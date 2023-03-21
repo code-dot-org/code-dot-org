@@ -54,10 +54,11 @@ class ActivitiesController < ApplicationController
       if @level.game.sharing_filtered?
         begin
           share_failure = ShareFiltering.find_share_failure(params[:program], locale)
-        rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_filtering_error
+        rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => exception
           # If WebPurify or Geocoder fail, the program will be allowed, and we
           # retain the share_filtering_error to log it alongside the level_source
           # ID below.
+          share_filtering_error = exception
         end
       end
 
@@ -135,13 +136,11 @@ class ActivitiesController < ApplicationController
     log_milestone(@level_source, params)
   end
 
-  private
-
-  def milestone_logger
+  private def milestone_logger
     @@milestone_logger ||= Logger.new("#{Rails.root}/log/milestone.log")
   end
 
-  def track_progress_for_user
+  private def track_progress_for_user
     authorize! :create, Activity
     authorize! :create, UserLevel
 
@@ -215,7 +214,7 @@ class ActivitiesController < ApplicationController
     end
   end
 
-  def track_progress_in_session
+  private def track_progress_in_session
     # track scripts
     if @script_level.try(:script).try(:id)
       test_result = params[:testResult].to_i
@@ -229,7 +228,7 @@ class ActivitiesController < ApplicationController
     end
   end
 
-  def log_milestone(level_source, params)
+  private def log_milestone(level_source, params)
     log_string = 'Milestone Report:'
     log_string +=
       if current_user || session.id

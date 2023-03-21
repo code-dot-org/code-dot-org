@@ -2,8 +2,8 @@
 ru:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: перемещение NESW с помощью клавиш со стрелками
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: запросить у пользователя {QUESTION} переменную {VAR} с параметрами выбора
           {A}{B}{C}
@@ -2498,6 +2498,17 @@ ru:
             '"quarantining"': уходить на карантин при заболевании
             '"avoiding"': социальное дистанцирование
             '"none"': оставаться неподвижным
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): вращение вправо
+            new Behavior(spinning_left, []): вращение влево
+            new Behavior(fluttering, []): дрожание
+            new Behavior(jittering, []): дрожание
+            new Behavior(wobbling, []): колебание
+            new Behavior(wandering, []): хождение
+            new Behavior(patrolling, []): патрулирование
       binary_drawBin:
         text: рисовать двоичный {BIN}
       binary_drawBinScreen:

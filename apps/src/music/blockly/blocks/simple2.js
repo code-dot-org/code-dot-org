@@ -6,15 +6,17 @@ import {
   FIELD_PATTERN_NAME,
   FIELD_REST_DURATION_NAME,
   FIELD_EFFECTS_NAME,
-  FIELD_EFFECTS_VALUE
+  FIELD_EFFECTS_VALUE,
+  FIELD_CHORD_NAME
 } from '../constants';
 import {
   fieldSoundsDefinition,
   fieldPatternDefinition,
-  fieldRestDurationDefinition
+  fieldRestDurationDefinition,
+  fieldChordDefinition
 } from '../fields';
 import {getCodeForSingleBlock} from '../blockUtils';
-import {DEFAULT_PATTERN_LENGTH} from '../../constants';
+import {DEFAULT_CHORD_LENGTH, DEFAULT_PATTERN_LENGTH} from '../../constants';
 
 // Some helpers used when generating code to be used by the interpreter.
 // Called by executeSong().
@@ -159,7 +161,7 @@ export const playSoundAtCurrentLocationSimple2 = {
         __effects
       );
       ProgramSequencer.updateMeasureForPlayByLength(
-        MusicPlayer.getLengthForId(
+        MusicLibrary.getLengthForId(
           "${block.getFieldValue(FIELD_SOUNDS_NAME)}"
         )
       );
@@ -171,7 +173,6 @@ export const playPatternAtCurrentLocationSimple2 = {
     type: BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
     message0: 'play pattern %1',
     args0: [fieldPatternDefinition],
-
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
@@ -192,6 +193,35 @@ export const playPatternAtCurrentLocationSimple2 = {
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         ${DEFAULT_PATTERN_LENGTH}
+      );
+    `
+};
+
+export const playChordAtCurrentLocationSimple2 = {
+  definition: {
+    type: BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
+    message0: 'play chord %1',
+    args0: [fieldChordDefinition],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'lab_blocks',
+    tooltip: 'play chord',
+    helpUrl: ''
+  },
+  generator: block =>
+    `
+      MusicPlayer.playChordAtMeasure(
+        ${JSON.stringify(block.getFieldValue(FIELD_CHORD_NAME))},
+        ProgramSequencer.getCurrentMeasure(),
+        __insideWhenRun,
+        null,
+        __currentFunction,
+        RandomSkipManager.getSkipContext(),
+        __effects
+      );
+      ProgramSequencer.updateMeasureForPlayByLength(
+        ${DEFAULT_CHORD_LENGTH}
       );
     `
 };
@@ -356,8 +386,11 @@ export const repeatSimple2 = {
     message0: 'repeat %1 times',
     args0: [
       {
-        type: 'input_value',
-        name: 'times'
+        type: 'field_number',
+        name: 'times',
+        value: 1,
+        min: 0,
+        max: 100
       }
     ],
     message1: 'do %1',
@@ -375,12 +408,7 @@ export const repeatSimple2 = {
     helpUrl: ''
   },
   generator: block => {
-    const repeats =
-      Blockly.JavaScript.valueToCode(
-        block,
-        'times',
-        Blockly.JavaScript.ORDER_ASSIGNMENT
-      ) || 0;
+    const repeats = block.getFieldValue('times');
 
     let branch = Blockly.JavaScript.statementToCode(block, 'code');
     branch = Blockly.JavaScript.addLoopTrap(branch, block);
@@ -390,13 +418,11 @@ export const repeatSimple2 = {
       Blockly.Names.NameType.VARIABLE
     );
     let endVar = repeats;
-    if (!repeats.match(/^\w+$/) && !Blockly.utils.string.isNumber(repeats)) {
-      endVar = Blockly.JavaScript.nameDB_.getDistinctName(
-        'repeat_end',
-        Blockly.Names.NameType.VARIABLE
-      );
-      code += 'var ' + endVar + ' = ' + repeats + ';\n';
-    }
+    endVar = Blockly.JavaScript.nameDB_.getDistinctName(
+      'repeat_end',
+      Blockly.Names.NameType.VARIABLE
+    );
+    code += 'var ' + endVar + ' = ' + repeats + ';\n';
     code +=
       'for (var ' +
       loopVar +

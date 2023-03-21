@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd5",
-    "serialized_at": "2023-03-10 02:00:28 UTC",
+    "serialized_at": "2023-03-17 22:43:09 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1389,6 +1389,19 @@
       }
     },
     {
+      "key": "8af2da4c-4ffd-45af-a037-b33f23c1b346",
+      "position": 2,
+      "properties": {
+        "description": "**Code Studio:** Have students answer 5 quick survey questions at the beginning of this unit. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
+        "name": "Reflection",
+        "progression_name": "Check-In Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "8af2da4c-4ffd-45af-a037-b33f23c1b346",
+        "lesson_activity.key": "c252df07-d2cd-40e5-b4e7-c5817178ea81"
+      }
+    },
+    {
       "key": "dbb7c7dd-fe3f-47f0-9141-8e985244c12d",
       "position": 1,
       "properties": {
@@ -2155,7 +2168,13 @@
       "key": "f203bf80-a5b0-4f3a-a127-21388aebf211",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r binary_and_data/csd5/2023] video in the slides.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r binary_and_data/csd5/2023] video in the slides.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f203bf80-a5b0-4f3a-a127-21388aebf211",
@@ -3925,7 +3944,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Accessing Videos:** These videos are embedded in the slides for this lesson and can also be downloaded from within this lesson plan. They can also be found in their own levels on Code Studio so students have access to these videos if they wish to them on their own or if they are absent for this lesson.\r\n"
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
           }
         ]
       },
@@ -4113,7 +4132,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Alternatives to AI For Ocenas:** AI for Oceans was orginally developed as an Hour of Code activity that can be completed by students with any device available. We have modified it for its usage here. Depending on your classroom situation, you might opt to replace the activity with:\r\n\r\n* [Teachable Machines](https://teachablemachine.withgoogle.com/) - *Teachable Machine is a web-based tool that makes creating machine learning models fast, easy, and accessible to everyone. Teachable Machine is flexible – use files or capture examples live. It’s respectful of the way you work. You can even choose to use it entirely on-device, without any webcam or microphone data leaving your computer.* \r\n\t* If your classrooms devices have cameras, Teachable Machines offers an engaging way to create training sets. Encourage students to teach the machine to represent rock, paper, or scissors with hand gestures. What are some possible ways for bias to enter in?\r\n\r\n\r\n* [Machine Learning for Kids](https://machinelearningforkids.co.uk/#!/about) - *This free tool introduces machine learning by providing hands-on experiences for training machine learning systems and building things with them. It provides an easy-to-use guided environment for training machine learning models to recognise text, numbers, images, or sounds.*\r\n\t* Machine Learning for Kids is a great option if your students want to work with text samples. Teach the machine to recognize words or passages that are happy or sad. Lots to play around with here! \r\n"
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
           }
         ]
       },
@@ -4127,7 +4146,13 @@
       "position": 2,
       "properties": {
         "description": "Machine learning refers to a computer that can recognize patterns and make decisions without being explicitly programmed. In this activity you’re going to supply the data to train your own machine learning model. Imagine an ocean that contains creatures like fish, but also contains trash dumped by humans. What if we could train a computer to tell the difference and then use that technology to help clean the ocean?",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Alternatives to AI For Ocenas:** AI for Oceans was orginally developed as an Hour of Code activity that can be completed by students with any device available. We have modified it for its usage here. Depending on your classroom situation, you might opt to replace the activity with:\n\n* [Teachable Machines](https://teachablemachine.withgoogle.com/) - *Teachable Machine is a web-based tool that makes creating machine learning models fast, easy, and accessible to everyone. Teachable Machine is flexible – use files or capture examples live. It’s respectful of the way you work. You can even choose to use it entirely on-device, without any webcam or microphone data leaving your computer.* \n\t* If your classrooms devices have cameras, Teachable Machines offers an engaging way to create training sets. Encourage students to teach the machine to represent rock, paper, or scissors with hand gestures. What are some possible ways for bias to enter in?\n\n\n* [Machine Learning for Kids](https://machinelearningforkids.co.uk/#!/about) - *This free tool introduces machine learning by providing hands-on experiences for training machine learning systems and building things with them. It provides an easy-to-use guided environment for training machine learning models to recognise text, numbers, images, or sounds.*\n\t* Machine Learning for Kids is a great option if your students want to work with text samples. Teach the machine to recognize words or passages that are happy or sad. Lots to play around with here! \n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f22b4e3e-3fcd-495f-94ba-10ae93f4c1d9",
@@ -4636,6 +4661,31 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd5_2023"
+        ],
+        "progression": "Check-In Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd5_2023"
+        ],
+        "lesson.key": "Representation Matters",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd5-2023",
+        "activity_section.key": "8af2da4c-4ffd-45af-a037-b33f23c1b346"
+      },
+      "level_keys": [
+        "intro-pulse-survey_csd5_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4658,7 +4708,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4683,7 +4733,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4708,7 +4758,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4733,7 +4783,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -4758,7 +4808,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4783,7 +4833,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4808,7 +4858,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4833,7 +4883,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4858,7 +4908,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4883,7 +4933,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4908,7 +4958,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4933,7 +4983,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4958,7 +5008,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4983,7 +5033,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5008,7 +5058,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5033,7 +5083,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5058,6 +5108,18 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "intro-pulse-survey_csd5_2023",
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd5_2023"
+        ],
+        "lesson.key": "Representation Matters",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd5-2023",
+        "activity_section.key": "8af2da4c-4ffd-45af-a037-b33f23c1b346"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "CSD U5 black white images pixelation_2023",
@@ -5500,7 +5562,7 @@
     },
     {
       "name": "Create a Representation",
-      "url": "https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/edit",
+      "url": "https://docs.google.com/document/d/1uk54ffts0mvoMoo1aM_9WQxhB_i9dVbperk3V5NZgv4/edit?usp=sharing",
       "key": "create_a_representation",
       "properties": {
         "audience": "Verified Teacher",
@@ -5849,12 +5911,11 @@
       }
     },
     {
-      "name": "Number Cards",
-      "url": "https://docs.google.com/presentation/u/2/d/1pZVjuP_Mwz4nOIxc6Hxz-SFIMzn3oS-zy3klSIgrEAc/copy",
+      "name": "Number Cards - Digital Manipulative",
+      "url": "https://docs.google.com/presentation/d/1cBJrrEm4P5zyz4to07ol1l_AtPcS5QamNXAlS06gObk/edit?usp=sharing",
       "key": "number_cards",
       "properties": {
-        "audience": "Teacher",
-        "type": "Digital Manipulative"
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "number_cards"

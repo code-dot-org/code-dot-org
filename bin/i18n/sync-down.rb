@@ -51,9 +51,9 @@ def sync_down
     end
 
     puts "Sync down completed successfully"
-  rescue => e
-    puts "Sync down failed from the error: #{e}"
-    raise e
+  rescue => exception
+    puts "Sync down failed from the error: #{exception}"
+    raise exception
   end
 end
 

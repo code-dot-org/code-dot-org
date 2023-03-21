@@ -8,6 +8,9 @@
   .field
     = f.label :name
     = f.text_field :name
+  .field.checkbox
+    = f.check_box :is_active
+    = f.label :is_active
   %h2 Regional Manager Information
   .field
     = f.label :contact_name

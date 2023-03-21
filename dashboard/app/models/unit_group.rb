@@ -142,10 +142,10 @@ class UnitGroup < ApplicationRecord
 
     unit_group.save!
     unit_group
-  rescue Exception => e
+  rescue Exception => exception
     # print filename for better debugging
-    new_e = Exception.new("in course: #{hash['name']}: #{e.message}")
-    new_e.set_backtrace(e.backtrace)
+    new_e = Exception.new("in course: #{hash['name']}: #{exception.message}")
+    new_e.set_backtrace(exception.backtrace)
     raise new_e
   end
 

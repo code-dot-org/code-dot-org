@@ -51,10 +51,10 @@ def parse_function_docs(doc_files)
 
   doc_files.each do |doc_filename|
     functions << parse_function_doc(doc_filename)
-  rescue Exception => e
+  rescue Exception => exception
     puts "Error processing file #{doc_filename}:"
-    puts e.message
-    puts e.backtrace.inspect
+    puts exception.message
+    puts exception.backtrace.inspect
   end
   functions
 end

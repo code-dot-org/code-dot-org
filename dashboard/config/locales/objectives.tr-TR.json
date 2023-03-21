@@ -663,7 +663,7 @@
           "description": "Bir algoritma yürütülürken karşılaşılan yanlışlıkları tanımlama ve düzeltme"
         },
         "9c04f7e1-5859-4e61-9ae0-630df254a9aa": {
-          "description": "Bilgisayar laboratuvarında düzgün davranışların modelini çıkarma"
+          "description": "Uygun bilgisayar laboratuvarı davranışlarını modelleyin"
         },
         "c78930e6-cbb5-418c-8ca3-9124e79570cd": {
           "description": "Şunlar gibi standart blok temelli programlama hareketlerini deneme: tıklama, sürükleme ve bırakma, vs."
@@ -948,25 +948,25 @@
           "description": "Bilgisayar faresini, dokunmatik fareyi veya dokunmatik ekranı belirtirken uygun terminolojiyi kullanın."
         },
         "1527c354-dff7-4d8c-94f7-8b55d5bc3099": {
-          "description": "Bilgisayar laboratuvarında düzgün davranışların modelini çıkarma"
+          "description": "Uygun bilgisayar laboratuvarı davranışlarını modelleyin"
         },
         "fc61a33c-e645-4600-b2d3-70bb8e46a938": {
           "description": "Şunlar gibi standart blok temelli programlama hareketlerini deneme: tıklama, sürükleme ve bırakma, vs."
         },
         "26c1a686-8627-439a-b7f9-3e42d80d4a6c": {
-          "description": "Bir dizi yazılı talimat için bir bilgisayar programı yapın."
+          "description": "Bir dizi yazılı talimattan bir bilgisayar programı oluşturun"
         },
         "8f583ef0-bd0b-4e2c-81c3-11057794f7e2": {
-          "description": "Sıralı hareketleri tanıyarak bir program oluşturma"
+          "description": "Sıralı hareketleri yeniden düzenleyerek bir program oluşturun"
         },
         "e20881b1-a3ad-4095-a434-6db807d457ed": {
           "description": "Hareketleri bir dizi komuta çevirme."
         },
         "6856ac6b-753c-4870-bfe4-d6ee553ff409": {
-          "description": "Komutları mantıksal bir sırada sıralama."
+          "description": "Komutları mantıksal bir sırayla sıralayın."
         },
         "bbf10b3a-152d-472c-82b5-761d1be6e3b2": {
-          "description": "Bir programdaki sorunları veya \"hataları\" tanımlayın ve sorunları çözmek için bir plan geliştirme."
+          "description": "Bir programdaki sorunları veya \"hataları\" tanıyın ve sorunları çözmek için bir plan geliştirin."
         },
         "21d90a6a-f1ea-4d0b-ba17-f2e6a53cf78c": {
           "description": "Bir programdaki hataları tanımlama ve yerini bulma."
@@ -1008,7 +1008,7 @@
           "description": "Girdi olayları ile ilişkili hareketleri tanımlama."
         },
         "37987315-bfd5-46fd-9faa-9e480ef816b2": {
-          "description": "Sıra ve olay-işleyicileri kullanarak hareketli, interaktif bir hikaye oluşturma."
+          "description": "Sekans ve olay işleyicileri kullanarak animasyonlu, etkileşimli bir hikaye oluşturun."
         },
         "fb6ff331-603c-4310-83e8-77e3e606edfe": {
           "description": "Yaratıcı bir eseri diğer öğrencilerle paylaşma."
@@ -1041,31 +1041,31 @@
           "description": "Bir algoritmayı bir programa çevirme"
         },
         "4d08a4a4-7475-4257-a955-62768629b65e": {
-          "description": "Sıralı talimatlardaki hataları veya yanlışlıkları tanımlama ve yönlendirme"
+          "description": "Sıralı talimatlardaki hataları veya hataları tanımlayın ve ele alın"
         },
         "f28907e3-caa2-4cfa-bd01-39282b5f5f8d": {
-          "description": "Başkası tarafından oluşturulan bir programı çözme ve çalıştırma"
+          "description": "Başkası tarafından oluşturulmuş bir programın kodunu çözün ve çalıştırın"
         },
         "25a06d14-94e5-41a1-b199-2d8ef7041b0f": {
           "description": "Şunlar gibi standart blok temelli programlama hareketlerini deneme: tıklama, sürükleme ve bırakma, vs."
         },
         "2e7e4324-ea3b-4e18-a61a-0e449579669a": {
-          "description": "Bilgisayar laboratuvarında düzgün davranışların modelini çıkarma"
+          "description": "Uygun bilgisayar laboratuvarı davranışlarını modelleyin"
         },
         "81b0eb83-7612-4f91-91d1-f6dd25afebb6": {
-          "description": "Sıralı hareketleri tanıyarak bir program oluşturma"
+          "description": "Sıralı hareketleri yeniden düzenleyerek bir program oluşturun"
         },
         "d6d95ae8-01ab-408a-a17d-6c4813fe0991": {
-          "description": "Bir dizi yazılı talimat için bir bilgisayar programı yapın."
+          "description": "Bir dizi yazılı talimattan bir bilgisayar programı oluşturun"
         },
         "f3ccc59a-2988-4ec2-994f-ae781e4e66d6": {
-          "description": "Problemleri çözerken uygun hata ayıklama pratiklerini seçme"
+          "description": "Sorunları çözerken uygun hata ayıklama uygulamalarını seçin"
         },
         "8fda32cd-f173-4d41-9a5c-4bb91f282534": {
-          "description": "Bir programdaki sorunları veya \"hataları\" tanımlayın ve sorunları çözmek için bir plan geliştirme."
+          "description": "Bir programdaki sorunları veya \"hataları\" tanıyın ve sorunları çözmek için bir plan geliştirin."
         },
         "ad2e874f-6827-4cec-bd3e-4c12a0596df5": {
-          "description": "Komutları mantıksal bir sırada sıralama."
+          "description": "Komutları mantıksal bir sırayla sıralayın."
         },
         "242ad249-b860-4727-9b98-01f0e2025d8d": {
           "description": "Döngülerle bir programı bir dizi çoklu hareket olarak yorumlama."
@@ -1104,7 +1104,7 @@
           "description": "Bir eğitmen tarafından verilen komutları tekrarlama."
         },
         "946d56ae-8a81-476c-93ab-6d5eff1f9633": {
-          "description": "Sıra ve olay-işleyicileri kullanarak hareketli, interaktif bir hikaye oluşturma."
+          "description": "Sekans ve olay işleyicileri kullanarak animasyonlu, etkileşimli bir hikaye oluşturun."
         },
         "ab8e0f55-bcb7-4af5-813f-df7d9629e21f": {
           "description": "Yaratıcı bir eseri diğer öğrencilerle paylaşma."
@@ -1128,7 +1128,7 @@
           "description": "Talimatları oluştururken doğruluğa dikkat etme"
         },
         "ce7a9596-845a-4d2f-b7ce-3e27b6faa99d": {
-          "description": "Sıralı talimatlardaki hataları veya yanlışlıkları tanımlama ve yönlendirme"
+          "description": "Sıralı talimatlardaki hataları veya hataları tanımlayın ve ele alın"
         },
         "1e020282-115c-4c09-877d-5003b8eb49a6": {
           "description": "Bir programdaki hataları tanımlama ve yerini bulma."
@@ -1419,7 +1419,7 @@
           "description": "Bir algoritma yürütülürken karşılaşılan yanlışlıkları tanımlama ve düzeltme"
         },
         "567921b7-1dc5-4b17-9c16-0bbcd785a498": {
-          "description": "Bilgisayar laboratuvarında düzgün davranışların modelini çıkarma"
+          "description": "Uygun bilgisayar laboratuvarı davranışlarını modelleyin"
         },
         "32056e13-2c3f-4ef7-8ada-49b29cac5f59": {
           "description": "Şunlar gibi standart blok temelli programlama hareketlerini deneme: tıklama, sürükleme ve bırakma, vs."
@@ -1527,31 +1527,31 @@
           "description": "Bir algoritmayı bir programa çevirme"
         },
         "95ef707d-603d-4106-955e-3138f0f16a5d": {
-          "description": "Başkası tarafından oluşturulan bir programı çözme ve çalıştırma"
+          "description": "Başkası tarafından oluşturulmuş bir programın kodunu çözün ve çalıştırın"
         },
         "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
-          "description": "Sıralı talimatlardaki hataları veya yanlışlıkları tanımlama ve yönlendirme"
+          "description": "Sıralı talimatlardaki hataları veya hataları tanımlayın ve ele alın"
         },
         "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
-          "description": "Bilgisayar laboratuvarında düzgün davranışların modelini çıkarma"
+          "description": "Uygun bilgisayar laboratuvarı davranışlarını modelleyin"
         },
         "6df3d067-06bb-4e95-856f-ef980543a15e": {
           "description": "Şunlar gibi standart blok temelli programlama hareketlerini deneme: tıklama, sürükleme ve bırakma, vs."
         },
         "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
-          "description": "Sıralı hareketleri tanıyarak bir program oluşturma"
+          "description": "Sıralı hareketleri yeniden düzenleyerek bir program oluşturun"
         },
         "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
-          "description": "Bir dizi yazılı talimat için bir bilgisayar programı yapın."
+          "description": "Bir dizi yazılı talimattan bir bilgisayar programı oluşturun"
         },
         "ad752d9a-9437-4b0b-9ffd-e01b34f8cdb5": {
-          "description": "Problemleri çözerken uygun hata ayıklama pratiklerini seçme"
+          "description": "Sorunları çözerken uygun hata ayıklama uygulamalarını seçin"
         },
         "199aed02-347c-4892-9e98-d7571ae64c9d": {
-          "description": "Komutları mantıksal bir sırada sıralama."
+          "description": "Komutları mantıksal bir sırayla sıralayın."
         },
         "f0335d03-c7b3-4dee-9d9c-e1cd00919261": {
-          "description": "Bir programdaki sorunları veya \"hataları\" tanımlayın ve sorunları çözmek için bir plan geliştirme."
+          "description": "Bir programdaki sorunları veya \"hataları\" tanıyın ve sorunları çözmek için bir plan geliştirin."
         },
         "407c5a4d-9337-4218-92d5-018597e41e19": {
           "description": "Tekrarlayan kodu tanımlama ve çoklu hareketleri bir tek döngüye kısaltma."
@@ -1593,7 +1593,7 @@
           "description": "Girdi olayları ile ilişkili hareketleri tanımlama."
         },
         "b366b41e-9396-4c1b-9d35-164052448c1c": {
-          "description": "Sıra ve olay-işleyicileri kullanarak hareketli, interaktif bir hikaye oluşturma."
+          "description": "Sekans ve olay işleyicileri kullanarak animasyonlu, etkileşimli bir hikaye oluşturun."
         },
         "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
           "description": "Yaratıcı bir eseri diğer öğrencilerle paylaşma."
@@ -1614,7 +1614,7 @@
           "description": "Talimatları oluştururken doğruluğa dikkat etme"
         },
         "26392005-5f64-4707-b38b-847d1f009a29": {
-          "description": "Sıralı talimatlardaki hataları veya yanlışlıkları tanımlama ve yönlendirme"
+          "description": "Sıralı talimatlardaki hataları veya hataları tanımlayın ve ele alın"
         },
         "560e14ee-7390-4244-aee5-a0c2737112e5": {
           "description": "Hareketleri bir dizi komuta çevirme."
@@ -2040,7 +2040,7 @@
           "description": "Bilgisayar faresini, dokunmatik fareyi veya dokunmatik ekranı belirtirken uygun terminolojiyi kullanın."
         },
         "565151fd-85db-44eb-9cfc-ccbe279cf49a": {
-          "description": "Bilgisayar laboratuvarında düzgün davranışların modelini çıkarma"
+          "description": "Uygun bilgisayar laboratuvarı davranışlarını modelleyin"
         },
         "af0ee86d-cae1-4a66-93c6-8030f2c36f47": {
           "description": "Şunlar gibi standart blok temelli programlama hareketlerini deneme: tıklama, sürükleme ve bırakma, vs."
@@ -2049,16 +2049,16 @@
           "description": "Hareketleri bir dizi komuta çevirme."
         },
         "7ef6d077-67aa-4a8b-b27b-ab3697654abc": {
-          "description": "Sıralı hareketleri tanıyarak bir program oluşturma"
+          "description": "Sıralı hareketleri yeniden düzenleyerek bir program oluşturun"
         },
         "3ad309d1-5c29-4a7d-923c-9c60e6ef21b0": {
-          "description": "Bir dizi yazılı talimat için bir bilgisayar programı yapın."
+          "description": "Bir dizi yazılı talimattan bir bilgisayar programı oluşturun"
         },
         "f4ccea6b-5333-454a-8b7a-e9d680967cef": {
-          "description": "Komutları mantıksal bir sırada sıralama."
+          "description": "Komutları mantıksal bir sırayla sıralayın."
         },
         "b881f284-2988-49e1-aaf2-f8baf12e5bb5": {
-          "description": "Bir programdaki sorunları veya \"hataları\" tanımlayın ve sorunları çözmek için bir plan geliştirme."
+          "description": "Bir programdaki sorunları veya \"hataları\" tanıyın ve sorunları çözmek için bir plan geliştirin."
         },
         "620da514-ad6e-4049-a9d3-d189a79af01e": {
           "description": "Hareketleri bir dizi komuta çevirme."
@@ -2100,7 +2100,7 @@
           "description": "Girdi olayları ile ilişkili hareketleri tanımlama."
         },
         "2fa04500-f1d4-4924-aa39-70292711d432": {
-          "description": "Sıra ve olay-işleyicileri kullanarak hareketli, interaktif bir hikaye oluşturma."
+          "description": "Sekans ve olay işleyicileri kullanarak animasyonlu, etkileşimli bir hikaye oluşturun."
         },
         "22d77ea2-3a62-4e21-b71f-f484fe90ec39": {
           "description": "Yaratıcı bir eseri diğer öğrencilerle paylaşma."

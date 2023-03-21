@@ -1999,6 +1999,12 @@ he:
               name: בשביל לולאות
         hello-world-space-2022:
           title: 'שלום, עולם: שטח'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-3:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2017,6 +2023,10 @@ he:
               display_name: 'פרק 1: תמונות ואנימציות'
             lessonGroup-3:
               display_name: 'פרק 2: יצירת משחקים'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:

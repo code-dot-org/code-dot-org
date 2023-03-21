@@ -82,7 +82,7 @@ module Pd::Application
     validates :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
-    before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
+    before_save :save_partner, if: -> {!deleted? && form_data_changed?}
     before_save :update_user_school_info!, if: -> {form_data_changed?}
     before_save :log_status, if: -> {status_changed? || form_data_changed?}
 
@@ -136,17 +136,14 @@ module Pd::Application
     end
 
     def set_status_from_admin_approval
-      # Do not modify status is application is not incomplete.
       return if status == 'incomplete'
+      return if principal_approval_state&.include?(PRINCIPAL_APPROVAL_STATE[:complete])
 
       # Do not modify status if admin approval status has not changed.
       # Since principal_approval_not_required is a serialized attribute, we cannot use the Dirty
       # API easily –– instead, use the Dirty API to look at the properties attribute.
       return if properties_change.include?(nil)
       return unless properties_change.map(&:keys)&.flatten&.include?('principal_approval_not_required')
-
-      # Do not modify status if the principal approval has already been completed.
-      return if principal_approval_state&.include?(PRINCIPAL_APPROVAL_STATE[:complete])
 
       if !principal_approval_not_required && status != 'awaiting_admin_approval'
         self.status = 'awaiting_admin_approval'
@@ -364,7 +361,7 @@ module Pd::Application
     end
 
     def should_send_decision_email?
-      if regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER
+      if regional_partner.nil? || regional_partner.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER
         false
       else
         AUTO_EMAIL_STATUSES.include?(status)

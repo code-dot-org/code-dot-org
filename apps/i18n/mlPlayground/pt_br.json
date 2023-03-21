@@ -252,11 +252,46 @@
     },
     "abalone": {
       "fields": {
+        "Sex": {
+          "id": "Sexo",
+          "description": "O sexo do abalone: M, F ou B (bebê)."
+        },
         "Length": {
-          "id": "Duração"
+          "id": "Duração",
+          "description": "Seu comprimento no ponto mais longo em milímetros."
+        },
+        "Diameter": {
+          "id": "Diâmetro",
+          "description": "Seu diâmetro em milímetros."
         },
         "Height": {
-          "id": "Altura"
+          "id": "Altura",
+          "description": "Sua altura com o caracol na concha em milímetros."
+        },
+        "Whole weight": {
+          "id": "Peso total",
+          "description": "O peso de todo o abalone em gramas."
+        },
+        "Shucked weight": {
+          "description": "O peso do caracol com a casca removida em gramas."
+        },
+        "Viscera weight": {
+          "id": "Peso das vísceras",
+          "description": "O peso das vísceras, em gramas."
+        },
+        "Shell weight": {
+          "id": "Peso da concha",
+          "description": "O peso da casca depois de seca, em gramas."
+        },
+        "Rings": {
+          "id": "Anéis",
+          "description": "A idade em anos."
+        }
+      },
+      "card": {
+        "description": "Este conjunto de dados contém vários atributos de abalones diferentes, um tipo de caracol marinho. O objetivo é prever o número de anéis na concha do abalone, que é um indicador de sua idade.",
+        "context": {
+          "potentialUses": "Determine a idade de um abalone."
         }
       }
     },
@@ -325,6 +360,9 @@
       "fields": {
         "Age": {
           "id": "Idade"
+        },
+        "Sex": {
+          "id": "Sexo"
         }
       }
     },

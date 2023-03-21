@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2023-03-14T20:45:14.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "C1_pair_programming",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20969,
+    "name_suffix": "_2023"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-03-14T20:45:14.344+00:00\",\"changed\":[\"cloned from \\\"elementary_video_pairProgramming2022\\\"\"],\"cloned_from\":\"elementary_video_pairProgramming2022\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

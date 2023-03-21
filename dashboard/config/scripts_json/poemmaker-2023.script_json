@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "poemmaker",
-    "serialized_at": "2023-03-09 21:33:22 UTC",
+    "serialized_at": "2023-03-16 00:27:16 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -35,7 +35,7 @@
   "lessons": [
     {
       "key": "Blank Space Stories",
-      "name": "Blank Space Stories",
+      "name": "Blank Space Poems",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -2051,6 +2051,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_poetry"
+        ],
         "progression": "Video: Unplugged Variables in Envelopes"
       },
       "bonus": false,
@@ -2073,138 +2076,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Example"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "poetry_module_variables_exemplar1_2023"
+        "level_keys": [
+          "courseF_variables_predict_poetry"
         ],
-        "lesson.key": "Playing with Words",
-        "lesson_group.key": "",
-        "script.name": "poemmaker-2023",
-        "activity_section.key": "6e7a1003-6936-4469-b913-f5c9744cec9a"
-      },
-      "level_keys": [
-        "poetry_module_variables_exemplar1_2023"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "poetry_module_variables_prompt_2023"
-        ],
-        "lesson.key": "Playing with Words",
-        "lesson_group.key": "",
-        "script.name": "poemmaker-2023",
-        "activity_section.key": "ac0e8105-108e-4e6c-b884-97f2ef5b92d8"
-      },
-      "level_keys": [
-        "poetry_module_variables_prompt_2023"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "poetry_module_variables_concatenation1_2023"
-        ],
-        "lesson.key": "Playing with Words",
-        "lesson_group.key": "",
-        "script.name": "poemmaker-2023",
-        "activity_section.key": "ac0e8105-108e-4e6c-b884-97f2ef5b92d8"
-      },
-      "level_keys": [
-        "poetry_module_variables_concatenation1_2023"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 4,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "poetry_module_variables_concatenation4_2023"
-        ],
-        "lesson.key": "Playing with Words",
-        "lesson_group.key": "",
-        "script.name": "poemmaker-2023",
-        "activity_section.key": "ac0e8105-108e-4e6c-b884-97f2ef5b92d8"
-      },
-      "level_keys": [
-        "poetry_module_variables_concatenation4_2023"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Free Play"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "poetry_module_variables_start_2023"
-        ],
-        "lesson.key": "Playing with Words",
-        "lesson_group.key": "",
-        "script.name": "poemmaker-2023",
-        "activity_section.key": "30cd75a2-ee3b-4b90-ba26-93258f59cf45"
-      },
-      "level_keys": [
-        "poetry_module_variables_start_2023"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Free Play"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "poetry_module_variables_finish_2023"
-        ],
-        "lesson.key": "Playing with Words",
-        "lesson_group.key": "",
-        "script.name": "poemmaker-2023",
-        "activity_section.key": "30cd75a2-ee3b-4b90-ba26-93258f59cf45"
-      },
-      "level_keys": [
-        "poetry_module_variables_finish_2023"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2222,11 +2096,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_prompts_poetry"
+        ],
         "progression": "Video: Text and Prompts"
       },
       "bonus": false,
@@ -2244,11 +2121,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 4,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_review_poetry"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2266,11 +2146,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 5,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_print_poetry"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2288,11 +2171,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 6,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_events_poetry"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2310,11 +2196,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 7,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_prompts_poetry"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2332,11 +2221,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 8,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_answer_poetry"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2354,11 +2246,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 9,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_concat_poetry"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2376,11 +2271,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 10,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_practice2022_2022_pilot_-2022-2_poetry"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2398,11 +2296,164 @@
       ]
     },
     {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_module_variables_exemplar1_2023"
+        ],
+        "progression": "Example"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_module_variables_exemplar1_2023"
+        ],
+        "lesson.key": "Playing with Words",
+        "lesson_group.key": "",
+        "script.name": "poemmaker-2023",
+        "activity_section.key": "6e7a1003-6936-4469-b913-f5c9744cec9a"
+      },
+      "level_keys": [
+        "poetry_module_variables_exemplar1_2023"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_module_variables_prompt_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_module_variables_prompt_2023"
+        ],
+        "lesson.key": "Playing with Words",
+        "lesson_group.key": "",
+        "script.name": "poemmaker-2023",
+        "activity_section.key": "ac0e8105-108e-4e6c-b884-97f2ef5b92d8"
+      },
+      "level_keys": [
+        "poetry_module_variables_prompt_2023"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_module_variables_concatenation1_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_module_variables_concatenation1_2023"
+        ],
+        "lesson.key": "Playing with Words",
+        "lesson_group.key": "",
+        "script.name": "poemmaker-2023",
+        "activity_section.key": "ac0e8105-108e-4e6c-b884-97f2ef5b92d8"
+      },
+      "level_keys": [
+        "poetry_module_variables_concatenation1_2023"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_module_variables_concatenation4_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_module_variables_concatenation4_2023"
+        ],
+        "lesson.key": "Playing with Words",
+        "lesson_group.key": "",
+        "script.name": "poemmaker-2023",
+        "activity_section.key": "ac0e8105-108e-4e6c-b884-97f2ef5b92d8"
+      },
+      "level_keys": [
+        "poetry_module_variables_concatenation4_2023"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_module_variables_start_2023"
+        ],
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_module_variables_start_2023"
+        ],
+        "lesson.key": "Playing with Words",
+        "lesson_group.key": "",
+        "script.name": "poemmaker-2023",
+        "activity_section.key": "30cd75a2-ee3b-4b90-ba26-93258f59cf45"
+      },
+      "level_keys": [
+        "poetry_module_variables_start_2023"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_module_variables_finish_2023"
+        ],
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_module_variables_finish_2023"
+        ],
+        "lesson.key": "Playing with Words",
+        "lesson_group.key": "",
+        "script.name": "poemmaker-2023",
+        "activity_section.key": "30cd75a2-ee3b-4b90-ba26-93258f59cf45"
+      },
+      "level_keys": [
+        "poetry_module_variables_finish_2023"
+      ]
+    },
+    {
       "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_generator_pause_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2425,6 +2476,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_generator_exemplar_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2447,6 +2501,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_generator_prompt_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2469,6 +2526,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_generator_event_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2491,6 +2551,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_generator_concatenation_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2513,6 +2576,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_generator_freeplay_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2535,6 +2601,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_choices_exemplar_2023"
+        ],
         "progression": "Example"
       },
       "bonus": false,
@@ -2557,6 +2626,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_choices_practice_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2579,6 +2651,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_choices_variables_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2601,6 +2676,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_choice_prompts_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2623,6 +2701,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_choices_freeplay_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2645,6 +2726,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_conditionals_exemplar_2023"
+        ],
         "progression": "Example"
       },
       "bonus": false,
@@ -2667,6 +2751,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_conditionals_practice_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2689,6 +2776,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_conditionals_freeplay_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2716,7 +2806,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "poetry_module_share_2023"
+          "poemmaker_module_share_2023"
         ],
         "lesson.key": "Poetry Circle",
         "lesson_group.key": "",
@@ -2724,7 +2814,7 @@
         "activity_section.key": "5e9f1235-26fd-4754-8bb0-2c9f5619eeb2"
       },
       "level_keys": [
-        "poetry_module_share_2023"
+        "poemmaker_module_share_2023"
       ]
     },
     {
@@ -2733,6 +2823,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_modeling_exemple_2023"
+        ],
         "progression": "Example"
       },
       "bonus": false,
@@ -2761,78 +2854,6 @@
         "lesson_group.key": "",
         "script.name": "poemmaker-2023",
         "activity_section.key": "4fb53e2d-9b99-4212-a787-7f34eb9f204a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "poetry_module_variables_exemplar1_2023",
-        "script_level.level_keys": [
-          "poetry_module_variables_exemplar1_2023"
-        ],
-        "lesson.key": "Playing with Words",
-        "lesson_group.key": "",
-        "script.name": "poemmaker-2023",
-        "activity_section.key": "6e7a1003-6936-4469-b913-f5c9744cec9a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "poetry_module_variables_prompt_2023",
-        "script_level.level_keys": [
-          "poetry_module_variables_prompt_2023"
-        ],
-        "lesson.key": "Playing with Words",
-        "lesson_group.key": "",
-        "script.name": "poemmaker-2023",
-        "activity_section.key": "ac0e8105-108e-4e6c-b884-97f2ef5b92d8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "poetry_module_variables_concatenation1_2023",
-        "script_level.level_keys": [
-          "poetry_module_variables_concatenation1_2023"
-        ],
-        "lesson.key": "Playing with Words",
-        "lesson_group.key": "",
-        "script.name": "poemmaker-2023",
-        "activity_section.key": "ac0e8105-108e-4e6c-b884-97f2ef5b92d8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "poetry_module_variables_concatenation4_2023",
-        "script_level.level_keys": [
-          "poetry_module_variables_concatenation4_2023"
-        ],
-        "lesson.key": "Playing with Words",
-        "lesson_group.key": "",
-        "script.name": "poemmaker-2023",
-        "activity_section.key": "ac0e8105-108e-4e6c-b884-97f2ef5b92d8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "poetry_module_variables_start_2023",
-        "script_level.level_keys": [
-          "poetry_module_variables_start_2023"
-        ],
-        "lesson.key": "Playing with Words",
-        "lesson_group.key": "",
-        "script.name": "poemmaker-2023",
-        "activity_section.key": "30cd75a2-ee3b-4b90-ba26-93258f59cf45"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "poetry_module_variables_finish_2023",
-        "script_level.level_keys": [
-          "poetry_module_variables_finish_2023"
-        ],
-        "lesson.key": "Playing with Words",
-        "lesson_group.key": "",
-        "script.name": "poemmaker-2023",
-        "activity_section.key": "30cd75a2-ee3b-4b90-ba26-93258f59cf45"
       }
     },
     {
@@ -2941,6 +2962,78 @@
         "lesson_group.key": "",
         "script.name": "poemmaker-2023",
         "activity_section.key": "6080a59b-ff69-4530-854c-3dc3fcf34db9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_module_variables_exemplar1_2023",
+        "script_level.level_keys": [
+          "poetry_module_variables_exemplar1_2023"
+        ],
+        "lesson.key": "Playing with Words",
+        "lesson_group.key": "",
+        "script.name": "poemmaker-2023",
+        "activity_section.key": "6e7a1003-6936-4469-b913-f5c9744cec9a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_module_variables_prompt_2023",
+        "script_level.level_keys": [
+          "poetry_module_variables_prompt_2023"
+        ],
+        "lesson.key": "Playing with Words",
+        "lesson_group.key": "",
+        "script.name": "poemmaker-2023",
+        "activity_section.key": "ac0e8105-108e-4e6c-b884-97f2ef5b92d8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_module_variables_concatenation1_2023",
+        "script_level.level_keys": [
+          "poetry_module_variables_concatenation1_2023"
+        ],
+        "lesson.key": "Playing with Words",
+        "lesson_group.key": "",
+        "script.name": "poemmaker-2023",
+        "activity_section.key": "ac0e8105-108e-4e6c-b884-97f2ef5b92d8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_module_variables_concatenation4_2023",
+        "script_level.level_keys": [
+          "poetry_module_variables_concatenation4_2023"
+        ],
+        "lesson.key": "Playing with Words",
+        "lesson_group.key": "",
+        "script.name": "poemmaker-2023",
+        "activity_section.key": "ac0e8105-108e-4e6c-b884-97f2ef5b92d8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_module_variables_start_2023",
+        "script_level.level_keys": [
+          "poetry_module_variables_start_2023"
+        ],
+        "lesson.key": "Playing with Words",
+        "lesson_group.key": "",
+        "script.name": "poemmaker-2023",
+        "activity_section.key": "30cd75a2-ee3b-4b90-ba26-93258f59cf45"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_module_variables_finish_2023",
+        "script_level.level_keys": [
+          "poetry_module_variables_finish_2023"
+        ],
+        "lesson.key": "Playing with Words",
+        "lesson_group.key": "",
+        "script.name": "poemmaker-2023",
+        "activity_section.key": "30cd75a2-ee3b-4b90-ba26-93258f59cf45"
       }
     },
     {
@@ -3113,9 +3206,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "poetry_module_share_2023",
+        "level.key": "poemmaker_module_share_2023",
         "script_level.level_keys": [
-          "poetry_module_share_2023"
+          "poemmaker_module_share_2023"
         ],
         "lesson.key": "Poetry Circle",
         "lesson_group.key": "",
@@ -3150,8 +3243,8 @@
       }
     },
     {
-      "name": "Blank Space Stories",
-      "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview",
+      "name": "Blank Space Poems",
+      "url": "https://docs.google.com/document/d/18ovJzM3-x5gejc5sxdNdUkSzVFpRgioE9IPqBR0RE18/template/preview",
       "key": "blank_space_stories",
       "properties": {
         "audience": "Student",
@@ -3198,63 +3291,16 @@
       }
     },
     {
-      "name": "Coding with Poetry Lesson 3",
-      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/copy",
+      "name": "Poem Maker",
+      "url": "https://docs.google.com/presentation/d/1YZzmGRfcPojrfqntdz2ct7C7SY9p7-cJDYXUNyGNvGI/template/preview",
       "key": "coding_with_poetry_lesson_3",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1YZzmGRfcPojrfqntdz2ct7C7SY9p7-cJDYXUNyGNvGI/export/pdf",
         "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "coding_with_poetry_lesson_3"
-      }
-    },
-    {
-      "name": "Coding with Poetry Lesson 4",
-      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/copy",
-      "key": "coding_with_poetry_lesson_4",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "coding_with_poetry_lesson_4"
-      }
-    },
-    {
-      "name": "Coding with Poetry Lesson 5",
-      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/copy",
-      "key": "coding_with_poetry_lesson_5",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "coding_with_poetry_lesson_5"
-      }
-    },
-    {
-      "name": "Coding with Poetry Lesson 6",
-      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/copy",
-      "key": "coding_with_poetry_lesson_6",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "coding_with_poetry_lesson_6"
-      }
-    },
-    {
-      "name": "Coding with Poetry Lesson 7",
-      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/copy",
-      "key": "coding_with_poetry_lesson_7",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "coding_with_poetry_lesson_7"
       }
     },
     {
@@ -3267,19 +3313,6 @@
       },
       "seeding_key": {
         "resource.key": "combining_text_and_variables"
-      }
-    },
-    {
-      "name": "CSF - Course F - Slides 2022-2023",
-      "url": "https://docs.google.com/presentation/d/1MMT5npnQb5bWPmUGia4YT_mYMiFczu1HbL-KCShsxYU/template/preview",
-      "key": "csf_-_course_f_-_slides_2022-2023",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1MMT5npnQb5bWPmUGia4YT_mYMiFczu1HbL-KCShsxYU/export/pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csf_-_course_f_-_slides_2022-2023"
       }
     },
     {
@@ -3383,13 +3416,13 @@
     {
       "seeding_key": {
         "lesson.key": "Blank Space Stories",
-        "resource.key": "csf_-_course_f_-_slides_2022-2023"
+        "resource.key": "coding_with_poetry_lesson_3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Build a Poem Generator App",
-        "resource.key": "coding_with_poetry_lesson_4"
+        "resource.key": "coding_with_poetry_lesson_3"
       }
     },
     {
@@ -3413,7 +3446,7 @@
     {
       "seeding_key": {
         "lesson.key": "Choosing Words Carefully",
-        "resource.key": "coding_with_poetry_lesson_5"
+        "resource.key": "coding_with_poetry_lesson_3"
       }
     },
     {
@@ -3455,7 +3488,7 @@
     {
       "seeding_key": {
         "lesson.key": "Poetry Circle",
-        "resource.key": "coding_with_poetry_lesson_7"
+        "resource.key": "coding_with_poetry_lesson_3"
       }
     },
     {
@@ -3473,13 +3506,13 @@
     {
       "seeding_key": {
         "lesson.key": "Responding to Words",
-        "resource.key": "coding_with_poetry_lesson_6"
+        "resource.key": "coding_with_poetry_lesson_3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Text and Prompts",
-        "resource.key": "csf_-_course_f_-_slides_2022-2023"
+        "resource.key": "coding_with_poetry_lesson_3"
       }
     },
     {

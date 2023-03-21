@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-01-18 16:11:34 UTC",
+    "serialized_at": "2023-03-17 21:45:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -355,9 +355,9 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "overview": "**How will I use what I know about classes and objects to answer a Free Response Question?**\n\nStudents are introduced to AP CSA Free Response Questions (FRQs) and practice decomposition and problem-solving skills to develop solutions to a mock FRQ. Students use annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
-        "preparation": "* Print the SpiralPainter FRQ Stations resource\n* Cut out the manipulatives in the SpiralPainter FRQ Stations resource\n* Create stations around the classroom as indicated on the SpiralPainter FRQ Stations resource\n* (Optional) Gather a blue, orange, and pink colored pencil or marker for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-frq-practice/36399/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**How will I use what I know about classes and objects to answer a Free Response Question?**\n\nYou are asked to develop solutions to Free Response Questions (FRQs) on the AP CSA Exam. You learn about the structure of an FRQ and practice decomposition and problem-solving skills to develop solutions to a mock FRQ. You use annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
+        "overview": "**How will I use what I know about classes, objects, and methods to answer a Free Response Question?**\n\nStudents are introduced to AP CSA Free Response Questions (FRQs) and practice decomposition and problem-solving skills to develop solutions to a mock FRQ. Students use annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
+        "preparation": "* Print the SpiralPainter FRQ Stations resource\n* Cut out the manipulatives in the SpiralPainter FRQ Stations resource *or* have students make a copy of the SpiralPainter FRQ Digital Manipulatives\n* Create stations around the classroom as indicated on the SpiralPainter FRQ Stations resource\n* (Optional) Gather a blue, orange, and pink colored pencil or marker for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-frq-practice/36399/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How will I use what I know about classes, objects, and methods to answer a Free Response Question?**\n\nYou are asked to develop solutions to Free Response Questions (FRQs) on the AP CSA Exam. You learn about the structure of an FRQ and practice decomposition and problem-solving skills to develop solutions to a mock FRQ. You use annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
       },
       "seeding_key": {
         "lesson.key": "lesson-20",
@@ -9450,6 +9450,18 @@
       }
     },
     {
+      "name": "SpiralPainter FRQ Digital Manipulatives",
+      "url": "https://docs.google.com/presentation/d/1Oktr6qjUvlZ0UYd8VxyLfl2SijsY8W8FjC5bTBfT1ME/edit?usp=sharing",
+      "key": "spiralpainter_frq_digital_manipulatives",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "spiralpainter_frq_digital_manipulatives"
+      }
+    },
+    {
       "name": "SpiralPainter FRQ Stations",
       "url": "https://docs.google.com/document/d/1WuRHjdKKv9nA-CqfgyxyRa4ppKn8FXg2dKk6EKpcOZM/edit?usp=sharing",
       "key": "spiralpainter_frq_stations",
@@ -10162,6 +10174,12 @@
       "seeding_key": {
         "lesson.key": "lesson-20",
         "resource.key": "spiralpainter_frq"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "resource.key": "spiralpainter_frq_digital_manipulatives"
       }
     },
     {
@@ -11293,16 +11311,6 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "objective.key": "62b92964-1343-49b2-bc66-a85501e6f566"
-      }
-    },
-    {
-      "key": "697140a0-91bb-4166-a779-7fb7b2298510",
-      "properties": {
-        "description": "Trace and validate the code of peers"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-20",
-        "objective.key": "697140a0-91bb-4166-a779-7fb7b2298510"
       }
     },
     {

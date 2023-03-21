@@ -74,9 +74,9 @@ module Services
           # I'm adding some explicit logging.
           begin
             PDF.merge_local_pdfs(destination, *pdfs)
-          rescue Exception => e
+          rescue Exception => exception
             ChatClient.log(
-              "Error when trying to merge resource PDFs for #{script.name}: #{e}",
+              "Error when trying to merge resource PDFs for #{script.name}: #{exception}",
               color: 'red'
             )
             ChatClient.log(
@@ -91,7 +91,7 @@ module Services
               "temporary directory contents: #{Dir.entries(pdfs_dir).inspect}",
               color: 'red'
             )
-            raise e
+            raise exception
           end
           FileUtils.remove_entry_secure(pdfs_dir)
 
@@ -179,15 +179,15 @@ module Services
             IO.copy_stream(URI.parse(url)&.open, path)
             return path
           end
-        rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => e
+        rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => exception
           ChatClient.log(
-            "Google error when trying to fetch PDF from #{url.inspect} to #{path.inspect}: #{e}",
+            "Google error when trying to fetch PDF from #{url.inspect} to #{path.inspect}: #{exception}",
             color: 'yellow'
           )
           return nil
-        rescue URI::InvalidURIError, OpenURI::HTTPError => e
+        rescue URI::InvalidURIError, OpenURI::HTTPError => exception
           ChatClient.log(
-            "URI error when trying to fetch PDF from #{url.inspect} to #{path.inspect}: #{e}",
+            "URI error when trying to fetch PDF from #{url.inspect} to #{path.inspect}: #{exception}",
             color: 'yellow'
           )
           return nil

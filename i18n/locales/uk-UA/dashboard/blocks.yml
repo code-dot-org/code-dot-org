@@ -2044,6 +2044,13 @@ uk:
             '0.75': most
             '0.5': half of
             '0.25': few
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(fluttering, []): пурхання
+            new Behavior(wobbling, []): хитання
+            new Behavior(wandering, []): бродіння
+            new Behavior(patrolling, []): патрулювання
       binary_drawBin:
         text: малювати двійково {BIN}
       binary_drawBinScreen:

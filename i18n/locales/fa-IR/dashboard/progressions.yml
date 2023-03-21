@@ -47,7 +47,9 @@ fa:
       'Artist: Variables': 'هنرمند: متغیرها'
       Assessment: ارزشیابی
       Attribution: نسبت دادن
+      Back and Forth: عقب و جلو
       Basic Conditionals: شرطی های پایه
+      Bass, Mid, and Treble: صدای بم، متوسط، زیر
       Be a Super Digital Citizen: شهروند فوق دیجیتال باشید
       Begin planning your project: طرح ریزی پروژه خود را آغاز نمایید
       Begin planning your project_2018: طرح ریزی پروژه-2018 خود را آغاز نمایید
@@ -116,6 +118,7 @@ fa:
       Customize: سفارشی ‎سازی
       Customize Your App: سفارشی سازی برنامه خود
       Customizing Your App: در حال سفارشی سازی برنامه خود
+      Dance Crews: گروه رقص
       Data Visualization: به تصویر در آوردن داده ها
       De-bugging with the Step Button: اشکال زدایی با دکمه Step
       Debugging: اشکال‌زدایی
@@ -185,6 +188,7 @@ fa:
       Fruit and Veggie Explorer: جستجوگر میوه و سبزی
       Functions: توابع
       Functions with Parameters: معادله با پارامترها
+      Get In Formation: آرایش بگیرید
       Getters and Setters: Getterها و Setterها
       Getting Properties: به دست آوردن ویژگیها
       Graph Paper Programming - Unplugged Activity: برنامه نویسی کاغذ شطرنجی - فعالیت بدون کار با رایانه
@@ -192,6 +196,7 @@ fa:
       Guess The Number: حدس زدن شماره
       Headings: عناوین
       How to Create a Simple Function: شیوه ایجاد تابع ساده
+      How to Make a Sprite: نحوه ساخت اسپرایت
       Human Device Interaction: تعامل انسان و دستگاه
       Ice Age Loops: حلقه های Ice Age
       Images and Sounds: تصاویر و صداها
@@ -211,6 +216,7 @@ fa:
       Intro to Sprites: معرفی اسپرایت ها
       Intro to Variables: معرفی متغیرها
       Introducing Sprite Lab: آشنایی با آزمایشگاه اسپرایت
+      Introduction to Arrays: معرفی آرایه‌ها
       Investigate: وارسی
       Isaac's Survey Data: داده های پیمایش Isaac
       Iteration and Parameters: تکرارها و پارامترها
@@ -268,6 +274,7 @@ fa:
       'Mini-project: Sticker Art': 'پروژه کوچک: هنر برچسب'
       'Mini-project: Sticker Design': 'پروژه کوچک: طراحی برچسب'
       Modify simulation variables: اصلاح متغیرهای شبیه سازی
+      More Buttons: دکمه‌های بیشتر
       More Input: ورودی های بیشتر
       More Parameters: پارامترهای مسیر
       Motorcycle: موتور سیکلت
@@ -321,6 +328,7 @@ fa:
       Project Work: کار پروژه
       Properties: مشخصات
       Publishing Your Website: انتشار وبسایت خود
+      Quarter Notes: نت یک‌چهارم
       Quick Check: بررسی سریع
       RGB Exploration: کاوش RGB
       Raspado Recommender: پیشنهاد Raspado
@@ -377,6 +385,7 @@ fa:
       Smart Bike - Blinkers: دوچرخه هوشمند - چشمک زن ها
       Social Sleuth: کارآگاه اجتماعی
       Songwriting - Functions Unplugged Activity: 'ترانه سرایی: فعالیت بدون کار با رایانه توابع'
+      Speed it Up, Slow it Down: سرعت بالا، سرعت کم
       Sprite Lab Project: پروژه آزمایشگاه اسپرایت
       Sprite Movement: حرکت اسپرایت
       Sprite Properties: ویژگی‌های اسپرایت
@@ -389,10 +398,12 @@ fa:
       Teach AI a New Word: آموختن واژه جدید به هوش مصنوعی
       'Technique: Frequency Analysis': 'تکنیک: تحلیل بسامد'
       Terminology Recap: ضبط اصطلاحات
+      The Animation Tab: زبانه انیمیشن
       The Artist in Code Studio: Artist در استودیو کدنویسی
       The Big Event - Unplugged Activity: رویداد بزرگ - فعالیت بدون کار با رایانه
       The Buzzer: زنگ هشدار
       The Collector: جمع آور
+      The Harvester: دروگر
       The Internet - Unplugged Activity: اینترنت - فعالیت بدون کار با رایانه
       The Power of Words - Unplugged Activity: قدرت کلمات - فعالیت بدون کار با رایانه
       The Right App - Unplugged Activity: برنامه درست - فعالیت بدون کار با رایانه
@@ -411,8 +422,10 @@ fa:
       Using Random Numbers: استفاده از اعداد تصادفی
       Using Training Data: استفاده از داده های آموزشی
       Using the LED: استفاده از LED
+      Using the Repeat Block: استفاده از بلوک تکرار
       Using the Switch: استفاده از سوئیچ
       Variables: متغیرها
+      Velocity: سرعت
       Velocity and the Counter Pattern: الگوی شمارشگر و سرعت
       Video: ویدیو
       Video - Encryption and Public Keys: فیلم - کلیدهای عمومی و رمزنگاری
@@ -522,6 +535,7 @@ fa:
       Warm Up: آمادگی
       Website Project: پروژه وبسایتی
       Welcome to Monster Town: به شهر هیولاها خوش آمدید
+      Where'd They Go?: کجا رفتند؟
       While Loops with the Farmer: حلقه های درحالیکه با Farmer
       'Widget: Text Compression': 'ویجت: فشرده سازی متن'
       Wrap-up: خلاصه

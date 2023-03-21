@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd2",
-    "serialized_at": "2023-03-10 01:58:47 UTC",
+    "serialized_at": "2023-03-17 23:11:26 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1551,13 +1551,13 @@
       "key": "3e82967b-8d4f-401c-9dc5-21b4afa88d5b",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show [r the_problem_solving_process/csd2/2023]  video.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem Solving Process?\n\n**Discuss and Display:** Briefly discuss with students what parts of the warm-up activity they felt fell into each step of the problem-solving process before displaying the example answers in the slides:\n- **Define:** when we put into our own words what the problem of a word search is and what the goal is\n- **Prepare:** the brainstorming of different strategies that could be used to solve a word search\n- **Try:** when we picked a strategy and tried to find the words\n- **Reflect:** when we reflected on how they did at the end",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show [r the_problem_solving_process/csd2/2023]  video.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?\n\n",
         "duration": "5",
         "name": "The Problem Solving Process",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This is a good point to remind students that the problem solving process is a cycle and there should be times when they need to repeat steps. For example, if they went back to the list of strategies and picked a different one at any point when solving this problem, they were not only doing the “Reflect” step without realizing it, but going back to the “Prepare” and “Try” steps again.\n"
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
           }
         ]
       },
@@ -1567,8 +1567,25 @@
       }
     },
     {
-      "key": "cd999f19-2644-4089-bb73-0c424aa67ee8",
+      "key": "6cc5f029-731d-433e-9468-a600321dc4e1",
       "position": 11,
+      "properties": {
+        "description": "**Discuss and Display:** Briefly discuss with students what parts of the warm-up activity they felt fell into each step of the problem-solving process before displaying the example answers in the slides:\n- **Define:** when we put into our own words what the problem of a word search is and what the goal is\n- **Prepare:** the brainstorming of different strategies that could be used to solve a word search\n- **Try:** when we picked a strategy and tried to find the words\n- **Reflect:** when we reflected on how they did at the end",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This is a good point to remind students that the problem solving process is a cycle and there should be times when they need to repeat steps. For example, if they went back to the list of strategies and picked a different one at any point when solving this problem, they were not only doing the “Reflect” step without realizing it, but going back to the “Prepare” and “Try” steps again.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6cc5f029-731d-433e-9468-a600321dc4e1",
+        "lesson_activity.key": "a6b64ae4-7d5f-4078-b2b0-9dfd00e55469"
+      }
+    },
+    {
+      "key": "cd999f19-2644-4089-bb73-0c424aa67ee8",
+      "position": 12,
       "properties": {
         "description": "Now that we're familiar with the problem solving process, let's explore how we can use it when designing websites.",
         "remarks": true
@@ -1787,6 +1804,19 @@
       }
     },
     {
+      "key": "b002b53f-2547-42e5-88a4-467e2c144e58",
+      "position": 3,
+      "properties": {
+        "description": "**Code Studio:** Have students answer 5 quick survey questions at the beginning of this unit. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
+        "name": "Reflection",
+        "progression_name": "Check-In Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "b002b53f-2547-42e5-88a4-467e2c144e58",
+        "lesson_activity.key": "8e229ab1-1ff5-42c4-a57d-9e05f7ce317e"
+      }
+    },
+    {
       "key": "7f46781c-6e78-44e0-b7f8-87ad85918803",
       "position": 1,
       "properties": {
@@ -1888,7 +1918,13 @@
       "key": "bb7c079f-129c-4ef3-b3eb-111c99d8a495",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r pair_programming/csd2/2023] video in the slides.\n\n**Questions to consider with the video:**\n- Why do you think professional programmers use pair programming?\n- How do you think pair programming will help you to program better?\n\n**Discussion Goal:** The goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming. As students discuss its potential benefits, make sure they understand that this is an industry-standard practice, not just something fun to do.\n\n\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r pair_programming/csd2/2023] video in the slides.\n\n**Questions to consider with the video:**\n- Why do you think professional programmers use pair programming?\n- How do you think pair programming will help you to program better?\n\n**Discussion Goal:** The goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming. As students discuss its potential benefits, make sure they understand that this is an industry-standard practice, not just something fun to do.\n\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "bb7c079f-129c-4ef3-b3eb-111c99d8a495",
@@ -1942,7 +1978,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Using Resources:** Below you can find recommendations for using the many resources students are introduced to in the lesson. You could consider creating a \"Resource Chart\" to keep track of these options and support students to be self-sufficient as they progress through levels.\n\n* **Level Instructions:** Instructions may introduce small pieces of new content. Each level features a \"Do This\" section explaining what students are supposed to do in that level. Set the expectation early that reading these instructions, not just the \"Do This\" section, is important.\n* **Help and Tips Tab** This tab contains all of the relevant videos and reference guides for a particular level.\n  - **Videos:** Watched as a class, but students can always return to them.\n  * **Reference Guides:** Contain text and diagrams explaining content. These are intended as helpful student resources, not class readings. They are a good place to go for review after learning content or when students get stuck in levels. You may decide to print these and have them available for students as they work through levels.\n* **Documentation** A link to Web Lab's documentation is available in the upper-right corner of the instructions panel. Students can use this to refresh their memory on important tags introduced in the unit."
+            "markdown": "**Facilitating Exploration Levels:** Exploration levels are a great opportunity for students to think critically about code and engage in class discussions. Consider having students discuss with a partner before and after typing in code. Once they have had a chance to explore the code and discuss with a partner, bring the class together for a full-group discussion to discuss what they did in the Exploration level, what they **noticed**, and what they still **wonder**. Use this as an opportunity to address any misconceptions that students may have had about the code initially.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -1967,7 +2003,13 @@
       "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_intro_to_web_lab_part_1/csd2/2023] video in the slides.\n\n**Question to consider with the video:**\n- What are the different parts of Web Lab, and what are they used for?\n\n**Discussion Goals:**\nWhile there are no broad learning goals for this video, students should understand that the instructions for Web Lab levels appear in the wide panel at the top, and the bottom three panels, from left to right, include the list of files that they are working on, the area where they type in their code, and the area where they see the results of their code. For now, they do not need to worry about every button, as they will be explained later, but they should understand that the inspector tool helps them to link parts of the web page with code that created them, and the refresh and save button allows them to update their webpage if it does not automatically update when they change the code.\n",
-        "progression_name": "Video: Intro to Web Lab - Part 1"
+        "progression_name": "Video: Intro to Web Lab - Part 1",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Using Resources:** Below you can find recommendations for using the many resources students are introduced to in the lesson. You could consider creating a \"Resource Chart\" to keep track of these options and support students to be self-sufficient as they progress through levels.\n\n* **Level Instructions:** Instructions may introduce small pieces of new content. Each level features a \"Do This\" section explaining what students are supposed to do in that level. Set the expectation early that reading these instructions, not just the \"Do This\" section, is important.\n* **Help and Tips Tab** This tab contains all of the relevant videos and reference guides for a particular level.\n  - **Videos:** Watched as a class, but students can always return to them.\n  * **Reference Guides:** Contain text and diagrams explaining content. These are intended as helpful student resources, not class readings. They are a good place to go for review after learning content or when students get stuck in levels. You may decide to print these and have them available for students as they work through levels.\n* **Documentation** A link to Web Lab's documentation is available in the upper-right corner of the instructions panel. Students can use this to refresh their memory on important tags introduced in the unit."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f566ffca-771e-42b0-9e36-aad04730db21",
@@ -2024,7 +2066,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Skill Building Levels:** Skill Building levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. "
+            "markdown": "**Facilitating Skill Building Levels:** Skill Building levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete Skill Building levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2374,6 +2416,10 @@
           {
             "type": "teachingTip",
             "markdown": "**Normalizing Mistakes and Supporting Debugging:** As programming levels become more complex, students may find themselves with bugs in their code that they need to untangle. If this happens frequently, this can be a demoralizing experience for students and can affect their self-perception of how capable they are in class. \n\nTo counter this, we recommend normalizing bugs and mistakes as something that happens to everyone - it’s just part of the process. Additionally, consider displaying the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) for students to reference throughout the unit and having [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) available for students to use."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
           }
         ]
       },
@@ -2507,7 +2553,7 @@
       "key": "7366428e-49df-44d7-8482-22049b3a198e",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student a copy of the Project Guide."
+        "description": "**Distribute:** Give each student a copy of the [r html_web_page_2/csd2/2023]."
       },
       "seeding_key": {
         "activity_section.key": "7366428e-49df-44d7-8482-22049b3a198e",
@@ -2530,7 +2576,7 @@
       "key": "c549ac36-f55a-4c2e-b193-9eaffb25f5bc",
       "position": 3,
       "properties": {
-        "description": "As students answer questions about the design of the page, ensure that they are differentiating between the content of the page and the way that content is organized or structured.  After they have completed their designs, ensure that they can identify which tags will be needed for different text on the web pages.",
+        "description": "As students answer questions about the design of the page, ensure that they are differentiating between the content of the page and the way that content is organized or structured.  After they have completed a sketch of their designs, ensure that they can identify which tags will be needed for different text on the web pages.",
         "name": "Step 2: Prepare - Design your Page\r",
         "tips": [
           {
@@ -2561,7 +2607,7 @@
       "key": "d9a90995-3525-4bcb-ab09-2c53b9662448",
       "position": 5,
       "properties": {
-        "description": "**Distribute:**  Hand out a copy of the Problem Solving Process with Programming to pairs of students. Encourage students to look over the guide.\n\n**Display:** Show the slide with the Problem Solving Process graphic"
+        "description": "**Distribute:**  Hand out a copy of the [r problem_solving_process_with_programming/csd2/2023] to pairs of students. Encourage students to look over the guide.\n\n**Display:** Show the slide with the Problem Solving Process graphic\n"
       },
       "seeding_key": {
         "activity_section.key": "d9a90995-3525-4bcb-ab09-2c53b9662448",
@@ -2938,7 +2984,13 @@
       "key": "638ecf6c-33ff-4f35-8742-58e1fec1dfd5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_1/csd2/2023] video in the slides and discuss the CSS video as a class.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_1/csd2/2023] video in the slides and discuss the CSS video as a class.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "638ecf6c-33ff-4f35-8742-58e1fec1dfd5",
@@ -3096,7 +3148,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Journal or Poster?** Just as with the \"HTML Tags\" page in their journals, you may choose to have your class keep track of CSS Properties in a shared class poster.\r\n"
+            "markdown": "<img src=\"https://images.code.org/3d122473886889443e423633d7346994-css properties 2.png\" style=\"margin-left:20px; width:200px; float:right\">\n\n**Journal or Poster?** Just as with the \"HTML Tags\" page in their journals, you may choose to have your class keep track of CSS Properties in a shared class poster.\n"
           }
         ]
       },
@@ -3109,7 +3161,7 @@
       "key": "0eb9a233-a1ad-44ac-a565-c54dcd71a514",
       "position": 3,
       "properties": {
-        "description": "**Group:** Place students in groups of two to five - you'll need at least one group for each of the properties introduced in this lesson.\n\n**Jigsaw:** Assign each group one of the properties introduced today. Each group needs to come up with a description and example for their property.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share:** Have groups add the properties they learned today to their journals or to the class \"CSS Properties\" poster.\n\n**Key Vocabulary:**\n\n* **CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n* **CSS Selector** - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\n"
+        "description": "**Group:** Place students in groups of two to five - you'll need at least one group for each of the properties introduced in this lesson.\n\n**Jigsaw:** Assign each group one of the properties introduced today. Each group needs to come up with a description and example for their property.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share:** Have groups add the properties they learned today to their new \"CSS Properties\" chart or to the class \"CSS Properties\" poster.\n\n**Key Vocabulary:**\n\n* **CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n* **CSS Selector** - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\n"
       },
       "seeding_key": {
         "activity_section.key": "0eb9a233-a1ad-44ac-a565-c54dcd71a514",
@@ -3422,7 +3474,13 @@
       "key": "defee76c-2589-4644-9f10-87089825f834",
       "position": 2,
       "properties": {
-        "description": "**Display:** Present the video to the class.  This video is from the McLaughlin Library at the University of Guelph. \r\n\r\n**Group:** Pair students.\r\n\r\n**Distribute:** Give each student a copy of the activity guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r creative_commons_overview/csd2/2023] video. This video is from the McLaughlin Library at the University of Guelph. \n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "defee76c-2589-4644-9f10-87089825f834",
@@ -3433,7 +3491,7 @@
       "key": "5bbab1c3-4372-44e6-baad-117233e5ee03",
       "position": 3,
       "properties": {
-        "description": "#### Licensing Your Work\r\n\r\n**License Components**"
+        "description": "**Group:** Pair students.\n\n**Distribute:** Give each student a copy of the activity guide.\n\n#### Licensing Your Work\n\n**License Components**"
       },
       "seeding_key": {
         "activity_section.key": "5bbab1c3-4372-44e6-baad-117233e5ee03",
@@ -4312,8 +4370,14 @@
       "key": "0b65c931-ec29-410f-b2af-94c3f760a26b",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r publishing_your_website/csd2/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What do you think your responsibilities are as a website publisher?\n- Why might you want to see the code or remix someone else's site?\n\n**Discussion Goal:** The video content is fairly straightforward, but this is your last check-in with students before they publish, so it's a good time to make sure they have fully thought through the implications of publishing to the entire world. They should make sure that they are not sharing any sensitive information, and that they have the rights to use all the content on the page.\n\nIn addition, as they began to share, they should also think about how they respect the work of other website publishers, in particular their classmates. You may want to take some time to establish classroom norms around how they talk about and give feedback on their classmates' sites, as well as guidelines for using code that others have written.\n",
-        "name": "Video: Publishing Your Website"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r publishing_your_website/csd2/2023] video in the slides.\n\n",
+        "name": "Video: Publishing Your Website",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0b65c931-ec29-410f-b2af-94c3f760a26b",
@@ -4324,6 +4388,7 @@
       "key": "8bda1197-e575-42de-8f84-8357522ea7e6",
       "position": 5,
       "properties": {
+        "description": "**Questions to Consider with Video:**\n- What do you think your responsibilities are as a website publisher?\n- Why might you want to see the code or remix someone else's site?\n\n**Discussion Goal:** The video content is fairly straightforward, but this is your last check-in with students before they publish, so it's a good time to make sure they have fully thought through the implications of publishing to the entire world. They should make sure that they are not sharing any sensitive information, and that they have the rights to use all the content on the page.\n\nIn addition, as they began to share, they should also think about how they respect the work of other website publishers, in particular their classmates. You may want to take some time to establish classroom norms around how they talk about and give feedback on their classmates' sites, as well as guidelines for using code that others have written.\n",
         "progression_name": "Publishing Your Website"
       },
       "seeding_key": {
@@ -4725,7 +4790,13 @@
       "key": "0f4d1407-ccbb-40bf-ba00-9fdb47be9d5b",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in their project groups.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_teamwork/csd2/2023] video in the slides.\n"
+        "description": "**Group:** Place students in their project groups.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r video_teamwork/csd2/2023] video in the slides.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0f4d1407-ccbb-40bf-ba00-9fdb47be9d5b",
@@ -5051,7 +5122,13 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_how_search_works/csd2/2023] video in the slides.\n",
         "name": " How Search Works\r",
-        "progression_name": "Video: How Search Works"
+        "progression_name": "Video: How Search Works",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "909654ed-e8dd-4764-869a-2247139e7413",
@@ -5666,7 +5743,13 @@
       "key": "d331a5e4-050f-40fb-a895-45db32b5ac22",
       "position": 5,
       "properties": {
-        "progression_name": "Share Your Pages"
+        "progression_name": "Share Your Pages",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**How Students Will Share Their HTML:** Due to the functionality of Web Lab, in order to share webpages to create a completed project, students will need to do some copy and pasting of teammates' code into their own project.\n\nThis will require students to complete the following steps:\n1) Click the \"Share\" button on their page, and give the link to teammates in a shared document, by email or however you have students collaborate and share with one another.\n2) Get the \"Share\" link of **each** teammate's webpage\n3) On each teammate's webpage click the \"View Code\" link at the bottom of the screen.\n4) Copy the HTML from each teammates' page into a new webpage in their project.\n5) Copy and paste the correct navigation bar onto each page.\n6) Check that all of the links and images work correctly.\n\n*Students will repeat steps 3-4 to get teammate's CSS code*"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d331a5e4-050f-40fb-a895-45db32b5ac22",
@@ -5921,6 +6004,31 @@
     },
     {
       "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd2_2023"
+        ],
+        "progression": "Check-In Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd2_2023"
+        ],
+        "lesson.key": "Exploring Web Pages",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2023",
+        "activity_section.key": "b002b53f-2547-42e5-88a4-467e2c144e58"
+      },
+      "level_keys": [
+        "intro-pulse-survey_csd2_2023"
+      ]
+    },
+    {
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5945,7 +6053,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5970,7 +6078,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5995,7 +6103,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6020,7 +6128,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -6045,7 +6153,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6070,7 +6178,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -6095,7 +6203,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6120,7 +6228,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6145,7 +6253,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6170,7 +6278,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6195,7 +6303,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -6220,7 +6328,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6245,7 +6353,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6270,7 +6378,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6295,7 +6403,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6320,7 +6428,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6345,7 +6453,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6370,7 +6478,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6395,7 +6503,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6420,7 +6528,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6445,7 +6553,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6470,7 +6578,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6495,7 +6603,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6520,7 +6628,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6545,7 +6653,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -6570,7 +6678,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -6595,7 +6703,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -6620,7 +6728,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6645,7 +6753,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6670,7 +6778,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -6695,7 +6803,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -6720,7 +6828,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6745,7 +6853,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6770,7 +6878,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6795,7 +6903,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6820,7 +6928,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6845,7 +6953,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6870,7 +6978,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6895,7 +7003,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6920,7 +7028,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -6945,7 +7053,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -6970,7 +7078,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6995,7 +7103,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -7020,7 +7128,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7045,7 +7153,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7070,7 +7178,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7095,7 +7203,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7120,7 +7228,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7145,7 +7253,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7170,7 +7278,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -7195,7 +7303,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -7220,7 +7328,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7245,7 +7353,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -7270,7 +7378,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7295,7 +7403,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7320,7 +7428,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7345,7 +7453,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7370,7 +7478,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7395,7 +7503,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -7420,7 +7528,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7445,7 +7553,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -7470,7 +7578,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7495,7 +7603,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7520,7 +7628,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7545,7 +7653,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7570,7 +7678,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7595,7 +7703,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7620,7 +7728,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -7645,7 +7753,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7670,7 +7778,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7695,7 +7803,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7720,7 +7828,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7745,7 +7853,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7770,7 +7878,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7795,7 +7903,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7820,7 +7928,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -7845,7 +7953,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7870,7 +7978,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7895,7 +8003,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7920,7 +8028,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7945,7 +8053,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7970,7 +8078,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7995,7 +8103,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8020,7 +8128,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8045,7 +8153,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -8070,7 +8178,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -8105,6 +8213,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2023",
         "activity_section.key": "c255a733-9244-48ed-a227-eee0659fa4a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-pulse-survey_csd2_2023",
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd2_2023"
+        ],
+        "lesson.key": "Exploring Web Pages",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2023",
+        "activity_section.key": "b002b53f-2547-42e5-88a4-467e2c144e58"
       }
     },
     {
@@ -11637,7 +11757,7 @@
     {
       "key": "0d039da4-6026-442a-a61a-92cde155234a",
       "properties": {
-        "description": "Create a prototype of a web design to meet the needs of a user"
+        "description": "Create a prototype of a web design to meet the needs of a user using the problem-solving process"
       },
       "seeding_key": {
         "lesson.key": "Exploring Web Pages",
@@ -11832,6 +11952,16 @@
       "seeding_key": {
         "lesson.key": "Your Web Page - Prepare",
         "objective.key": "aeed2f2f-07b9-4551-b6c0-77584842f223"
+      }
+    },
+    {
+      "key": "b2ea976a-9c50-4917-af46-a2a3dd3cf181",
+      "properties": {
+        "description": "Understand the steps of the problem-solving process"
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring Web Pages",
+        "objective.key": "b2ea976a-9c50-4917-af46-a2a3dd3cf181"
       }
     },
     {

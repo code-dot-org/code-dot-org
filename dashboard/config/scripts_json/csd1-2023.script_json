@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd1",
-    "serialized_at": "2023-03-10 01:59:08 UTC",
+    "serialized_at": "2023-03-17 19:15:01 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1366,6 +1366,19 @@
       }
     },
     {
+      "key": "e2c9fd7f-f196-4ed5-af46-0398fda3df01",
+      "position": 5,
+      "properties": {
+        "description": "**Code Studio:** Have students answer 5 quick survey questions at the beginning of this unit. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
+        "name": "Reflection",
+        "progression_name": "Check-In Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "e2c9fd7f-f196-4ed5-af46-0398fda3df01",
+        "lesson_activity.key": "9e786f9e-9ab6-4979-87a8-36fa84b7bfe1"
+      }
+    },
+    {
       "key": "08acf852-f955-4746-b3dd-2301cef8ca03",
       "position": 1,
       "properties": {
@@ -1446,7 +1459,13 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r problem_solving_process_1/csd1/2023] video in the slides.\n\n**Questions to consider with the video:**\n- How did you follow the problem-solving process in the last lesson?\n- How could you use this process on a problem in your everyday life?\n\n**Discussion Goal:** The first discussion question is part of the core activity in the rest of the lesson. Students should take time working in their groups to think of specific things that they did that follow each step of the process. The goal of this discussion is to make the abstract steps more concrete and accessible to students by relating them to a shared activity. The second question gives students a chance to expand their understanding of the process to a different problem, seeing how the different steps may look in different domains. The goal of this discussion is to make sure students have a general enough understanding of the process that they can apply it to a wider variety of problems since the process will be used throughout the course in various domains.\n",
         "name": "The Problem Solving Process\r",
-        "progression_name": "Video: Problem Solving Process"
+        "progression_name": "Video: Problem Solving Process",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9b54904f-66a6-4d2c-b41c-e9077a419c6a",
@@ -1982,7 +2001,13 @@
       "key": "7dd50f9a-e8a7-4b4e-97fb-48e6c0d387c8",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r what_is_a_computer/csd1/2023] video in the slides.\n\nThe video presents a computer as a machine that helps with certain kinds of thinking work by manipulating information.  You may want to present the definition as \"a machine that works with information\".\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r what_is_a_computer/csd1/2023] video in the slides.\n\nThe video presents a computer as a machine that helps with certain kinds of thinking work by manipulating information.  You may want to present the definition as \"a machine that works with information\".\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "7dd50f9a-e8a7-4b4e-97fb-48e6c0d387c8",
@@ -2758,7 +2783,7 @@
       "key": "e9cb7588-fbd6-4624-a83d-3dd31aff67e1",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show students the [r what_do_computers_do/csd1/2023] video in the slides which introduces the IOSP model.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r what_do_computers_do/csd1/2023] video in the slides which introduces the IOSP model.\n",
         "progression_name": "Video: IOSP Model"
       },
       "seeding_key": {
@@ -2774,7 +2799,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If you are using journaling, prompt the students to write their answers down in their journals\r\n"
+            "markdown": "If you are using journaling, prompt the students to write their answers down in their journals. \n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**.\n"
           }
         ]
       },
@@ -4456,6 +4481,31 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd1_2023"
+        ],
+        "progression": "Check-In Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd1_2023"
+        ],
+        "lesson.key": "Intro to Problem Solving",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd1-2023",
+        "activity_section.key": "e2c9fd7f-f196-4ed5-af46-0398fda3df01"
+      },
+      "level_keys": [
+        "intro-pulse-survey_csd1_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4478,7 +4528,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4503,7 +4553,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4528,7 +4578,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4553,7 +4603,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4578,7 +4628,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4603,7 +4653,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4628,7 +4678,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4653,7 +4703,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4678,7 +4728,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4703,7 +4753,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4728,7 +4778,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4753,7 +4803,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4778,7 +4828,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4803,7 +4853,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4828,7 +4878,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4853,6 +4903,18 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "intro-pulse-survey_csd1_2023",
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd1_2023"
+        ],
+        "lesson.key": "Intro to Problem Solving",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd1-2023",
+        "activity_section.key": "e2c9fd7f-f196-4ed5-af46-0398fda3df01"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "CSD U1 IO Pet Chooser_2023",

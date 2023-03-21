@@ -14,6 +14,7 @@ require 'json'
 require 'parallel'
 require 'tempfile'
 require 'yaml'
+require 'active_support/core_ext/object/blank'
 
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
@@ -36,9 +37,9 @@ def sync_out(upload_manifests=false)
   end
   clean_up_sync_out(CROWDIN_PROJECTS)
   puts "Sync out completed successfully"
-rescue => e
-  puts "Sync out failed from the error: #{e}"
-  raise e
+rescue => exception
+  puts "Sync out failed from the error: #{exception}"
+  raise exception
 end
 
 # Cleans up any files the sync-out is responsible for managing. When this function is done running,
@@ -343,6 +344,25 @@ def distribute_course_content(locale)
   end
 end
 
+# We provide URLs to the translators for Resources only; because
+# the sync has a side effect of applying Markdown formatting to
+# everything it encounters, we want to make sure to un-Markdownify
+# these URLs
+def postprocess_course_resources(locale, courses_source)
+  courses_yaml = YAML.load_file(courses_source)
+  lang_code = PegasusLanguages.get_code_by_locale(locale)
+  if courses_yaml[lang_code]['data']['resources']
+    courses_resources = courses_yaml[lang_code]['data']['resources']
+    courses_resources.each do |_key, resource|
+      next if resource['url'].blank?
+      resource['url'].strip!
+      resource['url'].delete_prefix!('<')
+      resource['url'].delete_suffix!('>')
+    end
+  end
+  File.write(courses_source, I18nScriptUtils.to_crowdin_yaml(courses_yaml))
+end
+
 # Distribute downloaded translations from i18n/locales
 # back to blockly, apps, pegasus, and dashboard.
 def distribute_translations(upload_manifests)
@@ -362,7 +382,7 @@ def distribute_translations(upload_manifests)
       next unless file_changed?(locale, relative_path)
 
       basename = File.basename(loc_file, ext)
-
+      postprocess_course_resources(locale, loc_file) if File.basename(loc_file) == 'courses.yml'
       # Special case the un-prefixed Yaml file.
       destination = (basename == "base") ?
         "dashboard/config/locales/#{locale}#{ext}" :
@@ -585,15 +605,15 @@ def restore_markdown_headers
     end
     begin
       source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
-    rescue Exception => err
+    rescue Exception => exception
       puts "Error parsing yaml header in source_path=#{source_path} for path=#{path}"
-      raise err
+      raise exception
     end
     begin
       header, content, _line = Documents.new.helpers.parse_yaml_header(path)
-    rescue Exception => err
+    rescue Exception => exception
       puts "Error parsing yaml header path=#{path}"
-      raise err
+      raise exception
     end
     I18nScriptUtils.sanitize_header!(header)
     restored_header = source_header.merge(header)

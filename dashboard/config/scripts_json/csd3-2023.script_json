@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2023-03-10 01:59:45 UTC",
+    "serialized_at": "2023-03-17 23:30:18 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -62,8 +62,8 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "To kick off a unit devoted to problem-solving and developing animations and games, students begin by investigating the design of different animations and games. Students look at a variety of animations and games and attempt to match each design with a potential user. Then students choose a user and attempt to prototype an animation or game design for them on paper or in a digital template. To conclude the activity, students consider what it means to be an animation and game designer and create resources for other users.\n\n**Question of the Day:** How can we design animations and games based on the needs of a user?\n\n",
-        "preparation": "* Review the research resources linked in Code Studio\n* Print a copy of the activity guide for each group of three students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "student_overview": "**Question of the Day:** How is computer science used in entertainment?\n\nIn this lesson, you will explore how Computer Science and specifically programming, plays a role in entertainment or as a vehicle for self-expression. \n\n"
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "student_overview": "**Question of the Day:** How can we design animations and games based on the needs of a user?\n\nIn this lesson, you will explore how we can design animations and games for different users and purposes\n\n"
       },
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
@@ -1954,13 +1954,13 @@
       "key": "122ed1c3-ec23-4041-ba57-4f6ad839c7ec",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?\n\n**Discuss and Display:** Briefly discuss with students what parts of the warm-up activity they felt fell into each step of the problem-solving process before displaying the example answers in the slides:\n* Define: when we put into our own words what the problem of a word search is and what the goal is\n* Prepare: the brainstorming of different strategies that could be used to solve a word search\n* Try: when we picked a strategy and tried to find the words\n* Reflect: when we reflected on how they did at the end\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?\n\n",
         "duration": "5",
         "name": "The Problem Solving Process",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This is a good point to remind students that the problem-solving process is a cycle and there should be times when they need to repeat steps. For example, if they went back to the list of strategies and picked a different one at any point when solving this problem, they were not only doing the “Reflect” step without realizing it but going back to the “Prepare” and “Try” steps again.\n"
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
           }
         ]
       },
@@ -1970,8 +1970,25 @@
       }
     },
     {
-      "key": "250bd25f-afa4-4bf1-a8fb-bb2a706f02cc",
+      "key": "c515a3ba-82d1-4f38-a53a-098b21fe1a1c",
       "position": 9,
+      "properties": {
+        "description": "**Discuss and Display:** Briefly discuss with students what parts of the warm-up activity they felt fell into each step of the problem-solving process before displaying the example answers in the slides:\n* Define: when we put into our own words what the problem of a word search is and what the goal is\n* Prepare: the brainstorming of different strategies that could be used to solve a word search\n* Try: when we picked a strategy and tried to find the words\n* Reflect: when we reflected on how they did at the end\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This is a good point to remind students that the problem-solving process is a cycle and there should be times when they need to repeat steps. For example, if they went back to the list of strategies and picked a different one at any point when solving this problem, they were not only doing the “Reflect” step without realizing it but going back to the “Prepare” and “Try” steps again.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c515a3ba-82d1-4f38-a53a-098b21fe1a1c",
+        "lesson_activity.key": "7c3c87b3-d067-49ac-be07-19be26932566"
+      }
+    },
+    {
+      "key": "250bd25f-afa4-4bf1-a8fb-bb2a706f02cc",
+      "position": 10,
       "properties": {
         "description": "Now that we're familiar with the problem-solving process, let's explore how we can use it when designing animations and games.\n",
         "remarks": true
@@ -2159,6 +2176,19 @@
       },
       "seeding_key": {
         "activity_section.key": "88749839-4617-413e-8f21-d727c457f75a",
+        "lesson_activity.key": "a27c5c4f-395d-46a1-99f5-0adcc3f2880b"
+      }
+    },
+    {
+      "key": "2cea4eb2-5c80-455e-b4f8-236ef11232c3",
+      "position": 2,
+      "properties": {
+        "description": "**Code Studio:** Have students answer 5 quick survey questions at the beginning of this unit. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
+        "name": "Reflection",
+        "progression_name": "Check-In Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "2cea4eb2-5c80-455e-b4f8-236ef11232c3",
         "lesson_activity.key": "a27c5c4f-395d-46a1-99f5-0adcc3f2880b"
       }
     },
@@ -2451,7 +2481,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Pair programming is a great way to increase student confidence and foster the practices of collaboration and communication. You can read more about Pair Programming in the [CSD Curriculum Guide](https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view)\n\n"
+            "markdown": "Pair programming is a great way to increase student confidence and foster the practices of collaboration and communication. You can read more about Pair Programming in the **[CSD Curriculum Guide](https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view)**\n\n"
           }
         ]
       },
@@ -2475,7 +2505,13 @@
       "key": "06a8e7d0-bcf6-462e-ad1c-811252e94962",
       "position": 3,
       "properties": {
-        "progression_name": "Predict - Introduction to Game Lab"
+        "progression_name": "Predict - Introduction to Game Lab",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Predict Levels:** Predict levels are a great opportunity for students to think critically about code and engage in class discussions. Consider having students think of their own prediction and discuss with a partner before typing in their response. Once they're run the code, bring the class together for a full-group discussion to discuss how their predictions were similar or different from the resulting program. Use this as an opportunity to address any misconceptions that students may have had about the code initially.\n\n**Digging Deeper:** For more tips about programming levels, see the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "06a8e7d0-bcf6-462e-ad1c-811252e94962",
@@ -2486,11 +2522,11 @@
       "key": "2ef19cd2-87ef-4290-a62a-8026acca3296",
       "position": 4,
       "properties": {
-        "description": "**Discussion Goal:** The parameters in this level will set the *x* and *y* values for the square. Students should recall this from the previous lesson, but what they may not realize is that the top left corner of the square is what will be placed at the *100 x* and *100 y* locations. Using this new information, they will be able to revisit this code at the next level and play with the *x* and *y* parameters to gain a better understanding.",
+        "description": "**Discussion Goal:** The parameters in this level will set the *x* and *y* values for the square. Students should recall this from the previous lesson, but what they may not realize is that the top left corner of the square is what will be placed at the *100 x* and *100 y* locations. Using this new information, they will be able to revisit this code at the next level and play with the *x* and *y* parameters to gain a better understanding.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_1/csd3/2023] video in the slides.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Using Resources:** Below you can find recommendations for using the many resources students are introduced to in the lesson. You could consider creating a \"Resource Chart\" to keep track of these options and support students to be self-sufficient as they progress through levels. \n\n* **Videos:** Watched as a class, but students can always return to them.\n* **Help and Tips Tab:** This tab contains all of the relevant videos and reference guides for a particular level.\n* **Reference Guides:** Contain text and diagrams explaining content. These are intended as helpful student resources, not class readings. They are a good place to go for review after learning content or when students get stuck in levels. You may decide to print these and have them available for students as they work through levels.\n* **Documentation and Examples:** Hovering over a block will show a short description of what the block does. Clicking the \"See Examples\" link will open the documentation for that block. \n* **Level Instructions:** Instructions may introduce small pieces of new content. Each level features a \"Do This\" section explaining what students are supposed to do in that level. Set the expectation early that reading these instructions, not just the \"Do This\" section, is important."
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
           }
         ]
       },
@@ -2503,7 +2539,13 @@
       "key": "e9a9c705-2850-44bc-a210-dc4b3466a353",
       "position": 5,
       "properties": {
-        "description": "\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_1/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- Where can you find more information about how to use the blocks?\n- What’s an advantage of using block mode?\n\n**Discussion Goal:** \n- *Where can you find more information about how to use the blocks?*\n  * Make sure students understand how to access the block documentation by clicking on the blocks inside the toolbox and clicking \"see examples\".\n- *What’s an advantage of using block mode?*\n  * As students think of ideas of why they might prefer to use block mode, make sure that they understand that the block-based version of the programming language is just as legitimate as the text-based version. Students may offer that blocks make it easier to remember the exact commands or that they don't have to worry about the details of the parentheses or semicolons.\n  * *Alternatively, advantages to text might be that it's easier to edit or that the text takes up less space.*\n"
+        "description": "\n\n\n**Questions to Consider with Video:**\n- Where can you find more information about how to use the blocks?\n- What’s an advantage of using block mode?\n\n**Discussion Goal:** \n- *Where can you find more information about how to use the blocks?*\n  * Make sure students understand how to access the block documentation by clicking on the blocks inside the toolbox and clicking \"see examples\".\n- *What’s an advantage of using block mode?*\n  * As students think of ideas of why they might prefer to use block mode, make sure that they understand that the block-based version of the programming language is just as legitimate as the text-based version. Students may offer that blocks make it easier to remember the exact commands or that they don't have to worry about the details of the parentheses or semicolons.\n  * *Alternatively, advantages to text might be that it's easier to edit or that the text takes up less space.*\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Using Resources:** Below you can find recommendations for using the many resources students are introduced to in the lesson. You could consider creating a \"Resource Chart\" to keep track of these options and support students to be self-sufficient as they progress through levels. \n\n* **Videos:** Watched as a class, but students can always return to them.\n* **Help and Tips Tab:** This tab contains all of the relevant videos and reference guides for a particular level.\n* **Reference Guides:** Contain text and diagrams explaining content. These are intended as helpful student resources, not class readings. They are a good place to go for review after learning content or when students get stuck in levels. You may decide to print these and have them available for students as they work through levels.\n* **Documentation and Examples:** Hovering over a block will show a short description of what the block does. Clicking the \"See Examples\" link will open the documentation for that block. \n* **Level Instructions:** Instructions may introduce small pieces of new content. Each level features a \"Do This\" section explaining what students are supposed to do in that level. Set the expectation early that reading these instructions, not just the \"Do This\" section, is important."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e9a9c705-2850-44bc-a210-dc4b3466a353",
@@ -2518,7 +2560,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Text-to-Speech Options:** The instructions panel includes two options that can support comprehension for students.\n- **Text to Speech** which reads aloud the instructions for students\n- **Microsoft Immersive Reader** which opens a new panel for the instructions and gives controls to change the text size, contrast, or translate to another language.\n\n[Click here to learn more about these options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
+            "markdown": "**Facilitating Skill Building Levels:** Skill Building levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete Skill Building levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in **[this video](https://www.youtube.com/watch?v=q7d_JtyCq1A)**, which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level.\n\n**Digging Deeper:** For more tips about programming levels, see the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2546,7 +2588,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Skill Building Levels:** Skill Building levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete Skill Building levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Text-to-Speech Options:** The instructions panel includes two options that can support comprehension for students.\n- **Text to Speech** which reads aloud the instructions for students\n- **Microsoft Immersive Reader** which opens a new panel for the instructions and gives controls to change the text size, contrast, or translate to another language.\n\n**[Click here to learn more about these options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)**"
           }
         ]
       },
@@ -2563,7 +2605,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class.\n\n**Digging Deeper:** For more tips about programming levels, see the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2580,7 +2622,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Assessment Levels:** Assessment levels contain a single task that requires applying the skills and concepts from the level in order to solve. Students should complete these levels individually and you can use your judgment of how much external help students should have. Assessment levels also contain a rubric that can be used for formative assessment and a box to provide feedback to students - [click here to learn more about using rubrics and giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n**Digging Deeper:** For more tips about assessing student work, see the [CSD Guide to Assessment](https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view)."
+            "markdown": "**Facilitating Assessment Levels:** Assessment levels contain a single task that requires applying the skills and concepts from the level in order to solve. Students should complete these levels individually and you can use your judgment of how much external help students should have. Assessment levels also contain a rubric that can be used for formative assessment and a box to provide feedback to students - **[click here to learn more about using rubrics and giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)**.\n\n**Digging Deeper:** For more tips about assessing student work, see the **[CSD Guide to Assessment](https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view)**."
           },
           {
             "type": "assessmentOpportunity",
@@ -2601,7 +2643,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels.\n\n**Digging Deeper:** For more tips about programming levels, see the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2688,7 +2730,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2717,7 +2759,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Normalizing Mistakes and Supporting Debugging:** As programming levels become more complex, students may find themselves with bugs in their code that they need to untangle. If this happens frequently, this can be a demoralizing experience for students and can affect their self-perception of how capable they are in class. \n\nTo counter this, we recommend normalizing bugs and mistakes as something that happens to everyone - it’s just part of the process. You can show students our [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s), which includes several students normalizing mistakes and discussing debugging strategies that students can use. Additionally, consider displaying the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) for students to reference throughout the unit and having [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) available for students to use."
+            "markdown": "**Normalizing Mistakes and Supporting Debugging:** As programming levels become more complex, students may find themselves with bugs in their code that they need to untangle. If this happens frequently, this can be a demoralizing experience for students and can affect their self-perception of how capable they are in class. \n\nTo counter this, we recommend normalizing bugs and mistakes as something that happens to everyone - it’s just part of the process. You can show students our **[Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s)**, which includes several students normalizing mistakes and discussing debugging strategies that students can use. Additionally, consider displaying the **[Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#)** for students to reference throughout the unit and having **[Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview)** available for students to use."
           }
         ]
       },
@@ -2797,7 +2839,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Input, Output, Processing, and Storage:** These terms are introduced in the Problem Solving and Computing unit in CS Discoveries, so students may already be familiar with them. However, if they need a refresher, you may decide to show the [What Do Computers Do?](https://www.youtube.com/watch?v=92TaQRBwPSs) video which highlights these four functions."
+            "markdown": "**Input, Output, Processing, and Storage:** These terms are introduced in the Problem Solving and Computing unit in CS Discoveries, so students may already be familiar with them. However, if they need a refresher, you may decide to show the **[What Do Computers Do?](https://www.youtube.com/watch?v=92TaQRBwPSs)** video which highlights these four functions."
           }
         ]
       },
@@ -2849,7 +2891,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2873,13 +2915,7 @@
       "key": "6f4336c3-44b3-4569-a53d-676b9a4d2247",
       "position": 3,
       "properties": {
-        "description": "**Discussion Goal:** Students may notice that the term `xPosition` is associated with the value 50, and so when we see the term `xPosition` farther down in the code, they may think it will use the value of 50 in that spot and draw the circle on the left side of the screen. When describing this relationship, they may not have the correct words to describe what's happening and may wonder what the purple `var` keyword means. Encourage students to use other familiar words when describing this relationship, like \"container\" or \"placeholder\", before introducing vocabulary",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Facilitating Predict Levels:** Predict levels are a great opportunity for students to think critically about code and engage in class discussions. Consider having students think of their own prediction and discuss with a partner before typing in their response. Once they're run the code, bring the class together for a full-group discussion to discuss how their predictions were similar or different from the resulting program. Use this as an opportunity to address any misconceptions that students may have had about the code initially.\n\n**Caution: Predict Entries Can't Be Deleted!** Once you enter an answer into the predict box, you are not able to reset it. This can make it difficult to repeat this process with multiple classes. Instead, we recommend entering dummy text like \"Class discussion\" and running the code. This way, the answer isn't \"spoiled\" for future classes. However, this means you will need to keep track of predictions separately such as on a whiteboard or in a document."
-          }
-        ]
+        "description": "**Discussion Goal:** Students may notice that the term `xPosition` is associated with the value 50, and so when we see the term `xPosition` farther down in the code, they may think it will use the value of 50 in that spot and draw the circle on the left side of the screen. When describing this relationship, they may not have the correct words to describe what's happening and may wonder what the purple `var` keyword means. Encourage students to use other familiar words when describing this relationship, like \"container\" or \"placeholder\", before introducing vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "6f4336c3-44b3-4569-a53d-676b9a4d2247",
@@ -2890,7 +2926,13 @@
       "key": "c4ffb29d-cce7-4fcb-a503-1ac238f6b1d7",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_variables/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What are variables used to do?\n- How do you create a variable and assign it a value?\n- What can go into a variable?\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_variables/csd3/2023] video in the slides.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c4ffb29d-cce7-4fcb-a503-1ac238f6b1d7",
@@ -2901,7 +2943,7 @@
       "key": "f518dd78-c3d9-48ab-9702-6c5f51e3bc9b",
       "position": 5,
       "properties": {
-        "description": "**Discussion Goal:** Students should understand that variables hold information and can be accessed using their labels. With simple drawings, students may not see the power of variables, so you may want them to think of some different apps that they use and what information needs to be stored for the app to work, or think about a more complex program that they want to use variables for.\n\nNumbers, text, and colors can all go into variables, as well as more complicated data structures that students will see later in the course.",
+        "description": "**Questions to Consider with Video:**\n- What are variables used to do?\n- How do you create a variable and assign it a value?\n- What can go into a variable?\n\n**Discussion Goal:** Students should understand that variables hold information and can be accessed using their labels. With simple drawings, students may not see the power of variables, so you may want them to think of some different apps that they use and what information needs to be stored for the app to work, or think about a more complex program that they want to use variables for.\n\nNumbers, text, and colors can all go into variables, as well as more complicated data structures that students will see later in the course.",
         "progression_name": "Predict"
       },
       "seeding_key": {
@@ -3060,7 +3102,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3201,7 +3243,7 @@
       "key": "d1c9ed2c-04bf-454a-9fbc-60403662fdd3",
       "position": 2,
       "properties": {
-        "description": "You've learned how to do some really cool things in Game Lab. Today you'll have a chance to put them together to make a unique robot face to share with the world. That means instead of trying to recreate someone else's idea, you get to come up with an idea of your own. Your robot face can be as creative as you want since you can add lots of unique and different features from the shape of its head to the number of eyes or mouths or if it has antennas … the sky’s the limit so it's time to get creative!\n",
+        "description": "You’ve learned how to do some really cool things in Game Lab. Today you’ll have a chance to put them together to make a unique robot face to share with the world. That means instead of trying to recreate someone else’s idea, you get to come up with an idea of your own. You can make your robot look however you want; you can choose the shape of its head, how many eyes or mouths it has, if it has antennas, and more. There is no limit, so let’s come up with something original and unexpected!\n",
         "remarks": true
       },
       "seeding_key": {
@@ -3324,7 +3366,7 @@
       "key": "1e934931-bc5e-45b6-b064-756f73811322",
       "position": 8,
       "properties": {
-        "description": "After you have checked the designs, allow students to log into Code Studio and code their programs. They will have a chance to review all of the blocks they have learned before they start on their robot faces, as some may help them create the features of their robot faces and features. They can complete these activities as a review or use them as resources while they work on their projects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio. \n",
+        "description": "After you have checked the designs, allow students to log into Code Studio and code their programs. They will have a chance to review all of the blocks they have learned before they start on their robot faces, as some may help them create the features of their robot faces. They can complete these activities as a review or use them as resources while they work on their projects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio. \n",
         "progression_name": "Review Shape Blocks"
       },
       "seeding_key": {
@@ -3438,7 +3480,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3462,7 +3504,13 @@
       "key": "1cf25bad-898f-4920-9419-15d582df7747",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_sprites/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What is a sprite?\n- What problem do sprites solve?\n\n**Discussion Goal:** From the video, students should think of sprites as a _container_ that helps us manage different properties of an image and helps us solve the problem of organizing a lot of information about how something should be drawn to a screen. It's okay if students also bring in some of their own experiences with animations and sprites, but emphasize that in Game Lab: a sprite isn't the animation or image itself, but the container that we can attach an image to. This helps manage expectations in the next few levels, where a sprite is just a gray rectangle until we learn to add animations to it.\n\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_sprites/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What is a sprite?\n- What problem do sprites solve?\n\n**Discussion Goal:** From the video, students should think of sprites as a _container_ that helps us manage different properties of an image and helps us solve the problem of organizing a lot of information about how something should be drawn to a screen. It's okay if students also bring in some of their own experiences with animations and sprites, but emphasize that in Game Lab: a sprite isn't the animation or image itself, but the container that we can attach an image to. This helps manage expectations in the next few levels, where a sprite is just a gray rectangle until we learn to add animations to it.\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1cf25bad-898f-4920-9419-15d582df7747",
@@ -3587,13 +3635,7 @@
       "position": 12,
       "properties": {
         "name": "Challenges",
-        "progression_name": "Challenges",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Level 11e - Finding an Image Online**: Because we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\n\n- [Creative Commons Search](https://search.creativecommons.org/)\n- [Google Image Advanced Search](https://www.google.com/advanced_image_search)\n- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n- [Flickr Creative Commons](https://www.flickr.com/creativecommons/)"
-          }
-        ]
+        "progression_name": "Challenges"
       },
       "seeding_key": {
         "activity_section.key": "aedcf92f-9a8c-451c-b17c-2b9d4cef55fe",
@@ -3676,7 +3718,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3697,10 +3739,26 @@
       }
     },
     {
-      "key": "d86c69ad-d7d1-4015-bb86-0d34ade76e5e",
+      "key": "018269af-e160-4502-9b18-15c10310dd92",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_properties_needs_updating_/csd3/2023] video in the slides.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n- **Property:** A label for a characteristic of a sprite, such as its location and appearance\n- **Dot notation:** the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_properties_needs_updating_/csd3/2023] video in the slides.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n- **Property:** A label for a characteristic of a sprite, such as its location and appearance\n- **Dot notation:** the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "018269af-e160-4502-9b18-15c10310dd92",
+        "lesson_activity.key": "c8d31704-9871-48a7-9d5f-fa4a893b367d"
+      }
+    },
+    {
+      "key": "d86c69ad-d7d1-4015-bb86-0d34ade76e5e",
+      "position": 4,
+      "properties": {
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -3710,7 +3768,7 @@
     },
     {
       "key": "e0cbb128-fcb7-464f-a506-7d78fd66a6f0",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Practice"
       },
@@ -3721,7 +3779,7 @@
     },
     {
       "key": "779e2809-80da-45b8-ba9b-44cc55386338",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -3738,7 +3796,7 @@
     },
     {
       "key": "c9cb7767-98ce-4e02-9d64-56927deb319e",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Challenges"
       },
@@ -3812,7 +3870,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -4220,7 +4278,13 @@
       "key": "91af4e95-88e2-457c-b6df-1d704404f2c8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_the_draw_loop/csd3/2023] video in the slides.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_the_draw_loop/csd3/2023] video in the slides.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "91af4e95-88e2-457c-b6df-1d704404f2c8",
@@ -4258,7 +4322,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -4421,7 +4485,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -4442,10 +4506,27 @@
       }
     },
     {
-      "key": "ddf3d6d4-d7d5-454a-9458-e08be66ef5ef",
+      "key": "edb20353-f050-4cb3-99f4-ddd66a421ce9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_movement/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What is the counter pattern?\n- How does the counter pattern move sprites across the screen?\n\n**Discussion Goal:** \n- *What is the counter pattern?*\n  - Students may describe the counter pattern in various ways. Make sure that they go beyond just stating the blocks or code that the counter pattern uses. \n  - They should understand that the counter pattern allows the programmer to update the value of a variable in a pattern that counts up (or down) on every iteration of the draw loop. \n  - This can be used for many different things, such as spinning, growing, shrinking, or timers, but it's most often used to move sprites across the screen.\n- *How does the counter pattern move sprites across the screen?*\n  - When a sprite's x or y property is updated in a counter pattern, its position changes in a consistent way over time, causing it to move across the screen. \n  - Students should be able to explain that movement for an animation is just a change in position and that changing a sprite's x position will cause it to move horizontally, and changing a sprite's y position will cause it to move vertically.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_movement/csd3/2023] video in the slides.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "edb20353-f050-4cb3-99f4-ddd66a421ce9",
+        "lesson_activity.key": "dffb2ecb-625c-4efa-ad89-8072cecade14"
+      }
+    },
+    {
+      "key": "ddf3d6d4-d7d5-454a-9458-e08be66ef5ef",
+      "position": 4,
+      "properties": {
+        "description": "\n**Questions to Consider with Video:**\n- What is the counter pattern?\n- How does the counter pattern move sprites across the screen?\n\n**Discussion Goal:** \n- *What is the counter pattern?*\n  - Students may describe the counter pattern in various ways. Make sure that they go beyond just stating the blocks or code that the counter pattern uses. \n  - They should understand that the counter pattern allows the programmer to update the value of a variable in a pattern that counts up (or down) on every iteration of the draw loop. \n  - This can be used for many different things, such as spinning, growing, shrinking, or timers, but it's most often used to move sprites across the screen.\n- *How does the counter pattern move sprites across the screen?*\n  - When a sprite's x or y property is updated in a counter pattern, its position changes in a consistent way over time, causing it to move across the screen. \n  - Students should be able to explain that movement for an animation is just a change in position and that changing a sprite's x position will cause it to move horizontally, and changing a sprite's y position will cause it to move vertically.\n",
         "progression_name": "Video: Sprite Movement"
       },
       "seeding_key": {
@@ -4455,7 +4536,7 @@
     },
     {
       "key": "5674cab2-158c-4664-b9b4-26406edfaaca",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -4466,7 +4547,7 @@
     },
     {
       "key": "d73ccc18-34c2-4fcc-9c31-b96821773a58",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Practice"
       },
@@ -4477,7 +4558,7 @@
     },
     {
       "key": "63ba5b2f-c777-4d9a-b3ea-dda021f3cc33",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -4494,7 +4575,7 @@
     },
     {
       "key": "cc48678f-8c9a-4ee4-82b7-71f64e57ba83",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Challenges"
       },
@@ -4875,7 +4956,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -4896,10 +4977,27 @@
       }
     },
     {
-      "key": "4a3fafce-b94e-4146-a883-b1a761edf661",
+      "key": "529ce195-5758-4385-8d85-76a4554d6201",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r boolean_expressions/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What is a Boolean expression?\n- What’s an expression that would evaluate to true?\n- What’s an expression that would evaluate to false?\n\n**Discussion Goal:** \n- *What is a Boolean expression?*\n  - **Boolean Expression** - in programming, an expression that evaluates to True or False.\n  - Students should be able to explain that a Boolean expression is something that is either true or false, similar to a yes or no question. \n  - The more formal way to say this is that Boolean expressions evaluate to either true or false. That means that when the computer processes a Boolean expression, it checks to see whether the expression describes a situation that is true or false, and then uses the value of either true or false wherever the expression is found.\n- *What’s an expression that would evaluate to true?*\n  - Some examples of Boolean expressions that evaluate to true are `3 > 1` and `4 <= 7`, but press students to think of expressions that might be better represented by variables, such as `studentAge < 70` or `sizeOfClass > 2`.\n- *What’s an expression that would evaluate to false?*\n  - Some examples of Boolean expressions that evaluate to false are `4 == 7`, `schoolName == \"Hogwarts\"`, and `currentYear < 1000`.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r boolean_expressions/csd3/2023] video in the slides.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "529ce195-5758-4385-8d85-76a4554d6201",
+        "lesson_activity.key": "e4b27363-1e82-46b2-9a42-7a9cb8336a08"
+      }
+    },
+    {
+      "key": "4a3fafce-b94e-4146-a883-b1a761edf661",
+      "position": 4,
+      "properties": {
+        "description": "**Questions to Consider with Video:**\n- What is a Boolean expression?\n- What’s an expression that would evaluate to true?\n- What’s an expression that would evaluate to false?\n\n**Discussion Goal:** \n- *What is a Boolean expression?*\n  - **Boolean Expression** - in programming, an expression that evaluates to True or False.\n  - Students should be able to explain that a Boolean expression is something that is either true or false, similar to a yes or no question. \n  - The more formal way to say this is that Boolean expressions evaluate to either true or false. That means that when the computer processes a Boolean expression, it checks to see whether the expression describes a situation that is true or false, and then uses the value of either true or false wherever the expression is found.\n- *What’s an expression that would evaluate to true?*\n  - Some examples of Boolean expressions that evaluate to true are `3 > 1` and `4 <= 7`, but press students to think of expressions that might be better represented by variables, such as `studentAge < 70` or `sizeOfClass > 2`.\n- *What’s an expression that would evaluate to false?*\n  - Some examples of Boolean expressions that evaluate to false are `4 == 7`, `schoolName == \"Hogwarts\"`, and `currentYear < 1000`.\n",
         "progression_name": "Video: Booleans"
       },
       "seeding_key": {
@@ -4909,7 +5007,7 @@
     },
     {
       "key": "78e20347-1146-453b-9549-d741338297bb",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Quick Check"
       },
@@ -4920,7 +5018,7 @@
     },
     {
       "key": "51e62f99-3a45-4c5a-ae5d-497b2fa80fda",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -4931,7 +5029,7 @@
     },
     {
       "key": "23e30728-5bed-44bd-8c4b-1074b93e8239",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r conditional_statements/csd3/2023] video in the slides.\n\n**Question to Consider with Video:**\n- When would you want to use an if statement?\n\n**Discussion Goal:** The broad point of this question is that programmers use if statements when they want the program to run differently in response to different situations. Encourage students to think of particular situations in which this would be the case. For example, they might want their characters to move faster when a \"bonus\" is in effect, or maybe they want more enemies to appear when the player reaches a certain level. Maybe they want the program to react in some way if a user presses a key or clicks the mouse, or they want a character to change animations if it touches a particular item.\n\n\n",
         "progression_name": "Video: Conditional Statements"
@@ -4943,7 +5041,7 @@
     },
     {
       "key": "87a43710-2d57-4737-9558-391256ad0dff",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -4954,7 +5052,7 @@
     },
     {
       "key": "05960f57-abb3-49d9-b863-efff268df7f3",
-      "position": 8,
+      "position": 9,
       "properties": {
         "progression_name": "Practice"
       },
@@ -4965,7 +5063,7 @@
     },
     {
       "key": "fa173d6c-bb83-4e25-8ee9-41863f73267c",
-      "position": 9,
+      "position": 10,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -4982,7 +5080,7 @@
     },
     {
       "key": "412d441d-82b0-4b0d-ad9b-98d5938d5ab8",
-      "position": 10,
+      "position": 11,
       "properties": {
         "progression_name": "Challenges"
       },
@@ -5046,7 +5144,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -5183,7 +5281,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -5204,10 +5302,27 @@
       }
     },
     {
-      "key": "de342f84-bb35-4fc0-abaf-43d0865483b5",
+      "key": "286ee182-4df3-4f7d-bef6-1011fcf1b56a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:**  Show students the [r if_else_statements/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What’s an example of when you would need an “if/else” statement?\n\n**Discussion Goal:** Make sure students are thinking of situations in which they want two different things to happen, depending on the situation. For example, they may say that they want one animation if the sprite is moving to the left and a different animation if the sprite is moving to the right. Challenge the students to think about when they would just use an [`if()`(#64B5F6)](/docs/ide/applab/expressions/ifElseBlock) block, and when an [`if()/else()`(#64B5F6)](/docs/ide/applab/expressions/ifElseBlock) block is necessary.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:**  Show students the [r if_else_statements/csd3/2023] video in the slides.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "286ee182-4df3-4f7d-bef6-1011fcf1b56a",
+        "lesson_activity.key": "a0e3d4a9-61da-4390-8170-69fd142afce4"
+      }
+    },
+    {
+      "key": "de342f84-bb35-4fc0-abaf-43d0865483b5",
+      "position": 4,
+      "properties": {
+        "description": "**Questions to Consider with Video:**\n- What’s an example of when you would need an “if/else” statement?\n\n**Discussion Goal:** Make sure students are thinking of situations in which they want two different things to happen, depending on the situation. For example, they may say that they want one animation if the sprite is moving to the left and a different animation if the sprite is moving to the right. Challenge the students to think about when they would just use an [`if()`(#64B5F6)](/docs/ide/applab/expressions/ifElseBlock) block, and when an [`if()/else()`(#64B5F6)](/docs/ide/applab/expressions/ifElseBlock) block is necessary.\n",
         "progression_name": "Video: If/Else Statements"
       },
       "seeding_key": {
@@ -5217,7 +5332,7 @@
     },
     {
       "key": "37e99532-82df-48f8-9ef1-d066e8125b8d",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -5228,7 +5343,7 @@
     },
     {
       "key": "0d87ba04-d0b6-4a2f-ae9e-17f8cd485d9c",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Practice"
       },
@@ -5239,7 +5354,7 @@
     },
     {
       "key": "a5d9d609-e585-4cde-bd83-e99589c3edb7",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -5256,7 +5371,7 @@
     },
     {
       "key": "6cdbe394-dd8d-414f-9c39-0f84be8ee6fb",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Challenges"
       },
@@ -5594,8 +5709,14 @@
       "key": "abb8365c-303e-410d-a30b-a54115599db1",
       "position": 3,
       "properties": {
-        "description": "**Discussion Goal:** Student predictions will vary but some may predict that the new [`velocity`(#f78183)](/docs/ide/gamelab/expressions/velocityX) block might make the sprite move faster than the counter pattern. Once they run the program, students will see that the two lines of code cause the same sprite movement - the difference being the  [`velocity`(#f78183)](/docs/ide/gamelab/expressions/velocityX) block hides the details of the counter pattern *and* happens *outside* the draw loop.",
-        "progression_name": "Skill Building"
+        "description": "**Discussion Goal:** Student predictions will vary but some may predict that the new [`velocity`(#f78183)](/docs/ide/gamelab/expressions/velocityX) block might make the sprite move faster than the counter pattern. Once they run the program, students will see that the two lines of code cause the same sprite movement - the difference being the  [`velocity`(#f78183)](/docs/ide/gamelab/expressions/velocityX) block hides the details of the counter pattern *and* happens *outside* the draw loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r velocity/csd3/2023] video in the slides.\n",
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "abb8365c-303e-410d-a30b-a54115599db1",
@@ -5606,7 +5727,7 @@
       "key": "c2999695-82bf-4122-ad30-5d496c903195",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r velocity/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- Why might you want to use a velocity block instead of the counter pattern?\n- Give an example of a counter pattern and how you could use a velocity block instead.\n\n**Discussion Goal:**\n- *Why might you want to use a velocity block instead of the counter pattern?*\n  - It may not be obvious to students why the velocity block is so powerful. The immediate answer is that the velocity block allows a programmer to set the velocity at the beginning of the program and not have to worry about the counter pattern inside the draw loop (as Game Lab will take care of that). \n  - If students are having trouble thinking of situations in which the velocity block provides a big advantage, assure them that they will tackle some problems in the coming lesson that they will need this block for.\n- *Give an example of a counter pattern and how you could use a velocity block instead.*\n  - As students give you examples, try to elicit answers that use both positive and negative numbers, and that use the x and y positions as well as sprite rotation.\n",
+        "description": "**Questions to Consider with Video:**\n- Why might you want to use a velocity block instead of the counter pattern?\n- Give an example of a counter pattern and how you could use a velocity block instead.\n\n**Discussion Goal:**\n- *Why might you want to use a velocity block instead of the counter pattern?*\n  - It may not be obvious to students why the velocity block is so powerful. The immediate answer is that the velocity block allows a programmer to set the velocity at the beginning of the program and not have to worry about the counter pattern inside the draw loop (as Game Lab will take care of that). \n  - If students are having trouble thinking of situations in which the velocity block provides a big advantage, assure them that they will tackle some problems in the coming lesson that they will need this block for.\n- *Give an example of a counter pattern and how you could use a velocity block instead.*\n  - As students give you examples, try to elicit answers that use both positive and negative numbers, and that use the x and y positions as well as sprite rotation.\n",
         "progression_name": "Video: Velocity"
       },
       "seeding_key": {
@@ -5623,7 +5744,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           },
           {
             "type": "teachingTip",
@@ -6230,7 +6351,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -6474,7 +6595,13 @@
       "key": "78c05816-0e2f-48a6-91a1-40edc89a48a8",
       "position": 3,
       "properties": {
-        "progression_name": "Skill Building"
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "78c05816-0e2f-48a6-91a1-40edc89a48a8",
@@ -6787,6 +6914,13 @@
       "key": "1693c6a1-f3db-4262-a4ba-99e228c5a39d",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r functions/csd3/2023] video in the slides.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1693c6a1-f3db-4262-a4ba-99e228c5a39d",
@@ -6797,7 +6931,7 @@
       "key": "c596e167-e8d2-4747-a7f2-1e1709c4d83c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r functions/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- Think of a time when a function might have helped you write a program.\n- What code would go in the **definition** of the function?\n- When would you **call** the function?\n- What would you name it?\n\n**Discussion Goal:** Ensure students know the key vocabulary term **Function** and its definition as *a named bit of programming instructions.* Make sure students understand the role of the two steps in using functions, as well as seeing functions as a form of \"chunking\" or abstraction. The function definition should include all of the code that they want to run, and the name of the function should be a short description of the purpose of the code. The function should be called at each place in the program where the student wants that block of code to run.\n",
+        "description": "**Questions to Consider with Video:**\n- Think of a time when a function might have helped you write a program.\n- What code would go in the **definition** of the function?\n- When would you **call** the function?\n- What would you name it?\n\n**Discussion Goal:** Ensure students know the key vocabulary term **Function** and its definition as *a named bit of programming instructions.* Make sure students understand the role of the two steps in using functions, as well as seeing functions as a form of \"chunking\" or abstraction. The function definition should include all of the code that they want to run, and the name of the function should be a short description of the purpose of the code. The function should be called at each place in the program where the student wants that block of code to run.\n",
         "progression_name": "Video: Functions"
       },
       "seeding_key": {
@@ -6810,7 +6944,13 @@
       "position": 3,
       "properties": {
         "description": "**Transition:** Move students into Code Studio where they will learn to create and call functions.\n\nThe first prediction level program is the first time they will see functions in action.\n\n**Discuss:** Students should consider and discuss:\n\n* What will be drawn on the screen and why?\n\n**Discussion Goal:** Predictions will vary but after viewing the Functions video, students should be able to predict that the program will draw what is inside the `drawBackground` and `drawPlanet` blocks of code. It is important to point out that the `drawPlanet` function was called twice which is why there are two planets drawn on the screen, each one a different color and location. Students should also notice the `drawStar` function being called *within* the `drawBackground` function multiple times rather than at the top of the program like the other function calls. You can take this opportunity to discuss how this helped organize and simplify the code since the stars are part of the background.",
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d11d117e-695b-4e36-bb74-e0a13e6bcf51",
@@ -7690,6 +7830,31 @@
     },
     {
       "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd3_2023"
+        ],
+        "progression": "Check-In Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd3_2023"
+        ],
+        "lesson.key": "Programming for Entertainment",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "2cea4eb2-5c80-455e-b4f8-236ef11232c3"
+      },
+      "level_keys": [
+        "intro-pulse-survey_csd3_2023"
+      ]
+    },
+    {
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7714,7 +7879,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7739,7 +7904,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7764,7 +7929,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7789,7 +7954,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7814,7 +7979,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -7839,7 +8004,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -7864,7 +8029,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7889,7 +8054,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -7914,7 +8079,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7939,7 +8104,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7964,7 +8129,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7989,7 +8154,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8014,7 +8179,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8039,7 +8204,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -8064,7 +8229,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -8089,7 +8254,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8114,7 +8279,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -8139,7 +8304,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -8164,7 +8329,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8189,7 +8354,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8214,7 +8379,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8239,7 +8404,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8264,7 +8429,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -8289,7 +8454,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8314,7 +8479,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -8339,7 +8504,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -8364,7 +8529,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8389,7 +8554,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8414,7 +8579,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8439,7 +8604,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8464,7 +8629,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -8489,7 +8654,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8514,7 +8679,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -8539,7 +8704,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -8564,7 +8729,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8589,7 +8754,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8614,7 +8779,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8639,7 +8804,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8664,7 +8829,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8689,7 +8854,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8714,7 +8879,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -8739,7 +8904,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -8764,7 +8929,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -8789,7 +8954,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -8814,7 +8979,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -8839,7 +9004,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -8864,7 +9029,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -8889,7 +9054,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8914,7 +9079,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8939,7 +9104,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8964,7 +9129,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8989,7 +9154,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -9014,7 +9179,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9039,7 +9204,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9064,7 +9229,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9089,7 +9254,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -9114,7 +9279,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9139,7 +9304,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -9164,7 +9329,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9189,7 +9354,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9214,7 +9379,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9239,7 +9404,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9264,7 +9429,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9289,7 +9454,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9314,7 +9479,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9339,7 +9504,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9364,7 +9529,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9389,7 +9554,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9414,7 +9579,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -9439,7 +9604,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9464,7 +9629,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9489,7 +9654,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -9514,7 +9679,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9539,7 +9704,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9564,7 +9729,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -9589,7 +9754,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -9614,7 +9779,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -9639,7 +9804,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9664,7 +9829,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9689,7 +9854,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -9714,7 +9879,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9739,7 +9904,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9764,7 +9929,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9789,7 +9954,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9814,7 +9979,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9839,7 +10004,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9864,7 +10029,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9889,7 +10054,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9914,7 +10079,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 92,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9939,7 +10104,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -9964,7 +10129,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9989,7 +10154,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10014,7 +10179,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -10039,7 +10204,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10064,7 +10229,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10089,7 +10254,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10114,7 +10279,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10139,7 +10304,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10164,7 +10329,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -10189,7 +10354,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -10214,7 +10379,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -10239,7 +10404,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 105,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10264,7 +10429,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10289,7 +10454,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10314,7 +10479,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10339,7 +10504,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -10364,7 +10529,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10389,7 +10554,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 111,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -10414,7 +10579,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 112,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10439,7 +10604,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 113,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10464,7 +10629,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 114,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10489,7 +10654,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 115,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -10514,7 +10679,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 116,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -10539,7 +10704,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 117,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -10564,7 +10729,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 118,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -10589,7 +10754,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 119,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -10614,7 +10779,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 120,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -10639,7 +10804,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 121,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10664,7 +10829,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 122,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10689,7 +10854,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 123,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10714,7 +10879,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 124,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10739,7 +10904,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 125,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -10764,7 +10929,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 126,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -10789,7 +10954,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 127,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -10814,7 +10979,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 128,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10839,7 +11004,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 129,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -10864,7 +11029,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 130,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -10889,7 +11054,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 131,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10914,7 +11079,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 132,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10939,7 +11104,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 133,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10964,7 +11129,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 134,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10989,7 +11154,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 135,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -11014,7 +11179,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 136,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11039,7 +11204,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 137,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -11064,7 +11229,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 138,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11089,11 +11254,14 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 139,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games side scroller demo_2023"
+        ],
         "progression": "Side Scroller Example"
       },
       "bonus": false,
@@ -11111,7 +11279,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 140,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11136,7 +11304,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 141,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11161,7 +11329,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 142,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -11186,7 +11354,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 143,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11211,7 +11379,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 144,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11236,7 +11404,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 145,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11261,7 +11429,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 146,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11286,7 +11454,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 147,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11311,7 +11479,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 148,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11336,7 +11504,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 149,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -11361,7 +11529,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 150,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -11386,7 +11554,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 151,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11411,7 +11579,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 152,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -11436,7 +11604,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 153,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11461,7 +11629,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 154,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11486,7 +11654,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 155,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11511,7 +11679,7 @@
       ]
     },
     {
-      "chapter": 155,
+      "chapter": 156,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -11536,7 +11704,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 157,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -11561,7 +11729,7 @@
       ]
     },
     {
-      "chapter": 157,
+      "chapter": 158,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -11586,7 +11754,7 @@
       ]
     },
     {
-      "chapter": 158,
+      "chapter": 159,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11611,7 +11779,7 @@
       ]
     },
     {
-      "chapter": 159,
+      "chapter": 160,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -11636,7 +11804,7 @@
       ]
     },
     {
-      "chapter": 160,
+      "chapter": 161,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11661,11 +11829,14 @@
       ]
     },
     {
-      "chapter": 161,
+      "chapter": 162,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games flyer demo_2023"
+        ],
         "progression": "Flyer Game Example"
       },
       "bonus": false,
@@ -11683,7 +11854,7 @@
       ]
     },
     {
-      "chapter": 162,
+      "chapter": 163,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11708,7 +11879,7 @@
       ]
     },
     {
-      "chapter": 163,
+      "chapter": 164,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11733,7 +11904,7 @@
       ]
     },
     {
-      "chapter": 164,
+      "chapter": 165,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11758,7 +11929,7 @@
       ]
     },
     {
-      "chapter": 165,
+      "chapter": 166,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -11783,7 +11954,7 @@
       ]
     },
     {
-      "chapter": 166,
+      "chapter": 167,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11808,7 +11979,7 @@
       ]
     },
     {
-      "chapter": 167,
+      "chapter": 168,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11833,7 +12004,7 @@
       ]
     },
     {
-      "chapter": 168,
+      "chapter": 169,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11858,7 +12029,7 @@
       ]
     },
     {
-      "chapter": 169,
+      "chapter": 170,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11883,7 +12054,7 @@
       ]
     },
     {
-      "chapter": 170,
+      "chapter": 171,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11908,7 +12079,7 @@
       ]
     },
     {
-      "chapter": 171,
+      "chapter": 172,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -11933,7 +12104,7 @@
       ]
     },
     {
-      "chapter": 172,
+      "chapter": 173,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -11958,7 +12129,7 @@
       ]
     },
     {
-      "chapter": 173,
+      "chapter": 174,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11983,7 +12154,7 @@
       ]
     },
     {
-      "chapter": 174,
+      "chapter": 175,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -12008,7 +12179,7 @@
       ]
     },
     {
-      "chapter": 175,
+      "chapter": 176,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -12033,7 +12204,7 @@
       ]
     },
     {
-      "chapter": 176,
+      "chapter": 177,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -12058,7 +12229,7 @@
       ]
     },
     {
-      "chapter": 177,
+      "chapter": 178,
       "position": 9,
       "activity_section_position": 3,
       "assessment": true,
@@ -12083,7 +12254,7 @@
       ]
     },
     {
-      "chapter": 178,
+      "chapter": 179,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -12108,7 +12279,7 @@
       ]
     },
     {
-      "chapter": 179,
+      "chapter": 180,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12133,7 +12304,7 @@
       ]
     },
     {
-      "chapter": 180,
+      "chapter": 181,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12158,7 +12329,7 @@
       ]
     },
     {
-      "chapter": 181,
+      "chapter": 182,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -12183,7 +12354,7 @@
       ]
     },
     {
-      "chapter": 182,
+      "chapter": 183,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -12208,7 +12379,7 @@
       ]
     },
     {
-      "chapter": 183,
+      "chapter": 184,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -12233,7 +12404,7 @@
       ]
     },
     {
-      "chapter": 184,
+      "chapter": 185,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -12258,7 +12429,7 @@
       ]
     },
     {
-      "chapter": 185,
+      "chapter": 186,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -12283,7 +12454,7 @@
       ]
     },
     {
-      "chapter": 186,
+      "chapter": 187,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -12308,7 +12479,7 @@
       ]
     },
     {
-      "chapter": 187,
+      "chapter": 188,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -12333,7 +12504,7 @@
       ]
     },
     {
-      "chapter": 188,
+      "chapter": 189,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -12358,7 +12529,7 @@
       ]
     },
     {
-      "chapter": 189,
+      "chapter": 190,
       "position": 11,
       "activity_section_position": 4,
       "assessment": false,
@@ -12383,7 +12554,7 @@
       ]
     },
     {
-      "chapter": 190,
+      "chapter": 191,
       "position": 12,
       "activity_section_position": 5,
       "assessment": false,
@@ -12408,7 +12579,7 @@
       ]
     },
     {
-      "chapter": 191,
+      "chapter": 192,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -12433,7 +12604,7 @@
       ]
     },
     {
-      "chapter": 192,
+      "chapter": 193,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12458,7 +12629,7 @@
       ]
     },
     {
-      "chapter": 193,
+      "chapter": 194,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12483,7 +12654,7 @@
       ]
     },
     {
-      "chapter": 194,
+      "chapter": 195,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -12508,7 +12679,7 @@
       ]
     },
     {
-      "chapter": 195,
+      "chapter": 196,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -12533,7 +12704,7 @@
       ]
     },
     {
-      "chapter": 196,
+      "chapter": 197,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -12558,7 +12729,7 @@
       ]
     },
     {
-      "chapter": 197,
+      "chapter": 198,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -12583,7 +12754,7 @@
       ]
     },
     {
-      "chapter": 198,
+      "chapter": 199,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -12608,7 +12779,7 @@
       ]
     },
     {
-      "chapter": 199,
+      "chapter": 200,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -12633,7 +12804,7 @@
       ]
     },
     {
-      "chapter": 200,
+      "chapter": 201,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -12658,7 +12829,7 @@
       ]
     },
     {
-      "chapter": 201,
+      "chapter": 202,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -12683,7 +12854,7 @@
       ]
     },
     {
-      "chapter": 202,
+      "chapter": 203,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -12708,7 +12879,7 @@
       ]
     },
     {
-      "chapter": 203,
+      "chapter": 204,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -12733,7 +12904,7 @@
       ]
     },
     {
-      "chapter": 204,
+      "chapter": 205,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -12758,7 +12929,7 @@
       ]
     },
     {
-      "chapter": 205,
+      "chapter": 206,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -12783,7 +12954,7 @@
       ]
     },
     {
-      "chapter": 206,
+      "chapter": 207,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
@@ -12808,7 +12979,7 @@
       ]
     },
     {
-      "chapter": 207,
+      "chapter": 208,
       "position": 16,
       "activity_section_position": 4,
       "assessment": false,
@@ -12833,7 +13004,7 @@
       ]
     },
     {
-      "chapter": 208,
+      "chapter": 209,
       "position": 17,
       "activity_section_position": 1,
       "assessment": true,
@@ -12858,7 +13029,7 @@
       ]
     },
     {
-      "chapter": 209,
+      "chapter": 210,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
@@ -12883,7 +13054,7 @@
       ]
     },
     {
-      "chapter": 210,
+      "chapter": 211,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12908,7 +13079,7 @@
       ]
     },
     {
-      "chapter": 211,
+      "chapter": 212,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12933,7 +13104,7 @@
       ]
     },
     {
-      "chapter": 212,
+      "chapter": 213,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12958,7 +13129,7 @@
       ]
     },
     {
-      "chapter": 213,
+      "chapter": 214,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -12983,7 +13154,7 @@
       ]
     },
     {
-      "chapter": 214,
+      "chapter": 215,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -13008,7 +13179,7 @@
       ]
     },
     {
-      "chapter": 215,
+      "chapter": 216,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -13033,7 +13204,7 @@
       ]
     },
     {
-      "chapter": 216,
+      "chapter": 217,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -13058,7 +13229,7 @@
       ]
     },
     {
-      "chapter": 217,
+      "chapter": 218,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -13083,7 +13254,7 @@
       ]
     },
     {
-      "chapter": 218,
+      "chapter": 219,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -13108,7 +13279,7 @@
       ]
     },
     {
-      "chapter": 219,
+      "chapter": 220,
       "position": 10,
       "activity_section_position": 5,
       "assessment": false,
@@ -13133,7 +13304,7 @@
       ]
     },
     {
-      "chapter": 220,
+      "chapter": 221,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -13158,7 +13329,7 @@
       ]
     },
     {
-      "chapter": 221,
+      "chapter": 222,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -13183,7 +13354,7 @@
       ]
     },
     {
-      "chapter": 222,
+      "chapter": 223,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -13218,6 +13389,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
         "activity_section.key": "11c537ee-7543-4422-b6ce-ac3a31cb5662"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-pulse-survey_csd3_2023",
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd3_2023"
+        ],
+        "lesson.key": "Programming for Entertainment",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "2cea4eb2-5c80-455e-b4f8-236ef11232c3"
       }
     },
     {
@@ -15880,6 +16063,7 @@
       "key": "_warm_up_word_search",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -15904,6 +16088,7 @@
       "key": "activity_guide_-_robot_face_planning",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -16010,6 +16195,7 @@
       "key": "app_design_for_users",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -16563,12 +16749,12 @@
       }
     },
     {
-      "name": "Introduction to Sprites [Needs Updating]",
-      "url": "https://youtu.be/aUHzpGt9nso",
+      "name": "Introduction to Sprites",
+      "url": "https://www.youtube.com/watch?v=96iGNtAp9J4",
       "key": "introduction_to_sprites",
       "properties": {
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_sprites-mp4.mp4",
+        "download_url": "https://videos.code.org/levelbuilder/introduction-to-sprites-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -16852,6 +17038,7 @@
       "key": "problem_solving_and_design",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -16864,6 +17051,7 @@
       "key": "problem_solving_with_programming",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -16958,6 +17146,7 @@
       "key": "robot_faces",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Rubric"
       },
       "seeding_key": {
@@ -17076,11 +17265,12 @@
       }
     },
     {
-      "name": "Sprite Properties [Needs Updating]",
-      "url": "https://www.code.org",
+      "name": "Sprite Properties",
+      "url": "https://www.youtube.com/watch?v=5Op72oHFUnc",
       "key": "sprite_properties_needs_updating_",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/sprite-properties-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -17147,12 +17337,12 @@
       }
     },
     {
-      "name": "The Animation Tab [Needs Updating]",
-      "url": "https://youtu.be/DQPruYTJ0Fk",
+      "name": "The Animation Tab",
+      "url": "https://youtu.be/BrkREtPb0J4",
       "key": "the_animation_tab",
       "properties": {
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_theanimationtab-mp4.mp4",
+        "download_url": "https://videos.code.org/levelbuilder/sprite-animations-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -17311,6 +17501,7 @@
       "key": "web_design_template",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -18684,6 +18875,16 @@
       }
     },
     {
+      "key": "0a840172-61ef-4be8-abc1-1f1213fe47f3",
+      "properties": {
+        "description": "Understand the steps of the problem-solving process "
+      },
+      "seeding_key": {
+        "lesson.key": "Programming for Entertainment",
+        "objective.key": "0a840172-61ef-4be8-abc1-1f1213fe47f3"
+      }
+    },
+    {
       "key": "0aaeeba7-74d2-422d-b603-5b32cfdc2774",
       "properties": {
         "description": "Explain how individual programming constructs can be combined to create more complex behavior"
@@ -19026,7 +19227,7 @@
     {
       "key": "bfe358fc-38a1-4001-b4d1-5c61972d301b",
       "properties": {
-        "description": "Create a prototype of an animation or game design to meet the needs of a user "
+        "description": "Create a prototype of an animation or game design to meet the needs of a user using the problem-solving process"
       },
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
@@ -19546,7 +19747,7 @@
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
         "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-21"
+        "standard.shortcode": "2-AP-13"
       }
     },
     {
@@ -20044,6 +20245,27 @@
         "lesson.key": "Velocity",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
       }
     }
   ],

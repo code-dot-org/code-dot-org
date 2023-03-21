@@ -105,11 +105,11 @@ class PegasusTest < Minitest::Test
           queries = capture_queries(DB, DASHBOARD_DB) {get(uri)}
           break if queries.empty? || (attempts -= 1).zero?
         end
-      rescue Exception => e
+      rescue Exception => exception
         # Filter backtrace from current location.
-        index = e.backtrace.index(caller(2..2).first)
-        e.set_backtrace(e.backtrace[0..index - 1])
-        next "[#{url}] Render failed:\n#{e}\n#{e.backtrace.join("\n")}"
+        index = exception.backtrace.index(caller(2..2).first)
+        exception.set_backtrace(exception.backtrace[0..index - 1])
+        next "[#{url}] Render failed:\n#{exception}\n#{exception.backtrace.join("\n")}"
       end
       response = last_response
       status = response.status
@@ -165,10 +165,8 @@ class PegasusTest < Minitest::Test
     end
   end
 
-  private
-
   # @return [Array<String>] sites configured with the provided site as their 'base'.
-  def inherited_sites(site)
+  private def inherited_sites(site)
     Documents.load_configs_in(app.helpers.content_dir).
       select {|_, config| config[:base] == site}.
       keys
@@ -176,13 +174,13 @@ class PegasusTest < Minitest::Test
 
   # If a given host isn't 'live', it won't correctly render requests routed to it as expected.
   # @return [Boolean] whether the host matches the result returned by `request.site`.
-  def live_host?(host)
+  private def live_host?(host)
     Rack::Request.new({'HTTP_HOST' => host}).site == host
   end
 
   # Runs `tidy` in a subprocess to validate HTML content.
   # @return [Array, nil] error messages, or `nil` if no errors.
-  def validate(body)
+  private def validate(body)
     cmd = 'tidy -q -e'
     status, result = nil
     Open3.popen3(cmd) do |stdin, _stdout, stderr, wait_thread|

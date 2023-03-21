@@ -299,8 +299,8 @@ class LevelsController < ApplicationController
       log_save_error(@level)
       render json: @level.errors, status: :unprocessable_entity
     end
-  rescue ArgumentError, ActiveRecord::RecordInvalid => e
-    render status: :not_acceptable, plain: e.message
+  rescue ArgumentError, ActiveRecord::RecordInvalid => exception
+    render status: :not_acceptable, plain: exception.message
   end
 
   # POST /levels/:id/update_start_code
@@ -364,10 +364,10 @@ class LevelsController < ApplicationController
 
     begin
       @level = type_class.create_from_level_builder(params, create_level_params)
-    rescue ArgumentError => e
-      render(status: :not_acceptable, plain: e.message) && return
-    rescue ActiveRecord::RecordInvalid => invalid
-      render(status: :not_acceptable, plain: invalid) && return
+    rescue ArgumentError => exception
+      render(status: :not_acceptable, plain: exception.message) && return
+    rescue ActiveRecord::RecordInvalid => exception
+      render(status: :not_acceptable, plain: exception) && return
     end
     if params[:do_not_redirect]
       render json: @level
@@ -444,10 +444,10 @@ class LevelsController < ApplicationController
     else
       render json: {redirect: edit_level_url(@new_level)}
     end
-  rescue ArgumentError => e
-    render(status: :not_acceptable, plain: e.message)
-  rescue ActiveRecord::RecordInvalid => invalid
-    render(status: :not_acceptable, plain: invalid)
+  rescue ArgumentError => exception
+    render(status: :not_acceptable, plain: exception.message)
+  rescue ActiveRecord::RecordInvalid => exception
+    render(status: :not_acceptable, plain: exception)
   end
 
   # GET /levels/:id/embed_level
@@ -464,10 +464,8 @@ class LevelsController < ApplicationController
     render 'levels/show'
   end
 
-  private
-
   # Use callbacks to share common setup or constraints between actions.
-  def set_level
+  private def set_level
     @level =
       if params.include? :key
         Level.find_by_key params[:key]
@@ -478,7 +476,7 @@ class LevelsController < ApplicationController
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def level_params
+  private def level_params
     permitted_params = [
       :name,
       :notes,
@@ -508,6 +506,9 @@ class LevelsController < ApplicationController
       {if_block_options: []},
       {place_block_options: []},
       {play_sound_options: []},
+
+      # Poetry-specific
+      {available_poems: []},
     ]
 
     # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
@@ -520,6 +521,7 @@ class LevelsController < ApplicationController
       :play_sound_options,
       :helper_libraries,
       :block_pools,
+      :available_poems
     ]
     multiselect_params.each do |param|
       params[:level][param].delete_if(&:empty?) if params[:level][param].is_a? Array
@@ -535,7 +537,7 @@ class LevelsController < ApplicationController
     params[:level].permit(permitted_params)
   end
 
-  def set_solution_image_url(level)
+  private def set_solution_image_url(level)
     level_source = LevelSource.find_identical_or_create(
       level,
       params[:program].strip_utf8mb4
@@ -550,7 +552,7 @@ class LevelsController < ApplicationController
 
   # Gathers data on top pain points for level builders by logging error details
   # to Firehose / Redshift.
-  def log_save_error(level)
+  private def log_save_error(level)
     FirehoseClient.instance.put_record(
       :analysis,
       {

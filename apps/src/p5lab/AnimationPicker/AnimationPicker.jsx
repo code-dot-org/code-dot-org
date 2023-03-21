@@ -51,7 +51,7 @@ class AnimationPicker extends React.Component {
     hideBackgrounds: PropTypes.bool.isRequired,
     hideCostumes: PropTypes.bool.isRequired,
     pickerType: PropTypes.oneOf(Object.values(PICKER_TYPE)).isRequired,
-    shouldRestrictAnimationUpload: PropTypes.bool.isRequired,
+    shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
 
     // Provided via Redux
     visible: PropTypes.bool.isRequired,
@@ -65,7 +65,8 @@ class AnimationPicker extends React.Component {
     onUploadDone: PropTypes.func.isRequired,
     onUploadError: PropTypes.func.isRequired,
     playAnimations: PropTypes.bool.isRequired,
-    onAnimationSelectionComplete: PropTypes.func.isRequired
+    onAnimationSelectionComplete: PropTypes.func.isRequired,
+    uploadWarningShowing: PropTypes.bool.isRequired
   };
 
   state = {
@@ -123,9 +124,7 @@ class AnimationPicker extends React.Component {
           hideCostumes={this.props.hideCostumes}
           selectedAnimations={this.props.selectedAnimations}
           pickerType={this.props.pickerType}
-          shouldRestrictAnimationUpload={
-            this.props.shouldRestrictAnimationUpload
-          }
+          shouldWarnOnAnimationUpload={this.props.shouldWarnOnAnimationUpload}
         />
         <StylizedBaseDialog
           title={msg.animationPicker_leaveSelectionTitle()}
@@ -165,7 +164,9 @@ class AnimationPicker extends React.Component {
       <BaseDialog
         isOpen
         handleClose={this.onClose}
-        uncloseable={this.props.uploadInProgress}
+        uncloseable={
+          this.props.uploadInProgress || this.props.uploadWarningShowing
+        }
         fullWidth={true}
         style={styles.dialog}
       >
@@ -199,7 +200,8 @@ export default connect(
     uploadInProgress: state.animationPicker.uploadInProgress,
     uploadError: state.animationPicker.uploadError,
     playAnimations: !state.pageConstants.allAnimationsSingleFrame,
-    selectedAnimations: Object.values(state.animationPicker.selectedAnimations)
+    selectedAnimations: Object.values(state.animationPicker.selectedAnimations),
+    uploadWarningShowing: state.animationPicker.uploadWarningShowing
   }),
   dispatch => ({
     onClose() {

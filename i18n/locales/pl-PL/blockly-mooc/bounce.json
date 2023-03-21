@@ -28,7 +28,7 @@
   "ifelseTooltip": "Jeśli jest ścieżka w określonym kierunku, to wykonaj pierwszy blok działań. W przeciwnym razie, wykonaj drugi blok działań.",
   "incrementOpponentScore": "punkt dla przeciwnika",
   "incrementOpponentScoreTooltip": "Dodaj jeden do bieżącego wyniku przeciwnika.",
-  "incrementPlayerScore": "wynik punktowy",
+  "incrementPlayerScore": "dodaj punkt",
   "incrementPlayerScoreTooltip": "Dodaj jeden do bieżącego wyniku gracza.",
   "isWall": "czy to jest ściana",
   "isWallTooltip": "Zwraca prawdę, jeżeli tutaj jest ściana",

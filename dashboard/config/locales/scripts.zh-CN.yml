@@ -4126,6 +4126,12 @@ zh-CN:
               display_name: 内容
             lessonGroup-4:
               display_name: 替补课程
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 替补课程
         hello-world-space-2022:
           title: 你好世界：太空
         hello-world-soccer-2022:
@@ -4133,10 +4139,9 @@ zh-CN:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 第1章
+              display_name: 第 1 章︰ 解决问题的流程
             lessonGroup-3:
-              display_name: 第2章
-          title: 解决问题
+              display_name: 第 2 章︰ 计算机和解决问题的能力
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4149,32 +4154,37 @@ zh-CN:
               display_name: 第 1 章︰ 用户为中心的设计
             lessonGroup-3:
               display_name: 第 2 章︰ 应用程序原型
-          title: 设计过程
+          student_description: 4单元介绍了计算的更广泛的社会影响。通过一系列的设计挑战, 您将了解如何在开发解决问题的方法时更好地理解他人的需求。该单元的后半部分由一个迭代团队项目组成,
+            在这个项目中，团队有机会确定他们所关心的需求、在纸上和应用程序实验室中的原型解决方案, 并与真正的用户测试解决方案以获得反馈并进一步推动迭代.
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 第 1 章︰ 表达信息
             lessonGroup-3:
               display_name: 第 2 章︰ 解决数据问题
+          description_short: 了解人们如何使用电脑来解决数据问题。
+          student_description: 单元5是关于数据在解决问题中的重要性, 它同时强调了计算机在这个过程中的作用。第一章探讨了在计算机中用来表示信息的不同系统以及使用它们所带来的挑战和折衷。在第二章中,
+            您将了解如何使用数据集合来解决问题, 以及计算机如何帮助自动化此过程的步骤。本章最后考虑如何将数据问题解决过程应用到您选择的区域。
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 第 1 章︰图像和动画
             lessonGroup-3:
               display_name: 第 2 章︰ 创建游戏
+          student_description: " 在单元3中，要利用你的代码技巧，在游戏实验室中给动画、交互艺术和游戏编程。像计算机科学家每天的工作一样，用同样的编程概念和设计流程。在本单元中，从简单的形状开始，然后构造出精巧的，基于精灵的游戏。在最后的项目中，会开发出一个个性化的交互程序。"
         csd6-2023:
           lesson_groups:
-            lessonGroup-2:
-              display_name: 第1章
             lessonGroup-3:
-              display_name: 第2章
-          title: 物理计算
+              display_name: 第 2 章︰ 创建物理原型
+          description_short: 学习使用物理设备编程。
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 第1章
             lessonGroup-3:
               display_name: 第2章
+            lessonGroup-4:
+              display_name: 应用程序实验室简介
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -4279,3 +4289,21 @@ zh-CN:
               display_name: 应用程序实验室简介
             lessonGroup-3:
               display_name: 输入和输出
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: 第2章
+          title: 解决问题
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+          title: 解决问题
+        testing-focus-on-creativity2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第一单元：创造网页
+            lessonGroup-4:
+              display_name: 第二章：多界面网站

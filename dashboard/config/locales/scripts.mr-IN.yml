@@ -1900,27 +1900,14 @@ mr:
           title: 'हॅलो वर्ल्ड: जागा'
         hello-world-soccer-2022:
           title: 'हॅलो वर्ल्ड: फुटबॉल'
-        csd1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: प्रकरण 1
-            lessonGroup-3:
-              display_name: प्रकरण 2
-          title: समस्या सोडवणे
-        csd4-2023:
-          title: डिझाईन प्रक्रिया
-        csd6-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: प्रकरण 1
-            lessonGroup-3:
-              display_name: प्रकरण 2
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: प्रकरण 1
             lessonGroup-3:
               display_name: प्रकरण 2
+            lessonGroup-4:
+              display_name: अॅप लॅबची ओळख
         csc-function-machines-pilot:
           lessons:
             lesson-1:
@@ -1957,3 +1944,15 @@ mr:
           lesson_groups:
             lessonGroup-2:
               display_name: अॅप लॅबची ओळख
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: प्रकरण 1
+            lessonGroup-3:
+              display_name: प्रकरण 2
+          title: समस्या सोडवणे
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: प्रकरण 1
+          title: समस्या सोडवणे

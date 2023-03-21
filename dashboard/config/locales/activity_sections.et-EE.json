@@ -10,6 +10,24 @@
             null
           ]
         },
+        "1f7acf41-57a9-4dc5-8cbb-945faffbdc41": {
+          "progression_name": "Moodusta formatsioon"
+        },
+        "d6973268-2630-4056-8169-81c3d5a34041": {
+          "progression_name": "Kuhu nad kadusid?"
+        },
+        "67bbe0f1-5e68-4669-a12b-d1ab6f3a527c": {
+          "progression_name": "Tantsumeeskonnad"
+        },
+        "4ff44f8e-3e97-47b2-9a6e-25e7e5836896": {
+          "progression_name": "Veerandnoodid"
+        },
+        "2ab803d8-6973-49d0-b987-e023b6780b6b": {
+          "progression_name": "Bass, Keskmised ja Kõrged"
+        },
+        "0cb1e680-8c08-4e85-bedf-0f968f52052c": {
+          "progression_name": "Kiiremaks, Aeglasemaks"
+        },
         "b2879d66-a5c6-4127-afe0-c5df430b8f30": {
           "name": "Järgmised sammud"
         },
@@ -538,6 +556,24 @@
           "tips": [
             null
           ]
+        },
+        "72e0b520-4c05-4c32-84c3-1a51fd86daad": {
+          "progression_name": "Moodusta formatsioon"
+        },
+        "d3123d53-f986-4095-a3d7-b9db9ea32c36": {
+          "progression_name": "Kuhu nad kadusid?"
+        },
+        "221fbe2a-57a8-43d4-9674-5815273512dc": {
+          "progression_name": "Tantsumeeskonnad"
+        },
+        "7c943749-994a-44b2-a116-f33f70d2df95": {
+          "progression_name": "Veerandnoodid"
+        },
+        "d4e671fd-e312-4461-b97b-50e6e05c9cf1": {
+          "progression_name": "Bass, Keskmised ja Kõrged"
+        },
+        "501df195-7991-40ad-bad9-df715484240b": {
+          "progression_name": "Kiiremaks, Aeglasemaks"
         },
         "0dffb367-12f3-485a-bcde-cf4e789baed9": {
           "name": "Järgmised sammud"
@@ -5969,6 +6005,9 @@
         "30f90504-21cc-4713-949c-c5bcdb5c3288": {
           "progression_name": "Tasuta mäng"
         },
+        "7ba3e3fc-9997-480c-86f7-54e100343b8a": {
+          "progression_name": "Projekt Sprite Lab"
+        },
         "919ce65a-2a03-4e80-9108-6243b5dd733f": {
           "name": "Artist projekt",
           "progression_name": "Artist projekt"
@@ -5993,9 +6032,15 @@
           "name": "Tasuta mäng",
           "progression_name": "Tasuta mäng"
         },
+        "b8f9aaae-501f-4c71-9df3-3250ffe49d6e": {
+          "progression_name": "Projekt Sprite Lab"
+        },
         "22ed3900-dd2a-4eec-99c1-69f131286de6": {
           "name": "Artist projekt",
           "progression_name": "Artist projekt"
+        },
+        "f0d08173-4d56-4bdc-8bd0-173ba4445206": {
+          "progression_name": "Projekt Sprite Lab"
         },
         "9a803448-dc94-4fae-9c6e-9099f7a26bc2": {
           "name": "Artist projekt",
@@ -6299,6 +6344,9 @@
           "tips": [
             null
           ]
+        },
+        "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
+          "progression_name": "Tasemed"
         },
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
           "name": "Peegeldus"

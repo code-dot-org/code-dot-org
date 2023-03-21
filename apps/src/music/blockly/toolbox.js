@@ -45,6 +45,10 @@ const toolboxBlocks = {
     kind: 'block',
     type: BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2
   },
+  [BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2]: {
+    kind: 'block',
+    type: BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2
+  },
   [BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2]: {
     kind: 'block',
     type: BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
@@ -88,15 +92,8 @@ const toolboxBlocks = {
   [BlockTypes.REPEAT_SIMPLE2]: {
     kind: 'block',
     type: BlockTypes.REPEAT_SIMPLE2,
-    inputs: {
-      times: {
-        shadow: {
-          type: 'math_number',
-          fields: {
-            NUM: 1
-          }
-        }
-      }
+    fields: {
+      times: 1
     }
   },
   [BlockTypes.PLAY_SOUND_IN_TRACK]: {
@@ -358,6 +355,7 @@ export function getToolbox() {
           Play: [
             BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
             BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
+            BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
             BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2
           ],
           Control: [
