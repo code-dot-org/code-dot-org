@@ -5,6 +5,6 @@ module InitialSectionCreationInterstitialHelper
     return false if user.nil?
     return false unless user.teacher?
 
-    return user.sign_in_count <= 1
+    return user.sign_in_count <= 1 && user.sections.with_deleted.count == 0
   end
 end
