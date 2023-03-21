@@ -34,7 +34,6 @@ const CurriculumCatalogCard = ({
       <div className="buttonsContainer">
         {/* each button should be same fixed size */}
         <Button
-          className="leftButton"
           color={Button.ButtonColor.neutralDark}
           type="button"
           onClick={() => {}}
@@ -43,7 +42,6 @@ const CurriculumCatalogCard = ({
           {quickViewButtonText}
         </Button>
         <Button
-          className="rightButton"
           color={Button.ButtonColor.brandSecondaryDefault}
           type="button"
           onClick={() => {}}
