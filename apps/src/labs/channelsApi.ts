@@ -15,6 +15,9 @@ export async function create(channel: NewChannel): Promise<Response> {
 
 export async function update(channel: Channel): Promise<Response> {
   return fetch(`${rootUrl}/${channel.id}`, {
+    headers: {
+      'Content-Type': 'application/json; charset=utf-8'
+    },
     method: 'POST',
     body: JSON.stringify(channel)
   });
