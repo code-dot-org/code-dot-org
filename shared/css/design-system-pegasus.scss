@@ -9,6 +9,10 @@ $border-radius: 4px;
   outline-offset: 2px;
 }
 
+@mixin hr-style {
+
+}
+
 // Use this to maintain proper heading hierarchy
 // if the design calls for an h5 style
 @mixin h5-lookalike-style {
@@ -81,13 +85,13 @@ div.divider {
   @media screen and (max-width: $width-md) {
     padding: 0 2em;
   }
-}
 
-hr {
-  border: 0;
-  border-top: 1px solid $neutral_dark60;
-  margin: 0;
-  width: 100%;
+  hr {
+    border: 0;
+    border-top: 1px solid $neutral_dark60;
+    margin: 0;
+    width: 100%;
+  }
 }
 
 // Paragraphs
