@@ -352,7 +352,7 @@ def postprocess_course_resources(locale, courses_source)
   courses_yaml = YAML.load_file(courses_source)
   lang_code = PegasusLanguages.get_code_by_locale(locale)
   return if courses_yaml[lang_code].nil?
-  if courses_yaml[lang_code]['data']['resources']
+  if courses_yaml[lang_code]['data']['resources'] # no processing of empty files
     courses_resources = courses_yaml[lang_code]['data']['resources']
     courses_resources.each do |_key, resource|
       next if resource['url'].blank?
