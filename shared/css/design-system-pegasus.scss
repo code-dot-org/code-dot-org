@@ -593,6 +593,10 @@ form {
   flex-wrap: wrap;
   padding: 1em 1.5em;
 
+  @media screen and (max-width: $width-md) {
+    height: 100%;
+  }
+
   img {
     width: 100%;
     margin-bottom: 1em;
