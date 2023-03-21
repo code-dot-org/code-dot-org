@@ -57,6 +57,8 @@ $border-radius: 4px;
       button {
         height: 40px;
         margin: 0;
+        // TODO [MEG] Adjust to accommodate different string
+        // sizes, look at gap https://css-tricks.com/almanac/properties/g/gap/
         width: 132px; // calculated: (totalContainerWidth - 2*padding - minimumSpaceBetweenButtons) / 2
         font-size: 1em;
       }
