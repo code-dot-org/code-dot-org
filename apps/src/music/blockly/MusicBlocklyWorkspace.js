@@ -43,7 +43,6 @@ export default class MusicBlocklyWorkspace {
       new S3ChannelsStore(),
       this.getProject.bind(this)
     );
-    console.log(this.projectManager);
   }
 
   triggerIdToEvent = id => `triggeredAtButton-${id}`;
@@ -321,12 +320,12 @@ export default class MusicBlocklyWorkspace {
       // TODO: Error handling
     }
 
-    const {source} = await projectResponse.json();
+    const {source, channel} = await projectResponse.json();
+    this.channel = channel;
     if (source) {
       const exitingCodeJson = JSON.parse(source.source);
       Blockly.serialization.workspaces.load(exitingCodeJson, this.workspace);
     } else {
-      // TODO: don't do this?
       this.resetCode();
     }
   }
@@ -339,7 +338,7 @@ export default class MusicBlocklyWorkspace {
     const defaultCodeFilename = 'defaultCode' + getBlockMode();
     const defaultCode = require(`@cdo/static/music/${defaultCodeFilename}.json`);
     Blockly.serialization.workspaces.load(defaultCode, this.workspace);
-    // TODO: This will overwrite data on the server.
+    // This will overwrite data on the server.
     this.saveCode();
   }
 
