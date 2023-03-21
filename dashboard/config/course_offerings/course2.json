@@ -8,7 +8,7 @@
   "marketing_initiative": null,
   "grade_levels": "2,3,4,5",
   "header": null,
-  "image": null,
+  "image": "https://images.code.org/8c42006d8a9c466a95b53448b92fe14c-Course 2.png",
   "cs_topic": "programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
