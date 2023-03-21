@@ -216,10 +216,10 @@ class UnconnectedMusicView extends React.Component {
       // This is a way to tell React to re-render the scene, notably
       // the timeline.
       this.setState({updateNumber: this.state.updateNumber + 1});
-    }
 
-    // Save the workspace.
-    this.musicBlocklyWorkspace.saveCode();
+      // TODO: This may no-op due to throttling.
+      this.musicBlocklyWorkspace.saveCode();
+    }
   };
 
   setPlaying = play => {
