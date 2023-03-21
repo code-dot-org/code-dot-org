@@ -217,7 +217,10 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   end
 
   private def has_current_application?
-    year = Pd::SharedApplicationConstants::APPLICATION_CURRENT_YEAR
-    Pd::Application::TeacherApplication.where(user: current_user, application_year: year).any?
+    Pd::Application::TeacherApplication.where(
+      user: current_user,
+      application_year: Pd::SharedApplicationConstants::APPLICATION_CURRENT_YEAR,
+      status: 'accepted'
+      ).any?
   end
 end

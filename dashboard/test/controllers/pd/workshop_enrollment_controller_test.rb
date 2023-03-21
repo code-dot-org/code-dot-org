@@ -91,13 +91,26 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'teacher with old application gets missing application view' do
     teacher = create :teacher
+    old_year = Pd::SharedApplicationConstants::YEAR_18_19
+    create :pd_teacher_application, user: teacher, application_year: old_year
 
     rp = create :regional_partner
     workshop = create :summer_workshop, regional_partner: rp
     assert workshop.require_application?
 
-    old_year = Pd::SharedApplicationConstants::YEAR_18_19
-    create :pd_teacher_application, user: teacher, application_year: old_year
+    sign_in teacher
+    get :new, params: {workshop_id: workshop.id}
+    assert_response :success
+    assert_template :missing_application
+  end
+
+  test 'teacher with incomplete application gets missing application view' do
+    teacher = create :teacher
+    create :pd_teacher_application, user: teacher, status: 'incomplete'
+
+    rp = create :regional_partner
+    workshop = create :summer_workshop, regional_partner: rp
+    assert workshop.require_application?
 
     sign_in teacher
     get :new, params: {workshop_id: workshop.id}
@@ -107,12 +120,11 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'teacher with required application gets new view' do
     teacher = create :teacher
+    create :pd_teacher_application, user: teacher, status: 'accepted'
 
     rp = create :regional_partner
     workshop = create :summer_workshop, regional_partner: rp
     assert workshop.require_application?
-
-    create :pd_teacher_application, user: teacher
 
     sign_in teacher
     get :new, params: {workshop_id: workshop.id}
