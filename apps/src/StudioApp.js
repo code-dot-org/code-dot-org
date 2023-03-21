@@ -1228,7 +1228,7 @@ StudioApp.prototype.showNextHint = function() {
 /**
  * Initialize Blockly for a readonly iframe.  Called on page load. No sounds.
  * XML argument may be generated from the console with:
- * Blockly.cdoUtils.getCode(Blockly.mainBlockSpace).slice(5, -6)
+ * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
  */
 StudioApp.prototype.initReadonly = function(options) {
   Blockly.inject(document.getElementById('codeWorkspace'), {
@@ -1250,32 +1250,12 @@ StudioApp.prototype.loadBlocks = function(blocks) {
       JSON.parse(blocks),
       Blockly.mainBlockSpace
     );
-    // Delete this log when we remove experiments.BLOCKLY_JSON
-    console.log('JSON used to load blocks');
+    console.log('Successfully parsed JSON to load blocks.');
+    console.log(JSON.parse(blocks));
   } catch (error) {
+    // Blocks will typically be saved as XML, unless saved with experiments.BLOCKLY_JSON
     var xml = parseXmlElement(blocks);
     Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
-  }
-};
-
-/**
- * Applies the specified arrangement to top startBlocks. If any
- * individual blocks have x or y properties set in the XML, those values
- * take priority. If no arrangement for a particular block type is
- * specified, blocks are automatically positioned by Blockly.
- *
- * Note that, currently, only bounce and flappy use arrangements.
- *
- * @param {string} startBlocks String representation of start blocks xml.
- * @param {Object.<Object>} arrangement A map from block type to position.
- * @return {string} String representation of start blocks xml, including
- *    block position.
- */
-StudioApp.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
-  try {
-    return Blockly.cdoUtils.arrangeBlocksJson(startBlocks, arrangement);
-  } catch (error) {
-    return Blockly.cdoUtils.arrangeBlocksXml(startBlocks, arrangement);
   }
 };
 
@@ -2716,7 +2696,10 @@ StudioApp.prototype.setStartBlocks_ = function(config, loadLastAttempt) {
       config.level.sharedFunctions
     );
   }
-  startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
+  startBlocks = Blockly.cdoUtils.arrangeBlockPosition(
+    startBlocks,
+    config.blockArrangement
+  );
   try {
     this.loadBlocks(startBlocks);
   } catch (e) {

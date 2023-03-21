@@ -275,7 +275,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     getCode: function(workspace) {
       return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
     },
-    arrangeBlocksXml: function(blocks, arrangement) {
+    arrangeBlocksPosition: function(blocks, arrangement) {
       // Arrangements are only used in Flappy and Bounce
       return blocks;
     }

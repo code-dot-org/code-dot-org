@@ -115,7 +115,35 @@ export function getCode(workspace) {
   }
 }
 
-export function arrangeBlocksJson(startBlocksJson, arrangement) {
+/**
+ * Applies the specified arrangement to top startBlocks. If any
+ * individual blocks have x or y properties set in the XML, those values
+ * take priority. If no arrangement for a particular block type is
+ * specified, blocks are automatically positioned by Blockly.
+ *
+ * Note that, currently, only bounce and flappy use arrangements.
+ *
+ * @param {string} startBlocks String representation of start blocks xml.
+ * @param {Object.<Object>} arrangement A map from block type to position.
+ * @return {string} String representation of start blocks xml or JSON,
+ * including block position.
+ */
+export function arrangeBlockPosition(blockText, arrangement) {
+  if (!arrangement) {
+    return;
+  }
+  try {
+    const arrangedBlocks = arrangeBlocksJson(blockText, arrangement);
+    console.log('Successfully parsed JSON to arrange blocks.');
+    console.log(JSON.parse(blockText));
+    return arrangedBlocks;
+  } catch (error) {
+    // Blocks will typically be saved as XML, unless saved with experiments.BLOCKLY_JSON
+    return arrangeBlocksXml(blockText, arrangement);
+  }
+}
+
+function arrangeBlocksJson(startBlocksJson, arrangement) {
   const code = JSON.parse(startBlocksJson);
   code.blocks.blocks.forEach(block => {
     // look to see if we have a predefined arrangement for this type
@@ -127,12 +155,13 @@ export function arrangeBlocksJson(startBlocksJson, arrangement) {
       if (arrangement[type].y && !block.y) {
         block.y = arrangement[type].y;
       }
+      console.log(`Applied arrangement for block of type ${block.type}`);
     }
   });
   return JSON.stringify(code);
 }
 
-export function arrangeBlocksXml(startBlocksXml, arrangement) {
+function arrangeBlocksXml(startBlocksXml, arrangement) {
   if (!arrangement) {
     return;
   }
