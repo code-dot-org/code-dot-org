@@ -30,15 +30,14 @@ import FieldChord from './FieldChord';
  * workspace view, execute code, and save/load projects.
  */
 export default class MusicBlocklyWorkspace {
-  constructor() {
+  constructor(channelId) {
     this.codeHooks = {};
     this.compiledEvents = null;
     this.lastExecutedEvents = null;
 
     this.channel = null;
-    // TODO: pass channelId in to constructor
     this.projectManager = new ProjectManager(
-      'UZhQ1Ap2xV1VwRzssldBfA' || this.getLocalStorageKeyName(),
+      channelId || this.getLocalStorageKeyName(),
       new S3SourcesStore(),
       new S3ChannelsStore(),
       this.getProject.bind(this)

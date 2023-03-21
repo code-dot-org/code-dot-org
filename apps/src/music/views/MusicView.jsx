@@ -45,6 +45,8 @@ const instructionPositionOrder = [
  */
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
+    channelId: PropTypes.string,
+
     // populated by Redux
     userId: PropTypes.number,
     userType: PropTypes.string,
@@ -58,7 +60,7 @@ class UnconnectedMusicView extends React.Component {
     this.programSequencer = new ProgramSequencer();
     this.randomSkipManager = new RandomSkipManager();
     this.analyticsReporter = new AnalyticsReporter();
-    this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
+    this.musicBlocklyWorkspace = new MusicBlocklyWorkspace(props.channelId);
     this.soundUploader = new SoundUploader(this.player);
     // Increments every time a trigger is pressed;
     // used to differentiate tracks created on the same trigger
@@ -456,10 +458,10 @@ const MusicView = connect(state => ({
   signInState: state.currentUser.signInState
 }))(UnconnectedMusicView);
 
-const MusicLabView = () => {
+const MusicLabView = props => {
   return (
     <Provider store={getStore()}>
-      <MusicView />
+      <MusicView {...props} />
     </Provider>
   );
 };
