@@ -133,7 +133,8 @@ export default class MusicPlayer {
     trackId?: string,
     functionContext?: FunctionContext,
     skipContext?: SkipContext,
-    effects?: Effects
+    effects?: Effects,
+    blockId?: string
   ) {
     if (!this.samplePlayer.initialized()) {
       console.log('MusicPlayer not initialized');
@@ -153,7 +154,8 @@ export default class MusicPlayer {
       functionContext,
       skipContext,
       effects,
-      length: constants.DEFAULT_PATTERN_LENGTH
+      length: constants.DEFAULT_PATTERN_LENGTH,
+      blockId
     };
 
     this.playbackEvents.push(patternEvent);
@@ -170,7 +172,8 @@ export default class MusicPlayer {
     trackId?: string,
     functionContext?: FunctionContext,
     skipContext?: SkipContext,
-    effects?: Effects
+    effects?: Effects,
+    blockId?: string
   ) {
     if (!this.samplePlayer.initialized()) {
       console.log('MusicPlayer not initialized');
@@ -190,7 +193,8 @@ export default class MusicPlayer {
       functionContext,
       skipContext,
       effects,
-      length: constants.DEFAULT_CHORD_LENGTH
+      length: constants.DEFAULT_CHORD_LENGTH,
+      blockId
     };
 
     this.playbackEvents.push(chordEvent);
