@@ -4,7 +4,7 @@ const SYSTEM_PROMPT = '';
 
 export const openaiCompletion = prompt => {
   const key = queryParams('key');
-  $.ajax({
+  return $.ajax({
     url: 'https://api.openai.com/v1/chat/completions',
     method: 'POST',
     headers: {
@@ -17,6 +17,6 @@ export const openaiCompletion = prompt => {
         {role: 'system', content: SYSTEM_PROMPT},
         {role: 'user', content: prompt}
       ]
-    }).then(response => response.choices[0].message.content)
-  });
+    })
+  }).then(response => response.choices[0].message.content);
 };
