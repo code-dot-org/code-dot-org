@@ -16,7 +16,7 @@ export default class MusicValidator extends Validator {
   private getIsPlaying: Function;
   private conditionsChecker: ConditionsChecker;
 
-  constructor(getIsPlaying: Function, player: MusicPlayer) {
+  constructor(getIsPlaying: () => boolean, player: MusicPlayer) {
     super();
 
     this.getIsPlaying = getIsPlaying;
