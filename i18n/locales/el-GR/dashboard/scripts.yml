@@ -1757,3 +1757,79 @@ el:
           title: Επίλυση Προβλημάτων
         testing-focus-on-creativity1:
           title: Επίλυση Προβλημάτων
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Βρόχοι
+            csf_events:
+              display_name: Συμβάντα
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: Χαρακτήρας
+            lessonGroup-9:
+              display_name: Συμβάντα
+            csf_loops:
+              display_name: Βρόχοι
+            csf_conditionals:
+              display_name: Συνθήκες
+            csf_functions:
+              display_name: Συναρτήσεις
+            csf_variables:
+              display_name: Μεταβλητές
+            csf_for_loops:
+              display_name: Βρόχοι Για
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ψηφιακή υπηκοότητα
+            csf_loops:
+              display_name: Βρόχοι
+            csf_events:
+              display_name: Συμβάντα
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
+          description_short: Μια εισαγωγή στην επιστήμη της πληροφορικής για νεαρούς αναγνώστες.
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ψηφιακή υπηκοότητα
+            csf_loops:
+              display_name: Βρόχοι
+            csf_events:
+              display_name: Συμβάντα
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ψηφιακή υπηκοότητα
+            csf_loops:
+              display_name: Βρόχοι
+            csf_events:
+              display_name: Συμβάντα
+            csf_data:
+              display_name: Δεδομένα
+          student_description: Δημιουργήστε προγράμματα με αλληλουχίες, κύβους βρόχων, και γεγονότα. Μετατρέψτε τα αρχικά σας σε δυαδικούς αριθμούς, ερευνήστε διαφορετικές τεχνικές επίλυσης προβλημάτων, και μάθετε πώς να απαντάτε στον διαδικτυακό εκφοβισμό. Στο τέλος του μαθήματος, δημιουργήστε ένα εξολοκλήρου δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε!
+          description_short: Μάθετε τα βασικά της επιστήμης της πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορίες και παιχνίδια.
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Ψηφιακή υπηκοότητα
+            csf_events:
+              display_name: Συμβάντα
+            csf_loops:
+              display_name: Βρόχοι
+            csf_conditionals:
+              display_name: Συνθήκες
+          title: Μάθημα D (2021)
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ψηφιακή υπηκοότητα
+            csf_sprites:
+              display_name: Χαρακτήρας
+            ramp_up:
+              display_name: Φωλιασμένες Επαναλήψεις
+            csf_functions:
+              display_name: Συναρτήσεις
+            csf_nested_loops:
+              display_name: Συνθήκες
