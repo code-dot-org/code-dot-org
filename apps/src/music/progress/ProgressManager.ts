@@ -18,7 +18,7 @@ interface Validation {
 }
 
 // The definition of the progression.
-interface Progression extends Object {
+interface Progression {
   panels: {
     text: string;
     toolbox: {

@@ -1,4 +1,3 @@
-
 export default class MusicLibrary {
   groups: FolderGroup[];
   private allowedSounds: Sounds | null;
@@ -35,34 +34,35 @@ export default class MusicLibrary {
   }
 
   // A progression step might specify a smaller set of allowed sounds.
-  setAllowedSounds(allowedSounds : Sounds):void {
+  setAllowedSounds(allowedSounds: Sounds): void {
     this.allowedSounds = allowedSounds;
   }
 
   // A sound picker might want to show the subset of sounds permitted by the
   // progression's currently allowed sounds.
-  getAllowedSounds(folderType: string) : Sounds {
-      const folders = this.groups[0].folders;
+  getAllowedSounds(folderType: string): Sounds {
+    const folders = this.groups[0].folders;
 
     // Let's just do a deep copy and then do filtering in-place.
     let foldersCopy = JSON.parse(JSON.stringify(folders));
 
     // Whether or not we have allowedSounds, we need to filter by type.
-    foldersCopy = foldersCopy.filter((folder :any) => folder.type === folderType);
+    foldersCopy = foldersCopy.filter(
+      (folder: any) => folder.type === folderType
+    );
 
     if (this.allowedSounds) {
       foldersCopy = foldersCopy.filter((folder : any) => this.allowedSounds?.[folder.path]);
 
-      foldersCopy.forEach((folder : any) => {
-        folder.sounds = folder.sounds.filter((sound:any) =>
-          this.allowedSounds?.[folder.path]?.includes(sound.src)
+      foldersCopy.forEach((folder: any) => {
+        folder.sounds = folder.sounds.filter(
+          (sound: any) => this.allowedSounds?.[folder.path]?.includes(sound.src)
         );
       });
     }
 
     return foldersCopy;
   }
-
 }
 
 export type SoundType = 'beat' | 'bass' | 'lead' | 'fx';
