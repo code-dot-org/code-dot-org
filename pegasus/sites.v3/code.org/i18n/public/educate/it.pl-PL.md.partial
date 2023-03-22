@@ -101,9 +101,19 @@ Korzystamy z [YouTube](https://www.youtube.com), aby umieszczać filmy w Code.or
 
 Zanim rozpoczniesz kursy online Code.org, przetestuj odtwarzanie poniższego filmu, aby upewnić się, że jesteś gotowy do pracy.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
-Jest to odtwarzacz używany w całym programie nauczania. Spróbuje wyświetlić wideo przez YouTube, a jeśli YouTube jest zablokowany, pokaże wideo hostowane na Code.org, korzystając z naszego odtwarzacza „zastępczego”.
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
+
+To jest gracz występujący w całym programie nauczania. Spróbuje pokazać wideo przez YouTube, a jeśli YouTube jest zablokowany, wyświetli wideo hostowane przez Code.org za pomocą naszego odtwarzacza „rezerwowego”.
 
 ### Film się nie odtwarza?
 
@@ -119,8 +129,8 @@ Jednak nadal możesz korzystać z naszych samouczków bez wideo.
 
 ## Specjalne ustawienia dla użytkowników Google Apps/G-Suite
 
-Jeśli jesteś administratorem G-suite, sprawdź, jakie są Twoje ustawienia ograniczeń dla YouTube. Jeśli określiłeś ustawienie „Ścisły ograniczony dostęp do YouTube” lub jeśli widzisz komunikat „ten film wideo został ograniczony”, możesz dodać nasz kanał do zatwierdzonej listy kanałów. Zapoznaj się z [tym przewodnikiem](https://support.google.com/a/answer/6245597) od Google, aby dowiedzieć się, jak dodać nasz kanał do zatwierdzonej listy. Możesz też zapoznać się z [tym przewodnikiem](https://support.google.com/a/answer/6212415?hl=pl), aby dowiedzieć się więcej o różnych ustawieniach i które są najlepsze dla Twojej klasy.
+Jeśli jesteś administratorem G-suite sprawdź, jakie są ustawienia ograniczeń dla YouTube. Jeśli określiłeś ustawienie „Ścisły ograniczony dostęp do YouTube” lub widzisz komunikaty z informacją „ten film został ograniczony”, możesz dodać nasz kanał do zatwierdzonej listy kanałów. Zobacz [ten przewodnik](https://support.google.com/a/answer/6245597) od Google, aby dowiedzieć się, jak dodać nasz kanał do listy zatwierdzonych. Możesz także zobaczyć [ten przewodnik](https://support.google.com/a/answer/6212415?hl=en), aby dowiedzieć się więcej o różnych ustawieniach i które są najlepsze dla Twojej klasy.
 
 ## Czy nadal masz problemy?
 
-Pomożemy Ci — po prostu napisz do nas na adres support@code.org!
+Pomożemy Ci - po prostu napisz do nas na support@code.org!
