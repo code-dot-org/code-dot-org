@@ -77,7 +77,15 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
                       moduleStyles.barLineCurrent
                   )}
                 />
-                <div className={moduleStyles.barNumber}>{measure}</div>
+                <div
+                  className={classNames(
+                    moduleStyles.barNumber,
+                    measure === Math.floor(currentPlayheadPosition) &&
+                      moduleStyles.barNumberCurrent
+                  )}
+                >
+                  {measure}
+                </div>
               </div>
             );
           })}

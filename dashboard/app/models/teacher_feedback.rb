@@ -239,9 +239,7 @@ class TeacherFeedback < ApplicationRecord
     return review_state == REVIEW_STATES.keepWorking && student_updated_since_feedback?
   end
 
-  private
-
-  def student_updated_since_feedback?
+  private def student_updated_since_feedback?
     user_level.present? && user_level.updated_at > created_at
   end
 end
