@@ -697,7 +697,7 @@ GEM
       thor (>= 0.20.3, < 2.0)
     rainbow (3.0.0)
     raindrops (0.20.0)
-    rake (11.3.0)
+    rake (12.3.3)
     rambling-trie (2.2.1)
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
@@ -783,8 +783,8 @@ GEM
     scenic-mysql_adapter (1.0.1)
       mysql2
       scenic (>= 1.4.0)
-    scss_lint (0.49.0)
-      rake (>= 0.9, < 12)
+    scss_lint (0.51.0)
+      rake (>= 0.9, < 13)
       sass (~> 3.4.20)
     selenium-webdriver (3.141.0)
       childprocess (~> 0.5)
@@ -1041,7 +1041,7 @@ DEPENDENCIES
   sassc-rails!
   scenic
   scenic-mysql_adapter
-  scss_lint
+  scss_lint (~> 0.51.0)
   selenium-webdriver (= 3.141.0)
   sequel
   shotgun
