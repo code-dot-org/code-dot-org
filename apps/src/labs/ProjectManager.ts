@@ -32,14 +32,6 @@ export default class ProjectManager {
     this.getProject = getProject;
   }
 
-  addEventListener(type: ProjectManagerEvent, listener: () => void) {
-    if (this.eventListeners[type]) {
-      this.eventListeners[type]?.push(listener);
-    } else {
-      this.eventListeners[type] = [listener];
-    }
-  }
-
   async load(): Promise<Response> {
     const sourceResponse = await this.sourcesStore.load(this.channelId);
     if (!sourceResponse.ok) {
@@ -100,11 +92,15 @@ export default class ProjectManager {
     return new Response();
   }
 
-  private executeListeners(type: ProjectManagerEvent, response: Response = new Response()) {
-    if (!this.eventListeners[type]) {
-      return;
+  addEventListener(type: ProjectManagerEvent, listener: () => void) {
+    if (this.eventListeners[type]) {
+      this.eventListeners[type]?.push(listener);
+    } else {
+      this.eventListeners[type] = [listener];
     }
+  }
 
+  private executeListeners(type: ProjectManagerEvent, response: Response = new Response()) {
     this.eventListeners[type]?.forEach(listener => listener(response));
   }
 }
