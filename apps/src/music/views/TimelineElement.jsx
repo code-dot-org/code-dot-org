@@ -26,7 +26,8 @@ const TimelineElement = ({
   when,
   skipContext,
   currentPlayheadPosition,
-  selectedBlockId
+  selectedBlockId,
+  onBlockSelected
 }) => {
   const playingContext = useContext(PlayingContext);
 
@@ -53,13 +54,22 @@ const TimelineElement = ({
         isCurrentlyPlaying && moduleStyles.timelineElementPlaying,
         isInsideRandom && moduleStyles.timelineElementInsideRandom,
         isSkipSound && moduleStyles.timelineElementSkipSound,
-        isBlockSelected && moduleStyles.timelineElementBlockSelected
+        isBlockSelected && moduleStyles.timelineElementBlockSelected,
+        onBlockSelected &&
+          !playingContext.isPlaying &&
+          moduleStyles.timelineElementClickable
       )}
       style={{
         width: barWidth * eventData.length,
         height,
         top,
         left
+      }}
+      onClick={event => {
+        if (onBlockSelected && !playingContext.isPlaying) {
+          onBlockSelected(eventData.blockId);
+        }
+        event.stopPropagation();
       }}
     >
       &nbsp;
@@ -76,7 +86,8 @@ TimelineElement.propTypes = {
   when: PropTypes.number.isRequired,
   skipContext: PropTypes.object,
   currentPlayheadPosition: PropTypes.number.isRequired,
-  selectedBlockId: PropTypes.string
+  selectedBlockId: PropTypes.string,
+  onBlockSelected: PropTypes.func
 };
 
 export default TimelineElement;

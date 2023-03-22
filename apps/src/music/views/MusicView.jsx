@@ -305,6 +305,9 @@ class UnconnectedMusicView extends React.Component {
       currentPlayheadPosition: 1,
       selectedBlockId: undefined
     });
+
+    // Unselect all blocks.
+    this.onBlockSelected(undefined);
   };
 
   stopSong = () => {
@@ -314,6 +317,21 @@ class UnconnectedMusicView extends React.Component {
 
     this.setState({isPlaying: false, currentPlayheadPosition: 0});
     this.triggerCount = 0;
+  };
+
+  // If the user selects a block ID by clicking a timeline element, then
+  // select the generating block in the Blockly workspace.
+  // If the user selects the currently-selected block ID, then unselect it.
+  // If undefined is provided, we'll unselect all blocks.
+  // During playback, we are dynamically highlighting blocks which overrides
+  // the selection, so just do nothing here.
+  onBlockSelected = blockId => {
+    if (!this.state.isPlaying) {
+      const selectedBlockId =
+        this.state.selectedBlockId === blockId ? undefined : blockId;
+      this.setState({selectedBlockId});
+      this.musicBlocklyWorkspace.selectBlock(selectedBlockId);
+    }
   };
 
   handleKeyUp = event => {
@@ -407,6 +425,7 @@ class UnconnectedMusicView extends React.Component {
           isPlaying={this.state.isPlaying}
           currentPlayheadPosition={this.state.currentPlayheadPosition}
           selectedBlockId={this.state.selectedBlockId}
+          onBlockSelected={this.onBlockSelected}
         />
       </div>
     );

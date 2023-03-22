@@ -1,7 +1,5 @@
 @import "color.scss";
 
-$full-width: 900px;
-
 .wrapper {
   background-color: $neutral_dark90;
   width: 100%;
@@ -19,7 +17,6 @@ $full-width: 900px;
     position: relative;
 
     .fullWidthOverlay {
-      width: $full-width;
       height: 100%;
       position: absolute;
       top: 0;
@@ -54,7 +51,7 @@ $full-width: 900px;
     }
 
     .soundsArea {
-      width: $full-width;
+      width: 0;
       height: 100%;
 
       .timelineElement {
@@ -106,7 +103,11 @@ $full-width: 900px;
         }
 
         &BlockSelected {
-          border-color: yellow;
+          border-color: #fc3;
+        }
+
+        &Clickable {
+          cursor: pointer;
         }
       }
 

@@ -17,7 +17,12 @@ const eventVerticalSpace = 2;
 /**
  * Renders the music playback timeline.
  */
-const Timeline = ({isPlaying, currentPlayheadPosition, selectedBlockId}) => {
+const Timeline = ({
+  isPlaying,
+  currentPlayheadPosition,
+  selectedBlockId,
+  onBlockSelected
+}) => {
   const playerUtils = useContext(PlayerUtilsContext);
   const measuresToDisplay = Math.max(
     minNumMeasures,
@@ -49,6 +54,7 @@ const Timeline = ({isPlaying, currentPlayheadPosition, selectedBlockId}) => {
   const timelineElementProps = {
     currentPlayheadPosition,
     selectedBlockId,
+    onBlockSelected,
     barWidth,
     eventVerticalSpace,
     getEventHeight
@@ -62,7 +68,11 @@ const Timeline = ({isPlaying, currentPlayheadPosition, selectedBlockId}) => {
 
   return (
     <div id="timeline" className={moduleStyles.wrapper}>
-      <div className={moduleStyles.container}>
+      <div
+        id="timeline-container"
+        className={moduleStyles.container}
+        onClick={() => onBlockSelected(undefined)}
+      >
         <div className={moduleStyles.fullWidthOverlay}>
           {arrayOfMeasures.map((measure, index) => {
             return (
@@ -92,7 +102,7 @@ const Timeline = ({isPlaying, currentPlayheadPosition, selectedBlockId}) => {
           })}
         </div>
 
-        <div className={moduleStyles.soundsArea}>
+        <div id="timeline-soundsarea" className={moduleStyles.soundsArea}>
           {getBlockMode() === BlockMode.TRACKS ? (
             <TimelineTrackEvents {...timelineElementProps} />
           ) : getBlockMode() === BlockMode.SIMPLE2 ? (
@@ -102,7 +112,7 @@ const Timeline = ({isPlaying, currentPlayheadPosition, selectedBlockId}) => {
           )}
         </div>
 
-        <div className={moduleStyles.fullWidthOverlay}>
+        <div id="timeline-playhead" className={moduleStyles.fullWidthOverlay}>
           {playHeadOffsetInPixels !== null && (
             <div
               className={moduleStyles.playhead}
@@ -121,6 +131,7 @@ Timeline.propTypes = {
   isPlaying: PropTypes.bool.isRequired,
   currentPlayheadPosition: PropTypes.number.isRequired,
   selectedBlockId: PropTypes.string,
+  onBlockSelected: PropTypes.func,
   sounds: PropTypes.array
 };
 

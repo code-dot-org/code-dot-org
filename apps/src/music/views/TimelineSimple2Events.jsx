@@ -9,6 +9,7 @@ import TimelineElement from './TimelineElement';
 const TimelineSimple2Events = ({
   currentPlayheadPosition,
   selectedBlockId,
+  onBlockSelected,
   barWidth,
   eventVerticalSpace,
   getEventHeight
@@ -127,6 +128,7 @@ const TimelineSimple2Events = ({
             skipContext={eventData.skipContext}
             currentPlayheadPosition={currentPlayheadPosition}
             selectedBlockId={selectedBlockId}
+            onBlockSelected={onBlockSelected}
           />
         ))}
       </div>
@@ -137,6 +139,7 @@ const TimelineSimple2Events = ({
 TimelineSimple2Events.propTypes = {
   currentPlayheadPosition: PropTypes.number.isRequired,
   selectedBlockId: PropTypes.string,
+  onBlockSelected: PropTypes.func,
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
   getEventHeight: PropTypes.func.isRequired
