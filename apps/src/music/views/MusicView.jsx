@@ -237,7 +237,9 @@ class UnconnectedMusicView extends React.Component {
     }
 
     if (e.type === Blockly.Events.SELECTED) {
-      this.setState({selectedBlockId: e.newElementId});
+      if (!this.state.isPlaying) {
+        this.setState({selectedBlockId: e.newElementId});
+      }
     }
 
     // Save the workspace.
