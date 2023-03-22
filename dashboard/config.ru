@@ -17,8 +17,15 @@ unless rack_env?(:development)
     }
 end
 
-require 'gctools/oobgc/unicorn_middleware'
-use GC::OOB::UnicornMiddleware
+# Temporarily wrap this unicorn-specific middleware in a DCDO flag so we can
+# evaluate whether or not this still has a performance impact now that we're no
+# longer using unicorn.
+# TODO: either remove the flag or this entire block, depending on the results
+unless DCDO.get('oobgc_unicorn_middleware_disabled', false)
+  require 'gctools/oobgc/unicorn_middleware'
+  use GC::OOB::UnicornMiddleware
+end
+
 use Rack::ContentLength
 require 'rack/ssl-enforcer'
 use Rack::SslEnforcer,
