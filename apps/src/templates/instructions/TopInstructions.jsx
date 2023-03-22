@@ -13,6 +13,7 @@ import ContainedLevelAnswer from '../ContainedLevelAnswer';
 import HelpTabContents from './HelpTabContents';
 import DocumentationTab from './DocumentationTab';
 import CommitsAndReviewTab from './CommitsAndReviewTab';
+import {AiTab} from './AiTab';
 import {
   toggleInstructionsCollapsed,
   setInstructionsMaxHeightNeeded,
@@ -50,7 +51,8 @@ export const TabType = {
   COMMENTS: 'comments',
   DOCUMENTATION: 'documentation',
   REVIEW: 'review',
-  TEACHER_ONLY: 'teacher-only'
+  TEACHER_ONLY: 'teacher-only',
+  AI: 'ai'
 };
 
 // Minecraft-specific styles
@@ -699,6 +701,7 @@ class TopInstructions extends Component {
             this.handleTabClick(TabType.DOCUMENTATION)
           }
           handleReviewTabClick={() => this.handleTabClick(TabType.REVIEW)}
+          handleAiTabClick={() => this.handleTabClick(TabType.AI)}
           handleTeacherOnlyTabClick={this.handleTeacherOnlyTabClick}
           collapsible={this.props.collapsible}
           handleClickCollapser={this.handleClickCollapser}
@@ -775,6 +778,7 @@ class TopInstructions extends Component {
                   )}
                 </div>
               )}
+            {tabSelected === TabType.AI && <AiTab />}
           </div>
           {!isEmbedView && resizable && !dynamicInstructions && (
             <HeightResizer
