@@ -68,6 +68,8 @@ function renderOfferings(
 function updateSectionCourse(updateCourse, course) {
   let courseVersionId;
   const courseVersions = {};
+  // The structure of cv is an array with the first item an id and the second
+  // item an object of everything. See 'CourseOfferingsTestData' for examples
   course.course_versions.map(cv => {
     courseVersions[cv[1].id] = cv[1];
   });
