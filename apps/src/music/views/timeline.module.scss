@@ -104,6 +104,10 @@ $full-width: 900px;
         &SkipSound {
           background-color: #808080;
         }
+
+        &BlockSelected {
+          border-color: yellow;
+        }
       }
 
       .tracksContainer {
