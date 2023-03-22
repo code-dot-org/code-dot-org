@@ -305,6 +305,18 @@ export default class MusicBlocklyWorkspace {
     });
   }
 
+  // Given a block ID, selects that block.
+  // Given undefined, unselects all blocks.
+  selectBlock(blockId) {
+    if (blockId) {
+      Blockly.mainBlockSpace.getBlockById(blockId).select();
+    } else {
+      Blockly.mainBlockSpace.getAllBlocks().forEach(block => {
+        block.unselect();
+      });
+    }
+  }
+
   getLocalStorageKeyName() {
     // Save code for each block mode in a different local storage item.
     // This way, switching block modes will load appropriate user code.
