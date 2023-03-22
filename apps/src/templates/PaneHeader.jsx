@@ -18,6 +18,9 @@ class PaneHeader extends React.Component {
   static propTypes = {
     hasFocus: PropTypes.bool.isRequired,
     style: PropTypes.object,
+    // TODO: [Phase 2] Need to maintain legacy styling for Javalab now.
+    //  Once Javalab receives rebranded styles - remove this prop and all of it's usage in the project
+    //  More info here: https://github.com/code-dot-org/code-dot-org/pull/50895
     isOldPurpleColor: PropTypes.bool,
     teacherOnly: PropTypes.bool,
     isMinecraft: PropTypes.bool,
@@ -130,6 +133,7 @@ export const PaneButton = Radium(function(props) {
   // TODO: [Phase 2] Need to maintain legacy styling for Javalab now.
   //  Once Javalab receives rebranded styles - remove this switch
   //  and use simpler moduleStyles call as it was before this commit
+  //  More info here: https://github.com/code-dot-org/code-dot-org/pull/50895
   const buttonStylesRoot = isLegacyStyles
     ? 'legacyHeaderButton'
     : 'headerButton';

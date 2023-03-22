@@ -99,7 +99,7 @@ function TopInstructionsHeader(props) {
             className="uitest-instructionsTab"
             onClick={handleInstructionTabClick}
             selected={tabSelected === TabType.INSTRUCTIONS}
-            isLegacyDefaultTextColor={isOldPurpleColor}
+            isLegacyTextColor={isOldPurpleColor}
             text={i18n.instructions()}
             teacherOnly={teacherOnly}
             isMinecraft={isMinecraft}
@@ -110,7 +110,7 @@ function TopInstructionsHeader(props) {
               className="uitest-helpTab"
               onClick={handleHelpTabClick}
               selected={tabSelected === TabType.RESOURCES}
-              isLegacyDefaultTextColor={isOldPurpleColor}
+              isLegacyTextColor={isOldPurpleColor}
               text={i18n.helpTips()}
               teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
@@ -122,7 +122,7 @@ function TopInstructionsHeader(props) {
               className="uitest-feedback"
               onClick={handleCommentTabClick}
               selected={tabSelected === TabType.COMMENTS}
-              isLegacyDefaultTextColor={isOldPurpleColor}
+              isLegacyTextColor={isOldPurpleColor}
               text={levelHasRubric ? i18n.rubric() : i18n.feedback()}
               teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
@@ -133,7 +133,7 @@ function TopInstructionsHeader(props) {
             <InstructionsTab
               onClick={handleDocumentationTabClick}
               selected={tabSelected === TabType.DOCUMENTATION}
-              isLegacyDefaultTextColor={isOldPurpleColor}
+              isLegacyTextColor={isOldPurpleColor}
               text={i18n.documentation()}
               teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
@@ -145,7 +145,7 @@ function TopInstructionsHeader(props) {
               className="uitest-reviewTab"
               onClick={handleReviewTabClick}
               selected={tabSelected === TabType.REVIEW}
-              isLegacyDefaultTextColor={isOldPurpleColor}
+              isLegacyTextColor={isOldPurpleColor}
               text={i18n.review()}
               teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}

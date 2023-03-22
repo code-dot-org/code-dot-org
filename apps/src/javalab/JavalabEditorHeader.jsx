@@ -38,7 +38,6 @@ function JavalabEditorHeader({
         headerHasFocus
         isLegacyStyles
         isRtl={false}
-        // style={{float: 'left', marginLeft: '3px', marginRight: 0}}
         label={javalabMsg.newFile()}
         leftJustified
         isDisabled={isReadOnlyWorkspace}

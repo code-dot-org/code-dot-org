@@ -31,6 +31,7 @@
 
 // TODO: [Phase 2] This now is legacy style that we use for Javalab. Remove .purpleHeader styles and it's usages
 //  once we move all the headers to updated styles.
+//  More info here: https://github.com/code-dot-org/code-dot-org/pull/50895
 .purpleHeader {
   height: style-constants.$workspace-headers-height;
   background-color: color.$purple;

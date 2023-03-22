@@ -23,16 +23,16 @@ export default class InstructionsTab extends Component {
     onClick: PropTypes.func.isRequired,
     style: PropTypes.object,
     text: PropTypes.string.isRequired,
-    isLegacyDefaultTextColor: PropTypes.bool,
+    isLegacyTextColor: PropTypes.bool,
     teacherOnly: PropTypes.bool,
     isMinecraft: PropTypes.bool,
     isRtl: PropTypes.bool
   };
 
   render() {
-    const {isLegacyDefaultTextColor} = this.props;
+    const {isLegacyTextColor} = this.props;
 
-    const highlightedWrapperStyle = isLegacyDefaultTextColor
+    const highlightedWrapperStyle = isLegacyTextColor
       ? styles.legacyHighlightedWrapper
       : styles.highlightedWrapper;
     const wrapperStyle = {
@@ -48,10 +48,10 @@ export default class InstructionsTab extends Component {
         ? styles.teacherText
         : {})
     };
-    const highlightedTextStyle = isLegacyDefaultTextColor
+    const highlightedTextStyle = isLegacyTextColor
       ? styles.legacyHighlightedText
       : styles.highlighted;
-    const defaultTextStyle = isLegacyDefaultTextColor
+    const defaultTextStyle = isLegacyTextColor
       ? styles.legacyText
       : styles.defaultText;
     const combinedStyle = {

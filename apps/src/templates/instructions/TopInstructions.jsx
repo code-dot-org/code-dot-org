@@ -574,6 +574,7 @@ class TopInstructions extends Component {
       mapReference,
       referenceLinks,
       // TODO: [Phase 2] Legacy header color logic. Delete once get rid of legacy header colors.
+      //  More info here: https://github.com/code-dot-org/code-dot-org/pull/50895
       isOldPurpleColorHeader,
       isMinecraft,
       teacherMarkdown,
