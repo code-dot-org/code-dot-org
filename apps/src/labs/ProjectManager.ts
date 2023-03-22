@@ -15,7 +15,10 @@ export default class ProjectManager {
   channelsStore: ChannelsStore;
   getProject: () => Project;
 
+  private nextSaveTime: number | null = null;
+  private readonly saveInterval: number = 30 * 1000; // 30 seconds
   private saveInProgress: boolean = false;
+  private saveQueued: boolean = false;
   private eventListeners: {
     [key in keyof typeof ProjectManagerEvent]?: [(response: Response) => void]
   } = {};
@@ -55,13 +58,18 @@ export default class ProjectManager {
   // TODO: Add functionality to reduce channel updates during
   // HoC "emergency mode" (see 1182-1187 in project.js).
   async save(): Promise<Response> {
-    if (this.saveInProgress) {
+    if (!this.canSave()) {
+      if (!this.saveQueued) {
+        this.enqueueSave();
+      }
+
       const noopResponse = new Response(null, {status: 304});
       this.executeListeners(ProjectManagerEvent.SaveNoop, noopResponse);
       return noopResponse;
     }
 
     this.saveInProgress = true;
+    this.nextSaveTime = Date.now() + this.saveInterval;
     this.executeListeners(ProjectManagerEvent.SaveStart);
     const project = this.getProject();
     const sourceResponse = await this.sourcesStore.save(
@@ -90,6 +98,25 @@ export default class ProjectManager {
     this.saveInProgress = false;
     this.executeListeners(ProjectManagerEvent.SaveSuccess);
     return new Response();
+  }
+
+  private canSave(): boolean {
+    if (this.saveInProgress) {
+      return false;
+    } else if (this.nextSaveTime) {
+      return this.nextSaveTime <= Date.now();
+    }
+
+    return true;
+  }
+
+  private enqueueSave() {
+    this.saveQueued = true;
+
+    setTimeout(() => {
+      this.save();
+      this.saveQueued = false;
+    }, this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval);
   }
 
   addEventListener(type: ProjectManagerEvent, listener: () => void) {
