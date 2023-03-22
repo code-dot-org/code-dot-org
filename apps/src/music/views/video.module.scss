@@ -1,6 +1,10 @@
-@import "./theme/tokens-dark";
 @import "color.scss";
 @import "./music-view.module.scss";
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
 .container {
   background-color: rgba(0 0 0 / 0.5);
@@ -9,6 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: fadein 1s;
 }
 
 .inner {
@@ -26,6 +31,7 @@
   height: 100%;
   border: solid 2px white;
   box-sizing: border-box;
+  background-color: black;
 }
 
 .closeContainer {
