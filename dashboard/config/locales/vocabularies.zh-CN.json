@@ -3,6 +3,7 @@
     "data": {
       "vocabularies": {
         "code/dance-extras/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "event/dance-extras/unversioned": {
@@ -14,6 +15,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/minecraft/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/minecraft/unversioned": {
@@ -33,6 +35,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/hero/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/hero/unversioned": {
@@ -80,6 +83,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/hourofcode/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/hourofcode/unversioned": {
@@ -91,6 +95,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/frozen/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/frozen/unversioned": {
@@ -102,6 +107,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/iceage/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/iceage/unversioned": {
@@ -125,6 +131,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/gumball/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/gumball/unversioned": {
@@ -136,6 +143,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/dance/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "event/dance/unversioned": {
@@ -147,6 +155,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/aquatic/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "condition/aquatic/unversioned": {
@@ -194,6 +203,7 @@
           "definition": "将字母表中的每个字母映射到字母表中随机选择的其它字母的一种加密技术。"
         },
         "code/starwars/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/starwars/unversioned": {
@@ -205,6 +215,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/mc/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/mc/unversioned": {
@@ -216,6 +227,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/playlab/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/playlab/unversioned": {
@@ -227,6 +239,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/starwarsblocks/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/starwarsblocks/unversioned": {
@@ -266,6 +279,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/infinity/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/infinity/unversioned": {
@@ -277,6 +291,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/basketball/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/basketball/unversioned": {
@@ -292,6 +307,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/dance-extras-2019/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "event/dance-extras-2019/unversioned": {
@@ -303,6 +319,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/dance-2019/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "event/dance-2019/unversioned": {
@@ -354,6 +371,7 @@
           "definition": "导致某些事情发生的操作。"
         },
         "code/coursed/2022": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "repeat/coursed/2022": {
@@ -618,6 +636,7 @@
           "definition": "导致某些事情发生的操作。"
         },
         "code/express/2022": {
+          "word": "代码",
           "definition": "编写代码或编写计算机指令。"
         },
         "loop/express/2022": {
@@ -1186,6 +1205,7 @@
           "definition": "导致某些事情发生的操作。"
         },
         "code/coursed/2021": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "repeat/coursed/2021": {
@@ -1253,6 +1273,7 @@
           "definition": "导致某些事情发生的操作。"
         },
         "code/express/2021": {
+          "word": "代码",
           "definition": "编写代码或编写计算机指令。"
         },
         "loop/express/2021": {
