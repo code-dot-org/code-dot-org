@@ -76,18 +76,16 @@ class Pd::PreWorkshopSurvey < ApplicationRecord
     end
   end
 
-  private
-
-  def units
+  private def units
     units_and_lessons.map(&:first)
   end
 
-  def lessons
+  private def lessons
     selected_unit = units_and_lessons.find {|u| u.first == sanitized_form_data_hash[:unit]}
     selected_unit.try(:last)
   end
 
-  def units_and_lessons
+  private def units_and_lessons
     @units_and_lessons ||= Pd::PreWorkshopSurvey.units_and_lessons(workshop)
   end
 end

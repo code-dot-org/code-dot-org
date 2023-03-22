@@ -52,18 +52,15 @@
     "hide_pause_button": "false",
     "instructions_icon": "bear",
     "standalone_app_name": "spritelab",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2023-03-10T22:07:28.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2023-03-10T22:07:28.000Z",
   "user_id": 831,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-10T22:07:28.003+00:00\",\"changed\":[\"cloned from \\\"behaviors 4\\\"\"],\"cloned_from\":\"behaviors 4\"},{\"changed_at\":\"2023-03-10 22:09:32 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 22:12:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 22:16:43 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-10T22:07:28.003+00:00\",\"changed\":[\"cloned from \\\"behaviors 4\\\"\"],\"cloned_from\":\"behaviors 4\"},{\"changed_at\":\"2023-03-10 22:09:32 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 22:12:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 22:16:43 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 22:41:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 22:44:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -108,8 +105,12 @@
         </block>
         <block type="when_run">
           <next>
-            <block type="gamelab_setBackgroundImageAs">
-              <field name="IMG">"night-meadow"</field>
+            <block type="gamelab_setBackground">
+              <value name="COLOR">
+                <block type="colour_picker">
+                  <field name="COLOUR">#c0c0c0</field>
+                </block>
+              </value>
               <next>
                 <block type="gamelab_makeNewSpriteAnon">
                   <field name="ANIMATION_NAME">"brownspider"</field>
@@ -175,6 +176,28 @@
                   </next>
                 </block>
               </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"bat"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"brownspider"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_destroy">
+              <value name="THIS">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"brownspider"</field>
+                </block>
+              </value>
             </block>
           </next>
         </block>

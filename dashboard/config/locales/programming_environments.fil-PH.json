@@ -88,6 +88,7 @@
                   }
                 },
                 "showMobileControls": {
+                  "content": "Binabago ang mga kontrol ng mobile na makikita sa ibaba ng play space.",
                   "palette_params": {
                     "spaceButtonVisible": {
                       "type": "Boolean"
@@ -101,7 +102,8 @@
                     "mobileOnly": {
                       "type": "Boolean"
                     }
-                  }
+                  },
+                  "short_description": "Binabago ang mga kontrol ng mobile na makikita sa ibaba ng play space."
                 },
                 "stopSound": {
                   "palette_params": {
@@ -121,6 +123,9 @@
                       "name": "Spiral"
                     }
                   }
+                },
+                "sprite.height": {
+                  "return_value": "Ang taas ng sprite."
                 },
                 "mirrorX": {
                   "palette_params": {
@@ -201,6 +206,9 @@
                       "type": "Bilang"
                     }
                   }
+                },
+                "sprite.width": {
+                  "return_value": "Ang lapad ng sprite."
                 },
                 "createSprite": {
                   "palette_params": {
@@ -595,6 +603,24 @@
                 }
               }
             },
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Ang bilang ng mga millisecond sa pagitan ng bawat pagpapatupad ng function."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Ang bilang ng mga millisecond na maghihintay bago isagawa ang function."
+                    }
+                  }
+                }
+              }
+            },
             "math": {
               "name": "Math",
               "expressions": {
@@ -638,7 +664,26 @@
               }
             },
             "variables": {
-              "name": "Mga variable"
+              "name": "Mga variable",
+              "expressions": {
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Ang string na hahanapin."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Ang string na hahanapin."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Ang haba ng string"
+                }
+              }
             },
             "functions": {
               "name": "Mga function"
@@ -651,6 +696,9 @@
           "categories": {
             "ui_controls": {
               "expressions": {
+                "button": {
+                  "short_description": "Lumikha ng button sa screen na nagpapakita ng text na ibinigay at tinutukoy ng ibinigay na id sa default na lokasyon (0,0)."
+                },
                 "getProperty": {
                   "palette_params": {
                     "id": {
@@ -722,25 +770,69 @@
                       "type": "String"
                     },
                     "property": {
-                      "type": "String"
+                      "type": "String",
+                      "description": "Ang katangiang babaguhin."
                     }
-                  }
+                  },
+                  "short_description": "Nagtatakda ng katangian sa bagong value sa tinukoy na elemento."
+                },
+                "setScreen": {
+                  "short_description": "Itinakda ang screen sa ibinigay na screenId."
+                },
+                "showElement": {
+                  "short_description": "Ipinapakita ang elementong may ibinigay na id."
+                },
+                "textLabel": {
+                  "short_description": "Lumikha ng text label sa screen na nagpapakita ng text na ibinigay at tinutukoy ng ibinigay na id sa default na lokasyon (0,0)."
                 }
               }
             },
             "canvas": {
               "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "Ang radius ng bilog, sa mga pixel."
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "Ang posisyon ng x sa mga pixel ng kaliwang sulok sa itaas ng imaheng iguguhit."
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel ng kaliwang sulok sa itaas ng imaheng iguguhit."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel ng kaliwang sulok sa itaas ng imaheng iguguhit."
+                    }
+                  }
+                },
                 "getAlpha": {
                   "palette_params": {
                     "imageData": {
                       "type": "bagay"
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
                     }
-                  }
+                  },
+                  "short_description": "Ibinabalik ang dami ng alpha (opacity) (mula 0 hanggang 255) sa kulay ng pixel na matatagpuan sa ibinigay na x at y na posisyon sa ibinigay na data ng imahe."
                 },
                 "getBlue": {
                   "palette_params": {
                     "imageData": {
                       "type": "bagay"
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
                     }
                   }
                 },
@@ -748,6 +840,28 @@
                   "palette_params": {
                     "imageData": {
                       "type": "bagay"
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel upang simulan ang pagkuha."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel upang simulan ang pagkuha."
+                    },
+                    "width": {
+                      "description": "Ang lapad ng bounding rectangle para makuha ang data ng imahe."
+                    },
+                    "height": {
+                      "description": "Ang taas ng bounding rectangle para makuha ang data ng imahe."
                     }
                   }
                 },
@@ -755,6 +869,12 @@
                   "palette_params": {
                     "imageData": {
                       "type": "bagay"
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
                     }
                   }
                 },
@@ -762,6 +882,28 @@
                   "palette_params": {
                     "imageData": {
                       "type": "bagay"
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan upang ilagay ang data sa canvas."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan upang ilagay ang data sa canvas."
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel ng kaliwang sulok sa itaas ng parihaba."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel ng kaliwang sulok sa itaas ng parihaba."
+                    },
+                    "width": {
+                      "description": "Ang pahalang na lapad sa mga pixel ng parihaba."
+                    },
+                    "height": {
+                      "description": "Ang patayong taas sa mga pixel ng parihaba."
                     }
                   }
                 },
@@ -769,15 +911,35 @@
                   "palette_params": {
                     "imageData": {
                       "type": "bagay"
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "alphaValue": {
+                      "description": "Ang dami ng alpha (opacity) (mula 0 hanggang 255) na itatakda sa pixel."
                     }
-                  }
+                  },
+                  "short_description": "Itinatakda ang dami ng alpha (opacity) (mula 0 hanggang 255) sa kulay ng pixel na matatagpuan sa ibinigay na x at y na posisyon sa ibinigay na data ng imahe."
                 },
                 "setBlue": {
                   "palette_params": {
                     "imageData": {
                       "type": "bagay"
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "blueValue": {
+                      "description": "Ang dami ng asul (mula 0 hanggang 255) na itinakda sa pixel."
                     }
-                  }
+                  },
+                  "short_description": "Itinatakda ang dami ng asul (mula sa 0 hanggang 255) sa kulay ng pixel na matatagpuan sa ibinigay na x at y na posisyon sa ibinigay na data ng imahe sa dami ng input na blueValue."
                 },
                 "setFillColor": {
                   "palette_params": {
@@ -790,13 +952,41 @@
                   "palette_params": {
                     "imageData": {
                       "type": "bagay"
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "greenValue": {
+                      "description": "Ang dami ng berde (mula 0 hanggang 255) na itinakda sa pixel."
                     }
-                  }
+                  },
+                  "short_description": "Itinatakda ang dami ng berde (mula 0 hanggang 255) sa kulay ng pixel na matatagpuan sa ibinigay na x at y na posisyon sa ibinigay na data ng imahe sa halaga ng input na greenValue."
                 },
                 "setRGB": {
                   "palette_params": {
                     "imageData": {
                       "type": "bagay"
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "red": {
+                      "description": "Ang dami ng pula (mula 0 hanggang 255) na itinakda sa pixel."
+                    },
+                    "green": {
+                      "description": "Ang dami ng berde (mula 0 hanggang 255) na itinakda sa pixel."
+                    },
+                    "blue": {
+                      "description": "Ang dami ng asul (mula 0 hanggang 255) na itinakda sa pixel."
+                    },
+                    "alpha": {
+                      "description": "Opsyonal. Ang dami ng opacity (mula 0 hanggang 255) na itatakda sa pixel. Default sa 255 (buong opacity)."
                     }
                   }
                 },
@@ -804,8 +994,18 @@
                   "palette_params": {
                     "imageData": {
                       "type": "bagay"
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "redValue": {
+                      "description": "Ang dami ng pula (mula 0 hanggang 255) na itinakda sa pixel."
                     }
-                  }
+                  },
+                  "short_description": "Itinatakda ang dami ng pula (mula sa 0 hanggang 255) sa kulay ng pixel na matatagpuan sa ibinigay na x at y na posisyon sa ibinigay na data ng imahe sa dami ng input na redValue."
                 },
                 "setStrokeColor": {
                   "palette_params": {
@@ -849,6 +1049,9 @@
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
+                    "tableName": {
+                      "description": "Ang pangalan ng talahanayan kung saan kukunin ang mga tala."
+                    },
                     "options": {
                       "type": "bagay"
                     }
@@ -864,6 +1067,13 @@
                     }
                   }
                 },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Ang pangalan ng key na kukunin."
+                    }
+                  }
+                },
                 "getPrediction": {
                   "palette_params": {
                     "name": {
@@ -874,6 +1084,16 @@
                     },
                     "callback": {
                       "type": "Function"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "Nakakakuha ng natatanging identifier para sa kasalukuyang user ng app na ito."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "Ang pangalan ng talahanayan kung saan ang event handler na ito ay naaangkop."
                     }
                   }
                 },
@@ -891,6 +1111,24 @@
                     }
                   }
                 },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Ang pangalan ng key na iimbakin."
+                    },
+                    "value": {
+                      "description": "Ang data na iimbakin."
+                    }
+                  },
+                  "short_description": "Nag-iimbak ng key/value pair sa key/value data storage ng App Lab, at tumatawag sa callback function kapag tapos na ang pagkilos."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "Ang web address ng isang serbisyong nagbabalik ng data."
+                    }
+                  }
+                },
                 "updateRecord": {
                   "palette_params": {
                     "record": {
@@ -902,24 +1140,102 @@
             },
             "turtle": {
               "expressions": {
+                "arcLeft": {
+                  "short_description": "Iginagalaw ang pagong pasulong at pakaliwa sa makinis, pabilog na arko."
+                },
+                "getX": {
+                  "short_description": "Nakukuha ang kasalukuyang x coordinate sa mga pixel ng pagong."
+                },
+                "getY": {
+                  "short_description": "Nakukuha ang kasalukuyang y coordinate sa mga pixel ng pagong."
+                },
+                "hide": {
+                  "short_description": "Ginagawang hindi nakikita ang pagong sa kasalukuyang lokasyon nito."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Ang bilang ng mga pixel upang ilipat ang pagong pakanan."
+                    },
+                    "y": {
+                      "description": "Ang bilang ng mga pixel upang ilipat ang pagong pababa."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "Inilipat ang pagong pabalik sa isang naibigay na bilang ng mga pixel mula sa kasalukuyang direksiyon."
+                },
+                "moveForward": {
+                  "short_description": "Inilipat ang pagong pasulong sa naibigay na bilang ng mga pixel sa kasalukuyang direksiyon."
+                },
+                "moveTo": {
+                  "short_description": "Inilipat ang pagong sa partikular na (x,y) na posisyon sa screen."
+                },
                 "penColor": {
                   "palette_params": {
                     "color": {
                       "type": "String"
                     }
-                  }
+                  },
+                  "short_description": "Itinakda ang kulay ng panulat na ginagamit ng pagong para sa pagguhit ng mga linya at tuldok."
+                },
+                "penDown": {
+                  "short_description": "Ibinababa ang panulat upang ang pagong ay gumuhit ng linya sa likod nito habang ito ay gumagalaw."
                 },
                 "penRGB": {
                   "palette_params": {
                     "r": {
                       "type": "Bilang"
                     }
-                  }
+                  },
+                  "short_description": "Gamit ang mga halaga ng RGBA, itinatakda ang kulay ng panulat na ginagamit ng pagong sa pagguhit ng mga linya at tuldok."
+                },
+                "penUp": {
+                  "short_description": "Pinulot ang panulat upang hindi gumuhit ng linya ang pagong habang ito ay gumagalaw."
+                },
+                "penWidth": {
+                  "short_description": "Itinatakda ang lapad ng linya sa mga pixel na iginuhit ng pagong sa likod nito habang gumagalaw."
+                },
+                "show": {
+                  "short_description": "Ginagawang nakikita ang pagong sa kasalukuyang lokasyon nito."
+                },
+                "speed": {
+                  "short_description": "Itinatakda ang bilis sa pagpapatupad ng app, na kinabibilangan ng bilis ng pagong."
+                },
+                "turnLeft": {
+                  "short_description": "Pinaikot ang pagong na iniwan ng tinukoy na anggulo. Ang posisyon ng pagong ay nananatiling pareho."
+                },
+                "turnRight": {
+                  "short_description": "Pinaikot pakanan ang pagong ayon sa tinukoy na anggulo. Ang posisyon ng pagong ay nananatiling pareho."
+                },
+                "turnTo": {
+                  "short_description": "Binabago ang direksiyon ng pagong sa tiyak na anggulo. 0 ang pataas, 90 ang kanan, 180 ang pababa, at 270 ang kaliwa."
                 }
               }
             },
             "control": {
               "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Ang value na ibinalik ng setTimeout function upang kanselahin."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Ang bilang ng mga millisecond sa pagitan ng bawat pagpapatupad ng function."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Ang bilang ng mga millisecond na maghihintay bago isagawa ang function."
+                    }
+                  }
+                },
                 "stopTimedLoop": {
                   "palette_params": {
                     "loop": {
@@ -1001,6 +1317,23 @@
                     }
                   }
                 },
+                "declareAssign_list_123": {
+                  "short_description": "Magdeklara at magtalaga ng array sa isang variable"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Ang string na hahanapin."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Ang string na hahanapin."
+                    }
+                  }
+                },
                 "addPair": {
                   "palette_params": {
                     "key": {
@@ -1015,6 +1348,9 @@
                       "type": "String"
                     }
                   }
+                },
+                "length": {
+                  "return_value": "Ang haba ng string"
                 }
               }
             },

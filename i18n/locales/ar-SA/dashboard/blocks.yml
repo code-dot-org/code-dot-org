@@ -2,6 +2,8 @@
 ar:
   data:
     blocks:
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: مستخدم فوري {QUESTION} للمتغير {VAR} مع خيارات {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -2253,6 +2255,15 @@ ar:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} قُل {SPEECH}"
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): الدوران ناحية اليمين
+            new Behavior(spinning_left, []): الدوران ناحية اليسار
+            new Behavior(jittering, []): الاهتزاز
+            new Behavior(wandering, []): التحرك
+            new Behavior(patrolling, []): التجوُّل
       binary_drawBin:
         text: رسم ثنائي {BIN}
       binary_drawBinScreen:

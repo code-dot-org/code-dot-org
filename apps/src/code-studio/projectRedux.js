@@ -11,6 +11,8 @@ const SET_NAME_FAILURE = 'project/SET_NAME_FAILURE';
 const UNSET_NAME_FAILURE = 'project/UNSET_NAME_FAILURE';
 const REFRESH_IN_RESTRICTED_SHARE_MODE =
   'project/REFRESH_IN_RESTRICTED_SHARE_MODE';
+const REFRESH_TEACHER_HAS_CONFIRMED_UPLOAD_WARNING =
+  'project/REFRESH_TEACHER_HAS_CONFIRMED_UPLOAD_WARNING';
 
 export const projectUpdatedStatuses = {
   default: 'default',
@@ -33,7 +35,8 @@ const initialState = {
   projectNameFailure: undefined,
   showTryAgainDialog: false,
   showWorkspaceAlert: {type: '', message: '', displayBottom: undefined},
-  inRestrictedShareMode: false
+  inRestrictedShareMode: false,
+  teacherHasConfirmedUploadWarning: false
 };
 
 export default (state = initialState, action) => {
@@ -97,6 +100,12 @@ export default (state = initialState, action) => {
     return {
       ...state,
       inRestrictedShareMode: dashboard.project.inRestrictedShareMode()
+    };
+  }
+  if (action.type === REFRESH_TEACHER_HAS_CONFIRMED_UPLOAD_WARNING) {
+    return {
+      ...state,
+      teacherHasConfirmedUploadWarning: dashboard.project.teacherHasConfirmedUploadWarning()
     };
   }
 
@@ -170,5 +179,11 @@ export const unsetNameFailure = () => ({
 export function refreshInRestrictedShareMode() {
   return {
     type: REFRESH_IN_RESTRICTED_SHARE_MODE
+  };
+}
+
+export function refreshTeacherHasConfirmedUploadWarning() {
+  return {
+    type: REFRESH_TEACHER_HAS_CONFIRMED_UPLOAD_WARNING
   };
 }

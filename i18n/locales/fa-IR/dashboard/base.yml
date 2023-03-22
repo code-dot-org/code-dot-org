@@ -1153,5 +1153,6 @@ fa:
     image_width: "عرض تصویر"
     image_height: "ارتفاع تصویر"
     bits_per_pixel_header: "بیت در هر پیکسل"
+    binary: "دو دویی"
     hexadecimal: "سیستم شانزده شانزدهی"
     pixel_format_header: "قالب پیکسل"

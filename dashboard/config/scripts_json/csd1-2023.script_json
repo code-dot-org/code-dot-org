@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd1",
-    "serialized_at": "2023-03-13 17:37:29 UTC",
+    "serialized_at": "2023-03-17 19:15:01 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1459,7 +1459,13 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r problem_solving_process_1/csd1/2023] video in the slides.\n\n**Questions to consider with the video:**\n- How did you follow the problem-solving process in the last lesson?\n- How could you use this process on a problem in your everyday life?\n\n**Discussion Goal:** The first discussion question is part of the core activity in the rest of the lesson. Students should take time working in their groups to think of specific things that they did that follow each step of the process. The goal of this discussion is to make the abstract steps more concrete and accessible to students by relating them to a shared activity. The second question gives students a chance to expand their understanding of the process to a different problem, seeing how the different steps may look in different domains. The goal of this discussion is to make sure students have a general enough understanding of the process that they can apply it to a wider variety of problems since the process will be used throughout the course in various domains.\n",
         "name": "The Problem Solving Process\r",
-        "progression_name": "Video: Problem Solving Process"
+        "progression_name": "Video: Problem Solving Process",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9b54904f-66a6-4d2c-b41c-e9077a419c6a",
@@ -1995,7 +2001,13 @@
       "key": "7dd50f9a-e8a7-4b4e-97fb-48e6c0d387c8",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r what_is_a_computer/csd1/2023] video in the slides.\n\nThe video presents a computer as a machine that helps with certain kinds of thinking work by manipulating information.  You may want to present the definition as \"a machine that works with information\".\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r what_is_a_computer/csd1/2023] video in the slides.\n\nThe video presents a computer as a machine that helps with certain kinds of thinking work by manipulating information.  You may want to present the definition as \"a machine that works with information\".\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "7dd50f9a-e8a7-4b4e-97fb-48e6c0d387c8",
@@ -2771,7 +2783,7 @@
       "key": "e9cb7588-fbd6-4624-a83d-3dd31aff67e1",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show students the [r what_do_computers_do/csd1/2023] video in the slides which introduces the IOSP model.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r what_do_computers_do/csd1/2023] video in the slides which introduces the IOSP model.\n",
         "progression_name": "Video: IOSP Model"
       },
       "seeding_key": {
@@ -2787,7 +2799,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If you are using journaling, prompt the students to write their answers down in their journals\r\n"
+            "markdown": "If you are using journaling, prompt the students to write their answers down in their journals. \n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**.\n"
           }
         ]
       },
@@ -4471,6 +4483,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd1_2023"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,

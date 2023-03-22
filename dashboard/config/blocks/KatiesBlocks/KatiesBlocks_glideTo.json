@@ -1,0 +1,18 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "glideTo",
+    "docFunc": "gamelab_glideTo",
+    "blockText": "{SPRITE} glide to {LOCATION}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "LOCATION",
+        "type": "Location"
+      }
+    ]
+  }
+}

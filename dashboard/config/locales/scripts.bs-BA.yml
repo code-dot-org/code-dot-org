@@ -1248,6 +1248,8 @@ bs:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Poglavlje 2: Rješavanje problema podataka'
+          description_short: Naučite kako ljudi koriste računala za rješavanje problema
+            podataka.
         csp2-2023:
           lesson_groups:
             csp_unit2_2020:
