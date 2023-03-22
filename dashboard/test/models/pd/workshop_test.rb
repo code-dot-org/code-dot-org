@@ -329,9 +329,13 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'account_required_for_attendance?' do
     normal_workshop = create :workshop, :ended
+    counselor_workshop = create :counselor_workshop, :ended
+    admin_workshop = create :admin_workshop, :ended
     admin_counselor_workshop = create :admin_counselor_workshop, :ended
 
     assert normal_workshop.account_required_for_attendance?
+    refute counselor_workshop.account_required_for_attendance?
+    refute admin_workshop.account_required_for_attendance?
     refute admin_counselor_workshop.account_required_for_attendance?
   end
 
@@ -344,6 +348,16 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.send_exit_surveys
   end
 
+  test 'send_exit_surveys with attendance but no account gets email for counselor or admin' do
+    workshop = create :counselor_workshop, :ended
+
+    enrollment = create :pd_enrollment, workshop: workshop
+    create :pd_attendance_no_account, session: workshop.sessions.first, enrollment: enrollment
+    refute workshop.account_required_for_attendance?
+    Pd::Enrollment.any_instance.expects(:send_exit_survey)
+    workshop.send_exit_surveys
+  end
+
   test 'send_exit_surveys with attendance but no account gets email for admin/counselor' do
     workshop = create :admin_counselor_workshop, :ended
 
@@ -351,7 +365,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create :pd_attendance_no_account, session: workshop.sessions.first, enrollment: enrollment
 
     refute workshop.account_required_for_attendance?
-    Pd::Enrollment.any_instance.expects(:send_exit_survey)
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
+
     workshop.send_exit_surveys
   end
 
@@ -479,18 +494,17 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'friendly name' do
     Geocoder.expects(:search).returns([])
-    workshop = create :admin_counselor_workshop,
+    workshop = create :admin_workshop,
       location_name: 'Code.org',
       location_address: 'Seattle, WA',
       sessions: [create(:pd_session, start: Date.new(2016, 9, 1))]
 
     # no subject
-    assert_equal 'Admin/Counselor Workshop Welcome workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
+    assert_equal 'Admin workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
 
     # with subject
     workshop.update!(course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_5)
     assert_equal 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
-
     # truncated at 255 chars
     workshop.update!(location_name: "blah" * 60)
     assert workshop.friendly_name.start_with? 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at blahblahblah'

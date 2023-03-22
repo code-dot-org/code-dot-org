@@ -478,10 +478,10 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     # professional learning landing page.
     # Root cause: WHERE subject != 'xyz' implicitly excludes rows where subject IS NULL too.
 
-    # Ended Admin/Counselor workshop with attendance.
-    admin_counselor_workshop = create :admin_counselor_workshop, :ended
-    expected_enrollment = create :pd_enrollment, workshop: admin_counselor_workshop
-    create :pd_attendance, session: admin_counselor_workshop.sessions.first, enrollment: expected_enrollment
+    # Ended Admin workshop with attendance; Admin workshops have no subject.
+    admin_workshop = create :admin_workshop, :ended
+    expected_enrollment = create :pd_enrollment, workshop: admin_workshop
+    create :pd_attendance, session: admin_workshop.sessions.first, enrollment: expected_enrollment
 
     assert_equal [expected_enrollment], Pd::Enrollment.with_surveys
   end

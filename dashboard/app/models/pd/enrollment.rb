@@ -160,9 +160,9 @@ class Pd::Enrollment < ApplicationRecord
 
     # Filter out Local summer, CSP Workshop for Returning Teachers, and CSF Intro workshops before 5/8/2020 (they
     # do not use Foorm for survey completion); CSF Deep Dive workshops before 9/1/2020 (they do not use Foorm for
-    # survey completion); and Admin/Counselor workshops (they should not receive exit surveys at all).
+    # survey completion); and Admin + Admin/Counselor workshops (they should not receive exit surveys at all).
     foorm_enrollments = enrollments.select do |enrollment|
-      !admin_counselor_workshop?(enrollment.workshop) && currently_receives_foorm_survey(enrollment.workshop)
+      !admin_workshop?(enrollment.workshop) && currently_receives_foorm_survey(enrollment.workshop)
     end
 
     # We do not want to check survey completion for the following workshop types: Legacy (non-Foorm) summer,
@@ -358,8 +358,9 @@ class Pd::Enrollment < ApplicationRecord
     user.permission = UserPermission::AUTHORIZED_TEACHER if user&.teacher? && [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(workshop.course)
   end
 
-  # Returns true if the given workshop is an Admin/Counselor workshop
-  private_class_method def self.admin_counselor_workshop?(workshop)
+  # Returns true if the given workshop is an Admin or Admin/Counselor workshop
+  private_class_method def self.admin_workshop?(workshop)
+    workshop.course == Pd::Workshop::COURSE_ADMIN ||
     workshop.course == Pd::Workshop::COURSE_ADMIN_COUNSELOR
   end
 
