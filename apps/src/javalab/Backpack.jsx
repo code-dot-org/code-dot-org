@@ -476,7 +476,7 @@ const styles = {
 
 export const UnconnectedBackpack = Backpack;
 export default connect(state => ({
-  backpackApi: state.javalab.backpackApi,
+  backpackChannelId: state.javalab.backpackChannelId,
   sources: state.javalab.sources,
   validation: state.javalab.validation,
   backpackEnabled: state.javalab.backpackEnabled
