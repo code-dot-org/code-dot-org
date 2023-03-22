@@ -4,18 +4,39 @@ require 'dynamic_config/gatekeeper'
 require_relative '../../pegasus/src/env'
 
 module WebPurify
+  API_ENDPOINT = URI('http://api1.webpurify.com/services/rest').freeze
+  CHARACTER_LIMIT = 30_000
   ISO_639_1_TO_WEBPURIFY = {
     'es' => 'sp',
     'ko' => 'kr',
     'ja' => 'jp'
   }.freeze
 
-  WEBPURIFY_URL = URI('http://api1.webpurify.com/services/rest').freeze
-
   CONNECTION_OPTIONS = {
     read_timeout: DCDO.get('webpurify_http_read_timeout', 10),
     open_timeout: DCDO.get('webpurify_tcp_connect_timeout', 5)
   }
+
+  # Note: If text has a string of text without whitespace longer than CHARACTER_LIMIT,
+  # the entire substring will count as one long chunk and be given its own request to WebPurify.
+  def self.split_text(text, max_chunk_length = CHARACTER_LIMIT)
+    words = text.split(/\s/)
+    chunks = []
+    current_chunk = ""
+
+    words.each do |word|
+      if current_chunk.length + word.length + 1 <= max_chunk_length
+        current_chunk += " " unless current_chunk.empty?
+        current_chunk += word
+      else
+        chunks << current_chunk unless current_chunk.empty?
+        current_chunk = word
+      end
+    end
+
+    chunks << current_chunk unless current_chunk.empty?
+    chunks
+  end
 
   # Returns the all profanities in text (if any) or nil (if none).
   # @param [String] text The text to search for profanity within.
@@ -31,23 +52,32 @@ module WebPurify
       uniq.
       join(',')
 
-    form_data = [
-      ['api_key', CDO.webpurify_key],
-      ['format', 'json'],
-      ['lang', language_codes],
-      ['method', 'webpurify.live.return'],
-      ['text', text]
-    ]
+    chunks = split_text(text)
+    expletives = []
+    Net::HTTP.start(API_ENDPOINT.host, API_ENDPOINT.port, CONNECTION_OPTIONS) do |http|
+      chunks.each do |chunk|
+        request = Net::HTTP::Post.new(API_ENDPOINT)
+        form_data = [
+          ['api_key', CDO.webpurify_key],
+          ['format', 'json'],
+          ['lang', language_codes],
+          ['method', 'webpurify.live.return'],
+          ['text', chunk]
+        ]
+        request.set_form form_data, 'multipart/form-data'
 
-    response = Net::HTTP.start(WEBPURIFY_URL.host, WEBPURIFY_URL.port, CONNECTION_OPTIONS) do |http|
-      request = Net::HTTP::Post.new(WEBPURIFY_URL)
-      request.set_form form_data, 'multipart/form-data'
-      http.request(request)
+        response = http.request(request)
+
+        next if !response.is_a?(Net::HTTPSuccess)
+        result = JSON.parse(response.body)
+        if result.key?('rsp') && result['rsp'].key?('expletive')
+          expletive = result['rsp']['expletive']
+          expletives.concat(expletive.is_a?(Array) ? expletive : [expletive])
+        end
+      end
     end
 
-    body = JSON.parse(response.read_body)
-    expletive = body['rsp'] && body['rsp']['expletive']
-    return nil unless expletive
-    expletive.is_a?(Array) ? expletive : [expletive]
+    return nil if expletives.empty?
+    expletives
   end
 end
