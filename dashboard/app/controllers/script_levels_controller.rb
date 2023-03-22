@@ -155,7 +155,6 @@ class ScriptLevelsController < ApplicationController
       # TODO: Change/remove this check as we add support for more level types.
       if level.class.to_s == 'FreeResponse'
         @responses = UserLevel.where(level: level, user: @section&.students)
-        puts @responses
       end
     end
 
