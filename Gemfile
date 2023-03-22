@@ -243,7 +243,7 @@ group :development, :staging, :levelbuilder do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rails-accessibility', require: false
-  gem 'scss_lint', require: false
+  gem 'scss_lint', '~> 0.51.0', require: false
 end
 
 # Reduce volume of production logs
