@@ -292,14 +292,12 @@ export default class MusicBlocklyWorkspace {
     return this.workspace.getAllBlocks();
   }
 
-  updateHighlightedBlocks(playingBlockIds, notPlayingBlockIds) {
-    // Some blocks might appear in both lists, such as when a
-    // block is in a loop and only one instance is actively playing.
-    // For that reason, we clear the highlights for the not playing list
-    // first, and then highlight for the playing list second.
-    notPlayingBlockIds.forEach(blockId => {
-      Blockly.mainBlockSpace.highlightBlock(blockId, false);
+  updateHighlightedBlocks(playingBlockIds) {
+    // Clear all highlights.
+    Blockly.mainBlockSpace.getAllBlocks().forEach(block => {
+      Blockly.mainBlockSpace.highlightBlock(block.id, false);
     });
+    // Highlight playing blocks.
     playingBlockIds.forEach(blockId => {
       Blockly.mainBlockSpace.highlightBlock(blockId, true);
     });

@@ -158,15 +158,8 @@ class UnconnectedMusicView extends React.Component {
   };
 
   updateHighlightedBlocks = () => {
-    const {
-      playingBlockIds,
-      notPlayingBlockIds
-    } = this.player.getCurrentlyPlayingBlockIds();
-
-    this.musicBlocklyWorkspace.updateHighlightedBlocks(
-      playingBlockIds,
-      notPlayingBlockIds
-    );
+    const playingBlockIds = this.player.getCurrentlyPlayingBlockIds();
+    this.musicBlocklyWorkspace.updateHighlightedBlocks(playingBlockIds);
   };
 
   loadLibrary = async () => {
