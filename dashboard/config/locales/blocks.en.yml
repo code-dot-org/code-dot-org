@@ -1134,6 +1134,8 @@ en:
         text: avoiding targets
       gamelab_beginCollectingData:
         text: begin collecting data {BREAK} value {VALUE} with label {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
@@ -1355,6 +1357,8 @@ en:
         text: make new {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_makeNumSprites:
         text: make {NUM} new {ANIMATION_NAME} sprites
+      gamelab_makeNumSpritesNear:
+        text: make {NUM} new {ANIMATION_NAME} sprites near {LOCATION}
       gamelab_makeProjectile:
         text: "create projectile \n{ANIMATION_NAME} from {LOCATION} with speed {SPEED}direction{DIRECTION}"
         options:
@@ -1754,6 +1758,8 @@ en:
           SPEECH:
             '"My beak is pointy and strong to find insects in tree bark."': My beak is pointy and strong to find insects in tree bark.
             '"I have a beak like a scoop to catch fish."': I have a beak like a scoop to catch fish.
+      KatiesBlocks_tumbling:
+        text: tumbling
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} begins {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2583,6 +2589,20 @@ en:
             new Behavior(wobbling, []): wobbling
             new Behavior(wandering, []): wandering
             new Behavior(patrolling, []): patrolling
+      adaptations_spriteBirdSay:
+        text: "{SPRITE} says {SPEECH}"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': My beak is pointy and strong to find insects in tree bark.
+            '"I have a beak like a scoop to catch fish."': I have a beak like a scoop to catch fish.
+      adaptations_startFollowing:
+        text: "{SPRITE} begins following {TARGET}"
+      adaptations_toggleBehaviorSimple:
+        text: sprite {SPRITE} {TOGGLE} {BEHAVIOR}
+        options:
+          TOGGLE:
+            '"begins"': begins
+            '"stops"': stops
       binary_drawBin:
         text: draw binary {BIN}
       binary_drawBinScreen:
