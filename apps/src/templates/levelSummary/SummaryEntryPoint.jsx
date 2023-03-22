@@ -28,7 +28,7 @@ const SummaryEntryPoint = ({students}) => {
         <p>
           <i className="fa fa-user" />
           <span className={styles.counter}>
-            {data.responses.length}/{students.length}
+            {data.responses.length}/{students.length}{' '}
           </span>
           <span className={styles.text}>{i18n.studentsAnswered()}</span>
         </p>
