@@ -23,12 +23,18 @@ export default class InstructionsTab extends Component {
     onClick: PropTypes.func.isRequired,
     style: PropTypes.object,
     text: PropTypes.string.isRequired,
+    isLegacyDefaultTextColor: PropTypes.bool,
     teacherOnly: PropTypes.bool,
     isMinecraft: PropTypes.bool,
     isRtl: PropTypes.bool
   };
 
   render() {
+    const {isLegacyDefaultTextColor} = this.props;
+
+    const highlightedWrapperStyle = isLegacyDefaultTextColor
+      ? styles.legacyHighlightedWrapper
+      : styles.highlightedWrapper;
     const wrapperStyle = {
       ...styles.tabWrapper,
       ...(this.props.isRtl ? styles.tabRtl : styles.tab),
@@ -37,11 +43,17 @@ export default class InstructionsTab extends Component {
           ? styles.teacherHighlightedWrapper
           : this.props.isMinecraft
           ? craftStyles.highlightedWrapper
-          : styles.highlightedWrapper
+          : highlightedWrapperStyle
         : this.props.teacherOnly
         ? styles.teacherText
         : {})
     };
+    const highlightedTextStyle = isLegacyDefaultTextColor
+      ? styles.legacyHighlightedText
+      : styles.highlighted;
+    const defaultTextStyle = isLegacyDefaultTextColor
+      ? styles.legacyText
+      : styles.defaultText;
     const combinedStyle = {
       ...this.props.style,
       ...styles.text,
@@ -50,12 +62,12 @@ export default class InstructionsTab extends Component {
           ? styles.teacherHighlighted
           : this.props.isMinecraft
           ? craftStyles.highlighted
-          : styles.highlighted
+          : highlightedTextStyle
         : this.props.teacherOnly
         ? styles.teacherText
         : this.props.isMinecraft
         ? craftStyles.text
-        : styles.defaultText)
+        : defaultTextStyle)
     };
     return (
       <button
@@ -102,6 +114,9 @@ const styles = {
   defaultText: {
     color: color.neutral_white
   },
+  legacyText: {
+    color: color.charcoal
+  },
   text: {
     textOverflow: 'ellipsis',
     overflow: 'hidden'
@@ -112,8 +127,14 @@ const styles = {
   highlighted: {
     color: color.neutral_white
   },
+  legacyHighlightedText: {
+    color: color.default_text
+  },
   highlightedWrapper: {
     borderBottom: '2px solid ' + color.neutral_white
+  },
+  legacyHighlightedWrapper: {
+    borderBottom: '2px solid ' + color.default_text
   },
   teacherHighlighted: {
     color: color.white

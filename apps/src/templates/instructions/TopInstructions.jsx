@@ -99,6 +99,7 @@ class TopInstructions extends Component {
     teacherMarkdown: PropTypes.string,
     hidden: PropTypes.bool.isRequired,
     shortInstructions: PropTypes.string,
+    isOldPurpleColorHeader: PropTypes.bool,
     isMinecraft: PropTypes.bool.isRequired,
     isBlockly: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
@@ -572,6 +573,8 @@ class TopInstructions extends Component {
       levelVideos,
       mapReference,
       referenceLinks,
+      // TODO: [Phase 2] Legacy header color logic. Delete once get rid of legacy header colors.
+      isOldPurpleColorHeader,
       isMinecraft,
       teacherMarkdown,
       isCollapsed,
@@ -675,6 +678,7 @@ class TopInstructions extends Component {
       >
         <TopInstructionsHeader
           teacherOnly={teacherOnly}
+          isOldPurpleColor={isOldPurpleColorHeader}
           tabSelected={tabSelected}
           isCSDorCSP={isCSDorCSP}
           displayHelpTab={displayHelpTab}

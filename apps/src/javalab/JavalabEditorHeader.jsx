@@ -30,7 +30,7 @@ function JavalabEditorHeader({
     : javalabMsg.editor();
 
   return (
-    <PaneHeader hasFocus>
+    <PaneHeader hasFocus isOldPurpleColor>
       <PaneButton
         id="javalab-editor-create-file"
         iconClass="fa fa-plus-circle"
