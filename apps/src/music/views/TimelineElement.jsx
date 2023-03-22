@@ -25,7 +25,8 @@ const TimelineElement = ({
   left,
   when,
   skipContext,
-  currentPlayheadPosition
+  currentPlayheadPosition,
+  selectedBlockId
 }) => {
   const playingContext = useContext(PlayingContext);
 
@@ -38,6 +39,8 @@ const TimelineElement = ({
     currentPlayheadPosition >= when &&
     currentPlayheadPosition < when + eventData.length;
 
+  const isBlockSelected = eventData.blockId === selectedBlockId;
+
   const colorType =
     eventData.type === 'sound' ? eventData.soundType : eventData.type;
   const colorClass = typeToColorClass[colorType];
@@ -49,7 +52,8 @@ const TimelineElement = ({
         colorClass,
         isCurrentlyPlaying && moduleStyles.timelineElementPlaying,
         isInsideRandom && moduleStyles.timelineElementInsideRandom,
-        isSkipSound && moduleStyles.timelineElementSkipSound
+        isSkipSound && moduleStyles.timelineElementSkipSound,
+        isBlockSelected && moduleStyles.timelineElementBlockSelected
       )}
       style={{
         width: barWidth * eventData.length,
@@ -71,7 +75,8 @@ TimelineElement.propTypes = {
   left: PropTypes.number,
   when: PropTypes.number.isRequired,
   skipContext: PropTypes.object,
-  currentPlayheadPosition: PropTypes.number.isRequired
+  currentPlayheadPosition: PropTypes.number.isRequired,
+  selectedBlockId: PropTypes.string
 };
 
 export default TimelineElement;

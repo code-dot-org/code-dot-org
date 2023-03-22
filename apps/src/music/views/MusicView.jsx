@@ -85,7 +85,8 @@ class UnconnectedMusicView extends React.Component {
       timelineAtTop: false,
       showInstructions: false,
       instructionsPosIndex,
-      showingVideo: true
+      showingVideo: true,
+      selectedBlockId: undefined
     };
   }
 
@@ -235,6 +236,10 @@ class UnconnectedMusicView extends React.Component {
       this.setState({updateNumber: this.state.updateNumber + 1});
     }
 
+    if (e.type === Blockly.Events.SELECTED) {
+      this.setState({selectedBlockId: e.newElementId});
+    }
+
     // Save the workspace.
     this.musicBlocklyWorkspace.saveCode();
   };
@@ -295,7 +300,11 @@ class UnconnectedMusicView extends React.Component {
 
     this.player.playSong();
 
-    this.setState({isPlaying: true, currentPlayheadPosition: 1});
+    this.setState({
+      isPlaying: true,
+      currentPlayheadPosition: 1,
+      selectedBlockId: undefined
+    });
   };
 
   stopSong = () => {
@@ -397,6 +406,7 @@ class UnconnectedMusicView extends React.Component {
         <Timeline
           isPlaying={this.state.isPlaying}
           currentPlayheadPosition={this.state.currentPlayheadPosition}
+          selectedBlockId={this.state.selectedBlockId}
         />
       </div>
     );
