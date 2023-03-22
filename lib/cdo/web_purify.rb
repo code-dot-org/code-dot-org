@@ -68,7 +68,7 @@ module WebPurify
 
         response = http.request(request)
 
-        next if !response.is_a?(Net::HTTPSuccess)
+        next unless response.is_a?(Net::HTTPSuccess)
         result = JSON.parse(response.body)
         if result.key?('rsp') && result['rsp'].key?('expletive')
           expletive = result['rsp']['expletive']
