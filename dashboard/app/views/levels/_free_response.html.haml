@@ -1,6 +1,11 @@
 :ruby
   js_data = {
-    responses: @responses
+    responses: @responses&.map do |response|
+      {
+        user_id: response.user_id,
+        text: response.level_source.data,
+      }
+    end
   }
   level ||= @level
   last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
