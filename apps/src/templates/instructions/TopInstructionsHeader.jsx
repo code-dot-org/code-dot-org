@@ -211,7 +211,7 @@ const styles = {
       marginBottom: '3px'
     },
     buttonImg: {
-      lineHeight: '24px',
+      lineHeight: '20px',
       fontSize: 15,
       paddingLeft: 12
     }
