@@ -485,7 +485,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       sessions: [create(:pd_session, start: Date.new(2016, 9, 1))]
 
     # no subject
-    assert_equal 'Admin workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
+    assert_equal 'Admin/Counselor Workshop Welcome workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
 
     # with subject
     workshop.update!(course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_5)

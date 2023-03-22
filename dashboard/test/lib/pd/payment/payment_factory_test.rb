@@ -42,7 +42,7 @@ module Pd::Payment
 
     test 'counselor admin calculator' do
       # Mix of public and private types
-      workshop_admin_counselor = create :admin_counselor_workshop, :ended, :funded
+      workshop_admin_counselor = create :admin_counselor_workshop, :ended
 
       assert_equal PaymentCalculatorCounselorAdmin, PaymentFactory.get_calculator_class(workshop_admin_counselor)
     end
