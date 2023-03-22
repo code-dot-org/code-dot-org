@@ -2,6 +2,13 @@ import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
 import {Project} from './types';
 
+export enum ProjectManagerEvent {
+  SaveStart,
+  SaveNoop,
+  SaveSuccess,
+  SaveFail
+}
+
 export default class ProjectManager {
   channelId: string;
   sourcesStore: SourcesStore;
@@ -9,6 +16,9 @@ export default class ProjectManager {
   getProject: () => Project;
 
   private saveInProgress: boolean = false;
+  private eventListeners: {
+    [key in keyof typeof ProjectManagerEvent]?: [(response: Response) => void]
+  } = {};
 
   constructor(
     channelId: string,
@@ -20,6 +30,14 @@ export default class ProjectManager {
     this.sourcesStore = sourcesStore;
     this.channelsStore = channelsStore;
     this.getProject = getProject;
+  }
+
+  addEventListener(type: ProjectManagerEvent, listener: () => void) {
+    if (this.eventListeners[type]) {
+      this.eventListeners[type]?.push(listener);
+    } else {
+      this.eventListeners[type] = [listener];
+    }
   }
 
   async load(): Promise<Response> {
@@ -46,11 +64,13 @@ export default class ProjectManager {
   // HoC "emergency mode" (see 1182-1187 in project.js).
   async save(): Promise<Response> {
     if (this.saveInProgress) {
-      // Return a no-op response
-      return new Response(null, {status: 304});
+      const noopResponse = new Response(null, {status: 304});
+      this.executeListeners(ProjectManagerEvent.SaveNoop, noopResponse);
+      return noopResponse;
     }
 
     this.saveInProgress = true;
+    this.executeListeners(ProjectManagerEvent.SaveStart);
     const project = this.getProject();
     const sourceResponse = await this.sourcesStore.save(
       this.channelId,
@@ -58,6 +78,7 @@ export default class ProjectManager {
     );
     if (!sourceResponse.ok) {
       this.saveInProgress = false;
+      this.executeListeners(ProjectManagerEvent.SaveFail, sourceResponse);
 
       // TODO: Should we wrap this response in some way?
       // Maybe add a more specific statusText to the response?
@@ -67,6 +88,7 @@ export default class ProjectManager {
     const channelResponse = await this.channelsStore.save(project.channel);
     if (!channelResponse.ok) {
       this.saveInProgress = false;
+      this.executeListeners(ProjectManagerEvent.SaveFail, channelResponse);
 
       // TODO: Should we wrap this response in some way?
       // Maybe add a more specific statusText to the response?
@@ -74,6 +96,15 @@ export default class ProjectManager {
     }
 
     this.saveInProgress = false;
+    this.executeListeners(ProjectManagerEvent.SaveSuccess);
     return new Response();
+  }
+
+  private executeListeners(type: ProjectManagerEvent, response: Response = new Response()) {
+    if (!this.eventListeners[type]) {
+      return;
+    }
+
+    this.eventListeners[type]?.forEach(listener => listener(response));
   }
 }
