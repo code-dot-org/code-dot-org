@@ -48,6 +48,10 @@ $selectUserTypeButtonTextColorSelected: #fff;
 
 @import "bootstrap";
 
+.ai-tab td {
+  border: solid 1px black;
+}
+
 p,pre,span {
   @include selectable;
 }

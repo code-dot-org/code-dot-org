@@ -1076,6 +1076,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
     getStore().dispatch(setIsEditWhileRun(false));
   } else {
     this.executingCode = this.getCode().trim();
+    window.currentCode = this.executingCode;
   }
 
   if (this.hasContainedLevels) {
@@ -2483,6 +2484,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     try {
       // Don't pass CRLF pairs to droplet until they fix CR handling:
       this.editor.setValue(startBlocks.replace(/\r\n/g, '\n'));
+      window.currentCode = startBlocks;
       // When adding content via setValue, the aceEditor cursor gets set to be
       // at the end of the file. For mysterious reasons we've been unable to
       // understand, we end up with some pretty funky render issues if the first
