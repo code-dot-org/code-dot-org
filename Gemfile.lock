@@ -375,10 +375,10 @@ GEM
       nokogiri
       selenium-webdriver
       state_machine
-    factory_bot (4.8.2)
+    factory_bot (4.11.1)
       activesupport (>= 3.0.0)
-    factory_bot_rails (4.8.2)
-      factory_bot (~> 4.8.2)
+    factory_bot_rails (4.11.1)
+      factory_bot (~> 4.11.1)
       railties (>= 3.0.0)
     fakeredis (0.6.0)
       redis (~> 3.2)
@@ -944,7 +944,7 @@ DEPENDENCIES
   dotiw
   execjs
   eyes_selenium (= 3.18.4)
-  factory_bot_rails (~> 4.8.2)
+  factory_bot_rails (~> 4.11)
   fakeredis
   firebase
   firebase_token_generator
