@@ -1057,6 +1057,8 @@ id:
         text: menghindari target
       gamelab_beginCollectingData:
         text: mulai mengumpulkan data {BREAK} nilai {VALUE} dengan label {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} memantulkan {TARGET}"
       gamelab_changePropBy:
@@ -1667,6 +1669,10 @@ id:
         text: x koordinat {SPRITE}
       gamelab_yLocationOf:
         text: y koordinat {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} meluncur ke {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: jatuh
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} mulai {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2260,8 +2266,6 @@ id:
         text: belok kiri
       RyanLab_turnRight:
         text: belok kanan
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} Mengatakan {TEXT} Untuk {SECONDS} Detik
       Vector_createSpriteWith:
         text: |-
           buat sprite
@@ -2335,6 +2339,8 @@ id:
             new Behavior(wobbling, []): terhuyung-huyung
             new Behavior(wandering, []): pengembaraan
             new Behavior(patrolling, []): perondaan
+      adaptations_startFollowing:
+        text: "{SPRITE} mulai mengikuti {TARGET}"
       binary_drawBin:
         text: menggambar biner {BIN}
       binary_drawBinScreen:
@@ -2458,7 +2464,3 @@ id:
         text: tetapkan heading {HEADING}
       storylab_setSubheading:
         text: tetapkan subheading {SUBHEADING}
-      validation_validatedBackground:
-        text: atur latar belakang ke {IMG}
-      validation_validatedSound:
-        text: MAINKAN Suara {SOUND}
