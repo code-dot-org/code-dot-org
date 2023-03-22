@@ -10,6 +10,7 @@ import _ from 'lodash';
 import CommitDialogBody from './CommitDialogBody';
 import {setCommitSaveStatus} from '@cdo/apps/javalab/javalabRedux';
 import {CompileStatus} from './constants';
+import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 
 const PADDING = 8;
 
@@ -21,7 +22,10 @@ export class UnconnectedCommitDialog extends React.Component {
     backpackSaveInProgress: false,
     hasBackpackLoadError: false,
     hasBackpackSaveError: false,
-    compileStatus: CompileStatus.NONE
+    compileStatus: CompileStatus.NONE,
+    backpackApi: this.props.backpackEnabled
+      ? new BackpackClientApi(this.props.backpackChannelId)
+      : null
   };
 
   componentDidMount() {
@@ -54,8 +58,8 @@ export class UnconnectedCommitDialog extends React.Component {
   }
 
   updateBackpackFileList() {
-    if (this.props.backpackEnabled && this.props.backpackApi.hasBackpack()) {
-      this.props.backpackApi.getFileList(
+    if (this.props.backpackEnabled && this.state.backpackApi.hasBackpack()) {
+      this.state.backpackApi.getFileList(
         () => this.setState({hasBackpackLoadError: true}),
         filenames => this.setState({existingBackpackFiles: filenames})
       );
@@ -160,7 +164,7 @@ export class UnconnectedCommitDialog extends React.Component {
     });
 
     // TODO: Compile before saving and show error if compile fails
-    this.props.backpackApi.saveFiles(
+    this.state.backpackApi.saveFiles(
       this.props.sources,
       this.state.filesToBackpack,
       this.handleBackpackSaveError,
@@ -283,7 +287,7 @@ UnconnectedCommitDialog.propTypes = {
   handleCommit: PropTypes.func.isRequired,
   // populated by redux
   sources: PropTypes.object,
-  backpackApi: PropTypes.object,
+  backpackChannelId: PropTypes.string,
   backpackEnabled: PropTypes.bool,
   isCommitSaveInProgress: PropTypes.bool,
   hasCommitSaveError: PropTypes.bool,
@@ -326,7 +330,7 @@ const styles = {
 export default connect(
   state => ({
     sources: state.javalab.sources,
-    backpackApi: state.javalab.backpackApi,
+    backpackChannelId: state.javalab.backpackChannelId,
     backpackEnabled: state.javalab.backpackEnabled,
     isCommitSaveInProgress: state.javalab.isCommitSaveInProgress,
     hasCommitSaveError: state.javalab.hasCommitSaveError

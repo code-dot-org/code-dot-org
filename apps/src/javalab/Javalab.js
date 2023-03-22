@@ -10,7 +10,6 @@ import javalab, {
   setAllValidation,
   setDisplayTheme,
   appendOutputLog,
-  setBackpackApi,
   setIsStartMode,
   setLevelName,
   appendNewlineToConsoleLog,
@@ -24,7 +23,8 @@ import javalab, {
   setHasOpenCodeReview,
   setValidationPassed,
   setHasRunOrTestedCode,
-  setIsJavabuilderConnecting
+  setIsJavabuilderConnecting,
+  setBackpackChannelId
 } from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -36,7 +36,6 @@ import TheaterVisualizationColumn from './theater/TheaterVisualizationColumn';
 import Theater from './theater/Theater';
 import {CsaViewMode, ExecutionType, InputMessageType} from './constants';
 import {getDisplayThemeFromString} from './DisplayTheme';
-import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
@@ -287,9 +286,7 @@ Javalab.prototype.init = function(config) {
   getStore().dispatch(setBackpackEnabled(backpackEnabled));
 
   if (backpackEnabled) {
-    getStore().dispatch(
-      setBackpackApi(new BackpackClientApi(config.backpackChannel))
-    );
+    getStore().dispatch(setBackpackChannelId(config.backpackChannel));
   }
 
   // Used for some post requests made in Javalab, namely

@@ -13,6 +13,7 @@ import {makeEnum} from '@cdo/apps/utils';
 import JavalabDialog from './JavalabDialog';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import CloseOnEscape from './components/CloseOnEscape';
+import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 
 const Dialog = makeEnum(
   'IMPORT_WARNING',
@@ -31,7 +32,7 @@ class Backpack extends Component {
     isButtonDisabled: PropTypes.bool.isRequired,
     onImport: PropTypes.func.isRequired,
     // populated by redux
-    backpackApi: PropTypes.object.isRequired,
+    backpackChannelId: PropTypes.string.isRequired,
     sources: PropTypes.object.isRequired,
     validation: PropTypes.object.isRequired,
     backpackEnabled: PropTypes.bool
@@ -46,7 +47,8 @@ class Backpack extends Component {
     openDialog: null,
     fileImportMessage: '',
     fileDeleteMessage: '',
-    isDeleting: false
+    isDeleting: false,
+    backpackApi: new BackpackClientApi(this.props.backpackChannelId)
   };
 
   expandDropdown = () => {
@@ -56,9 +58,9 @@ class Backpack extends Component {
       selectedFiles: [],
       backpackFilenames: []
     });
-    if (this.props.backpackApi.hasBackpack()) {
+    if (this.state.backpackApi.hasBackpack()) {
       this.setState({backpackFilesLoading: true});
-      this.props.backpackApi.getFileList(
+      this.state.backpackApi.getFileList(
         this.onFileListLoadError,
         this.onFileListLoadSuccess
       );
@@ -93,7 +95,7 @@ class Backpack extends Component {
   handleDelete = () => {
     const {selectedFiles} = this.state;
     this.setState({isDeleting: true});
-    this.props.backpackApi.deleteFiles(
+    this.state.backpackApi.deleteFiles(
       selectedFiles,
       (_, failedFileList) => this.onDeleteFailed(failedFileList, selectedFiles),
       this.collapseDropdown
@@ -134,7 +136,7 @@ class Backpack extends Component {
   importFiles = selectedFiles => {
     let failedServerImportFiles = [];
     selectedFiles.forEach(filename => {
-      this.props.backpackApi.fetchFile(
+      this.state.backpackApi.fetchFile(
         filename,
         () => failedServerImportFiles.push(filename),
         fileContents =>
