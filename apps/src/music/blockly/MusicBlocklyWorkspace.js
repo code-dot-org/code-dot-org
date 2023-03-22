@@ -318,7 +318,7 @@ export default class MusicBlocklyWorkspace {
     if (!projectResponse.ok) {
       if (projectResponse.status === 404) {
         // TODO: maybe rename resetCode?
-        await this.resetCode();
+        this.resetCode();
       }
 
       // TODO: Error handling
@@ -331,20 +331,20 @@ export default class MusicBlocklyWorkspace {
       const exitingCodeJson = JSON.parse(source.source);
       Blockly.serialization.workspaces.load(exitingCodeJson, this.workspace);
     } else {
-      await this.resetCode();
+      this.resetCode();
     }
   }
 
-  async saveCode() {
-    await this.projectManager.save();
+  saveCode() {
+    this.projectManager.save();
   }
 
-  async resetCode() {
+  resetCode() {
     const defaultCodeFilename = 'defaultCode' + getBlockMode();
     const defaultCode = require(`@cdo/static/music/${defaultCodeFilename}.json`);
     Blockly.serialization.workspaces.load(defaultCode, this.workspace);
     // This will overwrite data on the server.
-    await this.saveCode();
+    this.saveCode();
   }
 
   callUserGeneratedCode(fn) {
