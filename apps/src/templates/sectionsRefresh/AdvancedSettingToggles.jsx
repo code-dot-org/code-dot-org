@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
+import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
 import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ReactTooltip from 'react-tooltip';
 import style from './sections-refresh.module.scss';
 
 export default function AdvancedSettingToggles({
@@ -46,16 +45,10 @@ export default function AdvancedSettingToggles({
           }}
           label={i18n.pairProgramming()}
         />
-        <span data-tip data-for={'pair-toggle-info'}>
-          <FontAwesome icon="info-circle" className={style.infoTipIcon} />
-        </span>
-        <ReactTooltip
+        <InfoHelpTip
           id={'pair-toggle-info'}
-          effect="solid"
-          className={style.tooltip}
-        >
-          <p>{i18n.explainPairProgramming()}</p>
-        </ReactTooltip>
+          content={i18n.explainPairProgramming()}
+        />
       </div>
       <div className={style.toolTipContainer}>
         <ToggleSwitch
@@ -64,16 +57,10 @@ export default function AdvancedSettingToggles({
           onToggle={e => handleLockSectionToggle(e)}
           label={i18n.restrictSectionAccess()}
         />
-        <span data-tip data-for={'lock-toggle-info'}>
-          <FontAwesome icon="info-circle" className={style.infoTipIcon} />
-        </span>
-        <ReactTooltip
+        <InfoHelpTip
           id={'lock-toggle-info'}
-          effect="solid"
-          className={style.tooltip}
-        >
-          <p>{i18n.explainRestrictedSectionEmailToolTip()}</p>
-        </ReactTooltip>
+          content={i18n.explainRestrictedSectionEmailToolTip()}
+        />
       </div>
       {assignedUnitTextToSpeechEnabled && (
         <div className={style.toolTipContainer}>
@@ -83,16 +70,10 @@ export default function AdvancedSettingToggles({
             onToggle={e => handleTtsAutoplayEnabledToggle(e)}
             label={i18n.enableTtsAutoplayToggle()}
           />
-          <span data-tip data-for={'lock-toggle-info'}>
-            <FontAwesome icon="info-circle" className={style.infoTipIcon} />
-          </span>
-          <ReactTooltip
-            id={'lock-toggle-info'}
-            effect="solid"
-            className={style.tooltip}
-          >
-            <p>{i18n.explainTtsAutoplayToolTip()}</p>
-          </ReactTooltip>
+          <InfoHelpTip
+            id={'tts-toggle-info'}
+            content={i18n.explainTtsAutoplayToolTip()}
+          />
         </div>
       )}
       {assignedUnitLessonExtrasAvailable && (
@@ -103,16 +84,10 @@ export default function AdvancedSettingToggles({
             onToggle={e => handleLessonExtrasToggle(e)}
             label={i18n.enableLessonExtrasToggle()}
           />
-          <span data-tip data-for={'lesson-extras-toggle-info'}>
-            <FontAwesome icon="info-circle" className={style.infoTipIcon} />
-          </span>
-          <ReactTooltip
+          <InfoHelpTip
             id={'lesson-extras-toggle-info'}
-            effect="solid"
-            className={style.tooltip}
-          >
-            <p>{i18n.explainLessonExtrasToolsTip()}</p>
-          </ReactTooltip>
+            content={i18n.explainLessonExtrasToolsTip()}
+          />
         </div>
       )}
     </div>
