@@ -136,10 +136,10 @@ function DescriptionCard(props) {
 DescriptionCard.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
-  imgSrc: PropTypes.string.isRequired,
+  href: PropTypes.string,
+  imgSrc: PropTypes.string,
   imgStyle: PropTypes.object,
   description: PropTypes.string.isRequired,
   divStyle: PropTypes.object,
-  alt: PropTypes.string.isRequired
+  alt: PropTypes.string
 };
