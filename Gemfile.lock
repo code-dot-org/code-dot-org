@@ -783,7 +783,7 @@ GEM
     scenic-mysql_adapter (1.0.1)
       mysql2
       scenic (>= 1.4.0)
-    scss_lint (0.51.0)
+    scss_lint (0.55.0)
       rake (>= 0.9, < 13)
       sass (~> 3.4.20)
     selenium-webdriver (3.141.0)
@@ -1041,7 +1041,7 @@ DEPENDENCIES
   sassc-rails!
   scenic
   scenic-mysql_adapter
-  scss_lint (~> 0.51.0)
+  scss_lint
   selenium-webdriver (= 3.141.0)
   sequel
   shotgun
