@@ -107,6 +107,7 @@ export const PaneButton = Radium(function(props) {
     hiddenImage,
     label,
     leftJustified,
+    isLegacyStyles,
     isMinecraft,
     headerHasFocus,
     isDisabled,
@@ -126,13 +127,20 @@ export const PaneButton = Radium(function(props) {
     iconOrLabelHidden && moduleStyles.headerButtonIconOrLabelHidden
   );
 
+  // TODO: [Phase 2] Need to maintain legacy styling for Javalab now.
+  //  Once Javalab receives rebranded styles - remove this switch
+  //  and use simpler moduleStyles call as it was before this commit
+  const buttonStylesRoot = isLegacyStyles
+    ? 'legacyHeaderButton'
+    : 'headerButton';
+
   const buttonClassNames = classNames(
-    moduleStyles.headerButton,
-    isRtl !== !!leftJustified && moduleStyles.headerButtonRtl,
-    isMinecraft && moduleStyles.headerButtonMinecraft,
-    isPressed && moduleStyles.headerButtonPressed,
-    !headerHasFocus && moduleStyles.headerButtonUnfocused,
-    isDisabled && moduleStyles.headerButtonDisabled,
+    moduleStyles[buttonStylesRoot],
+    isRtl !== !!leftJustified && moduleStyles[`${buttonStylesRoot}Rtl`],
+    isMinecraft && moduleStyles[`${buttonStylesRoot}Minecraft`],
+    isPressed && moduleStyles[`${buttonStylesRoot}Pressed`],
+    !headerHasFocus && moduleStyles[`${buttonStylesRoot}Unfocused`],
+    isDisabled && moduleStyles[`${buttonStylesRoot}Disabled`],
     className
   );
 
@@ -205,6 +213,7 @@ PaneButton.propTypes = {
   pressedLabel: PropTypes.string,
   onClick: PropTypes.func,
   hiddenImage: PropTypes.element,
+  isLegacyStyles: PropTypes.bool,
   isMinecraft: PropTypes.bool,
   id: PropTypes.string,
   style: PropTypes.object,

@@ -237,6 +237,7 @@ class JavalabConsole extends React.Component {
             <PaneButton
               id="javalab-console-clear"
               headerHasFocus
+              isLegacyStyles
               isRtl={false}
               onClick={() => {
                 clearConsoleLogs();

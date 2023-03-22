@@ -308,6 +308,8 @@ class Backpack extends Component {
 
     const backpackIcon = (
       <i style={{marginRight: 8, fontSize: 13}}>
+        {/* TODO: [Phase 2] This is legacy style of backpack image.
+         Once we move to new styles, make sure to use backpack_neutraldark.png instead to match colors*/}
         <img
           src="/blockly/media/javalab/backpack.png"
           alt="backpack icon"
@@ -326,6 +328,7 @@ class Backpack extends Component {
           icon={backpackIcon}
           onClick={this.toggleDropdown}
           headerHasFocus
+          isLegacyStyles
           isRtl={false}
           label={javalabMsg.backpackLabel()}
           leftJustified

@@ -36,7 +36,9 @@ function JavalabEditorHeader({
         iconClass="fa fa-plus-circle"
         onClick={() => openEditorDialog(JavalabEditorDialog.CREATE_FILE)}
         headerHasFocus
+        isLegacyStyles
         isRtl={false}
+        // style={{float: 'left', marginLeft: '3px', marginRight: 0}}
         label={javalabMsg.newFile()}
         leftJustified
         isDisabled={isReadOnlyWorkspace}
@@ -53,6 +55,7 @@ function JavalabEditorHeader({
       )}
       <PaneButton
         id="data-mode-versions-header"
+        isLegacyStyles
         iconClass="fa fa-clock-o"
         label={msg.showVersionsHeader()}
         headerHasFocus
@@ -62,6 +65,7 @@ function JavalabEditorHeader({
       />
       <PaneButton
         id="javalab-editor-save"
+        isLegacyStyles
         iconClass="fa fa-check-circle"
         onClick={() => openEditorDialog(JavalabEditorDialog.COMMIT_FILES)}
         headerHasFocus
