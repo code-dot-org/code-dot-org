@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 // import PropTypes from 'prop-types';
 import {openaiCompletion} from '@cdo/apps/util/openai';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 export const AiTab = props => {
   // const {
@@ -11,14 +12,18 @@ export const AiTab = props => {
 
   useEffect(() => {
     const prompt =
-      'in two sentences, tell my student they did great on their coding assigment.';
+      'give me a markdown table showing whether each number 1 through 10 is odd or even';
     openaiCompletion(prompt).then(setResult);
   }, []);
 
   return (
     <div>
       {!result && <div>loading...</div>}
-      {result && <div>{result}</div>}
+      {result && (
+        <div>
+          <SafeMarkdown markdown={result} />
+        </div>
+      )}
     </div>
   );
 };
