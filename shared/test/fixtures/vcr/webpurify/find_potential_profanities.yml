@@ -13,7 +13,7 @@ http_interactions:
         message: OK
       headers:
         Date:
-          - Thu, 16 Mar 2023 05:08:06 GMT
+          - Tue, 21 Mar 2023 22:36:12 GMT
         Content-Type:
           - application/json; charset=utf-8
         Transfer-Encoding:
@@ -28,7 +28,7 @@ http_interactions:
         encoding: ASCII-8BIT
         string: '{"rsp":{"@attributes":{"stat":"ok"},"method":"webpurify.live.return","lang":"en","format":"rest","found":"0","api_key":"mocksecret"}}'
       http_version:
-    recorded_at: Thu, 16 Mar 2023 05:08:06 GMT
+    recorded_at: Tue, 21 Mar 2023 22:36:12 GMT
   - request:
       method: post
       uri: http://api1.webpurify.com/services/rest
@@ -42,7 +42,65 @@ http_interactions:
         message: OK
       headers:
         Date:
-          - Thu, 16 Mar 2023 05:08:06 GMT
+          - Tue, 21 Mar 2023 22:36:12 GMT
+        Content-Type:
+          - application/json; charset=utf-8
+        Transfer-Encoding:
+          - chunked
+        Connection:
+          - keep-alive
+        Server:
+          - nginx
+        Vary:
+          - Accept-Encoding
+      body:
+        encoding: ASCII-8BIT
+        string: '{"rsp":{"@attributes":{"stat":"ok"},"method":"webpurify.live.return","lang":"en","format":"rest","found":"0","api_key":"mocksecret"}}'
+      http_version:
+    recorded_at: Tue, 21 Mar 2023 22:36:12 GMT
+  - request:
+      method: post
+      uri: http://api1.webpurify.com/services/rest
+      body:
+        encoding: US-ASCII
+        string: ""
+      headers: {}
+    response:
+      status:
+        code: 200
+        message: OK
+      headers:
+        Date:
+          - Tue, 21 Mar 2023 22:36:12 GMT
+        Content-Type:
+          - application/json; charset=utf-8
+        Transfer-Encoding:
+          - chunked
+        Connection:
+          - keep-alive
+        Server:
+          - nginx
+        Vary:
+          - Accept-Encoding
+      body:
+        encoding: ASCII-8BIT
+        string: '{"rsp":{"@attributes":{"stat":"ok"},"method":"webpurify.live.return","lang":"en","format":"rest","found":"0","api_key":"mocksecret"}}'
+      http_version:
+    recorded_at: Tue, 21 Mar 2023 22:36:12 GMT
+  - request:
+      method: post
+      uri: http://api1.webpurify.com/services/rest
+      body:
+        encoding: US-ASCII
+        string: ""
+      headers: {}
+    response:
+      status:
+        code: 200
+        message: OK
+      headers:
+        Date:
+          - Tue, 21 Mar 2023 22:36:12 GMT
         Content-Type:
           - application/json; charset=utf-8
         Transfer-Encoding:
@@ -57,7 +115,7 @@ http_interactions:
         encoding: ASCII-8BIT
         string: '{"rsp":{"@attributes":{"stat":"ok"},"method":"webpurify.live.return","lang":"en","format":"rest","found":"2","expletive":["sh1t","shit"],"api_key":"mocksecret"}}'
       http_version:
-    recorded_at: Thu, 16 Mar 2023 05:08:06 GMT
+    recorded_at: Tue, 21 Mar 2023 22:36:12 GMT
   - request:
       method: post
       uri: http://api1.webpurify.com/services/rest
@@ -71,7 +129,7 @@ http_interactions:
         message: OK
       headers:
         Date:
-          - Thu, 16 Mar 2023 05:08:07 GMT
+          - Tue, 21 Mar 2023 22:36:12 GMT
         Content-Type:
           - application/json; charset=utf-8
         Transfer-Encoding:
@@ -86,7 +144,7 @@ http_interactions:
         encoding: ASCII-8BIT
         string: '{"rsp":{"@attributes":{"stat":"ok"},"method":"webpurify.live.return","lang":"en","format":"rest","found":"1","expletive":"shitstain","api_key":"mocksecret"}}'
       http_version:
-    recorded_at: Thu, 16 Mar 2023 05:08:07 GMT
+    recorded_at: Tue, 21 Mar 2023 22:36:12 GMT
   - request:
       method: post
       uri: http://api1.webpurify.com/services/rest
@@ -100,65 +158,7 @@ http_interactions:
         message: OK
       headers:
         Date:
-          - Thu, 16 Mar 2023 05:08:07 GMT
-        Content-Type:
-          - application/json; charset=utf-8
-        Transfer-Encoding:
-          - chunked
-        Connection:
-          - keep-alive
-        Server:
-          - nginx
-        Vary:
-          - Accept-Encoding
-      body:
-        encoding: ASCII-8BIT
-        string: '{"rsp":{"@attributes":{"stat":"ok"},"method":"webpurify.live.return","lang":"en","format":"rest","found":"0","api_key":"mocksecret"}}'
-      http_version:
-    recorded_at: Thu, 16 Mar 2023 05:08:07 GMT
-  - request:
-      method: post
-      uri: http://api1.webpurify.com/services/rest
-      body:
-        encoding: US-ASCII
-        string: ""
-      headers: {}
-    response:
-      status:
-        code: 200
-        message: OK
-      headers:
-        Date:
-          - Thu, 16 Mar 2023 05:08:07 GMT
-        Content-Type:
-          - application/json; charset=utf-8
-        Transfer-Encoding:
-          - chunked
-        Connection:
-          - keep-alive
-        Server:
-          - nginx
-        Vary:
-          - Accept-Encoding
-      body:
-        encoding: ASCII-8BIT
-        string: '{"rsp":{"@attributes":{"stat":"ok"},"method":"webpurify.live.return","lang":"en","format":"rest","found":"0","api_key":"mocksecret"}}'
-      http_version:
-    recorded_at: Thu, 16 Mar 2023 05:08:07 GMT
-  - request:
-      method: post
-      uri: http://api1.webpurify.com/services/rest
-      body:
-        encoding: US-ASCII
-        string: ""
-      headers: {}
-    response:
-      status:
-        code: 200
-        message: OK
-      headers:
-        Date:
-          - Thu, 16 Mar 2023 05:08:07 GMT
+          - Tue, 21 Mar 2023 22:36:13 GMT
         Content-Type:
           - application/json; charset=utf-8
         Transfer-Encoding:
@@ -173,5 +173,5 @@ http_interactions:
         encoding: ASCII-8BIT
         string: '{"rsp":{"@attributes":{"stat":"ok"},"method":"webpurify.live.return","lang":"en","format":"rest","found":"1","expletive":"ass","api_key":"mocksecret"}}'
       http_version:
-    recorded_at: Thu, 16 Mar 2023 05:08:07 GMT
+    recorded_at: Tue, 21 Mar 2023 22:36:13 GMT
 recorded_with: VCR 3.0.3
