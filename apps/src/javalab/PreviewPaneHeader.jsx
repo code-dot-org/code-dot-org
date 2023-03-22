@@ -18,7 +18,7 @@ export default function PreviewPaneHeader({
   showPreviewTitle = true
 }) {
   return (
-    <PaneHeader hasFocus style={{display: 'flex'}}>
+    <PaneHeader hasFocus style={{display: 'flex'}} isOldPurpleColor>
       <PaneSection className={'pane-header-section pane-header-section-left'}>
         <PaneButton
           headerHasFocus
