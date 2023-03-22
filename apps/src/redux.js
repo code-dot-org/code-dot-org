@@ -29,6 +29,7 @@ import Immutable from 'immutable';
 import experiments from './util/experiments';
 import * as redux from 'redux';
 import reduxThunk from 'redux-thunk';
+import {configureStore} from '@reduxjs/toolkit';
 
 if (process.env.NODE_ENV !== 'production') {
   var createLogger = require('redux-logger');
@@ -87,9 +88,7 @@ export function getStore() {
  */
 function createStoreWithReducers() {
   return createStore(
-    Object.keys(globalReducers).length > 0
-      ? redux.combineReducers(globalReducers)
-      : s => s
+    Object.keys(globalReducers).length > 0 ? globalReducers : s => s
   );
 }
 
@@ -153,23 +152,17 @@ function createStore(reducer, initialState) {
       }
     });
 
-    // load with dev tools extension, if present
-    // https://github.com/zalmoxisus/redux-devtools-extension#12-advanced-store-setup
-    const composeEnhancers =
-      window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-        trace: true
-      }) || redux.compose;
-
-    return redux.createStore(
-      reducer,
-      initialState,
-      composeEnhancers(redux.applyMiddleware(reduxThunk, reduxLogger))
-    );
+    return configureStore({
+      reducer: reducer,
+      preloadedState: initialState,
+      middleware: [reduxThunk, reduxLogger]
+    });
   }
 
-  return redux.createStore(
-    reducer,
-    initialState,
-    redux.applyMiddleware(reduxThunk)
-  );
+  return configureStore({
+    reducer: reducer,
+    preloadedState: initialState,
+    middleware: [reduxThunk],
+    devTools: process.env.NODE_ENV === 'development' // only enable devTools in development
+  });
 }

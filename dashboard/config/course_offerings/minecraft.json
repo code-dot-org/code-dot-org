@@ -8,7 +8,7 @@
   "marketing_initiative": "HOC",
   "grade_levels": "2,3,4,5,6,7,8,9,10,11,12",
   "header": "Minecraft",
-  "image": null,
+  "image": "https://images.code.org/307960d823153f6e15aa701d3373ea7f-Minecraft Designer.png",
   "cs_topic": "games_and_animations,programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"

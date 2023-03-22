@@ -321,9 +321,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  private
-
-  def pairing_still_enabled
+  private def pairing_still_enabled
     session[:pairing_section_id] && Section.find(session[:pairing_section_id]).pairing_allowed
   end
 end
