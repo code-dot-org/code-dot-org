@@ -466,6 +466,8 @@ Dashboard::Application.routes.draw do
             get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
             # /s/xxx/lessons/yyy/levels/zzz/sublevel/sss
             get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
+            # /s/xxx/lessons/yyy/levels/zzz/summary
+            get 'summary', to: 'script_levels#show', defaults: {view: 'summary'}
           end
         end
       end

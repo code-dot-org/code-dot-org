@@ -6,11 +6,11 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import styles from './summary-entry-point.module.scss';
 
-const SUMMARY_PARAM = 'view=summary';
+const SUMMARY_PATH = '/summary';
 
 const SummaryEntryPoint = ({students}) => {
-  const summaryUrlJoin = window.location.search === '' ? '?' : '&';
-  const summaryUrl = window.location.href + summaryUrlJoin + SUMMARY_PARAM;
+  const summaryUrl =
+    document.location.pathname + SUMMARY_PATH + document.location.search;
 
   const data = getScriptData('freeresponse');
 

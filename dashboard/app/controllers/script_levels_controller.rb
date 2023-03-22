@@ -73,6 +73,7 @@ class ScriptLevelsController < ApplicationController
     # There are too many variations of the script level path to use
     # a path helper, so use a regex to compute the new path.
     if @script.redirect_to?
+      puts 'redirect_to'
       new_script = Unit.get_from_cache(@script.redirect_to)
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
 
@@ -131,7 +132,7 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    if request.path != (canonical_path = build_script_level_path(@script_level, @extra_params))
+    if request.path != (canonical_path = build_script_level_path(@script_level, @extra_params)) && params[:view] != 'summary'
       canonical_path << "?#{request.query_string}" unless request.query_string.empty?
       redirect_to canonical_path, status: :moved_permanently
       return

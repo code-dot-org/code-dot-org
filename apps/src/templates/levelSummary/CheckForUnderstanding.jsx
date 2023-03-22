@@ -8,7 +8,6 @@ import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSe
 import i18n from '@cdo/locale';
 import styles from './check-for-understanding.module.scss';
 
-const SUMMARY_PARAM = 'view=summary';
 const FREE_RESPONSE = 'FreeResponse';
 
 const CheckForUnderstanding = ({
@@ -25,11 +24,7 @@ const CheckForUnderstanding = ({
   // To avoid confusion, if a teacher tries to view the summary as a student,
   // send them back to the level in Participant mode instead.
   if (viewAs === ViewType.Participant) {
-    const paramString = document.location.search
-      .replace(SUMMARY_PARAM, '')
-      .replace('&&', '&')
-      .replace('?&', '?');
-    document.location.replace(currentLevel.url + paramString);
+    document.location.replace(currentLevel.url + document.location.search);
   }
 
   const data = getScriptData('summary');

@@ -55,7 +55,7 @@ describe('SummaryEntryPoint', () => {
 
     // Renders link correctly.
     expect(wrapper.find('a').length).to.eq(1);
-    expect(wrapper.find('a').prop('href')).to.match(/\?view=summary$/);
+    expect(wrapper.find('a').prop('href')).to.match(/\/summary$/);
     // Student/response counter
     expect(wrapper.find(`.${styles.responseCounter}`).text()).to.eq(
       '1/1 students answered'
