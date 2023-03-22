@@ -35,7 +35,7 @@ export default class MusicBlocklyWorkspace {
     this.compiledEvents = null;
     this.lastExecutedEvents = null;
 
-    this.channel = null;
+    this.channel = {id: channelId};
     this.projectManager = new ProjectManager(
       channelId || this.getLocalStorageKeyName(),
       new S3SourcesStore(),
@@ -316,7 +316,13 @@ export default class MusicBlocklyWorkspace {
   async loadCode() {
     const projectResponse = await this.projectManager.load();
     if (!projectResponse.ok) {
+      if (projectResponse.status === 404) {
+        // TODO: maybe rename resetCode?
+        await this.resetCode();
+      }
+
       // TODO: Error handling
+      return;
     }
 
     const {source, channel} = await projectResponse.json();
@@ -325,7 +331,7 @@ export default class MusicBlocklyWorkspace {
       const exitingCodeJson = JSON.parse(source.source);
       Blockly.serialization.workspaces.load(exitingCodeJson, this.workspace);
     } else {
-      this.resetCode();
+      await this.resetCode();
     }
   }
 
@@ -333,12 +339,12 @@ export default class MusicBlocklyWorkspace {
     await this.projectManager.save();
   }
 
-  resetCode() {
+  async resetCode() {
     const defaultCodeFilename = 'defaultCode' + getBlockMode();
     const defaultCode = require(`@cdo/static/music/${defaultCodeFilename}.json`);
     Blockly.serialization.workspaces.load(defaultCode, this.workspace);
     // This will overwrite data on the server.
-    this.saveCode();
+    await this.saveCode();
   }
 
   callUserGeneratedCode(fn) {

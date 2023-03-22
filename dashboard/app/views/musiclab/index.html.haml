@@ -3,4 +3,4 @@
 
 - content_for(:head) do
   %script{src: webpack_asset_path('js/googleblockly.js')}
-  %script{src: webpack_asset_path('js/musiclab/index.js')}
+  %script{src: webpack_asset_path('js/musiclab/index.js'), data: {channelid: @channel_id}}

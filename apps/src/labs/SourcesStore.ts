@@ -34,10 +34,9 @@ export class S3SourcesStore implements SourcesStore {
 
     if (response.ok) {
       this.currentVersionId = response.headers.get('S3-Version-Id');
-      return response;
-    } else {
-      return new Response('');
     }
+
+    return response;
   }
 
   async save(channelId: string, source: Source, replace: boolean = false) {

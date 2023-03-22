@@ -4,6 +4,9 @@ class MusiclabController < ApplicationController
   def index
     view_options(no_footer: true, full_width: true)
     @body_classes = "music-black"
+
+    projects = Projects.new(get_storage_id)
+    @channel_id = projects.most_recent_project_type('music') || ChannelToken.create_channel(request.ip, projects, type: 'music')
   end
 
   def menu

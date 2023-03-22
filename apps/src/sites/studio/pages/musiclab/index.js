@@ -4,8 +4,11 @@ import ReactDOM from 'react-dom';
 import MusicLabView from '@cdo/apps/music/views/MusicView';
 
 $(document).ready(function() {
+  const channelId = document.querySelector('script[data-channelid]').dataset
+    .channelid;
+
   ReactDOM.render(
-    <MusicLabView channelId="UZhQ1Ap2xV1VwRzssldBfA" />,
+    <MusicLabView channelId={channelId} />,
     document.getElementById('musiclab-container')
   );
 });

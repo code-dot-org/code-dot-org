@@ -1,10 +1,8 @@
-import {Channel, NewChannel} from './types';
+import {Channel, DefaultChannel} from './types';
 import * as channelsApi from './channelsApi';
 
 export interface ChannelsStore {
   load: (key: string) => Promise<Response>;
-
-  create: (channel: Channel) => Promise<Response>;
 
   save: (channel: Channel) => Promise<Response>;
 }
@@ -17,27 +15,20 @@ export class LocalChannelsStore implements ChannelsStore {
     return Promise.resolve(new Response());
   }
 
-  create(channel: Channel) {
-    return Promise.resolve(new Response());
-  }
-
   save(channel: Channel) {
     return Promise.resolve(new Response());
   }
 }
 
 export class S3ChannelsStore implements ChannelsStore {
-  newChannel: NewChannel = {name: 'New Project'};
+  defaultChannel: DefaultChannel = {name: 'New Project'};
 
   load(channelId: string) {
     return channelsApi.get(channelId);
   }
 
-  create(channel: NewChannel = this.newChannel) {
-    return channelsApi.create(channel);
-  }
-
   save(channel: Channel) {
+    channel = {...this.defaultChannel, ...channel};
     return channelsApi.update(channel);
   }
 }

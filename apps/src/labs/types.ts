@@ -16,7 +16,7 @@ export type Channel = {
   updatedAt: string; // TODO: Is this the correct type?
 };
 
-export type NewChannel = Pick<Channel, 'name'>;
+export type DefaultChannel = Pick<Channel, 'name'>;
 
 export type Source = {
   // TODO: Extend source to allow for Javalab, which uses an object.
