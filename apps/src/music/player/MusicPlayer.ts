@@ -365,6 +365,7 @@ export default class MusicPlayer {
         insideWhenRun,
         trackId
       );
+
       maxSoundLength = Math.max(
         maxSoundLength,
         this.library.getSoundForId(soundId)?.length || 0
@@ -408,32 +409,33 @@ export default class MusicPlayer {
     return this.uniqueInvocationIdUpto++;
   }
 
-  getCurrentlyPlayingsounds():Object {
-    const playbackEvents = this.getPlaybackEvents();
+  // Returns an object containing two arrays.  One has the block IDs of all
+  // blocks currently playing, while the other is for those not currently
+  // playing.
+  getCurrentlyPlayingBlockIds(): {
+    playingBlockIds: string[];
+    notPlayingBlockIds: string[];
+  } {
     const currentPlayheadPosition = this.getCurrentPlayheadPosition();
+    const playbackEvents = this.getPlaybackEvents();
 
-    const playingSounds :string[]= [];
-    const notPlayingSounds :string[]= [];
+    const playingBlockIds: string[] = [];
+    const notPlayingBlockIds: string[] = [];
 
-    playbackEvents.forEach((playbackEvent:PlaybackEvent) => {
-      const currentlyPlaying = currentPlayheadPosition !== 0 &&
-      currentPlayheadPosition >= playbackEvent.when &&
-      currentPlayheadPosition < playbackEvent.when + playbackEvent.length;
+    playbackEvents.forEach((playbackEvent: PlaybackEvent) => {
+      const currentlyPlaying =
+        currentPlayheadPosition !== 0 &&
+        currentPlayheadPosition >= playbackEvent.when &&
+        currentPlayheadPosition < playbackEvent.when + playbackEvent.length;
 
       if (currentlyPlaying) {
-        playingSounds.push(playbackEvent.blockId || "");
+        playingBlockIds.push(playbackEvent.blockId || '');
       } else {
-        notPlayingSounds.push(playbackEvent.blockId || "");
+        notPlayingBlockIds.push(playbackEvent.blockId || '');
       }
     });
 
-    return {playingSounds, notPlayingSounds};
-    /*
-    return this.playbackEvents.filter(eventData =>
-      currentPlayheadPosition !== 0 &&
-      currentPlayheadPosition >= eventData.when &&
-      currentPlayheadPosition < eventData.when + eventData.length);
-      */
+    return {playingBlockIds, notPlayingBlockIds};
   }
 
   /**
