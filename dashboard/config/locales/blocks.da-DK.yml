@@ -1699,8 +1699,6 @@ da:
         text: drej til venstre
       RyanLab_turnRight:
         text: drej til højre
-      SpriteLab2Beta_spriteSay:
-        text: figur {SPRITE} siger {TEXT} i {SECONDS} sekunder
       Vector_createSpriteWith:
         text: |-
           opret figur
@@ -1905,5 +1903,3 @@ da:
             '"hearts"': hjerter
             '"rain"': regn
             '"starburst"': Starburst
-      validation_validatedBackground:
-        text: sæt baggrund til {IMG}
