@@ -41,13 +41,13 @@ interface ProgressState {
 export default class ProgressManager {
   private progression: Progression;
   private validator: Validator;
-  private onProgressChange: (state: ProgressState) => void;
+  private onProgressChange: () => void;
   private currentProgressState: ProgressState;
 
   constructor(
     progression: Progression,
     validator: Validator,
-    onProgressChange: (state: ProgressState) => void
+    onProgressChange: () => void
   ) {
     this.progression = progression;
     this.validator = validator;
@@ -99,7 +99,7 @@ export default class ProgressManager {
         if (this.validator.conditionsMet(validation.conditions)) {
           this.currentProgressState.satisfied = validation.next;
           this.currentProgressState.message = validation.message;
-          this.onProgressChange(this.currentProgressState);
+          this.onProgressChange();
           return;
         }
       } else {
@@ -107,7 +107,7 @@ export default class ProgressManager {
       }
     }
 
-    this.onProgressChange(this.currentProgressState);
+    this.onProgressChange();
   }
 
   // Advance to the next step.  Advances the state internally and calls
@@ -120,6 +120,6 @@ export default class ProgressManager {
     this.currentProgressState.satisfied = false;
     this.currentProgressState.message = null;
 
-    this.onProgressChange(this.currentProgressState);
+    this.onProgressChange();
   }
 }
