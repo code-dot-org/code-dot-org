@@ -1,6 +1,6 @@
 {
   "path": "initial-progression",
-  "panels": [
+  "steps": [
     {
       "text": "First, please play a sound.",
       "toolbox": {

@@ -19,7 +19,7 @@ interface Validation {
 
 // The definition of the progression.
 interface Progression {
-  panels: {
+  steps: {
     text: string;
     toolbox: {
       [key: string]: string;
@@ -35,7 +35,7 @@ interface Progression {
 interface ProgressState {
   step: number;
   satisfied: boolean;
-  message?: string | null;
+  message: string | null;
 }
 
 export default class ProgressManager {
@@ -67,16 +67,12 @@ export default class ProgressManager {
     return this.currentProgressState;
   }
 
-  getCurrentToolbox() {
-    return this.progression.panels[this.currentProgressState.step].toolbox;
-  }
-
-  getCurrentSounds() {
-    return this.progression.panels[this.currentProgressState.step].sounds;
+  getCurrentStepDetails() {
+    return this.progression.steps[this.currentProgressState.step];
   }
 
   updateProgress(): void {
-    const validations = this.progression.panels[this.currentProgressState.step]
+    const validations = this.progression.steps[this.currentProgressState.step]
       .validations;
 
     if (!validations) {
