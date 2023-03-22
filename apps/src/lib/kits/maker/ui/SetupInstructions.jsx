@@ -221,6 +221,7 @@ class WindowsDownloads extends React.Component {
     return (
       <div>
         <h2>{applabI18n.makerSetupMakerAppForWindows()}</h2>
+        <p>{applabI18n.makerSetupMakerAppAlternatePath()}</p>
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
@@ -267,6 +268,7 @@ class MacDownloads extends React.Component {
     return (
       <div>
         <h2>{applabI18n.makerSetupMakerAppForMac()}</h2>
+        <p>{applabI18n.makerSetupMakerAppAlternatePath()}</p>
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
@@ -311,6 +313,7 @@ class LinuxDownloads extends React.Component {
     return (
       <div>
         <h2>{applabI18n.makerSetupMakerAppForLinux()}</h2>
+        <p>{applabI18n.makerSetupMakerAppAlternatePath()}</p>
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button

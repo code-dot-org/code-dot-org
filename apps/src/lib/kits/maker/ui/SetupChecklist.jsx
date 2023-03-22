@@ -404,14 +404,19 @@ class SetupChecklist extends Component {
             )}
             {!linuxPermissionError && this.installFirmwareSketch()}
             {showUpdateMicroBitButton && (
-              <Button
-                text={applabI18n.makerSetupUpdateMBFirmata()}
-                color={Button.ButtonColor.orange}
-                size={Button.ButtonSize.medium}
-                style={downloadButtonStyle}
-                onClick={() => this.updateMBFirmata()}
-                title={applabI18n.makerSetupUpdateMBFirmataDescription()}
-              />
+              <div>
+                <Button
+                  text={applabI18n.makerSetupUpdateMBFirmata()}
+                  color={Button.ButtonColor.orange}
+                  size={Button.ButtonSize.medium}
+                  style={downloadButtonStyle}
+                  onClick={() => this.updateMBFirmata()}
+                  title={applabI18n.makerSetupUpdateMBFirmataDescription()}
+                />
+                <SafeMarkdown
+                  markdown={applabI18n.makerSetupMicrobitSupportArticle()}
+                />
+              </div>
             )}
           </ValidationStep>
 
@@ -444,5 +449,6 @@ const styles = {
 };
 
 const downloadButtonStyle = {
-  textAlign: 'center'
+  textAlign: 'center',
+  marginBottom: 15
 };
