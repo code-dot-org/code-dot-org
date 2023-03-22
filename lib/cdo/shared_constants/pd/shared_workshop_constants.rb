@@ -28,12 +28,14 @@ module Pd
     SUBJECT_TEACHER_CON = 'Code.org TeacherCon'.freeze
 
     # Academic Year Workshop subjects shared between CSA, CSD, and CSP
-    SUBJECT_WORKSHOP_1 = 'Academic Year Workshop 1'.freeze
-    SUBJECT_WORKSHOP_2 = 'Academic Year Workshop 2'.freeze
-    SUBJECT_WORKSHOP_3 = 'Academic Year Workshop 3'.freeze
-    SUBJECT_WORKSHOP_4 = 'Academic Year Workshop 4'.freeze
-    SUBJECT_WORKSHOP_1_2 = 'Academic Year Workshop 1 + 2'.freeze
-    SUBJECT_WORKSHOP_3_4 = 'Academic Year Workshop 3 + 4'.freeze
+    ACADEMIC_YEAR_SUBJECTS = [
+      SUBJECT_WORKSHOP_1 = 'Academic Year Workshop 1'.freeze,
+      SUBJECT_WORKSHOP_2 = 'Academic Year Workshop 2'.freeze,
+      SUBJECT_WORKSHOP_3 = 'Academic Year Workshop 3'.freeze,
+      SUBJECT_WORKSHOP_4 = 'Academic Year Workshop 4'.freeze,
+      SUBJECT_WORKSHOP_1_2 = 'Academic Year Workshop 1 + 2'.freeze,
+      SUBJECT_WORKSHOP_3_4 = 'Academic Year Workshop 3 + 4'.freeze
+    ]
 
     # Note: the original intent of this constant is to put subjects
     # in here that will be used explicitly in JS code.
