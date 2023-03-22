@@ -681,6 +681,8 @@ es-MX:
         csc-sprite-lab-pixel-editor: Dibuja tu Propio Sprite
         csa-pl-intro-to-strings: Introducción a las Cadenas en Java
         csa-pl-compareTo: El método compareTo()
+        enter_your_own_poem: Ingresa Tu Propio Poema
+        csd_sprite_properties: Propiedades de Sprite
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque
