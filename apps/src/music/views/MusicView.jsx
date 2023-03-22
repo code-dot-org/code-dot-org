@@ -145,7 +145,7 @@ class UnconnectedMusicView extends React.Component {
         document.getElementById('blockly-div'),
         this.onBlockSpaceChange,
         this.player,
-        this.progressManager?.getCurrentToolbox()
+        this.progressManager?.getCurrentStepDetails().toolbox
       );
       this.player.initialize(this.library);
       setInterval(this.updateTimer, 1000 / 30);
@@ -200,14 +200,17 @@ class UnconnectedMusicView extends React.Component {
 
   setToolboxForProgress = () => {
     if (this.progressManager) {
-      const allowedToolbox = this.progressManager.getCurrentToolbox();
+      const allowedToolbox = this.progressManager.getCurrentStepDetails()
+        .toolbox;
       this.musicBlocklyWorkspace.updateToolbox(allowedToolbox);
     }
   };
 
   setAllowedSoundsForProgress = () => {
     if (this.progressManager) {
-      this.library.setAllowedSounds(this.progressManager.getCurrentSounds());
+      this.library.setAllowedSounds(
+        this.progressManager.getCurrentStepDetails().sounds
+      );
     }
   };
 

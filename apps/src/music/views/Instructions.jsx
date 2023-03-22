@@ -19,7 +19,7 @@ const Instructions = ({
   const [showBigImage, setShowBigImage] = useState(false);
 
   const getNextPanel = () => {
-    return currentPanel + 1 < progression.panels.length
+    return currentPanel + 1 < progression.steps.length
       ? currentPanel + 1
       : null;
   };
@@ -30,14 +30,14 @@ const Instructions = ({
 
   const analyticsReporter = useContext(AnalyticsContext);
   useEffect(() => {
-    // Instructions panels are 0-indexed, tracking is 1-based
+    // Instructions steps are 0-indexed, tracking is 1-based
     analyticsReporter.onInstructionsVisited(currentPanel + 1);
   }, [currentPanel, analyticsReporter]);
 
   const nextPanel = getNextPanel();
 
   const progressText = progression
-    ? `${currentPanel + 1}/${progression.panels.length}`
+    ? `${currentPanel + 1}/${progression.steps.length}`
     : '';
 
   return (
@@ -50,7 +50,7 @@ const Instructions = ({
     >
       {progression && (
         <InstructionsPanel
-          panel={progression.panels[currentPanel]}
+          panel={progression.steps[currentPanel]}
           message={message}
           vertical={vertical}
           baseUrl={baseUrl}
