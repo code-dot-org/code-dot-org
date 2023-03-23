@@ -25,7 +25,7 @@ const musicSlice = createSlice({
 });
 
 // TODO: If/when a top-level component is created that wraps {@link MusicView}, then
-// registering reducers should to happen there. We are registering reducers here for now
+// registering reducers should happen there. We are registering reducers here for now
 // because MusicView is currently the top-level entrypoint into Music Lab and also needs
 // to be connected to this state.
 registerReducers({music: musicSlice.reducer});
