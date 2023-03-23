@@ -95,7 +95,7 @@ class RakeTaskEventLogger
                     commit_hash: RakeUtils.git_revision,
                     task_name: @rake_task.name,
                     depth: @@depth.to_s,
-                    total_dependencies: task_chain.split(',').count,
+                    total_dependencies: task_chain.split(',').count.to_s,
                     is_continuous_integration_run: ENV['CI'] ? 'true' : 'false'}
       Cdo::Metrics.put(metric_name, metric_value, dimensions)
       Cdo::Metrics.flush!
