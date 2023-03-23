@@ -1108,3 +1108,73 @@ eu:
               display_name: Zerrendak
             lessonGroup-3:
               display_name: Itzuliak
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: Pertsonaiak
+            lessonGroup-9:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_functions:
+              display_name: Funtzioak
+            csf_variables:
+              display_name: Aldagaiak
+            csf_for_loops:
+              display_name: For begiztak
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
+            csf_data:
+              display_name: Datu
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+            csf_conditionals:
+              display_name: Baldintzak
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_sprites:
+              display_name: Pertsonaiak
+            ramp_up:
+              display_name: Kabiatutako begiztak
+            csf_functions:
+              display_name: Funtzioak
+            csf_nested_loops:
+              display_name: Baldintzak

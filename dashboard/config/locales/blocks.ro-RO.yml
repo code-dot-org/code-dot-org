@@ -1635,6 +1635,10 @@ ro:
         text: coordonatele x ale {SPRITE}
       gamelab_yLocationOf:
         text: coordonatele y ale {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} culisează către {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: acrobatică
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} începe {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2222,8 +2226,6 @@ ro:
         text: ia-o la stânga
       RyanLab_turnRight:
         text: ia-o la dreapta
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} spun {TEXT} pentru {SECONDS} secunde
       Vector_createSpriteWith:
         text: |-
           crea sprite
@@ -2282,6 +2284,8 @@ ro:
             new Behavior(wobbling, []): clătinat
             new Behavior(wandering, []): rătăcit
             new Behavior(patrolling, []): patrulare
+      adaptations_startFollowing:
+        text: "{SPRITE}începe să urmărească {TARGET}"
       binary_drawBin:
         text: trage binar {BIN}
       binary_drawDec:
@@ -2420,5 +2424,3 @@ ro:
         text: stabilește titlul {HEADING}
       storylab_setSubheading:
         text: stabilește subtitlul {SUBHEADING}
-      validation_validatedBackground:
-        text: setează fundalul cu {IMG}

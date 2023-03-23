@@ -134,6 +134,18 @@
         "19f72ae3-7b2b-4028-84e5-8e5e66fcf397": {
           "description": "Tukuyin ang mga lugar na pupuntahan upang magpatuloy sa pag-aaral ng computer science at coding"
         },
+        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
+          "description": "Ipaliwanag kung bakit ang pag-encrypt ay mahalagang pangangailangan sa pang-araw-araw na buhay sa Internet."
+        },
+        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
+          "description": "I-crack ang mensaheng naka-encrypt sa Caesar cipher gamit ang Caesar Cipher Widget"
+        },
+        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
+          "description": "I-crack ang mensaheng naka-encrypt na may random na pagpapalit gamit ang Frequency Analysis"
+        },
+        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
+          "description": "Ipaliwanag ang mga kahinaan at mga depekto sa seguridad ng mga substitution cipher"
+        },
         "7da72bfe-23c8-479f-8797-7dcfcf175ab0": {
           "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga kasuotan at lokasyon."
         },
@@ -179,6 +191,12 @@
         "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
           "description": "Tukuyin ang mga lugar na pupuntahan upang magpatuloy sa pag-aaral ng computer science at coding"
         },
+        "50b1fb31-4471-433d-a5f1-74e38886d49f": {
+          "description": "Bumuo at ibahagi ang sarili nilang mga app sa App Lab gamit ang mga feature tulad ng mga button, text, larawan, tunog, at mga screen."
+        },
+        "f7a3786d-0859-48d5-a4f9-827d6d681133": {
+          "description": "Ipagpatuloy ang pagbuo ng mga proyekto sa buong App Lab gamit ang mga mapagkukunang ibinigay sa page ng code.org/applab."
+        },
         "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
           "description": "Gumawa ng interactive na animation gamit ang mga tiyanak at event."
         },
@@ -196,6 +214,18 @@
         },
         "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
           "description": "Tukuyin ang mga lugar na pupuntahan upang magpatuloy sa pag-aaral ng computer science at coding"
+        },
+        "d2d65101-b356-4092-8f88-59b387334dd9": {
+          "description": "Makipagtulungan sa kasamahan upang makahanap ng solusyon sa problema sa compression ng text gamit ang Text Compression Widget (lossless compression na scheme)."
+        },
+        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
+          "description": "Ipaliwanag kung bakit imposible o \"mahirap\" tukuyin ang pinakamainam na dami ng compression."
+        },
+        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
+          "description": "Ipaliwanag ang ilang mga kadahilanan kung bakit mahirap ang pag-compress."
+        },
+        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
+          "description": "Ilarawan ang layunin at katwiran sa lossless compression."
         },
         "bd8e3dc4-47f2-41ac-8c7f-01126eb5e68a": {
           "description": "Tukuyin ang pangunahing bokabularyo ng computer science."

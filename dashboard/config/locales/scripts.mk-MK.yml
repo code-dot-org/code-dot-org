@@ -339,3 +339,37 @@ mk:
               display_name: Листи
             lessonGroup-3:
               display_name: Лупови
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: Сприти
+            csf_loops:
+              display_name: Лупови
+            csf_variables:
+              display_name: Променливи
+        coursea-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        courseb-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        coursec-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+            csf_data:
+              display_name: Податоци
+        coursed-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        coursee-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: Сприти

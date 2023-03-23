@@ -865,6 +865,9 @@
                     }
                   }
                 },
+                "length": {
+                  "return_value": "Дължниата на низа"
+                },
                 "substring": {
                   "palette_params": {
                     "start": {
@@ -1187,7 +1190,8 @@
                       "type": "число"
                     },
                     "blueValue": {
-                      "type": "число"
+                      "type": "число",
+                      "description": "Количеството съньо (от 0 до 255), зададено в пиксела."
                     }
                   }
                 },
@@ -1210,7 +1214,8 @@
                       "type": "число"
                     },
                     "greenValue": {
-                      "type": "число"
+                      "type": "число",
+                      "description": "Количеството зелено (от 0 до 255), зададено в пиксела."
                     }
                   }
                 },
@@ -1229,10 +1234,12 @@
                       "type": "число"
                     },
                     "green": {
-                      "type": "число"
+                      "type": "число",
+                      "description": "Количеството зелено (от 0 до 255), зададено в пиксела."
                     },
                     "blue": {
-                      "type": "число"
+                      "type": "число",
+                      "description": "Количеството съньо (от 0 до 255), зададено в пиксела."
                     },
                     "alpha": {
                       "type": "число"
@@ -1353,6 +1360,13 @@
                     }
                   }
                 },
+                "setKeyValue": {
+                  "palette_params": {
+                    "value": {
+                      "description": "Данните за съхранение."
+                    }
+                  }
+                },
                 "updateRecord": {
                   "palette_params": {
                     "record": {
@@ -1373,7 +1387,8 @@
                     "radius": {
                       "type": "число"
                     }
-                  }
+                  },
+                  "short_description": "Премества костенурката напред и наляво в гладка, закръглена дъга. "
                 },
                 "arcRight": {
                   "palette_params": {
@@ -1464,6 +1479,9 @@
                       "type": "число"
                     }
                   }
+                },
+                "show": {
+                  "short_description": "Прави костенурката видима в текущото ѝ местоположение."
                 },
                 "speed": {
                   "palette_params": {
@@ -1690,6 +1708,9 @@
                       "type": "число"
                     }
                   }
+                },
+                "length": {
+                  "return_value": "Дължниата на низа"
                 },
                 "removeItem": {
                   "palette_params": {

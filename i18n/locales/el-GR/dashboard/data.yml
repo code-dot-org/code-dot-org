@@ -542,6 +542,7 @@ el:
         CSA-PL-Printing-in-Java: Εκτύπωση σε Java
         CSA-PL-multi-selection-statements: Εντολές πολλαπλής επιλογής
         CS_Changing_Everything: H Επιστήμη των Υπολογιστών αλλάζει τα Πάντα
+        csd_sprite_properties: Ιδιότητες Χαρακτήρα
     callout:
       text:
         drag_blocks: Πιάσε ένα μπλοκ "κίνηση" και φέρ'το κάτω από το άλλο μπλοκ

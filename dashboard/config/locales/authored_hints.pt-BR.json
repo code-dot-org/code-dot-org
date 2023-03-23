@@ -12625,6 +12625,9 @@
         },
         "helloworld_food_say_space-2022": {
           "hello-world-first-solution-pizza": "Para fazer o sprite dizer alguma coisa, conecte os blocos de código da seguinte forma:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "courseC_artist_loops7a2022": {
+          "courseC_artist_loops7a_a": "Um círculo tem 360 graus. Multiplique os graus em sua vez pelo número de vezes que você repete. É igual a 360?\nVerifique as rotações sugeridas para ver se isso funciona!\n\nAqui estão alguns exemplos para você começar:\n\n-   Experimente uma curva de 60 graus por 6 vezes em torno de\n-   Experimente uma curva de 45 graus por 8 vezes em torno de\n-   Experimente uma curva de 30 graus por 12 vezes"
         }
       }
     }

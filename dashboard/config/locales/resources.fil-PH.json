@@ -38,7 +38,16 @@
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "Pag-encrypt at Pampublikong Key",
+          "url": "https://youtu.be/ZghMPWGXexs",
           "type": "Video"
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "Mga Widget sa Pag-encrypt sa Code Studio",
+          "url": "https://studio.code.org/s/hoc-encryption"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "Gabay sa Aktibidad - Compression ng Text"
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Video"

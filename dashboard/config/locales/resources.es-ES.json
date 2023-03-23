@@ -453,6 +453,8 @@
           "type": "Guía"
         },
         "csf_-_course_f_-_slides_2022-2023/coursef/2022": {
+          "name": "CSF - Curso F - Diapositivas 2022-2023",
+          "url": "https://docs.google.com/presentation/d/1MMT5npnQb5bWPmUGia4YT_mYMiFczu1HbL-KCShsxYU/template/preview",
           "type": "Diapositivas"
         },
         "exploring_apps/coursef/2022": {
@@ -736,10 +738,12 @@
         },
         "cs_fundamentals_final_project/coursee/2022": {
           "name": "Proyecto Final de Fundamentos de Ciencias de la Computación",
+          "url": "https://docs.google.com/document/d/10G5rzAr3L3atKbp5JPIX9VyYIPhRwwxpCkzhIVlyHag/edit",
           "type": "Rúbrica"
         },
         "end_of_course_project_guide/coursee/2022": {
           "name": "Guía del Proyecto de Fin de Curso",
+          "url": "https://docs.google.com/document/d/1vNbI3RosjA5K2nQRoCTYGFmVReUvdubavvObCIljxuU/edit",
           "type": "Guía de Actividad"
         },
         "2022_change_log/courseb/2022": {
