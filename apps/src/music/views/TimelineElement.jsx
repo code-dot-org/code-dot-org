@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import React, {useContext} from 'react';
-import {PlayingContext} from '../context';
+import React from 'react';
 import classNames from 'classnames';
 import moduleStyles from './timeline.module.scss';
+import {useSelector} from 'react-redux';
 
 // TODO: Unify type constants and colors with those SoundPanel.jsx
 const typeToColorClass = {
@@ -29,10 +29,9 @@ const TimelineElement = ({
   selectedBlockId,
   onBlockSelected
 }) => {
-  const playingContext = useContext(PlayingContext);
-
+  const isPlaying = useSelector(state => state.music.isPlaying);
   const isInsideRandom = skipContext?.insideRandom;
-  const isSkipSound = playingContext.isPlaying && skipContext?.skipSound;
+  const isSkipSound = isPlaying && skipContext?.skipSound;
 
   const isCurrentlyPlaying =
     !isSkipSound &&
@@ -55,9 +54,7 @@ const TimelineElement = ({
         isInsideRandom && moduleStyles.timelineElementInsideRandom,
         isSkipSound && moduleStyles.timelineElementSkipSound,
         isBlockSelected && moduleStyles.timelineElementBlockSelected,
-        onBlockSelected &&
-          !playingContext.isPlaying &&
-          moduleStyles.timelineElementClickable
+        onBlockSelected && !isPlaying && moduleStyles.timelineElementClickable
       )}
       style={{
         width: barWidth * eventData.length,
@@ -66,7 +63,7 @@ const TimelineElement = ({
         left
       }}
       onClick={event => {
-        if (onBlockSelected && !playingContext.isPlaying) {
+        if (onBlockSelected && !isPlaying) {
           onBlockSelected(eventData.blockId);
         }
         event.stopPropagation();
