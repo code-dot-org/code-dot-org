@@ -12,7 +12,7 @@ class ImmersiveReaderButton extends Component {
     isImmersiveButtonHasRoundBorders: PropTypes.bool,
     // TODO: [Phase 2] This is a switch for legacy styles needed to revert Javalab rebranding changes.
     //  once we update Javalab to new styles we'll need to remove this prop and all of it's usage
-    //  more info here: PR_LINK_GOES_HERE
+    //  more info here: https://github.com/code-dot-org/code-dot-org/pull/50924
     isLegacyStyles: PropTypes.bool
   };
 
