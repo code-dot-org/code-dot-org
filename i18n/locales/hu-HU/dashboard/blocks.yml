@@ -1638,6 +1638,10 @@ hu:
         text: "{SPRITE} x koordinátája"
       gamelab_yLocationOf:
         text: "{SPRITE} y koordinátája"
+      KatiesBlocks_glideTo:
+        text: "{SPRITE}[0] siklik ide {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: bukdácsoló
       Mikelab_addBehaviorSimple:
         text: szereplő {SPRITE} elkezd {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2212,8 +2216,6 @@ hu:
         text: fordulj balra
       RyanLab_turnRight:
         text: fordulj jobbra
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} mondja {TEXT} {SECONDS} másodpercig
       Vector_createSpriteWith:
         text: |-
           hozz létre sprite-ot
@@ -2262,6 +2264,18 @@ hu:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} mondja {SPEECH}"
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): forgatás jobbra
+            new Behavior(spinning_left, []): forgatás balra
+            new Behavior(fluttering, []): csapkodva
+            new Behavior(jittering, []): remegés
+            new Behavior(wobbling, []): kalimpálva
+            new Behavior(wandering, []): kóborlás
+            new Behavior(patrolling, []): járőrözés
+      adaptations_startFollowing:
+        text: "[SPRITE] kezdi követni a(z) {TARGET} célt"
       binary_drawBin:
         text: bináris {BIN} rajzolása
       binary_drawBinScreen:
@@ -2418,5 +2432,3 @@ hu:
         text: "{HEADING} címsor beállítása"
       storylab_setSubheading:
         text: "{SUBHEADING} alcím beállítása"
-      validation_validatedBackground:
-        text: háttér beállítása {IMG}

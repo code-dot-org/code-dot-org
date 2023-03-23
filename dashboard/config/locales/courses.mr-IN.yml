@@ -1,1 +1,24 @@
---- {}
+---
+mr:
+  data:
+    course:
+      name:
+        mike-test:
+          title: संगणक शास्त्राची मूलतत्त्वे
+    resources:
+      curriculum/csd/2020:
+        name: अभ्यासक्रम
+      teacher_forum/csd/2020:
+        name: शिक्षक फोरम
+      curriculum/csd/2017:
+        name: अभ्यासक्रम
+      teacher_forum_6/csd/2017:
+        name: शिक्षक फोरम
+      curriculum/csd/2019:
+        name: अभ्यासक्रम
+      teacher_forum/csd/2019:
+        name: शिक्षक फोरम
+      curriculum/csd/2018:
+        name: अभ्यासक्रम
+      teacher_forum_6/csd/2018:
+        name: शिक्षक फोरम

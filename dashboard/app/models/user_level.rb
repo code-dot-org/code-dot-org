@@ -260,13 +260,11 @@ class UserLevel < ApplicationRecord
   # Making unlocked_at private ensures future updates will use the locked
   # virtual attribute directly, avoiding the need to recalculate a value
   # for locked based on the 'unlocked_at' field in the db.
-  private
-
-  def unlocked_at
+  private def unlocked_at
     self[:unlocked_at]
   end
 
-  def unlocked_at=(val)
+  private def unlocked_at=(val)
     write_attribute :unlocked_at, val
   end
 end

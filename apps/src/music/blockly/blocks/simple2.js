@@ -6,15 +6,17 @@ import {
   FIELD_PATTERN_NAME,
   FIELD_REST_DURATION_NAME,
   FIELD_EFFECTS_NAME,
-  FIELD_EFFECTS_VALUE
+  FIELD_EFFECTS_VALUE,
+  FIELD_CHORD_NAME
 } from '../constants';
 import {
   fieldSoundsDefinition,
   fieldPatternDefinition,
-  fieldRestDurationDefinition
+  fieldRestDurationDefinition,
+  fieldChordDefinition
 } from '../fields';
 import {getCodeForSingleBlock} from '../blockUtils';
-import {DEFAULT_PATTERN_LENGTH} from '../../constants';
+import {DEFAULT_CHORD_LENGTH, DEFAULT_PATTERN_LENGTH} from '../../constants';
 
 // Some helpers used when generating code to be used by the interpreter.
 // Called by executeSong().
@@ -156,10 +158,11 @@ export const playSoundAtCurrentLocationSimple2 = {
         null,
         __currentFunction,
         RandomSkipManager.getSkipContext(),
-        __effects
+        __effects,
+        "${block.id}"
       );
       ProgramSequencer.updateMeasureForPlayByLength(
-        MusicPlayer.getLengthForId(
+        MusicLibrary.getLengthForId(
           "${block.getFieldValue(FIELD_SOUNDS_NAME)}"
         )
       );
@@ -171,7 +174,6 @@ export const playPatternAtCurrentLocationSimple2 = {
     type: BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
     message0: 'play pattern %1',
     args0: [fieldPatternDefinition],
-
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
@@ -188,10 +190,41 @@ export const playPatternAtCurrentLocationSimple2 = {
         null,
         __currentFunction,
         RandomSkipManager.getSkipContext(),
-        __effects
+        __effects,
+        "${block.id}"
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         ${DEFAULT_PATTERN_LENGTH}
+      );
+    `
+};
+
+export const playChordAtCurrentLocationSimple2 = {
+  definition: {
+    type: BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
+    message0: 'play chord %1',
+    args0: [fieldChordDefinition],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'lab_blocks',
+    tooltip: 'play chord',
+    helpUrl: ''
+  },
+  generator: block =>
+    `
+      MusicPlayer.playChordAtMeasure(
+        ${JSON.stringify(block.getFieldValue(FIELD_CHORD_NAME))},
+        ProgramSequencer.getCurrentMeasure(),
+        __insideWhenRun,
+        null,
+        __currentFunction,
+        RandomSkipManager.getSkipContext(),
+        __effects,
+        "${block.id}"
+      );
+      ProgramSequencer.updateMeasureForPlayByLength(
+        ${DEFAULT_CHORD_LENGTH}
       );
     `
 };

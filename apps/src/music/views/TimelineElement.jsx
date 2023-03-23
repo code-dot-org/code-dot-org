@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
-import {PlayerUtilsContext, PlayingContext} from '../context';
+import {PlayingContext} from '../context';
 import classNames from 'classnames';
 import moduleStyles from './timeline.module.scss';
-import {DEFAULT_PATTERN_LENGTH} from '../constants';
 
 // TODO: Unify type constants and colors with those SoundPanel.jsx
 const typeToColorClass = {
@@ -11,7 +10,8 @@ const typeToColorClass = {
   bass: moduleStyles.timelineElementBlue,
   lead: moduleStyles.timelineElementGreen,
   fx: moduleStyles.timelineElementYellow,
-  pattern: moduleStyles.timelineElementPink
+  pattern: moduleStyles.timelineElementPink,
+  chord: moduleStyles.timelineElementOrange
 };
 
 /**
@@ -25,15 +25,11 @@ const TimelineElement = ({
   left,
   when,
   skipContext,
-  currentPlayheadPosition
+  currentPlayheadPosition,
+  selectedBlockId,
+  onBlockSelected
 }) => {
-  const playerUtils = useContext(PlayerUtilsContext);
   const playingContext = useContext(PlayingContext);
-
-  const length =
-    eventData.type === 'pattern'
-      ? DEFAULT_PATTERN_LENGTH
-      : playerUtils.getLengthForId(eventData.id);
 
   const isInsideRandom = skipContext?.insideRandom;
   const isSkipSound = playingContext.isPlaying && skipContext?.skipSound;
@@ -42,12 +38,12 @@ const TimelineElement = ({
     !isSkipSound &&
     currentPlayheadPosition !== 0 &&
     currentPlayheadPosition >= when &&
-    currentPlayheadPosition < when + length;
+    currentPlayheadPosition < when + eventData.length;
+
+  const isBlockSelected = eventData.blockId === selectedBlockId;
 
   const colorType =
-    eventData.type === 'pattern'
-      ? 'pattern'
-      : playerUtils.getTypeForId(eventData.id);
+    eventData.type === 'sound' ? eventData.soundType : eventData.type;
   const colorClass = typeToColorClass[colorType];
 
   return (
@@ -57,13 +53,23 @@ const TimelineElement = ({
         colorClass,
         isCurrentlyPlaying && moduleStyles.timelineElementPlaying,
         isInsideRandom && moduleStyles.timelineElementInsideRandom,
-        isSkipSound && moduleStyles.timelineElementSkipSound
+        isSkipSound && moduleStyles.timelineElementSkipSound,
+        isBlockSelected && moduleStyles.timelineElementBlockSelected,
+        onBlockSelected &&
+          !playingContext.isPlaying &&
+          moduleStyles.timelineElementClickable
       )}
       style={{
-        width: barWidth * length,
+        width: barWidth * eventData.length,
         height,
         top,
         left
+      }}
+      onClick={event => {
+        if (onBlockSelected && !playingContext.isPlaying) {
+          onBlockSelected(eventData.blockId);
+        }
+        event.stopPropagation();
       }}
     >
       &nbsp;
@@ -79,7 +85,9 @@ TimelineElement.propTypes = {
   left: PropTypes.number,
   when: PropTypes.number.isRequired,
   skipContext: PropTypes.object,
-  currentPlayheadPosition: PropTypes.number.isRequired
+  currentPlayheadPosition: PropTypes.number.isRequired,
+  selectedBlockId: PropTypes.string,
+  onBlockSelected: PropTypes.func
 };
 
 export default TimelineElement;

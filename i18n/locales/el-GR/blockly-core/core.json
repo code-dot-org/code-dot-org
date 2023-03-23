@@ -159,7 +159,7 @@
     "LISTS_SET_INDEX_HELPURL": "https://code.google.com/p/blockly/wiki/Lists#in_list_..._set",
     "LISTS_SET_INDEX_INPUT_TO": "ως",
     "LISTS_SET_INDEX_INSERT": "εισαγωγή σε",
-    "LISTS_SET_INDEX_SET": "Γρίφος",
+    "LISTS_SET_INDEX_SET": "Όρισε",
     "LISTS_SET_INDEX_TOOLTIP_INSERT_FIRST": "Εισάγει το στοιχείο στην αρχή μιας λίστας.",
     "LISTS_SET_INDEX_TOOLTIP_INSERT_FROM_END": "Εισάγει το στοιχείο σε συγκεκριμένη θέση σε μια λίστα. Το #1 είναι το τελευταίο στοιχείο.",
     "LISTS_SET_INDEX_TOOLTIP_INSERT_FROM_START": "Εισάγει το στοιχείο  στην καθορισμένη θέση σε μια λίστα.  #1 είναι το πρώτο στοιχείο.",

@@ -4,9 +4,9 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "CSD",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
-      "is_course": true,
       "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
@@ -15,12 +15,12 @@
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "csd3",
-    "serialized_at": "2023-03-15 17:34:28 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2023-03-17 23:30:18 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csd3-2023"
     }
@@ -62,8 +62,8 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "To kick off a unit devoted to problem-solving and developing animations and games, students begin by investigating the design of different animations and games. Students look at a variety of animations and games and attempt to match each design with a potential user. Then students choose a user and attempt to prototype an animation or game design for them on paper or in a digital template. To conclude the activity, students consider what it means to be an animation and game designer and create resources for other users.\n\n**Question of the Day:** How can we design animations and games based on the needs of a user?\n\n",
-        "preparation": "* Review the research resources linked in Code Studio\n* Print a copy of the activity guide for each group of three students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "student_overview": "**Question of the Day:** How is computer science used in entertainment?\n\nIn this lesson, you will explore how Computer Science and specifically programming, plays a role in entertainment or as a vehicle for self-expression. \n\n"
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "student_overview": "**Question of the Day:** How can we design animations and games based on the needs of a user?\n\nIn this lesson, you will explore how we can design animations and games for different users and purposes\n\n"
       },
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
@@ -1954,13 +1954,13 @@
       "key": "122ed1c3-ec23-4041-ba57-4f6ad839c7ec",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?\n\n**Discuss and Display:** Briefly discuss with students what parts of the warm-up activity they felt fell into each step of the problem-solving process before displaying the example answers in the slides:\n* Define: when we put into our own words what the problem of a word search is and what the goal is\n* Prepare: the brainstorming of different strategies that could be used to solve a word search\n* Try: when we picked a strategy and tried to find the words\n* Reflect: when we reflected on how they did at the end\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?\n\n",
         "duration": "5",
         "name": "The Problem Solving Process",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This is a good point to remind students that the problem-solving process is a cycle and there should be times when they need to repeat steps. For example, if they went back to the list of strategies and picked a different one at any point when solving this problem, they were not only doing the “Reflect” step without realizing it but going back to the “Prepare” and “Try” steps again.\n"
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
           }
         ]
       },
@@ -1970,8 +1970,25 @@
       }
     },
     {
-      "key": "250bd25f-afa4-4bf1-a8fb-bb2a706f02cc",
+      "key": "c515a3ba-82d1-4f38-a53a-098b21fe1a1c",
       "position": 9,
+      "properties": {
+        "description": "**Discuss and Display:** Briefly discuss with students what parts of the warm-up activity they felt fell into each step of the problem-solving process before displaying the example answers in the slides:\n* Define: when we put into our own words what the problem of a word search is and what the goal is\n* Prepare: the brainstorming of different strategies that could be used to solve a word search\n* Try: when we picked a strategy and tried to find the words\n* Reflect: when we reflected on how they did at the end\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This is a good point to remind students that the problem-solving process is a cycle and there should be times when they need to repeat steps. For example, if they went back to the list of strategies and picked a different one at any point when solving this problem, they were not only doing the “Reflect” step without realizing it but going back to the “Prepare” and “Try” steps again.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c515a3ba-82d1-4f38-a53a-098b21fe1a1c",
+        "lesson_activity.key": "7c3c87b3-d067-49ac-be07-19be26932566"
+      }
+    },
+    {
+      "key": "250bd25f-afa4-4bf1-a8fb-bb2a706f02cc",
+      "position": 10,
       "properties": {
         "description": "Now that we're familiar with the problem-solving process, let's explore how we can use it when designing animations and games.\n",
         "remarks": true
@@ -2464,7 +2481,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Pair programming is a great way to increase student confidence and foster the practices of collaboration and communication. You can read more about Pair Programming in the [CSD Curriculum Guide](https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view)\n\n"
+            "markdown": "Pair programming is a great way to increase student confidence and foster the practices of collaboration and communication. You can read more about Pair Programming in the **[CSD Curriculum Guide](https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view)**\n\n"
           }
         ]
       },
@@ -2492,7 +2509,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Predict Levels:** Predict levels are a great opportunity for students to think critically about code and engage in class discussions. Consider having students think of their own prediction and discuss with a partner before typing in their response. Once they're run the code, bring the class together for a full-group discussion to discuss how their predictions were similar or different from the resulting program. Use this as an opportunity to address any misconceptions that students may have had about the code initially.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Facilitating Predict Levels:** Predict levels are a great opportunity for students to think critically about code and engage in class discussions. Consider having students think of their own prediction and discuss with a partner before typing in their response. Once they're run the code, bring the class together for a full-group discussion to discuss how their predictions were similar or different from the resulting program. Use this as an opportunity to address any misconceptions that students may have had about the code initially.\n\n**Digging Deeper:** For more tips about programming levels, see the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2505,7 +2522,13 @@
       "key": "2ef19cd2-87ef-4290-a62a-8026acca3296",
       "position": 4,
       "properties": {
-        "description": "**Discussion Goal:** The parameters in this level will set the *x* and *y* values for the square. Students should recall this from the previous lesson, but what they may not realize is that the top left corner of the square is what will be placed at the *100 x* and *100 y* locations. Using this new information, they will be able to revisit this code at the next level and play with the *x* and *y* parameters to gain a better understanding."
+        "description": "**Discussion Goal:** The parameters in this level will set the *x* and *y* values for the square. Students should recall this from the previous lesson, but what they may not realize is that the top left corner of the square is what will be placed at the *100 x* and *100 y* locations. Using this new information, they will be able to revisit this code at the next level and play with the *x* and *y* parameters to gain a better understanding.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_1/csd3/2023] video in the slides.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2ef19cd2-87ef-4290-a62a-8026acca3296",
@@ -2516,7 +2539,7 @@
       "key": "e9a9c705-2850-44bc-a210-dc4b3466a353",
       "position": 5,
       "properties": {
-        "description": "\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_1/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- Where can you find more information about how to use the blocks?\n- What’s an advantage of using block mode?\n\n**Discussion Goal:** \n- *Where can you find more information about how to use the blocks?*\n  * Make sure students understand how to access the block documentation by clicking on the blocks inside the toolbox and clicking \"see examples\".\n- *What’s an advantage of using block mode?*\n  * As students think of ideas of why they might prefer to use block mode, make sure that they understand that the block-based version of the programming language is just as legitimate as the text-based version. Students may offer that blocks make it easier to remember the exact commands or that they don't have to worry about the details of the parentheses or semicolons.\n  * *Alternatively, advantages to text might be that it's easier to edit or that the text takes up less space.*\n",
+        "description": "\n\n\n**Questions to Consider with Video:**\n- Where can you find more information about how to use the blocks?\n- What’s an advantage of using block mode?\n\n**Discussion Goal:** \n- *Where can you find more information about how to use the blocks?*\n  * Make sure students understand how to access the block documentation by clicking on the blocks inside the toolbox and clicking \"see examples\".\n- *What’s an advantage of using block mode?*\n  * As students think of ideas of why they might prefer to use block mode, make sure that they understand that the block-based version of the programming language is just as legitimate as the text-based version. Students may offer that blocks make it easier to remember the exact commands or that they don't have to worry about the details of the parentheses or semicolons.\n  * *Alternatively, advantages to text might be that it's easier to edit or that the text takes up less space.*\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2537,7 +2560,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Skill Building Levels:** Skill Building levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete Skill Building levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Facilitating Skill Building Levels:** Skill Building levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete Skill Building levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in **[this video](https://www.youtube.com/watch?v=q7d_JtyCq1A)**, which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level.\n\n**Digging Deeper:** For more tips about programming levels, see the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2565,7 +2588,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Text-to-Speech Options:** The instructions panel includes two options that can support comprehension for students.\n- **Text to Speech** which reads aloud the instructions for students\n- **Microsoft Immersive Reader** which opens a new panel for the instructions and gives controls to change the text size, contrast, or translate to another language.\n\n[Click here to learn more about these options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
+            "markdown": "**Text-to-Speech Options:** The instructions panel includes two options that can support comprehension for students.\n- **Text to Speech** which reads aloud the instructions for students\n- **Microsoft Immersive Reader** which opens a new panel for the instructions and gives controls to change the text size, contrast, or translate to another language.\n\n**[Click here to learn more about these options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)**"
           }
         ]
       },
@@ -2582,7 +2605,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class.\n\n**Digging Deeper:** For more tips about programming levels, see the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2599,7 +2622,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Assessment Levels:** Assessment levels contain a single task that requires applying the skills and concepts from the level in order to solve. Students should complete these levels individually and you can use your judgment of how much external help students should have. Assessment levels also contain a rubric that can be used for formative assessment and a box to provide feedback to students - [click here to learn more about using rubrics and giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n**Digging Deeper:** For more tips about assessing student work, see the [CSD Guide to Assessment](https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view)."
+            "markdown": "**Facilitating Assessment Levels:** Assessment levels contain a single task that requires applying the skills and concepts from the level in order to solve. Students should complete these levels individually and you can use your judgment of how much external help students should have. Assessment levels also contain a rubric that can be used for formative assessment and a box to provide feedback to students - **[click here to learn more about using rubrics and giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)**.\n\n**Digging Deeper:** For more tips about assessing student work, see the **[CSD Guide to Assessment](https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view)**."
           },
           {
             "type": "assessmentOpportunity",
@@ -2620,7 +2643,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels.\n\n**Digging Deeper:** For more tips about programming levels, see the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2707,7 +2730,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2736,7 +2759,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Normalizing Mistakes and Supporting Debugging:** As programming levels become more complex, students may find themselves with bugs in their code that they need to untangle. If this happens frequently, this can be a demoralizing experience for students and can affect their self-perception of how capable they are in class. \n\nTo counter this, we recommend normalizing bugs and mistakes as something that happens to everyone - it’s just part of the process. You can show students our [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s), which includes several students normalizing mistakes and discussing debugging strategies that students can use. Additionally, consider displaying the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) for students to reference throughout the unit and having [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) available for students to use."
+            "markdown": "**Normalizing Mistakes and Supporting Debugging:** As programming levels become more complex, students may find themselves with bugs in their code that they need to untangle. If this happens frequently, this can be a demoralizing experience for students and can affect their self-perception of how capable they are in class. \n\nTo counter this, we recommend normalizing bugs and mistakes as something that happens to everyone - it’s just part of the process. You can show students our **[Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s)**, which includes several students normalizing mistakes and discussing debugging strategies that students can use. Additionally, consider displaying the **[Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#)** for students to reference throughout the unit and having **[Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview)** available for students to use."
           }
         ]
       },
@@ -2816,7 +2839,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Input, Output, Processing, and Storage:** These terms are introduced in the Problem Solving and Computing unit in CS Discoveries, so students may already be familiar with them. However, if they need a refresher, you may decide to show the [What Do Computers Do?](https://www.youtube.com/watch?v=92TaQRBwPSs) video which highlights these four functions."
+            "markdown": "**Input, Output, Processing, and Storage:** These terms are introduced in the Problem Solving and Computing unit in CS Discoveries, so students may already be familiar with them. However, if they need a refresher, you may decide to show the **[What Do Computers Do?](https://www.youtube.com/watch?v=92TaQRBwPSs)** video which highlights these four functions."
           }
         ]
       },
@@ -2868,7 +2891,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2903,7 +2926,13 @@
       "key": "c4ffb29d-cce7-4fcb-a503-1ac238f6b1d7",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_variables/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What are variables used to do?\n- How do you create a variable and assign it a value?\n- What can go into a variable?\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_variables/csd3/2023] video in the slides.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c4ffb29d-cce7-4fcb-a503-1ac238f6b1d7",
@@ -2914,7 +2943,7 @@
       "key": "f518dd78-c3d9-48ab-9702-6c5f51e3bc9b",
       "position": 5,
       "properties": {
-        "description": "**Discussion Goal:** Students should understand that variables hold information and can be accessed using their labels. With simple drawings, students may not see the power of variables, so you may want them to think of some different apps that they use and what information needs to be stored for the app to work, or think about a more complex program that they want to use variables for.\n\nNumbers, text, and colors can all go into variables, as well as more complicated data structures that students will see later in the course.",
+        "description": "**Questions to Consider with Video:**\n- What are variables used to do?\n- How do you create a variable and assign it a value?\n- What can go into a variable?\n\n**Discussion Goal:** Students should understand that variables hold information and can be accessed using their labels. With simple drawings, students may not see the power of variables, so you may want them to think of some different apps that they use and what information needs to be stored for the app to work, or think about a more complex program that they want to use variables for.\n\nNumbers, text, and colors can all go into variables, as well as more complicated data structures that students will see later in the course.",
         "progression_name": "Predict"
       },
       "seeding_key": {
@@ -3073,7 +3102,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3451,7 +3480,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3475,7 +3504,13 @@
       "key": "1cf25bad-898f-4920-9419-15d582df7747",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_sprites/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What is a sprite?\n- What problem do sprites solve?\n\n**Discussion Goal:** From the video, students should think of sprites as a _container_ that helps us manage different properties of an image and helps us solve the problem of organizing a lot of information about how something should be drawn to a screen. It's okay if students also bring in some of their own experiences with animations and sprites, but emphasize that in Game Lab: a sprite isn't the animation or image itself, but the container that we can attach an image to. This helps manage expectations in the next few levels, where a sprite is just a gray rectangle until we learn to add animations to it.\n\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_sprites/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What is a sprite?\n- What problem do sprites solve?\n\n**Discussion Goal:** From the video, students should think of sprites as a _container_ that helps us manage different properties of an image and helps us solve the problem of organizing a lot of information about how something should be drawn to a screen. It's okay if students also bring in some of their own experiences with animations and sprites, but emphasize that in Game Lab: a sprite isn't the animation or image itself, but the container that we can attach an image to. This helps manage expectations in the next few levels, where a sprite is just a gray rectangle until we learn to add animations to it.\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1cf25bad-898f-4920-9419-15d582df7747",
@@ -3683,7 +3718,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3704,10 +3739,26 @@
       }
     },
     {
-      "key": "d86c69ad-d7d1-4015-bb86-0d34ade76e5e",
+      "key": "018269af-e160-4502-9b18-15c10310dd92",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_properties_needs_updating_/csd3/2023] video in the slides.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n- **Property:** A label for a characteristic of a sprite, such as its location and appearance\n- **Dot notation:** the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_properties_needs_updating_/csd3/2023] video in the slides.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n- **Property:** A label for a characteristic of a sprite, such as its location and appearance\n- **Dot notation:** the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "018269af-e160-4502-9b18-15c10310dd92",
+        "lesson_activity.key": "c8d31704-9871-48a7-9d5f-fa4a893b367d"
+      }
+    },
+    {
+      "key": "d86c69ad-d7d1-4015-bb86-0d34ade76e5e",
+      "position": 4,
+      "properties": {
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -3717,7 +3768,7 @@
     },
     {
       "key": "e0cbb128-fcb7-464f-a506-7d78fd66a6f0",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Practice"
       },
@@ -3728,7 +3779,7 @@
     },
     {
       "key": "779e2809-80da-45b8-ba9b-44cc55386338",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -3745,7 +3796,7 @@
     },
     {
       "key": "c9cb7767-98ce-4e02-9d64-56927deb319e",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Challenges"
       },
@@ -3819,7 +3870,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -4227,7 +4278,13 @@
       "key": "91af4e95-88e2-457c-b6df-1d704404f2c8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_the_draw_loop/csd3/2023] video in the slides.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_the_draw_loop/csd3/2023] video in the slides.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "91af4e95-88e2-457c-b6df-1d704404f2c8",
@@ -4265,7 +4322,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -4428,7 +4485,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -4449,10 +4506,27 @@
       }
     },
     {
-      "key": "ddf3d6d4-d7d5-454a-9458-e08be66ef5ef",
+      "key": "edb20353-f050-4cb3-99f4-ddd66a421ce9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_movement/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What is the counter pattern?\n- How does the counter pattern move sprites across the screen?\n\n**Discussion Goal:** \n- *What is the counter pattern?*\n  - Students may describe the counter pattern in various ways. Make sure that they go beyond just stating the blocks or code that the counter pattern uses. \n  - They should understand that the counter pattern allows the programmer to update the value of a variable in a pattern that counts up (or down) on every iteration of the draw loop. \n  - This can be used for many different things, such as spinning, growing, shrinking, or timers, but it's most often used to move sprites across the screen.\n- *How does the counter pattern move sprites across the screen?*\n  - When a sprite's x or y property is updated in a counter pattern, its position changes in a consistent way over time, causing it to move across the screen. \n  - Students should be able to explain that movement for an animation is just a change in position and that changing a sprite's x position will cause it to move horizontally, and changing a sprite's y position will cause it to move vertically.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_movement/csd3/2023] video in the slides.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "edb20353-f050-4cb3-99f4-ddd66a421ce9",
+        "lesson_activity.key": "dffb2ecb-625c-4efa-ad89-8072cecade14"
+      }
+    },
+    {
+      "key": "ddf3d6d4-d7d5-454a-9458-e08be66ef5ef",
+      "position": 4,
+      "properties": {
+        "description": "\n**Questions to Consider with Video:**\n- What is the counter pattern?\n- How does the counter pattern move sprites across the screen?\n\n**Discussion Goal:** \n- *What is the counter pattern?*\n  - Students may describe the counter pattern in various ways. Make sure that they go beyond just stating the blocks or code that the counter pattern uses. \n  - They should understand that the counter pattern allows the programmer to update the value of a variable in a pattern that counts up (or down) on every iteration of the draw loop. \n  - This can be used for many different things, such as spinning, growing, shrinking, or timers, but it's most often used to move sprites across the screen.\n- *How does the counter pattern move sprites across the screen?*\n  - When a sprite's x or y property is updated in a counter pattern, its position changes in a consistent way over time, causing it to move across the screen. \n  - Students should be able to explain that movement for an animation is just a change in position and that changing a sprite's x position will cause it to move horizontally, and changing a sprite's y position will cause it to move vertically.\n",
         "progression_name": "Video: Sprite Movement"
       },
       "seeding_key": {
@@ -4462,7 +4536,7 @@
     },
     {
       "key": "5674cab2-158c-4664-b9b4-26406edfaaca",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -4473,7 +4547,7 @@
     },
     {
       "key": "d73ccc18-34c2-4fcc-9c31-b96821773a58",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Practice"
       },
@@ -4484,7 +4558,7 @@
     },
     {
       "key": "63ba5b2f-c777-4d9a-b3ea-dda021f3cc33",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -4501,7 +4575,7 @@
     },
     {
       "key": "cc48678f-8c9a-4ee4-82b7-71f64e57ba83",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Challenges"
       },
@@ -4882,7 +4956,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -4903,10 +4977,27 @@
       }
     },
     {
-      "key": "4a3fafce-b94e-4146-a883-b1a761edf661",
+      "key": "529ce195-5758-4385-8d85-76a4554d6201",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r boolean_expressions/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What is a Boolean expression?\n- What’s an expression that would evaluate to true?\n- What’s an expression that would evaluate to false?\n\n**Discussion Goal:** \n- *What is a Boolean expression?*\n  - **Boolean Expression** - in programming, an expression that evaluates to True or False.\n  - Students should be able to explain that a Boolean expression is something that is either true or false, similar to a yes or no question. \n  - The more formal way to say this is that Boolean expressions evaluate to either true or false. That means that when the computer processes a Boolean expression, it checks to see whether the expression describes a situation that is true or false, and then uses the value of either true or false wherever the expression is found.\n- *What’s an expression that would evaluate to true?*\n  - Some examples of Boolean expressions that evaluate to true are `3 > 1` and `4 <= 7`, but press students to think of expressions that might be better represented by variables, such as `studentAge < 70` or `sizeOfClass > 2`.\n- *What’s an expression that would evaluate to false?*\n  - Some examples of Boolean expressions that evaluate to false are `4 == 7`, `schoolName == \"Hogwarts\"`, and `currentYear < 1000`.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r boolean_expressions/csd3/2023] video in the slides.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "529ce195-5758-4385-8d85-76a4554d6201",
+        "lesson_activity.key": "e4b27363-1e82-46b2-9a42-7a9cb8336a08"
+      }
+    },
+    {
+      "key": "4a3fafce-b94e-4146-a883-b1a761edf661",
+      "position": 4,
+      "properties": {
+        "description": "**Questions to Consider with Video:**\n- What is a Boolean expression?\n- What’s an expression that would evaluate to true?\n- What’s an expression that would evaluate to false?\n\n**Discussion Goal:** \n- *What is a Boolean expression?*\n  - **Boolean Expression** - in programming, an expression that evaluates to True or False.\n  - Students should be able to explain that a Boolean expression is something that is either true or false, similar to a yes or no question. \n  - The more formal way to say this is that Boolean expressions evaluate to either true or false. That means that when the computer processes a Boolean expression, it checks to see whether the expression describes a situation that is true or false, and then uses the value of either true or false wherever the expression is found.\n- *What’s an expression that would evaluate to true?*\n  - Some examples of Boolean expressions that evaluate to true are `3 > 1` and `4 <= 7`, but press students to think of expressions that might be better represented by variables, such as `studentAge < 70` or `sizeOfClass > 2`.\n- *What’s an expression that would evaluate to false?*\n  - Some examples of Boolean expressions that evaluate to false are `4 == 7`, `schoolName == \"Hogwarts\"`, and `currentYear < 1000`.\n",
         "progression_name": "Video: Booleans"
       },
       "seeding_key": {
@@ -4916,7 +5007,7 @@
     },
     {
       "key": "78e20347-1146-453b-9549-d741338297bb",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Quick Check"
       },
@@ -4927,7 +5018,7 @@
     },
     {
       "key": "51e62f99-3a45-4c5a-ae5d-497b2fa80fda",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -4938,7 +5029,7 @@
     },
     {
       "key": "23e30728-5bed-44bd-8c4b-1074b93e8239",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r conditional_statements/csd3/2023] video in the slides.\n\n**Question to Consider with Video:**\n- When would you want to use an if statement?\n\n**Discussion Goal:** The broad point of this question is that programmers use if statements when they want the program to run differently in response to different situations. Encourage students to think of particular situations in which this would be the case. For example, they might want their characters to move faster when a \"bonus\" is in effect, or maybe they want more enemies to appear when the player reaches a certain level. Maybe they want the program to react in some way if a user presses a key or clicks the mouse, or they want a character to change animations if it touches a particular item.\n\n\n",
         "progression_name": "Video: Conditional Statements"
@@ -4950,7 +5041,7 @@
     },
     {
       "key": "87a43710-2d57-4737-9558-391256ad0dff",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -4961,7 +5052,7 @@
     },
     {
       "key": "05960f57-abb3-49d9-b863-efff268df7f3",
-      "position": 8,
+      "position": 9,
       "properties": {
         "progression_name": "Practice"
       },
@@ -4972,7 +5063,7 @@
     },
     {
       "key": "fa173d6c-bb83-4e25-8ee9-41863f73267c",
-      "position": 9,
+      "position": 10,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -4989,7 +5080,7 @@
     },
     {
       "key": "412d441d-82b0-4b0d-ad9b-98d5938d5ab8",
-      "position": 10,
+      "position": 11,
       "properties": {
         "progression_name": "Challenges"
       },
@@ -5053,7 +5144,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -5190,7 +5281,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -5211,10 +5302,27 @@
       }
     },
     {
-      "key": "de342f84-bb35-4fc0-abaf-43d0865483b5",
+      "key": "286ee182-4df3-4f7d-bef6-1011fcf1b56a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:**  Show students the [r if_else_statements/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What’s an example of when you would need an “if/else” statement?\n\n**Discussion Goal:** Make sure students are thinking of situations in which they want two different things to happen, depending on the situation. For example, they may say that they want one animation if the sprite is moving to the left and a different animation if the sprite is moving to the right. Challenge the students to think about when they would just use an [`if()`(#64B5F6)](/docs/ide/applab/expressions/ifElseBlock) block, and when an [`if()/else()`(#64B5F6)](/docs/ide/applab/expressions/ifElseBlock) block is necessary.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:**  Show students the [r if_else_statements/csd3/2023] video in the slides.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "286ee182-4df3-4f7d-bef6-1011fcf1b56a",
+        "lesson_activity.key": "a0e3d4a9-61da-4390-8170-69fd142afce4"
+      }
+    },
+    {
+      "key": "de342f84-bb35-4fc0-abaf-43d0865483b5",
+      "position": 4,
+      "properties": {
+        "description": "**Questions to Consider with Video:**\n- What’s an example of when you would need an “if/else” statement?\n\n**Discussion Goal:** Make sure students are thinking of situations in which they want two different things to happen, depending on the situation. For example, they may say that they want one animation if the sprite is moving to the left and a different animation if the sprite is moving to the right. Challenge the students to think about when they would just use an [`if()`(#64B5F6)](/docs/ide/applab/expressions/ifElseBlock) block, and when an [`if()/else()`(#64B5F6)](/docs/ide/applab/expressions/ifElseBlock) block is necessary.\n",
         "progression_name": "Video: If/Else Statements"
       },
       "seeding_key": {
@@ -5224,7 +5332,7 @@
     },
     {
       "key": "37e99532-82df-48f8-9ef1-d066e8125b8d",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -5235,7 +5343,7 @@
     },
     {
       "key": "0d87ba04-d0b6-4a2f-ae9e-17f8cd485d9c",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Practice"
       },
@@ -5246,7 +5354,7 @@
     },
     {
       "key": "a5d9d609-e585-4cde-bd83-e99589c3edb7",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -5263,7 +5371,7 @@
     },
     {
       "key": "6cdbe394-dd8d-414f-9c39-0f84be8ee6fb",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Challenges"
       },
@@ -5601,8 +5709,14 @@
       "key": "abb8365c-303e-410d-a30b-a54115599db1",
       "position": 3,
       "properties": {
-        "description": "**Discussion Goal:** Student predictions will vary but some may predict that the new [`velocity`(#f78183)](/docs/ide/gamelab/expressions/velocityX) block might make the sprite move faster than the counter pattern. Once they run the program, students will see that the two lines of code cause the same sprite movement - the difference being the  [`velocity`(#f78183)](/docs/ide/gamelab/expressions/velocityX) block hides the details of the counter pattern *and* happens *outside* the draw loop.",
-        "progression_name": "Skill Building"
+        "description": "**Discussion Goal:** Student predictions will vary but some may predict that the new [`velocity`(#f78183)](/docs/ide/gamelab/expressions/velocityX) block might make the sprite move faster than the counter pattern. Once they run the program, students will see that the two lines of code cause the same sprite movement - the difference being the  [`velocity`(#f78183)](/docs/ide/gamelab/expressions/velocityX) block hides the details of the counter pattern *and* happens *outside* the draw loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r velocity/csd3/2023] video in the slides.\n",
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "abb8365c-303e-410d-a30b-a54115599db1",
@@ -5613,7 +5727,7 @@
       "key": "c2999695-82bf-4122-ad30-5d496c903195",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r velocity/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- Why might you want to use a velocity block instead of the counter pattern?\n- Give an example of a counter pattern and how you could use a velocity block instead.\n\n**Discussion Goal:**\n- *Why might you want to use a velocity block instead of the counter pattern?*\n  - It may not be obvious to students why the velocity block is so powerful. The immediate answer is that the velocity block allows a programmer to set the velocity at the beginning of the program and not have to worry about the counter pattern inside the draw loop (as Game Lab will take care of that). \n  - If students are having trouble thinking of situations in which the velocity block provides a big advantage, assure them that they will tackle some problems in the coming lesson that they will need this block for.\n- *Give an example of a counter pattern and how you could use a velocity block instead.*\n  - As students give you examples, try to elicit answers that use both positive and negative numbers, and that use the x and y positions as well as sprite rotation.\n",
+        "description": "**Questions to Consider with Video:**\n- Why might you want to use a velocity block instead of the counter pattern?\n- Give an example of a counter pattern and how you could use a velocity block instead.\n\n**Discussion Goal:**\n- *Why might you want to use a velocity block instead of the counter pattern?*\n  - It may not be obvious to students why the velocity block is so powerful. The immediate answer is that the velocity block allows a programmer to set the velocity at the beginning of the program and not have to worry about the counter pattern inside the draw loop (as Game Lab will take care of that). \n  - If students are having trouble thinking of situations in which the velocity block provides a big advantage, assure them that they will tackle some problems in the coming lesson that they will need this block for.\n- *Give an example of a counter pattern and how you could use a velocity block instead.*\n  - As students give you examples, try to elicit answers that use both positive and negative numbers, and that use the x and y positions as well as sprite rotation.\n",
         "progression_name": "Video: Velocity"
       },
       "seeding_key": {
@@ -5630,7 +5744,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           },
           {
             "type": "teachingTip",
@@ -6237,7 +6351,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -6481,7 +6595,13 @@
       "key": "78c05816-0e2f-48a6-91a1-40edc89a48a8",
       "position": 3,
       "properties": {
-        "progression_name": "Skill Building"
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "78c05816-0e2f-48a6-91a1-40edc89a48a8",
@@ -6794,6 +6914,13 @@
       "key": "1693c6a1-f3db-4262-a4ba-99e228c5a39d",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r functions/csd3/2023] video in the slides.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1693c6a1-f3db-4262-a4ba-99e228c5a39d",
@@ -6804,7 +6931,7 @@
       "key": "c596e167-e8d2-4747-a7f2-1e1709c4d83c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r functions/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- Think of a time when a function might have helped you write a program.\n- What code would go in the **definition** of the function?\n- When would you **call** the function?\n- What would you name it?\n\n**Discussion Goal:** Ensure students know the key vocabulary term **Function** and its definition as *a named bit of programming instructions.* Make sure students understand the role of the two steps in using functions, as well as seeing functions as a form of \"chunking\" or abstraction. The function definition should include all of the code that they want to run, and the name of the function should be a short description of the purpose of the code. The function should be called at each place in the program where the student wants that block of code to run.\n",
+        "description": "**Questions to Consider with Video:**\n- Think of a time when a function might have helped you write a program.\n- What code would go in the **definition** of the function?\n- When would you **call** the function?\n- What would you name it?\n\n**Discussion Goal:** Ensure students know the key vocabulary term **Function** and its definition as *a named bit of programming instructions.* Make sure students understand the role of the two steps in using functions, as well as seeing functions as a form of \"chunking\" or abstraction. The function definition should include all of the code that they want to run, and the name of the function should be a short description of the purpose of the code. The function should be called at each place in the program where the student wants that block of code to run.\n",
         "progression_name": "Video: Functions"
       },
       "seeding_key": {
@@ -6817,7 +6944,13 @@
       "position": 3,
       "properties": {
         "description": "**Transition:** Move students into Code Studio where they will learn to create and call functions.\n\nThe first prediction level program is the first time they will see functions in action.\n\n**Discuss:** Students should consider and discuss:\n\n* What will be drawn on the screen and why?\n\n**Discussion Goal:** Predictions will vary but after viewing the Functions video, students should be able to predict that the program will draw what is inside the `drawBackground` and `drawPlanet` blocks of code. It is important to point out that the `drawPlanet` function was called twice which is why there are two planets drawn on the screen, each one a different color and location. Students should also notice the `drawStar` function being called *within* the `drawBackground` function multiple times rather than at the top of the program like the other function calls. You can take this opportunity to discuss how this helped organize and simplify the code since the stars are part of the background.",
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d11d117e-695b-4e36-bb74-e0a13e6bcf51",
@@ -15924,2442 +16057,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "(Warm Up) Word Search",
-      "url": "https://docs.google.com/document/d/1ebaf_cmMsIxI0j_WGQL2xry4URBOMWzp-7KwqayMFFU/edit?usp=sharing",
-      "key": "_warm_up_word_search",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "_warm_up_word_search"
-      }
-    },
-    {
-      "name": "(Warm Up) Word Search [KEY]",
-      "url": "https://docs.google.com/document/d/1B1fjF39Xr1KKDILVzcXqvEpi1ri3MiDkkVLIMZquh_8/edit?usp=share_link",
-      "key": "_warm_up_word_search_key_",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_warm_up_word_search_key_"
-      }
-    },
-    {
-      "name": "Activity Guide - Robot Face Planning",
-      "url": "https://docs.google.com/document/d/1xy53Z--2I9X4k75Besh15eGTY3Rpo8Asdba6uctI9nY/edit?usp=sharing",
-      "key": "activity_guide_-_robot_face_planning",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "activity_guide_-_robot_face_planning"
-      }
-    },
-    {
-      "name": "All Code",
-      "url": "/s/csd3-2023/code",
-      "key": "all_code",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_code"
-      }
-    },
-    {
-      "name": "All Resources",
-      "url": "/s/csd3-2023/resources",
-      "key": "all_resources",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_resources"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/s/csd3-2023/standards",
-      "key": "all_standards",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_standards"
-      }
-    },
-    {
-      "name": "All Vocabulary",
-      "url": "/s/csd3-2023/vocab",
-      "key": "all_vocabulary",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_vocabulary"
-      }
-    },
-    {
-      "name": "Animated Scene",
-      "url": "https://docs.google.com/document/d/1fHRgDgi5mCgPFitc3nM4StqO1ciaGjmQCLREmTnveFg/view",
-      "key": "animated_scene",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "animated_scene"
-      }
-    },
-    {
-      "name": "Animated Scene",
-      "url": "https://docs.google.com/document/d/1a2qv6xH8ewMu9SrKaFt3hbPM6JGSJ0kqjyc-UzQ_3xE/view",
-      "key": "animated_scene_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "animated_scene_1"
-      }
-    },
-    {
-      "name": "Animated Scene Planning",
-      "url": "https://docs.google.com/document/d/1YrtHnzB6kLGtFt05gQEHjfbX5aWWYlv3YRdTsR5VR3M/view",
-      "key": "animated_scene_planning",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "animated_scene_planning"
-      }
-    },
-    {
-      "name": "Animation Tab",
-      "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
-      "key": "animation_tab",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "animation_tab"
-      }
-    },
-    {
-      "name": "Animation and Game Design for Users",
-      "url": "https://docs.google.com/document/d/1T1rHB9UzmWg26DW1QLzJWGE6_ONfBCIi5F6pdX4rGmU/edit?usp=sharing",
-      "key": "app_design_for_users",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "app_design_for_users"
-      }
-    },
-    {
-      "name": "Boolean Expressions",
-      "url": "https://youtu.be/_j9nvYKaOVE",
-      "key": "boolean_expressions",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/csd_booleans_sm-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "boolean_expressions"
-      }
-    },
-    {
-      "name": "Booleans and Comparison Operators",
-      "url": "https://drive.google.com/file/d/1gGmtvyZpXVcH6Vrju9FX73X7qlZLIBvt/view?usp=sharing",
-      "key": "booleans_and_comparison_operators",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "booleans_and_comparison_operators"
-      }
-    },
-    {
-      "name": "Captioned Scenes",
-      "url": "https://docs.google.com/document/d/1sry7ZwDwOM_lsIJ0kKkEYyqvhif8JQocYX7y3Gx4JKk/view",
-      "key": "captioned_scenes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "captioned_scenes"
-      }
-    },
-    {
-      "name": "Collision Detection",
-      "url": "https://docs.google.com/document/d/1pSfutXv_HqPGrU-dWIDbwFgo0RiG0_8x58c3c5heGfY/view",
-      "key": "collision_detection",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "collision_detection"
-      }
-    },
-    {
-      "name": "Collision Detection",
-      "url": "https://drive.google.com/file/d/1xPa35tY4P8GUXKSMp0F6OUTQjcDpMa6M/view?usp=sharing",
-      "key": "collision_detection_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "collision_detection_1"
-      }
-    },
-    {
-      "name": "Collision Detection",
-      "url": "https://docs.google.com/presentation/d/1r4I_2bAd7GCqWPlIaQ_JaXr1UaIISo5TXCLvsXIiQiY/template/preview",
-      "key": "collision_detection_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "collision_detection_2"
-      }
-    },
-    {
-      "name": "Collision Detection (Version A)",
-      "url": "https://docs.google.com/document/d/1YThab-y4Vg-ltanqwNykC4nOaT0gKdKFHtS1INoHWHM/view",
-      "key": "collision_detection_version_a_",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "collision_detection_version_a_"
-      }
-    },
-    {
-      "name": "Collision Detection (Version B)",
-      "url": "https://docs.google.com/document/d/1U3t6FGGvvqAVdz-rudQIJsDW4ubfEaSelaVqENp_kVw/view",
-      "key": "collision_detection_version_b_",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "collision_detection_version_b_"
-      }
-    },
-    {
-      "name": "Collisions",
-      "url": "https://docs.google.com/presentation/d/18nEJsDVITNK8jHkhfBSdtvwoHBB12DVnKtjm-MhYoxI/template/preview",
-      "key": "collisions",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "collisions"
-      }
-    },
-    {
-      "name": "Complex Sprite Movement",
-      "url": "https://docs.google.com/presentation/d/1r3fGTf_J1buSAn10_qBNJI4h8mHEGWOFatytHyQOVYQ/template/preview",
-      "key": "complex_sprite_movement",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "complex_sprite_movement"
-      }
-    },
-    {
-      "name": "Computer Science Practices",
-      "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
-      "key": "computer_science_practices",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Reflection"
-      },
-      "seeding_key": {
-        "resource.key": "computer_science_practices"
-      }
-    },
-    {
-      "name": "Conditional Statements",
-      "url": "https://youtu.be/TuLIK7DcPWs",
-      "key": "conditional_statements",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/csd_conditionals_sm-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "conditional_statements"
-      }
-    },
-    {
-      "name": "Conditionals",
-      "url": "https://docs.google.com/presentation/d/1Pa444DLx4TBgZ1vaBgJMgHmaLSryolD7phxmdK7YQ2w/template/preview",
-      "key": "conditionals",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "conditionals"
-      }
-    },
-    {
-      "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
-      "key": "csd_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide"
-      }
-    },
-    {
-      "name": "CSD Guide to Debugging",
-      "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
-      "key": "csd_guide_to_debugging",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_debugging"
-      }
-    },
-    {
-      "name": "CSD Guide to Differentiation",
-      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
-      "key": "csd_guide_to_differentiation",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_differentiation"
-      }
-    },
-    {
-      "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
-      "key": "csd_implementation_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_implementation_guide"
-      }
-    },
-    {
-      "name": "CSD Learning Frameworks",
-      "url": "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view",
-      "key": "csd_learning_frameworks",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_learning_frameworks"
-      }
-    },
-    {
-      "name": "CSD Programming Levels Guide",
-      "url": "https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view",
-      "key": "csd_programming_levels_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_programming_levels_guide"
-      }
-    },
-    {
-      "name": "Defender Game",
-      "url": "https://docs.google.com/document/d/1ScMzt0GzhV_f-hMtrWCRCI0pha4mtmlGrrtrp76KIqg/view",
-      "key": "defender_game",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "defender_game"
-      }
-    },
-    {
-      "name": "Drawing in Game Lab",
-      "url": "https://docs.google.com/presentation/d/1kVwsZPhVrafAXXkK5qhWdfZeYKSEjK-eD6txmmWmPSA/template/preview",
-      "key": "drawing_in_game_lab",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "drawing_in_game_lab"
-      }
-    },
-    {
-      "name": "Drawing in Game Lab - Part 1",
-      "url": "https://youtu.be/PXn9gKiKKFo",
-      "key": "drawing_in_game_lab_-_part_1",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_introtodrawing-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "drawing_in_game_lab_-_part_1"
-      }
-    },
-    {
-      "name": "Drawing in Game Lab - Part 2",
-      "url": "https://youtu.be/QLabeWhw_O0",
-      "key": "drawing_in_game_lab_-_part_2",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_addingcolors-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "drawing_in_game_lab_-_part_2"
-      }
-    },
-    {
-      "name": "Drawing Shapes",
-      "url": "https://docs.google.com/document/d/1B1fjF39Xr1KKDILVzcXqvEpi1ri3MiDkkVLIMZquh_8/view",
-      "key": "drawing_shapes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "drawing_shapes"
-      }
-    },
-    {
-      "name": "Drawing Shapes",
-      "url": "https://drive.google.com/file/d/1zlXf6POVzO078N25Xos87oTrMaJ_p3Iq/view?usp=sharing",
-      "key": "drawing_shapes_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "drawing_shapes_1"
-      }
-    },
-    {
-      "name": "Drawing Shapes (Version A)",
-      "url": "https://docs.google.com/document/d/1ht990ZS0tJFc8dg-B6nmOi6nzayWq3ODiNNL4EBORlM/",
-      "key": "drawing_shapes_version_a_",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "drawing_shapes_version_a_"
-      }
-    },
-    {
-      "name": "Drawing Shapes (Version B)",
-      "url": "https://docs.google.com/document/d/1OCYkSeNuuEggdlmhNOG-LOfl51ctcyzyFmsPdQAtq84/",
-      "key": "drawing_shapes_version_b_",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "drawing_shapes_version_b_"
-      }
-    },
-    {
-      "name": "Exemplar - Animation and Game Design Activity Guide",
-      "url": "https://docs.google.com/document/d/1MgNcavou62Y4BykohkGT_MR8Rj1nKIeInEUVU2qaxq0/edit?usp=sharing",
-      "key": "exemplar_-_animation_and_game_design_activity_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "exemplar_-_animation_and_game_design_activity_guide"
-      }
-    },
-    {
-      "name": "Extra Code in Challenge Levels",
-      "url": "https://docs.google.com/document/d/1Zx8e-b_GJFNxsuXx10tIdh3EPSGoqPwpxGh2Hz70B2w/view",
-      "key": "extra_code_in_challenge_levels",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "extra_code_in_challenge_levels"
-      }
-    },
-    {
-      "name": "Flipbook Example - by Marnic Bos",
-      "url": "https://youtu.be/hol0p29cd8o",
-      "key": "flipbook_example_-_by_marnic_bos",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "flipbook_example_-_by_marnic_bos"
-      }
-    },
-    {
-      "name": "Flyer Game",
-      "url": "https://docs.google.com/document/d/1dTUv-Qj1Kg_9oEYfAR70iL2ud6y8XFectzYKCi4MLyE/view",
-      "key": "flyer_game",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "flyer_game"
-      }
-    },
-    {
-      "name": "Flyer Game - Project Guide",
-      "url": "https://docs.google.com/document/d/14by40I7v6BwWh7venZO83xk1qgeHE4hmNjdfQo1BsbQ/view",
-      "key": "flyer_game_-_project_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "flyer_game_-_project_guide"
-      }
-    },
-    {
-      "name": "Flyer Game",
-      "url": "https://docs.google.com/document/d/1_n916C-OpKAquctNSkD5SdsWqC1RI9WQQzQ0EcZV_48/view",
-      "key": "flyer_game_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "flyer_game_1"
-      }
-    },
-    {
-      "name": "Functions",
-      "url": "https://youtu.be/3ZfqwCuDZaQ",
-      "key": "functions",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/callingfunctions-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "functions"
-      }
-    },
-    {
-      "name": "Functions",
-      "url": "https://drive.google.com/file/d/1m4GATuAOfc3cL-kgb5Bmc4yciCNyxgVH/view?usp=sharing",
-      "key": "functions_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "functions_1"
-      }
-    },
-    {
-      "name": "Functions",
-      "url": "https://docs.google.com/presentation/d/1HX7a6aQXxnjvS99K0FDO0W7Kp23fnMNSHiHCYtcuD-s/template/preview",
-      "key": "functions_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "functions_2"
-      }
-    },
-    {
-      "name": "If-Else Statements",
-      "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
-      "key": "if-else_statements",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "if-else_statements"
-      }
-    },
-    {
-      "name": "If/Else Statements",
-      "url": "https://youtu.be/6m6FFUJsOzo",
-      "key": "if_else_statements",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/csd_ifelse_sm-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "if_else_statements"
-      }
-    },
-    {
-      "name": "If Statements",
-      "url": "https://drive.google.com/file/d/1EmNUdnXpCIyJdd4p8k2q9OEK-4KNI7PO/view?usp=sharing",
-      "key": "if_statements",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "if_statements"
-      }
-    },
-    {
-      "name": "Exemplar - Interactive Card",
-      "url": "https://docs.google.com/document/d/1Z13UA6i0PTT83UVdtEjSsZqxyGinVYoz3SFIUAnkwVY/view",
-      "key": "interactive_card",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "interactive_card"
-      }
-    },
-    {
-      "name": "Interactive Card - Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1HwcWQLHiuPEOlPaM6axOFGgu7peYsrCZnT7Juea-rfA/view",
-      "key": "interactive_card_-_marked_rubrics",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "interactive_card_-_marked_rubrics"
-      }
-    },
-    {
-      "name": "Interactive Card - Student Checklist",
-      "url": "https://docs.google.com/document/d/1N1iuDi-25VhSto-9zk9_0dc8H4t1nsS22u91I7Uucfw/view",
-      "key": "interactive_card_-_student_checklist",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "interactive_card_-_student_checklist"
-      }
-    },
-    {
-      "name": "Interactive Card - Activity Guide",
-      "url": "https://docs.google.com/document/d/1iJjh3OSHyZdk1TCBaq5JtfP3v9fXxbp9utiJzIU5bdQ/view",
-      "key": "interactive_card_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "interactive_card_1"
-      }
-    },
-    {
-      "name": "Interactive Card - Peer Review",
-      "url": "https://docs.google.com/document/d/1e9HdHppRFxkszxCF2m9YWr-jt1EK8DupSrsP6q2_060/view",
-      "key": "interactive_card_2",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "interactive_card_2"
-      }
-    },
-    {
-      "name": "Interactive Card",
-      "url": "https://docs.google.com/document/d/1sAILZnk26g21FluRhU0pWqVDOMBZVrNAko1mSVeuKHM/view",
-      "key": "interactive_card_3",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "interactive_card_3"
-      }
-    },
-    {
-      "name": "Introduction to Sprites [Needs Updating]",
-      "url": "https://youtu.be/aUHzpGt9nso",
-      "key": "introduction_to_sprites",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_sprites-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_sprites"
-      }
-    },
-    {
-      "name": "Introduction to the Draw Loop",
-      "url": "https://youtu.be/G6QJeuHhqCM",
-      "key": "introduction_to_the_draw_loop",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_draw-loop-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_the_draw_loop"
-      }
-    },
-    {
-      "name": "Introduction to Variables",
-      "url": "https://youtu.be/UG7Q1Sr0_F0",
-      "key": "introduction_to_variables",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/applab/variables_1.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_variables"
-      }
-    },
-    {
-      "name": "Keyboard Input",
-      "url": "https://docs.google.com/presentation/d/1dxsWmBnyhc0pzGs5KjupRRNaYkXX8Ehdiebja2N0Yss/template/preview",
-      "key": "keyboard_input",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "keyboard_input"
-      }
-    },
-    {
-      "name": "Make Your Own Game ",
-      "url": "https://docs.google.com/document/d/1m0szgz6YtE4RucBUFWpocRxu3r0hKpn3JDgPoK7nwOQ/view",
-      "key": "make_your_own_game",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "make_your_own_game"
-      }
-    },
-    {
-      "name": "Make Your Own Game - Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1VHUhfblKwRZieZXM8YYHr3mkilbjEQhcQmcmwNaUUHc/view",
-      "key": "make_your_own_game_-_sample_marked_rubrics",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "make_your_own_game_-_sample_marked_rubrics"
-      }
-    },
-    {
-      "name": "Make Your Own Game - Student Checklist",
-      "url": "https://docs.google.com/document/d/1YDsOmgD3NvRjIQwGpZsH_17TIXpQaVUhtjFpyh4-qGw/view",
-      "key": "make_your_own_game_-_student_checklist",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "make_your_own_game_-_student_checklist"
-      }
-    },
-    {
-      "name": "Make Your Own Game",
-      "url": "https://docs.google.com/document/d/14oPvmdvm_BfOn5KBSov6jyhoEMRHygdNNIXl-fe4g-Q/view",
-      "key": "make_your_own_game_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "make_your_own_game_1"
-      }
-    },
-    {
-      "name": "Make Your Own Game - Peer Review",
-      "url": "https://docs.google.com/document/d/1VOlmo7osjS7We0ebREm3M54Gwr4o13p7irHfIASDvFE/view",
-      "key": "make_your_own_game_2",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "make_your_own_game_2"
-      }
-    },
-    {
-      "name": "Make Your Own Game",
-      "url": "https://docs.google.com/document/d/1BHsR1x8scsPsfaQoNEIgkz1rSLwG2hnKkjmVrPX55lw/view",
-      "key": "make_your_own_game_3",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "make_your_own_game_3"
-      }
-    },
-    {
-      "name": "Mini-Project - Animation",
-      "url": "https://docs.google.com/presentation/d/1us7auvKet5Mdtd21WNeVH0p7CO8ZOiqHjVK6_SXGn0Y/template/preview",
-      "key": "mini-project_-_animation",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project_-_animation"
-      }
-    },
-    {
-      "name": "Mini-Project - Captioned Scenes",
-      "url": "https://docs.google.com/presentation/d/1S843wg4O8Cxz12NagDW2nu8B0Taj1_pSvyvj4o85asc/template/preview",
-      "key": "mini-project_-_captioned_scenes",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project_-_captioned_scenes"
-      }
-    },
-    {
-      "name": "Mini-Project - Flyer Game",
-      "url": "https://docs.google.com/presentation/d/1qbOF9IpC97i4GDN1c1KieAb6XtVb6Lh7mon9WcdUM9Q/template/preview",
-      "key": "mini-project_-_flyer_game",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project_-_flyer_game"
-      }
-    },
-    {
-      "name": "Mini-Project - Robot Faces",
-      "url": "https://docs.google.com/presentation/d/1161OfiePgWMjWrrBoN4dHU2Srxna4tE8gVhj9OYTHgg/template/preview",
-      "key": "mini-project_-_robot_faces",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project_-_robot_faces"
-      }
-    },
-    {
-      "name": "Mini-Project - Robot Faces",
-      "url": "https://docs.google.com/document/d/1jereSAhnM_DHRHJ7xmnhJl1cp9U6QiuNDbHnVaJHJA8/edit?usp=sharing",
-      "key": "mini-project_-_robot_faces_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project_-_robot_faces_1"
-      }
-    },
-    {
-      "name": "Mini-Project - Side Scroller",
-      "url": "https://docs.google.com/presentation/d/1-Zd08aeFU9Po2Qa7EHi9pf870CUilb2pdHtR44s_h_U/template/preview",
-      "key": "mini-project_-_side_scroller",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project_-_side_scroller"
-      }
-    },
-    {
-      "name": "Mini-Project Guide - Side Scroller",
-      "url": "https://docs.google.com/document/d/1zxFNweZNdkXc1YsVROgDQ2fmrxbbgCgZQtMPS-POmg4/view",
-      "key": "mini-project_guide_-_side_scroller",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project_guide_-_side_scroller"
-      }
-    },
-    {
-      "name": "Mini Project - Captioned Scenes",
-      "url": "https://docs.google.com/document/d/1xzA9xataf6TwgdLM--JumBAhAXLjcYyZOiuaShcuOjE/view",
-      "key": "mini_project_-_captioned_scenes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "mini_project_-_captioned_scenes"
-      }
-    },
-    {
-      "name": "Mouse Input",
-      "url": "https://docs.google.com/presentation/d/1V_I3P7hFqxijePGNKF5V0RynQqv1_zYLJaBrQyhwpns/template/preview",
-      "key": "mouse_input",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "mouse_input"
-      }
-    },
-    {
-      "name": "Naming Variables",
-      "url": "https://drive.google.com/file/d/1GGtHE-IK3S9rN6KoaE9jhdzTK8emO_Kw/view",
-      "key": "naming_variables",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "naming_variables"
-      }
-    },
-    {
-      "name": "Planning Your Platform Game",
-      "url": "https://docs.google.com/document/d/1F9RH16-Yph9gapZyBKbnnh-LEJUwN20Ipa5D4rIMz1g/view",
-      "key": "planning_your_platform_game",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "planning_your_platform_game"
-      }
-    },
-    {
-      "name": "Planning Your Platform Game",
-      "url": "https://docs.google.com/document/d/1FqTjwpAuFrVidZ_j6aGw895FivFCRO2CZSvhHqWuEik/view",
-      "key": "planning_your_platform_game_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "planning_your_platform_game_1"
-      }
-    },
-    {
-      "name": "Plotting Shapes",
-      "url": "https://docs.google.com/presentation/d/1kAI6VK8GU8k-ounpUizwzLRdhjMfwF4M0yumF8-O9qc/template/preview",
-      "key": "plotting_shapes",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "plotting_shapes"
-      }
-    },
-    {
-      "name": "Problem Solving and Design",
-      "url": "https://docs.google.com/document/d/1qgiwCyO7948qPSWbTvYmR7DjH0nkh8HpfxP1HxubDis/edit?usp=sharing",
-      "key": "problem_solving_and_design",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "problem_solving_and_design"
-      }
-    },
-    {
-      "name": "Problem Solving with Programming",
-      "url": "https://docs.google.com/document/d/1q10YfeMqY95SAq0VAB3wnLPK2aDuJEoD2j82n-i183Y/edit?usp=share_link",
-      "key": "problem_solving_with_programming",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "problem_solving_with_programming"
-      }
-    },
-    {
-      "name": "Programming for a Purpose",
-      "url": "https://docs.google.com/presentation/d/1lR2Il6bOm-OHQltTtHO5XJ_p0q2J-3dye_RiCZW-sGY/template/preview",
-      "key": "programming_for_a_purpose",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "programming_for_a_purpose"
-      }
-    },
-    {
-      "name": "Project - Design a Game",
-      "url": "https://docs.google.com/presentation/d/14RyASPSwS_vT1jf_OWromepRlsN8LQtQiAnLj2qzXVQ/template/preview",
-      "key": "project_-_design_a_game",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "project_-_design_a_game"
-      }
-    },
-    {
-      "name": "Project - Interactive Card",
-      "url": "https://docs.google.com/presentation/d/1VymZrgMdUtcehg9rA2u-IGevR5rptmlNRkeuHRmwisw/template/preview",
-      "key": "project_-_interactive_card",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "project_-_interactive_card"
-      }
-    },
-    {
-      "name": "Random Dot Flipbook",
-      "url": "https://docs.google.com/drawings/d/1N1m8la6XsQrn1X2Yq97gRfg4HRh1glk-gTHBK0fUDZA/view",
-      "key": "random_dot_flipbook",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "random_dot_flipbook"
-      }
-    },
-    {
-      "name": "Random Numbers",
-      "url": "https://drive.google.com/file/d/1BZwjs4cvsGdhtNhY8qjUXWkCgblmZUcD/view",
-      "key": "random_numbers",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "random_numbers"
-      }
-    },
-    {
-      "name": "Random Numbers",
-      "url": "https://docs.google.com/presentation/d/1gYcOnHhQRTTNDFj1s1Anfu5XkrkeCPk_9N7GmLCLzFo/template/preview",
-      "key": "random_numbers_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "random_numbers_1"
-      }
-    },
-    {
-      "name": "Random Sprite Flipbook",
-      "url": "https://docs.google.com/drawings/d/1VEgpZKDn4kvZvRSafrDSqB3so1HzKeeA8WAWLQZsoL0/view",
-      "key": "random_sprite_flipbook",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "random_sprite_flipbook"
-      }
-    },
-    {
-      "name": "Robot Faces",
-      "url": "https://docs.google.com/document/d/1MQBo1-nmTLCjrUihCOBSU9X__V7LgS4H0Clc2obp_Ek/edit?usp=sharing",
-      "key": "robot_faces",
-      "properties": {
-        "audience": "Student",
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "robot_faces"
-      }
-    },
-    {
-      "name": "Sample Shape Drawing",
-      "url": "https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-05-24-at-1.13.21-PM.png",
-      "key": "sample_shape_drawing",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "sample_shape_drawing"
-      }
-    },
-    {
-      "name": "Shapes and Parameters",
-      "url": "https://drive.google.com/file/d/1uEZ_gMcXJOCd41k6uTKlxsVVWEVrFikj/view?usp=sharing",
-      "key": "shapes_and_parameters",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "shapes_and_parameters"
-      }
-    },
-    {
-      "name": "Shapes and Parameters",
-      "url": "https://docs.google.com/presentation/d/1apejlCGeW2ptqIoFWTcy-WqthPGMsItKNbEUOWGosEk/template/preview",
-      "key": "shapes_and_parameters_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "shapes_and_parameters_1"
-      }
-    },
-    {
-      "name": "Side Scroller",
-      "url": "https://docs.google.com/document/d/1iSosF7vOAc5_iqr9cBYfgDjbiVERhkbKNMa1RJK_mv8/view",
-      "key": "side_scroller",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "side_scroller"
-      }
-    },
-    {
-      "name": "Side Scroller",
-      "url": "https://docs.google.com/document/d/1WW92Ti8Xg1Evn8rQtRZq8Xltf5NP8cP_ZVrWHuiQPFk/view",
-      "key": "side_scroller_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "side_scroller_1"
-      }
-    },
-    {
-      "name": "Sprite Movement",
-      "url": "https://youtu.be/G666sFzAg5g",
-      "key": "sprite_movement",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_animatingwithsprites-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "sprite_movement"
-      }
-    },
-    {
-      "name": "Sprite Movement",
-      "url": "https://docs.google.com/presentation/d/1qcdkzXVAkXUd9c3JIRba4ik35i02bk_-xRMfwrQVz8I/template/preview",
-      "key": "sprite_movement_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "sprite_movement_1"
-      }
-    },
-    {
-      "name": "Sprite Properties",
-      "url": "https://drive.google.com/file/d/1E4UZKHRQM0erDbb-rPTRbRVpj7IquA3p/view?usp=sharing",
-      "key": "sprite_properties",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "sprite_properties"
-      }
-    },
-    {
-      "name": "Sprite Properties",
-      "url": "https://docs.google.com/presentation/d/1T7SX_rhCuVe6DkmQFMWz2QIgQMBD0G4RXwY-lCA72ug/template/preview",
-      "key": "sprite_properties_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "sprite_properties_1"
-      }
-    },
-    {
-      "name": "Sprite Properties [Needs Updating]",
-      "url": "https://www.code.org",
-      "key": "sprite_properties_needs_updating_",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "sprite_properties_needs_updating_"
-      }
-    },
-    {
-      "name": "Sprite Scene Planning",
-      "url": "https://docs.google.com/document/d/1Rukfe006wz8yYJPnKj5sKn7SK6KbL1X6Pd-c2BNy95E/view",
-      "key": "sprite_scene_planning",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "sprite_scene_planning"
-      }
-    },
-    {
-      "name": "Sprites",
-      "url": "https://drive.google.com/file/d/1WS_5m8Ffy0u4OKILPEVSjs2KamZr2a41/view",
-      "key": "sprites",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "sprites"
-      }
-    },
-    {
-      "name": "Sprites",
-      "url": "https://docs.google.com/presentation/d/1XcR7-9AOjlV-ksjFts4MturQ7qISXUFMXWSWwrecjvU/template/preview",
-      "key": "sprites_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "sprites_1"
-      }
-    },
-    {
-      "name": "Teacher Forum",
-      "url": "https://forum.code.org/c/csd",
-      "key": "teacher_forum",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "teacher_forum"
-      }
-    },
-    {
-      "name": "Text",
-      "url": "https://docs.google.com/presentation/d/1ovtVNX4feLKwx1ETO18kkTmRQRa7_SLjqdLUrzuEi5I/template/preview",
-      "key": "text",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "text"
-      }
-    },
-    {
-      "name": "The Animation Tab [Needs Updating]",
-      "url": "https://youtu.be/DQPruYTJ0Fk",
-      "key": "the_animation_tab",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_theanimationtab-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "the_animation_tab"
-      }
-    },
-    {
-      "name": "The Counter Pattern",
-      "url": "https://drive.google.com/file/d/1Cuie3SFpeDBzXdSzEtZnGdL7H-NpG5dg/view?usp=sharing",
-      "key": "the_counter_pattern",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "the_counter_pattern"
-      }
-    },
-    {
-      "name": "The Draw Loop",
-      "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing",
-      "key": "the_draw_loop",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "the_draw_loop"
-      }
-    },
-    {
-      "name": "The Draw Loop",
-      "url": "https://docs.google.com/presentation/d/1WiAmb354NypVe1SsF3AUZ0O2b-aXgvnhRgkETaO3sZQ/template/preview",
-      "key": "the_draw_loop_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "the_draw_loop_1"
-      }
-    },
-    {
-      "name": "The Game Design Process",
-      "url": "https://docs.google.com/presentation/d/1R52jE2nA2mmd8dex6wfWKrAU63m64spVHgotpqid86w/template/preview",
-      "key": "the_game_design_process",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "the_game_design_process"
-      }
-    },
-    {
-      "name": "The Problem Solving Process ",
-      "url": "https://www.youtube.com/watch?v=z7RaFPT3DTE",
-      "key": "the_problem_solving_process",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/problemsolvingprocess-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "the_problem_solving_process"
-      }
-    },
-    {
-      "name": "Using the Game Design Process",
-      "url": "https://docs.google.com/presentation/d/14SNOuHJQ_rkJGymgcAA1DT7Nshhk1wROENBo-W6kY7g/template/preview",
-      "key": "using_the_game_design_process",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "using_the_game_design_process"
-      }
-    },
-    {
-      "name": "Variables",
-      "url": "https://drive.google.com/file/d/1SRUFCpI8bvsX4pRECNUl0R2ZBrA0TocN/view",
-      "key": "variables",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "variables"
-      }
-    },
-    {
-      "name": "Variables",
-      "url": "https://docs.google.com/presentation/d/1HtBUmXrH6cqE2SPhCtaxnouYF_xaitoWrvBgZDFOnpk/template/preview",
-      "key": "variables_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "variables_1"
-      }
-    },
-    {
-      "name": "Velocity",
-      "url": "https://youtu.be/zcP94yMYqrI",
-      "key": "velocity",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_velocity-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "velocity"
-      }
-    },
-    {
-      "name": "Velocity",
-      "url": "https://drive.google.com/file/d/10n2QcpY__sDlycr09Xar6o-2iDAb0P49/view?usp=sharing",
-      "key": "velocity_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "velocity_1"
-      }
-    },
-    {
-      "name": "Velocity",
-      "url": "https://docs.google.com/presentation/d/112H3VkJf1Dq8MQNQqDsFg5a6y62_kjSwUhafQD9xxoo/template/preview",
-      "key": "velocity_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "velocity_2"
-      }
-    },
-    {
-      "name": "Velocity and the Counter Pattern",
-      "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view?usp=sharing",
-      "key": "velocity_and_the_counter_pattern",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "velocity_and_the_counter_pattern"
-      }
-    },
-    {
-      "name": "Animation and Game Design Template ",
-      "url": "https://docs.google.com/presentation/d/1O1oWeMbIOetBbgmuwyXlUDmlr6L9ygQi0wLG89w_uq0/edit?usp=share_link",
-      "key": "web_design_template",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "web_design_template"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision_detection"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision_detection_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision_detection_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision_detection_version_a_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision_detection_version_b_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "resource.key": "collisions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Complex Sprite Movement",
-        "resource.key": "complex_sprite_movement"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Complex Sprite Movement",
-        "resource.key": "velocity_and_the_counter_pattern"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "boolean_expressions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "booleans_and_comparison_operators"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "conditional_statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "conditionals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "if_statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "resource.key": "drawing_in_game_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "resource.key": "drawing_in_game_lab_-_part_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "resource.key": "drawing_in_game_lab_-_part_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "resource.key": "drawing_shapes_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "resource.key": "functions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "resource.key": "functions_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "resource.key": "functions_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Keyboard Input",
-        "resource.key": "keyboard_input"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Animation",
-        "resource.key": "animated_scene"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Animation",
-        "resource.key": "animated_scene_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Animation",
-        "resource.key": "animated_scene_planning"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Animation",
-        "resource.key": "mini-project_-_animation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Animation",
-        "resource.key": "problem_solving_with_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Captioned Scenes",
-        "resource.key": "captioned_scenes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Captioned Scenes",
-        "resource.key": "mini-project_-_captioned_scenes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Captioned Scenes",
-        "resource.key": "mini_project_-_captioned_scenes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Captioned Scenes",
-        "resource.key": "problem_solving_with_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Captioned Scenes",
-        "resource.key": "sprite_scene_planning"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Flyer Game",
-        "resource.key": "flyer_game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Flyer Game",
-        "resource.key": "flyer_game_-_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Flyer Game",
-        "resource.key": "flyer_game_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Flyer Game",
-        "resource.key": "mini-project_-_flyer_game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Flyer Game",
-        "resource.key": "problem_solving_with_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Side Scroller",
-        "resource.key": "mini-project_-_side_scroller"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Side Scroller",
-        "resource.key": "mini-project_guide_-_side_scroller"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Side Scroller",
-        "resource.key": "problem_solving_with_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Side Scroller",
-        "resource.key": "side_scroller"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Side Scroller",
-        "resource.key": "side_scroller_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "resource.key": "if-else_statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "resource.key": "if_else_statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "resource.key": "mouse_input"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "drawing_shapes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "drawing_shapes_version_a_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "drawing_shapes_version_b_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "plotting_shapes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "sample_shape_drawing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
-        "resource.key": "_warm_up_word_search"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
-        "resource.key": "_warm_up_word_search_key_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
-        "resource.key": "app_design_for_users"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
-        "resource.key": "exemplar_-_animation_and_game_design_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
-        "resource.key": "problem_solving_and_design"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
-        "resource.key": "programming_for_a_purpose"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
-        "resource.key": "the_problem_solving_process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
-        "resource.key": "web_design_template"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "computer_science_practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "extra_code_in_challenge_levels"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make_your_own_game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make_your_own_game_-_sample_marked_rubrics"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make_your_own_game_-_student_checklist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make_your_own_game_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make_your_own_game_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make_your_own_game_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "problem_solving_with_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "project_-_design_a_game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "computer_science_practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "extra_code_in_challenge_levels"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive_card"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive_card_-_marked_rubrics"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive_card_-_student_checklist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive_card_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive_card_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive_card_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "problem_solving_with_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "project_-_interactive_card"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random Numbers",
-        "resource.key": "random_numbers"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random Numbers",
-        "resource.key": "random_numbers_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "resource.key": "shapes_and_parameters"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "resource.key": "shapes_and_parameters_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "resource.key": "sprite_movement"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "resource.key": "sprite_movement_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "resource.key": "the_counter_pattern"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "resource.key": "sprite_properties"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "resource.key": "sprite_properties_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "resource.key": "sprite_properties_needs_updating_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "animation_tab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "introduction_to_sprites"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "sprites"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "sprites_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "the_animation_tab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Text",
-        "resource.key": "text"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "flipbook_example_-_by_marnic_bos"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "introduction_to_the_draw_loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "random_dot_flipbook"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "random_sprite_flipbook"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "the_draw_loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "the_draw_loop_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Game Design Process",
-        "resource.key": "defender_game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Game Design Process",
-        "resource.key": "the_game_design_process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
-        "resource.key": "planning_your_platform_game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
-        "resource.key": "planning_your_platform_game_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
-        "resource.key": "using_the_game_design_process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "introduction_to_variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "naming_variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "variables_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "resource.key": "velocity"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "resource.key": "velocity_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "resource.key": "velocity_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-18",
-        "resource.key": "activity_guide_-_robot_face_planning"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-18",
-        "resource.key": "mini-project_-_robot_faces"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-18",
-        "resource.key": "mini-project_-_robot_faces_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-18",
-        "resource.key": "problem_solving_with_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-18",
-        "resource.key": "robot_faces"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "all_code",
-        "script.name": "csd3-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_resources",
-        "script.name": "csd3-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards",
-        "script.name": "csd3-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_vocabulary",
-        "script.name": "csd3-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
-        "script.name": "csd3-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_debugging",
-        "script.name": "csd3-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_differentiation",
-        "script.name": "csd3-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_implementation_guide",
-        "script.name": "csd3-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_learning_frameworks",
-        "script.name": "csd3-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_programming_levels_guide",
-        "script.name": "csd3-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "teacher_forum",
-        "script.name": "csd3-2023"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "abstraction",
-      "word": "Abstraction",
-      "definition": "a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "abstraction"
-      }
-    },
-    {
-      "key": "boolean_expression",
-      "word": "Boolean Expression",
-      "definition": "in programming, an expression that evaluates to True or False. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "boolean_expression"
-      }
-    },
-    {
-      "key": "bug",
-      "word": "Bug",
-      "definition": "Part of a program that does not work correctly.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "key": "condition",
-      "word": "Condition",
-      "definition": "Something a program checks to see whether it is true before deciding to take an action.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "key": "conditionals",
-      "word": "Conditionals",
-      "definition": "Statements that only run when certain conditions are true.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "dot_notation",
-      "word": "Dot notation",
-      "definition": "the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "dot_notation"
-      }
-    },
-    {
-      "key": "function",
-      "word": "Function",
-      "definition": "A named bit of programming instructions.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "function"
-      }
-    },
-    {
-      "key": "parameter",
-      "word": "Parameter",
-      "definition": "Additional information provided as input to a block to customize its functionality",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "parameter"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "property",
-      "word": "Property",
-      "definition": "A label for a characteristic of a sprite, such as its location and appearance",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "property"
-      }
-    },
-    {
-      "key": "sprite",
-      "word": "Sprite",
-      "definition": "A character on the screen with properties that describe its location, movement, and look.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sprite"
-      }
-    },
-    {
-      "key": "variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "variable"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "vocabulary.key": "abstraction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "vocabulary.key": "abstraction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "vocabulary.key": "boolean_expression"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "vocabulary.key": "function"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "vocabulary.key": "parameter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "vocabulary.key": "dot_notation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "vocabulary.key": "property"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "vocabulary.key": "sprite"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "vocabulary.key": "variable"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
     {
@@ -18736,7 +16449,7 @@
     {
       "key": "0a840172-61ef-4be8-abc1-1f1213fe47f3",
       "properties": {
-        "description": "Create a prototype of an animation or game design to meet the needs of a user using the problem-solving process"
+        "description": "Understand the steps of the problem-solving process "
       },
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
@@ -19086,7 +16799,7 @@
     {
       "key": "bfe358fc-38a1-4001-b4d1-5c61972d301b",
       "properties": {
-        "description": "Understand the steps of the problem-solving process "
+        "description": "Create a prototype of an animation or game design to meet the needs of a user using the problem-solving process"
       },
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",

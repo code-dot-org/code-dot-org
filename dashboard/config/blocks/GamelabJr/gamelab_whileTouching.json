@@ -6,6 +6,7 @@
       1,
       0.74
     ],
+    "style": "event_blocks",
     "func": "whileTouching",
     "docFunc": "gamelab_whileTouching",
     "blockText": "while {SPRITE1} is touching {SPRITE2}",

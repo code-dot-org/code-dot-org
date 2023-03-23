@@ -114,7 +114,7 @@ Està bé si vosaltres i els vostres alumnes us estreneu en les ciències inform
 
 Dirigiu els estudiants cap a l'activitat
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Escriviu l'enllaç del tutorial a la pissarra. Trobareu l'enllaç a [la informació sobre el tutorial seleccionat]({{ urls/learn }}). 
 
 Quan els vostres alumnes trobin dificultats, podeu respondre:
 
@@ -155,6 +155,6 @@ Què passa si un alumne acaba aviat?
 
 ### Què ve després de l'Hora del Codi?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Que s'hagi acabat l'Hora del Codi no significa que també s'acabi l'oportunitat de fer informàtica! [Descobriu com](/beyond) portar la informàtica a la vostra escola.
 
 {{ signup_button }}

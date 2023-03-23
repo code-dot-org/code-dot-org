@@ -98,6 +98,12 @@
         "csd-2022/patterns-overview": {
           "display_name": "Огляд"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Процес вирішення проблем"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Процес вирішення проблем"
+        },
         "csd-2022/sprites": {
           "display_name": "Спрайти"
         },

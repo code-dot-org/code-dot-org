@@ -6,10 +6,10 @@
   "assignable": true,
   "curriculum_type": null,
   "marketing_initiative": "HOC",
-  "grade_levels": null,
+  "grade_levels": "3,4,5,6,7,8,9,10,11,12",
   "header": "Favorites",
-  "image": null,
-  "cs_topic": null,
+  "image": "https://images.code.org/58cc5271d85e017cf5030ea510ae2715-AI for Oceans.png",
+  "cs_topic": "artificial_intelligence,data",
   "school_subject": null,
-  "device_compatibility": null
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
 }

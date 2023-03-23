@@ -322,7 +322,7 @@ zh-CN:
         personal_login_created_username: 您已成功创建了个人账号。您现在可以使用用户名(%{username}) 和密码登录。
   nav:
     header:
-      finished_hoc: 完成了！
+      finished_hoc: 我已经完成了我的Hour of Code项目。
       sign_in_to_save: 登录以保存进度
       my_dashboard: 我的控制面板
       course_catalog: 课程分类
@@ -368,6 +368,7 @@ zh-CN:
       help_us: 帮助我们
       teach: 教学
       about: 关于
+      incubator: 孵化器
       legal: 隐私与法律
       legal_privacy: 隐私政策
       legal_cookie_notice: Cookie通知
@@ -618,6 +619,7 @@ zh-CN:
     store: 商店
     cookie_notice: Cookie通知
     view_code: 查看代码
+    locale_select: 请选择语言
   reference_area:
     title: 需要帮助吗？
     subtitle: 看看这些视频和提示
@@ -643,6 +645,9 @@ zh-CN:
       applab_unsupported_tablet: 应用实验室的最佳体验是在有键盘、鼠标的桌面或笔记本电脑。您可能会在当前设备上遇到一些问题。
       gamelab_unsupported_tablet: 游戏实验室的最佳体验是在有键盘、鼠标的桌面或笔记本电脑。您可能会在当前设备上遇到一些问题。
       weblab_unsupported_locale_storage: 在私密浏览模式下使用 Web Lab 可能会遇到问题。请在正常模式下重新加载您的项目。很抱歉给您带来的不便。
+  deprecation:
+    algebra_lab: '代数中的 CS 课程和内容已被弃用。在接下来的几个月内，该实验室将不再可用。请改为查看 [Bootstrap: Algebra]
+      (%{bootstrap_algebra_url})。[了解更多] (%{cs_algebra_url})。'
   slow_loading: 请再多等一会儿...
   try_reloading: 请重新刷新页面
   next_stage: 完成 ！继续下一个阶段

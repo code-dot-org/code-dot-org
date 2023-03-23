@@ -1,7 +1,9 @@
-import {InsertEffects} from './soundEffects';
+import SoundEffects from './soundEffects';
 
 // audio
 var audioContext = null;
+
+var soundEffects = null;
 
 // var soundSourceIdUpto = 0;
 
@@ -39,7 +41,10 @@ function WebAudio() {
   } catch (e) {
     console.log('Web Audio API is not supported in this browser');
     audioContext = null;
+    return;
   }
+
+  soundEffects = new SoundEffects(audioContext);
 }
 
 WebAudio.prototype.getCurrentTime = function() {
@@ -92,6 +97,12 @@ WebAudio.prototype.LoadSoundFromBuffer = function(buffer, callback) {
   }
 };
 
+WebAudio.prototype.StartPlayback = function() {
+  if (['suspended', 'interrupted'].includes(audioContext.state)) {
+    audioContext.resume();
+  }
+};
+
 WebAudio.prototype.PlaySoundByBuffer = function(
   audioBuffer,
   id,
@@ -103,17 +114,13 @@ WebAudio.prototype.PlaySoundByBuffer = function(
   var source = audioContext.createBufferSource(); // creates a sound source
   source.buffer = audioBuffer; // tell the source which sound to play
 
-  let lastNode;
   if (effects) {
-    // Insert effects, attaching them to source.
-    lastNode = InsertEffects(audioContext, effects, source);
+    // Insert sound effects, which will connect to the output.
+    soundEffects.insertEffects(effects, source);
   } else {
-    lastNode = source;
+    // No sound effects, so we will connect directly to the output.
+    source.connect(audioContext.destination);
   }
-
-  // Connect the last node to output.
-  lastNode.connect(audioContext.destination);
-
   source.onended = callback.bind(this, id);
 
   source.loop = loop;

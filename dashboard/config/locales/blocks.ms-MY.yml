@@ -2,6 +2,8 @@
 ms:
   data:
     blocks:
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: pengguna prom {QUESTION} untuk pembolehubah {VAR} dengan pilihan {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -1043,6 +1045,8 @@ ms:
         text: mengelak sasaran
       gamelab_beginCollectingData:
         text: mula mengumpul data {BREAK} nilai {VALUE} dengan label {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} melantun {TARGET}"
       gamelab_changePropBy:
@@ -1681,6 +1685,10 @@ ms:
         text: koordinat x dari {SPRITE}
       gamelab_yLocationOf:
         text: y koordinat dari {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} meluncur ke {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: berguling
       Mikelab_addBehaviorSimple:
         text: bidadari {SPRITE} bermula {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2279,8 +2287,6 @@ ms:
         text: belok kiri
       RyanLab_turnRight:
         text: belok kanan
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} Mengatakan {TEXT} Bagi {SECONDS} Saat
       Vector_createSpriteWith:
         text: |-
           membuat bidadari
@@ -2329,6 +2335,19 @@ ms:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} katakan {SPEECH}"
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): berputar ke kanan
+            new Behavior(spinning_left, []): berputar ke kiri
+            new Behavior(fluttering, []): bergetar
+            new Behavior(jittering, []): terketar
+            new Behavior(wobbling, []): bergoyang
+            new Behavior(wandering, []): merayau
+            new Behavior(patrolling, []): meronda
+      adaptations_startFollowing:
+        text: "{SPRITE} mula mengikuti {TARGET}"
       binary_drawBin:
         text: menarik binari {BIN}
       binary_drawBinScreen:
@@ -2445,5 +2464,3 @@ ms:
         text: tetapkan tajuk {HEADING}
       storylab_setSubheading:
         text: tetapkan subtajuk {SUBHEADING}
-      validation_validatedBackground:
-        text: tetapkan latar belakang ke {IMG}

@@ -243,9 +243,7 @@ class ScriptsController < ApplicationController
     render json: rollup_pages.map(&:summarize_for_lesson_edit).to_json
   end
 
-  private
-
-  def rake
+  private def rake
     @errors = []
     begin
       Unit.rake
@@ -256,7 +254,7 @@ class ScriptsController < ApplicationController
     end
   end
 
-  def get_unit
+  private def get_unit
     unit_id = params[:id]
 
     script =
@@ -275,22 +273,22 @@ class ScriptsController < ApplicationController
     return nil
   end
 
-  def set_unit
+  private def set_unit
     @script = get_unit
     raise ActiveRecord::RecordNotFound unless @script
   end
 
-  def render_no_access
+  private def render_no_access
     if current_user && !current_user.admin? && !can?(:read, @script)
       render :no_access
     end
   end
 
-  def unit_params
+  private def unit_params
     params.require(:script).permit(:name)
   end
 
-  def general_params
+  private def general_params
     h = params.permit(
       :published_state,
       :instruction_type,
@@ -335,7 +333,7 @@ class ScriptsController < ApplicationController
     h
   end
 
-  def i18n_params
+  private def i18n_params
     params.permit(
       :name,
       :title,
@@ -346,13 +344,13 @@ class ScriptsController < ApplicationController
     ).to_h
   end
 
-  def set_redirect_override
+  private def set_redirect_override
     if params[:id] && params[:no_redirect]
       VersionRedirectOverrider.set_unit_redirect_override(session, params[:id])
     end
   end
 
-  def redirect_unit(unit, locale)
+  private def redirect_unit(unit, locale)
     # Return nil if unit is nil or we know the user can view the version requested.
     return nil if !unit || unit.can_view_version?(current_user, locale: locale)
 

@@ -20,6 +20,7 @@ import {
 } from './extensions';
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
+import FieldChord from './FieldChord';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -41,8 +42,9 @@ export default class MusicBlocklyWorkspace {
    * @param {*} container HTML element to inject the workspace into
    * @param {*} onBlockSpaceChange callback fired when any block space change events occur
    * @param {*} player reference to a {@link MusicPlayer}
+   * @param {*} toolboxAllowList optional object with allowed toolbox entries
    */
-  init(container, onBlockSpaceChange, player) {
+  init(container, onBlockSpaceChange, player, toolboxAllowList) {
     this.container = container;
 
     Blockly.Extensions.register(
@@ -69,9 +71,10 @@ export default class MusicBlocklyWorkspace {
 
     Blockly.fieldRegistry.register('field_sounds', FieldSounds);
     Blockly.fieldRegistry.register('field_pattern', FieldPattern);
+    Blockly.fieldRegistry.register('field_chord', FieldChord);
 
     this.workspace = Blockly.inject(container, {
-      toolbox: getToolbox(),
+      toolbox: getToolbox(toolboxAllowList),
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
       theme: CdoDarkTheme,
       renderer: experiments.isEnabled('zelos')
@@ -87,6 +90,9 @@ export default class MusicBlocklyWorkspace {
     // we don't want.
     delete Blockly.Blocks.procedures_defreturn;
     delete Blockly.Blocks.procedures_ifreturn;
+
+    // Rename the new function placeholder text for Music Lab specifically.
+    Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE'] = 'my function';
 
     Blockly.setInfiniteLoopTrap();
 
@@ -287,6 +293,29 @@ export default class MusicBlocklyWorkspace {
     return this.workspace.getAllBlocks();
   }
 
+  updateHighlightedBlocks(playingBlockIds) {
+    // Clear all highlights.
+    Blockly.mainBlockSpace.getAllBlocks().forEach(block => {
+      Blockly.mainBlockSpace.highlightBlock(block.id, false);
+    });
+    // Highlight playing blocks.
+    playingBlockIds.forEach(blockId => {
+      Blockly.mainBlockSpace.highlightBlock(blockId, true);
+    });
+  }
+
+  // Given a block ID, selects that block.
+  // Given undefined, unselects all blocks.
+  selectBlock(blockId) {
+    if (blockId) {
+      Blockly.mainBlockSpace.getBlockById(blockId).select();
+    } else {
+      Blockly.mainBlockSpace.getAllBlocks().forEach(block => {
+        block.unselect();
+      });
+    }
+  }
+
   getLocalStorageKeyName() {
     // Save code for each block mode in a different local storage item.
     // This way, switching block modes will load appropriate user code.
@@ -326,5 +355,10 @@ export default class MusicBlocklyWorkspace {
         console.log(e);
       }
     }
+  }
+
+  updateToolbox(allowList) {
+    const toolbox = getToolbox(allowList);
+    this.workspace.updateToolbox(toolbox);
   }
 }

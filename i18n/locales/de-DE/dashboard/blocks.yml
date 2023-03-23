@@ -1661,6 +1661,10 @@ de:
         text: x Koordinate von {SPRITE}
       gamelab_yLocationOf:
         text: y Koordinate von {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} gleite zu {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: hingefallen
       Mikelab_addBehaviorSimple:
         text: "{SPRITE} beginnt {BEHAVIOR}"
       Mikelab_addTrainingData:
@@ -2275,8 +2279,6 @@ de:
         text: nach links drehen
       RyanLab_turnRight:
         text: nach rechts drehen
-      SpriteLab2Beta_spriteSay:
-        text: Sprite {SPRITE} sagt {TEXT} für {SECONDS} Sekunden
       Vector_createSpriteWith:
         text: |-
           erzeuge Sprite
@@ -2382,6 +2384,18 @@ de:
             '"quarantining"': sich bei Krankheit in Quarantäne zu begeben
             '"avoiding"': sich sozial distanzieren
             '"none"': stillhalten
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): nach rechts drehen
+            new Behavior(spinning_left, []): nach links drehen
+            new Behavior(fluttering, []): flattern
+            new Behavior(jittering, []): zittern
+            new Behavior(wobbling, []): wackelnd
+            new Behavior(wandering, []): wandern
+            new Behavior(patrolling, []): patroullieren
+      adaptations_startFollowing:
+        text: "{SPRITE} beginnt, {TARGET} zu folgen"
       binary_drawBin:
         text: zeichne Binärwert {BIN}
       binary_drawBinScreen:
@@ -2538,5 +2552,3 @@ de:
         text: Überschrift festlegen {HEADING}
       storylab_setSubheading:
         text: Unterüberschrift festlegen {SUBHEADING}
-      validation_validatedBackground:
-        text: setze Hintergund auf {IMG}

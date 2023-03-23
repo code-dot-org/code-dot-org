@@ -122,6 +122,18 @@
         "csd-2022/playing-notes": {
           "display_name": "Granie z nut"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Proces rozwiązywania problemów"
+        },
+        "csd-2022/problem-solving-process-design": {
+          "display_name": "Proces rozwiązywania problemów z projektowaniem"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Proces rozwiązywania problemów"
+        },
+        "csd-2022/problem-solving-process-programming": {
+          "display_name": "Proces rozwiązywania problemów z programowaniem"
+        },
         "csd-2022/random-numbers": {
           "display_name": "Losowe liczby"
         },

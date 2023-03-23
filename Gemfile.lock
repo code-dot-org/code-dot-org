@@ -1,17 +1,4 @@
 GIT
-  remote: https://github.com/code-dot-org/petit.git
-  revision: bbe411d61d3f78fff59d9fa79d21c14b1c635750
-  specs:
-    petit (0.3.0)
-      activesupport
-      aws-sdk-dynamodb (~> 1)
-      jsonapi-serializers
-      rack-parser
-      rake
-      sinatra
-      unicorn
-
-GIT
   remote: https://github.com/code-dot-org/redis-slave-read.git
   revision: cfe1bd0f5cf65eee5b52560139cab133f22cb880
   ref: cfe1bd0f5cf65eee5b52560139cab133f22cb880
@@ -299,7 +286,7 @@ GEM
       sass (~> 3.2)
     brakeman (4.5.0)
     builder (3.2.4)
-    cancancan (3.1.0)
+    cancancan (3.2.2)
     case_transform (0.2)
       activesupport
     childprocess (0.9.0)
@@ -388,10 +375,10 @@ GEM
       nokogiri
       selenium-webdriver
       state_machine
-    factory_girl (4.7.0)
+    factory_bot (4.8.2)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.7.0)
-      factory_girl (~> 4.7.0)
+    factory_bot_rails (4.8.2)
+      factory_bot (~> 4.8.2)
       railties (>= 3.0.0)
     fakeredis (0.6.0)
       redis (~> 3.2)
@@ -522,8 +509,6 @@ GEM
     json-schema (2.8.1)
       addressable (>= 2.4)
     jsonapi-renderer (0.2.2)
-    jsonapi-serializers (1.0.0)
-      activesupport
     jumphash (0.1.0)
     jwt (2.5.0)
     kaminari (0.17.0)
@@ -673,8 +658,6 @@ GEM
     rack-openid (1.3.1)
       rack (>= 1.1.0)
       ruby-openid (>= 2.1.8)
-    rack-parser (0.7.0)
-      rack
     rack-protection (2.1.0)
       rack
     rack-ssl-enforcer (0.2.9)
@@ -945,7 +928,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass (~> 2.3.2.2)
   brakeman
-  cancancan (~> 3.1.0)
+  cancancan (~> 3.2.0)
   chronic (~> 0.10.2)
   cld
   colorize
@@ -961,7 +944,7 @@ DEPENDENCIES
   dotiw
   execjs
   eyes_selenium (= 3.18.4)
-  factory_girl_rails
+  factory_bot_rails (~> 4.8.2)
   fakeredis
   firebase
   firebase_token_generator
@@ -1023,7 +1006,6 @@ DEPENDENCIES
   parallel_tests
   paranoia (~> 2.5.0)
   pdf-reader
-  petit!
   pg
   phantomjs (~> 1.9.7.1)
   pry
