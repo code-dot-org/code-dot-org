@@ -1,0 +1,27 @@
+{
+  "name": "csd-2023",
+  "script_names": [
+    "csd1-2023",
+    "csd2-2023",
+    "csd3-2023",
+    "csd4-2023",
+    "csd5-2023",
+    "csd7-2023"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csd",
+    "has_numbered_units": true,
+    "has_verified_resources": false,
+    "version_year": "2023"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
