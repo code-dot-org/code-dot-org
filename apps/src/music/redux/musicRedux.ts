@@ -8,10 +8,12 @@ const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 interface MusicState {
   isPlaying: boolean;
+  currentPlayheadPosition: number;
 }
 
 const initialState: MusicState = {
-  isPlaying: false
+  isPlaying: false,
+  currentPlayheadPosition: 0
 };
 
 const musicSlice = createSlice({
@@ -20,6 +22,9 @@ const musicSlice = createSlice({
   reducers: {
     setIsPlaying: (state, action: PayloadAction<boolean>) => {
       state.isPlaying = action.payload;
+    },
+    setCurrentPlayheadPosition: (state, action: PayloadAction<number>) => {
+      state.currentPlayheadPosition = action.payload;
     }
   }
 });
@@ -30,4 +35,4 @@ const musicSlice = createSlice({
 // to be connected to this state.
 registerReducers({music: musicSlice.reducer});
 
-export const {setIsPlaying} = musicSlice.actions;
+export const {setIsPlaying, setCurrentPlayheadPosition} = musicSlice.actions;
