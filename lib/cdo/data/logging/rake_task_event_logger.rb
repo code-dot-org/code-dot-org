@@ -100,15 +100,7 @@ class RakeTaskEventLogger
                     is_continuous_integration_run: ENV['CI'] ? 'true' : 'false'}
       Cdo::Metrics.put(metric_name, metric_value, dimensions)
       Cdo::Metrics.flush!
-      ChatClient.log "\nBEGIN rake task information --------", color: 'green'
-      ChatClient.log @rake_task.name, color: 'green'
-      ChatClient.log task_chain, color: 'green'
-      ChatClient.log @@depth.to_s, color: 'green'
-      ChatClient.log task_chain.split(',').count.to_s, color: 'green'
-      ChatClient.log "END rake task information --------\n", color: 'green'
-      puts "Metric flushed ---------------------------e-d-----e3-2--"
     rescue => exception
-      ChatClient.log "SOMETHIGN WENT WRONG ?--------\n", color: 'green'
       Honeybadger.notify(
         exception,
         error_message: "Failed to log rake task information in cloudwatch",
