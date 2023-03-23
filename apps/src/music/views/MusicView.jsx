@@ -124,10 +124,7 @@ class UnconnectedMusicView extends React.Component {
       if (AppConfig.getValue('load-progression') === 'true') {
         const progression = values[1];
 
-        const musicValidator = new MusicValidator(
-          this.getIsPlaying,
-          this.player
-        );
+        const musicValidator = new MusicValidator(this.getIsPlaying, this.player);
 
         this.progressManager = new ProgressManager(
           progression,
@@ -202,8 +199,7 @@ class UnconnectedMusicView extends React.Component {
 
   setToolboxForProgress = () => {
     if (this.progressManager) {
-      const allowedToolbox =
-        this.progressManager.getCurrentStepDetails().toolbox;
+      const allowedToolbox = this.progressManager.getCurrentStepDetails().toolbox;
       this.musicBlocklyWorkspace.updateToolbox(allowedToolbox);
     }
   };
@@ -381,8 +377,7 @@ class UnconnectedMusicView extends React.Component {
     if (event.key === 'n') {
       this.setState({
         instructionsPosIndex:
-          (this.state.instructionsPosIndex + 1) %
-          instructionPositionOrder.length
+          (this.state.instructionsPosIndex + 1) % instructionPositionOrder.length
       });
     }
     Triggers.map(trigger => {
