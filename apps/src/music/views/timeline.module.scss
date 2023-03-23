@@ -1,9 +1,7 @@
-@import "./theme/tokens-dark";
-
-$full-width: 900px;
+@import "color.scss";
 
 .wrapper {
-  background-color: $gray-900;
+  background-color: $neutral_dark90;
   width: 100%;
   height: 100%;
   border-radius: 4px;
@@ -19,7 +17,6 @@ $full-width: 900px;
     position: relative;
 
     .fullWidthOverlay {
-      width: $full-width;
       height: 100%;
       position: absolute;
       top: 0;
@@ -36,23 +33,25 @@ $full-width: 900px;
         position: absolute;
         top: 20px;
         bottom: 0;
-        border-left: 2px $gray-800 solid;
-        color: $gray-600;
+        border-left: 2px $neutral_dark50 solid;
 
         &Current {
-          border-left-color: $gray-600;
-          color: $gray-300;
+          border-left-color: $neutral_dark20;
         }
       }
 
       .barNumber {
-        color: white;
+        color: $neutral_dark20;
         padding-left: 6px;
+
+        &Current {
+          color: $neutral_white;
+        }
       }
     }
 
     .soundsArea {
-      width: $full-width;
+      width: 0;
       height: 100%;
 
       .timelineElement {
@@ -102,6 +101,15 @@ $full-width: 900px;
         &SkipSound {
           background-color: #808080;
         }
+
+        &BlockSelected {
+          border-color: #fc3;
+          border-width: 3px;
+        }
+
+        &Clickable {
+          cursor: pointer;
+        }
       }
 
       .tracksContainer {
@@ -134,7 +142,7 @@ $full-width: 900px;
       top: 0;
       width: 1px;
       height: 100%;
-      border-left: 3px $yellow solid;
+      border-left: 3px yellow solid;
     }
   }
 }

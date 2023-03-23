@@ -8,6 +8,8 @@ import TimelineElement from './TimelineElement';
  */
 const TimelineSimple2Events = ({
   currentPlayheadPosition,
+  selectedBlockId,
+  onBlockSelected,
   barWidth,
   eventVerticalSpace,
   getEventHeight
@@ -89,7 +91,7 @@ const TimelineSimple2Events = ({
             key={index}
             style={{
               position: 'absolute',
-              backgroundColor: 'rgba(115 115 115 / 0.7)',
+              backgroundColor: 'rgba(255 255 255 / 0.12)',
               borderRadius: 8,
               left: (uniqueFunction.positionLeft - 1) * barWidth,
               width:
@@ -125,6 +127,8 @@ const TimelineSimple2Events = ({
             when={eventData.when}
             skipContext={eventData.skipContext}
             currentPlayheadPosition={currentPlayheadPosition}
+            selectedBlockId={selectedBlockId}
+            onBlockSelected={onBlockSelected}
           />
         ))}
       </div>
@@ -134,6 +138,8 @@ const TimelineSimple2Events = ({
 
 TimelineSimple2Events.propTypes = {
   currentPlayheadPosition: PropTypes.number.isRequired,
+  selectedBlockId: PropTypes.string,
+  onBlockSelected: PropTypes.func,
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
   getEventHeight: PropTypes.func.isRequired

@@ -68,6 +68,8 @@ export default class SamplePlayer {
     this.isPlaying = true;
 
     this.playSamples(sampleEventList);
+
+    soundApi.StartPlayback();
   }
 
   previewSample(sampleId: string, onStop: () => any) {
