@@ -15,7 +15,6 @@
   "properties": {
     "family_name": "csd",
     "has_numbered_units": true,
-    "has_verified_resources": false,
     "version_year": "2023"
   },
   "resources": [

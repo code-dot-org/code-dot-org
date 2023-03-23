@@ -130,7 +130,8 @@ function createStore(reducer, initialState) {
   // You have to manually enable debugging, both to keep the logger out
   // of production bundles, and because it causes a lot of console noise and
   // makes our unit tests fail. To enable, append ?enableExperiments=reduxLogging
-  // to your url
+  // to your url. This will also enable logging if there is a non-immutable or non-serializable
+  // value in the redux store, with some ignores already set up (see below).
   var enableReduxDebugging = experiments.isEnabled(experiments.REDUX_LOGGING);
   if (process.env.NODE_ENV !== 'production' && enableReduxDebugging) {
     var reduxLogger = createLogger({
@@ -155,7 +156,46 @@ function createStore(reducer, initialState) {
     return configureStore({
       reducer: reducer,
       preloadedState: initialState,
-      middleware: [reduxThunk, reduxLogger]
+      middleware: getDefaultMiddleware =>
+        // the default middleware includes redux thunk, immutability check,
+        // and serializability check. Some of our store does not pass these checks,
+        // so we are ignoring them for now. We only enable this in dev mode
+        // because it causes console errors if something fails the check, and
+        // can potentially cause a page crash (in the case of the JS Interpreter and the
+        // immutability check).
+        getDefaultMiddleware({
+          immutableCheck: {
+            ignoredPaths: ['jsInterpreter', 'jsdebugger']
+          },
+          serializableCheck: {
+            ignoredActionPaths: [
+              'blob',
+              'jsdebugger',
+              'observer',
+              'jsInterpreter',
+              'runApp',
+              'props.showNextHint',
+              'props.assetUrl',
+              'props.exportApp',
+              'backpackApi'
+            ],
+            ignoredPaths: [
+              'hiddenLesson',
+              'blob',
+              'pageConstants',
+              'observer',
+              'watchedExpressions',
+              'instructions',
+              'runApp',
+              'jsdebugger',
+              /animationList\.propsByKey.*\.blob/,
+              'maker',
+              'data',
+              'screens',
+              'javalab.backpackApi'
+            ]
+          }
+        }).concat(reduxLogger)
     });
   }
 
