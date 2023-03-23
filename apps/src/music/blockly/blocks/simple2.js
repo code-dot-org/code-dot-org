@@ -158,7 +158,8 @@ export const playSoundAtCurrentLocationSimple2 = {
         null,
         __currentFunction,
         RandomSkipManager.getSkipContext(),
-        __effects
+        __effects,
+        "${block.id}"
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         MusicLibrary.getLengthForId(
@@ -189,7 +190,8 @@ export const playPatternAtCurrentLocationSimple2 = {
         null,
         __currentFunction,
         RandomSkipManager.getSkipContext(),
-        __effects
+        __effects,
+        "${block.id}"
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         ${DEFAULT_PATTERN_LENGTH}
@@ -218,7 +220,8 @@ export const playChordAtCurrentLocationSimple2 = {
         null,
         __currentFunction,
         RandomSkipManager.getSkipContext(),
-        __effects
+        __effects,
+        "${block.id}"
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         ${DEFAULT_CHORD_LENGTH}
