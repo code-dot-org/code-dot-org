@@ -7,7 +7,8 @@ import cookies from 'js-cookie';
 class ImmersiveReaderButton extends Component {
   static propTypes = {
     title: PropTypes.string,
-    text: PropTypes.string
+    text: PropTypes.string,
+    isImmersiveButtonHasRoundBorders: PropTypes.bool
   };
 
   componentDidMount() {
@@ -30,7 +31,7 @@ class ImmersiveReaderButton extends Component {
   }
 
   render() {
-    const {title, text} = this.props;
+    const {title, text, isImmersiveButtonHasRoundBorders} = this.props;
     // Get the current language from the language cookie.
     const locale = cookies.get('language_') || 'en-US';
 
@@ -45,6 +46,9 @@ class ImmersiveReaderButton extends Component {
         ref={el => (this.container = el)}
         className={'immersive-reader-button'}
         data-button-style={'icon'}
+        style={{
+          borderRadius: isImmersiveButtonHasRoundBorders ? 4 : '4px 0 0 4px'
+        }}
         data-locale={locale}
         onClick={function() {
           handleLaunchImmersiveReader(locale, title, text);

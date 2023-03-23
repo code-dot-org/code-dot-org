@@ -185,6 +185,7 @@ function TopInstructionsHeader(props) {
                 ...(isRtl ? styles.audioRTL : styles.audioLTR)
               }}
               autoplayTriggerElementId="codeApp"
+              isRoundedVolumeIcon
             />
           )}
       </div>

@@ -62,6 +62,7 @@ class InlineAudio extends React.Component {
     message: PropTypes.string,
     style: PropTypes.object,
     ttsAutoplayEnabled: PropTypes.bool,
+    isRoundedVolumeIcon: PropTypes.bool,
 
     // when we need to wait for DOM event to trigger audio autoplay
     // this is the element ID that we'll be listening to
@@ -248,6 +249,7 @@ class InlineAudio extends React.Component {
   }
 
   render() {
+    const {isRoundedVolumeIcon} = this.props;
     if (
       this.props.textToSpeechEnabled &&
       !this.state.error &&
@@ -266,7 +268,9 @@ class InlineAudio extends React.Component {
             style={[this.props.style && this.props.style.button]}
             className={classNames(
               moduleStyles.iconWrapper,
-              moduleStyles.iconWrapperVolume
+              isRoundedVolumeIcon
+                ? moduleStyles.iconWrapperVolumeRounded
+                : moduleStyles.iconWrapperVolume
             )}
             id="volume"
           >

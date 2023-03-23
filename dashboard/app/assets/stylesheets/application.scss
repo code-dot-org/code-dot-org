@@ -3828,7 +3828,6 @@ html[dir=rtl] {
   margin-right: 2px;
   height: 16px;
   padding: 6px !important;
-  border-radius: 4px 0 0 4px !important;
 
   html[dir=rtl] & {
     float: left;
@@ -3837,7 +3836,6 @@ html[dir=rtl] {
   &:hover {
     background-color: $brand_primary_default !important;
     border-color: $brand_primary_default;
-    border-radius: 4px 0 0 4px !important;
 
     /* The TTS buttons overlap this button, so make this button's z-index higher as a temp fix */
     position: relative;

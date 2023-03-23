@@ -22,6 +22,7 @@ export default class Instructions extends React.Component {
     inTopPane: PropTypes.bool,
     onResize: PropTypes.func,
     isBlockly: PropTypes.bool,
+    isImmersiveButtonHasRoundBorders: PropTypes.bool,
     noInstructionsWhenCollapsed: PropTypes.bool
   };
 
@@ -31,6 +32,7 @@ export default class Instructions extends React.Component {
       instructions,
       onResize,
       isBlockly,
+      isImmersiveButtonHasRoundBorders,
       noInstructionsWhenCollapsed,
       inputOutputTable,
       imgURL,
@@ -44,6 +46,9 @@ export default class Instructions extends React.Component {
             <ImmersiveReaderButton
               title={i18n.instructions()}
               text={instructions}
+              isImmersiveButtonHasRoundBorders={
+                isImmersiveButtonHasRoundBorders
+              }
             />
             <MarkdownInstructions
               markdown={instructions}

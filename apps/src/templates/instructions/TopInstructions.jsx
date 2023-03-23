@@ -546,6 +546,7 @@ class TopInstructions extends Component {
             instructions={longInstructions}
             onResize={this.adjustMaxNeededHeight}
             inTopPane
+            isImmersiveButtonHasRoundBorders
             isBlockly={isBlockly}
             noInstructionsWhenCollapsed={noInstructionsWhenCollapsed}
           />
