@@ -73,7 +73,6 @@ class ScriptLevelsController < ApplicationController
     # There are too many variations of the script level path to use
     # a path helper, so use a regex to compute the new path.
     if @script.redirect_to?
-      puts 'redirect_to'
       new_script = Unit.get_from_cache(@script.redirect_to)
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
 
