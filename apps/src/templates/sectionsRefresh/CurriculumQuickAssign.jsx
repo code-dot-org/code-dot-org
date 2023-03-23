@@ -5,6 +5,7 @@ import moduleStyles from './sections-refresh.module.scss';
 import QuickAssignTable from './QuickAssignTable';
 import QuickAssignTableHocPl from './QuickAssignTableHocPl';
 import CurriculumQuickAssignTopRow from './CurriculumQuickAssignTopRow';
+import VersionUnitDropdowns from './VersionUnitDropdowns';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 
 export const MARKETING_AUDIENCE = {
@@ -19,6 +20,7 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
   const [courseOfferings, setCourseOfferings] = useState(null);
   const [decideLater, setDecideLater] = useState(false);
   const [marketingAudience, setMarketingAudience] = useState(null);
+  const [selectedCourseOffering, setSelectedCourseOffering] = useState(null);
 
   const showPlOfferings = queryParams('participantType') !== 'student';
 
@@ -86,6 +88,9 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
         <QuickAssignTable
           marketingAudience={marketingAudience}
           courseOfferings={courseOfferings}
+          setSelectedCourseOffering={offering =>
+            setSelectedCourseOffering(offering)
+          }
           updateCourse={course => updateSection('course', course)}
           sectionCourse={sectionCourse}
         />
@@ -94,10 +99,18 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
         <QuickAssignTableHocPl
           marketingAudience={marketingAudience}
           courseOfferings={courseOfferings}
+          setSelectedCourseOffering={offering =>
+            setSelectedCourseOffering(offering)
+          }
           updateCourse={course => updateSection('course', course)}
           sectionCourse={sectionCourse}
         />
       )}
+      <VersionUnitDropdowns
+        courseOffering={selectedCourseOffering}
+        updateCourse={course => updateSection('course', course)}
+        sectionCourse={sectionCourse}
+      />
     </div>
   );
 }

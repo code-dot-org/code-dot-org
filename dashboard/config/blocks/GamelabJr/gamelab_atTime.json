@@ -6,6 +6,7 @@
       1,
       0.74
     ],
+    "style": "event_blocks",
     "func": "atTime",
     "blockText": "at {N} {UNIT}",
     "callbackParams": [
