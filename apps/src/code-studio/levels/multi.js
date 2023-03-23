@@ -19,7 +19,8 @@ var Multi = function (
   answers,
   answersFeedback,
   lastAttemptString,
-  containedMode
+  containedMode,
+  multipleAttemptsAllowed
 ) {
   // The dashboard levelId.
   this.levelId = levelId;
@@ -58,6 +59,8 @@ var Multi = function (
   this.crossedAnswers = [];
 
   this.submitAllowed = true;
+
+  this.multipleAttemptsAllowed = !!multipleAttemptsAllowed;
 
   $(document).ready(() => this.ready());
 };
@@ -203,6 +206,9 @@ Multi.prototype.ready = function () {
 };
 
 Multi.prototype.lockAnswers = function () {
+  if (this.multipleAttemptsAllowed) {
+    return;
+  }
   $('#' + this.id + ' .answerbutton').addClass('lock-answers');
   $('#reset-predict-progress-button')?.prop('disabled', false);
 };

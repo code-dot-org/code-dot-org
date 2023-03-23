@@ -3,6 +3,7 @@
 - data['answers'] ||= []
 - localized_answers = level.localized_property(:answers)
 - contained_mode = local_assigns.fetch :contained_mode, false
+- multiple_attempts_allowed = level.multiple_attempts_allowed?
 - app = 'multi'
 - use_tight_layout = data['layout'] == "tight" || tight_layout
 - force_wrap_layout = data['layout'] == "wrap"
@@ -128,5 +129,6 @@
       #{answers || "undefined"},
       #{answers_feedback.to_json},
       #{last_attempt.to_json},
-      #{contained_mode}
+      #{contained_mode},
+      #{multiple_attempts_allowed}
     ));
