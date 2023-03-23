@@ -176,6 +176,8 @@ class UnconnectedMusicView extends React.Component {
         currentPlayheadPosition: this.player.getCurrentPlayheadPosition()
       });
 
+      this.updateHighlightedBlocks();
+
       this.progressManager?.updateProgress();
     }
   };
@@ -212,6 +214,11 @@ class UnconnectedMusicView extends React.Component {
         this.progressManager.getCurrentStepDetails().sounds
       );
     }
+  };
+
+  updateHighlightedBlocks = () => {
+    const playingBlockIds = this.player.getCurrentlyPlayingBlockIds();
+    this.musicBlocklyWorkspace.updateHighlightedBlocks(playingBlockIds);
   };
 
   loadLibrary = async () => {
@@ -293,6 +300,7 @@ class UnconnectedMusicView extends React.Component {
       this.analyticsReporter.onButtonClicked('play');
     } else {
       this.stopSong();
+      this.updateHighlightedBlocks();
     }
   };
 

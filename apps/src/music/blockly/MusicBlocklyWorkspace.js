@@ -91,6 +91,9 @@ export default class MusicBlocklyWorkspace {
     delete Blockly.Blocks.procedures_defreturn;
     delete Blockly.Blocks.procedures_ifreturn;
 
+    // Rename the new function placeholder text for Music Lab specifically.
+    Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE'] = 'my function';
+
     Blockly.setInfiniteLoopTrap();
 
     this.resizeBlockly();
@@ -288,6 +291,17 @@ export default class MusicBlocklyWorkspace {
 
   getAllBlocks() {
     return this.workspace.getAllBlocks();
+  }
+
+  updateHighlightedBlocks(playingBlockIds) {
+    // Clear all highlights.
+    Blockly.mainBlockSpace.getAllBlocks().forEach(block => {
+      Blockly.mainBlockSpace.highlightBlock(block.id, false);
+    });
+    // Highlight playing blocks.
+    playingBlockIds.forEach(blockId => {
+      Blockly.mainBlockSpace.highlightBlock(blockId, true);
+    });
   }
 
   getLocalStorageKeyName() {

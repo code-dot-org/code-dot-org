@@ -1443,6 +1443,18 @@
           "snow": "snö",
           "cloudy": "molnigt",
           "night": "natt"
+        },
+        "ml-intro app lab-book recommender demo-2021": {
+          "Silly": "Tokig"
+        },
+        "ml-intro app lab-book recommender demo_2022": {
+          "Silly": "Tokig"
+        },
+        "ml-model cards-book recommender model card": {
+          "Silly": "Tokig"
+        },
+        "ml-model cards-book recommender model card_2022": {
+          "Silly": "Tokig"
         }
       }
     }

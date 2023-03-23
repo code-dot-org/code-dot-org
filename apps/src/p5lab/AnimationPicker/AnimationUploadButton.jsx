@@ -7,27 +7,33 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import classNames from 'classnames';
 import styles from './animation-upload-button.module.scss';
 import {connect} from 'react-redux';
-import {refreshInRestrictedShareMode} from '@cdo/apps/code-studio/projectRedux.js';
+import {
+  refreshInRestrictedShareMode,
+  refreshTeacherHasConfirmedUploadWarning
+} from '@cdo/apps/code-studio/projectRedux.js';
 import {
   exitedUploadWarning,
   showingUploadWarning
 } from '../redux/animationPicker.js';
 
 /**
- * Render the animation upload button. If the project should restrict uploads
- * (which occurs for student Sprite Lab projects), and the project has not already seen
- * the warning (which is tracked with inRestrictedShareMode), we show a warning modal
- * before allowing uploads. If the project should restrict uploads and is already
+ * Render the animation upload button. If the project should warn on upload
+ * (which occurs for Sprite Lab projects), and the project has not already seen
+ * the warning (see details on warnings by user type below), we show a warning modal
+ * before allowing uploads. For students, if the project should restrict uploads and is already
  * published, we will not allow uploads until the project is un-published.
  */
 export function UnconnectedAnimationUploadButton({
   onUploadClick,
-  shouldRestrictAnimationUpload,
+  shouldWarnOnAnimationUpload,
   isBackgroundsTab,
+  teacherHasConfirmedUploadWarning,
   inRestrictedShareMode,
   refreshInRestrictedShareMode,
+  refreshTeacherHasConfirmedUploadWarning,
   showingUploadWarning,
-  exitedUploadWarning
+  exitedUploadWarning,
+  currentUserType
 }) {
   const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
   const [
@@ -38,8 +44,34 @@ export function UnconnectedAnimationUploadButton({
   const [restrictedShareConfirmed, setRestrictedShareConfirmed] = useState(
     false
   );
+
+  // Some of the behavior (particularly in the confirmation dialog) is conditional
+  // on whether a student or teacher is uploading.
+  // Teachers see a warning not to upload PII, and once they confirm this warning
+  // we save that state to their project and don't show the warning again.
+  // Students see a warning to not upload PII as well as a statement that they will not be able
+  // to share their project if they upload -- we also save this state to their project and don't show the warning again.
+  const isTeacher = currentUserType === 'teacher';
+  let hasConfirmedWarning, updateWarningState, isConfirmButtonEnabled;
+  if (isTeacher) {
+    hasConfirmedWarning = teacherHasConfirmedUploadWarning;
+    updateWarningState = () => {
+      project.setTeacherHasConfirmedUploadWarning(true);
+      refreshTeacherHasConfirmedUploadWarning();
+    };
+    isConfirmButtonEnabled = noPIIConfirmed;
+  } else {
+    hasConfirmedWarning = inRestrictedShareMode;
+    updateWarningState = () => {
+      project.setInRestrictedShareMode(true);
+      // redux setting, for use in share/remix
+      refreshInRestrictedShareMode();
+    };
+    isConfirmButtonEnabled = noPIIConfirmed && restrictedShareConfirmed;
+  }
+
   const showRestrictedUploadWarning =
-    shouldRestrictAnimationUpload && !inRestrictedShareMode;
+    shouldWarnOnAnimationUpload && !hasConfirmedWarning;
 
   function renderUploadButton() {
     return (
@@ -48,7 +80,7 @@ export function UnconnectedAnimationUploadButton({
         icon="upload"
         onClick={
           showRestrictedUploadWarning
-            ? project.isPublished()
+            ? project.isPublished() && !isTeacher
               ? showPublishedWarning
               : showUploadModal
             : onUploadClick
@@ -75,17 +107,25 @@ export function UnconnectedAnimationUploadButton({
             />
             {msg.animationPicker_confirmNoPII()}
           </label>
-          <label className={styles.checkboxLabel}>
-            <input
-              type="checkbox"
-              checked={restrictedShareConfirmed}
-              onChange={() =>
-                setRestrictedShareConfirmed(!restrictedShareConfirmed)
-              }
-            />
-            {msg.animationPicker_confirmRestrictedShare()}
-          </label>
+          {!isTeacher && (
+            <label className={styles.checkboxLabel}>
+              <input
+                type="checkbox"
+                checked={restrictedShareConfirmed}
+                onChange={() =>
+                  setRestrictedShareConfirmed(!restrictedShareConfirmed)
+                }
+              />
+              {msg.animationPicker_confirmRestrictedShare()}
+            </label>
+          )}
           <p className={styles.modalDetails}>
+            {isTeacher && (
+              <>
+                {msg.animationPicker_warnNoPublishShare()}
+                <br />
+              </>
+            )}
             {msg.animationPicker_undoRestrictedShareInstructions()}
           </p>
         </div>
@@ -100,8 +140,8 @@ export function UnconnectedAnimationUploadButton({
           <button
             className={classNames(styles.modalButton, styles.confirmButton)}
             type="button"
-            onClick={confirmRestrictedUpload}
-            disabled={!(noPIIConfirmed && restrictedShareConfirmed)}
+            onClick={confirmUploadWarning}
+            disabled={!isConfirmButtonEnabled}
           >
             {msg.dialogOK()}
           </button>
@@ -136,11 +176,9 @@ export function UnconnectedAnimationUploadButton({
     );
   }
 
-  function confirmRestrictedUpload() {
-    project.setInRestrictedShareMode(true);
+  function confirmUploadWarning() {
+    updateWarningState();
     setIsUploadModalOpen(false);
-    // redux setting, for use in share/remix
-    refreshInRestrictedShareMode();
     onUploadClick();
     exitedUploadWarning();
   }
@@ -178,22 +216,30 @@ export function UnconnectedAnimationUploadButton({
 
 UnconnectedAnimationUploadButton.propTypes = {
   onUploadClick: PropTypes.func.isRequired,
-  shouldRestrictAnimationUpload: PropTypes.bool.isRequired,
+  shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
   isBackgroundsTab: PropTypes.bool.isRequired,
   // populated from redux
   inRestrictedShareMode: PropTypes.bool.isRequired,
+  teacherHasConfirmedUploadWarning: PropTypes.bool.isRequired,
   refreshInRestrictedShareMode: PropTypes.func.isRequired,
+  refreshTeacherHasConfirmedUploadWarning: PropTypes.func.isRequired,
   showingUploadWarning: PropTypes.func.isRequired,
-  exitedUploadWarning: PropTypes.func.isRequired
+  exitedUploadWarning: PropTypes.func.isRequired,
+  currentUserType: PropTypes.string
 };
 
 export default connect(
   state => ({
-    inRestrictedShareMode: state.project.inRestrictedShareMode
+    inRestrictedShareMode: state.project.inRestrictedShareMode,
+    teacherHasConfirmedUploadWarning:
+      state.project.teacherHasConfirmedUploadWarning,
+    currentUserType: state.currentUser?.userType
   }),
   dispatch => ({
     refreshInRestrictedShareMode: inRestrictedShareMode =>
       dispatch(refreshInRestrictedShareMode(inRestrictedShareMode)),
+    refreshTeacherHasConfirmedUploadWarning: () =>
+      dispatch(refreshTeacherHasConfirmedUploadWarning()),
     showingUploadWarning: () => dispatch(showingUploadWarning()),
     exitedUploadWarning: () => dispatch(exitedUploadWarning())
   })

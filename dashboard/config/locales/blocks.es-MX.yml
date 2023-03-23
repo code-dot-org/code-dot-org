@@ -2,8 +2,8 @@
 es-MX:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: moviendo NESW con las teclas de flecha
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: solicitar usuario {QUESTION} para la variable {VAR} opciones {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -1622,7 +1622,7 @@ es-MX:
       gamelab_textVariableJoin:
         text: "{VAR}{TEXT2}"
       gamelab_tumbling:
-        text: cayendo
+        text: rodando
       gamelab_turn:
         text: "{SPRITE} gira {DIRECTION} {N} grados"
         options:
@@ -2491,6 +2491,17 @@ es-MX:
             '"quarantining"': cuarentena cuando enferma
             '"avoiding"': distanciamiento social
             '"none"': quedarse quieto
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): girando a la derecha
+            new Behavior(spinning_left, []): girando a la izquierda
+            new Behavior(fluttering, []): revoloteando
+            new Behavior(jittering, []): temblando
+            new Behavior(wobbling, []): tambaleándose
+            new Behavior(wandering, []): deambulando
+            new Behavior(patrolling, []): patrullando
       binary_drawBin:
         text: dibujar binario {BIN}
       binary_drawBinScreen:

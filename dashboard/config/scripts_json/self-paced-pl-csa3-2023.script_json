@@ -2,15 +2,16 @@
   "script": {
     "name": "self-paced-pl-csa3-2023",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSA Self Paced PL",
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-02-02 00:20:57 UTC",
+    "serialized_at": "2023-03-20 22:06:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -38,7 +39,7 @@
       "name": "Introduction to Java Lab",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
         "overview": "**You will:**\n\n* Create a new file in the Java Lab IDE\n* Name Java files using conventions for naming\n* Learn the basics of Java syntax\n* Print information to the console\n\n**Estimated time:** 60 minutes"
@@ -54,10 +55,10 @@
       "name": "Variables in Java",
       "absolute_position": 2,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
-        "overview": "**You will:**\n\n* Describe the different primitive data types covered in the AP subset\n* Declare and initialize variables\n* Use the assignment operator and compound assignment operators\n* Use variables in arithmetic operations\n* Print variables and text to the console\n\n**Estimated time:** 90 minutes",
+        "overview": "**You will:**\n\n* Describe the different primitive data types covered in the AP subset\n* Declare and initialize variables\n* Use the assignment operator and compound assignment operators\n* Use variables in arithmetic operations\n* Print variables and text to the console\n\n**Estimated time:** 60 minutes",
         "student_overview": "**You will:**\n\n* Describe the different primitive data types covered in the AP subset\n* Declare and initialize variables\n* Use the assignment operator and compound assignment operators\n* Use variables in arithmetic operations\n* Print variables and text to the console\n\n**Estimated time:** 90 minutes"
       },
       "seeding_key": {
@@ -71,7 +72,7 @@
       "name": "If statements in Java",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
         "overview": "**You will:**\n\n* Evaluate boolean expressions\n* Write and read if, if-else, if-else-if-else statements\n* Describe the difference between the assignment operator and the comparison operator\n\n**Estimated time:** 90 minutes",
@@ -88,10 +89,10 @@
       "name": "Loops in Java",
       "absolute_position": 4,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
-        "overview": "**You will:**\n\n* Read, write, and debug for loops in Java\n\n**Estimated time:** 90 minutes",
+        "overview": "**You will:**\n\n* Read, write, and debug for loops in Java\n\n**Estimated time:** 60 minutes",
         "student_overview": "**You will:**\n\n* Read, write, and debug for loops in Java\n\n**Estimated time:** 90 minutes"
       },
       "seeding_key": {
@@ -105,11 +106,11 @@
       "name": "Arrays in Java",
       "absolute_position": 5,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
-        "overview": "**You will:**\n\n* Declare and initialize a 1D array of primitive data types\n* Access and modify elements in an array\n* Traverse an array\n\n**Estimated time:** 120 minutes",
-        "student_overview": "**You will:**\n\n* Declare and initialize a 1D array of primitive data types\n* Access and modify elements in an array\n* Traverse an array\n\n**Estimated time:** 120 minutes"
+        "overview": "**You will:**\n\n* Declare and initialize a 1D array of primitive data types\n* Access and modify elements in an array\n* Traverse an array\n\n**Estimated time:** 90 minutes",
+        "student_overview": "**You will:**\n\n* Declare and initialize a 1D array of primitive data types\n* Access and modify elements in an array\n* Traverse an array\n\n**Estimated time:** 90 minutes"
       },
       "seeding_key": {
         "lesson.key": "Arrays in Java",

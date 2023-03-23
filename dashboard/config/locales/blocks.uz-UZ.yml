@@ -1993,6 +1993,14 @@ uz:
             '0.75': most
             '0.5': half of
             '0.25': few
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): o'ng tarafga aylanish
+            new Behavior(spinning_left, []): chap tarafga aylanish
+            new Behavior(jittering, []): titrash
+            new Behavior(wandering, []): daydish
+            new Behavior(patrolling, []): patrullash
       binary_drawBin:
         text: "{BIN} binar chizma qilish"
       binary_drawBinScreen:

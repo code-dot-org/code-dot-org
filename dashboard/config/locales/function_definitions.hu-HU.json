@@ -402,15 +402,18 @@
         },
         "Course 4 Artist Functions Inspiration": {
           "draw a square 20": {
-            "name": "rajzolj 20-as négyzetet"
+            "name": "rajzolj 20-as négyzetet",
+            "description": "20 képpont oldalú négyzet rajzolása"
           }
         },
         "Course 4 Artist Functions challenge": {
           "draw a line of squares": {
-            "name": "rajzolj egy sor négyzetet"
+            "name": "rajzolj egy sor négyzetet",
+            "description": "rajzolj egymás mellé sorban 6 négyzetet"
           },
           "draw a square 20": {
-            "name": "rajzolj 20-as négyzetet"
+            "name": "rajzolj 20-as négyzetet",
+            "description": "20 képpont oldalú négyzet rajzolása"
           }
         },
         "Course 4 Bee Params 1": {
@@ -565,7 +568,8 @@
             "name": "rajzolj egy sor hatszöget"
           },
           "draw a square 20": {
-            "name": "rajzolj 20-as négyzetet"
+            "name": "rajzolj 20-as négyzetet",
+            "description": "rajzolj egy 20 képpont hosszú oldalakból álló negyzetet"
           }
         },
         "Course 4 SCF 1a": {
@@ -578,7 +582,8 @@
         },
         "Course 4 SCF 2": {
           "draw a square 20": {
-            "name": "rajzolj 20-as négyzetet"
+            "name": "rajzolj 20-as négyzetet",
+            "description": "rajzolj egy 20 képpont hosszú oldalakból álló negyzetet"
           },
           "draw octagons": {
             "name": "rajzolj nyolcszögeket"
@@ -589,7 +594,8 @@
         },
         "Course 4 SCF 3": {
           "draw a square 20": {
-            "name": "rajzolj 20-as négyzetet"
+            "name": "rajzolj 20-as négyzetet",
+            "description": "rajzolj egy 20 képpont hosszú oldalakból álló negyzetet"
           },
           "do something": {
             "name": "csinálj valamit"
@@ -842,10 +848,12 @@
         },
         "NEW Course 4 Artist Functions 11": {
           "draw a line of  squares": {
-            "name": "rajzolj egy sor négyzetet"
+            "name": "rajzolj egy sor négyzetet",
+            "description": "rajzolj egymás mellé sorban 6 négyzetet"
           },
           "draw a square 20": {
-            "name": "rajzolj 20-as négyzetet"
+            "name": "rajzolj 20-as négyzetet",
+            "description": "Rajzolj egy négyzetet, amelynek oldalai 20 képpont hosszúak"
           },
           "draw a line of squares": {
             "name": "rajzolj egy sor négyzetet"
@@ -853,7 +861,8 @@
         },
         "NEW Course 4 Artist Functions 12": {
           "draw a square 20": {
-            "name": "rajzolj 20-as négyzetet"
+            "name": "rajzolj 20-as négyzetet",
+            "description": "rajzolj egy 20 képpont hosszú oldalakból álló negyzetet"
           },
           "draw a line of squares": {
             "name": "rajzolj egy sor négyzetet"
@@ -872,13 +881,15 @@
             "name": "üres függvény"
           },
           "draw a line of squares": {
-            "name": "rajzolj egy sor négyzetet"
+            "name": "rajzolj egy sor négyzetet",
+            "description": "rajzolj egy sor négyzetet "
           },
           "draw a square 40": {
             "name": "rajzolj négyzetet 40"
           },
           "draw a square 20": {
-            "name": "rajzolj 20-as négyzetet"
+            "name": "rajzolj 20-as négyzetet",
+            "description": "rajzolj egy 20 képpont hosszú oldalakból álló negyzetet"
           }
         },
         "NEW Course 4 Artist Functions 3": {
@@ -888,7 +899,8 @@
         },
         "NEW Course 4 Artist Functions 4": {
           "draw a square": {
-            "name": "rajzoljon egy négyzetet"
+            "name": "rajzoljon egy négyzetet",
+            "description": "100 képpont oldalú négyzetet rajzol"
           }
         },
         "NEW Course 4 Artist Functions 7": {
@@ -898,7 +910,8 @@
         },
         "NEW Course 4 Artist Functions 8": {
           "draw a triangle": {
-            "name": "Rajzolj egy háromszöget"
+            "name": "Rajzolj egy háromszöget",
+            "description": "100 képpont oldalú háromszöget rajzol"
           }
         },
         "NEW Course 4 Artist Functions 9": {
@@ -1082,7 +1095,7 @@
         },
         "NEW Course 4 Artist Params 8": {
           "draw a triangle with length": {
-            "name": "rajzolj háromszöget, oldala",
+            "name": "draw a triangle with length",
             "parameters": {
               "length": "length"
             }
@@ -1090,7 +1103,7 @@
         },
         "NEW Course 4 Artist Params 9": {
           "draw a square": {
-            "name": "rajzoljon egy négyzetet",
+            "name": "draw a square",
             "parameters": {
               "length": "length"
             }
@@ -1352,7 +1365,8 @@
             "name": "rajzolj sokszöget"
           },
           "draw a square 20": {
-            "name": "rajzolj 20-as négyzetet"
+            "name": "rajzolj 20-as négyzetet",
+            "description": "rajzolj egy 20 képpont hosszú oldalakból álló negyzetet"
           },
           "do something": {
             "name": "csinálj valamit"
@@ -3186,7 +3200,8 @@
             "name": "rajzolj sokszöget"
           },
           "draw a square 20": {
-            "name": "rajzolj 20-as négyzetet"
+            "name": "rajzolj 20-as négyzetet",
+            "description": "rajzolj egy 20 képpont hosszú oldalakból álló negyzetet"
           },
           "do something": {
             "name": "csinálj valamit"
@@ -3194,7 +3209,8 @@
         },
         "courseF_artist_fwp_challenge2": {
           "draw a square 20": {
-            "name": "rajzolj 20-as négyzetet"
+            "name": "rajzolj 20-as négyzetet",
+            "description": "rajzolj egy 20 képpont hosszú oldalakból álló negyzetet"
           },
           "do something": {
             "name": "csinálj valamit"

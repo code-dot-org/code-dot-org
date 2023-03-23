@@ -1742,6 +1742,13 @@ ga:
             '0.75': most
             '0.5': half of
             '0.25': few
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): casadh ar deiseal
+            new Behavior(jittering, []): crith
+            new Behavior(wandering, []): fánaíocht
+            new Behavior(patrolling, []): patrólú
       binary_drawPixelHere:
         options:
           VAL:

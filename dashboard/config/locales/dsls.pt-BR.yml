@@ -6542,12 +6542,16 @@ pt-BR:
             irá fazer o programa falhar? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - correct: true
+        - text: Scrat alcançará a bolota. Não há bugs no código.
+        - text: Scrat não alcançará a bolota porque ele vira para o lado errado.
+          correct: true
+        - text: O Scrat não alcançará a bolota porque não há blocos suficientes para
+            `avançar`.
+          correct: true
         - text: Eu não sei.
         questions:
-        - {}
+        - text: Procure por bugs nesse código. O Scrat alcançará a bolota ou há algum
+            problema?
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: O pássaro vai acabar um passo antes do porco.
@@ -10399,7 +10403,8 @@ pt-BR:
         - text: O artista desenhará um quadrado.
           correct: true
           feedback: Correto!
-        - {}
+        - text: O artista desenhará um pentágono
+          feedback: Incorreto. O artista desenha um quadrado.
         questions:
         - text: Olhe cuidadosamente para o código abaixo. O que acontecerá quando
             você clicar em "Executar"?
@@ -10422,12 +10427,16 @@ pt-BR:
             irá coletar após você apertar o "Executar"?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
+        - text: Scrat alcançará a bolota. Não há bugs no código.
+        - text: Scrat não alcançará a bolota porque ele vira para o lado errado.
+          correct: true
+        - text: O Scrat não alcançará a bolota porque não há blocos suficientes para
+            `avançar`.
+          correct: true
+        - text: O Scrat não se moverá do primeiro bloco.
         questions:
-        - {}
+        - text: Procure por bugs nesse código. O Scrat alcançará a bolota ou há algum
+            problema?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
         - text: O pássaro vai acabar um passo antes do porco.
@@ -10437,7 +10446,8 @@ pt-BR:
           feedback: Correto!
         - text: O pássaro vai correr para o TNT.
           feedback: Incorreto. Este código leva o pássaro perfeitamente ao porco.
-        - feedback: Incorreto. Este código leva o pássaro perfeitamente ao porco.
+        - text: O pássaro vai correr para a parede.
+          feedback: Incorreto. Este código leva o pássaro perfeitamente ao porco.
         questions:
         - text: Leia o código abaixo com muito cuidado. O que acontecerá quando você
             clicar em "Executar"?
@@ -10450,7 +10460,8 @@ pt-BR:
         - text: BB-8 irá se mover 5 vezes e pegará toda a sucata
           correct: true
           feedback: Correto!
-        - feedback: Incorreto. O bloco repetir irá mover BB-8 para frente 5 vezes.
+        - text: BB-8 moverá apenas 3 espaços.
+          feedback: Incorreto. O bloco repetir irá mover BB-8 para frente 5 vezes.
         questions:
         - text: O que acha que vai acontecer quando você clicar em "Executar"?
       courseC_multi_starWars_predict2_2021:
@@ -10465,7 +10476,8 @@ pt-BR:
         - text: BB-8 irá coletar todos os pedaços de metal sem nenhum problema.
           feedback: Incorreto. O primeiro loop só permite que o BB-8 avance 2 espaços,
             quando precisa avançar 3 espaços.
-        - feedback: Incorreto. O primeiro loop só permite que o BB-8 avance 2 espaços,
+        - text: O BB-8 irá virar na direção errada após a primeira repetição.
+          feedback: Incorreto. O primeiro loop só permite que o BB-8 avance 2 espaços,
             quando precisa avançar 3 espaços.
         questions:
         - text: Observe atentamente o código abaixo. O que acontecerá quando você
@@ -10903,7 +10915,8 @@ pt-BR:
         - text: Laurel coletará todo o tesouro.
           feedback: Incorreta. Laurel tenta recolher o tesouro onde não há nenhum
             e isso causa um erro.
-        - feedback: Incorreta. Laurel tenta recolher o tesouro onde não há nenhum
+        - text: A Laurel coletará 1 peça de tesouro usando este código.
+          feedback: Incorreta. Laurel tenta recolher o tesouro onde não há nenhum
             e isso causa um erro.
         questions:
         - text: Olhe para este código cuidadosamente. O que você acha que irá acontecer
@@ -11302,6 +11315,8 @@ pt-BR:
         display_name: Projeto de Fim do Curso
       courseF_EOC_samples_2021:
         display_name: Projeto de Fim do Curso
+        description: Você está prestes a iniciar seu projeto final. Antes de começar,
+          passe algum tempo olhando os projetos de exemplo.
       csd-post-survey-markdown-with-link-to-survey_2021:
         markdown: "# CS Descobertas de Pesquisa pós-curso \n\n** A sua entrada e feedback
           é importante para nós! ** Usamos para:\n\n* entender sua experiência\n*
@@ -18111,13 +18126,20 @@ pt-BR:
         - {}
       reasons-took-course:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Eu tinha amigos que estavam participando
+          correct: true
+        - text: Gosto muito do professor
+          correct: true
+        - text: Achei que seria divertido.
+          correct: true
+        - text: Eu queria aprender mais sobre ciência da computação
+          correct: true
+        - text: Eu pensei que seria fácil
+          correct: true
+        - text: Eu pensei que seria um desafio.
+          correct: true
+        - text: A turma tem uma boa reputação na minha escola
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -18126,24 +18148,36 @@ pt-BR:
         - {}
       reasons-took-course-csd_2021:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Eu tinha amigos que estavam participando
+          correct: true
+        - text: Gosto muito do professor
+          correct: true
+        - text: Achei que seria divertido.
+          correct: true
+        - text: Eu queria aprender mais sobre ciência da computação
+          correct: true
+        - text: Eu pensei que seria fácil
+          correct: true
+        - text: Eu pensei que seria um desafio.
+          correct: true
         - correct: true
         - correct: true
         questions:
         - {}
       reasons-took-course-csd_2022:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Eu tinha amigos que estavam participando
+          correct: true
+        - text: Gosto muito do professor
+          correct: true
+        - text: Achei que seria divertido.
+          correct: true
+        - text: Eu queria aprender mais sobre ciência da computação
+          correct: true
+        - text: Eu pensei que seria fácil
+          correct: true
+        - text: Eu pensei que seria um desafio.
+          correct: true
         - correct: true
         - correct: true
         questions:
@@ -18238,7 +18272,7 @@ pt-BR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Eu sinto que posso ser eu mesmo nesta aula de ciência da computação.
       will-be-myself-in-cs_2021:
         answers:
         - correct: true
@@ -18249,7 +18283,7 @@ pt-BR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Eu sinto que posso ser eu mesmo nesta aula de ciência da computação.
       will-be-myself-in-cs_2022:
         answers:
         - correct: true
@@ -18260,7 +18294,7 @@ pt-BR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Eu sinto que posso ser eu mesmo nesta aula de ciência da computação.
       worried-less-capable:
         answers:
         - correct: true
@@ -18271,7 +18305,8 @@ pt-BR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Estou preocupado em ser visto por outras pessoas como menos capaz
+            em ciência da computação.
       worried-seen-incapable:
         answers:
         - correct: true
@@ -18519,7 +18554,8 @@ pt-BR:
         - text: O artista desenhará um quadrado.
           correct: true
           feedback: Correto!
-        - {}
+        - text: O artista desenhará um pentágono
+          feedback: Incorreto. O artista desenha um quadrado.
         questions:
         - text: Olhe cuidadosamente para o código abaixo. O que acontecerá quando
             você clicar em "Executar"?
@@ -18542,12 +18578,16 @@ pt-BR:
             irá coletar após você apertar o "Executar"?
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Scrat alcançará a bolota. Não há bugs no código.
+        - text: Scrat não alcançará a bolota porque ele vira para o lado errado.
+          correct: true
+        - text: O Scrat não alcançará a bolota porque não há blocos suficientes para
+            `avançar`.
+        - text: O Scrat não se moverá do primeiro bloco.
+          feedback: Scrat não alcançará a bolota porque ele vira para o lado errado.
         questions:
-        - {}
+        - text: Procure por bugs nesse código. O Scrat alcançará a bolota ou há algum
+            problema?
       courseC_multi_maze_programming8_predict12022:
         answers:
         - text: O pássaro vai acabar um passo antes do porco.
@@ -18557,7 +18597,8 @@ pt-BR:
           feedback: Correto!
         - text: O pássaro vai correr para o TNT.
           feedback: Incorreto. Este código leva o pássaro perfeitamente ao porco.
-        - feedback: Incorreto. Este código leva o pássaro perfeitamente ao porco.
+        - text: O pássaro vai correr para a parede.
+          feedback: Incorreto. Este código leva o pássaro perfeitamente ao porco.
         questions:
         - text: Leia o código abaixo com muito cuidado. O que acontecerá quando você
             clicar em "Executar"?
@@ -18570,7 +18611,8 @@ pt-BR:
         - text: BB-8 irá se mover 5 vezes e pegará toda a sucata
           correct: true
           feedback: Correto!
-        - feedback: Incorreto. O bloco repetir irá mover BB-8 para frente 5 vezes.
+        - text: BB-8 moverá apenas 3 espaços.
+          feedback: Incorreto. O bloco repetir irá mover BB-8 para frente 5 vezes.
         questions:
         - text: O que acha que vai acontecer quando você clicar em "Executar"?
       courseC_multi_starWars_predict22022:
@@ -18585,7 +18627,8 @@ pt-BR:
         - text: BB-8 irá coletar todos os pedaços de metal sem nenhum problema.
           feedback: Incorreto. O primeiro loop só permite que o BB-8 avance 2 espaços,
             quando precisa avançar 3 espaços.
-        - feedback: Incorreto. O primeiro loop só permite que o BB-8 avance 2 espaços,
+        - text: O BB-8 irá virar na direção errada após a primeira repetição.
+          feedback: Incorreto. O primeiro loop só permite que o BB-8 avance 2 espaços,
             quando precisa avançar 3 espaços.
         questions:
         - text: Observe atentamente o código abaixo. O que acontecerá quando você
@@ -19013,7 +19056,8 @@ pt-BR:
         - text: Laurel coletará todo o tesouro.
           feedback: Incorreta. Laurel tenta recolher o tesouro onde não há nenhum
             e isso causa um erro.
-        - feedback: Incorreta. Laurel tenta recolher o tesouro onde não há nenhum
+        - text: A Laurel coletará 1 peça de tesouro usando este código.
+          feedback: Incorreta. Laurel tenta recolher o tesouro onde não há nenhum
             e isso causa um erro.
         questions:
         - text: Olhe para este código cuidadosamente. O que você acha que irá acontecer

@@ -3,6 +3,7 @@ et:
   data:
     block_categories:
       Actions: Tegevused
+      Category: Kategooria
       Color: Värv
       Comment: Kommentaar
       Conditionals: Tingimuslaused
