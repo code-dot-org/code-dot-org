@@ -9,13 +9,15 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
     #
     Timecop.freeze do
       # Initial creation: No reminders
-      application = create :pd_teacher_application
+      application_hash = build :pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id
+      application = create :pd_teacher_application, form_data_hash: application_hash
       Services::RegistrationReminder.queue_registration_reminders!
       assert_empty application.emails.where(email_type: 'registration_reminder')
 
-      # Fake sending first accepted email
+      # Fake sending first accepted email by updating the status to accepted and setting sent_at field
       Timecop.travel 1.day
-      create :pd_application_email, application: application, email_type: 'accepted', sent_at: DateTime.now
+      application.update!(status: 'accepted')
+      application.emails.where(email_type: 'accepted').last.mark_sent!
       Services::RegistrationReminder.queue_registration_reminders!
       assert_empty application.emails.where(email_type: 'registration_reminder')
 
@@ -99,6 +101,18 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
     application = create :pd_teacher_application, created_at: DateTime.new(2019, 9, 30)
     create :pd_application_email, application: application, email_type: 'accepted', sent_at: 1.week.ago
     assert_equal 0, Services::RegistrationReminder.applications_needing_first_reminder.count
+  end
+
+  test 'applications_needing_first_reminder omits applications without an RP since the accepted email does not get sent' do
+    Timecop.freeze do
+      application = create :pd_teacher_application
+      application.update!(status: 'accepted')
+      assert_empty application.emails.where(email_type: 'accepted')
+
+      Timecop.travel 7.days
+      Services::RegistrationReminder.queue_registration_reminders!
+      assert_equal 0, Services::RegistrationReminder.applications_needing_first_reminder.count
+    end
   end
 
   test 'applications_needing_first_reminder includes eligible applications' do

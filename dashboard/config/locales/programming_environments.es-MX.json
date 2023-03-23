@@ -682,7 +682,8 @@
                 "setInterval": {
                   "palette_params": {
                     "ms": {
-                      "type": "número"
+                      "type": "número",
+                      "description": "El número de milisegundos entre cada ejecución de la función."
                     }
                   }
                 },
@@ -1104,7 +1105,7 @@
                     },
                     "x": {
                       "type": "número",
-                      "description": "La posición x en píxeles a partir de la esquina superior izquierda de la imagen para colocar los datos en el lienzo."
+                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen para colocar los datos en el lienzo."
                     },
                     "y": {
                       "type": "número",
@@ -1193,9 +1194,11 @@
                       "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen."
                     },
                     "greenValue": {
-                      "type": "número"
+                      "type": "número",
+                      "description": "La cantidad de verde (de 0 a 255) a configurar en el píxel."
                     }
-                  }
+                  },
+                  "short_description": "Configura la cantidad de verde (de 0 a 255) en el color del píxel situado en la posición `x` e `y` de los datos de la imagen a la cantidad de entrada greenValue."
                 },
                 "setRGB": {
                   "palette_params": {
@@ -1215,7 +1218,8 @@
                       "description": "La cantidad de rojo (de 0 a 255) para configurar en el píxel."
                     },
                     "green": {
-                      "type": "número"
+                      "type": "número",
+                      "description": "La cantidad de verde (de 0 a 255) a configurar en el píxel."
                     },
                     "blue": {
                       "type": "número",
@@ -1358,6 +1362,17 @@
                     }
                   }
                 },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "El nombre de la clave que se va a almacenar."
+                    },
+                    "value": {
+                      "description": "Los datos que se almacenarán."
+                    }
+                  },
+                  "short_description": "Almacena un par clave/valor en el almacenamiento de datos clave/valor del Laboratorio de Aplicaciones y llama a la función de devolución de llamada cuando finaliza la acción."
+                },
                 "startWebRequest": {
                   "palette_params": {
                     "url": {
@@ -1462,7 +1477,7 @@
                   "short_description": "Configura el color de la pluma que utiliza la tortuga para dibujar líneas y puntos."
                 },
                 "penDown": {
-                  "short_description": "Mantener el lápiz abajo para que la tortuga dibuje una línea detrás de ella al moverse."
+                  "short_description": "Baja la pluma para que la tortuga dibuje una línea detrás de él mientras se mueve."
                 },
                 "penRGB": {
                   "palette_params": {
@@ -1479,10 +1494,10 @@
                       "type": "número"
                     }
                   },
-                  "short_description": "Con los valores RGBA, establece el color del lápiz utilizado por la tortuga al dibujar líneas y puntos. "
+                  "short_description": "Configura el color de la pluma que utiliza la tortuga para dibujar líneas y puntos."
                 },
                 "penUp": {
-                  "short_description": "Sube el lápiz para que la tortuga no dibuje líneas al moverse."
+                  "short_description": "Levanta la pluma para que la tortuga no dibuje una línea mientras se mueve."
                 },
                 "penWidth": {
                   "palette_params": {
@@ -1508,21 +1523,24 @@
                     "angle": {
                       "type": "número"
                     }
-                  }
+                  },
+                  "short_description": "Gira la tortuga hacia la izquierda el ángulo especificado. La posición de la tortuga sigue siendo la misma."
                 },
                 "turnRight": {
                   "palette_params": {
                     "angle": {
                       "type": "número"
                     }
-                  }
+                  },
+                  "short_description": "Gira la tortuga hacia la derecha el ángulo especificado. La posición de la tortuga sigue siendo la misma."
                 },
                 "turnTo": {
                   "palette_params": {
                     "angle": {
                       "type": "número"
                     }
-                  }
+                  },
+                  "short_description": "Cambia la dirección de la tortuga a un ángulo específico. 0 es arriba, 90 es derecha, 180 es abajo y 270 es izquierda."
                 }
               }
             },
@@ -1547,7 +1565,8 @@
                 "setInterval": {
                   "palette_params": {
                     "ms": {
-                      "type": "número"
+                      "type": "número",
+                      "description": "El número de milisegundos entre cada ejecución de la función."
                     }
                   }
                 },

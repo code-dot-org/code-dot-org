@@ -1,1 +1,7 @@
---- {}
+---
+ta:
+  data:
+    course:
+      name:
+        mike-test:
+          title: கணினி அறிவியல் அடிப்படைகள்

@@ -498,6 +498,7 @@
   "genderMale": "Mand",
   "genderFemale": "Kvinde",
   "genderNonBinary": "Ikke-binær",
+  "genderNotListed": "Fortrukken betegnelse er ikke angivet",
   "generatedCodeInfo": "Selv top-universiteter underviser i blok-baseret programmering (f.eks. {berkeleyLink}, {harvardLink}). Men under kølerhjelmen, kan de blokke du har samlet også vises i JavaScript, verdens mest udbredte programmeringssprog:",
   "getHelp": "Få hjælp",
   "goToCodeStudio": "Gå til Code Studio",

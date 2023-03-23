@@ -77,6 +77,12 @@
         "csd-2022/physical-input": {
           "display_name": "Биет оролт"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Асуудал шийдэх үйл явц"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Асуудал шийдэх үйл явц"
+        },
         "csd-2022/sprites": {
           "display_name": "Шидтэнгүүд"
         },

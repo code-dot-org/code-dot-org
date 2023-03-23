@@ -860,6 +860,10 @@
           "word": "Elaborazione",
           "definition": "Il ragionamento svolto dai computer per trasformare i dati in ingresso (input) in dati in uscita (output)."
         },
+        "storage/csd/2022": {
+          "word": "memorizzazione",
+          "definition": "salvataggio di dati da utilizzare in futuro"
+        },
         "bug/csd/2022": {
           "word": "Bug (errore)",
           "definition": "Parte di un programma che non funziona correttamente."
@@ -1518,6 +1522,10 @@
         "processing/csd/2021": {
           "word": "Elaborazione",
           "definition": "Il ragionamento svolto dai computer per trasformare i dati in ingresso (input) in dati in uscita (output)."
+        },
+        "storage/csd/2021": {
+          "word": "memorizzazione",
+          "definition": "salvataggio di dati da utilizzare in futuro"
         },
         "digital_footprint/csd/2021": {
           "word": "Orme digitali"

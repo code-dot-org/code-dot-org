@@ -1,8 +1,8 @@
 fa:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: حرکت به شمال/شرق/جنوب/غرب با کلیدهای جهت
+      AmysBlocks_playerBehaviors:
+        text: "[BEHAVIOR][0]"
       AmysBlocks_setPromptWithChoices:
         text: به کاربر برای متغیر [VAR][1] سوال [QUESTION][0] با انتخابهای [A][2][B][3][C][4] را بفرست
       AmysBlocks_spriteSayVar:
@@ -2408,6 +2408,17 @@ fa:
             '"quarantining"': رفتن به قرنطینه در زمان بیماری
             '"avoiding"': فاصله گرفتن اجتماعی
             '"none"': بی حرکت ماندن
+      adaptations_adaptationBehaviors:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            "new Behavior(spinning_right, [])": چرخش به راست
+            "new Behavior(spinning_left, [])": چرخش به چپ
+            "new Behavior(fluttering, [])": بال زدن
+            "new Behavior(jittering, [])": با عصبانیت رفتار کردن
+            "new Behavior(wobbling, [])": تلوتلو خوردن
+            "new Behavior(wandering, [])": گردش کردن
+            "new Behavior(patrolling, [])": گشت‌زنی
       binary_drawBin:
         text: 'کشیدن دودویی: [BIN][0]'
       binary_drawBinScreen:

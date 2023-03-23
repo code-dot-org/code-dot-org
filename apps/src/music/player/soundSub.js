@@ -97,6 +97,12 @@ WebAudio.prototype.LoadSoundFromBuffer = function(buffer, callback) {
   }
 };
 
+WebAudio.prototype.StartPlayback = function() {
+  if (['suspended', 'interrupted'].includes(audioContext.state)) {
+    audioContext.resume();
+  }
+};
+
 WebAudio.prototype.PlaySoundByBuffer = function(
   audioBuffer,
   id,

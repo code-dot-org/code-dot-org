@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-07 19:19:04 UTC",
+    "serialized_at": "2023-03-20 21:34:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5740,12 +5740,12 @@
       }
     },
     {
-      "name": "Athletes Don't Own Their Tattoos",
-      "url": "https://www.todayonline.com/world/athletes-dont-own-their-tattoos-thats-problem-video-game-developers",
+      "name": "Judge Rules in Favor of 'NBA 2K' Creators in Case Brought by Tattoo Artists",
+      "url": "https://www.si.com/nba/2020/04/06/nba-2k-ruling-tattoo-artists",
       "key": "athletes_don_t_own_their_tattoos",
       "properties": {
         "audience": "Student",
-        "type": "Article"
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "athletes_don_t_own_their_tattoos"

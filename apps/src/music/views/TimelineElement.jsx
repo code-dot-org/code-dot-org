@@ -25,7 +25,9 @@ const TimelineElement = ({
   left,
   when,
   skipContext,
-  currentPlayheadPosition
+  currentPlayheadPosition,
+  selectedBlockId,
+  onBlockSelected
 }) => {
   const playingContext = useContext(PlayingContext);
 
@@ -38,6 +40,8 @@ const TimelineElement = ({
     currentPlayheadPosition >= when &&
     currentPlayheadPosition < when + eventData.length;
 
+  const isBlockSelected = eventData.blockId === selectedBlockId;
+
   const colorType =
     eventData.type === 'sound' ? eventData.soundType : eventData.type;
   const colorClass = typeToColorClass[colorType];
@@ -49,13 +53,23 @@ const TimelineElement = ({
         colorClass,
         isCurrentlyPlaying && moduleStyles.timelineElementPlaying,
         isInsideRandom && moduleStyles.timelineElementInsideRandom,
-        isSkipSound && moduleStyles.timelineElementSkipSound
+        isSkipSound && moduleStyles.timelineElementSkipSound,
+        isBlockSelected && moduleStyles.timelineElementBlockSelected,
+        onBlockSelected &&
+          !playingContext.isPlaying &&
+          moduleStyles.timelineElementClickable
       )}
       style={{
         width: barWidth * eventData.length,
         height,
         top,
         left
+      }}
+      onClick={event => {
+        if (onBlockSelected && !playingContext.isPlaying) {
+          onBlockSelected(eventData.blockId);
+        }
+        event.stopPropagation();
       }}
     >
       &nbsp;
@@ -71,7 +85,9 @@ TimelineElement.propTypes = {
   left: PropTypes.number,
   when: PropTypes.number.isRequired,
   skipContext: PropTypes.object,
-  currentPlayheadPosition: PropTypes.number.isRequired
+  currentPlayheadPosition: PropTypes.number.isRequired,
+  selectedBlockId: PropTypes.string,
+  onBlockSelected: PropTypes.func
 };
 
 export default TimelineElement;
