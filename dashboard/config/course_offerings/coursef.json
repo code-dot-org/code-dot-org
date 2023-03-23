@@ -8,8 +8,8 @@
   "marketing_initiative": "CSF",
   "grade_levels": "5",
   "header": "CS Fundamentals",
-  "image": null,
-  "cs_topic": null,
+  "image": "https://images.code.org/8da9900cd5e57362d775845ae9d3407d-Course F.png",
+  "cs_topic": "art_and_design,app_design,games_and_animations,internet,programming",
   "school_subject": null,
-  "device_compatibility": null
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
 }

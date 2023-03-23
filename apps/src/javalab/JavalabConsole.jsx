@@ -217,7 +217,12 @@ class JavalabConsole extends React.Component {
 
     return (
       <div style={style}>
-        <PaneHeader id="pane-header" style={styles.header} hasFocus>
+        <PaneHeader
+          id="pane-header"
+          style={styles.header}
+          hasFocus
+          isOldPurpleColor
+        >
           <PaneSection
             className={'pane-header-section pane-header-section-left'}
           />
@@ -232,6 +237,7 @@ class JavalabConsole extends React.Component {
             <PaneButton
               id="javalab-console-clear"
               headerHasFocus
+              isLegacyStyles
               isRtl={false}
               onClick={() => {
                 clearConsoleLogs();
