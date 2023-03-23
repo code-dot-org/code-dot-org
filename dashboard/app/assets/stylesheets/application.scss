@@ -3826,17 +3826,9 @@ html[dir=rtl] {
   border: 2px solid $neutral_dark;
   margin-top: 1px !important;
   margin-right: 2px;
-  height: 28px;
-  padding: 0 !important;
+  height: 16px;
+  padding: 6px !important;
   border-radius: 4px 0 0 4px !important;
-
-  i {
-    font-size: 20px;
-    padding-right: 8px;
-    padding-left: 8px;
-    line-height: 26px;
-    color: $neutral_dark;
-  }
 
   html[dir=rtl] & {
     float: left;
@@ -3851,14 +3843,15 @@ html[dir=rtl] {
     position: relative;
     z-index: 1000;
 
-    i {
-      color: $neutral_white;
+    img {
+      // paint native Microsoft icon full black and set it's color to $neutral_white
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(111deg) brightness(101%) contrast(100%);
     }
   }
 
   img {
-    display: none;
-    filter: grayscale(1);
+    // paint native Microsoft icon full black and set it's color to $neutral_dark
+    filter: brightness(0) saturate(100%) invert(15%) sepia(31%) saturate(359%) hue-rotate(169deg) brightness(94%) contrast(91%);
   }
 }
 
