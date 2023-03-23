@@ -18,8 +18,10 @@ import {AnalyticsContext, PlayingContext, PlayerUtilsContext} from '../context';
 import TopButtons from './TopButtons';
 import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
-import AppConfig, {getBlockMode} from '../appConfig';
+import AppConfig from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
+import ProgressManager from '../progress/ProgressManager';
+import MusicValidator from '../progress/MusicValidator';
 import Video from './Video';
 import MusicLibrary from '../player/MusicLibrary';
 
@@ -61,6 +63,7 @@ class UnconnectedMusicView extends React.Component {
     this.analyticsReporter = new AnalyticsReporter();
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
+
     // Increments every time a trigger is pressed;
     // used to differentiate tracks created on the same trigger
     this.triggerCount = 0;
@@ -78,7 +81,6 @@ class UnconnectedMusicView extends React.Component {
     }
 
     this.state = {
-      instructions: null,
       isPlaying: false,
       currentPlayheadPosition: 0,
       updateNumber: 0,
@@ -107,30 +109,51 @@ class UnconnectedMusicView extends React.Component {
 
     document.body.addEventListener('keyup', this.handleKeyUp);
 
-    this.loadLibrary().then(libraryJson => {
-      const library = new MusicLibrary(libraryJson);
+    const promises = [];
+    promises.push(this.loadLibrary());
+    if (AppConfig.getValue('load-progression') === 'true') {
+      promises.push(this.loadProgression());
+    }
+
+    Promise.all(promises).then(values => {
+      // Process library, which includes setting up the toolbox.
+      const libraryJson = values[0];
+      this.library = new MusicLibrary(libraryJson);
+
+      // Process progression first, if there is one, since
+      // it might affect the toolbox.
+      if (AppConfig.getValue('load-progression') === 'true') {
+        const progression = values[1];
+
+        const musicValidator = new MusicValidator(
+          this.getIsPlaying,
+          this.player
+        );
+
+        this.progressManager = new ProgressManager(
+          progression,
+          musicValidator,
+          this.onProgresschange
+        );
+        this.setState({
+          showInstructions: !!progression
+        });
+
+        this.setAllowedSoundsForProgress();
+      }
+
       this.musicBlocklyWorkspace.init(
         document.getElementById('blockly-div'),
         this.onBlockSpaceChange,
-        this.player
+        this.player,
+        this.progressManager?.getCurrentStepDetails().toolbox
       );
-      this.player.initialize(library);
+      this.player.initialize(this.library);
       setInterval(this.updateTimer, 1000 / 30);
 
-      Globals.setLibrary(library);
+      Globals.setLibrary(this.library);
       Globals.setPlayer(this.player);
-      this.library = library;
     });
-
-    // Only attempt to load instructions if configured to.
-    if (AppConfig.getValue('show-instructions') === 'true') {
-      this.loadInstructions().then(instructions => {
-        this.setState({
-          instructions: instructions,
-          showInstructions: !!instructions
-        });
-      });
-    }
   }
 
   componentDidUpdate(prevProps) {
@@ -155,6 +178,42 @@ class UnconnectedMusicView extends React.Component {
       });
 
       this.updateHighlightedBlocks();
+
+      this.progressManager?.updateProgress();
+    }
+  };
+
+  onProgresschange = () => {
+    // This is a way to tell React to re-render the scene, notably
+    // the instructions.
+    this.setState({updateNumber: this.state.updateNumber + 1});
+  };
+
+  getIsPlaying = () => {
+    return this.state.isPlaying;
+  };
+
+  onNextPanel = () => {
+    this.progressManager?.next();
+    this.stopSong();
+    this.clearCode();
+    this.setToolboxForProgress();
+    this.setAllowedSoundsForProgress();
+  };
+
+  setToolboxForProgress = () => {
+    if (this.progressManager) {
+      const allowedToolbox = this.progressManager.getCurrentStepDetails()
+        .toolbox;
+      this.musicBlocklyWorkspace.updateToolbox(allowedToolbox);
+    }
+  };
+
+  setAllowedSoundsForProgress = () => {
+    if (this.progressManager) {
+      this.library.setAllowedSounds(
+        this.progressManager.getCurrentStepDetails().sounds
+      );
     }
   };
 
@@ -179,17 +238,20 @@ class UnconnectedMusicView extends React.Component {
     }
   };
 
-  loadInstructions = async () => {
-    const instructionsFilename = `music-instructions-${getBlockMode().toLowerCase()}.json`;
-    const response = await fetch(baseUrl + instructionsFilename);
-    let instructions;
-    try {
-      instructions = await response.json();
-    } catch (error) {
-      console.error('Instructions load error.', error);
-      instructions = null;
+  loadProgression = async () => {
+    if (AppConfig.getValue('local-progression') === 'true') {
+      const defaultProgressionFilename = 'music-progression';
+      const progression = require(`@cdo/static/music/${defaultProgressionFilename}.json`);
+      return progression;
+    } else {
+      const progressionParameter = AppConfig.getValue('progression');
+      const progressionFilename = progressionParameter
+        ? `music-progression-${progressionParameter}.json`
+        : 'music-progression.json';
+      const response = await fetch(baseUrl + progressionFilename);
+      const progression = await response.json();
+      return progression;
     }
-    return instructions;
   };
 
   clearCode = () => {
@@ -375,6 +437,25 @@ class UnconnectedMusicView extends React.Component {
   };
 
   renderInstructions(position) {
+    if (!this.progressManager) {
+      return;
+    }
+
+    // For now, the instructions are intended for use with a
+    // progression.  We might decide to make them agnostic at
+    // some point.
+    // One advantage of passing everything through is that the
+    // instructions can potentially size themselves to the
+    // maximum possible content size, requiring no dynamic
+    // resizing or user scrolling.  We did this for the dynamic
+    // instructions in AI Lab.
+    const progression = this.progressManager.getProgression();
+
+    const progressState = this.progressManager.getCurrentState();
+    const currentPanel = progressState.step;
+    const message = progressState.message;
+    const satisfied = progressState.satisfied;
+
     return (
       <div
         className={classNames(
@@ -389,7 +470,10 @@ class UnconnectedMusicView extends React.Component {
         )}
       >
         <Instructions
-          instructions={this.state.instructions}
+          progression={progression}
+          currentPanel={currentPanel}
+          message={message}
+          onNextPanel={satisfied ? this.onNextPanel : null}
           baseUrl={baseUrl}
           vertical={position !== InstructionsPositions.TOP}
           right={position === InstructionsPositions.RIGHT}
