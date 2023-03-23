@@ -2138,6 +2138,7 @@
   "startOver": "Start Over",
   "startOverTitle": "Are you sure you want to start over?",
   "startOverBody": "This will reset the puzzle to its start state and reset all the data you've added or changed.",
+  "startWithUnit": "Start with unit:",
   "statsTableFailure": "Sorry, something went wrong. Please reload the page to try again.",
   "stayHere": "Stay here",
   "stepIn": "Step in",
