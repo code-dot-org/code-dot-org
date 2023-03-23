@@ -416,15 +416,11 @@ export default class MusicPlayer {
   // Returns an object containing two arrays.  One has the block IDs of all
   // blocks currently playing, while the other is for those not currently
   // playing.
-  getCurrentlyPlayingBlockIds(): {
-    playingBlockIds: string[];
-    notPlayingBlockIds: string[];
-  } {
+  getCurrentlyPlayingBlockIds(): string[] {
     const currentPlayheadPosition = this.getCurrentPlayheadPosition();
     const playbackEvents = this.getPlaybackEvents();
 
     const playingBlockIds: string[] = [];
-    const notPlayingBlockIds: string[] = [];
 
     playbackEvents.forEach((playbackEvent: PlaybackEvent) => {
       const currentlyPlaying =
@@ -434,12 +430,10 @@ export default class MusicPlayer {
 
       if (currentlyPlaying) {
         playingBlockIds.push(playbackEvent.blockId || '');
-      } else {
-        notPlayingBlockIds.push(playbackEvent.blockId || '');
       }
     });
 
-    return {playingBlockIds, notPlayingBlockIds};
+    return playingBlockIds;
   }
 
   /**

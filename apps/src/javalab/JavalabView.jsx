@@ -204,6 +204,7 @@ class JavalabView extends React.Component {
             topLeftPanel={height => (
               <TopInstructions
                 mainStyle={styles.instructions}
+                isOldPurpleColorHeader
                 standalone
                 displayDocumentationTab
                 displayReviewTab
