@@ -7661,6 +7661,8 @@ en:
               name: Physical Computing PSP
             lesson-9:
               name: Microbit Playground
+            lesson-10:
+              name: Pulse Survey to Clone
         csc-pilot-2022-ecosystems:
           lesson_groups: {}
           name: csc-pilot-2022-ecosystems
@@ -8668,8 +8670,40 @@ en:
           description: "This unit expands on data structures introduced in Unit 3 to create tables of data using two-dimensional (2D) arrays. Students identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing 2D arrays and apply standard algorithms to find and manipulate elements. As students analyze problems involving 2D arrays, they revisit these standard algorithms to determine what code needs to be added or modified and to interact with completed program code. Students apply these concepts to manipulate pixels and in The Theater to create image filters in addition to working with primitive values and various object references. Additionally, students use the programming knowledge and skills they have acquired to consider the impacts of programs on society, economies, and culture.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p>\n\n-   Declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list\n\n-   Access and modify elements in a two-dimensional (2D) array using row and column indexes\n\n-   Write nested loops to traverse a two-dimensional (2D) array in row-major and column-major order\n\n-   Write nested enhanced `for` loops to traverse a two-dimensional (2D) array\n\n-   Apply standard 1D array algorithms to a 2D array\n\n-   Discuss the beneficial and harmful impacts of programs\n    </div>\n    </details>\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">✅ AP Classroom Personal Progress Checks</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p>To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's <a href=\"https://studio.code.org/s/csa2-2023/standards\" target=\"_blank\"><strong>Standards</strong></a> page. You can find instructions and video demonstrations to do this on <a href=\"https://apcentral.collegeboard.org/instructional-resources/ap-classroom\" target=\"_blank\"><strong>AP Central</strong></a>.</p>\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 8\n\n<p><em><strong>Note:</strong> Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.</em></p>\n    </div>\n</details>\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][0] to let the Code.org curriculum team know how the unit went."
           student_description: "This unit expands on data structures introduced in Unit 3 to create tables of data using two-dimensional (2D) arrays. You identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing 2D arrays and apply standard algorithms to find and manipulate elements. As you analyze problems involving 2D arrays, you revisit these standard algorithms to determine what code needs to be added or modified and to interact with completed program code. You apply these concepts to manipulate pixels using The Theater to create image filters in addition to working with primitive values and various object references. Additionally, you use the programming knowledge and skills you have acquired to consider the impacts of programs on society, economies, and culture.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p>\n\n-   Declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list\n\n-   Access and modify elements in a two-dimensional (2D) array using row and column indexes\n\n-   Write nested loops to traverse a two-dimensional (2D) array in row-major and column-major order\n\n-   Write nested enhanced `for` loops to traverse a two-dimensional (2D) array\n\n-   Apply standard 1D array algorithms to a 2D array\n\n-   Discuss the beneficial and harmful impacts of programs\n    </div>\n    </details>"
         csa6-2023:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Project Planning
+            lesson-2:
+              name: Substrings
+            lesson-3:
+              name: Integer and Double Objects
+            lesson-4:
+              name: ArrayLists
+            lesson-5:
+              name: Manipulating Elements
+            lesson-6:
+              name: Comparing Strings
+            lesson-7:
+              name: Lists of Objects
+            lesson-8:
+              name: Removing Elements
+            lesson-9:
+              name: ArrayList and String Algorithms
+            lesson-10:
+              name: Natural Language Processing Project
+            lesson-11:
+              name: TemperatureAction FRQ
+            lesson-12:
+              name: Unit 6 Assessment
+            lesson-13:
+              name: Natural Language Processing Project [1-Day Version]
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Alternate Lessons
           name: csa6-2023
           title: ArrayLists and String Methods
           description_audience: ''
@@ -8941,11 +8975,15 @@ en:
               display_name: 'Chapter 2: Building Physical Prototypes'
             lessonGroup-4:
               display_name: Introduction to App Lab
+            lessonGroup-5:
+              display_name: Old Lessons
+            lessonGroup-6:
+              display_name: New Lessons
           name: csd6-2023
-          title: Creating Apps for Devices ('23-'24)
+          title: "(Option A) Creating Apps with Devices - Circuit Playground ('23-'24)"
           description_audience: ''
           description_short: Learn to program with physical devices.
-          description: "In the Creating Apps for Devices unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the circuit playground and an app screen. On their circuit playground, students learn to control inputs like buttons or toggle switches and outputs like the buzzer or LED. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n**Goals:**\n\n-   Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n-   Create app prototypes that use a physical device to control a digital app.\n\n**Big Questions:**\n\n-   What inputs and outputs are available on a physical device?\n-   What inputs and outputs are available on an app?\n-   How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n**Goals:**\n\n-   Design and build a physical computing device that integrates sensors with digital apps. \n-   Create app prototypes that use a physical device to solve real-world problems.\n-   Use physical computing to solve problems in fun and innovative ways.\n\n**Big Questions:**\n\n-   How can a physical device use sensors to react to a physical environment?\n-   How can simple hardware be used to develop innovative new products?\n\n:::\n\n::: details [**Implementation Guidance for Physical Computing**]\n\n-   This unit requires students to have access to Circuit Playground's - [click here][0] for more information about using Circuit Playground's in your classroom\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][1] and [Differentiation Guide][2]\n-   You can view the full [Curriculum Guide][3] and [Implementation Guide][4] for more information about this unit\n    :::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices Self-Paced Professional Development Module][5]. The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][6] to let the Code.org curriculum team know how the unit went."
+          description: "In the Creating Apps for Devices unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **Circuit Playground** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **micro:bit** devices by assigning the [(Option B) Creating Apps with Devices unit][0]. Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the circuit playground and an app screen. On their circuit playground, students learn to control inputs like buttons or toggle switches and outputs like the buzzer or LED. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n**Goals:**\n\n-   Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n-   Create app prototypes that use a physical device to control a digital app.\n\n**Big Questions:**\n\n-   What inputs and outputs are available on a physical device?\n-   What inputs and outputs are available on an app?\n-   How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n**Goals:**\n\n-   Design and build a physical computing device that integrates sensors with digital apps. \n-   Create app prototypes that use a physical device to solve real-world problems.\n-   Use physical computing to solve problems in fun and innovative ways.\n\n**Big Questions:**\n\n-   How can a physical device use sensors to react to a physical environment?\n-   How can simple hardware be used to develop innovative new products?\n\n:::\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n\n-   This unit requires students to have access to Circuit Playground's - [click here][1] for more information about using Circuit Playground's in your classroom\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][2] and [Differentiation Guide][3]\n-   You can view the full [Curriculum Guide][4] and [Implementation Guide][5] for more information about this unit\n    :::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices Self-Paced Professional Development Module][6]. The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][7] to let the Code.org curriculum team know how the unit went."
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
         csd7-2023:
           lessons: {}
@@ -9282,7 +9320,7 @@ en:
             -   Get an introduction to the AP Computer Science A course
             -   Learn Code.org’s curricular approach to CSA
 
-            **Estimated Time:** 60 minutes
+            **Estimated Time:** 1 hour
           student_description: |-
             This module is for anyone using these professional learning modules for CSA.
 
@@ -9293,12 +9331,15 @@ en:
             -   Get an introduction to the AP Computer Science A course
             -   Learn Code.org’s curricular approach to CSA
 
-            **Estimated Time:** 60 minutes
+            **Estimated Time:** 1 hour
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csa1-2023
         self-paced-pl-csa2-2023:
           title: 'Module 2: Navigating Code.org'
-          description: "This module is intended for teachers who are new to Code.org and the Code.org platform. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching the course.\n\n**Estimated Time:** 70 minutes"
+          description: "This module is intended for teachers who are new to Code.org and the Code.org platform. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching the course.\n\n**Estimated Time:** 1 hour"
           student_description: |-
             This module is intended for teachers who are new to Code.org and the Code.org platform.
 
@@ -9309,9 +9350,12 @@ en:
             -   Locate and use course lesson plans and teacher resources.
             -   Learn how to access support while teaching the course.
 
-            **Estimated Time:** 70 minutes
+            **Estimated Time:** 1 hour
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csa2-2023
         self-paced-pl-csa3-2023:
           title: 'Module 3: Support for text-based programming'
           description: |-
@@ -9330,7 +9374,7 @@ en:
             -   Access and modify elements in arrays
             -   Traverse arrays
 
-            **Estimated Time:** 5.5 hours
+            **Estimated Time:** 6 hours
           student_description: |-
             This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
 
@@ -9347,7 +9391,7 @@ en:
             -   Access and modify elements in arrays
             -   Traverse arrays
 
-            **Estimated Time:** 5.5 hours
+            **Estimated Time:** 6 hours
           description_short: ''
           description_audience: ''
           lessons: {}
@@ -9567,11 +9611,11 @@ en:
             **You will:**
 
             -   Use Object Oriented Programming concepts in Code.org’s Neighborhood
-            -   Learn how to use UML diagrams
-            -   Call methods from the `Painter` class
             -   Instantiate an object
+            -   Call methods from the `Painter` class
+            -   Learn how to use UML diagrams
 
-            **Estimated Time:** ~2 hours
+            **Estimated Time:** 2 hours
           student_description: |-
             This module is for any teacher who is:
 
@@ -9583,11 +9627,11 @@ en:
             **You will:**
 
             -   Use Object Oriented Programming concepts in Code.org’s Neighborhood
-            -   Learn how to use UML diagrams
-            -   Call methods from the `Painter` class
             -   Instantiate an object
+            -   Call methods from the `Painter` class
+            -   Learn how to use UML diagrams
 
-            **Estimated Time:** ~2 hours
+            **Estimated Time:** 2 hours
         katies-playground:
           lessons:
             lesson-1:
@@ -9739,21 +9783,18 @@ en:
               name: How Blockchain Works (Video Series)
           lesson_groups: {}
           name: blockchain-2023
-          title: Blockchain
+          title: How Blockchain Works
           description_audience: ''
           description_short: ''
-          description: |-
-            These lessons supplement the [How Blockchain Works][0] video series. Each lesson focused on a single video from the series, diving-deeper into the concepts introduced in the videos. Lessons focus on creating an **immersive experience** for students, where students engage in an activity or simulation and then reflect on the experience as a way to build understanding around Blockchain technology and empathy with its users. Some lessons focus more on the technology behind Blockchain, while other lessons focus on the economic and societal impacts of Blockchain technologies.
-
-            The last lesson in the unit is for classrooms who only have a single day but would like to introduce students to Blockchain.
-          student_description: ''
+          description: "These lessons supplement the [How Blockchain Works][0] video series. Each lesson focused on a single video from the series, diving-deeper into the concepts introduced in the videos. Lessons focus on creating an **immersive experience** for students, where students engage in an activity or simulation and then reflect on the experience as a way to build understanding around Blockchain technology and empathy with its users. Some lessons focus more on the technology behind Blockchain, while other lessons focus on the economic and societal impacts of Blockchain technologies.\n\n### Implementation Options\n\nClick one of the options below to expand and view more details.\n\n::: details [<span style=\"font-size: 1.2em; font-weight: bold;\">\"I want to teach them all!\"</spa>]\nLessons 1-5 can be taught as a 5-day sequence, where each day focuses on an individual video from the video series and dives deeper into the concepts introduced. Classrooms that go this direction should hide Lesson 6, which does not fit in this sequence. [Click here to learn more about hiding lesson][1]\n:::\n\n::: details [<span style=\"font-size: 1.2em; font-weight: bold;\">\"I want to teach a specific lesson or integrate into another class\"</span>]\nEach lesson can stand on its own and be taught independently from the others. This is especially useful if you would like to integrate a lesson into another subject or an existing computer science, cybersecurity, or economics class. Classrooms that go this direction should hide all lessons except the one you want to teach. [Click here to learn more about hiding lesson][2]\n:::\n::: details [<span style=\"font-size: 1.2em; font-weight: bold;\">\"I Only Have a Day\"</span>]\nLesson 6 is designed for classrooms that want to introduce blockchain to students, but only have a day to do so. This lesson provides a notetaker for students as the class watches the entire video sequence. Classrooms that go this direction should hide all lessons except for Lesson 6. [Click here to learn more about hiding lesson][3]\n:::\n<br />\n<br />"
+          student_description: Learn how Blockchain works by participating in different immersive experiences and watching the [How Blockchain Works][0] video series!
         self-paced-pl-csc-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Teaching CS Connections
           title: Teaching CS Connections
-          description: "This professional learning module is designed to help you prepare to teach Code.org's CS Connections. \n\n-   Get an overview of CS Connections.\n\n-   Set up a plan to implement a CS Connections module.\n\n-   Practice key concepts included in lessons.\n\n-   Preview end of module projects.\n\n-   Consider strategies to create positive CS learning experiences.\n\n**Suggested Time:** 75 minutes"
-          student_description: "This professional learning module is designed to help you prepare to teach Code.org's CS Connections. \n\nGet an overview of CS Connections.\n\nSet up a plan to implement a CS Connections module.\n\nPractice key concepts included in lessons.\n\nPreview end of module projects.\n\nConsider strategies to create positive CS learning experiences.\n\n**Suggested Time:** 75 minutes"
+          description: "This professional learning module is designed to help you prepare to teach Code.org's CS Connections. \n\n-   Get an overview of CS Connections.\n\n-   Set up a plan to implement a CS Connections module.\n\n-   Practice key concepts included in lessons.\n\n-   Preview features and resources.\n\n-   Consider strategies to create positive CS learning experiences.\n\n**Suggested Time:** 75 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's CS Connections. \n\nGet an overview of CS Connections.\n\nSet up a plan to implement a CS Connections module.\n\nPractice key concepts included in lessons.\n\n-   Preview features and resources.\n\nConsider strategies to create positive CS learning experiences.\n\n**Suggested Time:** 75 minutes"
           description_short: ''
           description_audience: ''
           lessons: {}
@@ -9860,3 +9901,238 @@ en:
           description_short: ''
           description: "# Welcome to the 2023 Ceeper Learning: Core Foundations course"
           student_description: ''
+        csc-particles-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: csc-particles-2023
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csc-bookcovers-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: csc-bookcovers-2023
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
+          title: Pre-reader Express (2023)
+          description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
+          description_audience: 'Ages: 4-8'
+          lessons: {}
+          name: pre-express-2023
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_sprites:
+              display_name: Sprites
+            lessonGroup-9:
+              display_name: Events
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_functions:
+              display_name: Functions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: For Loops
+            end_of_course_project:
+              display_name: End of Course Project
+          title: Express Course (2022)
+          description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
+          description_audience: 'Ages: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
+            lessonGroup-5:
+              display_name: End of Course Project
+          title: Course A (2022)
+          description: 'Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. '
+          student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers.
+          description_audience: 'Ages: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_impacts:
+              display_name: Impacts of Computing
+            csf_events:
+              display_name: Events
+            lessonGroup-6:
+              display_name: End of Course Project
+          title: Course B (2022)
+          description: We developed Course B with first graders in mind. While the concepts in Course B parallel those in Course A, students learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
+          student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
+          description_audience: 'Ages: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
+            csf_data:
+              display_name: Data
+            end_of_course_project:
+              display_name: End of Course Project
+          title: Course C (2022)
+          description: We developed Course C for students in second grade. Students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
+          student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          description_short: Learn the basics of computer science and create your own art, stories, and games.
+          description_audience: 'Ages: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_events:
+              display_name: Events
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            end_of_course_project:
+              display_name: End of Course Project
+          title: Course D (2022)
+          description: 'We created course D for students in third grade.  The course begins with a review of the concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, while loops, conditionals, and more. '
+          student_description: Learn about loops, conditionals, and events. Beyond coding, learn about digital citizenship.
+          description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
+          description_audience: 'Ages: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: Nested Loops
+            csf_functions:
+              display_name: Functions
+            csf_nested_loops:
+              display_name: Conditionals
+            lessonGroup-7:
+              display_name: Impacts of Computing
+            end_of_course_project:
+              display_name: End of Course Project
+          title: Course E (2022)
+          description: We created Course E for students in fourth grade. The course begins with an introduction to the Sprite Lab programming tool. Students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety. Following these lessons, students will engage in more complex coding. Students will learn about nested loops, functions, and conditionals. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
+          student_description: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
+          description_short: Learn the basics of sprites, nested loops, and functions.
+          description_audience: 'Ages: 8-12'
+        problem-solving-computing-2023:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Computers and Problem Solving'
+            lessonGroup-4:
+              display_name: Alternative Lessons
+          name: problem-solving-computing-2023
+          title: Problem Solving and Computing ('23-'24)
+          description_audience: ''
+          description_short: Learn how humans work with computers to solve problems.
+          description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing. \n\n::: details [**Chapter 1 Overview**]\n**Description:** This chapter guides students to develop and adopt a more formal structured problem solving process by reflecting on problems they have problems they have encountered, both in the classroom and everyday life. By working through a diverse set of problems, such as logic puzzles, engineering challenges, and planning a trip, students learn to identify different classes of problems, decompose large problems, and develop their personal problem solving skills.\n\n**Goals:**\n\n-   Learn how to use a structured problem solving process and apply it to address various problems.\n-   Create a collaborative classroom environment where students view computer science as relevant, fun, and empowering.\n\n**Big Questions:** \n\n-   What strategies and processes can I use to become a more effective problem solver?\n    :::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter presents computers as machines that solve information problems. Students begin by building a common definition for a computer that focuses on functionality instead of specific hardware. They then explore the ways that computers approach problems. For their final project, students propose an app that could be used to solve a problem of their choosing.\n\n\\*\\*Goals:\n\n-   Identify the defined characteristics of a computer and how it is used to solve information problems. \n-   Use a structured problem solving process to design solutions that use computing technology. \n-   Create a collaborative classroom environment where students view computer science as relevant, fun, and empowering. \n\n**Big Questions:** \n\n-   How do computers help people to solve problems?\n-   How do people and computers approach problems differently?\n-   What does a computer need from people in order to solve problems effectively?\n    :::\n\n::: details [**Implementation Guidance for Problem Solving and Computing**]\n\n-   The first chapter of this unit should be completed before any other unit in CS Discoveries\n-   Alternate lessons are provided for some lessons in this unit, depending on your classroom context\n-   You can view the full [Curriculum Guide][0] and [Implementation Guide][1] for more information about this unit\n    :::\n\n<br>\n<br>"
+          student_description: Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.
+        web-development-2023:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Creating Webpages'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Multi-page Websites'
+          name: web-development-2023
+          title: Web Development ('23-'24)
+          description_audience: ''
+          description_short: " Learn to build your own web site in Web Lab."
+          description: "In Web Development, students are empowered to create and share content on their own web pages. They begin by thinking about the role of the web and how it can be used as a medium for creative expression. As students develop their pages and begin to see themselves as programmers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem solving as it relates to programming while they learn valuable skills such as debugging, using resources, and teamwork. At the conclusion of the unit, students will have created a personal website they can publish and share.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students use computing as a form of self expression as they design and develop basic web pages.   Focusing on the tags, keywords, and syntax used to communicate instructions to the computer, students use HTML to structure the content of a web page. They also explore the privacy and intellectual property implications of publishing their work online.\n\n**Goals:**\n\n-   Create digital artifacts that use multiple computer languages to control the structure and style of their content.\n-   Create a website as a form of personal expression.\n-   Use different programming languages to solve different problems.\n-   Examine their role and responsibilities as both creators and consumers of digital media.\n\n**Big Questions:**\n\n-   Why do people create websites?\n-   How can text communicate content, structure, and style on a web page?\n-   How do I safely and appropriately make use of the content published on the Internet?\n-   What strategies can I use when coding to find and fix issues?\n    :::\n\n::: details [**Chapter 2 Overview**]\n**Description:** Students expand their ideas of websites beyond personal expression and begin to see them as a way to solve problems.  Students build on their collaborative skills and work in teams to create multi-page websites that solve a problem.\n\n**Goals:**\n\n-   Create digital artifacts that use multiple computer languages to control the structure and style of their content.\n-   Create a website that solves a problem.\n-   Use different programming languages to solve different problems.\n-   Examine their role and responsibilities as both creators and consumers of digital media.\n\n**Big Questions:**\n\n-   How can websites be used to address problems in the world?\n-   What strategies can teams use to work better together?\n-   How do I know what information can be trusted online?\n    :::\n\n::: details [**Implementation Guidance for Web Development**]\n\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][0] and [Differentiation Guide][1]\n-   You can view the full [Curriculum Guide][2] and [Implementation Guide][3] for more information about this unit\n    :::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][4] to let the Code.org curriculum team know how the unit went."
+          student_description: " In this unit, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
+        interactive-games-animations-2023:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Images and Animations'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Building Games'
+          name: interactive-games-animations-2023
+          title: Interactive Animations and Games ('23-'24)
+          description_audience: ''
+          description_short: Learn to program animations, interactive art, and games in Game Lab.
+          description: "In the Interactive Animations and Games unit, students create programmatic images, animations, interactive art, and games. Starting off with simple, primitive shapes and building up to more sophisticated sprite-based games, students become familiar with the programming concepts and the design process computer scientists use daily. They then learn how these simpler constructs can be combined to create more complex programs. In the final project, students develop a personalized, interactive program.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students build up toward programming interactive animations in the Game Lab environment.  They begin with simple shapes and sprite objects, then use loops to create flipbook style animations.  Next, they learn to use booleans and conditionals to respond to user input.  At the end of the chapter, students design and create an interactive animation that they can share with the world.\n\n**Goals:**\n\n-   Create an interactive animation that includes basic programming concepts such as control structures, variables, user input, and randomness. \n-   Give and respond constructively to peer feedback, and work with their teammates to complete a project. \n-   View yourself as a computer programmer, and see programming as a fun and creative form of expression.\n\n**Big Questions:**\n\n-   What is a computer program?\n-   What are the core features of most programming languages?\n-   How does programming enable creativity and individual expression?\n-   What practices and strategies will help me as I write programs?\n    :::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter students combine the constructs that they learned in the first chapter to program more complex movement and collisions in their sprites.  As they create more complex programs, they begin to use functions to organize their code.  In the end, students use a design process to create an original game.\n\n**Goals:**\n\n-   Create an interactive game that includes basic programming concepts such as control structures, variables, user input, and randomness. \n-   Give and respond constructively to peer feedback, and work with their teammates to complete a project. \n-   Work with others to break down programming projects using sprites and functions.\n\n**Big Questions:**\n\n-   How do software developers manage complexity and scale?\n-   How can programs be organized so that common problems only need to be solved once?\n-   How can I build on previous solutions to create even more complex behavior?\n    :::\n\n::: details [**Implementation Guidance for Interactive Animations and Games**]\n\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][0] and [Differentiation Guide][1]\n-   You can view the full [Curriculum Guide][2] and [Implementation Guide][3] for more information about this unit\n    :::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][4] to let the Code.org curriculum team know how the unit went."
+          student_description: " In this unit, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
+        design-process-2023:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: User Centered Design'
+            lessonGroup-3:
+              display_name: 'Chapter 2: App Prototyping'
+          name: design-process-2023
+          title: The Design Process ('23-'24)
+          description_audience: ''
+          description_short: Learn how to design a program that meets the needs of your users.
+          description: "The Design Process unit transitions students from thinking about computer science as a tool to solve their own problems towards considering the broader social impacts of computing. Through a series of design challenges, students are asked to consider and understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which students have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test their solutions with real users to get feedback and drive further iteration.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This chapter introduces the design process as a specific version of the problem solving process in which empathy for a user's needs is consistently integrated. Students learn strategies for identifying user needs and assessing how well different designs address them. In particular they learn how to develop a paper prototype, how to gather and respond to feedback about a prototype, and consider ways different user interfaces do or do not affect the usability of their apps.\n\n**Goals:** \n\n-   See the design process as a form of problem solving that prioritizes the needs of a user. \n-   Identify user needs and assess how well different designs address them. \n-   Develop paper prototypes, gather and respond to feedback about a prototype, and consider ways different user interfaces do or do not affect the usability of their apps. \n\n**Big Questions:**\n\n-   How do designers identify the needs of their user?\n-   How can we ensure that a user's needs are met by our designs?\n-   What processes will best allow us to efficiently create, test, and iterate upon our designs?\n    :::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter is focused on a long running group project that allows students to apply all they've learned about User-Centered Design to develop an app prototype. Working in teams, students identify a social issue that they care about and design and prototype an app to address that issue. This is an opportunity for students to explore other roles in software development, such as product management, marketing, design, and testing.\n\n**Goals:**\n\n-   Develop digital prototypes, gather and respond to feedback about a prototype, and consider ways different user interfaces do or do not affect the usability of their apps. \n-   Understand other roles in software development, such as product management, marketing, design, and testing, and how to use what they have learned about computer science as a tool for social impact.\n\n**Big Questions:**\n\n-   How do teams effectively work together to develop software?\n-   What roles beyond programming are necessary to design and develop software?\n-   How do designers incorporate feedback into multiple iterations of a product?\n    :::\n\n::: details [**Implementation Guidance for The Design Process**]\n\n-   You can view the full [Curriculum Guide][0] and [Implementation Guide][1] for more information about this unit\n    :::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][2] to let the Code.org curriculum team know how the unit went."
+          student_description: This unit introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
+        data-society-2023:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Representing Information'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Solving Data Problems'
+          name: data-society-2023
+          title: Data and Society ('23-'24)
+          description_audience: ''
+          description_short: Learn how people use computers to solve data problems.
+          description: "The Data and Society unit is about the importance of using data to solve problems and it highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter, students learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. In the final project, students gather their own data and use it to develop an automated solution to a problem.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This chapter focuses on data representation and its role in solving information problems.  Students learn what a representation system needs to be useful, and how computers are able to represent different types of information using binary systems.  For the chapter project, students represent their perfect day in a binary punch card and trade with classmates to decipher.\n\n**Goals:**\n\n-   Understand the role of data and data representation in solving information problems. \n-   Explain the necessary components of any data representation scheme, as well as the particulars of binary and the common ways that various types of simple and complex data are represented in binary code. \n\n**Big Questions:**\n\n-   Why is representation important in problem solving?\n-   What features does a representation system need to be useful?\n-   What is necessary to create usable binary representation systems?\n-   How can we combine systems together to get more complex information?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** Students explore how data can be used to answer interesting questions and solve problems.  Using a modified version of the general Problem Solving Process, students look at how computers and humans use data differently and the pros and cons of automating problem solving.  After learning ways that computers use data in the real world, students choose their own problem and use data to address it.\n\n**Goals:**\n\n-   Investigate and understand how humans and computers use data differently.\n-   Design and implement a data-based solution to a given problem and determine how the different aspects of the problem solving process could be automated.\n\n**Big Questions:**\n\n-   How does data help us to solve problems?\n-   How do computers and humans use data differently?\n-   What parts of the data problem solving process can be automated?\n-   What kinds of problems do computers use data to solve in the real world?\n\n:::\n\n::: details [**Implementation Guidance for Data and Society**]\n\n-   You can view the full [Curriculum Guide][0] and [Implementation Guide][1] for more information about this unit\n    :::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][2] to let the Code.org curriculum team know how the unit went."
+          student_description: This unit is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
+        aiml-2023:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Intro to App Lab
+            lessonGroup-3:
+              display_name: Chapter 1
+            lessonGroup-4:
+              display_name: Chapter 2
+          name: aiml-2023
+          title: AI and Machine Learning ('23-'24)
+          description_audience: ''
+          description_short: Learn to about Artificial Intelligence and Machine Learning.
+          description: "This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students learn the basics of machine learning and use a tool called AI Lab to create machine learning models that can be used in App Lab. The unit starts with an overview of machine learning and how computers can use patterns in data to make decisions and predictions. Then, students learn how to use AI Lab to train models from tabular data while exploring issues of bias. Lessons follow a repeating \"unplugged - AI Lab - App Lab\" pattern so students are continually exposed to the concepts and tools of machine learning. The chapter culminates in a project where students select from a set of real-world datasets to train a machine learning model and create an app.\n\n**Goals:**\n\n-   Create a machine learning model in AI Lab to solve a problem, and use App Lab to create an app that uses their model. \n-   Understand how machine learning models make decisions from data\n\n**Big Questions:**\n\n-   How does machine learning find patterns in data to make decisions?\n-   How can we avoid bias when training a machine learning model?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter prepares students to be machine learning scientists to create an app that addresses an issue in their community. Students follow along with a fictional group of students as they define an issue, develop a survey to collect data, analyze their data in AI Lab, create a model card, and create an app to solve their problem. Then, in the final project, students repeat these same steps with an issue they care about in their community.\n\n**Goals:**\n\n-   Create machine learning models in AI Lab  from their own data and use App Lab to create an app that uses their model to solve problems in their community. \n\n**Big Questions:**\n\n-   How can machine learning be used to solve problems in our community?\n\n:::\n\n::: details [**Implementation Guidance for the AI and Machine Learning Unit**]\n\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][0] and [Differentiation Guide][1]\n-   You can view the full [Curriculum Guide][2] and [Implementation Guide][3] for more information about this unit\n    :::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module][4]. The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.\n:::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][5] to let the Code.org curriculum team know how the unit went."
+          student_description: This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
