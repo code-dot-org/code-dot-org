@@ -4635,7 +4635,12 @@ de:
               display_name: Inhalt
             lessonGroup-4:
               display_name: Alternate Lessons (alternative Lerneinheiten)
-        csa6-2023: {}
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         csa7-2023: {}
         csa8-2023: {}
         vpl-csd3-ayw-pilot-2022: {}
@@ -4846,3 +4851,167 @@ de:
         poetry-2023: {}
         poemmaker-2023: {}
         dlp-core-2023: {}
+        csc-particles-2023: {}
+        csc-bookcovers-2023: {}
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_events:
+              display_name: Ereignisse
+          description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
+          student_description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
+          description_short: 'Eine Einführung in die Informatik für Leseanfänger: Kombiniert das Beste aus unseren Kursen für die Vorschule und für Erstklässler.'
+          description_audience: 'Alter: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_sprites:
+              display_name: Sprites
+            lessonGroup-9:
+              display_name: Ereignisse
+            csf_loops:
+              display_name: Schleifen
+            csf_conditionals:
+              display_name: Bedingungen
+            csf_functions:
+              display_name: Funktionen
+            csf_variables:
+              display_name: Variablen
+            csf_for_loops:
+              display_name: Schleifen mit dem Wiederhol-Block
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+          description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
+          student_description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
+          description_short: 'Eine Einführung in die Informatik: kombiniert das Beste aus unserem Grundschullehrplan für ältere SchülerInnen.'
+          description_audience: 'Alter: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_events:
+              display_name: Ereignisse
+            lessonGroup-5:
+              display_name: Projekt am Ende des Kurses
+          title: Kurs A (2021)
+          student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
+          description_short: Eine Einführung in die Informatik für Leseanfänger.
+          description_audience: 'Alter: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_impacts:
+              display_name: Auswirkungen der Datenverarbeitung
+            csf_events:
+              display_name: Ereignisse
+            lessonGroup-6:
+              display_name: Projekt am Ende des Kurses
+          title: Kurs B (2021)
+          student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
+          description_short: Eine Einführung in die Informatik für Leseanfänger. (Ähnlich wie Kurs A, aber mit mehr Konzepttiefe.)
+          description_audience: 'Alter: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_events:
+              display_name: Ereignisse
+            csf_data:
+              display_name: Daten
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+          title: Kurs C (2021)
+          student_description: Erstellen Sie Programme mit Sequenzen, Schleifen und Ereignissen. Übersetzen Sie Ihre Initialen in Binärzahlen, untersuchen Sie verschiedene Techniken der Problemlösung und lernen Sie, wie Sie mit Cybermobbing umgehen können. Erstellen Sie am Ende des Kurses Ihr ganz eigenes Spiel oder Ihre eigene Geschichte, die Sie mit anderen teilen können!
+          description_short: Lerne die Grundlagen der Informatik und erstelle Deine eigene Kunst, Geschichten und Spiele.
+          description_audience: 'Alter: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sequencing:
+              display_name: Sequencing
+            csf_events:
+              display_name: Ereignisse
+            csf_loops:
+              display_name: Schleifen
+            csf_conditionals:
+              display_name: Bedingungen
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+          title: Kurs D (2021)
+          description_short: Erfahre mehr über bedingte Anweisungen. Kreiere Deine eigene Kunst, Deine eigenen Spiele und sogar eine Tanzparty.
+          description_audience: 'Alter: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: Verschachtelte Schleifen
+            csf_functions:
+              display_name: Funktionen
+            csf_nested_loops:
+              display_name: Bedingungen
+            lessonGroup-7:
+              display_name: Auswirkungen der Datenverarbeitung
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+          description_short: Erlernen Sie die Grundlagen von Grafikobjekten, Nested Loops und Funktionen.
+          description_audience: 'Alter: 8-12'
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Computer und Problemlösung'
+        web-development-2023:
+          title: Webentwicklung
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit.
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder und Animationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Erstellen von Spielen'
+          student_description: In Lerneinheit 3 arbeiten Sie bei der Programmierung von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und baut auf anspruchsvollere spritebasierte Spiele auf, wobei dieselben Programmierkonzepte und der Designprozess eingesetzt werden, die Informatiker täglich verwenden. Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives Programm.
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Benutzerzentriertes Design'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: App Prototyping'
+          student_description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie, wie Sie die Bedürfnisse anderer besser verstehen und gleichzeitig eine Lösung für ein Problem entwickeln können. Die zweite Hälfte der Lerneinheit besteht aus einem iterativen Teamprojekt, bei dem die Teams die Möglichkeit haben, einen Bedarf zu identifizieren, der ihnen am Herzen liegt, Lösungen sowohl auf Papier als auch im App-Lab prototypisch zu entwickeln und Lösungen mit realen Benutzern zu testen, um Feedback zu erhalten und die Iteration weiter voranzutreiben.
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datenprobleme lösen'
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme zu lösen.
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können. Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren. Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Einführung in AppLab
+            lessonGroup-3:
+              display_name: Kapitel 1
+            lessonGroup-4:
+              display_name: Kapitel 2

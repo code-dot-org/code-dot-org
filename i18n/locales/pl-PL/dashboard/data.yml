@@ -710,6 +710,15 @@ pl:
         csa_nested_loops: 'CSA: Zagnieżdżone pętle'
         csa_one_dimensional_arrays: 'CSA: Tablice jednowymiarowe (1D)'
         csa_polymorphism: 'CSA: Polimorfizm'
+        csa_random_numbers: 'CSA: Liczby losowe'
+        csa_static_methods: 'CSA: Metody statyczne'
+        csa_static_variables: 'CSA: Zmienne statyczne'
+        csa_the_equals_method: 'CSA: Metoda equals() '
+        csa_welcome_to_the_theater: 'CSA: Witamy w Teatrze'
+        enter_your_own_poem: Wpisz swój własny wiersz
+        csa-example-solution-1: 'Programowanie na żywo Przykładowe rozwiązanie '
+        csd_sprite_properties: Właściwości duszka
+        csa-pl-documentation: Dokumentacja w Java Lab
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

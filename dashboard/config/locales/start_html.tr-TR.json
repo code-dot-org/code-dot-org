@@ -613,7 +613,8 @@
           "white": "beyaz"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
-          "?": "?"
+          "?": "?",
+          "Happy": "Mutlu"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "başlık"
@@ -646,7 +647,8 @@
           "low": "düşük"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "Güncelle"
+          "Update": "Güncelle",
+          "value": "değer"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "Başardın!"
@@ -721,16 +723,20 @@
           "Success!": "Başarılı!"
         },
         "CSD U6 analog light": {
-          "Update": "Güncelle"
+          "Update": "Güncelle",
+          "value": "değer"
         },
         "CSD U6 analog light_2018": {
-          "Update": "Güncelle"
+          "Update": "Güncelle",
+          "value": "değer"
         },
         "CSD U6 analog light_2019": {
-          "Update": "Güncelle"
+          "Update": "Güncelle",
+          "value": "değer"
         },
         "CSD U6 analog light_2021": {
-          "Update": "Güncelle"
+          "Update": "Güncelle",
+          "value": "değer"
         },
         "CSD U6 array piano": {
           "C": "C",
@@ -809,16 +815,20 @@
           "Medium": "Orta"
         },
         "CSD U6 emotion machine example": {
-          "?": "?"
+          "?": "?",
+          "Happy": "Mutlu"
         },
         "CSD U6 emotion machine example_2018": {
-          "?": "?"
+          "?": "?",
+          "Happy": "Mutlu"
         },
         "CSD U6 emotion machine example_2019": {
-          "?": "?"
+          "?": "?",
+          "Happy": "Mutlu"
         },
         "CSD U6 emotion machine example_2021": {
-          "?": "?"
+          "?": "?",
+          "Happy": "Mutlu"
         },
         "CSD U6 frequency": {
           "short": "kısa",
@@ -1519,10 +1529,12 @@
           "Loading...": "Yükleniyor..."
         },
         "ml-intro app lab-book recommender demo-2021": {
-          "Predict": "Tahmin Et"
+          "Predict": "Tahmin Et",
+          "Silly": "Saçma"
         },
         "ml-intro app lab-book recommender demo_2022": {
-          "Predict": "Tahmin Et"
+          "Predict": "Tahmin Et",
+          "Silly": "Saçma"
         },
         "ml-model card-medical app v2 2021-2": {
           "W": "B",
@@ -1539,10 +1551,12 @@
           "head": "baş"
         },
         "ml-model cards-book recommender model card": {
-          "Predict": "Tahmin Et"
+          "Predict": "Tahmin Et",
+          "Silly": "Saçma"
         },
         "ml-model cards-book recommender model card_2022": {
-          "Predict": "Tahmin Et"
+          "Predict": "Tahmin Et",
+          "Silly": "Saçma"
         },
         "ml-models in applab-choice if quotes": {
           "3": "3",
@@ -1689,6 +1703,63 @@
           "This!": "Bu!",
           "This or That?!": "Bu mu, bu mu?",
           "You clicked this!": "Bunu tıkladın!"
+        },
+        "CSD U6 - Board Outputs - A_2222": {
+          "Happy": "Mutlu"
+        },
+        "CSD U6 - Board Outputs - SB4_2222": {
+          "Fish": "Balık"
+        },
+        "CSD U6 - Music - A_2222": {
+          "Happy": "Mutlu"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "değer"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "değer"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "değer"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "değer"
+        },
+        "CSD U6 analog change": {
+          "value": "değer"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "değer"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "değer"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "değer"
+        },
+        "CSD U6 analog data": {
+          "value": "değer"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "değer"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "değer"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "değer"
+        },
+        "CSD U6 analog sound": {
+          "value": "değer"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "değer"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "değer"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "değer"
         }
       }
     }

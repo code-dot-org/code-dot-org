@@ -1945,8 +1945,6 @@ el:
         text: στρίψε αριστερά
       RyanLab_turnRight:
         text: στρίψε δεξιά
-      SpriteLab2Beta_spriteSay:
-        text: χαρακτήρας {SPRITE} λέει {TEXT} για {SECONDS} δευτερόλεπτα
       Vector_createSpriteWith:
         text: |-
           δημιούργησε χαρακτήρα
@@ -2148,5 +2146,3 @@ el:
         text: ορίστε επικεφαλίδα {HEADING}
       storylab_setSubheading:
         text: ορίστε υποκεφαλίδα {SUBHEADING}
-      validation_validatedBackground:
-        text: Ορισμός φόντου σε {IMG}

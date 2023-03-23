@@ -1019,3 +1019,65 @@ sr:
               display_name: Листе
             lessonGroup-3:
               display_name: Петље
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Петље
+            csf_events:
+              display_name: Догађаји
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+            csf_conditionals:
+              display_name: Кондиционали
+            csf_functions:
+              display_name: Функције
+            csf_variables:
+              display_name: Променљиве
+            csf_for_loops:
+              display_name: Бројачке петље
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_loops:
+              display_name: Петље
+            csf_events:
+              display_name: Догађаји
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_loops:
+              display_name: Петље
+            csf_events:
+              display_name: Догађаји
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_loops:
+              display_name: Петље
+            csf_events:
+              display_name: Догађаји
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+            csf_conditionals:
+              display_name: Кондиционали
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_functions:
+              display_name: Функције
+            csf_nested_loops:
+              display_name: Кондиционали

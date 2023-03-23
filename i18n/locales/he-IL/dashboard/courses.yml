@@ -72,3 +72,20 @@ he:
           description_short: למד מושגי יסוד במדעי המחשב.
         self-paced-pl-csa-2023: {}
         tess-testing-focus-on-creativity-2023: {}
+    resources:
+      curriculum/csd/2020:
+        name: תוכנית לימוד
+      teacher_forum/csd/2020:
+        name: פורום מורים
+      curriculum/csd/2017:
+        name: תוכנית לימוד
+      teacher_forum_6/csd/2017:
+        name: פורום מורים
+      curriculum/csd/2019:
+        name: תוכנית לימוד
+      teacher_forum/csd/2019:
+        name: פורום מורים
+      curriculum/csd/2018:
+        name: תוכנית לימוד
+      teacher_forum_6/csd/2018:
+        name: פורום מורים

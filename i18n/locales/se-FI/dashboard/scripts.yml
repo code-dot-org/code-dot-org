@@ -1611,6 +1611,10 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1667,3 +1671,61 @@ se:
           lesson_groups:
             lessonGroup-3:
               display_name: Input:at ja Output:at
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
+            lessonGroup-9:
+              display_name: Dáhpáhusaid
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_sprites:
+              display_name: Sprite:at
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-3:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            lessonGroup-3:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            lessonGroup-3:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'

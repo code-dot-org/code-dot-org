@@ -1955,3 +1955,131 @@ ms:
             lessonGroup-2:
               display_name: Bab 1
           title: Penyelesaian Masalah
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Penjujukan
+            csf_loops:
+              display_name: Gelung
+            csf_events:
+              display_name: Acara-acara
+          description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
+          student_description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
+          description_short: 'Pengenalan kepada sains komputer untuk prapembaca: menggabungkan kursus tadika dan gred satu yang terbaik.'
+          description_audience: 'Umur: 4-8 tahun'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Penjujukan
+            csf_sprites:
+              display_name: Jin
+            lessonGroup-9:
+              display_name: Acara-acara
+            csf_loops:
+              display_name: Gelung
+            csf_conditionals:
+              display_name: Bersyarat
+            csf_functions:
+              display_name: Fungsi
+            csf_variables:
+              display_name: Pemboleh ubah
+            end_of_course_project:
+              display_name: Akhir Projek Kursus
+          description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
+          student_description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
+          description_short: 'Pengenalan kepada sains komputer: menggabungkan kurikulum sekolah rendah yang terbaik untuk pelajar yang lebih tua.'
+          description_audience: 'Umur: 9-18 tahun'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
+            csf_sequencing:
+              display_name: Penjujukan
+            csf_loops:
+              display_name: Gelung
+            csf_events:
+              display_name: Acara-acara
+            lessonGroup-5:
+              display_name: Akhir Projek Kursus
+          title: Kursus A (2021)
+          student_description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
+          description_short: Pengenalan kepada sains komputer untuk prapembaca.
+          description_audience: 'Umur: 4-7 tahun'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
+            csf_sequencing:
+              display_name: Penjujukan
+            csf_loops:
+              display_name: Gelung
+            csf_impacts:
+              display_name: Kesan Pengkomputeran
+            csf_events:
+              display_name: Acara-acara
+            lessonGroup-6:
+              display_name: Akhir Projek Kursus
+          title: Kursus B (2021)
+          student_description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
+          description_short: Pengenalan kepada sains komputer untuk prapembaca. Serupa dengan Kursus A, tetapi dengan kedalaman konsep tambahan.
+          description_audience: 'Umur: 5-8 tahun'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
+            csf_sequencing:
+              display_name: Penjujukan
+            csf_loops:
+              display_name: Gelung
+            csf_events:
+              display_name: Acara-acara
+            csf_data:
+              display_name: Data
+            end_of_course_project:
+              display_name: Akhir Projek Kursus
+          title: Kursus C (2021)
+          student_description: Cipta atur cara dengan penjujukan, gelung dan peristiwa. Terjemahkan tanda nama anda kepada binari, selidik teknik penyelesaian masalah yang berbeza dan pelajari cara bertindak balas terhadap buli siber. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan!
+          description_short: Pelajari asas sains komputer dan cipta seni, cerita dan permainan anda sendiri.
+          description_audience: 'Umur: 6-10 tahun'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Kewarganegaraan Digital
+            csf_sequencing:
+              display_name: Penjujukan
+            csf_events:
+              display_name: Acara-acara
+            csf_loops:
+              display_name: Gelung
+            csf_conditionals:
+              display_name: Bersyarat
+            end_of_course_project:
+              display_name: Akhir Projek Kursus
+          title: Kursus D (2021)
+          description_short: Pelajari tentang pernyataan bersyarat. Cipta seni, permainan dan malah majlis tari-menari anda sendiri.
+          description_audience: 'Umur: 7-11 tahun'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraan Digital
+            csf_sprites:
+              display_name: Jin
+            ramp_up:
+              display_name: Gelung Bersarang
+            csf_functions:
+              display_name: Fungsi
+            csf_nested_loops:
+              display_name: Bersyarat
+            lessonGroup-7:
+              display_name: Kesan Pengkomputeran
+            end_of_course_project:
+              display_name: Akhir Projek Kursus
+          description_audience: 'Umur: 8-12 tahun'
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pengenalan kepada Makmal Aplikasi
+            lessonGroup-3:
+              display_name: Bab 1
+            lessonGroup-4:
+              display_name: Bab 2
