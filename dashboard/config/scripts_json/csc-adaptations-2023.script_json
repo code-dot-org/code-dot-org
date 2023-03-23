@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-adaptations",
-    "serialized_at": "2023-03-21 15:39:29 UTC",
+    "serialized_at": "2023-03-22 19:43:11 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -59,6 +59,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "In this CS and science-integrated lesson, students will use behaviors in computer science to represent animal survival behaviors. When students use `behaviors` in Sprite Lab, they are giving their sprite a set of instructions to execute over and over like an animation. First, students will try out different pre-defined behaviors, including migratory patterns for whales and butterflies, bird dances used to attract a mate, and fish traveling in groups. Then, students will practice modifying and coding their own animal behaviors.    ",
+        "preparation": "- Review and complete the online tutorial yourself.\n- Determine in advance which levels might be more challenging for students.\n- Review slides and decide on pacing between student work time and whole group instruction.\n\n#####Optional\n- Prerequisite: \n   - Complete [Animal Adaptations: Lesson 1](https://studio.code.org/s/csc-adaptations-2023/lessons/1/levels/1)\n   - Complete [Hello World](https://studio.code.org/s/hello-world-food-2021/lessons/1)\n   - Complete [CSF: Course F, Sprites in Action](https://studio.code.org/s/coursef/lessons/4/levels/1)\n",
+        "student_overview": "Today you will explore many animals and their (sometimes silly) behaviors. Animals have developed certain movements and behaviors to survive and reproduce. Your code will control sprite animations in the playspace. "
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -126,12 +129,42 @@
       }
     },
     {
-      "key": "a150d330-1079-408b-b305-dbc4244d41af",
+      "key": "6f886134-c10b-497a-880f-f54e2888cf1d",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm-Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6f886134-c10b-497a-880f-f54e2888cf1d",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-adaptations-2023"
+      }
+    },
+    {
+      "key": "a150d330-1079-408b-b305-dbc4244d41af",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "a150d330-1079-408b-b305-dbc4244d41af",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-adaptations-2023"
+      }
+    },
+    {
+      "key": "5b88d4ce-a149-47bd-81fa-1faeab11b7d7",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5b88d4ce-a149-47bd-81fa-1faeab11b7d7",
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-adaptations-2023"
@@ -365,13 +398,170 @@
       }
     },
     {
-      "key": "72267301-2690-46fa-8186-e97e7193395a",
+      "key": "f8b819ac-8167-4a55-8c10-fa7febe38b15",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think About It” slide \n\n**Do This:** Read the two questions out loud. Allow students 2-4 minutes to think or write independently.\n\n**Discuss:** \n- _What are these animals doing?_\n- _What do the pictures have in common?_\n\n\n",
+        "duration": "10",
+        "name": "Think & Discuss"
+      },
+      "seeding_key": {
+        "activity_section.key": "f8b819ac-8167-4a55-8c10-fa7febe38b15",
+        "lesson_activity.key": "6f886134-c10b-497a-880f-f54e2888cf1d"
+      }
+    },
+    {
+      "key": "1fb909c3-a900-42a6-97b0-3595ad3a9301",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Turn & Talk” slide\n\n**Discuss:** \n- _Why is this school of sardines acting like this?_\n\n**Discussion Goals:** Students should create an argument for why there is strength in numbers. This could include facts about how small sardines are, how easy it would be to catch a sardine on its own, how this swarming behavior confuses its predators, and that there is a smaller chance of being eaten or caught when they swarm.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Science & Coding” slide\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1fb909c3-a900-42a6-97b0-3595ad3a9301",
+        "lesson_activity.key": "6f886134-c10b-497a-880f-f54e2888cf1d"
+      }
+    },
+    {
+      "key": "6b6d4e60-10fe-47e4-a5d5-67713f67ca3c",
+      "position": 3,
+      "properties": {
+        "description": "Last class, we learned about how over time, animals adapted special **features** to allow them to survive. In this class, we learn about special **behaviors** that animals adapted in order to survive.\n\nToday, you will use sprite behaviors in code to model  different animal behaviors. \n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6b6d4e60-10fe-47e4-a5d5-67713f67ca3c",
+        "lesson_activity.key": "6f886134-c10b-497a-880f-f54e2888cf1d"
+      }
+    },
+    {
+      "key": "ec31229a-c7dd-437d-8d7a-113d57f56013",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** Have students move to their computers and sign in. Students will work through the levels at their own speed.  \n\nCirculate the room to support students. Encourage them to read the instructions carefully and click on the lightbulb for hints on each level if they get stuck. \n",
+        "duration": "30",
+        "name": "Coding Behaviors for Survival"
+      },
+      "seeding_key": {
+        "activity_section.key": "ec31229a-c7dd-437d-8d7a-113d57f56013",
+        "lesson_activity.key": "a150d330-1079-408b-b305-dbc4244d41af"
+      }
+    },
+    {
+      "key": "de9ae6fc-d346-4979-a5f9-ecc1239c57b4",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Level 1** is designed to ensure that students are staying with the class and does not contain any code.\n\nThe slides for **Levels 2-10** can be used to preview or review the students independent work time. Or it may be helpful to advance the slides throughout the lesson to match the pace of your students as they work independently. \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "de9ae6fc-d346-4979-a5f9-ecc1239c57b4",
+        "lesson_activity.key": "a150d330-1079-408b-b305-dbc4244d41af"
+      }
+    },
+    {
+      "key": "b880121b-cfa3-46c6-a2ab-4f8da12ae0d6",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Behaviors Intro\" slide\n\n**Level 1:** Level 1 is an informational level comparing behaviors in nature with behaviors in computer science. Consider asking a student to read each section aloud and describe the pictures. Highlight for students that the behavior block is a green block connected to a `sprite begins` block. In this case, the block on screen shows the sprite `moving northwest`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Migration\" slide\n\n**Level 2:**  Level 2 models whale migration. Students add a new block to the program that begins the behavior ‘moving NSEW with arrow keys’ After clicking the run button, the whale will move in the direction of the arrow keys pressed. Students can use the arrow keys below the playspace or on their keyboard. In order to pass the level, students should model that whales migrate both north (up arrow key) and south (down arrow key).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3 - 4 - Behaviors in CS  \" slide\n\n**Levels 3-4:** In Levels 3 - 4, students experiment with beginning and stopping behaviors. They can test out different behaviors to gain an understanding of how changing the code changes the animation of the bug sprites. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-7 - Dancing Birds \" slide\n\n**Levels 5-7:**  Levels 5-7 use the natural bird dancing behavior to explore layering different behaviors with code. These three levels are linked, meaning students’ code will carry over from level to level so they can build on it. In level 5, students begin one behavior for the bird sprite. In level 6, they add a second behavior so the sprite is doing both behaviors at the same time. In level 7, students add a `when key pressed` event that triggers a third behavior for the bird sprite. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students modify the code beyond repair they can use the `Version History` button and click Start Over to reset the code for that specific level. If the version history is started over on a linked level, the code will reset to the original code from the first linked level. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b880121b-cfa3-46c6-a2ab-4f8da12ae0d6",
+        "lesson_activity.key": "a150d330-1079-408b-b305-dbc4244d41af"
+      }
+    },
+    {
+      "key": "7765a8e3-ece2-4518-8e5f-92590d350e60",
+      "position": 4,
+      "properties": {
+        "progression_name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "7765a8e3-ece2-4518-8e5f-92590d350e60",
+        "lesson_activity.key": "a150d330-1079-408b-b305-dbc4244d41af"
+      }
+    },
+    {
+      "key": "6c95601d-7633-48e7-ade2-eed3f5512588",
+      "position": 5,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "6c95601d-7633-48e7-ade2-eed3f5512588",
+        "lesson_activity.key": "a150d330-1079-408b-b305-dbc4244d41af"
+      }
+    },
+    {
+      "key": "a472aba6-ab14-4c36-b1a6-0d4d0f7ce6b9",
+      "position": 6,
+      "properties": {
+        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Speed\" slide\n\n**Level 8:**  In Level 8, students can modify the speed of the behavior for each sprite. Although both sprites are using the same behavior, they are moving at the speed set in the code. This level compares the difference in behavior between the turtle and the cheetah to highlight the different needs of each animal. \n\n <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Many Sprites\" slide\n\n**Level 9:**  Level 9 demonstrates that when a behavior is assigned to one sprite, it applies to all sprites with the same costume. In this example, when one butterfly begins migrating, they all begin migrating. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Survival in Groups \" slide\n\n**Level 10:**  In Level 10, students are able to set one sprite as the leader which other sprites will follow. This models a school of fish swimming together in a group for survival."
+      },
+      "seeding_key": {
+        "activity_section.key": "a472aba6-ab14-4c36-b1a6-0d4d0f7ce6b9",
+        "lesson_activity.key": "a150d330-1079-408b-b305-dbc4244d41af"
+      }
+    },
+    {
+      "key": "72267301-2690-46fa-8186-e97e7193395a",
+      "position": 7,
+      "properties": {
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "72267301-2690-46fa-8186-e97e7193395a",
         "lesson_activity.key": "a150d330-1079-408b-b305-dbc4244d41af"
+      }
+    },
+    {
+      "key": "528d1ae0-f10a-4d66-9ef6-1b68fdf33140",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Wrap Up” slide\n\n**Discuss:**\n- _Why do bears hibernate in the winter?_ \n- _If these bears lived in areas without a winter, how might they adapt to their new environment?_ \n- _What would change about the bear?_ \n\n\n**Do This:** Have students examine the picture of the hibernating bear. Read the prompt as well as the words in the word bank, out loud. Allow students 3-5 minutes to write their responses. Choose to share in partners or as a group. \n",
+        "duration": "10",
+        "name": "Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "528d1ae0-f10a-4d66-9ef6-1b68fdf33140",
+        "lesson_activity.key": "5b88d4ce-a149-47bd-81fa-1faeab11b7d7"
+      }
+    },
+    {
+      "key": "8ba97de7-954e-48e8-850e-60c7faeaa27d",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The wrap-up includes a prompt for students to write a sentence. They can write in a journal, respond to a prompt in an online document or form, or even on a scrap paper or whiteboard. You might choose to collect their responses or discuss in pairs, small groups or as a whole class. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8ba97de7-954e-48e8-850e-60c7faeaa27d",
+        "lesson_activity.key": "5b88d4ce-a149-47bd-81fa-1faeab11b7d7"
+      }
+    },
+    {
+      "key": "b92cf50f-e810-4bd5-9e9f-c71a1de91a0c",
+      "position": 3,
+      "properties": {
+        "description": "Well done, coders!\n\nNext time, we’ll learn how to edit behaviors and how to make our own. The next lesson ends with a challenge to imagine and code a new animal adaptation!\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b92cf50f-e810-4bd5-9e9f-c71a1de91a0c",
+        "lesson_activity.key": "5b88d4ce-a149-47bd-81fa-1faeab11b7d7"
       }
     },
     {
@@ -492,6 +682,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_whale_movement_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -514,6 +707,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_eventsvideo_2023"
+        ],
         "progression": "Video: Hello World: Programming with Events"
       },
       "bonus": false,
@@ -636,9 +832,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_animal_adaptations_intro"
-        ]
+        "progression": "Introduction"
       },
       "bonus": false,
       "seeding_key": {
@@ -648,7 +842,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-adaptations-2023",
-        "activity_section.key": "72267301-2690-46fa-8186-e97e7193395a"
+        "activity_section.key": "7765a8e3-ece2-4518-8e5f-92590d350e60"
       },
       "level_keys": [
         "csc_animal_adaptations_intro"
@@ -657,12 +851,10 @@
     {
       "chapter": 12,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_animal_adaptations_migration"
-        ]
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -672,7 +864,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-adaptations-2023",
-        "activity_section.key": "72267301-2690-46fa-8186-e97e7193395a"
+        "activity_section.key": "6c95601d-7633-48e7-ade2-eed3f5512588"
       },
       "level_keys": [
         "csc_animal_adaptations_migration"
@@ -681,12 +873,10 @@
     {
       "chapter": 13,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_animal_adaptations_bugs2"
-        ]
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -696,7 +886,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-adaptations-2023",
-        "activity_section.key": "72267301-2690-46fa-8186-e97e7193395a"
+        "activity_section.key": "6c95601d-7633-48e7-ade2-eed3f5512588"
       },
       "level_keys": [
         "csc_animal_adaptations_bugs2"
@@ -705,12 +895,10 @@
     {
       "chapter": 14,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_animal_adaptations_groups"
-        ]
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -720,7 +908,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-adaptations-2023",
-        "activity_section.key": "72267301-2690-46fa-8186-e97e7193395a"
+        "activity_section.key": "6c95601d-7633-48e7-ade2-eed3f5512588"
       },
       "level_keys": [
         "csc_animal_adaptations_groups"
@@ -729,12 +917,10 @@
     {
       "chapter": 15,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_animal_adaptations_bugs"
-        ]
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -744,7 +930,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-adaptations-2023",
-        "activity_section.key": "72267301-2690-46fa-8186-e97e7193395a"
+        "activity_section.key": "6c95601d-7633-48e7-ade2-eed3f5512588"
       },
       "level_keys": [
         "csc_animal_adaptations_bugs"
@@ -753,12 +939,10 @@
     {
       "chapter": 16,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_animal_adaptations_birds"
-        ]
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -768,7 +952,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-adaptations-2023",
-        "activity_section.key": "72267301-2690-46fa-8186-e97e7193395a"
+        "activity_section.key": "6c95601d-7633-48e7-ade2-eed3f5512588"
       },
       "level_keys": [
         "csc_animal_adaptations_birds"
@@ -777,12 +961,10 @@
     {
       "chapter": 17,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_animal_adaptations_fish"
-        ]
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -792,7 +974,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-adaptations-2023",
-        "activity_section.key": "72267301-2690-46fa-8186-e97e7193395a"
+        "activity_section.key": "6c95601d-7633-48e7-ade2-eed3f5512588"
       },
       "level_keys": [
         "csc_animal_adaptations_fish"
@@ -801,12 +983,13 @@
     {
       "chapter": 18,
       "position": 8,
-      "activity_section_position": 8,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csc_animal_adaptations_speed"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -825,12 +1008,13 @@
     {
       "chapter": 19,
       "position": 9,
-      "activity_section_position": 9,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csc_animal_adaptations_butterfly"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -849,12 +1033,13 @@
     {
       "chapter": 20,
       "position": 10,
-      "activity_section_position": 10,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csc_animal_adaptaions_fishschool"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -873,12 +1058,13 @@
     {
       "chapter": 21,
       "position": 11,
-      "activity_section_position": 11,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csc_animal_adaptations_birddance_template"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1217,7 +1403,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-adaptations-2023",
-        "activity_section.key": "72267301-2690-46fa-8186-e97e7193395a"
+        "activity_section.key": "7765a8e3-ece2-4518-8e5f-92590d350e60"
       }
     },
     {
@@ -1229,7 +1415,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-adaptations-2023",
-        "activity_section.key": "72267301-2690-46fa-8186-e97e7193395a"
+        "activity_section.key": "6c95601d-7633-48e7-ade2-eed3f5512588"
       }
     },
     {
@@ -1241,7 +1427,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-adaptations-2023",
-        "activity_section.key": "72267301-2690-46fa-8186-e97e7193395a"
+        "activity_section.key": "6c95601d-7633-48e7-ade2-eed3f5512588"
       }
     },
     {
@@ -1253,7 +1439,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-adaptations-2023",
-        "activity_section.key": "72267301-2690-46fa-8186-e97e7193395a"
+        "activity_section.key": "6c95601d-7633-48e7-ade2-eed3f5512588"
       }
     },
     {
@@ -1265,7 +1451,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-adaptations-2023",
-        "activity_section.key": "72267301-2690-46fa-8186-e97e7193395a"
+        "activity_section.key": "6c95601d-7633-48e7-ade2-eed3f5512588"
       }
     },
     {
@@ -1277,7 +1463,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-adaptations-2023",
-        "activity_section.key": "72267301-2690-46fa-8186-e97e7193395a"
+        "activity_section.key": "6c95601d-7633-48e7-ade2-eed3f5512588"
       }
     },
     {
@@ -1289,7 +1475,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-adaptations-2023",
-        "activity_section.key": "72267301-2690-46fa-8186-e97e7193395a"
+        "activity_section.key": "6c95601d-7633-48e7-ade2-eed3f5512588"
       }
     },
     {
@@ -1478,6 +1664,16 @@
       }
     },
     {
+      "key": "behavior",
+      "word": "Behavior",
+      "definition": "A set of actions you want a sprite to perform over and over. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
       "key": "code",
       "word": "Code",
       "definition": "(v) To write instructions for a computer",
@@ -1548,6 +1744,42 @@
         "lesson.key": "Modeling Animal Adaptations (pilot)",
         "vocabulary.key": "migration"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "adaptation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "evolution"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "migration"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -1585,6 +1817,36 @@
       }
     },
     {
+      "key": "36e2c3bf-e310-4aba-bdda-019164e55231",
+      "properties": {
+        "description": "Create an interactive animation using behaviors in computer science."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "36e2c3bf-e310-4aba-bdda-019164e55231"
+      }
+    },
+    {
+      "key": "8128f862-0d3e-4a07-b488-1fb2f03752fe",
+      "properties": {
+        "description": "Discuss similarities and differences in how animals move and behave."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "8128f862-0d3e-4a07-b488-1fb2f03752fe"
+      }
+    },
+    {
+      "key": "846b7d3c-56e3-44b4-80dd-47431ae2a040",
+      "properties": {
+        "description": "Illustrate examples of migration and increased survival in groups."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "846b7d3c-56e3-44b4-80dd-47431ae2a040"
+      }
+    },
+    {
       "key": "c470f27d-c0c0-40e4-85bc-8453a3500f80",
       "properties": {
         "description": "Create new sprites and assign costumes and locations."
@@ -1602,6 +1864,26 @@
       "seeding_key": {
         "lesson.key": "Modeling Animal Adaptations (pilot)",
         "objective.key": "cd4283af-9ccd-4a83-bc9d-16acfc47937a"
+      }
+    },
+    {
+      "key": "e89ead7e-816f-4133-b72e-09f37281c69c",
+      "properties": {
+        "description": "Develop models of behavioral adaptations with code."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "e89ead7e-816f-4133-b72e-09f37281c69c"
+      }
+    },
+    {
+      "key": "ecd731ff-0e81-46d4-bf79-407f4be474d7",
+      "properties": {
+        "description": "Explain hibernation as a survival mechanism using scientific language."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "ecd731ff-0e81-46d4-bf79-407f4be474d7"
       }
     }
   ],
@@ -1660,6 +1942,55 @@
         "lesson.key": "Modeling Animal Adaptations (pilot)",
         "framework.shortcode": "ngss",
         "standard.shortcode": "3-LS4-4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "ngss",
+        "standard.shortcode": "3-LS2-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "ngss",
+        "standard.shortcode": "3-LS3-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "ngss",
+        "standard.shortcode": "3-LS4-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "ngss",
+        "standard.shortcode": "3-LS4-3"
       }
     }
   ],
