@@ -6,7 +6,7 @@ import {PlaybackEvent} from './interfaces/PlaybackEvent';
 import {SkipContext} from './interfaces/SkipContext';
 import {SoundEvent} from './interfaces/SoundEvent';
 import {TrackMetadata} from './interfaces/TrackMetadata';
-import MusicLibrary, {SoundData, SoundFolder, SoundType} from './MusicLibrary';
+import MusicLibrary, {SoundFolder} from './MusicLibrary';
 import SamplePlayer, {SampleEvent} from './SamplePlayer';
 
 // Using require() to import JS in TS files
