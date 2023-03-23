@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
+import styles from './curriculum_catalog.module.scss';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
 
 export default class CurriculumCatalog extends Component {
@@ -27,14 +28,14 @@ export default class CurriculumCatalog extends Component {
 
   render() {
     return (
-      <>
+      <div className={styles.curriculumCatalogHeader}>
         <h1>{i18n.curriculumCatalogHeaderTitle()}</h1>
         <h2>{i18n.curriculumCatalogHeaderSubtitle()}</h2>
         <img src={CourseCatalogIllustration01} />
         {this.props.curriculaData.map(curriculum => (
           <li key={curriculum.key}>{curriculum.display_name}</li>
         ))}
-      </>
+      </div>
     );
   }
 }
