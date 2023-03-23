@@ -187,6 +187,12 @@ Then(/^the workspace has "(.*?)" blocks of type "(.*?)"$/) do |n, type|
   expect(result).to eq(n.to_i)
 end
 
+Then(/^all blocks render with no unknown blocks$/) do
+  code = "return Blockly.Workspace.getAll().map(workspace => workspace.getAllBlocks().some(block => block.getFieldValue('NAME')?.includes('unknown block')));"
+  result = @browser.execute_script(code)
+  puts result
+end
+
 Then(/^block "([^"]*)" has (not )?been deleted$/) do |block_id, negation|
   code = "return Blockly.mainBlockSpace.getAllBlocks().some(function (block) { return block.id == '" + get_block_id(block_id) + "'; })"
   result = @browser.execute_script(code)
