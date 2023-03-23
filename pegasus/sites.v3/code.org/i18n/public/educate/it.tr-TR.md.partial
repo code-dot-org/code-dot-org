@@ -101,15 +101,25 @@ Code.org ce [online eğitim platformlarına](https://studio.code.org) video yük
 
 Code.org'un online kurslarına başlamadan önce, hazır olduğunuzdan emin olmak için aşağıdaki videoyu oynatmayı test edin.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
-Bu, müfredat boyunca kullanılan video oynatıcıdır. Videoyu YouTube üzerinden göstermeye çalışacak ve YouTube engellendiyse bunun yerine Code.org'da barındırılan videoyu "yedek" oynatıcımızı kullanarak gösterecektir.
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
+
+This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
 
 ### Video oynatılamıyor mu?
 
-Video çalışmıyorsa, support@code.org adresine mail atabilirsiniz.
+If video does not work, you can email us at support@code.org.
 
-Ancak, eğitimlerimizi video olmadan da kullanabilirsiniz.
+However, you can still use our tutorials without video.
 
 1. Tüm videolarımızı [indirilebilir hale getirdik](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Okulunuzun bant genişliği düşükse, videoları indirmenizi ve bunları öğrencilere paylaşılan bir ekranda göstermenizi öneririz.
 2. Eğitimlerimize entegre olarak her video için öğrencilerin bireysel eğitim videoları indirmesine izin veren yeşil bir indirme bağlantısı simgesi <img src="/images/green-download.png" width=25 height=25 /> ekledik.
@@ -119,8 +129,8 @@ Ancak, eğitimlerimizi video olmadan da kullanabilirsiniz.
 
 ## Google Apps/G-Suite kullanıcıları için özel ayarlar
 
-G-Suite yöneticisiyseniz, YouTube için kısıtlama ayarlarınızın neler olduğunu kontrol ettiğinizden emin olun. Eğer "YouTube Erişimi Kesin Kısıtlama" ayarını seçtiyseniz veya "bu video kısıtlandı" uyarısını görüyorsanız, kanalımızı onaylanan kanallar listesine ekleyebilirsiniz. Kanalımızı onaylı listesine ekleme hakkında bilgi almak için [bu kılavuza](https://support.google.com/a/answer/6245597) bakınız. Ayrıca, sınıfınız için en uygun ayarları görmek için [bu kılavuza](https://support.google.com/a/answer/6212415?hl=en) bakabilirsiniz.
+If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
 
 ## Hala sorun mu yaşıyorsunuz?
 
-Size yardımcı olacağız - bize support@code.org adresinden e-posta göndermeniz yeterli!
+We'll help you out - just email us at support@code.org!
