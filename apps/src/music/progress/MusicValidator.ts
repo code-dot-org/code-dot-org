@@ -13,7 +13,7 @@ const KnownConditions: KnownConditions = {
 
 export default class MusicValidator extends Validator {
   private player: MusicPlayer;
-  private getIsPlaying: Function;
+  private getIsPlaying: () => boolean;
   private conditionsChecker: ConditionsChecker;
 
   constructor(getIsPlaying: () => boolean, player: MusicPlayer) {
@@ -63,7 +63,7 @@ export default class MusicValidator extends Validator {
     }
   }
 
-  conditionsMet(conditions: [string]): boolean {
+  conditionsMet(conditions: string[]): boolean {
     return this.conditionsChecker.checkRequirementConditions(conditions);
   }
 

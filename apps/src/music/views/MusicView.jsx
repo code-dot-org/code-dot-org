@@ -175,9 +175,9 @@ class UnconnectedMusicView extends React.Component {
       this.setState({
         currentPlayheadPosition: this.player.getCurrentPlayheadPosition()
       });
-    }
 
-    this.progressManager?.updateProgress();
+      this.progressManager?.updateProgress();
+    }
   };
 
   onProgresschange = () => {
@@ -200,8 +200,8 @@ class UnconnectedMusicView extends React.Component {
 
   setToolboxForProgress = () => {
     if (this.progressManager) {
-      const allowedToolbox = this.progressManager.getCurrentStepDetails()
-        .toolbox;
+      const allowedToolbox =
+        this.progressManager.getCurrentStepDetails().toolbox;
       this.musicBlocklyWorkspace.updateToolbox(allowedToolbox);
     }
   };

@@ -23,7 +23,7 @@ export default class ConditionsChecker {
 
   // Check whether the current set of satisfied conditions satisfy the given
   // required conditions.
-  checkRequirementConditions(requiredConditions: [string]) {
+  checkRequirementConditions(requiredConditions: string[]) {
     for (const requiredCondition of requiredConditions) {
       // If we don't yet support a condition, don't check against it for now.
       if (!Object.values(this.knownConditions).includes(requiredCondition)) {
