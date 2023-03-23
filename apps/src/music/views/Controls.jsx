@@ -6,6 +6,7 @@ import {Triggers} from '@cdo/apps/music/constants';
 import moduleStyles from './controls.module.scss';
 import BeatPad from './BeatPad';
 import {AnalyticsContext} from '../context';
+import {useSelector} from 'react-redux';
 
 const documentationUrl = '/docs/ide/projectbeats';
 
@@ -14,7 +15,6 @@ const documentationUrl = '/docs/ide/projectbeats';
  * and show/hide instructions button.
  */
 const Controls = ({
-  isPlaying,
   setPlaying,
   playTrigger,
   top,
@@ -22,6 +22,7 @@ const Controls = ({
   toggleInstructions,
   instructionsOnRight
 }) => {
+  const isPlaying = useSelector(state => state.music.isPlaying);
   const [isShowingBeatPad, setBeatPadShowing] = useState(false);
   useEffect(() => {
     if (isPlaying) {
@@ -114,7 +115,6 @@ const Controls = ({
 };
 
 Controls.propTypes = {
-  isPlaying: PropTypes.bool.isRequired,
   setPlaying: PropTypes.func.isRequired,
   playTrigger: PropTypes.func.isRequired,
   top: PropTypes.bool.isRequired,
