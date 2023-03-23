@@ -13,6 +13,7 @@ export const openaiCompletion = prompt => {
     },
     data: JSON.stringify({
       model: 'gpt-3.5-turbo',
+      temperature: 0,
       messages: [
         {role: 'system', content: SYSTEM_PROMPT},
         {role: 'user', content: prompt}
