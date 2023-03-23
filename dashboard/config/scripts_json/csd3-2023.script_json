@@ -7,7 +7,6 @@
       "curriculum_umbrella": "CSD",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
-      "is_course": true,
       "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
@@ -16056,6 +16055,24 @@
         "activity_section.key": "23cbe338-ad6f-40c4-ab1d-cabea7da80ab"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
   ],
   "lessons_programming_expressions": [
     {
