@@ -1028,3 +1028,67 @@ lv:
               display_name: Saraksti
             lessonGroup-3:
               display_name: Cikli
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Cikli
+            csf_events:
+              display_name: Pasākumi
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+            csf_conditionals:
+              display_name: Sazarojumi
+            csf_functions:
+              display_name: Funkcijas
+            csf_variables:
+              display_name: Mainīgie
+            csf_for_loops:
+              display_name: '"par" cikli'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_loops:
+              display_name: Cikli
+            csf_events:
+              display_name: Pasākumi
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_loops:
+              display_name: Cikli
+            csf_events:
+              display_name: Pasākumi
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_loops:
+              display_name: Cikli
+            csf_events:
+              display_name: Pasākumi
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+            csf_conditionals:
+              display_name: Sazarojumi
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            ramp_up:
+              display_name: Cikls ciklā
+            csf_functions:
+              display_name: Funkcijas
+            csf_nested_loops:
+              display_name: Sazarojumi

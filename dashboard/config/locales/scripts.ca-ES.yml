@@ -1768,6 +1768,8 @@ ca:
               name: Extensió de Depuració Asíncrona
         self-paced-pl-csd5-2022:
           title: Ensenyar I.A. i aprenentatge automàtic
+        csa-draft-pl:
+          name: csa-esborrany-pl
         vpl-csd2-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -1831,3 +1833,151 @@ ca:
           title: Resolució de problemes
         testing-focus-on-creativity1:
           title: Resolució de problemes
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Seqüenciació
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+          description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs
+            a continuació! Aprèn a crear programes informàtics, desenvolupa les teves
+            habilitats per resoldre problemes i completa els divertits reptes que
+            aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els
+            amics, la família i els professors.
+          student_description: Aprèn informàtica al teu ritme fent les lliçons que
+            trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa
+            les teves habilitats per resoldre problemes i completa els divertits reptes
+            que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb
+            els amics, la família i els professors.
+          description_short: 'Una introducció a la informàtica per a prelectors: combina
+            el millor dels cursos de parvulari i primer.'
+          description_audience: De 4 a 8 anys
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Seqüenciació
+            csf_sprites:
+              display_name: Sprites
+            lessonGroup-9:
+              display_name: Esdeveniments
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            csf_functions:
+              display_name: Funcions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Bucles "for"
+            end_of_course_project:
+              display_name: Projecte de final de curs
+          description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs
+            a continuació! Aprèn a crear programes informàtics, desenvolupa les teves
+            habilitats per resoldre problemes i completa els divertits reptes que
+            aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els
+            amics, la família i els professors.
+          student_description: Aprèn informàtica al teu ritme fent les lliçons que
+            trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa
+            les teves habilitats per resoldre problemes i completa els divertits reptes
+            que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb
+            els amics, la família i els professors.
+          description_short: 'Una introducció a la informàtica: combina el millor
+            del nostre currículum d''educació primària per alumnes més grans.'
+          description_audience: De 9 a 18 anys
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+            lessonGroup-5:
+              display_name: Projecte de final de curs
+          student_description: Aprèn els fonaments de la informàtica i de la seguretat
+            a internet. Al final del curs, podràs crear el teu propi joc o història
+            i compartir-los.
+          description_short: Una introducció a la informàtica per prelectors.
+          description_audience: De 4 a 7 anys
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
+            csf_loops:
+              display_name: Bucles
+            csf_impacts:
+              display_name: Els impactes de la informàtica
+            csf_events:
+              display_name: Esdeveniments
+            lessonGroup-6:
+              display_name: Projecte de final de curs
+          student_description: Aprèn els fonaments de la informàtica i de la seguretat
+            a internet. Al final del curs, podràs crear el teu propi joc o història
+            i compartir-los.
+          description_audience: De 5 a 8 anys
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+            csf_data:
+              display_name: Dades
+            end_of_course_project:
+              display_name: Projecte de final de curs
+          student_description: Crea programes amb seqüenciació, bucles i esdeveniments.
+            Tradueix les teves inicials al codi binari, investiga diferents tècniques
+            per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament.
+            Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
+          description_short: Apreneu els conceptes bàsics de la informàtica i creeu
+            el vostre propi art, històries i jocs.
+          description_audience: De 6 a 10 anys
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
+            csf_events:
+              display_name: Esdeveniments
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            end_of_course_project:
+              display_name: Projecte de final de curs
+          student_description: Aquí aprendràs sobre bucles, condicionals i esdeveniments.
+            I, a més de programació, aprendràs què és la ciutadania digital.
+          description_audience: De 7 a 11 anys
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: Bucles imbricats
+            csf_functions:
+              display_name: Funcions
+            csf_nested_loops:
+              display_name: Condicionals
+            lessonGroup-7:
+              display_name: Els impactes de la informàtica
+            end_of_course_project:
+              display_name: Projecte de final de curs
+          student_description: Comença a programar amb algorismes, esdeveniments,
+            bucles, condicionals i funcions! Quan arribis al final del curs, podràs
+            dissenyar i crear un joc o un dibuix per compartir-lo amb els amics i
+            la família.
+          description_audience: De 8 a 12 anys

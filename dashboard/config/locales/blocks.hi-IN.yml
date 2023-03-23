@@ -1676,6 +1676,10 @@ hi:
         text: "{SPRITE} का x निर्देशांक"
       gamelab_yLocationOf:
         text: "{SPRITE} का y निर्देशांक"
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} चुपके से {LOCATION} पर जाता है"
+      KatiesBlocks_tumbling:
+        text: कलाबाजियां खाना
       Mikelab_addBehaviorSimple:
         text: स्प्राइट {SPRITE} {BEHAVIOR} शुरू होता है
       Mikelab_addTrainingData:
@@ -2318,8 +2322,6 @@ hi:
         text: बाएं मुड़ें
       RyanLab_turnRight:
         text: दाएं मुड़ें
-      SpriteLab2Beta_spriteSay:
-        text: स्प्राइट {SPRITE} {TEXT} को {SECONDS} सेकंड तक कहता है
       Vector_createSpriteWith:
         text: |-
           स्प्राइट बनाएं
@@ -2451,6 +2453,8 @@ hi:
             new Behavior(wobbling, []): लड़खड़ाना
             new Behavior(wandering, []): घूमना
             new Behavior(patrolling, []): गश्त लगाना
+      adaptations_startFollowing:
+        text: "{SPRITE} {TARGET} का अनुसरण करना शुरू करता है"
       binary_drawBin:
         text: युग्मक चित्रित करें {BIN}
       binary_drawBinScreen:
@@ -2603,7 +2607,3 @@ hi:
         text: शीर्षक सेट करें {HEADING}
       storylab_setSubheading:
         text: उपशीर्षक सेट करें {SUBHEADING}
-      validation_validatedBackground:
-        text: पृष्ठभूमि के तौर पर {IMG} सेट करें
-      validation_validatedSound:
-        text: PLAYSound {SOUND}

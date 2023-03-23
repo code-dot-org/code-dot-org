@@ -82,7 +82,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 - Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
 - Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Consulteu les [Preguntes freqüents sobre l'Hora del Codi](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## Què ve després de l'Hora del Codi?
 

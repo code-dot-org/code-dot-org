@@ -3250,7 +3250,10 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
-        csa6-2023: {}
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         csa7-2023: {}
         csa8-2023: {}
         vpl-csd3-ayw-pilot-2022: {}
@@ -3404,3 +3407,158 @@ ro:
         poetry-2023: {}
         poemmaker-2023: {}
         dlp-core-2023: {}
+        csc-particles-2023: {}
+        csc-bookcovers-2023: {}
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Secvențiere
+            csf_loops:
+              display_name: Bucle
+            csf_events:
+              display_name: Evenimente
+          description: Învață știința calculatoarelor în ritmul tău cu ajutorul lecțiilor de mai jos! Învață să scrii programe pentru computer, să îți dezvolți abilitățile de rezolvare a problemelor și participă la provocări distractive! Creează jocuri și proiecte creative pe care să le partajezi cu prietenii, familia și profesorii tăi.
+          student_description: Învață știința calculatoarelor în ritmul tău cu ajutorul lecțiilor de mai jos! Învață să scrii programe pentru computer, să îți dezvolți abilitățile de rezolvare a problemelor și participă la provocări distractive! Creează jocuri și proiecte creative pe care să le partajezi cu prietenii, familia și profesorii tăi.
+          description_short: 'Introducere în știința calculatoarelor pentru copiii care încă nu au învățat să citească: o combinație a celor mai bune cursuri pentru grădiniță și clasa I.'
+          description_audience: 'Vârsta: 4-8 ani'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Secvențiere
+            csf_sprites:
+              display_name: Spiriduși
+            lessonGroup-9:
+              display_name: Evenimente
+            csf_loops:
+              display_name: Bucle
+            csf_conditionals:
+              display_name: Condiţionale
+            csf_functions:
+              display_name: Funcţii
+            csf_variables:
+              display_name: Variabile
+            csf_for_loops:
+              display_name: Bucle Pentru
+            end_of_course_project:
+              display_name: Proiect de final de curs
+          description: Învață știința calculatoarelor în ritmul tău cu ajutorul lecțiilor de mai jos! Învață să scrii programe pentru computer, să îți dezvolți abilitățile de rezolvare a problemelor și participă la provocări distractive! Creează jocuri și proiecte creative pe care să le partajezi cu prietenii, familia și profesorii tăi.
+          student_description: Învață știința calculatoarelor în ritmul tău cu ajutorul lecțiilor de mai jos! Învață să scrii programe pentru computer, să îți dezvolți abilitățile de rezolvare a problemelor și participă la provocări distractive! Creează jocuri și proiecte creative pe care să le partajezi cu prietenii, familia și profesorii tăi.
+          description_short: 'O introducere în știința calculatoarelor: o combinație a celor mai bune programe pentru școala elementară destinate elevilor mai mari.'
+          description_audience: 'Vârsta: 9-18 ani'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_sequencing:
+              display_name: Secvențiere
+            csf_loops:
+              display_name: Bucle
+            csf_events:
+              display_name: Evenimente
+            lessonGroup-5:
+              display_name: Proiect de final de curs
+          title: Curs A (2021)
+          student_description: Învață noțiunile de bază ale științei calculatoarelor și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți.
+          description_short: O introducere în informatică pentru preșcolari.
+          description_audience: 'Vârsta: 4-7 ani'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_sequencing:
+              display_name: Secvențiere
+            csf_loops:
+              display_name: Bucle
+            csf_impacts:
+              display_name: Impactul computerelor
+            csf_events:
+              display_name: Evenimente
+            lessonGroup-6:
+              display_name: Proiect de final de curs
+          title: Curs B (2021)
+          student_description: Învață noțiunile de bază ale științei calculatoarelor și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți.
+          description_short: O introducere în știința calculatoarelor pentru preșcolari. Asemănătoare cu Cursul A, dar cu o prezentare mai aprofundată a conceptelor.
+          description_audience: 'Vârsta: 5-8 ani'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_sequencing:
+              display_name: Secvențiere
+            csf_loops:
+              display_name: Bucle
+            csf_events:
+              display_name: Evenimente
+            csf_data:
+              display_name: Date
+            end_of_course_project:
+              display_name: Proiect de final de curs
+          title: Curs C (2021)
+          student_description: Creează programe cu secvențiere, bucle și evenimente. Scrie-ți inițialele în format binar, studiază diferite tehnici de rezolvare a problemelor și învață cum să reacționezi la cyberbullying. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți!
+          description_short: Învață noțiunile de bază ale științei calculatoarelor și creează desene, povești și jocuri.
+          description_audience: 'Vârsta: 6-10 ani'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Cetățenia Digitală
+            csf_sequencing:
+              display_name: Secvențiere
+            csf_events:
+              display_name: Evenimente
+            csf_loops:
+              display_name: Bucle
+            csf_conditionals:
+              display_name: Condiţionale
+            end_of_course_project:
+              display_name: Proiect de final de curs
+          title: "\t\nCurs D (2021)"
+          description_short: Învață despre condiții. Creează propriile opere de artă, jocuri, chiar și o petrecere dansantă.
+          description_audience: 'Vârsta: 7-11 ani'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_sprites:
+              display_name: Spiriduși
+            ramp_up:
+              display_name: Repetiții imbricate
+            csf_functions:
+              display_name: Funcţii
+            csf_nested_loops:
+              display_name: Condiţionale
+            lessonGroup-7:
+              display_name: Impactul computerelor
+            end_of_course_project:
+              display_name: Proiect de final de curs
+          description_audience: 'Vârsta: 8-12 ani'
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-3:
+              display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
+        web-development-2023: {}
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolul 1: Imagini şi animaţii'
+            lessonGroup-3:
+              display_name: 'Capitolul 2: Cum facem jocuri'
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolul 1: Design orientat spre utilizator'
+            lessonGroup-3:
+              display_name: 'Capitolul 2: Prototipare aplicații'
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolul 1: Reprezentarea informaţiilor'
+            lessonGroup-3:
+              display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Capitolul 1
+            lessonGroup-4:
+              display_name: Capirolul 2

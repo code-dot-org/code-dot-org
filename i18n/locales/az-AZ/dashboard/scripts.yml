@@ -3317,6 +3317,10 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
         csa8-2023:
           title: Axtarış və Çeşidləmə
         csa-magpie-lab:
@@ -3455,3 +3459,137 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Fəsil 1: veb-səhifələrin yaradılması'
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Ardıcıllıq qurmaq
+            csf_loops:
+              display_name: dövrlər
+            csf_events:
+              display_name: Tədbirlər
+          description_audience: 'Yaşlar: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Ardıcıllıq qurmaq
+            csf_sprites:
+              display_name: Spraytlar
+            lessonGroup-9:
+              display_name: Tədbirlər
+            csf_loops:
+              display_name: dövrlər
+            csf_conditionals:
+              display_name: Şərti ifadələr
+            csf_functions:
+              display_name: Funksiyalar
+            csf_variables:
+              display_name: dəyişənlər
+            csf_for_loops:
+              display_name: '"For" dövrü'
+            end_of_course_project:
+              display_name: Kurs layihələrinin sonu!
+          description_audience: 'Yaşlar: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Rəqəmsal vətəndaşlıq
+            csf_sequencing:
+              display_name: Ardıcıllıq qurmaq
+            csf_loops:
+              display_name: dövrlər
+            csf_events:
+              display_name: Tədbirlər
+            lessonGroup-5:
+              display_name: Kurs layihələrinin sonu!
+          student_description: Kompüter elminin və internet təhlükəsizliyinin əsaslarını öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın.
+          description_short: Ön-oxucular üçün kompüter elmlərinə giriş.
+          description_audience: 'Yaşlar: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Rəqəmsal vətəndaşlıq
+            csf_sequencing:
+              display_name: Ardıcıllıq qurmaq
+            csf_loops:
+              display_name: dövrlər
+            csf_events:
+              display_name: Tədbirlər
+            lessonGroup-6:
+              display_name: Kurs layihələrinin sonu!
+          student_description: Kompüter elminin və internet təhlükəsizliyinin əsaslarını öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın.
+          description_audience: 'Yaşlar: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Rəqəmsal vətəndaşlıq
+            csf_sequencing:
+              display_name: Ardıcıllıq qurmaq
+            csf_loops:
+              display_name: dövrlər
+            csf_events:
+              display_name: Tədbirlər
+            csf_data:
+              display_name: məlumat
+            end_of_course_project:
+              display_name: Kurs layihələrinin sonu!
+          student_description: Ardıcıllıq, döngələr və hadisələrlə proqramlar yaradın. Baş hərflərinizi binar hərflərə tərcümə edin, müxtəlif problemlərin həlli üsullarını araşdırın və kiber zorakılığa necə cavab verməyi öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın!
+          description_short: Kompüter elmlərinin əsaslarını öyrən və öz şəxsi rəsmlərini, hekayələrini və oyunlarını yarat.
+          description_audience: 'Yaşlar: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Rəqəmsal vətəndaşlıq
+            csf_sequencing:
+              display_name: Ardıcıllıq qurmaq
+            csf_events:
+              display_name: Tədbirlər
+            csf_loops:
+              display_name: dövrlər
+            csf_conditionals:
+              display_name: Şərti ifadələr
+            end_of_course_project:
+              display_name: Kurs layihələrinin sonu!
+          title: D Kursu (2021)
+          description_audience: 'Yaşlar: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Rəqəmsal vətəndaşlıq
+            csf_sprites:
+              display_name: Spraytlar
+            ramp_up:
+              display_name: Iç-içə dövrlər
+            csf_functions:
+              display_name: Funksiyalar
+            csf_nested_loops:
+              display_name: Şərti ifadələr
+            end_of_course_project:
+              display_name: Kurs layihələrinin sonu!
+          description_audience: 'Yaşlar: 8-12'
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: Problemin Həlli Prosesi'
+            lessonGroup-3:
+              display_name: 'Fəsil 2: Kompüterlər və Problemlərin Həlli'
+            lessonGroup-4:
+              display_name: Alternativ Dərslər
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: veb-səhifələrin yaradılması'
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: Şəkillər və Animasiyalar'
+            lessonGroup-3:
+              display_name: '2-ci fəsil: Oyunlar yaratmaq'
+          student_description: 3-cü bölmədə siz Game Lab-da animasiyalar, interaktiv incəsənət və oyunları proqramlaşdırarkən kodlaşdırma təcrübənizi inkişaf etdirəcəksiniz. Bölmə sadə formalarla başlayır və eyni proqramlaşdırma konsepsiyalarından və kompüter alimlərinin gündəlik istifadə etdiyi dizayn prosesindən istifadə edərək daha mürəkkəb sprite əsaslı oyunlar yaradır. Yekun layihədə siz fərdiləşdirilmiş, interaktiv proqram hazırlayacaqsınız.
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Proqram laboratoriyasına giriş
+            lessonGroup-3:
+              display_name: 1-ci Fəsil
+            lessonGroup-4:
+              display_name: 2-ci Fəsil

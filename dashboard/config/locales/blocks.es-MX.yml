@@ -1058,6 +1058,8 @@ es-MX:
         text: evitando objetivos
       gamelab_beginCollectingData:
         text: empieza recopilación de datos {BREAK} valor {VALUE} con etiqueta {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} rebota {TARGET}"
       gamelab_changePropBy:
@@ -1702,6 +1704,10 @@ es-MX:
         text: coordenada x de {SPRITE}
       gamelab_yLocationOf:
         text: coordenada y de {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} vuela a {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: rodando
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} comienza {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2371,8 +2377,6 @@ es-MX:
         text: girar a la izquierda
       RyanLab_turnRight:
         text: girar a la derecha
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} decir {TEXT} durante {SECONDS} segundos
       Vector_createSpriteWith:
         text: |-
           crear sprite
@@ -2502,6 +2506,14 @@ es-MX:
             new Behavior(wobbling, []): tambaleándose
             new Behavior(wandering, []): deambulando
             new Behavior(patrolling, []): patrullando
+      adaptations_startFollowing:
+        text: "{SPRITE} empieza seguimiento {TARGET}"
+      adaptations_toggleBehaviorSimple:
+        text: sprite {SPRITE} {TOGGLE} {BEHAVIOR}
+        options:
+          TOGGLE:
+            '"begins"': comienza
+            '"stops"': para
       binary_drawBin:
         text: dibujar binario {BIN}
       binary_drawBinScreen:
@@ -2662,7 +2674,3 @@ es-MX:
         text: solicitar usuario {QUESTION} para la variable {VAR} con opciones {A}
       storylab_setSubheading:
         text: definir subencabezado {SUBHEADING}
-      validation_validatedBackground:
-        text: establecer fondo a {IMG}
-      validation_validatedSound:
-        text: ReproducirSonido {SOUND}

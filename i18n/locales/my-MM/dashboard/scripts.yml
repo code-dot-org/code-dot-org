@@ -341,3 +341,41 @@ my:
               display_name: စာရင်းများ
             lessonGroup-3:
               display_name: Loops
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: ဖြစ်စဥ်များ
+            csf_loops:
+              display_name: Loops
+            csf_variables:
+              display_name: Variables
+        coursea-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
+        courseb-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
+        coursec-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
+        coursed-2023:
+          lesson_groups:
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
+            csf_loops:
+              display_name: Loops

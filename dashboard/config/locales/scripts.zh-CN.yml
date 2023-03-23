@@ -4132,6 +4132,12 @@ zh-CN:
               display_name: 内容
             lessonGroup-4:
               display_name: 替补课程
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 替补课程
         hello-world-space-2022:
           title: 你好世界：太空
         hello-world-soccer-2022:
@@ -4307,3 +4313,161 @@ zh-CN:
               display_name: 第一单元：创造网页
             lessonGroup-4:
               display_name: 第二章：多界面网站
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 循环
+            csf_events:
+              display_name: 事件
+          description_short: 学龄前读者的计算机科学介绍：结合了我们最好的幼儿园和一年级的课程。
+          description_audience: 年龄： 4-8
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_sprites:
+              display_name: 精灵图
+            lessonGroup-9:
+              display_name: 事件
+            csf_loops:
+              display_name: 循环
+            csf_conditionals:
+              display_name: 条件语句
+            csf_functions:
+              display_name: 函数
+            csf_variables:
+              display_name: 变量
+            csf_for_loops:
+              display_name: 计数循环
+            end_of_course_project:
+              display_name: 课程项目结束
+          description_short: 计算机科学导论：组合了我们为高年级学生准备的最佳的小学课程。
+          description_audience: 年龄：9-18
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: 数字公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 循环
+            csf_events:
+              display_name: 事件
+            lessonGroup-5:
+              display_name: 课程项目结束
+          student_description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+          description_short: 为学前学生准备的计算机科学介绍
+          description_audience: 年龄：4-7
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: 数字公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 循环
+            csf_impacts:
+              display_name: 计算的影响
+            csf_events:
+              display_name: 事件
+            lessonGroup-6:
+              display_name: 课程项目结束
+          student_description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+          description_short: 为学前学生准备的计算机科学介绍。类似于课程A，但是增加了概念的深度。
+          description_audience: 年龄： 5-8
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: 数字公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 循环
+            csf_events:
+              display_name: 事件
+            csf_data:
+              display_name: 数据
+            end_of_course_project:
+              display_name: 课程项目结束
+          student_description: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
+          description_short: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
+          description_audience: 年龄：6-10
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: 数字公民
+            csf_sequencing:
+              display_name: 序列
+            csf_events:
+              display_name: 事件
+            csf_loops:
+              display_name: 循环
+            csf_conditionals:
+              display_name: 条件语句
+            end_of_course_project:
+              display_name: 课程项目结束
+          title: 课程 D （2021）
+          description_audience: 年龄：7-11
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: 数字公民
+            csf_sprites:
+              display_name: 精灵图
+            ramp_up:
+              display_name: 循环嵌套
+            csf_functions:
+              display_name: 函数
+            csf_nested_loops:
+              display_name: 条件语句
+            lessonGroup-7:
+              display_name: 计算的影响
+            end_of_course_project:
+              display_name: 课程项目结束
+          description_audience: 年龄：8-12
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章︰ 解决问题的流程
+            lessonGroup-3:
+              display_name: 第 2 章︰ 计算机和解决问题的能力
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第一单元：创造网页
+            lessonGroup-3:
+              display_name: 第二章：多界面网站
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章︰图像和动画
+            lessonGroup-3:
+              display_name: 第 2 章︰ 创建游戏
+          student_description: " 在单元3中，要利用你的代码技巧，在游戏实验室中给动画、交互艺术和游戏编程。像计算机科学家每天的工作一样，用同样的编程概念和设计流程。在本单元中，从简单的形状开始，然后构造出精巧的，基于精灵的游戏。在最后的项目中，会开发出一个个性化的交互程序。"
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章︰ 用户为中心的设计
+            lessonGroup-3:
+              display_name: 第 2 章︰ 应用程序原型
+          student_description: 4单元介绍了计算的更广泛的社会影响。通过一系列的设计挑战, 您将了解如何在开发解决问题的方法时更好地理解他人的需求。该单元的后半部分由一个迭代团队项目组成,
+            在这个项目中，团队有机会确定他们所关心的需求、在纸上和应用程序实验室中的原型解决方案, 并与真正的用户测试解决方案以获得反馈并进一步推动迭代.
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章︰ 表达信息
+            lessonGroup-3:
+              display_name: 第 2 章︰ 解决数据问题
+          description_short: 了解人们如何使用电脑来解决数据问题。
+          student_description: 单元5是关于数据在解决问题中的重要性, 它同时强调了计算机在这个过程中的作用。第一章探讨了在计算机中用来表示信息的不同系统以及使用它们所带来的挑战和折衷。在第二章中,
+            您将了解如何使用数据集合来解决问题, 以及计算机如何帮助自动化此过程的步骤。本章最后考虑如何将数据问题解决过程应用到您选择的区域。
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 应用程序实验室简介
+            lessonGroup-3:
+              display_name: 第1章
+            lessonGroup-4:
+              display_name: 第2章

@@ -1029,6 +1029,8 @@ az:
         text: hədəflərdən qaçınmaq
       gamelab_beginCollectingData:
         text: "{BREAK} dəyəri {VALUE} {LABEL} etiketi ilə data toplamağa başlayın"
+      gamelab_behaviorPicker:
+        text: davranış
       gamelab_bounceOff:
         text: SPRITE][0] {TARGET} üzərindən sıçrayır
       gamelab_changePropBy:
@@ -1648,6 +1650,10 @@ az:
         text: x koordinatı
       gamelab_yLocationOf:
         text: y koordinatı
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} {LOCATION} yerə sürüşmək"
+      KatiesBlocks_tumbling:
+        text: akrobatika
       Mikelab_addBehaviorSimple:
         text: sprayt {SPRITE} başlayır {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2238,8 +2244,6 @@ az:
         text: sola dön
       RyanLab_turnRight:
         text: sağa dön
-      SpriteLab2Beta_spriteSay:
-        text: sprayt {SPRITE} deyir {TEXT} {SECONDS} saniyə ərzində
       Vector_createSpriteWith:
         text: |-
           sprayt yarat
@@ -2346,6 +2350,8 @@ az:
             new Behavior(wobbling, []): titrəmə(titrəmək)
             new Behavior(wandering, []): gəzən
             new Behavior(patrolling, []): patrul
+      adaptations_startFollowing:
+        text: "{SPRITE} {TARGET} nöqtəsini izləməyə başlayır"
       binary_drawBinScreen:
         text: |-
           ekranı çəkin
@@ -2467,7 +2473,3 @@ az:
             '"rain"': yağış
             '"starburst"': Ulduz partlaması
             '"twinkling"': parıldayan
-      validation_validatedBackground:
-        text: fonu {IMG} təyin edin
-      validation_validatedSound:
-        text: səsiOYNAT {SOUND}

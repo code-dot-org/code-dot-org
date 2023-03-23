@@ -13822,8 +13822,14 @@ tr-TR:
         display_name: Sanatçı Alıştırması
       CourseE_Lesson_11_Artist_Practice_2022:
         display_name: Sanatçı Alıştırması
+        description: Şimdiye kadar harika iş çıkardınız! Bir sonraki etkinliğinizi
+          seçin. Mümkün olduğu kadar çok tamamlayın. İşlevler ve Sanatçı ile pratik
+          yapmaya devam edin!
       CourseE_Lesson_7_Artist_Practice_2022:
         display_name: Sanatçı Alıştırması
+        description: Şimdiye kadar harika iş çıkardınız! Bir sonraki etkinliğinizi
+          seçin. Mümkün olduğu kadar çok tamamlayın. İç içe döngüler ve Sanatçı ile
+          pratik yapmaya devam edin!
       CourseF_outbreak_story2022_2022_pilot_-2022-2:
         content1: açıklama buraya
         markdown: "# Salgın: Kendi Simülasyonunuzu Kodlayın\n\n## Canavar Şehri'ne
@@ -14266,11 +14272,18 @@ tr-TR:
         - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - correct: true
+        - text: Zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri gidecek.
+          correct: true
           feedback: Doğru!
         - text: Zombi, ayçiçeğine ulaşacak.
+          feedback: Yanlış. Zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
+            gidecek.
         - text: Zombi ilk yolda sağa döner ve sürekli çember çizer.
+          feedback: Yanlış. Zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
+            gidecek.
         - text: Zombi ileriye giden yolun sonunda sıkışıp kalacak.
+          feedback: Bu kodda, zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
+            gidecek.
         questions:
         - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastıktan sonra ne
             olacak?
@@ -14343,12 +14356,16 @@ tr-TR:
         - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         display_name: Ders Projesinin Sonu
+        description: Kurs F"nin sonuna ulaştınız! Keşfetmek için bir proje seçin.
       courseF_EOC_samples2022:
         description: Son projenize başlamak üzeresiniz. Başlamadan önce, örnek projelere
           bakmak için biraz zaman ayırın.
         display_name: Ders Projesinin Sonu
       courseF_collector_samples_2022_pilot_-2022-2:
         display_name: Keşif - Örnek Programlar
+        description: Bir toplayıcı oyunu yaratacaksınız. Başlamadan önce, aşağıdaki
+          örnek projeleri keşfedin. Kendi programınızı planlamaya başlamaya hazır
+          olduğunuzda\ "Son\” tuşuna basın.
       courseF_events_freeplay2022_2022_pilot_-2022-2:
         description: Artık öğrendiklerinizi projenizi daha da iyi hale getirmek için
           kullanabilirsiniz! Programınızın üstüne eklemeye devam edin veya yeni bir
@@ -14375,14 +14392,23 @@ tr-TR:
         - text: Kodu oku, sonra da bir tahminde bulun.
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Tıkladığınız hareketli nesne büyüyecek.
+          correct: true
+          feedback: Doğru! Tıkladığınız hareketli nesne büyüyecek.
+        - text: Tıkladığınız hareketli nesne küçülecek.
+          feedback: Yanlış. Tıkladığınız hareketli nesne büyüyecek.
+        - text: Tüm hareketli nesneler büyüyecek.
+          feedback: Yanlış. Tıkladığınız hareketli nesne büyüyecek.
+        - text: Tüm hareketli nesneler küçülecek.
+          feedback: Yanlış. Tıkladığınız hareketli nesne büyüyecek.
         questions:
-        - {}
+        - text: 'Bir tahminde bulunun: Çalıştır''a bastıktan sonra, hareketli nesnelerden
+            birine tıkladığınızda ne olacak?'
       courseF_intro_apps2022_2022_pilot_-2022-2:
         display_name: SpriteLab Uygulamaları
+        description: Bu projelerin tümü Sprite Lab ile oluşturulmuştur. Neyin mümkün
+          olduğunu görmek için bunları şimdi deneyin. Bu kursun sonunda, bunun gibi
+          kendi projelerinizi yapabileceksiniz... ve daha fazlası!
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - text: '"Bir pizza hemen geliyor!"'
@@ -14465,20 +14491,37 @@ tr-TR:
         display_name: Metin ve İstem Alıştırması
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Tavşan “5" diyecek.
+          correct: true
+          feedback: Doğru! 5 sayısı değişkende saklanır ve ardından karakter konuşurken
+            tekrar kullanılır.
+        - text: Tavşan karakteri, yazılan sayı ne olursa söyleyecektir.
+          feedback: Yanlış. Bu programda bilgi istemi yoktur. Sayı doğrudan kodda
+            ayarlanır.
+        - text: Tavşan “say" diyecek.
+          feedback: Yanlış. "saymak" bir değişkendir. Bu blok çalıştığında, saklanan
+            numarayı alır. Tavşan "5" diyecek.
+        - text: "`saymak` bir sayı olmadığı için hiçbir şey olmayacak."
+          feedback: Yanlış. 5 sayısı değişkende saklanır ve karakter konuşurken kullanılır.
         questions:
-        - {}
+        - text: 'Bir tahmin yapın: Tavşan ne diyecek?'
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Program, yazılan sayı ne olursa yazdıracaktır.
+          feedback: Yanlış. Sayı değişkende saklanır ve havuç hareketli nesnesi oluşturmak
+            için kullanılır.
+        - text: Tavşan karakteri, yazılan sayı ne olursa söyleyecektir.
+          feedback: Yanlış. Sayı değişkende saklanır ve havuç hareketli nesnesi oluşturmak
+            için kullanılır.
+        - text: Program birçok yeni havuç karakteri yapacak.
+          correct: true
+          feedback: Doğru! Yapılan karakter sayısı değişkende depolanan sayıdır.
+        - text: "`saymak` bir sayı olmadığı için hiçbir şey olmayacak."
+          feedback: Yanlış. Değişkende bir sayı saklanır ve havuç karakterlerini oluşturmak
+            için kullanılır.
         questions:
-        - {}
+        - text: 'Bir tahminde bulunun: Bilgi istemine bir sayı yazdıktan sonra ne
+            olacak?'
       courseF_variables_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - text: Program, "Merhaba ad!" yazacak
@@ -14606,3 +14649,12 @@ tr-TR:
             ve bu hataya neden oluyor.
         questions:
         - text: Bu koda dikkatlice bakın. Sizce program çalıştığında ne olacak?
+      courseF_groups_freeplay_2022_pilot_-2022-2:
+        description: Artık ne istersen yapmak için öğrendiklerini kullanabilirsin!
+          Çok sayıda hareketli nesne içeren etkileşimli bir program oluşturun!
+        display_name: Bir sürü Hareketli Nesneler - Serbest Oyun
+      courseF_groups_practice_2022_pilot_-2022-2:
+        description: Şimdiye kadar çok iyi gitti! Bir sonraki aktiviteni seç. Mümkün
+          olduğu kadar çok tamamla. Olay ve hareeketli nesne gruplarıyla alıştırma
+          yapmaya devam et!
+        display_name: Çok sayıda Hareketli Nesne Alıştırmaları

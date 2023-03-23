@@ -2905,6 +2905,10 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
         hello-world-space-2022:
           title: 'Привіт Світ: Космос'
         hello-world-soccer-2022:
@@ -3024,3 +3028,124 @@ uk:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Глава 2: Побудова фізичних прототипів'
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+          description_audience: 'Вік: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_sprites:
+              display_name: Спрайти
+            lessonGroup-9:
+              display_name: Події
+            csf_loops:
+              display_name: Цикли
+            csf_conditionals:
+              display_name: Умови
+            csf_functions:
+              display_name: Функції
+            csf_variables:
+              display_name: Змінні
+            csf_for_loops:
+              display_name: Цикли For
+          description_audience: 'Вік: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+          student_description: Вивчення основ інформатики та безпеки в інтернеті. At the end of the course, create your very own game or story you can share.
+          description_audience: 'Вік: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+          student_description: Вивчення основ інформатики та безпеки в інтернеті. At the end of the course, create your very own game or story you can share.
+          description_audience: 'Вік: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+            csf_data:
+              display_name: Дані
+          description_audience: 'Вік: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_events:
+              display_name: Події
+            csf_loops:
+              display_name: Цикли
+            csf_conditionals:
+              display_name: Умови
+          title: Курс D (2021)
+          description_audience: 'Вік: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sprites:
+              display_name: Спрайти
+            ramp_up:
+              display_name: Вкладені цикли
+            csf_functions:
+              display_name: Функції
+            csf_nested_loops:
+              display_name: Умови
+          description_audience: 'Вік: 8-12'
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процес вирішення проблем'
+            lessonGroup-3:
+              display_name: 'Глава 2: Комп''ютери та вирішення проблем'
+        web-development-2023:
+          student_description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися зі світом, ви дізнаєтеся, як структурувати та стиліувати свої сторінки за допомогою HTML та CSS. Ви також будете практикувати цінні навички програмування, такі як налагодження, використання ресурсів і командна робота.  "
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Зображення та анімації'
+            lessonGroup-3:
+              display_name: 'Глава 2: Побудова ігор'
+          student_description: " У блоці 3 ви будете спиратися на свій досвід кодування під час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій починається з простих форм і будує до більш складних ігор на основі спрайтів, використовуючи ті ж концепції програмування та процес проектування, який комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте персоналізовану інтерактивну програму."
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: |-
+                Глава 1: Використуйте
+                Центрований дизайн
+            lessonGroup-3:
+              display_name: 'Глава 2: Прототипування додатків'
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Представлення інформації'
+            lessonGroup-3:
+              display_name: 'Глава 2: Вирішення проблем із даними'

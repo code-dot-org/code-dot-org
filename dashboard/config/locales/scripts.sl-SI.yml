@@ -1285,6 +1285,10 @@ sl:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -1303,3 +1307,65 @@ sl:
               display_name: Seznami
             lessonGroup-3:
               display_name: Zanke
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+            csf_conditionals:
+              display_name: Pogoji
+            csf_functions:
+              display_name: Funkcije
+            csf_variables:
+              display_name: Spremenljivke
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitalno državljanstvo
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+            csf_conditionals:
+              display_name: Pogoji
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            ramp_up:
+              display_name: Gnezdenje zank
+            csf_functions:
+              display_name: Funkcije
+            csf_nested_loops:
+              display_name: Pogoji

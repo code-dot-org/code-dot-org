@@ -1773,6 +1773,7 @@
         },
         "project_-_propose_an_app/csd/2022": {
           "name": "Progetto - Proponi un'app",
+          "url": "https://docs.google.com/presentation/d/1wkcHClx2M7iHLvZa4yO0Mj9FuRxZgqA8WyxkFD5wP60/template/preview",
           "type": "Diapositive"
         },
         "build_a_newspaper_table/csd/2022": {
@@ -1786,6 +1787,8 @@
           "type": "Guida alle attività"
         },
         "intro_to_problem_solving_newspapers_/csd/2022": {
+          "name": "Introduzione alla risoluzione dei problemi (giornali)",
+          "url": "https://docs.google.com/presentation/d/1ArHAwZQQ9ptcWZQgjQKbN8N3uRjFphIZvDRoiqPLEuI/template/preview",
           "type": "Diapositive"
         },
         "spaghetti_bridge/csd/2022": {
@@ -1838,6 +1841,8 @@
           "type": "Guida alle attività"
         },
         "exploring_problem_solving_games_/csd/2022": {
+          "name": "Esplorare la risoluzione dei problemi (giochi)",
+          "url": "https://docs.google.com/presentation/d/1u_-Gw3xJhfsOffpGtqyyKbqvjFNoLcAuozHh10enO0A/template/preview",
           "type": "Diapositive"
         },
         "cs_in_entertainment/csd/2022": {

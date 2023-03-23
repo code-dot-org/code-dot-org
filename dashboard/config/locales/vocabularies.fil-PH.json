@@ -149,8 +149,13 @@
         "code/aquatic/unversioned": {
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
+        "condition/aquatic/unversioned": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
+        },
         "conditionals/aquatic/unversioned": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "debugging/aquatic/unversioned": {
           "word": "Pagdedebug",
@@ -164,8 +169,29 @@
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Caesar Cipher ",
+          "definition": "pamamaraan sa pag-encrypt na nagbabago ng alpabeto sa ilang bilang ng mga karakter"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Cipher",
+          "definition": "ang pangkalahatang termino sa pamamaraan (o algorithm) na nagsasagawa ng pag-encrypt"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Pag-crack ng naka-encrypt",
+          "definition": "Kapag sinubukan mong i-decode ang lihim na mensahe nang hindi nalalaman ang lahat ng mga detalye ng cipher, sinusubukan mong \"i-crack\" ang naka-encrypt."
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Decryption",
+          "definition": "proseso na binabaligtad ang pag-encrypt, pagkuha ng lihim na mensahe at paggawa ng orihinal na plain text"
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Pag-Encrypt"
+          "word": "Pag-Encrypt",
+          "definition": "proseso ng pag-encode ng mga mensahe upang panatilihing lihim ang mga ito, kaya ang mga \"awtorisadong\" partido lang ang makakabasa nito."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Random na Pagpapalit ng Cipher",
+          "definition": "diskarte sa pag-encrypt na nagmamapa sa bawat titik ng alpabeto sa random na piniling iba pang mga titik ng alpabeto."
         },
         "code/starwars/unversioned": {
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
@@ -305,7 +331,12 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "conditionals/coursed/2022": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
+        },
+        "condition/coursed/2022": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
         },
         "behavior/coursef/2022": {
           "word": "Paggawi"
@@ -347,8 +378,12 @@
         "function/coursee/2022": {
           "word": "Function"
         },
+        "condition/coursee/2022": {
+          "word": "Condition"
+        },
         "conditionals/coursee/2022": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "copyright/coursee/2022": {
           "word": "Karapatang-ari"
@@ -394,8 +429,13 @@
           "word": "Loop",
           "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
+        "condition/express/2022": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
+        },
         "conditionals/express/2022": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "function/express/2022": {
           "word": "Function",
@@ -483,6 +523,9 @@
         },
         "variable/csd/2022": {
           "word": "Variable"
+        },
+        "condition/csd/2022": {
+          "word": "Condition"
         },
         "conditionals/csd/2022": {
           "word": "Mga conditional"
@@ -636,7 +679,12 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "conditionals/coursed/2021": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
+        },
+        "condition/coursed/2021": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
         },
         "debugging/express/2021": {
           "word": "Pagdedebug",
@@ -657,8 +705,13 @@
           "word": "Loop",
           "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
+        "condition/express/2021": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
+        },
         "conditionals/express/2021": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "function/express/2021": {
           "word": "Function",
@@ -707,8 +760,13 @@
           "word": "Function",
           "definition": "Isang piraso ng code na madali mong magagamit nang paulit-ulit."
         },
+        "condition/coursee/2021": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
+        },
         "conditionals/coursee/2021": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "define/coursee/2021": {
           "word": "magtakda"
@@ -729,6 +787,9 @@
         },
         "variable/csd/2021": {
           "word": "Variable"
+        },
+        "condition/csd/2021": {
+          "word": "Condition"
         },
         "conditionals/csd/2021": {
           "word": "Mga conditional"
