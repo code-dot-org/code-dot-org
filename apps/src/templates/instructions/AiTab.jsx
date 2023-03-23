@@ -29,6 +29,8 @@ export const AiTab = props => {
     
     ${currentCode}`;
 
+    console.log(prompt);
+
     openaiCompletion(prompt).then(setResult);
   }, [currentCode]);
 
@@ -36,7 +38,7 @@ export const AiTab = props => {
     <div>
       {!result && <div>loading...</div>}
       {result && (
-        <div>
+        <div className="ai-tab">
           <SafeMarkdown markdown={result} />
         </div>
       )}
