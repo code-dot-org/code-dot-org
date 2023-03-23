@@ -28,16 +28,21 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    %h2 What is a Maker?
-    %p.no-margin-bottom Makers invent, explore, innovate, and create using technology like development boards, robotics, 3D printing, programming, and more. Maker education takes STEM (Science, Technology, Engineering, Mathematics) a step further by inviting hands-on experience and collaboration into the classroom to help teach problem solving and critical thinking.
+    .text-wrapper.col-60
+      %h2 What is a Maker?
+      %p.h5-lookalike-style Makers invent, explore, innovate, and create using technology like development boards, robotics, 3D printing, programming, and more.
+      %p Maker education takes STEM (Science, Technology, Engineering, Mathematics) a step further by inviting hands-on experience and collaboration into the classroom to help teach problem solving and critical thinking.
+    %div.col-33{style: "float: right"}
+      %img{src: "/images/maker/maker-students-cp.png", alt: "", style: "width: 100%; margin-top: .75em"}
+    .clear
 
 = view :section_divider_line
 
 %section
   .wrapper
     %h2 Explore devices
-    %p We have curriculum options that support two different devices — see available options below. <strong>Need a device?</strong> Explore details of each device by clicking <em>Learn more about the device</em> below.
-    = view :maker_devices, curriculum_link_cp: "#curriculum_link_cp", curriculum_link_microbit: "#curriculum_link_microbit"
+    %p We have curriculum options that support two different devices — see available options below. <strong>Need a device?</strong> Learn more about the devices below.
+    = view :maker_devices, curriculum_link_cp: "#curriculum_link_cp", curriculum_link_microbit: "#curriculum_link_microbit",  button_label: "See available curriculum", aria_label_cp: "See available curriculum for Circuit Playground device", aria_label_microbit: "See available curriculum for BBC micro:bit device"
 
 %section.bg-neutral-light.why-physical-computing
   .wrapper
@@ -71,7 +76,7 @@ theme: responsive_full_width
 %section
   .wrapper
     %h2 Curriculum using the Circuit Playground
-    = view :maker_curriculum_circuit_playground, explore_unit_link: CDO.studio_url("/s/devices-2023?viewAs=Instructor"), teach_unit_link: CDO.studio_url("/courses/self-paced-pl-physical-computing")
+    = view :maker_curriculum_circuit_playground, explore_unit_link: CDO.studio_url("/s/devices-2022?viewAs=Instructor"), teach_unit_link: CDO.studio_url("/courses/self-paced-pl-physical-computing")
 
 = view :section_divider_line
 
@@ -79,6 +84,7 @@ theme: responsive_full_width
 %section
   .wrapper
     %h2 Curriculum using the micro:bit
+    %p Code.org has partnered with the Micro:bit Educational Foundation to offer teachers several resources on using the BBC micro:bit device.
     = view :maker_curriculum_microbit, explore_unit_link: CDO.studio_url("/s/microbit-2023?viewAs=Instructor"), extension_lessons_link: "/maker/csf-microbit"
 
 %section.bg-neutral-light
