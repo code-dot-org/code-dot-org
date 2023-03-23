@@ -1527,6 +1527,10 @@ nl:
         text: x coördinaat van {SPRITE}
       gamelab_yLocationOf:
         text: y coordinaat van {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} glijdt naar {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: tuimelen
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} begint {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2021,8 +2025,6 @@ nl:
         text: Draai linksom
       RyanLab_turnRight:
         text: Draai rechtsom
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} zeggen {TEXT} voor {SECONDS} seconden
       Vector_createSpriteWith:
         text: |-
           maak sprite
@@ -2071,6 +2073,8 @@ nl:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} zegt {SPEECH}"
+      adaptations_startFollowing:
+        text: "{SPRITE} begint {TARGET} te volgen"
       binary_drawBin:
         text: draw binary {BIN}
       binary_drawBinScreen:
@@ -2222,5 +2226,3 @@ nl:
             '"rain"': regen
             '"starburst"': Sterrenvorming
             '"twinkling"': Fonkeling
-      validation_validatedBackground:
-        text: set achtergrond naar {IMG}

@@ -64,3 +64,20 @@ nl:
           description_short: Leer basis computerwetenschappelijke principes.
         csp-2023:
           description_short: Leer basis computerwetenschappelijke principes.
+    resources:
+      curriculum/csd/2020:
+        name: Lesprogramma
+      teacher_forum/csd/2020:
+        name: Lerarenforum
+      curriculum/csd/2017:
+        name: Lesprogramma
+      teacher_forum_6/csd/2017:
+        name: Lerarenforum
+      curriculum/csd/2019:
+        name: Lesprogramma
+      teacher_forum/csd/2019:
+        name: Lerarenforum
+      curriculum/csd/2018:
+        name: Lesprogramma
+      teacher_forum_6/csd/2018:
+        name: Lerarenforum

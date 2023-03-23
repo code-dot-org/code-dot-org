@@ -557,8 +557,30 @@ pt:
         csf_follow_the_digital_trail: Siga o Trilha Digital
         csf_private_and_personal_information: Informações Privadas e Pessoais
         csd_what_computers_are: O que é um computador?
+        csd_how_teamwork_works: Como funciona o trabalho em equipe
+        csd_teamwork_and_disagreement: Trabalho em equipe - Lidar com discordâncias
+        csf21pilot_events: 'Sprite Lab: Sprites em ação'
+        csf21pilot_prompts: 'Sprite Lab: texto e instruções'
+        csd_ml_intro_to_ai_lab: Introdução ao AI Lab
+        csd_ml_import_model: Importando um modelo de IA
+        csf_lots_of_sprites: 'Sprite Lab: Muitos Sprites'
         playlab_2021: Introdução ao Laboratório
         playlab_2021_reader: Introdução ao Laboratório
+        csp_defining_calling_functions: Definindo e chamando funções
+        csp_tutorial_datatab: Aba de dados no App Lab
+        csp_tutorial_libraries: Bibliotecas no App Lab
+        PL-Video-21: Bem-vindo ao aprendizado profissional da Code.org!
+        csp_tutorial_datavis1: Visualizador de dados no App Lab - Parte 1
+        csp_tutorial_datavis2: Visualizador de dados no App Lab - Parte 2
+        csd_ml_intro_ai_lab_july2021: Introdução ao AI Lab
+        csd_ml_training_testing_ai_lan: Treinamento e testes no AI Lab
+        csd_ml_model_cards_july2021: Cartões modelo no AI Lab
+        csd_ml_numerical_ai_lab: Dados numéricos no AI Lab
+        Gettting_Started_Progress: Progresso, feedback e avaliação
+        Gettting_Started_ClassSection: Criando uma seção de classe
+        Gettting_Started_StudentExperience: A experiência do aluno
+        Getting_Started_BasicFeatures: Características básicas do Code.org
+        PL_overview_CSD: O que são descobertas da ciência da computação?
         PL_CSD_TeacherTips_Advise: Dicas de professores - Conselhos para novos professores
         PL_CSD_TeacherTips_IntroToCSD: "\nDicas de professores - Introdução ao CS Discoveries"
         PL_CSD_TeacherTips_ProblemSolvingProcess: Dicas de professores - O processo de solução de problemas
@@ -571,6 +593,7 @@ pt:
         hello_world_intro: Olá Mundo - Seja bem-vindo ao Laboratório das fadas
         hello_world_events: Olá Mundo - Programação com eventos
         hello_world_congrats: Olá Mundo - Faça o que você quiser
+        csp_global_vs_local: Depurando variáveis globais versus locais
         rough_poemart_intro: v1 Introdução à Arte de Poema
         rough_poemart_events: v1Eventos de Arte de Poema
         rough_poemart_imagery: v1 Imagens de Arte de Poema
@@ -581,6 +604,17 @@ pt:
         poetry_module_multichoiceprompts: Prompts de Múltipla Escolha - Codificação com Poesia
         poetry_module_conditionals: Condicionais - Codificação com Poesia
         poemart_intro: Introdução à Arte em Poemas 
+        poemart_events: Eventos de arte poética
+        poemart_imagery: Imagens de arte de poemas
+        poemart_celebration: Celebração da arte do poema
+        csd_u6_variables_part2: Variáveis - Parte 2
+        csd_ml_ethics_ai: 'Ética e IA '
+        outbreak_intro: 'Simulação de surto: introdução'
+        outbreak_events: 'Outbreak Simulator: Eventos'
+        outbreak_scientist: 'Simulador de surtos: pensando como um cientista'
+        outbreak_outro: 'Outbreak Simulator: jogo grátis'
+        PL_overview_CSP: O que são os Princípios da Ciência da Computação?
+        PL_CSP_EIPMOverview: Guia das aulas do EIPM
         CSA-PL-debugging-temp: Introdução à depuração em laboratório Java – modelo
         csd_app_lab_design_mode: Modo de design do CSD App Lab
         csd_app_lab_events: Eventos do CSD App Lab
@@ -622,6 +656,23 @@ pt:
         csa-pl-intro-to-equality: Introdução à igualdade
         csa-pl-intro-to-equals-method: Introdução ao método .equals ()
         csa-pl-equals-book: Escrevendo o método equals () para a classe Book
+        csa-multi-select-pl: Declarações de seleção múltipla em Java
+        csc_timecapsule_intro: Introdução ao Time Capsule
+        PL_Equity_in_CS_Education: Equidade na educação em ciência da computação
+        csc_fm_pilot: Máquinas funcionais (piloto)
+        csc_fm_pilot_v2: 'Introdução às máquinas funcionais '
+        csc-sprite-lab-pixel-editor: Desenhe seu próprio Sprite
+        csa-pl-intro-to-strings: Introdução às cadeias de caracteres em Java
+        csa-pl-compareTo: O método compareTo ()
+        csc-event-short-intro: Breve introdução aos eventos
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Visão geral da unidade Circuit Playground
+        csa-day-in-pm-pl: O que um gerente de projeto faz?
+        csa-pl-intro-to-pm: Introdução ao gerenciamento de projetos
+        PL_CSD_CircuitPlayground_Setup: Configuração do Circuit Playground
+        csa_object_oriented_programming: 'CSA: Programação orientada a objetos'
+        csa_creating_objects: 'CSA: Criando objetos'
+        csa_calling_methods: 'CSA: Métodos de chamada'
+        csd_sprite_properties: Propriedades do Sprite
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

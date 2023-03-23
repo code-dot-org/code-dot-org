@@ -1124,6 +1124,8 @@ pl:
         text: unikając celów
       gamelab_beginCollectingData:
         text: rozpocznij zbierać dane {BREAK} wartości {VALUE} z etykietami {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} odbija się od {TARGET}"
       gamelab_changePropBy:
@@ -1345,6 +1347,8 @@ pl:
         text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
       gamelab_makeNumSprites:
         text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
+      gamelab_makeNumSpritesNear:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
       gamelab_makeProjectile:
         text: |-
           utworzyć pocisk
@@ -1736,8 +1740,14 @@ pl:
         text: x współrzędna {SPRITE}
       gamelab_yLocationOf:
         text: współrzędna y {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} skocz do {LOCATION}"
+      KatiesBlocks_makeNumSpritesNear:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
       KatiesBlocks_spriteBirdSay:
         text: "{SPRITE} mówi {SPEECH}"
+      KatiesBlocks_tumbling:
+        text: gimnastykowanie się
       Mikelab_addBehaviorSimple:
         text: duszek {SPRITE} rozpoczyna {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2383,8 +2393,6 @@ pl:
         text: skręć w lewo
       RyanLab_turnRight:
         text: skręć w prawo
-      SpriteLab2Beta_spriteSay:
-        text: duszek {SPRITE} mówi {TEXT} przez {SECONDS} sekund
       Vector_createSpriteWith:
         text: |-
           utwórz duszka
@@ -2501,6 +2509,18 @@ pl:
             new Behavior(wobbling, []): chybotanie
             new Behavior(wandering, []): wędrowanie
             new Behavior(patrolling, []): patrolowanie
+      adaptations_makeNumSpritesNear:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
+      adaptations_spriteBirdSay:
+        text: "{SPRITE} mówi {SPEECH}"
+      adaptations_startFollowing:
+        text: "{SPRITE} zaczyna podążać {TARGET}"
+      adaptations_toggleBehaviorSimple:
+        text: duszek {SPRITE} {TOGGLE} {BEHAVIOR}
+        options:
+          TOGGLE:
+            '"begins"': zaczyna się
+            '"stops"': zatrzymuje się
       binary_drawBin:
         text: narysuj binarny {BIN}
       binary_drawBinScreen:
@@ -2661,7 +2681,3 @@ pl:
         text: monit użytkownika {QUESTION} o zmienną {VAR} z wyborem {A}
       storylab_setSubheading:
         text: ustaw podtytuł {SUBHEADING}
-      validation_validatedBackground:
-        text: ustaw tło na {IMG}
-      validation_validatedSound:
-        text: PLAYSound {SOUND}

@@ -1034,6 +1034,8 @@ fa:
         text: دوری از هدفها
       gamelab_beginCollectingData:
         text: آغاز جمع‌آوری داده [BREAK][0] با مقدار [VALUE][1] با برچسب [LABEL][2]
+      gamelab_behaviorPicker:
+        text: "[BEHAVIOR][0]"
       gamelab_bounceOff:
         text: "[SPRITE][0] به [TARGET][1] می‌رسد و برمی‌گردد"
       gamelab_changePropBy:
@@ -1643,6 +1645,10 @@ fa:
         text: مختصات x مربوط به [SPRITE][0]
       gamelab_yLocationOf:
         text: مختصات y مربوط به [SPRITE][0]
+      KatiesBlocks_glideTo:
+        text: "[SPRITE][0] آرام به [LOCATION][1] می‌رود"
+      KatiesBlocks_tumbling:
+        text: جست و خیز کردن
       Mikelab_addBehaviorSimple:
         text: اسپرایت [SPRITE][0] ، [BEHAVIOR][1] را شروع می‌کند
       Mikelab_addTrainingData:
@@ -2301,8 +2307,6 @@ fa:
         text: بپیچ به چپ
       RyanLab_turnRight:
         text: بپیچ به راست
-      SpriteLab2Beta_spriteSay:
-        text: اسپرایت [SPRITE][0] جمله [TEXT][1] را برای [SECONDS][2] ثانیه می‌گوید
       Vector_createSpriteWith:
         text: |-
           ایجاد اسپرایت
@@ -2419,6 +2423,8 @@ fa:
             "new Behavior(wobbling, [])": تلوتلو خوردن
             "new Behavior(wandering, [])": گردش کردن
             "new Behavior(patrolling, [])": گشت‌زنی
+      adaptations_startFollowing:
+        text: "[SPRITE][0] [TARGET][1] را دنبال میکند"
       binary_drawBin:
         text: 'کشیدن دودویی: [BIN][0]'
       binary_drawBinScreen:
@@ -2579,7 +2585,3 @@ fa:
         text: به کاربر برای متغیر [VAR][1] سوال [QUESTION][0] با انتخاب [A][2] را بفرست
       storylab_setSubheading:
         text: 'عنوان فرعی را تنظیم کن: [SUBHEADING][0]'
-      validation_validatedBackground:
-        text: تنظیم پس‌زمینه روی [IMG][0]
-      validation_validatedSound:
-        text: '[SOUND][0] را پخش کن'

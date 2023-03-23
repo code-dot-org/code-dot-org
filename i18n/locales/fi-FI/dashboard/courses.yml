@@ -49,3 +49,12 @@ fi:
           description_short: Opi tietotekniikan peruskäsitteet.
         csp-2023:
           description_short: Opi tietotekniikan peruskäsitteet.
+    resources:
+      curriculum/csd/2020:
+        name: Opetussuunnitelma
+      curriculum/csd/2017:
+        name: Opetussuunnitelma
+      curriculum/csd/2019:
+        name: Opetussuunnitelma
+      curriculum/csd/2018:
+        name: Opetussuunnitelma

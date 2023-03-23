@@ -924,6 +924,10 @@ kn:
         text: x {SPRITE} ನ ಕೋಆರ್ಡಿನೇಟ್
       gamelab_yLocationOf:
         text: y {SPRITE} ನ ಕೋಆರ್ಡಿನೇಟ್
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} ಇದು {LOCATION} ಗ್ಲೈಡ್ ಮಾಡಿ"
+      KatiesBlocks_tumbling:
+        text: ಟಂಬ್ಲಿಂಗ್
       Mikelab_addBehaviorSimple:
         text: ಸ್ಪ್ರೈಟ್ {SPRITE} ಆರಂಭ {BEHAVIOR}
       Mikelab_allSpritesWithAnimation:
@@ -1419,6 +1423,8 @@ kn:
             new Behavior(wobbling, []): ಒದ್ದಾಡುವುದು
             new Behavior(wandering, []): ಅಲೆದಾಡುವುದು
             new Behavior(patrolling, []): ಗಸ್ತು ತಿರುಗುತ್ತಿದೆ
+      adaptations_startFollowing:
+        text: "{SPRITE}  {TARGET} ಅನ್ನು ಫಾಲೋ ಮಾಡುವುದನ್ನು ಆರಂಭಿಸಿದೆ"
       binary_move:
         options:
           DIR:
@@ -1495,5 +1501,3 @@ kn:
         text: ಶೀರ್ಷಿಕೆ ನಿಗದಿಸಿ {HEADING}
       storylab_setSubheading:
         text: ಸಬ್‌ಹೆಡಿಂಗ್‌ ಸೆಟ್ ಮಾಡಿ {SUBHEADING}
-      validation_validatedBackground:
-        text: "{IMG} ಗೆ ಹಿನ್ನೆಲೆಯನ್ನು ನಿಗದಿಸಿ"
