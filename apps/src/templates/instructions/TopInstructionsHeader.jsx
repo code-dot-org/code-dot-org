@@ -32,6 +32,7 @@ function TopInstructionsHeader(props) {
     handleReviewTabClick,
     handleTeacherOnlyTabClick,
     handleClickCollapser,
+    isOldPurpleColor,
     isMinecraft,
     dynamicInstructions,
     ttsLongInstructionsUrl,
@@ -60,6 +61,7 @@ function TopInstructionsHeader(props) {
   return (
     <PaneHeader
       hasFocus={false}
+      isOldPurpleColor={isOldPurpleColor}
       teacherOnly={teacherOnly}
       isMinecraft={isMinecraft}
     >
@@ -97,6 +99,7 @@ function TopInstructionsHeader(props) {
             className="uitest-instructionsTab"
             onClick={handleInstructionTabClick}
             selected={tabSelected === TabType.INSTRUCTIONS}
+            isLegacyTextColor={isOldPurpleColor}
             text={i18n.instructions()}
             teacherOnly={teacherOnly}
             isMinecraft={isMinecraft}
@@ -107,6 +110,7 @@ function TopInstructionsHeader(props) {
               className="uitest-helpTab"
               onClick={handleHelpTabClick}
               selected={tabSelected === TabType.RESOURCES}
+              isLegacyTextColor={isOldPurpleColor}
               text={i18n.helpTips()}
               teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
@@ -118,6 +122,7 @@ function TopInstructionsHeader(props) {
               className="uitest-feedback"
               onClick={handleCommentTabClick}
               selected={tabSelected === TabType.COMMENTS}
+              isLegacyTextColor={isOldPurpleColor}
               text={levelHasRubric ? i18n.rubric() : i18n.feedback()}
               teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
@@ -128,6 +133,7 @@ function TopInstructionsHeader(props) {
             <InstructionsTab
               onClick={handleDocumentationTabClick}
               selected={tabSelected === TabType.DOCUMENTATION}
+              isLegacyTextColor={isOldPurpleColor}
               text={i18n.documentation()}
               teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
@@ -139,6 +145,7 @@ function TopInstructionsHeader(props) {
               className="uitest-reviewTab"
               onClick={handleReviewTabClick}
               selected={tabSelected === TabType.REVIEW}
+              isLegacyTextColor={isOldPurpleColor}
               text={i18n.review()}
               teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
@@ -204,7 +211,7 @@ const styles = {
       marginBottom: '3px'
     },
     buttonImg: {
-      lineHeight: '24px',
+      lineHeight: '20px',
       fontSize: 15,
       paddingLeft: 12
     }
@@ -281,6 +288,7 @@ TopInstructionsHeader.propTypes = {
   handleReviewTabClick: PropTypes.func.isRequired,
   handleTeacherOnlyTabClick: PropTypes.func.isRequired,
   handleClickCollapser: PropTypes.func.isRequired,
+  isOldPurpleColor: PropTypes.bool,
   isMinecraft: PropTypes.bool.isRequired,
   dynamicInstructions: PropTypes.object,
   ttsLongInstructionsUrl: PropTypes.string,

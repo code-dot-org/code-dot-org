@@ -84,7 +84,7 @@
   "user_id": 182,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-03T16:36:16.784+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_fish\\\"\"],\"cloned_from\":\"csc_animal_adaptations_fish\"},{\"changed_at\":\"2023-03-09 22:34:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"authored_hints\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:36:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 23:06:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-20 22:15:04 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-20 22:26:17 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"short_instructions\",\"block_pools\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-20 22:29:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-20 22:33:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 00:17:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 00:31:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 00:34:20 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-03T16:36:16.784+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_fish\\\"\"],\"cloned_from\":\"csc_animal_adaptations_fish\"},{\"changed_at\":\"2023-03-09 22:34:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"authored_hints\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:36:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 23:06:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-20 22:15:04 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-20 22:26:17 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"short_instructions\",\"block_pools\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-20 22:29:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-20 22:33:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 00:17:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 00:31:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 00:34:20 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 17:32:37 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 17:36:43 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1430,7 +1430,7 @@
           <field name="IMG">"forest"</field>
         </block>
         <block type="gamelab_makeNewSpriteAnon">
-          <field name="ANIMATION_NAME">"penguin_1"</field>
+          <field name="ANIMATION_NAME">"peacock"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker">
               <field name="LOCATION">{"x":144,"y":262}</field>
@@ -1441,12 +1441,12 @@
           <field name="TOGGLE">"begins"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"penguin_1"</field>
+              <field name="ANIMATION">"peacock"</field>
             </block>
           </value>
           <value name="BEHAVIOR">
-            <block type="gamelab_behaviorPicker">
-              <field name="BEHAVIOR">driving with arrow keys</field>
+            <block type="gamelab_collectibleBehaviors">
+              <field name="BEHAVIOR">new Behavior(spinning_right, [])</field>
             </block>
           </value>
         </block>
