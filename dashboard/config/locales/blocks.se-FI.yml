@@ -1204,6 +1204,8 @@ se:
         text: x koordináhta {SPRITE}
       gamelab_yLocationOf:
         text: y koordináhta {SPRITE}
+      KatiesBlocks_tumbling:
+        text: fierrat
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} álgá {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1479,8 +1481,6 @@ se:
             '13': '13'
             '14': '14'
             '15': '15'
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} dadjá {TEXT} {SECONDS} sekunddaid
       Vector_createSpriteWith:
         text: |-
           ráhkat sprite
@@ -1642,5 +1642,3 @@ se:
             '"confetti"': Konfetti
             '"hearts"': váimmut
             '"starburst"': Starburst
-      validation_validatedBackground:
-        text: bija duogábeali dása {IMG}

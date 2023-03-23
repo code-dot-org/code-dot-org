@@ -975,6 +975,7 @@ de:
         csa_accessor_methods: 'CSA: Accessor-Methoden'
         csa_constructors: 'CSA: Konstruktoren'
         csa_creating_a_scanner_object: 'CSA: Ein Scanner-Objekt erstellen'
+        csd_sprite_properties: Sprite Eigenschaften
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den

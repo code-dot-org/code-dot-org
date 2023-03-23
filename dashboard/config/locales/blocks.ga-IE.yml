@@ -1360,6 +1360,8 @@ ga:
         text: comhordanáid x de {SPRITE}
       gamelab_yLocationOf:
         text: comhordanáid y de {SPRITE}
+      KatiesBlocks_tumbling:
+        text: rothlam
       Mikelab_addBehaviorSimple:
         text: nuair a thosaíonn {SPRITE} {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1874,5 +1876,3 @@ ga:
             '"hearts"': croíthe
             '"rain"': báisteach
             '"starburst"': Pléascadh Réaltaí
-      validation_validatedBackground:
-        text: 'socraigh an cúlra: {IMG}'
