@@ -6,6 +6,7 @@
       0.6,
       0.6
     ],
+    "style": "procedure_blocks",
     "func": "addFiveBlock",
     "blockText": "addFive",
     "args": [

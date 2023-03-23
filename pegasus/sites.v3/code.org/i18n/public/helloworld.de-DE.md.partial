@@ -18,7 +18,7 @@ social:
 
 In Informatik 101 ist das erste Programm, das viele SchülerInnen erstellen, ein einfaches Programm, das eine ikonische Textzeile ausgibt: „Hallo Welt!“ Sagen Sie hallo zur Welt der Informatik mit dieser Einführungsaktivität. Sie vermittelt den Schülerinnen und Schülern die grundlegenden Programmierkenntnisse und das Selbstvertrauen für die Entwicklung von Anwendungen. Wähle aus sechs lustigen Themen aus und programmiere interaktive Charaktere in einer Welt, die du erschaffen hast!
 
-# Wähle dein Hello World Thema aus
+## Choose your Hello World theme
 
 {{spritelab_module, title: „NEU! Space", color: "#d41f33", image: "images/csc/helloworld/helloworldspacetheme.png", alt_text: "Two cute astronaut and corgi characters floating in space", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
 {{spritelab_module, title: „NEU! Soccer", color: "#3ba467", image: "images/csc/helloworld/helloworldsoccertheme.png", alt_text: "Three giraffe, tiger, and rhino characters on a field about to start a game of soccer", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
@@ -37,3 +37,5 @@ In Informatik 101 ist das erste Programm, das viele SchülerInnen erstellen, ein
 {{ featured_project, title: "Animals", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", alt_text: "A student project featuring an animated gif of an underwater scene with dolphin, fish, and jellyfish characters in front of a shipwreck", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
 {{ featured_project, title: "Retro", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", alt_text: "A student project featuring an animated gif of a game of tag with two alien characters on a distant planet", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
 {{ clearfix }}
+
+{{ helloworld }}
