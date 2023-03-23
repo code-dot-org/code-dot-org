@@ -42,10 +42,15 @@ class UnconnectedLabContainer extends Component {
     //this.lastId = this.props.currentLevelId;
 
     //console.log('rendering container again', idChanged);
+
+    const currentLevelIndex = this.getCurrentLevelIndex(
+      this.props.currentLevelId
+    );
+
     return (
       <div id="lab-container" style={{width: '100%', height: '100%'}}>
         <MusicLabView
-          currentLevel={this.props.currentLevelId}
+          currentLevel={currentLevelIndex}
           onChangeLevel={index => this.changeLevelIndex(index)}
         />
 
