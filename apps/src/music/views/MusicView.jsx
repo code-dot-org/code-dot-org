@@ -152,7 +152,14 @@ class UnconnectedMusicView extends React.Component {
       this.setState({
         currentPlayheadPosition: this.player.getCurrentPlayheadPosition()
       });
+
+      this.updateHighlightedBlocks();
     }
+  };
+
+  updateHighlightedBlocks = () => {
+    const playingBlockIds = this.player.getCurrentlyPlayingBlockIds();
+    this.musicBlocklyWorkspace.updateHighlightedBlocks(playingBlockIds);
   };
 
   loadLibrary = async () => {
@@ -231,6 +238,7 @@ class UnconnectedMusicView extends React.Component {
       this.analyticsReporter.onButtonClicked('play');
     } else {
       this.stopSong();
+      this.updateHighlightedBlocks();
     }
   };
 
