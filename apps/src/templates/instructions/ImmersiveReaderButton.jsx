@@ -3,12 +3,17 @@ import PropTypes from 'prop-types';
 import handleLaunchImmersiveReader from '@cdo/apps/util/immersive_reader';
 import {renderButtons} from '@microsoft/immersive-reader-sdk';
 import cookies from 'js-cookie';
+import classNames from 'classnames';
 
 class ImmersiveReaderButton extends Component {
   static propTypes = {
     title: PropTypes.string,
     text: PropTypes.string,
-    isImmersiveButtonHasRoundBorders: PropTypes.bool
+    isImmersiveButtonHasRoundBorders: PropTypes.bool,
+    // TODO: [Phase 2] This is a switch for legacy styles needed to revert Javalab rebranding changes.
+    //  once we update Javalab to new styles we'll need to remove this prop and all of it's usage
+    //  more info here: PR_LINK_GOES_HERE
+    isLegacyStyles: PropTypes.bool
   };
 
   componentDidMount() {
@@ -31,7 +36,12 @@ class ImmersiveReaderButton extends Component {
   }
 
   render() {
-    const {title, text, isImmersiveButtonHasRoundBorders} = this.props;
+    const {
+      title,
+      text,
+      isImmersiveButtonHasRoundBorders,
+      isLegacyStyles
+    } = this.props;
     // Get the current language from the language cookie.
     const locale = cookies.get('language_') || 'en-US';
 
@@ -44,7 +54,10 @@ class ImmersiveReaderButton extends Component {
         tabIndex={0}
         role="button"
         ref={el => (this.container = el)}
-        className={'immersive-reader-button'}
+        className={classNames(
+          'immersive-reader-button',
+          isLegacyStyles && 'immersive-reader-button-legacy-styles'
+        )}
         data-button-style={'icon'}
         style={{
           borderRadius: isImmersiveButtonHasRoundBorders ? 4 : '4px 0 0 4px'

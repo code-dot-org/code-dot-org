@@ -186,6 +186,7 @@ function TopInstructionsHeader(props) {
               }}
               autoplayTriggerElementId="codeApp"
               isRoundedVolumeIcon
+              isLegacyStyles={isOldPurpleColor}
             />
           )}
       </div>

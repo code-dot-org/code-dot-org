@@ -499,7 +499,8 @@ class TopInstructions extends Component {
       hasContainedLevels,
       isEmbedView,
       isBlockly,
-      noInstructionsWhenCollapsed
+      noInstructionsWhenCollapsed,
+      isOldPurpleColorHeader
     } = this.props;
     const {teacherViewingStudentWork, tabSelected} = this.state;
 
@@ -547,6 +548,7 @@ class TopInstructions extends Component {
             onResize={this.adjustMaxNeededHeight}
             inTopPane
             isImmersiveButtonHasRoundBorders
+            isLegacyImmersiveStyles={isOldPurpleColorHeader}
             isBlockly={isBlockly}
             noInstructionsWhenCollapsed={noInstructionsWhenCollapsed}
           />

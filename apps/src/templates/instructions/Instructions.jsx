@@ -23,6 +23,10 @@ export default class Instructions extends React.Component {
     onResize: PropTypes.func,
     isBlockly: PropTypes.bool,
     isImmersiveButtonHasRoundBorders: PropTypes.bool,
+    // TODO: [Phase 2] This is a switch for legacy styles needed to revert Javalab rebranding changes.
+    //  once we update Javalab to new styles we'll need to remove this prop and all of it's usage
+    //  more info here: PR_LINK_GOES_HERE
+    isLegacyImmersiveStyles: PropTypes.bool,
     noInstructionsWhenCollapsed: PropTypes.bool
   };
 
@@ -33,6 +37,7 @@ export default class Instructions extends React.Component {
       onResize,
       isBlockly,
       isImmersiveButtonHasRoundBorders,
+      isLegacyImmersiveStyles,
       noInstructionsWhenCollapsed,
       inputOutputTable,
       imgURL,
@@ -49,6 +54,7 @@ export default class Instructions extends React.Component {
               isImmersiveButtonHasRoundBorders={
                 isImmersiveButtonHasRoundBorders
               }
+              isLegacyStyles={isLegacyImmersiveStyles}
             />
             <MarkdownInstructions
               markdown={instructions}

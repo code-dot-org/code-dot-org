@@ -51,3 +51,29 @@
     }
   }
 }
+
+.inlineAudioButtonLegacy {
+  .iconWrapper {
+    background-color: $lightest_purple;
+    border-color: $lightest_purple;
+
+    &Volume {
+      border-radius: 4px 0 0 4px;
+    }
+
+    &PlayPause {
+      border-radius: 0 4px 4px 0;
+    }
+
+    .buttonImg {
+      color: $dark_charcoal;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .iconWrapper {
+      background-color: $cyan;
+    }
+  }
+}

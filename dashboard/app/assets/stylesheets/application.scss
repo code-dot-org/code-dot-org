@@ -3853,6 +3853,19 @@ html[dir=rtl] {
   }
 }
 
+.immersive-reader-button-legacy-styles {
+  /* !important is used to override the default styling from the Microsoft immersive-reader-sdk */
+  background-color: $lightest_purple !important;
+  border-color: $lightest_purple;
+
+  &:hover {
+    background-color: $cyan !important;
+    border-radius: 4px !important;
+
+    /* The TTS buttons overlap this button, so make this button's z-index higher as a temp fix */
+  }
+}
+
 #mapbox-location-search-container {
   .mapbox-location-search-container {
     width: 100%;
