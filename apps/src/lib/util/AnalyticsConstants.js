@@ -51,7 +51,12 @@ const EVENTS = {
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
   RUBRIC_LEVEL_VIEWED_EVENT: 'Rubric Level Viewed',
-  TEACHER_VIEWING_STUDENT_WORK: 'Teacher Viewing Student Work'
+  TEACHER_VIEWING_STUDENT_WORK: 'Teacher Viewing Student Work',
+
+  // Maker setup
+  MAKER_SETUP_PAGE_BOARD_TYPE_EVENT: 'Board type on maker setup page',
+  MAKER_SETUP_PAGE_MB_VERSION_EVENT: 'micro:bit version',
+  MAKER_SETUP_PAGE_MB_UPDATE_ERROR_EVENT: 'micro:bit software update error'
 };
 
 export {EVENTS};

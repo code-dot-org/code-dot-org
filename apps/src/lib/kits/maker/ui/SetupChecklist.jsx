@@ -21,6 +21,8 @@ import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 import Button from '../../../../templates/Button';
 import MBFirmataUpdater from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataUpdater';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
@@ -118,6 +120,10 @@ class SetupChecklist extends Component {
       // What type of board is this?
       .then(() => {
         this.setState({boardTypeDetected: this.setupChecker.detectBoardType()});
+        analyticsReporter.sendEvent(EVENTS.MAKER_SETUP_PAGE_BOARD_TYPE_EVENT, {
+          'maker board type': this.state.boardTypeDetected
+        });
+
         Promise.resolve();
       })
 

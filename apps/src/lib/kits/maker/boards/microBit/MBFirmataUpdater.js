@@ -11,6 +11,8 @@ import {
 import {DAPLink, WebUSB} from 'dapjs';
 import {getStore} from '@cdo/apps/redux';
 import {setMicroBitFirmataUpdatePercent} from '@cdo/apps/lib/kits/maker/microBitRedux';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export default class MBFirmataUpdater {
   constructor() {
@@ -28,6 +30,10 @@ export default class MBFirmataUpdater {
     } else if (MICROBIT_IDS_V2.includes(microBitId)) {
       microBitVersion = MICROBIT_V2;
     }
+    analyticsReporter.sendEvent(EVENTS.MAKER_SETUP_PAGE_MB_VERSION_EVENT, {
+      'micro:bit version': microBitVersion
+    });
+
     return microBitVersion;
   }
 
@@ -75,6 +81,12 @@ export default class MBFirmataUpdater {
     } catch (error) {
       console.log(error);
       getStore().dispatch(setMicroBitFirmataUpdatePercent(null));
+      analyticsReporter.sendEvent(
+        EVENTS.MAKER_SETUP_PAGE_MB_UPDATE_ERROR_EVENT,
+        {
+          'micro:bit update error': true
+        }
+      );
       return Promise.reject('Failed to flash Firmata.');
     }
   }
