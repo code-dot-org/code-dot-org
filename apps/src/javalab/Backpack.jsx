@@ -13,7 +13,7 @@ import {makeEnum} from '@cdo/apps/utils';
 import JavalabDialog from './JavalabDialog';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import CloseOnEscape from './components/CloseOnEscape';
-import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
+import {BackpackAPIContext} from './BackpackAPIContext';
 
 const Dialog = makeEnum(
   'IMPORT_WARNING',
@@ -32,11 +32,12 @@ class Backpack extends Component {
     isButtonDisabled: PropTypes.bool.isRequired,
     onImport: PropTypes.func.isRequired,
     // populated by redux
-    backpackChannelId: PropTypes.string.isRequired,
     sources: PropTypes.object.isRequired,
     validation: PropTypes.object.isRequired,
     backpackEnabled: PropTypes.bool
   };
+
+  static contextType = BackpackAPIContext;
 
   state = {
     dropdownOpen: false,
@@ -47,8 +48,7 @@ class Backpack extends Component {
     openDialog: null,
     fileImportMessage: '',
     fileDeleteMessage: '',
-    isDeleting: false,
-    backpackApi: new BackpackClientApi(this.props.backpackChannelId)
+    isDeleting: false
   };
 
   expandDropdown = () => {
@@ -58,9 +58,9 @@ class Backpack extends Component {
       selectedFiles: [],
       backpackFilenames: []
     });
-    if (this.state.backpackApi.hasBackpack()) {
+    if (this.context.hasBackpack()) {
       this.setState({backpackFilesLoading: true});
-      this.state.backpackApi.getFileList(
+      this.context.getFileList(
         this.onFileListLoadError,
         this.onFileListLoadSuccess
       );
@@ -95,7 +95,7 @@ class Backpack extends Component {
   handleDelete = () => {
     const {selectedFiles} = this.state;
     this.setState({isDeleting: true});
-    this.state.backpackApi.deleteFiles(
+    this.context.deleteFiles(
       selectedFiles,
       (_, failedFileList) => this.onDeleteFailed(failedFileList, selectedFiles),
       this.collapseDropdown
@@ -136,7 +136,7 @@ class Backpack extends Component {
   importFiles = selectedFiles => {
     let failedServerImportFiles = [];
     selectedFiles.forEach(filename => {
-      this.state.backpackApi.fetchFile(
+      this.context.fetchFile(
         filename,
         () => failedServerImportFiles.push(filename),
         fileContents =>
@@ -476,7 +476,6 @@ const styles = {
 
 export const UnconnectedBackpack = Backpack;
 export default connect(state => ({
-  backpackChannelId: state.javalab.backpackChannelId,
   sources: state.javalab.sources,
   validation: state.javalab.validation,
   backpackEnabled: state.javalab.backpackEnabled

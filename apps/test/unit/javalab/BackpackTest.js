@@ -1,25 +1,26 @@
 import React from 'react';
 import {expect, assert} from '../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
+import {mount} from 'enzyme';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import javalab from '@cdo/apps/javalab/javalabRedux';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import sinon from 'sinon';
 import {UnconnectedBackpack as Backpack} from '@cdo/apps/javalab/Backpack';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
+import {BackpackAPIContext} from '../../../src/javalab/BackpackAPIContext';
 
 describe('Java Lab Backpack Test', () => {
-  let defaultProps;
+  let defaultProps, backpackApiStub;
 
   beforeEach(() => {
     stubRedux();
     registerReducers({javalab});
-    sinon.stub(BackpackClientApi.prototype, 'hasBackpack').returns(true);
+    backpackApiStub = sinon.createStubInstance(BackpackClientApi);
+    backpackApiStub.hasBackpack.returns(true);
     defaultProps = {
       displayTheme: DisplayTheme.DARK,
       isButtonDisabled: false,
       onImport: () => {},
-      backpackChannelId: '123',
       backpackEnabled: true,
       sources: {},
       validation: {}
@@ -28,11 +29,18 @@ describe('Java Lab Backpack Test', () => {
 
   afterEach(() => {
     restoreRedux();
-    BackpackClientApi.prototype.hasBackpack.restore();
   });
 
+  const renderWithProps = props => {
+    return mount(
+      <BackpackAPIContext.Provider value={backpackApiStub}>
+        <Backpack {...{...defaultProps, ...props}} />
+      </BackpackAPIContext.Provider>
+    );
+  };
+
   it('updates selected files correctly', () => {
-    const wrapper = shallow(<Backpack {...defaultProps} />);
+    const wrapper = renderWithProps({});
     wrapper
       .instance()
       .handleFileCheckboxChange({target: {name: 'Class1.java', checked: true}});
@@ -52,7 +60,7 @@ describe('Java Lab Backpack Test', () => {
   });
 
   it('expand dropdown triggers getFileList', () => {
-    const wrapper = shallow(<Backpack {...defaultProps} />);
+    const wrapper = renderWithProps({});
     const getFileListStub = sinon.stub(
       BackpackClientApi.prototype,
       'getFileList'
@@ -63,7 +71,7 @@ describe('Java Lab Backpack Test', () => {
   });
 
   it('expand dropdown resets state correctly', () => {
-    const wrapper = shallow(<Backpack {...defaultProps} />);
+    const wrapper = renderWithProps({});
     // set state to something that should be cleared by expandDropdown
     wrapper.instance().setState({
       dropdownOpen: false,
@@ -84,7 +92,7 @@ describe('Java Lab Backpack Test', () => {
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}}
     };
-    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    const wrapper = renderWithProps(otherProps);
     // set state to something that should be cleared by expandDropdown
     wrapper.instance().setState({
       dropdownOpen: true,
@@ -102,7 +110,7 @@ describe('Java Lab Backpack Test', () => {
     const otherProps = {
       sources: {visibleFile: {isVisible: true}, hiddenFile: {isVisible: false}}
     };
-    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    const wrapper = renderWithProps(otherProps);
     // set state to something that should be cleared by expandDropdown
     wrapper.instance().setState({
       dropdownOpen: true,
@@ -117,7 +125,7 @@ describe('Java Lab Backpack Test', () => {
   });
 
   it('no dialog shown if there are no duplicate file names', () => {
-    const wrapper = shallow(<Backpack {...defaultProps} />);
+    const wrapper = renderWithProps({});
     // set state to something that should be cleared by expandDropdown
     wrapper.instance().setState({
       dropdownOpen: true,
@@ -132,9 +140,7 @@ describe('Java Lab Backpack Test', () => {
   });
 
   it('renders nothing if backpack is disabled', () => {
-    const wrapper = shallow(
-      <Backpack {...defaultProps} backpackEnabled={false} />
-    );
+    const wrapper = renderWithProps({backpackEnabled: false});
     expect(wrapper.isEmptyRender()).to.be.true;
   });
 
@@ -142,7 +148,7 @@ describe('Java Lab Backpack Test', () => {
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}}
     };
-    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    const wrapper = renderWithProps(otherProps);
     wrapper.instance().setState({
       dropdownOpen: true,
       backpackFilenames: ['file1', 'file2', 'file3'],
@@ -159,14 +165,14 @@ describe('Java Lab Backpack Test', () => {
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}}
     };
-    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    const wrapper = renderWithProps(otherProps);
     wrapper.instance().setState({
       dropdownOpen: true,
       backpackFilenames: ['file1', 'file2', 'file3'],
       selectedFiles: ['file1', 'file3']
     });
     // set up delete files to call success callback
-    sinon.stub(BackpackClientApi.prototype, 'deleteFiles').callsArg(2);
+    backpackApiStub.deleteFiles.callsArg(2);
 
     // open modal
     wrapper.instance().confirmAndDeleteFiles();
@@ -175,23 +181,20 @@ describe('Java Lab Backpack Test', () => {
 
     const state = wrapper.instance().state;
     expect(state.openDialog).to.equal(null);
-    BackpackClientApi.prototype.deleteFiles.restore();
   });
 
   it('Delete error modal is shown if delete fails', () => {
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}}
     };
-    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    const wrapper = renderWithProps(otherProps);
     wrapper.instance().setState({
       dropdownOpen: true,
       backpackFilenames: ['file1', 'file2', 'file3'],
       selectedFiles: ['file1', 'file3']
     });
     // set up delete files to call failure callback
-    sinon
-      .stub(BackpackClientApi.prototype, 'deleteFiles')
-      .callsArgWith(1, null, ['file1', 'file3']);
+    backpackApiStub.deleteFiles.callsArgWith(1, null, ['file1', 'file3']);
 
     // open modal
     wrapper.instance().confirmAndDeleteFiles();
@@ -200,23 +203,20 @@ describe('Java Lab Backpack Test', () => {
 
     const state = wrapper.instance().state;
     expect(state.openDialog).to.equal('DELETE_ERROR');
-    BackpackClientApi.prototype.deleteFiles.restore();
   });
 
   it('Deleted files are removed from dropdown on partial delete success', () => {
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}}
     };
-    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    const wrapper = renderWithProps(otherProps);
     wrapper.instance().setState({
       dropdownOpen: true,
       backpackFilenames: ['file1', 'file2', 'file3'],
       selectedFiles: ['file1', 'file3']
     });
     // set up delete files to call failure callback where only file 1 failed to delete
-    sinon
-      .stub(BackpackClientApi.prototype, 'deleteFiles')
-      .callsArgWith(1, null, ['file1']);
+    backpackApiStub.deleteFiles.callsArgWith(1, null, ['file1']);
 
     // open modal
     wrapper.instance().confirmAndDeleteFiles();
@@ -230,6 +230,5 @@ describe('Java Lab Backpack Test', () => {
     expect(selectedFiles[0]).to.equal('file1');
     // backpackFilenames should have length 2 (file3 should be gone)
     expect(state.backpackFilenames.length).to.equal(2);
-    BackpackClientApi.prototype.deleteFiles.restore();
   });
 });

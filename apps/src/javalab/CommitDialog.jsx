@@ -10,11 +10,13 @@ import _ from 'lodash';
 import CommitDialogBody from './CommitDialogBody';
 import {setCommitSaveStatus} from '@cdo/apps/javalab/javalabRedux';
 import {CompileStatus} from './constants';
-import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
+import {BackpackAPIContext} from './BackpackAPIContext';
 
 const PADDING = 8;
 
 export class UnconnectedCommitDialog extends React.Component {
+  static contextType = BackpackAPIContext;
+
   state = {
     filesToBackpack: [],
     existingBackpackFiles: [],
@@ -22,10 +24,7 @@ export class UnconnectedCommitDialog extends React.Component {
     backpackSaveInProgress: false,
     hasBackpackLoadError: false,
     hasBackpackSaveError: false,
-    compileStatus: CompileStatus.NONE,
-    backpackApi: this.props.backpackEnabled
-      ? new BackpackClientApi(this.props.backpackChannelId)
-      : null
+    compileStatus: CompileStatus.NONE
   };
 
   componentDidMount() {
@@ -58,8 +57,8 @@ export class UnconnectedCommitDialog extends React.Component {
   }
 
   updateBackpackFileList() {
-    if (this.props.backpackEnabled && this.state.backpackApi.hasBackpack()) {
-      this.state.backpackApi.getFileList(
+    if (this.props.backpackEnabled && this.context.hasBackpack()) {
+      this.context.getFileList(
         () => this.setState({hasBackpackLoadError: true}),
         filenames => this.setState({existingBackpackFiles: filenames})
       );
@@ -164,7 +163,7 @@ export class UnconnectedCommitDialog extends React.Component {
     });
 
     // TODO: Compile before saving and show error if compile fails
-    this.state.backpackApi.saveFiles(
+    this.context.saveFiles(
       this.props.sources,
       this.state.filesToBackpack,
       this.handleBackpackSaveError,
@@ -287,7 +286,6 @@ UnconnectedCommitDialog.propTypes = {
   handleCommit: PropTypes.func.isRequired,
   // populated by redux
   sources: PropTypes.object,
-  backpackChannelId: PropTypes.string,
   backpackEnabled: PropTypes.bool,
   isCommitSaveInProgress: PropTypes.bool,
   hasCommitSaveError: PropTypes.bool,
@@ -330,7 +328,6 @@ const styles = {
 export default connect(
   state => ({
     sources: state.javalab.sources,
-    backpackChannelId: state.javalab.backpackChannelId,
     backpackEnabled: state.javalab.backpackEnabled,
     isCommitSaveInProgress: state.javalab.isCommitSaveInProgress,
     hasCommitSaveError: state.javalab.hasCommitSaveError
