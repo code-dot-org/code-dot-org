@@ -6,6 +6,7 @@
       1,
       0.74
     ],
+    "style": "default",
     "func": "addTarget",
     "blockText": "{SPRITE} gets target {TARGET} to {OPT}",
     "args": [
