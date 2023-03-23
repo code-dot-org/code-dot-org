@@ -40,23 +40,27 @@ export default class MusicLibrary {
 
   // A sound picker might want to show the subset of sounds permitted by the
   // progression's currently allowed sounds.
-  getAllowedSounds(folderType: string): Sounds {
+  getAllowedSounds(folderType: string): SoundFolder[] {
     const folders = this.groups[0].folders;
 
     // Let's just do a deep copy and then do filtering in-place.
-    let foldersCopy = JSON.parse(JSON.stringify(folders));
+    let foldersCopy: SoundFolder[] = JSON.parse(
+      JSON.stringify(folders)
+    ) as SoundFolder[];
 
     // Whether or not we have allowedSounds, we need to filter by type.
     foldersCopy = foldersCopy.filter(
-      (folder: any) => folder.type === folderType
+      (folder: SoundFolder) => folder.type === folderType
     );
 
     if (this.allowedSounds) {
-      foldersCopy = foldersCopy.filter((folder : any) => this.allowedSounds?.[folder.path]);
+      foldersCopy = foldersCopy.filter(
+        (folder: SoundFolder) => this.allowedSounds?.[folder.path]
+      );
 
-      foldersCopy.forEach((folder: any) => {
-        folder.sounds = folder.sounds.filter(
-          (sound: any) => this.allowedSounds?.[folder.path]?.includes(sound.src)
+      foldersCopy.forEach((folder: SoundFolder) => {
+        folder.sounds = folder.sounds.filter((sound: SoundData) =>
+          this.allowedSounds?.[folder.path]?.includes(sound.src)
         );
       });
     }
