@@ -97,4 +97,8 @@ class Match < DSLDefined
       }
     )
   end
+
+  def multiple_attempts_allowed?
+    allow_multiple_attempts.nil? || allow_multiple_attempts
+  end
 end

@@ -77,4 +77,9 @@ class Multi < Match
       }
     )
   end
+
+  def multiple_attempts_allowed?(contained_mode: false)
+    return allow_multiple_attempts if allow_multiple_attempts.present?
+    !contained_mode
+  end
 end
