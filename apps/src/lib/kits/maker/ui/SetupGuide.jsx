@@ -91,7 +91,7 @@ export default class SetupGuide extends React.Component {
 
         <div>
           <div style={style.oneColumn}>
-            <DescriptionCard {...this.setupGuideContent('general')} />
+            <HeaderCard {...this.setupGuideContent('general')} />
           </div>
           <div style={style.twoColumns}>
             <DescriptionCard
@@ -136,10 +136,27 @@ function DescriptionCard(props) {
 DescriptionCard.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string.isRequired,
-  href: PropTypes.string,
-  imgSrc: PropTypes.string,
+  href: PropTypes.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
   imgStyle: PropTypes.object,
   description: PropTypes.string.isRequired,
   divStyle: PropTypes.object,
-  alt: PropTypes.string
+  alt: PropTypes.string.isRequired
+};
+
+function HeaderCard(props) {
+  return (
+    <div id={props.id} style={props.divStyle}>
+      <h2>{props.title}</h2>
+      <div className="description-content">
+        <SafeMarkdown markdown={props.description} />
+      </div>
+    </div>
+  );
+}
+HeaderCard.propTypes = {
+  id: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  divStyle: PropTypes.object
 };
