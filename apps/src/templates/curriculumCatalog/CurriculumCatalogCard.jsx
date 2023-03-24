@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
-import {cardImageNamesToSrc} from '@cdo/apps/templates/curriculumCatalog/cardImageNamesToSrc';
 import '../../../style/code-studio/curriculum_catalog_card.scss';
+
+// TODO [MEG]: remove this placeholder and require() syntax once images are pulled
+const tempImage = require('@cdo/static/resource_cards/anotherhoc.png');
 
 const CurriculumCatalogCard = ({
   assignButtonDescription,
@@ -12,13 +14,13 @@ const CurriculumCatalogCard = ({
   duration,
   gradeOrAgeRange,
   imageAltText,
-  imageName,
+  imageSrc,
   topic,
   quickViewButtonDescription,
   quickViewButtonText
 }) => (
   <div className="curriculumCatalogCardContainer">
-    <img src={cardImageNamesToSrc[imageName]} alt={imageAltText} />
+    <img src={imageSrc} alt={imageAltText} />
     <div className="curriculumInfoContainer">
       <p className="overline">{topic}</p>
       <h4>{courseName}</h4>
@@ -60,7 +62,7 @@ CurriculumCatalogCard.propTypes = {
   courseName: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
   gradeOrAgeRange: PropTypes.string.isRequired,
-  imageName: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string.isRequired,
   topic: PropTypes.string.isRequired,
   quickViewButtonText: PropTypes.string.isRequired,
   assignButtonText: PropTypes.string.isRequired,
@@ -72,7 +74,8 @@ CurriculumCatalogCard.propTypes = {
 };
 
 CurriculumCatalogCard.defaultProps = {
-  imageAltText: '' // for decorative images
+  imageAltText: '', // for decorative images
+  imageSrc: tempImage // TODO [MEG]: remove this default once images are pulled
 };
 
 export default CurriculumCatalogCard;
