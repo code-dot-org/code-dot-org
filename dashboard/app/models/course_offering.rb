@@ -122,6 +122,14 @@ class CourseOffering < ApplicationRecord
     end
   end
 
+  # We only want course offerings that are:
+  # - Assignable (course offering 'assignable' setting is true)
+  # - Published (associated unit group or unit 'published_state' setting is 'preview' or 'stable')
+  # - For students (associated unit group or unit 'participant_audience' setting is student)
+  def self.assignable_published_for_students_course_offerings
+    all_course_offerings.select {|co| co.assignable? && co.any_version_is_in_published_state? && co.get_participant_audience == 'student'}
+  end
+
   def self.assignable_course_offerings(user)
     all_course_offerings.select {|co| co.can_be_assigned?(user)}
   end
