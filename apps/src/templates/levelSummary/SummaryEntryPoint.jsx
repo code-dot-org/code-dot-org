@@ -3,14 +3,20 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import Button from '@cdo/apps/templates/Button';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import i18n from '@cdo/locale';
 import styles from './summary-entry-point.module.scss';
 
 const SUMMARY_PATH = '/summary';
 
 const SummaryEntryPoint = ({students}) => {
-  const summaryUrl =
-    document.location.pathname + SUMMARY_PATH + document.location.search;
+  // If viewing the page as Participant, be sure to rewrite the link URL
+  // to view as Instructor, so we don't just get redirected back.
+  const params = document.location.search.replace(
+    `viewAs=${ViewType.Participant}`,
+    `viewAs=${ViewType.Instructor}`
+  );
+  const summaryUrl = document.location.pathname + SUMMARY_PATH + params;
 
   const data = getScriptData('freeresponse');
 
