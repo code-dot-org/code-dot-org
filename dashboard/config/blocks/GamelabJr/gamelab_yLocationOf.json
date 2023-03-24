@@ -9,6 +9,7 @@
         "name": "SPRITE",
         "type": "Sprite"
       }
-    ]
+    ],
+    "style": "math_blocks"
   }
 }
