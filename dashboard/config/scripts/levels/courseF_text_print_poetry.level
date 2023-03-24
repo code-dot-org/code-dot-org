@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2023-03-09T15:16:27.000Z",
-  "level_num": "custom",
-  "user_id": 9,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -69,11 +65,16 @@
     "encrypted_examples": "+NiKqARTsK+jjXfcsp4iQHU2rI8sBKu+snguw3VcrrqkJw+G4lQE2moGMKO7\n9I1CxgsxNoeBqLfj9m1mgn58sA==\n",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Use the \"print\" block to make text appear on the screen.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "standalone_app_name": "spritelab"
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2023-03-09T15:16:27.000Z",
+  "level_num": "custom",
+  "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-09T15:16:27.410+00:00\",\"changed\":[\"cloned from \\\"courseF_text_print_-2022-2\\\"\"],\"cloned_from\":\"courseF_text_print_-2022-2\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-09T15:16:27.410+00:00\",\"changed\":[\"cloned from \\\"courseF_text_print_-2022-2\\\"\"],\"cloned_from\":\"courseF_text_print_-2022-2\"},{\"changed_at\":\"2023-03-23 20:51:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1
   }
