@@ -28,6 +28,10 @@ $border-radius: 4px;
     .overline {
       color: $brand_primary_default;
       margin-bottom: 0.5em;
+      font-size: 0.75em;
+      font-family: $gotham-bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     h4 {
