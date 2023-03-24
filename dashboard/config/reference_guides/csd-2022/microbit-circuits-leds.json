@@ -1,0 +1,9 @@
+{
+  "key": "microbit-circuits-leds",
+  "course_version_key": "2022",
+  "course_offering_key": "csd",
+  "parent_reference_guide_key": "maker-toolkit",
+  "display_name": "External LEDs on a micro:bit",
+  "content": null,
+  "position": 18
+}
