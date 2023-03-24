@@ -1399,6 +1399,12 @@
         "csd6-2022/CS Discoveries Post-Course Survey": {
           "name": "Pesquisa pós-curso da CS Discoveries"
         },
+        "csd7-2022/Introduction to AI Lab": {
+          "name": "Introdução ao AI Lab"
+        },
+        "csd7-2022/Numerical Data in AI Lab": {
+          "name": "Dados numéricos no AI Lab"
+        },
         "csd7-2022/Survey Planning": {
           "name": "Projetando a coleta de dados"
         },
@@ -3026,7 +3032,7 @@
           "name": "Sequenciando com arrastar e soltar"
         },
         "coursea-2017/Programming: Happy Maps": {
-          "name": "Programação: Mapas felizes"
+          "name": "Programação: Happy Maps"
         },
         "coursea-2017/Programming in Maze": {
           "name": "Programação no labirinto"
@@ -4991,6 +4997,12 @@
           "overview": "As próximas quatro lições proporcionam aos alunos a oportunidade de usar suas habilidades de codificação em um projeto principal. Este projeto ajudará as pessoas a ganhar experiência com codificação e produzir um exemplo para compartilhar com colegas e entes queridos. Com a intenção de ser uma experiência de várias lições ou de várias semanas, os alunos passarão um tempo explorando o brainstorming, aprendendo sobre o processo de design, construindo e apresentando seu trabalho final. \\\\r\n\\\\r\nNa fase de exploração, os alunos brincam com exemplos pré-criados de projetos no Artist e no Sprite Lab para se inspirar. Em seguida, os alunos aprenderão sobre o processo de design e como implementá-lo em seus próprios projetos. Eles terão espaço para criar seu próprio projeto no Artist, no Sprite Lab ou em outra interface com a qual se familiarizarem (esse é provavelmente o estágio mais longo do projeto). Finalmente, os alunos poderão apresentar seus trabalhos concluídos aos colegas.",
           "purpose": "Os alunos podem estar prontos para começar a construir seus projetos, mas esta lição ajudará a moldar suas ideias em planos. Essa estrutura manterá os sonhadores com os pés no chão e iluminará um caminho para aqueles que se sentem deixados no escuro. Ofereça aos alunos tempo suficiente para construir e revisar seus projetos. A tentativa e o erro inevitavelmente envolvidos nesta lição ensinarão a resolução de problemas e a persistência.",
           "student_overview": "Projetos desse tamanho levam tempo e muito planejamento. Encontre sua inspiração, desenvolva um plano e libere sua criatividade!"
+        },
+        "csd7-2021/Introduction to AI Lab": {
+          "name": "Introdução ao AI Lab"
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "name": "Dados numéricos no AI Lab"
         },
         "csd7-2021/Survey Planning": {
           "name": "Projetando a coleta de dados"

@@ -4120,6 +4120,12 @@ id:
               display_name: Konten
             lessonGroup-4:
               display_name: Pelajaran Alternatif
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
         hello-world-space-2022:
           title: 'Halo Dunia: Ruang'
         hello-world-soccer-2022:
@@ -4285,3 +4291,160 @@ id:
             lessonGroup-2:
               display_name: Chapter 1
           title: Pemecahan Masalah
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_events:
+              display_name: kegiatan
+          description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran di bawah ini semampu Anda! Pelajari cara membuat program komputer, mengembangkan keterampilan pemecahan masalah, dan menjawab tantangan seru! Buat permainan dan proyek-proyek kreatif untuk dibagikan kepada teman, keluarga, dan guru.
+          student_description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran di bawah ini semampu Anda! Pelajari cara membuat program komputer, mengembangkan keterampilan pemecahan masalah, dan menjawab tantangan seru! Buat permainan dan proyek-proyek kreatif untuk dibagikan kepada teman, keluarga, dan guru.
+          description_short: 'Pengenalan ilmu komputer bagi prabaca: menggabungkan kursus terbaik kami untuk taman kanak-kanak dan kelas satu SD.'
+          description_audience: 'Usia: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Urutan
+            csf_sprites:
+              display_name: Sprites
+            lessonGroup-9:
+              display_name: kegiatan
+            csf_loops:
+              display_name: Loop
+            csf_conditionals:
+              display_name: Kondisi
+            csf_functions:
+              display_name: fungsi
+            csf_variables:
+              display_name: variabel
+            csf_for_loops:
+              display_name: For Loop
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
+          description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran di bawah ini semampu Anda! Pelajari cara membuat program komputer, mengembangkan keterampilan pemecahan masalah, dan menjawab tantangan seru! Buat permainan dan proyek-proyek kreatif untuk dibagikan kepada teman, keluarga, dan guru.
+          student_description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran di bawah ini semampu Anda! Pelajari cara membuat program komputer, mengembangkan keterampilan pemecahan masalah, dan menjawab tantangan seru! Buat permainan dan proyek-proyek kreatif untuk dibagikan kepada teman, keluarga, dan guru.
+          description_short: 'Pengenalan ilmu komputer: menggabungkan kurikulum terbaik sekolah dasar bagi murid yang lebih tua usianya.'
+          description_audience: 'Usia: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_events:
+              display_name: kegiatan
+            lessonGroup-5:
+              display_name: Proyek Akhir Kursus
+          student_description: Pelajari dasar-dasar ilmu komputer dan keamanan internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
+          description_short: Pengenalan ilmu komputer untuk pra-pembaca.
+          description_audience: 'Usia: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_impacts:
+              display_name: Dampak dari Komputasi
+            csf_events:
+              display_name: kegiatan
+            lessonGroup-6:
+              display_name: Proyek Akhir Kursus
+          student_description: Pelajari dasar-dasar ilmu komputer dan keamanan internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
+          description_short: Pengenalan ilmu komputer untuk prabaca. Sama dengan Kursus A, tetapi dengan tambahan konsep 'pendalaman'.
+          description_audience: 'Usia: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_events:
+              display_name: kegiatan
+            csf_data:
+              display_name: Data
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
+          student_description: Buat program dengan pengurutan, loop, dan event. Terjemahkan inisial Anda menjadi binary, selidiki berbagai teknik pemecahan masalah, dan pelajari cara menanggapi perundungan maya (cyberbullying). Pada akhir kursus, buat permainan atau cerita Anda sendiri yang dapat dibagikan!
+          description_short: Pelajari dasar-dasar ilmu komputer dan buat seni, cerita, dan permainan Anda sendiri.
+          description_audience: 'Usia: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_events:
+              display_name: kegiatan
+            csf_loops:
+              display_name: Loop
+            csf_conditionals:
+              display_name: Kondisi
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
+          title: Kursus D (2021)
+          description_short: Pelajari tentang pernyataan conditional. Buat karya seni, permainan, dan bahkan pesta dansa.
+          description_audience: 'Usia: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: Nested Loop
+            csf_functions:
+              display_name: fungsi
+            csf_nested_loops:
+              display_name: Kondisi
+            lessonGroup-7:
+              display_name: Dampak dari Komputasi
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
+          description_audience: 'Usia: 8-12'
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-3:
+              display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
+        web-development-2023:
+          student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan pemrograman yang tak ternilai harganya, seperti debugging, menggunakan materi pembelajaran, dan kerja tim. "
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bab 1: Gambar dan Animasi'
+            lessonGroup-3:
+              display_name: 'Bab 2: Bangunan Permainan'
+          student_description: " Di Unit 3, Pengalaman coding Anda akan terbentuk sewaktu Anda memprogram animasi, seni interaktif, dan permainan di Game Lab. Unit ini dimulai dengan bentuk-bentuk sederhana dan berjenjang hingga ke permainan berbasis-sprite yang lebih canggih, menggunakan konsep pemrograman dan proses desain yang sama yang digunakan sehari-hari oleh ilmuwan komputer. Dalam proyek terakhir, Anda akan mengembangkan program interaktif yang sudah mendapat sentuhan pribadi."
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bab 1: User Centered Design'
+            lessonGroup-3:
+              display_name: 'Bab 2: Aplikasi Prototyping'
+          student_description: Unit 4 memperkenalkan dampak sosial yang lebih luas dari komputasi.  Melalui serangkaian tantangan desain, Anda akan mempelajari cara memahami kebutuhan orang lain dengan lebih baik sambil mengembangkan solusi sebuah masalah. Bagian kedua unit ini berisi sebuah proyek tim berulang, yang di dalamnya tim berkesempatan mengidentifikasi suatu kebutuhan yang mereka pedulikan, solusi prototipe baik di kertas maupun di App Lab, dan mengujikan solusi kepada pengguna yang sebenarnya untuk mendapatkan masukan dan mendorong pengulangan lebih lanjut.
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bab 1: Yang Mewakili Informasi'
+            lessonGroup-3:
+              display_name: 'Bab 2: Memecahkan Masalah Data'
+          description_short: Pelajari cara orang menggunakan komputer untuk memecahkan masalah data.
+          student_description: Unit 5 membahas pentingnya data dalam memecahkan masalah dan menyoroti cara komputer dapat membantu dalam proses ini. Bab pertama mengulas berbagai sistem yang digunakan untuk merepresentasikan informasi dalam komputer beserta tantangan dan imbalan yang diterima jika menggunakan sistem tersebut. Di bab kedua, Anda akan mempelajari cara menggunakan kumpulan data untuk memecahkan masalah, dan cara komputer membantu mengotomatiskan langkah-langkah dari proses ini. Bab ini diakhiri dengan mempertimbangkan cara menerapkan proses pemecahan masalah data dalam bidang yang Anda pilih.
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pengenalan App Lab
+            lessonGroup-3:
+              display_name: Chapter 1
+            lessonGroup-4:
+              display_name: Chapter 2

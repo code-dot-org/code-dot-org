@@ -8,6 +8,7 @@ import TimelineSimple2Events from './TimelineSimple2Events';
 import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
 import {PlayerUtilsContext} from '../context';
+import {useSelector} from 'react-redux';
 
 const barWidth = 60;
 const minNumMeasures = 30;
@@ -17,7 +18,12 @@ const eventVerticalSpace = 2;
 /**
  * Renders the music playback timeline.
  */
-const Timeline = ({isPlaying, currentPlayheadPosition}) => {
+const Timeline = ({
+  currentPlayheadPosition,
+  selectedBlockId,
+  onBlockSelected
+}) => {
+  const isPlaying = useSelector(state => state.music.isPlaying);
   const playerUtils = useContext(PlayerUtilsContext);
   const measuresToDisplay = Math.max(
     minNumMeasures,
@@ -48,6 +54,8 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
 
   const timelineElementProps = {
     currentPlayheadPosition,
+    selectedBlockId,
+    onBlockSelected,
     barWidth,
     eventVerticalSpace,
     getEventHeight
@@ -61,7 +69,11 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
 
   return (
     <div id="timeline" className={moduleStyles.wrapper}>
-      <div className={moduleStyles.container}>
+      <div
+        id="timeline-container"
+        className={moduleStyles.container}
+        onClick={() => onBlockSelected(undefined)}
+      >
         <div className={moduleStyles.fullWidthOverlay}>
           {arrayOfMeasures.map((measure, index) => {
             return (
@@ -91,7 +103,7 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
           })}
         </div>
 
-        <div className={moduleStyles.soundsArea}>
+        <div id="timeline-soundsarea" className={moduleStyles.soundsArea}>
           {getBlockMode() === BlockMode.TRACKS ? (
             <TimelineTrackEvents {...timelineElementProps} />
           ) : getBlockMode() === BlockMode.SIMPLE2 ? (
@@ -101,7 +113,7 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
           )}
         </div>
 
-        <div className={moduleStyles.fullWidthOverlay}>
+        <div id="timeline-playhead" className={moduleStyles.fullWidthOverlay}>
           {playHeadOffsetInPixels !== null && (
             <div
               className={moduleStyles.playhead}
@@ -117,8 +129,9 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
 };
 
 Timeline.propTypes = {
-  isPlaying: PropTypes.bool.isRequired,
   currentPlayheadPosition: PropTypes.number.isRequired,
+  selectedBlockId: PropTypes.string,
+  onBlockSelected: PropTypes.func,
   sounds: PropTypes.array
 };
 

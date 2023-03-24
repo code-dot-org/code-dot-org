@@ -841,6 +841,9 @@
                 },
                 "getAlpha": {
                   "palette_params": {
+                    "imageData": {
+                      "type": "objecte"
+                    },
                     "x": {
                       "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge."
                     },
@@ -852,6 +855,9 @@
                 },
                 "getBlue": {
                   "palette_params": {
+                    "imageData": {
+                      "type": "objecte"
+                    },
                     "x": {
                       "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge."
                     },
@@ -862,6 +868,9 @@
                 },
                 "getGreen": {
                   "palette_params": {
+                    "imageData": {
+                      "type": "objecte"
+                    },
                     "x": {
                       "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge."
                     },
@@ -888,6 +897,9 @@
                 },
                 "getRed": {
                   "palette_params": {
+                    "imageData": {
+                      "type": "objecte"
+                    },
                     "x": {
                       "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge."
                     },
@@ -898,6 +910,9 @@
                 },
                 "putImageData": {
                   "palette_params": {
+                    "imageData": {
+                      "type": "objecte"
+                    },
                     "x": {
                       "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge que es farà servir per col·locar les dades al llenç."
                     },
@@ -924,6 +939,9 @@
                 },
                 "setAlpha": {
                   "palette_params": {
+                    "imageData": {
+                      "type": "objecte"
+                    },
                     "x": {
                       "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge."
                     },
@@ -938,6 +956,9 @@
                 },
                 "setBlue": {
                   "palette_params": {
+                    "imageData": {
+                      "type": "objecte"
+                    },
                     "x": {
                       "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge."
                     },
@@ -959,6 +980,9 @@
                 },
                 "setGreen": {
                   "palette_params": {
+                    "imageData": {
+                      "type": "objecte"
+                    },
                     "x": {
                       "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge."
                     },
@@ -973,6 +997,9 @@
                 },
                 "setRGB": {
                   "palette_params": {
+                    "imageData": {
+                      "type": "objecte"
+                    },
                     "x": {
                       "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge."
                     },
@@ -995,6 +1022,9 @@
                 },
                 "setRed": {
                   "palette_params": {
+                    "imageData": {
+                      "type": "objecte"
+                    },
                     "x": {
                       "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge."
                     },
@@ -1019,6 +1049,13 @@
             "data": {
               "name": "Dades",
               "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objecte"
+                    }
+                  }
+                },
                 "createRecordSync": {
                   "palette_params": {
                     "table": {
@@ -1026,10 +1063,27 @@
                     }
                   }
                 },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objecte"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objecte"
+                    }
+                  }
+                },
                 "drawChartFromRecords": {
                   "palette_params": {
                     "tableName": {
                       "description": "El nom de la taula de la qual s'obtindran els registres."
+                    },
+                    "options": {
+                      "type": "objecte"
                     }
                   }
                 },
@@ -1073,6 +1127,13 @@
                     }
                   }
                 },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "objecte"
+                    }
+                  }
+                },
                 "readRecordsSync": {
                   "palette_params": {
                     "table": {
@@ -1095,6 +1156,13 @@
                   "palette_params": {
                     "url": {
                       "description": "L'adreça web d'un servei que retorna dades."
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objecte"
                     }
                   }
                 }

@@ -9038,10 +9038,10 @@ pt-BR:
 
           ## Qual informação é OK de ter em suas pegadas digitais?
       csf_safety_in_my_online_neighborhood:
-        markdown: |-
-          #Minha Vizinhança Online
+        markdown: |
+          # Minha vizinhança on-line
 
-          ##Como você vai com segurança à lugares online?
+          ## Como você vai a lugares online com segurança?
       csd-post-survey-2017-levelgroup:
         title: Pesquisa de estudantes ao final do curso do CS Discoveries
       csd-post-survey-2017-levelgroup_2018:
@@ -12038,10 +12038,11 @@ pt-BR:
         content1: descrição aqui
       CSD U4 test feature match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "“Estou sempre esquecendo meus óculos de leitura.”"
+        - text: "“Não gosto quando os aplicativos parecem muito chatos.”"
+        - text: "“Muitas vezes esqueço de verificar meu telefone, então perco minhas
+            notificações”"
+        - text: "“Meus amigos acham engraçado mudar minhas configurações, mas é irritante!”"
         - {}
         questions:
         - {}
@@ -12051,10 +12052,11 @@ pt-BR:
         - {}
       CSD U4 test feature match_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "“Estou sempre esquecendo meus óculos de leitura.”"
+        - text: "“Não gosto quando os aplicativos parecem muito chatos.”"
+        - text: "“Muitas vezes esqueço de verificar meu telefone, então perco minhas
+            notificações”"
+        - text: "“Meus amigos acham engraçado mudar minhas configurações, mas é irritante!”"
         - {}
         questions:
         - {}
@@ -12064,10 +12066,11 @@ pt-BR:
         - {}
       CSD U4 test feature match_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "“Estou sempre esquecendo meus óculos de leitura.”"
+        - text: "“Não gosto quando os aplicativos parecem muito chatos.”"
+        - text: "“Muitas vezes esqueço de verificar meu telefone, então perco minhas
+            notificações”"
+        - text: "“Meus amigos acham engraçado mudar minhas configurações, mas é irritante!”"
         - {}
         questions:
         - {}
@@ -18579,10 +18582,15 @@ pt-BR:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat alcançará a bolota. Não há bugs no código.
+          feedback: Incorreto. Scrat não alcançará a bolota porque ele vira para o
+            lado errado.
         - text: Scrat não alcançará a bolota porque ele vira para o lado errado.
           correct: true
+          feedback: Correto! Scrat vira na direção errada e não alcançará a bolota.
         - text: O Scrat não alcançará a bolota porque não há blocos suficientes para
             `avançar`.
+          feedback: Incorreto. Scrat não alcançará a bolota porque ele vira para o
+            lado errado.
         - text: O Scrat não se moverá do primeiro bloco.
           feedback: Scrat não alcançará a bolota porque ele vira para o lado errado.
         questions:

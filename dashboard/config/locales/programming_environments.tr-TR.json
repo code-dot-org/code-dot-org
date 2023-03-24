@@ -107,6 +107,7 @@
                   }
                 },
                 "showMobileControls": {
+                  "content": "Oyun alanının altında görünen mobil kontrolleri değiştirir.",
                   "palette_params": {
                     "spaceButtonVisible": {
                       "type": "Boolean"
@@ -120,7 +121,8 @@
                     "mobileOnly": {
                       "type": "Boolean"
                     }
-                  }
+                  },
+                  "short_description": "Oyun alanının altında görünen mobil kontrolleri değiştirir."
                 },
                 "stopSound": {
                   "palette_params": {
@@ -140,6 +142,9 @@
                       "name": "Sarmal"
                     }
                   }
+                },
+                "sprite.height": {
+                  "return_value": "Hareketli Karakter yüksekliği."
                 },
                 "mirrorX": {
                   "palette_params": {
@@ -220,6 +225,9 @@
                       "type": "Sayı"
                     }
                   }
+                },
+                "sprite.width": {
+                  "return_value": "Hareketli Karakter genişliği."
                 },
                 "createSprite": {
                   "palette_params": {
@@ -635,6 +643,24 @@
                 }
               }
             },
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "The number of milliseconds between each execution of the function."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "İşlev yürütülmeden önce beklenecek milisaniye sayısı."
+                    }
+                  }
+                }
+              }
+            },
             "math": {
               "name": "Matematik",
               "expressions": {
@@ -685,6 +711,23 @@
                 },
                 "declareAssign_x": {
                   "short_description": "'var' ifadesinden sonra belirtilen isimle bir değişken tanımlar ve değişkene eşitliğin sağ tarafındaki değeri atar"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Aranacak dize."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Aranacak dize."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Dizenin uzunluğu"
                 }
               }
             },
@@ -790,9 +833,20 @@
                       "type": "Dize"
                     },
                     "property": {
-                      "type": "Dize"
+                      "type": "Dize",
+                      "description": "Değiştirilecek özellik."
                     }
-                  }
+                  },
+                  "short_description": "Belirtilen öğe için bir özelliği yeni bir değere ayarlar."
+                },
+                "setScreen": {
+                  "short_description": "Ekranı verilen ekran kimliğine ayarlar."
+                },
+                "showElement": {
+                  "short_description": "Belirtilen kimliğe sahip öğeyi gösterir."
+                },
+                "textLabel": {
+                  "short_description": "Varsayılan konumda (0,0) verilen kimlik tarafından sağlanan ve başvurulan metni görüntüleyen ekranda bir metin etiketi oluşturur."
                 }
               }
             },
@@ -805,17 +859,43 @@
                     }
                   }
                 },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "Çizilecek görüntünün sol üst köşesinin piksel cinsinden x konumu."
+                    },
+                    "x": {
+                      "description": "Çizilecek görüntünün sol üst köşesinin piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "description": "Çizilecek görüntünün sol üst köşesinin piksel cinsinden y konumu."
+                    }
+                  }
+                },
                 "getAlpha": {
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "description": "Görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "description": "Görüntünün sol üst köşesinden başlayan piksel cinsinden y konumu."
                     }
-                  }
+                  },
+                  "short_description": "Verilen görüntü verisinde verilen x ve y konumunda bulunan pikselin rengindeki alfa (opaklık) miktarını (0 ile 255 arasında) döndürür."
                 },
                 "getBlue": {
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "description": "Görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "description": "Görüntünün sol üst köşesinden başlayan piksel cinsinden y konumu."
                     }
                   }
                 },
@@ -823,6 +903,28 @@
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "description": "Görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "description": "Görüntünün sol üst köşesinden başlayan piksel cinsinden y konumu."
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Yakalamayı başlatmak için piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "description": "Yakalamayı başlatmak için piksel cinsinden y konumu."
+                    },
+                    "width": {
+                      "description": "Görüntü verilerini yakalamak için sınırlayıcı dikdörtgenin genişliği."
+                    },
+                    "height": {
+                      "description": "Görüntü verilerini yakalamak için sınırlayıcı dikdörtgenin yüksekliği."
                     }
                   }
                 },
@@ -830,6 +932,12 @@
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "description": "Görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "description": "Görüntünün sol üst köşesinden başlayan piksel cinsinden y konumu."
                     }
                   }
                 },
@@ -837,11 +945,23 @@
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "description": "Verileri tuval üzerine yerleştirmek için görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "description": "Verileri tuval üzerine yerleştirmek için görüntünün sol üst köşesinden başlayarak piksel cinsinden y konumu."
                     }
                   }
                 },
                 "rect": {
                   "palette_params": {
+                    "x": {
+                      "description": "Dikdörtgenin sol üst köşesinin piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "description": "Dikdörtgenin sol üst köşesinin piksel cinsinden y konumu."
+                    },
                     "width": {
                       "description": "Dikdörtgenin piksel cinsinden yatay genişliği."
                     },
@@ -854,15 +974,35 @@
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "description": "Görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "description": "Görüntünün sol üst köşesinden başlayan piksel cinsinden y konumu."
+                    },
+                    "alphaValue": {
+                      "description": "Pikselde ayarlanacak alfa (opaklık) miktarı (0 - 255)."
                     }
-                  }
+                  },
+                  "short_description": "Verilen görüntü verisinde verilen x ve y konumunda bulunan pikselin rengindeki alfa (opaklık) miktarını (0 ila 255 aralığında) ayarlar."
                 },
                 "setBlue": {
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "description": "Görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "description": "Görüntünün sol üst köşesinden başlayan piksel cinsinden y konumu."
+                    },
+                    "blueValue": {
+                      "description": "Piksel olarak ayarlanacak mavi miktarı (0 - 255)."
                     }
-                  }
+                  },
+                  "short_description": "Verilen görüntü verisinde verilen x ve y konumunda bulunan pikselin rengindeki mavi miktarını (0 ila 255 arasında) blueValue giriş miktarına ayarlar."
                 },
                 "setFillColor": {
                   "palette_params": {
@@ -875,13 +1015,41 @@
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "description": "Görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "description": "Görüntünün sol üst köşesinden başlayan piksel cinsinden y konumu."
+                    },
+                    "greenValue": {
+                      "description": "Piksel olarak ayarlanacak yeşil miktarı (0 - 255)."
                     }
-                  }
+                  },
+                  "short_description": "Verilen görüntü verisinde verilen x ve y konumunda bulunan pikselin rengindeki yeşil miktarını (0 ila 255 arasında) greenValue giriş miktarına ayarlar."
                 },
                 "setRGB": {
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "description": "Görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "description": "Görüntünün sol üst köşesinden başlayan piksel cinsinden y konumu."
+                    },
+                    "red": {
+                      "description": "Piksel olarak ayarlanacak kırmızı miktarı (0 - 255)."
+                    },
+                    "green": {
+                      "description": "Piksel olarak ayarlanacak yeşil miktarı (0 - 255)."
+                    },
+                    "blue": {
+                      "description": "Piksel olarak ayarlanacak mavi miktarı (0 - 255)."
+                    },
+                    "alpha": {
+                      "description": "İsteğe bağlı. Pikselde ayarlanacak opaklık miktarı (0 - 255 arası). Varsayılanlar 255'tir (tam opaklık)."
                     }
                   }
                 },
@@ -889,8 +1057,18 @@
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "description": "Görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "description": "Görüntünün sol üst köşesinden başlayan piksel cinsinden y konumu."
+                    },
+                    "redValue": {
+                      "description": "Piksel olarak ayarlanacak kırmızı miktarı (0 - 255)."
                     }
-                  }
+                  },
+                  "short_description": "Verilen görüntü verisinde verilen x ve y konumunda bulunan pikselin rengindeki kırmızı miktarını (0 ile 255 arasında değişen) redValue giriş miktarına ayarlar."
                 },
                 "setStrokeColor": {
                   "palette_params": {
@@ -934,6 +1112,9 @@
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
+                    "tableName": {
+                      "description": "Kayıtların alınacağı tablonun adı."
+                    },
                     "options": {
                       "type": "nesne"
                     }
@@ -949,6 +1130,13 @@
                     }
                   }
                 },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Alınacak anahtarın adı."
+                    }
+                  }
+                },
                 "getPrediction": {
                   "palette_params": {
                     "name": {
@@ -959,6 +1147,16 @@
                     },
                     "callback": {
                       "type": "Fonksiyon"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "Bu uygulamanın mevcut kullanıcısı için benzersiz bir tanımlayıcı alır."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "Bu olay işleyicinin geçerli olduğu tablonun adı."
                     }
                   }
                 },
@@ -976,6 +1174,24 @@
                     }
                   }
                 },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Saklanacak anahtarın adı."
+                    },
+                    "value": {
+                      "description": "Saklanacak veriler."
+                    }
+                  },
+                  "short_description": "App Lab'ın anahtar/değer veri deposunda bir anahtar/değer çifti saklar ve işlem bittiğinde geri arama işlevini çağırır."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "Veri döndüren bir hizmetin web adresi."
+                    }
+                  }
+                },
                 "updateRecord": {
                   "palette_params": {
                     "record": {
@@ -990,19 +1206,73 @@
                 "arcLeft": {
                   "short_description": "Kaplumbağayı düz, dairesel bir yay çizerek ileri ve sola hareket ettirir."
                 },
+                "getX": {
+                  "short_description": "Geçerli x koordinatını kaplumbağanın piksel cinsinden alır."
+                },
+                "getY": {
+                  "short_description": "Kaplumbağanın piksel cinsinden geçerli y koordinatını alır."
+                },
+                "hide": {
+                  "short_description": "Kaplumbağayı bulunduğu konumda görünmez yapar."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Kaplumbağayı sağa hareket ettirmek için piksel sayısı."
+                    },
+                    "y": {
+                      "description": "Kaplumbağayı aşağı hareket ettirmek için piksel sayısı."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "Kaplumbağayı mevcut yönden belirli sayıda piksel geriye doğru hareket ettirir."
+                },
+                "moveForward": {
+                  "short_description": "Kaplumbağayı geçerli yönde belirli sayıda piksel ileri taşır."
+                },
+                "moveTo": {
+                  "short_description": "Kaplumbağayı ekranda belirli bir (x,y) konumuna taşır."
+                },
                 "penColor": {
                   "palette_params": {
                     "color": {
                       "type": "Dize"
                     }
-                  }
+                  },
+                  "short_description": "Kaplumbağanın çizgiler ve noktalar çizmek için kullandığı kalemin rengini ayarlar."
+                },
+                "penDown": {
+                  "short_description": "Kaplumbağa hareket ettikçe arkasına bir çizgi çizecek şekilde kalemi yere koyar."
                 },
                 "penRGB": {
                   "palette_params": {
                     "r": {
                       "type": "Sayı"
                     }
-                  }
+                  },
+                  "short_description": "RGBA değerlerini kullanarak, kaplumbağanın çizgiler ve noktalar çizmek için kullandığı kalemin rengini ayarlar."
+                },
+                "penUp": {
+                  "short_description": "Kaplumbağa hareket ederken çizgi çizmesin diye kalemi yukarı alır."
+                },
+                "penWidth": {
+                  "short_description": "Kaplumbağanın hareket ettikçe arkasına çizdiği çizginin genişliğini piksel cinsinden ayarlar."
+                },
+                "show": {
+                  "short_description": "Kaplumbağanın mevcut konumunda görünür olmasını sağlar."
+                },
+                "speed": {
+                  "short_description": "Kaplumbağanın hızını da içeren uygulamanın yürütme hızını ayarlar."
+                },
+                "turnLeft": {
+                  "short_description": "Kaplumbağayı belirtilen açı kadar sola döndürür. Kaplumbağanın konumu aynı kalır."
+                },
+                "turnRight": {
+                  "short_description": "Kaplumbağayı belirtilen açı kadar sağa döndürür. Kaplumbağanın konumu aynı kalır."
+                },
+                "turnTo": {
+                  "short_description": "Kaplumbağanın yönünü belirli bir açıyla değiştirir. 0 yukarı, 90 sağ, 180 aşağı ve 270 soldur."
                 }
               }
             },
@@ -1012,6 +1282,20 @@
                   "palette_params": {
                     "timeout": {
                       "description": "İptal etmek için setTimeout işlevi tarafından döndürülen değer."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "The number of milliseconds between each execution of the function."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "İşlev yürütülmeden önce beklenecek milisaniye sayısı."
                     }
                   }
                 },
@@ -1102,6 +1386,20 @@
                 "declareAssign_list_123": {
                   "short_description": "Bir diziyi bir değişkene bildirin ve atayın"
                 },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Aranacak dize."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Aranacak dize."
+                    }
+                  }
+                },
                 "addPair": {
                   "palette_params": {
                     "key": {
@@ -1116,6 +1414,9 @@
                       "type": "Dize"
                     }
                   }
+                },
+                "length": {
+                  "return_value": "Dizenin uzunluğu"
                 }
               }
             },

@@ -51,11 +51,25 @@ export const h3Style = {
   lineHeight: '24px'
 };
 
+export const h3RebrandingStyle = {
+  ...baseHeadingStyle,
+  fontFamily: '"Barlow Semi Condensed Semibold", sans-serif',
+  fontSize: '1.75em',
+  lineHeight: '1.2'
+};
+
 export class Heading3 extends Component {
   static propTypes = {
-    style: PropTypes.object
+    style: PropTypes.object,
+    isRebranded: PropTypes.bool
   };
   render() {
-    return <h3 {...this.props} style={{...h3Style, ...this.props.style}} />;
+    const {isRebranded, style, ...restProps} = this.props;
+    const headingStyles = {
+      ...(isRebranded ? h3RebrandingStyle : h3Style),
+      ...style
+    };
+
+    return <h3 {...restProps} style={headingStyles} />;
   }
 }
