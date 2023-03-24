@@ -2,8 +2,8 @@
   "key": "microbit-circuits-buttons",
   "course_version_key": "2022",
   "course_offering_key": "csd",
-  "parent_reference_guide_key": "maker-toolkit",
+  "parent_reference_guide_key": "microbit-parent",
   "display_name": "External Buttons on a micro:bit",
   "content": null,
-  "position": 19
+  "position": 6
 }

@@ -2,8 +2,8 @@
   "key": "microbit-physical-input",
   "course_version_key": "2022",
   "course_offering_key": "csd",
-  "parent_reference_guide_key": "maker-toolkit",
+  "parent_reference_guide_key": "microbit-parent",
   "display_name": "micro:bit Physical Input",
   "content": null,
-  "position": 17
+  "position": 4
 }
