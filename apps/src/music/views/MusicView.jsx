@@ -24,7 +24,7 @@ import ProgressManager from '../progress/ProgressManager';
 import MusicValidator from '../progress/MusicValidator';
 import Video from './Video';
 import MusicLibrary from '../player/MusicLibrary';
-import {setIsPlaying} from '../redux/musicRedux';
+import {setIsPlaying, setCurrentPlayheadPosition} from '../redux/musicRedux';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -54,7 +54,8 @@ class UnconnectedMusicView extends React.Component {
     userType: PropTypes.string,
     signInState: PropTypes.oneOf(Object.values(SignInState)),
     isPlaying: PropTypes.bool,
-    setIsPlaying: PropTypes.func
+    setIsPlaying: PropTypes.func,
+    setCurrentPlayheadPosition: PropTypes.func
   };
 
   constructor(props) {
@@ -84,7 +85,6 @@ class UnconnectedMusicView extends React.Component {
     }
 
     this.state = {
-      currentPlayheadPosition: 0,
       updateNumber: 0,
       timelineAtTop: false,
       showInstructions: false,
@@ -175,9 +175,9 @@ class UnconnectedMusicView extends React.Component {
 
   updateTimer = () => {
     if (this.props.isPlaying) {
-      this.setState({
-        currentPlayheadPosition: this.player.getCurrentPlayheadPosition()
-      });
+      this.props.setCurrentPlayheadPosition(
+        this.player.getCurrentPlayheadPosition()
+      );
 
       this.updateHighlightedBlocks();
 
@@ -360,8 +360,8 @@ class UnconnectedMusicView extends React.Component {
     this.player.playSong();
 
     this.props.setIsPlaying(true);
+    this.props.setCurrentPlayheadPosition(1);
     this.setState({
-      currentPlayheadPosition: 1,
       selectedBlockId: undefined
     });
 
@@ -375,7 +375,7 @@ class UnconnectedMusicView extends React.Component {
     this.executeCompiledSong();
 
     this.props.setIsPlaying(false);
-    this.setState({currentPlayheadPosition: 0});
+    this.props.setCurrentPlayheadPosition(0);
     this.triggerCount = 0;
   };
 
@@ -503,7 +503,6 @@ class UnconnectedMusicView extends React.Component {
           instructionsOnRight={instructionsOnRight}
         />
         <Timeline
-          currentPlayheadPosition={this.state.currentPlayheadPosition}
           selectedBlockId={this.state.selectedBlockId}
           onBlockSelected={this.onBlockSelected}
         />
@@ -582,7 +581,9 @@ const MusicView = connect(
     isPlaying: state.music.isPlaying
   }),
   dispatch => ({
-    setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying))
+    setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
+    setCurrentPlayheadPosition: currentPlayheadPosition =>
+      dispatch(setCurrentPlayheadPosition(currentPlayheadPosition))
   })
 )(UnconnectedMusicView);
 
