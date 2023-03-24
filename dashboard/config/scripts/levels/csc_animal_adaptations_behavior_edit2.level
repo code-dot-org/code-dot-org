@@ -45,22 +45,79 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "standalone_app_name": "spritelab",
-    "preload_asset_list": null,
-    "instructions_icon": "poet"
+    "instructions_icon": "poet",
+    "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2023-03-10T21:09:17.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2023-03-10T21:09:17.000Z",
   "user_id": 831,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-10T21:09:17.160+00:00\",\"changed\":[\"cloned from \\\"behaviors 3\\\"\"],\"cloned_from\":\"behaviors 3\"},{\"changed_at\":\"2023-03-10 21:31:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"short_instructions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:34:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:36:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-10T21:09:17.160+00:00\",\"changed\":[\"cloned from \\\"behaviors 3\\\"\"],\"cloned_from\":\"behaviors 3\"},{\"changed_at\":\"2023-03-10 21:31:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"short_instructions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:34:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:36:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 14:46:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
+        <block type="when_run">
+          <next>
+            <block type="gamelab_setBackgroundImageAs">
+              <field name="IMG">"sky"</field>
+              <next>
+                <block type="gamelab_makeNewSpriteAnon">
+                  <field name="ANIMATION_NAME">"falcon"</field>
+                  <value name="LOCATION">
+                    <block type="gamelab_location_picker">
+                      <field name="LOCATION">{"x":55,"y":100}</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_addBehaviorSimple">
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <field name="ANIMATION">"falcon"</field>
+                        </block>
+                      </value>
+                      <value name="BEHAVIOR">
+                        <block type="gamelab_behavior_get">
+                          <mutation/>
+                          <field name="VAR" id="fast flying east">fast flying east</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_makeNewSpriteAnon">
+                          <field name="ANIMATION_NAME">"bald_eagle"</field>
+                          <value name="LOCATION">
+                            <block type="gamelab_location_picker">
+                              <field name="LOCATION">{"x":105,"y":203}</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_addBehaviorSimple">
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <field name="ANIMATION">"bald_eagle"</field>
+                                </block>
+                              </value>
+                              <value name="BEHAVIOR">
+                                <block type="gamelab_behavior_get">
+                                  <mutation/>
+                                  <field name="VAR" id="zooming east">flying east</field>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
         <block type="behavior_definition" editable="false" uservisible="false">
           <mutation>
             <arg name="this sprite" type="Sprite"/>
@@ -103,63 +160,6 @@
               </value>
             </block>
           </statement>
-        </block>
-        <block type="when_run">
-          <next>
-            <block type="gamelab_setBackgroundImageAs">
-              <field name="IMG">"sky"</field>
-              <next>
-                <block type="gamelab_makeNewSpriteAnon">
-                  <field name="ANIMATION_NAME">"falcon"</field>
-                  <value name="LOCATION">
-                    <block type="gamelab_location_picker">
-                      <field name="LOCATION">{"x":104,"y":110}</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="gamelab_addBehaviorSimple">
-                      <value name="SPRITE">
-                        <block type="gamelab_allSpritesWithAnimation">
-                          <field name="ANIMATION">"falcon"</field>
-                        </block>
-                      </value>
-                      <value name="BEHAVIOR">
-                        <block type="gamelab_behavior_get">
-                          <mutation/>
-                          <field name="VAR" id="fast flying east">fast flying east</field>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="gamelab_makeNewSpriteAnon">
-                          <field name="ANIMATION_NAME">"bald_eagle"</field>
-                          <value name="LOCATION">
-                            <block type="gamelab_location_picker">
-                              <field name="LOCATION">{"x":63,"y":190}</field>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="gamelab_addBehaviorSimple">
-                              <value name="SPRITE">
-                                <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"bald_eagle"</field>
-                                </block>
-                              </value>
-                              <value name="BEHAVIOR">
-                                <block type="gamelab_behavior_get">
-                                  <mutation/>
-                                  <field name="VAR" id="zooming east">flying east</field>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
         </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
           <mutation>

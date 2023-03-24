@@ -24,7 +24,7 @@
     "disable_variable_editing": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "use_modal_function_editor": "true",
+    "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -79,9 +79,8 @@
       "downButton"
     ],
     "standalone_app_name": "spritelab",
-    "open_function_definition": "wandering",
-    "preload_asset_list": null,
-    "bubble_choice_description": "The Earth’s atmosphere is filled with a constant barrage of loud, obnoxious music, making it difficult for animals to communicate and navigate."
+    "bubble_choice_description": "The Earth’s atmosphere is filled with a constant barrage of loud, obnoxious music, making it difficult for animals to communicate and navigate.",
+    "preload_asset_list": null
   },
   "game_id": 64,
   "published": true,
@@ -89,7 +88,7 @@
   "level_num": "custom",
   "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-23T22:30:49.953+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_choice2\\\"\"],\"cloned_from\":\"csc_animal_adaptations_choice2\"},{\"changed_at\":\"2023-03-23 22:46:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"display_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-23T22:30:49.953+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_choice2\\\"\"],\"cloned_from\":\"csc_animal_adaptations_choice2\"},{\"changed_at\":\"2023-03-23 22:46:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"display_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 16:54:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"use_modal_function_editor\",\"encrypted_examples\",\"open_function_definition\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
