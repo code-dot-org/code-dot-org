@@ -27,7 +27,8 @@ import MusicLibrary from '../player/MusicLibrary';
 import {
   setIsPlaying,
   setCurrentPlayheadPosition,
-  clearSelectedBlockId
+  clearSelectedBlockId,
+  selectBlockId
 } from '../redux/musicRedux';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
@@ -178,7 +179,10 @@ class UnconnectedMusicView extends React.Component {
       );
     }
 
-    if (prevProps.selectedBlockId !== this.props.selectedBlockId) {
+    if (
+      prevProps.selectedBlockId !== this.props.selectedBlockId &&
+      !this.props.isPlaying
+    ) {
       this.musicBlocklyWorkspace.selectBlock(this.props.selectedBlockId);
     }
   }
@@ -304,7 +308,10 @@ class UnconnectedMusicView extends React.Component {
     }
 
     if (e.type === Blockly.Events.SELECTED) {
-      if (!this.props.isPlaying) {
+      if (
+        !this.props.isPlaying &&
+        e.newElementId !== this.props.selectedBlockId
+      ) {
         this.props.selectBlockId(e.newElementId);
       }
     }
@@ -572,6 +579,7 @@ const MusicView = connect(
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
     setCurrentPlayheadPosition: currentPlayheadPosition =>
       dispatch(setCurrentPlayheadPosition(currentPlayheadPosition)),
+    selectBlockId: blockId => dispatch(selectBlockId(blockId)),
     clearSelectedBlockId: () => dispatch(clearSelectedBlockId())
   })
 )(UnconnectedMusicView);

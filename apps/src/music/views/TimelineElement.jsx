@@ -3,6 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 import moduleStyles from './timeline.module.scss';
 import {useDispatch, useSelector} from 'react-redux';
+import {selectBlockId} from '../redux/musicRedux';
 
 // TODO: Unify type constants and colors with those SoundPanel.jsx
 const typeToColorClass = {
@@ -65,7 +66,7 @@ const TimelineElement = ({
         left
       }}
       onClick={event => {
-        dispatch(selectedBlockId(eventData.blockId));
+        dispatch(selectBlockId(eventData.blockId));
         event.stopPropagation();
       }}
     >
