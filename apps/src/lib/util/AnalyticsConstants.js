@@ -54,9 +54,9 @@ const EVENTS = {
   TEACHER_VIEWING_STUDENT_WORK: 'Teacher Viewing Student Work',
 
   // Maker setup
-  MAKER_SETUP_PAGE_BOARD_TYPE_EVENT: 'Board type on maker setup page',
-  MAKER_SETUP_PAGE_MB_VERSION_EVENT: 'micro:bit version',
-  MAKER_SETUP_PAGE_MB_UPDATE_ERROR_EVENT: 'micro:bit software update error'
+  MAKER_SETUP_PAGE_BOARD_TYPE_EVENT: 'Board Type On Maker Setup Page',
+  MAKER_SETUP_PAGE_MB_VERSION_EVENT: 'Microbit Version',
+  MAKER_SETUP_PAGE_MB_UPDATE_ERROR_EVENT: 'Microbit Software Update Error'
 };
 
 export {EVENTS};

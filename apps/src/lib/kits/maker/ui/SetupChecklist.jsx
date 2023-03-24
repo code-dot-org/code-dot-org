@@ -121,7 +121,7 @@ class SetupChecklist extends Component {
       .then(() => {
         this.setState({boardTypeDetected: this.setupChecker.detectBoardType()});
         analyticsReporter.sendEvent(EVENTS.MAKER_SETUP_PAGE_BOARD_TYPE_EVENT, {
-          'maker board type': this.state.boardTypeDetected
+          'Maker Board Type': this.state.boardTypeDetected
         });
 
         Promise.resolve();

@@ -31,7 +31,7 @@ export default class MBFirmataUpdater {
       microBitVersion = MICROBIT_V2;
     }
     analyticsReporter.sendEvent(EVENTS.MAKER_SETUP_PAGE_MB_VERSION_EVENT, {
-      'micro:bit version': microBitVersion
+      'Microbit Version': microBitVersion
     });
 
     return microBitVersion;
@@ -84,7 +84,7 @@ export default class MBFirmataUpdater {
       analyticsReporter.sendEvent(
         EVENTS.MAKER_SETUP_PAGE_MB_UPDATE_ERROR_EVENT,
         {
-          'micro:bit update error': true
+          'Microbit Update Error': true
         }
       );
       return Promise.reject('Failed to flash Firmata.');
