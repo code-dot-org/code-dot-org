@@ -24,7 +24,7 @@
     "disable_variable_editing": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "use_modal_function_editor": "true",
+    "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -45,11 +45,10 @@
     "pause_animations_by_default": "false",
     "start_animations": "{\"orderedKeys\":[\"26011c62-5b03-40bf-ab79-45f29d704e3c\",\"19c05b84-24a8-47d0-b42a-476bf58d51f4\",\"e64dea53-4162-4952-8da6-ce4cc8feaffa\"],\"propsByKey\":{\"e64dea53-4162-4952-8da6-ce4cc8feaffa\":{\"name\":\"whale-1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":189},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-11T21:06:40.000Z\",\"pngLastModified\":\"2022-04-11T21:06:40.000Z\",\"version\":\"zCc7IogcbHrLkIfF5CaSY.h8DKLxZnBW\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/zCc7IogcbHrLkIfF5CaSY.h8DKLxZnBW/whale-1.png\",\"sourceSize\":{\"x\":400,\"y\":189}},\"19c05b84-24a8-47d0-b42a-476bf58d51f4\":{\"name\":\"whale-4\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":183},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-11T21:07:06.000Z\",\"pngLastModified\":\"2022-04-11T21:51:52.000Z\",\"version\":\"wr20GPxFd_WZI5F.9pBP2vHXHUpUrhak\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/wr20GPxFd_WZI5F.9pBP2vHXHUpUrhak/whale-4.png\",\"sourceSize\":{\"x\":400,\"y\":183}},\"26011c62-5b03-40bf-ab79-45f29d704e3c\":{\"name\":\"world-map\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2022-04-12T13:44:17.000Z\",\"pngLastModified\":\"2022-04-11T21:04:30.000Z\",\"version\":\"j9QOdpWu.JzqROzGFFPd5pXDSbNOdgaG\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/j9QOdpWu.JzqROzGFFPd5pXDSbNOdgaG/world-map.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}",
     "hide_custom_blocks": "true",
-    "long_instructions": "Choice 2:\r\n\r\nThe planet's gravity suddenly triples, making it impossible for animals accustomed to living on land to move around and forcing them to adapt to an aquatic lifestyle.\r\n\r\n",
+    "long_instructions": "#Great Gravity Gains! \r\n**The planet's gravity suddenly triples, making it impossible for animals accustomed to living on land to move around and forcing them to adapt to an aquatic lifestyle.**\r\n\r\n- Add a `background`(#B3B2FB)\r\n- Add at least one `new sprite`(#F79EA5)\r\n- Add code to model an adaptation the animal sprite must make to be able to survive!\r\n\r\n\r\n***\r\n**Ideas:**\r\n\r\n    - Does the animal need to change something about their body? (Add a change costume block)\r\n    - Should the animal change their behvaior? (Add a new sprite begins behavior block or make your own)\r\n    - \r\n\r\n\r\n\r\n\r\n",
     "parent_level_id": 28525,
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
-    "short_instructions": "Build code that uses your arrow keys to move the whale sprite north to cooler waters.\r\n",
     "block_pool": "gamelab",
     "name_suffix": "_1",
     "block_pools": [
@@ -66,7 +65,7 @@
     "hide_pause_button": "false",
     "callout_json": "[]",
     "instructions_icon": "bear",
-    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Use these blocks to move the sprite up\\n<xml><block type=\\\"gamelab_keyPressed\\\"><field name=\\\"CONDITION\\\">\\\"when\\\"</field><field name=\\\"KEY\\\">\\\"up\\\"</field><next><block type=\\\"gamelab_moveInDirection\\\"><field name=\\\"DIRECTION\\\">\\\"North\\\"</field><value name=\\\"SPRITE\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"cuteanimals_bear\\\"</field></block></value><value name=\\\"DISTANCE\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">10</field></block></value></block></next></block></xml>\",\"hint_id\":\"move_sprite_up_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7cebcdb6e2635b5eac8c690d8d9f627d/csc_ecosystems_whale_movement_1.mp3\"}]",
+    "authored_hints": "[]",
     "skip_autosave": true,
     "display_name": "Gravity Gains",
     "thumbnail_url": "https://images.code.org/a61f638ee2ea76dc54236483324d7fbc-image-1648496940150.48.45 PM.png",
@@ -79,9 +78,8 @@
       "downButton"
     ],
     "standalone_app_name": "spritelab",
-    "open_function_definition": "wandering",
-    "preload_asset_list": null,
-    "bubble_choice_description": "The planet's gravity suddenly triples, making it impossible for animals accustomed to living on land to move around and forcing them to adapt to an aquatic lifestyle."
+    "bubble_choice_description": "The planet's gravity suddenly triples, making it impossible for animals accustomed to living on land to move around and forcing them to adapt to an aquatic lifestyle.",
+    "preload_asset_list": null
   },
   "game_id": 64,
   "published": true,
@@ -89,7 +87,7 @@
   "level_num": "custom",
   "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-23T22:30:37.684+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_choice1\\\"\"],\"cloned_from\":\"csc_animal_adaptations_choice1\"},{\"changed_at\":\"2023-03-23 22:40:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"display_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-23T22:30:37.684+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_choice1\\\"\"],\"cloned_from\":\"csc_animal_adaptations_choice1\"},{\"changed_at\":\"2023-03-23 22:40:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"display_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 16:26:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"short_instructions\",\"authored_hints\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 16:45:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 16:53:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"use_modal_function_editor\",\"encrypted_examples\",\"open_function_definition\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
