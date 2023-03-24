@@ -7,7 +7,6 @@ import TimelineElement from './TimelineElement';
  * Renders timeline events for the simple2 model.
  */
 const TimelineSimple2Events = ({
-  currentPlayheadPosition,
   selectedBlockId,
   onBlockSelected,
   barWidth,
@@ -126,7 +125,6 @@ const TimelineSimple2Events = ({
             left={barWidth * (eventData.when - 1)}
             when={eventData.when}
             skipContext={eventData.skipContext}
-            currentPlayheadPosition={currentPlayheadPosition}
             selectedBlockId={selectedBlockId}
             onBlockSelected={onBlockSelected}
           />
@@ -137,7 +135,6 @@ const TimelineSimple2Events = ({
 };
 
 TimelineSimple2Events.propTypes = {
-  currentPlayheadPosition: PropTypes.number.isRequired,
   selectedBlockId: PropTypes.string,
   onBlockSelected: PropTypes.func,
   barWidth: PropTypes.number.isRequired,
