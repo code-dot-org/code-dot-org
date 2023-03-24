@@ -105,8 +105,6 @@ class UnconnectedMusicView extends React.Component {
       this.analyticsReporter.endSession()
     );
 
-    // document.body.addEventListener('keyup', this.handleKeyUp);
-
     const promises = [];
     promises.push(this.loadLibrary());
     if (AppConfig.getValue('load-progression') === 'true') {
