@@ -1054,6 +1054,8 @@ fr:
         text: éviter les cibles
       gamelab_beginCollectingData:
         text: commencer la collecte des valeurs {VALUE} de données {BREAK} avec l'étiquette {LABEL}.
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} rebondit sur {TARGET}."
       gamelab_changePropBy:
@@ -1656,6 +1658,10 @@ fr:
         text: coordonnées x de {SPRITE}
       gamelab_yLocationOf:
         text: coordonnées y de {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} glisser vers {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: culbute
       Mikelab_addBehaviorSimple:
         text: le sprite {SPRITE} se met à {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2268,8 +2274,6 @@ fr:
         text: tourner à gauche
       RyanLab_turnRight:
         text: tourner à droite
-      SpriteLab2Beta_spriteSay:
-        text: lutin {SPRITE} dire {TEXT} pendant {SECONDS} secondes
       Vector_createSpriteWith:
         text: crée un lutin en train de{STATEMENT}
       Vector_log:
@@ -2384,6 +2388,8 @@ fr:
             new Behavior(wobbling, []): chanceler
             new Behavior(wandering, []): se balader
             new Behavior(patrolling, []): patrouiller
+      adaptations_startFollowing:
+        text: "{SPRITE} commence à suivre {TARGET}"
       binary_drawBin:
         text: dessiner binaire {BIN}
       binary_drawBinScreen:
@@ -2523,7 +2529,3 @@ fr:
         text: définir le titre{HEADING}
       storylab_setSubheading:
         text: définir le sous-titre {SUBHEADING}
-      validation_validatedBackground:
-        text: établir {IMG} comme arrière-plan
-      validation_validatedSound:
-        text: Jouer le son {SOUND}

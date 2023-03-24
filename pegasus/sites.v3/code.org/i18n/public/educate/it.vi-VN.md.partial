@@ -101,15 +101,25 @@ Chúng tôi sử dụng [YouTube](https://www.youtube.com) để nhúng video v�
 
 Trước khi bắt đầu các khóa học trực tuyến của Code.org, hãy thử phát video bên dưới để đảm bảo rằng video hoạt động tốt.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
-Đây là trình phát được sử dụng trong suốt chương trình học. Trình phát này sẽ cố gắng hiển thị video qua YouTube và nếu YouTube bị chặn thì sẽ hiển thị video lưu trên Code.org bằng trình phát “dự phòng” của chúng tôi.
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
+
+This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
 
 ### Video không chạy ư?
 
-Nếu video không hoạt động, bạn có thể gửi email cho chúng tôi theo địa chỉ support@code.org.
+If video does not work, you can email us at support@code.org.
 
-Tuy nhiên, bạn vẫn có thể sử dụng bài hướng dẫn của chúng tôi mà không cần video.
+However, you can still use our tutorials without video.
 
 1. Chúng tôi đã tải lên toàn bộ video của mình [để bạn tải xuống cùng lúc](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Nếu trường của bạn có băng thông thấp, chúng tôi khuyên bạn nên tải video xuống và cho học sinh xem trên màn hình chung.
 2. Chúng tôi đã thêm biểu tượng liên kết tải xuống màu xanh lá cây <img src="/images/green-download.png" width=25 height=25 /> tích hợp vào bài hướng dẫn cho mỗi video để học sinh tải xuống các video hướng dẫn riêng lẻ.
@@ -119,8 +129,8 @@ Tuy nhiên, bạn vẫn có thể sử dụng bài hướng dẫn của chúng t
 
 ## Cài đặt đặc biệt cho người dùng Google Apps/G-Suite
 
-Nếu bạn là quản trị viên G-suite, đừng quên kiểm tra cài đặt hạn chế của bạn dành cho YouTube. Nếu bạn đã xác định cài đặt “Quyền truy cập YouTube bị hạn chế nghiêm ngặt” hoặc nếu bạn thấy thông báo cho biết ‘video này bị hạn chế’, bạn có thể thêm kênh của chúng tôi vào danh sách kênh phê duyệt. Xem [hướng dẫn sau đây](https://support.google.com/a/answer/6245597) của Google để tìm hiểu cách thêm kênh của chúng tôi vào danh sách phê duyệt. Bạn cũng có thể xem [hướng dẫn này](https://support.google.com/a/answer/6212415?hl=en) để tìm hiểu thêm về các cài đặt khác nhau và cài đặt nào phù hợp nhất cho lớp học của bạn.
+If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
 
 ## Bạn vẫn gặp sự cố?
 
-Chúng tôi sẽ hỗ trợ – chỉ cần gửi email cho chúng tôi theo địa chỉ support@code.org!
+We'll help you out - just email us at support@code.org!

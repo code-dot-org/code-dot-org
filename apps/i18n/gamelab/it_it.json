@@ -1,10 +1,13 @@
 {
+  "dropletBlock_createSprite_param0_description": "Coordinata x iniziale.",
+  "dropletBlock_createSprite_param1_description": "Coordinata y iniziale.",
   "dropletBlock_createSprite_param2": "larghezza",
   "dropletBlock_createSprite_param3": "altezza",
   "dropletBlock_setCollider_param0": "tipo",
   "dropletBlock_setCollider_param4": "altezza",
   "dropletBlock_setColliderEach_param0": "tipo",
   "dropletBlock_setColliderEach_param4": "altezza",
+  "dropletBlock_Group_description": "Crea un gruppo vuoto.",
   "reinfFeedbackMsg": "Hai finito! Clicca su \"Continua\" per passare all'esercizio successivo.",
   "shareGame": "Condividi il tuo gioco:"
 }

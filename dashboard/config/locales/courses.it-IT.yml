@@ -154,3 +154,20 @@ it:
           description_short: Impara i princìpi fondamentali dell'informatica.
         self-paced-pl-csa-2023:
           title: CSA Moduli Per Iniziare
+    resources:
+      curriculum/csd/2020:
+        name: Curriculum
+      teacher_forum/csd/2020:
+        name: Forum dell'insegnante
+      curriculum/csd/2017:
+        name: Curriculum
+      teacher_forum_6/csd/2017:
+        name: Forum dell'insegnante
+      curriculum/csd/2019:
+        name: Curriculum
+      teacher_forum/csd/2019:
+        name: Forum dell'insegnante
+      curriculum/csd/2018:
+        name: Curriculum
+      teacher_forum_6/csd/2018:
+        name: Forum dell'insegnante

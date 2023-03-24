@@ -139,7 +139,7 @@ class RegionalPartner < ApplicationRecord
   validates_inclusion_of :applications_decision_emails, in: APPLICATION_DECISION_EMAILS, if: -> {applications_decision_emails.present?}
   validates :csd_cost, numericality: {greater_than: 0}, if: -> {csd_cost.present?}
   validates :csp_cost, numericality: {greater_than: 0}, if: -> {csp_cost.present?}
-  validates_presence_of :is_active
+  validates :is_active, inclusion: {in: [true, false], message: "is required"}
 
   # assign a program manager to a regional partner
   def program_manager=(program_manager_id)

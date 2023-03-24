@@ -982,3 +982,67 @@ gl:
               display_name: Listas
             lessonGroup-3:
               display_name: Bucles
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+            csf_functions:
+              display_name: Funcións
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            ramp_up:
+              display_name: Bucles aniñados
+            csf_functions:
+              display_name: Funcións
+            csf_nested_loops:
+              display_name: Condicionais
