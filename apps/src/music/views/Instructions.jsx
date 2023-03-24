@@ -3,20 +3,15 @@ import React, {useContext, useEffect, useState} from 'react';
 import classNames from 'classnames';
 import moduleStyles from './instructions.module.scss';
 import {AnalyticsContext} from '../context';
+import {useSelector} from 'react-redux';
 
 /**
  * Renders the Music Lab instructions component.
  */
-const Instructions = ({
-  progression,
-  currentPanel,
-  message,
-  onNextPanel,
-  baseUrl,
-  vertical,
-  right
-}) => {
+const Instructions = ({progression, onNextPanel, baseUrl, vertical, right}) => {
   const [showBigImage, setShowBigImage] = useState(false);
+  const progressState = useSelector(state => state.music.currentProgressState);
+  const currentPanel = progressState.step;
 
   const getNextPanel = () => {
     return currentPanel + 1 < progression.steps.length
@@ -51,7 +46,7 @@ const Instructions = ({
       {progression && (
         <InstructionsPanel
           panel={progression.steps[currentPanel]}
-          message={message}
+          message={progressState.message}
           vertical={vertical}
           baseUrl={baseUrl}
           path={progression.path}
@@ -63,7 +58,7 @@ const Instructions = ({
       <div className={moduleStyles.bottom}>
         <div className={moduleStyles.progressText}>{progressText}</div>
         <div>
-          {onNextPanel && (
+          {progressState.satisfied && (
             <button
               type="button"
               onClick={() => onNextPanel()}
