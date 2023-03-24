@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-adaptations",
-    "serialized_at": "2023-03-22 19:43:11 UTC",
+    "serialized_at": "2023-03-23 22:30:56 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -832,6 +832,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_animal_adaptations_intro"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -854,6 +857,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_animal_adaptations_migration"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -876,6 +882,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_animal_adaptations_bugs2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -898,6 +907,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_animal_adaptations_groups"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -920,6 +932,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_animal_adaptations_bugs"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -942,6 +957,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_animal_adaptations_birds"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -964,6 +982,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_animal_adaptations_fish"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1270,6 +1291,90 @@
       },
       "level_keys": [
         "csc_animal_adaptations_shareout"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_animal_adaptations_choice"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-adaptations-2023",
+        "activity_section.key": "04d46073-6413-49a8-b9e5-5f8e1bde46a6"
+      },
+      "level_keys": [
+        "csc_animal_adaptations_choice"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_animal_adaptations_choice1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-adaptations-2023",
+        "activity_section.key": "04d46073-6413-49a8-b9e5-5f8e1bde46a6"
+      },
+      "level_keys": [
+        "csc_animal_adaptations_choice1"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_animal_adaptations_choice2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-adaptations-2023",
+        "activity_section.key": "04d46073-6413-49a8-b9e5-5f8e1bde46a6"
+      },
+      "level_keys": [
+        "csc_animal_adaptations_choice2"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 12,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_animal_adaptations_choice3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-adaptations-2023",
+        "activity_section.key": "04d46073-6413-49a8-b9e5-5f8e1bde46a6"
+      },
+      "level_keys": [
+        "csc_animal_adaptations_choice3"
       ]
     }
   ],
@@ -1615,6 +1720,54 @@
         "level.key": "csc_animal_adaptations_shareout",
         "script_level.level_keys": [
           "csc_animal_adaptations_shareout"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-adaptations-2023",
+        "activity_section.key": "04d46073-6413-49a8-b9e5-5f8e1bde46a6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_animal_adaptations_choice",
+        "script_level.level_keys": [
+          "csc_animal_adaptations_choice"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-adaptations-2023",
+        "activity_section.key": "04d46073-6413-49a8-b9e5-5f8e1bde46a6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_animal_adaptations_choice1",
+        "script_level.level_keys": [
+          "csc_animal_adaptations_choice1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-adaptations-2023",
+        "activity_section.key": "04d46073-6413-49a8-b9e5-5f8e1bde46a6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_animal_adaptations_choice2",
+        "script_level.level_keys": [
+          "csc_animal_adaptations_choice2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-adaptations-2023",
+        "activity_section.key": "04d46073-6413-49a8-b9e5-5f8e1bde46a6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_animal_adaptations_choice3",
+        "script_level.level_keys": [
+          "csc_animal_adaptations_choice3"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
