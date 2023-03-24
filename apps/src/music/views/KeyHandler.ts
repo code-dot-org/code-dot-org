@@ -1,11 +1,9 @@
 import React, {useContext, useEffect} from 'react';
-import {useSelector} from 'react-redux';
 import {useDispatch} from 'react-redux';
 import {Triggers} from '../constants';
 import {AnalyticsContext} from '../context';
 import {
   advanceInstructionsPosition,
-  MusicState,
   toggleBeatPad,
   toggleInstructions,
   toggleTimelinePosition
@@ -16,6 +14,10 @@ interface KeyHandlerProps {
   playTrigger: (triggerId: string) => void;
 }
 
+/**
+ * Utility component for handling key presses in Music Lab that map to
+ * specific UI actions.
+ */
 const KeyHandler: React.FunctionComponent<KeyHandlerProps> = ({
   togglePlaying,
   playTrigger

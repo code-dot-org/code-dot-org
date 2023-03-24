@@ -19,7 +19,7 @@ export const InstructionsPositions = {
   RIGHT: InstructionsPosition.RIGHT
 };
 
-export interface MusicState {
+interface MusicState {
   isPlaying: boolean;
   currentPlayheadPosition: number;
   selectedBlockId: string | undefined;
