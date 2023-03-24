@@ -236,20 +236,20 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
+    "thumbnail_url": "https://images.code.org/b2f2e84a855a9640d2ad8bff46580d0b-ticTacToe_titleCard.png",
+    "bubble_choice_description": "In this lesson sequence, you will create the conditionals that help power a Tic Tac Toe game.",
+    "display_name": "Tic Tac Toe App, part 1",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "thumbnail_url": "https://images.code.org/b2f2e84a855a9640d2ad8bff46580d0b-ticTacToe_titleCard.png",
-    "bubble_choice_description": "In this lesson sequence, you will create the conditionals that help power a Tic Tac Toe game.",
-    "display_name": "Tic Tac Toe App, part I"
+    ]
   },
   "game_id": 41,
   "published": true,
   "created_at": "2023-03-21T17:51:03.000Z",
   "level_num": "custom",
   "user_id": 18603,
-  "audit_log": "[{\"changed_at\":\"2023-03-21 17:52:00 +0000\",\"changed\":[\"validation_enabled\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-21 17:55:11 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-22 14:32:25 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-22 16:02:26 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-22 16:04:33 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-21 17:52:00 +0000\",\"changed\":[\"validation_enabled\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-21 17:55:11 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-22 14:32:25 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-22 16:02:26 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-22 16:04:33 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-23 14:32:31 +0000\",\"changed\":[\"code_functions\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
