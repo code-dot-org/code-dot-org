@@ -8,6 +8,7 @@ import TimelineSimple2Events from './TimelineSimple2Events';
 import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
 import {PlayerUtilsContext} from '../context';
+import {useSelector} from 'react-redux';
 
 const barWidth = 60;
 const minNumMeasures = 30;
@@ -18,11 +19,11 @@ const eventVerticalSpace = 2;
  * Renders the music playback timeline.
  */
 const Timeline = ({
-  isPlaying,
   currentPlayheadPosition,
   selectedBlockId,
   onBlockSelected
 }) => {
+  const isPlaying = useSelector(state => state.music.isPlaying);
   const playerUtils = useContext(PlayerUtilsContext);
   const measuresToDisplay = Math.max(
     minNumMeasures,
@@ -128,7 +129,6 @@ const Timeline = ({
 };
 
 Timeline.propTypes = {
-  isPlaying: PropTypes.bool.isRequired,
   currentPlayheadPosition: PropTypes.number.isRequired,
   selectedBlockId: PropTypes.string,
   onBlockSelected: PropTypes.func,

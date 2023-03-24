@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "angelina-playground",
-    "serialized_at": "2023-03-04 15:31:25 UTC",
+    "serialized_at": "2023-03-23 19:10:37 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -92,6 +92,21 @@
         "lesson_group.key": "",
         "script.name": "angelina-playground"
       }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Assessments",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -139,6 +154,18 @@
       "seeding_key": {
         "lesson_activity.key": "ec84671c-709d-4e0b-87d3-a84e7a74d70d",
         "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground"
+      }
+    },
+    {
+      "key": "b6b6a0ab-1831-444e-bc42-c5839d36357f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b6b6a0ab-1831-444e-bc42-c5839d36357f",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "angelina-playground"
       }
@@ -228,6 +255,16 @@
       "seeding_key": {
         "activity_section.key": "623ee432-c38f-4678-87ee-a18e96e4789c",
         "lesson_activity.key": "ec84671c-709d-4e0b-87d3-a84e7a74d70d"
+      }
+    },
+    {
+      "key": "1c5b870f-880c-4368-8012-248ef03ebbe7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7",
+        "lesson_activity.key": "b6b6a0ab-1831-444e-bc42-c5839d36357f"
       }
     }
   ],
@@ -1106,6 +1143,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PSP U3 Sample 2"
+        ],
         "progression": "U3 Samples New Mini Project"
       },
       "bonus": false,
@@ -1120,6 +1160,48 @@
       },
       "level_keys": [
         "PSP U3 Sample 2"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp multiple answers example"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
+      },
+      "level_keys": [
+        "csp multiple answers example"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP multiple answers example 2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
+      },
+      "level_keys": [
+        "CSP multiple answers example 2"
       ]
     }
   ],
@@ -1566,6 +1648,30 @@
         "lesson_group.key": "",
         "script.name": "angelina-playground",
         "activity_section.key": "99641234-92ff-4ee2-bd19-75b04bbf2129"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp multiple answers example",
+        "script_level.level_keys": [
+          "csp multiple answers example"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP multiple answers example 2",
+        "script_level.level_keys": [
+          "CSP multiple answers example 2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
       }
     }
   ],
