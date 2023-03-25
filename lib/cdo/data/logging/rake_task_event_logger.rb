@@ -97,6 +97,9 @@ class RakeTaskEventLogger
                     depth: @@depth.to_s,
                     total_dependencies: task_chain.split(',').count,
                     is_continuous_integration_run: ENV['CI'] ? 'true' : 'false'}
+      ci_value = ENV['CI'] ? 'true' : 'false'
+      CDO.log.info "DEBUGGING - PABLO  ****#{ENV['CI']}----"
+      CDO.log.info "DEBUGGING 2- PABLO  ****#{ci_value}----"
       Cdo::Metrics.put(metric_name, metric_value, dimensions)
       Cdo::Metrics.flush!
     rescue => exception
