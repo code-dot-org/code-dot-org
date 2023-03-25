@@ -327,10 +327,40 @@ def get_i18n_strings(level)
       end
     end
 
+    # start_blocks
+    # localizing only string content and comments in blocks. Blocks get localized separately.
     if level.start_blocks
-      puts level.name
-      # start_blocks = level.start_blocks.dup
-      puts level.type
+      # Only Gamelab and Applab have start_blocks in Java Script
+      js_levels = %w(Applab Gamelab)
+
+      # non-empty xml start_blocks have opening and closing tags <xml></xml>
+      # empty xml start_blocks have a self-closing tag <xml/>
+      if level.start_blocks.starts_with?('<xml>') # level with non-empty xml start_blocks
+        start_blocks = Nokogiri::XML(level.start_blocks, &:noblanks)
+
+        # match any title element that has TEXT or TITLE as name attribute.
+        text_blocks = start_blocks.xpath('//title[@name="TEXT" or @name="TITLE"][text()[normalize-space()]]')
+        # Only adding start_blocks if there is translatable text in blocks
+        i18n_strings['start_blocks'] = Hash.new unless text_blocks.empty?
+        text_blocks.each do |element|
+          i18n_strings['start_blocks'][element.text] = element.text if element.text.match?(/[A-Za-z]/)
+        end
+      end
+
+      if js_levels.include?(level.type)
+
+        puts level.name + ' --> ' + level.type
+        start_blocks = level.start_blocks.dup
+        i18n_strings['start_blocks'] = Hash.new unless level.start_blocks.empty?
+        start_blocks_comments = start_blocks.scan(/\/\/.*/) # scanning for comments to translate
+        puts start_blocks
+        # start_blocks_text = start_blocks.scan(/"([^"]*)"/)
+        puts 'Comments ---------------------------------------------------------------'
+        start_blocks_comments.each do |element|
+          puts element
+        end
+        puts '------------------------------------------------------------------------'
+      end
     end
 
     level_xml = Nokogiri::XML(level.to_xml, &:noblanks)
