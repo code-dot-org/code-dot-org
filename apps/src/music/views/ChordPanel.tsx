@@ -7,9 +7,11 @@ const FontAwesome = require('../../templates/FontAwesome');
 const moduleStyles = require('./chordPanel.module.scss').default;
 const classNames = require('classnames');
 
-const NUM_OCTAVES = 3;
+const NUM_OCTAVES = 2;
 const START_OCTAVE = 4;
 const MAX_NOTES = 16;
+
+const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
 
 const styleDropdownOptions: [PlayStyle, string][] = [
   ['arpeggio-up', 'Arpeggio Up'],
@@ -124,13 +126,21 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
           ))}
         </select>
       </div>
-      <Keybed
-        numOctaves={NUM_OCTAVES}
-        startOctave={START_OCTAVE}
-        selectedNotes={selectedNotes}
-        onPressKey={onPressKey}
-        isDisabled={isDisabled}
-      />
+      <div id="grid-container" className={moduleStyles.gridContainer}>
+        <Keybed
+          numOctaves={NUM_OCTAVES}
+          startOctave={START_OCTAVE}
+          selectedNotes={selectedNotes}
+          onPressKey={onPressKey}
+          isDisabled={isDisabled}
+        />
+        <NoteGrid
+          numOctaves={NUM_OCTAVES}
+          startOctave={START_OCTAVE}
+          selectedNotes={selectedNotes}
+          playStyle={playStyle}
+        />
+      </div>
       <div className={moduleStyles.controlsRow}>
         <FontAwesome
           icon={'volume-up'}
@@ -185,7 +195,11 @@ const Keybed: React.FunctionComponent<KeybedProps> = ({
     );
   }
 
-  return <div className={moduleStyles.keybed}>{keys}</div>;
+  return (
+    <div id="keypad" className={moduleStyles.keybed}>
+      {keys}
+    </div>
+  );
 };
 
 interface KeyProps {
@@ -217,6 +231,90 @@ const Key: React.FunctionComponent<KeyProps> = ({
       <p className={moduleStyles.noteLabel}>{text}</p>
     </div>
   );
+};
+
+interface NoteGridProps {
+  numOctaves: number;
+  startOctave: number;
+  selectedNotes: number[];
+  playStyle: PlayStyle;
+}
+
+const NoteGrid: React.FunctionComponent<NoteGridProps> = ({
+  numOctaves,
+  startOctave,
+  selectedNotes,
+  playStyle
+}) => {
+  const keys = [];
+  const startingNote = startOctave * 12;
+
+  let notes: any = [];
+
+  let renderNotes : any;
+
+  if (playStyle === 'arpeggio-up') {
+    renderNotes = [...selectedNotes].sort();
+  } else {
+    renderNotes = [...selectedNotes].sort().reverse();
+  }
+
+  arrayOfTicks.forEach(tick => {
+    notes[tick] = {
+      tick: tick,
+      pitch: renderNotes[(tick - 1) % selectedNotes.length]
+    };
+  });
+
+  /*
+  const notes = [
+    {tick: 1, pitch: 48},
+    {tick: 2, pitch: 49},
+    {tick: 3, pitch: 50},
+    {tick: 4, pitch: 51},
+    {tick: 5, pitch: 52},
+    {tick: 6, pitch: 53},
+    {tick: 7, pitch: 54}
+  ];
+  */
+
+  return (
+    <div id="notegrid" className={moduleStyles.noteGrid}>
+      {notes.map((note: any) => {
+        return (
+          <div
+            className={moduleStyles.gridNote}
+            style={{
+              bottom: ((note.pitch - START_OCTAVE * 12) * 105) / 12,
+              left: note.tick * 14
+            }}
+          >
+            &nbsp;
+          </div>
+        );
+      })}
+    </div>
+  );
+
+  /*
+  for (
+    let currentNote = startingNote;
+    currentNote < startingNote + numOctaves * 12;
+    currentNote++
+  ) {
+    keys.push(
+      <Key
+        key={currentNote}
+        type={isBlackKey(currentNote) ? 'black' : 'white'}
+        isSelected={selectedNotes.includes(currentNote)}
+        text={!isBlackKey(currentNote) ? getNoteName(currentNote) : undefined}
+      />
+    );
+  }
+
+
+  return <div className={moduleStyles.keybed}>{keys}</div>;
+  */
 };
 
 export default ChordPanel;
