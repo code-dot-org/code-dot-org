@@ -454,11 +454,6 @@ export default class MusicPlayer {
   }
 
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
-    if (this.library === null) {
-      console.warn('Music Player not initialized');
-      return [];
-    }
-
     if (event.skipContext?.skipSound) {
       return [];
     }
@@ -495,64 +490,75 @@ export default class MusicPlayer {
 
       return results;
     } else if (event.type === 'chord') {
-      const chordEvent = event as ChordEvent;
-      const {instrument, notes, playStyle} = chordEvent.value;
-      if (notes.length === 0) {
-        return [];
-      }
-
-      const results: SampleEvent[] = [];
-
-      const folder: SoundFolder | null = this.library.getFolderForPath(
-        instrument
-      );
-
-      if (folder === null) {
-        console.warn(`No instrument ${instrument}`);
-        return [];
-      }
-
-      if (playStyle === 'arpeggio-up') {
-        notes.sort();
-      } else if (playStyle === 'arpeggio-down') {
-        notes.sort().reverse();
-      } else if (playStyle === 'arpeggio-random') {
-        // Randomize using Fisher-Yates Algorithm
-        for (let i = notes.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          const temp = notes[i];
-          notes[i] = notes[j];
-          notes[j] = temp;
-        }
-      }
-
-      // Create the array of samples. If the play style is arpeggio, we play one
-      // sound every 16th note, repeating the sequence as many times as needed.
-      // If the play style is "together", then only add each note once, and have them
-      // all play at the start of the given measure.
-      for (let i = 0; i < (playStyle === 'together' ? notes.length : 16); i++) {
-        const note = notes[i % notes.length];
-        const sound = folder.sounds.find(sound => sound.note === note) || null;
-        if (sound === null) {
-          console.warn(
-            `No sound for note value ${note} on instrument ${instrument}`
-          );
-          continue;
-        }
-
-        const noteWhen =
-          playStyle === 'together' ? chordEvent.when : chordEvent.when + i / 16;
-
-        results.push({
-          sampleId: `${instrument}/${sound.src}`,
-          offsetSeconds: this.convertPlayheadPositionToSeconds(noteWhen),
-          ...event
-        });
-      }
-
+      const results: SampleEvent[] = this.convertChordEventToSampleEvents(event);
       return results;
     }
 
     return [];
+  }
+
+  convertChordEventToSampleEvents(event: PlaybackEvent) : SampleEvent[] {
+    if (this.library === null) {
+      console.warn('Music Player not initialized');
+      return [];
+    }
+
+    const chordEvent = event as ChordEvent;
+
+    const {instrument, notes, playStyle} = chordEvent.value;
+    if (notes.length === 0) {
+      return [];
+    }
+
+    const results: SampleEvent[] = [];
+
+    const folder: SoundFolder | null = this.library.getFolderForPath(
+      instrument
+    );
+
+    if (folder === null) {
+      console.warn(`No instrument ${instrument}`);
+      return [];
+    }
+
+    if (playStyle === 'arpeggio-up') {
+      notes.sort();
+    } else if (playStyle === 'arpeggio-down') {
+      notes.sort().reverse();
+    } else if (playStyle === 'arpeggio-random') {
+      // Randomize using Fisher-Yates Algorithm
+      for (let i = notes.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = notes[i];
+        notes[i] = notes[j];
+        notes[j] = temp;
+      }
+    }
+
+    // Create the array of samples. If the play style is arpeggio, we play one
+    // sound every 16th note, repeating the sequence as many times as needed.
+    // If the play style is "together", then only add each note once, and have them
+    // all play at the start of the given measure.
+    for (let i = 0; i < (playStyle === 'together' ? notes.length : 16); i++) {
+      const note = notes[i % notes.length];
+      const sound = folder.sounds.find(sound => sound.note === note) || null;
+      if (sound === null) {
+        console.warn(
+          `No sound for note value ${note} on instrument ${instrument}`
+        );
+        continue;
+      }
+
+      const noteWhen =
+        playStyle === 'together' ? chordEvent.when : chordEvent.when + i / 16;
+
+      results.push({
+        sampleId: `${instrument}/${sound.src}`,
+        offsetSeconds: this.convertPlayheadPositionToSeconds(noteWhen),
+        ...event
+      });
+    }
+
+    return results;
   }
 }

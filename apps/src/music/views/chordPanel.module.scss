@@ -1,12 +1,14 @@
 @import "color.scss";
 
+$scale-keybed: 0.5;
+
 .chordPanelContainer {
-  display: flex;
-  flex-direction: column;
-  background-color: $neutral_dark50;
+  _display: flex;
+  _flex-direction: column;
+  background-color: $neutral_dark90;
   align-items: center;
-  border: 2px solid $neutral_dark10;
-  border-radius: 4px;
+  _border: 2px solid $neutral_dark10;
+  _border-radius: 4px;
   padding: 5px;
 
   .controlsRow {
@@ -14,22 +16,22 @@
     flex-direction: row;
     align-items: center;
     width: 100%;
-    margin: 10px 0;
+    _margin: 10px 0;
     justify-content: space-around;
 
     .dropdown {
       width: 100%;
       font-size: 12px;
-      margin: 0 30px;
+      margin: 0 10px;
     }
 
     .previewButton {
-      font-size: 30px;
+      font-size: 20px;
       cursor: pointer;
       transition: color 0.1s ease;
 
       &:hover {
-        color: $green;
+        color: $light_cyan;
       }
 
       &Disabled {
@@ -49,32 +51,56 @@
     }
   }
 
+  .gridContainer {
+    display: flex;
+    justify-content: center;
+    _background-color: $neutral_dark90;
+
+    .noteGrid {
+      position: relative;
+      width: 248px;
+      margin: 10px 10px 10px 0;
+      height: 210;
+      border-radius: 0 5px 5px 0;
+      background-color: $neutral_dark80;
+
+      .gridNote {
+        position: absolute;
+        width: 14px;
+        height: calc(105px / 12);
+        background-color: $light_cyan;
+        border-radius: 3px;
+      }
+    }
+  }
+
   .keybed {
     display: flex;
-    flex-direction: row;
-    margin: 10px;
+    flex-direction: column-reverse;
+    margin: 10px 0 10px 10px;
+    _scale: 0.75;
 
     .key {
       border-style: solid;
       border-color: black;
-      border-width: 2px 1px 2px 1px;
-      border-radius: 0 0 4px 4px;
+      border-width: 1px 2px 1px 2px;
+      border-radius: 0 4px 4px 0;
       box-sizing: border-box;
       transition: background-color 0.1s ease;
       cursor: pointer;
 
       &.whiteKey {
-        width: 30px;
-        height: 150px;
+        width: 150px * $scale-keybed;
+        height: 30px * $scale-keybed;
         background-color: white;
       }
 
       &.blackKey {
         z-index: 10;
-        width: 20px;
-        height: 100px;
+        width: 100px * $scale-keybed;
+        height: 20px * $scale-keybed;
         background-color: black;
-        margin: 0 -10px;
+        margin: -10px * $scale-keybed 0;
       }
 
       &.disabled {
@@ -87,20 +113,20 @@
       }
 
       &.selected {
-        background-color: $green;
+        background-color: $light_cyan;
         cursor: pointer;
       }
 
       .noteLabel {
         text-align: center;
-        margin-top: 120px;
+        margin-left: 120px * $scale-keybed;
         color: $neutral_dark80;
-        font-size: 12px;
+        font-size: 12px * $scale-keybed;
         user-select: none;
       }
 
       &:hover {
-        background-color: $green;
+        background-color: $light_cyan;
       }
     }
   }
