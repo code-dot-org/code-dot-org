@@ -188,9 +188,20 @@ Then(/^the workspace has "(.*?)" blocks of type "(.*?)"$/) do |n, type|
 end
 
 Then(/^all blocks render with no unknown blocks$/) do
-  code = "return Blockly.Workspace.getAll().map(workspace => workspace.getAllBlocks().some(block => block.getFieldValue('NAME')?.includes('unknown block')));"
+  code = <<~CODE
+    return Blockly.Workspace.getAll().map(workspace => {
+      const hasUnknownBlock = workspace.getAllBlocks().some(block => block.getFieldValue('NAME')?.includes('unknown block'));
+      if (hasUnknownBlock) {
+        // element ID has name of block that is failing to render
+        return workspace.getParentSvg().parentElement.id;
+      } else {
+        return null;
+      }
+    });
+  CODE
+
   result = @browser.execute_script(code)
-  puts result
+  expect(result.compact.empty?).to eq(true), "Blocks named: #{result.compact.join(', ')} unable to render"
 end
 
 Then(/^block "([^"]*)" has (not )?been deleted$/) do |block_id, negation|
