@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
 import moduleStyles from './timeline.module.scss';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
+import {selectBlockId} from '../redux/musicRedux';
 
 // TODO: Unify type constants and colors with those SoundPanel.jsx
 const typeToColorClass = {
@@ -24,12 +25,14 @@ const TimelineElement = ({
   top,
   left,
   when,
-  skipContext,
-  currentPlayheadPosition,
-  selectedBlockId,
-  onBlockSelected
+  skipContext
 }) => {
   const isPlaying = useSelector(state => state.music.isPlaying);
+  const selectedBlockId = useSelector(state => state.music.selectedBlockId);
+  const dispatch = useDispatch();
+  const currentPlayheadPosition = useSelector(
+    state => state.music.currentPlayheadPosition
+  );
   const isInsideRandom = skipContext?.insideRandom;
   const isSkipSound = isPlaying && skipContext?.skipSound;
 
@@ -54,7 +57,7 @@ const TimelineElement = ({
         isInsideRandom && moduleStyles.timelineElementInsideRandom,
         isSkipSound && moduleStyles.timelineElementSkipSound,
         isBlockSelected && moduleStyles.timelineElementBlockSelected,
-        onBlockSelected && !isPlaying && moduleStyles.timelineElementClickable
+        !isPlaying && moduleStyles.timelineElementClickable
       )}
       style={{
         width: barWidth * eventData.length,
@@ -63,9 +66,7 @@ const TimelineElement = ({
         left
       }}
       onClick={event => {
-        if (onBlockSelected && !isPlaying) {
-          onBlockSelected(eventData.blockId);
-        }
+        dispatch(selectBlockId(eventData.blockId));
         event.stopPropagation();
       }}
     >
@@ -81,10 +82,7 @@ TimelineElement.propTypes = {
   top: PropTypes.number.isRequired,
   left: PropTypes.number,
   when: PropTypes.number.isRequired,
-  skipContext: PropTypes.object,
-  currentPlayheadPosition: PropTypes.number.isRequired,
-  selectedBlockId: PropTypes.string,
-  onBlockSelected: PropTypes.func
+  skipContext: PropTypes.object
 };
 
 export default TimelineElement;

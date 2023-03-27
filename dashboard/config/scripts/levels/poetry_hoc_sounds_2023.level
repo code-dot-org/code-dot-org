@@ -1,9 +1,5 @@
 <Poetry>
   <config><![CDATA[{
-  "game_id": 69,
-  "created_at": "2023-03-09T15:12:49.000Z",
-  "level_num": "custom",
-  "user_id": 13468,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -44,12 +40,16 @@
     "standalone_app_name": "poetry_hoc",
     "default_poem": "singer",
     "skip_autosave": true,
-    "encrypted_examples": "kPFg05CWW2xvxjDTyQFr6EuEb9Nzl71rCEM5s02VKyxYfpxlVMbw0nOq+p0E\n4Rge/gimSNUVqw5hO290L3RZJg==\n",
+    "encrypted_examples": "McDn2sydow+7QD/VpMZgyAcs0wFrNiYTeXLIgl489BfmWCWo7h78d7B5/XzJ\nWBJ+OSaYeEOaJG96XYaVgklkIg==\n",
     "name_suffix": "_2023",
     "preload_asset_list": null
   },
+  "game_id": 69,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-03-09T15:12:49.591+00:00\",\"changed\":[\"cloned from \\\"poetry_hoc_sounds\\\"\"],\"cloned_from\":\"poetry_hoc_sounds\"}]",
+  "created_at": "2023-03-09T15:12:49.000Z",
+  "level_num": "custom",
+  "user_id": 13468,
+  "audit_log": "[{\"changed_at\":\"2023-03-09T15:12:49.591+00:00\",\"changed\":[\"cloned from \\\"poetry_hoc_sounds\\\"\"],\"cloned_from\":\"poetry_hoc_sounds\"},{\"changed_at\":\"2023-03-24 20:19:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
