@@ -153,7 +153,7 @@ class ScriptLevelsController < ApplicationController
       level = @level.contained_levels.any? ? @level.contained_levels.first : @level
 
       # TODO: Change/remove this check as we add support for more level types.
-      if level.class.to_s == 'FreeResponse'
+      if level.is_a?(FreeResponse)
         @responses = UserLevel.where(level: level, user: @section&.students)
       end
     end

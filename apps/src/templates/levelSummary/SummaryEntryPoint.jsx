@@ -23,8 +23,8 @@ const SummaryEntryPoint = ({students}) => {
   return (
     <div className={styles.summaryEntryPoint}>
       <Button
-        color="neutralDark"
-        text="View student responses"
+        color={Button.ButtonColor.neutralDark}
+        text={i18n.viewStudentResponses()}
         icon="arrow-up-right-from-square"
         href={summaryUrl}
         __useDeprecatedTag
