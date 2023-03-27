@@ -4,7 +4,8 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "adaptations"
     ],
     "helper_libraries": [
       "NativeSpriteLab"
@@ -34,9 +35,8 @@
     "start_animations": "{\"orderedKeys\":[\"0047191c-4bcf-477f-9d9c-d5e8e2211df3\",\"078c7302-c17e-46b1-80a1-e516f375a407\",\"0812d378-7334-4907-967d-e655c9b7d14e\",\"0f0e4253-8ea1-4c5f-bbaf-f6a1f07ae856\"],\"propsByKey\":{\"0f0e4253-8ea1-4c5f-bbaf-f6a1f07ae856\":{\"name\":\"bat\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":217},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:48:56 UTC\",\"pngLastModified\":\"2021-01-19 23:48:57 UTC\",\"version\":\"0dhzVnocFFm6xN217xOhk2P31vSxziml\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/0dhzVnocFFm6xN217xOhk2P31vSxziml/category_animals/bat.png\",\"sourceSize\":{\"x\":400,\"y\":217}},\"0812d378-7334-4907-967d-e655c9b7d14e\":{\"name\":\"brownspider\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":263,\"y\":397},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:48:16 UTC\",\"pngLastModified\":\"2021-01-19 23:48:16 UTC\",\"version\":\"2Ig.EXAjZRuTt7g_i_HWzVT3P8jHaBM.\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/2Ig.EXAjZRuTt7g_i_HWzVT3P8jHaBM./category_animals/brownspider.png\",\"sourceSize\":{\"x\":263,\"y\":397}},\"078c7302-c17e-46b1-80a1-e516f375a407\":{\"name\":\"night-meadow\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2022-04-12T13:44:18.000Z\",\"pngLastModified\":\"2022-04-11T21:16:12.000Z\",\"version\":\"KxJMy2ie64IP__levE3O1zBnSH.Ukh3a\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/KxJMy2ie64IP__levE3O1zBnSH.Ukh3a/night-meadow.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"0047191c-4bcf-477f-9d9c-d5e8e2211df3\":{\"name\":\"night_moon\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2023-03-01T16:05:40.000Z\",\"pngLastModified\":\"2023-03-01T16:05:39.000Z\",\"version\":\"Fou4wijwxmmpK_x8JPn03YnUnH3bAG5f\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Fou4wijwxmmpK_x8JPn03YnUnH3bAG5f/night_moon.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}\r\n\r\n",
     "hide_custom_blocks": "false",
     "short_instructions": "Make a prediction!",
-    "validation_code": "if (getProp({costume: \"satellite\"}, \"x\") < 80) {\r\n  levelSuccess(0);\r\n}\r\n\r\n",
     "authored_hints": "[]",
-    "long_instructions": "Make a prediction! How will the bat move to hunt the spider?",
+    "long_instructions": "**Look at the code to make a prediction**\r\n\r\nHow will the bat move to hunt the spider? \r\n\r\n*(Remember that a <strong>behavior</strong> runs the actions over and over until it is told to stop.)*",
     "parent_level_id": 15501,
     "auto_run_setup": "DRAW_LOOP",
     "contained_level_names": [
@@ -60,7 +60,7 @@
   "user_id": 831,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-10T22:07:28.003+00:00\",\"changed\":[\"cloned from \\\"behaviors 4\\\"\"],\"cloned_from\":\"behaviors 4\"},{\"changed_at\":\"2023-03-10 22:09:32 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 22:12:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 22:16:43 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 22:41:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 22:44:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-10T22:07:28.003+00:00\",\"changed\":[\"cloned from \\\"behaviors 4\\\"\"],\"cloned_from\":\"behaviors 4\"},{\"changed_at\":\"2023-03-10 22:09:32 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 22:12:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 22:16:43 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 22:41:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 22:44:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 22:34:52 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 23:10:11 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 23:20:03 +0000\",\"changed\":[\"start_blocks\",\"block_pools\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 23:20:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -154,7 +154,8 @@
                                 </block>
                               </value>
                               <next>
-                                <block type="gamelab_addBehaviorSimple">
+                                <block type="adaptations_toggleBehaviorSimple">
+                                  <field name="TOGGLE">"begins"</field>
                                   <value name="SPRITE">
                                     <block type="gamelab_allSpritesWithAnimation">
                                       <field name="ANIMATION">"bat"</field>

@@ -4,7 +4,8 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "adaptations"
     ],
     "helper_libraries": [
       "NativeSpriteLab"
@@ -36,7 +37,7 @@
     "short_instructions": "Moving in the morning!",
     "validation_code": "var status = 0;\r\nvar spriteIds = getSpriteIdsInUse();\r\nfor (var i = 0; i < spriteIds.length; i++) {\r\n  var y = getProp({id: spriteIds[i]}, \"y\");\r\n  if (y < 0 || World.frameCount > 300) {\r\n    status = 3;\r\n    //console.log(\"sprite fell off the edge\");\r\n  } else if (y < 340) {\r\n    status = 1;\r\n    //console.log(\"a sprite is too low\");\r\n  }\r\n}\r\nif (status !== 1) {\r\n  levelSuccess(status);\r\n}",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try editing the behaviors! \\n\\n* Which direction does the bird need to move?\",\"hint_id\":\"behavior hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/69b8ac72b81c65174de7a17b6312a927/csc_animal_adaptations_behavior_edit.mp3\"}]",
-    "long_instructions": "**Moving in the morning!**\r\n\r\n* `Edit`(#bed7f7) the behavior of the bird so that it moves **across** the sky instead of down.",
+    "long_instructions": "**Moving in the morning!**\r\n\r\n* First, click `Run`(#FFBD46) to see how the behavior currently works.\r\n- `Edit`(#bed7f7) the behavior of the bird so that it moves **across** the sky instead of down.",
     "parent_level_id": 21649,
     "auto_run_setup": "DRAW_LOOP",
     "encrypted": "false",
@@ -59,34 +60,13 @@
   "level_num": "custom",
   "user_id": 831,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-10T20:40:15.072+00:00\",\"changed\":[\"cloned from \\\"behaviors 2_2021\\\"\"],\"cloned_from\":\"behaviors 2_2021\"},{\"changed_at\":\"2023-03-10 21:00:05 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"short_instructions\",\"authored_hints\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:03:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:03:56 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:05:10 +0000\",\"changed\":[\"start_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 22:35:02 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-10T20:40:15.072+00:00\",\"changed\":[\"cloned from \\\"behaviors 2_2021\\\"\"],\"cloned_from\":\"behaviors 2_2021\"},{\"changed_at\":\"2023-03-10 21:00:05 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"short_instructions\",\"authored_hints\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:03:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:03:56 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:05:10 +0000\",\"changed\":[\"start_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 22:35:02 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 22:49:42 +0000\",\"changed\":[\"start_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 22:50:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 22:56:07 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="behavior_definition" editable="false" uservisible="false" usercreated="true">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-          </mutation>
-          <field name="NAME" id="flying">flying</field>
-          <statement name="STACK">
-            <block type="gamelab_moveInDirection" deletable="false" uservisible="false">
-              <field name="DIRECTION">"South"</field>
-              <value name="SPRITE">
-                <block type="sprite_parameter_get" uservisible="false">
-                  <field name="VAR">this sprite</field>
-                </block>
-              </value>
-              <value name="DISTANCE">
-                <block type="math_number" deletable="false" uservisible="false">
-                  <field name="NUM">3</field>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
         <block type="when_run">
           <next>
             <block type="gamelab_setBackgroundImageAs">
@@ -121,7 +101,8 @@
                             </block>
                           </value>
                           <next>
-                            <block type="gamelab_addBehaviorSimple" deletable="false">
+                            <block type="adaptations_toggleBehaviorSimple">
+                              <field name="TOGGLE">"begins"</field>
                               <value name="SPRITE">
                                 <block type="gamelab_allSpritesWithAnimation">
                                   <field name="ANIMATION">"brown_bird"</field>
@@ -143,6 +124,27 @@
               </next>
             </block>
           </next>
+        </block>
+        <block type="behavior_definition" editable="false" uservisible="false" usercreated="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+          </mutation>
+          <field name="NAME" id="flying">flying</field>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection" deletable="false" uservisible="false">
+              <field name="DIRECTION">"South"</field>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" uservisible="false">
+                  <field name="VAR">this sprite</field>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number" deletable="false" uservisible="false">
+                  <field name="NUM">3</field>
+                </block>
+              </value>
+            </block>
+          </statement>
         </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
           <mutation>

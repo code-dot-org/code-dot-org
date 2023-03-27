@@ -4,7 +4,8 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "adaptations"
     ],
     "helper_libraries": [
       "NativeSpriteLab"
@@ -36,7 +37,7 @@
     "short_instructions": "Help the falcon outrun the eagle!",
     "validation_code": "var roverX = getProp({costume: \"rover\"}, \"x\");\r\nvar robotX = getProp({costume: \"robot\"}, \"x\");\r\nif(roverX > robotX && roverX > 350){\r\n  levelSuccess(0);\r\n}\r\nelse if(roverX < robotX && robotX > 400){\r\n  levelSuccess(3);\r\n}\r\n\r\n",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try editing the behaviors! \\n* Which value is controlling the speed of each sprite?\",\"hint_id\":\"behavior hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6eab8c19ece33bb3b302902c9cfc8161/Tortoise and Hare.mp3\"}]",
-    "long_instructions": "**Help the falcon out fly the bald eagle!**\r\n\r\n* `Edit`(#bed7f7) the behavior of the falcon sprite (top) so that it goes **faster** than the eagle.",
+    "long_instructions": "**Falcons use their great speed as a survival tactic. Help this falcon out fly the bald eagle predator!**\r\n\r\n* Click `Run`(#FFBD46) to see how the behaviors currently work. \r\n- Then,`Edit`(#bed7f7) the behavior of the falcon sprite (bottom) so that it goes **faster** than the eagle.",
     "auto_run_setup": "DRAW_LOOP",
     "encrypted": "false",
     "mini_rubric": "false",
@@ -54,7 +55,7 @@
   "user_id": 831,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-10T21:09:17.160+00:00\",\"changed\":[\"cloned from \\\"behaviors 3\\\"\"],\"cloned_from\":\"behaviors 3\"},{\"changed_at\":\"2023-03-10 21:31:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"short_instructions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:34:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:36:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 14:46:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-10T21:09:17.160+00:00\",\"changed\":[\"cloned from \\\"behaviors 3\\\"\"],\"cloned_from\":\"behaviors 3\"},{\"changed_at\":\"2023-03-10 21:31:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"short_instructions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:34:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:36:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 14:46:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-24 22:58:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 23:00:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 23:00:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 23:01:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 23:17:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 23:18:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -67,44 +68,46 @@
               <field name="IMG">"sky"</field>
               <next>
                 <block type="gamelab_makeNewSpriteAnon">
-                  <field name="ANIMATION_NAME">"falcon"</field>
+                  <field name="ANIMATION_NAME">"bald_eagle"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker">
-                      <field name="LOCATION">{"x":55,"y":100}</field>
+                      <field name="LOCATION">{"x":57,"y":95}</field>
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_addBehaviorSimple">
+                    <block type="adaptations_toggleBehaviorSimple">
+                      <field name="TOGGLE">"begins"</field>
                       <value name="SPRITE">
                         <block type="gamelab_allSpritesWithAnimation">
-                          <field name="ANIMATION">"falcon"</field>
+                          <field name="ANIMATION">"bald_eagle"</field>
                         </block>
                       </value>
                       <value name="BEHAVIOR">
                         <block type="gamelab_behavior_get">
                           <mutation/>
-                          <field name="VAR" id="fast flying east">fast flying east</field>
+                          <field name="VAR" id="zooming east">flying east</field>
                         </block>
                       </value>
                       <next>
                         <block type="gamelab_makeNewSpriteAnon">
-                          <field name="ANIMATION_NAME">"bald_eagle"</field>
+                          <field name="ANIMATION_NAME">"falcon"</field>
                           <value name="LOCATION">
                             <block type="gamelab_location_picker">
-                              <field name="LOCATION">{"x":105,"y":203}</field>
+                              <field name="LOCATION">{"x":48,"y":198}</field>
                             </block>
                           </value>
                           <next>
-                            <block type="gamelab_addBehaviorSimple">
+                            <block type="adaptations_toggleBehaviorSimple">
+                              <field name="TOGGLE">"begins"</field>
                               <value name="SPRITE">
                                 <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"bald_eagle"</field>
+                                  <field name="ANIMATION">"falcon"</field>
                                 </block>
                               </value>
                               <value name="BEHAVIOR">
                                 <block type="gamelab_behavior_get">
                                   <mutation/>
-                                  <field name="VAR" id="zooming east">flying east</field>
+                                  <field name="VAR" id="fast flying east">fast flying east</field>
                                 </block>
                               </value>
                             </block>
