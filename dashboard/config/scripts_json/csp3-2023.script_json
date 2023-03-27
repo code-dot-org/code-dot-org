@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-04 15:16:46 UTC",
+    "serialized_at": "2023-03-27 17:51:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -53,8 +53,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students explore and investigate what makes an app an app. They begin by looking at and discussing five different apps. Following this, students watch a video explaining the basics of how computers work. Finally students return to the apps and consider the various inputs and outputs.",
-        "preparation": "* Preview the How Computers Work Video\n* Explore the apps used in this lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is an introduction to a unit that introduces programming through the broader context of designing apps that help people. This lesson is designed to build excitement about the skills that students will develop throughout the unit and get them thinking early about the ways programming can help others. This lesson also establishes shared vocabulary for talking about apps in a generic sense, for example its inputs, outputs, and overall user interface.",
+        "preparation": "* Preview the How Computers Work Video\n* Explore the apps used in this lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/146Dvs9RY0cvTDOaSWtxZAxBB3-c6yp993ap6gY_ocFQ/edit?usp=sharing)",
         "student_overview": "Welcome to the Introduction to App Development! We begin this unit by examining the basics of an app. "
       },
       "seeding_key": {
@@ -73,7 +72,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students work through a progression of levels to build an understanding of how to use Design Mode to layout an app. The final level has students setting up the screen of an app by attempting to copy an image of an app. ",
-        "preparation": "* Review the programming levels to ensure you understand the fundamentals of Design Mode in App Lab and how elements are created and their properties are modified.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Review the programming levels to ensure you understand the fundamentals of Design Mode in App Lab and how elements are created and their properties are modified.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/19sZq9TrPXas5dhs2ZjhwhXX500ljGM50MHP5zbQjbHs/edit?usp=sharing)",
         "purpose": "This lesson introduces students to Design Mode in App Lab and the different kinds of screen elements and properties at their disposal in this tool. This lesson not only builds up skills in designing a user interface but also sets students up to begin designing an app of their own in the following lesson.",
         "student_overview": "Learn how to create screens, buttons, images, text, and more inside of App Lab."
       },
@@ -273,21 +272,8 @@
   ],
   "lesson_activities": [
     {
-      "key": "8754e2b8-f160-4d5f-9ea2-19d0a2512fee",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8754e2b8-f160-4d5f-9ea2-19d0a2512fee",
-        "lesson.key": "Introduction to Apps",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2023"
-      }
-    },
-    {
       "key": "b70bf83c-7531-4691-aefb-5053221bed41",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -301,7 +287,7 @@
     },
     {
       "key": "cbf6a5b5-c565-4dfe-a0fa-4b2ad12ccbf2",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -315,7 +301,7 @@
     },
     {
       "key": "9da73de1-3e08-422a-9f17-96981d0f5aff",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -328,21 +314,8 @@
       }
     },
     {
-      "key": "251792d5-d715-4534-ae2d-30fbe374e45b",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "251792d5-d715-4534-ae2d-30fbe374e45b",
-        "lesson.key": "Introduction to Design Mode",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2023"
-      }
-    },
-    {
       "key": "83bc4e8c-57a0-4bc4-87b4-79591160bd28",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -356,7 +329,7 @@
     },
     {
       "key": "01ecd5ba-03fd-4c76-b82c-ef726f167f1a",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -370,7 +343,7 @@
     },
     {
       "key": "e80ed1d2-1120-43c0-b0d6-b2453d5c3a67",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -914,17 +887,6 @@
   ],
   "activity_sections": [
     {
-      "key": "0c091c9e-dcaf-4c1a-a78f-84d7b9f0bcf7",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/146Dvs9RY0cvTDOaSWtxZAxBB3-c6yp993ap6gY_ocFQ/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "0c091c9e-dcaf-4c1a-a78f-84d7b9f0bcf7",
-        "lesson_activity.key": "8754e2b8-f160-4d5f-9ea2-19d0a2512fee"
-      }
-    },
-    {
       "key": "6727bfea-9114-4e1f-83ef-31395ad45601",
       "position": 1,
       "properties": {
@@ -954,7 +916,13 @@
       "properties": {
         "description": "Today we are going to be looking at some sample apps to explore their purpose and function.",
         "name": "App Exploration",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This lesson is an introduction to a unit that introduces programming through the broader context of designing apps that help people. This lesson is designed to build excitement about the skills that students will develop throughout the unit and get them thinking early about the ways programming can help others. This lesson also establishes shared vocabulary for talking about apps in a generic sense, for example its inputs, outputs, and overall user interface."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c5710ea9-2e55-4542-a617-1c0795518a4f",
@@ -1115,17 +1083,6 @@
       "seeding_key": {
         "activity_section.key": "cbc517c1-483e-485c-b5ea-079041b5fcac",
         "lesson_activity.key": "9da73de1-3e08-422a-9f17-96981d0f5aff"
-      }
-    },
-    {
-      "key": "85a95c21-eab7-46d0-8b7e-f3f86e9427d4",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/19sZq9TrPXas5dhs2ZjhwhXX500ljGM50MHP5zbQjbHs/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "85a95c21-eab7-46d0-8b7e-f3f86e9427d4",
-        "lesson_activity.key": "251792d5-d715-4534-ae2d-30fbe374e45b"
       }
     },
     {
