@@ -38,6 +38,8 @@
   "drawATriangle": "צייר משולש",
   "drawUpperWave": "צייר גל עליון",
   "drawLowerWave": "צייר גל תחתון",
+  "drawShape": "צייר צורה",
+  "drawShapeWithSideLength": "לצייר צורה עם אורך הצד",
   "drawSticker": "צייר מדבקה",
   "drawStickerWithSize": "מצייר מדבקה עם גודל",
   "forward": "קדימה",
@@ -103,5 +105,6 @@
   "turtleVisibilityTooltip": "הפוך את האמן לנראה או בלתי-נראה.",
   "widthTooltip": "שנה את עובי העיפרון.",
   "withSize": "עם גודל",
+  "withSideLength": "עם אורך צד",
   "wrongColour": "התמונה בצבע לא נכון. לחידה הזאת, היא צריכה להיות %1."
 }

@@ -13,9 +13,7 @@ class PasswordsController < Devise::PasswordsController
     super
   end
 
-  protected
-
-  def after_sending_reset_password_instructions_path_for(resource_name)
+  protected def after_sending_reset_password_instructions_path_for(resource_name)
     if current_user.try(:admin)
       new_user_password_path
     else
@@ -23,9 +21,7 @@ class PasswordsController < Devise::PasswordsController
     end
   end
 
-  private
-
-  def show_reset_url_if_admin
+  private def show_reset_url_if_admin
     return unless current_user.try(:admin?)
     if raw_token = resource.try(:raw_token)
       url = edit_password_url(resource, reset_password_token: raw_token)
@@ -40,7 +36,7 @@ class PasswordsController < Devise::PasswordsController
     end
   end
 
-  def require_no_or_admin_authentication
+  private def require_no_or_admin_authentication
     return if current_user.try(:admin?) # allow admins
     require_no_authentication
   end

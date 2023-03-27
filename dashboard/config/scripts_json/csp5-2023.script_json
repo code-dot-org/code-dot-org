@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-07 17:51:56 UTC",
+    "serialized_at": "2023-03-26 15:11:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -65,7 +65,6 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students explore the “What’s Going on in this Graph?” site in order to tell a \"data story\" which explains both what the data shows and why that might be. Following this, students are introduced to the concept of metadata and look for the metadata of datasets on App Lab.",
         "preparation": "* Preview [“What’s Going on in this Graph?”](https://www.nytimes.com/2020/06/10/learning/over-60-new-york-times-graphs-for-students-to-analyze.html) and prepare for the demo\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching this virtually, consider checking our [Virtual Modifications](https://docs.google.com/document/d/1Ycz0b-nlvTSMQPq4dV5MHffdJpZYw-2sPsLAVue4raE/edit?usp=sharing)",
-        "purpose": "The two main purposes of this lesson are:\n\n1. Getting acquainted with talking and writing about data. In particular we want to:\n\t* Draw a distinction between describing what the data shows and describing why it might be that way\n\t* In other words: describe connections and trends in data separate from drawing conclusions.\n\t* We want students to get in the habit of separating the what from the why when it comes to talking and writing about data\n2. Introduce the concept of metadata. We want students to understand the value of data about data, that can be used to find, organize, and manage information. It also increases effective use of data by providing extra information. \n",
         "student_overview": "In this lesson, you will explore the “What’s Going on in this Graph?” site in order to tell a \"data story\" which explains both what the data shows and why that might be. Following this, you will learn about the concept of metadata and look for the metadata of datasets on App Lab."
       },
       "seeding_key": {
@@ -83,9 +82,8 @@
       "relative_position": 2,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to make create two different kinds of charts a bar chart, and a histogram. The lesson begins with a quick prompt to review the reasons charts are useful for looking at data. Students then practice reading a bar chart and review the kinds of questions it is and is not useful for answering. Afterwards they build different bar charts in the Data Visualizer and discuss why some are or are not useful. Afterwards they learn how to make histograms for building charts in instances where bar charts may not be useful. Students record their work on an activity guide. The lesson concludes with a brief review of what they learned.",
-        "preparation": "* Try using the Data Visualizer yourself to make some of the charts students will create as part of completing the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson introduces students to the Data Visualizer tool in App Lab as well as two important chart types, a bar chart, and a histogram. Students will build skills in using this tool and reading data that they will continue to develop throughout the unit.\r\n\r\nIn the Wrap Up of this lesson students are introduced to the Data Analysis Process, a set of steps that can be used to use data to answer questions. Students will continue to refer to this process throughout the remainder of the unit.",
+        "overview": "Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to make create two different kinds of charts a bar chart, and a histogram. The lesson begins with a quick prompt to review the reasons charts are useful for looking at data. Students then practice reading a bar chart and review the kinds of questions it is and is not useful for answering. Afterwards they build different bar charts in the Data Visualizer and discuss why some are or are not useful. Afterwards they learn how to make histograms for building charts in instances where bar charts may not be useful. Students record their work on an activity guide. The lesson concludes with a brief review of what they learned and an introduction to the Data Analysis Process.",
+        "preparation": "* Try using the Data Visualizer yourself to make some of the charts students will create as part of completing the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1OFcL88JGB2Xwg22JaDIFK1xvpZYAU0QXEyxydDAjURQ/edit?usp=sharing)",
         "student_overview": "Create a bar chart and a histogram in App Lab's Data Visualizer."
       },
       "seeding_key": {
@@ -104,8 +102,8 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, student explore the challenges of working with a messy dataset. First students learn how to identify issues using the Data Visualizer, and then manually clean the data. Following this, students learn about the filtering tools in the Data Visualizer, and use a guided activity to answer data questions that require filtering a dataset. ",
-        "preparation": "* Preview the filter tool in the Data Visualizer\n* Prepare for the demo in the Activity\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "The goal of this lesson is to introduce two crucial concepts when working with data: cleaning and filtering. The datasets in App Lab are generally clean, so a \"messy\" dataset is imported to a level for students to explore. After discovering why datsets need to be cleaned, students manually clean the dataset. \r\n\r\nWhen working with a dataset to answer a question, the user may want to focus on a subset of the data. In this lesson, students are introduced to the filtering tools in the Data Visualizer so they can accurately filter for the information they are looking for. ",
+        "preparation": "* Preview the filter tool in the Data Visualizer\n* Prepare for the demo in the Activity\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1zl9qfXQ2OYlyNVKD13kwB8qaPN49YkDwoyo1hCKiScM/edit?usp=sharing)",
+        "purpose": "\n\nWhen working with a dataset to answer a question, the user may want to focus on a subset of the data. In this lesson, students are introduced to the filtering tools in the Data Visualizer so they can accurately filter for the information they are looking for. ",
         "student_overview": "Clean data and use the filtering tools in the Data Visualizer to be able to analyze data."
       },
       "seeding_key": {
@@ -124,8 +122,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to make create two different kinds of charts, a cross tab, and a scatterplot. Students will practice reading each type of chart before learning to make them in the Data Visualizer. Students will track their work using a provided activity guide. The lesson concludes with a review of key takeaways.",
-        "preparation": "* Review how to make crosstab and scatter charts in the Data Visualizer\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson introduces students to two new ways of make visualizations in the Data Visualizer. The crosstab and scatter chart are new in that they allow students to see patterns across multiple variables, noticing how one might seem to change (or correlate) with another. This is good preparation for their unit project in which they'll need to make and interpret a data visualization of their own.",
+        "preparation": "* Review how to make crosstab and scatter charts in the Data Visualizer\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1vcKF0sFn-NHsf6EtwHe_SMs2TTUDU5OoSSawVxScolk/edit?usp=sharing)",
         "student_overview": "Create and analyze crosstab and scatter charts in App Lab's Data Visualizer."
       },
       "seeding_key": {
@@ -144,8 +141,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will complete a jigsaw of three different topics at the intersection of data, computing, and global impacts. These are topics, big data, crowdsourcing, and open data. Students will watch videos or listen to audio recordings about the different topics. Groups will each complete an activity guide about their topic before having individuals from each group share out their findings. The lesson concludes with a review of key points.",
-        "preparation": "* Ensure students will be able to access all of the videos / articles linked in the lesson.\n* Review at least the key takeaways and ideally some of the content from each topic to ensure you understand how these topics relate to what students have studied in previous lessons.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson zooms back out from the data analysis process to the ways that is applied in a wide variety of contexts. Students learn how big data, open data, and crowdsourcing apply this process in interesting ways that cleverly modify this process. For a summary of key points of this lesson review the key takeaways in the slides. In short however:\r\n\r\n* Big data: \"Collect huge amounts of data so we can learn even more from it\"\r\n* Open data: \"sharing data with others so they can can analyze it\"\r\n* Crowdsourcing: \"collecting data from others so you can analyze it\"\r\n\r\nThis lesson further builds towards the following lesson on machine learning which explores a different application of the data analysis process.",
+        "preparation": "* Ensure students will be able to access all of the videos / articles linked in the lesson.\n* Review at least the key takeaways and ideally some of the content from each topic to ensure you understand how these topics relate to what students have studied in previous lessons.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/14wo0fY1nnpqvKG5mAyeBH0JhrqV__tdN_vGhs_agiZw/edit?usp=sharing)",
         "student_overview": "Learn how big data, open data, and crowdsourcing apply the data analysis process in real world context to solve problems that matter.",
         "unplugged": true
       },
@@ -165,8 +161,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
-        "preparation": "* Review and complete the online tutorial yourself. If you are not going to use AI for Oceans, explore the other options listed below. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This tutorial is designed to quickly introduce students to machine learning, a type of artificial intelligence. Students will explore how training data is used to enable a machine learning model to classify new data. ",
+        "preparation": "* Review and complete the online tutorial yourself. If you are not going to use AI for Oceans, explore the other options listed below. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1ugJC_i_79pp4mfNCGvrN7AOatmycgHNfZQAqXNba0H0/edit?usp=sharing)",
         "student_overview": "In this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own."
       },
       "seeding_key": {
@@ -184,7 +179,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "In this lesson, students will practice cropping images to uncover the bias underlying the Twitter cropping algorithm. Then, students will read and watch a video about the discovery of this biased algorithm. Finally, students will discuss ways to recognize and reduce bias along with analyzing Twitter's response to the allegations of bias in their cropping algorithm.",
-        "preparation": "* Complete the cropping widget activity yourself so you can see what your students will experience with the widget will be and what questions or issues they may bring up.\n* Watch the parts of the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) referenced in the lesson plan.\n* Read the two articles from the links section below.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Complete the cropping widget activity yourself so you can see what your students will experience with the widget will be and what questions or issues they may bring up.\n* Watch the parts of the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) referenced in the lesson plan.\n* Read the two articles from the links section below.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1PPiJSS7ZdIQl8DKN_x7pB5I1-1gi4S9Y3I6F-PBJKj0/edit?usp=sharing)",
         "student_overview": "In this lesson, you will work on cropping images and discuss the challenges and bias involved in teaching a machine how to crop an image."
       },
       "seeding_key": {
@@ -327,21 +322,8 @@
       }
     },
     {
-      "key": "a8c127a4-05eb-4d68-83f4-894fbaae2579",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a8c127a4-05eb-4d68-83f4-894fbaae2579",
-        "lesson.key": "Exploring One Column",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2023"
-      }
-    },
-    {
       "key": "bbbf800f-3ca2-46e9-b54f-c43c611d6d22",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -355,7 +337,7 @@
     },
     {
       "key": "e6d746da-27af-4859-b4d1-7ae924d85fd6",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -369,7 +351,7 @@
     },
     {
       "key": "1b4441af-49e1-40ad-9e8b-fdcf23c207b1",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -382,21 +364,8 @@
       }
     },
     {
-      "key": "5b1fdeea-2464-4efb-a3ce-d010bed602fa",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5b1fdeea-2464-4efb-a3ce-d010bed602fa",
-        "lesson.key": "Filtering and Cleaning Data",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2023"
-      }
-    },
-    {
       "key": "fe600db4-83b9-47ee-8fcb-7e8dc7e3c3e9",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 2,
         "name": "Warm Up"
@@ -410,7 +379,7 @@
     },
     {
       "key": "a456353f-615b-4d56-862f-a10f9431558d",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 33,
         "name": "Activity"
@@ -424,7 +393,7 @@
     },
     {
       "key": "edd75da7-4cc3-4c5d-8137-b13d67801e51",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -438,7 +407,7 @@
     },
     {
       "key": "55d3e88e-a327-4d88-bd99-852e5862ac11",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -449,21 +418,8 @@
       }
     },
     {
-      "key": "0db8bfe2-c160-4211-b6e6-3de5678b50bc",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0db8bfe2-c160-4211-b6e6-3de5678b50bc",
-        "lesson.key": "Exploring Two Columns",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2023"
-      }
-    },
-    {
       "key": "cce7c60c-5972-4b95-ba57-8e4ce18d9b2f",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -477,7 +433,7 @@
     },
     {
       "key": "0b721a54-a33b-4b06-955e-bcf09090f3e8",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -491,7 +447,7 @@
     },
     {
       "key": "8c3a51db-e066-4199-a4d9-6a2704894ec3",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -504,21 +460,8 @@
       }
     },
     {
-      "key": "a622e14b-d8eb-4466-8ece-1ba2cff24adf",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a622e14b-d8eb-4466-8ece-1ba2cff24adf",
-        "lesson.key": "Big, Open, and Crowdsourced Data",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2023"
-      }
-    },
-    {
       "key": "18978264-002c-4780-b601-9f54cf46f563",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -532,7 +475,7 @@
     },
     {
       "key": "ea4ba922-662c-4aad-9482-03059e73f21f",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -546,7 +489,7 @@
     },
     {
       "key": "07c3b390-0b4c-44fc-a948-a293cbb0dce6",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -559,21 +502,8 @@
       }
     },
     {
-      "key": "45c2aeb8-bb9c-4e42-9729-624f65fac0aa",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "45c2aeb8-bb9c-4e42-9729-624f65fac0aa",
-        "lesson.key": "Machine Learning",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2023"
-      }
-    },
-    {
       "key": "5a51e393-9b2c-4f1d-a1bd-59c7ee6de997",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -587,7 +517,7 @@
     },
     {
       "key": "b31d8707-1b95-49b1-93f6-df658edccf7b",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -601,7 +531,7 @@
     },
     {
       "key": "10557617-3261-428a-9768-5b784c6e2773",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -614,21 +544,8 @@
       }
     },
     {
-      "key": "e56fec96-c55a-4646-8a01-c96f68f02593",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e56fec96-c55a-4646-8a01-c96f68f02593",
-        "lesson.key": "Algorithmic Bias",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2023"
-      }
-    },
-    {
       "key": "76d151f6-b3e1-4dc8-93e9-f6e13effcd3c",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -642,7 +559,7 @@
     },
     {
       "key": "e6208bc7-8a1b-4f48-80e2-dc72e4b88aee",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -656,7 +573,7 @@
     },
     {
       "key": "b6dbc779-3438-4a30-a6fa-426ad4f5f88d",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -884,7 +801,13 @@
       "position": 3,
       "properties": {
         "description": "This chart gives us information: a collection of facts and patterns extracted from data. We can use this information to identify trends, make connections and address problems. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> There are two distinctions we need to make when looking at a chart or visualization:\n\n* What does the data show?\n* Why might that be the case?\n\nThe \"what\" is the facts of the matter. The percentage of teenagers in the workforce has decreased since 2000. The \"why\" is an informed opinion. Fewer teenagers are working because more are focused on their education and earning scholarships.",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "One of the main goals of this lesson is getting students acquainted with talking and writing about data. In particular we want to:\n* Draw a distinction between describing what the data shows and describing why it might be that way\n* In other words: describe connections and trends in data separate from drawing conclusions.\n* We want students to get in the habit of separating the what from the why when it comes to talking and writing about data"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "243ffdf7-1da1-48ae-b20d-3dd9b448f82a",
@@ -962,7 +885,13 @@
       "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students navigate to Level 1 on Code Studio where they open the data tab and look at the metadata for a table. Then they should share with a partner where the data comes from and what they can learn from the metadata.",
-        "progression_name": "Exploring Metadata"
+        "progression_name": "Exploring Metadata",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You may also want to connect this concept of metadata to things that students use in their daily lives. For example, these websites show the steps to view the metadata on photos taken with [iPhones](https://www.igeeksblog.com/how-to-get-metadata-of-photos-on-iphone/#:~:text=Locate%20and%20long%2Dpress%20the,Once%20satisfied%2C%20tap%20Done.) and [Android](https://www.howtogeek.com/302672/how-to-view-and-edit-photo-exif-data-on-android/#:~:text=Swipe%20up%20on%20the%20photo,Image%20name%2C%20size%2C%20and%20resolution) devices."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "95f9197c-20ef-4c8d-845d-c8dc14d4e76c",
@@ -1000,17 +929,6 @@
       "seeding_key": {
         "activity_section.key": "d621ee4a-3248-465f-a6a7-6aee3fd0f13c",
         "lesson_activity.key": "0d268e19-f02c-43b8-920a-6a8d4da0d80b"
-      }
-    },
-    {
-      "key": "b5f340b4-ccf0-4d3f-9c3d-3925cc35276c",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1OFcL88JGB2Xwg22JaDIFK1xvpZYAU0QXEyxydDAjURQ/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "b5f340b4-ccf0-4d3f-9c3d-3925cc35276c",
-        "lesson_activity.key": "a8c127a4-05eb-4d68-83f4-894fbaae2579"
       }
     },
     {
@@ -1186,17 +1104,6 @@
       "seeding_key": {
         "activity_section.key": "bd9b0f58-82d7-42c2-9a2f-0b0760699fe0",
         "lesson_activity.key": "1b4441af-49e1-40ad-9e8b-fdcf23c207b1"
-      }
-    },
-    {
-      "key": "ff0b6653-e989-47ca-b6b1-260eb905094e",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1zl9qfXQ2OYlyNVKD13kwB8qaPN49YkDwoyo1hCKiScM/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "ff0b6653-e989-47ca-b6b1-260eb905094e",
-        "lesson_activity.key": "5b1fdeea-2464-4efb-a3ce-d010bed602fa"
       }
     },
     {
@@ -1429,17 +1336,6 @@
       }
     },
     {
-      "key": "39ec71c1-5d4e-4b4d-b0f9-38b914888c8d",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1vcKF0sFn-NHsf6EtwHe_SMs2TTUDU5OoSSawVxScolk/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "39ec71c1-5d4e-4b4d-b0f9-38b914888c8d",
-        "lesson_activity.key": "0db8bfe2-c160-4211-b6e6-3de5678b50bc"
-      }
-    },
-    {
       "key": "c4db2508-5ce2-4606-8c65-47dbce290453",
       "position": 1,
       "properties": {
@@ -1631,17 +1527,6 @@
       }
     },
     {
-      "key": "31d175d7-eac8-4ffc-85c2-432f3f2f197e",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/14wo0fY1nnpqvKG5mAyeBH0JhrqV__tdN_vGhs_agiZw/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "31d175d7-eac8-4ffc-85c2-432f3f2f197e",
-        "lesson_activity.key": "a622e14b-d8eb-4466-8ece-1ba2cff24adf"
-      }
-    },
-    {
       "key": "f0a6cebf-941f-469c-a956-4e1568021342",
       "position": 1,
       "properties": {
@@ -1724,17 +1609,6 @@
       "seeding_key": {
         "activity_section.key": "5c2738fb-56cb-45f5-adbe-60687afc429e",
         "lesson_activity.key": "07c3b390-0b4c-44fc-a948-a293cbb0dce6"
-      }
-    },
-    {
-      "key": "cc53daa0-c416-445c-8a75-18f88f18a07f",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1ugJC_i_79pp4mfNCGvrN7AOatmycgHNfZQAqXNba0H0/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "cc53daa0-c416-445c-8a75-18f88f18a07f",
-        "lesson_activity.key": "45c2aeb8-bb9c-4e42-9729-624f65fac0aa"
       }
     },
     {
@@ -1972,17 +1846,6 @@
       "seeding_key": {
         "activity_section.key": "d47d7836-b4e1-4e6f-84c9-38f2bc380b86",
         "lesson_activity.key": "10557617-3261-428a-9768-5b784c6e2773"
-      }
-    },
-    {
-      "key": "11a4d0cd-37e3-4bee-bec0-5a25016ac46a",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1PPiJSS7ZdIQl8DKN_x7pB5I1-1gi4S9Y3I6F-PBJKj0/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "11a4d0cd-37e3-4bee-bec0-5a25016ac46a",
-        "lesson_activity.key": "e56fec96-c55a-4646-8a01-c96f68f02593"
       }
     },
     {

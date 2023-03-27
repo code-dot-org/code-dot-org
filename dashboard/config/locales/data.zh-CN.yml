@@ -665,6 +665,7 @@ zh-CN:
         csc-sprite-lab-pixel-editor: 画自己的精灵图
         csa-pl-intro-to-strings: Java 中的字符串简介
         csa-pl-compareTo: compareTo() 方法
+        csd_sprite_properties: 精灵图属性
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

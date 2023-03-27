@@ -10,6 +10,7 @@
         "name": "SPRITE",
         "type": "Sprite"
       }
-    ]
+    ],
+    "style": "location_blocks"
   }
 }

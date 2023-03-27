@@ -1495,6 +1495,8 @@ uz:
         text: "{SPRITE} x koordinatasi"
       gamelab_yLocationOf:
         text: "{SPRITE} y koordinatasi"
+      KatiesBlocks_tumbling:
+        text: dumboloq oshish
       Mikelab_addBehaviorSimple:
         text: " {SPRITE}  {BEHAVIOR} harakatini boshlaydi"
       Mikelab_addTrainingData:
@@ -1944,8 +1946,6 @@ uz:
         text: chapga burilish
       RyanLab_turnRight:
         text: o‘ngga burilish
-      SpriteLab2Beta_spriteSay:
-        text: " {SPRITE} sprayt {TEXT} so'zlarni {SECONDS} sekund davomida aytadi"
       Vector_createSpriteWith:
         text: |-
           sprayt yaratish
@@ -1993,6 +1993,14 @@ uz:
             '0.75': most
             '0.5': half of
             '0.25': few
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): o'ng tarafga aylanish
+            new Behavior(spinning_left, []): chap tarafga aylanish
+            new Behavior(jittering, []): titrash
+            new Behavior(wandering, []): daydish
+            new Behavior(patrolling, []): patrullash
       binary_drawBin:
         text: "{BIN} binar chizma qilish"
       binary_drawBinScreen:
@@ -2143,5 +2151,3 @@ uz:
         text: sarlavhani o'rnating {HEADING}
       storylab_setSubheading:
         text: Tag sarlavhani o‘rnating {SUBHEADING}
-      validation_validatedBackground:
-        text: orqa fonni {IMG} ga o'zgartirish

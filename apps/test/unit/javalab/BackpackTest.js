@@ -1,12 +1,13 @@
 import React from 'react';
 import {expect, assert} from '../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
+import {mount} from 'enzyme';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import javalab from '@cdo/apps/javalab/javalabRedux';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import sinon from 'sinon';
 import {UnconnectedBackpack as Backpack} from '@cdo/apps/javalab/Backpack';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
+import {BackpackAPIContext} from '../../../src/javalab/BackpackAPIContext';
 
 describe('Java Lab Backpack Test', () => {
   let defaultProps, backpackApiStub;
@@ -20,7 +21,6 @@ describe('Java Lab Backpack Test', () => {
       displayTheme: DisplayTheme.DARK,
       isButtonDisabled: false,
       onImport: () => {},
-      backpackApi: backpackApiStub,
       backpackEnabled: true,
       sources: {},
       validation: {}
@@ -31,8 +31,16 @@ describe('Java Lab Backpack Test', () => {
     restoreRedux();
   });
 
+  const renderWithProps = props => {
+    return mount(
+      <BackpackAPIContext.Provider value={backpackApiStub}>
+        <Backpack {...{...defaultProps, ...props}} />
+      </BackpackAPIContext.Provider>
+    );
+  };
+
   it('updates selected files correctly', () => {
-    const wrapper = shallow(<Backpack {...defaultProps} />);
+    const wrapper = renderWithProps({});
     wrapper
       .instance()
       .handleFileCheckboxChange({target: {name: 'Class1.java', checked: true}});
@@ -52,13 +60,18 @@ describe('Java Lab Backpack Test', () => {
   });
 
   it('expand dropdown triggers getFileList', () => {
-    const wrapper = shallow(<Backpack {...defaultProps} />);
+    const wrapper = renderWithProps({});
+    const getFileListStub = sinon.stub(
+      BackpackClientApi.prototype,
+      'getFileList'
+    );
     wrapper.instance().expandDropdown();
-    expect(backpackApiStub.getFileList.calledOnce);
+    expect(getFileListStub.calledOnce);
+    getFileListStub.restore();
   });
 
   it('expand dropdown resets state correctly', () => {
-    const wrapper = shallow(<Backpack {...defaultProps} />);
+    const wrapper = renderWithProps({});
     // set state to something that should be cleared by expandDropdown
     wrapper.instance().setState({
       dropdownOpen: false,
@@ -79,7 +92,7 @@ describe('Java Lab Backpack Test', () => {
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}}
     };
-    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    const wrapper = renderWithProps(otherProps);
     // set state to something that should be cleared by expandDropdown
     wrapper.instance().setState({
       dropdownOpen: true,
@@ -97,7 +110,7 @@ describe('Java Lab Backpack Test', () => {
     const otherProps = {
       sources: {visibleFile: {isVisible: true}, hiddenFile: {isVisible: false}}
     };
-    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    const wrapper = renderWithProps(otherProps);
     // set state to something that should be cleared by expandDropdown
     wrapper.instance().setState({
       dropdownOpen: true,
@@ -112,7 +125,7 @@ describe('Java Lab Backpack Test', () => {
   });
 
   it('no dialog shown if there are no duplicate file names', () => {
-    const wrapper = shallow(<Backpack {...defaultProps} />);
+    const wrapper = renderWithProps({});
     // set state to something that should be cleared by expandDropdown
     wrapper.instance().setState({
       dropdownOpen: true,
@@ -127,9 +140,7 @@ describe('Java Lab Backpack Test', () => {
   });
 
   it('renders nothing if backpack is disabled', () => {
-    const wrapper = shallow(
-      <Backpack {...defaultProps} backpackEnabled={false} />
-    );
+    const wrapper = renderWithProps({backpackEnabled: false});
     expect(wrapper.isEmptyRender()).to.be.true;
   });
 
@@ -137,7 +148,7 @@ describe('Java Lab Backpack Test', () => {
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}}
     };
-    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    const wrapper = renderWithProps(otherProps);
     wrapper.instance().setState({
       dropdownOpen: true,
       backpackFilenames: ['file1', 'file2', 'file3'],
@@ -154,7 +165,7 @@ describe('Java Lab Backpack Test', () => {
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}}
     };
-    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    const wrapper = renderWithProps(otherProps);
     wrapper.instance().setState({
       dropdownOpen: true,
       backpackFilenames: ['file1', 'file2', 'file3'],
@@ -176,7 +187,7 @@ describe('Java Lab Backpack Test', () => {
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}}
     };
-    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    const wrapper = renderWithProps(otherProps);
     wrapper.instance().setState({
       dropdownOpen: true,
       backpackFilenames: ['file1', 'file2', 'file3'],
@@ -198,7 +209,7 @@ describe('Java Lab Backpack Test', () => {
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}}
     };
-    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    const wrapper = renderWithProps(otherProps);
     wrapper.instance().setState({
       dropdownOpen: true,
       backpackFilenames: ['file1', 'file2', 'file3'],

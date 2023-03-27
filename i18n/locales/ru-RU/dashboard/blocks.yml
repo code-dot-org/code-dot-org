@@ -2,8 +2,8 @@
 ru:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: перемещение NESW с помощью клавиш со стрелками
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: запросить у пользователя {QUESTION} переменную {VAR} с параметрами выбора {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -1058,6 +1058,8 @@ ru:
         text: избегание целей
       gamelab_beginCollectingData:
         text: начать сбор данных {BREAK} значение {VALUE} с меткой {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} отскакивает от {TARGET}"
       gamelab_changePropBy:
@@ -1674,6 +1676,10 @@ ru:
         text: x координата {SPRITE}
       gamelab_yLocationOf:
         text: y координата {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} плавно перейти к {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: акробатика
       Mikelab_addBehaviorSimple:
         text: Спрайт {SPRITE} начинает {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2333,8 +2339,6 @@ ru:
         text: повернуть налево
       RyanLab_turnRight:
         text: повернуть направо
-      SpriteLab2Beta_spriteSay:
-        text: Спрайт {SPRITE} Сказать {TEXT} Для {SECONDS} Секунд
       Vector_createSpriteWith:
         text: |-
           создать спрайт
@@ -2440,6 +2444,19 @@ ru:
             '"quarantining"': уходить на карантин при заболевании
             '"avoiding"': социальное дистанцирование
             '"none"': оставаться неподвижным
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): вращение вправо
+            new Behavior(spinning_left, []): вращение влево
+            new Behavior(fluttering, []): дрожание
+            new Behavior(jittering, []): дрожание
+            new Behavior(wobbling, []): колебание
+            new Behavior(wandering, []): хождение
+            new Behavior(patrolling, []): патрулирование
+      adaptations_startFollowing:
+        text: "{SPRITE} начинает следовать {TARGET}"
       binary_drawBin:
         text: рисовать двоичный {BIN}
       binary_drawBinScreen:
@@ -2600,7 +2617,3 @@ ru:
         text: запрос пользователя {QUESTION} для переменной {VAR} с вариантами {A}
       storylab_setSubheading:
         text: установить подзаголовок {SUBHEADING}
-      validation_validatedBackground:
-        text: установить фон для {IMG}
-      validation_validatedSound:
-        text: PLAYSound {SOUND}

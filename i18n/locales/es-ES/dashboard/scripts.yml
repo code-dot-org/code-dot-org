@@ -6383,8 +6383,22 @@ es:
               display_name: Lecciones alternativas
           title: Condiciones y Lógica
         csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Lecciones alternativas
           title: Arrays Bidimensionales
         csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Lecciones alternativas
           title: ArrayLists y Métodos de Cadena
           description: "En esta unidad, los estudiantes utilizan `ArrayList`s para almacenar los datos del programa y diferencian cuándo utilizar arrays 1D y 2D y `ArrayList`s. Los alumnos exploran las ventajas y la funcionalidad de un `ArrayList`, utilizándolo para resolver problemas que implican datos numéricos y de objetos. Los alumnos utilizan los métodos de la clase `String` para analizar y procesar el texto obtenido de la entrada del usuario y del archivo. A lo largo de la unidad, los alumnos escriben la documentación del programa utilizando comentarios de una línea, comentarios de varias líneas y comentarios Javadoc para crear la documentación de la API. En el proceso, los estudiantes identifican y documentan las precondiciones y postcondiciones de los objetos y métodos.\n\n### Controles de progreso personal del Aula AP\n\nPara asignar preguntas del banco de preguntas de AP Classroom que se ajusten a esta unidad, cree un cuestionario personalizado en AP Classroom buscando en el banco de preguntas los enunciados de los conocimientos esenciales en la página [\\*\\*Estándares\\*\\*](https://studio.code.org/s/csa6-2022/standards) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [\\*\\*AP Central\\*\\*](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nLas siguientes comprobaciones de progreso personal en el Aula AP se pueden asignar durante la semana de \"Demuestra lo que sabes\":\n\n-   Control de Progreso Personal 2\n-   Control de Progreso Personal 7\n\n**_Nota:_** _Algunos de los objetivos de aprendizaje y de los conocimientos esenciales que aparecen en los controles de progreso personal sugeridos se tratan en unidades posteriores._"
           student_description: Esta unidad continúa ampliando las estructuras de datos para introducirte en la creación de listas utilizando la clase `ArrayList`. En el proceso, aprenderás sobre las clases `Integer` y `Double` y utilizarás sus métodos para analizar datos de archivos de texto y explorar los límites de los valores enteros. Diferenciarás cuándo utilizar cada tipo de estructura de datos mientras aprendes sobre la estructura y funcionalidad de un `ArrayList`. Aplicarás algoritmos estándar para encontrar y manipular datos en un `ArrayList` de datos numéricos y de objetos. A lo largo de la unidad, se aprende a utilizar la clase `String` para analizar y procesar el texto obtenido de un usuario y de la entrada de un archivo, al tiempo que se aprenden las técnicas y aplicaciones básicas del procesamiento del lenguaje natural. Además, desarrollarás tus conocimientos de ingeniería de software escribiendo comentarios Javadoc para crear documentación de la API para tus programas.
@@ -6492,12 +6506,12 @@ es:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: Capítulo 1
+              display_name: 'Capítulo 1: El proceso de resolución de problemas'
             lessonGroup-3:
-              display_name: Capítulo 2
+              display_name: 'Capítulo 2: Computadoras y resolución de problemas'
             lessonGroup-4:
               display_name: Lecciones Alternativas
-          title: Resolución de Problemas
+          student_description: Resolución de Problemas y Computación es una iniciación altamente interactiva y colaborativa al campo de la informática, enmarcada dentro de la búsqueda más amplia de la resolución de problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de rompecabezas, desafíos y escenarios del mundo real. A continuación, aprenderás cómo los ordenadores introducen, emiten, almacenan y procesan información para ayudar a los humanos a resolver problemas.  La unidad concluye con un proyecto en el que diseñarás una aplicación que ayude a resolver un problema de tu elección.
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6505,13 +6519,14 @@ es:
             lessonGroup-3:
               display_name: 'Capítulo 2: Sitios Web Multipágina'
           title: Desarrollo Web
+          student_description: En la Unidad 2, aprenderás cómo crear y compartir el contenido en tus propias páginas web. Después de decidir qué contenido deseas compartir con los demás, aprenderás a estructurar y diseñar tus páginas mediante HTML y CSS. También practicarás valiosas habilidades de programación, como depurar y comentar. Al final de la unidad, tendrás un sitio web personal que podrás publicar en Internet.
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: Diseño orientado al usuario'
             lessonGroup-3:
               display_name: 'Capítulo 2: Prototipos de aplicaciones'
-          title: El Proceso de Diseño
+          student_description: La Unidad 4 introduce los impactos sociales más amplios que tiene la computación. A través de una serie de desafíos de diseño, aprenderás a comprender mejor las necesidades de los demás mientras desarrollas una solución a un problema. La segunda mitad de la unidad consiste en un proyecto de equipo iterativo, durante el cual los equipos tienen la oportunidad de identificar una necesidad que les importa, crear prototipos de soluciones tanto en papel como en el Laboratorio de aplicaciones, y probar soluciones con usuarios reales para obtener comentarios y seguir adelante.
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6519,6 +6534,8 @@ es:
             lessonGroup-3:
               display_name: 'Capítulo 2: Resolución de problemas en los datos'
           title: Datos y Sociedad
+          description_short: Aprende cómo las personas usan las computadoras para resolver problemas de datos.
+          student_description: La Unidad 5 trata sobre la importancia de los datos a la hora de resolver problemas y resalta cómo las computadoras pueden ayudar en este proceso. El primer capítulo explora los diferentes sistemas utilizados para representar información en una computadora, y los desafíos y concesiones planteados al usarlos. En el segundo capítulo, aprenderá cómo se utilizan las colecciones de datos para resolver problemas y cómo las computadoras ayudan a automatizar los pasos de este proceso. Al final del capítulo, se considera cómo se puede aplicar el proceso de resolución de problemas de datos a un área de tu elección.
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6526,20 +6543,25 @@ es:
             lessonGroup-3:
               display_name: 'Capítulo 2: Desarrollo de juegos'
           title: Animaciones Interactivas y Juegos
+          student_description: " En la Unidad 3, desarrollarás tu experiencia de programación a medida que programes animaciones, arte interactivo y juegos en el Laboratorio de juegos. La unidad comienza con formas simples y, a partir de los mismos conceptos de programación y el proceso de diseño que usan los científicos informáticos a diario, añade juegos más sofisticados basados en sprites. En el proyecto final, desarrollarás un programa personalizado e interactivo."
         csd6-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: Capítulo 1
+              display_name: 'Capítulo 1: Entradas y Salidas'
             lessonGroup-3:
-              display_name: Capítulo 2
-          title: Computación física
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+          description_short: Aprende a programar con dispositivos físicos.
+          student_description: Esta unidad explora el papel de las plataformas de hardware en la informática y cómo los diferentes sensores pueden proporcionar una entrada y salida más eficaz que el tradicional teclado, ratón y monitor. Utilizando el Laboratorio de Aplicaciones y el Circuit Playground de Adafruit, desarrollarás programas que utilizan las mismas entradas y salidas de hardware que se ven en los dispositivos inteligentes, observando cómo un simple prototipo aproximado puede conducir a un producto terminado. La unidad concluye con un reto de diseño para utilizar el Circuit Playground como base para una innovación de su propio diseño.
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Capítulo 1
             lessonGroup-3:
               display_name: Capítulo 2
+            lessonGroup-4:
+              display_name: Introducción al Laboratorio de aplicaciones
           title: Inteligencia Artificial y Aprendizaje Automático
+          student_description: La Unidad 7 es una introducción práctica al desarrollo de un modelo de aprendizaje automático con datos tabulares. Explorarás cómo los ordenadores aprenden de los datos para tomar decisiones, y luego desarrollarás tus propios proyectos de aprendizaje automático en torno a datos del mundo real. La unidad culmina con el diseño de tu propia aplicación de aprendizaje automático para resolver un problema de relevancia personal.
         physcomp-temp:
           lesson_groups:
             lessonGroup-2:
@@ -6833,3 +6855,209 @@ es:
           title: Preparación para Enseñar la Unidad 1
           description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Para cada unidad en Descubrimientos de la Informática, tendrás la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
           student_description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Para cada unidad en Descubrimientos de la Informática, tendrás la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
+        drafting:
+          name: borrador
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
+            lessonGroup-4:
+              display_name: Lecciones Alternativas
+          title: Resolución de Problemas
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+          title: Resolución de Problemas
+        testing-focus-on-creativity2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Creación de páginas Web'
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Sitios Web Multipágina'
+          title: Desarrollo Web
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Secuencias
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+          description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
+          student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
+          description_short: Una introducción a las ciencias de la computación para prelectores, que combina lo mejor de nuestros cursos para educación preescolar y primer grado.
+          description_audience: De 4 a 8 años
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Secuencias
+            csf_sprites:
+              display_name: Sprites
+            lessonGroup-9:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionales
+            csf_functions:
+              display_name: Funciones
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Bucles Para
+            end_of_course_project:
+              display_name: Proyecto de fin de curso
+          title: Curso Exprés (2022)
+          description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
+          student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
+          description_short: 'Una introducción a la ciencia de la computación: combina lo mejor de nuestro plan de estudios de primaria para estudiantes mayores.'
+          description_audience: 'Edades: 9 a 18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            csf_sequencing:
+              display_name: Secuencias
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+            lessonGroup-5:
+              display_name: Proyecto de fin de curso
+          title: Curso A (2021)
+          description: 'El curso A ofrece un plan de estudios de ciencias de la computación para los lectores principiantes, incluidos los estudiantes de infantil. Los estudiantes aprenderán a programar utilizando comandos como bucles y eventos. Las lecciones de este curso también enseñan a los estudiantes a colaborar de forma significativa con otros, a investigar diferentes técnicas de resolución de problemas, a persistir ante tareas desafiantes y a aprender sobre la seguridad en Internet. '
+          student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
+          description_short: Una introducción a la informática para pre-lectores.
+          description_audience: De 4 a 7 años
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            csf_sequencing:
+              display_name: Secuencias
+            csf_loops:
+              display_name: Bucles
+            csf_impacts:
+              display_name: Impactos de la computación
+            csf_events:
+              display_name: Eventos
+            lessonGroup-6:
+              display_name: Proyecto de fin de curso
+          title: Curso B (2021)
+          description: Hemos desarrollado el Curso B pensando en los alumnos de primer grado. Aunque los conceptos del Curso B son paralelos a los del Curso A, los alumnos aprenden actividades más sofisticadas y trabajan con una mayor variedad de rompecabezas. Los alumnos aprenderán los fundamentos de la programación, técnicas de colaboración, habilidades de investigación y pensamiento crítico, persistencia ante las dificultades y seguridad en Internet. Al final de este curso, los estudiantes crean juegos en el entorno de programación del Laboratorio de Juegos.
+          student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
+          description_short: Una introducción a las ciencias de la computación para prelectores. Es similar al Curso A, pero con conceptos más avanzados.
+          description_audience: De 5 a 8 años
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            csf_sequencing:
+              display_name: Secuencias
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+            csf_data:
+              display_name: Datos
+            end_of_course_project:
+              display_name: Proyecto de fin de curso
+          title: Curso C (2021)
+          description: Desarrollamos el Curso C para estudiantes de segundo grado. Los estudiantes crearán programas con secuencias, bucles y eventos. Investigarán técnicas de resolución de problemas y desarrollarán estrategias para construir comunidades positivas tanto en línea como fuera de ella. Al final del curso, los alumnos crearán juegos interactivos que podrán compartir.
+          student_description: Crea programas con secuencias, bucles y eventos. Traduce tus iniciales a código binario, investiga distintas técnicas de resolución de problemas y aprende cómo responder al ciberacoso. ¡Al final del curso podrás crear tu propio juego o historia para compartir!
+          description_short: Aprende los fundamentos de la informática y crea tu propio arte, historias y juegos.
+          description_audience: De 6 a 10 años
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Ciudadanía Digital
+            csf_sequencing:
+              display_name: Secuencias
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionales
+            end_of_course_project:
+              display_name: Proyecto de fin de curso
+          title: Curso D (2021)
+          description: 'Hemos creado el curso D para los alumnos de tercer grado.  El curso comienza con un repaso de los conceptos encontrados en cursos anteriores, incluyendo bucles y eventos. Después, los estudiantes desarrollarán su comprensión de los algoritmos, los bucles anidados, los bucles while, las condicionales y mucho más. '
+          student_description: Aprende sobre bucles, condicionales y eventos. Más allá de la codificación, aprende sobre la ciudadanía digital.
+          description_short: Aprende sobre sentencias condicionales y crea tu propio arte, historia o juego.
+          description_audience: Edades de 7 a 11 años
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: Bucles anidados
+            csf_functions:
+              display_name: Funciones
+            csf_nested_loops:
+              display_name: Condicionales
+            lessonGroup-7:
+              display_name: Impactos de la computación
+            end_of_course_project:
+              display_name: Proyecto de fin de curso
+          title: Curso E (2022)
+          description: Hemos creado el curso E para los alumnos de cuarto curso. El curso comienza con una introducción a la herramienta de programación Laboratorio de Sprite. Los alumnos aprenderán a realizar proyectos divertidos e interactivos que refuerzan lo que aprenderán sobre la seguridad en línea. Después de estas lecciones, los estudiantes se involucrarán en una codificación más compleja. Los estudiantes aprenderán sobre bucles anidados, funciones y condicionales. Al final del curso, los estudiantes combinarán estos conceptos para resolver desafiantes rompecabezas. El curso termina con un proyecto abierto en el que los alumnos crean un juego o un dibujo.
+          student_description: Comienza a codificar con algoritmos, eventos, bucles, condicionales y funciones. Al final de este curso, diseña y crea un juego o dibujo que puedas compartir con tus amigos y familiares.
+          description_short: Aprende los fundamentos de los sprites, los bucles anidados y las funciones.
+          description_audience: De 8 a 12 años
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: El proceso de resolución de problemas'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Computadoras y resolución de problemas'
+            lessonGroup-4:
+              display_name: Lecciones Alternativas
+          student_description: Resolución de Problemas y Computación es una iniciación altamente interactiva y colaborativa al campo de la informática, enmarcada dentro de la búsqueda más amplia de la resolución de problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de rompecabezas, desafíos y escenarios del mundo real. A continuación, aprenderás cómo los ordenadores introducen, emiten, almacenan y procesan información para ayudar a los humanos a resolver problemas.  La unidad concluye con un proyecto en el que diseñarás una aplicación que ayude a resolver un problema de tu elección.
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Creación de páginas Web'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Sitios Web Multipágina'
+          title: Desarrollo Web
+          student_description: En la Unidad 2, aprenderás cómo crear y compartir el contenido en tus propias páginas web. Después de decidir qué contenido deseas compartir con los demás, aprenderás a estructurar y diseñar tus páginas mediante HTML y CSS. También practicarás valiosas habilidades de programación, como depurar y comentar. Al final de la unidad, tendrás un sitio web personal que podrás publicar en Internet.
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Imágenes y animaciones'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Desarrollo de juegos'
+          title: Animaciones Interactivas y Juegos
+          student_description: " En la Unidad 3, desarrollarás tu experiencia de programación a medida que programes animaciones, arte interactivo y juegos en el Laboratorio de juegos. La unidad comienza con formas simples y, a partir de los mismos conceptos de programación y el proceso de diseño que usan los científicos informáticos a diario, añade juegos más sofisticados basados en sprites. En el proyecto final, desarrollarás un programa personalizado e interactivo."
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Diseño orientado al usuario'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Prototipos de aplicaciones'
+          student_description: La Unidad 4 introduce los impactos sociales más amplios que tiene la computación. A través de una serie de desafíos de diseño, aprenderás a comprender mejor las necesidades de los demás mientras desarrollas una solución a un problema. La segunda mitad de la unidad consiste en un proyecto de equipo iterativo, durante el cual los equipos tienen la oportunidad de identificar una necesidad que les importa, crear prototipos de soluciones tanto en papel como en el Laboratorio de aplicaciones, y probar soluciones con usuarios reales para obtener comentarios y seguir adelante.
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representación de la información'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Resolución de problemas en los datos'
+          title: Datos y Sociedad
+          description_short: Aprende cómo las personas usan las computadoras para resolver problemas de datos.
+          student_description: La Unidad 5 trata sobre la importancia de los datos a la hora de resolver problemas y resalta cómo las computadoras pueden ayudar en este proceso. El primer capítulo explora los diferentes sistemas utilizados para representar información en una computadora, y los desafíos y concesiones planteados al usarlos. En el segundo capítulo, aprenderá cómo se utilizan las colecciones de datos para resolver problemas y cómo las computadoras ayudan a automatizar los pasos de este proceso. Al final del capítulo, se considera cómo se puede aplicar el proceso de resolución de problemas de datos a un área de tu elección.
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introducción al Laboratorio de aplicaciones
+            lessonGroup-3:
+              display_name: Capítulo 1
+            lessonGroup-4:
+              display_name: Capítulo 2
+          title: Inteligencia Artificial y Aprendizaje Automático
+          student_description: La Unidad 7 es una introducción práctica al desarrollo de un modelo de aprendizaje automático con datos tabulares. Explorarás cómo los ordenadores aprenden de los datos para tomar decisiones, y luego desarrollarás tus propios proyectos de aprendizaje automático en torno a datos del mundo real. La unidad culmina con el diseño de tu propia aplicación de aprendizaje automático para resolver un problema de relevancia personal.

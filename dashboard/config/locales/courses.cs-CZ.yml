@@ -52,3 +52,43 @@ cs:
           description_teacher: Objevování informatiky je úvodním kurzem do informatiky,
             v němž se studenti seznamují s informatikou jako prostředkem k tvořivosti,
             komunikaci, řešení problémů a zábavě.
+        csd-pilot:
+          description_student: Objevování informatiky je úvodním kurzem do informatiky,
+            v němž se studenti seznamují s informatikou jako prostředkem k tvořivosti,
+            komunikaci, řešení problémů a zábavě.
+        csp-2020:
+          description_short: Naučte se základní principy informatiky.
+        csd-2020:
+          description_short: Úvodní počítačový kurz, který zapálí studenty k vytvoření
+            jedinečných počinů.
+          description_student: Objevování informatiky je úvodním kurzem do informatiky,
+            v němž se studenti seznamují s informatikou jako prostředkem k tvořivosti,
+            komunikaci, řešení problémů a zábavě.
+          description_teacher: Objevování informatiky je úvodním kurzem do informatiky,
+            v němž se studenti seznamují s informatikou jako prostředkem k tvořivosti,
+            komunikaci, řešení problémů a zábavě.
+        csp-2021:
+          description_short: Naučte se základní principy informatiky.
+        mike-test:
+          title: Základy informatiky
+        csp-2022:
+          description_short: Naučte se základní principy informatiky.
+        csp-2023:
+          description_short: Naučte se základní principy informatiky.
+    resources:
+      curriculum/csd/2020:
+        name: Obsah kurzu
+      teacher_forum/csd/2020:
+        name: Fórum učitelů
+      curriculum/csd/2017:
+        name: Obsah kurzu
+      teacher_forum_6/csd/2017:
+        name: Fórum učitelů
+      curriculum/csd/2019:
+        name: Obsah kurzu
+      teacher_forum/csd/2019:
+        name: Fórum učitelů
+      curriculum/csd/2018:
+        name: Obsah kurzu
+      teacher_forum_6/csd/2018:
+        name: Fórum učitelů
