@@ -18,7 +18,7 @@ const INVALID_COLOR = '#d00';
 
 let poolField, nameField, helperEditor, configEditor, validationDiv;
 let hasLintingErrors = false;
-let canRenderBlock = false;
+let isValidBlockConfig = false;
 
 $(document).ready(() => {
   registerReducers({animationList: animationList});
@@ -91,13 +91,15 @@ function onUpdateLinting(_, errors) {
 }
 
 const setSubmitButtonState = () => {
-  const submitButton = document.querySelector('#block_submit');
-  const disabled = hasLintingErrors || !canRenderBlock;
-  if (disabled) {
-    submitButton.setAttribute('disabled', 'disabled');
-  } else {
-    submitButton.removeAttribute('disabled');
-  }
+  const disabled = hasLintingErrors || !isValidBlockConfig;
+  ['#block_clone', '#block_submit'].forEach(buttonId => {
+    const button = document.querySelector(buttonId);
+    if (disabled) {
+      button.setAttribute('disabled', 'disabled');
+    } else {
+      button.removeAttribute('disabled');
+    }
+  });
 };
 
 function validateBlockConfig(editor) {
@@ -107,9 +109,11 @@ function validateBlockConfig(editor) {
     }
     updateBlockPreview();
     validateBlockRenders();
+    isValidBlockConfig = true;
     validationDiv.text('Config and helper code appear valid.');
     validationDiv.css('color', VALID_COLOR);
   } catch (err) {
+    isValidBlockConfig = false;
     validationDiv.text(err.toString());
     validationDiv.css('color', INVALID_COLOR);
   }
@@ -123,10 +127,7 @@ function validateBlockRenders() {
       .getAllBlocks()
       .some(block => block.getFieldValue('NAME')?.includes('unknown block'))
   ) {
-    canRenderBlock = false;
     throw 'Unable to render block with given configuration.';
-  } else {
-    canRenderBlock = true;
   }
 }
 
