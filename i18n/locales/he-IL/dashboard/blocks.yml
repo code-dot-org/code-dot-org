@@ -2058,8 +2058,6 @@ he:
         text: פנה שמאלה
       RyanLab_turnRight:
         text: פנה ימינה
-      SpriteLab2Beta_spriteSay:
-        text: שספרייט {SPRITE} אומר {TEXT} עבור {SECONDS} שניות
       Vector_createSpriteWith:
         text: |-
           ליצור ספרייט
@@ -2108,6 +2106,16 @@ he:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} אמור {SPEECH}"
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): להסתובב ימינה
+            new Behavior(spinning_left, []): להסתובב שמאלה
+            new Behavior(fluttering, []): להתרגש
+            new Behavior(jittering, []): לרעוד
+            new Behavior(wobbling, []): להתנדנד
+            new Behavior(wandering, []): לשוטט
+            new Behavior(patrolling, []): לסייר
       binary_drawBin:
         text: לצייר בינארי {BIN}
       binary_drawBinScreen:
@@ -2263,5 +2271,3 @@ he:
         text: קבעו כותרת {HEADING}
       storylab_setSubheading:
         text: קבעו תת-כותרת {SUBHEADING}
-      validation_validatedBackground:
-        text: קבע רקע {IMG}

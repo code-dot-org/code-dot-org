@@ -765,6 +765,8 @@ en:
         enter_your_own_poem: Enter Your Own Poem
         csa-example-solution-1: 'Live Coding an Example Solution '
         csd_sprite_properties: Sprite Properties
+        csa-pl-documentation: Documentation in Java Lab
+        csc-starquilts-intro: 'CSC: Star Quilts'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

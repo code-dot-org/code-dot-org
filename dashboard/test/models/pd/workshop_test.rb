@@ -14,6 +14,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     @workshop_organizer = create(:workshop_organizer)
     @organizer_workshop = create(:workshop, organizer: @workshop_organizer)
+
+    @regional_partner = create(:regional_partner)
   end
   setup do
     @workshop.reload
@@ -331,10 +333,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     normal_workshop = create :workshop, :ended
     counselor_workshop = create :counselor_workshop, :ended
     admin_workshop = create :admin_workshop, :ended
+    admin_counselor_workshop = create :admin_counselor_workshop, :ended
 
     assert normal_workshop.account_required_for_attendance?
     refute counselor_workshop.account_required_for_attendance?
     refute admin_workshop.account_required_for_attendance?
+    refute admin_counselor_workshop.account_required_for_attendance?
   end
 
   test 'send_exit_surveys enrolled-only teacher does not get mail' do
@@ -351,9 +355,20 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     enrollment = create :pd_enrollment, workshop: workshop
     create :pd_attendance_no_account, session: workshop.sessions.first, enrollment: enrollment
-
     refute workshop.account_required_for_attendance?
     Pd::Enrollment.any_instance.expects(:send_exit_survey)
+    workshop.send_exit_surveys
+  end
+
+  test 'send_exit_surveys with attendance but no account gets email for admin/counselor' do
+    workshop = create :admin_counselor_workshop, :ended
+
+    enrollment = create :pd_enrollment, workshop: workshop
+    create :pd_attendance_no_account, session: workshop.sessions.first, enrollment: enrollment
+
+    refute workshop.account_required_for_attendance?
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
+
     workshop.send_exit_surveys
   end
 
@@ -492,7 +507,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # with subject
     workshop.update!(course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_5)
     assert_equal 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
-
     # truncated at 255 chars
     workshop.update!(location_name: "blah" * 60)
     assert workshop.friendly_name.start_with? 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at blahblahblah'
@@ -1487,6 +1501,42 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     workshop.third_party_provider = nil
     assert workshop.valid?
+  end
+
+  test 'CSP summer workshop must require teacher application' do
+    workshop = create :csp_summer_workshop, regional_partner: @regional_partner
+    assert workshop.require_application?
+  end
+
+  test 'CSD academic year workshop must require teacher application' do
+    workshop = create :csd_academic_year_workshop, regional_partner: @regional_partner
+    assert workshop.require_application?
+  end
+
+  test 'CSA summer workshop must require teacher application' do
+    workshop = create :csa_summer_workshop, regional_partner: @regional_partner
+    assert workshop.require_application?
+  end
+
+  test 'CSF workshop must not require teacher application' do
+    workshop = create :csf_workshop, regional_partner: @regional_partner
+    refute workshop.require_application?
+  end
+
+  test 'virtual CSD workshop must not require teacher application' do
+    workshop = create :csd_virtual_workshop, regional_partner: @regional_partner
+    refute workshop.require_application?
+  end
+
+  test 'workshop without regional partner must not require teacher application' do
+    workshop = create :csp_summer_workshop
+    refute workshop.require_application?
+  end
+
+  test 'regional partner with partner application must not require teacher application' do
+    rp = create :regional_partner, link_to_partner_application: 'https://example.com'
+    workshop = create :csp_summer_workshop, regional_partner: rp
+    refute workshop.require_application?
   end
 
   private

@@ -1592,6 +1592,10 @@ pt:
         text: coordenada x do {SPRITE}
       gamelab_yLocationOf:
         text: coordenada y do {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} deslizar para {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: em queda
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} começa a {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2143,8 +2147,6 @@ pt:
         text: virar à esquerda
       RyanLab_turnRight:
         text: virar à direita
-      SpriteLab2Beta_spriteSay:
-        text: elemento {SPRITE} diz {TEXT} por {SECONDS} segundos
       Vector_createSpriteWith:
         text: |-
           criar um personagem
@@ -2218,6 +2220,18 @@ pt:
             '"congregating"': congregando
             '"avoiding"': distanciamento social
             '"none"': ficar parado
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): girando para a direita
+            new Behavior(spinning_left, []): girando para a esquerda
+            new Behavior(fluttering, []): tremulando
+            new Behavior(jittering, []): tremendo
+            new Behavior(wobbling, []): balançando
+            new Behavior(wandering, []): vagando
+            new Behavior(patrolling, []): patrulhando
+      adaptations_startFollowing:
+        text: "{SPRITE} começa a seguir {TARGET}"
       binary_drawBin:
         text: desenhar o binário {BIN}
       binary_drawBinScreen:
@@ -2370,7 +2384,3 @@ pt:
             '"rain"': chuva
             '"starburst"': Starburst
             '"twinkling"': Cintilante
-      validation_validatedBackground:
-        text: definir plano de fundo para {IMG}
-      validation_validatedSound:
-        text: Reproduzir som {SOUND}

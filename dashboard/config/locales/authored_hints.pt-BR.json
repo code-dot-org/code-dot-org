@@ -709,7 +709,7 @@
           "voyage_aquatic_9a": "Que recife de corais bonito! O coral azul parece ser o caminho **direito**, e lembre-se também de deixar o coral vermelho no caminho **esquerdo**."
         },
         "MC_HOC_2017_01_RETRY": {
-          "MC_HOC_2017_01_RETRY_a": "Arraste um bloco 'mover para a frente' da caixa de ferramentas para a área de trabalho e fixe-o abaixo do bloco 'ao rodar'.",
+          "MC_HOC_2017_01_RETRY_a": "Arraste um bloco 'mover para a frente' da caixa de ferramentas para a área de trabalho e fixe-o abaixo do bloco 'quando executar'.",
           "MC_HOC_2017_01_RETRY_b": "Não esqueça de clicar em \"Executar\" para executar o código para o Agent.",
           "MC_HOC_2017_01_RETRY_c": "Depois que o Agent executar todo o código, você poderá mover o jogador com as teclas de seta!"
         },
@@ -10744,7 +10744,7 @@
           "hw_retro_changePropBy": "Se quiser mudar o tamanho de uma fada repetidamente (com eventos), use este bloco: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "Cada fada tem uma **location**. Você pode definir a localização clicando no pino deste bloco: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml> \n\n-   Clique no pino ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) do bloco de localização e escolha uma nova posição para sua fada na tela. \n-   Pressione o botão \"Run\" quando seu código estiver completo.",
+          "location_hint": "Cada fada tem uma **location**. Você pode definir a localização clicando no pino deste bloco: \n\n<xml><block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Poetry_makeNewSpriteAnon\" id=\"1XbbmW9TqiPQBwSeRYvO\">\n  <field name=\"ANIMATION_NAME\">\"twinkling star\"</field>\n  <field name=\"LOCATION\">{\"x\":200,\"y\":200}</field>\n</block></xml> \n\n-   Clique no pino ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) do bloco de localização e escolha uma nova posição para sua fada na tela. \n-   Pressione o botão \"Run\" quando seu código estiver completo.",
           "remove_hint": "Você pode remover uma fada de determinado número de linha. Você pode adicionar uma nova fada para tomar o lugar da anterior: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
@@ -12625,6 +12625,9 @@
         },
         "helloworld_food_say_space-2022": {
           "hello-world-first-solution-pizza": "Para fazer o sprite dizer alguma coisa, conecte os blocos de código da seguinte forma:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "courseC_artist_loops7a2022": {
+          "courseC_artist_loops7a_a": "Um círculo tem 360 graus. Multiplique os graus em sua vez pelo número de vezes que você repete. É igual a 360?\nVerifique as rotações sugeridas para ver se isso funciona!\n\nAqui estão alguns exemplos para você começar:\n\n-   Experimente uma curva de 60 graus por 6 vezes em torno de\n-   Experimente uma curva de 45 graus por 8 vezes em torno de\n-   Experimente uma curva de 30 graus por 12 vezes"
         }
       }
     }

@@ -1536,6 +1536,8 @@ uk:
         text: x координата {SPRITE}
       gamelab_yLocationOf:
         text: y координата {SPRITE}
+      KatiesBlocks_tumbling:
+        text: спотикатись
       Mikelab_addBehaviorSimple:
         text: спрайт {SPRITE} починає {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2010,8 +2012,6 @@ uk:
         text: повернути ліворуч
       RyanLab_turnRight:
         text: повернути праворуч
-      SpriteLab2Beta_spriteSay:
-        text: Спрайт {SPRITE} Сказати {TEXT} Для {SECONDS} Секунд
       Vector_createSpriteWith:
         text: |-
           створіть спрайт
@@ -2058,6 +2058,13 @@ uk:
             '0.75': most
             '0.5': half of
             '0.25': few
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(fluttering, []): пурхання
+            new Behavior(wobbling, []): хитання
+            new Behavior(wandering, []): бродіння
+            new Behavior(patrolling, []): патрулювання
       binary_drawBin:
         text: малювати двійково {BIN}
       binary_drawBinScreen:
@@ -2212,5 +2219,3 @@ uk:
         text: встановити заголовок {HEADING}
       storylab_setSubheading:
         text: встановити підзаголовок {SUBHEADING}
-      validation_validatedBackground:
-        text: встановити фон {IMG}

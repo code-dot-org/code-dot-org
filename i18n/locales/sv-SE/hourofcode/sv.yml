@@ -12,46 +12,47 @@ sv:
   campaign_date_full: 5-11 december
   campaign_date_year: '2022'
   campaign_date_full_year: 5-11 december 2022
-  nonus_campaign_date_start_short: Oct. 1
-  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_start_short: 1 oktober
+  nonus_campaign_date_start_long: 1 oktober
   nonus_campaign_date_short: 1 oktober - 18 december
   nonus_campaign_date_full: 1 oktober - 18 december
   nonus_campaign_date_year: '2022'
   nonus_campaign_date_full_year: 1 oktober 2022 - 18 december 2022
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
+  latam_campaign_date_start_short: 1 oktober
+  latam_campaign_date_start_long: 1 oktober
   latam_campaign_date_short: 1 oktober - 18 december
   latam_campaign_date_full: 1 oktober - 18 december
   latam_campaign_date_year: '2022'
   latam_campaign_date_full_year: 1 oktober 2022 - 18 december 2022
-  europe_campaign_date_start_short: Oct. 1
-  europe_campaign_date_start_long: October 1
+  europe_campaign_date_start_short: 1 oktober
+  europe_campaign_date_start_long: 1 oktober
   europe_campaign_date_short: 1 oktober - 18 december
   europe_campaign_date_full: 1 oktober - 18 december
   europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: 1 oktober 2022 - 18 december 2022
-  africa_campaign_date_start_short: Oct. 1
-  africa_campaign_date_start_long: October 1
+  africa_campaign_date_start_short: 1 oktober
+  africa_campaign_date_start_long: 1 oktober
   africa_campaign_date_short: 1 oktober - 18 december
   africa_campaign_date_full: 1 oktober - 18 december
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 oktober 2022 - 18 december 2022
-  hoc2022_header: Explore, Play, Create!
-  social_hoc2022_explore_play_create: Use computer science to explore, play, and create!
+  hoc2022_header: Utforska, Lek, Skapa!
+  social_hoc2022_explore_play_create: Använd datavetenskap till att utforska, leka
+    och skapa!
   codeorg_homepage_hoc2022_body: Explore the universe, score a goal, bust a move —
     there are so many ways to try computer science.
-  hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
-  hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
-    play, and create with us.
-  social_hoc2022_dance: Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
-    Gomez, music from Disney's "Encanto," and more!
+  hoc2022_codeorg_title: Fira Hour of Code med NASA och fler
+  hoc2022_codeorg_description: Den tionde Hour of Code är på en helt ny nivå! Kom
+    och utforska, leka och skapa med oss.
+  social_hoc2022_dance: Med Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
+    musik från Disneys "Encanto" med mera!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  Det du lär dig idag bygger en ljusare framtid.  "
   hoc2020_header_with_line_break_markdown: "  Det du lär dig idag      bygger en ljusare
     framtid.  "
-  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
-    we want. #CSforGood'
+  social_hoc2020_cs_important: 'CS är viktigare än någonsin. Låt oss skapa den framtid
+    som vi önskar. #CSforGood'
   social_hoc2020_hoc_is_about_csforgood: "  #HourOfCode handlar om #CSforGood. Det
     du lär dig idag bygger en ljusare framtid.  "
   social_hoc2020_global_movement: Hour of Code är en global rörelse som når tiotals
@@ -77,7 +78,7 @@ sv:
     är grundläggande för varje elev att kunna.
   social_hoc2019_dance: Med Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas
     X, Jonas Brothers, Nicki Minaj, och 34 fler!
-  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
+  social_hoc_anybody: 'Hour of Code: Vem som helst kan lära sig '
   oceans_landing_title: AI för haven
   oceans_landing_description: 'Upptäck maskininlärning genom att lära ut "AI" för
     att identifiera fiskar. #CSforGood'
@@ -134,6 +135,10 @@ sv:
     träningsdatan så separerar vår SVM "utrymmet" av alla potentiella fiskar i två
     delar, som stämmer överens med klasserna vi försöker träna in (t ex "blå" eller
     "inte blå"). '
+  heading_additional_resources: Additional resources
+  call_to_action_learn_more: Läs mer
+  call_to_action_watch_now: Watch now
+  call_to_action_try_activity: Try activity
   social_hoc2019_oceans_title: 'AI för haven #CSForGood'
   social_hoc2019_oceans_desc: Lär dig om AI, maskininlärning, träningsdata, och bias,
     samtidigt som du utforskar etiska dilemman och hur AI kan användas för att adressera
@@ -142,13 +147,52 @@ sv:
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
-  social_maker_title: I'm a Maker!
+  social_maker_title: Jag är en Skapare!
   social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
-  pl_superhero_title: Help students become superheroes!
-  pl_superhero_desc: Our Professional Learning program helps you teach computer science!
+  social_blockchain_title: How Blockchain Works
+  social_blockchain_desc: Videos and lessons that explore what blockchain is and why
+    it's important.
+  pl_superhero_title: Hjälp studenter bli superhjältar!
+  pl_superhero_desc: Join our highly supportive Professional Learning Program for
+    middle and high school educators.
+  blockchain_hero_heading: How Blockchain Works
+  blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
+    our new video series and accompanying lessons!
+  blockchain_intro_heading: See how blockchain works
+  blockchain_intro_desc: The video series, made in partnership with Coinbase, features
+    industry experts and aims to demystify this technology.
+  blockchain_intro_list_heading: 'This series will:'
+  blockchain_intro_list_item_01: Explain what blockchain is
+  blockchain_intro_list_item_02: Explore why it's important
+  blockchain_intro_list_item_03: Unpack its societal impacts — both good and bad
+  blockchain_video_title_01: Introduction to Blockchain
+  blockchain_video_title_02: Why Blockchain
+  blockchain_video_title_03: Under the Hood
+  blockchain_video_title_04: Beyond Currencies
+  blockchain_video_title_05: Marketplace and Price
+  blockchain_video_title_06: Trustworthy or a Scam?
+  blockchain_video_title_07: Societal Impact
+  blockchain_lessons_heading: Blockchain lessons for your class
+  blockchain_lessons_desc: The first five lessons can be taught as part of a "How
+    Blockchain Works" series or can stand alone. The last lesson condenses the whole
+    series to a single day.
+  blockchain_resources_desc: Interested in learning more about blockchain? Here are
+    some additional resources that can help extend your students' learning.
+  blockchain_resources_01_heading: Coinbase Learn
+  blockchain_resources_01_desc: Crypto questions answered, beginner guides, practical
+    tips, and market updates for first-timers, experienced investors, and everyone
+    in between.
+  blockchain_resources_01_button_label: Visit the Coinbase Learn website
+  blockchain_resources_02_heading: Whiteboard Crypto
+  blockchain_resources_02_desc: Watch videos from Whiteboard Crypto's YouTube channel
+    to learn even more about blockchain technology.
+  blockchain_resources_02_button_label: Visit the Whiteboard Crypto YouTube channel
+  blockchain_resources_03_heading: Hour of Code Activity
+  blockchain_resources_03_desc: Try a crypto memory game created by Coinbase.
+  blockchain_resources_03_button_label: Try the Crypto Memory Game activity
   hoc_live: Hour of Code Live
-  hoc_live_sign_up_title: Sign up for Hour of Code Live
-  hoc_live_learn_title: Learn with Hour of Code Live
+  hoc_live_sign_up_title: Registrera dig för Hour of Code Live
+  hoc_live_learn_title: Lär tillsammans med Hour of Code Live
   hoc_live_sign_up_message: Learn in real time alongside special guests! Students
     of all ages and abilities, including those without computers, are welcome. Join
     our mailing list to receive recordings of the episodes and resources to continue
@@ -168,11 +212,11 @@ sv:
     computer science and other subjects like math, language arts, science, and social
     studies. Through these modules, projects, and lessons, classrooms can explore
     their usual subjects in exciting new ways!
-  hoc_overview_csc_learn_more: Learn more about CS Connections
-  hoc_danceparty_alt_text: Animated characters dancing to music underneath the text
-    'Code your own dance party'
-  hoc_ai_alt_text: A floating, white, artificial intelligence character with an antennae,
-    a scanner on the bottom, and an LED face
+  hoc_overview_csc_learn_more: Lär dig mer om CS Connections
+  hoc_danceparty_alt_text: Animerade karaktärer dansar till musik under texten 'Koda
+    ditt eget dansparty'
+  hoc_ai_alt_text: En flytande, vit, artificiellt intelligent karaktär med en antenn,
+    en skanner längst ner och ett LED ansikte
   hoc_banner_alt_text: Hour of Code banner
   ai_video_title_what_is_ai: Vad är AI?
   ai_video_title_algorithm_bias: Bekämpa fördomar i algoritmer
@@ -188,7 +232,7 @@ sv:
   description: Beskrivning
   audience: Målgrupp
   ai_resource_header: Lär ut och lär dig om AI
-  ai_resource_minecraft: Minecraft AI for Good
+  ai_resource_minecraft: 'Minecraft AI för att göra gott '
   ai_resource_minecraft_desc: Få tillgång till kostnadsfria resurser inklusive en
     lektionsplan, videos, en läroplan för datavetenskap, och utbildningsövningar för
     lärare. (Kräver utbildningsversionen av Minecraft)
@@ -255,8 +299,8 @@ sv:
   codeorg_homepage_special2020_body2: 'Se våra rekommenderade resurser för inlärning. '
   codeorg_homepage_special2020_body: 'Är skolan stängd? Lär dig hemma. Ta en Kodrast,
     eller se resurser för studenter, föräldrar och lärare. '
-  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
-    classroom this semester? View our resources.
+  codeorg_homepage_remote2020_body: Undervisar du på distans den här terminen? Titta
+    på våra resurser.
   codeorg_homepage_special2020_link_text: Kom igång
   codeorg_homepage_code_break_body: 'Ta en Kodrast! Veckans dos av inspiration, gemenskap
     och datavetenskap! '
@@ -352,20 +396,20 @@ sv:
   company_greenupcountyschooldistrict: Greenup Countys skolor
   company_gwinnettcountypublicschools: Gwinett Countys kommunala skolor
   company_HamptonCitySchools: Hampton Citys skolor
-  company_HanoverCountyPublicSchools: Hanover County Public Schools
-  company_HenricoCountyPublicSchools: Henrico County Public Schools
-  company_highlineschools: Highline School District
-  company_houstonisd: Houston Independent School District
-  company_hcpss: Howard County Public Schools
+  company_HanoverCountyPublicSchools: Kommunala skolor i Hanover County
+  company_HenricoCountyPublicSchools: Kommunala skolor i Henrico County
+  company_highlineschools: Highline skoldistrikt
+  company_houstonisd: Houston Independent skoldistrikt
+  company_hcpss: Kommunala skolor i Howard County
   company_idla: Idaho Digital Learning Academy
-  company_janesvilleschooldistrict: Janesville School District
-  company_johnstoncountyschools: Johnston County Schools
-  company_lps: Lincoln Public School
-  company_littletonpublicschools: Littleton Public Schools
-  company_lausd: Los Angeles Unified School District
-  company_lcps: Louisa County Public Schools
-  company_lcsedu: Lynchburg City Schools
-  company_msvl: Marysville School District
+  company_janesvilleschooldistrict: Janesville skoldistrikt
+  company_johnstoncountyschools: Skolor i Johnston County
+  company_lps: Kommunala skolor i Lincoln
+  company_littletonpublicschools: Kommunala skolor i Littleton
+  company_lausd: Los Angeles Unified skoldistrikt
+  company_lcps: Kommunala skolor i Louisa County
+  company_lcsedu: Lynchburg City Shools
+  company_msvl: Marysville skoldistrikt
   company_dadeschools: Miami-Dade Public Schools
   company_miltonps: Milton Public Schools
   company_montgomeryschoolsmd: Montgomery County Public Schools
@@ -1707,7 +1751,7 @@ sv:
   tutorial_ozobotvalue_name: What's My Value?
   tutorial_icodebytes_name: 'A Byte of iCompute: Unplugged'
   tutorial_clfashion2_name: Fashionistas of Data Science - Class 2
-  tutorial_ai4all_name: AI & Drawing
+  tutorial_ai4all_name: 'AI4ALL: AI & Drawing'
   tutorial_cldata_name: Welcome to Data Superpower
   tutorial_spheroinputs_name: Inputs and Outputs Unplugged
   tutorial_edisoncount_name: Teach Edison to count to 9

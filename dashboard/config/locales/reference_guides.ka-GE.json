@@ -65,6 +65,12 @@
         "csd-2022/physical-input": {
           "display_name": "ფიზიკურად შეყვანილი ინფორმაცია"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "პროებლემების გადაჭრის პროცესი"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "პროებლემების გადაჭრის პროცესი"
+        },
         "csd-2022/sprites": {
           "display_name": "სპრაიტები"
         },

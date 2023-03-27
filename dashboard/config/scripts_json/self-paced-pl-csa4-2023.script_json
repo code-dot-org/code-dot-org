@@ -2,13 +2,15 @@
   "script": {
     "name": "self-paced-pl-csa4-2023",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "curriculum_umbrella": "CSA Self Paced PL",
+      "is_migrated": true,
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-17 00:45:28 UTC",
+    "serialized_at": "2023-03-17 14:12:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -221,6 +223,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-intro-to-classes-video-2023"
+        ],
         "progression": "Video: Introduction to Object-Oriented Programming"
       },
       "bonus": false,
@@ -243,6 +248,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-predict-level-2023"
+        ],
         "progression": "Predict and run "
       },
       "bonus": false,
@@ -440,6 +448,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-debug-instantiate-practice-2023"
+        ],
         "progression": "Instantiating objects and calling methods"
       },
       "bonus": false,
@@ -562,6 +573,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-using-docs-video"
+        ],
         "progression": "Introduction to UML diagrams"
       },
       "bonus": false,

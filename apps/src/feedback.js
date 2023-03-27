@@ -1301,6 +1301,7 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(
  * @param {boolean} [options.prompt=false] Whether to prompt for a string value
  * @param {string} [options.promptPrefill] If prompting, textbox prefill value
  * @param {string} options.cancelText Text for cancel button
+ * @param {string} options.isDangerCancel Should cancel button has a danger type
  * @param {string} options.confirmText Text for confirm button
  * @param {boolean} [options.hideIcon=false] Whether to hide the icon
  * @param {onConfirmCallback} [options.onConfirm] Function to be called after clicking confirm
@@ -1327,7 +1328,7 @@ FeedbackUtils.prototype.showSimpleDialog = function(options) {
       <DialogButtons
         confirmText={options.confirmText}
         cancelText={options.cancelText}
-        cancelButtonClass={options.cancelButtonClass}
+        isDangerCancel={!!options.isDangerCancel}
       />
     </div>,
     document.createElement('div')

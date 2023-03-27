@@ -2341,7 +2341,12 @@ he:
         hello-world-space-2022:
           title: 'שלום, עולם: שטח'
         hello-world-soccer-2022: {}
-        csd1-2023: {}
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-3:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
         csd2-2023: {}
         csd4-2023:
           lesson_groups:
@@ -2361,7 +2366,10 @@ he:
               display_name: 'פרק 1: תמונות ואנימציות'
             lessonGroup-3:
               display_name: 'פרק 2: יצירת משחקים'
-        csd6-2023: {}
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
         csd7-2023: {}
         physcomp-temp:
           lesson_groups:
@@ -2461,3 +2469,107 @@ he:
         self-paced-pl-csc-2023: {}
         csc-ecosystems-2023: {}
         csc-adaptations-2023: {}
+        drafting: {}
+        tess-testing-problem-solving-2023: {}
+        testing-focus-on-creativity1: {}
+        testing-focus-on-creativity2: {}
+        poetry-2023: {}
+        poemmaker-2023: {}
+        dlp-core-2023: {}
+        csc-particles-2023: {}
+        csc-bookcovers-2023: {}
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: דמויות
+            lessonGroup-9:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+            csf_functions:
+              display_name: פונקציות
+            csf_variables:
+              display_name: משתנים
+            csf_for_loops:
+              display_name: בשביל לולאות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        coursea-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+            lessonGroup-5:
+              display_name: פרויקט סיום קורס
+        courseb-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+            lessonGroup-6:
+              display_name: פרויקט סיום קורס
+        coursec-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        coursed-2023:
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+          title: קורס ד' (2021)
+        coursee-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: דמויות
+            csf_functions:
+              display_name: פונקציות
+            csf_nested_loops:
+              display_name: תנאים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-3:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+        web-development-2023: {}
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            lessonGroup-3:
+              display_name: 'פרק 2: יצירת משחקים'
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            lessonGroup-3:
+              display_name: 'פרק 2: תכנון אפליקציה'
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: ייצוג מידע'
+            lessonGroup-3:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+        aiml-2023: {}

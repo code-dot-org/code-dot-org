@@ -17,7 +17,6 @@ import javalab, {
   sourceFileOrderUpdated,
   sourceVisibilityUpdated,
   sourceValidationUpdated,
-  setBackpackApi,
   setIsReadOnlyWorkspace,
   setHasOpenCodeReview,
   setEditTabKey,
@@ -38,13 +37,14 @@ import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/Backpac
 import javalabMsg from '@cdo/javalab/locale';
 import {JavalabEditorDialog} from '@cdo/apps/javalab/JavalabEditorDialogManager';
 import {darkMode, lightMode} from '@cdo/apps/javalab/editorThemes';
+import {BackpackAPIContext} from '../../../src/javalab/BackpackAPIContext';
 
 describe('Java Lab Editor Test', () => {
   // Warnings allowed due to usage of deprecated componentWillReceiveProps
   // lifecycle method.
   allowConsoleWarnings();
 
-  let defaultProps, store, appOptions, hasBackpackStub, backpackGetFileListStub;
+  let defaultProps, store, appOptions, backpackApiStub;
 
   beforeEach(() => {
     stubRedux();
@@ -66,31 +66,26 @@ describe('Java Lab Editor Test', () => {
         isEditingStartSources: false
       })
     );
-    backpackGetFileListStub = sinon
-      .stub(BackpackClientApi.prototype, 'getFileList')
-      .callsArgWith(1, ['backpackFile.java']);
-    hasBackpackStub = sinon.stub().returns(true);
 
-    store.dispatch(
-      setBackpackApi({
-        hasBackpack: hasBackpackStub,
-        getFileList: backpackGetFileListStub
-      })
-    );
+    backpackApiStub = sinon.createStubInstance(BackpackClientApi);
+    backpackApiStub.hasBackpack.returns(true);
+    backpackApiStub.getFileList.callsArgWith(1, ['backpackFile.java']);
+
     store.dispatch(setBackpackEnabled(true));
   });
 
   afterEach(() => {
     restoreRedux();
     window.appOptions = appOptions;
-    backpackGetFileListStub.restore();
   });
 
   const createWrapper = overrideProps => {
     const combinedProps = {...defaultProps, ...overrideProps};
     return mount(
       <Provider store={store}>
-        <JavalabEditor {...combinedProps} />
+        <BackpackAPIContext.Provider value={backpackApiStub}>
+          <JavalabEditor {...combinedProps} />
+        </BackpackAPIContext.Provider>
       </Provider>
     );
   };

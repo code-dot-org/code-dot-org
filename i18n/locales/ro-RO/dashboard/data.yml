@@ -572,6 +572,7 @@ ro:
         csp_applab_parameters: Funcții cu Parametrii
         CSA-PL-intro-to-arrays: Matrice Uni-Dimensionale (1D)
         CS_Changing_Everything: Știința calculatoarelor schimbă totul
+        csd_sprite_properties: Proprietăți spiriduș
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc
