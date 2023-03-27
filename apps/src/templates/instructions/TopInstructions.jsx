@@ -42,7 +42,12 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
-const MIN_HEIGHT = RESIZER_HEIGHT + 60;
+// Extra space needed to prevent scroll instructions buttons to collide with borders
+// of Instructions section and slightly increase the vertical padding between scroll button and parent element border.
+// More info here: https://github.com/code-dot-org/code-dot-org/pull/50808
+const EXTRA_SPACE_FOR_SCROLL_BUTTONS = 75;
+
+const MIN_HEIGHT = RESIZER_HEIGHT + 60 + EXTRA_SPACE_FOR_SCROLL_BUTTONS;
 
 export const TabType = {
   INSTRUCTIONS: 'instructions',

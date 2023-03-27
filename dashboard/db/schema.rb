@@ -1503,7 +1503,7 @@ ActiveRecord::Schema.define(version: 2023_03_23_175726) do
     t.datetime "updated_at", null: false
     t.datetime "deleted_at"
     t.text "properties"
-    t.boolean "is_active"
+    t.boolean "is_active", null: false
   end
 
   create_table "regional_partners_school_districts", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
