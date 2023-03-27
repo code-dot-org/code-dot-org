@@ -51,7 +51,8 @@
     "parent_level_id": 20398,
     "name_suffix": "_mb2022",
     "reference_links": [
-      "/courses/csd-2022/guides/microbit-overview"
+      "/courses/csd-2022/guides/microbit-overview",
+      "/courses/csd-2022/guides/microbit-display"
     ],
     "mini_rubric": "false",
     "text_mode_at_start": "false",
@@ -68,7 +69,7 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:45:13.017+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - SB1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - SB1_2222\"},{\"changed_at\":\"2023-02-13 22:55:23 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"makerlab_enabled\",\"palette_category_at_start\",\"start_blocks\",\"start_html\",\"long_instructions\",\"encrypted_examples\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-27 20:40:50 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:45:13.017+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - SB1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - SB1_2222\"},{\"changed_at\":\"2023-02-13 22:55:23 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"makerlab_enabled\",\"palette_category_at_start\",\"start_blocks\",\"start_html\",\"long_instructions\",\"encrypted_examples\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-27 20:40:50 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-27 20:42:48 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
