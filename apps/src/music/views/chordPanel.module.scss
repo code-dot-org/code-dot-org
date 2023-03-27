@@ -3,12 +3,8 @@
 $scale-keybed: 0.5;
 
 .chordPanelContainer {
-  _display: flex;
-  _flex-direction: column;
   background-color: $neutral_dark90;
   align-items: center;
-  _border: 2px solid $neutral_dark10;
-  _border-radius: 4px;
   padding: 5px;
 
   .controlsRow {
@@ -16,13 +12,11 @@ $scale-keybed: 0.5;
     flex-direction: row;
     align-items: center;
     width: 100%;
-    _margin: 10px 0;
-    justify-content: space-around;
+    justify-content: space-between;
 
     .dropdown {
-      width: 100%;
+      width: 48%;
       font-size: 12px;
-      margin: 0 10px;
     }
 
     .previewButton {
@@ -53,20 +47,20 @@ $scale-keybed: 0.5;
 
   .gridContainer {
     display: flex;
-    justify-content: center;
-    _background-color: $neutral_dark90;
+    align-items: center;
+    flex-direction: column;
 
     .noteGrid {
       position: relative;
-      width: 248px;
-      margin: 10px 10px 10px 0;
-      height: 210;
-      border-radius: 0 5px 5px 0;
+      width: 315px;
+      margin: 0 0 10px 0;
+      height: 110px;
+      border-radius: 4px;
       background-color: $neutral_dark80;
 
       .gridNote {
         position: absolute;
-        width: 14px;
+        width: calc(315px / 16);
         height: calc(105px / 12);
         background-color: $light_cyan;
         border-radius: 3px;
@@ -76,9 +70,8 @@ $scale-keybed: 0.5;
 
   .keybed {
     display: flex;
-    flex-direction: column-reverse;
-    margin: 10px 0 10px 10px;
-    _scale: 0.75;
+    flex-direction: row;
+    margin: 10px 0 10px 0;
 
     .key {
       border-style: solid;
@@ -90,17 +83,17 @@ $scale-keybed: 0.5;
       cursor: pointer;
 
       &.whiteKey {
-        width: 150px * $scale-keybed;
-        height: 30px * $scale-keybed;
+        width: 30px * $scale-keybed;
+        height: 150px * $scale-keybed;
         background-color: white;
       }
 
       &.blackKey {
         z-index: 10;
-        width: 100px * $scale-keybed;
-        height: 20px * $scale-keybed;
+        width: 20px * $scale-keybed;
+        height: 100px * $scale-keybed;
         background-color: black;
-        margin: -10px * $scale-keybed 0;
+        margin: 0 -10px * $scale-keybed;
       }
 
       &.disabled {
