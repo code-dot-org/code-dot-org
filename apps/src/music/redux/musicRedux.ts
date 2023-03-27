@@ -6,16 +6,37 @@ const registerReducers = require('@cdo/apps/redux').registerReducers;
  * State, reducer, and actions for Music Lab.
  */
 
+enum InstructionsPosition {
+  TOP = 'TOP',
+  LEFT = 'LEFT',
+  RIGHT = 'RIGHT'
+}
+
+// Exporting enum as object for use in JS files
+export const InstructionsPositions = {
+  TOP: InstructionsPosition.TOP,
+  LEFT: InstructionsPosition.LEFT,
+  RIGHT: InstructionsPosition.RIGHT
+};
+
 interface MusicState {
   isPlaying: boolean;
   currentPlayheadPosition: number;
   selectedBlockId: string | undefined;
+  timelineAtTop: boolean;
+  showInstructions: boolean;
+  instructionsPosition: InstructionsPosition;
+  isBeatPadShowing: boolean;
 }
 
 const initialState: MusicState = {
   isPlaying: false,
   currentPlayheadPosition: 0,
-  selectedBlockId: undefined
+  selectedBlockId: undefined,
+  timelineAtTop: false,
+  showInstructions: false,
+  instructionsPosition: InstructionsPosition.LEFT,
+  isBeatPadShowing: false
 };
 
 const musicSlice = createSlice({
@@ -47,6 +68,37 @@ const musicSlice = createSlice({
     },
     clearSelectedBlockId: state => {
       state.selectedBlockId = undefined;
+    },
+    toggleTimelinePosition: state => {
+      state.timelineAtTop = !state.timelineAtTop;
+    },
+    setShowInstructions: (state, action: PayloadAction<boolean>) => {
+      state.showInstructions = action.payload;
+    },
+    toggleInstructions: state => {
+      state.showInstructions = !state.showInstructions;
+    },
+    setInstructionsPosition: (
+      state,
+      action: PayloadAction<InstructionsPosition>
+    ) => {
+      state.instructionsPosition = action.payload;
+    },
+    advanceInstructionsPosition: state => {
+      const positions = Object.values(InstructionsPosition);
+      state.instructionsPosition =
+        positions[
+          (positions.indexOf(state.instructionsPosition) + 1) % positions.length
+        ];
+    },
+    showBeatPad: state => {
+      state.isBeatPadShowing = true;
+    },
+    hideBeatPad: state => {
+      state.isBeatPadShowing = false;
+    },
+    toggleBeatPad: state => {
+      state.isBeatPadShowing = !state.isBeatPadShowing;
     }
   }
 });
@@ -61,5 +113,13 @@ export const {
   setIsPlaying,
   setCurrentPlayheadPosition,
   selectBlockId,
-  clearSelectedBlockId
+  clearSelectedBlockId,
+  toggleTimelinePosition,
+  setShowInstructions,
+  setInstructionsPosition,
+  toggleInstructions,
+  advanceInstructionsPosition,
+  showBeatPad,
+  hideBeatPad,
+  toggleBeatPad
 } = musicSlice.actions;

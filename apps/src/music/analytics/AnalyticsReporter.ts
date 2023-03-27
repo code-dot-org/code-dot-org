@@ -123,11 +123,22 @@ export default class AnalyticsReporter {
     );
   }
 
-  onButtonClicked(buttonName: string, properties: object) {
-    const logMessage = `Button clicked. Payload: ${JSON.stringify({
+  onButtonClicked(buttonName: string, properties?: object) {
+    this.trackUIEvent('Button clicked', {
       buttonName,
       ...properties
-    })}`;
+    });
+  }
+
+  onKeyPressed(keyName: string, properties?: object) {
+    this.trackUIEvent('Key pressed', {
+      keyName,
+      ...properties
+    });
+  }
+
+  private trackUIEvent(eventType: string, payload: object) {
+    const logMessage = `${eventType}. Payload: ${JSON.stringify(payload)}`;
 
     if (!this.sessionInProgress) {
       this.log(`No session in progress.  (${logMessage})`);
@@ -136,7 +147,7 @@ export default class AnalyticsReporter {
       this.log(logMessage);
     }
 
-    track('Button clicked', {buttonName, ...properties}).promise;
+    track(eventType, payload).promise;
   }
 
   onVideoClosed(id: string, duration: number) {
