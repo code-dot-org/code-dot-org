@@ -12,7 +12,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
-     ruby --version  # --> ruby 2.7.5
+     ruby --version  # --> ruby 3.0.5
      node --version  # --> v14.17.1
      yarn --version  # --> 1.22.5
      ```
@@ -70,7 +70,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     - `ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
 
 1. `bundle exec rake build`
-    - This may fail if your are on a Mac and your OSX XCode Command Line Tools were not installed properly. See [Bundle Install Tips](#bundle-install-tips) for more information.
+    - This may fail if you are on a Mac and your OSX XCode Command Line Tools were not installed properly. See [Bundle Install Tips](#bundle-install-tips) for more information.
     - This may fail for external contributors who don't have permissions to access Code.org AWS Secrets. Assign placeholder values to any configuration settings that are [ordinarily populated in Development environments from AWS Secrets](https://github.com/code-dot-org/code-dot-org/blob/staging/config/development.yml.erb) as indicated in this example: https://github.com/code-dot-org/code-dot-org/blob/5b3baed4a9c2e7226441ca4492a3bca23a4d7226/locals.yml.default#L136-L139
 
 1. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
