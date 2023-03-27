@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 import moduleStyles from './sections-refresh.module.scss';
 const CelebrationGif = require('@cdo/static/section_creation_celebration.gif');
 
-export default function CelebrationDialog() {
+export default function SectionCreationCelebrationDialog() {
   const [isOpen, setIsOpen] = useState(true);
   return (
     <BaseDialog
