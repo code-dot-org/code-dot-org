@@ -7,7 +7,6 @@ import TimelineElement from './TimelineElement';
  * Renders timeline events for the simple2 model.
  */
 const TimelineSimple2Events = ({
-  currentPlayheadPosition,
   barWidth,
   eventVerticalSpace,
   getEventHeight
@@ -89,7 +88,7 @@ const TimelineSimple2Events = ({
             key={index}
             style={{
               position: 'absolute',
-              backgroundColor: 'rgba(115 115 115 / 0.7)',
+              backgroundColor: 'rgba(255 255 255 / 0.12)',
               borderRadius: 8,
               left: (uniqueFunction.positionLeft - 1) * barWidth,
               width:
@@ -124,7 +123,6 @@ const TimelineSimple2Events = ({
             left={barWidth * (eventData.when - 1)}
             when={eventData.when}
             skipContext={eventData.skipContext}
-            currentPlayheadPosition={currentPlayheadPosition}
           />
         ))}
       </div>
@@ -133,7 +131,6 @@ const TimelineSimple2Events = ({
 };
 
 TimelineSimple2Events.propTypes = {
-  currentPlayheadPosition: PropTypes.number.isRequired,
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
   getEventHeight: PropTypes.func.isRequired

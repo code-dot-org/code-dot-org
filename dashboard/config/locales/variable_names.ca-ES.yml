@@ -11,6 +11,7 @@ ca:
       age: edat
       answer: resposta
       binary: binari
+      birds: ocells
       blue1: blau1
       blue2: blau2
       cats: tots els gats
@@ -29,15 +30,19 @@ ca:
       marginY: margeY
       name: nom
       nectar: nèctar
+      object: objecte
+      planet: planeta
       points: puntes
       random: atzar
       repeat: repeteix
       right: dret
       score: puntuació
+      shout: cridar
       sides: costats
       size: mida
       speed: velocitat
       type: tipus
       variable: variable
       width: amplada
+      wizard: mag
       x: x

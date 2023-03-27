@@ -883,3 +883,59 @@ km:
               display_name: បញ្ជី
             lessonGroup-3:
               display_name: រង្វិល​ជុំ
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
+            ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
+          description_audience: 'អាយុ: ៤-៨'
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csf_functions:
+              display_name: អនុ​គមន៍
+            csf_variables:
+              display_name: អ​ថេរ
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
+          description_audience: 'អាយុ: ៩- ១៨'
+        coursea-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+          description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
+        courseb-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+        coursec-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+        coursed-2023:
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+        coursee-2023:
+          lesson_groups:
+            csf_functions:
+              display_name: អនុ​គមន៍
+            csf_nested_loops:
+              display_name: លក្ខខណ្ឌ

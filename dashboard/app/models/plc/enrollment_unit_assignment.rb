@@ -112,9 +112,7 @@ class Plc::EnrollmentUnitAssignment < ApplicationRecord
     summary
   end
 
-  private
-
-  def enroll_in_module(learning_module)
+  private def enroll_in_module(learning_module)
     return unless learning_module.plc_course_unit == plc_course_unit
 
     Plc::EnrollmentModuleAssignment.find_or_create_by(

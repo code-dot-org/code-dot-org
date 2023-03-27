@@ -310,6 +310,7 @@ ca:
         C3_dice_race: Cursa de daus
         C3_internet: Internet
         C3_crowdsourcing: Col·laboració oberta
+        C3_functional_suncatchers: Funcions atrapa-somnis
         C3_songwriting_with_parameters: Composició de cançons Amb Paràmetres
         C4_intro: Introducció
         C4_loops_zombie: Bucles
@@ -353,11 +354,11 @@ ca:
         csp_applab_functions_parameters: Funcions amb Paràmetres
         csp_applab_loops: Bucles
         csp_cs_is_changing_everything: La informàtica ho està canviant tot
-        starwars_intro: 'Star Wars: Construint una Galaxia amb Codi - Introducció'
+        starwars_intro: 'La guerra de les galàxies: Crea una galàxia amb codi - Introducció'
         starwars_typing: 'Star Wars: Creant una Galaxia amb Codi - JavaScript'
         starwars_events: 'Star Wars: Creant una galaxia amb codi - Esdeveniments'
         starwars_congrats: 'Star Wars: Creant una Galaxia amb codi - Enhorabona'
-        starwars_blocks_intro: 'Star Wars: Construint una Galaxia amb Codi - Introducció'
+        starwars_blocks_intro: 'La guerra de les galàxies: Crea una galàxia amb codi - Introducció'
         starwars_blocks_events: 'Star Wars: Creant una galaxia amb codi - Esdeveniments'
         starwars_blocks_congrats: 'Star Wars: Creant una Galaxia amb codi - Enhorabona'
         mc_intro: Minecraft - Introducció
@@ -377,10 +378,12 @@ ca:
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites en acció
         mc_2018_intro: 'Introducció a Minecraft: Viatge aquàtic'
         hoc_dance_properties: Festa de ball - Propietats
+        c_and_c_great_to_create: No hi ha res com crear i utilitzar de manera justa
         c_and_c_digital_sharing: Compartir continguts digitals
         csd_pair_programming: Programació per parelles
         csd_applab_parameters: Funcions amb Paràmetres
         CSF_Going_Places_Safely: El meu barri d'internet
+        CSF_SpriteLab_Intro_v2: Introducció al Laboratori d'Sprites
         CSF_Spritelab_MakeSprite_v2: Com crear un sprite
         CSF_SpriteLab_SpritesInAction_v2: Sprites en acció
         csd_debugging: Depuració
@@ -391,8 +394,12 @@ ca:
         csf21pilot_prompts: 'Laboratori d''Sprites: Text i preguntes'
         playlab_2021: Introducció a Play Lab
         playlab_2021_reader: Introducció a Play Lab
+        poemart_intro: L'art del poema - Introducció
+        outbreak_intro: 'Simulador de brots: Introducció'
+        PL_CS_Journeys_Overview: Viatges informàtics
         csp_applab_parameters: Funcions amb Paràmetres
         CS_Changing_Everything: La informàtica ho està canviant tot
+        csd_sprite_properties: Propietats de l'sprite
     callout:
       text:
         drag_blocks: Arrossegueu un bloc "mou" i enganxeu-lo sota l'altre bloc

@@ -93,12 +93,12 @@ class ApplicationController < ActionController::Base
 
   def prevent_caching
     # Rails has some logic to normalize the cache-control header that varies
-    # from version to version. Ideally, we would include 'no-cache' here but
-    # that causes Rails (starting in 5.2, still true as of 6.0) to remove
-    # 'must-revalidate' which causes issues on older mobile Safari browsers.
+    # from version to version. Ideally, we would include 'no-cache, max-age=0,
+    # must-revalidate' here, but when `no-store` is present it will clear out
+    # all the others.
     # See Rails logic at
-    # https://github.com/rails/rails/blob/v6.0.4.4/actionpack/lib/action_dispatch/http/cache.rb#L184
-    response.headers["Cache-Control"] = "no-store, max-age=0, must-revalidate"
+    # https://github.com/rails/rails/blob/v6.1.4.7/actionpack/lib/action_dispatch/http/cache.rb#L185
+    response.headers["Cache-Control"] = "no-store"
     response.headers["Pragma"] = "no-cache"
     response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
   end
@@ -321,9 +321,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  private
-
-  def pairing_still_enabled
+  private def pairing_still_enabled
     session[:pairing_section_id] && Section.find(session[:pairing_section_id]).pairing_allowed
   end
 end

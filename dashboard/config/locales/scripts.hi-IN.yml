@@ -5007,42 +5007,65 @@ hi:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: अध्याय 1
+              display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
             lessonGroup-3:
-              display_name: अध्याय 2
-          title: सवाल हल करना
+              display_name: 'अध्याय 2: कंप्यूटर और प्रश्न हल करना'
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: उपयोगकर्ता केंद्रित डिज़ाइन'
             lessonGroup-3:
               display_name: 'अध्याय 2: ऐप का प्रारूप बनाना'
-          title: डिज़ाइन प्रक्रिया
+          student_description: इकाई 4 कंप्यूटिंग के व्यापक सामाजिक प्रभावों का परिचय
+            देती है। डिज़ाइन चुनौतियों की श्रृंखला के माध्यम से, आप सीखेंगे कि किसी
+            समस्या के लिए समाधान विकसित करते समय अन्य लोगों की जरूरतों को बेहतर ढंग
+            से कैसे समझा जाए। इकाई के दूसरे भाग में पुनरावृत्ति टीम प्रोजेक्ट शामिल
+            है, जिसके दौरान टीमों के पास उस जरूरत को पहचानने, जिसकी वे परवाह करते
+            हैं, पेपर और ऐप लैब में, दोनों के लिए प्रतिमान समाधानों और फीडबैक प्राप्त
+            करने व आगे पुनरावृत्ति संचालित करने के लिए वास्तविक उपयोगकर्ताओं के साथ
+            परीक्षण समाधान का अवसर होता है।
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: जानकारी पेश करना'
             lessonGroup-3:
               display_name: 'अध्याय 2: डेटा समस्याओं को सुलझाना'
+          description_short: जानें कि डेटा संबंधी समस्याएं हल करने के लिए लोग कंप्यूटर
+            का कैसे उपयोग करते हैं।
+          student_description: इकाई 5 सवाल हल करने में डेटा के महत्व के बारे में है
+            और उजागर करती है कि कंप्यूटर इस प्रक्रिया में कैसे मदद कर सकते हैं। पहला
+            अध्याय कंप्यूटर में जानकारी और उनका उपयोग करके उत्पन्न हुई चुनौतियों और
+            दुविधाओं को पेश करने के लिए विभिन्न प्रणालियों की पड़ताल करता है। दूसरे
+            अध्याय में, आप सीखेंगे कि किस प्रकार डेटा संकलनों का उपयोग सवाल हल करने
+            के लिए किया जाता है और कंप्यूटर कैसे इस प्रक्रिया के स्टेप्स को ऑटोमेट
+            करने में मदद करते हैं। अध्याय यह विचार करके निष्कर्ष प्रदान करता है कि
+            डेटा समस्या हल करने की प्रक्रिया, आपके चयन के क्षेत्र पर कैसे लागू की
+            जा सकती है।
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: चित्र और एनिमेशंस'
             lessonGroup-3:
               display_name: 'अध्याय 2: गेम्स बनाना'
+          student_description: " इकाई 3 में, आप अपने कूटलेखन अनुभव पर निर्भर होंगे,
+            जब आप गेम लैब में ऐनिमेशन्स, संवादात्मक कलाकृतियों और गेम्स को प्रोग्राम
+            करेंगे। इकाई उन प्रोग्रामिंग अवधारणाओं और डिज़ाइन प्रक्रिया, जिसे कंप्यूटर
+            वैज्ञानिक रोज़ाना उपयोग करते हैं, का उपयोग करते हुए साधारण आकृतियों से
+            शुरू होती है और फिर अधिक सरल स्प्राइट-आधारित गेम्स की ओर बढ़ती है। अंतिम
+            प्रोजेक्ट में, आप निजी बनाया, संवादात्मक प्रोग्राम विकसित करेंगे।"
         csd6-2023:
           lesson_groups:
-            lessonGroup-2:
-              display_name: अध्याय 1
             lessonGroup-3:
-              display_name: अध्याय 2
-          title: भौतिक कंप्यूटिंग
+              display_name: 'अध्याय 2: भौतिक प्रारूप बनाना'
+          description_short: भौतिक डिवाइसों के साथ प्रोग्राम करना सीखें
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: अध्याय 1
             lessonGroup-3:
               display_name: अध्याय 2
+            lessonGroup-4:
+              display_name: ऐप लैब का परिचय
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -5142,3 +5165,201 @@ hi:
               display_name: ऐप लैब का परिचय
             lessonGroup-3:
               display_name: इनपुट्स और आउटपुट्स
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: अध्याय 1
+            lessonGroup-3:
+              display_name: अध्याय 2
+          title: सवाल हल करना
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: अध्याय 1
+          title: सवाल हल करना
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_loops:
+              display_name: फंदे
+            csf_events:
+              display_name: घटनाएँ
+          description_short: 'प्री-रीडर के लिए कंप्यूटर विज्ञान का एक परिचय: हमारे
+            किंडरगार्टन और पहली कक्षा के पाठ्यक्रमों में सर्वश्रेष्ठ को एक साथ जोड़ती
+            है।'
+          description_audience: 'आयु: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_sprites:
+              display_name: स्प्राइट्स
+            lessonGroup-9:
+              display_name: घटनाएँ
+            csf_loops:
+              display_name: फंदे
+            csf_conditionals:
+              display_name: कंडीशनल्स
+            csf_functions:
+              display_name: कार्य
+            csf_variables:
+              display_name: चर
+            csf_for_loops:
+              display_name: फॉर लूप्स
+            end_of_course_project:
+              display_name: कोर्स समाप्ति प्रोजेक्ट
+          description_short: 'कंप्यूटर विज्ञान का एक परिचय: पुराने छात्रों के लिए
+            हमारे प्राथमिक स्कूल पाठ्यक्रम का सबसे अच्छा संयोजन करता है।'
+          description_audience: 'आयु: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_loops:
+              display_name: फंदे
+            csf_events:
+              display_name: घटनाएँ
+            lessonGroup-5:
+              display_name: कोर्स समाप्ति प्रोजेक्ट
+          student_description: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे में मूल तत्व
+            सीखें। कोर्स के अंत में, अपनी खुद की गेम या कहानी बनाएं, जिसे आप साझा
+            कर सकते हैं।
+          description_short: प्री-रीडर्स के लिए कंप्यूटर विज्ञान का परिचय।
+          description_audience: 'आयु: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_loops:
+              display_name: फंदे
+            csf_impacts:
+              display_name: कंप्यूटिंग के प्रभाव
+            csf_events:
+              display_name: घटनाएँ
+            lessonGroup-6:
+              display_name: कोर्स समाप्ति प्रोजेक्ट
+          student_description: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे में मूल तत्व
+            सीखें। कोर्स के अंत में, अपनी खुद की गेम या कहानी बनाएं, जिसे आप साझा
+            कर सकते हैं।
+          description_short: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय। कोर्स A
+            से मिलता-जुलता, लेकिन इसमें अवधारणा को गहराई से शामिल किया गया है।
+          description_audience: 'उम्र: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_loops:
+              display_name: फंदे
+            csf_events:
+              display_name: घटनाएँ
+            csf_data:
+              display_name: डेटा
+            end_of_course_project:
+              display_name: कोर्स समाप्ति प्रोजेक्ट
+          student_description: विभिन्न प्रकार की लूप्स, इवेंट्स, फंक्शन्स और सापेक्षों
+            का उपयोग करना सीखें। अपने आद्याक्षरों को युग्मक में रूपांतरित करें, सवाल
+            हल करने की विभिन्न तकनीकों का निरीक्षण करें और जानें कि साइबर बदमाशी का
+            जवाब कैसे देना है। कोर्स के अंत में, अपनी खुद की गेम या कहानी तैयार करें,
+            जिसे आप साझा कर सकें।
+          description_short: कंप्यूटर साइंस के मूल सिद्धांत सीखें और अपनी खुद की कला,
+            कहानियां या गेम्स बनाएं।
+          description_audience: 'उम्र: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: डिजीटल नागरिकता
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_events:
+              display_name: घटनाएँ
+            csf_loops:
+              display_name: फंदे
+            csf_conditionals:
+              display_name: कंडीशनल्स
+            end_of_course_project:
+              display_name: कोर्स समाप्ति प्रोजेक्ट
+          title: कोर्स D (2021)
+          description_short: सापेक्ष स्टेटमेंट्स के बारे में सीखें और अपनी खुद की
+            कलाकृति, गेम और यहां तक कि डांस पार्टी बनाएं।
+          description_audience: 'उम्र: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_sprites:
+              display_name: स्प्राइट्स
+            ramp_up:
+              display_name: नेस्टड लूप्स
+            csf_functions:
+              display_name: कार्य
+            csf_nested_loops:
+              display_name: कंडीशनल्स
+            lessonGroup-7:
+              display_name: कंप्यूटिंग के प्रभाव
+            end_of_course_project:
+              display_name: कोर्स समाप्ति प्रोजेक्ट
+          description_audience: 'उम्र: 8-12'
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-3:
+              display_name: 'अध्याय 2: कंप्यूटर और प्रश्न हल करना'
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'अध्याय 1: चित्र और एनिमेशंस'
+            lessonGroup-3:
+              display_name: 'अध्याय 2: गेम्स बनाना'
+          student_description: " इकाई 3 में, आप अपने कूटलेखन अनुभव पर निर्भर होंगे,
+            जब आप गेम लैब में ऐनिमेशन्स, संवादात्मक कलाकृतियों और गेम्स को प्रोग्राम
+            करेंगे। इकाई उन प्रोग्रामिंग अवधारणाओं और डिज़ाइन प्रक्रिया, जिसे कंप्यूटर
+            वैज्ञानिक रोज़ाना उपयोग करते हैं, का उपयोग करते हुए साधारण आकृतियों से
+            शुरू होती है और फिर अधिक सरल स्प्राइट-आधारित गेम्स की ओर बढ़ती है। अंतिम
+            प्रोजेक्ट में, आप निजी बनाया, संवादात्मक प्रोग्राम विकसित करेंगे।"
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'अध्याय 1: उपयोगकर्ता केंद्रित डिज़ाइन'
+            lessonGroup-3:
+              display_name: 'अध्याय 2: ऐप का प्रारूप बनाना'
+          student_description: इकाई 4 कंप्यूटिंग के व्यापक सामाजिक प्रभावों का परिचय
+            देती है। डिज़ाइन चुनौतियों की श्रृंखला के माध्यम से, आप सीखेंगे कि किसी
+            समस्या के लिए समाधान विकसित करते समय अन्य लोगों की जरूरतों को बेहतर ढंग
+            से कैसे समझा जाए। इकाई के दूसरे भाग में पुनरावृत्ति टीम प्रोजेक्ट शामिल
+            है, जिसके दौरान टीमों के पास उस जरूरत को पहचानने, जिसकी वे परवाह करते
+            हैं, पेपर और ऐप लैब में, दोनों के लिए प्रतिमान समाधानों और फीडबैक प्राप्त
+            करने व आगे पुनरावृत्ति संचालित करने के लिए वास्तविक उपयोगकर्ताओं के साथ
+            परीक्षण समाधान का अवसर होता है।
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'अध्याय 1: जानकारी पेश करना'
+            lessonGroup-3:
+              display_name: 'अध्याय 2: डेटा समस्याओं को सुलझाना'
+          description_short: जानें कि डेटा संबंधी समस्याएं हल करने के लिए लोग कंप्यूटर
+            का कैसे उपयोग करते हैं।
+          student_description: इकाई 5 सवाल हल करने में डेटा के महत्व के बारे में है
+            और उजागर करती है कि कंप्यूटर इस प्रक्रिया में कैसे मदद कर सकते हैं। पहला
+            अध्याय कंप्यूटर में जानकारी और उनका उपयोग करके उत्पन्न हुई चुनौतियों और
+            दुविधाओं को पेश करने के लिए विभिन्न प्रणालियों की पड़ताल करता है। दूसरे
+            अध्याय में, आप सीखेंगे कि किस प्रकार डेटा संकलनों का उपयोग सवाल हल करने
+            के लिए किया जाता है और कंप्यूटर कैसे इस प्रक्रिया के स्टेप्स को ऑटोमेट
+            करने में मदद करते हैं। अध्याय यह विचार करके निष्कर्ष प्रदान करता है कि
+            डेटा समस्या हल करने की प्रक्रिया, आपके चयन के क्षेत्र पर कैसे लागू की
+            जा सकती है।
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ऐप लैब का परिचय
+            lessonGroup-3:
+              display_name: अध्याय 1
+            lessonGroup-4:
+              display_name: अध्याय 2

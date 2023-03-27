@@ -801,11 +801,16 @@
           "definition": "Poner los comandos en el orden correcto para que los computadores puedan leerlos."
         },
         "persistence/coursec/2022": {
-          "word": "Perseverancia"
+          "word": "Perseverancia",
+          "definition": "No te rindas."
         },
         "programming/coursec/2022": {
           "word": "Programación",
           "definition": "El arte de crear un programa"
+        },
+        "angle/coursec/2022": {
+          "word": "Ángulo",
+          "definition": "Punto de encuentro de dos lados de una figura, medido en grados."
         },
         "loop/coursec/2022": {
           "word": "Bucle",
@@ -820,7 +825,12 @@
           "definition": "una acción que hace que algo suceda."
         },
         "data/coursec/2022": {
-          "word": "Datos"
+          "word": "Datos",
+          "definition": "Una recopilación de información"
+        },
+        "graph/coursec/2022": {
+          "word": "Gráfico",
+          "definition": "Una imagen o un diagrama que representa datos o valores de forma organizada."
         },
         "binary/coursec/2022": {
           "word": "Binario",

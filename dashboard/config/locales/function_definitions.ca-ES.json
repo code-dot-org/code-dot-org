@@ -9,7 +9,7 @@
         },
         "2-3 Artist 3.4": {
           "draw a circle": {
-            "name": "dibuixa un cercle"
+            "name": "dibuixar un cercle"
           }
         },
         "2-3 Artist 7": {
@@ -29,22 +29,22 @@
             "name": "dibuixar quadrat"
           },
           "draw a circle": {
-            "name": "dibuixa un cercle"
+            "name": "dibuixar un cercle"
           }
         },
         "2-3 Artist Functions 11": {
           "draw a hexagon": {
-            "name": "dibuixa un hexàgon"
+            "name": "dibuixar hexàgon"
           }
         },
         "2-3 Artist Functions 11.5": {
           "draw a hexagon": {
-            "name": "dibuixa un hexàgon"
+            "name": "dibuixar hexàgon"
           }
         },
         "2-3 Artist Functions 12": {
           "draw a flower": {
-            "name": "dibuixa una flor"
+            "name": "dibuixar una flor"
           }
         },
         "2-3 Artist Functions 2": {
@@ -70,22 +70,22 @@
         },
         "2-3 Artist Functions 9": {
           "draw a snowflake": {
-            "name": "dibuixa un floc de neu"
+            "name": "dibuixar un floc de neu"
           }
         },
         "4-5 Artist 3": {
           "draw a flower": {
-            "name": "dibuixa una flor"
+            "name": "dibuixar una flor"
           }
         },
         "4-5 Artist 6": {
           "draw a tree": {
-            "name": "dibuixa un arbre"
+            "name": "dibuixar un arbre"
           }
         },
         "4-5 Artist 7": {
           "draw a circle": {
-            "name": "dibuixa un cercle"
+            "name": "dibuixar un cercle"
           },
           "draw triangle": {
             "name": "dibuixar triangle"
@@ -178,7 +178,7 @@
         },
         "Course 4 SCF 1": {
           "draw a hexagon": {
-            "name": "dibuixa un hexàgon"
+            "name": "dibuixar hexàgon"
           }
         },
         "Course 4 SCF 1a": {
@@ -218,12 +218,30 @@
         },
         "Geometric Sun": {
           "draw a house": {
-            "name": "dibuixa una casa"
+            "name": "dibuixar una casa"
+          },
+          "sun": {
+            "name": "sol"
+          },
+          "diamond": {
+            "name": "diamant"
+          },
+          "square": {
+            "name": "quadrat"
           }
         },
         "Geometric Sun_2018": {
           "draw a house": {
-            "name": "dibuixa una casa"
+            "name": "dibuixar una casa"
+          },
+          "sun": {
+            "name": "sol"
+          },
+          "diamond": {
+            "name": "diamant"
+          },
+          "square": {
+            "name": "quadrat"
           }
         },
         "InspirationalArtwork": {
@@ -296,7 +314,7 @@
             "name": "fer alguna cosa"
           },
           "draw a hexagon": {
-            "name": "dibuixa un hexàgon",
+            "name": "dibuixar hexàgon",
             "parameters": {
               "length": "longitud"
             }
@@ -351,7 +369,7 @@
         },
         "NEW Course 4 Artist Params 15": {
           "draw a star": {
-            "name": "dibuixa una estrella",
+            "name": "dibuixar una estrella",
             "parameters": {
               "points": "puntes",
               "length": "longitud"
@@ -359,7 +377,7 @@
             "description": "dibuixa una estrella amb les puntes i la longitud dels costats especificats"
           },
           "draw a circle": {
-            "name": "dibuixa un cercle",
+            "name": "dibuixar un cercle",
             "description": "dibuixa el cercle a partir del radi especificat",
             "parameters": {
               "radius": "radi"
@@ -387,7 +405,7 @@
             "name": "dibuixa una forma"
           },
           "draw a house": {
-            "name": "dibuixa una casa",
+            "name": "dibuixar una casa",
             "parameters": {
               "length": "longitud"
             }
@@ -436,7 +454,7 @@
             }
           },
           "draw a hexagon": {
-            "name": "dibuixa un hexàgon",
+            "name": "dibuixar hexàgon",
             "parameters": {
               "length": "longitud"
             }
@@ -504,7 +522,7 @@
         },
         "New Artist Project": {
           "draw a star": {
-            "name": "dibuixa una estrella",
+            "name": "dibuixar una estrella",
             "parameters": {
               "points": "puntes",
               "length": "longitud"
@@ -512,7 +530,7 @@
             "description": "dibuixa una estrella amb les puntes i la longitud dels costats especificats"
           },
           "draw a circle": {
-            "name": "dibuixa un cercle",
+            "name": "dibuixar un cercle",
             "description": "dibuixa el cercle a partir del radi especificat",
             "parameters": {
               "radius": "radi"
@@ -540,7 +558,7 @@
             "name": "dibuixa una forma"
           },
           "draw a house": {
-            "name": "dibuixa una casa",
+            "name": "dibuixar una casa",
             "parameters": {
               "length": "longitud"
             }
@@ -569,7 +587,7 @@
         },
         "Standalone_Artist_7": {
           "draw a flower": {
-            "name": "dibuixa una flor"
+            "name": "dibuixar una flor"
           }
         },
         "course3_artist_functions_challenge1": {
@@ -694,12 +712,12 @@
             "name": "fer alguna cosa"
           },
           "draw a hexagon": {
-            "name": "dibuixa un hexàgon"
+            "name": "dibuixar hexàgon"
           }
         },
         "courseE_artist_concept1_2018": {
           "draw a hexagon": {
-            "name": "dibuixa un hexàgon"
+            "name": "dibuixar hexàgon"
           }
         },
         "courseE_artist_concept4": {
@@ -814,52 +832,52 @@
         },
         "courseE_artist_functions3_2018": {
           "draw a star": {
-            "name": "dibuixa una estrella"
+            "name": "dibuixar una estrella"
           }
         },
         "courseE_artist_functions3_2019": {
           "draw a star": {
-            "name": "dibuixa una estrella"
+            "name": "dibuixar una estrella"
           }
         },
         "courseE_artist_functions3_2020": {
           "draw a star": {
-            "name": "dibuixa una estrella"
+            "name": "dibuixar una estrella"
           }
         },
         "courseE_artist_functions4": {
           "draw a star": {
-            "name": "dibuixa una estrella"
+            "name": "dibuixar una estrella"
           }
         },
         "courseE_artist_functions4_copy": {
           "draw a star": {
-            "name": "dibuixa una estrella"
+            "name": "dibuixar una estrella"
           }
         },
         "courseE_artist_functions5": {
           "draw a star": {
-            "name": "dibuixa una estrella"
+            "name": "dibuixar una estrella"
           }
         },
         "courseE_artist_functions5_2018": {
           "draw a star": {
-            "name": "dibuixa una estrella"
+            "name": "dibuixar una estrella"
           }
         },
         "courseE_artist_functions5_2019": {
           "draw a star": {
-            "name": "dibuixa una estrella"
+            "name": "dibuixar una estrella"
           }
         },
         "courseE_artist_functions5_2020": {
           "draw a star": {
-            "name": "dibuixa una estrella"
+            "name": "dibuixar una estrella"
           }
         },
         "courseE_artist_functions5_copy": {
           "draw a star": {
-            "name": "dibuixa una estrella"
+            "name": "dibuixar una estrella"
           }
         },
         "courseE_artist_functions7": {
@@ -1407,7 +1425,7 @@
         },
         "courseF_artist_fwp9": {
           "draw a star": {
-            "name": "dibuixa una estrella",
+            "name": "dibuixar una estrella",
             "parameters": {
               "points": "puntes",
               "length": "longitud"
@@ -1415,7 +1433,7 @@
             "description": "dibuixa una estrella amb les puntes i la longitud dels costats especificats"
           },
           "draw a circle": {
-            "name": "dibuixa un cercle",
+            "name": "dibuixar un cercle",
             "description": "dibuixa el cercle a partir del radi especificat",
             "parameters": {
               "radius": "radi"
@@ -1443,7 +1461,7 @@
             "name": "dibuixa una forma"
           },
           "draw a house": {
-            "name": "dibuixa una casa",
+            "name": "dibuixar una casa",
             "parameters": {
               "length": "longitud"
             }
@@ -1580,7 +1598,7 @@
         },
         "CourseD_EOC_artist": {
           "draw a star": {
-            "name": "dibuixa una estrella",
+            "name": "dibuixar una estrella",
             "parameters": {
               "points": "puntes",
               "length": "longitud"
@@ -1588,7 +1606,7 @@
             "description": "dibuixa una estrella amb les puntes i la longitud dels costats especificats"
           },
           "draw a circle": {
-            "name": "dibuixa un cercle",
+            "name": "dibuixar un cercle",
             "description": "dibuixa el cercle a partir del radi especificat",
             "parameters": {
               "radius": "radi"
@@ -1616,7 +1634,7 @@
             "name": "dibuixa una forma"
           },
           "draw a house": {
-            "name": "dibuixa una casa",
+            "name": "dibuixar una casa",
             "parameters": {
               "length": "longitud"
             }
@@ -1630,7 +1648,7 @@
         },
         "Course F: Artist Project_Flowers_examples_2021": {
           "draw a star": {
-            "name": "dibuixa una estrella",
+            "name": "dibuixar una estrella",
             "parameters": {
               "points": "puntes",
               "length": "longitud"
@@ -1638,7 +1656,7 @@
             "description": "dibuixa una estrella amb les puntes i la longitud dels costats especificats"
           },
           "draw a circle": {
-            "name": "dibuixa un cercle",
+            "name": "dibuixar un cercle",
             "description": "dibuixa el cercle a partir del radi especificat",
             "parameters": {
               "radius": "radi"
@@ -1666,7 +1684,7 @@
             "name": "dibuixa una forma"
           },
           "draw a house": {
-            "name": "dibuixa una casa",
+            "name": "dibuixar una casa",
             "parameters": {
               "length": "longitud"
             }
@@ -1704,12 +1722,12 @@
         },
         "courseE_artist_functions4_dani": {
           "draw a star": {
-            "name": "dibuixa una estrella"
+            "name": "dibuixar una estrella"
           }
         },
         "courseE_artist_functions5_dani": {
           "draw a star": {
-            "name": "dibuixa una estrella"
+            "name": "dibuixar una estrella"
           }
         },
         "courseE_artist_functions_predict1_dani": {
@@ -1727,7 +1745,7 @@
         },
         "Course E: Frozen Project_examples_2021": {
           "draw a star": {
-            "name": "dibuixa una estrella",
+            "name": "dibuixar una estrella",
             "parameters": {
               "points": "puntes",
               "length": "longitud"
@@ -1735,7 +1753,7 @@
             "description": "dibuixa una estrella amb les puntes i la longitud dels costats especificats"
           },
           "draw a circle": {
-            "name": "dibuixa un cercle",
+            "name": "dibuixar un cercle",
             "description": "dibuixa el cercle a partir del radi especificat",
             "parameters": {
               "radius": "radi"
@@ -1763,7 +1781,7 @@
             "name": "dibuixa una forma"
           },
           "draw a house": {
-            "name": "dibuixa una casa",
+            "name": "dibuixar una casa",
             "parameters": {
               "length": "longitud"
             }
@@ -1790,7 +1808,7 @@
         },
         "CourseD_EOC_artist_2021": {
           "draw a star": {
-            "name": "dibuixa una estrella",
+            "name": "dibuixar una estrella",
             "parameters": {
               "points": "puntes",
               "length": "longitud"
@@ -1798,7 +1816,7 @@
             "description": "dibuixa una estrella amb les puntes i la longitud dels costats especificats"
           },
           "draw a circle": {
-            "name": "dibuixa un cercle",
+            "name": "dibuixar un cercle",
             "description": "dibuixa el cercle a partir del radi especificat",
             "parameters": {
               "radius": "radi"
@@ -1826,7 +1844,7 @@
             "name": "dibuixa una forma"
           },
           "draw a house": {
-            "name": "dibuixa una casa",
+            "name": "dibuixar una casa",
             "parameters": {
               "length": "longitud"
             }
@@ -1840,7 +1858,7 @@
         },
         "CourseD_EOC_artist_example2021": {
           "draw a star": {
-            "name": "dibuixa una estrella",
+            "name": "dibuixar una estrella",
             "parameters": {
               "points": "puntes",
               "length": "longitud"
@@ -1848,7 +1866,7 @@
             "description": "dibuixa una estrella amb les puntes i la longitud dels costats especificats"
           },
           "draw a circle": {
-            "name": "dibuixa un cercle",
+            "name": "dibuixar un cercle",
             "description": "dibuixa el cercle a partir del radi especificat",
             "parameters": {
               "radius": "radi"
@@ -1876,7 +1894,7 @@
             "name": "dibuixa una forma"
           },
           "draw a house": {
-            "name": "dibuixa una casa",
+            "name": "dibuixar una casa",
             "parameters": {
               "length": "longitud"
             }
@@ -1909,12 +1927,12 @@
         },
         "courseE_artist_functions3_2021": {
           "draw a star": {
-            "name": "dibuixa una estrella"
+            "name": "dibuixar una estrella"
           }
         },
         "courseE_artist_functions5_2021": {
           "draw a star": {
-            "name": "dibuixa una estrella"
+            "name": "dibuixar una estrella"
           }
         },
         "courseE_artist_functions8_2021": {
@@ -2432,7 +2450,7 @@
         },
         "Course E: Frozen Project_examples2022": {
           "draw a star": {
-            "name": "dibuixa una estrella",
+            "name": "dibuixar una estrella",
             "parameters": {
               "points": "puntes",
               "length": "longitud"
@@ -2440,7 +2458,7 @@
             "description": "dibuixa una estrella amb les puntes i la longitud dels costats especificats"
           },
           "draw a circle": {
-            "name": "dibuixa un cercle",
+            "name": "dibuixar un cercle",
             "description": "dibuixa el cercle a partir del radi especificat",
             "parameters": {
               "radius": "radi"
@@ -2468,7 +2486,7 @@
             "name": "dibuixa una forma"
           },
           "draw a house": {
-            "name": "dibuixa una casa",
+            "name": "dibuixar una casa",
             "parameters": {
               "length": "longitud"
             }
@@ -2495,7 +2513,7 @@
         },
         "CourseD_EOC_artist2022": {
           "draw a star": {
-            "name": "dibuixa una estrella",
+            "name": "dibuixar una estrella",
             "parameters": {
               "points": "puntes",
               "length": "longitud"
@@ -2503,7 +2521,7 @@
             "description": "dibuixa una estrella amb les puntes i la longitud dels costats especificats"
           },
           "draw a circle": {
-            "name": "dibuixa un cercle",
+            "name": "dibuixar un cercle",
             "description": "dibuixa el cercle a partir del radi especificat",
             "parameters": {
               "radius": "radi"
@@ -2531,7 +2549,7 @@
             "name": "dibuixa una forma"
           },
           "draw a house": {
-            "name": "dibuixa una casa",
+            "name": "dibuixar una casa",
             "parameters": {
               "length": "longitud"
             }
@@ -2545,7 +2563,7 @@
         },
         "CourseD_EOC_artist_example20212022": {
           "draw a star": {
-            "name": "dibuixa una estrella",
+            "name": "dibuixar una estrella",
             "parameters": {
               "points": "puntes",
               "length": "longitud"
@@ -2553,7 +2571,7 @@
             "description": "dibuixa una estrella amb les puntes i la longitud dels costats especificats"
           },
           "draw a circle": {
-            "name": "dibuixa un cercle",
+            "name": "dibuixar un cercle",
             "description": "dibuixa el cercle a partir del radi especificat",
             "parameters": {
               "radius": "radi"
@@ -2581,7 +2599,7 @@
             "name": "dibuixa una forma"
           },
           "draw a house": {
-            "name": "dibuixa una casa",
+            "name": "dibuixar una casa",
             "parameters": {
               "length": "longitud"
             }
@@ -2630,12 +2648,12 @@
         },
         "courseE_artist_functions32022": {
           "draw a star": {
-            "name": "dibuixa una estrella"
+            "name": "dibuixar una estrella"
           }
         },
         "courseE_artist_functions52022": {
           "draw a star": {
-            "name": "dibuixa una estrella"
+            "name": "dibuixar una estrella"
           }
         },
         "courseE_artist_functions82022": {
@@ -3675,6 +3693,21 @@
         "Standalone_Artist_9": {
           "my function": {
             "name": "la meva funció"
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "reiniciar joc"
+          }
+        },
+        "CourseF_app_computer2022": {
+          "reset game": {
+            "name": "reiniciar joc"
+          }
+        },
+        "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "reiniciar joc"
           }
         }
       }

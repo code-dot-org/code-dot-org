@@ -1,5 +1,5 @@
 ---
-title: CS Connections
+title: Connexions Informàtiques
 theme: responsive
 set_dir: true
 social:
@@ -27,55 +27,55 @@ social:
 
 <link href="/css/generated/csc-module.css" rel="stylesheet">
 
-# Computer Science Connections
+# Connexions Informàtiques
 
-Our newest curriculum makes the connections between learning computer science and other subjects like math, language arts, science, and social studies. Through CS Connections, K-12 classrooms explore their usual subjects in exciting new ways!
+El nostre pla d'estudis més recent estableix relacions entre l'aprenentatge d'informàtica amb altres assignatures com les matemàtiques, la llengua, la plàstica i les ciències naturals i socials. Amb Connexions Informàtiques, els alumnes des d'educació infantil fins a batxillerat s'endinsaran en les assignatures habituals de maneres molt emocionants!
 
-## Modules
+## Mòduls
 
-CS Connections modules are a structured series of lessons that integrate computer science learning into core subject areas like math, ELA, and science. These modules are aligned to standards across subjects and culminate in a cross-curricular project.
+Els mòduls de Connexions Informàtiques són una sèrie de lliçons estructurades que integren l'aprenentatge d'informàtica amb les assignatures troncals com ara matemàtiques, llengua, plàstica i ciències naturals i socials. Aquests mòduls estan alineats amb els estàndards de totes les matèries i acaben amb un projecte multidisciplinari.
 
-They're perfect for teachers who'd like to incorporate computer science into their lesson plans for other subjects, as well as CS educators who want to reinforce what students are learning in other subjects.
+Són òptims per als professors que volen incorporar la informàtica a la planificació d'altres assignatures, així com per als docents d'informàtica que vulguin reforçar allò que els alumnes aprenen en altres matèries.
 
-{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 hours", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "View module" }}
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "a partir de 3r", subject: "Literatura", duration: "5 hores", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Programació amb poesia", right_description: "Relaciona la informàtica i la poesia amb aquesta sèrie de lliçons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Veure mòdul" }}
 
 <aside>
-  <h3><strong>Feedback</strong></h3>
-  <p>This is a beta version of our new CS Connections curriculum. We're still adding our finishing touches to these lessons. Do you have any feedback you'd like to share?</p>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLScJMEBHXFcBQjkztOrZcrE9O9uuOqxGNZQ-F_v9QWjLtevv9w/viewform?usp=sf_link" target="_blank" rel="noreferrer"><button>Give feedback</button></a>
+  <h3><strong>Comentaris</strong></h3>
+  <p>Aquesta és una versió beta del nostre pla d'estudis nou de Connexions Informàtiques. Encara estem fent els últims retocs a aquestes lliçons. Ens voleu fer arribar algun comentari?</p>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScJMEBHXFcBQjkztOrZcrE9O9uuOqxGNZQ-F_v9QWjLtevv9w/viewform?usp=sf_link" target="_blank" rel="noreferrer"><button>Enviar comentaris</button></a>
 </aside>
 
-{{ csc_module, title: "Marine Life Ecosystems (beta)", image: "/images/csc/landing/module_marine_life.png", grades: "3-5", subject: "Science", duration: "4 hours", description: "Restore balance to a marine life ecosystem on the verge of overfishing.", button_text: "Learn more", url: "https://studio.code.org/s/csc-ecosystems-2022" }}
-{{ csc_module, title: "Star Quilts (beta)", image: "/images/csc/landing/module_star_quilts.png", grades: "3-5", subject: "Math", duration: "4 hours", description: "Design a Native American star quilt using rhombus patterns in The Artist.", button_text: "Learn more", url: "https://studio.code.org/s/csc-starquilts-2022" }}
-{{ csc_module, title: "Storytelling (beta)", image: "/images/csc/landing/module_storytelling.png", grades: "3-5", subject: "ELA", duration: "4 hours", description: "Compare and contrast stories from around the world and create your own short story animation.", button_text: "Learn more", url: "https://studio.code.org/s/csc-fables-2022" }}
-{{ csc_module, title: "Time Capsule (beta)", image: "/images/csc/landing/module_time_capsule.png", grades: "3-5", subject: "Social Studies", duration: "4 hours", description: "Create an immersive time capsule experience and share your story of now.", button_text: "Learn more", url: "https://studio.code.org/s/csc-timecapsule-2022" }}
+{{ csc_module, title: "Ecosistemes marins (beta)", image: "/images/csc/landing/module_marine_life.png", grades: "3r-5è", subject: "Ciències naturals", duration: "4 hores", description: "Retorna l'equilibri a un escosistema marí afectat per la sobrepesca.", button_text: "Més informació", url: "https://studio.code.org/s/csc-ecosystems-2022" }}
+{{ csc_module, title: "Cobrellit d'estrelles (beta)", image: "/images/csc/landing/module_star_quilts.png", grades: "3r-5è", subject: "Matemàtiques", duration: "4 hores", description: "Dissenya un cobrellit d'estrelles a l'estil dels pobles natius americans amb patrons de rombes a l'Artista.", button_text: "Més informació", url: "https://studio.code.org/s/csc-starquilts-2022" }}
+{{ csc_module, title: "Expliquem històries (beta)", image: "/images/csc/landing/module_storytelling.png", grades: "3r-5è", subject: "Llengua i plàstica", duration: "4 hores", description: "Compara i contrasta històries d'arrey del món i anima el teu propi relat.", button_text: "Més informació", url: "https://studio.code.org/s/csc-fables-2022" }}
+{{ csc_module, title: "Càpsula del temps (beta)", image: "/images/csc/landing/module_time_capsule.png", grades: "3r-5è", subject: "Ciències socials", duration: "4 hores", description: "Crea una experiència immersiva amb una càpsula del temps i explica el teu present.", button_text: "Més informació", url: "https://studio.code.org/s/csc-timecapsule-2022" }}
 {{ clearfix }}
 
-## Sample Projects
+## Projectes d'exemple
 
-Continue making connections between computer science and traditional subjects with our cross-curricular projects. They take just 1-2 instructional hours to complete and are ideal for any teachers looking to develop topic-specific projects to fit within their existing curriculum.
+Seguiu establint relacions entre la informàtica i les assignatures tradicionals amb els nostres projectes transversals. Només requereixen 1-2 hores lectives i són fantàstics perquè els professors que volen desenvolupar temàtiques específiques d'una matèria els integrin als seus plans d'estudi.
 
-<em>Tip: These projects require some understanding of computer science basics, so we recommend completing our Hello World Hour of Code activity before getting started!</em>
+<em>Consell: Aquests projectes requereixen certs coneixements bàsics d'informàtica, de manera que recomanem fer l'activitat de l'Hora del Codi "Hola, Món" abans de començar.</em>
 
-{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/helloworld/helloworld_textbox.jpg", text_color: "white", grades: "3+", subject: "All", duration: "1 hour", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Hello World", right_description: "Get students started with the basics of Sprite Lab. With these new skills, students can create projects on any topic, including some of the cross-curricular options below.", right_specs: "", right_button_url: "https://studio.code.org/s/hello-world-food-2021/lessons/1", right_button_text: "View lesson plan" }}
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/helloworld/helloworld_textbox.jpg", text_color: "white", grades: "a partir de 3r", subject: "Totes", duration: "1 hora", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Hola, Mín", right_description: "Primers passos al Laboratori d'Sprites. Amb aquestes habilitats noves, els alumnes podran crear projectes multidisciplinaris com els que es mencionen a continuació.",right_specs: "", right_button_url: "https://studio.code.org/s/hello-world-food-2021/lessons/1", right_button_text: "Veure pla de la lliçó" }}
 
-{{ csc_module, title: "Ecosystems Sample", image: "", grades: "3+", subject: "Science", duration: "1-2 hours", description: "Using basic coding skills, students create an interactive model of an ecosystem that explores how different animals, plants, and organisms affect each other. This model could also be adapted into interactions between the geosphere, biosphere, hydrosphere, and/or atmosphere.", button_text: "Learn more", url: "https://bit.ly/3wEMAyc" }}
-{{ csc_module, title: "Life Cycles Sample", grades: "3+", image: "", subject: "Science", duration: "1-2 hours", description: "Go from egg to tadpole to frog with this project, in which students use code to create a model of a scientific cycle - like the life cycle of a frog or the transfer of energy!", button_text: "Learn more", url: "https://bit.ly/3Dc54Zq" }}
-{{ csc_module, title: "Character Study Sample", image: "", grades: "3+", subject: "ELA", duration: "1-2 hours", description: "Every action has a reaction! No, this isn't physics - this project allows students to use code to build a scene from a story that shows how one character's actions affects the chain of events.", button_text: "Learn more", url: "https://bit.ly/3wFlpTX" }}
-{{ csc_module, title: "Story Morals Sample", image: "", grades: "3+", subject: "ELA", duration: "1-2 hours", description: "What's between \"Once upon a time\" and \"The End?\" Students code an interactive app that recounts a story and its morals. Students could apply this skill to any story, folktale, book, or fable.", button_text: "Learn more", url: "https://bit.ly/3wBJbQO" }}
+{{ csc_module, title: "Ecosistemes (exemple)", image: "", grades: "a partir de 3r", subject: "Ciències", duration: "1-2 hores", description: "Els alumnes aplicaran habilitats de programació bàsiques per crear un model interactiu d'un ecosistema que analitza com els diferents animals, plantes i organismes s'influeixen els uns als altres. Aquest model també es podria adaptar per observar les interaccions entre la geosfera, la biosfera, l'hidrosfera i/o l'atmosfera.", button_text: "Més informació", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "Cicles de vida (exemple)", grades: "a partir de 3r", image: "", subject: "Ciències", duration: "1-2 hores", description: "Aquest projecte segueix l'evolució d'ou a capgròs i a granota per tal que els alumnes creïn el model d'un model científic, com ara el cicle vital de la granota o la transferència d'energia", button_text: "Més informació", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "Estudi de caràcter (exemple)", image: "", grades: "a partir de 3r", subject: "Llengua i plàstica", duration: "1-2 hores", description: "Tota acció té una reacció! No, no estem parlant de física: aquest projecte permet els alumnes fer servir codi per crear l'escena d'una història que il·lustri com les accions d'un personatge afecten la successió dels esdeveniments.", button_text: "Més informació", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "La moral de la història (exemple)", image: "", grades: "a partir de 3r", subject: "Llengua i plàstica", duration: "1-2 hores", description: "Què hi ha entre "Hi havia una vegada" i "Fi"?\" Els alumnes codificaran una aplicació interactiva que explica una història i la seva moral. Els alumnes poden aplicar aquesta habilitat a qualsevol història, conte, llibre o faula.", button_text: "Més informació", url: "https://bit.ly/3wBJbQO" }}
 {{ clearfix }}
 
-## Quick Activities
+## Activitats ràpides
 
-Our Quick Activities provide a quick and interesting way to make a connection between computer science and other subjects. These lessons don't require any prior knowledge of computer science, so they're perfect for any teacher who wants to incorporate essential 21st century learning into traditional curriculum or motivate students with new exciting ways to learn older subjects.
+Les nostres activitats ràpides són una manera ràpida i interessant d'establir relacions entre la informàtica i altres assignatures. Aquestes lliçons no requereixen coneixements previs d'informàtica, de manera que són fantàstiques per qualsevol professor que vulgui incorporar l'aprenentatge bàsic del segle XXI al pla d'estudis tradicional o motivar els alumnes de formes innovadores per aprendre les assignatures de sempre.
 
 
-{{ csc_module, title: "Spelling with Bee", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "ELA", duration: "1 hour", description: "F-U-N! In this lesson, students use basic coding skills to tell Bee where to B-U-Z-Z in order to spell words on a letter-filled grid.", button_text: "Learn more", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
-{{ csc_module, title: "Counting with Laurel", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "Math", duration: "1 hour", description: "It's a treasure hunt! Students will practice counting and adding when they code with loops to help Laurel collect gems across a maze grid.", button_text: "Learn more", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
-{{ csc_module, title: "AI Code of Ethics", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "ELA or Humanities", duration: "1 hour", description: "After researching the potential ethical pitfalls of artificial intelligence (AI), students work together to develop a class \"AI Code of Ethics\" resource.", button_text: "Learn more", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
-{{ csc_module, title: "Data Visualization", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "Math", duration: "1 hour", description: "This lesson introduces students to the Data Visualizer tool in App Lab as well as two important chart types: a bar chart and a histogram. Over the course of the lesson, students will build skills in using this tool and in reading data.", button_text: "Learn more", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ csc_module, title: "Lletrejar amb l'Abella", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "a partir d'infantil", subject: "Llengua i plàstica", duration: "1 hora", description: "D-I-V-E-R-S-I-Ó! En aquesta lliçó, els alumnes posen en pràctica habilitats de programació bàsica per dir-li a l'Abella cap a on ha V-O-L-A-R per lletrejar paraules en una quadrícula plena de lletres.", button_text: "Més informació", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "Comptar amb la Laurel", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "a partir d'infantil", subject: "Matemàtiques", duration: "1 hora", description: "Anem a buscar tresors! Els alumnes comptaran i sumaran mentre programen amb bucles per ajudar la Laurel a agafar joies per la quadrícula d'un laberint.", button_text: "Més informació", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "El codi ètic de la IA", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "a partir de 3r d'E.S.O.", subject: "Llengua, plàstica o humanitats", duration: "1 hora", description: "Després d'investigar sobre els possibles defectes de la intel·ligència artificial (IA), els alumnes treballen en grup per desenvolupar un \"Codi Ètic de la IA\" de referència per la classe.", button_text: "Més informació", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "Visualització de dades", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "a partir de 6è", subject: "Matemàtiques", duration: "1 hora", description: "Aquesta lliçó presenta als alumnes l'eina de Visualització de Dades del Laboratori d'Aplicacions i dos tipus de gràfics importants: el de barres i l'histograma. Durant el transcurs de la lliçó, els alumnes desenvoluparan el seu domini d'aquesta eina i de la lectura de dades.", button_text: "Més informació", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
 {{ clearfix }}
 
-<em>Finished a CS Connection activity and/or looking for more options for your classroom? Please <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">share your feedback</a> and ideas for more lessons here!</em>
+<em>Haeu acabat una activitat de Connexions Informàtiques i/o busqueu més opcions per fer amb la vostra classe? Us animem a <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">compartir els vostres comentaris</a> i idees per lliçons noves aquí!</em>
 
 {{ visit_partial_event_logger }}

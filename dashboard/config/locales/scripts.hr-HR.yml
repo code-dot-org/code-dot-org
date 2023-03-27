@@ -1113,3 +1113,71 @@ hr:
               display_name: Liste
             lessonGroup-3:
               display_name: Petlje
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: Likovi
+            lessonGroup-9:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_functions:
+              display_name: Funkcije
+            csf_variables:
+              display_name: Varijable
+            csf_for_loops:
+              display_name: Petlja brojača
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_sprites:
+              display_name: Likovi
+            ramp_up:
+              display_name: Ugniježđene petlje
+            csf_functions:
+              display_name: Funkcije
+            csf_nested_loops:
+              display_name: Uvjeti

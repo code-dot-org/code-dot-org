@@ -527,6 +527,7 @@ pt-BR:
   homepage_higher_power_body: Cria com Festa dançante, ganha a oportunidade de ver
     a banda ao vivo.
   homepage_csa_subhead: Uma nova abordagem para
+  homepage_csa_title: AP® Ciência da Computação A
   homepage_csa_body: Capacite os alunos com projetos criativos conectados ao mundo
     real em nosso currículo orientado pela equidade.
   contact_form_topic_student: Sou um estudante
@@ -715,6 +716,7 @@ pt-BR:
   video_title_chris_bosh: Chris Bosh fala sobre Ciência da Computação
   video_title_my_name_is_aracely: Meu Nome é Aracely
   video_title_change_face_of_cs: Mude a face da ciência da computação
+  video_title_latam_hoc: O que falta em nossas escolas
   video_1min: 1 min
   video_2min: 2 min
   video_3min: 3 min
@@ -1402,6 +1404,7 @@ pt-BR:
   hoc-impact-study_name: |2-
 
     Labirinto clássico com pesquisa
+  flappy-impact-study_name: Flappy Code com pesquisa
   hoc-encryption_name: Criptografia simples
   text-compression_name: Compressão de texto
   applab_name: Laboratório de Aplicativo
@@ -2722,7 +2725,9 @@ pt-BR:
   footer_privacy_policy_updated: Política de Privacidade Atualizada
   footer_about: Sobre
   footer_partners: Parceiros
+  footer_blog: Blog
   footer_donate: Faça uma doação
+  footer_store: Armazenar
   footer_support: Suporte
   footer_terms: Termos
   ai_for_oceans: IA para oceanos
@@ -2766,25 +2771,37 @@ pt-BR:
     em vários idiomas.
   ai_quick_draw: Rápido, desenhe!
   ai_quick_draw_description: Uma rede neural pode aprender a reconhecer rabiscos?
+  ai_teachable_machine: Máquina ensinável
   ai_teachable_machine_description: Treine um computador para reconhecer suas próprias
     imagens, sons e poses.
+  ai_google: Experimentos de IA com o Google
   ai_google_description: Comece a explorar o aprendizado de máquina por meio de imagens,
     desenhos, linguagem, música e muito mais.
+  ai_zooniverse: Zooniverse - Snapshot Mountain Zebra
   ai_zooniverse_description: Ajude a proteger a ameaçada Zebra da Montanha do Cabo
     identificando os diferentes animais nas imagens.
+  ai_audience: Audiência
   ai_minecraft_description: Acesse recursos grátis incluindo um plano de aula, vídeos,
     currículo de ciência da computação e treinamentos para professores.
+  ai_k_12_audience: K-12 (Leitura obrigatória)
+  ai_microsoft_workshop: Workshops virtuais gratuitos da Microsoft
+  ai_microsoft_workshop_description: Desperte a curiosidade com workshops gratuitos
+    de STEM e codificação.
+  ai_machine_learning_for_kids: Aprendizado de máquina para crianças
   ai_machine_learning_for_kids_description: Treine um modelo de aprendizado de máquina
     com texto, números ou imagens e use-o para criar jogos no Scratch.
   ai_ibm_machine_learning_for_kids: 'IBM: Aprendizado de Máquinas para crianças'
+  ai_ecs: 'ECS: Inteligência Artificial (IA)'
   ai_ecs_description: Uma nova unidade curricular alternativa para o currículo Exploring
     Computer Science (ECS).
+  ai_aiedu_intro: 'AiEdu: Introdução à Inteligência Artificial'
   ai_aiedu_intro_description: A introdução à IA é um currículo gratuito, inovador
     e culturalmente relevante, no qual os alunos desenvolvem conhecimento conceitual
     sobre o que é a IA e como ela é usada no mundo real.
   ai_elements: Elementos de IA
   ai_elements_description: Uma série de cursos on-line gratuitos criados pela Reaktor
     e pela Universidade de Helsinque.
+  ai_cognimates: Cognimados
   ai_cognimates_description: Uma plataforma educacional de IA para criar jogos, programar
     robôs e treinar.
   ai_try_activity: Experimentar uma atividade
@@ -2795,6 +2812,11 @@ pt-BR:
   outbreak_tile_alt: Uma simulação de como um vírus se espalha por um grupo de monstros
     roxos.
   footer_cookie_notice: Aviso sobre Cookies
+  top_hoc_tutorial_applab_alt_text: Uma mão marrom com o dedo indicador tocando um
+    tablet com tela sensível ao toque emitindo estrelas e raios de luz contra um fundo
+    azul
+  minecraft_tile_alt: Dois personagens do Minecraft, Steve e Alex, em um plano de
+    fundo mostrando uma cena aquática do Minecraft com corais, golfinhos e algas
   hoc2022_banner_title: Explore, jogue, crie!
   hoc2022_banner_description: Explore o universo, marque um gol, elabore um movimento
     – há tantas maneiras de experimentar a ciência da computação!
@@ -2816,7 +2838,11 @@ pt-BR:
   try_it_yourself: Tente você mesmo!
   try_an_activity: Experimentar uma atividade
   see_more_activities: Ver todas as atividades
+  hoc2022_nasa_webb_alt_text: Ilustração do telescópio James Webb da NASA
   hoc2022_nasa_banner_heading: Junte-se à NASA para uma Hora de Código especial sobre
     a ciência da computação no espaço!
   hoc2022_nasa_banner_description: Premiering 10AM ET, 5 de dezembro no canal da NASA
     STEM no YouTube.
+  hoc2022_nasa_banner_heading_posthoc: Confira o artigo especial da Hora do Código
+    da NASA sobre ciência da computação no espaço!
+  microsoft_logo_alt: Logotipo da Microsoft

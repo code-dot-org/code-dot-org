@@ -1190,3 +1190,71 @@ da:
               display_name: Lister
             lessonGroup-3:
               display_name: Løkker
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: figure
+            lessonGroup-9:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+            csf_functions:
+              display_name: Funktioner
+            csf_variables:
+              display_name: Variabler
+            csf_for_loops:
+              display_name: For Loops
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_sprites:
+              display_name: figure
+            ramp_up:
+              display_name: Indlejret Løkker
+            csf_functions:
+              display_name: Funktioner
+            csf_nested_loops:
+              display_name: Betingelser

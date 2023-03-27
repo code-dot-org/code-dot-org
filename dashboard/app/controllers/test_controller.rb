@@ -229,13 +229,14 @@ class TestController < ApplicationController
       csa_how_offer: 'As an AP course',
       csa_phone_screen: 'Yes',
       csa_already_know: 'Yes',
-      replace_existing: 'No, this course will be added to the schedule in addition to an existing computer science course'
+      replace_existing: 'No, this course will be added to the schedule in addition to an existing computer science course',
+      pay_fee: 'Yes, my school/district would be able to pay the full program fee.'
     }
   end
 
   def create_teacher_application
     return unless (user = current_user)
-    regional_partner = RegionalPartner.create!(name: "regional-partner#{Time.now.to_i}-#{rand(1_000_000)}")
+    regional_partner = RegionalPartner.create!(name: "regional-partner#{Time.now.to_i}-#{rand(1_000_000)}", is_active: true)
 
     RegionalPartnerProgramManager.create!(program_manager_id: user.id, regional_partner_id: regional_partner.id)
 
@@ -254,13 +255,12 @@ class TestController < ApplicationController
     form_data = teacher_form_data.merge(
       first_name: teacher_name,
       last_name: 'Test',
+      regional_partner_id: regional_partner.id,
       program: Pd::Application::TeacherApplication::PROGRAMS[:csp]
     ).to_json
     application = Pd::Application::TeacherApplication.create!(
       user: teacher,
       form_data: form_data,
-      regional_partner_id: regional_partner.id,
-      course: 'csp',
       status: 'unreviewed'
     )
 

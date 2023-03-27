@@ -56,7 +56,7 @@ ca:
         algebra:
           title: Informàtica en àlgebra
         infinity:
-          title: Disney infinit Play Lab
+          title: Disney Infinity al Laboratori de Jocs
           description: Utilitza Play Lab per crear una història o un joc protagonitzada pels personatges de Disney infinity.
           description_short: Utilitza Play Lab per crear una història o un joc protagonitzada pels personatges de Disney infinity.
           student_description: Utilitza Play Lab per crear una història o un joc protagonitzada pels personatges de Disney infinity.
@@ -94,15 +94,21 @@ ca:
           description_audience: Edats 6-13
         afterschool1:
           description_audience: Edats 7-13
+        cspunit4draft:
+          description_short: Dades
         Special Fun:
           description_audience: Edat 10 + (després del curs 3)
         SpecialSeries:
           description_audience: Edat 10 + (després del curs 3)
+        iceage:
+          title: L'edat de gel al Laboratori de Jocs
         starwars:
+          title: 'La guerra de les galàxies: Crea una galàxia amb codi (JavaScript)'
           description: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
           description_short: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
           student_description: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
         starwarsblocks:
+          title: 'La guerra de les galàxies: Crea una galàxia amb codi (Blockly)'
           description: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
           description_short: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
           student_description: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
@@ -122,11 +128,15 @@ ca:
         cspunit1-support:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
+        CSDU1-Draft:
+          description_short: Resolució de problemes
+        CSDU5-Draft:
+          description_short: Dades
         CSF_Secret_Sample_Story:
           description_audience: De 8 a 18 anys+
         MikeTest:
@@ -136,7 +146,7 @@ ca:
         teachercon:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         gradeKinder:
           description_audience: De 5 a 18 anys
         grade4:
@@ -154,17 +164,17 @@ ca:
         alltheplcthings:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         grade2:
           description_audience: De 5 a 18 anys
         csp-online-test:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp1-support:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         basketball:
           title: Escull el teu equip i fes un partit de bàsquet
           description_short: Escull el teu equip i fes un partit de bàsquet
@@ -174,8 +184,9 @@ ca:
         csp2-support:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         minecraft:
+          title: L'Hora del Codi amb Minecraft - Dissenyador
           description_short: Programa animals i altres criatures de Minecraft en la teva pròpia versió de Minecraft.
           description: Programa animals i altres criatures de Minecraft en la teva pròpia versió de Minecraft.
           student_description: Programa animals i altres criatures de Minecraft en la teva pròpia versió de Minecraft.
@@ -197,14 +208,16 @@ ca:
           description_short: Prova els conceptes bàsics de la informàtica amb personatges divertits!
         hoc-impact-study:
           description_short: Prova els conceptes bàsics de la informàtica amb personatges divertits!
+        sports:
+          name: esports
         csp3-support:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp4-support:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csf2harvey:
           lesson_groups:
             end_of_course_project:
@@ -212,7 +225,7 @@ ca:
         csp5-support:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         coursea-2017:
           title: Curs A
           assignment_family_title: Curs A
@@ -258,51 +271,51 @@ ca:
         cspnovice:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp1-dlp:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp2-dlp:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp3-dlp:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp4-dlp:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp5-dlp:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csd1-dlp:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csd6-dlp:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csd5-dlp:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csd4-dlp:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csd3-dlp:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csd2-dlp:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         express-2017:
           title: Curs exprés
           assignment_family_title: Curs exprés
@@ -340,6 +353,7 @@ ca:
           title: 'Minecraft: El viatge de l''heroi'
           description: Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca! Viatja a través de Minecraft amb el codi.
           student_description: Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca! Viatja a través de Minecraft amb el codi.
+          name: heroi
         course-e-2018:
           lesson_groups:
             end_of_course_project:
@@ -391,71 +405,71 @@ ca:
         csd1-dlp-18:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csd2-dlp-18:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csd3-dlp-18:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csd4-dlp-18:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csd5-dlp-18:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csd6-dlp-18:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp1-dlp-18:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp2-dlp-18:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp3-dlp-18:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp4-dlp-18:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp5-dlp-18:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp-explore-dlp-18:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp-create-dlp-18:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csd-novice-18:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csd-apprentice-18:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp-novice-18:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp-apprentice-18:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         pre-express-2018:
           assignment_family_title: Prelector exprés
           description: Aprèn els fonaments de la informàtica i de la seguretat a internet. Al final del curs, podràs crear el teu propi joc o història i compartir-los.
@@ -465,14 +479,17 @@ ca:
         fit-test:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         dance:
           description_short: Amb música de Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, i 25 més!
           description: Crea un codi amb la teva pròpia festa amb ball i comparteix-la amb els teus amics!
           student_description: Crea un codi amb la teva pròpia festa amb ball i comparteix-la amb els teus amics!
+          name: ball
         aquatic:
           title: 'Minecraft: Viatge aquàtic'
           description_short: Minecraft torna amb una activitat del tot nova de l'Hora del Codi!
+          description: Minecraft torna amb una activitat nova! Posa en pràctica la teva creativitat i capacitat per resoldre problemes per explorar i construir mons submarins amb codi.
+          student_description: Minecraft torna amb una activitat nova! Posa en pràctica la teva creativitat i capacitat per resoldre problemes per explorar i construir mons submarins amb codi.
           name: aquàtic
         cspplayground:
           lesson_groups:
@@ -493,10 +510,14 @@ ca:
           lesson_groups:
             csf_variables:
               display_name: Variables
+            csf_data:
+              display_name: Dades
             csf_for_loops:
               display_name: Bucles "for"
             csf_internet:
               display_name: Internet
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Ciutadania digital
             end_of_course_project:
@@ -521,6 +542,8 @@ ca:
         coursee-2019:
           description_audience: De 8 a 12 anys
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Ciutadania digital
             csf_impacts:
@@ -548,11 +571,13 @@ ca:
               display_name: Variables
             csf_for_loops:
               display_name: Bucles "for"
+            csf_sprites:
+              display_name: Sprites
           student_description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
         andrea-test:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         dance-extras-gallery:
           title: Que el ritme no pari
           description: Anar més enllà de la primera hora amb idees desenvolupades del projecte.
@@ -572,6 +597,8 @@ ca:
               display_name: Bucles
             csf_events:
               display_name: Esdeveniments
+            csf_data:
+              display_name: Dades
             end_of_course_project:
               display_name: Projecte de final de curs
           student_description: Crea programes amb seqüenciació, bucles i esdeveniments. Tradueix les teves inicials al codi binari, investiga diferents tècniques per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament. Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
@@ -629,11 +656,15 @@ ca:
             csp_project:
               display_name: Projecte
             required:
-              display_name: Vista general
+              display_name: Resum
         csp1-pilot:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
+        time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprites
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -721,19 +752,19 @@ ca:
             csp_project:
               display_name: Projecte
             required:
-              display_name: Vista general
+              display_name: Resum
         fit2019-novice:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         fit2019-apprentice:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp3-pilot:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csl-vn:
           lesson_groups:
             csf_sequencing:
@@ -745,51 +776,51 @@ ca:
         dlp19-csd-mod-fit:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         dlp19-csd-mod-w1:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         dlp19-csd-mod-w2:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         dlp19-csd-mod-w3:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         dlp19-csd-mod-w4:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         dlp19-csp-mod-w1:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         dlp19-csp-mod-w2:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         dlp19-csp-mod-w3:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         dlp19-csp-mod-w4:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp2-pilot:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp6-pilot:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         dance-2019:
           title: Festa de ball
           description_short: Codi d'una festa de ball per compartir amb els vostres amics i familiars. Amb Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, música de “Encanto” de Disney i molt més!
@@ -837,6 +868,8 @@ ca:
               display_name: Condicionals
             csf_events:
               display_name: Esdeveniments
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Ciutadania digital
             csf_impacts:
@@ -851,6 +884,8 @@ ca:
               display_name: Condicionals
             csf_events:
               display_name: Esdeveniments
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Ciutadania digital
             csf_impacts:
@@ -858,7 +893,7 @@ ca:
         csp7-pilot:
           lesson_groups:
             required:
-              display_name: Vista general
+              display_name: Resum
         csp4-2020:
           lesson_groups:
             csp_variables:
@@ -921,6 +956,8 @@ ca:
               display_name: Bucles
             csf_events:
               display_name: Esdeveniments
+            csf_data:
+              display_name: Dades
             end_of_course_project:
               display_name: Projecte de final de curs
           student_description: Crea programes amb seqüenciació, bucles i esdeveniments. Tradueix les teves inicials al codi binari, investiga diferents tècniques per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament. Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
@@ -944,6 +981,8 @@ ca:
         coursee-2020:
           description_audience: De 8 a 12 anys
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Ciutadania digital
             csf_nested_loops:
@@ -962,8 +1001,12 @@ ca:
               display_name: Ciutadania digital
             csf_variables:
               display_name: Variables
+            csf_data:
+              display_name: Dades
             csf_for_loops:
               display_name: Bucles "for"
+            csf_sprites:
+              display_name: Sprites
             end_of_course_project:
               display_name: Projecte de final de curs
         express-2020:
@@ -983,6 +1026,8 @@ ca:
               display_name: Variables
             csf_for_loops:
               display_name: Bucles "for"
+            csf_sprites:
+              display_name: Sprites
             end_of_course_project:
               display_name: Projecte de final de curs
           student_description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
@@ -1004,12 +1049,16 @@ ca:
               display_name: Primers passos
             k5_next_steps_1:
               display_name: Propers passos
+        outbreak:
+          title: Simulador de brots
         2021drafting:
           lesson_groups:
             introduction:
               display_name: Introducció
             lessonGroup-3:
               display_name: Variables
+            outbreak:
+              display_name: Simulador de brots
             debugging:
               display_name: Depuració
         csp4-2021:
@@ -1082,6 +1131,8 @@ ca:
               display_name: Bucles
             csf_events:
               display_name: Esdeveniments
+            csf_data:
+              display_name: Dades
             end_of_course_project:
               display_name: Projecte de final de curs
           student_description: Crea programes amb seqüenciació, bucles i esdeveniments. Tradueix les teves inicials al codi binari, investiga diferents tècniques per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament. Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
@@ -1112,6 +1163,8 @@ ca:
           lesson_groups:
             ramp_up:
               display_name: Bucles imbricats
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Ciutadania digital
             csf_nested_loops:
@@ -1126,9 +1179,12 @@ ca:
               display_name: Els impactes de la informàtica
           student_description: Comença a programar amb algorismes, esdeveniments, bucles, condicionals i funcions! Quan arribis al final del curs, podràs dissenyar i crear un joc o un dibuix per compartir-lo amb els amics i la família.
         coursef-2021:
+          title: Curs F (2021)
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
           description_audience: De 9 a 13 anys
           lesson_groups:
+            ramp_up:
+              display_name: Sprites
             csf_digcit:
               display_name: Ciutadania digital
             csf_variables:
@@ -1145,6 +1201,7 @@ ca:
               display_name: eliminar
             lessonGroup-7:
               display_name: Ciutadania digital
+          student_description: Aprèn a programar amb sprites, variables i bucles i entén els impactes socials de la informàtica i d'internet. Al final d'aquest curs, dissenyaràs i crearàs un projecte que podràs compartir amb els amics i la família.
         express-2021:
           title: Curs exprés (2021)
           description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
@@ -1165,6 +1222,8 @@ ca:
               display_name: Variables
             csf_for_loops:
               display_name: Bucles "for"
+            csf_sprites:
+              display_name: Sprites
             end_of_course_project:
               display_name: Projecte de final de curs
             lessonGroup-9:
@@ -1189,6 +1248,8 @@ ca:
               display_name: Introducció
             lessonGroup-3:
               display_name: Variables
+            Sprites:
+              display_name: Sprites
             variables:
               display_name: Variables
         contagion-pilot:
@@ -1199,8 +1260,12 @@ ca:
               display_name: Introducció
             Introduction:
               display_name: Introducció
+        outbreak-module:
+          title: Brots
         csa-videos:
           lesson_groups:
+            lessonGroup-3:
+              display_name: Recursos
             lessonGroup-2:
               display_name: Unitat 1
             lessonGroup-4:
@@ -1223,22 +1288,44 @@ ca:
               description: prova
         csa-u6-dev:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Lliçons
             lessonGroup-3:
               display_name: Projecte
+        hello-world-food:
+          title: 'Hola, món: Aliments'
         csa-u7-dev:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Lliçons
             lessonGroup-3:
               display_name: Projecte
+        hello-world-batman:
+          title: Hola, món
+        poem-art:
+          title: L'art del poema
         spelling-bee:
           title: Abella ortogràfica
+        outbreak-csc:
+          title: Brots
+        csd-post-survey-2021:
+          title: Enquesta post-curs Descobriments Informàtics
         ai-ethics-2021:
           description_audience: Qualificacions 6-12
+        poem-art-2021:
+          title: L'art del poema
+        hello-world-food-2021:
+          title: 'Hola, món: Aliments'
+        explore-data-1-2021:
+          title: Visualització de dades
         2022drafting:
           lesson_groups:
             lessonGroup-8:
               display_name: L'hora del codi
         csf-2022-pilot:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
             lessonGroup-3:
               display_name: Variables
             lessonGroup-4:
@@ -1262,6 +1349,8 @@ ca:
           lesson_groups:
             csf_sequencing:
               display_name: Seqüenciació
+            csf_sprites:
+              display_name: Sprites
             lessonGroup-9:
               display_name: Esdeveniments
             csf_loops:
@@ -1324,6 +1413,8 @@ ca:
               display_name: Bucles
             csf_events:
               display_name: Esdeveniments
+            csf_data:
+              display_name: Dades
             end_of_course_project:
               display_name: Projecte de final de curs
           student_description: Crea programes amb seqüenciació, bucles i esdeveniments. Tradueix les teves inicials al codi binari, investiga diferents tècniques per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament. Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
@@ -1347,6 +1438,8 @@ ca:
           description_audience: De 7 a 11 anys
         coursee-2022:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Ciutadania digital
             ramp_up:
@@ -1363,6 +1456,8 @@ ca:
           description_audience: De 8 a 12 anys
         coursef-2022:
           lesson_groups:
+            ramp_up:
+              display_name: Sprites
             lessonGroup-7:
               display_name: Ciutadania digital
             lessonGroup-8:
@@ -1391,16 +1486,30 @@ ca:
           lesson_groups:
             lessonGroup-7:
               display_name: Ciutadania digital
+            ramp_up:
+              display_name: Sprites
             lessonGroup-8:
               display_name: Variables
             end_of_course_project:
               display_name: Projecte de final de curs
           description_audience: De 9 a 13 anys
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
+        hello-world-csc:
+          title: Hola, món
+        csd-playground:
+          lessons:
+            lesson-7:
+              name: Introducció als sprites
+        csd-post-survey-2022:
+          title: Enquesta post-curs Descobriments Informàtics
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
               name: Extensió de Depuració Asíncrona
+        self-paced-pl-csd5-2022:
+          title: Ensenyar I.A. i aprenentatge automàtic
+        csa-draft-pl:
+          name: csa-esborrany-pl
         vpl-csd2-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -1412,6 +1521,8 @@ ca:
           description: Feu un partit de futbol
         csa1-2023:
           lessons:
+            lesson-2:
+              name: Laboratori Java
             lesson-6:
               name: Bucles
         csa2-2023:
@@ -1422,6 +1533,10 @@ ca:
           lessons:
             lesson-3:
               name: Bucles "for"
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: Aleatori
         hello-world-space-2022:
           title: 'Hola Món: Espai'
         csc-function-machines-pilot:
@@ -1440,6 +1555,8 @@ ca:
               display_name: Projecte
         csp5-2023:
           lesson_groups:
+            csp_lists:
+              display_name: Dades
             csp_loops:
               display_name: Bucles
             csp_project:
@@ -1452,3 +1569,125 @@ ca:
               display_name: Bucles
             lessonGroup-5:
               display_name: Projecte
+        tess-testing-problem-solving-2023:
+          title: Resolució de problemes
+        testing-focus-on-creativity1:
+          title: Resolució de problemes
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Seqüenciació
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+          description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
+          student_description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
+          description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
+          description_audience: De 4 a 8 anys
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Seqüenciació
+            csf_sprites:
+              display_name: Sprites
+            lessonGroup-9:
+              display_name: Esdeveniments
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            csf_functions:
+              display_name: Funcions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Bucles "for"
+            end_of_course_project:
+              display_name: Projecte de final de curs
+          description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
+          student_description: Aprèn informàtica al teu ritme fent les lliçons que trobaràs a continuació! Aprèn a crear programes informàtics, desenvolupa les teves habilitats per resoldre problemes i completa els divertits reptes que aniràs trobant. Fes jocs i projectes creatius i comparteix-los amb els amics, la família i els professors.
+          description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
+          description_audience: De 9 a 18 anys
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+            lessonGroup-5:
+              display_name: Projecte de final de curs
+          student_description: Aprèn els fonaments de la informàtica i de la seguretat a internet. Al final del curs, podràs crear el teu propi joc o història i compartir-los.
+          description_short: Una introducció a la informàtica per prelectors.
+          description_audience: De 4 a 7 anys
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
+            csf_loops:
+              display_name: Bucles
+            csf_impacts:
+              display_name: Els impactes de la informàtica
+            csf_events:
+              display_name: Esdeveniments
+            lessonGroup-6:
+              display_name: Projecte de final de curs
+          student_description: Aprèn els fonaments de la informàtica i de la seguretat a internet. Al final del curs, podràs crear el teu propi joc o història i compartir-los.
+          description_audience: De 5 a 8 anys
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+            csf_data:
+              display_name: Dades
+            end_of_course_project:
+              display_name: Projecte de final de curs
+          student_description: Crea programes amb seqüenciació, bucles i esdeveniments. Tradueix les teves inicials al codi binari, investiga diferents tècniques per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament. Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
+          description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
+          description_audience: De 6 a 10 anys
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Ciutadania digital
+            csf_sequencing:
+              display_name: Seqüenciació
+            csf_events:
+              display_name: Esdeveniments
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            end_of_course_project:
+              display_name: Projecte de final de curs
+          student_description: Aquí aprendràs sobre bucles, condicionals i esdeveniments. I, a més de programació, aprendràs què és la ciutadania digital.
+          description_audience: De 7 a 11 anys
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: Bucles imbricats
+            csf_functions:
+              display_name: Funcions
+            csf_nested_loops:
+              display_name: Condicionals
+            lessonGroup-7:
+              display_name: Els impactes de la informàtica
+            end_of_course_project:
+              display_name: Projecte de final de curs
+          student_description: Comença a programar amb algorismes, esdeveniments, bucles, condicionals i funcions! Quan arribis al final del curs, podràs dissenyar i crear un joc o un dibuix per compartir-lo amb els amics i la família.
+          description_audience: De 8 a 12 anys
