@@ -105,11 +105,11 @@ class ScrollButtons extends React.Component {
       : this.props.height > 20;
     const centerItems = this.props.isMinecraft
       ? this.props.height > 100
-      : this.props.height > 80;
+      : this.props.height > 60;
 
     let upStyle = {
       opacity: this.props.visible ? 1 : 0,
-      top: this.props.isMinecraft ? 10 : 16,
+      top: '10px',
       margin: '0 0 3px 0',
       left: centerItems ? '50%' : 25,
       transform: 'translateX(-50%)'
@@ -117,7 +117,7 @@ class ScrollButtons extends React.Component {
 
     const downStyle = {
       opacity: this.props.visible ? 1 : 0,
-      bottom: this.props.isMinecraft ? 10 : 16,
+      bottom: '10px',
       right: centerItems ? '50%' : 25,
       transform: 'translateX(50%)'
     };
@@ -127,8 +127,7 @@ class ScrollButtons extends React.Component {
     };
 
     const containerStyle = {
-      height: this.props.height,
-      minHeight: this.props.isMinecraft ? 'unset' : 55
+      height: this.props.height
     };
 
     // for most tutorials, we have minimalist arrow elements. For
