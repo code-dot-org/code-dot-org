@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useEffect, useContext} from 'react';
 import classNames from 'classnames';
 import FontAwesome from '../../templates/FontAwesome';
 import {Triggers} from '@cdo/apps/music/constants';
 import moduleStyles from './controls.module.scss';
 import BeatPad from './BeatPad';
 import {AnalyticsContext} from '../context';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
+import {hideBeatPad, showBeatPad, toggleBeatPad} from '../redux/musicRedux';
 
 const documentationUrl = '/docs/ide/projectbeats';
 
@@ -23,12 +24,14 @@ const Controls = ({
   instructionsOnRight
 }) => {
   const isPlaying = useSelector(state => state.music.isPlaying);
-  const [isShowingBeatPad, setBeatPadShowing] = useState(false);
+  const isBeatPadShowing = useSelector(state => state.music.isBeatPadShowing);
+  const dispatch = useDispatch();
+
   useEffect(() => {
     if (isPlaying) {
-      setBeatPadShowing(true);
+      dispatch(showBeatPad());
     }
-  }, [isPlaying]);
+  }, [dispatch, isPlaying]);
 
   const analyticsReporter = useContext(AnalyticsContext);
 
@@ -45,7 +48,7 @@ const Controls = ({
           triggers={Triggers}
           playTrigger={playTrigger}
           onClose={() => {
-            setBeatPadShowing(false);
+            dispatch(hideBeatPad());
             analyticsReporter.onButtonClicked('show-hide-beatpad', {
               showing: false
             });
@@ -68,9 +71,9 @@ const Controls = ({
 
   const beatPadIconSection = renderIconButton('th', () => {
     analyticsReporter.onButtonClicked('show-hide-beatpad', {
-      showing: !isShowingBeatPad
+      showing: !isBeatPadShowing
     });
-    setBeatPadShowing(!isShowingBeatPad);
+    dispatch(toggleBeatPad());
   });
   const infoIconSection = instructionsAvailable
     ? renderIconButton('info-circle', toggleInstructions)
@@ -82,7 +85,7 @@ const Controls = ({
 
   return (
     <div id="controls" className={moduleStyles.controlsContainer}>
-      {isShowingBeatPad && renderBeatPad()}
+      {isBeatPadShowing && renderBeatPad()}
       {leftIcon}
       <div
         className={classNames(moduleStyles.controlButtons, moduleStyles.center)}

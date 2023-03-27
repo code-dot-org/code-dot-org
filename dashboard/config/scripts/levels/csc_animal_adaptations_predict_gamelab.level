@@ -5,7 +5,8 @@
     "show_debug_watch": "true",
     "block_pools": [
       "GamelabJr",
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "adaptations"
     ],
     "helper_libraries": [
       "NativeSpriteLab"
@@ -60,34 +61,13 @@
   "user_id": 831,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-10T20:24:45.894+00:00\",\"changed\":[\"cloned from \\\"behaviors 1_2021\\\"\"],\"cloned_from\":\"behaviors 1_2021\"},{\"changed_at\":\"2023-03-10 20:25:48 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 20:30:31 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 20:31:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 20:33:14 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 20:36:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-10T20:24:45.894+00:00\",\"changed\":[\"cloned from \\\"behaviors 1_2021\\\"\"],\"cloned_from\":\"behaviors 1_2021\"},{\"changed_at\":\"2023-03-10 20:25:48 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 20:30:31 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 20:31:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 20:33:14 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 20:36:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 22:48:37 +0000\",\"changed\":[\"start_blocks\",\"block_pools\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 22:49:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="behavior_definition" editable="false" uservisible="false" usercreated="true">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-          </mutation>
-          <field name="NAME" id="mystery behavior">mystery behavior</field>
-          <statement name="STACK">
-            <block type="gamelab_changePropBy" uservisible="false">
-              <field name="PROPERTY">"scale"</field>
-              <value name="SPRITE">
-                <block type="sprite_parameter_get" uservisible="false">
-                  <field name="VAR">this sprite</field>
-                </block>
-              </value>
-              <value name="VAL">
-                <block type="math_number" uservisible="false">
-                  <field name="NUM">3</field>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
         <block type="when_run">
           <next>
             <block type="gamelab_setBackground">
@@ -118,7 +98,8 @@
                         </block>
                       </value>
                       <next>
-                        <block type="gamelab_addBehaviorSimple">
+                        <block type="adaptations_toggleBehaviorSimple">
+                          <field name="TOGGLE">"begins"</field>
                           <value name="SPRITE">
                             <block type="gamelab_allSpritesWithAnimation">
                               <field name="ANIMATION">"cuteanimals_fox_hello"</field>
@@ -138,6 +119,27 @@
               </next>
             </block>
           </next>
+        </block>
+        <block type="behavior_definition" editable="false" uservisible="false" usercreated="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+          </mutation>
+          <field name="NAME" id="mystery behavior">mystery behavior</field>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy" uservisible="false">
+              <field name="PROPERTY">"scale"</field>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" uservisible="false">
+                  <field name="VAR">this sprite</field>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_number" uservisible="false">
+                  <field name="NUM">3</field>
+                </block>
+              </value>
+            </block>
+          </statement>
         </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
           <mutation>
