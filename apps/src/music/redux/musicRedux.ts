@@ -28,6 +28,10 @@ interface MusicState {
   showInstructions: boolean;
   instructionsPosition: InstructionsPosition;
   isBeatPadShowing: boolean;
+  // TODO: Currently Music Lab is the only Lab that uses
+  // this progres system, but in the future, we may want to
+  // move this into a more generic, high-level, lab-agnostic
+  // reducer.
   currentProgressState: ProgressState;
 }
 
