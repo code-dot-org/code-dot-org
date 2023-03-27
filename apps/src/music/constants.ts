@@ -1,4 +1,11 @@
-export const Triggers = [
+export interface Trigger {
+  id: string;
+  dropdownLabel: string;
+  buttonLabel: string;
+  keyboardKey: string;
+}
+
+export const Triggers: Trigger[] = [
   {
     id: 'trigger1',
     dropdownLabel: '1',
