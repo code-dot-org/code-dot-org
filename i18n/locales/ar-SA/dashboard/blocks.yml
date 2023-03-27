@@ -1066,6 +1066,8 @@ ar:
         text: تجنب الأهداف
       gamelab_beginCollectingData:
         text: البدء في جمع قيمة {BREAK} البيانات  {VALUE} مع تسمية {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} الارتدادات {TARGET}"
       gamelab_changePropBy:
@@ -1634,6 +1636,10 @@ ar:
         text: x إحداثيات {SPRITE}
       gamelab_yLocationOf:
         text: إحداثيات Y من {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} الانتقال إلى {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: الشقلبة
       Mikelab_addBehaviorSimple:
         text: العفريت {SPRITE} يبدا {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2205,8 +2211,6 @@ ar:
         text: اتجه إلى اليسار
       RyanLab_turnRight:
         text: اتجه إلى اليمين
-      SpriteLab2Beta_spriteSay:
-        text: العفريت {SPRITE} اقول {TEXT} من أجل {SECONDS} ثانيه
       Vector_createSpriteWith:
         text: |-
           إنشاء العفريت
@@ -2264,6 +2268,8 @@ ar:
             new Behavior(jittering, []): الاهتزاز
             new Behavior(wandering, []): التحرك
             new Behavior(patrolling, []): التجوُّل
+      adaptations_startFollowing:
+        text: "{SPRITE} يبدأ في متابعة {TARGET}"
       binary_drawBin:
         text: رسم ثنائي {BIN}
       binary_drawBinScreen:
@@ -2420,5 +2426,3 @@ ar:
         text: ضبط عنوان {HEADING}
       storylab_setSubheading:
         text: ضبط عنوان فرعي  {SUBHEADING}
-      validation_validatedBackground:
-        text: تعيين الخلفية إلى {IMG}

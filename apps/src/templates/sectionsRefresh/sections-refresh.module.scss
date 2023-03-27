@@ -91,6 +91,11 @@
   margin: 10px 10px 0 5px;
 }
 
+.toolTipContainer {
+  display: flex;
+  align-items: center;
+}
+
 .celebrationDialogBody {
   padding: 36px;
   font: $barlowSemiCondensed-medium;

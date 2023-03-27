@@ -121,6 +121,7 @@ pt:
           description: Aprenda programação funcional com álgebra
           description_short: Aprenda programação funcional com álgebra
           student_description: Aprenda programação funcional com álgebra
+          name: álgebra
         infinity:
           title: Laboratório Infinito Disney
           description: Use o Laboratório para criar uma história ou um jogo usando
@@ -140,6 +141,10 @@ pt:
             de programação usados no Code.org CS em álgebra
         K5PD:
           title: Desenvolvimento profissional para o Ensino Fundamental
+          description: 'Para obter os mais recentes recursos on-line de desenvolvimento
+            profissional para professores do ensino fundamental, aqui: <https://studio.code.org/s/k5-onlinepd>'
+          student_description: 'Para obter os mais recentes recursos on-line de desenvolvimento
+            profissional para professores do ensino fundamental, aqui: <https://studio.code.org/s/k5-onlinepd>'
         netsim:
           title: Simulador de internet
           description: Aprenda como a Internet funciona
@@ -251,11 +256,17 @@ pt:
           description: Em parceria com o Projeto GUTS
           description_short: Em parceria com o Projeto GUTS
           student_description: Em parceria com o Projeto GUTS
+          name: ECSPD
         sciencePD:
           title: DP da ciência da computação na ciência
           description: Em parceria com o Projeto GUTS
           description_short: Em parceria com o Projeto GUTS
           student_description: Em parceria com o Projeto GUTS
+        rbo-reference:
+          title: referência robóloga
+          description: referência robóloga
+          description_short: referência robóloga
+          student_description: referência robóloga
         Test Wednesday:
           title: Teste quarta-feira
           description: Teste quarta-feira
@@ -321,6 +332,9 @@ pt:
           student_description: Em parceria com o Projeto GUTS
         sciencePD2:
           title: DP da ciência da computação na ciência
+          description: Estudo de verão combinado on-line da fase 2
+          description_short: Estudo de verão combinado on-line da fase 2
+          student_description: Estudo de verão combinado on-line da fase 2
         sciencePD3:
           title: DP da ciência da computação na ciência
           description: Suporte ao Ano Acadêmico - Semestre 1
@@ -352,12 +366,19 @@ pt:
           description: Todos os tipos de nível para testar UI
           description_short: Todos os tipos de nível para testar UI
           student_description: Todos os tipos de nível para testar UI
+          name: todas as coisas
         algebraPD2b:
           title: Ciência da computação em álgebra PD
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           student_description: 'Fase 2 - on-line: combinado de estudos de verão'
+        cspfacilitator:
+          title: 'Workshop para facilitadores de princípios de CS '
+          description: Níveis online para workshop de PD
+          description_short: Níveis online para workshop de PD
+          student_description: Níveis online para workshop de PD
         K5-OnlinePD:
+          title: Ensino de Fundamentos da Ciência da Computação (2017)
           description: Aprenda a ensinar ciência da computação usando os Fundamentos
             de Ciência da Computação da Code.org com este curso on-line gratuito e
             individualizado.
@@ -367,7 +388,9 @@ pt:
           student_description: Aprenda a ensinar ciência da computação usando os Fundamentos
             de Ciência da Computação da Code.org com este curso on-line gratuito e
             individualizado.
+          name: K5 - PDF online
         ECSPD2:
+          title: 'Explorando o PD em Ciência da Computação: estudo combinado de verão'
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           student_description: 'Fase 2 - on-line: combinado de estudos de verão'
@@ -375,15 +398,21 @@ pt:
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           student_description: 'Fase 2 - on-line: combinado de estudos de verão'
+        science-PD2:
+          description: Estudo de verão combinado on-line da fase 2
+          description_short: Estudo de verão combinado on-line da fase 2
+          student_description: Estudo de verão combinado on-line da fase 2
         sciencePD2b-iZone:
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           student_description: 'Fase 2 - on-line: combinado de estudos de verão'
         ECSPD2-iZone:
+          title: 'Explorando o PD em Ciência da Computação: estudo combinado de verão'
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           student_description: 'Fase 2 - on-line: combinado de estudos de verão'
         ECSPD2-NexTech:
+          title: 'Explorando o PD em Ciência da Computação: estudo combinado de verão'
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           student_description: 'Fase 2 - on-line: combinado de estudos de verão'
@@ -475,28 +504,105 @@ pt:
           student_description: Aprenda como a Inteligência Artificial e aprendizado
             de máquina pode ser usado para resolver problemas mundiais.
           name: oceanos
+        CSPPD3-Unit3-pt2:
+          title: 'Princípios da Ciência da Computação: Desafios do PD da Unidade'
+          description: Exploração on-line da Unidade 3 do CSP - Desafios da aula
+          description_short: Exploração on-line da Unidade 3 do CSP - Desafios da
+            aula
+          student_description: Exploração on-line da Unidade 3 do CSP - Desafios da
+            aula
+        ScienceP3OLPT3:
+          title: Ciência da Computação em Ciência PD Pré-Fase 3B
         cspunit5:
+          title: "(antiga) Princípios de CS, Unidade 5 - Tarefas de desempenho"
+          description: Esta unidade aborda a preparação e a conclusão das tarefas
+            de exploração e criação de desempenho.
           description_short: Programação
+          student_description: Esta unidade aborda a preparação e a conclusão das
+            tarefas de exploração e criação de desempenho.
         cspunit4:
+          title: "(antiga) Unidade 4 de Princípios de CS - Dados"
+          description: Ser capaz de manipular dados digitalmente, visualizá-los e
+            identificar padrões, tendências e possíveis significados são habilidades
+            práticas importantes que os cientistas da computação usam todos os dias.
+            O mundo rico em dados em que vivemos também introduz muitas questões complexas
+            relacionadas a políticas públicas, leis, ética e impacto social. Entender
+            de onde vêm os dados, ter intuições sobre o que poderia ser aprendido
+            ou extraído deles e ser capaz de usar ferramentas computacionais para
+            manipular dados e se comunicar sobre eles são as principais habilidades
+            abordadas na unidade.
           description_short: Programação
+          student_description: Ser capaz de manipular dados digitalmente, visualizá-los
+            e identificar padrões, tendências e possíveis significados são habilidades
+            práticas importantes que os cientistas da computação usam todos os dias.
+            O mundo rico em dados em que vivemos também introduz muitas questões complexas
+            relacionadas a políticas públicas, leis, ética e impacto social. Entender
+            de onde vêm os dados, ter intuições sobre o que poderia ser aprendido
+            ou extraído deles e ser capaz de usar ferramentas computacionais para
+            manipular dados e se comunicar sobre eles são as principais habilidades
+            abordadas na unidade.
+        CSPPD3-Unit4:
+          title: 'Princípios da Ciência da Computação: Unidade 4 PD'
+          description: Suporte on-line para CSP Unit 4
+          description_short: Suporte para a Unidade 4 do CSP
+          student_description: Suporte on-line para CSP Unit 4
+        cspunit6draft:
+          title: Material CSP Post-AP - Bancos de dados e uso de dados em seus aplicativos
+          description: O App Lab tem várias ferramentas que permitem coletar e usar
+            dados em seus aplicativos. O material a seguir fornece uma visão geral
+            de como essas ferramentas funcionam e termina com uma amostra de exemplos
+            de projetos que podem ser criados usando essas ferramentas.
+          description_short: Aplicativos de dados
+          student_description: O App Lab tem várias ferramentas que permitem coletar
+            e usar dados em seus aplicativos. O material a seguir fornece uma visão
+            geral de como essas ferramentas funcionam e termina com uma amostra de
+            exemplos de projetos que podem ser criados usando essas ferramentas.
+        CSPPD3-Unit5:
+          title: 'Princípios da Ciência da Computação: Unidade 5 PD'
+          description: Suporte on-line para CSP Unit 5
+          description_short: Suporte para a Unidade 5 do CSP
+          student_description: Suporte on-line para CSP Unit 5
         cspunit6:
+          title: Material CSP Post-AP - Bancos de dados e uso de dados em seus aplicativos
+          description: O App Lab tem várias ferramentas que permitem coletar e usar
+            dados em seus aplicativos. O material a seguir fornece uma visão geral
+            de como essas ferramentas funcionam, uma amostra de exemplos de projetos
+            que podem ser construídos usando essas ferramentas e um espaço para criar
+            e enviar um projeto final.
           description_short: Aprenda a coletar e usar dados em aplicativos do App
             Lab.
+          student_description: O App Lab tem várias ferramentas que permitem coletar
+            e usar dados em seus aplicativos. O material a seguir fornece uma visão
+            geral de como essas ferramentas funcionam, uma amostra de exemplos de
+            projetos que podem ser construídos usando essas ferramentas e um espaço
+            para criar e enviar um projeto final.
         AlgebraA:
+          title: 'Ciência da Computação em Álgebra: Curso A'
           description: Aprenda programação funcional com álgebra
           description_short: Aprenda programação funcional com álgebra
           student_description: Aprenda programação funcional com álgebra
+          name: Álgebra A
         AlgebraB:
           title: Ciência da computação em álgebra
           description: Aprenda programação funcional com álgebra
           description_short: Aprenda programação funcional com álgebra
           student_description: Aprenda programação funcional com álgebra
+          name: Álgebra
+        gamelab-hackathon:
+          title: Hackathon da Gamelab
+          description: Um lugar para experimentar coisas no Game Lab
+          description_short: Hackathon da Gamelab
+          student_description: Um lugar para experimentar coisas no Game Lab
         algebraPD1:
+          title: CS em Álgebra, Parte 1
           description: Ensine álgebra com programação funcional
           description_short: Em parceria com o Projeto GUTS
           student_description: Ensine álgebra com programação funcional
         algebraPD3c:
           title: Ciência da computação em álgebra PD
+          description: 'CS em álgebra: reflexão de fim de ano'
+          description_short: 'CS em álgebra: reflexão de fim de ano'
+          student_description: 'CS em álgebra: reflexão de fim de ano'
         csp1-2017:
           title: CSP Unidade 1 - A Internet ('17 -'18)
           description: Esta unidade explora os desafios e questões técnicas que surgem
@@ -547,6 +653,10 @@ pt:
             na unidade.
         csp3-2017:
           title: CSP Unidade 3 - Programação
+          description: |-
+            Esta unidade apresenta os conceitos fundamentais da programação de computadores, o que libera a capacidade de criar aplicativos ricos e interativos. Este curso usa JavaScript como linguagem de programação e App Lab como ambiente de programação para criar aplicativos, mas os conceitos aprendidos nessas lições abrangem todas as linguagens e ferramentas de programação.
+
+            Esta unidade foi atualizada pela última vez em 30 de outubro de 2017. Leia mais sobre as atualizações do currículo em forum.code.org/c/csp/updates.
           description_short: Programação
           lesson_groups:
             csp3_1:
@@ -555,8 +665,16 @@ pt:
               display_name: Avaliação do Capítulo
             cspSurvey:
               display_name: Questionário
+          student_description: |-
+            Esta unidade apresenta os conceitos fundamentais da programação de computadores, o que libera a capacidade de criar aplicativos ricos e interativos. Este curso usa JavaScript como linguagem de programação e App Lab como ambiente de programação para criar aplicativos, mas os conceitos aprendidos nessas lições abrangem todas as linguagens e ferramentas de programação.
+
+            Esta unidade foi atualizada pela última vez em 30 de outubro de 2017. Leia mais sobre as atualizações do currículo em forum.code.org/c/csp/updates.
         csp4-2017:
           title: CSP Unidade 4 do - Big Data e Privacidade ('17 -'18)
+          description: |-
+            O mundo rico em dados em que vivemos apresenta muitas questões complexas relacionadas a políticas públicas, leis, ética e impacto social. Os objetivos desta unidade são desenvolver uma visão completa e equilibrada sobre os dados no mundo, incluindo os efeitos positivos e negativos deles, e entender os fundamentos de como e por que a criptografia moderna funciona.
+
+            Esta unidade foi atualizada pela última vez em novembro de 2017. Leia mais sobre as atualizações do currículo em forum.code.org/c/csp/updates.
           description_short: Explore o mundo rico em dados em que vivemos e como os
             dados afetam as políticas públicas, a privacidade pessoal, a segurança,
             a lei e a ética.
@@ -567,6 +685,10 @@ pt:
               display_name: Avaliação do Capítulo
             cspSurvey:
               display_name: Questionário
+          student_description: |-
+            O mundo rico em dados em que vivemos apresenta muitas questões complexas relacionadas a políticas públicas, leis, ética e impacto social. Os objetivos desta unidade são desenvolver uma visão completa e equilibrada sobre os dados no mundo, incluindo os efeitos positivos e negativos deles, e entender os fundamentos de como e por que a criptografia moderna funciona.
+
+            Esta unidade foi atualizada pela última vez em novembro de 2017. Leia mais sobre as atualizações do currículo em forum.code.org/c/csp/updates.
         csp5-2017:
           title: CSP Unidade 5 - Construindo aplicações ('17 -'18)
           description: Esta unidade continua a introdução de conceitos fundamentais
@@ -590,29 +712,59 @@ pt:
             de programação e o App Lab como ambiente de programação para criar aplicativos,
             mas os conceitos aprendidos nessas lições abrangem todas as linguagens
             e ferramentas de programação.
+        csp6:
+          title: Unidade CSP 6 - Tarefas de desempenho do AP
+          description: Esta unidade aborda a preparação e a conclusão das tarefas
+            de criação e exploração de desempenho.
+          description_short: As aulas orientam os alunos a se prepararem e concluírem
+            as tarefas de desempenho do AP.
+          student_description: Esta unidade aborda a preparação e a conclusão das
+            tarefas de criação e exploração de desempenho.
         CSDU3-Draft:
+          title: " Unidade TEMP CSD 3 - Jogos e animações interativas"
+          description: Local temporário para trabalhar no U3 of Disco
           description_short: Programação
         2016_sciencePD_phase1:
+          title: 'CS em Ciência: Parte 1'
           description: Em parceria com o Projeto GUTS
           description_short: Em parceria com o Projeto GUTS
           student_description: Em parceria com o Projeto GUTS
         TEMP CSD Unit 3:
+          title: " Unidade TEMP CSD 3 - Jogos e animações interativas"
           description_short: Programação
         CSF_Secret_Sample:
+          title: Amostra secreta
+          description: Teste da nova filosofia educacional
+          description_short: Isso é um segredo... shhhhh
           description_audience: 8-18 anos de idade
+          student_description: Teste da nova filosofia educacional
         ECSPD1:
+          title: Parte 1 do ECS
+          description: Introdução de duas horas ao seu Programa de Aprendizagem Profissional
+            para o currículo ECS Versão 5
           description_short: Em parceria com o Projeto GUTS
+          student_description: Introdução de duas horas ao seu Programa de Aprendizagem
+            Profissional para o currículo ECS Versão 5
         algebraFacilitator:
+          title: Pré-trabalho do facilitador de Ciência da Computação em Álgebra
           description: Ensine álgebra com programação funcional
           description_short: Ensine álgebra com programação funcional
           student_description: Ensine álgebra com programação funcional
         sciencePD1:
+          title: 'CS em Ciência: Parte 1'
           description: Em parceria com o Projeto GUTS
           description_short: Em parceria com o Projeto GUTS
           student_description: Em parceria com o Projeto GUTS
         cspoptional:
+          title: Aulas opcionais de princípios de CS
+          description: As aulas e o conteúdo opcionais de todas as unidades de Princípios
+            de CS estão listados aqui.
           description_short: Opcional
+          student_description: As aulas e o conteúdo opcionais de todas as unidades
+            de Princípios de CS estão listados aqui.
         cspunit1-support:
+          title: Suporte on-line para CSP Unit 1
+          description: Este é um curso de aprendizagem profissional de teste
           lesson_groups:
             required:
               display_name: Visão geral
@@ -620,7 +772,9 @@ pt:
               display_name: Conteúdo
             practice:
               display_name: Práticas de ensino
+          student_description: Este é um curso de aprendizagem profissional de teste
         test-teaching-ap-cs-unit-1:
+          title: Teste CPS PD
           lesson_groups:
             required:
               display_name: Visão geral
@@ -628,6 +782,26 @@ pt:
               display_name: Conteúdo
             practice:
               display_name: Práticas de ensino
+        allthehiddenthings:
+          title: Todas as coisas escondidas!
+          description: Tipos de níveis não lançados para testes de interface de usuário
+            como administrador
+          description_short: Tipos de níveis não lançados para testes de interface
+            de usuário como administrador
+          student_description: Tipos de níveis não lançados para testes de interface
+            de usuário como administrador
+        cspunit1-support-test:
+          title: 'CSP Unidade 1: apoio ao professor'
+          description: Suporte on-line para CSP Unit 1
+          student_description: Suporte on-line para CSP Unit 1
+        cspunit1-tools:
+          title: conclusão da tarefa netsim
+          description: introdução ao simulador de internet e uma discussão sobre como
+            o usamos para ensinar a internet
+          student_description: introdução ao simulador de internet e uma discussão
+            sobre como o usamos para ensinar a internet
+        csp-facilitators:
+          title: Visão geral da ferramenta CSP
         cspexam1-mWU7ilDYM9:
           description_short: Esta avaliação de múltipla escolha cobre questões de
             7 grandes ideias da ciência da computação. É a parte 1 de duas partes
@@ -813,6 +987,8 @@ pt:
             versão do Minecraft.
           student_description: Crie animais e outras criaturas de Minecraft em sua
             própria versão do Minecraft.
+        flappy-impact-study:
+          title: Flappy Code com pesquisa
         coursea-draft:
           title: 'Fundamentos de Ciência da Computação: Curso A'
           description_short: Uma introdução à ciência da computação para novos leitores.
@@ -896,11 +1072,21 @@ pt:
             ('17 -'18)
           description_short: Aprenda a coletar e usar dados em aplicativos do App
             Lab.
+          description: O App Lab tem várias ferramentas que permitem coletar e usar
+            dados em seus aplicativos. O material a seguir fornece uma visão geral
+            de como essas ferramentas funcionam, uma amostra de exemplos de projetos
+            que podem ser construídos usando essas ferramentas e um espaço para criar
+            e enviar um projeto final.
           lesson_groups:
             content:
               display_name: Conteúdo
             cspSurvey:
               display_name: Questionário
+          student_description: O App Lab tem várias ferramentas que permitem coletar
+            e usar dados em seus aplicativos. O material a seguir fornece uma visão
+            geral de como essas ferramentas funcionam, uma amostra de exemplos de
+            projetos que podem ser construídos usando essas ferramentas e um espaço
+            para criar e enviar um projeto final.
         csd6-draft:
           title: CSD Unit 6 Revisions Draft
           lesson_groups:
@@ -5717,6 +5903,10 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         hello-world-space-2022:
           title: 'Olá, Mundo: Espaço'
         hello-world-soccer-2022:
@@ -5898,3 +6088,187 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Capítulo 1
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: laços
+            csf_events:
+              display_name: Eventos
+          description_short: 'Uma introdução à ciência da computação para pré-leitores:
+            combina o melhor do nosso jardim de infância e cursos de primeira série.'
+          description_audience: 'Idades: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_sprites:
+              display_name: Sprite
+            lessonGroup-9:
+              display_name: Eventos
+            csf_loops:
+              display_name: laços
+            csf_conditionals:
+              display_name: Condições
+            csf_functions:
+              display_name: funções
+            csf_variables:
+              display_name: variáveis
+            csf_for_loops:
+              display_name: Laços para
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
+          description_short: 'Uma introdução à ciência da computação: combina o melhor
+            do nosso currículo do ensino fundamental para alunos mais velhos.'
+          description_audience: 9-18 anos de idade
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: laços
+            csf_events:
+              display_name: Eventos
+            lessonGroup-5:
+              display_name: Projeto de Fim do Curso
+          student_description: Aprenda o básixo de Ciências da Computação e segurança
+            na internet. No final deste curso, você irá irá seu próprio jogo ou história,
+            que poderá ser compartilhada.
+          description_short: Uma introdução à ciência da computação para pré-leitores.
+          description_audience: 'Idade: de 4 a 7 anos'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: laços
+            csf_impacts:
+              display_name: Impacto da computação
+            csf_events:
+              display_name: Eventos
+            lessonGroup-6:
+              display_name: Projeto de Fim do Curso
+          student_description: Aprenda o básixo de Ciências da Computação e segurança
+            na internet. No final deste curso, você irá irá seu próprio jogo ou história,
+            que poderá ser compartilhada.
+          description_short: Uma introdução à ciência da computação na alfabetização
+            Semelhante ao curso A, mas com conceitos mais aprofundados.
+          description_audience: 'Idades: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: laços
+            csf_events:
+              display_name: Eventos
+            csf_data:
+              display_name: Dados
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
+          student_description: Crie programas com sequenciamento, loops e eventos.
+            Traduza suas iniciais em binário, investigue diferentes técnicas de solução
+            de problemas e aprenda a responder ao cyberbullying. No final do curso,
+            crie seu próprio jogo ou história que você pode compartilhar!
+          description_short: Aprenda o básico da ciência da computação e crie sua
+            própria arte, histórias e jogos.
+          description_audience: 'Idades: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: laços
+            csf_conditionals:
+              display_name: Condições
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
+          title: Curso D (2021)
+          description_short: Aprenda sobre declarações condicionais. Crie sua própria
+            arte, jogos e até uma festa de dança.
+          description_audience: 'Idades: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sprites:
+              display_name: Sprite
+            ramp_up:
+              display_name: Laços aninhados
+            csf_functions:
+              display_name: funções
+            csf_nested_loops:
+              display_name: Condições
+            lessonGroup-7:
+              display_name: Impacto da computação
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
+          description_audience: De 8 a 12 anos
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Imagens e Amimações'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Construindo Jogos'
+          student_description: " Na Unidade 3, você aproveitará sua experiência de
+            codificação ao programar animações, arte interativa e jogos no Laboratório
+            de Jogos. A unidade começa com formas simples e cria jogos sofisticados
+            baseados em sprites, usando os mesmos conceitos de programação e o processo
+            de design que os cientistas da computação usam diariamente. No projeto
+            final, você desenvolverá um programa interativo personalizado."
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Desenho orientado ao usuário'
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Prototipando o App'
+          student_description: A unidade 4 apresenta os impactos sociais mais amplos
+            da computação. Através de uma série de desafios de design, você aprenderá
+            a entender melhor as necessidades de outras pessoas enquanto desenvolve
+            uma solução para um problema. A segunda metade da unidade consiste em
+            um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade
+            de identificar uma necessidade com a qual se preocupam, protótipos de
+            soluções tanto no papel quanto no App Lab e testam soluções com usuários
+            reais para obter feedback e avançar iteração.
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representando Informação'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Resolvendo problemas de dados'
+          description_short: Aprenda como as pessoas usam computadores para resolver
+            problemas de dados.
+          student_description: A unidade 5 trata da importância dos dados na solução
+            de problemas e destaca como os computadores podem ajudar nesse processo.
+            O primeiro capítulo explora os diferentes sistemas usados ​​para representar
+            informações em um computador e os desafios e as vantagens e desvantagens
+            do uso deles. No segundo capítulo, você aprenderá como as coleções de
+            dados são usadas para resolver problemas e como os computadores ajudam
+            a automatizar as etapas desse processo. O capítulo conclui considerando
+            como o processo de solução de problemas de dados pode ser aplicado a uma
+            área de sua escolha.
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introdução Laboratório de Aplicativos
+            lessonGroup-3:
+              display_name: Capítulo 1
+            lessonGroup-4:
+              display_name: Capítulo 2

@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
+import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
 import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
+import style from './sections-refresh.module.scss';
 
 export default function AdvancedSettingToggles({
   updateSection,
@@ -34,35 +36,59 @@ export default function AdvancedSettingToggles({
 
   return (
     <div>
-      <ToggleSwitch
-        id={'uitest-pair-toggle'}
-        isToggledOn={section.pairingAllowed}
-        onToggle={e => {
-          handlePairProgrammingToggle(e);
-        }}
-        label={i18n.pairProgramming()}
-      />
-      <ToggleSwitch
-        id={'uitest-lock-toggle'}
-        isToggledOn={section.restrictSection}
-        onToggle={e => handleLockSectionToggle(e)}
-        label={i18n.restrictSectionAccess()}
-      />
-      {assignedUnitTextToSpeechEnabled && (
+      <div className={style.toolTipContainer}>
         <ToggleSwitch
-          id={'uitest-tts-toggle'}
-          isToggledOn={section.ttsAutoplayEnabled}
-          onToggle={e => handleTtsAutoplayEnabledToggle(e)}
-          label={i18n.enableTtsAutoplay()}
+          id={'uitest-pair-toggle'}
+          isToggledOn={section.pairingAllowed}
+          onToggle={e => {
+            handlePairProgrammingToggle(e);
+          }}
+          label={i18n.pairProgramming()}
         />
+        <InfoHelpTip
+          id={'pair-toggle-info'}
+          content={i18n.explainPairProgramming()}
+        />
+      </div>
+      <div className={style.toolTipContainer}>
+        <ToggleSwitch
+          id={'uitest-lock-toggle'}
+          isToggledOn={section.restrictSection}
+          onToggle={e => handleLockSectionToggle(e)}
+          label={i18n.restrictSectionAccess()}
+        />
+        <InfoHelpTip
+          id={'lock-toggle-info'}
+          content={i18n.explainRestrictedSectionEmailToolTip()}
+        />
+      </div>
+      {assignedUnitTextToSpeechEnabled && (
+        <div className={style.toolTipContainer}>
+          <ToggleSwitch
+            id={'uitest-tts-toggle'}
+            isToggledOn={section.ttsAutoplayEnabled}
+            onToggle={e => handleTtsAutoplayEnabledToggle(e)}
+            label={i18n.enableTtsAutoplayToggle()}
+          />
+          <InfoHelpTip
+            id={'tts-toggle-info'}
+            content={i18n.explainTtsAutoplayToolTip()}
+          />
+        </div>
       )}
       {assignedUnitLessonExtrasAvailable && (
-        <ToggleSwitch
-          id={'uitest-lesson-extras-toggle'}
-          isToggledOn={section.lessonExtras}
-          onToggle={e => handleLessonExtrasToggle(e)}
-          label={i18n.enableLessonExtras()}
-        />
+        <div className={style.toolTipContainer}>
+          <ToggleSwitch
+            id={'uitest-lesson-extras-toggle'}
+            isToggledOn={section.lessonExtras}
+            onToggle={e => handleLessonExtrasToggle(e)}
+            label={i18n.enableLessonExtrasToggle()}
+          />
+          <InfoHelpTip
+            id={'lesson-extras-toggle-info'}
+            content={i18n.explainLessonExtrasToolsTip()}
+          />
+        </div>
       )}
     </div>
   );

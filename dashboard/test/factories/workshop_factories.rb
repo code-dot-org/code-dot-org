@@ -259,6 +259,21 @@ FactoryBot.define do
         capacity 35          # Average capacity
       end
       factory(:csd_summer_workshop) {csd}
+
+      trait :csd_virtual do
+        course Pd::Workshop::COURSE_CSD
+        subject Pd::Workshop::SUBJECT_VIRTUAL_KICKOFF
+        virtual true
+        capacity 35          # Average capacity
+      end
+      factory(:csd_virtual_workshop) {csd_virtual}
+
+      trait :csa do
+        course Pd::Workshop::COURSE_CSA
+        subject Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP
+        capacity 35          # Average capacity
+      end
+      factory(:csa_summer_workshop) {csa}
     end
 
     factory :facilitator_workshop do

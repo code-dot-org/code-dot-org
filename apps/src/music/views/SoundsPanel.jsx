@@ -98,32 +98,30 @@ const SoundsPanel = ({
   onSelect,
   onPreview
 }) => {
-  const group = library.groups[0];
+  const folders = library.getAllowedSounds(undefined);
 
   return (
     <div className={styles.soundsPanel}>
-      {group.folders
-        .filter(folder => folder.type !== 'kit' && folder.type !== 'instrument')
-        .map((folder, folderIndex) => {
-          return (
-            <div className={styles.folder} key={folderIndex}>
-              <div className={styles.folderName}>{folder.name}</div>
-              {folder.sounds.map((sound, soundIndex) => {
-                return (
-                  <SoundsPanelRow
-                    key={soundIndex}
-                    currentValue={currentValue}
-                    playingPreview={playingPreview}
-                    folder={folder}
-                    sound={sound}
-                    onSelect={onSelect}
-                    onPreview={onPreview}
-                  />
-                );
-              })}
-            </div>
-          );
-        })}
+      {folders.map((folder, folderIndex) => {
+        return (
+          <div className={styles.folder} key={folderIndex}>
+            <div className={styles.folderName}>{folder.name}</div>
+            {folder.sounds.map((sound, soundIndex) => {
+              return (
+                <SoundsPanelRow
+                  key={soundIndex}
+                  currentValue={currentValue}
+                  playingPreview={playingPreview}
+                  folder={folder}
+                  sound={sound}
+                  onSelect={onSelect}
+                  onPreview={onPreview}
+                />
+              );
+            })}
+          </div>
+        );
+      })}
     </div>
   );
 };

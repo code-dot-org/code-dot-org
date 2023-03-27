@@ -1745,8 +1745,6 @@ fi:
         text: käänny vasempaan
       RyanLab_turnRight:
         text: käänny oikeaan
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} sanoo {TEXT} {SECONDS} sekuntia
       Vector_createSpriteWith:
         text: |-
           luoda sprite
@@ -1942,5 +1940,3 @@ fi:
             '"hearts"': sydämet
             '"rain"': sade
             '"starburst"': Tähtisäteet
-      validation_validatedBackground:
-        text: aseta tausta {IMG}
