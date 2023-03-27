@@ -50,7 +50,7 @@
     "parent_level_id": 20396,
     "name_suffix": "_mb2022",
     "reference_links": [
-      "/courses/csd-2022/guides/responding-to-user-input"
+      "/courses/csd-2022/guides/microbit-overview"
     ],
     "mini_rubric": "false",
     "text_mode_at_start": "false",
@@ -70,7 +70,7 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:44:44.754+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - P_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - P_2222\"},{\"changed_at\":\"2023-02-03 20:30:50 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"palette_category_at_start\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-03 20:34:11 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-13 22:48:37 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"hide_view_data_button\",\"start_blocks\",\"start_html\",\"map_reference\",\"teacher_markdown\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:44:44.754+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - P_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - P_2222\"},{\"changed_at\":\"2023-02-03 20:30:50 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"palette_category_at_start\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-03 20:34:11 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-13 22:48:37 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"hide_view_data_button\",\"start_blocks\",\"start_html\",\"map_reference\",\"teacher_markdown\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-27 20:39:29 +0000\",\"changed\":[\"reference_links\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
