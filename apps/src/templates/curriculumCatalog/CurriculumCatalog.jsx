@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
-import styleConstants from '@cdo/apps/styleConstants';
+import '../../../style/code-studio/curriculum_catalog.scss';
 import HeaderBanner from '../HeaderBanner';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
 
@@ -39,7 +39,7 @@ class CurriculumCatalog extends Component {
           />
         </div>
         <div className={'contentContainer'}>
-          <div className={'content'} style={styles.content}>
+          <div className={'content'}>
             {this.props.curriculaData.map(curriculum => (
               <li key={curriculum.key}>{curriculum.display_name}</li>
             ))}
@@ -49,11 +49,5 @@ class CurriculumCatalog extends Component {
     );
   }
 }
-
-const styles = {
-  content: {
-    maxWidth: styleConstants['content-width']
-  }
-};
 
 export default CurriculumCatalog;

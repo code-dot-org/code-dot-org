@@ -452,23 +452,6 @@ img.video_thumbnail {
   }
 }
 
-#curriculum-catalog-container {
-  #header-banner {
-    background-color: $darkest_gray;
-  }
-
-  .contentContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: 16px;
-
-    .content {
-      width: 100%;
-      margin: 0 16px;
-    }
-  }
-}
-
 .sign_in.show_only_on_mobile {
   float: right;
   margin-bottom: 10px;
