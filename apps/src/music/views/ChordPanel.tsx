@@ -7,7 +7,7 @@ const FontAwesome = require('../../templates/FontAwesome');
 const moduleStyles = require('./chordPanel.module.scss').default;
 const classNames = require('classnames');
 
-const NUM_OCTAVES = 2;
+const NUM_OCTAVES = 3;
 const START_OCTAVE = 4;
 const MAX_NOTES = 16;
 
@@ -251,7 +251,7 @@ const NoteGrid: React.FunctionComponent<NoteGridProps> = ({
 
   let notes: any = [];
 
-  let renderNotes : any;
+  let renderNotes: any;
 
   if (playStyle === 'arpeggio-up') {
     renderNotes = [...selectedNotes].sort();
@@ -285,8 +285,8 @@ const NoteGrid: React.FunctionComponent<NoteGridProps> = ({
           <div
             className={moduleStyles.gridNote}
             style={{
-              bottom: ((note.pitch - START_OCTAVE * 12) * 105) / 12,
-              left: note.tick * 14
+              bottom: ((note.pitch - START_OCTAVE * 12) * 110) / 3 / 13,
+              left: ((note.tick - 1) * 315) / 16
             }}
           >
             &nbsp;
