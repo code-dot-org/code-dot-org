@@ -1,11 +1,11 @@
-@import "./theme/tokens-dark.scss";
+@import "color.scss";
 
 .chordPanelContainer {
   display: flex;
   flex-direction: column;
-  background-color: $gray-500;
+  background-color: $neutral_dark50;
   align-items: center;
-  border: 2px solid $gray-100;
+  border: 2px solid $neutral_dark10;
   border-radius: 4px;
   padding: 5px;
 
@@ -33,11 +33,11 @@
       }
 
       &Disabled {
-        color: $gray-400;
+        color: $neutral_dark40;
         cursor: not-allowed;
 
         &:hover {
-          color: $gray-400;
+          color: $neutral_dark40;
         }
       }
     }
@@ -78,11 +78,11 @@
       }
 
       &.disabled {
-        background-color: $gray-600;
+        background-color: $neutral_dark60;
         cursor: not-allowed;
 
         &:hover {
-          background-color: $gray-600;
+          background-color: $neutral_dark60;
         }
       }
 
@@ -94,7 +94,7 @@
       .noteLabel {
         text-align: center;
         margin-top: 120px;
-        color: $gray-800;
+        color: $neutral_dark80;
         font-size: 12px;
         user-select: none;
       }

@@ -6,9 +6,7 @@ require_relative '../cdo/regexp'
 require_relative '../cdo/geocoder'
 
 module PegasusFormValidation
-  private
-
-  def csv_multivalue(value)
+  private def csv_multivalue(value)
     return value if value.class == FieldError
     begin
       CSV.parse_line(value.to_s) || []
@@ -17,13 +15,13 @@ module PegasusFormValidation
     end
   end
 
-  def default_if_empty(value, default_value)
+  private def default_if_empty(value, default_value)
     return value if value.class == FieldError
     return default_value if value.blank?
     value
   end
 
-  def downcased(value)
+  private def downcased(value)
     return value if value.class == FieldError
     if value.is_a?(Enumerable)
       value.map {|i| i.to_s.downcase}
@@ -32,13 +30,13 @@ module PegasusFormValidation
     end
   end
 
-  def enum(value, allowed)
+  private def enum(value, allowed)
     return value if value.class == FieldError
     return FieldError.new(value, :invalid) unless allowed.include?(value)
     value
   end
 
-  def integer(value)
+  private def integer(value)
     return value if value.class == FieldError
     return nil if value.blank?
 
@@ -49,20 +47,20 @@ module PegasusFormValidation
     i_value
   end
 
-  def nil_if_empty(value)
+  private def nil_if_empty(value)
     return value if value.class == FieldError
     return nil if value.blank?
     value
   end
 
-  def required(value)
+  private def required(value)
     return value if value.class == FieldError
     return value if value.is_a? Integer
     return FieldError.new(value, :required) if value.blank?
     value
   end
 
-  def stripped(value)
+  private def stripped(value)
     return value if value.class == FieldError
     if value.is_a?(Enumerable)
       value.map {|i| i.to_s.strip}
@@ -71,13 +69,13 @@ module PegasusFormValidation
     end
   end
 
-  def uploaded_file(value)
+  private def uploaded_file(value)
     return value if value.class == FieldError
     return nil if value.blank?
     AWS::S3.upload_to_bucket('cdo-form-uploads', value[:filename], File.open(value[:tempfile]))
   end
 
-  def email_address(value)
+  private def email_address(value)
     return value if value.class == FieldError
     email = downcased stripped value
     return nil if email.blank?
@@ -85,7 +83,7 @@ module PegasusFormValidation
     email
   end
 
-  def zip_code(value)
+  private def zip_code(value)
     return value if value.class == FieldError
     value = stripped value
     return nil if value.blank?
@@ -96,13 +94,13 @@ module PegasusFormValidation
     value
   end
 
-  def confirm_match(value, value2)
+  private def confirm_match(value, value2)
     return value if value.class == FieldError
     return FieldError.new(value, :mismatch) if value != value2
     value
   end
 
-  def us_phone_number(value)
+  private def us_phone_number(value)
     return value if value.class == FieldError
     value = stripped value
     return nil if value.blank?
@@ -110,7 +108,7 @@ module PegasusFormValidation
     RegexpUtils.extract_us_phone_number_digits(value)
   end
 
-  def data_to_errors(data)
+  private def data_to_errors(data)
     errors = {}
 
     data.each_pair do |key, value|
@@ -128,7 +126,7 @@ module PegasusFormValidation
     errors
   end
 
-  def validate_form(kind, data, logger = nil)
+  private def validate_form(kind, data, logger = nil)
     data = Object.const_get(kind).normalize(data)
 
     errors = data_to_errors(data)

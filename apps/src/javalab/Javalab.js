@@ -10,7 +10,6 @@ import javalab, {
   setAllValidation,
   setDisplayTheme,
   appendOutputLog,
-  setBackpackApi,
   setIsStartMode,
   setLevelName,
   appendNewlineToConsoleLog,
@@ -36,7 +35,6 @@ import TheaterVisualizationColumn from './theater/TheaterVisualizationColumn';
 import Theater from './theater/Theater';
 import {CsaViewMode, ExecutionType, InputMessageType} from './constants';
 import {getDisplayThemeFromString} from './DisplayTheme';
-import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
@@ -44,6 +42,8 @@ import {
 } from '../containedLevels';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
+import {BackpackAPIContext} from './BackpackAPIContext';
+import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -286,10 +286,9 @@ Javalab.prototype.init = function(config) {
   const backpackEnabled = !!config.backpackEnabled;
   getStore().dispatch(setBackpackEnabled(backpackEnabled));
 
+  let backpackApi = null;
   if (backpackEnabled) {
-    getStore().dispatch(
-      setBackpackApi(new BackpackClientApi(config.backpackChannel))
-    );
+    backpackApi = new BackpackClientApi(config.backpackChannel);
   }
 
   // Used for some post requests made in Javalab, namely
@@ -301,22 +300,24 @@ Javalab.prototype.init = function(config) {
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <JavalabView
-        onMount={onMount}
-        onRun={onRun}
-        onStop={onStop}
-        onTest={onTest}
-        onContinue={onContinue}
-        onCommitCode={onCommitCode}
-        onInputMessage={onInputMessage}
-        visualization={this.visualization}
-        viewMode={this.level.csaViewMode || CsaViewMode.CONSOLE}
-        isProjectTemplateLevel={!!this.level.projectTemplateLevelName}
-        handleClearPuzzle={() => {
-          return this.studioApp_.handleClearPuzzle(config);
-        }}
-        onPhotoPrompterFileSelected={onPhotoPrompterFileSelected}
-      />
+      <BackpackAPIContext.Provider value={backpackApi}>
+        <JavalabView
+          onMount={onMount}
+          onRun={onRun}
+          onStop={onStop}
+          onTest={onTest}
+          onContinue={onContinue}
+          onCommitCode={onCommitCode}
+          onInputMessage={onInputMessage}
+          visualization={this.visualization}
+          viewMode={this.level.csaViewMode || CsaViewMode.CONSOLE}
+          isProjectTemplateLevel={!!this.level.projectTemplateLevelName}
+          handleClearPuzzle={() => {
+            return this.studioApp_.handleClearPuzzle(config);
+          }}
+          onPhotoPrompterFileSelected={onPhotoPrompterFileSelected}
+        />
+      </BackpackAPIContext.Provider>
     </Provider>,
     document.getElementById(config.containerId)
   );

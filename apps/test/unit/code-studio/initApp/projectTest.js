@@ -1248,6 +1248,8 @@ function createStubSourceHandler() {
     setInitialLibrariesList: sinon.stub(),
     getLibrariesList: sinon.stub(),
     setInRestrictedShareMode: sinon.stub(),
-    inRestrictedShareMode: sinon.stub()
+    inRestrictedShareMode: sinon.stub(),
+    setTeacherHasConfirmedUploadWarning: sinon.stub(),
+    teacherHasConfirmedUploadWarning: sinon.stub()
   };
 }

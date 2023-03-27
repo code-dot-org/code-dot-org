@@ -42,9 +42,7 @@ class LibrariesController < ApplicationController
     render json: ProjectsList.fetch_updated_library_channels(libraries)
   end
 
-  private
-
-  def library_params
+  private def library_params
     params.require(:library).permit(
       :name,
       :content,

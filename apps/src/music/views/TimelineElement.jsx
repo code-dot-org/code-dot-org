@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
-import React, {useContext} from 'react';
-import {PlayingContext} from '../context';
+import React from 'react';
 import classNames from 'classnames';
 import moduleStyles from './timeline.module.scss';
+import {useDispatch, useSelector} from 'react-redux';
+import {selectBlockId} from '../redux/musicRedux';
 
 // TODO: Unify type constants and colors with those SoundPanel.jsx
 const typeToColorClass = {
@@ -24,19 +25,24 @@ const TimelineElement = ({
   top,
   left,
   when,
-  skipContext,
-  currentPlayheadPosition
+  skipContext
 }) => {
-  const playingContext = useContext(PlayingContext);
-
+  const isPlaying = useSelector(state => state.music.isPlaying);
+  const selectedBlockId = useSelector(state => state.music.selectedBlockId);
+  const dispatch = useDispatch();
+  const currentPlayheadPosition = useSelector(
+    state => state.music.currentPlayheadPosition
+  );
   const isInsideRandom = skipContext?.insideRandom;
-  const isSkipSound = playingContext.isPlaying && skipContext?.skipSound;
+  const isSkipSound = isPlaying && skipContext?.skipSound;
 
   const isCurrentlyPlaying =
     !isSkipSound &&
     currentPlayheadPosition !== 0 &&
     currentPlayheadPosition >= when &&
     currentPlayheadPosition < when + eventData.length;
+
+  const isBlockSelected = eventData.blockId === selectedBlockId;
 
   const colorType =
     eventData.type === 'sound' ? eventData.soundType : eventData.type;
@@ -49,13 +55,19 @@ const TimelineElement = ({
         colorClass,
         isCurrentlyPlaying && moduleStyles.timelineElementPlaying,
         isInsideRandom && moduleStyles.timelineElementInsideRandom,
-        isSkipSound && moduleStyles.timelineElementSkipSound
+        isSkipSound && moduleStyles.timelineElementSkipSound,
+        isBlockSelected && moduleStyles.timelineElementBlockSelected,
+        !isPlaying && moduleStyles.timelineElementClickable
       )}
       style={{
         width: barWidth * eventData.length,
         height,
         top,
         left
+      }}
+      onClick={event => {
+        dispatch(selectBlockId(eventData.blockId));
+        event.stopPropagation();
       }}
     >
       &nbsp;
@@ -70,8 +82,7 @@ TimelineElement.propTypes = {
   top: PropTypes.number.isRequired,
   left: PropTypes.number,
   when: PropTypes.number.isRequired,
-  skipContext: PropTypes.object,
-  currentPlayheadPosition: PropTypes.number.isRequired
+  skipContext: PropTypes.object
 };
 
 export default TimelineElement;

@@ -19,7 +19,7 @@ interface FieldChordOptions {
  * A custom field that renders the chord selection UI, used in the
  * "play_chord" block. The UI is rendered by {@link ChordPanel}.
  */
-export default class FieldChord extends Field<ChordEventValue> {
+export default class FieldChord extends Field {
   static fromJson(options: FieldChordOptions) {
     return new FieldChord(options);
   }
