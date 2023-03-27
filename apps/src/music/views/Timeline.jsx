@@ -18,12 +18,11 @@ const eventVerticalSpace = 2;
 /**
  * Renders the music playback timeline.
  */
-const Timeline = ({
-  currentPlayheadPosition,
-  selectedBlockId,
-  onBlockSelected
-}) => {
+const Timeline = ({selectedBlockId, onBlockSelected}) => {
   const isPlaying = useSelector(state => state.music.isPlaying);
+  const currentPlayheadPosition = useSelector(
+    state => state.music.currentPlayheadPosition
+  );
   const playerUtils = useContext(PlayerUtilsContext);
   const measuresToDisplay = Math.max(
     minNumMeasures,
@@ -53,7 +52,6 @@ const Timeline = ({
     : null;
 
   const timelineElementProps = {
-    currentPlayheadPosition,
     selectedBlockId,
     onBlockSelected,
     barWidth,
@@ -129,10 +127,8 @@ const Timeline = ({
 };
 
 Timeline.propTypes = {
-  currentPlayheadPosition: PropTypes.number.isRequired,
   selectedBlockId: PropTypes.string,
-  onBlockSelected: PropTypes.func,
-  sounds: PropTypes.array
+  onBlockSelected: PropTypes.func
 };
 
 export default Timeline;
