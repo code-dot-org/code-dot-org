@@ -143,7 +143,7 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
       </div>
       <div className={moduleStyles.controlsRow}>
         <FontAwesome
-          icon={'volume-up'}
+          icon={'play-circle'}
           onClick={onPreview}
           className={classNames(
             moduleStyles.previewButton,
@@ -151,7 +151,7 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
           )}
         />
         <FontAwesome
-          icon={'ban'}
+          icon={'trash-o'}
           onClick={() => setSelectedNotes([])}
           className={moduleStyles.previewButton}
         />
