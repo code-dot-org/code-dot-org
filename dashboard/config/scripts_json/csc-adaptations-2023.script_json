@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-adaptations",
-    "serialized_at": "2023-03-23 22:30:56 UTC",
+    "serialized_at": "2023-03-24 22:44:29 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1276,6 +1276,30 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "csc_animal_adaptations_choice"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_animal_adaptations_choice"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-adaptations-2023",
+        "activity_section.key": "04d46073-6413-49a8-b9e5-5f8e1bde46a6"
+      },
+      "level_keys": [
+        "csc_animal_adaptations_choice"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "csc_animal_adaptations_shareout"
         ]
       },
@@ -1294,32 +1318,14 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 9,
-      "activity_section_position": 9,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_animal_adaptations_choice"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csc-adaptations-2023",
-        "activity_section.key": "04d46073-6413-49a8-b9e5-5f8e1bde46a6"
-      },
-      "level_keys": [
-        "csc_animal_adaptations_choice"
-      ]
-    },
-    {
       "chapter": 31,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_animal_adaptations_choice1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1341,6 +1347,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_animal_adaptations_choice2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1362,6 +1371,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_animal_adaptations_choice3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1717,9 +1729,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_animal_adaptations_shareout",
+        "level.key": "csc_animal_adaptations_choice",
         "script_level.level_keys": [
-          "csc_animal_adaptations_shareout"
+          "csc_animal_adaptations_choice"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -1729,9 +1741,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_animal_adaptations_choice",
+        "level.key": "csc_animal_adaptations_shareout",
         "script_level.level_keys": [
-          "csc_animal_adaptations_choice"
+          "csc_animal_adaptations_shareout"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
