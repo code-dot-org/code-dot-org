@@ -34,7 +34,6 @@ const SET_IS_RUNNING = 'javalab/SET_IS_RUNNING';
 const SET_IS_TESTING = 'javalab/SET_IS_TESTING';
 const SET_CONSOLE_HEIGHT = 'javalab/SET_CONSOLE_HEIGHT';
 const EDITOR_COLUMN_HEIGHT = 'javalab/EDITOR_COLUMN_HEIGHT';
-const SET_BACKPACK_API = 'javalab/SET_BACKPACK_API';
 const SET_BACKPACK_ENABLED = 'javalab/SET_BACKPACK_ENABLED';
 const SET_IS_START_MODE = 'javalab/SET_IS_START_MODE';
 const SET_LEVEL_NAME = 'javalab/SET_LEVEL_NAME';
@@ -81,7 +80,6 @@ export const initialState = {
   isTesting: false,
   consoleHeight: 200,
   editorColumnHeight: 600,
-  backpackApi: null,
   backpackEnabled: false,
   isStartMode: false,
   levelName: undefined,
@@ -208,11 +206,6 @@ export const setIsRunning = isRunning => ({
 export const setIsTesting = isTesting => ({
   type: SET_IS_TESTING,
   isTesting
-});
-
-export const setBackpackApi = backpackApi => ({
-  type: SET_BACKPACK_API,
-  backpackApi
 });
 
 export const setBackpackEnabled = backpackEnabled => ({
@@ -598,12 +591,6 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       editorColumnHeight: action.editorColumnHeight
-    };
-  }
-  if (action.type === SET_BACKPACK_API) {
-    return {
-      ...state,
-      backpackApi: action.backpackApi
     };
   }
   if (action.type === SET_BACKPACK_ENABLED) {

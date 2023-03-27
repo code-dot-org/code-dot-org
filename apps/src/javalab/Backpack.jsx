@@ -13,6 +13,7 @@ import {makeEnum} from '@cdo/apps/utils';
 import JavalabDialog from './JavalabDialog';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import CloseOnEscape from './components/CloseOnEscape';
+import {BackpackAPIContext} from './BackpackAPIContext';
 
 const Dialog = makeEnum(
   'IMPORT_WARNING',
@@ -31,11 +32,12 @@ class Backpack extends Component {
     isButtonDisabled: PropTypes.bool.isRequired,
     onImport: PropTypes.func.isRequired,
     // populated by redux
-    backpackApi: PropTypes.object.isRequired,
     sources: PropTypes.object.isRequired,
     validation: PropTypes.object.isRequired,
     backpackEnabled: PropTypes.bool
   };
+
+  static contextType = BackpackAPIContext;
 
   state = {
     dropdownOpen: false,
@@ -56,9 +58,9 @@ class Backpack extends Component {
       selectedFiles: [],
       backpackFilenames: []
     });
-    if (this.props.backpackApi.hasBackpack()) {
+    if (this.context.hasBackpack()) {
       this.setState({backpackFilesLoading: true});
-      this.props.backpackApi.getFileList(
+      this.context.getFileList(
         this.onFileListLoadError,
         this.onFileListLoadSuccess
       );
@@ -93,7 +95,7 @@ class Backpack extends Component {
   handleDelete = () => {
     const {selectedFiles} = this.state;
     this.setState({isDeleting: true});
-    this.props.backpackApi.deleteFiles(
+    this.context.deleteFiles(
       selectedFiles,
       (_, failedFileList) => this.onDeleteFailed(failedFileList, selectedFiles),
       this.collapseDropdown
@@ -134,7 +136,7 @@ class Backpack extends Component {
   importFiles = selectedFiles => {
     let failedServerImportFiles = [];
     selectedFiles.forEach(filename => {
-      this.props.backpackApi.fetchFile(
+      this.context.fetchFile(
         filename,
         () => failedServerImportFiles.push(filename),
         fileContents =>
@@ -474,7 +476,6 @@ const styles = {
 
 export const UnconnectedBackpack = Backpack;
 export default connect(state => ({
-  backpackApi: state.javalab.backpackApi,
   sources: state.javalab.sources,
   validation: state.javalab.validation,
   backpackEnabled: state.javalab.backpackEnabled
