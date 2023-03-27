@@ -89,7 +89,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     assert_template :missing_application
   end
 
-  test 'teacher with old application gets missing application view' do
+  test 'teacher with old application gets new view' do
     teacher = create :teacher
     old_year = Pd::SharedApplicationConstants::YEAR_18_19
     create :pd_teacher_application, user: teacher, application_year: old_year

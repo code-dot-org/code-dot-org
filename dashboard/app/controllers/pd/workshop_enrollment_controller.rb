@@ -213,13 +213,12 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   end
 
   private def missing_application?
-    @workshop.require_application? && !has_current_application?
+    @workshop.require_application? && !has_application?
   end
 
-  private def has_current_application?
+  private def has_application?
     Pd::Application::TeacherApplication.where(
       user: current_user,
-      application_year: Pd::SharedApplicationConstants::APPLICATION_CURRENT_YEAR,
       status: 'accepted'
       ).any?
   end
