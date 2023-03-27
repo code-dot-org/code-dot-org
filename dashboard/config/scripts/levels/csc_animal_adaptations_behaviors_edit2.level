@@ -4,7 +4,8 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "adaptations"
     ],
     "helper_libraries": [
       "NativeSpriteLab"
@@ -35,8 +36,8 @@
     "hide_custom_blocks": "true",
     "short_instructions": "Debug: Make all of the sea creatures spin the same way!",
     "validation_code": "if (World.frameCount > 100) {\r\n  var star1rotation = getProp({costume: \"star1\"}, \"rotation\");\r\n  var star2rotation = getProp({costume: \"star2\"}, \"rotation\");\r\n  if (star1rotation != 0 && star1rotation == star2rotation) {\r\n    levelSuccess(0);\r\n  } else {\r\n    levelSuccess(3);\r\n  }\r\n}\r\n",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try editing the behaviors! \\n* Which value is controlling the speed of each sprite?\",\"hint_id\":\"behavior hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6eab8c19ece33bb3b302902c9cfc8161/Tortoise and Hare.mp3\"}]",
-    "long_instructions": "**Debug:** Make all of the sea creatures spin the same way!\r\n\r\n`Edit`(#bed7f7) the spinning right behavior. \r\n\r\nThe <xml><block type=\"sprite_parameter_get\" block-text=\"this sprite\"><title name=\"VAR\">this sprite</title></block></xml> block should be used instead of the `costume`(#F79EA5) block. This will make it work for any sprite, no matter which costume it uses.\r\n\r\n",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try editing the behavior! \\n\",\"hint_id\":\"behavior hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1eae7e31c1848594abf671214b8dc68d/csc_animal_adaptations_behaviors_edit2.mp3\"}]",
+    "long_instructions": "**Debug:** There is a problem in the code. All of the sea creatures should be spinning the same way!\r\n\r\n- First, click `Run`(#FFBD46) to see how the behaviors are currently working. \r\n- Click `Edit`(#bed7f7) on the **starfish's** spinning right behavior. \r\n\r\n- Inside the behavior, the `this sprite`(#F79EA5) block should be used instead of the urchin costume block. This will make the behavior work for all sprites, no matter which costume it uses.\r\n\r\n",
     "auto_run_setup": "DRAW_LOOP",
     "encrypted": "false",
     "mini_rubric": "false",
@@ -60,7 +61,7 @@
   "level_num": "custom",
   "user_id": 831,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-10T21:07:27.906+00:00\",\"changed\":[\"cloned from \\\"behaviors 3a_2021\\\"\"],\"cloned_from\":\"behaviors 3a_2021\"},{\"changed_at\":\"2023-03-10 21:47:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"short_instructions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:49:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:50:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:59:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-10T21:07:27.906+00:00\",\"changed\":[\"cloned from \\\"behaviors 3a_2021\\\"\"],\"cloned_from\":\"behaviors 3a_2021\"},{\"changed_at\":\"2023-03-10 21:47:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"short_instructions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:49:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:50:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 21:59:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 22:24:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 22:26:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 22:27:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 22:28:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 22:29:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 22:42:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-24 23:04:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 23:06:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 23:19:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -84,7 +85,8 @@
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_addBehaviorSimple" id="behavior">
+                    <block type="adaptations_toggleBehaviorSimple">
+                      <field name="TOGGLE">"begins"</field>
                       <value name="SPRITE">
                         <block type="gamelab_allSpritesWithAnimation">
                           <field name="ANIMATION">"cuteanimals_starfish"</field>
@@ -129,7 +131,8 @@
                                         </block>
                                       </value>
                                       <next>
-                                        <block type="gamelab_addBehaviorSimple">
+                                        <block type="adaptations_toggleBehaviorSimple">
+                                          <field name="TOGGLE">"begins"</field>
                                           <value name="SPRITE">
                                             <block type="gamelab_allSpritesWithAnimation">
                                               <field name="ANIMATION">"urchin"</field>
