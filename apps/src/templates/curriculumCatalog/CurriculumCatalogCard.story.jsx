@@ -9,17 +9,11 @@ export default {
 const Template = args => <CurriculumCatalogCard {...args} />;
 
 const defaultArgs = {
-  courseName: 'Express Course',
+  courseDisplayName: 'AI for Oceans',
   duration: 'Quarter',
   gradeOrAgeRange: 'Grades 4-12',
-  imageName: 'another-hoc',
-  topic: 'Programming',
-  quickViewButtonText: 'Quick View',
-  assignButtonText: 'Assign',
-
-  // for screenreaders
-  quickViewButtonDescription: 'View more details about the Express Course',
-  assignButtonDescription: 'Assign the Express Course'
+  subjects: ['english_language_arts'],
+  topics: ['cybersecurity']
 };
 
 export const BaseCard = Template.bind({});
