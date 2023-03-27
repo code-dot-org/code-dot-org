@@ -11,7 +11,6 @@
 - if RaceInterstitialHelper.show?(current_user) || @force_race_interstitial
   = render partial: 'layouts/race_interstitial'
 
-
 -# Teacher modals
 - if current_user && current_user.teacher? && !current_user.accepted_latest_terms?
   - current_user.update_user_tos_version_accept()
