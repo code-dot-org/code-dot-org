@@ -17,6 +17,8 @@ const VALID_COLOR = 'black';
 const INVALID_COLOR = '#d00';
 
 let poolField, nameField, helperEditor, configEditor, validationDiv;
+let hasLintingErrors = false;
+let canRenderBlock = false;
 
 $(document).ready(() => {
   registerReducers({animationList: animationList});
@@ -70,7 +72,9 @@ function initializeEditPage(defaultSprites) {
 
   if (blocks) {
     updateBlockPreview();
+    validateBlockConfig();
   }
+  setSubmitButtonState();
 
   $('.alert.alert-success')
     .delay(5000)
@@ -78,13 +82,23 @@ function initializeEditPage(defaultSprites) {
 }
 
 function onUpdateLinting(_, errors) {
-  const submitButton = document.querySelector('#block_submit');
   if (errors.length) {
+    hasLintingErrors = true;
+  } else {
+    hasLintingErrors = false;
+  }
+  setSubmitButtonState();
+}
+
+const setSubmitButtonState = () => {
+  const submitButton = document.querySelector('#block_submit');
+  const disabled = hasLintingErrors || !canRenderBlock;
+  if (disabled) {
     submitButton.setAttribute('disabled', 'disabled');
   } else {
     submitButton.removeAttribute('disabled');
   }
-}
+};
 
 function validateBlockConfig(editor) {
   try {
@@ -92,11 +106,27 @@ function validateBlockConfig(editor) {
       JSON.parse(editor.getValue());
     }
     updateBlockPreview();
+    validateBlockRenders();
     validationDiv.text('Config and helper code appear valid.');
     validationDiv.css('color', VALID_COLOR);
   } catch (err) {
     validationDiv.text(err.toString());
     validationDiv.css('color', INVALID_COLOR);
+  }
+}
+
+// Validation only relevant for blocks rendered via google blockly
+// "unknown block" is only implemented in google blockly
+function validateBlockRenders() {
+  if (
+    Blockly.mainBlockSpace
+      .getAllBlocks()
+      .some(block => block.getFieldValue('NAME')?.includes('unknown block'))
+  ) {
+    canRenderBlock = false;
+    throw 'Unable to render block with given configuration.';
+  } else {
+    canRenderBlock = true;
   }
 }
 
