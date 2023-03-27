@@ -310,18 +310,18 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'any_version_is_in_published_state? is true if one of the course versions have a published_state of preview or stable' do
-    unit1 = create(:script, name: 'unit1', family_name: 'family-11', version_year: '1991', is_course: true, published_state: 'beta')
+    unit1 = create(:script, name: 'unit1', family_name: 'family-12', version_year: '1991', is_course: true, published_state: 'beta')
     CourseOffering.add_course_offering(unit1)
-    unit2 = create(:script, name: 'unit2', family_name: 'family-11', version_year: '1992', is_course: true, published_state: 'preview')
+    unit2 = create(:script, name: 'unit2', family_name: 'family-12', version_year: '1992', is_course: true, published_state: 'preview')
     CourseOffering.add_course_offering(unit2)
 
     assert unit1.course_version.course_offering.any_version_is_in_published_state?
   end
 
   test 'any_version_is_in_published_state? is true if all of the course versions have a published_state of preview or stable' do
-    unit1 = create(:script, name: 'unit1', family_name: 'family-12', version_year: '1991', is_course: true, published_state: 'stable')
+    unit1 = create(:script, name: 'unit1', family_name: 'family-13', version_year: '1991', is_course: true, published_state: 'stable')
     CourseOffering.add_course_offering(unit1)
-    unit2 = create(:script, name: 'unit2', family_name: 'family-12', version_year: '1992', is_course: true, published_state: 'preview')
+    unit2 = create(:script, name: 'unit2', family_name: 'family-13', version_year: '1992', is_course: true, published_state: 'preview')
     CourseOffering.add_course_offering(unit2)
 
     assert unit1.course_version.course_offering.any_version_is_in_published_state?
@@ -331,32 +331,35 @@ class CourseOfferingTest < ActiveSupport::TestCase
     # Course offering that doesn't satisfy any of the conditions
     none_unit = create(:script, name: 'unit1', family_name: 'none', version_year: '1991', is_course: true, published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'teacher')
     none_co = CourseOffering.add_course_offering(none_unit)
-    none_co.assignable = false
-    none_co.save!
+    none_co.update!(assignable: false)
+
     # Course offering that only satisfies the 'assignable' condition
     assignable_unit = create(:script, name: 'unit2', family_name: 'assignable', version_year: '1992', is_course: true, published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'teacher')
     assignable_co = CourseOffering.add_course_offering(assignable_unit)
+
     # Course offering that only satisfies the 'published' condition
     published_unit = create(:script, name: 'unit3', family_name: 'published', version_year: '1993', is_course: true, published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'teacher')
     published_co = CourseOffering.add_course_offering(published_unit)
-    published_co.assignable = false
-    published_co.save!
+    published_co.update!(assignable: false)
+
     # Course offering that only satisfies the 'for student' condition
     for_student_unit = create(:script, name: 'unit4', family_name: 'for-student', version_year: '1994', is_course: true, published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'student')
     for_student_co = CourseOffering.add_course_offering(for_student_unit)
-    for_student_co.assignable = false
-    for_student_co.save!
+    for_student_co.update!(assignable: false)
+
     # Course offering that only satisfies the 'assignable' and 'published' condition
     assignable_published_unit = create(:script, name: 'unit5', family_name: 'assignable-published', version_year: '1995', is_course: true, published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'teacher')
     assignable_published_co = CourseOffering.add_course_offering(assignable_published_unit)
+
     # Course offering that only satisfies the 'assignable' and 'for student' condition
     assignable_for_student_unit = create(:script, name: 'unit6', family_name: 'assignable-for-student', version_year: '1996', is_course: true, published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'student')
     assignable_for_student_co = CourseOffering.add_course_offering(assignable_for_student_unit)
+
     # Course offering that only satisfies the 'published' and 'for student' condition
     published_for_student_unit = create(:script, name: 'unit7', family_name: 'published-for-student', version_year: '1997', is_course: true, published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'student')
     published_for_student_co = CourseOffering.add_course_offering(published_for_student_unit)
-    published_for_student_co.assignable = false
-    published_for_student_co.save!
+    published_for_student_co.update!(assignable: false)
+
     # Course offering that satisfies all 3 conditions
     all_unit = create(:script, name: 'unit8', family_name: 'all', version_year: '1998', is_course: true, published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'student')
     all_co = CourseOffering.add_course_offering(all_unit)
