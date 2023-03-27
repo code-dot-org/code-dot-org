@@ -24,7 +24,12 @@ import ProgressManager from '../progress/ProgressManager';
 import MusicValidator from '../progress/MusicValidator';
 import Video from './Video';
 import MusicLibrary from '../player/MusicLibrary';
-import {setIsPlaying, setCurrentPlayheadPosition} from '../redux/musicRedux';
+import {
+  setIsPlaying,
+  setCurrentPlayheadPosition,
+  clearSelectedBlockId,
+  selectBlockId
+} from '../redux/musicRedux';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -55,7 +60,10 @@ class UnconnectedMusicView extends React.Component {
     signInState: PropTypes.oneOf(Object.values(SignInState)),
     isPlaying: PropTypes.bool,
     setIsPlaying: PropTypes.func,
-    setCurrentPlayheadPosition: PropTypes.func
+    setCurrentPlayheadPosition: PropTypes.func,
+    selectedBlockId: PropTypes.string,
+    selectBlockId: PropTypes.func,
+    clearSelectedBlockId: PropTypes.func
   };
 
   constructor(props) {
@@ -89,8 +97,7 @@ class UnconnectedMusicView extends React.Component {
       timelineAtTop: false,
       showInstructions: false,
       instructionsPosIndex,
-      showingVideo: true,
-      selectedBlockId: undefined
+      showingVideo: true
     };
   }
 
@@ -170,6 +177,13 @@ class UnconnectedMusicView extends React.Component {
         this.props.userType,
         this.props.signInState
       );
+    }
+
+    if (
+      prevProps.selectedBlockId !== this.props.selectedBlockId &&
+      !this.props.isPlaying
+    ) {
+      this.musicBlocklyWorkspace.selectBlock(this.props.selectedBlockId);
     }
   }
 
@@ -294,8 +308,11 @@ class UnconnectedMusicView extends React.Component {
     }
 
     if (e.type === Blockly.Events.SELECTED) {
-      if (!this.props.isPlaying) {
-        this.setState({selectedBlockId: e.newElementId});
+      if (
+        !this.props.isPlaying &&
+        e.newElementId !== this.props.selectedBlockId
+      ) {
+        this.props.selectBlockId(e.newElementId);
       }
     }
 
@@ -361,12 +378,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.props.setIsPlaying(true);
     this.props.setCurrentPlayheadPosition(1);
-    this.setState({
-      selectedBlockId: undefined
-    });
-
-    // Unselect all blocks.
-    this.onBlockSelected(undefined);
+    this.props.clearSelectedBlockId();
   };
 
   stopSong = () => {
@@ -377,21 +389,6 @@ class UnconnectedMusicView extends React.Component {
     this.props.setIsPlaying(false);
     this.props.setCurrentPlayheadPosition(0);
     this.triggerCount = 0;
-  };
-
-  // If the user selects a block ID by clicking a timeline element, then
-  // select the generating block in the Blockly workspace.
-  // If the user selects the currently-selected block ID, then unselect it.
-  // If undefined is provided, we'll unselect all blocks.
-  // During playback, we are dynamically highlighting blocks which overrides
-  // the selection, so just do nothing here.
-  onBlockSelected = blockId => {
-    if (!this.props.isPlaying) {
-      const selectedBlockId =
-        this.state.selectedBlockId === blockId ? undefined : blockId;
-      this.setState({selectedBlockId});
-      this.musicBlocklyWorkspace.selectBlock(selectedBlockId);
-    }
   };
 
   handleKeyUp = event => {
@@ -502,10 +499,7 @@ class UnconnectedMusicView extends React.Component {
           toggleInstructions={() => this.toggleInstructions(false)}
           instructionsOnRight={instructionsOnRight}
         />
-        <Timeline
-          selectedBlockId={this.state.selectedBlockId}
-          onBlockSelected={this.onBlockSelected}
-        />
+        <Timeline />
       </div>
     );
   }
@@ -578,12 +572,15 @@ const MusicView = connect(
     userId: state.currentUser.userId,
     userType: state.currentUser.userType,
     signInState: state.currentUser.signInState,
-    isPlaying: state.music.isPlaying
+    isPlaying: state.music.isPlaying,
+    selectedBlockId: state.music.selectedBlockId
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
     setCurrentPlayheadPosition: currentPlayheadPosition =>
-      dispatch(setCurrentPlayheadPosition(currentPlayheadPosition))
+      dispatch(setCurrentPlayheadPosition(currentPlayheadPosition)),
+    selectBlockId: blockId => dispatch(selectBlockId(blockId)),
+    clearSelectedBlockId: () => dispatch(clearSelectedBlockId())
   })
 )(UnconnectedMusicView);
 

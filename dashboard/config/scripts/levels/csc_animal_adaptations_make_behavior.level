@@ -4,7 +4,8 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "adaptations"
     ],
     "helper_libraries": [
       "NativeSpriteLab"
@@ -35,7 +36,7 @@
     "hide_custom_blocks": "true",
     "short_instructions": "Create a bird dance!",
     "validation_code": "var astronautX = getProp({costume: \"astronaut\"}, \"x\");\r\nvar astronautY = getProp({costume: \"astronaut\"}, \"y\");\r\nif ((astronautX > 350 || astronautX < 50) && (astronautY > 350 || astronautY < 50)) {\r\n  levelSuccess(0);\r\n} else if (World.frameCount > 180) {\r\n  levelSuccess(3);\r\n}\r\n",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can pick any of the four ships. Which one does the astronaut want?\",\"hint_id\":\"target hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f9c2630d246086ae4d8d7ec15505ee79/behaviors 5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Edit the behavior to solve this puzzle. The astronaut sprite needs to move in two different directions to end up going diagonally.\",\"hint_id\":\"behavior hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ae5c27551e69af3d40ca3c480e066df0/behaviors 5.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Edit the behavior to solve this puzzle. Add actions into the behavior code. \",\"hint_id\":\"behavior hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/aaa418bfa0e1288112962300cc121860/csc_animal_adaptations_make_behavior.mp3\"}]",
     "long_instructions": "##Create your own behavior.\r\n\r\n**Add actions to a new behavior to model a fun tropical bird mating dance!**\r\n###Do This:\r\n- Click `edit`(#bed7f7) to open the `dance`(#6AF36C) behavior\r\n- Choose 2 or 3 blocks from the **Actions** menu to put inside the `dance`(#6AF36C) behavior\r\n- Click close to return to the main code\r\n- Click `Run`(#FFBD46) to test your code",
     "auto_run_setup": "DRAW_LOOP",
     "parent_level_id": 15503,
@@ -47,45 +48,40 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "standalone_app_name": "spritelab",
-    "preload_asset_list": null,
-    "instructions_icon": "poet"
+    "instructions_icon": "poet",
+    "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2023-03-10T22:18:52.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2023-03-10T22:18:52.000Z",
   "user_id": 831,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-10T22:18:52.914+00:00\",\"changed\":[\"cloned from \\\"behaviors 5\\\"\"],\"cloned_from\":\"behaviors 5\"},{\"changed_at\":\"2023-03-10 22:50:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"short_instructions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 22:53:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 22:47:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 22:48:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-10T22:18:52.914+00:00\",\"changed\":[\"cloned from \\\"behaviors 5\\\"\"],\"cloned_from\":\"behaviors 5\"},{\"changed_at\":\"2023-03-10 22:50:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"short_instructions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 22:53:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 22:47:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-21 22:48:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 14:50:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-24 14:51:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-24 14:52:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-24 14:53:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-24 14:54:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-24 22:42:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 22:47:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 22:47:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-24 23:21:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="behavior_definition" editable="false" uservisible="false" usercreated="true">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-          </mutation>
-          <field name="NAME" id="dance">dance</field>
-        </block>
         <block type="when_run">
           <next>
             <block type="gamelab_setBackgroundImageAs">
               <field name="IMG">"forest"</field>
               <next>
                 <block type="gamelab_makeNewSpriteAnon">
-                  <field name="ANIMATION_NAME">"flamingo"</field>
+                  <field name="ANIMATION_NAME">"parrot_1"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker">
-                      <field name="LOCATION">{"x":138,"y":293}</field>
+                      <field name="LOCATION">{"x":141,"y":261}</field>
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_addBehaviorSimple">
+                    <block type="adaptations_toggleBehaviorSimple">
+                      <field name="TOGGLE">"begins"</field>
                       <value name="SPRITE">
                         <block type="gamelab_allSpritesWithAnimation">
-                          <field name="ANIMATION">"flamingo"</field>
+                          <field name="ANIMATION">"parrot_1"</field>
                         </block>
                       </value>
                       <value name="BEHAVIOR">
@@ -100,6 +96,12 @@
               </next>
             </block>
           </next>
+        </block>
+        <block type="behavior_definition" editable="false" uservisible="false" usercreated="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+          </mutation>
+          <field name="NAME" id="dance">dance</field>
         </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
           <mutation>
@@ -1433,7 +1435,7 @@
         </category>
         <category name="Sprites">
           <block type="gamelab_makeNewSpriteAnon">
-            <field name="ANIMATION_NAME">"astronaut"</field>
+            <field name="ANIMATION_NAME">"parrot_1"</field>
             <value name="LOCATION">
               <block type="gamelab_location_picker">
                 <field name="LOCATION">{"x":57,"y":222}</field>
@@ -1441,10 +1443,10 @@
             </value>
           </block>
           <block type="gamelab_setAnimation">
-            <field name="ANIMATION">"astronaut"</field>
+            <field name="ANIMATION">"parrot_1"</field>
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"astronaut"</field>
+                <field name="ANIMATION">"parrot_1"</field>
               </block>
             </value>
           </block>
@@ -1453,21 +1455,21 @@
           <block type="gamelab_addBehaviorSimple">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" movable="false">
-                <field name="ANIMATION">"astronaut"</field>
+                <field name="ANIMATION">"parrot_1"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_removeBehaviorSimple">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" movable="false">
-                <field name="ANIMATION">"astronaut"</field>
+                <field name="ANIMATION">"parrot_1"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_removeAllBehaviors">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" movable="false">
-                <field name="ANIMATION">"astronaut"</field>
+                <field name="ANIMATION">"parrot_1"</field>
               </block>
             </value>
           </block>
@@ -1475,22 +1477,37 @@
         <category name="Actions">
           <block type="gamelab_moveInDirection">
             <field name="DIRECTION">"West"</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <field name="ANIMATION">"parrot_1"</field>
+              </block>
+            </value>
             <value name="DISTANCE">
               <block type="math_number">
-                <field name="NUM">0</field>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
           <block type="gamelab_changePropBy">
             <field name="PROPERTY">"rotation"</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <field name="ANIMATION">"parrot_1"</field>
+              </block>
+            </value>
             <value name="VAL">
               <block type="math_number">
-                <field name="NUM">0</field>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
           <block type="gamelab_changePropBy">
             <field name="PROPERTY">"scale"</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <field name="ANIMATION">"parrot_1"</field>
+              </block>
+            </value>
             <value name="VAL">
               <block type="math_number">
                 <field name="NUM">1</field>
@@ -1498,18 +1515,34 @@
             </value>
           </block>
           <block type="gamelab_setTint">
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation">
+                <field name="ANIMATION">"parrot_1"</field>
+              </block>
+            </value>
             <value name="COLOR">
               <block type="colour_picker">
-                <field name="COLOUR">#ff0000</field>
+                <field name="COLOUR">#33ff33</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_removeTint"/>
+          <block type="gamelab_removeTint">
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation">
+                <field name="ANIMATION">"parrot_1"</field>
+              </block>
+            </value>
+          </block>
           <block type="gamelab_setProp">
             <field name="PROPERTY">"scale"</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <field name="ANIMATION">"parrot_1"</field>
+              </block>
+            </value>
             <value name="VAL">
               <block type="math_number">
-                <field name="NUM">100</field>
+                <field name="NUM">150</field>
               </block>
             </value>
           </block>
