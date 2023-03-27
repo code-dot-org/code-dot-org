@@ -14,32 +14,40 @@ const tempImage = require('@cdo/static/resource_cards/anotherhoc.png');
 
 const CurriculumCatalogCard = ({
   courseDisplayName,
+  duration,
+  gradeOrAgeRange,
+  imageSrc,
   subjects,
   topics,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
-    {...props}
     assignButtonText={i18n.assign()}
     assignButtonDescription={i18n.assignDescription({
       course_name: props.courseDisplayName
     })}
-    quickViewButtonDescription={i18n.quickViewDescription({
-      course_name: props.courseDisplayName
-    })}
-    quickViewButtonText={i18n.quickView()}
+    courseDisplayName={courseDisplayName}
+    duration={duration}
+    gradeOrAgeRange={gradeOrAgeRange}
+    imageSrc={imageSrc}
     subjectsAndTopics={[
       ...subjects.map(
         subject => translatedCourseOfferingSchoolSubjects[subject]
       ),
       ...topics.map(topic => translatedCourseOfferingCsTopics[topic])
     ]}
-    courseName={courseDisplayName}
+    quickViewButtonDescription={i18n.quickViewDescription({
+      course_name: props.courseDisplayName
+    })}
+    quickViewButtonText={i18n.quickView()}
   />
 );
 
 CurriculumCatalogCard.propTypes = {
   courseDisplayName: PropTypes.string.isRequired,
+  duration: PropTypes.string.isRequired,
+  gradeOrAgeRange: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string.isRequired,
   subjects: PropTypes.arrayOf(
     Object.keys(translatedCourseOfferingSchoolSubjects)
   ).isRequired,
@@ -47,10 +55,14 @@ CurriculumCatalogCard.propTypes = {
     .isRequired
 };
 
+CurriculumCatalogCard.defaultProps = {
+  imageSrc: tempImage // TODO [MEG]: remove this default once images are pulled
+};
+
 const CustomizableCurriculumCatalogCard = ({
   assignButtonDescription,
   assignButtonText,
-  courseName,
+  courseDisplayName,
   duration,
   gradeOrAgeRange,
   imageAltText,
@@ -64,7 +76,7 @@ const CustomizableCurriculumCatalogCard = ({
     <div className="curriculumInfoContainer">
       {/*TODO [MEG]: Show all subjects and topics rather than only the first one */}
       <p className="overline">{subjectsAndTopics[0]}</p>
-      <h4>{courseName}</h4>
+      <h4>{courseDisplayName}</h4>
       <div className={'iconWithDescription'}>
         <FontAwesome icon={'user'} className={'fa-solid'} />
         <p className={'iconDescription'}>{gradeOrAgeRange}</p>
@@ -98,7 +110,7 @@ const CustomizableCurriculumCatalogCard = ({
 );
 
 CustomizableCurriculumCatalogCard.propTypes = {
-  courseName: PropTypes.string.isRequired,
+  courseDisplayName: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
   gradeOrAgeRange: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
@@ -113,8 +125,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
 };
 
 CustomizableCurriculumCatalogCard.defaultProps = {
-  imageAltText: '', // for decorative images
-  imageSrc: tempImage // TODO [MEG]: remove this default once images are pulled
+  imageAltText: '' // for decorative images
 };
 
 export default CurriculumCatalogCard;
