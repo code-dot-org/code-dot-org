@@ -5,7 +5,8 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import {
   translatedCourseOfferingCsTopics,
-  translatedCourseOfferingSchoolSubjects
+  translatedCourseOfferingSchoolSubjects,
+  translatedCourseOfferingDurations
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import '../../../style/code-studio/curriculum_catalog_card.scss';
 
@@ -27,7 +28,7 @@ const CurriculumCatalogCard = ({
       course_name: props.courseDisplayName
     })}
     courseDisplayName={courseDisplayName}
-    duration={duration}
+    duration={translatedCourseOfferingDurations[duration]}
     gradeOrAgeRange={gradeOrAgeRange}
     imageSrc={imageSrc}
     subjectsAndTopics={[
