@@ -12,8 +12,6 @@ import {
   updateAllSourceFileOrders
 } from './JavalabFileHelper';
 
-const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
-const CLEAR_CONSOLE_LOGS = 'javalab/CLEAR_CONSOLE_LOGS';
 const RENAME_FILE = 'javalab/RENAME_FILE';
 const SET_SOURCE = 'javalab/SET_SOURCE';
 const SOURCE_VISIBILITY_UPDATED = 'javalab/SOURCE_VISIBILITY_UPDATED';
@@ -38,8 +36,6 @@ const SET_BACKPACK_ENABLED = 'javalab/SET_BACKPACK_ENABLED';
 const SET_IS_START_MODE = 'javalab/SET_IS_START_MODE';
 const SET_LEVEL_NAME = 'javalab/SET_LEVEL_NAME';
 const TOGGLE_VISUALIZATION_COLLAPSED = 'javalab/TOGGLE_VISUALIZATION_COLLAPSED';
-const OPEN_PHOTO_PROMPTER = 'javalab/OPEN_PHOTO_PROMPTER';
-const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
 const SET_IS_READONLY_WORKSPACE = 'javalab/SET_IS_READONLY_WORKSPACE';
 const SET_HAS_OPEN_CODE_REVIEW = 'javalab/SET_HAS_OPEN_CODE_REVIEW';
 const SET_COMMIT_SAVE_STATUS = 'javalab/SET_COMMIT_SAVE_STATUS';
@@ -67,7 +63,6 @@ const initialSources = {
 // Exported for test
 export const initialState = {
   ...fileMetadataForEditor(initialSources),
-  consoleLogs: [],
   sources: initialSources,
   displayTheme: DisplayTheme.LIGHT,
   validation: {},
@@ -84,8 +79,6 @@ export const initialState = {
   isStartMode: false,
   levelName: undefined,
   isVisualizationCollapsed: false,
-  isPhotoPrompterOpen: false,
-  photoPrompterPromptText: '',
   isReadOnlyWorkspace: false,
   hasOpenCodeReview: false,
   isCommitSaveInProgress: false,
@@ -100,31 +93,6 @@ export const initialState = {
   canIncreaseFontSize: DEFAULT_FONT_SIZE_PX < MAX_FONT_SIZE_PX,
   canDecreaseFontSize: DEFAULT_FONT_SIZE_PX > MIN_FONT_SIZE_PX
 };
-
-// Action Creators
-export const appendInputLog = input => ({
-  type: APPEND_CONSOLE_LOG,
-  log: {type: 'input', text: input}
-});
-
-export const appendOutputLog = output => ({
-  type: APPEND_CONSOLE_LOG,
-  log: {type: 'output', text: output}
-});
-
-export const appendNewlineToConsoleLog = () => ({
-  type: APPEND_CONSOLE_LOG,
-  log: {type: 'newline'}
-});
-
-export const appendMarkdownLog = log => ({
-  type: APPEND_CONSOLE_LOG,
-  log: {type: 'markdown', text: log}
-});
-
-export const clearConsoleLogs = () => ({
-  type: CLEAR_CONSOLE_LOGS
-});
 
 export const setAllValidation = validation => ({
   type: SET_ALL_VALIDATION,
@@ -231,15 +199,6 @@ export const setIsStartMode = isStartMode => ({
 export const setLevelName = levelName => ({
   type: SET_LEVEL_NAME,
   levelName
-});
-
-export const openPhotoPrompter = promptText => ({
-  type: OPEN_PHOTO_PROMPTER,
-  promptText
-});
-
-export const closePhotoPrompter = () => ({
-  type: CLOSE_PHOTO_PROMPTER
 });
 
 export const openEditorDialog = dialogName => ({
@@ -419,18 +378,6 @@ export const setHasRunOrTestedCode = hasRunOrTestedCode => ({
 
 // Reducer
 export default function reducer(state = initialState, action) {
-  if (action.type === APPEND_CONSOLE_LOG) {
-    return {
-      ...state,
-      consoleLogs: [...state.consoleLogs, action.log]
-    };
-  }
-  if (action.type === CLEAR_CONSOLE_LOGS) {
-    return {
-      ...state,
-      consoleLogs: []
-    };
-  }
   if (action.type === SET_SOURCE) {
     let newSources = {...state.sources};
     newSources[action.filename] = {
@@ -615,20 +562,6 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isVisualizationCollapsed: !state.isVisualizationCollapsed
-    };
-  }
-  if (action.type === OPEN_PHOTO_PROMPTER) {
-    return {
-      ...state,
-      isPhotoPrompterOpen: true,
-      photoPrompterPromptText: action.promptText
-    };
-  }
-  if (action.type === CLOSE_PHOTO_PROMPTER) {
-    return {
-      ...state,
-      isPhotoPrompterOpen: false,
-      photoPrompterPromptText: ''
     };
   }
   if (action.type === SET_IS_READONLY_WORKSPACE) {
