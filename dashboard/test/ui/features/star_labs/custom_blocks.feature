@@ -1,3 +1,4 @@
+@chrome
 Feature: Google Blockly Custom Blocks
 
 Background:
