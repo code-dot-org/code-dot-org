@@ -25,11 +25,13 @@ const TimelineElement = ({
   left,
   when,
   skipContext,
-  currentPlayheadPosition,
   selectedBlockId,
   onBlockSelected
 }) => {
   const isPlaying = useSelector(state => state.music.isPlaying);
+  const currentPlayheadPosition = useSelector(
+    state => state.music.currentPlayheadPosition
+  );
   const isInsideRandom = skipContext?.insideRandom;
   const isSkipSound = isPlaying && skipContext?.skipSound;
 
@@ -82,7 +84,6 @@ TimelineElement.propTypes = {
   left: PropTypes.number,
   when: PropTypes.number.isRequired,
   skipContext: PropTypes.object,
-  currentPlayheadPosition: PropTypes.number.isRequired,
   selectedBlockId: PropTypes.string,
   onBlockSelected: PropTypes.func
 };
