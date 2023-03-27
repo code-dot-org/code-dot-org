@@ -646,7 +646,7 @@ class Pd::Workshop < ApplicationRecord
 
   # @return [Boolean] true if a Code Studio account is required for attendance, otherwise false.
   def account_required_for_attendance?
-    ![Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include?(course)
+    ![Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include?(course)
   end
 
   def workshop_starting_date

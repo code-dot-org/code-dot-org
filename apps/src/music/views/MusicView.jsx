@@ -9,32 +9,32 @@ import Timeline from './Timeline';
 import MusicPlayer from '../player/MusicPlayer';
 import ProgramSequencer from '../player/ProgramSequencer';
 import RandomSkipManager from '../player/RandomSkipManager';
-import {Triggers} from '../constants';
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import moduleStyles from './music-view.module.scss';
-import {AnalyticsContext, PlayingContext, PlayerUtilsContext} from '../context';
+import {AnalyticsContext, PlayerUtilsContext} from '../context';
 import TopButtons from './TopButtons';
 import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
-import AppConfig, {getBlockMode} from '../appConfig';
+import AppConfig from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
+import ProgressManager from '../progress/ProgressManager';
+import MusicValidator from '../progress/MusicValidator';
 import Video from './Video';
+import MusicLibrary from '../player/MusicLibrary';
+import {
+  setIsPlaying,
+  setCurrentPlayheadPosition,
+  clearSelectedBlockId,
+  selectBlockId,
+  setShowInstructions,
+  setInstructionsPosition,
+  InstructionsPositions
+} from '../redux/musicRedux';
+import KeyHandler from './KeyHandler';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
-
-const InstructionsPositions = {
-  TOP: 'TOP',
-  LEFT: 'LEFT',
-  RIGHT: 'RIGHT'
-};
-
-const instructionPositionOrder = [
-  InstructionsPositions.TOP,
-  InstructionsPositions.LEFT,
-  InstructionsPositions.RIGHT
-];
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -48,7 +48,18 @@ class UnconnectedMusicView extends React.Component {
     // populated by Redux
     userId: PropTypes.number,
     userType: PropTypes.string,
-    signInState: PropTypes.oneOf(Object.values(SignInState))
+    signInState: PropTypes.oneOf(Object.values(SignInState)),
+    isPlaying: PropTypes.bool,
+    setIsPlaying: PropTypes.func,
+    setCurrentPlayheadPosition: PropTypes.func,
+    selectedBlockId: PropTypes.string,
+    selectBlockId: PropTypes.func,
+    clearSelectedBlockId: PropTypes.func,
+    timelineAtTop: PropTypes.bool,
+    showInstructions: PropTypes.bool,
+    instructionsPosition: PropTypes.string,
+    setShowInstructions: PropTypes.func,
+    setInstructionsPosition: PropTypes.func
   };
 
   constructor(props) {
@@ -60,30 +71,21 @@ class UnconnectedMusicView extends React.Component {
     this.analyticsReporter = new AnalyticsReporter();
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
+
     // Increments every time a trigger is pressed;
     // used to differentiate tracks created on the same trigger
     this.triggerCount = 0;
 
     // Set default for instructions position.
-    let instructionsPosIndex = 1;
     const defaultInstructionsPos = AppConfig.getValue(
       'instructions-position'
     )?.toUpperCase();
     if (defaultInstructionsPos) {
-      const posIndex = instructionPositionOrder.indexOf(defaultInstructionsPos);
-      if (posIndex !== -1) {
-        instructionsPosIndex = posIndex;
-      }
+      this.props.setInstructionsPosition(defaultInstructionsPos);
     }
 
     this.state = {
-      instructions: null,
-      isPlaying: false,
-      currentPlayheadPosition: 0,
       updateNumber: 0,
-      timelineAtTop: false,
-      showInstructions: false,
-      instructionsPosIndex,
       showingVideo: true
     };
   }
@@ -103,30 +105,48 @@ class UnconnectedMusicView extends React.Component {
       this.analyticsReporter.endSession()
     );
 
-    document.body.addEventListener('keyup', this.handleKeyUp);
+    const promises = [];
+    promises.push(this.loadLibrary());
+    if (AppConfig.getValue('load-progression') === 'true') {
+      promises.push(this.loadProgression());
+    }
 
-    this.loadLibrary().then(library => {
+    Promise.all(promises).then(values => {
+      // Process library, which includes setting up the toolbox.
+      const libraryJson = values[0];
+      this.library = new MusicLibrary(libraryJson);
+
+      // Process progression first, if there is one, since
+      // it might affect the toolbox.
+      if (AppConfig.getValue('load-progression') === 'true') {
+        const progression = values[1];
+
+        const musicValidator = new MusicValidator(
+          this.getIsPlaying,
+          this.player
+        );
+
+        this.progressManager = new ProgressManager(
+          progression,
+          musicValidator,
+          this.onProgresschange
+        );
+        this.props.setShowInstructions(!!progression);
+        this.setAllowedSoundsForProgress();
+      }
+
       this.musicBlocklyWorkspace.init(
         document.getElementById('blockly-div'),
         this.onBlockSpaceChange,
-        this.player
+        this.player,
+        this.progressManager?.getCurrentStepDetails().toolbox
       );
-      this.player.initialize(library);
+      this.player.initialize(this.library);
       setInterval(this.updateTimer, 1000 / 30);
 
-      Globals.setLibrary(library);
+      Globals.setLibrary(this.library);
       Globals.setPlayer(this.player);
     });
-
-    // Only attempt to load instructions if configured to.
-    if (AppConfig.getValue('show-instructions') === 'true') {
-      this.loadInstructions().then(instructions => {
-        this.setState({
-          instructions: instructions,
-          showInstructions: !!instructions
-        });
-      });
-    }
   }
 
   componentDidUpdate(prevProps) {
@@ -142,14 +162,64 @@ class UnconnectedMusicView extends React.Component {
         this.props.signInState
       );
     }
+
+    if (
+      prevProps.selectedBlockId !== this.props.selectedBlockId &&
+      !this.props.isPlaying
+    ) {
+      this.musicBlocklyWorkspace.selectBlock(this.props.selectedBlockId);
+    }
   }
 
   updateTimer = () => {
-    if (this.state.isPlaying) {
-      this.setState({
-        currentPlayheadPosition: this.player.getCurrentPlayheadPosition()
-      });
+    if (this.props.isPlaying) {
+      this.props.setCurrentPlayheadPosition(
+        this.player.getCurrentPlayheadPosition()
+      );
+
+      this.updateHighlightedBlocks();
+
+      this.progressManager?.updateProgress();
     }
+  };
+
+  onProgresschange = () => {
+    // This is a way to tell React to re-render the scene, notably
+    // the instructions.
+    this.setState({updateNumber: this.state.updateNumber + 1});
+  };
+
+  getIsPlaying = () => {
+    return this.props.isPlaying;
+  };
+
+  onNextPanel = () => {
+    this.progressManager?.next();
+    this.stopSong();
+    this.clearCode();
+    this.setToolboxForProgress();
+    this.setAllowedSoundsForProgress();
+  };
+
+  setToolboxForProgress = () => {
+    if (this.progressManager) {
+      const allowedToolbox = this.progressManager.getCurrentStepDetails()
+        .toolbox;
+      this.musicBlocklyWorkspace.updateToolbox(allowedToolbox);
+    }
+  };
+
+  setAllowedSoundsForProgress = () => {
+    if (this.progressManager) {
+      this.library.setAllowedSounds(
+        this.progressManager.getCurrentStepDetails().sounds
+      );
+    }
+  };
+
+  updateHighlightedBlocks = () => {
+    const playingBlockIds = this.player.getCurrentlyPlayingBlockIds();
+    this.musicBlocklyWorkspace.updateHighlightedBlocks(playingBlockIds);
   };
 
   loadLibrary = async () => {
@@ -168,17 +238,20 @@ class UnconnectedMusicView extends React.Component {
     }
   };
 
-  loadInstructions = async () => {
-    const instructionsFilename = `music-instructions-${getBlockMode().toLowerCase()}.json`;
-    const response = await fetch(baseUrl + instructionsFilename);
-    let instructions;
-    try {
-      instructions = await response.json();
-    } catch (error) {
-      console.error('Instructions load error.', error);
-      instructions = null;
+  loadProgression = async () => {
+    if (AppConfig.getValue('local-progression') === 'true') {
+      const defaultProgressionFilename = 'music-progression';
+      const progression = require(`@cdo/static/music/${defaultProgressionFilename}.json`);
+      return progression;
+    } else {
+      const progressionParameter = AppConfig.getValue('progression');
+      const progressionFilename = progressionParameter
+        ? `music-progression-${progressionParameter}.json`
+        : 'music-progression.json';
+      const response = await fetch(baseUrl + progressionFilename);
+      const progression = await response.json();
+      return progression;
     }
-    return instructions;
   };
 
   clearCode = () => {
@@ -218,6 +291,15 @@ class UnconnectedMusicView extends React.Component {
       this.setState({updateNumber: this.state.updateNumber + 1});
     }
 
+    if (e.type === Blockly.Events.SELECTED) {
+      if (
+        !this.props.isPlaying &&
+        e.newElementId !== this.props.selectedBlockId
+      ) {
+        this.props.selectBlockId(e.newElementId);
+      }
+    }
+
     // Save the workspace.
     this.musicBlocklyWorkspace.saveCode();
   };
@@ -228,11 +310,12 @@ class UnconnectedMusicView extends React.Component {
       this.analyticsReporter.onButtonClicked('play');
     } else {
       this.stopSong();
+      this.updateHighlightedBlocks();
     }
   };
 
   playTrigger = id => {
-    if (!this.state.isPlaying) {
+    if (!this.props.isPlaying) {
       return;
     }
     this.analyticsReporter.onButtonClicked('trigger', {id});
@@ -240,22 +323,13 @@ class UnconnectedMusicView extends React.Component {
     this.triggerCount++;
   };
 
-  toggleInstructions = fromKeyboardShortcut => {
-    this.analyticsReporter.onButtonClicked('show-hide-instructions', {
-      showing: !this.state.showInstructions,
-      fromKeyboardShortcut
-    });
-    this.setState({
-      showInstructions: !this.state.showInstructions
-    });
-  };
-
   compileSong = () => {
     return this.musicBlocklyWorkspace.compileSong({
       MusicPlayer: this.player,
       ProgramSequencer: this.programSequencer,
       RandomSkipManager: this.randomSkipManager,
-      getTriggerCount: () => this.triggerCount
+      getTriggerCount: () => this.triggerCount,
+      MusicLibrary: this.library
     });
   };
 
@@ -276,7 +350,9 @@ class UnconnectedMusicView extends React.Component {
 
     this.player.playSong();
 
-    this.setState({isPlaying: true, currentPlayheadPosition: 1});
+    this.props.setIsPlaying(true);
+    this.props.setCurrentPlayheadPosition(1);
+    this.props.clearSelectedBlockId();
   };
 
   stopSong = () => {
@@ -284,41 +360,9 @@ class UnconnectedMusicView extends React.Component {
 
     this.executeCompiledSong();
 
-    this.setState({isPlaying: false, currentPlayheadPosition: 0});
+    this.props.setIsPlaying(false);
+    this.props.setCurrentPlayheadPosition(0);
     this.triggerCount = 0;
-  };
-
-  handleKeyUp = event => {
-    // Don't handle a keyboard shortcut if the active element is an
-    // input field, since the user is probably trying to type something.
-    if (document.activeElement.tagName.toLowerCase() === 'input') {
-      return;
-    }
-
-    // When assigning new keyboard shortcuts, be aware that the following
-    // keys are used for Blockly keyboard navigation: A, D, I, S, T, W, X
-    // https://developers.google.com/blockly/guides/configure/web/keyboard-nav
-    if (event.key === 'v') {
-      this.setState({timelineAtTop: !this.state.timelineAtTop});
-    }
-    if (event.key === 'b') {
-      this.toggleInstructions(true);
-    }
-    if (event.key === 'n') {
-      this.setState({
-        instructionsPosIndex:
-          (this.state.instructionsPosIndex + 1) %
-          instructionPositionOrder.length
-      });
-    }
-    Triggers.map(trigger => {
-      if (event.key === trigger.keyboardKey) {
-        this.playTrigger(trigger.id);
-      }
-    });
-    if (event.code === 'Space') {
-      this.setPlaying(!this.state.isPlaying);
-    }
   };
 
   onFeedbackClicked = () => {
@@ -334,6 +378,25 @@ class UnconnectedMusicView extends React.Component {
   };
 
   renderInstructions(position) {
+    if (!this.progressManager) {
+      return;
+    }
+
+    // For now, the instructions are intended for use with a
+    // progression.  We might decide to make them agnostic at
+    // some point.
+    // One advantage of passing everything through is that the
+    // instructions can potentially size themselves to the
+    // maximum possible content size, requiring no dynamic
+    // resizing or user scrolling.  We did this for the dynamic
+    // instructions in AI Lab.
+    const progression = this.progressManager.getProgression();
+
+    const progressState = this.progressManager.getCurrentState();
+    const currentPanel = progressState.step;
+    const message = progressState.message;
+    const satisfied = progressState.satisfied;
+
     return (
       <div
         className={classNames(
@@ -348,7 +411,10 @@ class UnconnectedMusicView extends React.Component {
         )}
       >
         <Instructions
-          instructions={this.state.instructions}
+          progression={progression}
+          currentPanel={currentPanel}
+          message={message}
+          onNextPanel={satisfied ? this.onNextPanel : null}
           baseUrl={baseUrl}
           vertical={position !== InstructionsPositions.TOP}
           right={position === InstructionsPositions.RIGHT}
@@ -367,7 +433,6 @@ class UnconnectedMusicView extends React.Component {
         )}
       >
         <Controls
-          isPlaying={this.state.isPlaying}
           setPlaying={this.setPlaying}
           playTrigger={this.playTrigger}
           top={timelineAtTop}
@@ -375,20 +440,16 @@ class UnconnectedMusicView extends React.Component {
           toggleInstructions={() => this.toggleInstructions(false)}
           instructionsOnRight={instructionsOnRight}
         />
-        <Timeline
-          isPlaying={this.state.isPlaying}
-          currentPlayheadPosition={this.state.currentPlayheadPosition}
-        />
+        <Timeline />
       </div>
     );
   }
 
   render() {
-    const instructionsPosition =
-      instructionPositionOrder[this.state.instructionsPosIndex];
-
     const showVideo =
-      AppConfig.getValue('show-video') === 'true' && this.state.showingVideo;
+      AppConfig.getValue('show-video') !== 'false' && this.state.showingVideo;
+
+    const {timelineAtTop, showInstructions, instructionsPosition} = this.props;
 
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
@@ -399,60 +460,80 @@ class UnconnectedMusicView extends React.Component {
             getLastMeasure: () => this.player.getLastMeasure()
           }}
         >
-          <PlayingContext.Provider value={{isPlaying: this.state.isPlaying}}>
-            <div id="music-lab-container" className={moduleStyles.container}>
-              {this.state.showInstructions &&
-                instructionsPosition === InstructionsPositions.TOP &&
-                this.renderInstructions(InstructionsPositions.TOP)}
+          <KeyHandler
+            togglePlaying={() => this.setPlaying(!this.props.isPlaying)}
+            playTrigger={this.playTrigger}
+          />
+          <div id="music-lab-container" className={moduleStyles.container}>
+            {showInstructions &&
+              instructionsPosition === InstructionsPositions.TOP &&
+              this.renderInstructions(InstructionsPositions.TOP)}
 
-              {showVideo && (
-                <Video id="initial-modal-0" onClose={this.onVideoClosed} />
+            {showVideo && (
+              <Video id="initial-modal-0" onClose={this.onVideoClosed} />
+            )}
+
+            {timelineAtTop &&
+              this.renderTimelineArea(
+                true,
+                instructionsPosition === InstructionsPositions.RIGHT
               )}
 
-              {this.state.timelineAtTop &&
-                this.renderTimelineArea(
-                  true,
-                  instructionsPosition === InstructionsPositions.RIGHT
-                )}
+            <div className={moduleStyles.middleArea}>
+              {showInstructions &&
+                instructionsPosition === InstructionsPositions.LEFT &&
+                this.renderInstructions(InstructionsPositions.LEFT)}
 
-              <div className={moduleStyles.middleArea}>
-                {this.state.showInstructions &&
-                  instructionsPosition === InstructionsPositions.LEFT &&
-                  this.renderInstructions(InstructionsPositions.LEFT)}
-
-                <div id="blockly-area" className={moduleStyles.blocklyArea}>
-                  <div className={moduleStyles.topButtonsContainer}>
-                    <TopButtons
-                      clearCode={this.clearCode}
-                      uploadSound={file => this.soundUploader.uploadSound(file)}
-                    />
-                  </div>
-                  <div id="blockly-div" />
+              <div id="blockly-area" className={moduleStyles.blocklyArea}>
+                <div className={moduleStyles.topButtonsContainer}>
+                  <TopButtons
+                    clearCode={this.clearCode}
+                    uploadSound={file => this.soundUploader.uploadSound(file)}
+                  />
                 </div>
-
-                {this.state.showInstructions &&
-                  instructionsPosition === InstructionsPositions.RIGHT &&
-                  this.renderInstructions(InstructionsPositions.RIGHT)}
+                <div id="blockly-div" />
               </div>
 
-              {!this.state.timelineAtTop &&
-                this.renderTimelineArea(
-                  false,
-                  instructionsPosition === InstructionsPositions.RIGHT
-                )}
+              {showInstructions &&
+                instructionsPosition === InstructionsPositions.RIGHT &&
+                this.renderInstructions(InstructionsPositions.RIGHT)}
             </div>
-          </PlayingContext.Provider>
+
+            {!timelineAtTop &&
+              this.renderTimelineArea(
+                false,
+                instructionsPosition === InstructionsPositions.RIGHT
+              )}
+          </div>
         </PlayerUtilsContext.Provider>
       </AnalyticsContext.Provider>
     );
   }
 }
 
-const MusicView = connect(state => ({
-  userId: state.currentUser.userId,
-  userType: state.currentUser.userType,
-  signInState: state.currentUser.signInState
-}))(UnconnectedMusicView);
+const MusicView = connect(
+  state => ({
+    userId: state.currentUser.userId,
+    userType: state.currentUser.userType,
+    signInState: state.currentUser.signInState,
+    isPlaying: state.music.isPlaying,
+    selectedBlockId: state.music.selectedBlockId,
+    timelineAtTop: state.music.timelineAtTop,
+    showInstructions: state.music.showInstructions,
+    instructionsPosition: state.music.instructionsPosition
+  }),
+  dispatch => ({
+    setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
+    setCurrentPlayheadPosition: currentPlayheadPosition =>
+      dispatch(setCurrentPlayheadPosition(currentPlayheadPosition)),
+    selectBlockId: blockId => dispatch(selectBlockId(blockId)),
+    clearSelectedBlockId: () => dispatch(clearSelectedBlockId()),
+    setShowInstructions: showInstructions =>
+      dispatch(setShowInstructions(showInstructions)),
+    setInstructionsPosition: instructionsPosition =>
+      dispatch(setInstructionsPosition(instructionsPosition))
+  })
+)(UnconnectedMusicView);
 
 const MusicLabView = () => {
   return (

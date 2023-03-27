@@ -175,7 +175,7 @@ const registerDarkMode = function() {
         baseName(scope.workspace?.getTheme().name) +
         (isDarkTheme(scope.workspace) ? '' : dark);
       localStorage.setItem(BLOCKLY_THEME, themeName);
-      scope.workspace.setTheme(Blockly.themes[themeName]);
+      setAllWorkspacesTheme(Blockly.themes[themeName]);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: 'toggleDarkMode',
@@ -227,7 +227,7 @@ const registerTheme = function(name, label, index) {
     callback: function(scope) {
       const themeName = name + (isDarkTheme(scope.workspace) ? dark : '');
       localStorage.setItem(BLOCKLY_THEME, themeName);
-      scope.workspace.setTheme(Blockly.themes[themeName]);
+      setAllWorkspacesTheme(Blockly.themes[themeName]);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: name + 'ThemeOption',
@@ -284,6 +284,12 @@ function isDarkTheme(workspace) {
 
 function baseName(themeName) {
   return themeName.replace(dark, '');
+}
+
+function setAllWorkspacesTheme(theme) {
+  Blockly.Workspace.getAll().forEach(workspace => {
+    workspace.setTheme(theme);
+  });
 }
 
 function unregisterDefaultOptions() {

@@ -331,10 +331,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     normal_workshop = create :workshop, :ended
     counselor_workshop = create :counselor_workshop, :ended
     admin_workshop = create :admin_workshop, :ended
+    admin_counselor_workshop = create :admin_counselor_workshop, :ended
 
     assert normal_workshop.account_required_for_attendance?
     refute counselor_workshop.account_required_for_attendance?
     refute admin_workshop.account_required_for_attendance?
+    refute admin_counselor_workshop.account_required_for_attendance?
   end
 
   test 'send_exit_surveys enrolled-only teacher does not get mail' do
@@ -351,9 +353,20 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     enrollment = create :pd_enrollment, workshop: workshop
     create :pd_attendance_no_account, session: workshop.sessions.first, enrollment: enrollment
-
     refute workshop.account_required_for_attendance?
     Pd::Enrollment.any_instance.expects(:send_exit_survey)
+    workshop.send_exit_surveys
+  end
+
+  test 'send_exit_surveys with attendance but no account gets email for admin/counselor' do
+    workshop = create :admin_counselor_workshop, :ended
+
+    enrollment = create :pd_enrollment, workshop: workshop
+    create :pd_attendance_no_account, session: workshop.sessions.first, enrollment: enrollment
+
+    refute workshop.account_required_for_attendance?
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
+
     workshop.send_exit_surveys
   end
 
@@ -492,7 +505,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # with subject
     workshop.update!(course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_5)
     assert_equal 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
-
     # truncated at 255 chars
     workshop.update!(location_name: "blah" * 60)
     assert workshop.friendly_name.start_with? 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at blahblahblah'
