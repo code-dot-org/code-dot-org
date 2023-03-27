@@ -29,7 +29,7 @@ const CurriculumCatalogCard = ({
     })}
     courseDisplayName={courseDisplayName}
     duration={translatedCourseOfferingDurations[duration]}
-    gradeOrAgeRange={gradeOrAgeRange}
+    gradeOrAgeRange={gradeOrAgeRange} // TODO [MEG]: Translate this once strategy is decided
     imageSrc={imageSrc}
     subjectsAndTopics={[
       ...subjects.map(
@@ -46,14 +46,16 @@ const CurriculumCatalogCard = ({
 
 CurriculumCatalogCard.propTypes = {
   courseDisplayName: PropTypes.string.isRequired,
-  duration: PropTypes.string.isRequired,
+  duration: PropTypes.oneOf(Object.keys(translatedCourseOfferingDurations))
+    .isRequired,
   gradeOrAgeRange: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
   subjects: PropTypes.arrayOf(
-    Object.keys(translatedCourseOfferingSchoolSubjects)
+    PropTypes.oneOf(Object.keys(translatedCourseOfferingSchoolSubjects))
   ).isRequired,
-  topics: PropTypes.arrayOf(Object.keys(translatedCourseOfferingCsTopics))
-    .isRequired
+  topics: PropTypes.arrayOf(
+    PropTypes.oneOf(Object.keys(translatedCourseOfferingCsTopics))
+  ).isRequired
 };
 
 CurriculumCatalogCard.defaultProps = {
