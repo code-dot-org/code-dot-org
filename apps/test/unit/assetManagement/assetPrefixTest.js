@@ -73,5 +73,12 @@ describe('apps/src/assetManagement/assetPrefix.js', () => {
       const result = fixPath('image.png');
       expect(result).to.equal(`/v3/assets/test-channel/image.png`);
     });
+
+    it('should not prepend assetPathPrefix or channelId when the filename is relative and channelId is not set', () => {
+      const dataTableAsset =
+        '//images.code.org/00dabb18b629e99ae0a77c5db2b3d0f9-Flag_of_Alabama.svg.png';
+      const result = fixPath(dataTableAsset);
+      expect(result).to.equal(dataTableAsset);
+    });
   });
 });

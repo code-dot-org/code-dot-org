@@ -55,7 +55,7 @@ export function fixPath(filename) {
   // Rewrite urls to pass through our media proxy. Unless of course we are in an
   // exported app, in which case our media proxy won't be good for anything
   // anyway.
-  if (ABSOLUTE_REGEXP.test(filename) && !window.location.protocol !== 'file:') {
+  if (ABSOLUTE_REGEXP.test(filename) && window.location.protocol !== 'file:') {
     if (
       ABSOLUTE_CDO_CURRICULUM_REGEXP.test(filename) ||
       ABSOLUTE_CDO_IMAGES_REGEXP.test(filename)
