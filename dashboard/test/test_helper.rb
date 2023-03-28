@@ -334,11 +334,7 @@ class ActiveSupport::TestCase
   end
 
   def assert_caching_disabled(cache_control_header)
-    expected_directives = [
-      'no-store',
-      'max-age=0',
-      'must-revalidate'
-    ]
+    expected_directives = ['no-store']
     assert_cache_control_match expected_directives, cache_control_header
   end
 

@@ -176,8 +176,7 @@ function createStore(reducer, initialState) {
               'runApp',
               'props.showNextHint',
               'props.assetUrl',
-              'props.exportApp',
-              'backpackApi'
+              'props.exportApp'
             ],
             ignoredPaths: [
               'hiddenLesson',
@@ -191,8 +190,7 @@ function createStore(reducer, initialState) {
               /animationList\.propsByKey.*\.blob/,
               'maker',
               'data',
-              'screens',
-              'javalab.backpackApi'
+              'screens'
             ]
           }
         }).concat(reduxLogger)

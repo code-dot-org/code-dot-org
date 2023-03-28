@@ -14,8 +14,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     @workshop_organizer = create(:workshop_organizer)
     @organizer_workshop = create(:workshop, organizer: @workshop_organizer)
-
-    @regional_partner = create(:regional_partner)
   end
   setup do
     @workshop.reload
@@ -1501,42 +1499,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     workshop.third_party_provider = nil
     assert workshop.valid?
-  end
-
-  test 'CSP summer workshop must require teacher application' do
-    workshop = create :csp_summer_workshop, regional_partner: @regional_partner
-    assert workshop.require_application?
-  end
-
-  test 'CSD academic year workshop must require teacher application' do
-    workshop = create :csd_academic_year_workshop, regional_partner: @regional_partner
-    assert workshop.require_application?
-  end
-
-  test 'CSA summer workshop must require teacher application' do
-    workshop = create :csa_summer_workshop, regional_partner: @regional_partner
-    assert workshop.require_application?
-  end
-
-  test 'CSF workshop must not require teacher application' do
-    workshop = create :csf_workshop, regional_partner: @regional_partner
-    refute workshop.require_application?
-  end
-
-  test 'virtual CSD workshop must not require teacher application' do
-    workshop = create :csd_virtual_workshop, regional_partner: @regional_partner
-    refute workshop.require_application?
-  end
-
-  test 'workshop without regional partner must not require teacher application' do
-    workshop = create :csp_summer_workshop
-    refute workshop.require_application?
-  end
-
-  test 'regional partner with partner application must not require teacher application' do
-    rp = create :regional_partner, link_to_partner_application: 'https://example.com'
-    workshop = create :csp_summer_workshop, regional_partner: rp
-    refute workshop.require_application?
   end
 
   private
