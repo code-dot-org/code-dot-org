@@ -31,6 +31,7 @@ $scale-keybed: 0.5;
       box-sizing: border-box;
       transition: background-color 0.1s ease;
       cursor: pointer;
+      position: relative;
 
       &.whiteKey {
         border-width: 2px 1px;
@@ -63,11 +64,15 @@ $scale-keybed: 0.5;
       }
 
       .noteLabel {
+        bottom: 2px;
+        position: absolute;
+        width: 13px;
         text-align: center;
-        margin-left: 120px * $scale-keybed;
-        color: $neutral_dark80;
-        font-size: 12px * $scale-keybed;
+        color: $neutral_dark60;
+        font-size: 8px;
         user-select: none;
+        height: 8px;
+        line-height: 1em;
       }
 
       &:hover {

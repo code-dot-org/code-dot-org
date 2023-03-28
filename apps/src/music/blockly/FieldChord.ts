@@ -94,14 +94,14 @@ export default class FieldChord extends Field {
       'x': 1,
       'y': 1,
       'width': 86,
-      'height': 26
+      'height': 18
     }, this.movableGroup_);
 
     const value = this.getValue();
 
     for (let i = 0; i < 16; i++) {
       const x = i * 86/16;
-      const y = 26 - ((value.notes[i % value.notes.length] - 4 * 12) * 26 / 3 / 13);
+      const y = 18 - ((value.notes[i % value.notes.length] - 4 * 12) * 18 / 3 / 13);
 
       GoogleBlockly.utils.dom.createSvgElement('rect',
       {
@@ -120,7 +120,7 @@ export default class FieldChord extends Field {
 
   updateSize_() {
     const width = 90;
-    const height = 30;
+    const height = 22;
 
     this.borderRect_?.setAttribute('width', '' + width);
     this.borderRect_?.setAttribute('height', '' + height);

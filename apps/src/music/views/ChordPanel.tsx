@@ -226,7 +226,7 @@ const Key: React.FunctionComponent<KeyProps> = ({
       )}
       onClick={onClick}
     >
-      <p className={moduleStyles.noteLabel}>{text}</p>
+      <div className={moduleStyles.noteLabel}>{text}</div>
     </div>
   );
 };
