@@ -414,5 +414,11 @@
   "interactive-games-animations": "interactive-games-animations",
   "problem-solving-computing": "problem-solving-computing",
   "web-development": "web-development",
-  "data-society": "data-society"
+  "data-society": "data-society",
+  "focus-on-design-with-purpose": "focus-on-design-with-purpose",
+  "focus-on-coding": "focus-on-coding",
+  "focus-on-hardware": "focus-on-hardware",
+  "focus-on-impact-in-society": "focus-on-impact-in-society",
+  "focus-on-data": "focus-on-data",
+  "focus-on-creativity": "focus-on-creativity"
 }
