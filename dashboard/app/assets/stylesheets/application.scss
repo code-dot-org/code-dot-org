@@ -2947,6 +2947,10 @@ $modal-no-icon-gap: 22px;
   p, pre {
     line-height: 27px;
     font-size: 24px;
+    color: $neutral_dark;
+  }
+
+  pre {
     color: $purple;
   }
 
@@ -3011,7 +3015,6 @@ $modal-no-icon-gap: 22px;
   .lines-of-code-message {
     font-size: 20px;
     line-height: normal;
-    color: $charcoal;
     margin: 0 0 8px 0;
   }
 
