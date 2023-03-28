@@ -77,12 +77,15 @@
     "display_name": "Correct or Incorrect",
     "thumbnail_url": "https://images.code.org/5430e1b1567969bfff45e8362b8e4d28-image-1650059568902.png",
     "bubble_choice_description": "Create an app that uses the playSound or playSpeech block to make \"correct\" or \"incorrect\" responses",
-    "encrypted_examples": [
-
-    ],
     "start_blocks": "//1) When you press the A button, the app plays the \"correct\" sound.\r\n\r\n//2) When you press the B button, the app plays the \"incorrect\" sound.",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "gz1qTLINqJw3fNNTmNt6Ez5q+31OJW8FtsALU3lDz75zQ/aYpmrVa1QkTAOu\noPq1XW0wmJGYa7FPlrYNqxrk2w==\n",
+    "reference_links": [
+      "/courses/csd-2022/guides/microbit-physical-input",
+      "/courses/csd-2022/guides/microbit-display",
+      "/courses/csd-2022/guides/microbit-overview"
+    ]
   },
   "game_id": 41,
   "published": true,
@@ -90,7 +93,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:46:54.629+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - ChalC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - ChalC_2222\"},{\"changed_at\":\"2023-02-03 22:12:17 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"palette_category_at_start\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:46:54.629+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - ChalC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - ChalC_2222\"},{\"changed_at\":\"2023-02-03 22:12:17 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"palette_category_at_start\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-27 22:26:39 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

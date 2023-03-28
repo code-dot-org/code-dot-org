@@ -32,11 +32,17 @@ interface Progression {
 }
 
 // The current progress state.
-interface ProgressState {
+export interface ProgressState {
   step: number;
   satisfied: boolean;
   message: string | null;
 }
+
+export const initialProgressState: ProgressState = {
+  step: 0,
+  satisfied: false,
+  message: null
+};
 
 export default class ProgressManager {
   private progression: Progression;
@@ -52,18 +58,14 @@ export default class ProgressManager {
     this.progression = progression;
     this.validator = validator;
     this.onProgressChange = onProgressChange;
-    this.currentProgressState = {
-      step: 0,
-      satisfied: false,
-      message: null
-    };
+    this.currentProgressState = initialProgressState;
   }
 
-  getProgression() {
+  getProgression(): Progression {
     return this.progression;
   }
 
-  getCurrentState() {
+  getCurrentState(): ProgressState {
     return this.currentProgressState;
   }
 
