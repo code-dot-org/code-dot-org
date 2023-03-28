@@ -1,4 +1,11 @@
-export const Triggers = [
+export interface Trigger {
+  id: string;
+  dropdownLabel: string;
+  buttonLabel: string;
+  keyboardKey: string;
+}
+
+export const Triggers: Trigger[] = [
   {
     id: 'trigger1',
     dropdownLabel: '1',
@@ -44,7 +51,7 @@ export const BlockMode = {
   TRACKS: 'Tracks'
 };
 
-export const DEFAULT_SOUND = 'dance/groovy_beat';
+export const DEFAULT_SOUND = 'beats/groovy_beat';
 
 // For reference, events look like this:
 // events: [{src: 'sound_1', tick: 3}]
