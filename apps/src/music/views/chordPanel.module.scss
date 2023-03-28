@@ -36,7 +36,7 @@ $scale-keybed: 0.5;
       &.whiteKey {
         border-width: 2px 1px;
         width: 30px * $scale-keybed;
-        height: 120px * $scale-keybed;
+        height: 80px * $scale-keybed;
         background-color: white;
       }
 
@@ -44,7 +44,7 @@ $scale-keybed: 0.5;
         border-width: 2px 2px;
         z-index: 10;
         width: 20px * $scale-keybed;
-        height: 90px * $scale-keybed;
+        height: 46px * $scale-keybed;
         background-color: black;
         margin: 0 -10px * $scale-keybed;
       }
