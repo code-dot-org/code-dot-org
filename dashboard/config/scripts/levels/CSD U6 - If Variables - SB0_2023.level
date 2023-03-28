@@ -4,7 +4,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "<img src=\"https://images.code.org/500baaceb5ff763bbc1197b1ae39c6aa-image-1650562262146.png\" style=\"float: right; width: 15%; margin: 5px\" />\r\n\r\n*This level follows a video that you may have watched with your class. If you missed the video, you can watch it in the Help and Tips tab of this level.*\r\n\r\n# Creating a Checkerboard\r\n\r\nThe `var` block is short for **variable**, which can store a value to be used throughout your code. For example, if you wanted a lot of objects to have the same color, you could set the color to a **variable** and then re-use that variable every time you wanted to use that color.\r\n\r\nLet's use this idea to create a checkerboard on the screen with alternating colors.\r\n\r\n## Do This\r\n\r\n1) Look at the top of the code which has several `var` blocks\r\n2) Edit the colors and numbers on the right-side of the blocks to make the app match the picture to the right\r\n\t- You should only need to change the colors and numbers - you won't need to add any new blocks to your code!",
+    "long_instructions": "<img src=\"https://images.code.org/500baaceb5ff763bbc1197b1ae39c6aa-image-1650562262146.png\" style=\"float: right; width: 15%; margin: 5px\" />\r\n\r\n# Creating a Checkerboard\r\n\r\nThe `var` block is short for **variable**, which can store a value to be used throughout your code. For example, if you wanted a lot of objects to have the same color, you could set the color to a **variable** and then re-use that variable every time you wanted to use that color.\r\n\r\nLet's use this idea to create a checkerboard on the screen with alternating colors.\r\n\r\n## Do This\r\n\r\n1) Look at the top of the code which has several `var` blocks\r\n2) Edit the colors and numbers on the right-side of the blocks to make the app match the picture to the right\r\n\t- You should only need to change the colors and numbers - you won't need to add any new blocks to your code!",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -54,11 +54,11 @@
       "comment": null
     },
     "start_blocks": "//Change the colors and number on the right-side of these blocks\r\nvar color1 = \"orange\";\r\nvar color2 = \"cyan\";\r\nvar blockWidth = 45;\r\nvar blockHeight = 70;\r\n\r\n//Don't change anything below here!\r\nsetProperty(\"block1\", \"background-color\", color1);\r\nsetProperty(\"block1\", \"width\", blockWidth);\r\nsetProperty(\"block1\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block2\", \"background-color\", color2);\r\nsetProperty(\"block2\", \"width\", blockWidth);\r\nsetProperty(\"block2\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block3\", \"background-color\", color1);\r\nsetProperty(\"block3\", \"width\", blockWidth);\r\nsetProperty(\"block3\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block4\", \"background-color\", color2);\r\nsetProperty(\"block4\", \"width\", blockWidth);\r\nsetProperty(\"block4\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block5\", \"background-color\", color2);\r\nsetProperty(\"block5\", \"width\", blockWidth);\r\nsetProperty(\"block5\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block6\", \"background-color\", color1);\r\nsetProperty(\"block6\", \"width\", blockWidth);\r\nsetProperty(\"block6\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block7\", \"background-color\", color2);\r\nsetProperty(\"block7\", \"width\", blockWidth);\r\nsetProperty(\"block7\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block8\", \"background-color\", color1);\r\nsetProperty(\"block8\", \"width\", blockWidth);\r\nsetProperty(\"block8\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block9\", \"background-color\", color1);\r\nsetProperty(\"block9\", \"width\", blockWidth);\r\nsetProperty(\"block9\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block10\", \"background-color\", color2);\r\nsetProperty(\"block10\", \"width\", blockWidth);\r\nsetProperty(\"block10\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block11\", \"background-color\", color1);\r\nsetProperty(\"block11\", \"width\", blockWidth);\r\nsetProperty(\"block11\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block12\", \"background-color\", color2);\r\nsetProperty(\"block12\", \"width\", blockWidth);\r\nsetProperty(\"block12\", \"height\", blockHeight);\r\n",
+    "video_key": "CSD_u6_variables_part1",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "video_key": "CSD_u6_variables_part1"
+    ]
   },
   "game_id": 41,
   "published": true,
@@ -66,7 +66,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:13:02.962+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB0_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB0_2222\"},{\"changed_at\":\"2023-03-15 18:21:59 +0000\",\"changed\":[\"long_instructions\",\"never_autoplay_video\",\"makerlab_enabled\",\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:13:02.962+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB0_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB0_2222\"},{\"changed_at\":\"2023-03-15 18:21:59 +0000\",\"changed\":[\"long_instructions\",\"never_autoplay_video\",\"makerlab_enabled\",\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-28 02:58:07 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
