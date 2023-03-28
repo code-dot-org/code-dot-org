@@ -2765,6 +2765,12 @@ ga:
               display_name: Ábhar
             lessonGroup-4:
               display_name: Ceachtanna Malartacha
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-4:
+              display_name: Ceachtanna Malartacha
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2882,6 +2888,123 @@ ga:
             lessonGroup-4:
               display_name: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'
         microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Buneolas ar an tSaotharlann Aipeanna
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Seicheamhú
+            csf_loops:
+              display_name: Lúba
+            csf_events:
+              display_name: Teagmhais
+          description_short: 'Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí:
+            scoth an ábhair ónár gcúrsaí do ghasúir sa chiondargairdín agus sa chéad
+            bhliain.'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Seicheamhú
+            csf_sprites:
+              display_name: Sprideanna
+            lessonGroup-9:
+              display_name: Teagmhais
+            csf_loops:
+              display_name: Lúba
+            csf_conditionals:
+              display_name: Coinníollacha
+            csf_functions:
+              display_name: Feidhmeanna
+            csf_variables:
+              display_name: Athróga
+            csf_for_loops:
+              display_name: Lúba "Do Gach"
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Saoránacht Dhigiteach
+            csf_sequencing:
+              display_name: Seicheamhú
+            csf_loops:
+              display_name: Lúba
+            csf_events:
+              display_name: Teagmhais
+          description_short: Buntús na ríomheolaíochta do réamhléitheoirí.
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Saoránacht Dhigiteach
+            csf_sequencing:
+              display_name: Seicheamhú
+            csf_loops:
+              display_name: Lúba
+            csf_events:
+              display_name: Teagmhais
+          description_short: Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí.
+            Cosúil le Cúrsa A, ach le coincheapa níos doimhne.
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Saoránacht Dhigiteach
+            csf_sequencing:
+              display_name: Seicheamhú
+            csf_loops:
+              display_name: Lúba
+            csf_events:
+              display_name: Teagmhais
+          description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín,
+            scéalta, agus cluichí.
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Saoránacht Dhigiteach
+            csf_sequencing:
+              display_name: Seicheamhú
+            csf_events:
+              display_name: Teagmhais
+            csf_loops:
+              display_name: Lúba
+            csf_conditionals:
+              display_name: Coinníollacha
+          title: Cúrsa D (2021)
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Saoránacht Dhigiteach
+            csf_sprites:
+              display_name: Sprideanna
+            ramp_up:
+              display_name: Lúba Neadaithe
+            csf_functions:
+              display_name: Feidhmeanna
+            csf_nested_loops:
+              display_name: Coinníollacha
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
+            lessonGroup-3:
+              display_name: 'Caibidil 2: Ríomhairí agus Réiteach Fadhbanna'
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Caibidil 1: Íomhánna agus Beochan'
+            lessonGroup-3:
+              display_name: 'Caibidil 2: Tógáil Cluichí'
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Caibidil 1: Dearadh Dírithe ar an Úsáideoir'
+            lessonGroup-3:
+              display_name: 'Caibidil 2: Fréamhshamhaltú Aipeanna'
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Caibidil 1: Léiriú Sonraí'
+            lessonGroup-3:
+              display_name: 'Caibidil 2: Réiteach Fadhbanna Sonraí'
+        aiml-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Buneolas ar an tSaotharlann Aipeanna

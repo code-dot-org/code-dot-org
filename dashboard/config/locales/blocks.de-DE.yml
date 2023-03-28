@@ -1678,6 +1678,10 @@ de:
         text: x Koordinate von {SPRITE}
       gamelab_yLocationOf:
         text: y Koordinate von {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} gleite zu {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: hingefallen
       Mikelab_addBehaviorSimple:
         text: "{SPRITE} beginnt {BEHAVIOR}"
       Mikelab_addTrainingData:
@@ -2301,8 +2305,6 @@ de:
         text: nach links drehen
       RyanLab_turnRight:
         text: nach rechts drehen
-      SpriteLab2Beta_spriteSay:
-        text: Sprite {SPRITE} sagt {TEXT} für {SECONDS} Sekunden
       Vector_createSpriteWith:
         text: |-
           erzeuge Sprite
@@ -2434,6 +2436,8 @@ de:
             new Behavior(wobbling, []): wackelnd
             new Behavior(wandering, []): wandern
             new Behavior(patrolling, []): patroullieren
+      adaptations_startFollowing:
+        text: "{SPRITE} beginnt, {TARGET} zu folgen"
       binary_drawBin:
         text: zeichne Binärwert {BIN}
       binary_drawBinScreen:
@@ -2590,5 +2594,3 @@ de:
         text: Überschrift festlegen {HEADING}
       storylab_setSubheading:
         text: Unterüberschrift festlegen {SUBHEADING}
-      validation_validatedBackground:
-        text: setze Hintergund auf {IMG}

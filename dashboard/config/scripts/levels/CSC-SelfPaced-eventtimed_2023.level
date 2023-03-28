@@ -22,7 +22,7 @@
     "instructions_important": "false",
     "project_template_level_name": "csc_ecosystems_template_2023",
     "short_instructions": "In a real aquatic ecosystem the algae will keep growing as the fish are eating it. Program the algae to continue to appear.\r\n",
-    "long_instructions": "**In a real aquatic ecosystem the algae will keep growing even as the fish eat it. Program the algae to continue to appear.**\r\n\r\nDo This: \r\n- Set up a new `repeat every 3 seconds` event.\r\n- Add a `make 10 new algae` block under the new event.\r\n- Use a `set sprite size` block to set the algae sprite size to `30`.\r\n\r\n\r\n\r\n\r\n",
+    "long_instructions": "**This is an example of an event that happens with a \"repeat every X seconds\" block.**\r\n\r\nIn a real aquatic ecosystem the algae will keep growing even as the fish eat it. Program the algae to continue to appear.\r\n\r\nDo This: \r\n- Set up a new `repeat every 3 seconds` event.\r\n- Add a `make 10 new algae` block under the new event.\r\n- Use a `set sprite size` block to set the algae sprite size to `30`.\r\n\r\n\r\n\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -49,7 +49,7 @@
   "created_at": "2023-03-14T23:17:42.000Z",
   "level_num": "custom",
   "user_id": 18528,
-  "audit_log": "[{\"changed_at\":\"2023-03-14T23:17:42.493+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_algae_growth_2023\\\"\"],\"cloned_from\":\"csc_ecosystems_algae_growth_2023\"},{\"changed_at\":\"2023-03-14 23:17:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-14T23:17:42.493+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_algae_growth_2023\\\"\"],\"cloned_from\":\"csc_ecosystems_algae_growth_2023\"},{\"changed_at\":\"2023-03-14 23:17:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-03-27 22:43:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-03-27 22:45:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -1053,6 +1053,8 @@ zh-CN:
         text: 避开目标
       gamelab_beginCollectingData:
         text: 开始收集数据{BREAK}值{VALUE}带标签{LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} 弹开 {TARGET}"
       gamelab_changePropBy:
@@ -1652,6 +1654,10 @@ zh-CN:
         text: "{SPRITE} 的x轴坐标"
       gamelab_yLocationOf:
         text: "{SPRITE} 的y坐标"
+      KatiesBlocks_glideTo:
+        text: "{SPRITE}滑到{LOCATION}"
+      KatiesBlocks_tumbling:
+        text: 翻滚
       Mikelab_addBehaviorSimple:
         text: 精灵图 {SPRITE} 开始 {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2294,8 +2300,6 @@ zh-CN:
         text: 向左转
       RyanLab_turnRight:
         text: 向右转
-      SpriteLab2Beta_spriteSay:
-        text: 精灵图 {SPRITE} 说{TEXT} 持续{SECONDS} 秒
       Vector_createSpriteWith:
         text: |-
           创建精灵图
@@ -2388,6 +2392,8 @@ zh-CN:
             new Behavior(wobbling, []): 摇摆
             new Behavior(wandering, []): 徘徊
             new Behavior(patrolling, []): 巡逻
+      adaptations_startFollowing:
+        text: "{SPRITE}开始跟随{TARGET}"
       binary_drawBin:
         text: 绘制二进制 {BIN}
       binary_drawBinScreen:
@@ -2544,5 +2550,3 @@ zh-CN:
         text: 设置标题 {HEADING}
       storylab_setSubheading:
         text: 设置副标题 {SUBHEADING}
-      validation_validatedBackground:
-        text: 设置背景为 {IMG}

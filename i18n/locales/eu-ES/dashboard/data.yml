@@ -464,6 +464,7 @@ eu:
         playlab_2021_reader: 'Sarrera: Jolas Laborategia'
         csp_applab_parameters: Parametrodun funtzioak
         CS_Changing_Everything: Informatika dena aldatzen ari da
+        csd_sprite_properties: Sprite-n Propietateak
     callout:
       text:
         drag_blocks: Arrastatu "mugitu" blokea eta lotu beste blokearen azpian

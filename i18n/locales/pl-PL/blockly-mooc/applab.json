@@ -91,6 +91,7 @@
   "makerSetupMakerAppForMac": "Code.org Maker App dla komputerów Mac",
   "makerSetupMakerAppForWindows": "Code.org Maker App dla systemu Windows",
   "makerSetupMicrobitFirmataUpdateSuccess": "Twój micro:bit został zaktualizowany!",
+  "makerSetupClickRedetect": "Kliknij przycisk „ponownie wykryj” powyżej",
   "makerSetupConfirmConnection": "aby potwierdzić, że możesz teraz pomyślnie połączyć się z płytą.",
   "makerSetupMicrobitImageAltText": "Płytka micro:bit to prostokątna płytka drukowana ze złączem USB na górze, jednym przyciskiem z każdej strony, 5 pinami połączeniowymi na dole i zestawem 5 na 5 diod LED pośrodku.",
   "makerSetupMicrobitTitle": "micro:bit",

@@ -136,7 +136,6 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursed/2022": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -209,6 +208,8 @@
           "type": "Cevap Anahtarı"
         },
         "csf_-_course_d_-_slides_2022-2023/coursed/2022": {
+          "name": "CSF- Kurs D - Slaytlar 2022-2023",
+          "url": "https://docs.google.com/presentation/d/1QZjvTpft-xc7uU-rccLHsA2D-YFD8LgONjXwAjJ4nCQ/template/preview",
           "type": "Slaytlar"
         },
         "graph_paper_programming/coursed/2022": {
@@ -368,7 +369,6 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursef/2022": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -391,7 +391,6 @@
           "name": "Ders Türü Kılavuzu"
         },
         "sprite_lab_documentation/coursef/2022": {
-          "name": "Peri Laboratuvar Belgelendirmesi",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -546,7 +545,6 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursee/2022": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -570,7 +568,6 @@
           "type": "Kaynak"
         },
         "sprite_lab_documentation/coursee/2022": {
-          "name": "Peri Laboratuvar Belgelendirmesi",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -722,7 +719,6 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/courseb/2022": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -848,12 +844,10 @@
           "type": "Yönergeler"
         },
         "stevie_and_the_big_project/courseb/2022": {
-          "name": "Stevie ve büyük proje",
           "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
           "type": "Kaynak"
         },
         "unspotted_bugs/courseb/2022": {
-          "name": "Bulunamamış hatalar",
           "url": "https://youtu.be/rah3DYlp5nQ",
           "type": "Video"
         },
@@ -960,7 +954,6 @@
           "type": "Çalışma Kağıdı"
         },
         "sprite_lab_documentation/express/2022": {
-          "name": "Peri Laboratuvar Belgelendirmesi",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -1079,7 +1072,6 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursea/2022": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -1284,7 +1276,6 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursec/2022": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -3219,7 +3210,6 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities_1/coursef/2021": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -3249,7 +3239,7 @@
           "type": "Kaynak"
         },
         "sprite_lab_documentation_1/coursef/2021": {
-          "name": "Peri Laboratuvar Belgelendirmesi",
+          "name": "Sprite Lab Dökümanları",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -3289,7 +3279,6 @@
           "type": "Slaytlar"
         },
         "sprite_lab_documentation/coursef/2021": {
-          "name": "Peri Laboratuvar Belgelendirmesi",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -3477,7 +3466,7 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/courseb/2021": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -3610,12 +3599,12 @@
           "type": "Yönergeler"
         },
         "stevie_and_the_big_project/courseb/2021": {
-          "name": "Stevie ve büyük proje",
+          "name": "Stevie ve Büyük Proje",
           "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
           "type": "Kaynak"
         },
         "unspotted_bugs/courseb/2021": {
-          "name": "Bulunamamış hatalar",
+          "name": "Tespit Edilmemiş Hatalar",
           "url": "https://youtu.be/rah3DYlp5nQ",
           "type": "Video"
         },
@@ -3949,7 +3938,7 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursec/2021": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -3994,7 +3983,7 @@
           "type": "Sunum Destesi"
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
-          "name": "Çevrimiçi Ortalama Durdurmak: Online Ortalama Durdur",
+          "name": "Çevrimiçi anlamsızlığı DURDURMAK: Çevrimiçi anlamsızlığı DURDURUN",
           "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
           "type": "Öğrenci Notu"
         },
@@ -4168,7 +4157,6 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursed/2021": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -4444,7 +4432,6 @@
           "type": "Çalışma Kağıdı"
         },
         "sprite_lab_documentation/express/2021": {
-          "name": "Peri Laboratuvar Belgelendirmesi",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -4458,7 +4445,6 @@
           "type": "Slaytlar"
         },
         "sprite_lab_documentation_1/express/2021": {
-          "name": "Peri Laboratuvar Belgelendirmesi",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -4596,7 +4582,6 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursee/2021": {
-          "name": "Müfredat Çapraz Uzatma Etkinlikleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -4626,7 +4611,7 @@
           "type": "Kaynak"
         },
         "sprite_lab_documentation_1/coursee/2021": {
-          "name": "Peri Laboratuvar Belgelendirmesi",
+          "name": "Sprite Lab Dökümanları",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "teacher_forum_1/coursee/2021": {
@@ -4645,7 +4630,6 @@
           "type": "Slaytlar"
         },
         "sprite_lab_documentation/coursee/2021": {
-          "name": "Peri Laboratuvar Belgelendirmesi",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },

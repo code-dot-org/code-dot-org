@@ -591,6 +591,7 @@ ja:
         CSA-PL-Printing-in-Java: Javaでプリント
         CSA-PL-multi-selection-statements: 複数選択文
         CS_Changing_Everything: コンピューター サイエンスはすべてを変えています
+        csd_sprite_properties: スプライトのプロパティ
     callout:
       text:
         drag_blocks: '「移動」ブロックをドラッグして、ほかのブロックの下にくっつけてください。'

@@ -4,9 +4,9 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "CSD",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
-      "is_course": true,
       "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
@@ -15,12 +15,12 @@
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "csd5",
-    "serialized_at": "2023-03-17 22:43:09 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2023-03-24 09:47:33 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csd5-2023"
     }
@@ -6762,6 +6762,10 @@
         "resource.key": "structuring_data_2021"
       }
     }
+
+  ],
+  "lessons_resources": [
+
   ],
   "scripts_resources": [
     {
@@ -6812,6 +6816,7 @@
         "script.name": "csd5-2023"
       }
     }
+
   ],
   "scripts_student_resources": [
 
@@ -6897,6 +6902,7 @@
         "vocabulary.key": "pixel"
       }
     }
+
   ],
   "lessons_vocabularies": [
     {
@@ -6947,6 +6953,7 @@
         "vocabulary.key": "pixel"
       }
     }
+
   ],
   "lessons_programming_expressions": [
 

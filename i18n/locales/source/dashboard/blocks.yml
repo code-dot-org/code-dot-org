@@ -1134,6 +1134,8 @@ en:
         text: avoiding targets
       gamelab_beginCollectingData:
         text: begin collecting data [BREAK][0] value [VALUE][1] with label [LABEL][2]
+      gamelab_behaviorPicker:
+        text: "[BEHAVIOR][0]"
       gamelab_bounceOff:
         text: "[SPRITE][0] bounces off [TARGET][1]"
       gamelab_changePropBy:
@@ -1355,6 +1357,8 @@ en:
         text: make new [ANIMATION_NAME][0] sprite at [LOCATION][1]
       gamelab_makeNumSprites:
         text: make [NUM][0] new [ANIMATION_NAME][1] sprites
+      gamelab_makeNumSpritesNear:
+        text: make [NUM][0] new [ANIMATION_NAME][1] sprites near [LOCATION][2]
       gamelab_makeProjectile:
         text: "create projectile \n[ANIMATION_NAME][0] from [LOCATION][1] with speed [SPEED][2]direction[DIRECTION][3]"
         options:
@@ -1748,12 +1752,18 @@ en:
         text: x coordinate of [SPRITE][0]
       gamelab_yLocationOf:
         text: y coordinate of [SPRITE][0]
+      KatiesBlocks_glideTo:
+        text: "[SPRITE][0] glide to [LOCATION][1]"
+      KatiesBlocks_makeNumSpritesNear:
+        text: make [NUM][0] new [ANIMATION_NAME][1] sprites near [LOCATION][2]
       KatiesBlocks_spriteBirdSay:
         text: "[SPRITE][0] says [SPEECH][1]"
         options:
           SPEECH:
             '"My beak is pointy and strong to find insects in tree bark."': My beak is pointy and strong to find insects in tree bark.
             '"I have a beak like a scoop to catch fish."': I have a beak like a scoop to catch fish.
+      KatiesBlocks_tumbling:
+        text: tumbling
       Mikelab_addBehaviorSimple:
         text: sprite [SPRITE][0] begins [BEHAVIOR][1]
       Mikelab_addTrainingData:
@@ -2459,8 +2469,6 @@ en:
         text: turn left
       RyanLab_turnRight:
         text: turn right
-      SpriteLab2Beta_spriteSay:
-        text: sprite [SPRITE][0] say [TEXT][1] for [SECONDS][2] seconds
       Vector_createSpriteWith:
         text: |-
           create sprite
@@ -2577,6 +2585,22 @@ en:
             new Behavior(wobbling, []): wobbling
             new Behavior(wandering, []): wandering
             new Behavior(patrolling, []): patrolling
+      adaptations_makeNumSpritesNear:
+        text: make [NUM][0] new [ANIMATION_NAME][1] sprites near [LOCATION][2]
+      adaptations_spriteBirdSay:
+        text: "[SPRITE][0] says [SPEECH][1]"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': My beak is pointy and strong to find insects in tree bark.
+            '"I have a beak like a scoop to catch fish."': I have a beak like a scoop to catch fish.
+      adaptations_startFollowing:
+        text: "[SPRITE][0] begins following [TARGET][1]"
+      adaptations_toggleBehaviorSimple:
+        text: sprite [SPRITE][0] [TOGGLE][1] [BEHAVIOR][2]
+        options:
+          TOGGLE:
+            '"begins"': begins
+            '"stops"': stops
       binary_drawBin:
         text: draw binary [BIN][0]
       binary_drawBinScreen:
@@ -2737,7 +2761,3 @@ en:
         text: prompt user [QUESTION][0] for variable [VAR][1] with choice [A][2]
       storylab_setSubheading:
         text: set subheading [SUBHEADING][0]
-      validation_validatedBackground:
-        text: set background to [IMG][0]
-      validation_validatedSound:
-        text: PLAYSound [SOUND][0]
