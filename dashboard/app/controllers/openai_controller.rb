@@ -11,13 +11,12 @@ class OpenaiController < ApplicationController
     }
 
     # Build the request body
-    prompt = "Hello, how are you?"
     data = {
       model: 'gpt-3.5-turbo',
       temperature: 0,
       messages: [
         {role: 'system', content: SYSTEM_PROMPT},
-        {role: 'user', content: prompt}
+        {role: 'user', content: params[:prompt]}
       ],
     }
 
