@@ -82,6 +82,11 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
+    ],
+    "reference_links": [
+      "/courses/csd-2022/guides/microbit-physical-input",
+      "/courses/csd-2022/guides/microbit-display",
+      "/courses/csd-2022/guides/microbit-overview"
     ]
   },
   "game_id": 41,
@@ -90,7 +95,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:46:54.983+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - ChalG_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - ChalG_2222\"},{\"changed_at\":\"2023-02-03 20:59:20 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"palette_category_at_start\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-03 22:16:38 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:46:54.983+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - ChalG_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - ChalG_2222\"},{\"changed_at\":\"2023-02-03 20:59:20 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"palette_category_at_start\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-03 22:16:38 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-27 22:26:42 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -3,17 +3,17 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introduction to Events
+# Introducing to Events
 
-##### Next, you will be introduced to the CS concept of **events**.  Events are 
+##### Next, you will be introduced to the CS concept of **events**, an action that causes something to happen. 
 
 ## You will:
 
-* ##### Watch videos as **events** are introduced.
+* ##### Watch a video that introduces **events** to students.
 * ##### Use Sprite Lab to code different types of events.
 
 
-**Note:**  Some levels presented here have more steps than what a student will encounter during a lesson.
+**Note:**  Some levels presented here have more steps than what a student will encounter during a single lesson.
 
 ### **Suggested time:** 15 minutes
 
