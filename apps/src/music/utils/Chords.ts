@@ -5,6 +5,13 @@ export interface ChordNote {
   note: number;
 }
 
+export interface ChordGraphNote {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}
+
 // Generate an array containing tick numbers from 1..16.
 const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
 
@@ -51,8 +58,22 @@ export function generateNotesFromChord(
   }
 }
 
-/*
-generateGraphFromChord() {
+// Given a ChordEventValue, generate a set of data for graphing it.
+export function generateGraphDataFromChord(
+  chordEventValue: ChordEventValue,
+  width: number,
+  height: number,
+  numOctaves: number,
+  startOctave: number
+): ChordGraphNote[] {
+  const notes : ChordNote[] = generateNotesFromChord(chordEventValue);
 
+  return notes.map((note : ChordNote) => {
+    return {
+      x: (note.tick - 1) * width / 16,
+      y: height - ((note.note - startOctave * 12) * height / numOctaves / 12),
+      width: Math.ceil(width / 16),
+      height: Math.ceil(height / 12 / numOctaves)
+    }
+  });
 }
-*/
