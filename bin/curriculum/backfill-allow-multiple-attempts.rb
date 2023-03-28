@@ -30,17 +30,17 @@ def backfill_free_response_levels
   standalone_free_response_levels = FreeResponse.all.filter {|l| level_is_standalone?(l)}
   contained_free_response_levels = FreeResponse.all.filter {|l| level_is_contained?(l)}
   free_response_levels_to_flag = find_union(standalone_free_response_levels, contained_free_response_levels)
-  standalone_free_response_levels -= free_response_levels_to_flag
+  contained_free_response_levels -= free_response_levels_to_flag
   puts "Free Response levels to manually check:"
   free_response_levels_to_flag.each {|l| puts l.name}
 
-  standalone_free_response_levels.each do |level|
-    level.allow_multiple_attempts = "true"
+  contained_free_response_levels.each do |level|
+    level.allow_multiple_attempts = "false"
     level.save!
   end
 
   FreeResponse.all.filter {|l| l.allow_multiple_attempts.nil?}.each do |level|
-    level.allow_multiple_attempts = "false"
+    level.allow_multiple_attempts = "true"
     level.save!
   end
 end
@@ -49,17 +49,17 @@ def backfill_match_levels
   standalone_match_levels = Match.all.filter {|l| level_is_standalone?(l)}
   contained_match_levels = Match.all.filter {|l| level_is_contained?(l)}
   match_levels_to_flag = find_union(standalone_match_levels, contained_match_levels)
-  standalone_match_levels -= match_levels_to_flag
+  contained_match_levels -= match_levels_to_flag
   puts "Match levels to manually check:"
   match_levels_to_flag.each {|l| puts l.name}
 
-  standalone_match_levels.each do |level|
-    level.allow_multiple_attempts = "true"
+  contained_match_levels.each do |level|
+    level.allow_multiple_attempts = "false"
     level.save!
   end
 
   Match.all.filter {|l| l.allow_multiple_attempts.nil?}.each do |level|
-    level.allow_multiple_attempts = "false"
+    level.allow_multiple_attempts = "true"
     level.save!
   end
 end
