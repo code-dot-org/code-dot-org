@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import SingleSectionSetUp from './SingleSectionSetUp';
 import CurriculumQuickAssign from './CurriculumQuickAssign';
@@ -7,7 +8,6 @@ import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import PropTypes from 'prop-types';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
@@ -84,10 +84,11 @@ const saveSection = (e, section) => {
 };
 
 // TO DO: Add a prop to indicate if this is a new section or an existing section
-export default function SectionsSetUpContainer(props) {
-  const {isNewSection} = props;
+export default function SectionsSetUpContainer({sectionToBeEdited}) {
   const [sections, updateSection] = useSections();
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
+
+  const isNewSection = !sectionToBeEdited;
 
   const caretStyle = style.caret;
   const caret = advancedSettingsOpen ? 'caret-down' : 'caret-right';
@@ -189,5 +190,5 @@ const style = {
 };
 
 SectionsSetUpContainer.propTypes = {
-  isNewSection: PropTypes.bool.isRequired
+  sectionToBeEdited: PropTypes.bool
 };
