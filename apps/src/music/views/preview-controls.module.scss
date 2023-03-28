@@ -1,0 +1,35 @@
+@import "color.scss";
+
+.controlsRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+  justify-content: space-around;
+
+  .previewButton {
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.1s ease;
+
+    &:hover {
+      color: $light_teal;
+    }
+
+    &Disabled {
+      color: $neutral_dark40;
+      cursor: not-allowed;
+
+      &:hover {
+        color: $neutral_dark40;
+      }
+    }
+  }
+
+  .clearButton {
+    font-size: 12px;
+    padding: 5px;
+    width: 100%;
+  }
+}

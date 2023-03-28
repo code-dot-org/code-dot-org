@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './patternPanel.module.scss';
+import PreviewControls from './PreviewControls';
 
 // Generate an array containing tick numbers from 1..16.
 const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
@@ -11,13 +12,22 @@ const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
  * custom Blockly Field {@link FieldPattern}
  */
 
-const PatternPanel = ({library, initValue, onChange}) => {
+const PatternPanel = ({
+  bpm,
+  library,
+  initValue,
+  onChange,
+  previewSound,
+  previewPattern,
+  cancelPreviews
+}) => {
   // Make a copy of the value object so that we don't overwrite Blockly's
   // data.
   const currentValue = JSON.parse(JSON.stringify(initValue));
 
   const group = library.groups[0];
   const currentFolder = library.getFolderForPath(currentValue.kit);
+  const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
 
   const toggleEvent = (sound, tick) => {
     const index = currentValue.events.findIndex(
@@ -29,6 +39,7 @@ const PatternPanel = ({library, initValue, onChange}) => {
     } else {
       // Not found, so add.
       currentValue.events.push({src: sound.src, tick});
+      previewSound(`${currentValue.kit}/${sound.src}`);
     }
 
     onChange(currentValue);
@@ -59,6 +70,24 @@ const PatternPanel = ({library, initValue, onChange}) => {
     );
   };
 
+  const onClear = () => {
+    currentValue.events = [];
+    onChange(currentValue);
+  };
+
+  const startPreview = () => {
+    setCurrentPreviewTick(1);
+    const intervalId = setInterval(
+      () => setCurrentPreviewTick(tick => tick + 1),
+      // Tick forward every 16th note, i.e. 4 times per beat.
+      (60 / bpm / 4) * 1000
+    );
+    previewPattern(currentValue, () => {
+      clearInterval(intervalId);
+      setCurrentPreviewTick(0);
+    });
+  };
+
   return (
     <div className={styles.patternPanel}>
       <select value={currentValue.kit} onChange={handleFolderChange}>
@@ -77,7 +106,10 @@ const PatternPanel = ({library, initValue, onChange}) => {
             {arrayOfTicks.map(tick => {
               return (
                 <div
-                  className={styles.outerCell}
+                  className={classNames(
+                    styles.outerCell,
+                    tick === currentPreviewTick && styles.outerCellPlaying
+                  )}
                   onClick={() => toggleEvent(sound, tick)}
                   key={tick}
                 >
@@ -88,14 +120,24 @@ const PatternPanel = ({library, initValue, onChange}) => {
           </div>
         );
       })}
+      <PreviewControls
+        enabled={currentValue.events.length > 0}
+        playPreview={startPreview}
+        onClickClear={onClear}
+        cancelPreviews={cancelPreviews}
+      />
     </div>
   );
 };
 
 PatternPanel.propTypes = {
   library: PropTypes.object.isRequired,
+  bpm: PropTypes.number.isRequired,
   initValue: PropTypes.object.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  previewSound: PropTypes.func.isRequired,
+  previewPattern: PropTypes.func.isRequired,
+  cancelPreviews: PropTypes.func.isRequired
 };
 
 export default PatternPanel;

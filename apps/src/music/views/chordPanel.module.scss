@@ -22,31 +22,6 @@
       font-size: 12px;
       margin: 0 30px;
     }
-
-    .previewButton {
-      font-size: 30px;
-      cursor: pointer;
-      transition: color 0.1s ease;
-
-      &:hover {
-        color: $green;
-      }
-
-      &Disabled {
-        color: $neutral_dark40;
-        cursor: not-allowed;
-
-        &:hover {
-          color: $neutral_dark40;
-        }
-      }
-    }
-
-    .clearButton {
-      font-size: 12px;
-      padding: 5px;
-      width: 100%;
-    }
   }
 
   .keybed {
@@ -87,7 +62,7 @@
       }
 
       &.selected {
-        background-color: $green;
+        background-color: $light_teal;
         cursor: pointer;
       }
 
@@ -100,7 +75,7 @@
       }
 
       &:hover {
-        background-color: $green;
+        background-color: $light_teal;
       }
     }
   }

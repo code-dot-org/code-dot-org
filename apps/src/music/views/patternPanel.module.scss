@@ -5,22 +5,29 @@
 }
 
 .row {
-  height: 24px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: rgba($background_gray, 0.2);
+  }
 }
 
 .name {
   display: inline-block;
   width: 80px;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .outerCell {
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  padding-top: 2px;
+  padding: 5px 3px;
   box-sizing: border-box;
   cursor: pointer;
+
+  &Playing {
+    background-color: $light-gray;
+  }
 }
 
 .cell {

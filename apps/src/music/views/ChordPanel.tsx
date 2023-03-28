@@ -2,8 +2,8 @@ import React, {useState, useEffect, useRef} from 'react';
 import {getNoteName, isBlackKey} from '../utils/Notes';
 import MusicLibrary from '../player/MusicLibrary';
 import {ChordEventValue, PlayStyle} from '../player/interfaces/ChordEvent';
+import PreviewControls from './PreviewControls';
 
-const FontAwesome = require('../../templates/FontAwesome');
 const moduleStyles = require('./chordPanel.module.scss').default;
 const classNames = require('classnames');
 
@@ -22,19 +22,22 @@ export interface ChordPanelProps {
   library: MusicLibrary;
   initValue: ChordEventValue;
   onChange: (value: ChordEventValue) => void;
-  previewChord: (chord: ChordEventValue, onStop: () => void) => void;
+  previewChord: (chord: ChordEventValue, onStop?: () => void) => void;
+  previewNote: (note: number, instrument: string, onStop?: () => void) => void;
+  cancelPreviews: () => void;
 }
 
 const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
   initValue,
   onChange,
   previewChord,
+  previewNote,
+  cancelPreviews,
   library
 }) => {
   const [selectedNotes, setSelectedNotes] = useState<number[]>(initValue.notes);
   const [playStyle, setPlayStyle] = useState<PlayStyle>(initValue.playStyle);
   const [instrument, setInstrument] = useState<string>(initValue.instrument);
-  const [isPlayingPreview, setIsPlayingPreview] = useState<boolean>(false);
   const [isDisabled, setIsDisabled] = useState<boolean>(
     selectedNotes.length >= MAX_NOTES
   );
@@ -49,41 +52,9 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
       newSelectedNotes.splice(newSelectedNotes.indexOf(note), 1);
     } else {
       newSelectedNotes.push(note);
+      previewNote(note, instrument);
     }
     setSelectedNotes(newSelectedNotes);
-  };
-
-  const previewTimeoutIdRef = useRef<number | null>(null);
-
-  const onPreview = () => {
-    if (isPlayingPreview) {
-      return;
-    }
-
-    setIsPlayingPreview(true);
-    previewChord(
-      {
-        notes: selectedNotes,
-        playStyle,
-        instrument
-      },
-      () => {
-        setIsPlayingPreview(false);
-        if (previewTimeoutIdRef.current !== null) {
-          clearTimeout(previewTimeoutIdRef.current);
-        }
-      }
-    );
-
-    // Set a timeout to reset the preview button in case there is an error
-    // playing a preview.
-    previewTimeoutIdRef.current = window.setTimeout(() => {
-      if (previewTimeoutIdRef.current !== null) {
-        console.warn(`Preview timeout expired. Resetting preview buttton.`);
-        setIsPlayingPreview(false);
-      }
-      previewTimeoutIdRef.current = null;
-    }, 5000);
   };
 
   useEffect(() => {
@@ -131,21 +102,18 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
         onPressKey={onPressKey}
         isDisabled={isDisabled}
       />
-      <div className={moduleStyles.controlsRow}>
-        <FontAwesome
-          icon={'volume-up'}
-          onClick={onPreview}
-          className={classNames(
-            moduleStyles.previewButton,
-            isPlayingPreview && moduleStyles.previewButtonDisabled
-          )}
-        />
-        <FontAwesome
-          icon={'ban'}
-          onClick={() => setSelectedNotes([])}
-          className={moduleStyles.previewButton}
-        />
-      </div>
+      <PreviewControls
+        enabled={selectedNotes.length > 0}
+        playPreview={() =>
+          previewChord({
+            notes: selectedNotes,
+            playStyle,
+            instrument
+          })
+        }
+        onClickClear={() => setSelectedNotes([])}
+        cancelPreviews={cancelPreviews}
+      />
     </div>
   );
 };
