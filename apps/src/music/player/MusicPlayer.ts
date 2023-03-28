@@ -8,6 +8,7 @@ import {SoundEvent} from './interfaces/SoundEvent';
 import {TrackMetadata} from './interfaces/TrackMetadata';
 import MusicLibrary, {SoundFolder} from './MusicLibrary';
 import SamplePlayer, {SampleEvent} from './SamplePlayer';
+import {generateNotesFromChord, ChordNote} from '../utils/Chords';
 
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
@@ -521,6 +522,28 @@ export default class MusicPlayer {
       return [];
     }
 
+    const generatedNotes: ChordNote[] = generateNotesFromChord(
+      chordEvent.value);
+
+    generatedNotes.forEach(note => {
+      const sound = folder.sounds.find(sound => sound.note === note.note) || null;
+      if (sound === null) {
+        console.warn(
+          `No sound for note value ${note} on instrument ${instrument}`
+        );
+      }
+
+      const noteWhen = chordEvent.when + note.tick/16;
+      //playStyle === 'together' ? chordEvent.when : chordEvent.when + i / 16;
+
+      results.push({
+        sampleId: `${instrument}/${sound?.src}`,
+        offsetSeconds: this.convertPlayheadPositionToSeconds(noteWhen),
+        ...event
+      });
+    });
+
+    /*
     if (playStyle === 'arpeggio-up') {
       notes.sort();
     } else if (playStyle === 'arpeggio-down') {
@@ -558,6 +581,7 @@ export default class MusicPlayer {
         ...event
       });
     }
+    */
 
     return results;
   }

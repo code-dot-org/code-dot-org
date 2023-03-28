@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import {getNoteName, isBlackKey} from '../utils/Notes';
 import MusicLibrary from '../player/MusicLibrary';
 import {ChordEventValue, PlayStyle} from '../player/interfaces/ChordEvent';
+import {generateNotesFromChord, ChordNote} from '../utils/Chords';
 
 const FontAwesome = require('../../templates/FontAwesome');
 const moduleStyles = require('./chordPanel.module.scss').default;
@@ -247,44 +248,21 @@ const NoteGrid: React.FunctionComponent<NoteGridProps> = ({
   const keys = [];
   const startingNote = startOctave * 12;
 
-  let notes: any = [];
-
-  let renderNotes: any;
-
-  if (playStyle === 'arpeggio-up') {
-    renderNotes = [...selectedNotes].sort();
-  } else {
-    renderNotes = [...selectedNotes].sort().reverse();
-  }
-
-  arrayOfTicks.forEach(tick => {
-    notes[tick] = {
-      tick: tick,
-      pitch: renderNotes[(tick - 1) % selectedNotes.length]
-    };
-  });
-
-  /*
-  const notes = [
-    {tick: 1, pitch: 48},
-    {tick: 2, pitch: 49},
-    {tick: 3, pitch: 50},
-    {tick: 4, pitch: 51},
-    {tick: 5, pitch: 52},
-    {tick: 6, pitch: 53},
-    {tick: 7, pitch: 54}
-  ];
-  */
+  const renderNotes: ChordNote[] = generateNotesFromChord({
+    notes: selectedNotes,
+    playStyle,
+    instrument: ''
+  } as ChordEventValue);
 
   return (
     <div id="notegrid" className={moduleStyles.noteGridContainer}>
-      {notes.map((note: any) => {
+      {renderNotes.map((renderNote: ChordNote) => {
         return (
           <div
             className={moduleStyles.gridNote}
             style={{
-              bottom: ((note.pitch - START_OCTAVE * 12) * 110) / 3 / 13,
-              left: ((note.tick - 1) * 315) / 16
+              bottom: ((renderNote.note - START_OCTAVE * 12) * 110) / 3 / 13,
+              left: ((renderNote.tick - 1) * 315) / 16
             }}
           >
             &nbsp;
