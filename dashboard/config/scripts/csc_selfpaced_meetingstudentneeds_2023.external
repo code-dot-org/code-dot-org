@@ -14,28 +14,29 @@ markdown <<MARKDOWN
 
 <summary><strong>Did you notice...</strong></summary>
 
-<img src="https://images.code.org/0a52eec184a4ab28ce053899d85ed9eb-image-1678893361563.png" alt="Image of a shoe recommender app" width="300px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/1e34b9574a4337f6e055bab8d333a88d-image-1679957725415.png" alt="Image of a shoe recommender app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 * #### You can choose among different sprites.
 * #### You can give sprites a location and move them.
 * #### An event can happen with a click.
-* #### An event can happen when two sprites touch.
+* #### An event can happen when sprites touch.
 * #### An event can happen during a set amount of time.
 
 </details>
 
 <div style="clear:both"/>
 
+
 ## Reflection
 
-#### What challenges might your students face with sprites? 
-#### What challenges might your students face with events? 
+#### What challenges might your students have with sprites? 
+#### What challenges might your students have with events? 
 
 <details>
 
 <summary><strong>Potential challenges may include...</strong></summary>
 
-<img src="https://images.code.org/2ac6f6e2be36cb478b0e9067755cda2d-image-1678828359562.png" alt="Image of a shoe recommender app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/855abe7bbd73291b6ce974966026d306-image-1679957698972.png" alt="Image of a shoe recommender app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 * #### You can choose among different sprites.
 * #### You can give sprites a location and move them.
@@ -47,7 +48,6 @@ markdown <<MARKDOWN
 </details>
 
 <div style="clear:both"/>
-
 
 
 ## Let's keep learning! 

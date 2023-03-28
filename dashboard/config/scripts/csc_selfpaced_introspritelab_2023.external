@@ -3,19 +3,16 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introduction to Sprite Lab
+# Introducing Sprite Lab
 
-##### Sprite Lab is XXXXX.
+##### Sprite Lab is one learning tool students will use throughout CS Connections.
 
 ## You will:
 
-* ##### Watch videos as Sprite Lab is introduced.
-* ##### Preview CS Connections lesson levels.
+* ##### Watch a video that introduces Sprite Lab to students.
+* ##### Practice working in Sprite Lab as you preview CS Connections lessons.
 
 ### **Suggested time:** 5 minutes
 
 ## Let's keep learning! 
-
-
-
 MARKDOWN
