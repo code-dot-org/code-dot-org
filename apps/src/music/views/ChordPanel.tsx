@@ -254,14 +254,16 @@ const NoteGrid: React.FunctionComponent<NoteGridProps> = ({
     315,
     110,
     numOctaves,
-    startOctave
+    startOctave,
+    2
   );
 
   return (
     <div id="notegrid" className={moduleStyles.noteGridContainer}>
-      {graphNotes.map((graphNote: ChordGraphNote) => {
+      {graphNotes.map((graphNote: ChordGraphNote, index) => {
         return (
           <div
+            key={index}
             className={moduleStyles.gridNote}
             style={{
               top: graphNote.y,
