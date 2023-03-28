@@ -1039,6 +1039,6 @@ Dashboard::Application.routes.draw do
     get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
     get '/offline-files.json', action: :offline_files, controller: :offline
 
-    get '/openai/chat_completion', to: 'openai#chat_completion'
+    post '/openai/chat_completion', to: 'openai#chat_completion'
   end
 end
