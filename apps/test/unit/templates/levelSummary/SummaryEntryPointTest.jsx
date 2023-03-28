@@ -18,13 +18,6 @@ const INITIAL_STATE = {
 };
 
 const setUpWrapper = (state = {}, jsData = {}) => {
-  const div = document.createElement('div');
-  div.setAttribute('id', 'attach-to-div');
-  const script = document.createElement('script');
-  script.dataset.freeresponse = JSON.stringify({...JS_DATA, ...jsData});
-  document.head.appendChild(script);
-  document.body.appendChild(div);
-
   const store = createStore(
     combineReducers({
       teacherSections
@@ -34,22 +27,14 @@ const setUpWrapper = (state = {}, jsData = {}) => {
 
   const wrapper = mount(
     <Provider store={store}>
-      <SummaryEntryPoint />
-    </Provider>,
-    {attachTo: div}
+      <SummaryEntryPoint scriptData={{...JS_DATA, ...jsData}} />
+    </Provider>
   );
 
   return wrapper;
 };
 
 describe('SummaryEntryPoint', () => {
-  afterEach(() => {
-    document.head.removeChild(
-      document.querySelector('script[data-freeresponse]')
-    );
-    document.body.removeChild(document.querySelector('#attach-to-div'));
-  });
-
   it('renders elements', () => {
     const wrapper = setUpWrapper();
 

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import getScriptData from '@cdo/apps/util/getScriptData';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import i18n from '@cdo/locale';
@@ -11,6 +10,8 @@ import styles from './check-for-understanding.module.scss';
 const FREE_RESPONSE = 'FreeResponse';
 
 const CheckForUnderstanding = ({
+  scriptData,
+  // redux
   isRtl,
   viewAs,
   selectedSection,
@@ -27,11 +28,9 @@ const CheckForUnderstanding = ({
     document.location.replace(currentLevel.url + document.location.search);
   }
 
-  const data = getScriptData('summary');
-
-  const questionMarkdown = data.level.properties.long_instructions;
-  const teacherMarkdown = data.teacher_markdown;
-  const height = data.level.height || '80';
+  const questionMarkdown = scriptData.level.properties.long_instructions;
+  const teacherMarkdown = scriptData.teacher_markdown;
+  const height = scriptData.level.height || '80';
 
   return (
     <div className={styles.summaryContainer}>
@@ -49,25 +48,28 @@ const CheckForUnderstanding = ({
       </p>
 
       {/* Question Title */}
-      {data.level.properties.title && (
-        <h1 className={styles.levelTitle}>{data.level.properties.title}</h1>
+      {scriptData.level.properties.title && (
+        <h1 className={styles.levelTitle}>
+          {scriptData.level.properties.title}
+        </h1>
       )}
 
       {/* Question Body */}
       <SafeMarkdown className={styles.markdown} markdown={questionMarkdown} />
 
       {/* Question Inputs */}
-      {data.level.type === FREE_RESPONSE && (
+      {scriptData.level.type === FREE_RESPONSE && (
         <textarea
           className={styles.freeResponse}
-          id={`level_${data.level.id}`}
+          id={`level_${scriptData.level.id}`}
           aria-label={i18n.yourAnswer()}
           placeholder={
-            data.level.properties.placeholder || i18n.enterYourAnswerHere()
+            scriptData.level.properties.placeholder ||
+            i18n.enterYourAnswerHere()
           }
           style={{height: height + 'px'}}
           readOnly={true}
-          defaultValue={data.last_attempt}
+          defaultValue={scriptData.last_attempt}
         />
       )}
 
@@ -83,7 +85,7 @@ const CheckForUnderstanding = ({
           <p>
             <i className="fa fa-user" />
             <span>
-              {data.responses.length}/{students.length}{' '}
+              {scriptData.responses.length}/{students.length}{' '}
               {i18n.studentsAnswered()}
             </span>
           </p>
@@ -95,7 +97,7 @@ const CheckForUnderstanding = ({
         </label>
 
         <div className={styles.studentResponsesColumns}>
-          {data.responses.map(response => (
+          {scriptData.responses.map(response => (
             <div key={response.user_id} className={styles.studentAnswer}>
               <p>{response.text}</p>
             </div>
@@ -119,6 +121,7 @@ const CheckForUnderstanding = ({
 };
 
 CheckForUnderstanding.propTypes = {
+  scriptData: PropTypes.object,
   isRtl: PropTypes.bool,
   viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
   selectedSection: PropTypes.shape({

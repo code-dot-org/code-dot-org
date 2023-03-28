@@ -12,7 +12,7 @@ import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {getStore} from '@cdo/apps/redux';
 
 $(document).ready(() => {
-  const data = getScriptData('freeresponse');
+  const scriptData = getScriptData('freeresponse');
 
   $('#containedLevel0 > #summaryEntryPoint').each(function() {
     const container = this;
@@ -21,7 +21,7 @@ $(document).ready(() => {
     ReactDOM.render(
       <Provider store={store}>
         <InstructorsOnly>
-          <SummaryEntryPoint />
+          <SummaryEntryPoint scriptData={scriptData} />
         </InstructorsOnly>
       </Provider>,
       container
@@ -45,7 +45,7 @@ $(document).ready(() => {
   }
 
   const attachmentsMountPoint = document.querySelector('#free-response-upload');
-  const attachmentsProps = data.attachments_props;
+  const attachmentsProps = scriptData.attachments_props;
   if (attachmentsMountPoint && attachmentsProps) {
     dashboard.project.getCurrentId = function() {
       return appOptions.channel;

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import getScriptData from '@cdo/apps/util/getScriptData';
 import Button from '@cdo/apps/templates/Button';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import i18n from '@cdo/locale';
@@ -9,7 +8,7 @@ import styles from './summary-entry-point.module.scss';
 
 const SUMMARY_PATH = '/summary';
 
-const SummaryEntryPoint = ({students}) => {
+const SummaryEntryPoint = ({scriptData, students}) => {
   // If viewing the page as Participant, be sure to rewrite the link URL
   // to view as Instructor, so we don't just get redirected back.
   const params = document.location.search.replace(
@@ -17,8 +16,6 @@ const SummaryEntryPoint = ({students}) => {
     `viewAs=${ViewType.Instructor}`
   );
   const summaryUrl = document.location.pathname + SUMMARY_PATH + params;
-
-  const data = getScriptData('freeresponse');
 
   return (
     <div className={styles.summaryEntryPoint}>
@@ -34,7 +31,7 @@ const SummaryEntryPoint = ({students}) => {
         <p>
           <i className="fa fa-user" />
           <span className={styles.counter}>
-            {data.responses.length}/{students.length}{' '}
+            {scriptData.responses.length}/{students.length}{' '}
           </span>
           <span className={styles.text}>{i18n.studentsAnswered()}</span>
         </p>
@@ -44,6 +41,7 @@ const SummaryEntryPoint = ({students}) => {
 };
 
 SummaryEntryPoint.propTypes = {
+  scriptData: PropTypes.object,
   students: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
