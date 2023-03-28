@@ -14,11 +14,14 @@ import {EditorView} from '@codemirror/view';
 import {EditorState} from '@codemirror/state';
 import javalab, {
   setDisplayTheme,
+  setIsReadOnlyWorkspace,
+  setHasOpenCodeReview,
+  setBackpackEnabled
+} from '@cdo/apps/javalab/javalabRedux';
+import javalabEditor, {
   sourceFileOrderUpdated,
   sourceVisibilityUpdated,
   sourceValidationUpdated,
-  setIsReadOnlyWorkspace,
-  setHasOpenCodeReview,
   setEditTabKey,
   setOrderedTabKeys,
   setFileMetadata,
@@ -26,9 +29,9 @@ import javalab, {
   setAllEditorMetadata,
   setAllSourcesAndFileMetadata,
   setAllValidation,
-  setBackpackEnabled,
   openEditorDialog
-} from '@cdo/apps/javalab/javalabRedux';
+} from '@cdo/apps/javalab/redux/editorRedux';
+
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
@@ -49,7 +52,7 @@ describe('Java Lab Editor Test', () => {
   beforeEach(() => {
     stubRedux();
     registerReducers(commonReducers);
-    registerReducers({javalab});
+    registerReducers({javalab, javalabEditor});
     store = getStore();
     defaultProps = {
       onCommitCode: () => {},

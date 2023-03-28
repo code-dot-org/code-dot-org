@@ -13,7 +13,7 @@ import {
   clearNewFileError,
   clearRenameFileError,
   closeEditorDialog
-} from './javalabRedux';
+} from './redux/editorRedux';
 
 export const JavalabEditorDialog = makeEnum(
   'RENAME_FILE',
@@ -127,15 +127,15 @@ UnconnectedJavalabEditorDialogManager.propTypes = {
 
 export default connect(
   state => ({
-    editorOpenDialogName: state.javalab.editorOpenDialogName,
+    editorOpenDialogName: state.javalabEditor.editorOpenDialogName,
     displayTheme: state.javalab.displayTheme,
-    newFileError: state.javalab.newFileError,
-    renameFileError: state.javalab.renameFileError,
+    newFileError: state.javalabEditor.newFileError,
+    renameFileError: state.javalabEditor.renameFileError,
     commitDialogFileNames: _.filter(
-      Object.keys(state.javalab.sources),
+      Object.keys(state.javalabEditor.sources),
       sourceName =>
-        state.javalab.sources[sourceName].isVisible &&
-        !state.javalab.sources[sourceName].isValidation
+        state.javalabEditor.sources[sourceName].isVisible &&
+        !state.javalabEditor.sources[sourceName].isValidation
     )
   }),
   dispatch => ({

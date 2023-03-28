@@ -176,7 +176,8 @@ function createStore(reducer, initialState) {
               'runApp',
               'props.showNextHint',
               'props.assetUrl',
-              'props.exportApp'
+              'props.exportApp',
+              'getChanges'
             ],
             ignoredPaths: [
               'hiddenLesson',
@@ -190,7 +191,9 @@ function createStore(reducer, initialState) {
               /animationList\.propsByKey.*\.blob/,
               'maker',
               'data',
-              'screens'
+              'screens',
+              'header.getLevelBuilderChanges',
+              'getChanges'
             ]
           }
         }).concat(reduxLogger)

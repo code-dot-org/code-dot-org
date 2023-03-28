@@ -476,7 +476,7 @@ const styles = {
 
 export const UnconnectedBackpack = Backpack;
 export default connect(state => ({
-  sources: state.javalab.sources,
-  validation: state.javalab.validation,
+  sources: state.javalabEditor.sources,
+  validation: state.javalabEditor.validation,
   backpackEnabled: state.javalab.backpackEnabled
 }))(onClickOutside(UnconnectedBackpack));
