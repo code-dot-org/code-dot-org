@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-27 17:51:32 UTC",
+    "serialized_at": "2023-03-28 04:50:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -73,7 +73,6 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students work through a progression of levels to build an understanding of how to use Design Mode to layout an app. The final level has students setting up the screen of an app by attempting to copy an image of an app. ",
         "preparation": "* Review the programming levels to ensure you understand the fundamentals of Design Mode in App Lab and how elements are created and their properties are modified.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/19sZq9TrPXas5dhs2ZjhwhXX500ljGM50MHP5zbQjbHs/edit?usp=sharing)",
-        "purpose": "This lesson introduces students to Design Mode in App Lab and the different kinds of screen elements and properties at their disposal in this tool. This lesson not only builds up skills in designing a user interface but also sets students up to begin designing an app of their own in the following lesson.",
         "student_overview": "Learn how to create screens, buttons, images, text, and more inside of App Lab."
       },
       "seeding_key": {
@@ -134,8 +133,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students explore the challenges of clearly communicating instructions. They build a small arrangement of blocks (LEGO® pieces or paper cutouts) and then create text instructions a classmate could follow to construct the same arrangement. Groups then trade instructions to see if they were clear enough to allow reconstruction of the original arrangement. The wrap-up discussion is used to highlight the inherent ambiguities of human language and call out the need for the creation of a programming language which leaves no room for interpretation.",
-        "preparation": "* Prepare either a small set of LEGO blocks or paper cutouts for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is students' first introduction to the concept of a programming language. It helps them understand why programming languages exist by giving them a first-hand experience with the problems that programming languages are designed to address. Natural language is usually too ambiguous for giving precise instructions that can be followed correctly 100% of the time. We need to create more structured and precise programming languages in order to accomplish this.",
+        "preparation": "* Prepare either a small set of LEGO blocks or paper cutouts for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1ro6_apaSbhb3Ff16xK9fVyJX3vszVcknaEdjnzemVP8/edit?usp=sharing)",
         "student_overview": "This is the first in a series of lessons where students will make progress on building their own functional app. ",
         "unplugged": true
       },
@@ -155,8 +153,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students use and modify a series of simple apps to get familiar with a small set of programming commands. They observe the way the code runs by slowing down the code and compare programs that run all at once to those that respond to user actions like buttons clicks. At the end of the lesson students discuss what they observed and are introduced to some key vocabulary for describing the running of programs.",
-        "preparation": "* Review the example apps and the prompts that students will be asked to respond to for each\n* Review the information covered in the slides at the conclusion of the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is written in an Investigate style, a common format of lesson that will be used in the remainder of the programming units. In this kind of lesson students are encouraged to investigate working code and make simple modifications to understand how it works. \r\n\r\nThis lesson introduces a number of concepts and vocabulary around what programs are and how they run that will need to be reinforced in future lessons. ",
+        "preparation": "* Review the example apps and the prompts that students will be asked to respond to for each\n* Review the information covered in the slides at the conclusion of the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1TfLlWANuZcXn4tljTl6_Mp9FqUAYnLQXkTwmaG0_Sgk/edit?usp=sharing)",
         "student_overview": "Get familiar with what programs are and how they run by using and modifying several working apps."
       },
       "seeding_key": {
@@ -175,8 +172,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students practice using the different programming concepts that they were introduced to in the last lesson. To begin, however, they are introduced to the concept of debugging and are encouraged to use and reflect on this practice throughout the lesson. At the end of the lesson students share their experiences debugging as well as an new realizations about programming.",
-        "preparation": "* Review the steps of the debugging process\n* Review the [r debugging/csp/2023] one-pager\n* Review the levels students will need to complete on Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson serves a number of roles. Even if students had modified programs in the previous lesson, this continues to be an introduction to many of the skills of programming. Students are also introduced to debugging as a skill they'll need to use and develop as programmers. A huge goal of this lesson, however, is attitudinal.",
+        "preparation": "* Review the steps of the debugging process\n* Review the [r debugging/csp/2023] one-pager\n* Review the levels students will need to complete on Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1yvj_9HkeZY2xKw-xDm1rnfk7zkZ_W_vceHnyx15EkI0/edit?usp=sharing)",
         "student_overview": "Learn how to identify and fix problems in your code through the debugging process. Then practice using it with a classmate."
       },
       "seeding_key": {
@@ -466,21 +462,8 @@
       }
     },
     {
-      "key": "376f7cca-4ecb-4448-83d6-a9fd37ac961f",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "376f7cca-4ecb-4448-83d6-a9fd37ac961f",
-        "lesson.key": "The Need for Programming Languages",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2023"
-      }
-    },
-    {
       "key": "8bc3a09b-da29-49c3-906e-badd7bade8dc",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -494,7 +477,7 @@
     },
     {
       "key": "496a23e7-0152-46d9-8a26-57aaaea70d16",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -508,7 +491,7 @@
     },
     {
       "key": "82d4bed5-8018-48a7-ab0c-afb1f71a97ee",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -522,7 +505,7 @@
     },
     {
       "key": "31a76654-cadd-4e0f-b461-d56561578e9f",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -533,21 +516,8 @@
       }
     },
     {
-      "key": "5d626cad-2a0b-4a4d-86d1-e08c30513139",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5d626cad-2a0b-4a4d-86d1-e08c30513139",
-        "lesson.key": "Intro to Programming",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2023"
-      }
-    },
-    {
       "key": "01f2ca2f-2c7b-498b-bfe3-1815d5081d32",
-      "position": 2,
+      "position": 1,
       "properties": {
         "name": "Warm Up"
       },
@@ -560,7 +530,7 @@
     },
     {
       "key": "11496835-d945-42d7-ac20-d6394d23485f",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -574,7 +544,7 @@
     },
     {
       "key": "2d4dcea7-1c3a-42f7-82bf-639b51bf8699",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 15,
         "name": "Wrap Up"
@@ -587,21 +557,8 @@
       }
     },
     {
-      "key": "18ada526-518a-47d5-9110-6a353f8c9acd",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "18ada526-518a-47d5-9110-6a353f8c9acd",
-        "lesson.key": "Debugging",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2023"
-      }
-    },
-    {
       "key": "f3f5599c-4a5a-48e3-a45e-4058b0f70f08",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -615,7 +572,7 @@
     },
     {
       "key": "65ba9bc8-2f3f-4b2a-bed8-4c9d918ae72f",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -629,7 +586,7 @@
     },
     {
       "key": "5295ac75-7103-448f-b541-7c1179875e88",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -643,7 +600,7 @@
     },
     {
       "key": "153bc31f-cad6-4743-9d6f-36ec937833bd",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -1498,17 +1455,6 @@
       }
     },
     {
-      "key": "01c2b6f2-ce58-42b5-8278-b882a9cbf025",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1ro6_apaSbhb3Ff16xK9fVyJX3vszVcknaEdjnzemVP8/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "01c2b6f2-ce58-42b5-8278-b882a9cbf025",
-        "lesson_activity.key": "376f7cca-4ecb-4448-83d6-a9fd37ac961f"
-      }
-    },
-    {
       "key": "c0855499-7521-4880-9bf6-7c1219c3c62d",
       "position": 1,
       "properties": {
@@ -1547,7 +1493,13 @@
       "key": "9e669389-485b-4558-b1c3-049599321840",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in groups of two, optionally forming a group of three.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a small set of blocks (either LEGO or paper cutouts). Also have each group use a blank sheet of paper or a blank page in a journal.\r\n\r\n**Display:** Use the lesson slides to guide this activity."
+        "description": "**Group:** Place students in groups of two, optionally forming a group of three.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a small set of blocks (either LEGO or paper cutouts). Also have each group use a blank sheet of paper or a blank page in a journal.\r\n\r\n**Display:** Use the lesson slides to guide this activity.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This lesson is students' first introduction to the concept of a programming language. It helps them understand why programming languages exist by giving them a first-hand experience with the problems that programming languages are designed to address. Natural language is usually too ambiguous for giving precise instructions that can be followed correctly 100% of the time. We need to create more structured and precise programming languages in order to accomplish this."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9e669389-485b-4558-b1c3-049599321840",
@@ -1662,17 +1614,6 @@
       }
     },
     {
-      "key": "c7378692-abab-4740-8677-da782fcf3488",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1TfLlWANuZcXn4tljTl6_Mp9FqUAYnLQXkTwmaG0_Sgk/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "c7378692-abab-4740-8677-da782fcf3488",
-        "lesson_activity.key": "5d626cad-2a0b-4a4d-86d1-e08c30513139"
-      }
-    },
-    {
       "key": "0fb77eea-d612-433f-b355-48a3176b0a74",
       "position": 1,
       "properties": {
@@ -1723,7 +1664,13 @@
       "key": "0ea43521-e531-43c1-ae26-c9f939e604b4",
       "position": 3,
       "properties": {
-        "progression_name": "Code Investigation"
+        "progression_name": "Code Investigation",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This lesson is written in an **Investigate** style, a common format of lesson that will be used in the remainder of the programming units. In this kind of lesson students are encouraged to investigate working code and make simple modifications to understand how it works. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0ea43521-e531-43c1-ae26-c9f939e604b4",
@@ -1804,17 +1751,6 @@
       "seeding_key": {
         "activity_section.key": "d6be92b5-2916-4346-9257-3380deb803b0",
         "lesson_activity.key": "2d4dcea7-1c3a-42f7-82bf-639b51bf8699"
-      }
-    },
-    {
-      "key": "70d7d1a6-95f7-4abb-a64b-deac68958738",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1yvj_9HkeZY2xKw-xDm1rnfk7zkZ_W_vceHnyx15EkI0/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "70d7d1a6-95f7-4abb-a64b-deac68958738",
-        "lesson_activity.key": "18ada526-518a-47d5-9110-6a353f8c9acd"
       }
     },
     {

@@ -1,0 +1,36 @@
+name 'CSC-SelfPaced-debugging2_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Implementing Debugging
+
+## General Debugging Teaching Strategies
+
+<img src="https://images.code.org/777a7b74cb2c3607d956c0c672d04f6f-image-1679964913802.png" alt="Image of AI bot and a model card" style="border-radius:40px; float: right; padding-right: 120px; height: 150 px; clear: both; margin: 0 20px 20px 0;">
+
+##### Pause lessons for **whole group discussions**
+
+##### Display an **anchor chart** with steps for debugging
+
+##### Use **guiding prompts**
+
+* 	<i>What is your code doing?
+    
+* 	What do you want the code to do?
+    
+*	Where do you think there's a bug in your code? 
+    
+*    Why? </i>
+
+## General Steps for Debugging
+
+##### **Search** for bugs
+##### **Discuss** the bugs
+##### **Fix** bugs through trial and error
+##### **Collect** bugs as references to help with future problems
+##### **Celebrate** students' challenges and successes
+
+## Let's keep learning! 
+
+MARKDOWN
