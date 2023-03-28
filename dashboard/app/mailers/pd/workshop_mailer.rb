@@ -126,18 +126,6 @@ class Pd::WorkshopMailer < ActionMailer::Base
       reply_to: reply_to
   end
 
-  def teacher_pre_workshop_csa(enrollment)
-    @enrollment = enrollment
-    @workshop = enrollment.workshop
-    @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
-
-    mail content_type: 'text/html',
-      from: from_teacher,
-      subject: 'Preparing for your Computer Science A summer workshop',
-      to: email_address(@enrollment.full_name, @enrollment.email),
-      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
-  end
-
   def facilitator_enrollment_reminder(user, workshop)
     @user = user
     @workshop = workshop

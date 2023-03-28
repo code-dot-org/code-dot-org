@@ -525,23 +525,11 @@ class Pd::Workshop < ApplicationRecord
     raise "Failed to send follow up: #{errors.join(', ')}" unless errors.empty?
   end
 
-  def send_teacher_pre_work_csa
-    # Collect errors, but do not stop batch. Rethrow all errors below.
-    errors = []
-    scheduled_start_in_days(20).each do |enrollment|
-      Pd::WorkshopMailer.teacher_csa_pre_workshop(enrollment).deliver_now
-    rescue => exception
-      errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
-    end
-    raise "Failed to send CSA pre-work: #{errors.join(', ')}" unless errors.empty?
-  end
-
   def self.send_automated_emails
     send_reminder_for_upcoming_in_days(3)
     send_reminder_for_upcoming_in_days(10)
     send_reminder_to_close
     send_follow_up_after_days(30)
-    send_teacher_pre_work_csa if course == COURSE_CSA
   end
 
   # Updates enrollments with resolved users.
