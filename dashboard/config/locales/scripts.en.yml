@@ -9948,6 +9948,8 @@ en:
               name: CTF Flash Talk
             lesson-4:
               name: CSS Grid
+            lesson-5:
+              name: Assessments
           lesson_groups: {}
           name: angelina-playground
           title: Angelina's Place To Do Stuff
@@ -10912,3 +10914,122 @@ en:
           description_short: Learn to about Artificial Intelligence and Machine Learning.
           description: "This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students learn the basics of machine learning and use a tool called AI Lab to create machine learning models that can be used in App Lab. The unit starts with an overview of machine learning and how computers can use patterns in data to make decisions and predictions. Then, students learn how to use AI Lab to train models from tabular data while exploring issues of bias. Lessons follow a repeating \"unplugged - AI Lab - App Lab\" pattern so students are continually exposed to the concepts and tools of machine learning. The chapter culminates in a project where students select from a set of real-world datasets to train a machine learning model and create an app.\n\n\n**Goals:**\n* Create a machine learning model in AI Lab to solve a problem, and use App Lab to create an app that uses their model. \n* Understand how machine learning models make decisions from data\n\n\n**Big Questions:**\n- How does machine learning find patterns in data to make decisions?\n- How can we avoid bias when training a machine learning model?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter prepares students to be machine learning scientists to create an app that addresses an issue in their community. Students follow along with a fictional group of students as they define an issue, develop a survey to collect data, analyze their data in AI Lab, create a model card, and create an app to solve their problem. Then, in the final project, students repeat these same steps with an issue they care about in their community.\n\n**Goals:**\n* Create machine learning models in AI Lab  from their own data and use App Lab to create an app that uses their model to solve problems in their community. \n\n\n**Big Questions:**\n- How can machine learning be used to solve problems in our community?\n\n:::\n\n\n::: details [**Implementation Guidance for the AI and Machine Learning Unit**]\n\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the full [Curriculum Guide](https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view) and [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module](https://studio.code.org/s/self-paced-pl-csd5-2021). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7) to let the Code.org curriculum team know how the unit went."
           student_description: This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
+        k5-onlinepd-2023:
+          lesson_groups:
+            Implementing and Teaching CS:
+              display_name: 'Part I:  Teaching and Implementing Computer Science'
+            k5_basic_concepts_1:
+              display_name: 'Part II:  Concepts in Courses A - F'
+            k5_next_steps_1:
+              display_name: 'Part III:  Next Steps'
+          title: Teaching Computer Science Fundamentals ('22-'23)
+          description: "Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! \n"
+          student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
+          description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
+          description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
+        focus-on-design-with-purpose1-2023:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-3:
+              display_name: Alternative Lessons
+          name: focus-on-design-with-purpose1-2023
+          title: Problem Solving and Computing ('23-'24)
+          description_audience: ''
+          description_short: Learn how humans work with computers to solve problems.
+          description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing. \n\n::: details [**Chapter 1 Overview**]\n**Description:** This chapter guides students to develop and adopt a more formal structured problem solving process by reflecting on problems they have problems they have encountered, both in the classroom and everyday life. By working through a diverse set of problems, such as logic puzzles, engineering challenges, and planning a trip, students learn to identify different classes of problems, decompose large problems, and develop their personal problem solving skills.\n\n**Goals:**\n* Learn how to use a structured problem solving process and apply it to address various problems.\n* Create a collaborative classroom environment where students view computer science as relevant, fun, and empowering.\n\n\n**Big Questions:** \n* What strategies and processes can I use to become a more effective problem solver?\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter presents computers as machines that solve information problems. Students begin by building a common definition for a computer that focuses on functionality instead of specific hardware. They then explore the ways that computers approach problems. For their final project, students propose an app that could be used to solve a problem of their choosing.\n\n**Goals:\n* Identify the defined characteristics of a computer and how it is used to solve information problems. \n* Use a structured problem solving process to design solutions that use computing technology. \n* Create a collaborative classroom environment where students view computer science as relevant, fun, and empowering. \n\n**Big Questions:** \n* How do computers help people to solve problems?\n* How do people and computers approach problems differently?\n* What does a computer need from people in order to solve problems effectively?\n:::\n\n::: details [**Implementation Guidance for Problem Solving and Computing**]\n- The first chapter of this unit should be completed before any other unit in CS Discoveries\n- Alternate lessons are provided for some lessons in this unit, depending on your classroom context\n- You can view the full [Curriculum Guide](https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view) and [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n<br>\n<br>\n\n"
+          student_description: 'Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.
+
+'
+        self-paced-pl-k5-getting-started:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-k5-getting-started
+          title: 'Getting Started with Code.org (K-5) '
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
+          student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
+        focus-on-design-with-purpose2-2023:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Creating Webpages'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Multi-page Websites'
+          name: focus-on-design-with-purpose2-2023
+          title: Web Development ('23-'24)
+          description_audience: ''
+          description_short: " Learn to build your own web site in Web Lab."
+          description: |-
+            In Web Development, students are empowered to create and share content on their own web pages. They begin by thinking about the role of the web and how it can be used as a medium for creative expression. As students develop their pages and begin to see themselves as programmers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem solving as it relates to programming while they learn valuable skills such as debugging, using resources, and teamwork. At the conclusion of the unit, students will have created a personal website they can publish and share.
+
+            ::: details [**Chapter 1 Overview**]
+            **Description:** Students use computing as a form of self expression as they design and develop basic web pages.   Focusing on the tags, keywords, and syntax used to communicate instructions to the computer, students use HTML to structure the content of a web page. They also explore the privacy and intellectual property implications of publishing their work online.
+
+            **Goals:**
+            * Create digital artifacts that use multiple computer languages to control the structure and style of their content.
+            * Create a website as a form of personal expression.
+            * Use different programming languages to solve different problems.
+            * Examine their role and responsibilities as both creators and consumers of digital media.
+
+            **Big Questions:**
+            * Why do people create websites?
+            * How can text communicate content, structure, and style on a web page?
+            * How do I safely and appropriately make use of the content published on the Internet?
+            * What strategies can I use when coding to find and fix issues?
+            :::
+
+            ::: details [**Chapter 2 Overview**]
+            **Description:** Students expand their ideas of websites beyond personal expression and begin to see them as a way to solve problems.  Students build on their collaborative skills and work in teams to create multi-page websites that solve a problem.
+
+            **Goals:**
+            * Create digital artifacts that use multiple computer languages to control the structure and style of their content.
+            * Create a website that solves a problem.
+            * Use different programming languages to solve different problems.
+            * Examine their role and responsibilities as both creators and consumers of digital media.
+
+            **Big Questions:**
+            * How can websites be used to address problems in the world?
+            * What strategies can teams use to work better together?
+            * How do I know what information can be trusted online?
+            :::
+
+
+            ::: details [**Implementation Guidance for Web Development**]
+            - Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)
+            - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view) and [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit
+            :::
+
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) to let the Code.org curriculum team know how the unit went.
+          student_description: " In this unit, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
+        focus-on-design-with-purpose3-2023:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: User Centered Design'
+            lessonGroup-3:
+              display_name: 'Chapter 2: App Prototyping'
+          name: focus-on-design-with-purpose3-2023
+          title: The Design Process ('23-'24)
+          description_audience: ''
+          description_short: Learn how to design a program that meets the needs of your users.
+          description: "The Design Process unit transitions students from thinking about computer science as a tool to solve their own problems towards considering the broader social impacts of computing. Through a series of design challenges, students are asked to consider and understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which students have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test their solutions with real users to get feedback and drive further iteration.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This chapter introduces the design process as a specific version of the problem solving process in which empathy for a user's needs is consistently integrated. Students learn strategies for identifying user needs and assessing how well different designs address them. In particular they learn how to develop a paper prototype, how to gather and respond to feedback about a prototype, and consider ways different user interfaces do or do not affect the usability of their apps.\n\n**Goals:** \n* See the design process as a form of problem solving that prioritizes the needs of a user. \n* Identify user needs and assess how well different designs address them. \n* Develop paper prototypes, gather and respond to feedback about a prototype, and consider ways different user interfaces do or do not affect the usability of their apps. \n\n**Big Questions:**\n* How do designers identify the needs of their user?\n* How can we ensure that a user's needs are met by our designs?\n* What processes will best allow us to efficiently create, test, and iterate upon our designs?\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter is focused on a long running group project that allows students to apply all they've learned about User-Centered Design to develop an app prototype. Working in teams, students identify a social issue that they care about and design and prototype an app to address that issue. This is an opportunity for students to explore other roles in software development, such as product management, marketing, design, and testing.\n\n\n**Goals:**\n* Develop digital prototypes, gather and respond to feedback about a prototype, and consider ways different user interfaces do or do not affect the usability of their apps. \n* Understand other roles in software development, such as product management, marketing, design, and testing, and how to use what they have learned about computer science as a tool for social impact.\n\n**Big Questions:**\n* How do teams effectively work together to develop software?\n* What roles beyond programming are necessary to design and develop software?\n* How do designers incorporate feedback into multiple iterations of a product?\n:::\n\n::: details [**Implementation Guidance for The Design Process**]\n- You can view the full [Curriculum Guide](https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view) and [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4) to let the Code.org curriculum team know how the unit went."
+          student_description: This unit introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
+        focus-on-design-with-purpose4a-2023:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduction to App Lab
+            lessonGroup-3:
+              display_name: 'Chapter 1: Inputs and Outputs'
+            lessonGroup-4:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+          name: focus-on-design-with-purpose4a-2023
+          title: "(Option A) Creating Apps with Devices - Circuit Playground ('23-'24)"
+          description_audience: ''
+          description_short: Learn to program with physical devices.
+          description: "In the Creating Apps for Devices unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **Circuit Playground** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **micro:bit** devices by assigning the [(Option B) Creating Apps with Devices unit](/s/csd6b-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the circuit playground and an app screen. On their circuit playground, students learn to control inputs like buttons or toggle switches and outputs like the buzzer or LED. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to Circuit Playground's - [click here](https://code.org/circuitplayground) for more information about using Circuit Playground's in your classroom\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the full [Curriculum Guide](https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view) and [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-physical-computing-2022). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
+          student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.

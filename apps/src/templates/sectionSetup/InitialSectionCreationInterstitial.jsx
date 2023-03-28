@@ -49,19 +49,20 @@ class InitialSectionCreationInterstitial extends Component {
             <h1 style={styles.title}>
               {i18n.sectionSetupOnInitialAccountCreation()}
             </h1>
-            <hr style={styles.pageBreak} />
             <p style={styles.descriptionText}>{i18n.sectionSetupFirstStep()}</p>
-            <hr style={styles.pageBreak} />
             <div style={styles.footerButtons}>
               <Button
                 id="uitest-abandon-section-creation"
                 text={i18n.goToMyDashboard()}
-                color={Button.ButtonColor.gray}
+                style={styles.leftButton}
+                color={Button.ButtonColor.neutralDark}
                 onClick={this.abandonEditingSection}
               />
               <Button
                 id="uitest-accept-section-creation"
                 text={i18n.createClassSections()}
+                style={styles.rightButton}
+                color={Button.ButtonColor.brandSecondaryDefault}
                 onClick={this.beginEditingSection}
               />
             </div>
@@ -73,24 +74,31 @@ class InitialSectionCreationInterstitial extends Component {
 }
 
 const styles = {
-  pageBreak: {
-    borderTop: '3px solid grey'
-  },
   dialogCentering: {
     marginLeft: '20px',
     marginRight: '20px'
   },
   title: {
-    color: color.teal,
-    fontSize: '24px'
+    color: color.neutral_dark,
+    fontSize: '1.25em',
+    marginBottom: '0.5em',
+    fontFamily: "'Gotham 5r', sans-serif"
   },
   descriptionText: {
-    fontSize: '14px'
+    fontSize: '1em',
+    marginBottom: '1em',
+    color: color.neutral_dark
   },
   footerButtons: {
     display: 'flex',
     flexFlow: 'row',
     justifyContent: 'space-between'
+  },
+  leftButton: {
+    marginLeft: 0
+  },
+  rightButton: {
+    marginRight: 0
   }
 };
 
