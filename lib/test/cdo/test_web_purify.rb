@@ -64,4 +64,11 @@ class WebPurifyTest < Minitest::Test
     text = ("aaaa " * 5999) + "shit dcCc d and this has some profanity damn too"
     assert_equal ['shit', 'damn'], WebPurify.find_potential_profanities(text)
   end
+
+  def test_find_potential_profanities_with_really_long_text
+    err = assert_raises StandardError do
+      WebPurify.find_potential_profanities(("a " * 60_000) + "a")
+    end
+    assert_match "Profanity check failed: text is too long", err.message
+  end
 end

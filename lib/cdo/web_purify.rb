@@ -4,8 +4,10 @@ require 'dynamic_config/gatekeeper'
 require_relative '../../pegasus/src/env'
 
 module WebPurify
+  # WebPurify limits us to 30,000 characters per request and 4 simultaneous requests per API key.
   API_ENDPOINT = URI('http://api1.webpurify.com/services/rest').freeze
   CHARACTER_LIMIT = 30_000
+  SIMULTANEOUS_REQUEST_LIMIT = 4
   ISO_639_1_TO_WEBPURIFY = {
     'es' => 'sp',
     'ko' => 'kr',
@@ -45,6 +47,14 @@ module WebPurify
   def self.find_potential_profanities(text, language_codes = ['en'])
     return nil unless CDO.webpurify_key && Gatekeeper.allows('webpurify', default: true)
     return nil if text.nil?
+
+    # This is an artificial limit to prevent us from profanity-checking a file up to 5MB (the project limit).
+    # The use of the SIMULTANEOUS_REQUEST_LIMIT as the multiplier is arbitrary because requests are not currently parallelized.
+    # If we want to increase this limit, we should investigate parallelizing the requests to WebPurify.
+    if text.length > CHARACTER_LIMIT * SIMULTANEOUS_REQUEST_LIMIT
+      raise StandardError.new("Profanity check failed: text is too long")
+    end
+
     # Convert language codes to a list of two character codes, comma separated.
     language_codes = language_codes.
       map {|language_code| language_code[0..1]}.
