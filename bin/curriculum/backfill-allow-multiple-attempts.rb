@@ -45,22 +45,37 @@ def backfill_free_response_levels
   end
 end
 
+def update_dsl_level(level, allow_multiple_attempts)
+  text = level.dsl_text
+  if text.include?('allow_multiple_attempts')
+    return if text.include?("allow_multiple_attempts #{allow_multiple_attempts}")
+    text.gsub!(/allow_multiple_attempts.*$/, "allow_multiple_attempts #{allow_multiple_attempts}")
+  else
+    text += "\nallow_multiple_attempts true"
+  end
+  begin
+    level.assign_attributes({dsl_text: text, allow_multiple_attempts: allow_multiple_attempts})
+    level.save!
+    raise "allow_multiple_attempts unset for #{level.name}" if level.reload.allow_multiple_attempts.nil?
+  rescue => exception
+    puts "Error updating #{level.name} with error #{exception.inspect}"
+  end
+end
+
 def backfill_match_levels
-  standalone_match_levels = Match.all.filter {|l| level_is_standalone?(l)}
-  contained_match_levels = Match.all.filter {|l| level_is_contained?(l)}
+  standalone_match_levels = Multi.all.filter {|l| level_is_standalone?(l)}
+  contained_match_levels = Multi.all.filter {|l| level_is_contained?(l)}
   match_levels_to_flag = find_union(standalone_match_levels, contained_match_levels)
   contained_match_levels -= match_levels_to_flag
   puts "Match levels to manually check:"
   match_levels_to_flag.each {|l| puts l.name}
 
   contained_match_levels.each do |level|
-    level.allow_multiple_attempts = "false"
-    level.save!
+    update_dsl_level(level, "false")
   end
 
   Match.all.filter {|l| l.allow_multiple_attempts.nil?}.each do |level|
-    level.allow_multiple_attempts = "true"
-    level.save!
+    update_dsl_level(level, "true")
   end
 end
 

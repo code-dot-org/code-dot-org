@@ -17,6 +17,10 @@ class MatchDSL < ContentDSL
 
   def layout(text) @hash[:layout] = text end
 
+  def allow_multiple_attempts(bool)
+    @hash[:allow_multiple_attempts] = bool.to_s.to_bool
+  end
+
   # @override
   def self.i18n_fields
     super + %w(
