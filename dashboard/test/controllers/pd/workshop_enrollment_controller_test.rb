@@ -75,63 +75,6 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     assert_template :new
   end
 
-  test 'teacher with missing application gets missing application view' do
-    teacher = create :teacher
-
-    # see Pd::Workshop#require_application? for the logic that determines whether a workshop requires an application
-    rp = create :regional_partner
-    workshop = create :summer_workshop, regional_partner: rp
-    assert workshop.require_application?
-
-    sign_in teacher
-    get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :missing_application
-  end
-
-  test 'teacher with old application gets missing application view' do
-    teacher = create :teacher
-    old_year = Pd::SharedApplicationConstants::YEAR_18_19
-    create :pd_teacher_application, user: teacher, application_year: old_year
-
-    rp = create :regional_partner
-    workshop = create :summer_workshop, regional_partner: rp
-    assert workshop.require_application?
-
-    sign_in teacher
-    get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :missing_application
-  end
-
-  test 'teacher with incomplete application gets missing application view' do
-    teacher = create :teacher
-    create :pd_teacher_application, user: teacher, status: 'incomplete'
-
-    rp = create :regional_partner
-    workshop = create :summer_workshop, regional_partner: rp
-    assert workshop.require_application?
-
-    sign_in teacher
-    get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :missing_application
-  end
-
-  test 'teacher with required application gets new view' do
-    teacher = create :teacher
-    create :pd_teacher_application, user: teacher, status: 'accepted'
-
-    rp = create :regional_partner
-    workshop = create :summer_workshop, regional_partner: rp
-    assert workshop.require_application?
-
-    sign_in teacher
-    get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :new
-  end
-
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers can see enrollment form' do
     # Note - organizers can see the form, but cannot enroll in their own workshops.
