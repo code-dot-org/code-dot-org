@@ -765,7 +765,7 @@
     }
   },
   "https://studio.code.org/s/coursee-2022/lessons/7/levels/6": {
-    "short_instructions": "Take the squares from before, but this time only make 7 of them, and lay them out in a row."
+    "short_instructions": "In the previous lesson (Lesson 6: Drawing with Loops) you learned how to code a square. This time, you will make 7 of them, and lay them out in a row.\n\n-   Each square has a side length of 50 pixels.\n-   Each square begins just 50 pixels from where the last one ended."
   },
   "https://studio.code.org/s/coursee-2022/lessons/7/levels/7": {
     "dsls": {
