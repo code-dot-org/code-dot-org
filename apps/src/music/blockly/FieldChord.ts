@@ -54,6 +54,14 @@ export default class FieldChord extends Field {
     if (this.borderRect_) {
       this.borderRect_.classList.add('blocklyDropdownRect');
     }
+
+    this.movableGroup_ = GoogleBlockly.utils.dom.createSvgElement(
+      'g',
+      {
+        transform: 'translate(1,1)'
+      },
+      this.fieldGroup_
+    ) as SVGGraphicsElement;
   }
 
   applyColour() {
@@ -79,15 +87,9 @@ export default class FieldChord extends Field {
   }
 
   protected render_() {
-    //super.render_();
-
-    this.movableGroup_ = GoogleBlockly.utils.dom.createSvgElement(
-      'g',
-      {
-        transform: 'translate(1,1)'
-      },
-      this.fieldGroup_
-    ) as SVGGraphicsElement;
+    if (this.movableGroup_) {
+      this.movableGroup_.innerHTML = "";
+    }
 
     const backingRectangle = GoogleBlockly.utils.dom.createSvgElement('rect',
     {
@@ -107,7 +109,8 @@ export default class FieldChord extends Field {
       86,
       18,
       3,
-      4
+      4,
+      2
     );
 
     graphNotes.forEach(graphNote => {
@@ -120,24 +123,6 @@ export default class FieldChord extends Field {
         'height': graphNote.height
       }, this.movableGroup_);
     });
-
-    /*
-    const value = this.getValue();
-
-    for (let i = 0; i < 16; i++) {
-      const x = i * 86/16;
-      const y = 18 - ((value.notes[i % value.notes.length] - 4 * 12) * 18 / 3 / 13);
-
-      GoogleBlockly.utils.dom.createSvgElement('rect',
-      {
-        'fill': '#59b9dc',
-        'x': x,
-        'y': y,
-        'width': 4,
-        'height': 2
-      }, this.movableGroup_);
-    }
-    */
 
     this.updateSize_();
 

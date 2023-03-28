@@ -64,16 +64,26 @@ export function generateGraphDataFromChord(
   width: number,
   height: number,
   numOctaves: number,
-  startOctave: number
+  startOctave: number,
+  padding: number
 ): ChordGraphNote[] {
-  const notes : ChordNote[] = generateNotesFromChord(chordEventValue);
+  const notes: ChordNote[] = generateNotesFromChord(chordEventValue);
 
-  return notes.map((note : ChordNote) => {
+  const useWidth = width - 2 * padding;
+  const useHeight = height - 2 * padding;
+  const noteWidth = Math.ceil(useWidth / 16);
+  const noteHeight = Math.ceil(useHeight / 12 / numOctaves * 2);
+
+  return notes.map((note: ChordNote) => {
     return {
-      x: (note.tick - 1) * width / 16,
-      y: height - ((note.note - startOctave * 12) * height / numOctaves / 12),
-      width: Math.ceil(width / 16),
-      height: Math.ceil(height / 12 / numOctaves)
-    }
+      x: ((note.tick - 1) * useWidth) / 16 + padding,
+      y:
+        padding +
+        useHeight -
+        ((note.note - startOctave * 12) * useHeight) / numOctaves / 12 -
+        noteHeight,
+      width: noteWidth,
+      height: noteHeight
+    };
   });
 }
