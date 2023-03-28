@@ -51,7 +51,7 @@ export const BlockMode = {
   TRACKS: 'Tracks'
 };
 
-export const DEFAULT_SOUND = 'dance/groovy_beat';
+export const DEFAULT_SOUND = 'beats/groovy_beat';
 
 // For reference, events look like this:
 // events: [{src: 'sound_1', tick: 3}]

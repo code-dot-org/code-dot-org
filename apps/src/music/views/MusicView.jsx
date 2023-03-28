@@ -231,7 +231,7 @@ class UnconnectedMusicView extends React.Component {
       const libraryParameter = AppConfig.getValue('library');
       const libraryFilename = libraryParameter
         ? `music-library-${libraryParameter}.json`
-        : 'music-library.json';
+        : 'music-library-by-type.json';
       const response = await fetch(baseUrl + libraryFilename);
       const library = await response.json();
       return library;
