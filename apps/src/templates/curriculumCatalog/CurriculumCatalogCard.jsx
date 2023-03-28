@@ -16,7 +16,8 @@ const tempImage = require('@cdo/static/resource_cards/anotherhoc.png');
 const CurriculumCatalogCard = ({
   courseDisplayName,
   duration,
-  gradeOrAgeRange,
+  youngestGrade,
+  oldestGrade,
   imageSrc,
   subjects,
   topics,
@@ -29,7 +30,10 @@ const CurriculumCatalogCard = ({
     })}
     courseDisplayName={courseDisplayName}
     duration={translatedCourseOfferingDurations[duration]}
-    gradeOrAgeRange={gradeOrAgeRange} // TODO [MEG]: Translate this once strategy is decided
+    gradeRange={i18n.gradeRange({
+      youngest_grade: youngestGrade,
+      oldest_grade: oldestGrade
+    })} // TODO [MEG]: Decide on translation strategy for this
     imageSrc={imageSrc}
     subjectsAndTopics={[
       ...subjects.map(
@@ -48,7 +52,8 @@ CurriculumCatalogCard.propTypes = {
   courseDisplayName: PropTypes.string.isRequired,
   duration: PropTypes.oneOf(Object.keys(translatedCourseOfferingDurations))
     .isRequired,
-  gradeOrAgeRange: PropTypes.string.isRequired,
+  youngestGrade: PropTypes.number,
+  oldestGrade: PropTypes.number,
   imageSrc: PropTypes.string.isRequired,
   subjects: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(translatedCourseOfferingSchoolSubjects))
@@ -67,7 +72,7 @@ const CustomizableCurriculumCatalogCard = ({
   assignButtonText,
   courseDisplayName,
   duration,
-  gradeOrAgeRange,
+  gradeRange,
   imageAltText,
   imageSrc,
   subjectsAndTopics,
@@ -82,7 +87,7 @@ const CustomizableCurriculumCatalogCard = ({
       <h4>{courseDisplayName}</h4>
       <div className={'iconWithDescription'}>
         <FontAwesome icon={'user'} className={'fa-solid'} />
-        <p className={'iconDescription'}>{gradeOrAgeRange}</p>
+        <p className={'iconDescription'}>{gradeRange}</p>
       </div>
       <div className={'iconWithDescription'}>
         {/*TODO [MEG]: Update this to be clock fa-solid when we update FontAwesome */}
@@ -115,7 +120,7 @@ const CustomizableCurriculumCatalogCard = ({
 CustomizableCurriculumCatalogCard.propTypes = {
   courseDisplayName: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
-  gradeOrAgeRange: PropTypes.string.isRequired,
+  gradeRange: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
   subjectsAndTopics: PropTypes.arrayOf(PropTypes.string).isRequired,
   quickViewButtonText: PropTypes.string.isRequired,

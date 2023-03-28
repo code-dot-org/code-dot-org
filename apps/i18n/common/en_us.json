@@ -1087,6 +1087,7 @@
   "goToMyDashboard": "Go to my Dashboard",
   "goToUnit": "Go to Unit",
   "grade": "Grade",
+  "gradeRange": "Grades: {youngest_grade}-{oldest_grade}",
   "greaterThan": "Greater than",
   "greaterThanOrEqualTo": "Greater than or equal to",
   "groups": "Groups",
