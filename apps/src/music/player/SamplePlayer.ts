@@ -19,7 +19,6 @@ interface PlayingSample {
 
 const MAIN_AUDIO_GROUP = 'mainaudio';
 const PREVIEW_GROUP = 'preview';
-const GROUP_PREFIX = 'all';
 
 /**
  * Handles playback of individual samples.
@@ -29,12 +28,14 @@ export default class SamplePlayer {
   private isPlaying: boolean;
   private startPlayingAudioTime: number;
   private isInitialized: boolean;
+  private groupPath: string;
 
   constructor() {
     this.playingSamples = [];
     this.isPlaying = false;
     this.startPlayingAudioTime = -1;
     this.isInitialized = false;
+    this.groupPath = '';
   }
 
   initialize(library: MusicLibrary) {
@@ -48,6 +49,8 @@ export default class SamplePlayer {
       })
       .flat(2);
     soundApi.InitSound(soundList);
+
+    this.groupPath = library.groups[0].path;
 
     this.isInitialized = true;
   }
@@ -80,7 +83,12 @@ export default class SamplePlayer {
 
     this.cancelPreviews();
 
-    soundApi.PlaySound(GROUP_PREFIX + '/' + sampleId, PREVIEW_GROUP, 0, onStop);
+    soundApi.PlaySound(
+      this.groupPath + '/' + sampleId,
+      PREVIEW_GROUP,
+      0,
+      onStop
+    );
   }
 
   previewSamples(events: SampleEvent[], onStop: () => any) {
@@ -94,7 +102,7 @@ export default class SamplePlayer {
     let counter = 0;
     events.forEach(event => {
       soundApi.PlaySound(
-        GROUP_PREFIX + '/' + event.sampleId,
+        this.groupPath + '/' + event.sampleId,
         PREVIEW_GROUP,
         soundApi.GetCurrentAudioTime() + event.offsetSeconds,
         () => {
@@ -149,7 +157,7 @@ export default class SamplePlayer {
 
       if (eventStart >= currentAudioTime - delayCompensation) {
         const uniqueId = soundApi.PlaySound(
-          GROUP_PREFIX + '/' + sampleEvent.sampleId,
+          this.groupPath + '/' + sampleEvent.sampleId,
           MAIN_AUDIO_GROUP,
           eventStart,
           null,
