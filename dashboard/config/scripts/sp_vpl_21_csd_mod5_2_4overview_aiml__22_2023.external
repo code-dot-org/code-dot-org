@@ -3,13 +3,13 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Planning to teach CS Connections
+# Implementing CS Connections
 
-### **Implementation guidance** 
+### **Guidance** 
 
-* ##### Complete XXX lessons of any module before starting. Consider using this Planning and Preparing guide.
+* ##### Complete all lessons of any module before starting. Consider using this Planning and Preparing guide.
 
-* ##### Modules assumes students are familiar with XXXX, specifically using XXXX to XXX. This can be accomplished by having students complete the <a href="https://studio.code.org/s/applab-intro/lessons/1/levels/1" target="blank" rel="noopener noreferrer">App Lab Hour of Code</a> before starting a module.
+* ##### Modules assume students are familiar with XXXX, specifically using XXXX to XXX. This can be accomplished by having students complete the <a href="https://studio.code.org/s/applab-intro/lessons/1/levels/1" target="blank" rel="noopener noreferrer">App Lab Hour of Code</a> before starting a module.
 
 * ##### Guidance for how to support students in programming levels and differentiate tasks are available in the <a href="https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview" target="blank" rel="noopener noreferrer">XXXX</a> and <a href="https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview" target="blank" rel="noopener noreferrer">XXXX</a>.
 
