@@ -20,5 +20,5 @@ export const getNoteName = (note: number): string => {
     'A#',
     'B'
   ];
-  return noteNames[note % 12] + (Math.floor(note / 12) - 1);
+  return noteNames[note % 12]; // + (Math.floor(note / 12) - 1);
 };
