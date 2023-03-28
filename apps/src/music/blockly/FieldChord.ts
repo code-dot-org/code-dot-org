@@ -5,8 +5,9 @@ import {BlockSvg, DropDownDiv, Field, WidgetDiv} from 'blockly/core';
 import {ChordEventValue} from '../player/interfaces/ChordEvent';
 import MusicLibrary from '../player/MusicLibrary';
 import {getNoteName} from '../utils/Notes';
-const experiments = require('@cdo/apps/util/experiments');
 import GoogleBlockly from 'blockly/core';
+import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
+const experiments = require('@cdo/apps/util/experiments');
 
 const MAX_DISPLAY_NOTES = 3;
 
@@ -97,6 +98,30 @@ export default class FieldChord extends Field {
       'height': 18
     }, this.movableGroup_);
 
+    const graphNotes: ChordGraphNote[] = generateGraphDataFromChord(
+      {
+        notes: this.getValue().notes,
+        playStyle: this.getValue().playStyle,
+        instrument: ''
+      } as ChordEventValue,
+      86,
+      18,
+      3,
+      4
+    );
+
+    graphNotes.forEach(graphNote => {
+      GoogleBlockly.utils.dom.createSvgElement('rect',
+      {
+        'fill': '#59b9dc',
+        'x': graphNote.x,
+        'y': graphNote.y,
+        'width': graphNote.width,
+        'height': graphNote.height
+      }, this.movableGroup_);
+    });
+
+    /*
     const value = this.getValue();
 
     for (let i = 0; i < 16; i++) {
@@ -112,6 +137,7 @@ export default class FieldChord extends Field {
         'height': 2
       }, this.movableGroup_);
     }
+    */
 
     this.updateSize_();
 

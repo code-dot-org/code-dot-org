@@ -2,7 +2,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import {getNoteName, isBlackKey} from '../utils/Notes';
 import MusicLibrary from '../player/MusicLibrary';
 import {ChordEventValue, PlayStyle} from '../player/interfaces/ChordEvent';
-import {generateNotesFromChord, ChordNote} from '../utils/Chords';
+import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
 
 const FontAwesome = require('../../templates/FontAwesome');
 const moduleStyles = require('./chordPanel.module.scss').default;
@@ -245,24 +245,29 @@ const NoteGrid: React.FunctionComponent<NoteGridProps> = ({
   selectedNotes,
   playStyle
 }) => {
-  const keys = [];
-  const startingNote = startOctave * 12;
-
-  const renderNotes: ChordNote[] = generateNotesFromChord({
-    notes: selectedNotes,
-    playStyle,
-    instrument: ''
-  } as ChordEventValue);
+  const graphNotes: ChordGraphNote[] = generateGraphDataFromChord(
+    {
+      notes: selectedNotes,
+      playStyle,
+      instrument: ''
+    } as ChordEventValue,
+    315,
+    110,
+    numOctaves,
+    startOctave
+  );
 
   return (
     <div id="notegrid" className={moduleStyles.noteGridContainer}>
-      {renderNotes.map((renderNote: ChordNote) => {
+      {graphNotes.map((graphNote: ChordGraphNote) => {
         return (
           <div
             className={moduleStyles.gridNote}
             style={{
-              bottom: ((renderNote.note - START_OCTAVE * 12) * 110) / 3 / 13,
-              left: ((renderNote.tick - 1) * 315) / 16
+              top: graphNote.y,
+              left: graphNote.x,
+              width: graphNote.width,
+              height: graphNote.height
             }}
           >
             &nbsp;
