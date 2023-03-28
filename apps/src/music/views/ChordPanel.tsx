@@ -102,7 +102,7 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
 
   return (
     <div className={moduleStyles.chordPanelContainer}>
-      <div className={moduleStyles.controlsRow}>
+      <div className={moduleStyles.optionsRow}>
         <select
           value={instrument}
           onChange={event => setInstrument(event.target.value)}
@@ -126,21 +126,19 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
           ))}
         </select>
       </div>
-      <div id="grid-container" className={moduleStyles.gridContainer}>
-        <Keybed
-          numOctaves={NUM_OCTAVES}
-          startOctave={START_OCTAVE}
-          selectedNotes={selectedNotes}
-          onPressKey={onPressKey}
-          isDisabled={isDisabled}
-        />
-        <NoteGrid
-          numOctaves={NUM_OCTAVES}
-          startOctave={START_OCTAVE}
-          selectedNotes={selectedNotes}
-          playStyle={playStyle}
-        />
-      </div>
+      <Keybed
+        numOctaves={NUM_OCTAVES}
+        startOctave={START_OCTAVE}
+        selectedNotes={selectedNotes}
+        onPressKey={onPressKey}
+        isDisabled={isDisabled}
+      />
+      <NoteGrid
+        numOctaves={NUM_OCTAVES}
+        startOctave={START_OCTAVE}
+        selectedNotes={selectedNotes}
+        playStyle={playStyle}
+      />
       <div className={moduleStyles.controlsRow}>
         <FontAwesome
           icon={'play-circle'}
@@ -279,7 +277,7 @@ const NoteGrid: React.FunctionComponent<NoteGridProps> = ({
   */
 
   return (
-    <div id="notegrid" className={moduleStyles.noteGrid}>
+    <div id="notegrid" className={moduleStyles.noteGridContainer}>
       {notes.map((note: any) => {
         return (
           <div
@@ -295,26 +293,6 @@ const NoteGrid: React.FunctionComponent<NoteGridProps> = ({
       })}
     </div>
   );
-
-  /*
-  for (
-    let currentNote = startingNote;
-    currentNote < startingNote + numOctaves * 12;
-    currentNote++
-  ) {
-    keys.push(
-      <Key
-        key={currentNote}
-        type={isBlackKey(currentNote) ? 'black' : 'white'}
-        isSelected={selectedNotes.includes(currentNote)}
-        text={!isBlackKey(currentNote) ? getNoteName(currentNote) : undefined}
-      />
-    );
-  }
-
-
-  return <div className={moduleStyles.keybed}>{keys}</div>;
-  */
 };
 
 export default ChordPanel;
