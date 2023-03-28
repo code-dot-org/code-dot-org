@@ -174,7 +174,7 @@ function TopInstructionsHeader(props) {
             <InstructionsTab
               onClick={handleAiTabClick}
               selected={tabSelected === TabType.AI}
-              text={'Auto Grading'}
+              text={'AI Assistant'}
             />
           )}
         </div>
