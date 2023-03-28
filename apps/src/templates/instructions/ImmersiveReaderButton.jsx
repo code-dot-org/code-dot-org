@@ -9,7 +9,7 @@ class ImmersiveReaderButton extends Component {
   static propTypes = {
     title: PropTypes.string,
     text: PropTypes.string,
-    isImmersiveButtonHasRoundBorders: PropTypes.bool,
+    hasRoundBorders: PropTypes.bool,
     // TODO: [Phase 2] This is a switch for legacy styles needed to revert Javalab rebranding changes.
     //  once we update Javalab to new styles we'll need to remove this prop and all of it's usage
     //  more info here: https://github.com/code-dot-org/code-dot-org/pull/50924
@@ -36,12 +36,7 @@ class ImmersiveReaderButton extends Component {
   }
 
   render() {
-    const {
-      title,
-      text,
-      isImmersiveButtonHasRoundBorders,
-      isLegacyStyles
-    } = this.props;
+    const {title, text, hasRoundBorders, isLegacyStyles} = this.props;
     // Get the current language from the language cookie.
     const locale = cookies.get('language_') || 'en-US';
 
@@ -60,7 +55,7 @@ class ImmersiveReaderButton extends Component {
         )}
         data-button-style={'icon'}
         style={{
-          borderRadius: isImmersiveButtonHasRoundBorders ? 4 : '4px 0 0 4px'
+          borderRadius: hasRoundBorders ? 4 : '4px 0 0 4px'
         }}
         data-locale={locale}
         onClick={function() {

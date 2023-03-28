@@ -51,9 +51,7 @@ export default class Instructions extends React.Component {
             <ImmersiveReaderButton
               title={i18n.instructions()}
               text={instructions}
-              isImmersiveButtonHasRoundBorders={
-                isImmersiveButtonHasRoundBorders
-              }
+              hasRoundBorders={isImmersiveButtonHasRoundBorders}
               isLegacyStyles={isLegacyImmersiveStyles}
             />
             <MarkdownInstructions
