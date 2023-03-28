@@ -7,7 +7,7 @@ $scale-keybed: 0.5;
   align-items: center;
   padding: 5px;
 
-  .controlsRow {
+  .optionsRow {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -18,80 +18,32 @@ $scale-keybed: 0.5;
       width: 48%;
       font-size: 12px;
     }
-
-    .previewButton {
-      font-size: 20px;
-      cursor: pointer;
-      transition: color 0.1s ease;
-
-      &:hover {
-        color: $light_cyan;
-      }
-
-      &Disabled {
-        color: $neutral_dark40;
-        cursor: not-allowed;
-
-        &:hover {
-          color: $neutral_dark40;
-        }
-      }
-    }
-
-    .clearButton {
-      font-size: 12px;
-      padding: 5px;
-      width: 100%;
-    }
-  }
-
-  .gridContainer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    .noteGrid {
-      position: relative;
-      width: 315px;
-      margin: 0 0 10px 0;
-      height: 110px;
-      border-radius: 4px;
-      background-color: $neutral_dark80;
-
-      .gridNote {
-        position: absolute;
-        width: calc(315px / 16);
-        height: calc(105px / 12);
-        background-color: $light_cyan;
-        border-radius: 3px;
-      }
-    }
   }
 
   .keybed {
     display: flex;
     flex-direction: row;
-    margin: 10px 0 10px 0;
 
     .key {
       border-style: solid;
       border-color: black;
-      border-width: 1px 2px 1px 2px;
-      border-radius: 0 4px 4px 0;
+      border-radius: 0 0 4px 4px;
       box-sizing: border-box;
       transition: background-color 0.1s ease;
       cursor: pointer;
 
       &.whiteKey {
+        border-width: 2px 1px;
         width: 30px * $scale-keybed;
-        height: 150px * $scale-keybed;
+        height: 120px * $scale-keybed;
         background-color: white;
       }
 
       &.blackKey {
+        border-width: 2px 2px;
         z-index: 10;
         width: 20px * $scale-keybed;
-        height: 100px * $scale-keybed;
+        height: 90px * $scale-keybed;
         background-color: black;
         margin: 0 -10px * $scale-keybed;
       }
@@ -119,8 +71,58 @@ $scale-keybed: 0.5;
       }
 
       &:hover {
-        background-color: $light_cyan;
+        background-color: $lighter_cyan;
       }
+    }
+  }
+
+  .noteGridContainer {
+    position: relative;
+    width: 315px;
+    margin: 10px 0;
+    height: 110px;
+    border-radius: 4px;
+    background-color: $neutral_dark80;
+
+    .gridNote {
+      position: absolute;
+      width: calc(315px / 16);
+      height: calc(105px / 12);
+      background-color: $light_cyan;
+      border-radius: 3px;
+    }
+  }
+
+  .controlsRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+
+    .previewButton {
+      font-size: 20px;
+      cursor: pointer;
+      transition: color 0.1s ease;
+
+      &:hover {
+        color: $lighter_cyan;
+      }
+
+      &Disabled {
+        color: $neutral_dark40;
+        cursor: not-allowed;
+
+        &:hover {
+          color: $neutral_dark40;
+        }
+      }
+    }
+
+    .clearButton {
+      font-size: 12px;
+      padding: 5px;
+      width: 100%;
     }
   }
 }

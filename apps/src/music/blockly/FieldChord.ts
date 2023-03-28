@@ -6,6 +6,7 @@ import {ChordEventValue} from '../player/interfaces/ChordEvent';
 import MusicLibrary from '../player/MusicLibrary';
 import {getNoteName} from '../utils/Notes';
 const experiments = require('@cdo/apps/util/experiments');
+import GoogleBlockly from 'blockly/core';
 
 const MAX_DISPLAY_NOTES = 3;
 
@@ -26,6 +27,7 @@ export default class FieldChord extends Field {
 
   private options: FieldChordOptions;
   private newDiv: HTMLDivElement | null;
+  private movableGroup_: SVGGraphicsElement | null;
 
   constructor(options: FieldChordOptions) {
     super(options.currentValue);
@@ -34,6 +36,7 @@ export default class FieldChord extends Field {
     this.newDiv = null;
     this.SERIALIZABLE = true;
     this.CURSOR = 'default';
+    this.movableGroup_ = null;
   }
 
   saveState() {
@@ -75,8 +78,74 @@ export default class FieldChord extends Field {
   }
 
   protected render_() {
-    super.render_();
+    //super.render_();
+
+    this.movableGroup_ = GoogleBlockly.utils.dom.createSvgElement(
+      'g',
+      {
+        transform: 'translate(1,1)'
+      },
+      this.fieldGroup_
+    ) as SVGGraphicsElement;
+
+    const backingRectangle = GoogleBlockly.utils.dom.createSvgElement('rect',
+    {
+      'fill': '#54595e',
+      'x': 1,
+      'y': 1,
+      'width': 86,
+      'height': 26
+    }, this.movableGroup_);
+
+    const value = this.getValue();
+
+    for (let i = 0; i < 16; i++) {
+      const x = i * 86/16;
+      const y = 26 - ((value.notes[i % value.notes.length] - 4 * 12) * 26 / 3 / 13);
+
+      GoogleBlockly.utils.dom.createSvgElement('rect',
+      {
+        'fill': '#59b9dc',
+        'x': x,
+        'y': y,
+        'width': 4,
+        'height': 2
+      }, this.movableGroup_);
+    }
+
+    this.updateSize_();
+
     this.renderContent();
+  }
+
+  updateSize_() {
+    const width = 90;
+    const height = 30;
+
+    this.borderRect_?.setAttribute('width', '' + width);
+    this.borderRect_?.setAttribute('height', '' + height);
+
+    this.size_.width = width;
+    this.size_.height = height;
+
+    /*
+    const bbox = this.movableGroup_?.getBBox();
+    if (bbox?.width && bbox?.height) {
+      let width = bbox.width;
+      let height = bbox.height;
+      if (width && height && this.borderRect_) {
+        //width += this.constants_.FIELD_BORDER_RECT_X_PADDING * 2;
+        //height += this.constants_.FIELD_BORDER_RECT_X_PADDING * 2;
+        width += 5 * 2;
+        height += 5 * 2;
+        this.borderRect_.setAttribute('width', '' + width);
+        this.borderRect_.setAttribute('height', '' + height);
+      }
+      // Note how both the width and the height can be dynamic.
+      this.size_.width = width;
+      this.size_.height = height;
+    }*/
+
   }
 
   protected showEditor_() {
