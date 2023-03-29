@@ -801,6 +801,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
       this.appendDummyInput().appendField(msg.setItemSpeedSet());
       const itemChoices = [...skin.itemChoices];
+      // Remove "random" option, but preserve it for other blocks.
       if (itemChoices[itemChoices.length - 1][1] === RANDOM_VALUE) {
         itemChoices.pop();
       }
