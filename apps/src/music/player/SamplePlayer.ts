@@ -75,7 +75,7 @@ export default class SamplePlayer {
     soundApi.StartPlayback();
   }
 
-  previewSample(sampleId: string, onStop: () => any) {
+  previewSample(sampleId: string, onStop?: () => any) {
     if (!this.isInitialized) {
       console.warn('Sample player not initialized.');
       return;
@@ -91,7 +91,7 @@ export default class SamplePlayer {
     );
   }
 
-  previewSamples(events: SampleEvent[], onStop: () => any) {
+  previewSamples(events: SampleEvent[], onStop?: () => any) {
     if (!this.isInitialized) {
       console.warn('Sample player not initialized.');
       return;
@@ -100,17 +100,21 @@ export default class SamplePlayer {
     this.cancelPreviews();
 
     let counter = 0;
-    events.forEach(event => {
-      soundApi.PlaySound(
-        this.groupPath + '/' + event.sampleId,
-        PREVIEW_GROUP,
-        soundApi.GetCurrentAudioTime() + event.offsetSeconds,
-        () => {
+    const onStopWrapper = onStop
+      ? () => {
           counter++;
           if (counter === events.length) {
             onStop();
           }
         }
+      : undefined;
+
+    events.forEach(event => {
+      soundApi.PlaySound(
+        this.groupPath + '/' + event.sampleId,
+        PREVIEW_GROUP,
+        soundApi.GetCurrentAudioTime() + event.offsetSeconds,
+        onStopWrapper
       );
     });
   }
