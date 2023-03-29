@@ -824,9 +824,16 @@ exports.install = function(blockly, blockInstallOptions) {
   ];
 
   generator.studio_setItemSpeed = function() {
+    var classParam = this.getFieldValue('CLASS');
+    if (classParam === RANDOM_VALUE) {
+      var allValues = skin.itemChoices.slice(0, -1).map(function(item) {
+        return item[1];
+      });
+      classParam = 'Studio.random([' + allValues + '])';
+    }
     return generateSetterCode({
       ctx: this,
-      extraParams: this.getFieldValue('CLASS'),
+      extraParams: classParam,
       name: 'setItemSpeed'
     });
   };
