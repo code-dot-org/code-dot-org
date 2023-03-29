@@ -139,6 +139,7 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
         startOctave={START_OCTAVE}
         selectedNotes={selectedNotes}
         playStyle={playStyle}
+        instrument={instrument}
       />
       <div className={moduleStyles.controlsRow}>
         <FontAwesome
@@ -237,27 +238,29 @@ interface NoteGridProps {
   startOctave: number;
   selectedNotes: number[];
   playStyle: PlayStyle;
+  instrument: string;
 }
 
 const NoteGrid: React.FunctionComponent<NoteGridProps> = ({
   numOctaves,
   startOctave,
   selectedNotes,
-  playStyle
+  playStyle,
+  instrument
 }) => {
-  const graphNotes: ChordGraphNote[] = generateGraphDataFromChord(
-    {
+  const graphNotes: ChordGraphNote[] = generateGraphDataFromChord({
+    chordEventValue: {
       notes: selectedNotes,
       playStyle,
-      instrument: ''
+      instrument
     } as ChordEventValue,
-    315,
-    110,
+    width: 315,
+    height: 110,
     numOctaves,
     startOctave,
-    2,
-    2
-  );
+    padding: 2,
+    noteHeightScale: 2
+  });
 
   return (
     <div id="notegrid" className={moduleStyles.noteGridContainer}>
