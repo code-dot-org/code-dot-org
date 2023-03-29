@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-mappinglandmarks",
-    "serialized_at": "2023-03-16 18:16:22 UTC",
+    "serialized_at": "2023-03-28 15:14:32 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -395,8 +395,19 @@
       }
     },
     {
-      "key": "07849f16-25c0-4823-bc21-a61671a828b6",
+      "key": "9be4c5f8-a1a1-4c86-a0c3-e8e7c94a833b",
       "position": 4,
+      "properties": {
+        "progression_name": "Mapmakers Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "9be4c5f8-a1a1-4c86-a0c3-e8e7c94a833b",
+        "lesson_activity.key": "821193be-e0aa-4907-b138-b2869eb91048"
+      }
+    },
+    {
+      "key": "07849f16-25c0-4823-bc21-a61671a828b6",
+      "position": 5,
       "properties": {
         "progression_name": "Skill Building - Map Setup"
       },
@@ -407,7 +418,7 @@
     },
     {
       "key": "18820e01-d482-41d6-abd8-f26bae504858",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Video - Events"
       },
@@ -418,7 +429,7 @@
     },
     {
       "key": "aa9723bf-a22c-4655-8761-a357f2e53e0b",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Skill Building",
         "tips": [
@@ -435,7 +446,7 @@
     },
     {
       "key": "4af6a0a5-abd6-4989-b92e-388088ca88a1",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Level 9 - Free Play” Slide\n\n**Do This:** Encourage students to make their projects their own. They can upload their own sprite costumes and backgrounds, change the size of their sprites, and use the `when touching` event to make their tour guide say something different about each sprite. ",
         "progression_name": "Free Play - Landmarks"
@@ -447,7 +458,7 @@
     },
     {
       "key": "676ccb47-3dd1-4f8a-a1c2-a1acf0511b50",
-      "position": 8,
+      "position": 9,
       "properties": {
         "progression_name": "Student Survey",
         "tips": [
@@ -1125,10 +1136,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CourseF_video_introSpriteLab_2023"
-        ],
-        "progression": "Skill Building - Map Setup"
+        "progression": "Mapmakers Video"
       },
       "bonus": false,
       "seeding_key": {
@@ -1138,7 +1146,7 @@
         "lesson.key": "US Landmarks",
         "lesson_group.key": "",
         "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "07849f16-25c0-4823-bc21-a61671a828b6"
+        "activity_section.key": "9be4c5f8-a1a1-4c86-a0c3-e8e7c94a833b"
       },
       "level_keys": [
         "CourseF_video_introSpriteLab_2023"
@@ -1147,7 +1155,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1172,7 +1180,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1197,7 +1205,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1222,7 +1230,7 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1247,7 +1255,7 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1275,6 +1283,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_eventsvideo_2023"
+        ],
         "progression": "Video - Events"
       },
       "bonus": false,
@@ -1297,6 +1308,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_touches1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1444,6 +1458,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student_sprite_management"
+        ],
         "progression": "Video"
       },
       "bonus": false,
@@ -1466,6 +1483,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_places1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1488,6 +1508,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_events_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1565,7 +1588,7 @@
         "lesson.key": "US Landmarks",
         "lesson_group.key": "",
         "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "07849f16-25c0-4823-bc21-a61671a828b6"
+        "activity_section.key": "9be4c5f8-a1a1-4c86-a0c3-e8e7c94a833b"
       }
     },
     {
