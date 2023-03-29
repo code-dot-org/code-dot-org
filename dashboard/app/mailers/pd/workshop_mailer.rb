@@ -265,14 +265,12 @@ class Pd::WorkshopMailer < ActionMailer::Base
       to: email_address(@enrollment.full_name, @enrollment.email)
   end
 
-  private
-
-  def save_timestamp
+  private def save_timestamp
     return unless @enrollment&.persisted?
     Pd::EnrollmentNotification.create(enrollment: @enrollment, name: action_name)
   end
 
-  def generate_csf_certificate
+  private def generate_csf_certificate
     image = Pd::CertificateRenderer.render_workshop_certificate @enrollment
     image.format = 'jpg'
     image.to_blob
@@ -280,36 +278,36 @@ class Pd::WorkshopMailer < ActionMailer::Base
     image.try :destroy!
   end
 
-  def email_address(display_name, email)
+  private def email_address(display_name, email)
     Mail::Address.new(email).tap do |address|
       address.display_name = display_name
     end.format
   end
 
-  def from_teacher
+  private def from_teacher
     email_address('Code.org', 'teacher@code.org')
   end
 
-  def from_facilitators
+  private def from_facilitators
     email_address('Code.org', 'facilitators@code.org')
   end
 
-  def from_no_reply
+  private def from_no_reply
     email_address('Code.org', 'noreply@code.org')
   end
 
-  def from_survey
+  private def from_survey
     email_address('Code.org', 'survey@code.org')
   end
 
-  def get_details_partial(course, subject)
+  private def get_details_partial(course, subject)
     return 'csf' if course == Pd::Workshop::COURSE_CSF
     return DETAILS_PARTIALS[course][subject] if DETAILS_PARTIALS[course] && DETAILS_PARTIALS[course][subject]
     nil
   end
 
-  def teacher_enrollment_subject(workshop)
-    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
+  private def teacher_enrollment_subject(workshop)
+    if Pd::Workshop::COURSE_ADMIN_COUNSELOR == workshop.course
       "Your upcoming #{workshop.course_name} workshop"
     elsif workshop.local_summer?
       if @is_first_pre_survey_email
@@ -325,8 +323,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
     end
   end
 
-  def detail_change_notification_subject(workshop)
-    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
+  private def detail_change_notification_subject(workshop)
+    if Pd::Workshop::COURSE_ADMIN_COUNSELOR == workshop.course
       "Details for your upcoming #{workshop.course_name} workshop have changed"
     else
       'Details for your upcoming Code.org workshop have changed'
@@ -340,7 +338,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   # "Remember that you can always reach out to us for support at teacher@code.org, to your regional partner at
   # patty@we_teach_code.ex.net, or to your facilitator(s) at
   # fiona_facilitator@example.net or fred_facilitator@example.net.""
-  def get_contact_text_for_teacher_follow_up(regional_partner, facilitators)
+  private def get_contact_text_for_teacher_follow_up(regional_partner, facilitators)
     has_partner = !!regional_partner&.contact_email
     has_facilitator = !facilitators.empty?
     after_teacher_contact = '.'
@@ -369,7 +367,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     contact_text
   end
 
-  def email_tag(email)
+  private def email_tag(email)
     "<a href=mailto:#{email}>#{email}</a>"
   end
 end

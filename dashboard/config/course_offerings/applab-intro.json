@@ -6,10 +6,10 @@
   "assignable": true,
   "curriculum_type": null,
   "marketing_initiative": "HOC",
-  "grade_levels": null,
+  "grade_levels": "9,10,11,12",
   "header": "Labs and Skills",
-  "image": null,
-  "cs_topic": null,
+  "image": "https://images.code.org/8e4cdad41052c2cc5e7b11d6d79aa9aa-Intro to App Lab.png",
+  "cs_topic": "app_design,programming",
   "school_subject": null,
-  "device_compatibility": null
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
 }

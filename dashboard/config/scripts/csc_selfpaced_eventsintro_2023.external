@@ -1,0 +1,24 @@
+name 'CSC-SelfPaced-eventsintro_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introducing to Events
+
+##### Next, you will be introduced to the CS concept of **events**, an action that causes something to happen. 
+
+## You will:
+
+* ##### Watch a video that introduces **events** to students.
+* ##### Use Sprite Lab to code different types of events.
+
+
+**Note:**  Some levels presented here have more steps than what a student will encounter during a single lesson.
+
+### **Suggested time:** 15 minutes
+
+## Let's keep learning! 
+
+
+
+MARKDOWN

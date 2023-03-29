@@ -113,7 +113,7 @@
           "description": "### Über die Hour of Code hinaus\n\nAuch nach der \"Hour of Code\" gibt es viele Möglichkeiten, wie Sie den Informatikunterricht in Ihrer 5. Klasse fortsetzen können. Hier einige Ideen:\n\n-   **Unterrichten Sie die Kurse [Code Studio Computer Science Fundamentals](http://code.org/educate/k5)**. Diese sechs Kurse sind für junge Lernende konzipiert. Die SchülerInnen lösen Aufgaben und lernen dabei das Programmieren. Die Lehrkräfte können motivierenden Unterrichtspläne nutzen, die das Lernen mit Leben erfüllen. Code.org bietet kostenlose berufliche Weiterbildungen für diese Kurse an, sowohl online oder persönlich.\n-   **Unter [You can Teach Computer Science](https://studio.code.org/courses?view=teacher)** finden Sie weitere Kursvorschläge.\n-   **Laden Sie einen Informatik-Experten ein, die Ihrer Klasse etwas über ihre Arbeit erzählen.** Wenn Sie keinen Informatiker kennen, kontaktieren Sie einen Freiwilligen auf unserer [volunteer map](https://code.org/volunteer/local)."
         },
         "79f9bd46-60a5-4891-ad3b-8369879847fc": {
-          "description": "#### Vorbereitung\n\nBegrüßen Sie die SchülerInnen und stellen Sie kurz die geplanten Aktivitäten vor. \n\nDiese Stunde wird Ihren SchülerInnen viel Spaß machen. Wahrscheinlich haben die meisten Ihrer SchülerInnen schon von Minecraft gehört, falls nicht geben Sie kurze Einführung\nMinecraft ist ein Spiel mit Würfeln. Sie können als Alex oder Steve spielen und sich durch Labyrinthe arbeiten. Sie müssen Gegenstände aufsammeln und eine Welt erkunden, die aus Würfeln mit Gegenständen besteht.\n\nSagen Sie: \"Heute werden wir eine Stunde Programmieren lernen. Hat jemand von euch schon einmal den Begriff \"Code\" gehört? Was bedeutet er?\"\\_\n\nDie SchülerInnen antworten meistens, dass ein \"Code\" eine geheime Nachricht ist, oder dass er mit Computern zu tun hat."
+          "description": "#### Vorbereitung\n\nBegrüßen Sie die SchülerInnen und stellen Sie kurz die geplanten Aktivitäten vor. \n\nDiese Stunde wird Ihren SchülerInnen viel Spaß machen. Wahrscheinlich haben die meisten Ihrer SchülerInnen schon von Minecraft gehört, falls nicht, geben Sie kurze Einführung.\nMinecraft ist ein Spiel mit Würfeln. Sie können als Alex oder Steve spielen und sich durch Labyrinthe arbeiten. Sie müssen Gegenstände aufsammeln und eine Welt erkunden, die aus Würfeln mit Gegenständen besteht.\n\nSagen Sie: \"Heute werden wir eine Stunde Programmieren lernen. Hat jemand von euch schon einmal den Begriff \"Code\" gehört? Was bedeutet er?\"\n\nDie SchülerInnen antworten meistens, dass ein \"Code\" eine geheime Nachricht ist, oder dass er mit Computern zu tun hat."
         },
         "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
           "tips": [
@@ -129,7 +129,7 @@
           ]
         },
         "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
-          "name": "Minecraft: Hero’s Journey",
+          "name": "Minecraft Helden Reise",
           "description": "Bitten Sie Ihre SchülerInnen, das Tutorial  [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) abzuschließen.\n\nJe nach Alter und Fähigkeiten Ihrer SchülerInnen gibt es viele Möglichkeiten: \n\n-   Für jüngere SchülerInnen empfehlen wir, die Klasse in Paare aufzuteilen und jede Gruppe aufzufordern, das Tutorial im [pair programming](https://youtu.be/vgkahOzFH2Q) gemeinsam zu bearbeiten.\n-   Bei SchülerInnen der Mittelstufe finden wir, dass es gut funktioniert, wenn sie unabhängig voneinander an den Übungen arbeiten. Manchmal ist es hilfreich, wenn die SchülerInnen ihr eigenes Tutorial auswählen können. Wenn die SchülerInnen nicht an Minecraft interessiert sind, können sie eine ähnliche Erfahrung mit den Tutorials [Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) oder [Star Wars](https://code.org/starwars) machen.\n-   Für ältere oder erwachsene Lernende eignet sich das Tutorial [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) sehr gut, entweder als eigenständige Herausforderung oder als Programmieraufgabe zu zweit."
         },
         "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
@@ -141,11 +141,11 @@
           "description": "Wenn eine Gruppe oder ein Einzelner vorzeitig fertig ist, können sie sich ein anderes Tutorial unter [code.org/learn](http://code.org/learn) ansehen."
         },
         "34238f3b-6699-4e27-b77a-54bcd8d57459": {
-          "progression_name": "Minecraft: Hero’s Journey"
+          "progression_name": "Minecraft Helden Reise"
         },
         "ae17edd9-ad82-47dc-95f5-368b58084998": {
           "name": "Besprechung",
-          "description": "Bitten Sie die SchülerInnen, über die Aktivitäten des Tages nachzudenken. Was haben sie über die Codierung gelernt? Programmierung? Fehlersuche? Was denken sie über Informatik und Code nach einer Stunde Unterricht?"
+          "description": "Bitten Sie die SchülerInnen, über die Aktivitäten des Tages nachzudenken. Was haben sie über die Programmierung gelernt? Programmierung? Fehlersuche? Was denken sie über Informatik und Code nach einer Stunde Unterricht?"
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
           "name": "Feiern",
@@ -668,7 +668,7 @@
           ]
         },
         "91cc858b-9f90-4134-b890-237f457e8423": {
-          "name": "Minecraft: Voyage Aquatic",
+          "name": "Minecraft: Aquatische Bedingungen Reise",
           "description": "Bitten Sie Ihre SchülerInnen, das Tutorial  [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1) abzuschließen.\n\nJe nach Alter und Fähigkeiten Ihrer SchülerInnen gibt es viele Möglichkeiten: \n\n-   Für jüngere SchülerInnen empfehlen wir, die Klasse in Paare aufzuteilen und jede Gruppe aufzufordern, das Tutorial im [pair programming](https://youtu.be/vgkahOzFH2Q) gemeinsam zu bearbeiten.\n-   Bei SchülerInnen der Mittelstufe finden wir, dass es gut funktioniert, wenn sie unabhängig voneinander an den Übungen arbeiten. Manchmal ist es hilfreich, wenn die SchülerInnen ihr eigenes Tutorial auswählen können. Wenn die SchülerInnen nicht an Minecraft interessiert sind, können sie eine ähnliche Erfahrung mit den Tutorials [Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) oder [Star Wars](https://code.org/starwars) machen.\n-   Für ältere oder erwachsene Lernende eignet sich das [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1) sehr gut, entweder als eigenständige Herausforderung oder als Programmieraufgabe zu zweit."
         },
         "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
@@ -1451,7 +1451,7 @@
           "description": "Bei Stunde des Codes geht es um Kreativität und wir können es kaum erwarten, zu sehen was sie gekreierenhaben! Bitte teilen Sie die Kreationen ihrer SchülerInnen, Fotos und Videos in den sozialen Netzwerken! Nehmen Sie die Klasse auf, wie sie einen Tanz codiert oder während sie tanzen. Machen Sie etwas Besonderes aus Ihrem Video, indem Sie  einen [ending clip](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0) hinzufügen.\n\nFügen Sie den Hashtag #HourOfCode hinzu und taggen Sie uns bei Facebook, Twitter und Instagram. Erhalten Sie Bonuspunkte für das Tagging des Künstlers, wenn die SchülerInnen seine Musik verwenden. Code.org wird ihre favorisierten Beiträge mit unseren Millionen von Followern teilen. \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif) \n\n_Selbstverständlich sollten Sie die Vorschriften für soziale Netzwerke ihrer Schule respektieren._"
         },
         "e4e53ed4-18d2-4b17-9566-e08ccc20a4f3": {
-          "description": "Ask students to add their “Whip Around” sticky notes or note cards to your \"Computer Science\" mind map on their way out the door.Versuchen Sie, das Brett mit möglichst vielen tollen Ideen darüber zu füllen, was CS ist und warum es wichtig ist."
+          "description": "Bitten die Schüler beim Verlassen des Raums ihre jeweiligen Klebenotizblätter auf die \"Informatik\" Mind Map anzubringen. Versuche die Tafel mit möglichst vielen tollen Ideen darüber zu füllen, was Informatik ist und warum sie wichtig ist."
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "name": "Begeistern Sie!",
@@ -10454,6 +10454,7 @@
           ]
         },
         "73c2cb42-e6a3-4317-8aab-7196411578ab": {
+          "name": "Modellkarten im KI Labor",
           "tips": [
             null
           ]
@@ -20390,6 +20391,7 @@
           ]
         },
         "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
+          "name": "Modellkarten im KI Labor",
           "tips": [
             null
           ]

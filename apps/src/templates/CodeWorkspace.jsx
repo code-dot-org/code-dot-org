@@ -300,7 +300,10 @@ const styles = {
     fontSize: 18
   },
   runningIcon: {
-    color: color.dark_charcoal
+    color: color.neutral_white,
+    ':hover': {
+      color: color.neutral_dark20
+    }
   },
   oldVersionWarning: {
     zIndex: 99,
@@ -333,11 +336,11 @@ const styles = {
     border: 'none',
     lineHeight: styleConstants['workspace-headers-height'] + 'px',
     backgroundColor: 'transparent',
-    color: color.lighter_purple,
+    color: color.neutral_white,
     fontSize: 18,
     ':hover': {
       cursor: 'pointer',
-      color: color.white,
+      color: color.neutral_dark20,
       boxShadow: 'none'
     }
   },

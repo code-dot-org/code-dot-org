@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import OrderableList from './OrderableList';
 import ExampleEditor from './ExampleEditor';
 import ParameterEditor from './ParameterEditor';
-import ImageInput from './ImageInput';
+import ImageInput from '../ImageInput';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';

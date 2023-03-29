@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-07 12:46:00 UTC",
+    "serialized_at": "2023-03-17 19:57:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -26,25 +26,1254 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Content"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Show What You Know"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Alternate Lessons",
+        "description": "This section contains the one-day version of the Natural Language Processing Project."
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa6-2023"
       }
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Project Planning",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Substrings",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Integer and Double Objects",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "ArrayLists",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Manipulating Elements",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Comparing Strings",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Lists of Objects",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Removing Elements",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "ArrayList and String Algorithms",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Natural Language Processing Project",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+        "overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. Students choose how they will implement basic natural language processing techniques to understand text and respond accordingly. After brainstorming and planning, students develop their programs.",
+        "preparation": "* Print copies of the Natural Language Processing Project Planning Guide (one for each student)\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, you use the skills you have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. You choose how you will implement basic natural language processing techniques to understand text and respond accordingly. After brainstorming and planning, you develop your program."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "TemperatureAction FRQ",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+        "overview": "**How will I use what I know about `ArrayList`s and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
+        "preparation": "* Print copies of the TemperatureAction FRQ handout (one for each student)\n* Print copies of the Java Quick Reference resource (one for each student)\n* Print copies of the TemperatureAction FRQ Scoring Guidelines (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-6-frq-practice/36334/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How will I use what I know about `ArrayList`s and standard algorithms to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Unit 6 Assessment",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+        "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "Congratulations, you completed Unit 6! Assess your progress through the Unit 6 Assessment."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Natural Language Processing Project [1-Day Version]",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+        "overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. Students choose how they will implement basic natural language processing techniques to understand text and respond accordingly. After brainstorming and planning, students develop their programs.",
+        "preparation": "* Print copies of the Natural Language Processing Project Planning Guide (one for each student)\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, you use the skills you have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. You choose how you will implement basic natural language processing techniques to understand text and respond accordingly. After brainstorming and planning, you develop your program."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2023"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "4c837b08-5826-4f09-8bf9-9e5deb7aeb23",
+      "position": 1,
+      "properties": {
+        "name": "Project Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4c837b08-5826-4f09-8bf9-9e5deb7aeb23",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "98ca797d-ee65-4636-9717-82423d9f60f0",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "98ca797d-ee65-4636-9717-82423d9f60f0",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "1e3e1797-646f-40d7-878a-81691f5c9d1e",
+      "position": 3,
+      "properties": {
+        "duration": 45,
+        "name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1e3e1797-646f-40d7-878a-81691f5c9d1e",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "b7a56cf6-02c8-4722-b2c6-c1364c663c17",
+      "position": 4,
+      "properties": {
+        "duration": 45,
+        "name": "Day 3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b7a56cf6-02c8-4722-b2c6-c1364c663c17",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "4f359cd0-3ea5-407c-bee4-6d3826edb5b0",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4f359cd0-3ea5-407c-bee4-6d3826edb5b0",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "23693292-42ac-4d26-930c-2ee57193e889",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "23693292-42ac-4d26-930c-2ee57193e889",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "37f8e6d6-3f19-4393-add8-f74d0a67ddd5",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "37f8e6d6-3f19-4393-add8-f74d0a67ddd5",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "7ccb187b-ef3c-4f66-a641-d1a45f847181",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7ccb187b-ef3c-4f66-a641-d1a45f847181",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "6238a02c-a4a3-4475-baac-1c028a647bcf",
+      "position": 2,
+      "properties": {
+        "name": "Wrap Up (Optional)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6238a02c-a4a3-4475-baac-1c028a647bcf",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "e0629635-6c9b-435f-98e3-803a7c1df58c",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e0629635-6c9b-435f-98e3-803a7c1df58c",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "2498bbbb-d051-44a9-a238-c9f1e7a7a870",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2498bbbb-d051-44a9-a238-c9f1e7a7a870",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "key": "7effcb82-e330-49d5-b402-7bc41031e511",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7effcb82-e330-49d5-b402-7bc41031e511",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2023"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "fd3eb488-3407-4282-84fd-e8ff25c2c6bf",
+      "position": 1,
+      "properties": {
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including choosing a topic or goal and implementing an algorithm. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Natural Language Processing Project 1-Day Lesson Plan**](https://levelbuilder-studio.code.org/s/csa6-2023/lessons/13). While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+      },
+      "seeding_key": {
+        "activity_section.key": "fd3eb488-3407-4282-84fd-e8ff25c2c6bf",
+        "lesson_activity.key": "4c837b08-5826-4f09-8bf9-9e5deb7aeb23"
+      }
+    },
+    {
+      "key": "667e30a4-4d16-4dd9-8093-5e0029be23d5",
+      "position": 1,
+      "properties": {
+        "description": "We have seen some examples of programs that use natural language processing techniques throughout the unit. Programs and devices often use natural language processing to interact with a user to answer questions, find information, or execute commands.",
+        "duration": "10",
+        "name": "Warm Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "667e30a4-4d16-4dd9-8093-5e0029be23d5",
+        "lesson_activity.key": "98ca797d-ee65-4636-9717-82423d9f60f0"
+      }
+    },
+    {
+      "key": "d3a34b7b-4812-4d10-9465-35397c6fe746",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of programs and devices that use natural language processing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a program that uses natural language processing to analyze, manipulate, or generate text?*\n\n**Discussion Goal:** Students share ideas about programs they might make using natural language processing, such as chatbots, story generators, or social media analyzers."
+      },
+      "seeding_key": {
+        "activity_section.key": "d3a34b7b-4812-4d10-9465-35397c6fe746",
+        "lesson_activity.key": "98ca797d-ee65-4636-9717-82423d9f60f0"
+      }
+    },
+    {
+      "key": "2e20bc1a-d967-4eba-aa46-ca456f8dd08c",
+      "position": 3,
+      "properties": {
+        "description": "Over the next few days, you will be developing a program that uses natural language processing techniques to analyze, manipulate, or generate text.",
+        "duration": "15",
+        "name": "Brainstorming and Planning",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2e20bc1a-d967-4eba-aa46-ca456f8dd08c",
+        "lesson_activity.key": "98ca797d-ee65-4636-9717-82423d9f60f0"
+      }
+    },
+    {
+      "key": "c0d14418-94b4-4b3c-b80a-34b7bc7710b3",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Natural Language Processing Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c0d14418-94b4-4b3c-b80a-34b7bc7710b3",
+        "lesson_activity.key": "98ca797d-ee65-4636-9717-82423d9f60f0"
+      }
+    },
+    {
+      "key": "133b6b76-09b8-4ee4-a8fd-993b04bd23c8",
+      "position": 5,
+      "properties": {
+        "description": "**Do This:** Introduce the steps students will take each day to complete the project:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Day 1 steps\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Day 2 steps\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Day 3 steps"
+      },
+      "seeding_key": {
+        "activity_section.key": "133b6b76-09b8-4ee4-a8fd-993b04bd23c8",
+        "lesson_activity.key": "98ca797d-ee65-4636-9717-82423d9f60f0"
+      }
+    },
+    {
+      "key": "818364ba-062b-4317-a3db-de1801c9e353",
+      "position": 6,
+      "properties": {
+        "description": "Before you begin writing your program, you first need to decide how you will use natural language processing techniques in your program. You will need to plan how you will organize your program and interact with a user, and identify the algorithms you need to develop to analyze text.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "818364ba-062b-4317-a3db-de1801c9e353",
+        "lesson_activity.key": "98ca797d-ee65-4636-9717-82423d9f60f0"
+      }
+    },
+    {
+      "key": "deb760ef-71f9-4981-bbe8-8b703ee2452f",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to brainstorm the program they will create, create UML diagrams for their classes, and identify the algorithms they need to develop on the Natural Language Processing Project Planning Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "deb760ef-71f9-4981-bbe8-8b703ee2452f",
+        "lesson_activity.key": "98ca797d-ee65-4636-9717-82423d9f60f0"
+      }
+    },
+    {
+      "key": "5871b116-c4d0-4116-8662-e67b10261dfe",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Natural Language Processing Good Project.",
+        "duration": "15",
+        "name": "Development"
+      },
+      "seeding_key": {
+        "activity_section.key": "5871b116-c4d0-4116-8662-e67b10261dfe",
+        "lesson_activity.key": "98ca797d-ee65-4636-9717-82423d9f60f0"
+      }
+    },
+    {
+      "key": "b0bf13b2-a227-4711-b109-7133b9e6cbbc",
+      "position": 9,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b0bf13b2-a227-4711-b109-7133b9e6cbbc",
+        "lesson_activity.key": "98ca797d-ee65-4636-9717-82423d9f60f0"
+      }
+    },
+    {
+      "key": "772de3d5-b0a5-468a-91d8-a167ec179f8a",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "772de3d5-b0a5-468a-91d8-a167ec179f8a",
+        "lesson_activity.key": "98ca797d-ee65-4636-9717-82423d9f60f0"
+      }
+    },
+    {
+      "key": "22ae7ca4-c503-4ef5-9b76-43b24406e87e",
+      "position": 11,
+      "properties": {
+        "description": "You made a lot of progress on your project today! Let's take a moment to reflect on what you have accomplished so far and what you need to focus on next.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "22ae7ca4-c503-4ef5-9b76-43b24406e87e",
+        "lesson_activity.key": "98ca797d-ee65-4636-9717-82423d9f60f0"
+      }
+    },
+    {
+      "key": "bab6d9c4-34b8-47b1-962e-31daba93b4b8",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 1 Reflection prompt on the Natural Language Processing Project Planning Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use the Day 1 Reflection as an optional completion assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bab6d9c4-34b8-47b1-962e-31daba93b4b8",
+        "lesson_activity.key": "98ca797d-ee65-4636-9717-82423d9f60f0"
+      }
+    },
+    {
+      "key": "22f0c92b-43ba-413c-a7f3-45aabe4755e1",
+      "position": 1,
+      "properties": {
+        "description": "Like in the examples we have seen in this unit, you are using computer science to analyze, manipulate, and generate text using natural language processing techniques. You are also using your software engineering characteristics to create your programs.",
+        "duration": "10",
+        "name": "Warm Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "22f0c92b-43ba-413c-a7f3-45aabe4755e1",
+        "lesson_activity.key": "1e3e1797-646f-40d7-878a-81691f5c9d1e"
+      }
+    },
+    {
+      "key": "93864464-ce54-4e0e-830e-2aad7a6e1a58",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Natural Language Processing Project Planning Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "93864464-ce54-4e0e-830e-2aad7a6e1a58",
+        "lesson_activity.key": "1e3e1797-646f-40d7-878a-81691f5c9d1e"
+      }
+    },
+    {
+      "key": "cb22081d-4dac-4986-bd33-4464efa095ef",
+      "position": 3,
+      "properties": {
+        "description": "Continue to work on your Natural Language Processing Project. Be sure to refer to the project requirements and rubric to make sure you include the necessary components.",
+        "duration": "10",
+        "name": "Development",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cb22081d-4dac-4986-bd33-4464efa095ef",
+        "lesson_activity.key": "1e3e1797-646f-40d7-878a-81691f5c9d1e"
+      }
+    },
+    {
+      "key": "f095ae58-573a-4b7d-a736-e98385f5b6ee",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to continue developing their projects."
+      },
+      "seeding_key": {
+        "activity_section.key": "f095ae58-573a-4b7d-a736-e98385f5b6ee",
+        "lesson_activity.key": "1e3e1797-646f-40d7-878a-81691f5c9d1e"
+      }
+    },
+    {
+      "key": "3cd27a6d-4eb9-4eae-9f7f-37fc7554e89c",
+      "position": 5,
+      "properties": {
+        "description": "This is a good time to commit our code and save our superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "duration": "10",
+        "name": "Code Review",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3cd27a6d-4eb9-4eae-9f7f-37fc7554e89c",
+        "lesson_activity.key": "1e3e1797-646f-40d7-878a-81691f5c9d1e"
+      }
+    },
+    {
+      "key": "c66df2a4-f5cc-4a7c-a3b6-a82728bfd2cd",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c66df2a4-f5cc-4a7c-a3b6-a82728bfd2cd",
+        "lesson_activity.key": "1e3e1797-646f-40d7-878a-81691f5c9d1e"
+      }
+    },
+    {
+      "key": "91471ca7-f0f7-49bb-b41b-b09357ab529c",
+      "position": 7,
+      "properties": {
+        "description": "When we write new code, getting feedback from our peers is helpful to make sure we have met the requirements of the problem efficiently.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "91471ca7-f0f7-49bb-b41b-b09357ab529c",
+        "lesson_activity.key": "1e3e1797-646f-40d7-878a-81691f5c9d1e"
+      }
+    },
+    {
+      "key": "bc9e2bf6-277c-45e1-a913-5f78903ee4db",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Natural Language Processing Project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may be at different points when it is time for the code review. Emphasize to students that their work does not need to be completed to get feedback. Remind students that the problem-solving and development process is iterative and that receiving feedback from peers while they are working can help give them additional insights, perspectives, and guidance."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bc9e2bf6-277c-45e1-a913-5f78903ee4db",
+        "lesson_activity.key": "1e3e1797-646f-40d7-878a-81691f5c9d1e"
+      }
+    },
+    {
+      "key": "c428db07-2726-440e-9f6b-4ee92ccbf74a",
+      "position": 9,
+      "properties": {
+        "description": "You have a lot of feedback from the code review to help improve your program! Let's review our tasks and priorities and plan updates based on the feedback we received and what we have left to complete.",
+        "duration": "10",
+        "name": "Revisions, Updates, and Reviews",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c428db07-2726-440e-9f6b-4ee92ccbf74a",
+        "lesson_activity.key": "1e3e1797-646f-40d7-878a-81691f5c9d1e"
+      }
+    },
+    {
+      "key": "b96f306b-40a7-4536-b48e-4e7918e51109",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the program requirements and rubric on the Natural Language Processing Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students create a prioritized list of upgrades, changes, and things they still need to complete on the Abstract Data Art Project Planning Guide based on the feedback they received from the code review.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students finish their prioritized list early, encourage them to start working on their #1 priority."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b96f306b-40a7-4536-b48e-4e7918e51109",
+        "lesson_activity.key": "1e3e1797-646f-40d7-878a-81691f5c9d1e"
+      }
+    },
+    {
+      "key": "019b9f68-ba2f-4fd4-95c0-af5a86c23c69",
+      "position": 11,
+      "properties": {
+        "description": "You made a lot of progress on your project today! Let's take a moment to reflect on what you have accomplished so far and what you need to focus on next.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "019b9f68-ba2f-4fd4-95c0-af5a86c23c69",
+        "lesson_activity.key": "1e3e1797-646f-40d7-878a-81691f5c9d1e"
+      }
+    },
+    {
+      "key": "03d76b8e-26a0-4a08-a2af-1d0540d35d35",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 2 Reflection prompt on the Natural Language Processing Project Planning Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use the Day 2 Reflection as an optional completion assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "03d76b8e-26a0-4a08-a2af-1d0540d35d35",
+        "lesson_activity.key": "1e3e1797-646f-40d7-878a-81691f5c9d1e"
+      }
+    },
+    {
+      "key": "f9e82279-ea29-49e8-9028-4c264647ac6e",
+      "position": 1,
+      "properties": {
+        "description": "We are almost done with our project! You should be proud of what you have accomplished in this unit and this project.",
+        "duration": "5",
+        "name": "Warm Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f9e82279-ea29-49e8-9028-4c264647ac6e",
+        "lesson_activity.key": "b7a56cf6-02c8-4722-b2c6-c1364c663c17"
+      }
+    },
+    {
+      "key": "662330c5-cd10-4cf5-bbe1-c7f3d41b9ddb",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
+      },
+      "seeding_key": {
+        "activity_section.key": "662330c5-cd10-4cf5-bbe1-c7f3d41b9ddb",
+        "lesson_activity.key": "b7a56cf6-02c8-4722-b2c6-c1364c663c17"
+      }
+    },
+    {
+      "key": "8f58aab6-cf99-4cdd-9cf9-5f0f9e3c5fa6",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the steps for Day 3 of the project.",
+        "duration": "15",
+        "name": "Development"
+      },
+      "seeding_key": {
+        "activity_section.key": "8f58aab6-cf99-4cdd-9cf9-5f0f9e3c5fa6",
+        "lesson_activity.key": "b7a56cf6-02c8-4722-b2c6-c1364c663c17"
+      }
+    },
+    {
+      "key": "da4f313c-9f8e-4165-a93a-085ea3eee656",
+      "position": 4,
+      "properties": {
+        "description": "You will finish developing your natural language processing program. Be sure to consider the feedback you received from your code review and rubric self-assessment as you finalize your program.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "da4f313c-9f8e-4165-a93a-085ea3eee656",
+        "lesson_activity.key": "b7a56cf6-02c8-4722-b2c6-c1364c663c17"
+      }
+    },
+    {
+      "key": "1adf11dd-a0bd-4553-93e3-7a60a44ee70d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the project requirements and rubric on the Natural Language Processing Project Planning Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "1adf11dd-a0bd-4553-93e3-7a60a44ee70d",
+        "lesson_activity.key": "b7a56cf6-02c8-4722-b2c6-c1364c663c17"
+      }
+    },
+    {
+      "key": "fb57e24a-dc58-4405-96b6-51193136caaa",
+      "position": 6,
+      "properties": {
+        "description": "Use the feedback you received from your code review and self-assessment to finalize your Natural Language Processing Project.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fb57e24a-dc58-4405-96b6-51193136caaa",
+        "lesson_activity.key": "b7a56cf6-02c8-4722-b2c6-c1364c663c17"
+      }
+    },
+    {
+      "key": "75ad9a3f-9147-4f49-b501-3d5fd6b3299f",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish developing their Natural Language Processing Project. Have students submit their projects at the end of the allotted time."
+      },
+      "seeding_key": {
+        "activity_section.key": "75ad9a3f-9147-4f49-b501-3d5fd6b3299f",
+        "lesson_activity.key": "b7a56cf6-02c8-4722-b2c6-c1364c663c17"
+      }
+    },
+    {
+      "key": "0a43aba6-350d-430e-bb33-08640e6a9ba3",
+      "position": 8,
+      "properties": {
+        "description": "Congratulations! You have completed your data for social good project for this unit. Let's show off our work through a Gallery Walk so you can share your work with your classmates.",
+        "duration": "15",
+        "name": "Peer Presentations",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0a43aba6-350d-430e-bb33-08640e6a9ba3",
+        "lesson_activity.key": "b7a56cf6-02c8-4722-b2c6-c1364c663c17"
+      }
+    },
+    {
+      "key": "2fc937da-5a66-479d-a409-529e3e4fb5c9",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
+      },
+      "seeding_key": {
+        "activity_section.key": "2fc937da-5a66-479d-a409-529e3e4fb5c9",
+        "lesson_activity.key": "b7a56cf6-02c8-4722-b2c6-c1364c663c17"
+      }
+    },
+    {
+      "key": "8d891ce0-4197-440e-8128-3eaa966f843d",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Natural Language Processing Project Planning Guide.",
+        "duration": "10",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8d891ce0-4197-440e-8128-3eaa966f843d",
+        "lesson_activity.key": "b7a56cf6-02c8-4722-b2c6-c1364c663c17"
+      }
+    },
+    {
+      "key": "6501d9d6-cc85-4dce-85df-2c4910059b4f",
+      "position": 11,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "6501d9d6-cc85-4dce-85df-2c4910059b4f",
+        "lesson_activity.key": "b7a56cf6-02c8-4722-b2c6-c1364c663c17"
+      }
+    },
+    {
+      "key": "830291fe-163c-4f20-af94-c1ca83a213e7",
+      "position": 12,
+      "properties": {
+        "description": "**Natural Language Processing Project Planning Guide:** Use the rubric on the last page of the Natural Language Processing Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "830291fe-163c-4f20-af94-c1ca83a213e7",
+        "lesson_activity.key": "b7a56cf6-02c8-4722-b2c6-c1364c663c17"
+      }
+    },
+    {
+      "key": "3bf0528a-449b-490a-9070-f2d1d9450f4a",
+      "position": 1,
+      "properties": {
+        "description": "Today, you will complete another FRQ independently. Let's get ready for doing a quick breathing exercise first to help us relax and set aside any distractions or negativity so we can focus on doing our best work.",
+        "name": "Breathing Exercise",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3bf0528a-449b-490a-9070-f2d1d9450f4a",
+        "lesson_activity.key": "4f359cd0-3ea5-407c-bee4-6d3826edb5b0"
+      }
+    },
+    {
+      "key": "6d0ed97b-f6af-4a9b-a962-832affc30b15",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in one of the breathing exercises."
+      },
+      "seeding_key": {
+        "activity_section.key": "6d0ed97b-f6af-4a9b-a962-832affc30b15",
+        "lesson_activity.key": "4f359cd0-3ea5-407c-bee4-6d3826edb5b0"
+      }
+    },
+    {
+      "key": "e061a276-2ae6-4b41-b50c-242dfbc91ec7",
+      "position": 3,
+      "properties": {
+        "description": "Now that we're ready for this FRQ, let's review the strategies we have practiced for approaching these questions.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e061a276-2ae6-4b41-b50c-242dfbc91ec7",
+        "lesson_activity.key": "4f359cd0-3ea5-407c-bee4-6d3826edb5b0"
+      }
+    },
+    {
+      "key": "5de0a33c-4471-4d66-b43e-ad6cc0f2f4fc",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the strategies for approaching FRQs."
+      },
+      "seeding_key": {
+        "activity_section.key": "5de0a33c-4471-4d66-b43e-ad6cc0f2f4fc",
+        "lesson_activity.key": "4f359cd0-3ea5-407c-bee4-6d3826edb5b0"
+      }
+    },
+    {
+      "key": "dea67c1d-b958-4a8d-a2d9-7b8331c94cdd",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the TemperatureAction FRQ handout and Java Quick Reference.",
+        "duration": "25",
+        "name": "Writing"
+      },
+      "seeding_key": {
+        "activity_section.key": "dea67c1d-b958-4a8d-a2d9-7b8331c94cdd",
+        "lesson_activity.key": "23693292-42ac-4d26-930c-2ee57193e889"
+      }
+    },
+    {
+      "key": "2bb87b71-cc09-4fa2-8df8-127318d40bb8",
+      "position": 2,
+      "properties": {
+        "description": "You now have 25 minutes to develop your response to the Free Response Question. Remember to use the strategies we have practiced!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2bb87b71-cc09-4fa2-8df8-127318d40bb8",
+        "lesson_activity.key": "23693292-42ac-4d26-930c-2ee57193e889"
+      }
+    },
+    {
+      "key": "a479ece7-34b9-4d09-99eb-122c6389d7d7",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Free Response Question."
+      },
+      "seeding_key": {
+        "activity_section.key": "a479ece7-34b9-4d09-99eb-122c6389d7d7",
+        "lesson_activity.key": "23693292-42ac-4d26-930c-2ee57193e889"
+      }
+    },
+    {
+      "key": "223fa177-1602-4104-81ee-013b688ab19e",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the TemperatureAction FRQ Scoring Guidelines.\n\n**Group:** Place students in groups of two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students compare their solutions with their partners and assess their work using the TemperatureAction FRQ Scoring Guidelines.",
+        "duration": "10",
+        "name": "Scoring and Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "223fa177-1602-4104-81ee-013b688ab19e",
+        "lesson_activity.key": "23693292-42ac-4d26-930c-2ee57193e889"
+      }
+    },
+    {
+      "key": "5c29aea6-3a5d-4364-a2d6-5f05d1dd3eee",
+      "position": 5,
+      "properties": {
+        "description": "Congratulations on completing another FRQ! As with any problems we solve in Java, there are multiple approaches to solving an FRQ. Let's look at one solution to today's FRQ.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5c29aea6-3a5d-4364-a2d6-5f05d1dd3eee",
+        "lesson_activity.key": "23693292-42ac-4d26-930c-2ee57193e889"
+      }
+    },
+    {
+      "key": "8307d2aa-74f0-4d07-9734-8b89caea14d0",
+      "position": 6,
+      "properties": {
+        "description": "**Do This:** Discuss possible solutions to the FRQ. For each solution, walk through each row of the FRQ Scoring Guide and point out how the solution met those requirements. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `addTemperatureAction()` method (Part (a))\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `removeTemperatureAction()` method (Part (b))"
+      },
+      "seeding_key": {
+        "activity_section.key": "8307d2aa-74f0-4d07-9734-8b89caea14d0",
+        "lesson_activity.key": "23693292-42ac-4d26-930c-2ee57193e889"
+      }
+    },
+    {
+      "key": "a821c7cf-32f5-4ebc-b2e7-97d725a9d4f5",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student one sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on their sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
+        "name": "Give One, Get One"
+      },
+      "seeding_key": {
+        "activity_section.key": "a821c7cf-32f5-4ebc-b2e7-97d725a9d4f5",
+        "lesson_activity.key": "37f8e6d6-3f19-4393-add8-f74d0a67ddd5"
+      }
+    },
+    {
+      "key": "1f5060f4-b3dc-42f3-9090-4d9869143b80",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "1f5060f4-b3dc-42f3-9090-4d9869143b80",
+        "lesson_activity.key": "37f8e6d6-3f19-4393-add8-f74d0a67ddd5"
+      }
+    },
+    {
+      "key": "c61c089e-81bd-43c5-b5fe-3f15895c2556",
+      "position": 3,
+      "properties": {
+        "description": "**TemperatureAction FRQ:** The TemperatureAction FRQ handout can be used as an optional formative assessment.",
+        "name": "Assessment (Optional)"
+      },
+      "seeding_key": {
+        "activity_section.key": "c61c089e-81bd-43c5-b5fe-3f15895c2556",
+        "lesson_activity.key": "37f8e6d6-3f19-4393-add8-f74d0a67ddd5"
+      }
+    },
+    {
+      "key": "df8097b9-d1c3-4e2d-9ccd-5e6281d3cc5a",
+      "position": 1,
+      "properties": {
+        "description": "Congratulations, you have made it to the end of Unit 6! You learned a lot about `ArrayList`s and `String`s and used these to analyze and generate text using natural language processing techniques. Today, you will complete an assessment to put your skills to the test.",
+        "name": "Unit 6 Assessment",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "df8097b9-d1c3-4e2d-9ccd-5e6281d3cc5a",
+        "lesson_activity.key": "7ccb187b-ef3c-4f66-a641-d1a45f847181"
+      }
+    },
+    {
+      "key": "074c8ecc-94bf-4248-b02c-1c248a40fb5f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 6 Assessment on Code Studio."
+      },
+      "seeding_key": {
+        "activity_section.key": "074c8ecc-94bf-4248-b02c-1c248a40fb5f",
+        "lesson_activity.key": "7ccb187b-ef3c-4f66-a641-d1a45f847181"
+      }
+    },
+    {
+      "key": "e1a8ae03-7b42-4245-9204-86bdd9e9dd28",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
+        "name": "Assessment Review",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Discuss any questions that come up and take note of topics where students may need extra review.\n\nAs you review answers with students, consider the following suggested strategies:\n\n* Students write down solutions to questions in their journals that they answered incorrectly.\n* Identify mostly missed questions and review as a class together.\n* Review answers asynchronously and allow students to do corrections.\n* Place students in pairs to review answers and share areas that need extra review.\n\nIf you do not have time to review answers with students, create a data chart that includes assessment results. For students who did not meet the learning expectation, follow up so they have the opportunity to learn from errors made on the assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e1a8ae03-7b42-4245-9204-86bdd9e9dd28",
+        "lesson_activity.key": "6238a02c-a4a3-4475-baac-1c028a647bcf"
+      }
+    },
+    {
+      "key": "912db0e0-4985-4155-a8f2-c7aae982df8c",
+      "position": 1,
+      "properties": {
+        "description": "We have seen some examples of programs that use natural language processing techniques throughout the unit. Programs and devices often use natural language processing to interact with a user to answer questions, find information, or execute commands.",
+        "name": "Natural Language Processing",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "912db0e0-4985-4155-a8f2-c7aae982df8c",
+        "lesson_activity.key": "e0629635-6c9b-435f-98e3-803a7c1df58c"
+      }
+    },
+    {
+      "key": "bf20099f-7e22-40f5-be01-a43d8ca6ea22",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of programs and devices that use natural language processing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a program that uses natural language processing to analyze, manipulate, or generate text?*\n\n**Discussion Goal:** Students share ideas about programs they might make using natural language processing, such as chatbots, story generators, or social media analyzers.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Natural Language Processing Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bf20099f-7e22-40f5-be01-a43d8ca6ea22",
+        "lesson_activity.key": "e0629635-6c9b-435f-98e3-803a7c1df58c"
+      }
+    },
+    {
+      "key": "f19c404c-26b5-43f6-a772-713af39933db",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their visuals, create UML diagrams for their classes, and identify the algorithms they need to develop on the Natural Language Processing Project Planning Guide.",
+        "duration": "10",
+        "name": "Brainstorming and Planning"
+      },
+      "seeding_key": {
+        "activity_section.key": "f19c404c-26b5-43f6-a772-713af39933db",
+        "lesson_activity.key": "2498bbbb-d051-44a9-a238-c9f1e7a7a870"
+      }
+    },
+    {
+      "key": "ade8b948-4d36-4da3-ac36-715d3431b413",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Natural Language Processing Good Project.",
+        "duration": "20",
+        "name": "Development"
+      },
+      "seeding_key": {
+        "activity_section.key": "ade8b948-4d36-4da3-ac36-715d3431b413",
+        "lesson_activity.key": "2498bbbb-d051-44a9-a238-c9f1e7a7a870"
+      }
+    },
+    {
+      "key": "e470a260-dd95-4b3e-821b-972bb0f0dac2",
+      "position": 3,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e470a260-dd95-4b3e-821b-972bb0f0dac2",
+        "lesson_activity.key": "2498bbbb-d051-44a9-a238-c9f1e7a7a870"
+      }
+    },
+    {
+      "key": "3886ef06-591b-48c2-b50e-aff16579b337",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3886ef06-591b-48c2-b50e-aff16579b337",
+        "lesson_activity.key": "2498bbbb-d051-44a9-a238-c9f1e7a7a870"
+      }
+    },
+    {
+      "key": "41dec73e-5d6a-4f5c-a5f6-8702d6fcc754",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Natural Language Processing Project Planning Guide.",
+        "name": "End of Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "41dec73e-5d6a-4f5c-a5f6-8702d6fcc754",
+        "lesson_activity.key": "7effcb82-e330-49d5-b402-7bc41031e511"
+      }
+    },
+    {
+      "key": "af71aff3-1f4d-4903-b6f6-af985a99f380",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "af71aff3-1f4d-4903-b6f6-af985a99f380",
+        "lesson_activity.key": "7effcb82-e330-49d5-b402-7bc41031e511"
+      }
+    },
+    {
+      "key": "bb2493c2-8286-4f5f-b819-4777e1101ad9",
+      "position": 3,
+      "properties": {
+        "description": "**Natural Language Processing Project Planning Guide:** Use the rubric on the last page of the Natural Language Processing Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb2493c2-8286-4f5f-b819-4777e1101ad9",
+        "lesson_activity.key": "7effcb82-e330-49d5-b402-7bc41031e511"
+      }
+    }
   ],
   "script_levels": [
 
@@ -53,10 +1282,44 @@
 
   ],
   "resources": [
-
+    {
+      "name": "Unit 6 Assessment",
+      "url": "https://docs.google.com/presentation/d/1gXwHhjjCEruePrOefcFRc2DDBPrID4rbPV8YwR7Utls/edit?usp=share_link",
+      "key": "unit_6_assessment",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "unit_6_assessment"
+      }
+    },
+    {
+      "name": "Unlocking Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
+      "key": "unlocking_assessments",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unlocking_assessments"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "unit_6_assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "unlocking_assessments"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -74,7 +1337,66 @@
 
   ],
   "objectives": [
-
+    {
+      "key": "03e77061-49bb-4a67-9ec5-c0a4591de6cb",
+      "properties": {
+        "description": "Implement methods based on a given set of specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "03e77061-49bb-4a67-9ec5-c0a4591de6cb"
+      }
+    },
+    {
+      "key": "04e6432b-bd71-415b-99e5-5ca7572aa12c",
+      "properties": {
+        "description": "Plan an algorithm using pseudocode"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "04e6432b-bd71-415b-99e5-5ca7572aa12c"
+      }
+    },
+    {
+      "key": "413515c6-5f4b-483f-849a-d4029b96eaf3",
+      "properties": {
+        "description": "Develop a program that uses natural language processing techniques to analyze, manipulate, or generate text"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "413515c6-5f4b-483f-849a-d4029b96eaf3"
+      }
+    },
+    {
+      "key": "47ee6750-db36-4fe4-a304-d74a96dc15df",
+      "properties": {
+        "description": "Develop a program that uses natural language processing techniques to analyze, manipulate, or generate text"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "47ee6750-db36-4fe4-a304-d74a96dc15df"
+      }
+    },
+    {
+      "key": "93b2d4dc-963b-4af7-b2c6-b4067753a347",
+      "properties": {
+        "description": "Plan a project to meet specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "93b2d4dc-963b-4af7-b2c6-b4067753a347"
+      }
+    },
+    {
+      "key": "d3c0aa22-0a23-4429-8701-f7b8ad8c9c7e",
+      "properties": {
+        "description": "Plan a project to meet specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "d3c0aa22-0a23-4429-8701-f7b8ad8c9c7e"
+      }
+    }
   ],
   "lessons_standards": [
 

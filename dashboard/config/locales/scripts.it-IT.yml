@@ -4034,6 +4034,18 @@ it:
               display_name: Contenuto
             lessonGroup-4:
               display_name: Lezioni alternative
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-4:
+              display_name: Lezioni alternative
         hello-world-space-2022:
           title: Ciao mondo - Spazio
         hello-world-soccer-2022:
@@ -4041,16 +4053,15 @@ it:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: Capitolo 1
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             lessonGroup-3:
-              display_name: Capitolo 2
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: Design a cura dell''Utente'
             lessonGroup-3:
               display_name: 'Capitolo 2: Prototipazione di App'
-          title: Il Processo di Progettazione
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4065,16 +4076,16 @@ it:
               display_name: 'Capitolo 2: Costruzione di Giochi'
         csd6-2023:
           lesson_groups:
-            lessonGroup-2:
-              display_name: Capitolo 1
             lessonGroup-3:
-              display_name: Capitolo 2
+              display_name: 'Capitolo 2: Input Hardware'
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Capitolo 1
             lessonGroup-3:
               display_name: Capitolo 2
+            lessonGroup-4:
+              display_name: Introduzione a Sviluppo App
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -4170,3 +4181,244 @@ it:
               display_name: Introduzione a Sviluppo App
             lessonGroup-3:
               display_name: Ingressi e uscite
+        drafting:
+          name: drafting
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolo 1
+            lessonGroup-3:
+              display_name: Capitolo 2
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolo 1
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenze di istruzioni
+            csf_loops:
+              display_name: Cicli
+            csf_events:
+              display_name: Eventi
+          description: Impara l'informatica esercitandoti con le seguenti lezioni
+            al ritmo che ti è più congeniale! Impara a creare programmi per computer,
+            a sviluppare capacità di risoluzione dei problemi e ad affrontare sfide
+            divertenti! Crea giochi e progetti creativi da condividere con amici,
+            familiari e insegnanti.
+          student_description: Impara l'informatica esercitandoti con le seguenti
+            lezioni al ritmo che ti è più congeniale! Impara a creare programmi per
+            computer, a sviluppare capacità di risoluzione dei problemi e ad affrontare
+            sfide divertenti! Crea giochi e progetti creativi da condividere con amici,
+            familiari e insegnanti.
+          description_short: 'Introduzione all''informatica per studenti pre-scolari:
+            mette insieme il meglio dei nostri corsi per la scuola dell''infanzia
+            e per la prima classe della scuola primaria.'
+          description_audience: Da 4 a 8 anni
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenze di istruzioni
+            csf_sprites:
+              display_name: Personaggi
+            lessonGroup-9:
+              display_name: Eventi
+            csf_loops:
+              display_name: Cicli
+            csf_conditionals:
+              display_name: Istruzioni condizionali
+            csf_functions:
+              display_name: Funzioni
+            csf_variables:
+              display_name: Variabili
+            csf_for_loops:
+              display_name: Cicli con contatore
+            end_of_course_project:
+              display_name: Progetto di fine corso
+          title: Corso Rapido (2022)
+          description: Impara l'informatica esercitandoti con le seguenti lezioni
+            al ritmo che ti è più congeniale! Impara a creare programmi per computer,
+            a sviluppare capacità di risoluzione dei problemi e ad affrontare sfide
+            divertenti! Crea giochi e progetti creativi da condividere con amici,
+            familiari e insegnanti.
+          student_description: Impara l'informatica esercitandoti con le seguenti
+            lezioni al ritmo che ti è più congeniale! Impara a creare programmi per
+            computer, a sviluppare capacità di risoluzione dei problemi e ad affrontare
+            sfide divertenti! Crea giochi e progetti creativi da condividere con amici,
+            familiari e insegnanti.
+          description_short: 'Introduzione all''informatica: mette a disposizione
+            di studenti più grandi, il meglio del nostro curriculum per la scuola
+            primaria.'
+          description_audience: Da 9 a 18 anni
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_sequencing:
+              display_name: Sequenze di istruzioni
+            csf_loops:
+              display_name: Cicli
+            csf_events:
+              display_name: Eventi
+            lessonGroup-5:
+              display_name: Progetto di fine corso
+          title: Corso A (2022)
+          description: 'Il corso A offre un piano di studi di informatica per i bambini
+            che hanno appena iniziato a leggere, inclusi gli alunni della scuola dell''infanzia.
+            Gli alunni impareranno a programmare usando istruzioni come cicli ed eventi.
+            Le lezioni presentate in questo corso insegnano anche agli alunni a collaborare
+            in modo proficuo con gli altri, indagare su diverse tecniche di risoluzione
+            dei problemi, perseverare di fronte a compiti impegnativi e conoscere
+            le questioni di sicurezza legate a Internet. '
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
+          description_short: Introduzione all'informatica per bambini che non leggono
+            ancora.
+          description_audience: 'Età: da 4 a 7 anni'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_sequencing:
+              display_name: Sequenze di istruzioni
+            csf_loops:
+              display_name: Cicli
+            csf_impacts:
+              display_name: Impatti dell'informatica
+            csf_events:
+              display_name: Eventi
+            lessonGroup-6:
+              display_name: Progetto di fine corso
+          title: Corso B (2022)
+          description: Il Corso B è stato sviluppato pensando ad alunni della 1° classe
+            della scuola primaria. Il Corso B è sostanzialmente allineato con il Corso
+            A, ma offre lezioni tradizionali più complesse e una maggiore varietà
+            di esercizi. Gli alunni imparano le basi della programmazione, tecniche
+            di collaborazione, indagine e pensiero critico, perseveranza di fronte
+            alle difficoltà e le basi della sicurezza su Internet. Alla fine del corso
+            gli alunni possono condividere con un link il proprio gioco personalizzato
+            creato nell'ambiente del Laboratorio.
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
+          description_short: Introduzione all'informatica per alunni che devono imparare
+            a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
+          description_audience: Da 5 a 8 anni
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_sequencing:
+              display_name: Sequenze di istruzioni
+            csf_loops:
+              display_name: Cicli
+            csf_events:
+              display_name: Eventi
+            csf_data:
+              display_name: Dati
+            end_of_course_project:
+              display_name: Progetto di fine corso
+          title: Corso C (2022)
+          description: Abbiamo realizzato il Corso C per gli alunni della seconda
+            primaria. Gli alunni creano programmi con sequenze di istruzioni, cicli
+            ed eventi. Indagano tecniche di risoluzione dei problemi e sviluppano
+            strategie per collaborare positivamente sia online che offline. Entro
+            la fine del corso, gli alunni creano giochi interattivi da condividere
+            con amici e conoscenti.
+          student_description: 'Crea programmi con sequenze di istruzioni, cicli ed
+            eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche
+            di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo.
+            Alla fine del corso, puoi creare e condividere un gioco interattivo o
+            una storia animata! ATTENZIONE: qui a destra scegli la versione 2018,
+            è la più aggiornata in italiano ==>'
+          description_short: Impara le basi dell'informatica e crea disegni, storie
+            animate o giochi interattivi.
+          description_audience: Da 6 a 10 anni
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Cittadinanza digitale
+            csf_sequencing:
+              display_name: Sequenze di istruzioni
+            csf_events:
+              display_name: Eventi
+            csf_loops:
+              display_name: Cicli
+            csf_conditionals:
+              display_name: Istruzioni condizionali
+            end_of_course_project:
+              display_name: Progetto di fine corso
+          title: Corso D (2022)
+          description: 'Abbiamo creato il corso D per gli alunni della terza primaria.
+            Il corso inizia con una rassegna dei concetti trovati nei corsi precedenti,
+            inclusi cicli ed eventi. In seguito, gli alunni sviluppano la loro comprensione
+            di algoritmi, cicli annidati, cicli, istruzioni condizionali e altro ancora. '
+          student_description: Impara di più sui cicli, le istruzioni condizionali
+            e gli eventi. Oltre alla programmazione, scopri la cittadinanza digitale.
+          description_audience: Da 7 a 11 anni
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_sprites:
+              display_name: Personaggi
+            ramp_up:
+              display_name: Cicli annidati
+            csf_functions:
+              display_name: Funzioni
+            csf_nested_loops:
+              display_name: Istruzioni condizionali
+            lessonGroup-7:
+              display_name: Impatti dell'informatica
+            end_of_course_project:
+              display_name: Progetto di fine corso
+          title: Corso E (2022)
+          description: Abbiamo creato il Corso E per gli alunni della quarta primaria.
+            Il corso inizia con un'introduzione allo ambiente di programmazione denominato
+            Laboratorio dei personaggi. Gli alunni imparano a realizzare divertenti
+            progetti interattivi che consolidano ciò che hanno imparato sulla sicurezza
+            online. Dopo queste lezioni, gli alunni si impegnano in una programmazione
+            più complessa. Gli alunni imparano i cicli annidati, le funzioni e le
+            istruzioni condizionali. Entro la fine del corso, gli alunni uniscono
+            questi concetti per risolvere esercizi impegnativi. Il corso si conclude
+            con un progetto senza limiti di tempo in cui gli alunni creano un gioco
+            o un disegno.
+          student_description: Inizia a programmare con algoritmi, eventi, cicli,
+            istruzioni condizionali e funzioni! Alla fine di questo corso, progetta
+            e crea un gioco o un disegno da condividere con amici e parenti.
+          description_audience: Da 8 a 12 anni
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Immagini e animazioni'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Costruzione di Giochi'
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Design a cura dell''Utente'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Prototipazione di App'
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduzione a Sviluppo App
+            lessonGroup-3:
+              display_name: Capitolo 1
+            lessonGroup-4:
+              display_name: Capitolo 2

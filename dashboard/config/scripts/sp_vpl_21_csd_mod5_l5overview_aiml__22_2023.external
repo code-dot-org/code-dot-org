@@ -3,15 +3,42 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 5: Classification Models 
+# Getting Ready 
 
-## Lesson 5 Overview
+## Suggested Planning Activities
 
-##### **Question of the Day:** How do computers learn to classify data?
+<img src="https://images.code.org/a602561da92e97ab5bc1fe1f35cffd16-image-1679955031729.png" style="float: right; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
-##### **Lesson Overview:** In this lesson students will participate in an unplugged activity simulating one of the machine learning algorithms computers use to separate data into groups to help make decisions. Students will be tasked with helping a computer learn to classify food as fruits or vegetables, graph 20 different fruits on two axes comparing "sweetness" to "easy to eat", and then try to separate the data into groups - a fruit area, and a veggie area.
+##### **Pick a module to add to your scope and sequence** 
+When does the module best fit into what you are already teaching?
 
-##### **Students will be able to:** Explain how computers can separate data to make a decision
+##### **Consider co-teaching** 
+What colleagues (e.g. librarian, technology specialist, general education) may want to teach lessons with you?
+
+##### **Make modifications or accomodations**
+How will you adapt the lessons to best meet your students' needs?
+
+
+
+
+## Suggested Preparing Activities
+
+##### **Preview lessons**
+What CS concepts or skills might be challenging for your students?  
+
+When will students need support debugging?
+
+##### **Develop a general lesson flow**
+When will teacher-led learning happen as a whole group?  
+
+When will student-led learning happen for individual students or pairs?
+
+##### **Keep the end in mind**
+What final project are students working towards?  
+
+How will students showcase and share their final projects?
+
+
 
 <hr style="clear:both">
 
@@ -57,10 +84,4 @@ Seneca Hart, CS Discoveries Teacher
 </div>
 
 <div style="clear:both"/>
-
-![]()
-
-![]()
-
-![]()
 MARKDOWN

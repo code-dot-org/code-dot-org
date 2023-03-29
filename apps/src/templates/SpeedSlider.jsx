@@ -5,12 +5,12 @@ import dom from '../dom';
 
 const style = {
   sliderTrack: {
-    stroke: color.lightest_purple,
+    stroke: color.neutral_white,
     strokeWidth: 4,
     strokeLinecap: 'round'
   },
   sliderKnob: {
-    fill: color.blockly_flyout_gray,
+    fill: color.neutral_white,
     stroke: '#bbc',
     strokeWidth: 1,
     strokeLinejoin: 'round',
@@ -160,11 +160,7 @@ class SpeedSlider extends React.Component {
           </clipPath>
           {/* turtle image */}
           <image
-            xlinkHref={
-              props.hasFocus
-                ? sliderImages.lightTurtle
-                : sliderImages.darkTurtle
-            }
+            xlinkHref={sliderImages.lightTurtle}
             height={12}
             width={22}
             x={2}
@@ -176,11 +172,7 @@ class SpeedSlider extends React.Component {
           </clipPath>
           {/* rabbit image */}
           <image
-            xlinkHref={
-              props.hasFocus
-                ? sliderImages.lightRabbit
-                : sliderImages.darkRabbit
-            }
+            xlinkHref={sliderImages.lightRabbit}
             height={15}
             width={23}
             x={knobXMax - 18}

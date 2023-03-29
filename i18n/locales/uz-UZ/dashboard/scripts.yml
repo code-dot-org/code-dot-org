@@ -3578,31 +3578,57 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
         hello-world-space-2022:
           title: 'Salom Dunyo: Kosmik'
         hello-world-soccer-2022:
           title: 'Salom Dunyo: Futbol'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Computers and Problem Solving'
+        csd2-2023:
+          student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek, siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: User Centered Design'
             lessonGroup-3:
               display_name: 'Chapter 2: App Prototyping'
-          title: The Design Process
+          student_description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: Representing Information'
             lessonGroup-3:
               display_name: 'Chapter 2: Solving Data Problems'
+          description_short: Learn how people use computers to solve data problems.
+          student_description: 5-bo‘lim ma'lumotlarning muammolarni hal qilishdagi ahamiyati haqida va bu jarayonda kompyuterlarning qanday yordam berishini ko‘rsatib beradi. Birinchi bobda kompyuterda ma'lumotlarni aks ettirish uchun foydalaniladigan turli xil tizimlar va ulardan foydalanish natijasida yuzaga keladigan qiyinchiliklar va almashinuvlar ko‘rib chiqilgan. Ikkinchi bobda siz ma'lumotlar to‘plamlari muammolarni hal qilishda qanday foydalanilishini va kompyuterlar ushbu jarayonning bosqichlarini avtomatlashtirishda qanday yordam berishini bilib olasiz. Ma'lumotlar muammosini hal qilish jarayonini siz tanlagan sohaga qanday tatbiq etish mumkinligini ko‘rib chiqish bilan bob yakunlanadi.
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: Images and Animations'
             lessonGroup-3:
               display_name: 'Chapter 2: Building Games'
+          student_description: Unit 3 bo'limida siz Game Labda animatsiyalar, interaktiv san'at va o‘yinlarni dasturlashtirasiz. Oddiy shakllardan boshlang va kompyuter olimlari har kuni foydalanadigan dizayn dasturlari bilan bir xil dasturiy tushunchalardan foydalanib, spraytga asoslangan yanada murakkab animatsiyalar va o‘yinlarni yarating. Yakuniy loyihada siz shaxsiylashtirilgan, interaktiv dasturni ishlab chiqasiz.
         csd6-2023:
-          title: Jismoniy hisoblash
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+          description_short: Learn to program with physical devices.
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Intro to App Lab
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -3687,3 +3713,155 @@ uz:
               display_name: Intro to App Lab
             lessonGroup-3:
               display_name: Inputs and Outputs
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Sikllar
+            csf_events:
+              display_name: Hodisalar
+          description: Quyidagi darslarni bor g‘ayratingiz bilan uringan holda kompyuter fanini o‘rganing! Kompyuter dasturlarini yaratishni, muammolarni hal qilish ko‘nikmalarini rivojlantirishni va qiziqarli muammolarni hal qilishni o‘rganing! Do‘stlaringiz, oilangiz va o‘qituvchilaringiz bilan ulashish uchun o‘yinlar va ijodiy loyihalar qiling.
+          student_description: Quyidagi darslarni bor g‘ayratingiz bilan uringan holda kompyuter fanini o‘rganing! Kompyuter dasturlarini yaratishni, muammolarni hal qilish ko‘nikmalarini rivojlantirishni va qiziqarli muammolarni hal qilishni o‘rganing! Do‘stlaringiz, oilangiz va o‘qituvchilaringiz bilan ulashish uchun o‘yinlar va ijodiy loyihalar qiling.
+          description_short: 'Kichik yoshdagi o''quvchilar uchun informatika faniga kirish: bolalar bog''chasi va birinchi sinf uchun o''quv kurslarimizning eng saralarini birlashtiradi.'
+          description_audience: 'Yosh: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_sprites:
+              display_name: Spraytlar
+            lessonGroup-9:
+              display_name: Hodisalar
+            csf_loops:
+              display_name: Sikllar
+            csf_conditionals:
+              display_name: Shartli bayonotlar
+            csf_functions:
+              display_name: Funksiyalar
+            csf_variables:
+              display_name: O‘zgaruvchilar
+            csf_for_loops:
+              display_name: For sikllari
+            end_of_course_project:
+              display_name: End of Course Project
+          title: Ekspress Kurs (2020)
+          description: Quyidagi darslarni bor g‘ayratingiz bilan uringan holda kompyuter fanini o‘rganing! Kompyuter dasturlarini yaratishni, muammolarni hal qilish ko‘nikmalarini rivojlantirishni va qiziqarli muammolarni hal qilishni o‘rganing! Do‘stlaringiz, oilangiz va o‘qituvchilaringiz bilan ulashish uchun o‘yinlar va ijodiy loyihalar qiling.
+          student_description: Quyidagi darslarni bor g‘ayratingiz bilan uringan holda kompyuter fanini o‘rganing! Kompyuter dasturlarini yaratishni, muammolarni hal qilish ko‘nikmalarini rivojlantirishni va qiziqarli muammolarni hal qilishni o‘rganing! Do‘stlaringiz, oilangiz va o‘qituvchilaringiz bilan ulashish uchun o‘yinlar va ijodiy loyihalar qiling.
+          description_short: 'Kompyuter fanlariga kirish: boshlang''ich o''quv dasturlarining eng saralarini birlashtiradi.'
+          description_audience: 'Yosh: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Raqamli Fuqarolik
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Sikllar
+            csf_events:
+              display_name: Hodisalar
+            lessonGroup-5:
+              display_name: End of Course Project
+          student_description: Kompyuter fanlari va Internet xavfsizligi asoslarini o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni yarating.
+          description_short: Maktabgacha yoshdagilarni kompyuter fanlari bilan tanishtirish
+          description_audience: 'Yosh: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Raqamli Fuqarolik
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Sikllar
+            csf_impacts:
+              display_name: Kompyuterlar ta'siri
+            csf_events:
+              display_name: Hodisalar
+            lessonGroup-6:
+              display_name: End of Course Project
+          student_description: Kompyuter fanlari va Internet xavfsizligi asoslarini o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni yarating.
+          description_short: Maktabgacha yoshdagi o‘quvchilar uchun kompyuter fanlariga kirish. (A kursiga o‘xshash, ammo tushunchalar chuqurroq o‘rganilgan).
+          description_audience: 'Yosh: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Raqamli Fuqarolik
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Sikllar
+            csf_events:
+              display_name: Hodisalar
+            end_of_course_project:
+              display_name: End of Course Project
+          student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          description_short: Informatika asoslarini o‘rganing va o‘z san'at asari, hikoya va o‘yinlaringizni yarating.
+          description_audience: 'Yosh: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Raqamli Fuqarolik
+            csf_sequencing:
+              display_name: Sequencing
+            csf_events:
+              display_name: Hodisalar
+            csf_loops:
+              display_name: Sikllar
+            csf_conditionals:
+              display_name: Shartli bayonotlar
+            end_of_course_project:
+              display_name: End of Course Project
+          title: Kurs D (2021)
+          description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
+          description_audience: 'Yosh: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Raqamli Fuqarolik
+            csf_sprites:
+              display_name: Spraytlar
+            ramp_up:
+              display_name: Ichma-ich sikllar
+            csf_functions:
+              display_name: Funksiyalar
+            csf_nested_loops:
+              display_name: Shartli bayonotlar
+            lessonGroup-7:
+              display_name: Kompyuterlar ta'siri
+            end_of_course_project:
+              display_name: End of Course Project
+          description_audience: 'Yosh: 8-12'
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Computers and Problem Solving'
+        web-development-2023:
+          student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek, siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Images and Animations'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Building Games'
+          student_description: Unit 3 bo'limida siz Game Labda animatsiyalar, interaktiv san'at va o‘yinlarni dasturlashtirasiz. Oddiy shakllardan boshlang va kompyuter olimlari har kuni foydalanadigan dizayn dasturlari bilan bir xil dasturiy tushunchalardan foydalanib, spraytga asoslangan yanada murakkab animatsiyalar va o‘yinlarni yarating. Yakuniy loyihada siz shaxsiylashtirilgan, interaktiv dasturni ishlab chiqasiz.
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: User Centered Design'
+            lessonGroup-3:
+              display_name: 'Chapter 2: App Prototyping'
+          student_description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Representing Information'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Solving Data Problems'
+          description_short: Learn how people use computers to solve data problems.
+          student_description: 5-bo‘lim ma'lumotlarning muammolarni hal qilishdagi ahamiyati haqida va bu jarayonda kompyuterlarning qanday yordam berishini ko‘rsatib beradi. Birinchi bobda kompyuterda ma'lumotlarni aks ettirish uchun foydalaniladigan turli xil tizimlar va ulardan foydalanish natijasida yuzaga keladigan qiyinchiliklar va almashinuvlar ko‘rib chiqilgan. Ikkinchi bobda siz ma'lumotlar to‘plamlari muammolarni hal qilishda qanday foydalanilishini va kompyuterlar ushbu jarayonning bosqichlarini avtomatlashtirishda qanday yordam berishini bilib olasiz. Ma'lumotlar muammosini hal qilish jarayonini siz tanlagan sohaga qanday tatbiq etish mumkinligini ko‘rib chiqish bilan bob yakunlanadi.
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Intro to App Lab

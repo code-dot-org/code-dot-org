@@ -1527,7 +1527,6 @@
   app_lab_tutorials: "Uygulama Laboratuvar Eğitimleri"
   game_lab_documentation: "Oyun Laboratuvar Belgelendirmesi"
   game_lab_tutorials: "Oyun Laboratuvar Eğitimi"
-  sprite_lab_documentation: "Peri Laboratuvar Belgelendirmesi"
   sprite_lab_tutorials: "Peri Laboratuvar Eğitimi"
   header_documentation: "Belgeler"
   user_header_label: "Merhaba %{username}"

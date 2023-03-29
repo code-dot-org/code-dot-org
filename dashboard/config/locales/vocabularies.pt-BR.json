@@ -36,7 +36,7 @@
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/hero/unversioned": {
-          "word": "Analisando",
+          "word": "Depuração",
           "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "function/hero/unversioned": {
@@ -147,6 +147,7 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "code/aquatic/unversioned": {
+          "word": "Código",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "condition/aquatic/unversioned": {
@@ -162,8 +163,8 @@
           "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "loops/aquatic/unversioned": {
-          "word": "laços",
-          "definition": "Ação de fazer algo repetidas vezes."
+          "word": "Laços",
+          "definition": "A ação de repetir algo."
         },
         "program/aquatic/unversioned": {
           "word": "Programa",

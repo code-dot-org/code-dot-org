@@ -216,9 +216,10 @@ class PeerReview < ApplicationRecord
 
   def self.get_potential_reviews(script, user)
     where(
-      script: script,
+      script: script
     ).where.not(
-      submitter: user,
+      submitter: user
+    ).where.not(
       level_source_id: PeerReview.where(reviewer: user, script: script).pluck(:level_source_id)
     )
   end
@@ -300,9 +301,7 @@ class PeerReview < ApplicationRecord
     classes.join(' ')
   end
 
-  private
-
-  def append_audit_trail(message)
+  private def append_audit_trail(message)
     self.audit_trail = (audit_trail || '') + "#{message} at #{Time.zone.now}\n"
   end
 end

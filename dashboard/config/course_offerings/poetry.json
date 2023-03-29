@@ -6,10 +6,10 @@
   "assignable": true,
   "curriculum_type": "Module",
   "marketing_initiative": "CSC",
-  "grade_levels": "3,4,5",
+  "grade_levels": "3,4,5,6,7,8",
   "header": "CS Connections",
-  "image": null,
-  "cs_topic": null,
-  "school_subject": null,
-  "device_compatibility": null
+  "image": "https://images.code.org/803a9b24caf309116f8f9652d9a3e135-Coding with Poetry.png",
+  "cs_topic": "art_and_design,games_and_animations,programming",
+  "school_subject": "english_language_arts",
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
 }

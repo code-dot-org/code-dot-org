@@ -47,7 +47,7 @@
     = "#{@organizer.name} at "
     = mail_to @organizer.email, "#{@organizer.email}."
 
--if [Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course
+-if Pd::Workshop::COURSE_ADMIN_COUNSELOR == @workshop.course
   = render partial: 'teacher_enrollment_details_counselor'
 -elsif Pd::Workshop::COURSE_FACILITATOR == @workshop.course
   = render partial: 'teacher_enrollment_details_facilitator'

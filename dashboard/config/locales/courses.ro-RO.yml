@@ -119,3 +119,46 @@ ro:
             în CS) este un curs introductiv care le permite elevilor să creeze artefacte
             autentice și să-i antreneze în știința calculatoarelor la un nivel mediu
             de creativitate, comunicare, rezolvare a problemelor și amuzament.
+        csd-pilot:
+          description_student: Descoperiri în știința calculatoarelor (Descoperiri
+            în CS) este un curs introductiv care le permite elevilor să creeze artefacte
+            autentice și să-i antreneze în știința calculatoarelor la un nivel mediu
+            de creativitate, comunicare, rezolvare a problemelor și amuzament.
+        csp-2020:
+          description_short: Învățați concepte fundamentale ale științei calculatoarelor.
+        csd-2020:
+          description_short: Un curs introductiv în știința calculatoarelor care permite
+            elevilor să creeze artefacte autentice.
+          description_student: Descoperiri în știința calculatoarelor (Descoperiri
+            în CS) este un curs introductiv care le permite elevilor să creeze artefacte
+            autentice și să-i antreneze în știința calculatoarelor la un nivel mediu
+            de creativitate, comunicare, rezolvare a problemelor și amuzament.
+          description_teacher: Descoperiri în știința calculatoarelor (Descoperiri
+            în CS) este un curs introductiv care le permite elevilor să creeze artefacte
+            autentice și să-i antreneze în știința calculatoarelor la un nivel mediu
+            de creativitate, comunicare, rezolvare a problemelor și amuzament.
+        csp-2021:
+          description_short: Învățați concepte fundamentale ale științei calculatoarelor.
+        mike-test:
+          title: Fundamentele informaticii
+        csp-2022:
+          description_short: Învățați concepte fundamentale ale științei calculatoarelor.
+        csp-2023:
+          description_short: Învățați concepte fundamentale ale științei calculatoarelor.
+    resources:
+      curriculum/csd/2020:
+        name: Curriculum
+      teacher_forum/csd/2020:
+        name: Forum profesori
+      curriculum/csd/2017:
+        name: Curriculum
+      teacher_forum_6/csd/2017:
+        name: Forum profesori
+      curriculum/csd/2019:
+        name: Curriculum
+      teacher_forum/csd/2019:
+        name: Forum profesori
+      curriculum/csd/2018:
+        name: Curriculum
+      teacher_forum_6/csd/2018:
+        name: Forum profesori

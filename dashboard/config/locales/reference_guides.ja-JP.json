@@ -71,6 +71,12 @@
         "csd-2022/playing-notes": {
           "display_name": "音符で遊ぶ"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "The Problem Solving Process"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "The Problem Solving Process"
+        },
         "csd-2022/responding-to-user-input": {
           "display_name": "ユーザー情報に返答"
         },

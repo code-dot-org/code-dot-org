@@ -1470,6 +1470,14 @@ si:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
         csp1-2023:
           lesson_groups:
             csp_unit1_2020:
@@ -1502,3 +1510,69 @@ si:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_functions:
+              display_name: ශ්‍රිතයන්
+            csf_variables:
+              display_name: විචල්‍යන්
+            csf_for_loops:
+              display_name: ලූපයන් සඳහා
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_data:
+              display_name: දත්ත
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            ramp_up:
+              display_name: නැවත නැවත සිදුවන ලුප
+            csf_functions:
+              display_name: ශ්‍රිතයන්
+            csf_nested_loops:
+              display_name: කන්ඩිෂනලස්

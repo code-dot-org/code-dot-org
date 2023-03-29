@@ -8,8 +8,8 @@ import {getStore} from '@cdo/apps/redux';
 export default class DialogButtons extends Component {
   static propTypes = {
     assetUrl: PropTypes.func,
-    cancelButtonClass: PropTypes.string,
     cancelText: PropTypes.string,
+    isDangerCancel: PropTypes.bool,
     confirmText: PropTypes.string,
     continueText: PropTypes.string,
     freePlay: PropTypes.bool,
@@ -21,6 +21,8 @@ export default class DialogButtons extends Component {
   };
 
   render() {
+    const {isDangerCancel, cancelText} = this.props;
+
     let okButton,
       cancelButton,
       confirmButton,
@@ -40,14 +42,13 @@ export default class DialogButtons extends Component {
       );
     }
 
-    if (this.props.cancelText) {
+    if (cancelText) {
       cancelButton = (
         <LegacyButton
-          type="cancel"
+          type={isDangerCancel ? 'danger' : 'cancel'}
           id="again-button"
-          className={this.props.cancelButtonClass || ''}
         >
-          {this.props.cancelText}
+          {cancelText}
         </LegacyButton>
       );
     }

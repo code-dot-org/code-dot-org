@@ -12,17 +12,15 @@ class PairingsController < ApplicationController
     render json: {pairings: pairings_summary, sections: sections_summary}
   end
 
-  private
-
   # Serialization helpers
 
-  def pairings_summary
+  private def pairings_summary
     pairings.map do |user|
       {id: user.id, name: user.name}
     end
   end
 
-  def sections_summary
+  private def sections_summary
     pairing_sections = current_user.sections_as_student.select(&:pairing_allowed)
     pairing_sections.map do |section|
       {

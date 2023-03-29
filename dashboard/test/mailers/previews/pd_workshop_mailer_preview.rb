@@ -1,6 +1,6 @@
 # This can be viewed on non-production environments at /rails/mailers/pd_workshop_mailer
 class PdWorkshopMailerPreview < ActionMailer::Preview
-  include FactoryGirl::Syntax::Methods
+  include FactoryBot::Syntax::Methods
 
   DEFAULT_COURSE = Pd::Workshop::COURSE_ECS
   DEFAULT_SUBJECT = Pd::Workshop::SUBJECT_ECS_PHASE_2

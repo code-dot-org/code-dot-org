@@ -2705,6 +2705,14 @@ cs:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
         hello-world-space-2022:
           title: 'Hello World: Prostora'
         hello-world-soccer-2022:
@@ -2712,15 +2720,13 @@ cs:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: Kapitola 1
+              display_name: 'Kapitola 1: Proces řešení problémů'
             lessonGroup-3:
-              display_name: Kapitola 2
-          title: Řešení problémů
+              display_name: 'Kapitola 2: Počítače a řešení problémů'
         csd4-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Kapitola 2: Prototypování aplikací'
-          title: Proces návrhu
         csd5-2023:
           lesson_groups:
             lessonGroup-3:
@@ -2733,16 +2739,16 @@ cs:
               display_name: 'Kapitola 2: Tvorba her'
         csd6-2023:
           lesson_groups:
-            lessonGroup-2:
-              display_name: Kapitola 1
             lessonGroup-3:
-              display_name: Kapitola 2
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Kapitola 1
             lessonGroup-3:
               display_name: Kapitola 2
+            lessonGroup-4:
+              display_name: Úvod do App Lab
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -2804,3 +2810,163 @@ cs:
           lesson_groups:
             lessonGroup-2:
               display_name: Úvod do App Lab
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+          title: Řešení problémů
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+          title: Řešení problémů
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Události
+          description: Učte se počítačovou vědu tak, že vyzkoušíte níže uvedené lekce vlastním tempem! Učte se vytvářet počítačové programy, rozvíjet schopnosti řešení problémů a pracovat na zábavných výzvách! Dělejte hry a kreativní projekty ke sdílení s přáteli, rodinou a učiteli.
+          student_description: Učte se počítačovou vědu tak, že vyzkoušíte níže uvedené lekce vlastním tempem! Učte se vytvářet počítačové programy, rozvíjet schopnosti řešení problémů a pracovat na zábavných výzvách! Dělejte hry a kreativní projekty ke sdílení s přáteli, rodinou a učiteli.
+          description_short: 'Úvod do počítačové vědy pro předškoláky: kombinuje naše nejlepší kurzy pro mateřskou školu a pro první třídu.'
+          description_audience: 'Věk: 4-8 let'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvence
+            csf_sprites:
+              display_name: Postavy
+            lessonGroup-9:
+              display_name: Události
+            csf_loops:
+              display_name: Cykly
+            csf_conditionals:
+              display_name: Podmínky
+            csf_functions:
+              display_name: Funkce
+            csf_variables:
+              display_name: Proměnné
+            csf_for_loops:
+              display_name: Cykly "For"
+            end_of_course_project:
+              display_name: Projekt na zakončení kurzu
+          title: Rychlý kurz (2021)
+          description: Učte se počítačovou vědu tak, že vyzkoušíte níže uvedené lekce vlastním tempem! Učte se vytvářet počítačové programy, rozvíjet schopnosti řešení problémů a pracovat na zábavných výzvách! Dělejte hry a kreativní projekty ke sdílení s přáteli, rodinou a učiteli.
+          student_description: Učte se počítačovou vědu tak, že vyzkoušíte níže uvedené lekce vlastním tempem! Učte se vytvářet počítačové programy, rozvíjet schopnosti řešení problémů a pracovat na zábavných výzvách! Dělejte hry a kreativní projekty ke sdílení s přáteli, rodinou a učiteli.
+          description_short: 'Úvod do počítačové vědy: kombinuje to nejlepší z našich osnov pro starší ročníky základní školy.'
+          description_audience: 'Věk: 9-18 let'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Události
+            lessonGroup-5:
+              display_name: Projekt na zakončení kurzu
+          student_description: Učte se základy počítačových věd a internetové bezpečnosti. Na konci tohoto kurzu vytvoříte svou vlastní hru nebo příběh, které budete moci sdílet.
+          description_short: Úvod do počítačové vědy pro ty, kdo ještě neumí číst.
+          description_audience: 'Věk: 4-7 let'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_impacts:
+              display_name: Dopady počítačů
+            csf_events:
+              display_name: Události
+            lessonGroup-6:
+              display_name: Projekt na zakončení kurzu
+          student_description: Učte se základy počítačových věd a internetové bezpečnosti. Na konci tohoto kurzu vytvoříte svou vlastní hru nebo příběh, které budete moci sdílet.
+          description_short: Úvod do počítačové vědy pro ty, kdo ještě neumí číst. Obdoba kurzu A, ale s větší hloubkou probíraných koncepcí.
+          description_audience: 'Věk: 5-8 let'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Události
+            csf_data:
+              display_name: Data
+            end_of_course_project:
+              display_name: Projekt na zakončení kurzu
+          student_description: Vytvářejte programy s posloupnostmi, cykly a událostmi. Převeďte své iniciály na binární kód, vyšetřete různé techniky řešení problémů a učte se reagovat na kybernetickou šikanu. Na konci tohoto kurzu vytvoříte svou vlastní hru nebo příběh, které budete moci sdílet!
+          description_short: Naučte se základy počítačové vědy a tvořte své vlastní umění, příběhy a hry.
+          description_audience: 'Věk: 6-10 let'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitální občanství
+            csf_sequencing:
+              display_name: Sekvence
+            csf_events:
+              display_name: Události
+            csf_loops:
+              display_name: Cykly
+            csf_conditionals:
+              display_name: Podmínky
+            end_of_course_project:
+              display_name: Projekt na zakončení kurzu
+          title: Kurz D (2021)
+          description_short: Naučte se něco o podmíněných příkazech. Vytvořte své vlastní umění, hry a dokonce i taneční večírek.
+          description_audience: 'Věk: 7-11 let'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_sprites:
+              display_name: Postavy
+            ramp_up:
+              display_name: Vnořené cykly
+            csf_functions:
+              display_name: Funkce
+            csf_nested_loops:
+              display_name: Podmínky
+            lessonGroup-7:
+              display_name: Dopady počítačů
+            end_of_course_project:
+              display_name: Projekt na zakončení kurzu
+          description_audience: 'Věk: 8-12 let'
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Počítače a řešení problémů'
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Obrázky a animace'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Tvorba her'
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Prototypování aplikací'
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Řešení datových problémů'
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Úvod do App Lab
+            lessonGroup-3:
+              display_name: Kapitola 1
+            lessonGroup-4:
+              display_name: Kapitola 2

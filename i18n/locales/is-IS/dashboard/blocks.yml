@@ -1462,6 +1462,8 @@ is:
         text: x hnit {SPRITE}
       gamelab_yLocationOf:
         text: y hnit {SPRITE}
+      KatiesBlocks_tumbling:
+        text: veltist
       Mikelab_addBehaviorSimple:
         text: vera {SPRITE} byrjar {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1876,8 +1878,6 @@ is:
         text: snúa til vinstri
       RyanLab_turnRight:
         text: snúa til hægri
-      SpriteLab2Beta_spriteSay:
-        text: vera {SPRITE} segir {TEXT} í {SECONDS} sekúndur
       Vector_createSpriteWith:
         text: |-
           búa til veru
@@ -2076,5 +2076,3 @@ is:
             '"hearts"': hjörtu
             '"rain"': regn
             '"starburst"': Stjörnublossi
-      validation_validatedBackground:
-        text: stilla bakgrunn á {IMG}

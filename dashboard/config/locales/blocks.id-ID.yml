@@ -2,6 +2,8 @@
 id:
   data:
     blocks:
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: mengonfirmasi pengguna {QUESTION} untuk variabel {VAR} dengan pilihan
           {A}{B}{C}
@@ -1056,6 +1058,8 @@ id:
         text: menghindari target
       gamelab_beginCollectingData:
         text: mulai mengumpulkan data {BREAK} nilai {VALUE} dengan label {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} memantulkan {TARGET}"
       gamelab_changePropBy:
@@ -1694,6 +1698,10 @@ id:
         text: x koordinat {SPRITE}
       gamelab_yLocationOf:
         text: y koordinat {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} meluncur ke {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: jatuh
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} mulai {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2307,8 +2315,6 @@ id:
         text: belok kiri
       RyanLab_turnRight:
         text: belok kanan
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} Mengatakan {TEXT} Untuk {SECONDS} Detik
       Vector_createSpriteWith:
         text: |-
           buat sprite
@@ -2371,6 +2377,19 @@ id:
         options:
           BEHAVIOR:
             '"avoiding"': jaga jarak
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): berputar ke kanan
+            new Behavior(spinning_left, []): berputar ke kiri
+            new Behavior(fluttering, []): sempoyongan
+            new Behavior(jittering, []): gugup
+            new Behavior(wobbling, []): terhuyung-huyung
+            new Behavior(wandering, []): pengembaraan
+            new Behavior(patrolling, []): perondaan
+      adaptations_startFollowing:
+        text: "{SPRITE} mulai mengikuti {TARGET}"
       binary_drawBin:
         text: menggambar biner {BIN}
       binary_drawBinScreen:
@@ -2494,7 +2513,3 @@ id:
         text: tetapkan heading {HEADING}
       storylab_setSubheading:
         text: tetapkan subheading {SUBHEADING}
-      validation_validatedBackground:
-        text: atur latar belakang ke {IMG}
-      validation_validatedSound:
-        text: MAINKAN Suara {SOUND}

@@ -8,8 +8,8 @@
   "marketing_initiative": "CSF",
   "grade_levels": "2,3",
   "header": "CS Fundamentals",
-  "image": null,
-  "cs_topic": null,
+  "image": "https://images.code.org/c3cf934b9335645a2ee31ef84b6b7dcb-Course C.png",
+  "cs_topic": "programming",
   "school_subject": null,
-  "device_compatibility": null
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
 }

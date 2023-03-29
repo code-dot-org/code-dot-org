@@ -480,9 +480,11 @@ function initProjects() {
         options.projectData = levelSource;
       },
       setInRestrictedShareMode: function(_) {},
+      setTeacherHasConfirmedUploadWarning: function (_) {},
       inRestrictedShareMode: function() {
         return undefined;
       },
+      teacherHasConfirmedUploadWarning: function () {return undefined;},
       getLevelSource: function() {
         return {
           // This method is expected to return a Promise. Since this file does not go through our

@@ -891,3 +891,57 @@ bn:
               display_name: তালিকা
             lessonGroup-3:
               display_name: চক্র
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_functions:
+              display_name: ফাংশনগুলি
+            csf_variables:
+              display_name: চলকগুলো
+            csf_for_loops:
+              display_name: ফর লুপ
+        coursea-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
+        courseb-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
+        coursec-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
+        coursed-2023:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+        coursee-2023:
+          lesson_groups:
+            ramp_up:
+              display_name: নেষ্টেড লুপ
+            csf_functions:
+              display_name: ফাংশনগুলি
+            csf_nested_loops:
+              display_name: শর্তযুক্ত
