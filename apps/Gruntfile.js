@@ -146,10 +146,6 @@ describe('entry tests', () => {
     }
   }
 
-  config.clean = {
-    all: ['build']
-  };
-
   config.copy = {
     src: {
       files: [
@@ -448,9 +444,9 @@ describe('entry tests', () => {
   // so that bundled files will be properly served.
   // this is the source of the following warning, which can be ignored:
   // "All files matched by "/tmp/_karma_webpack_425424/**/*" were excluded or matched by prior matchers."
+  const webpackOutputBasePath = path.join(os.tmpdir(), '_karma_webpack_');
   const webpackOutputPath =
-    path.join(os.tmpdir(), '_karma_webpack_') +
-    Math.floor(Math.random() * 1000000);
+    webpackOutputBasePath + Math.floor(Math.random() * 1000000);
   const webpackOutputPublicPath = '/webpack_output/';
 
   config.karma = {
@@ -565,6 +561,14 @@ describe('entry tests', () => {
       preprocessors: {
         'test/entry-tests.js': ['webpack', 'sourcemap']
       }
+    }
+  };
+
+  config.clean = {
+    all: ['build'],
+    unitTest: {
+      options: {force: true},
+      src: [webpackOutputBasePath + '*']
     }
   };
 
@@ -1408,7 +1412,8 @@ describe('entry tests', () => {
     'newer:messages',
     'exec:convertScssVars',
     'exec:generateSharedConstants',
-    'karma:unit'
+    'karma:unit',
+    'clean:unitTest'
   ]);
 
   grunt.registerTask('storybookTest', ['karma:storybook']);

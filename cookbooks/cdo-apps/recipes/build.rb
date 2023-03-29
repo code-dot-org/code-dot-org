@@ -22,16 +22,3 @@ execute 'build-cdo' do
   # Rebuild when Ruby is upgraded.
   subscribes :run, "apt_package[ruby#{node['cdo-ruby']['version']}]", :delayed if node['cdo-ruby']
 end
-
-# Clean up build artifacts left over on persistent servers after building.
-execute 'clean-build-artifacts' do
-  # Currently, this only removes the build artifacts for the `karma-webpack`
-  # NPM package because they've been accumulating on the test server and eating
-  # up our storage space. This could be expanded in the future to include any
-  # other cleanup we might discover we need.
-  command 'rm -r /tmp/_karma_webpack_*'
-
-  # We don't need to run this every time, just after a build.
-  action :nothing
-  subscribes :run, 'execute[build-cdo]'
-end
