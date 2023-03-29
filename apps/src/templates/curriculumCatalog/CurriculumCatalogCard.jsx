@@ -18,6 +18,7 @@ const CurriculumCatalogCard = ({
   duration,
   youngestGrade,
   oldestGrade,
+  imageAltText,
   imageSrc,
   subjects,
   topics,
@@ -45,6 +46,7 @@ const CurriculumCatalogCard = ({
       course_name: props.courseDisplayName
     })}
     quickViewButtonText={i18n.quickView()}
+    imageAltText={imageAltText}
   />
 );
 
@@ -54,6 +56,7 @@ CurriculumCatalogCard.propTypes = {
     .isRequired,
   youngestGrade: PropTypes.number,
   oldestGrade: PropTypes.number,
+  imageAltText: PropTypes.string,
   imageSrc: PropTypes.string.isRequired,
   subjects: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(translatedCourseOfferingSchoolSubjects))
