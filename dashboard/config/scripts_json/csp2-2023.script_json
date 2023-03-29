@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-26 16:35:45 UTC",
+    "serialized_at": "2023-03-28 23:12:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -222,8 +222,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "7545587d-5d71-4abc-ac96-8e01f28398c6",
+      "key": "3fd212ee-5fac-4f8e-ac98-fd3ad21193ea",
       "position": 1,
+      "properties": {
+        "name": "The Pre-Unit Pulse"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3fd212ee-5fac-4f8e-ac98-fd3ad21193ea",
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2023"
+      }
+    },
+    {
+      "key": "7545587d-5d71-4abc-ac96-8e01f28398c6",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -237,7 +250,7 @@
     },
     {
       "key": "3daf571c-7176-467a-833c-5f2c3dc64898",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -251,7 +264,7 @@
     },
     {
       "key": "f274f0b4-eb4e-4cec-94d2-2931f7b127c6",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -638,6 +651,17 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "dd2fb463-af64-4540-806d-05d55c4c172d",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Pre-Unit Pulse"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd2fb463-af64-4540-806d-05d55c4c172d",
+        "lesson_activity.key": "3fd212ee-5fac-4f8e-ac98-fd3ad21193ea"
+      }
+    },
     {
       "key": "ead7c8b2-fb50-404f-89c8-c57664f14d79",
       "position": 1,
@@ -2247,6 +2271,72 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "The Pre-Unit Pulse"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U2InterestInventoryQ1"
+        ],
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2023",
+        "activity_section.key": "dd2fb463-af64-4540-806d-05d55c4c172d"
+      },
+      "level_keys": [
+        "CSP U2InterestInventoryQ1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The Pre-Unit Pulse"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U2InterestInventoryQ3"
+        ],
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2023",
+        "activity_section.key": "dd2fb463-af64-4540-806d-05d55c4c172d"
+      },
+      "level_keys": [
+        "CSP U2InterestInventoryQ3"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "The Pre-Unit Pulse"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U2InterestInventoryQ2"
+        ],
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2023",
+        "activity_section.key": "dd2fb463-af64-4540-806d-05d55c4c172d"
+      },
+      "level_keys": [
+        "CSP U2InterestInventoryQ2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "CSP U2L1 Internet Simulator: Sending Text_2023"
         ],
@@ -2267,8 +2357,8 @@
       ]
     },
     {
-      "chapter": 2,
-      "position": 2,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -2292,7 +2382,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2317,7 +2407,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2342,7 +2432,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2367,7 +2457,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 9,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -2392,7 +2482,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2417,7 +2507,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2442,7 +2532,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -2467,7 +2557,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2492,7 +2582,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2517,7 +2607,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 15,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -2542,7 +2632,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2567,7 +2657,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2592,7 +2682,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -2617,7 +2707,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2642,7 +2732,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2668,6 +2758,42 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP U2InterestInventoryQ1",
+        "script_level.level_keys": [
+          "CSP U2InterestInventoryQ1"
+        ],
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2023",
+        "activity_section.key": "dd2fb463-af64-4540-806d-05d55c4c172d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U2InterestInventoryQ3",
+        "script_level.level_keys": [
+          "CSP U2InterestInventoryQ3"
+        ],
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2023",
+        "activity_section.key": "dd2fb463-af64-4540-806d-05d55c4c172d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U2InterestInventoryQ2",
+        "script_level.level_keys": [
+          "CSP U2InterestInventoryQ2"
+        ],
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2023",
+        "activity_section.key": "dd2fb463-af64-4540-806d-05d55c4c172d"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "CSP U2L1 Internet Simulator: Sending Text_2023",
