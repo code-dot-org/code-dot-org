@@ -60,9 +60,12 @@ export const style = {
       left: 10 - ARROW_WIDTH,
       borderRightColor: color
     }),
-    right: color => ({
+    right: (color, hoverColor) => ({
       right: 10 - ARROW_WIDTH,
-      borderLeftColor: color
+      borderLeftColor: color,
+      ':hover': {
+        // borderLeftColor: hoverColor
+      }
     })
   }
 };
@@ -123,6 +126,13 @@ export const BUTTON_TYPES = {
       }
     }
   },
+  legacyPrimary: {
+    style: {
+      backgroundColor: color.orange,
+      borderColor: color.orange,
+      color: color.neutral_white
+    }
+  },
   danger: {
     style: {
       backgroundColor: color.product_negative_default,
@@ -177,7 +187,10 @@ const ArrowButton = Radium(function ArrowButton({arrow, ...props}) {
       <div
         style={[
           style.arrowHead.base,
-          style.arrowHead[arrow](config.style.backgroundColor)
+          style.arrowHead[arrow](
+            config.style.backgroundColor,
+            config.style[':hover'].backgroundColor
+          )
         ]}
       />
       <BaseButton
