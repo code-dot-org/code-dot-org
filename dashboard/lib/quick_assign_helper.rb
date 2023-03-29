@@ -79,7 +79,7 @@ module QuickAssignHelper
     data.sort {|(h1, _), (h2, _)| compare_headers(h1, h2)}.to_h
   end
 
-  def localized_header(header)
+  def self.localized_header(header)
     localized_header = I18n.t(
       header,
       scope: [:data, :course_offerings],
