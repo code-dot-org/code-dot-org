@@ -7937,6 +7937,8 @@ en:
               name: Microbit Playground
             lesson-10:
               name: Pulse Survey to Clone
+            lesson-12:
+              name: AI Playground
         csc-pilot-2022-ecosystems:
           lesson_groups: {}
           name: csc-pilot-2022-ecosystems
