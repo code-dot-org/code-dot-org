@@ -7,13 +7,13 @@ import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {
   CourseOfferingCategories,
+  CourseOfferingHeaders,
+  CourseOfferingCurriculumTypes,
   CourseOfferingMarketingInitiatives,
   CourseOfferingCsTopics,
   CourseOfferingSchoolSubjects,
   DeviceTypes,
-  DeviceCompatibilityLevels,
-  CourseOfferingHeaders,
-  CourseOfferingCurriculumTypes
+  DeviceCompatibilityLevels
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 import {translatedCourseOfferingCategories} from '@cdo/apps/templates/teacherDashboard/AssignmentSelectorHelpers';
