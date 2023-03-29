@@ -1,0 +1,30 @@
+name 'CSC-SelfPaced-implementing_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Implementing CS Connections
+
+### **Guidance** 
+
+* ##### Complete all lessons of any module before starting.
+
+* ##### Consider introducing computer science to students with <a href="https://code.org/helloworld" target="blank" rel="noopener noreferrer">Hello World!</a>.
+
+* ##### Check out <a href="https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview" target="blank" rel="noopener noreferrer">XXXX</a> for more information and additional resources.
+
+
+<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">  ANOTHER PLACEHOLDER FOR TEACHER TESTIMONIAL </p>
+
+<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
+<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
+INSERT NAME HERE, K-5 Teacher
+</p>
+</div>
+
+<div style="clear:both"/>
+
+
+
+MARKDOWN
