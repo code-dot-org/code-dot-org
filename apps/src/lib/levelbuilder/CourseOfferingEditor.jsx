@@ -7,8 +7,6 @@ import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {
   CourseOfferingCategories,
-  CourseOfferingHeaders,
-  CourseOfferingCurriculumTypes,
   CourseOfferingMarketingInitiatives,
   CourseOfferingCsTopics,
   CourseOfferingSchoolSubjects,
@@ -21,7 +19,9 @@ import {
   translatedCourseOfferingCsTopics,
   translatedCourseOfferingSchoolSubjects,
   translatedCourseOfferingDeviceTypes,
-  translatedCourseOfferingDeviceCompatibilityLevels
+  translatedCourseOfferingDeviceCompatibilityLevels,
+  translatedCourseOfferingHeaders,
+  translatedCourseOfferingCurriculumTypes
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import ImageInput from './ImageInput';
 
@@ -218,7 +218,7 @@ export default function CourseOfferingEditor(props) {
           }
         >
           <option value="">{translatedNoneOption}</option>
-          {Object.values(CourseOfferingCurriculumTypes).map(type => (
+          {Object.values(translatedCourseOfferingCurriculumTypes).map(type => (
             <option key={type} value={type}>
               {type}
             </option>
@@ -236,7 +236,7 @@ export default function CourseOfferingEditor(props) {
           onChange={e => updateCourseOffering('header', e.target.value)}
         >
           <option value="">{translatedNoneOption}</option>
-          {Object.values(CourseOfferingHeaders).map(header => (
+          {Object.values(translatedCourseOfferingHeaders).map(header => (
             <option key={header} value={header}>
               {header}
             </option>
