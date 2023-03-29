@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2023-03-17 16:58:04 UTC",
+    "serialized_at": "2023-03-28 22:43:16 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -216,6 +216,21 @@
       },
       "seeding_key": {
         "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "AI Playground",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -702,6 +717,18 @@
       "seeding_key": {
         "lesson_activity.key": "8f053849-1aa6-4a32-a3d9-9d07eabe370a",
         "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "552ffd9b-c7b2-4a3e-934c-fde476c9ac00",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "552ffd9b-c7b2-4a3e-934c-fde476c9ac00",
+        "lesson.key": "lesson-12",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -2075,6 +2102,17 @@
       "seeding_key": {
         "activity_section.key": "66d591ab-e5f5-49bb-9f1c-a1a4df541dd2",
         "lesson_activity.key": "8f053849-1aa6-4a32-a3d9-9d07eabe370a"
+      }
+    },
+    {
+      "key": "11a80cbd-1ec4-40dd-9eb4-be1958ce36b3",
+      "position": 1,
+      "properties": {
+        "progression_name": "CNN Widget Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "11a80cbd-1ec4-40dd-9eb4-be1958ce36b3",
+        "lesson_activity.key": "552ffd9b-c7b2-4a3e-934c-fde476c9ac00"
       }
     }
   ],
@@ -3935,6 +3973,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - P_2023"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3957,6 +3998,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - SB1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3979,6 +4023,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - SB2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4001,6 +4048,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - SB3_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4023,6 +4073,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - SB4_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4045,6 +4098,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - Prac_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4067,6 +4123,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - A_2023"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -4089,6 +4148,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - Chal_2023"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -4103,6 +4165,28 @@
       },
       "level_keys": [
         "CSD U6 - Color LEDs - Chal_2023"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "CNN Widget Test"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cnn widget test"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "11a80cbd-1ec4-40dd-9eb4-be1958ce36b3"
+      },
+      "level_keys": [
+        "cnn widget test"
       ]
     }
   ],
@@ -5089,6 +5173,18 @@
         "lesson_group.key": "",
         "script.name": "csd-playground",
         "activity_section.key": "3466e38c-3d3d-4c35-acc1-c65f4260ba18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cnn widget test",
+        "script_level.level_keys": [
+          "cnn widget test"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "11a80cbd-1ec4-40dd-9eb4-be1958ce36b3"
       }
     }
   ],
