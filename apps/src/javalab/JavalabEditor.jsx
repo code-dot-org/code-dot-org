@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {setRenderedHeight, setEditorColumnHeight} from './javalabRedux';
 import {
   setSource,
   sourceTextUpdated,
@@ -8,8 +9,6 @@ import {
   sourceFileOrderUpdated,
   renameFile,
   removeFile,
-  setRenderedHeight,
-  setEditorColumnHeight,
   setEditTabKey,
   setActiveTabKey,
   setOrderedTabKeys,
@@ -21,7 +20,7 @@ import {
   setNewFileError,
   clearNewFileError,
   setRenameFileError
-} from './javalabRedux';
+} from './redux/editorRedux';
 import {DisplayTheme} from './DisplayTheme';
 import PropTypes from 'prop-types';
 import {EditorView} from '@codemirror/view';
@@ -820,19 +819,19 @@ class JavalabEditor extends React.Component {
 
 export default connect(
   state => ({
-    sources: state.javalab.sources,
-    validation: state.javalab.validation,
+    sources: state.javalabEditor.sources,
+    validation: state.javalabEditor.validation,
     displayTheme: state.javalab.displayTheme,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
     hasOpenCodeReview: state.javalab.hasOpenCodeReview,
     isViewingOwnProject: state.pageConstants.isViewingOwnProject,
     codeOwnersName: state.pageConstants.codeOwnersName,
-    fileMetadata: state.javalab.fileMetadata,
-    orderedTabKeys: state.javalab.orderedTabKeys,
-    activeTabKey: state.javalab.activeTabKey,
-    lastTabKeyIndex: state.javalab.lastTabKeyIndex,
-    editTabKey: state.javalab.editTabKey,
+    fileMetadata: state.javalabEditor.fileMetadata,
+    orderedTabKeys: state.javalabEditor.orderedTabKeys,
+    activeTabKey: state.javalabEditor.activeTabKey,
+    lastTabKeyIndex: state.javalabEditor.lastTabKeyIndex,
+    editTabKey: state.javalabEditor.editTabKey,
     editorFontSize: state.javalab.editorFontSize
   }),
   dispatch => ({
