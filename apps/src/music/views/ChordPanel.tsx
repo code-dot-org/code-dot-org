@@ -255,6 +255,7 @@ const NoteGrid: React.FunctionComponent<NoteGridProps> = ({
     110,
     numOctaves,
     startOctave,
+    2,
     2
   );
 

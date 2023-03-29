@@ -96,7 +96,7 @@ export default class FieldChord extends Field {
       'fill': '#54595e',
       'x': 1,
       'y': 1,
-      'width': 86,
+      'width': 51,
       'height': 18
     }, this.movableGroup_);
 
@@ -106,11 +106,12 @@ export default class FieldChord extends Field {
         playStyle: this.getValue().playStyle,
         instrument: ''
       } as ChordEventValue,
-      86,
+      51,
       18,
       3,
       4,
-      2
+      2,
+      4
     );
 
     graphNotes.forEach(graphNote => {
@@ -130,7 +131,7 @@ export default class FieldChord extends Field {
   }
 
   updateSize_() {
-    const width = 90;
+    const width = 55;
     const height = 22;
 
     this.borderRect_?.setAttribute('width', '' + width);

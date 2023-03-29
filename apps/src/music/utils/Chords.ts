@@ -41,7 +41,14 @@ export function generateNotesFromChord(
     }
   }
 
-  if (playStyle === 'together') {
+  if (playStyle === 'arpeggio-random') {
+    return arrayOfTicks.map(tick => {
+      return {
+        tick: tick,
+        note: notes[Math.floor(Math.random() * notes.length)]
+      };
+    });
+  } else if (playStyle === 'together') {
     return notes.map(note => {
       return {
         tick: 1,
@@ -49,6 +56,12 @@ export function generateNotesFromChord(
       } as ChordNote;
     });
   } else {
+    if (playStyle === 'arpeggio-up') {
+      notes.sort();
+    } else if (playStyle === 'arpeggio-down') {
+      notes.sort().reverse();
+    }
+
     return arrayOfTicks.map(tick => {
       return {
         tick: tick,
@@ -65,23 +78,29 @@ export function generateGraphDataFromChord(
   height: number,
   numOctaves: number,
   startOctave: number,
-  padding: number
+  padding: number,
+  noteHeightScale: number
 ): ChordGraphNote[] {
   const notes: ChordNote[] = generateNotesFromChord(chordEventValue);
 
-  const useWidth = width - 2 * padding;
-  const useHeight = height - 2 * padding;
-  const noteWidth = Math.ceil(useWidth / 16);
-  const noteHeight = Math.ceil(useHeight / 12 / numOctaves * 2);
+  // Note widths fit in the space; note heights are exaggerated.
+  const noteWidth = Math.ceil((width - 2 * padding) / 16);
+  const noteHeight = Math.ceil(
+    ((height - 2 * padding) / (12 * numOctaves)) * noteHeightScale
+  );
+
+  // Blocks locations will be for their upper-left corners, so ensure
+  // that the space we are filling counts for the full size of the blocks.
+  const useWidth = width - 2 * padding - noteWidth;
+  const useHeight = height - 2 * padding - noteHeight;
 
   return notes.map((note: ChordNote) => {
     return {
-      x: ((note.tick - 1) * useWidth) / 16 + padding,
+      x: ((note.tick - 1) * useWidth) / (16 - 1) + padding,
       y:
         padding +
         useHeight -
-        ((note.note - startOctave * 12) * useHeight) / numOctaves / 12 -
-        noteHeight,
+        ((note.note - startOctave * 12) * useHeight) / (numOctaves * 12 - 1),
       width: noteWidth,
       height: noteHeight
     };
