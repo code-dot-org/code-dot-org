@@ -6,9 +6,13 @@
  * Entirely derived from the logic for similar blocks in our dance party repo here (more layouts supported there):
  * https://github.com/code-dot-org/dance-party/blob/6672bdb0cffad1cbfda6e7396155f542b6cdcffe/src/p5.dance.js#L637-L911
  */
-export function layoutSpriteGroup(group, layoutName, p5) {
+export function layoutSpriteGroup(group, layout, p5) {
   // resize at top?
   const count = group.length;
+  if (!count) {
+    return;
+  }
+
   const minX = 20;
   const maxX = 400 - minX;
   const minY = 35;
@@ -16,13 +20,13 @@ export function layoutSpriteGroup(group, layoutName, p5) {
   const radiansToDegrees = 180 / Math.PI;
   const maxCircleRadius = 165;
 
-  if (layoutName === 'top') {
+  if (layout === 'top') {
     createRow(group, 100);
-  } else if (layoutName === 'row') {
+  } else if (layout === 'row') {
     createRow(group, 200);
-  } else if (layoutName === 'bottom') {
+  } else if (layout === 'bottom') {
     createRow(group, 300);
-  } else if (layoutName === 'border') {
+  } else if (layout === 'border') {
     // First fill the four corners.
     // Then split remainder into 4 groups. Distribute group one along the top,
     // group 2 along the right, etc.
@@ -82,7 +86,7 @@ export function layoutSpriteGroup(group, layoutName, p5) {
         sprite.rotation = 0;
       }
     }
-  } else if (layoutName === 'circle') {
+  } else if (layout === 'circle') {
     // Adjust radius of circle and size of the sprite according to number of
     // sprites in our group.
     const pct = p5.constrain(count / 10, 0, 1);
@@ -98,7 +102,7 @@ export function layoutSpriteGroup(group, layoutName, p5) {
       sprite.rotation = (angle - startAngle) * radiansToDegrees;
       sprite.scale = scale;
     });
-  } else if (layoutName === 'grid') {
+  } else if (layout === 'grid') {
     // Create a grid where the width is the square root of the count, rounded up,
     // and the height is the number of rows needed to fill in count cells.
     // For our last row, we might have empty cells in our grid (but the row
@@ -113,14 +117,14 @@ export function layoutSpriteGroup(group, layoutName, p5) {
       sprite.y = p5.lerp(minY, maxY, row / (numRows - 1) || 0);
       sprite.rotation = 0;
     });
-  } else if (layoutName === 'left') {
+  } else if (layout === 'left') {
     createColumn(group, 100);
-  } else if (layoutName === 'column') {
+  } else if (layout === 'column') {
     createColumn(group, 200);
-  } else if (layoutName === 'right') {
+  } else if (layout === 'right') {
     createColumn(group, 300);
   } else {
-    throw new Error('Unexpected layout: ' + layoutName);
+    throw new Error('Unexpected layout: ' + layout);
   }
 
   // We want sprites that are lower in the canvas to show up on top of those

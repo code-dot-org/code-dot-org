@@ -121,9 +121,9 @@ export const commands = {
     return sprites.every(sprite => sprite.getAnimationLabel() === costumeName);
   },
 
-  layoutSprites(costumeName, layoutName) {
-    const group = this.getSpriteArray({costume: costumeName});
-    layoutSpriteGroup(group, layoutName, this.p5);
+  layoutSprites(costume, layout) {
+    const group = this.getSpriteArray({costume});
+    layoutSpriteGroup(group, layout, this.p5);
   },
 
   isKeyPressed(key) {

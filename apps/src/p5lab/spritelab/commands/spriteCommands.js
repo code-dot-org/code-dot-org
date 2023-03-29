@@ -176,15 +176,12 @@ export const commands = {
     });
   },
 
-  makeNewSpriteGroup(n, costume, layout) {
-    // handle undefined n?
+  makeNewSpriteGroup(n, animation, layout) {
     let spriteGroup = [];
-    for (var i = 0; i < n; i++) {
-      const id = this.addSprite({animation: costume});
+    for (let i = 0; i < n; i++) {
+      const id = this.addSprite({animation});
       spriteGroup = spriteGroup.concat(this.getSpriteArray({id}));
     }
-    // need some helper that will accept a group as an argument
-    // that this and layoutSprites can call
     layoutSpriteGroup(spriteGroup, layout, this.p5);
   }
 };
