@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import moduleStyles from './sections-refresh.module.scss';
 import AssignmentVersionSelector from '../teacherDashboard/AssignmentVersionSelector';
+import _ from 'lodash';
 
 export default function VersionUnitDropdowns({
   courseOffering,
@@ -12,19 +13,50 @@ export default function VersionUnitDropdowns({
   const VERSION_ID = 'versionId';
   const UNIT_ID = 'unitId';
   const noAssignment = '__noAssignment__';
-  const decideLater = '__decideLater__';
 
-  const updateCourseDetail = (label, id) => {
-    sectionCourse[label] = id;
+  // When selecting a new version, remove the outdated assigned unit
+  const updateCourseVersion = id => {
+    sectionCourse[VERSION_ID] = id;
+    sectionCourse[UNIT_ID] = null;
     updateCourse(sectionCourse);
   };
 
   const prepareCourseVersions = () => {
     const versionObject = {};
-    courseOffering.course_versions.map(cv => {
+    courseOffering?.course_versions.map(cv => {
       versionObject[cv[1].id] = cv[1];
     });
     return versionObject;
+  };
+
+  const selectedCourseVersionObject = prepareCourseVersions()[
+    (sectionCourse?.versionId)
+  ];
+
+  const orderedUnits = _.orderBy(
+    selectedCourseVersionObject?.units,
+    'position'
+  );
+
+  const selectedUnitId = sectionCourse?.unitId
+    ? sectionCourse.unitId
+    : noAssignment;
+
+  const onChangeUnit = event => {
+    if (event.target.value === noAssignment) {
+      updateCourse({...sectionCourse, unitId: null});
+    } else {
+      const unitId = Number(event.target.value);
+      const selectedUnit = Object.values(orderedUnits).find(
+        unit => unit.id === unitId
+      );
+      updateCourse({
+        ...sectionCourse,
+        unitId: unitId,
+        hasLessonExtras: selectedUnit.lesson_extras_available,
+        hasTextToSpeech: selectedUnit.text_to_speech_enabled
+      });
+    }
   };
 
   return (
@@ -34,36 +66,28 @@ export default function VersionUnitDropdowns({
           <AssignmentVersionSelector
             selectedCourseVersionId={sectionCourse.versionId}
             courseVersions={prepareCourseVersions()}
-            onChangeVersion={id => updateCourseDetail(VERSION_ID, id)}
+            onChangeVersion={id => updateCourseVersion(id)}
           />
         )}
-        {sectionCourse?.unitId && (
-          <span>
-            <div>{i18n.assignmentSelectorCourse()}</div>
-            <select
-              id="uitest-unit-dropdown"
-              value={courseOffering}
-              onChange={updateCourseDetail(UNIT_ID, event.target.value)}
-            >
-              <option key="default" value={noAssignment} />
-              <option key="later" value={decideLater}>
-                {i18n.decideLater()}
-              </option>
-              {courseOffering.map(offering => (
-                <optgroup
-                  key={offering.display_name}
-                  label={offering.display_name}
-                >
-                  {courseOffering?.map(courseOffering => (
-                    <option key={courseOffering.id} value={courseOffering.id}>
-                      {courseOffering.display_name}
-                    </option>
-                  ))}
-                </optgroup>
-              ))}
-            </select>
-          </span>
-        )}
+        {sectionCourse?.versionId &&
+          orderedUnits &&
+          Object.entries(orderedUnits).length > 1 && (
+            <span className={moduleStyles.unitDropdown}>
+              <div>{i18n.startWithUnit()}</div>
+              <select
+                id="uitest-secondary-assignment"
+                value={selectedUnitId}
+                onChange={onChangeUnit}
+              >
+                {Object.values(orderedUnits).map(unit => (
+                  <option key={unit.id} value={unit.id}>
+                    {unit.name}
+                  </option>
+                ))}
+                <option value={noAssignment} />
+              </select>
+            </span>
+          )}
       </div>
     </div>
   );
