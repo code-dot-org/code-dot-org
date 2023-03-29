@@ -67,7 +67,8 @@ CurriculumCatalogCard.propTypes = {
 };
 
 CurriculumCatalogCard.defaultProps = {
-  imageSrc: tempImage // TODO [MEG]: remove this default once images are pulled
+  imageSrc: tempImage, // TODO [MEG]: remove this default once images are pulled
+  imageAltText: '' // for decorative images
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -133,10 +134,6 @@ CustomizableCurriculumCatalogCard.propTypes = {
   imageAltText: PropTypes.string,
   quickViewButtonDescription: PropTypes.string.isRequired,
   assignButtonDescription: PropTypes.string.isRequired
-};
-
-CustomizableCurriculumCatalogCard.defaultProps = {
-  imageAltText: '' // for decorative images
 };
 
 export default CurriculumCatalogCard;
