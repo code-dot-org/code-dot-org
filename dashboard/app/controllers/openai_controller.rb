@@ -9,6 +9,7 @@ class OpenaiController < ApplicationController
       "Content-Type" => "application/json",
       "Authorization" => "Bearer #{CDO.openai_api_key}"
     }
+    headers["OpenAI-Organization"] = CDO.openai_org if CDO.openai_org
 
     # Build the request body
     data = {
