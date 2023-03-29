@@ -23,6 +23,7 @@ import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryW
 import javalabEditor, {
   setAllSourcesAndFileMetadata
 } from '@cdo/apps/javalab/redux/editorRedux';
+import javalab from '@cdo/apps/javalab/javalabRedux';
 
 describe('JavalabEditorDialogManager', () => {
   let defaultProps;
@@ -152,7 +153,7 @@ describe('JavalabEditorDialogManager', () => {
   describe('Commit Dialog', () => {
     beforeEach(() => {
       stubRedux();
-      registerReducers({javalabEditor});
+      registerReducers({javalab, javalabEditor});
     });
 
     afterEach(() => {
