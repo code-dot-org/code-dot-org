@@ -10,7 +10,7 @@ describe('CurriculumCatalogCard', () => {
       duration: 'quarter',
       youngestGrade: 4,
       oldestGrade: 12,
-      subjects: ['english_language_arts'],
+      subjects: ['math'],
       topics: ['cybersecurity']
     };
   });
@@ -27,16 +27,38 @@ describe('CurriculumCatalogCard', () => {
     screen.getByRole('img', {name: defaultProps.courseName});
   });
 
-  it('shows image without description by default', () => {
+  it('shows image with empty alt text by default', () => {
     render(<CurriculumCatalogCard {...defaultProps} />);
 
-    screen.getByRole('img', {name: ''});
+    screen.getByAltText('');
   });
 
   it('can have image alt text if passed in', () => {
     const altText = 'Two people coding';
     render(<CurriculumCatalogCard {...defaultProps} imageAltText={altText} />);
 
-    screen.getByRole('img', {name: altText});
+    screen.getByAltText(altText);
+  });
+
+  it('renders grade range', () => {
+    render(<CurriculumCatalogCard {...defaultProps} />);
+
+    screen.getByText(
+      new RegExp(
+        `Grades: ${defaultProps.youngestGrade}-${defaultProps.oldestGrade}`
+      )
+    );
+  });
+
+  it('renders subject', () => {
+    render(<CurriculumCatalogCard {...defaultProps} />);
+
+    screen.getByText(defaultProps.subjects[0], {exact: false});
+  });
+
+  it('renders duration', () => {
+    render(<CurriculumCatalogCard {...defaultProps} />);
+
+    screen.getByText(defaultProps.duration, {exact: false});
   });
 });
