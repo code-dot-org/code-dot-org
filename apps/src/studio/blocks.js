@@ -800,13 +800,8 @@ exports.install = function(blockly, blockInstallOptions) {
       Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
 
       this.appendDummyInput().appendField(msg.setItemSpeedSet());
-      const itemChoices = [...skin.itemChoices];
-      // Remove "random" option, but preserve it for other blocks.
-      if (itemChoices[itemChoices.length - 1][1] === RANDOM_VALUE) {
-        itemChoices.pop();
-      }
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(itemChoices),
+        new blockly.FieldDropdown(skin.itemChoices),
         'CLASS'
       );
 
