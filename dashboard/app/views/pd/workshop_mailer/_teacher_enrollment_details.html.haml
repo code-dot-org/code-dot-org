@@ -37,7 +37,7 @@
 
 - if @workshop.virtual?
   = render partial: 'virtual_tips'
-- elsif !@workshop.virtual?
+- elsif !@workshop.virtual? && @is_reminder
   = render partial: 'supply_list'
   %h3
     Health and wellness precautions
