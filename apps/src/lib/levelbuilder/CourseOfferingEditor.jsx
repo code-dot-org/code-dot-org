@@ -11,7 +11,9 @@ import {
   CourseOfferingCsTopics,
   CourseOfferingSchoolSubjects,
   DeviceTypes,
-  DeviceCompatibilityLevels
+  DeviceCompatibilityLevels,
+  CourseOfferingHeaders,
+  CourseOfferingCurriculumTypes
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 import {translatedCourseOfferingCategories} from '@cdo/apps/templates/teacherDashboard/AssignmentSelectorHelpers';
@@ -19,9 +21,7 @@ import {
   translatedCourseOfferingCsTopics,
   translatedCourseOfferingSchoolSubjects,
   translatedCourseOfferingDeviceTypes,
-  translatedCourseOfferingDeviceCompatibilityLevels,
-  translatedCourseOfferingHeaders,
-  translatedCourseOfferingCurriculumTypes
+  translatedCourseOfferingDeviceCompatibilityLevels
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import ImageInput from './ImageInput';
 
@@ -218,7 +218,7 @@ export default function CourseOfferingEditor(props) {
           }
         >
           <option value="">{translatedNoneOption}</option>
-          {Object.values(translatedCourseOfferingCurriculumTypes).map(type => (
+          {Object.values(CourseOfferingCurriculumTypes).map(type => (
             <option key={type} value={type}>
               {type}
             </option>
@@ -236,7 +236,7 @@ export default function CourseOfferingEditor(props) {
           onChange={e => updateCourseOffering('header', e.target.value)}
         >
           <option value="">{translatedNoneOption}</option>
-          {Object.values(translatedCourseOfferingHeaders).map(header => (
+          {Object.values(CourseOfferingHeaders).map(header => (
             <option key={header} value={header}>
               {header}
             </option>
