@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import moduleStyles from './sections-refresh.module.scss';
@@ -19,13 +18,13 @@ export default function SectionCreationCelebrationDialog() {
         <div>{i18n.sectionCreationCelebrationDialogMessage()}</div>
         <img src={CelebrationGif} className={moduleStyles.celebrationGif} />
       </div>
-      <DialogFooter>
+      <div className={moduleStyles.celebrationDialogFooter}>
         <Button
           onClick={() => setIsOpen(false)}
           text={i18n.goToDashboard()}
           color={Button.ButtonColor.brandSecondaryDefault}
         />
-      </DialogFooter>
+      </div>
     </BaseDialog>
   );
 }
