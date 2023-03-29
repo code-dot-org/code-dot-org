@@ -1550,7 +1550,10 @@ exports.install = function(blockly, blockInstallOptions) {
         'block_id_${this.id}');\n`;
   };
 
-  function createDrawShapeBlock(blockName) {
+  function createDrawShapeBlock(blockName = 'shape', shapeNames) {
+    if (!skin[shapeNames]) {
+      shapeNames = 'shapes';
+    }
     return {
       helpUrl: '',
       init: function() {
@@ -1564,8 +1567,8 @@ exports.install = function(blockly, blockInstallOptions) {
 
         // Generates a list of pairs of the form [[url, name]]
         var values = [];
-        for (var name in skin.shapes) {
-          var url = skin.shapes[name];
+        for (var name in skin[shapeNames]) {
+          var url = skin[shapeNames][name];
           values.push([url, name]);
         }
         dropdown = new blockly.FieldImageDropdown(values, 40, 40);
@@ -1579,12 +1582,12 @@ exports.install = function(blockly, blockInstallOptions) {
 
   // Add size input to the draw shape block (text input & socket)
   function appendToDrawShapeBlock(blockName, block) {
-    if (blockName === 'turtle_shape_with_side_length') {
+    if (blockName.endsWith('_with_side_length')) {
       block.appendDummyInput().appendField(msg.withSideLength());
       block.appendValueInput('SIZE').setCheck(blockly.BlockValueType.NUMBER);
       block.appendDummyInput().appendField(msg.pixels());
       block.setTooltip(msg.drawShapeWithSideLength());
-    } else if (blockName === 'turtle_shape_with_side_length_non_param') {
+    } else if (blockName.endsWith('_with_side_length_non_param')) {
       block.appendDummyInput().appendField(msg.withSideLength());
       block
         .appendDummyInput()
@@ -1605,13 +1608,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.shape = createDrawShapeBlock();
 
   generator.shape = function() {
-    return (
-      'Turtle.drawShape("' +
-      this.getFieldValue('VALUE') +
-      '", null, \'block_id_' +
-      this.id +
-      "');\n"
-    );
+    return generateDrawShapeCommand(this.getFieldValue('VALUE'), null, this.id);
   };
 
   blockly.Blocks.turtle_shape_with_side_length = createDrawShapeBlock(
@@ -1624,8 +1621,24 @@ exports.install = function(blockly, blockInstallOptions) {
       'SIZE',
       Blockly.JavaScript.ORDER_NONE
     );
-    return `Turtle.drawShape('${this.getFieldValue('VALUE')}',${size},
-        'block_id_${this.id}');\n`;
+    return generateDrawShapeCommand(this.getFieldValue('VALUE'), size, this.id);
+  };
+
+  blockly.Blocks.rhombus_shape_with_side_length = createDrawShapeBlock(
+    'rhombus_shape_with_side_length',
+    'rhombus45degree'
+  );
+
+  generator.rhombus_shape_with_side_length =
+    generator.turtle_shape_with_side_length;
+
+  generator.turtle_shape_with_side_length = function() {
+    let size = generator.valueToCode(
+      this,
+      'SIZE',
+      Blockly.JavaScript.ORDER_NONE
+    );
+    return generateDrawShapeCommand(this.getFieldValue('VALUE'), size, this.id);
   };
 
   blockly.Blocks.turtle_shape_with_side_length_non_param = createDrawShapeBlock(
@@ -1634,9 +1647,13 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.turtle_shape_with_side_length_non_param = function() {
     let size = window.parseFloat(this.getFieldValue('SIZE')) || 0;
-    return `Turtle.drawShape('${this.getFieldValue('VALUE')}',${size},
-        'block_id_${this.id}');\n`;
+    return generateDrawShapeCommand(this.getFieldValue('VALUE'), size, this.id);
   };
+
+  function generateDrawShapeCommand(value, size, id) {
+    return `Turtle.drawShape('${value}',${size},
+        'block_id_${id}');\n`;
+  }
 
   blockly.Blocks.turtle_setArtist = {
     helpUrl: '',

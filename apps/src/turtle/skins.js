@@ -1,11 +1,11 @@
-var skinBase = require('../skins');
-var linePatterns = require('./linePatterns');
+const skinBase = require('../skins');
+const linePatterns = require('./linePatterns');
 
 exports.load = function(assetUrl, id) {
-  var skin = skinBase.load(assetUrl, id);
+  const skin = skinBase.load(assetUrl, id);
   skin.linePatterns = linePatterns.load(assetUrl);
 
-  var CONFIGS = {
+  const CONFIGS = {
     anna: {
       // slider speed gets divided by this value
       speedModifier: 10,
@@ -90,9 +90,9 @@ exports.load = function(assetUrl, id) {
    *
    * @return the mapping of names to urls
    */
-  var stickers = function() {
+  const stickers = function() {
     // Playlab characters
-    var playlab = [
+    const playlab = [
       'Alien',
       'Bat',
       'Bird',
@@ -165,63 +165,75 @@ exports.load = function(assetUrl, id) {
 
     return mapping;
   };
+  var rhombus60degree = [
+    'smallRhombusMaroon',
+    'smallRhombusRed',
+    'smallRhombusOrange',
+    'smallRhombusYellow',
+    'smallRhombusGreen',
+    'smallRhombusCyan',
+    'smallRhombusLightBlue',
+    'smallRhombusBlue',
+    'smallRhombusPurple',
+    'smallRhombusMagenta'
+  ];
+  var rhombus45degree = [
+    'smallRhombusMaroon45',
+    'smallRhombusRed45',
+    'smallRhombusOrange45',
+    'smallRhombusYellow45',
+    'smallRhombusGreen45',
+    'smallRhombusCyan45',
+    'smallRhombusLightBlue45',
+    'smallRhombusBlue45',
+    'smallRhombusPurple45',
+    'smallRhombusMagenta45'
+  ];
+  var rhombus30degree = [
+    'smallRhombusMaroon30',
+    'smallRhombusRed30',
+    'smallRhombusOrange30',
+    'smallRhombusYellow30',
+    'smallRhombusGreen30',
+    'smallRhombusCyan30',
+    'smallRhombusLightBlue30',
+    'smallRhombusBlue30',
+    'smallRhombusPurple30',
+    'smallRhombusMagenta30'
+  ];
+  var patternBlocks = [
+    'hexagonYellow',
+    'triangleGreen',
+    'squareOrange',
+    'trapezoidRed'
+  ];
+
+  var allShapes = [
+    ...rhombus60degree,
+    ...rhombus45degree,
+    ...rhombus30degree,
+    ...patternBlocks
+  ];
+
   /**
    * Generates a mapping of geometry sticker names to the urls of their images.
    *
    * @return the mapping of names to urls
    */
-  var shapes = function() {
+  var shapes = function(imageNames) {
     // Pattern Blocks
-    var shapes = [
-      'smallRhombusMaroon',
-      'smallRhombusRed',
-      'smallRhombusOrange',
-      'smallRhombusYellow',
-      'smallRhombusGreen',
-      'smallRhombusCyan',
-      'smallRhombusLightBlue',
-      'smallRhombusBlue',
-      'smallRhombusPurple',
-      'smallRhombusMagenta',
-      'smallRhombusMaroon45',
-      'smallRhombusRed45',
-      'smallRhombusOrange45',
-      'smallRhombusYellow45',
-      'smallRhombusGreen45',
-      'smallRhombusCyan45',
-      'smallRhombusLightBlue45',
-      'smallRhombusBlue45',
-      'smallRhombusPurple45',
-      'smallRhombusMagenta45',
-      'smallRhombusMaroon30',
-      'smallRhombusRed30',
-      'smallRhombusOrange30',
-      'smallRhombusYellow30',
-      'smallRhombusGreen30',
-      'smallRhombusCyan30',
-      'smallRhombusLightBlue30',
-      'smallRhombusBlue30',
-      'smallRhombusPurple30',
-      'smallRhombusMagenta30',
-      'hexagonYellow',
-      'triangleGreen',
-      'squareOrange',
-      'trapezoidRed'
-    ];
 
     var mapping = {};
-    var name;
 
-    for (var i = 0; i < shapes.length; i++) {
-      name = shapes[i];
+    imageNames.forEach(name => {
       mapping[name] = assetUrl('media/common_images/shapes/' + name + '.png');
-    }
-
+    });
     return mapping;
   };
 
   skin.stickers = stickers();
-  skin.shapes = shapes();
+  skin.shapes = shapes(allShapes);
+  skin.rhombus45degree = shapes(rhombus45degree);
 
   var config = CONFIGS[skin.id];
 
