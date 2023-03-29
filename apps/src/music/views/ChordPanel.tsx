@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import {getNoteName, isBlackKey} from '../utils/Notes';
 import MusicLibrary from '../player/MusicLibrary';
 import {ChordEventValue, PlayStyle} from '../player/interfaces/ChordEvent';
@@ -46,16 +46,19 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
     .filter(folder => folder.type === 'instrument')
     .map(folder => [folder.name, folder.path]);
 
-  const onPressKey = (note: number) => {
-    const newSelectedNotes = [...selectedNotes];
-    if (newSelectedNotes.includes(note)) {
-      newSelectedNotes.splice(newSelectedNotes.indexOf(note), 1);
-    } else {
-      newSelectedNotes.push(note);
-      previewNote(note, instrument);
-    }
-    setSelectedNotes(newSelectedNotes);
-  };
+  const onPressKey = useCallback(
+    (note: number) => {
+      const newSelectedNotes = [...selectedNotes];
+      if (newSelectedNotes.includes(note)) {
+        newSelectedNotes.splice(newSelectedNotes.indexOf(note), 1);
+      } else {
+        newSelectedNotes.push(note);
+        previewNote(note, instrument);
+      }
+      setSelectedNotes(newSelectedNotes);
+    },
+    [selectedNotes, instrument, setSelectedNotes, previewNote]
+  );
 
   useEffect(() => {
     onChange({
@@ -68,6 +71,18 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
   useEffect(() => {
     setIsDisabled(selectedNotes.length >= MAX_NOTES);
   }, [selectedNotes]);
+
+  const playPreview = useCallback(
+    () =>
+      previewChord({
+        notes: selectedNotes,
+        playStyle,
+        instrument
+      }),
+    [previewChord, selectedNotes, playStyle, instrument]
+  );
+
+  const onClear = useCallback(() => setSelectedNotes([]), [setSelectedNotes]);
 
   return (
     <div className={moduleStyles.chordPanelContainer}>
@@ -104,14 +119,8 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
       />
       <PreviewControls
         enabled={selectedNotes.length > 0}
-        playPreview={() =>
-          previewChord({
-            notes: selectedNotes,
-            playStyle,
-            instrument
-          })
-        }
-        onClickClear={() => setSelectedNotes([])}
+        playPreview={playPreview}
+        onClickClear={onClear}
         cancelPreviews={cancelPreviews}
       />
     </div>

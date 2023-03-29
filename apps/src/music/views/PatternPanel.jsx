@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './patternPanel.module.scss';
@@ -29,21 +29,24 @@ const PatternPanel = ({
   const currentFolder = library.getFolderForPath(currentValue.kit);
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
 
-  const toggleEvent = (sound, tick) => {
-    const index = currentValue.events.findIndex(
-      event => event.src === sound.src && event.tick === tick
-    );
-    if (index !== -1) {
-      // If found, delete.
-      currentValue.events.splice(index, 1);
-    } else {
-      // Not found, so add.
-      currentValue.events.push({src: sound.src, tick});
-      previewSound(`${currentValue.kit}/${sound.src}`);
-    }
+  const toggleEvent = useCallback(
+    (sound, tick) => {
+      const index = currentValue.events.findIndex(
+        event => event.src === sound.src && event.tick === tick
+      );
+      if (index !== -1) {
+        // If found, delete.
+        currentValue.events.splice(index, 1);
+      } else {
+        // Not found, so add.
+        currentValue.events.push({src: sound.src, tick});
+        previewSound(`${currentValue.kit}/${sound.src}`);
+      }
 
-    onChange(currentValue);
-  };
+      onChange(currentValue);
+    },
+    [currentValue]
+  );
 
   const hasEvent = (sound, tick) => {
     const element = currentValue.events.find(
@@ -70,12 +73,12 @@ const PatternPanel = ({
     );
   };
 
-  const onClear = () => {
+  const onClear = useCallback(() => {
     currentValue.events = [];
     onChange(currentValue);
-  };
+  }, [currentValue]);
 
-  const startPreview = () => {
+  const startPreview = useCallback(() => {
     setCurrentPreviewTick(1);
     const intervalId = setInterval(
       () => setCurrentPreviewTick(tick => tick + 1),
@@ -86,7 +89,7 @@ const PatternPanel = ({
       clearInterval(intervalId);
       setCurrentPreviewTick(0);
     });
-  };
+  }, [setCurrentPreviewTick, currentValue]);
 
   return (
     <div className={styles.patternPanel}>

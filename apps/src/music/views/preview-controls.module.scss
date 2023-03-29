@@ -1,4 +1,5 @@
 @import "color.scss";
+@import "../../mixins.scss";
 
 .controlsRow {
   display: flex;
@@ -8,22 +9,29 @@
   margin: 10px 0;
   justify-content: space-around;
 
+  .buttonContainer {
+    @include remove-button-styles($color: $background_gray);
+
+    &:hover,
+    &:focus {
+      > .previewButton {
+        color: $light_teal;
+
+        &Disabled {
+          color: $neutral_dark40;
+        }
+      }
+    }
+  }
+
   .previewButton {
     font-size: 30px;
     cursor: pointer;
     transition: color 0.1s ease;
 
-    &:hover {
-      color: $light_teal;
-    }
-
     &Disabled {
       color: $neutral_dark40;
       cursor: not-allowed;
-
-      &:hover {
-        color: $neutral_dark40;
-      }
     }
   }
 

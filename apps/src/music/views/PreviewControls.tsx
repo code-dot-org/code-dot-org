@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 
 const classNames = require('classnames');
 const FontAwesome = require('../../templates/FontAwesome');
@@ -24,16 +24,17 @@ interface ClearButtonProps {
 const ClearButton: React.FunctionComponent<ClearButtonProps> = ({
   onClickClear,
   cancelPreviews
-}) => (
-  <FontAwesome
-    icon={'trash-o'}
-    onClick={() => {
-      cancelPreviews();
-      onClickClear();
-    }}
-    className={moduleStyles.previewButton}
-  />
-);
+}) => {
+  const onClick = useCallback(() => {
+    cancelPreviews();
+    onClickClear();
+  }, [cancelPreviews, onClickClear]);
+  return (
+    <button className={moduleStyles.buttonContainer} onClick={onClick}>
+      <FontAwesome icon={'trash-o'} className={moduleStyles.previewButton} />
+    </button>
+  );
+};
 
 interface PreviewButtonProps {
   enabled: boolean;
@@ -45,14 +46,18 @@ const PreviewButton: React.FunctionComponent<PreviewButtonProps> = ({
   playPreview
 }) => {
   return (
-    <FontAwesome
-      icon={'volume-up'}
-      onClick={playPreview}
-      className={classNames(
-        moduleStyles.previewButton,
-        !enabled && moduleStyles.previewButtonDisabled
-      )}
-    />
+    <button
+      className={moduleStyles.buttonContainer}
+      onClick={enabled ? playPreview : undefined}
+    >
+      <FontAwesome
+        icon={'volume-up'}
+        className={classNames(
+          moduleStyles.previewButton,
+          !enabled && moduleStyles.previewButtonDisabled
+        )}
+      />
+    </button>
   );
 };
 
