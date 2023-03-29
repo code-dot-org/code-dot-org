@@ -10,6 +10,8 @@ import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
 const experiments = require('@cdo/apps/util/experiments');
 
 const MAX_DISPLAY_NOTES = 3;
+const FIELD_WIDTH = 51;
+const FIELD_HEIGHT = 18;
 
 interface FieldChordOptions {
   getLibrary: () => MusicLibrary;
@@ -28,7 +30,7 @@ export default class FieldChord extends Field {
 
   private options: FieldChordOptions;
   private newDiv: HTMLDivElement | null;
-  private movableGroup_: SVGGraphicsElement | null;
+  private backgroundElement: SVGGraphicsElement | null;
 
   constructor(options: FieldChordOptions) {
     super(options.currentValue);
@@ -37,7 +39,7 @@ export default class FieldChord extends Field {
     this.newDiv = null;
     this.SERIALIZABLE = true;
     this.CURSOR = 'default';
-    this.movableGroup_ = null;
+    this.backgroundElement = null;
   }
 
   saveState() {
@@ -55,7 +57,7 @@ export default class FieldChord extends Field {
       this.borderRect_.classList.add('blocklyDropdownRect');
     }
 
-    this.movableGroup_ = GoogleBlockly.utils.dom.createSvgElement(
+    this.backgroundElement = GoogleBlockly.utils.dom.createSvgElement(
       'g',
       {
         transform: 'translate(1,1)'
@@ -87,8 +89,8 @@ export default class FieldChord extends Field {
   }
 
   protected render_() {
-    if (this.movableGroup_) {
-      this.movableGroup_.innerHTML = "";
+    if (this.backgroundElement) {
+      this.backgroundElement.innerHTML = "";
     }
 
     const backingRectangle = GoogleBlockly.utils.dom.createSvgElement('rect',
@@ -96,23 +98,23 @@ export default class FieldChord extends Field {
       'fill': '#54595e',
       'x': 1,
       'y': 1,
-      'width': 51,
-      'height': 18
-    }, this.movableGroup_);
+      'width': FIELD_WIDTH,
+      'height': FIELD_HEIGHT
+    }, this.backgroundElement);
 
-    const graphNotes: ChordGraphNote[] = generateGraphDataFromChord(
-      {
+    const graphNotes: ChordGraphNote[] = generateGraphDataFromChord({
+      chordEventValue: {
         notes: this.getValue().notes,
         playStyle: this.getValue().playStyle,
-        instrument: ''
+        instrument: this.getValue().instrument
       } as ChordEventValue,
-      51,
-      18,
-      3,
-      4,
-      2,
-      4
-    );
+      width: FIELD_WIDTH,
+      height: FIELD_HEIGHT,
+      numOctaves: 3,
+      startOctave: 4,
+      padding: 2,
+      noteHeightScale: 4
+    });
 
     graphNotes.forEach(graphNote => {
       GoogleBlockly.utils.dom.createSvgElement('rect',
@@ -122,7 +124,7 @@ export default class FieldChord extends Field {
         'y': graphNote.y,
         'width': graphNote.width,
         'height': graphNote.height
-      }, this.movableGroup_);
+      }, this.backgroundElement);
     });
 
     this.updateSize_();
@@ -139,25 +141,6 @@ export default class FieldChord extends Field {
 
     this.size_.width = width;
     this.size_.height = height;
-
-    /*
-    const bbox = this.movableGroup_?.getBBox();
-    if (bbox?.width && bbox?.height) {
-      let width = bbox.width;
-      let height = bbox.height;
-      if (width && height && this.borderRect_) {
-        //width += this.constants_.FIELD_BORDER_RECT_X_PADDING * 2;
-        //height += this.constants_.FIELD_BORDER_RECT_X_PADDING * 2;
-        width += 5 * 2;
-        height += 5 * 2;
-        this.borderRect_.setAttribute('width', '' + width);
-        this.borderRect_.setAttribute('height', '' + height);
-      }
-      // Note how both the width and the height can be dynamic.
-      this.size_.width = width;
-      this.size_.height = height;
-    }*/
-
   }
 
   protected showEditor_() {

@@ -1,5 +1,8 @@
 import {ChordEventValue} from '../player/interfaces/ChordEvent';
 
+// Helpers for chords, used by the custom field, custom field editor panel,
+// and the music player.
+
 export interface ChordNote {
   tick: number;
   note: number;
@@ -15,14 +18,11 @@ export interface ChordGraphNote {
 // Generate an array containing tick numbers from 1..16.
 const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
 
-// Helpers for chords, used by the custom field, custom field editor panel,
-// and the music player.
-
 // Given a ChordEventValue, generate a set of notes.
 export function generateNotesFromChord(
   chordEventValue: ChordEventValue
 ): ChordNote[] {
-  const {instrument, notes, playStyle} = chordEventValue;
+  const {notes, playStyle} = chordEventValue;
   if (notes.length === 0) {
     return [];
   }
@@ -72,15 +72,25 @@ export function generateNotesFromChord(
 }
 
 // Given a ChordEventValue, generate a set of data for graphing it.
-export function generateGraphDataFromChord(
-  chordEventValue: ChordEventValue,
-  width: number,
-  height: number,
-  numOctaves: number,
-  startOctave: number,
-  padding: number,
-  noteHeightScale: number
-): ChordGraphNote[] {
+export function generateGraphDataFromChord(options: {
+  chordEventValue: ChordEventValue;
+  width: number;
+  height: number;
+  numOctaves: number;
+  startOctave: number;
+  padding: number;
+  noteHeightScale: number;
+}): ChordGraphNote[] {
+  const {
+    chordEventValue,
+    width,
+    height,
+    numOctaves,
+    startOctave,
+    padding,
+    noteHeightScale
+  } = options;
+
   const notes: ChordNote[] = generateNotesFromChord(chordEventValue);
 
   // Note widths fit in the space; note heights are exaggerated.

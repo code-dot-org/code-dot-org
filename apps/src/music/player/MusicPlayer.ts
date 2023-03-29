@@ -506,7 +506,7 @@ export default class MusicPlayer {
 
     const chordEvent = event as ChordEvent;
 
-    const {instrument, notes, playStyle} = chordEvent.value;
+    const {instrument, notes} = chordEvent.value;
     if (notes.length === 0) {
       return [];
     }
@@ -534,7 +534,6 @@ export default class MusicPlayer {
       }
 
       const noteWhen = chordEvent.when + note.tick/16;
-      //playStyle === 'together' ? chordEvent.when : chordEvent.when + i / 16;
 
       results.push({
         sampleId: `${instrument}/${sound?.src}`,
@@ -542,46 +541,6 @@ export default class MusicPlayer {
         ...event
       });
     });
-
-    /*
-    if (playStyle === 'arpeggio-up') {
-      notes.sort();
-    } else if (playStyle === 'arpeggio-down') {
-      notes.sort().reverse();
-    } else if (playStyle === 'arpeggio-random') {
-      // Randomize using Fisher-Yates Algorithm
-      for (let i = notes.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        const temp = notes[i];
-        notes[i] = notes[j];
-        notes[j] = temp;
-      }
-    }
-
-    // Create the array of samples. If the play style is arpeggio, we play one
-    // sound every 16th note, repeating the sequence as many times as needed.
-    // If the play style is "together", then only add each note once, and have them
-    // all play at the start of the given measure.
-    for (let i = 0; i < (playStyle === 'together' ? notes.length : 16); i++) {
-      const note = notes[i % notes.length];
-      const sound = folder.sounds.find(sound => sound.note === note) || null;
-      if (sound === null) {
-        console.warn(
-          `No sound for note value ${note} on instrument ${instrument}`
-        );
-        continue;
-      }
-
-      const noteWhen =
-        playStyle === 'together' ? chordEvent.when : chordEvent.when + i / 16;
-
-      results.push({
-        sampleId: `${instrument}/${sound.src}`,
-        offsetSeconds: this.convertPlayheadPositionToSeconds(noteWhen),
-        ...event
-      });
-    }
-    */
 
     return results;
   }
