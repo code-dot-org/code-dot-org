@@ -3,7 +3,8 @@ import {
   translatedCourseOfferingCsTopics,
   translatedCourseOfferingSchoolSubjects,
   translatedCourseOfferingDeviceTypes,
-  translatedCourseOfferingDeviceCompatibilityLevels
+  translatedCourseOfferingDeviceCompatibilityLevels,
+  translatedCourseOfferingDurations
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 
 describe('CourseOfferingHelpers', () => {
@@ -31,6 +32,14 @@ describe('CourseOfferingHelpers', () => {
     Object.values(translatedCourseOfferingDeviceCompatibilityLevels).forEach(
       compatibility_level => {
         expect(compatibility_level).to.not.equal('');
+      }
+    );
+  });
+
+  it('each translatedCourseOfferingDurations constant is mapped to a non-empty string', () => {
+    Object.values(translatedCourseOfferingDurations).forEach(
+      course_duration => {
+        expect(course_duration).to.not.equal('');
       }
     );
   });
