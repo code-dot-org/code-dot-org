@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "title": "The Pre-Unit Pulse ❤️🎧 - Lists, Loops, and Traversals",
+    "long_instructions": "What types of datasets do you wish you had access to in AppLab? Be as specific as you can.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "game_id": 52,
+  "published": true,
+  "created_at": "2023-03-28T23:40:31.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "audit_log": "[{\"changed_at\":\"2023-03-28T23:40:31.554+00:00\",\"changed\":[\"cloned from \\\"CSP Pre-Unit Pulse - Lists, Loops, Traversals Q2\\\"\"],\"cloned_from\":\"CSP Pre-Unit Pulse - Lists, Loops, Traversals Q2\"},{\"changed_at\":\"2023-03-28 23:40:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
