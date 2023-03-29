@@ -767,6 +767,7 @@ en:
         csd_sprite_properties: Sprite Properties
         csa-pl-documentation: Documentation in Java Lab
         csc-starquilts-intro: 'CSC: Star Quilts'
+        csc-mapmakers-intro: "CSC: Mapmakers\t"
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
