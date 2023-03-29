@@ -1,5 +1,5 @@
 {
-  "navigateForward": "Continuar",
+  "navigateForward": "Avançar",
   "navigateBack": "Voltar",
   "tryAgain": "Tente novamente",
   "navigateDone": "Concluir",
@@ -50,6 +50,48 @@
         },
         "lime": {
           "id": "lima"
+        }
+      }
+    },
+    "auto_mpg": {
+      "fields": {
+        "mpg": {
+          "id": "mpg",
+          "description": "Milhas por galão."
+        },
+        "cylinders": {
+          "id": "Cilindros",
+          "description": "O número de cilindros no motor."
+        },
+        "displacement": {
+          "id": "deslocamento",
+          "description": "Uma medida do volume do cilindro."
+        },
+        "horsepower": {
+          "id": "cavalos de potência",
+          "description": "A potência do carro."
+        },
+        "weight": {
+          "description": "O peso do carro em quilos."
+        },
+        "acceleration": {
+          "id": "aceleração",
+          "description": "A aceleração do carro."
+        },
+        "model year": {
+          "id": "ano modelo",
+          "description": "O ano em que o carro foi lançado."
+        },
+        "car name": {
+          "id": "nome do carro",
+          "description": "O nome do carro: todos os valores exclusivos."
+        }
+      },
+      "card": {
+        "description": "Um pequeno conjunto de dados de diferentes estatísticas de carros, originalmente de 1983, usado para prever seu MPG (milhas por galão). É improvável que esse conjunto de dados obtenha grandes pontuações de precisão em uma regressão KNN, mas pode ser um modelo útil: como você pode pegar um padrão geral no modelo e usá-lo para determinar quais características contribuem para maiores milhas por galão? Como você pode alterar o conjunto de dados para obter um modelo mais preciso - por exemplo, alterando o MPG de uma coluna numérica para uma categórica com intervalos de 5 MPG?",
+        "context": {
+          "potentialUses": "Determine o MPG de um carro com base em vários recursos, como peso e potência.",
+          "potentialMisuses": "Como tem 30 anos, pode não refletir os avanços da tecnologia - não compre seu carro com base nisso!"
         }
       }
     },
@@ -144,6 +186,87 @@
         },
         "meat": {
           "id": "carne"
+        }
+      }
+    },
+    "club_biased_toy": {
+      "fields": {
+        "activity": {
+          "id": "atividade",
+          "description": "De quais dessas atividades você mais gosta?"
+        },
+        "free time": {
+          "id": "tempo livre",
+          "description": "Quanto tempo livre você tem depois da escola?"
+        },
+        "personality": {
+          "id": "personalidade",
+          "description": "Como você gosta de passar seu tempo?"
+        },
+        "element": {
+          "id": "elemento",
+          "description": "Qual desses elementos é o seu favorito?"
+        },
+        "school minutes": {
+          "id": "minutos de escola",
+          "description": "Quanto tempo você leva para chegar à escola?"
+        },
+        "make build": {
+          "id": "fazer construir",
+          "description": "O que você acha da seguinte declaração: “Gosto de fazer e construir coisas com minhas mãos”"
+        },
+        "meet people": {
+          "id": "conhecer pessoas",
+          "description": "O que você acha da seguinte declaração: “Gosto de aprender coisas novas e conhecer novas pessoas”"
+        },
+        "club": {
+          "id": "clube",
+          "description": "Em qual clube você gostaria de ingressar ou do qual já faz parte?"
+        }
+      },
+      "card": {
+        "description": "O pai de Nico está em uma banda e enviou um e-mail para todos da lista de e-mails do fã-clube. A maioria das pessoas na lista de e-mail preencheu o formulário.",
+        "context": {
+          "potentialUses": "As perguntas podem ajudar a recomendar a adesão de um clube com base em seus interesses e personalidade.",
+          "potentialMisuses": "Os dados vieram apenas de pessoas de nossa escola e comunidade - tenha cuidado ao usá-los em escolas diferentes."
+        }
+      }
+    },
+    "cookies_toy": {
+      "fields": {
+        "chocolate chips": {
+          "id": "Gotas de chocolate",
+          "description": "O biscoito tem gotas de chocolate?"
+        },
+        "raisins": {
+          "id": "uva passa",
+          "description": "O biscoito tem uva passas?"
+        },
+        "oatmeal": {
+          "id": "aveia",
+          "description": "O biscoito tem aveia?"
+        },
+        "m and ms": {
+          "id": "M&Ms",
+          "description": "O biscoito tem M&Ms?"
+        },
+        "ice cream on top": {
+          "id": "sorvete por cima",
+          "description": "O biscoito tem sorvete por cima?"
+        },
+        "frosting": {
+          "id": "glacé",
+          "description": "O biscoito tem glacé?"
+        },
+        "preference": {
+          "description": "Você gosta ou não gosta do biscoito?"
+        }
+      },
+      "card": {
+        "description": "Pesquisa com clientes em uma loja de biscoitos para saber se eles gostam ou não de determinadas combinações de biscoitos.",
+        "context": {
+          "potentialUses": "Ajude a fazer recomendações sobre quais tipos de biscoitos um novo cliente deve comprar.",
+          "potentialMisuses": "Qualquer coisa que não seja recomendações de biscoitos."
         }
       }
     },
@@ -443,6 +566,37 @@
         }
       }
     },
+    "club_specific_toy": {
+      "fields": {
+        "activity": {
+          "id": "atividade",
+          "description": "Quais dessas atividades você fez no último mês?"
+        },
+        "pet you own": {
+          "id": "animal de estimação que você possui",
+          "description": "Quais desses animais de estimação você possui?"
+        },
+        "favorite movie": {
+          "id": "filme favorito",
+          "description": "Qual desses filmes você mais gosta?"
+        },
+        "lunch food": {
+          "id": "comida de almoço",
+          "description": "Quais desses alimentos você comeria no almoço?"
+        },
+        "club": {
+          "id": "clube",
+          "description": "Em qual clube você gostaria de ingressar ou do qual já faz parte?"
+        }
+      },
+      "card": {
+        "description": "Kim perguntou à irmã mais velha quais perguntas ela deveria fazer na pesquisa e, em seguida, enviou a pesquisa por e-mail para os amigos da irmã na universidade particular onde ela estuda.",
+        "context": {
+          "potentialUses": "As perguntas podem ajudar a recomendar a adesão de um clube com base em seus interesses e personalidade.",
+          "potentialMisuses": "Os dados vieram apenas de pessoas de nossa escola e comunidade - tenha cuidado ao usá-los em escolas diferentes."
+        }
+      }
+    },
     "songs": {
       "fields": {
         "Artist": {
@@ -520,10 +674,84 @@
       },
       "name": "Abalone"
     },
+    "basketball_shots": {
+      "fields": {
+        "Away team alias": {
+          "id": "Pseudônimo da equipe visitante",
+          "description": "Abreviatura do nome da equipe visitante."
+        },
+        "Home team alias": {
+          "id": "Pseudônimo da equipe da casa",
+          "description": "Abreviatura do nome do time da casa."
+        },
+        "Time in seconds": {
+          "id": "Tempo em segundos",
+          "description": "Tempo decorrido no relógio do jogo, em segundos."
+        },
+        "Jersey number": {
+          "id": "Número da camisa",
+          "description": "O número do jogador que arremessou."
+        },
+        "Inches from left baseline": {
+          "id": "Centímetros da linha de base esquerda",
+          "description": "Distância da linha de base esquerda (a linha atrás de uma cesta)."
+        },
+        "Inches from bottom sideline": {
+          "id": "Centímetros da linha lateral inferior",
+          "description": "Distância da linha lateral inferior (a linha ao longo da quadra)."
+        },
+        "Made or miss": {
+          "id": "Feito ou perdido",
+          "description": "Se o arremesso de 3 pontos foi feito ou não."
+        }
+      },
+      "card": {
+        "description": "Este conjunto de dados contém todas as tentativas de 3 pontos feitas durante o torneio da NCAA 2017. Com esses dados, é possível prever se a foto foi feita ou perdida.",
+        "context": {
+          "potentialUses": "Preveja se um arremesso de 3 pontos foi feito ou perdido."
+        }
+      },
+      "name": "Tentativas de 3 pontos da NCAA"
+    },
     "zoo": {
       "fields": {
         "Aquatic": {
           "id": "Aquático"
+        }
+      }
+    },
+    "club_sparse_toy": {
+      "fields": {
+        "activity": {
+          "id": "atividade",
+          "description": "De quais dessas atividades você mais gosta?"
+        },
+        "personality": {
+          "id": "personalidade",
+          "description": "Como você gosta de passar seu tempo?"
+        },
+        "element": {
+          "id": "elemento",
+          "description": "Qual desses elementos é o seu favorito?"
+        },
+        "make build": {
+          "id": "fazer construir",
+          "description": "O que você acha da seguinte declaração: “Gosto de fazer e construir coisas com minhas mãos”"
+        },
+        "meet people": {
+          "id": "conhecer pessoas",
+          "description": "O que você acha da seguinte declaração: “Gosto de aprender coisas novas e conhecer novas pessoas”"
+        },
+        "club": {
+          "id": "clube",
+          "description": "Em qual clube você gostaria de ingressar ou do qual já faz parte?"
+        }
+      },
+      "card": {
+        "description": "Zoey pediu a todos em sua aula de inglês que respondessem à pesquisa e todos o fizeram!",
+        "context": {
+          "potentialUses": "As perguntas podem ajudar a recomendar a adesão de um clube com base em seus interesses e personalidade.",
+          "potentialMisuses": "Os dados vieram apenas de pessoas de nossa escola e comunidade - tenha cuidado ao usá-los em escolas diferentes."
         }
       }
     },
@@ -625,6 +853,13 @@
       },
       "name": "Chá de bolhas"
     },
+    "global_happiness_raw": {
+      "fields": {
+        "Year": {
+          "id": "Ano"
+        }
+      }
+    },
     "heart": {
       "fields": {
         "Age": {
@@ -642,254 +877,6 @@
         },
         "size": {
           "id": "tamanho"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Music": {
-          "id": "Música"
-        },
-        "Dance": {
-          "id": "Dançar"
-        },
-        "Country": {
-          "id": "País"
-        }
-      }
-    },
-    "auto_mpg": {
-      "fields": {
-        "mpg": {
-          "id": "mpg",
-          "description": "Milhas por galão."
-        },
-        "cylinders": {
-          "id": "Cilindros",
-          "description": "O número de cilindros no motor."
-        },
-        "displacement": {
-          "id": "deslocamento",
-          "description": "Uma medida do volume do cilindro."
-        },
-        "horsepower": {
-          "id": "cavalos de potência",
-          "description": "A potência do carro."
-        },
-        "weight": {
-          "description": "O peso do carro em quilos."
-        },
-        "acceleration": {
-          "id": "aceleração",
-          "description": "A aceleração do carro."
-        },
-        "model year": {
-          "id": "ano modelo",
-          "description": "O ano em que o carro foi lançado."
-        },
-        "car name": {
-          "id": "nome do carro",
-          "description": "O nome do carro: todos os valores exclusivos."
-        }
-      },
-      "card": {
-        "description": "Um pequeno conjunto de dados de diferentes estatísticas de carros, originalmente de 1983, usado para prever seu MPG (milhas por galão). É improvável que esse conjunto de dados obtenha grandes pontuações de precisão em uma regressão KNN, mas pode ser um modelo útil: como você pode pegar um padrão geral no modelo e usá-lo para determinar quais características contribuem para maiores milhas por galão? Como você pode alterar o conjunto de dados para obter um modelo mais preciso - por exemplo, alterando o MPG de uma coluna numérica para uma categórica com intervalos de 5 MPG?",
-        "context": {
-          "potentialUses": "Determine o MPG de um carro com base em vários recursos, como peso e potência.",
-          "potentialMisuses": "Como tem 30 anos, pode não refletir os avanços da tecnologia - não compre seu carro com base nisso!"
-        }
-      }
-    },
-    "club_biased_toy": {
-      "fields": {
-        "activity": {
-          "id": "atividade",
-          "description": "De quais dessas atividades você mais gosta?"
-        },
-        "free time": {
-          "id": "tempo livre",
-          "description": "Quanto tempo livre você tem depois da escola?"
-        },
-        "personality": {
-          "id": "personalidade",
-          "description": "Como você gosta de passar seu tempo?"
-        },
-        "element": {
-          "id": "elemento",
-          "description": "Qual desses elementos é o seu favorito?"
-        },
-        "school minutes": {
-          "id": "minutos de escola",
-          "description": "Quanto tempo você leva para chegar à escola?"
-        },
-        "make build": {
-          "id": "fazer construir",
-          "description": "O que você acha da seguinte declaração: “Gosto de fazer e construir coisas com minhas mãos”"
-        },
-        "meet people": {
-          "id": "conhecer pessoas",
-          "description": "O que você acha da seguinte declaração: “Gosto de aprender coisas novas e conhecer novas pessoas”"
-        },
-        "club": {
-          "id": "clube",
-          "description": "Em qual clube você gostaria de ingressar ou do qual já faz parte?"
-        }
-      },
-      "card": {
-        "description": "O pai de Nico está em uma banda e enviou um e-mail para todos da lista de e-mails do fã-clube. A maioria das pessoas na lista de e-mail preencheu o formulário.",
-        "context": {
-          "potentialUses": "As perguntas podem ajudar a recomendar a adesão de um clube com base em seus interesses e personalidade.",
-          "potentialMisuses": "Os dados vieram apenas de pessoas de nossa escola e comunidade - tenha cuidado ao usá-los em escolas diferentes."
-        }
-      }
-    },
-    "cookies_toy": {
-      "fields": {
-        "chocolate chips": {
-          "id": "Gotas de chocolate",
-          "description": "O biscoito tem gotas de chocolate?"
-        },
-        "raisins": {
-          "id": "uva passa",
-          "description": "O biscoito tem uva passas?"
-        },
-        "oatmeal": {
-          "id": "aveia",
-          "description": "O biscoito tem aveia?"
-        },
-        "m and ms": {
-          "id": "M&Ms",
-          "description": "O biscoito tem M&Ms?"
-        },
-        "ice cream on top": {
-          "id": "sorvete por cima",
-          "description": "O biscoito tem sorvete por cima?"
-        },
-        "frosting": {
-          "id": "glacé",
-          "description": "O biscoito tem glacé?"
-        },
-        "preference": {
-          "description": "Você gosta ou não gosta do biscoito?"
-        }
-      },
-      "card": {
-        "description": "Pesquisa com clientes em uma loja de biscoitos para saber se eles gostam ou não de determinadas combinações de biscoitos.",
-        "context": {
-          "potentialUses": "Ajude a fazer recomendações sobre quais tipos de biscoitos um novo cliente deve comprar.",
-          "potentialMisuses": "Qualquer coisa que não seja recomendações de biscoitos."
-        }
-      }
-    },
-    "club_specific_toy": {
-      "fields": {
-        "activity": {
-          "id": "atividade",
-          "description": "Quais dessas atividades você fez no último mês?"
-        },
-        "pet you own": {
-          "id": "animal de estimação que você possui",
-          "description": "Quais desses animais de estimação você possui?"
-        },
-        "favorite movie": {
-          "id": "filme favorito",
-          "description": "Qual desses filmes você mais gosta?"
-        },
-        "lunch food": {
-          "id": "comida de almoço",
-          "description": "Quais desses alimentos você comeria no almoço?"
-        },
-        "club": {
-          "id": "clube",
-          "description": "Em qual clube você gostaria de ingressar ou do qual já faz parte?"
-        }
-      },
-      "card": {
-        "description": "Kim perguntou à irmã mais velha quais perguntas ela deveria fazer na pesquisa e, em seguida, enviou a pesquisa por e-mail para os amigos da irmã na universidade particular onde ela estuda.",
-        "context": {
-          "potentialUses": "As perguntas podem ajudar a recomendar a adesão de um clube com base em seus interesses e personalidade.",
-          "potentialMisuses": "Os dados vieram apenas de pessoas de nossa escola e comunidade - tenha cuidado ao usá-los em escolas diferentes."
-        }
-      }
-    },
-    "basketball_shots": {
-      "fields": {
-        "Away team alias": {
-          "id": "Pseudônimo da equipe visitante",
-          "description": "Abreviatura do nome da equipe visitante."
-        },
-        "Home team alias": {
-          "id": "Pseudônimo da equipe da casa",
-          "description": "Abreviatura do nome do time da casa."
-        },
-        "Time in seconds": {
-          "id": "Tempo em segundos",
-          "description": "Tempo decorrido no relógio do jogo, em segundos."
-        },
-        "Jersey number": {
-          "id": "Número da camisa",
-          "description": "O número do jogador que arremessou."
-        },
-        "Inches from left baseline": {
-          "id": "Centímetros da linha de base esquerda",
-          "description": "Distância da linha de base esquerda (a linha atrás de uma cesta)."
-        },
-        "Inches from bottom sideline": {
-          "id": "Centímetros da linha lateral inferior",
-          "description": "Distância da linha lateral inferior (a linha ao longo da quadra)."
-        },
-        "Made or miss": {
-          "id": "Feito ou perdido",
-          "description": "Se o arremesso de 3 pontos foi feito ou não."
-        }
-      },
-      "card": {
-        "description": "Este conjunto de dados contém todas as tentativas de 3 pontos feitas durante o torneio da NCAA 2017. Com esses dados, é possível prever se a foto foi feita ou perdida.",
-        "context": {
-          "potentialUses": "Preveja se um arremesso de 3 pontos foi feito ou perdido."
-        }
-      },
-      "name": "Tentativas de 3 pontos da NCAA"
-    },
-    "club_sparse_toy": {
-      "fields": {
-        "activity": {
-          "id": "atividade",
-          "description": "De quais dessas atividades você mais gosta?"
-        },
-        "personality": {
-          "id": "personalidade",
-          "description": "Como você gosta de passar seu tempo?"
-        },
-        "element": {
-          "id": "elemento",
-          "description": "Qual desses elementos é o seu favorito?"
-        },
-        "make build": {
-          "id": "fazer construir",
-          "description": "O que você acha da seguinte declaração: “Gosto de fazer e construir coisas com minhas mãos”"
-        },
-        "meet people": {
-          "id": "conhecer pessoas",
-          "description": "O que você acha da seguinte declaração: “Gosto de aprender coisas novas e conhecer novas pessoas”"
-        },
-        "club": {
-          "id": "clube",
-          "description": "Em qual clube você gostaria de ingressar ou do qual já faz parte?"
-        }
-      },
-      "card": {
-        "description": "Zoey pediu a todos em sua aula de inglês que respondessem à pesquisa e todos o fizeram!",
-        "context": {
-          "potentialUses": "As perguntas podem ajudar a recomendar a adesão de um clube com base em seus interesses e personalidade.",
-          "potentialMisuses": "Os dados vieram apenas de pessoas de nossa escola e comunidade - tenha cuidado ao usá-los em escolas diferentes."
-        }
-      }
-    },
-    "global_happiness_raw": {
-      "fields": {
-        "Year": {
-          "id": "Ano"
         }
       }
     },
@@ -932,6 +919,19 @@
         }
       },
       "name": "Avaliação do carro"
+    },
+    "loneliness_music": {
+      "fields": {
+        "Music": {
+          "id": "Música"
+        },
+        "Dance": {
+          "id": "Dançar"
+        },
+        "Country": {
+          "id": "País"
+        }
+      }
     }
   }
 }
