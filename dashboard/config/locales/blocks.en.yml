@@ -2,8 +2,34 @@
 en:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: moving NESW with arrow keys
+      AmysBlocks_addTarget:
+        text: "{TARGET} {OPT} {SPRITE} "
+        options:
+          OPT:
+            '"follows"': follows
+            '"avoids"': avoids
+      AmysBlocks_goldilocks:
+        text: |2-
+           if {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': too much
+            '"just right"': just right
+            '"too little"': too little
+      AmysBlocks_goldilocksElse:
+        text: |2-
+           if too much{SPRITE}
+          {STATEMENT}else if just right
+          {STATEMENT3}else if too little
+          {STATEMENT2}
+      AmysBlocks_makeNumSprites:
+        text: make {NUM} new {ANIMATION_NAME} sprites {LOCATION}
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): moving NSEW with arrow keys
       AmysBlocks_setPromptWithChoices:
         text: prompt user {QUESTION} for variable {VAR} with choices {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -1108,6 +1134,8 @@ en:
         text: avoiding targets
       gamelab_beginCollectingData:
         text: begin collecting data {BREAK} value {VALUE} with label {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
@@ -1329,6 +1357,8 @@ en:
         text: make new {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_makeNumSprites:
         text: make {NUM} new {ANIMATION_NAME} sprites
+      gamelab_makeNumSpritesNear:
+        text: make {NUM} new {ANIMATION_NAME} sprites near {LOCATION}
       gamelab_makeProjectile:
         text: "create projectile \n{ANIMATION_NAME} from {LOCATION} with speed {SPEED}direction{DIRECTION}"
         options:
@@ -1722,6 +1752,18 @@ en:
         text: x coordinate of {SPRITE}
       gamelab_yLocationOf:
         text: y coordinate of {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} glide to {LOCATION}"
+      KatiesBlocks_makeNumSpritesNear:
+        text: make {NUM} new {ANIMATION_NAME} sprites near {LOCATION}
+      KatiesBlocks_spriteBirdSay:
+        text: "{SPRITE} says {SPEECH}"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': My beak is pointy and strong to find insects in tree bark.
+            '"I have a beak like a scoop to catch fish."': I have a beak like a scoop to catch fish.
+      KatiesBlocks_tumbling:
+        text: tumbling
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} begins {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2433,8 +2475,6 @@ en:
         text: turn left
       RyanLab_turnRight:
         text: turn right
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} say {TEXT} for {SECONDS} seconds
       Vector_createSpriteWith:
         text: |-
           create sprite
@@ -2540,6 +2580,33 @@ en:
             '"quarantining"': quarantining when sick
             '"avoiding"': social distancing
             '"none"': staying still
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): spinning right
+            new Behavior(spinning_left, []): spinning left
+            new Behavior(fluttering, []): fluttering
+            new Behavior(jittering, []): jittering
+            new Behavior(wobbling, []): wobbling
+            new Behavior(wandering, []): wandering
+            new Behavior(patrolling, []): patrolling
+      adaptations_makeNumSpritesNear:
+        text: make {NUM} new {ANIMATION_NAME} sprites near {LOCATION}
+      adaptations_spriteBirdSay:
+        text: "{SPRITE} says {SPEECH}"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': My beak is pointy and strong to find insects in tree bark.
+            '"I have a beak like a scoop to catch fish."': I have a beak like a scoop to catch fish.
+      adaptations_startFollowing:
+        text: "{SPRITE} begins following {TARGET}"
+      adaptations_toggleBehaviorSimple:
+        text: sprite {SPRITE} {TOGGLE} {BEHAVIOR}
+        options:
+          TOGGLE:
+            '"begins"': begins
+            '"stops"': stops
       binary_drawBin:
         text: draw binary {BIN}
       binary_drawBinScreen:
@@ -2700,7 +2767,3 @@ en:
         text: prompt user {QUESTION} for variable {VAR} with choice {A}
       storylab_setSubheading:
         text: set subheading {SUBHEADING}
-      validation_validatedBackground:
-        text: set background to {IMG}
-      validation_validatedSound:
-        text: PLAYSound {SOUND}

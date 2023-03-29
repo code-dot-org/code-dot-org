@@ -8,8 +8,8 @@
   "marketing_initiative": null,
   "grade_levels": "7,8,9,10,11,12",
   "header": "Teacher-Led",
-  "image": null,
-  "cs_topic": null,
+  "image": "https://images.code.org/d7586abdba3bef9583270a10343b98d4-Blockchain.png",
+  "cs_topic": "cybersecurity",
   "school_subject": null,
-  "device_compatibility": null
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"not_recommended\"}"
 }

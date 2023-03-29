@@ -53,7 +53,6 @@ Dashboard::Application.routes.draw do
     resources :videos do
       collection do
         get 'test'
-        get 'embed/:key', to: 'videos#embed', as: 'embed'
       end
     end
 
@@ -105,6 +104,8 @@ Dashboard::Application.routes.draw do
     # For both, fall back to old proxying logic.
     get 'docs/*path', to: 'curriculum_proxy#get_doc'
     get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
+
+    get '/catalog', to: 'curriculum_catalog#index'
 
     # User-facing section routes
     resources :sections, only: [:show, :new] do

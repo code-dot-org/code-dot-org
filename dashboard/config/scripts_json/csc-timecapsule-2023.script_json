@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2023-03-09 20:44:48 UTC",
+    "serialized_at": "2023-03-16 16:21:20 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -370,7 +370,7 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Introduction\" Video ",
         "name": "Digital Time Capsule Intro",
-        "progression_name": "Introduction"
+        "progression_name": "Video"
       },
       "seeding_key": {
         "activity_section.key": "227b8dcb-fb59-4c77-925c-f696d7585eca",
@@ -407,7 +407,7 @@
       "position": 4,
       "properties": {
         "description": "**Do This**: Transition students to their computers, and have them begin following the instructions for each level in the skill building section. \n\n",
-        "progression_name": "Skill Building",
+        "progression_name": "What Is a Time Capsule?",
         "tips": [
           {
             "type": "teachingTip",
@@ -962,7 +962,7 @@
         "level_keys": [
           "csc_time capsule_intro video_2023"
         ],
-        "progression": "Introduction"
+        "progression": "Video"
       },
       "bonus": false,
       "seeding_key": {
@@ -984,7 +984,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "level_keys": [
+          "csc_timecapsule_info_2023"
+        ],
+        "progression": "What Is a Time Capsule?"
       },
       "bonus": false,
       "seeding_key": {
@@ -1281,6 +1284,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_timecapsule_choice_lesson_3"
+        ]
       },
       "bonus": false,
       "seeding_key": {

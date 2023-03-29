@@ -20,7 +20,7 @@
           "name": "Minecraft: Jornada do Herói",
           "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição funciona bem para qualquer aluno com idade suficiente para ler (mais de 6 anos). Alunos mais jovens provavelmente não conseguirão concluir o tutorial, mas terão muita diversão trabalhando com os quebra-cabeças por uma hora. Alunos do ensino médio em geral devem concluir o tutorial e ter algum tempo para se divertirem no nível gratuito de jogos no final.",
           "preparation": "### Uma semana antes do seu Hour of Code\n\n– Analise o [Guia do Professor do Hour of Code](http://hourofcode.com/resources/how-to/) e as [Melhores Práticas de Professores de Sucesso]][1] para começar a planejar seu evento Hour of Code. \n– [Registre seu evento Hour of Code](http://hourofcode.com) se você quiser receber assistência o suporte em sala de aula. \n– Analise e preencha o tutorial on-line: [Minecraft: Hero's Journey](studio.code.org/s/hero/lessons/1/levels/1) \n– Não deixe de testar antes de pedir aos alunos que façam a tarefa. Verifique a tecnologia e decida se é preciso solucionar qualquer problema antes do seu Hour of Code. \n\n### Um dia antes do seu Hour of Code\n\n– Imprima uma ou mais cópias dos [Exemplos de Tickets de Saída](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) ao final deste plano de lição, ou crie o seu próprio. \n– Cada aluno que concluir a atividade deverá receber um [certificado](https://studio.code.org/certificates/batch?course=bWM=). Imprima um para cada aluno antecipadamente, para facilitar a finalização do seu Hour of Code.",
-          "purpose": "Esta lição introduz os principais conceitos de CC de codificação e programação (utilizando blocos), bem como técnicas simples de depuração e como as funções pode ser úteis.",
+          "purpose": "Esta lição introduz os principais conceitos de CC de codificação e programação (utilizando blocos), bem como técnicas simples de depuração e como as funções podem ser úteis.",
           "student_overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. "
         },
         "poem-art-2021/Poem Art": {
@@ -96,9 +96,9 @@
         },
         "aquatic/Aquatic": {
           "name": "Minecraft: Viagem Aquática",
-          "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição funciona bem para qualquer aluno com idade suficiente para ler (mais de 6 anos). Alunos mais jovens provavelmente não conseguirão concluir o tutorial, mas terão muita diversão trabalhando com os quebra-cabeças por uma hora. Alunos do ensino médio em geral devem concluir o tutorial e ter algum tempo para se divertirem no nível gratuito de jogos no final.",
-          "preparation": "### Uma semana antes do seu Hour of Code\n\n– Analise o [Guia do Professor do Hour of Code](http://hourofcode.com/resources/how-to/) e as [Melhores Práticas de Professores de Sucesso]][1] para começar a planejar seu evento Hour of Code. \n– [Registre seu evento Hour of Code](http://hourofcode.com) se você quiser receber assistência o suporte em sala de aula. – Analise e preencha o tutorial on-line: [Minecraft: Viagem aquática](http://studio.code.org/s/aquatic/lessons/1/levels/1) \n– Não deixe de testar antes de pedir aos alunos que façam a tarefa. Verifique a tecnologia e decida se é preciso solucionar qualquer problema antes do seu Hour of Code. \n\n### Um dia antes do seu Hour of Code\n\n– Imprima uma ou mais cópias dos [Exemplos de Tickets de Saída](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) ao final deste plano de lição, ou crie o seu próprio. \n– Cada aluno que concluir a atividade deverá receber um certificado. [Imprimir um](https://studio.code.org/certificates/batch?course=bWM=) para todos antecipadamente, para facilitar a finalização do seu Hour of Code.",
-          "purpose": "Esta lição introduz os principais conceitos de CC de codificação e programação (utilizando blocos), bem como técnicas simples de depuração e estruturas condicionais. Este conjunto de enigmas serve para solidificar e desenvolver os conhecimentos de loops e introdução a estruturas condicionais. Ao parear esses dois conceitos, os alunos poderão explorar o potencial de criação de programas divertidos e inovadores em um ambiente novo e empolgante.",
+          "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição funciona bem para qualquer aluno com idade suficiente para ler (mais de 6 anos). Alunos mais jovens provavelmente não conseguirão concluir o tutorial, mas irão se divertir bastante trabalhando com os quebra-cabeças por uma hora. Alunos do ensino médio em geral devem concluir o tutorial e ter algum tempo para se divertir no nível gratuito de jogos ao final.",
+          "preparation": "### Uma semana antes do seu Hour of Code\n\n– Analise o [Guia do Professor do Hour of Code](http://hourofcode.com/resources/how-to/) e as [Melhores Práticas de Professores de Sucesso]][1] para começar a planejar seu evento Hour of Code. \n– [Registre seu evento Hour of Code](http://hourofcode.com) se você quiser receber assistência o suporte em sala de aula. – Analise e preencha o tutorial on-line: [Minecraft: Viagem aquática](http://studio.code.org/s/aquatic/lessons/1/levels/1) \n– Não deixe de testar antes de pedir aos alunos que façam a tarefa. Verifique a sua tecnologia e decida se é preciso resolver qualquer problema antes do seu Hour of Code. \n\n### Um dia antes do seu Hour of Code\n\n– Imprima uma ou mais cópias dos [Exemplos de Tickets de Saída](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) ao final deste plano de lição, ou crie o seu próprio. \n– Cada aluno que concluir a atividade deverá receber um certificado. [Imprimir um](https://studio.code.org/certificates/batch?course=bWM=) para todos antecipadamente, para facilitar a finalização do seu Hour of Code.",
+          "purpose": "Esta lição introduz os principais conceitos de CC de codificação e programação (utilizando blocos), bem como técnicas simples de depuração e estruturas condicionais. Este conjunto de enigmas serve para solidificar e desenvolver os conhecimentos de loops e introduzir estruturas condicionais. Ao parear esses dois conceitos, os alunos poderão explorar o potencial de criação de programas divertidos e inovadores em um ambiente novo e empolgante.",
           "student_overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. "
         },
         "hoc-encryption/Simple Encryption": {
@@ -1398,6 +1398,12 @@
         },
         "csd6-2022/CS Discoveries Post-Course Survey": {
           "name": "Pesquisa pós-curso da CS Discoveries"
+        },
+        "csd7-2022/Introduction to AI Lab": {
+          "name": "Introdução ao AI Lab"
+        },
+        "csd7-2022/Numerical Data in AI Lab": {
+          "name": "Dados numéricos no AI Lab"
         },
         "csd7-2022/Survey Planning": {
           "name": "Projetando a coleta de dados"
@@ -3026,7 +3032,7 @@
           "name": "Sequenciando com arrastar e soltar"
         },
         "coursea-2017/Programming: Happy Maps": {
-          "name": "Programação: Mapas felizes"
+          "name": "Programação: Happy Maps"
         },
         "coursea-2017/Programming in Maze": {
           "name": "Programação no labirinto"
@@ -4009,6 +4015,7 @@
         "jigsaw/Jigsaw": {
           "name": "Quebra-cabeça",
           "overview": "Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.",
+          "preparation": "-   Consulte o site [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) para obter mais conteúdo de segurança on-line.",
           "purpose": "O principal objetivo desta lição é construir a experiência dos alunos com computadores. Ao cobrir as funções mais básicas do computador, como clicar, arrastar e soltar, estamos criando um ambiente mais igualitário na classe para futuros quebra-cabeças. Esta lição também oferece uma ótima oportunidade para introduzir o comportamento apropriado no laboratório de informática.",
           "student_overview": "Clique e arraste para finalizar os quebra-cabeças."
         },
@@ -4990,6 +4997,12 @@
           "overview": "As próximas quatro lições proporcionam aos alunos a oportunidade de usar suas habilidades de codificação em um projeto principal. Este projeto ajudará as pessoas a ganhar experiência com codificação e produzir um exemplo para compartilhar com colegas e entes queridos. Com a intenção de ser uma experiência de várias lições ou de várias semanas, os alunos passarão um tempo explorando o brainstorming, aprendendo sobre o processo de design, construindo e apresentando seu trabalho final. \\\\r\n\\\\r\nNa fase de exploração, os alunos brincam com exemplos pré-criados de projetos no Artist e no Sprite Lab para se inspirar. Em seguida, os alunos aprenderão sobre o processo de design e como implementá-lo em seus próprios projetos. Eles terão espaço para criar seu próprio projeto no Artist, no Sprite Lab ou em outra interface com a qual se familiarizarem (esse é provavelmente o estágio mais longo do projeto). Finalmente, os alunos poderão apresentar seus trabalhos concluídos aos colegas.",
           "purpose": "Os alunos podem estar prontos para começar a construir seus projetos, mas esta lição ajudará a moldar suas ideias em planos. Essa estrutura manterá os sonhadores com os pés no chão e iluminará um caminho para aqueles que se sentem deixados no escuro. Ofereça aos alunos tempo suficiente para construir e revisar seus projetos. A tentativa e o erro inevitavelmente envolvidos nesta lição ensinarão a resolução de problemas e a persistência.",
           "student_overview": "Projetos desse tamanho levam tempo e muito planejamento. Encontre sua inspiração, desenvolva um plano e libere sua criatividade!"
+        },
+        "csd7-2021/Introduction to AI Lab": {
+          "name": "Introdução ao AI Lab"
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "name": "Dados numéricos no AI Lab"
         },
         "csd7-2021/Survey Planning": {
           "name": "Projetando a coleta de dados"

@@ -4095,6 +4095,18 @@ ja:
               display_name: 内容
             lessonGroup-4:
               display_name: 代替レッスン
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 代替レッスン
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 代替レッスン
         hello-world-space-2022:
           title: ハローワールド:スペース
         hello-world-soccer-2022:
@@ -4102,48 +4114,52 @@ ja:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 第一章
+              display_name: '第 1章: 問題解決プロセス'
             lessonGroup-3:
-              display_name: 第二章
-          title: 問題解決
+              display_name: 第 2 章コンピューターと問題解決
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: '第1章: ウェブページの作成'
             lessonGroup-3:
               display_name: '第2章: マルチページのウェブサイト'
+          student_description: ユニット2では、コンテンツを作成して自分のウェブページで共有する方法を学びます。世界と共有したいコンテンツを決定したら、HTMLとCSSを使ってページを構造化およびスタイル設定する方法を学びます。また、デバッグ、リソースの使用、チームワークなどの貴重なプログラミングスキルも練習します。
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 第 1 章：ユーザーを中心にしたデザイン
             lessonGroup-3:
               display_name: 第 2 章：アプリのプロトタイピング
-          title: 設計プロセス
+          student_description: ユニット4では、コンピューティングの幅広い社会的影響を紹介します。一連の設計課題を通じて、問題の解決策を開発しながら、他の人のニーズをよりよく理解する方法を学びます。ユニットの後半は、反復して行うチームプロジェクトで構成されています。このプロジェクトでは、チームが関心のあるニーズを特定し、紙とアプリラボの両方でソリューションのプロトタイプを作成し、実際のユーザーでテストして、フィードバックを得てさらに反復を行います。
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 第1章：情報を表現する
             lessonGroup-3:
               display_name: 第 2 章：データ問題を解決
+          description_short: コンピューターを使ってデータの問題を解決する方法を学びましょう。
+          student_description: ユニット5では、問題の解決におけるデータの重要性について説明し、このプロセスでコンピューターがどのように役立つかに脚光を浴びせます。最初の章では、コンピューターで情報を表現するために使用するさまざまなシステムと、それらを使用することによってもたらされる課題とトレードオフについて詳しく見ていきます。第2章では、データのコレクションを使って問題を解決する方法と、コンピューターがこのプロセスの手順をどのように自動化しているかを学びます。この章は、データの問題解決プロセスを選択した領域にどのように適用できるかを検討して締めくくります。
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: '第 1 章: 画像とアニメーション'
             lessonGroup-3:
               display_name: '第2章: ゲームを作る'
+          student_description: ユニット3では、ゲームラボでアニメーション、インタラクティブアート、ゲームをプログラミングしながら、プログラミングエクスペリエンスを構築します。ユニットは、単純な形状から始まり、コンピューター
+            サイエンティストが日常的に使用するのと同じプログラミング概念と設計プロセスを使って、より洗練されたスプライトベースのゲームを構築していきます。最終プロジェクトでは、パーソナライズされたインタラクティブなプログラムを開発します。
         csd6-2023:
           lesson_groups:
-            lessonGroup-2:
-              display_name: 第一章
             lessonGroup-3:
-              display_name: 第二章
-          title: 物理コンピューティング
+              display_name: '第 2 章: 物理プロパティの構築'
+          description_short: 物理デバイスでプログラミングする方法を学びます。
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 第一章
             lessonGroup-3:
               display_name: 第二章
+            lessonGroup-4:
+              display_name: アプリラボの紹介
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -4248,3 +4264,187 @@ ja:
               display_name: アプリラボの紹介
             lessonGroup-3:
               display_name: 入力と出力
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第一章
+            lessonGroup-3:
+              display_name: 第二章
+          title: 問題解決
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第一章
+          title: 問題解決
+        testing-focus-on-creativity2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第1章: ウェブページの作成'
+            lessonGroup-4:
+              display_name: '第2章: マルチページのウェブサイト'
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
+          description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
+          student_description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター
+            プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
+          description_short: 低学年向けのコンピュータ サイエンス入門です。幼児向けと小学1年生向けコースの良い所をとりだしました。
+          description_audience: '年齢: 4～8才'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_sprites:
+              display_name: スプライト
+            lessonGroup-9:
+              display_name: イベント
+            csf_loops:
+              display_name: くりかえし
+            csf_conditionals:
+              display_name: 条件
+            csf_functions:
+              display_name: 関数(かんすう)
+            csf_variables:
+              display_name: 変数（へんすう）
+            csf_for_loops:
+              display_name: ループ用
+            end_of_course_project:
+              display_name: コース最後のプロジェクト
+          description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
+          student_description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター
+            プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
+          description_short: コンピューター サイエンス入門。小学校の中高学年向けコースの良い所をとりだしました。
+          description_audience: '年齢: 9～18才'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
+            lessonGroup-5:
+              display_name: コース最後のプロジェクト
+          title: コース A (2021)
+          student_description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
+          description_short: 低学年向けコンピューター サイエンス入門
+          description_audience: 4-7 才
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_impacts:
+              display_name: コンピューティングの影響
+            csf_events:
+              display_name: イベント
+            lessonGroup-6:
+              display_name: コース最後のプロジェクト
+          student_description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
+          description_short: 就学前の児童のためのコンピューター サイエンス入門。コースAと似ていますが、コンセプトが深化しています。
+          description_audience: 5-8 才
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
+            csf_data:
+              display_name: データ
+            end_of_course_project:
+              display_name: コース最後のプロジェクト
+          student_description: シーケンス、ループ、イベントを含むプログラムを作成します。イニシャルをバイナリに変換し、さまざまな問題解決手法を調査し、ネット上のいじめに対処する方法を学びます。コースの最後に、独自のゲームやストーリーを作成して共有しましょう！
+          description_short: コンピューター サイエンスの基礎を学び、独自のアート、ストーリー、ゲームを作成しましょう。
+          description_audience: '年齢: 6～10才'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: デジタル シティズンシップ
+            csf_sequencing:
+              display_name: シークエンス
+            csf_events:
+              display_name: イベント
+            csf_loops:
+              display_name: くりかえし
+            csf_conditionals:
+              display_name: 条件
+            end_of_course_project:
+              display_name: コース最後のプロジェクト
+          title: コース D (2021)
+          description_short: 条件文について学び、独自のアート、ゲーム、さらにはダンスパーティーを作成しましょう。
+          description_audience: '年齢: 7～11才'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
+            csf_sprites:
+              display_name: スプライト
+            ramp_up:
+              display_name: 入れ子のループ
+            csf_functions:
+              display_name: 関数(かんすう)
+            csf_nested_loops:
+              display_name: 条件
+            lessonGroup-7:
+              display_name: コンピューティングの影響
+            end_of_course_project:
+              display_name: コース最後のプロジェクト
+          description_audience: '年齢: 8～12才'
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第 1章: 問題解決プロセス'
+            lessonGroup-3:
+              display_name: 第 2 章コンピューターと問題解決
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第1章: ウェブページの作成'
+            lessonGroup-3:
+              display_name: '第2章: マルチページのウェブサイト'
+          student_description: ユニット2では、コンテンツを作成して自分のウェブページで共有する方法を学びます。世界と共有したいコンテンツを決定したら、HTMLとCSSを使ってページを構造化およびスタイル設定する方法を学びます。また、デバッグ、リソースの使用、チームワークなどの貴重なプログラミングスキルも練習します。
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第 1 章: 画像とアニメーション'
+            lessonGroup-3:
+              display_name: '第2章: ゲームを作る'
+          student_description: ユニット3では、ゲームラボでアニメーション、インタラクティブアート、ゲームをプログラミングしながら、プログラミングエクスペリエンスを構築します。ユニットは、単純な形状から始まり、コンピューター
+            サイエンティストが日常的に使用するのと同じプログラミング概念と設計プロセスを使って、より洗練されたスプライトベースのゲームを構築していきます。最終プロジェクトでは、パーソナライズされたインタラクティブなプログラムを開発します。
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：ユーザーを中心にしたデザイン
+            lessonGroup-3:
+              display_name: 第 2 章：アプリのプロトタイピング
+          student_description: ユニット4では、コンピューティングの幅広い社会的影響を紹介します。一連の設計課題を通じて、問題の解決策を開発しながら、他の人のニーズをよりよく理解する方法を学びます。ユニットの後半は、反復して行うチームプロジェクトで構成されています。このプロジェクトでは、チームが関心のあるニーズを特定し、紙とアプリラボの両方でソリューションのプロトタイプを作成し、実際のユーザーでテストして、フィードバックを得てさらに反復を行います。
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章：情報を表現する
+            lessonGroup-3:
+              display_name: 第 2 章：データ問題を解決
+          description_short: コンピューターを使ってデータの問題を解決する方法を学びましょう。
+          student_description: ユニット5では、問題の解決におけるデータの重要性について説明し、このプロセスでコンピューターがどのように役立つかに脚光を浴びせます。最初の章では、コンピューターで情報を表現するために使用するさまざまなシステムと、それらを使用することによってもたらされる課題とトレードオフについて詳しく見ていきます。第2章では、データのコレクションを使って問題を解決する方法と、コンピューターがこのプロセスの手順をどのように自動化しているかを学びます。この章は、データの問題解決プロセスを選択した領域にどのように適用できるかを検討して締めくくります。
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: アプリラボの紹介
+            lessonGroup-3:
+              display_name: 第一章
+            lessonGroup-4:
+              display_name: 第二章

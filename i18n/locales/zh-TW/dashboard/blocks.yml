@@ -2,6 +2,8 @@
 zh-TW:
   data:
     blocks:
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: 提示用戶{QUESTION}變量{VAR}，選項{A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -1060,6 +1062,8 @@ zh-TW:
         text: 避開目標
       gamelab_beginCollectingData:
         text: 開始收集數據{BREAK}，值{VALUE}，標籤{LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} 跳離 {TARGET}"
       gamelab_changePropBy:
@@ -1660,6 +1664,10 @@ zh-TW:
         text: x 座標 {SPRITE}
       gamelab_yLocationOf:
         text: y 座標 {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE}滑動到{LOCATION}"
+      KatiesBlocks_tumbling:
+        text: 翻滾
       Mikelab_addBehaviorSimple:
         text: 角色 {SPRITE} 開始 {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2290,8 +2298,6 @@ zh-TW:
         text: 轉向-左方
       RyanLab_turnRight:
         text: 轉向-右方
-      SpriteLab2Beta_spriteSay:
-        text: 雪 碧 {SPRITE} 說 {TEXT} 對於 {SECONDS} 秒
       Vector_createSpriteWith:
         text: |-
           創建子畫面
@@ -2340,6 +2346,19 @@ zh-TW:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE}說{SPEECH}"
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): 向右旋轉
+            new Behavior(spinning_left, []): 向左旋轉
+            new Behavior(fluttering, []): 飄移
+            new Behavior(jittering, []): 抖動
+            new Behavior(wobbling, []): 搖晃
+            new Behavior(wandering, []): 徘徊
+            new Behavior(patrolling, []): 巡邏
+      adaptations_startFollowing:
+        text: "{SPRITE}開始跟隨{TARGET}"
       binary_drawBin:
         text: 繪製二進位 {BIN}
       binary_drawBinScreen:
@@ -2496,5 +2515,3 @@ zh-TW:
         text: 設置標題 {HEADING}
       storylab_setSubheading:
         text: 設置副標題 {SUBHEADING}
-      validation_validatedBackground:
-        text: 背景設為 {IMG}

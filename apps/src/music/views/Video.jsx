@@ -62,7 +62,7 @@ const Video = ({id, onClose}) => {
             width="100%"
             height="100%"
             style={{border: 'none'}}
-            src="https://www.youtube-nocookie.com/embed/qYZF6oIZtfc"
+            src="https://www.youtube-nocookie.com/embed/ab2SBrfkKXU"
             title=""
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen

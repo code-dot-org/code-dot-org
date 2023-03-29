@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "blockchain",
-    "serialized_at": "2023-03-15 22:30:12 UTC",
+    "serialized_at": "2023-03-20 23:16:18 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2435,7 +2435,13 @@
       "key": "11b1d5c5-7b81-4a4e-bd16-9598ca92c299",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a set of\n[r asset_cards/blockchain/2023]."
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a set of\n[r asset_cards/blockchain/2023].",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Real or Fake?** Hopefully these resources feel realistic to students and provide meaningful context, but each of these assets are **fake** and were invented just for this lesson. However, they were inspired by real NFTs, Cryptocurrencies, and Stablecoins which influence their design and description - students may make comments about how these feel similar to real assets they see in headlines."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "11b1d5c5-7b81-4a4e-bd16-9598ca92c299",
@@ -4026,6 +4032,28 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/blockchain-2023/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/blockchain-2023/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Under the Hood",
       "url": "https://docs.google.com/presentation/d/1PT6NNzHnbEdoqI_VIWgU-lnmMgvYJr6Knwhwm90m4JE/template/preview",
       "key": "applied_blockchain_bitcoin",
@@ -4723,7 +4751,18 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "blockchain-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 

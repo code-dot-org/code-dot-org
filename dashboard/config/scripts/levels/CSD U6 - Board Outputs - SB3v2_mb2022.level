@@ -53,7 +53,8 @@
     "parent_level_id": 20398,
     "name_suffix": "_mb2022",
     "reference_links": [
-      "/courses/csd-2022/guides/responding-to-user-input"
+      "/courses/csd-2022/guides/microbit-overview",
+      "/courses/csd-2022/guides/microbit-display"
     ],
     "mini_rubric": "false",
     "text_mode_at_start": "false",
@@ -62,9 +63,7 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "KaqGIIGL0CM6bMdl5zLPsRjwSOlzAlAbQsx2JQ3Y5q/WHOCxlHhCyfBFkyP7\nOAq6qYIsjjQiUVUfkQOEa8KqLQ==\n"
   },
   "game_id": 41,
   "published": true,
@@ -72,7 +71,7 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-14T00:14:37.369+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - SB1_mb2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - SB1_mb2022\"},{\"changed_at\":\"2023-02-14 00:18:00 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-14T00:14:37.369+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - SB1_mb2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - SB1_mb2022\"},{\"changed_at\":\"2023-02-14 00:18:00 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-27 20:41:34 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-27 20:43:10 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

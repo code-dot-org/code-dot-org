@@ -841,13 +841,19 @@
           "Target Number": "Docelowa liczba"
         },
         "CSD U6 - Board Inputs - SB1_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Board Inputs - SB2_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Board Inputs - SB3_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Board Outputs - A_2222": {
           "Happy": "Radosny",
@@ -856,13 +862,19 @@
           "Sleepy": "Senny"
         },
         "CSD U6 - Board Outputs - P_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Board Outputs - SB1_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Board Outputs - SB2_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "Ryba",
@@ -871,7 +883,9 @@
         },
         "CSD U6 - Board Outputs - Setup_2222": {
           "Success!": "Udało się!",
-          "Connect your board to an LED, then plug it in and press Run": "Podłącz swoją płytę do diody LED, następnie podłącz ją i naciśnij Uruchom"
+          "Connect your board to an LED, then plug it in and press Run": "Podłącz swoją płytę do diody LED, następnie podłącz ją i naciśnij Uruchom",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
           "North": "Północ",
@@ -880,13 +894,19 @@
           "West": "Zachód"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Color LEDs - SB2_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Color LEDs - SB3_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Średni",
@@ -1053,7 +1073,9 @@
           "A#": "A#"
         },
         "CSD U6 - Music - SB4_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
@@ -1064,54 +1086,84 @@
           "You Won!": "Wygrałeś!"
         },
         "CSD U6 - Physical Input - ChalA_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Physical Input - ChalB_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Physical Input - ChalC_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Physical Input - PA_2222": {
           "Score": "Wynik",
           "0": "0"
         },
         "CSD U6 - Physical Input - PC_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Physical Input - PD_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Physical Input - SB1_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Physical Output - ChalA_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Physical Output - ChalB_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Physical Output - ChalC_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Physical Output - PB_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Physical Output - PC_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Physical Output - P_2222": {
           "Success!": "Udało się!",
-          "Connect your board to an LED, then plug it in and press Run": "Podłącz swoją płytę do diody LED, następnie podłącz ją i naciśnij Uruchom"
+          "Connect your board to an LED, then plug it in and press Run": "Podłącz swoją płytę do diody LED, następnie podłącz ją i naciśnij Uruchom",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Physical Output - SB1_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Physical Output - SB2.2_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Physical Output - SB2_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "Nazwisko:",
@@ -1184,7 +1236,8 @@
           "right": "w prawo"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
-          "name": "nazwa"
+          "name": "nazwa",
+          "Hello": "Witaj"
         },
         "CSD U6 - Sensors - A_2222": {
           "0": "0",
@@ -1249,16 +1302,24 @@
           "pulse": "puls"
         },
         "CSD U6 LED toggle": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 LED toggle_2018": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 LED toggle_2019": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 LED toggle_2021": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 Pedometer": {
           "0": "0",
@@ -1281,16 +1342,24 @@
           "You Did It!": "Ty to zrobiłeś!"
         },
         "CSD U6 add LED button": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 add LED button_2018": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 add LED button_2019": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 add LED button_2021": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 analog light": {
           "Update": "Uaktualnij",
@@ -1725,16 +1794,24 @@
           "Score:": "Wynik:"
         },
         "CSD U6 predict LED button": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 predict LED button_2018": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 predict LED button_2019": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 predict LED button_2021": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 sensor experiment embedded": {
           "text": "tekst",
@@ -1813,16 +1890,24 @@
           "Game Over": "Koniec gry"
         },
         "CSD U6 test LED": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 test LED_2018": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 test LED_2019": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSD U6 test LED_2021": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSDU4 Connecting Screens": {
           "Red": "Czerwona/Czerwone",
@@ -2202,19 +2287,29 @@
           "I'm taking computer science class at school!": "Biorę lekcje informatyki w szkole!"
         },
         "CSDU6 Circuit Playground Test": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSDU6 Circuit Playground Test_2018": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSDU6 Circuit Playground Test_2019": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSDU6 Circuit Playground Test_2021": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSDU6 Circuit Playground Test_2222": {
-          "Success!": "Udało się!"
+          "Success!": "Udało się!",
+          "Try the following:": "Spróbuj wykonać następujące czynności:",
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
         },
         "CSDU6 circuit playground piano": {
           "C": "B",
@@ -2346,7 +2441,8 @@
           "Sidewalk": "Chodnik",
           "Taxi": "Taxi",
           "Wall": "Ściana",
-          "Other Objects": "Inne obiekty"
+          "Other Objects": "Inne obiekty",
+          "Manual": "Podręcznik"
         },
         "csd u5 recommender sample": {
           "Start": "Rozpocznij",
@@ -2874,7 +2970,8 @@
           "Outdoors": "Na zewnątrz",
           "Indoors": "Wewnątrz",
           "How do you like to spendtime?": "Jak lubisz spędzać czas?",
-          "With Friends": "Z przyjaciółmi"
+          "With Friends": "Z przyjaciółmi",
+          "Which animal do you like the most?": "Które zwierzę lubisz najbardziej?"
         },
         "ml-intro app lab-book recommender demo_2022": {
           "Silly": "Głupia\n",
@@ -2888,7 +2985,8 @@
           "Outdoors": "Na zewnątrz",
           "Indoors": "Wewnątrz",
           "How do you like to spendtime?": "Jak lubisz spędzać czas?",
-          "With Friends": "Z przyjaciółmi"
+          "With Friends": "Z przyjaciółmi",
+          "Which animal do you like the most?": "Które zwierzę lubisz najbardziej?"
         },
         "ml-model card-medical app v2 2021-2": {
           "W": "W",
@@ -2964,7 +3062,8 @@
           "Outdoors": "Na zewnątrz",
           "Indoors": "Wewnątrz",
           "How do you like to spendtime?": "Jak lubisz spędzać czas?",
-          "With Friends": "Z przyjaciółmi"
+          "With Friends": "Z przyjaciółmi",
+          "Which animal do you like the most?": "Które zwierzę lubisz najbardziej?"
         },
         "ml-model cards-book recommender model card_2022": {
           "Silly": "Głupia\n",
@@ -2978,7 +3077,8 @@
           "Outdoors": "Na zewnątrz",
           "Indoors": "Wewnątrz",
           "How do you like to spendtime?": "Jak lubisz spędzać czas?",
-          "With Friends": "Z przyjaciółmi"
+          "With Friends": "Z przyjaciółmi",
+          "Which animal do you like the most?": "Które zwierzę lubisz najbardziej?"
         },
         "ml-models in applab-choice if quotes": {
           "3": "3",
@@ -2995,7 +3095,8 @@
           "Pet Recommendation: Fish!": "Rekomendacja zwierzęcia domowego: Ryba!",
           "Pet Recommendation: Iguana!": "Rekomendacja zwierzęcia domowego: Iguana!",
           "Pet Recommendation: Parakeet": "Rekomendacja zwierzęcia domowego: Papużka",
-          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!"
+          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!",
+          "Playful?": "Wesołe?"
         },
         "ml-models in applab-choice if quotes_2022": {
           "3": "3",
@@ -3012,7 +3113,8 @@
           "Pet Recommendation: Fish!": "Rekomendacja zwierzęcia domowego: Ryba!",
           "Pet Recommendation: Iguana!": "Rekomendacja zwierzęcia domowego: Iguana!",
           "Pet Recommendation: Parakeet": "Rekomendacja zwierzęcia domowego: Papużka",
-          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!"
+          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!",
+          "Playful?": "Wesołe?"
         },
         "ml-models in applab-choice if wrong place": {
           "3": "3",
@@ -3029,7 +3131,8 @@
           "Pet Recommendation: Fish!": "Rekomendacja zwierzęcia domowego: Ryba!",
           "Pet Recommendation: Iguana!": "Rekomendacja zwierzęcia domowego: Iguana!",
           "Pet Recommendation: Parakeet": "Rekomendacja zwierzęcia domowego: Papużka",
-          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!"
+          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!",
+          "Playful?": "Wesołe?"
         },
         "ml-models in applab-choice if wrong place_2022": {
           "3": "3",
@@ -3046,7 +3149,8 @@
           "Pet Recommendation: Fish!": "Rekomendacja zwierzęcia domowego: Ryba!",
           "Pet Recommendation: Iguana!": "Rekomendacja zwierzęcia domowego: Iguana!",
           "Pet Recommendation: Parakeet": "Rekomendacja zwierzęcia domowego: Papużka",
-          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!"
+          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!",
+          "Playful?": "Wesołe?"
         },
         "ml-models in applab-choice intended warnings": {
           "3": "3",
@@ -3067,7 +3171,8 @@
           "Pet Recommendation: Parakeet": "Rekomendacja zwierzęcia domowego: Papużka",
           "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!",
           "Intended Uses": "Zamierzone użycia",
-          "Limitations and Warnings": "Ograniczenia i ostrzeżenia"
+          "Limitations and Warnings": "Ograniczenia i ostrzeżenia",
+          "Playful?": "Wesołe?"
         },
         "ml-models in applab-choice intended warnings_2022": {
           "3": "3",
@@ -3088,7 +3193,8 @@
           "Pet Recommendation: Parakeet": "Rekomendacja zwierzęcia domowego: Papużka",
           "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!",
           "Intended Uses": "Zamierzone użycia",
-          "Limitations and Warnings": "Ograniczenia i ostrzeżenia"
+          "Limitations and Warnings": "Ograniczenia i ostrzeżenia",
+          "Playful?": "Wesołe?"
         },
         "ml-models in applab-choice predict typos": {
           "3": "3",
@@ -3105,7 +3211,8 @@
           "Pet Recommendation: Fish!": "Rekomendacja zwierzęcia domowego: Ryba!",
           "Pet Recommendation: Iguana!": "Rekomendacja zwierzęcia domowego: Iguana!",
           "Pet Recommendation: Parakeet": "Rekomendacja zwierzęcia domowego: Papużka",
-          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!"
+          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!",
+          "Playful?": "Wesołe?"
         },
         "ml-models in applab-choice predict typos_2022": {
           "3": "3",
@@ -3122,7 +3229,8 @@
           "Pet Recommendation: Fish!": "Rekomendacja zwierzęcia domowego: Ryba!",
           "Pet Recommendation: Iguana!": "Rekomendacja zwierzęcia domowego: Iguana!",
           "Pet Recommendation: Parakeet": "Rekomendacja zwierzęcia domowego: Papużka",
-          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!"
+          "Pet Recommendation: Dog!": "Rekomendacja zwierzęcia domowego: Pies!",
+          "Playful?": "Wesołe?"
         },
         "ml-models in applab-zoo assessment": {
           "Yes": "Tak",
@@ -3134,7 +3242,9 @@
           "It's a Bird!": "To ptak!",
           "It's a Fish!": "To ryba!",
           "It's an Amphibian!": "To płaz!",
-          "It's a Crustacean!": "To skorupiak!"
+          "It's a Crustacean!": "To skorupiak!",
+          "It's A Mammal!": "To ssak!",
+          "It's a Bug!": "To błąd!"
         },
         "ml-models in applab-zoo assessment_2022": {
           "Yes": "Tak",
@@ -3146,7 +3256,9 @@
           "It's a Bird!": "To ptak!",
           "It's a Fish!": "To ryba!",
           "It's an Amphibian!": "To płaz!",
-          "It's a Crustacean!": "To skorupiak!"
+          "It's a Crustacean!": "To skorupiak!",
+          "It's A Mammal!": "To ssak!",
+          "It's a Bug!": "To błąd!"
         },
         "ml-models in applab-zoo model embed": {
           "Yes": "Tak",
@@ -3161,7 +3273,9 @@
           "It's a Crustacean!": "To skorupiak!",
           "Intended Uses": "Zamierzone użycia",
           "Next!": "Następny!",
-          "Limitations": "Ograniczenia"
+          "Limitations": "Ograniczenia",
+          "It's A Mammal!": "To ssak!",
+          "It's a Bug!": "To błąd!"
         },
         "ml-models in applab-zoo model embed_2022": {
           "Yes": "Tak",
@@ -3176,7 +3290,9 @@
           "It's a Crustacean!": "To skorupiak!",
           "Intended Uses": "Zamierzone użycia",
           "Next!": "Następny!",
-          "Limitations": "Ograniczenia"
+          "Limitations": "Ograniczenia",
+          "It's A Mammal!": "To ssak!",
+          "It's a Bug!": "To błąd!"
         },
         "ml-models-shoes decision tree-2021": {
           "Sports": "Zawody",
@@ -3227,7 +3343,8 @@
           "How Many Other Cars Are On The Road?": "Ile innych samochodów jest na drodze?",
           "What Is The Weather Like?": "Jaka jest pogoda?",
           "What is the Temperature Outside?": "Jaka jest temperatura na zewnątrz?",
-          "What time of day is it?": "Jaka jest pora dnia?"
+          "What time of day is it?": "Jaka jest pora dnia?",
+          "Predict!": "Przewidywać!"
         },
         "ml-use model card-example3A_2022": {
           "rain": "deszcz",
@@ -3246,7 +3363,8 @@
           "How Many Other Cars Are On The Road?": "Ile innych samochodów jest na drodze?",
           "What Is The Weather Like?": "Jaka jest pogoda?",
           "What is the Temperature Outside?": "Jaka jest temperatura na zewnątrz?",
-          "What time of day is it?": "Jaka jest pora dnia?"
+          "What time of day is it?": "Jaka jest pora dnia?",
+          "Predict!": "Przewidywać!"
         },
         "AppLab Intro 7 - Change Text 2": {
           "Make me bigger and blue!": "Uczyń mnie większym i niebieskim!"
@@ -4004,6 +4122,13 @@
           "Recommend Shoes!": "Poleć buty!",
           "Another Recommendation!": "Kolejna rekomendacja!",
           "We Recommend...": "Polecamy..."
+        },
+        "AllTheThings Applab DesignModeDefault": {
+          "Login": "Logowanie"
+        },
+        "CSD U6 - Board Outputs - PracC_2222": {
+          "Light Off": "Światło wyłączone",
+          "Light On": "Światło włączone"
         }
       }
     }

@@ -615,8 +615,6 @@ tr:
         CSF_my_robotic_friends: Robot dostlarım
         CSF_Power_of_Words: Kelimelerin Gücü
         CSF_Super_Digital_Citizen: Süper Dijital Vatandaş
-        CSF_stevie_big_project: Stevie ve büyük proje
-        CSF_unspotted_bugs: Bulunamamış hatalar
         CSF_zuck_loops_short: Döngüleri yineleyin
         frozen_intro: Kodlama Saatine Giriş
         frozen_loops: Döngülere Giriş
@@ -928,6 +926,7 @@ tr:
         csc-sprite-lab-pixel-editor: Kendi Hareketli Nesneni Çiz
         csa-pl-intro-to-strings: Java'da Dizgilere Giriş
         csa-pl-compareTo: Karşılaştırma () metodu
+        csd_sprite_properties: Nesne özellikleri
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

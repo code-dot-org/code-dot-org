@@ -407,6 +407,44 @@
         },
         "MC_HOC_2017_FP20x202022": {
           "MC_HOC_2017_13_Cole_a": "Püüa panna Agent ehitama mõned minecartid, et ta saaks maailma avastada!"
+        },
+        "Dance_Party_05": {
+          "validation": "\\*\\* Kuidas ma saan sellest tasemest läbi? \\*\\*\n\n-   Teie tantsija peab enne taseme lõppu läbima vähemalt 4 erinevat tantsukäiku.\n\n\\_See tase lõpeb pärast 12-t mõõtu. \\_"
+        },
+        "Function intro Ryan": {
+          "Function_intro_Ryan_b": "Kui kutsute funktsioone õigesti välja, siis on see tee, mida te reisite...",
+          "Function_intro_Ryan_a": "Võite funktsiooni mitu korda välja kutsuda oma programmi sees! Proovige seda kaks korda välja kutsuda, et lahendada see pusle."
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_b": "Kui kutsute funktsioone õigesti välja, siis on see tee, mida te reisite...",
+          "Function_intro_Ryan_a": "Võite funktsiooni mitu korda välja kutsuda oma programmi sees! Proovige seda kaks korda välja kutsuda, et lahendada see pusle."
+        },
+        "Function intro Ryan_2019": {
+          "Function_intro_Ryan_b": "Kui kutsute funktsioone õigesti välja, siis on see tee, mida te reisite...",
+          "Function_intro_Ryan_a": "Võite funktsiooni mitu korda välja kutsuda oma programmi sees! Proovige seda kaks korda välja kutsuda, et lahendada see pusle."
+        },
+        "Function intro Ryan_2020": {
+          "Function_intro_Ryan_b": "Kui kutsute funktsioone õigesti välja, siis on see tee, mida te reisite...",
+          "Function_intro_Ryan_a": "Võite funktsiooni mitu korda välja kutsuda oma programmi sees! Proovige seda kaks korda välja kutsuda, et lahendada see pusle."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_b": "Kui kutsute funktsioone õigesti välja, siis on see tee, mida te reisite...",
+          "Function_intro_Ryan_a": "Võite funktsiooni mitu korda välja kutsuda oma programmi sees! Proovige seda kaks korda välja kutsuda, et lahendada see pusle."
+        },
+        "courseC_artist_loops7a2022": {
+          "courseC_artist_loops7a_a": "Ringis on 360 kraadi. Korruta oma pöörde kraadid nii mitu korda kui Sa kordad pööret. Kas see on 360-ga võrdne?\nKontrollige soovitatud pöördeid, et näha, et see toimib!\n\nSiin on mõned näited, kuidas alustada:\n\n-   Proovige 60-kraadist pööret 6 korda\n-   Proovige 45-kraadist pööret 8 korda\n-   Proovige 30-kraadist pööret 12 korda"
+        },
+        "courseD_artist_nestedLoops52022": {
+          "courseD_artist_nestedLoops5_a": "Selleks et lihtsalt teha:\n\n- korda 4 korda\n  - tee ring\n  - hüppa edasi 50 pikslit\n  - pööra paremale 90 kraadi"
+        },
+        "courseD_artist_nestedLoops72022": {
+          "courseD_artist_nestedLoops7_b": "Kasutage pesastatud tsüklit, kus sisemine tsükkel on ruudu kood.\n\n- korda 6 korda\n  - tee ruut\n  - hüppa edasi **50 pikslit**\n  - keera **60 kraadi**"
+        },
+        "courseD_artist_nestedLoops82022": {
+          "courseD_artist_nestedLoops8_c": "Kasuta pesastatud tsüklit:\n\n  - Korda 8 korda\n    - joonista kuusnurk\n    - hüppa edasi 50 pikslit\n    - pööra paremale 45 kraadi"
+        },
+        "courseD_artist_nestedLoops92022": {
+          "courseD_artist_nestedLoops9_c": "Kasutage kahte pesastatud tsüklit:\n  - Korda 8 korda\n    - joonista ruut\n    - hüppa edasi 50 pikslit\n    - pööra paremale 45 kraadi\n  - Korda 8 korda\n    - joonista kolmnurk\n    - hüppa edasi 50 pikslit\n    - pööra paremale 45 kraadi"
         }
       }
     }

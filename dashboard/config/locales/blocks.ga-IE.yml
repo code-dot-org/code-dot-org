@@ -1360,6 +1360,8 @@ ga:
         text: comhordanáid x de {SPRITE}
       gamelab_yLocationOf:
         text: comhordanáid y de {SPRITE}
+      KatiesBlocks_tumbling:
+        text: rothlam
       Mikelab_addBehaviorSimple:
         text: nuair a thosaíonn {SPRITE} {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1742,6 +1744,13 @@ ga:
             '0.75': most
             '0.5': half of
             '0.25': few
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): casadh ar deiseal
+            new Behavior(jittering, []): crith
+            new Behavior(wandering, []): fánaíocht
+            new Behavior(patrolling, []): patrólú
       binary_drawPixelHere:
         options:
           VAL:
@@ -1867,5 +1876,3 @@ ga:
             '"hearts"': croíthe
             '"rain"': báisteach
             '"starburst"': Pléascadh Réaltaí
-      validation_validatedBackground:
-        text: 'socraigh an cúlra: {IMG}'

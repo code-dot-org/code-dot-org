@@ -29,6 +29,9 @@
         "ai-training/oceans/unversioned": {
           "type": "Video"
         },
+        "curriculum_guide/coursed/2022": {
+          "name": "Õppekava juhend"
+        },
         "implementation_guide/coursed/2022": {
           "name": "Rakendamise juhend"
         },
@@ -89,6 +92,9 @@
         "conditionals_with_cards_4/coursed/2022": {
           "name": "Tingimuslaused kaartidel"
         },
+        "curriculum_guide/coursef/2022": {
+          "name": "Õppekava juhend"
+        },
         "implementation_guide/coursef/2022": {
           "name": "Rakendamise juhend"
         },
@@ -116,6 +122,9 @@
         "the_internet/coursef/2022": {
           "name": "Internet"
         },
+        "curriculum_guide/coursee/2022": {
+          "name": "Õppekava juhend"
+        },
         "implementation_guide/coursee/2022": {
           "name": "Rakendamise juhend"
         },
@@ -124,6 +133,9 @@
         },
         "digital_sharing_ethics_video_/coursee/2022": {
           "type": "Video"
+        },
+        "curriculum_guide/courseb/2022": {
+          "name": "Õppekava juhend"
         },
         "implementation_guide/courseb/2022": {
           "name": "Rakendamise juhend"
@@ -208,6 +220,9 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "Video"
         },
+        "curriculum_guide/coursea/2022": {
+          "name": "Õppekava juhend"
+        },
         "implementation_guide/coursea/2022": {
           "name": "Rakendamise juhend"
         },
@@ -243,6 +258,9 @@
         },
         "the_big_event_2/coursea/2022": {
           "name": "Suursündmus"
+        },
+        "curriculum_guide/coursec/2022": {
+          "name": "Õppekava juhend"
         },
         "implementation_guide/coursec/2022": {
           "name": "Rakendamise juhend"
@@ -589,11 +607,17 @@
         "vocabulary/coursec/2018": {
           "name": "Sõnavara"
         },
+        "code_introduced_1/csd/2018": {
+          "name": "Koodi tutvustus"
+        },
         "lesson_plans_2/csd/2018": {
           "name": "Tunniplaan"
         },
         "vocabulary_2/csd/2018": {
           "name": "Sõnavara"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Koodi tutvustus"
         },
         "lesson_plans_5/csd/2018": {
           "name": "Tunniplaan"
@@ -607,11 +631,17 @@
         "vocabulary_4/csd/2018": {
           "name": "Sõnavara"
         },
+        "code_introduced_2/csd/2018": {
+          "name": "Koodi tutvustus"
+        },
         "lesson_plans_3/csd/2018": {
           "name": "Tunniplaan"
         },
         "vocabulary_3/csd/2018": {
           "name": "Sõnavara"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Koodi tutvustus"
         },
         "lesson_plans_1/csd/2018": {
           "name": "Tunniplaan"
@@ -625,11 +655,17 @@
         "vocabulary/csd/2018": {
           "name": "Sõnavara"
         },
+        "curriculum_guide/coursea/2019": {
+          "name": "Õppekava juhend"
+        },
         "lesson_plans/coursea/2019": {
           "name": "Tunniplaan"
         },
         "vocabulary/coursea/2019": {
           "name": "Sõnavara"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "Õppekava juhend"
         },
         "lesson_plans/courseb/2019": {
           "name": "Tunniplaan"
@@ -637,17 +673,26 @@
         "vocabulary/courseb/2019": {
           "name": "Sõnavara"
         },
+        "curriculum_guide/coursed/2019": {
+          "name": "Õppekava juhend"
+        },
         "lesson_plans/coursed/2019": {
           "name": "Tunniplaan"
         },
         "vocabulary/coursed/2019": {
           "name": "Sõnavara"
         },
+        "curriculum_guide/coursef/2019": {
+          "name": "Õppekava juhend"
+        },
         "lesson_plans/coursef/2019": {
           "name": "Tunniplaan"
         },
         "vocabulary/coursef/2019": {
           "name": "Sõnavara"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "Õppekava juhend"
         },
         "lesson_plans/coursee/2019": {
           "name": "Tunniplaan"
@@ -661,11 +706,17 @@
         "vocabulary/express/2019": {
           "name": "Sõnavara"
         },
+        "curriculum_guide/coursec/2019": {
+          "name": "Õppekava juhend"
+        },
         "lesson_plans/coursec/2019": {
           "name": "Tunniplaan"
         },
         "vocabulary/coursec/2019": {
           "name": "Sõnavara"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Koodi tutvustus"
         },
         "lesson_plans_2/csd/2019": {
           "name": "Tunniplaan"
@@ -673,11 +724,17 @@
         "vocabulary_2/csd/2019": {
           "name": "Sõnavara"
         },
+        "code_introduced_3/csd/2019": {
+          "name": "Koodi tutvustus"
+        },
         "lesson_plans_5/csd/2019": {
           "name": "Tunniplaan"
         },
         "vocabulary_5/csd/2019": {
           "name": "Sõnavara"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Koodi tutvustus"
         },
         "lesson_plans_3/csd/2019": {
           "name": "Tunniplaan"
@@ -697,11 +754,17 @@
         "vocabulary/csd/2019": {
           "name": "Sõnavara"
         },
+        "code_introduced/csd/2019": {
+          "name": "Koodi tutvustus"
+        },
         "lesson_plans_1/csd/2019": {
           "name": "Tunniplaan"
         },
         "vocabulary_1/csd/2019": {
           "name": "Sõnavara"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Koodi tutvustus"
         },
         "lesson_plans_2/csd/2017": {
           "name": "Tunniplaan"
@@ -709,11 +772,17 @@
         "vocabulary_2/csd/2017": {
           "name": "Sõnavara"
         },
+        "code_introduced_3/csd/2017": {
+          "name": "Koodi tutvustus"
+        },
         "lesson_plans_5/csd/2017": {
           "name": "Tunniplaan"
         },
         "vocabulary_5/csd/2017": {
           "name": "Sõnavara"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Koodi tutvustus"
         },
         "lesson_plans_1/csd/2017": {
           "name": "Tunniplaan"
@@ -733,6 +802,9 @@
         "vocabulary_4/csd/2017": {
           "name": "Sõnavara"
         },
+        "code_introduced_2/csd/2017": {
+          "name": "Koodi tutvustus"
+        },
         "lesson_plans_3/csd/2017": {
           "name": "Tunniplaan"
         },
@@ -743,6 +815,9 @@
           "name": "",
           "url": "",
           "type": ""
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Õppekava juhend"
         },
         "implementation_guide/coursef/2021": {
           "name": "Rakendamise juhend"
@@ -788,6 +863,9 @@
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internet"
+        },
+        "curriculum_guide_1/courseb/2021": {
+          "name": "Õppekava juhend"
         },
         "implementation_guide/courseb/2021": {
           "name": "Rakendamise juhend"
@@ -842,6 +920,9 @@
           "name": "Suursündmus",
           "type": "Video"
         },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "Õppekava juhend"
+        },
         "implementation_guide/coursea/2021": {
           "name": "Rakendamise juhend"
         },
@@ -877,6 +958,9 @@
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "Suursündmus"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "Õppekava juhend"
         },
         "implementation_guide/coursec/2021": {
           "name": "Rakendamise juhend"
@@ -926,6 +1010,9 @@
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "Binaarsed käevõrud"
+        },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "Õppekava juhend"
         },
         "implementation_guide/coursed/2021": {
           "name": "Rakendamise juhend"
@@ -1020,6 +1107,9 @@
         },
         "common-sense-media-pause-think/pre-express/2021": {
           "type": "Video"
+        },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Õppekava juhend"
         },
         "implementation_guide/coursee/2021": {
           "name": "Rakendamise juhend"
@@ -1263,11 +1353,17 @@
         "vocabulary/express/2020": {
           "name": "Sõnavara"
         },
+        "curriculum_guide/courseb/2020": {
+          "name": "Õppekava juhend"
+        },
         "lesson_plans/courseb/2020": {
           "name": "Tunniplaan"
         },
         "vocabulary/courseb/2020": {
           "name": "Sõnavara"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "Õppekava juhend"
         },
         "lesson_plans/coursed/2020": {
           "name": "Tunniplaan"
@@ -1275,11 +1371,17 @@
         "vocabulary/coursed/2020": {
           "name": "Sõnavara"
         },
+        "curriculum_guide/coursec/2020": {
+          "name": "Õppekava juhend"
+        },
         "lesson_plans/coursec/2020": {
           "name": "Tunniplaan"
         },
         "vocabulary/coursec/2020": {
           "name": "Sõnavara"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "Õppekava juhend"
         },
         "lesson_plans/coursee/2020": {
           "name": "Tunniplaan"
@@ -1287,11 +1389,17 @@
         "vocabulary/coursee/2020": {
           "name": "Sõnavara"
         },
+        "curriculum_guide/coursea/2020": {
+          "name": "Õppekava juhend"
+        },
         "lesson_plans/coursea/2020": {
           "name": "Tunniplaan"
         },
         "vocabulary/coursea/2020": {
           "name": "Sõnavara"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "Õppekava juhend"
         },
         "lesson_plans/coursef/2020": {
           "name": "Tunniplaan"

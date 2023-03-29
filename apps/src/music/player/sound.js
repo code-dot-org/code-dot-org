@@ -48,6 +48,10 @@ function LoadSounds(desiredSounds) {
   }
 }
 
+export function StartPlayback() {
+  audioSystem.StartPlayback();
+}
+
 // play a sound.
 // an optional groupTag puts the sound in a group with a limited set of instances.
 export function PlaySound(

@@ -464,10 +464,8 @@ class LevelsController < ApplicationController
     render 'levels/show'
   end
 
-  private
-
   # Use callbacks to share common setup or constraints between actions.
-  def set_level
+  private def set_level
     @level =
       if params.include? :key
         Level.find_by_key params[:key]
@@ -478,7 +476,7 @@ class LevelsController < ApplicationController
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def level_params
+  private def level_params
     permitted_params = [
       :name,
       :notes,
@@ -539,7 +537,7 @@ class LevelsController < ApplicationController
     params[:level].permit(permitted_params)
   end
 
-  def set_solution_image_url(level)
+  private def set_solution_image_url(level)
     level_source = LevelSource.find_identical_or_create(
       level,
       params[:program].strip_utf8mb4
@@ -554,7 +552,7 @@ class LevelsController < ApplicationController
 
   # Gathers data on top pain points for level builders by logging error details
   # to Firehose / Redshift.
-  def log_save_error(level)
+  private def log_save_error(level)
     FirehoseClient.instance.put_record(
       :analysis,
       {

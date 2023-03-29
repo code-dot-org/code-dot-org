@@ -6065,7 +6065,7 @@
           ]
         },
         "4e00ff11-13c5-4dc7-853e-d107de9c6526": {
-          "name": "Metti alla prova la tua barca",
+          "name": "Collauda la tua barca",
           "description": "Una volta predisposti i gruppi, chiedi loro di mettere alla prova le rispettive barche facendo cadere singoli monetine nella barca. Ricorda loro le regole, in particolare che non possono toccare o regolare le barche una volta che sono in acqua. Chiedi loro di annotare nelle loro guide di attività, il numero totale di monetine contenute."
         },
         "34b886d9-1bd6-4860-92f9-e56e213a9a83": {
@@ -6079,7 +6079,7 @@
           ]
         },
         "a50d517a-d000-4ace-a66e-94088a60cda2": {
-          "description": "### Sviluppa un piano\n\n\\*\\*Richiesta: \\*\\* Ora che hai avuto la possibilità di imparare dal primo ciclo di costruzione di barche, ripetiamo la stessa attività. Innanzitutto, il tuo gruppo svilupperà un nuovo piano. Proprio come prima, annotalo sulla tua guida alle attività e quando sarai pronto tornerò e ti darò un nuovo pezzo di pellicola.\n\n**Supporto**: mentre circoli da un gruppo all'altro, fai domande sull'obiettivo del gruppo nella riprogettazione. Es: «Quale aspetto della tua barca necessitava di maggiori miglioramenti?» «Quali idee di altri gruppi volevi integrare nelle tue?» «Hai sentito il bisogno di riprogettare completamente la tua barca o di apportare solo piccole modifiche?» \n\nUna volta che i gruppi hanno preparato i nuovi piani, dai loro un nuovo pezzo di foglio d'alluminio e chiedi a ciascuno di loro di costruire una nuova barca.\n\n### Metti alla prova la tua barca\n\nI gruppi possono mettere alla prova i propri progetti come prima e registrare i risultati sulle proprie guide di attività."
+          "description": "### Sviluppa un piano\n\n\\*\\*Richiesta: \\*\\* Ora che hai avuto la possibilità di imparare dal primo ciclo di costruzione di barche, ripetiamo la stessa attività. Innanzitutto, il tuo gruppo svilupperà un nuovo piano. Proprio come prima, annotalo sulla tua guida alle attività e quando sarai pronto tornerò e ti darò un nuovo pezzo di pellicola.\n\n**Supporto**: mentre circoli da un gruppo all'altro, fai domande sull'obiettivo del gruppo nella riprogettazione. Es: «Quale aspetto della tua barca necessitava di maggiori miglioramenti?» «Quali idee di altri gruppi volevi integrare nelle tue?» «Hai sentito il bisogno di riprogettare completamente la tua barca o di apportare solo piccole modifiche?» \n\nUna volta che i gruppi hanno preparato i nuovi piani, dai loro un nuovo pezzo di foglio d'alluminio e chiedi a ciascuno di loro di costruire una nuova barca.\n\n### Collauda la tua barca\n\nI gruppi possono mettere alla prova i propri progetti come prima e registrare i risultati sulle proprie guide di attività.te"
         },
         "b2e287ee-cae3-4d61-917c-d1bd94d023c2": {
           "name": "Rifletti",
@@ -6452,7 +6452,7 @@
         "7b25ed70-f14d-4b51-afff-cd67b4b56e83": {
           "description": "**Richiesta:** questa app utilizza diversi tipi di elaborazione per prendere decisioni. Che tipo di elaborazione potrebbe utilizzare?",
           "tips": [
-            "Consenti agli studenti di condividere le loro risposte, ma fai in modo che «conteggio» e «ricerca di una corrispondenza» vengano evidenziati durante la discussione."
+            "Consenti agli studenti di condividere le loro risposte, ma fai in modo che \"conteggio\" e \"ricerca di una corrispondenza\" vengano evidenziati durante la discussione."
           ]
         },
         "04529d95-26df-48be-b118-a43abd3fe6d9": {
@@ -6512,87 +6512,164 @@
           "description": "**Diario di bordo**: vai su Code Studio per guardare l'app per la scelta di abiti. Qual è un ingresso, un uscita e un tipo di elaborazione che potrebbe utilizzare? Supponiamo che tu abbia usato questa app ogni giorno. Quali dati vorresti che questa app ricordasse?"
         },
         "f4a0fbbd-2d29-4de8-b325-f08c12c9abcf": {
+          "description": "**Girando tra i banchi:** la prima parte di questa riflessione è un ripasso degli ingressi e delle uscite (input e output). Mentre gli studenti ragionano sullla discussione, controlla le loro risposte per assicurarti che comprendano come vengono utilizzati ingressi e uscite nell'app.",
           "tips": [
-            null
+            "Gli studenti possono identificare il tempo, il colore preferito o la stagione come dati in ingresso e le immagini degli abiti come risultato di uscita. Anche se l'elaborazione esatta dell'app potrebbe non essere chiara, gli studenti potrebbero far notare che esistono diversi scenari probabili («Se piove, includi un ombrello») o che ci sono delle corrispondenze tra l'input dell'utente e le caratteristiche degli abiti."
           ]
         },
         "fba0356b-d79b-4c1c-83f9-9b770ae8c5e5": {
+          "description": "Chiedi agli studenti di condividere quali dati ritengano debbano essere memorizzati e perché.",
           "tips": [
-            null
+            "Sebbene non sia importante che gli studenti concordino sulle risposte, questa discussione inizia a suggerire l'idea di memorizzare le informazioni per una fase successiva e li incentiva a pensare a quali dati vadano o non vadano memorizzati in un'app. "
           ]
+        },
+        "0ff42327-3014-4bae-9477-4b96f7b8ae29": {
+          "description": "Questa app di esempio richiede alcuni dati che non cambieranno molto spesso, come il tuo colore preferito. Invece di inserire questi dati ogni volta, sarebbe utile se l'app potesse ricordare le nostre risposte memorizzandole. Tutti i computer possono salvare i dati per un secondo momento e leggere le informazioni salvate attraverso la **memorizzazione**."
+        },
+        "86f692b7-c299-4ffa-ab9c-b060039b15f7": {
+          "description": "**Glossario delle parole chiave:** \n\n-   **Memorizzazione** - salvataggio dei dati da utilizzare in successivamente\n\n**Domanda del giorno: perché la memorizzazione è una parte importante del processo di elaborazione?**"
+        },
+        "93502113-e31f-4975-9a99-3479ca651ce1": {
+          "name": "App con memorizzazione",
+          "description": "Esamineremo alcune app che utilizzano alcuni tipi di dati. Vogliamo identificare quali dati potrebbero essere memorizzati in modo da non doverli inserire ogni volta."
         },
         "0a531305-2813-401c-8540-d5707aab0c65": {
           "description": "**Forma i gruppi:** crea gruppi di 2-3 alunni. Per questa attività ciascun gruppo dovrà accedere a un computer.\n\n**Distribuisci:** consegna a ogni gruppo una copia della guida alle attività.\n\nCome classe, completa la prima sezione della guida alle attività, che fa riferimento all'app di selezione degli abiti utilizzata nel riscaldamento.\n\nRimanda gli alunni a Code Studio per vedere le app di esempio."
         },
         "b79f88b6-459f-42a7-a524-bda610f7eee1": {
+          "description": "**Girando tra i banchi:** fai in modo che gli studenti completino il resto della guida alle attività nell'ambito dei loro gruppi. Mentre compilano i grafici, chiedi loro di spiegare perché hanno pensato che ogni input dovesse essere mmorizzato o meno.",
           "tips": [
-            null
+            "C'è una certa flessibilità su ciò che deve e non deve essere memorizzato, poiché questa è una scelta che appartine a chi progetta l'app. La parte più importante è la loro spiegazione. Dovrebbero chiedersi se tali dati cambieranno frequentemente."
           ]
         },
         "286386cc-e586-4d44-bf85-60c800773505": {
           "name": "App: scelta di abiti",
+          "description": "La prima app chiede agli utenti di inserire il loro colore preferito, la stagione in corso e il tempo, quindi invia un'immagine di un tipo di abbigliamento in base ai dati in ingresso stabiliti dall'utente.",
           "progression_name": "App: scelta di abiti"
         },
         "e6e2ba98-c7fc-428e-9a47-f22073547f0c": {
           "name": "Il trovamico",
+          "description": "La seconda app chiede agli utenti di inserire quali amici devono essere nella loro lista di amici, quindi emette una mappa che mostra le posizioni degli amici nell'elenco.",
           "progression_name": "App: il trovamico"
         },
         "6b3b1859-20d3-4a4f-b929-8336e5c63082": {
+          "name": "Scegli un film per bambini",
+          "description": "La terza app richiede agli utenti di inserire diverse preferenze relative ai film, quindi emette un consiglio sui film in base alle preferenze dell'utente.",
           "progression_name": "App: scegli un film per bambini"
         },
+        "edba8738-0f96-4338-9082-2879bba95fc0": {
+          "name": "Linee guida",
+          "description": "Man mano che i gruppi passano all'attività finale, potrebbe essere necessario spiegare brevemente cosa sono le linee guida e cosa richiede la domanda. Fai in modo che tutti i gruppi abbiano il tempo di elaborare delle linee guida, anche se devono saltare parti del grafico precedente."
+        },
         "8712d7ff-7061-43ef-ba2c-cde28fac3fcf": {
+          "description": "**Girando tra i banchi:** se i gruppi non riescono a scrivere le loro linee guida, chiedi loro quali input ritengono che debbano essere memorizzati nelle altre app. Chiedi loro provare a trovare somiglianze tra gli input memorizzati e quelli che non sono stati memorizzati. Ricorda loro che possono anche scrivere linee guida su quali input non sono stati memorizzati.",
           "tips": [
-            null
+            "Le risposte degli studenti possono variare, ma in generale devono rendersi conto che l'opportunità di memorizzare certi dati dipende dalla frequenza con cui essi cambiano, se cambiano del tutto."
           ]
+        },
+        "424d599d-71f1-4f5f-b669-c90a6c511644": {
+          "description": "Una volta che la maggior parte dei gruppi ha finito di scrivere le linee guida, riunisci la classe e chiedi se qualche gruppo desidera condividere una delle proprie linee guida."
+        },
+        "210b8c4e-e74e-429f-a9ed-95de965d97cb": {
+          "description": "Ora possiamo intendere un computer come una macchina che compie quattro attività: ingressi, uscite, memorizzazione ed elaborazione"
+        },
+        "9f0e41f0-b47e-47fc-8d18-609fe949117a": {
+          "description": "Mostra loro il video che illustra il modello di elaborazione del computer.",
+          "progression_name": "Video: modello del computer"
         },
         "9bb79ae5-93c9-4824-855f-310fbcbd77cd": {
+          "description": "Apri la discussione con due domande che agevolino il dibattito.",
           "tips": [
-            null
+            "Se usi il diario, chiedi agli studenti di scrivere le loro risposte nei loro diari"
           ]
+        },
+        "27d2d05d-916a-492e-8be0-eaae4fa0d875": {
+          "description": "1.  Pensa a qualcosa che fai sul computer. Che tipo di ingressi, uscite, memorizzazione ed elaborazione stanno avvenendo?\n\n2.  Quali tipi di ingressi, uscite, memorizzazione ed elaborazione vengono utilizzati in uno smartphone di oggi?\n\nInfine, guarda la locandina della lezione \"Cos'è un computer?\" e verifica se qualcuno dei computer deve essere riclassificato come computer o meno in base a questo modello del computer così come l'abbiamo definito."
         },
         "f9a9da59-8175-4d75-9579-762042a27097": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "**Richiesta**: pensa a un'app che vorresti creare. Quali dati dovrebbe conservare?"
         },
         "4965f12c-d6da-48ba-8073-290ea2469298": {
+          "description": "**Condividi:** se c'è tempo, dai modo agli studenti di condividere le proprie idee.",
           "tips": [
-            null
+            "Quando lo studente condivide le proprie idee, fai in modo che utilizzi il glossario delle parole chiave della lezione:\n\n**memorizzazione** - salvataggio delle informazioni da utilizzare in futuro"
           ]
         },
+        "0a4f5de8-7cfb-4bca-9d6a-c430c7da0fa7": {
+          "name": "Presenta il progetto",
+          "description": "**Discussione:** tra le app che abbiamo visto in questa unità, qual era la tua preferita? Che problema ha risolto?\n\n**Condivisione:** consente agli studenti di condividere le loro app preferite."
+        },
+        "4afc1d44-47bc-4042-90dc-e943aafeeff6": {
+          "description": "In tutta questa unità abbiamo imparato a conoscere il processo di risoluzione dei problemi e come i computer elaborano i dati per aiutare a risolvere i problemi prendendo dati in ingresso ed elaborandoli per creare dati in uscita utili. Oggi inizieremo un progetto in cui tu e un compagno progetterete un'app per risolvere un problema di vostra scelta."
+        },
+        "d1d6b6d2-c8d9-43c3-b6bd-3a696cc48dbf": {
+          "description": "**Domanda del giorno: come può il modello  inserisci- estrai-memorizza-elabora aiutarci a progettare un'app che risolva un problema?**"
+        },
         "8f1b70db-3dc8-4346-aa71-b6ad5062e754": {
-          "name": "Guida al progetto"
+          "name": "Guida al progetto",
+          "description": "**Distribuzione**: dai a ogni studente una guida al progetto e una tabella o lista di controllo per gli studenti. Come classe, esamina le informazioni fornite nel primo foglio della guida al progetto che spiega il progetto, elenca i passaggi e mostra cosa dovranno produrre gli studenti. Quindi fornisci una breve panoramica di ciascuno dei passaggi più dettagliati."
         },
         "79636d63-1378-4779-b0f6-c0e3d41dbaf6": {
+          "description": "**Fase 1: scegli un compagno**: disponi gli studenti a coppie o in gruppi di tre.",
           "tips": [
             null
           ]
         },
         "4ab37207-f96e-49e5-9f5a-cc547af387c2": {
+          "description": "**Fase 2: riflessione di gruppo sui problemi**: invita i gruppi a dedicare alcuni minuti in silenzio a riflettere sui problemi e ad annotarli nelle guide del progetto. Vai in giro tra i banchi e ricorda loro che a questo punto non dovrebbero pensare a un'app che vogliono creare e nemmeno se è possibile risolvere questo problema con un'app. Assicurati che inizino con il problema piuttosto che con la soluzione.",
           "tips": [
-            null
+            "**Agevolare la riflessione di gruppo:** ascolta con attenzione le conversazioni degli studenti. Identifica gli studenti che sono bloccati e il motivo per cui sono bloccati. Pensano troppo in grande? Aiuta questi studenti a pensare ai problemi come a fastidi o inconvenienti o a un'opportunità per migliorare la qualità della vita in misura piccola o grande. "
           ]
         },
+        "a82f2775-b525-48c6-b56c-1e8c72d4e9f4": {
+          "description": "**Fase 3: scegli il tuo problema**: la guida al progetto fornisce diversi criteri che gli studenti possono utilizzare per valutare quali dei loro problemi vorrebbero affrontare. Chiedi agli studenti di attendere con impazienza la Fase 4 se hanno bisogno di ulteriori indicazioni su come definire o definire l'ambito dei loro problemi. Lascia qualche minuto agli studenti per discutere con il loro gruppo e scegli il problema che vorrebbero risolvere con la loro app."
+        },
         "f1f5a087-65ba-4c18-b5d2-36b1d8bc9955": {
+          "description": "**Fase 4: definisci il tuo problema**: in questa fase gli studenti dovranno definire in modo appropriato il loro problema definendo chi è il loro pubblico, qual è specificamente il problema e come sapranno di averlo risolto.",
           "tips": [
-            null
+            "**Quanto aiutare:** a questo punto gli studenti hanno fatto molta pratica nella definizione dei problemi. Subito dopo questa fase, sosterranno anche un processo di revisione tra pari. Incoraggiali a essere il più dettagliati possibile, ma evita di dare consigli specifici su come definire il loro problema. "
           ]
         },
         "7017d684-e823-4892-9211-ed75e4b20bfa": {
+          "description": "**Fase 5: la tua app**: una volta che gli studenti hanno analizzato l'ambito del problema, chiedi loro di discutere di un'app che potrebbe essere utilizzata per aiutarli a risolvere il problema. Per iniziare, dovranno solo fornire una descrizione di alto livello dell'app che descriva come l'utente la userebbe e cosa fa.",
           "tips": [
             null
           ]
+        },
+        "27a2c29c-cace-4068-903c-fff92442c785": {
+          "description": "**Fase 6: inserisci, estrai, memorizza, elabora**: in questa fase gli studenti progettano il modo in cui la loro app funzionerà effettivamente per elaborare i dati. \n\nPrima gli studenti progetteranno e poi descriveranno i risultati delle loro app. Sul lato sinistro possono fare uno schizzo di come sarebbe la loro app. Non è necessario che si tratti di una bozza definitiva e serve solo ad aiutarli a raccogliere idee e a comunicare a un altro gruppo come sarebbe la loro app. Sul lato destro hanno spazio per etichettare ogni singolo dato sullo schermo.\n\nUtilizzando i dati in uscita che gli studenti hanno selezionato come guida, gli studenti devono scegliere i dati in ingresso di cui avranno bisogno per crearli. Sono previsti solo 6 posti, anche se gli studenti possono scegliere di sceglierne di più. Questo è in qualche modo intenzionale per aiutare gli studenti a sfruttare le funzionalità della loro app.\n\nGli studenti descriveranno il modo in cui la loro app elabora i dati utilizzando come modello il modo in cui li elaborerebbero loro stessi. L'obiettivo qui è principalmente quello di garantire che gli studenti abbiano selezionato gli input che potrebbero essere elaborati per produrre gli output. Ad esempio, se questo mese trovano un elenco di amici con compleanni, sia un computer che un essere umano dovrebbero conoscere l'elenco dei compleanni degli amici e il mese corrente.\n\nInfine, agli studenti viene chiesto di decidere quali dati, nel caso, è opportuno conservare a lungo termine.\n\n**Distribuzione:** App e risoluzione dei problemi - Revisione tra pari, una copia per ogni coppia di studenti\n\n**Fase 7: revisione tra pari**: ogni gruppo dovrebbe scambiare le proprie guide ai progetti con un altro. Dovrebbero compilare la prima riga della revisione tra pari che chiede su quale parte specifica del loro progetto desiderano ricevere un feedback. Successivamente, ci sono una serie di domande dirette e la possibilità di fornire un feedback più aperto sull'idea.\n\nGli studenti dovrebbero ricevere le guide al progetto e il feedback dei colleghi. Sul retro, ci sono domande in cui possono indicare quali modifiche o migliorie progettuali intendono apportare alle loro app in base al riscontro."
         },
         "7e8ae9d1-832d-42b9-bb2a-186d496375b7": {
+          "description": "**Fase 8: mettere a punto l'app e creare un cartellone**: gli studenti devono incorporare le idee dei loro colleghi nel finalizzare la loro idea di app. Dovrebbero quindi creare un cartellone che presenti la loro app seguendo le indicazioni fornite nella guida alle attività.\n\nGli studenti dovrebbero rivisitare la tabella di questo progetto per vedere quanto è allineato il loro progetto. Puoi anche decidere di distribuire le [r apps_and_problem_solving_-_student_checklist/csd/2022] in modo che gli studenti possano valutare autonomamente in che misura il loro progetto soddisfa i requisiti per questo progetto.",
           "tips": [
-            null
+            "**Tabella e lista di controllo:** gli studenti hanno due risorse che possono usare per autoriflessione e assicurarsi di essere sulla strada giusta: la tabella e la lista di controllo (checklist= degli studenti. Consigliamo agli studenti di utilizzare la lista di controllo per la propria autovalutazione e riflessione, poiché può essere più facile da digerire e comprendere quando si esamina il proprio progetto. Tuttavia, consigliamo agli insegnanti di utilizzare la tabella completa per valutare i progetti per fornire un feedback più accurato agli studenti. Puoi vederne alcuni esempi con la risorsa _Esempio di tabella compilata_ nella parte superiore del piano della lezione (visibile solo agli insegnanti verificati)"
           ]
         },
+        "a505b540-e560-4bb2-921c-20c29b84e445": {
+          "name": "Presentazione delle app",
+          "description": "**Condivisione**: decidi se e come gli studenti condivideranno i loro cartelloni tra loro. Se gli studenti terranno presentazioni più formali, utilizza le linee guida fornite nella Fase 9 della guida del progetto per strutturare le presentazioni.\n\n**Discussione:** alla fine della presentazione raccogli le guide del progetto completate, i moduli dei riscontri tra pari e i cartelloni di ciascun gruppo."
+        },
         "3258b13a-0f05-4f62-bf07-38aca3a745db": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": "\\*\\*Domanda del giorno: come può il modello inserisci-estrai-memorizza-elabora aiutarci a progettare un'app che risolva un problema? \\*\\*\n\n**Rifletti:** gli studenti riflettono sulla seguente domanda nei loro diari:\n\n-   qual è la cosa del tuo progetto che ti rende più orgoglioso?\n\nInvia gli studenti a Code Studio per completare le riflessioni sul loro atteggiamento nei confronti dell'informatica. Sebbene le loro risposte siano anonime, i dati aggregati saranno disponibili una volta che almeno cinque studenti avranno completato il sondaggio."
+        },
+        "62bf93c9-f7ae-40b7-a515-4b81b83acee9": {
+          "name": "Shark Tank",
+          "description": "Conduci un finto show «Shark Tank» come ambientazione per il progetto dell'unità. Ecco alcune cose da tenere presente: \n\n-   il livello di maturità della tua classe consente di mantenere un buon clima in questa competizione? \n-   invita docenti/personale, concittadini o altri professionisti per ascoltare le presentazioni della Fase 2 e farsi un'idea per l'assegnazione del primo, del secondo o del terzo posto. \n-   invita degli imprenditori del luogo o altri professionisti a condividere esperienze durante il primo o il secondo giorno in modo che gli studenti possano vedere in che legami ha l'informatica con il settore in cui lavorano."
         },
         "df73d786-2f5f-4ce6-b86c-63985e354302": {
           "description": "Per poter vedere il lavoro degli studenti nell'arco dell'anno e consentire loro di accedere a strumenti e risorse online, gli studenti devono trovarsi tutti nella stessa sezione di Code Studio. Per visualizzare le valutazioni e le chiavi di risposta fornite da Code.org, devi anche essere un «insegnante verificato»."
         },
+        "8ad71590-c0af-4272-9a76-0b3a771d8efb": {
+          "name": "Prima della lezione"
+        },
+        "49e70311-3cb5-4843-9ee7-b8d3c369c0a3": {
+          "name": "All'inizio della lezione",
+          "description": "1.  Chiedi agli studenti di creare un account Code Studio all'indirizzo <https://studio.code.org> se non ne hanno già uno\n2.  Condividi l'URL di iscrizione con gli studenti e chiedi loro di accedervi per navigare nella sezione\n    -   Puoi avere conferma che uno studente si sia iscritto con successo alla tua sezione aprendo la pagina di avanzamento della sezione nella home page del docente e premendo aggiorna quando gli studenti si iscrivono. Gli studenti dovrebbero vedere una piccola barra verde nella parte superiore della pagina che dice \"Ti sei iscritto con successo...\" \n3.  Da [studio.code.org]a[1] , chiedi agli studenti di individuare il riquadro Computer Science Discoveries e fare clic su \"Visualizza corso\", quindi passare all'Unità 1.\n\nUna volta che gli studenti avranno consultato la pagina di panoramica dell'Unità 1, saranno pronti per rispondere al sondaggio pre-corso del CSD"
+        },
         "2b30cadb-489b-48a6-9412-77201cf56342": {
+          "description": "#### Importante! Chiedi ai tuoi studenti di partecipare al sondaggio pre-corso CSD!\n\nGli studenti possono trovare un link al sondaggio in Code Studio come primo elemento nella pagina di panoramica dell'Unità 1. Per garantire che gli studenti partecipino al sondaggio solo al momento opportuno, questo viene \"bloccato\" e non può essere visualizzato fino a quando non lo \"sblocchi\". Il documento [r how-to-administer-a-locked-assessment/csd/2021] fornisce dettagli su come farlo quando sei pronto. Tieni presente che le istruzioni per la gestione di una valutazione e di un sondaggio sono le stesse.    \n\n**Quanto tempo ci vuole?** il sondaggio richiede del tempo: contiene circa 30 domande. Potresti prendere in considerazione l'idea di somministrarlo in un giorno amministrativo a scuola o come compito a casa presto.\n\n**Quando devo somministrare il sondaggio?** poiché si tratta di un sondaggio preliminare al corso, è importante che gli studenti lo facciano il prima possibile e preferibilmente nelle primissime fasi o addirittura prima di aver avuto a che fare con l'apprendimento in aula, in modo da poter valutare con precisione i cambiamenti causati dal corso sugli atteggiamenti e sulle convinzioni.",
           "tips": [
             "-   Uno degli obiettivi principali di CS Discoveries è quello di ampliare la partecipazione all'informatica.  \n\n-   È quindi fondamentale avere un'idea degli atteggiamenti e delle convinzioni degli studenti nei confronti dell'informatica _prima_ del corso in modo da poter misurare la quantità di cambiamenti avvenuti _dopo_ la fine del corso.\n\n-   Tieni presente che questo sondaggio è **anonimo per gli studenti**\n\n-   Il suo completamento ci aiuta anche a definire importanti miglioramenti che possiamo apportare al Piano di studi per migliorare l'esperienza degli insegnanti e degli studenti.\n\n**Aiutaci facendo in modo che i tuoi studenti contribuiscano a questo set di dati fondamentale. Le loro voci possono fare la differenza!**"
           ]
@@ -6617,34 +6694,54 @@
           "description": "**Mostra:** mostra agli studenti la domanda del giorno\n\n**Domanda del giorno: cos'è che può aiutarci a lavorare insieme e a risolvere i problemi in gruppo?**"
         },
         "0133c8b4-1bd0-40c9-a4f0-a5ebbfccddd5": {
+          "name": "Costruire un tavolo di giornali",
           "description": "**Gruppo**: crea gruppi di 2 o 3 studenti."
+        },
+        "4245d32e-bb93-4422-b7e9-7139356b1e30": {
+          "description": "Oggi costruiremo tavoli con giornali e nastro adesivo. Ogni tavolo dovrebbe tenere i libri ad almeno 30 cm da terra. Avrai l'opportunità di creare almeno due tavoli e utilizzare la tua esperienza con ognuno di essi per migliorare i tuoi progetti. Prima di iniziare, decidi in gruppo che tipo di progetto vorresti realizzare con il tuo primo tavolo. Registra le tue idee e gli eventuali punti deboli di questo progetto nella tua guida alle attività."
         },
         "9c55da28-8567-4354-83a7-d69f494cc553": {
           "description": "**Distribuzione**: distribuisci una copia della guida alle attività per ogni gruppo.",
           "tips": [
-            null
+            "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-08-17-at-11.51.32-AM.png\" style=\"float:right;height:150px\">\n\n**Ottenere copie dei documenti di Google Docs:** le guide alle attività di questo piano di studi sono disponibili come Google Docs, Word Docs e PDF. Se desideri modificare o creare una copia personale di un documento Google, puoi farlo senza richiedere l'accesso. Basta accedere con un account Google, fare clic su «File» e «Crea una copia» dal menu. Puoi quindi condividere la tua copia con i tuoi studenti."
           ]
         },
         "bb2ca753-9e20-4862-a5f8-b46453f8ce94": {
           "name": "Obiettivi e regole",
           "description": "In classe, leggi le sezioni Obiettivi e Regole della guida alle attività e rispondi alle domande.",
           "tips": [
-            null
+            "Questa attività dovrebbe essere svolta in uno spazio ampio. Se la tua aula è poco spaziosa  potresti anche prendere in considerazione l'idea di far svolgere questa attività nel corridoio o in qualche altro spazio o, se necessario, aggiungere ulteriori regole."
           ]
         },
         "8a9c7222-2421-496c-ad09-4d055cdcbca8": {
           "name": "Elabora un piano",
+          "description": "Lascia agli studenti un paio di minuti per discutere in gruppo l'approccio che adotteranno con questa prima tabella. Una volta che i gruppi hanno annotato le loro idee e alcuni possibili punti deboli, possono venire da te per prendere il giornale e la cassetta e iniziare a costruire i loro tavoli.",
           "tips": [
-            null
+            "Trattieni i materiali finché gli studenti non presentano un piano per il loro tavolo. L'obiettivo non è rallentarli troppo, ma semplicemente dar loro un momento per riflettere brevemente sui possibili approcci che potrebbero adottare. Questo è uno dei modi in cui questa attività prefigura la fase di pianificazione del processo di risoluzione dei problemi che gli studenti vedranno nelle lezioni successive."
           ]
         },
+        "6d831e07-7474-41e7-bf22-e283aaa0ae50": {
+          "name": "Collauda il tuo tavolo",
+          "description": "Appena i gruppi sono pronti, chiedi loro di mettere alla prova i loro tavoli. posizionando i singoli libri sulla parte superiore. Ricorda loro le regole, in particolare che non possono toccare o regolare i tavoli una volta che hanno iniziato ad aggiungere libri e che i libri devono essere ad almeno 30 cm da terra. Chiedi loro di annotare il numero totale di libri contenuti nelle loro guide di attività."
+        },
         "e9de9293-1dea-417b-98d4-8046a6d2435a": {
-          "name": "Valuta e migliora"
+          "name": "Valuta e migliora",
+          "description": "Questo primo tentativo di costruire i nostri tavoli è stato solo per familiarizzare con la sfida. Costruiremo tutti un secondo tavolo e vedremo se possiamo aumentare il numero di libri che possiamo contenere. Prima di iniziare però, vediamo cosa possiamo imparare da questa prova."
         },
         "d816c1a5-90aa-4775-98f0-8325769bfcc0": {
+          "description": "**Condivisione:** chiedi agli studenti di condividere i risultati della loro prima sfida con i gruppi vicini. Chiedi ai gruppi di concentrarsi in particolare su quale sia stato l'eventuale difetto progettuale del tavolo (ad esempio, non era sufficientemente largo, era instabile, ecc.) e di riflettere su come aggirare quei problemi.",
           "tips": [
             "Sebbene alcuni studenti vedano questa parte come una competizione, sottolinea che ogni gruppo sta cercando di migliorare il proprio progetto, non di competere con gli altri. Stai invitando ogni studente a sfidare prima se stesso, non gli altri."
           ]
+        },
+        "5ce85328-7117-45d5-830c-9c562ed78780": {
+          "description": "### Elabora un piano"
+        },
+        "ad63d229-e13c-40bf-887b-09dc2c9041ad": {
+          "description": "Ora che hai avuto la possibilità di imparare dal primo ciclo di preparazione dei tavoli, ripetiamo la stessa attività. Prima di tutto, il tuo gruppo svilupperà un nuovo piano. Proprio come prima, annotalo sulla tua guida alle attività e quando sarai pronto tornerò a darti un nuovo giornale."
+        },
+        "c7dd14ab-d219-4004-9119-a8a159c797d4": {
+          "description": "**Supporto**: mentre ti sposti da un gruppo all'altro, poni domande al gruppo su come fare attenzione nella riprogettazione. Es: «Quale aspetto del tuo tavolo necessitava dei maggiori miglioramenti?» «Quali idee di altri gruppi volevi incorporare nelle tue?» «Hai sentito il bisogno di riconfigurare completamente il tuo tavolo o apportare piccole modifiche?» \n\nUna volta che i gruppi hanno preparato i nuovi piani, dai loro un nuovo giornale e chiedi a ciascuno di loro di costruire un nuovo tavolo.\n\n### Collauda il tuo tavolo\n\nI gruppi possono testare i propri progetti come prima e annotarne i risultati nelle loro guide alle attività."
         },
         "67a5d084-3fb2-41b1-b97a-e9ebf4009129": {
           "name": "Rifletti",
@@ -6669,7 +6766,15 @@
         "c2045954-0aa7-4467-86af-23b6f3067e70": {
           "description": "Per poter vedere il lavoro degli studenti nell'arco dell'anno e consentire loro di accedere a strumenti e risorse online, gli studenti devono trovarsi tutti nella stessa sezione di Code Studio. Per visualizzare le valutazioni e le chiavi di risposta fornite da Code.org, devi anche essere un «insegnante verificato»."
         },
+        "58b5ad32-dbdd-44a8-ba61-6172f83d2d34": {
+          "name": "Prima della lezione"
+        },
+        "a9f9e7ec-6d94-43b9-939c-140fd99bce5d": {
+          "name": "All'inizio della lezione",
+          "description": "1.  Chiedi agli studenti di creare un account Code Studio all'indirizzo <https://studio.code.org> se non ne hanno già uno\n2.  Condividi l'URL di iscrizione con gli studenti e chiedi loro di accedervi per navigare nella sezione\n    -   Puoi avere conferma che uno studente si sia iscritto con successo alla tua sezione aprendo la pagina di avanzamento della sezione nella home page del docente e premendo aggiorna quando gli studenti si iscrivono. Gli studenti dovrebbero vedere una piccola barra verde nella parte superiore della pagina che dice \"Ti sei iscritto con successo...\" \n3.  Da [studio.code.org]a[1] , chiedi agli studenti di individuare il riquadro Computer Science Discoveries e fare clic su \"Visualizza corso\", quindi passare all'Unità 1.\n\nUna volta che gli studenti avranno consultato la pagina di panoramica dell'Unità 1, saranno pronti per rispondere al sondaggio pre-corso del CSD"
+        },
         "305aebd8-9daf-4d68-b332-ed969803bced": {
+          "description": "#### Importante! Chiedi ai tuoi studenti di partecipare al sondaggio pre-corso CSD!\n\nGli studenti possono trovare un link al sondaggio in Code Studio come primo elemento nella pagina di panoramica dell'Unità 1. Per garantire che gli studenti partecipino al sondaggio solo al momento opportuno, questo viene \"bloccato\" e non può essere visualizzato fino a quando non lo \"sblocchi\". Il documento [r how-to-administer-a-locked-assessment/csd/2021] fornisce dettagli su come farlo quando sei pronto. Tieni presente che le istruzioni per la gestione di una valutazione e di un sondaggio sono le stesse.    \n\n**Quanto tempo ci vuole?** il sondaggio richiede del tempo: contiene circa 30 domande. Potresti prendere in considerazione l'idea di somministrarlo in un giorno amministrativo a scuola o come compito a casa presto.\n\n**Quando devo somministrare il sondaggio?** poiché si tratta di un sondaggio preliminare al corso, è importante che gli studenti lo facciano il prima possibile e preferibilmente nelle primissime fasi o addirittura prima di aver avuto a che fare con l'apprendimento in aula, in modo da poter valutare con precisione i cambiamenti causati dal corso sugli atteggiamenti e sulle convinzioni.",
           "tips": [
             "-   Uno degli obiettivi principali di CS Discoveries è quello di ampliare la partecipazione all'informatica.  \n\n-   È quindi fondamentale avere un'idea degli atteggiamenti e delle convinzioni degli studenti nei confronti dell'informatica _prima_ del corso in modo da poter misurare la quantità di cambiamenti avvenuti _dopo_ la fine del corso.\n\n-   Tieni presente che questo sondaggio è **anonimo per gli studenti**\n\n-   Il suo completamento ci aiuta anche a definire importanti miglioramenti che possiamo apportare al Piano di studi per migliorare l'esperienza degli insegnanti e degli studenti.\n\n**Aiutaci facendo in modo che i tuoi studenti contribuiscano a questo set di dati fondamentale. Le loro voci possono fare la differenza!**"
           ]
@@ -6694,34 +6799,58 @@
           "description": "**Mostra:** mostra agli studenti la domanda del giorno\n\n**Domanda del giorno: cos'è che può aiutarci a lavorare insieme e a risolvere i problemi in gruppo?**"
         },
         "ca54fa06-4c7e-479f-b7cc-e9fec8605dc6": {
+          "name": "Costruire un ponte di spaghetti",
           "description": "**Gruppo**: crea gruppi di 2 o 3 studenti."
+        },
+        "3b2b1d4f-fd00-444f-8999-5ff784921445": {
+          "description": "Oggi costruiremo ponti per spaghetti. Ogni ponte dovrà attraversare uno spazio di circa 30 cm e contenere il maggior numero possibile di libri. Avrai l'opportunità di costruire almeno due ponti e utilizzare la tua esperienza con ognuno di essi per migliorare i tuoi progetti. Prima di iniziare, decidi in gruppo che tipo di design vorresti realizzare con il tuo primo ponte. Annota le tue idee e gli eventuali punti deboli di questo progetto nella tua guida alle attività."
         },
         "3cade706-35ca-4591-8b03-b81c9b3ac155": {
           "description": "**Distribuzione**: distribuisci una copia della guida alle attività per ogni gruppo.",
           "tips": [
-            null
+            "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-08-17-at-11.51.32-AM.png\" style=\"float:right;height:150px\">\n\n**Ottenere copie dei documenti di Google Docs:** le guide alle attività di questo piano di studi sono disponibili come Google Docs, Word Docs e PDF. Se desideri modificare o creare una copia personale di un documento Google, puoi farlo senza richiedere l'accesso. Basta accedere con un account Google, fare clic su «File» e «Crea una copia» dal menu. Puoi quindi condividere la tua copia con i tuoi studenti."
           ]
         },
         "a115c9f0-e81d-4614-902b-013b48c73dd3": {
           "name": "Obiettivi e regole",
           "description": "In classe, leggi le sezioni Obiettivi e Regole della guida alle attività e rispondi alle domande.",
           "tips": [
-            null
+            "Per svolgere questa attività c'è bisogno di spazio altrimenti ci potranno essere delle difficoltà. Se la tua stanza presenta spazi stretti potresti anche prendere in considerazione l'idea di far svolgere questa attività nel corridoio o in qualche altro spazio oppure, se necessario, definire regole aggiuntive."
           ]
         },
         "3ecc7174-3d61-48b2-b527-596c96b2d593": {
           "name": "Elabora un piano",
+          "description": "Dai agli studenti un paio di minuti per discutere in gruppo dell'approccio che adotteranno con questo primo ponte. Una volta che i gruppi avranno preso nota delle loro idee e di alcuni possibili punti deboli, potranno venire da te per prendere gli spaghetti e iniziare a costruire i loro ponti. Dai circa mezzo chilo di spaghetti a ciascun gruppo.",
           "tips": [
-            null
+            "Trattieni i materiali finché gli studenti non presentano un piano per il loro ponte. L'obiettivo non è rallentarli troppo, ma semplicemente dar loro modo di riflettere brevemente sui possibili approcci che potrebbero adottare. Questo è uno dei modi in cui questa attività prefigura la fase di pianificazione del processo di risoluzione dei problemi che gli studenti vedranno nelle lezioni successive."
           ]
         },
+        "8c4c9e7c-6a3b-4708-bc1f-67f6a963732d": {
+          "name": "Collauda il tuo ponte",
+          "description": "Quando i gruppi sono pronti, chiedi di collaudare i loro ponti posizionando i singoli libri sul ponte. Ricorda loro le regole, in particolare che non possono toccare o aggiustare i ponti una volta che è stato posizionato un libro. Chiedi loro di annotare nelle loro guide di attività il numero totale di libri collocati."
+        },
         "71f7568f-7785-4e88-8d34-d9538bfa3963": {
-          "name": "Valuta e migliora"
+          "name": "Valuta e migliora",
+          "description": "Questo primo tentativo di costruire il nostro ponte è stata un'ottima occasione per saperne di più sul problema. Costruiremo tutti un secondo ponte e vedremo se possiamo aumentare il numero di libri che i nostri ponti contenevano. Prima di iniziare però, vediamo cosa possiamo imparare da questa prova."
         },
         "b3e1e318-87e3-41cd-be33-643df5ac2ff1": {
+          "description": "**Condividi:** Chiedi agli studenti di condividere i risultati della loro prima sfida con i gruppi vicini. Chiedi ai gruppi di concentrarsi in particolare su quale sia stato l'eventuale difetto del ponte (ad esempio il ponte non è durato abbastanza, era instabile, ecc.) e di riflettere su come aggirare questi problemi.",
           "tips": [
             "Sebbene alcuni studenti vedano questa parte come una competizione, sottolinea che ogni gruppo sta cercando di migliorare il proprio progetto, non di competere con gli altri. Stai invitando ogni studente a sfidare prima se stesso, non gli altri."
           ]
+        },
+        "b58249f3-c4a0-4582-8862-dfa8e5416429": {
+          "description": "**Se svolgi questa attività per due giorni, puoi decidere di fermarti qui.**\n\n### Sviluppa un piano"
+        },
+        "ddbd078e-b201-4997-a60b-ee6f04ead75c": {
+          "description": "Ora che hai avuto la possibilità di imparare dal primo ciclo di costruzione di ponti, ripetiamo la stessa attività. Innanzitutto, il tuo gruppo svilupperà un nuovo piano. Proprio come prima, annotalo sulla tua guida alle attività e quando sarai pronto tornerò a darti degli spaghetti nuovi."
+        },
+        "88502eb8-8e6e-46f3-aff1-e568261f31b9": {
+          "description": "**Supporto**: mentre ti aggiri per l'aula da un gruppo all'altro, poni domande al gruppo su come fare attenzione nella riprogettazione. Es: «Quale aspetto del tuo ponte necessitava dei maggiori miglioramenti?» «Quali idee di altri gruppi volevi incorporare nelle tue?» «Hai sentito il bisogno di riconfigurare completamente il tuo ponte o apportare piccole modifiche?» \n\nUna volta che i gruppi hanno preparato i nuovi piani, dai loro altri spaghetti e chiedi a ciascuno di loro di realizzare un nuovo ponte."
+        },
+        "a6d62cfc-bf6e-420e-97fb-2d345e843eff": {
+          "name": "Collauda il tuo tavolo",
+          "description": "I gruppi possono collaudar i propri progetti come prima e annotare i risultati nelle loro guide alle attività."
         },
         "35e95c35-425b-44e2-9fe6-0c00d79237d6": {
           "name": "Rifletti",
@@ -6746,7 +6875,15 @@
         "c7d3976f-62e3-4a23-b332-d57a740908b3": {
           "description": "Per poter vedere il lavoro degli studenti nell'arco dell'anno e consentire loro di accedere a strumenti e risorse online, gli studenti devono trovarsi tutti nella stessa sezione di Code Studio. Per visualizzare le valutazioni e le chiavi di risposta fornite da Code.org, devi anche essere un «insegnante verificato»."
         },
+        "c5560ce8-1ca0-4b8b-b7ea-87b3a1618309": {
+          "name": "Prima della lezione"
+        },
+        "64c58616-3ba8-43cf-97f9-4b47a3c3cea2": {
+          "name": "All'inizio della lezione",
+          "description": "1.  Chiedi agli studenti di creare un account Code Studio all'indirizzo <https://studio.code.org> se non ne hanno già uno\n2.  Condividi l'URL di iscrizione con gli studenti e chiedi loro di accedervi per navigare nella sezione\n    -   Puoi avere conferma che uno studente si sia iscritto con successo alla tua sezione aprendo la pagina di avanzamento della sezione nella home page del docente e premendo aggiorna quando gli studenti si iscrivono. Gli studenti dovrebbero vedere una piccola barra verde nella parte superiore della pagina che dice \"Ti sei iscritto con successo...\" \n3.  Da [studio.code.org]a[1] , chiedi agli studenti di individuare il riquadro Computer Science Discoveries e fare clic su \"Visualizza corso\", quindi passare all'Unità 1.\n\nUna volta che gli studenti avranno consultato la pagina di panoramica dell'Unità 1, saranno pronti per rispondere al sondaggio pre-corso del CSD"
+        },
         "824d14f1-04c5-4ec9-af8b-8c6717ea9fd0": {
+          "description": "#### Importante! Chiedi ai tuoi studenti di partecipare al sondaggio pre-corso CSD!\n\nGli studenti possono trovare un link al sondaggio in Code Studio come primo elemento nella pagina di panoramica dell'Unità 1. Per garantire che gli studenti partecipino al sondaggio solo al momento opportuno, questo viene \"bloccato\" e non può essere visualizzato fino a quando non lo \"sblocchi\". Il documento [r how-to-administer-a-locked-assessment/csd/2021] fornisce dettagli su come farlo quando sei pronto. Tieni presente che le istruzioni per la gestione di una valutazione e di un sondaggio sono le stesse.    \n\n**Quanto tempo ci vuole?** il sondaggio richiede del tempo: contiene circa 30 domande. Potresti prendere in considerazione l'idea di somministrarlo in un giorno amministrativo a scuola o come compito a casa presto.\n\n**Quando devo somministrare il sondaggio?** poiché si tratta di un sondaggio preliminare al corso, è importante che gli studenti lo facciano il prima possibile e preferibilmente nelle primissime fasi o addirittura prima di aver avuto a che fare con l'apprendimento in aula, in modo da poter valutare con precisione i cambiamenti causati dal corso sugli atteggiamenti e sulle convinzioni.",
           "tips": [
             "-   Uno degli obiettivi principali di CS Discoveries è quello di ampliare la partecipazione all'informatica.  \n\n-   È quindi fondamentale avere un'idea degli atteggiamenti e delle convinzioni degli studenti nei confronti dell'informatica _prima_ del corso in modo da poter misurare la quantità di cambiamenti avvenuti _dopo_ la fine del corso.\n\n-   Tieni presente che questo sondaggio è **anonimo per gli studenti**\n\n-   Il suo completamento ci aiuta anche a definire importanti miglioramenti che possiamo apportare al Piano di studi per migliorare l'esperienza degli insegnanti e degli studenti.\n\n**Aiutaci facendo in modo che i tuoi studenti contribuiscano a questo set di dati fondamentale. Le loro voci possono fare la differenza!**"
           ]
@@ -6776,7 +6913,7 @@
         "e129bba1-faba-47e0-8d48-8cb3d1be8c85": {
           "description": "**Distribuzione**: distribuisci una copia della guida alle attività per ogni gruppo.",
           "tips": [
-            null
+            "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-08-17-at-11.51.32-AM.png\" style=\"float:right;height:150px\">\n\n**Ottenere copie dei documenti di Google Docs:** le guide alle attività di questo piano di studi sono disponibili come Google Docs, Word Docs e PDF. Se desideri modificare o creare una copia personale di un documento Google, puoi farlo senza richiedere l'accesso. Basta accedere con un account Google, fare clic su «File» e «Crea una copia» dal menu. Puoi quindi condividere la tua copia con i tuoi studenti."
           ]
         },
         "cf837b19-bc57-4852-929b-cecbace3a881": {
@@ -6792,6 +6929,9 @@
             null
           ]
         },
+        "754fb49d-3180-440c-a906-599b41bad3b9": {
+          "name": "Collauda il tuo tavolo"
+        },
         "95eca054-2c21-4cd1-a4c5-b405189227a7": {
           "name": "Valuta e migliora"
         },
@@ -6799,6 +6939,9 @@
           "tips": [
             "Sebbene alcuni studenti vedano questa parte come una competizione, sottolinea che ogni gruppo sta cercando di migliorare il proprio progetto, non di competere con gli altri. Stai invitando ogni studente a sfidare prima se stesso, non gli altri."
           ]
+        },
+        "ed007b73-ed30-411a-b574-4434d8290625": {
+          "description": "### Elabora un piano"
         },
         "215425a6-e4cf-4993-ad77-37a7a54933bd": {
           "name": "Rifletti",
@@ -9599,6 +9742,7 @@
           ]
         },
         "836b29e0-6e20-434b-a5b4-556abfb94d2b": {
+          "name": "Presenta il progetto",
           "tips": [
             null
           ]
@@ -18833,7 +18977,7 @@
           ]
         },
         "88cccb48-efc0-4649-886d-c649589769b3": {
-          "description": "**Istruzioni:**\n\n-   Dividi la classe in gruppi da 4 a 6 alunni.\n-   Dai ad ogni gruppo diverse copie dell'esercitazione per scrivere le canzoni.\n-   Riproduci una breve canzone che contenga un ritornello chiaro che non cambia da una strofa all'altra.\n-   Invita la classe ad identificare (e scrivere) il ritornello.\n-   Confronta i risultati di ogni gruppo.\n\nHanno tutti ottenuto lo stesso risultato?\nCantate insieme i ritornelli per scoprirlo!\nGioca a questo gioco più e più volte finché la classe non avrà più problemi ad identificare i ritornelli.\n\n-   Spesso è più facile fare in modo che gli alunni ascoltino (o guardino) la canzone e votino qual'è per ognuno di loro il ritornello, cantandolo insieme, piuttosto che scriverlo tutto. Se scegli questo metodo, prevedi di analizzare per iscritto la canzone finale, in modo da essere sicuro che gli alunni con apprendimento maggiormente visivo ricevano il giusto stimolo."
+          "description": "**Istruzioni:**\n\n-   Dividi la classe in gruppi da 4 a 6 alunni.\n-   Dai ad ogni gruppo diverse copie dell'esercitazione per scrivere le canzoni.\n-   Riproduci una breve canzone che contenga un ritornello chiaro che non cambia da una strofa all'altra.\n-   Invita la classe ad identificare (e scrivere) il ritornello.\n-   Confronta i risultati di ogni gruppo.\n\nHanno tutti ottenuto lo stesso risultato?\nCantate insieme i ritornelli per scoprirlo!\nGioca a questo gioco più e più volte finché la classe non avrà più problemi ad identificare i ritornelli.\n\n-   Spesso è più facile fare in modo che gli alunni ascoltino (o guardino) la canzone e votino qual è per ognuno di loro il ritornello, cantandolo insieme, piuttosto che scriverlo tutto. Se scegli questo metodo, prevedi di analizzare per iscritto la canzone finale, in modo da essere sicuro che gli alunni con apprendimento maggiormente visivo ricevano il giusto stimolo."
         },
         "06b4ee77-0a27-48bc-9dca-d55b530d1ce6": {
           "name": "Riflessione",
@@ -22137,7 +22281,7 @@
           ]
         },
         "2b44b34b-743b-4698-bcf9-2b32d2172ac5": {
-          "name": "Metti alla prova la tua barca",
+          "name": "Collauda la tua barca",
           "description": "Una volta predisposti i gruppi, chiedi loro di mettere alla prova le rispettive barche facendo cadere singoli monetine nella barca. Ricorda loro le regole, in particolare che non possono toccare o regolare le barche una volta che sono in acqua. Chiedi loro di annotare nelle loro guide di attività, il numero totale di monetine contenute."
         },
         "75e6b296-d238-4993-a9f3-2712d896e9c6": {
@@ -22151,7 +22295,7 @@
           ]
         },
         "fd85159d-c1a1-484b-a5c6-fed3d2d0cc77": {
-          "description": "### Sviluppa un piano\n\n\\*\\*Richiesta: \\*\\* Ora che hai avuto la possibilità di imparare dal primo ciclo di costruzione di barche, ripetiamo la stessa attività. Innanzitutto, il tuo gruppo svilupperà un nuovo piano. Proprio come prima, annotalo sulla tua guida alle attività e quando sarai pronto tornerò e ti darò un nuovo pezzo di pellicola.\n\n**Supporto**: mentre circoli da un gruppo all'altro, fai domande sull'obiettivo del gruppo nella riprogettazione. Es: «Quale aspetto della tua barca necessitava di maggiori miglioramenti?» «Quali idee di altri gruppi volevi integrare nelle tue?» «Hai sentito il bisogno di riprogettare completamente la tua barca o di apportare solo piccole modifiche?» \n\nUna volta che i gruppi hanno preparato i nuovi piani, dai loro un nuovo pezzo di foglio d'alluminio e chiedi a ciascuno di loro di costruire una nuova barca.\n\n### Metti alla prova la tua barca\n\nI gruppi possono mettere alla prova i propri progetti come prima e registrare i risultati sulle proprie guide di attività."
+          "description": "### Sviluppa un piano\n\n\\*\\*Richiesta: \\*\\* Ora che hai avuto la possibilità di imparare dal primo ciclo di costruzione di barche, ripetiamo la stessa attività. Innanzitutto, il tuo gruppo svilupperà un nuovo piano. Proprio come prima, annotalo sulla tua guida alle attività e quando sarai pronto tornerò e ti darò un nuovo pezzo di pellicola.\n\n**Supporto**: mentre circoli da un gruppo all'altro, fai domande sull'obiettivo del gruppo nella riprogettazione. Es: «Quale aspetto della tua barca necessitava di maggiori miglioramenti?» «Quali idee di altri gruppi volevi integrare nelle tue?» «Hai sentito il bisogno di riprogettare completamente la tua barca o di apportare solo piccole modifiche?» \n\nUna volta che i gruppi hanno preparato i nuovi piani, dai loro un nuovo pezzo di foglio d'alluminio e chiedi a ciascuno di loro di costruire una nuova barca.\n\n### Collauda la tua barca\n\nI gruppi possono mettere alla prova i propri progetti come prima e registrare i risultati sulle proprie guide di attività.te"
         },
         "fc1bd727-4c35-4405-a14f-a713bcd7e532": {
           "name": "Rifletti",
@@ -22539,7 +22683,7 @@
         "21e51178-7062-468a-b8e1-a9227a0ac5eb": {
           "description": "**Richiesta:** questa app utilizza diversi tipi di elaborazione per prendere decisioni. Che tipo di elaborazione potrebbe utilizzare?",
           "tips": [
-            "Consenti agli studenti di condividere le loro risposte, ma fai in modo che «conteggio» e «ricerca di una corrispondenza» vengano evidenziati durante la discussione."
+            "Consenti agli studenti di condividere le loro risposte, ma fai in modo che \"conteggio\" e \"ricerca di una corrispondenza\" vengano evidenziati durante la discussione."
           ]
         },
         "58559ae7-ea27-45aa-ba26-1fdc3758d9a0": {
@@ -22602,91 +22746,172 @@
           "description": "**Diario di bordo**: vai su Code Studio per guardare l'app per la scelta di abiti. Qual è un ingresso, un uscita e un tipo di elaborazione che potrebbe utilizzare? Supponiamo che tu abbia usato questa app ogni giorno. Quali dati vorresti che questa app ricordasse?"
         },
         "071466cb-7d6b-4e91-93bb-261e508f89dc": {
+          "description": "**Girando tra i banchi:** la prima parte di questa riflessione è un ripasso degli ingressi e delle uscite (input e output). Mentre gli studenti ragionano sullla discussione, controlla le loro risposte per assicurarti che comprendano come vengono utilizzati ingressi e uscite nell'app.",
           "tips": [
-            null
+            "Gli studenti possono identificare il tempo, il colore preferito o la stagione come dati in ingresso e le immagini degli abiti come risultato di uscita. Anche se l'elaborazione esatta dell'app potrebbe non essere chiara, gli studenti potrebbero far notare che esistono diversi scenari probabili («Se piove, includi un ombrello») o che ci sono delle corrispondenze tra l'input dell'utente e le caratteristiche degli abiti."
           ]
         },
         "9c0439ca-8ac8-463f-889c-47df291b32d9": {
+          "description": "Chiedi agli studenti di condividere quali dati ritengano debbano essere memorizzati e perché.",
           "tips": [
-            null
+            "Sebbene non sia importante che gli studenti concordino sulle risposte, questa discussione inizia a suggerire l'idea di memorizzare le informazioni per una fase successiva e li incentiva a pensare a quali dati vadano o non vadano memorizzati in un'app. "
           ]
+        },
+        "2f41e74b-1693-4621-a008-ee942996e062": {
+          "description": "Questa app di esempio richiede alcuni dati che non cambieranno molto spesso, come il tuo colore preferito. Invece di inserire questi dati ogni volta, sarebbe utile se l'app potesse ricordare le nostre risposte memorizzandole. Tutti i computer possono salvare i dati per un secondo momento e leggere le informazioni salvate attraverso la **memorizzazione**."
+        },
+        "dee06cd4-dac7-4000-bce5-c10bedcc7874": {
+          "description": "**Glossario delle parole chiave:** \n\n-   **Memorizzazione** - salvataggio dei dati da utilizzare in successivamente\n\n**Domanda del giorno: perché la memorizzazione è una parte importante del processo di elaborazione?**"
+        },
+        "b289fd48-6c31-480d-a98b-7d3d92fdca67": {
+          "name": "App con memorizzazione",
+          "description": "Esamineremo alcune app che utilizzano alcuni tipi di dati. Vogliamo identificare quali dati potrebbero essere memorizzati in modo da non doverli inserire ogni volta."
         },
         "24dd5f31-50de-4a28-91c2-5d4591b8d1d8": {
           "description": "**Forma i gruppi:** crea gruppi di 2-3 alunni. Per questa attività ciascun gruppo dovrà accedere a un computer.\n\n**Distribuisci:** consegna a ogni gruppo una copia della guida alle attività.\n\nCome classe, completa la prima sezione della guida alle attività, che fa riferimento all'app di selezione degli abiti utilizzata nel riscaldamento.\n\nRimanda gli alunni a Code Studio per vedere le app di esempio."
         },
         "59845bd6-dedc-4283-9cbd-f3c574fd99ab": {
+          "description": "**Girando tra i banchi:** fai in modo che gli studenti completino il resto della guida alle attività nell'ambito dei loro gruppi. Mentre compilano i grafici, chiedi loro di spiegare perché hanno pensato che ogni input dovesse essere mmorizzato o meno.",
           "tips": [
-            null
+            "C'è una certa flessibilità su ciò che deve e non deve essere memorizzato, poiché questa è una scelta che appartine a chi progetta l'app. La parte più importante è la loro spiegazione. Dovrebbero chiedersi se tali dati cambieranno frequentemente."
           ]
         },
         "2000a800-9ea1-4dbd-bb6c-7af93735477d": {
           "name": "App: scelta di abiti",
+          "description": "La prima app chiede agli utenti di inserire il loro colore preferito, la stagione in corso e il tempo, quindi invia un'immagine di un tipo di abbigliamento in base ai dati in ingresso stabiliti dall'utente.",
           "progression_name": "App: scelta di abiti"
         },
         "33b8468e-5c6c-4acb-b377-dd721dc0904a": {
           "name": "Il trovamico",
+          "description": "La seconda app chiede agli utenti di inserire quali amici devono essere nella loro lista di amici, quindi emette una mappa che mostra le posizioni degli amici nell'elenco.",
           "progression_name": "App: il trovamico"
         },
         "028c50a4-a63b-44aa-a686-55512682ee15": {
+          "name": "Scegli un film per bambini",
+          "description": "La terza app richiede agli utenti di inserire diverse preferenze relative ai film, quindi emette un consiglio sui film in base alle preferenze dell'utente.",
           "progression_name": "App: scegli un film per bambini"
         },
+        "2956f576-807d-495f-ae89-140842e245b0": {
+          "name": "Linee guida",
+          "description": "Man mano che i gruppi passano all'attività finale, potrebbe essere necessario spiegare brevemente cosa sono le linee guida e cosa richiede la domanda. Fai in modo che tutti i gruppi abbiano il tempo di elaborare delle linee guida, anche se devono saltare parti del grafico precedente."
+        },
         "fa03e441-7483-4193-a5f7-20fa4bb081bf": {
+          "description": "**Girando tra i banchi:** se i gruppi non riescono a scrivere le loro linee guida, chiedi loro quali input ritengono che debbano essere memorizzati nelle altre app. Chiedi loro provare a trovare somiglianze tra gli input memorizzati e quelli che non sono stati memorizzati. Ricorda loro che possono anche scrivere linee guida su quali input non sono stati memorizzati.",
           "tips": [
-            null
+            "Le risposte degli studenti possono variare, ma in generale devono rendersi conto che l'opportunità di memorizzare certi dati dipende dalla frequenza con cui essi cambiano, se cambiano del tutto."
           ]
+        },
+        "93237735-0211-4bda-be3e-0a22ee8e868a": {
+          "description": "Una volta che la maggior parte dei gruppi ha finito di scrivere le linee guida, riunisci la classe e chiedi se qualche gruppo desidera condividere una delle proprie linee guida."
+        },
+        "9f28ebbd-3614-4789-b84e-9f9037fc8c83": {
+          "description": "Ora possiamo intendere un computer come una macchina che compie quattro attività: ingressi, uscite, memorizzazione ed elaborazione"
+        },
+        "0e40d4c1-d45a-4209-989f-30553ca8de8a": {
+          "description": "Mostra loro il video che illustra il modello di elaborazione del computer.",
+          "progression_name": "Video: modello del computer"
         },
         "4cefb9ba-ffbc-40ba-bc37-dae06e608b67": {
+          "description": "Apri la discussione con due domande che agevolino il dibattito.",
           "tips": [
-            null
+            "Se usi il diario, chiedi agli studenti di scrivere le loro risposte nei loro diari"
           ]
         },
+        "bf776613-5d76-4349-8f6d-3df95766a838": {
+          "description": "1.  Pensa a qualcosa che fai sul computer. Che tipo di ingressi, uscite, memorizzazione ed elaborazione stanno avvenendo?\n\n2.  Quali tipi di ingressi, uscite, memorizzazione ed elaborazione vengono utilizzati in uno smartphone di oggi?\n\nInfine, guarda la locandina della lezione \"Cos'è un computer?\" e verifica se qualcuno dei computer deve essere riclassificato come computer o meno in base a questo modello del computer così come l'abbiamo definito."
+        },
         "2d4d1c53-92af-4087-b1e7-964f95e3c3da": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "**Richiesta**: pensa a un'app che vorresti creare. Quali dati dovrebbe conservare?"
         },
         "40b16a1c-add1-445a-81de-c281c495fe6f": {
+          "description": "**Condividi:** se c'è tempo, dai modo agli studenti di condividere le proprie idee.",
           "tips": [
-            null
+            "Quando lo studente condivide le proprie idee, fai in modo che utilizzi il glossario delle parole chiave della lezione:\n\n**memorizzazione** - salvataggio delle informazioni da utilizzare in futuro"
           ]
         },
         "fbec93b8-ebae-4b0b-9c2f-3ceee251e162": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/1H0UKaAlFi8-nRe1vUOYEPA_bR8M2J7Msd4aORf0zHm0/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
         },
+        "8a962e67-680c-4b35-8f29-bee873ebf2fe": {
+          "name": "Presenta il progetto",
+          "description": "**Discussione:** tra le app che abbiamo visto in questa unità, qual era la tua preferita? Che problema ha risolto?\n\n**Condivisione:** consente agli studenti di condividere le loro app preferite."
+        },
+        "76ebb601-8ed2-4aa1-ac1e-4a8d04173f64": {
+          "description": "In tutta questa unità abbiamo imparato a conoscere il processo di risoluzione dei problemi e come i computer elaborano i dati per aiutare a risolvere i problemi prendendo dati in ingresso ed elaborandoli per creare dati in uscita utili. Oggi inizieremo un progetto in cui tu e un compagno progetterete un'app per risolvere un problema di vostra scelta."
+        },
+        "400c20cd-fe74-435b-a883-db94d9c4ee41": {
+          "description": "**Domanda del giorno: come può il modello  inserisci- estrai-memorizza-elabora aiutarci a progettare un'app che risolva un problema?**"
+        },
         "a5bc259a-2779-4488-b754-f6485a212933": {
-          "name": "Guida al progetto"
+          "name": "Guida al progetto",
+          "description": "**Distribuzione**: dai a ogni studente una guida al progetto e una tabella o lista di controllo per gli studenti. Come classe, esamina le informazioni fornite nel primo foglio della guida al progetto che spiega il progetto, elenca i passaggi e mostra cosa dovranno produrre gli studenti. Quindi fornisci una breve panoramica di ciascuno dei passaggi più dettagliati."
         },
         "254a27b6-75fb-4f5f-bdf1-2ac909f01f75": {
+          "description": "**Fase 1: scegli un compagno**: disponi gli studenti a coppie o in gruppi di tre.",
           "tips": [
-            null
+            "**Creazione di gruppi:** il modo ideale di svolgere questo progetto è in coppia. Se necessario, potranno andare bene gruppi di 3 persone. Dovresti decidere prima se deciderle tu o se consentire agli studenti di scegliere i propri compagni."
           ]
         },
         "e7394c68-613b-4772-90c8-dcf1228ba5dc": {
+          "description": "**Fase 2: riflessione di gruppo sui problemi**: invita i gruppi a dedicare alcuni minuti in silenzio a riflettere sui problemi e ad annotarli nelle guide del progetto. Vai in giro tra i banchi e ricorda loro che a questo punto non dovrebbero pensare a un'app che vogliono creare e nemmeno se è possibile risolvere questo problema con un'app. Assicurati che inizino con il problema piuttosto che con la soluzione.",
           "tips": [
-            null
+            "**Agevolare la riflessione di gruppo:** ascolta con attenzione le conversazioni degli studenti. Identifica gli studenti che sono bloccati e il motivo per cui sono bloccati. Pensano troppo in grande? Aiuta questi studenti a pensare ai problemi come a fastidi o inconvenienti o a un'opportunità per migliorare la qualità della vita in misura piccola o grande. "
           ]
         },
+        "4118dd91-3977-4ade-825a-32aa7f2996c1": {
+          "description": "**Fase 3: scegli il tuo problema**: la guida al progetto fornisce diversi criteri che gli studenti possono utilizzare per valutare quali dei loro problemi vorrebbero affrontare. Chiedi agli studenti di attendere con impazienza la Fase 4 se hanno bisogno di ulteriori indicazioni su come definire o definire l'ambito dei loro problemi. Lascia qualche minuto agli studenti per discutere con il loro gruppo e scegli il problema che vorrebbero risolvere con la loro app."
+        },
         "6a60775b-f641-46a0-820d-f6895dd26fed": {
+          "description": "**Fase 4: definisci il tuo problema**: in questa fase gli studenti dovranno definire in modo appropriato il loro problema definendo chi è il loro pubblico, qual è specificamente il problema e come sapranno di averlo risolto.",
           "tips": [
-            null
+            "**Quanto aiutare:** a questo punto gli studenti hanno fatto molta pratica nella definizione dei problemi. Subito dopo questa fase, sosterranno anche un processo di revisione tra pari. Incoraggiali a essere il più dettagliati possibile, ma evita di dare consigli specifici su come definire il loro problema. "
           ]
         },
         "709fc018-84ca-4c5c-af4e-bae11c2867b1": {
+          "description": "**Fase 5: la tua app**: una volta che gli studenti hanno analizzato l'ambito del problema, chiedi loro di discutere di un'app che potrebbe essere utilizzata per aiutarli a risolvere il problema. Per iniziare, dovranno solo fornire una descrizione di alto livello dell'app che descriva come l'utente la userebbe e cosa fa.",
           "tips": [
-            null
+            "**Che tipo di app?:** questo progetto è finalizzato a realizzare un'app semplice, sulla falsariga di quelle viste nella lezione precedente. Anche problemi di grandi dimensioni o parti di problemi di grandi dimensioni possono essere risolti raccogliendo ed elaborando adeguatamente i dati."
           ]
         },
+        "fe619886-9d11-4f22-9a63-fd59c89246d3": {
+          "description": "**Fase 6: inserisci, estrai, memorizza, elabora**: in questa fase gli studenti progettano il modo in cui la loro app funzionerà effettivamente per elaborare i dati. \n\nPrima gli studenti progetteranno e poi descriveranno i risultati delle loro app. Sul lato sinistro possono fare uno schizzo di come sarebbe la loro app. Non è necessario che si tratti di una bozza definitiva e serve solo ad aiutarli a raccogliere idee e a comunicare a un altro gruppo come sarebbe la loro app. Sul lato destro hanno spazio per etichettare ogni singolo dato sullo schermo.\n\nUtilizzando i dati in uscita che gli studenti hanno selezionato come guida, gli studenti devono scegliere i dati in ingresso di cui avranno bisogno per crearli. Sono previsti solo 6 posti, anche se gli studenti possono scegliere di sceglierne di più. Questo è in qualche modo intenzionale per aiutare gli studenti a sfruttare le funzionalità della loro app.\n\nGli studenti descriveranno il modo in cui la loro app elabora i dati utilizzando come modello il modo in cui li elaborerebbero loro stessi. L'obiettivo qui è principalmente quello di garantire che gli studenti abbiano selezionato gli input che potrebbero essere elaborati per produrre gli output. Ad esempio, se questo mese trovano un elenco di amici con compleanni, sia un computer che un essere umano dovrebbero conoscere l'elenco dei compleanni degli amici e il mese corrente.\n\nInfine, agli studenti viene chiesto di decidere quali dati, nel caso, è opportuno conservare a lungo termine.\n\n**Distribuzione:** App e risoluzione dei problemi - Revisione tra pari, una copia per ogni coppia di studenti\n\n**Fase 7: revisione tra pari**: ogni gruppo dovrebbe scambiare le proprie guide ai progetti con un altro. Dovrebbero compilare la prima riga della revisione tra pari che chiede su quale parte specifica del loro progetto desiderano ricevere un feedback. Successivamente, ci sono una serie di domande dirette e la possibilità di fornire un feedback più aperto sull'idea.\n\nGli studenti dovrebbero ricevere le guide al progetto e il feedback dei colleghi. Sul retro, ci sono domande in cui possono indicare quali modifiche o migliorie progettuali intendono apportare alle loro app in base al riscontro."
+        },
         "06fa61d8-63d0-49d0-b9d1-77ec59c88d72": {
+          "description": "**Fase 8: mettere a punto l'app e creare un cartellone**: gli studenti devono incorporare le idee dei loro colleghi nel finalizzare la loro idea di app. Dovrebbero quindi creare un cartellone che presenti la loro app seguendo le indicazioni fornite nella guida alle attività.\n\nGli studenti dovrebbero rivisitare la tabella di questo progetto per vedere quanto è allineato il loro progetto. Puoi anche decidere di distribuire le [r apps_and_problem_solving_-_student_checklist/csd/2021] in modo che gli studenti possano valutare autonomamente in che misura il loro progetto soddisfa i requisiti per questo progetto.",
           "tips": [
-            null
+            "**Tabella e lista di controllo:** gli studenti hanno due risorse che possono usare per autoriflessione e assicurarsi di essere sulla strada giusta: la tabella e la lista di controllo (checklist= degli studenti. Consigliamo agli studenti di utilizzare la lista di controllo per la propria autovalutazione e riflessione, poiché può essere più facile da digerire e comprendere quando si esamina il proprio progetto. Tuttavia, consigliamo agli insegnanti di utilizzare la tabella completa per valutare i progetti per fornire un feedback più accurato agli studenti. Puoi vederne alcuni esempi con la risorsa _Esempio di tabella compilata_ nella parte superiore del piano della lezione (visibile solo agli insegnanti verificati)"
           ]
+        },
+        "cabc123a-f4bd-41d6-87f7-f85807b42c97": {
+          "name": "Presentazione delle app",
+          "description": "**Condivisione**: decidi se e come gli studenti condivideranno i loro cartelloni tra loro. Se gli studenti terranno presentazioni più formali, utilizza le linee guida fornite nella Fase 9 della guida del progetto per strutturare le presentazioni.\n\n**Discussione:** alla fine della presentazione raccogli le guide del progetto completate, i moduli dei riscontri tra pari e i cartelloni di ciascun gruppo."
         },
         "03ad2f47-6f62-4854-b398-3075d952d71e": {
           "name": "Riflessione",
+          "description": "\\*\\*Domanda del giorno: come può il modello inserisci-estrai-memorizza-elabora aiutarci a progettare un'app che risolva un problema? \\*\\*\n\n**Rifletti:** gli studenti riflettono sulla seguente domanda nei loro diari:\n\n-   qual è la cosa del tuo progetto che ti rende più orgoglioso?\n\nInvia gli studenti a Code Studio per completare le riflessioni sul loro atteggiamento nei confronti dell'informatica. Sebbene le loro risposte siano anonime, i dati aggregati saranno disponibili una volta che almeno cinque studenti avranno completato il sondaggio.",
           "progression_name": "Riflessione"
+        },
+        "a37c4b7c-19a2-4517-b0f4-d4187aa8f1a2": {
+          "name": "Shark Tank",
+          "description": "Conduci un finto show «Shark Tank» come ambientazione per il progetto dell'unità. Ecco alcune cose da tenere presente: \n\n-   il livello di maturità della tua classe consente di mantenere un buon clima in questa competizione? \n-   invita docenti/personale, concittadini o altri professionisti per ascoltare le presentazioni della Fase 2 e farsi un'idea per l'assegnazione del primo, del secondo o del terzo posto. \n-   invita degli imprenditori del luogo o altri professionisti a condividere esperienze durante il primo o il secondo giorno in modo che gli studenti possano vedere in che legami ha l'informatica con il settore in cui lavorano."
+        },
+        "371d5237-e425-45ed-9e45-0879ff7105b7": {
+          "description": "La verifica finale si trova nella parte inferiore della pagina panoramica dell'unità Risoluzione dei problemi e informatica di Code Studio.\n\nQuesta verifica è bloccata e nascosta alla vista dello studente per impostazione predefinita. Affinché gli studenti possano vedere e sostenere questa verifica, dovrai sbloccarla facendo clic sul pulsante «Blocca impostazioni» e seguendo le istruzioni visualizzate. [Cliccare qui per ulteriori informazioni sullo sblocco e l'amministrazione delle valutazioni](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)"
         },
         "7693d6aa-abdb-4631-ae6c-d358e5d063e8": {
           "description": "Per poter vedere il lavoro degli studenti nell'arco dell'anno e consentire loro di accedere a strumenti e risorse online, gli studenti devono trovarsi tutti nella stessa sezione di Code Studio. Per visualizzare le valutazioni e le chiavi di risposta fornite da Code.org, devi anche essere un «insegnante verificato»."
         },
+        "7bc95fda-8bc5-4e9c-8e1c-504e1fe504b8": {
+          "name": "Prima della lezione",
+          "description": "#### Assicurati di essere registrato su Code Studio come account insegnante «verificato»\n\nChiunque può creare un account insegnante su Code Studio, il che significa che abbiamo bisogno di un ulteriore livello di autorizzazione per consentire agli insegnanti di CS Discoveries di vedere valutazioni, chiavi di risposta e qualsiasi altro materiale a cui gli studenti non dovrebbero essere in grado di accedere banalmente. Se hai partecipato a un TeacherCon di Code.org durante l'estate, dovresti già avere questo accesso.\n\nPer verificare se hai accesso:\n\n1.  Vai alla [pagina panoramica del corso dell'Unità 1](https://studio.code.org/s/csd1-2018)\n2.  Consideri il sondaggio pre-corso di CS Discoveries come la prima «fase» del corso?\n3.  In caso contrario, compila [questo modulo](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Tieni presente che può essere necessario circa un giorno per diventare un account insegnante verificato, quindi esegui questo passaggio in anticipo!\n\nSe non sei un account insegnante verificato, puoi comunque creare una sezione per la tua classe, ma non sarai in grado di amministrare il sondaggio pre-corso il primo giorno.\n\n#### Crea una sezione di classe su Code Studio.\n\nPer creare una sezione:\n\n1.  Vai alla [Home page del docente](https://studio.code.org/home)\n2.  Fai clic su «Nuova sezione» in «Sezioni della classe»\n3.  Scegli «Accessi via email» \n4.  Nell'apposito spazio, dai un nome alla sezione (ad esempio Periodo CSD 1), il voto dei tuoi studenti, il corso: «Scoperte dell'informatica», l'unità corrente: «Unità 1: Risoluzione dei problemi» e fai clic su «Salva»\n5.  Una volta creata la sezione, fate clic sul nome della sezione\n6.  Nella nuova pagina, vedrai un URL di iscrizione univoco che distribuirai ai tuoi studenti in classe. \n\nPer un video che illustra questi passaggi e altri passaggi sulla navigazione del tuo account Code.org, vai alla [Playlist video dimostrativa di Code.org](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)"
+        },
+        "7211ed44-e31e-47ce-926a-6b39c4a36f52": {
+          "name": "All'inizio della lezione",
+          "description": "1.  Chiedi agli studenti di creare un account Code Studio all'indirizzo <https://studio.code.org> se non ne hanno già uno\n2.  Condividi l'URL di iscrizione con gli studenti e chiedi loro di accedervi per navigare nella sezione\n    -   Puoi avere conferma che uno studente si sia iscritto con successo alla tua sezione aprendo la pagina di avanzamento della sezione nella home page del docente e premendo aggiorna quando gli studenti si iscrivono. Gli studenti dovrebbero vedere una piccola barra verde nella parte superiore della pagina che dice \"Ti sei iscritto con successo...\" \n3.  Da [studio.code.org]a[1] , chiedi agli studenti di individuare il riquadro Computer Science Discoveries e fare clic su \"Visualizza corso\", quindi passare all'Unità 1.\n\nUna volta che gli studenti avranno consultato la pagina di panoramica dell'Unità 1, saranno pronti per rispondere al sondaggio pre-corso del CSD"
+        },
         "7d3700c3-08ad-41e8-bee3-19384d50e4c4": {
+          "description": "#### Importante! Chiedi ai tuoi studenti di partecipare al sondaggio pre-corso CSD!\n\nGli studenti possono trovare un link al sondaggio in Code Studio come primo elemento nella pagina di panoramica dell'Unità 1. Per garantire che gli studenti partecipino al sondaggio solo al momento opportuno, questo viene \"bloccato\" e non può essere visualizzato fino a quando non lo \"sblocchi\". Il documento [r how-to-administer-a-locked-assessment/csd/2021] fornisce dettagli su come farlo quando sei pronto. Tieni presente che le istruzioni per la gestione di una valutazione e di un sondaggio sono le stesse.    \n\n**Quanto tempo ci vuole?** il sondaggio richiede del tempo: contiene circa 30 domande. Potresti prendere in considerazione l'idea di somministrarlo in un giorno amministrativo a scuola o come compito a casa presto.\n\n**Quando devo somministrare il sondaggio?** poiché si tratta di un sondaggio preliminare al corso, è importante che gli studenti lo facciano il prima possibile e preferibilmente nelle primissime fasi o addirittura prima di aver avuto a che fare con l'apprendimento in aula, in modo da poter valutare con precisione i cambiamenti causati dal corso sugli atteggiamenti e sulle convinzioni.",
           "tips": [
             "-   Uno degli obiettivi principali di CS Discoveries è quello di ampliare la partecipazione all'informatica.  \n\n-   È quindi fondamentale avere un'idea degli atteggiamenti e delle convinzioni degli studenti nei confronti dell'informatica _prima_ del corso in modo da poter misurare la quantità di cambiamenti avvenuti _dopo_ la fine del corso.\n\n-   Tieni presente che questo sondaggio è **anonimo per gli studenti**\n\n-   Il suo completamento ci aiuta anche a definire importanti miglioramenti che possiamo apportare al Piano di studi per migliorare l'esperienza degli insegnanti e degli studenti.\n\n**Aiutaci facendo in modo che i tuoi studenti contribuiscano a questo set di dati fondamentale. Le loro voci possono fare la differenza!**"
           ]
@@ -22711,34 +22936,54 @@
           "description": "**Mostra:** mostra agli studenti la domanda del giorno\n\n**Domanda del giorno: cos'è che può aiutarci a lavorare insieme e a risolvere i problemi in gruppo?**"
         },
         "20c1bfc1-6514-49f7-8426-549f7bce2c3f": {
+          "name": "Costruire un tavolo di giornali",
           "description": "**Gruppo**: crea gruppi di 2 o 3 studenti."
+        },
+        "fae1250c-e3ce-4abb-8d77-7ba1b4df7f05": {
+          "description": "Oggi costruiremo tavoli con giornali e nastro adesivo. Ogni tavolo dovrebbe tenere i libri ad almeno 30 cm da terra. Avrai l'opportunità di creare almeno due tavoli e utilizzare la tua esperienza con ognuno di essi per migliorare i tuoi progetti. Prima di iniziare, decidi in gruppo che tipo di progetto vorresti realizzare con il tuo primo tavolo. Registra le tue idee e gli eventuali punti deboli di questo progetto nella tua guida alle attività."
         },
         "922ac8cd-6633-48ac-bcb7-85fb1d2e711a": {
           "description": "**Distribuzione**: distribuisci una copia della guida alle attività per ogni gruppo.",
           "tips": [
-            null
+            "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-08-17-at-11.51.32-AM.png\" style=\"float:right;height:150px\">\n\n**Ottenere copie dei documenti di Google Docs:** le guide alle attività di questo piano di studi sono disponibili come Google Docs, Word Docs e PDF. Se desideri modificare o creare una copia personale di un documento Google, puoi farlo senza richiedere l'accesso. Basta accedere con un account Google, fare clic su «File» e «Crea una copia» dal menu. Puoi quindi condividere la tua copia con i tuoi studenti."
           ]
         },
         "f3726d11-0690-46a9-b742-f48b4a80ab33": {
           "name": "Obiettivi e regole",
           "description": "In classe, leggi le sezioni Obiettivi e Regole della guida alle attività e rispondi alle domande.",
           "tips": [
-            null
+            "Questa attività dovrebbe essere svolta in uno spazio ampio. Se la tua aula è poco spaziosa  potresti anche prendere in considerazione l'idea di far svolgere questa attività nel corridoio o in qualche altro spazio o, se necessario, aggiungere ulteriori regole."
           ]
         },
         "6cd90ae5-5c64-45e8-a9c5-c1e01bdddd64": {
           "name": "Elabora un piano",
+          "description": "Lascia agli studenti un paio di minuti per discutere in gruppo l'approccio che adotteranno con questa prima tabella. Una volta che i gruppi hanno annotato le loro idee e alcuni possibili punti deboli, possono venire da te per prendere il giornale e la cassetta e iniziare a costruire i loro tavoli.",
           "tips": [
-            null
+            "Trattieni i materiali finché gli studenti non presentano un piano per il loro tavolo. L'obiettivo non è rallentarli troppo, ma semplicemente dar loro un momento per riflettere brevemente sui possibili approcci che potrebbero adottare. Questo è uno dei modi in cui questa attività prefigura la fase di pianificazione del processo di risoluzione dei problemi che gli studenti vedranno nelle lezioni successive."
           ]
         },
+        "9ed66e94-d0f7-41c7-bcc6-0ad4280881ab": {
+          "name": "Collauda il tuo tavolo",
+          "description": "Appena i gruppi sono pronti, chiedi loro di mettere alla prova i loro tavoli. posizionando i singoli libri sulla parte superiore. Ricorda loro le regole, in particolare che non possono toccare o regolare i tavoli una volta che hanno iniziato ad aggiungere libri e che i libri devono essere ad almeno 30 cm da terra. Chiedi loro di annotare il numero totale di libri contenuti nelle loro guide di attività."
+        },
         "49050d16-5918-4c25-b43d-144649ad574c": {
-          "name": "Valuta e migliora"
+          "name": "Valuta e migliora",
+          "description": "Questo primo tentativo di costruire i nostri tavoli è stato solo per familiarizzare con la sfida. Costruiremo tutti un secondo tavolo e vedremo se possiamo aumentare il numero di libri che possiamo contenere. Prima di iniziare però, vediamo cosa possiamo imparare da questa prova."
         },
         "caf7880a-40b3-4252-865e-a81d22f30d07": {
+          "description": "**Condivisione:** chiedi agli studenti di condividere i risultati della loro prima sfida con i gruppi vicini. Chiedi ai gruppi di concentrarsi in particolare su quale sia stato l'eventuale difetto progettuale del tavolo (ad esempio, non era sufficientemente largo, era instabile, ecc.) e di riflettere su come aggirare quei problemi.",
           "tips": [
             "Sebbene alcuni studenti vedano questa parte come una competizione, sottolinea che ogni gruppo sta cercando di migliorare il proprio progetto, non di competere con gli altri. Stai invitando ogni studente a sfidare prima se stesso, non gli altri."
           ]
+        },
+        "937e5140-1635-48fd-a02f-79fc0b208510": {
+          "description": "### Elabora un piano"
+        },
+        "b5b18fcc-941a-43df-9a83-9967b566b043": {
+          "description": "Ora che hai avuto la possibilità di imparare dal primo ciclo di preparazione dei tavoli, ripetiamo la stessa attività. Prima di tutto, il tuo gruppo svilupperà un nuovo piano. Proprio come prima, annotalo sulla tua guida alle attività e quando sarai pronto tornerò a darti un nuovo giornale."
+        },
+        "0a0a6ac4-694b-4da2-95e5-5ad4662f0ca3": {
+          "description": "**Supporto**: mentre ti sposti da un gruppo all'altro, poni domande al gruppo su come fare attenzione nella riprogettazione. Es: «Quale aspetto del tuo tavolo necessitava dei maggiori miglioramenti?» «Quali idee di altri gruppi volevi incorporare nelle tue?» «Hai sentito il bisogno di riconfigurare completamente il tuo tavolo o apportare piccole modifiche?» \n\nUna volta che i gruppi hanno preparato i nuovi piani, dai loro un nuovo giornale e chiedi a ciascuno di loro di costruire un nuovo tavolo.\n\n### Collauda il tuo tavolo\n\nI gruppi possono testare i propri progetti come prima e annotarne i risultati nelle loro guide alle attività."
         },
         "17a60d00-0762-4796-8bb7-c953b2f53867": {
           "name": "Rifletti",
@@ -22763,7 +23008,16 @@
         "805b87e8-c377-489d-84e2-8be6316309b1": {
           "description": "Per poter vedere il lavoro degli studenti nell'arco dell'anno e consentire loro di accedere a strumenti e risorse online, gli studenti devono trovarsi tutti nella stessa sezione di Code Studio. Per visualizzare le valutazioni e le chiavi di risposta fornite da Code.org, devi anche essere un «insegnante verificato»."
         },
+        "6c301b18-2257-43b7-ad69-d9d8eab042bd": {
+          "name": "Prima della lezione",
+          "description": "#### Assicurati di essere registrato su Code Studio come account insegnante «verificato»\n\nChiunque può creare un account insegnante su Code Studio, il che significa che abbiamo bisogno di un ulteriore livello di autorizzazione per consentire agli insegnanti di CS Discoveries di vedere valutazioni, chiavi di risposta e qualsiasi altro materiale a cui gli studenti non dovrebbero essere in grado di accedere banalmente. Se hai partecipato a un TeacherCon di Code.org durante l'estate, dovresti già avere questo accesso.\n\nPer verificare se hai accesso:\n\n1.  Vai alla [pagina panoramica del corso dell'Unità 1](https://studio.code.org/s/csd1-2018)\n2.  Ritieni il sondaggio pre-corso di CS Discoveries come la prima «fase» del corso?\n3.  In caso contrario, compila [questo modulo](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Tieni presente che può essere necessario circa un giorno per diventare un account insegnante verificato, quindi esegui questo passaggio in anticipo!\n\nSe non disponi di un account insegnante verificato, puoi comunque creare una classe per i tui studenti, ma non sarai in grado di amministrare il sondaggio pre-corso il primo giorno.\n\n#### Crea una classe su Code Studio.\n\nPer creare una classe:\n\n1.  Vai alla [Home page del docente](https://studio.code.org/home)\n2.  Fai clic su «Nuova classe» in «Sezioni della classe»\n3.  Scegli «Accessi via email» \n4.  Nell'apposito spazio, dai un nome alla classe (ad esempio Periodo CSD 1), il voto dei tuoi studenti, il corso: «Scoperte dell'informatica», l'unità corrente: «Unità 1: Risoluzione dei problemi» e fai clic su «Salva»\n5.  Una volta creata la classe, fate clic sul nome della classe\n6.  Nella nuova pagina, vedrai un URL di iscrizione univoco che distribuirai ai tuoi studenti della classe. \n\nPer un video che illustra questi passaggi e altri passaggi sulla navigazione del tuo account Code.org, vai alla [Playlist video dimostrativa di Code.org](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)"
+        },
+        "9f212653-f99f-40a5-aee5-1ce6ad6b9d86": {
+          "name": "All'inizio della lezione",
+          "description": "1.  Chiedi agli studenti di creare un account Code Studio all'indirizzo <https://studio.code.org> se non ne hanno già uno\n2.  Condividi l'URL di iscrizione con gli studenti e chiedi loro di accedervi per navigare nella sezione\n    -   Puoi avere conferma che uno studente si sia iscritto con successo alla tua sezione aprendo la pagina di avanzamento della sezione nella home page del docente e premendo aggiorna quando gli studenti si iscrivono. Gli studenti dovrebbero vedere una piccola barra verde nella parte superiore della pagina che dice \"Ti sei iscritto con successo...\" \n3.  Da [studio.code.org]a[1] , chiedi agli studenti di individuare il riquadro Computer Science Discoveries e fare clic su \"Visualizza corso\", quindi passare all'Unità 1.\n\nUna volta che gli studenti avranno consultato la pagina di panoramica dell'Unità 1, saranno pronti per rispondere al sondaggio pre-corso del CSD"
+        },
         "c55fae38-7795-4027-b469-a3238f34efe5": {
+          "description": "#### Importante! Chiedi ai tuoi studenti di partecipare al sondaggio pre-corso CSD!\n\nGli studenti possono trovare un link al sondaggio in Code Studio come primo elemento nella pagina di panoramica dell'Unità 1. Per garantire che gli studenti partecipino al sondaggio solo al momento opportuno, questo viene \"bloccato\" e non può essere visualizzato fino a quando non lo \"sblocchi\". Il documento [r how-to-administer-a-locked-assessment/csd/2021] fornisce dettagli su come farlo quando sei pronto. Tieni presente che le istruzioni per la gestione di una valutazione e di un sondaggio sono le stesse.    \n\n**Quanto tempo ci vuole?** il sondaggio richiede del tempo: contiene circa 30 domande. Potresti prendere in considerazione l'idea di somministrarlo in un giorno amministrativo a scuola o come compito a casa presto.\n\n**Quando devo somministrare il sondaggio?** poiché si tratta di un sondaggio preliminare al corso, è importante che gli studenti lo facciano il prima possibile e preferibilmente nelle primissime fasi o addirittura prima di aver avuto a che fare con l'apprendimento in aula, in modo da poter valutare con precisione i cambiamenti causati dal corso sugli atteggiamenti e sulle convinzioni.",
           "tips": [
             "-   Uno degli obiettivi principali di CS Discoveries è quello di ampliare la partecipazione all'informatica.  \n\n-   È quindi fondamentale avere un'idea degli atteggiamenti e delle convinzioni degli studenti nei confronti dell'informatica _prima_ del corso in modo da poter misurare la quantità di cambiamenti avvenuti _dopo_ la fine del corso.\n\n-   Tieni presente che questo sondaggio è **anonimo per gli studenti**\n\n-   Il suo completamento ci aiuta anche a definire importanti miglioramenti che possiamo apportare al Piano di studi per migliorare l'esperienza degli insegnanti e degli studenti.\n\n**Aiutaci facendo in modo che i tuoi studenti contribuiscano a questo set di dati fondamentale. Le loro voci possono fare la differenza!**"
           ]
@@ -22788,34 +23042,58 @@
           "description": "**Mostra:** mostra agli studenti la domanda del giorno\n\n**Domanda del giorno: cos'è che può aiutarci a lavorare insieme e a risolvere i problemi in gruppo?**"
         },
         "d3cf10fd-68e0-46fd-8a4e-a82daa4e0f1c": {
+          "name": "Costruire un ponte di spaghetti",
           "description": "**Gruppo**: crea gruppi di 2 o 3 studenti."
+        },
+        "7962df65-9338-4d88-aff7-3e531f947173": {
+          "description": "Oggi costruiremo ponti per spaghetti. Ogni ponte dovrà attraversare uno spazio di circa 30 cm e contenere il maggior numero possibile di libri. Avrai l'opportunità di costruire almeno due ponti e utilizzare la tua esperienza con ognuno di essi per migliorare i tuoi progetti. Prima di iniziare, decidi in gruppo che tipo di design vorresti realizzare con il tuo primo ponte. Annota le tue idee e gli eventuali punti deboli di questo progetto nella tua guida alle attività."
         },
         "c209191d-c268-4f8e-b40c-93a5de206b76": {
           "description": "**Distribuzione**: distribuisci una copia della guida alle attività per ogni gruppo.",
           "tips": [
-            null
+            "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-08-17-at-11.51.32-AM.png\" style=\"float:right;height:150px\">\n\n**Ottenere copie dei documenti di Google Docs:** le guide alle attività di questo piano di studi sono disponibili come Google Docs, Word Docs e PDF. Se desideri modificare o creare una copia personale di un documento Google, puoi farlo senza richiedere l'accesso. Basta accedere con un account Google, fare clic su «File» e «Crea una copia» dal menu. Puoi quindi condividere la tua copia con i tuoi studenti."
           ]
         },
         "09e4642c-bedd-44e7-a7a7-ed2f85ece6c1": {
           "name": "Obiettivi e regole",
           "description": "In classe, leggi le sezioni Obiettivi e Regole della guida alle attività e rispondi alle domande.",
           "tips": [
-            null
+            "Per svolgere questa attività c'è bisogno di spazio altrimenti ci potranno essere delle difficoltà. Se la tua stanza presenta spazi stretti potresti anche prendere in considerazione l'idea di far svolgere questa attività nel corridoio o in qualche altro spazio oppure, se necessario, definire regole aggiuntive."
           ]
         },
         "740f2761-b6d0-4d82-97ec-2c97d92e2859": {
           "name": "Elabora un piano",
+          "description": "Dai agli studenti un paio di minuti per discutere in gruppo dell'approccio che adotteranno con questo primo ponte. Una volta che i gruppi avranno preso nota delle loro idee e di alcuni possibili punti deboli, potranno venire da te per prendere gli spaghetti e iniziare a costruire i loro ponti. Dai circa mezzo chilo di spaghetti a ciascun gruppo.",
           "tips": [
-            null
+            "Trattieni i materiali finché gli studenti non presentano un piano per il loro ponte. L'obiettivo non è rallentarli troppo, ma semplicemente dar loro modo di riflettere brevemente sui possibili approcci che potrebbero adottare. Questo è uno dei modi in cui questa attività prefigura la fase di pianificazione del processo di risoluzione dei problemi che gli studenti vedranno nelle lezioni successive."
           ]
         },
+        "8ce3a7bc-8653-4f02-b3cd-21f88b8d2217": {
+          "name": "Collauda il tuo ponte",
+          "description": "Quando i gruppi sono pronti, chiedi di collaudare i loro ponti posizionando i singoli libri sul ponte. Ricorda loro le regole, in particolare che non possono toccare o aggiustare i ponti una volta che è stato posizionato un libro. Chiedi loro di annotare nelle loro guide di attività il numero totale di libri collocati."
+        },
         "e4c5a863-1f7b-4d7e-994a-a4750df74d0f": {
-          "name": "Valuta e migliora"
+          "name": "Valuta e migliora",
+          "description": "Questo primo tentativo di costruire il nostro ponte è stata un'ottima occasione per saperne di più sul problema. Costruiremo tutti un secondo ponte e vedremo se possiamo aumentare il numero di libri che i nostri ponti contenevano. Prima di iniziare però, vediamo cosa possiamo imparare da questa prova."
         },
         "193961e8-e637-4d45-bb0b-014a3e8d1bbb": {
+          "description": "**Condividi:** Chiedi agli studenti di condividere i risultati della loro prima sfida con i gruppi vicini. Chiedi ai gruppi di concentrarsi in particolare su quale sia stato l'eventuale difetto del ponte (ad esempio il ponte non è durato abbastanza, era instabile, ecc.) e di riflettere su come aggirare questi problemi.",
           "tips": [
             "Sebbene alcuni studenti vedano questa parte come una competizione, sottolinea che ogni gruppo sta cercando di migliorare il proprio progetto, non di competere con gli altri. Stai invitando ogni studente a sfidare prima se stesso, non gli altri."
           ]
+        },
+        "4102495d-f93b-4b89-ba0d-044a44901c70": {
+          "description": "**Se svolgi questa attività per due giorni, puoi decidere di fermarti qui.**\n\n### Sviluppa un piano"
+        },
+        "5f6c0c4e-0216-4316-a1e7-82eaeb469b5e": {
+          "description": "Ora che hai avuto la possibilità di imparare dal primo ciclo di costruzione di ponti, ripetiamo la stessa attività. Innanzitutto, il tuo gruppo svilupperà un nuovo piano. Proprio come prima, annotalo sulla tua guida alle attività e quando sarai pronto tornerò a darti degli spaghetti nuovi."
+        },
+        "a4db4016-ed32-427d-8a58-6b5119dc0070": {
+          "description": "**Supporto**: mentre ti aggiri per l'aula da un gruppo all'altro, poni domande al gruppo su come fare attenzione nella riprogettazione. Es: «Quale aspetto del tuo ponte necessitava dei maggiori miglioramenti?» «Quali idee di altri gruppi volevi incorporare nelle tue?» «Hai sentito il bisogno di riconfigurare completamente il tuo ponte o apportare piccole modifiche?» \n\nUna volta che i gruppi hanno preparato i nuovi piani, dai loro altri spaghetti e chiedi a ciascuno di loro di realizzare un nuovo ponte."
+        },
+        "d1d70672-7b59-43f6-a03b-2b89b504e2fb": {
+          "name": "Collauda il tuo tavolo",
+          "description": "I gruppi possono collaudar i propri progetti come prima e annotare i risultati nelle loro guide alle attività."
         },
         "cebe2e73-7783-4bbf-9469-c2084423900d": {
           "name": "Rifletti",
@@ -22840,7 +23118,15 @@
         "7e2b0140-2517-4a48-89c6-2e51107ec2f2": {
           "description": "Per poter vedere il lavoro degli studenti nell'arco dell'anno e consentire loro di accedere a strumenti e risorse online, gli studenti devono trovarsi tutti nella stessa sezione di Code Studio. Per visualizzare le valutazioni e le chiavi di risposta fornite da Code.org, devi anche essere un «insegnante verificato»."
         },
+        "625b6145-fb18-49d5-ba66-2f69668f8178": {
+          "name": "Prima della lezione"
+        },
+        "ca8d4fdf-1c4a-445e-b8bc-9bf50538cdb4": {
+          "name": "All'inizio della lezione",
+          "description": "1.  Chiedi agli studenti di creare un account Code Studio all'indirizzo <https://studio.code.org> se non ne hanno già uno\n2.  Condividi l'URL di iscrizione con gli studenti e chiedi loro di accedervi per navigare nella sezione\n    -   Puoi avere conferma che uno studente si sia iscritto con successo alla tua sezione aprendo la pagina di avanzamento della sezione nella home page del docente e premendo aggiorna quando gli studenti si iscrivono. Gli studenti dovrebbero vedere una piccola barra verde nella parte superiore della pagina che dice \"Ti sei iscritto con successo...\" \n3.  Da [studio.code.org]a[1] , chiedi agli studenti di individuare il riquadro Computer Science Discoveries e fare clic su \"Visualizza corso\", quindi passare all'Unità 1.\n\nUna volta che gli studenti avranno consultato la pagina di panoramica dell'Unità 1, saranno pronti per rispondere al sondaggio pre-corso del CSD"
+        },
         "163d7212-c083-4ba8-bb87-6150a37f8f0f": {
+          "description": "#### Importante! Chiedi ai tuoi studenti di partecipare al sondaggio pre-corso CSD!\n\nGli studenti possono trovare un link al sondaggio in Code Studio come primo elemento nella pagina di panoramica dell'Unità 1. Per garantire che gli studenti partecipino al sondaggio solo al momento opportuno, questo viene \"bloccato\" e non può essere visualizzato fino a quando non lo \"sblocchi\". Il documento [r how-to-administer-a-locked-assessment/csd/2021] fornisce dettagli su come farlo quando sei pronto. Tieni presente che le istruzioni per la gestione di una valutazione e di un sondaggio sono le stesse.    \n\n**Quanto tempo ci vuole?** il sondaggio richiede del tempo: contiene circa 30 domande. Potresti prendere in considerazione l'idea di somministrarlo in un giorno amministrativo a scuola o come compito a casa presto.\n\n**Quando devo somministrare il sondaggio?** poiché si tratta di un sondaggio preliminare al corso, è importante che gli studenti lo facciano il prima possibile e preferibilmente nelle primissime fasi o addirittura prima di aver avuto a che fare con l'apprendimento in aula, in modo da poter valutare con precisione i cambiamenti causati dal corso sugli atteggiamenti e sulle convinzioni.",
           "tips": [
             "-   Uno degli obiettivi principali di CS Discoveries è quello di ampliare la partecipazione all'informatica.  \n\n-   È quindi fondamentale avere un'idea degli atteggiamenti e delle convinzioni degli studenti nei confronti dell'informatica _prima_ del corso in modo da poter misurare la quantità di cambiamenti avvenuti _dopo_ la fine del corso.\n\n-   Tieni presente che questo sondaggio è **anonimo per gli studenti**\n\n-   Il suo completamento ci aiuta anche a definire importanti miglioramenti che possiamo apportare al Piano di studi per migliorare l'esperienza degli insegnanti e degli studenti.\n\n**Aiutaci facendo in modo che i tuoi studenti contribuiscano a questo set di dati fondamentale. Le loro voci possono fare la differenza!**"
           ]
@@ -22870,7 +23156,7 @@
         "b452ecde-f660-4d52-9ab7-8b33989681f0": {
           "description": "**Distribuzione**: distribuisci una copia della guida alle attività per ogni gruppo.",
           "tips": [
-            null
+            "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-08-17-at-11.51.32-AM.png\" style=\"float:right;height:150px\">\n\n**Ottenere copie dei documenti di Google Docs:** le guide alle attività di questo piano di studi sono disponibili come Google Docs, Word Docs e PDF. Se desideri modificare o creare una copia personale di un documento Google, puoi farlo senza richiedere l'accesso. Basta accedere con un account Google, fare clic su «File» e «Crea una copia» dal menu. Puoi quindi condividere la tua copia con i tuoi studenti."
           ]
         },
         "f5570fab-fdee-464e-b569-ec19142fc35d": {
@@ -22886,6 +23172,9 @@
             null
           ]
         },
+        "a6ec15d7-7a48-466b-b9a2-b312a529e47b": {
+          "name": "Collauda il tuo tavolo"
+        },
         "185b70c9-2353-4632-aec9-7372f25cb1a6": {
           "name": "Valuta e migliora"
         },
@@ -22893,6 +23182,9 @@
           "tips": [
             "Sebbene alcuni studenti vedano questa parte come una competizione, sottolinea che ogni gruppo sta cercando di migliorare il proprio progetto, non di competere con gli altri. Stai invitando ogni studente a sfidare prima se stesso, non gli altri."
           ]
+        },
+        "653eab77-81ff-43eb-9ae6-e35f41a327b1": {
+          "description": "### Elabora un piano"
         },
         "ba9df800-646b-4324-9b35-b3f6564ba061": {
           "name": "Rifletti",

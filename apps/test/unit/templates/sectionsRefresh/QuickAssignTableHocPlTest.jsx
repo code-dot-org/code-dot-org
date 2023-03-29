@@ -6,29 +6,28 @@ import {MARKETING_AUDIENCE} from '@cdo/apps/templates/sectionsRefresh/Curriculum
 import {hocCourseOfferings, plCourseOfferings} from './CourseOfferingsTestData';
 import i18n from '@cdo/locale';
 
+const DEFAULT_PROPS = {
+  marketingAudience: MARKETING_AUDIENCE.HOC,
+  courseOfferings: hocCourseOfferings,
+  setSelectedCourseOffering: () => {},
+  updateCourse: () => {},
+  sectionCourse: {}
+};
+
+const setUp = (overrideProps = {}) => {
+  const props = {...DEFAULT_PROPS, ...overrideProps};
+  return shallow(<QuickAssignTableHocPl {...props} />);
+};
+
 describe('QuickAssignTable', () => {
   it('renders Hour of Code as the first and only table/column header', () => {
-    const wrapper = shallow(
-      <QuickAssignTableHocPl
-        marketingAudience={MARKETING_AUDIENCE.HOC}
-        courseOfferings={hocCourseOfferings}
-        updateCourse={() => {}}
-        sectionCourse={{}}
-      />
-    );
+    const wrapper = setUp();
     expect(wrapper.find('table').length).to.equal(3);
     expect(wrapper.contains(i18n.courseOfferingHOC())).to.be.true;
   });
 
   it('renders extra two headers in the first and second tables', () => {
-    const wrapper = shallow(
-      <QuickAssignTableHocPl
-        marketingAudience={MARKETING_AUDIENCE.HOC}
-        courseOfferings={hocCourseOfferings}
-        updateCourse={() => {}}
-        sectionCourse={{}}
-      />
-    );
+    const wrapper = setUp();
     expect(wrapper.find('table').length).to.equal(3);
     // First header displays in table 0
     expect(
@@ -54,27 +53,19 @@ describe('QuickAssignTable', () => {
   });
 
   it('renders Professional Learning as the first and only table/column header', () => {
-    const wrapper = shallow(
-      <QuickAssignTableHocPl
-        marketingAudience={MARKETING_AUDIENCE.PL}
-        courseOfferings={plCourseOfferings}
-        updateCourse={() => {}}
-        sectionCourse={{}}
-      />
-    );
+    const wrapper = setUp({
+      marketingAudience: MARKETING_AUDIENCE.PL,
+      courseOfferings: plCourseOfferings
+    });
     expect(wrapper.find('table').length).to.equal(3);
     expect(wrapper.contains(i18n.professionalLearning())).to.be.true;
   });
 
   it('renders one header in each of the first two columns', () => {
-    const wrapper = shallow(
-      <QuickAssignTableHocPl
-        marketingAudience={MARKETING_AUDIENCE.PL}
-        courseOfferings={plCourseOfferings}
-        updateCourse={() => {}}
-        sectionCourse={{}}
-      />
-    );
+    const wrapper = setUp({
+      marketingAudience: MARKETING_AUDIENCE.PL,
+      courseOfferings: plCourseOfferings
+    });
     expect(wrapper.find('table').length).to.equal(3);
     // First header displays in table 0
     expect(

@@ -128,6 +128,14 @@ class Pd::Workshop < ApplicationRecord
     end
   end
 
+  # Whether enrollment in this workshop requires an application
+  def require_application?
+    courses = [COURSE_CSP, COURSE_CSD, COURSE_CSA]
+    subjects = [SUBJECT_SUMMER_WORKSHOP]
+    courses.include?(course) && subjects.include?(subject) &&
+      regional_partner && regional_partner.link_to_partner_application.blank?
+  end
+
   def self.organized_by(organizer)
     where(organizer_id: organizer.id)
   end
@@ -517,11 +525,27 @@ class Pd::Workshop < ApplicationRecord
     raise "Failed to send follow up: #{errors.join(', ')}" unless errors.empty?
   end
 
+  def self.send_teacher_pre_work_csa
+    # Collect errors, but do not stop batch. Rethrow all errors below.
+    errors = []
+    scheduled_start_in_days(20).each do |workshop|
+      workshop.enrollments.each do |enrollment|
+        Pd::WorkshopMailer.teacher_pre_workshop_csa(enrollment).deliver_now
+      rescue => exception
+        errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
+      end
+    rescue => exception
+      errors << "teacher workshop #{workshop.id} - #{exception.message}"
+    end
+    raise "Failed to send CSA pre-work: #{errors.join(', ')}" unless errors.empty?
+  end
+
   def self.send_automated_emails
     send_reminder_for_upcoming_in_days(3)
     send_reminder_for_upcoming_in_days(10)
     send_reminder_to_close
     send_follow_up_after_days(30)
+    send_teacher_pre_work_csa if course == COURSE_CSA
   end
 
   # Updates enrollments with resolved users.
@@ -646,7 +670,7 @@ class Pd::Workshop < ApplicationRecord
 
   # @return [Boolean] true if a Code Studio account is required for attendance, otherwise false.
   def account_required_for_attendance?
-    ![Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include?(course)
+    ![Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include?(course)
   end
 
   def workshop_starting_date

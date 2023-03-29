@@ -125,11 +125,11 @@
         "G": {
           "description": "Həndəsə"
         },
-        "IC": {
-          "description": "Bir Şeydən Nəticə Çıxarma Prosesi və Nəticənin Əsaslandırılması"
-        },
         "MP": {
           "description": "Riyaziyyat təcrübələri"
+        },
+        "IC": {
+          "description": "Bir Şeydən Nəticə Çıxarma Prosesi və Nəticənin Əsaslandırılması"
         }
       }
     }

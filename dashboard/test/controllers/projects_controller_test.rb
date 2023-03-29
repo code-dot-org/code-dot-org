@@ -25,7 +25,7 @@ class ProjectsControllerTest < ActionController::TestCase
     # them specific content.
     ProjectsController::STANDALONE_PROJECTS.each do |type, config|
       next if Level.exists?(name: config[:name])
-      factory = FactoryGirl.factories.registered?(type) ? type : :level
+      factory = FactoryBot.factories.registered?(type) ? type : :level
       create(factory, name: config[:name])
     end
 

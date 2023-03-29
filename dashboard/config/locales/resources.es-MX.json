@@ -117,14 +117,21 @@
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Vídeo"
         },
+        "2022_change_log/coursed/2022": {
+          "name": "Registro de Cambios de 2022",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
         "all_resources/coursed/2022": {
-          "name": "Todos los Recursos"
+          "name": "Todos los Recursos",
+          "url": "/s/cursod-2022/recursos"
         },
         "all_standards/coursed/2022": {
-          "name": "Todos los Estándares"
+          "name": "Todos los Estándares",
+          "url": "/s/cursod-2022/normas"
         },
         "all_vocabulary/coursed/2022": {
-          "name": "Todo el Vocabulario"
+          "name": "Todo el Vocabulario",
+          "url": "/s/cursod-2022/vocabulario"
         },
         "common_core_and_ngss_guidance/coursed/2022": {
           "name": "Guía de Common Core y NGSS",
@@ -137,7 +144,8 @@
           "type": "Recurso"
         },
         "curriculum_guide/coursed/2022": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
         "debugging_guide/coursed/2022": {
           "name": "Guia de Depuración",
@@ -160,9 +168,12 @@
           "type": "Recurso"
         },
         "virtual_lesson_modifications/coursed/2022": {
-          "name": "Modificaciones de las lecciones virtuales"
+          "name": "Modificaciones de las lecciones virtuales",
+          "url": "https://docs.google.com/document/d/1X139Yy8C3WPxE3g1j2LlE89hzeREex8QVPzKITDSuF4/view"
         },
         "extension_lessons_micro_bit/coursed/2022": {
+          "name": "Lecciones de Ampliación con el micro:bit",
+          "url": "https://code.org/maker/csf-microbit",
           "type": "Recurso"
         },
         "password_power-up_if_then_scenarios/coursed/2022": {
@@ -201,6 +212,8 @@
           "type": "Guía de respuestas"
         },
         "csf_-_course_d_-_slides_2022-2023/coursed/2022": {
+          "name": "CSF - Curso D - Diapositivas 2022-2023",
+          "url": "https://docs.google.com/presentation/d/1QZjvTpft-xc7uU-rccLHsA2D-YFD8LgONjXwAjJ4nCQ/template/preview",
           "type": "Diapositivas"
         },
         "graph_paper_programming/coursed/2022": {
@@ -285,6 +298,7 @@
         },
         "open-ended_programming_levels_1/coursed/2022": {
           "name": "Niveles de programación abiertos",
+          "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view",
           "type": "Guía de respuestas"
         },
         "sample_level_solutions/coursed/2022": {
@@ -299,6 +313,7 @@
         },
         "dance_party_unplugged/coursed/2022": {
           "name": "Fiesta de baile: sin conexión",
+          "url": "https://curriculum.code.org/hoc/unplugged/4/",
           "type": "Recurso"
         },
         "open-ended_programming_levels_2/coursed/2022": {
@@ -350,17 +365,21 @@
           "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
           "type": "Guía de Proyecto"
         },
+        "2022_change_log/coursef/2022": {
+          "name": "Registro de Cambios de 2022",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
         "all_resources/coursef/2022": {
           "name": "Todos los Recursos",
-          "url": "/s/coursef-2022/resources"
+          "url": "/s/cursof-2022/recursos"
         },
         "all_standards/coursef/2022": {
           "name": "Todos los Estándares",
-          "url": "/s/coursef-2022/estándares"
+          "url": "/s/cursof-2022/normas"
         },
         "all_vocabulary/coursef/2022": {
           "name": "Todo el Vocabulario",
-          "url": "/s/coursef-2022/vocab"
+          "url": "/s/cursof-2022/vocabulario"
         },
         "common_core_and_ngss_guidance/coursef/2022": {
           "name": "Guía de Common Core y NGSS",
@@ -374,6 +393,7 @@
         },
         "curriculum_guide/coursef/2022": {
           "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview",
           "type": "Recurso"
         },
         "debugging_guide/coursef/2022": {
@@ -387,7 +407,8 @@
           "type": "Recurso"
         },
         "lesson_type_guide/coursef/2022": {
-          "name": "Guia de Tipos de Lecciones"
+          "name": "Guia de Tipos de Lecciones",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/preview"
         },
         "sprite_lab_documentation/coursef/2022": {
           "name": "Documentación del Laboratorio de sprites",
@@ -404,6 +425,8 @@
           "url": "https://docs.google.com/document/d/10v_thWkO0aJNWsCFtv_bpVbiIy-meYs_vbUiHi-ZCH0/preview"
         },
         "extension_lessons_micro_bit/coursef/2022": {
+          "name": "Lecciones de Ampliación con el micro:bit",
+          "url": "https://code.org/maker/csf-microbit",
           "type": "Recurso"
         },
         "the_power_of_words_lesson_quiz/coursef/2022": {
@@ -537,14 +560,21 @@
           "name": "Guía del proyecto de fin de curso",
           "type": "Guía de Actividades"
         },
+        "2022_change_log/coursee/2022": {
+          "name": "Registro de Cambios de 2022",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
         "all_resources/coursee/2022": {
-          "name": "Todos los Recursos"
+          "name": "Todos los Recursos",
+          "url": "/s/cursoe-2022/recursos"
         },
         "all_standards/coursee/2022": {
-          "name": "Todos los Estándares"
+          "name": "Todos los Estándares",
+          "url": "/s/cursoe-2022/normas"
         },
         "all_vocabulary/coursee/2022": {
-          "name": "Todo el Vocabulario"
+          "name": "Todo el Vocabulario",
+          "url": "/s/cursoe-2022/vocabulario"
         },
         "common_core_and_ngss_guidance/coursee/2022": {
           "name": "Guía de Common Core y NGSS",
@@ -557,7 +587,8 @@
           "type": "Recurso"
         },
         "curriculum_guide/coursee/2022": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
         "debugging_guide/coursee/2022": {
           "name": "Guia de Depuración",
@@ -585,9 +616,12 @@
           "type": "Recurso"
         },
         "virtual_lesson_modifications/coursee/2022": {
-          "name": "Modificaciones de las lecciones virtuales"
+          "name": "Modificaciones de las lecciones virtuales",
+          "url": "https://docs.google.com/document/d/1WDr-KRGUThXMzL1ppDIkbueQrJfF0lwrwFhEsO6ET5s/view"
         },
         "extension_lessons_micro_bit/coursee/2022": {
+          "name": "Lecciones de Ampliación con el micro:bit",
+          "url": "https://code.org/maker/csf-microbit",
           "type": "Recurso"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
@@ -624,6 +658,8 @@
           "type": "Video del estudiante"
         },
         "csf_-_course_e_-_slides_2022-2023/coursee/2022": {
+          "name": "CSF - Curso E - Diapositivas 2022-2023",
+          "url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/template/preview",
           "type": "Diapositivas"
         },
         "swimming_fish_teacher_sandbox/coursee/2022": {
@@ -632,6 +668,8 @@
           "type": "Nivel de programación"
         },
         "csf_-_course_e_-_slides_2022-2023_1/coursee/2022": {
+          "name": "CSF - Curso E - Diapositivas 2022-2023",
+          "url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/template/preview",
           "type": "Diapositivas"
         },
         "about_me_planning_guide/coursee/2022": {
@@ -707,6 +745,10 @@
           "name": "Guía del proyecto de fin de curso",
           "type": "Guía de Actividades"
         },
+        "2022_change_log/courseb/2022": {
+          "name": "Registro de Cambios de 2022",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
         "all_resources/courseb/2022": {
           "name": "Todos los Recursos",
           "url": "/s/coursob-2022/recursos"
@@ -730,7 +772,8 @@
           "type": "Recurso"
         },
         "curriculum_guide/courseb/2022": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
         "debugging_guide/courseb/2022": {
           "name": "Guia de Depuración",
@@ -1086,6 +1129,10 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Vídeo"
         },
+        "2022_change_log/coursea/2022": {
+          "name": "Registro de Cambios de 2022",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
         "all_resources/coursea/2022": {
           "name": "Todos los Recursos",
           "url": "/s/cursoa-2022/recursos"
@@ -1109,7 +1156,8 @@
           "type": "Recurso"
         },
         "curriculum_guide/coursea/2022": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
         "debugging_guide/coursea/2022": {
           "name": "Guia de Depuración",
@@ -1289,6 +1337,10 @@
           "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
           "type": "Guía de respuestas"
         },
+        "2022_change_log/coursec/2022": {
+          "name": "Registro de Cambios de 2022",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
         "all_resources/coursec/2022": {
           "name": "Todos los Recursos",
           "url": "/s/cursoc-2022/recursos"
@@ -1312,7 +1364,8 @@
           "type": "Recurso"
         },
         "curriculum_guide/coursec/2022": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
         "debugging_guide_1/coursec/2022": {
           "name": "Guia de Depuración",
@@ -1339,6 +1392,8 @@
           "url": "https://docs.google.com/document/d/1p71nZ3SqyNNVIJtQwPA_LTdcnL9RDsxIo5mQe9Gd-hQ/view"
         },
         "extension_lessons_micro_bit/coursec/2022": {
+          "name": "Lecciones de Ampliación con el micro:bit",
+          "url": "https://code.org/maker/csf-microbit",
           "type": "Recurso"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
@@ -1353,6 +1408,7 @@
         },
         "csf_-_course_c_-_slides_2022-2023/coursec/2022": {
           "name": "CSF - Curso C - Diapositivas 2022-2023",
+          "url": "https://docs.google.com/presentation/d/1gBtG-smXiAPsk5LJhkVsoX795WN18AZFRdml5uJynug/template/preview",
           "type": "Diapositivas"
         },
         "my_robotic_friends/coursec/2022": {
@@ -1451,6 +1507,7 @@
         },
         "open-ended_programming_levels/coursec/2022": {
           "name": "Niveles de programación abiertos",
+          "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view",
           "type": "Guía de respuestas"
         },
         "pause_and_think_online/coursec/2022": {
@@ -6987,7 +7044,7 @@
         },
         "all_standards_4/csd/2021": {
           "name": "Todos los Estándares",
-          "url": "/s/csd4-2021/estándares"
+          "url": "/s/csd4-2021/standards"
         },
         "all_vocabulary_4/csd/2021": {
           "name": "Todo el Vocabulario",
@@ -7347,7 +7404,7 @@
         },
         "all_standards_6/csd/2021": {
           "name": "Todos los Estándares",
-          "url": "/s/csd6-2021/estándares"
+          "url": "/s/csd6-2021/standards"
         },
         "all_vocabulary_6/csd/2021": {
           "name": "Todo el Vocabulario",
@@ -7592,7 +7649,7 @@
         },
         "all_standards_5/csd/2021": {
           "name": "Todos los Estándares",
-          "url": "/s/csd5-2021/estándares"
+          "url": "/s/csd5-2021/standards"
         },
         "all_vocabulary_5/csd/2021": {
           "name": "Todo el Vocabulario",
@@ -7908,7 +7965,7 @@
         },
         "all_standards_2/csd/2021": {
           "name": "Todos los Estándares",
-          "url": "/s/csd1-2021/estándares"
+          "url": "/s/csd1-2021/standards"
         },
         "all_vocabulary_2/csd/2021": {
           "name": "Todo el Vocabulario",
@@ -8268,7 +8325,7 @@
         },
         "all_standards/csd/2021": {
           "name": "Unidad 1 Estándares",
-          "url": "/s/csd1-2021/estándares"
+          "url": "/s/csd1-2021/standards"
         },
         "all_vocabulary/csd/2021": {
           "name": "Unidad 1 Vocabulario",
@@ -8480,7 +8537,7 @@
         },
         "all_standards_3/csd/2021": {
           "name": "Todos los Estándares",
-          "url": "/s/csd2-2021/estándares"
+          "url": "/s/csd2-2021/standards"
         },
         "all_vocabulary_3/csd/2021": {
           "name": "Todo el Vocabulario",

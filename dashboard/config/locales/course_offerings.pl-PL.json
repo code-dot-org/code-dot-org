@@ -383,7 +383,20 @@
         "microbit-temp": "mikrobit-temp",
         "csc-mappinglandmarks": "csc-mappinglandmarks",
         "blockchain": "Blockchain",
-        "self-paced-pl-csc": "self-paced-pl-csc"
+        "self-paced-pl-csc": "self-paced-pl-csc",
+        "csc-adaptations": "csc-adaptations",
+        "poemmaker": "poeta",
+        "testing-digital-information": "testing-digital-information",
+        "dlp-core": "dlp-core",
+        "tess-testing-problem-solving": "tess-testing-problem-solving",
+        "tess-testing-focus-on-creativity": "tess-testing-focus-on-creativity",
+        "csc-particles": "csc-particles",
+        "csc-bookcovers": "csc-bookcovers",
+        "design-process": "design-process",
+        "interactive-games-animations": "interactive-games-animations",
+        "problem-solving-computing": "problem-solving-computing",
+        "web-development": "web-development",
+        "data-society": "data-society"
       }
     }
   }

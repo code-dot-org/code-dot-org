@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import React, {useContext} from 'react';
-import {PlayerUtilsContext, PlayingContext} from '../context';
+import React from 'react';
 import classNames from 'classnames';
 import moduleStyles from './timeline.module.scss';
-import {DEFAULT_PATTERN_LENGTH} from '../constants';
+import {useDispatch, useSelector} from 'react-redux';
+import {selectBlockId} from '../redux/musicRedux';
 
 // TODO: Unify type constants and colors with those SoundPanel.jsx
 const typeToColorClass = {
@@ -25,31 +25,27 @@ const TimelineElement = ({
   top,
   left,
   when,
-  skipContext,
-  currentPlayheadPosition
+  skipContext
 }) => {
-  const playerUtils = useContext(PlayerUtilsContext);
-  const playingContext = useContext(PlayingContext);
-
-  // TODO: Add length as field on PlaybackEvent to prevent duplicated lookup logic
-  const length =
-    eventData.type === 'pattern' || eventData.type === 'chord'
-      ? DEFAULT_PATTERN_LENGTH
-      : playerUtils.getLengthForId(eventData.id);
-
+  const isPlaying = useSelector(state => state.music.isPlaying);
+  const selectedBlockId = useSelector(state => state.music.selectedBlockId);
+  const dispatch = useDispatch();
+  const currentPlayheadPosition = useSelector(
+    state => state.music.currentPlayheadPosition
+  );
   const isInsideRandom = skipContext?.insideRandom;
-  const isSkipSound = playingContext.isPlaying && skipContext?.skipSound;
+  const isSkipSound = isPlaying && skipContext?.skipSound;
 
   const isCurrentlyPlaying =
     !isSkipSound &&
     currentPlayheadPosition !== 0 &&
     currentPlayheadPosition >= when &&
-    currentPlayheadPosition < when + length;
+    currentPlayheadPosition < when + eventData.length;
+
+  const isBlockSelected = eventData.blockId === selectedBlockId;
 
   const colorType =
-    eventData.type === 'pattern' || eventData.type === 'chord'
-      ? eventData.type
-      : playerUtils.getTypeForId(eventData.id);
+    eventData.type === 'sound' ? eventData.soundType : eventData.type;
   const colorClass = typeToColorClass[colorType];
 
   return (
@@ -59,13 +55,19 @@ const TimelineElement = ({
         colorClass,
         isCurrentlyPlaying && moduleStyles.timelineElementPlaying,
         isInsideRandom && moduleStyles.timelineElementInsideRandom,
-        isSkipSound && moduleStyles.timelineElementSkipSound
+        isSkipSound && moduleStyles.timelineElementSkipSound,
+        isBlockSelected && moduleStyles.timelineElementBlockSelected,
+        !isPlaying && moduleStyles.timelineElementClickable
       )}
       style={{
-        width: barWidth * length,
+        width: barWidth * eventData.length,
         height,
         top,
         left
+      }}
+      onClick={event => {
+        dispatch(selectBlockId(eventData.blockId));
+        event.stopPropagation();
       }}
     >
       &nbsp;
@@ -80,8 +82,7 @@ TimelineElement.propTypes = {
   top: PropTypes.number.isRequired,
   left: PropTypes.number,
   when: PropTypes.number.isRequired,
-  skipContext: PropTypes.object,
-  currentPlayheadPosition: PropTypes.number.isRequired
+  skipContext: PropTypes.object
 };
 
 export default TimelineElement;

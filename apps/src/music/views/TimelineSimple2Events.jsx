@@ -2,13 +2,11 @@ import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
 import {PlayerUtilsContext} from '../context';
 import TimelineElement from './TimelineElement';
-import {DEFAULT_PATTERN_LENGTH} from '../constants';
 
 /**
  * Renders timeline events for the simple2 model.
  */
 const TimelineSimple2Events = ({
-  currentPlayheadPosition,
   barWidth,
   eventVerticalSpace,
   getEventHeight
@@ -50,13 +48,8 @@ const TimelineSimple2Events = ({
   for (const soundEvent of soundEvents) {
     const soundId = soundEvent.id;
     const functionName = soundEvent.functionContext.name;
-    // TODO: Add length as field on PlaybackEvent to prevent duplicated lookup logic
-    const length =
-      soundEvent.type === 'pattern' || soundEvent.type === 'chord'
-        ? DEFAULT_PATTERN_LENGTH
-        : playerUtils.getLengthForId(soundId);
     const positionLeft = soundEvent.when;
-    const positionRight = positionLeft + length;
+    const positionRight = positionLeft + soundEvent.length;
     const positionTop = getVerticalOffsetForEventId(
       functionName + ' ' + soundId
     );
@@ -95,7 +88,7 @@ const TimelineSimple2Events = ({
             key={index}
             style={{
               position: 'absolute',
-              backgroundColor: 'rgba(115 115 115 / 0.7)',
+              backgroundColor: 'rgba(255 255 255 / 0.12)',
               borderRadius: 8,
               left: (uniqueFunction.positionLeft - 1) * barWidth,
               width:
@@ -130,7 +123,6 @@ const TimelineSimple2Events = ({
             left={barWidth * (eventData.when - 1)}
             when={eventData.when}
             skipContext={eventData.skipContext}
-            currentPlayheadPosition={currentPlayheadPosition}
           />
         ))}
       </div>
@@ -139,7 +131,6 @@ const TimelineSimple2Events = ({
 };
 
 TimelineSimple2Events.propTypes = {
-  currentPlayheadPosition: PropTypes.number.isRequired,
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
   getEventHeight: PropTypes.func.isRequired

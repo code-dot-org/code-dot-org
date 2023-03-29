@@ -454,6 +454,105 @@
         },
         "6.d": {
           "description": "Transferir os conhecimentos atuais para o aprendizado de novas tecnologias."
+        },
+        "3-A-i.K-2": {
+          "description": "Descreva e forneça exemplos de como as pessoas aprendem e como os computadores aprendem."
+        },
+        "3-A-i.3-5": {
+          "description": "Diferencie entre como as pessoas aprendem e como os computadores aprendem."
+        },
+        "3-A-i.6-8": {
+          "description": "Compare as características únicas do aprendizado humano com a forma como os sistemas de aprendizado de máquina operam."
+        },
+        "3-A-i.9-12": {
+          "description": "Defina algoritmos de aprendizado supervisionado, não supervisionado e por reforço e dê exemplos de aprendizado humano semelhantes a cada algoritmo."
+        },
+        "3-A-ii.K-2": {
+          "description": "Identifique padrões nos dados rotulados e determine as características que predizem os rótulos."
+        },
+        "3-A-ii.3-5": {
+          "description": "Modele como o aprendizado supervisionado identifica padrões em dados rotulados."
+        },
+        "3-A-ii.6-8": {
+          "description": "Modele como o aprendizado não supervisionado encontra padrões em dados não rotulados."
+        },
+        "3-A-ii.9-12": {
+          "description": "Use um algoritmo de aprendizado supervisionado ou não supervisionado para treinar um modelo com dados do mundo real e, em seguida, avalie os resultados."
+        },
+        "3-A-iii.K-2": {
+          "description": "Demonstre como treinar um computador para reconhecer algo"
+        },
+        "3-A-iii.3-5": {
+          "description": "Treine um modelo de classificação usando aprendizado de máquina e, em seguida, examine a precisão do modelo em novas entradas"
+        },
+        "3-A-iii.6-8": {
+          "description": "Treine e avalie um modelo de classificação ou predição usando aprendizado de máquina em um conjunto de dados tabular"
+        },
+        "3-A-iv.3-5": {
+          "description": "Demonstre como os dados de treinamento são rotulados ao usar uma ferramenta de aprendizado de máquina."
+        },
+        "3-A-iv.6-8": {
+          "description": "Explique a diferença entre treinar e usar um modelo de raciocínio."
+        },
+        "3-A-iv.9-12": {
+          "description": "Ilustre o que acontece durante cada uma das etapas necessárias ao usar o aprendizado de máquina para construir um classificador ou preditor."
+        },
+        "3-A-v.3-5": {
+          "description": "Analise um jogo em que se constrói uma árvore de decisão, descrevendo a organização da árvore e o algoritmo de aprendizado usado para adicionar nós"
+        },
+        "3-A-v.6-8": {
+          "description": "Compare como um algoritmo de aprendizado de árvore de decisão funciona com o funcionamento de um algoritmo de aprendizado de rede neural."
+        },
+        "3-A-v.9-12": {
+          "description": "Descreva como vários tipos de algoritmos de aprendizado de máquina aprendem ajustando suas representações internas."
+        },
+        "3-A-vi.3-5": {
+          "description": "Explique como o aprendizado por reforço permite que um computador aprenda com a experiência (ou seja, tentativa e erro)."
+        },
+        "3-A-vi.6-8": {
+          "description": "Explique as diferenças entre o aprendizado supervisionado e o aprendizado por reforço."
+        },
+        "3-A-vi.9-12": {
+          "description": "Selecione o tipo apropriado de algoritmo de aprendizado de máquina (aprendizado supervisionado, não supervisionado ou por reforço) para resolver um problema de raciocínio."
+        },
+        "3-B-i.3-5": {
+          "description": "Ilustre como uma rede neural de 1 a 3 neurônios é uma função que computa uma saída."
+        },
+        "3-B-i.6-8": {
+          "description": "Ilustre a estrutura de uma rede neural e descreva como suas partes formam um conjunto de funções que computam uma saída."
+        },
+        "3-B-i.9-12": {
+          "description": "Descreva as seguintes arquiteturas de rede neural e seus usos: rede de feed-forward, rede convolucional 2D, rede recorrente, rede adversarial generativa."
+        },
+        "3-B-ii.3-5": {
+          "description": "Demonstre como os pesos são atribuídos em uma rede neural para produzir o comportamento de entrada/saída desejado."
+        },
+        "3-B-ii.6-8": {
+          "description": "Demonstre como uma regra de aprendizado pode ser usada para ajustar os pesos em uma rede neural de uma camada."
+        },
+        "3-B-ii.9-12": {
+          "description": "Treine uma rede neural multicamada usando o algoritmo de aprendizado de retropropagação e descreva como os pesos dos neurônios e as saídas das unidades ocultas mudam como resultado do aprendizado."
+        },
+        "3-C-i.K-2": {
+          "description": "Crie um conjunto de dados rotulado com recursos explícitos para ilustrar como os computadores podem aprender a classificar coisas como alimentos, filmes ou brinquedos."
+        },
+        "3-C-i.3-5": {
+          "description": "Crie um conjunto de dados rotulado com recursos explícitos de vários tipos e use uma ferramenta de aprendizado de máquina para treinar um classificador com esses dados."
+        },
+        "3-C-i.6-8": {
+          "description": "Crie um conjunto de dados para treinar um classificador ou preditor de árvore de decisão e explore o impacto que diferentes codificações de recursos têm na árvore de decisão."
+        },
+        "3-C-i.9-12": {
+          "description": "Compare dois conjuntos de dados do mundo real em termos dos recursos que eles compõem e como esses recursos são codificados."
+        },
+        "3-C-ii.3-5": {
+          "description": "Ilustre como o treinamento de um classificador para um conceito amplo, como “cachorro”, exige uma grande quantidade de dados para capturar a diversidade do domínio."
+        },
+        "3-C-ii.6-8": {
+          "description": "Ilustre como os objetos em uma imagem podem ser segmentados e rotulados para criar um conjunto de treinamento para reconhecimento de objetos."
+        },
+        "3-C-ii.9-12": {
+          "description": "Avalie um conjunto de dados usado para treinar um sistema de IA real considerando o tamanho do conjunto de dados, a forma como os dados foram adquiridos e rotulados, o armazenamento necessário e o tempo estimado para produzir o conjunto de dados."
         }
       }
     }

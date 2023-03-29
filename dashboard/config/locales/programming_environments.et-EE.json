@@ -88,6 +88,9 @@
           "categories": {
             "ui_controls": {
               "expressions": {
+                "button": {
+                  "short_description": "Loob ekraanil nupu, kus kuvatakse antud ID-ga viidatud tekst vaikimisi asukohas (0,0)."
+                },
                 "onEvent": {
                   "palette_params": {
                     "callback": {
@@ -97,7 +100,29 @@
                 }
               }
             },
+            "canvas": {
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "Ringi raadius pikslites."
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "width": {
+                      "description": "Ristküliku horisontaalne laius pikslites."
+                    },
+                    "height": {
+                      "description": "Ristküliku vertikaalne kõrgus pikslites."
+                    }
+                  }
+                }
+              }
+            },
             "data": {
+              "name": "Andmed",
               "expressions": {
                 "getPrediction": {
                   "palette_params": {
@@ -108,8 +133,22 @@
                 }
               }
             },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "Liigutab kilpkonna edasi ja vasakule sujuva, ümara kaarega."
+                }
+              }
+            },
             "control": {
               "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Tühistada funktsiooni SetTimeout tagastatud väärtus."
+                    }
+                  }
+                },
                 "timedLoop": {
                   "palette_params": {
                     "callback": {
@@ -147,6 +186,9 @@
             "variables": {
               "name": "Muutujad",
               "expressions": {
+                "declareAssign_list_123": {
+                  "short_description": "Muutujale massiivi deklareerimine ja määramine"
+                },
                 "addPair": {
                   "return_value": "Mitte ükski"
                 }

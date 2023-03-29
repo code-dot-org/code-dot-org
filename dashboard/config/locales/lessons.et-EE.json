@@ -71,11 +71,17 @@
         "k5-onlinepd-2019/For Loops": {
           "name": "For tsükkel"
         },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Arvutiteaduse alused"
+        },
         "K5-OnlinePD/Next Steps": {
           "name": "Järgmised sammud"
         },
         "netsim/Manual DNS": {
           "name": "Manuaalne DNS"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Arvutiteaduse alused"
         },
         "kodea-pd-2021/Next Steps": {
           "name": "Järgmised sammud"

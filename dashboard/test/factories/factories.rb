@@ -1,8 +1,8 @@
 require 'cdo/activity_constants'
 
-FactoryGirl.allow_class_lookup = false
+FactoryBot.allow_class_lookup = false
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :course_offering do
     sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
     sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
@@ -1466,6 +1466,7 @@ FactoryGirl.define do
     group 1
     pl_programs_offered ['CSD', 'CSP']
     applications_principal_approval RegionalPartner::ALL_REQUIRE_APPROVAL
+    is_active true
   end
 
   factory :regional_partner_with_mappings, parent: :regional_partner do
