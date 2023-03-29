@@ -566,6 +566,9 @@ describe('entry tests', () => {
 
   config.clean = {
     all: ['build'],
+    // The karma-webpack-backed unit tests generate several hundred megabytes
+    // worth of assets in /tmp/ on each run which will accumulate indefinitely
+    // on our persistent test server unless we clean them up.
     unitTest: {
       options: {force: true},
       src: [webpackOutputBasePath + '*']
