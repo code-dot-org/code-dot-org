@@ -27,7 +27,7 @@ const CurriculumCatalogCard = ({
   <CustomizableCurriculumCatalogCard
     assignButtonText={i18n.assign()}
     assignButtonDescription={i18n.assignDescription({
-      course_name: props.courseDisplayName
+      course_name: courseDisplayName
     })}
     courseDisplayName={courseDisplayName}
     duration={translatedCourseOfferingDurations[duration]}
@@ -43,7 +43,7 @@ const CurriculumCatalogCard = ({
       ...topics.map(topic => translatedCourseOfferingCsTopics[topic])
     ]}
     quickViewButtonDescription={i18n.quickViewDescription({
-      course_name: props.courseDisplayName
+      course_name: courseDisplayName
     })}
     quickViewButtonText={i18n.quickView()}
     imageAltText={imageAltText}

@@ -61,4 +61,22 @@ describe('CurriculumCatalogCard', () => {
 
     screen.getByText(defaultProps.duration, {exact: false});
   });
+
+  it('Quick View button has descriptive label', () => {
+    render(<CurriculumCatalogCard {...defaultProps} />);
+
+    screen.getByRole('button', {
+      name: new RegExp(`View details about ${defaultProps.courseDisplayName}`)
+    });
+  });
+
+  it('Assign button has descriptive label', () => {
+    render(<CurriculumCatalogCard {...defaultProps} />);
+
+    screen.getByRole('button', {
+      name: new RegExp(
+        `Assign ${defaultProps.courseDisplayName} to your classroom`
+      )
+    });
+  });
 });
