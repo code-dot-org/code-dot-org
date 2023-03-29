@@ -162,7 +162,6 @@ export default class FieldChord extends Field {
 
     this.newDiv.style.color = 'white';
     this.newDiv.style.width = 'auto';
-    this.newDiv.style.height = 'auto';
     this.newDiv.style.backgroundColor = 'black';
     this.newDiv.style.padding = '5px';
 

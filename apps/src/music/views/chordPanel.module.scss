@@ -1,11 +1,10 @@
 @import "color.scss";
 
-$scale-keybed: 0.5;
-
 .chordPanelContainer {
   background-color: $neutral_dark90;
   align-items: center;
   padding: 5px;
+  user-select: none;
 
   .optionsRow {
     display: flex;
@@ -35,32 +34,35 @@ $scale-keybed: 0.5;
 
       &.whiteKey {
         border-width: 2px 1px;
-        width: 30px * $scale-keybed;
-        height: 80px * $scale-keybed;
+        width: 15px;
+        height: 40px;
         background-color: white;
       }
 
       &.blackKey {
         border-width: 2px 2px;
         z-index: 10;
-        width: 20px * $scale-keybed;
-        height: 46px * $scale-keybed;
+        width: 10px;
+        height: 23px;
         background-color: black;
-        margin: 0 -10px * $scale-keybed;
+        margin: 0 -5px;
       }
 
       &.disabled {
-        background-color: $neutral_dark60;
-        cursor: not-allowed;
+        background-color: $neutral_dark40;
 
         &:hover {
-          background-color: $neutral_dark60;
+          background-color: $neutral_dark40;
         }
       }
 
       &.selected {
         background-color: $light_cyan;
         cursor: pointer;
+
+        &:hover {
+          background-color: $lighter_cyan;
+        }
       }
 
       .noteLabel {
@@ -70,13 +72,12 @@ $scale-keybed: 0.5;
         text-align: center;
         color: $neutral_dark60;
         font-size: 8px;
-        user-select: none;
         height: 8px;
         line-height: 1em;
       }
 
       &:hover {
-        background-color: $lighter_cyan;
+        background-color: $lightest_cyan;
       }
     }
   }

@@ -1,13 +1,15 @@
 import {ChordEventValue} from '../player/interfaces/ChordEvent';
 
-// Helpers for chords, used by the custom field, custom field editor panel,
-// and the music player.
+// This file contains helper functions for chords, and is used by the
+// block's custom field, the custom field editor panel, and the music player.
 
+// A single note to be played in a chord.
 export interface ChordNote {
   tick: number;
   note: number;
 }
 
+// A single note from a chord to be rendered in a graph.
 export interface ChordGraphNote {
   x: number;
   y: number;
@@ -99,7 +101,7 @@ export function generateGraphDataFromChord(options: {
     ((height - 2 * padding) / (12 * numOctaves)) * noteHeightScale
   );
 
-  // Blocks locations will be for their upper-left corners, so ensure
+  // Blocks' locations will be for their upper-left corners, so ensure
   // that the space we are filling counts for the full size of the blocks.
   const useWidth = width - 2 * padding - noteWidth;
   const useHeight = height - 2 * padding - noteHeight;

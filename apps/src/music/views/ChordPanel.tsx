@@ -12,8 +12,6 @@ const NUM_OCTAVES = 3;
 const START_OCTAVE = 4;
 const MAX_NOTES = 16;
 
-const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
-
 const styleDropdownOptions: [PlayStyle, string][] = [
   ['arpeggio-up', 'Arpeggio Up'],
   ['arpeggio-down', 'Arpeggio Down'],
