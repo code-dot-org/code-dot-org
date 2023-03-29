@@ -9,7 +9,7 @@ import {
   stubRedux,
   restoreRedux
 } from '@cdo/apps/redux';
-import javalab, {setDisplayTheme} from '@cdo/apps/javalab/javalabRedux';
+import javalabView, {setDisplayTheme} from '@cdo/apps/javalab/redux/viewRedux';
 import javalabConsole, {
   openPhotoPrompter,
   closePhotoPrompter
@@ -24,7 +24,7 @@ describe('Java Lab Console Test', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({javalab, javalabConsole});
+    registerReducers({javalabView, javalabConsole});
     store = getStore();
   });
 
