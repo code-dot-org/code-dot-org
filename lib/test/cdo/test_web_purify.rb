@@ -65,7 +65,7 @@ class WebPurifyTest < Minitest::Test
     assert_equal ['shit', 'damn'], WebPurify.find_potential_profanities(text)
   end
 
-  def test_find_potential_profanities_with_really_long_text
+  def test_find_potential_profanities_with_text_exceeding_maximum_length
     err = assert_raises StandardError do
       WebPurify.find_potential_profanities(("a " * 60_000) + "a")
     end

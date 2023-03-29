@@ -1,3 +1,4 @@
+require 'net/http'
 require 'open-uri'
 require 'json'
 require 'dynamic_config/gatekeeper'
@@ -66,9 +67,10 @@ module WebPurify
     expletives = []
     Net::HTTP.start(API_ENDPOINT.host, API_ENDPOINT.port, CONNECTION_OPTIONS) do |http|
       chunks.each do |chunk|
+        puts 'starting request'
         request = Net::HTTP::Post.new(API_ENDPOINT)
         form_data = [
-          ['api_key', CDO.webpurify_key],
+          ['api_key', 'baloney'],
           ['format', 'json'],
           ['lang', language_codes],
           ['method', 'webpurify.live.return'],
@@ -77,13 +79,29 @@ module WebPurify
         request.set_form form_data, 'multipart/form-data'
 
         response = http.request(request)
-
-        next unless response.is_a?(Net::HTTPSuccess)
         result = JSON.parse(response.body)
-        if result.key?('rsp') && result['rsp'].key?('expletive')
-          expletive = result['rsp']['expletive']
-          expletives.concat(expletive.is_a?(Array) ? expletive : [expletive])
+        puts '****result'
+        puts result
+        status = result.dig('rsp', '@attributes', 'stat')
+        puts '****status'
+        puts status
+
+        err_code = result.dig('rsp', 'err', '@attributes', 'code')
+        err_msg = result.dig('rsp', 'err', '@attributes', 'msg')
+        expletive = result.dig('rsp', 'expletive')
+
+        puts '****err_code'
+        puts err_code
+        puts '****err_msg'
+        puts err_msg
+        if !response.is_a?(Net::HTTPSuccess) || status != "ok"
+          message = "Profanity check failed"
+          message += " with code #{err_code}" if err_code
+          message += ": #{err_msg}" if err_msg && !err_msg.empty?
+          raise StandardError.new(message)
         end
+
+        expletives.concat(expletive.is_a?(Array) ? expletive : [expletive]) if expletive
       end
     end
 
