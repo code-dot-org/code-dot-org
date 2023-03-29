@@ -1,5 +1,6 @@
 import {commands as locationCommands} from './locationCommands';
 import {commands as behaviorCommands} from './behaviorCommands';
+import {layoutSpriteGroup} from '../../layoutUtils';
 import * as utils from '@cdo/apps/p5lab/utils';
 
 export const commands = {
@@ -173,5 +174,17 @@ export const commands = {
         );
       sprite.scale *= sprite.baseScale;
     });
+  },
+
+  makeNewSpriteGroup(n, costume, layout) {
+    // handle undefined n?
+    let spriteGroup = [];
+    for (var i = 0; i < n; i++) {
+      const id = this.addSprite({animation: costume});
+      spriteGroup = spriteGroup.concat(this.getSpriteArray({id}));
+    }
+    // need some helper that will accept a group as an argument
+    // that this and layoutSprites can call
+    layoutSpriteGroup(spriteGroup, layout, this.p5);
   }
 };
