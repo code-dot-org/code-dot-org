@@ -200,7 +200,7 @@ export const PaneButton = Radium(function(props) {
       <span className={moduleStyles.headerButtonSpan}>
         {hiddenImage}
         {renderIcon()}
-        <span style={styles.noPadding}>{label}</span>
+        <span style={styles.noPadding}>{buttonLabel}</span>
       </span>
     </Tag>
   );
