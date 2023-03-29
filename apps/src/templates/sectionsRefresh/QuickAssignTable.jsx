@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moduleStyles from './sections-refresh.module.scss';
 import i18n from '@cdo/locale';
-import {CourseOfferingCurriculumTypes as curriculumTypes} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {translatedCourseOfferingCurriculumTypes as curriculumTypes} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import {renderRows} from './QuickAssignTableHelpers';
 
 /*

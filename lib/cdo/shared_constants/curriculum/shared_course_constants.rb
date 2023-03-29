@@ -78,37 +78,33 @@ module Curriculum
     ).freeze
 
     # The curriculum types used in curriculum quick assign
-    COURSE_OFFERING_CURRICULUM_TYPES = OpenStruct.new(
-      {
-        module: 'Module',
-        course: 'Course',
-        standalone_unit: 'Standalone Unit',
-        hoc: 'Hour of Code',
-        pl: 'Professional Learning'
-      }
+    COURSE_OFFERING_CURRICULUM_TYPES = %w(
+      module
+      course
+      standalone_unit
+      hoc
+      pl
     ).freeze
 
     # The headers used to organize course offerings in curriculum quick assign
-    COURSE_OFFERING_HEADERS = OpenStruct.new(
-      {
-        favorites: 'Favorites',
-        labs_and_skills: 'Labs and Skills',
-        minecraft: 'Minecraft',
-        hello_world: 'Hello World',
-        popular_media: 'Popular Media',
-        sports: 'Sports',
-        express: 'Express',
-        csf: 'CS Fundamentals',
-        csc: 'CS Connections',
-        year_long: 'Year Long',
-        csa_labs: 'CSA Labs',
-        self_paced: 'Self-Paced',
-        teacher_led: 'Teacher-Led',
-        collections: 'Collections',
-        workshops_k5: 'K-5 Workshops',
-        summer_workshops_612: '6-12 Summer Workshops',
-        virtual_academic_year_workshops_612: '6–12 Virtual Academic Year Workshops'
-      }
+    COURSE_OFFERING_HEADERS = %w(
+      favorites
+      labs_and_skills
+      minecraft
+      hello_world
+      popular_media
+      sports
+      express
+      csf
+      csc
+      year_long
+      csa_labs
+      self_paced
+      teacher_led
+      collections
+      workshops_k5
+      summer_workshops_612
+      virtual_academic_year_workshops_612
     ).freeze
 
     # Used in curriculum quick assign

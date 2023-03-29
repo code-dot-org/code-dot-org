@@ -37,3 +37,33 @@ export const translatedCourseOfferingDeviceCompatibilityLevels = {
   not_recommended: i18n.courseOfferingDeviceCompatibilityLevelNotRecommended(),
   incompatible: i18n.courseOfferingDeviceCompatibilityLevelIncompatible()
 };
+
+// Same list as CourseOfferingHeaders in sharedCourseConstants but with translated strings
+export const translatedCourseOfferingHeaders = {
+  favorites: i18n.courseOfferingFavorites(),
+  labs_and_skills: i18n.courseOfferingLabsAndSkills(),
+  minecraft: i18n.projectTypeMinecraft(),
+  hello_world: i18n.courseOfferingHelloWorld(),
+  popular_media: i18n.courseOfferingPopularMedia(),
+  sports: i18n.projectTypeSports(),
+  express: i18n.courseOfferingExpress(),
+  csf: i18n.courseOfferingCSF(),
+  csc: i18n.courseOfferingCSC(),
+  year_long: i18n.courseOfferingYearLong(),
+  csa_labs: i18n.courseOfferingCSALabs(),
+  self_paced: i18n.courseOfferingSelfPaced(),
+  teacher_led: i18n.courseOfferingTeacherLed(),
+  collections: i18n.courseOfferingCollections(),
+  workshops_k5: i18n.courseOfferingK5(),
+  summer_workshops_612: i18n.courseOffering612(),
+  virtual_academic_year_workshops_612: i18n.courseOfferingVirtual612()
+};
+
+// Same list as CourseOfferingCurriculumTypes but with translated strings
+export const translatedCourseOfferingCurriculumTypes = {
+  module: i18n.curriculumTypeModule(),
+  course: i18n.course(),
+  standalone_unit: i18n.curriculumTypeStandaloneUnit(),
+  hoc: i18n.courseOfferingHOC(),
+  pl: i18n.professionalLearning()
+};
