@@ -58,7 +58,7 @@ describe('CurriculumCatalogCard', () => {
     screen.getByText(defaultProps.duration, {exact: false});
   });
 
-  it('Quick View button has descriptive label', () => {
+  it('renders Quick View button with descriptive label', () => {
     render(<CurriculumCatalogCard {...defaultProps} />);
 
     screen.getByRole('button', {
@@ -66,7 +66,7 @@ describe('CurriculumCatalogCard', () => {
     });
   });
 
-  it('Assign button has descriptive label', () => {
+  it('renders Assign button with descriptive label', () => {
     render(<CurriculumCatalogCard {...defaultProps} />);
 
     screen.getByRole('button', {
