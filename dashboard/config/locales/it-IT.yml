@@ -758,6 +758,8 @@ it:
     try_hour_of_code: Prova l'Ora del Codice!
     store: Negozio
     cookie_notice: Informativa sui cookie
+    view_code: Visualizza codice
+    locale_select: Seleziona lingua
   reference_area:
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti
@@ -839,6 +841,7 @@ it:
       title: Minecraft
     dance-2019:
       title: Ballando col codice
+      image_alt: Un gatto felice, un bradipo e uno squalo che ballano.
     dance:
       title: Ballando col codice
     flappy:
@@ -890,6 +893,7 @@ it:
     poem-art:
       title: L'arte della poesia
       body: Esprimiti! Usa il codice per animare le poesie.
+      image_alt: Un calamaro hipster che si esibisce su un palco.
     sports:
       title: Sport
       body: Crea una partita di basket o abbina diversi sport.
@@ -1170,6 +1174,7 @@ it:
           abuse_type: Indicate come questo contenuto violi i Termini del servizio
           abuse_detail: Si prega di fornire i dettagli concernenti il contenuto che
             si desidera segnalare
+          captcha: Compilare il CAPTCHA per segnalare questo contenuto.
         abusive_url: URL del contenuto da segnalare
         abuse_type:
           question: Come questo contenuto viola i %{link_start}Termini del servizio%{link_end}?
@@ -1303,6 +1308,7 @@ it:
       colombian_school_city: Città della scuola
       colombian_school_municipality: Provincia della Scuola
       colombian_chilean_school_name: Nome della scuola
+      chilean_school_id: ID Scuola
       ages: Qual è l'età degli studenti a cui insegni quest'anno?
       subjects: Quali materie insegni quest'anno?
       resources: Quali delle seguenti risorse di informatica utilizzi?
@@ -1332,13 +1338,17 @@ it:
         not_listed: Termine preferito non in elenco
         none: Preferisco non rispondere
       school_country:
+        barbados: Barbados
+        belize: Belize
         canada: Canada
         chile: Cile
         colombia: Colombia
         israel: Israele
         malaysia: Malesia
         mexico: Messico
+        paraguay: Paraguay
         thailand: Tailandia
+        uzbekistan: Uzbekistan
       ages:
         ages_under_6: Fino a 6 anni
         ages_7_8: 7 -8 anni
@@ -1471,4 +1481,17 @@ it:
       forbidden: L'utente non può aggiornare lo stato bloccabile dello studente
   reset_predict_progress_button: Eliminare la risposta
   pixelation:
+    raw_format: Formato Raw
+    save_image: Salva immagine
+    actual_size: Dimensioni effettive
+    image_file_format_header: 'Formato file immagine '
+    image_file_format_width: 'Larghezza: 1 byte'
+    image_file_format_height: 'Altezza: 1 byte'
+    image_file_format_bits_per_pixel: 'Bit per pixel: 1 byte'
+    image_width: 'Larghezza immagine
+
+'
+    image_height: Altezza immagine
     binary: Binario
+    hexadecimal: Esadecimale
+    pixel_format_header: Formato Pixel

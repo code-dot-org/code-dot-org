@@ -1460,6 +1460,10 @@ sq:
               display_name: Listat
             lessonGroup-3:
               display_name: cikle
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Vlerësimet
         pre-express-2023:
           lesson_groups:
             csf_loops:

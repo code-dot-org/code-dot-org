@@ -866,6 +866,7 @@
   "explainPairProgramming": "Kung ang pair programming ay naka-on, ang mga estudyante ay maaring pumili na makipagsabay sa isang kamag-aral sa parehong kompyuter. Itakda ang setting na ito na naka-on kung gusto mo ang estudyante na maaaring magtrabaho ng sabay-sabay habang nagbabahagi nang pag-unlad.",
   "explainPairProgrammingLearnMore": " Alamin pa ang tugkol sa pair programming.",
   "explainRestrictedSectionEmail": "Hindi makakasali ang mga mag-aaral sa seksiyong ito gamit ang code ng seksyon kung nakatakda sa 'oo'. Maaari ka pa ring magdagdag ng mga mag-aaral sa seksiyon nang manu-mano sa pamamagitan ng paglipat o pagkopya sa kanila mula sa ibang seksiyon.",
+  "explainRestrictedSectionEmailToolTip": "Hindi makakasali ang mga mag-aaral sa seksiyong ito gamit ang code ng seksyon kung nakatakda sa 'oo'. Maaari ka pa ring magdagdag ng mga mag-aaral sa seksiyon nang manu-mano sa pamamagitan ng paglipat o pagkopya sa kanila mula sa ibang seksiyon.",
   "explainRestrictedSectionWordAndPicture": "Hindi makakasali sa seksyong ito gamit ang code ng seksyon kung nakatakda sa 'oo' ang mga mag-aaral. Maaari ka pa ring magdagdag ng mga mag-aaral sa seksyon nang manu-mano sa tab na Pamahalaan ang Mga Mag-aaral.",
   "explainRestrictedSectionLearnMore": "Dagdagan ang Kaalaman",
   "exploreDataset": "I-visualize ang {datasetName}",
