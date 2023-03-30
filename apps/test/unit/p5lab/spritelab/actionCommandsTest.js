@@ -9,6 +9,7 @@ import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
 describe('Action Commands', () => {
   let coreLibrary;
   const spriteName = 'spriteName';
+
   beforeEach(function() {
     const p5Wrapper = createP5Wrapper();
     coreLibrary = new CoreLibrary(p5Wrapper.p5);
@@ -450,5 +451,48 @@ describe('Action Commands', () => {
         'rotation'
       ])
     ).to.equal(-90);
+  });
+
+  describe('layoutSprites', () => {
+    it('border works with 5 sprites', () => {
+      let image = new p5.Image(100, 100, coreLibrary.p5);
+      let frames = [{name: 0, frame: {x: 0, y: 0, width: 50, height: 50}}];
+      let sheet = new coreLibrary.p5.SpriteSheet(image, frames);
+      let animation = new coreLibrary.p5.Animation(sheet);
+      coreLibrary.p5._predefinedSpriteAnimations = {costume_label: animation};
+
+      [1, 2, 3, 4, 5].forEach(i => {
+        // name necessary?
+        coreLibrary.addSprite({
+          animation: 'costume_label',
+          name: `spriteName${i}`
+        });
+      });
+
+      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'border']);
+
+      const minX = 20;
+      const maxX = 400 - minX;
+      const minY = 35;
+      const maxY = 400 - 40;
+
+      const cats = coreLibrary.getSpriteArray({costume: 'costume_label'});
+
+      // first four are at the corners
+      expect(cats[0].x, minX);
+      expect(cats[0].y, minY);
+
+      expect(cats[1].x, maxX);
+      expect(cats[1].y, minY);
+
+      expect(cats[2].x, maxX);
+      expect(cats[2].y, maxY);
+
+      expect(cats[3].x, minX);
+      expect(cats[3].y, maxY);
+
+      expect(cats[4].x, (minX + maxX) / 2);
+      expect(cats[4].y, minY);
+    });
   });
 });
