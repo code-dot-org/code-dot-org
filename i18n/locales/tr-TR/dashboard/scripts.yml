@@ -6187,6 +6187,10 @@ tr:
             **Tahmini Süre:** 60 dakika
         self-paced-pl-csa3-2023:
           title: 'Modül 3: Metin tabanlı programlama desteği'
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Değerlendirmeler
         csp-playground:
           title: CSP Oyun Alanı
           description_audience: Mufredat Yazarları
@@ -6429,3 +6433,175 @@ tr:
               display_name: Bölüm 2
           title: Yapay Zeka ve Makine Öğrenimi
           student_description: Bu ünite, tablo verileriyle bir makine öğrenimi modeli geliştirmeye uygulamalı bir giriş niteliğindedir. Bilgisayarların karar vermek için verilerden nasıl öğrendiğini keşfedecek, ardından gerçek dünya verileri etrafında kendi makine öğrenimi projelerinizi geliştireceksiniz. Ünite, kişisel olarak ilgili bir sorunu çözmek için kendi makine öğrenimi uygulamanızı tasarlamakla sona erer.
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Problem çözme süreci'
+          student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
+        focus-on-creativity2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Web sayfası oluşturma'
+            lessonGroup-3:
+              display_name: 'Bölüm 2: Çok sayfalı Web siteleri'
+          title: Web Geliştirme
+          student_description: Bu ünitede, kendi web sayfalarınızdaki içeriği nasıl oluşturacağınızı ve paylaşacağınızı öğreneceksiniz. Dünyayla hangi içeriği paylaşmak istediğinize karar verdikten sonra, HTML ve CSS kullanarak sayfalarınızı nasıl yapılandıracağınızı ve biçimlendireceğinizi öğreneceksiniz. Ayrıca hata ayıklama, kaynakları kullanma ve ekip çalışması gibi değerli programlama becerilerini de uygulayacaksınız.
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Resim ve animasyon'
+            lessonGroup-3:
+              display_name: 'Bölüm 2: Oyun geliştirme'
+          student_description: " Ünite 3'te Oyun Laboratuvarında animasyonlar, etkileşimli sanat ve oyunlar programladığından dolayı kodlama deneyimini arttıracaksın. Ünite, basit şekiller ile başlar ve bilgisayar bilim insanlarının günlük kullandığı ile aynı programlama kavramları ve tasarım süreci kullanılarak daha karmaşık hareketli nesne tabanlı oyunlara doğru ilerler. Final projesinde kişiselleştirilmiş, etkileşimli bir program geliştireceksiniz."
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Bölüm 1: Donanım girdisi'
+          description_short: Fiziksel cihazlarla programlamayı öğrenin.
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-3:
+              display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
+          student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Bilgileri gösterme'
+            lessonGroup-3:
+              display_name: 'Bölüm 2: Veri problemlerini çözme'
+          description_short: İnsanların veri problemlerini çözmek için bilgisayarı nasıl kullandıklarını öğrenin.
+          student_description: 5.  ünite problem çözmede verilerin önemi hakkındadır ve bilgisayarların bu sürece nasıl yardımcı olabileceğini vurgulamaktadır. Birinci kısım bir bilgisayarda bilgiyi temsil etmek için kullanılan farklı sistemleri ve bunları kullanmanın getirdiği zorlukları, artılarını ve eksilerini araştırır. İkinci kısımda problem çözmek için kullanılan verilerin nasıl toplandığını ve bilgisayarların bu işlemin adımlarını otamatikleştirmede nasıl yardımcı olduklarını öğreneceksiniz. Bölüm, verilerin problem çözmede seçtiğiniz bir alana nasıl uygulanabileceğini dikkate alarak sonuçlandırılır.
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Bölüm 1: Donanım girdisi'
+          description_short: Fiziksel cihazlarla programlamayı öğrenin.
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Problem çözme süreci'
+          student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Bilgileri gösterme'
+          description_short: İnsanların veri problemlerini çözmek için bilgisayarı nasıl kullandıklarını öğrenin.
+          student_description: 5.  ünite problem çözmede verilerin önemi hakkındadır ve bilgisayarların bu sürece nasıl yardımcı olabileceğini vurgulamaktadır. Birinci kısım bir bilgisayarda bilgiyi temsil etmek için kullanılan farklı sistemleri ve bunları kullanmanın getirdiği zorlukları, artılarını ve eksilerini araştırır. İkinci kısımda problem çözmek için kullanılan verilerin nasıl toplandığını ve bilgisayarların bu işlemin adımlarını otamatikleştirmede nasıl yardımcı olduklarını öğreneceksiniz. Bölüm, verilerin problem çözmede seçtiğiniz bir alana nasıl uygulanabileceğini dikkate alarak sonuçlandırılır.
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Bilgileri gösterme'
+            lessonGroup-3:
+              display_name: 'Bölüm 2: Veri problemlerini çözme'
+          description_short: İnsanların veri problemlerini çözmek için bilgisayarı nasıl kullandıklarını öğrenin.
+          student_description: 5.  ünite problem çözmede verilerin önemi hakkındadır ve bilgisayarların bu sürece nasıl yardımcı olabileceğini vurgulamaktadır. Birinci kısım bir bilgisayarda bilgiyi temsil etmek için kullanılan farklı sistemleri ve bunları kullanmanın getirdiği zorlukları, artılarını ve eksilerini araştırır. İkinci kısımda problem çözmek için kullanılan verilerin nasıl toplandığını ve bilgisayarların bu işlemin adımlarını otamatikleştirmede nasıl yardımcı olduklarını öğreneceksiniz. Bölüm, verilerin problem çözmede seçtiğiniz bir alana nasıl uygulanabileceğini dikkate alarak sonuçlandırılır.
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Uygulama Labına Giriş
+            lessonGroup-3:
+              display_name: Bölüm 1
+            lessonGroup-4:
+              display_name: Bölüm 2
+          title: Yapay Zeka ve Makine Öğrenimi
+          student_description: Bu ünite, tablo verileriyle bir makine öğrenimi modeli geliştirmeye uygulamalı bir giriş niteliğindedir. Bilgisayarların karar vermek için verilerden nasıl öğrendiğini keşfedecek, ardından gerçek dünya verileri etrafında kendi makine öğrenimi projelerinizi geliştireceksiniz. Ünite, kişisel olarak ilgili bir sorunu çözmek için kendi makine öğrenimi uygulamanızı tasarlamakla sona erer.
+        k5-onlinepd-2023:
+          lesson_groups:
+            Implementing and Teaching CS:
+              display_name: 'Bölüm I: Bilgisayar Bilimi Öğretimi ve Uygulaması'
+            k5_basic_concepts_1:
+              display_name: 'Bölüm II: A - F Derslerinde Kavramlar'
+            k5_next_steps_1:
+              display_name: 'Bölüm III: Sonraki Adımlar'
+          title: Bilgisayar Bilimi Temellerinin Öğretimi ('22-'23)
+          description: Code.org'un Bilgisayar Bilimi Temelleri'ne başlamak için kendi hızınızda yapabileceğiniz ücretsiz çevrimiçi eğitimci kursuna hoş geldiniz!
+          student_description: 'Code.org''un BB Temelleri için ücretsiz çevrimiçi eğitimci kursuna hoş geldiniz! '
+          description_short: Code.org'un Bilgisayar Bilimi Temelleri'ne başlamak için kendi hızınızda yapabileceğiniz ücretsiz çevrimiçi eğitimci kursuna hoş geldiniz!
+          description_audience: Code.org'un Bilgisayar Bilimi Temelleri'ne başlamak için kendi hızınızda yapabileceğiniz ücretsiz çevrimiçi eğitimci kursuna hoş geldiniz!
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Problem çözme süreci'
+          student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
+        focus-on-design-with-purpose2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Web sayfası oluşturma'
+            lessonGroup-3:
+              display_name: 'Bölüm 2: Çok sayfalı Web siteleri'
+          title: Web Geliştirme
+          student_description: Bu ünitede, kendi web sayfalarınızdaki içeriği nasıl oluşturacağınızı ve paylaşacağınızı öğreneceksiniz. Dünyayla hangi içeriği paylaşmak istediğinize karar verdikten sonra, HTML ve CSS kullanarak sayfalarınızı nasıl yapılandıracağınızı ve biçimlendireceğinizi öğreneceksiniz. Ayrıca hata ayıklama, kaynakları kullanma ve ekip çalışması gibi değerli programlama becerilerini de uygulayacaksınız.
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Kullanıcı merkezli tasarım'
+            lessonGroup-3:
+              display_name: 'Bölüm 2: Uygulama prototipleme'
+          student_description: Ünite 4, bilgi işlemin daha geniş toplumsal etkilerini tanıtmaktadır. Bir dizi tasarım zorluğuyla, bir probleme bir çözüm geliştirirken diğerlerinin ihtiyaçlarını daha iyi anlayabileceğinizi öğreneceksiniz. Birimin ikinci yarısı, ekiplerin bakım ihtiyaçlarını belirleme, hem kağıt üzerinde hem de Uygulama Laboratuarında prototip çözümler üretme ve gerçek kullanıcılar ile geribildirim almak ve ilerlemek için çözümler test etme imkanı sağlayan bir tekrarlayıcı takım projesinden oluşur.
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Bölüm 1: Donanım girdisi'
+          description_short: Fiziksel cihazlarla programlamayı öğrenin.
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Problem çözme süreci'
+          student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
+        focus-on-coding2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Web sayfası oluşturma'
+            lessonGroup-3:
+              display_name: 'Bölüm 2: Çok sayfalı Web siteleri'
+          title: Web Geliştirme
+          student_description: Bu ünitede, kendi web sayfalarınızdaki içeriği nasıl oluşturacağınızı ve paylaşacağınızı öğreneceksiniz. Dünyayla hangi içeriği paylaşmak istediğinize karar verdikten sonra, HTML ve CSS kullanarak sayfalarınızı nasıl yapılandıracağınızı ve biçimlendireceğinizi öğreneceksiniz. Ayrıca hata ayıklama, kaynakları kullanma ve ekip çalışması gibi değerli programlama becerilerini de uygulayacaksınız.
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Resim ve animasyon'
+            lessonGroup-3:
+              display_name: 'Bölüm 2: Oyun geliştirme'
+          student_description: " Ünite 3'te Oyun Laboratuvarında animasyonlar, etkileşimli sanat ve oyunlar programladığından dolayı kodlama deneyimini arttıracaksın. Ünite, basit şekiller ile başlar ve bilgisayar bilim insanlarının günlük kullandığı ile aynı programlama kavramları ve tasarım süreci kullanılarak daha karmaşık hareketli nesne tabanlı oyunlara doğru ilerler. Final projesinde kişiselleştirilmiş, etkileşimli bir program geliştireceksiniz."
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Bölüm 1: Donanım girdisi'
+          description_short: Fiziksel cihazlarla programlamayı öğrenin.
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Problem çözme süreci'
+          student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Kullanıcı merkezli tasarım'
+            lessonGroup-3:
+              display_name: 'Bölüm 2: Uygulama prototipleme'
+          student_description: Ünite 4, bilgi işlemin daha geniş toplumsal etkilerini tanıtmaktadır. Bir dizi tasarım zorluğuyla, bir probleme bir çözüm geliştirirken diğerlerinin ihtiyaçlarını daha iyi anlayabileceğinizi öğreneceksiniz. Birimin ikinci yarısı, ekiplerin bakım ihtiyaçlarını belirleme, hem kağıt üzerinde hem de Uygulama Laboratuarında prototip çözümler üretme ve gerçek kullanıcılar ile geribildirim almak ve ilerlemek için çözümler test etme imkanı sağlayan bir tekrarlayıcı takım projesinden oluşur.
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Bilgileri gösterme'
+            lessonGroup-3:
+              display_name: 'Bölüm 2: Veri problemlerini çözme'
+          description_short: İnsanların veri problemlerini çözmek için bilgisayarı nasıl kullandıklarını öğrenin.
+          student_description: 5.  ünite problem çözmede verilerin önemi hakkındadır ve bilgisayarların bu sürece nasıl yardımcı olabileceğini vurgulamaktadır. Birinci kısım bir bilgisayarda bilgiyi temsil etmek için kullanılan farklı sistemleri ve bunları kullanmanın getirdiği zorlukları, artılarını ve eksilerini araştırır. İkinci kısımda problem çözmek için kullanılan verilerin nasıl toplandığını ve bilgisayarların bu işlemin adımlarını otamatikleştirmede nasıl yardımcı olduklarını öğreneceksiniz. Bölüm, verilerin problem çözmede seçtiğiniz bir alana nasıl uygulanabileceğini dikkate alarak sonuçlandırılır.
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bölüm 1
+            lessonGroup-3:
+              display_name: Uygulama Labına Giriş
+            lessonGroup-4:
+              display_name: Bölüm 2
+          title: Yapay Zeka ve Makine Öğrenimi
+          student_description: Bu ünite, tablo verileriyle bir makine öğrenimi modeli geliştirmeye uygulamalı bir giriş niteliğindedir. Bilgisayarların karar vermek için verilerden nasıl öğrendiğini keşfedecek, ardından gerçek dünya verileri etrafında kendi makine öğrenimi projelerinizi geliştireceksiniz. Ünite, kişisel olarak ilgili bir sorunu çözmek için kendi makine öğrenimi uygulamanızı tasarlamakla sona erer.
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Bölüm 1: Donanım girdisi'
+          description_short: Fiziksel cihazlarla programlamayı öğrenin.

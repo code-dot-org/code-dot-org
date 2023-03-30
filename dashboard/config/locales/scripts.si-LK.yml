@@ -1510,6 +1510,10 @@ si:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: ඇගයීම්
         pre-express-2023:
           lesson_groups:
             csf_loops:
