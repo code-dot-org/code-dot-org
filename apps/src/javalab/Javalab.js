@@ -4,10 +4,6 @@ import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import JavalabView from './JavalabView';
 import javalab, {
-  getSources,
-  getValidation,
-  setAllSourcesAndFileMetadata,
-  setAllValidation,
   setDisplayTheme,
   setIsStartMode,
   setLevelName,
@@ -27,6 +23,12 @@ import javalabConsole, {
   closePhotoPrompter,
   openPhotoPrompter
 } from './redux/consoleRedux';
+import javalabEditor, {
+  getSources,
+  getValidation,
+  setAllSourcesAndFileMetadata,
+  setAllValidation
+} from './redux/editorRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import JavabuilderConnection from './JavabuilderConnection';
@@ -193,7 +195,7 @@ Javalab.prototype.init = function(config) {
     isSubmitted: !!config.level.submitted
   });
 
-  registerReducers({javalab, javalabConsole});
+  registerReducers({javalab, javalabConsole, javalabEditor});
   // If we're in editBlock mode (for editing start_sources) we set up the save button to save
   // the project file information into start_sources on the level.
   if (this.isStartMode) {

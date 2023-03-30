@@ -12,6 +12,8 @@ const MAX_DISPLAY_NOTES = 3;
 interface FieldChordOptions {
   getLibrary: () => MusicLibrary;
   previewChord: (value: ChordEventValue) => void;
+  previewNote: (note: number, instrument: string, onStop?: () => void) => void;
+  cancelPreviews: () => void;
   currentValue: ChordEventValue;
 }
 
@@ -114,6 +116,8 @@ export default class FieldChord extends Field {
         library: this.options.getLibrary(),
         initValue: this.getValue(),
         previewChord: this.options.previewChord,
+        previewNote: this.options.previewNote,
+        cancelPreviews: this.options.cancelPreviews,
         onChange: value => this.setValue(value)
       }),
       this.newDiv
