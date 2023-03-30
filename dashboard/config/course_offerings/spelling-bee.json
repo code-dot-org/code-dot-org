@@ -8,8 +8,8 @@
   "marketing_initiative": "CSC",
   "grade_levels": "3,4,5",
   "header": "CS Connections",
-  "image": null,
-  "cs_topic": null,
-  "school_subject": null,
-  "device_compatibility": null
+  "image": "https://images.code.org/83b777315a136ad7f6dcd7d868dc8a0e-CSCLanding_SpellingBeeLesson.png",
+  "cs_topic": "programming",
+  "school_subject": "english_language_arts",
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
 }

@@ -143,6 +143,7 @@ et:
     user_type_teacher: Õpetaja
     field_is_required: on nõutud
     accept_terms: Pead konto loomiseks nõustuma
+    email_preference_privacy: "(Vaata privaatsusreegleid)"
     email_preference_yes: Jah
     email_preference_no: Ei
     share_teacher_email_reg_partner_preference_yes: Jah

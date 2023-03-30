@@ -349,3 +349,45 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        csd-2023:
+          title: csd-2023
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'23-'24"
+        focus-on-creativity-2023:
+          title: Focus on Creativity
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'23-24"
+        focus-on-hardware-2023:
+          title: Focus on Hardware
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        focus-on-data-2023:
+          title: Focus on Data
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        focus-on-design-with-purpose-2023:
+          title: Focus on Design with Purpose
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        focus-on-coding-2023:
+          title: Focus on Coding
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        focus-on-impact-in-society-2023:
+          title: Focus on Impact in Society
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

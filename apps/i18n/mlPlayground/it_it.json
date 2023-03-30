@@ -252,12 +252,28 @@
     },
     "abalone": {
       "fields": {
+        "Sex": {
+          "id": "Sesso",
+          "description": "Il sesso dell'abalone: M, F o N (neonato)."
+        },
         "Length": {
-          "id": "Lunghezza"
+          "id": "Lunghezza",
+          "description": "La sua lunghezza nel punto più lungo in millimetri."
+        },
+        "Diameter": {
+          "id": "Diametro",
+          "description": "Il suo diametro in millimetri."
         },
         "Height": {
-          "id": "Peso"
+          "id": "Peso",
+          "description": "La sua altezza in millimetri con la chiocciola nel guscio."
+        },
+        "Rings": {
+          "id": "Anelli"
         }
+      },
+      "card": {
+        "description": "Questo set di dati contiene vari attributi di diversi abalone, un tipo di lumache marine. L'obiettivo è prevedere il numero di anelli nel guscio dell'abalone, che è un indicatore della sua età."
       }
     },
     "zoo": {
@@ -325,6 +341,9 @@
       "fields": {
         "Age": {
           "id": "Età"
+        },
+        "Sex": {
+          "id": "Sesso"
         }
       }
     },

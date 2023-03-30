@@ -6,10 +6,10 @@
   "assignable": true,
   "curriculum_type": "Module",
   "marketing_initiative": "CSC",
-  "grade_levels": "3,4,5",
+  "grade_levels": "3,4,5,6,7,8",
   "header": "CS Connections",
-  "image": null,
-  "cs_topic": null,
-  "school_subject": null,
-  "device_compatibility": null
+  "image": "https://images.code.org/784831bd4dfd22fdff17d756cca0b503-Star Quilts.png",
+  "cs_topic": "art_and_design,programming",
+  "school_subject": "math",
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
 }

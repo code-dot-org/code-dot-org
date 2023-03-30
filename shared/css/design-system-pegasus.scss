@@ -16,6 +16,8 @@ $border-radius: 4px;
   font-size: 1.25em;
 }
 
+.h5-lookalike-style { @include h5-lookalike-style}
+
 // Start styles
 html {
   scroll-behavior: smooth;
@@ -50,22 +52,42 @@ h6 { font-size: 1em; }
 // Use these classes to change a section's background color
 section.bg-neutral-light { background-color: $neutral_light; }
 section.bg-neutral-dark { background-color: $neutral_dark; }
-section.bg-primary { background-color: rgba($brand_primary_light, .5); }
+section.bg-primary-light { background-color: rgba($brand_primary_light, .5); }
 section.bg-secondary { background-color: $brand_secondary_light; }
 
 // Centers a block-level element
 .centered { text-align: center !important; }
 
-// Removes the bottom margin —
+// Removes the bottom margin or padding —
 // often helpful on a last paragraphs or list elements
 // to maintain consistent white space between sections
 .no-margin-bottom { margin-bottom: 0 !important;}
+.no-padding-bottom { padding-bottom: 0 !important;}
 
 // FontAwesome icon defaults
 .icon::before {
   display: inline-block;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
+}
+
+// Line divider for use between sections
+// Use .no-margin-bottom to remove extra space above
+// a section that starts with an h2
+div.divider {
+  max-width: 960px;
+  margin: 1em auto 0;
+
+  @media screen and (max-width: $width-md) {
+    padding: 0 2em;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid $neutral_dark60;
+    margin: 0;
+    width: 100%;
+  }
 }
 
 // Paragraphs
@@ -133,13 +155,12 @@ button,
 .btn,
 input[type=submit] {
   height: unset;
-  min-width: 200px;
   display: inline-block;
   color: white;
   background-color: $brand_secondary_default;
   border: 2px solid $brand_secondary_default;
   border-radius: $border-radius;
-  padding: .625em 1em;
+  padding: .625em 2em;
   margin: 0.5em 0;
   font-size: 1em;
   font-family: 'Gotham 5r', sans-serif;
@@ -513,13 +534,15 @@ form {
 
 .action-block__wrapper--three-col {
   justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 960px;
 
   & > .action-block--one-col {
     width: 32%;
+    margin-top: 1.25em;
 
     @media screen and (max-width: $width-md) {
       width: 49%;
-      margin-top: 1em;
     }
 
     @media screen and (max-width: $width-sm) {
@@ -535,6 +558,10 @@ form {
   border-radius: $border-radius;
   display: flex;
   align-content: baseline;
+
+  h3 {
+    width: 100%;
+  }
 
   p.overline {
     color: $brand_primary_default;
@@ -565,6 +592,10 @@ form {
 .action-block--one-col {
   flex-wrap: wrap;
   padding: 1em 1.5em;
+
+  @media screen and (max-width: $width-md) {
+    height: 100%;
+  }
 
   img {
     width: 100%;
@@ -706,5 +737,18 @@ form {
       background: none;
       border: none;
     }
+  }
+}
+
+// Video series
+// - see example: code.org/blockchain
+.video-series {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  figure {
+    width: 49%;
+    margin-top: 1.25em;
   }
 }

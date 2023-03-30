@@ -1698,8 +1698,6 @@ da:
         text: drej til venstre
       RyanLab_turnRight:
         text: drej til højre
-      SpriteLab2Beta_spriteSay:
-        text: figur {SPRITE} siger {TEXT} i {SECONDS} sekunder
       Vector_createSpriteWith:
         text: |-
           opret figur
@@ -1746,6 +1744,14 @@ da:
             '0.75': most
             '0.5': half of
             '0.25': few
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): spinning til højre
+            new Behavior(spinning_left, []): spinning til venstre
+            new Behavior(jittering, []): rystende
+            new Behavior(wandering, []): vandrende
+            new Behavior(patrolling, []): patruljerer
       binary_drawBin:
         text: tegn binært {BIN}
       binary_drawBinScreen:
@@ -1896,5 +1902,3 @@ da:
             '"hearts"': hjerter
             '"rain"': regn
             '"starburst"': Starburst
-      validation_validatedBackground:
-        text: sæt baggrund til {IMG}

@@ -2,6 +2,8 @@
 ja:
   data:
     blocks:
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: ユーザーに変数 {VAR} について選択肢 {A}{B}{C} を使って {QUESTION} をプロンプト表示する
       AmysBlocks_spriteSayVar:
@@ -1056,6 +1058,8 @@ ja:
         text: ターゲットを避ける
       gamelab_beginCollectingData:
         text: "{LABEL} でデータ{BREAK} 値 {VALUE} を収集し始める"
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE}が{TARGET}を跳ね返す"
       gamelab_changePropBy:
@@ -1661,6 +1665,10 @@ ja:
         text: x 座標の {SPRITE}
       gamelab_yLocationOf:
         text: y 座標 {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} が {LOCATION} へと進む"
+      KatiesBlocks_tumbling:
+        text: ころがる
       Mikelab_addBehaviorSimple:
         text: スプライト {SPRITE} 開始 {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2288,8 +2296,6 @@ ja:
         text: ひだりに まがる
       RyanLab_turnRight:
         text: みぎに まがる
-      SpriteLab2Beta_spriteSay:
-        text: スプライト {SPRITE} 言う {TEXT} 用 {SECONDS} 秒
       Vector_createSpriteWith:
         text: |-
           スプライトの作成
@@ -2395,6 +2401,19 @@ ja:
             '"quarantining"': 病気のときに自主隔離する
             '"avoiding"': ソーシャル・ディスタンス
             '"none"': じっとしている
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): 右に回す
+            new Behavior(spinning_left, []): 左に回す
+            new Behavior(fluttering, []): パタパタさせる
+            new Behavior(jittering, []): ブルブルさせる
+            new Behavior(wobbling, []): ぐらぐらさせる
+            new Behavior(wandering, []): あちこちに動かす
+            new Behavior(patrolling, []): パトロール
+      adaptations_startFollowing:
+        text: "{SPRITE} が {TARGET} を追跡し始めます"
       binary_drawBin:
         text: バイナリを描画する {BIN}
       binary_drawBinScreen:
@@ -2551,7 +2570,3 @@ ja:
         text: 見出し{HEADING}を設定
       storylab_setSubheading:
         text: サブ見出し{SUBHEADING}を設定
-      validation_validatedBackground:
-        text: 背景を次の値に設定する {IMG}
-      validation_validatedSound:
-        text: サウンド再生 {SOUND}

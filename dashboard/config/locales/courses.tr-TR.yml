@@ -110,3 +110,60 @@ tr:
             bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturmasını;
             ve onların üreticilik, iletişim, problem çözme ve eğlence için bir araç
             olarak bilgisayar bilimi ile uğraşmasını sağlar.
+        csd-pilot:
+          title: CSD Pilot Kursu
+          description_student: Bilgisayar Bilimi Keşifleri (CS Keşifleri) giriş seviyesi
+            bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturmasını;
+            ve onların üreticilik, iletişim, problem çözme ve eğlence için bir araç
+            olarak bilgisayar bilimi ile uğraşmasını sağlar.
+        csp-2020:
+          description_short: Temel bilgisayar bilim kavramlarını öğrenin.
+        csd-2020:
+          description_short: Bilgisayar bilimlerine giriş niteliğindeki bir kurs,
+            öğrencilere özgün eserler oluşturabilme yetkinliğini sağlamakta yardımcı
+            olur.
+          description_student: Bilgisayar Bilimi Keşifleri (CS Keşifleri) giriş seviyesi
+            bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturmasını;
+            ve onların üreticilik, iletişim, problem çözme ve eğlence için bir araç
+            olarak bilgisayar bilimi ile uğraşmasını sağlar.
+          description_teacher: Bilgisayar Bilimi Keşifleri (CS Keşifleri) giriş seviyesi
+            bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturmasını;
+            ve onların üreticilik, iletişim, problem çözme ve eğlence için bir araç
+            olarak bilgisayar bilimi ile uğraşmasını sağlar.
+        csp-2021:
+          description_short: Temel bilgisayar bilim kavramlarını öğrenin.
+        mike-test:
+          title: Bilgisayar Bilimi Temelleri
+        self-paced-pl-csp-2021:
+          title: kendi-temposunda-pl-csp-2021
+        csa-pilot-facilitator:
+          title: CSA Pilot Kolaylaştırıcıları
+        csp-2022:
+          description_short: Temel bilgisayar bilim kavramlarını öğrenin.
+        vpl-csd-summer-pilot-ci-2022:
+          title: BB Keşifleri Müfredatı İncelemesi
+        self-paced-pl-csa-2022:
+          title: CSA Başlarken Modülleri
+        self-paced-pl-csp-2022:
+          title: kendi-temposunda-pl-csp-2021
+        csp-2023:
+          description_short: Temel bilgisayar bilim kavramlarını öğrenin.
+        self-paced-pl-csa-2023:
+          title: CSA Başlarken Modülleri
+    resources:
+      curriculum/csd/2020:
+        name: Müfredat
+      teacher_forum/csd/2020:
+        name: Öğretmen Forumu
+      curriculum/csd/2017:
+        name: Müfredat
+      teacher_forum_6/csd/2017:
+        name: Öğretmen Forumu
+      curriculum/csd/2019:
+        name: Müfredat
+      teacher_forum/csd/2019:
+        name: Öğretmen Forumu
+      curriculum/csd/2018:
+        name: Müfredat
+      teacher_forum_6/csd/2018:
+        name: Öğretmen Forumu

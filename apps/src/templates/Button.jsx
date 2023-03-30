@@ -47,6 +47,11 @@ class Button extends React.Component {
     className: PropTypes.string,
     href: PropTypes.string,
     text: PropTypes.string,
+    value: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+      PropTypes.bool
+    ]),
     children: PropTypes.node,
     size: PropTypes.oneOf(Object.keys(ButtonSize)),
     color: PropTypes.oneOf(Object.values(ButtonColor)),
@@ -92,6 +97,7 @@ class Button extends React.Component {
       tabIndex,
       isPending,
       pendingText,
+      value,
       __useDeprecatedTag
     } = this.props;
 
@@ -162,6 +168,7 @@ class Button extends React.Component {
         style={{...buttonStyle}}
         href={disabled ? '#' : href}
         target={target}
+        value={value}
         rel={rel}
         disabled={disabled}
         download={download}

@@ -155,6 +155,12 @@
         "csd-2022/playing-notes": {
           "display_name": "角色备注"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "解决问题的过程"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "解决问题的过程"
+        },
         "csd-2022/random-numbers": {
           "display_name": "随机数"
         },

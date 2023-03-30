@@ -4,28 +4,31 @@ import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import JavalabView from './JavalabView';
 import javalab, {
-  getSources,
-  getValidation,
-  setAllSourcesAndFileMetadata,
-  setAllValidation,
   setDisplayTheme,
-  appendOutputLog,
-  setBackpackApi,
   setIsStartMode,
   setLevelName,
-  appendNewlineToConsoleLog,
   setIsRunning,
   setIsTesting,
-  openPhotoPrompter,
-  closePhotoPrompter,
   setBackpackEnabled,
-  appendMarkdownLog,
   setIsReadOnlyWorkspace,
   setHasOpenCodeReview,
   setValidationPassed,
   setHasRunOrTestedCode,
   setIsJavabuilderConnecting
 } from './javalabRedux';
+import javalabConsole, {
+  appendOutputLog,
+  appendNewlineToConsoleLog,
+  appendMarkdownLog,
+  closePhotoPrompter,
+  openPhotoPrompter
+} from './redux/consoleRedux';
+import javalabEditor, {
+  getSources,
+  getValidation,
+  setAllSourcesAndFileMetadata,
+  setAllValidation
+} from './redux/editorRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import JavabuilderConnection from './JavabuilderConnection';
@@ -36,7 +39,6 @@ import TheaterVisualizationColumn from './theater/TheaterVisualizationColumn';
 import Theater from './theater/Theater';
 import {CsaViewMode, ExecutionType, InputMessageType} from './constants';
 import {getDisplayThemeFromString} from './DisplayTheme';
-import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
@@ -44,6 +46,8 @@ import {
 } from '../containedLevels';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
+import {BackpackAPIContext} from './BackpackAPIContext';
+import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -191,7 +195,7 @@ Javalab.prototype.init = function(config) {
     isSubmitted: !!config.level.submitted
   });
 
-  registerReducers({javalab});
+  registerReducers({javalab, javalabConsole, javalabEditor});
   // If we're in editBlock mode (for editing start_sources) we set up the save button to save
   // the project file information into start_sources on the level.
   if (this.isStartMode) {
@@ -286,10 +290,9 @@ Javalab.prototype.init = function(config) {
   const backpackEnabled = !!config.backpackEnabled;
   getStore().dispatch(setBackpackEnabled(backpackEnabled));
 
+  let backpackApi = null;
   if (backpackEnabled) {
-    getStore().dispatch(
-      setBackpackApi(new BackpackClientApi(config.backpackChannel))
-    );
+    backpackApi = new BackpackClientApi(config.backpackChannel);
   }
 
   // Used for some post requests made in Javalab, namely
@@ -301,22 +304,24 @@ Javalab.prototype.init = function(config) {
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <JavalabView
-        onMount={onMount}
-        onRun={onRun}
-        onStop={onStop}
-        onTest={onTest}
-        onContinue={onContinue}
-        onCommitCode={onCommitCode}
-        onInputMessage={onInputMessage}
-        visualization={this.visualization}
-        viewMode={this.level.csaViewMode || CsaViewMode.CONSOLE}
-        isProjectTemplateLevel={!!this.level.projectTemplateLevelName}
-        handleClearPuzzle={() => {
-          return this.studioApp_.handleClearPuzzle(config);
-        }}
-        onPhotoPrompterFileSelected={onPhotoPrompterFileSelected}
-      />
+      <BackpackAPIContext.Provider value={backpackApi}>
+        <JavalabView
+          onMount={onMount}
+          onRun={onRun}
+          onStop={onStop}
+          onTest={onTest}
+          onContinue={onContinue}
+          onCommitCode={onCommitCode}
+          onInputMessage={onInputMessage}
+          visualization={this.visualization}
+          viewMode={this.level.csaViewMode || CsaViewMode.CONSOLE}
+          isProjectTemplateLevel={!!this.level.projectTemplateLevelName}
+          handleClearPuzzle={() => {
+            return this.studioApp_.handleClearPuzzle(config);
+          }}
+          onPhotoPrompterFileSelected={onPhotoPrompterFileSelected}
+        />
+      </BackpackAPIContext.Provider>
     </Provider>,
     document.getElementById(config.containerId)
   );

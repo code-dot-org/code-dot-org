@@ -5,12 +5,8 @@ import color from '@cdo/apps/util/color';
 import JavalabConsole from './JavalabConsole';
 import JavalabEditor from './JavalabEditor';
 import JavalabPanels from './JavalabPanels';
-import {
-  appendOutputLog,
-  setDisplayTheme,
-  setIsRunning,
-  setIsTesting
-} from './javalabRedux';
+import {setDisplayTheme, setIsRunning, setIsTesting} from './javalabRedux';
+import {appendOutputLog} from './redux/consoleRedux';
 import {DisplayTheme} from './DisplayTheme';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions, {
@@ -204,6 +200,7 @@ class JavalabView extends React.Component {
             topLeftPanel={height => (
               <TopInstructions
                 mainStyle={styles.instructions}
+                isOldPurpleColorHeader
                 standalone
                 displayDocumentationTab
                 displayReviewTab

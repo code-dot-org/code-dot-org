@@ -14,6 +14,7 @@ as independent tables makes styling them simpler.
 export default function QuickAssignTableHocPl({
   marketingAudience,
   courseOfferings,
+  setSelectedCourseOffering,
   updateCourse,
   sectionCourse
 }) {
@@ -43,7 +44,12 @@ export default function QuickAssignTableHocPl({
           </tr>
         </thead>
         <tbody className={moduleStyles.tableBody}>
-          {renderRows(rows, sectionCourse, updateCourse)}
+          {renderRows(
+            rows,
+            sectionCourse,
+            updateCourse,
+            setSelectedCourseOffering
+          )}
         </tbody>
       </table>
     );
@@ -87,8 +93,9 @@ export default function QuickAssignTableHocPl({
 }
 
 QuickAssignTableHocPl.propTypes = {
-  courseOfferings: PropTypes.object.isRequired,
   marketingAudience: PropTypes.string.isRequired,
+  courseOfferings: PropTypes.object.isRequired,
+  setSelectedCourseOffering: PropTypes.func.isRequired,
   updateCourse: PropTypes.func.isRequired,
   sectionCourse: PropTypes.object
 };

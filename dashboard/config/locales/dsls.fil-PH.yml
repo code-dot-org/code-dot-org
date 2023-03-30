@@ -9956,10 +9956,15 @@ fil-PH:
         - {}
       courseD_multi_maze_until10_predict22022:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Ang zombie ay dadaan sa tamang landas at magtatapos nang pabalik-balik
+            magpakailanman.
+          correct: true
+        - feedback: Mali. Ang zombie ay dadaan sa tamang landas at magtatapos nang
+            pabalik-balik magpakailanman.
+        - feedback: Mali. Ang zombie ay dadaan sa tamang landas at magtatapos nang
+            pabalik-balik magpakailanman.
+        - feedback: Sa code na ito, dadaan ang zombie sa tamang landas at magtatapos
+            nang pabalik-balik magpakailanman.
         questions:
         - {}
       courseD_multi_maze_until2_predict12022:
@@ -10004,12 +10009,18 @@ fil-PH:
         - {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Ang sprite na iyong na-click ay magiging mas malaki.
+          correct: true
+          feedback: Tama! Ang sprite na na-click mo ay magiging mas malaki.
+        - text: Ang sprite na na-click mo ay magiging mas maliit.
+          feedback: Mali. Ang sprite na na-click mo ay magiging mas malaki.
+        - text: Ang lahat ng mga sprite ay magiging mas malaki.
+          feedback: Mali. Ang sprite na na-click mo ay magiging mas malaki.
+        - text: Ang lahat ng mga sprite ay magiging mas maliit.
+          feedback: Mali. Ang sprite na na-click mo ay magiging mas malaki.
         questions:
-        - {}
+        - text: 'Gumawa ng hula: Pagkatapos pindutin ang Run, ano ang mangyayari kapag
+            na-click mo ang isa sa mga sprite?'
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - {}
@@ -10045,20 +10056,40 @@ fil-PH:
         - {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Ang kuneho ay magsasabi ng "5".
+          correct: true
+          feedback: Tama! Ang numero 5 ay naka-imbak sa variable at pagkatapos ay
+            ginamit muli kapag nagsasalita ang sprite.
+        - text: Ang kunehong sprite ay magsasabi ng anumang numero na naisulat.
+          feedback: Mali. Walang prompt sa programang ito. Ang numero ay direktang
+            nakatakda sa code.
+        - text: Ang kuneho ay magsasabi ng "bilang".
+          feedback: Mali. Ang `bilang` ay isang variable. Kapag tumakbo ang block
+            na ito, nakukuha nito ang anumang numerong nakaimbak. Ang kuneho ay magsasabi
+            ng "5".
+        - text: Walang mangyayari dahil ang `bilang` ay hindi isang numero.
+          feedback: Mali. Ang numero 5 ay naka-imbak sa variable at ginagamit kapag
+            nagsasalita ang sprite.
         questions:
-        - {}
+        - text: 'Gumawa ng hula: Ano ang sasabihin ng kuneho?'
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Ang programa ay magpi-print ng anumang numero na naisulat.
+          feedback: Mali. Ang numero ay naka-imbak sa variable at ginagamit upang
+            lumikha ng mga karot na sprite.
+        - text: Ang kunehong sprite ay magsasabi ng anumang numero na naisulat.
+          feedback: Mali. Ang numero ay naka-imbak sa variable at ginagamit upang
+            lumikha ng mga karot na sprite.
+        - text: Ang program ay gagawa ng maraming bagong karot na sprite.
+          correct: true
+          feedback: Tama! Ang bilang ng mga sprite na ginawa ay ang numerong nakaimbak
+            sa variable.
+        - text: Walang mangyayari dahil ang `bilang` ay hindi isang numero.
+          feedback: Mali. Ang isang numero ay naka-imbak sa variable at ginagamit
+            upang lumikha ng mga karot na sprite.
         questions:
-        - {}
+        - text: 'Gumawa ng hula: Ano ang mangyayari pagkatapos mag-type ng numero
+            sa prompt?'
       courseF_variables_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - {}
@@ -10091,3 +10122,31 @@ fil-PH:
         - {}
         questions:
         - {}
+      CourseE_Lesson_11_Artist_Practice_2022:
+        description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
+          ang lahat ng kaya mo. Patuloy na magsanay sa mga function at sa Artist!
+      CourseE_Lesson_7_Artist_Practice_2022:
+        description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
+          ang lahat ng kaya mo. Patuloy na magsanay sa mga nested loop at sa Artist!
+      courseF_EOC_examples2022_2022_pilot_-2022-2:
+        description: Naabot mo na ang dulo ng Course F! Pumili ng proyektong tutuklasin.
+      courseF_collector_samples_2022_pilot_-2022-2:
+        description: Gagawa ka ng collector game. Bago ka magsimula, suriin ang mga
+          halimbawa ng mga proyekto sa ibaba. Pindutin ang \"Tapos na\" kapag handa
+          ka nang magsimulang magplano ng sarili mong program.
+      courseF_groups_freeplay_2022_pilot_-2022-2:
+        description: Ngayon ay maaari mong gamitin ang natutunan mo upang gawin ang
+          anumang gusto mo! Lumikha ng interactive na program na may maraming mga
+          sprite!
+        display_name: Maraming Sprite - Libreng Paglalaro
+      courseF_groups_practice_2022_pilot_-2022-2:
+        description: Mahusay na trabaho sa ngayon! Piliin ang susunod na aktibidad
+          mo. Kumpletuhin ang lahat na kaya mo. Panatilihin ang pagsasanay sa mga
+          kaganapan at grupo ng mga sprite! Patuloy na magsanay sa mga event at grupo
+          ng sprite!
+        display_name: Maraming Mga Pagsasanay sa Sprite
+      courseF_intro_apps2022_2022_pilot_-2022-2:
+        description: Ang mga proyektong ito ay nilikha lahat gamit ang Sprite Lab.
+          Subukan ang mga ito ngayon upang makita kung ano ang posible. Sa pagtatapos
+          ng kursong ito, makakagawa ka na ng sarili mong mga proyekto tulad nito...
+          at higit pa!
