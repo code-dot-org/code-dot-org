@@ -60,7 +60,7 @@ export const style = {
       left: 10 - ARROW_WIDTH,
       borderRightColor: color
     }),
-    right: (color, hoverColor) => ({
+    right: color => ({
       right: 10 - ARROW_WIDTH,
       borderLeftColor: color
     })

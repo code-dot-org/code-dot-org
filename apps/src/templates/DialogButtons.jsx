@@ -72,7 +72,7 @@ export default class DialogButtons extends Component {
           <LegacyButton
             type="cancel"
             size="large"
-            style={{marginTop: 25.5}}
+            style={styles.againButtonFormerArrowBtn}
             id="again-button"
             className="launch"
           >
@@ -153,5 +153,8 @@ const styles = {
   },
   hintButton: {
     marginRight: 10
+  },
+  againButtonFormerArrowBtn: {
+    marginTop: 25.5
   }
 };
