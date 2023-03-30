@@ -189,7 +189,7 @@ const Key: React.FunctionComponent<KeyProps> = ({
         type === 'white' && moduleStyles.whiteKey,
         type === 'black' && moduleStyles.blackKey
       )}
-      onClick={onClick}
+      onClick={isSelected || !isDisabled ? onClick : undefined}
     >
       <p className={moduleStyles.noteLabel}>{text}</p>
     </div>
