@@ -238,7 +238,7 @@ const NoteGrid: React.FunctionComponent<NoteGridProps> = ({
   });
 
   return (
-    <div id="notegrid" className={moduleStyles.noteGridContainer}>
+    <div id="notegrid-container" className={moduleStyles.noteGridContainer}>
       {graphNotes.map((graphNote: ChordGraphNote, index) => {
         return (
           <div
