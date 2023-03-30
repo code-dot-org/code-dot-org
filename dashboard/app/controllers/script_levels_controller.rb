@@ -131,7 +131,7 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    if request.path != (canonical_path = build_script_level_path(@script_level, @extra_params)) && params[:view] != 'summary'
+    if request.path != (canonical_path = build_script_level_path(@script_level, @extra_params))
       canonical_path << "?#{request.query_string}" unless request.query_string.empty?
       redirect_to canonical_path, status: :moved_permanently
       return
@@ -144,19 +144,6 @@ class ScriptLevelsController < ApplicationController
 
     @level = select_level
     return if redirect_under_13_without_tos_teacher(@level)
-
-    # TODO: If this adds too much to the load time in prod, move it to an API.
-    if current_user&.teacher?
-      @responses = []
-      # We use this for the level summary entry point, so on contained levels
-      # what we actually care about are responses to the contained level.
-      level = @level.contained_levels.any? ? @level.contained_levels.first : @level
-
-      # TODO: Change/remove this check as we add support for more level types.
-      if level.is_a?(FreeResponse)
-        @responses = UserLevel.where(level: level, user: @section&.students)
-      end
-    end
 
     @body_classes = @level.properties['background']
 
