@@ -73,8 +73,7 @@ export function generateNotesFromChord(
   }
 }
 
-// Given a ChordEventValue, generate a set of data for graphing it.
-export function generateGraphDataFromChord(options: {
+interface GenerateGraphDataFromChordOptions {
   chordEventValue: ChordEventValue;
   width: number;
   height: number;
@@ -82,17 +81,18 @@ export function generateGraphDataFromChord(options: {
   startOctave: number;
   padding: number;
   noteHeightScale: number;
-}): ChordGraphNote[] {
-  const {
-    chordEventValue,
-    width,
-    height,
-    numOctaves,
-    startOctave,
-    padding,
-    noteHeightScale
-  } = options;
+}
 
+// Given a ChordEventValue, generate a set of data for graphing it.
+export function generateGraphDataFromChord({
+  chordEventValue,
+  width,
+  height,
+  numOctaves,
+  startOctave,
+  padding,
+  noteHeightScale
+}: GenerateGraphDataFromChordOptions): ChordGraphNote[] {
   const notes: ChordNote[] = generateNotesFromChord(chordEventValue);
 
   // Note widths fit in the space; note heights are exaggerated.
