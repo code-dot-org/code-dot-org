@@ -5,20 +5,19 @@ require 'dynamic_config/gatekeeper'
 require_relative '../../pegasus/src/env'
 
 module WebPurify
-  # WebPurify limits us to 30,000 characters per request and 4 simultaneous requests per API key.
+  # WebPurify limits us to 30,000 characters per request and 4 simultaneous requests per API key
   API_ENDPOINT = URI('http://api1.webpurify.com/services/rest').freeze
   CHARACTER_LIMIT = 30_000
-  SIMULTANEOUS_REQUEST_LIMIT = 4
+  REQUEST_LIMIT = 4
+  CONNECTION_OPTIONS = {
+    read_timeout: DCDO.get('webpurify_http_read_timeout', 10),
+    open_timeout: DCDO.get('webpurify_tcp_connect_timeout', 5)
+  }
   ISO_639_1_TO_WEBPURIFY = {
     'es' => 'sp',
     'ko' => 'kr',
     'ja' => 'jp'
   }.freeze
-
-  CONNECTION_OPTIONS = {
-    read_timeout: DCDO.get('webpurify_http_read_timeout', 10),
-    open_timeout: DCDO.get('webpurify_tcp_connect_timeout', 5)
-  }
 
   # Note: If text has a string of text without whitespace longer than CHARACTER_LIMIT,
   # the entire substring will count as one long chunk and be given its own request to WebPurify.
@@ -49,10 +48,10 @@ module WebPurify
     return nil unless CDO.webpurify_key && Gatekeeper.allows('webpurify', default: true)
     return nil if text.nil?
 
-    # This is an artificial limit to prevent us from profanity-checking a file up to 5MB (the project limit).
-    # The use of the SIMULTANEOUS_REQUEST_LIMIT as the multiplier is arbitrary because requests are not currently parallelized.
-    # If we want to increase this limit, we should investigate parallelizing the requests to WebPurify.
-    if text.length > CHARACTER_LIMIT * SIMULTANEOUS_REQUEST_LIMIT
+    # This is an artificial limit to prevent us from profanity-checking a file up to 5MB (the project size limit)
+    # The request limit here happens to be the same as the simultaneous request limit for our WebPurify plan
+    # The choice is arbitrary because requests are not currently parallelized, though they could be in the future
+    if text.length > CHARACTER_LIMIT * REQUEST_LIMIT
       raise StandardError.new("Profanity check failed: text is too long")
     end
 
@@ -67,40 +66,43 @@ module WebPurify
     expletives = []
     Net::HTTP.start(API_ENDPOINT.host, API_ENDPOINT.port, CONNECTION_OPTIONS) do |http|
       chunks.each do |chunk|
-        puts 'starting request'
         request = Net::HTTP::Post.new(API_ENDPOINT)
         form_data = [
-          ['api_key', 'baloney'],
+          ['api_key', CDO.webpurify_key],
           ['format', 'json'],
           ['lang', language_codes],
           ['method', 'webpurify.live.return'],
           ['text', chunk]
         ]
         request.set_form form_data, 'multipart/form-data'
-
         response = http.request(request)
         result = JSON.parse(response.body)
-        puts '****result'
-        puts result
-        status = result.dig('rsp', '@attributes', 'stat')
-        puts '****status'
-        puts status
 
-        err_code = result.dig('rsp', 'err', '@attributes', 'code')
-        err_msg = result.dig('rsp', 'err', '@attributes', 'msg')
-        expletive = result.dig('rsp', 'expletive')
+        status = nil
+        # Note: Need to check that we can check for keys on the response
+        # because there is an edge case where response.body is {"rsp": false}
+        if result[:rsp].respond_to?(:key?) && result[:rsp].key?(:@attributes) && result[:rsp][:@attributes].key?(:stat)
+          status = result[:rsp][:@attributes][:stat]
+        end
 
-        puts '****err_code'
-        puts err_code
-        puts '****err_msg'
-        puts err_msg
         if !response.is_a?(Net::HTTPSuccess) || status != "ok"
           message = "Profanity check failed"
+          err_code = err_msg = nil
+
+          if result[:rsp].respond_to?(:key?) && result[:rsp].key?(:err)
+            err_code = result.dig('rsp', 'err', '@attributes', 'code')
+          end
           message += " with code #{err_code}" if err_code
+
+          if result[:rsp].respond_to?(:key?) && result[:rsp].key?(:err)
+            err_msg = result.dig('rsp', 'err', '@attributes', 'msg')
+          end
           message += ": #{err_msg}" if err_msg && !err_msg.empty?
+
           raise StandardError.new(message)
         end
 
+        expletive = result.dig('rsp', 'expletive')
         expletives.concat(expletive.is_a?(Array) ? expletive : [expletive]) if expletive
       end
     end
