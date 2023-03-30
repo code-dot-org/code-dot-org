@@ -281,7 +281,7 @@ export default class MusicPlayer {
   // Converts actual seconds used by the audio system into a playhead
   // position, which is 1-based and scaled to measures.
   convertSecondsToPlayheadPosition(seconds: number): number {
-    return Math.round((1 + seconds / this.secondsPerMeasure()) * 1000) / 1000;
+    return 1 + seconds / this.secondsPerMeasure();
   }
 
   // Converts a playhead position, which is 1-based and scaled to measures,
