@@ -519,14 +519,16 @@ export default class MusicPlayer {
 
       return results;
     } else if (event.type === 'chord') {
-      const results: SampleEvent[] = this.convertChordEventToSampleEvents(event);
+      const results: SampleEvent[] = this.convertChordEventToSampleEvents(
+        event
+      );
       return results;
     }
 
     return [];
   }
 
-  convertChordEventToSampleEvents(event: PlaybackEvent) : SampleEvent[] {
+  convertChordEventToSampleEvents(event: PlaybackEvent): SampleEvent[] {
     const chordEvent = event as ChordEvent;
 
     const {instrument, notes} = chordEvent.value;
@@ -537,23 +539,24 @@ export default class MusicPlayer {
     const results: SampleEvent[] = [];
 
     const generatedNotes: ChordNote[] = generateNotesFromChord(
-      chordEvent.value);
+      chordEvent.value
+    );
 
     generatedNotes.forEach(note => {
-      const sampleId = this.getSampleForNote(note.note, instrument) || '';
+      const sampleId = this.getSampleForNote(note.note, instrument);
       if (sampleId === null) {
         console.warn(
           `No sound for note value ${note} on instrument ${instrument}`
         );
+      } else {
+        const noteWhen = chordEvent.when + (note.tick - 1) / 16;
+
+        results.push({
+          sampleId,
+          offsetSeconds: this.convertPlayheadPositionToSeconds(noteWhen),
+          ...event
+        });
       }
-
-      const noteWhen = chordEvent.when + (note.tick - 1) / 16;
-
-      results.push({
-        sampleId,
-        offsetSeconds: this.convertPlayheadPositionToSeconds(noteWhen),
-        ...event
-      });
     });
 
     return results;
@@ -582,6 +585,6 @@ export default class MusicPlayer {
       return null;
     }
 
-    return `${instrument}/${sound.src}`
+    return `${instrument}/${sound.src}`;
   }
 }

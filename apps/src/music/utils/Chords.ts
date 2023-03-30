@@ -55,7 +55,7 @@ export function generateNotesFromChord(
       return {
         tick: 1,
         note
-      } as ChordNote;
+      };
     });
   } else {
     if (playStyle === 'arpeggio-up') {

@@ -228,7 +228,7 @@ const NoteGrid: React.FunctionComponent<NoteGridProps> = ({
       notes: selectedNotes,
       playStyle,
       instrument
-    } as ChordEventValue,
+    },
     width: 315,
     height: 110,
     numOctaves,
