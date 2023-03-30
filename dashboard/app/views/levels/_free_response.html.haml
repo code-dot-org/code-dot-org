@@ -68,5 +68,3 @@
 
 - content_for(:head) do
   %script{src: webpack_asset_path('js/levels/_free_response.js'), data: {freeresponse: js_data.to_json}}
-  -# TODO: remove the script tag below once we include FontAwesome Pro in the JS build.
-  %script{src: "https://kit.fontawesome.com/ea2d9d4413.js", crossorigin: "anonymous"}

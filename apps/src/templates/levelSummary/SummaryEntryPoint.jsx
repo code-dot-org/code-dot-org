@@ -22,7 +22,6 @@ const SummaryEntryPoint = ({scriptData, students}) => {
       <Button
         color={Button.ButtonColor.neutralDark}
         text={i18n.viewStudentResponses()}
-        icon="arrow-up-right-from-square"
         href={summaryUrl}
         __useDeprecatedTag
       />
