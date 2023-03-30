@@ -71,5 +71,4 @@ def ensure_eyes_available
   return if @eyes
   @eyes = Applitools::Selenium::Eyes.new
   @eyes.api_key = CDO.applitools_eyes_api_key
-  @eyes.log_handler = Logger.new('../../log/eyes.log')
 end
