@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-10 18:50:09 UTC",
+    "serialized_at": "2023-03-29 18:04:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3090,7 +3090,7 @@
       "key": "26e76e32-e51c-4942-b9fe-9e86848e2972",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the program uses `&&` and `||` operators in the conditions and share ideas about their functionalities. Students may wonder how these are similar and different from using nested `if` statements."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the program uses `&&` operator in the condition and share ideas about its functionality. Students may wonder how this is similar and different from using nested `if` statements."
       },
       "seeding_key": {
         "activity_section.key": "26e76e32-e51c-4942-b9fe-9e86848e2972",
@@ -6012,15 +6012,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U4L8-L5_2023"
-        ],
         "progression": "Finding Patterns"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U4L8-L5_2023"
+          "CSA U4L8-L5 Finding Patterns"
         ],
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-2",
@@ -6028,7 +6025,7 @@
         "activity_section.key": "443f335b-a192-4c99-a18e-d273c242e113"
       },
       "level_keys": [
-        "CSA U4L8-L5_2023"
+        "CSA U4L8-L5 Finding Patterns"
       ]
     },
     {
@@ -7008,9 +7005,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U4L8-L5_2023",
+        "level.key": "CSA U4L8-L5 Finding Patterns",
         "script_level.level_keys": [
-          "CSA U4L8-L5_2023"
+          "CSA U4L8-L5 Finding Patterns"
         ],
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-2",

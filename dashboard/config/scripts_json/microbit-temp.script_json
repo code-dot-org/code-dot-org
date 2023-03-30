@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "microbit-temp",
-    "serialized_at": "2023-03-28 04:47:29 UTC",
+    "serialized_at": "2023-03-30 00:09:45 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1148,21 +1148,8 @@
       }
     },
     {
-      "key": "81f2d221-e8cd-49bd-990d-a7c0475f9db0",
-      "position": 4,
-      "properties": {
-        "name": "After the Lesson"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "81f2d221-e8cd-49bd-990d-a7c0475f9db0",
-        "lesson.key": "Project - Prototype an Innovation",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "microbit-temp"
-      }
-    },
-    {
       "key": "cfa12baf-fbbb-47f7-9fbe-7e91ce1dada3",
-      "position": 5,
+      "position": 4,
       "properties": {
         "name": "Extensions"
       },
@@ -2283,7 +2270,7 @@
       "key": "21f664fc-d4b9-45e7-ac7f-19cb415deb58",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r the_counter_pattern/csd6/2023] video in the slides.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r the_counter_pattern/microbit-temp/unversioned] video in the slides.\n\n\n\n",
         "progression_name": "Video - The Counter Pattern",
         "tips": [
           {
@@ -2501,7 +2488,7 @@
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** (Optional) pass out copies of the project guide. Students will use this to plan their project, and includes items that can be used for assessment at the end of the project.",
-        "name": "Introduction",
+        "name": "Project Ideation",
         "tips": [
           {
             "type": "teachingTip",
@@ -2518,18 +2505,7 @@
       "key": "cf42c169-f9c5-4d35-9c10-16a5a845a2a5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Slides**: Present an overview of the project and the steps students will take to complete it. There are multiple slides available to help explain the project.\n\n**(Optional) Class Brainstorm:** Before diving into individual projects, consider leading a class brainstorm of what some example projects could look like that fit this criteria. You may also decide to show one or two of the exemplar apps to help inspire the brainstorm. Using these ideas, students may find it easier to latch onto an initial idea for their project"
-      },
-      "seeding_key": {
-        "activity_section.key": "cf42c169-f9c5-4d35-9c10-16a5a845a2a5",
-        "lesson_activity.key": "e849fe18-2165-480b-995f-bbdb64b3e2da"
-      }
-    },
-    {
-      "key": "559dfab5-e432-40e0-88d9-c242fb2b9af5",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Slides**: Present an overview of the project and the steps students will take to complete it. There are multiple slides available to help explain the project.\n\n**(Optional) Class Brainstorm:** Before diving into individual projects, consider leading a class brainstorm of what some example projects could look like that fit this criteria. You may also decide to show one or two of the exemplar apps to help inspire the brainstorm. Using these ideas, students may find it easier to latch onto an initial idea for their project",
         "tips": [
           {
             "type": "teachingTip",
@@ -2538,13 +2514,60 @@
         ]
       },
       "seeding_key": {
+        "activity_section.key": "cf42c169-f9c5-4d35-9c10-16a5a845a2a5",
+        "lesson_activity.key": "e849fe18-2165-480b-995f-bbdb64b3e2da"
+      }
+    },
+    {
+      "key": "a0f9502b-5f77-49da-a29f-b329a4c9a842",
+      "position": 4,
+      "properties": {
+        "description": "Many of you are ready to start creating your programs. One thing that could make this challenging is the *blank screen* effect: unlike previous levels, you won’t have any starter code or direction on what to create. This means you might not be sure what exactly you’re supposed to do, or you might run into bugs you need to fix which can be frustrating. Luckily, we can also use the problem-solving process to help with these types of projects as well!\n",
+        "name": "Creating the Project",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a0f9502b-5f77-49da-a29f-b329a4c9a842",
+        "lesson_activity.key": "e849fe18-2165-480b-995f-bbdb64b3e2da"
+      }
+    },
+    {
+      "key": "ed5d5cca-e15d-4e0d-8152-487a4a526783",
+      "position": 5,
+      "properties": {
+        "description": "**Distribute:** Hand out a copy of the [r problem_solving_process_with_programming/microbit-temp/unversioned] to pairs of students. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic."
+      },
+      "seeding_key": {
+        "activity_section.key": "ed5d5cca-e15d-4e0d-8152-487a4a526783",
+        "lesson_activity.key": "e849fe18-2165-480b-995f-bbdb64b3e2da"
+      }
+    },
+    {
+      "key": "b01295e5-a421-4745-9167-e81d1d9d5a43",
+      "position": 6,
+      "properties": {
+        "description": "If you feel stuck or you’re not sure what to do next, remember you can always follow the steps of the problem-solving process to **define** your next step, **prepare** for what you want to code, **try** it out, then **reflect** on whether or not it solved your problem.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b01295e5-a421-4745-9167-e81d1d9d5a43",
+        "lesson_activity.key": "e849fe18-2165-480b-995f-bbdb64b3e2da"
+      }
+    },
+    {
+      "key": "559dfab5-e432-40e0-88d9-c242fb2b9af5",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio."
+      },
+      "seeding_key": {
         "activity_section.key": "559dfab5-e432-40e0-88d9-c242fb2b9af5",
         "lesson_activity.key": "e849fe18-2165-480b-995f-bbdb64b3e2da"
       }
     },
     {
       "key": "13d67a60-f445-4748-b709-796c7bb9ef47",
-      "position": 5,
+      "position": 8,
       "properties": {
         "name": "Code Studio",
         "progression_name": "Field Collector App"
@@ -2555,8 +2578,25 @@
       }
     },
     {
+      "key": "31990fed-234d-4596-b6bf-a0974ea62984",
+      "position": 9,
+      "properties": {
+        "description": "**Circulate:** Encourage students to use the steps in the Problem-Solving Process for Programming when they get stuck or are unsure of what to do next.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Using the Problem Solving Process:** Not all bullets in the Problem Solving Process will be applicable to every problem a student has. Instead, encourage them to pick one or two from each category to try each time they are stuck.\n\nThis document is also available in the Help and Tips for each level on Code Studio."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "31990fed-234d-4596-b6bf-a0974ea62984",
+        "lesson_activity.key": "e849fe18-2165-480b-995f-bbdb64b3e2da"
+      }
+    },
+    {
       "key": "69e0f7e0-197d-4687-ab52-310e4e7161d4",
-      "position": 6,
+      "position": 10,
       "properties": {
         "description": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices."
       },
@@ -2567,7 +2607,7 @@
     },
     {
       "key": "867bcab2-c0bb-4926-8fe9-5eaafb6fa89b",
-      "position": 7,
+      "position": 11,
       "properties": {
         "description": "Allow students to walk around the room and interact with each other's devices. Celebrate all of the different ideas that students were able to implement with the same basic code.",
         "name": "(Optional) Gallery Walk",
@@ -4390,18 +4430,6 @@
       }
     },
     {
-      "key": "a5d1bb3c-7954-4107-868e-23d3bc34f6a1",
-      "position": 1,
-      "properties": {
-        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/edit) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
-        "name": "Post-Project Test"
-      },
-      "seeding_key": {
-        "activity_section.key": "a5d1bb3c-7954-4107-868e-23d3bc34f6a1",
-        "lesson_activity.key": "81f2d221-e8cd-49bd-990d-a7c0475f9db0"
-      }
-    },
-    {
       "key": "eaf74966-025a-4279-8cb7-6171405b8d27",
       "position": 1,
       "properties": {
@@ -5445,6 +5473,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - SB2.1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9737,7 +9768,7 @@
       }
     },
     {
-      "name": "Mini-Project: Interactive Art",
+      "name": "Mini-Project: Interactive Pet",
       "url": "https://docs.google.com/presentation/d/1ho2cU7mQIPHNZ2HpULzlxeXIZ5wLtcilSNp3rnzXhnU/template/preview",
       "key": "mini-project_interactive_art",
       "properties": {
@@ -9848,6 +9879,19 @@
       }
     },
     {
+      "name": "Problem Solving Process with Programming",
+      "url": "https://docs.google.com/document/d/1q10YfeMqY95SAq0VAB3wnLPK2aDuJEoD2j82n-i183Y/edit",
+      "key": "problem_solving_process_with_programming",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_programming"
+      }
+    },
+    {
       "name": "Project Guide - Field Collector App",
       "url": "https://docs.google.com/document/d/1jpnyyyx5CeLVePSHUdC7VwGzNFEOx9JFzj8yk_9bVyA/edit",
       "key": "project_guide_-_field_collector_app",
@@ -9874,7 +9918,7 @@
       }
     },
     {
-      "name": "Project Guide - Interactive Art",
+      "name": "Project Guide - Interactive Pet",
       "url": "https://docs.google.com/document/d/1X0NCzO8s-6kxCgGT5wC8GXkGJrVeaW7F4_zyImbjq9s/edit#",
       "key": "project_guide_-_interactive_art",
       "properties": {
@@ -10059,7 +10103,7 @@
       }
     },
     {
-      "name": "Student Rubric - Interactive Art",
+      "name": "Student Rubric - Interactive Pet",
       "url": "https://docs.google.com/document/d/1gHFFmcxnroXEHFyWYXR3sXzqoe7QMNL5kDkrZbgwsfE/edit#",
       "key": "student_rubric_-_interactive_art",
       "properties": {
@@ -10097,7 +10141,7 @@
     },
     {
       "name": "The Counter Pattern",
-      "url": "https://youtu.be/sLIJNEIE0Rs",
+      "url": "https://youtu.be/GiHbeLq1ZkM",
       "key": "the_counter_pattern",
       "properties": {
         "audience": "Student",
@@ -10365,6 +10409,12 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: Field Collector App",
+        "resource.key": "problem_solving_process_with_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Field Collector App",
         "resource.key": "project_guide_-_field_collector_app"
       }
     },
@@ -10378,6 +10428,12 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: Interactive Art",
         "resource.key": "mini-project_interactive_art"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Interactive Art",
+        "resource.key": "problem_solving_process_with_programming"
       }
     },
     {
@@ -10522,6 +10578,12 @@
       "seeding_key": {
         "lesson.key": "Project: Human Device Interaction",
         "resource.key": "peer_review_-_human_device_interaction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Human Device Interaction",
+        "resource.key": "problem_solving_process_with_programming"
       }
     },
     {
