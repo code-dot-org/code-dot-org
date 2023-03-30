@@ -21,23 +21,19 @@ describe('CurriculumCatalogCard', () => {
     screen.getByRole('heading', {name: defaultProps.courseName});
   });
 
-  it('shows image', () => {
+  it('renders image with empty alt text by default', () => {
     render(<CurriculumCatalogCard {...defaultProps} />);
 
+    // with empty alt text, the image name is the same as the header name
     screen.getByRole('img', {name: defaultProps.courseName});
   });
 
-  it('shows image with empty alt text by default', () => {
-    render(<CurriculumCatalogCard {...defaultProps} />);
-
-    screen.getByAltText('');
-  });
-
-  it('can have image alt text if passed in', () => {
+  it('renders image with alt text if passed in', () => {
     const altText = 'Two people coding';
     render(<CurriculumCatalogCard {...defaultProps} imageAltText={altText} />);
 
-    screen.getByAltText(altText);
+    // when alt text is present, the img name is the alt text
+    screen.getByRole('img', {name: altText});
   });
 
   it('renders grade range', () => {
