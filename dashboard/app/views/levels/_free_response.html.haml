@@ -1,12 +1,5 @@
 :ruby
-  js_data = {
-    responses: @responses&.map do |response|
-      {
-        user_id: response.user_id,
-        text: response.level_source.data,
-      }
-    end
-  }
+  js_data = {}
   level ||= @level
   last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
   in_level_group ||= false
@@ -37,9 +30,6 @@
       }
     );
 
-- if is_contained_level && DCDO.get("show_level_summary_entry_point", false)
-  %div#summaryEntryPoint
-
 .free-response{:class => ('left-aligned' if left_align)}
   - title = level.get_property(:title)
   - if title.present? && (!in_level_group || is_contained_level)
@@ -68,5 +58,3 @@
 
 - content_for(:head) do
   %script{src: webpack_asset_path('js/levels/_free_response.js'), data: {freeresponse: js_data.to_json}}
-  -# TODO: remove the script tag below once we include FontAwesome Pro in the JS build.
-  %script{src: "https://kit.fontawesome.com/ea2d9d4413.js", crossorigin: "anonymous"}
