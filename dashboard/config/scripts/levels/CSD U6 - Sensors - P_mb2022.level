@@ -8,7 +8,7 @@
     "instructions_important": "false",
     "display_name": "Sensor Experiment",
     "submittable": "false",
-    "start_blocks": "var sensor1 = {};\nvar sensor2 = {};\n\nonBoardEvent(lightSensor, \"data\", function(event) {\n  sensor1.current = lightSensor.value;\n  if (sensor1.current > sensor1.high || sensor1.high == null) sensor1.high = sensor1.current;\n  if (sensor1.current < sensor1.low || sensor1.low == null) sensor1.low = sensor1.current;\n  \n  setNumber(\"sensor1current\", sensor1.current);\n  setNumber(\"sensor1high\", sensor1.high);\n  setNumber(\"sensor1low\", sensor1.low);\n});\n\nonBoardEvent(tempSensor, \"data\", function(event) {\n  sensor2.current = tempSensor.value;\n  if (sensor2.current > sensor2.high || sensor2.high == null) sensor2.high = sensor2.current;\n  if (sensor2.current < sensor2.low || sensor2.low == null) sensor2.low = sensor2.current;\n  \n  setNumber(\"sensor2current\", sensor2.current);\n  setNumber(\"sensor2high\", sensor2.high);\n  setNumber(\"sensor2low\", sensor2.low);\n});\n",
+    "start_blocks": "var sensor1 = {};\r\nvar sensor2 = {};\r\n\r\nonBoardEvent(lightSensor, \"data\", function(event) {\r\n  sensor1.current = lightSensor.value;\r\n  if (sensor1.current > sensor1.high || sensor1.high == null) sensor1.high = sensor1.current;\r\n  if (sensor1.current < sensor1.low || sensor1.low == null) sensor1.low = sensor1.current;\r\n  \r\n  setNumber(\"sensor1current\", sensor1.current);\r\n  setNumber(\"sensor1high\", sensor1.high);\r\n  setNumber(\"sensor1low\", sensor1.low);\r\n});\r\n\r\nonBoardEvent(tempSensor, \"data\", function(event) {\r\n  sensor2.current = tempSensor.value;\r\n  if (sensor2.current > sensor2.high || sensor2.high == null) sensor2.high = sensor2.current;\r\n  if (sensor2.current < sensor2.low || sensor2.low == null) sensor2.low = sensor2.current;\r\n  \r\n  setNumber(\"sensor2current\", sensor2.current);\r\n  setNumber(\"sensor2high\", sensor2.high);\r\n  setNumber(\"sensor2low\", sensor2.low);\r\n});\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -53,16 +53,19 @@
     "libraries_enabled": "false",
     "validation_enabled": "false",
     "ai_enabled": "false",
-    "teacher_markdown": "This level takes advantage of two sensors on the micro:bit - a light sensor and a temperature sensor. Micro:bit V2 also have a sound sensor, but these levels focus on the sensors shared between the V1 and V2 versions of the micro:bit.\r\n\r\nEncourage students to relate the sensors to their own senses and interact with the micro:bit that way - for example, what happens when we show or hide things from the device?\r\n\r\nThrough experimentation, students should notice that the light sensor minimum value is 0 and the maximum value is 1023. Students may also notice that one sensor (temperature) doesn't seem to change very much.",
-    "preload_asset_list": null
+    "teacher_markdown": "This level takes advantage of two sensors on the micro:bit - a light sensor and a temperature sensor. Micro:bit V2 also have a sound sensor, but these levels focus on the sensors shared between the V1 and V2 versions of the micro:bit.\r\n\r\nEncourage students to relate the sensors to their own senses and interact with the micro:bit that way - for example, what happens when we show or hide things from the device?\r\n\r\nThrough experimentation, students should notice that the light sensor minimum value is 0 and the maximum value is 255. Students may also notice that one sensor (temperature) doesn't seem to change very much.",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 41,
+  "published": true,
   "created_at": "2023-02-01T10:50:29.000Z",
   "level_num": "custom",
   "user_id": 1,
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:50:29.813+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - P_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - P_2222\"},{\"changed_at\":\"2023-02-09 19:35:01 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"free_play\",\"hide_design_mode\",\"makerlab_enabled\",\"teacher_markdown\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-09 19:36:25 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-09 19:36:30 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:50:29.813+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - P_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - P_2222\"},{\"changed_at\":\"2023-02-09 19:35:01 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"free_play\",\"hide_design_mode\",\"makerlab_enabled\",\"teacher_markdown\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-09 19:36:25 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-09 19:36:30 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:31:50 +0000\",\"changed\":[\"start_blocks\",\"teacher_markdown\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
