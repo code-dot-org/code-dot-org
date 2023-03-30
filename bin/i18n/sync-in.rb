@@ -328,7 +328,7 @@ def get_i18n_strings(level)
     end
 
     # start_blocks
-    # localizing only string content and comments in blocks. Blocks get localized separately.
+    # localizing only strings and comments in blocks. Blocks get localized separately.
     if level.start_blocks
       # Only Gamelab and Applab have start_blocks in Java Script
       js_levels = %w(Applab Gamelab)
@@ -346,21 +346,105 @@ def get_i18n_strings(level)
           i18n_strings['start_blocks'][element.text] = element.text if element.text.match?(/[A-Za-z]/)
         end
       end
-
       if js_levels.include?(level.type)
-
-        puts level.name + ' --> ' + level.type
+        puts level.name
         start_blocks = level.start_blocks.dup
+        # puts start_blocks.lines.map(&:chomp)
+        # At this time localization is supported only for specific blocks in start_blocks.
+        # Localized blocs inlcude: comments, console.log(), text() and setText()
         i18n_strings['start_blocks'] = Hash.new unless level.start_blocks.empty?
-        start_blocks_comments = start_blocks.scan(/\/\/.*/) # scanning for comments to translate
-        puts start_blocks
-        # start_blocks_text = start_blocks.scan(/"([^"]*)"/)
-        puts 'Comments ---------------------------------------------------------------'
-        start_blocks_comments.each do |element|
-          puts element
+        # scanning for comment blocks
+        comment_blocks = start_blocks.scan(/(?<!https:)\/\/.*/)
+        puts '// comments //'
+        comment_blocks.each do |element|
+          # i18n_strings['start_blocks'][element] = element if element.match?(/[A-Za-z]/)
+          start_blocks = start_blocks.gsub(element, '')
+          puts '-->' + element if element.match?(/[A-Za-z]/)
         end
-        puts '------------------------------------------------------------------------'
+
+        # searching for console.log() blocks
+        console_log_blocks = start_blocks.scan(/console\.log\(.*\);/)
+        puts '// console.log() //'
+        console_log_blocks.each do |block|
+          puts block
+          block.scan(/"[^"]*"|'[^']*'/).each do |element|
+            # i18n_strings['start_blocks'][element[1..-2]] = element[1..-2] if element.match?(/[A-Za-z]/)
+            puts '-->' + element if element.match?(/[A-Za-z]/)
+          end
+          start_blocks = start_blocks.gsub(block, '')
+        end
+        if level.type == "Gamelab"
+          # scanning for text() blocks
+          text_blocks = start_blocks.scan(/(?:text\()\s?".*".*\s?,\s?\d{1,3}\s?,\s?\d{1,3}.*\);/)
+          puts '// text("text", x_pos, y_pos) //'
+          text_blocks.each do |block|
+            puts block
+            # element = block.match(/(?:text\()(?<str>".*").*,\s?(?:\d{1,3})\s?,\s?(?:\d{1,3}).*(\);)/)
+            # puts '-->' + block[1..-2] if block.match?(/[A-Za-z]/)
+            # i18n_strings['start_blocks'][element[:str][1..-2]] = element[:str][1..-2] if element[:str].match?(/[A-Za-z]/)
+          end
+        end
+
+        if level.type == "Applab"
+          # Localizing Applab start_blocks requires aditional pro-processing to avoid translating
+          # Preprocessing start_blocks
+
+          # Removing get*() blocks - this blocks appear inside setText() sometimes
+          start_blocks = start_blocks.gsub(/get[A-Za-z]+\(.*\)/, '')
+          # Removing setScreen() blocks -
+          start_blocks = start_blocks.gsub(/setScreen\(.*\);/, '')
+
+          # scanning for steText() blocks
+          set_text_blocks = start_blocks.scan(/(?:setText\()(?:"[\w_]*")\s*,\s*(.*)(?:\s*\);)/)
+          puts '// setText("id", "text") //'
+          set_text_blocks.each do |block|
+            puts block
+            block_string = block.split(',', 2)
+            next if block_string.length < 2
+            block_string[1].scan(/".*(?<!\\)"/).each do |element|
+              i18n_strings['start_blocks'][element[1..-2]] = element[1..-2] if element.match?(/[A-Za-z]/)
+            end
+            # block.split("+").each do |element|
+            #  puts element #if element.match?(/[A-Za-z]/)
+            # end
+            #element = block.match(/\((?<id>".*"),(?<str>.*)\);/)
+            #i18n_strings['start_blocks'][element[:str][1..-2]] = element[:str][1..-2] if element[:str].match?(/[A-Za-z]/)
+          end
+
+          # scanning for strings in boolean expressions
+          bool_blocks = start_blocks.scan(/if\s?\(.*\)\s?\{/)
+          puts '// boolean expressions //'
+          bool_blocks.each do |block|
+            puts block
+            block.scan(/"[^"]*"/).each do |element|
+              # i18n_strings['start_blocks'][element[1..-2]] = element[1..-2] if element.match?(/[A-Za-z]/)
+              puts '-->' + element if element.match?(/[A-Za-z]/)
+            end
+          end
+        end
+
+        # scanning for setText blocks
+        # set_text_blocks = start_blocks.scan(/setText\(.*\);/)
+        # set_text_blocks.each do |block|
+        #   block_string = block.split(',', 2)
+        #   next if block_string.length() < 2
+        #   #stings = block_string[1].gsub(/get[A-Za-z]+\(.*\)/,'')
+        #   block_string[1].scan(/"[^"]*"|'[^']*'/).each do |element|
+        #
+        #     i18n_strings['start_blocks'][element[1..-2]] = element[1..-2] if element.match?(/[A-Za-z]/)
+        #   end
+        #   start_blocks = start_blocks.gsub(block,'')
+        # end
+
+        # # scanning for strings stored in variables
+        # var_blocks = start_blocks.scan(/.*=.*/)
+        # var_blocks.each do |block|
+        #   puts 'variable --> ' + block
+        # end
+        #
+
       end
+      #puts i18n_strings['start_blocks']
     end
 
     level_xml = Nokogiri::XML(level.to_xml, &:noblanks)
