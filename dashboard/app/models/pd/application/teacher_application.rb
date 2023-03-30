@@ -353,6 +353,18 @@ module Pd::Application
       )
     end
 
+    # This is called by scheduled_teacher_admin_approval_reminders cron job which is run
+    # on the production-daemon machine once a week
+    def self.send_admin_approval_reminders_to_teachers
+      where(
+        application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR
+      ).find_each do |teacher_application|
+        if teacher_application.allow_sending_admin_approval_teacher_reminder_email?
+          teacher_application.queue_email :admin_approval_teacher_reminder, deliver_now: true
+        end
+      end
+    end
+
     def workshop_present_if_required_for_status
       if regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM &&
         WORKSHOP_REQUIRED_STATUSES.include?(status) && !pd_workshop_id
