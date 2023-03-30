@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "angelina-playground",
-    "serialized_at": "2023-03-23 19:10:37 UTC",
+    "serialized_at": "2023-03-29 16:43:57 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1168,6 +1168,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp multiple answers example"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1189,6 +1192,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP multiple answers example 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1202,6 +1208,69 @@
       },
       "level_keys": [
         "CSP multiple answers example 2"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "matching example"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
+      },
+      "level_keys": [
+        "matching example"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "example with image"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
+      },
+      "level_keys": [
+        "example with image"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Image between lines example"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
+      },
+      "level_keys": [
+        "Image between lines example"
       ]
     }
   ],
@@ -1667,6 +1736,42 @@
         "level.key": "CSP multiple answers example 2",
         "script_level.level_keys": [
           "CSP multiple answers example 2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "matching example",
+        "script_level.level_keys": [
+          "matching example"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "example with image",
+        "script_level.level_keys": [
+          "example with image"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Image between lines example",
+        "script_level.level_keys": [
+          "Image between lines example"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",

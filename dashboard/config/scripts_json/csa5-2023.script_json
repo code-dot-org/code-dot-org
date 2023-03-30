@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-29 01:46:58 UTC",
+    "serialized_at": "2023-03-29 18:12:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2796,6 +2796,7 @@
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 through 5. Students complete a Check for Understanding, then continue to Level 3 to implement their algorithm. On Levels 4 and 5, students complete a choice level to create an image filter.",
+        "progression_name": "Practice: Image Filters",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -4996,15 +4997,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L8-L2_2023"
-        ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U5L8-L2_2023"
+          "CSA U5L7-L2_2023"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5012,7 +5010,7 @@
         "activity_section.key": "be8d31f1-dba8-463d-85f2-e40042aa18b0"
       },
       "level_keys": [
-        "CSA U5L8-L2_2023"
+        "CSA U5L7-L2_2023"
       ]
     },
     {
@@ -5021,15 +5019,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L8-L3_2023"
-        ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U5L8-L3_2023"
+          "CSA U5L7-L3_2023"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5037,7 +5032,7 @@
         "activity_section.key": "be8d31f1-dba8-463d-85f2-e40042aa18b0"
       },
       "level_keys": [
-        "CSA U5L8-L3_2023"
+        "CSA U5L7-L3_2023"
       ]
     },
     {
@@ -5046,15 +5041,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U5L8-L4_2023"
-        ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U5L8-L4_2023"
+          "CSA U5L7-L4_2023"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5062,7 +5054,7 @@
         "activity_section.key": "be8d31f1-dba8-463d-85f2-e40042aa18b0"
       },
       "level_keys": [
-        "CSA U5L8-L4_2023"
+        "CSA U5L7-L4_2023"
       ]
     },
     {
@@ -5192,6 +5184,94 @@
     },
     {
       "chapter": 50,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Practice: Image Filters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L8-L2_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      },
+      "level_keys": [
+        "CSA U5L8-L2_2023"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Image Filters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L8-L3_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      },
+      "level_keys": [
+        "CSA U5L8-L3_2023"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Image Filters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L8-L4_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      },
+      "level_keys": [
+        "CSA U5L8-L4_2023"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Image Filters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L8-L5_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      },
+      "level_keys": [
+        "CSA U5L8-L5_2023"
+      ]
+    },
+    {
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5216,7 +5296,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5241,7 +5321,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5266,7 +5346,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -5291,7 +5371,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5811,9 +5891,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U5L8-L2_2023",
+        "level.key": "CSA U5L7-L2_2023",
         "script_level.level_keys": [
-          "CSA U5L8-L2_2023"
+          "CSA U5L7-L2_2023"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5823,9 +5903,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U5L8-L3_2023",
+        "level.key": "CSA U5L7-L3_2023",
         "script_level.level_keys": [
-          "CSA U5L8-L3_2023"
+          "CSA U5L7-L3_2023"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5835,9 +5915,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U5L8-L4_2023",
+        "level.key": "CSA U5L7-L4_2023",
         "script_level.level_keys": [
-          "CSA U5L8-L4_2023"
+          "CSA U5L7-L4_2023"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5903,6 +5983,54 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa5-2023",
         "activity_section.key": "02a2e0f6-3dd3-4110-96fc-acb09ae2b0ad"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U5L8-L2_2023",
+        "script_level.level_keys": [
+          "CSA U5L8-L2_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U5L8-L3_2023",
+        "script_level.level_keys": [
+          "CSA U5L8-L3_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U5L8-L4_2023",
+        "script_level.level_keys": [
+          "CSA U5L8-L4_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U5L8-L5_2023",
+        "script_level.level_keys": [
+          "CSA U5L8-L5_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
       }
     },
     {

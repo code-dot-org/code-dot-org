@@ -1,7 +1,7 @@
 {
   "key": "microbit",
-  "display_name": "microbit",
-  "category": "other",
+  "display_name": "Creating Apps with Devices (micro:bit)",
+  "category": "maker",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
