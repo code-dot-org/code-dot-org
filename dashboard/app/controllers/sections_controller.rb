@@ -8,6 +8,16 @@ class SectionsController < ApplicationController
     redirect_to '/home' unless params[:loginType] && params[:participantType]
   end
 
+  def edit
+    return head :forbidden unless current_user&.admin
+
+    redirect_to '/home' unless params[:loginType] && params[:participantType]
+
+    @section = Section.find_by(
+      id: params[:id]
+    )
+  end
+
   def show
     @secret_pictures = SecretPicture.all.shuffle
   end

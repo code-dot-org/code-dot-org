@@ -16,16 +16,22 @@ const SECTIONS_API = '/api/v1/sections';
 // Currently, this hook returns two things:
 //   - sections: list of objects that represent the sections to create
 //   - updateSection: function to update the section at the given index
-const useSections = () => {
+const useSections = section => {
   // added "default properties" for any new section
-  const [sections, setSections] = useState([
-    {
-      pairingAllowed: true,
-      restrictSection: false,
-      ttsAutoplayEnabled: false,
-      lessonExtras: true
-    }
-  ]);
+  const [sections, setSections] = useState(
+    section
+      ? [section]
+      : [
+          {
+            pairingAllowed: true,
+            restrictSection: false,
+            ttsAutoplayEnabled: false,
+            lessonExtras: true
+          }
+        ]
+  );
+
+  // create a set state that creates a list using the section you gave me.
 
   const updateSection = (sectionIdx, keyToUpdate, val) => {
     const newSections = sections.map((section, idx) => {
@@ -83,9 +89,8 @@ const saveSection = (e, section) => {
     });
 };
 
-// TO DO: Add a prop to indicate if this is a new section or an existing section
 export default function SectionsSetUpContainer({sectionToBeEdited}) {
-  const [sections, updateSection] = useSections();
+  const [sections, updateSection] = useSections(sectionToBeEdited);
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
 
   const isNewSection = !sectionToBeEdited;
@@ -163,7 +168,7 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
             }}
           />
         )}
-        {/* currently this button just changes text if it is a "new" or "editied"
+        {/* TO DO: currently this button just changes text if it is a "new" or "editied"
         screen, depending on how we want the functionality of this button to work,
         this might mean creating a different button for the "edit" page */}
         <Button
@@ -190,5 +195,5 @@ const style = {
 };
 
 SectionsSetUpContainer.propTypes = {
-  sectionToBeEdited: PropTypes.bool
+  sectionToBeEdited: PropTypes.object
 };
