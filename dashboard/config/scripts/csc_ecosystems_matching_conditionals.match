@@ -1,0 +1,26 @@
+name 'csc_ecosystems_matching_conditionals'
+title 'Match the code to the screen'
+description 'Match the code to the correct animation.'
+height '300'
+question 'Too little algae makes the fish leave.
+ <br>
+ ![](https://images.code.org/e176212f3a32bb22085d8e3c5eaf8cf2-image-1680120570146.gif)'
+answer '![](https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41 PM.png)'
+question 'Too much algae makes the coral sick. <br>
+![](https://images.code.org/29d289d67ad948108c7afd574adc4e1a-image-1680120578869.gif)'
+answer '![](https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00 PM.png)'
+question 'Just the right about of algae keeps the fish and coral healthy. !![](https://images.code.org/861a3dde2ec9a1475af7528e6dec86ea-image-1680120583702.gif)'
+answer '![](https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50 PM.png)'
+
+
+
+
+markdown <<MARKDOWN
+## Match the code to what's happening on screen
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

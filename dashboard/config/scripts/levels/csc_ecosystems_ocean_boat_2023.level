@@ -5,7 +5,8 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "ecosystems"
     ],
     "helper_libraries": [
       "NativeSpriteLab",
@@ -18,11 +19,11 @@
     "all_animations_single_frame": "true",
     "use_modal_function_editor": "true",
     "embed": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Does your event look like this?\\n<xml><block type=\\\"gamelab_checkTouching\\\"><field name=\\\"CONDITION\\\">\\\"when\\\"</field><value name=\\\"SPRITE1\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"fish_05\\\"</field></block></value><value name=\\\"SPRITE2\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"boat-net\\\"</field></block></value></block></xml> \",\"hint_id\":\"event_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3aad10c8584d0f97435ca1f701ac1160/csc_ecosystems_ocean_boat_2023.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Click on the blue plus sign to get the fish sprite subject block.\\n\\n![](https://images.code.org/59bb77699f0ec9f41eef55e3c900d590-image-1650493439980.gif)\",\"hint_id\":\"subject_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/462522d3800918fafa01c207702cf344/csc_ecosystems_ocean_boat_2023.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Does your event look like this?\\n<xml><block type=\\\"gamelab_checkTouching\\\"><field name=\\\"CONDITION\\\">\\\"when\\\"</field><value name=\\\"SPRITE1\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"fish_05\\\"</field></block></value><value name=\\\"SPRITE2\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"boat-net\\\"</field></block></value></block></xml> \",\"hint_id\":\"event_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3aad10c8584d0f97435ca1f701ac1160/csc_ecosystems_ocean_boat_2023.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"Use the `catch object` block to remove the fish.\",\"hint_id\":\"catch_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dce3c2591c4fe19c269671962f67bcc2/csc_ecosystems_ocean_boat_2023.mp3\"}]",
     "instructions_important": "false",
     "project_template_level_name": "csc_ecosystems_template_2023",
-    "short_instructions": "In this level you need to add the fish into this simulation and give them a realistic size and movement.",
-    "long_instructions": "**The fishing boat at the top is taking fish out of their ecosystem. Build code that removes fish one at a time when  they touch the fishing boat.**\r\n\r\nDo This:\r\n- Make a new `when fish touches boat` event\r\n- Connect a blue `remove` block under your new event. \r\n- Click on the blue plus sign on the `when touches` event and drag out a fish block to snap to the `remove` block.\r\n- Press \"Run\" to check that each time a fish touches the boat it disappears from the ecosystem. ",
+    "short_instructions": "The humans are catching fist in the boat. ",
+    "long_instructions": "##Human Impact\r\n\r\n\r\n**Code an event so when the boat touches an fish sprite, it catches it.**\r\n\r\n- Add a `when boat touches fish`(#6AF36C) event anywhere in the workspace.\r\n- Connect an `catches object`(#5ED5DD) block under your new event.\r\n- Press `Run`(#FFBD46) to check that when the boat touches a fish, it disappears.\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -49,7 +50,7 @@
   "created_at": "2023-02-22T20:21:58.000Z",
   "level_num": "custom",
   "user_id": 18528,
-  "audit_log": "[{\"changed_at\":\"2023-02-22T20:21:58.490+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_boat_2\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_boat_2\"},{\"changed_at\":\"2023-02-28 15:09:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 22:25:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-02-22T20:21:58.490+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_boat_2\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_boat_2\"},{\"changed_at\":\"2023-02-28 15:09:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 22:25:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-29 17:45:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 17:46:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 17:48:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 17:55:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 17:55:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 17:57:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 17:59:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 18:00:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 18:01:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 18:04:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 18:13:23 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 18:26:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 18:27:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 18:28:57 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 19:13:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 19:13:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 19:14:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 19:15:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-30 01:55:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"short_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -422,53 +423,34 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_makeNumSprites">
-          <field name="ANIMATION_NAME">"fish_10"</field>
-          <value name="NUM">
-            <block type="math_number" can_disconnect_from_parent="false">
-              <field name="NUM">10</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_setProp">
-          <field name="PROPERTY">"scale"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"fish_10"</field>
-            </block>
-          </value>
-          <value name="VAL">
-            <block type="math_number" can_disconnect_from_parent="false">
-              <field name="NUM">50</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_addBehaviorSimple">
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"fish_10"</field>
-            </block>
-          </value>
-          <value name="BEHAVIOR">
-            <block type="gamelab_collectibleBehaviors" can_disconnect_from_parent="false">
-              <field name="BEHAVIOR">new Behavior(wandering, [])</field>
-            </block>
-          </value>
-        </block>
         <block type="gamelab_checkTouching">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"fish_10"</field>
+              <field name="ANIMATION">"boat-net"</field>
             </block>
           </value>
           <value name="SPRITE2">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"boat-net"</field>
+              <field name="ANIMATION">"fish_10"</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_destroy"/>
+        <block type="ecosystems_eat">
+          <value name="THIS">
+            <block type="gamelab_objectSpritePointer"/>
+          </value>
+        </block>
+        <block type="ecosystems_catch">
+          <value name="THIS">
+            <block type="gamelab_objectSpritePointer"/>
+          </value>
+        </block>
+        <block type="gamelab_destroy">
+          <value name="THIS">
+            <block type="gamelab_objectSpritePointer"/>
+          </value>
+        </block>
       </xml>
     </toolbox_blocks>
   </blocks>
