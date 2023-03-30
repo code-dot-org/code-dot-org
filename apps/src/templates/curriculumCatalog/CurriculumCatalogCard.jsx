@@ -84,7 +84,7 @@ const CustomizableCurriculumCatalogCard = ({
   quickViewButtonText
 }) => (
   <div className="curriculumCatalogCardContainer">
-    <img src={imageSrc} />
+    <img src={imageSrc} alt={imageAltText} />
     <div className="curriculumInfoContainer">
       {/*TODO [MEG]: Show all subjects and topics rather than only the first one */}
       <p className="overline">{subjectsAndTopics[0]}</p>
