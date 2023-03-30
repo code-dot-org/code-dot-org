@@ -8,6 +8,7 @@ import {SoundEvent} from './interfaces/SoundEvent';
 import {TrackMetadata} from './interfaces/TrackMetadata';
 import MusicLibrary, {SoundFolder} from './MusicLibrary';
 import SamplePlayer, {SampleEvent} from './SamplePlayer';
+import {generateNotesFromChord, ChordNote} from '../utils/Chords';
 
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
@@ -249,7 +250,7 @@ export default class MusicPlayer {
       triggered: false,
       length: constants.DEFAULT_PATTERN_LENGTH
     };
-    
+
     this.samplePlayer.previewSamples(
       this.convertEventToSamples(patternEvent),
       onStop
@@ -518,44 +519,37 @@ export default class MusicPlayer {
 
       return results;
     } else if (event.type === 'chord') {
-      const chordEvent = event as ChordEvent;
-      const {instrument, notes, playStyle} = chordEvent.value;
-      if (notes.length === 0) {
-        return [];
-      }
+      const results: SampleEvent[] = this.convertChordEventToSampleEvents(
+        event
+      );
+      return results;
+    }
 
-      const results: SampleEvent[] = [];
+    return [];
+  }
 
-      if (playStyle === 'arpeggio-up') {
-        notes.sort();
-      } else if (playStyle === 'arpeggio-down') {
-        notes.sort().reverse();
-      } else if (playStyle === 'arpeggio-random') {
-        // Randomize using Fisher-Yates Algorithm
-        for (let i = notes.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          const temp = notes[i];
-          notes[i] = notes[j];
-          notes[j] = temp;
-        }
-      }
+  convertChordEventToSampleEvents(event: PlaybackEvent): SampleEvent[] {
+    const chordEvent = event as ChordEvent;
 
-      // Create the array of samples. If the play style is arpeggio, we play one
-      // sound every 16th note, repeating the sequence as many times as needed.
-      // If the play style is "together", then only add each note once, and have them
-      // all play at the start of the given measure.
-      for (let i = 0; i < (playStyle === 'together' ? notes.length : 16); i++) {
-        const note = notes[i % notes.length];
-        const sampleId = this.getSampleForNote(note, instrument);
-        if (sampleId === null) {
-          console.warn(
-            `No sound for note value ${note} on instrument ${instrument}`
-          );
-          continue;
-        }
+    const {instrument, notes} = chordEvent.value;
+    if (notes.length === 0) {
+      return [];
+    }
 
-        const noteWhen =
-          playStyle === 'together' ? chordEvent.when : chordEvent.when + i / 16;
+    const results: SampleEvent[] = [];
+
+    const generatedNotes: ChordNote[] = generateNotesFromChord(
+      chordEvent.value
+    );
+
+    generatedNotes.forEach(note => {
+      const sampleId = this.getSampleForNote(note.note, instrument);
+      if (sampleId === null) {
+        console.warn(
+          `No sound for note value ${note} on instrument ${instrument}`
+        );
+      } else {
+        const noteWhen = chordEvent.when + (note.tick - 1) / 16;
 
         results.push({
           sampleId,
@@ -563,11 +557,9 @@ export default class MusicPlayer {
           ...event
         });
       }
+    });
 
-      return results;
-    }
-
-    return [];
+    return results;
   }
 
   private getSampleForNote(note: number, instrument: string): string | null {
@@ -575,7 +567,6 @@ export default class MusicPlayer {
       console.warn('Music Player not initialized');
       return null;
     }
-
 
     const folder: SoundFolder | null = this.library.getFolderForPath(
       instrument
@@ -594,6 +585,6 @@ export default class MusicPlayer {
       return null;
     }
 
-    return `${instrument}/${sound.src}`
+    return `${instrument}/${sound.src}`;
   }
 }
