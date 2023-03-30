@@ -1,4 +1,3 @@
-//import utils from 'blockly/core/utils/object';
 import GoogleBlockly from 'blockly/core';
 
 export default class CdoConstantsProvider extends GoogleBlockly.geras
@@ -15,7 +14,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.geras
     switch (connection.type) {
       case GoogleBlockly.ConnectionType.INPUT_VALUE:
       case GoogleBlockly.ConnectionType.OUTPUT_VALUE:
-        return this.TRI_INPUT_OUTPUT;
+        return this.ROUND_INPUT_OUTPUT;
       case GoogleBlockly.ConnectionType.PREVIOUS_STATEMENT:
       case GoogleBlockly.ConnectionType.NEXT_STATEMENT:
         return this.NOTCH;
@@ -77,9 +76,50 @@ export default class CdoConstantsProvider extends GoogleBlockly.geras
     };
   }
 
+  makeRoundInputConn() {
+    const width = this.TAB_WIDTH;
+    const height = this.TAB_HEIGHT;
+
+    /**
+     * Since input and output connections share the same shape you can
+     * define a function to generate the path for both.
+     */
+    function makeMainPath(up) {
+      // svgPaths.curve is buggy! Needs .join(',') and space after 'c'
+      // const path = Blockly.utils.svgPaths.curve('c ', [
+      //   -width + ' 0',
+      //   -width + ' ' + -1 * height,
+      //   '0 ' + -1 * height
+      // ]);
+      // return path;
+      const path =
+        'c ' +
+        -width * 1.5 +
+        ' 0, ' +
+        -width * 1.5 +
+        ' ' +
+        -1 * up * height +
+        ', ' +
+        '0 ' +
+        -1 * up * height;
+      return path;
+    }
+
+    var pathUp = makeMainPath(1);
+    var pathDown = makeMainPath(-1);
+
+    return {
+      width: width,
+      height: height,
+      pathDown: pathDown,
+      pathUp: pathUp
+    };
+  }
+
   init() {
     super.init();
     this.RECT_INPUT_OUTPUT = this.makeRectangularInputConn();
     this.TRI_INPUT_OUTPUT = this.makeTriangularInputConn();
+    this.ROUND_INPUT_OUTPUT = this.makeRoundInputConn();
   }
 }
