@@ -12,6 +12,8 @@ Services::RegistrationReminder.send_registration_reminders!
 # have not completed it
 Services::CompleteApplicationReminder.send_complete_application_reminders!
 
-# Send reminder emails to teachers if their admin has not yet submitted their application
-# Sends an email no more than once for each application
+# Send reminder emails to teachers if their admin has not yet submitted approval
+# Sends an email no more than once for each application, and only if it's been
+# at least 6 days from when an admin approval email was sent.
+# See allow_sending_admin_approval_teacher_reminder_email? for all conditions
 Pd::Application::TeacherApplication.send_admin_approval_reminders_to_teachers
