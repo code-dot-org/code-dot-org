@@ -62,10 +62,7 @@ export const style = {
     }),
     right: (color, hoverColor) => ({
       right: 10 - ARROW_WIDTH,
-      borderLeftColor: color,
-      ':hover': {
-        // borderLeftColor: hoverColor
-      }
+      borderLeftColor: color
     })
   }
 };
@@ -187,10 +184,7 @@ const ArrowButton = Radium(function ArrowButton({arrow, ...props}) {
       <div
         style={[
           style.arrowHead.base,
-          style.arrowHead[arrow](
-            config.style.backgroundColor,
-            config.style[':hover'].backgroundColor
-          )
+          style.arrowHead[arrow](config.style.backgroundColor)
         ]}
       />
       <BaseButton
