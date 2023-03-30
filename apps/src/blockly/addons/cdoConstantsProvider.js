@@ -14,15 +14,40 @@ export default class CdoConstantsProvider extends GoogleBlockly.geras
   shapeFor(connection) {
     switch (connection.type) {
       case GoogleBlockly.ConnectionType.INPUT_VALUE:
-        return this.RECT_INPUT_OUTPUT;
       case GoogleBlockly.ConnectionType.OUTPUT_VALUE:
-        return this.RECT_INPUT_OUTPUT;
+        return this.TRI_INPUT_OUTPUT;
       case GoogleBlockly.ConnectionType.PREVIOUS_STATEMENT:
       case GoogleBlockly.ConnectionType.NEXT_STATEMENT:
         return this.NOTCH;
       default:
         throw Error('Unknown connection type');
     }
+  }
+
+  makeTriangularInputConn() {
+    const width = this.TAB_WIDTH;
+    const height = this.TAB_HEIGHT;
+
+    /**
+     * Since input and output connections share the same shape you can
+     * define a function to generate the path for both.
+     */
+    function makeMainPath(up) {
+      return Blockly.utils.svgPaths.line([
+        Blockly.utils.svgPaths.point(-width, (-1 * up * height) / 2),
+        Blockly.utils.svgPaths.point(width, (-1 * up * height) / 2)
+      ]);
+    }
+
+    var pathUp = makeMainPath(1);
+    var pathDown = makeMainPath(-1);
+
+    return {
+      width: width,
+      height: height,
+      pathDown: pathDown,
+      pathUp: pathUp
+    };
   }
 
   makeRectangularInputConn() {
@@ -55,5 +80,6 @@ export default class CdoConstantsProvider extends GoogleBlockly.geras
   init() {
     super.init();
     this.RECT_INPUT_OUTPUT = this.makeRectangularInputConn();
+    this.TRI_INPUT_OUTPUT = this.makeTriangularInputConn();
   }
 }
