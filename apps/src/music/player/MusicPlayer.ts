@@ -63,6 +63,10 @@ export default class MusicPlayer {
     soundApi.LoadSoundFromBuffer(id, buffer);
   }
 
+  getBPM(): number {
+    return this.bpm;
+  }
+
   /**
    * Schedule a given sound (identified by its ID) for playback, at a given measure.
    * If playback is in progress, the sound will be played by the {@link SamplePlayer}
@@ -211,11 +215,11 @@ export default class MusicPlayer {
    * @param id unique ID of the sound
    * @param onStop called when the sound finished playing
    */
-  previewSound(id: string, onStop: () => any) {
+  previewSound(id: string, onStop?: () => any) {
     this.samplePlayer.previewSample(id, onStop);
   }
 
-  previewChord(chordValue: ChordEventValue, onStop: () => any) {
+  previewChord(chordValue: ChordEventValue, onStop?: () => any) {
     const chordEvent: ChordEvent = {
       type: 'chord',
       when: 1,
@@ -225,6 +229,30 @@ export default class MusicPlayer {
     };
     this.samplePlayer.previewSamples(
       this.convertEventToSamples(chordEvent),
+      onStop
+    );
+  }
+
+  previewNote(note: number, instrument: string, onStop?: () => any) {
+    const sampleId = this.getSampleForNote(note, instrument);
+    if (sampleId === null) {
+      return;
+    }
+
+    this.previewSound(sampleId, onStop);
+  }
+
+  previewPattern(patternValue: PatternEventValue, onStop?: () => any) {
+    const patternEvent: PatternEvent = {
+      type: 'pattern',
+      when: 1,
+      value: patternValue,
+      triggered: false,
+      length: constants.DEFAULT_PATTERN_LENGTH
+    };
+
+    this.samplePlayer.previewSamples(
+      this.convertEventToSamples(patternEvent),
       onStop
     );
   }
@@ -499,11 +527,6 @@ export default class MusicPlayer {
   }
 
   convertChordEventToSampleEvents(event: PlaybackEvent) : SampleEvent[] {
-    if (this.library === null) {
-      console.warn('Music Player not initialized');
-      return [];
-    }
-
     const chordEvent = event as ChordEvent;
 
     const {instrument, notes} = chordEvent.value;
@@ -513,21 +536,12 @@ export default class MusicPlayer {
 
     const results: SampleEvent[] = [];
 
-    const folder: SoundFolder | null = this.library.getFolderForPath(
-      instrument
-    );
-
-    if (folder === null) {
-      console.warn(`No instrument ${instrument}`);
-      return [];
-    }
-
     const generatedNotes: ChordNote[] = generateNotesFromChord(
       chordEvent.value);
 
     generatedNotes.forEach(note => {
-      const sound = folder.sounds.find(sound => sound.note === note.note) || null;
-      if (sound === null) {
+      const sampleId = this.getSampleForNote(note.note, instrument) || '';
+      if (sampleId === null) {
         console.warn(
           `No sound for note value ${note} on instrument ${instrument}`
         );
@@ -536,12 +550,38 @@ export default class MusicPlayer {
       const noteWhen = chordEvent.when + note.tick/16;
 
       results.push({
-        sampleId: `${instrument}/${sound?.src}`,
+        sampleId,
         offsetSeconds: this.convertPlayheadPositionToSeconds(noteWhen),
         ...event
       });
     });
 
     return results;
+  }
+
+  private getSampleForNote(note: number, instrument: string): string | null {
+    if (this.library === null) {
+      console.warn('Music Player not initialized');
+      return null;
+    }
+
+    const folder: SoundFolder | null = this.library.getFolderForPath(
+      instrument
+    );
+
+    if (folder === null) {
+      console.warn(`No instrument ${instrument}`);
+      return null;
+    }
+
+    const sound = folder.sounds.find(sound => sound.note === note) || null;
+    if (sound === null) {
+      console.warn(
+        `No sound for note value ${note} on instrument ${instrument}`
+      );
+      return null;
+    }
+
+    return `${instrument}/${sound.src}`
   }
 }
