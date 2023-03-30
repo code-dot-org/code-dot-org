@@ -91,10 +91,23 @@
       "victoria_clipped.jpg": "64cfc625-f98b-4a7a-899d-e0648841b67f.jpg"
     },
     "start_libraries": "[{\"name\":\"PioneerApp\",\"description\":\"Library for Pioneers of Electronics Accessibility app\",\"functions\":[\"isClicked\"],\"dropletConfig\":[{\"func\":\"PioneerApp.isClicked\",\"category\":\"Functions\",\"comment\":\"Checks if the cursor is over the element on the screen\",\"type\":\"either\",\"params\":[\"e\"],\"paletteParams\":[\"e\"]}],\"source\":\"//Checks if the cursor is over the element on the screen\\nfunction isClicked(e) {\\n  var pX = getXPosition(\\\"pointer\\\");\\n  var pY = getYPosition(\\\"pointer\\\");\\n  var eX = getXPosition(e);\\n  var eY = getYPosition(e);\\n  var bound = 70;\\n  if (pX < eX + bound && pX + bound > eX && pY < eY + bound && pY + bound > eY) {\\n    return true;\\n  }\\n}\\n\",\"originalName\":\"PioneerApp\",\"versionId\":\"KPvwoi2rbnANtEJiCmBZD.yZ0BXGi3Vv\",\"channelId\":\"F0TjjgNMs_CxxpcLULhjPQ\",\"fromLevelbuilder\":true}]",
-    "encrypted_examples": [
-
-    ],
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "+aBX9alEVClQ2H2z5tJja7iPIkRwC9TEMv6BVvoqU62hlLXBfBrENc80HTYG\nTD+q0VPbma1zrRMBt26bZceEnw==\n",
+    "reference_links": [
+      "/courses/csd-2022/guides/the-accelerometer",
+      "/courses/csd-2022/guides/accelerometer-events",
+      "/courses/csd-2022/guides/microbit-sensors",
+      "/courses/csd-2022/guides/data-and-change-events",
+      "/courses/csd-2022/guides/changing-sensor-scale",
+      "/courses/csd-2022/guides/board-events",
+      "/courses/csd-2022/guides/microbit-physical-input",
+      "/courses/csd-2022/guides/microbit-display",
+      "/courses/csd-2022/guides/microbit-overview",
+      "/courses/csd-2022/guides/if-statements-2",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/counter-patterns-with-event"
+    ]
   },
   "game_id": 41,
   "published": true,
@@ -102,7 +115,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:42.659+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - A_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - A_2222\"},{\"changed_at\":\"2023-02-10 20:50:37 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-10 20:51:02 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:42.659+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - A_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - A_2222\"},{\"changed_at\":\"2023-02-10 20:50:37 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-10 20:51:02 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:44:49 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
