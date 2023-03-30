@@ -78,7 +78,8 @@
   }
 
   .text-wrapper {
-    width: 370px;
+    color: white;
+    width: 385px;
     text-align: center;
 
     @media screen and (max-width: $width-md) {
@@ -92,7 +93,7 @@
 
     h1 {
       font-family: $gotham-bold;
-      font-size: 1.65em;
+      font-size: 1.5em;
       color: $white;
       margin: 0 auto 4px;
 
