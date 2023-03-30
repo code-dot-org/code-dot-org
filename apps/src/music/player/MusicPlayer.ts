@@ -547,7 +547,7 @@ export default class MusicPlayer {
         );
       }
 
-      const noteWhen = chordEvent.when + note.tick/16;
+      const noteWhen = chordEvent.when + (note.tick - 1) / 16;
 
       results.push({
         sampleId,
