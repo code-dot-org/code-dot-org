@@ -2,16 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import getScriptData from '@cdo/apps/util/getScriptData';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import i18n from '@cdo/locale';
 import styles from './check-for-understanding.module.scss';
 
+const SUMMARY_PARAM = 'view=summary';
 const FREE_RESPONSE = 'FreeResponse';
 
 const CheckForUnderstanding = ({
-  scriptData,
-  // redux
   isRtl,
   viewAs,
   selectedSection,
@@ -25,12 +25,18 @@ const CheckForUnderstanding = ({
   // To avoid confusion, if a teacher tries to view the summary as a student,
   // send them back to the level in Participant mode instead.
   if (viewAs === ViewType.Participant) {
-    document.location.replace(currentLevel.url + document.location.search);
+    const paramString = document.location.search
+      .replace(SUMMARY_PARAM, '')
+      .replace('&&', '&')
+      .replace('?&', '?');
+    document.location.replace(currentLevel.url + paramString);
   }
 
-  const questionMarkdown = scriptData.level.properties.long_instructions;
-  const teacherMarkdown = scriptData.teacher_markdown;
-  const height = scriptData.level.height || '80';
+  const data = getScriptData('summary');
+
+  const questionMarkdown = data.level.properties.long_instructions;
+  const teacherMarkdown = data.teacher_markdown;
+  const height = data.level.height || '80';
 
   return (
     <div className={styles.summaryContainer}>
@@ -40,7 +46,7 @@ const CheckForUnderstanding = ({
         {nextLevel && (
           <a
             className={isRtl ? styles.navLinkLeft : styles.navLinkRight}
-            href={nextLevel.url}
+            href={`${nextLevel.url}${document.location.search}`}
           >
             {i18n.nextLevelLink()} &gt;
           </a>
@@ -48,28 +54,25 @@ const CheckForUnderstanding = ({
       </p>
 
       {/* Question Title */}
-      {scriptData.level.properties.title && (
-        <h1 className={styles.levelTitle}>
-          {scriptData.level.properties.title}
-        </h1>
+      {data.level.properties.title && (
+        <h1 className={styles.levelTitle}>{data.level.properties.title}</h1>
       )}
 
       {/* Question Body */}
       <SafeMarkdown className={styles.markdown} markdown={questionMarkdown} />
 
       {/* Question Inputs */}
-      {scriptData.level.type === FREE_RESPONSE && (
+      {data.level.type === FREE_RESPONSE && (
         <textarea
           className={styles.freeResponse}
-          id={`level_${scriptData.level.id}`}
+          id={`level_${data.level.id}`}
           aria-label={i18n.yourAnswer()}
           placeholder={
-            scriptData.level.properties.placeholder ||
-            i18n.enterYourAnswerHere()
+            data.level.properties.placeholder || i18n.enterYourAnswerHere()
           }
           style={{height: height + 'px'}}
           readOnly={true}
-          defaultValue={scriptData.last_attempt}
+          defaultValue={data.last_attempt}
         />
       )}
 
@@ -85,8 +88,10 @@ const CheckForUnderstanding = ({
           <p>
             <i className="fa fa-user" />
             <span>
-              {scriptData.responses.length}/{students.length}{' '}
-              {i18n.studentsAnswered()}
+              {i18n.studentsSubmitted({
+                numSubmissions: data.responses.length,
+                numStudents: students.length
+              })}
             </span>
           </p>
         </div>
@@ -97,7 +102,7 @@ const CheckForUnderstanding = ({
         </label>
 
         <div className={styles.studentResponsesColumns}>
-          {scriptData.responses.map(response => (
+          {data.responses.map(response => (
             <div key={response.user_id} className={styles.studentAnswer}>
               <p>{response.text}</p>
             </div>
@@ -121,7 +126,6 @@ const CheckForUnderstanding = ({
 };
 
 CheckForUnderstanding.propTypes = {
-  scriptData: PropTypes.object,
   isRtl: PropTypes.bool,
   viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
   selectedSection: PropTypes.shape({
