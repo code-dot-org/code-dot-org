@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-02-24 22:06:13 UTC",
+    "serialized_at": "2023-03-28 18:23:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -163,9 +163,8 @@
       "relative_position": 5,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students learn the basics of conditionals through an unplugged activity using the sticky notes and plastic baggies from the Variables Explore lesson. Flowcharts are introduced as a way to understand how computers make decisions using Boolean expressions. ",
-        "preparation": "* 3 sandwich baggies per pair of students\n* packs of red, yellow, and blue stickies\n* pens / pencils\n* 1 dry erase marker per four students (pairs can share)\n* Review the slides and click through all animations\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-conditionals-lessons-5-8/36475) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "The warm up activity is designed to provide context for the Conditionals progression. The subsequent activity provides students a physical mental model they will be able to use when they start programming with conditionals in the subsequent lessons.",
+        "overview": "Students learn the basics of conditionals through an unplugged activity using the sticky notes and plastic baggies from the Variables Explore lesson. The activity provides students a physical mental model they will be able to use when they start programming with conditionals in the subsequent lessons. Flowcharts are introduced as a way to understand how computers make decisions using Boolean expressions. ",
+        "preparation": "* 3 sandwich baggies per pair of students\n* packs of red, yellow, and blue stickies\n* pens / pencils\n* 1 dry erase marker per four students (pairs can share)\n* Review the slides and click through all animations\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-conditionals-lessons-5-8/36475) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1uqg-ZhfZX3B6crWNdgUZ7QZVr8xfq28YchfvAOtxbxA/edit?usp=sharing)",
         "student_overview": "Develop a mental model for how computers make decisions.",
         "unplugged": true
       },
@@ -185,8 +184,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students work with partners to investigate three versions of the \"Lemon Squeeze\" app to understand how boolean expressions and conditional statements allow programs to make decisions. In each guided investigation students first watch a short video on a concept, then use a working app to predict how new features work, then investigate the code to see how those features are implemented, and finally modify the code to add expanded features. To conclude the lesson, students review and discuss common programming patterns with conditionals.",
-        "preparation": "* Review the example apps and the prompts that students will be asked to respond to for each\n* Review the information covered in the slides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-conditionals-lessons-5-8/36475) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "After building a conceptual model for boolean expressions and conditional statements in the previous lesson, this lesson allows students to see how they are actually implemented in code. This lesson also introduces common programming patterns when using variables. Students will have some opportunities to modify working code in this lesson, but the most significant practice with conditional statements and boolean expressions will come in the following lesson.",
+        "preparation": "* Review the example apps and the prompts that students will be asked to respond to for each\n* Review the information covered in the slides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-conditionals-lessons-5-8/36475) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/12dlXSCabj0qxNv1YM6NSa_bwMlUvkQLVdDIkRj3s3ag/edit?usp=sharing)",
         "student_overview": "Investigate and modify sample apps that use conditionals and learn common programming patterns with conditionals."
       },
       "seeding_key": {
@@ -205,8 +203,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students spend most of their time practicing using the skills and processes they have learned about conditionals. At the conclusion of the lesson students discuss the main things they realized and still have questions about at the conclusion of this lesson.",
-        "preparation": "* Review the programming challenges students will be completing\n* Review the Debugging Guide for ideas on how to support your students during the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-conditionals-lessons-5-8/36475) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is students primary opportunity to get hands on with conditionals in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. In the following lesson students are encouraged to work independently.",
+        "preparation": "* Review the programming challenges students will be completing\n* Review the Debugging Guide for ideas on how to support your students during the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-conditionals-lessons-5-8/36475) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1qlZ1jETAivu185K88GCIdcZWYlj0suAIrf0gWy2-Mrc/edit?usp=sharing)",
         "student_overview": "Practice programming with conditionals through a set of programming puzzles."
       },
       "seeding_key": {
@@ -225,8 +222,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Museum Ticket Generator app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. A progression of levels guides students on the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
-        "preparation": "* Review the different steps students will be asked to complete as they build the app\n* Review the information covered in the slides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-conditionals-lessons-5-8/36475) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
+        "preparation": "* Review the different steps students will be asked to complete as they build the app\n* Review the information covered in the slides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-conditionals-lessons-5-8/36475) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1JliO9BylCTVvVy3_owFuiz99WyRcqiASq2RhjS4qFcs/edit?usp=sharing)",
         "student_overview": "Practice making an app that uses conditionals and programming patterns with conditionals."
       },
       "seeding_key": {
@@ -245,8 +241,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students begin the lesson by considering two ways to write out the lyrics of a song, one that includes a lot of repeated text and one that does not. After exploring this example students complete a series of investigate activities in which functions have been used to remove repeated code from a program. At the conclusion of the lesson students discuss the concept of a function to synthesize their learning and add definitions to their journal.",
-        "preparation": "* Print copies of the activity guide of song lyrics used in the warm up or determine how you'll project it to the class.\n* Review the apps that students will investigate in the app\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-functions-lessons-9-11/36476) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is both the Explore and Investigate components of the EIPM sequence for functions. Functions are best understood by actually using them in a program, and so while the Explore component is relatively shorter, students actually are given many opportunities to observe how functions are used in programs. There is a heavy emphasis on running programs slowly to see how functions change the order in which programs run.\r\n\r\nIf you are a teacher with more experience with the concept of functions you may be wondering where other related concepts like parameters, arguments, and return values, will be introduced. In this unit these additional concepts are not learning objectives, and they will not be discussed in detail until later units. For now, it is fine for students to think of functions simply as a way to name a collection of commands so that they can be used in multiple places within your code.",
+        "preparation": "* Print copies of the activity guide of song lyrics used in the warm up or determine how you'll project it to the class.\n* Review the apps that students will investigate in the app\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-functions-lessons-9-11/36476) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1L3mWTEFvwwKYu8ZqFeZg6KGxv5vhVqxn6lB7rkw7RgA/edit?usp=sharing)",
         "student_overview": "Develop a mental model for using functions to replace repeated code. Investigate and modify sample apps that use functions. "
       },
       "seeding_key": {
@@ -265,8 +260,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students spend most of their time practicing using the skills and processes they have learned about functions. At the conclusion of the lesson students discuss remaining questions in anticipation of their Make project in the following lesson.",
-        "preparation": "* Review the video in the level progression that covers the topic of global vs. local variables\n* Review the map level about \"When to make a function?\"\n* Review other programming levels to be better prepared to support students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-functions-lessons-9-11/36476) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is students primary opportunity to get hands on with functions in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. In the following lesson students are encouraged to work independently.",
+        "preparation": "* Review the video in the level progression that covers the topic of global vs. local variables\n* Review the map level about \"When to make a function?\"\n* Review other programming levels to be better prepared to support students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-functions-lessons-9-11/36476) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1FkpaeUcI23FnZr46PwCupgrvZx-lYjjNgwA23hfR4n4/edit?usp=sharing)",
         "student_overview": "Practice programming with functions through a set of programming puzzles."
       },
       "seeding_key": {
@@ -285,8 +279,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Quote Maker app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
-        "preparation": "* Review the Activity Guide to decide if you will use it with your students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-functions-lessons-9-11/36476) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
+        "preparation": "* Review the Activity Guide to decide if you will use it with your students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-functions-lessons-9-11/36476) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1lAKM8HXduAdK1B7l8uWwp8v-Emaqk-eGHhZWfl_oAKI/edit?usp=sharing)",
         "student_overview": "Practice making an app that uses functions and programming patterns with functions."
       },
       "seeding_key": {
@@ -614,21 +607,8 @@
       }
     },
     {
-      "key": "b07e5f6b-df3d-49fe-a15e-bb0f2de91a4d",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b07e5f6b-df3d-49fe-a15e-bb0f2de91a4d",
-        "lesson.key": "Conditionals Explore",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
       "key": "6c973d75-c52b-448d-907c-e1ec87cb6e51",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -642,7 +622,7 @@
     },
     {
       "key": "3f86ea4d-131a-42e6-8bca-eb4dc240a649",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -656,7 +636,7 @@
     },
     {
       "key": "69de5461-14be-4e02-bf47-aa0d82e5f3e1",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -669,21 +649,8 @@
       }
     },
     {
-      "key": "bd3c6e20-32ea-42fc-8f10-225f7d4558a1",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "bd3c6e20-32ea-42fc-8f10-225f7d4558a1",
-        "lesson.key": "Conditionals Investigate",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
       "key": "bc30feb3-0e62-470b-8d37-a8eda30127d2",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -697,7 +664,7 @@
     },
     {
       "key": "3f83304a-4ab6-4d5b-b7be-5de673849e3a",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -711,7 +678,7 @@
     },
     {
       "key": "d8e3947a-239b-4db9-a867-47c7b2ffbcd8",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -724,21 +691,8 @@
       }
     },
     {
-      "key": "519c714b-d970-40f6-a5fe-e5b4cd298ddd",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "519c714b-d970-40f6-a5fe-e5b4cd298ddd",
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
       "key": "64cd2b05-c4b4-445f-86a3-d775e393cae5",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -752,7 +706,7 @@
     },
     {
       "key": "e2d548e8-4d74-4a61-88a4-bae5a05f667c",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -766,7 +720,7 @@
     },
     {
       "key": "f819451a-7a7a-40cb-b8c7-0c071e12cc60",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -780,7 +734,7 @@
     },
     {
       "key": "5f97781d-b5c3-408c-8389-e3f5d260a5b5",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -791,21 +745,8 @@
       }
     },
     {
-      "key": "cd3d43e0-c1d7-4633-8938-0b59d2134207",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "cd3d43e0-c1d7-4633-8938-0b59d2134207",
-        "lesson.key": "Conditionals Make",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
       "key": "84697d7a-d297-42f1-80ef-2365a78cfe15",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 2,
         "name": "Warm Up"
@@ -819,7 +760,7 @@
     },
     {
       "key": "d37f0ea2-3bd9-4aae-9068-98e3d4c7c480",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 38,
         "name": "Activity"
@@ -833,7 +774,7 @@
     },
     {
       "key": "5501c1df-1e05-4e9a-aad1-062d6d9229a0",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -846,21 +787,8 @@
       }
     },
     {
-      "key": "07f36bc7-411f-4778-839f-c4b2a1647a4d",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "07f36bc7-411f-4778-839f-c4b2a1647a4d",
-        "lesson.key": "Functions Explore / Investigate",
-        "lesson_group.key": "csp_functions",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
       "key": "5b2a074d-6319-48db-8f6e-dcd57722a1cd",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -874,7 +802,7 @@
     },
     {
       "key": "ae9c96a2-14e0-4e9f-a011-5baf195d4d3c",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -888,7 +816,7 @@
     },
     {
       "key": "d82d345a-6460-4ad4-83c1-6f7e63bc673f",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -901,21 +829,8 @@
       }
     },
     {
-      "key": "c82361c5-e523-4a57-b22f-b45b0b91daad",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c82361c5-e523-4a57-b22f-b45b0b91daad",
-        "lesson.key": "Functions Practice",
-        "lesson_group.key": "csp_functions",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
       "key": "6b2843d2-bc75-4387-ad68-af29caa7e171",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -929,7 +844,7 @@
     },
     {
       "key": "1cd641bf-2f55-46c8-8526-7e917993fdf2",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -943,7 +858,7 @@
     },
     {
       "key": "febc3faa-4c89-45cc-82a1-a2a793fba370",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -957,7 +872,7 @@
     },
     {
       "key": "afcf6d42-595e-45b4-ad42-a7a83d8419cc",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -968,21 +883,8 @@
       }
     },
     {
-      "key": "58b899c2-d806-4b47-b920-88daefcd6b90",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "58b899c2-d806-4b47-b920-88daefcd6b90",
-        "lesson.key": "Functions Make",
-        "lesson_group.key": "csp_functions",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
       "key": "58914df6-136e-48c3-8080-76686c2fe588",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 2,
         "name": "Warm Up"
@@ -996,7 +898,7 @@
     },
     {
       "key": "7cfa1fa8-6818-413e-9dae-64bf686b4972",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 38,
         "name": "Activity"
@@ -1010,7 +912,7 @@
     },
     {
       "key": "b0dfd722-31ab-4047-90fd-72a84025c668",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -2583,17 +2485,6 @@
       }
     },
     {
-      "key": "54bef719-4154-4078-9a15-07e2dc2f37ce",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1uqg-ZhfZX3B6crWNdgUZ7QZVr8xfq28YchfvAOtxbxA/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "54bef719-4154-4078-9a15-07e2dc2f37ce",
-        "lesson_activity.key": "b07e5f6b-df3d-49fe-a15e-bb0f2de91a4d"
-      }
-    },
-    {
       "key": "64749ba9-f866-40d8-8d6b-f2aebb0bc868",
       "position": 1,
       "properties": {
@@ -2695,17 +2586,6 @@
       "seeding_key": {
         "activity_section.key": "f5a4d780-a1ef-4296-9317-3e3849440046",
         "lesson_activity.key": "69de5461-14be-4e02-bf47-aa0d82e5f3e1"
-      }
-    },
-    {
-      "key": "4e11d2db-d502-4365-a3b4-67d0a66cc1a2",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/12dlXSCabj0qxNv1YM6NSa_bwMlUvkQLVdDIkRj3s3ag/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "4e11d2db-d502-4365-a3b4-67d0a66cc1a2",
-        "lesson_activity.key": "bd3c6e20-32ea-42fc-8f10-225f7d4558a1"
       }
     },
     {
@@ -2994,21 +2874,10 @@
       }
     },
     {
-      "key": "57a1eb82-168a-4910-889c-8e05a97a4a3d",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1qlZ1jETAivu185K88GCIdcZWYlj0suAIrf0gWy2-Mrc/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "57a1eb82-168a-4910-889c-8e05a97a4a3d",
-        "lesson_activity.key": "519c714b-d970-40f6-a5fe-e5b4cd298ddd"
-      }
-    },
-    {
       "key": "17f6a200-1385-464a-9e0c-1f47d9fef805",
       "position": 1,
       "properties": {
-        "description": "Today we're going to have a chance to practice programming with a lot of the concepts and patterns we've explored over the last two lessons. I encourage you to go through these with a partner, but pay close attention to what each other is doing. In our next lesson you're going to have to use a lot of these on an independent project, and these activities are good practice for what you'll find there! Alright, let's get to it!",
+        "description": "Today we're going to have a chance to practice programming with a lot of the concepts and patterns we've explored over the last two lessons. I encourage you to go through these with a partner, but pay close attention to what each other is doing. You will be choosing one of three apps to help develop today. While the design of each of these apps is complete, it will be your job to use your knowledge of conditional statements in order to make the apps function as intended.\n\nWhichever app you choose, please continue to choose that <strong>same </strong>app on each of the choice levels. There are a total of four levels for each app.\n\nIn our next lesson you're going to have to use a lot of these skills on an independent project, and these activities are good practice for what you'll find there! Alright, let's get to it!",
         "name": "Quick Warm Up\r",
         "remarks": true,
         "tips": [
@@ -3027,7 +2896,7 @@
       "key": "0951db4f-7749-426f-af1c-a2ebb71dee23",
       "position": 1,
       "properties": {
-        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussions. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio, Lesson 3 Level 2. Then briefly remind students about debugging skills that they will be using in today's activity.",
+        "description": "**Group:** It is recommended that students work in pairs for this lesson. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio, Lesson 3 Level 1. ",
         "name": "Practice Time"
       },
       "seeding_key": {
@@ -3036,127 +2905,13 @@
       }
     },
     {
-      "key": "82507d79-9223-41d4-8752-59edce041996",
+      "key": "9b91a83b-809b-4773-b8fb-68310c3d48c1",
       "position": 2,
       "properties": {
-        "description": "Today you're mostly going to practice what we've learned about programming with conditionals. As always you should be using the debugging process to help you as you work on issues. Today we're also going to be working on finding two types of errors\n\n1. Syntax errors show up when you type code that breaks the rules of the programming language. You can check for errors and warnings\n2. Logic errors show up when you type valid code but it works incorrectly. Today you're going to focus on testing your code to make sure you don't have logic errors.\n\nOther errors you may encounter include:\n\n* Run-time error - a mistake in the program that shows when running the program. These are defined by the programming language. \n* Overflow error - an error that occurs when a computer tries to handle a number outside of the defined range of values.",
-        "remarks": true
+        "progression_name": "Conditional Statements with App Development"
       },
       "seeding_key": {
-        "activity_section.key": "82507d79-9223-41d4-8752-59edce041996",
-        "lesson_activity.key": "e2d548e8-4d74-4a61-88a4-bae5a05f667c"
-      }
-    },
-    {
-      "key": "0bd2bc48-e43c-4315-bc8a-e84bb647eb51",
-      "position": 3,
-      "properties": {
-        "description": "**Levels 1-3:** These levels only use the [`console.log()`(#BB77C7)](/docs/applab/console.log/) command which prints commands in the debug console. Here are a few things to keep an eye out for\n\n* Levels 1-2 ask students to write Boolean expressions using comparison operators. Students may need to quickly review the comparison operators `<`, `>`, `<=`, `>=`, `==`, `!=`\n* Level 3 asks students to write Boolean expressions with logical operators `&&`, `||`, `!`\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Providing Support:** Circulate around the room through the lesson encouraging students to use the strategies introduced at the beginning of the lesson. Students have a number of supports at their fingertips, so a big part of your role is helping build their independence in using those resources.\n\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "0bd2bc48-e43c-4315-bc8a-e84bb647eb51",
-        "lesson_activity.key": "e2d548e8-4d74-4a61-88a4-bae5a05f667c"
-      }
-    },
-    {
-      "key": "b4a350b3-bf80-4fb2-8576-a5ac86aae1fb",
-      "position": 4,
-      "properties": {
-        "progression_name": "Boolean expressions"
-      },
-      "seeding_key": {
-        "activity_section.key": "b4a350b3-bf80-4fb2-8576-a5ac86aae1fb",
-        "lesson_activity.key": "e2d548e8-4d74-4a61-88a4-bae5a05f667c"
-      }
-    },
-    {
-      "key": "be314d51-4a15-4f51-8463-75d9fe62f720",
-      "position": 5,
-      "properties": {
-        "description": "\n**Levels 4-8:** These levels practice if-statements while working with a star color-changing app. \n\n* Levels 4-5 involve setting up an if-statement that becomes an if-else statement. \n* In Level 6 students follow a pattern to create a lengthy if-else-if statement.\n* For Level 7, make sure students slow down the running of the code to understand what's happening. It's suggested that students use the slider to slow down the code.\n* Level 8 demonstrates that Boolean expressions can be written as conditional statements, and vice versa "
-      },
-      "seeding_key": {
-        "activity_section.key": "be314d51-4a15-4f51-8463-75d9fe62f720",
-        "lesson_activity.key": "e2d548e8-4d74-4a61-88a4-bae5a05f667c"
-      }
-    },
-    {
-      "key": "3ee63864-27d3-436b-9733-676c03de70ae",
-      "position": 6,
-      "properties": {
-        "progression_name": "If-Statements"
-      },
-      "seeding_key": {
-        "activity_section.key": "3ee63864-27d3-436b-9733-676c03de70ae",
-        "lesson_activity.key": "e2d548e8-4d74-4a61-88a4-bae5a05f667c"
-      }
-    },
-    {
-      "key": "8de73618-027d-4c50-b8e1-673cdc391471",
-      "position": 7,
-      "properties": {
-        "description": "\n\n\n**Levels 9-10:** The levels return to the \"Can I Adopt a Cat?\" flowchart from the Conditionals Explore activity. Students will use the flowchart to work out the logic of the if-statements in a their program. \n\n* A new block appears in these levels: [`getNumber()`(#fff176)](/docs/applab/getNumber/) . This is different than [`getText()`(#fff176)](/docs/applab/getText/). [`getNumber()`(#fff176)](/docs/applab/getNumber/) gets a number from a user input that can be used mathematically. \n* Level 10 can be completed many different ways. There are different combinations of Boolean expressions using `&&` and `||`. Students should regularly test their apps to see if their Boolean expressions are working properly.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "8de73618-027d-4c50-b8e1-673cdc391471",
-        "lesson_activity.key": "e2d548e8-4d74-4a61-88a4-bae5a05f667c"
-      }
-    },
-    {
-      "key": "ab0d947e-c486-47e7-81a6-499e9b99ffb0",
-      "position": 8,
-      "properties": {
-        "progression_name": "Logical Operators"
-      },
-      "seeding_key": {
-        "activity_section.key": "ab0d947e-c486-47e7-81a6-499e9b99ffb0",
-        "lesson_activity.key": "e2d548e8-4d74-4a61-88a4-bae5a05f667c"
-      }
-    },
-    {
-      "key": "73db721f-e23f-46ca-b45a-4b25933dfad7",
-      "position": 9,
-      "properties": {
-        "description": "* Level 11: Students do a quick practice with the MOD operator.",
-        "progression_name": "MOD Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "73db721f-e23f-46ca-b45a-4b25933dfad7",
-        "lesson_activity.key": "e2d548e8-4d74-4a61-88a4-bae5a05f667c"
-      }
-    },
-    {
-      "key": "a0da6c7a-22ce-4a23-acb0-4f8bbc891e52",
-      "position": 10,
-      "properties": {
-        "description": "* Level 12 Students complete a choice level\n  * Level 12a - Students practice adding logical operators to if-else-if statements\n  * Level 12b - Students rewrite an if-else-if statement based on a flowchart\n  * Level 12c - Students practice using the MOD operator and also writing the most specific condition first in their if-else-if statements",
-        "progression_name": "Putting It Together",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Choice Level:** To help normalize mistakes and support debugging, consider having [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) available for students to use"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "a0da6c7a-22ce-4a23-acb0-4f8bbc891e52",
-        "lesson_activity.key": "e2d548e8-4d74-4a61-88a4-bae5a05f667c"
-      }
-    },
-    {
-      "key": "7a0c30ee-49cf-4da9-b943-50fa4a1989a3",
-      "position": 11,
-      "properties": {
-        "description": "**Extension Opportunities:**\n\n* Level 3: Students can add more variables and create complex Boolean expressions. One challenge might be to assign a String to a variable and compare that string to another. \n* Level 9: There are multiple solutions. If students build their if-statement using only `&&` encourage them to figure out how to build it using only `||`. They may need to switch the content of the if and else branches. \n* Level 10: Create another input (i.e. How many cats do you already own?). Students use this information to craft more complex if-statements."
-      },
-      "seeding_key": {
-        "activity_section.key": "7a0c30ee-49cf-4da9-b943-50fa4a1989a3",
+        "activity_section.key": "9b91a83b-809b-4773-b8fb-68310c3d48c1",
         "lesson_activity.key": "e2d548e8-4d74-4a61-88a4-bae5a05f667c"
       }
     },
@@ -3218,17 +2973,6 @@
       }
     },
     {
-      "key": "e7c66f66-cf46-4eb2-9e56-aa4d25753922",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1JliO9BylCTVvVy3_owFuiz99WyRcqiASq2RhjS4qFcs/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "e7c66f66-cf46-4eb2-9e56-aa4d25753922",
-        "lesson_activity.key": "cd3d43e0-c1d7-4633-8938-0b59d2134207"
-      }
-    },
-    {
       "key": "4e53430d-9b4a-4e4e-b5fe-3b8b7f6f1db9",
       "position": 1,
       "properties": {
@@ -3261,8 +3005,14 @@
       "key": "27f4c5eb-cf7e-4143-ade7-f040ae1c1c5c",
       "position": 1,
       "properties": {
-        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n**Distribute:** Make sure students have access to scrap paper and pencils / paper for drawing flow charts.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2 - Explore:** Have students explore the working Museum Ticket Generator App in Level 2. If students are not working in pairs they should still discuss with a neighbor.",
-        "name": "Try the Museum Ticket Generator"
+        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n**Distribute:** Make sure students have access to scrap paper and pencils / paper for drawing flow charts.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 1 - Explore:** Have students explore the working Museum Ticket Generator App in Level 1. If students are not working in pairs they should still discuss with a neighbor.",
+        "name": "Try the Museum Ticket Generator",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "27f4c5eb-cf7e-4143-ade7-f040ae1c1c5c",
@@ -3374,17 +3124,6 @@
       }
     },
     {
-      "key": "bc60b421-ce90-4d93-900f-e34116e6cab9",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1L3mWTEFvwwKYu8ZqFeZg6KGxv5vhVqxn6lB7rkw7RgA/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "bc60b421-ce90-4d93-900f-e34116e6cab9",
-        "lesson_activity.key": "07f36bc7-411f-4778-839f-c4b2a1647a4d"
-      }
-    },
-    {
       "key": "3dfdabdd-26f8-47ae-8e62-aafa398ec970",
       "position": 1,
       "properties": {
@@ -3411,7 +3150,13 @@
       "key": "9b279ecc-4bef-4e64-8db5-14ac40d04be4",
       "position": 3,
       "properties": {
-        "description": "* *In Style 1, what line of the song do you sing after line 09? What about in Style 2?*\n* *Style 2 uses fewer lines to write. Are there fewer lyrics to sing?*\n* *What are the benefits of writing a song in Style 2?*\n\nHave students silently consider these prompts on their own, then share with a neighbor, and finally move to a full class discussion.\n\n\n**Discussion Goal:** This lesson does not feature a large hands-on explore segment, but students should still get a quick introduction to the concept of a function before jumping in the code to try it out. Run this discussion to help motivate the ideas underlying functions. Here are the main points to bring out.\n\n  \t* In Style 1 you read line 10 after line 09. This is a the normal order we're used to.\n\n  \t* In Style 2 you sing the lyrics “out of order”. After line 09 you’re going to sing line 35\n\n  \t* It’s shorter to write the song but it’s the same song and will take the same time / lyrics to sing.\n\n  \t* Style 2 removes repetition and it also makes it a little easier to understand the overall structure of the song\n\n"
+        "description": "* *In Style 1, what line of the song do you sing after line 09? What about in Style 2?*\n* *Style 2 uses fewer lines to write. Are there fewer lyrics to sing?*\n* *What are the benefits of writing a song in Style 2?*\n\nHave students silently consider these prompts on their own, then share with a neighbor, and finally move to a full class discussion.\n\n\n**Discussion Goal:** This lesson does not feature a large hands-on explore segment, but students should still get a quick introduction to the concept of a function before jumping in the code to try it out. Run this discussion to help motivate the ideas underlying functions. Here are the main points to bring out.\n\n  \t* In Style 1 you read line 10 after line 09. This is a the normal order we're used to.\n\n  \t* In Style 2 you sing the lyrics “out of order”. After line 09 you’re going to sing line 35\n\n  \t* It’s shorter to write the song but it’s the same song and will take the same time / lyrics to sing.\n\n  \t* Style 2 removes repetition and it also makes it a little easier to understand the overall structure of the song\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This lesson is both the **Explore** and **Investigate** components of the EIPM sequence for functions. Functions are best understood by actually using them in a program, and so while the Explore component is relatively shorter, students actually are given many opportunities to observe how functions are used in programs. There is a heavy emphasis on running programs slowly to see how functions change the order in which programs run."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9b279ecc-4bef-4e64-8db5-14ac40d04be4",
@@ -3470,7 +3215,13 @@
       "key": "d90f1dc9-3315-4e99-b020-e6190c000515",
       "position": 4,
       "properties": {
-        "progression_name": "Declaring and Calling Functions"
+        "progression_name": "Declaring and Calling Functions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you are a teacher with more experience with the concept of functions you may be wondering where other related concepts like parameters, arguments, and return values, will be introduced. In this unit these additional concepts are not learning objectives, and they will not be discussed in detail until later units. For now, it is fine for students to think of functions simply as a way to name a collection of commands so that they can be used in multiple places within your code."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d90f1dc9-3315-4e99-b020-e6190c000515",
@@ -3515,17 +3266,6 @@
       }
     },
     {
-      "key": "efbdc8d5-59e7-4f54-b593-f68d97647b09",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1FkpaeUcI23FnZr46PwCupgrvZx-lYjjNgwA23hfR4n4/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "efbdc8d5-59e7-4f54-b593-f68d97647b09",
-        "lesson_activity.key": "c82361c5-e523-4a57-b22f-b45b0b91daad"
-      }
-    },
-    {
       "key": "26db06e0-5489-47ce-a4ee-2e300b9d681b",
       "position": 1,
       "properties": {
@@ -3565,7 +3305,13 @@
       "key": "849c1603-2de2-46e5-b1ac-aa3381b89534",
       "position": 2,
       "properties": {
-        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussions. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n**Distribute:** Optionally pass out a plastic cup or other manipulative they can place on their computer when they are stuck as a signal that they need support.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to Code Studio, Lesson 10 Level 2"
+        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussions. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n**Distribute:** Optionally pass out a plastic cup or other manipulative they can place on their computer when they are stuck as a signal that they need support.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to Code Studio, Lesson 10 Level 2",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This lesson is students primary opportunity to get hands on with functions in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. In the following lesson students are encouraged to work independently."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "849c1603-2de2-46e5-b1ac-aa3381b89534",
@@ -3730,17 +3476,6 @@
       "seeding_key": {
         "activity_section.key": "5ec467af-3858-4e63-b1a2-e875ba2c927f",
         "lesson_activity.key": "afcf6d42-595e-45b4-ad42-a7a83d8419cc"
-      }
-    },
-    {
-      "key": "8f58eff9-2f9b-4abe-a653-21159c4a86b1",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1lAKM8HXduAdK1B7l8uWwp8v-Emaqk-eGHhZWfl_oAKI/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "8f58eff9-2f9b-4abe-a653-21159c4a86b1",
-        "lesson_activity.key": "58b899c2-d806-4b47-b920-88daefcd6b90"
       }
     },
     {
@@ -5222,22 +4957,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U4 L07 Conditionals Practice 1_2023"
+          "U4_L07_Conditionals Practice_Level 1"
         ],
-        "progression": "Boolean expressions"
+        "progression": "Conditional Statements with App Development"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 1_2023"
+          "U4_L07_Conditionals Practice_Level 1"
         ],
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2023",
-        "activity_section.key": "b4a350b3-bf80-4fb2-8576-a5ac86aae1fb"
+        "activity_section.key": "9b91a83b-809b-4773-b8fb-68310c3d48c1"
       },
       "level_keys": [
-        "U4 L07 Conditionals Practice 1_2023"
+        "U4_L07_Conditionals Practice_Level 1"
       ]
     },
     {
@@ -5247,22 +4982,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U4 L07 Conditionals Practice 2_2023"
+          "U4_L07_Conditionals Practice_Level 2"
         ],
-        "progression": "Boolean expressions"
+        "progression": "Conditional Statements with App Development"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 2_2023"
+          "U4_L07_Conditionals Practice_Level 2"
         ],
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2023",
-        "activity_section.key": "b4a350b3-bf80-4fb2-8576-a5ac86aae1fb"
+        "activity_section.key": "9b91a83b-809b-4773-b8fb-68310c3d48c1"
       },
       "level_keys": [
-        "U4 L07 Conditionals Practice 2_2023"
+        "U4_L07_Conditionals Practice_Level 2"
       ]
     },
     {
@@ -5272,252 +5007,52 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U4 L07 Conditionals Practice 3_2023"
+          "U4_L07_Conditionals Practice_Level 3"
         ],
-        "progression": "Boolean expressions"
+        "progression": "Conditional Statements with App Development"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 3_2023"
+          "U4_L07_Conditionals Practice_Level 3"
         ],
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2023",
-        "activity_section.key": "b4a350b3-bf80-4fb2-8576-a5ac86aae1fb"
+        "activity_section.key": "9b91a83b-809b-4773-b8fb-68310c3d48c1"
       },
       "level_keys": [
-        "U4 L07 Conditionals Practice 3_2023"
+        "U4_L07_Conditionals Practice_Level 3"
       ]
     },
     {
       "chapter": 39,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U4 L07 Conditionals Practice 10_2023"
+          "U4_L07_Conditionals Practice_Level 4"
         ],
-        "progression": "If-Statements"
+        "progression": "Conditional Statements with App Development"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 10_2023"
+          "U4_L07_Conditionals Practice_Level 4"
         ],
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2023",
-        "activity_section.key": "3ee63864-27d3-436b-9733-676c03de70ae"
+        "activity_section.key": "9b91a83b-809b-4773-b8fb-68310c3d48c1"
       },
       "level_keys": [
-        "U4 L07 Conditionals Practice 10_2023"
+        "U4_L07_Conditionals Practice_Level 4"
       ]
     },
     {
       "chapter": 40,
       "position": 5,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4 L07 Conditionals Practice 4_2023"
-        ],
-        "progression": "If-Statements"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 4_2023"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023",
-        "activity_section.key": "3ee63864-27d3-436b-9733-676c03de70ae"
-      },
-      "level_keys": [
-        "U4 L07 Conditionals Practice 4_2023"
-      ]
-    },
-    {
-      "chapter": 41,
-      "position": 6,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4 L07 Conditionals Practice 5_2023"
-        ],
-        "progression": "If-Statements"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 5_2023"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023",
-        "activity_section.key": "3ee63864-27d3-436b-9733-676c03de70ae"
-      },
-      "level_keys": [
-        "U4 L07 Conditionals Practice 5_2023"
-      ]
-    },
-    {
-      "chapter": 42,
-      "position": 7,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4 L07 Conditionals Practice 6_2023"
-        ],
-        "progression": "If-Statements"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 6_2023"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023",
-        "activity_section.key": "3ee63864-27d3-436b-9733-676c03de70ae"
-      },
-      "level_keys": [
-        "U4 L07 Conditionals Practice 6_2023"
-      ]
-    },
-    {
-      "chapter": 43,
-      "position": 8,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4 L07 Conditionals Practice equivalent expressions_2023"
-        ],
-        "progression": "If-Statements"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice equivalent expressions_2023"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023",
-        "activity_section.key": "3ee63864-27d3-436b-9733-676c03de70ae"
-      },
-      "level_keys": [
-        "U4 L07 Conditionals Practice equivalent expressions_2023"
-      ]
-    },
-    {
-      "chapter": 44,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4 L07 Conditionals Practice 7_2023"
-        ],
-        "progression": "Logical Operators"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 7_2023"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023",
-        "activity_section.key": "ab0d947e-c486-47e7-81a6-499e9b99ffb0"
-      },
-      "level_keys": [
-        "U4 L07 Conditionals Practice 7_2023"
-      ]
-    },
-    {
-      "chapter": 45,
-      "position": 10,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4 L07 Conditionals Practice 8_2023"
-        ],
-        "progression": "Logical Operators"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 8_2023"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023",
-        "activity_section.key": "ab0d947e-c486-47e7-81a6-499e9b99ffb0"
-      },
-      "level_keys": [
-        "U4 L07 Conditionals Practice 8_2023"
-      ]
-    },
-    {
-      "chapter": 46,
-      "position": 11,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4 Conditionals Practice MOD_2023"
-        ],
-        "progression": "MOD Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4 Conditionals Practice MOD_2023"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023",
-        "activity_section.key": "73db721f-e23f-46ca-b45a-4b25933dfad7"
-      },
-      "level_keys": [
-        "U4 Conditionals Practice MOD_2023"
-      ]
-    },
-    {
-      "chapter": 47,
-      "position": 12,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSP U4L7 Choice_2023"
-        ],
-        "progression": "Putting It Together"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP U4L7 Choice_2023"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023",
-        "activity_section.key": "a0da6c7a-22ce-4a23-acb0-4f8bbc891e52"
-      },
-      "level_keys": [
-        "CSP U4L7 Choice_2023"
-      ]
-    },
-    {
-      "chapter": 48,
-      "position": 13,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -5541,8 +5076,8 @@
       ]
     },
     {
-      "chapter": 49,
-      "position": 14,
+      "chapter": 41,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -5566,7 +5101,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5591,7 +5126,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5616,7 +5151,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5641,7 +5176,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5666,7 +5201,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5691,7 +5226,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5716,7 +5251,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -5741,7 +5276,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -5766,7 +5301,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 50,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5791,7 +5326,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 51,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5816,7 +5351,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5841,7 +5376,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5866,7 +5401,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5891,7 +5426,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5916,7 +5451,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 56,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5941,7 +5476,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 57,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5966,7 +5501,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 58,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5991,7 +5526,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 59,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6016,7 +5551,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 60,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6041,7 +5576,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 61,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -6066,7 +5601,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6091,7 +5626,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -6116,7 +5651,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6141,7 +5676,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6166,7 +5701,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6191,7 +5726,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6216,7 +5751,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 68,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6241,7 +5776,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 69,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6266,7 +5801,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6291,7 +5826,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -6316,7 +5851,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 72,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -6341,7 +5876,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6789,146 +6324,50 @@
     },
     {
       "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice 1_2023",
+        "level.key": "U4_L07_Conditionals Practice_Level 1",
         "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 1_2023"
+          "U4_L07_Conditionals Practice_Level 1"
         ],
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2023",
-        "activity_section.key": "b4a350b3-bf80-4fb2-8576-a5ac86aae1fb"
+        "activity_section.key": "9b91a83b-809b-4773-b8fb-68310c3d48c1"
       }
     },
     {
       "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice 2_2023",
+        "level.key": "U4_L07_Conditionals Practice_Level 2",
         "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 2_2023"
+          "U4_L07_Conditionals Practice_Level 2"
         ],
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2023",
-        "activity_section.key": "b4a350b3-bf80-4fb2-8576-a5ac86aae1fb"
+        "activity_section.key": "9b91a83b-809b-4773-b8fb-68310c3d48c1"
       }
     },
     {
       "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice 3_2023",
+        "level.key": "U4_L07_Conditionals Practice_Level 3",
         "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 3_2023"
+          "U4_L07_Conditionals Practice_Level 3"
         ],
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2023",
-        "activity_section.key": "b4a350b3-bf80-4fb2-8576-a5ac86aae1fb"
+        "activity_section.key": "9b91a83b-809b-4773-b8fb-68310c3d48c1"
       }
     },
     {
       "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice 10_2023",
+        "level.key": "U4_L07_Conditionals Practice_Level 4",
         "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 10_2023"
+          "U4_L07_Conditionals Practice_Level 4"
         ],
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2023",
-        "activity_section.key": "3ee63864-27d3-436b-9733-676c03de70ae"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice 4_2023",
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 4_2023"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023",
-        "activity_section.key": "3ee63864-27d3-436b-9733-676c03de70ae"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice 5_2023",
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 5_2023"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023",
-        "activity_section.key": "3ee63864-27d3-436b-9733-676c03de70ae"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice 6_2023",
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 6_2023"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023",
-        "activity_section.key": "3ee63864-27d3-436b-9733-676c03de70ae"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice equivalent expressions_2023",
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice equivalent expressions_2023"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023",
-        "activity_section.key": "3ee63864-27d3-436b-9733-676c03de70ae"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice 7_2023",
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 7_2023"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023",
-        "activity_section.key": "ab0d947e-c486-47e7-81a6-499e9b99ffb0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice 8_2023",
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 8_2023"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023",
-        "activity_section.key": "ab0d947e-c486-47e7-81a6-499e9b99ffb0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4 Conditionals Practice MOD_2023",
-        "script_level.level_keys": [
-          "U4 Conditionals Practice MOD_2023"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023",
-        "activity_section.key": "73db721f-e23f-46ca-b45a-4b25933dfad7"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSP U4L7 Choice_2023",
-        "script_level.level_keys": [
-          "CSP U4L7 Choice_2023"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2023",
-        "activity_section.key": "a0da6c7a-22ce-4a23-acb0-4f8bbc891e52"
+        "activity_section.key": "9b91a83b-809b-4773-b8fb-68310c3d48c1"
       }
     },
     {

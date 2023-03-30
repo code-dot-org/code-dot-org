@@ -108,12 +108,26 @@ class CourseOffering < ApplicationRecord
     course_versions.any? {|cv| cv.content_root.is_a?(Unit) && cv.has_editor_experiment?(user)}
   end
 
+  # Checks if any course version has a published_state of 'preview' or 'stable'
+  def any_version_is_in_published_state?
+    published_states = ['preview', 'stable']
+    course_versions.any? {|cv| published_states.include?(cv.published_state)}
+  end
+
   def self.all_course_offerings
     if should_cache?
       @@course_offerings ||= CourseOffering.all.includes(course_versions: :content_root)
     else
       CourseOffering.all.includes(course_versions: :content_root)
     end
+  end
+
+  # We only want course offerings that are:
+  # - Assignable (course offering 'assignable' setting is true)
+  # - Published (associated unit group or unit 'published_state' setting is 'preview' or 'stable')
+  # - For students (associated unit group or unit 'participant_audience' setting is student)
+  def self.assignable_published_for_students_course_offerings
+    all_course_offerings.select {|co| co.assignable? && co.any_version_is_in_published_state? && co.get_participant_audience == 'student'}
   end
 
   def self.assignable_course_offerings(user)

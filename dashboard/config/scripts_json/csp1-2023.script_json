@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-20 21:34:34 UTC",
+    "serialized_at": "2023-03-25 16:50:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -78,9 +78,8 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Welcome to Computer Science Principles! The first lesson is about getting students excited about the course and connecting their own personal interests to computer science.  Students are asked to share something they know a lot about and teach it to a small group.  Groups make a “rapid” prototype of an innovative idea and share it.  Students watch a brief video about computing innovations.  The lesson ends with students logging into the Code.org CSP course web site, and answering a brief prompt about what “computer science” means to them.",
-        "preparation": "- Procure poster paper for sharing innovations\n- Queue up CS is Changing Everything video\n- Setup section in Code Studio for this course\n- Have student sign-up link ready to share\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This activity plants the initial seed for students to think about the ways in which they might be able to solve some problems relevant to their lives with technological innovations. ",
+        "overview": "Welcome to Computer Science Principles! The first lesson is about getting students excited about the course and connecting their own personal interests to computer science.  Students are asked to share something they know a lot about and teach it to a small group.  Groups make a “rapid” prototype of an innovative idea and share it.  Students watch a brief video about computing innovations.  The lesson ends with students logging into the Code.org CSP course web site, and answering a brief prompt about what “computer science” means to them. This activity plants the initial seed for students to think about the ways in which they might be able to solve some problems relevant to their lives with technological innovations. ",
+        "preparation": "- Procure poster paper for sharing innovations\n- Queue up CS is Changing Everything video\n- Setup section in Code Studio for this course\n- Have student sign-up link ready to share\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1WsCHV1oqTOhitJRDA2i6pghcydiJKY4LuYb-cZ-Zb6U/edit?usp=sharing)",
         "student_overview": "Welcome to Computer Science Principles! Groups make a “rapid” prototype of an innovative idea and share it. Students watch a brief video about computing innovations.",
         "unplugged": true
       },
@@ -99,9 +98,8 @@
       "relative_position": 2,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Using everyday materials, students create devices for sending information to a partner. Each group then uses its device to send an answer to a question. Following this, students modify their devices to answer more complex answers, responding with one of four possible messages, then one of eight possible messages, then one of sixteen possible messages.",
-        "preparation": "- Reusable and consumable supplies for the classroom, such as markers, small flashlights, noisemakers, bells, whistles, cups and string, straws, slinkies, blocks, or colored paper.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson introduces the concept of sending bits of information from one place to another. While building and modifying their information sending devices students should eventually recognize that it's easier to invent a system of communication that used a combination of patterns with a simple device, rather than making a new, or increasingly complex device for each new problem. This lays the foundation for understanding how complex information is represented in computers using a combination of bits. ",
+        "overview": "Using everyday materials, students create devices for sending information to a partner, which introduces the concept of sending bits of information from one place to another. Each group then uses its device to send an answer to a question. Following this, students modify their devices to answer more complex answers, responding with one of four possible messages, then one of eight possible messages, then one of sixteen possible messages. This lays the foundation for understanding how complex information is represented in computers using a combination of bits. ",
+        "preparation": "- Reusable and consumable supplies for the classroom, such as markers, small flashlights, noisemakers, bells, whistles, cups and string, straws, slinkies, blocks, or colored paper.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1iRhwURhXHSZqX1K_bis_A71IQVLalnrw8L1-9oQMMpk/edit?usp=sharing)",
         "student_overview": "Design a device for sending information across the room using common household supplies.",
         "unplugged": true
       },
@@ -120,9 +118,8 @@
       "relative_position": 3,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students will create rules for ordering patterns of circles and squares. Students generate all possible messages with three place values, then create rules that explain how they ordered each message. Emphasis is placed on creating clear rules so that, if another group were to follow the rules, they would generate the same list in the same order. Using these rules, students then try to list all possible messages with four place values. As the lesson concludes, students share their rules with classmates.",
-        "preparation": "* Have scissors ready for groups to create [r shape_cutouts/csp/2023] or have these pre-cut and prepared before class\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
-        "purpose": "Eventually, students will need to understand the binary number system which uses 1's and 0's rather than circles and squares. This lesson acts as a bridge to the next lesson where binary is formally introduced and practiced. In wrestling with the challenge of describing the rules of ordering patterns of circles and squares clearly, students will be primed to see how the binary number system solves many of these problems. Students may discover a system that is equivalent to the binary number system, which is a feat worth celebrating, but it is not expected that every student uncovers the rules for binary in this lesson.",
+        "overview": "Students will create rules for ordering patterns of circles and squares. Students generate all possible messages with three place values, then create rules that explain how they ordered each message. Emphasis is placed on creating clear rules so that, if another group were to follow the rules, they would generate the same list in the same order. Using these rules, students then try to list all possible messages with four place values. As the lesson concludes, students share their rules with classmates. This lesson acts as a bridge to the next lesson where binary is formally introduced and practiced.",
+        "preparation": "* Have scissors ready for groups to create [r shape_cutouts/csp/2023] or have these pre-cut and prepared before class\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1-_Vfwz51mO8PpNobJt8T5XG1-YjBdsdJi5uD25-26PE/edit?usp=sharing)",
         "student_overview": "Develop a system for creating and ordering patterns of shapes.",
         "unplugged": true
       },
@@ -142,8 +139,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
-        "preparation": "* Scissors (many pairs)\n* Printed copies of [r flippy_do/csp/2023]\t\n* [KEY U1L4 Flippy Do Pt 1](https://docs.google.com/document/d/1ZFg2LvFTLOJ5VFL0IxIEydKaLLz59g7gwhNLiFPz2gE/edit?usp=sharing)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is designed to give students as much time as possible using the Flippy Do to get comfortable with the relationship between binary and decimal numbers and the concept of place value.",
+        "preparation": "* Scissors (many pairs)\n* Printed copies of [r flippy_do/csp/2023]\t\n* [KEY U1L4 Flippy Do Pt 1](https://docs.google.com/document/d/1ZFg2LvFTLOJ5VFL0IxIEydKaLLz59g7gwhNLiFPz2gE/edit?usp=sharing)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1oLPbsfOpnRD1wlNCJKjwO8FaKidOx4GpQxH7t3Ml-i4/edit?usp=sharing)",
         "student_overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
         "unplugged": true
       },
@@ -162,9 +158,8 @@
       "relative_position": 5,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students extend their understanding of the binary number system by exploring errors that result from overflow and rounding. They use the binary odometer widget and develop their own systems for representing fractional amounts using the Flippy Do. ",
+        "overview": "Students extend their understanding of the binary number system by exploring errors that result from overflow and rounding. They use the binary odometer widget and develop their own systems for representing fractional amounts using the Flippy Do. Students discover the limitations of creating numbers that are “too big” or “too small” to count. They learn that, while a number system is infinite, the physical representation of numbers requires place values -- which are finite, and limit the ability to represent numbers.",
         "preparation": "\n* Work through the Candy Shop exercise yourself so you can see where your students may get stuck or have questions.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers.\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1gCIVlV9pXKbqQsUWvZNv-Yojl_SVK5JXjpZdbtf8Gxw/edit?usp=sharing)",
-        "purpose": "This lesson introduces students to the practical aspects of using a binary system to represent  numbers in a computing device. Students discover the limitations of creating numbers that are “too big” or “too small” to count. They learn that, while a number system is infinite, the physical representation of numbers requires place values -- which are finite, and limit the ability to represent numbers.",
         "student_overview": "Explore the limitations or representing numbers with bits.",
         "unplugged": true
       },
@@ -183,9 +178,8 @@
       "relative_position": 6,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson, students create a system for representing text using only numbers while communicating with each other. They are only allowed to send numbers back-and-forth, so they must create a system to translate between number and character. At the end of the main activity they briefly review the ASCII system for representing text. The wrap up discussion emphasizes how all of the concepts thus far have ‘built’ on each other and introduces the concept of abstraction to describe this progression.",
-        "preparation": "\n* Decide how you will distribute challenge phrases to students\n* Access to journals, paper, or other places that students can write down systems for the main activity.\n* Optionally print copies of ASCII Reference Sheet or prepare to project it\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "After this lesson students will understand the ways the most common types of information, text and numbers, are stored using binary. More importantly they should understand the challenges or principles that led to the creation of these systems and that these systems are somewhat arbitrarily created to solve a shared problem. They work not because there was \"one right answer\" but because many people agreed to use them. The wrap up discussion begins to explore the concept of abstraction. This is a challenging concept to understand and one that students will return to many times throughout the course. In this context, we emphasize how common it is to send text messages to each other yet these messages rely on many smaller layers (like binary numbers and electrical signals) to truly function correctly.",
+        "overview": "In this lesson, students create a system for representing text using only numbers while communicating with each other. They are only allowed to send numbers back-and-forth, so they must create a system to translate between number and character. Most importantly they should understand the challenges or principles that led to the creation of these systems and that these systems are somewhat arbitrarily created to solve a shared problem. They work not because there was \"one right answer\" but because many people agreed to use them. At the end of the main activity they briefly review the ASCII system for representing text. The wrap up discussion emphasizes how all of the concepts thus far have ‘built’ on each other and introduces the concept of abstraction to describe this progression.",
+        "preparation": "\n* Decide how you will distribute challenge phrases to students\n* Access to journals, paper, or other places that students can write down systems for the main activity.\n* Optionally print copies of ASCII Reference Sheet or prepare to project it\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1iRebT_EdY6r3bY-t-TePNdQ-aZMr7RHzxp3NdUNZ3pE/edit?usp=sharing)",
         "student_overview": "Develop a system for representing text using bits based on what you already know about representing numbers.",
         "unplugged": true
       },
@@ -205,8 +199,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students explore how black and white images are represented.  Students use the black and white pixelation widget to represent each pixel of an image with black or white light.  They learn how to sample an analog image using small squares of uniform size (each represented with a black or white value) and reflect on the pros and cons of choosing a smaller or larger square size when sampling.",
-        "preparation": "\n* Practice using the pixelation widget\n* Copies of [r u1l7_black_and_white_images/csp/2023] for each pair of students\n* [KEY U1L7 Black and White Images](https://docs.google.com/document/d/1b02zxA27_uBJHDHkyBSyw56KiEPcgQRdwGekJmNs5Fk/edit?usp=sharing)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "Throughout this unit, students gradually discover how to use bits to represent more complex data types. In this case, students work on representing images using sampling. Students quickly realize that very tiny sample squares are needed to approximate an image’s curves and small details. The smaller we make each sample, the more bits are needed. Students must also wrestle with deciding whether each square should be a 0 or 1, as many squares have both white and black in the same square. They will have more control over the representation of each bit in the next lesson.\r\n",
+        "preparation": "\n* Practice using the pixelation widget\n* Copies of [r u1l7_black_and_white_images/csp/2023] for each pair of students\n* [KEY U1L7 Black and White Images](https://docs.google.com/document/d/1b02zxA27_uBJHDHkyBSyw56KiEPcgQRdwGekJmNs5Fk/edit?usp=sharing)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/14ElmcZSzyt5mBh_GmBN_91lVf5WFMUgPjnFf0UYAbv4/edit?usp=sharing)",
         "student_overview": "Learn how computers represent black and white images using bits."
       },
       "seeding_key": {
@@ -224,9 +217,8 @@
       "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This is a second opportunity for students to interact with the Pixelation Widget, but this time they will work with color pixels.  Students start off learning that each pixel uses red, green, and blue lights that can be turned on or off using bits. They will create more color variants using an increasing amount of bits per pixel, and apply their learning by approximating an analog color image using the widget.",
-        "preparation": "\n* Practice using the color pixelation widget \n* Review slides from [r csp_unit_1_-_digital_information/csp/2023]\t\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
-        "purpose": "This lesson continues the story of how bits are used to represent digital images.  Much like in the last lesson, students will use the Pixelation Widget to attempt to make digital approximations of analog images, this time in color.  These images are produced using layers of abstraction, with each layer relying on the other to perform its process.\r\n\r\nStudents will begin to realize that analog color images have values that change smoothly and subtly, while digital images do not.  The number of digital colors is also limited by the number of bits per pixel, whereas analog colors are unlimited.\r\n",
+        "overview": "This is a second opportunity for students to interact with the Pixelation Widget, but this time they will work with color pixels.  Students start off learning that each pixel uses red, green, and blue lights that can be turned on or off using bits. They will create more color variants using an increasing amount of bits per pixel, and apply their learning by approximating an analog color image using the widget. These images are produced using layers of abstraction, with each layer relying on the other to perform its process.",
+        "preparation": "\n* Practice using the color pixelation widget \n* Review slides from [r csp_unit_1_-_digital_information/csp/2023]\t\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1qPlUIVBriflJhmjBGOiu02Dk0rzFzqmgyGnRLAV87zw/edit?usp=sharing)",
         "student_overview": "Learn how computers represent color images using bits."
       },
       "seeding_key": {
@@ -244,9 +236,8 @@
       "relative_position": 9,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students use the Text Compression Widget to experiment with compressing songs and poems and try to find their ‘personal best’ compression. A video introduces important vocabulary for the lesson and demonstrates the full features of the widget. Students pick a text they think will be ‘easy’ to compress and one they think will be ‘difficult’, paying attention to why some texts might be more compressible than others. As a wrap-up, students discuss what factors make some texts more compressible than others.",
-        "preparation": "\n* Familiarize yourself with the Text Compression Widget\n* Open Unit 1 Slideshow to current lesson\n* Plan for how you will display the initial Pitter Patter Message & it's Compressed Message during the warm-up\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "As students have been creating images over the last few lessons, the number of bits it takes to represent that information has grown and grown. In this lesson, students are introduced to the concept of compression as a way to address the growing file sizes of all of our information. This lesson is anchored by the Text Compression widget, which is a very hands-on & active widget for students to experiment with. Most of the lesson should be spent in the widget, having students experiment with different strategies for compression and creating a memorable experience to help anchor the concept of compression. Students also watch a video that introduces **lossless** and **lossy compression** - today’s lesson is an example of **lossless compression**, while tomorrow’s lesson is dedicated to **lossy compression**. The widget is just one example of lossless compression and students aren’t expected to master specific compression strategies - instead, they should understand that lossless compression uses less data and still lets them re-create the original information.",
+        "overview": "Students use the Text Compression Widget to experiment with compressing songs and poems and try to find their ‘personal best’ compression. A video introduces important vocabulary for the lesson and demonstrates the full features of the widget. Students pick a text they think will be ‘easy’ to compress and one they think will be ‘difficult’, paying attention to why some texts might be more compressible than others. As a wrap-up, students discuss what factors make some texts more compressible than others. The widget is just one example of lossless compression and students aren’t expected to master specific compression strategies - instead, they should understand that lossless compression uses less data and still lets them re-create the original information.",
+        "preparation": "\n* Familiarize yourself with the Text Compression Widget\n* Open Unit 1 Slideshow to current lesson\n* Plan for how you will display the initial Pitter Patter Message & it's Compressed Message during the warm-up\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T27X3QE0zjoakeRIRwdba-xKfTXb3-nC0cnb0Wtdgks/edit?usp=sharing)",
         "student_overview": "Learn how computers can decrease the number of bits used to represent a piece of information."
       },
       "seeding_key": {
@@ -264,9 +255,8 @@
       "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students are introduced to lossy compression via the Lossy Text Compression widget. They apply this concept and their prior knowledge of sampling to create their own lossy compressions of image files using the Lossy Image Widget. Students then discuss several practical scenarios where they need to decide whether to use a lossy or lossless compression algorithm. The lesson ends with a discussion of the situations where lossless compression is important and the situations where lossy compression is important.",
-        "preparation": "* Explore each of the widgets for this lesson\n* Decide how you will let students share their lossy compressions with each other or the whole class\n* Have [r csp_unit_1_-_digital_information/csp/2023] ready for the discussion towards the end of the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
-        "purpose": "After exploring lossless compression in yesterday’s lesson, students are introduced to lossy compression. A theme throughout the lesson is that lossy compression can greatly reduce the file size, but it can also greatly reduce the quality and it’s important to find that balance between quality and file size. The real challenge here is finding where that line is - how much can we compress but still keep it recognizable? In the final discussion, students compare lossy compression with lossless compression to see that each has value depending on the situation - lossy is useful when file size needs to be minimized, but lossless is important when its vital to be able to reconstruct the original image. ",
+        "overview": "Students are introduced to lossy compression via the Lossy Text Compression widget. They apply this concept and their prior knowledge of sampling to create their own lossy compressions of image files using the Lossy Image Widget. A theme throughout the lesson is that lossy compression can greatly reduce the file size, but it can also greatly reduce the quality and it’s important to find that balance between quality and file size. The real challenge here is finding where that line is - how much can we compress but still keep it recognizable? Students then discuss several practical scenarios where they need to decide whether to use a lossy or lossless compression algorithm. The lesson ends with a discussion of the situations where lossless compression is important and the situations where lossy compression is important.",
+        "preparation": "* Explore each of the widgets for this lesson\n* Decide how you will let students share their lossy compressions with each other or the whole class\n* Have [r csp_unit_1_-_digital_information/csp/2023] ready for the discussion towards the end of the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1_sbw1zXbQa2_ZJkN20PrijCdIxLCxys_cYFPj1kYND0/edit?usp=sharing)",
         "student_overview": "Learn how information is represented using fewer bits when it's OK for some of the information or details to be lost."
       },
       "seeding_key": {
@@ -284,9 +274,8 @@
       "relative_position": 11,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students are asked to reflect on who owns their creative works from this class, such as their pixel images, before reading an article describing how ownership can become complicated as analog works become digital artifacts. After reading the article, students watch several videos explaining copyright and introducing them to the Creative Commons. Students then re-read the article answering three questions about the benefits, harms, and impacts of current copyright policy. Students use their new understanding of copyright to form an opinion about current copyright policies and create a small poster justifying their opinion with a quote from the article.",
-        "preparation": "\n* Print out [r article_-_fortnite_stealing_dance_moves/csp/2023] with highlighters ready to mark the text. If you are unable to print copies, see the Teaching Tip below.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "Students have been examining how digital information is created and stored, but they have not closely examined the question of who owns their digital data and what rules govern how that information can be shared. This lesson introduces the concept of copyright by presenting students with an article that challenges their current understanding of digital ownership and makes them wrestle with some of the complexities of owning and sharing digital information. It’s important for students to talk through their ideas and hear the perspectives of their peers as they try to unpack how copyright law can impact society. Ultimately, students begin to form their own opinions about copyright focusing on how these policies impact the world around us and observing who benefits and who is harmed in particular copyright situations.\r\n\r\nThis lesson is also a scaffold to the larger project that begins after this lesson which includes several tasks that are also a part of this lesson such as, annotating an article, answering questions, and forming an opinion using the article as evidence. Students may need support with these processes during this lesson so they are able to complete the following lesson independently. It is especially important that students use marking the text strategies to help them comprehend and synthesize the information from their article, because they will need to do this in the next lesson as well. \r\n",
+        "overview": "Students are asked to reflect on who owns their creative works from this class, such as their pixel images, before reading an article describing how ownership can become complicated as analog works become digital artifacts. After reading the article, students watch several videos explaining copyright and introducing them to the Creative Commons. Students then re-read the article answering three questions about the benefits, harms, and impacts of current copyright policy. Students use their new understanding of copyright to form an opinion about current copyright policies and create a small poster justifying their opinion with a quote from the article. This lesson is also a scaffold to the larger project that begins after this lesson which includes several tasks that are also a part of this lesson such as, annotating an article, answering questions, and forming an opinion using the article as evidence.",
+        "preparation": "\n* Print out [r article_-_fortnite_stealing_dance_moves/csp/2023] with highlighters ready to mark the text. If you are unable to print copies, see the Teaching Tip below.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1VqeD3PZyFnUXeUFjbY-z-fkz0XWmy5AqdXk-kRpgQzs/edit?usp=sharing)",
         "student_overview": "Learn about how people can own digital information and the ways they can share access to their creative digital works.",
         "unplugged": true
       },
@@ -376,21 +365,8 @@
       }
     },
     {
-      "key": "b7726ba9-2d91-42bc-b945-2118d5f6fc1d",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b7726ba9-2d91-42bc-b945-2118d5f6fc1d",
-        "lesson.key": "Welcome to CSP",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023"
-      }
-    },
-    {
       "key": "6538631f-49c6-4b97-a081-c6cf9450ac8d",
-      "position": 2,
+      "position": 1,
       "properties": {
         "name": "Tech Setup"
       },
@@ -403,7 +379,7 @@
     },
     {
       "key": "dbea31fb-9ef4-48f2-9128-8d885150b44d",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 15,
         "name": "Warm-Up"
@@ -417,7 +393,7 @@
     },
     {
       "key": "b5574840-1608-4162-8360-88e3501265f9",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 20,
         "name": "Activity"
@@ -431,7 +407,7 @@
     },
     {
       "key": "65181896-3039-49a4-b7a4-ad66fa16279a",
-      "position": 5,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap-up"
@@ -444,21 +420,8 @@
       }
     },
     {
-      "key": "6484744d-2bb0-47b4-a409-e613298f25f9",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "6484744d-2bb0-47b4-a409-e613298f25f9",
-        "lesson.key": "Representing Information",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023"
-      }
-    },
-    {
       "key": "fcc36e7f-86ad-4cdb-a69c-da191055b09b",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -472,7 +435,7 @@
     },
     {
       "key": "9d85a2cb-a899-42c1-971b-7640e542ab2d",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -486,7 +449,7 @@
     },
     {
       "key": "39436d73-73b6-454b-b0c7-60e944749741",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -499,21 +462,8 @@
       }
     },
     {
-      "key": "921fc056-933f-4a2a-96f5-8c06b4c32777",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "921fc056-933f-4a2a-96f5-8c06b4c32777",
-        "lesson.key": "Circle Square Patterns",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023"
-      }
-    },
-    {
       "key": "97986aae-c419-45c6-8368-a7c470fa864b",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -527,7 +477,7 @@
     },
     {
       "key": "11ea4077-019b-4716-8f27-f786afc2cf31",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -541,7 +491,7 @@
     },
     {
       "key": "6a955256-6122-4fd5-a621-a7b1da8d0074",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -554,21 +504,8 @@
       }
     },
     {
-      "key": "f38cdc67-ff3e-471a-bc1c-4954e3fe07f7",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f38cdc67-ff3e-471a-bc1c-4954e3fe07f7",
-        "lesson.key": "Binary Numbers",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023"
-      }
-    },
-    {
       "key": "3a8c9e7c-131b-4568-88fd-df236d73fda5",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -582,7 +519,7 @@
     },
     {
       "key": "8e68bdb3-3d9a-4a98-94be-686af315d54d",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -596,7 +533,7 @@
     },
     {
       "key": "9703c92a-1eba-4b1a-bc94-f3b336b80c87",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -651,21 +588,8 @@
       }
     },
     {
-      "key": "a467dac6-cd4f-4be2-a84b-e9e6a2403f0b",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a467dac6-cd4f-4be2-a84b-e9e6a2403f0b",
-        "lesson.key": "Representing Text",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023"
-      }
-    },
-    {
       "key": "acfcec04-4fdb-48ad-ae9d-2c67dd7d906f",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -679,7 +603,7 @@
     },
     {
       "key": "31975f58-f725-4fac-b931-edc2a0a383a2",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -693,7 +617,7 @@
     },
     {
       "key": "54195765-2f6b-4986-be10-59784ff38e7b",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -706,21 +630,8 @@
       }
     },
     {
-      "key": "7a030463-20fc-47c5-8654-a1cdc3db58c7",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "7a030463-20fc-47c5-8654-a1cdc3db58c7",
-        "lesson.key": "Black and White Images",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023"
-      }
-    },
-    {
       "key": "23d5afd3-afdb-4a85-8cd3-37d54d3f56ed",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -734,7 +645,7 @@
     },
     {
       "key": "c1d4b1e2-abf1-4051-9fb7-54408656b9f6",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -748,7 +659,7 @@
     },
     {
       "key": "b84f75cc-e8d5-4a28-bc16-a512e00679d4",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -761,21 +672,8 @@
       }
     },
     {
-      "key": "4c8ed677-8398-4a37-b37d-663266c5dbbf",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "4c8ed677-8398-4a37-b37d-663266c5dbbf",
-        "lesson.key": "Color Images",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023"
-      }
-    },
-    {
       "key": "56a51855-cd0f-447c-8915-a98d3e5c9f7a",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -789,7 +687,7 @@
     },
     {
       "key": "6292080f-b5bb-48fb-91ba-875e1240a7e8",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -803,7 +701,7 @@
     },
     {
       "key": "696c666a-f712-4536-bf7d-fd35b34fd9db",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -816,21 +714,8 @@
       }
     },
     {
-      "key": "c5d96e1a-e7b8-4716-8a7f-3b4c51de0df7",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c5d96e1a-e7b8-4716-8a7f-3b4c51de0df7",
-        "lesson.key": "Lossless Compression",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023"
-      }
-    },
-    {
       "key": "80a5b1b5-3240-47fd-bbd2-0554d3b3ff75",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -844,7 +729,7 @@
     },
     {
       "key": "b5407c28-11e7-4ad9-aa03-2e9889c22994",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -858,7 +743,7 @@
     },
     {
       "key": "9bc90b0a-114a-4c41-a66b-462ddb5a53fb",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -871,21 +756,8 @@
       }
     },
     {
-      "key": "9341ee27-c1fa-4ec1-b2fe-1fb24ceb6946",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "9341ee27-c1fa-4ec1-b2fe-1fb24ceb6946",
-        "lesson.key": "Lossy Compression",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023"
-      }
-    },
-    {
       "key": "a5f838ed-91b6-4d57-9803-11f8ca239c3a",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -899,7 +771,7 @@
     },
     {
       "key": "e00ca500-74a9-4fb4-95ec-22a073bdda83",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -913,7 +785,7 @@
     },
     {
       "key": "2d4720d9-e437-4b1d-815a-637fe9774649",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -926,21 +798,8 @@
       }
     },
     {
-      "key": "918c5dde-6afd-487e-a007-a6a2975ba678",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modfications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "918c5dde-6afd-487e-a007-a6a2975ba678",
-        "lesson.key": "Intellectual Property",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023"
-      }
-    },
-    {
       "key": "3025e65f-af0d-499a-ad0c-b542001021ef",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -954,7 +813,7 @@
     },
     {
       "key": "b90b5bc4-9945-4078-bc89-3d3ba892a6d3",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -968,7 +827,7 @@
     },
     {
       "key": "8afa94d3-29e3-44dd-b358-c69a29697c43",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -1141,17 +1000,6 @@
       "seeding_key": {
         "activity_section.key": "1af2a304-db02-4eb9-9166-bc0007f9e9fc",
         "lesson_activity.key": "06dd072f-ac50-4cd1-a8b8-5420d0edc87f"
-      }
-    },
-    {
-      "key": "885bcbcb-d328-4bfa-a995-6d894f416ef0",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1WsCHV1oqTOhitJRDA2i6pghcydiJKY4LuYb-cZ-Zb6U/edit?usp=sharing) to access the modifications. "
-      },
-      "seeding_key": {
-        "activity_section.key": "885bcbcb-d328-4bfa-a995-6d894f416ef0",
-        "lesson_activity.key": "b7726ba9-2d91-42bc-b945-2118d5f6fc1d"
       }
     },
     {
@@ -1508,17 +1356,6 @@
       }
     },
     {
-      "key": "f38c6060-c4a9-44ae-bf34-7e4d9710c614",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1iRhwURhXHSZqX1K_bis_A71IQVLalnrw8L1-9oQMMpk/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "f38c6060-c4a9-44ae-bf34-7e4d9710c614",
-        "lesson_activity.key": "6484744d-2bb0-47b4-a409-e613298f25f9"
-      }
-    },
-    {
       "key": "3b5ac820-f3b8-4532-b595-9c4ff6150b0e",
       "position": 1,
       "properties": {
@@ -1681,17 +1518,6 @@
       "seeding_key": {
         "activity_section.key": "be0c6490-c809-47bb-b071-837aca82086c",
         "lesson_activity.key": "39436d73-73b6-454b-b0c7-60e944749741"
-      }
-    },
-    {
-      "key": "3c2ccbb9-f24c-4abf-9e7e-f0a105375e49",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1-_Vfwz51mO8PpNobJt8T5XG1-YjBdsdJi5uD25-26PE/edit?usp=sharing) to access the modifications. \n"
-      },
-      "seeding_key": {
-        "activity_section.key": "3c2ccbb9-f24c-4abf-9e7e-f0a105375e49",
-        "lesson_activity.key": "921fc056-933f-4a2a-96f5-8c06b4c32777"
       }
     },
     {
@@ -1866,17 +1692,6 @@
       "seeding_key": {
         "activity_section.key": "fc1d57c3-187f-43c2-98b8-7520505b07ac",
         "lesson_activity.key": "6a955256-6122-4fd5-a621-a7b1da8d0074"
-      }
-    },
-    {
-      "key": "52b744ad-4f75-4f7c-a38b-f0c19ff34e47",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1oLPbsfOpnRD1wlNCJKjwO8FaKidOx4GpQxH7t3Ml-i4/edit?usp=sharing) to access the modifications. "
-      },
-      "seeding_key": {
-        "activity_section.key": "52b744ad-4f75-4f7c-a38b-f0c19ff34e47",
-        "lesson_activity.key": "f38cdc67-ff3e-471a-bc1c-4954e3fe07f7"
       }
     },
     {
@@ -2199,17 +2014,6 @@
       }
     },
     {
-      "key": "a70a62e0-2fd4-4107-94eb-42c3e49342c2",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1iRebT_EdY6r3bY-t-TePNdQ-aZMr7RHzxp3NdUNZ3pE/edit?usp=sharing) to access the modifications. "
-      },
-      "seeding_key": {
-        "activity_section.key": "a70a62e0-2fd4-4107-94eb-42c3e49342c2",
-        "lesson_activity.key": "a467dac6-cd4f-4be2-a84b-e9e6a2403f0b"
-      }
-    },
-    {
       "key": "527c496d-e333-44cf-b4e8-b368a4573bda",
       "position": 1,
       "properties": {
@@ -2477,17 +2281,6 @@
       }
     },
     {
-      "key": "b2165189-8501-43b8-9f6f-0dea2fe7970f",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/14ElmcZSzyt5mBh_GmBN_91lVf5WFMUgPjnFf0UYAbv4/edit?usp=sharing) to access the modifications. "
-      },
-      "seeding_key": {
-        "activity_section.key": "b2165189-8501-43b8-9f6f-0dea2fe7970f",
-        "lesson_activity.key": "7a030463-20fc-47c5-8654-a1cdc3db58c7"
-      }
-    },
-    {
       "key": "2c7f0110-3e8a-4a7e-b812-f30fad1065a0",
       "position": 1,
       "properties": {
@@ -2681,17 +2474,6 @@
       "seeding_key": {
         "activity_section.key": "a6c05f7d-cc81-4f59-98d3-2072e9bde4b2",
         "lesson_activity.key": "b84f75cc-e8d5-4a28-bc16-a512e00679d4"
-      }
-    },
-    {
-      "key": "782a3dd4-9084-46b5-98d4-6ed21e4eff9e",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1qPlUIVBriflJhmjBGOiu02Dk0rzFzqmgyGnRLAV87zw/edit?usp=sharing) to access the modifications. "
-      },
-      "seeding_key": {
-        "activity_section.key": "782a3dd4-9084-46b5-98d4-6ed21e4eff9e",
-        "lesson_activity.key": "4c8ed677-8398-4a37-b37d-663266c5dbbf"
       }
     },
     {
@@ -2963,17 +2745,6 @@
       }
     },
     {
-      "key": "115a1a6f-9b30-47b3-9d34-3ae945ef71c8",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1T27X3QE0zjoakeRIRwdba-xKfTXb3-nC0cnb0Wtdgks/edit?usp=sharing) to access the modifications. "
-      },
-      "seeding_key": {
-        "activity_section.key": "115a1a6f-9b30-47b3-9d34-3ae945ef71c8",
-        "lesson_activity.key": "c5d96e1a-e7b8-4716-8a7f-3b4c51de0df7"
-      }
-    },
-    {
       "key": "091a3b5c-6b4c-43c0-a607-64a15a0f3e81",
       "position": 1,
       "properties": {
@@ -3242,17 +3013,6 @@
       }
     },
     {
-      "key": "4c232b87-7f0a-4767-ac0b-ce2acac51e1f",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1_sbw1zXbQa2_ZJkN20PrijCdIxLCxys_cYFPj1kYND0/edit?usp=sharing) to access the modifications. "
-      },
-      "seeding_key": {
-        "activity_section.key": "4c232b87-7f0a-4767-ac0b-ce2acac51e1f",
-        "lesson_activity.key": "9341ee27-c1fa-4ec1-b2fe-1fb24ceb6946"
-      }
-    },
-    {
       "key": "fb0cafa0-4533-4e11-b061-06217273b9dd",
       "position": 1,
       "properties": {
@@ -3496,17 +3256,6 @@
       }
     },
     {
-      "key": "afd57f6e-6583-499e-90c7-2fbcef3aaa91",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png) **Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1VqeD3PZyFnUXeUFjbY-z-fkz0XWmy5AqdXk-kRpgQzs/edit?usp=sharing) to access the modifications. "
-      },
-      "seeding_key": {
-        "activity_section.key": "afd57f6e-6583-499e-90c7-2fbcef3aaa91",
-        "lesson_activity.key": "918c5dde-6afd-487e-a007-a6a2975ba678"
-      }
-    },
-    {
       "key": "d607179c-a3a3-4cd9-b0d9-069d27de97ba",
       "position": 1,
       "properties": {
@@ -3535,7 +3284,13 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** \n[r article_-_fortnite_stealing_dance_moves/csp/2023]",
         "duration": "10",
-        "name": "Activity Part 1: Read the Article"
+        "name": "Activity Part 1: Read the Article",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**To Print or Not To Print?** This lesson is written assuming that you have printed out the article and have it physically available for students to write on, even though it is also possible to have students interact with this text digitally. If students read the article digitally, it is most important that they still follow the active reading strategies outlined in this lesson - highlighting the text, writing in the margins, and summarizing. This may require some additional time & instruction to teach students your preferred digital annotation tools and may require some additional adjustments to some of the later annotation strategies in this lesson."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "71a83447-a2f7-4029-b7cb-83ef9aba51f2",
@@ -3550,7 +3305,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**To Print or Not To Print?** This lesson is written assuming that you have printed out the article and have it physically available for students to write on, even though it is also possible to have students interact with this text digitally. If students read the article digitally, it is most important that they still follow the active reading strategies outlined in this lesson - highlighting the text, writing in the margins, and summarizing. This may require some additional time & instruction to teach students your preferred digital annotation tools and may require some additional adjustments to some of the later annotation strategies in this lesson.\n\n"
+            "markdown": "In order to complete the following lesson and project independently, students may need support with the processes of \n* Annotating an article\n* Answering questions\n* Forming an opinion using the article as evidence \n\nIt is especially important that students use marking the text strategies to help them comprehend and synthesize the information from their article, because they will need to do this in the next lesson as well. \n\n"
           }
         ]
       },
