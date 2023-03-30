@@ -5,22 +5,32 @@
         "CSD U1 IO Pet Chooser 2_2021": {
           "Yes": "Sì",
           "No": "No",
-          "cute": "carino"
+          "cute": "carino",
+          "Click here to start!": "Clicca qui per iniziare!",
+          "Do you like going outside?": "Ti piace uscire di casa?",
+          "Find it!": "Trovalo!"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
           "Yes": "Sì",
           "No": "No",
-          "cute": "carino"
+          "cute": "carino",
+          "Click here to start!": "Clicca qui per iniziare!",
+          "Do you like going outside?": "Ti piace uscire di casa?",
+          "Find it!": "Trovalo!"
         },
         "CSD U1 IO Pet Chooser_2021": {
           "Yes": "Sì",
           "No": "No",
-          "cute": "carino"
+          "cute": "carino",
+          "Click here to start!": "Clicca qui per iniziare!",
+          "Do you like going outside?": "Ti piace uscire di casa?"
         },
         "CSD U1 IO Pet Chooser_2022": {
           "Yes": "Sì",
           "No": "No",
-          "cute": "carino"
+          "cute": "carino",
+          "Click here to start!": "Clicca qui per iniziare!",
+          "Do you like going outside?": "Ti piace uscire di casa?"
         },
         "CSD U1 IO Story_2021": {
           "Name": "Nome",
@@ -85,12 +95,16 @@
         "CSD U1 processing fastest_2021": {
           "s": "s",
           "k": "k",
-          "0": "0"
+          "0": "0",
+          "Which finger is the FASTEST?": "Qual è il dito più veloce?",
+          "It's a tie!": "È un pareggio!"
         },
         "CSD U1 processing fastest_2022": {
           "s": "s",
           "k": "k",
-          "0": "0"
+          "0": "0",
+          "Which finger is the FASTEST?": "Qual è il dito più veloce?",
+          "It's a tie!": "È un pareggio!"
         },
         "CSD U1 processing guess_2021": {
           "?": "?",
@@ -115,7 +129,69 @@
           "19": "19",
           "20": "20",
           "21": "21",
-          "text": "testo"
+          "text": "testo",
+          "Can you guess it?": "Riesci a indovinarlo?",
+          "You only have 5 tries.": "Hai solo 5 tentativi.",
+          "41": "41",
+          "42": "42",
+          "43": "43",
+          "44": "44",
+          "45": "45",
+          "46": "46",
+          "47": "47",
+          "48": "48",
+          "49": "49",
+          "50": "50",
+          "51": "51",
+          "52": "52",
+          "53": "53",
+          "54": "54",
+          "55": "55",
+          "56": "56",
+          "57": "57",
+          "58": "58",
+          "59": "59",
+          "60": "60",
+          "61": "61",
+          "62": "62",
+          "63": "63",
+          "64": "64",
+          "65": "65",
+          "66": "66",
+          "67": "67",
+          "68": "68",
+          "69": "69",
+          "70": "70",
+          "71": "71",
+          "72": "72",
+          "73": "73",
+          "74": "74",
+          "75": "75",
+          "76": "76",
+          "77": "77",
+          "78": "78",
+          "79": "79",
+          "80": "80",
+          "81": "81",
+          "83": "83",
+          "84": "84",
+          "85": "85",
+          "86": "86",
+          "87": "87",
+          "88": "88",
+          "89": "89",
+          "91": "91",
+          "92": "92",
+          "93": "93",
+          "94": "94",
+          "95": "95",
+          "96": "96",
+          "97": "97",
+          "98": "98",
+          "99": "99",
+          "You won!": "Hai vinto!",
+          "The number was": "Il numero era",
+          "No more tries!": "Niente più tentativi!"
         },
         "CSD U1 processing guess_2022": {
           "?": "?",
@@ -140,17 +216,103 @@
           "19": "19",
           "20": "20",
           "21": "21",
-          "text": "testo"
+          "text": "testo",
+          "Can you guess it?": "Riesci a indovinarlo?",
+          "You only have 5 tries.": "Hai solo 5 tentativi.",
+          "41": "41",
+          "42": "42",
+          "43": "43",
+          "44": "44",
+          "45": "45",
+          "46": "46",
+          "47": "47",
+          "48": "48",
+          "49": "49",
+          "50": "50",
+          "51": "51",
+          "52": "52",
+          "53": "53",
+          "54": "54",
+          "55": "55",
+          "56": "56",
+          "57": "57",
+          "58": "58",
+          "59": "59",
+          "60": "60",
+          "61": "61",
+          "62": "62",
+          "63": "63",
+          "64": "64",
+          "65": "65",
+          "66": "66",
+          "67": "67",
+          "68": "68",
+          "69": "69",
+          "70": "70",
+          "71": "71",
+          "72": "72",
+          "73": "73",
+          "74": "74",
+          "75": "75",
+          "76": "76",
+          "77": "77",
+          "78": "78",
+          "79": "79",
+          "80": "80",
+          "81": "81",
+          "83": "83",
+          "84": "84",
+          "85": "85",
+          "86": "86",
+          "87": "87",
+          "88": "88",
+          "89": "89",
+          "91": "91",
+          "92": "92",
+          "93": "93",
+          "94": "94",
+          "95": "95",
+          "96": "96",
+          "97": "97",
+          "98": "98",
+          "99": "99",
+          "You won!": "Hai vinto!",
+          "The number was": "Il numero era",
+          "No more tries!": "Niente più tentativi!"
         },
         "CSD U1 processing live_2021": {
           "walking": "camminare",
           "bear": "Orso",
-          "rat": "ratto"
+          "rat": "ratto",
+          "Where should you live?": "Dove dovresti vivere?",
+          "Answer the questions for advice on where to live. ": "Rispondi alle domande per ottenere consigli su dove vivere. ",
+          "You should live in a big city.": "Dovresti vivere in una grande città.",
+          "What do you like to do for fun?": "Cosa ti piace fare per divertirti?",
+          "visit museums": "visitare i musei",
+          "cookout with friends": "grigliata con gli amici",
+          "go camping": "andare in campeggio",
+          "public transit": "trasporto pubblico",
+          "racoon": "procione",
+          "coyote": "coyote",
+          "What food do you like?": "Che cibo ti piace?",
+          "delivery/takeout": "consegna/asporto"
         },
         "CSD U1 processing live_2022": {
           "walking": "camminare",
           "bear": "Orso",
-          "rat": "ratto"
+          "rat": "ratto",
+          "Where should you live?": "Dove dovresti vivere?",
+          "Answer the questions for advice on where to live. ": "Rispondi alle domande per ottenere consigli su dove vivere. ",
+          "You should live in a big city.": "Dovresti vivere in una grande città.",
+          "What do you like to do for fun?": "Cosa ti piace fare per divertirti?",
+          "visit museums": "visitare i musei",
+          "cookout with friends": "grigliata con gli amici",
+          "go camping": "andare in campeggio",
+          "public transit": "trasporto pubblico",
+          "racoon": "procione",
+          "coyote": "coyote",
+          "What food do you like?": "Che cibo ti piace?",
+          "delivery/takeout": "consegna/asporto"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "Corretto!",
@@ -208,23 +370,47 @@
         },
         "CSD U1 storage friends_2021": {
           "Back": "Indietro",
-          "Friend Finder": "Il trovamico"
+          "Friend Finder": "Il trovamico",
+          "Friend List": "Elenco Amici",
+          "Friend Requests": "Richieste d'amicizia",
+          "Find Friends": "Trova amici",
+          "Friends": "Amici"
         },
         "CSD U1 storage friends_2022": {
           "Back": "Indietro",
-          "Friend Finder": "Il trovamico"
+          "Friend Finder": "Il trovamico",
+          "Friend List": "Elenco Amici",
+          "Friend Requests": "Richieste d'amicizia",
+          "Find Friends": "Trova amici",
+          "Friends": "Amici"
         },
         "CSD U1 storage movies_2021": {
           "Star Wars": "Guerre Stellari",
           "Yes": "Sì",
           "No": "No",
-          "text": "testo"
+          "text": "testo",
+          "-- Select a movie --": "-- Seleziona un film --",
+          "Harry Potter": "Harry Potter",
+          "The LEGO Movie": "The LEGO Movie",
+          "My Neighbor Totoro": "\nIl mio vicino Totoro",
+          "Select your favorite movie": "Seleziona il tuo film preferito",
+          "What Should I Watch?": "Cosa dovrei guardare?",
+          "You wanted to watch a:": "Volevi guardare un:",
+          "Based on your preferences, we think you should watch:": "In base alle tue preferenze, pensiamo che dovresti guardare:"
         },
         "CSD U1 storage movies_2022": {
           "Star Wars": "Guerre Stellari",
           "Yes": "Sì",
           "No": "No",
-          "text": "testo"
+          "text": "testo",
+          "-- Select a movie --": "-- Seleziona un film --",
+          "Harry Potter": "Harry Potter",
+          "The LEGO Movie": "The LEGO Movie",
+          "My Neighbor Totoro": "\nIl mio vicino Totoro",
+          "Select your favorite movie": "Seleziona il tuo film preferito",
+          "What Should I Watch?": "Cosa dovrei guardare?",
+          "You wanted to watch a:": "Volevi guardare un:",
+          "Based on your preferences, we think you should watch:": "In base alle tue preferenze, pensiamo che dovresti guardare:"
         },
         "CSD U1 storage outfit_2021": {
           "Clear": "Cancella",
@@ -233,7 +419,14 @@
           "green": "verde",
           "black": "nero",
           "purple": "viola",
-          "Outfit Picker": "App: scelta di abiti"
+          "Outfit Picker": "App: scelta di abiti",
+          "Spring": "Primavera",
+          "Summer": "Estate",
+          "Autumn": "Autunno",
+          "Winter": "Inverno",
+          "What season is it?": "Che stagione è?",
+          "Cloudy": "Nuvoloso",
+          "Generate Outfit!": "Genera Outfit!"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "Cancella",
@@ -242,7 +435,14 @@
           "green": "verde",
           "black": "nero",
           "purple": "viola",
-          "Outfit Picker": "App: scelta di abiti"
+          "Outfit Picker": "App: scelta di abiti",
+          "Spring": "Primavera",
+          "Summer": "Estate",
+          "Autumn": "Autunno",
+          "Winter": "Inverno",
+          "What season is it?": "Che stagione è?",
+          "Cloudy": "Nuvoloso",
+          "Generate Outfit!": "Genera Outfit!"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -1541,6 +1741,17 @@
           "night": "notte",
           "dusk": "Crepuscolo",
           "Predict": "Predict"
+        },
+        "CSD U1 processing countries_2021": {
+          "have more than a billion people?": "ha più di un miliardo di persone?"
+        },
+        "CSD U1 processing countries_2022": {
+          "have more than a billion people?": "ha più di un miliardo di persone?"
+        },
+        "CSDU4 - Design Mode - 17": {
+          "Red Button!": "Pulsante Rosso!",
+          "Click me!": "Cliccami!",
+          "I'm a button!": "Sono un pulsante!"
         }
       }
     }

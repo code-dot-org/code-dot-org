@@ -1,0 +1,20 @@
+name 'csc_ecosystems_overfishing_solutions_overview'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+#Saving our Seas! 
+
+> The ocean has a lot of fish in it, but sometimes people catch too many fish and it can be bad for the ecosystem. There are three things that people can do to help protect our ocean ecosystems: 
+
+##Set Fishing Limits
+**Scientists can figure out how many fish can be caught without hurting the ocean. Then they can tell the fishermen to only catch that many fish.**
+
+##No Fishing Zones
+**Fishing boats can only fish in designated areas. Some areas are off limits for fishing boats so the ecosystem can recover.**
+
+##Fishing Season
+**Set limits on when people can catch fish. When it is not fishing season the ecosystem has time to recover.**
+
+>>>**There are rules that fishermen have to follow when they catch fish, and people can check to make sure they are following the rules. If they don't follow the rules, they can get in trouble.**
+MARKDOWN

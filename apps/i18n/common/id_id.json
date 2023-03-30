@@ -903,6 +903,7 @@
   "explainPairProgramming": "Saat pair programming diaktifkan, murid bisa memilih untuk bekerja dengan teman sekelas di komputer yang sama. Hidupkan pengaturan ini jika Anda ingin murid dapat bekerja sama sambil berbagi kemajuan.\n ",
   "explainPairProgrammingLearnMore": " Pelajari lebih lanjut tentang pair programming.",
   "explainRestrictedSectionEmail": "Jika disetel menjadi 'ya', siswa tidak akan dapat bergabung ke segmen ini menggunakan kode segmen. Anda masih dapat menambahkan siswa ke bagian ini secara manual dengan memindahkan atau menyalinnya dari segmen lain.",
+  "explainRestrictedSectionEmailToolTip": "Jika disetel menjadi 'ya', siswa tidak akan dapat bergabung ke segmen ini menggunakan kode segmen. Anda masih dapat menambahkan siswa ke bagian ini secara manual dengan memindahkan atau menyalinnya dari segmen lain.",
   "explainRestrictedSectionWordAndPicture": "Jika disetel menjadi 'ya', siswa tidak akan dapat bergabung ke segmen ini menggunakan kode segmen. Anda masih dapat menambahkan siswa ke segmen ini secara manual pada tab Kelola Siswa.",
   "explainRestrictedSectionLearnMore": "Pelajari lebih banyak",
   "exploreDataset": "Visualisasikan {datasetName}",
