@@ -59,13 +59,15 @@ export default class FieldChord extends Field {
       this.borderRect_.classList.add('blocklyDropdownRect');
     }
 
-    this.backgroundElement = GoogleBlockly.utils.dom.createSvgElement(
+    this.backgroundElement = GoogleBlockly.utils.dom.createSvgElement<
+      SVGGraphicsElement
+    >(
       'g',
       {
         transform: 'translate(1,1)'
       },
       this.fieldGroup_
-    ) as SVGGraphicsElement;
+    );
   }
 
   applyColour() {
@@ -92,24 +94,23 @@ export default class FieldChord extends Field {
 
   protected render_() {
     if (this.backgroundElement) {
-      this.backgroundElement.innerHTML = "";
+      this.backgroundElement.innerHTML = '';
     }
 
-    const backingRectangle = GoogleBlockly.utils.dom.createSvgElement('rect',
-    {
-      'fill': '#54595e',
-      'x': 1,
-      'y': 1,
-      'width': FIELD_WIDTH,
-      'height': FIELD_HEIGHT
-    }, this.backgroundElement);
+    const backingRectangle = GoogleBlockly.utils.dom.createSvgElement(
+      'rect',
+      {
+        fill: '#54595e',
+        x: 1,
+        y: 1,
+        width: FIELD_WIDTH,
+        height: FIELD_HEIGHT
+      },
+      this.backgroundElement
+    );
 
     const graphNotes: ChordGraphNote[] = generateGraphDataFromChord({
-      chordEventValue: {
-        notes: this.getValue().notes,
-        playStyle: this.getValue().playStyle,
-        instrument: this.getValue().instrument
-      } as ChordEventValue,
+      chordEventValue: this.getValue(),
       width: FIELD_WIDTH,
       height: FIELD_HEIGHT,
       numOctaves: 3,
@@ -119,14 +120,17 @@ export default class FieldChord extends Field {
     });
 
     graphNotes.forEach(graphNote => {
-      GoogleBlockly.utils.dom.createSvgElement('rect',
-      {
-        'fill': '#59b9dc',
-        'x': graphNote.x,
-        'y': graphNote.y,
-        'width': graphNote.width,
-        'height': graphNote.height
-      }, this.backgroundElement);
+      GoogleBlockly.utils.dom.createSvgElement(
+        'rect',
+        {
+          fill: '#59b9dc',
+          x: graphNote.x,
+          y: graphNote.y,
+          width: graphNote.width,
+          height: graphNote.height
+        },
+        this.backgroundElement
+      );
     });
 
     this.updateSize_();
