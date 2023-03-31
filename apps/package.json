@@ -9,7 +9,7 @@
   },
   "scripts": {
     "lint": "yarn lint:scss && yarn lint:js",
-    "lint:js": "eslint --format ./.eslintCustomMessagesFormatter.js --ext .js,.jsx,.ts,.tsx src test",
+    "lint:js": "eslint --format ./.eslintCustomMessagesFormatter.js --ext .js,.jsx,.ts,.tsx src test --resolve-plugins-relative-to .",
     "lint:scss": "npx stylelint '**/*.scss'",
     "test": "TZ=UTC ./test-low-memory.sh",
     "test-low-memory": "TZ=UTC ./test-low-memory.sh",
