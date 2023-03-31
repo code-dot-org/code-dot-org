@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-25 16:50:02 UTC",
+    "serialized_at": "2023-03-31 05:08:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -287,7 +287,7 @@
     },
     {
       "key": "Project   Digital Information Dilemmas Part 1",
-      "name": "Project   Digital Information Dilemmas Part 1",
+      "name": "Project Digital Information Dilemmas",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -295,10 +295,9 @@
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students begin tackling the question of whether digitizing information has made the world a better or worse place. To begin the lesson, students place stickies on a spectrum of \"worse\" to \"better\" to state their opinion prior to doing the activity. Students then choose an article they are interested in reading using a process the class completed collectively in the previous lesson. Students will discuss their preliminary reading and opinions after today's lesson and will have a chance to start making an artifact to present their findings.",
-        "preparation": "* Print copies of articles for students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-digital-information-dilemmas-unit-1-lessons-12-13/36469) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "At this point in the unit students understand a great deal about how information is digitized and they are ready to start considering the impacts of digitization on society at large.\r\n\r\nThis lesson is very similar to the project that students will complete at the end of Unit 2 in which students evaluate the benefits and harms of connecting humanity through vast networks.",
-        "student_overview": "Read about a current event or societal challenge created by the digitization of information.",
+        "overview": "In Day 1 of this lesson, students begin tackling the question of whether digitizing information has made the world a better or worse place. To begin the lesson, students place stickies on a spectrum of \"worse\" to \"better\" to state their opinion prior to doing the activity. Students then choose an article they are interested in reading using a process the class completed collectively in the previous lesson. Students will discuss their preliminary reading and opinions after today's lesson and will have a chance to start making an artifact to present their findings.\n\nIn Day 2 of this lesson, students finish designing an artifact that represents their analysis of an article on the impacts of digitizing information. Students will complete the final two quadrants of their poster in which they identify the benefits and harms highlighted in the article and then make an overall claim about whether the world has been made better or worse through the digitization of information. At the conclusion of the class students update the position of their stickies on the \"better\" to \"worse\" spectrum they designed yesterday and then discuss whether and why they changed their opinion.",
+        "preparation": "* Print copies of articles for students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-digital-information-dilemmas-unit-1-lessons-12-13/36469) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our Virtual Lesson Modifications [Day 1](https://docs.google.com/document/d/1_RxxezfQ8cJj9AcMxMObps1E65sHqj5HxHDKii3OHhI/edit?usp=sharing) [Day 2](https://docs.google.com/document/d/1kOrZhsFNaNeo9TK_0xz-FClogTagfsqHFCtFgeHmK9E/edit?usp=sharing)",
+        "student_overview": "Read about a current event or societal challenge created by the digitization of information. Then, share the results of your reading and discuss with classmates the overall impacts of the digitization of information.",
         "unplugged": true
       },
       "seeding_key": {
@@ -308,34 +307,12 @@
       }
     },
     {
-      "key": "Project   Digital Information Dilemmas Part 2",
-      "name": "Project   Digital Information Dilemmas Part 2",
-      "absolute_position": 14,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 13,
-      "properties": {
-        "assessment": true,
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students finish designing an artifact that represents their analysis of an article on the impacts of digitizing information. Students will complete the final two quadrants of their poster in which they identify the benefits and harms highlighted in the article and then make an overall claim about whether the world has been made better or worse through the digitization of information. At the conclusion of the class students update the position of their stickies on the \"better\" to \"worse\" spectrum they designed yesterday and then discuss whether and why they changed their opinion.",
-        "preparation": "* Make sure students have access to the posters they began designing in the previous lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-digital-information-dilemmas-unit-1-lessons-12-13/36469) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is a continuation of the major unit project. Students continue to consider broad societal questions about the impacts of computing and the ways it is changing their world.",
-        "student_overview": "Share the results of your reading and discuss with classmates the overall impacts of the digitization of information.",
-        "unplugged": true
-      },
-      "seeding_key": {
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023"
-      }
-    },
-    {
       "key": "Assessment Day",
       "name": "Assessment Day",
-      "absolute_position": 15,
+      "absolute_position": 14,
       "lockable": true,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 13,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -840,38 +817,11 @@
       }
     },
     {
-      "key": "95ceb234-70f4-4cbe-b92f-40840ff25c97",
+      "key": "1cbb6da2-8734-4189-b7ee-ee9f72fa2009",
       "position": 1,
       "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "95ceb234-70f4-4cbe-b92f-40840ff25c97",
-        "lesson.key": "Project   Digital Information Dilemmas Part 1",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023"
-      }
-    },
-    {
-      "key": "adeabbf5-c156-4223-8b2b-53dca17528be",
-      "position": 2,
-      "properties": {
-        "duration": 5,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "adeabbf5-c156-4223-8b2b-53dca17528be",
-        "lesson.key": "Project   Digital Information Dilemmas Part 1",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023"
-      }
-    },
-    {
-      "key": "1cbb6da2-8734-4189-b7ee-ee9f72fa2009",
-      "position": 3,
-      "properties": {
-        "duration": 35,
-        "name": "Activity"
+        "duration": 45,
+        "name": "Day 1"
       },
       "seeding_key": {
         "lesson_activity.key": "1cbb6da2-8734-4189-b7ee-ee9f72fa2009",
@@ -881,70 +831,15 @@
       }
     },
     {
-      "key": "14dc2ad8-b574-4575-825b-1cf38edb6f53",
-      "position": 4,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "14dc2ad8-b574-4575-825b-1cf38edb6f53",
-        "lesson.key": "Project   Digital Information Dilemmas Part 1",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023"
-      }
-    },
-    {
-      "key": "aba3638c-10df-4c8f-a196-7a9a1a6f8b69",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "aba3638c-10df-4c8f-a196-7a9a1a6f8b69",
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023"
-      }
-    },
-    {
-      "key": "ce62eec7-3136-424b-90c8-5d027e353e8b",
+      "key": "082efe3a-bc1d-4070-bc60-a46fd452b06c",
       "position": 2,
       "properties": {
-        "duration": 5,
-        "name": "Warm Up"
+        "duration": 45,
+        "name": "Day 2"
       },
       "seeding_key": {
-        "lesson_activity.key": "ce62eec7-3136-424b-90c8-5d027e353e8b",
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023"
-      }
-    },
-    {
-      "key": "ab7912ae-8334-4d07-a06a-5a3e5da57d3e",
-      "position": 3,
-      "properties": {
-        "duration": 35,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ab7912ae-8334-4d07-a06a-5a3e5da57d3e",
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023"
-      }
-    },
-    {
-      "key": "b46938f2-93c8-4b7b-ba81-d88338fbe763",
-      "position": 4,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b46938f2-93c8-4b7b-ba81-d88338fbe763",
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
+        "lesson_activity.key": "082efe3a-bc1d-4070-bc60-a46fd452b06c",
+        "lesson.key": "Project   Digital Information Dilemmas Part 1",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2023"
       }
@@ -3513,56 +3408,49 @@
       }
     },
     {
-      "key": "3a3f0860-e0f3-428a-aad2-c97724046c08",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png) **Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1_RxxezfQ8cJj9AcMxMObps1E65sHqj5HxHDKii3OHhI/edit?usp=sharing) to access the modifications. "
-      },
-      "seeding_key": {
-        "activity_section.key": "3a3f0860-e0f3-428a-aad2-c97724046c08",
-        "lesson_activity.key": "95ceb234-70f4-4cbe-b92f-40840ff25c97"
-      }
-    },
-    {
-      "key": "85200a50-112b-4a4a-8782-d5332150b140",
+      "key": "d90220b9-76ac-41f9-a9d4-b866a06f9064",
       "position": 1,
       "properties": {
         "description": "This unit we have considered how our analog world can be represented digitally. Today we will consider the impact of digitizing our world. Does it make it better or worse?",
+        "duration": "5",
+        "name": "Warm Up",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "85200a50-112b-4a4a-8782-d5332150b140",
-        "lesson_activity.key": "adeabbf5-c156-4223-8b2b-53dca17528be"
+        "activity_section.key": "d90220b9-76ac-41f9-a9d4-b866a06f9064",
+        "lesson_activity.key": "1cbb6da2-8734-4189-b7ee-ee9f72fa2009"
       }
     },
     {
-      "key": "2e8ee446-ba7a-45c0-8ce0-c86eccbbcaf5",
+      "key": "1fbfcbd8-a0d2-4f21-bdd1-9bbcdb895e39",
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Is our world better or worse because of digital representation? Place a sticky note (or draw an X) on the board at the place on the line that feels right to you right now.*\n\n**Discussion Goal:** This activity is supposed to be open-ended and something that students come back to at the end of this lesson and the following one. Don't enforce too many rules and don't spend too much time. Just ask them to make a decision and let them know they'll have a chance to make a change to their choice at the end of the next two lessons.\n\nWhen students have filled in the spectrum it will look something like the drawing below. \n\n![](https://images.code.org/8ce9e193210753e29ae826918ab92b0c-image-1611866479179.jpg)\n"
       },
       "seeding_key": {
-        "activity_section.key": "2e8ee446-ba7a-45c0-8ce0-c86eccbbcaf5",
-        "lesson_activity.key": "adeabbf5-c156-4223-8b2b-53dca17528be"
+        "activity_section.key": "1fbfcbd8-a0d2-4f21-bdd1-9bbcdb895e39",
+        "lesson_activity.key": "1cbb6da2-8734-4189-b7ee-ee9f72fa2009"
       }
     },
     {
-      "key": "370801d6-a12f-4140-888c-86e8c6938db1",
+      "key": "b578ddb1-a483-480a-ae6a-0bc6ad770cfb",
       "position": 3,
       "properties": {
         "description": "We're going to think more about this question together. You'll have a chance once we've done some more digging to update your answer if you like.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "370801d6-a12f-4140-888c-86e8c6938db1",
-        "lesson_activity.key": "adeabbf5-c156-4223-8b2b-53dca17528be"
+        "activity_section.key": "b578ddb1-a483-480a-ae6a-0bc6ad770cfb",
+        "lesson_activity.key": "1cbb6da2-8734-4189-b7ee-ee9f72fa2009"
       }
     },
     {
       "key": "66b38c0d-368a-490d-98cd-daed6f66d43c",
-      "position": 1,
+      "position": 4,
       "properties": {
         "description": "Yesterday, you stated an opinion on a copyright issue based on reading an article. Today, you will get to choose an article to read and respond to, focusing on the digital dilemma: Is our world better or worse?",
+        "duration": "35",
+        "name": "Activity",
         "remarks": true,
         "tips": [
           {
@@ -3578,7 +3466,7 @@
     },
     {
       "key": "761ced6d-18c1-4c0f-99e3-34e51943afae",
-      "position": 2,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Students pick one of the articles below.\n\n* [r the_ethics_of_computer-generated_actors/csp/2023]\n* [r dna_testing_kits_the_security_risks_in_digitized_dna/csp/2023]\n* [r athletes_don_t_own_their_tattoos/csp/2023] \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Instructions on lesson slides.\n\n* **Highlight/Underline:** Any information in this article that you want to learn more about. \n* **At The End:** Write a 10 word summary of the article. \n\n**Group:** Create groups of students who read the same article. You may need to have more than one group for a single article."
       },
@@ -3589,7 +3477,7 @@
     },
     {
       "key": "1405c091-ae9f-4646-84ff-a6b76aa68b9e",
-      "position": 3,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Share your 10 word summary with the group and discuss the main content in the articles. Together look up any unfamiliar words or concepts.*\n\n**Discussion Goal:** At the end of this time, students should feel comfortable with the content of their articles. Opinions will be shared later. "
       },
@@ -3600,7 +3488,7 @@
     },
     {
       "key": "dea90e33-2053-435f-81be-7e2728e42b29",
-      "position": 4,
+      "position": 7,
       "properties": {
         "description": "Now, that you have a better understanding of the content of your article, you're going to re-read the article to determine if our world is in a better or worse place.",
         "remarks": true
@@ -3612,7 +3500,7 @@
     },
     {
       "key": "c6498f85-0f68-4583-b034-3aab5eb33314",
-      "position": 5,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Is our world in a better or worse place because of digital representation?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\nHave students re-read their article in order to answer these questions. Students leave comments in the margins and text of the article. \n\n* What was digitized?\n* What was the goal or purpose of digitizing this thing?\n* Is someone benefiting from this situation? If so, who?\n* Is someone being harmed in this situation? If so, who?\n* Are these impacts intended or unintended? How do you know?\n\nStudents should continue to annotate their article by adding the following symbols:\n\n* Add a + next to the sentences that show benefit.\n* Add a - next to sentences that show harm.\n* Add a face next to sentences that show impact. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Check back in with your group. Share some of the sentences you annotated. Did everyone identify the same areas?*"
       },
@@ -3623,7 +3511,7 @@
     },
     {
       "key": "002bcd70-1516-4dee-a048-92deb131e7c6",
-      "position": 6,
+      "position": 9,
       "properties": {
         "description": "You need to take a stand on today's question, using the article to help support your position. We will do this by creating a poster.",
         "remarks": true
@@ -3635,7 +3523,7 @@
     },
     {
       "key": "3f4eaf17-8b06-406b-b38d-761f462f3805",
-      "position": 7,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to create posters by following instructions on the lesson slides. Students will divide a sheet of paper into four quadrants and write information in each of the quadrants. For this lesson, students will complete the top two quadrants. In the next lesson, they will finish the bottom two."
       },
@@ -3646,7 +3534,7 @@
     },
     {
       "key": "08cf6f81-38a0-4722-a240-cce8783e88af",
-      "position": 8,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Complete the top two quadrants.",
         "tips": [
@@ -3663,7 +3551,7 @@
     },
     {
       "key": "3b80bd15-bee8-495f-9483-452998bbf44e",
-      "position": 9,
+      "position": 12,
       "properties": {
         "description": "* **Quadrant 1:** What is being digitized? How is the information represented digitally? \n\n\t* For example: Is it an image or text? Do you think it's been compressed? Which form of compression (lossy/lossless)?\n\n* **Quadrant 2:** What is the goal or purpose of digitizing this thing?"
       },
@@ -3673,217 +3561,210 @@
       }
     },
     {
-      "key": "2613a0c9-920e-401e-a65c-c7ad13b6ed8d",
-      "position": 1,
+      "key": "b51a2106-0d70-4c3c-861d-fdd4601116d2",
+      "position": 13,
       "properties": {
         "description": "Tomorrow we will finish our position posters.",
+        "duration": "5",
+        "name": "Wrap Up",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "2613a0c9-920e-401e-a65c-c7ad13b6ed8d",
-        "lesson_activity.key": "14dc2ad8-b574-4575-825b-1cf38edb6f53"
+        "activity_section.key": "b51a2106-0d70-4c3c-861d-fdd4601116d2",
+        "lesson_activity.key": "1cbb6da2-8734-4189-b7ee-ee9f72fa2009"
       }
     },
     {
-      "key": "9b25171f-b0b2-4db6-8085-216a21a1aaca",
-      "position": 2,
+      "key": "93cdd0b7-6d86-4338-bb59-3d9cc7578319",
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Do you think there is always both a benefit and a harm to digitizing analog content? Why or why not?*\n\n**Discussion Goal:** Answers will vary. The goal here is for students to start thinking about the tradeoffs when it comes to digitizing the world. \n\n---"
       },
       "seeding_key": {
-        "activity_section.key": "9b25171f-b0b2-4db6-8085-216a21a1aaca",
-        "lesson_activity.key": "14dc2ad8-b574-4575-825b-1cf38edb6f53"
+        "activity_section.key": "93cdd0b7-6d86-4338-bb59-3d9cc7578319",
+        "lesson_activity.key": "1cbb6da2-8734-4189-b7ee-ee9f72fa2009"
       }
     },
     {
-      "key": "74f57730-793e-42e7-9f68-ef7c36fb0634",
-      "position": 3,
+      "key": "5528c691-7d34-4d8a-8c6a-6efe98c3ff3d",
+      "position": 15,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Many museums have digital catalogs of their collections. What are the potential benefits and harms of creating these digital catalogs?",
         "name": "Assessment: Check For Understanding\r",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
-        "activity_section.key": "74f57730-793e-42e7-9f68-ef7c36fb0634",
-        "lesson_activity.key": "14dc2ad8-b574-4575-825b-1cf38edb6f53"
+        "activity_section.key": "5528c691-7d34-4d8a-8c6a-6efe98c3ff3d",
+        "lesson_activity.key": "1cbb6da2-8734-4189-b7ee-ee9f72fa2009"
       }
     },
     {
-      "key": "a10c0dfb-4781-4d57-a9c6-bfbd8457c2ae",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png) **Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1kOrZhsFNaNeo9TK_0xz-FClogTagfsqHFCtFgeHmK9E/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "a10c0dfb-4781-4d57-a9c6-bfbd8457c2ae",
-        "lesson_activity.key": "aba3638c-10df-4c8f-a196-7a9a1a6f8b69"
-      }
-    },
-    {
-      "key": "31279d12-3517-41ea-a42c-73065f2b6081",
+      "key": "3f8dccb8-7a61-48c5-9d01-1114abd30330",
       "position": 1,
       "properties": {
         "description": "Yesterday you began making a position poster based on an article you read. Today we are going to finish that up before debating our positions!",
+        "duration": "5",
+        "name": "Warm Up",
         "remarks": true,
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Get to the Activity:** The warm-up is short today. Continue on to the activity as soon as possible to give students the maximum amount of time to complete their posters. \r\n"
+            "markdown": "**Get to the Activity:** The warm-up is short today. Continue on to the activity as soon as possible to give students the maximum amount of time to complete their posters. "
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "31279d12-3517-41ea-a42c-73065f2b6081",
-        "lesson_activity.key": "ce62eec7-3136-424b-90c8-5d027e353e8b"
+        "activity_section.key": "3f8dccb8-7a61-48c5-9d01-1114abd30330",
+        "lesson_activity.key": "082efe3a-bc1d-4070-bc60-a46fd452b06c"
       }
     },
     {
-      "key": "f221efd2-efe9-451b-a240-018c7b3e0708",
-      "position": 1,
+      "key": "7f5e7f74-6b05-48ee-806e-bf289afd3427",
+      "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Use the lesson slides to guide students through completing their position posters.",
-        "duration": "15",
-        "name": "Position Posters",
+        "description": "####Position Posters\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Use the lesson slides to guide students through completing their position posters.",
+        "duration": "35",
+        "name": "Activity",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Encourage students to find creative ways to represent the information in each quadrant. \n"
+            "markdown": "Encourage students to find creative ways to represent the information in each quadrant."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "f221efd2-efe9-451b-a240-018c7b3e0708",
-        "lesson_activity.key": "ab7912ae-8334-4d07-a06a-5a3e5da57d3e"
+        "activity_section.key": "7f5e7f74-6b05-48ee-806e-bf289afd3427",
+        "lesson_activity.key": "082efe3a-bc1d-4070-bc60-a46fd452b06c"
       }
     },
     {
-      "key": "d0263595-045d-4fb7-8509-a592171f071f",
-      "position": 2,
+      "key": "d277a6e5-35a2-4973-a107-80c78f0d7af3",
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Complete quadrants 3 & 4.\n\n* **Quadrant 3:** What are the benefits and harms of digitizing this content?\n\n* **Quadrant 4:** Is our world better or worse because of digital representation? Explain why, giving examples from the article."
       },
       "seeding_key": {
-        "activity_section.key": "d0263595-045d-4fb7-8509-a592171f071f",
-        "lesson_activity.key": "ab7912ae-8334-4d07-a06a-5a3e5da57d3e"
+        "activity_section.key": "d277a6e5-35a2-4973-a107-80c78f0d7af3",
+        "lesson_activity.key": "082efe3a-bc1d-4070-bc60-a46fd452b06c"
       }
     },
     {
-      "key": "c8f89c69-18cd-4fa5-b250-1f2acb9cef41",
-      "position": 3,
+      "key": "294767ef-0a8f-40f1-88c6-01e3d22c24b8",
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Place students in groups with one representative for each article. \n\n**Discuss:** Students share their position papers and discuss the articles they read with their groups.",
-        "duration": "10",
         "name": "Jigsaw"
       },
       "seeding_key": {
-        "activity_section.key": "c8f89c69-18cd-4fa5-b250-1f2acb9cef41",
-        "lesson_activity.key": "ab7912ae-8334-4d07-a06a-5a3e5da57d3e"
+        "activity_section.key": "294767ef-0a8f-40f1-88c6-01e3d22c24b8",
+        "lesson_activity.key": "082efe3a-bc1d-4070-bc60-a46fd452b06c"
       }
     },
     {
-      "key": "883e6fb6-920a-40d5-b8c3-232aa4b0b8bf",
-      "position": 4,
+      "key": "3f9acf6a-cad6-41bb-aca3-4769d88d4fb2",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In the last class, we started the lesson by placing a sticky note on a spectrum. Based on your jigsaw discussions, put a sticky note back on the board. Has your position changed since yesterday?\n\nWhere do you stand?",
-        "duration": "10",
         "name": "Digital Dilemma Debate",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "883e6fb6-920a-40d5-b8c3-232aa4b0b8bf",
-        "lesson_activity.key": "ab7912ae-8334-4d07-a06a-5a3e5da57d3e"
+        "activity_section.key": "3f9acf6a-cad6-41bb-aca3-4769d88d4fb2",
+        "lesson_activity.key": "082efe3a-bc1d-4070-bc60-a46fd452b06c"
       }
     },
     {
-      "key": "2af23093-e5c8-4141-bfa2-0d08e1593c66",
-      "position": 5,
+      "key": "e9c09539-340c-4c05-9f1c-fb4ec61f770e",
+      "position": 6,
       "properties": {
         "description": "**Do This:** Students move their sticky notes along the spectrum of worse to better."
       },
       "seeding_key": {
-        "activity_section.key": "2af23093-e5c8-4141-bfa2-0d08e1593c66",
-        "lesson_activity.key": "ab7912ae-8334-4d07-a06a-5a3e5da57d3e"
+        "activity_section.key": "e9c09539-340c-4c05-9f1c-fb4ec61f770e",
+        "lesson_activity.key": "082efe3a-bc1d-4070-bc60-a46fd452b06c"
       }
     },
     {
-      "key": "898a520b-c14b-4988-a85a-4a9c933e3811",
-      "position": 6,
+      "key": "958f2141-525c-48bd-93f4-bfce97cecc52",
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Now, where does our class stand? Where do the majority of our sticky notes fall on the spectrum?  Let's consider our group position.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "898a520b-c14b-4988-a85a-4a9c933e3811",
-        "lesson_activity.key": "ab7912ae-8334-4d07-a06a-5a3e5da57d3e"
+        "activity_section.key": "958f2141-525c-48bd-93f4-bfce97cecc52",
+        "lesson_activity.key": "082efe3a-bc1d-4070-bc60-a46fd452b06c"
       }
     },
     {
-      "key": "1e121fd7-40fe-48c1-bf84-2c00d8f5c709",
-      "position": 7,
+      "key": "53408874-013f-41e6-8117-bad2096739e9",
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Debate:** *Is our world better or worse because of digital representation?*\n\n**Discussion Goal:** At this point, open the floor for general discussion. Students should state their case for the group position, referencing the articles and sharing from their own experiences.  \n"
       },
       "seeding_key": {
-        "activity_section.key": "1e121fd7-40fe-48c1-bf84-2c00d8f5c709",
-        "lesson_activity.key": "ab7912ae-8334-4d07-a06a-5a3e5da57d3e"
+        "activity_section.key": "53408874-013f-41e6-8117-bad2096739e9",
+        "lesson_activity.key": "082efe3a-bc1d-4070-bc60-a46fd452b06c"
       }
     },
     {
-      "key": "0130e61d-7646-4a0d-867c-392b80349a0f",
-      "position": 8,
+      "key": "cff0c325-469e-4029-9b8c-7f2a3e9361a4",
+      "position": 9,
       "properties": {
         "description": "**Do This:** Conclude the debate by grouping all sticky notes into a single location on the spectrum to represent the majority position of the class."
       },
       "seeding_key": {
-        "activity_section.key": "0130e61d-7646-4a0d-867c-392b80349a0f",
-        "lesson_activity.key": "ab7912ae-8334-4d07-a06a-5a3e5da57d3e"
+        "activity_section.key": "cff0c325-469e-4029-9b8c-7f2a3e9361a4",
+        "lesson_activity.key": "082efe3a-bc1d-4070-bc60-a46fd452b06c"
       }
     },
     {
-      "key": "fd00add2-e752-4dcb-885a-6fa4d6ebc06a",
-      "position": 1,
+      "key": "4d656c7b-5d95-4d3f-b971-f2d2d9706f7c",
+      "position": 10,
       "properties": {
         "description": "There are trade-offs in representing information digitally. Usually someone is benefitting while others are harmed.",
+        "duration": "5",
+        "name": "Wrap Up",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "fd00add2-e752-4dcb-885a-6fa4d6ebc06a",
-        "lesson_activity.key": "b46938f2-93c8-4b7b-ba81-d88338fbe763"
+        "activity_section.key": "4d656c7b-5d95-4d3f-b971-f2d2d9706f7c",
+        "lesson_activity.key": "082efe3a-bc1d-4070-bc60-a46fd452b06c"
       }
     },
     {
-      "key": "367dd112-71be-4f0c-9a0b-13c3619eff31",
-      "position": 2,
+      "key": "f5f4a597-38de-4843-83fd-dbcf3ddd0a68",
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why should we care about information being represented digitally? How does this impact you personally?*\n\nAllow students time to think and share about the personal implications of digital representation. \n\n---"
       },
       "seeding_key": {
-        "activity_section.key": "367dd112-71be-4f0c-9a0b-13c3619eff31",
-        "lesson_activity.key": "b46938f2-93c8-4b7b-ba81-d88338fbe763"
+        "activity_section.key": "f5f4a597-38de-4843-83fd-dbcf3ddd0a68",
+        "lesson_activity.key": "082efe3a-bc1d-4070-bc60-a46fd452b06c"
       }
     },
     {
-      "key": "7e7c2cc4-d403-4647-8b5f-357d57b7a10a",
-      "position": 3,
+      "key": "1fc6ef9d-5260-401b-ab11-91765824301c",
+      "position": 12,
       "properties": {
-        "description": "Students turn in both the pieces of their project for assessment:\r\n\r\n* Annotated article\r\n* Position Projects",
-        "name": "Assessment: Submit\r",
+        "description": "Students turn in both the pieces of their project for assessment:\n\n* Annotated article\n* Position Projects",
+        "name": "Assessment: Submit",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
-        "activity_section.key": "7e7c2cc4-d403-4647-8b5f-357d57b7a10a",
-        "lesson_activity.key": "b46938f2-93c8-4b7b-ba81-d88338fbe763"
+        "activity_section.key": "1fc6ef9d-5260-401b-ab11-91765824301c",
+        "lesson_activity.key": "082efe3a-bc1d-4070-bc60-a46fd452b06c"
       }
     },
     {
-      "key": "0bc481a9-1333-4265-9aa3-9de4deca89f8",
-      "position": 4,
+      "key": "ffe41d9a-22f5-4690-83f1-fcde0a77b4de",
+      "position": 13,
       "properties": {
-        "progression_name": "End-Of-Unit Survey"
+        "progression_name": "End-of-Unit Survey"
       },
       "seeding_key": {
-        "activity_section.key": "0bc481a9-1333-4265-9aa3-9de4deca89f8",
-        "lesson_activity.key": "b46938f2-93c8-4b7b-ba81-d88338fbe763"
+        "activity_section.key": "ffe41d9a-22f5-4690-83f1-fcde0a77b4de",
+        "lesson_activity.key": "082efe3a-bc1d-4070-bc60-a46fd452b06c"
       }
     },
     {
@@ -4859,9 +4740,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L13 CFU Digital Representation_2023"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4872,7 +4750,7 @@
         "lesson.key": "Project   Digital Information Dilemmas Part 1",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2023",
-        "activity_section.key": "74f57730-793e-42e7-9f68-ef7c36fb0634"
+        "activity_section.key": "5528c691-7d34-4d8a-8c6a-6efe98c3ff3d"
       },
       "level_keys": [
         "U1L13 CFU Digital Representation_2023"
@@ -4880,13 +4758,10 @@
     },
     {
       "chapter": 39,
-      "position": 1,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L14 CSP CFU digital information_2023"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4894,10 +4769,10 @@
         "script_level.level_keys": [
           "U1L14 CSP CFU digital information_2023"
         ],
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
+        "lesson.key": "Project   Digital Information Dilemmas Part 1",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2023",
-        "activity_section.key": "7e7c2cc4-d403-4647-8b5f-357d57b7a10a"
+        "activity_section.key": "1fc6ef9d-5260-401b-ab11-91765824301c"
       },
       "level_keys": [
         "U1L14 CSP CFU digital information_2023"
@@ -4905,24 +4780,21 @@
     },
     {
       "chapter": 40,
-      "position": 2,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csp1_2023"
-        ],
-        "progression": "End-Of-Unit Survey"
+        "progression": "End-of-Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Student End of Unit Survey_csp1_2023"
         ],
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
+        "lesson.key": "Project   Digital Information Dilemmas Part 1",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2023",
-        "activity_section.key": "0bc481a9-1333-4265-9aa3-9de4deca89f8"
+        "activity_section.key": "ffe41d9a-22f5-4690-83f1-fcde0a77b4de"
       },
       "level_keys": [
         "Student End of Unit Survey_csp1_2023"
@@ -5408,7 +5280,7 @@
         "lesson.key": "Project   Digital Information Dilemmas Part 1",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2023",
-        "activity_section.key": "74f57730-793e-42e7-9f68-ef7c36fb0634"
+        "activity_section.key": "5528c691-7d34-4d8a-8c6a-6efe98c3ff3d"
       }
     },
     {
@@ -5417,10 +5289,10 @@
         "script_level.level_keys": [
           "U1L14 CSP CFU digital information_2023"
         ],
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
+        "lesson.key": "Project   Digital Information Dilemmas Part 1",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2023",
-        "activity_section.key": "7e7c2cc4-d403-4647-8b5f-357d57b7a10a"
+        "activity_section.key": "1fc6ef9d-5260-401b-ab11-91765824301c"
       }
     },
     {
@@ -5429,10 +5301,10 @@
         "script_level.level_keys": [
           "Student End of Unit Survey_csp1_2023"
         ],
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
+        "lesson.key": "Project   Digital Information Dilemmas Part 1",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2023",
-        "activity_section.key": "0bc481a9-1333-4265-9aa3-9de4deca89f8"
+        "activity_section.key": "ffe41d9a-22f5-4690-83f1-fcde0a77b4de"
       }
     },
     {
@@ -5640,19 +5512,6 @@
       },
       "seeding_key": {
         "resource.key": "csp_unit_1-12_-_digital_information"
-      }
-    },
-    {
-      "name": "csp_unit_1-13_-_digital_information",
-      "url": "https://docs.google.com/presentation/d/1XBP2agRKCR0jfuw259wpUGjEmwEAHPJ68DDXi3N06Rc/",
-      "key": "csp_unit_1-13_-_digital_information",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1XBP2agRKCR0jfuw259wpUGjEmwEAHPJ68DDXi3N06Rc/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_1-13_-_digital_information"
       }
     },
     {
@@ -6239,6 +6098,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Digital Information Dilemmas Part 1",
+        "resource.key": "csp_unit_1_project_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Digital Information Dilemmas Part 1",
         "resource.key": "dna_testing_kits_the_security_risks_in_digitized_dna"
       }
     },
@@ -6250,49 +6115,37 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
-        "resource.key": "csp_unit_1-13_-_digital_information"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
-        "resource.key": "csp_unit_1_project_rubric"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
+        "lesson.key": "Project   Digital Information Dilemmas Part 1",
         "resource.key": "u1_high_score_sample_article_markup"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
+        "lesson.key": "Project   Digital Information Dilemmas Part 1",
         "resource.key": "u1_high_score_sample_poster"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
+        "lesson.key": "Project   Digital Information Dilemmas Part 1",
         "resource.key": "u1_high_score_sample_rubric"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
+        "lesson.key": "Project   Digital Information Dilemmas Part 1",
         "resource.key": "u1_mid_score_sample_article_markup"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
+        "lesson.key": "Project   Digital Information Dilemmas Part 1",
         "resource.key": "u1_mid_score_sample_poster"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
+        "lesson.key": "Project   Digital Information Dilemmas Part 1",
         "resource.key": "u1_mid_score_sample_rubric"
       }
     },
@@ -6443,16 +6296,6 @@
       }
     },
     {
-      "key": "2695adc1-67b8-4b27-82a1-49bf35176d9e",
-      "properties": {
-        "description": "Argue whether the digitization of information has broadly speaking improved or damaged society"
-      },
-      "seeding_key": {
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
-        "objective.key": "2695adc1-67b8-4b27-82a1-49bf35176d9e"
-      }
-    },
-    {
       "key": "2ed5c0a3-1045-4c19-8896-1c9eca49196d",
       "properties": {
         "description": "Explain how bits can be used to represent the individual pixels of a black and white image"
@@ -6470,6 +6313,16 @@
       "seeding_key": {
         "lesson.key": "Binary Numbers",
         "objective.key": "34dc1b56-3ec9-4bce-bf60-eb0e50af915c"
+      }
+    },
+    {
+      "key": "53853119-ba81-47a7-87df-646318736a3b",
+      "properties": {
+        "description": "Argue whether the digitization of information has broadly speaking improved or damaged society"
+      },
+      "seeding_key": {
+        "lesson.key": "Project   Digital Information Dilemmas Part 1",
+        "objective.key": "53853119-ba81-47a7-87df-646318736a3b"
       }
     },
     {
@@ -6603,6 +6456,16 @@
       }
     },
     {
+      "key": "b53f5def-c66d-4aa7-a253-264c69e47ee8",
+      "properties": {
+        "description": "Examine articles to identify the social benefits and harms caused by information digitization"
+      },
+      "seeding_key": {
+        "lesson.key": "Project   Digital Information Dilemmas Part 1",
+        "objective.key": "b53f5def-c66d-4aa7-a253-264c69e47ee8"
+      }
+    },
+    {
       "key": "b824a746-c97c-4e01-99e5-9d0889c6433d",
       "properties": {
         "description": "Explain how digital data is used to approximate real-world analog data "
@@ -6630,16 +6493,6 @@
       "seeding_key": {
         "lesson.key": "Circle Square Patterns",
         "objective.key": "cb3a8f93-8bdf-41d4-a523-df1938f19b62"
-      }
-    },
-    {
-      "key": "cca18fab-3883-4d5c-aebc-0dff3c3e7969",
-      "properties": {
-        "description": "Examine articles to identify the social benefits and harms caused by information digitization"
-      },
-      "seeding_key": {
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
-        "objective.key": "cca18fab-3883-4d5c-aebc-0dff3c3e7969"
       }
     },
     {
@@ -6995,27 +6848,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Digital Information Dilemmas Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-28"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-20"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-24"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Digital Information Dilemmas Part 2",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-28"
       }
