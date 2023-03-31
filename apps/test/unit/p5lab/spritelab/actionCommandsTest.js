@@ -453,11 +453,21 @@ describe('Action Commands', () => {
     ).to.equal(-90);
   });
 
+  // tests copied from dance party repo here:
+  // https://github.com/code-dot-org/dance-party/blob/main/test/unit/layoutTest.js
   describe('layoutSprites', () => {
     const minX = 20;
     const maxX = 400 - minX;
     const minY = 35;
     const maxY = 400 - 40;
+
+    const createSprites = (n, animation) => {
+      for (let i = 0; i < n; i++) {
+        coreLibrary.addSprite({
+          animation: animation
+        });
+      }
+    };
 
     beforeEach(() => {
       let image = new p5.Image(100, 100, coreLibrary.p5);
@@ -465,21 +475,19 @@ describe('Action Commands', () => {
       let sheet = new coreLibrary.p5.SpriteSheet(image, frames);
       let animation = new coreLibrary.p5.Animation(sheet);
       coreLibrary.p5._predefinedSpriteAnimations = {
-        costume_label: animation,
-        // only needed for one test, move?
-        costume_label2: animation,
-        costume_label3: animation
+        cat: animation,
+        alien: animation,
+        duck: animation
       };
     });
-    // teardown?
 
     it('circle layout works with 1 sprite', () => {
       coreLibrary.addSprite({
-        animation: 'costume_label'
+        animation: 'cat'
       });
 
-      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'circle']);
-      const sprites = coreLibrary.getSpriteArray({costume: 'costume_label'});
+      commands.layoutSprites.apply(coreLibrary, ['cat', 'circle']);
+      const sprites = coreLibrary.getSpriteArray({costume: 'cat'});
 
       // one sprite, facing upwards
       expect(sprites.length).to.equal(1);
@@ -488,14 +496,10 @@ describe('Action Commands', () => {
     });
 
     it('circle layout works with 2 sprites', () => {
-      for (let i = 0; i < 2; i++) {
-        coreLibrary.addSprite({
-          animation: 'costume_label'
-        });
-      }
+      createSprites(2, 'cat');
 
-      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'circle']);
-      const sprites = coreLibrary.getSpriteArray({costume: 'costume_label'});
+      commands.layoutSprites.apply(coreLibrary, ['cat', 'circle']);
+      const sprites = coreLibrary.getSpriteArray({costume: 'cat'});
 
       expect(sprites.length).to.equal(2);
       expect(sprites[0].x).to.equal(200);
@@ -509,31 +513,18 @@ describe('Action Commands', () => {
     });
 
     it('circle changes radius/scale as we add more sprites', () => {
-      for (let i = 0; i < 2; i++) {
-        coreLibrary.addSprite({
-          animation: 'costume_label'
-        });
-      }
-      for (let i = 0; i < 10; i++) {
-        coreLibrary.addSprite({
-          animation: 'costume_label2'
-        });
-      }
-      for (let i = 0; i < 20; i++) {
-        coreLibrary.addSprite({
-          animation: 'costume_label3'
-        });
-      }
+      createSprites(2, 'cat');
+      createSprites(10, 'alien');
+      createSprites(20, 'duck');
 
-      // clean up variable names
-      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'circle']);
-      const cats = coreLibrary.getSpriteArray({costume: 'costume_label'});
+      commands.layoutSprites.apply(coreLibrary, ['cat', 'circle']);
+      const cats = coreLibrary.getSpriteArray({costume: 'cat'});
 
-      commands.layoutSprites.apply(coreLibrary, ['costume_label2', 'circle']);
-      const aliens = coreLibrary.getSpriteArray({costume: 'costume_label2'});
+      commands.layoutSprites.apply(coreLibrary, ['alien', 'circle']);
+      const aliens = coreLibrary.getSpriteArray({costume: 'alien'});
 
-      commands.layoutSprites.apply(coreLibrary, ['costume_label3', 'circle']);
-      const ducks = coreLibrary.getSpriteArray({costume: 'costume_label3'});
+      commands.layoutSprites.apply(coreLibrary, ['duck', 'circle']);
+      const ducks = coreLibrary.getSpriteArray({costume: 'duck'});
 
       // fewer cats, so they should be bigger
       expect(cats[0].scale).to.be.greaterThan(aliens[0].scale);
@@ -551,14 +542,10 @@ describe('Action Commands', () => {
     });
 
     it('border works with 5 sprites', () => {
-      for (let i = 0; i < 5; i++) {
-        coreLibrary.addSprite({
-          animation: 'costume_label'
-        });
-      }
+      createSprites(5, 'cat');
 
-      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'border']);
-      const sprites = coreLibrary.getSpriteArray({costume: 'costume_label'});
+      commands.layoutSprites.apply(coreLibrary, ['cat', 'border']);
+      const sprites = coreLibrary.getSpriteArray({costume: 'cat'});
 
       // first four are at the corners
       expect(sprites[0].x).to.equal(minX);
@@ -578,15 +565,10 @@ describe('Action Commands', () => {
     });
 
     it('border works with > 10 sprites', () => {
-      // helper to create sprites?
-      for (let i = 0; i < 11; i++) {
-        coreLibrary.addSprite({
-          animation: 'costume_label'
-        });
-      }
+      createSprites(11, 'cat');
 
-      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'border']);
-      const sprites = coreLibrary.getSpriteArray({costume: 'costume_label'});
+      commands.layoutSprites.apply(coreLibrary, ['cat', 'border']);
+      const sprites = coreLibrary.getSpriteArray({costume: 'cat'});
 
       expect(sprites.length).to.equal(11);
 
@@ -604,14 +586,10 @@ describe('Action Commands', () => {
     });
 
     it('sprites that are lower are in front of those that are higher', () => {
-      for (let i = 0; i < 36; i++) {
-        coreLibrary.addSprite({
-          animation: 'costume_label'
-        });
-      }
+      createSprites(36, 'cat');
 
-      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'circle']);
-      const sprites = coreLibrary.getSpriteArray({costume: 'costume_label'});
+      commands.layoutSprites.apply(coreLibrary, ['cat', 'circle']);
+      const sprites = coreLibrary.getSpriteArray({costume: 'cat'});
 
       expect(sprites.length).to.equal(36);
 
@@ -623,14 +601,10 @@ describe('Action Commands', () => {
     });
 
     it('sprites that are further right have a higher depth', () => {
-      for (let i = 0; i < 2; i++) {
-        coreLibrary.addSprite({
-          animation: 'costume_label'
-        });
-      }
+      createSprites(2, 'cat');
 
-      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'row']);
-      const sprites = coreLibrary.getSpriteArray({costume: 'costume_label'});
+      commands.layoutSprites.apply(coreLibrary, ['cat', 'row']);
+      const sprites = coreLibrary.getSpriteArray({costume: 'cat'});
 
       expect(sprites.length).to.equal(2);
 
@@ -639,14 +613,10 @@ describe('Action Commands', () => {
     });
 
     it('grid layout with perfect square count', () => {
-      for (let i = 0; i < 4; i++) {
-        coreLibrary.addSprite({
-          animation: 'costume_label'
-        });
-      }
+      createSprites(4, 'cat');
 
-      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'grid']);
-      const sprites = coreLibrary.getSpriteArray({costume: 'costume_label'});
+      commands.layoutSprites.apply(coreLibrary, ['cat', 'grid']);
+      const sprites = coreLibrary.getSpriteArray({costume: 'cat'});
 
       expect(sprites.length, 4);
 
@@ -664,14 +634,10 @@ describe('Action Commands', () => {
     });
 
     it('grid layout without perfect square count', () => {
-      for (let i = 0; i < 5; i++) {
-        coreLibrary.addSprite({
-          animation: 'costume_label'
-        });
-      }
+      createSprites(5, 'cat');
 
-      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'grid']);
-      const sprites = coreLibrary.getSpriteArray({costume: 'costume_label'});
+      commands.layoutSprites.apply(coreLibrary, ['cat', 'grid']);
+      const sprites = coreLibrary.getSpriteArray({costume: 'cat'});
 
       expect(sprites.length).to.equal(5);
 
@@ -694,14 +660,10 @@ describe('Action Commands', () => {
     });
 
     it('grid layout of size 2', () => {
-      for (let i = 0; i < 2; i++) {
-        coreLibrary.addSprite({
-          animation: 'costume_label'
-        });
-      }
+      createSprites(2, 'cat');
 
-      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'grid']);
-      const sprites = coreLibrary.getSpriteArray({costume: 'costume_label'});
+      commands.layoutSprites.apply(coreLibrary, ['cat', 'grid']);
+      const sprites = coreLibrary.getSpriteArray({costume: 'cat'});
 
       expect(sprites.length, 2);
 

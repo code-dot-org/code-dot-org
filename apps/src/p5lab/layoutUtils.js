@@ -1,4 +1,3 @@
-// is "spriteArg" name for costumeName?
 /**
  * Given a group of sprites, arrange all sprites of this type in a particular
  * layout. This is likely to change some or all of position/rotation/scale for
@@ -7,7 +6,6 @@
  * https://github.com/code-dot-org/dance-party/blob/6672bdb0cffad1cbfda6e7396155f542b6cdcffe/src/p5.dance.js#L637-L911
  */
 export function layoutSpriteGroup(group, layout, p5) {
-  // resize at top?
   const count = group.length;
   if (!count) {
     return;
