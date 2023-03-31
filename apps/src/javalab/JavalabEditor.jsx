@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setRenderedHeight, setEditorColumnHeight} from './javalabRedux';
+import {setRenderedHeight, setEditorColumnHeight} from './redux/viewRedux';
 import {
   setSource,
   sourceTextUpdated,
@@ -821,7 +821,7 @@ export default connect(
   state => ({
     sources: state.javalabEditor.sources,
     validation: state.javalabEditor.validation,
-    displayTheme: state.javalab.displayTheme,
+    displayTheme: state.javalabView.displayTheme,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
     hasOpenCodeReview: state.javalab.hasOpenCodeReview,
@@ -832,7 +832,7 @@ export default connect(
     activeTabKey: state.javalabEditor.activeTabKey,
     lastTabKeyIndex: state.javalabEditor.lastTabKeyIndex,
     editTabKey: state.javalabEditor.editTabKey,
-    editorFontSize: state.javalab.editorFontSize
+    editorFontSize: state.javalabView.editorFontSize
   }),
   dispatch => ({
     setSource: (filename, source, tabOrder) =>

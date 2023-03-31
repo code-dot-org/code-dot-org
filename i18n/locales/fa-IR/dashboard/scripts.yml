@@ -1482,6 +1482,10 @@ fa:
               display_name: حلقه‌ها
             lessonGroup-5:
               display_name: پروژه
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: ارزیابی
         drafting:
           name: پیشنویس
         tess-testing-problem-solving-2023:

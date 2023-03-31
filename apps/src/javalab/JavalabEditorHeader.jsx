@@ -103,7 +103,7 @@ export default connect(
   state => ({
     isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
     backpackEnabled: state.javalab.backpackEnabled,
-    displayTheme: state.javalab.displayTheme,
+    displayTheme: state.javalabView.displayTheme,
     showProjectTemplateWorkspaceIcon:
       !!state.pageConstants.isProjectTemplateLevel &&
       state.javalab.isReadOnlyWorkspace

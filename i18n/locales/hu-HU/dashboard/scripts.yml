@@ -2657,6 +2657,10 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tanfomlyam Utáni Felmérés
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Felmérők
         tess-testing-problem-solving-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2765,6 +2769,44 @@ hu:
         aiml-2023:
           lesson_groups:
             lessonGroup-3:
+              display_name: 1.  fejezet
+            lessonGroup-4:
+              display_name: 2.  fejezet
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-3:
+              display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 1.  fejezet
+            lessonGroup-4:
+              display_name: 2.  fejezet
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
               display_name: 1.  fejezet
             lessonGroup-4:
               display_name: 2.  fejezet
