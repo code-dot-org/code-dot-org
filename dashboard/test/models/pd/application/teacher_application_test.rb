@@ -1124,10 +1124,18 @@ module Pd::Application
       TeacherApplication.send_admin_approval_reminders_to_teachers
       assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
 
-      # If we created a teacher reminder email any time before, we can't send.
+      # If we queued a teacher reminder email any time before but didn't send, we can send.
       application = create :pd_teacher_application
       create :pd_application_email, application: application, email_type: 'admin_approval_teacher_reminder', created_at: 14.days.ago
       create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
+      assert_equal 0, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
+      TeacherApplication.send_admin_approval_reminders_to_teachers
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
+
+      # If we sent a teacher reminder email any time before, we can't send.
+      application = create :pd_teacher_application
+      create :pd_application_email, application: application, email_type: 'admin_approval_teacher_reminder', created_at: 14.days.ago
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago, sent_at: 6.days.ago
       assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
       TeacherApplication.send_admin_approval_reminders_to_teachers
       assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
