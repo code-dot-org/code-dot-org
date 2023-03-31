@@ -30,17 +30,13 @@ module.exports = {
   },
   rules: {
     'cdo-custom-rules/style-blocks-below-class': 'error'
-  }
-  // overrides: [
-  //   {
-  //     files: ['**/*{ts, tsx}'],
-  //     parser: '@typescript-eslint/parser',
-  //     plugins: ['@typescript-eslint'],
-  //     extends: ['plugin:@typescript-eslint/recommended'],
-  //     // rules: {
-  //     //   '@typescript-eslint/no-empty-function': 0,
-  //     //   '@typescript-eslint/no-var-requires': 0
-  //     // }
-  //   }
-  // ]
+  },
+  overrides: [
+    {
+      files: ['**/*.ts', '**/*.tsx'],
+      parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint'],
+      extends: ['plugin:@typescript-eslint/recommended']
+    }
+  ]
 };
