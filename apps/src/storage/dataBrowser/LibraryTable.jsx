@@ -31,13 +31,8 @@ class LibraryTable extends React.Component {
     });
 
   render() {
-    const {
-      name,
-      libraryManifest,
-      locale,
-      onShowPreview,
-      importTable
-    } = this.props;
+    const {name, libraryManifest, locale, onShowPreview, importTable} =
+      this.props;
     const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
     const datasetInfo = getDatasetInfo(name, libraryManifest.tables);
     const shouldShowTable =

@@ -19,13 +19,8 @@ class PersonalProjectsNameCell extends Component {
   };
 
   render() {
-    const {
-      projectId,
-      projectType,
-      projectName,
-      updatedName,
-      isEditing
-    } = this.props;
+    const {projectId, projectType, projectName, updatedName, isEditing} =
+      this.props;
     const url = `/projects/${projectType}/${projectId}/edit`;
 
     return (

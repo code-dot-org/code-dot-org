@@ -54,12 +54,7 @@ describe('ProgrammingEnvironmentsTable', () => {
     // We need mount here to access the buttons
     const wrapper = mount(<ProgrammingEnvironmentsTable {...defaultProps} />);
 
-    wrapper
-      .find('BodyRow')
-      .at(1)
-      .find('Button')
-      .at(1)
-      .simulate('click');
+    wrapper.find('BodyRow').at(1).find('Button').at(1).simulate('click');
     expect(wrapper.find('StylizedBaseDialog').length).to.equal(1);
   });
 });

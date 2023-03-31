@@ -307,10 +307,7 @@ describe('LessonOverview', () => {
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(1);
-    const dropdownLinks = wrapper
-      .find(DropdownButton)
-      .first()
-      .props().children;
+    const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
     expect(dropdownLinks.map(link => link.props.href)).to.eql([
       '/link/to/lesson_plan.pdf',
       '/link/to/script_resources.pdf'
@@ -331,10 +328,7 @@ describe('LessonOverview', () => {
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(1);
-    const dropdownLinks = wrapper
-      .find(DropdownButton)
-      .first()
-      .props().children;
+    const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
     expect(dropdownLinks.map(link => link.props.href)).to.eql([
       '/link/to/lesson_plan.pdf'
     ]);
@@ -358,10 +352,7 @@ describe('LessonOverview', () => {
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(1);
-    const dropdownLinks = wrapper
-      .find(DropdownButton)
-      .first()
-      .props().children;
+    const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
     expect(dropdownLinks.map(link => link.props.href)).to.eql([
       '/link/to/script_resources.pdf'
     ]);
@@ -385,10 +376,7 @@ describe('LessonOverview', () => {
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(1);
-    const dropdownLinks = wrapper
-      .find(DropdownButton)
-      .first()
-      .props().children;
+    const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
     expect(dropdownLinks.map(link => link.props.href)).to.eql([
       '/link/to/script_resources.pdf'
     ]);

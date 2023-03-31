@@ -10,7 +10,7 @@ import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analy
 $(document).ready(() => {
   const data = getScriptData('freeresponse');
 
-  $('.free-response > .markdown-container').each(function() {
+  $('.free-response > .markdown-container').each(function () {
     const container = this;
     if (!container.dataset.markdown) {
       return;
@@ -29,7 +29,7 @@ $(document).ready(() => {
   const attachmentsMountPoint = document.querySelector('#free-response-upload');
   const attachmentsProps = data.attachments_props;
   if (attachmentsMountPoint && attachmentsProps) {
-    dashboard.project.getCurrentId = function() {
+    dashboard.project.getCurrentId = function () {
       return appOptions.channel;
     };
 

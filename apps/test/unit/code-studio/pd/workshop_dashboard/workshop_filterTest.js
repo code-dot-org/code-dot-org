@@ -18,7 +18,10 @@ describe('WorkshopFilter component', () => {
         expected: {
           CSF: [],
           CSD: [{value: 'C1', label: 'C1'}],
-          CSP: [{value: 'C1', label: 'C1'}, {value: 'C2', label: 'C2'}]
+          CSP: [
+            {value: 'C1', label: 'C1'},
+            {value: 'C2', label: 'C2'}
+          ]
         }
       },
       {

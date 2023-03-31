@@ -390,15 +390,13 @@ describe('Java Lab Editor Test', () => {
         const dispatchSpy = sinon.spy(firstEditor, 'dispatch');
         store.dispatch(setDisplayTheme(DisplayTheme.DARK));
         expect(dispatchSpy).to.have.been.calledWith({
-          effects: javalabEditor.editorModeConfigCompartment.reconfigure(
-            darkMode
-          )
+          effects:
+            javalabEditor.editorModeConfigCompartment.reconfigure(darkMode)
         });
         store.dispatch(setDisplayTheme(DisplayTheme.LIGHT));
         expect(dispatchSpy).to.have.been.calledWith({
-          effects: javalabEditor.editorModeConfigCompartment.reconfigure(
-            lightMode
-          )
+          effects:
+            javalabEditor.editorModeConfigCompartment.reconfigure(lightMode)
         });
         dispatchSpy.restore();
       });
@@ -1103,8 +1101,9 @@ describe('Java Lab Editor Test', () => {
 
     it('is editable', () => {
       const editor = createWrapper();
-      const javalabCodeMirrors = editor.find('JavalabEditor').instance()
-        .editors;
+      const javalabCodeMirrors = editor
+        .find('JavalabEditor')
+        .instance().editors;
       const firstEditor = Object.values(javalabCodeMirrors)[0];
 
       expect(firstEditor.state.facet(EditorView.editable)).to.be.true;
@@ -1117,10 +1116,9 @@ describe('Java Lab Editor Test', () => {
           headerButtonId === backpackHeaderButtonId
             ? 'isButtonDisabled'
             : 'isDisabled';
-        const isButtonDisabled = editor
-          .find(headerButtonId)
-          .first()
-          .props()[propName];
+        const isButtonDisabled = editor.find(headerButtonId).first().props()[
+          propName
+        ];
 
         expect(isButtonDisabled).to.be.false;
       });
@@ -1147,8 +1145,9 @@ describe('Java Lab Editor Test', () => {
 
     it('is not editable', () => {
       const editor = createWrapper();
-      const javalabCodeMirrors = editor.find('JavalabEditor').instance()
-        .editors;
+      const javalabCodeMirrors = editor
+        .find('JavalabEditor')
+        .instance().editors;
       const firstEditor = Object.values(javalabCodeMirrors)[0];
 
       expect(firstEditor.state.facet(EditorView.editable)).to.be.false;
@@ -1162,10 +1161,9 @@ describe('Java Lab Editor Test', () => {
           headerButtonId === backpackHeaderButtonId
             ? 'isButtonDisabled'
             : 'isDisabled';
-        const isButtonDisabled = editor
-          .find(headerButtonId)
-          .first()
-          .props()[propName];
+        const isButtonDisabled = editor.find(headerButtonId).first().props()[
+          propName
+        ];
 
         expect(isButtonDisabled).to.be.true;
       });

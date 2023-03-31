@@ -453,12 +453,8 @@ export default function reducer(state = initialState, action) {
     };
   }
   if (action.type === SET_ALL_SOURCES_AND_FILE_METADATA) {
-    const {
-      fileMetadata,
-      orderedTabKeys,
-      activeTabKey,
-      lastTabKeyIndex
-    } = fileMetadataForEditor(action.sources, action.isEditingStartSources);
+    const {fileMetadata, orderedTabKeys, activeTabKey, lastTabKeyIndex} =
+      fileMetadataForEditor(action.sources, action.isEditingStartSources);
     const updatedSources = updateAllSourceFileOrders(
       action.sources,
       fileMetadata,

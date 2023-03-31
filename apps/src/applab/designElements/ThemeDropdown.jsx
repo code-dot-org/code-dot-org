@@ -31,7 +31,7 @@ export default class ThemeDropdown extends React.Component {
     const {description} = this.props;
     const {selectedValue} = this.state;
 
-    const renderedOptions = themeOptionsForSelect.map(function(themeOption) {
+    const renderedOptions = themeOptionsForSelect.map(function (themeOption) {
       return {
         value: themeOption.option,
         label: (

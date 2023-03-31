@@ -27,8 +27,7 @@ export const stubFakePersonalProjectData = [
     channel: 'abcd2'
   },
   {
-    name:
-      "Personal Project 3 has a super extra long name let's see how it looks in the table",
+    name: "Personal Project 3 has a super extra long name let's see how it looks in the table",
     updatedAt: '2016-10-31T23:59:59.999-08:00',
     type: 'artist',
     channel: 'abcd3',

@@ -157,9 +157,7 @@ class ProgrammingExpressionsEditor extends Component {
       <div>
         {this.state.confirmRemovalDialogOpen && (
           <Dialog
-            body={`Are you sure you want to remove the programming expression "${
-              this.state.programmingExpressionForRemoval.name
-            }" from this lesson?`}
+            body={`Are you sure you want to remove the programming expression "${this.state.programmingExpressionForRemoval.name}" from this lesson?`}
             cancelText="Cancel"
             confirmText="Delete"
             confirmType="danger"
@@ -213,7 +211,8 @@ const styles = {
   }
 };
 
-export const UnconnectedProgrammingExpressionsEditor = ProgrammingExpressionsEditor;
+export const UnconnectedProgrammingExpressionsEditor =
+  ProgrammingExpressionsEditor;
 
 export default connect(
   state => ({

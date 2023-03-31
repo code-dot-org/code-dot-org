@@ -21,11 +21,8 @@ class NeighborhoodVisualizationColumn extends React.Component {
   };
 
   render() {
-    const {
-      displayTheme,
-      isCollapsed,
-      toggleVisualizationCollapsed
-    } = this.props;
+    const {displayTheme, isCollapsed, toggleVisualizationCollapsed} =
+      this.props;
     const {isFullscreen} = this.state;
 
     const fullIconPath =

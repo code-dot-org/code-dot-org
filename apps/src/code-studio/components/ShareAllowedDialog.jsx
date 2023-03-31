@@ -43,7 +43,7 @@ function recordShare(type) {
 }
 
 function wrapShareClick(handler, type) {
-  return function() {
+  return function () {
     try {
       recordShare(type);
     } finally {

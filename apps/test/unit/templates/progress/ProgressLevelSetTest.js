@@ -7,7 +7,7 @@ import {
   fakeLevel
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 
-describe('ProgressLevelSet', function() {
+describe('ProgressLevelSet', function () {
   it('has a pill and no bubbles for a single level', () => {
     const wrapper = shallow(
       <ProgressLevelSet
