@@ -49,6 +49,8 @@ class FieldPattern extends GoogleBlockly.Field {
       },
       this.fieldGroup_
     );
+
+    this.updateSize_();
   }
 
   applyColour() {
@@ -164,8 +166,6 @@ class FieldPattern extends GoogleBlockly.Field {
         this.backgroundElement
       );
     });
-
-    this.updateSize_();
 
     this.renderContent();
   }
