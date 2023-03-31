@@ -3,9 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introducing to Events
+# Introduction to Events
 
-##### Next, you will be introduced to the CS concept of **events**, an action that causes something to happen. 
+##### Next, you will be introduced to the computer science concept of **events**, an action that causes something to happen. 
 
 ## You will:
 

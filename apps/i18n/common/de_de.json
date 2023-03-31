@@ -905,6 +905,7 @@
   "explainPairProgramming": "Wenn die Paarprogrammierung aktiviert ist, können die Schüler wählen, mit einem Klassenkameraden am selben Computer zu arbeiten. Aktivieren Sie diese Einstellung, wenn Sie möchten, dass die Schüler zusammenarbeiten und gleichzeitig den Fortschritt teilen können.",
   "explainPairProgrammingLearnMore": " Mehr über Paar Programmierung lernen.",
   "explainRestrictedSectionEmail": "Wenn Sie für diese Option auf 'ja' festlegen, können die SchülerInnen diesem Bereich nicht über den Bereich Code beitreten. Sie können die SchülerInnen jedoch weiterhin manuell zu diesem Bereich hinzufügen, indem Sie sie aus einem anderen Abschnitt verschieben oder kopieren.",
+  "explainRestrictedSectionEmailToolTip": "Wenn Sie für diese Option auf 'ja' festlegen, können die SchülerInnen diesem Bereich nicht über den Bereich Code beitreten. Sie können die SchülerInnen jedoch weiterhin manuell zu diesem Bereich hinzufügen, indem Sie sie aus einem anderen Abschnitt verschieben oder kopieren.",
   "explainRestrictedSectionWordAndPicture": "Wenn Sie für diese Option auf 'ja' festlegen, können die SchülerInnen diesem Bereich nicht über den Bereich Code beitreten. Sie können die SchülerInnen jedoch weiterhin manuell in der Registerkarte \"SchülerInnen verwalten\" hinzufügen.",
   "explainRestrictedSectionLearnMore": "Mehr erfahren",
   "exploreDataset": "Entdecke {datasetName}",
