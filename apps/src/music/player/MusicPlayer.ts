@@ -25,8 +25,7 @@ const DEFAULT_BPM = 120;
 export default class MusicPlayer {
   private bpm: number;
   private playbackEvents: PlaybackEvent[];
-  private lastTriggeredMeasure: number;
-  private lastWhenRunMeasure: number;
+  private lastMeasure: number;
   private tracksMetadata: {[trackId: string]: TrackMetadata};
   private uniqueInvocationIdUpto: number;
   private samplePlayer: SamplePlayer;
@@ -39,8 +38,7 @@ export default class MusicPlayer {
     this.uniqueInvocationIdUpto = 0;
     this.samplePlayer = new SamplePlayer();
     this.library = null;
-    this.lastTriggeredMeasure = 0;
-    this.lastWhenRunMeasure = 0;
+    this.lastMeasure = 0;
   }
 
   /**
@@ -97,19 +95,6 @@ export default class MusicPlayer {
       return;
     }
 
-    const endingMeasure = measure + soundData.length - 1;
-    if (insideWhenRun) {
-      this.lastWhenRunMeasure = Math.max(
-        endingMeasure,
-        this.lastWhenRunMeasure
-      );
-    } else {
-      this.lastTriggeredMeasure = Math.max(
-        endingMeasure,
-        this.lastTriggeredMeasure
-      );
-    }
-
     const soundEvent: SoundEvent = {
       type: 'sound',
       id,
@@ -124,7 +109,7 @@ export default class MusicPlayer {
       blockId
     };
 
-    this.playbackEvents.push(soundEvent);
+    this.addNewEvent(soundEvent);
 
     if (this.samplePlayer.playing()) {
       this.samplePlayer.playSamples(this.convertEventToSamples(soundEvent));
@@ -163,7 +148,7 @@ export default class MusicPlayer {
       blockId
     };
 
-    this.playbackEvents.push(patternEvent);
+    this.addNewEvent(patternEvent);
 
     if (this.samplePlayer.playing()) {
       this.samplePlayer.playSamples(this.convertEventToSamples(patternEvent));
@@ -202,7 +187,7 @@ export default class MusicPlayer {
       blockId
     };
 
-    this.playbackEvents.push(chordEvent);
+    this.addNewEvent(chordEvent);
 
     if (this.samplePlayer.playing()) {
       this.samplePlayer.playSamples(this.convertEventToSamples(chordEvent));
@@ -282,26 +267,25 @@ export default class MusicPlayer {
    */
   stopSong() {
     this.samplePlayer.stopPlayback();
-    this.clearTriggeredEvents();
   }
 
   /**
-   * Clear all non-triggered events from the list of playback events, and stop
-   * any sounds that have not yet been played, if playback is in progress.
+   * Clear all from the list of playback events, and stop any sounds that have 
+   * not yet been played, if playback is in progress.
    */
-  clearWhenRunEvents() {
-    this.playbackEvents = this.playbackEvents.filter(
-      playbackEvent => playbackEvent.triggered
-    );
+  clearAllEvents() {
+    this.playbackEvents = [];
+    this.lastMeasure = 0;
+    this.tracksMetadata = {};
+
     Object.keys(this.tracksMetadata).forEach(trackId => {
       if (this.tracksMetadata[trackId].insideWhenRun) {
         delete this.tracksMetadata[trackId];
       }
     });
 
-    // If playing, stop all non-triggered samples that have not yet been played.
+    // If playing, stop all samples that have not yet been played.
     this.samplePlayer.stopAllSamplesStillToPlay();
-    this.lastWhenRunMeasure = 0;
   }
 
   getPlaybackEvents(): PlaybackEvent[] {
@@ -309,7 +293,7 @@ export default class MusicPlayer {
   }
 
   getLastMeasure(): number {
-    return Math.max(this.lastWhenRunMeasure, this.lastTriggeredMeasure);
+    return this.lastMeasure;
   }
 
   // Returns the current playhead position, in floating point for an exact position,
@@ -427,10 +411,6 @@ export default class MusicPlayer {
     this.tracksMetadata[trackId].currentMeasure += lengthMeasures;
   }
 
-  clearTracksData() {
-    this.tracksMetadata = {};
-  }
-
   getTracksMetadata(): {[trackId: string]: TrackMetadata} {
     return this.tracksMetadata;
   }
@@ -465,21 +445,9 @@ export default class MusicPlayer {
     return playingBlockIds;
   }
 
-  /**
-   * Clear all triggered events from the list of playback events.
-   */
-  private clearTriggeredEvents() {
-    this.playbackEvents = this.playbackEvents.filter(
-      playbackEvent => !playbackEvent.triggered
-    );
-
-    Object.keys(this.tracksMetadata).forEach(trackId => {
-      if (!this.tracksMetadata[trackId].insideWhenRun) {
-        delete this.tracksMetadata[trackId];
-      }
-    });
-
-    this.lastTriggeredMeasure = 0;
+  private addNewEvent(event: PlaybackEvent) {
+    this.playbackEvents.push(event);
+    this.lastMeasure = Math.max(this.lastMeasure, event.when + event.length - 1);
   }
 
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
