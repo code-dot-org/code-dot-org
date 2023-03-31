@@ -16,6 +16,8 @@ $border-radius: 4px;
   font-size: 1.25em;
 }
 
+.h5-lookalike-style { @include h5-lookalike-style}
+
 // Start styles
 html {
   scroll-behavior: smooth;
@@ -50,16 +52,17 @@ h6 { font-size: 1em; }
 // Use these classes to change a section's background color
 section.bg-neutral-light { background-color: $neutral_light; }
 section.bg-neutral-dark { background-color: $neutral_dark; }
-section.bg-primary { background-color: rgba($brand_primary_light, .5); }
+section.bg-primary-light { background-color: rgba($brand_primary_light, .5); }
 section.bg-secondary { background-color: $brand_secondary_light; }
 
 // Centers a block-level element
 .centered { text-align: center !important; }
 
-// Removes the bottom margin —
+// Removes the bottom margin or padding —
 // often helpful on a last paragraphs or list elements
 // to maintain consistent white space between sections
 .no-margin-bottom { margin-bottom: 0 !important;}
+.no-padding-bottom { padding-bottom: 0 !important;}
 
 // FontAwesome icon defaults
 .icon::before {
@@ -152,13 +155,12 @@ button,
 .btn,
 input[type=submit] {
   height: unset;
-  min-width: 200px;
   display: inline-block;
   color: white;
   background-color: $brand_secondary_default;
   border: 2px solid $brand_secondary_default;
   border-radius: $border-radius;
-  padding: .625em 1em;
+  padding: .625em 2em;
   margin: 0.5em 0;
   font-size: 1em;
   font-family: 'Gotham 5r', sans-serif;
@@ -557,6 +559,10 @@ form {
   display: flex;
   align-content: baseline;
 
+  h3 {
+    width: 100%;
+  }
+
   p.overline {
     color: $brand_primary_default;
     width: 100%;
@@ -586,6 +592,10 @@ form {
 .action-block--one-col {
   flex-wrap: wrap;
   padding: 1em 1.5em;
+
+  @media screen and (max-width: $width-md) {
+    height: 100%;
+  }
 
   img {
     width: 100%;

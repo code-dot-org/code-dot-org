@@ -5,9 +5,13 @@ import {BlockSvg, DropDownDiv, Field, WidgetDiv} from 'blockly/core';
 import {ChordEventValue} from '../player/interfaces/ChordEvent';
 import MusicLibrary from '../player/MusicLibrary';
 import {getNoteName} from '../utils/Notes';
+import GoogleBlockly from 'blockly/core';
+import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
 const experiments = require('@cdo/apps/util/experiments');
 
 const MAX_DISPLAY_NOTES = 3;
+const FIELD_WIDTH = 51;
+const FIELD_HEIGHT = 18;
 
 interface FieldChordOptions {
   getLibrary: () => MusicLibrary;
@@ -28,6 +32,7 @@ export default class FieldChord extends Field {
 
   private options: FieldChordOptions;
   private newDiv: HTMLDivElement | null;
+  private backgroundElement: SVGGraphicsElement | null;
 
   constructor(options: FieldChordOptions) {
     super(options.currentValue);
@@ -36,6 +41,7 @@ export default class FieldChord extends Field {
     this.newDiv = null;
     this.SERIALIZABLE = true;
     this.CURSOR = 'default';
+    this.backgroundElement = null;
   }
 
   saveState() {
@@ -52,6 +58,16 @@ export default class FieldChord extends Field {
     if (this.borderRect_) {
       this.borderRect_.classList.add('blocklyDropdownRect');
     }
+
+    this.backgroundElement = GoogleBlockly.utils.dom.createSvgElement<
+      SVGGraphicsElement
+    >(
+      'g',
+      {
+        transform: 'translate(1,1)'
+      },
+      this.fieldGroup_
+    );
   }
 
   applyColour() {
@@ -77,8 +93,60 @@ export default class FieldChord extends Field {
   }
 
   protected render_() {
-    super.render_();
+    if (this.backgroundElement) {
+      this.backgroundElement.innerHTML = '';
+    }
+
+    const backingRectangle = GoogleBlockly.utils.dom.createSvgElement(
+      'rect',
+      {
+        fill: '#54595e',
+        x: 1,
+        y: 1,
+        width: FIELD_WIDTH,
+        height: FIELD_HEIGHT
+      },
+      this.backgroundElement
+    );
+
+    const graphNotes: ChordGraphNote[] = generateGraphDataFromChord({
+      chordEventValue: this.getValue(),
+      width: FIELD_WIDTH,
+      height: FIELD_HEIGHT,
+      numOctaves: 3,
+      startOctave: 4,
+      padding: 2,
+      noteHeightScale: 4
+    });
+
+    graphNotes.forEach(graphNote => {
+      GoogleBlockly.utils.dom.createSvgElement(
+        'rect',
+        {
+          fill: '#59b9dc',
+          x: graphNote.x,
+          y: graphNote.y,
+          width: graphNote.width,
+          height: graphNote.height
+        },
+        this.backgroundElement
+      );
+    });
+
+    this.updateSize_();
+
     this.renderContent();
+  }
+
+  updateSize_() {
+    const width = 55;
+    const height = 22;
+
+    this.borderRect_?.setAttribute('width', '' + width);
+    this.borderRect_?.setAttribute('height', '' + height);
+
+    this.size_.width = width;
+    this.size_.height = height;
   }
 
   protected showEditor_() {
