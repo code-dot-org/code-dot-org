@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -6,6 +6,8 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import i18n from '@cdo/locale';
 import styles from './check-for-understanding.module.scss';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const FREE_RESPONSE = 'FreeResponse';
 
@@ -31,6 +33,16 @@ const CheckForUnderstanding = ({
   const questionMarkdown = scriptData.level.properties.long_instructions;
   const teacherMarkdown = scriptData.teacher_markdown;
   const height = scriptData.level.height || '80';
+
+  useEffect(() => {
+    const {level} = scriptData;
+    analyticsReporter.sendEvent(EVENTS.SUMMARY_PAGE_VISITED, {
+      levelId: level.id,
+      levelName: level.properties.name,
+      levelType: level.type,
+      ...scriptData.reportingData
+    });
+  }, []);
 
   return (
     <div className={styles.summaryContainer}>
