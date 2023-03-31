@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-28 23:12:39 UTC",
+    "serialized_at": "2023-03-30 18:59:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -655,7 +655,14 @@
       "key": "dd2fb463-af64-4540-806d-05d55c4c172d",
       "position": 1,
       "properties": {
-        "progression_name": "The Pre-Unit Pulse"
+        "description": "Have your students complete these questions independently some time before starting this unit. ",
+        "progression_name": "The Pre-Unit Pulse",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Pre-Unit Pulse Questions:** The answers to these questions can provide insights into the preferences, strengths, and motivations of your students. If you'd like to adapt the questions or add in your own, you may want to make a copy of [this Google Form](https://docs.google.com/forms/d/1gqzFd8b9sxTVsi7PBPyM48l75Y43w_F55eEo3b8PkY8/copy) which already has the existing questions populated.\n\nFor more tips and ideas of how to use these questions, check out the [CSP Guide to Pre-Unit Pulse Questions](https://docs.google.com/document/d/1jx43dakN6og2n7iey_uQrNwcpMHQRbv1RCPZFHpQdYw/edit?usp=sharing)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "dd2fb463-af64-4540-806d-05d55c4c172d",
@@ -2271,6 +2278,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2InterestInventoryQ1"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2293,6 +2303,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2InterestInventoryQ3"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2315,6 +2328,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2InterestInventoryQ2"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
