@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-29 18:12:00 UTC",
+    "serialized_at": "2023-03-31 05:06:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4997,6 +4997,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L2_2023"
+        ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
@@ -5019,6 +5022,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L3_2023"
+        ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
@@ -5041,6 +5047,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L4_2023"
+        ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
@@ -5188,6 +5197,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L2_2023"
+        ],
         "progression": "Practice: Image Filters"
       },
       "bonus": false,
@@ -5210,6 +5222,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L3_2023"
+        ],
         "progression": "Practice: Image Filters"
       },
       "bonus": false,
@@ -5232,6 +5247,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L4_2023"
+        ],
         "progression": "Practice: Image Filters"
       },
       "bonus": false,
@@ -5254,6 +5272,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L5_2023"
+        ],
         "progression": "Practice: Image Filters"
       },
       "bonus": false,

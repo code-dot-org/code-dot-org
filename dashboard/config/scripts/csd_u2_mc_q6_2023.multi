@@ -1,8 +1,16 @@
 name 'CSD U2 MC Q6_2023'
 title 'Question 1'
 type 'multi'
-question 'Placeholder Question Text'
-right 'Placeholder Answer'
+question 'Given this webpage, predict the HTML.'
+height '200'
+right '![](https://images.code.org/a0457e9d4b3efa97baf3894c0c9dfd5b-CSD Unit 2 headings correct.png)'
 wrong 'Placeholder Answer'
 wrong 'Placeholder Answer'
 wrong 'Placeholder Answer'
+
+
+markdown <<MARKDOWN
+![](https://images.code.org/68363b38691c08fdb693edea88a37dcb-CSD%20Unit%202%20headings.png)
+
+<img src="https://images.code.org/a0457e9d4b3efa97baf3894c0c9dfd5b-CSD Unit 2 headings correct.png" style="height:50">
+MARKDOWN
