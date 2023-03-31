@@ -30,5 +30,17 @@ module.exports = {
     "jQuery": true,
     "IN_UNIT_TEST": true,
     "IN_STORYBOOK": true,
-  }
+  }//,
+  // overrides: [
+  //   {
+  //     files: ['**/*{ts, tsx}'],
+  //     parser: '@typescript-eslint/parser',
+  //     plugins: ['@typescript-eslint'],
+  //     extends: ['plugin:@typescript-eslint/recommended'],
+  //     // rules: {
+  //     //   '@typescript-eslint/no-empty-function': 0,
+  //     //   '@typescript-eslint/no-var-requires': 0
+  //     // }
+  //   }
+  // ]
 };
