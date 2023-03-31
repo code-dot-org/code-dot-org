@@ -15,7 +15,7 @@ class SectionsController < ApplicationController
 
     @section = Section.find_by(
       id: params[:id]
-    )
+    ).attributes.to_json.camelize
   end
 
   def show
