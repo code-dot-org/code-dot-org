@@ -373,6 +373,7 @@ def get_i18n_strings(level)
           end
           start_blocks = start_blocks.gsub(block, '')
         end
+
         if level.type == "Gamelab"
           # scanning for text() blocks
           text_blocks = start_blocks.scan(/(?:text\()\s?".*".*\s?,\s?\d{1,3}\s?,\s?\d{1,3}.*\);/)
@@ -395,14 +396,15 @@ def get_i18n_strings(level)
           start_blocks = start_blocks.gsub(/setScreen\(.*\);/, '')
 
           # scanning for steText() blocks
-          set_text_blocks = start_blocks.scan(/(?:setText\()(?:"[\w_]*")\s*,\s*(.*)(?:\s*\);)/)
+          set_text_blocks = start_blocks.scan(/setText\(("[\w_]*",\s?.*)\s?\);/)
           puts '// setText("id", "text") //'
           set_text_blocks.each do |block|
             puts block
             block_string = block.split(',', 2)
             next if block_string.length < 2
             block_string[1].scan(/".*(?<!\\)"/).each do |element|
-              i18n_strings['start_blocks'][element[1..-2]] = element[1..-2] if element.match?(/[A-Za-z]/)
+              puts element if element.match?(/[A-Za-z]/)
+              # i18n_strings['start_blocks'][element[1..-2]] = element[1..-2] if element.match?(/[A-Za-z]/)
             end
             # block.split("+").each do |element|
             #  puts element #if element.match?(/[A-Za-z]/)
@@ -416,7 +418,7 @@ def get_i18n_strings(level)
           puts '// boolean expressions //'
           bool_blocks.each do |block|
             puts block
-            block.scan(/"[^"]*"/).each do |element|
+            block.scan(/(?:==\s?)"[^"]*"(?:\s?\))/).each do |element|
               # i18n_strings['start_blocks'][element[1..-2]] = element[1..-2] if element.match?(/[A-Za-z]/)
               puts '-->' + element if element.match?(/[A-Za-z]/)
             end
