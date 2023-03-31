@@ -36,7 +36,7 @@ const CheckForUnderstanding = ({
 
   useEffect(() => {
     const {level} = scriptData;
-    analyticsReporter.sendEvent(EVENTS.SUMMARY_PAGE_VISITED, {
+    analyticsReporter.sendEvent(EVENTS.SUMMARY_PAGE_LOADED, {
       levelId: level.id,
       levelName: level.properties.name,
       levelType: level.type,

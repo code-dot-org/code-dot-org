@@ -52,7 +52,7 @@ const EVENTS = {
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
   RUBRIC_LEVEL_VIEWED_EVENT: 'Rubric Level Viewed',
   TEACHER_VIEWING_STUDENT_WORK: 'Teacher Viewing Student Work',
-  SUMMARY_PAGE_VISITED: 'Summary Page Visited',
+  SUMMARY_PAGE_LOADED: 'Summary Page Loaded',
 
   // Maker setup
   MAKER_SETUP_PAGE_BOARD_TYPE_EVENT: 'Board Type On Maker Setup Page',
