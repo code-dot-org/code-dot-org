@@ -454,45 +454,262 @@ describe('Action Commands', () => {
   });
 
   describe('layoutSprites', () => {
-    it('border works with 5 sprites', () => {
+    const minX = 20;
+    const maxX = 400 - minX;
+    const minY = 35;
+    const maxY = 400 - 40;
+
+    beforeEach(() => {
       let image = new p5.Image(100, 100, coreLibrary.p5);
       let frames = [{name: 0, frame: {x: 0, y: 0, width: 50, height: 50}}];
       let sheet = new coreLibrary.p5.SpriteSheet(image, frames);
       let animation = new coreLibrary.p5.Animation(sheet);
-      coreLibrary.p5._predefinedSpriteAnimations = {costume_label: animation};
+      coreLibrary.p5._predefinedSpriteAnimations = {
+        costume_label: animation,
+        // only needed for one test, move?
+        costume_label2: animation,
+        costume_label3: animation
+      };
+    });
+    // teardown?
 
-      [1, 2, 3, 4, 5].forEach(i => {
-        // name necessary?
-        coreLibrary.addSprite({
-          animation: 'costume_label',
-          name: `spriteName${i}`
-        });
+    it('circle layout works with 1 sprite', () => {
+      coreLibrary.addSprite({
+        animation: 'costume_label'
       });
 
-      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'border']);
+      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'circle']);
+      const sprites = coreLibrary.getSpriteArray({costume: 'costume_label'});
 
-      const minX = 20;
-      const maxX = 400 - minX;
-      const minY = 35;
-      const maxY = 400 - 40;
+      // one sprite, facing upwards
+      expect(sprites.length).to.equal(1);
+      expect(sprites[0].x).to.equal(200);
+      expect(sprites[0].rotation).to.equal(0);
+    });
 
+    it('circle layout works with 2 sprites', () => {
+      for (let i = 0; i < 2; i++) {
+        coreLibrary.addSprite({
+          animation: 'costume_label'
+        });
+      }
+
+      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'circle']);
+      const sprites = coreLibrary.getSpriteArray({costume: 'costume_label'});
+
+      expect(sprites.length).to.equal(2);
+      expect(sprites[0].x).to.equal(200);
+      expect(sprites[0].rotation).to.equal(0);
+
+      expect(sprites[1].x).to.equal(200);
+      expect(sprites[1].rotation).to.equal(180);
+
+      // fairly weak test that they just have different y values
+      expect(sprites[0].y).to.not.equal(sprites[1].y);
+    });
+
+    it('circle changes radius/scale as we add more sprites', () => {
+      for (let i = 0; i < 2; i++) {
+        coreLibrary.addSprite({
+          animation: 'costume_label'
+        });
+      }
+      for (let i = 0; i < 10; i++) {
+        coreLibrary.addSprite({
+          animation: 'costume_label2'
+        });
+      }
+      for (let i = 0; i < 20; i++) {
+        coreLibrary.addSprite({
+          animation: 'costume_label3'
+        });
+      }
+
+      // clean up variable names
+      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'circle']);
       const cats = coreLibrary.getSpriteArray({costume: 'costume_label'});
 
+      commands.layoutSprites.apply(coreLibrary, ['costume_label2', 'circle']);
+      const aliens = coreLibrary.getSpriteArray({costume: 'costume_label2'});
+
+      commands.layoutSprites.apply(coreLibrary, ['costume_label3', 'circle']);
+      const ducks = coreLibrary.getSpriteArray({costume: 'costume_label3'});
+
+      // fewer cats, so they should be bigger
+      expect(cats[0].scale).to.be.greaterThan(aliens[0].scale);
+      expect(cats[0].scale).to.be.greaterThan(ducks[0].scale);
+
+      // we should stop getting bigger after count 10
+      expect(aliens[0].scale).to.equal(ducks[0].scale);
+
+      // radius should be smaller when we have fewer (so y should be bigger)
+      expect(cats[0].y).to.be.greaterThan(aliens[0].y);
+      expect(cats[0].y).to.be.greaterThan(ducks[0].y);
+
+      // again, this should be unaffected after count 10
+      expect(aliens[0].y).to.equal(ducks[0].y);
+    });
+
+    it('border works with 5 sprites', () => {
+      for (let i = 0; i < 5; i++) {
+        coreLibrary.addSprite({
+          animation: 'costume_label'
+        });
+      }
+
+      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'border']);
+      const sprites = coreLibrary.getSpriteArray({costume: 'costume_label'});
+
       // first four are at the corners
-      expect(cats[0].x, minX);
-      expect(cats[0].y, minY);
+      expect(sprites[0].x).to.equal(minX);
+      expect(sprites[0].y).to.equal(minY);
 
-      expect(cats[1].x, maxX);
-      expect(cats[1].y, minY);
+      expect(sprites[1].x).to.equal(maxX);
+      expect(sprites[1].y).to.equal(minY);
 
-      expect(cats[2].x, maxX);
-      expect(cats[2].y, maxY);
+      expect(sprites[2].x).to.equal(maxX);
+      expect(sprites[2].y).to.equal(maxY);
 
-      expect(cats[3].x, minX);
-      expect(cats[3].y, maxY);
+      expect(sprites[3].x).to.equal(minX);
+      expect(sprites[3].y).to.equal(maxY);
 
-      expect(cats[4].x, (minX + maxX) / 2);
-      expect(cats[4].y, minY);
+      expect(sprites[4].x).to.equal((minX + maxX) / 2);
+      expect(sprites[4].y).to.equal(minY);
+    });
+
+    it('border works with > 10 sprites', () => {
+      // helper to create sprites?
+      for (let i = 0; i < 11; i++) {
+        coreLibrary.addSprite({
+          animation: 'costume_label'
+        });
+      }
+
+      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'border']);
+      const sprites = coreLibrary.getSpriteArray({costume: 'costume_label'});
+
+      expect(sprites.length).to.equal(11);
+
+      // top row should contain first, second, and then 2 more
+      [0, 1, 4, 5].forEach(i => expect(sprites[i].y).to.equal(minY));
+
+      // right column contains second, third, and 2 others
+      [1, 2, 6, 7].forEach(i => expect(sprites[i].x).to.equal(maxX));
+
+      // bottom row contains third, fourth, and 2 others
+      [2, 3, 8, 9].forEach(i => expect(sprites[i].y).to.equal(maxY));
+
+      // left column contains fourth, first and 1 other
+      [3, 0, 10].forEach(i => expect(sprites[i].x).to.equal(minX));
+    });
+
+    it('sprites that are lower are in front of those that are higher', () => {
+      for (let i = 0; i < 36; i++) {
+        coreLibrary.addSprite({
+          animation: 'costume_label'
+        });
+      }
+
+      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'circle']);
+      const sprites = coreLibrary.getSpriteArray({costume: 'costume_label'});
+
+      expect(sprites.length).to.equal(36);
+
+      for (let i = 1; i < sprites.length; i++) {
+        expect(sprites[i].y > sprites[i - 1].y).to.equal(
+          sprites[i].depth > sprites[i - 1].depth
+        );
+      }
+    });
+
+    it('sprites that are further right have a higher depth', () => {
+      for (let i = 0; i < 2; i++) {
+        coreLibrary.addSprite({
+          animation: 'costume_label'
+        });
+      }
+
+      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'row']);
+      const sprites = coreLibrary.getSpriteArray({costume: 'costume_label'});
+
+      expect(sprites.length).to.equal(2);
+
+      expect(sprites[0].y).to.equal(sprites[1].y);
+      expect(sprites[0].depth).to.be.lessThan(sprites[1].depth);
+    });
+
+    it('grid layout with perfect square count', () => {
+      for (let i = 0; i < 4; i++) {
+        coreLibrary.addSprite({
+          animation: 'costume_label'
+        });
+      }
+
+      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'grid']);
+      const sprites = coreLibrary.getSpriteArray({costume: 'costume_label'});
+
+      expect(sprites.length, 4);
+
+      expect(sprites[0].x).to.equal(minX);
+      expect(sprites[0].y).to.equal(minY);
+
+      expect(sprites[1].x).to.equal(maxX);
+      expect(sprites[1].y).to.equal(minY);
+
+      expect(sprites[2].x).to.equal(minX);
+      expect(sprites[2].y).to.equal(maxY);
+
+      expect(sprites[3].x).to.equal(maxX);
+      expect(sprites[3].y).to.equal(maxY);
+    });
+
+    it('grid layout without perfect square count', () => {
+      for (let i = 0; i < 5; i++) {
+        coreLibrary.addSprite({
+          animation: 'costume_label'
+        });
+      }
+
+      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'grid']);
+      const sprites = coreLibrary.getSpriteArray({costume: 'costume_label'});
+
+      expect(sprites.length).to.equal(5);
+
+      // size 5 means we're filling up a 3x3 grid, except that we don't end up
+      // needing the 3rd row, and so we instead fill a 3x2 grid
+      expect(sprites[0].x).to.equal(minX);
+      expect(sprites[0].y).to.equal(minY);
+
+      expect(sprites[1].x).to.equal((minX + maxX) / 2);
+      expect(sprites[1].y).to.equal(minY);
+
+      expect(sprites[2].x).to.equal(maxX);
+      expect(sprites[2].y).to.equal(minY);
+
+      expect(sprites[3].x).to.equal(minX);
+      expect(sprites[3].y).to.equal(maxY);
+
+      expect(sprites[4].x).to.equal((minX + maxX) / 2);
+      expect(sprites[4].y).to.equal(maxY);
+    });
+
+    it('grid layout of size 2', () => {
+      for (let i = 0; i < 2; i++) {
+        coreLibrary.addSprite({
+          animation: 'costume_label'
+        });
+      }
+
+      commands.layoutSprites.apply(coreLibrary, ['costume_label', 'grid']);
+      const sprites = coreLibrary.getSpriteArray({costume: 'costume_label'});
+
+      expect(sprites.length, 2);
+
+      expect(sprites[0].x).to.equal(minX);
+      expect(sprites[0].y).to.equal(minY);
+
+      expect(sprites[1].x).to.equal(maxX);
+      expect(sprites[1].y).to.equal(minY);
     });
   });
 });
