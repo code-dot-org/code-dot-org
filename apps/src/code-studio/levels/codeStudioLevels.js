@@ -112,7 +112,6 @@ export function lockContainedLevelAnswers() {
       `Expected exactly one contained level. Got ${levelIds.length}`
     );
   }
-  console.log(getLevel(levelIds[0]));
   getLevel(levelIds[0]).lockAnswers();
 }
 

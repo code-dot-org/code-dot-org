@@ -20,7 +20,7 @@ var Multi = function (
   answersFeedback,
   lastAttemptString,
   containedMode,
-  multipleAttemptsAllowed
+  allowMultipleAttempts
 ) {
   // The dashboard levelId.
   this.levelId = levelId;
@@ -60,7 +60,7 @@ var Multi = function (
 
   this.submitAllowed = true;
 
-  this.multipleAttemptsAllowed = !!multipleAttemptsAllowed;
+  this.allowMultipleAttempts = !!allowMultipleAttempts;
 
   $(document).ready(() => this.ready());
 };
@@ -206,7 +206,7 @@ Multi.prototype.ready = function () {
 };
 
 Multi.prototype.lockAnswers = function () {
-  if (this.multipleAttemptsAllowed) {
+  if (this.allowMultipleAttempts) {
     return;
   }
   $('#' + this.id + ' .answerbutton').addClass('lock-answers');
