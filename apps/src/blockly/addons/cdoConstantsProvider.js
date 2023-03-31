@@ -2,6 +2,11 @@ import GoogleBlockly from 'blockly/core';
 
 export default class CdoConstantsProvider extends GoogleBlockly.geras
   .ConstantProvider {
+  STYLES_SHAPES_MAP = {
+    ['sprite_blocks']: this.TRI_INPUT_OUTPUT,
+    ['behavior_blocks']: this.ROUND_INPUT_OUTPUT,
+    ['location_blocks']: this.RECT_INPUT_OUTPUT
+  };
   /**
    * Get an object with connection shape and sizing information based on the
    * type of the connection.
@@ -11,10 +16,11 @@ export default class CdoConstantsProvider extends GoogleBlockly.geras
    * @override
    */
   shapeFor(connection) {
+    const blockStyleName = connection.getSourceBlock().styleName_;
     switch (connection.type) {
       case GoogleBlockly.ConnectionType.INPUT_VALUE:
       case GoogleBlockly.ConnectionType.OUTPUT_VALUE:
-        return this.ROUND_INPUT_OUTPUT;
+        return this.STYLES_SHAPES_MAP[blockStyleName] || this.PUZZLE_TAB;
       case GoogleBlockly.ConnectionType.PREVIOUS_STATEMENT:
       case GoogleBlockly.ConnectionType.NEXT_STATEMENT:
         return this.NOTCH;
