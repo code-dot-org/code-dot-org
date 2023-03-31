@@ -7,7 +7,7 @@ import {
   VISUALIZATION_DIV_ID,
   isResponsiveFromState
 } from '@cdo/apps/templates/ProtectedVisualizationDiv';
-import {toggleVisualizationCollapsed} from '../javalabRedux';
+import {toggleVisualizationCollapsed} from '@cdo/apps/javalab/redux/viewRedux';
 import style from './theater-visualization-column.module.scss';
 import JavalabCrosshairOverlay, {
   showOverlayFromState
@@ -91,7 +91,7 @@ const styles = {
 export default connect(
   state => ({
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-    isCollapsed: state.javalab.isVisualizationCollapsed,
+    isCollapsed: state.javalabView.isVisualizationCollapsed,
     responsive: isResponsiveFromState(state),
     showOverlay: showOverlayFromState(state)
   }),
