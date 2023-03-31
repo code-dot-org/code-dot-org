@@ -900,6 +900,10 @@ bn:
               display_name: তালিকা
             lessonGroup-3:
               display_name: চক্র
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: মূল্যায়ন
         pre-express-2023:
           lesson_groups:
             csf_loops:

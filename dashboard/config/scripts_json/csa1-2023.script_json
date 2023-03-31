@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-17 21:45:31 UTC",
+    "serialized_at": "2023-03-27 13:46:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2131,7 +2131,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Recall the houses warmup activity and the definition of a class. Guide students to make the connection between blueprints being used to build multiple houses, so classes can be used to create multiple objects."
+            "markdown": "Recall the houses warmup activity from the previous lesson and the definition of a class. Guide students to make the connection between blueprints being used to build multiple houses, so classes can be used to create multiple objects."
           }
         ]
       },

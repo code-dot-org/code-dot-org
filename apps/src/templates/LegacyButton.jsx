@@ -123,6 +123,13 @@ export const BUTTON_TYPES = {
       }
     }
   },
+  legacyPrimary: {
+    style: {
+      backgroundColor: color.orange,
+      borderColor: color.orange,
+      color: color.neutral_white
+    }
+  },
   danger: {
     style: {
       backgroundColor: color.product_negative_default,

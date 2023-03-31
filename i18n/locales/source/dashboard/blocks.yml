@@ -1201,6 +1201,8 @@ en:
         text: following targets
       gamelab_getAllSprites:
         text: all sprites
+      gamelab_getCostume:
+        text: sprites with costume of [SPRITE][0]
       gamelab_getProp:
         text: "[SPRITE][0] [PROPERTY][1]"
         options:

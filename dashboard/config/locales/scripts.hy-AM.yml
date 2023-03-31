@@ -1543,6 +1543,10 @@ hy:
           lesson_groups:
             csp_unit9_2020:
               display_name: CS Principles Unit 9
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Assessments
         pre-express-2023:
           lesson_groups:
             csf_loops:
