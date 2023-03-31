@@ -12,6 +12,7 @@ import animationList, {
 } from '@cdo/apps/p5lab/redux/animationList';
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import {BlocklyVersion} from '@cdo/apps/constants';
 
 const VALID_COLOR = 'black';
 const INVALID_COLOR = '#d00';
@@ -119,15 +120,15 @@ function validateBlockConfig(editor) {
   }
 }
 
-// Validation only relevant for blocks rendered via google blockly
-// "unknown block" is only implemented in google blockly
+// Only apply this validation to pools being rendered in Google Blockly,
+// as those are the pools where we have UI tests and want to prevent
+// levelbuilder changes from causing them to fail
 function validateBlockRenders() {
   if (
-    Blockly.mainBlockSpace
-      .getAllBlocks()
-      .some(block => block.getFieldValue('NAME')?.includes('unknown block'))
+    Blockly.version === BlocklyVersion.GOOGLE &&
+    Blockly.mainBlockSpace.getAllBlocks().some(block => !!block.unknownBlock)
   ) {
-    throw 'Unable to render block with given configuration.';
+    throw 'Blockly is unable to render a block with the given configuration.';
   }
 }
 
