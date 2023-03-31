@@ -1,9 +1,5 @@
 <Bounce>
   <config><![CDATA[{
-  "game_id": 22,
-  "created_at": "2022-01-06T20:21:33.000Z",
-  "level_num": "custom",
-  "user_id": 156,
   "properties": {
     "skin": "basketball",
     "timeout_failure_tick": "100",
@@ -43,11 +39,19 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "free_play": "false",
+    "encrypted": "false",
+    "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
+  "game_id": 22,
   "published": true,
+  "created_at": "2022-01-06T23:29:14.000Z",
+  "level_num": "custom",
+  "user_id": 156,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:21:33.330+00:00\",\"changed\":[\"cloned from \\\"courseD_bounce_events5s_2021\\\"\"],\"cloned_from\":\"courseD_bounce_events5s_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:21:33.330+00:00\",\"changed\":[\"cloned from \\\"courseD_bounce_events5s_2021\\\"\"],\"cloned_from\":\"courseD_bounce_events5s_2021\"},{\"changed_at\":\"2023-03-30 21:51:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-30 21:56:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-30 21:57:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
