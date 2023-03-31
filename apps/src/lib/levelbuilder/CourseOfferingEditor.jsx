@@ -236,8 +236,8 @@ export default function CourseOfferingEditor(props) {
           onChange={e => updateCourseOffering('header', e.target.value)}
         >
           <option value="">{translatedNoneOption}</option>
-          {Object.values(CourseOfferingHeaders).map(header => (
-            <option key={header} value={header}>
+          {Object.entries(CourseOfferingHeaders).map(([key, header]) => (
+            <option key={key} value={key}>
               {header}
             </option>
           ))}

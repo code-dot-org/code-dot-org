@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import experiments from '@cdo/apps/util/experiments';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SetupInstructions from '@cdo/apps/lib/kits/maker/ui/SetupInstructions';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
@@ -52,12 +51,17 @@ export default class SetupGuide extends React.Component {
           imgStyle: style.circuitPlaygroundImg,
           alt: applabI18n.makerSetupCircuitPlaygroundImageAltText()
         };
+      case 'general':
+        return {
+          id: 'general-description',
+          title: applabI18n.makerSetupGeneralTitle(),
+          description: applabI18n.makerSetupGeneralDescription()
+        };
     }
   };
 
   render() {
     // Experiment 'microbit', displays Circuit Playground and Micro:Bit descriptions.
-    const isMicrobit = experiments.isEnabled('microbit');
     const chromeVersion = getChromeVersion();
 
     return (
@@ -83,7 +87,11 @@ export default class SetupGuide extends React.Component {
           />
         )}
         <h1>{applabI18n.makerSetupPageTitle()}</h1>
-        {isMicrobit ? (
+
+        <div>
+          <div style={style.oneColumn}>
+            <HeaderCard {...this.setupGuideContent('general')} />
+          </div>
           <div style={style.twoColumns}>
             <DescriptionCard
               {...this.setupGuideContent('circuitPlayground')}
@@ -94,9 +102,8 @@ export default class SetupGuide extends React.Component {
               divStyle={style.descriptionFlexCard}
             />
           </div>
-        ) : (
-          <DescriptionCard {...this.setupGuideContent('circuitPlayground')} />
-        )}
+        </div>
+
         <div id="setup-status-mount">
           <SetupInstructions />
         </div>
@@ -134,4 +141,21 @@ DescriptionCard.propTypes = {
   description: PropTypes.string.isRequired,
   divStyle: PropTypes.object,
   alt: PropTypes.string.isRequired
+};
+
+function HeaderCard(props) {
+  return (
+    <div id={props.id} style={props.divStyle}>
+      <h2>{props.title}</h2>
+      <div className="description-content">
+        <SafeMarkdown markdown={props.description} />
+      </div>
+    </div>
+  );
+}
+HeaderCard.propTypes = {
+  id: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  divStyle: PropTypes.object
 };

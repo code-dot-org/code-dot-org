@@ -72,7 +72,7 @@ export default class DialogButtons extends Component {
           <LegacyButton
             type="cancel"
             size="large"
-            arrow={isRtl ? 'right' : 'left'}
+            style={styles.againButtonFormerArrowBtn}
             id="again-button"
             className="launch"
           >
@@ -104,7 +104,7 @@ export default class DialogButtons extends Component {
       nextButton =
         this.props.isK1 && !this.props.freePlay ? (
           <LegacyButton
-            type="primary"
+            type="legacyPrimary"
             size="large"
             arrow={isRtl ? 'left' : 'right'}
             id="continue-button"
@@ -115,7 +115,7 @@ export default class DialogButtons extends Component {
           </LegacyButton>
         ) : (
           <LegacyButton
-            type="primary"
+            type="legacyPrimary"
             id="continue-button"
             className="launch"
             style={isRtl ? styles.nextButtonRtl : styles.nextButton}
@@ -153,5 +153,8 @@ const styles = {
   },
   hintButton: {
     marginRight: 10
+  },
+  againButtonFormerArrowBtn: {
+    marginTop: 25.5
   }
 };

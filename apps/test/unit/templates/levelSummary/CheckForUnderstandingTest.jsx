@@ -44,13 +44,6 @@ const INITIAL_STATE = {
 };
 
 const setUpWrapper = (state = {}, jsData = {}) => {
-  const div = document.createElement('div');
-  div.setAttribute('id', 'attach-to-div');
-  const script = document.createElement('script');
-  script.dataset.summary = JSON.stringify({...JS_DATA, ...jsData});
-  document.head.appendChild(script);
-  document.body.appendChild(div);
-
   const store = createStore(
     combineReducers({
       isRtl,
@@ -63,20 +56,14 @@ const setUpWrapper = (state = {}, jsData = {}) => {
 
   const wrapper = mount(
     <Provider store={store}>
-      <CheckForUnderstanding />
-    </Provider>,
-    {attachTo: div}
+      <CheckForUnderstanding scriptData={{...JS_DATA, ...jsData}} />
+    </Provider>
   );
 
   return wrapper;
 };
 
 describe('CheckForUnderstanding', () => {
-  afterEach(() => {
-    document.head.removeChild(document.querySelector('script[data-summary]'));
-    document.body.removeChild(document.querySelector('#attach-to-div'));
-  });
-
   it('renders elements', () => {
     const wrapper = setUpWrapper();
 
@@ -90,7 +77,7 @@ describe('CheckForUnderstanding', () => {
     expect(wrapper.find('textarea').length).to.eq(1);
     // Student responses.
     expect(wrapper.find(`.${styles.studentsSubmittedRight}`).text()).to.eq(
-      '1/1 students submitted'
+      '1/1 students answered'
     );
     expect(wrapper.find(`div.${styles.studentAnswer}`).length).to.eq(1);
     // Section selector, with one section.

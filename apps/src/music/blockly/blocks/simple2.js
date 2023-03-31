@@ -129,9 +129,7 @@ export const triggeredAtSimple2 = {
       };
       var __effects = {};
       ProgramSequencer.playSequentialWithMeasure(
-        Math.ceil(
-          MusicPlayer.getCurrentPlayheadPosition()
-        )
+        Math.ceil(startPosition)
       );
       RandomSkipManager.init();
     `

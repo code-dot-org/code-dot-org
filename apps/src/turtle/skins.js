@@ -183,11 +183,17 @@ exports.load = function (assetUrl, id) {
     'smallRhombusOrange45',
     'smallRhombusYellow45',
     'smallRhombusGreen45',
+    'smallRhombusDarkGreen45',
+    'smallRhombusLightGreen45',
+    'smallRhombusTeal45',
     'smallRhombusCyan45',
     'smallRhombusLightBlue45',
     'smallRhombusBlue45',
     'smallRhombusPurple45',
-    'smallRhombusMagenta45'
+    'smallRhombusLightPurple45',
+    'smallRhombusMagenta45',
+    'smallRhombusLightPink45',
+    'smallRhombusGray45'
   ];
   var rhombus30degree = [
     'smallRhombusMaroon30',

@@ -2088,6 +2088,10 @@ ta:
               display_name: சுழற்சிகள்
             lessonGroup-5:
               display_name: திட்டம்
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: மதிப்பீடு
         csp-playground:
           description_audience: பாடத்திட்ட எழுத்தாளர்கள்
           description_short: பாடத்திட்ட பதிப்புகளுக்கு இடையே பாடங்கள் அல்லது நிலைகளுக்கான
@@ -2217,5 +2221,21 @@ ta:
               display_name: பயன்பாட்டு ஆய்வகத்திற்கு அறிமுகம்
             lessonGroup-3:
               display_name: அத்தியாயம் 1
+            lessonGroup-4:
+              display_name: அத்தியாயம் 2
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: பயன்பாட்டு ஆய்வகத்திற்கு அறிமுகம்
+            lessonGroup-3:
+              display_name: அத்தியாயம் 1
+            lessonGroup-4:
+              display_name: அத்தியாயம் 2
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: அத்தியாயம் 1
+            lessonGroup-3:
+              display_name: பயன்பாட்டு ஆய்வகத்திற்கு அறிமுகம்
             lessonGroup-4:
               display_name: அத்தியாயம் 2
