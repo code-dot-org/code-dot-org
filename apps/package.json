@@ -165,7 +165,7 @@
     "pepjs": "^0.4.3",
     "pixelmatch": "^5.2.0",
     "postcss": "8",
-    "prettier": "1.16.1",
+    "prettier": "2.8.7",
     "process": "^0.11.10",
     "progress-bar-webpack-plugin": "^2.1.0",
     "pusher-js": "4.1.0",
