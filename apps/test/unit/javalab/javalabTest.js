@@ -15,7 +15,7 @@ import {
   restoreRedux
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
-import {setAllSourcesAndFileMetadata} from '@cdo/apps/javalab/javalabRedux';
+import {setAllSourcesAndFileMetadata} from '@cdo/apps/javalab/redux/editorRedux';
 
 describe('Javalab', () => {
   let javalab;
