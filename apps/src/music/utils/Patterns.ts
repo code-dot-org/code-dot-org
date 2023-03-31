@@ -54,8 +54,8 @@ export function generateGraphDataFromPattern({
       sound => sound.src === event.src
     );
     return {
-      x: ((event.tick - 1) * useWidth) / (16 - 1) + padding,
-      y: padding + (soundIndex * useHeight) / (numSounds - 1),
+      x: 1 + ((event.tick - 1) * useWidth) / (16 - 1) + padding,
+      y: 1 + padding + (soundIndex * useHeight) / (numSounds - 1),
       width: noteWidth,
       height: noteHeight
     };
