@@ -128,7 +128,7 @@ UnconnectedJavalabEditorDialogManager.propTypes = {
 export default connect(
   state => ({
     editorOpenDialogName: state.javalabEditor.editorOpenDialogName,
-    displayTheme: state.javalab.displayTheme,
+    displayTheme: state.javalabView.displayTheme,
     newFileError: state.javalabEditor.newFileError,
     renameFileError: state.javalabEditor.renameFileError,
     commitDialogFileNames: _.filter(
