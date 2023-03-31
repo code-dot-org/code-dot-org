@@ -11,16 +11,23 @@ export default class CdoConstantsProvider extends GoogleBlockly.geras
    * @override
    */
   shapeFor(connection) {
-    const stylesShapeMap = {
+    const outputStyleShapeMap = {
       ['sprite_blocks']: this.TRI_INPUT_OUTPUT,
       ['behavior_blocks']: this.ROUND_INPUT_OUTPUT,
       ['location_blocks']: this.RECT_INPUT_OUTPUT
     };
+    const inputTypeShapeMap = {
+      ['Sprite']: this.TRI_INPUT_OUTPUT,
+      ['Behavior']: this.ROUND_INPUT_OUTPUT,
+      ['Location']: this.RECT_INPUT_OUTPUT
+    };
     const blockStyleName = connection.getSourceBlock().styleName_;
+    const inputType = connection.check_ ? connection.check_[0] : null;
     switch (connection.type) {
       case GoogleBlockly.ConnectionType.INPUT_VALUE:
+        return inputTypeShapeMap[inputType] || this.PUZZLE_TAB;
       case GoogleBlockly.ConnectionType.OUTPUT_VALUE:
-        return stylesShapeMap[blockStyleName] || this.PUZZLE_TAB;
+        return outputStyleShapeMap[blockStyleName] || this.PUZZLE_TAB;
       case GoogleBlockly.ConnectionType.PREVIOUS_STATEMENT:
       case GoogleBlockly.ConnectionType.NEXT_STATEMENT:
         return this.NOTCH;
