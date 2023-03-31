@@ -190,7 +190,7 @@ end
 Then(/^all blocks render with no unknown blocks$/) do
   code = <<~CODE
     return Blockly.Workspace.getAll().map(workspace => {
-      const hasUnknownBlock = workspace.getAllBlocks().some(block => block.getFieldValue('NAME')?.includes('unknown block'));
+      const hasUnknownBlock = workspace.getAllBlocks().some(block => !!block.unknownBlock);
       if (hasUnknownBlock) {
         // element ID has name of block that is failing to render
         return workspace.getParentSvg().parentElement.id;
