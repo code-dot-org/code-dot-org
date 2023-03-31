@@ -137,6 +137,9 @@ class UnconnectedMusicView extends React.Component {
         this.setAllowedSoundsForProgress();
       }
 
+      Globals.setLibrary(this.library);
+      Globals.setPlayer(this.player);
+
       this.musicBlocklyWorkspace.init(
         document.getElementById('blockly-div'),
         this.onBlockSpaceChange,
@@ -145,9 +148,6 @@ class UnconnectedMusicView extends React.Component {
       );
       this.player.initialize(this.library);
       setInterval(this.updateTimer, 1000 / 30);
-
-      Globals.setLibrary(this.library);
-      Globals.setPlayer(this.player);
     });
   }
 
