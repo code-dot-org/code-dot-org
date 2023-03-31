@@ -69,6 +69,8 @@ export default class FieldChord extends Field {
       },
       this.fieldGroup_
     );
+
+    this.updateSize_();
   }
 
   applyColour() {
@@ -134,8 +136,6 @@ export default class FieldChord extends Field {
         this.backgroundElement
       );
     });
-
-    this.updateSize_();
 
     this.renderContent();
   }
