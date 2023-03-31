@@ -35,7 +35,7 @@ module.exports = {
     "no-extra-boolean-cast": "off",
     "no-implicit-globals": "error",
     "no-new-object": "error",
-    "no-prototype-builtins": "off",
+    "no-redeclare": ["error", { builtinGlobals: false }],
     "no-restricted-imports": ["error", "radium"],
     "no-trailing-spaces": "error",
     "no-undef": "error",

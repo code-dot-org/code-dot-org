@@ -5,8 +5,8 @@
  * @see https://github.com/eslint/eslint/blob/v4.19.1/docs/developer-guide/working-with-custom-formatters.md
  */
 
-const {ESLint} = require('eslint');
-const esLint = new ESLint();
+const eslint = require('eslint');
+const defaultFormatter = eslint.CLIEngine.getFormatter();
 
 /**
  * Provide a mapping from eslint ruleId to the override for that rule. Right
@@ -35,8 +35,7 @@ const RULE_MESSAGE_OVERRIDES = {
  * @param results - https://github.com/eslint/eslint/blob/v4.19.1/docs/developer-guide/working-with-custom-formatters.md#the-result-object
  * @returns {string}
  */
-module.exports = async function (results = []) {
-  const defaultFormatter = await esLint.loadFormatter();
+module.exports = (results = []) => {
   // first, preprocess results to adjust messages as desired
   results.forEach(result => {
     result.messages.forEach(messageObject => {
@@ -48,5 +47,5 @@ module.exports = async function (results = []) {
   });
 
   // then pass modified results array to the existing formatter
-  return defaultFormatter.format(results);
+  return defaultFormatter(results);
 };

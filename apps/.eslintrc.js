@@ -4,13 +4,6 @@ module.exports = {
   parser: '@babel/eslint-parser',
   plugins: ['cdo-custom-rules'],
   parserOptions: {
-    // sourceType: 'module',
-    // ecmaFeatures: {
-    //   jsx: true,
-    //   modules: true,
-    //   ecmaVersion: 6,
-    //   experimentalObjectRestSpread: true
-    // }
     babelOptions: {
       presets: ['@babel/preset-react']
     }
