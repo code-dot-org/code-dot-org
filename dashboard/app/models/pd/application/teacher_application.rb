@@ -353,7 +353,7 @@ module Pd::Application
       )
     end
 
-    # This is called by scheduled_pd_application_emails which is run
+    # This is called by the scheduled_pd_application_emails cronjob which is run
     # on the production-daemon machine every day
     def self.send_admin_approval_reminders_to_teachers
       where(
