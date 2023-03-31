@@ -6,7 +6,7 @@
       1,
       0.74
     ],
-    "func": "catch",
+    "func": "catchMe",
     "docFunc": "gamelab_destroy",
     "blockText": "catch {THIS}",
     "args": [

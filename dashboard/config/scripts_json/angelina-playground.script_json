@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "angelina-playground",
-    "serialized_at": "2023-03-29 16:43:57 UTC",
+    "serialized_at": "2023-03-30 18:40:40 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1216,6 +1216,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "matching example"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1237,6 +1240,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "example with image"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1258,6 +1264,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Image between lines example"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1271,6 +1280,27 @@
       },
       "level_keys": [
         "Image between lines example"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Image in MC Options Example"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
+      },
+      "level_keys": [
+        "Image in MC Options Example"
       ]
     }
   ],
@@ -1772,6 +1802,18 @@
         "level.key": "Image between lines example",
         "script_level.level_keys": [
           "Image between lines example"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "1c5b870f-880c-4368-8012-248ef03ebbe7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Image in MC Options Example",
+        "script_level.level_keys": [
+          "Image in MC Options Example"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
