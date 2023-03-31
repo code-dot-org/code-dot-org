@@ -1,4 +1,3 @@
-function oceanSetup() {
 function math_random_int(a, b) {
   if (a > b) {
     // Swap a and b to ensure a is smaller.
@@ -165,7 +164,7 @@ function moving_south_and_looping(this_sprite) {
 }
 
 setBackgroundImageAs("background_underwater_17");
-makeNewSpriteAnon("boat-net", ({"x":15,"y":50}));
+makeNewSpriteAnon("boat-net", ({"x":11,"y":49}));
 setProp(({costume: "boat-net"}), "scale", 200);
 makeNumSprites(10, "fish_10");
 setProp(({costume: "fish_10"}), "scale", 40);
@@ -177,15 +176,30 @@ setProp(({costume: "underseadeco_25"}), "scale", 120);
 addBehaviorSimple(({costume: "fish_10"}), collectibleBehaviors(new Behavior(wandering, [])));
 addBehaviorSimple(({costume: "boat-net"}), collectibleBehaviors(new Behavior(patrolling, [])));
 
-  everyInterval(5, "seconds", function () {
-makeNumSprites(1, "fish_10");
-  setProp(({costume: "fish_10"}), "scale", 40);
-    addBehaviorSimple(({costume: "fish_10"}), collectibleBehaviors(new Behavior(wandering, [])));
-  });
+checkTouching("when", ({costume: "boat-net"}), ({costume: "fish_10"}), function (extraArgs) {
+  destroy(({id: extraArgs.objectSprite}));
+});
+
+checkTouching("when", ({costume: "fish_10"}), ({costume: "green-sea-plant-2"}), function (extraArgs) {
+  destroy(({id: extraArgs.objectSprite}));
+  if (countByAnimation(({costume: "green-sea-plant-2"})) > 10) {
+    setAnimation(({costume: "underseadeco_25"}), "red-coral-dead");
+  } else if (countByAnimation(({costume: "green-sea-plant-2"})) < 1) {
+    removeAllBehaviors(({costume: "fish_10"}));
+    addBehaviorSimple(({costume: "fish_10"}), new Behavior(jittering, []));
+  } else {
+    setAnimation(({costume: "red-coral-dead"}), "underseadeco_25");
+  }
+
+});
+
 everyInterval(3, "seconds", function () {
   makeNumSprites(15, "green-sea-plant-2");
   setProp(({costume: "green-sea-plant-2"}), "scale", 40);
-  
 });
-}
-oceanSetup();
+
+everyInterval(5, "seconds", function () {
+  makeNumSprites(1, "fish_10");
+  setProp(({costume: "fish_10"}), "scale", 40);
+  addBehaviorSimple(({costume: "fish_10"}), collectibleBehaviors(new Behavior(wandering, [])));
+});
