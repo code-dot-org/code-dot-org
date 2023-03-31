@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ChordPanel, {ChordPanelProps} from '../views/ChordPanel';
-import {BlockSvg, DropDownDiv, Field, WidgetDiv} from 'blockly/core';
+import {BlockSvg, DropDownDiv, Field} from 'blockly/core';
 import {ChordEventValue} from '../player/interfaces/ChordEvent';
 import MusicLibrary from '../player/MusicLibrary';
 import {getNoteName} from '../utils/Notes';

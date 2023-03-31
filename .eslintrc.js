@@ -35,6 +35,8 @@ module.exports = {
     "no-extra-boolean-cast": "off",
     "no-implicit-globals": "error",
     "no-new-object": "error",
+    // Turn back to error once we've fixed all the existing warnings
+    "no-prototype-builtins": "off",
     "no-redeclare": ["error", { builtinGlobals: false }],
     "no-restricted-imports": ["error", "radium"],
     "no-trailing-spaces": "error",

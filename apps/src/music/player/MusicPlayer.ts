@@ -362,7 +362,7 @@ export default class MusicPlayer {
     const {currentMeasure, insideWhenRun} = this.tracksMetadata[trackId];
     let maxSoundLength = 0;
 
-    for (let soundId of soundIds) {
+    for (const soundId of soundIds) {
       this.playSoundAtMeasureById(
         soundId,
         currentMeasure,
@@ -480,7 +480,7 @@ export default class MusicPlayer {
 
       const kit = patternEvent.value.kit;
 
-      for (let event of patternEvent.value.events) {
+      for (const event of patternEvent.value.events) {
         const resultEvent = {
           sampleId: `${kit}/${event.src}`,
           offsetSeconds: this.convertPlayheadPositionToSeconds(
