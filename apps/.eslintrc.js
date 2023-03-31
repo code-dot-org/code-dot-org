@@ -8,6 +8,7 @@ module.exports = {
       presets: ['@babel/preset-react']
     }
   },
+  extends: ['plugin:prettier/recommended'],
   env: {
     es6: true
   },

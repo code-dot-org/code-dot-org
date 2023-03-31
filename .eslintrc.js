@@ -4,11 +4,7 @@
 // other .eslintrc.js files for those rules.
 module.exports = {
   plugins: ["react", "react-hooks", "mocha", "babel"],
-  extends: [
-    "plugin:prettier/recommended",
-    "eslint:recommended",
-    "plugin:react/recommended"
-  ],
+  extends: ["eslint:recommended", "plugin:react/recommended"],
   env: {
     browser: true,
     node: true,
