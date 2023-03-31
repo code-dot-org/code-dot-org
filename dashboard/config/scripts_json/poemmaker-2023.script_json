@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "poemmaker",
-    "serialized_at": "2023-03-16 00:27:16 UTC",
+    "serialized_at": "2023-03-30 13:43:55 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2801,6 +2801,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poemmaker_module_share_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -3255,8 +3258,8 @@
       }
     },
     {
-      "name": "Blank Space Stories",
-      "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
+      "name": "Blank Space Poems",
+      "url": "https://docs.google.com/document/d/1TO5i8kFUgHBqlC1ty2SgB2J5lTqfDbyy5fACakyynXc/template/preview",
       "key": "blank_space_stories_1",
       "properties": {
         "audience": "Teacher",
