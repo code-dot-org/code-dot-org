@@ -34,6 +34,19 @@ $border-radius: 4px;
       letter-spacing: 0.5px;
     }
 
+    i {
+      color: $neutral_dark80;
+    }
+
+    .tagsAndTranslatabilityContainer {
+      display: flex;
+      justify-content: space-between;
+
+      i {
+        margin-left: auto;
+      }
+    }
+
     h4 {
       margin-bottom: 0.75em;
       color: $neutral_dark;
@@ -41,7 +54,6 @@ $border-radius: 4px;
 
     .iconWithDescription {
       display: flex;
-      color: $neutral_dark80;
       margin: 0 0 0.5em 0;
       align-items: center;
 

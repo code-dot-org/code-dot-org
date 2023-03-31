@@ -1,5 +1,6 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react';
+import {expect} from '../../../util/reconfiguredChai';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 
 describe('CurriculumCatalogCard', () => {
@@ -56,6 +57,19 @@ describe('CurriculumCatalogCard', () => {
     render(<CurriculumCatalogCard {...defaultProps} />);
 
     screen.getByText(defaultProps.duration, {exact: false});
+  });
+
+  it('does not render translation icon by default', () => {
+    render(<CurriculumCatalogCard {...defaultProps} />);
+
+    expect(screen.queryByTitle('Course is available in your language')).to.be
+      .null;
+  });
+
+  it('renders translation icon when translation is available', () => {
+    render(<CurriculumCatalogCard {...defaultProps} isTranslated />);
+
+    screen.getByTitle('Course is available in your language');
   });
 
   it('renders Quick View button with descriptive label', () => {
