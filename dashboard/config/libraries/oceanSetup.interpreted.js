@@ -177,13 +177,15 @@ setProp(({costume: "underseadeco_25"}), "scale", 120);
 addBehaviorSimple(({costume: "fish_10"}), collectibleBehaviors(new Behavior(wandering, [])));
 addBehaviorSimple(({costume: "boat-net"}), collectibleBehaviors(new Behavior(patrolling, [])));
 
-everyInterval(3, "seconds", function () {
-makeNumSprites(5, "fish_10");
+  everyInterval(5, "seconds", function () {
+makeNumSprites(1, "fish_10");
   setProp(({costume: "fish_10"}), "scale", 40);
+    addBehaviorSimple(({costume: "fish_10"}), collectibleBehaviors(new Behavior(wandering, [])));
+  });
+everyInterval(3, "seconds", function () {
   makeNumSprites(15, "green-sea-plant-2");
   setProp(({costume: "green-sea-plant-2"}), "scale", 40);
-
-  addBehaviorSimple(({costume: "fish_10"}), collectibleBehaviors(new Behavior(wandering, [])));
+  
 });
 }
 oceanSetup();
