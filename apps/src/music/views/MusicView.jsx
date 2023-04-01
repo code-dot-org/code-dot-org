@@ -30,7 +30,8 @@ import {
   selectBlockId,
   setShowInstructions,
   setInstructionsPosition,
-  InstructionsPositions
+  InstructionsPositions,
+  setCurrentProgressState
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 
@@ -59,7 +60,8 @@ class UnconnectedMusicView extends React.Component {
     showInstructions: PropTypes.bool,
     instructionsPosition: PropTypes.string,
     setShowInstructions: PropTypes.func,
-    setInstructionsPosition: PropTypes.func
+    setInstructionsPosition: PropTypes.func,
+    setCurrentProgressState: PropTypes.func
   };
 
   constructor(props) {
@@ -129,7 +131,7 @@ class UnconnectedMusicView extends React.Component {
         this.progressManager = new ProgressManager(
           progression,
           musicValidator,
-          this.onProgresschange
+          this.onProgressChange
         );
         this.props.setShowInstructions(!!progression);
         this.setAllowedSoundsForProgress();
@@ -183,10 +185,8 @@ class UnconnectedMusicView extends React.Component {
     }
   };
 
-  onProgresschange = () => {
-    // This is a way to tell React to re-render the scene, notably
-    // the instructions.
-    this.setState({updateNumber: this.state.updateNumber + 1});
+  onProgressChange = () => {
+    this.props.setCurrentProgressState(this.progressManager.getCurrentState());
   };
 
   getIsPlaying = () => {
@@ -231,7 +231,7 @@ class UnconnectedMusicView extends React.Component {
       const libraryParameter = AppConfig.getValue('library');
       const libraryFilename = libraryParameter
         ? `music-library-${libraryParameter}.json`
-        : 'music-library.json';
+        : 'music-library-by-type.json';
       const response = await fetch(baseUrl + libraryFilename);
       const library = await response.json();
       return library;
@@ -390,13 +390,6 @@ class UnconnectedMusicView extends React.Component {
     // maximum possible content size, requiring no dynamic
     // resizing or user scrolling.  We did this for the dynamic
     // instructions in AI Lab.
-    const progression = this.progressManager.getProgression();
-
-    const progressState = this.progressManager.getCurrentState();
-    const currentPanel = progressState.step;
-    const message = progressState.message;
-    const satisfied = progressState.satisfied;
-
     return (
       <div
         className={classNames(
@@ -411,10 +404,8 @@ class UnconnectedMusicView extends React.Component {
         )}
       >
         <Instructions
-          progression={progression}
-          currentPanel={currentPanel}
-          message={message}
-          onNextPanel={satisfied ? this.onNextPanel : null}
+          progression={this.progressManager.getProgression()}
+          onNextPanel={this.onNextPanel}
           baseUrl={baseUrl}
           vertical={position !== InstructionsPositions.TOP}
           right={position === InstructionsPositions.RIGHT}
@@ -531,7 +522,9 @@ const MusicView = connect(
     setShowInstructions: showInstructions =>
       dispatch(setShowInstructions(showInstructions)),
     setInstructionsPosition: instructionsPosition =>
-      dispatch(setInstructionsPosition(instructionsPosition))
+      dispatch(setInstructionsPosition(instructionsPosition)),
+    setCurrentProgressState: progressState =>
+      dispatch(setCurrentProgressState(progressState))
   })
 )(UnconnectedMusicView);
 

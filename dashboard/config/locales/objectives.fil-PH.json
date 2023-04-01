@@ -227,6 +227,18 @@
         "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
           "description": "Ilarawan ang layunin at katwiran sa lossless compression."
         },
+        "93e23857-027c-4711-9033-a41de9430672": {
+          "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
+        "8e120010-1817-488a-8ca8-ce5198a0883d": {
+          "description": "Gumawa ng interactive na laro gamit ang sequence at event-handler."
+        },
+        "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
+          "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
+        },
+        "559aa8ee-c19e-41b2-8820-8cf04cf72dad": {
+          "description": "Bigyang-kahulugan ang “coding” at “computer science.”"
+        },
         "bd8e3dc4-47f2-41ac-8c7f-01126eb5e68a": {
           "description": "Tukuyin ang pangunahing bokabularyo ng computer science."
         },
@@ -244,6 +256,18 @@
         },
         "4fc4fb7c-051c-40b4-a93a-0b92afeb97e1": {
           "description": "Tukuyin ang mga lugar na pupuntahan upang magpatuloy sa pag-aaral ng computer science at coding"
+        },
+        "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
+          "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
+        "73964b0e-cea1-43cf-a130-410017addf73": {
+          "description": "Gumawa ng interactive na laro gamit ang sequence at event-handler."
+        },
+        "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
+          "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
+        },
+        "8b4629a9-0621-4442-9801-e3b61e4fbaf3": {
+          "description": "Bigyang-kahulugan ang “coding” at “computer science.”"
         },
         "16a00a1c-4559-4e9c-95e1-1cd1e542fe68": {
           "description": "Tukuyin ang pangunahing bokabularyo ng computer science."
@@ -269,11 +293,32 @@
         "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
           "description": "Lumikha ng mga animation ng sayaw gamit ang code"
         },
+        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
+          "description": "Talakayin ang papel na ginagampanan ng artificial intelligence sa kanilang buhay."
+        },
+        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
+          "description": "Sanayin at subukan ang isang machine learning model."
+        },
+        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
+          "description": "Dahilan kung paano gumaganap ang bias ng tao sa machine learning."
+        },
         "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
           "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga kasuotan at lokasyon."
         },
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
           "description": "Gumawa ng interactive na animation gamit ang mga tiyanak at event."
+        },
+        "a7fe08e4-1943-4bbc-a18a-e10bd0942173": {
+          "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
+        },
+        "d2a9a010-d6c6-4ce1-9f70-cb5ceba6af8f": {
+          "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
+        "df973a96-c08b-4f3f-9a11-c93434193cfe": {
+          "description": "Gumawa ng interactive na laro gamit ang sequence at event-handler."
+        },
+        "04cbf3cd-2cb7-451b-b4ed-1ccd70594cc5": {
+          "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
         },
         "4ed9cede-cc9a-409d-b433-781185b454b6": {
           "description": "Lumikha ng mga animation ng sayaw gamit ang code"
@@ -284,11 +329,26 @@
         "7728246b-7582-4624-a2b1-229b998fc2ae": {
           "description": "Bumuo ng mga programa na tumutugon sa inoorasang mga event"
         },
+        "8a99a9c0-2079-4c7e-a39c-188f940fcfe2": {
+          "description": "Talakayin ang papel na ginagampanan ng artificial intelligence sa kanilang buhay."
+        },
+        "9ec60d3b-ddcc-479c-9e4d-220ff3d8a10a": {
+          "description": "Sanayin at subukan ang isang machine learning model."
+        },
+        "ba631251-039e-4f7a-9320-158390f318c2": {
+          "description": "Dahilan kung paano gumaganap ang bias ng tao sa machine learning."
+        },
         "0601569e-2f95-4d2f-a3a9-0aea3df102ed": {
           "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga kasuotan at lokasyon."
         },
         "884d4f4c-abd4-493c-8029-cde7399519f4": {
           "description": "Gumawa ng interactive na animation gamit ang mga tiyanak at event."
+        },
+        "2583489b-c21a-415d-bd1f-c0fa1eca9ef0": {
+          "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
+        "a64618b3-e151-46ce-9670-cada1927a2db": {
+          "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
         },
         "b06566c3-55fe-4cb6-9e55-f40814d47ad8": {
           "description": "Gumawa ng program upang makumpleto ang imahe gamit ang sunud-sunod na mga hakbang."
@@ -311,17 +371,47 @@
         "d62cb1ce-6c5d-4893-ba48-3f8a844f0670": {
           "description": "Gumamit ng naaangkop na terminolohiya kapag tumutukoy sa isang computer mouse, trackpad, o touchscreen."
         },
+        "35be46ad-58dd-4072-97a4-09a55c75e329": {
+          "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
+        "fb6ff331-603c-4310-83e8-77e3e606edfe": {
+          "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
+        },
+        "0f40a956-c075-4b89-a139-101c2288896f": {
+          "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
+        },
+        "11e630e5-0551-49c9-9894-2db312a9f1df": {
+          "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
         "9ffae8f4-4880-42db-ba40-b4379c1a5f6c": {
           "description": "Kilalanin kung ano ang inaasahan kapag lumipat ang mga mag-aaral sa computer lab."
         },
         "d386bcb1-393c-46bc-8524-7380583d6ebb": {
           "description": "Gumamit ng naaangkop na terminolohiya kapag tumutukoy sa isang computer mouse, trackpad, o touchscreen."
         },
+        "ab8e0f55-bcb7-4af5-813f-df7d9629e21f": {
+          "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
+        },
+        "dddf548b-2b97-45fd-ad62-f4c633d3647d": {
+          "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
         "30aa1d4a-8e6e-4b27-8a1a-5c5ea80d6b3f": {
           "description": "Gumawa ng program upang makumpleto ang imahe gamit ang sunud-sunod na mga hakbang."
         },
         "e0ada5e4-a180-4691-9bd3-8b83763f9dd2": {
           "description": "Paghiwalayin ang mga kumplikadong hugis sa mga simpleng bahagi."
+        },
+        "6f45e56c-85b7-4e48-86d4-3394e0e7048e": {
+          "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
+        },
+        "36275ea8-84ac-4220-87ca-53d1b5eaac43": {
+          "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
+        "214e78cd-feb0-4235-a076-0fe81d14d95a": {
+          "description": "Sanayin at subukan ang isang machine learning model."
+        },
+        "db7f5c46-7cbc-477f-a325-dac7168fd719": {
+          "description": "Dahilan kung paano gumaganap ang bias ng tao sa machine learning."
         },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
           "description": ""
@@ -338,17 +428,56 @@
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Gumamit ng naaangkop na terminolohiya kapag tumutukoy sa isang computer mouse, trackpad, o touchscreen."
         },
+        "f748f186-f152-468e-9f51-48bee23c44db": {
+          "description": "Talakayin ang papel na ginagampanan ng artificial intelligence sa kanilang buhay."
+        },
+        "82bb0282-0550-4779-9a86-a15fbb93215f": {
+          "description": "Sanayin at subukan ang isang machine learning model."
+        },
+        "6638c886-891e-4d59-820a-227e37274e49": {
+          "description": "Dahilan kung paano gumaganap ang bias ng tao sa machine learning."
+        },
+        "a1e2ab93-1f36-45df-b7f2-d936689e195c": {
+          "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
+        "c7c29345-8b72-4c4f-8fb1-2aa7f90d9bfc": {
+          "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
+        },
         "9727a876-04d5-4ae0-a904-13cd594e2fac": {
           "description": "Kilalanin kung ano ang inaasahan kapag lumipat ang mga mag-aaral sa computer lab."
         },
         "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
           "description": "Gumamit ng naaangkop na terminolohiya kapag tumutukoy sa isang computer mouse, trackpad, o touchscreen."
         },
+        "106c5668-bbc0-404b-8cb5-8ff2bd66eeef": {
+          "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
+        "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
+          "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
+        },
         "6503170b-db97-4737-ae5d-5108591497a0": {
           "description": "Gumawa ng program upang makumpleto ang imahe gamit ang sunud-sunod na mga hakbang."
         },
         "d47b51d2-9114-4dfd-ad21-810573d85543": {
           "description": "Paghiwalayin ang mga kumplikadong hugis sa mga simpleng bahagi."
+        },
+        "5f5877b9-cf72-4bb8-8700-341d33658a7c": {
+          "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
+        },
+        "c0757733-5e14-4797-9615-11b61d8d490f": {
+          "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
+        "3b4a2468-e182-4060-861f-2a922730445b": {
+          "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
+        "ed6bda58-2e92-4a38-8847-7f739a13385e": {
+          "description": "Gumawa ng interactive na laro gamit ang sequence at event-handler."
+        },
+        "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
+          "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
+        },
+        "e3dce354-a602-47d1-99d1-dc729d0f4ff4": {
+          "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
         },
         "6a6abb8f-e710-4a5e-9979-38e6fef573de": {
           "description": "Bumuo ng mga programa na tumutugon sa inoorasang mga event"
@@ -379,6 +508,27 @@
         },
         "d1485387-01e4-484d-9935-75f7c14b9d76": {
           "description": "Gumamit ng naaangkop na terminolohiya kapag tumutukoy sa isang computer mouse, trackpad, o touchscreen."
+        },
+        "15115c43-46c8-4ab4-93e4-947e2fd42703": {
+          "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
+        "22d77ea2-3a62-4e21-b71f-f484fe90ec39": {
+          "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
+        },
+        "8295b4b6-f9ac-4b43-b271-b7bd9e6829f3": {
+          "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
+        "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
+          "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
+        },
+        "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
+          "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
+        },
+        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
+          "description": "Sanayin at subukan ang isang machine learning model."
+        },
+        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
+          "description": "Dahilan kung paano gumaganap ang bias ng tao sa machine learning."
         }
       }
     }

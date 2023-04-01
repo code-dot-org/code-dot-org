@@ -327,7 +327,7 @@ const styles = {
 
 export default connect(
   state => ({
-    sources: state.javalab.sources,
+    sources: state.javalabEditor.sources,
     backpackEnabled: state.javalab.backpackEnabled,
     isCommitSaveInProgress: state.javalab.isCommitSaveInProgress,
     hasCommitSaveError: state.javalab.hasCommitSaveError
