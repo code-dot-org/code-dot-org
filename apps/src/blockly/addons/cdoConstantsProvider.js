@@ -94,9 +94,10 @@ export default class CdoConstantsProvider extends GoogleBlockly.geras
     const width = this.TAB_WIDTH;
     const height = this.TAB_HEIGHT;
 
-    // `curve` function below rewrites svgPaths.curve from mainline Blockly
-    // This function will be removed if svgPaths.curve is fixed.
-    // Added .join(','), and space after 'c', and there should be no comma
+    // NOTE: `curve` function below rewrites `svgPaths.curve` from mainline Blockly
+    // https://github.com/google/blockly/blob/69afe5b60fe43b5ed911db91ae62058d66ffe5ec/core/utils/svg_paths.ts#L38
+    // This function will be removed once `svgPaths.curve` is fixed.
+    // Added .join(','), space after 'c', and there should be no comma
     // between x and y
     /**
      * Draw a cubic or quadratic curve.  See
@@ -114,6 +115,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.geras
     function curve(command, points) {
       return ' ' + command + ' ' + points.join(',');
     }
+
     /**
      * Since input and output connections share the same shape you can
      * define a function to generate the path for both.
