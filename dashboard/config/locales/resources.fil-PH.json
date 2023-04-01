@@ -6,13 +6,23 @@
           "name": "Spotify Playlist (lahat ng edad)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
+        "list_of_poems/poem-art/2021": {
+          "name": "HoC Poem Art",
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+        },
         "poem_art_celebration/poem-art/2021": {
+          "name": "Sining ng Tula 4 - Pagdiriwang",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
           "type": "Video"
         },
         "poem_art_events/poem-art/2021": {
+          "name": "Sining ng Tula 2 - Mga Event",
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3",
           "type": "Video"
         },
         "poem_art_imagery/poem-art/2021": {
+          "name": "Sining ng Tula 3 - Imahe",
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4",
           "type": "Video"
         },
         "poem_art_introduction/poem-art/2021": {
@@ -47,10 +57,35 @@
           "url": "https://studio.code.org/s/hoc-encryption"
         },
         "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "Gabay sa Aktibidad - Compression ng Text"
+          "name": "Gabay sa Aktibidad - Compression ng Text",
+          "url": "https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "Recap ng Aktibidad - I-decode ang Mensaheng ito",
+          "url": "https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM/",
+          "type": "Recap ng Aktibidad"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "I-decode ang mensaheng ito",
+          "url": "https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ/"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "Text Compression Widget sa Code Studio",
+          "url": "https://studio.code.org/s/text-compression/stage/1/puzzle/1",
+          "type": "Widget"
         },
         "video-text-compression/text-compression/unversioned": {
+          "name": "Video: Pag-compress ng text gamit ang Aloe Blacc",
+          "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Video"
+        },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "name": "Mga Event sa Bounce - Paano Ito Nangyayari?",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "name": "Mga Event sa Bounce - Paano Ito Nangyayari?",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
           "name": "Spotify Playlist (lahat ng edad)",
@@ -61,12 +96,18 @@
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "ai-ml/oceans/unversioned": {
+          "name": "AI: Machine Learning",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "ai-societal/oceans/unversioned": {
+          "name": "AI: Epekto sa Lipunan",
+          "url": "https://youtu.be/ng4c1g3COfs",
           "type": "Video"
         },
         "ai-training/oceans/unversioned": {
+          "name": "AI: Mga Data sa Pagsasanay at Bias",
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
         "curriculum_guide/coursed/2022": {
@@ -176,12 +217,18 @@
           "type": "Video"
         },
         "ai_impact_on_society/coursef/2022": {
+          "name": "AI: Epekto sa Lipunan",
+          "url": "https://youtu.be/ng4c1g3COfs",
           "type": "Video"
         },
         "ai_machine_learning/coursef/2022": {
+          "name": "AI: Machine Learning",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "ai_training_data_bias/coursef/2022": {
+          "name": "AI: Mga Data sa Pagsasanay at Bias",
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
         "internet/coursef/2022": {
@@ -593,6 +640,7 @@
         },
         "video_machine_learning/csd/2022": {
           "name": "Video: Machine Learning",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "video_training_data_and_bias/csd/2022": {
@@ -1102,6 +1150,7 @@
           "type": "Rubric"
         },
         "ai_what_is_machine_learning_/csd/2022": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "seeing_ai/csd/2022": {
@@ -1123,6 +1172,8 @@
           "type": "Video"
         },
         "ai_training_data_bias/csd/2022": {
+          "name": "AI: Mga Data sa Pagsasanay at Bias",
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
         "model_cards_in_ai_lab/csd/2022": {
@@ -1652,12 +1703,18 @@
           "name": "Saya sa For Loop"
         },
         "ai-ml/coursef/2021": {
+          "name": "AI: Machine Learning",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "ai-societal/coursef/2021": {
+          "name": "AI: Epekto sa Lipunan",
+          "url": "https://youtu.be/ng4c1g3COfs",
           "type": "Video"
         },
         "ai-training/coursef/2021": {
+          "name": "AI: Mga Data sa Pagsasanay at Bias",
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
         "assessment-answer-internet/coursef/2021": {
@@ -1923,6 +1980,9 @@
         "unplugged-video-relay-programming/coursed/2021": {
           "name": "Relay Programming"
         },
+        "events-in-bounce-how-do-they-happen/coursed/2021": {
+          "name": "Mga Event sa Bounce - Paano Ito Nangyayari?"
+        },
         "pause_and_think_online/coursed/2021": {
           "type": "Video"
         },
@@ -2061,6 +2121,7 @@
           "type": "Rubric"
         },
         "ai_what_is_machine_learning_/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "seeing_ai/csd/2021": {
@@ -2082,6 +2143,8 @@
           "type": "Video"
         },
         "ai_training_data_bias/csd/2021": {
+          "name": "AI: Mga Data sa Pagsasanay at Bias",
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
         "model_cards_in_ai_lab/csd/2021": {
@@ -2291,6 +2354,7 @@
         },
         "video_machine_learning/csd/2021": {
           "name": "Video: Machine Learning",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "video_training_data_and_bias/csd/2021": {

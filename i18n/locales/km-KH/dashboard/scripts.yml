@@ -858,6 +858,10 @@ km:
               display_name: បញ្ជី
             lessonGroup-3:
               display_name: រង្វិល​ជុំ
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: ការវាយតម្លៃ
         pre-express-2023:
           lesson_groups:
             csf_loops:

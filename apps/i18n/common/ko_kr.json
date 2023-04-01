@@ -864,6 +864,7 @@
   "explainPairProgramming": "페어 프로그래밍이 켜지면, 학생들은 급우들과 동일한 컴퓨터에서 학업하기로 선택할 수 있습니다. 진도를 공유하면서 학생들이 함께 학업할 수 있기를 원한다면 이 설정을 켜십시오.",
   "explainPairProgrammingLearnMore": " 페어 프로그래밍에 대해 더 자세히 배우기.",
   "explainRestrictedSectionEmail": "‘네’로 설정되었으면, 학생은 섹션 코드를 사용해 이 섹션에 참여할 수 없습니다. 교사는 여전히 학생들을 이동하거나 다른 섹션에서 복제하여 그들을 섹션에 수동으로 추가할 수 있습니다.",
+  "explainRestrictedSectionEmailToolTip": "‘네’로 설정되었으면, 학생은 섹션 코드를 사용해 이 섹션에 참여할 수 없습니다. 교사는 여전히 학생들을 이동하거나 다른 섹션에서 복제하여 그들을 섹션에 수동으로 추가할 수 있습니다.",
   "explainRestrictedSectionWordAndPicture": "‘네’로 설정되었으면, 학생은 섹션 코드를 사용해 이 섹션에 참여할 수 없습니다. 교사는 여전히 학생 관리 탭에서 학생들을 섹션에 수동으로 추가할 수 있습니다.",
   "explainRestrictedSectionLearnMore": "더 알아보기",
   "exploreDataset": "시각화 {datasetName}",

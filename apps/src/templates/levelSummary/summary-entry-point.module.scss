@@ -1,0 +1,34 @@
+@import "color.scss";
+
+.summaryEntryPoint {
+  padding-bottom: 8px;
+}
+
+.responseCounter {
+  display: inline-block;
+  padding: 0 12px;
+
+  height: 30px; // button height;
+  line-height: 30px;
+
+  p {
+    margin: 0;
+  }
+
+  span.counter {
+    padding: 0 8px;
+    font-weight: bold;
+  }
+
+  span.text {
+    display: block;
+  }
+
+  /* stylelint-disable selector-pseudo-class-no-unknown */
+  :global(.fa) {
+    vertical-align: middle;
+    font-size: 18px;
+    color: $brand_primary_default;
+  }
+  /* stylelint-enable selector-pseudo-class-no-unknown */
+}

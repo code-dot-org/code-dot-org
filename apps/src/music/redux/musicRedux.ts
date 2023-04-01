@@ -1,4 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {initialProgressState, ProgressState} from '../progress/ProgressManager';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
@@ -27,6 +28,11 @@ interface MusicState {
   showInstructions: boolean;
   instructionsPosition: InstructionsPosition;
   isBeatPadShowing: boolean;
+  // TODO: Currently Music Lab is the only Lab that uses
+  // this progres system, but in the future, we may want to
+  // move this into a more generic, high-level, lab-agnostic
+  // reducer.
+  currentProgressState: ProgressState;
 }
 
 const initialState: MusicState = {
@@ -36,7 +42,8 @@ const initialState: MusicState = {
   timelineAtTop: false,
   showInstructions: false,
   instructionsPosition: InstructionsPosition.LEFT,
-  isBeatPadShowing: false
+  isBeatPadShowing: false,
+  currentProgressState: {...initialProgressState}
 };
 
 const musicSlice = createSlice({
@@ -99,6 +106,9 @@ const musicSlice = createSlice({
     },
     toggleBeatPad: state => {
       state.isBeatPadShowing = !state.isBeatPadShowing;
+    },
+    setCurrentProgressState: (state, action: PayloadAction<ProgressState>) => {
+      state.currentProgressState = {...action.payload};
     }
   }
 });
@@ -121,5 +131,6 @@ export const {
   advanceInstructionsPosition,
   showBeatPad,
   hideBeatPad,
-  toggleBeatPad
+  toggleBeatPad,
+  setCurrentProgressState
 } = musicSlice.actions;

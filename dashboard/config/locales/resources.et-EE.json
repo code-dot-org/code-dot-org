@@ -368,9 +368,15 @@
         "introduction_to_sprites/csd/2022": {
           "type": "Video"
         },
+        "sprites/csd/2022": {
+          "name": "Spraidid"
+        },
         "the_animation_tab/csd/2022": {
           "name": "Animatsioon",
           "type": "Video"
+        },
+        "sprites_1/csd/2022": {
+          "name": "Spraidid"
         },
         "text/csd/2022": {
           "name": "Tekst"
@@ -1240,6 +1246,9 @@
         "the_animation_tab/csd/2021": {
           "name": "Animatsioon",
           "type": "Video"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Spraidid"
         },
         "youtube-flipbook/csd/2021": {
           "type": "Video"
