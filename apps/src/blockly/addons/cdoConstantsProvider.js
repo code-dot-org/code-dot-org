@@ -1,4 +1,5 @@
 import GoogleBlockly from 'blockly/core';
+import {inputBlockTypes, outputBlockStyleTypes} from './cdoConstants';
 
 export default class CdoConstantsProvider extends GoogleBlockly.geras
   .ConstantProvider {
@@ -11,15 +12,15 @@ export default class CdoConstantsProvider extends GoogleBlockly.geras
    * @override
    */
   shapeFor(connection) {
-    const outputStyleShapeMap = {
-      ['sprite_blocks']: this.TRI_INPUT_OUTPUT,
-      ['behavior_blocks']: this.ROUND_INPUT_OUTPUT,
-      ['location_blocks']: this.RECT_INPUT_OUTPUT
-    };
     const inputTypeShapeMap = {
-      ['Sprite']: this.TRI_INPUT_OUTPUT,
-      ['Behavior']: this.ROUND_INPUT_OUTPUT,
-      ['Location']: this.RECT_INPUT_OUTPUT
+      [inputBlockTypes.SPRITE]: this.TRI_INPUT_OUTPUT,
+      [inputBlockTypes.BEHAVIOR]: this.ROUND_INPUT_OUTPUT,
+      [inputBlockTypes.LOCATION]: this.RECT_INPUT_OUTPUT
+    };
+    const outputStyleShapeMap = {
+      [outputBlockStyleTypes.SPRITE_TYPE]: this.TRI_INPUT_OUTPUT,
+      [outputBlockStyleTypes.BEHAVIOR_TYPE]: this.ROUND_INPUT_OUTPUT,
+      [outputBlockStyleTypes.LOCATION_TYPE]: this.RECT_INPUT_OUTPUT
     };
     const blockStyleName = connection.getSourceBlock().styleName_;
     const inputType = connection.check_ ? connection.check_[0] : null;
