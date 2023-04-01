@@ -51,7 +51,7 @@ const PreviewButton: React.FunctionComponent<PreviewButtonProps> = ({
       onClick={enabled ? playPreview : undefined}
     >
       <FontAwesome
-        icon={'volume-up'}
+        icon={'play-circle'}
         className={classNames(
           moduleStyles.previewButton,
           !enabled && moduleStyles.previewButtonDisabled

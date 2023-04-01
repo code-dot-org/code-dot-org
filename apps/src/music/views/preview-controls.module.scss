@@ -25,13 +25,12 @@
   }
 
   .previewButton {
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
     transition: color 0.1s ease;
 
     &Disabled {
       color: $neutral_dark40;
-      cursor: not-allowed;
     }
   }
 

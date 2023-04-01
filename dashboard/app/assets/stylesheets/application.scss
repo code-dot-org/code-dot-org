@@ -3036,7 +3036,8 @@ $modal-no-icon-gap: 22px;
 }
 
 h5.dialog-title {
-  font-size: 1.25em;
+  // TODO: [Phase 2] Remove when new typography will be done and used or replace with 1.25em
+  font-size: 20px;
 }
 
 #ok-button {
