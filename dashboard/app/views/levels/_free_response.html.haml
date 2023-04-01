@@ -1,5 +1,12 @@
 :ruby
-  js_data = {}
+  js_data = {
+    responses: @responses&.map do |response|
+      {
+        user_id: response.user_id,
+        text: response.level_source.data,
+      }
+    end
+  }
   level ||= @level
   last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
   in_level_group ||= false
@@ -29,6 +36,9 @@
         };
       }
     );
+
+- if is_contained_level && DCDO.get("show_level_summary_entry_point", false)
+  %div#summaryEntryPoint
 
 .free-response{:class => ('left-aligned' if left_align)}
   - title = level.get_property(:title)

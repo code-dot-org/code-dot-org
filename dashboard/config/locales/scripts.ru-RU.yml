@@ -4373,6 +4373,10 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: Опрос после окончания курса
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Оценки
         csp-playground:
           description_audience: Руководство для авторов
           description_short: Для поэтапныъ обновлений в уроках или уровней между версиями
@@ -4555,3 +4559,111 @@ ru:
               display_name: Глава 1
             lessonGroup-4:
               display_name: Глава 2
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процесс решения проблемы'
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Изображения и анимации'
+            lessonGroup-3:
+              display_name: 'Глава 2: Создание игры'
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Создание физических прототипов'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-3:
+              display_name: 'Глава 2: Компьютеры и решение проблем'
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Представление информации'
+            lessonGroup-3:
+              display_name: 'Глава 2: Решение информационных проблем'
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Создание физических прототипов'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процесс решения проблемы'
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Представление информации'
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Представление информации'
+            lessonGroup-3:
+              display_name: 'Глава 2: Решение информационных проблем'
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Введение в Лабораторию приложений
+            lessonGroup-3:
+              display_name: Глава 1
+            lessonGroup-4:
+              display_name: Глава 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процесс решения проблемы'
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Пользовательский дизайн'
+            lessonGroup-3:
+              display_name: 'Глава 2: Прототипирование приложения'
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Создание физических прототипов'
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процесс решения проблемы'
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Изображения и анимации'
+            lessonGroup-3:
+              display_name: 'Глава 2: Создание игры'
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Создание физических прототипов'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процесс решения проблемы'
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Пользовательский дизайн'
+            lessonGroup-3:
+              display_name: 'Глава 2: Прототипирование приложения'
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Представление информации'
+            lessonGroup-3:
+              display_name: 'Глава 2: Решение информационных проблем'
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Глава 1
+            lessonGroup-3:
+              display_name: Введение в Лабораторию приложений
+            lessonGroup-4:
+              display_name: Глава 2
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Глава 2: Создание физических прототипов'

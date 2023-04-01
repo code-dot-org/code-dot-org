@@ -2939,6 +2939,10 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Khảo sát sau khoá học
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Bài thi đánh giá
         csp-playground:
           description_audience: Người biên soạn giáo trình
           description_short: Để cập nhật theo giai đoạn cho các bài học hoặc cấp độ giữa các phiên bản giáo trình
@@ -3086,5 +3090,21 @@ vi:
               display_name: Giới thiệu về AppLab
             lessonGroup-3:
               display_name: Chương 1
+            lessonGroup-4:
+              display_name: Chương 2
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Giới thiệu về AppLab
+            lessonGroup-3:
+              display_name: Chương 1
+            lessonGroup-4:
+              display_name: Chương 2
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chương 1
+            lessonGroup-3:
+              display_name: Giới thiệu về AppLab
             lessonGroup-4:
               display_name: Chương 2

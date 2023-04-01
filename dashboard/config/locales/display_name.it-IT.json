@@ -960,7 +960,23 @@
         "CSD U1 storage outfit_2021": "App: scelta di abiti",
         "CSD U1 storage outfit_2022": "App: scelta di abiti",
         "CSD U1 storage video_2021": "Modello del computer",
-        "CSD U1 storage video_2022": "Modello del computer"
+        "CSD U1 storage video_2022": "Modello del computer",
+        "CSDU4 Design Mode Video": "Introduzione alla modalità Design",
+        "CSDU4 Design Mode Video_2018": "Introduzione alla modalità Design",
+        "CSDU4 Design Mode Video_2019": "Introduzione alla modalità Design",
+        "CSDU4 Design Mode Video_2021": "Introduzione alla modalità Design",
+        "ml-customize apps-choice2": "Aggiungi immagine",
+        "ml-customize apps-choice2_2022": "Aggiungi immagine",
+        "ml-customize apps-choice3": "Aggiungi un suono",
+        "ml-customize apps-choice3_2022": "Aggiungi un suono",
+        "ml-intro app lab-book recommender 5B-2021": "Aggiungi immagine",
+        "ml-intro app lab-book recommender 5B_2022": "Aggiungi immagine",
+        "ml-intro app lab-book recommender 5C-2021": "Aggiungi un suono",
+        "ml-intro app lab-book recommender 5C_2022": "Aggiungi un suono",
+        "ml-use model card-choice2": "Aggiungi immagine",
+        "ml-use model card-choice2_2022": "Aggiungi immagine",
+        "ml-use model card-choice3": "Aggiungi un suono",
+        "ml-use model card-choice3_2022": "Aggiungi un suono"
       }
     }
   }

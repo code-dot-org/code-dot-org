@@ -847,6 +847,7 @@
   "explainPairProgramming": "Khi tính năng lập trình theo cặp được bật, học sinh có thể chọn để làm việc với một bạn cùng lớp tại cùng một máy tính. Bật cài đặt này nếu bạn muốn các học sinh có thể làm việc cùng nhau và cùng chia sẻ quá trình học tập.",
   "explainPairProgrammingLearnMore": " Tìm hiểu thêm về lập trình theo cặp.",
   "explainRestrictedSectionEmail": "Nếu được đặt thành ‘có’, học sinh sẽ không thể tham gia nhóm này bằng mã nhóm đào tạo. Bạn vẫn có thể thêm học sinh vào nhóm đào tạo theo cách thủ công bằng cách di chuyển hoặc sao chép học sinh từ nhóm khác.",
+  "explainRestrictedSectionEmailToolTip": "Nếu được đặt thành ‘có’, học sinh sẽ không thể tham gia nhóm này bằng mã nhóm đào tạo. Bạn vẫn có thể thêm học sinh vào nhóm đào tạo theo cách thủ công bằng cách di chuyển hoặc sao chép học sinh từ nhóm khác.",
   "explainRestrictedSectionWordAndPicture": "Nếu được đặt thành ‘có’, học sinh sẽ không thể tham gia nhóm này bằng mã nhóm đào tạo. Bạn vẫn có thể thêm học sinh vào nhóm đào tạo theo cách thủ công trên thẻ Quản lý học sinh.",
   "explainRestrictedSectionLearnMore": "Tìm hiểu thêm",
   "exploreDataset": "Trực quan hóa {datasetName}",
