@@ -13,11 +13,11 @@ Animals have developed <strong>behaviors</strong> and actions to help them survi
 
 <div style="float: left">
 <h2>Behaviors in computer science</h2>
-In computer science, <strong>behaviors</strong> are are a set of actions that a sprite repeats over and over like an animation. <br>  
+In computer science, <strong>behaviors</strong> are are a set of actions that a sprite repeats over and over like an animation. <br>
+The actions within the behavior continue until instructed to stop. 
 <br>
 <br>
 
-<img src="https://images.code.org/ce0b169674ea99f3a56ecb496577cc70-image-1678322843065.gif" style=" float: left; width:70%; padding-top:10px">
+<img src="https://images.code.org/56809209ca823047729cc01a033a7ac0-image-1679937249706.gif" style=" float: left; width:70%; padding-top:10px">
 </div>
-
 MARKDOWN

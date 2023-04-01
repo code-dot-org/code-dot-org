@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {openEditorDialog} from './javalabRedux';
+import {openEditorDialog} from './redux/editorRedux';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import PaneHeader, {

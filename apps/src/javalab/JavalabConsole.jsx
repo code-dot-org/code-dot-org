@@ -8,7 +8,7 @@ import {
   appendInputLog,
   clearConsoleLogs,
   closePhotoPrompter
-} from './javalabRedux';
+} from './redux/consoleRedux';
 import {DisplayTheme} from './DisplayTheme';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import PaneHeader, {
@@ -277,10 +277,10 @@ class JavalabConsole extends React.Component {
 
 export default connect(
   state => ({
-    consoleLogs: state.javalab.consoleLogs,
+    consoleLogs: state.javalabConsole.consoleLogs,
     displayTheme: state.javalab.displayTheme,
-    isPhotoPrompterOpen: state.javalab.isPhotoPrompterOpen,
-    photoPrompterPromptText: state.javalab.photoPrompterPromptText,
+    isPhotoPrompterOpen: state.javalabConsole.isPhotoPrompterOpen,
+    photoPrompterPromptText: state.javalabConsole.photoPrompterPromptText,
     shouldJumpToInput: state.javalab.isRunning || state.javalab.isTesting,
     editorFontSize: state.javalab.editorFontSize
   }),
