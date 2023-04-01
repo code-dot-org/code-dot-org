@@ -4,6 +4,8 @@ import {expect} from '../../../util/reconfiguredChai';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 
 describe('CurriculumCatalogCard', () => {
+  const translationIconTitle = 'Curriculum is available in your language';
+
   let defaultProps;
   beforeEach(() => {
     defaultProps = {
@@ -37,7 +39,25 @@ describe('CurriculumCatalogCard', () => {
     screen.getByRole('img', {name: altText});
   });
 
-  it('renders grade range', () => {
+  it('renders subject', () => {
+    render(<CurriculumCatalogCard {...defaultProps} />);
+
+    screen.getByText(defaultProps.subjects[0], {exact: false});
+  });
+
+  it('does not render translation icon by default', () => {
+    render(<CurriculumCatalogCard {...defaultProps} />);
+
+    expect(screen.queryByTitle(translationIconTitle)).to.be.null;
+  });
+
+  it('renders translation icon when translation is available', () => {
+    render(<CurriculumCatalogCard {...defaultProps} isTranslated />);
+
+    screen.getByTitle(translationIconTitle);
+  });
+
+  it('renders grade range with icon', () => {
     render(<CurriculumCatalogCard {...defaultProps} />);
 
     screen.getByText(
@@ -47,29 +67,10 @@ describe('CurriculumCatalogCard', () => {
     );
   });
 
-  it('renders subject', () => {
-    render(<CurriculumCatalogCard {...defaultProps} />);
-
-    screen.getByText(defaultProps.subjects[0], {exact: false});
-  });
-
-  it('renders duration', () => {
+  it('renders duration with icon', () => {
     render(<CurriculumCatalogCard {...defaultProps} />);
 
     screen.getByText(defaultProps.duration, {exact: false});
-  });
-
-  it('does not render translation icon by default', () => {
-    render(<CurriculumCatalogCard {...defaultProps} />);
-
-    expect(screen.queryByTitle('Course is available in your language')).to.be
-      .null;
-  });
-
-  it('renders translation icon when translation is available', () => {
-    render(<CurriculumCatalogCard {...defaultProps} isTranslated />);
-
-    screen.getByTitle('Course is available in your language');
   });
 
   it('renders Quick View button with descriptive label', () => {
