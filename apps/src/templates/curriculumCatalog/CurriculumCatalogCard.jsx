@@ -8,7 +8,7 @@ import {
   translatedCourseOfferingSchoolSubjects,
   translatedCourseOfferingDurations
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
-import '../../../style/code-studio/curriculum_catalog_card.scss';
+import style from './curriculum_catalog_card.module.scss';
 
 // TODO [MEG]: remove this placeholder and require() syntax once images are pulled
 const tempImage = require('@cdo/static/resource_cards/anotherhoc.png');
@@ -89,32 +89,32 @@ const CustomizableCurriculumCatalogCard = ({
   quickViewButtonDescription,
   quickViewButtonText
 }) => (
-  <div className="curriculumCatalogCardContainer">
+  <div className={style.curriculumCatalogCardContainer}>
     <img src={imageSrc} alt={imageAltText} />
-    <div className="curriculumInfoContainer">
+    <div className={style.curriculumInfoContainer}>
       {/*TODO [MEG]: Show all subjects and topics rather than only the first one */}
-      <div className="tagsAndTranslatabilityContainer">
-        <p className="overline">{subjectsAndTopics[0]}</p>
+      <div className={style.tagsAndTranslatabilityContainer}>
+        <p className={style.overline}>{subjectsAndTopics[0]}</p>
         {/*TODO [MEG]: Ensure this icon matches spec when we update FontAwesome */}
         {isTranslated && (
           <FontAwesome
-            icon={'language'}
-            className={'fa-solid'}
+            icon="language"
+            className="fa-solid"
             title={translationIconTitle}
           />
         )}
       </div>
       <h4>{courseDisplayName}</h4>
-      <div className={'iconWithDescription'}>
-        <FontAwesome icon={'user'} className={'fa-solid'} />
-        <p className={'iconDescription'}>{gradeRange}</p>
+      <div className={style.iconWithDescription}>
+        <FontAwesome icon="user" className="fa-solid" />
+        <p className={style.iconDescription}>{gradeRange}</p>
       </div>
-      <div className={'iconWithDescription'}>
+      <div className={style.iconWithDescription}>
         {/*TODO [MEG]: Update this to be clock fa-solid when we update FontAwesome */}
-        <FontAwesome icon={'clock-o'} />
-        <p className={'iconDescription'}>{duration}</p>
+        <FontAwesome icon="clock-o" />
+        <p className={style.iconDescription}>{duration}</p>
       </div>
-      <div className="buttonsContainer">
+      <div className={style.buttonsContainer}>
         {/* each button should be same fixed size */}
         <Button
           color={Button.ButtonColor.neutralDark}
