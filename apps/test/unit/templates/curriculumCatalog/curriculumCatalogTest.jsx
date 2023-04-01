@@ -46,31 +46,37 @@ describe('CurriculumCatalogCard', () => {
   });
 
   it('does not render translation icon by default', () => {
-    render(<CurriculumCatalogCard {...defaultProps} />);
+    const {container} = render(<CurriculumCatalogCard {...defaultProps} />);
 
     expect(screen.queryByTitle(translationIconTitle)).to.be.null;
+    expect(container.querySelectorAll('i[class*=language]')).to.have.length(0);
   });
 
   it('renders translation icon when translation is available', () => {
-    render(<CurriculumCatalogCard {...defaultProps} isTranslated />);
+    const {container} = render(
+      <CurriculumCatalogCard {...defaultProps} isTranslated />
+    );
 
     screen.getByTitle(translationIconTitle);
+    expect(container.querySelectorAll('i[class*=language]')).to.have.length(1);
   });
 
   it('renders grade range with icon', () => {
-    render(<CurriculumCatalogCard {...defaultProps} />);
+    const {container} = render(<CurriculumCatalogCard {...defaultProps} />);
 
     screen.getByText(
       new RegExp(
         `Grades: ${defaultProps.youngestGrade}-${defaultProps.oldestGrade}`
       )
     );
+    expect(container.querySelectorAll('i[class*=user]')).to.have.length(1);
   });
 
   it('renders duration with icon', () => {
-    render(<CurriculumCatalogCard {...defaultProps} />);
+    const {container} = render(<CurriculumCatalogCard {...defaultProps} />);
 
     screen.getByText(defaultProps.duration, {exact: false});
+    expect(container.querySelectorAll('i[class*=clock]')).to.have.length(1);
   });
 
   it('renders Quick View button with descriptive label', () => {
