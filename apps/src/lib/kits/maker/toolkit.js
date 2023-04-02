@@ -33,7 +33,7 @@ import {
 export {dropletConfig, configMicrobit, configCircuitPlayground, MakerError};
 
 /**
- * @type {CircuitPlaygroundBoard} The current board controller, populated when
+ * @type {CircuitPlaygroundBoard | FakeCPBoard || MicroBitBoard || FakeMBBoard} The current board controller, populated when
  * connected, null when not connected.  There can be only one at any time.
  */
 let currentBoard = null;
@@ -73,8 +73,9 @@ export function connect({interpreter, onDisconnect}) {
       )
     );
   }
-
-  if (currentBoard) {
+  const isFakeBoard =
+    currentBoard instanceof FakeCPBoard || currentBoard instanceof FakeMBBoard;
+  if (currentBoard && !isFakeBoard) {
     commands.injectBoardController(currentBoard);
     currentBoard.installOnInterpreter(interpreter);
     // When the board is reset, the components are disabled. Re-enable now.

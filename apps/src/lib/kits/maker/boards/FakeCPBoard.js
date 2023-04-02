@@ -7,7 +7,8 @@ import {
 } from './circuitPlayground/PlaygroundConstants';
 
 /**
- * Fake Circuit Playground Maker Board for running Maker Toolkit apps without a Ciruit Playground board attached.
+ * Fake Circuit Playground Maker Board for running Maker Toolkit apps without a
+ * Circuit Playground board attached.
  * Attaches fake, no-op components to the interpreter.
  * @extends EventEmitter
  * @implements MakerBoard
@@ -29,6 +30,8 @@ export default class FakeCPBoard extends EventEmitter {
     return Promise.resolve();
   }
 
+  reset() {}
+
   /**
    * Marshals the board component controllers and appropriate constants into the
    * given JS Interpreter instance so they can be used by student code.
@@ -38,7 +41,6 @@ export default class FakeCPBoard extends EventEmitter {
   installOnInterpreter(jsInterpreter) {
     const constructors = {
       Led: FakeLed,
-      Board: FakeComponent,
       NeoPixel: FakeColorLed,
       PlaygroundButton: FakeButton,
       Switch: FakeToggleSwitch,
@@ -140,7 +142,6 @@ class FakeLed extends FakeComponent {
 }
 
 class FakeColorLed extends FakeLed {
-  stop() {}
   intensity() {}
   color() {}
 }
@@ -148,9 +149,10 @@ class FakeColorLed extends FakeLed {
 class FakeBuzzer extends FakeComponent {
   frequency() {}
   note() {}
-  off() {}
   stop() {}
   play() {}
+  playNotes() {}
+  playSong() {}
 }
 
 class FakeToggleSwitch extends FakeComponent {
@@ -163,11 +165,10 @@ class FakeToggleSwitch extends FakeComponent {
 class FakeSensor extends FakeComponent {
   constructor() {
     super();
-    this.value = null;
+    this.value = 0;
     this.threshold = 0;
   }
 
-  start() {}
   setScale() {}
 
   getAveragedValue() {
