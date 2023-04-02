@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import {EventEmitter} from 'events'; // see node-libs-browser
 import {expect} from '../../../../../util/reconfiguredChai';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
-import FakeBoard from '@cdo/apps/lib/kits/maker/boards/FakeBoard';
+import FakeCPBoard from '@cdo/apps/lib/kits/maker/boards/FakeCPBoard';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
 
 /**
@@ -219,13 +219,16 @@ export function itImplementsTheMakerBoardInterface(
 
       it(`returns an Led component`, () => {
         const led = board.createLed(10);
-        // FakeBoard doesn't provide an LED component, so check the basic LED
+        // FakeCPBoard doesn't provide an LED component, so check the basic LED
         // shape instead.
         expect(led.on).to.be.a('function');
         expect(led.off).to.be.a('function');
         expect(led.toggle).to.be.a('function');
 
-        if (BoardClass === CircuitPlaygroundBoard || BoardClass === FakeBoard) {
+        if (
+          BoardClass === CircuitPlaygroundBoard ||
+          BoardClass === FakeCPBoard
+        ) {
           expect(led.blink).to.be.a('function');
           expect(led.pulse).to.be.a('function');
         }

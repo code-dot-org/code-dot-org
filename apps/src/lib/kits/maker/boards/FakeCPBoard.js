@@ -1,4 +1,4 @@
-/** @file Fake for running Maker apps without an attached board. */
+/** @file Fake for running Maker apps without an attached Circuit Playground board. */
 import _ from 'lodash';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import {
@@ -7,12 +7,12 @@ import {
 } from './circuitPlayground/PlaygroundConstants';
 
 /**
- * Fake Maker Board for running Maker Toolkit apps without a board attached.
+ * Fake Circuit Playground Maker Board for running Maker Toolkit apps without a Ciruit Playground board attached.
  * Attaches fake, no-op components to the interpreter.
  * @extends EventEmitter
  * @implements MakerBoard
  */
-export default class FakeBoard extends EventEmitter {
+export default class FakeCPBoard extends EventEmitter {
   /**
    * Open a connection to the board on its configured port.
    * @returns {Promise} resolved when the board is ready to use.

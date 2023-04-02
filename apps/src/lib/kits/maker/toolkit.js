@@ -5,7 +5,8 @@
 import {getStore} from '../../../redux';
 import trackEvent from '../../../util/trackEvent';
 import CircuitPlaygroundBoard from './boards/circuitPlayground/CircuitPlaygroundBoard';
-import FakeBoard from './boards/FakeBoard';
+import FakeCPBoard from './boards/FakeCPBoard';
+import FakeMBBoard from './boards/FakeMBBoard';
 import * as commands from './commands';
 import dropletConfig, {
   configMicrobit,
@@ -168,7 +169,12 @@ function getBoard() {
     project.getMakerAPIs() === MB_API ? MicroBitBoard : CircuitPlaygroundBoard;
 
   if (shouldRunWithFakeBoard()) {
-    return Promise.resolve(new FakeBoard());
+    // Check which maker is being enabled
+    if (project.getMakerAPIs() === MB_API) {
+      return Promise.resolve(new FakeMBBoard());
+    } else {
+      return Promise.resolve(new FakeCPBoard());
+    }
   } else if (shouldUseWebSerial()) {
     return navigator.serial.getPorts().then(ports => {
       // No previously connected port. Query user to select port.

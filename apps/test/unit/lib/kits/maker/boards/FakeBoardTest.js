@@ -1,16 +1,16 @@
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
-import FakeBoard from '@cdo/apps/lib/kits/maker/boards/FakeBoard';
+import FakeCPBoard from '@cdo/apps/lib/kits/maker/boards/FakeCPBoard';
 import {expect} from '../../../../../util/reconfiguredChai';
 import {itMakesCircuitPlaygroundComponentsAvailable} from './circuitPlayground/CircuitPlaygroundBoardTest';
 
-describe('FakeBoard', () => {
-  // Test coverage for Maker Board Interface
-  itImplementsTheMakerBoardInterface(FakeBoard);
-  itMakesCircuitPlaygroundComponentsAvailable(FakeBoard);
+describe('FakeCPBoard', () => {
+  // Test coverage for Circuit Playground Maker Board Interface
+  itImplementsTheMakerBoardInterface(FakeCPBoard);
+  itMakesCircuitPlaygroundComponentsAvailable(FakeCPBoard);
 
   describe(`boardConnected()`, () => {
     it('always returns false', () => {
-      const board = new FakeBoard();
+      const board = new FakeCPBoard();
       expect(board.boardConnected()).to.be.false;
       return board.connect().then(() => {
         expect(board.boardConnected()).to.be.false;
