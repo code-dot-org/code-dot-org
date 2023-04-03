@@ -20,13 +20,13 @@ import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
 import {isChrome, gtChrome33, isCodeOrgBrowser} from './util/browserChecks';
 import MicroBitBoard from './boards/microBit/MicroBitBoard';
-import project from '../../../code-studio/initApp/project';
 import {MB_API} from './boards/microBit/MicroBitConstants';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 import {
   WEB_SERIAL_FILTERS,
   shouldUseWebSerial
 } from '@cdo/apps/lib/kits/maker/util/boardUtils';
+import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 
 // Re-export some modules so consumers only need this 'toolkit' module
 export {dropletConfig, configMicrobit, configCircuitPlayground, MakerError};
@@ -164,8 +164,9 @@ function confirmSupportedBrowser() {
  * @returns {Promise.<MakerBoard>}
  */
 function getBoard() {
+  const makerBoardAPI = getAppOptions().level.makerlabEnabled;
   const boardConstructor =
-    project.getMakerAPIs() === MB_API ? MicroBitBoard : CircuitPlaygroundBoard;
+    makerBoardAPI === MB_API ? MicroBitBoard : CircuitPlaygroundBoard;
 
   if (shouldRunWithFakeBoard()) {
     return Promise.resolve(new FakeBoard());
