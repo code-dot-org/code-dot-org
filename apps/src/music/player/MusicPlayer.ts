@@ -270,7 +270,7 @@ export default class MusicPlayer {
   }
 
   /**
-   * Clear all from the list of playback events, and stop any sounds that have 
+   * Clear all from the list of playback events, and stop any sounds that have
    * not yet been played, if playback is in progress.
    */
   clearAllEvents() {
@@ -447,7 +447,10 @@ export default class MusicPlayer {
 
   private addNewEvent(event: PlaybackEvent) {
     this.playbackEvents.push(event);
-    this.lastMeasure = Math.max(this.lastMeasure, event.when + event.length - 1);
+    this.lastMeasure = Math.max(
+      this.lastMeasure,
+      event.when + event.length - 1
+    );
   }
 
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
@@ -487,9 +490,8 @@ export default class MusicPlayer {
 
       return results;
     } else if (event.type === 'chord') {
-      const results: SampleEvent[] = this.convertChordEventToSampleEvents(
-        event
-      );
+      const results: SampleEvent[] =
+        this.convertChordEventToSampleEvents(event);
       return results;
     }
 
@@ -536,9 +538,8 @@ export default class MusicPlayer {
       return null;
     }
 
-    const folder: SoundFolder | null = this.library.getFolderForPath(
-      instrument
-    );
+    const folder: SoundFolder | null =
+      this.library.getFolderForPath(instrument);
 
     if (folder === null) {
       console.warn(`No instrument ${instrument}`);

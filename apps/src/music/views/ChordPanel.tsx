@@ -67,7 +67,7 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
       playStyle,
       instrument
     });
-  }, [instrument, playStyle, selectedNotes]);
+  }, [instrument, onChange, playStyle, selectedNotes]);
 
   useEffect(() => {
     setIsDisabled(selectedNotes.length >= MAX_NOTES);

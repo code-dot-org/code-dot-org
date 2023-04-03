@@ -30,6 +30,7 @@ const ClearButton: React.FunctionComponent<ClearButtonProps> = ({
     onClickClear();
   }, [cancelPreviews, onClickClear]);
   return (
+    // eslint-disable-next-line react/button-has-type
     <button className={moduleStyles.buttonContainer} onClick={onClick}>
       <FontAwesome icon={'trash-o'} className={moduleStyles.previewButton} />
     </button>
@@ -46,6 +47,7 @@ const PreviewButton: React.FunctionComponent<PreviewButtonProps> = ({
   playPreview
 }) => {
   return (
+    // eslint-disable-next-line react/button-has-type
     <button
       className={moduleStyles.buttonContainer}
       onClick={enabled ? playPreview : undefined}

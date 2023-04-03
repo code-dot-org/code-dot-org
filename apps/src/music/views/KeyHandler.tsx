@@ -75,6 +75,7 @@ const KeyHandler: React.FunctionComponent<KeyHandlerProps> = ({
 
   useEffect(() => {
     document.body.addEventListener('keyup', handleKeyUp);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return null;
