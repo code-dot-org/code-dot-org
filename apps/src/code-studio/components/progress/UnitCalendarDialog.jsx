@@ -8,16 +8,7 @@ import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLesso
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS = [
-  45,
-  90,
-  135,
-  180,
-  225,
-  270,
-  315,
-  360,
-  405,
-  450
+  45, 90, 135, 180, 225, 270, 315, 360, 405, 450
 ];
 export const WEEK_WIDTH = 585;
 

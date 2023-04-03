@@ -97,7 +97,7 @@ export default class JSInterpreter {
     this.studioApp = studioApp;
     this.shouldRunAtMaxSpeed =
       shouldRunAtMaxSpeed ||
-      function() {
+      function () {
         return true;
       };
     this.maxInterpreterStepsPerTick = maxInterpreterStepsPerTick || 10000;
@@ -184,33 +184,34 @@ export default class JSInterpreter {
         '\n;while(true){var __jsCB=getCallback();' +
         'if(__jsCB){setCallbackRetVal(__jsCB.fn.apply(null,__jsCB.arguments || null));}}';
 
-      CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction = intFunc => {
-        let retFunc = (...args) => {
-          if (this.initialized()) {
-            this.eventQueue.push({
-              fn: intFunc,
-              arguments: args
-            });
+      CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction =
+        intFunc => {
+          let retFunc = (...args) => {
+            if (this.initialized()) {
+              this.eventQueue.push({
+                fn: intFunc,
+                arguments: args
+              });
 
-            if (!this.isExecuting) {
-              // Execute the interpreter and if a return value is sent back from the
-              // interpreter's event handler, pass that back in the native world
+              if (!this.isExecuting) {
+                // Execute the interpreter and if a return value is sent back from the
+                // interpreter's event handler, pass that back in the native world
 
-              // NOTE: the interpreter will not execute forever, if the event handler
-              // takes too long, executeInterpreter() will return and the native side
-              // will just see 'undefined' as the return value. The rest of the interpreter
-              // event handler will run in the next onTick(), but the return value will
-              // no longer have any effect.
-              this.executeInterpreter(false, true);
-              return this.lastCallbackRetVal;
+                // NOTE: the interpreter will not execute forever, if the event handler
+                // takes too long, executeInterpreter() will return and the native side
+                // will just see 'undefined' as the return value. The rest of the interpreter
+                // event handler will run in the next onTick(), but the return value will
+                // no longer have any effect.
+                this.executeInterpreter(false, true);
+                return this.lastCallbackRetVal;
+              }
             }
+          };
+          if (intFunc && intFunc.node && intFunc.node.id) {
+            retFunc.funcName = intFunc.node.id.name;
           }
+          return retFunc;
         };
-        if (intFunc && intFunc.node && intFunc.node.id) {
-          retFunc.funcName = intFunc.node.id.name;
-        }
-        return retFunc;
-      };
     }
 
     try {
@@ -353,10 +354,7 @@ export default class JSInterpreter {
         if (fullComment[0] === '*') {
           // For a JSDoc style comment, acorn doesn't strip the * that starts
           // each line, so we do that here.
-          fullComment = fullComment
-            .substr(1)
-            .split('\n * ')
-            .join('\n');
+          fullComment = fullComment.substr(1).split('\n * ').join('\n');
         }
       } else {
         while (comment) {
@@ -639,7 +637,7 @@ export default class JSInterpreter {
       let selectCodeFunc;
       let libraryName;
       if (this.studioApp.hideSource && atMaxSpeed) {
-        selectCodeFunc = function() {
+        selectCodeFunc = function () {
           return -1;
         };
       } else if (this.studioApp.hideSource || atMaxSpeed) {
@@ -893,8 +891,9 @@ export default class JSInterpreter {
         objectString = node.object.name;
         break;
       default:
-        throw 'Unexpected MemberExpression node object type: ' +
-          node.object.type;
+        throw (
+          'Unexpected MemberExpression node object type: ' + node.object.type
+        );
     }
     let propString;
     switch (node.property.type) {
@@ -905,8 +904,9 @@ export default class JSInterpreter {
         propString = '[' + node.property.value + ']';
         break;
       default:
-        throw 'Unexpected MemberExpression node property type: ' +
-          node.object.type;
+        throw (
+          'Unexpected MemberExpression node property type: ' + node.object.type
+        );
     }
     return objectString + propString;
   }
@@ -1349,7 +1349,7 @@ export default class JSInterpreter {
       'OBJECT',
       'STRING',
       'UNDEFINED'
-    ].forEach(function(prop) {
+    ].forEach(function (prop) {
       evalInterpreter[prop] = this.interpreter[prop];
     }, this);
 

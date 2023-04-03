@@ -169,12 +169,8 @@ class TopInstructions extends Component {
    * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
-    const {
-      user,
-      serverLevelId,
-      serverScriptId,
-      dynamicInstructions
-    } = this.props;
+    const {user, serverLevelId, serverScriptId, dynamicInstructions} =
+      this.props;
     const {studentId} = this.state;
 
     window.addEventListener('resize', this.adjustMaxNeededHeight);

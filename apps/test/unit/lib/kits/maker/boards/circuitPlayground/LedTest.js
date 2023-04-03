@@ -5,7 +5,7 @@ import five from '@code-dot-org/johnny-five';
 import {makeStubBoard} from '../makeStubBoard';
 import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
 
-describe('Led', function() {
+describe('Led', function () {
   it('is a five.Led', () => {
     const led = newTestLed();
     expect(led).to.be.an.instanceOf(five.Led);

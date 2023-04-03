@@ -27,7 +27,7 @@ export default {
 
     $('#pairing_link')
       .show()
-      .click(function() {
+      .click(function () {
         lazyInitDialog();
         hideUserOptions();
         return false;

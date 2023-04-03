@@ -386,24 +386,21 @@ const EXPECTED_LOCATIONS = [
     lat: '49.9025854',
     lon: '-129.3042705',
     title: 'Virtruvian Elementary',
-    html:
-      '<h3 class="entry-detail">Virtruvian Elementary</h3><div class="entry-detail">2020 Example Way, Mukilteo, WA, United States</div><div class="entry-detail"><strong>Format: </strong>Out of school - Afterschool program (private)</div><div class="entry-detail"><strong>Level(s): </strong>Preschool, Elementary</div><div class="entry-detail"><strong>Language(s): </strong>Code.org Code Studio, HTML, JavaScript, Ruby</div><div><a id="location-details-trigger-0" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-0">More information</a></div>',
+    html: '<h3 class="entry-detail">Virtruvian Elementary</h3><div class="entry-detail">2020 Example Way, Mukilteo, WA, United States</div><div class="entry-detail"><strong>Format: </strong>Out of school - Afterschool program (private)</div><div class="entry-detail"><strong>Level(s): </strong>Preschool, Elementary</div><div class="entry-detail"><strong>Language(s): </strong>Code.org Code Studio, HTML, JavaScript, Ruby</div><div><a id="location-details-trigger-0" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-0">More information</a></div>',
     zoom: 10
   },
   {
     lat: '44.6409',
     lon: '-124.348',
     title: 'Code on the Road',
-    html:
-      '<h3 class="entry-detail">Code on the Road</h3><div class="entry-detail">Example Building 8th floor\nSeattle, WA 98109\nUnited States</div><div class="entry-detail"><strong>Format: </strong>Out of school - Other out of school (private)</div><div class="entry-detail"><strong>Level(s): </strong>High school, College</div><div class="entry-detail"><strong>Language(s): </strong>C#, Python</div><div><a id="location-details-trigger-1" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-1">More information</a></div>',
+    html: '<h3 class="entry-detail">Code on the Road</h3><div class="entry-detail">Example Building 8th floor\nSeattle, WA 98109\nUnited States</div><div class="entry-detail"><strong>Format: </strong>Out of school - Other out of school (private)</div><div class="entry-detail"><strong>Level(s): </strong>High school, College</div><div class="entry-detail"><strong>Language(s): </strong>C#, Python</div><div><a id="location-details-trigger-1" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-1">More information</a></div>',
     zoom: 10
   },
   {
     lat: '107.16035650000001',
     lon: ' 125.5214185',
     title: 'Bloom County Library',
-    html:
-      '<h3 class="entry-detail">Bloom County Library</h3><div class="entry-detail">151 Wildacre Rd SW Lakewood WA 98499</div><div class="entry-detail"><strong>Format: </strong>Out of school - Other out of school (public)</div><div class="entry-detail"><strong>Level(s): </strong>Elementary, Middle school, High school</div><div class="entry-detail"><strong>Language(s): </strong>Scratch, JavaScript, PHP, Ruby, C++, Arduino</div><div><a id="location-details-trigger-2" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-2">More information</a></div>',
+    html: '<h3 class="entry-detail">Bloom County Library</h3><div class="entry-detail">151 Wildacre Rd SW Lakewood WA 98499</div><div class="entry-detail"><strong>Format: </strong>Out of school - Other out of school (public)</div><div class="entry-detail"><strong>Level(s): </strong>Elementary, Middle school, High school</div><div class="entry-detail"><strong>Language(s): </strong>Scratch, JavaScript, PHP, Ruby, C++, Arduino</div><div><a id="location-details-trigger-2" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-2">More information</a></div>',
     zoom: 10
   }
 ];

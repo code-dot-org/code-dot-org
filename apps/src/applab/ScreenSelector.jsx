@@ -43,7 +43,7 @@ class ScreenSelector extends React.Component {
       return null;
     }
 
-    const options = this.props.screenIds.map(function(item) {
+    const options = this.props.screenIds.map(function (item) {
       return (
         <option key={item} value={item}>
           {item}
@@ -51,13 +51,9 @@ class ScreenSelector extends React.Component {
       );
     });
 
-    const defaultScreenId =
-      elementUtils
-        .getScreens()
-        .first()
-        .attr('id') || '';
+    const defaultScreenId = elementUtils.getScreens().first().attr('id') || '';
 
-    options.sort(function(a, b) {
+    options.sort(function (a, b) {
       if (a.key === defaultScreenId) {
         return -1;
       } else if (b.key === defaultScreenId) {
@@ -97,7 +93,7 @@ export default connect(
   },
   function propsFromDispatch(dispatch) {
     return {
-      onScreenChange: function(screenId) {
+      onScreenChange: function (screenId) {
         dispatch(screens.changeScreen(screenId));
       },
       onImport() {

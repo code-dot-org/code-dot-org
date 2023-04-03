@@ -201,12 +201,8 @@ class JavalabEditor extends React.Component {
   }
 
   createEditor(key, doc) {
-    const {
-      displayTheme,
-      isReadOnlyWorkspace,
-      fileMetadata,
-      editorFontSize
-    } = this.props;
+    const {displayTheme, isReadOnlyWorkspace, fileMetadata, editorFontSize} =
+      this.props;
     const extensions = [...editorSetup];
 
     extensions.push(

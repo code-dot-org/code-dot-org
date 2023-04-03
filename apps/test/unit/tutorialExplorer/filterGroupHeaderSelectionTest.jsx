@@ -23,10 +23,7 @@ const DEFAULT_PROPS = {
 };
 
 function getItemBorderLeft(wrapper, itemIndex) {
-  return wrapper
-    .childAt(0)
-    .childAt(itemIndex)
-    .props().style.borderLeft;
+  return wrapper.childAt(0).childAt(itemIndex).props().style.borderLeft;
 }
 
 describe('FilterGroupHeaderSelection', () => {
@@ -35,10 +32,7 @@ describe('FilterGroupHeaderSelection', () => {
     const wrapper = shallow(
       <FilterGroupHeaderSelection {...DEFAULT_PROPS} onUserInput={spy} />
     );
-    wrapper
-      .childAt(0)
-      .childAt(1)
-      .simulate('click');
+    wrapper.childAt(0).childAt(1).simulate('click');
     expect(spy).to.have.been.calledOnce.and.calledWith(
       'group-1',
       'frobozz',

@@ -13,18 +13,12 @@ describe('LessonGroupInfoDialog', () => {
     const wrapper = shallow(<LessonGroupInfo {...DEFAULT_PROPS} />);
 
     expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(2);
-    expect(
-      wrapper
-        .find('SafeMarkdown')
-        .at(0)
-        .props().markdown
-    ).to.equal('This is an awesome Lesson Group.');
+    expect(wrapper.find('SafeMarkdown').at(0).props().markdown).to.equal(
+      'This is an awesome Lesson Group.'
+    );
 
-    expect(
-      wrapper
-        .find('SafeMarkdown')
-        .at(1)
-        .props().markdown
-    ).to.equal('Who? What?');
+    expect(wrapper.find('SafeMarkdown').at(1).props().markdown).to.equal(
+      'Who? What?'
+    );
   });
 });

@@ -261,9 +261,8 @@ export class UnconnectedCommitDialog extends React.Component {
             files={files.map(name => ({
               name,
               commit: filesToBackpack.includes(name),
-              hasConflictingName: this.getConflictingBackpackFiles().includes(
-                name
-              )
+              hasConflictingName:
+                this.getConflictingBackpackFiles().includes(name)
             }))}
             notes={commitNotes}
             onToggleFile={this.toggleFileToBackpack}
