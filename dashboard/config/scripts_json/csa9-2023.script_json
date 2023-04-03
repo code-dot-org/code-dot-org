@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-29 18:21:53 UTC",
+    "serialized_at": "2023-03-31 15:22:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2718,6 +2718,17 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa9-2023/resources",
+      "key": "all_resources_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_7"
+      }
+    },
+    {
       "name": "AP Classroom: Authoring New FRQs",
       "url": "https://apclassroom.clickhelp.co/articles/#!ap-classroom-user-guide-for-teachers-publication/tcb-qb-creating-new-frqs",
       "key": "ap_classroom_authoring_new_frqs",
@@ -3339,7 +3350,12 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_7",
+        "script.name": "csa9-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 

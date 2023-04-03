@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-29 18:27:12 UTC",
+    "serialized_at": "2023-04-01 20:28:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -207,6 +207,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "assessment": true,
         "overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. Students choose how they will implement basic natural language processing techniques to understand text and respond accordingly. After brainstorming and planning, students develop their programs.",
         "preparation": "* Print copies of the Natural Language Processing Project Planning Guide (one for each student)\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, you use the skills you have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. You choose how you will implement basic natural language processing techniques to understand text and respond accordingly. After brainstorming and planning, you develop your program."
@@ -261,6 +262,7 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "assessment": true,
         "overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. Students choose how they will implement basic natural language processing techniques to understand text and respond accordingly. After brainstorming and planning, students develop their programs.",
         "preparation": "* Print copies of the Natural Language Processing Project Planning Guide (one for each student)\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, you use the skills you have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. You choose how you will implement basic natural language processing techniques to understand text and respond accordingly. After brainstorming and planning, you develop your program."
@@ -548,7 +550,8 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Natural Language Processing Good Project.",
         "duration": "15",
-        "name": "Development"
+        "name": "Development",
+        "progression_name": "Natural Language Processing Project"
       },
       "seeding_key": {
         "activity_section.key": "5871b116-c4d0-4116-8662-e67b10261dfe",
@@ -1197,7 +1200,8 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Natural Language Processing Good Project.",
         "duration": "20",
-        "name": "Development"
+        "name": "Development",
+        "progression_name": "Natural Language Processing Project"
       },
       "seeding_key": {
         "activity_section.key": "ade8b948-4d36-4da3-ac36-715d3431b413",
@@ -1276,12 +1280,101 @@
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Natural Language Processing Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6 Natural Language Processing Project_2023"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2023",
+        "activity_section.key": "5871b116-c4d0-4116-8662-e67b10261dfe"
+      },
+      "level_keys": [
+        "CSA U6 Natural Language Processing Project_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Natural Language Processing Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6 Natural Language Processing Project 1-Day_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2023",
+        "activity_section.key": "ade8b948-4d36-4da3-ac36-715d3431b413"
+      },
+      "level_keys": [
+        "CSA U6 Natural Language Processing Project 1-Day_2023"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "CSA U6 Natural Language Processing Project_2023",
+        "script_level.level_keys": [
+          "CSA U6 Natural Language Processing Project_2023"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2023",
+        "activity_section.key": "5871b116-c4d0-4116-8662-e67b10261dfe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6 Natural Language Processing Project 1-Day_2023",
+        "script_level.level_keys": [
+          "CSA U6 Natural Language Processing Project 1-Day_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2023",
+        "activity_section.key": "ade8b948-4d36-4da3-ac36-715d3431b413"
+      }
+    }
   ],
   "resources": [
+    {
+      "name": "All Resources",
+      "url": "/s/csa6-2023/resources",
+      "key": "all_resources_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_6"
+      }
+    },
+    {
+      "name": "Developing Project Management Skills",
+      "url": "https://docs.google.com/document/d/1kgVoutrFAiSLDtVwTYUUG_K5ys2vjw-NrBpEx10ZVpY/edit?usp=sharing",
+      "key": "developing_project_management_skills",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "developing_project_management_skills"
+      }
+    },
     {
       "name": "Unit 6 Assessment",
       "url": "https://docs.google.com/presentation/d/1gXwHhjjCEruePrOefcFRc2DDBPrID4rbPV8YwR7Utls/edit?usp=share_link",
@@ -1292,6 +1385,44 @@
       },
       "seeding_key": {
         "resource.key": "unit_6_assessment"
+      }
+    },
+    {
+      "name": "Unit 6 Guide",
+      "url": "https://docs.google.com/document/d/12jLdyrtHeDoZYXsVlO12wmV-x1SCfD9l5sr8CZTXKGM/edit?usp=sharing",
+      "key": "unit_6_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "unit_6_guide"
+      }
+    },
+    {
+      "name": "Unit 6 Overview",
+      "url": "https://docs.google.com/document/d/1w1ZZqKQhyhO-YBjvK9b_qX4X6Djk588tmhR9y1H8dR4/edit?usp=share_link",
+      "key": "unit_6_overview",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_6_overview"
+      }
+    },
+    {
+      "name": "Unit 6 Study Guide",
+      "url": "https://docs.google.com/document/d/1-xgKZvDhQy3aoiRVkMJBT1KEF8TUP8O-_U8Eo8bseTk/edit?usp=share_link",
+      "key": "unit_6_study_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_6_study_guide"
       }
     },
     {
@@ -1322,7 +1453,36 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_6",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "developing_project_management_skills",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_6_guide",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_6_overview",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_6_study_guide",
+        "script.name": "csa6-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
