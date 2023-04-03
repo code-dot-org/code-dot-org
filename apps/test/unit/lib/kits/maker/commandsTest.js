@@ -14,6 +14,7 @@ import {
   pinMode
 } from '@cdo/apps/lib/kits/maker/commands';
 import FakeBoard from '@cdo/apps/lib/kits/maker/boards/FakeBoard';
+import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
 import {MicrobitStubBoard} from './boards/makeStubBoard';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 
@@ -171,7 +172,8 @@ describe('maker/commands.js - MicroBit', () => {
   let stubBoardController, errorHandler;
 
   beforeEach(() => {
-    stubBoardController = sinon.createStubInstance(MicrobitStubBoard);
+    stubBoardController = sinon.createStubInstance(MicroBitBoard);
+    stubBoardController.boardClient_ = new MicrobitStubBoard();
     injectBoardController(stubBoardController);
     errorHandler = {
       outputWarning: sinon.spy(),

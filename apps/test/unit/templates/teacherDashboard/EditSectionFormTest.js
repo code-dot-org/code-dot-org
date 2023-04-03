@@ -442,7 +442,7 @@ describe('EditSectionForm', () => {
       sectionCurriculumLocalizedName:
         courseOfferings[testSection.courseOfferingId].display_name,
       sectionCurriculumVersionYear: '2017',
-      sectionGrade: testSection.grade,
+      sectionGrade: testSection.grades[0],
       sectionLockSelection: testSection.restrictSection,
       sectionName: testSection.name,
       sectionPairProgramSelection: testSection.pairingAllowed,
@@ -505,7 +505,7 @@ describe('EditSectionForm', () => {
       sectionCurriculumLocalizedName:
         courseOfferings[testSection.courseOfferingId].display_name,
       sectionCurriculumVersionYear: '2017',
-      sectionGrade: testSection.grade,
+      sectionGrade: testSection.grades[0],
       sectionLockSelection: testSection.restrictSection,
       sectionName: testSection.name,
       sectionPairProgramSelection: testSection.pairingAllowed,

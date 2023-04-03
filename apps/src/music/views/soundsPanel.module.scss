@@ -1,12 +1,11 @@
 @import "color.scss";
-@import "./theme/tokens-dark";
 
 .soundsPanel {
   user-select: none;
 }
 
 .folder {
-  background-color: $gray-900;
+  background-color: $neutral_dark90;
   overflow: hidden;
   border-radius: 4px;
   padding: 6px;
@@ -22,7 +21,7 @@
   font-size: 18px;
   padding: 6px 0;
   margin-bottom: 6px;
-  border-bottom: solid 1px $gray-800;
+  border-bottom: solid 1px $neutral_dark80;
   margin-right: 12px;
 }
 
@@ -30,10 +29,10 @@
   overflow: hidden;
   padding: 4px 0;
   &:hover {
-    background-color: $gray-800;
+    background-color: $neutral_dark80;
   }
   &Selected {
-    background-color: $gray-700;
+    background-color: $neutral_dark70;
   }
 }
 
@@ -60,22 +59,35 @@
 }
 
 .soundRowMiddle {
-  width: calc(100% - 23px - 30px);
+  width: calc(100% - 23px - 55px);
   float: left;
 }
 
 .soundRowRight {
   float: right;
-  width: 15px;
+  width: 40px;
   margin-right: 15px;
-  font-size: 16px;
+
+  .length {
+    display: inline-block;
+    font-size: 13px;
+    width: 15px;
+    margin-right: 10px;
+    color: $neutral_dark40;
+    text-align: right;
+  }
+
+  .previewContainer {
+    display: inline-block;
+    font-size: 16px;
+  }
 }
 
 .preview {
-  color: $gray-300;
+  color: $neutral_dark30;
 
   &Playing {
-    color: $gray-600;
+    color: $neutral_dark60;
     cursor: default;
   }
 }

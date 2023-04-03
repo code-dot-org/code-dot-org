@@ -135,22 +135,10 @@ Lint/UnusedMethodArgument:
 Naming/HeredocDelimiterNaming:
   Enabled: false
 
-# Offense count: 16
-# Configuration parameters: EnforcedStyleForLeadingUnderscores.
-# SupportedStylesForLeadingUnderscores: disallowed, required, optional
-Naming/MemoizedInstanceVariableName:
-  Enabled: false
-
 # Offense count: 63
 # Configuration parameters: MinNameLength, AllowNamesEndingInNumbers, AllowedNames, ForbiddenNames.
 # AllowedNames: at, by, db, id, in, io, ip, of, on, os, pp, to
 Naming/MethodParameterName:
-  Enabled: false
-
-# Offense count: 72
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: PreferredName.
-Naming/RescuedExceptionsVariableName:
   Enabled: false
 
 # Offense count: 661

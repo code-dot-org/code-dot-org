@@ -908,8 +908,11 @@ et:
             "'sound://category_animals/cat.mp3'": kass
             "'sound://category_animals/cow.mp3'": lehm
             "'sound://category_animals/sheep.mp3'": lammas
+            "'sound://category_animals/goat.mp3'": kits
             "'sound://category_animals/chicken.mp3'": kana
+            "'sound://category_animals/elephant.mp3'": elevant
             "'sound://category_animals/dolphin.mp3'": delfiin
+            "'sound://category_animals/chick.mp3'": tibu
             "'sound://category_animals/dog.mp3'": koer
             "'sound://category_digital/jump_7.mp3'": hüppa
       gamelab_randColor:
@@ -926,7 +929,9 @@ et:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': koobas
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': linn
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': kõrb
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaktika
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ruudustikus
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': heinamaa
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': vikerkaar
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': veealune
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': talv
@@ -1129,6 +1134,7 @@ et:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': linn
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': heinamaa
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1192,6 +1198,7 @@ et:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': tellis
             '"hearts"': südamed
             '"rainbow"': vikerkaar
       Poetry_makeBurst:
@@ -1201,11 +1208,13 @@ et:
       Poetry_playMusic:
         options:
           SOUND:
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': mets
             '"sound://category_nature/summer_night_loop.mp3"': öö
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': aeglane
       Poetry_playSound:
         options:
           SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': kell
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hüppa
       Poetry_setBackground:
         text: määra taustavärv {COLOR}

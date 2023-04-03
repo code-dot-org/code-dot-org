@@ -1759,6 +1759,18 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Bagong block!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Mag-click muna dito!"
+        },
+        "courseF_collector_items_-2022-2": {
+          "costumes_tab_callout": "Tab ng costume"
+        },
+        "courseF_collector_player_move_-2022-2": {
+          "costumes_tab_callout": "Tab ng costume"
+        },
+        "courseF_groups_size_-2022-2": {
+          "mini-toolbox-blue-button": "I-click ang asul na button para buksan o isara."
         }
       }
     }

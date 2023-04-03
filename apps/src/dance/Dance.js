@@ -475,9 +475,10 @@ Dance.prototype.onPuzzleComplete = function(result, message) {
   // If we know they succeeded, mark `levelComplete` true.
   const levelComplete = result;
 
-  // We're using blockly, report the program as xml.
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  let program = encodeURIComponent(Blockly.Xml.domToText(xml));
+  // We're using blockly, report the program as JSON.
+  let program = encodeURIComponent(
+    Blockly.cdoUtils.getCode(Blockly.mainBlockSpace)
+  );
 
   if (this.testResults >= TestResults.FREE_PLAY) {
     this.studioApp_.playAudio('win');

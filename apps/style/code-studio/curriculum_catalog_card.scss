@@ -1,0 +1,71 @@
+@import "phase1-design-system";
+
+$border-radius: 4px;
+
+.curriculumCatalogCardContainer {
+  display: flex;
+  flex-flow: column;
+  background-color: $neutral_light;
+  border-radius: $border-radius;
+  height: 384px;
+  width: 309px;
+
+  img {
+    height: 140px;
+    object-fit: cover;
+    border-radius: $border-radius $border-radius 0 0;
+  }
+
+  .curriculumInfoContainer {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    border: 1px solid $neutral_dark20;
+    border-top: 0;
+    border-radius: 0 0 $border-radius $border-radius;
+    padding: 1.25em 1em;
+
+    .overline {
+      color: $brand_primary_default;
+      margin-bottom: 0.5em;
+      font-size: 0.75em;
+      font-family: $gotham-bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    h4 {
+      margin-bottom: 0.75em;
+      color: $neutral_dark;
+    }
+
+    .iconWithDescription {
+      display: flex;
+      color: $neutral_dark80;
+      margin: 0 0 0.5em 0;
+      align-items: center;
+
+      .iconDescription {
+        font-size: 0.875em;
+        margin: 0 0 0 0.5em;
+        color: $neutral_dark;
+      }
+    }
+
+    .buttonsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: auto;
+
+      button {
+        height: 40px;
+        margin: 0;
+        // TODO [MEG] Adjust to accommodate different string
+        // sizes, look at gap https://css-tricks.com/almanac/properties/g/gap/
+        width: 132px; // calculated: (totalContainerWidth - 2*padding - minimumSpaceBetweenButtons) / 2
+        font-size: 1em;
+      }
+    }
+  }
+}

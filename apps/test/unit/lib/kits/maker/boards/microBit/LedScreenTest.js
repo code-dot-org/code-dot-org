@@ -1,4 +1,3 @@
-/** @file Tests for our johnny-five Led wrapper */
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {MicrobitStubBoard} from '../makeStubBoard';

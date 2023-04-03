@@ -27,14 +27,22 @@
           "Color": "Farba",
           "Food": "Jedlo",
           "City": "Mesto",
-          "text": "text"
+          "text": "text",
+          "Fill in the blanks to create a custom story!": "Vyplň prázdne políčka a vytvor si vlastný príbeh!",
+          "Emotion": "Emócia",
+          "Make a Sci-Fi Story!": "Vytvor sci-fi príbeh!",
+          "Make a Western Story!": "Vytvor westernový príbeh!"
         },
         "CSD U1 IO Story_2022": {
           "Name": "Meno",
           "Color": "Farba",
           "Food": "Jedlo",
           "City": "Mesto",
-          "text": "text"
+          "text": "text",
+          "Fill in the blanks to create a custom story!": "Vyplň prázdne políčka a vytvor si vlastný príbeh!",
+          "Emotion": "Emócia",
+          "Make a Sci-Fi Story!": "Vytvor sci-fi príbeh!",
+          "Make a Western Story!": "Vytvor westernový príbeh!"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
@@ -150,11 +158,13 @@
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "Správne!",
-          "Sorry!": "Prepáč!"
+          "Sorry!": "Prepáč!",
+          "National Park Quiz": "Kvíz o národných parkoch"
         },
         "CSD U1 processing npark_2022": {
           "Correct!": "Správne!",
-          "Sorry!": "Prepáč!"
+          "Sorry!": "Prepáč!",
+          "National Park Quiz": "Kvíz o národných parkoch"
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
@@ -1304,11 +1314,13 @@
         },
         "csd-explore ui-4": {
           "Correct!": "Správne!",
-          "Sorry!": "Prepáč!"
+          "Sorry!": "Prepáč!",
+          "National Park Quiz": "Kvíz o národných parkoch"
         },
         "csd-explore ui-4_2022": {
           "Correct!": "Správne!",
-          "Sorry!": "Prepáč!"
+          "Sorry!": "Prepáč!",
+          "National Park Quiz": "Kvíz o národných parkoch"
         },
         "csd-explore ui-5": {
           "1": "1",
@@ -1539,6 +1551,12 @@
           "night": "noc",
           "dusk": "Súmrak",
           "Predict": "Predpoveď"
+        },
+        "CSD U1 processing countries_2021": {
+          "How Many Countries...": "Koľko krajín..."
+        },
+        "CSD U1 processing countries_2022": {
+          "How Many Countries...": "Koľko krajín..."
         }
       }
     }

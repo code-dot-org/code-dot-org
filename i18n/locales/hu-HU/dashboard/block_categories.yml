@@ -16,7 +16,7 @@ hu:
       Default: Alapértelmezett
       Effects: Effektek
       Events: Események
-      Functions: funkciók
+      Functions: Függvények
       'Functions ': 'Függvények '
       Game/Score: Játék/pontszám
       Games/Score: Játékok/pontszám
@@ -26,7 +26,7 @@ hu:
       Location: Pozíció
       Locations: Helyek
       Logic: Logika
-      Loops: hurkok
+      Loops: Ciklusok
       Math: Matematika
       Number: Szám
       Numbers: Számok

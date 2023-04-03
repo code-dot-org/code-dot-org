@@ -285,6 +285,11 @@ export default class P5Lab {
           this.isBlockly
         )
       );
+      // If we reset a puzzle, it no longer has any custom uploads.
+      // Therefore we can set restricted share mode to false.
+      project.sourceHandler.setInRestrictedShareMode(false);
+      // If we reset a puzzle, we should reset the selected poem on that project.
+      project.sourceHandler.setSelectedPoem(null);
       this.studioApp_.resetButtonClick();
     }.bind(this);
 
@@ -901,27 +906,34 @@ export default class P5Lab {
       program = encodeURIComponent(this.studioApp_.getCode());
       this.message = null;
     } else {
-      // We're using blockly, report the program as xml
-      var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+      let textBlocks;
+      if (Blockly.version === 'Google') {
+        // We're using Google Blockly, report the program as JSON
+        textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+      } else {
+        // We're using CDO Blockly, report the program as xml
+        var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
 
-      // When SharedFunctions (aka shared behavior_definitions) are enabled, they
-      // are always appended to startBlocks on page load.
-      // See StudioApp -> setStartBlocks_
-      // Because of this, we need to remove the SharedFunctions when we are in
-      // toolbox edit mode. Otherwise, they end up in a student's toolbox.
-      if (this.level.edit_blocks === TOOLBOX_EDIT_MODE) {
-        var allBlocks = Array.from(xml.querySelectorAll('xml > block'));
-        var toRemove = allBlocks.filter(element => {
-          return (
-            element.getAttribute('type') === 'behavior_definition' &&
-            element.getAttribute('usercreated') !== 'true'
-          );
-        });
-        toRemove.forEach(element => {
-          xml.removeChild(element);
-        });
+        // When SharedFunctions (aka shared behavior_definitions) are enabled, they
+        // are always appended to startBlocks on page load.
+        // See StudioApp -> setStartBlocks_
+        // Because of this, we need to remove the SharedFunctions when we are in
+        // toolbox edit mode. Otherwise, they end up in a student's toolbox.
+        if (this.level.edit_blocks === TOOLBOX_EDIT_MODE) {
+          var allBlocks = Array.from(xml.querySelectorAll('xml > block'));
+          var toRemove = allBlocks.filter(element => {
+            return (
+              element.getAttribute('type') === 'behavior_definition' &&
+              element.getAttribute('usercreated') !== 'true'
+            );
+          });
+          toRemove.forEach(element => {
+            xml.removeChild(element);
+          });
+        }
+        textBlocks = Blockly.Xml.domToText(xml);
       }
-      program = encodeURIComponent(Blockly.Xml.domToText(xml));
+      program = encodeURIComponent(textBlocks);
     }
 
     if (this.testResults >= TestResults.FREE_PLAY) {

@@ -1,0 +1,47 @@
+@import "color.scss";
+
+.patternPanel {
+  font-size: 13px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: rgba($background_gray, 0.2);
+  }
+}
+
+.name {
+  display: inline-block;
+  width: 80px;
+  vertical-align: middle;
+}
+
+.outerCell {
+  display: inline-block;
+  padding: 5px 3px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &Playing {
+    background-color: $light-gray;
+  }
+}
+
+.cell {
+  padding: 2px;
+  width: 10px;
+  height: 10px;
+  background-color: #555;
+  border-radius: 50%;
+}
+
+.activeCell {
+  background-color: white;
+}
+
+.highlightedCell {
+  background-color: #696969;
+}

@@ -23,68 +23,45 @@ const mockAuthenticationOptions = {
   }
 };
 
-export default storybook =>
-  storybook.storiesOf('ManageLinkedAccounts', module).addStoryTable([
-    {
-      name: 'default table',
-      story: () => <ManageLinkedAccounts {...DEFAULT_PROPS} />
-    },
-    {
-      name: 'table for teacher with all authentication options',
-      story: () => (
-        <ManageLinkedAccounts
-          {...DEFAULT_PROPS}
-          userType="teacher"
-          authenticationOptions={mockAuthenticationOptions}
-        />
-      )
-    },
-    {
-      name: 'table for student with all authentication options',
-      story: () => (
-        <ManageLinkedAccounts
-          {...DEFAULT_PROPS}
-          userType="student"
-          authenticationOptions={mockAuthenticationOptions}
-        />
-      )
-    },
-    {
-      name: 'table with an error upon disconnecting',
-      story: () => {
-        const mockOptions = {
-          ...mockAuthenticationOptions,
-          2: {
-            id: 2,
-            credentialType: 'facebook',
-            email: 'facebook@email.com',
-            error: 'Oh no!'
-          }
-        };
+export default {
+  title: 'ManageLinkedAccounts',
+  component: ManageLinkedAccounts
+};
 
-        return (
-          <ManageLinkedAccounts
-            {...DEFAULT_PROPS}
-            authenticationOptions={mockOptions}
-          />
-        );
-      }
-    },
-    {
-      name: 'table with a disabled disconnect status',
-      story: () => {
-        const mockOptions = {
-          ...mockAuthenticationOptions,
-          1: {id: 1, credentialType: 'google_oauth2', email: 'google@email.com'}
-        };
+const Template = args => <ManageLinkedAccounts {...DEFAULT_PROPS} {...args} />;
 
-        return (
-          <ManageLinkedAccounts
-            {...DEFAULT_PROPS}
-            isGoogleClassroomStudent={true}
-            authenticationOptions={mockOptions}
-          />
-        );
-      }
+export const DefaultTable = Template.bind({});
+
+export const TableForTeachersWithAllAuthOptions = Template.bind({});
+TableForTeachersWithAllAuthOptions.args = {
+  userType: 'teacher',
+  authenticationOptions: mockAuthenticationOptions
+};
+
+export const TableForStudentsWithAllAuthOptions = Template.bind({});
+TableForStudentsWithAllAuthOptions.args = {
+  userType: 'student',
+  authenticationOptions: mockAuthenticationOptions
+};
+
+export const TableWithErrorWhenDisconnecting = Template.bind({});
+TableWithErrorWhenDisconnecting.args = {
+  authenticationOptions: {
+    ...mockAuthenticationOptions,
+    2: {
+      id: 2,
+      credentialType: 'facebook',
+      email: 'facebook@email.com',
+      error: 'Oh no!'
     }
-  ]);
+  }
+};
+
+export const TableWithADisabledDisconnectStatus = Template.bind({});
+TableWithADisabledDisconnectStatus.args = {
+  authenticationOptions: {
+    ...mockAuthenticationOptions,
+    1: {id: 1, credentialType: 'google_oauth2', email: 'google@email.com'}
+  },
+  isGoogleClassroomStudent: true
+};

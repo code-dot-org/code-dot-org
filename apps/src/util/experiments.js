@@ -23,7 +23,6 @@ experiments.REDUX_LOGGING = 'reduxLogging';
 experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
   'schoolAutocompleteDropdownNewSearch';
 experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES = 'showUnpublishedFirebaseTables';
-experiments.MICROBIT = 'microbit';
 experiments.TEACHER_DASHBOARD_SECTION_BUTTONS =
   'teacher-dashboard-section-buttons';
 experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
@@ -38,6 +37,7 @@ experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 // Experiment for showing a backgrounds tab and enabling student upload
 // for Sprite Lab animations
 experiments.BACKGROUNDS_AND_UPLOAD = 'backgroundsTab';
+experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

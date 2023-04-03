@@ -9,6 +9,7 @@ import AnimationPickerListItem from '@cdo/apps/p5lab/AnimationPicker/AnimationPi
 import testAnimationLibrary from '../testAnimationLibrary.json';
 import {CostumeCategories} from '@cdo/apps/p5lab/spritelab/constants';
 import {PICKER_TYPE} from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker';
+import AnimationUploadButton from '@cdo/apps/p5lab/AnimationPicker/AnimationUploadButton';
 
 const emptyFunction = function() {};
 
@@ -31,13 +32,14 @@ describe('AnimationPickerBody', function() {
     },
     selectedAnimations: [],
     onAnimationSelectionComplete: emptyFunction,
-    pickerType: PICKER_TYPE.gamelab
+    pickerType: PICKER_TYPE.gamelab,
+    shouldWarnOnAnimationUpload: false
   };
 
   describe('upload warning', function() {
-    it('shows an upload warning if the user is under 13', function() {
+    it('shows an upload warning if the upload button is visible', function() {
       const body = shallow(
-        <AnimationPickerBody {...defaultProps} is13Plus={false} />
+        <AnimationPickerBody {...defaultProps} hideUploadOption={false} />
       );
       const warnings = body.find(WarningLabel);
       expect(warnings).to.have.length(1);
@@ -46,20 +48,9 @@ describe('AnimationPickerBody', function() {
       );
     });
 
-    it('shows an upload warning if the user age is not known', function() {
+    it('does not show an upload warning if upload button is hidden', function() {
       const body = shallow(
-        <AnimationPickerBody {...defaultProps} is13Plus={undefined} />
-      );
-      const warnings = body.find(WarningLabel);
-      expect(warnings).to.have.length(1);
-      expect(warnings.children().text()).to.equal(
-        msg.animationPicker_warning()
-      );
-    });
-
-    it('does not show an upload warning if the user is 13 or older', function() {
-      const body = shallow(
-        <AnimationPickerBody {...defaultProps} is13Plus={true} />
+        <AnimationPickerBody {...defaultProps} hideUploadOption={true} />
       );
       const warnings = body.find(WarningLabel);
       expect(warnings).to.have.length(0);
@@ -98,14 +89,26 @@ describe('AnimationPickerBody', function() {
       const body = shallow(
         <AnimationPickerBody {...defaultProps} hideBackgrounds={true} />
       );
-      const items = body.find(AnimationPickerListItem);
-      expect(items.length).to.equal(4);
+      const pickerItems = body.find(AnimationPickerListItem);
+      expect(pickerItems.length).to.equal(3);
+      const uploadButton = body.find(AnimationUploadButton);
+      expect(uploadButton.length).to.equal(1);
     });
 
     it('does shows backgrounds if not hideBackgrounds', function() {
       const body = shallow(<AnimationPickerBody {...defaultProps} />);
-      const items = body.find(AnimationPickerListItem);
-      expect(items.length).to.equal(5);
+      const pickerItems = body.find(AnimationPickerListItem);
+      expect(pickerItems.length).to.equal(4);
+      const uploadButton = body.find(AnimationUploadButton);
+      expect(uploadButton.length).to.equal(1);
+    });
+
+    it('does not show upload button if hideUploadButton', function() {
+      const body = shallow(
+        <AnimationPickerBody {...defaultProps} hideUploadOption={true} />
+      );
+      const uploadButton = body.find(AnimationUploadButton);
+      expect(uploadButton.length).to.equal(0);
     });
 
     it('only shows backgrounds if defaultQuery has categoryQuery backgrounds', function() {

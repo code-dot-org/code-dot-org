@@ -34,6 +34,7 @@ import QRCode from 'qrcode.react';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import color from '@cdo/apps/util/color';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -1300,28 +1301,34 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(
  * @param {boolean} [options.prompt=false] Whether to prompt for a string value
  * @param {string} [options.promptPrefill] If prompting, textbox prefill value
  * @param {string} options.cancelText Text for cancel button
+ * @param {string} options.isDangerCancel Should cancel button has a danger type
  * @param {string} options.confirmText Text for confirm button
  * @param {boolean} [options.hideIcon=false] Whether to hide the icon
  * @param {onConfirmCallback} [options.onConfirm] Function to be called after clicking confirm
  * @param {onCancelCallback} [options.onCancel] Function to be called after clicking cancel
  */
 FeedbackUtils.prototype.showSimpleDialog = function(options) {
+  const bodyTextStyle = {
+    color: color.neutral_dark,
+    fontSize: '14px'
+  };
+
   var textBoxStyle = {
     marginBottom: 10
   };
   var contentDiv = ReactDOM.render(
     <div>
       {options.headerText && (
-        <p className="dialog-title">{options.headerText}</p>
+        <h5 className="dialog-title">{options.headerText}</h5>
       )}
-      {options.bodyText && <p>{options.bodyText}</p>}
+      {options.bodyText && <p style={bodyTextStyle}>{options.bodyText}</p>}
       {options.prompt && (
         <input style={textBoxStyle} defaultValue={options.promptPrefill} />
       )}
       <DialogButtons
         confirmText={options.confirmText}
         cancelText={options.cancelText}
-        cancelButtonClass={options.cancelButtonClass}
+        isDangerCancel={!!options.isDangerCancel}
       />
     </div>,
     document.createElement('div')

@@ -180,7 +180,11 @@ function installWhenRun(blockly, skin, isK1) {
     // Block to handle event where mouse is clicked
     helpUrl: '',
     init: function() {
-      Blockly.cdoUtils.setHSV(this, 39, 1.0, 0.99);
+      if (this.setStyle) {
+        this.setStyle('setup_blocks');
+      } else {
+        Blockly.cdoUtils.setHSV(this, 39, 1.0, 0.99);
+      }
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.whenRun())

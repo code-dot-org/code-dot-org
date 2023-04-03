@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import {styleTypes} from './blockly/themes/cdoBlockStyles.mjs';
 import xml from './xml';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
@@ -977,6 +978,23 @@ exports.createJsWrapperBlockCreator = function(
     if (inline === undefined) {
       inline = true;
     }
+
+    if (style && !styleTypes.includes(style)) {
+      // Attempt to guess the intended styles based on the first three letters.
+      const bestGuess =
+        styleTypes[
+          styleTypes.findIndex(type =>
+            type.startsWith(style.toLowerCase().slice(0, 3))
+          )
+        ];
+      throw new Error(
+        `"${style}" is not a valid style for ${name || func}. ` +
+          (bestGuess
+            ? `Did you mean "${bestGuess}"?`
+            : `Choose one of [${styleTypes.sort().join(', ')}]`)
+      );
+    }
+
     args = args || [];
     if (args.filter(arg => arg.statement).length > 1 && inline) {
       console.warn('blocks with multiple statement inputs cannot be inlined');

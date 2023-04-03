@@ -117,14 +117,21 @@
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Vídeo"
         },
+        "2022_change_log/coursed/2022": {
+          "name": "Registro de Cambios de 2022",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
         "all_resources/coursed/2022": {
-          "name": "Todos los Recursos"
+          "name": "Todos los Recursos",
+          "url": "/s/cursod-2022/recursos"
         },
         "all_standards/coursed/2022": {
-          "name": "Todos los Estándares"
+          "name": "Todos los Estándares",
+          "url": "/s/cursod-2022/normas"
         },
         "all_vocabulary/coursed/2022": {
-          "name": "Todo el Vocabulario"
+          "name": "Todo el Vocabulario",
+          "url": "/s/cursod-2022/vocabulario"
         },
         "common_core_and_ngss_guidance/coursed/2022": {
           "name": "Guía de Common Core y NGSS",
@@ -137,7 +144,8 @@
           "type": "Recurso"
         },
         "curriculum_guide/coursed/2022": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
         "debugging_guide/coursed/2022": {
           "name": "Guia de Depuración",
@@ -160,9 +168,12 @@
           "type": "Recurso"
         },
         "virtual_lesson_modifications/coursed/2022": {
-          "name": "Modificaciones de las lecciones virtuales"
+          "name": "Modificaciones de las lecciones virtuales",
+          "url": "https://docs.google.com/document/d/1X139Yy8C3WPxE3g1j2LlE89hzeREex8QVPzKITDSuF4/view"
         },
         "extension_lessons_micro_bit/coursed/2022": {
+          "name": "Lecciones de Ampliación con el micro:bit",
+          "url": "https://code.org/maker/csf-microbit",
           "type": "Recurso"
         },
         "password_power-up_if_then_scenarios/coursed/2022": {
@@ -201,6 +212,8 @@
           "type": "Guía de respuestas"
         },
         "csf_-_course_d_-_slides_2022-2023/coursed/2022": {
+          "name": "CSF - Curso D - Diapositivas 2022-2023",
+          "url": "https://docs.google.com/presentation/d/1QZjvTpft-xc7uU-rccLHsA2D-YFD8LgONjXwAjJ4nCQ/template/preview",
           "type": "Diapositivas"
         },
         "graph_paper_programming/coursed/2022": {
@@ -285,6 +298,7 @@
         },
         "open-ended_programming_levels_1/coursed/2022": {
           "name": "Niveles de programación abiertos",
+          "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view",
           "type": "Guía de respuestas"
         },
         "sample_level_solutions/coursed/2022": {
@@ -299,6 +313,7 @@
         },
         "dance_party_unplugged/coursed/2022": {
           "name": "Fiesta de baile: sin conexión",
+          "url": "https://curriculum.code.org/hoc/unplugged/4/",
           "type": "Recurso"
         },
         "open-ended_programming_levels_2/coursed/2022": {
@@ -350,17 +365,21 @@
           "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
           "type": "Guía de Proyecto"
         },
+        "2022_change_log/coursef/2022": {
+          "name": "Registro de Cambios de 2022",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
         "all_resources/coursef/2022": {
           "name": "Todos los Recursos",
-          "url": "/s/coursef-2022/resources"
+          "url": "/s/cursof-2022/recursos"
         },
         "all_standards/coursef/2022": {
           "name": "Todos los Estándares",
-          "url": "/s/coursef-2022/estándares"
+          "url": "/s/cursof-2022/normas"
         },
         "all_vocabulary/coursef/2022": {
           "name": "Todo el Vocabulario",
-          "url": "/s/coursef-2022/vocab"
+          "url": "/s/cursof-2022/vocabulario"
         },
         "common_core_and_ngss_guidance/coursef/2022": {
           "name": "Guía de Common Core y NGSS",
@@ -374,6 +393,7 @@
         },
         "curriculum_guide/coursef/2022": {
           "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview",
           "type": "Recurso"
         },
         "debugging_guide/coursef/2022": {
@@ -387,7 +407,8 @@
           "type": "Recurso"
         },
         "lesson_type_guide/coursef/2022": {
-          "name": "Guia de Tipos de Lecciones"
+          "name": "Guia de Tipos de Lecciones",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/preview"
         },
         "sprite_lab_documentation/coursef/2022": {
           "name": "Documentación del Laboratorio de sprites",
@@ -404,6 +425,8 @@
           "url": "https://docs.google.com/document/d/10v_thWkO0aJNWsCFtv_bpVbiIy-meYs_vbUiHi-ZCH0/preview"
         },
         "extension_lessons_micro_bit/coursef/2022": {
+          "name": "Lecciones de Ampliación con el micro:bit",
+          "url": "https://code.org/maker/csf-microbit",
           "type": "Recurso"
         },
         "the_power_of_words_lesson_quiz/coursef/2022": {
@@ -432,6 +455,8 @@
           "type": "Guía"
         },
         "csf_-_course_f_-_slides_2022-2023/coursef/2022": {
+          "name": "CSF - Curso F - Diapositivas 2022-2023",
+          "url": "https://docs.google.com/presentation/d/1MMT5npnQb5bWPmUGia4YT_mYMiFczu1HbL-KCShsxYU/template/preview",
           "type": "Diapositivas"
         },
         "exploring_apps/coursef/2022": {
@@ -531,20 +556,29 @@
         },
         "cs_fundamentals_final_project/coursef/2022": {
           "name": "Proyecto final de Fundamentos de Ciencias de la Computación",
+          "url": "https://docs.google.com/document/d/1xt4PzGNhs-qJo-ZuRWmsoX4VpCLsk4NIqv38ThewhGo/edit",
           "type": "Rúbrica"
         },
         "final_project_design_1/coursef/2022": {
           "name": "Guía del proyecto de fin de curso",
+          "url": "https://docs.google.com/document/d/1PWOfzIXpcN3tF32T28fVAMFykNePli7IEBHBK9u7NXQ/edit",
           "type": "Guía de Actividades"
         },
+        "2022_change_log/coursee/2022": {
+          "name": "Registro de Cambios de 2022",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
         "all_resources/coursee/2022": {
-          "name": "Todos los Recursos"
+          "name": "Todos los Recursos",
+          "url": "/s/cursoe-2022/recursos"
         },
         "all_standards/coursee/2022": {
-          "name": "Todos los Estándares"
+          "name": "Todos los Estándares",
+          "url": "/s/cursoe-2022/normas"
         },
         "all_vocabulary/coursee/2022": {
-          "name": "Todo el Vocabulario"
+          "name": "Todo el Vocabulario",
+          "url": "/s/cursoe-2022/vocabulario"
         },
         "common_core_and_ngss_guidance/coursee/2022": {
           "name": "Guía de Common Core y NGSS",
@@ -557,7 +591,8 @@
           "type": "Recurso"
         },
         "curriculum_guide/coursee/2022": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
         "debugging_guide/coursee/2022": {
           "name": "Guia de Depuración",
@@ -585,9 +620,12 @@
           "type": "Recurso"
         },
         "virtual_lesson_modifications/coursee/2022": {
-          "name": "Modificaciones de las lecciones virtuales"
+          "name": "Modificaciones de las lecciones virtuales",
+          "url": "https://docs.google.com/document/d/1WDr-KRGUThXMzL1ppDIkbueQrJfF0lwrwFhEsO6ET5s/view"
         },
         "extension_lessons_micro_bit/coursee/2022": {
+          "name": "Lecciones de Ampliación con el micro:bit",
+          "url": "https://code.org/maker/csf-microbit",
           "type": "Recurso"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
@@ -624,6 +662,8 @@
           "type": "Video del estudiante"
         },
         "csf_-_course_e_-_slides_2022-2023/coursee/2022": {
+          "name": "CSF - Curso E - Diapositivas 2022-2023",
+          "url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/template/preview",
           "type": "Diapositivas"
         },
         "swimming_fish_teacher_sandbox/coursee/2022": {
@@ -632,6 +672,8 @@
           "type": "Nivel de programación"
         },
         "csf_-_course_e_-_slides_2022-2023_1/coursee/2022": {
+          "name": "CSF - Curso E - Diapositivas 2022-2023",
+          "url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/template/preview",
           "type": "Diapositivas"
         },
         "about_me_planning_guide/coursee/2022": {
@@ -701,11 +743,17 @@
         },
         "cs_fundamentals_final_project/coursee/2022": {
           "name": "Proyecto final de Fundamentos de Ciencias de la Computación",
+          "url": "https://docs.google.com/document/d/10G5rzAr3L3atKbp5JPIX9VyYIPhRwwxpCkzhIVlyHag/edit",
           "type": "Rúbrica"
         },
         "end_of_course_project_guide/coursee/2022": {
           "name": "Guía del proyecto de fin de curso",
+          "url": "https://docs.google.com/document/d/1vNbI3RosjA5K2nQRoCTYGFmVReUvdubavvObCIljxuU/edit",
           "type": "Guía de Actividades"
+        },
+        "2022_change_log/courseb/2022": {
+          "name": "Registro de Cambios de 2022",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/courseb/2022": {
           "name": "Todos los Recursos",
@@ -730,7 +778,8 @@
           "type": "Recurso"
         },
         "curriculum_guide/courseb/2022": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
         "debugging_guide/courseb/2022": {
           "name": "Guia de Depuración",
@@ -1086,6 +1135,10 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Vídeo"
         },
+        "2022_change_log/coursea/2022": {
+          "name": "Registro de Cambios de 2022",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
         "all_resources/coursea/2022": {
           "name": "Todos los Recursos",
           "url": "/s/cursoa-2022/recursos"
@@ -1109,7 +1162,8 @@
           "type": "Recurso"
         },
         "curriculum_guide/coursea/2022": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
         "debugging_guide/coursea/2022": {
           "name": "Guia de Depuración",
@@ -1289,6 +1343,10 @@
           "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
           "type": "Guía de respuestas"
         },
+        "2022_change_log/coursec/2022": {
+          "name": "Registro de Cambios de 2022",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
         "all_resources/coursec/2022": {
           "name": "Todos los Recursos",
           "url": "/s/cursoc-2022/recursos"
@@ -1312,7 +1370,8 @@
           "type": "Recurso"
         },
         "curriculum_guide/coursec/2022": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
         "debugging_guide_1/coursec/2022": {
           "name": "Guia de Depuración",
@@ -1339,6 +1398,8 @@
           "url": "https://docs.google.com/document/d/1p71nZ3SqyNNVIJtQwPA_LTdcnL9RDsxIo5mQe9Gd-hQ/view"
         },
         "extension_lessons_micro_bit/coursec/2022": {
+          "name": "Lecciones de Ampliación con el micro:bit",
+          "url": "https://code.org/maker/csf-microbit",
           "type": "Recurso"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
@@ -1353,6 +1414,7 @@
         },
         "csf_-_course_c_-_slides_2022-2023/coursec/2022": {
           "name": "CSF - Curso C - Diapositivas 2022-2023",
+          "url": "https://docs.google.com/presentation/d/1gBtG-smXiAPsk5LJhkVsoX795WN18AZFRdml5uJynug/template/preview",
           "type": "Diapositivas"
         },
         "my_robotic_friends/coursec/2022": {
@@ -1451,6 +1513,7 @@
         },
         "open-ended_programming_levels/coursec/2022": {
           "name": "Niveles de programación abiertos",
+          "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view",
           "type": "Guía de respuestas"
         },
         "pause_and_think_online/coursec/2022": {
@@ -3762,26 +3825,43 @@
           "type": "Vídeo"
         },
         "exemplar_1_-_lights_and_music/csd/2022": {
+          "name": "Ejemplo 1 - Luces y Música",
+          "url": "https://docs.google.com/document/d/1JGY-WC_C0yFcu0kn_vvc_0GyPCsTTXXpj0sqDPmtYlM/view",
           "type": "Ejemplo"
         },
         "exemplar_2_-_magic_unicorn/csd/2022": {
+          "name": "Ejemplo 2 - Unicornio Mágico",
+          "url": "https://docs.google.com/document/d/13HfVzjOrDS95zGngC_qPmT1f5JgCyCCt_WwmJcUhU0Q/view",
           "type": "Ejemplo"
         },
         "exemplar_3_-_red_light_green_light/csd/2022": {
+          "name": "Ejemplo 3 - Luz Roja, Luz Verde",
+          "url": "https://docs.google.com/document/d/1bZaa_cBl2O0U0h_3AxbsTD83HZ7swlwZKAo7bWDG4AU/view",
           "type": "Ejemplo"
         },
         "peer_review_-_human_device_interaction/csd/2022": {
+          "name": "Revisión por Pares - Interacción Persona-Dispositivo",
+          "url": "https://docs.google.com/document/d/1lfEr8muFsAGldj7DHMxl8jVsUA_7Pb4LIaFNMWWvNaw/view",
           "type": "Recurso"
         },
         "project_guide_-_human_device_interaction/csd/2022": {
+          "name": "Guía de Proyecto - Interacción Persona-Dispositivo",
+          "url": "https://docs.google.com/document/d/1qCzlxKJQ4gdYDS2LufqLYugiFKYbs3O5v5q_jufBR70/edit",
           "type": "Guía de Actividades"
         },
         "project_human_device_interaction/csd/2022": {
           "name": "Proyecto: Interacción entre Dispositivos Humanos",
+          "url": "https://docs.google.com/presentation/d/1DVJFjMABrb6FHUl4nxCJVNRzSnbQlg9MDUzVcGQ9HGc/template/preview",
           "type": "Diapositivas"
         },
         "rubric_-_human_device_interaction/csd/2022": {
+          "name": "Rúbrica - Interacción Persona-Dispositivo",
+          "url": "https://docs.google.com/document/d/1GqR49vQTEirALh2c7pIDoGugJD3WqX-sEYygPQ2vlhQ/view",
           "type": "Rúbrica"
+        },
+        "student_checklist_-_human_device_interaction/csd/2022": {
+          "name": "Lista de Control del Alumno - Interacción Persona-Dispositivo",
+          "url": "https://docs.google.com/document/d/1IVZIVUMyq0FxmA9mX-H3LXo12Blvi2NzDg7vZ2dLbLA/edit#"
         },
         "analog_sensors/csd/2022": {
           "name": "Sensores analógicos",
@@ -3789,6 +3869,8 @@
           "type": "Recurso"
         },
         "board_sensors/csd/2022": {
+          "name": "Sensores de Placa",
+          "url": "https://docs.google.com/presentation/d/1dZX6FtRlz2s56be72O64w5dYrsUZTKi9fn9QWFfgzIU/template/preview",
           "type": "Diapositivas"
         },
         "changing_sensor_scale/csd/2022": {
@@ -3803,6 +3885,7 @@
         },
         "accelerometer/csd/2022": {
           "name": "Acelerómetro ",
+          "url": "https://docs.google.com/presentation/d/1cjP0GFe-rfJ4Ym6-EDvxPKfGp7unHQlaBSIioVk7d24/template/preview",
           "type": "Diapositivas"
         },
         "accelerometer_events/csd/2022": {
@@ -3822,6 +3905,7 @@
         },
         "making_music/csd/2022": {
           "name": "Crear música",
+          "url": "https://docs.google.com/presentation/d/1Wk8g6JKrrP7h9j4PiIZllIR3csZ6Umvs3hMI2CfIVRY/template/preview",
           "type": "Diapositivas"
         },
         "playing_notes/csd/2022": {
@@ -3846,14 +3930,17 @@
         },
         "functions_2/csd/2022": {
           "name": "Funciones",
+          "url": "https://docs.google.com/presentation/d/1qpTbQAOB7LoPT-rW5wuzRWhRNMkrVfpHi-Wr6yiwMuU/template/preview",
           "type": "Diapositivas"
         },
         "functions_3/csd/2022": {
           "name": "Funciones",
+          "url": "https://youtu.be/TUdtGzQge3M",
           "type": "Vídeo"
         },
         "functions_with_parameters/csd/2022": {
           "name": "Funciones con parámetros",
+          "url": "https://youtu.be/5UMKeMPCa7E",
           "type": "Vídeo"
         },
         "functions_5/csd/2022": {
@@ -3862,24 +3949,38 @@
           "type": "Recurso"
         },
         "exemplar_1_-_city_silhouette/csd/2022": {
+          "name": "Ejemplo 1 - Silueta de Ciudad",
+          "url": "https://docs.google.com/document/d/1uh66nCn4WxChNRU8rwmmBmTWPRCNepLFux-vinawm3Y/view",
           "type": "Ejemplo"
         },
         "exemplar_2_-_dual_landscape_painting/csd/2022": {
+          "name": "Ejemplo 2 - Pintura de Paisaje Doble",
+          "url": "https://docs.google.com/document/d/1DXCfmdONjv-rnwGe6If2V-nudI1IHBPO-RsgvwMEH38/view",
           "type": "Ejemplo"
         },
         "exemplar_3_-_monster_puppet/csd/2022": {
+          "name": "Ejemplo 3 - Marioneta Monstruo",
+          "url": "https://docs.google.com/document/d/1sCprlRW21NWc9UlBwhzG_oumuaererhJcTbUYTFeav4/view",
           "type": "Ejemplo"
         },
         "mini-project_interactive_art/csd/2022": {
+          "name": "Mini-Proyecto: Arte Interactivo",
+          "url": "https://docs.google.com/presentation/d/1fDzBxID3Zye50GJxANGDS10COe8LGzRHZH4xEpK1cfk/template/preview",
           "type": "Diapositivas"
         },
         "project_guide_-_interactive_art/csd/2022": {
+          "name": "Guía de Proyecto - Arte Interactivo",
+          "url": "https://docs.google.com/document/d/1LOGlXauYbwVj3b1G3Hfm67-1Y_5sGmlcWHmr7J5CKcA/view",
           "type": "Guía de Actividades"
         },
         "student_rubric_-_interactive_art/csd/2022": {
+          "name": "Rúbrica del Alumno - Arte Interactivo",
+          "url": "https://docs.google.com/document/d/1nAFxmXua3FX0nWEOxHrEWbCNA6YFPAaNmboFp-QQUlk/view",
           "type": "Rúbrica"
         },
         "student_example_projects/csd/2022": {
+          "name": "Ejemplos de Proyectos de Alumnos",
+          "url": "https://drive.google.com/drive/folders/19XYyV6BN1ZP8X2jPdk3_e38bZTtiLChY?usp=sharing",
           "type": "Recurso"
         },
         "circuits_and_leds/csd/2022": {
@@ -3888,6 +3989,8 @@
           "type": "Recurso"
         },
         "physical_outputs_and_leds/csd/2022": {
+          "name": "Salidas Físicas y LEDs",
+          "url": "https://docs.google.com/presentation/d/16AB6Hx-qVP6lDBDeA98o2FXuixHGC3Fe-H_Iai3p7Mc/template/preview",
           "type": "Diapositivas"
         },
         "circuits_and_buttons/csd/2022": {
@@ -3896,30 +3999,46 @@
           "type": "Recurso"
         },
         "physical_inputs_and_buttons/csd/2022": {
+          "name": "Entradas Físicas y Botones",
+          "url": "https://docs.google.com/presentation/d/10VuZBg7i751vsiV4frb4H95thqoYeifUnvHOD-dubBM/template/preview",
           "type": "Diapositivas"
+        },
+        "peer_review_-_prototype_an_innovation/csd/2022": {
+          "name": "Revisión por pares - Prototipo de una Innovación",
+          "url": "https://docs.google.com/document/d/1a7kngoybDZ4ZF6UeGEXjbfXzMynnfCxgaqJcsdc3YRc/view"
         },
         "project_prototype_an_innovation/csd/2022": {
           "name": "Proyecto: crear el prototipo de una innovación",
+          "url": "https://docs.google.com/presentation/d/1Jl-6hwZ12QDCCA0ut621BZVQERV73V-xgymPb5IE1Ws/template/preview",
           "type": "Diapositivas"
         },
         "prototype_an_innovation/csd/2022": {
           "name": "Prototipo de una Innovación",
+          "url": "https://docs.google.com/document/d/1txsg24iWQjTuw-I1gHOMdrf7dqiSjXrHoWOGlBtF-Hg/edit#",
           "type": "Rúbrica"
         },
         "prototype_an_innovation_-_student_checklist/csd/2022": {
-          "name": "Prototipo de una innovación - Lista de comprobación del estudiante"
+          "name": "Prototipo de una innovación - Lista de comprobación del estudiante",
+          "url": "https://docs.google.com/document/d/1ifmTs7Xjlyk1jQUwYsrTny9OJK4kjCCfCgqsYHTNzX4/view"
         },
         "prototype_an_innovation_1/csd/2022": {
           "name": "Prototipo de una Innovación",
+          "url": "https://docs.google.com/document/d/1j3snUDbEsv13M-sab6SXtwpHdUx6ilXS7BzUR2xnnk8/view",
           "type": "Guía de Actividades"
         },
         "prototype_an_innovation_example_1/csd/2022": {
+          "name": "Prototipo de una Innovación - Ejemplo 1",
+          "url": "https://docs.google.com/document/d/1lujGcifyqK4lNZzeCMQaZ68EL90qx0tc5z6Q9pZHl1c/edit",
           "type": "Ejemplo"
         },
         "prototype_an_innovation_example_2/csd/2022": {
+          "name": "Prototipo de una Innovación - Ejemplo 2",
+          "url": "https://docs.google.com/document/d/1IfD9qlxTNGIsY3cgspUKtN3g2K93EZLGaUczG-Y00Dk/edit",
           "type": "Ejemplo"
         },
         "prototype_an_innovation_example_3/csd/2022": {
+          "name": "Prototipo de una Innovación - Ejemplo 3",
+          "url": "https://docs.google.com/document/d/1somgJ2TOLqsV5zFe0BgQtC29Mv3ignYsa34zf4PI_VU/edit",
           "type": "Ejemplo"
         },
         "all_code_3/csd/2022": {
@@ -6508,7 +6627,7 @@
         },
         "all_code_5/csd/2021": {
           "name": "Todo el Código",
-          "url": "/s/csd7-2021/código"
+          "url": "/s/csd7-2021/code"
         },
         "all_resources_7/csd/2021": {
           "name": "Todos los Recursos",
@@ -6923,7 +7042,7 @@
         },
         "all_code_3/csd/2021": {
           "name": "Todo el Código",
-          "url": "/s/csd4-2021/código"
+          "url": "/s/csd4-2021/code"
         },
         "all_resources_4/csd/2021": {
           "name": "Todos los Recursos",
@@ -6931,7 +7050,7 @@
         },
         "all_standards_4/csd/2021": {
           "name": "Todos los Estándares",
-          "url": "/s/csd4-2021/estándares"
+          "url": "/s/csd4-2021/standards"
         },
         "all_vocabulary_4/csd/2021": {
           "name": "Todo el Vocabulario",
@@ -7283,7 +7402,7 @@
         },
         "all_code_4/csd/2021": {
           "name": "Todo el Código",
-          "url": "/s/csd6-2021/código"
+          "url": "/s/csd6-2021/code"
         },
         "all_resources_6/csd/2021": {
           "name": "Todos los Recursos",
@@ -7291,7 +7410,7 @@
         },
         "all_standards_6/csd/2021": {
           "name": "Todos los Estándares",
-          "url": "/s/csd6-2021/estándares"
+          "url": "/s/csd6-2021/standards"
         },
         "all_vocabulary_6/csd/2021": {
           "name": "Todo el Vocabulario",
@@ -7536,7 +7655,7 @@
         },
         "all_standards_5/csd/2021": {
           "name": "Todos los Estándares",
-          "url": "/s/csd5-2021/estándares"
+          "url": "/s/csd5-2021/standards"
         },
         "all_vocabulary_5/csd/2021": {
           "name": "Todo el Vocabulario",
@@ -7844,7 +7963,7 @@
         },
         "all_code_1/csd/2021": {
           "name": "Todo el Código",
-          "url": "/s/csd2-2021/código"
+          "url": "/s/csd2-2021/code"
         },
         "all_resources_2/csd/2021": {
           "name": "Todos los Recursos",
@@ -7852,7 +7971,7 @@
         },
         "all_standards_2/csd/2021": {
           "name": "Todos los Estándares",
-          "url": "/s/csd1-2021/estándares"
+          "url": "/s/csd1-2021/standards"
         },
         "all_vocabulary_2/csd/2021": {
           "name": "Todo el Vocabulario",
@@ -8212,7 +8331,7 @@
         },
         "all_standards/csd/2021": {
           "name": "Unidad 1 Estándares",
-          "url": "/s/csd1-2021/estándares"
+          "url": "/s/csd1-2021/standards"
         },
         "all_vocabulary/csd/2021": {
           "name": "Unidad 1 Vocabulario",
@@ -8416,7 +8535,7 @@
         },
         "all_code_2/csd/2021": {
           "name": "Todo el Código",
-          "url": "/s/csd2-2021/código"
+          "url": "/s/csd2-2021/code"
         },
         "all_resources_3/csd/2021": {
           "name": "Todos los Recursos",
@@ -8424,7 +8543,7 @@
         },
         "all_standards_3/csd/2021": {
           "name": "Todos los Estándares",
-          "url": "/s/csd2-2021/estándares"
+          "url": "/s/csd2-2021/standards"
         },
         "all_vocabulary_3/csd/2021": {
           "name": "Todo el Vocabulario",

@@ -474,8 +474,7 @@ module.exports = class Maze {
 
       program = studioApp().editor.getValue();
     } else {
-      var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-      program = Blockly.Xml.domToText(xml);
+      program = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
     }
 
     this.waitingForReport = true;

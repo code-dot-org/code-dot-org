@@ -27,10 +27,10 @@ class ToggleSwitch extends React.Component {
         style={styles.button}
         className="button-active-no-border toggle-input"
       >
-        <div style={styles.label}>{label}</div>
         <div className="toggle-display">
           <i className={'fa fa-toggle-on'} style={iconStyle} />
         </div>
+        <div style={styles.label}>{label}</div>
       </button>
     );
   }
@@ -67,7 +67,7 @@ const styles = {
     width: '32px'
   },
   label: {
-    marginRight: 5,
+    marginLeft: 5,
     padding: 0
   }
 };

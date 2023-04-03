@@ -16,7 +16,7 @@ export const sectionShape = PropTypes.shape({
   unitId: PropTypes.number,
   courseId: PropTypes.number,
   scriptId: PropTypes.number,
-  grade: PropTypes.string,
+  grades: PropTypes.arrayOf(PropTypes.string),
   providerManaged: PropTypes.bool.isRequired,
   restrictSection: PropTypes.bool,
   postMilestoneDisabled: PropTypes.bool
@@ -72,7 +72,7 @@ export const sortableSectionShape = PropTypes.shape({
   loginType: PropTypes.oneOf(Object.keys(SectionLoginType)).isRequired,
   studentCount: PropTypes.number.isRequired,
   code: PropTypes.string.isRequired,
-  grade: PropTypes.string,
+  grades: PropTypes.arrayOf(PropTypes.string),
   providerManaged: PropTypes.bool.isRequired,
   hidden: PropTypes.bool.isRequired,
   assignmentName: PropTypes.arrayOf(PropTypes.string),

@@ -5,7 +5,6 @@ import moduleStyles from './timeline.module.scss';
 import TimelineElement from './TimelineElement';
 
 const TimelineTrackEvents = ({
-  currentPlayheadPosition,
   barWidth,
   eventVerticalSpace,
   getEventHeight
@@ -15,7 +14,7 @@ const TimelineTrackEvents = ({
   // for arrays and objects, as it will consider object/arrays with different contents the same
   // if they are the same object/array reference. These values are relatively small and simple
   // so convert to JSON strings to get around this.
-  const soundEventsJson = JSON.stringify(playerUtils.getSoundEvents());
+  const soundEventsJson = JSON.stringify(playerUtils.getPlaybackEvents());
   const tracksMetadataJson = JSON.stringify(playerUtils.getTracksMetadata());
 
   const organizeSoundsByTracks = (soundEventsJson, tracksMetadataJson) => {
@@ -80,12 +79,11 @@ const TimelineTrackEvents = ({
                     (eventData, index) => (
                       <TimelineElement
                         key={index}
-                        soundId={eventData.id}
+                        eventData={eventData}
                         barWidth={barWidth}
                         height={singleElementHeight}
                         top={index * singleElementHeight}
                         when={eventData.when}
-                        currentPlayheadPosition={currentPlayheadPosition}
                       />
                     )
                   )}
@@ -100,7 +98,6 @@ const TimelineTrackEvents = ({
 };
 
 TimelineTrackEvents.propTypes = {
-  currentPlayheadPosition: PropTypes.number.isRequired,
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
   getEventHeight: PropTypes.func.isRequired

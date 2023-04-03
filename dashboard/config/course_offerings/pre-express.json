@@ -7,5 +7,9 @@
   "curriculum_type": "Course",
   "marketing_initiative": "CSF",
   "grade_levels": "K,1,2,3",
-  "header": "Express"
+  "header": "express",
+  "image": null,
+  "cs_topic": "programming",
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
 }

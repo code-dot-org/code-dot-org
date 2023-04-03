@@ -17,11 +17,6 @@ export class MicrobitStubBoard {
     this.updateListeners = [];
     this.analogChannel = new Array(16).fill(0);
     this.myPort = null;
-    this.boardClient_ = null;
-  }
-
-  boardClient_() {
-    this.boardClient_ = {};
   }
 
   connect() {

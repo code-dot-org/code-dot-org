@@ -1604,6 +1604,10 @@ ur:
         text: ایکس {SPRITE} کے مربوط
       gamelab_yLocationOf:
         text: Y کے ہم آہنگ {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} چلتا ہے بجانب {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: قلابازیاں کھاتے ہوئے
       Mikelab_addBehaviorSimple:
         text: سکرائٹ {SPRITE} شروع ہوتا ہے {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2155,8 +2159,6 @@ ur:
         text: بائیں طرف مڑیں
       RyanLab_turnRight:
         text: دائیں طرف مڑیں
-      SpriteLab2Beta_spriteSay:
-        text: پریت {SPRITE} کہنا {TEXT} کے لئے {SECONDS} سیکنڈ
       Vector_createSpriteWith:
         text: |-
           سکرائٹ
@@ -2205,6 +2207,8 @@ ur:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} کہتا ہے {SPEECH}"
+      adaptations_startFollowing:
+        text: "{SPRITE} تعاقب کرنے لگتا ہے {TARGET} کا"
       binary_drawBin:
         text: بائنری ڈراؤ {BIN}
       binary_drawBinScreen:
@@ -2321,5 +2325,3 @@ ur:
         text: ہیڈنگ سیٹ کریں {HEADING}
       storylab_setSubheading:
         text: ذیلی ہیڈنگ سیٹ کریں {SUBHEADING}
-      validation_validatedBackground:
-        text: پس منظر کو {IMG} پر سیٹ کریں

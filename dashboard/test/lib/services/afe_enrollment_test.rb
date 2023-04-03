@@ -30,7 +30,6 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
           'school-zip' => 'test-zip',
           'inspirational-marketing-kit' => '1',
           'csta-plus' => '1',
-          'aws-educate' => '1',
           'amazon-terms' => '1',
           'new-code-account' => '1',
           'registration-date-time' => Time.now.iso8601
@@ -43,35 +42,35 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'false becomes "0" for boolean params' do
-    assert_param_translation({aws_educate: false}, {'aws-educate' => '0'})
+    assert_param_translation({csta_plus: false}, {'csta-plus' => '0'})
   end
 
   test 'the string "false" becomes "0" for boolean params' do
-    assert_param_translation({aws_educate: 'false'}, {'aws-educate' => '0'})
+    assert_param_translation({csta_plus: 'false'}, {'csta-plus' => '0'})
   end
 
   test 'the number 0 becomes "0" for boolean params' do
-    assert_param_translation({aws_educate: 0}, {'aws-educate' => '0'})
+    assert_param_translation({csta_plus: 0}, {'csta-plus' => '0'})
   end
 
   test 'the string "0" becomes "0" for boolean params' do
-    assert_param_translation({aws_educate: '0'}, {'aws-educate' => '0'})
+    assert_param_translation({csta_plus: '0'}, {'csta-plus' => '0'})
   end
 
   test 'true becomes "1" for boolean params' do
-    assert_param_translation({aws_educate: true}, {'aws-educate' => '1'})
+    assert_param_translation({csta_plus: true}, {'csta-plus' => '1'})
   end
 
   test 'the string "true" becomes "1" for boolean params' do
-    assert_param_translation({aws_educate: 'true'}, {'aws-educate' => '1'})
+    assert_param_translation({csta_plus: 'true'}, {'csta-plus' => '1'})
   end
 
   test 'the number 1 becomes "1" for boolean params' do
-    assert_param_translation({aws_educate: 1}, {'aws-educate' => '1'})
+    assert_param_translation({csta_plus: 1}, {'csta-plus' => '1'})
   end
 
   test 'the string "1" becomes "1" for boolean params' do
-    assert_param_translation({aws_educate: '1'}, {'aws-educate' => '1'})
+    assert_param_translation({csta_plus: '1'}, {'csta-plus' => '1'})
   end
 
   test 'raises without submitting if amazon_terms is not true' do
@@ -141,7 +140,6 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
       zip: 'test-zip',
       marketing_kit: true,
       csta_plus: true,
-      aws_educate: true,
       amazon_terms: true,
       new_code_account: true
     }

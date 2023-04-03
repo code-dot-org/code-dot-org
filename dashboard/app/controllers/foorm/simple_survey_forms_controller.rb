@@ -28,8 +28,8 @@ module Foorm
           survey_data: survey_data
         )
       # Admin only page, so return any errors in plain text.
-      rescue StandardError => e
-        return render status: :bad_request, json: {error: e.message}
+      rescue StandardError => exception
+        return render status: :bad_request, json: {error: exception.message}
       end
 
       render 'index'

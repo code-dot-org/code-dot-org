@@ -18,6 +18,7 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const submitButtonText = 'Complete and Send';
 const sessionStorageKey = 'TeacherApplication';
+const hasLoggedTeacherAppStart = 'hasLoggedTeacherAppStart';
 const pageComponents = [
   ChooseYourProgram,
   FindYourRegion,
@@ -66,6 +67,10 @@ const TeacherApplication = props => {
   };
 
   const onInitialize = () => {
+    if (!sessionStorage.getItem(hasLoggedTeacherAppStart)) {
+      sessionStorage.setItem(hasLoggedTeacherAppStart, true);
+      analyticsReporter.sendEvent(EVENTS.TEACHER_APP_VISITED_EVENT);
+    }
     sendFirehoseEvent(userId, 'started-teacher-application');
   };
 

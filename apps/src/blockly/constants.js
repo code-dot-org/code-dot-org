@@ -7,12 +7,18 @@ export const MenuOptionStates = {
   DISABLED: 'disabled',
   HIDDEN: 'hidden'
 };
+
 export const Themes = {
-  MODERN: 'modern',
-  DARK: 'dark',
-  MUSICLAB_DARK: 'musiclabdark',
-  HIGH_CONTRAST: 'highContrast',
-  ACCESSIBLE: 'accessible'
+  MODERN: 'cdomodern',
+  DARK: 'cdomoderndark',
+  HIGH_CONTRAST: 'cdohighcontrast',
+  HIGH_CONTRAST_DARK: 'cdohighcontrastdark',
+  PROTANOPIA: 'cdoprotanopia',
+  PROTANOPIA_DARK: 'cdoprotanopiadark',
+  DEUTERANOPIA: 'cdodeuteranopia',
+  DEUTERANOPIA_DARK: 'cdodeuteranopiadark',
+  TRITANOPIA: 'cdotritanopia',
+  TRITANOPIA_DARK: 'cdotritanopiadark'
 };
 
 // Used for custom field type ClampedNumber(,)

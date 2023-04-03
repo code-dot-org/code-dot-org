@@ -101,15 +101,25 @@ theme: responsive
 
 在你開始Code.org的線上課程之前，請測試以下視訊的播放，以確保你準備就緒。
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
-這是貫穿整個課程的播放機。 它將嘗試通過YouTube顯示視訊，如果YouTube被阻止，將使用我們的“後備”播放機顯示Code.org託管視訊。
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
+
+This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
 
 ### 視訊無法播放？
 
-如果視訊無法播放，你可以給我們發送電子郵件：support@code.org。
+If video does not work, you can email us at support@code.org.
 
-然而，你仍然可以在沒有視訊的情況下使用我們的教程。
+However, you can still use our tutorials without video.
 
 1. 我們已經使所有的視訊[可以一起下載](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH)。 如果你的學校頻寬較低，我們建議你下載視訊並在共用螢幕上給學生展示。
 2. 在我們的教程中，我們為每個視訊添加了一個綠色下載連結圖示<img src="/images/green-download.png" width=25 height=25 />，讓學生可以下載單個教程視訊。
@@ -119,8 +129,8 @@ theme: responsive
 
 ## Google應用程式/G-Suite用戶的特殊設定
 
-如果你是G-suite管理員，記得檢查你對YouTube的限制設定。 如果你已指定“嚴格限制YouTube訪問”設定，或如果你看到“此視訊已被限制”的訊息，你可以將我們的頻道添加到已批准頻道清單。 請參閱來自Google的[這個指南](https://support.google.com/a/answer/6245597)，瞭解如何將我們的頻道添加到已批准清單。 你也可以參閱[這個指南](https://support.google.com/a/answer/6212415?hl=en)以進一步瞭解不同的設定以及哪種設定最適合你的課堂。
+If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
 
 ## 仍然存在困難？
 
-我們將為你提供幫助，只需給我們發送電子郵件：support@code.org！
+We'll help you out - just email us at support@code.org!

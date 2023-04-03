@@ -269,17 +269,6 @@ class DeleteAccountsHelper
     census_submissions = Census::CensusSubmission.where(submitter_email_address: email)
     csfms = Census::CensusSubmissionFormMap.where(census_submission_id: census_submissions.pluck(:id))
 
-    unless census_submissions.empty?
-      census_submission_ids = census_submissions.pluck(:id).join(',')
-      # SQL query to anonymize Census::CensusInaccuracyInvestigation because the model no longer exists
-      deleted_cii_count = ActiveRecord::Base.connection.exec_query(
-        "SELECT id FROM `census_inaccuracy_investigations` WHERE `census_inaccuracy_investigations`.`census_submission_id` IN (#{census_submission_ids})"
-      ).length
-      ActiveRecord::Base.connection.exec_query(
-        "DELETE FROM `census_inaccuracy_investigations` WHERE `census_inaccuracy_investigations`.`census_submission_id` IN (#{census_submission_ids})"
-      )
-      @log.puts "Removed #{deleted_cii_count} CensusInaccuracyInvestigation" if deleted_cii_count > 0
-    end
     deleted_csfm_count = csfms.delete_all
     deleted_submissions_count = census_submissions.delete_all
     @log.puts "Removed #{deleted_csfm_count} CensusSubmissionFormMap" if deleted_csfm_count > 0

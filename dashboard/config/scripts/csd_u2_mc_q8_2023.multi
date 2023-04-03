@@ -1,0 +1,18 @@
+name 'CSD U2 MC Q8_2023'
+question 'Given this webpage and HTML, predict the CSS.'
+wrong '![](https://images.code.org/d7cf5a617d8b8d43c84833f20ddba977-CSDunit2css1.png)'
+wrong '![](https://images.code.org/9dc157eab97266dc7ff361f8259a0ed6-CSDunit2css2.png)'
+right '![](https://images.code.org/899076fa7e97005fc27433b4f62caa89-CSDunit2css3.png)'
+wrong '![](https://images.code.org/d5ff15d8d6e7b730ed01a4e5648efb22-CSDunit2css4.png)'
+wrong '![](https://images.code.org/1c1d19bf62bcf0310b12e27244831781-CSDunit2css5.png)'
+markdown <<MARKDOWN
+| Webpage      | HTML |
+| ----------- | ----------- |
+| <img src="https://images.code.org/09e13c1790fd937ec1aa2d1e54c438b2-CSDunit2csswebpage.png" style="height: 200px">      | <img src="https://images.code.org/97c4c191ff04d6cb949998db4a1e1540-CSDunit2csshtml.png" style="height: 200px">       |
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 2 Lesson 6, 11**
+
+The font size in `<h1>` is smaller than the font size in `<p>`, and the color is blue in `<p>`.
+MARKDOWN

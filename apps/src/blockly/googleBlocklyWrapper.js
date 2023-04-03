@@ -25,8 +25,17 @@ import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './themes/cdoTheme';
 import CdoDarkTheme from './themes/cdoDark';
 import CdoHighContrastTheme from './themes/cdoHighContrast';
-import cdoAccessibleTheme from './themes/cdoAccessible';
-import MusicLabTheme from './themes/musicLabDark';
+import CdoHighContrastDarkTheme from './themes/cdoHighContrastDark';
+import {
+  CdoProtanopiaTheme,
+  CdoDeuteranopiaTheme,
+  CdoTritanopiaTheme
+} from './themes/cdoAccessibleThemes';
+import {
+  CdoProtanopiaDarkTheme,
+  CdoDeuteranopiaDarkTheme,
+  CdoTritanopiaDarkTheme
+} from './themes/cdoAccessibleDarkThemes';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
@@ -258,6 +267,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     CdoRendererZelos,
     true /* opt_allowOverrides */
   );
+
   registerAllContextMenuItems();
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
@@ -293,10 +303,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // Allows for dynamically setting the workspace theme with workspace.setTheme()
   blocklyWrapper.themes = {
     [Themes.MODERN]: CdoTheme,
-    [Themes.ACCESSIBLE]: cdoAccessibleTheme,
     [Themes.DARK]: CdoDarkTheme,
     [Themes.HIGH_CONTRAST]: CdoHighContrastTheme,
-    [Themes.MUSICLAB_DARK]: MusicLabTheme
+    [Themes.HIGH_CONTRAST_DARK]: CdoHighContrastDarkTheme,
+    [Themes.PROTANOPIA]: CdoProtanopiaTheme,
+    [Themes.PROTANOPIA_DARK]: CdoProtanopiaDarkTheme,
+    [Themes.DEUTERANOPIA]: CdoDeuteranopiaTheme,
+    [Themes.DEUTERANOPIA_DARK]: CdoDeuteranopiaDarkTheme,
+    [Themes.TRITANOPIA]: CdoTritanopiaTheme,
+    [Themes.TRITANOPIA_DARK]: CdoTritanopiaDarkTheme
   };
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.navigationController = new NavigationController();
@@ -486,9 +501,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
 
     createReadOnlyBlockSpace: (container, xml, options) => {
+      const theme = cdoUtils.getUserTheme(options.theme);
       const workspace = new Blockly.WorkspaceSvg({
         readOnly: true,
-        theme: options.theme || CdoTheme,
+        theme: theme,
         plugins: {},
         RTL: options.rtl
       });
@@ -499,7 +515,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
           'xmlns:html': 'http://www.w3.org/1999/xhtml',
           'xmlns:xlink': 'http://www.w3.org/1999/xlink',
           version: '1.1',
-          class: 'geras-renderer modern-theme readOnlyBlockSpace'
+          class: 'geras-renderer modern-theme readOnlyBlockSpace injectionDiv'
         },
         null
       );
@@ -534,6 +550,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
         'style',
         `transform: translate(0px, ${notchHeight + BLOCK_PADDING}px)`
       );
+      workspace.setTheme(theme);
       return workspace;
     }
   };
@@ -541,7 +558,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.inject = function(container, opt_options, opt_audioPlayer) {
     const options = {
       ...opt_options,
-      theme: opt_options.theme || CdoTheme,
+      theme: cdoUtils.getUserTheme(opt_options.theme),
       trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,
@@ -558,11 +575,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
       renderer: opt_options.renderer || 'cdo_renderer',
       comments: false
     };
-    // Users can change their active theme using the context menu. Use this setting, if present.
-    // Music Lab doesn't look good without its custom theme, so we prevent others from being used.
-    if (localStorage.blocklyTheme && options.theme.name !== 'musiclabdark') {
-      options.theme = this.themes[localStorage.blocklyTheme] || options.theme;
-    }
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.
     blocklyWrapper.assetUrl = opt_options.assetUrl || (path => `./${path}`);

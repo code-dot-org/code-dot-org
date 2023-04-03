@@ -1,14 +1,11 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2023-02-22T20:21:59.000Z",
-  "level_num": "custom",
-  "user_id": 182,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
     "helper_libraries": [
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "oceanSetup"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
@@ -41,7 +38,7 @@
     "expand_debugger": "false",
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"b110a7b1-f934-4023-a89a-1f6aaa7dbf74\",\r\n    \"862293ea-7fc7-46aa-9dea-730e9386408a\",\r\n    \"e5c88810-7976-4103-b723-200d15608be1\",\r\n    \"bf93b920-c437-4d82-8e7b-dc055026aa98\",\r\n    \"bcb16502-d050-4458-a2cb-d4ce643253b8\",\r\n    \"371643d6-e167-4877-8010-d186f64bfd67\",\r\n    \"ba6fa4b2-95e6-410d-97c8-740b2bb63283\",\r\n    \"ce145478-c610-4fd4-8fec-8cdc8ebbc939\",\r\n    \"7b45d2dc-dd4c-4fe5-a432-daa51b4f5b8f\",\r\n    \"02557c2d-0561-4c65-9991-fc22b98bca6f\",\r\n    \"05dde026-0e8a-4b74-b009-e279de5814bf\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"b110a7b1-f934-4023-a89a-1f6aaa7dbf74\": {\r\n      \"name\": \"boat-net\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/level_animations/49XQ13C7i18vCcmpZBhHre6n7tDCnjTJ/boat-net.png\",\r\n      \"frameSize\": {\r\n        \"x\": 970,\r\n        \"y\": 430\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"49XQ13C7i18vCcmpZBhHre6n7tDCnjTJ\",\r\n      \"categories\": [\r\n        \"\"\r\n      ]\r\n    },\r\n    \"862293ea-7fc7-46aa-9dea-730e9386408a\": {\r\n      \"name\": \"fish_05\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/spritelab/PZeXyfsEYNUU_0CbtIm4jfyQY.Tu9BJ_/category_animals/fish_05.png\",\r\n      \"frameSize\": {\r\n        \"x\": 392,\r\n        \"y\": 220\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"PZeXyfsEYNUU_0CbtIm4jfyQY.Tu9BJ_\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ]\r\n    },\r\n    \"e5c88810-7976-4103-b723-200d15608be1\": {\r\n      \"name\": \"green-sea-plant-2\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/level_animations/5b9IyVs3kjEFG_er_OO9IkBNGtw1AtpA/green-sea-plant-2.png\",\r\n      \"frameSize\": {\r\n        \"x\": 360,\r\n        \"y\": 390\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"5b9IyVs3kjEFG_er_OO9IkBNGtw1AtpA\",\r\n      \"categories\": [\r\n        \"\"\r\n      ]\r\n    },\r\n    \"bf93b920-c437-4d82-8e7b-dc055026aa98\": {\r\n      \"name\": \"red-coral-dead\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/level_animations/RQCgmEclO.axc7PWfRZ4NIZdWq6_O8BS/red-coral-dead.png\",\r\n      \"frameSize\": {\r\n        \"x\": 316,\r\n        \"y\": 394\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"RQCgmEclO.axc7PWfRZ4NIZdWq6_O8BS\",\r\n      \"categories\": [\r\n        \"\"\r\n      ]\r\n    },\r\n    \"bcb16502-d050-4458-a2cb-d4ce643253b8\": {\r\n      \"name\": \"underseadeco_25\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/spritelab/BhwhWkxxwEdIvnGKm6st6kqUm9QvS.bw/category_aquatic_objects/underseadeco_25.png\",\r\n      \"frameSize\": {\r\n        \"x\": 316,\r\n        \"y\": 394\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"BhwhWkxxwEdIvnGKm6st6kqUm9QvS.bw\",\r\n      \"categories\": [\r\n        \"aquatic_objects\"\r\n      ]\r\n    },\r\n    \"371643d6-e167-4877-8010-d186f64bfd67\": {\r\n      \"name\": \"purple-coral-dead\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/level_animations/sJ9pU2hToWT4pki.ko7Lozj9uB0NmRm5/purple-coral-dead.png\",\r\n      \"frameSize\": {\r\n        \"x\": 301,\r\n        \"y\": 397\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"sJ9pU2hToWT4pki.ko7Lozj9uB0NmRm5\",\r\n      \"categories\": [\r\n        \"\"\r\n      ]\r\n    },\r\n    \"ba6fa4b2-95e6-410d-97c8-740b2bb63283\": {\r\n      \"name\": \"underseadeco_24\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/spritelab/Od2KSKc7q9fYUdp.Fm0RCZPcgTjygssc/category_aquatic_objects/underseadeco_24.png\",\r\n      \"frameSize\": {\r\n        \"x\": 301,\r\n        \"y\": 397\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Od2KSKc7q9fYUdp.Fm0RCZPcgTjygssc\",\r\n      \"categories\": [\r\n        \"aquatic_objects\"\r\n      ]\r\n    },\r\n    \"ce145478-c610-4fd4-8fec-8cdc8ebbc939\": {\r\n      \"name\": \"background_underwater_17\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/spritelab/T3iCeWVvk34YAqG8qfnOzbGcWXDnBqlp/category_backgrounds/background_underwater_17.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 399\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"T3iCeWVvk34YAqG8qfnOzbGcWXDnBqlp\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"7b45d2dc-dd4c-4fe5-a432-daa51b4f5b8f\": {\r\n      \"name\": \"background_underwater_11\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/spritelab/mq4Kep6xV_uNHS9hORePIH8B0xCtT6M./category_backgrounds/background_underwater_11.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 399\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"mq4Kep6xV_uNHS9hORePIH8B0xCtT6M.\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"02557c2d-0561-4c65-9991-fc22b98bca6f\": {\r\n      \"name\": \"underwater\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/spritelab/N6hAaLpD2XfNOPQVk4Noa7.0mYvp5z08/category_backgrounds/background_underwater.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"N6hAaLpD2XfNOPQVk4Noa7.0mYvp5z08\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"05dde026-0e8a-4b74-b009-e279de5814bf\": {\r\n      \"name\": \"background_landscape_10\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/spritelab/wT8H5cnXZ3IQlkPnvLQgPWSbH0csfkWt/category_backgrounds/background_landscape_10.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"wT8H5cnXZ3IQlkPnvLQgPWSbH0csfkWt\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\"orderedKeys\":[\"00ad7fcf-047f-49b3-9afa-d588ffbb9132\",\"ce6d1afc-ab54-456b-9315-7eb465e11da6\",\"da7a5dcd-f3d5-4f01-bfe6-d5f3e1308e40\",\"804a6c01-512f-472c-9538-7f37a640bd1d\",\"16dc4bfd-2a04-4bc0-a3b2-d6cf8daaad9a\",\"87229a77-7c72-4d9c-be31-36a0c1f01ac1\",\"a184d1d6-5d68-4812-a779-94d701457145\",\"a88a370f-a37f-4e0c-8717-c716e20fd26e\",\"681fcfc0-0ed6-4abf-bb1f-0e75c2c64c2c\",\"bd985bff-e5e9-44de-a6de-7c4575698dc4\"],\"propsByKey\":{\"bd985bff-e5e9-44de-a6de-7c4575698dc4\":{\"name\":\"background_underwater_17\",\"categories\":[\"backgrounds\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":399},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:53:15 UTC\",\"pngLastModified\":\"2021-01-19 23:53:16 UTC\",\"version\":\"T3iCeWVvk34YAqG8qfnOzbGcWXDnBqlp\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/T3iCeWVvk34YAqG8qfnOzbGcWXDnBqlp/category_backgrounds/background_underwater_17.png\",\"sourceSize\":{\"x\":400,\"y\":399}},\"681fcfc0-0ed6-4abf-bb1f-0e75c2c64c2c\":{\"name\":\"underseadeco_24\",\"categories\":[\"aquatic_objects\"],\"frameCount\":1,\"frameSize\":{\"x\":301,\"y\":397},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:51:16 UTC\",\"pngLastModified\":\"2021-01-19 23:51:15 UTC\",\"version\":\"Od2KSKc7q9fYUdp.Fm0RCZPcgTjygssc\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/Od2KSKc7q9fYUdp.Fm0RCZPcgTjygssc/category_aquatic_objects/underseadeco_24.png\",\"sourceSize\":{\"x\":301,\"y\":397}},\"a88a370f-a37f-4e0c-8717-c716e20fd26e\":{\"name\":\"purple-coral-dead\",\"frameCount\":1,\"frameSize\":{\"x\":301,\"y\":397},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-18T23:10:34.000Z\",\"pngLastModified\":\"2022-04-18T23:10:33.000Z\",\"version\":\"sJ9pU2hToWT4pki.ko7Lozj9uB0NmRm5\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/sJ9pU2hToWT4pki.ko7Lozj9uB0NmRm5/purple-coral-dead.png\",\"sourceSize\":{\"x\":301,\"y\":397}},\"a184d1d6-5d68-4812-a779-94d701457145\":{\"name\":\"underseadeco_25\",\"categories\":[\"aquatic_objects\"],\"frameCount\":1,\"frameSize\":{\"x\":316,\"y\":394},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:51:11 UTC\",\"pngLastModified\":\"2021-01-19 23:51:14 UTC\",\"version\":\"BhwhWkxxwEdIvnGKm6st6kqUm9QvS.bw\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/BhwhWkxxwEdIvnGKm6st6kqUm9QvS.bw/category_aquatic_objects/underseadeco_25.png\",\"sourceSize\":{\"x\":316,\"y\":394}},\"87229a77-7c72-4d9c-be31-36a0c1f01ac1\":{\"name\":\"red-coral-dead\",\"frameCount\":1,\"frameSize\":{\"x\":316,\"y\":394},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-18T23:10:11.000Z\",\"pngLastModified\":\"2022-04-18T23:10:10.000Z\",\"version\":\"RQCgmEclO.axc7PWfRZ4NIZdWq6_O8BS\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/RQCgmEclO.axc7PWfRZ4NIZdWq6_O8BS/red-coral-dead.png\",\"sourceSize\":{\"x\":316,\"y\":394}},\"16dc4bfd-2a04-4bc0-a3b2-d6cf8daaad9a\":{\"name\":\"green-sea-plant-2\",\"frameCount\":1,\"frameSize\":{\"x\":360,\"y\":390},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-11T21:02:50.000Z\",\"pngLastModified\":\"2022-04-11T21:02:50.000Z\",\"version\":\"5b9IyVs3kjEFG_er_OO9IkBNGtw1AtpA\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/5b9IyVs3kjEFG_er_OO9IkBNGtw1AtpA/green-sea-plant-2.png\",\"sourceSize\":{\"x\":360,\"y\":390}},\"804a6c01-512f-472c-9538-7f37a640bd1d\":{\"name\":\"fish_10\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":395,\"y\":247},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:46:44 UTC\",\"pngLastModified\":\"2021-01-19 23:46:45 UTC\",\"version\":\"0rhBDi4DUUwKbJatsf.dSkxMiiPwS2HQ\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/0rhBDi4DUUwKbJatsf.dSkxMiiPwS2HQ/category_animals/fish_10.png\",\"sourceSize\":{\"x\":395,\"y\":247}},\"da7a5dcd-f3d5-4f01-bfe6-d5f3e1308e40\":{\"name\":\"fish_07\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":396,\"y\":227},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:46:42 UTC\",\"pngLastModified\":\"2021-01-19 23:46:43 UTC\",\"version\":\"m2x25vfrwb.4_WTvLFXCFt_RaoCm_bvx\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/m2x25vfrwb.4_WTvLFXCFt_RaoCm_bvx/category_animals/fish_07.png\",\"sourceSize\":{\"x\":396,\"y\":227}},\"ce6d1afc-ab54-456b-9315-7eb465e11da6\":{\"name\":\"fish_05\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":392,\"y\":220},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:46:39 UTC\",\"pngLastModified\":\"2021-01-19 23:46:40 UTC\",\"version\":\"PZeXyfsEYNUU_0CbtIm4jfyQY.Tu9BJ_\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/PZeXyfsEYNUU_0CbtIm4jfyQY.Tu9BJ_/category_animals/fish_05.png\",\"sourceSize\":{\"x\":392,\"y\":220}},\"00ad7fcf-047f-49b3-9afa-d588ffbb9132\":{\"name\":\"boat-net\",\"frameCount\":1,\"frameSize\":{\"x\":970,\"y\":430},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-18T23:22:58.000Z\",\"pngLastModified\":\"2022-04-18T23:22:58.000Z\",\"version\":\"49XQ13C7i18vCcmpZBhHre6n7tDCnjTJ\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/49XQ13C7i18vCcmpZBhHre6n7tDCnjTJ/boat-net.png\",\"sourceSize\":{\"x\":1082,\"y\":480}}}}",
     "hide_custom_blocks": "true",
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
@@ -53,7 +50,8 @@
     "name_suffix": "_2023",
     "block_pools": [
       "GamelabJr",
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "ecosystems"
     ],
     "mini_rubric": "false",
     "encrypted": "false",
@@ -65,11 +63,16 @@
       "csc_ecosystems_multiple_choice_child_1_2_2023"
     ],
     "instructions_icon": "crab",
+    "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2023-02-22T20:21:59.000Z",
+  "user_id": 182,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-22T20:21:59.618+00:00\",\"changed\":[\"cloned from \\\"csc_multiple_choice_1_2\\\"\"],\"cloned_from\":\"csc_multiple_choice_1_2\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-02-22T20:21:59.618+00:00\",\"changed\":[\"cloned from \\\"csc_multiple_choice_1_2\\\"\"],\"cloned_from\":\"csc_multiple_choice_1_2\"},{\"changed_at\":\"2023-02-28 15:10:31 +0000\",\"changed\":[\"start_blocks\",\"helper_libraries\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-29 20:13:21 +0000\",\"changed\":[\"start_blocks\",\"block_pools\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 20:14:37 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 20:15:43 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 20:16:15 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 20:16:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 20:17:45 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 20:20:12 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 20:21:16 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 20:22:27 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 20:26:01 +0000\",\"changed\":[\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 20:27:51 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 20:28:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 21:08:23 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-29 21:12:12 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -78,27 +81,10 @@
       <xml>
         <block type="when_run">
           <next>
-            <block type="controls_if">
-              <value name="IF0">
-                <block type="logic_compare">
-                  <field name="OP">GT</field>
-                  <value name="A">
-                    <block type="gamelab_countByAnimation">
-                      <value name="SPRITE">
-                        <block type="gamelab_allSpritesWithAnimation">
-                          <field name="ANIMATION">"green-sea-plant-2"</field>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="math_number">
-                      <field name="NUM">8</field>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <statement name="DO0">
+            <block type="ecosystems_goldilocks">
+              <field name="CONDITION">"too much"</field>
+              <field name="SPRITE">"green-sea-plant-2"</field>
+              <statement name="STATEMENT">
                 <block type="gamelab_setAnimation">
                   <field name="ANIMATION">"red-coral-dead"</field>
                   <value name="THIS">
@@ -106,199 +92,8 @@
                       <field name="ANIMATION">"underseadeco_25"</field>
                     </block>
                   </value>
-                  <next>
-                    <block type="gamelab_setAnimation">
-                      <field name="ANIMATION">"purple-coral-dead"</field>
-                      <value name="THIS">
-                        <block type="gamelab_allSpritesWithAnimation">
-                          <field name="ANIMATION">"underseadeco_24"</field>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
                 </block>
               </statement>
-              <next>
-                <block type="gamelab_makeNumSprites" uservisible="false">
-                  <field name="ANIMATION_NAME">"green-sea-plant-2"</field>
-                  <value name="NUM">
-                    <block type="math_number" uservisible="false">
-                      <field name="NUM">3</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="gamelab_makeNewSpriteAnon" uservisible="false">
-                      <field name="ANIMATION_NAME">"underseadeco_25"</field>
-                      <value name="LOCATION">
-                        <block type="gamelab_location_picker" uservisible="false">
-                          <field name="LOCATION">{"x":69,"y":323}</field>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="gamelab_makeNewSpriteAnon" uservisible="false">
-                          <field name="ANIMATION_NAME">"underseadeco_24"</field>
-                          <value name="LOCATION">
-                            <block type="gamelab_location_picker" uservisible="false">
-                              <field name="LOCATION">{"x":336,"y":323}</field>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="gamelab_addBehaviorSimple" uservisible="false">
-                              <value name="SPRITE">
-                                <block type="gamelab_allSpritesWithAnimation" uservisible="false">
-                                  <field name="ANIMATION">"green-sea-plant-2"</field>
-                                </block>
-                              </value>
-                              <value name="BEHAVIOR">
-                                <block type="gamelab_behavior_get" uservisible="false">
-                                  <mutation/>
-                                  <field name="VAR" id="wandering">wandering</field>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="gamelab_setProp" uservisible="false">
-                                  <field name="PROPERTY">"scale"</field>
-                                  <value name="SPRITE">
-                                    <block type="gamelab_allSpritesWithAnimation" uservisible="false">
-                                      <field name="ANIMATION">"green-sea-plant-2"</field>
-                                    </block>
-                                  </value>
-                                  <value name="VAL">
-                                    <block type="math_number" uservisible="false">
-                                      <field name="NUM">50</field>
-                                    </block>
-                                  </value>
-                                  <next>
-                                    <block type="gamelab_setProp" uservisible="false">
-                                      <field name="PROPERTY">"scale"</field>
-                                      <value name="SPRITE">
-                                        <block type="gamelab_allSpritesWithAnimation" uservisible="false">
-                                          <field name="ANIMATION">"underseadeco_25"</field>
-                                        </block>
-                                      </value>
-                                      <value name="VAL">
-                                        <block type="math_number" uservisible="false">
-                                          <field name="NUM">150</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="gamelab_setProp" uservisible="false">
-                                          <field name="PROPERTY">"scale"</field>
-                                          <value name="SPRITE">
-                                            <block type="gamelab_allSpritesWithAnimation" uservisible="false">
-                                              <field name="ANIMATION">"underseadeco_24"</field>
-                                            </block>
-                                          </value>
-                                          <value name="VAL">
-                                            <block type="math_number" uservisible="false">
-                                              <field name="NUM">150</field>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_everyInterval" uservisible="false">
-          <field name="UNIT">"seconds"</field>
-          <value name="N">
-            <block type="math_number" uservisible="false">
-              <field name="NUM">1</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_makeNumSprites" uservisible="false">
-              <field name="ANIMATION_NAME">"green-sea-plant-2"</field>
-              <value name="NUM">
-                <block type="math_number" uservisible="false">
-                  <field name="NUM">1</field>
-                </block>
-              </value>
-              <next>
-                <block type="gamelab_addBehaviorSimple" uservisible="false">
-                  <value name="SPRITE">
-                    <block type="gamelab_allSpritesWithAnimation" uservisible="false">
-                      <field name="ANIMATION">"green-sea-plant-2"</field>
-                    </block>
-                  </value>
-                  <value name="BEHAVIOR">
-                    <block type="gamelab_behavior_get" uservisible="false">
-                      <mutation/>
-                      <field name="VAR" id="wandering">wandering</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="gamelab_setProp" uservisible="false">
-                      <field name="PROPERTY">"scale"</field>
-                      <value name="SPRITE">
-                        <block type="gamelab_allSpritesWithAnimation" uservisible="false">
-                          <field name="ANIMATION">"green-sea-plant-2"</field>
-                        </block>
-                      </value>
-                      <value name="VAL">
-                        <block type="math_number" uservisible="false">
-                          <field name="NUM">50</field>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="controls_if" uservisible="false">
-                          <value name="IF0">
-                            <block type="logic_compare" uservisible="false">
-                              <field name="OP">GT</field>
-                              <value name="A">
-                                <block type="gamelab_countByAnimation" uservisible="false">
-                                  <value name="SPRITE">
-                                    <block type="gamelab_allSpritesWithAnimation" uservisible="false">
-                                      <field name="ANIMATION">"green-sea-plant-2"</field>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                              <value name="B">
-                                <block type="math_number" uservisible="false">
-                                  <field name="NUM">8</field>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <statement name="DO0">
-                            <block type="gamelab_setAnimation" uservisible="false">
-                              <field name="ANIMATION">"red-coral-dead"</field>
-                              <value name="THIS">
-                                <block type="gamelab_allSpritesWithAnimation" uservisible="false">
-                                  <field name="ANIMATION">"underseadeco_25"</field>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="gamelab_setAnimation" uservisible="false">
-                                  <field name="ANIMATION">"purple-coral-dead"</field>
-                                  <value name="THIS">
-                                    <block type="gamelab_allSpritesWithAnimation" uservisible="false">
-                                      <field name="ANIMATION">"underseadeco_24"</field>
-                                    </block>
-                                  </value>
-                                </block>
-                              </next>
-                            </block>
-                          </statement>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
             </block>
           </next>
         </block>
@@ -476,6 +271,35 @@
               </next>
             </block>
           </statement>
+        </block>
+        <block type="gamelab_checkTouching" uservisible="false">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation" uservisible="false">
+              <field name="ANIMATION">"fish_10"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation" uservisible="false">
+              <field name="ANIMATION">"green-sea-plant-2"</field>
+            </block>
+          </value>
+          <next>
+            <block type="ecosystems_goldilocks" uservisible="false">
+              <field name="CONDITION">"too much"</field>
+              <field name="SPRITE">"green-sea-plant-2"</field>
+              <statement name="STATEMENT">
+                <block type="gamelab_setAnimation" uservisible="false">
+                  <field name="ANIMATION">"red-coral-dead"</field>
+                  <value name="THIS">
+                    <block type="gamelab_allSpritesWithAnimation" uservisible="false">
+                      <field name="ANIMATION">"underseadeco_25"</field>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </next>
         </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
           <mutation>
@@ -1618,8 +1442,5 @@
         </block>
       </xml>
     </start_blocks>
-    <toolbox_blocks>
-      <xml/>
-    </toolbox_blocks>
   </blocks>
 </GamelabJr>

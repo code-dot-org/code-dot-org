@@ -62,6 +62,8 @@ class CourseOverview extends Component {
     redirectToCourseUrl: PropTypes.string,
     showAssignButton: PropTypes.bool,
     userId: PropTypes.number,
+    userType: PropTypes.string,
+    participantAudience: PropTypes.string,
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -74,9 +76,14 @@ class CourseOverview extends Component {
       props.redirectToCourseUrl && props.redirectToCourseUrl.length > 0;
     this.state = {showRedirectDialog};
 
-    analyticsReporter.sendEvent(EVENTS.COURSE_OVERVIEW_PAGE_VISITED_EVENT, {
-      'unit group name': props.name
-    });
+    if (props.userType === 'teacher') {
+      analyticsReporter.sendEvent(
+        EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
+        {
+          'unit group name': props.name
+        }
+      );
+    }
   }
 
   onChangeVersion = versionId => {
@@ -139,7 +146,8 @@ class CourseOverview extends Component {
       redirectToCourseUrl,
       showAssignButton,
       userId,
-      isSignedIn
+      isSignedIn,
+      participantAudience
     } = this.props;
 
     const showNotification =
@@ -216,11 +224,12 @@ class CourseOverview extends Component {
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
             id={id}
-            title={title}
+            courseName={title}
             teacherResources={teacherResources}
             studentResources={studentResources}
             showAssignButton={showAssignButton}
             isInstructor={viewAs === ViewType.Instructor}
+            participantAudience={participantAudience}
           />
         </div>
         {scripts.map((script, index) => (

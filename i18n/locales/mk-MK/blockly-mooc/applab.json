@@ -356,7 +356,7 @@
   "makerSetupFollowInstructions": "Следете ги упатствата дадени од интерактивната листа за проверка за поставување.",
   "makerSetupInstallSerialConnector": "Ве молиме инсталирајте го [Code.org сериски конектор Chrome App]({webstoreURL}).",
   "makerSetupInstallFirmataCP": "Треба да бидете сигурни дека ја има инсталирано вистинската скица на фирмверот. Можете да ја инсталирате Firmata скицата [за Circuit Playground Express плочките со овие упатства]({firmataURLExpress}) и [за Circuit Playground Класичните табли со овие упатства]({firmataURLClassic})",
-  "makerSetupInstallFirmataMB": "Треба да бидете сигурни дека ја има инсталирано вистинската скица на фирмверот. Можете [да ја инсталирате скицата Firmata со овие упатства]({firmataURL}).",
+  "makerSetupInstallFirmataMB": "Треба да бидете сигурни дека ја има инсталирано вистинската скица на фирмверот. Можете [да ја инсталирате скицата Firmata со овие упатства][0].",
   "makerSetupInstallFirmataOther": "Треба да бидете сигурни дека ја има инсталирано вистинската скица на фирмверот. Можете да ја инсталирате Firmata скицата [за Circuit Playground Express плочките со овие упатства]({firmataURLExpress}) и [за Circuit Playground Класичните табли со овие упатства]({firmataURLClassic})Скицата на Firmata можете да ја инсталирате [за микро:бит со овие упатства]({firmataURLMB})",
   "makerSetupLinuxAddDialout": "Ако не припаѓате на 'dialout', ќе сакате да се додадете во таа група:",
   "makerSetupLinuxAlternative": "Алтернативни монтери",

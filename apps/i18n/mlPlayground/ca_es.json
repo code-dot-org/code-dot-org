@@ -1,7 +1,7 @@
 {
   "navigateForward": "Continuar",
   "navigateBack": "Tornar",
-  "tryAgain": "Torna a intentar-ho",
+  "tryAgain": "Intentar de nou",
   "navigateDone": "Acabar",
   "saveProgress": "Desa",
   "correctAnswer": "Correcte",
@@ -10,6 +10,9 @@
   "columnInspectorDescription": "Descripció",
   "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "màx",
+  "dataCardLastUpdated": "Darrera actualització",
+  "predictButton": "Fes una predicció",
+  "uniqueOptionsWarningNotice": "Nota",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -20,15 +23,52 @@
     },
     "shoe_survey_toy": {
       "fields": {
+        "weather": {
+          "id": "clima"
+        },
         "day": {
           "id": "dia"
+        },
+        "shoe": {
+          "id": "sabata"
         }
       }
     },
     "salsa_toy": {
       "fields": {
+        "onion": {
+          "id": "ceba"
+        },
+        "avocado": {
+          "id": "alvocat"
+        },
         "corn": {
           "id": "blat de moro"
+        },
+        "beans": {
+          "id": "mongetes"
+        },
+        "lime": {
+          "id": "llima"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "mushrooms": {
+          "id": "bolets"
+        },
+        "lobster": {
+          "id": "llagosta"
+        },
+        "bacon": {
+          "id": "bacó"
+        },
+        "cheese": {
+          "id": "formatge"
+        },
+        "meat": {
+          "id": "carn"
         }
       }
     },
@@ -36,6 +76,12 @@
       "fields": {
         "color": {
           "id": "color"
+        },
+        "music": {
+          "id": "música"
+        },
+        "food": {
+          "id": "menjar"
         }
       }
     },
@@ -56,6 +102,16 @@
         }
       }
     },
+    "raspado_toy": {
+      "fields": {
+        "strawberry": {
+          "id": "maduixa"
+        },
+        "lime": {
+          "id": "llima"
+        }
+      }
+    },
     "shapes_v2_toy": {
       "fields": {
         "sides": {
@@ -68,8 +124,23 @@
     },
     "salad_toy": {
       "fields": {
+        "tomato": {
+          "id": "tomàquet"
+        },
+        "avocado": {
+          "id": "alvocat"
+        },
         "chicken": {
           "id": "gallina"
+        },
+        "fruit": {
+          "id": "fruita"
+        },
+        "beans": {
+          "id": "mongetes"
+        },
+        "cheese": {
+          "id": "formatge"
         }
       }
     },
@@ -85,8 +156,14 @@
     },
     "student_alcohol_consumption": {
       "fields": {
+        "school": {
+          "id": "escola"
+        },
         "age": {
           "id": "edat"
+        },
+        "health": {
+          "id": "salut"
         }
       }
     },
@@ -94,6 +171,15 @@
       "fields": {
         "chicken": {
           "id": "gallina"
+        },
+        "lamb": {
+          "id": "xai"
+        },
+        "onion": {
+          "id": "ceba"
+        },
+        "cheese": {
+          "id": "formatge"
         }
       }
     },
@@ -113,6 +199,9 @@
     },
     "movies": {
       "fields": {
+        "Score": {
+          "id": "Puntuació"
+        },
         "Country": {
           "id": "País"
         },
@@ -131,6 +220,26 @@
         }
       }
     },
+    "safari_toy": {
+      "fields": {
+        "people": {
+          "id": "gent"
+        },
+        "rhino": {
+          "id": "rinoceront"
+        },
+        "elephant": {
+          "id": "elefant"
+        },
+        "alligator": {
+          "id": "cocodril"
+        },
+        "trees": {
+          "id": "arbres"
+        }
+      },
+      "name": "Safari"
+    },
     "abalone": {
       "fields": {
         "Length": {
@@ -141,12 +250,28 @@
     "zoo": {
       "fields": {
         "Aquatic": {
-          "id": "Aquàtiques"
+          "id": "Aquàtic"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "alvocat"
+        },
+        "onion": {
+          "id": "ceba"
+        },
+        "ginger": {
+          "id": "gingebre"
         }
       }
     },
     "student_survey": {
       "fields": {
+        "Music": {
+          "id": "Música"
+        },
         "Country": {
           "id": "País"
         },
@@ -192,6 +317,9 @@
     },
     "loneliness_music": {
       "fields": {
+        "Music": {
+          "id": "Música"
+        },
         "Country": {
           "id": "País"
         }

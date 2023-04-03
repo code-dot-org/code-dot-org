@@ -25,7 +25,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'courseOfferingId',
   'courseVersionId',
   'unitId',
-  'grade',
+  'grades',
   'hidden',
   'restrictSection',
   'codeReviewExpiresAt'
@@ -623,7 +623,7 @@ function newSectionData(participantType) {
     id: PENDING_NEW_SECTION_ID,
     name: '',
     loginType: undefined,
-    grade: '',
+    grades: [''],
     providerManaged: false,
     lessonExtras: true,
     pairingAllowed: true,
@@ -893,7 +893,7 @@ export default function teacherSections(state = initialState, action) {
       action.props.participantType !== ParticipantAudience.student
     ) {
       loginTypeSettings.loginType = SectionLoginType.email;
-      gradeSettings.grade = PlGradeValue;
+      gradeSettings.grades = [PlGradeValue];
     }
 
     const lessonExtraSettings = {};
@@ -1251,7 +1251,7 @@ export function getSectionRows(state, sectionIds) {
       'studentCount',
       'code',
       'participantType',
-      'grade',
+      'grades',
       'providerManaged',
       'hidden'
     ]),
@@ -1274,7 +1274,7 @@ export const sectionFromServerSection = serverSection => ({
   courseVersionName: serverSection.courseVersionName,
   createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
-  grade: serverSection.grade,
+  grades: serverSection.grades,
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
   lessonExtras: serverSection.lesson_extras,
   pairingAllowed: serverSection.pairing_allowed,

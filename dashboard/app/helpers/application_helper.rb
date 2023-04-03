@@ -226,9 +226,7 @@ module ApplicationHelper
     obj
   end
 
-  private
-
-  def share_failure_message(failure_type)
+  private def share_failure_message(failure_type)
     case failure_type
     when ShareFiltering::FailureType::EMAIL
       t('share_code.email_not_allowed')

@@ -1,0 +1,11 @@
+name 'CSD U2 MC Q7_2023'
+type 'multi'
+question 'Debug the following image tag `<img src=rainbow.jpg" alt="a rainbow">`'
+wrong 'No alt is necessary'
+wrong '`img` should be `image`'
+right 'Add a starting quotation mark so the code is `src="rainbow.jpg"`'
+wrong 'Add a closing `</img>` tag'
+wrong 'No change is necessary'
+teacher_markdown <<MARKDOWN
+**Content: Unit 2 Lesson 9**
+MARKDOWN

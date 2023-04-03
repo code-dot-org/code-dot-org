@@ -1,9 +1,11 @@
 import GoogleBlockly from 'blockly/core';
+import i18n from '@cdo/locale';
 
 const EMPTY_OPTION = '???';
 
 export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   static ARROW_CHAR = '\u25BC';
+  static NO_OPTIONS_MESSAGE = i18n.uninitialized();
 
   /** Turn changeHandler into validator
    * @override

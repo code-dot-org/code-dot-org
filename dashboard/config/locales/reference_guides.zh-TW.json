@@ -125,6 +125,12 @@
         "csd-2022/playing-notes": {
           "display_name": "遊玩筆記"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "問題解決流程"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "問題解決流程"
+        },
         "csd-2022/random-numbers": {
           "display_name": "隨機取數"
         },
