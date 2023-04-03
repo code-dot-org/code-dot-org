@@ -69,7 +69,7 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>',
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // Validate that we use parens correctly. (Otherwise we'd end up with
         // 2 + 4 / 2 = 4).
         var height = Studio.Globals.rocket_height(1);
@@ -88,7 +88,7 @@ module.exports = {
         '' +
         '<block type="functional_start_setValue" inline="false" deletable="false" movable="false" editable="false">' +
         '</block>',
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Studio.message,
           commonMsg.emptyTopLevelBlock({topLevelBlockName: 'start (function)'})
@@ -152,7 +152,7 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>',
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Studio.message,
           commonMsg.emptyBlockInVariable({name: 'foobar'})
@@ -206,7 +206,7 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>',
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Studio.message,
           commonMsg.emptyBlockInFunction({name: 'rocket-height'})

@@ -24,8 +24,7 @@ const standaloneVideoScriptLevel = {
       enable_fallback: true,
       key: 'csd_debugging',
       name: 'Debugging',
-      src:
-        'https://www.youtube-nocookie.com/embed/auv10y-dN4s/?autoplay=0&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=auv10y-dN4s&wmode=transparent',
+      src: 'https://www.youtube-nocookie.com/embed/auv10y-dN4s/?autoplay=0&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=auv10y-dN4s&wmode=transparent',
       thumbnail: 'studio.code.org/c/video_thumbnails/csd_debugging.jpg'
     }
   }
@@ -104,8 +103,7 @@ const levelWithInstructions = {
         enable_fallback: true,
         key: 'csd_weblab_intro_2',
         name: 'Intro to Web Lab - Part 2',
-        src:
-          'https://www.youtube-nocookie.com/embed/Hjl6gbg9kmk/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=Hjl6gbg9kmk&wmode=transparent',
+        src: 'https://www.youtube-nocookie.com/embed/Hjl6gbg9kmk/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=Hjl6gbg9kmk&wmode=transparent',
         thumbnail: '/c/video_thumbnails/csd_weblab_intro_2.jpg'
       }
     ]

@@ -29,10 +29,8 @@ export default function ProgrammingExpressionsTable({
   const [selectedCategory, setSelectedCategory] = useState(DEFAULT_VALUE);
   const [selectedResultType, setSelectedResultType] = useState(DEFAULT_TYPE);
   const [programmingExpressions, setProgrammingExpressions] = useState([]);
-  const [
-    categoriesAvailableForSelect,
-    setCategoriesAvailableForSelect
-  ] = useState(allCategories);
+  const [categoriesAvailableForSelect, setCategoriesAvailableForSelect] =
+    useState(allCategories);
   const [itemToClone, setItemToClone] = useState(null);
 
   const [itemToDelete, setItemToDelete] = useState(null);
@@ -235,8 +233,9 @@ export default function ProgrammingExpressionsTable({
       <>
         {!!itemToDelete && (
           <StylizedBaseDialog
-            body={`Are you sure you want to remove ${itemToDelete.name ||
-              itemToDelete.key} and its associated code doc?`}
+            body={`Are you sure you want to remove ${
+              itemToDelete.name || itemToDelete.key
+            } and its associated code doc?`}
             handleConfirmation={() => {
               destroyExpression(
                 `/${selectedResultType}/${itemToDelete.id}`,

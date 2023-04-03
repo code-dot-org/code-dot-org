@@ -436,10 +436,10 @@ export default class CoreLibrary {
     }
 
     sprite.baseScale = 1;
-    sprite.setScale = function(scale) {
+    sprite.setScale = function (scale) {
       sprite.scale = scale * sprite.baseScale;
     };
-    sprite.getScale = function() {
+    sprite.getScale = function () {
       return sprite.scale / sprite.baseScale;
     };
     if (animation) {
@@ -674,12 +674,12 @@ export default class CoreLibrary {
   }
 
   whenTouchEvent(inputEvent) {
-    const getFired = function(map, spriteId, targetId) {
+    const getFired = function (map, spriteId, targetId) {
       if (map && map[spriteId] && map[spriteId][targetId]) {
         return map[spriteId][targetId].firedOnce;
       }
     };
-    const setFired = function(map, spriteId, targetId, fired) {
+    const setFired = function (map, spriteId, targetId, fired) {
       if (!map) {
         map = {};
       }

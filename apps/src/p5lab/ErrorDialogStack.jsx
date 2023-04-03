@@ -129,10 +129,10 @@ export default connect(
   },
   function propsFromDispatch(dispatch) {
     return {
-      dismissError: function() {
+      dismissError: function () {
         dispatch(actions.dismissError());
       },
-      deleteAnimation: function(key, isSpriteLab) {
+      deleteAnimation: function (key, isSpriteLab) {
         dispatch(animationActions.deleteAnimation(key, isSpriteLab));
       }
     };

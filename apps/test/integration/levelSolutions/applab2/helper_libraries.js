@@ -18,12 +18,12 @@ export default {
       description: 'Helper Libraries in App Lab',
       editCode: true,
       xml: 'console.log(myVar);',
-      runBeforeClick: function() {
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+      runBeforeClick: function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         const debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '"hello world"123');
         return true;

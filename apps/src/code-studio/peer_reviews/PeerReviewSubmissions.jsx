@@ -90,9 +90,7 @@ class PeerReviewSubmissions extends React.Component {
 
   handleDownloadCsvClick = () => {
     window.open(
-      `/api/v1/peer_review_submissions/report_csv?plc_course_unit_id=${
-        this.state.plcCourseUnitId
-      }`
+      `/api/v1/peer_review_submissions/report_csv?plc_course_unit_id=${this.state.plcCourseUnitId}`
     );
   };
 
@@ -101,10 +99,11 @@ class PeerReviewSubmissions extends React.Component {
 
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: `/api/v1/peer_review_submissions/index?user_q=${userFilter ||
-        ''}&plc_course_id=${plcCourseId ||
-        ''}&plc_course_unit_id=${plcCourseUnitId || ''}&page=${pageNumber ||
-        1}&per=30`,
+      url: `/api/v1/peer_review_submissions/index?user_q=${
+        userFilter || ''
+      }&plc_course_id=${plcCourseId || ''}&plc_course_unit_id=${
+        plcCourseUnitId || ''
+      }&page=${pageNumber || 1}&per=30`,
       dataType: 'json'
     }).done(data => {
       this.setState({

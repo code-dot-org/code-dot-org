@@ -444,12 +444,15 @@ export default class JavabuilderConnection {
     let unauthorizedMessage;
     if (this.currentUser.signInState === SignInState.SignedIn) {
       if (this.currentUser.userType === 'teacher') {
-        unauthorizedMessage = javalabMsg.unauthorizedJavabuilderConnectionTeacher();
+        unauthorizedMessage =
+          javalabMsg.unauthorizedJavabuilderConnectionTeacher();
       } else {
-        unauthorizedMessage = javalabMsg.unauthorizedJavabuilderConnectionStudent();
+        unauthorizedMessage =
+          javalabMsg.unauthorizedJavabuilderConnectionStudent();
       }
     } else {
-      unauthorizedMessage = javalabMsg.unauthorizedJavabuilderConnectionNotLoggedIn();
+      unauthorizedMessage =
+        javalabMsg.unauthorizedJavabuilderConnectionNotLoggedIn();
     }
 
     // Send unauthorized message as markdown as some unauthorized messages contain links

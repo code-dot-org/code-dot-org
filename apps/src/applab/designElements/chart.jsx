@@ -135,7 +135,7 @@ export default {
   PropertyTab: ChartProperties,
   EventTab: ChartEvents,
 
-  create: function() {
+  create: function () {
     const element = document.createElement('div');
     element.setAttribute('class', 'chart');
     element.style.height = '100px';

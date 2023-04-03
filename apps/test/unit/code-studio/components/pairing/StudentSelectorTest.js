@@ -53,16 +53,12 @@ describe('StudentSelector', () => {
       const wrapper = shallow(
         <StudentSelector students={students} handleSubmit={() => {}} />
       );
-      let btnBackground = wrapper
-        .find('button')
-        .at(0)
-        .props().style.backgroundColor;
+      let btnBackground = wrapper.find('button').at(0).props()
+        .style.backgroundColor;
       expect(btnBackground).to.equal('white');
       wrapper.setState({selectedStudentIds: [1]});
-      btnBackground = wrapper
-        .find('button')
-        .at(0)
-        .props().style.backgroundColor;
+      btnBackground = wrapper.find('button').at(0).props()
+        .style.backgroundColor;
       expect(btnBackground).to.equal('#0094ca');
     });
   });

@@ -77,9 +77,7 @@ class ShowSecret extends Component {
     };
 
     $.ajax({
-      url: `/dashboardapi/sections/${this.props.sectionId}/students/${
-        this.props.id
-      }`,
+      url: `/dashboardapi/sections/${this.props.sectionId}/students/${this.props.id}`,
       method: 'PATCH',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify(dataToUpdate)

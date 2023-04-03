@@ -12,7 +12,7 @@ import {installCustomBlocks} from '@cdo/apps/block_utils';
 
 var testCollectionUtils = require('./testCollectionUtils');
 
-module.exports = function(testCollection, testData, dataItem, done) {
+module.exports = function (testCollection, testData, dataItem, done) {
   const finished = _.once(() => done(/*ensure no args*/));
 
   // LegacyDialog is stubbed in the beforeEach step in levelTests.js
@@ -60,7 +60,7 @@ module.exports = function(testCollection, testData, dataItem, done) {
   var validationCallCount = 0;
 
   // Validate successful solution.
-  var validateResult = async function(report) {
+  var validateResult = async function (report) {
     try {
       assert(testData.expected, 'Have expectations');
       var expected;
@@ -70,11 +70,9 @@ module.exports = function(testCollection, testData, dataItem, done) {
         expected = testData.expected;
       }
       assert(Object.keys(expected).length > 0, 'No expected keys specified');
-      Object.keys(expected).forEach(function(key) {
+      Object.keys(expected).forEach(function (key) {
         if (report[key] !== expected[key]) {
-          var failureMsg = `Failure for key: ${key}. Expected: ${
-            expected[key]
-          }. Got: ${report[key]}\n`;
+          var failureMsg = `Failure for key: ${key}. Expected: ${expected[key]}. Got: ${report[key]}\n`;
           assert(false, failureMsg);
         }
       });
@@ -164,7 +162,7 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
       : () => {
           throw unexpectedExecutionErrorMsg;
         },
-    onInitialize: function() {
+    onInitialize: function () {
       // we have a race condition for loading our editor. give it another 500ms
       // to load if it hasnt already
       var timeout = 0;
@@ -183,8 +181,8 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
         getConfigRef().autoFlush();
         getConfigRef().set({
           limits: {
-            '15': 5,
-            '60': 10
+            15: 5,
+            60: 10
           },
           maxRecordSize: 100,
           maxPropertySize: 100,
@@ -196,7 +194,7 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
         getProjectDatabase().set(null);
       }
 
-      setTimeout(function() {
+      setTimeout(function () {
         assert(window.droplet, 'droplet is in global');
 
         // Click the run button!

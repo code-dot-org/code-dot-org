@@ -30,12 +30,8 @@ const SongSelector = Radium(
     };
 
     render() {
-      const {
-        selectedSong,
-        songData,
-        enableSongSelection,
-        filterOn
-      } = this.props;
+      const {selectedSong, songData, enableSongSelection, filterOn} =
+        this.props;
 
       const songKeys = getFilteredSongKeys(songData, filterOn);
 

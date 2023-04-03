@@ -240,9 +240,7 @@ class P5LabView extends React.Component {
         }
         interfaceMode={interfaceMode}
       />
-    ) : (
-      undefined
-    );
+    ) : undefined;
   }
 
   render() {

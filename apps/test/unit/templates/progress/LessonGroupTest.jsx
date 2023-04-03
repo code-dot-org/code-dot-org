@@ -28,10 +28,7 @@ describe('LessonGroup', () => {
     expect(wrapper.find('FontAwesome')).to.have.lengthOf(2);
 
     expect(wrapper.state('lessonGroupInfoDialogOpen')).to.be.false;
-    wrapper
-      .find('FontAwesome')
-      .at(1)
-      .simulate('click');
+    wrapper.find('FontAwesome').at(1).simulate('click');
     expect(wrapper.state('lessonGroupInfoDialogOpen')).to.be.true;
   });
   it('renders without lesson group info button when there is no description or big questions', () => {
