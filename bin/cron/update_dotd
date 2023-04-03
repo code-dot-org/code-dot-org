@@ -2,10 +2,10 @@
 require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
-require 'open-uri'
-require 'json'
-require File.expand_path('../../../pegasus/src/env', __FILE__)
-require_relative '../../deployment'
+# require 'open-uri'
+# require 'json'
+# require File.expand_path('../../../pegasus/src/env', __FILE__)
+# require_relative '../../deployment'
 require 'cdo/pager_duty'
 require 'cdo/slack'
 
@@ -27,4 +27,17 @@ def main
   Slack.update_topic('developers', new_topic) unless new_topic == current_topic
 end
 
-main
+# Update the topic of the given slack channel to reflect the current on-call person for the given escalation policy.
+# @param slack_channel [String] The slack channel to update.
+# @param pagerduty_escalation_policy [String] The PagerDuty escalation policy to query.
+def update_on_call(slack_channel, pagerduty_escalation_policy)
+  current_topic = Slack.get_topic(slack_channel)
+  on_call_email = PagerDuty.on_call(pagerduty_escalation_policy)
+  on_call_name = 'unknown' unless Slack.user_name(on_call_email)
+  # Assume that the on-call engineer is the first element of the status, delimited by a semicolon.
+  new_topic = current_topic.sub(/^.+?;/, "On-call: #{on_call_name};")
+  Slack.update_topic(slack_channel, new_topic) unless new_topic == current_topic
+end
+
+update_on_call('developers', 'Live Site Issues')
+update_on_call('infrastructure', 'Infrastructure')
