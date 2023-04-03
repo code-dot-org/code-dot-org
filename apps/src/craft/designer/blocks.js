@@ -8,7 +8,9 @@ import {BLOCK_NAME_TO_DISPLAY_TEXT} from '../utils';
 const ENTITY_INPUT_EXTRA_SPACING = 14;
 
 const NUMBERS_TO_DISPLAY_TEXT = {
-  0.4: i18n.timeVeryShort(),
+  // prettier wants to remove quotes here
+  // eslint-disable-next-line prettier/prettier
+  '0.4': i18n.timeVeryShort(),
   '1.0': i18n.timeShort(),
   '2.0': i18n.timeMedium(),
   '4.0': i18n.timeLong(),
