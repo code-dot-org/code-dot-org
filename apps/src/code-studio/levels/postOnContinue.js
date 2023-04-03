@@ -49,7 +49,7 @@ export function onContinue() {
     result: result.result,
     pass: true,
     testResult: TestResults.ALL_PASS,
-    onComplete: function() {
+    onComplete: function () {
       const lastServerResponse = getLastServerResponse();
       let url = lastServerResponse && lastServerResponse.nextRedirect;
       if (!url) {

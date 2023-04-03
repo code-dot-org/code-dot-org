@@ -30,9 +30,7 @@ class Courses extends Component {
 
   componentDidMount() {
     // The components used here are implemented in legacy HAML/CSS rather than React.
-    $('#flashes')
-      .appendTo(ReactDOM.findDOMNode(this.refs.flashes))
-      .show();
+    $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
   }
 
   getHeroStrings() {
@@ -74,12 +72,8 @@ class Courses extends Component {
       specialAnnouncement
     } = this.props;
 
-    const {
-      headingText,
-      subHeadingText,
-      description,
-      buttonText
-    } = this.getHeroStrings();
+    const {headingText, subHeadingText, description, buttonText} =
+      this.getHeroStrings();
 
     // Verify background image works for both LTR and RTL languages.
     const backgroundUrl = isTeacher

@@ -154,11 +154,11 @@ module.exports = {
         '  </functional_input>' +
         '</block>' +
         '</xml>',
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // At the point where report gets called, we haven't actually updated
         // our display area. We do our validation asynchronously so that
         // we do update our display area before this gets called
-        setTimeout(function() {
+        setTimeout(function () {
           var userExpression = document.getElementById('userExpression');
           assert(userExpression.childNodes.length === 3);
           var failedInputGroup = userExpression.childNodes[2];

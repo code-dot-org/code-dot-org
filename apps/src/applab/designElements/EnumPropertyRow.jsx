@@ -25,7 +25,7 @@ export default class EnumPropertyRow extends React.Component {
     const {options, displayOptions = [], desc} = this.props;
     const {selectedValue} = this.state;
 
-    const renderedOptions = options.map(function(option, index) {
+    const renderedOptions = options.map(function (option, index) {
       return (
         <option key={index} value={option}>
           {displayOptions[index] || option}

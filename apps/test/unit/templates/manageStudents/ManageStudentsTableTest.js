@@ -206,10 +206,7 @@ describe('ManageStudentsTable', () => {
       expect(manageStudentNameCell().prop('isEditing')).to.be.true;
 
       // Find the name input
-      const nameInput = () =>
-        manageStudentNameCell()
-          .find('input')
-          .first();
+      const nameInput = () => manageStudentNameCell().find('input').first();
       expect(nameInput().prop('value')).to.equal(fakeStudent.name);
 
       // Simulate a name change

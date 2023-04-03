@@ -112,12 +112,10 @@ const FormController = props => {
   const [errorHeader, setErrorHeader] = useState(null);
   const [globalError, setGlobalError] = useState(false);
   const [triedToSubmit, setTriedToSubmit] = useState(false);
-  const [updatedApplicationId, setUpdatedApplicationId] = useState(
-    applicationId
-  );
-  const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] = useState(
-    applicationId
-  );
+  const [updatedApplicationId, setUpdatedApplicationId] =
+    useState(applicationId);
+  const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] =
+    useState(applicationId);
 
   // do this once on mount only
   useEffect(() => {
