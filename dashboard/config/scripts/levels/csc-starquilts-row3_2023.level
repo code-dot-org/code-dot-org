@@ -47,7 +47,7 @@
     "long_instructions": "**Time to make Row 3**\r\n\r\n<div style=\"float:right;padding:20px\">\r\n<img src=\"https://images.code.org/4d91d7110f590dbfa60bbd1cab7cf3be-image-1649477100014.04.04 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\r\n<p style=\"text-align: center\">\r\nexample\r\n</p>\r\n</div>\r\n\r\n- Start with a \"Row 3\" `comment` block \r\n- Have the Artist jump `diagonalLeft` \r\n- Then, add a new `draw shape` block\r\n- Have the Artist `bumpRight` \r\n- Make another rhombus\r\n- Then, `bumpRight` again\r\n- Make your last rhombus of this row\r\n",
     "project_template_level_name": "csc-starquilts-template_2023",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/0733e6619ed1cce35523eb25b9f503cf=levelbuilder/193377.png",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your code should look like this: \\n<xml><block type=\\\"when_run\\\" deletable=\\\"false\\\" movable=\\\"false\\\" id=\\\"when_run\\\"><next><block type=\\\"variables_set\\\"><field name=\\\"VAR\\\">length</field><value name=\\\"VALUE\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">35</field></block></value><next><block type=\\\"comment\\\"><field name=\\\"TEXT\\\">Row 1</field><next><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusRed45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value><next><block type=\\\"comment\\\"><field name=\\\"TEXT\\\">Row 2</field><next><block type=\\\"procedures_callnoreturn\\\"><mutation name=\\\"diagonalRight\\\"></mutation><next><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusOrange45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value><next><block type=\\\"procedures_callnoreturn\\\"><mutation name=\\\"bumpLeft\\\"></mutation><next><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusOrange45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value><next><block type=\\\"comment\\\"><field name=\\\"TEXT\\\">Row 3</field><next><block type=\\\"procedures_callnoreturn\\\"><mutation name=\\\"diagonalLeft\\\"></mutation><next><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusGreen45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value><next><block type=\\\"procedures_callnoreturn\\\"><mutation name=\\\"bumpRight\\\"></mutation><next><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusCyan45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value><next><block type=\\\"procedures_callnoreturn\\\"><mutation name=\\\"bumpRight\\\"></mutation><next><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusLightBlue45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/847332db1023482a1bb9b6c20b54d7f9/csc-starquilts-row3.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your code should look like this: \\n<xml><block type=\\\"when_run\\\" deletable=\\\"false\\\" movable=\\\"false\\\" id=\\\"when_run\\\"><next><block type=\\\"variables_set\\\"><field name=\\\"VAR\\\">length</field><value name=\\\"VALUE\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">35</field></block></value><next><block type=\\\"comment\\\"><field name=\\\"TEXT\\\">Row 1</field><next><block type=\\\"rhombus_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusRed45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value><next><block type=\\\"comment\\\"><field name=\\\"TEXT\\\">Row 2</field><next><block type=\\\"procedures_callnoreturn\\\"><mutation name=\\\"diagonalRight\\\"></mutation><next><block type=\\\"rhombus_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusOrange45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value><next><block type=\\\"procedures_callnoreturn\\\"><mutation name=\\\"bumpLeft\\\"></mutation><next><block type=\\\"rhombus_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusOrange45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value><next><block type=\\\"comment\\\"><field name=\\\"TEXT\\\">Row 3</field><next><block type=\\\"procedures_callnoreturn\\\"><mutation name=\\\"diagonalLeft\\\"></mutation><next><block type=\\\"rhombus_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusGreen45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value><next><block type=\\\"procedures_callnoreturn\\\"><mutation name=\\\"bumpRight\\\"></mutation><next><block type=\\\"rhombus_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusCyan45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value><next><block type=\\\"procedures_callnoreturn\\\"><mutation name=\\\"bumpRight\\\"></mutation><next><block type=\\\"rhombus_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusLightBlue45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/847332db1023482a1bb9b6c20b54d7f9/csc-starquilts-row3.mp3\"}]",
     "name_suffix": "_2023",
     "encrypted_examples": "cUH+6c79dZXfzZ+xLPExRH+rO8IduzZOidNyCJVYEheKxrBu8cqT+KlgY2Zu\nazTokqZyeOakbhkoegX8OQcZ/g==\n",
     "preload_asset_list": null
@@ -77,7 +77,7 @@
         <block type="comment">
           <field name="TEXT">Row 3</field>
         </block>
-        <block type="turtle_shape_with_side_length">
+        <block type="rhombus_shape_with_side_length">
           <field name="VALUE">smallRhombusGreen45</field>
           <value name="SIZE">
             <block type="variables_get">
@@ -114,7 +114,7 @@
                 <block type="comment">
                   <field name="TEXT">Row 1</field>
                   <next>
-                    <block type="turtle_shape_with_side_length">
+                    <block type="rhombus_shape_with_side_length">
                       <field name="VALUE">smallRhombusRed45</field>
                       <value name="SIZE">
                         <block type="variables_get">
@@ -128,7 +128,7 @@
                             <block type="procedures_callnoreturn">
                               <mutation name="diagonalRight"/>
                               <next>
-                                <block type="turtle_shape_with_side_length">
+                                <block type="rhombus_shape_with_side_length">
                                   <field name="VALUE">smallRhombusOrange45</field>
                                   <value name="SIZE">
                                     <block type="variables_get">
@@ -139,7 +139,7 @@
                                     <block type="procedures_callnoreturn">
                                       <mutation name="bumpLeft"/>
                                       <next>
-                                        <block type="turtle_shape_with_side_length">
+                                        <block type="rhombus_shape_with_side_length">
                                           <field name="VALUE">smallRhombusOrange45</field>
                                           <value name="SIZE">
                                             <block type="variables_get">
@@ -153,7 +153,7 @@
                                                 <block type="procedures_callnoreturn">
                                                   <mutation name="diagonalLeft"/>
                                                   <next>
-                                                    <block type="turtle_shape_with_side_length">
+                                                    <block type="rhombus_shape_with_side_length">
                                                       <field name="VALUE">smallRhombusGreen45</field>
                                                       <value name="SIZE">
                                                         <block type="variables_get">
@@ -164,7 +164,7 @@
                                                         <block type="procedures_callnoreturn">
                                                           <mutation name="bumpRight"/>
                                                           <next>
-                                                            <block type="turtle_shape_with_side_length">
+                                                            <block type="rhombus_shape_with_side_length">
                                                             <field name="VALUE">smallRhombusCyan45</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
@@ -175,7 +175,7 @@
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="bumpRight"/>
                                                             <next>
-                                                            <block type="turtle_shape_with_side_length">
+                                                            <block type="rhombus_shape_with_side_length">
                                                             <field name="VALUE">smallRhombusLightBlue45</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
