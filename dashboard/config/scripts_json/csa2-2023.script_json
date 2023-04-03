@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-10 18:51:27 UTC",
+    "serialized_at": "2023-03-31 18:29:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -90,9 +90,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**How are values assigned to the instance variables?**\n\nStudents have used constructors to create a variety of objects, including `Painter` objects. Students build on their knowledge of instance variables to explore how to assign values to the instance variables when an object is created. Students recall that the constructor they have used in the `Painter` class instantiates a `Painter` object with the same values every time, and they consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. Students practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck.",
+        "overview": "**How does a constructor assign values to instance variables?**\n\nStudents have used constructors to create a variety of objects, including `Painter` objects. Students build on their knowledge of instance variables to explore how to assign values to the instance variables when an object is created. Students recall that the constructor they have used in the `Painter` class instantiates a `Painter` object with the same values every time, and they consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. Students practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck.",
         "preparation": "* Preview the *Constructors* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-4-constructors/36394/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**How are values assigned to the instance variables?**\n\nYou have used constructors to create a variety of objects, including `Painter` objects. In this lesson, you build on your knowledge of instance variables to explore how to assign values to the instance variables when an object is created. You recall that the constructor you have used in the `Painter` class instantiates a `Painter` object with the same values every time, and you consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. You practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck."
+        "student_overview": "**How does a constructor assign values to instance variables?**\n\nYou have used constructors to create a variety of objects, including `Painter` objects. In this lesson, you build on your knowledge of instance variables to explore how to assign values to the instance variables when an object is created. You recall that the constructor you have used in the `Painter` class instantiates a `Painter` object with the same values every time, and you consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. You practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck."
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -198,9 +198,9 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "**How can I use variables to perform calculations?**\n\nStudents have learned how to use variables to store primitive values and object references. In this lesson, students explore writing and evaluating expressions using arithmetic operators and compound assignment operators. Students discover how the data type impacts the way an expression is evaluated and the result of dividing an `int` or a `double` value by zero. They also learn about using compound assignment operators and explore the mod ( `%` ) operator.",
+        "overview": "**How can I use variables and operators to perform calculations?**\n\nStudents have learned how to use variables to store primitive values and object references. In this lesson, students explore writing and evaluating expressions using arithmetic operators and compound assignment operators. Students discover how the data type impacts the way an expression is evaluated and the result of dividing an `int` or a `double` value by zero. They also learn about using compound assignment operators and explore the mod ( `%` ) operator.",
         "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-4-constructors/36394/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**How can I use variables to perform calculations?**\n\nYou have learned how to use variables to store primitive values and object references. In this lesson, you explore writing and evaluating expressions using arithmetic operators and compound assignment operators. You discover how the data type impacts the way an expression is evaluated and the result of dividing an `int` or a `double` value by zero. You also learn about using compound assignment operators and explore the mod ( `%` ) operator."
+        "student_overview": "**How can I use variables and operators to perform calculations?**\n\nYou have learned how to use variables to store primitive values and object references. In this lesson, you explore writing and evaluating expressions using arithmetic operators and compound assignment operators. You discover how the data type impacts the way an expression is evaluated and the result of dividing an `int` or a `double` value by zero. You also learn about using compound assignment operators and explore the mod ( `%` ) operator."
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -367,7 +367,7 @@
       "key": "27832459-72f3-444c-8329-5ced5106bc5d",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -381,7 +381,7 @@
       "key": "83ba7039-7de8-4a47-b7c8-d7f88b3dba9b",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1259,7 +1259,7 @@
       "key": "7efead4a-5f7c-49d6-a9a2-c2f13788f21e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Read the quote to the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write down ideas and thoughts in response to the prompt on a sticky note or scrap piece of paper.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this quote make you think about or wonder?*\n\n**Discussion Goal:** Students make connections between the quote and scenarios they have encountered or things they have learned in the course so far. These might include sharing their thoughts on real-world scenarios and issues and how this quote relates to these.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1269,34 +1269,6 @@
       },
       "seeding_key": {
         "activity_section.key": "7efead4a-5f7c-49d6-a9a2-c2f13788f21e",
-        "lesson_activity.key": "27832459-72f3-444c-8329-5ced5106bc5d"
-      }
-    },
-    {
-      "key": "00d2c0cd-8d4f-4b61-9d01-667123699690",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue.\n\nGive One, Get One encourages students to seek and share ideas and information. Students circulate the classroom and pair up with a partner when prompted by the teacher. Each student \"gives\" or shares one of their ideas as the other student \"gets\" or listens and writes it down. The teacher then prompts students to find new partners and repeat the process."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "00d2c0cd-8d4f-4b61-9d01-667123699690",
-        "lesson_activity.key": "27832459-72f3-444c-8329-5ced5106bc5d"
-      }
-    },
-    {
-      "key": "6b4ae249-ef03-4672-a0e4-8d0e78fd6a84",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you learn from each other?*\n* *How did these ideas and thoughts contribute to your identity as a software engineer?*\n\n**Discussion Goal:** Students share the ideas they gathered and identify patterns or common views. Students identify characteristics of a software engineer that relate to the quote and how they share or demonstrate these same characteristics in their personal lives."
-      },
-      "seeding_key": {
-        "activity_section.key": "6b4ae249-ef03-4672-a0e4-8d0e78fd6a84",
         "lesson_activity.key": "27832459-72f3-444c-8329-5ced5106bc5d"
       }
     },
@@ -1447,7 +1419,7 @@
       "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What was useful about the no-argument constructor in the `Painter` class? What was NOT useful about it?*\n\n**Discussion Goal:** Students suggest that creating `Painter` objects with the no-argument constructor meant that they always knew where the object was going to start, what direction it would be facing, and that it had no paint. Students may make connections with achieving consistency and reliability in their programs since they could trust that an object would always be created the same way. They share how a different approach would have been more useful if they wanted the `Painter` object to start at a specific location or with a certain amount of paint.",
-        "duration": "10",
+        "duration": "15",
         "name": "No-Argument Constructors",
         "tips": [
           {
@@ -7938,6 +7910,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa2-2023/resources",
+      "key": "all_resources_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_2"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa2-2023/standards",
+      "key": "all_standards_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_2"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa2-2023/vocab",
+      "key": "all_vocabulary_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2"
+      }
+    },
+    {
       "name": "Anticipation Guide",
       "url": "https://docs.google.com/document/d/1D5d1uUJGuYqAQP77kKeGDqLfDJIGhE434JGlxmmNhTM/edit?usp=sharing",
       "key": "anticipation_guide",
@@ -8435,6 +8440,18 @@
       }
     },
     {
+      "name": "Unit 2 Overview",
+      "url": "https://docs.google.com/document/d/1I9s_qs8Foxg2df3YzgeCLDFzBTpYECERm7_iRiUkLMc/edit?usp=share_link",
+      "key": "unit_2_overview",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_overview"
+      }
+    },
+    {
       "name": "Unit 2 Study Guide",
       "url": "https://docs.google.com/document/d/1k2hoP7Zjy0Z1LYYqjNTM4_MIYXAeeVlw-abhc93B72g/edit?usp=sharing",
       "key": "unit_2_study_guide",
@@ -8889,7 +8906,42 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_2",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_2",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_2_guide",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_2_overview",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_2_study_guide",
+        "script.name": "csa2-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
