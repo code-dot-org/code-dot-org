@@ -108,8 +108,9 @@ export function generateGraphDataFromChord({
 
   return notes.map((note: ChordNote) => {
     return {
-      x: ((note.tick - 1) * useWidth) / (16 - 1) + padding,
+      x: 1 + ((note.tick - 1) * useWidth) / (16 - 1) + padding,
       y:
+        1 +
         padding +
         useHeight -
         ((note.note - startOctave * 12) * useHeight) / (numOctaves * 12 - 1),
