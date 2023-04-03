@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-07 12:46:00 UTC",
+    "serialized_at": "2023-03-31 15:22:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -53,13 +53,85 @@
 
   ],
   "resources": [
-
+    {
+      "name": "Developing Project Management Skills",
+      "url": "https://docs.google.com/document/d/1kgVoutrFAiSLDtVwTYUUG_K5ys2vjw-NrBpEx10ZVpY/edit?usp=sharing",
+      "key": "developing_project_management_skills",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "developing_project_management_skills"
+      }
+    },
+    {
+      "name": "Unit 7 Guide",
+      "url": "https://docs.google.com/document/d/1-DU8lBsSPy3Kld-IWLeDoZmhIstoM_BeRQEvIOGSYxw/edit?usp=share_link",
+      "key": "unit_7_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "unit_7_guide"
+      }
+    },
+    {
+      "name": "Unit 7 Overview",
+      "url": "https://docs.google.com/document/d/1aiGwLcIpCkHjWsjzDOHDCnxB_ITAOCiv6YLsslyM09g/edit?usp=share_link",
+      "key": "unit_7_overview",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_7_overview"
+      }
+    },
+    {
+      "name": "Unit 7 Study Guide",
+      "url": "https://docs.google.com/document/d/1m3jf7bmZaR2fk85b0mR-Ut_5yRatwXk8Bl0g30Gc71k/edit?usp=share_link",
+      "key": "unit_7_study_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_7_study_guide"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "developing_project_management_skills",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_7_guide",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_7_overview",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_7_study_guide",
+        "script.name": "csa7-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
