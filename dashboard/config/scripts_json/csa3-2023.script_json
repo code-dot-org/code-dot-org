@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-10 18:49:16 UTC",
+    "serialized_at": "2023-04-02 18:52:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -962,7 +962,7 @@
       "key": "41aeac3f-df09-4fff-a736-046d7877cd2f",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define **data structure** and **one-dimensional array**.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that data structures contain zero or more elements and define ***element***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define **data structure** and **one-dimensional array**.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that data structures contain zero or more elements and define ***element***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: 1D Arrays"
       },
       "seeding_key": {
@@ -999,7 +999,7 @@
       "key": "59ae0fd3-806a-487b-add8-aa1d5c2ec1df",
       "position": 10,
       "properties": {
-        "description": "**Do This:** Explain how 1D arrays are declared and initialized:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declaring a 1D array\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initializing a 1D array\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declaring and initializing a 1D array in one line\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that a 1D array is an object and is accessed using a reference variable.",
+        "description": "**Do This:** Explain how 1D arrays are declared and initialized:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declaring a 1D array\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initializing a 1D array\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declaring and initializing a 1D array in one line\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that a 1D array is an object and is accessed using a reference variable.",
         "tips": [
           {
             "type": "teachingTip",
@@ -7167,6 +7167,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa3-2023/resources",
+      "key": "all_resources_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_3"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa3-2023/standards",
+      "key": "all_standards_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_3"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa3-2023/vocab",
+      "key": "all_vocabulary_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_3"
+      }
+    },
+    {
       "name": "Array Algorithms",
       "url": "https://docs.google.com/presentation/d/1Ks7hI6Ig7WPUhQN0Pp2WIbxqAYD4PvsuzHvfPcVDXOA/edit?usp=sharing",
       "key": "array_algorithms",
@@ -7714,6 +7747,18 @@
       }
     },
     {
+      "name": "Unit 3 Overview",
+      "url": "https://docs.google.com/document/d/1FDbyYrJh73QqNqIJBL3yXx9lgNr02DeGv0-wiMs3P-4/edit?usp=share_link",
+      "key": "unit_3_overview",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_3_overview"
+      }
+    },
+    {
       "name": "Unit 3 Study Guide",
       "url": "https://docs.google.com/document/d/1XNLZmHIVsdan4CSW9rw5kOOtRglGHXBeBSX9sihIHSs/edit?usp=sharing",
       "key": "unit_3_study_guide",
@@ -8170,7 +8215,42 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_3",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_3",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_3",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_3_guide",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_3_overview",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_3_study_guide",
+        "script.name": "csa3-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
