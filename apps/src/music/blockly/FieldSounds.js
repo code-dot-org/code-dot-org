@@ -192,8 +192,9 @@ class FieldSounds extends GoogleBlockly.Field {
     );
 
     // Add an image for the sound type.
-    const soundType = this.options.getLibrary().getSoundForId(this.getValue())
-      .type;
+    const soundType = this.options
+      .getLibrary()
+      .getSoundForId(this.getValue()).type;
 
     GoogleBlockly.utils.dom.createSvgElement(
       'image',
