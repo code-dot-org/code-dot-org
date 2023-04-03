@@ -4,6 +4,11 @@
     "func": "makeNewSpriteGroup",
     "blockText": "make {N} new {GROUP} in a {FORMAT}",
     "style": "sprite_blocks",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
     "args": [
       {
         "name": "N",
