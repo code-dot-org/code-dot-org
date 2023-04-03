@@ -45,7 +45,7 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
       )
     end
     if profanity_or_pii
-      render json: {id: model_id, status: "piiProfanity"}
+      render json: {id: model_id, status: "piiProfanity", data: profanity_or_pii}
     else
       metadata = model_data.except(:trainedModel, :featureNumberKey)
       @user_ml_model = UserMlModel.create(
