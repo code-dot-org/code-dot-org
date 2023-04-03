@@ -20,9 +20,9 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
     model_id = UserMlModel.generate_id
     model_data = params["ml_model"]
     return head :bad_request if model_data.nil? || model_data == ""
+
     # If there's a PII/profanity API error, we rescue the exception and the save
     # will succeed. The saved model will bypass the PII/profanity filters.
-
     begin
       profanity_or_pii = ShareFiltering.find_failure(
         model_data.except(:trainedModel).to_s,
