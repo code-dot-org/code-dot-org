@@ -1,6 +1,6 @@
 import {expect} from '../../../../../../util/reconfiguredChai';
 import Accelerometer from '@cdo/apps/lib/kits/maker/boards/microBit/Accelerometer';
-import {MicrobitStubBoard} from '../makeStubBoard';
+import {MBFirmataClientStub} from '../makeStubBoard';
 import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import sinon from 'sinon';
 import {ACCEL_EVENT_ID} from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataWrapper';
@@ -10,7 +10,7 @@ describe('MicroBitAccelerometer', function() {
   let accelerometer;
 
   beforeEach(() => {
-    boardClient = new MicrobitStubBoard();
+    boardClient = new MBFirmataClientStub();
     accelerometer = new Accelerometer({mb: boardClient});
   });
 

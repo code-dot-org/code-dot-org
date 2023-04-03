@@ -1,4 +1,4 @@
-import {MicrobitStubBoard} from '../makeStubBoard';
+import {MBFirmataClientStub} from '../makeStubBoard';
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
@@ -8,7 +8,7 @@ describe('CapacitiveTouchSensor', function() {
   let testPin = 2;
 
   beforeEach(() => {
-    boardClient = new MicrobitStubBoard();
+    boardClient = new MBFirmataClientStub();
     sensor = new CapacitiveTouchSensor({mb: boardClient, pin: testPin});
   });
   afterEach(() => {

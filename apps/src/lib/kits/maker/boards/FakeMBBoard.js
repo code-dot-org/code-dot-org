@@ -1,5 +1,6 @@
 /** @file Fake for running Maker apps without an attached MicroBit board. */
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
+import {MBFirmataClientStub} from '../../../../../test/unit/lib/kits/maker/boards/makeStubBoard';
 
 /**
  * Fake MicroBit Board for running Maker Toolkit apps without a MicroBit board
@@ -9,6 +10,11 @@ import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
  * @implements MakerBoard
  */
 export default class FakeMBBoard extends EventEmitter {
+  constructor() {
+    super();
+    this.boardClient_ = new MBFirmataClientStub();
+  }
+
   /**
    * Open a connection to the board on its configured port.
    * @returns {Promise} resolved when the board is ready to use.
@@ -27,6 +33,8 @@ export default class FakeMBBoard extends EventEmitter {
 
   reset() {}
 
+  openSerialPort() {}
+
   /**
    * Marshals the board component controllers and appropriate constants into the
    * given JS Interpreter instance so they can be used by student code.
@@ -43,8 +51,7 @@ export default class FakeMBBoard extends EventEmitter {
       LightSensor: FakeLightSensor,
       ExternalButton: FakeExternalButton,
       ExternalLed: FakeExternalLed,
-      CapacitiveTouchSensor: FakeCapacitiveTouchSensor,
-      MicrobitFirmataWrapper: FakeMBFirmataWrapper
+      CapacitiveTouchSensor: FakeCapacitiveTouchSensor
     };
 
     for (const constructorName in constructors) {
@@ -125,6 +132,7 @@ class FakeComponent extends EventEmitter {}
 class FakeLedScreen extends FakeComponent {
   on() {}
   off() {}
+  toggle() {}
   clear() {}
   display() {}
   scrollNumber() {}
@@ -138,6 +146,7 @@ class FakeLightSensor extends FakeComponent {
     this.threshold = 0;
   }
 
+  start() {}
   setScale() {}
 
   getAveragedValue() {
@@ -154,6 +163,7 @@ class FakeMicroBitThermometer extends FakeComponent {
 }
 
 class FakeAccelerometer extends FakeComponent {
+  start() {}
   getAcceleration() {
     return 0;
   }
@@ -171,7 +181,10 @@ class FakeMicroBitButton extends FakeComponent {
   }
 }
 
-class FakeCompass extends FakeComponent {}
+class FakeCompass extends FakeComponent {
+  start() {}
+  getHeading() {}
+}
 
 class FakeExternalLed extends FakeComponent {
   on() {}

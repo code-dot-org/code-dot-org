@@ -11,7 +11,7 @@ export function makeStubBoard() {
   });
 }
 
-export class MicrobitStubBoard {
+export class MBFirmataClientStub {
   constructor() {
     this.eventListeners = [];
     this.updateListeners = [];

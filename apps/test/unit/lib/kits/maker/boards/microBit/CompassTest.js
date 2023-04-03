@@ -1,6 +1,6 @@
 import {expect} from '../../../../../../util/reconfiguredChai';
 import Compass from '@cdo/apps/lib/kits/maker/boards/microBit/Compass';
-import {MicrobitStubBoard} from '../makeStubBoard';
+import {MBFirmataClientStub} from '../makeStubBoard';
 import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import sinon from 'sinon';
 
@@ -9,7 +9,7 @@ describe('MicroBit Compass', function() {
   let compass;
 
   beforeEach(() => {
-    boardClient = new MicrobitStubBoard();
+    boardClient = new MBFirmataClientStub();
     compass = new Compass({mb: boardClient});
   });
   afterEach(() => {

@@ -1,6 +1,6 @@
 import {expect} from '../../../../../../util/reconfiguredChai';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
-import {MicrobitStubBoard} from '../makeStubBoard';
+import {MBFirmataClientStub} from '../makeStubBoard';
 import sinon from 'sinon';
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardTest';
 import {
@@ -27,6 +27,193 @@ function stubOpenSerialPort(board) {
   });
 }
 
+export function itMakesMicroBitComponentsAvailable(
+  Board,
+  boardSpecificSetup = null,
+  boardSpecificTeardown = null
+) {
+  /**
+   * After installing on the interpreter, test that the components and
+   * component constructors are available from the interpreter
+   */
+  describe('Micro Bit components accessible from interpreter', () => {
+    let jsInterpreter;
+    let board;
+
+    beforeEach(() => {
+      board = new Board();
+      boardSetupAndStub(board);
+
+      jsInterpreter = {
+        globalProperties: {},
+        createGlobalProperty: function(key, value) {
+          jsInterpreter.globalProperties[key] = value;
+        },
+        addCustomMarshalObject: sinon.spy()
+      };
+      // Opportunity to stub anything needed to test a board
+      if (boardSpecificSetup) {
+        boardSpecificSetup(board);
+      }
+
+      return board.connect();
+    });
+
+    afterEach(() => {
+      if (boardSpecificTeardown) {
+        boardSpecificTeardown(board);
+      }
+    });
+
+    describe('adds component constructors', () => {
+      beforeEach(() => {
+        board.installOnInterpreter(jsInterpreter);
+      });
+
+      it(`correct number of them`, () => {
+        expect(jsInterpreter.addCustomMarshalObject).to.have.callCount(
+          MB_COMPONENTS.length
+        );
+      });
+
+      MB_COMPONENTS.forEach(constructor => {
+        it(constructor, () => {
+          expect(jsInterpreter.globalProperties).to.have.ownProperty(
+            constructor
+          );
+          expect(jsInterpreter.globalProperties[constructor]).to.be.a(
+            'function'
+          );
+          const passedObjects = jsInterpreter.addCustomMarshalObject.args.map(
+            call => call[0].instance
+          );
+          expect(passedObjects).to.include(
+            jsInterpreter.globalProperties[constructor]
+          );
+        });
+      });
+    });
+
+    describe('adds components', () => {
+      beforeEach(() => {
+        board.installOnInterpreter(jsInterpreter);
+      });
+
+      it(`correct number of them`, () => {
+        let globalPropsCount = MB_COMPONENTS.length + MB_COMPONENT_COUNT;
+        expect(Object.keys(jsInterpreter.globalProperties)).to.have.length(
+          globalPropsCount
+        );
+      });
+
+      ['buttonA', 'buttonB'].forEach(button => {
+        describe(button, () => {
+          let component;
+
+          beforeEach(() => {
+            component = jsInterpreter.globalProperties[button];
+          });
+
+          it('isPressed', () => expect(component.isPressed).to.be.a('boolean'));
+          it('holdtime', () => expect(component.holdtime).to.be.a('number'));
+        });
+      });
+
+      describe('ledScreen', () => {
+        function expectLedToHaveFunction(fnName) {
+          expect(jsInterpreter.globalProperties.ledScreen[fnName]).to.be.a(
+            'function'
+          );
+        }
+
+        // Set of required functions derived from our dropletConfig
+        [
+          'on',
+          'off',
+          'toggle',
+          'clear',
+          'scrollString',
+          'scrollNumber'
+        ].forEach(fnName => {
+          it(`${fnName}()`, () => expectLedToHaveFunction(fnName));
+        });
+      });
+
+      describe('tempSensor', () => {
+        let component;
+
+        beforeEach(() => {
+          component = jsInterpreter.globalProperties.tempSensor;
+        });
+
+        it('F', () => {
+          expect(component).to.have.property('F');
+        });
+
+        it('C', () => {
+          expect(component).to.have.property('C');
+        });
+      });
+
+      describe('lightSensor', () => {
+        let component;
+
+        beforeEach(() => {
+          component = jsInterpreter.globalProperties.lightSensor;
+        });
+
+        it('value', () => {
+          expect(component).to.have.property('value');
+        });
+
+        it('threshold', () => {
+          expect(component).to.have.property('threshold');
+        });
+
+        it('start()', () => {
+          expect(component.start).to.be.a('function');
+        });
+
+        it('setScale()', () => {
+          expect(component.setScale).to.be.a('function');
+        });
+      });
+
+      describe('accelerometer', () => {
+        let component;
+
+        beforeEach(() => {
+          component = jsInterpreter.globalProperties.accelerometer;
+        });
+
+        it('start()', () => expect(component.start).to.be.a('function'));
+        it('getOrientation()', () =>
+          expect(component.getOrientation).to.be.a('function'));
+        it('getAcceleration()', () =>
+          expect(component.getAcceleration).to.be.a('function'));
+      });
+
+      describe('compass', () => {
+        let component;
+
+        beforeEach(() => {
+          component = jsInterpreter.globalProperties.compass;
+        });
+
+        it('start()', () => expect(component.start).to.be.a('function'));
+        it('getHeading()', () =>
+          expect(component.getHeading).to.be.a('function'));
+      });
+
+      describe('board', () => {
+        it('exists', () => {
+          expect(jsInterpreter.globalProperties).to.have.ownProperty('board');
+        });
+      });
+    });
+  });
+}
+
 describe('MicroBitBoard', () => {
   let board;
 
@@ -34,7 +221,7 @@ describe('MicroBitBoard', () => {
     // Construct a board to test on
     window.SerialPort = {};
     board = new MicroBitBoard();
-    board.boardClient_ = new MicrobitStubBoard();
+    board.boardClient_ = new MBFirmataClientStub();
     boardSetupAndStub(board);
   });
 
@@ -49,178 +236,7 @@ describe('MicroBitBoard', () => {
       sinon.stub(board.boardClient_, 'analogRead').callsArgWith(1, 0);
       sinon.stub(board.boardClient_, 'digitalRead').callsArgWith(1, 0);
     });
-
-    /**
-     * After installing on the interpreter, test that the components and
-     * component constructors are available from the interpreter
-     */
-    describe('Micro Bit components accessible from interpreter', () => {
-      let jsInterpreter;
-      let board;
-
-      beforeEach(() => {
-        board = new MicroBitBoard();
-        boardSetupAndStub(board);
-
-        jsInterpreter = {
-          globalProperties: {},
-          createGlobalProperty: function(key, value) {
-            jsInterpreter.globalProperties[key] = value;
-          },
-          addCustomMarshalObject: sinon.spy()
-        };
-
-        return board.connect();
-      });
-
-      describe('adds component constructors', () => {
-        beforeEach(() => {
-          board.installOnInterpreter(jsInterpreter);
-        });
-
-        it(`correct number of them`, () => {
-          expect(jsInterpreter.addCustomMarshalObject).to.have.callCount(
-            MB_COMPONENTS.length
-          );
-        });
-
-        MB_COMPONENTS.forEach(constructor => {
-          it(constructor, () => {
-            expect(jsInterpreter.globalProperties).to.have.ownProperty(
-              constructor
-            );
-            expect(jsInterpreter.globalProperties[constructor]).to.be.a(
-              'function'
-            );
-            const passedObjects = jsInterpreter.addCustomMarshalObject.args.map(
-              call => call[0].instance
-            );
-            expect(passedObjects).to.include(
-              jsInterpreter.globalProperties[constructor]
-            );
-          });
-        });
-      });
-
-      describe('adds components', () => {
-        beforeEach(() => {
-          board.installOnInterpreter(jsInterpreter);
-        });
-
-        it(`correct number of them`, () => {
-          let globalPropsCount = MB_COMPONENTS.length + MB_COMPONENT_COUNT;
-          expect(Object.keys(jsInterpreter.globalProperties)).to.have.length(
-            globalPropsCount
-          );
-        });
-
-        ['buttonA', 'buttonB'].forEach(button => {
-          describe(button, () => {
-            let component;
-
-            beforeEach(() => {
-              component = jsInterpreter.globalProperties[button];
-            });
-
-            it('isPressed', () =>
-              expect(component.isPressed).to.be.a('boolean'));
-            it('holdtime', () => expect(component.holdtime).to.be.a('number'));
-          });
-        });
-
-        describe('ledScreen', () => {
-          function expectLedToHaveFunction(fnName) {
-            expect(jsInterpreter.globalProperties.ledScreen[fnName]).to.be.a(
-              'function'
-            );
-          }
-
-          // Set of required functions derived from our dropletConfig
-          [
-            'on',
-            'off',
-            'toggle',
-            'clear',
-            'scrollString',
-            'scrollNumber'
-          ].forEach(fnName => {
-            it(`${fnName}()`, () => expectLedToHaveFunction(fnName));
-          });
-        });
-
-        describe('tempSensor', () => {
-          let component;
-
-          beforeEach(() => {
-            component = jsInterpreter.globalProperties.tempSensor;
-          });
-
-          it('F', () => {
-            expect(component).to.have.property('F');
-          });
-
-          it('C', () => {
-            expect(component).to.have.property('C');
-          });
-        });
-
-        describe('lightSensor', () => {
-          let component;
-
-          beforeEach(() => {
-            component = jsInterpreter.globalProperties.lightSensor;
-          });
-
-          it('value', () => {
-            expect(component).to.have.property('value');
-          });
-
-          it('threshold', () => {
-            expect(component).to.have.property('threshold');
-          });
-
-          it('start()', () => {
-            expect(component.start).to.be.a('function');
-          });
-
-          it('setScale()', () => {
-            expect(component.setScale).to.be.a('function');
-          });
-        });
-
-        describe('accelerometer', () => {
-          let component;
-
-          beforeEach(() => {
-            component = jsInterpreter.globalProperties.accelerometer;
-          });
-
-          it('start()', () => expect(component.start).to.be.a('function'));
-          it('getOrientation()', () =>
-            expect(component.getOrientation).to.be.a('function'));
-          it('getAcceleration()', () =>
-            expect(component.getAcceleration).to.be.a('function'));
-        });
-
-        describe('compass', () => {
-          let component;
-
-          beforeEach(() => {
-            component = jsInterpreter.globalProperties.compass;
-          });
-
-          it('start()', () => expect(component.start).to.be.a('function'));
-          it('getHeading()', () =>
-            expect(component.getHeading).to.be.a('function'));
-        });
-
-        describe('board', () => {
-          it('exists', () => {
-            expect(jsInterpreter.globalProperties).to.have.ownProperty('board');
-          });
-        });
-      });
-    });
+    itMakesMicroBitComponentsAvailable(MicroBitBoard);
   });
 
   describe(`connect()`, () => {

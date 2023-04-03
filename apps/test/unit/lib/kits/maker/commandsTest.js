@@ -15,7 +15,7 @@ import {
 } from '@cdo/apps/lib/kits/maker/commands';
 import FakeCPBoard from '@cdo/apps/lib/kits/maker/boards/FakeCPBoard';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
-import {MicrobitStubBoard} from './boards/makeStubBoard';
+import {MBFirmataClientStub} from './boards/makeStubBoard';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 
 describe('maker/commands.js - CircuitPlayground', () => {
@@ -173,7 +173,7 @@ describe('maker/commands.js - MicroBit', () => {
 
   beforeEach(() => {
     stubBoardController = sinon.createStubInstance(MicroBitBoard);
-    stubBoardController.boardClient_ = new MicrobitStubBoard();
+    stubBoardController.boardClient_ = new MBFirmataClientStub();
     injectBoardController(stubBoardController);
     errorHandler = {
       outputWarning: sinon.spy(),

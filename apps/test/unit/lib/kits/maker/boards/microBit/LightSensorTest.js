@@ -1,4 +1,4 @@
-import {MicrobitStubBoard} from '../makeStubBoard';
+import {MBFirmataClientStub} from '../makeStubBoard';
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import LightSensor from '@cdo/apps/lib/kits/maker/boards/microBit/LightSensor';
@@ -13,7 +13,7 @@ describe('LightSensor', function() {
   let boardClient, lightSensor;
 
   beforeEach(() => {
-    boardClient = new MicrobitStubBoard();
+    boardClient = new MBFirmataClientStub();
     lightSensor = new LightSensor({mb: boardClient});
   });
   afterEach(() => {
