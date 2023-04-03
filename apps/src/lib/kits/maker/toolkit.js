@@ -164,7 +164,8 @@ function confirmSupportedBrowser() {
  * @returns {Promise.<MakerBoard>}
  */
 function getBoard() {
-  const makerBoardAPI = getAppOptions().level.makerlabEnabled;
+  const makerBoardAPI = getAppOptions().level?.makerlabEnabled;
+  console.log(makerBoardAPI);
   const boardConstructor =
     makerBoardAPI === MB_API ? MicroBitBoard : CircuitPlaygroundBoard;
 
