@@ -573,14 +573,26 @@
           "purpose": "Esta lección no introduce nuevas habilidades o conceptos, sino que les da a los estudiantes la oportunidad de aplicar lo que han aprendido de forma creativa.",
           "student_overview": "Aplica tus nuevos conocimientos con variables a uno de los tres proyectos abiertos."
         },
+        "coursef-2022/[New] Lots of Sprites": {
+          "name": "Montones de Sprites",
+          "overview": "En esta lección de **contextualización**/**desarrollo de conocimientos**, los alumnos profundizarán en las capacidades de Laboratorio Sprite y aprenderán a gestionar grupos de sprites con el mismo disfraz. ",
+          "preparation": "Juega a través de los niveles y repasa las **diapositivas de la lección**.",
+          "purpose": "Esta lección se aleja temporalmente de las variables y se centra en la programación con grupos de sprites. Más adelante, los alumnos aprenderán más sobre variables y simulaciones. Los tipos de programas que los estudiantes pueden crear en esta lección proporcionarán un contexto adicional para esas lecciones.",
+          "student_overview": "Aprenderás a hacer aún más cosas con el Laboratorio Sprite y a ¡crear proyectos con un montón de sprites!"
+        },
         "coursef-2022/[New] Counting with Variables": {
           "name": "Contando con Variables",
           "overview": "En esta lección de **desarrollo de conocimientos**, los alumnos utilizarán variables para registrar un valor que cambia con el tiempo, como un contador. Esta lección también incluye un breve **mini-proyecto** en el que los alumnos crean un juego sencillo.",
+          "preparation": "Juega a través de los niveles y repasa las **diapositivas de la lección**.",
           "purpose": "En las lecciones anteriores, los alumnos aprendieron a utilizar las variables para almacenar datos que pueden ser recuperados posteriormente. En esta lección, los alumnos comenzarán a aprender a modificar los datos almacenados en una variable. Este conocimiento clave de cómo funcionan las variables también les permitirá crear proyectos más avanzados.",
           "student_overview": "Aprenderás a utilizar variables para hacer un contador o llevar la cuenta de una puntuación en un juego."
         },
         "coursef-2022/[New] Mini-Project: Collector Game": {
-          "name": "Mini-Proyecto: Juego de Coleccionista"
+          "name": "Mini-Proyecto: Juego de Coleccionista",
+          "overview": "En esta lección de **mini-proyecto**, los alumnos crearán un \"juego de coleccionista\" personalizado, en el que el usuario mueve un sprite para recoger objetos.",
+          "preparation": "Juega a través de los niveles y repasa las **diapositivas de la lección**.",
+          "purpose": "Este proyecto está diseñado para que los alumnos apliquen sus nuevos conocimientos sobre variables de una forma divertida. Al comprender cómo modificar el valor almacenado en una variable, los alumnos pueden crear un juego que mantenga automáticamente la puntuación en función de las acciones del jugador.",
+          "student_overview": "¡Colecciona todos los sprites! En este proyecto, crearás un juego al que otros podrán jugar."
         },
         "coursef-2022/Simulating Experiments": {
           "name": "Simulación de experimentos",

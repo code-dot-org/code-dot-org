@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2023-03-28 04:24:15 UTC",
+    "serialized_at": "2023-03-31 20:48:17 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1776,7 +1776,7 @@
       "position": 7,
       "properties": {
         "description": "Now we've been asked to create a physical design for a client. We can create our own design, but it should meet the needs of our users.\n",
-        "name": "Designing an Animation or Game",
+        "name": "Creating a Physical Design",
         "remarks": true,
         "tips": [
           {
@@ -11833,7 +11833,7 @@
     },
     {
       "name": "The Counter Pattern",
-      "url": "https://youtu.be/sLIJNEIE0Rs",
+      "url": "https://youtu.be/GiHbeLq1ZkM",
       "key": "the_counter_pattern",
       "properties": {
         "audience": "Student",
