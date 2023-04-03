@@ -73,9 +73,8 @@ export function connect({interpreter, onDisconnect}) {
       )
     );
   }
-  const isFakeBoard =
-    currentBoard instanceof FakeCPBoard || currentBoard instanceof FakeMBBoard;
-  if (currentBoard && !isFakeBoard) {
+
+  if (currentBoard) {
     commands.injectBoardController(currentBoard);
     currentBoard.installOnInterpreter(interpreter);
     // When the board is reset, the components are disabled. Re-enable now.

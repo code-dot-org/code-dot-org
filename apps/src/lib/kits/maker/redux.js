@@ -89,7 +89,8 @@ export function reducer(state = new MakerState(), action) {
     return state.set('connectionState', CONNECTING);
   } else if (action.type === REPORT_CONNECTED) {
     return state.merge({
-      connectionState: CONNECTED
+      connectionState: CONNECTED,
+      usingFakeBoardNextTime: false
     });
   } else if (action.type === REPORT_CONNECTION_ERROR) {
     return state.merge({

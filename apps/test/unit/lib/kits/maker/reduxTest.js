@@ -82,11 +82,11 @@ describe('maker/redux.js', () => {
       expect(isConnected(store.getState())).to.be.true;
     });
 
-    it('sets maker to run with a fake board next time', () => {
+    it('sets maker to run with a real board next time', () => {
       store.dispatch(useFakeBoardOnNextRun());
       expect(shouldRunWithFakeBoard(store.getState())).to.be.true;
       store.dispatch(reportConnected());
-      expect(shouldRunWithFakeBoard(store.getState())).to.be.true;
+      expect(shouldRunWithFakeBoard(store.getState())).to.be.false;
     });
   });
 
