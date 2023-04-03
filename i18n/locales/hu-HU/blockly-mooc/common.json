@@ -847,6 +847,7 @@
   "explainPairProgramming": "Ha a páros programozás be van kapcsolva, a diákok választhatnak, hogy egy osztálytársakkal dolgoznak ugyanazon a számítógépen. Kapcsolja be ezt a beállítást, ha azt szeretné, hogy a tanulók együtt tudjanak dolgozni és az előrehaladást meg tudják osztani.",
   "explainPairProgrammingLearnMore": " További információ a páros programozásról.",
   "explainRestrictedSectionEmail": "Hogyha az 'igen'-re állítod, akkor a diákok nem fognak tudni a szakaszhoz csatlakozni a szakaszkód segítségével. Ettől függetlenül még mindig adhatsz diákokat a szakaszhoz manuálisan, egy másik szakszból való átmozgatásukkal vagy átmásolásukkal.",
+  "explainRestrictedSectionEmailToolTip": "Hogyha az 'igen'-re állítod, akkor a diákok nem fognak tudni a szakaszhoz csatlakozni a szakaszkód segítségével. Ettől függetlenül még mindig adhatsz diákokat a szakaszhoz manuálisan, egy másik szakszból való átmozgatásukkal vagy átmásolásukkal.",
   "explainRestrictedSectionWordAndPicture": "Hogyha 'igen'-re állítod, akkor a diákok nem fognak tudni csatlakozni a szekcióhoz a szekció kód segítségével. Ettől függetlenül továbbra is hozzáadhatsz diákokat a szekcióhoz manuálisan a Diákok menedzselése fülön.",
   "explainRestrictedSectionLearnMore": "Tudj meg többet",
   "exploreDataset": "Fedezd fel {datasetName}",

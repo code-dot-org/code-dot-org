@@ -174,6 +174,9 @@
         "29252927-11c0-44cc-b471-dfa8b1792c2b": {
           "description": "Hikayatin ang mga mag-aaral na magbahagi ng mga paraan ng pagpapahayag nila ng pagkamalikhain, gaya ng sining, sayaw, musika, o pagsulat. Bilang susunod na tanong, tanungin ang mga mag-aaral kung ano ang ginagamit nila upang pukawin ang kanilang pagkamalikhain. "
         },
+        "484b5029-3d10-4c64-9b8d-547a7751713c": {
+          "description": "Alam mo ba na maaaring maging napakamalikhain ng computer science? Sa katunayan, maaari kang gumawa ng sining gamit ang code. Ang code ay set ng mga tagubilin na maiintindihan ng computer. Tulad ng pagpili kung aling mga kulay ng pintura ang gagamitin, ang pagpili ng kung anong code ang isusulat mo ay maaaring maging pagkakataon upang ipahayag ang pagkamalikhain mo! \n\nGagamitin natin ang tula upang magbigay-inspirasyon sa ating creative coding ngayon. May nakakaalam ba kung ano ang tula? Mayroon ka bang paboritong tula o makata? "
+        },
         "b9115c85-6495-49eb-b0e4-cd4fb06dc81d": {
           "description": "**Magbasa ng tula nang sama-sama:** Magbasa ng [ilang mga tula](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) na magkasama at magsanay sa pagbibigay ng pangalan sa mood ng bawat tula. Hikayatin ang mga mag-aaral na ibahagi ang kanilang interpretasyon, kahit na naiiba ito sa iba. "
         },
@@ -182,24 +185,31 @@
           "description": "#### Pangkalahatang Suporta\n\nSa pagtatapos ng aktibidad na ito, magkakaroon ang mga mag-aaral ng animated na tula na kumakatawan sa kanilang visual interpretation ng tulang pinili nila. Idinisenyo ang araling ito upang bigyan ang mga mag-aaral ng pagkakataon na mag-usisa at hanapin ang mga visual effects na gusto nila. \n\nHabang umiikot sa silid, hikayatin ang mga mag-aaral na:\n\n-   **Huwag kang mag-madali:** Karamihan sa mga antas ay nangangailangan sa mga mag-aaral na mahanap ang perpektong mga epekto na tutugma sa kanilang interpretasyon sa mood ng tula. Ang pananatili sa isang antas at pag-usisa sa kanilang code ay lubos na hinihikayat. \n\n-   **Maghanap ng tula na gusto mo:** Ang tula na ipinapakita sa mag-aaral sa bagong antas ay mungkahi lamang. Mayroong dropdown menu ng tula na may mga paunang na-load na tula sa tuktok ng playspace. Hilingin sa mga mag-aaral na basahin ang ilan at hanapin ang isa na may dating sa kanila. Pagkatapos ay maaari nilang simulan ang pag-animate ng tula na napili gamit ang code. \n\n-   **Ipakita ang nakumpletong antas:** Anumang level bubble na ganap na berde ay nangangahulugang matagumpay na nakumpleto ng mag-aaral ang lahat ng mga kinakailangan sa antas na iyon. Hilingin sa mag-aaral na mag-click sa berdeng bula upang ipakita ang kanilang nilikha. \n\nPara sa mga pagkakataon na ang mag-aaral ay di makausad: \n\n-   **Basahin ang mga tagubilin:** Ang mga tagubilin ay mga puntong may bullet tungkol sa kung paano kumpletuhin ang antas. Kung ang mag-aaral ay di makausad, hilingin sa kaniya na basahin sa iyo nang malakas ang mga tagubilin at hilingin sa kaniya na ulitin ang sinasabi ng mga tagubilin sa kaniyang sariling mga salita. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Maaari ring i-click ng mga mag-aaral ang icon na text-to-speech upang marinig ang mga tagubilin.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Maghanap ng mga mungkahi**: Karamihan sa mga antas ay naglalaman ng hindi bababa sa isang pahiwatig na may mas malinaw na mga detalye tungkol sa kung paano pumasa sa antas. \n-   **Ipagdiwang ang mga bug:** Ang pagkakaroon ng bug sa code mo ay likas na bahagi ng proseso ng pag-coding. Kung hindi ginagawa ng program ang inaasahan, hilingin sa mag-aaral na sabihin muna sa iyo kung ano ang gusto nilang mangyari, i-click ang run para obserbahan kung ano ang aktwal na nangyayari, pagkatapos ay hanapin ang lugar sa kanilang code na naging sanhi ng pagkakaiba. Tandaan na ipagdiwang ang pagkakaroon ng mga bug at pag-aayos ng mga bug. Ang pagkakaroon ng bug ay nangangahulugang ang mga mag-aaral ay gumagawa ng mahusay na trabaho sa pagbuo ng mas kumplikadong programa. "
         },
         "49994950-2fc5-4779-abd5-2369a402a750": {
+          "description": "#### Antas ayon sa Antas na Suporta\n\n**Antas 1:** Hikayatin ang mga mag-aaral na basahin ang tula. Pagkatapos ay hilingin sa mga mag-aaral na maghanap ng kulay ng background o epekto na tumutugma sa tono ng tula na kanilang pinili.",
           "progression_name": "Pagbuo ng Kasanayan"
         },
         "950807e2-afa0-4c26-9459-4682b3f49602": {
+          "description": "**Antas 2:** Sa halimbawang ito, dapat munang basahin ng mga mag-aaral ang tula nang mag-isa, pagkatapos ay pindutin ang Run. Maaari mong tanungin ang mag-aaral kung ang tunog at mga epekto na pinili ng programmer ay tumugma sa mood ng tula. Sabihin sa mga mag-aaral na ipaliwanag ang kanilang sagot.",
           "progression_name": "Halimbawa"
         },
         "175a6627-901e-40c3-9b54-d156c7da668f": {
+          "description": "**Antas 3:** Ang antas na ito ay nagpapakilala ng tunog, ang mga mag-aaral ay maaaring gumamit ng mga headphone kung mayroon sila nito.",
           "progression_name": "Pagbuo ng Kasanayan"
         },
         "96abf95f-d28e-4fe0-a376-016b5dbd6883": {
+          "description": "**Antas 4:** Hilingin sa mga mag-aaral na basahin ang tula at hanapin ang linya kung saan nagbabago ang mood ng tula o kung may bagong imahe na ipinakilala ng makata. Gamitin ang block ng kaganapan upang magdagdag ng kaukulang mga epekto sa mga natukoy na linya ng tula.",
           "progression_name": "Pagbuo ng Kasanayan"
         },
         "51fbff8e-3efa-4697-8f66-bc9c3b27e82b": {
+          "description": "**Antas 5:** Sa halimbawang ito, dapat munang basahin ng mga mag-aaral ang tula nang mag-isa, pagkatapos ay pindutin ang Run. Itanong sa mag-aaral kung ang mga larawan ay tumugma sa mga salita ng tula. Hilingin sa kanila na ipaliwanag ang kanilang sagot.",
           "progression_name": "Halimbawa"
         },
         "14006414-2422-4d85-bbed-d7bd50c95996": {
+          "description": "**Level 6, 7, 8:** Tingnan ang “Ipagdiwang ang mga bug” sa ilalim ng seksiyong Pangkalahatang Suporta. Hikayatin ang mga mag-aaral na bumuo ng mga program na may higit sa isang paglipat sa kanilang mga event block.",
           "progression_name": "Pagbuo ng Kasanayan"
         },
         "a6528f05-51ce-4f9d-ae5e-0cc1543f71b6": {
+          "description": "**Antas 9:** Hikayatin ang mga mag-aaral na basahin ang lahat ng mga tula sa dropdown na menu upang mahanap ang gusto nila. Sabihin sa mga mag-aaral na maaari nilang ibahagi sa kanilang mga kaibigan at pamilya ang kanilang ginagawa sa huling antas na ito. Ngayon na ang oras upang pagsamahin ang lahat ng coding at ELA skills!",
           "progression_name": "Libreng Laro"
         },
         "a93e96cb-27d2-4d92-8321-57accd5addde": {
@@ -1155,25 +1165,48 @@
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Panimula",
+          "description": "#### Paghahanda\n\nBatiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon. \n\nSabihin: “Ngayon ay maglalaan tayo ng isang oras sa pag-aaral ng code. May nakarinig na ba dito ng terminong \"code\" dati? Ano ang ibig sabihin nito?\\_ \n\nMaaaring banggitin ng mga mag-aaral na ang “code” ay parang lihim na mensahe, o may kaugnayan ito sa mga computer sa ilang paraan.",
           "tips": [
             "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ang pagpapakita ng isa sa aming [inspirational videos](https://hourofcode.com/us/resources#videos). Piliin ang isa na sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga bata, iminumungkahi namin ang [Ang Hour of Code na Narito](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "e7a740e5-690b-408c-b647-fb6f47cc2d3d": {
+          "description": "Ipaliwanag na sa computer science, ang ibig sabihin ng “code” ay set ng mga tagubilin na naiintindihan ng computer. Ipaalam sa mga mag-aaral na ngayon, magsasanay sila ng \"coding,\" \"programming\" “events” at \"debugging.\"\nBigyang-kahulugan:\n\n-   Ang Coding ay nangangahulugang magsulat ng code, o magsulat ng mga tagubilin para sa computer. \n-   Ang Programming, gayundin, nangangahulugang sumulat ng code o mga tagubilin. Ngayon, magpo-program ka gamit ang mga block sa computer (kung gumagamit ka ng online na tutorial) o gamit ang panulat at papel (kung gumagamit ka ng hindi naka-plug na aktibidad).\n-   Ang Event ay aksiyong nagiging sanhi na mangyari ang isang bagay.\n-   Ang Debugging ay nangangahulugang suriin ang code para sa mga pagkakamali at subukang ayusin ang mga error.",
           "tips": [
             "Baka gusto mong gumugol ng kaunting oras sa front-loading o pagpapakilala ng Hour of Code mo. Lalo na sa mga bata, pinakamahusay na kumilos sa lalong madaling panahon. Sobrang paliwanag o lektyur sa simula ay may posibilidad na sumira sa kasiyahan, at ang kasiyahan ang buong punto!"
           ]
         },
+        "821aeaeb-2dd7-4e84-a7e0-0cdfdaeaff28": {
+          "description": "Hilingin sa mga mag-aaral na umupo malapit sa iyo. Ngayon sabihin na tumayo ang lahat! \n\nSabihin sa mga mag-aaral na ang ginawa mo ay nagdeklara ng event at aksiyon. Kapag sinabi mong umupo, ito ay isang event. Ang aksiyon na tumutugon sa event na ito ay ang klase na nakaupo. Ito ay pareho kapag hiniling mo sa klase na tumayo. Ang mga event at aksiyon ay madaling matukoy sa ating buhay. \n\nAng ilang iba pang mga event at aksiyon ay kinabibilangan ng: \n\n-   Pakiramdam ng gutom at pagkain ng pagkain \n-   Pagtusok ng daliri mo sa paa at sumisigaw ng \"Aray!\" \n-   Pag-shoot ng basketball sa basket at pag-iskor ng puntos para sa team mo! \n\nHilingin sa klase na mag-isip ng ilan pang mga event. Sabihin sa kanila na gagawa sila ng laro kung saan ang program ay magkakaroon ng mga aksiyong nauugnay sa mga event na kanilang na-code!"
+        },
+        "2123b1ad-42d8-4c2f-87f6-4300fe7dd741": {
+          "name": "I-code ang Sarili Mong Laro sa Isport",
+          "description": "Hamunin ang mga mag-aaral mo na kumpletuhin itong [I-code ang Sarili Mong Laro sa Isport](https://studio.code.org/s/sports/lessons/1/levels/1) na aktibidad.\n\nDepende sa edad at kakayahan ng iyong mga mag-aaral, maaari mong isaalang-alang ang: \n\n-   Sa mas batang mga mag-aaral, iminumungkahi naming hatiin mo ang iyong klase sa mga pares at hilingin sa bawat grupo na magtulungan upang makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n-   Sa mga mag-aaral sa gitnang baitang, nalaman naming gumagana nang maayos ang independiyenteng paggawa sa mga tutorial. Minsan nakakatulong na payagan ang mga mag-aaral na pumili ng sarili nilang tutorial. Kung ang mga mag-aaral ay hindi interesado sa Minecraft, maaari silang makakuha ng katulad na karanasan sa mga tutorial na [Code kasama si Anna at Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [Star Wars](https://code.org/starwars).\n-   Sa mga mas matanda o nasa hustong gulang na mag-aaral, ang tutorial na [I-code ang Sarili Mong Laro sa Isport](https://studio.code.org/s/sports/lessons/1/levels/1) ay gumagana nang mahusay sa alinman bilang independiyenteng hamon o pares na aktibidad sa programming."
+        },
         "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
+          "description": "Sa pagtatapos ng hanay ng mga palaisipan, magkakaroon ng pagkakataon ang mga mag-aaral na gawing natatangi ang kanilang laro. Hayaan ang mga mag-aaral na subukan ang mga bagong paraan upang gawing mas mahirap ang laro. Halimbawa, subukan mong maglaro ng maraming bola nang sabay-sabay, o sa tuwing tumatakbo ang bola sa dingding, magpalabas ng higit pang mga bola. \n\nKung ang isang grupo o indibidwal ay natapos nang maaga, maaari nilang subukan ang isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn](<>).",
           "tips": [
-            null
+            "Paalalahanan ang mga mag-aaral na ibahagi lamang ang kanilang trabaho sa kanilang malapít na mga kaibigan o pamilya. Sa higit pang impormasyon panoorin o ipakita sa klase [Huminto at Mag-isip Online](https://www.youtube.com/watch?v=rgbZAWnOWOo) Video.."
           ]
         },
         "6aeca5a9-2901-4f02-9c34-4104cf1296f5": {
           "name": "Pagtatasa",
+          "description": "Ipakita ang **Mga Event sa Bounce - Paano Ito Nangyayari?** slide deck sa mga mag-aaral. Hayaang itala muna nila ang tamang pagkakasunod-sunod ng mga pangyayari sa ikalawang slide sa kanilang mga journal. Tumawag ng ilang mag-aaral upang ibahagi ang kanilang mga sagot bago ihayag ang ikatlong slide. Talakayin sa klase ang tamang pagkakasunod-sunod.",
           "tips": [
-            null
+            "Bagama't ipinakilala sa araling ito, ang slide deck na \"Mga Event sa Bounce - Paano Ito Nangyayari?\" maaaring ilapat nang mas pangkalahatan upang ipahayag ang kaugnayan sa pagitan ng hardware at software. Lalo na, pinapasimple ng huling slide ang input-to-output na pagkasunud-sunod at maaaring gawing poster sa silid-aralan mo."
           ]
+        },
+        "95cc8163-fcee-44bd-95c8-606999d2c378": {
+          "description": "**Tamang Order: D, B, A, C**"
+        },
+        "11b82689-57e5-404f-8846-51e10f2642d0": {
+          "description": "#### Debrief\n\nHilingin sa mga mag-aaral na pagnilayan ang mga gawain sa araw na iyon. Ano ang natutunan nila tungkol sa coding? Programming? Debugging? Events? Ano ang pakiramdam nila tungkol sa computer science at coding pagkatapos gumugol ng isang oras sa pagtuklas?\n\nAno ang pakiramdam nila tungkol sa computer science at coding pagkatapos gumugol ng isang oras sa paggalugad?\n\n#### Ipagdiwang\n\nIpaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil ang linggong ito ay CS Education Week, at milyon-milyong iba pang mga mag-aaral sa buong mundo ang nakikilahok din sa Hour of Code ngayong linggo. Batiin ang mga mag-aaral sa pagiging bahagi ng kilusang ito sa buong mundo.\n\nBigyan ang bawat mag-aaral ng [sertipiko](https://studio.code.org/certificates/batch) na may pangalan niya.\n\n#### Mga Susunod na Hakbang\n\nIpaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang mga opsyon sa pagpapatuloy sa pag-code. Hikayatin ang mga mag-aaral na bisitahin ang code.org/learn para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano ang susunod sa silid-aralan mo."
+        },
+        "e9c48a39-952e-44be-8955-9d012bfa89c1": {
+          "description": "### Higit sa Hour of Code\n\nPagkatapos ng Hour of Code mo, maraming paraan para magpatuloy sa pagtuturo ng computer science sa iyong K-5 na silid-aralan. Narito ang ilang mga ideya:\n\n-   **Ituro ang [Mga Batayan ng Code Studio Computer Science](http://code.org/educate/k5) na mga kurso**. Ang anim na kursong ito ay idinisenyo para sa mga batang mag-aaral. Ang mga mag-aaral ay nagsusumikap sa kanilang paraan sa pamamagitan ng serye ng mga palaisipan na nagtuturo sa kanila na mag-code, at ang mga tagapagturo ay may access sa nakakaengganyong mga lesson plan na makakatulong na gawing buhay ang pag-aaral. Nag-aalok ang Code.org ng libreng propesyonal na pag-unlad sa mga kursong ito, online o personal.\n-   **Bisitahin ang [Maaari kang Magturo ng Computer Science](https://studio.code.org/courses?view=teacher)** para sa higit pang mga mungkahi sa kurso.\n-   **Mag-imbita ng eksperto sa computer science na makipag-usap sa klase mo tungkol sa kanyang trabaho**. Wala kang alam na lokal na computer scientist? Makipag-ugnayan sa isang boluntaryo sa aming [volunteer map](https://code.org/volunteer/local)"
+        },
+        "03d9b77b-8370-4525-b5ba-d1e198c4bc96": {
+          "description": "#### Dalhin Ako sa Larong Bola\n\nDalhin ang mga mag-aaral sa labas upang maglaro ng isang uri ng laro ng bola. Subaybayan ang mga event at aksiyon. Halimbawa, ang hindi pag-dribble sa basketball ay nagreresulta sa travelling foul at nakuha ng kabilang team ang bola. Sa soccer, ang pagsipa ng bola sa labas ng mga hangganan ay nagreresulta sa pagsisipa ng bola sa kabilang koponan. Ang pagkuha ng bola sa layunin ay nagreresulta sa isang punto! Gumawa ng higit pang mga event kung gusto ito ng mga mag-aaral mo. Ipasigaw sa lahat ng mga mag-aaral ang \"Yippee\" kapag nakakuha ng puntos ang kapitan ng isang pangkat. Magpatumba ang lahat at magpagulong-gulong kung ang isang mag-aaral ay gagawa ng dalawang magkasunod na goal!"
         },
         "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
           "name": "Paghahanda",
@@ -1188,7 +1221,8 @@
           "description": "Ipaliwanag na sa computer science, ang ibig sabihin ng “code” ay hanay ng mga tagubilin na mauunawaan ng computer. Ipaalam sa mga mag-aaral na ngayon, magsasanay sila ng \"coding,\" \"programming\" at \"debugging\".\n\nBigyang-kahulugan:\n\n-   Ang **Coding** ay nangangahulugang magsulat ng code, o magsulat ng mga tagubilin para sa computer.\n-   Ang **Programming**, gayundin, ay nangangahulugang sumulat ng code o mga tagubilin. Ngayon, magpo-program ka gamit ang mga block sa computer (kung gumagamit ka ng online na tutorial) o gamit ang panulat at papel (kung gumagamit ka ng hindi naka-plug na aktibidad).\n-   Ang **Debugging** ay nangangahulugang suriin ang code para sa mga pagkakamali at subukang ayusin ang mga error.\n\nHilingin sa mga mag-aaral na pag-isipan kung ano ang magiging mainam na susunod nilang hakbang pagkatapos ng graduation sa high school. Hilingin sa mga mag-aaral na itaas ang kanilang kamay kung naniniwala sila na ang susunod na hakbang ay nangangailangang gumamit sila ng computer. Dapat magtaas ng kamay ang lahat, dahil nasa paligid natin ang mga computer...sa ating mga telepono, sa ating mga sasakyan, kahit sa ating mga microwave at dishwasher!\n\nHilingin sa mga mag-aaral na hulaan kung ilang K12 na paaralan ang mayroon sa United States of America. Ang sagot ay humigit-kumulang 100,000. Ngayon hilingin sa mga mag-aaral na hulaan kung ilan sa mga K12 na paaralang iyon ang nag-aalok ng kurso sa computer science. Ang sagot ay mas mababa sa 1 sa 4 na paaralan. Nangangahulugan iyon na wala pang 25% ng populasyon ng US ang may pagkakataong matuto ng computer science sa paaralan. Itanong sa mga mag-aaral: paano ito nakakaapekto sa kakayahan ng kabataan na makuha ang kanilang pinapangarap na trabaho o makapasok sa kanilang gustong kolehiyo, kung wala silang karanasan sa computer? At ang problemang ito ay umiiral hindi lamang sa US, ngunit sa buong mundo.\n\nIpaliwanag na sa buong mundo, ang mga kabataan tulad ng mga mag-aaral mo ay nakikilahok sa Hour of Code bilang paraan upang magkaroon ng kamalayan sa kawalan ng hustisyang ito -- ang kawalan ng access sa edukasyon sa computer science. Ang klase mo ay makikibahagi, hindi lamang para matutunan ang mga pangunahing kaalaman sa CS at magkaroon ng kaunting kasiyahan -- ngunit pati na rin manindigan at gamitin ang boses upang magsalita tungkol sa kahalagahan ng CS para sa lahat."
         },
         "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
-          "name": "Disney Infinity na Play Lab"
+          "name": "Disney Infinity na Play Lab",
+          "description": "Hamunin ang mga mag-aaral mo na kumpletuhin ang [Disney Infinity Play Lab](https://studio.code.org/s/infinity/lessons/1/levels/1)  na tutorial. \n\nDepende sa edad at kakayahan ng mga mag-aaral mo, maaari mong isaalang-alang ang: \n\n-   Sa mga mag-aaral sa middle at high school, iminumungkahi naming pumili ka ng mga tutorial na nagbibigay-daan sa libreng paglalaro at paglikha ng mga app o laro. Maaari mong hayaang magtrabaho ang mga mag-aaral na nag-iisa o nang pares o maliliit na grupo. Maraming iba pang mga tutorial sa [code.org/learn](http://code.org/learn) na nagbibigay-daan sa libreng paggawa, kabilang na ang [Gumawa ng Flappy Game](https://studio.code.org/s/flappy) at ang aming bagong beta tool [AppLab](https://code.org/educate/applab).\n-   Sa mas batang mga mag-aaral, iminumungkahi naming hatiin mo ang iyong klase sa mga pares o napakaliit na grupo (tatlo hanggang apat na mag-aaral bawat isa) at hilingin sa bawat grupo na magtulungan upang makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n-   Sa mga nag-aaral na nasa hustong gulang, ang tutorial na [Isulat ang iyong unang computer program](https://studio.code.org/hoc/1) ay gumagana nang mahusay alinman bilang independiyenteng hamon o pares na aktibidad sa programming."
         },
         "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
           "tips": [
@@ -1220,37 +1254,66 @@
         },
         "8295d7d8-acb1-4cc1-b178-8d89613aa6b6": {
           "name": "Panimula",
+          "description": "#### Paghahanda\n\nBatiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon. \n\nSabihin: “Ngayon ay maglalaan tayo ng isang oras sa pag-aaral ng code. May nakarinig na ba dito ng terminong \"code\" dati? Ano ang ibig sabihin nito?\\_ \n\nMaaaring banggitin ng mga mag-aaral na ang “code” ay parang lihim na mensahe, o may kaugnayan ito sa mga computer sa ilang paraan.",
           "tips": [
             "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ang pagpapakita ng isa sa aming [inspirational videos](https://hourofcode.com/us/resources#videos). Piliin ang isa na sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga bata, iminumungkahi namin ang [Ang Hour of Code na Narito](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "6b27ea94-da11-4c56-99c0-48e35ac5fbda": {
+          "description": "Ipaliwanag na sa computer science, ang ibig sabihin ng “code” ay set ng mga tagubilin na naiintindihan ng computer. Ipaalam sa mga mag-aaral na ngayon, magsasanay sila ng \"coding,\" \"programming\" “events” at \"debugging.\"\nBigyang-kahulugan:\n\n-   Ang Coding ay nangangahulugang magsulat ng code, o magsulat ng mga tagubilin para sa computer. \n-   Ang Programming, gayundin, nangangahulugang sumulat ng code o mga tagubilin. Ngayon, magpo-program ka gamit ang mga block sa computer (kung gumagamit ka ng online na tutorial) o gamit ang panulat at papel (kung gumagamit ka ng hindi naka-plug na aktibidad).\n-   Ang Event ay aksiyong nagiging sanhi na mangyari ang isang bagay.\n-   Ang Debugging ay nangangahulugang suriin ang code para sa mga pagkakamali at subukang ayusin ang mga error.",
           "tips": [
             "Baka gusto mong gumugol ng kaunting oras sa front-loading o pagpapakilala ng Hour of Code mo. Lalo na sa mga bata, pinakamahusay na kumilos sa lalong madaling panahon. Sobrang paliwanag o lektyur sa simula ay may posibilidad na sumira sa kasiyahan, at ang kasiyahan ang buong punto!"
           ]
         },
+        "94273f25-07f7-401b-85f9-13bc82c64695": {
+          "description": "Hilingin sa mga mag-aaral na umupo malapit sa iyo. Ngayon sabihin na tumayo ang lahat! \n\nSabihin sa mga mag-aaral na ang ginawa mo ay nagdeklara ng event at aksiyon. Kapag sinabi mong umupo, ito ay isang event. Ang aksiyon na tumutugon sa event na ito ay ang klase na nakaupo. Ito ay pareho kapag hiniling mo sa klase na tumayo. Ang mga event at aksiyon ay madaling matukoy sa ating buhay. \n\nAng ilang iba pang mga event at aksiyon ay kinabibilangan ng: \n\n-   Pakiramdam ng gutom at pagkain ng pagkain \n-   Pagtusok ng daliri mo sa paa at sumisigaw ng \"Aray!\" \n-   Pag-shoot ng basketball sa basket at pag-iskor ng puntos para sa team mo! \n\nHilingin sa klase na mag-isip ng ilan pang mga event. Sabihin sa kanila na gagawa sila ng laro kung saan ang program ay magkakaroon ng mga aksiyong nauugnay sa mga event na kanilang na-code!"
+        },
+        "41a58fa3-ee0d-46ca-be76-89def06d2062": {
+          "name": "I-code ang Sarili Mong Basketball Game",
+          "description": "Hamunin ang mga mag-aaral mo na kumpletuhin itong [I-code ang Sarili Mong Basketball Game](https://studio.code.org/s/basketball/lessons/1/levels/1) na aktibidad.\n\nDepende sa edad at kakayahan ng iyong mga mag-aaral, maaari mong isaalang-alang ang: \n\n-   Sa mas batang mga mag-aaral, iminumungkahi naming hatiin mo ang iyong klase sa mga pares at hilingin sa bawat grupo na magtulungan upang makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n-   Sa mga mag-aaral sa gitnang baitang, nalaman naming gumagana nang maayos ang independiyenteng paggawa sa mga tutorial. Minsan nakakatulong na payagan ang mga mag-aaral na pumili ng sarili nilang tutorial. Kung ang mga mag-aaral ay hindi interesado sa Minecraft, maaari silang makakuha ng katulad na karanasan sa mga tutorial na [Code kasama si Anna at Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [Star Wars](https://code.org/starwars).\n-   Sa mga mas matanda o nasa hustong gulang na mag-aaral, ang tutorial na [I-code ang Sarili Mong Basketball Game](https://studio.code.org/s/basketball/lessons/1/levels/1) ay gumagana nang mahusay sa alinman bilang independiyenteng hamon o pares na aktibidad sa programming."
+        },
         "720eaa7d-2623-4fab-bd98-ee2dda7831fc": {
+          "description": "Sa pagtatapos ng hanay ng mga palaisipan, magkakaroon ng pagkakataon ang mga mag-aaral na gawing natatangi ang kanilang laro. Hayaan ang mga mag-aaral na subukan ang mga bagong paraan upang gawing mas mahirap ang laro. Halimbawa, subukan mong maglaro ng maraming bola nang sabay-sabay, o sa tuwing tumatakbo ang bola sa dingding, magpalabas ng higit pang mga bola. \n\nKung ang isang grupo o indibidwal ay natapos nang maaga, maaari nilang subukan ang isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn](<>).",
           "tips": [
-            null
+            "Paalalahanan ang mga mag-aaral na ibahagi lamang ang kanilang trabaho sa kanilang malapít na mga kaibigan o pamilya. Sa higit pang impormasyon panoorin o ipakita sa klase [Huminto at Mag-isip Online](https://www.youtube.com/watch?v=rgbZAWnOWOo) Video."
           ]
         },
         "3d7a5e6b-1a14-4091-98a1-c2bc45e970b0": {
           "name": "Pagtatasa",
+          "description": "Ipakita ang **Mga Event sa Bounce - Paano Ito Nangyayari?** slide deck sa mga mag-aaral. Hayaang itala muna nila ang tamang pagkakasunod-sunod ng mga pangyayari sa ikalawang slide sa kanilang mga journal. Tumawag ng ilang mag-aaral upang ibahagi ang kanilang mga sagot bago ihayag ang ikatlong slide. Talakayin sa klase ang tamang pagkakasunod-sunod.",
           "tips": [
-            null
+            "Bagama't ipinakilala sa araling ito, ang slide deck na \"Mga Event sa Bounce - Paano Ito Nangyayari?\" maaaring ilapat nang mas pangkalahatan upang ipahayag ang kaugnayan sa pagitan ng hardware at software. Lalo na, pinapasimple ng huling slide ang input-to-output na pagkasunud-sunod at maaaring gawing poster sa silid-aralan mo."
           ]
         },
+        "2754bec9-70a7-46db-8991-16bbf01adbe7": {
+          "description": "**Tamang Order: D, B, A, C**"
+        },
+        "efd26bf1-c977-4fc3-883d-a37bb3e68a75": {
+          "description": "#### Debrief\n\nHilingin sa mga mag-aaral na pagnilayan ang mga gawain sa araw na iyon. Ano ang natutunan nila tungkol sa coding? Programming? Debugging? Events? Ano ang pakiramdam nila tungkol sa computer science at coding pagkatapos gumugol ng isang oras sa pagtuklas?\n\nAno ang pakiramdam nila tungkol sa computer science at coding pagkatapos gumugol ng isang oras sa paggalugad?\n\n#### Ipagdiwang\n\nIpaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil ang linggong ito ay CS Education Week, at milyon-milyong iba pang mga mag-aaral sa buong mundo ang nakikilahok din sa Hour of Code ngayong linggo. Batiin ang mga mag-aaral sa pagiging bahagi ng kilusang ito sa buong mundo.\n\nBigyan ang bawat mag-aaral ng [sertipiko](https://studio.code.org/certificates/batch) na may pangalan niya.\n\n#### Mga Susunod na Hakbang\n\nIpaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang mga opsyon sa pagpapatuloy sa pag-code. Hikayatin ang mga mag-aaral na bisitahin ang code.org/learn para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano ang susunod sa silid-aralan mo."
+        },
+        "0eade685-f4a5-4d81-bc38-4371a06fbb06": {
+          "description": "#### Higit pa sa Hour of Code\n\nPagkatapos ng Hour of Code mo, maraming paraan upang magpatuloy sa pagtuturo ng computer science sa K-5 na silid-aralan mo. Narito ang ilang ideya: \n\n-   **Ituro ang [Mga Batayan ng Code Studio Computer Science](http://code.org/educate/k5) na mga kurso**. Ang anim na kursong ito ay idinisenyo sa mga batang mag-aaral. Ang mga mag-aaral ay gumagawa ng kanilang paraan sa pamamagitan ng serye ng mga palaisipan na nagtuturo sa kanila na mag-code, at ang mga tagapagturo ay may access sa nakakaengganyo na mga lesson plan na makakatulong na gawing buhay ang pag-aaral. Nag-aalok ang Code.org ng libreng propesyonal na pag-unlad para sa mga kursong ito, online o personal. \n-   **Bisitahin ang [Maaari kang Magturo ng Computer Science](https://studio.code.org/courses?view=teacher)** sa higit pang mga mungkahi sa kurso. \n-   **Mag-imbita ng eksperto sa computer science na makipag-usap sa iyong klase tungkol sa kanyang trabaho**. Wala kang alam na lokal na computer scientist? Makipag-ugnayan sa isang boluntaryo sa aming [mapa ng boluntaryo](https://code.org/volunteer/local) \n\n#### Dalhin Ako sa Larong Bola\n\nDalhin ang mga mag-aaral sa labas upang maglaro ng isang uri ng laro ng bola. Subaybayan ang mga event at aksiyon. Halimbawa, ang hindi pag-dribble sa basketball ay nagreresulta sa travelling foul at nakuha ng kabilang team ang bola. Sa soccer, ang pagsipa ng bola sa labas ng mga hangganan ay nagreresulta sa pagsisipa ng bola sa kabilang koponan. Ang pagkuha ng bola sa layunin ay nagreresulta sa isang punto! Gumawa ng higit pang mga event kung gusto ito ng mga mag-aaral mo. Ipasigaw sa lahat ng mga mag-aaral ang \"Yippee\" kapag nakakuha ng puntos ang kapitan ng isang pangkat. Magpatumba ang lahat at magpagulong-gulong kung ang isang mag-aaral ay gagawa ng dalawang magkasunod na goal!"
+        },
         "1f9abc1c-6217-4fb4-a348-e0293042dc7a": {
-          "name": "Paghahanda"
+          "name": "Paghahanda",
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon. Hikayatin ang mga mag-aaral na maglaan ng kanilang oras sa aktibidad at eksperimento."
+        },
+        "16f14f63-53a6-4f79-b6cf-8aa9f3b22e69": {
+          "description": "Ano ang iyong paboritong paraan upang maging malikhain?"
         },
         "25621525-b6e8-47f3-bd9b-e574fc307993": {
           "description": "Hikayatin ang mga mag-aaral na ibahagi ang mga paraan nila ng pagkamalikhain, tulad ng sining, sayaw, musika, pagsusulat."
         },
+        "2b020959-fedc-4265-832e-d663520a5427": {
+          "description": "Ipaliwanag na magkakaroon tayo ngayon ng isa pang pagkakataon na maging malikhain gamit ang \"code\", na nangangahulugan lamang ng paggamit ng hanay ng mga tagubilin na mauunawaan ng computer. Tulad ng pagpili kung aling mga kulay ang gagamitin, o kung anong mga salita ang isusulat mo na maaaring magpahayag ng pagkamalikhain, ang pagpili kung anong code ang isusulat mo at kung paano nakikipag-ugnayan ang mga tao dito ay maaaring maging pagkakataon upang ipahayag din ang iyong pagkamalikhain! \n\n**Tumayo at sumayaw:** Ihayag sa klase na ngayon ay titingnan natin kung paano pagsasamahin ang coding sa pagsasayaw sa mas malikhaing paraan. Hilingin sa mga anak mo na mag-floss, mag-dab, o gumawa ng sarili nilang malikhaing dance move sa loob ng 10 segundo para gaganahan sila. Maaari kang magpatugtog ng kanta sa [Spotify Playlist (lahat ng edad)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw) para makatulong sa pagsisimula. Kunan ng video ang mga galaw ng klase mo.\n\n[](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw)"
+        },
         "8c86b05c-3d26-4b91-b5a1-dca6c7fd5800": {
-          "name": "Pag-filter ng Musika"
+          "name": "Pag-filter ng Musika",
+          "description": "Nagtatampok ang tutorial na ito ng mga kanta mula sa mga sikat na artist. Upang makakuha ng preview ng listahan ng kanta sa tutorial na ito, tingnan itong [Spotify Playlist (lahat ng edad)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw). Gumagamit kami ng mga radio-safe na bersiyon ng lahat ng kanta. Sa mga mag-aaral na wala pang 13 taong gulang, nililimitahan namin ang musika sa naka-filter na listahang ito."
         },
         "faf90391-c01a-42d3-b79c-0becac0a50d2": {
-          "name": "Pangkalahatang Suporta"
+          "name": "Pangkalahatang Suporta",
+          "description": "**Pangkalahatang Suporta:** Bilang guro ang pangunahing tungkulin mo ay upang suportahan ang mga mag-aaral habang sila ay nagsisikap sa tutorial. Narito ang ilang mga tip na dapat makatulong sa mga mag-aaral anuman ang antas na kanilang pinagtatrabahuhan: \n\n-   Hikayatin ang mga mag-aaral na lumipat sa iba't ibang mga \"extra\" sa anumang pagkakasunud-sunod na gusto nila. Maaari silang bumalik sa Level 1 upang muling tingnan ang menu. \n\n-   \\*\\* Makipagtulungan sa mga katabi:\\*\\* Hinihikayat ang mga mag-aaral na magtanong sa katabi kapag sila ay natigil. Dahil ang tutorial na ito ay naglalaman ng mga video at ang mga mag-aaral ay maaaring magsuot ng mga headphone maaari itong maging madali upang \"magsarili\". Tulungan ang mga barrier na iyon sa pamamagitan ng aktibong pag-pares sa mga mag-aaral kung tila kailangan nila ng tulong. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong isaalang-alang ang pormal na paghahati ng iyong klase sa mga pares upang makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q). \n\n-   **Basahin ang Mga Instruksiyon:** Ang mga tagubilin ay karaniwang nagbibigay ng mga kapaki-pakinabang na tip sa kung paano makumpleto ang antas. Bago makumpleto ang antas sa mag-aaral tiyakin na sila ay talagang tumingin ng malapit sa target na imahe at basahin ang lahat ng text doon. \n\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Natigil? Maghanap ng mga hint:** Ang bawat antas ay may kasamang isang hint na may karagdagang mga detalye tungkol sa kung paano pumasa sa antas. Kung sinusubukan ng mga mag-aaral na ipasa ang mga palaisipan nang mabilis hangga't maaari, baka malaman nila na kailangan lamang nilang maghintay ng tiyak na halaga ng panahon sa lahat ng code upang maglaro bago magpatuloy. Maraming antas ang naglalaman ng pangalawang hint na may mga mungkahi sa mga paraan upang maging mas malikhain sa pamamagitan ng pagpapalawak ng gawain. \n\n-   **Magpatuloy at Bumalik:** Minsan mas makikinabang ang mga mag-aaral na bumalik sa mahirap na antas. Ang lahat ng antas ay independyente sa isa't isa, kahit na umaasa sila sa ilang antas sa mga naunang ipinakilalang konsepto. \n\n-   **Maglaan ng oras at mag-eksperimento.** Basahin nang mabuti ang code. Kahit na ang unang pares na antas ay nagsasabi sa mga mag-aaral kung ano ang kailangan nilang gawin upang makapasa, dapat din na huwag silang mag-atubiling subukan ang kanilang sariling mga ideya. Walang tama o maling sagot sa Mga Antas na ito. (Lahat sila ay libreng laro!)"
         },
         "bfdf9e27-6c04-46fc-8539-1d87d7e507dd": {
           "tips": [
@@ -1292,11 +1355,18 @@
           "name": "Magdiwang",
           "description": "Ipaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil Linggo ng Edukasyon sa CS ang linggong ito, at milyun-milyong iba pang mga mag-aaral sa buong mundo ang nag-aaral din ng Hour of Code. Purihin ang mga mag-aaral sa pagiging bahagi ng pandaigdigang kilusang ito.\n\nBigyan ang bawat mag-aaral ng [isang sertipiko](http://code.org/certificates) na may pangalan niya."
         },
+        "3558b17c-e6ce-4bc8-bb5c-35eed135b8fb": {
+          "description": "#### Maging Viral\n\nAng Hour of Code ay tungkol sa pagkamalikhain, at hindi kami makapaghintay na makita kung ano ang nilikha mo! Ibahagi ang mga likha ng mag-aaral, mga larawan, at mga video sa social media! Mga guro, i-record ang iyong silid-aralan sa pag-coding ng sayaw, o pagsasayaw ng sayaw. Gawing espesyal ang video mo sa pamamagitan ng pagdaragdag ng [ending clip](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0).\n\nTiyaking isama ang #HourOfCode at i-tag kami sa Facebook, Twitter at Instagram. Bonus na puntos sa pag-tag sa artist ng musikang ginamit ng mga mag-aaral mo. Ang Code.org ay ibabahagi ang mga paborito naming post sa milyun-milyon naming tagasubaybay. \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)\n\n_Siyempre, siguraduhing igalang ang patakaran sa social media ng iyong paaralan._"
+        },
         "0dffb367-12f3-485a-bcde-cf4e789baed9": {
-          "name": "Mga susunod na Hakbang"
+          "name": "Mga susunod na Hakbang",
+          "description": "Ipaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon sa pagpapatuloy sa pag-code. Hikayatin ang mga mag-aaral na bisitahin ang [code.org/learn](http://code.org/learn) sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa iba pang mga aktibidad sa extension na kasunod, sabihin sa mga mag-aaral kung ano ang susunod na darating sa silid-aralan mo."
         },
         "7905508e-c354-4909-93eb-38e2e9ef5661": {
           "description": "Sabihin sa mga estudyante na idagdag ang kanilang “Whip Around” sticky notes o note cards sa iyong \"Computer Science\" mind map kapag lalabas na sila ng pintuan. Subukang sulatan ang board ng magagandang mga ideya tungkol sa kung ano ang CS at bakit mahalaga ito."
+        },
+        "4587cdae-c2ce-4d5f-9540-063b6383388d": {
+          "description": "#### Higit pa sa Hour of Code\n\nPagkatapos ng Hour of Code mo, maraming paraan upang magpatuloy sa pagtuturo ng computer science sa iyong K-5 na silid-aralan. Narito ang ilang ideya:\n\n-   Ituro ang mga kursong [Code Studio Computer Science Fundamentals](http://code.org/educate/k5). Idinisenyo ang anim na kursong ito sa mga batang mag-aaral. Ang mga mag-aaral ay nakikibahagi sa pamamagitan ng serye ng mga palaisipan na nagtuturo sa kanila na mag-code, at ang mga tagapagturo ay may access sa nakakaengganyong mga lesson plan na makakatulong na gawing buhay ang pag-aaral. Nag-aalok ang Code.org ng libreng propesyonal na pag-unlad sa mga kursong ito, online o personal.\n-   Bisitahin ang [You can Teach Computer Science](https://studio.code.org/courses?view=teacher) sa higit pang mga mungkahi sa kurso.\n-   Mag-imbita ng eksperto sa computer science na makipag-usap sa iyong klase tungkol sa kanyang trabaho. Wala kang alam na lokal na computer scientist? Makipag-ugnayan sa isang boluntaryo sa aming [mapa ng boluntaryo](https://code.org/volunteer/local)."
         },
         "1a919c4d-50b6-47fd-bcee-b2465b5c0f84": {
           "name": "Paghahanda",
@@ -1318,20 +1388,52 @@
             "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ipakita ang isa sa [aming nagbibigay-inspirasyong mga video](https://hourofcode.com/promote/resources#videos). Piliin ang sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga mag-aaral sa gitnang baitang, iminumungkahi namin [Ang Hour of Code na Narito](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
+        "468ba876-6a73-42cb-94c6-a8dfa5bff320": {
+          "description": "Ipaliwanag na ngayon ay magiging malikhain tayo sa \"code\", na nangangahulugan lamang ng paggamit ng hanay ng mga tagubilin na mauunawaan ng computer. Tulad ng pagpili kung aling mga kulay ng pintura ang gagamitin, o kung anong mga salita ang isinusulat mo ay mga paraan ng pagpapahayag ng pagkamalikhain, pagpili kung anong code ang isusulat mo at kung paano nakikipag-ugnayan ang mga tao dito ay maaaring maging pagkakataon upang ipahayag din ang pagkamalikhain mo! \n\n**Bumangon ka at sumayaw:** Ipahayag sa klase na ngayon ay titingnan natin kung paano natin pagsasamahin ang coding sa pagsasayaw sa malikhaing paraan. Hilingin sa mga anak mo na mag-floss, mag-dab, o gumawa ng sarili nilang malikhaing dance move sa loob ng 10 segundo upang makuha sila sa mood. Maaari kang magpatugtog ng kanta mula sa [r dance-party-playlist] na ito para makatulong sa pagsisimula ng mga bagay-bagay. Kunan ng video ang mga galaw ng klase mo. \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
+        },
         "5442c2d2-c29f-4455-a3aa-bb02b59f0bbe": {
-          "name": "Pag-filter ng Musika"
+          "name": "Pag-filter ng Musika",
+          "description": "Nagtatampok ang tutorial na ito ng mga kanta mula sa mga sikat na artist. Upang makakuha ng preview ng listahan ng kanta sa tutorial na ito, tingnan itong [Spotify Playlist (lahat ng edad)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw) . Gumagamit kami ng mga radio-safe na bersiyon ng lahat ng kanta at sa mga mag-aaral na wala pang 13 taong gulang."
         },
         "6c36cec6-95a3-4b8e-87d1-d9f01bc99638": {
           "name": "Pangkalahatang Suporta",
           "description": "**Pangkalahatang Suporta:** Bilang guro, ang tungkulin mo ay pangunahing suportahan ang mga mag-aaral habang nagsusumikap sila sa tutorial. Narito ang ilang mga tip na dapat makatulong sa mga mag-aaral anuman ang antas na kanilang ginagawa\n\n-   **Makipagtulungan sa Mga Katabi:** Hikayatin ang mga mag-aaral na makipag-usap sa katabi kapag sila ay nahirapan. Dahil ang tutorial ay may kasamang mga video at ang mga mag-aaral ay maaaring may suot na headphone, madali itong \"makapagsarili.\" Tumulong na masira ang mga hadlang na iyon sa pamamagitan ng aktibong pagpapares ng mga mag-aaral kung mukhang kailangan nila ng tulong. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong isaalang-alang ang pormal na paghahati-hati ng iyong klase sa mga pares para makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n-   **Basahin ang Mga Tagubilin:** Ang mga tagubilin ay karaniwang nagbibigay ng mga kapaki-pakinabang na tip sa kung paano kumpletuhin ang antas. Bago kumpletuhin ang antas sa isang mag-aaral tiyakin na aktwal nilang tiningnan nang mabuti ang target na imahe at nabasa ang lahat ng text doon.\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Natigil? Maghanap ng mga hint:** Ang bawat antas ay may kasamang hint na may mga karagdagang detalye tungkol sa kung paano makapasa sa antas. Kung sinusubukan ng mga mag-aaral na maipasa ang mga palaisipan nang mabilis, baka makita nila na kailangan lang nilang maghintay ng ilang oras para gumana ang lahat ng code bago magpatuloy. Maraming mga antas ang naglalaman ng pangalawang hint na may mga mungkahi ng mga paraan upang maging mas malikhain sa pamamagitan ng pagpapatagal sa gawain.\n-   **Magpatuloy at Bumalik:** Minsan mas makikinabang ang mga mag-aaral kung babalik sila sa isang mahirap na antas. Ang lahat ng antas ay independyente sa isa't isa, kahit na umaasa ito sa ilang antas sa mga naunang ipinakilalang konsepto.\n-   **Maglaan ng oras at mag-eksperimento.** Kahit na ang unang mga antas ay nagsasabi sa mga mag-aaral kung ano ang kailangan nilang gawin upang makapasa, dapat din na malaya nilang subukan ang kanilang sariling mga ideya."
         },
         "d737dd0e-b1aa-47df-b9a2-620d324f9c10": {
+          "name": "Antas ayon sa Antas",
           "description": "#### Antas 1\n\n-   I-drag ang pulang block na `gumawa ng bago` mula sa toolbox sa kaliwa patungo sa workspace sa kanan. Ikonekta ito sa loob ng `setup` na block.\n-   Naisulat mo na ngayon ang unang programa mo. Siguraduhing pindutin ang Run para makita kung ano ang mangyayari. Dapat kang makarinig ng musika at makakita ng karakter na nagsisimulang gumalaw sa lugar ng display."
+        },
+        "02028482-b4db-44c7-a8ab-9576f6c34b29": {
+          "description": "#### Antas 2\n\n-   Ang mga antas 2-3 ay tungkol sa paggawa ng sayaw na interactive. \n-   Ang mga berdeng block ay mga event block. Ang mga block na ito ay nagsisimula ng bagong pagkakasunud-sunod ng code at hindi kailangang ikonekta sa loob ng block ng `setup`. \n-   Ang pagkonekta sa lilang block sa ilalim ng berdeng block ng event ay nagbibigay-daan sa iyong gawin ang karakter na magsagawa ng sayaw sa pamamagitan ng pagpindot sa orange na mga arrow button o key sa keyboard mo. \n-   Siguraduhing pindutin ang mga arrow button pagkatapos pindutin ang Run o ang (mga) mananayaw ay hindi gagalaw."
+        },
+        "ec0922cd-fda5-4e54-a44f-bb63f86b9eda": {
+          "description": "#### Antas 3\n\n-   Tiyaking maglabas ng pangalawang lila na `gawin minsan` na block. Dapat ay mayroon kang `minsan ginagawa ng mga oso` na block at `minsan ginagawa ng mga pusa` na block sa workspace mo. Parehong dapat na konektado sa berdeng `kapag pinindot` na event block.\n-   Siguraduhing pindutin ang mga arrow button pagkatapos pindutin ang Run o hindi gagalaw ang mga mananayaw."
+        },
+        "e07e7231-6932-46d6-9f35-7c8ec34fb25d": {
+          "description": "#### Antas 4\n\n-   Ang antas 4-5 ay tungkol sa pag-synchronize ng sayaw sa musika. \n-   Ang mga event block na `pagkatapos ng measures` ay magsisimula rin ng bagong pagkakasunod-sunod ng code at hindi dapat ikonekta sa loob ng block na `setup`. \n-   Ang pagkonekta sa lila na `gawin magpakailanman` na block sa ilalim ng berdeng `pagkatapos ng measures` na event block ay dapat magsagawa ng karakter na gumawa ng dance move pagkatapos ng bilang ng mga sukat na ipinapahiwatig mo. \n-   Iba ang paggana ng block na `gawin magpakailanman` kumpara sa mga block na `gawin minsan` na nakikita sa mga nakaraang level."
+        },
+        "42f6ef23-a698-4d94-a9d6-917a7dda0fa6": {
+          "description": "#### Antas 5\n\n-   Tiyaking mailabas ng pangalawang berdeng block ng event. Dapat ay mayroon kang block na `pagkatapos ng 4 na hakbang` at `pagkatapos ng 6 na hakbang` na block sa workspace mo. Parehong dapat ay may purple block na konektado sa ilalim."
+        },
+        "760263d5-a994-4722-af9a-758d7f028a8d": {
+          "description": "#### Antas 6\n\n-   Ang antas 6 ay tungkol sa paglikha ng mga grupo ng mga mananayaw nang mabilis. \n-   Gamitin ang bagong block na ibinigay sa toolbox upang lumikha ng hanay ng mas maliliit na mananayaw. \n    \\*Dapat mo ring gamitin ang normal na block na `gumawa ng bago` upang lumikha ng mas malaking “lead” na mananayaw.\n-   Maraming mga mag-aaral ang magiging pamilyar sa ideya na maaari mong gawin ang isang bagay na tila mas malayo sa pamamagitan ng pagguhit nito sa mas maliit na sukat. Sa susunod na antas, magagawa mong ayusin ang effect na ito."
+        },
+        "d29c2e16-c0a1-4a6b-a1bd-86962b471ea9": {
+          "description": "#### Antas 7\n\n-   Ang antas 7-9 ay tungkol sa pagsasaayos ng mga katangian (hal. laki, kulay) ng mga mananayaw. \n-   Mahalagang tiyakin na ang teal `set` block ay nakalagay sa isang lugar sa program _pagkatapos_ nalikha ang mga mananayaw. Upang malutas ang puzzle na ito, maglagay ng `itakda ang laki` na block saanman sa program mo at gamitin ito upang baguhin ang laki ng ilan sa iyong mga mananayaw. \n-   Ang mga mananayaw na nilikha bilang grupo ay may default na laki na 30. Ang iba pang mga mananayaw ay may default na laki na 100."
         },
         "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
           "tips": [
             "Sa puntong ito ng aralin mapapansin mo na ang mga tagubilin ay hindi gaanong nakatakda. Hikayatin ang mga mag-aaral na maging malikhain at tuklasin ang mga bagong block na ipinakilala. Mula sa puntong ito, ang code ng mag-aaral ay **hindi sinusuri kung tama** upang hikayatin ang pag-eksperimento sa halip na lutasin ang partikular na task."
           ]
+        },
+        "165b8450-bd88-42b3-b955-2e8ecd1dc93f": {
+          "description": "#### Antas 8\n\n-   Gaya ng nakaraang level, siguraduhing gamitin lang ang `itakda ang tint sa (color)` na block _pagkatapos_ mong gawin ang mga mananayaw sa program mo. Halimbawa, ang paglalagay nito bilang unang hakbang sa lugar ng `setup` ng iyong program ay walang epekto."
+        },
+        "e04d58b1-6687-4e9b-ae31-1796d5232ce2": {
+          "description": "#### Antas 9\n\n-   Gamit ang tamang code, dapat mong makita ang ikot ng mananayaw sa iba't ibang kulay, laki, o galaw ng sayaw. \n-   Tiyaking may teal na `pagbabago`, isang teal na `randomize` na block, o lila na `gawin magpakailanman` na block na nakakonekta sa loob ng `kada 2 measure` na block. \n-   Tiyaking nakatakda ang mga block na `gawin magpakailanman` sa alinman sa (Susunod), (Nakaraan), o (Random). Kung hindi, ang mananayaw ay isasagawa lamang ang set move nang paulit-ulit. \n-   Tandaan na ang **code na isinulat ng mga mag-aaral sa antas na ito ay hindi sinusuri kung tama**. Nangangahulugan ito na palagi silang papasa sa antas, kahit na hindi nila binago ang program. Ang mga mag-aaral ay dapat malayang mag-eksperimento sa kanilang code sa mga paraan na kawili-wili sa kanila. Dapat i-click ng mga mag-aaral ang pindutang \"Tapos na\" upang magpatuloy.\n-   Ang paggawa ng mga bagong mananayaw sa loob ng `bawat 2 hakbang` na block ay magiging sanhi ng program mo na lumikha ng maramihang magkakatulad na mananayaw sa parehong (mga) lokasyon at maaaring humantong sa hindi sinasadyang mga kahihinatnan!"
+        },
+        "8ab0ecdc-93e2-4959-a1d8-2aaad168be42": {
+          "description": "#### Antas 10\n\n-   Ang huling antas na ito ay napaka-open-ended. Ang tutorial mismo ay idinisenyo upang bigyan ang mga mag-aaral ng sapat na oras upang patuloy na magtrabaho sa sarili nilang sayaw.\n-   **Hikayatin ang Pagbabahagi:** Kung ang mga mag-aaral ay may mga cell phone na may data plan maaari silang mabilis na mag-text ng link sa kanilang mga proyekto sa sariling telepono o sa kaibigan. Kung pinapayagan ito ng patakaran sa paaralan mo, hikayatin silang gawin ito.\n-   **Hikayatin ang Pagkamalikhain:** Ang pagkamalikhain ay mahalaga sa buong araling ito, higit itong totoo dito kaysa saanman! "
         },
         "8653a0a0-b67c-4237-b8c1-111e0d11b4fe": {
           "name": "Panayam",
@@ -1352,33 +1454,76 @@
           "description": "Sabihin sa mga estudyante na idagdag ang kanilang “Whip Around” sticky notes o note cards sa iyong \"Computer Science\" mind map kapag lalabas na sila ng pintuan. Subukang sulatan ang board ng magagandang mga ideya tungkol sa kung ano ang CS at bakit mahalaga ito."
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
+          "name": "Bumuo ng Kagalakan!",
+          "description": "**Mag-udyok:** Ipaliwanag sa mga mag-aaral ang mga layunin ng aktibidad ngayon. Magsisimula silang gumamit ng bagong tool na hahayaan silang magsanay ng tunay na modelo ng pag-aaral ng makina, isang anyo ng artificial intelligence. \n\n**Pangkalahatang Suporta:** Bilang guro, ang pangunahing tungkulin mo ay upang suportahan ang mga mag-aaral habang nagsisikap sila sa tutorial. Narito ang ilang tip na dapat makatulong sa mga mag-aaral anuman ang antas na kanilang ginagawa. \n\n-   **Pagsusuri ng Tama:** Hindi sasabihin ng tutorial na ito sa mga mag-aaral kung nakumpleto nila nang tama ang antas. Posibleng laktawan ang iba't ibang bahagi ng aktibidad nang mabilis. Hikayatin ang mga mag-aaral na panoorin ang mga video, basahin ang mga tagubilin, at subukan ang iba't ibang bagay sa daan. Anumang oras, maaari nilang ibahagi ang kanilang mga natuklasan sa iyo o sa isang kaklase. \n-   **Makipagtulungan sa mga Katabi:** Hikayatin ang mga mag-aaral na magtanong sa katabi upang talakayin kung ano ang kanilang nararanasan. Dahil ang tutorial na ito ay may kasamang mga video at ang mga mag-aaral ay maaaring may suot na headphone, madali itong \"magsarili.\" Tumulong na masira ang mga hadlang na iyon sa pamamagitan ng aktibong pagpapares ng mga mag-aaral. \n-   **Basahin ang Mga Tagubilin:** Ang mga tagubilin ay karaniwang nagbibigay ng kapaki-pakinabang na impormasyon tungkol sa kung ano ang nangyayari sa likod ng mga eksena. \n-   **Bumalik at subukan ang iba't ibang bagay:** Kung mabilis na matapos ang mga mag-aaral, hikayatin silang bumalik sa \"Sanayin Pa\". Sa huling bahagi ng aktibidad, maaari ding bumalik ang mga mag-aaral at pumili ng \"Bagong Salita\". Ang mas maraming data ng pagsasanay ay may posibilidad na gawing mas tumpak at pare-pareho ang modelo ng machine learning. Ang mga mag-aaral ay maaari ding matuto sa pamamagitan ng sinasadyang pagsasanay sa kanilang modelo nang hindi tama, o hindi ito pagsasanay sa lahat. \n    **Video:** [AI: Machine Learning](https://www.youtube.com/watch?v=OeU5m6vRyCk) Ang unang antas ng aktibidad na ito ay isang video na nagbibigay ng mahalagang konteksto sa paligid ng artificial intelligence at machine learning. Panoorin ito bilang isang klase at magtanong pagkatapos upang matulungan ang mga mag-aaral na bumuo ng mga koneksiyon sa nilalaman.",
           "tips": [
-            null
+            "Maaari mong ibahagi ang mga kuwentong ito sa klase mo para matulungan silang makita kung paano makakaapekto ang AI sa hinaharap. \n\n-   [Ang Basura ng Pagkain ay Isang Malubhang Problema. Sinusubukang Lutasin Ito ng AI](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/) \n-   [Maaaring makilala ng AI tech ang mga genetic disorder mula sa mukha ng isang tao](https://mashable.com/video/ai-identify-genetic-disorders-photo/?) \n-   [Paano Idinisenyo ng AI Startup ang isang Kandidato sa Gamot sa loob lamang ng 46 na Araw](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/) - [MIT AI na tool ay maaaring mahulaan ang kanser sa suso hanggang 5 taon nang mas maaga](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/) - [Ang Army ay sumulong sa mga self-driving na kotse](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?) \n-   [Sabi ng San Francisco na gagamitin nito ang AI upang mabawasan ang bias kapag naniningil sa mga tao ng mga krimen](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime) \n-   [Tinutulungan ng AI ang mga iskolar na ibalik ang mga sinaunang Griyego na text sa mga tapyas ng bato](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)"
           ],
           "progression_name": "AI Machine Learning - Video"
         },
+        "a000c7ca-046c-47c5-b2c9-5a3043c747d9": {
+          "description": "**Quick Share-out:** Saan ka nakakita o nakaranas ng artificial intelligence sa iyong buhay? Kasama sa mga halimbawa mula sa video ang: \n\n-   mga filter ng email \n-   auto-complete na text \n-   mga system ng rekomendasyon ng video \n-   pagkilala sa boses \n-   mga app sa pagsasalin \n-   mga digital assistant \n-   pagkilala sa imahe \n\n**Prompt:** Batay sa nakita mo sa video, ano ang machine learning? \n\n**Talakayin:** Simula sa maliliit na grupo pagkatapos ay lumipat sa buong klase, ibinabahagi ng mga mag-aaral ang kanilang mga tugon. Ang layunin dito ay upang makilala ng mga mag-aaral ang mundo ng artificial intelligence, pagnilayan ang paglaganap ng artificial intelligence sa ating buhay at malawak na pag-isipan ang tungkol sa mga potensyal na inobasyon sa hinaharap. \n\n**Sabihin:** _Tumutukoy ang machine learning sa isang computer na nakakakilala ng mga pattern at makakapagdesisyon nang hindi tahasang nakaprograma. Sa aktibidad na ito, ibibigay mo ang data para sanayin ang sarili mong modelo ng machine learning. Isipin ang karagatan na naglalaman ng mga nilalang tulad ng isda, ngunit naglalaman din ng mga basurang itinapon ng mga tao. Paano kung maaari nating sanayin ang computer upang sabihin ang pagkakaiba at pagkatapos ay gamitin ang teknolohiyang iyon upang makatulong sa paglilinis ng karagatan?_"
+        },
         "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
+          "name": "AI Para sa Mga Karagatan  ",
           "tips": [
-            null
+            "Ang bawat larawan sa bahaging ito ng tutorial ay inilalagay sa neural network na na-pre-trained sa malaking hanay ng data na tinatawag na [ImageNet](http://www.image-net.org/). Naglalaman ang database ng higit sa 14 milyong mga larawang na-annotate ng kamay. Ang ImageNet ay naglalaman ng higit sa 20,000 mga kategorya na may karaniwang kategorya, tulad ng \"balloon\" o \"strawberry\", na binubuo ng ilang daang mga larawan. Kapag nag-scan ang AI ng mga bagong larawan at gumagawa ng sarili nitong mga hula sa tutorial, talagang inihahambing nito ang mga posibleng kategorya sa bagong larawan sa mga pattern na nakita nito sa dataset ng pagsasanay."
           ]
         },
         "5d09fa3e-63ce-4142-ac59-d893889ce78d": {
+          "description": "#### Mga Antas 2-4 - Sanayin ang AI na Linisin ang Karagatan\n\nAng mga mag-aaral ay maaaring magtrabaho sa mga antas 2-4 nang mag-isa o kasama ang isang kapareha. Upang i-program ang AI, gamitin ang mga button para lagyan ng label ang isang imahe bilang alinman sa \"isda\" o \"hindi isda\". Ang bawat larawan at label ay nagiging bahagi ng data na ginagamit upang sanayin ang AI na gawin ito nang mag-isa. Kapag nasanay na, susubukan ng AI na mag-label ng 100 bagong larawan nang mag-isa, pagkatapos ay magpapakita ng seleksyon na natukoy nitong may pinakamataas na posibilidad na maging \"isda\" batay sa pagsasanay nito. Ang mga mag-aaral na patuloy na naglalagay ng tama sa mga bagay ay dapat makakita ng karagatang puno ng iba't ibang uri ng mga nilalang sa dagat, nang walang gaanong (o anumang) iba pang bagay.",
           "progression_name": "Magsanay ng AI para Linisin ang Karagatan"
         },
         "917bb837-8f93-4a92-86dc-ed60980f680b": {
+          "description": "#### Level 5 - Data ng Pagsasanay at Bias\n\n**Mabilis na Pagbabahagi:** Gaano kahusay ang ginawa ng AI? Sa tingin mo, paano ito nagpasya kung ano ang isasama sa karagatan?",
           "progression_name": "AI: Data ng Pagsasanay at Bias - Video"
         },
+        "2dd01487-fb16-4666-bd3c-56ae2ce5a364": {
+          "description": "**Prompt:** Paano sa palagay mo naimpluwensyahan ng data mo ng pagsasanay ang mga resultang ginawa ng AI?"
+        },
+        "5ccd5b0c-d53b-4931-9405-218822bb91c6": {
+          "description": "**Talakayin:** Sa maliliit na grupo, ibinabahagi ng mga mag-aaral ang kanilang mga tugon. Umikot sa silid at makinig sa mga ideya ng mag-aaral. Maaari itong sundan ng buong talakayan sa klase, o ang mga mag-aaral ay maaaring tumalon pabalik sa tutorial. Ang layunin ay upang maipakita ng mga mag-aaral ang kanilang karanasan sa ngayon. Mahalaga sa puntong ito na napagtanto nila na ang pag-label na kanilang ginagawa ay ang aktwal na pagprograma ng computer. Ang mga halimbawang ipinapakita nila sa AI ay ang \"data ng pagsasanay\"."
+        },
+        "6403e073-cdd0-46e8-9e02-f336a51baf91": {
+          "description": "#### Mga Antas 6 - Paggamit ng Data ng Pagsasanay"
+        },
         "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
+          "description": "Sa ikalawang bahagi ng aktibidad, ituturo ng mga mag-aaral ang AI tungkol sa salita na kanilang pinili sa pamamagitan ng pagpapakita dito ng mga halimbawa ng ganoong uri ng isda. Tulad ng dati, hindi nagsisimula ang AI sa anumang data ng pagsasanay tungkol sa mga label na ito. Kahit na ang mga salita sa antas na ito ay medyo layunin, posibleng magkaroon ng iba't ibang resulta ang mga mag-aaral batay sa kanilang data ng pagsasanay. Ang ilang mga mag-aaral ay maaaring sinasadyang sanayin ang AI nang hindi tama upang makita kung ano ang mangyayari. Kung iniisip ng mga mag-aaral kung paano gumagana ang machine learning, dapat itong hikayatin!",
           "tips": [
-            null
+            "Ang mga isda sa tutorial na ito ay random na nabuo batay sa ilang paunang natukoy na mga bahagi, kabilang ang mga bibig, buntot, mata, kaliskis, at palikpik, na may random na piniling kulay, hugis, at laki ng katawan. Sa halip na tingnan ang aktwal na data ng imahe, naghahanap na ngayon ang AI ng mga pattern sa mga bahaging ito batay sa kung paano inuuri ng mag-aaral ang bawat isda. Mas malamang na lagyan ng label ang isang isda sa parehong paraan na magkakaroon ng mag-aaral kung ito ay may tugmang mga katangian."
           ],
           "progression_name": "Paggamit ng Data ng Pagsasanay"
         },
         "0e3fc271-27d1-4e73-9981-3e36c95c583f": {
+          "description": "#### Level 7 - Mga Epekto sa Lipunan\n\n**Sabihin:** _Natututo ang mga artificial intelligence system mula sa data na ibinibigay namin dito, ngunit ang data na iyon ay maaaring batay sa opinyon o bias._",
           "progression_name": "AI: Epekto sa Lipunan - Video"
         },
+        "10c97a69-e8a4-4eb0-8a7d-86e143c3c4ac": {
+          "description": "**Sabihin:** _Isipin ang mga halimbawa ng artificial intelligence na tinalakay natin sa simula. Mag-isip ng isang oras kung saan maaaring nagkamali ang machine learning sa totoong mundo? (Halimbawa, hindi ka naiintindihan ng voice recognition.)_ \n\n**Prompt:** Paano maaaring magresulta ang bias na data sa mga problema sa artificial intelligence? Ano ang mga paraan upang matugunan ito?"
+        },
+        "fa3c9144-cc51-42f5-8069-6f50da5b465d": {
+          "description": "**Talakayin:** Simula sa maliliit na grupo pagkatapos ay lumipat sa buong klase, ibinabahagi ng mga mag-aaral ang kanilang mga tugon. Ang layunin ng talakayang ito ay ibalik ang mga mag-aaral sa konteksto ng artificial intelligence sa totoong mundo. \n\n**Sabihin:** _Ang ilang mga paraan upang matugunan ang bias ay ang paggamit ng mas malaki o higit pang kasamang hanay ng data ng pagsasanay. Sa huling bahagi ng aktibidad, ituturo mo sa AI ang salita na maaaring bigyang-kahulugan sa iba't ibang paraan._"
+        },
         "a47af864-6d0d-441c-98ea-6e50d036c415": {
+          "description": "#### Level 8 - Turuan ang AI ng Bagong Salita\n\nDito, tulad ng dati, gagamit ang mga mag-aaral ng data ng pagsasanay upang turuan ang AI na makilala ang iba't ibang uri ng isda. Ang mga salita sa listahang ito ay sadyang mas subjective kaysa sa nakita ng mga mag-aaral sa ngayon. Hikayatin ang mga mag-aaral na magpasya para sa kanilang sarili kung ano ang nagmumukhang \"galit\" o \"nakakatuwa\" ng isda. Maaaring piliin ng dalawang mag-aaral ang parehong label at makakuha ng ibang magkakaibang hanay ng mga resulta batay sa kung aling mga katangian ng isda ang kanilang pinagtutuunan ng pansin. Hikayatin ang mga estudyante na talakayin ang kanilang mga natuklasan sa isa't isa o bumalik at pumili ng mga bagong salita. Ang bawat mag-aaral ay aasa sa kanilang sariling mga opinyon upang sanayin ang AI na nangangahulugan na ang AI ay matututo na may parehong mga bias na hawak ng mga mag-aaral. Habang nagsisimulang makita ng mga estudyante ang papel na ginagampanan ng kanilang opinyon, hilingin sa kanila na pag-isipan kung ito ay mabuti o masama, at kung paano ito matutugunan. \n\n**Bukas na tanong:** _Ano ang problemang pinapahalagahan mo na maaaring makatulong sa paglutas ng artificial intelligence?_",
           "progression_name": "Turuan ang AI ng Bagong Salita"
+        },
+        "0cc68ced-0af8-4fbf-a8df-4df044149a60": {
+          "description": "[Mag-print ng mga sertipiko](https://studio.code.org/certificates/batch?course=b2NlYW5z) para ipagdiwang ng mga mag-aaral ang kanilang tagumpay. \n\nSa pagtatapos ng aralin, hikayatin ang mga mag-aaral na tumungo sa [Code.org/learn](http://Code.org/learn) kung saan makakakuha sila ng mga ideya para sa higit pang mga paraan upang mapanatili ang kanilang pakikipagsapalaran sa computer science."
+        },
+        "be0db11e-cb8e-4658-844c-73a9faafa36d": {
+          "description": "#### Tulong Pag-uri-uriin ang Mga Hayop sa Mountain Zebra National Park\n\nSnapshot Safari ay naglagay ng daan-daang nakatagong camera sa buong southern Africa, na kumukuha ng milyun-milyong larawan ng magaganda at pambihirang mga hayop. Makakatulong ang mga mag-aaral na protektahan ang nanganganib na Cape Mountain Zebra sa pamamagitan ng pag-uuri ng iba't ibang hayop sa mga larawang ito. Maaari mong basahin ang tungkol sa proyekto [dito](https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/about/research) o mag-click sa ibaba upang subukan ito! \n\n[Snapshot Mountain Zebra - Zooniverse](https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/classify?reload=0&workflow=11445)"
+        },
+        "bb046ecc-a5f6-4ac9-a43c-a071589e04c9": {
+          "description": "Sa screen ng mga huling resulta, makikita ang visualization ng machine learning model ng AI sa pamamagitan ng pag-click sa ![](https://curriculum.code.org/media/uploads/info.png)."
+        },
+        "be0995b2-b12f-45ee-9047-8261719fcd56": {
+          "name": "Halimbawa 1: Pagsasanay batay sa isang katangian (hugis ng katawan)",
+          "description": "Bilang halimbawa, tingnan natin ang isang mag-aaral na nagsasanay ng AI upang makilala ang **\"pabilog\"** na isda sa pamamagitan lamang ng pagpili ng isda sa pamamagitan ng pagtingin sa isang katangian:\n\n| \"Pabilog\" na mga hugis ng katawan: ![](https://curriculum.code.org/media/uploads/circle_1.png) ![](https://curriculum.code.org/media/uploads/circle_2.png) |\n| ---------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\nPagkatapos ng humigit-kumulang 30 set ng data ng pagsasanay, makikita natin na ang AI ay ganap na nauuri ang isda. Matagumpay itong nakilala ang isang pattern: Lahat ng isda na pinili ng mag-aaral ay may isa sa parehong dalawang hugis ng katawan.\n\n| \"Pabilog\" na isda - pagsasanay: 30                                                                                                                                                                                    |                                                                                                                                                                                                                                                             |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/circularSum.png\" width=\"5000\">                                                                                                                                    | <img src=\"https://curriculum.code.org/media/uploads/circular.png\" width=\"5000\">                                                                                                                                                                             |\n| _Sa pamamagitan ng pag-click sa pindutan ng impormasyon, makikita natin na ang AI ay lubos na nagtitiwala na ang \"katawan\" ay ang pinakamahalagang sangkap sa pangkalahatan sa mga isda na natukoy nitong \"pabilog\"._ | _Maaaring suriin ang isang indibidwal na isda sa pamamagitan ng pag-click dito. Ipinapakita ng impormasyon dito na para sa isda na ito, natukoy ng AI na ang hugis ng katawan nito ay isang positibong tagapagpahiwatig na ito ay isang \"pabilog\" na isda._ |\n\n| \"Hindi pabilog\" na isda - pagsasanay: 30                                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |\n| ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| <img src=\"https://curriculum.code.org/media/uploads/Screen-Shot-2019-12-05-at-4.53.07-PM.png\" width=\"2500\"> | _Sa pamamagitan ng pag-togg sa view, maaari din nating suriin ang kamao AI na tinutukoy ay \"hindi pabilog\". Ang mga berdeng bar na nakaturo sa kanan ay kumakatawan sa isang senyas na ang katangian ay \"pabilog\". Ang mga pulang bar na nakaturo sa kaliwa ay senyales na ito ay \"hindi pabilog\". Napagpasyahan ng AI kung paano pag-uri-uriin ang bawat isda sa pamamagitan ng pagtimbang ng \\*lahat_ ng mga bahagi, kahit na ang mga hindi ipinapakita sa listahan.\\* |\n\n##### Paano ang iba pang mga katangian?\n\nMaaaring napansin mo na ang iba pang mga katangian tulad ng kulay ay tila mahalaga sa AI kahit na ang mag-aaral ay nakatuon lamang sa hugis ng katawan. Bukod sa halatang katotohanang hindi literal na nababasa ng AI ang ating mga isipan, may isa pang dahilan kung bakit maaaring gumawa ang AI ng ilan sa mga maling konklusyon. \n\nAng mga isda sa tutorial na ito ay random na nabuo. Ang mga isda na binansagan ng mag-aaral bilang \"pabilog\" ay random na may ilan sa mga parehong kulay. Kung hindi kasama sa set ng data ng pagsasanay ang mga isda na berde na may bilog na katawan, magiging hindi gaanong kumpiyansa ang AI sa pag-uuri ng isa bilang \"circular\" kahit na iyon ang nilayon ng mag-aaral."
+        },
+        "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
+          "name": "Halimbawa 2: Paggamit ng view ng Impormasyon upang mapabuti ang modelo",
+          "description": "Ang pagdaragdag ng higit pang data ng pagsasanay ay hindi lamang nagbabago sa mga resulta, ngunit ang data na ipinapakita sa view ng Impormasyon. Minsan ang ipinapakitang graph ng mga resulta ay maaaring gawing mas malinaw kung bakit hindi tumutugma ang mga resulta sa mga inaasahan. \n\nIsaalang-alang natin ang isang mag-aaral na gustong magsanay ng AI upang makilala ang **\"galit\"** na isda. Nais nilang maisakatuparan ito sa pamamagitan ng pagpili ng anumang isda na may mga kilay na nakaturo sa loob at nakasimangot na mga bibig. Lalagyan nila ng label ang isang isda bilang \"galit\" kung mayroon itong kumbinasyon ng mga katangiang ito:\n\n| \"Galit\" na mga mata: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Galit\" na mga bibig: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\nMaaari bang malaman ng AI kung ano ang ginagawa ng mag-aaral nang hindi tahasang nakaprograma? Depende ito sa kung gaano karaming data ng pagsasanay ang ibinibigay ng mag-aaral at ang kalidad ng data sa set.\n\n| \"Galit\" na isda - pagsasanay: 30                                                  | \"Galit\" na isda - pagsasanay: 200                                          |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n\\| _Dito makikita natin na ang AI ay kinuha kaagad sa \"mga mata\" bilang ang pinakamahalagang katangian, ngunit malapit na sinusundan ng \"kulay\", hindi \"bibig\". Mayroong ilang mga purple na isda sa kaliwang larawan na may mga bibig na iba sa tinatarget ng estudyante. Marahil marami sa mga \"galit\" na isda na unang pinili ng mag-aaral ay kulay lila? Ang isang paraan para mapahusay ang modelo ay ang ipagpatuloy ang pagsasanay, siguraduhing magpapatuloy hanggang ang ilang mga lilang \"hindi galit\" na isda ay tama na nalagyan ng label._ \\| _Mga pinahusay na resulta pagkatapos ng karagdagang pagsasanay._                              \\|"
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Warm Up"
@@ -2207,7 +2352,11 @@
         "63fcf28c-54ae-4953-acfd-397dff2ce9d3": {
           "name": "Pagmumuni-muni"
         },
+        "bcf8a087-827a-435a-9ea1-1b5708a800c2": {
+          "name": "Bumuo ng Kagalakan!"
+        },
         "9630adaa-f7c1-4efa-8f7e-5d3ceb155b0b": {
+          "name": "AI Para sa Mga Karagatan  ",
           "tips": [
             null
           ],
@@ -2224,7 +2373,7 @@
         },
         "97505f9d-3e88-4a48-8fb1-66a0dcb61e9e": {
           "tips": [
-            null
+            "Ang mga isda sa tutorial na ito ay random na nabuo batay sa ilang paunang natukoy na mga bahagi, kabilang ang mga bibig, buntot, mata, kaliskis, at palikpik, na may random na piniling kulay, hugis, at laki ng katawan. Sa halip na tingnan ang aktwal na data ng imahe, naghahanap na ngayon ang AI ng mga pattern sa mga bahaging ito batay sa kung paano inuuri ng mag-aaral ang bawat isda. Mas malamang na lagyan ng label ang isang isda sa parehong paraan na magkakaroon ng mag-aaral kung ito ay may tugmang mga katangian."
           ],
           "progression_name": "Paggamit ng Data ng Pagsasanay"
         },
@@ -2236,11 +2385,14 @@
         },
         "f3a8670b-9954-45f9-af08-1689c799a427": {
           "tips": [
-            null
+            "Maaari mong ibahagi ang mga kuwentong ito sa klase mo para matulungan silang makita kung paano makakaapekto ang AI sa hinaharap. \n\n-   [Ang Basura ng Pagkain ay Isang Malubhang Problema. Sinusubukang Lutasin Ito ng AI](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/) \n-   [Maaaring makilala ng AI tech ang mga genetic disorder mula sa mukha ng isang tao](https://mashable.com/video/ai-identify-genetic-disorders-photo/?) \n-   [Paano Idinisenyo ng AI Startup ang isang Kandidato sa Gamot sa loob lamang ng 46 na Araw](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/) - [MIT AI na tool ay maaaring mahulaan ang kanser sa suso hanggang 5 taon nang mas maaga](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/) - [Ang Army ay sumulong sa mga self-driving na kotse](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?) \n-   [Sabi ng San Francisco na gagamitin nito ang AI upang mabawasan ang bias kapag naniningil sa mga tao ng mga krimen](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime) \n-   [Tinutulungan ng AI ang mga iskolar na ibalik ang mga sinaunang Griyego na text sa mga tapyas ng bato](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)"
           ]
         },
         "5f554a52-41ac-4982-bfd0-e3deb97bc410": {
           "name": "Pagmumuni-muni"
+        },
+        "04f13b6a-1f5c-4c1f-8c9e-cbb4dca0273b": {
+          "description": "Maaari mong ibahagi ang mga kuwentong ito sa klase mo para matulungan silang makita kung paano makakaapekto ang AI sa hinaharap. \n\n-   [Ang Basura ng Pagkain ay Isang Malubhang Problema. Sinusubukang Lutasin Ito ng AI](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/) \n-   [Maaaring makilala ng AI tech ang mga genetic disorder mula sa mukha ng isang tao](https://mashable.com/video/ai-identify-genetic-disorders-photo/?) \n-   [Paano Idinisenyo ng AI Startup ang isang Kandidato sa Gamot sa loob lamang ng 46 na Araw](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/) - [MIT AI na tool ay maaaring mahulaan ang kanser sa suso hanggang 5 taon nang mas maaga](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/) - [Ang Army ay sumulong sa mga self-driving na kotse](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?) \n-   [Sabi ng San Francisco na gagamitin nito ang AI upang mabawasan ang bias kapag naniningil sa mga tao ng mga krimen](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime) \n-   [Tinutulungan ng AI ang mga iskolar na ibalik ang mga sinaunang Griyego na text sa mga tapyas ng bato](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)"
         },
         "768fdc30-25c8-40ae-846a-6de108de3a9f": {
           "name": "Panimula"
@@ -5114,13 +5266,14 @@
           "progression_name": "Video: Data ng Pagsasanay at Pagkiling"
         },
         "88bf5a1b-6fb2-4b9f-b57f-9ae388535572": {
+          "description": "**Prompt:** Paano sa palagay mo naimpluwensyahan ng data mo ng pagsasanay ang mga resultang ginawa ng AI?",
           "tips": [
             null
           ]
         },
         "320ceb07-4a69-4d4b-be08-cd23e1ae2521": {
           "tips": [
-            null
+            "Ang mga isda sa tutorial na ito ay random na nabuo batay sa ilang paunang natukoy na mga bahagi, kabilang ang mga bibig, buntot, mata, kaliskis, at palikpik, na may random na piniling kulay, hugis, at laki ng katawan. Sa halip na tingnan ang aktwal na data ng imahe, naghahanap na ngayon ang AI ng mga pattern sa mga bahaging ito batay sa kung paano inuuri ng mag-aaral ang bawat isda. Mas malamang na lagyan ng label ang isang isda sa parehong paraan na magkakaroon ng mag-aaral kung ito ay may tugmang mga katangian."
           ]
         },
         "f1238482-df77-4638-b841-bb0688e717f5": {
@@ -5136,7 +5289,7 @@
         },
         "3a011835-84a4-44a6-a2cd-47fddd47d637": {
           "tips": [
-            null
+            "Maaari mong ibahagi ang mga kuwentong ito sa klase mo para matulungan silang makita kung paano makakaapekto ang AI sa hinaharap. \n\n-   [Ang Basura ng Pagkain ay Isang Malubhang Problema. Sinusubukang Lutasin Ito ng AI](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/) \n-   [Maaaring makilala ng AI tech ang mga genetic disorder mula sa mukha ng isang tao](https://mashable.com/video/ai-identify-genetic-disorders-photo/?) \n-   [Paano Idinisenyo ng AI Startup ang isang Kandidato sa Gamot sa loob lamang ng 46 na Araw](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/) - [MIT AI na tool ay maaaring mahulaan ang kanser sa suso hanggang 5 taon nang mas maaga](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/) - [Ang Army ay sumulong sa mga self-driving na kotse](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?) \n-   [Sabi ng San Francisco na gagamitin nito ang AI upang mabawasan ang bias kapag naniningil sa mga tao ng mga krimen](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime) \n-   [Tinutulungan ng AI ang mga iskolar na ibalik ang mga sinaunang Griyego na text sa mga tapyas ng bato](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)"
           ]
         },
         "627715bc-b88f-44b5-82f3-6542b6a13c1a": {
@@ -12510,7 +12663,11 @@
           "name": "Pagmumuni-muni",
           "description": "**Mga Prompt:**\n\n-   Paano ang simulation na ito ay katulad ng totoong mundo? Paano ito naiiba?\n-   Ano ang gusto mong baguhin/idagdag sa iyong simulation?"
         },
+        "2c7244e0-80ea-472a-9dbe-051909768cfc": {
+          "name": "Bumuo ng Kagalakan!"
+        },
         "708bfaf4-4547-4c24-87d4-3822f97185b5": {
+          "name": "AI Para sa Mga Karagatan  ",
           "tips": [
             null
           ],
@@ -12527,7 +12684,7 @@
         },
         "86495854-e877-4aea-b9d6-2669b1d2d43b": {
           "tips": [
-            null
+            "Ang mga isda sa tutorial na ito ay random na nabuo batay sa ilang paunang natukoy na mga bahagi, kabilang ang mga bibig, buntot, mata, kaliskis, at palikpik, na may random na piniling kulay, hugis, at laki ng katawan. Sa halip na tingnan ang aktwal na data ng imahe, naghahanap na ngayon ang AI ng mga pattern sa mga bahaging ito batay sa kung paano inuuri ng mag-aaral ang bawat isda. Mas malamang na lagyan ng label ang isang isda sa parehong paraan na magkakaroon ng mag-aaral kung ito ay may tugmang mga katangian."
           ],
           "progression_name": "Paggamit ng Data ng Pagsasanay"
         },
@@ -12539,11 +12696,14 @@
         },
         "daee1c13-09e4-4f2f-88c8-d3841869bfcb": {
           "tips": [
-            null
+            "Maaari mong ibahagi ang mga kuwentong ito sa klase mo para matulungan silang makita kung paano makakaapekto ang AI sa hinaharap. \n\n-   [Ang Basura ng Pagkain ay Isang Malubhang Problema. Sinusubukang Lutasin Ito ng AI](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/) \n-   [Maaaring makilala ng AI tech ang mga genetic disorder mula sa mukha ng isang tao](https://mashable.com/video/ai-identify-genetic-disorders-photo/?) \n-   [Paano Idinisenyo ng AI Startup ang isang Kandidato sa Gamot sa loob lamang ng 46 na Araw](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/) - [MIT AI na tool ay maaaring mahulaan ang kanser sa suso hanggang 5 taon nang mas maaga](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/) - [Ang Army ay sumulong sa mga self-driving na kotse](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?) \n-   [Sabi ng San Francisco na gagamitin nito ang AI upang mabawasan ang bias kapag naniningil sa mga tao ng mga krimen](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime) \n-   [Tinutulungan ng AI ang mga iskolar na ibalik ang mga sinaunang Griyego na text sa mga tapyas ng bato](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)"
           ]
         },
         "f06209ef-3a44-433c-9f9f-78803376b321": {
           "name": "Pagmumuni-muni"
+        },
+        "3218da5f-4f6d-4679-bc7a-178c91cb9bb6": {
+          "description": "Maaari mong ibahagi ang mga kuwentong ito sa klase mo para matulungan silang makita kung paano makakaapekto ang AI sa hinaharap. \n\n-   [Ang Basura ng Pagkain ay Isang Malubhang Problema. Sinusubukang Lutasin Ito ng AI](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/) \n-   [Maaaring makilala ng AI tech ang mga genetic disorder mula sa mukha ng isang tao](https://mashable.com/video/ai-identify-genetic-disorders-photo/?) \n-   [Paano Idinisenyo ng AI Startup ang isang Kandidato sa Gamot sa loob lamang ng 46 na Araw](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/) - [MIT AI na tool ay maaaring mahulaan ang kanser sa suso hanggang 5 taon nang mas maaga](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/) - [Ang Army ay sumulong sa mga self-driving na kotse](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?) \n-   [Sabi ng San Francisco na gagamitin nito ang AI upang mabawasan ang bias kapag naniningil sa mga tao ng mga krimen](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime) \n-   [Tinutulungan ng AI ang mga iskolar na ibalik ang mga sinaunang Griyego na text sa mga tapyas ng bato](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)"
         },
         "fda34361-ffaa-4440-98c7-a5ab57d1cf17": {
           "name": "Panimula"
@@ -17357,13 +17517,14 @@
           "progression_name": "Video: Data ng Pagsasanay at Pagkiling"
         },
         "914c565c-fb6d-490c-a14a-b289ac56d720": {
+          "description": "**Prompt:** Paano sa palagay mo naimpluwensyahan ng data mo ng pagsasanay ang mga resultang ginawa ng AI?",
           "tips": [
             null
           ]
         },
         "4ed5db10-7aec-4ab8-802b-10ccc9710ed5": {
           "tips": [
-            null
+            "Ang mga isda sa tutorial na ito ay random na nabuo batay sa ilang paunang natukoy na mga bahagi, kabilang ang mga bibig, buntot, mata, kaliskis, at palikpik, na may random na piniling kulay, hugis, at laki ng katawan. Sa halip na tingnan ang aktwal na data ng imahe, naghahanap na ngayon ang AI ng mga pattern sa mga bahaging ito batay sa kung paano inuuri ng mag-aaral ang bawat isda. Mas malamang na lagyan ng label ang isang isda sa parehong paraan na magkakaroon ng mag-aaral kung ito ay may tugmang mga katangian."
           ]
         },
         "0644d195-c0b2-4557-9f2c-116b259fe74a": {
@@ -17379,7 +17540,7 @@
         },
         "7c5c8f29-ab7a-4891-b135-182f4222a591": {
           "tips": [
-            null
+            "Maaari mong ibahagi ang mga kuwentong ito sa klase mo para matulungan silang makita kung paano makakaapekto ang AI sa hinaharap. \n\n-   [Ang Basura ng Pagkain ay Isang Malubhang Problema. Sinusubukang Lutasin Ito ng AI](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/) \n-   [Maaaring makilala ng AI tech ang mga genetic disorder mula sa mukha ng isang tao](https://mashable.com/video/ai-identify-genetic-disorders-photo/?) \n-   [Paano Idinisenyo ng AI Startup ang isang Kandidato sa Gamot sa loob lamang ng 46 na Araw](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/) - [MIT AI na tool ay maaaring mahulaan ang kanser sa suso hanggang 5 taon nang mas maaga](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/) - [Ang Army ay sumulong sa mga self-driving na kotse](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?) \n-   [Sabi ng San Francisco na gagamitin nito ang AI upang mabawasan ang bias kapag naniningil sa mga tao ng mga krimen](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime) \n-   [Tinutulungan ng AI ang mga iskolar na ibalik ang mga sinaunang Griyego na text sa mga tapyas ng bato](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)"
           ]
         },
         "375e017e-8620-4d95-a1f5-89fda22729ac": {

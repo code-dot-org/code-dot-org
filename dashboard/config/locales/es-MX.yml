@@ -429,7 +429,7 @@ es-MX:
       educate_overview: Descripción del educador
       educate_elementary: Escuela primaria
       educate_middle: Escuela secundaria
-      educate_high: Educación media superior
+      educate_high: Preparatoria
       educate_hoc: Hora del código
       educate_partner: Colabora con nosotros
       educate_beyond: Más allá de Code.org
@@ -530,7 +530,7 @@ es-MX:
     confirm:
       remove: "¿Estás seguro de que quieres eliminar a este profesor?"
     students:
-      dashboard: Ir al panel del maestro
+      dashboard: Ir al panel del profesor
     user_not_found: No se pudo encontrar al docente.
     student_teacher_disassociated: Has abandonado la sección %{section_code} con %{teacher_name}.
     panel:
@@ -1185,6 +1185,7 @@ es-MX:
           age: Especifique una edad
           abuse_type: Describa cómo este contenido viola los términos del servicio
           abuse_detail: Proporcione detalles sobre el contenido que está informando
+          captcha: Por favor, completa el CAPTCHA para reportar este contenido.
         abusive_url: URL de los contenidos que está reportando
         abuse_type:
           question: "¿Cómo este contenido viola la %{link_start}Term de Servicio%{link_end}?"

@@ -9,12 +9,12 @@ import {
   stubRedux,
   restoreRedux
 } from '@cdo/apps/redux';
-import javalab, {setDisplayTheme} from '@cdo/apps/javalab/javalabRedux';
+import javalabView, {setDisplayTheme} from '@cdo/apps/javalab/redux/viewRedux';
 import javalabConsole, {
   openPhotoPrompter,
   closePhotoPrompter
 } from '@cdo/apps/javalab/redux/consoleRedux';
-
+import javalab from '@cdo/apps/javalab/javalabRedux';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import sinon from 'sinon';
 import PhotoSelectionView from '@cdo/apps/javalab/components/PhotoSelectionView';
@@ -24,7 +24,7 @@ describe('Java Lab Console Test', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({javalab, javalabConsole});
+    registerReducers({javalab, javalabView, javalabConsole});
     store = getStore();
   });
 

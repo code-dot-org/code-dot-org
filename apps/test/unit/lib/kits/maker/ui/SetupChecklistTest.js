@@ -17,6 +17,7 @@ import {
 import microBitReducer, {
   setMicroBitFirmataUpdatePercent
 } from '@cdo/apps/lib/kits/maker/microBitRedux';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 describe('SetupChecklist', () => {
   let checker;
@@ -157,6 +158,19 @@ describe('SetupChecklist', () => {
       expect(wrapper.find(REDETECT_BUTTON)).not.to.be.disabled;
       expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
       expect(window.console.error).not.to.have.been.called;
+    });
+
+    it('sends analytic event when a board is connected on /maker/setup page', async () => {
+      const wrapper = mount(
+        <Provider store={getStore()}>
+          <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
+        </Provider>
+      );
+      const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
+      await yieldUntilDoneDetecting(wrapper);
+      expect(sendEventSpy).to.be.calledOnce;
+      expect(sendEventSpy).calledWith('Board Type On Maker Setup Page');
+      analyticsReporter.sendEvent.restore();
     });
 
     describe('test with expected console.error', () => {
