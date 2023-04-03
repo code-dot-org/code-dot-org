@@ -952,6 +952,10 @@ export const styles = {
     width: 500
   },
 
+  modelSaveDataMessage: {
+    opacity: 0.5
+  },
+
   navigationButtonsContainer: {
     position: "relative"
   }

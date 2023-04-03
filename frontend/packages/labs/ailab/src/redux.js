@@ -203,8 +203,8 @@ export function setResultsHighlightRow(highlightRow) {
   return { type: SET_RESULTS_HIGHLIGHT_ROW, highlightRow };
 }
 
-export function setSaveStatus(status) {
-  return { type: SET_SAVE_STATUS, status };
+export function setSaveStatus(status, data) {
+  return { type: SET_SAVE_STATUS, status, data };
 }
 
 export function setHistoricResult(label, features, accuracy) {
@@ -262,6 +262,7 @@ const initialState = {
   // Possible values for saveStatus: "notStarted", "started", "success",
   // "piiProfanity", and "failure".
   saveStatus: "notStarted",
+  saveData: undefined,
   columnRefs: {},
   historicResults: [],
   showResultsDetails: false,
@@ -602,7 +603,8 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === SET_SAVE_STATUS) {
     return {
       ...state,
-      saveStatus: action.status
+      saveStatus: action.status,
+      saveData: action.data
     };
   }
   if (action.type === SET_HISTORIC_RESULT) {
