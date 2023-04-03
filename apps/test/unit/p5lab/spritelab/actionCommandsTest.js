@@ -481,6 +481,22 @@ describe('Action Commands', () => {
       };
     });
 
+    it('scales sprites in a non-circle layout', () => {
+      coreLibrary.addSprite({
+        animation: 'cat'
+      });
+
+      const spritesBeforeLayout = coreLibrary.getSpriteArray({costume: 'cat'});
+      expect(spritesBeforeLayout.length).to.equal(1);
+      expect(spritesBeforeLayout[0].scale).to.equal(1);
+
+      commands.layoutSprites.apply(coreLibrary, ['cat', 'border']);
+
+      const spritesAfterLayout = coreLibrary.getSpriteArray({costume: 'cat'});
+      expect(spritesAfterLayout.length).to.equal(1);
+      expect(spritesAfterLayout[0].scale).to.equal(0.3);
+    });
+
     it('circle layout works with 1 sprite', () => {
       coreLibrary.addSprite({
         animation: 'cat'

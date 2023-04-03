@@ -11,6 +11,12 @@ export function layoutSpriteGroup(group, layout, p5) {
     return;
   }
 
+  // Begin by resizing the entire group.
+  group.forEach(sprite => {
+    sprite.scale = 0.3;
+    adjustSpriteDepth(sprite);
+  });
+
   const minX = 20;
   const maxX = 400 - minX;
   const minY = 35;
