@@ -300,16 +300,10 @@ const styles = {
 export const UnconnectedTeacherPanel = TeacherPanel;
 export default connect(
   state => {
-    const {
-      lessonsBySectionId,
-      lockableAuthorized,
-      lockableAuthorizedLoaded
-    } = state.lessonLock;
-    const {
-      selectedSectionId,
-      sectionsAreLoaded,
-      sectionIds
-    } = state.teacherSections;
+    const {lessonsBySectionId, lockableAuthorized, lockableAuthorizedLoaded} =
+      state.lessonLock;
+    const {selectedSectionId, sectionsAreLoaded, sectionIds} =
+      state.teacherSections;
     const currentSection = lessonsBySectionId[selectedSectionId];
 
     const fullyLocked = fullyLockedLessonMapping(

@@ -119,7 +119,7 @@ const createStore = ({
   );
   if (!preload) {
     const sections = {
-      '11': {
+      11: {
         id: 11,
         name: 'test section',
         lesson_extras: true,

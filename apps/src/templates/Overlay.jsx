@@ -52,7 +52,7 @@ export default connect(
   },
   function propsFromDispatch(dispatch) {
     return {
-      hide: function() {
+      hide: function () {
         dispatch(hideOverlay());
       }
     };

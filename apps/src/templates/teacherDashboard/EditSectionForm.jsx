@@ -635,9 +635,8 @@ let defaultPropsFromState = state => ({
   assignedUnitName: assignedUnitName(state),
   assignedUnitTextToSpeechEnabled: assignedUnitTextToSpeechEnabled(state),
   localeCode: state.locales.localeCode,
-  assignedUnitRequiresVerifiedInstructor: assignedUnitRequiresVerifiedInstructor(
-    state
-  ),
+  assignedUnitRequiresVerifiedInstructor:
+    assignedUnitRequiresVerifiedInstructor(state),
   isVerifiedInstructor: state.verifiedInstructor.isVerified,
 
   // DCDO Flag - show/hide Lock Section field
@@ -646,25 +645,19 @@ let defaultPropsFromState = state => ({
 
 export const UnconnectedEditSectionForm = EditSectionForm;
 
-export const ReloadAfterEditSectionForm = connect(
-  defaultPropsFromState,
-  {
-    editSectionProperties,
-    updateHiddenScript,
-    handleSave: reloadAfterEditingSection,
-    handleClose: cancelEditingSection
-  }
-)(EditSectionForm);
+export const ReloadAfterEditSectionForm = connect(defaultPropsFromState, {
+  editSectionProperties,
+  updateHiddenScript,
+  handleSave: reloadAfterEditingSection,
+  handleClose: cancelEditingSection
+})(EditSectionForm);
 
-export default connect(
-  defaultPropsFromState,
-  {
-    editSectionProperties,
-    updateHiddenScript,
-    handleSave: finishEditingSection,
-    handleClose: cancelEditingSection
-  }
-)(EditSectionForm);
+export default connect(defaultPropsFromState, {
+  editSectionProperties,
+  updateHiddenScript,
+  handleSave: finishEditingSection,
+  handleClose: cancelEditingSection
+})(EditSectionForm);
 
 const style = {
   root: {

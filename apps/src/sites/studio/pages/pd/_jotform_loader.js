@@ -33,7 +33,7 @@ function main(context) {
  */
 function checkJotFormFrameLoaded(context) {
   return new Promise(resolve => {
-    context.JotFormFrameLoaded = function() {
+    context.JotFormFrameLoaded = function () {
       const time = performance.now();
       if (timeoutKey) {
         clearTimeout(timeoutKey);
@@ -42,7 +42,7 @@ function checkJotFormFrameLoaded(context) {
       resolve(time);
     };
 
-    const timeoutKey = setTimeout(function() {
+    const timeoutKey = setTimeout(function () {
       console.log(`JotForm failed to load in 5s`);
       resolve(false);
     }, 5000);

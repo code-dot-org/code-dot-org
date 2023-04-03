@@ -151,20 +151,14 @@ describe('VersionHistory', () => {
       finishVersionHistoryLoad();
       expect(restoreSpy()).not.to.have.been.called;
 
-      wrapper
-        .find('.img-upload')
-        .first()
-        .simulate('click');
+      wrapper.find('.img-upload').first().simulate('click');
       expect(restoreSpy()).to.have.been.calledOnce;
     });
 
     it('renders an error on failed restore', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
-      wrapper
-        .find('.img-upload')
-        .first()
-        .simulate('click');
+      wrapper.find('.img-upload').first().simulate('click');
 
       failRestoreVersion();
       expect(wrapper.text()).to.include('An error occurred.');
@@ -173,10 +167,7 @@ describe('VersionHistory', () => {
     it('reloads the page on successful restore', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
-      wrapper
-        .find('.img-upload')
-        .first()
-        .simulate('click');
+      wrapper.find('.img-upload').first().simulate('click');
       expect(utils.reload).not.to.have.been.called;
 
       finishRestoreVersion();

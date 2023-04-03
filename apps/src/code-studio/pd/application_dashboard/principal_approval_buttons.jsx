@@ -48,9 +48,7 @@ export default class PrincipalApprovalButtons extends React.Component {
   handleSendEmailClick = () => {
     const sendEmailRequest = $.ajax({
       method: 'POST',
-      url: `/api/v1/pd/application/teacher/${
-        this.props.applicationId
-      }/send_principal_approval`
+      url: `/api/v1/pd/application/teacher/${this.props.applicationId}/send_principal_approval`
     }).done(data => {
       this.props.onChange(this.props.applicationId, data.principal_approval);
       this.setState({
@@ -84,9 +82,7 @@ export default class PrincipalApprovalButtons extends React.Component {
     const changeRequirementRequest = $.ajax({
       method: 'POST',
       data: {principal_approval_not_required: !newApprovalRequiredStatus},
-      url: `/api/v1/pd/application/teacher/${
-        this.props.applicationId
-      }/change_principal_approval_requirement`
+      url: `/api/v1/pd/application/teacher/${this.props.applicationId}/change_principal_approval_requirement`
     }).done(data => {
       this.props.onChange(this.props.applicationId, data.principal_approval);
 

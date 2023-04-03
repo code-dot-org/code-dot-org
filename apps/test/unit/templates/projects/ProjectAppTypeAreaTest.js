@@ -86,12 +86,7 @@ describe('ProjectAppTypeArea', () => {
         />
       );
       expect(wrapper.find('ProjectCard')).to.have.length(12);
-      expect(
-        wrapper
-          .find('Button')
-          .first()
-          .text()
-      ).to.equal('View more');
+      expect(wrapper.find('Button').first().text()).to.equal('View more');
       expect(stubAjax).not.to.have.been.called;
     });
 

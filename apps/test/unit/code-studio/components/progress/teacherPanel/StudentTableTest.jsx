@@ -7,7 +7,10 @@ import i18n from '@cdo/locale';
 import sinon from 'sinon';
 
 const DEFAULT_PROPS = {
-  students: [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}],
+  students: [
+    {id: 1, name: 'Student 1'},
+    {id: 2, name: 'Student 2'}
+  ],
   onSelectUser: () => {},
   getSelectedUserId: () => {},
   levelsWithProgress: [],

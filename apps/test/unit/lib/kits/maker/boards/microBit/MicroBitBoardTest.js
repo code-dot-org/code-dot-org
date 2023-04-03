@@ -64,7 +64,7 @@ describe('MicroBitBoard', () => {
 
         jsInterpreter = {
           globalProperties: {},
-          createGlobalProperty: function(key, value) {
+          createGlobalProperty: function (key, value) {
             jsInterpreter.globalProperties[key] = value;
           },
           addCustomMarshalObject: sinon.spy()

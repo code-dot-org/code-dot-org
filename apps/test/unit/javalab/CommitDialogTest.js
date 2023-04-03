@@ -44,18 +44,12 @@ describe('CommitDialog test', () => {
   it('cannot commit with message', () => {
     const wrapper = renderWithProps({});
     expect(
-      wrapper
-        .find('#confirmationButton')
-        .find('FooterButton')
-        .props().disabled
+      wrapper.find('#confirmationButton').find('FooterButton').props().disabled
     ).to.be.true;
     wrapper.instance().updateNotes('commit notes');
     wrapper.update();
     expect(
-      wrapper
-        .find('#confirmationButton')
-        .find('FooterButton')
-        .props().disabled
+      wrapper.find('#confirmationButton').find('FooterButton').props().disabled
     ).to.be.false;
   });
 
@@ -64,10 +58,7 @@ describe('CommitDialog test', () => {
     const file = wrapper.find(CommitDialogFileRow).first();
 
     expect(file.text()).to.not.contain(i18n.backpackFileNameConflictWarning());
-    file
-      .find('input[type="checkbox"]')
-      .first()
-      .simulate('change');
+    file.find('input[type="checkbox"]').first().simulate('change');
     expect(file.text()).to.contain(i18n.backpackFileNameConflictWarning());
   });
 
@@ -75,10 +66,7 @@ describe('CommitDialog test', () => {
     const wrapper = renderWithProps({files: ['fileNotInBackpack.java']});
     const file = wrapper.find(CommitDialogFileRow).first();
 
-    file
-      .find('input[type="checkbox"]')
-      .first()
-      .simulate('change');
+    file.find('input[type="checkbox"]').first().simulate('change');
     expect(file.text()).to.not.contain(i18n.backpackFileNameConflictWarning());
   });
 
@@ -151,10 +139,7 @@ describe('CommitDialog test', () => {
   it('hides the backpack sesion in the dialog body if backpack disabled', () => {
     const wrapper = renderWithProps({backpackEnabled: false});
     expect(
-      wrapper
-        .find(CommitDialogBody)
-        .first()
-        .props().showSaveToBackpackSection
+      wrapper.find(CommitDialogBody).first().props().showSaveToBackpackSection
     ).to.be.false;
   });
 });
