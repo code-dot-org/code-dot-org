@@ -53,6 +53,8 @@ const EVENTS = {
   RUBRIC_LEVEL_VIEWED_EVENT: 'Rubric Level Viewed',
   TEACHER_VIEWING_STUDENT_WORK: 'Teacher Viewing Student Work',
   SUMMARY_PAGE_LOADED: 'Summary Page Loaded',
+  SUMMARY_PAGE_NEXT_LEVEL_CLICKED: 'Summary Page Next Level Clicked',
+  SUMMARY_PAGE_BACK_TO_LEVEL_CLICKED: 'Summary Page Back To Level Clicked',
 
   // Maker setup
   MAKER_SETUP_PAGE_BOARD_TYPE_EVENT: 'Board Type On Maker Setup Page',
