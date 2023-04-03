@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-24 09:47:33 UTC",
+    "serialized_at": "2023-03-31 22:30:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -11357,22 +11357,358 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "All Code",
+      "url": "/s/csd7-2023/code",
+      "key": "all_code",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csd1-2023/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csd1-2023/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csd1-2023/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
+      "key": "csd_curriculum_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Guide to Debugging",
+      "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
+      "key": "csd_guide_to_debugging",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging"
+      }
+    },
+    {
+      "name": "CSD Guide to Differentiation",
+      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
+      "key": "csd_guide_to_differentiation",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
+      "key": "csd_implementation_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_code",
+        "script.name": "csd7-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "csd7-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "csd7-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "csd7-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd7-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "csd7-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation",
+        "script.name": "csd7-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd7-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csd7-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-
+    {
+      "key": "bias",
+      "word": "Bias",
+      "definition": "When a decision favors some things and de-prioritizes or excludes others",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "key": "categorical_data",
+      "word": "Categorical Data",
+      "definition": "data that can be separated into groups",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "categorical_data"
+      }
+    },
+    {
+      "key": "classification",
+      "word": "Classification",
+      "definition": "predicting a category based on other features",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "classification"
+      }
+    },
+    {
+      "key": "ethics",
+      "word": "Ethics",
+      "definition": "guidelines for good behavior.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "ethics"
+      }
+    },
+    {
+      "key": "features",
+      "word": "Features",
+      "definition": "The inputs that a model uses to make decisions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "features"
+      }
+    },
+    {
+      "key": "label",
+      "word": "Label",
+      "definition": "the output you are trying to decide or predict with a model",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "label"
+      }
+    },
+    {
+      "key": "machine_learning",
+      "word": "Machine Learning",
+      "definition": "How computers recognize patterns and make decisions without being explicitly programmed",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "machine_learning"
+      }
+    },
+    {
+      "key": "model",
+      "word": "Model",
+      "definition": "a computer program designed to make a decision",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "model"
+      }
+    },
+    {
+      "key": "numerical_data",
+      "word": "Numerical Data",
+      "definition": "data that can be counted or measured",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "numerical_data"
+      }
+    },
+    {
+      "key": "supervised_learning",
+      "word": "Supervised Learning",
+      "definition": "When a human trains a model to learn with examples",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "supervised_learning"
+      }
+    },
+    {
+      "key": "training",
+      "word": "Training",
+      "definition": "giving examples to a model so it can learn",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "training"
+      }
+    },
+    {
+      "key": "unsupervised_learning",
+      "word": "Unsupervised Learning",
+      "definition": "Finding patterns in data that doesn't have any labels",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "unsupervised_learning"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "AI Code of Ethics",
+        "vocabulary.key": "ethics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classification Models",
+        "vocabulary.key": "categorical_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classification Models",
+        "vocabulary.key": "classification"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "vocabulary.key": "machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Cards",
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Numerical Data in AI Lab",
+        "vocabulary.key": "numerical_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "vocabulary.key": "features"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "vocabulary.key": "label"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "vocabulary.key": "model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "vocabulary.key": "supervised_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "vocabulary.key": "training"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "vocabulary.key": "unsupervised_learning"
+      }
+    }
   ],
   "lessons_programming_expressions": [
     {

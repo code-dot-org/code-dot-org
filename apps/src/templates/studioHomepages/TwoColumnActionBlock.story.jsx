@@ -32,6 +32,5 @@ export const LocalClassActionBlockExamples = LocalClassActionBlockTemplate.bind(
   {}
 );
 
-export const AdministratorResourcesActionBlockExamples = AdministratorResourcesActionBlockTemplate.bind(
-  {}
-);
+export const AdministratorResourcesActionBlockExamples =
+  AdministratorResourcesActionBlockTemplate.bind({});

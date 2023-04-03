@@ -36,14 +36,11 @@ export function UnconnectedAnimationUploadButton({
   currentUserType
 }) {
   const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
-  const [
-    isPublishedWarningModalOpen,
-    setIsPublishedWarningModalOpen
-  ] = useState(false);
+  const [isPublishedWarningModalOpen, setIsPublishedWarningModalOpen] =
+    useState(false);
   const [noPIIConfirmed, setNoPIIConfirmed] = useState(false);
-  const [restrictedShareConfirmed, setRestrictedShareConfirmed] = useState(
-    false
-  );
+  const [restrictedShareConfirmed, setRestrictedShareConfirmed] =
+    useState(false);
 
   // Some of the behavior (particularly in the confirmation dialog) is conditional
   // on whether a student or teacher is uploading.

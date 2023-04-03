@@ -8,7 +8,7 @@ import vocabulariesEditor, {
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 
-$(document).ready(function() {
+$(document).ready(function () {
   const vocabularies = getScriptData('vocabularies');
   const courseVersionData = getScriptData('courseVersionData');
   const courseName = getScriptData('courseName');

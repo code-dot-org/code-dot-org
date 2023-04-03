@@ -88,6 +88,9 @@
         "variable/coursef/2022": {
           "word": "Muutuja"
         },
+        "input/coursef/2022": {
+          "word": "Sisend"
+        },
         "internet/coursef/2022": {
           "word": "Internet"
         },
@@ -154,6 +157,9 @@
         "binary/coursec/2022": {
           "word": "Binaarne"
         },
+        "input/csd/2022": {
+          "word": "Sisend"
+        },
         "debugging/csd/2022": {
           "word": "Debugimine"
         },
@@ -197,6 +203,9 @@
         },
         "variable/coursef/2021": {
           "word": "Muutuja"
+        },
+        "input/coursef/2021": {
+          "word": "Sisend"
         },
         "internet/coursef/2021": {
           "word": "Internet"
@@ -281,6 +290,9 @@
         },
         "function/csd/2021": {
           "word": "Funktsioon"
+        },
+        "input/csd/2021": {
+          "word": "Sisend"
         },
         "copyright/csd/2021": {
           "word": "Autoriõigus"

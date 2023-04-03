@@ -76,7 +76,7 @@ export default class SmallFooter extends React.Component {
     // The first time we click anywhere, hide any open children
     $(document.body).one(
       'click',
-      function(event) {
+      function (event) {
         // menu copyright has its own click handler
         if (event.target === this.refs.menuCopyright) {
           return;
@@ -90,7 +90,7 @@ export default class SmallFooter extends React.Component {
         // Create a window during which we can't show again, so that clicking
         // on copyright doesnt immediately hide/reshow
         setTimeout(
-          function() {
+          function () {
             this.setState({menuState: MenuState.MINIMIZED});
           }.bind(this),
           200
@@ -306,13 +306,13 @@ export default class SmallFooter extends React.Component {
     const channelId = this.props.channel;
     const alreadyReportedAbuse = userAlreadyReportedAbuse(channelId);
     if (alreadyReportedAbuse) {
-      _.remove(this.props.menuItems, function(menuItem) {
+      _.remove(this.props.menuItems, function (menuItem) {
         return menuItem.key === 'report-abuse';
       });
     }
 
     const menuItemElements = this.props.menuItems.map(
-      function(item, index) {
+      function (item, index) {
         return (
           <li
             key={index}

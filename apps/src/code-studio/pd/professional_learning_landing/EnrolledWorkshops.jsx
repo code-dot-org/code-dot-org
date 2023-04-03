@@ -35,9 +35,7 @@ class EnrolledWorkshopsTable extends React.Component {
   };
 
   cancelEnrollment = event => {
-    window.location = `/pd/workshop_enrollment/${
-      this.state.enrollmentCodeToCancel
-    }/cancel`;
+    window.location = `/pd/workshop_enrollment/${this.state.enrollmentCodeToCancel}/cancel`;
   };
 
   dismissCancelModal = event => {

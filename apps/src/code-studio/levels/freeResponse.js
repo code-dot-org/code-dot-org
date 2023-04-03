@@ -9,7 +9,7 @@ export default class FreeResponse {
     // Levelbuilder booleans are undefined, 'true', or 'false'.
     this.optional = [true, 'true'].includes(optional);
 
-    $(document).ready(function() {
+    $(document).ready(function () {
       var textarea = $(`textarea#level_${levelId}.response`);
       if (!textarea.val()) {
         const lastAttempt = sourceForLevel(
@@ -20,10 +20,10 @@ export default class FreeResponse {
           textarea.val(lastAttempt);
         }
       }
-      textarea.blur(function() {
+      textarea.blur(function () {
         onAnswerChanged(levelId, true);
       });
-      textarea.on('input', null, null, function() {
+      textarea.on('input', null, null, function () {
         onAnswerChanged(levelId, false);
       });
 

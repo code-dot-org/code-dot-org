@@ -10,12 +10,12 @@ const ResultsHandler = require('@cdo/apps/maze/results/resultsHandler');
 
 import {MazeController} from '@code-dot-org/maze';
 
-const createResultsHandlerForSubtype = require('@cdo/apps/maze/results/utils')
-  .createResultsHandlerForSubtype;
+const createResultsHandlerForSubtype =
+  require('@cdo/apps/maze/results/utils').createResultsHandlerForSubtype;
 
-describe('ResultsHandlers', function() {
-  describe('createResultsHandlerForSubtype util', function() {
-    it('can select the correct subtype handler for a given controller', function() {
+describe('ResultsHandlers', function () {
+  describe('createResultsHandlerForSubtype util', function () {
+    it('can select the correct subtype handler for a given controller', function () {
       const skinToExpected = {
         farmer: FarmerHandler,
         farmer_night: FarmerHandler,

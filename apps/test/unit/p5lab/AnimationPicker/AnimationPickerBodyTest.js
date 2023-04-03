@@ -11,9 +11,9 @@ import {CostumeCategories} from '@cdo/apps/p5lab/spritelab/constants';
 import {PICKER_TYPE} from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker';
 import AnimationUploadButton from '@cdo/apps/p5lab/AnimationPicker/AnimationUploadButton';
 
-const emptyFunction = function() {};
+const emptyFunction = function () {};
 
-describe('AnimationPickerBody', function() {
+describe('AnimationPickerBody', function () {
   const defaultProps = {
     onDrawYourOwnClick: emptyFunction,
     onPickLibraryAnimation: emptyFunction,
@@ -36,8 +36,8 @@ describe('AnimationPickerBody', function() {
     shouldWarnOnAnimationUpload: false
   };
 
-  describe('upload warning', function() {
-    it('shows an upload warning if the upload button is visible', function() {
+  describe('upload warning', function () {
+    it('shows an upload warning if the upload button is visible', function () {
       const body = shallow(
         <AnimationPickerBody {...defaultProps} hideUploadOption={false} />
       );
@@ -48,7 +48,7 @@ describe('AnimationPickerBody', function() {
       );
     });
 
-    it('does not show an upload warning if upload button is hidden', function() {
+    it('does not show an upload warning if upload button is hidden', function () {
       const body = shallow(
         <AnimationPickerBody {...defaultProps} hideUploadOption={true} />
       );
@@ -85,7 +85,7 @@ describe('AnimationPickerBody', function() {
     });
   });
   describe('handleBackgrounds', () => {
-    it('does not show backgrounds if hideBackgrounds', function() {
+    it('does not show backgrounds if hideBackgrounds', function () {
       const body = shallow(
         <AnimationPickerBody {...defaultProps} hideBackgrounds={true} />
       );
@@ -95,7 +95,7 @@ describe('AnimationPickerBody', function() {
       expect(uploadButton.length).to.equal(1);
     });
 
-    it('does shows backgrounds if not hideBackgrounds', function() {
+    it('does shows backgrounds if not hideBackgrounds', function () {
       const body = shallow(<AnimationPickerBody {...defaultProps} />);
       const pickerItems = body.find(AnimationPickerListItem);
       expect(pickerItems.length).to.equal(4);
@@ -103,7 +103,7 @@ describe('AnimationPickerBody', function() {
       expect(uploadButton.length).to.equal(1);
     });
 
-    it('does not show upload button if hideUploadButton', function() {
+    it('does not show upload button if hideUploadButton', function () {
       const body = shallow(
         <AnimationPickerBody {...defaultProps} hideUploadOption={true} />
       );
@@ -111,7 +111,7 @@ describe('AnimationPickerBody', function() {
       expect(uploadButton.length).to.equal(0);
     });
 
-    it('only shows backgrounds if defaultQuery has categoryQuery backgrounds', function() {
+    it('only shows backgrounds if defaultQuery has categoryQuery backgrounds', function () {
       const body = shallow(
         <AnimationPickerBody
           {...defaultProps}

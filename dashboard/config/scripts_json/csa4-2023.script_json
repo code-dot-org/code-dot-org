@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-10 18:50:09 UTC",
+    "serialized_at": "2023-03-31 15:21:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3090,7 +3090,7 @@
       "key": "26e76e32-e51c-4942-b9fe-9e86848e2972",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the program uses `&&` and `||` operators in the conditions and share ideas about their functionalities. Students may wonder how these are similar and different from using nested `if` statements."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the program uses `&&` operator in the condition and share ideas about its functionality. Students may wonder how this is similar and different from using nested `if` statements."
       },
       "seeding_key": {
         "activity_section.key": "26e76e32-e51c-4942-b9fe-9e86848e2972",
@@ -6013,14 +6013,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U4L8-L5_2023"
+          "CSA U4L8-L5 Finding Patterns"
         ],
         "progression": "Finding Patterns"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U4L8-L5_2023"
+          "CSA U4L8-L5 Finding Patterns"
         ],
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-2",
@@ -6028,7 +6028,7 @@
         "activity_section.key": "443f335b-a192-4c99-a18e-d273c242e113"
       },
       "level_keys": [
-        "CSA U4L8-L5_2023"
+        "CSA U4L8-L5 Finding Patterns"
       ]
     },
     {
@@ -7008,9 +7008,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U4L8-L5_2023",
+        "level.key": "CSA U4L8-L5 Finding Patterns",
         "script_level.level_keys": [
-          "CSA U4L8-L5_2023"
+          "CSA U4L8-L5 Finding Patterns"
         ],
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-2",
@@ -7475,6 +7475,39 @@
       },
       "seeding_key": {
         "resource.key": "aliasing"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csa4-2023/resources",
+      "key": "all_resources_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_4"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa4-2023/standards",
+      "key": "all_standards_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_4"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa4-2023/vocab",
+      "key": "all_vocabulary_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4"
       }
     },
     {
@@ -8000,6 +8033,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_4_guide"
+      }
+    },
+    {
+      "name": "Unit 4 Overview",
+      "url": "https://docs.google.com/document/d/19RBir7NF1OsqWqeqNGYh7P_OdA_LJYgRKW4yC3NrqNo/edit?usp=share_link",
+      "key": "unit_4_overview",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_4_overview"
       }
     },
     {
@@ -8555,7 +8600,42 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_4",
+        "script.name": "csa4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_4",
+        "script.name": "csa4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4",
+        "script.name": "csa4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_4_guide",
+        "script.name": "csa4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_4_overview",
+        "script.name": "csa4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_4_study_guide",
+        "script.name": "csa4-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 

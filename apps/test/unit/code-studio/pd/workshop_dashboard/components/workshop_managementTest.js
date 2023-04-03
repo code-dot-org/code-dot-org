@@ -46,11 +46,7 @@ describe('WorkshopManagement', () => {
   const findButtons = () => workshopManagement.find(Button);
   const findButtonWithText = text => {
     const filtered = findButtons().filterWhere(
-      b =>
-        b
-          .children()
-          .first()
-          .text() === text
+      b => b.children().first().text() === text
     );
     expect(filtered).to.have.length(1);
     return filtered.first();

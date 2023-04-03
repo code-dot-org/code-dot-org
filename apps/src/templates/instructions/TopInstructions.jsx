@@ -169,12 +169,8 @@ class TopInstructions extends Component {
    * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
-    const {
-      user,
-      serverLevelId,
-      serverScriptId,
-      dynamicInstructions
-    } = this.props;
+    const {user, serverLevelId, serverScriptId, dynamicInstructions} =
+      this.props;
     const {studentId} = this.state;
 
     window.addEventListener('resize', this.adjustMaxNeededHeight);
@@ -499,7 +495,8 @@ class TopInstructions extends Component {
       hasContainedLevels,
       isEmbedView,
       isBlockly,
-      noInstructionsWhenCollapsed
+      noInstructionsWhenCollapsed,
+      isOldPurpleColorHeader
     } = this.props;
     const {teacherViewingStudentWork, tabSelected} = this.state;
 
@@ -546,6 +543,8 @@ class TopInstructions extends Component {
             instructions={longInstructions}
             onResize={this.adjustMaxNeededHeight}
             inTopPane
+            isImmersiveButtonHasRoundBorders
+            isLegacyImmersiveStyles={isOldPurpleColorHeader}
             isBlockly={isBlockly}
             noInstructionsWhenCollapsed={noInstructionsWhenCollapsed}
           />

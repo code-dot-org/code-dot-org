@@ -357,8 +357,8 @@ export default {
   },
 
   exportApp(appName, code, levelHtml) {
-    return this.exportAppToZip(appName, code, levelHtml).then(function(zip) {
-      zip.generateAsync({type: 'blob'}).then(function(blob) {
+    return this.exportAppToZip(appName, code, levelHtml).then(function (zip) {
+      zip.generateAsync({type: 'blob'}).then(function (blob) {
         saveAs(blob, appName + '.zip');
       });
     });

@@ -23,21 +23,21 @@ const limitedColours = [
 const customInputTypes = {
   spritePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      block.getVars = function() {
+      block.getVars = function () {
         return {
           [Blockly.BlockValueType.SPRITE]: [
             block.getFieldValue(inputConfig.name)
           ]
         };
       };
-      block.renameVar = function(oldName, newName) {
+      block.renameVar = function (oldName, newName) {
         if (
           Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
         ) {
           block.setTitleValue(newName, inputConfig.name);
         }
       };
-      block.removeVar = function(oldName) {
+      block.removeVar = function (oldName) {
         if (
           Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
         ) {
@@ -45,7 +45,7 @@ const customInputTypes = {
         }
       };
       block.superSetTitleValue = block.setTitleValue;
-      block.setTitleValue = function(newValue, name) {
+      block.setTitleValue = function (newValue, name) {
         if (name === inputConfig.name && block.blockSpace.isFlyout) {
           newValue = Blockly.Variables.generateUniqueName(newValue);
         }
@@ -117,7 +117,7 @@ export default {
 
     Blockly.Blocks.sprite_variables_get = {
       // Variable getter.
-      init: function() {
+      init: function () {
         var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
@@ -140,19 +140,19 @@ export default {
         this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
       },
-      getVars: function() {
+      getVars: function () {
         return Blockly.Variables.getVars.bind(this)(
           Blockly.BlockValueType.SPRITE
         );
       },
-      renameVar: function(oldName, newName) {
+      renameVar: function (oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
           this.setTitleValue(newName, 'VAR');
         }
       },
       removeVar: Blockly.Blocks.variables_get.removeVar
     };
-    generator.sprite_variables_get = function() {
+    generator.sprite_variables_get = function () {
       return [
         `'${this.getFieldValue('VAR')}'`,
         Blockly.JavaScript.ORDER_ATOMIC
@@ -281,7 +281,7 @@ export default {
       }
     };
 
-    generator.gamelab_behavior_get = function() {
+    generator.gamelab_behavior_get = function () {
       const name = Blockly.JavaScript.variableDB_.getName(
         this.getFieldValue('VAR'),
         Blockly.Procedures.NAME_TYPE
@@ -301,8 +301,8 @@ export default {
       ];
     };
 
-    Blockly.Blocks.behavior_definition = Blockly.Block.createProcedureDefinitionBlock(
-      {
+    Blockly.Blocks.behavior_definition =
+      Blockly.Block.createProcedureDefinitionBlock({
         initPostScript(block) {
           block.setHSV(136, 0.84, 0.8);
           block.parameterNames_ = ['this sprite'];
@@ -316,8 +316,7 @@ export default {
           },
           callType_: 'gamelab_behavior_get'
         }
-      }
-    );
+      });
 
     generator.behavior_definition = generator.procedures_defnoreturn;
 

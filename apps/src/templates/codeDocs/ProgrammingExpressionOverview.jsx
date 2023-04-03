@@ -165,7 +165,8 @@ export default function ProgrammingExpressionOverview({
           <h2>{i18n.additionalInformationHeader()}</h2>
           <EnhancedSafeMarkdown
             markdown={i18n.additionalInformationText({
-              externalDocumentationUrl: programmingExpression.externalDocumentation.trim()
+              externalDocumentationUrl:
+                programmingExpression.externalDocumentation.trim()
             })}
             className="docs-pages"
           />

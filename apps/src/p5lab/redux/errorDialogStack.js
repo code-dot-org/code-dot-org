@@ -28,7 +28,7 @@ exports.default = function reducer(state, action) {
  * @param {!string} message
  * @returns {{type: string, message: string, error_type: string, error_cause: string}}
  */
-exports.reportError = function(message, error_type, error_cause) {
+exports.reportError = function (message, error_type, error_cause) {
   return {
     type: REPORT_ERROR,
     message: message,
@@ -41,7 +41,7 @@ exports.reportError = function(message, error_type, error_cause) {
  * Remove the top (first) error from the stack.
  * @returns {{type: string}}
  */
-exports.dismissError = function() {
+exports.dismissError = function () {
   return {
     type: DISMISS_ERROR
   };

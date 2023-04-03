@@ -32,8 +32,8 @@ describe('Survey Rollup Table Foorm', () => {
   };
 
   const sampleFacilitatorRollup = {
-    '1': sampleRollupAverages1,
-    '2': sampleRollupAverages2
+    1: sampleRollupAverages1,
+    2: sampleRollupAverages2
   };
 
   const sampleQuestions = {
@@ -63,7 +63,7 @@ describe('Survey Rollup Table Foorm', () => {
     questions: sampleQuestions
   };
 
-  const sampleFacilitators = {'1': 'Facilitator 1', '2': 'Facilitator 2'};
+  const sampleFacilitators = {1: 'Facilitator 1', 2: 'Facilitator 2'};
 
   it('renders rows and columns correctly', () => {
     const rollupTable = mount(
@@ -91,16 +91,10 @@ describe('Survey Rollup Table Foorm', () => {
     const bodyRows = rollupTable.find('BodyRow');
     expect(bodyRows).to.have.length(7);
 
-    const totalResponsesForThisWorkshop = bodyRows
-      .first()
-      .find('td')
-      .at(1);
+    const totalResponsesForThisWorkshop = bodyRows.first().find('td').at(1);
     expect(totalResponsesForThisWorkshop.text()).to.equal('10');
 
-    const perFacilitatorAverage = bodyRows
-      .at(1)
-      .find('td')
-      .at(3);
+    const perFacilitatorAverage = bodyRows.at(1).find('td').at(3);
     expect(perFacilitatorAverage.text()).to.equal('4.2 / 7');
   });
 });

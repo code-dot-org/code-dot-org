@@ -1610,3 +1610,19 @@ kn:
               display_name: ಅಧ್ಯಾಯ 1
             lessonGroup-4:
               display_name: ಅಧ್ಯಾಯ 2
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಆಪ್‌ ಲ್ಯಾಬ್‌ಗೆ ಪರಿಚಯ
+            lessonGroup-3:
+              display_name: ಅಧ್ಯಾಯ 1
+            lessonGroup-4:
+              display_name: ಅಧ್ಯಾಯ 2
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಅಧ್ಯಾಯ 1
+            lessonGroup-3:
+              display_name: ಆಪ್‌ ಲ್ಯಾಬ್‌ಗೆ ಪರಿಚಯ
+            lessonGroup-4:
+              display_name: ಅಧ್ಯಾಯ 2

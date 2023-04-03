@@ -1569,6 +1569,10 @@ ca:
               display_name: Bucles
             lessonGroup-5:
               display_name: Projecte
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Avaluacions
         tess-testing-problem-solving-2023:
           title: Resolució de problemes
         testing-focus-on-creativity1:

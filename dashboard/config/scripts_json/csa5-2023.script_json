@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-28 02:33:49 UTC",
+    "serialized_at": "2023-03-31 21:39:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -234,6 +234,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "assessment": true,
         "overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, students use the skills they have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. Students choose the topic for their personal narrative and the image filters or manipulation techniques they want to use. After brainstorming and planning, students develop their programs to create their personal narrative collage or animation.",
         "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-personal-narrative-project/36348/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, you use the skills you have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. You choose the topic for your personal narrative and the image filters or manipulation techniques you want to use. After brainstorming and planning, you develop your program to create your personal narrative collage or animation."
@@ -289,6 +290,7 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "assessment": true,
         "overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, students use the skills they have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. Students choose the topic for their personal narrative and the image filters or manipulation techniques they want to use. After brainstorming and planning, students develop their programs to create their personal narrative collage or animation.",
         "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-personal-narrative-project/36348/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, you use the skills you have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. You choose the topic for your personal narrative and the image filters or manipulation techniques you want to use. After brainstorming and planning, you develop your program to create your personal narrative collage or animation."
@@ -2249,7 +2251,7 @@
       "key": "74520888-cd09-4566-a00a-b9e57d93e1a5",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n**Do This:** Click through the animated slides to introduce the `Image` and `Pixel` classes:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `Image` class and its methods\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `Pixel` class and its methods\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce that the `Image` class has a `Pixel` object as an instance variable and how to declare object references as instance variables in a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate getting a pixel from an image.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using object references as parameters to a method or constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that when the return expression is a reference to an object, a copy of that reference is returned, not a copy of the object."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n**Do This:** Click through the animated slides to introduce the `Image` and `Pixel` classes:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `Image` class and its methods\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `Pixel` class and its methods\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate getting a pixel from an image.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using object references as parameters to a method or constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that when the return expression is a reference to an object, a copy of that reference is returned, not a copy of the object."
       },
       "seeding_key": {
         "activity_section.key": "74520888-cd09-4566-a00a-b9e57d93e1a5",
@@ -2792,7 +2794,7 @@
       }
     },
     {
-      "key": "c4d472e3-4a6f-499c-8b67-ed4c981e3bfc",
+      "key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0",
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 through 5. Students complete a Check for Understanding, then continue to Level 3 to implement their algorithm. On Levels 4 and 5, students complete a choice level to create an image filter.",
@@ -2805,7 +2807,7 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "c4d472e3-4a6f-499c-8b67-ed4c981e3bfc",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0",
         "lesson_activity.key": "b8ba9b15-96d7-4f4e-ac70-ca357026029a"
       }
     },
@@ -3022,7 +3024,7 @@
       "key": "b37b6c51-2920-4506-ba28-328a8daeccad",
       "position": 8,
       "properties": {
-        "description": "**Do This:** Show the examples of edge detection:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Detect abnormalities, such as tumors, in the body\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Detect curves in fingertips for fingerprint recognition\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Detect other vehicles and people on the road\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Detect objects while navigating a room\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "**Do This:** Show the examples of edge detection:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Detect abnormalities, such as tumors, in the body\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Detect curves in fingertips for fingerprint recognition\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Detect other vehicles and people on the road\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Image Manipulations"
       },
       "seeding_key": {
@@ -3225,7 +3227,8 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Personal Narrative Good Project.",
         "duration": "15",
-        "name": "Development"
+        "name": "Development",
+        "progression_name": "Personal Narrative Project"
       },
       "seeding_key": {
         "activity_section.key": "fea2ec89-5d9f-4de2-9769-c82126182c57",
@@ -3430,7 +3433,7 @@
       "key": "d9a83b2d-a0c5-49f4-ad23-54e7bb3ac4aa",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the program requirements and rubric on the Personal Narrative Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students create a prioritized list of upgrades, changes, and things they still need to complete on the Personal Narrative Project Planning Guide based on the feedback they received from the code review.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students create a prioritized list of upgrades, changes, and things they still need to complete on the Personal Narrative Project Planning Guide based on the feedback they received from the code review.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3887,7 +3890,8 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Personal Narrative Good Project.",
         "duration": "20",
-        "name": "Development"
+        "name": "Development",
+        "progression_name": "Personal Narrative Project"
       },
       "seeding_key": {
         "activity_section.key": "749a02be-2608-4aa5-b4db-957f3acc283b",
@@ -3972,6 +3976,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L1_2023"
+        ],
         "progression": "Predict and Run: 2D Arrays"
       },
       "bonus": false,
@@ -3994,6 +4001,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L2_2023"
+        ],
         "progression": "Skill Building: Creating 2D Arrays"
       },
       "bonus": false,
@@ -4016,6 +4026,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L3_2023"
+        ],
         "progression": "Skill Building: Creating 2D Arrays"
       },
       "bonus": false,
@@ -4038,6 +4051,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L4_2023"
+        ],
         "progression": "Skill Building: Using Initializer Lists"
       },
       "bonus": false,
@@ -4060,6 +4076,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L5_2023"
+        ],
         "progression": "Skill Building: Using Initializer Lists"
       },
       "bonus": false,
@@ -4082,6 +4101,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L6_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4104,6 +4126,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L1_2023"
+        ],
         "progression": "Predict and Run: 2D Array Elements"
       },
       "bonus": false,
@@ -4126,6 +4151,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L2_2023"
+        ],
         "progression": "Investigate and Modify: 2D Array Elements"
       },
       "bonus": false,
@@ -4148,6 +4176,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L3_2023"
+        ],
         "progression": "Investigate and Modify: 2D Array Elements"
       },
       "bonus": false,
@@ -4170,6 +4201,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L4_2023"
+        ],
         "progression": "Investigate and Modify: 2D Array Elements"
       },
       "bonus": false,
@@ -4192,6 +4226,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L5_2023"
+        ],
         "progression": "Practice: 2D Array Elements"
       },
       "bonus": false,
@@ -4214,6 +4251,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L6_2023"
+        ],
         "progression": "Practice: 2D Array Elements"
       },
       "bonus": false,
@@ -4236,6 +4276,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L7_2023"
+        ],
         "progression": "Practice: 2D Array Elements"
       },
       "bonus": false,
@@ -4258,6 +4301,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L8_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4280,6 +4326,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L1_2023"
+        ],
         "progression": "Predict and Run: Nested Loops and 2D Arrays"
       },
       "bonus": false,
@@ -4302,6 +4351,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L2_2023"
+        ],
         "progression": "Practice: Traversing 2D Arrays"
       },
       "bonus": false,
@@ -4324,6 +4376,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L3_2023"
+        ],
         "progression": "Practice: Traversing 2D Arrays"
       },
       "bonus": false,
@@ -4346,6 +4401,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L4_2023"
+        ],
         "progression": "Practice: Traversing 2D Arrays"
       },
       "bonus": false,
@@ -4368,6 +4426,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L5_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4390,6 +4451,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L4_2023"
+        ],
         "progression": "Predict and Run: Column-Major Traversal"
       },
       "bonus": false,
@@ -4412,6 +4476,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L2_2023"
+        ],
         "progression": "Practice: Column-Major Traversal"
       },
       "bonus": false,
@@ -4434,6 +4501,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L3_2023"
+        ],
         "progression": "Practice: Column-Major Traversal"
       },
       "bonus": false,
@@ -4456,6 +4526,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L4choice_2023"
+        ],
         "progression": "Practice: Column-Major Traversal"
       },
       "bonus": false,
@@ -4478,6 +4551,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L5_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4500,6 +4576,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L1_2023"
+        ],
         "progression": "Predict and Run: Enhanced For Loops and Objects"
       },
       "bonus": false,
@@ -4522,6 +4601,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L2_2023"
+        ],
         "progression": "Investigate and Modify: Enhanced For Loops"
       },
       "bonus": false,
@@ -4544,6 +4626,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L3_2023"
+        ],
         "progression": "Investigate and Modify: Enhanced For Loops"
       },
       "bonus": false,
@@ -4566,6 +4651,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L4_2023"
+        ],
         "progression": "Investigate and Modify: Enhanced For Loops"
       },
       "bonus": false,
@@ -4588,6 +4676,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L5_2023"
+        ],
         "progression": "Practice: Enhanced For Loops and 2D Arrays"
       },
       "bonus": false,
@@ -4610,6 +4701,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L6_2023"
+        ],
         "progression": "Practice: Enhanced For Loops and 2D Arrays"
       },
       "bonus": false,
@@ -4632,6 +4726,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L7_2023"
+        ],
         "progression": "Practice: Enhanced For Loops and 2D Arrays"
       },
       "bonus": false,
@@ -4654,6 +4751,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L8_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4676,6 +4776,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L1_2023"
+        ],
         "progression": "Predict and Run: Image Filters"
       },
       "bonus": false,
@@ -4698,6 +4801,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L2_2023"
+        ],
         "progression": "Investigate and Modify: Image Filters"
       },
       "bonus": false,
@@ -4720,6 +4826,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L3_2023"
+        ],
         "progression": "Investigate and Modify: Image Filters"
       },
       "bonus": false,
@@ -4742,6 +4851,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L4_2023"
+        ],
         "progression": "Investigate and Modify: Image Filters"
       },
       "bonus": false,
@@ -4764,6 +4876,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L5_2023"
+        ],
         "progression": "Practice: Creating Image Filters"
       },
       "bonus": false,
@@ -4786,6 +4901,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L6_2023"
+        ],
         "progression": "Practice: Creating Image Filters"
       },
       "bonus": false,
@@ -4808,6 +4926,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L7_2023"
+        ],
         "progression": "Practice: Creating Image Filters"
       },
       "bonus": false,
@@ -4830,6 +4951,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L8_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4852,6 +4976,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L1_2023"
+        ],
         "progression": "Predict and Run: The indexOf() Method"
       },
       "bonus": false,
@@ -4874,12 +5001,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L2_2023"
+        ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U5L8-L2_2023"
+          "CSA U5L7-L2_2023"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -4887,7 +5017,7 @@
         "activity_section.key": "be8d31f1-dba8-463d-85f2-e40042aa18b0"
       },
       "level_keys": [
-        "CSA U5L8-L2_2023"
+        "CSA U5L7-L2_2023"
       ]
     },
     {
@@ -4896,12 +5026,15 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L3_2023"
+        ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U5L8-L3_2023"
+          "CSA U5L7-L3_2023"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -4909,7 +5042,7 @@
         "activity_section.key": "be8d31f1-dba8-463d-85f2-e40042aa18b0"
       },
       "level_keys": [
-        "CSA U5L8-L3_2023"
+        "CSA U5L7-L3_2023"
       ]
     },
     {
@@ -4918,12 +5051,15 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L4_2023"
+        ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U5L8-L4_2023"
+          "CSA U5L7-L4_2023"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -4931,7 +5067,7 @@
         "activity_section.key": "be8d31f1-dba8-463d-85f2-e40042aa18b0"
       },
       "level_keys": [
-        "CSA U5L8-L4_2023"
+        "CSA U5L7-L4_2023"
       ]
     },
     {
@@ -4940,6 +5076,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L5_2023"
+        ],
         "progression": "Skill Building: The indexOf() Method"
       },
       "bonus": false,
@@ -4962,6 +5101,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L6_2023"
+        ],
         "progression": "Practice: 2D Array Algorithms"
       },
       "bonus": false,
@@ -4984,6 +5126,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L7_2023"
+        ],
         "progression": "Practice: 2D Array Algorithms"
       },
       "bonus": false,
@@ -5006,6 +5151,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L8_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5028,6 +5176,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L1_2023"
+        ],
         "progression": "Predict and Run: Image Filters"
       },
       "bonus": false,
@@ -5046,10 +5197,113 @@
     },
     {
       "chapter": 50,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U5L8-L2_2023"
+        ],
+        "progression": "Practice: Image Filters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L8-L2_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      },
+      "level_keys": [
+        "CSA U5L8-L2_2023"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U5L8-L3_2023"
+        ],
+        "progression": "Practice: Image Filters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L8-L3_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      },
+      "level_keys": [
+        "CSA U5L8-L3_2023"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U5L8-L4_2023"
+        ],
+        "progression": "Practice: Image Filters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L8-L4_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      },
+      "level_keys": [
+        "CSA U5L8-L4_2023"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U5L8-L5_2023"
+        ],
+        "progression": "Practice: Image Filters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L8-L5_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      },
+      "level_keys": [
+        "CSA U5L8-L5_2023"
+      ]
+    },
+    {
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L1_2023"
+        ],
         "progression": "Investigate and Modify: Image Manipulations"
       },
       "bonus": false,
@@ -5067,11 +5321,14 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L2_2023"
+        ],
         "progression": "Investigate and Modify: Image Manipulations"
       },
       "bonus": false,
@@ -5089,11 +5346,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L3_2023"
+        ],
         "progression": "Investigate and Modify: Image Manipulations"
       },
       "bonus": false,
@@ -5111,11 +5371,14 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L4_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5133,7 +5396,29 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 58,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Personal Narrative Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5 Personal Narrative Project_2023"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023",
+        "activity_section.key": "fea2ec89-5d9f-4de2-9769-c82126182c57"
+      },
+      "level_keys": [
+        "CSA U5 Personal Narrative Project_2023"
+      ]
+    },
+    {
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5155,6 +5440,28 @@
       },
       "level_keys": [
         "CSA Unit 5 Assessment_2023"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Personal Narrative Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5 Personal Narrative Project 1-Day_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2023",
+        "activity_section.key": "749a02be-2608-4aa5-b4db-957f3acc283b"
+      },
+      "level_keys": [
+        "CSA U5 Personal Narrative Project 1-Day_2023"
       ]
     }
   ],
@@ -5653,9 +5960,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U5L8-L2_2023",
+        "level.key": "CSA U5L7-L2_2023",
         "script_level.level_keys": [
-          "CSA U5L8-L2_2023"
+          "CSA U5L7-L2_2023"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5665,9 +5972,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U5L8-L3_2023",
+        "level.key": "CSA U5L7-L3_2023",
         "script_level.level_keys": [
-          "CSA U5L8-L3_2023"
+          "CSA U5L7-L3_2023"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5677,9 +5984,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U5L8-L4_2023",
+        "level.key": "CSA U5L7-L4_2023",
         "script_level.level_keys": [
-          "CSA U5L8-L4_2023"
+          "CSA U5L7-L4_2023"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5749,6 +6056,54 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U5L8-L2_2023",
+        "script_level.level_keys": [
+          "CSA U5L8-L2_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U5L8-L3_2023",
+        "script_level.level_keys": [
+          "CSA U5L8-L3_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U5L8-L4_2023",
+        "script_level.level_keys": [
+          "CSA U5L8-L4_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U5L8-L5_2023",
+        "script_level.level_keys": [
+          "CSA U5L8-L5_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U5L9-L1_2023",
         "script_level.level_keys": [
           "CSA U5L9-L1_2023"
@@ -5797,6 +6152,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U5 Personal Narrative Project_2023",
+        "script_level.level_keys": [
+          "CSA U5 Personal Narrative Project_2023"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023",
+        "activity_section.key": "fea2ec89-5d9f-4de2-9769-c82126182c57"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Unit 5 Assessment_2023",
         "script_level.level_keys": [
           "CSA Unit 5 Assessment_2023"
@@ -5805,6 +6172,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa5-2023",
         "activity_section.key": "e659d8a5-512e-423f-8819-65df3768a163"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U5 Personal Narrative Project 1-Day_2023",
+        "script_level.level_keys": [
+          "CSA U5 Personal Narrative Project 1-Day_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2023",
+        "activity_section.key": "749a02be-2608-4aa5-b4db-957f3acc283b"
       }
     }
   ],
@@ -5867,6 +6246,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_grayscale_images"
+      }
+    },
+    {
+      "name": "[KEY] GrayscaleImage FRQ",
+      "url": "https://docs.google.com/document/d/1w0KwiyzaOASR93LCJOTb-kdLmdFsVPIaGcCNQsWBnhE/edit?usp=share_link",
+      "key": "_key_grayscaleimage_frq",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_grayscaleimage_frq"
       }
     },
     {
@@ -6026,6 +6417,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa5-2023/resources",
+      "key": "all_resources_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_5"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa5-2023/standards",
+      "key": "all_standards_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_5"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa5-2023/vocab",
+      "key": "all_vocabulary_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_5"
+      }
+    },
+    {
       "name": "Column-Major Traversal",
       "url": "https://docs.google.com/presentation/d/1ouaFfonE710Whme4LGVAqkV6eQ1FdkIe6GaSa-Dxqvs/edit?usp=sharing",
       "key": "column-major_traversal",
@@ -6100,6 +6524,19 @@
       }
     },
     {
+      "name": "Grayscale Image FRQ",
+      "url": "https://docs.google.com/document/d/1y0oaPcEWngb_OeXQB0uSHPCnRqCWZrBa_MXu0fywuV0/edit?usp=share_link",
+      "key": "grayscale_image_frq",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "grayscale_image_frq"
+      }
+    },
+    {
       "name": "Grayscale Images",
       "url": "https://docs.google.com/document/d/1U7KadRIYqDHg3vEaN5Qh1UwjRCKGdrMc_PfzCfoxl4s/edit?usp=sharing",
       "key": "grayscale_images",
@@ -6110,6 +6547,31 @@
       },
       "seeding_key": {
         "resource.key": "grayscale_images"
+      }
+    },
+    {
+      "name": "GrayscaleImage FRQ",
+      "url": "https://docs.google.com/presentation/d/1ghDXil7SfcIMKm6EZgqxGxOdkvkKdqkgw9rNtkINIbA/edit?usp=sharing",
+      "key": "grayscaleimage_frq",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "grayscaleimage_frq"
+      }
+    },
+    {
+      "name": "GrayscaleImage FRQ Scoring Guidelines",
+      "url": "https://docs.google.com/document/d/1o0aAiQH1ZFOyMAfVtMt2GV7YbdZYnir999wl095DwXw/edit?usp=share_link",
+      "key": "grayscaleimage_frq_scoring_guidelines",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "grayscaleimage_frq_scoring_guidelines"
       }
     },
     {
@@ -6158,6 +6620,31 @@
       },
       "seeding_key": {
         "resource.key": "modifying_images"
+      }
+    },
+    {
+      "name": "Personal Narrative Project",
+      "url": "https://docs.google.com/presentation/d/1DxA0rXABD7yW_hpbA4hDeP0zj3qvRtjOrFY-c4mKJJQ/edit?usp=sharing",
+      "key": "personal_narrative_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "personal_narrative_project"
+      }
+    },
+    {
+      "name": "Personal Narrative Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1RFAWC08LaOsSdEiTToPw78c9bcGpR-rsYnzgM4nUp9k/edit?usp=sharing",
+      "key": "personal_narrative_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "personal_narrative_project_planning_guide"
       }
     },
     {
@@ -6415,6 +6902,18 @@
       }
     },
     {
+      "name": "Unit 5 Overview",
+      "url": "https://docs.google.com/document/d/1A22tMFqIWkq0445i0lKpueZYCu-6RKN9XeBkt5f7TM0/edit?usp=share_link",
+      "key": "unit_5_overview",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_overview"
+      }
+    },
+    {
       "name": "Unit 5 Study Guide",
       "url": "https://docs.google.com/document/d/1XsASO5aI0HzNApY9_21rgkgdi48SVzjbFUZiv9LI_Fw/edit?usp=sharing",
       "key": "unit_5_study_guide",
@@ -6507,6 +7006,42 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "unit_5_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "personal_narrative_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "personal_narrative_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_grayscaleimage_frq"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "grayscale_image_frq"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "grayscaleimage_frq"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "grayscaleimage_frq_scoring_guidelines"
       }
     },
     {
@@ -6853,7 +7388,42 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_5",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_5",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_5",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_guide",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_overview",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_study_guide",
+        "script.name": "csa5-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 

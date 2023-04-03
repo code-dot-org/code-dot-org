@@ -880,6 +880,7 @@
   "explainPairProgramming": "Eşli programlama aktif olduğunda, öğrenciler aynı bilgisayarda çalışmak üzere bir sınıf arkadaşını seçebilirler. Eğer öğrencilerinizi gelişimi paylaşarak birlikte çalışmasını istiyorsanız, bu özelliği etkinleştirin.",
   "explainPairProgrammingLearnMore": " Eşli programlama hakkında daha fazla bilgi edinin.",
   "explainRestrictedSectionEmail": "\"Evet\" olarak ayarlanırsa, öğrenciler bölüm kodunu kullanarak bu bölüme katılamazlar. Yine de öğrencileri başka bir bölümden taşıyarak veya kopyalayarak bölüme manuel olarak ekleyebilirsiniz.",
+  "explainRestrictedSectionEmailToolTip": "\"Evet\" olarak ayarlanırsa, öğrenciler bölüm kodunu kullanarak bu bölüme katılamazlar. Yine de öğrencileri başka bir bölümden taşıyarak veya kopyalayarak bölüme manuel olarak ekleyebilirsiniz.",
   "explainRestrictedSectionWordAndPicture": "\"Evet\" olarak ayarlanırsa, öğrenciler bölüm kodunu kullanarak bu bölüme katılamazlar. Yine de Öğrencileri Yönet sekmesinden öğrencileri bölüme manuel olarak ekleyebilirsiniz.",
   "explainRestrictedSectionLearnMore": "Daha Fazla Bilgi Edinin",
   "exploreDataset": "{datasetName}'i görselleştir.",

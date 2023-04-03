@@ -9,7 +9,7 @@ import {
   MAX_LIGHT_SENSOR_VALUE
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 
-describe('LightSensor', function() {
+describe('LightSensor', function () {
   let boardClient, lightSensor;
 
   beforeEach(() => {
@@ -41,9 +41,8 @@ describe('LightSensor', function() {
       boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 0;
       expect(lightSensor.value).to.equal(0);
 
-      boardClient.analogChannel[
-        SENSOR_CHANNELS.lightSensor
-      ] = MAX_LIGHT_SENSOR_VALUE;
+      boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] =
+        MAX_LIGHT_SENSOR_VALUE;
       expect(lightSensor.value).to.equal(MAX_LIGHT_SENSOR_VALUE);
 
       boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 123;
@@ -56,9 +55,8 @@ describe('LightSensor', function() {
       boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 0;
       expect(lightSensor.value).to.equal(10);
 
-      boardClient.analogChannel[
-        SENSOR_CHANNELS.lightSensor
-      ] = MAX_LIGHT_SENSOR_VALUE;
+      boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] =
+        MAX_LIGHT_SENSOR_VALUE;
       expect(lightSensor.value).to.equal(110);
 
       boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 123;

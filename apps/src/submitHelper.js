@@ -82,7 +82,7 @@ function unsubmit() {
   $.post(
     unsubmitUrl,
     {_method: 'PUT', user_level: {submitted: false}},
-    function() {
+    function () {
       location.reload();
     }
   );
@@ -125,14 +125,14 @@ function showConfirmationDialog(config) {
 
   const cancelButton = buttons.querySelector('#again-button');
   if (cancelButton) {
-    dom.addClickTouchEvent(cancelButton, function() {
+    dom.addClickTouchEvent(cancelButton, function () {
       dialog.hide();
     });
   }
 
   const confirmButton = buttons.querySelector('#confirm-button');
   if (confirmButton) {
-    dom.addClickTouchEvent(confirmButton, function() {
+    dom.addClickTouchEvent(confirmButton, function () {
       if (config.onConfirm) {
         config.onConfirm();
       }

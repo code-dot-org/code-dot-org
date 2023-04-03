@@ -116,12 +116,8 @@ export class ShareTeacherLibraries extends React.Component {
   };
 
   render() {
-    const {
-      sections,
-      personalProjectsList,
-      onCancel,
-      loadingFinished
-    } = this.props;
+    const {sections, personalProjectsList, onCancel, loadingFinished} =
+      this.props;
     const {selectedSections, selectedLibraryId} = this.state;
     const libraries = personalProjectsList
       .filter(project => project.libraryName)

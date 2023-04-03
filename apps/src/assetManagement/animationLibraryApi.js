@@ -43,9 +43,7 @@ export function uploadDefaultListMetadata(metadata, environment) {
     .then(response => {
       if (!response.ok) {
         throw new Error(
-          `Default Sprite Metadata Upload Error(${response.status}: ${
-            response.statusText
-          })`
+          `Default Sprite Metadata Upload Error(${response.status}: ${response.statusText})`
         );
       }
       return Promise.resolve();
