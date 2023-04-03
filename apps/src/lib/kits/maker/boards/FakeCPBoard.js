@@ -41,6 +41,7 @@ export default class FakeCPBoard extends EventEmitter {
   installOnInterpreter(jsInterpreter) {
     const constructors = {
       Led: FakeLed,
+      Board: FakeComponent,
       NeoPixel: FakeColorLed,
       PlaygroundButton: FakeButton,
       Switch: FakeToggleSwitch,
@@ -142,6 +143,7 @@ class FakeLed extends FakeComponent {
 }
 
 class FakeColorLed extends FakeLed {
+  stop() {}
   intensity() {}
   color() {}
 }
@@ -169,6 +171,7 @@ class FakeSensor extends FakeComponent {
     this.threshold = 0;
   }
 
+  start() {}
   setScale() {}
 
   getAveragedValue() {
