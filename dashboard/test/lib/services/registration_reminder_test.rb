@@ -33,30 +33,30 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
       # At 7 days, email is sent on schedule:
       Timecop.travel 1.day
       Services::RegistrationReminder.send_registration_reminders!
-      assert_equal 1, application.emails.where(email_type: 'registration_reminder').count
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'registration_reminder').count
 
       # Immediate re-run does not create another reminder
       Services::RegistrationReminder.send_registration_reminders!
-      assert_equal 1, application.emails.where(email_type: 'registration_reminder').count
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'registration_reminder').count
 
       # Next email is due in 7 days.  At 6 days, only the one reminder has been sent:
       Timecop.travel 6.days
       Services::RegistrationReminder.send_registration_reminders!
-      assert_equal 1, application.emails.where(email_type: 'registration_reminder').count
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'registration_reminder').count
 
       # At 7 days, the second reminder is sent on schedule:
       Timecop.travel 1.day
       Services::RegistrationReminder.send_registration_reminders!
-      assert_equal 2, application.emails.where(email_type: 'registration_reminder').count
+      assert_equal 2, application.emails.where.not(sent_at: nil).where(email_type: 'registration_reminder').count
 
       # Immediate re-run does not create another reminder
       Services::RegistrationReminder.send_registration_reminders!
-      assert_equal 2, application.emails.where(email_type: 'registration_reminder').count
+      assert_equal 2, application.emails.where.not(sent_at: nil).where(email_type: 'registration_reminder').count
 
       # That's the last one - no more reminders are sent
       Timecop.travel 30.days
       Services::RegistrationReminder.send_registration_reminders!
-      assert_equal 2, application.emails.where(email_type: 'registration_reminder').count
+      assert_equal 2, application.emails.where.not(sent_at: nil).where(email_type: 'registration_reminder').count
     end
   end
 
