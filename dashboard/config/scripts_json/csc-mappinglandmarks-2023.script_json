@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-mappinglandmarks",
-    "serialized_at": "2023-03-28 15:14:32 UTC",
+    "serialized_at": "2023-03-31 21:54:19 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -53,7 +53,7 @@
     },
     {
       "key": "Local Landmarks - Unplugged Project Planning",
-      "name": "Mapping Landmarks - Unplugged Planning",
+      "name": "Mapmakers - Unplugged Planning",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -71,7 +71,7 @@
     },
     {
       "key": "Local Landmarks - Coding Your Project",
-      "name": "Mapping Landmarks - Coding Your Project",
+      "name": "Mapmakers - Coding Your Project",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -808,7 +808,7 @@
       "key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Level 1-6\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Return student’s Mapping Landmarks Planning handout if they were collected in the previous lesson.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Level 1-6\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Return student’s Mapmakers Planning handout if they were collected in the previous lesson.",
         "duration": "10",
         "name": "Map Set Up",
         "progression_name": "Skill Building"
@@ -1136,6 +1136,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_video_introSpriteLab_2023"
+        ],
         "progression": "Mapmakers Video"
       },
       "bonus": false,
@@ -1837,7 +1840,7 @@
       }
     },
     {
-      "name": "Mapping Landmarks",
+      "name": "Mapmakers",
       "url": "https://docs.google.com/presentation/d/19XIgtzM0JxyhjSd90aW9doyrMrgzdhO_nxWQa9Wqv8I/template/preview",
       "key": "lesson_slides",
       "properties": {

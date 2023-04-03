@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-29 18:04:58 UTC",
+    "serialized_at": "2023-03-31 15:21:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6012,6 +6012,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L5 Finding Patterns"
+        ],
         "progression": "Finding Patterns"
       },
       "bonus": false,
@@ -7475,6 +7478,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa4-2023/resources",
+      "key": "all_resources_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_4"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa4-2023/standards",
+      "key": "all_standards_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_4"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa4-2023/vocab",
+      "key": "all_vocabulary_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4"
+      }
+    },
+    {
       "name": "Asphalt Art Project Planning Guide",
       "url": "https://docs.google.com/document/d/1HezNqobaqc60Yz6WsfFvf9nfh3Vdoh_7JKZHluqqvGY/edit?usp=sharing",
       "key": "asphalt_art_project_planning_guide_2",
@@ -7997,6 +8033,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_4_guide"
+      }
+    },
+    {
+      "name": "Unit 4 Overview",
+      "url": "https://docs.google.com/document/d/19RBir7NF1OsqWqeqNGYh7P_OdA_LJYgRKW4yC3NrqNo/edit?usp=share_link",
+      "key": "unit_4_overview",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_4_overview"
       }
     },
     {
@@ -8552,7 +8600,42 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_4",
+        "script.name": "csa4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_4",
+        "script.name": "csa4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4",
+        "script.name": "csa4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_4_guide",
+        "script.name": "csa4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_4_overview",
+        "script.name": "csa4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_4_study_guide",
+        "script.name": "csa4-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
