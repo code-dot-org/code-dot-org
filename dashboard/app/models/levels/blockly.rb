@@ -301,7 +301,7 @@ class Blockly < Level
 
         set_unless_nil(level_options, 'longInstructions', localized_long_instructions)
         set_unless_nil(level_options, 'failureMessageOverride', localized_failure_message_override)
-        set_unless_nil(level_options, 'startHtml', localized_start_html(level_options['startHtml']))
+        # set_unless_nil(level_options, 'startHtml', localized_start_html(level_options['startHtml']))
 
         # Unintuitively, it is completely possible for a Blockly level to use
         # Droplet, so we need to confirm the editor style before assuming that
