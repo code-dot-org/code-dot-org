@@ -63,7 +63,7 @@ function getAllBehaviors() {
     ? `${i18n.createBlocklyBehavior()}\u2026`
     : i18n.behaviorsNotFound();
   const behaviors = [];
-  Blockly.mainBlockSpace?.getAllBlocks().forEach(function(block) {
+  Blockly.mainBlockSpace?.getAllBlocks().forEach(function (block) {
     if (
       block.type === 'behavior_definition' &&
       block.getProcedureInfo()?.name &&
@@ -146,21 +146,21 @@ const customInputTypes = {
   },
   locationVariableDropdown: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      block.getVars = function() {
+      block.getVars = function () {
         return {
           [Blockly.BlockValueType.LOCATION]: [
             block.getFieldValue(inputConfig.name)
           ]
         };
       };
-      block.renameVar = function(oldName, newName) {
+      block.renameVar = function (oldName, newName) {
         if (
           Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
         ) {
           block.setTitleValue(newName, inputConfig.name);
         }
       };
-      block.removeVar = function(oldName) {
+      block.removeVar = function (oldName) {
         if (
           Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
         ) {
@@ -189,7 +189,7 @@ const customInputTypes = {
   },
   soundPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      var onSelect = function(soundValue) {
+      var onSelect = function (soundValue) {
         block.setTitleValue(soundValue, inputConfig.name);
       };
       currentInputRow.appendField(inputConfig.label).appendField(
@@ -329,21 +329,21 @@ const customInputTypes = {
   },
   spritePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      block.getVars = function() {
+      block.getVars = function () {
         return {
           [Blockly.BlockValueType.SPRITE]: [
             block.getFieldValue(inputConfig.name)
           ]
         };
       };
-      block.renameVar = function(oldName, newName) {
+      block.renameVar = function (oldName, newName) {
         if (
           Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
         ) {
           block.setTitleValue(newName, inputConfig.name);
         }
       };
-      block.removeVar = function(oldName) {
+      block.removeVar = function (oldName) {
         if (
           Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
         ) {
@@ -351,7 +351,7 @@ const customInputTypes = {
         }
       };
       block.superSetTitleValue = block.setTitleValue;
-      block.setTitleValue = function(newValue, name) {
+      block.setTitleValue = function (newValue, name) {
         if (name === inputConfig.name && block.blockSpace.isFlyout) {
           newValue = Blockly.Variables.generateUniqueName(newValue);
         }
@@ -502,7 +502,7 @@ export default {
 
     Blockly.Blocks.sprite_variables_get = {
       // Variable getter.
-      init: function() {
+      init: function () {
         var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
@@ -525,19 +525,19 @@ export default {
         this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
       },
-      getVars: function() {
+      getVars: function () {
         return Blockly.Variables.getVars.bind(this)(
           Blockly.BlockValueType.SPRITE
         );
       },
-      renameVar: function(oldName, newName) {
+      renameVar: function (oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
           this.setTitleValue(newName, 'VAR');
         }
       },
       removeVar: Blockly.Blocks.variables_get.removeVar
     };
-    generator.sprite_variables_get = function() {
+    generator.sprite_variables_get = function () {
       return [
         `{name: '${Blockly.JavaScript.translateVarName(
           this.getFieldValue('VAR')
@@ -683,7 +683,7 @@ export default {
       }
     };
 
-    generator.gamelab_behavior_get = function() {
+    generator.gamelab_behavior_get = function () {
       const name = Blockly.JavaScript.variableDB_.getName(
         this.getTitle_('VAR').id,
         Blockly.Procedures.NAME_TYPE
@@ -703,8 +703,8 @@ export default {
       ];
     };
 
-    Blockly.Blocks.behavior_definition = Blockly.Block.createProcedureDefinitionBlock(
-      {
+    Blockly.Blocks.behavior_definition =
+      Blockly.Block.createProcedureDefinitionBlock({
         initPostScript(block) {
           block.setHSV(136, 0.84, 0.8);
           block.parameterNames_ = [i18n.thisSprite()];
@@ -717,8 +717,7 @@ export default {
           },
           callType_: 'gamelab_behavior_get'
         }
-      }
-    );
+      });
 
     generator.behavior_definition = generator.procedures_defnoreturn;
 

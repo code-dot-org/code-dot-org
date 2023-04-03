@@ -7,7 +7,7 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import ManifestEditor from '@cdo/apps/storage/levelbuilder/ManifestEditor';
 
-$(document).ready(function() {
+$(document).ready(function () {
   const manifest = getScriptData('libraryManifest');
   registerReducers({data});
   const store = getStore();

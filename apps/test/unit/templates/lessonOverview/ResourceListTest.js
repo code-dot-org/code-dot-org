@@ -47,12 +47,7 @@ describe('ResourceList', () => {
         pageType="teacher-lesson-plan"
       />
     );
-    expect(
-      wrapper
-        .find('li')
-        .at(0)
-        .contains('Download')
-    ).to.true;
+    expect(wrapper.find('li').at(0).contains('Download')).to.true;
   });
 
   it('displays resource without download link', () => {
@@ -69,12 +64,7 @@ describe('ResourceList', () => {
         pageType="teacher-lesson-plan"
       />
     );
-    expect(
-      wrapper
-        .find('li')
-        .at(0)
-        .contains('Download')
-    ).to.false;
+    expect(wrapper.find('li').at(0).contains('Download')).to.false;
   });
 
   it('sends amplitude event when resource is clicked', () => {

@@ -42,21 +42,25 @@ export default class LessonToken extends Component {
         }
         key={this.props.lesson.position}
       >
-        {// Use react-motion to interpolate the following values and create
-        // smooth transitions.
-        ({y, scale, shadow}) => (
-          <LessonTokenContents
-            y={y}
-            scale={scale}
-            shadow={shadow}
-            draggedLessonPos={draggedLessonPos}
-            lesson={this.props.lesson}
-            handleDragStart={this.props.handleDragStart}
-            removeLesson={this.props.removeLesson}
-            cloneLesson={this.props.cloneLesson}
-            allowMajorCurriculumChanges={this.props.allowMajorCurriculumChanges}
-          />
-        )}
+        {
+          // Use react-motion to interpolate the following values and create
+          // smooth transitions.
+          ({y, scale, shadow}) => (
+            <LessonTokenContents
+              y={y}
+              scale={scale}
+              shadow={shadow}
+              draggedLessonPos={draggedLessonPos}
+              lesson={this.props.lesson}
+              handleDragStart={this.props.handleDragStart}
+              removeLesson={this.props.removeLesson}
+              cloneLesson={this.props.cloneLesson}
+              allowMajorCurriculumChanges={
+                this.props.allowMajorCurriculumChanges
+              }
+            />
+          )
+        }
       </Motion>
     );
   }
@@ -98,11 +102,10 @@ export class LessonTokenContents extends Component {
       <div
         className="uitest-lesson-token-contents"
         style={Object.assign({}, styles.lessonToken, {
-          transform: `translate3d(0, ${this.props.y}px, 0) scale(${
-            this.props.scale
-          })`,
-          boxShadow: `${color.shadow} 0 ${this.props.shadow}px ${this.props
-            .shadow * 3}px`,
+          transform: `translate3d(0, ${this.props.y}px, 0) scale(${this.props.scale})`,
+          boxShadow: `${color.shadow} 0 ${this.props.shadow}px ${
+            this.props.shadow * 3
+          }px`,
           zIndex: this.props.draggedLessonPos
             ? 1000
             : 500 - this.props.lesson.position

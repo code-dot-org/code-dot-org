@@ -77,9 +77,7 @@ function initializeEditPage(defaultSprites) {
   }
   setSubmitButtonState();
 
-  $('.alert.alert-success')
-    .delay(5000)
-    .fadeOut(1000);
+  $('.alert.alert-success').delay(5000).fadeOut(1000);
 }
 
 function onUpdateLinting(_, errors) {
@@ -174,7 +172,6 @@ function updateBlockPreview() {
 }
 
 function onBlockSpaceChange() {
-  document.getElementById(
-    'code-preview'
-  ).innerText = Blockly.getWorkspaceCode();
+  document.getElementById('code-preview').innerText =
+    Blockly.getWorkspaceCode();
 }

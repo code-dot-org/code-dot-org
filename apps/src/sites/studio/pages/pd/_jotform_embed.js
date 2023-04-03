@@ -14,7 +14,7 @@ if (window.location.href && window.location.href.indexOf('?') > -1) {
     ifr.src = src;
   }
 }
-window.handleIFrameMessage = function(e) {
+window.handleIFrameMessage = function (e) {
   if (typeof e.data === 'object') {
     return;
   }

@@ -20,13 +20,8 @@ class TopCourse extends Component {
   };
 
   render() {
-    const {
-      assignableName,
-      lessonName,
-      linkToOverview,
-      linkToLesson,
-      isRtl
-    } = this.props;
+    const {assignableName, lessonName, linkToOverview, linkToLesson, isRtl} =
+      this.props;
     const localeStyle = isRtl ? styles.ltr : styles.rtl;
 
     return (

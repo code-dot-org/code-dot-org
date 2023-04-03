@@ -176,9 +176,7 @@ class VocabulariesEditor extends Component {
         )}
         {this.state.confirmRemovalDialogOpen && (
           <Dialog
-            body={`Are you sure you want to remove the vocabulary "${
-              this.state.vocabularyForRemoval.word
-            }" from this lesson?`}
+            body={`Are you sure you want to remove the vocabulary "${this.state.vocabularyForRemoval.word}" from this lesson?`}
             cancelText="Cancel"
             confirmText="Delete"
             confirmType="danger"

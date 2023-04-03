@@ -3,7 +3,7 @@ import React from 'react';
 var msg = require('./locale');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 
-var SpellingControls = function(props) {
+var SpellingControls = function (props) {
   return (
     <ProtectedStatefulDiv id="spelling-table-wrapper">
       <table id="spelling-table" className="float-right">

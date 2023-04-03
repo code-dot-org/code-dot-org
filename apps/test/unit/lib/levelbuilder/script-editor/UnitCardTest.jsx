@@ -128,18 +128,10 @@ describe('UnitCard', () => {
     );
     expect(wrapper.find('Connect(LessonGroupCard)')).to.have.lengthOf(1);
     expect(wrapper.find('button')).to.have.lengthOf(2);
-    expect(
-      wrapper
-        .find('button')
-        .at(0)
-        .text()
-    ).to.include('Add Lesson Group');
-    expect(
-      wrapper
-        .find('button')
-        .at(1)
-        .text()
-    ).to.include('Disable Lesson Groups');
+    expect(wrapper.find('button').at(0).text()).to.include('Add Lesson Group');
+    expect(wrapper.find('button').at(1).text()).to.include(
+      'Disable Lesson Groups'
+    );
   });
 
   it('displays UnitCard correctly when non user facing lesson group', () => {

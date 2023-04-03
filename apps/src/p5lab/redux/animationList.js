@@ -348,12 +348,8 @@ export function setInitialAnimationList(
     for (let j = i + 1; j < numberAnimations; j++) {
       const otherKey = serializedAnimationList.orderedKeys[j];
       if (name === serializedAnimationList.propsByKey[otherKey].name) {
-        serializedAnimationList.propsByKey[
-          otherKey
-        ].name = generateAnimationName(
-          name,
-          serializedAnimationList.propsByKey
-        );
+        serializedAnimationList.propsByKey[otherKey].name =
+          generateAnimationName(name, serializedAnimationList.propsByKey);
       }
     }
   }
@@ -453,9 +449,8 @@ export function appendBlankFrame() {
   return (dispatch, getState) => {
     // Multiframe animations are only supported in Game Lab,
     // so we don't need to worry about backgrounds (which are only in Sprite Lab)
-    const currentAnimationKey = getState().animationTab.currentAnimations[
-      P5LabInterfaceMode.ANIMATION
-    ];
+    const currentAnimationKey =
+      getState().animationTab.currentAnimations[P5LabInterfaceMode.ANIMATION];
     dispatch(setPendingFramesAction(currentAnimationKey, {blankFrame: true}));
     projectChanged();
   };
@@ -502,9 +497,8 @@ export function appendCustomFrames(props) {
   return (dispatch, getState) => {
     // Multiframe animations are only supported in Game Lab,
     // so we don't need to worry about backgrounds (Sprite Lab only)
-    const currentAnimationKey = getState().animationTab.currentAnimations[
-      P5LabInterfaceMode.ANIMATION
-    ];
+    const currentAnimationKey =
+      getState().animationTab.currentAnimations[P5LabInterfaceMode.ANIMATION];
     dispatch(setPendingFramesAction(currentAnimationKey, props));
     dispatch(loadPendingFramesFromSource(currentAnimationKey, props));
     projectChanged();
@@ -553,9 +547,8 @@ export function appendLibraryFrames(props) {
   return (dispatch, getState) => {
     // Multiframe animations are only supported in Game Lab,
     // so we don't need to worry about backgrounds (Sprite Lab only)
-    const currentAnimationKey = getState().animationTab.currentAnimations[
-      P5LabInterfaceMode.ANIMATION
-    ];
+    const currentAnimationKey =
+      getState().animationTab.currentAnimations[P5LabInterfaceMode.ANIMATION];
     dispatch(setPendingFramesAction(currentAnimationKey, props));
     dispatch(loadPendingFramesFromSource(currentAnimationKey, props));
     projectChanged();
@@ -704,13 +697,18 @@ export function deleteAnimation(
 
     dispatch({type: DELETE_ANIMATION, key});
     projectChanged();
-    animationsApi.ajax('DELETE', key + '.png', () => {}, function error(xhr) {
-      dispatch(
-        reportError(
-          `Error deleting object ${key}: ${xhr.status} ${xhr.statusText}`
-        )
-      );
-    });
+    animationsApi.ajax(
+      'DELETE',
+      key + '.png',
+      () => {},
+      function error(xhr) {
+        dispatch(
+          reportError(
+            `Error deleting object ${key}: ${xhr.status} ${xhr.statusText}`
+          )
+        );
+      }
+    );
   };
 }
 
@@ -721,7 +719,7 @@ export function deleteAnimation(
  * @param {function} [callback]
  */
 function loadAnimationFromSource(key, callback) {
-  callback = callback || function() {};
+  callback = callback || function () {};
   return (dispatch, getState) => {
     const state = getState();
     const sourceUrl = animationSourceUrl(
@@ -763,9 +761,7 @@ function loadAnimationFromSource(key, callback) {
           // Display error dialog
           dispatch(
             reportError(
-              `Sorry, we couldn't load animation "${
-                state.animationList.propsByKey[key].name
-              }".`,
+              `Sorry, we couldn't load animation "${state.animationList.propsByKey[key].name}".`,
               'anim_load',
               key
             )
@@ -870,7 +866,7 @@ function startLoadingPendingFramesFromSourceAction() {
  * @param {function} [callback]
  */
 function loadPendingFramesFromSource(key, props, callback) {
-  callback = callback || function() {};
+  callback = callback || function () {};
   return (dispatch, getState) => {
     const state = getState();
     const sourceUrl = animationSourceUrl(
@@ -1005,11 +1001,11 @@ export function saveAnimation(animationKey, animationProps) {
   return new Promise((resolve, reject) => {
     let xhr = new XMLHttpRequest();
 
-    const onError = function() {
+    const onError = function () {
       reject(new Error(`${xhr.status} ${xhr.statusText}`));
     };
 
-    const onSuccess = function() {
+    const onSuccess = function () {
       if (xhr.status >= 400) {
         onError();
         return;

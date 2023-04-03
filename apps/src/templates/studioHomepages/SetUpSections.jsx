@@ -45,9 +45,6 @@ class SetUpSections extends Component {
   }
 }
 export const UnconnectedSetUpSections = SetUpSections;
-export default connect(
-  undefined,
-  {
-    beginEditingSection
-  }
-)(SetUpSections);
+export default connect(undefined, {
+  beginEditingSection
+})(SetUpSections);

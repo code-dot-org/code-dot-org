@@ -47,15 +47,14 @@ export default class LightSensor extends EventEmitter {
         }
       }
 
-      this.state.currentReading = this.board.mb.analogChannel[
-        SENSOR_CHANNELS.lightSensor
-      ];
+      this.state.currentReading =
+        this.board.mb.analogChannel[SENSOR_CHANNELS.lightSensor];
     });
     this.start();
 
     Object.defineProperties(this, {
       value: {
-        get: function() {
+        get: function () {
           return scaleWithinRange(
             this.board.mb.analogChannel[SENSOR_CHANNELS.lightSensor],
             this.state.rangeMin,
@@ -64,10 +63,10 @@ export default class LightSensor extends EventEmitter {
         }
       },
       threshold: {
-        set: function(value) {
+        set: function (value) {
           this.state.threshold = value;
         },
-        get: function(value) {
+        get: function (value) {
           return this.state.threshold;
         }
       }

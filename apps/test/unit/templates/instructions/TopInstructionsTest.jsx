@@ -153,12 +153,9 @@ describe('TopInstructions', () => {
 
     expect(wrapper.state().tabSelected).to.equal(TabType.TEACHER_ONLY);
     expect(wrapper.find('Button')).to.have.lengthOf(2);
-    expect(
-      wrapper
-        .find('Button')
-        .at(0)
-        .props().text
-    ).to.equal('Example Solution 1');
+    expect(wrapper.find('Button').at(0).props().text).to.equal(
+      'Example Solution 1'
+    );
   });
 
   it('does not display example solutions buttons in other tabs when available', () => {

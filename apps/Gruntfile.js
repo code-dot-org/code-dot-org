@@ -16,7 +16,7 @@ var sass = require('sass');
 var TerserPlugin = require('terser-webpack-plugin');
 var {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   process.env.mocha_entry = grunt.option('entry') || '';
   if (process.env.mocha_entry) {
     if (
@@ -216,7 +216,7 @@ describe('entry tests', () => {
           src: ['*_*.js'],
           dest: 'build/locales',
           // e.g., ar_sa.js -> ar_sa/blockly_locale.js
-          rename: function(dest, src) {
+          rename: function (dest, src) {
             var outputPath = src.replace(
               /(.+_.+)\.js/g,
               '$1/blockly_locale.js'
@@ -313,7 +313,7 @@ describe('entry tests', () => {
           ],
           dest: 'build/package/js',
           // e.g. webpack-runtimewp0123456789aabbccddee.min.js --> webpack-runtime.min.js
-          rename: function(dest, src) {
+          rename: function (dest, src) {
             var outputFile = src.replace(/wp[0-9a-f]{20}/, '');
             return path.join(dest, outputFile);
           }
@@ -384,7 +384,7 @@ describe('entry tests', () => {
             'style/code-studio/foorm_editor.scss'
           ]
         ].concat(
-          appsToBuild.map(function(app) {
+          appsToBuild.map(function (app) {
             return [
               'build/package/css/' + app + '.css', // dst
               'style/' + app + '/style.scss' // src
@@ -404,7 +404,7 @@ describe('entry tests', () => {
       files: [
         {
           // e.g., build/js/i18n/bounce/ar_sa.json -> build/package/js/ar_sa/bounce_locale.js
-          rename: function(dest, src) {
+          rename: function (dest, src) {
             var outputPath = src.replace(
               /(build\/)?i18n\/(\w*)\/(\w+_\w+).json/g,
               '$3/$2_locale.js'
@@ -576,7 +576,7 @@ describe('entry tests', () => {
   };
 
   var appsEntries = _.fromPairs(
-    appsToBuild.map(function(app) {
+    appsToBuild.map(function (app) {
       return [app, './src/sites/studio/pages/levels-' + app + '-main.js'];
     })
   );
@@ -921,7 +921,7 @@ describe('entry tests', () => {
           sharedEntries,
           otherEntries
         ),
-        function(val) {
+        function (val) {
           return ['@babel/polyfill/noConflict', 'whatwg-fetch'].concat(val);
         }
       ),
@@ -1207,7 +1207,7 @@ describe('entry tests', () => {
   config.uglify = {
     lib: {
       files: _.fromPairs(
-        ['p5play/p5.play.js', 'p5play/p5.js'].map(function(src) {
+        ['p5play/p5.play.js', 'p5play/p5.js'].map(function (src) {
           return [
             'build/package/js/' + src.replace(/\.js$/, '.min.js'), // dst
             'build/package/js/' + src // src
@@ -1284,10 +1284,10 @@ describe('entry tests', () => {
   });
 
   grunt.loadTasks('tasks');
-  grunt.registerTask('noop', function() {});
+  grunt.registerTask('noop', function () {});
 
   // Generate locale stub files in the build/locale/current folder
-  grunt.registerTask('locales', function() {
+  grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
     child_process.execSync('mkdir -p ' + current);
     appsToBuild
@@ -1297,7 +1297,7 @@ describe('entry tests', () => {
         'regionalPartnerSearch',
         'regionalPartnerMiniContact'
       )
-      .map(function(item) {
+      .map(function (item) {
         var localeType = item === 'common' ? 'locale' : 'appLocale';
         var localeString =
           '/*' +
@@ -1311,7 +1311,7 @@ describe('entry tests', () => {
   });
 
   // Checks the size of Droplet to ensure it's built with LANGUAGE=javascript
-  grunt.registerTask('checkDropletSize', function() {
+  grunt.registerTask('checkDropletSize', function () {
     var bytes = fs.statSync('lib/droplet/droplet-full.min.js').size;
     if (bytes > 500 * 1000) {
       grunt.warn(
@@ -1332,14 +1332,14 @@ describe('entry tests', () => {
     'ejs'
   ]);
 
-  grunt.registerTask('check-entry-points', function() {
+  grunt.registerTask('check-entry-points', function () {
     const done = this.async();
     checkEntryPoints(config.webpack.build, {verbose: true}).then(stats =>
       done()
     );
   });
 
-  grunt.registerTask('lint-entry-points', function() {
+  grunt.registerTask('lint-entry-points', function () {
     const done = this.async();
     checkEntryPoints(config.webpack.build).then(stats => {
       console.log(
@@ -1353,9 +1353,7 @@ describe('entry tests', () => {
       );
       if (stats.failed > 0) {
         grunt.warn(
-          `${
-            stats.failed
-          } entry points do not conform to naming conventions.\n` +
+          `${stats.failed} entry points do not conform to naming conventions.\n` +
             `Run grunt check-entry-points for details.\n`
         );
       }
@@ -1363,7 +1361,7 @@ describe('entry tests', () => {
     });
   });
 
-  grunt.registerTask('compile-firebase-rules', function() {
+  grunt.registerTask('compile-firebase-rules', function () {
     if (process.env.RACK_ENV === 'production') {
       throw new Error(
         'Cannot compile firebase security rules on production.\n' +
