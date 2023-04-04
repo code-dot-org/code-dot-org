@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -6,6 +6,8 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import i18n from '@cdo/locale';
 import styles from './check-for-understanding.module.scss';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const FREE_RESPONSE = 'FreeResponse';
 
@@ -35,17 +37,44 @@ const CheckForUnderstanding = ({
   const teacherMarkdown = scriptData.teacher_markdown;
   const height = scriptData.level.height || '80';
 
+  const logEvent = useCallback(eventName => {
+    const {level} = scriptData;
+    analyticsReporter.sendEvent(eventName, {
+      levelId: level.id,
+      levelName: level.name,
+      levelType: level.type,
+      ...scriptData.reportingData
+    });
+  }, []);
+
+  useEffect(() => {
+    logEvent(EVENTS.SUMMARY_PAGE_LOADED);
+  }, [logEvent]);
+
+  const onBackToLevelClick = e => {
+    e.preventDefault();
+    logEvent(EVENTS.SUMMARY_PAGE_BACK_TO_LEVEL_CLICKED);
+    window.location.href = currentLevel.url;
+  };
+
+  const onNextLevelClick = e => {
+    e.preventDefault();
+    logEvent(EVENTS.SUMMARY_PAGE_NEXT_LEVEL_CLICKED);
+    window.location.href = nextLevel.url;
+  };
+
   return (
     <div className={styles.summaryContainer}>
       {/* Top Nav Links */}
       <p className={styles.navLinks}>
-        <a href={`${currentLevel.url}${sectionParam}`}>
+        <a href={`${currentLevel.url}${sectionParam}`} onClick={onBackToLevelClick}>
           &lt; {i18n.backToLevel()}
         </a>
         {nextLevel && (
           <a
             className={isRtl ? styles.navLinkLeft : styles.navLinkRight}
             href={nextLevel.url}
+            onClick={onNextLevelClick}
           >
             {i18n.nextLevelLink()} &gt;
           </a>
