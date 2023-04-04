@@ -39,7 +39,7 @@ const SummaryEntryPoint = ({scriptData, students}) => {
       <div className={styles.responseCounter}>
         <p>
           <span className={styles.counter}>
-            {scriptData.responses.length}/{students.length}{' '}
+            {scriptData.response_count}/{students.length}{' '}
           </span>
           <span className={styles.text}>{i18n.studentsAnswered()}</span>
         </p>

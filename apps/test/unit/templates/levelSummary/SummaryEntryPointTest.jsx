@@ -8,7 +8,7 @@ import styles from '@cdo/apps/templates/levelSummary/summary-entry-point.module.
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const JS_DATA = {
-  responses: [{user_id: 0, text: 'student answer'}],
+  response_count: 1,
   is_contained_level: false
 };
 
