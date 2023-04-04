@@ -1,3 +1,4 @@
+
 // Music Lab specific validations.
 
 import MusicPlayer from '../player/MusicPlayer';
@@ -41,7 +42,7 @@ export default class MusicValidator extends Validator {
     const currentPlayheadPosition = this.player.getCurrentPlayheadPosition();
 
     this.player.getPlaybackEvents().forEach((eventData: PlaybackEvent) => {
-      const length = eventData.length;
+      let length = eventData.length;
 
       if (
         eventData.when <= currentPlayheadPosition &&

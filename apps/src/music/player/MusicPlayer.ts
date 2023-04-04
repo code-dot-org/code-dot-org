@@ -1,3 +1,4 @@
+
 import {ChordEvent, ChordEventValue} from './interfaces/ChordEvent';
 import {Effects} from './interfaces/Effects';
 import {FunctionContext} from './interfaces/FunctionContext';
@@ -145,7 +146,8 @@ export default class MusicPlayer {
       skipContext,
       effects,
       length: constants.DEFAULT_PATTERN_LENGTH,
-      blockId
+      blockId,
+      id: JSON.stringify(value)
     };
 
     this.addNewEvent(patternEvent);
@@ -184,7 +186,8 @@ export default class MusicPlayer {
       skipContext,
       effects,
       length: constants.DEFAULT_CHORD_LENGTH,
-      blockId
+      blockId,
+      id: JSON.stringify(value)
     };
 
     this.addNewEvent(chordEvent);
@@ -210,7 +213,8 @@ export default class MusicPlayer {
       when: 1,
       value: chordValue,
       triggered: false,
-      length: constants.DEFAULT_CHORD_LENGTH
+      length: constants.DEFAULT_CHORD_LENGTH,
+      id: 'preview'
     };
     this.samplePlayer.previewSamples(
       this.convertEventToSamples(chordEvent),
@@ -233,7 +237,8 @@ export default class MusicPlayer {
       when: 1,
       value: patternValue,
       triggered: false,
-      length: constants.DEFAULT_PATTERN_LENGTH
+      length: constants.DEFAULT_PATTERN_LENGTH,
+      id: 'preview'
     };
 
     this.samplePlayer.previewSamples(
@@ -375,7 +380,7 @@ export default class MusicPlayer {
     const {currentMeasure, insideWhenRun} = this.tracksMetadata[trackId];
     let maxSoundLength = 0;
 
-    for (const soundId of soundIds) {
+    for (let soundId of soundIds) {
       this.playSoundAtMeasureById(
         soundId,
         currentMeasure,
@@ -447,10 +452,7 @@ export default class MusicPlayer {
 
   private addNewEvent(event: PlaybackEvent) {
     this.playbackEvents.push(event);
-    this.lastMeasure = Math.max(
-      this.lastMeasure,
-      event.when + event.length - 1
-    );
+    this.lastMeasure = Math.max(this.lastMeasure, event.when + event.length - 1);
   }
 
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
@@ -475,7 +477,7 @@ export default class MusicPlayer {
 
       const kit = patternEvent.value.kit;
 
-      for (const event of patternEvent.value.events) {
+      for (let event of patternEvent.value.events) {
         const resultEvent = {
           sampleId: `${kit}/${event.src}`,
           offsetSeconds: this.convertPlayheadPositionToSeconds(
@@ -490,8 +492,9 @@ export default class MusicPlayer {
 
       return results;
     } else if (event.type === 'chord') {
-      const results: SampleEvent[] =
-        this.convertChordEventToSampleEvents(event);
+      const results: SampleEvent[] = this.convertChordEventToSampleEvents(
+        event
+      );
       return results;
     }
 
@@ -538,8 +541,9 @@ export default class MusicPlayer {
       return null;
     }
 
-    const folder: SoundFolder | null =
-      this.library.getFolderForPath(instrument);
+    const folder: SoundFolder | null = this.library.getFolderForPath(
+      instrument
+    );
 
     if (folder === null) {
       console.warn(`No instrument ${instrument}`);

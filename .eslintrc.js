@@ -3,7 +3,7 @@
 // or overridden for a particular subset of the project.  See
 // other .eslintrc.js files for those rules.
 module.exports = {
-  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
+  extends: ['eslint:recommended'],
   env: {
     browser: true,
     node: true,
@@ -28,7 +28,7 @@ module.exports = {
     'no-extra-boolean-cast': 'off',
     'no-implicit-globals': 'error',
     'no-new-object': 'error',
-    // Turn back to error once we've fixed all the existing warnings
+    // TODO: Turn back to error once we've fixed all the existing warnings
     'no-prototype-builtins': 'off',
     'no-redeclare': ['error', {builtinGlobals: false}],
     'no-restricted-imports': ['error', 'radium'],
@@ -41,10 +41,5 @@ module.exports = {
     semi: 'off', // enforced by babel/semi
     'space-before-blocks': 'error',
     strict: 'error'
-  },
-  settings: {
-    react: {
-      version: 'detect'
-    }
   }
 };

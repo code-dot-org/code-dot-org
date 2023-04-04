@@ -1,3 +1,36 @@
+
+Skip to content
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+@molly-moen
+code-dot-org /
+code-dot-org
+Public
+
+Fork your own copy of code-dot-org/code-dot-org
+
+Code
+Pull requests 272
+Discussions
+Actions
+Wiki
+Security 275
+Insights
+
+    Settings
+
+code-dot-org/apps/src/music/blockly/FieldSounds.js /
+@breville
+breville Music: fix formatting
+Latest commit bb76512 Apr 3, 2023
+History
+2 contributors
+@breville
+@sanchitmalhotra126
+237 lines (196 sloc) 5.86 KB
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SoundsPanel from '../views/SoundsPanel';
@@ -235,3 +268,20 @@ class FieldSounds extends GoogleBlockly.Field {
 }
 
 export default FieldSounds;
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+
+    Terms
+    Privacy
+    Security
+    Status
+    Docs
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+
+code-dot-org/FieldSounds.js at staging · code-dot-org/code-dot-org

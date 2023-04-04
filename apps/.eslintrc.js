@@ -1,6 +1,6 @@
 // This config defines globals available especially in apps,
-// enables es6, and enables react-sepcific plugins and rules.
-// See the root .eslintrc.js for linting rules.
+// enables es6, and enables apps-specific plugins and rules.
+// See the root .eslintrc.js for generic eslint linting rules.
 module.exports = {
   parser: '@babel/eslint-parser',
   plugins: ['cdo-custom-rules', 'react', 'react-hooks', 'mocha', 'babel'],
@@ -9,7 +9,7 @@ module.exports = {
       presets: ['@babel/preset-react']
     }
   },
-  extends: ['plugin:react/recommended'],
+  extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
   env: {
     es6: true
   },
@@ -49,12 +49,17 @@ module.exports = {
     'react/no-unescaped-entities': 'off',
     'react/self-closing-comp': 'error',
     'react/no-danger': 'error',
-    // TODO: turn this back on to error after fixing issues.
-    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/exhaustive-deps': 'error',
     'react-hooks/rules-of-hooks': 'error'
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    }
   },
   overrides: [
     {
+      // Use the typescript parser for typescript files
       files: ['**/*.ts', '**/*.tsx'],
       parser: '@typescript-eslint/parser',
       plugins: ['@typescript-eslint'],
