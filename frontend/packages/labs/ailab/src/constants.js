@@ -952,7 +952,7 @@ export const styles = {
     width: 500
   },
 
-  modelSaveDataMessage: {
+  modelSaveResponseDataMessage: {
     opacity: 0.5
   },
 

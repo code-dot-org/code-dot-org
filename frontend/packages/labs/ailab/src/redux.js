@@ -262,7 +262,9 @@ const initialState = {
   // Possible values for saveStatus: "notStarted", "started", "success",
   // "piiProfanity", and "failure".
   saveStatus: "notStarted",
-  saveData: undefined,
+  // Additional data for a failed save response.  Currently contains
+  // details when server-side "share filtering" prevents a save.
+  saveResponseData: undefined,
   columnRefs: {},
   historicResults: [],
   showResultsDetails: false,
@@ -604,7 +606,7 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       saveStatus: action.status,
-      saveData: action.data
+      saveResponseData: action.data
     };
   }
   if (action.type === SET_HISTORIC_RESULT) {
