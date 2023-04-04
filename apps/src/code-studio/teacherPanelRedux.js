@@ -49,9 +49,7 @@ export const loadLevelsWithProgress = () => (dispatch, getState) => {
 
   const queryParams = getLevelProgressQueryParams(state);
 
-  const baseUrl = `/api/teacher_panel_progress/${
-    state.teacherSections.selectedSectionId
-  }`;
+  const baseUrl = `/api/teacher_panel_progress/${state.teacherSections.selectedSectionId}`;
 
   return $.ajax({
     url: baseUrl + '?' + queryString.stringify(queryParams),

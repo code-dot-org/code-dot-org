@@ -91,11 +91,7 @@ describe('TooltipOverlay', () => {
   });
 
   it('generates a set of tooltip strings from providers that return a string', () => {
-    expect(
-      withProviders([])
-        .instance()
-        .getTooltipStrings()
-    ).to.be.empty;
+    expect(withProviders([]).instance().getTooltipStrings()).to.be.empty;
 
     expect(
       withProviders([() => '', () => null, () => null])
@@ -111,45 +107,35 @@ describe('TooltipOverlay', () => {
   });
 
   it('generates tooltip dimensions that depend on the length of the string set', () => {
-    expect(
-      withStrings([])
-        .instance()
-        .getTooltipDimensions()
-    ).to.deep.equal({
+    expect(withStrings([]).instance().getTooltipDimensions()).to.deep.equal({
       width: TEXT_RECT_WIDTH,
       height: 0
     });
 
     expect(
-      withStrings(['one'])
-        .instance()
-        .getTooltipDimensions()
+      withStrings(['one']).instance().getTooltipDimensions()
     ).to.deep.equal({
       width: TEXT_RECT_WIDTH,
       height: TEXT_RECT_HEIGHT
     });
 
     expect(
-      withStrings(['one', 'two'])
-        .instance()
-        .getTooltipDimensions()
+      withStrings(['one', 'two']).instance().getTooltipDimensions()
     ).to.deep.equal({
       width: TEXT_RECT_WIDTH,
       height: 2 * TEXT_RECT_HEIGHT + BETWEEN_RECT_MARGIN
     });
 
     expect(
-      withStrings(['one', 'two', 'three'])
-        .instance()
-        .getTooltipDimensions()
+      withStrings(['one', 'two', 'three']).instance().getTooltipDimensions()
     ).to.deep.equal({
       width: TEXT_RECT_WIDTH,
       height: 3 * TEXT_RECT_HEIGHT + 2 * BETWEEN_RECT_MARGIN
     });
   });
 
-  describe('coordinatesProvider', function() {
-    it('maps props mouseX and mouseY to a coordinate string', function() {
+  describe('coordinatesProvider', function () {
+    it('maps props mouseX and mouseY to a coordinate string', function () {
       const props = {
         mouseX: 50,
         mouseY: 100
@@ -159,14 +145,14 @@ describe('TooltipOverlay', () => {
       );
     });
 
-    it('rounds the given coordinates', function() {
+    it('rounds the given coordinates', function () {
       const props = {
         mouseX: 1.3,
         mouseY: 2.9
       };
       expect(coordinatesProvider()(props)).to.equal('x: 1, y: 3');
     });
-    it('reverse the direction of the coordinates in a RTL language', function() {
+    it('reverse the direction of the coordinates in a RTL language', function () {
       const props = {
         mouseX: 50,
         mouseY: 100

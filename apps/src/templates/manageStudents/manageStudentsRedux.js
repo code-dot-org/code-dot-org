@@ -890,9 +890,7 @@ const updateStudentOnServer = (updatedStudentInfo, sectionId, onComplete) => {
     }
   };
   $.ajax({
-    url: `/dashboardapi/sections/${sectionId}/students/${
-      dataToUpdate.student.id
-    }`,
+    url: `/dashboardapi/sections/${sectionId}/students/${dataToUpdate.student.id}`,
     method: 'PATCH',
     type: 'json',
     contentType: 'application/json;charset=UTF-8',

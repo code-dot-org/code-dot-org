@@ -112,7 +112,7 @@ class CanvasEvents extends React.Component {
 export default {
   PropertyTab: CanvasProperties,
   EventTab: CanvasEvents,
-  create: function() {
+  create: function () {
     const element = document.createElement('canvas');
     element.setAttribute('width', '100px');
     element.setAttribute('height', '100px');

@@ -38,11 +38,10 @@ describe('vocabulariesEditorRedux reducer tests', () => {
         commonSenseMedia: false
       })
     );
-    assert.deepEqual(nextState.map(r => r.key), [
-      'vocabulary-1',
-      'vocabulary-2',
-      'new-word'
-    ]);
+    assert.deepEqual(
+      nextState.map(r => r.key),
+      ['vocabulary-1', 'vocabulary-2', 'new-word']
+    );
   });
 
   it('edit vocabulary', () => {
@@ -52,7 +51,10 @@ describe('vocabulariesEditorRedux reducer tests', () => {
       initialState,
       updateVocabulary(editedVocabulary)
     );
-    assert.deepEqual(nextState.map(r => r.word), ['new word', 'vocabulary-2']);
+    assert.deepEqual(
+      nextState.map(r => r.word),
+      ['new word', 'vocabulary-2']
+    );
   });
 
   it('remove vocabulary', () => {
@@ -60,6 +62,9 @@ describe('vocabulariesEditorRedux reducer tests', () => {
       initialState,
       removeVocabulary('vocabulary-1')
     );
-    assert.deepEqual(nextState.map(r => r.key), ['vocabulary-2']);
+    assert.deepEqual(
+      nextState.map(r => r.key),
+      ['vocabulary-2']
+    );
   });
 });

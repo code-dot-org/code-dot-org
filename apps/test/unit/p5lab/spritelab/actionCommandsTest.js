@@ -9,7 +9,7 @@ import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
 describe('Action Commands', () => {
   let coreLibrary;
   const spriteName = 'spriteName';
-  beforeEach(function() {
+  beforeEach(function () {
     const p5Wrapper = createP5Wrapper();
     coreLibrary = new CoreLibrary(p5Wrapper.p5);
   });
@@ -361,7 +361,7 @@ describe('Action Commands', () => {
   });
 
   describe('setProp', () => {
-    beforeEach(function() {
+    beforeEach(function () {
       coreLibrary.addSprite({name: spriteName, location: {x: 0, y: 0}});
     });
     it('sets direction', () => {

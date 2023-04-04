@@ -24,7 +24,7 @@ function openModal(type, callback, table) {
 }
 
 export function getTables() {
-  return function() {
+  return function () {
     return [
       {
         text: msg.choosePrefix(),
@@ -47,7 +47,7 @@ function getTableNameFromColumnSocket(socket, editor) {
 }
 
 export function getColumns() {
-  return function(editor) {
+  return function (editor) {
     const tableName = getTableNameFromColumnSocket(this, editor);
     return [
       {

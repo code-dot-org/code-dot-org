@@ -19,10 +19,7 @@ describe('Module assignment element', () => {
         );
 
         expect(
-          moduleAssignment
-            .find('div')
-            .last()
-            .props().style.backgroundColor
+          moduleAssignment.find('div').last().props().style.backgroundColor
         ).to.equal(value);
       }
     );

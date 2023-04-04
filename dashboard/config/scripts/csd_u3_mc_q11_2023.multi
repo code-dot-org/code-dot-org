@@ -1,8 +1,12 @@
 name 'CSD U3 MC Q11_2023'
-title 'Question 1'
 type 'multi'
-question 'Placeholder Question Text'
-right 'Placeholder Answer'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
+question 'Which program will draw the following? ![](https://images.code.org/de286da089fa28a675a6e1a070486f97-CSDunit3coordinate.png)'
+wrong '![](https://images.code.org/455e4900eb12debc5b1c8193739de218-CSDunit3coordinate1.png)'
+right '![](https://images.code.org/fda88b3fb25cfbc9f4f2f9861eafb9ba-CSDunit3coordinate2.png)'
+wrong '![](https://images.code.org/18ae74f6ea3f6f62b5cdc34ea7686e99-CSDunit3coordinate3.png)'
+wrong '![](https://images.code.org/d32609a993f20dc5bcfb0ca798144254-CSDunit3coordinate4.png)'
+teacher_markdown <<MARKDOWN
+**Content: Unit 3 Lesson 2**
+
+Since the green ellipse is on top of the red rectangle, the red rectangle should be drawn first, then the green ellipse.
+MARKDOWN

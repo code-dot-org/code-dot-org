@@ -408,14 +408,8 @@ describe('OwnedSectionsTable', () => {
     it('courseLinkFormatter provides links to course information and section information', () => {
       const rowData = sectionRowData[0];
       const courseLinkCol = shallow(courseLinkFormatter(null, {rowData}));
-      const courseLink = courseLinkCol
-        .find('a')
-        .at(0)
-        .props().href;
-      const sectionLink = courseLinkCol
-        .find('a')
-        .at(1)
-        .props().href;
+      const courseLink = courseLinkCol.find('a').at(0).props().href;
+      const sectionLink = courseLinkCol.find('a').at(1).props().href;
       assert.equal(
         courseLink,
         '//localhost-studio.code.org:3000/courses/csd?section_id=1'
@@ -429,14 +423,8 @@ describe('OwnedSectionsTable', () => {
     it('courseLinkFormatter contains course text and section text', () => {
       const rowData = sectionRowData[0];
       const courseLinkCol = shallow(courseLinkFormatter(null, {rowData}));
-      const courseText = courseLinkCol
-        .find('a')
-        .at(0)
-        .text();
-      const sectionText = courseLinkCol
-        .find('a')
-        .at(1)
-        .text();
+      const courseText = courseLinkCol.find('a').at(0).text();
+      const sectionText = courseLinkCol.find('a').at(1).text();
       assert.equal(courseText, 'CS Discoveries');
       assert.equal(sectionText, 'Unit 1: Problem Solving');
     });

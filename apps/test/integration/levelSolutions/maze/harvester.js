@@ -116,7 +116,7 @@ module.exports = {
         result: false,
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
-      customValidator: function() {
+      customValidator: function () {
         // Don't run all 10,000 steps...
         Maze.executionInfo.steps_.length = 0;
         return (
@@ -148,7 +148,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.executionInfo.terminationValue() ===
           constants.HarvesterTerminationValue.WRONG_CROP
@@ -173,7 +173,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.executionInfo.terminationValue() ===
           constants.HarvesterTerminationValue.EMPTY_CROP
@@ -203,7 +203,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.executionInfo.terminationValue() ===
           constants.HarvesterTerminationValue.WRONG_CROP
@@ -226,7 +226,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.executionInfo.terminationValue() ===
           constants.HarvesterTerminationValue.DID_NOT_COLLECT_EVERYTHING

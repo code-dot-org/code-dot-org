@@ -216,8 +216,8 @@ export default connect(state => ({
   isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
   isInspectorOn: state.inspectorOn,
   isFullScreenPreviewOn: state.fullScreenPreviewOn,
-  showProjectTemplateWorkspaceIcon: !!state.pageConstants
-    .showProjectTemplateWorkspaceIcon,
+  showProjectTemplateWorkspaceIcon:
+    !!state.pageConstants.showProjectTemplateWorkspaceIcon,
   maxProjectCapacity: state.maxProjectCapacity,
   projectSize: state.projectSize
 }))(WebLabView);

@@ -36,10 +36,7 @@ describe('ParticipantTypePicker', () => {
       />
     );
 
-    wrapper
-      .find('ParticipantTypeCard')
-      .at(0)
-      .simulate('click');
+    wrapper.find('ParticipantTypeCard').at(0).simulate('click');
     expect(setParticipantType).to.have.been.calledOnce;
   });
 });

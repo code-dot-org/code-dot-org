@@ -20,12 +20,8 @@ class ModernCsfCourses extends Component {
     $('#pre-express')
       .appendTo(ReactDOM.findDOMNode(this.refs.pre_express))
       .show();
-    $('#express')
-      .appendTo(ReactDOM.findDOMNode(this.refs.express))
-      .show();
-    $('#unplugged')
-      .appendTo(ReactDOM.findDOMNode(this.refs.unplugged))
-      .show();
+    $('#express').appendTo(ReactDOM.findDOMNode(this.refs.express)).show();
+    $('#unplugged').appendTo(ReactDOM.findDOMNode(this.refs.unplugged)).show();
   }
 
   render() {
@@ -119,12 +115,8 @@ class Courses1To4 extends Component {
 
 class AcceleratedAndUnplugged extends Component {
   componentDidMount() {
-    $('#20-hour')
-      .appendTo(ReactDOM.findDOMNode(this.refs.twenty_hour))
-      .show();
-    $('#unplugged')
-      .appendTo(ReactDOM.findDOMNode(this.refs.unplugged))
-      .show();
+    $('#20-hour').appendTo(ReactDOM.findDOMNode(this.refs.twenty_hour)).show();
+    $('#unplugged').appendTo(ReactDOM.findDOMNode(this.refs.unplugged)).show();
   }
 
   render() {

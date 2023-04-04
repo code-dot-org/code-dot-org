@@ -20,12 +20,9 @@ describe('ImageInput', () => {
         initialImageUrl="code.org/images/spritelab.png"
       />
     );
-    expect(
-      wrapper
-        .find('input')
-        .first()
-        .props().value
-    ).to.equal('code.org/images/spritelab.png');
+    expect(wrapper.find('input').first().props().value).to.equal(
+      'code.org/images/spritelab.png'
+    );
   });
 
   it('calls callback after image is updated', () => {

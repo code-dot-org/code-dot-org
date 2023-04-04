@@ -12,6 +12,7 @@ const experiments = require('@cdo/apps/util/experiments');
 const MAX_DISPLAY_NOTES = 3;
 const FIELD_WIDTH = 51;
 const FIELD_HEIGHT = 18;
+const FIELD_PADDING = 2;
 
 interface FieldChordOptions {
   getLibrary: () => MusicLibrary;
@@ -68,6 +69,8 @@ export default class FieldChord extends Field {
       },
       this.fieldGroup_
     );
+
+    this.updateSize_();
   }
 
   applyColour() {
@@ -97,14 +100,15 @@ export default class FieldChord extends Field {
       this.backgroundElement.innerHTML = '';
     }
 
-    const backingRectangle = GoogleBlockly.utils.dom.createSvgElement(
+    GoogleBlockly.utils.dom.createSvgElement(
       'rect',
       {
         fill: '#54595e',
         x: 1,
         y: 1,
         width: FIELD_WIDTH,
-        height: FIELD_HEIGHT
+        height: FIELD_HEIGHT,
+        rx: 3
       },
       this.backgroundElement
     );
@@ -127,20 +131,19 @@ export default class FieldChord extends Field {
           x: graphNote.x,
           y: graphNote.y,
           width: graphNote.width,
-          height: graphNote.height
+          height: graphNote.height,
+          rx: 1
         },
         this.backgroundElement
       );
     });
 
-    this.updateSize_();
-
     this.renderContent();
   }
 
   updateSize_() {
-    const width = 55;
-    const height = 22;
+    const width = FIELD_WIDTH + 2 * FIELD_PADDING;
+    const height = FIELD_HEIGHT + 2 * FIELD_PADDING;
 
     this.borderRect_?.setAttribute('width', '' + width);
     this.borderRect_?.setAttribute('height', '' + height);

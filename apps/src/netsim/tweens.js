@@ -26,7 +26,7 @@ var DEFAULT_TWEEN_DURATION = 600;
  * Interpolates with a little back-and-forth over the target value at the end.
  * @type {TweenFunction}
  */
-exports.easeOutElastic = function(t, b, c, d) {
+exports.easeOutElastic = function (t, b, c, d) {
   var s, p, a;
   s = 1.70158;
   p = 0;
@@ -57,7 +57,7 @@ exports.easeOutElastic = function(t, b, c, d) {
  * Interpolates, accelerating as it goes.
  * @type {TweenFunction}
  */
-exports.easeInQuad = function(t, b, c, d) {
+exports.easeInQuad = function (t, b, c, d) {
   return c * (t /= d) * t + b;
 };
 
@@ -65,11 +65,11 @@ exports.easeInQuad = function(t, b, c, d) {
  * Interpolates, decelerating as it goes.
  * @type {TweenFunction}
  */
-exports.easeOutQuad = function(t, b, c, d) {
+exports.easeOutQuad = function (t, b, c, d) {
   return -c * (t /= d) * (t - 2) + b;
 };
 
-exports.easeInOutQuad = function(t, b, c, d) {
+exports.easeInOutQuad = function (t, b, c, d) {
   if ((t /= d / 2) < 1) {
     return (c / 2) * t * t + b;
   }
@@ -80,7 +80,7 @@ exports.easeInOutQuad = function(t, b, c, d) {
  * Linear interpolation
  * @type {TweenFunction}
  */
-exports.linear = function(t, b, c, d) {
+exports.linear = function (t, b, c, d) {
   return c * (t / d) + b;
 };
 
@@ -97,7 +97,7 @@ exports.linear = function(t, b, c, d) {
  * @param {TweenFunction} [tweenFunction] - A tween function, default linear
  * @constructor
  */
-exports.TweenValueTo = function(
+exports.TweenValueTo = function (
   target,
   propertyName,
   endValue,
@@ -157,7 +157,7 @@ exports.TweenValueTo = function(
 /**
  * @param {RunLoop.clock} clock
  */
-exports.TweenValueTo.prototype.tick = function(clock) {
+exports.TweenValueTo.prototype.tick = function (clock) {
   if (this.startTime_ === undefined) {
     this.startTime_ = clock.time;
   }
@@ -179,7 +179,7 @@ exports.TweenValueTo.prototype.tick = function(clock) {
   }
 };
 
-exports.DoAfterDelay = function(target, duration, callback) {
+exports.DoAfterDelay = function (target, duration, callback) {
   /**
    * Will be set to TRUE when tween is completed.
    * @type {boolean}
@@ -221,7 +221,7 @@ exports.DoAfterDelay = function(target, duration, callback) {
 /**
  * @param {RunLoop.clock} clock
  */
-exports.DoAfterDelay.prototype.tick = function(clock) {
+exports.DoAfterDelay.prototype.tick = function (clock) {
   if (this.startTime_ === undefined) {
     this.startTime_ = clock.time;
   }

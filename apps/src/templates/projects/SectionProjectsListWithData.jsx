@@ -19,9 +19,7 @@ class SectionProjectsListWithData extends Component {
   };
 
   componentDidMount() {
-    const projectsDataUrl = `/dashboardapi/v1/projects/section/${
-      this.props.sectionId
-    }`;
+    const projectsDataUrl = `/dashboardapi/v1/projects/section/${this.props.sectionId}`;
     $.ajax({
       url: projectsDataUrl,
       method: 'GET',
@@ -54,7 +52,8 @@ class SectionProjectsListWithData extends Component {
   }
 }
 
-export const UnconnectedSectionProjectsListWithData = SectionProjectsListWithData;
+export const UnconnectedSectionProjectsListWithData =
+  SectionProjectsListWithData;
 
 export default connect(state => ({
   localeCode: state.locales.localeCode,

@@ -19,10 +19,7 @@ describe('DataDocView', () => {
     const wrapper = shallow(<DataDocView {...defaultProps} />);
     expect(wrapper.text()).to.contain(docName);
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .first()
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').first().props().markdown
     ).to.equal(docContent);
   });
 });

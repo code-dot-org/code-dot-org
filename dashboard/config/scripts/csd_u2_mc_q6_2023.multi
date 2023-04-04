@@ -1,8 +1,20 @@
 name 'CSD U2 MC Q6_2023'
 title 'Question 1'
 type 'multi'
-question 'Placeholder Question Text'
-right 'Placeholder Answer'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
+question 'Given this webpage, predict the HTML.'
+height '300'
+right '![](https://images.code.org/15ff5935096483fb0bd8e40d417e8215-CSDunit2headings1.png)'
+wrong '![](https://images.code.org/10618b645957c1caa10546fc5d369374-CSDunit2headings2.png)'
+wrong '![](https://images.code.org/0a7ed435aea1502370b0350de4540184-CSDunit2headings3.png)'
+wrong '![](https://images.code.org/fd805d89e5dbb7e11c9fbf766a8fb999-CSDunit2headings4.png)'
+wrong '![](https://images.code.org/4947f0eca5fedf5d5c6dd5e00c2860bb-CSDunit2headings5.png)'
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/6c7bec721e62f015929d00a70319c6f6-CSDunit2headings.png" style="height:300px">
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 2 Lesson 3**
+
+Headings are the different sized section titles throughout a web page. There are different sized headings which are marked by the number next to the h in the heading tag. They go from `<h1>` to `<h6>`.
+MARKDOWN

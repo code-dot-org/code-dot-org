@@ -198,7 +198,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EXAMPLE_FAILED
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Calc.__testonly__.appState.message,
           'You need at least' +
@@ -220,7 +220,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EXAMPLE_FAILED
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Calc.__testonly__.appState.message,
           'The function f has' +
@@ -237,7 +237,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Calc.__testonly__.appState.message, null);
         return true;
       },
@@ -255,7 +255,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Calc.__testonly__.appState.message, null);
         return true;
       },
@@ -286,7 +286,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EXAMPLE_FAILED
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Calc.__testonly__.appState.message,
           'You need at least' +
