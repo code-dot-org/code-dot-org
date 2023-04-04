@@ -25,6 +25,8 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 1. `rbenv rehash`
 
+1. `bundle config --local without staging test production levelbuilder`
+
 1. `bundle install`
     - This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
 
