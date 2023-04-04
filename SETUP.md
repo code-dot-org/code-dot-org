@@ -7,7 +7,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 ## Overview
 
-1. Request and Configure AWS access (code.org staff) or configure local secrets. See (Configure AWS Access or Secrets)[#configure-aws-access-or-secrets] below. This step is not required until rake is first run below, but staff may wish to submit the request first so its ready when rake is.
+1. Request and Configure AWS access (code.org staff) or configure local secrets (open source contributors). See (Configure AWS Access or Secrets)[#configure-aws-access-or-secrets] below. This step is not required until rake is first run below, but staff may wish to submit the request first so its ready when rake is.
 
 1. Install OS-specific prerequisites
    - See the appropriate section below: [OS X](#os-x-monterey---including-apple-silicon-m1), [Ubuntu](#ubuntu-1804-download-iso), [Windows](#windows)
