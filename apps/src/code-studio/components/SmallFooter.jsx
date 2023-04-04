@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable react/no-danger */
 import $ from 'jquery';
 import _ from 'lodash';
@@ -324,7 +325,6 @@ export default class SmallFooter extends React.Component {
               ref={item.copyright ? 'menuCopyright' : undefined}
               target={item.newWindow ? '_blank' : '_parent'}
               onClick={item.copyright ? this.clickMenuCopyright : undefined}
-              rel="noreferrer"
             >
               {item.text}
             </a>

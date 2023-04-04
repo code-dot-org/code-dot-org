@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import PropTypes from 'prop-types';
 import React from 'react';
 import Certificate from './Certificate';
@@ -39,12 +40,7 @@ export default function Congrats(props) {
     }
     return (
       <div style={styles.extraLinkContainer}>
-        <a
-          href={extraLinkUrl}
-          target={'_blank'}
-          style={styles.extraLink}
-          rel="noreferrer"
-        >
+        <a href={extraLinkUrl} target={'_blank'} style={styles.extraLink}>
           {extraLinkText}
         </a>
       </div>

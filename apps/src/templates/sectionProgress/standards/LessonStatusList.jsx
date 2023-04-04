@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import MultiCheckboxSelector from '../../MultiCheckboxSelector';
@@ -107,7 +108,6 @@ const ComplexLessonComponent = function ({lesson}) {
         href={lesson.url}
         target={'_blank'}
         onClick={() => handleLessonLinkClick(lesson)}
-        rel="noreferrer"
       >
         {lesson.name}
       </a>

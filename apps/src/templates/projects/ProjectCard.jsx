@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import PropTypes from 'prop-types';
 import React from 'react';
 import color from '../../util/color';
@@ -42,7 +43,6 @@ export default class ProjectCard extends React.Component {
               href={studio(url)}
               style={{width: '100%'}}
               target={isPublicGallery ? '_blank' : undefined}
-              rel="noreferrer"
             >
               <img
                 src={projectData.thumbnailUrl || PROJECT_DEFAULT_IMAGE}
@@ -55,7 +55,6 @@ export default class ProjectCard extends React.Component {
             style={styles.titleLink}
             href={studio(url)}
             target={isPublicGallery ? '_blank' : undefined}
-            rel="noreferrer"
           >
             <div
               style={styles.title}
