@@ -4,6 +4,7 @@ import msg from '@cdo/locale';
 import classnames from 'classnames';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import queryString from 'query-string';
+import Button from '../templates/Button';
 
 /**
  * A single row in the VersionHistory dialog, describing one version of a project.
@@ -50,7 +51,7 @@ export default class VersionRow extends React.Component {
     let buttons = [];
     if (this.props.isLatest) {
       buttons.push(
-        <button
+        <Button
           key={'latest-version-message'}
           type="button"
           className="btn-default"
@@ -58,7 +59,7 @@ export default class VersionRow extends React.Component {
           style={{cursor: 'default', background: 'none', border: 'none'}}
         >
           {msg.latestVersion()}
-        </button>
+        </Button>
       );
     } else if (!this.props.isReadOnly) {
       const className = this.props.isSelectedVersion

@@ -6,6 +6,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import * as utils from '../utils';
 import i18n from '@cdo/locale';
+import Button from '../templates/Button';
 
 /**
  * A component for viewing project version history.
@@ -155,7 +156,7 @@ export default class VersionHistory extends React.Component {
               {i18n.versionHistory_clearProgress_templateLevelWarning()}
             </p>
           )}
-          <button
+          <Button
             type="button"
             className="btn-danger"
             id="start-over-button"
@@ -163,7 +164,7 @@ export default class VersionHistory extends React.Component {
             onClick={this.onClearPuzzle}
           >
             {i18n.versionHistory_clearProgress_confirm()}
-          </button>
+          </Button>
           <button
             type="button"
             id="again-button"
@@ -209,14 +210,14 @@ export default class VersionHistory extends React.Component {
                       <p>{i18n.versionHistory_initialVersion_label()}</p>
                     </td>
                     <td width="250" style={{textAlign: 'right'}}>
-                      <button
+                      <Button
                         type="button"
                         className="btn-danger"
                         onClick={this.onConfirmClearPuzzle}
                         style={{float: 'right'}}
                       >
                         {i18n.versionHistory_clearProgress_confirm()}
-                      </button>
+                      </Button>
                     </td>
                   </tr>
                 )}
