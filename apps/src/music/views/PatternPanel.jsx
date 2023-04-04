@@ -105,7 +105,14 @@ const PatternPanel = ({
       {currentFolder.sounds.map(sound => {
         return (
           <div className={styles.row} key={sound.src}>
-            <div className={styles.name}>{sound.name}</div>
+            <div className={styles.nameContainer}>
+              <span
+                className={styles.name}
+                onClick={() => previewSound(`${currentValue.kit}/${sound.src}`)}
+              >
+                {sound.name}
+              </span>
+            </div>
             {arrayOfTicks.map(tick => {
               return (
                 <div
