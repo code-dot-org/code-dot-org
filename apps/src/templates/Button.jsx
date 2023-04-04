@@ -68,7 +68,6 @@ class Button extends React.Component {
     tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     isPending: PropTypes.bool,
     pendingText: PropTypes.string,
-    __useDeprecatedTag: PropTypes.bool,
     'aria-label': PropTypes.string
   };
 
@@ -99,7 +98,6 @@ class Button extends React.Component {
       isPending,
       pendingText,
       value,
-      __useDeprecatedTag,
       'aria-label': ariaLabel
     } = this.props;
 
@@ -118,12 +116,18 @@ class Button extends React.Component {
     the button has an onClick() and no href. Such removal may require style
     updates for margin and boxShadow to match page styling.
     */
-    if (__useDeprecatedTag) {
-      Tag = href ? 'a' : 'div';
+    if (href) {
+      Tag = 'a';
     } else {
-      // boxShadow should default to none, unless otherwise overridden
       buttonStyle = {boxShadow: 'none', ...style};
     }
+
+    // if (__useDeprecatedTag) {
+    //   Tag = href ? 'a' : 'div';
+    // } else {
+    // // boxShadow should default to none, unless otherwise overridden
+    // buttonStyle = {boxShadow: 'none', ...style};
+    // }
 
     if (download && Tag !== 'a') {
       // <button> and <div> elements do not support the download attribute, so
@@ -133,12 +137,18 @@ class Button extends React.Component {
       );
     }
 
-    const sizeClassNames = __useDeprecatedTag
-      ? [
-          moduleStyles[size],
-          Phase1ButtonColor[color] ? moduleStyles.phase1Updated : ''
-        ]
-      : [moduleStyles[size], moduleStyles.updated];
+    const sizeClassNames = [
+      moduleStyles[size],
+      Tag === 'a'
+        ? !!Phase1ButtonColor[color] && moduleStyles.phase1Updated
+        : moduleStyles.updated
+    ];
+    // Tag === 'a'
+    //   ? [
+    //       moduleStyles[size],
+    //       Phase1ButtonColor[color] ? moduleStyles.phase1Updated : ''
+    //     ]
+    //   : [moduleStyles[size], moduleStyles.updated];
 
     // Opening links in new tabs with 'target=_blank' is inherently insecure.
     // Unfortunately, we depend on this functionality in a couple of place.
@@ -164,6 +174,13 @@ class Button extends React.Component {
       );
     }
 
+    if (Tag === 'div') {
+      console.log('div:', this.props);
+    } else if (Tag === 'a') {
+      console.log('a:', this.props);
+    } else if (Tag === 'button') {
+      console.log('button:', this.props);
+    }
     return (
       <Tag
         className={className}
