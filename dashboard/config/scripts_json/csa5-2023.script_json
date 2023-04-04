@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-31 21:39:07 UTC",
+    "serialized_at": "2023-04-03 12:48:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3756,7 +3756,7 @@
       "key": "fa838400-394b-4237-aa30-3bccc3ecc248",
       "position": 6,
       "properties": {
-        "description": "**Do This:** Explain the potential solution and scoring guidelines:\n* Implementation for `countBlackPixels()` method (Part (a))\n* Implementation for `lightenImage()` method (Part (b))"
+        "description": "**Do This:** Explain the potential solution and scoring guidelines:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `countBlackPixels()` access all entries in `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `countBlackPixels()` compares an element in the array with `BLACK` or with `0` during traversal\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `countBlackPixels()` initializes and increments a counter\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `countBlackPixels()` returns the correct count of the number of black pixels in `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()` accesses all necessary elements in at least one row or one column of `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()` accesses all entries in `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()` increases the value at index `[row][col]` by the value found at index `[row + 2][col + 2]`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()` modifies all appropriate elements of `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()`assigns `WHITE` or `255` to elements of `pixels` that would otherwise have a value greater than `WHITE`"
       },
       "seeding_key": {
         "activity_section.key": "fa838400-394b-4237-aa30-3bccc3ecc248",
@@ -5401,6 +5401,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5 Personal Narrative Project_2023"
+        ],
         "progression": "Personal Narrative Project"
       },
       "bonus": false,
@@ -5448,6 +5451,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5 Personal Narrative Project 1-Day_2023"
+        ],
         "progression": "Personal Narrative Project"
       },
       "bonus": false,
@@ -6611,6 +6617,19 @@
       }
     },
     {
+      "name": "Java Quick Reference",
+      "url": "https://drive.google.com/file/d/16EtSldvp1wgbS3M0tMOx2Y5rXkhfXHny/view?usp=share_link",
+      "key": "java_quick_reference_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "java_quick_reference_1"
+      }
+    },
+    {
       "name": "Modifying Images",
       "url": "https://docs.google.com/presentation/d/1JMDCGHmuH6HoVN8xWG68Ji3B44LReEgnnUkKMGRz_BM/edit?usp=sharing",
       "key": "modifying_images",
@@ -7042,6 +7061,12 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "resource.key": "grayscaleimage_frq_scoring_guidelines"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "java_quick_reference_1"
       }
     },
     {

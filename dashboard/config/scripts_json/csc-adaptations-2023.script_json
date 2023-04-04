@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-adaptations",
-    "serialized_at": "2023-03-28 22:39:07 UTC",
+    "serialized_at": "2023-04-03 20:42:17 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -35,13 +35,13 @@
   "lessons": [
     {
       "key": "Modeling Animal Adaptations (pilot)",
-      "name": "Modeling Animal Adaptations",
+      "name": "Animal Adaptations Introduction",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "In this **skill-building** lesson, students will learn to create and animate sprites and use events to make them interactive. \n\nStudents will code an event-based cause-and-effect model in Sprite Lab to demonstrate how species survive by adapting to their environments over time. . Interactive models and simulations are used in the real world to help engineers and scientists identify patterns, understand nature, make predictions about future changes, and design solutions to prepare for and/or combat major disruptions. \n\nStudents will explore examples of evolution, adaptation, migration, natural selection, and survival in groups. \n",
+        "overview": "In this **skill-building** lesson, students will learn to create and animate sprites and use events to make them interactive. \n\nStudents will code an event-based cause-and-effect model in Sprite Lab to demonstrate how species survive by adapting to their environments over time. Interactive models and simulations are used in the real world to help engineers and scientists identify patterns, understand nature, make predictions about future changes, and design solutions to prepare for and/or combat major disruptions. \n\nStudents will explore examples of evolution, adaptation, migration, natural selection, and survival in groups. \n",
         "preparation": "- Review and complete the online tutorial yourself.\n- Determine in advance which levels might be more challenging for students.\n- Review slides and decide on pacing between student work time and whole group instruction.\n\n#####Optional\n- Prerequisite: Complete [Hello World](https://studio.code.org/s/hello-world-food-2021/lessons/1)\n- Pair Programming: Decide if you want students to engage in pair programming. Watch this video and visit this Support page for more information about pair programming.\n",
         "student_overview": "In this lesson, you will model how animals adapt to their environments over time. You’ll learn to code how giraffes got their long necks, how bunnies have changed their fur color to hide better, and how birds have developed different shaped beaks."
       },
@@ -1219,6 +1219,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_animal_adaptations_L3_intro"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -1241,6 +1244,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_animal_adaptations_predict_gamelab"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1313,6 +1319,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_animal_adaptations_behaviors_wolfpack"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1335,6 +1344,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_animal_adaptations_behaviors_elephantleader"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1407,6 +1419,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_animal_adaptations_choice"
+        ],
         "progression": "Choice"
       },
       "bonus": false,
@@ -1429,6 +1444,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_animal_adaptations_shareout"
+        ],
         "progression": "Share Out"
       },
       "bonus": false,
@@ -1810,7 +1828,7 @@
   ],
   "resources": [
     {
-      "name": "Animal Adaptations",
+      "name": "Modeling Animal Adaptations",
       "url": "https://docs.google.com/presentation/d/1J9yCLR8vBYHgKxuuKymGNWU_KFCGGGUpzTmpl_dvl7A/template/preview",
       "key": "ecosystems",
       "properties": {
