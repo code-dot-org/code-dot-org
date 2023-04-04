@@ -89,7 +89,7 @@ export const commands = {
             // ...convert each string in the array to a number...
             .map(Number)
             // ...remove NaN values. (ex. 'whenClick: 0' results in [Nan, 0] above)
-            .filter(function(value) {
+            .filter(function (value) {
               return !Number.isNaN(value);
             })
         );

@@ -3,11 +3,11 @@ import {assert} from '../util/reconfiguredChai';
 
 var authoredHintUtils = require('@cdo/apps/authoredHintUtils');
 
-describe('Authored Hint Utils', function() {
+describe('Authored Hint Utils', function () {
   var hintOne, hintTwo, record, recordTwo;
   var originalAjax;
 
-  beforeEach(function() {
+  beforeEach(function () {
     localStorage.removeItem('finished_authored_hint_views');
     localStorage.removeItem('unfinished_authored_hint_views');
     localStorage.removeItem('last_attempt_record');
@@ -46,12 +46,12 @@ describe('Authored Hint Utils', function() {
     originalAjax = $.ajax;
   });
 
-  afterEach(function() {
+  afterEach(function () {
     $.ajax = originalAjax;
   });
 
-  describe('getFromLocalStorage_', function() {
-    it("returns default when key doesn' exist", function() {
+  describe('getFromLocalStorage_', function () {
+    it("returns default when key doesn' exist", function () {
       var defaultValue = 'hello';
       var result = authoredHintUtils.getFromLocalStorage_(
         'nonexistent_key',
@@ -60,7 +60,7 @@ describe('Authored Hint Utils', function() {
       assert.equal(result, defaultValue);
     });
 
-    it('can recover from bad JSON', function() {
+    it('can recover from bad JSON', function () {
       localStorage.setItem('bad_json', "yeah, this'll definitely break123");
       var defaultValue = 'hello';
       var result = authoredHintUtils.getFromLocalStorage_(
@@ -70,7 +70,7 @@ describe('Authored Hint Utils', function() {
       assert.equal(result, defaultValue);
     });
 
-    it('retrieves the set value if all else goes well', function() {
+    it('retrieves the set value if all else goes well', function () {
       var expectedValue = 'hello!';
       localStorage.setItem('good_json', JSON.stringify(expectedValue));
       var result = authoredHintUtils.getFromLocalStorage_(
@@ -81,8 +81,8 @@ describe('Authored Hint Utils', function() {
     });
   });
 
-  describe('recordFinishedHints_', function() {
-    it('simply appends whatever is given to whatever is in finished_authored_hint_views', function() {
+  describe('recordFinishedHints_', function () {
+    it('simply appends whatever is given to whatever is in finished_authored_hint_views', function () {
       var hints = [1, 2, 3];
       localStorage.setItem(
         'finished_authored_hint_views',
@@ -94,8 +94,8 @@ describe('Authored Hint Utils', function() {
     });
   });
 
-  describe('finalizeHints_', function() {
-    it('if no last_attempt_record is set, simply returns the finished hints', function() {
+  describe('finalizeHints_', function () {
+    it('if no last_attempt_record is set, simply returns the finished hints', function () {
       var hints = [1, 2, 3];
       localStorage.setItem(
         'finished_authored_hint_views',
@@ -105,7 +105,7 @@ describe('Authored Hint Utils', function() {
       assert.deepEqual(finalizedHints, [1, 2, 3]);
     });
 
-    it('if last_attempt_record is set, extends all finished hints without overriding', function() {
+    it('if last_attempt_record is set, extends all finished hints without overriding', function () {
       var hints = [hintOne, hintTwo];
 
       localStorage.setItem(
@@ -140,14 +140,14 @@ describe('Authored Hint Utils', function() {
     });
   });
 
-  describe('recordUnfinishedHint', function() {
-    it('if no last_attempt_record is set, simply records the given value', function() {
+  describe('recordUnfinishedHint', function () {
+    it('if no last_attempt_record is set, simply records the given value', function () {
       authoredHintUtils.recordUnfinishedHint(hintOne);
       var unfinishedHints = authoredHintUtils.getUnfinishedHints_();
       assert.deepEqual(unfinishedHints, [hintOne]);
     });
 
-    it('if last_attempt_record is set, extends the given hint without overriding', function() {
+    it('if last_attempt_record is set, extends the given hint without overriding', function () {
       localStorage.setItem('last_attempt_record', JSON.stringify(record));
 
       authoredHintUtils.recordUnfinishedHint(hintOne);
@@ -168,8 +168,8 @@ describe('Authored Hint Utils', function() {
     });
   });
 
-  describe('finishHints', function() {
-    it('sets last_attempt_record', function() {
+  describe('finishHints', function () {
+    it('sets last_attempt_record', function () {
       assert.isNull(localStorage.getItem('last_attempt_record'));
       authoredHintUtils.finishHints(record);
       assert.equal(
@@ -178,7 +178,7 @@ describe('Authored Hint Utils', function() {
       );
     });
 
-    it('clears unfinished_hints', function() {
+    it('clears unfinished_hints', function () {
       authoredHintUtils.recordUnfinishedHint(hintOne);
       assert.equal(
         localStorage.getItem('unfinished_authored_hint_views'),
@@ -191,7 +191,7 @@ describe('Authored Hint Utils', function() {
       );
     });
 
-    it('extends unfinished_hints and moves them to finished_hints', function() {
+    it('extends unfinished_hints and moves them to finished_hints', function () {
       authoredHintUtils.recordUnfinishedHint(hintOne);
       assert.equal(
         localStorage.getItem('unfinished_authored_hint_views'),
@@ -215,9 +215,9 @@ describe('Authored Hint Utils', function() {
     });
   });
 
-  describe('submitHints', function() {
-    it('finishes all unfinished hints using the last hint', function() {
-      $.ajax = function() {};
+  describe('submitHints', function () {
+    it('finishes all unfinished hints using the last hint', function () {
+      $.ajax = function () {};
 
       localStorage.setItem('last_attempt_record', JSON.stringify(record));
       authoredHintUtils.recordUnfinishedHint(hintOne);
@@ -261,9 +261,9 @@ describe('Authored Hint Utils', function() {
       ]);
     });
 
-    it('posts all finalized hints at once', function() {
+    it('posts all finalized hints at once', function () {
       var data;
-      $.ajax = function(options) {
+      $.ajax = function (options) {
         data = options.data;
       };
       var hints = [1, 2, 3];
@@ -283,8 +283,8 @@ describe('Authored Hint Utils', function() {
       );
     });
 
-    it('clears finished hints after successful post', function() {
-      $.ajax = function(options) {
+    it('clears finished hints after successful post', function () {
+      $.ajax = function (options) {
         options.complete();
       };
       authoredHintUtils.recordUnfinishedHint(hintOne);

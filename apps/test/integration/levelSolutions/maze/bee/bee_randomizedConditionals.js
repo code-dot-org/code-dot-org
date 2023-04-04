@@ -99,7 +99,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: function() {
+      customValidator: function () {
         return Maze.executionInfo.terminationValue() === 3; //TerminationValue.NOT_AT_HONEYCOMB;
       },
       xml:

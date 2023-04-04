@@ -83,19 +83,9 @@ describe('AnnouncementsEditor', () => {
     );
     const announce = wrapper.find('Announcement');
     assert.equal(announce.length, 1);
-    assert.equal(
-      announce
-        .first()
-        .dive()
-        .find('button').length,
-      1
-    );
+    assert.equal(announce.first().dive().find('button').length, 1);
 
-    announce
-      .first()
-      .dive()
-      .find('button')
-      .simulate('click');
+    announce.first().dive().find('button').simulate('click');
     expect(updateAnnouncements).to.have.been.calledWith([]);
   });
 

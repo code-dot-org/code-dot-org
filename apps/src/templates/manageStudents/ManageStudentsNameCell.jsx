@@ -27,15 +27,8 @@ class ManageStudentNameCell extends Component {
   };
 
   render() {
-    const {
-      id,
-      sectionId,
-      name,
-      username,
-      email,
-      editedValue,
-      scriptName
-    } = this.props;
+    const {id, sectionId, name, username, email, editedValue, scriptName} =
+      this.props;
     const studentUrl = scriptUrlForStudent(sectionId, scriptName, id);
 
     return (

@@ -43,7 +43,7 @@ const DataState = Record({
 
 const initialState = new DataState();
 
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case ADD_TABLE_NAME:
       return state.set(

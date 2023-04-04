@@ -165,12 +165,8 @@ class MultipleSectionsAssigner extends Component {
 
   // this is identical to unhideAndAssignUnit above but just has null as the scriptId
   assignCourseWithoutUnit = section => {
-    const {
-      courseId,
-      courseOfferingId,
-      courseVersionId,
-      assignToSection
-    } = this.props;
+    const {courseId, courseOfferingId, courseVersionId, assignToSection} =
+      this.props;
     const sectionId = section.id;
     assignToSection(
       sectionId,
@@ -310,11 +306,8 @@ const styles = {
 
 export const UnconnectedMultipleSectionsAssigner = MultipleSectionsAssigner;
 
-export default connect(
-  state => ({}),
-  {
-    assignToSection,
-    updateHiddenScript,
-    unassignSection
-  }
-)(MultipleSectionsAssigner);
+export default connect(state => ({}), {
+  assignToSection,
+  updateHiddenScript,
+  unassignSection
+})(MultipleSectionsAssigner);
