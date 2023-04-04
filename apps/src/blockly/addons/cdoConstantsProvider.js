@@ -93,38 +93,11 @@ export default class CdoConstantsProvider extends GoogleBlockly.geras
   makeRoundInputConn() {
     const width = this.TAB_WIDTH;
     const height = this.TAB_HEIGHT;
-
-    // NOTE: `curve` function below rewrites `svgPaths.curve` from mainline Blockly
-    // https://github.com/google/blockly/blob/69afe5b60fe43b5ed911db91ae62058d66ffe5ec/core/utils/svg_paths.ts#L38
-    // This function will be removed once `svgPaths.curve` is fixed.
-    // Added .join(','), space after 'c', and there should be no comma
-    // between x and y
-    /**
-     * Draw a cubic or quadratic curve.  See
-     * developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d#Cubic_B%C3%A9zier_Curve
-     * These coordinates are unitless and hence in the user coordinate system.
-     *
-     * @param command The command to use.
-     *     Should be one of: c, C, s, S, q, Q.
-     * @param points  An array containing all of the points to pass to the curve
-     *     command, in order.  The points are represented as strings of the format
-     *     'x y'.
-     * @returns A string defining one or more Bezier curves.  See the MDN
-     *     documentation for exact format.
-     */
-    function curve(command, points) {
-      return ' ' + command + ' ' + points.join(',');
-    }
-
-    /**
-     * Since input and output connections share the same shape you can
-     * define a function to generate the path for both.
-     */
     function makeMainPath(up) {
-      const path = curve('c ', [
-        -width * 1.5 + ' 0',
-        -width * 1.5 + ' ' + -1 * up * height,
-        '0 ' + -1 * up * height
+      const path = Blockly.utils.svgPaths.curve('c', [
+        -width * 1.5 + ', 0 ',
+        -width * 1.5 + ', ' + -1 * up * height + ' ',
+        '0, ' + -1 * up * height + ' '
       ]);
       return path;
     }
