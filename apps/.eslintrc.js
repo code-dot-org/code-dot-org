@@ -66,12 +66,7 @@ module.exports = {
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
         // We can rely on typescript types instead of prop types
-        'react/prop-types': 'off',
-        // We need to fix up our imports
-        // https://codedotorg.atlassian.net/browse/SL-763
-        '@typescript-eslint/no-var-requires': 'off',
-        // TODO: should this be an error?
-        '@typescript-eslint/no-explicit-any': 'off'
+        'react/prop-types': 'off'
       }
     }
   ]
