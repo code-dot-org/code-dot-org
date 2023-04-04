@@ -13,10 +13,11 @@ markdown <<MARKDOWN
 
 ##### Click the dropdown arrows below to view lesson overviews.
 
-<details>
-<summary><strong>Lesson 1: Intro to Problem Solving</strong></summary>
-
-<img src="https://images.code.org/564c63dd5be84166dd2753dbaf88c895-image-1651244113551.54.00 AM.png" alt="Image of sample activity guide" width="275px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<details style="background-color: #ececec; padding:10px; margin-bottom:10px; border:1px solid transparent; border-radius:5px;">
+<summary style="font-size:1.2em; font-weight: bold;">🔎 Lesson 1: Intro to Problem Solving</summary>
+<div style="margin-top:20px; margin-left:20px; margin-right:20px;">
+<p>
+<img src="https://images.code.org/564c63dd5be84166dd2753dbaf88c895-image-1651244113551.54.00 AM.png" alt="Image of sample activity guide" width="300px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 **Question of the Day:** What can help us to work together and solve problems as a team?
 
@@ -35,16 +36,16 @@ Alternate versions of this lesson are also available.
 * Identify different strategies used to solve a problem
 * Iteratively improve a solution to a problem
 
-</details>
+</p></div></details>
 
 <div style="clear:both"/>
 
 
-<details>
-
-<summary><strong>Lesson 2: The Problem Solving Process</strong></summary>
-
-<img src="https://images.code.org/1798a4589fe0e8f16210ba9a1c208df3-image-1651244302341.58.12 AM.png" alt="Image of web lab" width="275px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<details style="background-color: #ececec; padding:10px; margin-bottom:10px; border:1px solid transparent; border-radius:5px;">
+<summary style="font-size:1.2em; font-weight: bold;">🔎 Lesson 2: The Problem Solving Process</summary>
+<div style="margin-top:20px; margin-left:20px; margin-right:20px;">
+<p>
+<img src="https://images.code.org/1798a4589fe0e8f16210ba9a1c208df3-image-1651244302341.58.12 AM.png" alt="Image of web lab" width="300px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 **Question of the Day:** What are some common steps we can use to solve many different types of problems?
 
@@ -55,17 +56,17 @@ This lesson introduces the formal problem solving process that students will use
 **Students will be able to:**
 * Given a problem, identify individual actions that would fall within each step of the problem solving process
 * Identify useful strategies within each step of the problem solving process
-
+</p></div>
 </details>
 
 <div style="clear:both"/>
 
 
-<details>
-
-<summary><strong>Lesson 3: Exploring Problem Solving</strong></summary>
-
-<img src="https://images.code.org/5246334c13c32e5c91ba41ae1dd43045-image-1651244490640.01.19 AM.png" alt="Image of an activity guide" width="275px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<details style="background-color: #ececec; padding:10px; margin-bottom:10px; border:1px solid transparent; border-radius:5px;">
+<summary style="font-size:1.2em; font-weight: bold;">🔎 Lesson 3: Exploring Problem Solving</summary>
+<div style="margin-top:20px; margin-left:20px; margin-right:20px;">
+<p>
+<img src="https://images.code.org/5246334c13c32e5c91ba41ae1dd43045-image-1651244490640.01.19 AM.png" alt="Image of an activity guide" width="300px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 **Question of the Day:** How can we apply the problem solving process to many different kinds of problems?
 
@@ -81,7 +82,7 @@ Alternate versions of this lesson are also available.
 **Students will be able to:**
 * Apply the problem solving process to approach a variety of problems
 * Assess how well-defined a problem is and use strategies to define the problem more precisely
-
+</p></div>
 </details>
 
 <div style="clear:both"/>
