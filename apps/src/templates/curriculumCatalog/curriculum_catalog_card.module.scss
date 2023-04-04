@@ -1,6 +1,7 @@
 @import "phase1-design-system";
 
 $border-radius: 4px;
+$container-width: 309px;
 
 .curriculumCatalogCardContainer {
   display: flex;
@@ -8,7 +9,7 @@ $border-radius: 4px;
   background-color: $neutral_light;
   border-radius: $border-radius;
   height: 384px;
-  width: 309px;
+  width: $container-width;
 
   img {
     height: 140px;
@@ -65,18 +66,33 @@ $border-radius: 4px;
       }
     }
 
-    .buttonsContainer {
+    .buttonsContainerNotEnglish {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin-top: auto;
+      row-gap: 3px;
+
+      button {
+        margin: 0;
+        width: 100%;
+        height: 34px;
+        font-size: 0.9em;
+      }
+    }
+
+    .buttonsContainerEnglish {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       margin-top: auto;
 
       button {
+        // width calculated to ensure space between buttons is 12px
+        // (totalContainerWidth - 2*padding - minimumSpaceBetweenButtons) / 2
+        width: ($container-width - (2 * 16) - 12) / 2;
         height: 40px;
         margin: 0;
-        // TODO [MEG] Adjust to accommodate different string
-        // sizes, look at gap https://css-tricks.com/almanac/properties/g/gap/
-        width: 132px; // calculated: (totalContainerWidth - 2*padding - minimumSpaceBetweenButtons) / 2
         font-size: 1em;
       }
     }
