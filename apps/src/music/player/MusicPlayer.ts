@@ -145,7 +145,8 @@ export default class MusicPlayer {
       skipContext,
       effects,
       length: constants.DEFAULT_PATTERN_LENGTH,
-      blockId
+      blockId,
+      id: JSON.stringify(value)
     };
 
     this.addNewEvent(patternEvent);
@@ -184,7 +185,8 @@ export default class MusicPlayer {
       skipContext,
       effects,
       length: constants.DEFAULT_CHORD_LENGTH,
-      blockId
+      blockId,
+      id: JSON.stringify(value)
     };
 
     this.addNewEvent(chordEvent);
@@ -270,7 +272,7 @@ export default class MusicPlayer {
   }
 
   /**
-   * Clear all from the list of playback events, and stop any sounds that have 
+   * Clear all from the list of playback events, and stop any sounds that have
    * not yet been played, if playback is in progress.
    */
   clearAllEvents() {
