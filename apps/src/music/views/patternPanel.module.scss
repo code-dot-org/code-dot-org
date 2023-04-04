@@ -13,10 +13,15 @@
   }
 }
 
-.name {
+.nameContainer {
   display: inline-block;
   width: 80px;
   vertical-align: middle;
+  padding-left: 3px;
+
+  .name {
+    cursor: pointer;
+  }
 }
 
 .outerCell {
