@@ -244,6 +244,10 @@ Resources:
           Value: lb_cookie
         - Key: stickiness.lb_cookie.duration_seconds
           Value: 30
+        # Linearly increase the HTTP throughput share to new instances to give them time to initialize and load caches.
+        - Key: slow_start.duration_seconds
+          Value: 120
+
 <%   unless frontends -%>
       Targets:
         - {Id: !Ref <%=daemon%>, Port: 80}
