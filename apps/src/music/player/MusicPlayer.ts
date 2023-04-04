@@ -212,7 +212,8 @@ export default class MusicPlayer {
       when: 1,
       value: chordValue,
       triggered: false,
-      length: constants.DEFAULT_CHORD_LENGTH
+      length: constants.DEFAULT_CHORD_LENGTH,
+      id: 'preview'
     };
     this.samplePlayer.previewSamples(
       this.convertEventToSamples(chordEvent),
@@ -235,7 +236,8 @@ export default class MusicPlayer {
       when: 1,
       value: patternValue,
       triggered: false,
-      length: constants.DEFAULT_PATTERN_LENGTH
+      length: constants.DEFAULT_PATTERN_LENGTH,
+      id: 'preview'
     };
 
     this.samplePlayer.previewSamples(
