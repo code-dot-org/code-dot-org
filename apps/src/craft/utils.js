@@ -84,7 +84,7 @@ export const BLOCK_NAME_TO_DISPLAY_TEXT = {
  * @returns {Array.<Array.<String>>} - an array of [displayName, blockType] pairs
  */
 export function blockTypesToDropdownOptions(blockTypes) {
-  return blockTypes.map(function(blockType) {
+  return blockTypes.map(function (blockType) {
     const displayName = BLOCK_NAME_TO_DISPLAY_TEXT[blockType] || blockType;
     return [displayName, blockType];
   });

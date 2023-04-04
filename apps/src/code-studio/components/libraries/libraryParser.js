@@ -70,9 +70,7 @@ export function createLibraryClosure(json) {
   let exportedFunctions = [];
   exportedFunctions = json.functions.map(name => `${name}: ${name}`);
   let functionsInClosure = exportedFunctions.join(',');
-  return `var ${json.name} = (function() {${
-    json.source
-  };\nreturn {${functionsInClosure}}})();`;
+  return `var ${json.name} = (function() {${json.source};\nreturn {${functionsInClosure}}})();`;
 }
 
 /**

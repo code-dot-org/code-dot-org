@@ -324,7 +324,10 @@ describe('instructions', () => {
       );
 
       it('sets long instructions if we have an inputOutputTable', () => {
-        const inputOutputTable = [[15, 5], [20, 10]];
+        const inputOutputTable = [
+          [15, 5],
+          [20, 10]
+        ];
         const result = determineInstructionsConstants({
           level: {
             shortInstructions: 'non-markdown',

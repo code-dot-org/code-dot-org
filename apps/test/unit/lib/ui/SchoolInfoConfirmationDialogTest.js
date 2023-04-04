@@ -14,7 +14,7 @@ describe('SchoolInfoConfirmationDialog', () => {
       authTokenValue: 'fake_auth_token',
       existingSchoolInfo: {}
     },
-    onClose: function() {}
+    onClose: function () {}
   };
 
   it('renders the schoolinfointerstitial form', () => {

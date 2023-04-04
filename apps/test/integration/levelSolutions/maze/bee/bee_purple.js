@@ -39,7 +39,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: function() {
+      customValidator: function () {
         return Maze.executionInfo.terminationValue() === 6; //TerminationValue.UNCHECKED_PURPLE
       },
       xml:

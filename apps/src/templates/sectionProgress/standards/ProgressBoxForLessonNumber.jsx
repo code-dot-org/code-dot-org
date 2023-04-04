@@ -33,13 +33,8 @@ class ProgressBoxForLessonNumber extends Component {
   };
 
   render() {
-    const {
-      completed,
-      inProgress,
-      lessonNumber,
-      tooltipId,
-      linkToLessonPlan
-    } = this.props;
+    const {completed, inProgress, lessonNumber, tooltipId, linkToLessonPlan} =
+      this.props;
     const started = completed || inProgress;
     const workingOn = inProgress && !completed;
     const progressBox = (

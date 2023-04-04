@@ -139,7 +139,7 @@ export default Radium(SoundListEntry);
 // Adapted from: http://stackoverflow.com/questions/6312993/javascript-seconds-to-time-string-with-format-hhmmss
 // Convert a number, numSeconds, into a string formatted as MM:SS or "Less than 1 second"
 // if the time is 0 seconds
-const getTimeString = function(numSeconds) {
+const getTimeString = function (numSeconds) {
   const sec_num = parseInt(numSeconds, 10);
   const hours = Math.floor(sec_num / 3600);
   let minutes = Math.floor((sec_num - hours * 3600) / 60);

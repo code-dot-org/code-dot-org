@@ -173,12 +173,8 @@ export class EditableTeacherFeedback extends Component {
   };
 
   didFeedbackChange = () => {
-    const {
-      latestFeedback,
-      comment,
-      performance,
-      reviewStateUpdated
-    } = this.state;
+    const {latestFeedback, comment, performance, reviewStateUpdated} =
+      this.state;
 
     if (latestFeedback) {
       const commentChanged = comment !== latestFeedback.comment;

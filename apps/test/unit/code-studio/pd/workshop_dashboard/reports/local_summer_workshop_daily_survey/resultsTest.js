@@ -123,7 +123,7 @@ describe('Local Summer Workshop Daily Survey Results class', () => {
               overall_success_0: 'I feel more prepared to teach'
             },
             facilitators: {
-              '1': 'Facilitator Person 1'
+              1: 'Facilitator Person 1'
             }
           }}
           facilitatorRollups={{
@@ -143,7 +143,7 @@ describe('Local Summer Workshop Daily Survey Results class', () => {
                 'Demonstrated knowledge of the curriculum.'
             },
             facilitators: {
-              '1': 'Facilitator Person 1'
+              1: 'Facilitator Person 1'
             }
           }}
         />
@@ -167,17 +167,11 @@ describe('Local Summer Workshop Daily Survey Results class', () => {
       'Facilitator Specific Questions'
     ]);
 
-    expect(
-      results
-        .find('Tab')
-        .at(2)
-        .find('SurveyRollupTable')
-    ).to.have.length(1);
-    expect(
-      results
-        .find('Tab')
-        .at(3)
-        .find('SurveyRollupTable')
-    ).to.have.length(1);
+    expect(results.find('Tab').at(2).find('SurveyRollupTable')).to.have.length(
+      1
+    );
+    expect(results.find('Tab').at(3).find('SurveyRollupTable')).to.have.length(
+      1
+    );
   });
 });

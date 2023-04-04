@@ -308,8 +308,8 @@ describe('hiddenLessonRedux', () => {
 
       it('dispatches for each section/script for teachers', () => {
         const data = {
-          '123': ['1', '2'],
-          '456': ['3']
+          123: ['1', '2'],
+          456: ['3']
         };
         initializeHiddenScripts(data)(dispatch);
         assert.deepEqual(

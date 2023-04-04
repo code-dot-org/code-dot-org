@@ -70,11 +70,8 @@ class LessonGroup extends React.Component {
   render() {
     const {isSummaryView, isPlc, viewAs, isRtl, hasVisibleLesson} = this.props;
 
-    const {
-      description,
-      bigQuestions,
-      displayName
-    } = this.props.groupedLesson.lessonGroup;
+    const {description, bigQuestions, displayName} =
+      this.props.groupedLesson.lessonGroup;
 
     // Adjust styles if locale is RTL
     const headingTextStyle = isRtl ? styles.headingTextRTL : styles.headingText;

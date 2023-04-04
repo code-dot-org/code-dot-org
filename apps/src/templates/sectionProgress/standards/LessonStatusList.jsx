@@ -75,7 +75,7 @@ const styles = {
   }
 };
 
-const handleLessonLinkClick = function(lesson) {
+const handleLessonLinkClick = function (lesson) {
   firehoseClient.putRecord(
     {
       study: 'teacher_dashboard_actions',
@@ -91,7 +91,7 @@ const handleLessonLinkClick = function(lesson) {
   );
 };
 
-const ComplexLessonComponent = function({lesson}) {
+const ComplexLessonComponent = function ({lesson}) {
   return (
     <div style={styles.lessonListItem}>
       <div>

@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import five from '@code-dot-org/johnny-five';
 import NeoPixel from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/NeoPixel';
 
-describe('NeoPixel', function() {
+describe('NeoPixel', function () {
   beforeEach(() => {
     // We stub five.Led.RGB's superclass to avoid calling any johnny-five
     // logic that requires a board.
