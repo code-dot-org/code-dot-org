@@ -2,6 +2,7 @@
 
 .patternPanel {
   font-size: 13px;
+  user-select: none;
 }
 
 .row {
@@ -21,6 +22,7 @@
 
   .name {
     cursor: pointer;
+    user-select: none;
   }
 }
 
