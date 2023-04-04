@@ -22,7 +22,8 @@ const CurriculumCatalogCard = ({
   imageSrc,
   subjects,
   topics,
-  isTranslated
+  isTranslated,
+  language
 }) => (
   <CustomizableCurriculumCatalogCard
     assignButtonText={i18n.assign()}
@@ -49,6 +50,7 @@ const CurriculumCatalogCard = ({
     imageAltText={imageAltText}
     isTranslated={isTranslated}
     translationIconTitle={i18n.courseInYourLanguage()}
+    isEnglish={language === 'en'}
   />
 );
 
@@ -66,7 +68,8 @@ CurriculumCatalogCard.propTypes = {
   ).isRequired,
   topics: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(translatedCourseOfferingCsTopics))
-  ).isRequired
+  ).isRequired,
+  language: PropTypes.string.isRequired
 };
 
 CurriculumCatalogCard.defaultProps = {
@@ -87,7 +90,8 @@ const CustomizableCurriculumCatalogCard = ({
   translationIconTitle,
   subjectsAndTopics,
   quickViewButtonDescription,
-  quickViewButtonText
+  quickViewButtonText,
+  isEnglish
 }) => (
   <div className={style.curriculumCatalogCardContainer}>
     <img src={imageSrc} alt={imageAltText} />
@@ -114,8 +118,13 @@ const CustomizableCurriculumCatalogCard = ({
         <FontAwesome icon="clock-o" />
         <p className={style.iconDescription}>{duration}</p>
       </div>
-      <div className={style.buttonsContainer}>
-        {/* each button should be same fixed size */}
+      <div
+        className={
+          isEnglish
+            ? style.buttonsContainerEnglish
+            : style.buttonsContainerNotEnglish
+        }
+      >
         <Button
           color={Button.ButtonColor.neutralDark}
           type="button"
@@ -145,6 +154,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   isTranslated: PropTypes.bool,
   translationIconTitle: PropTypes.string.isRequired,
   subjectsAndTopics: PropTypes.arrayOf(PropTypes.string).isRequired,
+  isEnglish: PropTypes.bool,
   quickViewButtonText: PropTypes.string.isRequired,
   assignButtonText: PropTypes.string.isRequired,
 
