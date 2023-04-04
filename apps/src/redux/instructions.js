@@ -323,10 +323,11 @@ export const setDynamicInstructionsKey = (dynamicInstructionsKey, options) => ({
   options
 });
 
-export const setDynamicInstructionsOverlayDismissCallback = dynamicInstructionsDismissCallback => ({
-  type: SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK,
-  dynamicInstructionsDismissCallback
-});
+export const setDynamicInstructionsOverlayDismissCallback =
+  dynamicInstructionsDismissCallback => ({
+    type: SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK,
+    dynamicInstructionsDismissCallback
+  });
 
 // HELPERS
 

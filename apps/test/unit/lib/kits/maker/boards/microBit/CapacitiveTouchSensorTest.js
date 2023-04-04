@@ -3,7 +3,7 @@ import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
 
-describe('CapacitiveTouchSensor', function() {
+describe('CapacitiveTouchSensor', function () {
   let boardClient, sensor;
   let testPin = 2;
 

@@ -13,7 +13,7 @@ require('../utils'); // Provides Function.prototype.inherits
  * @constructor
  * @augments NetSimSlider
  */
-var NetSimChunkSizeControl = (module.exports = function(
+var NetSimChunkSizeControl = (module.exports = function (
   rootDiv,
   chunkSizeChangeCallback
 ) {
@@ -35,7 +35,7 @@ NetSimChunkSizeControl.inherits(NetSimSlider);
  * @returns {string} - localized string representation of value
  * @override
  */
-NetSimChunkSizeControl.prototype.valueToLabel = function(val) {
+NetSimChunkSizeControl.prototype.valueToLabel = function (val) {
   return i18n.numBitsPerChunk({
     numBits: val
   });
@@ -47,6 +47,6 @@ NetSimChunkSizeControl.prototype.valueToLabel = function(val) {
  * @returns {string} - localized string representation of value
  * @override
  */
-NetSimChunkSizeControl.prototype.valueToShortLabel = function(val) {
+NetSimChunkSizeControl.prototype.valueToShortLabel = function (val) {
   return val.toString();
 };

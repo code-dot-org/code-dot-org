@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2023-03-30 18:10:21 UTC",
+    "serialized_at": "2023-04-03 20:33:02 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -35,7 +35,7 @@
   "lessons": [
     {
       "key": "Poem Art",
-      "name": "Animate a Poem",
+      "name": "Animate a Poem Introduction",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -53,7 +53,7 @@
     },
     {
       "key": "Writing My Time Capsule Poem",
-      "name": "Write My Poem",
+      "name": "Writing My Poem",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -71,7 +71,7 @@
     },
     {
       "key": "Coding My Time Capsule",
-      "name": "Code My Poem",
+      "name": "Coding My Poem",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,

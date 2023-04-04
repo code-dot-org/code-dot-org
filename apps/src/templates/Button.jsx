@@ -68,7 +68,8 @@ class Button extends React.Component {
     tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     isPending: PropTypes.bool,
     pendingText: PropTypes.string,
-    __useDeprecatedTag: PropTypes.bool
+    __useDeprecatedTag: PropTypes.bool,
+    'aria-label': PropTypes.string
   };
 
   onKeyDown = event => {
@@ -98,7 +99,8 @@ class Button extends React.Component {
       isPending,
       pendingText,
       value,
-      __useDeprecatedTag
+      __useDeprecatedTag,
+      'aria-label': ariaLabel
     } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
@@ -176,6 +178,7 @@ class Button extends React.Component {
         onKeyDown={this.onKeyDown}
         tabIndex={tabIndex}
         id={id}
+        aria-label={ariaLabel}
       >
         <div style={_.pick(style, ['textAlign'])}>
           {icon && (

@@ -26,10 +26,10 @@ describe('programmingExpressionsEditorRedux reducer tests', () => {
   beforeEach(() => (initialState = getInitialState()));
 
   it('add programmingExpression', () => {
-    assert.deepEqual(initialState.map(r => r.key), [
-      'programmingExpression-1',
-      'programmingExpression-2'
-    ]);
+    assert.deepEqual(
+      initialState.map(r => r.key),
+      ['programmingExpression-1', 'programmingExpression-2']
+    );
 
     const nextState = programmingExpressionEditor(
       initialState,
@@ -41,22 +41,28 @@ describe('programmingExpressionsEditorRedux reducer tests', () => {
         programmingEnvironmentName: 'applab'
       })
     );
-    assert.deepEqual(nextState.map(r => r.key), [
-      'programmingExpression-1',
-      'programmingExpression-2',
-      'programmingExpression-3'
-    ]);
+    assert.deepEqual(
+      nextState.map(r => r.key),
+      [
+        'programmingExpression-1',
+        'programmingExpression-2',
+        'programmingExpression-3'
+      ]
+    );
   });
 
   it('remove programmingExpression', () => {
-    assert.deepEqual(initialState.map(r => r.key), [
-      'programmingExpression-1',
-      'programmingExpression-2'
-    ]);
+    assert.deepEqual(
+      initialState.map(r => r.key),
+      ['programmingExpression-1', 'programmingExpression-2']
+    );
     const nextState = programmingExpressionEditor(
       initialState,
       removeProgrammingExpression(1)
     );
-    assert.deepEqual(nextState.map(r => r.key), ['programmingExpression-2']);
+    assert.deepEqual(
+      nextState.map(r => r.key),
+      ['programmingExpression-2']
+    );
   });
 });

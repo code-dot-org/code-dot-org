@@ -13,7 +13,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   constructor(menuGenerator, opt_changeHandler, opt_alwaysCallChangeHandler) {
     let validator;
     if (opt_changeHandler) {
-      validator = function(val) {
+      validator = function (val) {
         if (
           this.getSourceBlock() &&
           !this.getSourceBlock().isInsertionMarker_ &&

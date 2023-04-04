@@ -19,7 +19,10 @@ export default storybook => {
                 level_name: 'Documenting all that you know',
                 submission_date: '2/19/2017',
                 escalation_date: '4/3/2/2017',
-                review_ids: [[1, 'escalated'], [2, 'accepted']],
+                review_ids: [
+                  [1, 'escalated'],
+                  [2, 'accepted']
+                ],
                 status: 'escalated',
                 escalated_review_id: 1
               },

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2023-03-30 18:09:45 UTC",
+    "serialized_at": "2023-04-03 20:37:49 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -53,7 +53,7 @@
     },
     {
       "key": "My Time Capsule Story (pilot)",
-      "name": "Writing My Time Capsule Poem",
+      "name": "Writing My Time Capsule",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -90,7 +90,7 @@
     },
     {
       "key": "Sharing My Time Capsule (pilot)",
-      "name": "Sharing My Time Capsule",
+      "name": "Sharing Out",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -1674,7 +1674,7 @@
       }
     },
     {
-      "name": "Time Capsule",
+      "name": "Coding a Time Capsule",
       "url": "https://docs.google.com/presentation/d/1jgZ_PS7uDb2KuvUNPNpW_PqSxsvfVKap4f8RscZPwVY/template/preview",
       "key": "time_capsule",
       "properties": {

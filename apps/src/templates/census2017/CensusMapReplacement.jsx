@@ -53,9 +53,7 @@ class CensusMapInfoWindow extends Component {
 
     const schoolDropdownOption = {
       value: this.props.schoolId,
-      label: `${this.props.schoolName} - ${this.props.city}, ${
-        this.props.state
-      }`,
+      label: `${this.props.schoolName} - ${this.props.city}, ${this.props.state}`,
       school: {
         nces_id: this.props.schoolId,
         name: this.props.schoolName,
@@ -143,7 +141,7 @@ export default class CensusMapReplacement extends Component {
       // console but still make it to our error reporting system. We should
       // change this code once React error boundariess are available (React
       // 16).  https://reactjs.org/docs/error-boundaries.html
-      setTimeout(1, function() {
+      setTimeout(1, function () {
         console.err(e);
       });
     }
@@ -207,7 +205,7 @@ export default class CensusMapReplacement extends Component {
 
     var _this = this;
 
-    this.map.on('load', function() {
+    this.map.on('load', function () {
       _this.map.addSource('censustiles', {
         type: 'vector',
         url: 'mapbox://codeorg.censustiles'
@@ -271,39 +269,39 @@ export default class CensusMapReplacement extends Component {
       }
 
       // Enable mouse controls when the map is clicked
-      _this.map.on('click', function(e) {
+      _this.map.on('click', function (e) {
         enableMouseControls();
       });
       // Enable mouse controls when the zoom (+/-) buttons are pressed
-      _this.map.on('zoom', function(e) {
+      _this.map.on('zoom', function (e) {
         enableMouseControls();
       });
       // Enable mouse controls when we go full screen
-      _this.map.on('resize', function(e) {
+      _this.map.on('resize', function (e) {
         enableMouseControls();
       });
 
-      _this.map.on('click', 'census-schools', function(e) {
+      _this.map.on('click', 'census-schools', function (e) {
         _this.onPointClick(_this, e);
       });
 
-      _this.map.on('mouseenter', 'census-schools', function() {
+      _this.map.on('mouseenter', 'census-schools', function () {
         _this.map.getCanvas().style.cursor = 'pointer';
       });
 
-      _this.map.on('mouseleave', 'census-schools', function() {
+      _this.map.on('mouseleave', 'census-schools', function () {
         _this.map.getCanvas().style.cursor = '';
       });
 
-      _this.map.on('click', 'census-schools-teaching-cs', function(e) {
+      _this.map.on('click', 'census-schools-teaching-cs', function (e) {
         _this.onPointClick(_this, e);
       });
 
-      _this.map.on('mouseenter', 'census-schools-teaching-cs', function() {
+      _this.map.on('mouseenter', 'census-schools-teaching-cs', function () {
         _this.map.getCanvas().style.cursor = 'pointer';
       });
 
-      _this.map.on('mouseleave', 'census-schools-teaching-cs', function() {
+      _this.map.on('mouseleave', 'census-schools-teaching-cs', function () {
         _this.map.getCanvas().style.cursor = '';
       });
     });
@@ -328,7 +326,7 @@ export default class CensusMapReplacement extends Component {
       this.map.flyTo(map_options);
       const _this = this;
       var flying = true;
-      _this.map.on('moveend', function() {
+      _this.map.on('moveend', function () {
         if (!flying) {
           return;
         }

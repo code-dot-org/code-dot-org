@@ -1,14 +1,14 @@
 var createToolbox = require('../block_utils').createToolbox;
 
-var jigsawBlock = function(type, x, y, child, childType) {
+var jigsawBlock = function (type, x, y, child, childType) {
   return jigsawBlockWithDeletableAttr(type, x, y, child, childType, true);
 };
 
-var undeletableJigsawBlock = function(type, x, y, child, childType) {
+var undeletableJigsawBlock = function (type, x, y, child, childType) {
   return jigsawBlockWithDeletableAttr(type, x, y, child, childType, false);
 };
 
-var jigsawBlockWithDeletableAttr = function(
+var jigsawBlockWithDeletableAttr = function (
   type,
   x,
   y,
@@ -49,7 +49,7 @@ var jigsawBlockWithDeletableAttr = function(
  * @param {number} options.level Level number
  * @Param {number} options.numBlocks How many blocks there are in the level
  */
-var validateSimplePuzzle = function(types, options) {
+var validateSimplePuzzle = function (types, options) {
   var numBlocks;
   if (types) {
     numBlocks = types.length;
@@ -96,7 +96,7 @@ var validateSimplePuzzle = function(types, options) {
  */
 
 module.exports = {
-  '1': {
+  1: {
     instructionsIcon: 'apple',
     isK1: true,
     image: {
@@ -110,13 +110,13 @@ module.exports = {
     freePlay: false,
     largeNotches: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return Jigsaw.block1Clicked;
       }
     },
     startBlocks: undeletableJigsawBlock('jigsaw_1A', 20, 20)
   },
-  '2': {
+  2: {
     instructionsIcon: 'smiley',
     isK1: true,
     instructionsImportant: true,
@@ -135,7 +135,7 @@ module.exports = {
     freePlay: false,
     largeNotches: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         // need to be finished drag
         if (Blockly.mainBlockSpace.dragMode) {
           return false;
@@ -151,7 +151,7 @@ module.exports = {
     },
     startBlocks: undeletableJigsawBlock('jigsaw_2A', 20, 20)
   },
-  '3': {
+  3: {
     instructionsIcon: 'snail',
     isK1: true,
     image: {
@@ -169,7 +169,7 @@ module.exports = {
     freePlay: false,
     largeNotches: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(null, {level: 3, numBlocks: 2});
       }
     },
@@ -178,7 +178,7 @@ module.exports = {
       undeletableJigsawBlock('jigsaw_3B', 100, 220)
   },
 
-  '4': {
+  4: {
     instructionsIcon: 'elephant',
     isK1: true,
     image: {
@@ -196,7 +196,7 @@ module.exports = {
     freePlay: false,
     largeNotches: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(null, {level: 4, numBlocks: 2});
       }
     },
@@ -205,7 +205,7 @@ module.exports = {
       undeletableJigsawBlock('jigsaw_4B', 400, 200)
   },
 
-  '5': {
+  5: {
     instructionsIcon: 'fish',
     isK1: true,
     image: {
@@ -224,7 +224,7 @@ module.exports = {
     largeNotches: true,
     notchedEnds: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(null, {level: 5, numBlocks: 3});
       }
     },
@@ -234,7 +234,7 @@ module.exports = {
       undeletableJigsawBlock('jigsaw_5C', 100, 280)
   },
 
-  '6': {
+  6: {
     instructionsIcon: 'doggie',
     isK1: true,
     image: {
@@ -253,7 +253,7 @@ module.exports = {
     largeNotches: true,
     notchedEnds: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(null, {level: 6, numBlocks: 3});
       }
     },
@@ -263,7 +263,7 @@ module.exports = {
       undeletableJigsawBlock('jigsaw_6C', 100, 280)
   },
 
-  '7': {
+  7: {
     instructionsIcon: 'tree',
     isK1: true,
     image: {
@@ -282,7 +282,7 @@ module.exports = {
     largeNotches: true,
     notchedEnds: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(null, {level: 7, numBlocks: 3});
       }
     },
@@ -292,7 +292,7 @@ module.exports = {
       undeletableJigsawBlock('jigsaw_7C', 100, 280)
   },
 
-  '8': {
+  8: {
     instructionsIcon: 'flower',
     isK1: true,
     image: {
@@ -311,7 +311,7 @@ module.exports = {
     largeNotches: true,
     notchedEnds: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(null, {level: 8, numBlocks: 3});
       }
     },
@@ -321,7 +321,7 @@ module.exports = {
       undeletableJigsawBlock('jigsaw_8A', 100, 280)
   },
 
-  '9': {
+  9: {
     instructionsIcon: 'house',
     isK1: true,
     image: {
@@ -340,7 +340,7 @@ module.exports = {
     notchedEnds: true,
     largeNotches: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(null, {level: 9, numBlocks: 3});
       }
     },
@@ -357,7 +357,7 @@ module.exports = {
     )
   },
 
-  '10': {
+  10: {
     instructionsIcon: 'computer',
     isK1: true,
     image: {
@@ -376,7 +376,7 @@ module.exports = {
     notchedEnds: true,
     largeNotches: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(null, {level: 10, numBlocks: 3});
       }
     },
@@ -393,7 +393,7 @@ module.exports = {
     )
   },
 
-  '11': {
+  11: {
     instructionsIcon: 'blocks',
     isK1: true,
     image: {
@@ -412,7 +412,7 @@ module.exports = {
     largeNotches: false,
     snapRadius: 30,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(
           ['jigsaw_purple', 'jigsaw_blue', 'jigsaw_green'],
           {}
@@ -428,7 +428,7 @@ module.exports = {
     toolbox: createToolbox(jigsawBlock('jigsaw_green'))
   },
 
-  '12': {
+  12: {
     instructionsIcon: 'blocks',
     isK1: true,
     image: {
@@ -447,7 +447,7 @@ module.exports = {
     largeNotches: false,
     snapRadius: 30,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(
           ['jigsaw_purple', 'jigsaw_blue', 'jigsaw_green'],
           {}
@@ -463,7 +463,7 @@ module.exports = {
   },
 
   // assessment
-  '13': {
+  13: {
     instructionsIcon: 'doggie',
     isK1: true,
     image: {
@@ -482,7 +482,7 @@ module.exports = {
     largeNotches: true,
     notchedEnds: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(null, {level: 13, numBlocks: 3});
       }
     },

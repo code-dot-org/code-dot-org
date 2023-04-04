@@ -5,7 +5,7 @@ import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBit
 import sinon from 'sinon';
 import {ACCEL_EVENT_ID} from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataWrapper';
 
-describe('MicroBitAccelerometer', function() {
+describe('MicroBitAccelerometer', function () {
   let boardClient;
   let accelerometer;
 

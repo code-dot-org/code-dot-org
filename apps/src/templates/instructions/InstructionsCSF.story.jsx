@@ -32,7 +32,7 @@ export default {
  * @param {boolean} options.subInstructions
  * @param {boolean} options.tts
  */
-const createCommonStore = function(options = {}) {
+const createCommonStore = function (options = {}) {
   const store = createStore(combineReducers({...commonReducers, isRtl}));
   const pageConstants = {};
   const instructionsConstants = {};

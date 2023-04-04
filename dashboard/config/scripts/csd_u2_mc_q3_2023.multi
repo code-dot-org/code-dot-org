@@ -1,12 +1,13 @@
 name 'CSD U2 MC Q3_2023'
-title 'Question 1'
-type 'multi'
-question 'Placeholder Question Text'
-right '.clouds {
+type 'multi2'
+question 'Which are you more likely to find in a CSS file? (Select all that apply)'
+right '![](https://images.code.org/731fbf85a78266a3a8791e826694314b-CSDunit2htmlcss1.png)'
+wrong '![](https://images.code.org/9149f67ca9f5a89cfe0db39ca2ed3bd3-CSDunit2htmlcss2.png)'
+right '![](https://images.code.org/3bf2e8b84ff295e760298c03ac3056fb-CSDunit2htmlcss3.png)'
+wrong '![](https://images.code.org/eaa9c6ae878eee121e893d62fcbb167a-CSDunit2htmlcss4.png)'
+wrong '![](https://images.code.org/3ce1d41eaf88db8e7211d0c457b1ee20-CSDunit2htmlcss5.png)'
+teacher_markdown <<MARKDOWN
+**Content: Unit 2 Lesson 6, 11, 17**
 
-  height: 50px;
-
-}'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
+In CSS files, rules are found inside curly braces `{}` and each rule consists of a property name and a value, separated by a colon `:`. HTML tags use `<>`.
+MARKDOWN

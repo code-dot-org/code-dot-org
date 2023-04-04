@@ -16,11 +16,11 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Eval.message, evalMsg.infiniteRecursionError());
         return true;
       },
-      xml: (function() {
+      xml: (function () {
         // foo(x) = foo(x)
         // display(foo(1))
 
@@ -50,7 +50,7 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       },
-      xml: (function() {
+      xml: (function () {
         // foo(x) = cond(x == 1, 1, foo(x-1))
         // display(foo(5))
 

@@ -22,7 +22,7 @@ if (!runnable.length) {
   runnable = testsContext.keys();
 }
 
-describe('unit tests', function() {
+describe('unit tests', function () {
   throwOnConsoleErrorsEverywhere();
 
   // TODO: Add warnings back once redux/react-redux have been upgraded.

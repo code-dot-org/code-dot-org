@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 
-$(document).ready(function() {
+$(document).ready(function () {
   const script = document.querySelector('script[data-curricula]');
   const curriculaData = JSON.parse(script.dataset.curricula);
 

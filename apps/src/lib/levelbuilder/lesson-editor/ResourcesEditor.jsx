@@ -262,9 +262,7 @@ class ResourcesEditor extends Component {
         )}
         {this.state.confirmRemovalDialogOpen && (
           <Dialog
-            body={`Are you sure you want to remove resource "${
-              this.state.resourceToRemove.name
-            }" from this lesson?`}
+            body={`Are you sure you want to remove resource "${this.state.resourceToRemove.name}" from this lesson?`}
             cancelText="Cancel"
             confirmText="Delete"
             confirmType="danger"
@@ -358,11 +356,8 @@ const styles = {
 
 export const UnconnectedResourcesEditor = ResourcesEditor;
 
-export default connect(
-  state => ({}),
-  {
-    addResource,
-    editResource,
-    removeResource
-  }
-)(ResourcesEditor);
+export default connect(state => ({}), {
+  addResource,
+  editResource,
+  removeResource
+})(ResourcesEditor);

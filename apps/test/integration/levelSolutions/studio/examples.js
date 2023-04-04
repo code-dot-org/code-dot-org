@@ -157,7 +157,7 @@ module.exports = {
     requiredBlocks: '',
     freePlay: false,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return Studio.tickCount > 2;
       }
     }
@@ -172,7 +172,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EXAMPLE_FAILED
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Studio.message,
           'You need at least two examples in' +
@@ -193,7 +193,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EXAMPLE_FAILED
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Studio.message,
           'The function f has' +
@@ -210,7 +210,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Studio.message, null);
         return true;
       },
@@ -222,7 +222,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Studio.message, null);
         return true;
       },
@@ -253,7 +253,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EXAMPLE_FAILED
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Studio.message,
           'You need at least two' +

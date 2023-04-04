@@ -437,7 +437,7 @@ for (var elementType in PROPERTIES) {
   var elementProperties = PROPERTIES[elementType];
   elementProperties.dropdownOptions = [];
   elementProperties.infoForFriendlyName = {};
-  elementProperties.propertyNames.forEach(function(propName) {
+  elementProperties.propertyNames.forEach(function (propName) {
     var friendlyName = PROP_INFO[propName].friendlyName;
     if (elementProperties.infoForFriendlyName[friendlyName]) {
       throw new Error(
@@ -638,7 +638,7 @@ function getPropertyValueDropdown(param2) {
  *  then returns the appropriate dropdown based on the value.
  */
 export function setPropertyValueSelector() {
-  return function(editor) {
+  return function (editor) {
     const param2 = getSecondSetPropertyParam(this.parent, editor);
     return getPropertyValueDropdown(param2);
   };
@@ -652,7 +652,7 @@ export function setPropertyValueSelector() {
  *   types, provides full list of properties across all types.
  */
 export function setPropertyDropdown(setMode) {
-  return function(aceEditor) {
+  return function (aceEditor) {
     var elementType;
     // Note: We depend on "this" being the droplet socket when in block mode,
     // such that parent ends up being the block. In text mode, this.parent

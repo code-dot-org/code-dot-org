@@ -165,12 +165,8 @@ class MoveStudents extends Component {
   };
 
   isButtonDisabled = () => {
-    const {
-      studentIds,
-      sectionId,
-      otherTeacher,
-      otherTeacherSection
-    } = this.props.transferData;
+    const {studentIds, sectionId, otherTeacher, otherTeacherSection} =
+      this.props.transferData;
     if (otherTeacher) {
       return studentIds.length === 0 || !otherTeacherSection;
     } else {

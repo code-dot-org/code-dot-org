@@ -11,7 +11,7 @@ describe('Sprite Commands', () => {
   const sprite1Name = 'sprite1';
   const sprite2Name = 'sprite2';
   const sprite3Name = 'sprite3';
-  beforeEach(function() {
+  beforeEach(function () {
     const p5Wrapper = createP5Wrapper();
     coreLibrary = new CoreLibrary(p5Wrapper.p5);
     let image = new p5.Image(100, 100, p5Wrapper.p5);

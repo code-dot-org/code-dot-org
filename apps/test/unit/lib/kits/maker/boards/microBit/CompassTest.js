@@ -4,7 +4,7 @@ import {MBFirmataClientStub} from '../makeStubBoard';
 import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import sinon from 'sinon';
 
-describe('MicroBit Compass', function() {
+describe('MicroBit Compass', function () {
   let boardClient;
   let compass;
 

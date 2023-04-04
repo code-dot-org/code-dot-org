@@ -31,13 +31,13 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 10000);
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.isFalse(window.Studio.sprite[0].visible, 'sprite is hidden');
         return true;
       },
@@ -75,13 +75,13 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 10000);
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(window.Studio.sprite[0].x, 0, 'sprite is at the far left');
         assert.equal(window.Studio.sprite[0].y, 0, 'sprite is at the top');
         return true;
@@ -120,13 +120,13 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 10000);
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(window.Studio.sprite[0].x, 0, 'sprite is at the far left');
         assert.equal(window.Studio.sprite[0].y, 0, 'sprite is at the top');
         return true;

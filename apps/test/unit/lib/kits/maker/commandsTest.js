@@ -150,17 +150,17 @@ describe('maker/commands.js - CircuitPlayground', () => {
     describe(`event aliases`, () => {
       let component, callback;
 
-      beforeEach(function() {
+      beforeEach(function () {
         component = {on: sinon.spy()};
         callback = () => {};
       });
 
-      it(`aliases 'tap:single' event to 'singleTap'`, function() {
+      it(`aliases 'tap:single' event to 'singleTap'`, function () {
         onBoardEvent({component, event: 'singleTap', callback});
         expect(component.on).to.have.been.calledWith('tap:single', callback);
       });
 
-      it(`aliases 'tap:double' event to 'doubleTap'`, function() {
+      it(`aliases 'tap:double' event to 'doubleTap'`, function () {
         onBoardEvent({component, event: 'doubleTap', callback});
         expect(component.on).to.have.been.calledWith('tap:double', callback);
       });

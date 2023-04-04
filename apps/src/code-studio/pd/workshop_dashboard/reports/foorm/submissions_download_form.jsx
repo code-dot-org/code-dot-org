@@ -76,13 +76,9 @@ export default class SubmissionsDownloadForm extends React.Component {
 
   getQueryParams() {
     if (this.props.workshopId) {
-      return `?name=${this.state.selectedForm.name}&version=${
-        this.state.selectedForm.version
-      }`;
+      return `?name=${this.state.selectedForm.name}&version=${this.state.selectedForm.version}`;
     } else {
-      let queryParams = `?name=${this.state.selectedForm.name}&version=${
-        this.state.selectedForm.version
-      }`;
+      let queryParams = `?name=${this.state.selectedForm.name}&version=${this.state.selectedForm.version}`;
       if (this.state.startDate) {
         queryParams = `${queryParams}&start_date=${this.formatStartDate(
           this.state.startDate
@@ -138,9 +134,7 @@ export default class SubmissionsDownloadForm extends React.Component {
 
   getCsvQueryUrl() {
     if (this.props.workshopId) {
-      return `/api/v1/pd/workshops/${
-        this.props.workshopId
-      }/foorm/csv_survey_report`;
+      return `/api/v1/pd/workshops/${this.props.workshopId}/foorm/csv_survey_report`;
     } else {
       return '/api/v1/pd/foorm/forms/submissions_csv';
     }
@@ -148,9 +142,7 @@ export default class SubmissionsDownloadForm extends React.Component {
 
   getFormNameVersionQueryUrl() {
     if (this.props.workshopId) {
-      return `/api/v1/pd/workshops/${
-        this.props.workshopId
-      }/foorm/forms_for_workshop`;
+      return `/api/v1/pd/workshops/${this.props.workshopId}/foorm/forms_for_workshop`;
     } else {
       return '/api/v1/pd/foorm/forms/form_names';
     }

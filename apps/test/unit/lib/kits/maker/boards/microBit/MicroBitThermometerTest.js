@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import MicroBitThermometer from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitThermometer';
 import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 
-describe('MicroBitThermometer', function() {
+describe('MicroBitThermometer', function () {
   let boardClient, thermometer;
 
   beforeEach(() => {
