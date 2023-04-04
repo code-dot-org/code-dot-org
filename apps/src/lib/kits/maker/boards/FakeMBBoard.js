@@ -123,6 +123,10 @@ export default class FakeMBBoard extends EventEmitter {
   createButton(pin) {
     return new FakeExternalButton();
   }
+
+  createCapacitiveTouchSensor() {
+    return new FakeCapacitiveTouchSensor();
+  }
 }
 
 class FakeComponent extends EventEmitter {}
@@ -194,6 +198,11 @@ class FakeExternalLed extends FakeComponent {
 
 class FakeExternalButton extends FakeMicroBitButton {}
 
-class FakeCapacitiveTouchSensor extends FakeComponent {}
+class FakeCapacitiveTouchSensor extends FakeComponent {
+  constructor() {
+    super();
+    this.isPressed = false;
+  }
+}
 
 class FakeMBFirmataWrapper {}

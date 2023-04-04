@@ -5,6 +5,7 @@ import {expect} from '../../../../../util/reconfiguredChai';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
 import FakeCPBoard from '@cdo/apps/lib/kits/maker/boards/FakeCPBoard';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
+import FakeMBBoard from '@cdo/apps/lib/kits/maker/boards/FakeMBBoard';
 
 /**
  * Interface that our board controllers must implement to be usable with
@@ -260,7 +261,7 @@ export function itImplementsTheMakerBoardInterface(
       });
     });
 
-    if (BoardClass === MicroBitBoard) {
+    if (BoardClass === MicroBitBoard || BoardClass === FakeMBBoard) {
       /**
        * @function
        * @name MakerBoard#createCapacitiveTouchSensor
