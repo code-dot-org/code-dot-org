@@ -21,4 +21,6 @@ export interface PlaybackEvent {
   length: number;
   /** The ID of the block that created this event */
   blockId?: string;
+  /** A unique ID used to group same sounds together in the timeline */
+  id?: string;
 }

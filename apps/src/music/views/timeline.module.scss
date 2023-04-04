@@ -90,6 +90,16 @@
           border-color: violet;
         }
 
+        &Pattern {
+          background-color: black;
+          border-color: white;
+        }
+
+        &Chord {
+          background-color: $light_cyan;
+          border-color: $neutral_dark80;
+        }
+
         &Playing {
           box-shadow: 0 0 10px rgba(255 255 255 / 0.5);
         }
