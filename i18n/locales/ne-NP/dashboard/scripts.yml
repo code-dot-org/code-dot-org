@@ -1439,6 +1439,10 @@ ne:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(old) Unit 9: Data"
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Assessments
         pre-express-2023:
           lesson_groups:
             csf_loops:

@@ -10,7 +10,7 @@ function getRect(photoSelectComponent) {
   };
 }
 
-describe('Applab designElements/photoSelect component', function() {
+describe('Applab designElements/photoSelect component', function () {
   let photoSelectComponent;
 
   beforeEach(() => {

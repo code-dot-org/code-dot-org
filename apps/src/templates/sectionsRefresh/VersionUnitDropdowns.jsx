@@ -29,9 +29,8 @@ export default function VersionUnitDropdowns({
     return versionObject;
   };
 
-  const selectedCourseVersionObject = prepareCourseVersions()[
-    (sectionCourse?.versionId)
-  ];
+  const selectedCourseVersionObject =
+    prepareCourseVersions()[sectionCourse?.versionId];
 
   const orderedUnits = _.orderBy(
     selectedCourseVersionObject?.units,

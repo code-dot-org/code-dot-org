@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import FieldGroup from './FieldGroup';
 
-const PHONE_NUMBER_REGEX = /(\()?(\(?\d{1,3})?(\) ?)?(\d{1,3})?(-| )?(\d{1,4})?/;
+const PHONE_NUMBER_REGEX =
+  /(\()?(\(?\d{1,3})?(\) ?)?(\d{1,3})?(-| )?(\d{1,4})?/;
 
 export default class UsPhoneNumberInput extends React.Component {
   static propTypes = {

@@ -238,7 +238,8 @@ const styles = {
   }
 };
 
-export const UnconnectedMultipleChoiceAssessmentsOverviewTable = MultipleChoiceAssessmentsOverviewTable;
+export const UnconnectedMultipleChoiceAssessmentsOverviewTable =
+  MultipleChoiceAssessmentsOverviewTable;
 
 export default connect(
   state => ({}),

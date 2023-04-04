@@ -129,9 +129,7 @@ export const triggeredAtSimple2 = {
       };
       var __effects = {};
       ProgramSequencer.playSequentialWithMeasure(
-        Math.ceil(
-          MusicPlayer.getCurrentPlayheadPosition()
-        )
+        Math.ceil(startPosition)
       );
       RandomSkipManager.init();
     `
@@ -266,7 +264,11 @@ export const setEffectAtCurrentLocationSimple2 = {
       {
         type: 'field_dropdown',
         name: FIELD_EFFECTS_VALUE,
-        options: [['normal', ''], ['medium', 'medium'], ['low', 'low']]
+        options: [
+          ['normal', ''],
+          ['medium', 'medium'],
+          ['low', 'low']
+        ]
       }
     ],
     inputsInline: true,

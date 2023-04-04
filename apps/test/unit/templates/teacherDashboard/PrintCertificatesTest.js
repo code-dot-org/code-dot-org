@@ -29,12 +29,7 @@ describe('PrintCertificates', () => {
 
   it('has trigger to open /certificates', () => {
     assert.equal(wrapper.find('div').length, 2);
-    assert(
-      wrapper
-        .find('div')
-        .last()
-        .contains('Print Certificates')
-    );
+    assert(wrapper.find('div').last().contains('Print Certificates'));
   });
 
   it('loads student names', finish => {
@@ -64,10 +59,7 @@ describe('PrintCertificates', () => {
     };
 
     assert.deepEqual(wrapper.state('names'), []);
-    wrapper
-      .find('div')
-      .last()
-      .simulate('click');
+    wrapper.find('div').last().simulate('click');
     sinon.restore();
   });
 });

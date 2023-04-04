@@ -14,7 +14,7 @@ describe('AssetManager', () => {
   beforeEach(() => {
     xhr = sinon.useFakeXMLHttpRequest();
     requests = [];
-    xhr.onCreate = function(xhr) {
+    xhr.onCreate = function (xhr) {
       requests.push(xhr);
     };
   });

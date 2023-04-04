@@ -64,10 +64,8 @@ export default function ProgrammingExpressionEditor({
   environmentCategories,
   videoOptions
 }) {
-  const [
-    programmingExpression,
-    setProgrammingExpressionProperty
-  ] = useProgrammingExpression(initialProgrammingExpression);
+  const [programmingExpression, setProgrammingExpressionProperty] =
+    useProgrammingExpression(initialProgrammingExpression);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);

@@ -58,10 +58,7 @@ describe('DataDocEditAll', () => {
 
     // check delete button (TextLink) calls initiate delete doc function
     expect(
-      editAllTable
-        .findAll('.actions-box')[0]
-        .findAll('TextLink')[1]
-        .toString()
+      editAllTable.findAll('.actions-box')[0].findAll('TextLink')[1].toString()
     ).to.contain('initiateDeleteDataDoc');
   });
 

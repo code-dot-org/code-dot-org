@@ -207,13 +207,8 @@ class JavalabConsole extends React.Component {
   };
 
   render() {
-    const {
-      displayTheme,
-      style,
-      bottomRow,
-      clearConsoleLogs,
-      editorFontSize
-    } = this.props;
+    const {displayTheme, style, bottomRow, clearConsoleLogs, editorFontSize} =
+      this.props;
 
     return (
       <div style={style}>
@@ -278,11 +273,11 @@ class JavalabConsole extends React.Component {
 export default connect(
   state => ({
     consoleLogs: state.javalabConsole.consoleLogs,
-    displayTheme: state.javalab.displayTheme,
+    displayTheme: state.javalabView.displayTheme,
     isPhotoPrompterOpen: state.javalabConsole.isPhotoPrompterOpen,
     photoPrompterPromptText: state.javalabConsole.photoPrompterPromptText,
     shouldJumpToInput: state.javalab.isRunning || state.javalab.isTesting,
-    editorFontSize: state.javalab.editorFontSize
+    editorFontSize: state.javalabView.editorFontSize
   }),
   dispatch => ({
     appendInputLog: log => dispatch(appendInputLog(log)),

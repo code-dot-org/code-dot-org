@@ -600,7 +600,7 @@ describe('teacherSectionsRedux', () => {
       return getState().teacherSections;
     }
 
-    beforeEach(function() {
+    beforeEach(function () {
       // Stub server responses
       server = sinon.fakeServer.create();
 
@@ -609,7 +609,7 @@ describe('teacherSectionsRedux', () => {
       store.dispatch(setSections(sections));
     });
 
-    afterEach(function() {
+    afterEach(function () {
       server.restore();
     });
 
@@ -790,13 +790,13 @@ describe('teacherSectionsRedux', () => {
       return getState().teacherSections;
     }
 
-    beforeEach(function() {
+    beforeEach(function () {
       // Stub server responses
       server = sinon.fakeServer.create();
       sinon.stub(console, 'error');
     });
 
-    afterEach(function() {
+    afterEach(function () {
       console.error.restore();
       server.restore();
     });

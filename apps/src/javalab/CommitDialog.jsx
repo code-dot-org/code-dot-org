@@ -261,9 +261,8 @@ export class UnconnectedCommitDialog extends React.Component {
             files={files.map(name => ({
               name,
               commit: filesToBackpack.includes(name),
-              hasConflictingName: this.getConflictingBackpackFiles().includes(
-                name
-              )
+              hasConflictingName:
+                this.getConflictingBackpackFiles().includes(name)
             }))}
             notes={commitNotes}
             onToggleFile={this.toggleFileToBackpack}
@@ -327,7 +326,7 @@ const styles = {
 
 export default connect(
   state => ({
-    sources: state.javalab.sources,
+    sources: state.javalabEditor.sources,
     backpackEnabled: state.javalab.backpackEnabled,
     isCommitSaveInProgress: state.javalab.isCommitSaveInProgress,
     hasCommitSaveError: state.javalab.hasCommitSaveError

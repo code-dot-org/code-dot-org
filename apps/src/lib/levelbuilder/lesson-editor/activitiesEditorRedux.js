@@ -399,13 +399,12 @@ function activities(state = [], action) {
     case REMOVE_TIP: {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
-      activitySections[
-        action.activitySectionPosition - 1
-      ].tips = activitySections[action.activitySectionPosition - 1].tips.filter(
-        tip => {
-          return tip.key !== action.tipKey;
-        }
-      );
+      activitySections[action.activitySectionPosition - 1].tips =
+        activitySections[action.activitySectionPosition - 1].tips.filter(
+          tip => {
+            return tip.key !== action.tipKey;
+          }
+        );
       break;
     }
 

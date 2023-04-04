@@ -9,12 +9,12 @@ import {
   stubRedux,
   restoreRedux
 } from '@cdo/apps/redux';
-import javalab, {setDisplayTheme} from '@cdo/apps/javalab/javalabRedux';
+import javalabView, {setDisplayTheme} from '@cdo/apps/javalab/redux/viewRedux';
 import javalabConsole, {
   openPhotoPrompter,
   closePhotoPrompter
 } from '@cdo/apps/javalab/redux/consoleRedux';
-
+import javalab from '@cdo/apps/javalab/javalabRedux';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import sinon from 'sinon';
 import PhotoSelectionView from '@cdo/apps/javalab/components/PhotoSelectionView';
@@ -24,7 +24,7 @@ describe('Java Lab Console Test', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({javalab, javalabConsole});
+    registerReducers({javalab, javalabView, javalabConsole});
     store = getStore();
   });
 
@@ -48,16 +48,10 @@ describe('Java Lab Console Test', () => {
     it('Has light mode', () => {
       const editor = createWrapper();
       expect(
-        editor
-          .find('input')
-          .first()
-          .instance().style.backgroundColor
+        editor.find('input').first().instance().style.backgroundColor
       ).to.equal('rgba(0, 0, 0, 0)');
       expect(
-        editor
-          .find('.javalab-console')
-          .first()
-          .instance().style.backgroundColor
+        editor.find('.javalab-console').first().instance().style.backgroundColor
       ).to.equal('rgb(255, 255, 255)');
     });
 
@@ -65,16 +59,10 @@ describe('Java Lab Console Test', () => {
       const editor = createWrapper();
       store.dispatch(setDisplayTheme(DisplayTheme.DARK));
       expect(
-        editor
-          .find('input')
-          .first()
-          .instance().style.backgroundColor
+        editor.find('input').first().instance().style.backgroundColor
       ).to.equal('rgba(0, 0, 0, 0)');
       expect(
-        editor
-          .find('.javalab-console')
-          .first()
-          .instance().style.backgroundColor
+        editor.find('.javalab-console').first().instance().style.backgroundColor
       ).to.equal('rgb(0, 0, 0)');
     });
   });

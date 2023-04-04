@@ -3985,6 +3985,10 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Hodnotenie kurzu
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Hodnotenia
         csp-playground:
           description_audience: Autori osnov
           description_short: Na prípravu aktualizácií hodín alebo úrovní medzi verziami
@@ -4195,3 +4199,179 @@ sk:
             lessonGroup-4:
               display_name: Kapitola 2
           title: Umelá inteligencia a strojové učenie
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Postup riešenia problémov'
+          student_description: Tematický celok „Riešenie problémov a výpočtová technika“
+            je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
+            kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
+            viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš,
+            ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú
+            informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok
+            uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa
+            svojho výberu.
+        focus-on-creativity2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Tvorba webových stránok'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Viacstránkové weby'
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Obrázky a animácie'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Tvorba hier'
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Počítače a riešenie problémov'
+          student_description: Tematický celok „Riešenie problémov a výpočtová technika“
+            je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
+            kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
+            viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš,
+            ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú
+            informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok
+            uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa
+            svojho výberu.
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Prezentácia informácií'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Riešenie problémov s dátami'
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Postup riešenia problémov'
+          student_description: Tematický celok „Riešenie problémov a výpočtová technika“
+            je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
+            kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
+            viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš,
+            ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú
+            informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok
+            uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa
+            svojho výberu.
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Prezentácia informácií'
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Prezentácia informácií'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Riešenie problémov s dátami'
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Úvod do App Labu
+            lessonGroup-3:
+              display_name: Kapitola 1
+            lessonGroup-4:
+              display_name: Kapitola 2
+          title: Umelá inteligencia a strojové učenie
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Postup riešenia problémov'
+          student_description: Tematický celok „Riešenie problémov a výpočtová technika“
+            je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
+            kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
+            viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš,
+            ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú
+            informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok
+            uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa
+            svojho výberu.
+        focus-on-design-with-purpose2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Tvorba webových stránok'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Viacstránkové weby'
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Užívateľsky orientovaný dizajn'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Prototypovanie aplikácií'
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Postup riešenia problémov'
+          student_description: Tematický celok „Riešenie problémov a výpočtová technika“
+            je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
+            kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
+            viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš,
+            ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú
+            informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok
+            uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa
+            svojho výberu.
+        focus-on-coding2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Tvorba webových stránok'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Viacstránkové weby'
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Obrázky a animácie'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Tvorba hier'
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Postup riešenia problémov'
+          student_description: Tematický celok „Riešenie problémov a výpočtová technika“
+            je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
+            kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
+            viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš,
+            ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú
+            informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok
+            uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa
+            svojho výberu.
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Užívateľsky orientovaný dizajn'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Prototypovanie aplikácií'
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Prezentácia informácií'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Riešenie problémov s dátami'
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Úvod do App Labu
+            lessonGroup-4:
+              display_name: Kapitola 2
+          title: Umelá inteligencia a strojové učenie
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'

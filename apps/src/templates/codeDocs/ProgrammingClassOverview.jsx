@@ -76,7 +76,8 @@ export default function ProgrammingClassOverview({
           <h2>{i18n.additionalInformationHeader()}</h2>
           <EnhancedSafeMarkdown
             markdown={i18n.additionalInformationText({
-              externalDocumentationUrl: programmingClass.externalDocumentation.trim()
+              externalDocumentationUrl:
+                programmingClass.externalDocumentation.trim()
             })}
           />
         </div>

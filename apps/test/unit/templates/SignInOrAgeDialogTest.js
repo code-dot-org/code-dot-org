@@ -63,10 +63,7 @@ describe('SignInOrAgeDialog', () => {
     instance.onClickAgeOk();
     assert.equal(wrapper.state().tooYoung, true);
     assert.equal(
-      wrapper
-        .find('BaseDialog div > div')
-        .first()
-        .text(),
+      wrapper.find('BaseDialog div > div').first().text(),
       'Tutorial unavailable for younger students'
     );
     assert.equal(
@@ -101,10 +98,7 @@ describe('SignInOrAgeDialog', () => {
       instance.ageDropdown = {
         getValue: () => '13'
       };
-      wrapper
-        .find('Button')
-        .at(1)
-        .simulate('click');
+      wrapper.find('Button').at(1).simulate('click');
       assert(setItemSpy.calledOnce);
       assert(setItemSpy.calledWith('anon_over13', true));
       assert(utils.reload.called);

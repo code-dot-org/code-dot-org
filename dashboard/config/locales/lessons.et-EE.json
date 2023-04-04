@@ -128,6 +128,9 @@
         "csd3-2022/Variables": {
           "name": "Muutujad"
         },
+        "csd3-2022/Sprites": {
+          "name": "Spraidid"
+        },
         "csd3-2022/Text": {
           "name": "Tekst"
         },
@@ -278,6 +281,9 @@
         "csd3-2018/Variables": {
           "name": "Muutujad"
         },
+        "csd3-2018/Sprites": {
+          "name": "Spraidid"
+        },
         "csd3-2018/Conditionals": {
           "name": "Tingimuslaused"
         },
@@ -359,6 +365,9 @@
         "csd3-2019/Variables": {
           "name": "Muutujad"
         },
+        "csd3-2019/Sprites": {
+          "name": "Spraidid"
+        },
         "csd3-2019/Conditionals": {
           "name": "Tingimuslaused"
         },
@@ -427,6 +436,9 @@
         },
         "csd3-2017/Variables": {
           "name": "Muutujad"
+        },
+        "csd3-2017/Sprites": {
+          "name": "Spraidid"
         },
         "csd3-2017/Conditionals": {
           "name": "Tingimuslaused"
@@ -820,6 +832,9 @@
         },
         "csd3-2021/Variables": {
           "name": "Muutujad"
+        },
+        "csd3-2021/Sprites": {
+          "name": "Spraidid"
         },
         "csd3-2021/Text": {
           "name": "Tekst"

@@ -9,7 +9,7 @@
  * @param {string[]} params List of parameter names if a function.
  * @param {ExpressionNode} expression
  */
-var Equation = function(name, params, expression) {
+var Equation = function (name, params, expression) {
   this.name = name;
   this.params = params || [];
   this.expression = expression;
@@ -29,10 +29,10 @@ module.exports = Equation;
 /**
  * @returns True if a function
  */
-Equation.prototype.isFunction = function() {
+Equation.prototype.isFunction = function () {
   return this.params.length > 0;
 };
 
-Equation.prototype.clone = function() {
+Equation.prototype.clone = function () {
   return new Equation(this.name, this.params.slice(), this.expression.clone());
 };
