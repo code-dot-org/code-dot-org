@@ -1,7 +1,7 @@
 // This stylesheet can be imported to maintain typographic
 // consistency across Dashboard and Pegasus sites.
 
-// Includes heading and paragraph styles.
+// Includes heading, paragraph, and caption styles.
 
 // ----------------------------------------
 
@@ -12,12 +12,11 @@
 // - example: %h3.heading-sm - This is an h3 heading that will look like an h5
 
 // Use @include [mixin-name] in stylesheets for widespread use.
-// — example: all h3s in a ul need to look like h5s
-  /*
+/* — example: all h3s in a ul need to look like h5s
     ul.icon-list {
       h3 { @include heading-sm }
     }
-  */
+*/
 
 // Mixins
 @mixin heading-xxl {
@@ -89,4 +88,12 @@ p {
 
 strong {
   font-family: $gotham-bold, sans-serif;
+}
+
+// Captions
+figcaption {
+  font-size: .875em;
+  font-family: $gotham-bold, sans-serif;
+  margin: .5em 0 1em;
+  line-height: 1.2;
 }
