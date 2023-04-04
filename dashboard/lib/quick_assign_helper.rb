@@ -82,7 +82,7 @@ module QuickAssignHelper
   end
 
   def self.localized_header(header)
-    localized_header = I18n.t("course_offering.headers.#{header}")
+    localized_header = I18n.t("course_offering.headers.#{header}", default: nil)
     localized_header || header
   end
 end
