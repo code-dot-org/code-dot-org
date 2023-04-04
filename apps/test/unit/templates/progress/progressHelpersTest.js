@@ -30,7 +30,7 @@ describe('progressHelpers', () => {
       },
       hiddenLesson: Immutable.fromJS({
         lessonsBySection: {
-          '11': {'3': true}
+          11: {3: true}
         }
       })
     };
@@ -293,7 +293,7 @@ describe('progressHelpers', () => {
     });
 
     it('throws if icon is invalid', () => {
-      assert.throws(function() {
+      assert.throws(function () {
         const level = {
           icon: 'asdf'
         };

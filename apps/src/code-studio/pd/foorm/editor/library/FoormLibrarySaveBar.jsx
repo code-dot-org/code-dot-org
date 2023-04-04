@@ -83,9 +83,7 @@ class FoormLibrarySaveBar extends Component {
     }
 
     $.ajax({
-      url: `/foorm/library_questions/${
-        this.props.libraryQuestionId
-      }/published_forms_appeared_in`,
+      url: `/foorm/library_questions/${this.props.libraryQuestionId}/published_forms_appeared_in`,
       type: 'get'
     }).done(result => {
       if (result.length !== 0) {
@@ -139,9 +137,7 @@ class FoormLibrarySaveBar extends Component {
     // Need to include library name if this is a new library (no ID)
     let fullLibraryName = '';
     if (!this.props.libraryId) {
-      fullLibraryName = `${this.state.libraryCategory}/${
-        this.state.libraryShortName
-      }`;
+      fullLibraryName = `${this.state.libraryCategory}/${this.state.libraryShortName}`;
     }
 
     $.ajax({

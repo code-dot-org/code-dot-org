@@ -15,7 +15,8 @@ import PersonalLoginDialog, {
 } from './PersonalLoginDialog';
 import DeleteAccountDialog from './DeleteAccountDialog';
 
-export const DELETE_VERIFICATION_STRING = i18n.deleteAccountDialog_verificationString();
+export const DELETE_VERIFICATION_STRING =
+  i18n.deleteAccountDialog_verificationString();
 
 const DEFAULT_STATE = {
   isPersonalLoginDialogOpen: false,

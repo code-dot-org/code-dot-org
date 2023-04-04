@@ -38,12 +38,8 @@ class StudentTable extends React.Component {
   };
 
   render() {
-    const {
-      students,
-      onSelectUser,
-      selectedUserId,
-      levelsWithProgress
-    } = this.props;
+    const {students, onSelectUser, selectedUserId, levelsWithProgress} =
+      this.props;
 
     return (
       <table style={styles.table} className="student-table">

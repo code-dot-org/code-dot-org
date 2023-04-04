@@ -194,7 +194,7 @@ export function handleUploadComplete(result) {
     })
   });
 
-  return function(dispatch, getState) {
+  return function (dispatch, getState) {
     const isBackgroundMode =
       getState().interfaceMode === P5LabInterfaceMode.BACKGROUND;
     const {goal, uploadFilename} = getState().animationPicker;
@@ -235,7 +235,7 @@ export function handleUploadComplete(result) {
  */
 function loadImageMetadata(sourceUrl, onComplete, onError) {
   let image = new Image();
-  image.addEventListener('load', function() {
+  image.addEventListener('load', function () {
     onComplete({
       sourceSize: {x: image.width, y: image.height},
       frameSize: {x: image.width, y: image.height},

@@ -45,8 +45,8 @@ class BonusLevels extends React.Component {
   };
 
   render() {
-    const currLessonNum = this.props.bonusLevels[this.state.lessonIndex]
-      .lessonNumber;
+    const currLessonNum =
+      this.props.bonusLevels[this.state.lessonIndex].lessonNumber;
 
     const previousNumLessons = this.props.bonusLevels.filter(
       lesson => lesson.lessonNumber < currLessonNum

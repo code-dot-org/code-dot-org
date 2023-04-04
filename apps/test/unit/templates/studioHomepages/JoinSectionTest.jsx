@@ -59,7 +59,7 @@ describe('JoinSection', () => {
       })
     ]);
 
-    const updateSections = sinon.spy(function() {
+    const updateSections = sinon.spy(function () {
       expect(wrapper.state()).to.deep.equal({sectionCode: ''});
       expect(wrapper.find('input').prop('value')).to.equal('');
 
@@ -86,7 +86,7 @@ describe('JoinSection', () => {
       })
     ]);
 
-    const updateSections = sinon.spy(function() {
+    const updateSections = sinon.spy(function () {
       expect(wrapper.state()).to.deep.equal({sectionCode: ''});
       expect(wrapper.find('input').prop('value')).to.equal('');
 
@@ -113,7 +113,7 @@ describe('JoinSection', () => {
       })
     ]);
 
-    const updateSections = sinon.spy(function() {
+    const updateSections = sinon.spy(function () {
       expect(wrapper.state()).to.deep.equal({sectionCode: ''});
       expect(wrapper.find('input').prop('value')).to.equal('');
 
@@ -158,7 +158,7 @@ describe('JoinSection', () => {
       })
     ]);
 
-    const updateSectionsResult = sinon.spy(function() {
+    const updateSectionsResult = sinon.spy(function () {
       expect(wrapper.state()).to.deep.equal({sectionCode: ''});
       expect(wrapper.find('input').prop('value')).to.equal('');
 
@@ -185,7 +185,7 @@ describe('JoinSection', () => {
       ''
     ]);
 
-    const updateSectionsResult = sinon.spy(function() {
+    const updateSectionsResult = sinon.spy(function () {
       expect(wrapper.state()).to.deep.equal({sectionCode: ''});
       expect(wrapper.find('input').prop('value')).to.equal('');
 

@@ -138,7 +138,8 @@ class FieldPattern extends GoogleBlockly.Field {
         x: 1,
         y: 1,
         width: FIELD_WIDTH,
-        height: FIELD_HEIGHT
+        height: FIELD_HEIGHT,
+        rx: 3
       },
       this.backgroundElement
     );

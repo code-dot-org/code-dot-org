@@ -108,7 +108,7 @@ var DEFAULT_CHARACTER = CHARACTER_STEVE;
 /**
  * Initialize Blockly and the Craft app. Called on page load.
  */
-Craft.init = function(config) {
+Craft.init = function (config) {
   if (config.level.puzzle_number === 1 && config.level.lesson_total === 1) {
     // Not viewing level within a script, bump puzzle # to unused one so
     // asset loading system and levelbuilder overrides don't think this is
@@ -123,7 +123,7 @@ Craft.init = function(config) {
   config.level.disableFinalLessonMessage = true;
 
   // Return the version of Internet Explorer (8+) or undefined if not IE.
-  var getIEVersion = function() {
+  var getIEVersion = function () {
     return document.documentMode;
   };
 
@@ -164,14 +164,14 @@ Craft.init = function(config) {
 
   var levelTracks = [];
   if (Craft.level.songs && MUSIC_METADATA) {
-    levelTracks = MUSIC_METADATA.filter(function(trackMetadata) {
+    levelTracks = MUSIC_METADATA.filter(function (trackMetadata) {
       return Craft.level.songs.indexOf(trackMetadata.name) !== -1;
     });
   }
 
   Craft.musicController = new MusicController(
     Sounds.getSingleton(),
-    function(filename) {
+    function (filename) {
       return config.skin.assetUrl(`music/${filename}`);
     },
     levelTracks,
@@ -179,23 +179,23 @@ Craft.init = function(config) {
     muteCookieWithLevel(Craft.level)
   );
 
-  config.muteBackgroundMusic = function() {
+  config.muteBackgroundMusic = function () {
     Craft.musicController.setMuteMusic(true);
   };
 
-  config.unmuteBackgroundMusic = function() {
+  config.unmuteBackgroundMusic = function () {
     var songToPlayFirst = Craft.getFirstSong();
     Craft.musicController.setMuteMusic(false, songToPlayFirst);
   };
 
   // Play music when the instructions are shown
-  Craft.beginBackgroundMusic = function() {
+  Craft.beginBackgroundMusic = function () {
     var songToPlayFirst = Craft.getFirstSong();
     Craft.musicController.play(songToPlayFirst);
   };
 
-  Craft.getFirstSong = function() {
-    Sounds.getSingleton().whenAudioUnlocked(function() {
+  Craft.getFirstSong = function () {
+    Sounds.getSingleton().whenAudioUnlocked(function () {
       var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
       return hasSongInLevel ? Craft.level.songs[0] : null;
     });
@@ -209,15 +209,15 @@ Craft.init = function(config) {
 
   var levelConfig = config.level;
 
-  var onMount = function() {
+  var onMount = function () {
     studioApp().init(
       Object.assign({}, config, {
         forceInsertTopBlock: 'when_run',
         appStrings: {
           generatedCodeDescription: craftMsg.generatedCodeDescription()
         },
-        loadAudio: function() {},
-        afterInject: function() {
+        loadAudio: function () {},
+        afterInject: function () {
           // NaN if not set
           var slowMotionURLParam = parseFloat(
             (location.search.split('customSlowMotion=')[1] || '').split('&')[0]
@@ -242,7 +242,7 @@ Craft.init = function(config) {
             earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(
               levelConfig.puzzle_number
             ),
-            afterAssetsLoaded: function() {
+            afterAssetsLoaded: function () {
               // preload music after essential game asset downloads completely finished
               Craft.musicController.preload();
             },
@@ -293,13 +293,13 @@ Craft.init = function(config) {
       );
     }
 
-    interfaceImagesToLoad.forEach(function(url) {
+    interfaceImagesToLoad.forEach(function (url) {
       preloadImage(url);
     });
 
     var shareButton = $('.mc-share-button');
     if (shareButton.length) {
-      dom.addClickTouchEvent(shareButton[0], function() {
+      dom.addClickTouchEvent(shareButton[0], function () {
         Craft.reportResult(true);
       });
     }
@@ -328,33 +328,33 @@ Craft.init = function(config) {
   );
 };
 
-Craft.getAppReducers = function() {
+Craft.getAppReducers = function () {
   return reducers;
 };
 
-var preloadImage = function(url) {
+var preloadImage = function (url) {
   var img = new Image();
   img.src = url;
 };
 
-Craft.characterAssetPackName = function(playerName) {
+Craft.characterAssetPackName = function (playerName) {
   return 'player' + playerName + 'Aquatic';
 };
 
-Craft.getCurrentCharacter = function() {
+Craft.getCurrentCharacter = function () {
   return (
     window.localStorage.getItem('craftSelectedPlayer') || DEFAULT_CHARACTER
   );
 };
 
-Craft.setCurrentCharacter = function(name = DEFAULT_CHARACTER) {
+Craft.setCurrentCharacter = function (name = DEFAULT_CHARACTER) {
   trackEvent('Minecraft', 'ChoseCharacter', name);
   Craft.clearPlayerState();
   trySetLocalStorage('craftSelectedPlayer', name);
   Craft.updateUIForCharacter(name);
 };
 
-Craft.updateUIForCharacter = function(character) {
+Craft.updateUIForCharacter = function (character) {
   Craft.initialConfig.skin.staticAvatar = characters[character].staticAvatar;
   Craft.initialConfig.skin.smallStaticAvatar =
     characters[character].smallStaticAvatar;
@@ -364,11 +364,11 @@ Craft.updateUIForCharacter = function(character) {
   $('#prompt-icon').attr('src', characters[character].smallStaticAvatar);
 };
 
-Craft.clearPlayerState = function() {
+Craft.clearPlayerState = function () {
   window.localStorage.removeItem('craftSelectedPlayer');
 };
 
-Craft.initializeAppLevel = function(levelConfig) {
+Craft.initializeAppLevel = function (levelConfig) {
   CraftUtils.convertActionPlaneEntitiesToConfig(levelConfig);
 
   var fluffPlane = [];
@@ -411,13 +411,13 @@ Craft.initializeAppLevel = function(levelConfig) {
   });
 };
 
-Craft.minAssetsForLevelWithCharacter = function(levelNumber) {
+Craft.minAssetsForLevelWithCharacter = function (levelNumber) {
   return Craft.minAssetsForLevelNumber(levelNumber).concat([
     Craft.characterAssetPackName(Craft.getCurrentCharacter())
   ]);
 };
 
-Craft.minAssetsForLevelNumber = function(levelNumber) {
+Craft.minAssetsForLevelNumber = function (levelNumber) {
   switch (levelNumber) {
     case 1:
       return ['aquaticIslandAssets'];
@@ -432,13 +432,13 @@ Craft.minAssetsForLevelNumber = function(levelNumber) {
   }
 };
 
-Craft.afterLoadAssetsForLevel = function(levelNumber) {
+Craft.afterLoadAssetsForLevel = function (levelNumber) {
   // After level loads & player starts playing, kick off further asset downloads
   // TODO
   return [];
 };
 
-Craft.earlyLoadAssetsForLevel = function(levelNumber) {
+Craft.earlyLoadAssetsForLevel = function (levelNumber) {
   switch (levelNumber) {
     case 1:
       return Craft.minAssetsForLevelNumber(levelNumber);
@@ -447,7 +447,7 @@ Craft.earlyLoadAssetsForLevel = function(levelNumber) {
   }
 };
 
-Craft.niceToHaveAssetsForLevel = function(levelNumber) {
+Craft.niceToHaveAssetsForLevel = function (levelNumber) {
   switch (levelNumber) {
     case 1:
       return ['playerSteve', 'playerAlex'];
@@ -460,7 +460,7 @@ Craft.niceToHaveAssetsForLevel = function(levelNumber) {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first true if first reset
  */
-Craft.reset = function(first) {
+Craft.reset = function (first) {
   if (first) {
     return;
   }
@@ -468,7 +468,7 @@ Craft.reset = function(first) {
   Craft.gameController.codeOrgAPI.resetAttempt();
 };
 
-Craft.phaserLoaded = function() {
+Craft.phaserLoaded = function () {
   return (
     Craft.gameController &&
     Craft.gameController.game &&
@@ -479,7 +479,7 @@ Craft.phaserLoaded = function() {
 /**
  * Click the run button.  Start the program.
  */
-Craft.runButtonClick = function() {
+Craft.runButtonClick = function () {
   if (!Craft.phaserLoaded()) {
     return;
   }
@@ -515,7 +515,7 @@ Craft.runButtonClick = function() {
   }
 };
 
-Craft.executeUserCode = function() {
+Craft.executeUserCode = function () {
   if (Craft.initialConfig.level.edit_blocks) {
     this.reportResult(true);
     return;
@@ -567,13 +567,13 @@ Craft.executeUserCode = function() {
   };
 
   const asyncMethods = {
-    moveForward: function(callback) {
+    moveForward: function (callback) {
       appCodeOrgAPI.moveForward(null, 'Player', resume(callback));
     },
-    turnLeft: function(callback) {
+    turnLeft: function (callback) {
       appCodeOrgAPI.turnLeft(null, 'Player', resume(callback));
     },
-    turnRight: function(callback) {
+    turnRight: function (callback) {
       appCodeOrgAPI.turnRight(null, 'Player', resume(callback));
     }
   };
@@ -620,7 +620,7 @@ Craft.executeUserCode = function() {
   );
 
   appCodeOrgAPI.startAttempt(
-    function(success, levelModel) {
+    function (success, levelModel) {
       if (Craft.level.freePlay) {
         return;
       }
@@ -629,7 +629,7 @@ Craft.executeUserCode = function() {
   );
 };
 
-Craft.getTestResultFrom = function(success, studioTestResults) {
+Craft.getTestResultFrom = function (success, studioTestResults) {
   if (studioTestResults === TestResults.LEVEL_INCOMPLETE_FAIL) {
     return TestResults.APP_SPECIFIC_FAIL;
   }
@@ -641,7 +641,7 @@ Craft.getTestResultFrom = function(success, studioTestResults) {
   return studioTestResults;
 };
 
-Craft.reportResult = function(success) {
+Craft.reportResult = function (success) {
   var studioTestResults = studioApp().getTestResults(success);
   var testResultType = Craft.getTestResultFrom(success, studioTestResults);
 
@@ -662,7 +662,7 @@ Craft.reportResult = function(success) {
     ),
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
-    onComplete: function(response) {
+    onComplete: function (response) {
       const isSignedIn =
         getStore().getState().currentUser.signInState === SignInState.SignedIn;
       studioApp().displayFeedback({
@@ -693,7 +693,7 @@ Craft.reportResult = function(success) {
  * @param {string} testResultType TestResults type of this level completion
  * @returns {boolean} whether to continue
  */
-Craft.shouldDefaultToContinue = function(testResultType) {
+Craft.shouldDefaultToContinue = function (testResultType) {
   var isFreePlay = testResultType === TestResults.FREE_PLAY;
   var isSuccess = testResultType > TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
   return isSuccess && !isFreePlay;

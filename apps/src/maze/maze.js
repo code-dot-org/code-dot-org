@@ -4,8 +4,8 @@ const Provider = require('react-redux').Provider;
 
 const timeoutList = require('../lib/util/timeoutList');
 import AppView from '../templates/AppView';
-const CustomMarshalingInterpreter = require('../lib/tools/jsinterpreter/CustomMarshalingInterpreter')
-  .default;
+const CustomMarshalingInterpreter =
+  require('../lib/tools/jsinterpreter/CustomMarshalingInterpreter').default;
 const dom = require('../dom');
 const utils = require('../utils');
 import {TestResults, ResultType} from '../constants';
@@ -27,8 +27,8 @@ const maze = require('@code-dot-org/maze');
 const MazeController = maze.MazeController;
 const tiles = maze.tiles;
 
-const createResultsHandlerForSubtype = require('./results/utils')
-  .createResultsHandlerForSubtype;
+const createResultsHandlerForSubtype =
+  require('./results/utils').createResultsHandlerForSubtype;
 
 module.exports = class Maze {
   constructor() {
@@ -716,7 +716,7 @@ module.exports = class Maze {
       studioApp().playAudioOnWin();
       this.controller.animatedFinish(timePerStep);
     } else {
-      timeoutList.setTimeout(function() {
+      timeoutList.setTimeout(function () {
         studioApp().playAudioOnFailure();
       }, this.stepSpeed);
     }

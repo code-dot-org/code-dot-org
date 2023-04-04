@@ -27,9 +27,7 @@ export default class StudentHomepage extends Component {
 
   componentDidMount() {
     // The component used here is implemented in legacy HAML/CSS rather than React.
-    $('#flashes')
-      .appendTo(ReactDOM.findDOMNode(this.refs.flashes))
-      .show();
+    $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
   }
 
   render() {

@@ -25,8 +25,7 @@ module.exports = {
       expected: {
         testResult: TestResults.MISSING_BLOCK_UNFINISHED
       },
-      xml:
-        '"<xml><block type="when_run" deletable="false" movable="false"></block></xml>'
+      xml: '"<xml><block type="when_run" deletable="false" movable="false"></block></xml>'
     },
     {
       description:
@@ -34,8 +33,7 @@ module.exports = {
       expected: {
         testResult: TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED
       },
-      xml:
-        '<xml><block type="when_run" deletable="false" movable="false"><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">60</title><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">60</title><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">60</title><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">60</title><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">60</title><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>'
+      xml: '<xml><block type="when_run" deletable="false" movable="false"><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">60</title><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">60</title><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">60</title><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">60</title><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">60</title><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>'
     },
     {
       description:
@@ -43,16 +41,14 @@ module.exports = {
       expected: {
         testResult: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
       },
-      xml:
-        '<xml><block type="when_run" deletable="false" movable="false"><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">60</title></block></next></block></next></block></xml>'
+      xml: '<xml><block type="when_run" deletable="false" movable="false"><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">60</title></block></next></block></next></block></xml>'
     },
     {
       description: 'Level With Recommended Blocks: Completed with everything',
       expected: {
         testResult: TestResults.ALL_PASS
       },
-      xml:
-        '<xml><block type="when_run" deletable="false" movable="false"><next><block type="controls_repeat"><title name="TIMES">6</title><statement name="DO"><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">60</title></block></next></block></statement></block></next></block></xml>'
+      xml: '<xml><block type="when_run" deletable="false" movable="false"><next><block type="controls_repeat"><title name="TIMES">6</title><statement name="DO"><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">60</title></block></next></block></statement></block></next></block></xml>'
     }
   ]
 };
