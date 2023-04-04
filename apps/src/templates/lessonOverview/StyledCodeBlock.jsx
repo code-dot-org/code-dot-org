@@ -1,3 +1,5 @@
+// TODO: define prop types for this file.
+/* eslint-disable react/prop-types */
 import PropTypes from 'prop-types';
 import React from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';

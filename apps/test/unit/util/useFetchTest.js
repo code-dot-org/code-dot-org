@@ -7,6 +7,8 @@ import {useFetch} from '@cdo/apps/util/useFetch';
 
 // Functional react component to host the useFetch hook
 let useFetchReturnValue = {current: null};
+// TODO: define these props
+// eslint-disable-next-line react/prop-types
 const UseFetchHarness = ({url, options, deps}) => {
   useFetchReturnValue.current = useFetch(url, options, deps);
   return null;

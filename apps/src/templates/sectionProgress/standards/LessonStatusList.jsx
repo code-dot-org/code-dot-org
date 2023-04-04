@@ -107,6 +107,7 @@ const ComplexLessonComponent = function({lesson}) {
         href={lesson.url}
         target={'_blank'}
         onClick={() => handleLessonLinkClick(lesson)}
+        rel="noreferrer"
       >
         {lesson.name}
       </a>

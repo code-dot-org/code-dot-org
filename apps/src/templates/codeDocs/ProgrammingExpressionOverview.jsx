@@ -1,3 +1,5 @@
+// TODO: Fix all prop types for this file.
+/* eslint-disable react/prop-types */
 import React, {createRef, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';

@@ -324,6 +324,7 @@ export default class SmallFooter extends React.Component {
               ref={item.copyright ? 'menuCopyright' : undefined}
               target={item.newWindow ? '_blank' : '_parent'}
               onClick={item.copyright ? this.clickMenuCopyright : undefined}
+              rel="noreferrer"
             >
               {item.text}
             </a>
