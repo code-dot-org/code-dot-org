@@ -63,7 +63,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.executionInfo.terminationValue() ===
           TerminationValue.INSUFFICIENT_HONEY

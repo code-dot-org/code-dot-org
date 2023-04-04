@@ -45,13 +45,8 @@ CodeMirrorSpellChecker({
  *        by appending "_preview" to the id of the target element.
  */
 function initializeCodeMirror(target, mode, options = {}) {
-  let {
-    callback,
-    attachments,
-    onUpdateLinting,
-    additionalAnnotations,
-    preview
-  } = options;
+  let {callback, attachments, onUpdateLinting, additionalAnnotations, preview} =
+    options;
   let updatePreview;
 
   // Code mirror parses html using xml mode

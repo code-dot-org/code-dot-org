@@ -665,7 +665,7 @@ describe('manageStudentsRedux', () => {
       const expectedData = {
         '-1': {id: -1, name: 'student -1', isEditing: true},
         '-2': {id: -2, name: 'student -2', isEditing: true},
-        '4': {id: 4, name: 'original student', isEditing: true}
+        4: {id: 4, name: 'original student', isEditing: true}
       };
       assert.deepEqual(nextState.studentData, expectedData);
       assert.deepEqual(nextState.editingData, expectedData);
@@ -896,10 +896,11 @@ describe('manageStudentsRedux', () => {
       };
 
       // Add student fails
-      const addStudentFailureAction = addStudentsFailure(2, 'error info', [
-        1,
-        2
-      ]);
+      const addStudentFailureAction = addStudentsFailure(
+        2,
+        'error info',
+        [1, 2]
+      );
       const addedStudentState = manageStudents(
         initialState,
         addStudentFailureAction

@@ -94,7 +94,10 @@ describe('CheckForUnderstanding', () => {
         lessons: [
           {
             id: 0,
-            levels: [{activeId: '0', position: 1}, {activeId: '1', position: 2}]
+            levels: [
+              {activeId: '0', position: 1},
+              {activeId: '1', position: 2}
+            ]
           }
         ]
       }
@@ -114,11 +117,8 @@ describe('CheckForUnderstanding', () => {
     );
 
     expect(wrapper.find('SafeMarkdown').length).to.eq(2);
-    expect(
-      wrapper
-        .find('SafeMarkdown')
-        .at(1)
-        .text()
-    ).to.eq('test teacher markdown');
+    expect(wrapper.find('SafeMarkdown').at(1).text()).to.eq(
+      'test teacher markdown'
+    );
   });
 });

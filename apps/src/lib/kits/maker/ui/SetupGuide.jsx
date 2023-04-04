@@ -45,8 +45,7 @@ export default class SetupGuide extends React.Component {
         return {
           id: 'circuit-playground-description',
           title: applabI18n.makerSetupCircuitPlaygroundTitle(),
-          href:
-            'https://learn.adafruit.com/introducing-circuit-playground/overview',
+          href: 'https://learn.adafruit.com/introducing-circuit-playground/overview',
           imgSrc: '/blockly/media/maker/circuit-playground-x-1.png',
           description: applabI18n.makerSetupCircuitPlaygroundDescription(),
           imgStyle: style.circuitPlaygroundImg,

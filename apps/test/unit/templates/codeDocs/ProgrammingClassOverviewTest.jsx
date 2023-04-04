@@ -59,28 +59,16 @@ describe('ProgrammingClassOverview', () => {
     ]);
 
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(0)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(0).props().markdown
     ).to.equal(defaultProgrammingClass.content);
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(1)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(1).props().markdown
     ).to.contain(defaultProgrammingClass.syntax);
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(2)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(2).props().markdown
     ).to.equal(defaultProgrammingClass.tips);
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(3)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(3).props().markdown
     ).to.contain(defaultProgrammingClass.externalDocumentation);
 
     expect(wrapper.text()).to.contain(defaultProgrammingClass.category);

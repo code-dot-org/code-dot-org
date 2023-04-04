@@ -178,7 +178,7 @@ export default {
   PropertyTab: RadioButtonProperties,
   EventTab: RadioButtonEvents,
 
-  create: function(withoutId) {
+  create: function (withoutId) {
     const element = document.createElement('input');
     element.type = 'radio';
     element.style.width = '12px';
@@ -194,9 +194,9 @@ export default {
     return element;
   },
 
-  onDeserialize: function(element) {
+  onDeserialize: function (element) {
     // Disable click events unless running
-    $(element).on('click', function(e) {
+    $(element).on('click', function (e) {
       if (!Applab.isRunning()) {
         element.checked = !element.checked;
       }

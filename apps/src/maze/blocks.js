@@ -29,7 +29,7 @@ var blockUtils = require('../block_utils');
 var msg = require('./locale');
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function(blockly, blockInstallOptions) {
+exports.install = function (blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   var generator = blockly.getGenerator();
   blockly.JavaScript = generator;
@@ -67,25 +67,23 @@ exports.install = function(blockly, blockInstallOptions) {
         tooltip: msg.moveSouthTooltip()
       }
     },
-    generateBlocksForAllDirections: function() {
+    generateBlocksForAllDirections: function () {
       SimpleMove.generateBlocksForDirection('North');
       SimpleMove.generateBlocksForDirection('South');
       SimpleMove.generateBlocksForDirection('West');
       SimpleMove.generateBlocksForDirection('East');
     },
-    generateBlocksForDirection: function(direction) {
-      generator['maze_move' + direction] = SimpleMove.generateCodeGenerator(
-        direction
-      );
-      blockly.Blocks['maze_move' + direction] = SimpleMove.generateMoveBlock(
-        direction
-      );
+    generateBlocksForDirection: function (direction) {
+      generator['maze_move' + direction] =
+        SimpleMove.generateCodeGenerator(direction);
+      blockly.Blocks['maze_move' + direction] =
+        SimpleMove.generateMoveBlock(direction);
     },
-    generateMoveBlock: function(direction) {
+    generateMoveBlock: function (direction) {
       var directionConfig = SimpleMove.DIRECTION_CONFIGS[direction];
       return {
         helpUrl: '',
-        init: function() {
+        init: function () {
           Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
           this.appendDummyInput()
             .appendField(
@@ -100,8 +98,8 @@ exports.install = function(blockly, blockInstallOptions) {
         }
       };
     },
-    generateCodeGenerator: function(direction) {
-      return function() {
+    generateCodeGenerator: function (direction) {
+      return function () {
         return 'Maze.move' + direction + "('block_id_" + this.id + "');\n";
       };
     }
@@ -139,7 +137,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.maze_move = {
     // Block for moving forward/backward
     helpUrl: 'http://code.google.com/p/blockly/wiki/Move',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
@@ -156,7 +154,7 @@ exports.install = function(blockly, blockInstallOptions) {
     [msg.moveBackward(), 'moveBackward']
   ];
 
-  generator.maze_move = function() {
+  generator.maze_move = function () {
     // Generate JavaScript for moving forward/backward
     var dir = this.getFieldValue('DIR');
     return 'Maze.' + dir + "('block_id_" + this.id + "');\n";
@@ -165,7 +163,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.maze_turn = {
     // Block for turning left or right.
     helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
@@ -182,7 +180,7 @@ exports.install = function(blockly, blockInstallOptions) {
     [msg.turnRight() + ' \u21BB', 'turnRight']
   ];
 
-  generator.maze_turn = function() {
+  generator.maze_turn = function () {
     // Generate JavaScript for turning left or right.
     var dir = this.getFieldValue('DIR');
     return 'Maze.' + dir + "('block_id_" + this.id + "');\n";
@@ -191,7 +189,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.maze_isPath = {
     // Block for checking if there a path.
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.setOutput(true, blockly.BlockValueType.NUMBER);
       this.appendDummyInput().appendField(
@@ -208,7 +206,7 @@ exports.install = function(blockly, blockInstallOptions) {
     [msg.pathRight() + ' \u21BB', 'isPathRight']
   ];
 
-  generator.maze_isPath = function() {
+  generator.maze_isPath = function () {
     // Generate JavaScript for checking if there is a path.
     var code = 'Maze.' + this.getFieldValue('DIR') + '()';
     return [code, generator.ORDER_FUNCTION_CALL];
@@ -217,7 +215,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.maze_if = {
     // Block for 'if' conditional if there is a path.
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
@@ -233,7 +231,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.maze_if.DIRECTIONS = blockly.Blocks.maze_isPath.DIRECTIONS;
 
-  generator.maze_if = function() {
+  generator.maze_if = function () {
     // Generate JavaScript for 'if' conditional if there is a path.
     var argument =
       'Maze.' + this.getFieldValue('DIR') + "('block_id_" + this.id + "')";
@@ -245,7 +243,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.maze_ifElse = {
     // Block for 'if/else' conditional if there is a path.
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
@@ -262,7 +260,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.maze_ifElse.DIRECTIONS = blockly.Blocks.maze_isPath.DIRECTIONS;
 
-  generator.maze_ifElse = function() {
+  generator.maze_ifElse = function () {
     // Generate JavaScript for 'if/else' conditional if there is a path.
     var argument =
       'Maze.' + this.getFieldValue('DIR') + "('block_id_" + this.id + "')";
@@ -276,7 +274,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.karel_if = {
     // Block for 'if' conditional if there is a path.
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendField(msg.ifCode());
       this.appendDummyInput().appendField(
@@ -291,7 +289,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.karel_if = function() {
+  generator.karel_if = function () {
     // Generate JavaScript for 'if' conditional if there is a path.
     var argument =
       'Maze.' + this.getFieldValue('DIR') + "('block_id_" + this.id + "')";
@@ -310,7 +308,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.karel_ifElse = {
     // Block for 'if/else' conditional if there is a path.
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendField(msg.ifCode());
       this.appendDummyInput().appendField(
@@ -326,7 +324,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.karel_ifElse = function() {
+  generator.karel_ifElse = function () {
     // Generate JavaScript for 'if/else' conditional if there is a path.
     var argument =
       'Maze.' + this.getFieldValue('DIR') + "('block_id_" + this.id + "')";
@@ -341,7 +339,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.maze_whileNotClear = {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
@@ -354,7 +352,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.maze_whileNotClear = function() {
+  generator.maze_whileNotClear = function () {
     var argument =
       'Maze.' + this.getFieldValue('DIR') + "('block_id_" + this.id + "')";
     var branch = generator.statementToCode(this, 'DO');
@@ -369,7 +367,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.maze_untilBlocked = {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput().appendField(msg.repeatUntilBlocked());
       this.appendStatementInput('DO').appendField(msg.doCode());
@@ -379,7 +377,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.maze_untilBlocked = function() {
+  generator.maze_untilBlocked = function () {
     var argument = 'Maze.isPathForward' + "('block_id_" + this.id + "')";
     var branch = generator.statementToCode(this, 'DO');
     branch = Blockly.getInfiniteLoopTrap() + branch;
@@ -389,7 +387,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.maze_forever = {
     // Do forever loop.
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput()
         .appendField(msg.repeatUntil())
@@ -400,7 +398,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.maze_forever = function() {
+  generator.maze_forever = function () {
     // Generate JavaScript for do forever loop.
     var branch = generator.statementToCode(this, 'DO');
     branch =
@@ -412,7 +410,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.maze_untilBlockedOrNotClear = {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
@@ -425,7 +423,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.maze_untilBlockedOrNotClear = function() {
+  generator.maze_untilBlockedOrNotClear = function () {
     var argument =
       'Maze.' + this.getFieldValue('DIR') + "('block_id_" + this.id + "')";
     var branch = generator.statementToCode(this, 'DO');

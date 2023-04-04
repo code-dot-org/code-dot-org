@@ -38,12 +38,8 @@ export default class NetSimLogBrowser extends React.Component {
   };
 
   dialogTitle() {
-    const {
-      i18n,
-      teacherView,
-      isAllRouterLogMode,
-      currentTrafficFilter
-    } = this.props;
+    const {i18n, teacherView, isAllRouterLogMode, currentTrafficFilter} =
+      this.props;
     if (teacherView) {
       return i18n.logBrowserHeader_teacherView();
     }

@@ -161,10 +161,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
     // check that modal pops up
     assert(
-      wrapper
-        .find('ConfirmationDialog')
-        .at(1)
-        .prop('show'),
+      wrapper.find('ConfirmationDialog').at(1).prop('show'),
       'Publish ConfirmationDialog is showing'
     );
 
@@ -241,10 +238,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
     // check that modal pops up
     assert(
-      wrapper
-        .find('ConfirmationDialog')
-        .at(0)
-        .prop('show'),
+      wrapper.find('ConfirmationDialog').at(0).prop('show'),
       'Save ConfirmationDialog is showing'
     );
 
@@ -334,10 +328,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
     // check that modal pops up
     assert(
-      wrapper
-        .find('ConfirmationDialog')
-        .at(0)
-        .prop('show'),
+      wrapper.find('ConfirmationDialog').at(0).prop('show'),
       'Save ConfirmationDialog is showing'
     );
 
@@ -371,10 +362,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
     // check that modal pops up
     assert(
-      wrapper
-        .find('ConfirmationDialog')
-        .at(1)
-        .prop('show'),
+      wrapper.find('ConfirmationDialog').at(1).prop('show'),
       'Publish ConfirmationDialog is showing'
     );
 
@@ -418,10 +406,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
     // check that modal pops up
     assert(
-      wrapper
-        .find('Modal')
-        .at(0)
-        .prop('show'),
+      wrapper.find('Modal').at(0).prop('show'),
       'Save New Form Modal is showing'
     );
 
@@ -440,10 +425,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
     // expect new form name to show up
     expect(
-      wrapper
-        .find('FoormEditorHeader')
-        .find('h2')
-        .contains(sampleSaveData.name)
+      wrapper.find('FoormEditorHeader').find('h2').contains(sampleSaveData.name)
     );
   });
 
@@ -468,10 +450,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
     // check that modal pops up
     assert(
-      wrapper
-        .find('Modal')
-        .at(0)
-        .prop('show'),
+      wrapper.find('Modal').at(0).prop('show'),
       'Save New Form Modal is showing'
     );
 

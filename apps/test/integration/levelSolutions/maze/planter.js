@@ -98,7 +98,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.executionInfo.terminationValue() ===
           PlanterHandler.TerminationValue.PLANT_IN_NON_SOIL
@@ -123,7 +123,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.executionInfo.terminationValue() ===
           PlanterHandler.TerminationValue.PLANT_IN_NON_SOIL
@@ -158,7 +158,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.executionInfo.terminationValue() ===
           PlanterHandler.TerminationValue.DID_NOT_PLANT_EVERYWHERE

@@ -4,8 +4,8 @@ import {EventEmitter} from 'events';
 import sinon from 'sinon';
 import MicroBitButton from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitButton';
 
-describe('MicroBitButton', function() {
-  it('is an event emitter component', function() {
+describe('MicroBitButton', function () {
+  it('is an event emitter component', function () {
     const button = new MicroBitButton({
       mb: new MicrobitStubBoard(),
       pin: 0

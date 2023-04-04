@@ -240,15 +240,11 @@ export default class TutorialDetail extends React.Component {
                           </td>
                           <td style={styles.tutorialDetailsTableBody}>
                             <a
-                              href={`https://hourofcode.com/${
-                                this.props.item.short_code
-                              }`}
+                              href={`https://hourofcode.com/${this.props.item.short_code}`}
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              {`https://hourofcode.com/${
-                                this.props.item.short_code
-                              }`}
+                              {`https://hourofcode.com/${this.props.item.short_code}`}
                             </a>
                           </td>
                         </tr>

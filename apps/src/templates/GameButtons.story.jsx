@@ -1,7 +1,7 @@
 import React from 'react';
 import {UnconnectedGameButtons, RunButton, ResetButton} from './GameButtons';
 
-export default function(storybook) {
+export default function (storybook) {
   storybook.storiesOf('Buttons/GameButtons/RunButton', module).addStoryTable([
     {
       name: 'default',

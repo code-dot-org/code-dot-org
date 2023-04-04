@@ -122,8 +122,8 @@ class UnitEditor extends React.Component {
       hideableLessons: this.props.initialHideableLessons,
       studentDetailProgressView: this.props.initialStudentDetailProgressView,
       deeperLearningCourse: this.props.initialProfessionalLearningCourse,
-      onlyInstructorReviewRequired: this.props
-        .initialOnlyInstructorReviewRequired,
+      onlyInstructorReviewRequired:
+        this.props.initialOnlyInstructorReviewRequired,
       peerReviewsRequired: this.props.initialPeerReviewsRequired,
       wrapupVideo: this.props.initialWrapupVideo,
       projectWidgetVisible: this.props.initialProjectWidgetVisible,
@@ -492,8 +492,8 @@ class UnitEditor extends React.Component {
               style={styles.checkbox}
               onChange={() =>
                 this.setState({
-                  studentDetailProgressView: !this.state
-                    .studentDetailProgressView
+                  studentDetailProgressView:
+                    !this.state.studentDetailProgressView
                 })
               }
             />
@@ -876,8 +876,8 @@ class UnitEditor extends React.Component {
                 style={styles.checkbox}
                 onChange={() =>
                   this.setState({
-                    includeStudentLessonPlans: !this.state
-                      .includeStudentLessonPlans
+                    includeStudentLessonPlans:
+                      !this.state.includeStudentLessonPlans
                   })
                 }
                 disabled={!allowMajorCurriculumChanges}
@@ -1027,8 +1027,8 @@ class UnitEditor extends React.Component {
                 style={styles.checkbox}
                 onChange={() =>
                   this.setState({
-                    onlyInstructorReviewRequired: !this.state
-                      .onlyInstructorReviewRequired,
+                    onlyInstructorReviewRequired:
+                      !this.state.onlyInstructorReviewRequired,
                     peerReviewsRequired: 0
                   })
                 }

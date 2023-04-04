@@ -27,12 +27,7 @@ describe('PageContainer', () => {
       </PageContainer>
     );
     expect(wrapper.find('h1').length).to.equal(1);
-    expect(
-      wrapper
-        .find('h1')
-        .text()
-        .includes('IDE Lab')
-    ).to.be.true;
+    expect(wrapper.find('h1').text().includes('IDE Lab')).to.be.true;
     expect(wrapper.find('NavigationBar').length).to.equal(1);
     expect(
       wrapper.find('NavigationBar').find('NavigationCategory').length

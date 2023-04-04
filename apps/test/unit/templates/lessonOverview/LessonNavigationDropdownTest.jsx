@@ -195,12 +195,7 @@ describe('LessonNavigationDropdown', () => {
     const wrapper = shallow(<LessonNavigationDropdown lesson={lesson} />);
     expect(wrapper.find('a').length).to.equal(11);
     let lesson1 = wrapper.find('a').at(1);
-    expect(
-      wrapper
-        .find('a')
-        .at(1)
-        .contains('1 - Lesson 1')
-    ).to.be.true;
+    expect(wrapper.find('a').at(1).contains('1 - Lesson 1')).to.be.true;
     lesson1.simulate('click', {preventDefault: () => {}});
 
     expect(firehoseClient.putRecord).to.have.been.calledOnce;
