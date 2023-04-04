@@ -257,7 +257,7 @@ class FirehoseClient {
           Data: JSON.stringify(data)
         }
       },
-      function(err, data) {
+      function (err, data) {
         if (options.callback) {
           options.callback(err, data);
         } else if (err) {
@@ -283,7 +283,7 @@ class FirehoseClient {
       useProgressScriptId: true
     }
   ) {
-    data.map(function(record) {
+    data.map(function (record) {
       return this.AddCommonValues(
         record,
         options.includeUserId,
@@ -295,7 +295,7 @@ class FirehoseClient {
       console.groupCollapsed(
         'Skipped sending record batch to ' + deliveryStreamName
       );
-      data.map(function(record) {
+      data.map(function (record) {
         if (!IN_UNIT_TEST) {
           console.log(record);
         }
@@ -304,7 +304,7 @@ class FirehoseClient {
       return;
     }
 
-    const batch = data.map(function(record) {
+    const batch = data.map(function (record) {
       return {
         Data: JSON.stringify(record)
       };
@@ -315,7 +315,7 @@ class FirehoseClient {
         DeliveryStreamName: deliveryStreamName,
         Records: batch
       },
-      function(err, data) {}
+      function (err, data) {}
     );
   }
 }

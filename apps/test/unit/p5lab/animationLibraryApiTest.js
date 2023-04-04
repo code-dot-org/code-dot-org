@@ -131,9 +131,7 @@ describe('animationLibraryApi', () => {
         expect(firstSpriteProps)
           .to.have.property('sourceUrl')
           .that.has.string('https://studio.code.org');
-        expect(firstSpriteProps)
-          .to.have.property('name')
-          .that.equals('bear');
+        expect(firstSpriteProps).to.have.property('name').that.equals('bear');
         expect(Object.keys(firstSpriteProps)).to.have.length(8);
       });
     });

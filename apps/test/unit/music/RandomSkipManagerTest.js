@@ -3,8 +3,8 @@
 var assert = require('assert');
 import RandomSkipManager from '@cdo/apps/music/player/RandomSkipManager';
 
-describe('Music random skip manager tests', function() {
-  it('nested test', function() {
+describe('Music random skip manager tests', function () {
+  it('nested test', function () {
     const randomSkipManager = new RandomSkipManager();
 
     randomSkipManager.init();

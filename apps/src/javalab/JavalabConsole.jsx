@@ -207,13 +207,8 @@ class JavalabConsole extends React.Component {
   };
 
   render() {
-    const {
-      displayTheme,
-      style,
-      bottomRow,
-      clearConsoleLogs,
-      editorFontSize
-    } = this.props;
+    const {displayTheme, style, bottomRow, clearConsoleLogs, editorFontSize} =
+      this.props;
 
     return (
       <div style={style}>

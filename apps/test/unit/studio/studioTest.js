@@ -16,7 +16,7 @@ const STUDIO_WIDTH = 400;
 const SPEECH_BUBBLE_H_OFFSET = 50;
 const SPEECH_BUBBLE_SIDE_MARGIN = 10;
 
-describe('studio', function() {
+describe('studio', function () {
   before(() => {
     replaceOnWindow('appOptions', {});
   });
@@ -25,11 +25,11 @@ describe('studio', function() {
     restoreOnWindow('appOptions');
   });
 
-  describe('setSvgText', function() {
+  describe('setSvgText', function () {
     let speechBubbleText;
     let opts;
 
-    beforeEach(function() {
+    beforeEach(function () {
       const svg = document.createElementNS(SVG_NS, 'svg');
       document.body.appendChild(svg);
 
@@ -48,7 +48,7 @@ describe('studio', function() {
       };
     });
 
-    it('stays small for short strings', function() {
+    it('stays small for short strings', function () {
       const size = setSvgText(
         Object.assign({}, opts, {
           text: 'Hello world!'
@@ -58,7 +58,7 @@ describe('studio', function() {
       expect(size.width).to.equal(150);
     });
 
-    it('maxes out for long strings', function() {
+    it('maxes out for long strings', function () {
       const size = setSvgText(
         Object.assign({}, opts, {
           text:
@@ -72,7 +72,7 @@ describe('studio', function() {
       expect(size.width).to.equal(opts.maxWidth);
     });
 
-    it('increases width to less than maxWidth for medium strings', function() {
+    it('increases width to less than maxWidth for medium strings', function () {
       const size = setSvgText(
         Object.assign({}, opts, {
           text:
@@ -86,8 +86,8 @@ describe('studio', function() {
     });
   });
 
-  describe('calculateBubblePosition', function() {
-    it('positions a small bubble on the top right', function() {
+  describe('calculateBubblePosition', function () {
+    it('positions a small bubble on the top right', function () {
       const position = calculateBubblePosition(
         {
           x: 150,
@@ -107,7 +107,7 @@ describe('studio', function() {
       expect(position.ySpeech).to.be.below(100);
     });
 
-    it('positions a small bubble on the top left', function() {
+    it('positions a small bubble on the top left', function () {
       const position = calculateBubblePosition(
         {
           x: 300,
@@ -127,7 +127,7 @@ describe('studio', function() {
       expect(position.ySpeech).to.be.below(100);
     });
 
-    it('positions a small bubble on the botom right', function() {
+    it('positions a small bubble on the botom right', function () {
       const position = calculateBubblePosition(
         {
           x: 150,
@@ -147,7 +147,7 @@ describe('studio', function() {
       expect(position.ySpeech).to.be.above(0);
     });
 
-    it('positions a small bubble on the botom left', function() {
+    it('positions a small bubble on the botom left', function () {
       const position = calculateBubblePosition(
         {
           x: 250,
@@ -167,7 +167,7 @@ describe('studio', function() {
       expect(position.ySpeech).to.be.above(0);
     });
 
-    it('adjusts the bubble tip on a large bubble below to the right', function() {
+    it('adjusts the bubble tip on a large bubble below to the right', function () {
       const sprite = {
         x: 0,
         y: 0,
@@ -188,7 +188,7 @@ describe('studio', function() {
       expect(position.ySpeech).to.be.above(0);
     });
 
-    it('adjusts the bubble tip on a large bubble above to the left', function() {
+    it('adjusts the bubble tip on a large bubble above to the left', function () {
       const sprite = {
         x: 250,
         y: 250,

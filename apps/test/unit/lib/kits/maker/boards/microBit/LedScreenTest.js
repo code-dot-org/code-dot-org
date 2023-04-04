@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import {MicrobitStubBoard} from '../makeStubBoard';
 import LedScreen from '@cdo/apps/lib/kits/maker/boards/microBit/LedScreen';
 
-describe('LedScreen', function() {
+describe('LedScreen', function () {
   describe('on() and off()', () => {
     let led;
     let boardClient = new MicrobitStubBoard();

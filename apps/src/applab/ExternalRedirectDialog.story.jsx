@@ -15,8 +15,7 @@ export const ApprovedSite = Template.bind({});
 ApprovedSite.args = {
   redirects: [
     {
-      url:
-        'www.google.com/super_duper/long_url/should_be_wrapped/to-the-next-line.html',
+      url: 'www.google.com/super_duper/long_url/should_be_wrapped/to-the-next-line.html',
       response: REDIRECT_RESPONSE.APPROVED
     }
   ]

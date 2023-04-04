@@ -105,16 +105,10 @@ describe('LessonGroupCard', () => {
     expect(wrapper.contains('Lesson Group Name:')).to.be.true;
 
     expect(
-      wrapper
-        .find('MarkdownEnabledTextarea')
-        .at(0)
-        .props().markdown
+      wrapper.find('MarkdownEnabledTextarea').at(0).props().markdown
     ).to.equal('Lesson group description');
     expect(
-      wrapper
-        .find('MarkdownEnabledTextarea')
-        .at(1)
-        .props().markdown
+      wrapper.find('MarkdownEnabledTextarea').at(1).props().markdown
     ).to.equal('Big questions');
   });
 

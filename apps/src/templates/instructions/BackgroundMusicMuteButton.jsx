@@ -26,9 +26,8 @@ function BackgroundMusicMuteButton({
     ? currentUserBackgroundMusicMuted
     : muteCookieValue();
 
-  const [isBackgroundMusicMuted, setIsBackgroundMusicMuted] = useState(
-    initialMuteState
-  );
+  const [isBackgroundMusicMuted, setIsBackgroundMusicMuted] =
+    useState(initialMuteState);
 
   const updateMuteMusic = updatedMuteValue => {
     signedIn ? new UserPreferences().setMuteMusic(updatedMuteValue) : {};

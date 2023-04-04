@@ -64,7 +64,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="turtle_shape_with_side_length">
+        <block type="rhombus_shape_with_side_length">
           <field name="VALUE">smallRhombusMaroon</field>
           <value name="SIZE">
             <block type="math_number">

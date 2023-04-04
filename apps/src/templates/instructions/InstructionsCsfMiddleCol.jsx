@@ -261,7 +261,7 @@ export default connect(
   },
   function propsFromDispatch(dispatch) {
     return {
-      hideOverlay: function() {
+      hideOverlay: function () {
         dispatch(instructions.hideOverlay());
       },
       setInstructionsRenderedHeight(height) {

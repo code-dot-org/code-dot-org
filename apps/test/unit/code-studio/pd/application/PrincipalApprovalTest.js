@@ -20,11 +20,10 @@ describe('PrincipalApproval', () => {
       ...ALWAYS_REQUIRED_FIELDS,
       ...REQUIRED_SCHOOL_INFO_FIELDS
     ];
-    const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields(
-      {
+    const actualFields =
+      PrincipalApprovalComponent.getDynamicallyRequiredFields({
         doYouApprove: 'Yes'
-      }
-    );
+      });
     expect(actualFields).to.deep.equal(expectedFields);
   });
 
@@ -34,12 +33,11 @@ describe('PrincipalApproval', () => {
       ...REQUIRED_SCHOOL_INFO_FIELDS,
       ...MANUAL_SCHOOL_FIELDS
     ].sort();
-    const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields(
-      {
+    const actualFields =
+      PrincipalApprovalComponent.getDynamicallyRequiredFields({
         doYouApprove: 'Yes',
         school: '-1'
-      }
-    ).sort();
+      }).sort();
     expect(actualFields).to.deep.equal(expectedFields);
   });
 
@@ -48,13 +46,12 @@ describe('PrincipalApproval', () => {
       ...ALWAYS_REQUIRED_FIELDS,
       ...REQUIRED_SCHOOL_INFO_FIELDS
     ].sort();
-    const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields(
-      {
+    const actualFields =
+      PrincipalApprovalComponent.getDynamicallyRequiredFields({
         doYouApprove: 'Yes',
         course: 'Computer Science Discoveries',
         replaceCourse: 'Yes'
-      }
-    ).sort();
+      }).sort();
     expect(actualFields).to.deep.equal(expectedFields);
   });
 
@@ -63,13 +60,12 @@ describe('PrincipalApproval', () => {
       ...ALWAYS_REQUIRED_FIELDS,
       ...REQUIRED_SCHOOL_INFO_FIELDS
     ].sort();
-    const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields(
-      {
+    const actualFields =
+      PrincipalApprovalComponent.getDynamicallyRequiredFields({
         doYouApprove: 'Yes',
         course: 'Computer Science Principles',
         replaceCourse: 'Yes'
-      }
-    ).sort();
+      }).sort();
     expect(actualFields).to.deep.equal(expectedFields);
   });
 

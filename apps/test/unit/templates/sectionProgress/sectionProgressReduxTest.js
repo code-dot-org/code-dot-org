@@ -20,7 +20,10 @@ const fakeUnitData789 = {
       hasStandards: false,
       title: 'Title 789',
       path: '/',
-      lessons: [{id: 1, levels: []}, {id: 2, levels: []}],
+      lessons: [
+        {id: 1, levels: []},
+        {id: 2, levels: []}
+      ],
       family_name: 'fakeUnit789',
       version_year: 2020
     }
@@ -35,7 +38,10 @@ const fakeUnitData456 = {
       hasStandards: false,
       title: 'Title 456',
       path: '/',
-      lessons: [{id: 3, levels: []}, {id: 4, levels: []}],
+      lessons: [
+        {id: 3, levels: []},
+        {id: 4, levels: []}
+      ],
       family_name: 'fakeUnit456',
       version_year: 2020
     }

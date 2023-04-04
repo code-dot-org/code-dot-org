@@ -386,10 +386,8 @@ describe('The applab/import module', () => {
 
       it('will copy the assets that are going to be replaced', () => {
         expect(assetsApi.copyAssets).to.have.been.called;
-        var [
-          projectId,
-          allAssetsToReplace
-        ] = assetsApi.copyAssets.firstCall.args;
+        var [projectId, allAssetsToReplace] =
+          assetsApi.copyAssets.firstCall.args;
         expect(projectId).to.equal(project.id);
         expect(allAssetsToReplace).to.have.members([
           'asset1.png',
