@@ -944,6 +944,7 @@ export const styles = {
   },
 
   modelSaveMessage: {
+    display: "inline-block",
     top: 15,
     zIndex: 1001,
     right: "calc(50% - 250px)",
@@ -953,7 +954,9 @@ export const styles = {
   },
 
   modelSaveResponseDataMessage: {
-    opacity: 0.5
+    display: "inline-block",
+    opacity: 0.5,
+    padding: "0 5px"
   },
 
   navigationButtonsContainer: {

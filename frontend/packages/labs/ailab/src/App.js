@@ -67,7 +67,7 @@ class PanelButtons extends Component {
 
     const index = errorTypes.indexOf(saveResponseData.type);
     if (index !== -1) {
-      return ` (${index})`;
+      return `(${index})`;
     } else {
       return "";
     }
@@ -108,10 +108,12 @@ class PanelButtons extends Component {
 
         {this.props.shouldDisplaySaveStatus(saveStatus) &&
           this.props.currentPanel === "saveModel" && (
-            <span style={styles.modelSaveMessage}>
+            <div style={styles.modelSaveMessage}>
               {loadSaveStatus}
-              <span style={styles.modelSaveResponseDataMessage}>{loadSaveResponseData}</span>
-            </span>
+              <div style={styles.modelSaveResponseDataMessage}>
+                {loadSaveResponseData}
+              </div>
+            </div>
           )}
 
         {panelButtons.next && (
