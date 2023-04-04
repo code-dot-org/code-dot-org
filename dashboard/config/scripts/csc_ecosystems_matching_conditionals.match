@@ -1,6 +1,6 @@
 name 'csc_ecosystems_matching_conditionals'
 title 'Match the code to the screen'
-
+description 'Take a look at these three ecosystems. One is balanced and the other two are imbalanced in different ways. Figure out which if statement matches up to each image.'
 height '300'
 question 'Too little algae makes the fish leave. ![](https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)'
 answer '![](https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41 PM.png)'

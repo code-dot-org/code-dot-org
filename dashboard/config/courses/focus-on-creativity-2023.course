@@ -4,7 +4,8 @@
     "focus-on-creativity1-2023",
     "focus-on-creativity2-2023",
     "focus-on-creativity3-2023",
-    "focus-on-creativity4a-2023"
+    "focus-on-creativity4a-2023",
+    "focus-on-creativity4b-2023"
   ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",
@@ -12,11 +13,53 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "focus-on-creativity",
-    "has_numbered_units": true,
     "version_year": "2023"
   },
   "resources": [
-
+    {
+      "name": "All Code",
+      "url": "/courses/focus-on-creativity-2023/code",
+      "key": "all_code_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code_4"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/courses/focus-on-creativity-2023/resources",
+      "key": "all_resources_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_5"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/focus-on-creativity-2023/standards",
+      "key": "all_standards_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_5"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/focus-on-creativity-2023/vocab",
+      "key": "all_vocabulary_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4"
+      }
+    }
   ],
   "student_resources": [
 
