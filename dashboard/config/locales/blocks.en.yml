@@ -2751,6 +2751,19 @@ en:
           DIR:
             right: right ↻
             left: left ↺
+      ecosystems_catchMe:
+        text: catch {THIS}
+      ecosystems_eat:
+        text: eat {THIS}
+      ecosystems_goldilocks:
+        text: |2-
+           if {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': too much
+            '"just right"': just right
+            '"too little"': too little
       storylab_clearHeadings:
         text: clear headings
       storylab_setForegroundEffect2:
