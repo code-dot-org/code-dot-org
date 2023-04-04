@@ -130,18 +130,18 @@ These steps may need to change over time as 3rd party tools update to have versi
           4. Confirm MySQL has started by running `brew services` again.
 
 1. Install the **Java 8 JSK**
-   1. Either explicitly via `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8` or for M1 in Rosetta, `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
+   1. `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
    2. Or by installing [sdkman](https://sdkman.io/) and installing a suitable JDK. Similar to **rbenv** and **nvm**, **sdkman** allows you to switch between versions of Java.
       1. Different versions will be available depending on your system architecture, use `sdk list java` to identify a Java 8 JDK available for ARM architecture.
       2. `sdk install java <version identifier>` to install a version
       3. `sdk default java <installed version>` to ensure it is the default for future shells.
 
-1. Install and configure **rbenv**
+2. Install and configure **rbenv**
     1. Install: `brew install rbenv`
-    2. Run `echo 'eval "$(~/.rbenv/bin/rbenv init - zsh)"' >> ~/.zshrc` to configure ZSH to use **rbenv**. See https://github.com/rbenv/rbenv#basic-git-checkout for instructions on configuring bash and other shells.
+    2. Run `echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc` to configure ZSH to use **rbenv**. See https://github.com/rbenv/rbenv#basic-git-checkout for instructions on configuring bash and other shells.
     3. Reload your .zshrc to load **rbenv**: `source ~/.zshrc`
 
-1. Install **Ruby**
+3. Install **Ruby**
     1. For non-M1 systems (including M1 systems using Rosetta), running `rbenv install` from the project root directory should be sufficient.
     2. For Apple Silicon, special configuration is required to set *libffi* options correctly. The following is a single line to execute.
 
@@ -149,7 +149,7 @@ These steps may need to change over time as 3rd party tools update to have versi
       optflags="-Wno-error=implicit-function-declaration" LDFLAGS="-L/opt/homebrew/opt/libffi/lib" CPPFLAGS="-I/opt/homebrew/opt/libffi/include" PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig" rbenv install
       ```
 
-1. *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See <https://leancrew.com/all-this/2017/01/pdftk/> and <https://github.com/turforlag/homebrew-cervezas/pull/1> for more information about pdftk on macOS.
+4. *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See <https://leancrew.com/all-this/2017/01/pdftk/> and <https://github.com/turforlag/homebrew-cervezas/pull/1> for more information about pdftk on macOS.
 
     ```sh
     curl -O https://raw.githubusercontent.com/zph/homebrew-cervezas/master/pdftk.rb
@@ -157,9 +157,9 @@ These steps may need to change over time as 3rd party tools update to have versi
     rm ./pdftk.rb
     ```
 
-1. Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils sqlite parallel tidy-html5`
+5. Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils sqlite parallel tidy-html5`
 
-1. Install [Node Version Manager](https://github.com/nvm-sh/nvm) and install Node
+6. Install [Node Version Manager](https://github.com/nvm-sh/nvm) and install Node
     1. Install NVM via `brew install nvm`
 
     2. Running `nvm install` or `nvm use` within the project directory will install and use the version specified in [.nvmrc](.nvmrc)
@@ -177,15 +177,15 @@ These steps may need to change over time as 3rd party tools update to have versi
        nvm use && nvm alias default $(cat ./.nvmrc)
        ```
 
-1. Install **yarn** via `npm install -g yarn@1.22.5`
+7. Install **yarn** via `npm install -g yarn@1.22.5`
 
-1. Install **OpenSSL**
+8. Install **OpenSSL**
     1. Run `brew install openssl`
     2. Following the instructions in the output, run a form of `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
 
-1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
+9. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
-1. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. Note that there are additional steps for Apple Silicon (M1) when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
+10. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. Note that there are additional steps for Apple Silicon (M1) when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
 
 ### OS X Catalina
 
