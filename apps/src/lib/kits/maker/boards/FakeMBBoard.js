@@ -31,6 +31,8 @@ export default class FakeMBBoard extends EventEmitter {
     return Promise.resolve();
   }
 
+  reset() {}
+
   openSerialPort() {}
 
   /**

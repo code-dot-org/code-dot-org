@@ -30,6 +30,8 @@ export default class FakeCPBoard extends EventEmitter {
     return Promise.resolve();
   }
 
+  reset() {}
+
   /**
    * Marshals the board component controllers and appropriate constants into the
    * given JS Interpreter instance so they can be used by student code.
