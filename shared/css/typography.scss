@@ -1,0 +1,82 @@
+// Use this to maintain proper heading hierarchy when design
+// calls for a different style (semantic h3, h5 styling).
+
+// Use @include mixin-name in stylesheets for widespread use.
+/* — example: all h3s in a ul need to look like a h5s
+    ul.icon-list {
+      h3 { @include h5-style }
+    }
+*/
+
+// Use .h1, .h2, etc classes on single elements in the markup.
+// - example: %h3.h5 This is heading text that will look like an h5
+
+// Mixins
+@mixin heading-xxl {
+  font-family: $barlowSemiCondensed-semibold;
+  font-size: 3em;
+}
+
+@mixin heading-xl {
+  font-family: $barlowSemiCondensed-semibold;
+  font-size: 2.125em;
+}
+
+@mixin heading-lg {
+  font-family: $barlowSemiCondensed-semibold;
+  font-size: 1.75em;
+}
+
+@mixin heading-md {
+  font-family: $barlowSemiCondensed-semibold;
+  font-size: 1.5em;
+}
+
+@mixin heading-sm {
+  font-family: $gotham-bold, sans-serif;
+  font-size: 1.25em;
+}
+
+@mixin heading-xs {
+  font-family: $gotham-bold, sans-serif;
+  font-size: 1em;
+}
+
+h1, .heading-xxl { @include heading-xxl }
+h2, .heading-xl { @include heading-xl }
+h3, .heading-lg { @include heading-lg }
+h4, .heading-md { @include heading-md }
+h5, .heading-sm { @include heading-sm }
+h6, .heading-xs { @include heading-xs }
+
+// Heading styles
+h1, h2, h3, h4, h5, h6 {
+  color: $neutral-dark;
+  margin: 0 0 0.5em;
+  line-height: 1.2;
+}
+
+// Paragraphs
+p {
+  color: $neutral-dark;
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 1em;
+
+  // For use on course block descriptions or anywhere
+  // else that needs smaller paragraph text
+  &.body-two {
+    font-size: .875em;
+  }
+
+  &.overline {
+    font-size: .75em;
+    font-family: $gotham-bold;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+}
+
+strong {
+  font-family: $gotham-bold, sans-serif;
+}
