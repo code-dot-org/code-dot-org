@@ -1,11 +1,11 @@
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
-import {
+const {
   DEFAULT_FONT_SIZE_PX,
   FONT_SIZE_INCREMENT_PX,
   MAX_FONT_SIZE_PX,
   MIN_FONT_SIZE_PX
-} from '@cdo/apps/javalab/editorThemes';
+} = require('@cdo/apps/javalab/editorThemes');
 
 const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
 const EDITOR_HEIGHT_UPDATED = 'javalab/EDITOR_HEIGHT_UPDATED';
@@ -18,6 +18,10 @@ const EDITOR_COLUMN_HEIGHT = 'javalab/EDITOR_COLUMN_HEIGHT';
 const TOGGLE_VISUALIZATION_COLLAPSED = 'javalab/TOGGLE_VISUALIZATION_COLLAPSED';
 const INCREASE_EDITOR_FONT_SIZE = 'javalab/INCREASE_EDITOR_FONT_SIZE';
 const DECREASE_EDITOR_FONT_SIZE = 'javalab/DECREASE_EDITOR_FONT_SIZE';
+
+// interface JavalabViewState {
+//   displayTheme: 
+// }
 
 const initialState = {
   displayTheme: DisplayTheme.LIGHT,
