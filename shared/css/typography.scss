@@ -9,7 +9,8 @@
 // calls for a different style (semantic h3, h5 styling).
 
 // Use .heading-[xx] classes on single elements in the markup.
-// - example: %h3.heading-sm - This is an h3 heading that will look like an h5
+// This is an h3 heading that will look like an h5.
+// - example: %h3.heading-sm
 
 // Use @include [mixin-name] in stylesheets for widespread use.
 /* — example: all h3s in a ul need to look like h5s
