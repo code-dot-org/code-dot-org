@@ -136,7 +136,7 @@ const TimelineLine = ({height, marginRight = '0px', marginLeft = '0px'}) => {
 TimelineLine.propTypes = {
   height: PropTypes.string.isRequired,
   marginRight: PropTypes.string,
-  marginLeft: PropTypes.strings
+  marginLeft: PropTypes.string
 };
 
 const lineStyle = `3px solid ${color.charcoal}`;
