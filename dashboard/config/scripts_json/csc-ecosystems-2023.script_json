@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-ecosystems",
-    "serialized_at": "2023-03-30 23:05:41 UTC",
+    "serialized_at": "2023-04-03 20:49:43 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -35,7 +35,7 @@
   "lessons": [
     {
       "key": "Overfishing Simulation (pilot)",
-      "name": "Overfishing Simulation (2023)",
+      "name": "Overfishing Simulation",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -53,7 +53,7 @@
     },
     {
       "key": "Balancing the Ecosystem (pilot)",
-      "name": "Balancing the Ecosystem (2023)",
+      "name": "Balancing the Ecosystem",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -71,7 +71,7 @@
     },
     {
       "key": "lesson-3",
-      "name": "Code Your Own Ecosystem (2023)",
+      "name": "Coding My Ecosystem",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -1750,7 +1750,7 @@
   ],
   "resources": [
     {
-      "name": "Sustainable Ecosystems",
+      "name": "Simulating a Marine Ecosystem",
       "url": "https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview",
       "key": "ecosystems",
       "properties": {
