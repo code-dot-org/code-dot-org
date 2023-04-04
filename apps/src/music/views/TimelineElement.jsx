@@ -11,8 +11,8 @@ const typeToColorClass = {
   bass: moduleStyles.timelineElementBlue,
   lead: moduleStyles.timelineElementGreen,
   fx: moduleStyles.timelineElementYellow,
-  pattern: moduleStyles.timelineElementPink,
-  chord: moduleStyles.timelineElementOrange
+  pattern: moduleStyles.timelineElementPattern,
+  chord: moduleStyles.timelineElementChord
 };
 
 /**
