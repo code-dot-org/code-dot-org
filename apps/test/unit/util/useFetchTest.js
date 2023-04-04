@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {expect} from '../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
@@ -7,11 +8,15 @@ import {useFetch} from '@cdo/apps/util/useFetch';
 
 // Functional react component to host the useFetch hook
 let useFetchReturnValue = {current: null};
-// TODO: define these props
-// eslint-disable-next-line react/prop-types
 const UseFetchHarness = ({url, options, deps}) => {
   useFetchReturnValue.current = useFetch(url, options, deps);
   return null;
+};
+
+UseFetchHarness.propTypes = {
+  url: PropTypes.string,
+  options: PropTypes.object,
+  deps: PropTypes.array
 };
 
 // Convenience method; tests can use "await processEventLoop()" to wait for
