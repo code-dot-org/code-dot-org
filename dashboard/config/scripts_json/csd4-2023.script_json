@@ -7089,6 +7089,594 @@
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Bugs and Features",
+        "resource.key": "bugs_and_features"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Bugs and Features",
+        "resource.key": "bugs_and_features_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Bugs and Features",
+        "resource.key": "bugs_and_features_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Digital Prototype",
+        "resource.key": "build_a_digital_prototype"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Digital Prototype",
+        "resource.key": "screen_design_2021_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Paper Prototype",
+        "resource.key": "build_a_paper_prototype"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Paper Prototype",
+        "resource.key": "design_mode"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Paper Prototype",
+        "resource.key": "design_mode_elements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Paper Prototype",
+        "resource.key": "paper_prototype_planning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Paper Prototype",
+        "resource.key": "paper_prototype_planning_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Paper Prototype",
+        "resource.key": "phone_paper_prototype"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design Mode in App Lab",
+        "resource.key": "design_mode"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design Mode in App Lab",
+        "resource.key": "design_mode_elements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design Mode in App Lab",
+        "resource.key": "design_mode_in_app_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design Mode in App Lab",
+        "resource.key": "intro_to_design_mode"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design Mode in App Lab",
+        "resource.key": "model_screen_design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design Mode in App Lab",
+        "resource.key": "screen_design_2021_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design Mode in App Lab",
+        "resource.key": "screen_ownership_2021_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Apps for Good",
+        "resource.key": "app_design_kickoff"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Apps for Good",
+        "resource.key": "app_design_kickoff_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Apps for Good",
+        "resource.key": "designing_apps_for_good"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Apps for Good",
+        "resource.key": "example_apps_for_good"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing With Empathy",
+        "resource.key": "designing_with_empathy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing With Empathy",
+        "resource.key": "designing_with_empathy_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing With Empathy",
+        "resource.key": "designing_with_empathy_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing With Empathy",
+        "resource.key": "problem_solving_process_with_empathy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in App Lab",
+        "resource.key": "events_in_app_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in App Lab",
+        "resource.key": "events_in_app_lab_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring UI Elements",
+        "resource.key": "explore_ui_elements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring UI Elements",
+        "resource.key": "explore_ui_elements_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring UI Elements",
+        "resource.key": "exploring_ui_elements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Feedback and Testing",
+        "resource.key": "feedback_and_testing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Feedback and Testing",
+        "resource.key": "improve_a_screen"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Feedback and Testing",
+        "resource.key": "improve_a_screen_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Feedback and Testing",
+        "resource.key": "prototype_feedback"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Feedback and Testing",
+        "resource.key": "user_interface_screens"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Identifying User Needs",
+        "resource.key": "example_user_interviews"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Identifying User Needs",
+        "resource.key": "identifying_user_needs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Identifying User Needs",
+        "resource.key": "user_interviews"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Prototype Screens",
+        "resource.key": "changing_screens"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Prototype Screens",
+        "resource.key": "importing_screens"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Prototype Screens",
+        "resource.key": "linking_prototype_screens"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Prototype Screens",
+        "resource.key": "multi-screen_apps"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Prototype Screens",
+        "resource.key": "responding_to_user_input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Market Research",
+        "resource.key": "market_research"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Market Research",
+        "resource.key": "market_research_-_research_areas"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Market Research",
+        "resource.key": "market_research_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Market Research",
+        "resource.key": "market_research_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
+        "resource.key": "app_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
+        "resource.key": "app_presentation_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
+        "resource.key": "app_presentation_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
+        "resource.key": "app_presentation_template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
+        "resource.key": "computer_science_practices"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
+        "resource.key": "peer_review_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
+        "resource.key": "peer_review_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
+        "resource.key": "project_-_app_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
+        "resource.key": "sample_marked_rubrics_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Paper Prototype",
+        "resource.key": "computer_science_practices"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Paper Prototype",
+        "resource.key": "example_project_-_cooking_app_-_convincing_evidence"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Paper Prototype",
+        "resource.key": "example_project_-_cooking_app_-_extensive_evidence"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Paper Prototype",
+        "resource.key": "example_project_-_language_app_-_convincing_evidence"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Paper Prototype",
+        "resource.key": "example_project_-_language_app_-_limited_evidence"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Paper Prototype",
+        "resource.key": "paper_prototype_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Paper Prototype",
+        "resource.key": "paper_prototype_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Paper Prototype",
+        "resource.key": "paper_prototypes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Paper Prototype",
+        "resource.key": "project_-_paper_prototype"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Prototype Testing",
+        "resource.key": "paper_prototype_user_testing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Prototype Testing",
+        "resource.key": "paper_prototype_user_testing_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Prototype Testing",
+        "resource.key": "prototype_testing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Prototype Testing",
+        "resource.key": "user_test_cases"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Prototype Testing",
+        "resource.key": "user_test_cases_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Prototype Testing",
+        "resource.key": "what_s_for_lunch_testing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Testing the App",
+        "resource.key": "digital_prototype_user_testing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Testing the App",
+        "resource.key": "testing_the_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Testing the App",
+        "resource.key": "user_test_cases"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Your User",
+        "resource.key": "profile_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Your User",
+        "resource.key": "profile_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Your User",
+        "resource.key": "profile_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Your User",
+        "resource.key": "profile_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Your User",
+        "resource.key": "reacting_as_your_user"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Your User",
+        "resource.key": "reacting_as_your_user_profile_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Your User",
+        "resource.key": "reacting_as_your_user_profile_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Your User",
+        "resource.key": "reacting_as_your_user_profile_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Your User",
+        "resource.key": "reacting_as_your_user_profile_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Your User",
+        "resource.key": "understanding_your_user"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Your Prototype",
+        "resource.key": "updating_your_prototype"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Your Prototype",
+        "resource.key": "updating_your_prototype_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User Centered Design - Define and Prepare",
+        "resource.key": "the_design_thinking_process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User Centered Design - Define and Prepare",
+        "resource.key": "user_centered_design_-_define_and_prepare"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User Centered Design - Define and Prepare",
+        "resource.key": "user_centered_design_define_prepare_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User Centered Design - Define and Prepare",
+        "resource.key": "user_centered_design_define_prepare_2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User Centered Design - Try and Reflect",
+        "resource.key": "user_centered_design_-_try_and_reflect"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User Centered Design - Try and Reflect",
+        "resource.key": "user_centered_design_try_reflect_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User Centered Design - Try and Reflect",
+        "resource.key": "user_centered_design_try_reflect_2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User Interfaces",
+        "resource.key": "user_interface_screens"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User Interfaces",
+        "resource.key": "user_interfaces"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User Interfaces",
+        "resource.key": "user_testing_computer_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User Interfaces",
+        "resource.key": "user_testing_user_"
+      }
+    }
 
   ],
   "scripts_resources": [
