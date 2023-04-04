@@ -1,15 +1,23 @@
-// Use this to maintain proper heading hierarchy when design
+// This stylesheet can be imported to maintain typographic
+// consistency across Dashboard and Pegasus sites.
+
+// Includes heading and paragraph styles.
+
+// ----------------------------------------
+
+// Mixins are used to maintain accessible heading hierarchy when design
 // calls for a different style (semantic h3, h5 styling).
 
-// Use @include mixin-name in stylesheets for widespread use.
-/* — example: all h3s in a ul need to look like a h5s
-    ul.icon-list {
-      h3 { @include h5-style }
-    }
-*/
+// Use .heading-[xx] classes on single elements in the markup.
+// - example: %h3.heading-sm - This is an h3 heading that will look like an h5
 
-// Use .h1, .h2, etc classes on single elements in the markup.
-// - example: %h3.h5 This is heading text that will look like an h5
+// Use @include [mixin-name] in stylesheets for widespread use.
+// — example: all h3s in a ul need to look like h5s
+  /*
+    ul.icon-list {
+      h3 { @include heading-sm }
+    }
+  */
 
 // Mixins
 @mixin heading-xxl {
@@ -42,6 +50,9 @@
   font-size: 1em;
 }
 
+// ----------------------------------------
+
+// Headings
 h1, .heading-xxl { @include heading-xxl }
 h2, .heading-xl { @include heading-xl }
 h3, .heading-lg { @include heading-lg }
@@ -49,7 +60,6 @@ h4, .heading-md { @include heading-md }
 h5, .heading-sm { @include heading-sm }
 h6, .heading-xs { @include heading-xs }
 
-// Heading styles
 h1, h2, h3, h4, h5, h6 {
   color: $neutral-dark;
   margin: 0 0 0.5em;
