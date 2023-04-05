@@ -1,19 +1,23 @@
 name 'U2L08 Assessment 1'
-encrypted 'l5PjyzhmqWQnVHy5l2LJKsO1K3qUmsrbd/gN0/ObZnRdd6A/uVJeYrFXgw6B
-BDDd8oBGNZTNGRWSgF4gE34YhvKDwq1al6ovbOhIDOzL8Gc/6DfuKw2HeTQa
-1QMxCL63B0PqdUb8m1FX00JyM4OLz8Hu2Uhc5CxYzWw/909ZIMkdXT8sHeFw
-E+2mQmmQ+LJGjCXfkiQzeaMka+yEXql93OYF9EJBqk9fFlMyFOcNuUCK3Drk
-ZBon8HsZ4It3Hm5b/FCt4R/QrgLFiU1W0jH2BdBlet0HHYMxg/dnPadTNRSt
-hkbtCFhUHAGLdnyJnusXJPP3hi8VDmGy+gMrJ0k+Y/YzTXZ2YirSroSQi/cf
-Jv9XS0wN/9tNhuHt6NOdhEvgN1Pr5eFadRPx6E4ux4RPq5fDd3l3KrGkyQjW
-vMJQEMHRT79hnPuUQzJHnGrX0C/oWGCZdGpFA/AGrYR4nnpoojavq97CP8Pk
-HP0zcAd/RmADbftMjnktVNPJW4YaY7LAXczjmQMcG9lMyczB7gMqDauqOAd2
-koiSAqigpPQwMHckU3WmZEseoxmq9j3kUXSWC/OECtlOtgVOyu03Pk9nmAtW
-2fjjUcRQQRFosptiOXvIFIAEGf01e5ds7y1fWZ6ZYGG0FUp4gU8+kd6AAKkM
-OEQEfin0Zf8tWoCBOH3RnjzfNnLDs8cCNdynBzDwLZgwXFxA9emYFFjVfAXg
-QiQxs/zh3mvJUXn5q7Y2N3byHDYqgLEq475lhu6ECEdVLoPuRdN8vieXe6cU
-v4Pu3YIGcmFjBIiUysBbStUsYl/gvcsTCloacK50xzI/N++fjsCxQ2DrPgRr
-YXxEYpDuePtKxyzdzpcljia5jOMmKk5p8G/7IlPy6TK6CfHGVAYR6UR4ZElL
-p0114ZyNRRuzUzpg8IwpOkay4E++J16AXqrsPqtm7r/mwqOOi7yGxVycABVn
-DBLkEkBBtnHNm8KD38SH9Q==
-'
+title 'Router Table: Assessment'
+
+wrong '5'
+wrong '6'
+wrong '8'
+right '9'
+wrong '11'
+
+markdown <<MARKDOWN
+You’re router Z, and you just joined this network, and router A is showing you its table, which is shown below. **Based on your current knowledge as router Z, what is the cost of the most efficient way to send traffic to router C?**
+<br>
+
+![](https://images.code.org/d6ab31cec25e0af70311d1ddb39f63fc-image-1440168592699.49.20 AM.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answer: 9
+
+Note that it will currently take router A 6ms to send a message to router C. With the additional cost of 3ms to send a message from Z to A, the total cost of the trip is 9ms.
+MARKDOWN
+
+allow_multiple_attempts true

@@ -14,7 +14,7 @@ import javalab, {
   setValidationPassed,
   setHasRunOrTestedCode,
   setIsJavabuilderConnecting
-} from './javalabRedux';
+} from './redux/javalabRedux';
 import javalabConsole, {
   appendOutputLog,
   appendNewlineToConsoleLog,

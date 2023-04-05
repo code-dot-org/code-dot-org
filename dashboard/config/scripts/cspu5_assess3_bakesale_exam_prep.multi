@@ -27,3 +27,5 @@ Note that the condition for the while loop to keep running is the numItems must 
 
 		numItems = numItems - 1;
 MARKDOWN
+
+allow_multiple_attempts true

@@ -1,3 +1,8 @@
+/**
+ * Redux store for state specific to the visuals of Java Lab
+ * (widths/heights/font sizes/etc.)
+ */
+
 import {
   AnyAction,
   PayloadAction,
