@@ -1,5 +1,7 @@
-import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
-import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
+import {PayloadAction, createSlice} from '@reduxjs/toolkit';
+
+const {DisplayTheme} = require('@cdo/apps/javalab/DisplayTheme');
+const UserPreferences = require('@cdo/apps/lib/util/UserPreferences');
 const {
   DEFAULT_FONT_SIZE_PX,
   FONT_SIZE_INCREMENT_PX,
@@ -7,23 +9,24 @@ const {
   MIN_FONT_SIZE_PX
 } = require('@cdo/apps/javalab/editorThemes');
 
-const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
-const EDITOR_HEIGHT_UPDATED = 'javalab/EDITOR_HEIGHT_UPDATED';
-const LEFT_WIDTH_UPDATED = 'javalab/LEFT_WIDTH_UPDATED';
-const RIGHT_WIDTH_UPDATED = 'javalab/RIGHT_WIDTH_UPDATED';
-const SET_INSTRUCTIONS_HEIGHT = 'javalab/SET_INSTRUCTIONS_HEIGHT';
-const SET_INSTRUCTIONS_FULL_HEIGHT = 'javalab/SET_INSTRUCTIONS_FULL_HEIGHT';
-const SET_CONSOLE_HEIGHT = 'javalab/SET_CONSOLE_HEIGHT';
-const EDITOR_COLUMN_HEIGHT = 'javalab/EDITOR_COLUMN_HEIGHT';
-const TOGGLE_VISUALIZATION_COLLAPSED = 'javalab/TOGGLE_VISUALIZATION_COLLAPSED';
-const INCREASE_EDITOR_FONT_SIZE = 'javalab/INCREASE_EDITOR_FONT_SIZE';
-const DECREASE_EDITOR_FONT_SIZE = 'javalab/DECREASE_EDITOR_FONT_SIZE';
+type DisplayThemeValue = 'light' | 'dark';
 
-// interface JavalabViewState {
-//   displayTheme: 
-// }
+interface JavalabViewState {
+  displayTheme: DisplayThemeValue;
+  renderedEditorHeight: number;
+  leftWidth: number;
+  rightWidth: number;
+  instructionsHeight: number;
+  instructionsFullHeight: number;
+  consoleHeight: number;
+  editorColumnHeight: number;
+  isVisualizationCollapsed: boolean;
+  editorFontSize: number;
+  canIncreaseFontSize: boolean;
+  canDecreaseFontSize: boolean;
+}
 
-const initialState = {
+const initialState: JavalabViewState = {
   displayTheme: DisplayTheme.LIGHT,
   renderedEditorHeight: 400,
   leftWidth: 400,
@@ -38,143 +41,74 @@ const initialState = {
   canDecreaseFontSize: DEFAULT_FONT_SIZE_PX > MIN_FONT_SIZE_PX
 };
 
-// Action Creators
-
-// Updates the user preferences to reflect change
-export const setDisplayTheme = displayTheme => {
-  new UserPreferences().setDisplayTheme(displayTheme);
-  return {
-    displayTheme: displayTheme,
-    type: COLOR_PREFERENCE_UPDATED
-  };
-};
-
-export const toggleVisualizationCollapsed = () => ({
-  type: TOGGLE_VISUALIZATION_COLLAPSED
+const javalabViewSlice = createSlice({
+  name: 'javalabView',
+  initialState,
+  reducers: {
+    setDisplayTheme(state, action: PayloadAction<DisplayThemeValue>) {
+      // is this a place for a thunk??
+      new UserPreferences().setDisplayTheme(action.payload);
+      state.displayTheme = action.payload;
+    },
+    toggleVisualizationCollapsed(state) {
+      state.isVisualizationCollapsed = !state.isVisualizationCollapsed;
+    },
+    increaseEditorFontSize(state) {
+      const newFontSize = Math.min(
+        MAX_FONT_SIZE_PX,
+        state.editorFontSize + FONT_SIZE_INCREMENT_PX
+      );
+      updateEditorFontSize(state, newFontSize);
+    },
+    decreaseEditorFontSize(state) {
+      const newFontSize = Math.max(
+        MIN_FONT_SIZE_PX,
+        state.editorFontSize - FONT_SIZE_INCREMENT_PX
+      );
+      updateEditorFontSize(state, newFontSize);
+    },
+    setRenderedHeight(state, action: PayloadAction<number>) {
+      state.renderedEditorHeight = action.payload;
+    },
+    setLeftWidth(state, action: PayloadAction<number>) {
+      state.leftWidth = action.payload;
+    },
+    setRightWidth(state, action: PayloadAction<number>) {
+      state.rightWidth = action.payload;
+    },
+    setInstructionsHeight(state, action: PayloadAction<number>) {
+      state.instructionsHeight = action.payload;
+    },
+    setInstructionsFullHeight(state, action: PayloadAction<number>) {
+      state.instructionsFullHeight = action.payload;
+    },
+    setConsoleHeight(state, action: PayloadAction<number>) {
+      state.consoleHeight = action.payload;
+    },
+    setEditorColumnHeight(state, action: PayloadAction<number>) {
+      state.editorColumnHeight = action.payload;
+    }
+  }
 });
 
-export const increaseEditorFontSize = () => ({
-  type: INCREASE_EDITOR_FONT_SIZE
-});
-
-export const decreaseEditorFontSize = () => ({
-  type: DECREASE_EDITOR_FONT_SIZE
-});
-
-export const setRenderedHeight = height => ({
-  type: EDITOR_HEIGHT_UPDATED,
-  height
-});
-
-export const setLeftWidth = width => ({
-  type: LEFT_WIDTH_UPDATED,
-  width
-});
-
-export const setRightWidth = width => ({
-  type: RIGHT_WIDTH_UPDATED,
-  width
-});
-
-export const setInstructionsHeight = height => ({
-  type: SET_INSTRUCTIONS_HEIGHT,
-  height
-});
-
-export const setInstructionsFullHeight = height => ({
-  type: SET_INSTRUCTIONS_FULL_HEIGHT,
-  height
-});
-
-export const setConsoleHeight = height => ({
-  type: SET_CONSOLE_HEIGHT,
-  height
-});
-
-export const setEditorColumnHeight = editorColumnHeight => ({
-  type: EDITOR_COLUMN_HEIGHT,
-  editorColumnHeight
-});
-
-// Reducer
-export default function reducer(state = initialState, action) {
-  if (action.type === COLOR_PREFERENCE_UPDATED) {
-    return {
-      ...state,
-      displayTheme: action.displayTheme
-    };
-  }
-  if (action.type === EDITOR_HEIGHT_UPDATED) {
-    return {
-      ...state,
-      renderedEditorHeight: action.height
-    };
-  }
-  if (action.type === LEFT_WIDTH_UPDATED) {
-    return {
-      ...state,
-      leftWidth: action.width
-    };
-  }
-  if (action.type === RIGHT_WIDTH_UPDATED) {
-    return {
-      ...state,
-      rightWidth: action.width
-    };
-  }
-  if (action.type === SET_INSTRUCTIONS_HEIGHT) {
-    return {
-      ...state,
-      instructionsHeight: action.height
-    };
-  }
-  if (action.type === SET_INSTRUCTIONS_FULL_HEIGHT) {
-    return {
-      ...state,
-      instructionsFullHeight: action.height
-    };
-  }
-  if (action.type === SET_CONSOLE_HEIGHT) {
-    return {
-      ...state,
-      consoleHeight: action.height
-    };
-  }
-  if (action.type === EDITOR_COLUMN_HEIGHT) {
-    return {
-      ...state,
-      editorColumnHeight: action.editorColumnHeight
-    };
-  }
-  if (action.type === TOGGLE_VISUALIZATION_COLLAPSED) {
-    return {
-      ...state,
-      isVisualizationCollapsed: !state.isVisualizationCollapsed
-    };
-  }
-  if (action.type === INCREASE_EDITOR_FONT_SIZE) {
-    const newFontSize = Math.min(
-      MAX_FONT_SIZE_PX,
-      state.editorFontSize + FONT_SIZE_INCREMENT_PX
-    );
-    return {
-      ...state,
-      editorFontSize: newFontSize,
-      canIncreaseFontSize: newFontSize < MAX_FONT_SIZE_PX,
-      canDecreaseFontSize: newFontSize > MIN_FONT_SIZE_PX
-    };
-  }
-  if (action.type === DECREASE_EDITOR_FONT_SIZE) {
-    const newFontSize = Math.max(
-      MIN_FONT_SIZE_PX,
-      state.editorFontSize - FONT_SIZE_INCREMENT_PX
-    );
-    return {
-      ...state,
-      editorFontSize: newFontSize,
-      canIncreaseFontSize: newFontSize < MAX_FONT_SIZE_PX,
-      canDecreaseFontSize: newFontSize > MIN_FONT_SIZE_PX
-    };
-  }
-  return state;
+function updateEditorFontSize(state: JavalabViewState, newFontSize: number) {
+  state.editorFontSize = newFontSize;
+  state.canIncreaseFontSize = newFontSize < MAX_FONT_SIZE_PX;
+  state.canDecreaseFontSize = newFontSize > MIN_FONT_SIZE_PX;
 }
+
+export const {
+  setDisplayTheme,
+  toggleVisualizationCollapsed,
+  increaseEditorFontSize,
+  decreaseEditorFontSize,
+  setRenderedHeight,
+  setLeftWidth,
+  setRightWidth,
+  setInstructionsHeight,
+  setInstructionsFullHeight,
+  setConsoleHeight,
+  setEditorColumnHeight
+} = javalabViewSlice.actions;
+
+export default javalabViewSlice.reducer;
