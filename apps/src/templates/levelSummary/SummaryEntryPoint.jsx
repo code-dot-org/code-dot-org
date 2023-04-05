@@ -23,12 +23,15 @@ const SummaryEntryPoint = ({scriptData, students}) => {
         color={Button.ButtonColor.neutralDark}
         text={i18n.viewStudentResponses()}
         href={summaryUrl}
+        className={styles.button}
         __useDeprecatedTag
       />
 
+      <div className={styles.responseIcon}>
+        <i className="fa fa-user" />
+      </div>
       <div className={styles.responseCounter}>
         <p>
-          <i className="fa fa-user" />
           <span className={styles.counter}>
             {scriptData.responses.length}/{students.length}{' '}
           </span>
