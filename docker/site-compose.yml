@@ -33,6 +33,7 @@ services:
       - ../../droplet/:/home/circleci/droplet:delegated
       - ../../blockly/:/home/circleci/blockly:delegated
       - ../../maze/:/home/circleci/maze:delegated
+      - ../../ml-playground/:/home/circleci/ml-playground:delegated
 
     ports:
       - "3000:3000"
