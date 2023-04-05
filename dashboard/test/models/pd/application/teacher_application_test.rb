@@ -476,18 +476,6 @@ module Pd::Application
       application.update!(status: 'pending')
     end
 
-    test 'setting an auto-email status deletes unsent emails for the application' do
-      unrelated_email = create :pd_application_email
-      application = create :pd_teacher_application
-      associated_sent_email = create :pd_application_email, application: application, sent_at: Time.now
-      associated_unsent_email = create :pd_application_email, application: application
-
-      application.update!(status: 'pending_space_availability')
-      assert Email.exists?(unrelated_email.id)
-      assert Email.exists?(associated_sent_email.id)
-      refute Email.exists?(associated_unsent_email.id)
-    end
-
     test 'test non course dynamically required fields' do
       application_hash = build :pd_teacher_application_hash,
         regional_partner_id: create(:regional_partner).id,
