@@ -45,7 +45,7 @@ const CheckForUnderstanding = ({
         {nextLevel && (
           <a
             className={isRtl ? styles.navLinkLeft : styles.navLinkRight}
-            href={nextLevel.url}
+            href={`${nextLevel.url}${sectionParam}`}
           >
             {i18n.nextLevelLink()} &gt;
           </a>
