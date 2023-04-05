@@ -16,7 +16,7 @@ class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
 
   def alternate_email
     # Note: Use dig instead of [] because RuboCop doesn't like chaining ordinary method call after safe navigation operator.
-    object&.application&.sanitize_form_data_hash&.dig(:alternate_email)
+    object&.application&.sanitized_form_data_hash&.dig(:alternate_email)
   end
 
   def school

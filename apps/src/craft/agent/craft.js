@@ -109,7 +109,7 @@ export default class Craft {
     config.showInstructionsInTopPane = true;
 
     // Return the version of Internet Explorer (8+) or undefined if not IE.
-    const getIEVersion = function() {
+    const getIEVersion = function () {
       return document.documentMode;
     };
 
@@ -162,14 +162,14 @@ export default class Craft {
 
     let levelTracks = [];
     if (Craft.level.songs && MUSIC_METADATA) {
-      levelTracks = MUSIC_METADATA.filter(function(trackMetadata) {
+      levelTracks = MUSIC_METADATA.filter(function (trackMetadata) {
         return Craft.level.songs.indexOf(trackMetadata.name) !== -1;
       });
     }
 
     Craft.musicController = new MusicController(
       Sounds.getSingleton(),
-      function(filename) {
+      function (filename) {
         return config.skin.assetUrl(`music/${filename}`);
       },
       levelTracks,
@@ -177,23 +177,23 @@ export default class Craft {
       muteCookieWithLevel(Craft.level)
     );
 
-    config.muteBackgroundMusic = function() {
+    config.muteBackgroundMusic = function () {
       Craft.musicController.setMuteMusic(true);
     };
 
-    config.unmuteBackgroundMusic = function() {
+    config.unmuteBackgroundMusic = function () {
       var songToPlayFirst = Craft.getFirstSong();
       Craft.musicController.setMuteMusic(false, songToPlayFirst);
     };
 
     // Play music when the instructions are shown
-    Craft.beginBackgroundMusic = function() {
+    Craft.beginBackgroundMusic = function () {
       var songToPlayFirst = Craft.getFirstSong();
       Craft.musicController.play(songToPlayFirst);
     };
 
-    Craft.getFirstSong = function() {
-      Sounds.getSingleton().whenAudioUnlocked(function() {
+    Craft.getFirstSong = function () {
+      Sounds.getSingleton().whenAudioUnlocked(function () {
         var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
         return hasSongInLevel ? Craft.level.songs[0] : null;
       });
@@ -206,15 +206,15 @@ export default class Craft {
     config.skin.winAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Success.png';
     config.level.levelTracks = levelTracks;
 
-    const onMount = function() {
+    const onMount = function () {
       studioApp().init(
         Object.assign({}, config, {
           forceInsertTopBlock: 'when_run',
           appStrings: {
             generatedCodeDescription: craftMsg.generatedCodeDescription()
           },
-          loadAudio: function() {},
-          afterInject: function() {
+          loadAudio: function () {},
+          afterInject: function () {
             if (config.level.showMovementBanner) {
               studioApp().displayWorkspaceAlert(
                 'warning',
@@ -248,7 +248,7 @@ export default class Craft {
               earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(
                 config.level.puzzle_number
               ),
-              afterAssetsLoaded: function() {
+              afterAssetsLoaded: function () {
                 // Listen for hint events that draw a path in the game.
                 window.addEventListener('displayHintPath', e => {
                   Craft.gameController.levelView.drawHintPath(e.detail);
@@ -283,7 +283,7 @@ export default class Craft {
             for (const btn in ArrowIds) {
               dom.addMouseUpTouchEvent(
                 document.getElementById(ArrowIds[btn]),
-                (function(btn) {
+                (function (btn) {
                   return () => {
                     Craft.onArrowButtonUp(ArrowIds[btn]);
                   };
@@ -291,7 +291,7 @@ export default class Craft {
               );
               dom.addMouseDownTouchEvent(
                 document.getElementById(ArrowIds[btn]),
-                (function(btn) {
+                (function (btn) {
                   return e => {
                     Craft.onArrowButtonDown(e, ArrowIds[btn]);
                   };
@@ -314,7 +314,7 @@ export default class Craft {
               [Hammer.DIRECTION_DOWN]: 'downButton'
             };
 
-            const onDrag = function(e) {
+            const onDrag = function (e) {
               if (hammerToButton[e.direction]) {
                 Craft.gameController.codeOrgAPI.arrowDown(
                   directionToFacing[hammerToButton[e.direction]]
@@ -323,7 +323,7 @@ export default class Craft {
               e.preventDefault();
             };
 
-            const onDragEnd = function(e) {
+            const onDragEnd = function (e) {
               if (hammerToButton[e.direction]) {
                 Craft.gameController.codeOrgAPI.arrowUp(
                   directionToFacing[hammerToButton[e.direction]]
@@ -379,14 +379,14 @@ export default class Craft {
         );
       }
 
-      interfaceImagesToLoad.forEach(function(url) {
+      interfaceImagesToLoad.forEach(function (url) {
         const img = new Image();
         img.src = url;
       });
 
       const shareButton = $('.mc-share-button');
       if (shareButton.length) {
-        dom.addClickTouchEvent(shareButton[0], function() {
+        dom.addClickTouchEvent(shareButton[0], function () {
           Craft.reportResult(true);
         });
       }
@@ -720,37 +720,37 @@ export default class Craft {
 
     code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
     CustomMarshalingInterpreter.evalWith(code, {
-      moveForward: function(blockID) {
+      moveForward: function (blockID) {
         appCodeOrgAPI.moveForward(
           studioApp().highlight.bind(studioApp(), blockID),
           'PlayerAgent'
         );
       },
-      moveBackward: function(blockID) {
+      moveBackward: function (blockID) {
         appCodeOrgAPI.moveBackward(
           studioApp().highlight.bind(studioApp(), blockID),
           'PlayerAgent'
         );
       },
-      turnLeft: function(blockID) {
+      turnLeft: function (blockID) {
         appCodeOrgAPI.turnLeft(
           studioApp().highlight.bind(studioApp(), blockID),
           'PlayerAgent'
         );
       },
-      turnRight: function(blockID) {
+      turnRight: function (blockID) {
         appCodeOrgAPI.turnRight(
           studioApp().highlight.bind(studioApp(), blockID),
           'PlayerAgent'
         );
       },
-      destroyBlock: function(blockID) {
+      destroyBlock: function (blockID) {
         appCodeOrgAPI.destroyBlock(
           studioApp().highlight.bind(studioApp(), blockID),
           'PlayerAgent'
         );
       },
-      ifLavaAhead: function(callback, blockID) {
+      ifLavaAhead: function (callback, blockID) {
         appCodeOrgAPI.ifBlockAhead(
           studioApp().highlight.bind(studioApp(), blockID),
           'lava',
@@ -758,7 +758,7 @@ export default class Craft {
           callback
         );
       },
-      ifBlockAhead: function(blockType, callback, blockID) {
+      ifBlockAhead: function (blockType, callback, blockID) {
         appCodeOrgAPI.ifBlockAhead(
           studioApp().highlight.bind(studioApp(), blockID),
           blockType,
@@ -766,14 +766,14 @@ export default class Craft {
           callback
         );
       },
-      placeBlock: function(blockType, blockID) {
+      placeBlock: function (blockType, blockID) {
         appCodeOrgAPI.placeBlock(
           studioApp().highlight.bind(studioApp(), blockID),
           blockType,
           'PlayerAgent'
         );
       },
-      placeDirection: function(blockType, direction, blockID) {
+      placeDirection: function (blockType, direction, blockID) {
         appCodeOrgAPI.placeDirection(
           studioApp().highlight.bind(studioApp(), blockID),
           blockType,
@@ -781,7 +781,7 @@ export default class Craft {
           direction
         );
       },
-      moveDirection: function(direction, targetEntity, blockID) {
+      moveDirection: function (direction, targetEntity, blockID) {
         const dirStringToDirection = {
           up: FacingDirection.North,
           down: FacingDirection.South,
@@ -847,13 +847,11 @@ export default class Craft {
       testResult: testResultType,
       image: encodedImage,
       program: encodeURIComponent(
-        Blockly.Xml.domToText(
-          Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
-        )
+        Blockly.cdoUtils.getCode(Blockly.mainBlockSpace)
       ),
       // typically delay feedback until response back
       // for things like e.g. crowdsourced hints & hint blocks
-      onComplete: function(response) {
+      onComplete: function (response) {
         const sharing = Craft.initialConfig.level.freePlay;
         if (sharing && response.level_source) {
           trySetLocalStorage('craftHeroShareLink', response.level_source);

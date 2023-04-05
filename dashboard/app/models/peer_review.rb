@@ -130,12 +130,12 @@ class PeerReview < ApplicationRecord
   end
 
   def self.create_for_submission(user_level, level_source_id)
-    return if PeerReview.where(
+    return if PeerReview.exists?(
       submitter: user_level.user,
       level: user_level.level,
       from_instructor: true,
       status: :accepted
-    ).exists?
+    )
 
     transaction do
       # Remove old unassigned reviews for this submitter+script+level combination
@@ -216,9 +216,10 @@ class PeerReview < ApplicationRecord
 
   def self.get_potential_reviews(script, user)
     where(
-      script: script,
+      script: script
     ).where.not(
-      submitter: user,
+      submitter: user
+    ).where.not(
       level_source_id: PeerReview.where(reviewer: user, script: script).pluck(:level_source_id)
     )
   end
@@ -300,9 +301,7 @@ class PeerReview < ApplicationRecord
     classes.join(' ')
   end
 
-  private
-
-  def append_audit_trail(message)
+  private def append_audit_trail(message)
     self.audit_trail = (audit_trail || '') + "#{message} at #{Time.zone.now}\n"
   end
 end

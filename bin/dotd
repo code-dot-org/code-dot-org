@@ -287,11 +287,14 @@ def dotd_menu(dotd_name)
       menu.choice(:G) {mark_dtt_green}
       menu.choice(:R) {mark_dtt_red}
       menu.choice(:K) do
-        run_on 'test', 'test/bin/kill-tests'
+        run_on 'test', 'test/bin/terminate_build'
 
         puts <<-EOS.unindent
 
           Attempted to kill tests. See Slack#infra-test for more information.
+
+          If the test build does not restart, run the /restart-test-build
+          slack command to restart it.
 
         EOS
         @logger.info 'kills tests'

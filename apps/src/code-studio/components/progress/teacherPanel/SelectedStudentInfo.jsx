@@ -121,14 +121,8 @@ export default class SelectedStudentInfo extends React.Component {
       );
     }
 
-    const {
-      paired,
-      submitLevel,
-      status,
-      updatedAt,
-      partnerNames,
-      partnerCount
-    } = levelWithProgress;
+    const {paired, submitLevel, status, updatedAt, partnerNames, partnerCount} =
+      levelWithProgress;
 
     return (
       <div style={styles.main}>

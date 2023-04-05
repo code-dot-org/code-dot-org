@@ -102,7 +102,7 @@ module.exports = {
       'grass',
       'grass'
     ],
-    verificationFunction: function(verificationAPI) {
+    verificationFunction: function (verificationAPI) {
       return verificationAPI.solutionMapMatchesResultMap([
         '',
         '',

@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2023-03-24T18:16:24.000Z",
+  "level_num": "custom",
+  "user_id": 772,
+  "properties": {
+    "video_key": "hoc_dance_events_2019",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 26745,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "long_instructions": "**Watch this video from Course D - Lesson 8, Level 3:  Dance Party.**"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-03-24T18:16:24.470+00:00\",\"changed\":[\"cloned from \\\"OPD-K5-DVidEvents_2022\\\"\"],\"cloned_from\":\"OPD-K5-DVidEvents_2022\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

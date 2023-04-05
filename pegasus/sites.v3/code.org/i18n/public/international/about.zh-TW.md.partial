@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Code.org 課程有數以千萬計的學生使用，由全球數百萬位教師盡心製作而成。</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## 歷史
 
 2013 年，Code.org 由孿生兄弟 Hadi 與 Ali Partovi 共同創立，並以[這條影片宣揚電腦科學](https://www.youtube.com/watch?v=nKIu9yen5nc)。 影片在 YouTube 上榮登播放首位一天，有多達 15,000 所學校邀請我們提供協助。 自影片發表以來，我們已從白手起家的志願者員工，擴展至完整的組織，支援全球各地的電腦科學運動。 我們相信，優質的電腦科學教育應能夠向每位孩童提供，而不僅僅限於少數的人。
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## 我們的工作
 

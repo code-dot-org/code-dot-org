@@ -6,6 +6,10 @@ import moduleStyles from './topbuttons.module.scss';
 import FontAwesome from '../../templates/FontAwesome';
 import AppConfig from '../appConfig';
 
+/**
+ * Renders a set of miscellaneous buttons in the top of the Music Lab workspace,
+ * including Start Over, Share, Feedback, and optionally Upload Sound.
+ */
 const TopButtons = ({clearCode, uploadSound}) => {
   const analyticsReporter = useContext(AnalyticsContext);
   const [shareMessageShowing, setShareMessageShowing] = useState(false);

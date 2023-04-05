@@ -40,6 +40,22 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
 
     # When the teacher loads the PL landing page
     load_pl_landing teacher
+    # They do not see a prompt to take the Admin workshop exit survey
+    response = assigns(:landing_page_data)
+    refute response[:last_workshop_survey_url]
+    refute response[:last_workshop_survey_course]
+  end
+
+  test 'Admin/Counselor workshops do not show up as pending exit surveys' do
+    # Fake Admin/Counselor workshop, which should produce an exit survey
+    admin_counselor_workshop = create :admin_counselor_workshop, :ended
+
+    # Given a teacher that attended the workshop
+    teacher = create :teacher
+    go_to_workshop admin_counselor_workshop, teacher
+
+    # When the teacher loads the PL landing page
+    load_pl_landing teacher
 
     # They do not see a prompt to take the Admin workshop exit survey
     response = assigns(:landing_page_data)

@@ -291,49 +291,28 @@ describe('ManageLinkedAccounts', () => {
         'Microsoft Account'
       );
       expect(
-        wrapper
-          .find('OauthConnection')
-          .at(1)
-          .find('BootstrapButton')
+        wrapper.find('OauthConnection').at(1).find('BootstrapButton')
       ).to.not.be.disabled();
-      expect(
-        wrapper
-          .find('OauthConnection')
-          .at(1)
-          .find('ReactTooltip')
-      ).to.not.exist;
+      expect(wrapper.find('OauthConnection').at(1).find('ReactTooltip')).to.not
+        .exist;
 
       expect(wrapper.find('OauthConnection').at(2)).to.include.text(
         'Clever Account'
       );
       expect(
-        wrapper
-          .find('OauthConnection')
-          .at(2)
-          .find('BootstrapButton')
+        wrapper.find('OauthConnection').at(2).find('BootstrapButton')
       ).to.not.be.disabled();
-      expect(
-        wrapper
-          .find('OauthConnection')
-          .at(2)
-          .find('ReactTooltip')
-      ).to.not.exist;
+      expect(wrapper.find('OauthConnection').at(2).find('ReactTooltip')).to.not
+        .exist;
 
       expect(wrapper.find('OauthConnection').at(3)).to.include.text(
         'Facebook Account'
       );
       expect(
-        wrapper
-          .find('OauthConnection')
-          .at(3)
-          .find('BootstrapButton')
+        wrapper.find('OauthConnection').at(3).find('BootstrapButton')
       ).to.not.be.disabled();
-      expect(
-        wrapper
-          .find('OauthConnection')
-          .at(3)
-          .find('ReactTooltip')
-      ).to.not.exist;
+      expect(wrapper.find('OauthConnection').at(3).find('ReactTooltip')).to.not
+        .exist;
     });
   });
 });

@@ -3,5 +3,13 @@
   "display_name": "Course 4",
   "category": "csf_international",
   "is_featured": false,
-  "assignable": true
+  "assignable": true,
+  "curriculum_type": null,
+  "marketing_initiative": null,
+  "grade_levels": "4,5",
+  "header": null,
+  "image": "https://images.code.org/266d9e2c86055943e57c4590edfe8df8-course4.png",
+  "cs_topic": "programming",
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
 }

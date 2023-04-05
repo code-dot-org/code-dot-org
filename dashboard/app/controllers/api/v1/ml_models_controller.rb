@@ -29,7 +29,8 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
         request.locale,
         PROFANITY_FILTER_REPLACE_TEXT_LIST
       )
-    rescue OpenURI::HTTPError => share_filtering_error
+    rescue OpenURI::HTTPError => exception
+      share_filtering_error = exception
     end
     if share_filtering_error
       FirehoseClient.instance.put_record(
@@ -108,17 +109,15 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
     render json: {id: @user_ml_model.model_id, status: status}
   end
 
-  private
-
-  def upload_to_s3(model_id, trained_model)
+  private def upload_to_s3(model_id, trained_model)
     AWS::S3.upload_to_bucket(S3_BUCKET, model_id, trained_model, no_random: true)
   end
 
-  def download_from_s3(model_id)
+  private def download_from_s3(model_id)
     AWS::S3.download_from_bucket(S3_BUCKET, model_id)
   end
 
-  def delete_from_s3(model_id)
+  private def delete_from_s3(model_id)
     AWS::S3.delete_from_bucket(S3_BUCKET, model_id)
   end
 end

@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import {LocalClassActionBlock} from './TwoColumnActionBlock';
 import {CourseBlocksHoc} from './CourseBlocks';
-import CourseBlocksStudentGradeBands from './CourseBlocksStudentGradeBands';
+import CourseBlocksWrapper from '@cdo/apps/templates/studioHomepages/CourseBlocksWrapper';
+import {StudentGradeBandCards} from '@cdo/apps/util/courseBlockCardsConstants';
+import i18n from '@cdo/locale';
 
 /**
  * This is the main content for the Courses page for a student using English,
@@ -11,8 +13,12 @@ class CoursesStudentEnglish extends Component {
   render() {
     return (
       <div>
-        <CourseBlocksStudentGradeBands
-          showContainer={true}
+        <CourseBlocksWrapper
+          cards={StudentGradeBandCards}
+          heading={i18n.courseBlocksGradeBandsContainerHeading()}
+          description={i18n.courseBlocksGradeBandsContainerDescription()}
+          link={'/home/#recent-courses'}
+          linkText={i18n.viewMyRecentCourses()}
           hideBottomMargin={false}
         />
 

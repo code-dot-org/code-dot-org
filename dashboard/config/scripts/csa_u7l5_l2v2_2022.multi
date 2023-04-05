@@ -14,15 +14,16 @@ Given the declaration `Calculator eval = new Evaluator();` and the class definit
 public class Calculator {
   ...
   public int compute( int value) {
-    value = super.compute(value - 1);
-    return value ++;
+    return value * 2;
   }
 }
 
 public class Evaluator extends Calculator {
  ...
   public int compute(int value) {
-    return value * 2;
+    value = super.compute(value - 1);
+    value++;
+    return value;
   }
 }
 ```

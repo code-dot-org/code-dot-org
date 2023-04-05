@@ -70,12 +70,6 @@ gem 'rack-cache'
 
 group :development, :test do
   gem 'rerun'
-
-  # Ref: https://github.com/e2/ruby_dep/issues/24
-  # https://github.com/e2/ruby_dep/issues/25
-  # https://github.com/e2/ruby_dep/issues/30
-  gem 'ruby_dep', '~> 1.3.1'
-
   gem 'shotgun'
   gem 'thin'
   # Use debugger
@@ -117,7 +111,7 @@ group :development, :test do
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
-gem 'factory_girl_rails', group: [:development, :staging, :test, :adhoc]
+gem 'factory_bot_rails', '~> 4.11', group: [:development, :staging, :test, :adhoc]
 
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false
@@ -151,12 +145,10 @@ gem 'phantomjs', '~> 1.9.7.1'
 gem 'gemoji'
 
 # Authentication and permissions.
-gem 'cancancan', '~> 3.1.0'
+gem 'cancancan', '~> 3.2.0'
 gem 'devise', '~> 4.7.0'
 gem 'devise_invitable', '~> 2.0.2'
 
-# Ref: https://github.com/instructure/ims-lti/pull/90
-gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
 # Ref: https://github.com/daynew/omniauth-clever/pull/1
 gem 'omniauth-clever', '~> 2.0.0', github: 'daynew/omniauth-clever', branch: 'clever-v2.1-upgrade'
 gem 'omniauth-facebook', '~> 4.0.0'
@@ -223,7 +215,6 @@ gem 'sequel'
 gem 'user_agent_parser'
 
 gem 'paranoia', '~> 2.5.0'
-gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
 gem 'active_model_serializers', '~> 0.10.13'
@@ -271,7 +262,7 @@ gem 'daemons'
 gem 'httparty'
 gem 'net-scp'
 gem 'net-ssh'
-gem 'oj'
+gem 'oj', '~> 3.10'
 
 gem 'rest-client', '~> 2.0.1'
 
@@ -338,9 +329,6 @@ gem 'scenic'
 gem 'scenic-mysql_adapter'
 
 gem 'colorize'
-
-gem 'gnista', github: 'wjordan/gnista', ref: 'embed', submodules: true
-gem 'hammerspace'
 
 gem 'require_all', require: false
 

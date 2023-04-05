@@ -7,6 +7,8 @@ import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import {connect} from 'react-redux';
 import {beginEditingSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 class InitialSectionCreationInterstitial extends Component {
   static propTypes = {
@@ -24,7 +26,13 @@ class InitialSectionCreationInterstitial extends Component {
 
   beginEditingSection = () => {
     this.setState({isOpen: false});
+    analyticsReporter.sendEvent(EVENTS.SECTION_SETUP_SIGN_IN_EVENT);
     this.props.beginEditingSection();
+  };
+
+  abandonEditingSection = () => {
+    this.setState({isOpen: false});
+    analyticsReporter.sendEvent(EVENTS.ABANDON_SECTION_SETUP_SIGN_IN_EVENT);
   };
 
   render() {
@@ -33,7 +41,7 @@ class InitialSectionCreationInterstitial extends Component {
     return (
       <BaseDialog
         useUpdatedStyles
-        handleClose={() => this.setState({isOpen: false})}
+        handleClose={this.abandonEditingSection}
         isOpen={isOpen}
       >
         <PadAndCenter>
@@ -41,17 +49,20 @@ class InitialSectionCreationInterstitial extends Component {
             <h1 style={styles.title}>
               {i18n.sectionSetupOnInitialAccountCreation()}
             </h1>
-            <hr style={styles.pageBreak} />
             <p style={styles.descriptionText}>{i18n.sectionSetupFirstStep()}</p>
-            <hr style={styles.pageBreak} />
             <div style={styles.footerButtons}>
               <Button
+                id="uitest-abandon-section-creation"
                 text={i18n.goToMyDashboard()}
-                color={Button.ButtonColor.gray}
-                onClick={() => this.setState({isOpen: false})}
+                style={styles.leftButton}
+                color={Button.ButtonColor.neutralDark}
+                onClick={this.abandonEditingSection}
               />
               <Button
+                id="uitest-accept-section-creation"
                 text={i18n.createClassSections()}
+                style={styles.rightButton}
+                color={Button.ButtonColor.brandSecondaryDefault}
                 onClick={this.beginEditingSection}
               />
             </div>
@@ -63,30 +74,34 @@ class InitialSectionCreationInterstitial extends Component {
 }
 
 const styles = {
-  pageBreak: {
-    borderTop: '3px solid grey'
-  },
   dialogCentering: {
     marginLeft: '20px',
     marginRight: '20px'
   },
   title: {
-    color: color.teal,
-    fontSize: '24px'
+    color: color.neutral_dark,
+    fontSize: '1.25em',
+    marginBottom: '0.5em',
+    fontFamily: "'Gotham 5r', sans-serif"
   },
   descriptionText: {
-    fontSize: '14px'
+    fontSize: '1em',
+    marginBottom: '1em',
+    color: color.neutral_dark
   },
   footerButtons: {
     display: 'flex',
     flexFlow: 'row',
     justifyContent: 'space-between'
+  },
+  leftButton: {
+    marginLeft: 0
+  },
+  rightButton: {
+    marginRight: 0
   }
 };
 
-export default connect(
-  undefined,
-  {
-    beginEditingSection
-  }
-)(InitialSectionCreationInterstitial);
+export default connect(undefined, {
+  beginEditingSection
+})(InitialSectionCreationInterstitial);

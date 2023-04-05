@@ -77,3 +77,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>完成了電腦科學聯繫活動和/或正在為你的課堂尋找更多選擇？ 請在這裡<a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">分享你的回饋</a>和更多課程的想法！</em>
+
+{{ visit_partial_event_logger }}

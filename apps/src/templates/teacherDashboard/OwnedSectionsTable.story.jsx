@@ -95,25 +95,21 @@ const serverSections = [
   }
 ];
 
-export default storybook => {
-  storybook
-    .storiesOf('OwnedSectionsTable (teacher dashboard)', module)
-    .addStoryTable([
-      {
-        name: 'section table',
-        story: () => {
-          const store = createStore(combineReducers({teacherSections}));
-          store.dispatch(setCourseOfferings(courseOfferings));
-          store.dispatch(setSections(serverSections));
-          return (
-            <Provider store={store}>
-              <OwnedSectionsTable
-                sectionIds={[11, 12, 20, 21, 307]}
-                onEdit={() => {}}
-              />
-            </Provider>
-          );
-        }
-      }
-    ]);
+export default {
+  name: 'OwnedSectionsTable (teacher dashboard)',
+  component: OwnedSectionsTable
+};
+
+export const SectionTable = () => {
+  const store = createStore(combineReducers({teacherSections}));
+  store.dispatch(setCourseOfferings(courseOfferings));
+  store.dispatch(setSections(serverSections));
+  return (
+    <Provider store={store}>
+      <OwnedSectionsTable
+        sectionIds={[11, 12, 20, 21, 307]}
+        onEdit={() => {}}
+      />
+    </Provider>
+  );
 };

@@ -1,10 +1,11 @@
 require_relative 'test_helper'
+require 'cdo/legacy_varnish_helpers'
 require 'cdo/rack/allowlist'
 
 class CookieAllowlistTest < Minitest::Test
   include Rack::Test::Methods
 
-  HEADERS = REMOVED_HEADERS.map {|x| x.split(':')[0]}.freeze
+  HEADERS = LegacyVarnishHelpers::REMOVED_HEADERS.map {|x| x.split(':')[0]}.freeze
   COOKIE_CONFIG = {
     behaviors: [
       {
@@ -22,7 +23,7 @@ class CookieAllowlistTest < Minitest::Test
   }.freeze
 
   def build_rack_mock_session
-    @session ||= Rack::MockSession.new(app)
+    @build_rack_mock_session ||= Rack::MockSession.new(app)
   end
 
   def app

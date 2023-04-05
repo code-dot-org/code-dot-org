@@ -16,7 +16,7 @@ var sass = require('sass');
 var TerserPlugin = require('terser-webpack-plugin');
 var {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   process.env.mocha_entry = grunt.option('entry') || '';
   if (process.env.mocha_entry) {
     if (
@@ -146,10 +146,6 @@ describe('entry tests', () => {
     }
   }
 
-  config.clean = {
-    all: ['build']
-  };
-
   config.copy = {
     src: {
       files: [
@@ -220,7 +216,7 @@ describe('entry tests', () => {
           src: ['*_*.js'],
           dest: 'build/locales',
           // e.g., ar_sa.js -> ar_sa/blockly_locale.js
-          rename: function(dest, src) {
+          rename: function (dest, src) {
             var outputPath = src.replace(
               /(.+_.+)\.js/g,
               '$1/blockly_locale.js'
@@ -317,12 +313,19 @@ describe('entry tests', () => {
           ],
           dest: 'build/package/js',
           // e.g. webpack-runtimewp0123456789aabbccddee.min.js --> webpack-runtime.min.js
-          rename: function(dest, src) {
+          rename: function (dest, src) {
             var outputFile = src.replace(/wp[0-9a-f]{20}/, '');
             return path.join(dest, outputFile);
           }
         }
       ]
+    }
+  };
+
+  config.ts = {
+    default: {
+      tsconfig: './tsconfig.json',
+      src: ['./src/**/*.ts', './src/**/*.tsx']
     }
   };
 
@@ -381,7 +384,7 @@ describe('entry tests', () => {
             'style/code-studio/foorm_editor.scss'
           ]
         ].concat(
-          appsToBuild.map(function(app) {
+          appsToBuild.map(function (app) {
             return [
               'build/package/css/' + app + '.css', // dst
               'style/' + app + '/style.scss' // src
@@ -401,7 +404,7 @@ describe('entry tests', () => {
       files: [
         {
           // e.g., build/js/i18n/bounce/ar_sa.json -> build/package/js/ar_sa/bounce_locale.js
-          rename: function(dest, src) {
+          rename: function (dest, src) {
             var outputPath = src.replace(
               /(build\/)?i18n\/(\w*)\/(\w+_\w+).json/g,
               '$3/$2_locale.js'
@@ -441,9 +444,9 @@ describe('entry tests', () => {
   // so that bundled files will be properly served.
   // this is the source of the following warning, which can be ignored:
   // "All files matched by "/tmp/_karma_webpack_425424/**/*" were excluded or matched by prior matchers."
+  const webpackOutputBasePath = path.join(os.tmpdir(), '_karma_webpack_');
   const webpackOutputPath =
-    path.join(os.tmpdir(), '_karma_webpack_') +
-    Math.floor(Math.random() * 1000000);
+    webpackOutputBasePath + Math.floor(Math.random() * 1000000);
   const webpackOutputPublicPath = '/webpack_output/';
 
   config.karma = {
@@ -561,8 +564,19 @@ describe('entry tests', () => {
     }
   };
 
+  config.clean = {
+    build: ['build'],
+    // The karma-webpack-backed unit tests generate several hundred megabytes
+    // worth of assets in /tmp/ on each run which will accumulate indefinitely
+    // on our persistent test server unless we clean them up.
+    unitTest: {
+      options: {force: true},
+      src: [webpackOutputBasePath + '*']
+    }
+  };
+
   var appsEntries = _.fromPairs(
-    appsToBuild.map(function(app) {
+    appsToBuild.map(function (app) {
       return [app, './src/sites/studio/pages/levels-' + app + '-main.js'];
     })
   );
@@ -578,6 +592,8 @@ describe('entry tests', () => {
     'courses/resources': './src/sites/studio/pages/courses/resources.js',
     'courses/code': './src/sites/studio/pages/courses/code.js',
     'courses/standards': './src/sites/studio/pages/courses/standards.js',
+    'curriculum_catalog/index':
+      './src/sites/studio/pages/curriculum_catalog/index.js',
     'data_docs/index': './src/sites/studio/pages/data_docs/index.js',
     'data_docs/show': './src/sites/studio/pages/data_docs/show.js',
     'incubator/index': './src/sites/studio/pages/incubator/index.js',
@@ -596,6 +612,11 @@ describe('entry tests', () => {
       './src/sites/studio/pages/programming_environments/show.js',
     'programming_expressions/show':
       './src/sites/studio/pages/programming_expressions/show.js',
+    'devise/sessions/new': './src/sites/studio/pages/devise/sessions/new.js',
+    'devise/registrations/_sign_up':
+      './src/sites/studio/pages/devise/registrations/_sign_up.js',
+    'devise/shared/_oauth_links':
+      './src/sites/studio/pages/devise/shared/_oauth_links.js',
     'devise/registrations/_finish_sign_up':
       './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
     'devise/registrations/edit':
@@ -606,6 +627,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/layouts/_parent_email_banner.js',
     'layouts/_race_interstitial':
       './src/sites/studio/pages/layouts/_race_interstitial.js',
+    'layouts/_section_creation_celebration_dialog':
+      './src/sites/studio/pages/layouts/_section_creation_celebration_dialog.js',
     'layouts/_school_info_confirmation_dialog':
       './src/sites/studio/pages/layouts/_school_info_confirmation_dialog.js',
     'layouts/_school_info_interstitial':
@@ -637,6 +660,7 @@ describe('entry tests', () => {
     'levels/_pixelation': './src/sites/studio/pages/levels/_pixelation.js',
     'levels/_standalone_video':
       './src/sites/studio/pages/levels/_standalone_video.js',
+    'levels/_summary': './src/sites/studio/pages/levels/_summary.js',
     'levels/_teacher_markdown':
       './src/sites/studio/pages/levels/_teacher_markdown.js',
     'levels/_teacher_panel':
@@ -667,7 +691,9 @@ describe('entry tests', () => {
       './src/sites/studio/pages/teacher_dashboard/parent_letter.js',
     'teacher_feedbacks/index':
       './src/sites/studio/pages/teacher_feedbacks/index.js',
-    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js'
+    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
+    'weblab_host/network_check':
+      './src/sites/studio/pages/weblab_host/network_check.js'
   };
 
   var internalEntries = {
@@ -703,6 +729,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/levels/editors/fields/_droplet.js',
     'levels/editors/fields/_grid':
       './src/sites/studio/pages/levels/editors/fields/_grid.js',
+    'levels/editors/fields/_poetry_fields':
+      './src/sites/studio/pages/levels/editors/fields/_poetry_fields.js',
     'levels/editors/fields/_preload_assets':
       './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
     'levels/editors/fields/_special_level_types':
@@ -739,6 +767,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/reference_guides/edit_all.js',
     'programming_expressions/index':
       './src/sites/studio/pages/programming_expressions/index.js',
+    'sections/new': './src/sites/studio/pages/sections/new.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
@@ -761,8 +790,6 @@ describe('entry tests', () => {
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses':
       './src/sites/code.org/pages/public/educate/curriculum/courses.js',
-    'code.org/public/educate/weblab-test':
-      './src/sites/code.org/pages/public/educate/weblab-test.js',
     'code.org/public/student/middle-high':
       './src/sites/code.org/pages/public/student/middle-high.js',
     'code.org/public/teacher-dashboard/index':
@@ -771,6 +798,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/yourschool.js',
     'code.org/public/yourschool/thankyou':
       './src/sites/code.org/pages/public/yourschool/thankyou.js',
+    'code.org/public/administrators':
+      './src/sites/code.org/pages/public/administrators.js',
     'code.org/views/regional_partner_search':
       './src/sites/code.org/pages/views/regional_partner_search.js',
     'code.org/views/share_privacy':
@@ -784,6 +813,8 @@ describe('entry tests', () => {
     'code.org/views/amazon_future_engineer_eligibility':
       './src/sites/code.org/pages/views/amazon_future_engineer_eligibility.js',
     'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
+    'code.org/views/analytics_event_log_helper':
+      './src/sites/code.org/pages/views/analytics_event_log_helper.js',
 
     // hourofcode.com
     'hourofcode.com/public/index':
@@ -806,8 +837,6 @@ describe('entry tests', () => {
 
     'pd/workshop_dashboard/index':
       './src/sites/studio/pages/pd/workshop_dashboard/index.js',
-    'pd/workshop_survey/new':
-      './src/sites/studio/pages/pd/workshop_survey/new.js',
     'pd/pre_workshop_survey/new':
       './src/sites/studio/pages/pd/pre_workshop_survey/new.js',
     'pd/teachercon_survey/new':
@@ -818,8 +847,6 @@ describe('entry tests', () => {
       './src/sites/studio/pages/pd/application/teacher_application/new.js',
     'pd/application/principal_approval_application/new':
       './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
-    'pd/fit_weekend_registration/new':
-      './src/sites/studio/pages/pd/fit_weekend_registration/new.js',
     'pd/workshop_daily_survey/new_general_foorm':
       './src/sites/studio/pages/pd/workshop_daily_survey/new_general_foorm.js',
     'pd/workshop_enrollment/new':
@@ -860,13 +887,6 @@ describe('entry tests', () => {
     blockly: './src/sites/studio/pages/blockly.js',
     googleblockly: './src/sites/studio/pages/googleblockly.js',
 
-    // Build embedVideo.js in its own step (skipping factor-bundle) so that
-    // we don't have to include the large code-studio-common file in the
-    // embedded video page, keeping it fairly lightweight.
-    // (I wonder how much more we could slim it down by removing jQuery!)
-    // @see embed.html.haml
-    embedVideo: './src/sites/studio/pages/embedVideo.js',
-
     // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
     // in a bundle to minimize the amount of stuff we need when loading blocks
     // in an iframe.
@@ -878,9 +898,6 @@ describe('entry tests', () => {
 
     'applab-api': './src/applab/api-entry.js',
     'gamelab-api': './src/p5lab/gamelab/api-entry.js',
-
-    'census_reviewers/review_reported_inaccuracies':
-      './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
 
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact'
@@ -904,7 +921,7 @@ describe('entry tests', () => {
           sharedEntries,
           otherEntries
         ),
-        function(val) {
+        function (val) {
           return ['@babel/polyfill/noConflict', 'whatwg-fetch'].concat(val);
         }
       ),
@@ -1190,7 +1207,7 @@ describe('entry tests', () => {
   config.uglify = {
     lib: {
       files: _.fromPairs(
-        ['p5play/p5.play.js', 'p5play/p5.js'].map(function(src) {
+        ['p5play/p5.play.js', 'p5play/p5.js'].map(function (src) {
           return [
             'build/package/js/' + src.replace(/\.js$/, '.min.js'), // dst
             'build/package/js/' + src // src
@@ -1242,6 +1259,7 @@ describe('entry tests', () => {
     watch: {
       tasks: [
         'watch',
+        'ts',
         envConstants.HOT ? 'webpack-dev-server:watch' : 'webpack:watch'
       ],
       options: {
@@ -1266,10 +1284,10 @@ describe('entry tests', () => {
   });
 
   grunt.loadTasks('tasks');
-  grunt.registerTask('noop', function() {});
+  grunt.registerTask('noop', function () {});
 
   // Generate locale stub files in the build/locale/current folder
-  grunt.registerTask('locales', function() {
+  grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
     child_process.execSync('mkdir -p ' + current);
     appsToBuild
@@ -1279,7 +1297,7 @@ describe('entry tests', () => {
         'regionalPartnerSearch',
         'regionalPartnerMiniContact'
       )
-      .map(function(item) {
+      .map(function (item) {
         var localeType = item === 'common' ? 'locale' : 'appLocale';
         var localeString =
           '/*' +
@@ -1293,7 +1311,7 @@ describe('entry tests', () => {
   });
 
   // Checks the size of Droplet to ensure it's built with LANGUAGE=javascript
-  grunt.registerTask('checkDropletSize', function() {
+  grunt.registerTask('checkDropletSize', function () {
     var bytes = fs.statSync('lib/droplet/droplet-full.min.js').size;
     if (bytes > 500 * 1000) {
       grunt.warn(
@@ -1314,14 +1332,14 @@ describe('entry tests', () => {
     'ejs'
   ]);
 
-  grunt.registerTask('check-entry-points', function() {
+  grunt.registerTask('check-entry-points', function () {
     const done = this.async();
     checkEntryPoints(config.webpack.build, {verbose: true}).then(stats =>
       done()
     );
   });
 
-  grunt.registerTask('lint-entry-points', function() {
+  grunt.registerTask('lint-entry-points', function () {
     const done = this.async();
     checkEntryPoints(config.webpack.build).then(stats => {
       console.log(
@@ -1335,9 +1353,7 @@ describe('entry tests', () => {
       );
       if (stats.failed > 0) {
         grunt.warn(
-          `${
-            stats.failed
-          } entry points do not conform to naming conventions.\n` +
+          `${stats.failed} entry points do not conform to naming conventions.\n` +
             `Run grunt check-entry-points for details.\n`
         );
       }
@@ -1345,7 +1361,7 @@ describe('entry tests', () => {
     });
   });
 
-  grunt.registerTask('compile-firebase-rules', function() {
+  grunt.registerTask('compile-firebase-rules', function () {
     if (process.env.RACK_ENV === 'production') {
       throw new Error(
         'Cannot compile firebase security rules on production.\n' +
@@ -1399,7 +1415,8 @@ describe('entry tests', () => {
     'newer:messages',
     'exec:convertScssVars',
     'exec:generateSharedConstants',
-    'karma:unit'
+    'karma:unit',
+    'clean:unitTest'
   ]);
 
   grunt.registerTask('storybookTest', ['karma:storybook']);

@@ -77,3 +77,5 @@ Le nostre attività brevi rappresentano un modo rapido e interessante per creare
 {{ clearfix }}
 
 <em>Hai terminato un'attività del curriculum Informatica interdisciplinare e/o stai cercando altre risorse per la tua classe? <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">Condividi i tuoi commenti</a> ed eventuali idee per nuove lezioni!</em>
+
+{{ visit_partial_event_logger }}

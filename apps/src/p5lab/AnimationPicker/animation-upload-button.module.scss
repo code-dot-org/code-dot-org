@@ -1,0 +1,40 @@
+@import "color.scss";
+
+.modalButtonRow {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+
+.modalButton {
+  text-align: center;
+  padding: 5px 16px 5px 16px;
+  font-size: 14px;
+}
+
+.confirmButton {
+  background-color: $orange;
+  color: $white;
+}
+
+.cancelButton {
+  background-color: $lightest_gray;
+  color: $black;
+}
+
+.modalDetails {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.checkboxLabel {
+  input[type="checkbox"] {
+    margin: -2px 5px 0 5px;
+  }
+
+  margin: 2px 0;
+}
+
+.modalHeader {
+  margin: 10px 0 0 0;
+}

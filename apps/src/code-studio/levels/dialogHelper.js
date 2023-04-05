@@ -44,7 +44,7 @@ export function showDialog(component, callback, onHidden) {
   // Clicking the okay button in the dialog box dismisses it, and calls the callback.
   $(content)
     .find('#ok-button')
-    .click(function() {
+    .click(function () {
       dialog.hide();
       if (callback) {
         callback();
@@ -54,7 +54,7 @@ export function showDialog(component, callback, onHidden) {
   // Clicking the cancel button in the dialog box dismisses it.
   $(content)
     .find('#cancel-button')
-    .click(function() {
+    .click(function () {
       dialog.hide();
     });
 
@@ -141,8 +141,9 @@ export function processResults(onComplete, beforeHook) {
       pass: result,
       testResult: testResult,
       submitted: submitted,
-      onComplete: function() {
-        var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
+      onComplete: function () {
+        var lastServerResponse =
+          window.dashboard.reporting.getLastServerResponse();
         var willRedirect = !!lastServerResponse.nextRedirect;
         if (onComplete) {
           onComplete(willRedirect);
@@ -174,7 +175,8 @@ export function processResults(onComplete, beforeHook) {
         } else if (lastServerResponse.nextRedirect) {
           if (appOptions.dialog.shouldShowDialog) {
             showDialog(getSuccessDialog(appOptions), null, () => {
-              var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
+              var lastServerResponse =
+                window.dashboard.reporting.getLastServerResponse();
               if (lastServerResponse.nextRedirect) {
                 window.location.href = lastServerResponse.nextRedirect;
               }

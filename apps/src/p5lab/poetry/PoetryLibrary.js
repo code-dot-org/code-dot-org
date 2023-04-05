@@ -36,12 +36,13 @@ export default class PoetryLibrary extends CoreLibrary {
       },
       isVisible: true,
       textEffects: [],
-      // By default, start the poem animation when the program starts (frame 1)
+      // For any subtype besides poetry (time capsule or poetry hoc),
+      // start the poem animation when the program starts (frame 1)
       // The animation can be restarted with the animatePoem() block, which
       // updates this value.
       // This value is used as an offset when calculating which lines to show.
       animationStartFrame:
-        appOptions.level.standaloneAppName === 'poetry_hoc' ? 1 : null,
+        appOptions.level.standaloneAppName === 'poetry' ? null : 1,
       backgroundMusic: undefined
     };
     this.backgroundEffect = () => this.p5.background('white');

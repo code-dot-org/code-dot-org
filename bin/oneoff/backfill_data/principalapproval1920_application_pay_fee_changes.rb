@@ -11,9 +11,10 @@ ActiveRecord::Base.transaction do
     print '.'
     pay_fee = application.form_data_hash["payFee"]
 
-    if pay_fee == 'Yes, my school or teacher will be able to pay the full program fee.'
+    case pay_fee
+    when 'Yes, my school or teacher will be able to pay the full program fee.'
       new_pay_fee = 'Yes, my school will be able to pay the full program fee.'
-    elsif pay_fee == 'No, my school or teacher will not be able to pay the program fee. We would like to be considered for a scholarship.'
+    when 'No, my school or teacher will not be able to pay the program fee. We would like to be considered for a scholarship.'
       new_pay_fee = 'No, my school will not be able to pay the program fee. We would like to be considered for a scholarship.'
     else
       next

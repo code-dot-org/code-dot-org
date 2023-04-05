@@ -24,7 +24,7 @@ export default class OptionsSelectRow extends React.Component {
   handleChangeInternal = event => {
     const value = event.target.value;
     // Extract an array of text values, 1 per line
-    const optionList = value.split('\n').filter(function(val) {
+    const optionList = value.split('\n').filter(function (val) {
       return val !== '';
     });
     this.props.handleChange(optionList);

@@ -48,7 +48,7 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
 
     if (this.buttons_) {
       // Force buttons to a new row by adding blank elements if needed.
-      const numItems = this.menu_.menuItems_.length;
+      const numItems = this.menu_.menuItems.length;
       const numInLastRow = numItems % this.columns_;
       const numBlankToAdd = numInLastRow > 0 ? this.columns_ - numInLastRow : 0;
       for (let i = 0; i < numBlankToAdd; i++) {

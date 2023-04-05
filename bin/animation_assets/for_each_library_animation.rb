@@ -43,8 +43,8 @@ class AnimationIterator
     progress_bar.finish
 
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
-  rescue Aws::Errors::ServiceError => service_error
-    warn service_error.inspect
+  rescue Aws::Errors::ServiceError => exception
+    warn exception.inspect
     warn <<-EOS.unindent
 
       #{bold 'There was an error talking to S3.'}  Make sure you have credentials set using one of:

@@ -47,8 +47,7 @@ const lessonData = [
         kind: LevelKind.unplugged,
         icon: null,
         title: 'Unplugged Activity',
-        url:
-          'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/1',
+        url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/1',
         previous: false,
         is_concept_level: false,
         bonus: false,
@@ -63,8 +62,7 @@ const lessonData = [
         kind: LevelKind.assessment,
         icon: null,
         title: 1,
-        url:
-          'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/2',
+        url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/2',
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
@@ -78,8 +76,7 @@ const lessonData = [
         kind: LevelKind.assessment,
         icon: null,
         title: 2,
-        url:
-          'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/3',
+        url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/3',
         next: [2, 1],
         is_concept_level: false,
         bonus: true,
@@ -113,8 +110,7 @@ const lessonData = [
         kind: LevelKind.puzzle,
         icon: null,
         title: 1,
-        url:
-          'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/1',
+        url: 'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/1',
         previous: [1, 3],
         is_concept_level: false,
         bonus: false,
@@ -128,8 +124,7 @@ const lessonData = [
         kind: LevelKind.puzzle,
         icon: null,
         title: 2,
-        url:
-          'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/2',
+        url: 'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/2',
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
@@ -142,8 +137,7 @@ const lessonData = [
         kind: LevelKind.puzzle,
         icon: null,
         title: 3,
-        url:
-          'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/3',
+        url: 'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/3',
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
@@ -178,8 +172,7 @@ const lockableLessonData = [
         kind: LevelKind.unplugged,
         icon: null,
         title: 'Unplugged Activity',
-        url:
-          'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/1',
+        url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/1',
         previous: false,
         is_concept_level: false,
         bonus: false,
@@ -277,7 +270,7 @@ describe('progressReduxTest', () => {
       // not perfect
       const state = {
         levelResults: {
-          '341': TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
+          341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
         },
         lessons: [
           {
@@ -294,7 +287,7 @@ describe('progressReduxTest', () => {
       };
 
       // update progress to perfect
-      const action = mergeResults({'341': TestResults.ALL_PASS});
+      const action = mergeResults({341: TestResults.ALL_PASS});
       const nextState = reducer(state, action);
       assert.equal(nextState.levelResults['341'], TestResults.ALL_PASS);
     });
@@ -304,7 +297,7 @@ describe('progressReduxTest', () => {
       // perfect
       const state = {
         levelResults: {
-          '339': TestResults.ALL_PASS
+          339: TestResults.ALL_PASS
         },
         lessons: [
           {
@@ -480,7 +473,7 @@ describe('progressReduxTest', () => {
       // with some progress, and 1 lesson of peer reviews
       const state = {
         levelResults: {
-          '341': TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
+          341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
         },
         lessons: [lessonData[1]],
         peerReviewLessonInfo: peerReviewLessonInfo
@@ -562,9 +555,9 @@ describe('progressReduxTest', () => {
       // merge some progress so that we have statuses
       const action = mergeResults({
         // lesson 2 level 2 is pass
-        '339': TestResults.ALL_PASS,
+        339: TestResults.ALL_PASS,
         // lesson 2 level 3 is incomplete
-        '341': TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
+        341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
       });
       const state = reducer(initializedState, action);
 
@@ -573,8 +566,7 @@ describe('progressReduxTest', () => {
           {
             id: '2106',
             status: 'not_tried',
-            url:
-              'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/1',
+            url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/1',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -595,8 +587,7 @@ describe('progressReduxTest', () => {
           {
             id: '323',
             status: 'not_tried',
-            url:
-              'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/2',
+            url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/2',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -617,8 +608,7 @@ describe('progressReduxTest', () => {
           {
             id: '322',
             status: 'not_tried',
-            url:
-              'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/3',
+            url: 'http://localhost-studio.code.org:3000/s/course3/lessons/1/levels/3',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -641,8 +631,7 @@ describe('progressReduxTest', () => {
           {
             id: '330',
             status: 'not_tried',
-            url:
-              'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/1',
+            url: 'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/1',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -663,8 +652,7 @@ describe('progressReduxTest', () => {
           {
             id: '339',
             status: 'perfect',
-            url:
-              'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/2',
+            url: 'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/2',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -685,8 +673,7 @@ describe('progressReduxTest', () => {
           {
             id: '341',
             status: 'attempted',
-            url:
-              'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/3',
+            url: 'http://localhost-studio.code.org:3000/s/course3/lessons/2/levels/3',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -1264,7 +1251,7 @@ describe('progressReduxTest', () => {
     it('returns false if the level was not perfected', () => {
       const state = {
         levelResults: {
-          '1': TestResults.MINIMUM_PASS_RESULT
+          1: TestResults.MINIMUM_PASS_RESULT
         }
       };
       assert.isFalse(isPerfect(state, levelId));
@@ -1273,7 +1260,7 @@ describe('progressReduxTest', () => {
     it('returns true if the level was perfected', () => {
       const state = {
         levelResults: {
-          '1': TestResults.ALL_PASS
+          1: TestResults.ALL_PASS
         }
       };
       assert.isTrue(isPerfect(state, levelId));

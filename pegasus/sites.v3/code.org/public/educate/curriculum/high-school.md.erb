@@ -6,7 +6,7 @@ theme: responsive
 
 <link href="/css/afe-promo-box.css" rel="stylesheet">
 
-<%= view :professional_learning_marketing_banner, audience_text: 'you', link_address: '/educate/professional-learning/middle-high', button_label: 'Learn more' %>
+<%= view :professional_learning_marketing_banner, link_address: '/educate/professional-learning/middle-high', button_label: 'Learn more' %>
 
 [solid-block-header]
 
@@ -109,3 +109,5 @@ In addition to our courses, we have tools and resources that you can blend into 
 If you want to go even further with your students, or you're looking for other options, check out our [recommended third party resources](https://code.org/educate/curriculum/3rd-party) for additional courses in programming, game design, and more!
 
 <br>
+
+<%= view :analytics_event_log_helper, event_name: AnalyticsConstants::HIGH_SCHOOL_CURRICULUM_PAGE_VISITED_EVENT %>

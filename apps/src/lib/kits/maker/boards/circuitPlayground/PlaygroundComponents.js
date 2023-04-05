@@ -277,10 +277,10 @@ function initializeAccelerometer(board) {
     board,
     controller: PlaygroundIO.Accelerometer
   });
-  accelerometer.start = function() {
+  accelerometer.start = function () {
     accelerometer.io.sysexCommand([CP_COMMAND, CP_ACCEL_STREAM_ON]);
   };
-  accelerometer.getOrientation = function(orientationType) {
+  accelerometer.getOrientation = function (orientationType) {
     if (undefined === orientationType) {
       return [
         accelerometer.getOrientation('x'),
@@ -300,7 +300,7 @@ function initializeAccelerometer(board) {
     }
     return accelerometer[orientationType];
   };
-  accelerometer.getAcceleration = function(accelerationDirection) {
+  accelerometer.getAcceleration = function (accelerationDirection) {
     if (undefined === accelerationDirection) {
       return [
         accelerometer.getAcceleration('x'),

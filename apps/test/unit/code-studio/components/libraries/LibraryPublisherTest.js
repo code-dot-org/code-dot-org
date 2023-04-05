@@ -84,21 +84,15 @@ describe('LibraryPublisher', () => {
       );
 
       expect(wrapper.state().libraryName).to.equal(libraryName);
-      expect(
-        wrapper
-          .find('input')
-          .first()
-          .props().value
-      ).to.equal(libraryName);
+      expect(wrapper.find('input').first().props().value).to.equal(libraryName);
     });
 
     it('filters invalid functions from selectedFunctions', () => {
-      libraryDetails.sourceFunctionList = libraryDetails.sourceFunctionList.concat(
-        [
+      libraryDetails.sourceFunctionList =
+        libraryDetails.sourceFunctionList.concat([
           {functionName: 'invalidFunc', comment: ''},
           {functionName: 'validFunc', comment: 'hey'}
-        ]
-      );
+        ]);
       libraryDetails.selectedFunctions = {
         invalidFunc: true,
         validFunc: true
@@ -125,12 +119,11 @@ describe('LibraryPublisher', () => {
     });
 
     it('disables checkbox for functions with duplicate names', () => {
-      libraryDetails.sourceFunctionList = libraryDetails.sourceFunctionList.concat(
-        [
+      libraryDetails.sourceFunctionList =
+        libraryDetails.sourceFunctionList.concat([
           {functionName: 'duplicate', comment: 'first dup!'},
           {functionName: 'duplicate', comment: 'another dup!'}
-        ]
-      );
+        ]);
       let wrapper = shallow(
         <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
       );

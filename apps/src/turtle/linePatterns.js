@@ -1,4 +1,4 @@
-exports.load = function(assetUrl) {
+exports.load = function (assetUrl) {
   return {
     patternDefault: assetUrl('media/common_images/defaultline-menuicon.png'), // default first, then alphabetical
     brickLine: assetUrl('media/common_images/brick.png'),

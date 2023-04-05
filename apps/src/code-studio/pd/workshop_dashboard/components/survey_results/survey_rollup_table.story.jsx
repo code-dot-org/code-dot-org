@@ -5,8 +5,8 @@ import {COURSE_CSF} from '../../workshopConstants';
 
 const facilitator_rollups = {
   facilitators: {
-    '1': 'Facilitator Person 1',
-    '2': 'Facilitator Person 2'
+    1: 'Facilitator Person 1',
+    2: 'Facilitator Person 2'
   },
   questions: {
     facilitator_effectiveness_0: 'Demonstrated knowledge of the curriculum.',
@@ -75,8 +75,8 @@ const facilitator_rollups = {
 
 const workshop_rollups = {
   facilitators: {
-    '1': 'Facilitator Person 1',
-    '2': 'Facilitator Person 2'
+    1: 'Facilitator Person 1',
+    2: 'Facilitator Person 2'
   },
   questions: {
     overall_success_0:

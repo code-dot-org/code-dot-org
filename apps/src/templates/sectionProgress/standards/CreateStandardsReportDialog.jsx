@@ -79,4 +79,5 @@ const styles = {
   }
 };
 
-export const UnconnectedCreateStandardsReportDialog = CreateStandardsReportDialog;
+export const UnconnectedCreateStandardsReportDialog =
+  CreateStandardsReportDialog;

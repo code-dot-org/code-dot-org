@@ -11,8 +11,9 @@ import Match from '@cdo/apps/code-studio/levels/match';
 window.Match = Match;
 window.Multi = require('@cdo/apps/code-studio/levels/multi.js');
 window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch.js');
-var saveAnswers = require('@cdo/apps/code-studio/levels/saveAnswers.js')
-  .saveAnswers;
+var saveAnswers =
+  require('@cdo/apps/code-studio/levels/saveAnswers.js').saveAnswers;
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
 $(document).ready(() => {
   const levelData = getScriptData('levelData');
@@ -26,6 +27,8 @@ $(document).ready(() => {
       initData.last_attempt
     );
   }
+
+  reportTeacherReviewingStudentNonLabLevel({page: initData?.page});
 });
 
 function initLevelGroup(levelCount, currentPage, lastAttempt) {
@@ -121,7 +124,7 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
   function getAggregatedResults() {
     // Add any new results to the existing lastAttempt results.
     const levelIds = codeStudioLevels.getLevelIds();
-    levelIds.forEach(function(levelId) {
+    levelIds.forEach(function (levelId) {
       const subLevel = codeStudioLevels.getLevel(levelId);
       const currentAnswer = subLevel.getResult(true);
       const levelResult = replaceEmoji(currentAnswer.response.toString());
@@ -231,11 +234,11 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
     return source.replace(new RegExp(range, 'g'), blankCharacter);
   }
 
-  $('.nextPageButton').click(function(event) {
+  $('.nextPageButton').click(function (event) {
     gotoPage(currentPage + 1);
   });
 
-  $('.previousPageButton').click(function(event) {
+  $('.previousPageButton').click(function (event) {
     gotoPage(currentPage - 1);
   });
 }

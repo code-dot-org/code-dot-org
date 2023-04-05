@@ -1,5 +1,6 @@
 - SignUpTracking.log_load_sign_up session
 %link{href: "/shared/css/phase1-design-system.css", rel: "stylesheet"}
+%script{src: webpack_asset_path('js/devise/registrations/_sign_up.js')}
 
 #signup
   .row
@@ -58,7 +59,7 @@
         / Submit
         .row
           .span8
-            %button.submit= t('signup_form.submit')
+            %button.submit{:id => 'signup_form_submit'}= t('signup_form.submit')
 
   / More information for students about email storage.
   .row

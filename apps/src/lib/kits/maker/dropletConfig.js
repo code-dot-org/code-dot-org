@@ -13,6 +13,7 @@ import {
 import {
   MB_BUTTON_VARS,
   MB_SENSOR_VARS,
+  MB_ACCELEROMETER_VAR,
   MB_COMPONENT_EVENTS
 } from './boards/microBit/MicroBitConstants';
 
@@ -47,11 +48,7 @@ function getBoardEventDropdownForParam(firstParam, componentEvents) {
   const wrapInQuotes = e => `"${e}"`;
   const idealOptions = componentEvents[firstParam];
   if (Array.isArray(idealOptions)) {
-    return _.chain(idealOptions)
-      .sort()
-      .sortedUniq()
-      .map(wrapInQuotes)
-      .value();
+    return _.chain(idealOptions).sort().sortedUniq().map(wrapInQuotes).value();
   }
 
   // If we can't find an ideal subset, use all possible
@@ -75,36 +72,51 @@ function createMakerPinProps(defaultParam) {
   };
 }
 
-// LED-related blocks that we'll reuse in multiple categories
-function sharedLedBlocks({category, blockPrefix, objectDropdown}) {
+/**
+ * Color LED-related blocks that we'll reuse in multiple categories
+ *
+ * Note: in order to differentiate blocks between different categories, we can prepend
+ * the blockPrefix to the func name directly, as blocks with the same func name are
+ * considered the same block. However, in order to not break existing levels, we also
+ * temporarily need to support versions of these blocks without the blockPrefix prepended
+ * directly. We can use the {@param includePrefixInFunc} flag to support both these versions.
+ * Once we've stopped using the old versions of these blocks (without the prefix directly in
+ * the func name), we can remove this flag.
+ */
+function sharedColorLedBlocks({
+  category,
+  blockPrefix,
+  objectDropdown,
+  includePrefixInFunc
+}) {
   return [
     {
-      func: 'on',
-      blockPrefix,
+      func: `${includePrefixInFunc ? blockPrefix : ''}on`,
+      blockPrefix: includePrefixInFunc ? undefined : blockPrefix,
       category,
       tipPrefix: pixelType,
       modeOptionName: '*.on',
       objectDropdown
     },
     {
-      func: 'off',
-      blockPrefix,
+      func: `${includePrefixInFunc ? blockPrefix : ''}off`,
+      blockPrefix: includePrefixInFunc ? undefined : blockPrefix,
       category,
       tipPrefix: pixelType,
       modeOptionName: '*.off',
       objectDropdown
     },
     {
-      func: 'toggle',
-      blockPrefix,
+      func: `${includePrefixInFunc ? blockPrefix : ''}toggle`,
+      blockPrefix: includePrefixInFunc ? undefined : blockPrefix,
       category,
       tipPrefix: pixelType,
       modeOptionName: '*.toggle',
       objectDropdown
     },
     {
-      func: 'blink',
-      blockPrefix,
+      func: `${includePrefixInFunc ? blockPrefix : ''}blink`,
+      blockPrefix: includePrefixInFunc ? undefined : blockPrefix,
       category,
       paletteParams: ['interval'],
       params: ['100'],
@@ -113,8 +125,8 @@ function sharedLedBlocks({category, blockPrefix, objectDropdown}) {
       objectDropdown
     },
     {
-      func: 'pulse',
-      blockPrefix,
+      func: `${includePrefixInFunc ? blockPrefix : ''}pulse`,
+      blockPrefix: includePrefixInFunc ? undefined : blockPrefix,
       category,
       paletteParams: ['interval'],
       params: ['300'],
@@ -126,7 +138,7 @@ function sharedLedBlocks({category, blockPrefix, objectDropdown}) {
 }
 
 /**
- * Generic Johnny-Five / Firmata blocks
+ * Maker drawer blocks used by both Circuit Playground and Micro:Bit
  */
 export function getMakerBlocks(boardType) {
   let defaultPin = '"A6"';
@@ -195,9 +207,16 @@ export function getMakerBlocks(boardType) {
       docFunc: 'createLed'
     },
 
-    ...sharedLedBlocks({
+    ...sharedColorLedBlocks({
       category: MAKER_CATEGORY,
-      blockPrefix: emptySocketPrefix
+      blockPrefix: emptySocketPrefix,
+      includePrefixInFunc: true
+    }),
+
+    ...sharedColorLedBlocks({
+      category: MAKER_CATEGORY,
+      blockPrefix: emptySocketPrefix,
+      includePrefixInFunc: false
     }),
 
     {
@@ -227,7 +246,7 @@ const circuitPlaygroundBlocks = [
     allowFunctionDrop: {2: true},
     dropdown: {
       0: Object.keys(CP_COMPONENT_EVENTS),
-      1: function(editor) {
+      1: function (editor) {
         return getBoardEventDropdownForParam(
           getFirstParam('onBoardEvent', this.parent, editor),
           CP_COMPONENT_EVENTS
@@ -260,10 +279,18 @@ const circuitPlaygroundBlocks = [
 
   {func: 'colorLeds', category: CIRCUIT_CATEGORY, type: 'readonlyproperty'},
 
-  ...sharedLedBlocks({
+  ...sharedColorLedBlocks({
     category: CIRCUIT_CATEGORY,
     blockPrefix: colorLedBlockPrefix,
-    objectDropdown: {options: colorPixelVariables}
+    objectDropdown: {options: colorPixelVariables},
+    includePrefixInFunc: true
+  }),
+
+  ...sharedColorLedBlocks({
+    category: CIRCUIT_CATEGORY,
+    blockPrefix: colorLedBlockPrefix,
+    objectDropdown: {options: colorPixelVariables},
+    includePrefixInFunc: false
   }),
 
   {
@@ -449,7 +476,7 @@ const microBitBlocks = [
     allowFunctionDrop: {2: true},
     dropdown: {
       0: Object.keys(MB_COMPONENT_EVENTS),
-      1: function(editor) {
+      1: function (editor) {
         return getBoardEventDropdownForParam(
           getFirstParam('onBoardEvent', this.parent, editor),
           MB_COMPONENT_EVENTS
@@ -501,7 +528,7 @@ const microBitBlocks = [
     func: 'ledScreen.display',
     category: MICROBIT_CATEGORY,
     params: [
-      '[\n[1, 0, 1, 0, 1],\n[1, 0, 1, 0, 1],\n[1, 0, 1, 0, 1],\n[0, 1, 0, 1, 0],\n[1, 0, 1, 0, 1]\n]'
+      '[\n([1, 1, 1, 1, 1]),\n([1, 1, 1, 1, 1]),\n([1, 1, 1, 1, 1]),\n([1, 1, 1, 1, 1]),\n([1, 1, 1, 1, 1])\n]'
     ],
     paletteParams: ['boardArray']
   },
@@ -588,7 +615,11 @@ export let configMicrobit = {
     }
   },
   blocks: [...getMakerBlocks(MICROBIT_CATEGORY), ...microBitBlocks],
-  additionalPredefValues: [...MB_BUTTON_VARS, ...MB_SENSOR_VARS]
+  additionalPredefValues: [
+    ...MB_BUTTON_VARS,
+    ...MB_SENSOR_VARS,
+    MB_ACCELEROMETER_VAR
+  ]
 };
 
 export let configCircuitPlayground = {
