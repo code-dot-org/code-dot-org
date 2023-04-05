@@ -256,8 +256,9 @@ a:visited,
   &.neutralDark,
   &.brandSecondaryDefault {
     &.default {
-      padding-left: 16px;
-      padding-right: 16px;
+      padding: 0 16px;
+      //padding-left: 16px;
+      //padding-right: 16px;
       font-family: $gotham-bold;
     }
   }
@@ -265,8 +266,9 @@ a:visited,
   // Button sizes.
   &.default {
     height: $button-height-default;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 0 24px;
+    //padding-left: 24px;
+    //padding-right: 24px;
     line-height: 34px;
   }
 

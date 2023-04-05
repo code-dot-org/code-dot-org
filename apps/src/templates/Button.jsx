@@ -116,11 +116,11 @@ class Button extends React.Component {
     the button has an onClick() and no href. Such removal may require style
     updates for margin and boxShadow to match page styling.
     */
-    if (href) {
-      Tag = 'a';
-    } else {
-      buttonStyle = {boxShadow: 'none', ...style};
-    }
+    // if (href) {
+    //   Tag = 'a';
+    // } else {
+    buttonStyle = {boxShadow: 'none', ...style};
+    // }
 
     // if (__useDeprecatedTag) {
     //   Tag = href ? 'a' : 'div';
