@@ -455,7 +455,7 @@ module Pd::Application
       application = create :pd_teacher_application, form_data_hash: application_hash
       assert_empty application.emails
 
-      application.expects(:queue_email).with('accepted')
+      application.expects(:send_pd_application_email).with('accepted')
       application.update!(status: 'accepted')
     end
 
@@ -463,7 +463,7 @@ module Pd::Application
       application = create :pd_teacher_application
       assert_empty application.emails
 
-      application.expects(:queue_email).never
+      application.expects(:send_pd_application_email).never
       application.update!(status: 'accepted')
     end
 
@@ -472,7 +472,7 @@ module Pd::Application
       application = create :pd_teacher_application, form_data_hash: application_hash
       assert_empty application.emails
 
-      application.expects(:queue_email).never
+      application.expects(:send_pd_application_email).never
       application.update!(status: 'pending')
     end
 
@@ -845,7 +845,7 @@ module Pd::Application
       incomplete = "Incomplete - Admin email sent on Oct 8"
       Timecop.freeze Date.new(2020, 10, 8) do
         application.stubs(:deliver_email)
-        application.queue_email :admin_approval, deliver_now: true
+        application.send_pd_application_email :admin_approval, deliver_now: true
         assert_equal incomplete, application.reload.principal_approval_state
       end
 

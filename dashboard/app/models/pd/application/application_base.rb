@@ -134,7 +134,7 @@ module Pd::Application
     #   When true, send the email immediately.
     #   Otherwise, it will remain unsent in the queue until the next morning's cronjob.
     # @see Pd::Application::Email
-    def queue_email(email_type, deliver_now: false)
+    def send_pd_application_email(email_type, deliver_now: false)
       email = Email.new(
         application: self,
         application_status: status,
