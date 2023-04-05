@@ -58,28 +58,17 @@ describe('FoormLibraryEditorManager', () => {
   };
 
   it('keeps library question choice disabled and editor hidden on load', () => {
-    assert(
-      wrapper
-        .find(FoormEntityLoadButtons)
-        .at(1)
-        .prop('isDisabled')
-    );
+    assert(wrapper.find(FoormEntityLoadButtons).at(1).prop('isDisabled'));
 
     assert.equal(wrapper.find(FoormEntityEditor).length, 0);
   });
 
   it('enables library question choice and keeps editor hidden on library load', () => {
-    wrapper
-      .find(FoormEntityLoadButtons)
-      .at(0)
-      .prop('onSelect')(sampleExistingLibraryData);
-
-    assert(
-      wrapper
-        .find(FoormEntityLoadButtons)
-        .at(1)
-        .prop('isDisabled')
+    wrapper.find(FoormEntityLoadButtons).at(0).prop('onSelect')(
+      sampleExistingLibraryData
     );
+
+    assert(wrapper.find(FoormEntityLoadButtons).at(1).prop('isDisabled'));
 
     server.respond();
     // calls setFetchableLibraryQuestions which results in
@@ -91,10 +80,7 @@ describe('FoormLibraryEditorManager', () => {
     });
 
     assert.isFalse(
-      wrapper
-        .find(FoormEntityLoadButtons)
-        .at(1)
-        .prop('isDisabled')
+      wrapper.find(FoormEntityLoadButtons).at(1).prop('isDisabled')
     );
   });
 
@@ -107,20 +93,18 @@ describe('FoormLibraryEditorManager', () => {
 
     assert.equal(wrapper.find(FoormEntityEditor).length, 0);
 
-    wrapper
-      .find(FoormEntityLoadButtons)
-      .at(0)
-      .prop('onSelect')(sampleExistingLibraryData);
+    wrapper.find(FoormEntityLoadButtons).at(0).prop('onSelect')(
+      sampleExistingLibraryData
+    );
 
     server.respond();
     wrapper.update();
 
     assert.equal(wrapper.find(FoormEntityEditor).length, 0);
 
-    wrapper
-      .find(FoormEntityLoadButtons)
-      .at(1)
-      .prop('onSelect')(sampleExistingLibraryQuestionData);
+    wrapper.find(FoormEntityLoadButtons).at(1).prop('onSelect')(
+      sampleExistingLibraryQuestionData
+    );
 
     server.respond();
     wrapper.update();

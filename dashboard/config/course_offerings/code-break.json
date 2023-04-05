@@ -6,10 +6,10 @@
   "assignable": true,
   "curriculum_type": null,
   "marketing_initiative": null,
-  "grade_levels": null,
+  "grade_levels": "8,9,10,11,12",
   "header": null,
-  "image": null,
-  "cs_topic": null,
+  "image": "https://images.code.org/d0beca5b723e4c649225a6e38177e15f-Code Break.png",
+  "cs_topic": "programming",
   "school_subject": null,
-  "device_compatibility": null
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
 }

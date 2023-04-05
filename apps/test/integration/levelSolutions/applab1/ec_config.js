@@ -26,7 +26,7 @@ export default {
               id="label1">start html</label>
             </div>
           </div>`,
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         assert.equal(
           $('#divApplab label').text(),
           'start html',
@@ -65,7 +65,7 @@ export default {
               id="label1">level html</label>
             </div>
           </div>`,
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         assert.equal(
           $('#divApplab label').text(),
           'level html',
@@ -105,7 +105,7 @@ export default {
             </div>
           </div>`,
       embed: true,
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         assert.equal(
           $('#divApplab label').text(),
           'start html',
@@ -124,7 +124,7 @@ export default {
       description: 'start code visible when user code is absent',
       editCode: true,
       xml: "textLabel('id', 'start code');",
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 5, () => {
           assert.equal(
@@ -153,7 +153,7 @@ export default {
       editCode: true,
       xml: "textLabel('id', 'start code');",
       lastAttempt: "textLabel('id', 'user code');",
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 5, () => {
           assert.equal(
@@ -183,7 +183,7 @@ export default {
       xml: "textLabel('id', 'start code');",
       lastAttempt: "textLabel('id', 'user code');",
       embed: true,
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 5, () => {
           assert.equal(

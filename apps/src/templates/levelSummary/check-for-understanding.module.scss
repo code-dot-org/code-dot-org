@@ -76,11 +76,14 @@
   }
 
   .studentAnswer {
-    padding: 8px;
+    padding: 12px;
     margin-bottom: 16px;
     // TODO: Update to use #E6F6F8 once the phase-2 brand colors are in.
     background-color: $lightest_cyan;
-    display: block;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
 
     p {
       margin: 0;

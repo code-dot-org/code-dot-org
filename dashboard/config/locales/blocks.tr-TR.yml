@@ -2,8 +2,8 @@
 tr:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: ok tuşlarıyla KDGB (Kuzey-Doğu-Güney-Batı) yönünde hareket ettirmek
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: "{VAR} değişkeni için {A}{B}{C} seçenekleriyle {QUESTION} sorusunu kullanıcıya
           sor"
@@ -1077,6 +1077,8 @@ tr:
         text: hedeflerden kaçınmak
       gamelab_beginCollectingData:
         text: değeri {VALUE} olan {LABEL} etiketli {BREAK} verisi toplamaya başla
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{TARGET}'in {SPRITE} sekmeleri"
       gamelab_changePropBy:
@@ -1717,6 +1719,10 @@ tr:
         text: "{SPRITE} 'ın x koordinatı"
       gamelab_yLocationOf:
         text: "{SPRITE} 'ın y koordinatı "
+      KatiesBlocks_glideTo:
+        text: "{SPRITE}, {LOCATION} konumuna süzülür"
+      KatiesBlocks_tumbling:
+        text: karıştır
       Mikelab_addBehaviorSimple:
         text: hareket {SPRITE} Başlar {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2393,8 +2399,6 @@ tr:
         text: sola dön
       RyanLab_turnRight:
         text: sağa dön
-      SpriteLab2Beta_spriteSay:
-        text: hareketli nesne {SPRITE} {TEXT} 'i {SECONDS} saniye söyler
       Vector_createSpriteWith:
         text: "{STATEMENT} ı yapmak için hareketli nesne oluştur"
       Vector_log:
@@ -2509,6 +2513,19 @@ tr:
             '"quarantining"': hasta olduğunda karantinaya
             '"avoiding"': sosyal mesafeli
             '"none"': hala kalıyor
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): sağa dönme
+            new Behavior(spinning_left, []): sola dönme
+            new Behavior(fluttering, []): çırpınma
+            new Behavior(jittering, []): kararsızlık
+            new Behavior(wobbling, []): sallanma
+            new Behavior(wandering, []): gezinme
+            new Behavior(patrolling, []): kontrol sağlama
+      adaptations_startFollowing:
+        text: "{SPRITE} {TARGET}'i takip etmeye başlar"
       binary_drawBin:
         text: ikili {BIN} çizmek
       binary_drawBinScreen:
@@ -2670,7 +2687,3 @@ tr:
           sor
       storylab_setSubheading:
         text: "{SUBHEADING} alt başlığını ayarlayın"
-      validation_validatedBackground:
-        text: arka planı {IMG} olarak ayarlayın
-      validation_validatedSound:
-        text: " {SOUND} Sesini çal"

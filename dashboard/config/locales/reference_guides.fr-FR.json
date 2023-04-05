@@ -152,6 +152,12 @@
         "csd-2022/playing-notes": {
           "display_name": "Jouer des notes"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Le Processus de Résolution de Problèmes"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Le Processus de Résolution de Problèmes"
+        },
         "csd-2022/random-numbers": {
           "display_name": "Nombres aléatoires"
         },

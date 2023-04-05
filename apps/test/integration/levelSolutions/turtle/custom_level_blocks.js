@@ -9,11 +9,11 @@ module.exports = {
   tests: [
     {
       description: 'fractal snowflake',
-      delayLoadLevelDefinition: function() {
+      delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
           instant: true,
-          answer: testUtils.generateArtistAnswer(function(api) {
+          answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('fractal');
           })
         };
@@ -29,11 +29,11 @@ module.exports = {
 
     {
       description: 'flower snowflake',
-      delayLoadLevelDefinition: function() {
+      delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
           instant: true,
-          answer: testUtils.generateArtistAnswer(function(api) {
+          answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('flower');
           })
         };
@@ -47,11 +47,11 @@ module.exports = {
 
     {
       description: 'spiral snowflake',
-      delayLoadLevelDefinition: function() {
+      delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
           instant: true,
-          answer: testUtils.generateArtistAnswer(function(api) {
+          answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('spiral');
           })
         };
@@ -65,11 +65,11 @@ module.exports = {
 
     {
       description: 'line snowflake',
-      delayLoadLevelDefinition: function() {
+      delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
           instant: true,
-          answer: testUtils.generateArtistAnswer(function(api) {
+          answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('line');
           })
         };
@@ -83,11 +83,11 @@ module.exports = {
 
     {
       description: 'parallelogram snowflake',
-      delayLoadLevelDefinition: function() {
+      delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
           instant: true,
-          answer: testUtils.generateArtistAnswer(function(api) {
+          answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('parallelogram');
           })
         };
@@ -103,11 +103,11 @@ module.exports = {
 
     {
       description: 'square snowflake',
-      delayLoadLevelDefinition: function() {
+      delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
           instant: true,
-          answer: testUtils.generateArtistAnswer(function(api) {
+          answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('square');
           })
         };
@@ -123,7 +123,7 @@ module.exports = {
       // Freeplay level that just uses a bunch of our blocks to get us some
       // better code coverage
       description: 'other blocks',
-      delayLoadLevelDefinition: function() {
+      delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
           sliderSpeed: 1,
@@ -135,7 +135,7 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       },
-      runBeforeClick: function() {
+      runBeforeClick: function () {
         // This is a free-play level: click Finish when drawing is done.
         addEventListener('artistDrawingComplete', () =>
           $('#finishButton').click()

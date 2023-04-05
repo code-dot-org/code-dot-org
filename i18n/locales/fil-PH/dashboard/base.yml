@@ -19,7 +19,7 @@
 fil:
   errors:
     messages:
-      not_saved: 'Pakiwasto ang mga sumusunod na error:'
+      not_saved: 'Pakiwasto ang mga sumusunod na mga error:'
       too_young: 'May limitadong edad ito at hindi pwedeng ibigay sa nakababatang mga estudyante.'
       teacher_must_accept_terms: 'Ang content na ito ay may nakalagay na restrikyon sa edad at hindi available para sa mga mas batang mag-aaral. Pakisabihan ang iyong guro na tanggapin ang updated na Terms of Service para mabigyan ka ng access sa content na ito. Magagawa ito ng iyong guro sa pag-login sa Code Studio at pag-click sa "I-review ang updated terms" button malapit sa itaas ng Code Studio homepage.'
       pair_programmer: 'Ikaw ay kasalukuyang nakapair programming sa isang estudyante na walang access sa nilalaman na ito. Para ma-access ang nilalamang ito, ihinto ang pair programming at subukan ulit.'

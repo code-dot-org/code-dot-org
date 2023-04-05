@@ -4,6 +4,7 @@
     "func": "setPromptWithChoices",
     "inline": false,
     "blockText": "prompt user {QUESTION} for variable {VAR} with choices {A}{B}{C}",
+    "style": "default",
     "args": [
       {
         "name": "QUESTION",

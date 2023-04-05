@@ -375,6 +375,9 @@
         "express-2018/Functions: Songwriting": {
           "name": "Писане на песен"
         },
+        "express-2018/Functions in Artist": {
+          "name": "Функции в Художник"
+        },
         "express-2018/Events: The Big Event": {
           "name": "Голямото събитие"
         },
@@ -645,11 +648,35 @@
         "coursef-2017/Loops in Artist": {
           "name": "Цикли в Художник"
         },
+        "coursef-2017/Nested Loops in Bee/Zombie": {
+          "name": "Вложени Цикли в Пчела/Зомби"
+        },
         "coursef-2017/Algorithms: Tangrams": {
           "name": "Алгоритми: Танграми"
         },
+        "coursef-2017/The Power of Words": {
+          "name": "Цифров Гражданин: Силата на Думите"
+        },
+        "coursef-2017/Ice Age Play Lab": {
+          "name": "Събития в Ледена Епоха"
+        },
         "coursef-2017/Conditionals in Minecraft": {
           "name": "Условия в Minecraft"
+        },
+        "coursef-2017/Variables in Artist": {
+          "name": "Променливи в Художник"
+        },
+        "coursef-2017/Variables in Play Lab": {
+          "name": "Променливи в Play Lab"
+        },
+        "coursef-2017/For Loop Fun": {
+          "name": "Цикли За: Забава с Цикли За"
+        },
+        "coursef-2017/For Loops in Bee": {
+          "name": "Цикли За в Пчела"
+        },
+        "coursef-2017/For Loops in Artist": {
+          "name": "Цикли За в Художник"
         },
         "coursea-2017/Debugging: Unspotted Bugs": {
           "name": "Отстраняване на Грешки: Ненамерени Грешки"
@@ -696,6 +723,9 @@
         "coursee-2017/Nested Loops": {
           "name": "Вмъкнати цикли"
         },
+        "coursee-2017/Functions in Artist": {
+          "name": "Функции в Художник"
+        },
         "coursec-2017/Real-life Algorithms: Paper Planes": {
           "name": "Реални алгоритми: Хартиени самолети"
         },
@@ -737,6 +767,21 @@
         },
         "express-2017/Conditionals in Minecraft": {
           "name": "Условия в Minecraft"
+        },
+        "express-2017/Variables in Artist": {
+          "name": "Променливи в Художник"
+        },
+        "express-2017/Variables in Play Lab": {
+          "name": "Променливи в Play Lab"
+        },
+        "express-2017/For Loops: For Loop Fun": {
+          "name": "Цикли За: Забава с Цикли За"
+        },
+        "express-2017/For Loops in Bee": {
+          "name": "Цикли За в Пчела"
+        },
+        "express-2017/For Loops in Artist": {
+          "name": "Цикли За в Художник"
         },
         "csd3-2017/Shapes and Randomization": {
           "name": "Фигури и Рандомизация"

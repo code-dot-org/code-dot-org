@@ -24,8 +24,8 @@ describe('FirebaseStorage', () => {
     return getConfigRef()
       .set({
         limits: {
-          '15': 5,
-          '60': 10
+          15: 5,
+          60: 10
         },
         maxRecordSize: 100,
         maxPropertySize: 100,
@@ -1214,9 +1214,7 @@ describe('FirebaseStorage', () => {
         .child('storage/tables/mytable/records')
         .set(tableData);
 
-      getProjectDatabase()
-        .child('current_tables/mytable')
-        .set(true);
+      getProjectDatabase().child('current_tables/mytable').set(true);
 
       const expectedRecords = [
         {id: 1, name: 'alice', age: 7, male: false},

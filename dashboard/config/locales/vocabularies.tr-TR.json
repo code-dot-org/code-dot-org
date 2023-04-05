@@ -415,7 +415,8 @@
           "definition": "Bir görevi tamamlamak için adımların listesi."
         },
         "behavior/coursef/2022": {
-          "word": "Davranış"
+          "word": "Davranış",
+          "definition": "Sprite Lab\"da bir karakterin durması söylenene kadar sürekli olarak gerçekleştirdiği bir eylem."
         },
         "program/coursef/2022": {
           "word": "Program",
@@ -514,10 +515,20 @@
           "definition": "Tekrar bir şey yapmak."
         },
         "function/coursee/2022": {
-          "word": "Fonksiyon"
+          "word": "Fonksiyon",
+          "definition": "Tekrar tekrar kolaylıkla kullanabileceğiniz bir kod parçası."
+        },
+        "call_a_function/coursee/2022": {
+          "word": "Bir fonksiyon çağır",
+          "definition": "Bilgisayara fonksiyonda yazılan kodu çalıştırmasını söylemek için işlevin adını kullanma."
+        },
+        "declare_a_function/coursee/2022": {
+          "word": "Bir İşlev bildirin",
+          "definition": "Bir işlevi kodla doldurun ve işleve bir ad verin."
         },
         "condition/coursee/2022": {
-          "word": "Koşul"
+          "word": "Koşul",
+          "definition": "Bir programın doğru mu yanlış mı olduğunu kontrol ettiği bir ifade. Doğruysa, bir işlem yapılır. Aksi takdirde, eylem yoksayılır."
         },
         "conditionals/coursee/2022": {
           "word": "Koşullar",
@@ -820,11 +831,16 @@
           "definition": "Bilgisayarların komutları okuyabilmesi için komutları doğru sırada dizme."
         },
         "persistence/coursec/2022": {
-          "word": "Israr"
+          "word": "Israr",
+          "definition": "Vazgeçmek yok."
         },
         "programming/coursec/2022": {
           "word": "Programlama",
           "definition": "Bir program oluşturma sanatı."
+        },
+        "angle/coursec/2022": {
+          "word": "Açı",
+          "definition": "Bir şeklin iki tarafının bir araya geldiği yer, derece cinsinden ölçülür."
         },
         "loop/coursec/2022": {
           "word": "Döngü",
@@ -839,7 +855,12 @@
           "definition": "Bir şeylerin olmasına neden olan bir eylem."
         },
         "data/coursec/2022": {
-          "word": "Veri"
+          "word": "Veri",
+          "definition": "Bir bilgi koleksiyonu"
+        },
+        "graph/coursec/2022": {
+          "word": "Grafik",
+          "definition": "Verileri veya değerleri organize bir şekilde temsil eden bir resim veya diyagram"
         },
         "binary/coursec/2022": {
           "word": "İkili",

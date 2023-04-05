@@ -155,8 +155,8 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       let trashcanVisibility = 'hidden';
       let toolboxVisibility = 'visible';
       // Don't show the trashcan if the block is being dragged out of the toolbox.
-      const isDraggingFromToolbox = !!Blockly.mainBlockSpace?.currentGesture_
-        ?.flyout_;
+      const isDraggingFromToolbox =
+        !!Blockly.mainBlockSpace?.currentGesture_?.flyout_;
       if (!isDraggingFromToolbox && blocklyEvent.isStart) {
         trashcanVisibility = 'visible';
         toolboxVisibility = 'hidden';

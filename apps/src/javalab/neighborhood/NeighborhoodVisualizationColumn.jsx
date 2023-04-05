@@ -3,7 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PreviewPaneHeader from '../PreviewPaneHeader';
 import MazeVisualization from '@cdo/apps/maze/Visualization';
-import {toggleVisualizationCollapsed} from '../javalabRedux';
+import {toggleVisualizationCollapsed} from '@cdo/apps/javalab/redux/viewRedux';
 import {DisplayTheme} from '../DisplayTheme';
 
 const ICON_PATH = '/blockly/media/turtle/';
@@ -21,11 +21,8 @@ class NeighborhoodVisualizationColumn extends React.Component {
   };
 
   render() {
-    const {
-      displayTheme,
-      isCollapsed,
-      toggleVisualizationCollapsed
-    } = this.props;
+    const {displayTheme, isCollapsed, toggleVisualizationCollapsed} =
+      this.props;
     const {isFullscreen} = this.state;
 
     const fullIconPath =
@@ -92,8 +89,8 @@ const styles = {
 
 export default connect(
   state => ({
-    displayTheme: state.javalab.displayTheme,
-    isCollapsed: state.javalab.isVisualizationCollapsed
+    displayTheme: state.javalabView.displayTheme,
+    isCollapsed: state.javalabView.isVisualizationCollapsed
   }),
   dispatch => ({
     toggleVisualizationCollapsed() {

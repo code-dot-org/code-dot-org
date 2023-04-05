@@ -64,9 +64,7 @@ class VideosController < ApplicationController
     end
   end
 
-  private
-
-  def upload_to_s3
+  private def upload_to_s3
     raise 'Expected a video/mp4 (.mp4) file' unless video_params[:download].content_type == 'video/mp4'
 
     filename = File.basename(video_params[:download].original_filename).parameterize + '.mp4'
@@ -80,11 +78,11 @@ class VideosController < ApplicationController
   end
 
   # Use callbacks to share common setup or constraints between actions.
-  def set_video
+  private def set_video
     @video = Video.find(params[:id])
   end
 
-  def set_video_by_key
+  private def set_video_by_key
     key = params[:key]
     # Create a temporary video object from default attributes if an entry isn't found in the DB.
     @video = Video.current_locale.find_by_key(key) ||
@@ -96,11 +94,11 @@ class VideosController < ApplicationController
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def video_params
+  private def video_params
     params.require(:video).permit(:key, :youtube_code, :download, :locale)
   end
 
-  def i18n_params
+  private def i18n_params
     params.permit(:title)
   end
 
@@ -109,7 +107,7 @@ class VideosController < ApplicationController
     params[:video] &&= video_params
   end
 
-  def merge_and_write
+  private def merge_and_write
     if @video.locale == I18n.default_locale.to_s
       Video.merge_and_write_i18n({@video.key => i18n_params[:title]})
     end

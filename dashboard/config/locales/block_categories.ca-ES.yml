@@ -3,23 +3,39 @@ ca:
   data:
     block_categories:
       Actions: Accions
+      Advanced: Avançat
       Behaviors: Comportaments
+      'Behaviors ': 'Comportaments '
+      Boolean: Booleà
+      Brushes: Pinzells
       Category: Categoria
       Color: Color
+      Comment: Comentari
+      Comments: Comentaris
       Conditionals: Condicionals
       Dancers: Ballarins
+      Default: Per defecte
       Effects: Efectes
       Events: Esdeveniments
       Functions: Funcions
       'Functions ': 'Funcions '
+      Game/Score: Partida/Puntuació
+      Games/Score: Partides/Puntuació
       Groups: Grups
+      Input: Entrada
       Locations: Ubicacions
       Logic: Lògica
       Loops: Bucles
       Math: Matemàtiques
+      Number: Número
       Numbers: Números
+      Picker: Selector
+      Prebuilt: Preprogramat
       Properties: Propietats
+      Sprites: Sprites
+      String: Cadenes
       Text: Text
       Variables: Variables
       'Variables ': 'Variables '
+      'Variables  ': 'Variables  '
       World: Món

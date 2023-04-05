@@ -397,7 +397,8 @@
           "definition": "Una lista de pasos para completar una tarea."
         },
         "behavior/coursef/2022": {
-          "word": "Comportamiento"
+          "word": "Comportamiento",
+          "definition": "Una acción en el Laboratorio Sprite que un sprite realiza continuamente hasta que se le dice que se detenga."
         },
         "program/coursef/2022": {
           "word": "Programa",
@@ -496,10 +497,20 @@
           "definition": "hacer algo de nuevo."
         },
         "function/coursee/2022": {
-          "word": "Función"
+          "word": "Función",
+          "definition": "Un fragmento de código que puedes llamar una y otra vez."
+        },
+        "call_a_function/coursee/2022": {
+          "word": "Llamar a una Función",
+          "definition": "Utilizar el nombre de la función para indicar al ordenador que ejecute el código escrito en la función."
+        },
+        "declare_a_function/coursee/2022": {
+          "word": "Declarar una Función",
+          "definition": "Rellena una función con código y dale un nombre."
         },
         "condition/coursee/2022": {
-          "word": "Condición"
+          "word": "Condición",
+          "definition": "Una sentencia que un programa comprueba para ver si es verdadera o falsa. Si es verdadera, se realiza una acción. En caso contrario, se ignora la acción."
         },
         "conditionals/coursee/2022": {
           "word": "Condicionales",
@@ -801,11 +812,16 @@
           "definition": "poner los comandos en el orden correcto para que las computadoras puedan leerlos."
         },
         "persistence/coursec/2022": {
-          "word": "Perseverancia"
+          "word": "Perseverancia",
+          "definition": "No te rindas."
         },
         "programming/coursec/2022": {
           "word": "Programación",
           "definition": "el arte de crear un programa."
+        },
+        "angle/coursec/2022": {
+          "word": "Ángulo",
+          "definition": "Punto de encuentro de dos lados de una figura, medido en grados."
         },
         "loop/coursec/2022": {
           "word": "Bucle",
@@ -820,7 +836,12 @@
           "definition": "una acción que hace que algo suceda."
         },
         "data/coursec/2022": {
-          "word": "Datos"
+          "word": "Datos",
+          "definition": "Una recopilación de información"
+        },
+        "graph/coursec/2022": {
+          "word": "Gráfico",
+          "definition": "Una imagen o un diagrama que representa datos o valores de forma organizada."
         },
         "binary/coursec/2022": {
           "word": "Binario",

@@ -112,14 +112,8 @@ export default class AzureTextToSpeech {
    * const soundResponse = await soundPromise();
    */
   createSoundPromise = opts => () => {
-    const {
-      text,
-      gender,
-      locale,
-      authenticityToken,
-      onFailure,
-      onComplete
-    } = opts;
+    const {text, gender, locale, authenticityToken, onFailure, onComplete} =
+      opts;
     const id = this.cacheKey_(locale, gender, text);
     const cachedSound = this.getCachedSound_(locale, gender, text);
     const wrappedSetCachedSound = soundResponse => {

@@ -3,6 +3,7 @@
   "config": {
     "func": "randColor",
     "blockText": "random color",
-    "returnType": "Colour"
+    "returnType": "Colour",
+    "style": "colour_blocks"
   }
 }

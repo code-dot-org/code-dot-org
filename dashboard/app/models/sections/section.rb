@@ -537,9 +537,7 @@ class Section < ApplicationRecord
     self.code_review_expires_at = enable_code_review ? Time.now.utc + 90.days : nil
   end
 
-  private
-
-  def unused_random_code
+  private def unused_random_code
     CodeGeneration.random_unique_code length: 6, model: Section
   end
 
@@ -547,7 +545,7 @@ class Section < ApplicationRecord
   # from the section name.
   # We make a best-effort to make the name usable without the removed characters.
   # We can remove this once our database has utf8mb4 support everywhere.
-  def strip_emoji_from_name
+  private def strip_emoji_from_name
     # We don't want to fill in a default name if the caller intentionally tried to clear it.
     return if name.blank?
 

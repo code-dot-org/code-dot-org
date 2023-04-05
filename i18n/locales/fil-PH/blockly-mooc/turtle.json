@@ -38,6 +38,8 @@
   "drawATriangle": "gumuhit ng tatsulok",
   "drawUpperWave": "gumuhit ng upper wave",
   "drawLowerWave": "gumuhit ng lower wave",
+  "drawShape": "gumuhit ng hugis",
+  "drawShapeWithSideLength": "gumuhit ng hugis na may haba ng gilid",
   "drawSticker": "gumuhit ng sticker",
   "drawStickerWithSize": "gumuhit ng sticker na may sukat",
   "forward": "pasulong",
@@ -103,5 +105,6 @@
   "turtleVisibilityTooltip": "Ipakita o huwag ipakita ang artist.",
   "widthTooltip": "Pagbabago ng lapad ng lapis.",
   "withSize": "may sukat",
+  "withSideLength": "may haba ng gilid",
   "wrongColour": "Ang iyong larawan ay mali ang kulay. Para sa puzzle na ito ang kailangan ay %1."
 }

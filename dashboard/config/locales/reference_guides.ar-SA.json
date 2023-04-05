@@ -77,6 +77,12 @@
         "csd-2022/physical-input": {
           "display_name": "المدخلات المادية"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "عملية حل المشكلات"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "عملية حل المشكلات"
+        },
         "csd-2022/sprite-properties": {
           "display_name": "خصائص الكائنات"
         },

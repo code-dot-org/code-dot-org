@@ -122,18 +122,8 @@ describe('LessonEditor', () => {
       'purpose'
     ).to.be.true;
     expect(wrapper.find('Connect(ActivitiesEditor)').length).to.equal(1);
-    expect(
-      wrapper
-        .find('input')
-        .at(1)
-        .props().disabled
-    ).to.equal(false);
-    expect(
-      wrapper
-        .find('input')
-        .at(2)
-        .props().disabled
-    ).to.equal(false);
+    expect(wrapper.find('input').at(1).props().disabled).to.equal(false);
+    expect(wrapper.find('input').at(2).props().disabled).to.equal(false);
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(1);
     expect(wrapper.find('CollapsibleEditorSection').length).to.equal(12);
     expect(wrapper.find('ResourcesEditor').length).to.equal(1);
@@ -147,18 +137,8 @@ describe('LessonEditor', () => {
     let unitInfoCopy = _.cloneDeep(defaultProps.unitInfo);
     unitInfoCopy.allowMajorCurriculumChanges = false;
     const wrapper = createWrapper({unitInfo: unitInfoCopy});
-    expect(
-      wrapper
-        .find('input')
-        .at(1)
-        .props().disabled
-    ).to.equal(true);
-    expect(
-      wrapper
-        .find('input')
-        .at(2)
-        .props().disabled
-    ).to.equal(true);
+    expect(wrapper.find('input').at(1).props().disabled).to.equal(true);
+    expect(wrapper.find('input').at(2).props().disabled).to.equal(true);
   });
 
   it('renders lesson editor for lesson without lesson plan', () => {

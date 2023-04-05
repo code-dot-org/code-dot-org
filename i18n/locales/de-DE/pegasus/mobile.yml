@@ -378,6 +378,9 @@
   homepage_below_hero_announcement_link_text: "Mehr erfahren"
   homepage_higher_power_body: "Programmiere einen Tanz zu „Higher Power“ Coldplay, dann kannst du die Band vielleicht live erleben!"
   homepage_thebadguys_body: "Codiere ein Abenteuer mit Frau Tarantula, Herrn Wolf und den anderen Figuren aus dem Film **Die Gangster Gang**!"
+  homepage_csa_subhead: "Ein neuer Ansatz für"
+  homepage_csa_title: "AP® Informatik A"
+  homepage_csa_body: "Unterstützen Sie Schüler in unserem auf Chancengleichheit ausgerichteten Lehrplan mit kreativen Projekten, die mit der realen Welt in Verbindung stehen."
   contact_form_topic_student: "Ich bin ein Schüler"
   contact_form_topic_parent: "Ich bin ein Elternteil"
   contact_form_topic_teacher: "Ich bin Lehrer/Pädagoge"
@@ -1567,13 +1570,13 @@
   syncing_students: "Synchronisieren Ihrer Schüler"
   syncing_students_instructions: 'Wenn Ihr Code.org-Abschnitt mit Ihrer Liste der Schüler in Google Classroom veraltet ist, klicken Sie auf die Schaltfläche "Schüler aus Google Classroom synchronisieren" auf der Registerkarte "Schüler verwalten":'
   google_sign_in_instruct: 'Von dort sollten sie die Option "Anmelden mit Google-Konto" auswählen:'
-  hero_name: 'Minecraft: Hero’s Journey'
+  hero_name: 'Minecraft Helden Reise'
   applab-intro_name: App Labor Einführung
   applab_tile_title: "Einführung ins App-Labor (ab 13 Jahren)"
   applab_tile_subtitle: "Erstelle deine eigene App in JavaScript mit Blöcken. Oder nimm die Herausforderung an und erlerne textbasierte Programmation. (Nur Englisch)"
   applab_tile_start_tutorial: "Start"
   applab_tile_teacher_guide: "Lehrer-Leitfaden anzeigen"
-  aquatic_name: 'Minecraft: Voyage Aquatic'
+  aquatic_name: 'Minecraft: Aquatische Bedingungen Reise'
   account_sign_up_email_opt_in: "Dürfen wir dich per E-Mail über Neuigkeiten zu unseren Kursen, lokale Möglichkeiten oder andere Neuigkeiten zur Informatik informieren?"
   account_sign_up_child_accept_terms: "Ich bestätige, dass ich die Erlaubnis meines Erziehungsberechtigten habe, die Dienste von Code.org zu nutzen."
   hoc_overview_dance_title: "Tanzparty"
@@ -1809,6 +1812,8 @@
   ai_ibm_machine_learning_for_kids: 'IBM: Maschinelles Lernen für Kinder'
   ai_ecs: 'ECS: Künstliche Intelligenz (KI)'
   ai_ecs_description: "Eine neue alternative Lehrplaneinheit für das Curriculum Exploring Computer Science (ECS)."
+  ai_aiedu_intro: 'aiEDU: Einführung in die künstliche Intelligenz'
+  ai_aiedu_intro_description: "Einführung in KI ist ein kostenloser, innovativer, kulturell relevanter Lehrplan, in dem die Schüler konzeptionelles Wissen darüber entwickeln, was KI ist und wie sie in der realen Welt eingesetzt wird."
   ai_elements: "Elemente der KI"
   ai_elements_description: "Eine Reihe kostenloser Online-Kurse, die von Reaktor und der Universität Helsinki erstellt wurden."
   ai_cognimates: "Cognimate"
@@ -1835,5 +1840,8 @@
   try_it_yourself: "Versuche es selbst!"
   try_an_activity: "Aktivität"
   see_more_activities: "Weitere Aktivitäten ansehen"
+  hoc2022_nasa_webb_alt_text: "Abbildung des James-Webb-Teleskops der NASA"
   hoc2022_nasa_banner_heading: "Schließen Sie sich der NASA für einen speziellen Hour of Code-Beitrag über Computerwissenschaft im Weltraum an!"
   hoc2022_nasa_banner_description: "kPremiere am 5. Dezember um 10 Uhr ET auf dem YouTube-Kanal von NASA STEM."
+  hoc2022_nasa_banner_heading_posthoc: "Schauen Sie sich den speziellen Hour of Code-Beitrag der NASA über Informatik im Weltraum an!"
+  microsoft_logo_alt: "Microsoft-Logo"

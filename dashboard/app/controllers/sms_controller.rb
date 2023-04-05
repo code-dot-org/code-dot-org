@@ -19,14 +19,13 @@ class SmsController < ApplicationController
     end
   end
 
-  private
-
-  def send_sms_link(link, phone)
-    body = "Check this out on Code Studio: #{link} (reply STOP to stop receiving this)"
+  private def send_sms_link(link, phone)
+    decorated_link = link + '?sms=true'
+    body = "Check this out on Code Studio: #{decorated_link} (reply STOP to stop receiving this)"
     send_sms(body, phone)
   end
 
-  def send_sms(body, phone)
+  private def send_sms(body, phone)
     # If the Twilio WebService is unavailable or experiencing latency issues we can no-op this method to avoid
     # tie-ing up all puma worker threads waiting for the Twilio API to respond by switching a Gatekeeper flag.
     return head :ok unless Gatekeeper.allows('twilio', default: true)

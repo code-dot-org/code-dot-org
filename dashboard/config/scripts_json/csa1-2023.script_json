@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-10 18:44:42 UTC",
+    "serialized_at": "2023-03-31 18:04:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -156,9 +156,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "**How do I give instructions to an object in Java?**\n\nStudents have seen examples of programs where a `Painter` object is moving and painting in The Neighborhood. In this lesson, students explore some of the methods in the `Painter` class and learn the syntax for calling methods in Java. Students then practice calling methods to navigate in The Neighborhood.",
+        "overview": "**How do I give instructions to an object in Java?**\n\nStudents have seen examples of programs where a `Painter` object is moving and painting in The Neighborhood. In this lesson, students explore the `move()` and `turnLeft()` methods in the `Painter` class and learn the syntax for calling methods in Java. Students then practice calling methods to navigate in The Neighborhood.",
         "preparation": "* Preview the *Calling Methods* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-lesson-1-welcome-to-csa/36415/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**How do I give instructions to an object in Java?**\n\nYou have seen examples of programs where a `Painter` object is moving and painting in The Neighborhood. In this lesson, you explore some of the methods in the `Painter` class and learn the syntax for calling methods in Java. You then practice calling methods to navigate in The Neighborhood."
+        "student_overview": "**How do I give instructions to an object in Java?**\n\nYou have seen examples of programs where a `Painter` object is moving and painting in The Neighborhood. In this lesson, you explore the `move()` and `turnLeft()` methods in the `Painter` class and learn the syntax for calling methods in Java. You then practice calling methods to navigate in The Neighborhood."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -355,9 +355,9 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "overview": "**How will I use what I know about classes and objects to answer a Free Response Question?**\n\nStudents are introduced to AP CSA Free Response Questions (FRQs) and practice decomposition and problem-solving skills to develop solutions to a mock FRQ. Students use annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
-        "preparation": "* Print the SpiralPainter FRQ Stations resource\n* Cut out the manipulatives in the SpiralPainter FRQ Stations resource\n* Create stations around the classroom as indicated on the SpiralPainter FRQ Stations resource\n* (Optional) Gather a blue, orange, and pink colored pencil or marker for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-frq-practice/36399/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**How will I use what I know about classes and objects to answer a Free Response Question?**\n\nYou are asked to develop solutions to Free Response Questions (FRQs) on the AP CSA Exam. You learn about the structure of an FRQ and practice decomposition and problem-solving skills to develop solutions to a mock FRQ. You use annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
+        "overview": "**How will I use what I know about classes, objects, and methods to answer a Free Response Question?**\n\nStudents are introduced to AP CSA Free Response Questions (FRQs) and practice decomposition and problem-solving skills to develop solutions to a mock FRQ. Students use annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
+        "preparation": "* Print the SpiralPainter FRQ Stations resource\n* Cut out the manipulatives in the SpiralPainter FRQ Stations resource *or* have students make a copy of the SpiralPainter FRQ Digital Manipulatives\n* Create stations around the classroom as indicated on the SpiralPainter FRQ Stations resource\n* (Optional) Gather a blue, orange, and pink colored pencil or marker for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-frq-practice/36399/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How will I use what I know about classes, objects, and methods to answer a Free Response Question?**\n\nYou are asked to develop solutions to Free Response Questions (FRQs) on the AP CSA Exam. You learn about the structure of an FRQ and practice decomposition and problem-solving skills to develop solutions to a mock FRQ. You use annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
       },
       "seeding_key": {
         "lesson.key": "lesson-20",
@@ -2131,7 +2131,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Recall the houses warmup activity and the definition of a class. Guide students to make the connection between blueprints being used to build multiple houses, so classes can be used to create multiple objects."
+            "markdown": "Recall the houses warmup activity from the previous lesson and the definition of a class. Guide students to make the connection between blueprints being used to build multiple houses, so classes can be used to create multiple objects."
           }
         ]
       },
@@ -9020,6 +9020,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa1-2023/resources",
+      "key": "all_resources_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_1"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa1-2023/standards",
+      "key": "all_standards_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_1"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa1-2023/vocab",
+      "key": "all_vocabulary_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_1"
+      }
+    },
+    {
       "name": "Asphalt Art Project",
       "url": "https://docs.google.com/presentation/d/1ZRHKtN5vv3KLNis_RfXmur2yoCqQA5d7ncE7cU805Io/edit?usp=sharing",
       "key": "asphalt_art_project",
@@ -9450,6 +9483,18 @@
       }
     },
     {
+      "name": "SpiralPainter FRQ Digital Manipulatives",
+      "url": "https://docs.google.com/presentation/d/1Oktr6qjUvlZ0UYd8VxyLfl2SijsY8W8FjC5bTBfT1ME/edit?usp=sharing",
+      "key": "spiralpainter_frq_digital_manipulatives",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "spiralpainter_frq_digital_manipulatives"
+      }
+    },
+    {
       "name": "SpiralPainter FRQ Stations",
       "url": "https://docs.google.com/document/d/1WuRHjdKKv9nA-CqfgyxyRa4ppKn8FXg2dKk6EKpcOZM/edit?usp=sharing",
       "key": "spiralpainter_frq_stations",
@@ -9701,6 +9746,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_1_guide"
+      }
+    },
+    {
+      "name": "Unit 1 Overview",
+      "url": "https://docs.google.com/document/d/12Bv7iyFuRhcjmbra20xxxXcPh8OJ69OfDT2nCIBIVJU/edit?usp=share_link",
+      "key": "unit_1_overview",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_overview"
       }
     },
     {
@@ -10167,6 +10224,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-20",
+        "resource.key": "spiralpainter_frq_digital_manipulatives"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-20",
         "resource.key": "spiralpainter_frq_stations"
       }
     },
@@ -10424,7 +10487,42 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_1",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_1",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_1",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_1_guide",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_1_overview",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_1_study_guide",
+        "script.name": "csa1-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -11296,16 +11394,6 @@
       }
     },
     {
-      "key": "697140a0-91bb-4166-a779-7fb7b2298510",
-      "properties": {
-        "description": "Trace and validate the code of peers"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-20",
-        "objective.key": "697140a0-91bb-4166-a779-7fb7b2298510"
-      }
-    },
-    {
       "key": "6b7fa724-fd44-423c-9715-bc9e6d1f9b33",
       "properties": {
         "description": "Use the NOT ( `!` ) logical operator to execute specific blocks of code if a condition is not `true`"
@@ -11646,6 +11734,20 @@
         "lesson.key": "lesson-14",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.F.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.F.2"
       }
     },
     {

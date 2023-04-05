@@ -688,6 +688,7 @@ az:
         csa_nested_loops: "CSA: Nested Loops\nCSA: İç-içə Döngələr"
         csa_one_dimensional_arrays: "CSA: Bir Ölçülü (1D) Massivlər\nCSA: Bir Ölçülü (1D) Arrays"
         csa_polymorphism: 'CSA: Polimorfizm'
+        csd_sprite_properties: Sprite Xüsusiyyətləri
     callout:
       text:
         drag_blocks: '"Get" blokunu sürükləyib şıqqıltı ilə digər blokun aşağısına yapışdırın'

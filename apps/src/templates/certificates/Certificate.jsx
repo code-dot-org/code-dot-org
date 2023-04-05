@@ -21,7 +21,7 @@ import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
  */
 function reEncodeNonLatin1(data) {
   var encodedData = encodeURIComponent(data);
-  encodedData = encodedData.replace(/%([0-9A-F]{2})/g, function(match, p1) {
+  encodedData = encodedData.replace(/%([0-9A-F]{2})/g, function (match, p1) {
     return String.fromCharCode('0x' + p1);
   });
   return decodeURIComponent(encodedData);
