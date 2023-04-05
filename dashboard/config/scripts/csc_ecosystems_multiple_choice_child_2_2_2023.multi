@@ -7,3 +7,5 @@ wrong 'If there is too little algae, the coral gets sick. ', feedback: 'Incorrec
 
 
 
+
+allow_multiple_attempts false
