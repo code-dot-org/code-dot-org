@@ -68,6 +68,11 @@ module Cdo
     end
 
     class StackSecret < Secret
+      # This attribute is used by the Cdo::Secrets.required (and require!) methods to determine which AWS Secret to get.
+      def key
+        stack_specific_secret_path
+      end
+
       # Extend the default lookup functionality to support checking for
       # stack-specific secrets, defaulting to the original functionality if
       # none are found.
