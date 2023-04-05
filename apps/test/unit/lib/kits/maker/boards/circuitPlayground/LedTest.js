@@ -2,7 +2,7 @@
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import five from '@code-dot-org/johnny-five';
-import {makeStubBoard} from '../makeStubBoard';
+import {CPBoardStub} from '../../../../../../../src/lib/kits/maker/util/makeStubBoard';
 import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
 
 describe('Led', function () {
@@ -100,7 +100,7 @@ describe('Led', function () {
 function newTestLed() {
   return new Led({
     controller: makeStubController(),
-    board: makeStubBoard()
+    board: CPBoardStub()
   });
 }
 

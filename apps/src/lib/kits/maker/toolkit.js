@@ -5,8 +5,8 @@
 import {getStore} from '../../../redux';
 import trackEvent from '../../../util/trackEvent';
 import CircuitPlaygroundBoard from './boards/circuitPlayground/CircuitPlaygroundBoard';
-import FakeCPBoard from './boards/FakeCPBoard';
-import FakeMBBoard from './boards/FakeMBBoard';
+import VirtualCPBoard from './boards/VirtualCPBoard';
+import VirtualMBBoard from './boards/VirtualMBBoard';
 import * as commands from './commands';
 import dropletConfig, {
   configMicrobit,
@@ -33,7 +33,7 @@ import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 export {dropletConfig, configMicrobit, configCircuitPlayground, MakerError};
 
 /**
- * @type {CircuitPlaygroundBoard | FakeCPBoard || MicroBitBoard || FakeMBBoard} The current board controller, populated when
+ * @type {CircuitPlaygroundBoard | VirtualCPBoard | MicroBitBoard | VirtualMBBoard} The current board controller, populated when
  * connected, null when not connected.  There can be only one at any time.
  */
 let currentBoard = null;
@@ -74,9 +74,10 @@ export function connect({interpreter, onDisconnect}) {
     );
   }
 
-  const isFakeBoard =
-    currentBoard instanceof FakeCPBoard || currentBoard instanceof FakeMBBoard;
-  if (currentBoard && !isFakeBoard) {
+  const isVirtualBoard =
+    currentBoard instanceof VirtualCPBoard ||
+    currentBoard instanceof VirtualMBBoard;
+  if (currentBoard && !isVirtualBoard) {
     commands.injectBoardController(currentBoard);
     currentBoard.installOnInterpreter(interpreter);
     // When the board is reset, the components are disabled. Re-enable now.
@@ -162,7 +163,7 @@ function confirmSupportedBrowser() {
 }
 
 /**
- * Create a board controller attached to an available board (or Fake board, if
+ * Create a board controller attached to an available board (or Virtual board, if
  * appropriate).
  * @returns {Promise.<MakerBoard>}
  */
@@ -171,12 +172,12 @@ function getBoard() {
   const boardConstructor =
     makerBoardAPI === MB_API ? MicroBitBoard : CircuitPlaygroundBoard;
 
-  if (shouldRunWithFakeBoard()) {
+  if (shouldRunWithVirtualBoard()) {
     // Check which maker is being enabled
     if (makerBoardAPI === MB_API) {
-      return Promise.resolve(new FakeMBBoard());
+      return Promise.resolve(new VirtualMBBoard());
     } else {
-      return Promise.resolve(new FakeCPBoard());
+      return Promise.resolve(new VirtualCPBoard());
     }
   } else if (shouldUseWebSerial()) {
     return navigator.serial.getPorts().then(ports => {
@@ -203,8 +204,8 @@ function isConnecting() {
   return redux.isConnecting(getStore().getState());
 }
 
-function shouldRunWithFakeBoard() {
-  return redux.shouldRunWithFakeBoard(getStore().getState());
+function shouldRunWithVirtualBoard() {
+  return redux.shouldRunWithVirtualBoard(getStore().getState());
 }
 
 /**

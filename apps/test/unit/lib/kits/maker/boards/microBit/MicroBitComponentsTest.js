@@ -5,7 +5,7 @@ import {
   cleanupMicroBitComponents,
   enableMicroBitComponents
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitComponents';
-import {MBFirmataClientStub} from '../makeStubBoard';
+import {MBFirmataClientStub} from '../../../../../../../src/lib/kits/maker/util/makeStubBoard';
 import {EventEmitter} from 'events';
 import sinon from 'sinon';
 import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';

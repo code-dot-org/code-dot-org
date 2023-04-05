@@ -1,15 +1,15 @@
-/** @file Fake for running Maker apps without an attached MicroBit board. */
+/** @file For running Maker apps without an attached MicroBit board. */
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
-import {MBFirmataClientStub} from '../../../../../test/unit/lib/kits/maker/boards/makeStubBoard';
+import {MBFirmataClientStub} from '../util/makeStubBoard';
 
 /**
- * Fake MicroBit Board for running Maker Toolkit apps without a MicroBit board
+ * Virtual MicroBit Board for running Maker Toolkit apps without a MicroBit board
  * attached.
- * Attaches fake, no-op components to the interpreter.
+ * Attaches virtual, no-op components to the interpreter.
  * @extends EventEmitter
  * @implements MakerBoard
  */
-export default class FakeMBBoard extends EventEmitter {
+export default class VirtualMBBoard extends EventEmitter {
   constructor() {
     super();
     this.boardClient_ = new MBFirmataClientStub();
@@ -33,6 +33,10 @@ export default class FakeMBBoard extends EventEmitter {
 
   reset() {}
 
+  /**
+   * Create a serial port controller and open the serial port immediately.
+   * @return {SerialPort}
+   */
   openSerialPort() {}
 
   /**
@@ -43,15 +47,15 @@ export default class FakeMBBoard extends EventEmitter {
    */
   installOnInterpreter(jsInterpreter) {
     const constructors = {
-      MicroBitButton: FakeMicroBitButton,
-      LedScreen: FakeLedScreen,
-      Accelerometer: FakeAccelerometer,
-      MicroBitThermometer: FakeMicroBitThermometer,
-      Compass: FakeCompass,
-      LightSensor: FakeLightSensor,
-      ExternalButton: FakeExternalButton,
-      ExternalLed: FakeExternalLed,
-      CapacitiveTouchSensor: FakeCapacitiveTouchSensor
+      MicroBitButton: VirtualMicroBitButton,
+      LedScreen: VirtualLedScreen,
+      Accelerometer: VirtualAccelerometer,
+      MicroBitThermometer: VirtualMicroBitThermometer,
+      Compass: VirtualCompass,
+      LightSensor: VirtualLightSensor,
+      ExternalButton: VirtualExternalButton,
+      ExternalLed: VirtualExternalLed,
+      CapacitiveTouchSensor: VirtualCapacitiveTouchSensor
     };
 
     for (const constructorName in constructors) {
@@ -61,14 +65,14 @@ export default class FakeMBBoard extends EventEmitter {
     }
 
     const components = {
-      buttonA: new FakeMicroBitButton(),
-      buttonB: new FakeMicroBitButton(),
-      ledScreen: new FakeLedScreen(),
-      tempSensor: new FakeMicroBitThermometer(),
-      accelerometer: new FakeAccelerometer(),
-      lightSensor: new FakeLightSensor(),
-      compass: new FakeCompass(),
-      board: new FakeMBFirmataWrapper()
+      buttonA: new VirtualMicroBitButton(),
+      buttonB: new VirtualMicroBitButton(),
+      ledScreen: new VirtualLedScreen(),
+      tempSensor: new VirtualMicroBitThermometer(),
+      accelerometer: new VirtualAccelerometer(),
+      lightSensor: new VirtualLightSensor(),
+      compass: new VirtualCompass(),
+      board: new VirtualMBFirmataWrapper()
     };
 
     for (const componentName in components) {
@@ -118,22 +122,33 @@ export default class FakeMBBoard extends EventEmitter {
     return false;
   }
 
+  /**
+   * @param {number} pin
+   * @return {VirtualExternalLed}
+   */
   createLed(pin) {
-    return new FakeExternalLed();
+    return new VirtualExternalLed();
   }
 
+  /**
+   * @param {number} pin
+   * @return {VirtualExternalButton}
+   */
   createButton(pin) {
-    return new FakeExternalButton();
+    return new VirtualExternalButton();
   }
 
+  /**
+   * @return {VirtualExternalButton}
+   */
   createCapacitiveTouchSensor() {
-    return new FakeCapacitiveTouchSensor();
+    return new VirtualCapacitiveTouchSensor();
   }
 }
 
-class FakeComponent extends EventEmitter {}
+class VirtualComponent extends EventEmitter {}
 
-class FakeLedScreen extends FakeComponent {
+class VirtualLedScreen extends VirtualComponent {
   on() {}
   off() {}
   toggle() {}
@@ -143,7 +158,7 @@ class FakeLedScreen extends FakeComponent {
   scrollString() {}
 }
 
-class FakeLightSensor extends FakeComponent {
+class VirtualLightSensor extends VirtualComponent {
   constructor() {
     super();
     this.value = 0;
@@ -158,7 +173,7 @@ class FakeLightSensor extends FakeComponent {
   }
 }
 
-class FakeMicroBitThermometer extends FakeComponent {
+class VirtualMicroBitThermometer extends VirtualComponent {
   constructor() {
     super();
     this.F = 32;
@@ -166,7 +181,7 @@ class FakeMicroBitThermometer extends FakeComponent {
   }
 }
 
-class FakeAccelerometer extends FakeComponent {
+class VirtualAccelerometer extends VirtualComponent {
   start() {}
   getAcceleration() {
     return 0;
@@ -177,7 +192,7 @@ class FakeAccelerometer extends FakeComponent {
   }
 }
 
-class FakeMicroBitButton extends FakeComponent {
+class VirtualMicroBitButton extends VirtualComponent {
   constructor() {
     super();
     this.isPressed = false;
@@ -185,12 +200,12 @@ class FakeMicroBitButton extends FakeComponent {
   }
 }
 
-class FakeCompass extends FakeComponent {
+class VirtualCompass extends VirtualComponent {
   start() {}
   getHeading() {}
 }
 
-class FakeExternalLed extends FakeComponent {
+class VirtualExternalLed extends VirtualComponent {
   on() {}
   off() {}
   blink() {}
@@ -198,13 +213,13 @@ class FakeExternalLed extends FakeComponent {
   pulse() {}
 }
 
-class FakeExternalButton extends FakeMicroBitButton {}
+class VirtualExternalButton extends VirtualMicroBitButton {}
 
-class FakeCapacitiveTouchSensor extends FakeComponent {
+class VirtualCapacitiveTouchSensor extends VirtualComponent {
   constructor() {
     super();
     this.isPressed = false;
   }
 }
 
-class FakeMBFirmataWrapper {}
+class VirtualMBFirmataWrapper {}
