@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2018-05-03T16:39:58.000Z",
-  "level_num": "custom",
-  "user_id": 13,
   "properties": {
     "long_instructions": "Consider the following scenario:\r\n\r\n*In order to dampen the effect of a potential data breach or accidental release of records a health care company has decided to remove a lot of personally identifiable information in its health records, like names, phone numbers and so on.  In its place, along with all medical information, they plan to store ONLY the gender, age, and zip code of the patient.*\r\n\r\n**Give your opinion**: Is this health care company doing enough to protect the personal information of patients? If yes, explain why this is the best they can do. If no, explain what they should do instead.  (Limit your response to a few sentences).",
     "instructions_important": "false",
@@ -14,8 +10,13 @@
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 7464,
-    "name_suffix": "_2018"
+    "name_suffix": "_2018",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2018-05-03T16:39:58.000Z",
+  "user_id": 13,
   "published": true,
   "notes": ""
 }]]></config>

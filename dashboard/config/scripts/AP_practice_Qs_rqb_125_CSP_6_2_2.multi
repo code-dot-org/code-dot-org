@@ -21,3 +21,5 @@ Learning Objective: **6.2.2** and Essential Knowledge statements: **6.2.2E**
  (D) This is incorrect. Only the dropped packets are re-sent to the destination computer.
 
 MARKDOWN
+
+allow_multiple_attempts true
