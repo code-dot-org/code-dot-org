@@ -34,6 +34,7 @@ class PanelButtons extends Component {
     startSaveTrainedModel: PropTypes.func,
     dataToSave: PropTypes.object,
     saveStatus: PropTypes.string,
+    saveResponseData: PropTypes.object,
     isSaveComplete: PropTypes.func,
     shouldDisplaySaveStatus: PropTypes.func
   };
@@ -52,16 +53,38 @@ class PanelButtons extends Component {
     }
   };
 
-  localizedSaveMessage = (saveStatus) => {
-    return I18n.t(`saveStatus_${saveStatus}`)
+  localizedSaveMessage = saveStatus => {
+    return I18n.t(`saveStatus_${saveStatus}`);
+  };
+
+  saveResponseDataMessage = saveResponseData => {
+    // The list of known error types from share_filtering.rb.
+    const errorTypes = ["email", "address", "phone", "profanity"];
+
+    if (!saveResponseData) {
+      return undefined;
+    }
+
+    const index = errorTypes.indexOf(saveResponseData.type);
+    if (index !== -1) {
+      return `(${index})`;
+    } else {
+      return undefined;
+    }
   };
 
   render() {
-    const { panelButtons, saveStatus } = this.props;
+    const { panelButtons, saveStatus, saveResponseData } = this.props;
 
-    let loadSaveStatus= this.props.isSaveComplete(saveStatus)
-      ? this.localizedSaveMessage(saveStatus)
-      : ( <FontAwesomeIcon icon={faSpinner} />);
+    let loadSaveStatus = this.props.isSaveComplete(saveStatus) ? (
+      this.localizedSaveMessage(saveStatus)
+    ) : (
+      <FontAwesomeIcon icon={faSpinner} />
+    );
+
+    let loadSaveResponseData = this.props.isSaveComplete(saveStatus)
+      ? this.saveResponseDataMessage(saveResponseData)
+      : undefined;
 
     return (
       <div style={styles.navigationButtonsContainer}>
@@ -85,7 +108,14 @@ class PanelButtons extends Component {
 
         {this.props.shouldDisplaySaveStatus(saveStatus) &&
           this.props.currentPanel === "saveModel" && (
-            <span style={styles.modelSaveMessage}>{loadSaveStatus}</span>
+            <div style={styles.modelSaveMessage}>
+              {loadSaveStatus}
+              {loadSaveResponseData && (
+                <div style={styles.modelSaveResponseDataMessage}>
+                  {loadSaveResponseData}
+                </div>
+              )}
+            </div>
           )}
 
         {panelButtons.next && (
@@ -157,6 +187,7 @@ class App extends Component {
     startSaveTrainedModel: PropTypes.func,
     dataToSave: PropTypes.object,
     saveStatus: PropTypes.string,
+    saveResponseData: PropTypes.object,
     isSaveComplete: PropTypes.func,
     shouldDisplaySaveStatus: PropTypes.func
   };
@@ -170,7 +201,8 @@ class App extends Component {
       resultsPhase,
       dataToSave,
       startSaveTrainedModel,
-      saveStatus
+      saveStatus,
+      saveResponseData
     } = this.props;
 
     return (
@@ -251,6 +283,7 @@ class App extends Component {
           startSaveTrainedModel={startSaveTrainedModel}
           dataToSave={dataToSave}
           saveStatus={saveStatus}
+          saveResponseData={saveResponseData}
           isSaveComplete={isSaveComplete}
           shouldDisplaySaveStatus={shouldDisplaySaveStatus}
         />
@@ -265,7 +298,8 @@ export default connect(
     currentPanel: state.currentPanel,
     resultsPhase: state.resultsPhase,
     dataToSave: getTrainedModelDataToSave(state),
-    saveStatus: state.saveStatus
+    saveStatus: state.saveStatus,
+    saveResponseData: state.saveResponseData
   }),
   dispatch => ({
     setCurrentPanel(panel) {
@@ -276,6 +310,6 @@ export default connect(
     },
     shouldDisplaySaveStatus(state) {
       dispatch(shouldDisplaySaveStatus(state));
-    },
+    }
   })
 )(App);

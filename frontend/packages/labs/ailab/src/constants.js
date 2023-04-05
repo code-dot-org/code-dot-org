@@ -944,12 +944,19 @@ export const styles = {
   },
 
   modelSaveMessage: {
+    display: "inline-block",
     top: 15,
     zIndex: 1001,
     right: "calc(50% - 250px)",
     textAlign: "center",
     position: "absolute",
     width: 500
+  },
+
+  modelSaveResponseDataMessage: {
+    display: "inline-block",
+    opacity: 0.5,
+    padding: "0 5px"
   },
 
   navigationButtonsContainer: {

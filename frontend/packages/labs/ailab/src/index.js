@@ -98,11 +98,12 @@ const processMode = mode => {
 const startSaveTrainedModel = dataToSave => {
   store.dispatch(setSaveStatus("started"));
   saveTrainedModel(dataToSave, response => {
-    store.dispatch(setSaveStatus(response.status));
+    store.dispatch(setSaveStatus(response.status, response.data));
     if (response.status === "success") {
       store.dispatch(setCurrentPanel("modelSummary"));
     } else {
       store.dispatch(setCurrentPanel("saveModel"));
+      console.log("Save data", response.data);
     }
   });
 };
