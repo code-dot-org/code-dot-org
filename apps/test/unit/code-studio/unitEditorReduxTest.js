@@ -116,8 +116,10 @@ describe('unitEditorRedux reducer tests', () => {
   });
 
   it('add group', () => {
-    const nextState = reducer(initialState, addGroup(2, 'key', 'Display Name'))
-      .lessonGroups;
+    const nextState = reducer(
+      initialState,
+      addGroup(2, 'key', 'Display Name')
+    ).lessonGroups;
     assert.equal(nextState[nextState.length - 1].displayName, 'Display Name');
     assert.equal(nextState[nextState.length - 1].userFacing, true);
   });
@@ -145,45 +147,73 @@ describe('unitEditorRedux reducer tests', () => {
       initialState,
       addLesson(1, 'lesson-new', 'New Lesson 2')
     ).lessonGroups;
-    assert.deepEqual(nextState[0].lessons.map(s => s.name), [
-      'A',
-      'B',
-      'C',
-      'New Lesson 2'
-    ]);
+    assert.deepEqual(
+      nextState[0].lessons.map(s => s.name),
+      ['A', 'B', 'C', 'New Lesson 2']
+    );
   });
 
   describe('reorderLesson', () => {
     it('move lesson up within first lesson group', () => {
-      const nextState = reducer(initialState, reorderLesson(1, 3, 2))
-        .lessonGroups;
-      assert.deepEqual(nextState[0].lessons.map(l => l.key), ['a', 'c', 'b']);
+      const nextState = reducer(
+        initialState,
+        reorderLesson(1, 3, 2)
+      ).lessonGroups;
+      assert.deepEqual(
+        nextState[0].lessons.map(l => l.key),
+        ['a', 'c', 'b']
+      );
     });
     it('move lesson down within first lesson group', () => {
-      const nextState = reducer(initialState, reorderLesson(1, 1, 2))
-        .lessonGroups;
-      assert.deepEqual(nextState[0].lessons.map(l => l.key), ['b', 'a', 'c']);
+      const nextState = reducer(
+        initialState,
+        reorderLesson(1, 1, 2)
+      ).lessonGroups;
+      assert.deepEqual(
+        nextState[0].lessons.map(l => l.key),
+        ['b', 'a', 'c']
+      );
     });
     it('move lesson to same position within first lesson group', () => {
-      const nextState = reducer(initialState, reorderLesson(1, 2, 2))
-        .lessonGroups;
-      assert.deepEqual(nextState[0].lessons.map(l => l.key), ['a', 'b', 'c']);
+      const nextState = reducer(
+        initialState,
+        reorderLesson(1, 2, 2)
+      ).lessonGroups;
+      assert.deepEqual(
+        nextState[0].lessons.map(l => l.key),
+        ['a', 'b', 'c']
+      );
     });
 
     it('move lesson up within second lesson group', () => {
-      const nextState = reducer(initialState, reorderLesson(2, 3, 2))
-        .lessonGroups;
-      assert.deepEqual(nextState[1].lessons.map(l => l.key), ['d', 'f', 'e']);
+      const nextState = reducer(
+        initialState,
+        reorderLesson(2, 3, 2)
+      ).lessonGroups;
+      assert.deepEqual(
+        nextState[1].lessons.map(l => l.key),
+        ['d', 'f', 'e']
+      );
     });
     it('move lesson to same position within second lesson group', () => {
-      const nextState = reducer(initialState, reorderLesson(2, 2, 2))
-        .lessonGroups;
-      assert.deepEqual(nextState[1].lessons.map(l => l.key), ['d', 'e', 'f']);
+      const nextState = reducer(
+        initialState,
+        reorderLesson(2, 2, 2)
+      ).lessonGroups;
+      assert.deepEqual(
+        nextState[1].lessons.map(l => l.key),
+        ['d', 'e', 'f']
+      );
     });
     it('move lesson down within second lesson group', () => {
-      const nextState = reducer(initialState, reorderLesson(2, 1, 2))
-        .lessonGroups;
-      assert.deepEqual(nextState[1].lessons.map(l => l.key), ['e', 'd', 'f']);
+      const nextState = reducer(
+        initialState,
+        reorderLesson(2, 1, 2)
+      ).lessonGroups;
+      assert.deepEqual(
+        nextState[1].lessons.map(l => l.key),
+        ['e', 'd', 'f']
+      );
     });
   });
 
@@ -196,13 +226,19 @@ describe('unitEditorRedux reducer tests', () => {
           key: 'x',
           displayName: 'X',
           position: 1,
-          lessons: [{id: 101, position: 1}, {id: 102, position: 2}]
+          lessons: [
+            {id: 101, position: 1},
+            {id: 102, position: 2}
+          ]
         },
         {
           key: 'y',
           displayName: 'Y',
           position: 2,
-          lessons: [{id: 103, position: 1}, {id: 104, position: 2}]
+          lessons: [
+            {id: 103, position: 1},
+            {id: 104, position: 2}
+          ]
         }
       ];
       initialState.lessonGroups = initialLessonGroups;

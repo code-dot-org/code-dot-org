@@ -111,7 +111,7 @@ group :development, :test do
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
-gem 'factory_bot_rails', '~> 4.8.2', group: [:development, :staging, :test, :adhoc]
+gem 'factory_bot_rails', '~> 4.11', group: [:development, :staging, :test, :adhoc]
 
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false
@@ -215,7 +215,6 @@ gem 'sequel'
 gem 'user_agent_parser'
 
 gem 'paranoia', '~> 2.5.0'
-gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
 gem 'active_model_serializers', '~> 0.10.13'

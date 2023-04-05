@@ -34,7 +34,7 @@ function validateGeneratedEquation(
 ) {
   blockIndex = blockIndex || 0;
   // Clear existing blocks
-  Blockly.mainBlockSpace.getTopBlocks().forEach(function(b) {
+  Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) {
     // use b.blockSpace as an indicator for whether block has already
     // been disposed
     if (b.blockSpace) {
@@ -80,7 +80,7 @@ module.exports = {
       },
       // Run all validation in a single test to avoid the overhead of new node
       // processes
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         validateGeneratedEquation(
           assert,
           blockUtils.calcBlockXml('functional_plus', [1, 2]),

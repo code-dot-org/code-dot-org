@@ -35,9 +35,8 @@ export default function loadSpritelab(options) {
 
 function initializeOptionsAndSpritelab(spritelab, options) {
   // Bind helper that provides project metadata for gamelab autosave
-  options.getAnimationList = spritelab.getSerializedAnimationList.bind(
-    spritelab
-  );
+  options.getAnimationList =
+    spritelab.getSerializedAnimationList.bind(spritelab);
 
   spritelab.injectStudioApp(studioApp());
   appMain(spritelab, levels, options);

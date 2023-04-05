@@ -241,9 +241,7 @@ export default {
         assert.equal(
           String(debugOutput.textContent).startsWith('WARNING: Line: 6:'),
           true,
-          `log message contains warning with line number: ${
-            debugOutput.textContent
-          }`
+          `log message contains warning with line number: ${debugOutput.textContent}`
         );
         return true;
       },
@@ -261,12 +259,7 @@ export default {
       runBeforeClick(assert) {
         $('.droplet-palette-group-header:contains(Data)').click();
         const actualBlocks = $('.droplet-palette-canvas > g')
-          .map((i, el) =>
-            $(el)
-              .text()
-              .split('(')[0]
-              .replace(/\W/g, '')
-          )
+          .map((i, el) => $(el).text().split('(')[0].replace(/\W/g, ''))
           .toArray();
         const expectedBlocks = [
           'getColumn',

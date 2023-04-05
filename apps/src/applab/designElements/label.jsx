@@ -187,7 +187,7 @@ export default {
   EventTab: LabelEvents,
   themeValues: themeValues.label,
 
-  create: function() {
+  create: function () {
     const element = document.createElement('label');
     element.style.margin = '0px';
     element.style.lineHeight = '1';
@@ -207,7 +207,7 @@ export default {
     return element;
   },
 
-  onDeserialize: function(element) {
+  onDeserialize: function (element) {
     // Set background color style for older projects that didn't set it on create:
     if (!element.style.backgroundColor) {
       element.style.backgroundColor = themeValues.label.backgroundColor.classic;
@@ -223,7 +223,7 @@ export default {
     elementUtils.setDefaultFontFamilyStyle(element);
   },
 
-  getCurrentSize: function(element) {
+  getCurrentSize: function (element) {
     return {
       width: parseInt(element.style.width, 10),
       height: parseInt(element.style.height, 10)
@@ -234,7 +234,7 @@ export default {
    * @returns {{width: number, height: number}} Size that this element should be if it were fitted exactly. If there is
    * no text, then the best size is 15 x 15 so that the user has something to drag around.
    */
-  getBestSize: function(element) {
+  getBestSize: function (element) {
     // Start by assuming best fit is current size
     const size = this.getCurrentSize(element);
 
@@ -269,10 +269,8 @@ export default {
         })
         .appendTo($(document.body));
 
-      const {
-        horizontalPadding,
-        verticalPadding
-      } = elementUtils.calculatePadding(element.style.padding);
+      const {horizontalPadding, verticalPadding} =
+        elementUtils.calculatePadding(element.style.padding);
 
       if (!widthLocked) {
         // Truncate the width before it runs off the edge of the screen
@@ -300,7 +298,7 @@ export default {
     return size;
   },
 
-  resizeToFitText: function(element) {
+  resizeToFitText: function (element) {
     const size = this.getBestSize(element);
 
     // For center or right alignment, we should adjust the left side to effectively retain that alignment.
@@ -342,17 +340,15 @@ export default {
    * If several property changes happen together, they will share the same unique batchChangeId
    * parameter. Batched property changes occur as a result of theme changes.
    */
-  beforePropertyChange: function(element, name, batchChangeId) {
+  beforePropertyChange: function (element, name, batchChangeId) {
     switch (name) {
       case 'padding':
       case 'text':
       case 'fontFamily':
       case 'fontSize': {
         // Check _lastFitsExactly for a cache hit
-        const {
-          batchId = -1,
-          previouslyFitExactly: batchPreviouslyFitExactly
-        } = this._lastFitsExactly;
+        const {batchId = -1, previouslyFitExactly: batchPreviouslyFitExactly} =
+          this._lastFitsExactly;
         if (batchId === batchChangeId) {
           // We've already computed previouslyFitExactly for this batch of property updates:
           return batchPreviouslyFitExactly;
@@ -380,7 +376,7 @@ export default {
   /**
    * @returns {boolean} True if it modified the backing element
    */
-  onPropertyChange: function(element, name, value, previouslyFitExactly) {
+  onPropertyChange: function (element, name, value, previouslyFitExactly) {
     switch (name) {
       case 'text':
       case 'fontFamily':

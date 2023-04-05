@@ -28,22 +28,22 @@ export default class LessonAgenda extends Component {
                 } (${activity.duration} ${i18n.minutes()})`}</a>
               )}
               {activity.duration === 0 && (
-                <a href={`#activity-${activity.key}`}>{`${
-                  activity.displayName
-                }`}</a>
+                <a
+                  href={`#activity-${activity.key}`}
+                >{`${activity.displayName}`}</a>
               )}
             </li>
             {activity.activitySections.map(section => (
               <li style={{marginLeft: 15}} key={section.key}>
                 {section.duration > 0 && (
-                  <a href={`#section-${section.key}`}>{`${
-                    section.displayName
-                  }`}</a>
+                  <a
+                    href={`#section-${section.key}`}
+                  >{`${section.displayName}`}</a>
                 )}
                 {section.duration === 0 && (
-                  <a href={`#section-${section.key}`}>{`${
-                    section.displayName
-                  }`}</a>
+                  <a
+                    href={`#section-${section.key}`}
+                  >{`${section.displayName}`}</a>
                 )}
               </li>
             ))}

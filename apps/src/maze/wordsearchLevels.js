@@ -5,7 +5,7 @@ var blockUtils = require('../block_utils');
 
 var reqBlocks = require('./requiredBlocks');
 
-var wordSearchToolbox = function() {
+var wordSearchToolbox = function () {
   return blockUtils.createToolbox(
     blockUtils.blockOfType('maze_moveNorth') +
       blockUtils.blockOfType('maze_moveSouth') +

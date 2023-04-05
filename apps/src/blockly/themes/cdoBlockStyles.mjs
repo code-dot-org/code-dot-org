@@ -68,7 +68,11 @@ const labBlockStyles = {
 // The order of the properties in this object is intentional
 // as it gives priority to our most-used block styles when
 // remapping to nearest colors for our accessible themes.
-export default {
+const cdoBlockStyles = {
   ...commonBlockStyles,
   ...labBlockStyles
 };
+
+export default cdoBlockStyles;
+
+export const styleTypes = Object.keys(cdoBlockStyles);

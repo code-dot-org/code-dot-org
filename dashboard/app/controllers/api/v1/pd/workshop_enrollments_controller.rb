@@ -118,9 +118,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     enrollment.update!(first_name: params[:first_name], last_name: params[:last_name])
   end
 
-  private
-
-  def enrollment_params
+  private def enrollment_params
     {
       first_name: params[:first_name]&.strip_utf8mb4,
       last_name: params[:last_name]&.strip_utf8mb4,
@@ -143,7 +141,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     }
   end
 
-  def school_info_params
+  private def school_info_params
     {
       school_type: params[:school_info][:school_type],
       school_state: params[:school_info][:school_state],
@@ -156,20 +154,20 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     }
   end
 
-  def render_unsuccessful(error_message, options={})
+  private def render_unsuccessful(error_message, options={})
     render json: options.merge({workshop_enrollment_status: error_message}),
       status: :bad_request
   end
 
-  def workshop_closed?
+  private def workshop_closed?
     @workshop.state == STATE_ENDED
   end
 
-  def workshop_full?
+  private def workshop_full?
     @workshop.enrollments.count >= @workshop.capacity
   end
 
-  def workshop_owned_by?(user)
+  private def workshop_owned_by?(user)
     return false unless user
     @workshop.organizer_or_facilitator? user
   end

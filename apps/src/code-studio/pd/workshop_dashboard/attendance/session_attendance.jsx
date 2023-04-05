@@ -91,9 +91,7 @@ export class SessionAttendance extends React.Component {
 
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: `/api/v1/pd/workshops/${props.workshopId}/attendance/${
-        props.sessionId
-      }`,
+      url: `/api/v1/pd/workshops/${props.workshopId}/attendance/${props.sessionId}`,
       dataType: 'json'
     }).done(data => {
       this.loadRequest = null;

@@ -182,9 +182,7 @@ describe('EnrollmentsPanel', () => {
     // Respond to the server request
     server.respondWith(
       'POST',
-      `/api/v1/pd/enrollments/move?destination_workshop_id=${destinationWorkshopId}&enrollment_ids[]=${
-        enrollments[0].id
-      }`,
+      `/api/v1/pd/enrollments/move?destination_workshop_id=${destinationWorkshopId}&enrollment_ids[]=${enrollments[0].id}`,
       [204, {}, '']
     );
     server.respond();

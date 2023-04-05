@@ -38,7 +38,7 @@ function openerMatchesCloser(opener, closer) {
  * @param position
  * @returns {parameterSlotInfo|null}
  */
-exports.findFunctionAndParamNumber = function(editor, position) {
+exports.findFunctionAndParamNumber = function (editor, position) {
   var seenCloserStack = [];
   var sameDepthPrecedingCommaCount = 0;
 

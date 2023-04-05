@@ -66,7 +66,8 @@ const styles = {
   }
 };
 
-export const UnconnectedControlProjectSharingDialog = ControlProjectSharingDialog;
+export const UnconnectedControlProjectSharingDialog =
+  ControlProjectSharingDialog;
 
 export default connect(
   state => ({}),

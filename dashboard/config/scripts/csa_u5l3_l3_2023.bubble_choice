@@ -1,0 +1,9 @@
+name 'CSA U5L3-L3_2023'
+display_name 'level display_name here'
+description 'level description here'
+
+sublevels
+level 'CSA U5L3-L3a_2023'
+level 'CSA U5L3-L3b_2023'
+level 'CSA U5L3-L3c_2023'
+level 'CSA U5L3-L3d_2023'

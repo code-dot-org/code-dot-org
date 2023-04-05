@@ -82,7 +82,8 @@ const styles = {
   }
 };
 
-export const UnconnectedMatchAssessmentsOverviewContainer = MatchAssessmentsOverviewContainer;
+export const UnconnectedMatchAssessmentsOverviewContainer =
+  MatchAssessmentsOverviewContainer;
 
 export default connect(
   state => ({
