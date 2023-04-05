@@ -121,10 +121,18 @@ export default class FakeCPBoard extends EventEmitter {
     return false;
   }
 
+  /**
+   * @param {number} pin
+   * @return {FakeExternalLed}
+   */
   createLed(pin) {
     return new FakeLed();
   }
 
+  /**
+   * @param {number} pin
+   * @return {FakeExternalButton}
+   */
   createButton(pin) {
     return new FakeButton();
   }

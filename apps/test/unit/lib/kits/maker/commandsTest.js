@@ -15,7 +15,7 @@ import {
 } from '@cdo/apps/lib/kits/maker/commands';
 import FakeCPBoard from '@cdo/apps/lib/kits/maker/boards/FakeCPBoard';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
-import {MBFirmataClientStub} from './boards/makeStubBoard';
+import {MBFirmataClientStub} from '@cdo/lib/kits/maker/util/makeStubBoard';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 
 describe('maker/commands.js - CircuitPlayground', () => {

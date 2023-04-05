@@ -1,4 +1,4 @@
-import {MBFirmataClientStub} from '../makeStubBoard';
+import {MBFirmataClientStub} from '@cdo/lib/kits/maker/util/makeStubBoard';
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';

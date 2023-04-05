@@ -1,6 +1,6 @@
 /** @file Fake for running Maker apps without an attached MicroBit board. */
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
-import {MBFirmataClientStub} from '../../../../../test/unit/lib/kits/maker/boards/makeStubBoard';
+import {MBFirmataClientStub} from '../util/makeStubBoard';
 
 /**
  * Fake MicroBit Board for running Maker Toolkit apps without a MicroBit board
@@ -31,6 +31,10 @@ export default class FakeMBBoard extends EventEmitter {
     return Promise.resolve();
   }
 
+  /**
+   * Create a serial port controller and open the serial port immediately.
+   * @return {SerialPort}
+   */
   openSerialPort() {}
 
   /**
@@ -116,14 +120,25 @@ export default class FakeMBBoard extends EventEmitter {
     return false;
   }
 
+  /**
+   * @param {number} pin
+   * @return {FakeExternalLed}
+   */
   createLed(pin) {
     return new FakeExternalLed();
   }
 
+  /**
+   * @param {number} pin
+   * @return {FakeExternalButton}
+   */
   createButton(pin) {
     return new FakeExternalButton();
   }
 
+  /**
+   * @return {FakeExternalButton}
+   */
   createCapacitiveTouchSensor() {
     return new FakeCapacitiveTouchSensor();
   }

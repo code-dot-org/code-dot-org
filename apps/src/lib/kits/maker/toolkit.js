@@ -33,7 +33,7 @@ import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 export {dropletConfig, configMicrobit, configCircuitPlayground, MakerError};
 
 /**
- * @type {CircuitPlaygroundBoard | FakeCPBoard || MicroBitBoard || FakeMBBoard} The current board controller, populated when
+ * @type {CircuitPlaygroundBoard | FakeCPBoard | MicroBitBoard | FakeMBBoard} The current board controller, populated when
  * connected, null when not connected.  There can be only one at any time.
  */
 let currentBoard = null;
