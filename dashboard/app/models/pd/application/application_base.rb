@@ -130,11 +130,8 @@ module Pd::Application
 
     # Queues an email for this application
     # @param email_type [String] specifies the mailer action
-    # @param deliver_now [Boolean] (default false)
-    #   When true, send the email immediately.
-    #   Otherwise, it will remain unsent in the queue until the next morning's cronjob.
     # @see Pd::Application::Email
-    def send_pd_application_email(email_type, deliver_now: false)
+    def send_pd_application_email(email_type)
       email = Email.new(
         application: self,
         application_status: status,
@@ -142,7 +139,7 @@ module Pd::Application
         to: user.email
       )
 
-      email.send! if deliver_now
+      email.send!
       email.save!
     end
 
