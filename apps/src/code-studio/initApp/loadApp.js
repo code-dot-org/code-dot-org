@@ -429,6 +429,7 @@ const sourceHandler = {
    * (e.g. in pixelation.js) have that same method defined.
    */
   setMakerAPIsEnabled(enableMakerAPIs) {
+    console.log('inside loadApp setMakerAPIsEnabled');
     getAppOptions().level.makerlabEnabled = enableMakerAPIs;
   },
   getMakerAPIsEnabled() {

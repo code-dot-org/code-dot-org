@@ -333,6 +333,8 @@ var projects = (module.exports = {
    * @returns {string}
    */
   getMakerAPIs() {
+    console.log('inside getMakerAPIs in project.js');
+    console.log(currentSources.makerAPIsEnabled);
     return currentSources.makerAPIsEnabled;
   },
 
@@ -554,6 +556,12 @@ var projects = (module.exports = {
 
   // Whether the current level is a project level (i.e. at the /projects url).
   isProjectLevel() {
+    console.log('isProjectLevel');
+    console.log('appOptions.level', appOptions.level);
+    console.log(
+      'appOptions.level.isProjectLevel',
+      appOptions.level.isProjectLevel
+    );
     return appOptions.level && appOptions.level.isProjectLevel;
   },
 
@@ -674,6 +682,11 @@ var projects = (module.exports = {
       return;
     }
 
+    console.log(
+      'checking is.ProjectLevel() in project init()',
+      this.isProjectLevel()
+    );
+    console.log('current', current);
     if (this.isProjectLevel() || current) {
       if (currentSources.html) {
         sourceHandler.setInitialLevelHtml(currentSources.html);
@@ -682,6 +695,7 @@ var projects = (module.exports = {
       setMakerAPIsStatusFromLevel();
       setMakerAPIsStatusFromQueryParams();
       if (this.getMakerAPIs()) {
+        console.log('setMakerAPIsEnabled');
         sourceHandler.setMakerAPIsEnabled(currentSources.makerAPIsEnabled);
       }
 
@@ -2028,7 +2042,12 @@ function setMakerAPIsStatusFromQueryParams() {
  * Note: for backwards compatibility, levels with makerLabEnabled default to circuitPlayground
  */
 function setMakerAPIsStatusFromLevel() {
+  console.log(
+    'appOptions.level.makerlabEnabled in setMakerAPIsStatusFromLevel in project.js'
+  );
+  console.log(appOptions.level.makerlabEnabled);
   if (appOptions.level.makerlabEnabled) {
+    console.log('set makerAPIsEnabled');
     currentSources.makerAPIsEnabled = appOptions.level.makerlabEnabled;
   }
 }
