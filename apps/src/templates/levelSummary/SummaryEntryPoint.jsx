@@ -18,19 +18,28 @@ const SummaryEntryPoint = ({scriptData, students}) => {
   const summaryUrl = document.location.pathname + SUMMARY_PATH + params;
 
   return (
-    <div className={styles.summaryEntryPoint}>
+    <div
+      className={
+        styles.summaryEntryPoint +
+        ' ' +
+        (scriptData.is_contained_level ? '' : styles.isStandalone)
+      }
+    >
       <Button
         color={Button.ButtonColor.neutralDark}
         text={i18n.viewStudentResponses()}
         href={summaryUrl}
+        className={styles.button}
         __useDeprecatedTag
       />
 
+      <div className={styles.responseIcon}>
+        <i className="fa fa-user" />
+      </div>
       <div className={styles.responseCounter}>
         <p>
-          <i className="fa fa-user" />
           <span className={styles.counter}>
-            {scriptData.responses.length}/{students.length}{' '}
+            {scriptData.response_count}/{students.length}{' '}
           </span>
           <span className={styles.text}>{i18n.studentsAnswered()}</span>
         </p>
