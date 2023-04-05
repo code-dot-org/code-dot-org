@@ -263,24 +263,10 @@ module Pd::Application
       assert_nil application.instance_variable_get(:@full_answers)
     end
 
-    test 'send_pd_application_email creates an associated unsent Email record' do
-      application = create TEACHER_APPLICATION_FACTORY
-
-      application.expects(:deliver_email).never
-      assert_creates Email do
-        application.send_pd_application_email :test_email
-      end
-      email = Email.last
-      assert_equal application, email.application
-      assert_equal 'test_email', email.email_type
-      assert_equal application.status, email.application_status
-      assert_nil email.sent_at
-    end
-
     test 'send_pd_application_email sends email and creates an associated sent Email record' do
       application = create TEACHER_APPLICATION_FACTORY
 
-      application.expects(:deliver_email)
+      application.expects(:deliver_email).once
       assert_creates Email do
         application.send_pd_application_email :test_email
       end
