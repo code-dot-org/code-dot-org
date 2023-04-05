@@ -6,3 +6,5 @@ right 'A little bit'
 right 'Somewhat'
 right 'A lot'
 right 'I loved this Performance Task!'
+
+allow_multiple_attempts true

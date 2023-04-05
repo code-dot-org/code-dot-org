@@ -28,3 +28,5 @@ You can relate this to any character that is inside the string, even if it is a 
 
 As long as the variable is of type string, combining letters and digits have the same concept.
 MARKDOWN
+
+allow_multiple_attempts true
