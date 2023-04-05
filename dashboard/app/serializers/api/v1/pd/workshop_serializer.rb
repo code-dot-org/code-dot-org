@@ -53,4 +53,8 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
   def can_delete
     @scope.try(:[], :current_user) && object.can_user_delete?(@scope[:current_user])
   end
+
+  def workshop_starts_within_a_month
+    object.workshop_starting_date.to_date >= Date.today && object.workshop_starting_date.to_date - 1.month <= Date.today
+  end
 end
