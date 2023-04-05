@@ -23,6 +23,9 @@ const CheckForUnderstanding = ({
 }) => {
   const currentLevel = levels.find(l => l.activeId === currentLevelId);
   const nextLevel = levels.find(l => l.position === currentLevel.position + 1);
+  const sectionParam = selectedSection?.id
+    ? `?section_id=${selectedSection.id}`
+    : '';
 
   // To avoid confusion, if a teacher tries to view the summary as a student,
   // send them back to the level in Participant mode instead.
@@ -64,13 +67,16 @@ const CheckForUnderstanding = ({
     <div className={styles.summaryContainer}>
       {/* Top Nav Links */}
       <p className={styles.navLinks}>
-        <a href={currentLevel.url} onClick={onBackToLevelClick}>
+        <a
+          href={`${currentLevel.url}${sectionParam}`}
+          onClick={onBackToLevelClick}
+        >
           &lt; {i18n.backToLevel()}
         </a>
         {nextLevel && (
           <a
             className={isRtl ? styles.navLinkLeft : styles.navLinkRight}
-            href={nextLevel.url}
+            href={`${nextLevel.url}${sectionParam}`}
             onClick={onNextLevelClick}
           >
             {i18n.nextLevelLink()} &gt;
