@@ -387,16 +387,14 @@ export class WorkshopForm extends React.Component {
       isAdminCounselor || isCsfSubjectWithHiddenFundedField
     );
 
-    console.log(this.props.workshop.workshop_starts_within_a_month);
-
     // For summer workshops for CSP and CSA, only workshop admins can
     // update the “Is this a virtual workshop” field within one month
     // of the workshop in order to prevent people from changing this
     // last minute without talking to Friday institute.
     const nonWSAdminAndStartWithinMonth =
       (this.state.course === COURSE_CSP || this.state.course === COURSE_CSA) &&
-      !this.props.permission.has(WorkshopAdmin);
-    //   start less than month out;
+      !this.props.permission.has(WorkshopAdmin) &&
+      this.props.workshop?.workshop_starts_within_a_month;
     const virtualWorkshopHelpTip = nonWSAdminAndStartWithinMonth ? (
       <p>
         There is less than a month until your workshop. Please contact
@@ -405,8 +403,6 @@ export class WorkshopForm extends React.Component {
     ) : (
       <p>Please update your selection if/when your plans change.</p>
     );
-    console.log(this.state.sessions);
-    console.log(this.state.sessions[0].start);
 
     return (
       <FormGroup>
