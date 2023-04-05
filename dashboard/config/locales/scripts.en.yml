@@ -7876,6 +7876,7 @@ en:
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end of chapter projects.\n\n**Suggested time:** 120 minutes"
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end of chapter projects.\n\n**Suggested time:** 120 minutes"
+          lessons: {}
         vpl-csd4-ci-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -11251,7 +11252,9 @@ en:
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's Web Development unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Web Development.\n* Practice key concepts included in the unit.\n* Engage with Web Lab.\n* Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
         vpl-csd-ci-3:
           lessons: {}
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparing to Teach Interactive Animations and Games
           name: vpl-csd-ci-3
           title: 'Preparing to Teach Interactive Animations and Games '
           description_audience: ''
