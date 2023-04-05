@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-target-blank */
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
@@ -138,6 +137,7 @@ const Notification = ({
                     href={detailsLink}
                     style={styles.detailsLink}
                     target={detailsLinkNewWindow ? '_blank' : null}
+                    rel={detailsLinkNewWindow ? 'noreferrer' : undefined}
                   >
                     {detailsLinkText}
                   </a>
