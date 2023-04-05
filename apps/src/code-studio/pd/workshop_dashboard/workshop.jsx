@@ -104,7 +104,8 @@ export class Workshop extends React.Component {
             'created_at',
             'virtual',
             'suppress_email',
-            'third_party_provider'
+            'third_party_provider',
+            'workshop_starts_within_a_month'
           ])
         });
       })
