@@ -12,7 +12,7 @@ const MakerState = Immutable.Record({
   enabled: false,
   connectionState: DISCONNECTED,
   connectionError: null,
-  usingFakeBoardNextTime: false
+  usingVirtualBoardNextTime: false
 });
 
 // Selectors
@@ -46,8 +46,8 @@ export function getConnectionError(state) {
   return getRoot(state).connectionError;
 }
 
-export function shouldRunWithFakeBoard(state) {
-  return getRoot(state).usingFakeBoardNextTime;
+export function shouldRunWithVirtualBoard(state) {
+  return getRoot(state).usingVirtualBoardNextTime;
 }
 
 // Actions
@@ -76,9 +76,9 @@ export function disconnect() {
   return {type: DISCONNECT};
 }
 
-const USE_FAKE_BOARD_ON_NEXT_RUN = 'maker/USE_FAKE_BOARD_ON_NEXT_RUN';
-export function useFakeBoardOnNextRun() {
-  return {type: USE_FAKE_BOARD_ON_NEXT_RUN};
+const USE_VIRTUAL_BOARD_ON_NEXT_RUN = 'maker/USE_VIRTUAL_BOARD_ON_NEXT_RUN';
+export function useVirtualBoardOnNextRun() {
+  return {type: USE_VIRTUAL_BOARD_ON_NEXT_RUN};
 }
 
 // Reducer
@@ -90,7 +90,7 @@ export function reducer(state = new MakerState(), action) {
   } else if (action.type === REPORT_CONNECTED) {
     return state.merge({
       connectionState: CONNECTED,
-      usingFakeBoardNextTime: false
+      usingVirtualBoardNextTime: false
     });
   } else if (action.type === REPORT_CONNECTION_ERROR) {
     return state.merge({
@@ -102,8 +102,8 @@ export function reducer(state = new MakerState(), action) {
       connectionState: DISCONNECTED,
       connectionError: null
     });
-  } else if (action.type === USE_FAKE_BOARD_ON_NEXT_RUN) {
-    return state.set('usingFakeBoardNextTime', true);
+  } else if (action.type === USE_VIRTUAL_BOARD_ON_NEXT_RUN) {
+    return state.set('usingVirtualBoardNextTime', true);
   }
 
   return state;

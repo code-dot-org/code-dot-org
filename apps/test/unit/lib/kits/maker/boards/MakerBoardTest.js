@@ -3,9 +3,9 @@ import sinon from 'sinon';
 import {EventEmitter} from 'events'; // see node-libs-browser
 import {expect} from '../../../../../util/reconfiguredChai';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
-import FakeCPBoard from '@cdo/apps/lib/kits/maker/boards/FakeCPBoard';
+import VirtualCPBoard from '@cdo/apps/lib/kits/maker/boards/VirtualCPBoard';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
-import FakeMBBoard from '@cdo/apps/lib/kits/maker/boards/FakeMBBoard';
+import VirtualMBBoard from '@cdo/apps/lib/kits/maker/boards/VirtualMBBoard';
 
 /**
  * Interface that our board controllers must implement to be usable with
@@ -220,7 +220,7 @@ export function itImplementsTheMakerBoardInterface(
 
       it(`returns an Led component`, () => {
         const led = board.createLed(10);
-        // FakeCPBoard doesn't provide an LED component, so check the basic LED
+        // VirtualCPBoard doesn't provide an LED component, so check the basic LED
         // shape instead.
         expect(led.on).to.be.a('function');
         expect(led.off).to.be.a('function');
@@ -228,7 +228,7 @@ export function itImplementsTheMakerBoardInterface(
 
         if (
           BoardClass === CircuitPlaygroundBoard ||
-          BoardClass === FakeCPBoard
+          BoardClass === VirtualCPBoard
         ) {
           expect(led.blink).to.be.a('function');
           expect(led.pulse).to.be.a('function');
@@ -261,7 +261,7 @@ export function itImplementsTheMakerBoardInterface(
       });
     });
 
-    if (BoardClass === MicroBitBoard || BoardClass === FakeMBBoard) {
+    if (BoardClass === MicroBitBoard || BoardClass === VirtualMBBoard) {
       /**
        * @function
        * @name MakerBoard#createCapacitiveTouchSensor

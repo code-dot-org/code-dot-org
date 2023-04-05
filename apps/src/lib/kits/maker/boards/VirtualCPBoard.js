@@ -1,20 +1,19 @@
-/** @file Fake for running Maker apps without an attached MicroBit board. */
+/** @file For running Maker apps without an attached Circuit Playground board. */
+import _ from 'lodash';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
-import {MBFirmataClientStub} from '../util/makeStubBoard';
+import {
+  J5_CONSTANTS,
+  N_COLOR_LEDS
+} from './circuitPlayground/PlaygroundConstants';
 
 /**
- * Fake MicroBit Board for running Maker Toolkit apps without a MicroBit board
- * attached.
- * Attaches fake, no-op components to the interpreter.
+ * Virtual Circuit Playground Maker Board for running Maker Toolkit apps without a
+ * Circuit Playground board attached.
+ * Attaches virtual, no-op components to the interpreter.
  * @extends EventEmitter
  * @implements MakerBoard
  */
-export default class FakeMBBoard extends EventEmitter {
-  constructor() {
-    super();
-    this.boardClient_ = new MBFirmataClientStub();
-  }
-
+export default class VirtualCPBoard extends EventEmitter {
   /**
    * Open a connection to the board on its configured port.
    * @returns {Promise} resolved when the board is ready to use.
@@ -32,12 +31,6 @@ export default class FakeMBBoard extends EventEmitter {
   }
 
   /**
-   * Create a serial port controller and open the serial port immediately.
-   * @return {SerialPort}
-   */
-  openSerialPort() {}
-
-  /**
    * Marshals the board component controllers and appropriate constants into the
    * given JS Interpreter instance so they can be used by student code.
    *
@@ -45,15 +38,19 @@ export default class FakeMBBoard extends EventEmitter {
    */
   installOnInterpreter(jsInterpreter) {
     const constructors = {
-      MicroBitButton: FakeMicroBitButton,
-      LedScreen: FakeLedScreen,
-      Accelerometer: FakeAccelerometer,
-      MicroBitThermometer: FakeMicroBitThermometer,
-      Compass: FakeCompass,
-      LightSensor: FakeLightSensor,
-      ExternalButton: FakeExternalButton,
-      ExternalLed: FakeExternalLed,
-      CapacitiveTouchSensor: FakeCapacitiveTouchSensor
+      Led: VirtualLed,
+      Board: VirtualComponent,
+      NeoPixel: VirtualColorLed,
+      PlaygroundButton: VirtualButton,
+      Switch: VirtualToggleSwitch,
+      Piezo: VirtualBuzzer,
+      Sensor: VirtualSensor,
+      Thermometer: VirtualThermometer,
+      Pin: VirtualComponent,
+      Accelerometer: VirtualAccelerometer,
+      Animation: VirtualComponent,
+      Servo: VirtualComponent,
+      TouchSensor: VirtualComponent
     };
 
     for (const constructorName in constructors) {
@@ -63,14 +60,18 @@ export default class FakeMBBoard extends EventEmitter {
     }
 
     const components = {
-      buttonA: new FakeMicroBitButton(),
-      buttonB: new FakeMicroBitButton(),
-      ledScreen: new FakeLedScreen(),
-      tempSensor: new FakeMicroBitThermometer(),
-      accelerometer: new FakeAccelerometer(),
-      lightSensor: new FakeLightSensor(),
-      compass: new FakeCompass(),
-      board: new FakeMBFirmataWrapper()
+      board: new VirtualComponent(),
+      colorLeds: _.range(N_COLOR_LEDS).map(() => new VirtualColorLed()),
+      led: new VirtualLed(),
+      toggleSwitch: new VirtualToggleSwitch(),
+      buzzer: new VirtualBuzzer(),
+      soundSensor: new VirtualSensor(),
+      lightSensor: new VirtualSensor(),
+      tempSensor: new VirtualThermometer(),
+      accelerometer: new VirtualAccelerometer(),
+      buttonL: new VirtualButton(),
+      buttonR: new VirtualButton(),
+      ...J5_CONSTANTS
     };
 
     for (const componentName in components) {
@@ -122,41 +123,54 @@ export default class FakeMBBoard extends EventEmitter {
 
   /**
    * @param {number} pin
-   * @return {FakeExternalLed}
+   * @return {VirtualExternalLed}
    */
   createLed(pin) {
-    return new FakeExternalLed();
+    return new VirtualLed();
   }
 
   /**
    * @param {number} pin
-   * @return {FakeExternalButton}
+   * @return {VirtualExternalButton}
    */
   createButton(pin) {
-    return new FakeExternalButton();
-  }
-
-  /**
-   * @return {FakeExternalButton}
-   */
-  createCapacitiveTouchSensor() {
-    return new FakeCapacitiveTouchSensor();
+    return new VirtualButton();
   }
 }
 
-class FakeComponent extends EventEmitter {}
+class VirtualComponent extends EventEmitter {}
 
-class FakeLedScreen extends FakeComponent {
+class VirtualLed extends VirtualComponent {
   on() {}
   off() {}
+  blink() {}
   toggle() {}
-  clear() {}
-  display() {}
-  scrollNumber() {}
-  scrollString() {}
+  pulse() {}
 }
 
-class FakeLightSensor extends FakeComponent {
+class VirtualColorLed extends VirtualLed {
+  stop() {}
+  intensity() {}
+  color() {}
+}
+
+class VirtualBuzzer extends VirtualComponent {
+  frequency() {}
+  note() {}
+  stop() {}
+  play() {}
+  playNotes() {}
+  playSong() {}
+}
+
+class VirtualToggleSwitch extends VirtualComponent {
+  constructor() {
+    super();
+    this.isOpen = false;
+  }
+}
+
+class VirtualSensor extends VirtualComponent {
   constructor() {
     super();
     this.value = 0;
@@ -171,7 +185,7 @@ class FakeLightSensor extends FakeComponent {
   }
 }
 
-class FakeMicroBitThermometer extends FakeComponent {
+class VirtualThermometer extends VirtualComponent {
   constructor() {
     super();
     this.F = 32;
@@ -179,8 +193,9 @@ class FakeMicroBitThermometer extends FakeComponent {
   }
 }
 
-class FakeAccelerometer extends FakeComponent {
+class VirtualAccelerometer extends VirtualComponent {
   start() {}
+
   getAcceleration() {
     return 0;
   }
@@ -190,34 +205,10 @@ class FakeAccelerometer extends FakeComponent {
   }
 }
 
-class FakeMicroBitButton extends FakeComponent {
+class VirtualButton extends VirtualComponent {
   constructor() {
     super();
     this.isPressed = false;
     this.holdtime = 0;
   }
 }
-
-class FakeCompass extends FakeComponent {
-  start() {}
-  getHeading() {}
-}
-
-class FakeExternalLed extends FakeComponent {
-  on() {}
-  off() {}
-  blink() {}
-  toggle() {}
-  pulse() {}
-}
-
-class FakeExternalButton extends FakeMicroBitButton {}
-
-class FakeCapacitiveTouchSensor extends FakeComponent {
-  constructor() {
-    super();
-    this.isPressed = false;
-  }
-}
-
-class FakeMBFirmataWrapper {}

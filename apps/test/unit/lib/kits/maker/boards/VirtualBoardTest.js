@@ -1,18 +1,18 @@
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
-import FakeCPBoard from '@cdo/apps/lib/kits/maker/boards/FakeCPBoard';
-import FakeMBBoard from '@cdo/apps/lib/kits/maker/boards/FakeMBBoard';
+import VirtualCPBoard from '@cdo/apps/lib/kits/maker/boards/VirtualCPBoard';
+import VirtualMBBoard from '@cdo/apps/lib/kits/maker/boards/VirtualMBBoard';
 import {expect} from '../../../../../util/reconfiguredChai';
 import {itMakesCircuitPlaygroundComponentsAvailable} from './circuitPlayground/CircuitPlaygroundBoardTest';
 import {itMakesMicroBitComponentsAvailable} from './microBit/MicroBitBoardTest';
 
-describe('FakeCPBoard', () => {
+describe('VirtualCPBoard', () => {
   // Test coverage for Circuit Playground Maker Board Interface
-  itImplementsTheMakerBoardInterface(FakeCPBoard);
-  itMakesCircuitPlaygroundComponentsAvailable(FakeCPBoard);
+  itImplementsTheMakerBoardInterface(VirtualCPBoard);
+  itMakesCircuitPlaygroundComponentsAvailable(VirtualCPBoard);
 
   describe(`boardConnected()`, () => {
     it('always returns false', () => {
-      const board = new FakeCPBoard();
+      const board = new VirtualCPBoard();
       expect(board.boardConnected()).to.be.false;
       return board.connect().then(() => {
         expect(board.boardConnected()).to.be.false;
@@ -23,14 +23,14 @@ describe('FakeCPBoard', () => {
   });
 });
 
-describe('FakeMBBoard', () => {
+describe('VirtualMBBoard', () => {
   // Test coverage for micro:bit Maker Board Interface
-  itImplementsTheMakerBoardInterface(FakeMBBoard);
-  itMakesMicroBitComponentsAvailable(FakeMBBoard);
+  itImplementsTheMakerBoardInterface(VirtualMBBoard);
+  itMakesMicroBitComponentsAvailable(VirtualMBBoard);
 
   describe(`boardConnected()`, () => {
     it('always returns false', () => {
-      const board = new FakeMBBoard();
+      const board = new VirtualMBBoard();
       expect(board.boardConnected()).to.be.false;
       return board.connect().then(() => {
         expect(board.boardConnected()).to.be.false;
