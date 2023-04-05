@@ -8,10 +8,10 @@ export default {
 
 const Template = args => (
   <ControlProjectSharingDialog
-    {...args}
     isDialogOpen={true}
     closeDialog={() => console.log('click')}
     showSharingColumn={() => console.log('click')}
+    {...args}
   />
 );
 

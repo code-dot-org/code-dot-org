@@ -40,13 +40,13 @@ export default {
 
 const Template = args => (
   <MoveStudents
-    {...args}
     studentData={studentData}
     currentSectionId={1}
     sections={sections}
     updateStudentTransfer={action('Update')}
     transferStudents={action('Transfer')}
     cancelStudentTransfer={action('Cancel')}
+    {...args}
   />
 );
 export const MoveStudentsEmptyDialog = Template.bind({});

@@ -10,9 +10,9 @@ export default {
 
 const Template = args => (
   <ConfirmRemoveStudentDialog
-    {...args}
     {...MINIMUM_TEST_PROPS}
     hideBackdrop={true}
+    {...args}
   />
 );
 

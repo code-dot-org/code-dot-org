@@ -22,12 +22,12 @@ const defaultExport = {
 
 const Template = args => (
   <ManageStudentsLoginInfo
-    {...args}
     sectionId={7}
     sectionCode="ABCDEF"
     sectionName="Name"
     studioUrlPrefix="http://localhost-studio.code.org:3000"
     studentData={studentData}
+    {...args}
   />
 );
 const stories = {};

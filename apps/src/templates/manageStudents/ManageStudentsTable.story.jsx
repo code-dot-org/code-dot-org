@@ -266,13 +266,14 @@ const Template = args => (
     )}
   >
     <UnconnectedManageStudentsTable
-      {...args}
       editingData={{}}
       addStatus={{}}
       transferData={blankStudentTransfer}
       transferStatus={{}}
       sectionId={53}
+      sectionCode="ABCDEF"
       sectionName="My Section"
+      {...args}
     />
   </Provider>
 );
