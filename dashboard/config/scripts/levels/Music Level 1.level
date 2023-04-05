@@ -2,7 +2,8 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "background": "music-black"
   },
   "game_id": 70,
   "published": true,
