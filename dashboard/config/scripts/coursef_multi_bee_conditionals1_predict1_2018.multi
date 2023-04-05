@@ -7,3 +7,5 @@ wrong 'I don\'t know.', feedback: 'The `if at flower` block assures that the bee
 markdown <<MARKDOWN
 The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar **once**. 
 MARKDOWN
+
+allow_multiple_attempts false

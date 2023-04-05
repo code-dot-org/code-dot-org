@@ -12,3 +12,5 @@ right '...people\'s access to computing and the Internet differs based on socioe
 wrong '...people\'s access to computing technology is affected by the fact that newer devices that use new protocols makes it more difficult for them to communicate with older devices and technology'
 
 wrong '...the amount of data on the Internet is growing so fast that the amount computing power and time we have to process it is lagging behind'
+
+allow_multiple_attempts true

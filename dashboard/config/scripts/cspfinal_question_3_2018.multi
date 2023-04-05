@@ -14,3 +14,5 @@ For example, information can be sent directly between computers `A`, and `B` and
 
 Computer `A` sends a packet intended to reach computer `F`.  Along its path it arrives at Computer `C`.  Which computer should Computer `C` forward the packet to in order to use the most cost effective path?
 MARKDOWN
+
+allow_multiple_attempts true
