@@ -957,42 +957,42 @@
           "type": "kit",
           "sounds": [
             {
-              "name": "Glitch 1",
+              "name": "Bass Drum",
               "src": "sound_1",
               "length": 0.0625
             },
             {
-              "name": "Glitch 2",
+              "name": "5nare",
               "src": "sound_2",
               "length": 0.0625
             },
             {
-              "name": "Glitch 3",
+              "name": "Closed Hi-hat",
               "src": "sound_3",
               "length": 0.0625
             },
             {
-              "name": "Glitch 4",
+              "name": "Open Hi-hat",
               "src": "sound_4",
               "length": 0.0625
             },
             {
-              "name": "Glitch 5",
+              "name": "Mid Tom",
               "src": "sound_5",
               "length": 0.0625
             },
             {
-              "name": "Glitch 6",
+              "name": "High Tom",
               "src": "sound_6",
               "length": 0.0625
             },
             {
-              "name": "Glitch 7",
+              "name": "Ride",
               "src": "sound_7",
               "length": 0.0625
             },
             {
-              "name": "Glitch 8",
+              "name": "Cymbal",
               "src": "sound_8",
               "length": 0.0625
             }
@@ -1004,42 +1004,42 @@
           "type": "kit",
           "sounds": [
             {
-              "name": "Machine 1",
+              "name": "Bass Drum",
               "src": "sound_1",
               "length": 0.0625
             },
             {
-              "name": "Machine 2",
+              "name": "Snare",
               "src": "sound_2",
               "length": 0.0625
             },
             {
-              "name": "Machine 3",
+              "name": "Closed Hi-hat",
               "src": "sound_3",
               "length": 0.0625
             },
             {
-              "name": "Machine 4",
+              "name": "Open Hi-hat",
               "src": "sound_4",
               "length": 0.0625
             },
             {
-              "name": "Machine 5",
+              "name": "Mid Tom",
               "src": "sound_5",
               "length": 0.0625
             },
             {
-              "name": "Machine 6",
+              "name": "High Tom",
               "src": "sound_6",
               "length": 0.0625
             },
             {
-              "name": "Machine 7",
+              "name": "Ride",
               "src": "sound_7",
               "length": 0.0625
             },
             {
-              "name": "Machine 8",
+              "name": "Cymbal",
               "src": "sound_8",
               "length": 0.0625
             }
