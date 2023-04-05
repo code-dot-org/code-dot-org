@@ -115,7 +115,7 @@ module Api::V1::Pd::Application
 
     test 'Sends principal approval received emails on successful create' do
       ADMIN_APPROVAL_EMAILS.each do |email_type|
-        TEACHER_APPLICATION_CLASS.any_instance.expects(:send_pd_application_email).with(email_type, deliver_now: true)
+        TEACHER_APPLICATION_CLASS.any_instance.expects(:send_pd_application_email).with(email_type)
       end
 
       put :create, params: @test_params

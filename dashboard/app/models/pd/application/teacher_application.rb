@@ -60,7 +60,7 @@ module Pd::Application
 
     REVIEWING_INCOMPLETE = 'Reviewing Incomplete'
 
-    # These statuses are considered "decisions", and will queue an email that will be sent by cronjob the next morning
+    # These statuses are considered "decisions", and will send an email
     # In these decision emails, status and email_type are the same.
     AUTO_EMAIL_STATUSES = %w(
       accepted
@@ -147,7 +147,7 @@ module Pd::Application
 
       if !principal_approval_not_required && status != 'awaiting_admin_approval'
         self.status = 'awaiting_admin_approval'
-        send_pd_application_email(:needs_admin_approval, deliver_now: true)
+        send_pd_application_email(:needs_admin_approval)
       elsif principal_approval_not_required && status == 'awaiting_admin_approval'
         self.status = 'unreviewed'
       end
@@ -360,7 +360,7 @@ module Pd::Application
         application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR
       ).find_each do |teacher_application|
         if teacher_application.allow_sending_admin_approval_teacher_reminder_email?
-          teacher_application.send_pd_application_email :admin_approval_teacher_reminder, deliver_now: true
+          teacher_application.send_pd_application_email :admin_approval_teacher_reminder
         end
       end
     end
@@ -384,8 +384,6 @@ module Pd::Application
       self.status_log ||= []
       status_log.push({status: status, at: Time.zone.now})
 
-      # delete any unsent emails, and queue a new status email if appropriate
-      emails.unsent.destroy_all
       send_pd_application_email(status) if should_send_decision_email?
     end
 
@@ -398,7 +396,7 @@ module Pd::Application
       end
 
       # email_type maps to the mailer action
-      TeacherApplicationMailer.send(email.email_type, self).deliver_now
+      TeacherApplicationMailer.send(email.email_type, self)
     end
 
     # Return a string if the principal approval state is complete, in-progress, or not required.
@@ -1121,11 +1119,11 @@ module Pd::Application
     def on_successful_create
       return if status == 'incomplete'
 
-      send_pd_application_email :confirmation, deliver_now: true
+      send_pd_application_email :confirmation
       auto_score!
       self.principal_approval_not_required = regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
       unless regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
-        send_pd_application_email :admin_approval, deliver_now: true
+        send_pd_application_email :admin_approval
       end
       save
     end
@@ -1176,9 +1174,9 @@ module Pd::Application
       )
       save!
       auto_score!
-      send_pd_application_email(:admin_approval_completed, deliver_now: true)
-      send_pd_application_email(:admin_approval_completed_partner, deliver_now: true)
-      send_pd_application_email(:admin_approval_completed_teacher_receipt, deliver_now: true)
+      send_pd_application_email(:admin_approval_completed)
+      send_pd_application_email(:admin_approval_completed_partner)
+      send_pd_application_email(:admin_approval_completed_teacher_receipt)
     end
 
     # @override

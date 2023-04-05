@@ -263,7 +263,7 @@ module Pd::Application
       assert_nil application.instance_variable_get(:@full_answers)
     end
 
-    test 'queue_email creates an associated unsent Email record' do
+    test 'send_pd_application_email creates an associated unsent Email record' do
       application = create TEACHER_APPLICATION_FACTORY
 
       application.expects(:deliver_email).never
@@ -277,12 +277,12 @@ module Pd::Application
       assert_nil email.sent_at
     end
 
-    test 'queue_email with deliver_now sends email and creates an associated sent Email record' do
+    test 'send_pd_application_email sends email and creates an associated sent Email record' do
       application = create TEACHER_APPLICATION_FACTORY
 
       application.expects(:deliver_email)
       assert_creates Email do
-        application.send_pd_application_email :test_email, deliver_now: true
+        application.send_pd_application_email :test_email
       end
       email = Email.last
       assert_equal application, email.application
@@ -399,32 +399,6 @@ module Pd::Application
       assert_raises_matching("invalid email address for application #{application_without_email.id}") do
         application_without_email.formatted_applicant_email
       end
-    end
-
-    test 'deleting an application also deletes its unsent emails' do
-      # Create two applications, each with sent and unsent email
-      application_a = create TEACHER_APPLICATION_FACTORY
-      application_b = create TEACHER_APPLICATION_FACTORY
-      [application_a, application_b].each do |application|
-        application.stubs(:deliver_email)
-        application.send_pd_application_email :test_email
-        application.send_pd_application_email :test_email, deliver_now: true
-        assert_equal 2, application.emails.count
-        assert_equal 1, application.emails.unsent.count
-      end
-
-      # Destroy one of the applications
-      application_a.destroy
-
-      # Unsent email for that application was destroyed
-      assert_equal 0, application_a.emails.unsent.count
-      # Sent email for that application was not destroyed
-      assert_equal 1, application_a.emails.count
-      # Email for the other application was not destroyed
-      assert_equal 2, application_b.emails.count
-    ensure
-      application_a.emails.destroy_all
-      application_b.emails.destroy_all
     end
   end
 end
