@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2018-04-03T15:26:01.000Z",
-  "level_num": "custom",
-  "user_id": 532,
   "properties": {
     "long_instructions": "**Short Answer:**  Computer models and simulations are used to formulate, refine, and test hypotheses.  Describe a scenario that could be modeled by a computer and explain one benefit and one drawback of doing the simulation on a computer instead of real world. \r\n",
     "instructions_important": "false",
@@ -14,8 +10,13 @@
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 7090,
-    "name_suffix": "_exam_prep"
+    "name_suffix": "_exam_prep",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2018-04-03T15:26:01.000Z",
+  "user_id": 532,
   "published": true,
   "notes": ""
 }]]></config>

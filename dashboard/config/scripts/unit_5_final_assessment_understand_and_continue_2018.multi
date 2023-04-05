@@ -8,3 +8,5 @@ Quick survey question before continuing on...
 
 Please select the answer that most closely describes your intent to take the AP CS Principles exam this year.
 MARKDOWN
+
+allow_multiple_attempts true
