@@ -1,27 +1,27 @@
 name 'cspu5_assess1_additem'
-encrypted 'XBx9fHIVls954dzuDmqnrBzAV9B8v1DGyzIlbo2XtEVJsB7I7MThkU8VQs9D
-zz29MU06YwZjFtvtJMx1GyT1sIN9vbEBpwqxWpgllPNnqf2th+Taoye2S33V
-N7dauVG4hp3HoN0sNDVTFsJc5/cI7v0nznONt3AU2Crha1wicoQlWT0DZKqB
-jkk6nQqLuYsDGq7dkziI856fhnWKasguZDF+QR+QI15bxkWuBDjTLGpARpOR
-j7xO1UREfu4kVJJctl9IQt7ygL0A9pmffi9k36V141BIFWOCglZHQe6STUJt
-+b7Hv4bcBwcRhMm4XByhv9shKT6LEsSQbF3sLP/pVg/6ndrBijpPwlGIlpWN
-AGdMIU9Vx/7BpuqBzouHbpUmwya0BDGaun69Ca3sXT0xFWKTeXcC49WF98CO
-O3+c+nO4j3EtSTTvUX61Z9M5XrW5laSaIfXkBA3a1M1VeKU6vpBjI1scrtC6
-/k70M7T+VqEPre/Q79Ab5OO8nK3Bmebn3st+Atg4GFrH0932EfCJX2dY0Di1
-JgYVc0+M3+655ic1E9pTl/+6GJA/GVVe/Y8MANGW2cQMXXvsh25wOpRhaTDd
-ualRTKsHBXm5wSanaXLVj3Lg6R4MmDCTwyTWDM1pcLtgCMjasu2QHODl3l9T
-+xuxEjpPP3z9kZoy+L75e6wLjkLlGDzIyZyf/ysrg5OSOzE7KO3auh8P9OFb
-MWfC5F9+9FsBvFmhcFEs3c//++g2H6/Ow3vIDdJNRA/ohOjjkCpaFkM959wy
-yq04SDLhg2U2az906RcpBkmxJkWYyP63yAH+i3AxERmWkZeqlP5U+nFXdEEP
-6palxdIlqbDL9Dc4Ex0BwBwhYIKzc8Pexg9BilHNEmic0Sfbm4jodelDxePR
-Ohr8LAEUXSTWobC1UOy2xfcFeI/H6E0UiJPaDcpxvuHfqt4ieprsuESc97kg
-PPsnEkedBBXYUEVVb1oKvNEjpGgbick4CK6GL8RMnl2bkxKvThJNAqVgIwjL
-acxb5pcNH/4xw352zc85TL+EKjltfzYolakjTJo/Ujzgh1sVUKBv7UkgZyn+
-YlCVGBYyoErPU+Hzn6yHemCyKwLcwagQdQmfrUfuy37p+NVi6Yk2JSoK4Zr7
-MekgHiCJf/9DP0et4avByt1QRNKy8nLDOuJTADcgrY+Oel7+VOuI5LV8H8ld
-lwANuXNHRQ7yIgVLI6Ntudx6WfF/WwOtsP12W5G4vYbtiswL4V+XgDyahDHB
-AB4zNwlp1Pin4ishGMDRbXN+Bt71LJTz2pGMw+q0oYIxf0JUNDStCAbVmYAH
-vjRL5sDj/mY5K8Ksm0JHVafIQu9jDwJXwT4PMlXBJW5gKReLqqleUW6FYl0k
-4sDlsUBCizfU/wEYHtDiLrpncIGLrJ1aKQrtdcvtqcGSAB51WQhT5366ic8p
-/DnUvB0JVOACdbC5yOYYcetBfpf4/V+pceQTxW3L6/lkQqmmhZBFLg==
-'
+wrong 'cart total = 1;'
+wrong 'cartTotal + 1;'
+right 'cartTotal = cartTotal +1;'
+wrong 'var cartTotal = cartTotal + 1;'
+wrong 'var cartTotal + 1;'
+
+
+markdown <<MARKDOWN
+Jasmine is writing a shopping app.  She has created a variable to keep track of the number of items in the shopping cart.  Every time someone clicks the “addItemButton”, she would like the variable to increase by 1.
+
+![](https://images.code.org/c0a0429e482ef79e3127059fe270a041-image-1475371042841.png)
+
+What code should Jasmine insert where it says `<missing code>` in order for her app to work?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lessons 4,5**
+
+Since Jasmine wants to increase the cartTotal by one every time the "addItemButton" is clicked, the new cartTotal should be the current cartTotal plus one. In other words,
+
+_cartTotal = cartTotal + 1;_
+
+Since the variable cartTotal is already initialized in line 1, the word "var" is not necessary because that would create a new local variable instead of adding on to the existing cartTotal.
+MARKDOWN
+
+allow_multiple_attempts true
