@@ -125,6 +125,12 @@
         "csd-2022/playing-notes": {
           "display_name": "Notaları çalma"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Problem çözme süreci"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Problem çözme süreci"
+        },
         "csd-2022/random-numbers": {
           "display_name": "Rastgele Sayılar"
         },
@@ -148,6 +154,9 @@
         },
         "csd-2022/velocity-and-the-counter-pattern": {
           "display_name": "Hız ve Sayaç Deseni"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Web Laboratuvarı"
         },
         "csd-2022/which-type-of-chart": {
           "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"

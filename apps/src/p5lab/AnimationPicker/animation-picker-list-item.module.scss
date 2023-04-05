@@ -40,7 +40,6 @@ $hover-plus-size: 24px;
   background-color: $purple;
   border-color: $purple;
   font-size: calc($thumbnail-size / 2);
-  line-height: $thumbnail-size;
   &:hover {
     background-color: $light_purple;
     border-color: $light_purple;
@@ -49,6 +48,10 @@ $hover-plus-size: 24px;
     background-color: $light_purple;
     border-color: $light_purple;
   }
+}
+
+.icon {
+  padding-top: 10px;
 }
 
 .label {

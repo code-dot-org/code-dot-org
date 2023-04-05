@@ -117,7 +117,7 @@ describe('Foorm Daily Survey Results', () => {
               }
             }
           }}
-          facilitators={{'1': 'facilitator 1', '2': 'facilitator 2'}}
+          facilitators={{1: 'facilitator 1', 2: 'facilitator 2'}}
           thisWorkshop={{
             'Day 0': {
               general: {
@@ -144,33 +144,33 @@ describe('Foorm Daily Survey Results', () => {
                 }
               },
               facilitator: {
-                response_count: {'1': 4, '2': 7},
+                response_count: {1: 4, 2: 7},
                 form_key_1: {
                   q1_facilitator: {
-                    '1': ['answer1!', 'answer2'],
-                    '2': ['answer3!', 'answer4']
+                    1: ['answer1!', 'answer2'],
+                    2: ['answer3!', 'answer4']
                   },
                   q2_facilitator: {
-                    '1': {
+                    1: {
                       choice1: 1,
                       choice2: 1,
                       choice3: 1,
                       choice4: 1
                     },
-                    '2': {
+                    2: {
                       choice1: 1,
                       choice2: 4,
                       choice3: 1
                     }
                   },
                   q3_facilitator: {
-                    '1': {
+                    1: {
                       num_respondents: 3,
                       choice1_q3: 2,
                       choice2_q3: 1,
                       choice3_q3: 3
                     },
-                    '2': {
+                    2: {
                       num_respondents: 5,
                       choice1_q3: 2,
                       choice2_q3: 1,
@@ -178,7 +178,7 @@ describe('Foorm Daily Survey Results', () => {
                     }
                   },
                   q4_facilitator: {
-                    '1': {
+                    1: {
                       row1: {column1: 1, column2: 2, column3: 1}
                     }
                   }
@@ -209,13 +209,13 @@ describe('Foorm Daily Survey Results', () => {
                 }
               },
               overall_facilitator: {
-                '1': {
+                1: {
                   response_count: 3,
                   averages: {
                     rollup_q1: {average: 4.2, rows: {row1: 4.1, row2: 4.3}}
                   }
                 },
-                '2': {
+                2: {
                   response_count: 5,
                   averages: {
                     rollup_q1: {average: 3, rows: {row1: 2.5, row2: 3.5}}
@@ -244,7 +244,7 @@ describe('Foorm Daily Survey Results', () => {
                 }
               },
               single_workshop: {
-                '1': {
+                1: {
                   response_count: 4,
                   averages: {
                     facilitator_rollup_q1: {
@@ -253,7 +253,7 @@ describe('Foorm Daily Survey Results', () => {
                     }
                   }
                 },
-                '2': {
+                2: {
                   response_count: 4,
                   averages: {
                     facilitator_rollup_q1: {
@@ -264,7 +264,7 @@ describe('Foorm Daily Survey Results', () => {
                 }
               },
               overall_facilitator: {
-                '1': {
+                1: {
                   response_count: 3,
                   averages: {
                     facilitator_rollup_q1: {
@@ -273,7 +273,7 @@ describe('Foorm Daily Survey Results', () => {
                     }
                   }
                 },
-                '2': {
+                2: {
                   response_count: 5,
                   averages: {
                     facilitator_rollup_q1: {

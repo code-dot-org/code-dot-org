@@ -4,8 +4,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {sectionForDropdownShape} from './shapes';
 import TeacherSectionSelector from './TeacherSectionSelector';
-import AssignButton from '@cdo/apps/templates/AssignButton';
-import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
+import MultipleAssignButton from '@cdo/apps/templates/MultipleAssignButton';
 import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 class SectionAssigner extends Component {
@@ -17,7 +16,9 @@ class SectionAssigner extends Component {
     courseId: PropTypes.number,
     scriptId: PropTypes.number,
     forceReload: PropTypes.bool,
-    buttonLocationAnalytics: PropTypes.string,
+    isOnCoursePage: PropTypes.bool,
+    isStandAloneUnit: PropTypes.bool,
+    participantAudience: PropTypes.string,
     // Redux provided
     selectSection: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.number,
@@ -26,6 +27,21 @@ class SectionAssigner extends Component {
 
   onChangeSection = sectionId => {
     this.props.selectSection(sectionId);
+  };
+
+  state = {
+    confirmationMessageOpen: false
+  };
+
+  onReassignConfirm = () => {
+    this.setState({
+      confirmationMessageOpen: true
+    });
+    setTimeout(() => {
+      this.setState({
+        confirmationMessageOpen: false
+      });
+    }, 15000);
   };
 
   render() {
@@ -39,7 +55,9 @@ class SectionAssigner extends Component {
       selectedSectionId,
       forceReload,
       assignmentName,
-      buttonLocationAnalytics
+      isOnCoursePage,
+      isStandAloneUnit,
+      participantAudience
     } = this.props;
     const selectedSection = sections.find(
       section => section.id === selectedSectionId
@@ -47,7 +65,12 @@ class SectionAssigner extends Component {
 
     return (
       <div style={styles.section}>
-        <div style={styles.label}>{i18n.currentSection()}</div>
+        <div style={styles.label}>
+          <div>{i18n.currentSection()}</div>
+          {this.state.confirmationMessageOpen && (
+            <span style={styles.confirmText}>{i18n.assignSuccess()}</span>
+          )}
+        </div>
         <div style={styles.content}>
           <TeacherSectionSelector
             sections={sections}
@@ -58,26 +81,21 @@ class SectionAssigner extends Component {
             courseVersionId={courseVersionId}
             unitId={scriptId}
           />
-          {selectedSection && selectedSection.isAssigned && (
-            <UnassignSectionButton
-              courseName={assignmentName}
+          {selectedSection && showAssignButton && (
+            <MultipleAssignButton
               sectionId={selectedSection.id}
-              buttonLocationAnalytics={buttonLocationAnalytics}
+              courseOfferingId={courseOfferingId}
+              courseVersionId={courseVersionId}
+              courseId={courseId}
+              scriptId={scriptId}
+              assignmentName={assignmentName}
+              sectionName={selectedSection.name}
+              reassignConfirm={this.onReassignConfirm}
+              isOnCoursePage={isOnCoursePage}
+              isStandAloneUnit={isStandAloneUnit}
+              participantAudience={participantAudience}
             />
           )}
-          {selectedSection &&
-            !selectedSection.isAssigned &&
-            showAssignButton && (
-              <AssignButton
-                sectionId={selectedSection.id}
-                courseOfferingId={courseOfferingId}
-                courseVersionId={courseVersionId}
-                courseId={courseId}
-                scriptId={scriptId}
-                assignmentName={assignmentName}
-                sectionName={selectedSection.name}
-              />
-            )}
         </div>
       </div>
     );
@@ -97,7 +115,13 @@ const styles = {
     fontSize: 16,
     fontFamily: '"Gotham 5r", sans-serif',
     paddingTop: 10,
-    paddingBottom: 10
+    paddingBottom: 10,
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+  confirmText: {
+    fontSize: 12,
+    fontFamily: '"Gotham 4r", sans-serif'
   }
 };
 

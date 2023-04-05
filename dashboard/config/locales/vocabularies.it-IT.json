@@ -844,11 +844,25 @@
           "word": "Binario",
           "definition": "Un modo di rappresentare i dati usando solo due opzioni."
         },
+        "computer/csd/2022": {
+          "word": "Computer",
+          "definition": "Una macchina che elabora dati."
+        },
         "input/csd/2022": {
-          "word": "Input"
+          "word": "Input",
+          "definition": " (ingresso) i dati che i computer ricevono da utenti, dispositivi o altri computer"
+        },
+        "output/csd/2022": {
+          "word": "Output",
+          "definition": " (uscita) i dati che i computer mettono a disposizione di utenti, dispositivi o altri computer"
         },
         "processing/csd/2022": {
-          "word": "Elaborazione"
+          "word": "Elaborazione",
+          "definition": "Il ragionamento svolto dai computer per trasformare i dati in ingresso (input) in dati in uscita (output)."
+        },
+        "storage/csd/2022": {
+          "word": "memorizzazione",
+          "definition": "salvataggio di dati da utilizzare in futuro"
         },
         "bug/csd/2022": {
           "word": "Bug (errore)",
@@ -1493,11 +1507,25 @@
         "function/csd/2021": {
           "word": "Funzione"
         },
+        "computer/csd/2021": {
+          "word": "Computer",
+          "definition": "Una macchina che elabora dati."
+        },
         "input/csd/2021": {
-          "word": "Input"
+          "word": "Input",
+          "definition": " (ingresso) i dati che i computer ricevono da utenti, dispositivi o altri computer"
+        },
+        "output/csd/2021": {
+          "word": "Output",
+          "definition": " (uscita) i dati che i computer mettono a disposizione di utenti, dispositivi o altri computer"
         },
         "processing/csd/2021": {
-          "word": "Elaborazione"
+          "word": "Elaborazione",
+          "definition": "Il ragionamento svolto dai computer per trasformare i dati in ingresso (input) in dati in uscita (output)."
+        },
+        "storage/csd/2021": {
+          "word": "memorizzazione",
+          "definition": "salvataggio di dati da utilizzare in futuro"
         },
         "digital_footprint/csd/2021": {
           "word": "Orme digitali"

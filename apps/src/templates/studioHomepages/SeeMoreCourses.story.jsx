@@ -1,5 +1,7 @@
 import React from 'react';
 import SeeMoreCourses from './SeeMoreCourses';
+import {Provider} from 'react-redux';
+import {reduxStore} from '@cdo/storybook/decorators';
 
 const courses = [
   {
@@ -21,15 +23,17 @@ const courses = [
   }
 ];
 
-export default storybook => {
-  return storybook
-    .storiesOf('Homepages/SeeMoreCourses', module)
-    .withReduxStore()
-    .addStoryTable([
-      {
-        name: 'See More Courses for homepages',
-        description: `If a teacher has progress in more than 4 courses or a student in more than 5, they will see a "View More" button. When they click button, they will see the remainder of their courses.`,
-        story: () => <SeeMoreCourses courses={courses} />
-      }
-    ]);
+export default {
+  title: 'SeeMoreCourse',
+  component: SeeMoreCourses
 };
+
+const Template = args => {
+  return (
+    <Provider store={reduxStore()}>
+      <SeeMoreCourses courses={courses} />
+    </Provider>
+  );
+};
+
+export const SeeMoreCoursesExamples = Template.bind({});

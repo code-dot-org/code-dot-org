@@ -2,6 +2,138 @@
   "fr-FR": {
     "data": {
       "objectives": {
+        "d48452ca-5cba-4bc4-b52c-424f10d43bab": {
+          "description": "Définir « codage » et « informatique »."
+        },
+        "bdb824f7-9d5c-4465-b019-0294329fd999": {
+          "description": "Identifier le vocabulaire informatique clé."
+        },
+        "69ffb469-2601-46aa-bc80-82043d8dcd1e": {
+          "description": "Identifier où aller pour continuer à apprendre l'informatique et le codage."
+        },
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "Illustrer les changements d'humeur d'un poème."
+        },
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "Représenter le langage figuré et littéral dans un texte."
+        },
+        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
+          "description": "Développer des programmes qui répondent à des événements planifiés."
+        },
+        "1232eb04-9ab1-4fe2-87f9-61c6d94d770e": {
+          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
+        },
+        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
+          "description": "Créez une animation interactive en utilisant des sprites et des événements."
+        },
+        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
+          "description": "Créez une animation interactive en utilisant des sprites et des événements."
+        },
+        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
+          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
+        },
+        "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
+          "description": "Crée un programme pour compléter une image en utilisant des étapes séquentielles."
+        },
+        "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085": {
+          "description": "Casse des formes complexes en parties simples."
+        },
+        "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
+          "description": "Développer des programmes qui répondent aux événements chronométrés"
+        },
+        "efcad81f-908b-4e31-8602-02c5ef16ab26": {
+          "description": "Développer des programmes qui répondent aux commentaires des utilisateurs"
+        },
+        "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
+          "description": "Créer des animations de danse avec du code"
+        },
+        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
+          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
+        },
+        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
+          "description": "Créez une animation interactive en utilisant des sprites et des événements."
+        },
+        "7da72bfe-23c8-479f-8797-7dcfcf175ab0": {
+          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
+        },
+        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
+          "description": "Créez une animation interactive en utilisant des sprites et des événements."
+        },
+        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
+          "description": "Créez une animation interactive en utilisant des sprites et des événements."
+        },
+        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
+          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
+        },
+        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
+          "description": "Créez une animation interactive en utilisant des sprites et des événements."
+        },
+        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
+          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
+        },
+        "93e23857-027c-4711-9033-a41de9430672": {
+          "description": "Identifier les actions qui aux événements d'entrée."
+        },
+        "8e120010-1817-488a-8ca8-ce5198a0883d": {
+          "description": "Créer un jeu interactif en utilisant des séquences et des gestionnaires d'événements."
+        },
+        "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
+          "description": "Partager un artefact créatif avec d'autres élèves."
+        },
+        "bd8e3dc4-47f2-41ac-8c7f-01126eb5e68a": {
+          "description": "Identifier le vocabulaire informatique clé."
+        },
+        "0e2bbedd-f066-4dc1-b80c-291dac187c62": {
+          "description": "Identifier où aller pour continuer à apprendre l'informatique et le codage."
+        },
+        "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
+          "description": "Identifier les actions qui aux événements d'entrée."
+        },
+        "73964b0e-cea1-43cf-a130-410017addf73": {
+          "description": "Créer un jeu interactif en utilisant des séquences et des gestionnaires d'événements."
+        },
+        "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
+          "description": "Partager un artefact créatif avec d'autres élèves."
+        },
+        "16a00a1c-4559-4e9c-95e1-1cd1e542fe68": {
+          "description": "Identifier le vocabulaire informatique clé."
+        },
+        "5e05fbeb-12c6-437c-b0c4-5e2057d3d975": {
+          "description": "Identifier où aller pour continuer à apprendre l'informatique et le codage."
+        },
+        "83f493e8-9941-4154-b2f4-f34836741746": {
+          "description": "Définir « codage » et « informatique »."
+        },
+        "58cd5fc3-375f-4840-a5ac-fdb527a38ebd": {
+          "description": "Identifier le vocabulaire informatique clé."
+        },
+        "1cc8d9b3-ae28-4034-b5e3-c5c0a63d43d3": {
+          "description": "Identifier où aller pour continuer à apprendre l'informatique et le codage."
+        },
+        "f9486b57-7160-4b3b-b327-b311239d5d26": {
+          "description": "Développer des programmes qui répondent aux événements chronométrés"
+        },
+        "251fe027-d9b3-4384-99f6-53505275e4ce": {
+          "description": "Développer des programmes qui répondent aux commentaires des utilisateurs"
+        },
+        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
+          "description": "Créer des animations de danse avec du code"
+        },
+        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
+          "description": "Discutez du rôle que joue l'intelligence artificielle dans leur vie."
+        },
+        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
+          "description": "Se former et tester un modèle d'apprentissage automatique."
+        },
+        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
+          "description": "Raisonner sur la façon dont le biais humain joue un rôle dans l'apprentissage automatique."
+        },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": "Créez une animation interactive en utilisant des sprites et des événements."
+        },
         "1033b638-05a5-40c2-8e29-1efe1b5f3451": {
           "description": "Définir le terme « mot de passe » et décrire le but d'un mot de passe."
         },
@@ -179,18 +311,6 @@
         "ea8b6be7-f51c-420f-a295-ec02488a066f": {
           "description": "Utiliser des variables en les associant à des invites."
         },
-        "fc312ef1-6ea0-41a5-b112-b4e478cef7d3": {
-          "description": ""
-        },
-        "29d1cbbf-aba5-45c8-ab1f-fc1ed266bb1b": {
-          "description": ""
-        },
-        "9da7b378-c4e9-4184-b58a-61dfdad47357": {
-          "description": ""
-        },
-        "ac5f0f5b-6aa9-4732-930d-08d96a451b99": {
-          "description": ""
-        },
         "3606812b-a55f-4eb9-8a40-a9ca52df3726": {
           "description": "Faire et tester une prévision en modifiant les variables de la simulation "
         },
@@ -243,7 +363,7 @@
           "description": "Créer de nouveaux sprites et leur attribuer des costumes et des comportements. "
         },
         "bf11a11b-35be-4fdc-a266-9f192e141760": {
-          "description": "Définissez « sprite » comme un personnage ou un objet à l'écran qui peut être déplacé et modifié. "
+          "description": "Définir un « sprite » comme étant un personnage ou un objet à l'écran qui peut être déplacé et modifié. "
         },
         "0601569e-2f95-4d2f-a3a9-0aea3df102ed": {
           "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
@@ -273,13 +393,13 @@
           "description": "Associer des formes simples pour en faire des designs complexes en utilisant les boucles imbriquées."
         },
         "2cae95f3-a3dc-4541-8b5c-43d876d26ce3": {
-          "description": "Définir quand une boucle, une boucle imbriquée, ou aucune boucle n'est nécessaire."
+          "description": "Décrire quand une boucle, une boucle imbriquée, ou aucune boucle est nécessaire."
         },
         "45801eec-c3af-4a73-afb8-988d55e7a469": {
-          "description": "Reconnaître la différence entre utiliser une boucle et une boucle imbriquée."
+          "description": "Reconnaître la différence entre utiliser une boucle et utiliser une boucle imbriquée."
         },
         "feae5f14-f531-4db9-b746-9582df08da12": {
-          "description": "Décomposer le code en séquences reproductibles les plus grandes, à l'aide à la fois des boucles et des boucles imbriquées."
+          "description": "Diviser le code en les plus larges séquences reproductibles possibles en se servant à la fois des boucles et des boucles imbriquées."
         },
         "020afd03-339c-4b70-af23-62f495f2088f": {
           "description": "Identifier les sections d'une chanson à intégrer dans une fonction."
@@ -291,16 +411,16 @@
           "description": "Localiser les phrases récurrentes dans les paroles d'une chanson."
         },
         "50d6d0ce-0013-47e4-9f0b-ac6bca5d4a30": {
-          "description": "Utiliser des fonctions prédéterminées pour effectuer des tâches fréquemment répétées."
+          "description": "Utiliser des fonctions prédéterminées pour compléter des tâches qui se répètent fréquemment."
         },
         "e3843037-6a2c-4561-9a5c-c27b4e84de71": {
           "description": "Utiliser des fonctions pour simplifier des programmes complexes."
         },
         "34743a30-9835-4b96-9933-c84ccd8a20b6": {
-          "description": "Reconnaître lorsqu'une une fonction pourrait aider à simplifier un programme."
+          "description": "Reconnaître quand une fonction pourrait aider à simplifier un programme."
         },
         "fa73c58f-368d-4e53-97eb-7de987b548c3": {
-          "description": "Catégoriser et généraliser le code en fonctions utiles."
+          "description": "Classer et généraliser le code en fonctions utiles."
         },
         "818dc160-2ce6-4d7d-a358-208b9026debb": {
           "description": "Déterminer si une condition est remplie, en fonction de critères."
@@ -315,10 +435,10 @@
           "description": "Définir les circonstances dans lesquelles certaines parties d'un programme devraient s'exécuter et dans lesquelles elles ne le devraient pas."
         },
         "59e29159-7e29-48ce-95c7-8510877793e9": {
-          "description": "Reconnaître lorsqu'une une fonction pourrait aider à simplifier un programme."
+          "description": "Reconnaître quand une fonction pourrait aider à simplifier un programme."
         },
         "b92ee5de-79d3-4fd6-8bf6-e86e3dad779a": {
-          "description": "Utiliser des fonctions prédéterminées pour effectuer des tâches fréquemment répétées."
+          "description": "Utiliser des fonctions prédéterminées pour compléter des tâches qui se répètent fréquemment."
         },
         "5fb6d430-a2bf-4d0b-b128-5592afc2d856": {
           "description": "Améliorer le design d'une appli existante en répondant aux besoins d'accessibilité des utilisateurs."
@@ -349,6 +469,111 @@
         },
         "d3dbfefc-34eb-4b0a-ab79-53a1ce3adfdc": {
           "description": "Apprendre à planifier à l'avance pour une tâche qui se fait de façon continue. "
+        },
+        "4bf451c9-a1ce-4e40-95a6-10c911a081bf": {
+          "description": "Faites-les apprendre que les informations qu'ils partagent en ligne laissent une empreinte numérique ou une « trace ». "
+        },
+        "7cc37ede-4e83-4881-9213-1746313de397": {
+          "description": "Découvrez quelles informations peuvent être partagées en ligne. "
+        },
+        "1fb2f469-060b-4caf-ab67-28747acc0f00": {
+          "description": "Traduire une liste d'étapes en une série d'actions physiques "
+        },
+        "8a9a5295-648e-47f2-baec-c5a360f2788a": {
+          "description": "Définir une liste d'étapes (algorithme) pour amener un ami de son point de départ à son but"
+        },
+        "ab239024-3c6d-4db1-8c7c-2572c316dc75": {
+          "description": "Identifier et corriger les erreurs dans l'exécution d'un algorithme "
+        },
+        "9c04f7e1-5859-4e61-9ae0-630df254a9aa": {
+          "description": "Montrez les bons comportements en salle informatique "
+        },
+        "c78930e6-cbb5-418c-8ca3-9124e79570cd": {
+          "description": "Testez des actions de programmation normales basées sur les blocs, telles que : cliquer, glisser-déposer, etc. "
+        },
+        "0ad6ceff-faa1-40ea-a688-7ad92308dca3": {
+          "description": "Construire un programme en réorganisant des mouvements séquentiels."
+        },
+        "1c946e64-eafa-4a8f-8c2d-5829ab3acbf7": {
+          "description": "Construire un programme informatique à partir d'un ensemble d'instructions écrites."
+        },
+        "59718681-70e8-4b7f-91a7-e6b02e4ca98f": {
+          "description": "Traduire les mouvements en une série de commandes."
+        },
+        "a278cf3e-4bf9-4d1c-b9d0-a73c2530e3d8": {
+          "description": "Traduire les mouvements en une série de commandes."
+        },
+        "ae6f9158-191c-458c-9850-331faf94b567": {
+          "description": "Identifier et localiser les bugs dans un programme."
+        },
+        "72900cbd-2ad8-4073-abde-f397a2832b5d": {
+          "description": "Convertir une série d'actions multiples en une seule boucle."
+        },
+        "76138142-0691-4645-8e78-5dbb1c19eab0": {
+          "description": "Traduire un programme d'images en une danse dans la vraie vie. "
+        },
+        "ad9095b2-5de7-41af-89b9-aac0f2fd0726": {
+          "description": "Répéter les actions initiées par l'instructeur."
+        },
+        "2b7ac17e-7e3a-44b5-8c46-e28eec5af112": {
+          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence répétable possible."
+        },
+        "4d6affaa-f8b0-4dbc-a436-4dccf8c57fc1": {
+          "description": "Employer un mélange de commandes séquentielles et en boucle pour parvenir à la fin d'un labyrinthe."
+        },
+        "be1a4163-770d-4fbd-85a1-4c18198d5c94": {
+          "description": "Créer un programme pour une tâche donnée qui boucle une séquence de commandes."
+        },
+        "dbb376e1-41ba-4f5f-8125-30a2de24cead": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "36786d0a-ce44-48d7-b557-a7e44c32c28d": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "6baba9ab-130e-4a58-bf30-7cee60bacb18": {
+          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence répétable possible."
+        },
+        "54ae27f7-71b5-41ce-a67a-61d15e520bc3": {
+          "description": "Compter le nombre de fois qu'une action doit être répétée et représenter cela sous forme de boucle."
+        },
+        "5f8621d2-481c-487d-a2e1-90d7fd15b929": {
+          "description": "Créer un programme qui dessine des formes complexes en répétant des séquences simples."
+        },
+        "b85981bf-b2e5-49f6-bf08-348f8d16ba2b": {
+          "description": "Décomposer une forme en sa plus grande séquence reproductible."
+        },
+        "28c09bb0-c9f4-44ab-ba0a-8c9cdb24e5f0": {
+          "description": "Recommander des technologies à autrui, en fonction de leurs besoins spécifiques."
+        },
+        "9e78b33b-39a6-4524-89e4-a26fdba11cb5": {
+          "description": "Faire preuve d'empathie et de créativité lors de la conception de technologies pour les autres. "
+        },
+        "f854671c-b4c0-4bd7-8dd6-bf0094cd1733": {
+          "description": "Énumérer plusieurs exemples différents d'applications pour smartphone. "
+        },
+        "1275ac31-dcd9-49c5-92e2-68abd8aa9955": {
+          "description": "Répéter les commandes données par un enseignant."
+        },
+        "4dbb2bcf-bd83-4c90-a077-6261a6b2607c": {
+          "description": "S'entraîner à différencier entre les actions prédéfinies et les actions axées sur des événements."
+        },
+        "ef1a9273-ff0e-4134-8456-9762728bed55": {
+          "description": "Reconnaître les actions de l'enseignant comme des signaux pour lancer des commandes."
+        },
+        "2583489b-c21a-415d-bd1f-c0fa1eca9ef0": {
+          "description": "Identifier les actions qui aux événements d'entrée."
+        },
+        "2f9f9b26-d5f6-48ab-be27-98608a47b74d": {
+          "description": "Créer une histoire animée et interactive en utilisant les séquences et les gestionnaires d'événements."
+        },
+        "a64618b3-e151-46ce-9670-cada1927a2db": {
+          "description": "Partager un artefact créatif avec d'autres élèves."
+        },
+        "0e1a61eb-eb48-4c3b-ab89-5b19ef6c6977": {
+          "description": "Mettre en pratique des notions d'informatique dans un projet libre. "
+        },
+        "3aa63e80-f3d8-4043-811d-5b275f168499": {
+          "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
         },
         "7279e4aa-2ccc-49b2-b912-e4e4d680e15b": {
           "description": "Identifier et localiser les bugs dans un programme."
@@ -384,7 +609,7 @@
           "description": "Créer de nouveaux sprites et leur attribuer des costumes et des comportements. "
         },
         "0e3791df-3c03-4b83-9943-d3b57110dea1": {
-          "description": "Définissez « sprite » comme un personnage ou un objet à l'écran qui peut être déplacé et modifié. "
+          "description": "Définir un « sprite » comme étant un personnage ou un objet à l'écran qui peut être déplacé et modifié. "
         },
         "0b712f3f-c5fb-4d8d-8247-23bfa13c0139": {
           "description": "Créer de nouveaux sprites et leur attribuer des costumes et des comportements. "
@@ -441,13 +666,13 @@
           "description": "Diviser les tâches complexes en de plus petites sections reproductibles."
         },
         "2dc48a33-af54-4ea5-b2a5-4b8c16018529": {
-          "description": "Reconnaître la différence entre utiliser une boucle et une boucle imbriquée."
+          "description": "Reconnaître la différence entre utiliser une boucle et utiliser une boucle imbriquée."
         },
         "3eb2fbbc-383b-4293-94a9-df920d67ff2e": {
-          "description": "Définir quand une boucle, une boucle imbriquée, ou aucune boucle n'est nécessaire."
+          "description": "Décrire quand une boucle, une boucle imbriquée, ou aucune boucle est nécessaire."
         },
         "7376c401-4ea5-4247-a739-1b3c8f3077c7": {
-          "description": "Décomposer le code en séquences reproductibles les plus grandes, à l'aide à la fois des boucles et des boucles imbriquées."
+          "description": "Diviser le code en les plus larges séquences reproductibles possibles en se servant à la fois des boucles et des boucles imbriquées."
         },
         "5abe1116-ce82-4bce-8454-7537bdce12d4": {
           "description": "Déterminer si une condition est remplie, en fonction de critères."
@@ -480,40 +705,34 @@
           "description": "Traduire des déclarations conditionnelles et des boucles du langage parlé vers un programme."
         },
         "24fd8517-7a14-4489-8d76-76ddf7b9a7fe": {
-          "description": "Associer une boucle et une instruction conditionnelle."
+          "description": "Associer une boucle et une instruction conditionnelle ensemble."
         },
         "57a8c756-ad85-4861-ae8d-a54d86c19d26": {
-          "description": "Imbriquer des conditions pour analyser plusieurs conditions de valeur à l'aide de la logique si, sinon si, sinon."
+          "description": "Imbriquer des instructions conditionnelles pour analyser des conditions aux valeurs multiples en utilisant une logique si, sinon si, sinon."
         },
         "6c8101ef-895e-43de-b0a5-cbfddc2ca79f": {
           "description": "Utiliser des fonctions pour simplifier des programmes complexes."
         },
         "90578a9d-1c23-4b7e-be6d-5c2d5c18ff7b": {
-          "description": "Utiliser des fonctions prédéterminées pour effectuer des tâches fréquemment répétées."
+          "description": "Utiliser des fonctions prédéterminées pour compléter des tâches qui se répètent fréquemment."
         },
         "05e395d7-bc15-440b-a765-833fc2e05258": {
-          "description": "Reconnaître lorsqu'une une fonction pourrait aider à simplifier un programme."
+          "description": "Reconnaître quand une fonction pourrait aider à simplifier un programme."
         },
         "3ccd51c5-ad2c-4f0e-9a41-5816a40cc190": {
-          "description": "Utiliser des fonctions prédéterminées pour effectuer des tâches fréquemment répétées."
+          "description": "Utiliser des fonctions prédéterminées pour compléter des tâches qui se répètent fréquemment."
         },
         "33ccfa77-2a9e-4500-ba9c-0ba82af10a78": {
-          "description": "Catégoriser et généraliser le code en fonctions utiles."
+          "description": "Classer et généraliser le code en fonctions utiles."
         },
         "fdfbb07a-5a1c-459d-81ae-8b7c35da4ecc": {
-          "description": "Reconnaître lorsqu'une une fonction pourrait aider à simplifier un programme."
+          "description": "Reconnaître quand une fonction pourrait aider à simplifier un programme."
         },
         "7540f285-a55a-465e-87cd-ed3a930b9ea7": {
           "description": "Utiliser des variables en les associant à des invites."
         },
         "fc585f17-d535-4c1d-aaba-65e878894373": {
-          "description": ""
-        },
-        "4d6b0001-0d41-45ae-8061-1c493e6976ee": {
-          "description": ""
-        },
-        "54f59612-1695-4ba2-bbf4-c03862b02924": {
-          "description": ""
+          "description": "Utiliser des variables pour contenir des mots et des phrases."
         },
         "75953ae5-c4fa-40d3-85e1-deb508c32847": {
           "description": "Attribuer des valeurs à des variables existantes."
@@ -625,6 +844,102 @@
         },
         "d2669646-8580-4bb3-a6e0-54961b42a029": {
           "description": "Créer une histoire animée et interactive en utilisant les séquences et les gestionnaires d'événements."
+        },
+        "086d6899-da60-486b-a9f7-89715397d81c": {
+          "description": "Expliquez les règles pour voyager en toute sécurité sur Internet. "
+        },
+        "6ec5d1a8-13d0-43ab-a269-dc1060d0f872": {
+          "description": "Comparez le fait qu'être en sécurité en ligne, c'est comme l'être dans le monde réel. "
+        },
+        "dfa4ff01-8e4b-410d-93fb-2380f70f0042": {
+          "description": "Découvrez que l'Internet peut être utilisé pour visiter des endroits lointains et apprendre de nouvelles choses. "
+        },
+        "9ffae8f4-4880-42db-ba40-b4379c1a5f6c": {
+          "description": "Reconnaître ce qu'on attend d'eux lorsqu'ils passent au labo informatique."
+        },
+        "d386bcb1-393c-46bc-8524-7380583d6ebb": {
+          "description": "Utilisez la bonne terminologie quand vous faites référence à une souris d'ordinateur, un trackpad ou un écran tactile. "
+        },
+        "42c68792-f472-4122-906c-67bef3edae73": {
+          "description": "Traduire un algorithme en un programme"
+        },
+        "4d08a4a4-7475-4257-a955-62768629b65e": {
+          "description": "Identifier et corriger les bugs ou les erreurs dans les instructions séquencées"
+        },
+        "f28907e3-caa2-4cfa-bd01-39282b5f5f8d": {
+          "description": "Décoder et exécuter un programme créé par quelqu'un d'autre"
+        },
+        "25a06d14-94e5-41a1-b199-2d8ef7041b0f": {
+          "description": "Testez des actions de programmation normales basées sur les blocs, telles que : cliquer, glisser-déposer, etc. "
+        },
+        "2e7e4324-ea3b-4e18-a61a-0e449579669a": {
+          "description": "Montrez les bons comportements en salle informatique "
+        },
+        "81b0eb83-7612-4f91-91d1-f6dd25afebb6": {
+          "description": "Construire un programme en réorganisant les mouvements séquentiels"
+        },
+        "d6d95ae8-01ab-408a-a17d-6c4813fe0991": {
+          "description": "Construire un programme d'ordinateur à partir d'une série d'instructions écrites"
+        },
+        "f3ccc59a-2988-4ec2-994f-ae781e4e66d6": {
+          "description": "Choisir les processus de débogage adaptés lors de la résolution de problèmes"
+        },
+        "8fda32cd-f173-4d41-9a5c-4bb91f282534": {
+          "description": "Identifiez des problèmes ou « bugs » dans un programme et élaborez un plan pour résoudre ces problèmes."
+        },
+        "ad2e874f-6827-4cec-bd3e-4c12a0596df5": {
+          "description": "Séquencez les commandes dans un ordre logique."
+        },
+        "242ad249-b860-4727-9b98-01f0e2025d8d": {
+          "description": "Interpréter un programme avec des boucles comme une série de plusieurs actions."
+        },
+        "616d06fa-de3a-4e8e-970b-1077be296a30": {
+          "description": "Identifier un code répétitif et réduire plusieurs actions en une seule boucle."
+        },
+        "a28f100d-9129-44e2-ae89-93a0e4da1ef2": {
+          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant vers des structures mise en boucle"
+        },
+        "b55b43b6-9b0d-4703-be2e-9525b05c0a26": {
+          "description": "Construire un programme en utilisant des structures qui répètent des zones de code"
+        },
+        "95c27888-7fcc-4606-8647-b8d7aca4841c": {
+          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence répétable possible."
+        },
+        "afb9f46f-81f6-4f0a-a017-4e9c5fd5c7f6": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "03eb830d-5a23-4897-b23b-067e5eb0180f": {
+          "description": "Décomposer une forme en sa plus grande séquence reproductible."
+        },
+        "408f218c-3c80-44f0-9a98-c6bd82fa4021": {
+          "description": "Créer un programme qui dessine des formes complexes en répétant des séquences simples."
+        },
+        "eb0c126b-1a28-4a64-81a8-84713ba12efb": {
+          "description": "Compter le nombre de fois qu'une action doit être répétée et représenter cela sous forme de boucle."
+        },
+        "11ae4f6e-9a22-4fe7-b476-d0251076f65b": {
+          "description": "S'entraîner à différencier entre les actions prédéfinies et les actions axées sur des événements."
+        },
+        "699d524a-9ba6-430d-8ab4-fdce1b832b6f": {
+          "description": "Reconnaître les actions de l'enseignant comme des signaux pour lancer des commandes."
+        },
+        "805cf72f-fb59-4003-b6b5-1879ced802b9": {
+          "description": "Répéter les commandes données par un enseignant."
+        },
+        "946d56ae-8a81-476c-93ab-6d5eff1f9633": {
+          "description": "Créer une histoire animée et interactive en utilisant des séquences et des gestionnaires d'événements."
+        },
+        "ab8e0f55-bcb7-4af5-813f-df7d9629e21f": {
+          "description": "Partager un artefact créatif avec d'autres élèves."
+        },
+        "dddf548b-2b97-45fd-ad62-f4c633d3647d": {
+          "description": "Identifier les actions qui aux événements d'entrée."
+        },
+        "12be98ac-b495-4379-94d1-6cdd7395776a": {
+          "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
+        },
+        "6619f367-009a-49ca-9d78-582a2ff9ad5e": {
+          "description": "Mettre en pratique des notions d'informatique dans un projet libre. "
         },
         "33b55b11-ca81-406f-be39-265e8f33d09d": {
           "description": "Identifier comment réagir aux paroles méchantes en ligne, en utilisant S-T-O-P. "
@@ -746,461 +1061,26 @@
         "5feb276e-2e95-4bd6-87b8-7bb9075d0d0a": {
           "description": "Utiliser une conception planifiée comme plan de création."
         },
-        "078fec6a-9fc8-4d1c-be3b-145bbe8c44c9": {
-          "description": ""
-        },
-        "9cd5c970-3a55-4940-958d-61605147d5c2": {
-          "description": ""
-        },
-        "0d580f25-ee71-432a-8b69-7349fa960674": {
-          "description": ""
-        },
-        "ffc8e923-dff2-40b1-8b1d-f0a09ab29a62": {
-          "description": ""
-        },
-        "d3b5237e-6e10-4047-be27-c0cd12d356aa": {
-          "description": ""
-        },
-        "d77690f8-afd2-4ca0-9be0-3ed08c2bdd1d": {
-          "description": ""
-        },
-        "74b683c5-113c-4d05-9da5-38329409e4f9": {
-          "description": ""
-        },
-        "c86aff12-2dbd-49dd-9b2c-1533d2b6b67d": {
-          "description": ""
-        },
-        "ba4227d1-66ee-4d5d-a9dd-bebbf43088eb": {
-          "description": ""
-        },
-        "d658e76c-fefe-4d39-a6de-f3226d759b35": {
-          "description": ""
-        },
-        "0fa20ec4-0324-43f0-9258-a26552fe029e": {
-          "description": ""
-        },
-        "3af536f4-0410-4a24-827f-d97d292f7e7b": {
-          "description": ""
-        },
-        "37c70730-7a01-444c-9652-c7977d5545ca": {
-          "description": ""
-        },
-        "8f275062-9b81-4771-b7be-bae454b7d673": {
-          "description": ""
-        },
-        "ade3062a-fb55-40e3-937d-e6060b55b9ed": {
-          "description": ""
-        },
-        "b2f72fa5-d58c-4d89-bc49-3b03872eeaf6": {
-          "description": ""
-        },
-        "e26a79b0-b4bf-4341-88b5-4bf959cd3ffc": {
-          "description": ""
-        },
-        "1d4673ca-199b-46a4-84a7-656b123b00d3": {
-          "description": ""
-        },
-        "4ecdb927-3f50-4cae-a8b5-43e5cb6d594c": {
-          "description": ""
-        },
-        "559a197c-3703-47ac-b7a7-76ea51af2c9f": {
-          "description": ""
-        },
-        "d472eb7c-0cf3-4772-9597-5f80e2a1e57d": {
-          "description": ""
-        },
-        "ecae7b1f-43e4-49d3-8b7f-4949c2279978": {
-          "description": ""
-        },
-        "fb8a7a54-344f-4990-b622-9c7d312d5ae9": {
-          "description": ""
-        },
-        "bc5753cb-a584-452e-8a07-a6df74b2b3d8": {
-          "description": ""
-        },
-        "f1234be5-c0ff-4acd-b223-b2e37e10d93b": {
-          "description": ""
-        },
-        "6b598741-bb69-4f2e-b101-d9b7d8c23054": {
-          "description": ""
-        },
-        "81cbe752-e505-4226-875f-a03ab4671fd7": {
-          "description": ""
-        },
-        "1f2032fb-aef8-4f29-9e73-cb39ae0b7753": {
-          "description": ""
-        },
-        "7ae34966-a319-42bc-8e4f-dca8a5beabe3": {
-          "description": ""
-        },
-        "a64a27fc-47e4-4320-9506-7f8d3d23821d": {
-          "description": ""
-        },
-        "21f43f7a-5166-4972-9076-1a0e9dd75258": {
-          "description": ""
-        },
-        "979f3a49-ce48-440b-8dc4-4f0a478cd962": {
-          "description": ""
-        },
-        "eca67119-27ce-42b2-8e6e-d7bc14095248": {
-          "description": ""
-        },
         "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Se former et tester un modèle d'apprentissage automatique."
         },
         "db7f5c46-7cbc-477f-a325-dac7168fd719": {
           "description": "Raisonner sur la façon dont le biais humain joue un rôle dans l'apprentissage automatique."
         },
-        "1380eb65-627f-46bd-9d89-e1d75dfc45b7": {
-          "description": ""
+        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
+          "description": "Développer des programmes qui répondent à des événements planifiés."
         },
-        "5e1cfa5a-c056-4b90-b2b8-886263dab73b": {
-          "description": ""
+        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
+          "description": "Illustrer les changements d'humeur d'un poème."
         },
-        "0476cbe2-4b38-4943-8a29-10e8f9307666": {
-          "description": ""
+        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
+          "description": "Représenter le langage figuré et littéral dans un texte."
         },
-        "80c42d14-ae97-41e5-9f54-e2d301214878": {
-          "description": ""
+        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
+          "description": "Reconnaître ce qu'on attend d'eux lorsqu'ils passent au labo informatique."
         },
-        "b85bb5be-65f2-4ac9-8f0f-414a534e8ee0": {
-          "description": ""
-        },
-        "2c8a7aae-0eb3-43e4-af11-a7d983f08293": {
-          "description": ""
-        },
-        "de78bf50-a981-49ce-94a6-1794ff2e6076": {
-          "description": ""
-        },
-        "5304d021-0887-40c2-8189-44163b7d0252": {
-          "description": ""
-        },
-        "5c991204-e725-4b24-8cb6-21aaf734ad2a": {
-          "description": ""
-        },
-        "7cdf9380-d6a5-4ee5-a9a0-c1e6e198a7f3": {
-          "description": ""
-        },
-        "a0596f12-31b4-4ff8-8546-6e46c95f1f24": {
-          "description": ""
-        },
-        "c11d1740-d582-464b-aaa4-bd22c710fce1": {
-          "description": ""
-        },
-        "79703655-22be-4793-9467-645a51036c6e": {
-          "description": ""
-        },
-        "c7d19ce4-de97-45e9-9eca-24091cf33f2e": {
-          "description": ""
-        },
-        "562b0b01-1b21-4c50-a63f-8d749d32f9de": {
-          "description": ""
-        },
-        "653717aa-11b9-45b1-b2c8-fac35c18feea": {
-          "description": ""
-        },
-        "b2463106-01c4-42ed-a732-46be3ca3191f": {
-          "description": ""
-        },
-        "42d14a4e-0836-4d86-aba7-207e9a322daf": {
-          "description": ""
-        },
-        "5a49bc36-dccc-454a-8b8c-290946b595bf": {
-          "description": ""
-        },
-        "81d18fde-09cd-411b-a2b8-e49eb0e44aa7": {
-          "description": ""
-        },
-        "76cff286-8d27-4ec9-9203-0dbf0c6235fe": {
-          "description": ""
-        },
-        "86acd27d-2f32-46a5-944e-6caf24e43873": {
-          "description": ""
-        },
-        "bfa63478-5cbf-4a29-992e-45f3c7a34673": {
-          "description": ""
-        },
-        "2ebd7cbf-186c-4685-966c-0bff0c440c41": {
-          "description": ""
-        },
-        "c7072356-f905-45ea-8a1d-896c1d3d59d0": {
-          "description": ""
-        },
-        "d9ab8195-2b9a-4ba8-9b24-98abe5172a2d": {
-          "description": ""
-        },
-        "4478ba9d-cd39-48a1-9eb2-dae2bd660d68": {
-          "description": ""
-        },
-        "5567e330-9ea2-49ba-922f-f85ec5b38eea": {
-          "description": ""
-        },
-        "c2af5d23-e29f-4427-a128-d18d656b134d": {
-          "description": ""
-        },
-        "0a5b806f-c672-409e-8f04-5a2416ef9f8a": {
-          "description": ""
-        },
-        "5d04bd39-2968-4018-bd3a-4ba26d88fe06": {
-          "description": ""
-        },
-        "ff942d9c-3b05-4664-9ef3-a8c5646eaf13": {
-          "description": ""
-        },
-        "dedc8e2d-6a07-46e3-89c2-d8a214416d44": {
-          "description": ""
-        },
-        "e47931fd-1372-47f9-87d0-759a46e37e41": {
-          "description": ""
-        },
-        "371879c7-e338-45a3-8c40-4f82b78702f9": {
-          "description": ""
-        },
-        "9a3394cc-5d5a-4cef-9f48-6dcdacb47888": {
-          "description": ""
-        },
-        "216cb133-b606-43be-adb9-6cf77faa357f": {
-          "description": ""
-        },
-        "39ea0ee9-0bed-4684-b37f-78fb7585a784": {
-          "description": ""
-        },
-        "772d2b7c-9863-42d1-8eb6-ec0520b19441": {
-          "description": ""
-        },
-        "530ec96a-34f8-4ebd-9ba3-13c2ba0926cd": {
-          "description": ""
-        },
-        "a2eaee21-e82f-4b0d-aae4-dc6ebc2280c0": {
-          "description": ""
-        },
-        "43fc52a2-e27f-40b0-8b9b-77f757f6f764": {
-          "description": ""
-        },
-        "9d3158aa-110b-43d2-89c9-6510524bd9bb": {
-          "description": ""
-        },
-        "c25b3f0d-dcfb-415a-a97f-89b4e89311a5": {
-          "description": ""
-        },
-        "1a871ec6-8ec4-4a65-b036-2482e0b07269": {
-          "description": ""
-        },
-        "8de745f1-fb9a-4fc6-b98b-dc2806d7f4f2": {
-          "description": ""
-        },
-        "f94d8eca-cf05-40a8-acf0-8c5b1ed3868f": {
-          "description": ""
-        },
-        "9d865e75-6b5a-43d4-a145-17de9aee4ad3": {
-          "description": ""
-        },
-        "411f894a-c802-41df-822e-41c4b8dd9a9d": {
-          "description": ""
-        },
-        "72496109-18f7-4a09-84eb-3aabcc22ae92": {
-          "description": ""
-        },
-        "36566c25-03d9-4b33-9269-bf4155649445": {
-          "description": ""
-        },
-        "b18a4c06-e791-4aed-8ce9-8373bdfb8352": {
-          "description": ""
-        },
-        "f792a4b7-46e7-4887-871b-bf2f921bc44d": {
-          "description": ""
-        },
-        "12844473-89b5-4157-82c2-801b4aca52fb": {
-          "description": ""
-        },
-        "2ad3c9f2-28d0-461b-8a75-15b8a69d2f53": {
-          "description": ""
-        },
-        "522df320-9b1b-42e5-b997-09f45759d2d3": {
-          "description": ""
-        },
-        "b96eecbc-f152-4b13-87bb-5c2bd71bafcf": {
-          "description": ""
-        },
-        "e1012bc2-2e9b-4066-9ec8-b1c2a10c72e0": {
-          "description": ""
-        },
-        "154510cf-774c-49e2-ac44-97f8b358f987": {
-          "description": ""
-        },
-        "d104dffd-48d0-491e-813e-6d2867de294f": {
-          "description": ""
-        },
-        "98ef15a4-cec5-4410-941f-e493978cbdb2": {
-          "description": ""
-        },
-        "a92a3ce6-e432-4a5e-a484-5f4ca110b2b5": {
-          "description": ""
-        },
-        "ecd2dd66-5ac2-4cba-a3db-e86eeb93644f": {
-          "description": ""
-        },
-        "0a362b6b-eb99-4648-abaf-609f15ac0948": {
-          "description": ""
-        },
-        "561329f0-2d51-44e0-a761-89467f39b783": {
-          "description": ""
-        },
-        "111ced6d-7a03-4f25-bc84-e9ea52a15f4f": {
-          "description": ""
-        },
-        "7b9ca082-7b03-4e09-b0bf-d33a70502d6a": {
-          "description": ""
-        },
-        "4ab9fb5b-e4f9-402c-87fd-f8c67e95f854": {
-          "description": ""
-        },
-        "8291b013-88a0-4bcf-8815-dcd127b899f8": {
-          "description": ""
-        },
-        "3655a84f-baf8-4feb-8296-a45434158ef4": {
-          "description": ""
-        },
-        "8a256d5f-e9c0-4f08-96be-6ce4acffadfc": {
-          "description": ""
-        },
-        "6937cac3-eee0-4c3c-9fdc-49a7378013c2": {
-          "description": ""
-        },
-        "c5133459-f185-40c2-ab71-fae84e1044ad": {
-          "description": ""
-        },
-        "ce0887ae-3904-4475-9d03-923199a851b1": {
-          "description": ""
-        },
-        "13503201-2764-45e3-b644-2f5fd993f710": {
-          "description": ""
-        },
-        "149a90c7-273f-4c73-8273-2799340bf90d": {
-          "description": ""
-        },
-        "be3ca496-7d99-4db9-8ca3-2844688ce210": {
-          "description": ""
-        },
-        "15bd7a23-5d71-46fc-9534-112241fcb7c4": {
-          "description": ""
-        },
-        "1a615e1a-3506-461f-ae16-433abddd2fa4": {
-          "description": ""
-        },
-        "24b3d2c9-3a7b-4232-80fa-8272f0bfd7fb": {
-          "description": ""
-        },
-        "608b3d15-c429-49e9-84e0-26c7e151143c": {
-          "description": ""
-        },
-        "a623c1a7-f58d-44fd-80da-924e9ad6ec1c": {
-          "description": ""
-        },
-        "28bcb96e-7769-49a0-a8f6-b183cce873e9": {
-          "description": ""
-        },
-        "52c71d11-1250-424c-a113-6c36c3083342": {
-          "description": ""
-        },
-        "04151a07-8251-4216-a51e-e12e64b568aa": {
-          "description": ""
-        },
-        "7dc164da-e876-45b2-94cc-360b92c7e2ee": {
-          "description": ""
-        },
-        "e5edbdd5-a926-4a68-9b96-2e206b4330dd": {
-          "description": ""
-        },
-        "1e818391-5de9-4ad0-828e-8457cb34805e": {
-          "description": ""
-        },
-        "2b3a24a7-98b6-4a3d-b446-4630bd4e7a9a": {
-          "description": ""
-        },
-        "3c008c53-63fc-4e2c-b766-5e35441f0b48": {
-          "description": ""
-        },
-        "4c0488ad-53bf-4650-abbf-6e249543b988": {
-          "description": ""
-        },
-        "b3491bac-8eca-4817-8658-c1d0dd04e8ec": {
-          "description": ""
-        },
-        "3b81f029-8a75-4223-94c2-f5540e612c27": {
-          "description": ""
-        },
-        "6fcd183a-7d4e-44e5-bf7f-d7d8f7279c31": {
-          "description": ""
-        },
-        "95694b30-9acd-47d3-9dd8-6f000dad8fba": {
-          "description": ""
-        },
-        "a8b7e858-2aa8-42de-8bf1-f627babf4b96": {
-          "description": ""
-        },
-        "b5f3f0ec-c563-45e9-bd12-6d2a9a01b7e6": {
-          "description": ""
-        },
-        "b6d3f91f-3252-45cd-b183-adbf3a0e0691": {
-          "description": ""
-        },
-        "3d2d0f94-7396-4f69-95b5-dfd8b7c95e4c": {
-          "description": ""
-        },
-        "fd2f3a3b-d981-4d9b-ad8e-4e0f2bbdf420": {
-          "description": ""
-        },
-        "96ace636-3dcb-4db1-93e3-de7c699751cc": {
-          "description": ""
-        },
-        "1afb5069-3b9a-4b3f-a555-a51aa337780f": {
-          "description": ""
-        },
-        "3a0160d2-7fac-4428-b229-41af43564cb1": {
-          "description": ""
-        },
-        "410169f4-ccb1-42f7-9ddf-fef8068c2a7b": {
-          "description": ""
-        },
-        "7b87ea5b-d720-4f00-a3bd-e70600dfcad2": {
-          "description": ""
-        },
-        "50029d66-c4d2-4804-a227-01d50bf73769": {
-          "description": ""
-        },
-        "abc7ae72-467a-4e13-b4b4-00cdc60a9a0c": {
-          "description": ""
-        },
-        "a720d628-20d7-45f5-a183-eb6823bf8b6f": {
-          "description": ""
-        },
-        "32449f20-2f87-4259-99ef-cd7e58d4b8f3": {
-          "description": ""
-        },
-        "e0f97525-eabc-4a77-ac9c-ef7e3e869a47": {
-          "description": ""
-        },
-        "f902f391-277d-45cb-8ae4-279065ec94c4": {
-          "description": ""
-        },
-        "723b01ab-9a3f-4767-8978-f241abba9115": {
-          "description": ""
-        },
-        "0ecde430-f617-4c96-9b1c-c9863bb8a273": {
-          "description": ""
-        },
-        "6fa6528c-a414-44aa-82c1-6ac34fbab03e": {
-          "description": ""
-        },
-        "88c2d538-8d11-431a-b799-d28d085a3c15": {
-          "description": ""
-        },
-        "6381f927-324f-4efe-9e8b-a52c76750bc9": {
-          "description": ""
-        },
-        "9cffd1e7-8cf5-43a8-800e-2aab85f50f5b": {
-          "description": ""
+        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
+          "description": "Utilisez la bonne terminologie quand vous faites référence à une souris d'ordinateur, un trackpad ou un écran tactile. "
         },
         "5b8eb232-7326-4c4d-8507-0c2da9642581": {
           "description": "Décrire l'importance de l'utilisateur dans le processus de conception. "
@@ -1346,6 +1226,447 @@
         "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65": {
           "description": "Articuler le processus de conception et comment cela a influé sur la forme du projet final abouti. "
         },
+        "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
+          "description": "Faites-les apprendre que les informations qu'ils partagent en ligne laissent une empreinte numérique ou une « trace ». "
+        },
+        "5efa6c72-000c-40a0-ace0-55f47117305b": {
+          "description": "Découvrez quelles informations peuvent être partagées en ligne. "
+        },
+        "d7a194a2-b69d-417f-8996-3f56c7bccd83": {
+          "description": "Définir une liste d'étapes (algorithme) pour amener un ami de son point de départ à son but"
+        },
+        "5c532776-e5e5-4e5e-b3f1-15f01eb66449": {
+          "description": "Traduire une liste d'étapes en une série d'actions physiques "
+        },
+        "8f2d92d5-7d6b-447d-90a9-f38ed7ef5e37": {
+          "description": "Identifier et corriger les erreurs dans l'exécution d'un algorithme "
+        },
+        "567921b7-1dc5-4b17-9c16-0bbcd785a498": {
+          "description": "Montrez les bons comportements en salle informatique "
+        },
+        "32056e13-2c3f-4ef7-8ada-49b29cac5f59": {
+          "description": "Testez des actions de programmation normales basées sur les blocs, telles que : cliquer, glisser-déposer, etc. "
+        },
+        "fae372cb-4b72-4b35-abd6-e2424e54d791": {
+          "description": "Traduire les mouvements en une série de commandes."
+        },
+        "bffe609e-4319-4507-b643-b2a2ab2507b9": {
+          "description": "Construire un programme en réorganisant des mouvements séquentiels."
+        },
+        "7fe333c7-2422-4e9e-8328-9fcd2da6fdba": {
+          "description": "Construire un programme informatique à partir d'un ensemble d'instructions écrites."
+        },
+        "4576e06e-56f1-4e32-a81d-7bbfea125273": {
+          "description": "Traduire les mouvements en une série de commandes."
+        },
+        "d5f927b9-727a-423e-90d3-80faad21aa34": {
+          "description": "Identifier et localiser les bugs dans un programme."
+        },
+        "6c67256a-a8d5-4a57-9744-092686fb01a0": {
+          "description": "Répéter les actions initiées par l'instructeur."
+        },
+        "368e8edc-290d-4737-a616-a543e5298c66": {
+          "description": "Traduire un programme d'images en une danse dans la vraie vie. "
+        },
+        "ddb96aa7-a52d-41d7-b253-8f0d1533e093": {
+          "description": "Convertir une série d'actions multiples en une seule boucle."
+        },
+        "b7345cb5-cb6f-4bed-b9c8-4db24c6fb0c4": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "b8432810-ae14-4baf-9acb-e56ad1f8995f": {
+          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence répétable possible."
+        },
+        "8293f536-510e-44a0-880b-397b3f97deeb": {
+          "description": "Créer un programme pour une tâche donnée qui boucle une séquence de commandes."
+        },
+        "cb89ffb0-ef91-48ea-a77a-90e59e45c73e": {
+          "description": "Employer un mélange de commandes séquentielles et en boucle pour parvenir à la fin d'un labyrinthe."
+        },
+        "1a658eb5-9957-4d23-9736-ba85ea545c5e": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "b46842b6-02c4-4fd5-abff-6180d77a5c55": {
+          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence répétable possible."
+        },
+        "f7153703-ec15-4ce5-943e-02e2f2ebcfef": {
+          "description": "Compter le nombre de fois qu'une action doit être répétée et représenter cela sous forme de boucle."
+        },
+        "8b2f225a-f9d2-4ac4-9adf-bc978b347f34": {
+          "description": "Décomposer une forme en sa plus grande séquence reproductible."
+        },
+        "61329a99-1c0a-414f-9694-78f7f9c81372": {
+          "description": "Créer un programme qui dessine des formes complexes en répétant des séquences simples."
+        },
+        "11d46ade-3342-4157-932b-ce46acd1e6b4": {
+          "description": "Énumérer plusieurs exemples différents d'applications pour smartphone. "
+        },
+        "595564b5-94b4-4104-9613-05eadc30663e": {
+          "description": "Recommander des technologies à autrui, en fonction de leurs besoins spécifiques."
+        },
+        "b0a4edfa-fd6a-48fc-8421-3ae80769aed3": {
+          "description": "Faire preuve d'empathie et de créativité lors de la conception de technologies pour les autres. "
+        },
+        "7b0ddd26-468b-4ca1-8d08-444c0563f8c6": {
+          "description": "Répéter les commandes données par un enseignant."
+        },
+        "3997dff6-b815-412c-b3b5-52d4bd1fc019": {
+          "description": "Reconnaître les actions de l'enseignant comme des signaux pour lancer des commandes."
+        },
+        "86c93634-0b7d-46de-82dd-50b86576bd56": {
+          "description": "S'entraîner à différencier entre les actions prédéfinies et les actions axées sur des événements."
+        },
+        "a1e2ab93-1f36-45df-b7f2-d936689e195c": {
+          "description": "Identifier les actions qui aux événements d'entrée."
+        },
+        "3b0b8dc7-7ac9-4604-9bee-5e6c7f58acda": {
+          "description": "Créer une histoire animée et interactive en utilisant les séquences et les gestionnaires d'événements."
+        },
+        "c7c29345-8b72-4c4f-8fb1-2aa7f90d9bfc": {
+          "description": "Partager un artefact créatif avec d'autres élèves."
+        },
+        "8023306a-d106-4097-8205-5bc1e92ffade": {
+          "description": "Mettre en pratique des notions d'informatique dans un projet libre. "
+        },
+        "ae68c8b9-0188-48da-a066-b89a819b67e2": {
+          "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
+        },
+        "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
+          "description": "Découvrez que l'Internet peut être utilisé pour visiter des endroits lointains et apprendre de nouvelles choses. "
+        },
+        "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
+          "description": "Comparez le fait qu'être en sécurité en ligne, c'est comme l'être dans le monde réel. "
+        },
+        "ba49206c-c099-4994-be57-1f8744273eaf": {
+          "description": "Expliquez les règles pour voyager en toute sécurité sur Internet. "
+        },
+        "9727a876-04d5-4ae0-a904-13cd594e2fac": {
+          "description": "Reconnaître ce qu'on attend d'eux lorsqu'ils passent au labo informatique."
+        },
+        "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
+          "description": "Utilisez la bonne terminologie quand vous faites référence à une souris d'ordinateur, un trackpad ou un écran tactile. "
+        },
+        "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
+          "description": "Traduire un algorithme en un programme"
+        },
+        "95ef707d-603d-4106-955e-3138f0f16a5d": {
+          "description": "Décoder et exécuter un programme créé par quelqu'un d'autre"
+        },
+        "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
+          "description": "Identifier et corriger les bugs ou les erreurs dans les instructions séquencées"
+        },
+        "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
+          "description": "Montrez les bons comportements en salle informatique "
+        },
+        "6df3d067-06bb-4e95-856f-ef980543a15e": {
+          "description": "Testez des actions de programmation normales basées sur les blocs, telles que : cliquer, glisser-déposer, etc. "
+        },
+        "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
+          "description": "Construire un programme en réorganisant les mouvements séquentiels"
+        },
+        "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
+          "description": "Construire un programme d'ordinateur à partir d'une série d'instructions écrites"
+        },
+        "ad752d9a-9437-4b0b-9ffd-e01b34f8cdb5": {
+          "description": "Choisir les processus de débogage adaptés lors de la résolution de problèmes"
+        },
+        "199aed02-347c-4892-9e98-d7571ae64c9d": {
+          "description": "Séquencez les commandes dans un ordre logique."
+        },
+        "f0335d03-c7b3-4dee-9d9c-e1cd00919261": {
+          "description": "Identifiez des problèmes ou « bugs » dans un programme et élaborez un plan pour résoudre ces problèmes."
+        },
+        "407c5a4d-9337-4218-92d5-018597e41e19": {
+          "description": "Identifier un code répétitif et réduire plusieurs actions en une seule boucle."
+        },
+        "4c30941d-1b93-4dd9-a4f2-bbf9c9ff297f": {
+          "description": "Interpréter un programme avec des boucles comme une série de plusieurs actions."
+        },
+        "cb7cab91-20ca-495a-a429-621631cb0507": {
+          "description": "Construire un programme en utilisant des structures qui répètent des zones de code"
+        },
+        "381b89ab-336f-41cd-b755-78142a1f1f90": {
+          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant vers des structures mise en boucle"
+        },
+        "632bd918-c124-4f4c-892e-980cdc07b3bf": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "ea6a44e1-0175-4ecc-a257-4489b703c063": {
+          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence répétable possible."
+        },
+        "a49fa168-3cd7-4918-a60a-4c4031dd0116": {
+          "description": "Compter le nombre de fois qu'une action doit être répétée et représenter cela sous forme de boucle."
+        },
+        "97a73553-b88a-4b23-9b9f-0ef644cfcb4c": {
+          "description": "Décomposer une forme en sa plus grande séquence reproductible."
+        },
+        "66267233-8532-4f63-aea5-3a214dac119a": {
+          "description": "Créer un programme qui dessine des formes complexes en répétant des séquences simples."
+        },
+        "134f184c-8865-44d2-8921-5740c749bcd5": {
+          "description": "Répéter les commandes données par un enseignant."
+        },
+        "b7973aec-afbf-4f81-820c-daced7731b0f": {
+          "description": "Reconnaître les actions de l'enseignant comme des signaux pour lancer des commandes."
+        },
+        "3ec1a741-277f-46fb-9ec1-e358f399dab4": {
+          "description": "S'entraîner à différencier entre les actions prédéfinies et les actions axées sur des événements."
+        },
+        "106c5668-bbc0-404b-8cb5-8ff2bd66eeef": {
+          "description": "Identifier les actions qui aux événements d'entrée."
+        },
+        "b366b41e-9396-4c1b-9d35-164052448c1c": {
+          "description": "Créer une histoire animée et interactive en utilisant des séquences et des gestionnaires d'événements."
+        },
+        "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
+          "description": "Partager un artefact créatif avec d'autres élèves."
+        },
+        "7267ef0f-cb1a-42c2-aa5c-40cd949c9479": {
+          "description": "Mettre en pratique des notions d'informatique dans un projet libre. "
+        },
+        "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
+          "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
+        },
+        "1b4ddab6-f8a7-436e-929d-8ea87e41575f": {
+          "description": "Comprendre à quoi peut ressembler la méchanceté en ligne et ce qu'elle peut faire aux gens. "
+        },
+        "30ef895d-12fa-4348-8cd8-4c2bef269e9f": {
+          "description": "Identifier comment réagir aux paroles méchantes en ligne, en utilisant S-T-O-P. "
+        },
+        "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69": {
+          "description": "Soyez attentifs à la précision en créant des instructions"
+        },
+        "26392005-5f64-4707-b38b-847d1f009a29": {
+          "description": "Identifier et corriger les bugs ou les erreurs dans les instructions séquencées"
+        },
+        "560e14ee-7390-4244-aee5-a0c2737112e5": {
+          "description": "Traduire les mouvements en une série de commandes."
+        },
+        "5ced3389-52c6-4f9c-a8da-2e997e0008da": {
+          "description": "Identifier et localiser les bugs dans un programme."
+        },
+        "ce53a40d-db75-451a-a901-93f93226306a": {
+          "description": "Prévoir où un programme va échouer. "
+        },
+        "3ad547f9-c577-4953-88d5-41f7ac1ab710": {
+          "description": "Modifier un programme existant pour résoudre les erreurs."
+        },
+        "367c7a8a-4dea-494f-87c7-77cba03711a1": {
+          "description": "Réfléchir au processus de débogage d'une manière adaptée à l'âge."
+        },
+        "991aa440-0e71-40b0-8354-da04e3ad125b": {
+          "description": "Ordonner des commandes de déplacement sous forme d'étapes séquentielles dans un programme."
+        },
+        "a48e07da-5c86-4377-8738-4a6a06633e1d": {
+          "description": "Représenter un algorithme sous forme de programme informatique."
+        },
+        "d50f34e0-2613-485c-9381-7b63832dbd0a": {
+          "description": "Développer des compétences de résolution de problèmes et l'esprit critique en étudiant des pratiques de débogage."
+        },
+        "6503170b-db97-4737-ae5d-5108591497a0": {
+          "description": "Crée un programme pour compléter une image en utilisant des étapes séquentielles."
+        },
+        "d47b51d2-9114-4dfd-ad21-810573d85543": {
+          "description": "Casse des formes complexes en parties simples."
+        },
+        "ffef0ecc-334c-45c7-82af-3d63bbbe3e9f": {
+          "description": "Identifier des motifs récurrents dans le code qui pourraient être remplacés par une boucle"
+        },
+        "bad7a754-67f5-40db-bd28-b191d6a5b4d8": {
+          "description": "Écrire des instructions qui utilisent des boucles pour répéter les motifs"
+        },
+        "46288097-dbab-437f-897c-4e14352ae388": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "dea9fd7a-8b64-4d36-90a4-1eee89ea355a": {
+          "description": "Décomposer une longue séquence d'instructions en la plus grosse séquence répétable."
+        },
+        "8e76410f-b4db-446b-88c0-00013d9c05bd": {
+          "description": "Employer un mélange de commandes séquentielles et en boucle pour parvenir à la fin d'un labyrinthe."
+        },
+        "ff15ce2c-8445-442a-89f0-7a50e741850a": {
+          "description": "Écrire un programme pour une tâche donnée qui met en boucle une seule commande."
+        },
+        "757d864e-38a3-4b30-8617-b9a4174c8b08": {
+          "description": "Identifier quand une boucle peut être utilisée pour simplifier une action répétitive."
+        },
+        "94ed661c-bf8f-41fe-866d-86f09b4ef4ad": {
+          "description": "Utiliser un mélange de commandes séquentielles et mises en boucle pour se déplacer et effectuer des actions."
+        },
+        "bf154cd9-0914-43c2-b895-030de92d1427": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "b27f9553-dc95-452c-a4ee-dc69db0fc913": {
+          "description": "Faire la différence entre les commandes qui doivent être répétées en boucles et les commandes qui doivent être utilisées seules."
+        },
+        "74ce2354-89e9-4396-8cf5-5f9a43e02bd4": {
+          "description": "Répéter les commandes données par un enseignant."
+        },
+        "529f5b68-c1dc-494b-bfa9-1ada0412cf78": {
+          "description": "Reconnaître les mouvements de l'enseignant comme des signaux pour lancer des commandes."
+        },
+        "7232c8de-da31-441a-84c9-cabef4ea8fc0": {
+          "description": "S'entraîner à différencier entre les actions prédéfinies et les actions axées sur des événements."
+        },
+        "6c461f48-eb24-4fee-94f3-eb987d8f4fe9": {
+          "description": "Faire correspondre les blocs avec le gestionnaire d'événements approprié."
+        },
+        "a8e453ad-ae3a-489a-b652-5f26ea11853a": {
+          "description": "Créer un jeu à l'aide de gestionnaires d'événements."
+        },
+        "5f5877b9-cf72-4bb8-8700-341d33658a7c": {
+          "description": "Partager un artefact créatif avec d'autres élèves."
+        },
+        "15e9cb30-5d79-4344-a82e-a98f6f29c397": {
+          "description": "Créer un jeu animé et interactif à l'aide de séquences et de gestionnaires d'événements."
+        },
+        "c0757733-5e14-4797-9615-11b61d8d490f": {
+          "description": "Identifier les actions qui aux événements d'entrée."
+        },
+        "f60bacab-23a9-428a-bfe3-629f21ce8b4c": {
+          "description": "Recueillir et enregistrer des données sur des quantités d'objets réels ou de personnages sur un écran"
+        },
+        "f14af7c1-5797-4c9a-bafc-5dd0d630406b": {
+          "description": "Créer un histogramme et un camembert pour représenter des données simples."
+        },
+        "0ca67e69-bff3-4d30-96d3-3f53299353cc": {
+          "description": "Faire des comparaisons entre les visualisations de données faites par d'autres et les utiliser pour faire une prévision. "
+        },
+        "9a785141-1fe6-4728-996c-2fbb8781b62c": {
+          "description": "Encoder des lettres en code binaire."
+        },
+        "e972d59a-b86f-49ec-91ef-39c5ea6d9353": {
+          "description": "Re-décoder du binaire en lettres."
+        },
+        "ce1f4117-76f3-4359-a554-683a878f82cb": {
+          "description": "Faire le lien entre l'idée de stocker des lettres sur papier et l'idée de stocker des informations sur un ordinateur."
+        },
+        "03ac24d5-21f0-45e5-b15a-3354a578b67d": {
+          "description": "Utiliser une conception planifiée comme plan de création."
+        },
+        "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
+          "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
+        },
+        "e546a87d-131a-4d75-b2c6-d5942ee4a0c0": {
+          "description": "Définir le terme « mot de passe » et décrire le but d'un mot de passe."
+        },
+        "ea9adc1d-dc64-4a08-a97f-19eec1e448e6": {
+          "description": "S'entraîner à créer un mot de passe fort et mémorisable."
+        },
+        "3c4b51d5-b72f-42df-a55a-86c146214424": {
+          "description": "Réorganiser une série d'étapes en un programme encodé"
+        },
+        "16d1e174-7b4d-4b5e-a7be-9d4399743d19": {
+          "description": "Expliquer les contraintes de traduire des problèmes du langage humain vers le langage machine"
+        },
+        "69023643-6dd6-4d71-b31a-d2dff7952ea7": {
+          "description": "Ordonner des commandes de déplacement sous forme d'étapes séquentielles dans un programme."
+        },
+        "ca5f69c3-0626-4e28-bfcf-f4ad872ab87a": {
+          "description": "Modifier un programme existant pour résoudre les erreurs."
+        },
+        "14389c2c-96ea-4be1-8347-46e7d19dd1ff": {
+          "description": "Décomposer une longue séquence d'instructions en la plus grosse séquence répétable."
+        },
+        "8a0addda-b47f-4551-8c82-9115be3c130d": {
+          "description": "Définir des idées en utilisant du code et des symboles."
+        },
+        "dfde2f15-333a-4ca0-942e-eb7642ea3239": {
+          "description": "Vérifier le travail effectué par ses coéquipiers."
+        },
+        "8dba466d-d809-49c6-8f60-218c27964411": {
+          "description": "Identifier les signes de frustration"
+        },
+        "2d84b5eb-70d6-4f6d-88c5-7838a4983a78": {
+          "description": "Lire et comprendre un code donné."
+        },
+        "71cede4e-3e93-41d6-a422-f2443f756a61": {
+          "description": "Identifier un bug et les problèmes qu'il génère dans un programme."
+        },
+        "2f25fa99-cf66-4ed5-b41d-aaab9b796d5e": {
+          "description": "Décrire et mettre en œuvre un plan pour déboguer un programme."
+        },
+        "3b4a2468-e182-4060-861f-2a922730445b": {
+          "description": "Identifier les actions qui aux événements d'entrée."
+        },
+        "ed6bda58-2e92-4a38-8847-7f739a13385e": {
+          "description": "Créer un jeu interactif en utilisant des séquences et des gestionnaires d'événements."
+        },
+        "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
+          "description": "Partager un artefact créatif avec d'autres élèves."
+        },
+        "bafea2a8-7a23-4046-9360-77d760c54c2b": {
+          "description": "Créer un jeu animé et interactif à l'aide de séquences et de d'événements."
+        },
+        "e3dce354-a602-47d1-99d1-dc729d0f4ff4": {
+          "description": "Identifier les actions qui aux événements d'entrée."
+        },
+        "6a6abb8f-e710-4a5e-9979-38e6fef573de": {
+          "description": "Développer des programmes qui répondent aux événements chronométrés"
+        },
+        "18434de2-92be-4695-8dc7-4aed45243596": {
+          "description": "Développer des programmes qui répondent aux commentaires des utilisateurs"
+        },
+        "891d87fb-2024-4ecc-828e-fa4f12dbbb05": {
+          "description": "Créer des animations de danse avec du code"
+        },
+        "9ff9fb2c-7d0a-4449-85bf-fa6d3fe84744": {
+          "description": "Construire un programme en utilisant des structures qui répètent des zones de code"
+        },
+        "982d25cd-d5ff-491b-8505-be2606ba0a5e": {
+          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant vers des structures mise en boucle"
+        },
+        "d0dae7ad-246b-4f90-8800-8cc9f1de25aa": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "079d7fb4-c8a7-4319-80d6-53037ad705eb": {
+          "description": "Faire la différence entre les commandes qui doivent être répétées en boucles et les commandes qui doivent être utilisées seules."
+        },
+        "3a50aae3-6e0f-4821-9539-d06669eba0b1": {
+          "description": "Diviser les tâches complexes en de plus petites sections reproductibles."
+        },
+        "a19b271e-27b4-410c-bd3f-20c07f3ce2f0": {
+          "description": "Reconnaître les gros motifs récurrents comme étant composés de motifs récurrents plus petits."
+        },
+        "673ddc56-5217-45a9-919c-b42024f7de2b": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "fd3464fd-5921-4873-a850-c0799c55eecd": {
+          "description": "Définir les circonstances dans lesquelles certaines parties d'un programme devraient s'exécuter et dans lesquelles elles ne le devraient pas."
+        },
+        "494526f8-7392-4788-9126-b2e2dd53b241": {
+          "description": "Déterminer si une condition est remplie, en fonction de critères."
+        },
+        "3f9795a0-e52c-4fcd-ade0-d436facf382c": {
+          "description": "Parcourir un programme et prédire le résultat, en fonction d'un ensemble d'entrées."
+        },
+        "f3746860-8db9-414b-bd6e-5d2503fc81b4": {
+          "description": "Définir les circonstances dans lesquelles certaines parties d'un programme devraient s'exécuter et dans lesquelles elles ne le devraient pas."
+        },
+        "83b6020a-2273-4966-abd6-0049afa1eb4e": {
+          "description": "Déterminer si une condition est remplie, en fonction de critères."
+        },
+        "4a1dcde3-13a7-47d1-859a-b29ade558f5d": {
+          "description": "Traduire des déclarations conditionnelles de langage parlé vers un programme."
+        },
+        "b9f29764-7d0f-4dfc-9400-9277f0ad9e4f": {
+          "description": "Résoudre des casse-têtes à l'aide d'un mélange de séquences en boucle et d'instructions conditionnelles."
+        },
+        "f06bf36a-d520-4a73-b194-6d1e131a07ec": {
+          "description": "Faire la distinction entre les boucles qui se répètent un nombre prédéfini de fois et les boucles qui se répètent tant qu'une condition est vraie."
+        },
+        "38cd04a9-3d07-4df9-b22d-18e39369e387": {
+          "description": "Utiliser une boucle tant que pour créer des programmes capables de résoudre des problèmes avec des valeurs inconnues."
+        },
+        "fd7ce60d-0e0f-403e-85a4-cf0d7e5eeac3": {
+          "description": "Construire des programmes en comprenant de multiples stratégies pour mettre en œuvre des instructions conditionnelles."
+        },
+        "630e79db-15ec-49fd-804c-060b8adf40ea": {
+          "description": "Traduire des déclarations conditionnelles et des boucles du langage parlé vers un programme."
+        },
+        "92ad0a98-e2e5-4104-8a9f-1dee9409f300": {
+          "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
+        },
         "8c021568-46ed-4243-a4d1-f2037138c01a": {
           "description": "Traduire les mouvements en une série de commandes."
         },
@@ -1377,7 +1698,7 @@
           "description": "Casse des formes complexes en parties simples."
         },
         "090bc5c3-f9cb-4aea-bc89-a1dd85c9d196": {
-          "description": "Définissez « sprite » comme un personnage ou un objet à l'écran qui peut être déplacé et modifié. "
+          "description": "Définir un « sprite » comme étant un personnage ou un objet à l'écran qui peut être déplacé et modifié. "
         },
         "09281dd0-4b33-4537-9543-a2377bc2f923": {
           "description": "Créer de nouveaux sprites et leur attribuer des costumes et des comportements. "
@@ -1437,13 +1758,13 @@
           "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
         },
         "f35a3857-a630-4783-98c3-c0e6304af48f": {
-          "description": "Décomposer le code en séquences reproductibles les plus grandes, à l'aide à la fois des boucles et des boucles imbriquées."
+          "description": "Diviser le code en les plus larges séquences reproductibles possibles en se servant à la fois des boucles et des boucles imbriquées."
         },
         "10a74fb8-26fd-4a7c-84f4-1b868f042670": {
-          "description": "Reconnaître la différence entre utiliser une boucle et une boucle imbriquée."
+          "description": "Reconnaître la différence entre utiliser une boucle et utiliser une boucle imbriquée."
         },
         "d1ca506b-d694-4c2b-bcc5-38af2ce425dd": {
-          "description": "Définir quand une boucle, une boucle imbriquée, ou aucune boucle n'est nécessaire."
+          "description": "Décrire quand une boucle, une boucle imbriquée, ou aucune boucle est nécessaire."
         },
         "d10e3ab4-a6ef-4f07-8a30-3ef1f9c181f6": {
           "description": "Définir les circonstances dans lesquelles certaines parties d'un programme devraient s'exécuter et dans lesquelles elles ne le devraient pas."
@@ -1476,31 +1797,31 @@
           "description": "Traduire des déclarations conditionnelles et des boucles du langage parlé vers un programme."
         },
         "8107c1bb-a8ed-4cb4-9f5e-1a21126a4700": {
-          "description": "Imbriquer des conditions pour analyser plusieurs conditions de valeur à l'aide de la logique si, sinon si, sinon."
+          "description": "Imbriquer des instructions conditionnelles pour analyser des conditions aux valeurs multiples en utilisant une logique si, sinon si, sinon."
         },
         "0174cd8f-0a91-423b-b643-2b8a0290fcff": {
-          "description": "Associer une boucle et une instruction conditionnelle."
+          "description": "Associer une boucle et une instruction conditionnelle ensemble."
         },
         "1ece8579-425f-4324-a041-8f47ce736f42": {
           "description": "Utiliser des fonctions pour simplifier des programmes complexes."
         },
         "4f16bc65-a8b7-485b-b34e-5b67c0c68259": {
-          "description": "Utiliser des fonctions prédéterminées pour effectuer des tâches fréquemment répétées."
+          "description": "Utiliser des fonctions prédéterminées pour compléter des tâches qui se répètent fréquemment."
         },
         "ae435e31-012f-4ad5-aeb4-028f25f5671d": {
-          "description": "Catégoriser et généraliser le code en fonctions utiles."
+          "description": "Classer et généraliser le code en fonctions utiles."
         },
         "36a2f4e1-f9df-4115-a898-a7d96ee60c27": {
-          "description": "Reconnaître lorsqu'une une fonction pourrait aider à simplifier un programme."
+          "description": "Reconnaître quand une fonction pourrait aider à simplifier un programme."
         },
         "22b69133-d5b3-407a-9c18-7b4841daffa7": {
-          "description": "Reconnaître lorsqu'une une fonction pourrait aider à simplifier un programme."
+          "description": "Reconnaître quand une fonction pourrait aider à simplifier un programme."
         },
         "5bbd5970-dd02-4100-b9c4-6d051ec9bba2": {
-          "description": "Utiliser des fonctions prédéterminées pour effectuer des tâches fréquemment répétées."
+          "description": "Utiliser des fonctions prédéterminées pour compléter des tâches qui se répètent fréquemment."
         },
         "ef77d0c7-ef92-4f67-85fc-b9e4c8d14c49": {
-          "description": ""
+          "description": "Utiliser des variables pour contenir des mots et des phrases."
         },
         "077a5626-d78c-4ae2-9620-e0558a2ab8cf": {
           "description": "Utiliser des variables en les associant à des invites."
@@ -1620,7 +1941,7 @@
           "description": "Commencer à faire les liens concernant une nouvelle façon d'écrire des programmes."
         },
         "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
-          "description": "Définissez « sprite » comme un personnage ou un objet à l'écran qui peut être déplacé et modifié. "
+          "description": "Définir un « sprite » comme étant un personnage ou un objet à l'écran qui peut être déplacé et modifié. "
         },
         "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
           "description": "Créer de nouveaux sprites et leur attribuer des costumes et des comportements. "
@@ -1668,13 +1989,13 @@
           "description": "Diviser les tâches complexes en de plus petites sections reproductibles."
         },
         "6174da85-eb3a-4c0e-925d-360b04604fdb": {
-          "description": "Définir quand une boucle, une boucle imbriquée, ou aucune boucle n'est nécessaire."
+          "description": "Décrire quand une boucle, une boucle imbriquée, ou aucune boucle est nécessaire."
         },
         "90591bd7-cbd5-46c4-95dc-59e16e5a949c": {
-          "description": "Reconnaître la différence entre utiliser une boucle et une boucle imbriquée."
+          "description": "Reconnaître la différence entre utiliser une boucle et utiliser une boucle imbriquée."
         },
         "5c73217a-9e91-4d3f-8dac-ebbdc2c8b25d": {
-          "description": "Décomposer le code en séquences reproductibles les plus grandes, à l'aide à la fois des boucles et des boucles imbriquées."
+          "description": "Diviser le code en les plus larges séquences reproductibles possibles en se servant à la fois des boucles et des boucles imbriquées."
         },
         "e26d818e-81fd-43c6-8558-fc69835e693a": {
           "description": "Localiser les phrases récurrentes dans les paroles d'une chanson."
@@ -1689,13 +2010,13 @@
           "description": "Utiliser des fonctions pour simplifier des programmes complexes."
         },
         "763f0ac3-d0b3-487a-b83d-151e2b3bee94": {
-          "description": "Utiliser des fonctions prédéterminées pour effectuer des tâches fréquemment répétées."
+          "description": "Utiliser des fonctions prédéterminées pour compléter des tâches qui se répètent fréquemment."
         },
         "fbae45e8-1bd0-4b7d-9ae3-431c11cf0c56": {
-          "description": "Catégoriser et généraliser le code en fonctions utiles."
+          "description": "Classer et généraliser le code en fonctions utiles."
         },
         "75ef4b25-6f64-4795-9a13-f0d27662040e": {
-          "description": "Reconnaître lorsqu'une une fonction pourrait aider à simplifier un programme."
+          "description": "Reconnaître quand une fonction pourrait aider à simplifier un programme."
         },
         "e23e9b8a-cb10-4ec2-ac46-516d6a538d91": {
           "description": "Définir les circonstances dans lesquelles certaines parties d'un programme devraient s'exécuter et dans lesquelles elles ne le devraient pas."
@@ -1710,10 +2031,10 @@
           "description": "Déterminer si une condition est remplie, en fonction de critères."
         },
         "dc1b604a-9814-45f4-aed5-b76776ad818c": {
-          "description": "Reconnaître lorsqu'une une fonction pourrait aider à simplifier un programme."
+          "description": "Reconnaître quand une fonction pourrait aider à simplifier un programme."
         },
         "cff52f84-5090-495e-a37b-02cf8b666ad6": {
-          "description": "Utiliser des fonctions prédéterminées pour effectuer des tâches fréquemment répétées."
+          "description": "Utiliser des fonctions prédéterminées pour compléter des tâches qui se répètent fréquemment."
         },
         "87094122-056f-4fa4-83b7-e3d6abb52e67": {
           "description": "Décrire l'impact des applis mobiles sur le monde moderne."
@@ -1739,461 +2060,11 @@
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "Articuler le processus de conception et comment cela a influé sur la forme du projet final abouti. "
         },
-        "ad6a4213-49c3-49e2-ace9-5a7d36daa458": {
-          "description": ""
-        },
-        "5b050fa6-537c-42bd-ab68-8da930f96fc1": {
-          "description": ""
-        },
-        "c570aee0-75a6-4698-a3d7-b211adcd5ef8": {
-          "description": ""
-        },
-        "6b88c767-4b50-4334-8b24-fff5e79a467d": {
-          "description": ""
-        },
-        "8885beeb-2915-4569-b3b2-2ceca9293597": {
-          "description": ""
-        },
-        "ce14b7c8-ae41-4118-9fa2-56086e2298a1": {
-          "description": ""
-        },
-        "33a9d6e5-89ba-422e-a8f1-c3a200a8c2ba": {
-          "description": ""
-        },
-        "81d19c33-2675-415e-9b35-12643f8c33be": {
-          "description": ""
-        },
-        "6c20f4f3-4375-4dee-9f00-012a33e7d2af": {
-          "description": ""
-        },
-        "cff6cc90-bf04-4c7d-9dac-c6f1a28310a8": {
-          "description": ""
-        },
-        "3b9c322a-6a98-4473-8079-d20160c3e352": {
-          "description": ""
-        },
-        "95e992b6-6a6c-42f6-aa5c-aee60535a00a": {
-          "description": ""
-        },
-        "b09ef219-e569-45de-94f7-3e7beec34d72": {
-          "description": ""
-        },
-        "c6441f90-9643-4b1d-9ac8-90e4ee024f61": {
-          "description": ""
-        },
-        "6d0afa47-7d02-480b-9369-b4aabf3b6841": {
-          "description": ""
-        },
-        "91be4c6c-f556-4fc4-85b4-8cb5bbdf8e29": {
-          "description": ""
-        },
-        "b3622011-d99b-4a7b-9818-63ff04be86f8": {
-          "description": ""
-        },
-        "6fa760e4-910d-4f77-99be-68f7673581d6": {
-          "description": ""
-        },
-        "d1a36c22-f6c1-42c6-bf97-88091a1201c6": {
-          "description": ""
-        },
-        "3e59ba97-41b3-4967-9366-d38699ab43bb": {
-          "description": ""
-        },
-        "01fafc69-a442-46b9-8274-d8ec27670236": {
-          "description": ""
-        },
-        "c2f81013-f143-44b7-940d-fba98243bb3d": {
-          "description": ""
-        },
-        "3a6f69e7-fc2d-4f5a-bebe-8336c819e788": {
-          "description": ""
-        },
-        "41aa43b4-0a6f-4377-927a-e1d6042149cb": {
-          "description": ""
-        },
-        "b6e2c14d-12b9-44dd-96fa-82de930560a1": {
-          "description": ""
-        },
-        "0e89a393-31c9-4c3c-b1bb-0285a4a618c7": {
-          "description": ""
-        },
-        "fec5eaa1-f93f-4255-b69a-080150de17c0": {
-          "description": ""
-        },
-        "a39d3b79-7607-4435-9ecb-d2b1041334ec": {
-          "description": ""
-        },
-        "6ee3d556-8e43-4ecb-9805-dc5596471be8": {
-          "description": ""
-        },
-        "12ae5d81-38da-43a1-bf10-53d10c0e3e04": {
-          "description": ""
-        },
-        "f027b687-253c-4337-bfa7-815483f163d6": {
-          "description": ""
-        },
-        "d40519ba-f2c6-485e-919d-b4752a96e391": {
-          "description": ""
-        },
-        "6aab1c32-4afe-4d2a-a747-61bf6f0ce7b3": {
-          "description": ""
-        },
-        "db9fbd1e-9028-4c08-8490-2906a54bee8a": {
-          "description": ""
-        },
-        "f6bad7b7-7a94-46b6-8375-016077a5bf54": {
-          "description": ""
-        },
-        "f86060e6-0c95-4d92-85c1-52fc82c32257": {
-          "description": ""
-        },
-        "3f8b9c32-15fb-4b26-9360-9cb6fdfe7ed3": {
-          "description": ""
-        },
-        "11f42eed-8c8c-4fca-b3ff-8bb800a8fbcd": {
-          "description": ""
-        },
-        "5d843877-4608-49b0-a6a5-c33fdab204ba": {
-          "description": ""
-        },
-        "80e00862-0fe7-44a4-9e0c-785e6674f0e5": {
-          "description": ""
-        },
-        "19b5be99-7f7e-42e1-9ce4-6e53d7361d35": {
-          "description": ""
-        },
-        "6ad62a76-15c2-4ee6-812b-89426ccbaf53": {
-          "description": ""
-        },
-        "314c3d2c-32d4-4b31-a7b7-bc848001a0ef": {
-          "description": ""
-        },
-        "a4a38d49-6a85-4c4e-9e9f-b589bc00b61a": {
-          "description": ""
-        },
-        "607265dd-c7c2-4ef7-bb9d-ea8026f769e3": {
-          "description": ""
-        },
-        "3a37860e-7f85-4921-a622-4c0435783261": {
-          "description": ""
-        },
-        "bddab4e2-74ad-4394-8180-11dde4ab88f9": {
-          "description": ""
-        },
-        "572e2633-ed9c-4957-9399-4cdd236c9da9": {
-          "description": ""
-        },
-        "7db30b84-9106-4f12-9a6b-3d4119423ec7": {
-          "description": ""
-        },
-        "1eceabc4-6a94-4939-bdb3-a1084c6e6aa4": {
-          "description": ""
-        },
-        "42021a55-c97c-432b-9420-a62927cc2bba": {
-          "description": ""
-        },
-        "e537dea9-f777-4037-8c48-d20298ba53b2": {
-          "description": ""
-        },
-        "e4ff5379-6af0-43ba-8611-535630489148": {
-          "description": ""
-        },
-        "8f1a62d6-c1b7-400f-9324-3f7cf5cecc72": {
-          "description": ""
-        },
-        "d7b16ab2-6683-4efa-93d9-d425024858bf": {
-          "description": ""
-        },
-        "550ed66e-4795-428a-aee8-9a77e03f667d": {
-          "description": ""
-        },
-        "88327c34-dbb7-4b44-8c32-c76166910b39": {
-          "description": ""
-        },
-        "87ac4c51-43bc-4219-93ba-29f517c309ef": {
-          "description": ""
-        },
-        "98d5856a-9dc5-4d14-bfc1-c79f4d9191d0": {
-          "description": ""
-        },
-        "5ac58714-911b-460c-b34b-73d1e67c160e": {
-          "description": ""
-        },
-        "fd6610c2-f7c5-4e4a-ac5a-b1e358c8a11d": {
-          "description": ""
-        },
-        "8d396418-f31f-438e-b9d8-43730f49868f": {
-          "description": ""
-        },
-        "1d63355b-8406-4aba-a3e7-a4a559c67c5f": {
-          "description": ""
-        },
-        "a656b8a6-b4f4-4014-9c91-ed44f25b2831": {
-          "description": ""
-        },
-        "e645e06c-9cb1-479c-91b6-1b81b8961d54": {
-          "description": ""
-        },
-        "b17ebfe7-f8da-40c2-82d1-43b00a7e8364": {
-          "description": ""
-        },
-        "02c329fa-a4a0-4b23-b77e-788296c2bc7b": {
-          "description": ""
-        },
-        "b8217d7c-960e-42d1-b3f0-1035158a64a0": {
-          "description": ""
-        },
-        "fd3bf488-7c63-4869-9c48-a97556d39150": {
-          "description": ""
-        },
-        "44bb192f-0e71-405f-b8a6-5757ff7f37e1": {
-          "description": ""
-        },
         "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
           "description": "Se former et tester un modèle d'apprentissage automatique."
         },
         "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
           "description": "Raisonner sur la façon dont le biais humain joue un rôle dans l'apprentissage automatique."
-        },
-        "6885b6d1-78d2-4560-8bf5-8f14cfc68bb7": {
-          "description": ""
-        },
-        "b0342e84-056b-46d6-ac84-1d976155c38d": {
-          "description": ""
-        },
-        "b2682f90-e600-48aa-aef4-def3798b261d": {
-          "description": ""
-        },
-        "27e5577c-a619-4ef6-8f34-b252c18deb58": {
-          "description": ""
-        },
-        "e5a564d4-8723-4ee1-92c5-f9262ee8722d": {
-          "description": ""
-        },
-        "92707a88-4d6e-44a5-a1ba-e888e9ea27c8": {
-          "description": ""
-        },
-        "d8f92cff-b148-455d-b1c9-690e0d8c3929": {
-          "description": ""
-        },
-        "1fc6f9a4-a172-4504-a702-e0f6b219e62c": {
-          "description": ""
-        },
-        "5fc17aef-b130-416f-8746-54fe3f0ed390": {
-          "description": ""
-        },
-        "e09ca0a1-6d0c-4177-9bcb-b97ab36faeca": {
-          "description": ""
-        },
-        "557e9ade-ee71-4196-9dce-44f742180fa8": {
-          "description": ""
-        },
-        "71209fa9-4d56-4ced-bb42-b3cf73f523f1": {
-          "description": ""
-        },
-        "40bde7b5-fc47-455e-9d21-5dc53330e8e8": {
-          "description": ""
-        },
-        "99befbcc-2654-44cc-a2f9-fe0cde1ab146": {
-          "description": ""
-        },
-        "c61f1e5d-d728-499d-9729-a1ff2db8de64": {
-          "description": ""
-        },
-        "b40e994c-3d1e-4ba8-9cf1-8674567bb26c": {
-          "description": ""
-        },
-        "d6709c2c-76b3-495d-bb07-af8a4c772363": {
-          "description": ""
-        },
-        "6828e8c6-bde7-4e8f-842d-04bd41a46eb4": {
-          "description": ""
-        },
-        "9ed14237-271b-4890-b05c-04bde1c706fc": {
-          "description": ""
-        },
-        "ef9e41ae-04ee-4b48-a59e-06f87ff5c9d9": {
-          "description": ""
-        },
-        "32725306-4405-48d1-871c-ce44cd180b0c": {
-          "description": ""
-        },
-        "ac9b5e0b-ce84-48f1-8d9e-3957b6d3ac16": {
-          "description": ""
-        },
-        "1bd55841-3a6b-45b8-9a2c-7ad9b9df5102": {
-          "description": ""
-        },
-        "aee02da5-9e5d-4c9b-b43d-7576a405fd5d": {
-          "description": ""
-        },
-        "6c2364e6-a17c-4b0c-856e-71ba8ec2b4c7": {
-          "description": ""
-        },
-        "317b8134-0316-46e4-b56c-4adba284eab6": {
-          "description": ""
-        },
-        "58e13b51-2fb9-4de3-a547-dfe7bb9e71b0": {
-          "description": ""
-        },
-        "286ec7b0-0776-4049-9174-3deeb1d80c14": {
-          "description": ""
-        },
-        "899e51b2-2cb8-4948-9987-aaada64c6a85": {
-          "description": ""
-        },
-        "ebf0954f-2190-4e20-8420-f0275aceee0a": {
-          "description": ""
-        },
-        "01426fc9-55b3-41ec-92ec-fb871a4739b1": {
-          "description": ""
-        },
-        "bb7bce08-c20e-4a8b-8b3e-def24447e33f": {
-          "description": ""
-        },
-        "d3aa02b0-9340-47ab-b258-5446686c77b4": {
-          "description": ""
-        },
-        "63135326-7d2f-4974-af73-f8d7a801cd04": {
-          "description": ""
-        },
-        "6ed44bf4-19c7-4fd2-b72d-527e7c1ed3f3": {
-          "description": ""
-        },
-        "2a7e04b6-f408-4915-a8df-10a590d5b45a": {
-          "description": ""
-        },
-        "ba90afe9-19b4-4a19-b7e7-9cc6dcc94b86": {
-          "description": ""
-        },
-        "3572828f-fdf1-4708-bfd1-1a021799e8fd": {
-          "description": ""
-        },
-        "9d1d61de-4fa4-458f-b11f-aee208854019": {
-          "description": ""
-        },
-        "dd877754-8fc0-4026-9205-385c6a3a2e4e": {
-          "description": ""
-        },
-        "1cfd94eb-3bdf-4628-b8c5-2caeaa3dc189": {
-          "description": ""
-        },
-        "87b37b88-d7c7-4ad7-a5bc-f4be00ef3016": {
-          "description": ""
-        },
-        "cb1a4260-ee88-49c1-abf7-92dfc8d1dc16": {
-          "description": ""
-        },
-        "0b62d335-144f-495a-971c-fb1ee82f154a": {
-          "description": ""
-        },
-        "ea476a5f-3a8d-4c7a-bb2c-c6e58d216ef3": {
-          "description": ""
-        },
-        "7f488fda-a480-4f40-814d-6a2810780b38": {
-          "description": ""
-        },
-        "74126a3c-61fa-40ac-aef5-ffe0bf68a549": {
-          "description": ""
-        },
-        "8bc02767-3a96-4d13-a946-1e5a0dbcb037": {
-          "description": ""
-        },
-        "1a3a0395-0d25-44f7-9d47-e1c7700c3507": {
-          "description": ""
-        },
-        "3c206514-27ee-4c05-a9b7-f84176d23ebe": {
-          "description": ""
-        },
-        "1383b94a-1a14-4579-8da9-47114eec604d": {
-          "description": ""
-        },
-        "e8cad68d-4922-47bd-9b73-c22e8af10879": {
-          "description": ""
-        },
-        "34e775e2-0c00-4052-9987-1ea46e705fa0": {
-          "description": ""
-        },
-        "ccfcb058-12bd-488b-8356-b22d10c4ea6f": {
-          "description": ""
-        },
-        "bac6e9a1-3d3a-4632-951a-18176be462c8": {
-          "description": ""
-        },
-        "10f87a6a-1dee-44d3-b8d9-1a8d79891db9": {
-          "description": ""
-        },
-        "b77ee6ff-2558-4b8a-b835-6cc16409602f": {
-          "description": ""
-        },
-        "372ca368-9509-4398-b84c-21ac4c890a1d": {
-          "description": ""
-        },
-        "36878c76-5f41-4efb-bba1-e9ca4a2e32fa": {
-          "description": ""
-        },
-        "dd98dbf4-2b0d-4d8b-be4e-4807c06de0a0": {
-          "description": ""
-        },
-        "434ebdb0-40d0-4a29-bcfb-635ade18fb5e": {
-          "description": ""
-        },
-        "eecfc6b0-93e7-4a6f-bdc2-fcfe306a3407": {
-          "description": ""
-        },
-        "f8ceacee-8c38-4d94-a2f3-35ee71d8b382": {
-          "description": ""
-        },
-        "30f1b582-38d8-402b-83da-c8a7cba4b2aa": {
-          "description": ""
-        },
-        "e543e22d-8270-4eb9-81ad-6de8d5455d59": {
-          "description": ""
-        },
-        "6fa18746-fa9c-4ace-a0e3-fc7936899b64": {
-          "description": ""
-        },
-        "5caf913a-779e-4174-9e9f-b6a87756263e": {
-          "description": ""
-        },
-        "07998a0e-1ef2-4bc0-af59-5278007a0058": {
-          "description": ""
-        },
-        "74336c50-eaa5-4dce-a478-27925ce67729": {
-          "description": ""
-        },
-        "30d66e3d-96aa-4b8e-adb5-6f112d41f16d": {
-          "description": ""
-        },
-        "71eb384e-9034-406d-a8fc-3e410e869985": {
-          "description": ""
-        },
-        "eb402ed0-5510-4b3a-bc73-694ddde8bf0f": {
-          "description": ""
-        },
-        "9f5e8294-cf6c-4f28-9f8f-1c0c869a69be": {
-          "description": ""
-        },
-        "dd44e0a2-e2a0-46aa-bc51-e0d67dc95491": {
-          "description": ""
-        },
-        "2c2dc6c4-9a9f-4186-85ba-44882179e48b": {
-          "description": ""
-        },
-        "1829ce9e-4e7e-451f-898e-692c3abb5ad6": {
-          "description": ""
-        },
-        "a98e9a65-fe9a-421b-854f-ee5c090c9503": {
-          "description": ""
-        },
-        "4616a321-c362-4a0e-928a-b1bc642d4010": {
-          "description": ""
-        },
-        "69a7b9a8-b9be-4d2e-aacc-43805fc5f186": {
-          "description": ""
-        },
-        "1e8b24b5-f8b6-46a6-b0b1-aba1633a02f0": {
-          "description": ""
         }
       }
     }

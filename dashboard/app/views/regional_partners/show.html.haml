@@ -21,6 +21,12 @@
   %strong Name:
   = @regional_partner.name
 %p
+  %strong Active:
+  - if @regional_partner.is_active
+    = 'Yes'
+  - else
+    = 'No'
+%p
   %strong Contact Email:
   = @regional_partner.contact_email
 %p

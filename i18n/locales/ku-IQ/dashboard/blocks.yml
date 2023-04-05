@@ -1356,8 +1356,6 @@ ku:
             '13': '13'
             '14': '14'
             '15': '15'
-      SpriteLab2Beta_spriteSay:
-        text: سپڕایت {SPRITE} بڵێ {TEXT} بەماوەی {SECONDS} چرکە
       Vector_createSpriteWith:
         text: |-
           سپڕایت دروستبکە
@@ -1521,5 +1519,3 @@ ku:
           EFFECT:
             '"bubbles"': بڵق
             '"confetti"': بڕشتی کاغەز
-      validation_validatedBackground:
-        text: پاشبنەما دابنێ {IMG}

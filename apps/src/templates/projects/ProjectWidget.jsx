@@ -57,7 +57,7 @@ class ProjectWidget extends React.Component {
 // The project widget uses the channels API to populate the personal projects
 // and the data needs to be converted to match the format of the project cards
 // before passing it to PersonalRecentProjects.
-const convertChannelsToProjectData = function(projects) {
+const convertChannelsToProjectData = function (projects) {
   // Sort by most recently updated.
   let projectLists = _.sortBy(projects, 'updatedAt').reverse();
 

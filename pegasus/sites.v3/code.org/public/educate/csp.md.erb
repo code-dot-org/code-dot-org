@@ -5,6 +5,8 @@ theme: responsive
 style_min: true
 ---
 
+<%= view :professional_learning_marketing_banner, link_address: '/educate/professional-learning/middle-high', button_label: 'Learn more' %>
+
 <%=view :solid_block_header, :title=>"Computer Science Principles" %>
 
 <link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
@@ -350,6 +352,8 @@ Have some time after the AP Exam? Explore these exciting units which will expand
 <hr/>
 
 AP® is a registered trademark of the College Board.
+
+<%= view :analytics_event_log_helper, event_name: AnalyticsConstants::CSP_CURRICULUM_PAGE_VISITED_EVENT %>
 
 <!--
 

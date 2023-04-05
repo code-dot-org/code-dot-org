@@ -208,7 +208,8 @@
           "snowflake_dropdown": "Utilitza aquesta llista desplegable per crear diferents flocs de neu!"
         },
         "frozen line": {
-          "move_elsa_forward": "Arrossega un bloc \"Avança\" i col·loca'l sota el bloc \"Quan s'executi\" per fer avançar l'Elsa"
+          "move_elsa_forward": "Arrossega un bloc \"Avança\" i col·loca'l sota el bloc \"Quan s'executi\" per fer avançar l'Elsa",
+          "run": "Fes clic a \"Executar\" per provar el teu programa!"
         },
         "frozen perpendicular": {
           "turn_elsa": "Utilitza el bloc \"Gira\" per fer girar l'Elsa. El valor que triem en el desplegable determina quants graus girarà l'Elsa"
@@ -1384,19 +1385,23 @@
           "courseC_maze_programming3_2": "Pots arrossegar els blocs addicionals a la caixa d'eines per desfer-te'n."
         },
         "courseD_maze_ramp32022": {
-          "courseC_maze_programming3_2": "Pots arrossegar els blocs addicionals a la caixa d'eines per desfer-te'n."
+          "courseC_maze_programming3_2": "Pots arrossegar els blocs addicionals a la caixa d'eines per desfer-te'n.",
+          "stone_block_2": "Els blocs grisos no es poden eliminar."
         },
         "courseD_maze_ramp3_2018": {
           "courseC_maze_programming3_2": "Pots arrossegar els blocs addicionals a la caixa d'eines per desfer-te'n."
         },
         "courseD_maze_ramp3_2019": {
-          "courseC_maze_programming3_2": "Pots arrossegar els blocs addicionals a la caixa d'eines per desfer-te'n."
+          "courseC_maze_programming3_2": "Pots arrossegar els blocs addicionals a la caixa d'eines per desfer-te'n.",
+          "stone_block_2": "Els blocs grisos no es poden eliminar."
         },
         "courseD_maze_ramp3_2020": {
-          "courseC_maze_programming3_2": "Pots arrossegar els blocs addicionals a la caixa d'eines per desfer-te'n."
+          "courseC_maze_programming3_2": "Pots arrossegar els blocs addicionals a la caixa d'eines per desfer-te'n.",
+          "stone_block_2": "Els blocs grisos no es poden eliminar."
         },
         "courseD_maze_ramp3_2021": {
-          "courseC_maze_programming3_2": "Pots arrossegar els blocs addicionals a la caixa d'eines per desfer-te'n."
+          "courseC_maze_programming3_2": "Pots arrossegar els blocs addicionals a la caixa d'eines per desfer-te'n.",
+          "stone_block_2": "Els blocs grisos no es poden eliminar."
         },
         "courseD_maze_ramp4": {
           "courseC_maze_programming4_1": "Aquest es el límit de blocs que tens. Indica quants d'aquests blocs encara pots fer servir."
@@ -1910,6 +1915,153 @@
         },
         "courseE_playLab_scaffold3": {
           "courseE_playLab_scaffold3_1": "Porta l'actor fins a aquesta banderola per passar al nivell següent."
+        },
+        "Virtual Pet 2_2019": {
+          "": "Fes clic aquí!"
+        },
+        "Virtual Pet 2_2020": {
+          "": "Fes clic aquí!"
+        },
+        "courseD_artist_nestedLoops1a": {
+          "courseD_artist_nestedLoops1a_1": "No cal que facis servir colors per acabar aquest trencaclosques. Però si vols, aquest bloc de \"color aleatori\" t'ho posarà molt fàcil!"
+        },
+        "courseD_artist_nestedLoops1a2022": {
+          "courseD_artist_nestedLoops1a_1": "No cal que facis servir colors per acabar aquest trencaclosques. Però si vols, aquest bloc de \"color aleatori\" t'ho posarà molt fàcil!"
+        },
+        "courseD_artist_nestedLoops1a_2018": {
+          "courseD_artist_nestedLoops1a_1": "No cal que facis servir colors per acabar aquest trencaclosques. Però si vols, aquest bloc de \"color aleatori\" t'ho posarà molt fàcil!"
+        },
+        "courseD_artist_nestedLoops1a_2019": {
+          "courseD_artist_nestedLoops1a_1": "No cal que facis servir colors per acabar aquest trencaclosques. Però si vols, aquest bloc de \"color aleatori\" t'ho posarà molt fàcil!"
+        },
+        "courseD_artist_nestedLoops1a_2020": {
+          "courseD_artist_nestedLoops1a_1": "No cal que facis servir colors per acabar aquest trencaclosques. Però si vols, aquest bloc de \"color aleatori\" t'ho posarà molt fàcil!"
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "No cal que facis servir colors per acabar aquest trencaclosques. Però si vols, aquest bloc de \"color aleatori\" t'ho posarà molt fàcil!"
+        },
+        "courseE_aboutme_2": {
+          "": "Fes clic aquí!"
+        },
+        "courseE_aboutme_2_2020": {
+          "": "Fes clic aquí!"
+        },
+        "courseE_aboutme_2_2021": {
+          "": "Fes clic aquí!"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Fes clic aquí per expandir el bloc.",
+          "pointerlocation": "Arrossega un bloc de \"subjecte\" aquí."
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "Fes clic aquí per expandir el bloc.",
+          "pointerlocation": "Arrossega un bloc de \"subjecte\" aquí."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Fes clic per fer un vestit nou"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_aquarium2022": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_card2022": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_chatbot2022": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_collector2022": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_collector_-2022-2": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_collector_drive_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_collector_move2_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_madlib2022": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_pet2022": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_pet_-2022-2": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_text_print_-2022-2": {
+          "print_block": "Aquí trobaràs el bloc d'escriure text!",
+          "text_print_finish": "El teu missatge ha aparegut imprès a dalt? Si és així, fes clic a \"Acabar\". Si no, fes clic a \"Reiniciar\", canvia el codi i torna a \"Executar\"."
+        },
+        "poetry_hoc_backgroundEffects": {
+          "run_button": "Prova la teva animació amb aquest botó. "
         }
       }
     }

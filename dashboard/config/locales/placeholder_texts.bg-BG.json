@@ -34,7 +34,9 @@
         "courseF_playlab_variables5c": {
           "bda9643ac6601722a28f238714274da4": "червено",
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
-          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
+          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук",
+          "ff800dc7251afead2cdf9c569ff5c9bc": "Днес е доста ",
+          "c30c9d9f51c03a6d42d66cea54206abd": " нали?"
         },
         "courseF_project_1": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Печелиш!",
@@ -163,11 +165,15 @@
         },
         "courseF_playlab_variables1a": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
-          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
+          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук",
+          "ea904c9d18bd602705f598372988aaa8": "Какво да изкрещя?",
+          "97a97de7add5e8dcd9f70a407d56968e": "Гол!"
         },
         "courseF_playlab_variables3b_josh": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
-          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
+          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук",
+          "662722f1029078dad7a3683c64d8b922": "Еха! Аз съм ",
+          "ae096fbf24d913754b01a1601672bf62": " също!"
         },
         "courseF_playlab_variables4b": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
@@ -175,7 +181,9 @@
         },
         "courseF_playlab_variables4c_predictive1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
-          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
+          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук",
+          "d065635d5fffcb3739555ae93006081c": "Радвам се да се запознаем, ",
+          "f6429fe0f1a76611670df7e1234af936": "Как се казваш?"
         },
         "courseF_playlab_variables6c": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
@@ -191,7 +199,11 @@
         },
         "courseF_playlab_variables8c": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
-          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
+          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук",
+          "bec312aa7dbfb0c284d221d2aa8e9ffd": "Поздравления, ",
+          "cd0d7bbbbb604e524bfc25effa78095d": ", аз си мислех за цвета ",
+          "8460ae10541cf8ded22a4e899ddfc0bb": "Съжалявам, ",
+          "8622f69e8cf70458a82fc22d8e46372f": ", аз не си мислех за цвета "
         },
         "courseF_playlab_variables_challenge1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
@@ -235,7 +247,8 @@
         },
         "courseF_apps_aquarium": {
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "живо същество",
-          "f655df68ec33643278de7e69794e8d76": "Виртуален Аквариум"
+          "f655df68ec33643278de7e69794e8d76": "Виртуален Аквариум",
+          "83e4a96aed96436c621b9809e258b309": "риба"
         },
         "New Play Lab Project": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
@@ -272,17 +285,55 @@
         },
         "courseF_apps_aquarium2022": {
           "f655df68ec33643278de7e69794e8d76": "Виртуален Аквариум",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "живо същество"
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "живо същество",
+          "83e4a96aed96436c621b9809e258b309": "риба"
         },
         "courseF_apps_aquarium_-2022-2": {
           "f655df68ec33643278de7e69794e8d76": "Виртуален Аквариум",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "живо същество"
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "живо същество",
+          "83e4a96aed96436c621b9809e258b309": "риба"
         },
         "courseF_apps_collector2022": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Печелиш!"
         },
         "courseF_apps_collector_-2022-2": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Печелиш!"
+        },
+        "courseF_apps_chatbot": {
+          "ae096fbf24d913754b01a1601672bf62": " също!"
+        },
+        "courseF_apps_chatbot2022": {
+          "ae096fbf24d913754b01a1601672bf62": " също!"
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "ae096fbf24d913754b01a1601672bf62": " също!"
+        },
+        "courseF_editable_chatbot": {
+          "ae096fbf24d913754b01a1601672bf62": " също!"
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "ae096fbf24d913754b01a1601672bf62": " също!"
+        },
+        "courseF_extras_sim": {
+          "a2e534e7e893bd7ddb5d2047ed29dc8e": "слон е събрал "
+        },
+        "courseF_text_concat": {
+          "f6429fe0f1a76611670df7e1234af936": "Как се казваш?"
+        },
+        "courseF_text_concat_-2022-2": {
+          "f6429fe0f1a76611670df7e1234af936": "Как се казваш?"
+        },
+        "courseF_text_prompts": {
+          "f6429fe0f1a76611670df7e1234af936": "Как се казваш?"
+        },
+        "courseF_text_prompts_-2022-2": {
+          "f6429fe0f1a76611670df7e1234af936": "Как се казваш?"
+        },
+        "courseF_variables_predict": {
+          "f6429fe0f1a76611670df7e1234af936": "Как се казваш?"
+        },
+        "courseF_variables_predict_-2022-2": {
+          "f6429fe0f1a76611670df7e1234af936": "Как се казваш?"
         }
       }
     }

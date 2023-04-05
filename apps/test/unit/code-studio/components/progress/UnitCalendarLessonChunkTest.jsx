@@ -212,10 +212,7 @@ describe('UnitCalendarLessonChunk', () => {
     );
 
     assert.propertyVal(
-      wrapper
-        .find('FontAwesome')
-        .at(0)
-        .prop('style'),
+      wrapper.find('FontAwesome').at(0).prop('style'),
       'visibility',
       'hidden'
     );
@@ -235,10 +232,7 @@ describe('UnitCalendarLessonChunk', () => {
     );
 
     assert.propertyVal(
-      wrapper
-        .find('FontAwesome')
-        .at(1)
-        .prop('style'),
+      wrapper.find('FontAwesome').at(1).prop('style'),
       'visibility',
       'hidden'
     );

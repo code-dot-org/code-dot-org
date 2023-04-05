@@ -5,13 +5,13 @@ class Services::CompleteApplicationReminder
     #
     # We send reminders to complete an application 7 days after an applicant has last saved their application,
     # another one 14 days after an applicant has last saved their application.
-    def queue_complete_application_reminders!
+    def send_complete_application_reminders!
       applications_needing_initial_reminder.each do |application|
-        application.queue_email 'complete_application_initial_reminder'
+        application.queue_email 'complete_application_initial_reminder', deliver_now: true
       end
 
       applications_needing_final_reminder.each do |application|
-        application.queue_email 'complete_application_final_reminder'
+        application.queue_email 'complete_application_final_reminder', deliver_now: true
       end
     end
 

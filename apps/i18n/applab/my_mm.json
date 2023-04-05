@@ -355,7 +355,7 @@
   "makerSetupFollowInstructions": "အပြန်အလှန်အကျိုးသက်ရောက်မှုထည့်သွင်းမှုးစာရင်းမှပေထားးသော ညွှန်ကြားချက်များကိုလိုက်နာပါ။",
   "makerSetupInstallSerialConnector": "[Code.org Serial Connector Chrome အက်ပ်]({webstoreURL}) ကို ထည့်သွင်းပါ။",
   "makerSetupInstallFirmataCP": "၎င်းတွင် မှန်ကန်သော firmware ပုံကြမ်းကို ထည့်သွင်းထားပြီးကြောင်း သေချာစွာစစ်ဆေးသင့်ပါသည်။ သင်ဤပုံကြမ်းကို  [for Circuit Playground Express boards with these instructions]({firmataURLExpress}) နှင့် [for Circuit Playground Classic boards with these instructions]({firmataURLClassic}) တို့မှ ထည့်သွင်းနိုင်ပါသည်။",
-  "makerSetupInstallFirmataMB": "၎င်းတွင် မှန်ကန်သော Firmware ပုံကြမ်းကို ထည့်သွင်းထားကြောင်း သင်သေချာစွာစစ်ဆေးသင့်ပါသည်။ သင်သည် [ဤညွှန်ကြားချက်များဖြင့် Firmata ပုံကြမ်းကို ထည့်သွင်းနိုင်ပါသည်။]({firmataURL}) ",
+  "makerSetupInstallFirmataMB": "၎င်းတွင် မှန်ကန်သော Firmware ပုံကြမ်းကို ထည့်သွင်းထားကြောင်း သင်သေချာစွာစစ်ဆေးသင့်ပါသည်။ သင်သည် [ဤညွှန်ကြားချက်များဖြင့် Firmata ပုံကြမ်းကို ထည့်သွင်းနိုင်ပါသည်။][0] ",
   "makerSetupInstallFirmataOther": "၎င်းတွင် မှန်ကန်သော firmware ပုံကြမ်းကို ထည့်သွင်းထားပြီးဖြစ်ကြောင်း သေချာစွာစစ်ဆေးသင့်ပါသည်။ သင်ဤ Firmata ပုံကြမ်အား  [for Circuit Playground Express boards with these instructions]({firmataURLExpress}) နှင့် [for Circuit Playground Classic boards with these instructions]({firmataURLClassic}) တို့မှ ထည့်သွင်းထားနိုင်ပါသည်။ သင် Firmata ပုံကြမ်းကို [for micro:bit with these instructions]({firmataURLMB}) ထည့်သွင်းထားနိုင်ပါသည်။",
   "makerSetupLinuxAddDialout": "အကယ်၍ သင်သည် 'ဒိုင်ယာလော့' တွင် မပါဝင်ပါက၊ သင်သည် ထိုအဖွဲ့သို့ သင့်ကိုယ်သင် ထည့်လိုပါလိမ့်မည်။",
   "makerSetupLinuxAlternative": "အစားထိုး တပ်ဆင်သူများ",

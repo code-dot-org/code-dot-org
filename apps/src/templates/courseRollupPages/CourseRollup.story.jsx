@@ -1,6 +1,8 @@
 import React from 'react';
 import CourseRollup from '@cdo/apps/templates/courseRollupPages/CourseRollup';
 import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
+import {Provider} from 'react-redux';
+import {reduxStore} from '@cdo/storybook/decorators';
 
 const defaultProps = {
   objectToRollUp: 'Vocabulary',
@@ -193,66 +195,63 @@ const defaultProps = {
   }
 };
 
-export default storybook => {
-  storybook
-    .storiesOf('CourseRollup', module)
-    .withReduxStore()
-    .addStoryTable([
-      {
-        name: 'Course Vocabulary',
-        story: () => <CourseRollup {...defaultProps} />
-      },
-      {
-        name: 'Course Code',
-        story: () => <CourseRollup {...defaultProps} objectToRollUp={'Code'} />
-      },
-      {
-        name: 'Course Resources',
-        story: () => (
-          <CourseRollup {...defaultProps} objectToRollUp={'Resources'} />
-        )
-      },
-      {
-        name: 'Course Standards',
-        story: () => (
-          <CourseRollup {...defaultProps} objectToRollUp={'Standards'} />
-        )
-      },
-      {
-        name: 'Unit Vocabulary',
-        story: () => (
-          <UnitRollup
-            unit={defaultProps.course.units[0]}
-            objectToRollUp={defaultProps.objectToRollUp}
-          />
-        )
-      },
-      {
-        name: 'Unit Code',
-        story: () => (
-          <UnitRollup
-            unit={defaultProps.course.units[0]}
-            objectToRollUp={'Code'}
-          />
-        )
-      },
-      {
-        name: 'Unit Resources',
-        story: () => (
-          <UnitRollup
-            unit={defaultProps.course.units[0]}
-            objectToRollUp={'Resources'}
-          />
-        )
-      },
-      {
-        name: 'Unit Standards',
-        story: () => (
-          <UnitRollup
-            unit={defaultProps.course.units[0]}
-            objectToRollUp={'Standards'}
-          />
-        )
-      }
-    ]);
+export default {
+  title: 'CourseRollup',
+  component: CourseRollup
+};
+
+const CourseTemplate = args => {
+  return (
+    <Provider store={reduxStore()}>
+      <CourseRollup {...defaultProps} {...args} />
+    </Provider>
+  );
+};
+
+const UnitTemplate = args => {
+  return (
+    <Provider store={reduxStore()}>
+      <UnitRollup unit={defaultProps.course.units[0]} {...args} />
+    </Provider>
+  );
+};
+
+export const CourseVocabularyExample = CourseTemplate.bind({});
+CourseVocabularyExample.args = {
+  objectToRollUp: defaultProps.objectToRollUp
+};
+
+export const CourseCodeExample = CourseTemplate.bind({});
+CourseCodeExample.args = {
+  objectToRollUp: 'Code'
+};
+
+export const CourseResourceExample = CourseTemplate.bind({});
+CourseResourceExample.args = {
+  objectToRollUp: 'Resources'
+};
+
+export const CourseStandardsExample = CourseTemplate.bind({});
+CourseStandardsExample.args = {
+  objectToRollUp: 'Standards'
+};
+
+export const UnitVocabularyExample = UnitTemplate.bind({});
+UnitVocabularyExample.args = {
+  objectToRollUp: defaultProps.objectToRollUp
+};
+
+export const UnitCodeExample = UnitTemplate.bind({});
+UnitCodeExample.args = {
+  objectToRollUp: 'Code'
+};
+
+export const UnitResourceExample = UnitTemplate.bind({});
+UnitResourceExample.args = {
+  objectToRollUp: 'Resources'
+};
+
+export const UnitStandardsExample = UnitTemplate.bind({});
+UnitStandardsExample.args = {
+  objectToRollUp: 'Standards'
 };

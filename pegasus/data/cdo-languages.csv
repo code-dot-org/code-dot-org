@@ -62,6 +62,7 @@ pt-PT,po,pt,pt-PT,Português (Portugal),Portuguese (Portugal),TRUE,TRUE,pt,Portu
 ro,ro,ro,ro-RO,Română,Romanian,TRUE,TRUE,ro,Romanian,TRUE,TRUE,FALSE,TRUE,FALSE
 ru,ru,ru,ru-RU,Pусский,Russian,TRUE,TRUE,ru,Russian,FALSE,FALSE,TRUE,FALSE,TRUE
 se,se,se,se-FI,Davvisámegiella,Northern Sami,TRUE,TRUE,se,Northern Sami,FALSE,FALSE,FALSE,FALSE,FALSE
+sm,sm,sm,sm-WS,Sāmoa,Samoan,FALSE,FALSE,sm,Samoan,FALSE,FALSE,FALSE,FALSE,FALSE
 si,si,si,si-LK,සිංහල,Sinhalese,TRUE,TRUE,si-LK,Sinhala,FALSE,FALSE,FALSE,FALSE,FALSE
 sk,sk,sk,sk-SK,Slovenčina,Slovak,TRUE,TRUE,sk,Slovak,FALSE,TRUE,FALSE,FALSE,TRUE
 sl,sl,sl,sl-SI,Slovenščina,Slovenian,TRUE,TRUE,sl,Slovenian,FALSE,TRUE,FALSE,FALSE,FALSE

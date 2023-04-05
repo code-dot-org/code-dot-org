@@ -14,6 +14,9 @@ const enabledClasses = [
   styles.teal
 ];
 
+/**
+ * Renders the Beat Pad component, which can be used to play numbered triggers during playback
+ */
 const BeatPad = ({triggers, playTrigger, onClose, isPlaying}) => {
   const renderTriggers = () => {
     const rows = [];

@@ -12,6 +12,6 @@
   "invalidMainMethod": "Asosiy usulingizda xatolik yuz berdi. Asosiy usulingiz ommaviy, statik, bekor qilish turiga ega va faqat bitta argumentga ega ekanligiga ishonch hosil qiling (String [] args).",
   "rename": "Qayta nomlash",
   "renameFile": "Faylni qayta nomlash",
-  "submit": "Taqdim qilmoq",
-  "saving": "Saqlash ..."
+  "saving": "Saqlash ...",
+  "submit": "Taqdim qilmoq"
 }

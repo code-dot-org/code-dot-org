@@ -45,7 +45,7 @@ describe('WorkshopIndex', () => {
       ]
     ]);
 
-    permissionButtonMap.forEach(function(buttons, permissionName) {
+    permissionButtonMap.forEach(function (buttons, permissionName) {
       it(permissionName + ' has ' + buttons.length + ' buttons', () => {
         const permission = new Permission([permissionName]);
 
@@ -58,10 +58,7 @@ describe('WorkshopIndex', () => {
         );
         expect(
           workshopIndex.find('ButtonToolbar Button').map(button => {
-            return button
-              .children()
-              .first()
-              .text();
+            return button.children().first().text();
           })
         ).to.deep.equal(buttons);
       });

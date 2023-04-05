@@ -2499,36 +2499,34 @@ class User < ApplicationRecord
     followeds.map(&:code_review_group).compact
   end
 
-  private
-
-  def account_age_in_years
+  private def account_age_in_years
     ((Time.now - created_at.to_time) / 1.year).round
   end
 
   # Returns a list of all grades that the teacher currently has sections for
-  def grades_being_taught
-    @grades_being_taught ||= sections.map(&:grade).uniq
+  private def grades_being_taught
+    @grades_being_taught ||= sections.map(&:grades).flatten.uniq
   end
 
   # Returns a list of all curriculums that the teacher currently has sections for
   # ex: ["csf", "csd"]
-  def curriculums_being_taught
+  private def curriculums_being_taught
     @curriculums_being_taught ||= sections.map {|section| section.script&.curriculum_umbrella}.compact.uniq
   end
 
-  def has_attended_pd?
+  private def has_attended_pd?
     pd_attendances.any?
   end
 
-  def school_stats
+  private def school_stats
     @school_stats ||= school_info_school&.most_recent_school_stats
   end
 
-  def hidden_lesson_ids(sections)
+  private def hidden_lesson_ids(sections)
     return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
   end
 
-  def hidden_unit_ids(sections)
+  private def hidden_unit_ids(sections)
     return sections.flat_map(&:section_hidden_scripts).pluck(:script_id)
   end
 
@@ -2539,7 +2537,7 @@ class User < ApplicationRecord
   # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
   #   if we're looking for hidden units.
   # @return {Hash<string,number[]>
-  def get_instructor_hidden_ids(hidden_lessons)
+  private def get_instructor_hidden_ids(hidden_lessons)
     # If we're a teacher, we want to go through each of our sections and return
     # a mapping from section id to hidden lessons/units in that section
     hidden_by_section = {}
@@ -2554,7 +2552,7 @@ class User < ApplicationRecord
   # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
   #   if we're looking for hidden units.
   # @return {number[]} Set of lesson/unit ids that should be hidden
-  def get_participant_hidden_ids(assign_id, hidden_lessons)
+  private def get_participant_hidden_ids(assign_id, hidden_lessons)
     sections = sections_as_student
     return [] if sections.empty?
 
@@ -2578,13 +2576,13 @@ class User < ApplicationRecord
     end
   end
 
-  def normalize_parent_email
+  private def normalize_parent_email
     self.parent_email = nil if parent_email.blank?
   end
 
   # Parent email is not required, but if it is present, it must be a
   # well-formed email address.
-  def validate_parent_email
+  private def validate_parent_email
     errors.add(:parent_email) unless parent_email.nil? ||
       Cdo::EmailValidator.email_address?(parent_email)
   end

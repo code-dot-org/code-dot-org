@@ -155,6 +155,12 @@
         "csd-2022/playing-notes": {
           "display_name": "角色备注"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "解决问题的过程"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "解决问题的过程"
+        },
         "csd-2022/random-numbers": {
           "display_name": "随机数"
         },
@@ -193,6 +199,9 @@
         },
         "csd-2022/velocity-and-the-counter-pattern": {
           "display_name": "速度和计数模式"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "网络实验室"
         },
         "csd-2022/which-type-of-chart": {
           "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"

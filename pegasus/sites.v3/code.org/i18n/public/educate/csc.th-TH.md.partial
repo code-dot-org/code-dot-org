@@ -77,3 +77,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>ได้เรียนรู้ในกิจกรรม CS Connection ครบถ้วนแล้วและ/หรือกำลังมองหาตัวเลือกใหม่ๆให้กับชั้นเรียน? โปรด <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">แสดงความคิดเห็น</a>และข้อเสนอแนะเกี่ยวกับบทเรียนต่างๆที่นี่!</em>
+
+{{ visit_partial_event_logger }}

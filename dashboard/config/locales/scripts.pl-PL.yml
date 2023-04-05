@@ -6621,6 +6621,8 @@ pl:
               name: Wprowadzenie do Duszków
             lesson-9:
               name: Microbit Playground
+            lesson-10:
+              name: Badanie pulsu do klonowania
         csc-pilot-2022-ecosystems:
           name: csc-pilot-2022-ecosystems
         csc-pilot-2022-timecapsule:
@@ -7120,6 +7122,8 @@ pl:
               name: Pętle dla (for)
             lesson-4:
               name: Warunki wstępne i warunki końcowe
+            lesson-5:
+              name: Ulepszone dla pętli
             lesson-6:
               name: Zmienne statyczne i stałe
             lesson-7:
@@ -7128,10 +7132,14 @@ pl:
               name: Algorytmy macierzowe
             lesson-9:
               name: Znajdowanie duplikatów
+            lesson-10:
+              name: Dane dla projektu dobra społecznego
             lesson-11:
               name: Praktyka FRQ
             lesson-12:
               name: Jednostka 3 Sprawdzian
+            lesson-13:
+              name: Dane dla projektu dobra społecznego [wersja 1-dniowa]
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -7142,12 +7150,114 @@ pl:
           name: csa3-2023
           title: Tablice i Algorytmy
         csa4-2023:
+          lessons:
+            lesson-2:
+              name: Projekt abstrakcyjnych danych sztuki
+            lesson-3:
+              name: BingoCaller FRQ
+            lesson-4:
+              name: Jednostka 4 Sprawdzian
+            lesson-1:
+              name: Projekt abstrakcyjnych danych sztuki [wersja 1-dniowa]
+            lesson-5:
+              name: Teatr
+            lesson-6:
+              name: Statyczne zmienne i metody
+            lesson-7:
+              name: Klasa matematyki
+            lesson-8:
+              name: Odcinanie i zaokrąglanie
+            lesson-10:
+              name: Aliasy obiektów i równość
+            lesson-11:
+              name: Zagnieżdżone instrukcje 'jeżeli'
+            lesson-12:
+              name: Operatory logiczne
+            lesson-13:
+              name: Prawa De Morgana
+            lesson-14:
+              name: Instrukcje wielokrotnego wyboru
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
           name: csa4-2023
           title: Warunki i Logika
         csa5-2023:
+          lessons:
+            lesson-1:
+              name: Tablice dwuwymiarowe (2D)
+            lesson-2:
+              name: Elementy tablicy 2D
+            lesson-3:
+              name: Wiersz-Major Traversal
+            lesson-4:
+              name: Kolumna-Major Traversal
+            lesson-5:
+              name: Ulepszone dla pętli
+            lesson-6:
+              name: Obrazy w Teatrze
+            lesson-7:
+              name: Algorytmy na macierzach 2D
+            lesson-8:
+              name: Modyfikowanie obrazów
+            lesson-9:
+              name: Wpływ programów
+            lesson-10:
+              name: Osobisty projekt narracyjny
+            lesson-11:
+              name: GrayScaleImage FRQ
+            lesson-12:
+              name: Jednostka 5 Sprawdzian
+            lesson-13:
+              name: Osobisty projekt narracyjny [Wersja 1-dniowa]
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
           name: csa5-2023
           title: Tablice dwuwymiarowe
         csa6-2023:
+          lessons:
+            lesson-1:
+              name: Planowanie projektu
+            lesson-2:
+              name: Łańcuchy częściowe
+            lesson-3:
+              name: Całkowite i podwójne obiekty
+            lesson-4:
+              name: Listy tablic
+            lesson-5:
+              name: Manipulowanie elementami
+            lesson-6:
+              name: Porównywanie łańcuchów
+            lesson-7:
+              name: Listy obiektów
+            lesson-8:
+              name: Usuwanie elementów
+            lesson-9:
+              name: Algorytmy na listach tablic i łańcuchach
+            lesson-10:
+              name: Projekt przetwarzania języka naturalnego
+            lesson-11:
+              name: TemperatureAction FRQ
+            lesson-12:
+              name: Jednostka 6 Sprawdzian
+            lesson-13:
+              name: Projekt przetwarzania języka naturalnego [wersja 1-dniowa]
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
           name: csa6-2023
           title: Listy tablic i Metody łańcuchów
         csa7-2023:
@@ -7279,12 +7389,11 @@ pl:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: Rozdział 1
+              display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
-              display_name: Rozdział 2
+              display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
             lessonGroup-4:
               display_name: Lekcje alternatywne
-          title: Rozwiązywanie problemów
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -7292,13 +7401,26 @@ pl:
             lessonGroup-3:
               display_name: 'Rozdział 2: Wielostronicowe witryny'
           title: Opracowywaniem stron internetowych
+          student_description: W Części 2 nauczysz się, jak tworzyć i udostępniać
+            treści na Twoich własnych stronach internetowych. Po podjęciu decyzji
+            jaką treść chcesz udostępniać światu nauczysz się, jak konstruować i stylizować
+            swoje strony z wykorzystaniem HTML i CSS. Będziesz też ćwiczyć cenne umiejętności
+            w zakresie programowania takie jak debugowanie, korzystanie  z zasobów
+            i praca zespołowa.
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
             lessonGroup-3:
               display_name: 'Rozdział 2: Prototypowanie aplikacji'
-          title: Proces projektowania
+          student_description: Dział 4 wprowadza zagadnienia szerszego oddziaływania
+            społecznego informatyki. Poprzez serię wyzwań projektowych będziesz się
+            uczył lepiej rozumieć potrzeby innych, opracowując rozwiązanie problemu.
+            Druga połowa działu składa się z iteracyjnego projektu zespołowego, w
+            trakcie którego zespoły mają możliwość identyfikacji potrzeb, które są
+            dla nich ważne, tworzyć prototypy rozwiązań na papierze i w App Lab oraz
+            testować rozwiązania na prawdziwych użytkownikach, aby uzyskać od nich
+            informacje zwrotne i kształtować dalszą iterację.
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
@@ -7306,26 +7428,53 @@ pl:
             lessonGroup-3:
               display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
           title: Dane i społeczeństwo
+          description_short: Dowiedz się, w jaki sposób ludzie używają komputerów,
+            aby rozwiązywać problemy z danymi.
+          student_description: Dział 5 poświęcony jest znaczeniu danych w rozwiązywaniu
+            problemów oraz podkreślaniu, w jaki sposób komputery mogą pomóc w tym
+            procesie. W pierwszym rozdziale bada się różne systemy używane do przedstawiania
+            informacji na komputerze oraz wyzwań i kompromisów zamieszczone przez
+            tych, którzy go używają. W drugim rozdziale dowiesz się, jak zbieranie
+            danych są używane do rozwiązywania problemów i jak komputery pomagają
+            w automatyzacji kroków tego procesu. Rozdział kończy się przemyśleniem,
+            jak proces rozwiązywania problemu z danym może być stosowany w wybranym
+            przez siebie obszarze.
         csd3-2023:
+          lessons:
+            lesson-18:
+              name: Mini-projekt - twarz robota
           lesson_groups:
             lessonGroup-2:
               display_name: 'Rozdział 1: Obrazy i animacje'
             lessonGroup-3:
               display_name: 'Rozdział 2: Budowanie gier'
           title: Interaktywne animacje i gry
+          student_description: W dziale 3 będziesz korzystać z doświadczeń w zakresie
+            kodowania w trakcie programowania animacji, sztuki interaktywną i gry
+            w Game Lab.Dział rozpoczyna się  od prostych kształtów i buduje się w
+            nim bardziej wyszukane animacje i gry oparte na duszku, używając tych
+            samych koncepcji programowania i procesu projektowania, którego informatycy
+            używają w codziennej pracy. W ramach projektu finałowego będziesz opracowywać
+            spersonalizowany program interaktywny.
         csd6-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: Rozdział 1
+              display_name: 'Rozdział 1: Dane i wyniki'
             lessonGroup-3:
-              display_name: Rozdział 2
-          title: Oiczenia fizyczne
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
+            lessonGroup-5:
+              display_name: Stare lekcje
+            lessonGroup-6:
+              display_name: Nowe lekcje
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Rozdział 1
             lessonGroup-3:
               display_name: Rozdział 2
+            lessonGroup-4:
+              display_name: Wprowadzenie do App Lab
           title: AI i uczenie maszynowe
         physcomp-temp:
           lesson_groups:
@@ -7387,6 +7536,8 @@ pl:
               name: Rzeczy Emmy
             lesson-2:
               name: NOWOŚĆ- Maszyny funkcyjne
+            lesson-6:
+              name: Test ekosystemów
           name: emmas-playground
         amys-playground:
           lessons:
@@ -7405,15 +7556,18 @@ pl:
               display_name: Ankieta
             csp_unit1_2020:
               display_name: 'Jednostka 1: Informacje cyfrowe'
+          name: csp1-2023
         csp2-2023:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Jednostka 2: Internet'
           title: Internet ('21-'22)
+          name: csp2-2023
         csp3-2023:
           lesson_groups:
             csp_unit3_2020:
               display_name: Jednostka 3 - Wprowadzenie do projektowania aplikacji
+          name: csp3-2023
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -7424,6 +7578,7 @@ pl:
               display_name: Funkcje
             csp_project:
               display_name: Projekt
+          name: csp4-2023
         csp5-2023:
           lesson_groups:
             csp_lists:
@@ -7463,6 +7618,7 @@ pl:
               display_name: Biblioteki
             lessonGroup-3:
               display_name: Ankieta po odbyciu kursu
+          name: csp7-2023
         csp8-2023:
           lesson_groups:
             lessonGroup-2:
@@ -7489,8 +7645,13 @@ pl:
           description: Ta jednostka zawiera ankietę po kursie Zasady Informatyki
           student_description: Ta jednostka zawiera ankietę dotyczącą kursu Zasady
             Informatyki. Twój nauczyciel poinformuje Cię, kiedy masz wypełnić tę ankietę.
+        self-paced-pl-csa1-2023:
+          name: self-paced-pl-csa1-2023
+        self-paced-pl-csa2-2023:
+          name: self-paced-pl-csa2-2023
         self-paced-pl-csa3-2023:
           title: 'Moduł 3: Wsparcie przy programowaniu tekstowym'
+          name: self-paced-pl-csa3-2023
         csa-examples-22:
           lessons:
             lesson-1:
@@ -7516,6 +7677,8 @@ pl:
               name: Cząstki
             lesson-3:
               name: Sprite Lab Building Demo
+            lesson-4:
+              name: ekosystemy
         angelina-playground:
           lessons:
             lesson-1:
@@ -7524,6 +7687,8 @@ pl:
               name: OG Stany rzeczy
             lesson-4:
               name: Siatka CSS
+            lesson-5:
+              name: Oceny/Sprawdziany
           name: angelina-playground
           title: Miejsce Angeliny do robienia rzeczy
         csc-pilot-fa2022-timecapsule:
@@ -7608,3 +7773,643 @@ pl:
               name: Pomysły FM
           name: katies-playground
           title: Miejsce Katie do robienia rzeczy
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Wejścia i wyjścia
+            lessonGroup-4:
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
+          name: mikrobit-2022
+          title: Tworzenie aplikacji z urządzeniami (Micro:bit)
+        microbit-temp:
+          lessons:
+            lesson-11:
+              name: Wyświetlacz LED
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Wprowadzenie do App Lab
+            lessonGroup-3:
+              display_name: Wejścia i wyjścia
+            lessonGroup-4:
+              display_name: Budowanie fizycznych prototypów
+          name: mikrobit-temp
+          title: 'Micro: Bit Temp'
+        csc-timecapsule-2023:
+          name: csc-timecapsule-2023
+          title: Kapsuła czasu (2023)
+        vpl-csd7-ayw-pilot-2022:
+          lessons:
+            lesson-3:
+              name: Planowanie na przyszły rok
+            lesson-4:
+              name: Bez konferencji
+            lesson-6:
+              name: Badanie asynchronicznego programu nauczania
+          name: vpl-csd7-ayw-pilot-2022
+          title: Odkrycia Informatyki wirtualny moduł 7
+        vpl-csd8-ayw-pilot-2022:
+          lessons:
+            lesson-3:
+              name: Zobowiązanie się do sprawiedliwych praktyk dydaktycznych
+            lesson-4:
+              name: Łączenie się ze społecznością w przyszłości
+            lesson-6:
+              name: Badanie asynchronicznego programu nauczania
+          name: vpl-csd8-ayw-pilot-2022
+          title: Odkrycia Informatyki wirtualny moduł 8
+        csc-mappinglandmarks-2023:
+          name: csc-mappinglandmarks-2023
+          title: Mapowanie punktów orientacyjnych (2023)
+        blockchain-2023:
+          lessons:
+            lesson-1:
+              name: Przegląd Blockchain
+            lesson-2:
+              name: Zastosowane Blockchain i Bitcoin
+            lesson-3:
+              name: Poza walutami
+            lesson-4:
+              name: Wartość w Blockchain
+            lesson-5:
+              name: Wpływ społeczny
+            lesson-6:
+              name: Jak działa Blockchain (seria wideo)
+          name: blockchain-2023
+          title: Blockchain
+          description: To jest jednostka na Blockchain!
+        self-paced-pl-csc-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Przygotowanie do uczenia Jednostki 1
+          title: Przygotowanie do uczenia Jednostki 1
+          name: self-paced-pl-csc-2023
+        csc-ecosystems-2023:
+          lessons:
+            lesson-3:
+              name: Koduj swój własny ekosystem (2023)
+          name: csc-ecosystems-2023
+          title: Zrównoważone ekosystemy
+        csc-adaptations-2023:
+          lessons:
+            lesson-2:
+              name: Zachowania zwierząt dla przetrwania
+            lesson-3:
+              name: Koduj własną adaptację
+          name: csc-adaptations-2023
+        drafting:
+          name: redakcja
+          title: Aktualizacje wersji roboczej CSP 2023-24
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Rozdział 1
+            lessonGroup-3:
+              display_name: Rozdział 2
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+          name: tess-testing-problem-solving-2023
+          title: Rozwiązywanie problemów
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Rozdział 1
+          name: testing-focus-on-creativity1
+          title: Rozwiązywanie problemów
+        testing-focus-on-creativity2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Tworzenie stron internetowych'
+            lessonGroup-4:
+              display_name: 'Rozdział 2: Wielostronicowe witryny'
+          name: testing-focus-on-creativity2
+          title: Opracowywaniem stron internetowych
+        poetry-2023:
+          name: poetry-2023
+          title: Kodowanie z poezją (2023)
+        poemmaker-2023:
+          name: poemmaker-2023
+          title: Kreator wiersza
+        dlp-core-2023:
+          name: dlp-core-2023
+          title: 2023 Podstawy głębszego uczenia się
+          description: "# Witamy na kursie Ceeper Learning: Core Foundations 2023"
+        csc-particles-2023:
+          name: csc-particles-2023
+        csc-bookcovers-2023:
+          name: csc-bookcovers-2023
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekwencjonowanie
+            csf_loops:
+              display_name: Pętle
+            csf_events:
+              display_name: Zdarzenia
+          title: Ekspresowy kurs dla nie umiejących czytać (2023)
+          description: Ucz się informatyki wypróbowując poniższe lekcje w swoim własnym
+            tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności w
+            zakresie rozwiązywania problemów i pokonuj rozrywkowe wyzwania! Twórz
+            gry i kreatywne projekty, aby udostępniać je znajomym, rodzinie i nauczycielom.
+          student_description: Ucz się informatyki wypróbowując poniższe lekcje w
+            swoim własnym tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności
+            w zakresie rozwiązywania problemów i pokonuj rozrywkowe wyzwania! Twórz
+            gry i kreatywne projekty, aby udostępniać je znajomym, rodzinie i nauczycielom.
+          description_short: 'Wprowadzenie do informatyki dla nie umiejących czytać:
+            łączy najlepsze elementy z naszych kursów dla przedszkoli i pierwszej
+            klasy.'
+          description_audience: W wieku 4-8
+          name: pre-express-2023
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekwencjonowanie
+            csf_sprites:
+              display_name: Duszki
+            lessonGroup-9:
+              display_name: Zdarzenia
+            csf_loops:
+              display_name: Pętle
+            csf_conditionals:
+              display_name: Zdania z warunkami
+            csf_functions:
+              display_name: Funkcje
+            csf_variables:
+              display_name: Zmienne
+            csf_for_loops:
+              display_name: Pętle dla (for)
+            end_of_course_project:
+              display_name: Koniec projektu kursu
+          description: Ucz się informatyki wypróbowując poniższe lekcje w swoim własnym
+            tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności w
+            zakresie rozwiązywania problemów i pokonuj rozrywkowe wyzwania! Twórz
+            gry i kreatywne projekty, aby udostępniać je znajomym, rodzinie i nauczycielom.
+          student_description: Ucz się informatyki wypróbowując poniższe lekcje w
+            swoim własnym tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności
+            w zakresie rozwiązywania problemów i pokonuj rozrywkowe wyzwania! Twórz
+            gry i kreatywne projekty, aby udostępniać je znajomym, rodzinie i nauczycielom.
+          description_short: 'Wprowadzenie do informatyki: łączy nasze najlepsze programy
+            nauczania w szkole podstawowej dla starszych uczniów.'
+          description_audience: W wieku 9-18
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_sequencing:
+              display_name: Sekwencjonowanie
+            csf_loops:
+              display_name: Pętle
+            csf_events:
+              display_name: Zdarzenia
+            lessonGroup-5:
+              display_name: Koniec projektu kursu
+          student_description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie.
+            Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
+            udostępnić.
+          description_short: Wprowadzenie do informatyki dla nie umiejących czytać.
+          description_audience: W wieku 4-7
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_sequencing:
+              display_name: Sekwencjonowanie
+            csf_loops:
+              display_name: Pętle
+            csf_impacts:
+              display_name: Wplywy informatyki
+            csf_events:
+              display_name: Zdarzenia
+            lessonGroup-6:
+              display_name: Koniec projektu kursu
+          student_description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie.
+            Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
+            udostępnić.
+          description_short: Wprowadzenie do informatyki dla nieumiejących jeszcze
+            czytać. Podobne do Kursu A, ale z pogłębieniem pojęć.
+          description_audience: W wieku 5-8
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_sequencing:
+              display_name: Sekwencjonowanie
+            csf_loops:
+              display_name: Pętle
+            csf_events:
+              display_name: Zdarzenia
+            csf_data:
+              display_name: Dane
+            end_of_course_project:
+              display_name: Koniec projektu kursu
+          student_description: Twórz programy z sekwencjami, pętlami i zdarzeniami.
+            Przekładaj swoje inicjały na zapis binarny, badaj różne techniki rozwiązywania
+            problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu utwórz
+            swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
+          description_short: Poznaj podstawy informatyki i twórz własne artystyczne
+            dzieła, opowiadania i gry.
+          description_audience: W wieku 6-10
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Cyfrowe obywatelstwo
+            csf_sequencing:
+              display_name: Sekwencjonowanie
+            csf_events:
+              display_name: Zdarzenia
+            csf_loops:
+              display_name: Pętle
+            csf_conditionals:
+              display_name: Zdania z warunkami
+            end_of_course_project:
+              display_name: Koniec projektu kursu
+          title: Kurs D (2021)
+          description_short: Ucz się o instrukcjach warunkowych. Twórz swoją własną
+            grafikę, gry, a nawet potańcówkę.
+          description_audience: W wieku 7-11
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_sprites:
+              display_name: Duszki
+            ramp_up:
+              display_name: Zagnieżdżające się  pętle
+            csf_functions:
+              display_name: Funkcje
+            csf_nested_loops:
+              display_name: Zdania z warunkami
+            lessonGroup-7:
+              display_name: Wplywy informatyki
+            end_of_course_project:
+              display_name: Koniec projektu kursu
+          title: Kurs E (2022)
+          description_audience: W wieku 8-12
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Proces rozwiązywania problemów'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+          name: problem-solving-computing-2023
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Tworzenie stron internetowych'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Wielostronicowe witryny'
+          name: web-development-2023
+          title: Opracowywaniem stron internetowych
+          student_description: W Części 2 nauczysz się, jak tworzyć i udostępniać
+            treści na Twoich własnych stronach internetowych. Po podjęciu decyzji
+            jaką treść chcesz udostępniać światu nauczysz się, jak konstruować i stylizować
+            swoje strony z wykorzystaniem HTML i CSS. Będziesz też ćwiczyć cenne umiejętności
+            w zakresie programowania takie jak debugowanie, korzystanie  z zasobów
+            i praca zespołowa.
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Obrazy i animacje'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Budowanie gier'
+          name: interactive-games-animations-2023
+          title: Interaktywne animacje i gry
+          student_description: W dziale 3 będziesz korzystać z doświadczeń w zakresie
+            kodowania w trakcie programowania animacji, sztuki interaktywną i gry
+            w Game Lab.Dział rozpoczyna się  od prostych kształtów i buduje się w
+            nim bardziej wyszukane animacje i gry oparte na duszku, używając tych
+            samych koncepcji programowania i procesu projektowania, którego informatycy
+            używają w codziennej pracy. W ramach projektu finałowego będziesz opracowywać
+            spersonalizowany program interaktywny.
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Prototypowanie aplikacji'
+          name: design-process-2023
+          student_description: Dział 4 wprowadza zagadnienia szerszego oddziaływania
+            społecznego informatyki. Poprzez serię wyzwań projektowych będziesz się
+            uczył lepiej rozumieć potrzeby innych, opracowując rozwiązanie problemu.
+            Druga połowa działu składa się z iteracyjnego projektu zespołowego, w
+            trakcie którego zespoły mają możliwość identyfikacji potrzeb, które są
+            dla nich ważne, tworzyć prototypy rozwiązań na papierze i w App Lab oraz
+            testować rozwiązania na prawdziwych użytkownikach, aby uzyskać od nich
+            informacje zwrotne i kształtować dalszą iterację.
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Reprezentowanie Informacji'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
+          name: data-society-2023
+          title: Dane i społeczeństwo
+          description_short: Dowiedz się, w jaki sposób ludzie używają komputerów,
+            aby rozwiązywać problemy z danymi.
+          student_description: Dział 5 poświęcony jest znaczeniu danych w rozwiązywaniu
+            problemów oraz podkreślaniu, w jaki sposób komputery mogą pomóc w tym
+            procesie. W pierwszym rozdziale bada się różne systemy używane do przedstawiania
+            informacji na komputerze oraz wyzwań i kompromisów zamieszczone przez
+            tych, którzy go używają. W drugim rozdziale dowiesz się, jak zbieranie
+            danych są używane do rozwiązywania problemów i jak komputery pomagają
+            w automatyzacji kroków tego procesu. Rozdział kończy się przemyśleniem,
+            jak proces rozwiązywania problemu z danym może być stosowany w wybranym
+            przez siebie obszarze.
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Wprowadzenie do App Lab
+            lessonGroup-3:
+              display_name: Rozdział 1
+            lessonGroup-4:
+              display_name: Rozdział 2
+          name: aiml-2023
+          title: AI i uczenie maszynowe
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Proces rozwiązywania problemów'
+            lessonGroup-3:
+              display_name: Lekcje alternatywne
+          name: focus-on-creativity1-2023
+        focus-on-creativity2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Tworzenie stron internetowych'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Wielostronicowe witryny'
+          name: focus-on-creativity2-2023
+          title: Opracowywaniem stron internetowych
+          student_description: W Części 2 nauczysz się, jak tworzyć i udostępniać
+            treści na Twoich własnych stronach internetowych. Po podjęciu decyzji
+            jaką treść chcesz udostępniać światu nauczysz się, jak konstruować i stylizować
+            swoje strony z wykorzystaniem HTML i CSS. Będziesz też ćwiczyć cenne umiejętności
+            w zakresie programowania takie jak debugowanie, korzystanie  z zasobów
+            i praca zespołowa.
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Obrazy i animacje'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Budowanie gier'
+          name: focus-on-creativity3-2023
+          title: Interaktywne animacje i gry
+          student_description: W dziale 3 będziesz korzystać z doświadczeń w zakresie
+            kodowania w trakcie programowania animacji, sztuki interaktywną i gry
+            w Game Lab.Dział rozpoczyna się  od prostych kształtów i buduje się w
+            nim bardziej wyszukane animacje i gry oparte na duszku, używając tych
+            samych koncepcji programowania i procesu projektowania, którego informatycy
+            używają w codziennej pracy. W ramach projektu finałowego będziesz opracowywać
+            spersonalizowany program interaktywny.
+        csc-starquilts-2023:
+          name: csc-starquilts-2023
+          title: Gwiezdne Kołdry (2023)
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Rozdział 1: Dane i wyniki'
+            lessonGroup-4:
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
+          name: focus-on-creativity4a-2023
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Proces rozwiązywania problemów'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+          name: focus-on-hardware1-2023
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Reprezentowanie Informacji'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
+          name: focus-on-hardware2-2023
+          title: Dane i społeczeństwo
+          description_short: Dowiedz się, w jaki sposób ludzie używają komputerów,
+            aby rozwiązywać problemy z danymi.
+          student_description: Dział 5 poświęcony jest znaczeniu danych w rozwiązywaniu
+            problemów oraz podkreślaniu, w jaki sposób komputery mogą pomóc w tym
+            procesie. W pierwszym rozdziale bada się różne systemy używane do przedstawiania
+            informacji na komputerze oraz wyzwań i kompromisów zamieszczone przez
+            tych, którzy go używają. W drugim rozdziale dowiesz się, jak zbieranie
+            danych są używane do rozwiązywania problemów i jak komputery pomagają
+            w automatyzacji kroków tego procesu. Rozdział kończy się przemyśleniem,
+            jak proces rozwiązywania problemu z danym może być stosowany w wybranym
+            przez siebie obszarze.
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Rozdział 1: Dane i wyniki'
+            lessonGroup-4:
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
+          name: focus-on-hardware3a-2023
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Proces rozwiązywania problemów'
+            lessonGroup-3:
+              display_name: Lekcje alternatywne
+          name: focus-on-data1-2023
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Reprezentowanie Informacji'
+          name: focus-on-data2
+          title: Dane i społeczeństwo
+          description_short: Dowiedz się, w jaki sposób ludzie używają komputerów,
+            aby rozwiązywać problemy z danymi.
+          student_description: Dział 5 poświęcony jest znaczeniu danych w rozwiązywaniu
+            problemów oraz podkreślaniu, w jaki sposób komputery mogą pomóc w tym
+            procesie. W pierwszym rozdziale bada się różne systemy używane do przedstawiania
+            informacji na komputerze oraz wyzwań i kompromisów zamieszczone przez
+            tych, którzy go używają. W drugim rozdziale dowiesz się, jak zbieranie
+            danych są używane do rozwiązywania problemów i jak komputery pomagają
+            w automatyzacji kroków tego procesu. Rozdział kończy się przemyśleniem,
+            jak proces rozwiązywania problemu z danym może być stosowany w wybranym
+            przez siebie obszarze.
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Reprezentowanie Informacji'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
+          name: focus-on-data2-2023
+          title: Dane i społeczeństwo
+          description_short: Dowiedz się, w jaki sposób ludzie używają komputerów,
+            aby rozwiązywać problemy z danymi.
+          student_description: Dział 5 poświęcony jest znaczeniu danych w rozwiązywaniu
+            problemów oraz podkreślaniu, w jaki sposób komputery mogą pomóc w tym
+            procesie. W pierwszym rozdziale bada się różne systemy używane do przedstawiania
+            informacji na komputerze oraz wyzwań i kompromisów zamieszczone przez
+            tych, którzy go używają. W drugim rozdziale dowiesz się, jak zbieranie
+            danych są używane do rozwiązywania problemów i jak komputery pomagają
+            w automatyzacji kroków tego procesu. Rozdział kończy się przemyśleniem,
+            jak proces rozwiązywania problemu z danym może być stosowany w wybranym
+            przez siebie obszarze.
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Wprowadzenie do App Lab
+            lessonGroup-3:
+              display_name: Rozdział 1
+            lessonGroup-4:
+              display_name: Rozdział 2
+          name: focus-on-data3-2023
+          title: AI i uczenie maszynowe
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Proces rozwiązywania problemów'
+            lessonGroup-3:
+              display_name: Lekcje alternatywne
+          name: focus-on-design-with-purpose1-2023
+        self-paced-pl-k5-getting-started:
+          name: self-paced-pl-k5-getting-started
+          title: 'Pierwsze kroki z Code.org (K-5) '
+        focus-on-design-with-purpose2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Tworzenie stron internetowych'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Wielostronicowe witryny'
+          name: focus-on-design-with-purpose2-2023
+          title: Opracowywaniem stron internetowych
+          student_description: W Części 2 nauczysz się, jak tworzyć i udostępniać
+            treści na Twoich własnych stronach internetowych. Po podjęciu decyzji
+            jaką treść chcesz udostępniać światu nauczysz się, jak konstruować i stylizować
+            swoje strony z wykorzystaniem HTML i CSS. Będziesz też ćwiczyć cenne umiejętności
+            w zakresie programowania takie jak debugowanie, korzystanie  z zasobów
+            i praca zespołowa.
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Prototypowanie aplikacji'
+          name: focus-on-design-with-purpose3-2023
+          student_description: Dział 4 wprowadza zagadnienia szerszego oddziaływania
+            społecznego informatyki. Poprzez serię wyzwań projektowych będziesz się
+            uczył lepiej rozumieć potrzeby innych, opracowując rozwiązanie problemu.
+            Druga połowa działu składa się z iteracyjnego projektu zespołowego, w
+            trakcie którego zespoły mają możliwość identyfikacji potrzeb, które są
+            dla nich ważne, tworzyć prototypy rozwiązań na papierze i w App Lab oraz
+            testować rozwiązania na prawdziwych użytkownikach, aby uzyskać od nich
+            informacje zwrotne i kształtować dalszą iterację.
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Rozdział 1: Dane i wyniki'
+            lessonGroup-4:
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
+          name: focus-on-design-with-purpose4a-2023
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
+        self-paced-k5-pl-getting-started:
+          name: self-paced-k5-pl-getting-started
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Proces rozwiązywania problemów'
+            lessonGroup-3:
+              display_name: Lekcje alternatywne
+          name: focus-on-coding1-2023
+        focus-on-coding2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Tworzenie stron internetowych'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Wielostronicowe witryny'
+          name: focus-on-coding2-2023
+          title: Opracowywaniem stron internetowych
+          student_description: W Części 2 nauczysz się, jak tworzyć i udostępniać
+            treści na Twoich własnych stronach internetowych. Po podjęciu decyzji
+            jaką treść chcesz udostępniać światu nauczysz się, jak konstruować i stylizować
+            swoje strony z wykorzystaniem HTML i CSS. Będziesz też ćwiczyć cenne umiejętności
+            w zakresie programowania takie jak debugowanie, korzystanie  z zasobów
+            i praca zespołowa.
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Obrazy i animacje'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Budowanie gier'
+          name: focus-on-coding3-2023
+          title: Interaktywne animacje i gry
+          student_description: W dziale 3 będziesz korzystać z doświadczeń w zakresie
+            kodowania w trakcie programowania animacji, sztuki interaktywną i gry
+            w Game Lab.Dział rozpoczyna się  od prostych kształtów i buduje się w
+            nim bardziej wyszukane animacje i gry oparte na duszku, używając tych
+            samych koncepcji programowania i procesu projektowania, którego informatycy
+            używają w codziennej pracy. W ramach projektu finałowego będziesz opracowywać
+            spersonalizowany program interaktywny.
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Rozdział 1: Dane i wyniki'
+            lessonGroup-4:
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
+          name: focus-on-coding4a-2023
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Proces rozwiązywania problemów'
+            lessonGroup-3:
+              display_name: Lekcje alternatywne
+          name: focus-on-impact-in-society1-2023
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Prototypowanie aplikacji'
+          name: focus-on-impact-in-society2-2023
+          student_description: Dział 4 wprowadza zagadnienia szerszego oddziaływania
+            społecznego informatyki. Poprzez serię wyzwań projektowych będziesz się
+            uczył lepiej rozumieć potrzeby innych, opracowując rozwiązanie problemu.
+            Druga połowa działu składa się z iteracyjnego projektu zespołowego, w
+            trakcie którego zespoły mają możliwość identyfikacji potrzeb, które są
+            dla nich ważne, tworzyć prototypy rozwiązań na papierze i w App Lab oraz
+            testować rozwiązania na prawdziwych użytkownikach, aby uzyskać od nich
+            informacje zwrotne i kształtować dalszą iterację.
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Reprezentowanie Informacji'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
+          name: focus-on-impact-in-society3-2023
+          title: Dane i społeczeństwo
+          description_short: Dowiedz się, w jaki sposób ludzie używają komputerów,
+            aby rozwiązywać problemy z danymi.
+          student_description: Dział 5 poświęcony jest znaczeniu danych w rozwiązywaniu
+            problemów oraz podkreślaniu, w jaki sposób komputery mogą pomóc w tym
+            procesie. W pierwszym rozdziale bada się różne systemy używane do przedstawiania
+            informacji na komputerze oraz wyzwań i kompromisów zamieszczone przez
+            tych, którzy go używają. W drugim rozdziale dowiesz się, jak zbieranie
+            danych są używane do rozwiązywania problemów i jak komputery pomagają
+            w automatyzacji kroków tego procesu. Rozdział kończy się przemyśleniem,
+            jak proces rozwiązywania problemu z danym może być stosowany w wybranym
+            przez siebie obszarze.
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Rozdział 1
+            lessonGroup-3:
+              display_name: Wprowadzenie do App Lab
+            lessonGroup-4:
+              display_name: Rozdział 2
+          name: focus-on-impact-in-society4-2023
+          title: AI i uczenie maszynowe
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Dane i wyniki'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych

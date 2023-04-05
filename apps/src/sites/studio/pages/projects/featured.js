@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import FeaturedProjects from '@cdo/apps/templates/projects/FeaturedProjects';
 
-$(document).ready(function() {
+$(document).ready(function () {
   const script = document.querySelector('script[data-featuredprojects]');
   const featuredProjectsData = JSON.parse(script.dataset.featuredprojects);
   const currentFeaturedProjects =

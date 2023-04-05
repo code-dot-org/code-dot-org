@@ -7,6 +7,24 @@
           "categories": {
             "html_tags": {
               "name": "Tagi HTML"
+            },
+            "css_properties": {
+              "expressions": {
+                "text-align": {
+                  "content": "# Wyrównaj tekst",
+                  "short_description": "Wyrównaj tekst"
+                },
+                "width": {
+                  "examples": {
+                    "Width as a percentage": {
+                      "name": "Szerokość w procentach"
+                    },
+                    "Width in pixels": {
+                      "name": "Szerokość w pikselach"
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -19,11 +37,11 @@
                 "World.allSprites": {
                   "examples": {
                     "Rotating Stickers": {
-                      "description": "Użyj 26 różnych obrazów do naklejek i RandomNumber, aby umieścić naklejki"
+                      "description": "Użyj 26 różnych obrazów do naklejek i randomNumber, aby umieścić naklejki"
                     }
                   },
                   "return_value": "Tablica zawierająca wszystkie aktywne duszki.",
-                  "short_description": "Zwraca tablicę zawierającą wszystkie aktywne sprites.",
+                  "short_description": "Zwraca tablicę zawierającą wszystkie aktywne duszki.",
                   "tips": "-   Jeśli chcesz wykonać jakąś akcję na podzbiorze aktywnych duszków, utwórz Grupę, zamiast używać allSprites."
                 },
                 "World.frameCount": {
@@ -79,9 +97,9 @@
                       "description": "Przewiń obraz za pomocą myszy, przestań przewijać, gdy lewy przycisk myszy jest opuszczony."
                     }
                   },
-                  "return_value": "Logiczna prawda czy fałsz.",
-                  "short_description": "Zwraca true, jeśli aparat jest aktywny, w przeciwnym razie zwraca false.",
-                  "tips": "-   Kamera jest automatycznie włączana na początku każdej pętli [`draw ()`(#fff176)](/docs/gamelab/draw/). "
+                  "return_value": "Logiczna prawda lub fałsz.",
+                  "short_description": "Zwraca true, jeśli kamera jest aktywna, w przeciwnym razie zwraca false.",
+                  "tips": "-   Kamera jest automatycznie włączana na początku każdej pętli [`draw ()`](/docs/gamelab/draw/). "
                 },
                 "camera.mouseX": {
                   "return_value": "Współrzędna x myszy przetłumaczona na widok kamery.",
@@ -98,7 +116,7 @@
                     }
                   },
                   "short_description": "Dezaktywuje kamerę. ",
-                  "tips": "-   Kamera jest automatycznie włączana na początku każdej pętli [`draw ()`(#fff176)](/docs/gamelab/draw/). "
+                  "tips": "-   Kamera jest automatycznie włączana na początku każdej pętli [`draw ()`](/docs/gamelab/draw/). "
                 },
                 "camera.on": {
                   "examples": {
@@ -110,7 +128,7 @@
                       "description": "Połącz kamerę z ruchem głównego duszka i przewiń stacjonarne duszki."
                     }
                   },
-                  "tips": "-   Kamera jest automatycznie włączana na początku każdej pętli [`draw ()`(#fff176)](/docs/gamelab/draw/). "
+                  "tips": "-   Kamera jest automatycznie włączana na początku każdej pętli [`draw ()`](/docs/gamelab/draw/). "
                 },
                 "camera.x": {
                   "examples": {
@@ -120,12 +138,12 @@
                     },
                     "Looking for Something": {
                       "name": "Szukać czegoś",
-                      "description": "Badaj tło, łącząc aparat z myszą."
+                      "description": "Badaj tło, łącząc kamerę z myszą."
                     }
                   },
                   "return_value": "Współrzędna x środka kamery.",
                   "short_description": "Położenie x kamery.",
-                  "tips": "-   Obszar wyświetlania to 400 pikseli x 400 pikseli, a lewy górny róg to (0,0).\n-   Aby uzyskać dostęp lub zaktualizować właściwości kamery, należy użyć notacji kropkowej (kamera, po której następuje kropka, z etykietą właściwości).\n-   Wszelkie zmiany właściwości kamery będą widoczne dopiero po wywołaniu [`drawSprites ()`(#fff176)](/docs/gamelab/drawSprites/) ."
+                  "tips": "-   Obszar wyświetlania to 400 pikseli x 400 pikseli, a lewy górny róg to (0,0).\n-   Aby uzyskać dostęp lub zaktualizować właściwości kamery, należy użyć notacji kropkowej (kamera, po której następuje kropka, z etykietą właściwości).\n-   Wszelkie zmiany właściwości kamery będą widoczne dopiero po wywołaniu [`drawSprites ()`](/docs/gamelab/drawSprites/) ."
                 },
                 "camera.y": {
                   "examples": {
@@ -135,12 +153,12 @@
                     },
                     "Looking for Something": {
                       "name": "Szukać czegoś",
-                      "description": "Badaj tło, łącząc aparat z myszą."
+                      "description": "Badaj tło, łącząc kamerę z myszą."
                     }
                   },
                   "return_value": "Współrzędna y środka kamery.",
                   "short_description": "Pozycja y kamery.",
-                  "tips": "-   Obszar wyświetlania to 400 pikseli x 400 pikseli, a lewy górny róg to (0,0).\n-   Aby uzyskać dostęp lub zaktualizować właściwości kamery, należy użyć notacji kropkowej (kamera, po której następuje kropka, z etykietą właściwości).\n-   Wszelkie zmiany właściwości kamery będą widoczne dopiero po wywołaniu [`drawSprites ()`(#fff176)](/docs/gamelab/drawSprites/) ."
+                  "tips": "-   Obszar wyświetlania to 400 pikseli x 400 pikseli, a lewy górny róg to (0,0).\n-   Aby uzyskać dostęp lub zaktualizować właściwości kamery, należy użyć notacji kropkowej (kamera, po której następuje kropka, z etykietą właściwości).\n-   Wszelkie zmiany właściwości kamery będą widoczne dopiero po wywołaniu [`drawSprites ()`](/docs/gamelab/drawSprites/) ."
                 },
                 "camera.zoom": {
                   "examples": {
@@ -151,7 +169,7 @@
                   },
                   "return_value": "Współczynnik powiększenia aparatu.",
                   "short_description": "Współczynnik powiększenia aparatu.",
-                  "tips": "-   Obszar wyświetlania to 400 pikseli x 400 pikseli, a lewy górny róg to (0,0).\n-   Aby uzyskać dostęp lub zaktualizować właściwości kamery, należy użyć notacji kropkowej (kamera, po której następuje kropka, z etykietą właściwości).\n-   Wszelkie zmiany właściwości kamery będą widoczne dopiero po wywołaniu [`drawSprites ()`(#fff176)](/docs/gamelab/drawSprites/) ."
+                  "tips": "-   Obszar wyświetlania to 400 pikseli x 400 pikseli, a lewy górny róg to (0,0).\n-   Aby uzyskać dostęp lub zaktualizować właściwości kamery, należy użyć notacji kropkowej (kamera, po której następuje kropka, z etykietą właściwości).\n-   Wszelkie zmiany właściwości kamery będą widoczne dopiero po wywołaniu [`drawSprites ()`](/docs/gamelab/drawSprites/) ."
                 },
                 "comment_GameLab": {
                   "examples": {
@@ -179,7 +197,7 @@
                       "type": "Łańcuch"
                     }
                   },
-                  "return_value": "Logiczna prawda czy fałsz."
+                  "return_value": "Logiczna prawda lub fałsz."
                 },
                 "keyWentDown": {
                   "palette_params": {
@@ -187,7 +205,7 @@
                       "type": "Łańcuch"
                     }
                   },
-                  "return_value": "Logiczna prawda czy fałsz."
+                  "return_value": "Logiczna prawda lub fałsz."
                 },
                 "keyWentUp": {
                   "palette_params": {
@@ -195,10 +213,10 @@
                       "type": "Łańcuch"
                     }
                   },
-                  "return_value": "Logiczna prawda czy fałsz."
+                  "return_value": "Logiczna prawda lub fałsz."
                 },
                 "mouseDidMove": {
-                  "return_value": "Logiczna prawda czy fałsz.",
+                  "return_value": "Logiczna prawda lub fałsz.",
                   "short_description": "Sprawdza, czy mysz się poruszyła."
                 },
                 "mouseDown": {
@@ -212,7 +230,7 @@
                       "type": "Łańcuch"
                     }
                   },
-                  "return_value": "Logiczna prawda czy fałsz."
+                  "return_value": "Logiczna prawda lub fałsz."
                 },
                 "mouseIsOver": {
                   "examples": {
@@ -225,7 +243,7 @@
                       "type": "Duszek"
                     }
                   },
-                  "return_value": "Logiczna prawda czy fałsz."
+                  "return_value": "Logiczna prawda lub fałsz."
                 },
                 "mousePressedOver": {
                   "examples": {
@@ -238,7 +256,7 @@
                       "type": "Duszek"
                     }
                   },
-                  "return_value": "Logiczna prawda czy fałsz."
+                  "return_value": "Logiczna prawda lub fałsz."
                 },
                 "mouseWentDown": {
                   "examples": {
@@ -251,7 +269,7 @@
                       "type": "Łańcuch"
                     }
                   },
-                  "return_value": "Logiczna prawda czy fałsz."
+                  "return_value": "Logiczna prawda lub fałsz."
                 },
                 "mouseWentUp": {
                   "palette_params": {
@@ -259,7 +277,7 @@
                       "type": "Łańcuch"
                     }
                   },
-                  "return_value": "Logiczna prawda czy fałsz."
+                  "return_value": "Logiczna prawda lub fałsz."
                 },
                 "playSound": {
                   "examples": {
@@ -311,11 +329,18 @@
                   }
                 },
                 "stopSound": {
+                  "examples": {
+                    "Stop the Music": {
+                      "name": "Zatrzymaj muzykę",
+                      "description": "Zatrzymaj dźwięk w tle, gdy duszek dociera do krawędzi obszaru wyświetlania."
+                    }
+                  },
                   "palette_params": {
                     "url": {
                       "type": "Łańcuch"
                     }
-                  }
+                  },
+                  "return_value": "Brak wartości zwracanej. Przestaje odtwarzać tylko dźwięk."
                 }
               }
             },
@@ -374,7 +399,7 @@
                   "return_value": "Wysokość duszka."
                 },
                 "isTouching": {
-                  "return_value": "Logiczna prawda czy fałsz."
+                  "return_value": "Logiczna prawda lub fałsz."
                 },
                 "mirrorX": {
                   "palette_params": {
@@ -401,7 +426,7 @@
                   }
                 },
                 "rotateToDirection": {
-                  "return_value": "Logiczna prawda czy fałsz."
+                  "return_value": "Logiczna prawda lub fałsz."
                 },
                 "setAnimation": {
                   "palette_params": {
@@ -460,7 +485,7 @@
                   }
                 },
                 "visible": {
-                  "return_value": "Logiczna prawda czy fałsz."
+                  "return_value": "Logiczna prawda lub fałsz."
                 },
                 "sprite.width": {
                   "return_value": "Szerokość duszka."
@@ -503,7 +528,7 @@
                       "type": "Duszek"
                     }
                   },
-                  "return_value": "Logiczna prawda czy fałsz."
+                  "return_value": "Logiczna prawda lub fałsz."
                 },
                 "get": {
                   "palette_params": {
@@ -513,7 +538,7 @@
                   }
                 },
                 "group.isTouching": {
-                  "return_value": "Logiczna prawda czy fałsz."
+                  "return_value": "Logiczna prawda lub fałsz."
                 },
                 "pointToEach": {
                   "palette_params": {
@@ -804,6 +829,11 @@
                   }
                 },
                 "rgb": {
+                  "examples": {
+                    "Flag of France": {
+                      "name": "Flaga Francji"
+                    }
+                  },
                   "palette_params": {
                     "r": {
                       "type": "Liczba"
@@ -822,7 +852,8 @@
                 "shape": {
                   "examples": {
                     "Star": {
-                      "name": "Star"
+                      "name": "Star",
+                      "description": "Narysuj gwiazdę."
                     }
                   },
                   "palette_params": {
@@ -874,6 +905,15 @@
                   }
                 },
                 "textAlign": {
+                  "examples": {
+                    "Vertical Alignments": {
+                      "name": "Pionowe wyrównanie",
+                      "description": "Wyświetl różne wyrównania tekstu w pionie."
+                    },
+                    "Horizontal Alignments": {
+                      "name": "Poziome wyrównanie"
+                    }
+                  },
                   "palette_params": {
                     "horiz": {
                       "type": "Łańcuch"
@@ -895,22 +935,58 @@
                     "pixels": {
                       "type": "Liczba"
                     }
-                  }
+                  },
+                  "short_description": "Ustawia/pobiera bieżący rozmiar czcionki. "
                 }
               }
             },
             "control": {
               "expressions": {
+                "forLoop_i_0_4": {
+                  "examples": {
+                    "Example: Count Down": {
+                      "name": "Przykład: Odliczanie",
+                      "description": "Odliczanie do zera od dziesięciu przy użyciu ujemnego przyrostu."
+                    },
+                    "Example: One Inch": {
+                      "name": "Przykład: Jeden cal"
+                    },
+                    "Example: Flower": {
+                      "name": "Przykład: Kwiat"
+                    }
+                  },
+                  "palette_params": {
+                    "condition": {
+                      "type": "Wyrażenia logiczne"
+                    }
+                  }
+                },
                 "ifBlock": {
                   "return_value": "Brak wartości zwracanej."
                 },
                 "ifElseBlock": {
+                  "examples": {
+                    "Example: Even or Odd": {
+                      "name": "Przykład: parzysty lub nieparzysty",
+                      "description": "Określa, czy liczba losowa jest parzysta czy nieparzysta."
+                    }
+                  },
+                  "palette_params": {
+                    "condition": {
+                      "type": "Wyrażenia logiczne"
+                    }
+                  },
                   "return_value": "Brak wartości zwracanej."
                 },
                 "whileBlock": {
                   "return_value": "Brak wartości zwracanej."
                 },
                 "clearInterval": {
+                  "examples": {
+                    "Example: Countdown": {
+                      "name": "Przykład: Odliczanie"
+                    }
+                  },
                   "palette_params": {
                     "interval": {
                       "type": "liczba"
@@ -936,8 +1012,26 @@
                   "short_description": "Zapisuje opis jakiegoś kodu.",
                   "tips": "-   Możesz skomentować blok instrukcji używając `/*` przed pierwszą instrukcją i `*/` po ostatniej instrukcji."
                 },
+                "getTime": {
+                  "examples": {
+                    "Example: How Fast?": {
+                      "name": "Przykład: Jak szybko?"
+                    },
+                    "Example: Five Clicks": {
+                      "name": "Przykład: Pięć kliknięć"
+                    }
+                  }
+                },
                 "setInterval": {
+                  "examples": {
+                    "Example: Set Interval": {
+                      "name": "Przykład: Ustaw przedział"
+                    }
+                  },
                   "palette_params": {
+                    "callback": {
+                      "type": "funkcja"
+                    },
                     "ms": {
                       "type": "liczba"
                     }
@@ -945,6 +1039,9 @@
                 },
                 "setTimeout": {
                   "palette_params": {
+                    "callback": {
+                      "type": "funkcja"
+                    },
                     "ms": {
                       "type": "liczba"
                     }
@@ -955,6 +1052,54 @@
             "math": {
               "name": "Matematyka",
               "expressions": {
+                "addOperator": {
+                  "examples": {
+                    "Adding a Few Things": {
+                      "name": "Dodawanie kilku rzeczy"
+                    }
+                  },
+                  "palette_params": {
+                    "value1": {
+                      "type": "Dowolny"
+                    },
+                    "value2": {
+                      "type": "Dowolny"
+                    }
+                  }
+                },
+                "andOperator": {
+                  "palette_params": {
+                    "expression1": {
+                      "type": "wartość logiczna"
+                    },
+                    "expression2": {
+                      "type": "wartość logiczna"
+                    }
+                  }
+                },
+                "divideOperator": {
+                  "palette_params": {
+                    "___": {
+                      "type": "Dowolny"
+                    }
+                  },
+                  "return_value": "iIoraz dwóch liczb.",
+                  "short_description": "Podziel dwie liczby."
+                },
+                "inequalityOperator": {
+                  "palette_params": {
+                    "___": {
+                      "type": "Dowolny"
+                    }
+                  }
+                },
+                "lessThanOperator": {
+                  "palette_params": {
+                    "___": {
+                      "type": "Dowolny"
+                    }
+                  }
+                },
                 "mathAbs": {
                   "palette_params": {
                     "x": {
@@ -997,6 +1142,23 @@
                     },
                     "value2": {
                       "type": "Liczba"
+                    }
+                  }
+                },
+                "notOperator": {
+                  "palette_params": {
+                    "expression": {
+                      "type": "wartość logiczna"
+                    }
+                  }
+                },
+                "orOperator": {
+                  "palette_params": {
+                    "expression1": {
+                      "type": "wartość logiczna"
+                    },
+                    "expression2": {
+                      "type": "wartość logiczna"
                     }
                   }
                 },
@@ -1141,6 +1303,13 @@
             "functions": {
               "name": "Funkcje",
               "expressions": {
+                "callMyFunction_n": {
+                  "palette_params": {
+                    "param1, ... paramN": {
+                      "type": "Dowolny"
+                    }
+                  }
+                },
                 "comment": {
                   "return_value": "Komentarze są ignorowane przez komputer.",
                   "short_description": "Zapisuje opis jakiegoś kodu."
@@ -1165,23 +1334,30 @@
                     }
                   }
                 },
+                "checkbox": {
+                  "palette_params": {
+                    "checked": {
+                      "type": "wartość logiczna"
+                    }
+                  }
+                },
                 "dropdown": {
                   "examples": {
                     "Example Two Moods": {
-                      "name": "Przykład Dwa nastroje"
+                      "name": "Przykład: Dwa nastroje"
                     },
                     "Example Simple Form": {
-                      "name": "Przykład Prosta forma"
+                      "name": "Przykład: Prosta forma"
                     }
                   }
                 },
                 "getChecked": {
-                  "return_value": "Logiczna prawda czy fałsz."
+                  "return_value": "Logiczna prawda lub fałsz."
                 },
                 "getNumber": {
                   "examples": {
                     "Example: Fahrenheit to Celsius": {
-                      "name": "Przykład: Fahrenheit na Celsjusz"
+                      "name": "Przykład: Stopnie Fahrenheita na Celsjusza"
                     }
                   }
                 },
@@ -1204,7 +1380,7 @@
                   },
                   "return_value": "Łańcuch zawierający zawartość elementu ekranu.",
                   "short_description": "Pobiera tekst z określonego elementu ekranu.",
-                  "tips": "-   [`getText ()`(#fff176)](/docs/applab/getText/) może również odczytać tekst na [`button ()`(#fff176)](/docs/applab/button/) lub [`textLabel ()`(#fff176)](/docs/applab/textLabel/)."
+                  "tips": "-   [`getText ()`](/docs/applab/getText/) może również odczytać tekst na [`button ()`](/docs/applab/button/) lub [`textLabel ()`](/docs/applab/textLabel/)."
                 },
                 "getXPosition": {
                   "examples": {
@@ -1229,7 +1405,7 @@
                       "description": " Spraw, by logo Code.org migotało."
                     }
                   },
-                  "tips": "-   [showElement](/applab/docs/showElement) jest często używany z HideElement."
+                  "tips": "-   [showElement](/applab/docs/showElement) jest często używany z hideElement."
                 },
                 "image": {
                   "examples": {
@@ -1306,7 +1482,19 @@
                     }
                   }
                 },
+                "radioButton": {
+                  "palette_params": {
+                    "checked": {
+                      "type": "wartość logiczna"
+                    }
+                  }
+                },
                 "rgb": {
+                  "examples": {
+                    "Flag of France": {
+                      "name": "Flaga Francji"
+                    }
+                  },
                   "palette_params": {
                     "r": {
                       "type": "Liczba"
@@ -1319,6 +1507,13 @@
                     },
                     "a": {
                       "type": "Liczba"
+                    }
+                  }
+                },
+                "setChecked": {
+                  "palette_params": {
+                    "checked": {
+                      "type": "wartość logiczna"
                     }
                   }
                 },
@@ -1376,7 +1571,7 @@
                 "textInput": {
                   "examples": {
                     "Example Simple Form": {
-                      "name": "Przykład Prosta forma"
+                      "name": "Przykład: Prosta forma"
                     }
                   }
                 }
@@ -1725,6 +1920,9 @@
                   "palette_params": {
                     "record": {
                       "type": "obiekt"
+                    },
+                    "callback": {
+                      "type": "funkcja"
                     }
                   }
                 },
@@ -1742,6 +1940,9 @@
                   "palette_params": {
                     "record": {
                       "type": "obiekt"
+                    },
+                    "callback": {
+                      "type": "funkcja"
                     }
                   }
                 },
@@ -1749,6 +1950,9 @@
                   "palette_params": {
                     "options": {
                       "type": "obiekt"
+                    },
+                    "callback": {
+                      "type": "funkcja"
                     }
                   }
                 },
@@ -1756,6 +1960,9 @@
                   "palette_params": {
                     "options": {
                       "type": "obiekt"
+                    },
+                    "callback": {
+                      "type": "funkcja"
                     }
                   }
                 },
@@ -1766,6 +1973,13 @@
                     },
                     "column": {
                       "type": "Łańcuch"
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "funkcja"
                     }
                   }
                 },
@@ -1785,10 +1999,23 @@
                     }
                   }
                 },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "funkcja"
+                    },
+                    "includeAll": {
+                      "type": "wartość logiczna"
+                    }
+                  }
+                },
                 "readRecords": {
                   "palette_params": {
                     "terms": {
                       "type": "obiekt"
+                    },
+                    "callback": {
+                      "type": "funkcja"
                     }
                   }
                 },
@@ -1806,6 +2033,16 @@
                     },
                     "value": {
                       "description": "Dane, które mają być przechowywane."
+                    },
+                    "callback": {
+                      "type": "funkcja"
+                    }
+                  }
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "funkcja"
                     }
                   }
                 },
@@ -1813,6 +2050,9 @@
                   "palette_params": {
                     "record": {
                       "type": "obiekt"
+                    },
+                    "callback": {
+                      "type": "funkcja"
                     }
                   }
                 }
@@ -1828,7 +2068,8 @@
                     "radius": {
                       "type": "liczba"
                     }
-                  }
+                  },
+                  "short_description": "Przesuwa żółwia do przodu i w lewo po gładkim, okrągłym łuku."
                 },
                 "arcRight": {
                   "palette_params": {
@@ -1957,6 +2198,17 @@
                   "return_value": "Brak wartości zwracanej."
                 },
                 "ifElseBlock": {
+                  "examples": {
+                    "Example: Even or Odd": {
+                      "name": "Przykład: parzysty lub nieparzysty",
+                      "description": "Określa, czy liczba losowa jest parzysta czy nieparzysta."
+                    }
+                  },
+                  "palette_params": {
+                    "condition": {
+                      "type": "Wyrażenia logiczne"
+                    }
+                  },
                   "return_value": "Brak wartości zwracanej."
                 },
                 "whileBlock": {
@@ -1978,8 +2230,45 @@
                   },
                   "return_value": "Brak wartości zwracanej."
                 },
-                "setInterval": {
+                "forLoop_i_0_4": {
+                  "examples": {
+                    "Example: Count Down": {
+                      "name": "Przykład: Odliczanie",
+                      "description": "Odliczanie do zera od dziesięciu przy użyciu ujemnego przyrostu."
+                    },
+                    "Example: One Inch": {
+                      "name": "Przykład: Jeden cal"
+                    },
+                    "Example: Flower": {
+                      "name": "Przykład: Kwiat"
+                    }
+                  },
                   "palette_params": {
+                    "condition": {
+                      "type": "Wyrażenia logiczne"
+                    }
+                  }
+                },
+                "getTime": {
+                  "examples": {
+                    "Example: How Fast?": {
+                      "name": "Przykład: Jak szybko?"
+                    },
+                    "Example: Five Clicks": {
+                      "name": "Przykład: Pięć kliknięć"
+                    }
+                  }
+                },
+                "setInterval": {
+                  "examples": {
+                    "Example: Set Interval": {
+                      "name": "Przykład: Ustaw przedział"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "funkcja"
+                    },
                     "ms": {
                       "type": "liczba"
                     }
@@ -1987,6 +2276,9 @@
                 },
                 "setTimeout": {
                   "palette_params": {
+                    "callback": {
+                      "type": "funkcja"
+                    },
                     "ms": {
                       "type": "liczba"
                     }
@@ -2014,6 +2306,31 @@
             "math": {
               "name": "Matematyka",
               "expressions": {
+                "addOperator": {
+                  "examples": {
+                    "Adding a Few Things": {
+                      "name": "Dodawanie kilku rzeczy"
+                    }
+                  },
+                  "palette_params": {
+                    "value1": {
+                      "type": "Dowolny"
+                    },
+                    "value2": {
+                      "type": "Dowolny"
+                    }
+                  }
+                },
+                "andOperator": {
+                  "palette_params": {
+                    "expression1": {
+                      "type": "wartość logiczna"
+                    },
+                    "expression2": {
+                      "type": "wartość logiczna"
+                    }
+                  }
+                },
                 "mathAbs": {
                   "palette_params": {
                     "x": {
@@ -2066,6 +2383,23 @@
                     },
                     "y": {
                       "type": "Liczba"
+                    }
+                  }
+                },
+                "notOperator": {
+                  "palette_params": {
+                    "expression": {
+                      "type": "wartość logiczna"
+                    }
+                  }
+                },
+                "orOperator": {
+                  "palette_params": {
+                    "expression1": {
+                      "type": "wartość logiczna"
+                    },
+                    "expression2": {
+                      "type": "wartość logiczna"
                     }
                   }
                 },
@@ -2143,6 +2477,9 @@
                     },
                     "key": {
                       "type": "Łańcuch"
+                    },
+                    "value": {
+                      "type": "Dowolny"
                     }
                   },
                   "return_value": "Żaden"
@@ -2193,9 +2530,30 @@
             "functions": {
               "name": "Funkcje",
               "expressions": {
+                "callMyFunction_n": {
+                  "palette_params": {
+                    "param1, ... paramN": {
+                      "type": "Dowolny"
+                    }
+                  }
+                },
                 "comment": {
                   "return_value": "Komentarze są ignorowane przez komputer.",
                   "short_description": "Zapisuje opis jakiegoś kodu."
+                },
+                "functionParams_n": {
+                  "palette_params": {
+                    "param1, param2, ..., paramN": {
+                      "type": "Dowolny"
+                    }
+                  }
+                },
+                "return": {
+                  "palette_params": {
+                    "__": {
+                      "type": "Dowolny"
+                    }
+                  }
                 }
               }
             },
@@ -2292,6 +2650,11 @@
                   }
                 },
                 "blink": {
+                  "examples": {
+                    "Simple Button Press": {
+                      "name": "Proste naciśnięcie przycisku"
+                    }
+                  },
                   "palette_params": {
                     "interval": {
                       "type": "liczba"
@@ -2336,6 +2699,13 @@
                   "palette_params": {
                     "interval": {
                       "type": "liczba"
+                    }
+                  }
+                },
+                "onBoardEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "funkcja"
                     }
                   }
                 },

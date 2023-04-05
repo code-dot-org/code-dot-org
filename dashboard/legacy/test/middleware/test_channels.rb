@@ -312,51 +312,26 @@ class ChannelsTest < Minitest::Test
     assert_cannot_publish('foo')
   end
 
-  def test_abuse
-    post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    channel_id = last_response.location.split('/').last
+  def test_restricted_publish_permissions
+    # sprite lab projects require talking to S3
+    AWS::S3.stubs :create_client
 
-    get "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
-
-    post "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-
-    get "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
-
-    delete "/v3/channels/#{channel_id}/abuse"
-    assert last_response.unauthorized?
-
-    ChannelsApi.any_instance.stubs(:project_validator?).returns(true)
-
-    delete "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
-
-    ChannelsApi.any_instance.unstub(:project_validator?)
-  end
-
-  def test_signed_in_abuse
-    post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    channel_id = last_response.location.split('/').last
-
-    stub_user = {name: ' xavier', birthday: 14.years.ago.to_datetime}
-    ChannelsApi.any_instance.stubs(:verified_teacher?).returns(false)
+    # under 13 sharing enabled
+    stub_user = {
+      name: ' xavier',
+      birthday: 12.years.ago.to_datetime,
+      properties: {sharing_disabled: false}.to_json
+    }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
-    DCDO.stubs(:get).with('restrict-abuse-reporting-to-verified', true).returns(false)
+    stub_project_body(true)
+    # stubbed project has restricted share mode set to true, this means we cannot publish
+    assert_cannot_publish('spritelab')
+    stub_project_body(false)
+    # stubbed project has restricted share mode set to false, this means we can publish
+    assert_can_publish('spritelab')
 
-    # check initial state
-    get "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
-
-    # authenticated non-teacher should get a score of 10
-    post "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 10, JSON.parse(last_response.body)['abuse_score']
+    SourceBucket.any_instance.unstub(:get)
+    AWS::S3.unstub(:create_client)
   end
 
   def test_disable_and_enable_content_moderation
@@ -413,22 +388,6 @@ class ChannelsTest < Minitest::Test
     assert last_response.ok?
     assert_equal true, JSON.parse(last_response.body)['sharing_disabled']
     Projects.any_instance.unstub(:get_user_sharing_disabled)
-  end
-
-  def test_abuse_frozen
-    post '/v3/channels', {frozen: true}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    channel_id = last_response.location.split('/').last
-
-    get "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
-
-    post "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-
-    get "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
   end
 
   def test_most_recent
@@ -535,5 +494,11 @@ class ChannelsTest < Minitest::Test
   def assert_cannot_unpublish(channel_id)
     post "/v3/channels/#{channel_id}/unpublish", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.client_error?
+  end
+
+  def stub_project_body(should_restrict_share)
+    sample_project = StringIO.new
+    sample_project.puts "{\"inRestrictedShareMode\": #{should_restrict_share}}"
+    SourceBucket.any_instance.stubs(:get).returns({body: sample_project})
   end
 end

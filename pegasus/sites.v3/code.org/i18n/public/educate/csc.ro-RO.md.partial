@@ -77,3 +77,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>Ai terminat o activitate CS Connection și/sau cauți mai multe opțiuni pentru clasa ta? Te rugăm să <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">împărtășești opinia ta</a> și idei pentru mai multe lecții aici!</em>
+
+{{ visit_partial_event_logger }}

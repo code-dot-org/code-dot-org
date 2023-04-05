@@ -705,21 +705,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_logged "Removed 1 CensusSubmissionFormMap"
   end
 
-  test "deletes census_inaccuracy_investigation associated census_submissions associated with user email" do
-    census_inaccuracy_investigation = create :census_inaccuracy_investigation
-    id = census_inaccuracy_investigation.id
-    user = census_inaccuracy_investigation.user
-    refute_empty Census::CensusInaccuracyInvestigation.where(id: id),
-      "Expected at least one CensusInaccuracyInvestigation under this email"
-
-    purge_user user
-
-    assert_empty Census::CensusInaccuracyInvestigation.where(id: id),
-      "Rows are actually gone, not just anonymized"
-
-    assert_logged "Removed 1 CensusInaccuracyInvestigation"
-  end
-
   test "leaves no SchoolInfos referring to the deleted CensusSubmissions" do
     user = create :teacher
     email = user.email
@@ -1139,23 +1124,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears form_data from pd_teachercon1819_registrations" do
-    registration = create :pd_teachercon1819_registration
-    refute_equal '{}', registration.form_data
+    teacher = create :teacher
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        INSERT INTO `pd_teachercon1819_registrations` (user_id, form_data, created_at, updated_at)
+        VALUES (#{teacher.id}, '{\"country\": \"USA\"}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
+    SQL
+    )
 
-    purge_user registration.user
+    registration = get_record_with_sql("form_data", "pd_teachercon1819_registrations", {'user_id' => teacher.id})
+    refute_empty registration["form_data"]
 
-    registration.reload
-    assert_equal '{}', registration.form_data
-  end
+    purge_user teacher
 
-  test "clears user_id from pd_teachercon1819_registrations" do
-    registration = create :pd_teachercon1819_registration
-    refute_nil registration.user_id
-
-    purge_user registration.user
-
-    registration.reload
-    assert_nil registration.user_id
+    registration = get_record_with_sql("form_data", "pd_teachercon1819_registrations", {'user_id' => teacher.id})
+    assert_empty registration["form_data"]
   end
 
   #
@@ -1460,9 +1443,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     assert_equal 0, SurveyResult.where(user_id: teacher_a.id).count
     assert_equal 1, SurveyResult.where(user_id: teacher_b.id).count
-    refute SurveyResult.where(id: survey_result_a.id).exists?
-    refute SurveyResult.where(id: survey_result_b.id).exists?
-    assert SurveyResult.where(id: survey_result_c.id).exists?
+    refute SurveyResult.exists?(id: survey_result_a.id)
+    refute SurveyResult.exists?(id: survey_result_b.id)
+    assert SurveyResult.exists?(id: survey_result_c.id)
   end
 
   #
@@ -2138,7 +2121,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     # even if the user doesn't have the related permission.
     program_manager.delete_permission UserPermission::PROGRAM_MANAGER
 
-    assert RegionalPartnerProgramManager.where(program_manager_id: program_manager.id).exists?
+    assert RegionalPartnerProgramManager.exists?(program_manager_id: program_manager.id)
     refute program_manager.permission? UserPermission::PROGRAM_MANAGER
 
     err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
@@ -2162,7 +2145,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     # even if the user doesn't have the related permission.
     program_manager.delete_permission UserPermission::PROGRAM_MANAGER
 
-    assert RegionalPartnerProgramManager.where(program_manager_id: program_manager.id).exists?
+    assert RegionalPartnerProgramManager.exists?(program_manager_id: program_manager.id)
     refute program_manager.permission? UserPermission::PROGRAM_MANAGER
 
     unsafe_purge_user program_manager

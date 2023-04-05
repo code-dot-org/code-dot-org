@@ -83,6 +83,12 @@
         "csd-2022/playing-notes": {
           "display_name": "नोट्स प्ले करना"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "सवाल हल करने की प्रक्रिया"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "सवाल हल करने की प्रक्रिया"
+        },
         "csd-2022/sprite-properties": {
           "display_name": "स्प्राइट्स की विशेषताएं"
         },
@@ -100,6 +106,9 @@
         },
         "csd-2022/velocity-and-the-counter-pattern": {
           "display_name": "वेग और काउंटर पैटर्न"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "वेब लैब"
         },
         "csd-2022/which-type-of-chart": {
           "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"

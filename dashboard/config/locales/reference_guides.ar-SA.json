@@ -77,6 +77,12 @@
         "csd-2022/physical-input": {
           "display_name": "المدخلات المادية"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "عملية حل المشكلات"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "عملية حل المشكلات"
+        },
         "csd-2022/sprite-properties": {
           "display_name": "خصائص الكائنات"
         },
@@ -91,6 +97,9 @@
         },
         "csd-2022/velocity": {
           "display_name": "السرعة"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "مختبر الويب"
         },
         "csd-2022/which-type-of-chart": {
           "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"

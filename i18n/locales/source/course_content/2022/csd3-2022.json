@@ -678,7 +678,7 @@
       "CSD U3 properties tint_2022": {
         "display_name": "New Block : Tint",
         "bubble_choice_description": "Adjust the sprite's color with tint.",
-        "long_instructions": "# Tint\r\n\r\nTint is a property that will overlay a color on top of a sprite to tint it. This tint doesn't change the existing colors of a sprite, but is more like putting a pane of colored glass over the top of the sprite.\r\n\r\n## Do This:\r\n\r\nUsing either the sprite already created for you or with any other sprites of your choosing, play around with the tint property and see how it works and how it changes on different colored sprites!\r\n",
+        "long_instructions": "# Tint\r\n\r\nTint is a property that will overlay a color on top of a sprite to tint it. This tint doesn't change the existing colors of a sprite, but is more like putting a pane of colored glass over the top of the sprite.\r\n\r\n## Do This:\r\n\r\n1) Using either the sprite already created for you or with any other sprites of your choosing, play around with the tint property and see how it works and how it changes on different colored sprites!\r\n   - **Tip:** Make sure to put the tint color you would like in quotation marks (example: \"red\"). \r\n",
         "callouts": {
           "CSD_U3_rect_c1": "Here is the code",
           "CSD_U3_rect_c2": "Drag this block into the code area."

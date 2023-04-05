@@ -382,16 +382,13 @@ class Pd::Enrollment < ApplicationRecord
       form_name = POST_SURVEY_CONFIG_PATHS[workshop.subject]
       Pd::WorkshopSurveyFoormSubmission.where(pd_workshop: workshop, user: enrollment.user).
         joins(:foorm_submission).
-        where(foorm_submissions: {form_name: form_name}).
-        exists?
+        exists?(foorm_submissions: {form_name: form_name})
     end
 
     select_completed ? completed_surveys : uncompleted_surveys
   end
 
-  private
-
-  def unused_random_code
+  private def unused_random_code
     CodeGeneration.random_unique_code length: 10, model: Pd::Enrollment
   end
 end

@@ -146,6 +146,12 @@
         "csd-2022/playing-notes": {
           "display_name": "Jogando Notas"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "O Processo de Resolução de Problemas"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "O Processo de Resolução de Problemas"
+        },
         "csd-2022/random-numbers": {
           "display_name": "Números Aleatórios"
         },
@@ -184,6 +190,9 @@
         },
         "csd-2022/velocity-and-the-counter-pattern": {
           "display_name": "Velocidade e o Padrão Contador"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Laboratório Web"
         },
         "csd-2022/which-type-of-chart": {
           "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"

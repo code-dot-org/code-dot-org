@@ -113,6 +113,21 @@
         "5": {
           "description": "Tələbələr insaniç mədəni və sosiolji şeyləri texnologiya ilə əlaqaləndirməyi anlayırlar və qanuni-etik davranışı praktika edirlər."
         },
+        "AAP-1.A": {
+          "description": "Bir dəyişən bir dəyərlə təmsil edin."
+        },
+        "CRD-2.C": {
+          "description": "Proqrama giriş(lər)i müəyyən edin."
+        },
+        "CRD-2.E": {
+          "description": "İnkişaf prosesindən istifadə edərək proqram hazırlayın."
+        },
+        "G": {
+          "description": "Həndəsə"
+        },
+        "MP": {
+          "description": "Riyaziyyat təcrübələri"
+        },
         "IC": {
           "description": "Bir Şeydən Nəticə Çıxarma Prosesi və Nəticənin Əsaslandırılması"
         }

@@ -136,6 +136,8 @@
   "completedWithoutRecommendedBlock": "Congratulations! You completed Puzzle {puzzleNumber}. (But you could use a different block for stronger code.)",
   "continue": "Continue",
   "copy": "Copy",
+  "courseOfferingCsTopicCybersecurity": "Cybersecurity",
+  "courseOfferingSchoolSubjectMath": "Mathematics",
   "courseOfferingHOC": "The Hour of Code",
   "courseOfferingMath": "Mathematics",
   "create": "Create",

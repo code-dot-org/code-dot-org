@@ -41,10 +41,10 @@ class FollowersController < ApplicationController
       return
     else
       gender = params.dig(:user, :gender)
-      gender_input_type = gender_input_type?(request, session.id.to_s)
+      gender_input_type = gender_input_type?(request, session)
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         if @user.save && @section&.add_student(@user)
-          SignUpTracking.log_gender_input_type_account_created(session, gender, gender_input_type, request.locale, 'section_signup', @user.user_type)
+          SignUpTracking.log_gender_input_type_account_created(session, gender, gender_input_type, request.locale, 'section_signup', @user)
           sign_in(:user, @user)
           @user.increment_section_attempts
           # Check for an exiting user, and redirect to course if found
@@ -69,9 +69,7 @@ class FollowersController < ApplicationController
     render 'student_user_new', formats: [:html]
   end
 
-  private
-
-  def followers_params(user_type)
+  private def followers_params(user_type)
     allowed_params = params[:user].permit([:name, :password, :gender, :age, :email, :hashed_email])
     if user_type == User::TYPE_TEACHER
       allowed_params.merge(params[:user].permit([:school, :full_address]))
@@ -79,11 +77,11 @@ class FollowersController < ApplicationController
     allowed_params
   end
 
-  def redirect_url
+  private def redirect_url
     params[:redirect] || root_path
   end
 
-  def load_section
+  private def load_section
     return if params[:section_code].blank?
 
     # Though downstream validations would raise an exception, we redirect to the admin directory to

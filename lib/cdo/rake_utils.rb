@@ -153,10 +153,15 @@ module RakeUtils
 
   def self.bundle_install(*args)
     without = CDO.rack_envs - [CDO.rack_env]
+    run_bundle_command('config set --local without', *without)
+    run_bundle_command('install --quiet --jobs', nproc, *args)
+  end
+
+  def self.run_bundle_command(*args)
     if CDO.bundler_use_sudo
-      sudo 'bundle', '--without', *without, '--quiet', '--jobs', nproc, *args
+      sudo('bundle', *args)
     else
-      system 'bundle', '--without', *without, '--quiet', '--jobs', nproc, *args
+      system('bundle', *args)
     end
   end
 

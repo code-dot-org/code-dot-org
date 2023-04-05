@@ -228,22 +228,28 @@
           "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Mou un sprite cap a la dreta per la pantalla. Quan desaparegui pel costat dret de la pantalla, torna'l a moure cap al costat esquerre de la pantalla."
         },
         "CourseF_outbreak1": {
-          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament"
+          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament",
+          "gradually recover from sickness": "recuperar-se a poc a poc de la malaltia"
         },
         "CourseF_outbreak1_-2022-2": {
-          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament"
+          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament",
+          "gradually recover from sickness": "recuperar-se a poc a poc de la malaltia"
         },
         "CourseF_outbreak2": {
-          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament"
+          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament",
+          "gradually recover from sickness": "recuperar-se a poc a poc de la malaltia"
         },
         "CourseF_outbreak2_-2022-2": {
-          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament"
+          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament",
+          "gradually recover from sickness": "recuperar-se a poc a poc de la malaltia"
         },
         "CourseF_outbreak3": {
-          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament"
+          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament",
+          "gradually recover from sickness": "recuperar-se a poc a poc de la malaltia"
         },
         "CourseF_outbreak3_-2022-2": {
-          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament"
+          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament",
+          "gradually recover from sickness": "recuperar-se a poc a poc de la malaltia"
         },
         "CourseF_outbreak4": {
           "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament",
@@ -256,7 +262,8 @@
           "move a sprite upwards across the screen": "moure un sprite cap amunt a través de la pantalla",
           "randomly change the size of a sprite": "canviar aleatòriament la mida d'un sprite",
           "move a sprite to the left across the screen": "moure un sprite cap a l'esquerra a través de la pantalla",
-          "move a sprite across the screen, reversing direction if it touches the edges": "moure un sprite per la pantalla, invertint la direcció si toca les vores"
+          "move a sprite across the screen, reversing direction if it touches the edges": "moure un sprite per la pantalla, invertint la direcció si toca les vores",
+          "gradually recover from sickness": "recuperar-se a poc a poc de la malaltia"
         },
         "CourseF_outbreak4_-2022-2": {
           "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament",
@@ -269,19 +276,24 @@
           "move a sprite upwards across the screen": "moure un sprite cap amunt a través de la pantalla",
           "randomly change the size of a sprite": "canviar aleatòriament la mida d'un sprite",
           "move a sprite to the left across the screen": "moure un sprite cap a l'esquerra a través de la pantalla",
-          "move a sprite across the screen, reversing direction if it touches the edges": "moure un sprite per la pantalla, invertint la direcció si toca les vores"
+          "move a sprite across the screen, reversing direction if it touches the edges": "moure un sprite per la pantalla, invertint la direcció si toca les vores",
+          "gradually recover from sickness": "recuperar-se a poc a poc de la malaltia"
         },
         "CourseF_outbreak5": {
-          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament"
+          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament",
+          "gradually recover from sickness": "recuperar-se a poc a poc de la malaltia"
         },
         "CourseF_outbreak5_-2022-2": {
-          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament"
+          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament",
+          "gradually recover from sickness": "recuperar-se a poc a poc de la malaltia"
         },
         "CourseF_outbreak6": {
-          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament"
+          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament",
+          "gradually recover from sickness": "recuperar-se a poc a poc de la malaltia"
         },
         "CourseF_outbreak6_-2022-2": {
-          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament"
+          "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament",
+          "gradually recover from sickness": "recuperar-se a poc a poc de la malaltia"
         },
         "CourseF_outbreak7": {
           "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament",
@@ -294,7 +306,8 @@
           "move a sprite upwards across the screen": "moure un sprite cap amunt a través de la pantalla",
           "randomly change the size of a sprite": "canviar aleatòriament la mida d'un sprite",
           "move a sprite to the left across the screen": "moure un sprite cap a l'esquerra a través de la pantalla",
-          "move a sprite across the screen, reversing direction if it touches the edges": "moure un sprite per la pantalla, invertint la direcció si toca les vores"
+          "move a sprite across the screen, reversing direction if it touches the edges": "moure un sprite per la pantalla, invertint la direcció si toca les vores",
+          "gradually recover from sickness": "recuperar-se a poc a poc de la malaltia"
         },
         "CourseF_outbreak7_-2022-2": {
           "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament",
@@ -307,7 +320,8 @@
           "move a sprite upwards across the screen": "moure un sprite cap amunt a través de la pantalla",
           "randomly change the size of a sprite": "canviar aleatòriament la mida d'un sprite",
           "move a sprite to the left across the screen": "moure un sprite cap a l'esquerra a través de la pantalla",
-          "move a sprite across the screen, reversing direction if it touches the edges": "moure un sprite per la pantalla, invertint la direcció si toca les vores"
+          "move a sprite across the screen, reversing direction if it touches the edges": "moure un sprite per la pantalla, invertint la direcció si toca les vores",
+          "gradually recover from sickness": "recuperar-se a poc a poc de la malaltia"
         },
         "CourseF_outbreak8": {
           "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament",
@@ -320,7 +334,8 @@
           "move a sprite upwards across the screen": "moure un sprite cap amunt a través de la pantalla",
           "randomly change the size of a sprite": "canviar aleatòriament la mida d'un sprite",
           "move a sprite to the left across the screen": "moure un sprite cap a l'esquerra a través de la pantalla",
-          "move a sprite across the screen, reversing direction if it touches the edges": "moure un sprite per la pantalla, invertint la direcció si toca les vores"
+          "move a sprite across the screen, reversing direction if it touches the edges": "moure un sprite per la pantalla, invertint la direcció si toca les vores",
+          "gradually recover from sickness": "recuperar-se a poc a poc de la malaltia"
         },
         "CourseF_outbreak8_-2022-2": {
           "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament",
@@ -333,7 +348,8 @@
           "move a sprite upwards across the screen": "moure un sprite cap amunt a través de la pantalla",
           "randomly change the size of a sprite": "canviar aleatòriament la mida d'un sprite",
           "move a sprite to the left across the screen": "moure un sprite cap a l'esquerra a través de la pantalla",
-          "move a sprite across the screen, reversing direction if it touches the edges": "moure un sprite per la pantalla, invertint la direcció si toca les vores"
+          "move a sprite across the screen, reversing direction if it touches the edges": "moure un sprite per la pantalla, invertint la direcció si toca les vores",
+          "gradually recover from sickness": "recuperar-se a poc a poc de la malaltia"
         },
         "Dance Party 2": {
           "rotate a sprite to its left": "girar un sprite a la seva esquerra",
@@ -1167,7 +1183,9 @@
           "move a sprite upwards across the screen": "moure un sprite cap amunt a través de la pantalla",
           "randomly change the size of a sprite": "canviar aleatòriament la mida d'un sprite",
           "move a sprite across the screen, reversing direction if it touches the edges": "moure un sprite per la pantalla, invertint la direcció si toca les vores",
-          "move a sprite if the user is pressing the arrow keys": "moure un sprite si l'usuari està prement les tecles de fletxa"
+          "move a sprite if the user is pressing the arrow keys": "moure un sprite si l'usuari està prement les tecles de fletxa",
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Mou un sprite cap a l'esquerra per la pantalla. Si desapareix pel costat esquerre de la pantalla, tornarà a aparèixer al costat dret de la pantalla.",
+          "randomly move the sprite up or down": "moure l'sprite amunt i avall aleatòriament"
         },
         "courseF_apps_collector2022": {
           "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament",
@@ -1181,7 +1199,9 @@
           "move a sprite upwards across the screen": "moure un sprite cap amunt a través de la pantalla",
           "randomly change the size of a sprite": "canviar aleatòriament la mida d'un sprite",
           "move a sprite across the screen, reversing direction if it touches the edges": "moure un sprite per la pantalla, invertint la direcció si toca les vores",
-          "move a sprite if the user is pressing the arrow keys": "moure un sprite si l'usuari està prement les tecles de fletxa"
+          "move a sprite if the user is pressing the arrow keys": "moure un sprite si l'usuari està prement les tecles de fletxa",
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Mou un sprite cap a l'esquerra per la pantalla. Si desapareix pel costat esquerre de la pantalla, tornarà a aparèixer al costat dret de la pantalla.",
+          "randomly move the sprite up or down": "moure l'sprite amunt i avall aleatòriament"
         },
         "courseF_apps_collector_-2022-2": {
           "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament",
@@ -1195,7 +1215,9 @@
           "move a sprite upwards across the screen": "moure un sprite cap amunt a través de la pantalla",
           "randomly change the size of a sprite": "canviar aleatòriament la mida d'un sprite",
           "move a sprite across the screen, reversing direction if it touches the edges": "moure un sprite per la pantalla, invertint la direcció si toca les vores",
-          "move a sprite if the user is pressing the arrow keys": "moure un sprite si l'usuari està prement les tecles de fletxa"
+          "move a sprite if the user is pressing the arrow keys": "moure un sprite si l'usuari està prement les tecles de fletxa",
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Mou un sprite cap a l'esquerra per la pantalla. Si desapareix pel costat esquerre de la pantalla, tornarà a aparèixer al costat dret de la pantalla.",
+          "randomly move the sprite up or down": "moure l'sprite amunt i avall aleatòriament"
         },
         "courseF_apps_collector_drag_-2022-2": {
           "move a sprite, changing its direction randomly": "moure un sprite, canviant la seva direcció aleatòriament",

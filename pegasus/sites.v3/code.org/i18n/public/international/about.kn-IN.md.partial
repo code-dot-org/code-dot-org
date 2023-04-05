@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Code.org ಕೋರ್ಸ್‌ಗಳನ್ನು ಲಕ್ಷಾಂತರ ವಿದ್ಯಾರ್ಥಿಗಳು ಮತ್ತು ಒಂದು ಮಿಲಿಯನ್‌ ಶಿಕ್ಷಕರು ವಿಶ್ವಾದ್ಯಂತ ಬಳಸುತ್ತಿದ್ದಾರೆ.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## ಇತಿಹಾಸ
 
 2013 ರಲ್ಲಿ, ಅವಳಿ ಸೋದರರಾದ ಹದಿ ಮತ್ತು ಅಲಿ ಪರ್ತೋವಿ Code.org ಅನ್ನು [ವೀಡಿಯೋ ಪ್ರೋತ್ಸಾಹಕ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌](https://www.youtube.com/watch?v=nKIu9yen5nc) ಜೊತೆಗೆ ಆರಂಭಿಸಿದರು. ಈ ವೀಡಿಯೋ ಒಂದು ದಿನದವರೆಗೆ ಯೂಟ್ಯೂಬ್‌ನಲ್ಲಿ #1 ಆಯಿತು ಮತ್ತು 15,000 ಶಾಲೆಗಳು ನಮಗೆ ಸಹಾಯ ಮಾಡಲು ಮುಂದೆ ಬಂದವು. ಅಂದಿನಿಂದ, ವಿಶ್ವಾದ್ಯಂತ ಚಳವಳಿಗೆ ಬೆಂಬಲಿಸುವ ಇಡೀ ಸಂಸ್ಥೆಯನ್ನು ನಿರ್ಮಿಸಲು ಸ್ವಯಸೇವಕರ ಬೆಂಬಲವನ್ನು ವಿಸ್ತರಿಸುತ್ತಲೇ ಇದ್ದೇವೆ. ಗುಣಮಟ್ಟದ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಶಿಕ್ಷಣವು ಎಲ್ಲರಿಗೂ ಲಭ್ಯವಾಗಬೇಕು. ಕೆಲವೇ ಅದೃಷ್ಟವಂತರಿಗೆ ಮಾತ್ರ ಇದು ಸಿಗುವಂತಾಗಬಾರದು ಎಂದು ನಾವು ನಂಬಿದ್ದೇವೆ.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## ನಾವು ಮಾಡುವುದೇನು
 

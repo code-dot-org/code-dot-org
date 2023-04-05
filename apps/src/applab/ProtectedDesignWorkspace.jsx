@@ -18,7 +18,7 @@ class ProtectedDesignWorkspace extends React.Component {
     // update styles. However, we do want to prevent property changes that would
     // change the DOM structure.
     Object.keys(nextProps).forEach(
-      function(key) {
+      function (key) {
         // interfaceMode only affects style, and can be updated
         if (key === 'interfaceMode') {
           return;

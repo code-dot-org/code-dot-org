@@ -777,7 +777,7 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal level.localized_rubric_property('rubric_key_concept'), "first english markdown"
     assert_equal level.localized_rubric_property('rubric_performance_level_1'), "second english markdown"
     # Should return nil on a non-existing property
-    assert_equal level.localized_rubric_property('rubric_performance_level_9'), nil
+    assert_nil level.localized_rubric_property('rubric_performance_level_9')
   end
 
   test 'create unplugged level from level builder' do

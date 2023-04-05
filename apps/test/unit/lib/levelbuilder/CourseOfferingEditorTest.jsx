@@ -8,6 +8,14 @@ import * as utils from '@cdo/apps/utils';
 describe('CourseOfferingEditor', () => {
   let defaultProps;
 
+  const deviceCompatibilities = {
+    computer: 'incompatible',
+    chromebook: 'not_recommended',
+    tablet: 'not_recommended',
+    mobile: 'ideal',
+    no_device: ''
+  };
+
   beforeEach(() => {
     defaultProps = {
       initialCourseOffering: {
@@ -15,7 +23,15 @@ describe('CourseOfferingEditor', () => {
         is_featured: false,
         category: 'Other',
         display_name: 'Course Offering 1',
-        assignable: true
+        assignable: true,
+        grade_levels: 'K',
+        curriculum_type: 'Module',
+        header: 'Self-Paced',
+        marketing_initiative: 'HOC',
+        image: 'https://images.code.org/spritelab.JPG',
+        cs_topic: 'art_and_design',
+        school_subject: 'science,english_language_arts',
+        device_compatibility: JSON.stringify(deviceCompatibilities)
       }
     };
   });
@@ -44,7 +60,16 @@ describe('CourseOfferingEditor', () => {
         key: 'test-course-offering',
         display_name: 'Course Offering 2',
         category: 'Full Courses',
-        is_featured: true
+        is_featured: true,
+        assignable: true,
+        grade_levels: 'K',
+        curriculum_type: 'Module',
+        header: 'Self-Paced',
+        marketing_initiative: 'HOC',
+        image: 'https://images.code.org/spritelab.JPG',
+        cs_topic: 'art_and_design',
+        school_subject: 'science,english_language_arts',
+        device_compatibility: JSON.stringify(deviceCompatibilities)
       };
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
         200,
@@ -109,7 +134,15 @@ describe('CourseOfferingEditor', () => {
         key: 'test-course-offering',
         display_name: 'Course Offering 2',
         category: 'Full Courses',
-        is_featured: true
+        is_featured: true,
+        grade_levels: 'K,1,2,3',
+        curriculum_type: 'Course',
+        header: 'Self-Paced',
+        marketing_initiative: 'HOC',
+        image: 'https://images.code.org/spritelab.JPG',
+        cs_topic: 'art_and_design',
+        school_subject: 'science,english_language_arts',
+        device_compatibility: JSON.stringify(deviceCompatibilities)
       };
 
       server.respondWith('PUT', '/course_offerings/test-course-offering', [

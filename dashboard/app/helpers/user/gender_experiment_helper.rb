@@ -15,9 +15,7 @@ module User::GenderExperimentHelper
     country_code = request.params['country_code'] || location&.country_code.to_s
     # This experiment is limited to the US. 'RD' is the code returned for localhost.
     us_country = country_code && ['US', 'RD'].include?(country_code.upcase)
-    us_country &&
-      experiment_value('gender_input_exp') &&
-      gender_input_type?(request, session_id) != GENDER_INPUT_TYPE_NONE
+    us_country && experiment_value('gender_input_exp')
   end
 
   GENDER_INPUT_TYPE_NONE = 'none'
@@ -38,9 +36,10 @@ module User::GenderExperimentHelper
   # }
   # With the above configuration, 50% of users will get the 'none' experience, 30% the 'dropdown'
   # experience, and 20% the 'text' experience.
-  # @param session_id {String} A hexadecimal number identifying the user's browser session
-  def gender_input_type?(request, session_id)
+  def gender_input_type?(request, session)
     return request.params['gender_input'] if request.params['gender_input'].present?
+    # If we have already determined the experience for the user, then show it again.
+    return session[:gender_input_type] if session[:gender_input_type]
     weights = experiment_value('gender_input_exp_weights', {})
     none_weight = weights[GENDER_INPUT_TYPE_NONE] || 0
     text_weight = weights[GENDER_INPUT_TYPE_TEXT] || 0
@@ -49,13 +48,15 @@ module User::GenderExperimentHelper
     # If there is no configuration, default to showing nothing.
     return GENDER_INPUT_TYPE_NONE if total_weight == 0
 
-    experience = session_id.to_i(16) % total_weight
-    if experience < text_weight
-      GENDER_INPUT_TYPE_TEXT
-    elsif  experience < (dropdown_weight + text_weight)
-      GENDER_INPUT_TYPE_DROPDOWN
-    else
-      GENDER_INPUT_TYPE_NONE
-    end
+    experience = Random.rand(total_weight)
+    gender_input_type = if experience < text_weight
+                          GENDER_INPUT_TYPE_TEXT
+                        elsif  experience < (dropdown_weight + text_weight)
+                          GENDER_INPUT_TYPE_DROPDOWN
+                        else
+                          GENDER_INPUT_TYPE_NONE
+                        end
+    # Save the experience for this session so it is the same if the user refreshes the page.
+    session[:gender_input_type] = gender_input_type
   end
 end

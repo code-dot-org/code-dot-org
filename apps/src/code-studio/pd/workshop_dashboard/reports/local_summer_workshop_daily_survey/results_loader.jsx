@@ -19,9 +19,7 @@ export class ResultsLoader extends React.Component {
   }
 
   load() {
-    const url = `/api/v1/pd/workshops/${
-      this.props.params['workshopId']
-    }/generic_survey_report`;
+    const url = `/api/v1/pd/workshops/${this.props.params['workshopId']}/generic_survey_report`;
 
     this.loadRequest = $.ajax({
       method: 'GET',

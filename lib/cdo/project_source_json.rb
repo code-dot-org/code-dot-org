@@ -28,4 +28,8 @@ class ProjectSourceJson
       @parsed_json['animations']['orderedKeys'] &&
       @parsed_json['animations']['propsByKey']
   end
+
+  def in_restricted_share_mode?
+    !!@parsed_json && @parsed_json['inRestrictedShareMode']
+  end
 end

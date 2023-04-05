@@ -26,7 +26,7 @@ style_min: true
 <div class="col-50" style="padding-right: 20px; float: left">
   <figure class="video-responsive" style="margin: 2em auto">
     <div>
-      <iframe src="https://www.youtube.com/embed/u4DqOGpAuvI" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube-nocookie.com/embed/u4DqOGpAuvI" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
     </div>
   </figure>
 </div>
@@ -59,7 +59,7 @@ style_min: true
 <div class="col-50" style="padding-left: 30px; float: right; margin-top: 0">
   <figure class="video-responsive" style="margin: 2em auto">
     <div>
-      <iframe src="https://www.youtube.com/embed/gBLuUwahBnw" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube-nocookie.com/embed/gBLuUwahBnw" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
     </div>
   </figure>
 </div>

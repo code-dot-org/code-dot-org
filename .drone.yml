@@ -7,10 +7,17 @@ clone:
   disable: true
 
 steps:
+  - name: info
+    image: curlimages/curl
+    commands:
+      # If running on EC2, get hostname from ec2 metadata
+      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
+      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
+      - echo "Running on $hostname"
+
   - name: clone
     image: docker:git
     commands:
-      - hostname=$(wget -O - http://169.254.169.254/latest/meta-data/public-hostname 2> /dev/null || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
       - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
       - git reset --hard $DRONE_COMMIT
       # Also fetch the target branch (which is staging for pull requests.) We need this for determining which tests to run based on changed files.
@@ -45,8 +52,6 @@ steps:
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
     commands:
-      # If running on EC2, get hostname from ec2 metadata
-      - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
       - sudo chown -R circleci:circleci .
       # cache is restored to source directory, so we need to copy it into the right place
       - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
@@ -100,6 +105,14 @@ services:
       - 6379
 
 steps:
+  - name: info
+    image: curlimages/curl
+    commands:
+      # If running on EC2, get hostname from ec2 metadata
+      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
+      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
+      - echo "Running on $hostname"
+
   - name: clone
     image: docker:git
     commands:
@@ -147,8 +160,6 @@ steps:
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
     commands:
-      # If running on EC2, get hostname from ec2 metadata
-      - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
       - sudo chown -R circleci:circleci .
       # cache is restored to source directory, so we need to copy it into the right place
       - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
@@ -189,6 +200,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: a42f3249d466f263dd8242d07f573717d16c16efb40a152d6cb2bbe2466d09a8
+hmac: 753cfe2cb54dcd48fe3b7e788a03307b83b40c6550e6d84d62813b108308f350
 
 ...

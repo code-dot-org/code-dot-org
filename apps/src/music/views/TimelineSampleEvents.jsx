@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {useRef, useContext} from 'react';
-import moduleStyles from './timeline.module.scss';
-import classNames from 'classnames';
 import UniqueSounds from '../utils/UniqueSounds';
 import {PlayerUtilsContext} from '../context';
+import TimelineElement from './TimelineElement';
 
 /**
  * Renders timeline events, organized by unique sample ID.
@@ -11,21 +10,18 @@ import {PlayerUtilsContext} from '../context';
 const TimelineSampleEvents = ({
   barWidth,
   eventVerticalSpace,
-  getLengthForId,
-  getEventHeight,
-  colorClasses
+  getEventHeight
 }) => {
   const playerUtils = useContext(PlayerUtilsContext);
-  const soundEvents = playerUtils.getSoundEvents();
+  const soundEvents = playerUtils.getPlaybackEvents();
 
   const uniqueSoundsRef = useRef(new UniqueSounds());
   // Let's cache the value of getUniqueSounds() so that the various helpers
   // we call during render don't need to recalculate it.  This also ensures
   // that we recalculate unique sounds, even when there are no entries to
   // render.
-  const currentUniqueSounds = uniqueSoundsRef.current.getUniqueSounds(
-    soundEvents
-  );
+  const currentUniqueSounds =
+    uniqueSoundsRef.current.getUniqueSounds(soundEvents);
 
   const getVerticalOffsetForEventId = id => {
     return (
@@ -39,28 +35,19 @@ const TimelineSampleEvents = ({
 
   return (
     <>
-      {soundEvents.map((eventData, index) => {
-        return (
-          <div
-            key={index}
-            className={classNames(
-              moduleStyles.timelineElement,
-              colorClasses[
-                getUniqueIndexForEventId(eventData.id) % colorClasses.length
-              ]
-            )}
-            style={{
-              width: barWidth * getLengthForId(eventData.id) - 4,
-              left: barWidth * eventData.when,
-              top: 20 + getVerticalOffsetForEventId(eventData.id),
-              height:
-                getEventHeight(currentUniqueSounds.length) - eventVerticalSpace
-            }}
-          >
-            &nbsp;
-          </div>
-        );
-      })}
+      {soundEvents.map((eventData, index) => (
+        <TimelineElement
+          key={index}
+          eventData={eventData}
+          barWidth={barWidth}
+          height={
+            getEventHeight(currentUniqueSounds.length) - eventVerticalSpace
+          }
+          top={20 + getVerticalOffsetForEventId(eventData.id)}
+          left={barWidth * (eventData.when - 1)}
+          when={eventData.when}
+        />
+      ))}
     </>
   );
 };
@@ -68,9 +55,7 @@ const TimelineSampleEvents = ({
 TimelineSampleEvents.propTypes = {
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
-  getLengthForId: PropTypes.func.isRequired,
-  getEventHeight: PropTypes.func.isRequired,
-  colorClasses: PropTypes.array.isRequired
+  getEventHeight: PropTypes.func.isRequired
 };
 
 export default TimelineSampleEvents;

@@ -435,6 +435,7 @@ class LessonTest < ActiveSupport::TestCase
     lesson.expects(:get_localized_property).with(:overview)
     lesson.expects(:get_localized_property).with(:purpose)
     lesson.expects(:get_localized_property).with(:preparation)
+    lesson.expects(:get_localized_property).with(:assessment_opportunities)
 
     lesson.summarize_for_lesson_show(create(:user), false)
   end

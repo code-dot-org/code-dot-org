@@ -61,7 +61,7 @@ export function itMakesCircuitPlaygroundComponentsAvailable(
     beforeEach(() => {
       jsInterpreter = {
         globalProperties: {},
-        createGlobalProperty: function(key, value) {
+        createGlobalProperty: function (key, value) {
           jsInterpreter.globalProperties[key] = value;
         },
         addCustomMarshalObject: sinon.spy()
@@ -435,7 +435,7 @@ describe('CircuitPlaygroundBoard', () => {
     beforeEach(() => {
       wrappedPort = new WebSerialPortWrapper();
       sinon
-        .stub(wrappedPort, 'open')
+        .stub(wrappedPort, 'openCPPort')
         .returns(new Promise(resolve => resolve(wrappedPort)));
       board = new CircuitPlaygroundBoard(wrappedPort);
       board.port_.vendorId = '0x239A';
@@ -487,10 +487,9 @@ describe('CircuitPlaygroundBoard', () => {
         expect(led1.stop).not.to.have.been.called;
         expect(led2.stop).not.to.have.been.called;
 
-        return board.destroy().then(() => {
-          expect(led1.stop).to.have.been.calledOnce;
-          expect(led2.stop).to.have.been.calledOnce;
-        });
+        board.reset();
+        expect(led1.stop).to.have.been.calledOnce;
+        expect(led2.stop).to.have.been.calledOnce;
       });
     });
   });
@@ -598,10 +597,7 @@ describe('CircuitPlaygroundBoard', () => {
           // its song.  This method uses a promise chain for animations, so we
           // have to yield the test 'thread' to let the promise chain run until
           // it needs to wait for something.
-          buzzer
-            .expects('play')
-            .once()
-            .calledWith(SONG_CHARGE, 104);
+          buzzer.expects('play').once().calledWith(SONG_CHARGE, 104);
           // Set up no expectations for leds - they don't do anything immediately.
 
           // Now invoke the method under test and yield to the promise chain once.
@@ -613,10 +609,7 @@ describe('CircuitPlaygroundBoard', () => {
 
             // The initial invocation set up timers to enable each LED in sequence
             for (let i = 0; i < leds.length; i++) {
-              leds[i]
-                .expects('color')
-                .once()
-                .calledWith('blue');
+              leds[i].expects('color').once().calledWith('blue');
               clock.tick(80);
               leds[i].verify();
             }

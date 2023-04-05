@@ -3,11 +3,11 @@ import React from 'react';
 import MultiCheckboxSelector from './MultiCheckboxSelector';
 import {action} from '@storybook/addon-actions';
 
-const ItemComponent = function({item}) {
+const ItemComponent = function ({item}) {
   return <strong>{item}</strong>;
 };
 ItemComponent.propTypes = {item: PropTypes.string};
-const ComplexItemComponent = function({style, screen}) {
+const ComplexItemComponent = function ({style, screen}) {
   return (
     <div style={style}>
       <h2>{screen.name}</h2>

@@ -36,7 +36,7 @@ fr:
   africa_campaign_date_full: Du 1er octobre au 18 décembre
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: Du 1er octobre  2022 au 12 décembre 2022
-  hoc2022_header: Explores, joues, crées !
+  hoc2022_header: Explore, joue, crée !
   social_hoc2022_explore_play_create: Utilisez l'informatique pour découvrir, jouer
     et créer !
   codeorg_homepage_hoc2022_body: 'Explorez l''univers, marquez des buts, bougez :
@@ -159,6 +159,10 @@ fr:
     ces vecteurs pour former la SVM. Sur la base des données de formation, la SVM
     sépare « l'espace » de tous les poissons possibles en deux parties qui correspondent
     aux classes que nous essayons d'apprendre (comme « bleu » ou « non bleu »).
+  heading_additional_resources: Additional resources
+  call_to_action_learn_more: En savoir plus
+  call_to_action_watch_now: Watch now
+  call_to_action_try_activity: Try activity
   social_hoc2019_oceans_title: 'IA pour les Océans #CSforGood  '
   social_hoc2019_oceans_desc: "  Découvrez l'IA, l'apprentissage automatique, les
     données de formation et le biais, tout en explorant les questions d’éthique et
@@ -171,8 +175,47 @@ fr:
     and you could win.
   social_maker_title: I'm a Maker!
   social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  social_blockchain_title: How Blockchain Works
+  social_blockchain_desc: Videos and lessons that explore what blockchain is and why
+    it's important.
   pl_superhero_title: Help students become superheroes!
-  pl_superhero_desc: Our Professional Learning program helps you teach computer science!
+  pl_superhero_desc: Join our highly supportive Professional Learning Program for
+    middle and high school educators.
+  blockchain_hero_heading: How Blockchain Works
+  blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
+    our new video series and accompanying lessons!
+  blockchain_intro_heading: See how blockchain works
+  blockchain_intro_desc: The video series, made in partnership with Coinbase, features
+    industry experts and aims to demystify this technology.
+  blockchain_intro_list_heading: 'This series will:'
+  blockchain_intro_list_item_01: Explain what blockchain is
+  blockchain_intro_list_item_02: Explore why it's important
+  blockchain_intro_list_item_03: Unpack its societal impacts — both good and bad
+  blockchain_video_title_01: Introduction to Blockchain
+  blockchain_video_title_02: Why Blockchain
+  blockchain_video_title_03: Under the Hood
+  blockchain_video_title_04: Beyond Currencies
+  blockchain_video_title_05: Marketplace and Price
+  blockchain_video_title_06: Trustworthy or a Scam?
+  blockchain_video_title_07: Societal Impact
+  blockchain_lessons_heading: Blockchain lessons for your class
+  blockchain_lessons_desc: The first five lessons can be taught as part of a "How
+    Blockchain Works" series or can stand alone. The last lesson condenses the whole
+    series to a single day.
+  blockchain_resources_desc: Interested in learning more about blockchain? Here are
+    some additional resources that can help extend your students' learning.
+  blockchain_resources_01_heading: Coinbase Learn
+  blockchain_resources_01_desc: Crypto questions answered, beginner guides, practical
+    tips, and market updates for first-timers, experienced investors, and everyone
+    in between.
+  blockchain_resources_01_button_label: Visit the Coinbase Learn website
+  blockchain_resources_02_heading: Whiteboard Crypto
+  blockchain_resources_02_desc: Watch videos from Whiteboard Crypto's YouTube channel
+    to learn even more about blockchain technology.
+  blockchain_resources_02_button_label: Visit the Whiteboard Crypto YouTube channel
+  blockchain_resources_03_heading: Hour of Code Activity
+  blockchain_resources_03_desc: Try a crypto memory game created by Coinbase.
+  blockchain_resources_03_button_label: Try the Crypto Memory Game activity
   hoc_live: Lévènement "Une heure de code" en direct
   hoc_live_sign_up_title: S'inscrire à "Une heure de Code" en direct
   hoc_live_learn_title: Apprenez avec L'Heure du code en direct
@@ -1818,7 +1861,7 @@ fr:
   tutorial_ozobotvalue_name: What's My Value?
   tutorial_icodebytes_name: 'A Byte of iCompute: Unplugged'
   tutorial_clfashion2_name: Fashionistas of Data Science - Class 2
-  tutorial_ai4all_name: AI & Drawing
+  tutorial_ai4all_name: 'AI4ALL: AI & Drawing'
   tutorial_cldata_name: Welcome to Data Superpower
   tutorial_spheroinputs_name: Inputs and Outputs Unplugged
   tutorial_edisoncount_name: Teach Edison to count to 9

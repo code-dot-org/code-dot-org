@@ -14,8 +14,6 @@ import {currentLocation} from '@cdo/apps/utils';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import $ from 'jquery';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const WorkshopCard = props => {
   return (
@@ -594,10 +592,6 @@ const StartApplicationButton = ({
     ? "Apply on partner's site"
     : 'Start application';
 
-  const logStartApplication = () => {
-    analyticsReporter.sendEvent(EVENTS.TEACHER_APP_STARTED_EVENT);
-  };
-
   let notificationHeading, notificationText;
   if (priorityDeadlineDate) {
     notificationHeading = `Priority deadline for your region is ${priorityDeadlineDate}`;
@@ -610,11 +604,7 @@ const StartApplicationButton = ({
 
   const button = (
     <a className={className} id={id} target={target} href={link}>
-      <button
-        type="button"
-        style={styles.bigButton}
-        onClick={logStartApplication}
-      >
+      <button type="button" style={styles.bigButton}>
         {buttonText}
       </button>
     </a>

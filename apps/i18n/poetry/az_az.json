@@ -35,7 +35,7 @@
   "lomeli1Title": "Günorta yuxusu",
   "lomeli2Lines": "Qarışıqlıq hövzəsi fırlananda\nətrafınıza yeni bir cazibə qüvvəsi çəkir\nYa da bir bağ xəyal edirsən\nistəklər və daşlarla doludur\nöyrənəcəksiniz\nSöz dünyası sərhədsizdir.",
   "lomeli2Title": "Təxəyyülün mədhi",
-  "makeBackground": "Siz arxa fon effekti əlavə etməlisiniz.",
+  "makeBackground": "Arxa fon effekti əlavə eləməlisiniz.",
   "makeForeground": "Ön plan effekti əlavə etməlisiniz.",
   "noBehavior": "Bu bloku tapmaq üçün ** Sprites ** alət qutusuna vurun.\n<xml><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"cloud_single\"</title><title name=\"BEHAVIOR\">gəzən</title></block></xml>",
   "noSprites": "Siz sprite əldən verirsiniz. Bu bloku tapın və kodunuza əlavə edin:\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">'{\"x\":200,\"y\":243}'< /title></block></xml>",

@@ -31,8 +31,14 @@
     },
     "salsa_toy": {
       "fields": {
+        "avocado": {
+          "id": "avokaado"
+        },
         "corn": {
           "id": "mais"
+        },
+        "beans": {
+          "id": "oad"
         }
       }
     },
@@ -43,10 +49,23 @@
         }
       }
     },
+    "poutine_toy": {
+      "fields": {
+        "cheese": {
+          "id": "juust"
+        },
+        "meat": {
+          "id": "liha"
+        }
+      }
+    },
     "club_random_toy": {
       "fields": {
         "color": {
           "id": "värv"
+        },
+        "food": {
+          "id": "toit"
         }
       }
     },
@@ -59,6 +78,9 @@
     },
     "nutrition": {
       "fields": {
+        "Category": {
+          "id": "Kategooria"
+        },
         "Description": {
           "id": "Kirjeldus"
         }
@@ -73,8 +95,20 @@
     },
     "salad_toy": {
       "fields": {
+        "avocado": {
+          "id": "avokaado"
+        },
         "chicken": {
           "id": "kana"
+        },
+        "fruit": {
+          "id": "puuvili"
+        },
+        "beans": {
+          "id": "oad"
+        },
+        "cheese": {
+          "id": "juust"
         }
       }
     },
@@ -99,6 +133,9 @@
       "fields": {
         "chicken": {
           "id": "kana"
+        },
+        "cheese": {
+          "id": "juust"
         }
       }
     },
@@ -139,10 +176,30 @@
         }
       }
     },
+    "safari_toy": {
+      "fields": {
+        "elephant": {
+          "id": "elevant"
+        },
+        "alligator": {
+          "id": "alligaator"
+        }
+      }
+    },
     "abalone": {
       "fields": {
         "Length": {
           "id": "Pikkus"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokaado"
+        },
+        "ginger": {
+          "id": "ingver"
         }
       }
     },
