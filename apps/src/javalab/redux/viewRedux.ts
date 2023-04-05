@@ -1,4 +1,9 @@
-import {PayloadAction, createSlice} from '@reduxjs/toolkit';
+import {
+  AnyAction,
+  PayloadAction,
+  ThunkAction,
+  createSlice
+} from '@reduxjs/toolkit';
 
 const {DisplayTheme} = require('@cdo/apps/javalab/DisplayTheme');
 const UserPreferences = require('@cdo/apps/lib/util/UserPreferences');
@@ -41,13 +46,22 @@ const initialState: JavalabViewState = {
   canDecreaseFontSize: DEFAULT_FONT_SIZE_PX > MIN_FONT_SIZE_PX
 };
 
+// THUNKS
+export const setDisplayTheme = (
+  displayTheme: DisplayThemeValue
+): ThunkAction<void, JavalabViewState, undefined, AnyAction> => {
+  return dispatch => {
+    dispatch(javalabViewSlice.actions.setDisplayThemeValue(displayTheme));
+    new UserPreferences().setDisplayTheme(displayTheme);
+  };
+};
+
+// SLICE
 const javalabViewSlice = createSlice({
   name: 'javalabView',
   initialState,
   reducers: {
-    setDisplayTheme(state, action: PayloadAction<DisplayThemeValue>) {
-      // is this a place for a thunk??
-      new UserPreferences().setDisplayTheme(action.payload);
+    setDisplayThemeValue(state, action: PayloadAction<DisplayThemeValue>) {
       state.displayTheme = action.payload;
     },
     toggleVisualizationCollapsed(state) {
@@ -98,7 +112,6 @@ function updateEditorFontSize(state: JavalabViewState, newFontSize: number) {
 }
 
 export const {
-  setDisplayTheme,
   toggleVisualizationCollapsed,
   increaseEditorFontSize,
   decreaseEditorFontSize,
