@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2022-02-26T00:32:29.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "title": "Trace the Code",
@@ -14,8 +10,13 @@
     "optional": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "name_suffix": "_2022"
+    "name_suffix": "_2022",
+    "allow_multiple_attempts": "false"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2022-02-26T00:32:29.000Z",
+  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-02-26T00:32:29.144+00:00\",\"changed\":[\"cloned from \\\"CSA U7L9-L2b Predict\\\"\"],\"cloned_from\":\"CSA U7L9-L2b Predict\"}]",
   "level_concept_difficulty": {
