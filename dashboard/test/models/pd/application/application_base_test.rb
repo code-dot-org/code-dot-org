@@ -268,7 +268,7 @@ module Pd::Application
 
       application.expects(:deliver_email).never
       assert_creates Email do
-        application.queue_email :test_email
+        application.send_pd_application_email :test_email
       end
       email = Email.last
       assert_equal application, email.application
@@ -282,7 +282,7 @@ module Pd::Application
 
       application.expects(:deliver_email)
       assert_creates Email do
-        application.queue_email :test_email, deliver_now: true
+        application.send_pd_application_email :test_email, deliver_now: true
       end
       email = Email.last
       assert_equal application, email.application
@@ -407,8 +407,8 @@ module Pd::Application
       application_b = create TEACHER_APPLICATION_FACTORY
       [application_a, application_b].each do |application|
         application.stubs(:deliver_email)
-        application.queue_email :test_email
-        application.queue_email :test_email, deliver_now: true
+        application.send_pd_application_email :test_email
+        application.send_pd_application_email :test_email, deliver_now: true
         assert_equal 2, application.emails.count
         assert_equal 1, application.emails.unsent.count
       end
