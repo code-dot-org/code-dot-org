@@ -73,11 +73,11 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     - This may fail if your are on a Mac and your OSX XCode Command Line Tools were not installed properly. See [Bundle Install Tips](#bundle-install-tips) for more information.
     - This may fail for external contributors who don't have permissions to access Code.org AWS Secrets. Assign placeholder values to any configuration settings that are [ordinarily populated in Development environments from AWS Secrets](https://github.com/code-dot-org/code-dot-org/blob/staging/config/development.yml.erb) as indicated in this example: https://github.com/code-dot-org/code-dot-org/blob/5b3baed4a9c2e7226441ca4492a3bca23a4d7226/locals.yml.default#L136-L139
 
-2. Run the website `bin/dashboard-server`
+1. Run the website `bin/dashboard-server`
 
-3. Visit <http://localhost-studio.code.org:3000/> to verify it is running.
+1. Visit <http://localhost-studio.code.org:3000/> to verify it is running.
 
-4. Install necessary plugins described in the [Editor configuration](#editor-configuration) section below.
+1. Install necessary plugins described in the [Editor configuration](#editor-configuration) section below.
 
 After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
@@ -146,12 +146,12 @@ These steps may need to change over time as 3rd party tools update to have versi
       2. `sdk install java <version identifier>` to install a version
       3. `sdk default java <installed version>` to ensure it is the default for future shells.
 
-2. Install and configure **rbenv**
+1. Install and configure **rbenv**
     1. Install: `brew install rbenv`
     2. Run `echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc` to configure ZSH to use **rbenv**. See https://github.com/rbenv/rbenv#basic-git-checkout for instructions on configuring bash and other shells.
     3. Reload your .zshrc to load **rbenv**: `source ~/.zshrc`
 
-3. Install **Ruby**
+1. Install **Ruby**
     1. For non-M1 systems (including M1 systems using Rosetta), running `rbenv install` from the project root directory should be sufficient.
     2. For Apple Silicon, special configuration is required to set *libffi* options correctly. The following is a single line to execute.
 
@@ -159,7 +159,7 @@ These steps may need to change over time as 3rd party tools update to have versi
       optflags="-Wno-error=implicit-function-declaration" LDFLAGS="-L/opt/homebrew/opt/libffi/lib" CPPFLAGS="-I/opt/homebrew/opt/libffi/include" PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig" rbenv install
       ```
 
-4. *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See <https://leancrew.com/all-this/2017/01/pdftk/> and <https://github.com/turforlag/homebrew-cervezas/pull/1> for more information about pdftk on macOS.
+1. *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See <https://leancrew.com/all-this/2017/01/pdftk/> and <https://github.com/turforlag/homebrew-cervezas/pull/1> for more information about pdftk on macOS.
 
     ```sh
     curl -O https://raw.githubusercontent.com/zph/homebrew-cervezas/master/pdftk.rb
@@ -167,9 +167,9 @@ These steps may need to change over time as 3rd party tools update to have versi
     rm ./pdftk.rb
     ```
 
-5. Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils sqlite parallel tidy-html5`
+1. Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils sqlite parallel tidy-html5`
 
-6. Install [Node Version Manager](https://github.com/nvm-sh/nvm) and install Node
+1. Install [Node Version Manager](https://github.com/nvm-sh/nvm) and install Node
     1. Install NVM via `brew install nvm`
 
     2. Running `nvm install` or `nvm use` within the project directory will install and use the version specified in [.nvmrc](.nvmrc)
@@ -187,15 +187,15 @@ These steps may need to change over time as 3rd party tools update to have versi
        nvm use && nvm alias default $(cat ./.nvmrc)
        ```
 
-7. Install **yarn** via `npm install -g yarn@1.22.5`
+1. Install **yarn** via `npm install -g yarn@1.22.5`
 
-8. Install **OpenSSL**
+1. Install **OpenSSL**
     1. Run `brew install openssl`
     2. Following the instructions in the output, run a form of `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
 
-9. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
+1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
-10. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. Note that there are additional steps for Apple Silicon (M1) when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
+1. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. Note that there are additional steps for Apple Silicon (M1) when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
 
 ### OS X Catalina
 
