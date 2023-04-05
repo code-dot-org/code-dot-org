@@ -62,14 +62,14 @@ class PanelButtons extends Component {
     const errorTypes = ["email", "address", "phone", "profanity"];
 
     if (!saveResponseData) {
-      return "";
+      return undefined;
     }
 
     const index = errorTypes.indexOf(saveResponseData.type);
     if (index !== -1) {
       return `(${index})`;
     } else {
-      return "";
+      return undefined;
     }
   };
 
@@ -110,9 +110,11 @@ class PanelButtons extends Component {
           this.props.currentPanel === "saveModel" && (
             <div style={styles.modelSaveMessage}>
               {loadSaveStatus}
-              <div style={styles.modelSaveResponseDataMessage}>
-                {loadSaveResponseData}
-              </div>
+              {loadSaveResponseData && (
+                <div style={styles.modelSaveResponseDataMessage}>
+                  {loadSaveResponseData}
+                </div>
+              )}
             </div>
           )}
 
