@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MusicView from './MusicView';
-import {Provider} from 'react-redux';
-import {getStore} from '../redux';
+import MusicLabView from './views/MusicView';
+// import {Provider} from 'react-redux';
+// import {getStore} from '../redux';
 import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
 import {TestResults} from '@cdo/apps/constants';
 import fishMsg from './locale';
@@ -15,13 +15,13 @@ import fishMsg from './locale';
  * on the mobile device, and correspondingly to scale up the overlay image to
  * properly fit on the mobile device for that viewport.
  */
-const MOBILE_PORTRAIT_WIDTH = 600;
+//const MOBILE_PORTRAIT_WIDTH = 600;
 
 /**
  * An instantiable Fish class
  */
 
-const Music = function() {
+const Music = function () {
   this.skin = null;
   this.level = null;
 
@@ -32,14 +32,14 @@ const Music = function() {
 /**
  * Inject the studioApp singleton.
  */
-Music.prototype.injectStudioApp = function(studioApp) {
+Music.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
 };
 
 /**
  * Initialize this WebLab instance.  Called on page load.
  */
-Music.prototype.init = function(config) {
+Music.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error('Fish requires a StudioApp');
   }
@@ -55,8 +55,8 @@ Music.prototype.init = function(config) {
 
   const onMount = () => {
     // NOTE: Other apps call studioApp.init(), except WebLab. Fish is imitating WebLab
-    this.studioApp_.setConfigValues_(config);
-    this.studioApp_.initTimeSpent();
+    //this.studioApp_.setConfigValues_(config);
+    //this.studioApp_.initTimeSpent();
 
     // NOTE: if we called studioApp_.init(), the code here would be executed
     // automatically since pinWorkspaceToBottom is true...
@@ -67,6 +67,7 @@ Music.prototype.init = function(config) {
     container.className = container.className + ' pin_bottom';
 
     // Fixes viewport for small screens.  Also usually done by studioApp_.init().
+    /*
     var viewport = document.querySelector('meta[name="viewport"]');
     if (viewport) {
       this.studioApp_.fixViewportForSpecificWidthForSmallScreens_(
@@ -74,28 +75,36 @@ Music.prototype.init = function(config) {
         MOBILE_PORTRAIT_WIDTH
       );
     }
+    */
 
-    //this.initMLActivities();
+    //this.initMLActivities();*/
   };
 
   // Push initial level properties into the Redux store
-  this.studioApp_.setPageConstants(config, {
+  /*this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
     noVisualization: true,
     visualizationInWorkspace: true,
     isProjectLevel: !!config.level.isProjectLevel
   });
+  */
 
+  ReactDOM.render(
+    <MusicLabView onMount={onMount} />,
+    document.getElementById(config.containerId)
+  );
+
+  /*
   ReactDOM.render(
     <Provider store={getStore()}>
       <MusicView onMount={onMount} />
     </Provider>,
     document.getElementById(config.containerId)
-  );
+  );*/
 };
 
 // Called by the fish app when it wants to go to the next level.
-Music.prototype.onContinue = function() {
+Music.prototype.onContinue = function () {
   const onReportComplete = result => {
     this.studioApp_.onContinue();
   };
@@ -112,7 +121,7 @@ Music.prototype.onContinue = function() {
   });
 };
 
-Music.prototype.initMLActivities = function() {
+Music.prototype.initMLActivities = function () {
   const {mode} = this.level;
   const onContinue = this.onContinue.bind(this);
 
