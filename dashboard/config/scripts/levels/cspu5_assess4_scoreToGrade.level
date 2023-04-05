@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2016-10-30T20:48:27.000Z",
-  "level_num": "custom",
-  "user_id": 532,
   "properties": {
     "long_instructions": "**Short Answer:** Jimmy wrote the procedure scoreToGrade which accepts as a parameter score - a quiz score in the range 0-100.  The procedure is supposed to return a letter grade. He feels confident his program is correct because he has tested it using the scores 3, 29, and 67. Sally believes the program is incorrect because she tested the values 73 and 86.  The code is syntactically correct, and the programs runs without generating an error, but the results are sometimes wrong.  Why does the procedure return the correct values for Jimmy’s tests but not Sally’s? \r\n\r\n    PROCEDURE scoreToGrade (percent)\r\n    {\r\n        IF (percent < 60)\r\n        {\r\n            RETURN (\"F\")\r\n        }\r\n        ELSE IF (percent >= 60)\r\n        {\r\n        \tRETURN (\"D\")\r\n        }\r\n        ELSE IF (percent >= 70)\r\n        {\r\n            RETURN (\"C\")\r\n        }\r\n        ELSE IF (percent >= 80)\r\n        {\r\n            RETURN (\"B\")\r\n        }\r\n        ELSE\r\n        {\r\n        \tRETURN (\"A\")\r\n        }\r\n    }",
     "instructions_important": "false",
@@ -12,8 +8,13 @@
     "submittable": "false",
     "peer_reviewable": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2016-10-30T20:48:27.000Z",
+  "user_id": 532,
   "published": true,
   "notes": "",
   "level_concept_difficulty": {

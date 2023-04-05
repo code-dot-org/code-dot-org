@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2018-05-03T16:37:47.000Z",
-  "level_num": "custom",
-  "user_id": 0,
   "properties": {
     "title": "Reflection: Why Functions?",
     "long_instructions": "In your own words, explain at least one reason why programming languages have functions.  Include an example of something you did in this lesson that demonstrates the reason you describe.\n\n",
@@ -11,8 +7,13 @@
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 2406,
-    "name_suffix": "_2018"
+    "name_suffix": "_2018",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2018-05-03T16:37:47.000Z",
+  "user_id": 0,
   "published": true
 }]]></config>
 </FreeResponse>
