@@ -149,7 +149,7 @@ const CheckForUnderstanding = ({
         notice={i18n.feedbackShareBannerTitle()}
         details={i18n.feedbackShareBannerDesc()}
         buttonText={i18n.feedbackShareBannerButton()}
-        buttonLink={'about:blank'}
+        buttonLink={'https://forms.gle/XsjRL9L3Mo5aC3KbA'}
         dismissable={false}
       />
       {/* Teacher Instructions */}
