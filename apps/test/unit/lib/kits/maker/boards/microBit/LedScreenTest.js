@@ -1,6 +1,6 @@
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {MBFirmataClientStub} from '@cdo/lib/kits/maker/util/makeStubBoard';
+import {MBFirmataClientStub} from '../../../../../../../src/lib/kits/maker/util/makeStubBoard';
 import LedScreen from '@cdo/apps/lib/kits/maker/boards/microBit/LedScreen';
 
 describe('LedScreen', function () {

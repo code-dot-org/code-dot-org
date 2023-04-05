@@ -2,7 +2,7 @@
 import _ from 'lodash';
 import {expect} from '../../../../../../util/reconfiguredChai';
 import five from '@code-dot-org/johnny-five';
-import {CPBoardStub} from '@cdo/lib/kits/maker/util/makeStubBoard';
+import {CPBoardStub} from '../../../../../../../src/lib/kits/maker/util/makeStubBoard';
 import PlaygroundButton from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Button';
 import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 

@@ -1,4 +1,4 @@
-import {MBFirmataClientStub} from '@cdo/lib/kits/maker/util/makeStubBoard';
+import {MBFirmataClientStub} from '../../../../../../../src/lib/kits/maker/util/makeStubBoard';
 import {expect} from '../../../../../../util/reconfiguredChai';
 import {EventEmitter} from 'events';
 import sinon from 'sinon';
