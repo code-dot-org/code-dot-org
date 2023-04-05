@@ -26,7 +26,13 @@ import {
   Radio,
   Alert
 } from 'react-bootstrap';
-import {TIME_FORMAT, DATE_FORMAT, DATETIME_FORMAT} from '../workshopConstants';
+import {
+  TIME_FORMAT,
+  DATE_FORMAT,
+  DATETIME_FORMAT,
+  COURSE_CSP,
+  COURSE_CSA
+} from '../workshopConstants';
 import {
   PermissionPropType,
   WorkshopAdmin,
@@ -95,7 +101,8 @@ export class WorkshopForm extends React.Component {
       organizer: PropTypes.shape({
         id: PropTypes.number,
         name: PropTypes.string
-      })
+      }),
+      workshop_starts_within_a_month: PropTypes.bool
     }),
     onSaved: PropTypes.func,
     readOnly: PropTypes.bool,
@@ -380,6 +387,27 @@ export class WorkshopForm extends React.Component {
       isAdminCounselor || isCsfSubjectWithHiddenFundedField
     );
 
+    console.log(this.props.workshop.workshop_starts_within_a_month);
+
+    // For summer workshops for CSP and CSA, only workshop admins can
+    // update the “Is this a virtual workshop” field within one month
+    // of the workshop in order to prevent people from changing this
+    // last minute without talking to Friday institute.
+    const nonWSAdminAndStartWithinMonth =
+      (this.state.course === COURSE_CSP || this.state.course === COURSE_CSA) &&
+      !this.props.permission.has(WorkshopAdmin);
+    //   start less than month out;
+    const virtualWorkshopHelpTip = nonWSAdminAndStartWithinMonth ? (
+      <p>
+        There is less than a month until your workshop. Please contact
+        partner@code.org to update this setting.
+      </p>
+    ) : (
+      <p>Please update your selection if/when your plans change.</p>
+    );
+    console.log(this.state.sessions);
+    console.log(this.state.sessions[0].start);
+
     return (
       <FormGroup>
         <ControlLabel>
@@ -419,16 +447,15 @@ export class WorkshopForm extends React.Component {
             <FormGroup validationState={validation.style.virtual}>
               <ControlLabel>
                 Is this a virtual workshop?
-                <HelpTip>
-                  <p>Please update your selection if/when your plans change.</p>
-                </HelpTip>
+                <HelpTip>{virtualWorkshopHelpTip}</HelpTip>
               </ControlLabel>
               <SelectIsVirtual
                 value={this.currentVirtualStatus()}
                 onChange={this.handleVirtualChange}
                 readOnly={
                   this.props.readOnly ||
-                  VirtualOnlySubjects.includes(this.state.subject)
+                  VirtualOnlySubjects.includes(this.state.subject) ||
+                  nonWSAdminAndStartWithinMonth
                 }
               />
               <HelpBlock>{validation.help.virtual}</HelpBlock>
