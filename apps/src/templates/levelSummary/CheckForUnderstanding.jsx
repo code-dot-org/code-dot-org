@@ -54,13 +54,13 @@ const CheckForUnderstanding = ({
   const onBackToLevelClick = e => {
     e.preventDefault();
     logEvent(EVENTS.SUMMARY_PAGE_BACK_TO_LEVEL_CLICKED);
-    window.location.href = currentLevel.url;
+    window.location.href = currentLevel.url + sectionParam;
   };
 
   const onNextLevelClick = e => {
     e.preventDefault();
     logEvent(EVENTS.SUMMARY_PAGE_NEXT_LEVEL_CLICKED);
-    window.location.href = nextLevel.url;
+    window.location.href = nextLevel.url + sectionParam;
   };
 
   return (
