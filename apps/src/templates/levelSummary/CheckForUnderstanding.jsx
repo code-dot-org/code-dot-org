@@ -143,7 +143,7 @@ const CheckForUnderstanding = ({
         </div>
       </div>
 
-      {/* Feedback banner */}
+      {/* Feedback sharing banner */}
       <Notification
         type={NotificationType.feedback}
         notice={i18n.feedbackShareBannerTitle()}
@@ -152,6 +152,7 @@ const CheckForUnderstanding = ({
         buttonLink={'https://forms.gle/XsjRL9L3Mo5aC3KbA'}
         dismissable={false}
       />
+
       {/* Teacher Instructions */}
       {teacherMarkdown && (
         <div>
