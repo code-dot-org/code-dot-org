@@ -2,14 +2,14 @@
 import _ from 'lodash';
 import {expect} from '../../../../../../util/reconfiguredChai';
 import five from '@code-dot-org/johnny-five';
-import {CPBoardStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+import {makeCPBoardStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import PlaygroundButton from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Button';
 import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 
 describe('PlaygroundButton', function () {
   it('is a johnny-five Button component', function () {
     const button = new PlaygroundButton({
-      board: CPBoardStub(),
+      board: makeCPBoardStub(),
       pin: 0
     });
     expect(button).to.be.an.instanceOf(five.Button);
@@ -20,7 +20,7 @@ describe('PlaygroundButton', function () {
 
     beforeEach(() => {
       button = new PlaygroundButton({
-        board: CPBoardStub(),
+        board: makeCPBoardStub(),
         pin: 0
       });
     });
@@ -38,7 +38,7 @@ describe('PlaygroundButton', function () {
   it('becomes a pullup when assigned to an external pin', () => {
     EXTERNAL_PINS.forEach(pin => {
       const button = new PlaygroundButton({
-        board: CPBoardStub(),
+        board: makeCPBoardStub(),
         pin
       });
       expect(button.pullup).to.be.true;
@@ -50,7 +50,7 @@ describe('PlaygroundButton', function () {
       .filter(pin => !EXTERNAL_PINS.includes(pin))
       .forEach(pin => {
         const button = new PlaygroundButton({
-          board: CPBoardStub(),
+          board: makeCPBoardStub(),
           pin
         });
         expect(button.pullup).to.be.false;

@@ -173,7 +173,11 @@ function getBoard() {
     makerBoardAPI === MB_API ? MicroBitBoard : CircuitPlaygroundBoard;
 
   if (shouldRunWithVirtualBoard()) {
-    // Check which maker is being enabled
+    // Check which maker is being enabled (micro:bit or Circuit Playground).
+    // Since shouldRunWithVirtualBoard() returns true, we can safely assume that makerBoardAPI is set.
+    // If micro:bit is enabled, makerBoardAPI's value is 'microbit'.
+    // However, if Circuit Playground is enabled, makerBoardAPI's value is either true or
+    // 'circuitPlayground' depending on  value assigned in the level.
     if (makerBoardAPI === MB_API) {
       return Promise.resolve(new VirtualMBBoard());
     } else {
