@@ -1,4 +1,3 @@
-
 import {ChordEvent, ChordEventValue} from './interfaces/ChordEvent';
 import {Effects} from './interfaces/Effects';
 import {FunctionContext} from './interfaces/FunctionContext';
