@@ -533,7 +533,7 @@ const MusicView = connect(
 const MusicLabView = () => {
   return (
     <Provider store={getStore()}>
-      <MusicView  />
+      <MusicView />
     </Provider>
   );
 };
