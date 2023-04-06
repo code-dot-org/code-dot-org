@@ -1,5 +1,7 @@
 require 'cdo/config'
 require 'cdo/lazy'
+require 'aws-sdk-ec2'
+require 'net/http'
 
 module Cdo
   # Prepend this module to a Cdo::Config to process lazy-loaded secrets contained in special tags.
