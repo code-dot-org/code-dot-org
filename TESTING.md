@@ -59,7 +59,8 @@ Worth noting:
 * `bundle exec rake test:apps`, `bundle exec rake test:pegasus`, `bundle exec rake test:blockly_core` ... etc  - runs tests for specific sub-project
 * `bundle exec rake test:changed` - detects which sub-projects have changed in this branch, runs those tests
 * `bundle exec rake test:changed:apps` - runs apps tests if sub-project folder has changed
-
+* `bundle exec rake test:dashboard` - runs dashboard tests, but see [Dashboard Tests](#dashboard-tests) below for first time setup
+  
 ### Shared and Lib Tests
 Tests in the `shared/` and `lib/` directories need to be run slightly differently since they are outside of our Rails environment.
 
