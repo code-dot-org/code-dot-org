@@ -43,7 +43,7 @@ module AWS
     def self.current_stack_name
       metadata_service_request = Net::HTTP.new(EC2_METADATA_SERVICE_URL.host, EC2_METADATA_SERVICE_URL.port)
       # Set a short timeout so that when not executing on an EC2 Instance we fail fast.
-      metadata_service_request.open_timeout = metadata_service_request.read_timeout = 3
+      metadata_service_request.open_timeout = metadata_service_request.read_timeout = 10
       ec2_instance_id = metadata_service_request.request_get(EC2_METADATA_SERVICE_URL.path).body
       ec2_client = Aws::EC2::Client.new
       ec2_client.
@@ -54,8 +54,7 @@ module AWS
         value
     rescue Net::OpenTimeout # This code is not executing on an AWS EC2 Instance nor in an ECS container or Lambda.
       nil
-    rescue StandardError => error
-      CDO.log.info error.message
+    rescue StandardError
       nil
     end
 
