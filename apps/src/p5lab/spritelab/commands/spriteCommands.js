@@ -176,9 +176,9 @@ export const commands = {
     });
   },
 
-  makeNewSpriteGroup(n, animation, layout) {
+  makeNewSpriteGroup(numSprites, animation, layout) {
     let spriteGroup = [];
-    for (let i = 0; i < n; i++) {
+    for (let i = 0; i < numSprites; i++) {
       const id = this.addSprite({animation});
       spriteGroup = spriteGroup.concat(this.getSpriteArray({id}));
     }
