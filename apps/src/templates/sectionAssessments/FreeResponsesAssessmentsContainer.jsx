@@ -34,11 +34,8 @@ class FreeResponsesAssessmentsContainer extends Component {
   };
 
   render() {
-    const {
-      freeResponseQuestions,
-      studentId,
-      currentStudentHasResponses
-    } = this.props;
+    const {freeResponseQuestions, studentId, currentStudentHasResponses} =
+      this.props;
     return (
       <div>
         {(studentId === ALL_STUDENT_FILTER || currentStudentHasResponses) && (
@@ -83,7 +80,8 @@ const styles = {
   }
 };
 
-export const UnconnectedFreeResponsesAssessmentsContainer = FreeResponsesAssessmentsContainer;
+export const UnconnectedFreeResponsesAssessmentsContainer =
+  FreeResponsesAssessmentsContainer;
 
 export default connect(
   state => ({

@@ -69,10 +69,7 @@ describe('TableControls', () => {
   });
 
   function getModal(wrapper) {
-    return wrapper
-      .find(VisualizerModal)
-      .children()
-      .first();
+    return wrapper.find(VisualizerModal).children().first();
   }
 
   function assertModalState(wrapper, expectedState) {

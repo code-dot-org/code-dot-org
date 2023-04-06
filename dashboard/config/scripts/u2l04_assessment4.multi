@@ -1,24 +1,21 @@
 name 'U2L04 Assessment4'
-encrypted 'RdLcN4ACNGqJz1+gcB0Hxw/wkZrht2sTIdvDKoCI+i4P66KdBMwu19FYdnTG
-dR1UMQGaF3OUr2LQ36BB18OIX36QxlJnS92DQysDQ6p/oN836vi7fnDWYw0C
-KPWqpZYnCvO7iMXsQThC8jL+MK+85fnL0SOD8T+T7abaooDQ4As99Y0RaKEN
-sCk9d/29EAuexaO1FBQkqlil26r/0nVWVNbbryFHv7mEdv6qLwNdej+R6sC8
-Kd3txzeVl+9CS/DAKlPA1AlqDnfIVTa9JCRbe4B1xBd4M8KxnWoC1XlRloXs
-45LmLt3qa5uxvOy6wH8iQ58spbapL7UiDRt0Xb1QR3nTSFfyHacxhbsPm9j3
-Pyb7vQR3N/lLW4df/PSkYasxSdRAzgfJSpqCe/v04jxdG0hEtLYig7UirSRZ
-nUcGLrq8SnfnH/VZ9EHaPq/14+U42/VDnGb0MEX5IXBG5OyKXMeJhzob7z4F
-f5b21W4MiDpLqrcShR9xt78wamBmC2HZCZtC+Eqlbe+X3SoTUAJF/qmKSz94
-MbNBwW9XHBbYdJq6FT2BwkwaZ70Q3AiESffZNIvV+Y9aIiEXikSJ2+kCTiNF
-aZCYhoP1EysHAbzeg7UL02Eh+MLBsG6Rb4getdVSGj5G9g3wm58cGdCvi0Sz
-Xy0UCG8YxaMtU6g/t73Ot8uWITBGojCRoeMBXwNUbMJ6Pi1M46+WCvOR/RG2
-VYQxp0FwZ2j8JfW9kx5Pn4Max2QP2hGh9mukKL59+xzRJSyR7ABnyfe1v4Jy
-ZXTQocoAC7PsDs+AFOaQJrwDZkiQdT1gvVwSk3YZnjnN1pqpW0Ho940C/Kvy
-0wk7uEjAFg1V1W/KpdLl7rsk+8oAbE2pw+B69ONLgJUsdQqpPHZI+A9Kc8Hm
-jIRNahpY+FVSM7eBL4G4+gzVYCJiLBsbCCXVEx9N0patHiKblFmLbQsmDwgt
-YsO3VwLtreqRapT6dLg4S/vKKO8lVgNZCRfI7zE112kjw9p/ena59G+sJ52m
-PS+/nxvLCCvi1fUTFVkqZh2KVwJ5eI+QA8j2A+ukS2uCsIRSpVrzKUhkISwX
-HWINs1tlxREOxqMtOoBZQ0bz9YBkWKteDmZeDG0s7GZNgsaonI/gcl4Mq6xA
-1wPiDBWZYSSM0DwCfw7b5XP4iTZuW5EWeMcjM5r1JM+76wmTW49/i7sbpCRr
-0tuURT2jnOtCgcFMXUd5EammBDUsFstqYahsfo6Zgj7uHRVtGjzqehpGI2i5
-l7BTnU9VOyalhmpJrdg3wG46GPfVnIE+2IEovhwoAA==
-'
+title 'Routers and Redundancy: Question 2'
+type 'multi2'
+
+question 'If the post office delivered mail exactly like routers deliver messages on the internet, which 2 of the following statements would be true?'
+wrong 'One mailman would be responsible for delivering a letter from sender to receiver.'
+right 'The mailman would sometimes take a different path to deliver each letter to your home.'
+right 'Letters would be written on the outside of envelopes for all to read instead of letters put inside envelopes.'
+wrong 'Your mail could not be delivered if a road your mailman was planning to take were under construction.'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Answers:
+
+- B: The mail carrier would sometimes take different paths to deliver each letter to your home.
+- C: Letters would be written on the outside of envelopes for all to read instead of being put inside envelopes.
+MARKDOWN
+
+allow_multiple_attempts true

@@ -24,16 +24,8 @@ describe('CloneLessonDialog', () => {
   it('disables clone button while saving', () => {
     fetchSpy.resolves();
     const wrapper = shallow(<CloneLessonDialog {...defaultProps} />);
-    wrapper
-      .find('Button')
-      .at(1)
-      .simulate('click');
-    expect(
-      wrapper
-        .find('Button')
-        .at(1)
-        .props().disabled
-    ).to.be.true;
+    wrapper.find('Button').at(1).simulate('click');
+    expect(wrapper.find('Button').at(1).props().disabled).to.be.true;
   });
 
   it('can display success message on clone', () => {

@@ -90,13 +90,11 @@ describe('dialogHelper', () => {
             correct: true
           },
           {
-            text:
-              'I feel like I need to do SOME review of lessons, content, etc before I teach this',
+            text: 'I feel like I need to do SOME review of lessons, content, etc before I teach this',
             correct: true
           },
           {
-            text:
-              'I feel like I need to do A LOT of review of lessons, content, etc before I teach this',
+            text: 'I feel like I need to do A LOT of review of lessons, content, etc before I teach this',
             correct: true
           }
         ],

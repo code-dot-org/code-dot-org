@@ -1460,6 +1460,10 @@ kk:
               display_name: Тізімдер
             lessonGroup-3:
               display_name: Ілмек
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Бағалаулар
         pre-express-2023:
           lesson_groups:
             csf_loops:

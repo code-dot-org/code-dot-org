@@ -831,7 +831,7 @@ function getUrlParameters(filters) {
   return parametersObject;
 }
 
-window.TutorialExplorerManager = function(options) {
+window.TutorialExplorerManager = function (options) {
   options.mobile = mobileCheck();
   let {filters, initialFilters, hideFilters} = getFilters(options);
 
@@ -847,7 +847,7 @@ window.TutorialExplorerManager = function(options) {
     ? TutorialsSortByOptions.popularityrank
     : TutorialsSortByOptions.displayweight;
 
-  this.renderToElement = function(element) {
+  this.renderToElement = function (element) {
     ReactDOM.render(
       <TutorialExplorer
         tutorials={options.tutorials}

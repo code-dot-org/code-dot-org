@@ -14,9 +14,8 @@ import SearchBox from '@cdo/apps/lib/levelbuilder/lesson-editor/SearchBox';
 
 function StandardsEditor(props) {
   const [standardToRemove, setStandardToRemove] = useState(null);
-  const [confirmRemovalDialogOpen, setConfirmRemovalDialogOpen] = useState(
-    false
-  );
+  const [confirmRemovalDialogOpen, setConfirmRemovalDialogOpen] =
+    useState(false);
   const [frameworkShortcode, setFrameworkShortcode] = useState(null);
 
   const actionsCellFormatter = (actions, {rowData}) => {
@@ -187,9 +186,7 @@ function StandardsEditor(props) {
       </Table.Provider>
       {confirmRemovalDialogOpen && (
         <Dialog
-          body={`Are you sure you want to remove standard "${
-            standardToRemove.shortcode
-          }" from this lesson?`}
+          body={`Are you sure you want to remove standard "${standardToRemove.shortcode}" from this lesson?`}
           cancelText="Cancel"
           confirmText="Delete"
           confirmType="danger"
@@ -235,10 +232,7 @@ const styles = {
 
 export const UnconnectedStandardsEditor = StandardsEditor;
 
-export default connect(
-  state => ({}),
-  {
-    addStandard,
-    removeStandard
-  }
-)(StandardsEditor);
+export default connect(state => ({}), {
+  addStandard,
+  removeStandard
+})(StandardsEditor);

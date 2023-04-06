@@ -1523,7 +1523,7 @@
         },
         "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
           "name": "Ejemplo 2: Uso de la visión de la Información para mejorar el modelo",
-          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
+          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n\\| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Calentamiento"
@@ -2611,7 +2611,7 @@
           "progression_name": "Predicción"
         },
         "fa8242f4-3cba-4a2c-bd5b-069a58450349": {
-          "description": "#### Vídeo: Sprites en acción (3 minutos)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra el vídeo \"Sprites en Acción\"",
+          "description": "#### Vídeo: Sprites en Acción (3 minutos)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra el vídeo \"Sprites en Acción\"",
           "progression_name": "Vídeo: Sprites en Acción"
         },
         "ddbb537c-edf8-479c-b44d-8188941c0655": {
@@ -2633,7 +2633,7 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"¿Cómo funcionan los eventos?\""
         },
         "8af29cc7-6e43-400d-8410-17b8758b9183": {
-          "description": "¿Cómo funcionan los eventos?\n\n1.  El usuario pulsa una tecla del teclado.\n2.  El teclado envía una señal al ordenador.\n3.  El ordenador toma una decisión en función del código.\n4.  El ordenador actualiza la pantalla."
+          "description": "¿Cómo funcionan los eventos?\n\n1.  El usuario pulsa una tecla en el teclado.\n2.  El teclado envía una señal al ordenador.\n3.  El ordenador toma una decisión en función del código.\n4.  El ordenador actualiza la pantalla."
         },
         "ec95fadb-9235-4f39-b4f7-f9b02e2fecdb": {
           "name": "Reflexionar",
@@ -2660,19 +2660,32 @@
           "progression_name": "Exploración"
         },
         "e9443a1f-ef37-4cb8-8d8c-415f2ceaf8ee": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Nivel 3-6 - Crear una Mascota Virtual\"",
           "progression_name": "Miniproyecto: Crear una Mascota Virtual"
         },
         "70b98dfc-752d-47f0-a29f-2c39cbad42be": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Nivel 7 - Juego Libre\"",
           "progression_name": "Juego libre"
         },
         "6007c0c9-9fe0-4bf5-9861-e64847bd3161": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona:**\n\n-   _¿De qué ha tratado la lección de hoy?_\n-   _¿Qué otras cosas te gustaría que hiciera tu mascota?_"
         },
         "73bf4d55-3d84-4105-868f-eb0a20a55388": {
           "description": "### Proporcionar energía para tu mascota virtual (60-90 minutos)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png) **Ciencias de la computación + artes del lenguaje + ciencia**\n\n[Proporcionar energía para tu mascota virtual](https://docs.google.com/document/d/1SV51NrXzinuXHLToGarIDnVMd6GA8ZaD2LfWMDqTg0M/edit?usp=sharing) es una actividad opcional alineada con las normas básicas comunes ELA y las normas de ciencias de última generación, escritas por nuestra comunidad de docentes. Los estudiantes crearán un modelo científico que muestra cómo su mascota virtual recibirá la energía que necesita para sobrevivir. \n\n_Normas abordadas:_\n\n-   **CCSS.ELA.RI.5.7:** aprovechar la información de varias fuentes impresas o digitales, demostrando la capacidad de encontrar una respuesta a una pregunta rápidamente o de resolver un problema de manera eficiente. \n\n-   **CCSS.ELA.RI.5.9:** integrar información de varios textos sobre el mismo tema para escribir o hablar sobre el tema con conocimiento. \n\n-   **5- PS3-1:** utilizar modelos para describir que la energía en la comida de los animales (utilizada para reparar el cuerpo, crecer, moverse y mantener el calor corporal) alguna vez fue energía del Sol. \n\n-   **5-LS2-1:** desarrollar un modelo para describir el movimiento de la materia entre plantas, animales, descomponedores y el medio ambiente. \n\n-   **SL.5.5:** incluir componentes multimedia (por ejemplo, gráficos, sonido) y presentaciones visuales cuando sea apropiado para mejorar el desarrollo de ideas o temas principales. "
         },
+        "6587bc74-8dc2-4a3d-a7f2-118582b1454a": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"¿Cómo se guardan las cosas?\""
+        },
+        "bdb2c76b-5012-4cb7-a951-45ea895997b5": {
+          "description": "Una forma de guardar las cosas es con recipientes etiquetados."
+        },
+        "a8ae0d45-e7ce-4ea8-bcbd-0f7d0eabf120": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Historias de Espacios en Blanco\"\n\nPide a los alumnos que piensen en cómo organizamos y guardamos las cosas. ¿Guardan alguna vez las cosas en cajas? ¿Están etiquetadas esas cajas? ¿Por qué? Si los alumnos no tienen esta experiencia, pídeles que se imaginen ayudándote a empaquetar la clase para el verano. ¿Y si, en lugar de objetos, tuvieran que guardar información? \n\nExplica a los alumnos que hoy vamos a realizar un juego de palabras, similar a Mad Libs®, en el que se les pedirá que escriban palabras que luego colocarán en una historia absurda."
+        },
         "36b84666-22b3-4032-b1ef-863aca87cfd9": {
-          "name": "Comida favorita"
+          "name": "Comida favorita",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra \"Historia del Espacio en Blanco: Comida Favorita\"\n\n**Haz esto:** Muestra la primera historia de espacio en blanco (Comida favorita) en la pizarra utilizando las diapositivas de la lección. \n\n**Sugerencia:** \\_¿Cómo crees que funciona esta historia del espacio en blanco? ¿Qué notas en las etiquetas de cada espacio en blanco?\n\nEs importante que los alumnos entiendan que una persona suele proporcionar las palabras designadas por cada etiqueta sin ver la historia antes. Los alumnos pueden observar que cada espacio tiene una etiqueta única.\n\n**Haz esto:** Prepara los tres primeros sobres para la demostración. Si utilizas las diapositivas, avanza la animación para mostrar las tres cajas moradas. "
         },
         "c9d09795-0970-471d-ac5d-b745bdc7c6ee": {
           "description": "En un momento, tendré voluntarios que nos ayudarán a llenar los espacios en blanco. Vamos a usar sobres para hacer un seguimiento de la información que nos proporcionan. Cada sobre tiene una etiqueta que va con uno de los espacios en blanco. Si te entrego un sobre, por favor escribe una palabra que vaya con esa etiqueta y colócala dentro, luego devolvemelo."
@@ -2681,7 +2694,14 @@
           "description": "\\*\\*Haz esto: \\*\\* Facilita la entrega y recogida de los sobres marcados como «objeto», «líquido» y «número». Una vez recogidos, mantén los sobres cerrados y empieza a leer el cuento. Solo cuando llegues a cada espacio en blanco, abre el sobre y lee el valor almacenado."
         },
         "580f30a2-5998-427d-9399-f52a5426e91d": {
-          "name": "Juegos de Fiesta"
+          "name": "Juegos de Fiesta",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Historia del Espacio en Blanco: Juegos de Fiesta\" \n\n**Haz esto:**\n\n-   Prepara los sobres marcados con \"adjetivo\", \"objeto\", \"parte del cuerpo\" y \"número\". \n-   Repite el juego anterior con la segunda historia. Esta vez puedes empezar con las etiquetas antes de mostrar la historia para crear más suspense. Las animaciones de las diapositivas ya están preparadas para facilitar esta tarea.\n\n#### (Opcional) Ampliación del Juego de Rol\n\nSe puede establecer una conexión entre los voluntarios y la idea de que una aplicación tiene un \"usuario\". En esta analogía, tu papel como profesor ha sido como el del ordenador. Pedirás y almacenarás la información de los \"usuarios\" y luego resolverás cómo montar la historia. Para implicar a más alumnos y hacer que representen este modelo, asigna papeles:\n\n_Ordenadores:_ Reparte y recoge los sobres. Abre cada sobre mientras se lee la historia para comprobar los valores almacenados.\n\n_Usuarios:_ Entrega las palabras necesarias para completar la historia.\n\n_Lector:_ Lee la historia terminada en voz alta.\n\n#### Informe\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona**: _¿En qué se diferencia escribir una historia en un espacio en blanco de escribir una historia normal?_"
+        },
+        "6a51a240-94c7-47c6-880d-674a72b76bbf": {
+          "description": "#### Vocabulario\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Vocabulario\"\n\nLos espacios en blanco de estas historias funcionan como contenedores de información. Cada contenedor tiene también una etiqueta.\n\nEn informática, la llamamos variable.\n\n-   **Variable** - Una etiqueta para una parte de la información utilizada en un programa."
+        },
+        "e35b9294-084e-44f7-bf86-7bf5f5755a70": {
+          "description": "#### Crea tu propia historia (20 minutos)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra el vídeo \"Desconectada - Variables en Sobres\"."
         },
         "c173338f-588c-408f-a20a-9fff31d41a14": {
           "description": "En la actividad de hoy, trabajarás con un grupo para crear tu propia historia de espacios en blanco. "
@@ -2690,73 +2710,144 @@
           "progression_name": "Vídeo: Variables Desconectadas en Envolventes"
         },
         "a39aeb31-f24a-4a70-b481-9fb3172e76cb": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Crea tu propia historia\"\n\n**Haz esto:** Reparte la **\\*hoja de trabajo del alumno** y repasa las instrucciones. ",
           "tips": [
             "Escribir una historia en un espacio en blanco puede ser un desafío. Puede ser útil dar a los estudiantes sugerencias de temas para inspirar y enfocar su escritura. Considere la posibilidad de que los alumnos trabajen en esta tarea en grupos para que puedan colaborar.\n\n\\*\\*Sugerencias temáticas: \\*\\*\n\n-   excursión de clase imaginaria\n\n-   vacaciones inusuales\n\n-   crítica de la película\n\n-   rutina matutina\n\n-   un día en la playa\n\n-   cómo volar una cometa"
           ]
         },
         "4a32f72b-2376-432d-8b3a-983f0fe9488b": {
+          "description": "#### Comparte tus historias (10 minutos)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Comparte tus historias\"\n\n**Haz esto:** Forma parejas de dos grupos y pídeles que compartan sus historias por turnos. \n\nSi dispones de tiempo y materiales suficientes, entrega a los alumnos sus propios sobres para que los etiqueten e intercambien. Esto ayudará a los alumnos a construir el modelo mental correcto sobre cómo funciona este intercambio cuando vuelvan a la programación.",
           "tips": [
             "\\*\\* ¡Guarda las historias de los alumnos! \\*\\*\n\nEn un par de lecciones, los alumnos aplicarán lo que han aprendido para crear otro proyecto de Sprite Lab. Hay varias opciones para este proyecto, pero una de ellas es crear una historia digital en blanco.\n\nPor ejemplo, [here](https://studio.code.org/levels/27026) es una versión de Sprite Lab de la historia _Party Games_ de esta lección. "
           ]
         },
         "4bff0457-cc5d-4e24-a3e8-51093371c51e": {
-          "name": "Introducción de variables"
+          "name": "Introducción de variables",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Recapitulación de las Historias del Espacio en Blanco\"\n\n**Haz esto:** Resume las reglas de las historias en espacios en blanco una vez más con la clase. "
+        },
+        "4402ca61-f30f-49f6-a8e1-66f23987e68c": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la siguiente diapositiva"
+        },
+        "987009ba-dbd2-45d0-8738-f1c3d844784d": {
+          "description": "_Todas estas aplicaciones piden al usuario que facilite cierta información. ¿Qué relación tienen con la actividad de hoy?_"
+        },
+        "ec5312ba-d580-4c5f-8da9-4952bb18c5b3": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Variables\""
+        },
+        "6c0c826d-bad3-47ad-adc3-3e15facc2066": {
+          "description": "_La información se almacena en la memoria del ordenador mediante variables. Cada variable tiene una etiqueta que nos indica qué tipo de información podemos esperar. Cuando el ordenador necesita esa información más tarde, busca la etiqueta de la variable._"
+        },
+        "b78b4806-9a6b-456f-94ff-966956790604": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la siguiente diapositiva \"Variables\""
+        },
+        "b764c4b4-8c77-41d1-b69a-7a0caa48f547": {
+          "description": "_Si almacenas objetos en una caja, palabras en un sobre o información en una variable, es importante utilizar buenas etiquetas, para no confundirse más tarde._\n\n_Cuando un usuario escribe una línea de comandos, es como si el ordenador almacenara la información en un contenedor. La etiqueta de la variable nos dice qué tipo de información podemos esperar._"
+        },
+        "d1b404e0-f066-4a95-9ac9-f0426512392e": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la siguiente diapositiva"
         },
         "c7ac5782-093f-43a4-a9df-c9b507e35a30": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona:** _¿Cómo crees que se relacionan las historias de espacios en blanco con el aprendizaje de la informática?_"
         },
         "50cb30b6-f77f-4ca8-a7aa-477fc5de0b70": {
           "description": "### Variables de la cadena alimentaria (45-60 minutos)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Informática+Artes del Lenguaje Inglés+Matemáticas+Ciencia**\n\n[\\*\\*Variables de la cadena alimentaria\\*\\*](https://docs.google.com/document/d/1td4o1Oj1Syw_WwVAJ2CMDdWhvwp9DwMdbwv0gV0azOs/edit?usp=sharing) es una actividad opcional alineada con Common Core ELA, Common Core Math y Next Generation Science Standards, escrita por nuestra comunidad docente. Los estudiantes identificarán varios valores para las variables que se encuentran en las cadenas alimentarias (por ejemplo: plantas, animales, descomponedores, etc.) a medida que documentan estos valores en las tarjetas de notas y muestran el movimiento de la materia a través de un entorno. Los estudiantes también aprenderán sobre la regla del 10% y describirán más a fondo el flujo de energía con un mensaje escrito.\n\n_Estándares abordados:_\n\n-   \\*\\*CCSS.ELA-LITERACY.W.5.2.B: \\*\\* Desarrolle el tema con hechos, definiciones, detalles concretos, citas u otra información y ejemplos relacionados con el tema.\n\n-   \\*\\*CCSS.MATH.CONTENT.5.NF.B.7.C: \\*\\* Resolver problemas del mundo real relacionados con la división de fracciones unitarias por números naturales distintos de cero y la división de números enteros por fracciones unitarias, por ejemplo, utilizando modelos de fracciones visuales y ecuaciones para representar el problema. \n\n-   \\*\\*NGSS.5-LS2-1: \\*\\* Desarrolle un modelo para describir el movimiento de la materia entre plantas, animales, descomponedores y el medio ambiente. "
         },
         "48748da0-02c7-49dd-9376-c8bacabc64ea": {
-          "name": "Revisión"
+          "name": "Revisión",
+          "description": "**Haz esto:** Recuerda a los alumnos lo que hicieron la última clase o pídeles que lo compartan. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona:** _¿Cómo utilizamos las variables en nuestras Historias de Espacio en Blanco?_"
+        },
+        "48554910-bc13-4721-b8a3-b49cea4948b7": {
+          "description": "#### Vocabulario\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Vocabulario\"\n\n-   **Prompt** - Un mensaje en la pantalla del ordenador que espera la entrada del usuario.\n-   **Variable** - Etiqueta para una información utilizada en un programa."
+        },
+        "34c34d60-a5ed-437e-bf72-21e8d8006059": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Vocabulario\"\n\n-   **Prompt** - Un mensaje en la pantalla del ordenador que espera la entrada del usuario.\n-   **Variable** - Una etiqueta para una pieza de información utilizada en un programa: Mostrar diapositiva \"Prompts\"\n\n**Debatir:** ¿Cómo nos piden información los programas informáticos?\n\n**Objetivo del debate:** Los alumnos deben pensar en sus propias experiencias como usuarios y en las ocasiones en que un ordenador les pide información. Hay muchas formas de introducir información en un ordenador, pero por ahora nos centraremos en las ideas en las que se teclea algo en la línea de comandos.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Variables\""
         },
         "384bc094-bdd1-4218-83e6-361c012c6c89": {
           "description": "Al final de la última lección, analizamos las similitudes entre las historias de espacios en blanco y las aplicaciones que piden información al usuario. \nCuando un mensaje en la pantalla del ordenador está esperando su entrada, lo llamamos un mensaje. \nCuando un usuario escribe en un mensaje, es como si el equipo estuviera almacenando la información en un contenedor.\nLa etiqueta de la variable nos indica qué tipo de información podemos esperar.\nHoy vamos a aprender el código para crear un mensaje en Sprite Lab."
         },
         "14e9da9c-a429-47db-b4bd-c07d5dc4401f": {
           "name": "Texto y Comentarios",
+          "description": "#### Predicción (5 minutos)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 1 - Predecir\" \n\n**Haz esto:** Pide a los alumnos que lean el código proporcionado y hagan una predicción sobre lo que ocurrirá. Después de pulsar \"Ejecutar\", deja tiempo para que los alumnos reflexionen sobre cualquier cosa que les haya parecido interesante o que les haya sorprendido.",
           "progression_name": "Predicción"
         },
         "71f32e49-99e7-46d2-9a4d-a6b0b07d5a17": {
+          "description": "#### Vídeo (5 minutos)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra el vídeo \"Laboratorio Sprite: Texto y Prompts\"",
           "tips": [
             "Al igual que cuando los alumnos escriben o se comunican verbalmente, es importante establecer expectativas sobre el uso adecuado de las palabras en esta actividad. Los alumnos deben entender que son responsables del código que escriben, incluido cualquier texto que aparezca en pantalla. El texto debe ser respetuoso y seguro. Los estudiantes pueden practicar no compartir información personal en sus programas, especialmente si quieren compartirla con otros.\nTen en cuenta que la información escrita en un mensaje de Sprite Lab no se guarda a largo plazo. Las palabras y los mensajes escritos por los usuarios de estas aplicaciones desaparecen una vez que se restablece la aplicación."
           ],
           "progression_name": "Vídeo: Texto y Avisos"
         },
         "304fbec8-0776-402a-9eeb-1e774da6bc0c": {
+          "description": "#### Desarrollo de Conocimientos y Práctica (20 minutos)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 3-8 - Desarrollo de Conocimientos\" \n\n**Transición:** Pide a los alumnos que se dirijan a su ordenador e inicien sesión. Todos los alumnos deben completar todos los niveles de esta sección en orden. Estas actividades son adecuadas para el aprendizaje independiente o la programación en parejas.\n\nLos alumnos deben completar los niveles de Desarrollo de Conocimientos y, a continuación, dedicar el tiempo restante a elegir entre las distintas actividades de Práctica.",
           "tips": [
             "Esta lección tiene más niveles de desarrollo de habilidades y práctica que las lecciones anteriores, porque los estudiantes están aprendiendo algunas habilidades nuevas al mismo tiempo. Como tal, no hay un nivel de «juego libre» dedicado. Sin embargo, los estudiantes que se sientan seguros con sus nuevas habilidades pueden elegir la última opción de práctica para empezar de cero con un proyecto en blanco. En la siguiente lección, los alumnos también trabajarán exclusivamente en su propio proyecto que planifican y diseñan con anticipación."
           ],
           "progression_name": "Desarrollo de Habilidades"
         },
         "a2280341-dec1-43b0-9269-e8719a92375d": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 9 - Práctica (Elección)\"",
           "progression_name": "Practica"
         },
         "1025db18-dae1-40a6-ac7e-b38ceed1360d": {
-          "name": "Revisión"
+          "name": "Revisión",
+          "description": "**Haz esto:** Utiliza las diapositivas de la lección para repasar el vocabulario de esta lección. Asegúrate de que los alumnos recuerdan dónde vieron cada uno de estos conceptos. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Resumen de Cierre\""
         },
         "6def65c9-7628-4d25-866a-1b2c428fbaa6": {
           "description": "Cuando un usuario introduce información en un mensaje, el equipo la almacena con una variable. El mensaje también puede desencadenar un evento. Si el código utiliza una variable, el equipo buscará una etiqueta coincidente para encontrar la información almacenada."
         },
         "fdbe210a-89d4-489c-a834-a293569d0274": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Reflexionar\"\n\nElige una (o las dos) de las preguntas para reflexionar que aparecen a continuación y entrégalas a los alumnos. Pueden escribir en su diario individualmente o debatir las respuestas en grupos o en clase.\n\n**Reflexiona:**\n\n-   _¿En qué se parece una variable a una caja? ¿En qué se diferencia?_\n-   _¿Por qué los programadores necesitan variables?_"
         },
         "aef1a460-c4ee-406c-9f3e-2e9243f88502": {
           "name": "Revisión",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona:** _¿Cómo funcionan los sprites, los comportamientos, los eventos y el texto?_\n\n#### Vocabulario\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Vocabulario\"\n\n-   **Entrada** - La información que los ordenadores reciben de los usuarios.\n-   **Prompt** - Un mensaje en la pantalla del ordenador que espera la entrada del usuario.\n-   **Variable** - Una etiqueta para una parte de información utilizada en un programa.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Repaso\"\n\n**Haz esto:** Usando las diapositivas de la lección, repasa los conceptos que los estudiantes han explorado hasta ahora en el curso: sprites, comportamientos, eventos y texto. Por último, repasar cómo funcionan las indicaciones y las variables. \n\n#### Predicción\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 1 - Predecir\"\n\n**Haz esto:** Pide a los alumnos que lean el código proporcionado y hagan una predicción sobre lo que ocurrirá. Después de pulsar \"Ejecutar\", deja tiempo para que los alumnos reflexionen sobre cualquier cosa que les haya parecido interesante o que les haya sorprendido. También puedes editar este código con tu clase en este nivel [\"sandbox\"](https://studio.code.org/levels/27300) independiente.",
           "tips": [
             "Una de las partes más complicadas de las variables de aprendizaje es asegurarse de que la etiqueta de una variable siempre coincida. En este nivel, asegúrese de que los alumnos noten la diferencia entre la variable **comida** y la variable **comida**. Los estudiantes deben entender que la mejor manera de resolver esto sería usar una sola variable, asegurándose de que la etiqueta siempre coincida.\n\nTambién puedes guiar a tu clase para corregir los errores de este programa usando este nivel [Teacher Sandbox](https://studio.code.org/levels/27300) con tu proyector."
           ],
           "progression_name": "Predicción"
         },
         "b70948ff-b376-41dc-8c46-6572c8ab8241": {
+          "description": "### Exploración\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 2 - Exploración: Ejemplo de Programas\" \n\n**Haz esto:** Pide a los alumnos que exploren los programas de ejemplo del nivel 1. Esto se puede hacer como una clase entera con debate, con parejas compartiendo un dispositivo, o incluso individualmente. Para cada uno de los programas, pide a los alumnos que piensen cómo funciona, quién lo utilizaría y qué ideas les da sobre lo que podrían hacer ellos mismos. Una buena estrategia en este caso es hacer que los alumnos lean el código del programa en voz alta, línea por línea, y luego comenten para qué sirve.",
           "tips": [
             "Si tienes poco tiempo o quieres minimizar las transiciones, completa esta parte de la lección como un debate grupal completo. Puede recordarles a los alumnos que pueden volver a visitar estos programas más adelante si tienen alguna pregunta sobre cómo funciona algo.\n\nSi ya has pasado toda la lección tú mismo, ¡también puedes mostrarles tu propio programa terminado para inspirarte!"
           ],
           "progression_name": "Exploración: Ejemplos de Programas"
         },
         "cbd68965-84ed-4389-8fc1-b9f4ed5094e6": {
-          "name": "Programas de entrada de usuario"
+          "name": "Programas de entrada de usuario",
+          "description": "Ya hemos tenido la oportunidad de construir diversos programas en el Laboratorio de Sprite. Hoy, esta experiencia será mucho más abierta, por lo que requerirá una planificación previa. La planificación es una parte muy importante de la programación de un juego o de cualquier otro tipo de software."
+        },
+        "5902398d-e206-48c7-910f-dd199dac9011": {
+          "description": "#### Planificación (10 minutos)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 3 - Planificación de Programas\""
+        },
+        "2f3827a9-3daa-4dc5-ab2f-3a3c435d2095": {
+          "description": "Antes de escribir cualquier código, crearás un plan para tu programa.\n\nTu plan completo debe incluir:\n\n-   El tipo de proyecto que estás construyendo.\n-   Una lista de preguntas que le harás al usuario.\n-   Cualquier otro texto que vayas a mostrar.\n-   Una descripción o dibujo de los sprites que necesitarás (y sus comportamientos)."
+        },
+        "424d3194-cf6e-4e19-9ded-54cffd714225": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Paso 1 - Elige un Tipo de Proyecto\". "
+        },
+        "53e39bfd-2e0c-4fdb-9e7a-cbea7aca691d": {
+          "description": "Elegirás entre tres tipos de proyectos básicos con instrucciones diferentes. Cada elección comienza con diferentes disfraces, pero también puedes añadir más en cualquier momento."
+        },
+        "76a93731-21c0-465b-9efc-ff9c04d77e9b": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Paso 2 - Planifica tu Texto y Variables\""
+        },
+        "90301634-4307-4f29-aba7-31fe4c1d32b1": {
+          "description": "Este es un ejemplo de lo que podrías escribir si eliges la opción \"chatbot\". Para cada palabra que provenga del usuario, rodéala con un círculo y luego decide las etiquetas de las variables que utilizarás en tu programa."
+        },
+        "2e6edfc0-9325-40df-b74f-4905e7b3ef14": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Paso 3 - Planifica tus Prompts\""
+        },
+        "09315310-5308-4ab9-abfb-e5646b1cfa78": {
+          "description": "Para cada variable de tu programa, escribe un prompt (o pregunta) simple que le diga al usuario lo que tiene que hacer."
+        },
+        "0e5c5416-089d-47cd-8159-c1ec0a315c59": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Paso 4 - Diseña tu Escena\""
+        },
+        "25246d7d-90f5-444f-9a1a-c55a68c27299": {
+          "description": "Crea un guión gráfico de dos paneles para tu programa. Dedica algún tiempo a pensar cómo quieres que aparezcan o se muevan tus sprites, tanto antes como después de responder a las instrucciones."
         },
         "9eb4bb34-8e86-4041-a410-dd8f833d20a4": {
           "tips": [
@@ -2765,53 +2856,73 @@
           "progression_name": "Planificación"
         },
         "ee6223c9-e041-4165-b451-70f4c8416e23": {
+          "description": "### Mini-proyecto (20 minutos)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 4 - En Code Studio...\"\n\nPara cada una de las opciones de proyecto, hay dos subniveles. Para empezar, elige uno de los niveles marcados como \"Parte 1\". Una vez que termines ese nivel, vuelve aquí y selecciona \"Parte 2\" del mismo proyecto. \n\nEl primer nivel de cada opción proporcionará a los estudiantes información a medida que vayan ensamblando los componentes básicos de su proyecto. El segundo nivel es un \"juego libre\" que tiene por objeto permitir a los estudiantes realizar los cambios que deseen en su código.\n\nEquipados con sus guías de planificación, los alumnos están listos para dar vida a sus proyectos. Pide a los alumnos que se dirijan a sus ordenadores y comiencen la \"Parte 1\" del proyecto que hayan elegido.",
           "tips": [
             "Este nivel presenta a los alumnos un menú de opciones que corresponde a los principales tipos de proyectos que han elegido. Las principales diferencias entre estos subniveles son las instrucciones y los disfraces de sprites predeterminados. Es posible que los estudiantes necesiten instrucciones muy claras para entender cómo navegar por las opciones aquí. Para cada una de las opciones de proyecto, hay dos subniveles aquí. Para empezar, los alumnos deben elegir uno de los niveles marcados como «Parte 1\". Una vez que terminen ese nivel, deben volver aquí y seleccionar «Parte 2\" del mismo proyecto. El primer nivel de cada elección proporcionará a los estudiantes comentarios a medida que combinen los componentes básicos de su proyecto. El segundo nivel es «juego libre», que pretende permitir a los estudiantes hacer cualquier cambio en su código que les guste."
           ],
           "progression_name": "Mini-Proyecto: Programas de Entrada de Usuarios"
         },
         "f25b421f-f40b-496b-b754-f7b0bf806b85": {
-          "name": "Presentación"
+          "name": "Presentación",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Escaparate\"\n\n**Haz esto:** Para celebrar el trabajo de los alumnos, dedica los últimos 10 minutos más o menos a que muestren sus proyectos. Esto se puede hacer de muchas maneras, pero aquí tienes algunas:\n\n-   **Demostración Pública:** Selecciona a algunos voluntarios ejemplares para que hagan una breve demostración de sus proyectos delante de la clase. Mientras lo hacen, pídeles que hablen de cómo ha sido para ellos la experiencia de planificar y programar, incluidas las ideas que todavía les gustaría poner en práctica.\n-   **Comprobación en Parejas:** Pide a los alumnos o grupos que se pongan en parejas y comprueben los proyectos de los demás. Pídeles que se hagan comentarios positivos y constructivos mutuamente. La ventaja es que los alumnos tendrán la oportunidad de dar su opinión y responder a ella en un entorno más reducido.\n-   **Paseo por la Galería:** Asegúrate de que todos los alumnos tienen sus proyectos listos para la prueba. Pide a los alumnos que se desplacen en plan \"sillas musicales\" a otro ordenador y que jueguen o prueben allí el proyecto durante unos minutos, hasta que les indiques que se desplacen a otro ordenador. Repite esta operación cada pocos minutos. Aunque aquí hay menos oportunidades para la comunicación estructurada, esto garantiza que los alumnos puedan probar tantos proyectos de sus compañeros como sea posible."
         },
         "2db78276-8789-4046-8488-4ce232bc6bb2": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"¿Cómo describirías esta escena interactiva?\"\n\n**Debatir**: \n\n-   _¿Cómo describirías esta escena interactiva?_\n-   _Si quisieras crear esta escena en el Laboratorio Sprite, ¿qué bloques de código necesitarías?_\n\n**Objetivo del debate**: Los alumnos deben reconocer partes de la escena que ya entienden cómo se hacen, como crear sprites y darles comportamientos. También deben darse cuenta de que muchos sprites se crean a la vez y de que cada sprite responde a un clic del usuario en un momento diferente. Esto puede suscitar un debate sobre nuevos bloques de código que podrían utilizarse aquí."
         },
         "86834c6e-de76-4d6a-bc8d-5c6d2e8d760a": {
           "tips": [
-            null
+            "La animación del ejemplo parece complicada porque hay muchos sprites en movimiento. Es importante destacar que los alumnos aprenderán a programar escenas como ésta con algunos bloques de código nuevos.\n\nPuede ser útil que tú mismo repases los niveles con antelación, para que entiendas en qué se diferencian los nuevos bloques de lo que los alumnos han visto antes."
           ]
         },
+        "ac2aa387-d8c9-447d-904c-8efe02f66fc9": {
+          "description": "En esta escena, vemos múltiples sprites que comienzan a girar cuando el usuario hace clic sobre ellos. Ya sabemos cómo crear sprites y darles un comportamiento. \n\nHoy aprenderemos a crear un grupo de sprites con disfraces a juego e interactuar con cada sprite por separado. Esto nos permitirá hacer animaciones más movidas y juegos más divertidos."
+        },
+        "76b1642d-383d-49c3-b43d-7bf347ea1bb5": {
+          "name": "Montones de Sprites"
+        },
         "56262489-b084-4a55-a4e2-b45138492e6c": {
+          "description": "#### Predicción (3 minutos)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 1 - Predecir\"\n\n**Haz esto**: Pide a los alumnos que lean el código proporcionado y hagan una predicción sobre lo que ocurrirá. Después de pulsar \"Ejecutar\", deja tiempo para que los alumnos reflexionen sobre cualquier cosa que les haya parecido interesante o que les haya sorprendido.",
           "progression_name": "Predicción"
         },
         "9a30234f-6c15-4525-aa78-4b8905d29133": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra el vídeo \"Muchos Sprites\".",
           "progression_name": "Vídeo: Muchos Sprites"
         },
         "e2e2e67f-7883-47c0-b018-118af90abc79": {
+          "description": "#### Desarrollo de Conocimientos y Práctica (17 minutos)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 3-8 - Desarrollo de Conocimientos\"\n\n**Transición**: Pide a los alumnos que se dirijan a su ordenador e inicien sesión.\n\nEstas actividades son adecuadas para el aprendizaje independiente o la programación en parejas.\n\nLos alumnos deben completar los niveles de Desarrollo de Conocimientos y, a continuación, dedicar el tiempo restante a elegir entre las distintas actividades de Práctica.",
           "progression_name": "Desarrollo de Habilidades"
         },
         "b1b312f7-6502-4335-907d-9663f892dc6f": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 9 - Práctica (Elección)\"",
           "progression_name": "Practica"
         },
         "6962360d-5a78-47ae-8686-4038e83ebfbf": {
+          "description": "#### Juego Libre (10 minutos)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 10 - Juego Libre\"\n\n**Transición**: Los alumnos deben pasar al último nivel de la lección, donde podrán crear su propio proyecto. Cada opción proporciona a los alumnos una colección diferente de disfraces de sprites. Los alumnos deben elegir uno para empezar.",
           "progression_name": "Juego libre"
         },
         "95e83631-dfdc-4398-bde7-941a56206de6": {
-          "name": "Reflexionar"
+          "name": "Reflexionar",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona**: _¿Cómo puedes usar sprites y eventos para hacer tu programa más complejo?_\n\n**Objetivo del debate**: Los alumnos deben comprender que abrir los bloques de eventos (con el signo +) y arrastrar el bloque de sprites que hay dentro permite al programa cambiar los sprites individuales de uno en uno cuando el usuario pulsa sobre ellos.  "
         },
         "7d525905-cfd3-47a7-b70a-2d2a28c13fac": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la siguiente diapositiva\n\n**Debatir**: ¿Cuál de los siguientes tipos de información cambia con el tiempo? \n\n-   _Tu nombre_\n-   _Tu cumpleaños_\n-   _Tu altura_\n-   _Tu edad_\n-   _La temperatura exterior_\n-   _La respuesta a 2+2_\n-   _La capital de nuestro país_\n-   _La fecha de hoy_\n-   _El resultado de un partido_\n\n**Haz esto**: Pide a los alumnos que comenten qué información cambiaría con el tiempo y cuál no. Algunos elementos podrían generar un debate más amplio. Por ejemplo, es posible cambiar tu nombre de pila o utilizar un apodo. Además, con el tiempo, tu altura dejará de cambiar.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona**: ¿Cuándo es útil cambiar lo que está almacenado en una variable?\n\n**Objetivo del debate**: Los alumnos deben comprender que pueden crear una variable que almacene información, que permanece igual o cambia con el tiempo. En un juego con puntos, una variable se encarga de llevar la cuenta de la puntuación del usuario a lo largo de la partida. Normalmente, esta variable comienza siendo 0 y aumenta en 1 por cada punto que el usuario consigue. La puntuación final se informa al final imprimiendo la variable. "
         },
         "44ade190-d83f-4460-87ae-c1e4dcaef911": {
           "tips": [
             "El objetivo de esta actividad de debate es que los alumnos piensen en el almacenamiento y la modificación de la información mediante una variable. Los alumnos pueden recordar que en lecciones anteriores almacenaban información, como una palabra, introduciéndola en un indicador. En las siguientes actividades, los alumnos aprenderán una nueva forma de almacenar información, así como a modificar esa información mientras se ejecuta un programa. Deberán analizar cuándo sería necesario cambiar o actualizar una variable a lo largo del tiempo. \n\nPara el debate, decide de antemano qué estrategia funcionará mejor en tu aula. Algunas ideas son: utilizar una tabla T, debatir en parejas o en clase."
           ]
         },
+        "8e09ca45-a90d-4b90-8bd6-f70b424ceefd": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la siguiente diapositiva"
+        },
         "d5583d6b-9097-4abc-9bd9-f246a3e3c7dc": {
           "description": "El valor almacenado en una variable puede cambiar con el tiempo.\n\nCuando empezamos, nuestra variable de recuento se establece en 0. Después de unos segundos, aumenta en 1."
         },
         "8477c71b-b998-4915-9ed2-96f5adefe860": {
-          "name": "Revisión"
+          "name": "Revisión",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la siguiente diapositiva\n\n**Haz esto**: Utiliza las diapositivas de la lección para repasar el vocabulario de esta lección. Asegúrate de que los alumnos recuerdan dónde han visto cada uno de estos conceptos."
         },
         "93c00345-f28f-4bbf-b7b5-7d4ae0f3941d": {
           "description": "Cuando un usuario introduce información en un mensaje, el equipo la almacena con una variable. El mensaje también puede desencadenar un evento. Si el código utiliza una variable, el equipo buscará una etiqueta coincidente para encontrar la información almacenada."
@@ -2825,6 +2936,7 @@
           "name": "Contando con Variables"
         },
         "51946ebc-7151-47c2-88bb-29d89d0338c5": {
+          "description": "#### Predicción (3 minutos)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 1 - Predecir\"\n\n**Haz esto**: Pide a los alumnos que lean el código proporcionado y hagan una predicción sobre lo que ocurrirá. Después de pulsar \"Ejecutar\", deja tiempo para que los alumnos reflexionen sobre cualquier cosa que les haya parecido interesante o que les haya sorprendido.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 2 - Predecir\"\n\n**Haz esto**: Pide a los alumnos que lean el código proporcionado y hagan una predicción sobre lo que ocurrirá. Después de pulsar \"Ejecutar\", deja tiempo para que los alumnos reflexionen sobre cualquier cosa que les haya parecido interesante o que les haya sorprendido.",
           "progression_name": "Predicción"
         },
         "75a9857e-a926-4c5a-a1ff-2307afce0d11": {
@@ -2833,57 +2945,85 @@
           ]
         },
         "f621cd05-64b4-41d4-8c9a-b310731edecb": {
+          "description": "#### Desarrollo de Conocimientos y Exploración (10 minutos)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 3-5 - Desarrollo de Conocimientos\"\n\n**Transición**: Traslada los alumnos a sus ordenadores. Anima a los alumnos a seguir las instrucciones de cada nivel.",
           "progression_name": "Desarrollo de Habilidades"
         },
         "2203aacd-4e1b-4cb5-ab3e-b0b72011a6f9": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 6 - Exploración\"",
           "progression_name": "Exploración: Juego de Clicker"
         },
         "08684dd6-65f9-42b1-877a-05814f08c46c": {
+          "description": "#### Mini-proyecto (17 minutos)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 7-11 - Juego de Clicker\"",
           "progression_name": "Mini-Proyecto: Juego de Clicker"
         },
         "30357f1e-97b8-43b2-9fa9-edace8299c36": {
-          "name": "Reflexionar"
+          "name": "Reflexionar",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona**: _¿Cómo usaste las variables en tu juego?_\n\n**Objetivo del debate**: Los alumnos deben comprender que las variables de su juego almacenaban un valor que cambiaba con el tiempo. El valor de una variable puede establecerse directamente en el código, modificarse a medida que el usuario interactúa con la aplicación o introducirse directamente, por ejemplo, mediante un indicador (prompt)."
         },
         "37214efe-4044-4968-8924-71472b1d2725": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona**: _¿Qué hace que una actividad sea un juego?_\n\n**Objetivo del debate**: Los alumnos deben comprender que los juegos suelen implicar jugadores, puntuaciones, una condición de ganar o perder y diferentes resultados. Cada vez que un usuario participa en un juego, puede tener un resultado o una puntuación diferente."
         },
         "229b6ed8-f28d-4d6b-98ea-39fe3ac44fab": {
-          "name": "Mini-Proyecto: Juego de Coleccionista"
+          "name": "Mini-Proyecto: Juego de Coleccionista",
+          "description": "#### Exploración (10 minutos)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Nivel 1 - Exploración\"\n\n**Objetivo**: Hoy, los alumnos crearán su propio juego interactivo de coleccionista ¡en el Laboratorio Sprite! Comenzarán explorando algunos ejemplos. Luego, tras una rápida introducción sobre cómo personalizar el comportamiento de los sprites y llevar la cuenta de la puntuación, los alumnos trabajarán en el diseño de su propio juego."
+        },
+        "2b9cd09b-da9a-4ee5-a446-b3388f48ef07": {
+          "description": "Ahora es el momento de explorar algunos proyectos por tu cuenta. Piensa en cada proyecto:\n\n-   _¿Qué tienen en común todos estos proyectos?_\n-   _¿En qué se diferencian?_\n-   _¿Qué notas en el código de cada proyecto?_\n\nCuando termines de explorar, pulsa \"Finalizar\" y pasa al siguiente nivel."
         },
         "22b7037c-93fc-4723-a172-22f1501dbf3b": {
+          "description": "**Transición**: Traslada los alumnos a sus ordenadores.\n\n**Haz esto**: Antes de que los alumnos empiecen el mini-proyecto, haz que exploren los proyectos de ejemplo del nivel 1. Cuando estén preparados para empezar a planificar su propio programa, pueden pulsar \"Finalizar\" y continuar.",
           "progression_name": "Exploración: Ejemplos de Programas"
         },
         "61043979-dfcc-47f4-b882-94ea107cd123": {
+          "description": "#### Mini-proyecto (20 minutos)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra \"Niveles 2-8 - Mini-proyecto: Juego del Coleccionista\"\n\n**Haz esto**: Anima a los alumnos a seguir las instrucciones de cada nivel. En el último nivel pueden añadir lo que quieran a su código. Por ejemplo, pueden cambiar el fondo al final del juego o añadir sonidos.",
           "progression_name": "Mini-Proyecto: Juego de Coleccionista"
         },
         "0e088be7-4df3-4826-842b-2c6655bc02e9": {
-          "name": "Presentación"
+          "name": "Presentación",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Escaparate\"\n\n**Haz esto**: Para celebrar el trabajo de los alumnos, dedica los últimos 10 minutos aproximadamente a que muestren sus proyectos. Esto se puede hacer de muchas maneras, pero aquí tienes algunas:\n\n-   **Demostración Pública**: Selecciona a algunos voluntarios ejemplares para que hagan una breve demostración de sus proyectos delante de la clase. Mientras lo hacen, pídeles que hablen de cómo ha sido para ellos la experiencia de planificar y programar, incluyendo ideas que todavía les gustaría poner en práctica.\n\n-   **Pruebas en Parejas**: Pide a los alumnos o a los grupos que se pongan en parejas y prueben los proyectos de los demás. Pídeles que se hagan comentarios positivos y constructivos mutuamente. La ventaja es que los alumnos tendrán la oportunidad de dar su opinión y responder a ella en un entorno más reducido.\n\n-   **Paseo por la Galería**: Asegúrate de que todos los alumnos tienen sus proyectos listos para la prueba. Pide a los alumnos que se desplacen en plan \"sillas musicales\" a otro ordenador y que jueguen o prueben el proyecto allí durante unos minutos, hasta que reciban una señal tuya para que se desplacen a otro ordenador. Repite esta operación cada pocos minutos. Aunque aquí hay menos oportunidades para la comunicación estructurada, esto garantiza que los alumnos puedan probar tantos proyectos de sus compañeros como sea posible."
         },
         "08a15ab5-ba6f-4d69-b493-cae09147c210": {
-          "name": "Reflexionar"
+          "name": "Reflexionar",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona**: _¿Qué te ha gustado de los juegos que han hecho tus compañeros? ¿Qué te ha sorprendido?_"
         },
         "280458d7-1de1-46dc-b42c-2be014890b38": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona**:  Si fueras un científico, ¿cuándo te gustaría simular un experimento en un ordenador en lugar de hacerlo en la vida real? \n\nAnima a los alumnos a pensar en experimentos que podrían ser peligrosos o difíciles de reproducir en la vida real.\n\n**Comenta**: Hoy vamos a hacer una simulación para recoger datos sobre un experimento, como hacen los científicos."
+        },
+        "7ba3f55f-5511-4e5f-ad3e-3e8dcf141f85": {
+          "description": "#### Vocabulario\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Vocabulario\"\n\n-   **Modelos y Simulaciones**: programa que reproduce o imita características clave de un acontecimiento del mundo real para investigar su comportamiento sin el coste, el tiempo o el peligro de realizar un experimento en la vida real."
         },
         "c5ce3765-d4c5-4159-8e5c-39035697517e": {
           "name": "Experimentos de simulación",
+          "description": "**Distribuye**: Reparte la **\\*hoja de trabajo** de la lección junto con lápices e instrumentos para colorear de algún tipo. Dirige a los alumnos a Code Studio o proyecta el nivel en la pizarra.\n\n#### Ejecución de Simulaciones\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Paso 1 - Recopilación de Datos\"\n\n**Paso 1 Recoger Datos**: La primera burbuja es una simulación sencilla de un elefante y un hipopótamo recogiendo manzanas. Los alumnos ejecutarán la simulación al menos 5 veces, registrando el número de manzanas recogidas por cada animal y el tiempo total que tardó en ejecutarse la simulación.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Paso 2 - Gráfico de Líneas\"\n\n**Paso 2 - Gráfica Lineal**: Utilizando los datos recogidos en el paso anterior, los estudiantes trazarán un gráfico de doble línea. Anima a los alumnos a compartir sus gráficas con sus compañeros y a debatir las siguientes preguntas:\n\n-   _¿Las gráficas son iguales o diferentes? ¿Por qué crees que es así?_\n-   _¿Qué crees que verías si hicieras esta simulación 5 veces más?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pantalla:** Muestra la diapositiva \"Paso 3 - Modificar y Predecir\"\n\n**Paso 3 Modificar y Predecir**: En la segunda burbuja los estudiantes podrán modificar algunas de las variables que controlan esta simulación. Cada estudiante elegirá una variable para modificar y predecir cómo impactará ese cambio en la simulación. Las posibles variables a modificar son\n\n-   Número de elefantes\n-   Número de hipopótamos\n-   Número de manzanas\n-   Velocidad de los elefantes\n-   Velocidad de los hipopótamos\n\n_Nota: los alumnos pueden cambiar los sprites de su simulación por otros animales y alimentos si lo desean._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pantalla:** Muestra la diapositiva \"Paso 4 - Recopilando más datos\"\n\n**Paso 4 - Recoger más datos**: Con las modificaciones que los alumnos decidieron en el último paso, ejecutarán la simulación cinco veces más y recogerán los datos.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Paso 5 - Visualiza tus datos\"\n\n**Paso 5 - Visualiza tus datos**: Este paso se deja intencionadamente abierto para permitir a los alumnos explorar cualquier representación visual de sus datos que deseen. El objetivo de esta representación visual debe ser demostrar o descartar su predicción.\n\n**Compartir**: Al terminar, los alumnos pueden compartir sus resultados con un compañero. Cuando toda la clase esté lista, reúne a todos.",
           "progression_name": "Ejecutar una simulación"
         },
         "a30085db-0943-45a2-87c4-6a1ef63df09c": {
           "progression_name": "Modificar las variables de simulación"
         },
         "65a5c77d-65a0-4744-b99b-26f05b60ebf2": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Debatir\"\n\n**Debate**: \n\n-   _¿Cómo resultó tu modificación y tu predicción?_\n-   _¿Qué modificaciones hiciste y por qué las elegiste?_\n-   _¿Cómo se relaciona este cambio con tus predicciones?_ \n\n**Objetivo del debate:** La simulación utilizada en esta lección es deliberadamente amplia y algo tonta. A través de este debate, los alumnos deben empezar a relacionar las predicciones y los cambios de variables con hipótesis científicas reales. A partir de ahí, puedes animar a los alumnos a pensar en la simulación computacional o en hipótesis o experimentos más auténticos."
+        },
+        "ae71388d-5583-4615-b7c8-89929ab5e3f5": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona**: \n\n-   _¿Cuál es una cosa interesante que podrías simular utilizando un ordenador?_\n-   _¿Qué tipo de variables querrías controlar en ese experimento?_"
         },
         "cbd047b0-88f2-4fdd-8307-afe5ade83470": {
           "name": "Personaliza la simulación",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Ampliación - Personalizar\"\n\nA lo largo de la actividad principal de esta lección, los alumnos están ejecutando y modificando una simulación que no han programado ellos mismos desde cero. En realidad, los alumnos pueden programar la simulación con bloques de código que han visto en lecciones anteriores.\n\nEn el último nivel de la lección, los alumnos pueden explorar este código y empezar a pensar en cómo programar ellos mismos una simulación.",
           "progression_name": "Personalizar"
         },
         "966897db-4aa7-4d18-81a8-27b4ef5100fe": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona**: \n\n-   _¿Qué puede provocar que un virus se propague más rápidamente por una ciudad?_\n-   _¿Qué puede ayudar a frenar la propagación de un virus?_\n\nEl objetivo de este debate es que los alumnos tengan la oportunidad de activar sus conocimientos previos y ver sus ideas en la pizarra. También es una oportunidad para investigar algunos conceptos erróneos sobre cómo se propagan los virus."
+        },
+        "046b3604-3fda-417e-bbc3-348118922e96": {
+          "description": "#### Vocabulario\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Vocabulario\"\n\n-   **Evento** - Acción que provoca que algo suceda.\n\n-   **Modelos y Simulaciones** - un programa que replica o imita las características clave de un evento del mundo real con el fin de investigar su comportamiento sin el costo, el tiempo o el peligro de ejecutar un experimento en la vida real. \n\n**Haz esto:** Repasa el vocabulario, **modelos y simulaciones** con los alumnos, basándote en la lección anterior. Una simulación es un modelo informático de un proceso o sistema."
         },
         "49647f1f-bc9a-402c-85c0-6338ea7c9541": {
-          "name": "Brote"
+          "name": "Brote",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Nivel 1 - Bienvenido a Monster Town\""
         },
         "f43a5b4e-6e2d-4f24-b566-f942dc8ce78b": {
           "description": "_En la lección de hoy, vas a ir a \"Monster Town\", donde está a punto de producirse un brote de virus. El Dr. Monstruo necesita tu ayuda para frenar la propagación del virus._\n\n_Crearás una simulación de brote en el Laboratorio de Sprite y la utilizarás para entender cómo puede propagarse un virus. ¡También ayudarás a todos los monstruos a recuperar la salud!_",
@@ -2892,83 +3032,171 @@
         "8cbb7cae-6857-4d95-8401-9d1198ee0aec": {
           "description": "**Hacer esto:** Leer _Bienvenidos a Monster Town_ en grupo."
         },
+        "5de63381-b255-4ec6-8657-53710a36096e": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Bienvenido a Monster Town\""
+        },
+        "105e3699-cd4a-43eb-bcb9-bcba118e7289": {
+          "description": "\\_Monster Town solía ser un lugar feliz y sano. A los monstruos de Monster Town les encantaba pasear para visitar a sus amigos.\n\nUn día, uno de los monstruos empezó a encontrarse mal. ¡Se había contagiado con un virus! Un virus es un pequeño germen que puede hacerte enfermar. Los otros monstruos no se preocuparon demasiado. Siguieron visitando a sus amigos."
+        },
+        "b25dae58-5772-41ec-9f12-d8dcc1c7cc01": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la siguiente diapositiva \"Bienvenido a Monster Town\""
+        },
+        "33a8bb8e-0361-424e-8889-e7ddcbed4182": {
+          "description": "_Poco después, otros dos monstruos enfermaron. ¡Era el mismo virus! Parece que se contagiaron de su amigo._\n\n_El virus se extendió lentamente a otros monstruos que estaban cerca. Los monstruos sanos empezaron a preocuparse porque todos iban a enfermar. Los monstruos enfermos empezaron a preocuparse por si contagiaban el virus a los demás._"
+        },
+        "eac8b27a-32d1-4448-8e03-e20074c0b1b3": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Detener la Propagación\""
+        },
+        "37f98c34-c80e-4418-b3b2-52aa63097d2a": {
+          "description": "_Afortunadamente, tras estudiar el virus, los vecinos de Monster Town hicieron un importante descubrimiento. Se dieron cuenta de que era menos probable que contagiaran el virus si se ponían mascarillas en la boca. Con las mascarillas puestas, era menos probable que los monstruos enfermos contagiaran el virus a los monstruos sanos._"
+        },
+        "de9111be-dd1b-4d51-97af-4873c905c493": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"¿Qué pasará después?\""
+        },
+        "a1648cd3-0168-4b3a-b062-0b5ba6f48630": {
+          "description": "_Hoy vas a escribir código para crear y ejecutar tu propia simulación del brote de virus en Monster Town. Una simulación es un modelo informático de un proceso o sistema. Aprende a codificar y haz predicciones sobre lo que les ocurrirá a los vecinos de Monster Town._\n\n-   _¿Cómo de rápido se propagará el virus?_\n-   _¿Enfermarán todos?_\n-   _¿Cómo ayudarán las mascarillas?_"
+        },
+        "8261fa3f-30b2-4a35-8301-d4505f24026f": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la siguiente diapositiva \"¿Qué pasará después?\""
+        },
+        "470c21a2-eeda-41c9-9e2e-f1bd0d5319d8": {
+          "description": "_Cuando hayas terminado, comparte tu simulación con los demás. Comparte tu mensaje sobre lo que crees que podemos hacer para ayudar a mantener sanos a los demás cuando un virus llega a la ciudad._"
+        },
         "7fb7bd27-6ada-4f30-9422-37c9ea683969": {
           "progression_name": "Bienvenido a Monster Town"
         },
         "5f45c495-ac96-4203-8eb1-92fe77e81b68": {
           "description": "**Hacer esto:** Repasar el vocabulario, **modelos y simulaciones** con los alumnos, basándose en la lección anterior. Una simulación es un modelo informático de un proceso o sistema."
         },
+        "0c3814f9-66cf-41d1-b809-35840b9be2d8": {
+          "description": "_Hoy vamos a hacer que un lugar como Monster Town cobre vida escribiendo algo de código._ \n\n_En esta simulación, vas a utilizar sprites para representar a los diferentes monstruos. Los sprites tendrán diferentes disfraces para decirnos cosas como, si están enfermos o sanos. También usarás comportamientos para que los monstruos se muevan._ \n\n_Por último, utilizarás eventos para cambiar el disfraz de un sprite cuando dos sprites se toquen en la pantalla. Esto representará a un monstruo pasando el virus a otro. Harás predicciones sobre lo que les ocurrirá a los vecinos de Monster Town y ¡les ayudarás a recuperar la salud!_. "
+        },
         "12dc3a29-9b6a-448a-91d7-c795731e097b": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra el vídeo \"Simulador de Brote: Introducción\"",
           "tips": [
             "Los bloques de eventos de esta lección son más avanzados que los que los alumnos han utilizado hasta ahora en el curso. Asegúrese de que los alumnos sepan que pueden expandir los bloques de eventos verdes pulsando el botón +. Los estudiantes están trabajando con muchos sprites hoy. Normalmente, los comandos de Sprite Lab afectan a todos los sprites con el mismo traje. Los bloques dentro del bloque de eventos harán que cada acción adjunta solo afecte a los sprites que estuvieron involucrados en ese evento."
           ],
           "progression_name": "Vídeo: Muchos Sprites"
         },
         "fc407406-3b2b-46cd-be85-000640f4f949": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Nivel 3 - Creación de una Simulación\"\n\n**Haz esto:** Traslada los alumnos a sus ordenadores y pídeles que empiecen a seguir las instrucciones de cada nivel en la sección de desarrollo de conocimientos. Si los estudiantes terminan pronto esta sección, pueden continuar experimentando con su código en el Nivel 7 hasta que la clase esté lista para continuar.",
           "progression_name": "Desarrollo de Habilidades"
         },
         "43ec708f-4fc2-467d-b096-303d4f897b68": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra el vídeo \"Simulador de Brote: Eventos\" ",
           "progression_name": "Vídeo: Simulador de Brote: Eventos"
         },
         "21348baa-81f3-473d-a4d8-bfdef00cc99e": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Nivel 5-7 - Desarrollo de Conocimientos\"",
           "progression_name": "Desarrollo de Habilidades"
         },
         "29a7a268-d78c-4217-9c8e-42bd781dee2a": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra el vídeo \" Simulador de Brote: Piensa como un Científico\"\n\n**Haz esto:** Vuelve a reunir a la clase para ver _Simulador de brotes: Piensa como un científico._ Utiliza las ideas del nivel 9 para comentar el vídeo y ayudar a estructurar el resto de la lección.",
           "progression_name": "Vídeo: Simulador de Brote: Pensando como un Científico"
+        },
+        "43cecfea-28ec-4923-801f-e6fdbaf6ff9c": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Nivel 9 - ¡Reinicio y Repetición!\""
+        },
+        "ed38b463-8c4a-4d04-93d5-80124ec1fdaa": {
+          "description": "_Incluso cuando escribes el código tú mismo, es imposible saber exactamente qué ocurrirá cuando pulses ejecutar. Los monstruos deambulan aleatoriamente, así que no sabes si el virus se propagará rápido o lento. Siempre que cambies el código, asegúrate de ejecutar la simulación más de una vez. ¡Las cosas no ocurrirán de la misma manera dos veces!_"
+        },
+        "8f5460af-3515-4a9c-b2a8-7b9096f9390e": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Recopilación de Datos\""
+        },
+        "1bf1d23f-61ca-4a34-90d9-0acb36a519db": {
+          "description": "\\_Intenta anotar tus observaciones mientras realizas la simulación. Puedes contar el número de monstruos que enferman o utilizar un cronómetro para ver lo rápido que suceden las cosas. Por ejemplo, ¿cuánto tiempo suelen tardar en enfermar todos los monstruos si ninguno lleva la mascarilla?"
+        },
+        "bd803e47-8be1-491a-bf03-07ffe955bd74": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Haciendo Predicciones\""
+        },
+        "1f6843c2-4d4a-4aa4-93d8-f5ed6c632f80": {
+          "description": "_Si entiendes tu modelo, puedes utilizarlo para hacer predicciones. Incluso puedes cambiar cómo se ejecuta tu simulación y adivinar qué ocurrirá de forma diferente. Por ejemplo:_\n\n-   _¿Qué pasaría si hubiera el doble de monstruos?_\n-   _¿Qué pasaría si los monstruos se movieran a la mitad de velocidad?_"
+        },
+        "2f4455a2-4b47-45b6-9fdf-e97bac4bd4b0": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"¿Es Monster Town como el mundo real?\""
+        },
+        "fbcda4d8-89aa-49b6-9d2f-5723621194b3": {
+          "description": "_Hay un límite al realismo que puede alcanzar cualquier modelo._\n\n-   \\_¿Qué tiene en común tu simulación de brote con los brotes de virus del mundo real?\n-   _¿Cuáles son las diferencias? Cuando termines esta actividad, ¡comenta estas preguntas con tus profesores o con tu familia!_"
+        },
+        "56548ef4-cb81-4361-9046-a71669a71b52": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"¿Qué más podemos modelar?\""
+        },
+        "b34aaa61-44bd-4113-9641-064e11249205": {
+          "description": "_Ya has creado un modelo funcional del brote en Monster Town. ¿Qué cosas no puede hacer o mostrar tu simulación que te gustaría que pudiera hacer? Presiona `continuar` para seguir adelante y aprender a modelar aún más:_\n\n-   _Aumentando el número de monstruos en la simulación_\n-   _Ayudando a los monstruos a recuperarse del virus_\n-   \\_Probabilidad, inmunidad, vacunas y mucho más.\n\n_También puedes compartir tu modelo de simulación con los demás, o compartir un mensaje sobre lo que crees que podemos hacer para ayudar a mantener sanos a los demás cuando un virus llega a la ciudad._"
         },
         "9456da46-d269-42c3-ab51-42e617b07542": {
           "progression_name": "Aprendiendo de las Simulaciones"
         },
         "7e9c17d4-3d1e-4a6c-a9ef-e1d09bfedee1": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Nivel 10-12 - Mini-proyecto\"\n\n**Haz esto:** Traslada a los alumnos de vuelta a sus ordenadores y pídeles que trabajen en los niveles restantes. Algunos de estos niveles ofrecen desafíos opcionales. Anima a los alumnos a leer atentamente las instrucciones y a experimentar con sus simulaciones.",
           "progression_name": "Miniproyecto: Simulador de Brotes"
         },
         "50845627-ac76-4f69-b95d-2e3718a6ed49": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra el vídeo \"Simulador de Brote: Juego Libre\" ",
           "progression_name": "Vídeo: Simulador de Brote: Juego Libre"
         },
         "40fc31a6-1dc5-41dd-88d1-80206579453f": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Nivel 14 - Mini-proyecto\"",
           "progression_name": "Miniproyecto: Simulador de Brotes"
         },
         "c154010a-b763-41df-9fcf-67e0ba44fdd7": {
           "description": "_Las simulaciones son una excelente manera de aprender cosas que pueden ser difíciles de observar en el mundo real. Ayudan a los científicos a resolver problemas, a predecir cómo resolver el problema y a probar nuevas ideas de forma segura y eficiente. Tu simulación es una forma de mostrar cómo podría ser un brote de virus en Monster Town._"
         },
+        "4799adb7-95d9-4a73-87d8-a891e398e5e4": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Mostrar diapositiva \"Debatir\"\n\n**Debate:**\n\n-   _¿Cómo pueden ser útiles las simulaciones en el mundo real?_ \n-   _¿Cómo pueden las simulaciones mejorar la forma en que probamos las ideas?_ \n\nEl objetivo del debate es que los alumnos comprendan que las simulaciones son una forma de modelar sistemas complejos de manera interactiva. También deben comprender que las simulaciones permiten poner a prueba ideas de forma rápida, barata y segura. "
+        },
         "63fcf28c-54ae-4953-acfd-397dff2ce9d3": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona**:\n\n-   _¿En qué se parece esta simulación al mundo real? ¿En qué se diferencia?_\n-   _¿Qué te gustaría cambiar/añadir a tu simulación?_"
         },
         "bcf8a087-827a-435a-9ea1-1b5708a800c2": {
-          "name": "¡Crear Emoción!"
+          "name": "¡Crear Emoción!",
+          "description": "**Motivar:** Explica a los alumnos los objetivos de la actividad de hoy. Van a empezar a utilizar una nueva herramienta que les permitirá entrenar un modelo real de aprendizaje automático, una forma de inteligencia artificial. \n\n**Vídeo:** El primer nivel de esta actividad es un vídeo que da un contexto importante en torno a la inteligencia artificial y el aprendizaje automático. Muestra el vídeo **\\*IA: Aprendizaje Automático** en clase y después haz un resumen  para ayudar a los alumnos a establecer conexiones con el contenido.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona:** _¿Crees que la tecnología puede predecir tus acciones o intereses? Explica por qué sí o por qué no._"
+        },
+        "883e5553-79b4-416f-9c8d-4e835e5c2503": {
+          "description": "#### Vocabulario\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Vocabulario\"\n\n-   **Aprendizaje Automático** - Cómo reconocen patrones y toman decisiones los ordenadores sin estar explícitamente programados."
         },
         "9630adaa-f7c1-4efa-8f7e-5d3ceb155b0b": {
           "name": "Inteligencia Artificial para océanos",
+          "description": "**Apoyo General:** Como docente, tu función principal es apoyar a los alumnos a medida que avanzan en la tutoría. He aquí algunos consejos que deberían ayudar a los alumnos independientemente del nivel en el que estén trabajando.\n\n-   **Colabora con tus compañeros:** Anima a los alumnos a que se pongan en contacto con un compañero para hablar de lo que están experimentando. Como este tutorial incluye vídeos y los alumnos pueden llevar auriculares, puede resultar fácil \"entrar en una burbuja\". Ayuda a romper esas barreras emparejando activamente a los alumnos.\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar información útil sobre lo que ocurre entre bastidores. \n-   **Vuelve atrás y prueba cosas diferentes:** Si los alumnos terminan rápido, anímales a volver a \"Entrenar más\". En la última parte de la actividad, los alumnos también pueden volver atrás y elegir una \"Palabra nueva\". Más datos de entrenamiento tienden a hacer que el modelo de aprendizaje automático sea más preciso y consistente. Los alumnos también pueden aprender entrenando a propósito su modelo de forma incorrecta, o no entrenándolo en absoluto.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra el vídeo \"IA: ¿Qué es el Aprendizaje Automático?\"",
           "tips": [
             "Esta lección no indicará a los alumnos si han completado el nivel correctamente. Es posible saltarse rápidamente las diferentes partes de la actividad. Anime a los alumnos a que vean los vídeos, lean las instrucciones y prueben cosas diferentes en el camino. En cualquier momento, los alumnos pueden compartir sus hallazgos contigo o con un compañero de clase."
           ],
           "progression_name": "Vídeo: Inteligencia Artificial: ¿Qué es el aprendizaje automático?"
         },
         "138f82fc-c0fe-4836-a4f8-a38e874680b5": {
+          "description": "### Entrenando la Inteligencia Artificial\n\nLos alumnos pueden trabajar los tres primeros niveles solos o con un compañero. Para programar la I.A., utiliza los botones para etiquetar una imagen como \"pez\" o \"no pez\". Cada imagen y etiqueta se convierte en parte de los datos utilizados para entrenar a la I.A. para que lo haga por sí misma. Una vez entrenada, la I.A. intentará etiquetar 100 nuevas imágenes por sí sola y, a continuación, presentará una selección que haya determinado que tiene la mayor probabilidad de ser \"pez\" basándose en su entrenamiento. Los alumnos que etiqueten las imágenes correctamente de forma sistemática verán un océano lleno de diferentes tipos de criaturas marinas, sin muchos (o ningún) objeto más.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Nivel 2-4 - Entrena la IA para limpiar el océano\"",
           "tips": [
             "Cada imagen de esta parte de la lección se introduce en una red neuronal que se ha entrenado previamente en un enorme conjunto de datos llamado [ImageNet](http://www.image-net.org/). La base de datos contiene más de 14 millones de imágenes anotadas a mano. ImageNet contiene más de 20.000 categorías con una categoría típica, como «globo» o «fresa», que consta de varios cientos de imágenes. Cuando la IA escanea nuevas imágenes y hace sus propias predicciones en la lección, en realidad compara las categorías posibles de la nueva imagen con los patrones encontrados en el conjunto de datos de entrenamiento. "
           ],
           "progression_name": "Entrenar la Inteligencia Artificial para Limpiar el Océano"
         },
         "d1a3c948-ad03-4d96-81c4-6588163a3015": {
+          "description": "**Compartir rápidamente:** \\_¿Qué tal lo hizo la I.A.? ¿Cómo crees que decidió qué incluir en el océano?\n\n### Uso de Datos de Entrenamiento\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Debatir\"\n\n**Debate:** _¿Cómo crees que tus datos de entrenamiento influyen en los resultados que produce la Inteligencia Artificial?_\n\nEn pequeños grupos, los alumnos comparten sus respuestas. Circula por la sala y escucha las ideas de los alumnos. Esto puede ir seguido de un debate de toda la clase, o los estudiantes pueden saltar de nuevo a la tutoría.\n\n**Objetivo:** Pide a los alumnos que reflexionen sobre su experiencia hasta el momento. Es importante en este punto que se den cuenta de que el etiquetado que están haciendo es realmente programar el ordenador. Los ejemplos que muestran a la Inteligencia Artificial son los \"datos de entrenamiento\".\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra el vídeo \"Datos de Entrenamiento y Sesgo\".",
           "progression_name": "Vídeo: Datos de Entrenamiento y Sesgo"
         },
         "97505f9d-3e88-4a48-8fb1-66a0dcb61e9e": {
+          "description": "En la segunda mitad de la actividad, los alumnos enseñarán a la Inteligencia Artificial una palabra de su elección mostrándole ejemplos de ese tipo de peces.  Como antes, la Inteligencia Artificial no empieza con ningún dato de entrenamiento sobre estas etiquetas. Aunque las palabras de este nivel son bastante objetivas, es posible que los alumnos obtengan resultados diferentes en función de sus datos de entrenamiento. Algunos alumnos pueden incluso entrenar intencionadamente la Inteligencia Artificial de forma incorrecta para ver qué ocurre. Si los alumnos reflexionan sobre cómo funciona el **aprendizaje automático**, ¡hay que animarles!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Nivel 6 - Utilización de los Datos de Entrenamiento\"",
           "tips": [
             "Los peces de este aprendizaje se generan aleatoriamente basándose en algunos componentes predefinidos, como bocas, colas, ojos, escamas y aletas, con un color, una forma y un tamaño del cuerpo elegidos al azar. En lugar de mirar los datos de la imagen real, la Inteligencia Artificial está buscando patrones en estos componentes basados en cómo el estudiante clasifica cada pez. Es más probable que etiquete un pez de la misma manera que el estudiante si tiene rasgos que coinciden."
           ],
           "progression_name": "Uso de los Datos de Entrenamiento"
         },
         "febd53d5-1b5e-4e73-a843-482a6a9a0781": {
+          "description": "### Impactos en la Sociedad\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra el vídeo \"Impacto Social de la Inteligencia Artificial\"\n\n**Comenta:** _Los sistemas de inteligencia artificial aprenden a partir de los datos que les damos, pero a veces puede que no les demos suficientes datos o que les demos datos que les hagan actuar de forma extraña._\n\n_Piensa en los ejemplos de inteligencia artificial que hemos visto al principio. Piensa en alguna ocasión en la que el aprendizaje automático haya hecho algo mal en el mundo real. (Por ejemplo, el reconocimiento de voz no te entiende)._",
           "progression_name": "Vídeo: Impactos en la Sociedad"
         },
         "4cbe4554-d9fd-4e24-9f7c-572f2874fee9": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona**: \n\n-   _¿Pueden crear problemas los datos de entrenamiento? ¿Cómo?_\n\n**Debatir:** Comenzando en pequeños grupos y pasando después a toda la clase, los alumnos comparten sus respuestas.\n\n**Objetivo:** El objetivo de este debate es devolver a los alumnos al contexto de la inteligencia artificial en el mundo real. \n\n**Comenta:** _Algunas formas de solucionarlo son utilizar muchos datos de entrenamiento y asegurarnos de que nosotros mismos entendemos bien el problema para dar los tipos de datos adecuados. En la parte final de la actividad vas a enseñar a la Inteligencia Artificial una palabra que podría interpretarse de diferentes maneras._\n\n### Enseñar a la I.A. una nueva palabra\n\nAquí, como antes, los alumnos utilizarán datos de entrenamiento para enseñar a la Inteligencia Artificial a reconocer distintos tipos de peces. Las palabras de esta lista son intencionadamente más subjetivas de lo que los alumnos habrán visto hasta ahora. Anima a los alumnos a decidir por sí mismos qué hace que un pez parezca \"enfadado\" o \"divertido\". Dos alumnos pueden elegir la misma etiqueta y obtener resultados muy diferentes en función de los rasgos de los peces en los que se hayan centrado. Anima a los alumnos a comentar sus conclusiones entre ellos o a volver atrás y elegir nuevas palabras. Cada alumno se basará en sus propias opiniones para entrenar a la Inteligencia Artificial, lo que significa que la Inteligencia Artificial aprenderá con los mismos prejuicios que tienen los alumnos. Cuando los alumnos empiecen a darse cuenta del papel que desempeñan sus opiniones, pídeles que reflexionen sobre si esto es bueno o malo y sobre cómo podría solucionarse.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Nivel 8 - Enseña a la I.A. una nueva palabra\"",
           "progression_name": "Enseñar a la Inteligencia Artificial una nueva palabra"
         },
         "f3a8670b-9954-45f9-af08-1689c799a427": {
           "tips": [
             "Puedes compartir estas historias con tu clase para ayudarles a ver el impacto de la Inteligencia Artificial en el futuro.\n\n-   [El despilfarro de alimentos es un problema grave, pero la IA intenta resolverlo](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/).\n-   [La tecnología de IA puede identificar trastornos genéticos a partir de la cara de una persona](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n-   [Cómo una empresa de IA diseñó un candidato a fármaco en sólo 46 días](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\n-   [La herramienta de IA del MIT puede predecir el cáncer de mama hasta 5 años antes](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\n-   [El Ejército acelera el ritmo de los coches autónomos](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\n-   [San Francisco dice que utilizará la IA para reducir los prejuicios a la hora de acusar a las personas de delitos](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\n-   [La IA está ayudando a los estudiosos a restaurar antiguos textos griegos en tablillas de piedra](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)"
           ]
+        },
+        "6eb603fa-551c-4873-9cd3-6d5ed1311427": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Compartir\"\n\n**Comparte rápidamente:** _¿Dónde habéis visto o experimentado la inteligencia artificial en vuestras vidas?_\nEjemplos del vídeo:\n\n-   filtros de correo electrónico\n-   autocompletar texto\n-   sistemas de recomendación de vídeos\n-   reconocimiento de voz\n-   aplicaciones de traducción\n-   asistentes digitales\n-   reconocimiento de imágenes\n\n**Pregunta:** _Basándote en lo que has visto en el vídeo, ¿qué es el **aprendizaje automático**?_"
         },
         "676b1021-0b14-463c-85eb-beca19002ac2": {
           "description": "\\*\\*Discuta: \\*\\* Comenzando en grupos pequeños y luego pasando a toda la clase, los estudiantes comparten sus respuestas.\n\n\\*\\*Objetivo: \\*\\* Familiarizar a los alumnos con el mundo de la inteligencia artificial.  "
@@ -2977,38 +3205,59 @@
           "description": "**Digamos: \\*\\* \\_**Aprendizaje automático\\*\\* se refiere a un equipo que puede reconocer patrones y tomar decisiones por sí solo en función de los datos. En esta actividad vas a dar los datos del ordenador para entrenarlo. Imagina un océano que contiene criaturas como peces, pero que también contiene basura arrojada por los humanos. ¿Qué pasaría si pudiéramos entrenar a una computadora para que note la diferencia y luego usar esa tecnología para ayudar a limpiar el océano? \\_"
         },
         "5f554a52-41ac-4982-bfd0-e3deb97bc410": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona:** _¿Cómo podría utilizarse la inteligencia artificial para resolver un problema en el mundo?_"
         },
         "04f13b6a-1f5c-4c1f-8c9e-cbb4dca0273b": {
           "name": "I.A. en Actualidad",
           "description": "Puedes compartir estas historias con tu clase para ayudarles a ver el impacto de la Inteligencia Artificial en el futuro.\n\n-   [El despilfarro de alimentos es un problema grave, pero la IA intenta resolverlo](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/).\n-   [La tecnología de IA puede identificar trastornos genéticos a partir de la cara de una persona](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n-   [Cómo una empresa de IA diseñó un candidato a fármaco en sólo 46 días](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\n-   [La herramienta de IA del MIT puede predecir el cáncer de mama hasta 5 años antes](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\n-   [El Ejército acelera el ritmo de los coches autónomos](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\n-   [San Francisco dice que utilizará la IA para reducir los prejuicios a la hora de acusar a las personas de delitos](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\n-   [La IA está ayudando a los estudiosos a restaurar antiguos textos griegos en tablillas de piedra](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)"
         },
         "768fdc30-25c8-40ae-846a-6de108de3a9f": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona**: _¿Cómo ayuda Internet a conectarnos con otras personas?_"
+        },
+        "01f92bd6-33ad-4402-9e59-9c7fe188cdbf": {
+          "description": "#### Vocabulario:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Vocabulario Clave\""
         },
         "f7e2b7b8-84ff-442f-bd6a-831da855966f": {
           "tips": [
-            null
+            "Todo lo que necesitas aquí es una vista previa rápida. Todas estas palabras se explicarán como parte de la lección, por lo que sería mucho menos confuso hacer una breve introducción a las palabras como un aviso del tipo «mira si puedes detectarlas durante el día»."
           ]
+        },
+        "45b761d5-5401-47c9-b4b4-82d27e1e4255": {
+          "description": "Esta lección contiene varias palabras nuevas e importantes:\n\n-   **Dirección IP** - Número asignado a cualquier dispositivo conectado a Internet.\n\n-   **DNS (Servicio de Nombres de Dominio)** - Servicio que traduce las URL a direcciones IP.\n\n-   **URL (Universal Resource Locator)** - Dirección fácil de recordar para llamar a una página web (como www.code.org)\n\n-   **Internet** - Grupo de ordenadores y servidores conectados entre sí.\n\n-   **Servidores** - Ordenadores que existen sólo para proporcionar cosas a otros.\n\n-   **Cable de fibra óptica** - Conexión que utiliza la luz para transmitir información.\n\n-   **Wi-Fi** - Método inalámbrico de transmisión de información mediante ondas de radio.\n\n-   **DSL/Cable** - Método de transmisión de información mediante cables telefónicos o de televisión.\n\n-   **Paquetes** - Pequeños fragmentos de información cuidadosamente formados a partir de fragmentos más grandes."
         },
         "1b0d023d-bf54-4703-af7e-5d9fd45d755d": {
           "tips": [
             "Hay algunos videos geniales de YouTube sobre este tema que pueden hacer que esta lección sea un poco más fácil de entender. Puedes enseñarlas a la clase con antelación o simplemente verlas tú mismo. [Este es uno de los vídeos de la serie de vídeos de Code.org sobre «Cómo funciona Internet\"](https://www.youtube.com/watch?v=5o8CwafCxnU&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&index=3). \n(Recomendamos verlo de 1:44 a 5:13, si es posible). El resto de la lista de reproducción está disponible [here](https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7)."
           ]
         },
+        "005f07c2-daf4-431d-aee0-66f21bda4051": {
+          "description": "#### Captar el Mensaje\n\n-   Es muy probable que tus alumnos sepan lo que es Internet, pero quizá no entiendan realmente lo que hace.\n    -   **Pregunta:** ¿Qué es Internet?\n    -   _¿Es Internet un lugar público o privado?_\n    -   (A decir verdad, mucha gente piensa que puede ser ambas cosas, pero debe considerarse un espacio público, independientemente de la configuración que creas dominar).\n    -   _¿Cómo llega la información de un lugar a otro?_\n-   _Digamos que quiero consultar la página web de Code.org. ¿Cómo crees que sería el proceso para enviar un mensaje solicitando esa página?_\n    -   _¿Qué hago como usuario?_\n    -   _¿Qué crees que ocurre dentro de Internet?_\n\nEnviar un mensaje por Internet es muy parecido a enviar un mensaje por correo... ¡si cada carta que enviáramos requiriera miles de sobres!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Paquetes\"\n\nCada mensaje que enviamos a través de Internet se trocea y cada trozo se envuelve en su propia versión de un sobre. Es lo que llamamos paquetes. Los paquetes son trozos de información especialmente formados que pueden fluir fácilmente por cualquiera de los canales de Internet.\n\nA veces, algunos de esos paquetes se pierden, porque Internet es un lugar de locos. En ese caso, los paquetes tienen que reenviarse y todo el mensaje tiene que quedar en espera hasta que lleguen.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Servidores\"\n\n_¿Adónde crees que se dirigen esos paquetes?_\n\n-   Aunque envíes mensajes a otra persona, primero tienen que ir al menos a un servidor.\n    -   Un servidor es un ordenador especial que se supone que está siempre encendido y listo para enviar y recibir información.\n    -   Cada sitio web tiene un servidor.\n    -   Incluso el correo electrónico pasa por servidores.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Direcciones IP\" \n\nLos servidores no tienen nombres como tú y yo. En realidad se dirigen a ellos usando números. Estos números se llaman direcciones IP, y tienen un aspecto un poco extraño.\n\n-   Por ejemplo: Una de las direcciones IP de Code.org solía ser 54.243.71.82\n    -   (Asegúrate de comprobarlo con antelación. La mayoría de las direcciones IP cambian de vez en cuando y luego se reutilizan para otros sitios).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"DSL, Cable, Fibra Óptica o WiFi\"\n\nHay muchas formas de llegar a Internet desde tu casa, escuela o lugar de trabajo.\n\n-   Puedes conectarte directamente por cable (DSL, cable o fibra óptica).\n-   O puedes conectarte utilizando ondas de radio a través de Wi-Fi.\n\nLas conexiones directas son las más fiables, pero pueden resultar incómodas.\n\n-   _¿Sabes por qué?_\n    -   (¡Tienes que estar conectado a un cable!)\n\nLas conexiones Wi-Fi son muy cómodas, pero no siempre son fiables.\n\n-   _¿Sabes por qué?_\n    -   (Las ondas de radio rebotan por todas partes y pueden perderse)."
+        },
         "07e83a27-5530-4af9-bc71-88838f668e86": {
           "tips": [
             "Si piensas que esto es mucho texto y que sería muy aburrido tratar de dar una conferencia a una clase llena de niños de primaria, ¡tienes toda la razón!\nSi no puedes mostrar un vídeo de YouTube en clase para explicarlo todo, te recomiendo encarecidamente que hagas dibujos para explicar cada idea anterior, o que elijas a los estudiantes como voluntarios para que representen lo que describas mientras explicas. No se espera que obtengan todos los detalles y definiciones en este momento, solo para obtener exposición."
           ]
         },
+        "0bbc7350-40cf-4846-9e37-0d296e58c73e": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra el vídeo \"Direcciones IP y DNS\"\n\nSi estás acostumbrado a enviar información a direcciones URL (como www.code.org) y los servidores tienen en realidad direcciones IP para los nombres (como 54.243.71.82), ¿cómo cambia Internet de una a otra? Para eso está el DNS. El DNS (Servidor de Nombres de Dominio) tiene tablas que permiten al sistema ir y venir entre URLs y direcciones IP. Si los Servidores de Nombres de Dominio dejaran de funcionar, Internet dejaría de funcionar tal y como la conocemos.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Crear una tabla DNS\"\n\nDicho esto, vamos a intentar comprender lo que hace el DNS creando nosotros mismos una pequeña tabla DNS.\n\nSaca un trozo de papel y dibuja una cuadrícula similar a la de la actividad de internet:\n\nEjemplo de Tabla DNS:\n\n| #   | URL            | Direcciones IP   |\n| --- | -------------- | ---------------- |\n| 1   |    code.org    |   54.243.71.82   |\n| 2   |                |                  |\n| 3   |                |                  |\n| 4   |                |                  |\n| 5   |                |                  |\n\n<br/>Primero, tenemos que rellenar esta tabla.\n\n-   Pregunta a la clase cuáles son sus sitios web favoritos y escribe las URL en la columna de la izquierda.\n-   Utiliza un sitio como **\\*get-site-ip.com** para encontrar las direcciones IP de esos sitios y escríbelas en las filas correspondientes de la columna de la derecha.\n\nAhora tomemos esta tabla DNS y hagamos como si enviáramos mensajes a través de Internet."
+        },
         "0965b5bc-06b2-458d-b6c5-9c6f9f2f6340": {
           "name": "Internet",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra el vídeo \"Internet\"",
           "progression_name": "Internet - Actividad Desconectada"
+        },
+        "b179b4ba-d826-4414-9253-27dd36ba94e7": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"La Actividad en Internet\"\n\n**La Actividad en Internet:**\n\n-   Crea tu propia tabla DNS, similar a la que se muestra arriba.\n-   Pide a la clase que te ayude a rellenar los espacios en blanco de la tabla. Elige tus URL favoritas y busca sus direcciones IP utilizando un sitio como www.get-site-ip.com.\n-   Dividirse en grupos de 3 a 5 personas.\n-   Asigna a cada grupo una dirección IP de la tabla recién creada y asigna a cada persona del grupo un puesto:\n    -   El Escritor de Mensajes\n    -   La Internet\n    -   El Servidor (lleva la dirección IP)\n    -   La Internet de Retorno (opcional)\n    -   El Receptor del Mensaje (opcional)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Direcciones\"\n\n**Direcciones:**\n\n-   Cada grupo dibujará una **\\*Tarjeta de Dirección IP y una Tarjeta de Tipo de Entrega** para saber a dónde va su mensaje y cuál será su método de entrega del mensaje (Wi-Fi, Cable/DSL o Cable de Fibra Óptica).\n-   `El Escritor de Mensajes` elaborará una nota para enviar al servidor.\n-   `La Internet` dividirá el mensaje en 4 pequeños trozos llamados paquetes, y entregará cada paquete de uno en uno al Servidor con la dirección IP que se extrajo de la pila de la Tarjeta de Direcciones IP.\n-   `El Servidor` se asegurará de que el mensaje llega en orden, luego enviará cada paquete de uno en uno a la Internet de Retorno (puede ser la misma persona o una persona diferente a la Internet original).\n-   `La Internet de Retorno` entregará cada pieza de vuelta al Receptor del Mensaje (puede ser la misma persona o una persona diferente al Escritor del Mensaje) y lo volverá a juntar.\n-   `El Receptor de Mensajes` esperará a que lleguen todas las piezas y leerá el mensaje para asegurarse de que ha llegado correctamente.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Reglas\"\n\n**Reglas:**\n\n-   La Internet debe dividir el mensaje en exactamente cuatro paquetes.\n-   Si la Internet deja caer un paquete, tiene que recogerlo y volver al principio para entregarlo de nuevo.\n-   El servidor tiene que esperar a que lleguen todas las piezas del mensaje antes de empezar a enviarlo.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Información\"\n\n**Información:**\n\n-   Wi-Fi: Práctico, pero irregular. El Wi-Fi no requiere cables, pero como la señal rebota por todas partes, los paquetes pueden perderse con bastante facilidad.\n    -   Simulación: Internet debe llevar cada paquete al hombro (sin manos).\n-   Cable/DSL: Bastante bueno en la entrega de mensajes, pero debe estar conectado a un cable.\n    -   Simulación: Internet debe llevar cada paquete en el dorso de una mano y debe mantener la otra mano tocando una pared, escritorio, silla o el suelo en todo momento.\n-   Cable de Fibra Óptica: El mejor para entregar mensajes, pero debe estar conectado a un cable.\n    -   Simulación: Internet puede llevar paquetes en la mano, pero debe mantener la otra mano tocando una pared, escritorio, silla o el suelo en todo momento."
         },
         "3b419e1c-6cbf-4940-b2a0-c12606b359e1": {
           "tips": [
             "Si parece que hay demasiadas reglas que explicar de plano, siéntete libre de publicarlas en el tablero y simplemente explica el juego sobre la marcha. Puedes jugar varias rondas hasta que la clase realmente lo entienda."
           ]
+        },
+        "b24665b5-76cd-4406-8fe7-c3c72eb860d8": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Materiales del Alumno\"\n\nPara realizar este juego, puedes hacer que tus grupos se agrupen en cualquier lugar, pero para la primera vez puede ser menos confuso hacer que los grupos jueguen en fila.\n\n-   Alinea los \"Servidores\" en un extremo de la sala (sujetando sus direcciones IP). Los jugadores de Internet de Retorno también pueden estar allí (si tienes tantas personas en cada grupo).\n-   Haz que todos los demás se alineen frente a su servidor al otro lado de la sala.\n-   Es probable que los Remitentes de Mensajes envíen sus mensajes a un servidor que no sea el suyo, por lo que los jugadores de Internet cruzarán de un grupo a otro. Puede parecerse al diagrama siguiente:\n\n![](https://code.org/curriculum/course3/18/layout.png)"
         },
         "fc104032-9a2d-443a-96d0-e7f4c6de6782": {
           "name": "Reflexión",
@@ -3016,8 +3265,18 @@
             "Las preguntas de Flash Chat están destinadas a despertar el pensamiento general sobre cómo se relaciona la lección con el mundo en general y el futuro de los estudiantes. Usa tus conocimientos de tu aula para decidir si quieres discutirlos en clase, en grupo o con un compañero de apoyo."
           ]
         },
+        "7b6cc68b-d189-4ebc-ad01-05bdf8696a0a": {
+          "description": "#### Flash Chat: ¿Qué hemos aprendido?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Flash Chat\"\n\n-   ¿Qué tipo de conexión preferirías tener (Wi-Fi, ADSL/Cable o Fibra Óptica)? ¿Por qué?\n-   ¿Por qué puede tardar mucho en llegar tu mensaje?"
+        },
+        "05006226-4aab-4a47-9898-ac217d3d868d": {
+          "description": "#### Reflexionar\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona:** _¿Qué has aprendido hoy sobre Internet?_"
+        },
+        "57b4f13c-3346-472d-99fb-6a6ab08125d0": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Evaluación de Internet\"\n\nReparte la hoja de trabajo **\\*evaluación** y deja que los alumnos completen la actividad de forma autónoma después de haberles explicado bien las instrucciones. Esto debería resultarles familiar, gracias a las actividades anteriores."
+        },
         "f26ccabe-2b34-481f-b142-b6227421df3e": {
-          "name": "Explorar"
+          "name": "Explorar",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona:** _Hoy comenzarás la última lección de la unidad, en la que diseñarás y codificarás tu propio proyecto._\n\n-   _Antes de empezar, ¿cuál ha sido tu lección favorita hasta ahora?_\n-   _¿Qué conocimientos has necesitado para tener éxito?_ \n\n#### Vocabulario\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Vocabulario\"\n\n-   **Definir** - Averiguar los detalles de los problemas que intentas resolver.\n-   **Preparar** - Investigar, planificar y adquirir materiales para la actividad que se va a realizar.\n-   **Reflexionar** - Reflexionar cuidadosamente sobre algo con la intención de mejorar el resultado en el futuro.\n-   **Intentar** - Intentar hacer algo.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Proyecto de Fin de Curso\"\n\n**Objetivo:** Esta parte del proceso es una exploración.  Los alumnos se sentarán con un escenario lleno de proyectos de ejemplo para remezclar y aprender.  Esto no sólo dará a los estudiantes una idea de lo que es posible, sino que también les ayudará a ver las limitaciones de la herramienta.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Día 1 - Explorar\"\n\nConcede a los alumnos un día para jugar y remezclar los proyectos que se encuentran en Code Studio. Pídeles que utilicen sus diarios (o cuadernos) para anotar sus pensamientos e ideas sobre la marcha.\n\nEsta actividad debe realizarse en las mismas parejas/grupos que trabajarán juntos en los proyectos durante las próximas lecciones.\n\nAsegúrate de que tu clase entiende que pasarán las próximas semanas trabajando con sus propios proyectos, por lo que deben prestar mucha atención a cómo se escribieron estos programas, así como a los conceptos que utilizan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Nivel 1 - Ejemplo de Proyectos\""
         },
         "f8419af8-d199-4cb6-b4dc-ea619a1ea802": {
           "progression_name": "Ejemplo de proyectos"
@@ -3026,22 +3285,28 @@
           "progression_name": "Crear tu proyecto"
         },
         "ba61b408-4ce9-4056-8e42-3efac281242e": {
-          "name": "Definir y preparar"
+          "name": "Definir y preparar",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Día 2: Definir y Preparar\"\n\n**Objetivo:** Los alumnos idearán un proyecto y planificarán su estrategia para programar ese proyecto en un solo día.  Los estudiantes deben tener un boceto del proyecto y una descripción para cuando termine el día.\n\n#### Preparando a los Alumnos para el Proceso:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Rúbrica del Proyecto de Fin de Curso\"\n\nLa responsabilidad más importante que tienes al iniciar este segmento es ayudar a tu clase a comprender el alcance de este proyecto. Los alumnos deben tener claras las distintas expectativas de las próximas semanas para que puedan prepararse adecuadamente para sus revisiones y presentaciones.  \n\nPara ayudar a tu clase a gestionar esta empresa de varias fases, el primer día de planificación se les debe entregar tanto la **\\*Hoja de Trabajo de Diseño del Proyecto Final** como la **\\*Rúbrica del Proyecto Final**. De este modo, los alumnos podrán seguir la rúbrica paso a paso para predecir cuál será la calificación final de su proyecto.  \n\nLa Hoja de Trabajo de Diseño del Proyecto Final servirá para que los alumnos anoten sus ideas y procesos sobre la marcha, de modo que estén mejor preparados para sus revisiones y presentaciones finales.  \n\nComo docente, debes descargar una copia de los documentos y decidir qué elementos son importantes para ti. Asegúrate de editar o eliminar todo aquello que no pretendas que atraiga la atención de los alumnos."
         },
         "de7ab6f7-a853-4f00-b05d-a9db0bb2da2d": {
           "tips": [
             "Ahorre aproximadamente 5 minutos al final del día para que los estudiantes intercambien hojas de trabajo de diseño del proyecto final para que vean el trabajo de los demás. Esto ayudará a asegurarse de que nada se omita ni se pasa por alto."
           ]
         },
+        "22af53a6-e604-4f5d-ae02-38f19f994885": {
+          "description": "#### Folleto - Definir y Preparar:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Folleto: Definir y Preparar\"\n\nAhora que la clase tiene su **\\*Guía de Proyecto Final** en la mano, deben empezar a rellenar las preguntas de la sección **Definir y Preparar**.\n\nEs probable que los alumnos necesiten consultar sus notas de los proyectos de ejemplo, especialmente si no tienen acceso a los niveles de proyecto en línea de Artista o Laboratorio de Juegos mientras planifican. \n\nLos alumnos deben centrarse en definir y planificar su proyecto durante el Día 1, y no pasar a la construcción hasta que sus ideas hayan sido escritas y/o dibujadas.\n\nSi los alumnos se atascan, ayúdales a trabajar las ideas haciéndoles preguntas y recordándoles ejemplos, en lugar de ofrecerles soluciones."
+        },
         "3591fc28-830a-4a32-94e4-3468853cea32": {
-          "name": "Probar"
+          "name": "Probar",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Día 3: Prueba\"\n\n**Objetivo:** Los alumnos utilizarán este día para construir una versión inicial de su proyecto.\n\nEquipados con su **\\*Hoja de Trabajo de Diseño de Proyecto Final**, los estudiantes deben dirigirse a los ordenadores para empezar a dar vida a sus proyectos. \n\nEste proceso se completará con muchas pruebas y errores. Es probable que los proyectos se conviertan en versiones truncadas del alcance original (si no se transforman por completo).  Recuerda a los alumnos que este tipo de compromiso es habitual en el diseño de software, pero que deben asegurarse de documentar las razones de los cambios en su producto.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Folleto: Prueba\" \n\nRecuerda a la clase que se olvide de rellenar la sección **Prueba** de su **\\*Guía de Proyecto Final** a medida que avanzan.  Puede ser útil sugerir que las parejas/grupos hagan una pausa en la hoja de trabajo para empezar a debatir estas cuestiones hacia la mitad de su tiempo de laboratorio.  Alternativamente, el navegante puede mantener los ojos abiertos en busca de respuestas pertinentes mientras el conductor codifica.  \n\nAsegúrate de que cada miembro del equipo tenga su propia **\\*Hoja de Trabajo de Diseño del Proyecto Final**, ya que hay preguntas sobre los pensamientos y comportamientos individuales de cada estudiante que deben capturarse a lo largo del camino."
         },
         "bad6c34f-b32e-4116-908c-7eb4fc2ca6a4": {
           "tips": [
-            null
+            "A medida que los alumnos programen sus proyectos, anímales a utilizar sus conocimientos de depuración. Recuérdales que la depuración es una parte esencial del proceso de programación. Incluso puedes crear un Salón de la Fama de los Errores para que los alumnos publiquen sus intentos exitosos de depurar su propio código o el de sus compañeros."
           ]
         },
         "7cb6ed54-d6cc-4905-95d7-dd3c9ed28e09": {
+          "name": "Comentarios y Correcciones ",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Día 4: Comentarios y Correcciones\"\n\n#### Introducción (5 minutos)\n\n**Haz esto**: Explica a los alumnos que probarán los proyectos de sus compañeros y les darán su opinión. A continuación, los alumnos revisarán los comentarios que han recibido y los utilizarán para revisar sus propios proyectos.\n\n**Objetivo:** Los alumnos trabajarán con otro grupo para aportar y recibir comentarios con el fin de mejorar los proyectos de los demás.\n\n#### Comentarios (25 minutos)\n\nPara los comentarios, haz que cada grupo se ponga en parejas con otro grupo para probar los proyectos de los demás durante unos 10 minutos. A continuación, haz que los grupos discutan las preguntas de la **\\*Hoja de Trabajo de Diseño del Proyecto Final**.  \n\nAnima a los alumnos a formular las preguntas de la **\\*Hoja de Trabajo de Diseño del Proyecto Final** y a anotar los comentarios de sus equipos revisores para que puedan consultarlos más tarde.  Esta parte les llevará unos 15 minutos más."
         },
         "38c0b06f-e0b8-4739-b359-6513f419fd11": {
@@ -3053,12 +3318,16 @@
           "description": "#### Correcciones (15 minutos)\n\nCon sus nuevas reflexiones en la mano, los alumnos pueden volver a sus máquinas para hacer un puñado de correcciones.  Con sólo 15 minutos, es probable que tengan que seleccionar sólo los comentarios más importantes para incorporarlos."
         },
         "0d190d49-c24a-4c56-8322-5a72e797a075": {
-          "name": "Presentaciones - Día 5"
+          "name": "Presentaciones - Día 5",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Día 5 y 6: Presentar y Reflexionar\"\n\n**Objetivo:** Los alumnos crearán y presentarán sus proyectos de la forma aprobada (por escrito, oral o utilizando multimedia)."
         },
         "4b48da8b-113d-4b9b-94ff-c776a0cab3b9": {
           "tips": [
             "Si estás buscando una sección de esta serie para asignarla como tarea, ¡esta es la tuya! Los proyectos no tienen que presentarse en formato electrónico, por lo que esta es una excelente opción offline."
           ]
+        },
+        "1dd0b830-db2a-465b-a698-6344eb2bbbc1": {
+          "description": "#### Crear\n\nLo ideal es disponer de tiempo en clase para que los alumnos trabajen en sus presentaciones.  Esto les permitirá incorporar componentes multimedia enriquecidos, como _Google Slides_.\n\nAnima a los alumnos a incluir en su presentación toda la información de la sección J de la Hoja de Trabajo de Diseño del Proyecto Final, así como dos o más preguntas de la sección K.\n\n#### Presentar\n\nEn primer lugar, los alumnos deben mostrar sus aplicaciones y, a continuación, pueden debatir las cuestiones que han tratado en sus presentaciones. \n\nPuede ser muy útil que los alumnos se apunten a un orden específico para hacer sus presentaciones, de modo que puedan disfrutar de las demostraciones de sus compañeros sin preocuparse de si serán llamados a continuación."
         },
         "321cfa4e-750c-424e-a221-8c22a0a592c5": {
           "name": "Presentaciones - Día 6",
@@ -3066,17 +3335,19 @@
         },
         "1b707283-b28d-4147-921e-691c3e5325fe": {
           "tips": [
-            null
+            "Al final de las presentaciones, ¡dedica tiempo a celebrar el duro trabajo de los alumnos! Puedes optar por imprimir [certificados de finalización](https://code.org/congrats/course1) para los alumnos u organizar una ceremonia de entrega de premios. Si decides entregar premios a tus alumnos, céntrate en sus conocimientos y contribuciones como compañeros de clase más que en la complejidad de su proyecto final. Por ejemplo, considera premios como Codificador más Avanzado, Depurador más Persistente y Mejor Compañero de Equipo. "
           ]
         },
         "e5a4600f-c0cb-4f61-82bc-b1fdff9ad731": {
+          "name": "Reflexionar ",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Reflexionar\"\n\n**Reflexiona:** \n\n-   _¿Qué has aprendido al crear este proyecto?_\n-   _¿Cuál ha sido el mayor reto de esta experiencia? ¿Cómo lo has superado?_\n\nLos alumnos reflexionarán sobre su trabajo completando la sección final **Reflexionar** de sus paquetes **\\*Guía de Proyecto Final**."
         },
         "c3102dcc-a35a-489f-8461-06e0aa3d5125": {
           "description": "Si sus estudiantes ya se sienten cómodos con los conceptos de codificación, motívelos a que intenten crear sus proyectos en otra plataforma, como [Scratch](https://scratch.mit.edu/) o [Alice](http://www.alice.org/index.php)."
         },
         "d7eee78e-d5fd-418e-9dce-3cb0f1be8122": {
-          "name": "Lecciones de Ampliación con el micro:bit"
+          "name": "Lecciones de Ampliación con el micro:bit",
+          "description": "Para desarrollar los conocimientos adquiridos en el Curso F de Fundamentos de Informática, haz clic [here](http://code.org/maker/csf-microbit) para consultar las Lecciones de Ampliación con el micro:bit. Estas [4 lecciones micro:bit](https://code.org/maker/assets/CSF-Booklet-Course-F-v3.pdf) cubren los siguientes temas: Conoce tu micro:bit, Variables, Datos, Eventos, Simulación, Bucles y Condicionales."
         },
         "b01367f6-8c61-4417-9d29-193fd67ddac0": {
           "name": "Vocabulario Clave",
@@ -26154,7 +26425,7 @@
         },
         "020265fb-ab0b-4d77-8cf9-30fb0228a37b": {
           "name": "Diario",
-          "description": "**Sugerencia:** Pide a tus alumnos que reflexionen sobre su desarrollo en las [[cinco prácticas de  Descubrimientos CS]](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/edit#heading=h.5u3d4jfozbgc) (Resolución de Problemas, Persistencia, Creatividad, Colaboración, Comunicación). Elige una de las siguientes indicaciones según consideres oportuno.\n\n-   Elige una de las cinco prácticas en las que crees que has demostrado crecimiento en esta lección. Escribe algo que hayas hecho que ejemplifique esta práctica.\n\n-   Elige una práctica en la que creas que puedes seguir creciendo. ¿Qué es lo que te gustaría hacer mejor?\n\n-   Elige una práctica que te haya parecido especialmente importante para la actividad que hemos realizado hoy. ¿Por qué era tan importante?"
+          "description": "**Sugerencia:** Pide a tus alumnos que reflexionen sobre su desarrollo en las [\\[cinco prácticas de  Descubrimientos CS\\]](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/edit#heading=h.5u3d4jfozbgc) (Resolución de Problemas, Persistencia, Creatividad, Colaboración, Comunicación). Elige una de las siguientes indicaciones según consideres oportuno.\n\n-   Elige una de las cinco prácticas en las que crees que has demostrado crecimiento en esta lección. Escribe algo que hayas hecho que ejemplifique esta práctica.\n\n-   Elige una práctica en la que creas que puedes seguir creciendo. ¿Qué es lo que te gustaría hacer mejor?\n\n-   Elige una práctica que te haya parecido especialmente importante para la actividad que hemos realizado hoy. ¿Por qué era tan importante?"
         },
         "5cf3a5e9-20b3-4eb3-bc30-8f7676bfbfc8": {
           "name": "¿Qué hace un sensor?",

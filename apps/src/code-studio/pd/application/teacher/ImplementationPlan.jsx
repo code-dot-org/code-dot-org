@@ -47,9 +47,7 @@ const ImplementationPlan = props => {
   const programInfo = getProgramInfo(data.program);
   const hasNoProgramSelected = data.program === undefined;
 
-  const notSureTeachPlanOption = `Not sure yet if my school plans to offer ${
-    programInfo.name
-  } in the ${Year} school year`;
+  const notSureTeachPlanOption = `Not sure yet if my school plans to offer ${programInfo.name} in the ${Year} school year`;
   let showScholarshipEligibilityWarning = false;
   if (
     (data.program === PROGRAM_CSD &&

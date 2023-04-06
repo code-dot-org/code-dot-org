@@ -21,7 +21,7 @@ const MOBILE_PORTRAIT_WIDTH = 600;
  * An instantiable Fish class
  */
 
-const Fish = function() {
+const Fish = function () {
   this.skin = null;
   this.level = null;
 
@@ -32,14 +32,14 @@ const Fish = function() {
 /**
  * Inject the studioApp singleton.
  */
-Fish.prototype.injectStudioApp = function(studioApp) {
+Fish.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
 };
 
 /**
  * Initialize this WebLab instance.  Called on page load.
  */
-Fish.prototype.init = function(config) {
+Fish.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error('Fish requires a StudioApp');
   }
@@ -95,7 +95,7 @@ Fish.prototype.init = function(config) {
 };
 
 // Called by the fish app when it wants to go to the next level.
-Fish.prototype.onContinue = function() {
+Fish.prototype.onContinue = function () {
   const onReportComplete = result => {
     this.studioApp_.onContinue();
   };
@@ -112,7 +112,7 @@ Fish.prototype.onContinue = function() {
   });
 };
 
-Fish.prototype.initMLActivities = function() {
+Fish.prototype.initMLActivities = function () {
   const {mode} = this.level;
   const onContinue = this.onContinue.bind(this);
 

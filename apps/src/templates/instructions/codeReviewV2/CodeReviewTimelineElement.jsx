@@ -90,7 +90,8 @@ CodeReviewTimelineElement.propTypes = {
     .isRequired,
   isLast: PropTypes.bool,
   projectVersionId: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
+  viewAsCodeReviewer: PropTypes.bool
 };
 
 // Helper to render the eyeball

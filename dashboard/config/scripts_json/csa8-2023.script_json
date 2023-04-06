@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-07 12:46:00 UTC",
+    "serialized_at": "2023-03-31 15:19:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -53,13 +53,85 @@
 
   ],
   "resources": [
-
+    {
+      "name": "Developing Project Management Skills",
+      "url": "https://docs.google.com/document/d/1kgVoutrFAiSLDtVwTYUUG_K5ys2vjw-NrBpEx10ZVpY/edit?usp=sharing",
+      "key": "developing_project_management_skills",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "developing_project_management_skills"
+      }
+    },
+    {
+      "name": "Unit 8 Guide",
+      "url": "https://docs.google.com/document/d/1TBVErOseon-wSabljYbJ2q_4wUwX5kOzBZ4sBcND4jc/edit?usp=share_link",
+      "key": "unit_8_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "unit_8_guide"
+      }
+    },
+    {
+      "name": "Unit 8 Overview",
+      "url": "https://docs.google.com/document/d/1hNXXQdzw9wjprcMj8zMasEoUTVI4Gff0m07kGnF_FjA/edit?usp=share_link",
+      "key": "unit_8_overview",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_8_overview"
+      }
+    },
+    {
+      "name": "Unit 8 Study Guide",
+      "url": "https://docs.google.com/document/d/1OjrxZRtCLe8t7xVB9Tbk1Z7eLWNXJP2T9HV-Fzj2Xm0/edit?usp=share_link",
+      "key": "unit_8_study_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_8_study_guide"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "developing_project_management_skills",
+        "script.name": "csa8-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_8_guide",
+        "script.name": "csa8-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_8_overview",
+        "script.name": "csa8-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_8_study_guide",
+        "script.name": "csa8-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 

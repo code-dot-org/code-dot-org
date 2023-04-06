@@ -38,11 +38,7 @@ describe('Tests for Professional Learning Landing Page', () => {
 
       expect(landingPage.childAt(2).is('LastWorkshopSurveyBanner')).to.be.true;
       expect(
-        landingPage
-          .childAt(2)
-          .shallow()
-          .text()
-          .indexOf('Submit your feedback')
+        landingPage.childAt(2).shallow().text().indexOf('Submit your feedback')
       ).to.equal(-1);
       expect(landingPage.childAt(3).is('EnrolledWorkshops')).to.be.true;
       expect(landingPage.childAt(4).is('ProfessionalLearningCourseProgress')).to

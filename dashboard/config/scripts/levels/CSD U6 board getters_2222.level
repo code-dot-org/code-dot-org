@@ -11,7 +11,8 @@
     "parent_level_id": 20434,
     "name_suffix": "_2222",
     "encrypted": "false",
-    "optional": "false"
+    "optional": "false",
+    "allow_multiple_attempts": "false"
   },
   "level_num": "custom",
   "game_id": 52,

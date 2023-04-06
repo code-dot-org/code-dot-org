@@ -1,0 +1,11 @@
+name 'VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Problem Solving Process 
+
+##### The Problem Solving Process is a tool for structured problem solving that is woven throughout the entire CS Discoveries course to promote student growth and development. The Problem Solving Process is first introduced in Chapter 1 of the Problem Solving and Computing unit. 
+
+![](https://images.code.org/060a26e0d3a718196847c583bba8392c-image-1680300694774.png)
+MARKDOWN

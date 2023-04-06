@@ -1,34 +1,29 @@
 name 'cspu5_assess1_codevalues'
-encrypted '/EH9hvt+XIF3Fc6TK7u87MDPgNSyyt5+WHDWi/lgHu1aUZxTkEdZPUQpUMSz
-TMoW7+FCiWj/5ji88zvdBFqz/saEJN/5411EWaBlXbd20aEfSDUHE+SMAmde
-8ozLbEFQan9VWipfSuRFoO0Zc5rWd93uZ46maZWjH+Eanx2CpMIjfza1fU2m
-ZWiRyzBjCFv3aEcPpSoF41NjbqUthfoiRNb1iVh+lbWVmlMNW/zgh+CFovXw
-a0Izgnp696t80yI0lNwWk1Jg63YSTv7wGOsEWH1o4tF93Dvrjv9U70CWqHsE
-cZM/r9QYHaeUXTNBXS8clYYX9dyxxDlRCPoWXNGTcPatlcoxTHmX7nrWG88y
-q0wq21S4jlQlN+LkfFZUYSHb5MMt5P7jfrl4H2GfNQvUaIK7zdnne+HCLjQi
-oidV83Q3/mK7pq94c1Zofh5AG72gEajKXpnwfCT+Qd2oBQ09lVKR3lAQJOAr
-F6aXTXxiOEb4yDvrUP/58GAtcLlnVAJTaZPmSZ1iikaX6glzSrCQPhfKSJu8
-bnIyzHntWKev8jAY5ZRnNCtD981yniMz23VyZXNkXGj7IlIkk3EZNX0etuIb
-Qb6HY/TFMVJDluLCk+Zy4qkoSuhWvX00Ed5do+1QFLNVDP2QOIKyIFHPne4e
-k5D1QmTJKzXsAIBCSHbahcnaeNVRoJHFLtQA9MnYnxSpU7WqZtx+YhAKj46T
-88yJjRU6dexyoNGwcR+ree3KhRPPieS/gMof2mBMCB9bph3cBrd8TdXXMJWy
-6ReMyf9w4Wa6zSZXXCSlqh3NNfAqEV7E3Fc0ptJF3RsqQLJq6lr2AOYXnWxc
-2BgxtWkkFNxTXFfULba1Cus20I/k8AX51S/jBk4ROwfzZ2HDZWM5OXW4rF7W
-tZQAqUDBprL+UOkmBGOXbnWK6zT6wU/G2iAR2Lc1XgkA4YaqAuWIVfaQtz7Q
-iDKJNLDFez7v3wTroioxzNL5DbQ3OIqcMicdLHwD8XOY+OYEuG6XkmuxbRkR
-bJIRwHgOVpF3hzLsrDh+NVZZ39U7Xr5QuMI1gWdQq4aT+Fn9P/W5CBOi8OP+
-ujP484yRRTsgtGEJwdllZ1BXHkhWI7L1/gyJeeOa34SHlwymiTktuCn1k/Fj
-egNvPdPLh20i9gRFyQKQa5+dwH696tOhVnVTJtBN0WPNHYkDexkbSZ/Fjpt3
-cFV/1kBfOZXfV1F2wyl9E+U9qeEyU3+3CCIrEsrdk07QenGi0B1K9Josj/09
-b90BpevuuIJtVvQoTfwGnbp7LI8KNNgr53cG75KPJn37A8NP6YHl3rHI6unV
-62qFfgPR/9dFrzUiRQTD24DTwZn/rUNvopb491INnqUmQwokrRoew+izMU4Q
-G+px5WdvLD6KdqZBAhz2J14HK4Y4NY8+1K2EYGy714brL86Zs+uvK6J0GjBJ
-ksGTPuqQ4t4RFBcB+zwQJifAVU2ojgRBEnq/lUZ5nqeK2R6VyqdUK6zNsueE
-YKGv/NxOale72lQgsvPurake0LjLUEPx//JGEnpTVwHm85Glk0s0n+Km0eFq
-R7+SVcoziNC284oUBFlJnUG1owRncTPas8nmaur1TIadCnoUhVJxToWGhVV2
-SmM6W/EZVFSJ1QA70JWlg29JuIHwiz3sFPYjLaMDlukDui/LvHj10xT9km/J
-aMVnBiUG/GNelQct4ppfMG+bKRLBrKKrwlLsuaoxZPvyBLEiSmLIfBSXROic
-vXZ3UdlW08VgPgI3Sp+cb1NKWjsgXHbC1cvJybal0GaKLB4R4Q43kFyTYKpE
-MQu/u1wmdZM/NPptbU9pok/ciX2a8bkz3OwqEWPgkpWB7Oas5EqucbKpO8nB
-fbrFaDp4CqnnbEHYQA==
-'
+wrong 'https://images.code.org/c6dc8124731de362b6c99ffd750f84c7-image-1475370574495.png,300'
+right 'https://images.code.org/302ee2e224d23fb9ec5588644dfe60f6-image-1475370577730.png,300' 
+wrong 'https://images.code.org/d6a6c39d108d1b431a1a0a706d9d9305-image-1475370580744.png,300'
+wrong 'https://images.code.org/4671c605a2dd8195781a96e8d24ac4b7-image-1475370583198.png,300'
+wrong 'https://images.code.org/1f4632ca9f0405dff72a360bf75aa0f9-image-1475370584704.png,300'
+markdown <<MARKDOWN
+Consider the code segment below:
+
+![](https://images.code.org/fd521b7c95685c1b90b2e0bfc208b135-image-1475370737782.png)
+
+What are the values of a, b, and c after this code segment has been run?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 4**
+
+Solve this problem by going through the lines of code while keeping track of the value of each variable.
+It is important to note that if a variable is assigned a new value, the lines of code that reference that variable afterwards also references the new value.
+
+* At the very beginning, a = 0, b = 3, c = 4
+* a = a + c which equals  0 + 4 = 4. Thus, variable "a" is changed to the value 4
+* _Now, the value of "a" is set to 4_
+* b = a + c which equals 4 + 4 = 8. Variable "b" now equals 8
+* c = a + c which equals 4 + 4 = 8
+* By the end of the program, a = 4, b = 8, and c = 8
+MARKDOWN
+
+allow_multiple_attempts true

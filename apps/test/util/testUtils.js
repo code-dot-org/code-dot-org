@@ -61,12 +61,7 @@ export function generateArtistAnswer(generatedCode) {
  * @returns {boolean} True if mochify was launched with debug flag
  */
 export function debugMode() {
-  return (
-    location.search
-      .substring(1)
-      .split('&')
-      .indexOf('debug') !== -1
-  );
+  return location.search.substring(1).split('&').indexOf('debug') !== -1;
 }
 
 /**

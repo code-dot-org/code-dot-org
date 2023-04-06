@@ -25,11 +25,11 @@ var msg = require('./locale');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function(blockly, blockInstallOptions) {
+exports.install = function (blockly, blockInstallOptions) {
   var generator = blockly.getGenerator();
   blockly.JavaScript = generator;
 
-  var gensym = function(name) {
+  var gensym = function (name) {
     var NAME_TYPE = blockly.Variables.NAME_TYPE;
     return generator.variableDB_.getDistinctName(name, NAME_TYPE);
   };
@@ -255,7 +255,7 @@ function installFunctionalBlock(blockly, generator, gensym, options) {
   var returnType = options.returnType || blockly.BlockValueType.IMAGE;
 
   blockly.Blocks[blockName] = {
-    init: function() {
+    init: function () {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
         this,
         blockTitle,
@@ -268,7 +268,7 @@ function installFunctionalBlock(blockly, generator, gensym, options) {
     }
   };
 
-  generator[blockName] = function() {
+  generator[blockName] = function () {
     var apiArgs = [];
     for (var i = 0; i < args.length; i++) {
       var arg = args[i];

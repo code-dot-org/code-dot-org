@@ -237,12 +237,9 @@ const styles = {
 
 export const UnconnectedActivityCard = ActivityCard;
 
-export default connect(
-  state => ({}),
-  {
-    addActivitySection,
-    moveActivity,
-    removeActivity,
-    updateActivityField
-  }
-)(ActivityCard);
+export default connect(state => ({}), {
+  addActivitySection,
+  moveActivity,
+  removeActivity,
+  updateActivityField
+})(ActivityCard);

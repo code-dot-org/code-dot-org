@@ -33,14 +33,7 @@ function assertPropertyRowValue(index, label, value, assert) {
     "' and value '" +
     value +
     "'";
-  assert.equal(
-    propertyRow
-      .children(1)
-      .children(0)
-      .val(),
-    value,
-    msg
-  );
+  assert.equal(propertyRow.children(1).children(0).val(), value, msg);
 }
 
 /**
@@ -63,12 +56,12 @@ function assertPropertyRowExists(index, label, assert) {
 // on checking classes.
 // An element will be set to opacity 0.3 if it has the class
 // design-mode-hidden and divApplab is hidden
-var isFaded = function(selector) {
+var isFaded = function (selector) {
   var rootEl = $('#designModeViz');
   var element = rootEl.find(selector);
   return rootEl.is(':visible') && element.hasClass('design-mode-hidden');
 };
-var isHidden = function(selector) {
+var isHidden = function (selector) {
   var rootEl = $('#divApplab');
   var element = rootEl.find(selector);
   return rootEl.is(':visible') && element.hasClass('design-mode-hidden');
@@ -79,9 +72,7 @@ var isHidden = function(selector) {
  * by xAmount/yAmount to make the element bigger.
  */
 function resizeElement(element, xAmount, yAmount) {
-  var resizer = $(element)
-    .parent()
-    .find('.ui-icon-gripsmall-diagonal-se');
+  var resizer = $(element).parent().find('.ui-icon-gripsmall-diagonal-se');
 
   var start = {
     x: resizer.offset().left + resizer.width(),
@@ -138,7 +129,7 @@ module.exports = {
       description: 'button image with absolute url',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         $('#designModeButton').click();
 
         testUtils.dragToVisualization('BUTTON', 10, 20);
@@ -172,7 +163,7 @@ module.exports = {
       description: 'button image url correct with fully qualified url',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         $('#designModeButton').click();
 
         testUtils.dragToVisualization('BUTTON', 10, 20);
@@ -211,7 +202,7 @@ module.exports = {
       // Use an asset path which we can access so that image loading will succeed
       assetPathPrefix: '/base/test/integration/assets/',
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         $('#designModeButton').click();
 
         testUtils.dragToVisualization('BUTTON', 10, 20);
@@ -236,13 +227,13 @@ module.exports = {
         // wait until image has loaded to do validation
         var img = new Image();
         img.src = encodedAssetUrl;
-        img.onload = function() {
+        img.onload = function () {
           // There's no guarantee that we hit this onload after the onload in
           // designMode.js, so the styles won't always be set immediately.
           // Instead, wait until the next tick
 
           // add a completion on timeout since this is a freeplay level
-          setTimeout(function() {
+          setTimeout(function () {
             assert.include(
               buttonElement.style.backgroundImage,
               encodedAssetUrl,
@@ -261,7 +252,7 @@ module.exports = {
             Applab.onPuzzleComplete();
           }, 1);
         };
-        img.onerror = function(err) {
+        img.onerror = function (err) {
           console.warn('img.onerror unexpectedly called');
           assert(false, err.message);
         };
@@ -275,8 +266,8 @@ module.exports = {
       description: 'resizability',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
-        var shouldBeResizable = function() {
+      runBeforeClick: function (assert) {
+        var shouldBeResizable = function () {
           var rootDiv, screen1, resizable, button;
 
           rootDiv = $('#designModeViz');
@@ -304,32 +295,23 @@ module.exports = {
           button = resizable.children().first();
           assert.equal(button.prop('tagName'), 'BUTTON');
           assert.equal(
-            resizable
-              .children()
-              .eq(1)
-              .hasClass('ui-resizable-handle'),
+            resizable.children().eq(1).hasClass('ui-resizable-handle'),
             true,
             'is resizable handle'
           );
           assert.equal(
-            resizable
-              .children()
-              .eq(2)
-              .hasClass('ui-resizable-handle'),
+            resizable.children().eq(2).hasClass('ui-resizable-handle'),
             true,
             'is resizable handle'
           );
           assert.equal(
-            resizable
-              .children()
-              .eq(3)
-              .hasClass('ui-resizable-handle'),
+            resizable.children().eq(3).hasClass('ui-resizable-handle'),
             true,
             'is resizable handle'
           );
         };
 
-        var shouldNotBeResizable = function() {
+        var shouldNotBeResizable = function () {
           var rootDiv, screen1, button;
 
           rootDiv = $('#divApplab');
@@ -372,7 +354,7 @@ module.exports = {
       description: 'resizing button',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         $('#designModeButton').click();
         testUtils.dragToVisualization('BUTTON', 10, 20);
         assertPropertyRowValue(0, 'id', 'button1', assert);
@@ -401,7 +383,7 @@ module.exports = {
       description: 'dragging button',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         $('#designModeButton').click();
         testUtils.dragToVisualization('BUTTON', 10, 20);
         assertPropertyRowValue(0, 'id', 'button1', assert);
@@ -430,7 +412,7 @@ module.exports = {
       description: 'hidden items',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         $('#designModeButton').click();
         testUtils.dragToVisualization('BUTTON', 10, 10);
         assertPropertyRowValue(0, 'id', 'button1', assert);
@@ -476,8 +458,8 @@ module.exports = {
       description: 'entering design mode while running',
       editCode: true,
       xml: 'button("my_button", "text");',
-      runBeforeClick: function(assert) {
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+      runBeforeClick: function (assert) {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert.equal($('#my_button').length, 1);
 
           $('#designModeButton').click();
@@ -516,7 +498,7 @@ module.exports = {
       description: 'design mode box dims when running in design mode',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         $('#designModeButton').click();
         assert.equal(
           $('#design-mode-dimmed').length,
@@ -565,7 +547,7 @@ module.exports = {
       description: 'version history button works in design mode',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         $('#designModeButton').click();
         assert.equal(
           $('#design-mode-versions-header').is(':visible'),
@@ -592,7 +574,7 @@ module.exports = {
       description: 'exercise CHART element',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // Switch to design mode
         var designModeButton = $('#designModeButton');
         designModeButton.click();
@@ -658,7 +640,7 @@ module.exports = {
       editCode: true,
       xml: '',
 
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         $('#designModeButton').click();
 
         testUtils.dragToVisualization('TEXT_AREA', 0, 0);
@@ -695,9 +677,7 @@ module.exports = {
         ReactTestUtils.Simulate.change(textArea, {target: {value: 'Text 1'}});
 
         assert.equal(
-          $('#propertyRowContainer textarea')
-            .first()
-            .val(),
+          $('#propertyRowContainer textarea').first().val(),
           'Text 1',
           'Text should be written'
         );
@@ -712,9 +692,7 @@ module.exports = {
           'element should be named'
         );
         assert.equal(
-          $('#designModeViz .textArea')
-            .first()
-            .prop('innerHTML'),
+          $('#designModeViz .textArea').first().prop('innerHTML'),
           'Text 1',
           'should have one line of text'
         );
@@ -724,9 +702,7 @@ module.exports = {
         });
 
         assert.equal(
-          $('#designModeViz .textArea')
-            .first()
-            .prop('innerHTML'),
+          $('#designModeViz .textArea').first().prop('innerHTML'),
           'Text1<div>Text2</div><div>Text3</div>'
         );
 
@@ -735,9 +711,7 @@ module.exports = {
         });
 
         assert.equal(
-          $('#designModeViz .textArea')
-            .first()
-            .prop('innerHTML'),
+          $('#designModeViz .textArea').first().prop('innerHTML'),
           'Text1<div><br></div><div>Text2</div>'
         );
 
@@ -750,14 +724,10 @@ module.exports = {
 
         //Clicking on one of the divs in the text area should still bring back the text area
         $('#design_screen1').click();
-        $('#designModeViz .textArea div')
-          .first()
-          .click();
+        $('#designModeViz .textArea div').first().click();
         assertPropertyRowValue(0, 'id', 'text_area1', assert);
         assert.equal(
-          $('#propertyRowContainer textarea')
-            .first()
-            .val(),
+          $('#propertyRowContainer textarea').first().val(),
           'Text1\n\nText2',
           'Text should be written'
         );
@@ -769,9 +739,7 @@ module.exports = {
           target: {value: "I said hey-hey-hey-hey\nWhat's going on?"}
         });
         assert.equal(
-          $('#designModeViz .textArea')
-            .first()
-            .prop('innerHTML'),
+          $('#designModeViz .textArea').first().prop('innerHTML'),
           "I said hey-hey-hey-hey<div>What's going on?</div>"
         );
 
@@ -787,7 +755,7 @@ module.exports = {
       description: 'exercise IMAGE element',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // Switch to design mode
         var designModeButton = $('#designModeButton');
         designModeButton.click();
@@ -855,7 +823,7 @@ module.exports = {
       description: 'exercise duplicate button on elements',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // Switch to design mode
         var designModeButton = $('#designModeButton');
         designModeButton.click();
@@ -937,7 +905,7 @@ module.exports = {
       description: 'exercise copy paste button on elements',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // Switch to design mode
         var designModeButton = $('#designModeButton');
         designModeButton.click();
@@ -1028,7 +996,7 @@ module.exports = {
         '<img src="/blockly/media/1x1.gif" id="image3" data-canonical-image-url="" style="height: 100px; width: 100px; position: absolute; left: 30px; top: 155px; margin: 0px;" />' +
         '</div>' +
         '</div>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // a remixed image with previous channel id in its src.
         var redImage = '/v3/assets/applab-channel-id/red.Png';
         assert.equal(
@@ -1108,7 +1076,7 @@ module.exports = {
         images = $('#designModeViz').find('img');
         assert.equal(images.length, 4, 'there are four images in design mode');
 
-        tickWrapper.runOnAppTick(Applab, 1, function() {
+        tickWrapper.runOnAppTick(Applab, 1, function () {
           assert.equal(
             $('#design_image1').attr('src'),
             redImage,
@@ -1169,7 +1137,7 @@ module.exports = {
         '<img src="/v3/assets/Adks1c9Ko6WdR2PuwkA6cw/flappy_promo.png" id="image1" data-canonical-image-url="flappy_promo.png" style="height: 105px; width: 110px; position: absolute; left: 10px; top: 10px; margin: 0px;" />' +
         '</div>' +
         '</div>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         var flappyUrl =
           '/base/test/integration/assets/applab-channel-id/flappy_promo.png';
         assert.equal(
@@ -1228,7 +1196,7 @@ module.exports = {
         'background-image: url(http://localhost-studio.code.org:3000/v3/assets/Adks1c9Ko6WdR2PuwkA6cw/phone_purple.png); background-color: rgb(26, 188, 156); background-size: 120px 130px;">Button</button>' +
         '</div>' +
         '</div>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         var flappyUrl =
           '/base/test/integration/assets/applab-channel-id/flappy_promo.png';
         assert.equal(
@@ -1261,13 +1229,13 @@ module.exports = {
 
         var img = new Image();
         img.src = flappyUrl;
-        img.onload = function() {
+        img.onload = function () {
           // There's no guarantee that we hit this onload after the onload in
           // designMode.js, so the styles won't always be set immediately.
           // Instead, wait until the next tick
 
           // add a completion on timeout since this is a freeplay level
-          setTimeout(function() {
+          setTimeout(function () {
             var buttonElement = $('#design_button1')[0];
             assert.include(
               buttonElement.style.backgroundImage,
@@ -1349,7 +1317,7 @@ module.exports = {
             Applab.onPuzzleComplete();
           }, 1);
         };
-        img.onerror = function(err) {
+        img.onerror = function (err) {
           assert(false, err.message);
         };
       },
@@ -1363,7 +1331,7 @@ module.exports = {
       description: 'element ids are validated',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // Switch to design mode
         var designModeButton = $('#designModeButton');
         designModeButton.click();
@@ -1605,7 +1573,7 @@ module.exports = {
         '<button id="button2" style="padding: 0px; margin: 0px; height: 130px; width: 120px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 120px; top: 180px;">Button 2</button>' +
         '</div>' +
         '</div>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         var elementSelect = $('#emptyTab').find('select')[0];
 
         // Switch to design mode
@@ -1636,7 +1604,7 @@ module.exports = {
       description: 'new radio buttons have default group ids',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // Switch to design mode
         $('#designModeButton').click();
 
@@ -1702,7 +1670,7 @@ module.exports = {
       description: 'dragging out of bounds to delete',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // Turn off animations so we don't have to wait for them
         $.fx.off = true;
 

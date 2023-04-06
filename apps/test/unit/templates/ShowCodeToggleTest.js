@@ -57,7 +57,7 @@ describe('The ShowCodeToggle component', () => {
         focus() {}
       }
     };
-    sinon.stub(studioApp(), 'handleEditCode_').callsFake(function() {
+    sinon.stub(studioApp(), 'handleEditCode_').callsFake(function () {
       this.editor = editor;
     });
   });

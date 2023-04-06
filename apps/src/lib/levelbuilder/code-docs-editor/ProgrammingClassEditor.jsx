@@ -61,11 +61,8 @@ export default function ProgrammingClassEditor({
   initialProgrammingClass,
   environmentCategories
 }) {
-  const [
-    programmingClass,
-    setProgrammingClassProperty,
-    resetProgrammingClass
-  ] = useProgrammingClass(initialProgrammingClass);
+  const [programmingClass, setProgrammingClassProperty, resetProgrammingClass] =
+    useProgrammingClass(initialProgrammingClass);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);

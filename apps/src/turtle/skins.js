@@ -1,7 +1,7 @@
 const skinBase = require('../skins');
 const linePatterns = require('./linePatterns');
 
-exports.load = function(assetUrl, id) {
+exports.load = function (assetUrl, id) {
   const skin = skinBase.load(assetUrl, id);
   skin.linePatterns = linePatterns.load(assetUrl);
 
@@ -90,7 +90,7 @@ exports.load = function(assetUrl, id) {
    *
    * @return the mapping of names to urls
    */
-  const stickers = function() {
+  const stickers = function () {
     // Playlab characters
     const playlab = [
       'Alien',
@@ -183,11 +183,17 @@ exports.load = function(assetUrl, id) {
     'smallRhombusOrange45',
     'smallRhombusYellow45',
     'smallRhombusGreen45',
+    'smallRhombusDarkGreen45',
+    'smallRhombusLightGreen45',
+    'smallRhombusTeal45',
     'smallRhombusCyan45',
     'smallRhombusLightBlue45',
     'smallRhombusBlue45',
     'smallRhombusPurple45',
-    'smallRhombusMagenta45'
+    'smallRhombusLightPurple45',
+    'smallRhombusMagenta45',
+    'smallRhombusLightPink45',
+    'smallRhombusGray45'
   ];
   var rhombus30degree = [
     'smallRhombusMaroon30',
@@ -220,7 +226,7 @@ exports.load = function(assetUrl, id) {
    *
    * @return the mapping of names to urls
    */
-  var shapes = function(imageNames) {
+  var shapes = function (imageNames) {
     // Pattern Blocks
 
     var mapping = {};

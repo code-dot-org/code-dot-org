@@ -6,7 +6,7 @@ import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
 describe('Location Commands', () => {
   let coreLibrary;
   const spriteName = 'sprite1';
-  beforeEach(function() {
+  beforeEach(function () {
     const p5Wrapper = createP5Wrapper();
     coreLibrary = new CoreLibrary(p5Wrapper.p5);
   });

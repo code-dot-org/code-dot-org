@@ -327,7 +327,7 @@
           "description": "Hareket komutlarını bir programda sıralı adımlar olarak sıralayın."
         },
         "c141459a-a5b8-41ce-ada6-33b92afb0596": {
-          "description": "Bir uzun talimat sırasını en büyük tekrarlanabilir sıraya ayırma."
+          "description": "Uzun bir talimat dizisini tekrarlanabilir en büyük diziye ayırın."
         },
         "f0a49033-5a23-4b2e-b570-69fd6d678f65": {
           "description": "Hataları çözmek için mevcut bir programı değiştirin."
@@ -807,7 +807,7 @@
           "description": "Bir labirentin sonuna ulaşmak için sıralı ve döngülü komutların bir kombinasyonunu kullanın."
         },
         "8a54dbc1-2cc5-4fbe-a69d-1fcdeb521415": {
-          "description": "Bir uzun talimat sırasını en büyük tekrarlanabilir sıraya ayırma."
+          "description": "Uzun bir talimat dizisini tekrarlanabilir en büyük diziye ayırın."
         },
         "bbb2787f-1faa-4193-93ec-e2e5ff8de139": {
           "description": "Döngülerde tekrarlanması gereken komutlar ve kendi başına kullanılması gereken komutlar arasındaki farkı belirtme."
@@ -1131,25 +1131,25 @@
           "description": "Karmaşık şekilleri basit parçalara ayırma."
         },
         "81c36d87-10e0-4f7e-91f2-88b6065ab543": {
-          "description": "Koddaki bir döngü ile değiştirilebilen tekrarlı desenleri tanımlama."
+          "description": "Bir döngü ile değiştirilebilecek kod daki yinelenen kalıpları tanımlayın"
         },
         "d96017f7-e2b0-45e1-aa9f-12055fcee5fe": {
-          "description": "Desenleri tekrarlamak için döngüleri kullanan talimatları yazma."
+          "description": "Kalıpları tekrarlamak için döngüler kullanan talimatlar yazın"
         },
         "00417e59-53f6-4f10-9e17-ae69f9e5db7b": {
           "description": "Bir labirentin sonuna ulaşmak için sıralı ve döngülü komutların bir kombinasyonunu kullanın."
         },
         "b2de5b75-e224-4eee-aa3a-ab51792f3dea": {
-          "description": "Bir uzun talimat sırasını en büyük tekrarlanabilir sıraya ayırma."
+          "description": "Uzun bir talimat dizisini tekrarlanabilir en büyük diziye ayırın."
         },
         "2998b3d3-4953-4cbf-94f2-004630893e21": {
-          "description": "Hareketleri taşımak ve gerçekleştirmek için sıralı ve döngüsel komutların bir kombinasyonunu kullanma."
+          "description": "Eylemleri taşımak ve gerçekleştirmek için sıralı ve döngülü komutların bir kombinasyonunu kullanın."
         },
         "35810652-e1be-48aa-923b-1148a5c1584e": {
-          "description": "Tekrarlı bir hareketi basitleştirmek için bir döngünün ne zaman kullanılabileceğini tanımlama."
+          "description": "Tekrarlanan bir eylemi basitleştirmek için bir döngünün ne zaman kullanılabileceğini belirleyin."
         },
         "5b7b74bc-4f78-4c98-b221-5233324b086e": {
-          "description": "Tek bir komutun döngüsünü sağlayan belirli bir görev için bir program yazma."
+          "description": "Belirli bir görev için tek bir komutu döngüye sokan bir program yazın."
         },
         "cf1d581f-7554-4432-a92e-3e5f57f9144e": {
           "description": "Döngülerde tekrarlanması gereken komutlar ve kendi başına kullanılması gereken komutlar arasındaki farkı belirtme."
@@ -1164,25 +1164,25 @@
           "description": "Öğretmenin hareketlerini, komutları başlatacak sinyaller olarak düşünme."
         },
         "08847046-9784-46fb-996b-17a827cbea6f": {
-          "description": "Blokları, uygun olay işleyicileri ile eşleştirme."
+          "description": "Blokları uygun olay işleyiciyle eşleştirin."
         },
         "6f45e56c-85b7-4e48-86d4-3394e0e7048e": {
           "description": "Yaratıcı bir eseri diğer öğrencilerle paylaşma."
         },
         "c912e4f7-5734-44cc-8090-77fe751676f4": {
-          "description": "Olay işleyicileri kullanarak oyun oluşturma."
+          "description": "Olay işleyicileri kullanarak bir oyun oluşturun."
         },
         "36275ea8-84ac-4220-87ca-53d1b5eaac43": {
           "description": "Girdi olayları ile ilişkili hareketleri tanımlama."
         },
         "7263be7c-5e96-4ce0-8f3a-04cd57918643": {
-          "description": "Sıra ve olay-işleyicileri kullanarak hareketli, interaktif bir oyun oluşturma."
+          "description": "Sekans ve olay işleyicileri kullanarak animasyonlu, etkileşimli bir oyun oluşturun."
         },
         "93ff4ab3-b610-4f61-aa17-c5d1dc187ebf": {
-          "description": "Basit verileri temsil etmek için çubuk grafik ve pasta grafiği oluşturun."
+          "description": "Basit verileri temsil etmek için bir çubuk grafik ve pasta grafik oluşturun."
         },
         "b1760cb7-8bc1-4f45-85a4-f8231785ab7e": {
-          "description": "Başkaları tarafından yapılan veri görselleştirmeleri arasında karşılaştırmalar yapın ve bunları tahmin yapmak için kullanın."
+          "description": "Başkaları tarafından yapılan veri görselleştirmeleri arasında karşılaştırmalar yapın ve bunları bir tahminde bulunmak için kullanın."
         },
         "e77eca08-1bf5-47df-a660-6c5ba38d4fec": {
           "description": "Ekrandaki gerçek nesnelerin veya karakterlerin miktarları hakkında veri toplayın ve kaydedin"
@@ -1191,16 +1191,16 @@
           "description": "İkili kodları tekrar harflere çözme."
         },
         "9a7d25e3-3f39-45fb-b14d-56c90df8e06a": {
-          "description": "Harfleri ikili kodlama."
+          "description": "Harfleri ikili olarak kodlayın."
         },
         "bf86db48-ae33-49e8-a236-883b166a81bb": {
-          "description": "Bir kağıt üzerine harflerin saklanması fikrini, bilgisayara bilgi depolamak fikriyle ilişkilendirme."
+          "description": "Harfleri kağıt üzerinde saklama fikrini, bilgileri bir bilgisayarda saklama fikriyle ilişkilendirin."
         },
         "06e84ef1-68ef-4bce-adfe-fcd8c7e010c7": {
           "description": "Zaman kısıtlamaları veya hatalar gibi engellerin üstesinden gelin."
         },
         "5feb276e-2e95-4bd6-87b8-7bb9075d0d0a": {
-          "description": "Planlı bir tasarımı oluşturma için bir plan olarak kullanın."
+          "description": "Planlanmış bir tasarımı, yaratım planı olarak kullanın."
         },
         "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Bir makine öğrenim modelini öğretme ve test etme."
@@ -1605,25 +1605,31 @@
           "description": "Karmaşık şekilleri basit parçalara ayırma."
         },
         "ffef0ecc-334c-45c7-82af-3d63bbbe3e9f": {
-          "description": "Koddaki bir döngü ile değiştirilebilen tekrarlı desenleri tanımlama."
+          "description": "Bir döngü ile değiştirilebilecek kod daki yinelenen kalıpları tanımlayın"
         },
         "bad7a754-67f5-40db-bd28-b191d6a5b4d8": {
-          "description": "Desenleri tekrarlamak için döngüleri kullanan talimatları yazma."
+          "description": "Kalıpları tekrarlamak için döngüler kullanan talimatlar yazın"
+        },
+        "46288097-dbab-437f-897c-4e14352ae388": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
         },
         "dea9fd7a-8b64-4d36-90a4-1eee89ea355a": {
-          "description": "Bir uzun talimat sırasını en büyük tekrarlanabilir sıraya ayırma."
+          "description": "Uzun bir talimat dizisini tekrarlanabilir en büyük diziye ayırın."
         },
         "8e76410f-b4db-446b-88c0-00013d9c05bd": {
           "description": "Bir labirentin sonuna ulaşmak için sıralı ve döngülü komutların bir kombinasyonunu kullanın."
         },
         "ff15ce2c-8445-442a-89f0-7a50e741850a": {
-          "description": "Tek bir komutun döngüsünü sağlayan belirli bir görev için bir program yazma."
+          "description": "Belirli bir görev için tek bir komutu döngüye sokan bir program yazın."
         },
         "757d864e-38a3-4b30-8617-b9a4174c8b08": {
-          "description": "Tekrarlı bir hareketi basitleştirmek için bir döngünün ne zaman kullanılabileceğini tanımlama."
+          "description": "Tekrarlanan bir eylemi basitleştirmek için bir döngünün ne zaman kullanılabileceğini belirleyin."
         },
         "94ed661c-bf8f-41fe-866d-86f09b4ef4ad": {
-          "description": "Hareketleri taşımak ve gerçekleştirmek için sıralı ve döngüsel komutların bir kombinasyonunu kullanma."
+          "description": "Eylemleri taşımak ve gerçekleştirmek için sıralı ve döngülü komutların bir kombinasyonunu kullanın."
+        },
+        "bf154cd9-0914-43c2-b895-030de92d1427": {
+          "description": "Manuel tekrarlama yerine bir döngü yapısı kullanmanın faydalarını tanımlayın."
         },
         "b27f9553-dc95-452c-a4ee-dc69db0fc913": {
           "description": "Döngülerde tekrarlanması gereken komutlar ve kendi başına kullanılması gereken komutlar arasındaki farkı belirtme."
@@ -1638,16 +1644,16 @@
           "description": "Önceden tanımlanmış eylemleri ve olaya dayalı olanları ayırt etme alıştırması yapın."
         },
         "6c461f48-eb24-4fee-94f3-eb987d8f4fe9": {
-          "description": "Blokları, uygun olay işleyicileri ile eşleştirme."
+          "description": "Blokları uygun olay işleyiciyle eşleştirin."
         },
         "a8e453ad-ae3a-489a-b652-5f26ea11853a": {
-          "description": "Olay işleyicileri kullanarak oyun oluşturma."
+          "description": "Olay işleyicileri kullanarak bir oyun oluşturun."
         },
         "5f5877b9-cf72-4bb8-8700-341d33658a7c": {
           "description": "Yaratıcı bir eseri diğer öğrencilerle paylaşma."
         },
         "15e9cb30-5d79-4344-a82e-a98f6f29c397": {
-          "description": "Sıra ve olay-işleyicileri kullanarak hareketli, interaktif bir oyun oluşturma."
+          "description": "Sekans ve olay işleyicileri kullanarak animasyonlu, etkileşimli bir oyun oluşturun."
         },
         "c0757733-5e14-4797-9615-11b61d8d490f": {
           "description": "Girdi olayları ile ilişkili hareketleri tanımlama."
@@ -1656,22 +1662,22 @@
           "description": "Ekrandaki gerçek nesnelerin veya karakterlerin miktarları hakkında veri toplayın ve kaydedin"
         },
         "f14af7c1-5797-4c9a-bafc-5dd0d630406b": {
-          "description": "Basit verileri temsil etmek için çubuk grafik ve pasta grafiği oluşturun."
+          "description": "Basit verileri temsil etmek için bir çubuk grafik ve pasta grafik oluşturun."
         },
         "0ca67e69-bff3-4d30-96d3-3f53299353cc": {
-          "description": "Başkaları tarafından yapılan veri görselleştirmeleri arasında karşılaştırmalar yapın ve bunları tahmin yapmak için kullanın."
+          "description": "Başkaları tarafından yapılan veri görselleştirmeleri arasında karşılaştırmalar yapın ve bunları bir tahminde bulunmak için kullanın."
         },
         "9a785141-1fe6-4728-996c-2fbb8781b62c": {
-          "description": "Harfleri ikili kodlama."
+          "description": "Harfleri ikili olarak kodlayın."
         },
         "e972d59a-b86f-49ec-91ef-39c5ea6d9353": {
           "description": "İkili kodları tekrar harflere çözme."
         },
         "ce1f4117-76f3-4359-a554-683a878f82cb": {
-          "description": "Bir kağıt üzerine harflerin saklanması fikrini, bilgisayara bilgi depolamak fikriyle ilişkilendirme."
+          "description": "Harfleri kağıt üzerinde saklama fikrini, bilgileri bir bilgisayarda saklama fikriyle ilişkilendirin."
         },
         "03ac24d5-21f0-45e5-b15a-3354a578b67d": {
-          "description": "Planlı bir tasarımı oluşturma için bir plan olarak kullanın."
+          "description": "Planlanmış bir tasarımı, yaratım planı olarak kullanın."
         },
         "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
           "description": "Zaman kısıtlamaları veya hatalar gibi engellerin üstesinden gelin."
@@ -1695,7 +1701,7 @@
           "description": "Hataları çözmek için mevcut bir programı değiştirin."
         },
         "14389c2c-96ea-4be1-8347-46e7d19dd1ff": {
-          "description": "Bir uzun talimat sırasını en büyük tekrarlanabilir sıraya ayırma."
+          "description": "Uzun bir talimat dizisini tekrarlanabilir en büyük diziye ayırın."
         },
         "8a0addda-b47f-4551-8c82-9115be3c130d": {
           "description": "Kod ve sembolleri kullanarak fikirleri tanımlama."
@@ -1857,7 +1863,7 @@
           "description": "Kod ile dans animasyonları oluşturma"
         },
         "d41cb934-ead6-42d0-a3c6-3a692fa53626": {
-          "description": "Bir uzun talimat sırasını en büyük tekrarlanabilir sıraya ayırma."
+          "description": "Uzun bir talimat dizisini tekrarlanabilir en büyük diziye ayırın."
         },
         "19dc83bf-d44c-4e6b-a7ac-c11ada6cb656": {
           "description": "Bir labirentin sonuna ulaşmak için sıralı ve döngülü komutların bir kombinasyonunu kullanın."
