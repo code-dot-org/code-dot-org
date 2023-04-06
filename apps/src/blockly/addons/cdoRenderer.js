@@ -17,7 +17,7 @@ export default class CdoRenderer extends GoogleBlockly.geras.Renderer {
    * Use our cdoConstantsProvider class instead of the default. Our PathObject has
    * different styles for highlighted and disabled blocks than the geras default.
    */
-  makeConstants_ = function() {
+  makeConstants_ = function () {
     return new CdoConstantsProvider();
   };
 }
