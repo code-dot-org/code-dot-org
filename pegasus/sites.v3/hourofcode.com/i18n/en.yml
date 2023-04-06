@@ -137,6 +137,20 @@
   blockchain_resources_03_desc: 'Try a crypto memory game created by Coinbase.'
   blockchain_resources_03_button_label: 'Try the Crypto Memory Game activity'
 
+  ai_hero_heading_01: "Artificial intelligence isn't magic…"
+  ai_hero_heading_02: "It's just code!"
+  ai_hero_desc: "Demystify artificial intelligence (AI) by learning how it's changing the ways we live, work, and learn."
+  ai_intro_heading: "Why learn about AI?"
+  ai_intro_video_caption: "Enjoyed this video? [Check the full Intro to AI series](%{series_url})."
+  ai_intro_list_title_01: "Foundational knowledge"
+  ai_intro_list_desc_01: "Spark students' interest in technology and help them understand the world around them in a deeper way."
+  ai_intro_list_title_02: "Creativity and innovation"
+  ai_intro_list_desc_02: "Inspire students to think creatively and innovate, as they explore the potential applications of AI."
+  ai_intro_list_title_03: "Problem solving and critical thinking"
+  ai_intro_list_desc_03: "Encourage students to develop essential skills as they learn to design, build, and evaluate AI systems."
+  ai_why_heading: "Why teach AI with Code.org?"
+  ai_why_desc: "All the resources you need in one place! Explore our curriculum offerings, professional learning courses, and video series designed for you and your students."
+
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
   hoc_live_learn_title: 'Learn with Hour of Code Live'

@@ -11,11 +11,17 @@ $border-radius: 4px;
 
 // Use this to maintain proper heading hierarchy
 // if the design calls for an h5 style
+@mixin h1-lookalike-style {
+  font-family: $barlowSemiCondensed-semibold, sans-serif;
+  font-size: 3em;
+}
+
 @mixin h5-lookalike-style {
   font-family: $gotham-bold, sans-serif;
   font-size: 1.25em;
 }
 
+.h1-lookalike-style { @include h1-lookalike-style}
 .h5-lookalike-style { @include h5-lookalike-style}
 
 // Start styles

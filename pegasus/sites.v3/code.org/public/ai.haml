@@ -1,0 +1,63 @@
+---
+title: Learn about Artificial Intelligence (AI) | Code.org
+theme: responsive_full_width
+---
+
+%link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
+%link{href: "/css/generated/ai-styles.css", rel: "stylesheet"}
+
+-# Import FontAwesome Pro
+%script{src: "https://kit.fontawesome.com/ea2d9d4413.js", crossorigin: "anonymous"}
+
+-# FontAwesome icons
+- icon_sparkles = "fa-solid fa-sparkles"
+- icon_lightbulb = "fa-solid fa-lightbulb"
+- icon_magnifying_glass = "fa-solid fa-magnifying-glass"
+
+%section.hero-banner-basic.bg-neutral-dark{style: "display: block !important"}
+  .wrapper
+    .text-wrapper.col-60
+      %h1{style: "color: white; margin-bottom: 0"}=hoc_s(:ai_hero_heading_01)
+      %h2.h1-lookalike-style{style: "color: white"}=hoc_s(:ai_hero_heading_02)
+      %p{style: "color: white"}=hoc_s(:ai_hero_desc)
+    %figure.col-33{style: "float: right"}
+      %img.fade-in-out{src: "/images/banners/ai-bot-wizard.svg", alt: "", style: "z-index: 10"}
+      %img{src: "/images/banners/ai-bot-default.svg", alt: "", style: "position: relative;"}
+
+    .clear
+
+%section.intro
+  .wrapper
+    %h2=hoc_s(:ai_intro_heading)
+    %div.col-50{style: "float: left; margin-top: 1em"}
+      %figure.video-responsive{style: "max-width: unset"}
+        %div
+          %iframe{src: "https://www.youtube-nocookie.com/embed/dWRnCXbUDgA", allowFullScreen: 'true', frameborder: '0', title: "Why AI Matters with Deb Raji"}
+        %figcaption=hoc_s(:ai_intro_video_caption, markdown: :inline, locals: {series_url: resolve_url("#")})
+    %div.flex-container.col-45{style: "float: right"}
+      %ul.icon-bullet-list.full-width{style: "margin-top: 0"}
+        %li
+          %div
+            %i{class: "#{icon_sparkles}"}
+          .text-wrapper
+            %h3=hoc_s(:ai_intro_list_title_01)
+            %p.no-margin-bottom=hoc_s(:ai_intro_list_desc_01)
+        %li
+          %div
+            %i{class: "#{icon_lightbulb}"}
+          .text-wrapper
+            %h3=hoc_s(:ai_intro_list_title_02)
+            %p.no-margin-bottom=hoc_s(:ai_intro_list_desc_02)
+        %li.no-margin-bottom
+          %div
+            %i{class: "#{icon_magnifying_glass}"}
+          .text-wrapper
+            %h3=hoc_s(:ai_intro_list_title_03)
+            %p.no-margin-bottom=hoc_s(:ai_intro_list_desc_03)
+    .clear
+
+%section
+  .wrapper
+    %h2=hoc_s(:ai_why_heading)
+    %p=hoc_s(:ai_why_desc)
+
