@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2023-04-04T22:36:37.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -30,7 +26,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Exploring Sprites\r\n\r\nIn order to create more interesting and detailed images, students are introduced to the sprite object. A **sprite** is a character on the screen with properties that describe its location, movement, and look. \r\n\r\n# Do This\r\n\r\n* Read the code below and predict how it works before running the program to test your prediction. \r\n* Change some lines and see what happens. ",
+    "long_instructions": "# Exploring Sprites\r\n\r\nIn order to create more interesting and detailed images, students are introduced to the sprite object and three new blocks. A **sprite** is a character on the screen with properties that describe its location, movement, and look. The three new blocks include: [`createSprite()`(#f78183)](/docs/ide/gamelab/expressions/createSprite), [`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation), and [`drawSprites()`(#fff176)](/docs/ide/gamelab/expressions/draw).\r\n\r\n# Do This\r\n\r\n1) Read the code below and predict how it works before running the program to test your prediction. \r\n2) Change some lines and see what happens.\r\n   - Perhaps come up with 1-2 \"What if ...\" questions that you wonder about the code. For example: what if [`drawSprites()`(#fff176)](/docs/ide/gamelab/expressions/draw) was used at the top of the code instead of at the bottom?\r\n   - Use those \"What if\" wonderings to help you decide what to change.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -83,11 +79,18 @@
     "start_blocks": "var fruit = createSprite(100, 200);\r\nfruit.setAnimation(\"apple\");\r\nvar vegetable = createSprite(300, 200);\r\nvegetable.setAnimation(\"carrot\");\r\ndrawSprites();",
     "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/sprites",
     "libraries_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2023-04-04T22:36:37.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-04-04T22:36:37.921+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U3 Sprites Exploration_2021\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U3 Sprites Exploration_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-04T22:36:37.921+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U3 Sprites Exploration_2021\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U3 Sprites Exploration_2021\"},{\"changed_at\":\"2023-04-05 22:02:14 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-05 22:03:47 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

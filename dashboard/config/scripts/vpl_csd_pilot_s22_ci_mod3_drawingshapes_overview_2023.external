@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Drawing shapes in Game Lab
+# Drawing Shapes in Game Lab
 
 ##### In the first few lessons of the Interactive Animations and Games unit, students will start to become familiar with Game Lab as they learn to draw and color shapes. Through the process they are also learning basic programming skills such as:
 
