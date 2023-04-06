@@ -8,7 +8,8 @@ import styles from '@cdo/apps/templates/levelSummary/summary-entry-point.module.
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const JS_DATA = {
-  responses: [{user_id: 0, text: 'student answer'}]
+  response_count: 1,
+  is_contained_level: false
 };
 
 const INITIAL_STATE = {
@@ -45,5 +46,17 @@ describe('SummaryEntryPoint', () => {
     expect(wrapper.find(`.${styles.responseCounter}`).text()).to.eq(
       '1/1 students answered'
     );
+  });
+
+  it('adds standalone class on non-contained levels', () => {
+    const wrapper = setUpWrapper();
+
+    expect(wrapper.find(`.${styles.isStandalone}`).length).to.eq(1);
+  });
+
+  it('does not add standalone class on contained levels', () => {
+    const wrapper = setUpWrapper({}, {is_contained_level: true});
+
+    expect(wrapper.find(`.${styles.isStandalone}`).length).to.eq(0);
   });
 });

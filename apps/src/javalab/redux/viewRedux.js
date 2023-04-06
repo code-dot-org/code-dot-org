@@ -1,3 +1,8 @@
+/**
+ * Redux store for state specific to the visuals of Java Lab
+ * (widths/heights/font sizes/etc.)
+ */
+
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {
