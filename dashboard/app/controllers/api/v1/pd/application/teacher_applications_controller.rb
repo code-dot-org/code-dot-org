@@ -56,7 +56,7 @@ module Api::V1::Pd::Application
 
     def change_principal_approval_requirement
       @application.update!(principal_approval_not_required: params[:principal_approval_not_required].to_bool)
-      @application.send_pd_application_email :admin_approval, deliver_now: true if @application.allow_sending_principal_email?
+      @application.send_pd_application_email :admin_approval if @application.allow_sending_principal_email?
       render json: {principal_approval: @application.principal_approval_state}
     end
 
