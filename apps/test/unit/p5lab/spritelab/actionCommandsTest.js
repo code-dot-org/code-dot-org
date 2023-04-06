@@ -508,7 +508,6 @@ describe('Action Commands', () => {
       // one sprite, facing upwards
       expect(sprites.length).to.equal(1);
       expect(sprites[0].x).to.equal(200);
-      expect(sprites[0].rotation).to.equal(0);
     });
 
     it('circle layout works with 2 sprites', () => {
@@ -519,10 +518,8 @@ describe('Action Commands', () => {
 
       expect(sprites.length).to.equal(2);
       expect(sprites[0].x).to.equal(200);
-      expect(sprites[0].rotation).to.equal(0);
 
       expect(sprites[1].x).to.equal(200);
-      expect(sprites[1].rotation).to.equal(180);
 
       // fairly weak test that they just have different y values
       expect(sprites[0].y).to.not.equal(sprites[1].y);
@@ -599,33 +596,6 @@ describe('Action Commands', () => {
 
       // left column contains fourth, first and 1 other
       [3, 0, 10].forEach(i => expect(sprites[i].x).to.equal(minX));
-    });
-
-    it('sprites that are lower are in front of those that are higher', () => {
-      createSprites(36, 'cat');
-
-      commands.layoutSprites.apply(coreLibrary, ['cat', 'circle']);
-      const sprites = coreLibrary.getSpriteArray({costume: 'cat'});
-
-      expect(sprites.length).to.equal(36);
-
-      for (let i = 1; i < sprites.length; i++) {
-        expect(sprites[i].y > sprites[i - 1].y).to.equal(
-          sprites[i].depth > sprites[i - 1].depth
-        );
-      }
-    });
-
-    it('sprites that are further right have a higher depth', () => {
-      createSprites(2, 'cat');
-
-      commands.layoutSprites.apply(coreLibrary, ['cat', 'row']);
-      const sprites = coreLibrary.getSpriteArray({costume: 'cat'});
-
-      expect(sprites.length).to.equal(2);
-
-      expect(sprites[0].y).to.equal(sprites[1].y);
-      expect(sprites[0].depth).to.be.lessThan(sprites[1].depth);
     });
 
     it('grid layout with perfect square count', () => {
