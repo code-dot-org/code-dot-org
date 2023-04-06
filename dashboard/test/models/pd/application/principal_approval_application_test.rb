@@ -82,7 +82,7 @@ module Pd::Application
       end
 
       assert Pd::Application::PrincipalApprovalApplication.last.placeholder?
-      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval').count
+      assert_equal 1, teacher_application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval').count
     end
   end
 end
