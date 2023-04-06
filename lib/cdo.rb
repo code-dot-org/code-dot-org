@@ -59,15 +59,15 @@ module Cdo
       return override_dashboard if override_dashboard && domain == 'studio.code.org'
       return override_pegasus if override_pegasus && domain == 'code.org'
 
+      # `name` is the name of the machine, from Chef via globals.yml
       return "#{name}.#{domain}" if ['console', 'hoc-levels'].include?(name)
       return domain if rack_env?(:production)
 
       # our HTTPS wildcard certificate only supports *.code.org
       # 'env', 'studio.code.org' over https must resolve to 'env-studio.code.org' for non-prod environments
       sep = (domain.include?('.code.org')) ? '-' : '.'
-      return "localhost#{sep}#{domain}" if rack_env?(:development)
-      return "translate#{sep}#{domain}" if name == 'crowdin'
-      "#{rack_env}#{sep}#{domain}"
+
+      return [environment_subdomain, domain].join(sep)
     end
 
     def dashboard_hostname
@@ -79,7 +79,22 @@ module Cdo
     end
 
     def hourofcode_hostname
-      canonical_hostname('hourofcode.com')
+      domain = 'hourofcode.com'
+      return domain if rack_env?(:production)
+      return [environment_subdomain, 'hourofcode.com'].join(".")
+    end
+
+    def hourofcode_origin_hostname
+      subdomain = "#{environment_subdomain}-origin}"
+      return [subdomain, 'hourofcode.com'].join(".")
+    end
+
+    # Returns the subdomain for the current environment
+    # often but not always the same as `rack_env`
+    def environment_subdomain
+      return 'localhost' if rack_env?(:development)
+      return 'translate' if name == 'crowdin'
+      rack_env
     end
 
     def advocacy_hostname
@@ -90,6 +105,7 @@ module Cdo
       canonical_hostname('codeprojects.org')
     end
 
+    # Returns the first hosted zone found for the given domain
     def hostedzone_id(domain)
       hosted_zone = Aws::Route53::Client.new.list_hosted_zones_by_name(dns_name: domain).hosted_zones.first
       raise "Could not find #{domain} in hosted zones" unless hosted_zone.name.delete_suffix('.') == domain
@@ -98,6 +114,10 @@ module Cdo
 
     def codeprojects_hostedzone_id
       hostedzone_id('codeprojects.org')
+    end
+
+    def hourofcode_hostedzone_id
+      hostedzone_id('hourofcode.com')
     end
 
     def site_host(domain)
