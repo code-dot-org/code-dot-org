@@ -5,3 +5,5 @@ wrong 'Humans should catch all of the fish in the ocean for food. ', feedback: '
 right 'Humans should catch some of the fish and fish should eat some of the algae, so there is always enough food for each creature.', feedback: 'Correct!'
 wrong 'Fish should eat all the coral so the algae can grow faster.', feedback: 'Incorrect.'
 
+
+allow_multiple_attempts false

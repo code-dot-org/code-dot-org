@@ -1,3 +1,7 @@
+/**
+ * Redux store for generic Java Lab state.
+ */
+
 const SET_IS_RUNNING = 'javalab/SET_IS_RUNNING';
 const SET_IS_TESTING = 'javalab/SET_IS_TESTING';
 const SET_BACKPACK_ENABLED = 'javalab/SET_BACKPACK_ENABLED';

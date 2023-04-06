@@ -29,3 +29,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Looking at the two else if statements in the middle, we notice that (time < 20) comes before (time < 10). Since code executes sequentially, "Good Morning" will never be displayed because all values that are between 6 and 10 will first go into the (time < 20) statement due to the order of the code.
 MARKDOWN
+
+allow_multiple_attempts true

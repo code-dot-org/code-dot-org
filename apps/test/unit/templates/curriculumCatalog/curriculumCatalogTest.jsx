@@ -1,8 +1,11 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react';
+import {expect} from '../../../util/reconfiguredChai';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 
 describe('CurriculumCatalogCard', () => {
+  const translationIconTitle = 'Curriculum is available in your language';
+
   let defaultProps;
   beforeEach(() => {
     defaultProps = {
@@ -36,26 +39,44 @@ describe('CurriculumCatalogCard', () => {
     screen.getByRole('img', {name: altText});
   });
 
-  it('renders grade range', () => {
-    render(<CurriculumCatalogCard {...defaultProps} />);
-
-    screen.getByText(
-      new RegExp(
-        `Grades: ${defaultProps.youngestGrade}-${defaultProps.oldestGrade}`
-      )
-    );
-  });
-
   it('renders subject', () => {
     render(<CurriculumCatalogCard {...defaultProps} />);
 
     screen.getByText(defaultProps.subjects[0], {exact: false});
   });
 
-  it('renders duration', () => {
-    render(<CurriculumCatalogCard {...defaultProps} />);
+  it('does not render translation icon by default', () => {
+    const {container} = render(<CurriculumCatalogCard {...defaultProps} />);
+
+    expect(screen.queryByTitle(translationIconTitle)).to.be.null;
+    expect(container.querySelectorAll('i[class*=language]')).to.have.length(0);
+  });
+
+  it('renders translation icon when translation is available', () => {
+    const {container} = render(
+      <CurriculumCatalogCard {...defaultProps} isTranslated />
+    );
+
+    screen.getByTitle(translationIconTitle);
+    expect(container.querySelectorAll('i[class*=language]')).to.have.length(1);
+  });
+
+  it('renders grade range with icon', () => {
+    const {container} = render(<CurriculumCatalogCard {...defaultProps} />);
+
+    screen.getByText(
+      new RegExp(
+        `Grades: ${defaultProps.youngestGrade}-${defaultProps.oldestGrade}`
+      )
+    );
+    expect(container.querySelectorAll('i[class*=user]')).to.have.length(1);
+  });
+
+  it('renders duration with icon', () => {
+    const {container} = render(<CurriculumCatalogCard {...defaultProps} />);
 
     screen.getByText(defaultProps.duration, {exact: false});
+    expect(container.querySelectorAll('i[class*=clock]')).to.have.length(1);
   });
 
   it('renders Quick View button with descriptive label', () => {

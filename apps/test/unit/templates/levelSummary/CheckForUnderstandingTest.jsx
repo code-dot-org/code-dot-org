@@ -83,6 +83,8 @@ describe('CheckForUnderstanding', () => {
     // Section selector, with one section.
     expect(wrapper.find('SectionSelector').length).to.eq(1);
     expect(wrapper.find('SectionSelector option').length).to.eq(2);
+    // Feedback sharing notification banner
+    expect(wrapper.find('Notification').length).to.eq(1);
   });
 
   it('applies correct classes when rtl', () => {

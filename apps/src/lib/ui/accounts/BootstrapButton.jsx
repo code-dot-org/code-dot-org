@@ -44,13 +44,13 @@ export default class BootstrapButton extends React.Component {
     const {style, onClick, disabled, text} = this.props;
 
     return (
-      // for some reason, the 'button has type' rule isn't able to recognize
+      // The 'button has type' rule isn't able to recognize
       // that we are actually passing a valid button type here. Valid types
       // include "button", "submit", or "reset", and we are currently always
       // returning either "button" or "submit".
       // see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/button-has-type.md
-      // eslint-disable-next-line react/button-has-type
       <button
+        // eslint-disable-next-line react/button-has-type
         type={this.buttonType()}
         className={this.buttonClasses()}
         style={{...styles.button, ...style}}
