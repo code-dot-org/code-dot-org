@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2023-04-04T22:37:01.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -28,7 +24,7 @@
     },
     "edit_code": true,
     "embed": "true",
-    "long_instructions": "# Collision Detection\r\n\r\nAfter students are exposed to the idea of using one block to represent complex code using the `velocity` block, they further explore this idea in the context of the intentionally complex mathematical challenge of determining whether two sprites are touching. By using a single block to represent this complexity, in this case the `isTouching()` block, it becomes much easier to write and reason about code, and students can appreciate the value of using abstractions. In later lessons, students will continue to build on the `isTouching()` abstraction to create more complex sprite interactions.\r\n\r\n# Key Concept\r\n\r\nStudents should note that even though they could program the code to detect whether sprites are touching each time, it is error-prone and would take up more time and energy than having a block that performs the same code automatically. The new block helps them to take on more difficult challenges by reducing the risk of errors and freeing them to think about the bigger picture.\r\n\r\n<img src=\"https://images.code.org/61546d5131b83b68dcefab6203f31ef9-image-1648670814822.47.10 PM.png\" style=\"float: right; height: 250px; clear: both; margin: 0 20px 20px 0;\">\r\n\r\n# isTouching() Example\r\n\r\nIn this example program, the computer is using the `isTouching()` block to determine if the bunny and the robot are touching. Since the `isTouching()` block is in an if-statement, the animation changes as a result of the collision between the two sprites. \r\n\r\n# Do This\r\n\r\n* Run the program to the left of the screen to see how the `isTouching()` block works. \r\n\r\n<div style=\"clear:both\"/>\r\n",
+    "long_instructions": "# Collision Detection\r\n\r\nAfter students are exposed to the idea of using one block to represent complex code using the [`velocity`(#f78183)](/docs/ide/gamelab/expressions/velocityX) block, they further explore this idea in the context of the intentionally complex mathematical challenge of determining whether two sprites are touching. By using a single block to represent this complexity, in this case the [`isTouching()`(#f78183)](/docs/ide/gamelab/expressions/isTouching) block, it becomes much easier to write and reason about code, and students can appreciate the value of using abstractions. In later lessons, students will continue to build on the [`isTouching()`(#f78183)](/docs/ide/gamelab/expressions/isTouching) abstraction to create more complex sprite interactions.\r\n\r\n# Key Concept\r\n\r\nStudents should note that even though they could program the code to detect whether sprites are touching each time, it is error-prone and would take up more time and energy than having a block that performs the same code automatically. The new block helps them to take on more difficult challenges by reducing the risk of errors and freeing them to think about the bigger picture.\r\n\r\n<img src=\"https://images.code.org/61546d5131b83b68dcefab6203f31ef9-image-1648670814822.47.10 PM.png\" style=\"float: right; height: 250px; clear: both; margin: 0 20px 20px 0;\">\r\n\r\n# isTouching() Example\r\n\r\nIn this example program, the computer is using the [`isTouching()`(#f78183)](/docs/ide/gamelab/expressions/isTouching) block to determine if the bunny and the robot are touching. Since the [`isTouching()`(#f78183)](/docs/ide/gamelab/expressions/isTouching) block is in an if-statement, the animation changes as a result of the collision between the two sprites. \r\n\r\n# Do This\r\n1) Run the program to the left of the screen to see how the [`isTouching()`(#f78183)](/docs/ide/gamelab/expressions/isTouching) block works. \r\n\r\n<div style=\"clear:both\"/>\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -82,9 +78,13 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2023-04-04T22:37:01.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-04-04T22:37:01.428+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U3 collisions isTouching intro_2021\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U3 collisions isTouching intro_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-04T22:37:01.428+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U3 collisions isTouching intro_2021\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U3 collisions isTouching intro_2021\"},{\"changed_at\":\"2023-04-06 00:19:26 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
