@@ -87,7 +87,7 @@ See [the apps readme](./apps/README.md) for more details.
 
 ### Dashboard Tests
 
-Dashboard tests should be run from the `dashboard/` directory: 
+Dashboard tests commands below should be run from the `dashboard/` directory: 
 
 `cd dashboard`
 
