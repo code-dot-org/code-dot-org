@@ -1,6 +1,6 @@
 import {expect} from '../../../../../../util/reconfiguredChai';
 import Accelerometer from '@cdo/apps/lib/kits/maker/boards/microBit/Accelerometer';
-import {MBFirmataClientStub} from '../../../../../../../src/lib/kits/maker/util/makeStubBoard';
+import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import sinon from 'sinon';
 import {ACCEL_EVENT_ID} from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataWrapper';

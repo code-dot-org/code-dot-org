@@ -1,6 +1,6 @@
 import {expect} from '../../../../../../util/reconfiguredChai';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
-import {MBFirmataClientStub} from '../../../../../../../src/lib/kits/maker/util/makeStubBoard';
+import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import sinon from 'sinon';
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardTest';
 import {
