@@ -78,7 +78,7 @@ group :development, :test do
   gem 'active_record_query_trace'
   gem 'benchmark-ips'
   gem 'better_errors', '>= 2.7.0'
-  gem 'binding_of_caller'
+  gem 'binding_of_caller', '~> 1.0.0'
   gem 'brakeman'
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'ruby-prof'
