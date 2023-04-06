@@ -654,7 +654,7 @@ $small-footer-standard-width: 400px;
 }
 
 .small-footer-base {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   margin: 0 $codeApp-left-margin;
   display: flex;
