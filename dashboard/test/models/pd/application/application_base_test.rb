@@ -8,6 +8,10 @@ module Pd::Application
 
     freeze_time
 
+    setup_all do
+      Pd::Application::ApplicationBase.any_instance.stubs(:deliver_email)
+    end
+
     test 'required fields' do
       application = ApplicationBase.new
       refute application.valid?

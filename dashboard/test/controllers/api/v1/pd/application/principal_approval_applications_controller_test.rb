@@ -8,6 +8,7 @@ module Api::V1::Pd::Application
     self.use_transactional_test_case = true
 
     setup_all do
+      Pd::Application::ApplicationBase.any_instance.stubs(:deliver_email)
       @teacher_application = create TEACHER_APPLICATION_FACTORY, application_guid: SecureRandom.uuid
       @test_params = {
         form_data: build(PRINCIPAL_APPROVAL_HASH_FACTORY, :approved_yes),
