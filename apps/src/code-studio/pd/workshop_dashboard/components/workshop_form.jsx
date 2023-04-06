@@ -101,8 +101,7 @@ export class WorkshopForm extends React.Component {
       organizer: PropTypes.shape({
         id: PropTypes.number,
         name: PropTypes.string
-      }),
-      workshop_starts_within_a_month: PropTypes.bool
+      })
     }),
     onSaved: PropTypes.func,
     readOnly: PropTypes.bool,
