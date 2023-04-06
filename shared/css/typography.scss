@@ -108,12 +108,14 @@ h5, .heading-sm { @include heading-sm }
 h6, .heading-xs { @include heading-xs }
 
 // Paragraphs
-// For use on default paragraphs
+// Use on default paragraphs
 p, .body-one { @include body-one }
-// For use on course block descriptions or anywhere
+// Use on course block descriptions or anywhere
 // else that needs smaller paragraph text
 p.body-two, .body-two { @include body-two }
+// Use on small uppercase labels or descriptions
 p.overline, .overline { @include overline }
+// Use on paragraph or span elements for bold text
 strong, .strong { @include strong }
 
 // Captions
