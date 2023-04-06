@@ -618,12 +618,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
       );
     }
     // Customize function definition blocks.
-    if (options.noFunctionBlockFrame) {
-      Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
-        FUNCTION_BLOCK_NO_FRAME.init;
-    } else {
-      Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
-        FUNCTION_BLOCK.init;
+    if (Blockly.blockly_.Blocks['procedures_defnoreturn']) {
+      if (options.noFunctionBlockFrame) {
+        Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
+          FUNCTION_BLOCK_NO_FRAME.init;
+      } else {
+        Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
+          FUNCTION_BLOCK.init;
+      }
     }
 
     return workspace;
