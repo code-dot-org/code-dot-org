@@ -31,6 +31,8 @@ export default class VirtualMBBoard extends EventEmitter {
     return Promise.resolve();
   }
 
+  reset() {}
+
   /**
    * Create a serial port controller and open the serial port immediately.
    * @return {SerialPort}

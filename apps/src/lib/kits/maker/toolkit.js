@@ -74,7 +74,10 @@ export function connect({interpreter, onDisconnect}) {
     );
   }
 
-  if (currentBoard) {
+  const isVirtualBoard =
+    currentBoard instanceof VirtualCPBoard ||
+    currentBoard instanceof VirtualMBBoard;
+  if (currentBoard && !isVirtualBoard) {
     commands.injectBoardController(currentBoard);
     currentBoard.installOnInterpreter(interpreter);
     // When the board is reset, the components are disabled. Re-enable now.
