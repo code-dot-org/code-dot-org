@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2023-04-04T22:36:38.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -13,7 +9,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Help a Student Debug Their Code\r\n\r\n<img src=\"https://images.code.org/9e62ba920102879979acb2a7f6c216d8-image-1566234200067.36.46 AM.png\" style=\"float: right; width: 150px;\">\r\n\r\nA student has encountered a bug when attempting to draw sprites on the screen. The wrong sprite is in front, and one sprite's animation isn't showing up.\r\n\r\n# Do This\r\n\r\n* Find the problem that is causing the bug.\r\n* Consider the guiding questions that you might use to help the student debug their code. \r\n\r\n*Hint: Just like shapes, sprites are drawn in the order they are created.*",
+    "long_instructions": "# Help a Student Debug Their Code\r\n\r\n<img src=\"https://images.code.org/9e62ba920102879979acb2a7f6c216d8-image-1566234200067.36.46 AM.png\" style=\"float: right; width: 150px;\">\r\n\r\nA student has encountered a bug when attempting to draw sprites on the screen. The wrong sprite is in front, and one sprite's animation isn't showing up.\r\n\r\n# Do This\r\n\r\n1) Run the code to see what happens.\r\n2) Find the problems that are causing the bugs.\r\n3) Consider the guiding questions that you might use to help the student debug their code. \r\n\r\n*Hint: Just like shapes, sprites are drawn in the order they are created.*",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -71,9 +67,13 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2023-04-04T22:36:38.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-04-04T22:36:38.760+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites sequencing_2021\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites sequencing_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-04T22:36:38.760+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites sequencing_2021\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites sequencing_2021\"},{\"changed_at\":\"2023-04-05 23:18:59 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

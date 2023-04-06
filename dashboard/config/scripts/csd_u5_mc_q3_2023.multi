@@ -5,6 +5,8 @@ wrong 'True'
 right 'False'
 teacher_markdown <<MARKDOWN
 **Content: Unit 5 Lesson 11, 12**
+
+If someone likes music, they are most likely to like dogs.
 MARKDOWN
 
 markdown <<MARKDOWN

@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2023-04-04T22:36:59.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -61,7 +57,7 @@
     },
     "edit_code": true,
     "embed": "true",
-    "long_instructions": "# Keyboard Input\r\n\r\nOne common way conditionals are used is to check for different types of user input, especially key presses. Following the introduction to booleans and if statements, students are introduced to a new block called `keyDown()` which returns a boolean and can be used in conditionals statements to move sprites around the screen. \r\n\r\nHaving a way for a user to interact with a program makes it more interesting and dynamic. Without interaction from the user it is very difficult to create a game. Therefore the introduction of conditionals and user inputs for decision making is a critical step toward creating games.\r\n\r\n<img src=\"https://images.code.org/bc75b3f10229e2d033c7ad3918529ff5-image-1648651739004.34.23 AM.png\" style=\"float: right; height: 300px; clear: both; margin: 0 20px 20px 0;\">\r\n\r\n\r\n# Fish with Arrows\r\n\r\nThe sample program to the left of the screen uses keyboard inputs along to move fish across the screen. \r\n\r\n# Do This\r\n\r\n* Run the program to the left of the screen and use your left and right arrows to move the fish across the screen.\r\n\r\n<div style=\"clear:both\"/>\r\n",
+    "long_instructions": "# Keyboard Input\r\n\r\nOne common way conditionals are used is to check for different types of user input, especially key presses. Following the introduction to booleans and if statements, students are introduced to a new block called [`keyDown()`(#fff176)](/docs/ide/gamelab/expressions/keyDown)\r\n which returns a boolean and can be used in conditionals statements to move sprites around the screen. \r\n\r\nHaving a way for a user to interact with a program makes it more interesting and dynamic. Without interaction from the user it is very difficult to create a game. Therefore the introduction of conditionals and user inputs for decision making is a critical step toward creating games.\r\n\r\n<img src=\"https://images.code.org/bc75b3f10229e2d033c7ad3918529ff5-image-1648651739004.34.23 AM.png\" style=\"float: right; height: 300px; clear: both; margin: 0 20px 20px 0;\">\r\n\r\n\r\n# Fish with Arrows\r\n\r\nThe sample program to the left of the screen uses keyboard inputs along to move fish across the screen. \r\n\r\n# Do This\r\n\r\n1) Run the program to the left of the screen and use your left and right arrows to move the fish across the screen.\r\n\r\n<div style=\"clear:both\"/>\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -122,9 +118,13 @@
     "validation_enabled": "false",
     "preload_asset_list": null
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2023-04-04T22:36:59.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-04-04T22:36:59.540+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U3 Input Fish_2021\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U3 Input Fish_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-04T22:36:59.540+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U3 Input Fish_2021\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U3 Input Fish_2021\"},{\"changed_at\":\"2023-04-06 00:08:00 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

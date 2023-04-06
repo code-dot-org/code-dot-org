@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-04 22:37:46 UTC",
+    "serialized_at": "2023-04-06 00:17:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -408,6 +408,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U3_2023"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -430,6 +433,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U3L2_2023"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -452,6 +458,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U3L3_2023"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -474,6 +483,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_tools-U3_2023"
+        ],
         "progression": "Learning Tools"
       },
       "bonus": false,
@@ -496,6 +508,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-exU3L5_2023"
+        ],
         "progression": "Explore the first week of curriculum"
       },
       "bonus": false,
@@ -518,6 +533,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson2-overview_2023"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -540,6 +558,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-grid-overview_2023"
+        ],
         "progression": "Position shapes on the grid"
       },
       "bonus": false,
@@ -562,6 +583,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 1_2023"
+        ],
         "progression": "Position shapes on the grid"
       },
       "bonus": false,
@@ -584,6 +608,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Drawing Squares to Corners_2023"
+        ],
         "progression": "Position shapes on the grid"
       },
       "bonus": false,
@@ -606,6 +633,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 2_2023"
+        ],
         "progression": "Add color to shapes "
       },
       "bonus": false,
@@ -628,6 +658,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 sequence_2023"
+        ],
         "progression": "Add color to shapes "
       },
       "bonus": false,
@@ -650,6 +683,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-DrawingShapes-overview_2023"
+        ],
         "progression": "Add parameters"
       },
       "bonus": false,
@@ -672,6 +708,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Random Taller Rectangle_2023"
+        ],
         "progression": "Add parameters"
       },
       "bonus": false,
@@ -694,6 +733,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Random Debug Grass_2023"
+        ],
         "progression": "Add parameters"
       },
       "bonus": false,
@@ -716,6 +758,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-matching-c4u-DrawingShapes_2023"
+        ],
         "progression": "Add parameters"
       },
       "bonus": false,
@@ -738,6 +783,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Introduction to Variables - Part 1_2023"
+        ],
         "progression": "Add variables"
       },
       "bonus": false,
@@ -760,6 +808,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Variables Draw Poppy_2023"
+        ],
         "progression": "Add variables"
       },
       "bonus": false,
@@ -782,6 +833,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-variaables-overview_2023"
+        ],
         "progression": "Add variables"
       },
       "bonus": false,
@@ -804,6 +858,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson2-C4U-variables_2023"
+        ],
         "progression": "Add variables"
       },
       "bonus": false,
@@ -826,6 +883,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Variables random with assignment_2023"
+        ],
         "progression": "Add variables"
       },
       "bonus": false,
@@ -848,6 +908,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson3-overview_2023"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -870,6 +933,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Sprites Exploration_2023"
+        ],
         "progression": "Create a sprite"
       },
       "bonus": false,
@@ -892,6 +958,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Sprites in Game Lab_2023"
+        ],
         "progression": "Create a sprite"
       },
       "bonus": false,
@@ -914,6 +983,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites intro sprites_2023"
+        ],
         "progression": "Create a sprite"
       },
       "bonus": false,
@@ -936,6 +1008,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Animation Tab_2023"
+        ],
         "progression": "Animate a sprite"
       },
       "bonus": false,
@@ -958,6 +1033,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites sequencing_2023"
+        ],
         "progression": "Animate a sprite"
       },
       "bonus": false,
@@ -980,6 +1058,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-spriteOverview_2023"
+        ],
         "progression": "Animate a sprite"
       },
       "bonus": false,
@@ -1002,6 +1083,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-matching-c4u-mod3-lesson3-MakingSprites_2023"
+        ],
         "progression": "Animate a sprite"
       },
       "bonus": false,
@@ -1024,6 +1108,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Games properties xy_2023"
+        ],
         "progression": "Animate a sprite"
       },
       "bonus": false,
@@ -1046,6 +1133,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Introduction to the Draw Loop_2023"
+        ],
         "progression": "Add movement to a sprite"
       },
       "bonus": false,
@@ -1068,6 +1158,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Draw Loop Plugged orange and green_2023"
+        ],
         "progression": "Add movement to a sprite"
       },
       "bonus": false,
@@ -1090,6 +1183,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 dancing alien_2023"
+        ],
         "progression": "Add movement to a sprite"
       },
       "bonus": false,
@@ -1112,6 +1208,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-drawLoop-overview_2023"
+        ],
         "progression": "Add movement to a sprite"
       },
       "bonus": false,
@@ -1134,6 +1233,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Animating Sprite Movement_2023"
+        ],
         "progression": "Move a sprite across the screen "
       },
       "bonus": false,
@@ -1156,6 +1258,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprite Movement Right_2023"
+        ],
         "progression": "Move a sprite across the screen "
       },
       "bonus": false,
@@ -1178,6 +1283,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Diagonal Movement_2023"
+        ],
         "progression": "Move a sprite across the screen "
       },
       "bonus": false,
@@ -1200,6 +1308,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-counterPattern-overview_2023"
+        ],
         "progression": "Move a sprite across the screen "
       },
       "bonus": false,
@@ -1222,6 +1333,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson3-C4U-spriteMovement_2023"
+        ],
         "progression": "Move a sprite across the screen "
       },
       "bonus": false,
@@ -1244,6 +1358,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-overview_2023"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1266,6 +1383,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 - Booleans Video_2023"
+        ],
         "progression": "React to changes using conditional statements"
       },
       "bonus": false,
@@ -1288,6 +1408,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-booleanOverview_2023"
+        ],
         "progression": "React to changes using conditional statements"
       },
       "bonus": false,
@@ -1310,6 +1433,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-mod3-c4u-booleans_2023"
+        ],
         "progression": "React to changes using conditional statements"
       },
       "bonus": false,
@@ -1332,6 +1458,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-csd U3 conditional statements video_2023"
+        ],
         "progression": "React to changes using conditional statements"
       },
       "bonus": false,
@@ -1354,6 +1483,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Conditionals Apple 2_2023"
+        ],
         "progression": "React to changes using conditional statements"
       },
       "bonus": false,
@@ -1376,6 +1508,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Input Fish_2023"
+        ],
         "progression": "Change conditions using inputs"
       },
       "bonus": false,
@@ -1398,6 +1533,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 - Conditionals Video_2023"
+        ],
         "progression": "Change conditions using inputs"
       },
       "bonus": false,
@@ -1420,6 +1558,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 - complex - mouse down_2023"
+        ],
         "progression": "Change conditions using inputs"
       },
       "bonus": false,
@@ -1442,6 +1583,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-conditionals-C4U_2023"
+        ],
         "progression": "Change conditions using inputs"
       },
       "bonus": false,
@@ -1464,6 +1608,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-Abstraction_2023"
+        ],
         "progression": "Hide details with abstractions"
       },
       "bonus": false,
@@ -1486,6 +1633,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD: Sprite Velocity_2023"
+        ],
         "progression": "Hide details with abstractions"
       },
       "bonus": false,
@@ -1508,6 +1658,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 abstraction velocityX_2023"
+        ],
         "progression": "Hide details with abstractions"
       },
       "bonus": false,
@@ -1530,6 +1683,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 collisions isTouching intro_2023"
+        ],
         "progression": "Hide details with abstractions"
       },
       "bonus": false,
@@ -1552,6 +1708,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson4-abstraction-C4U_2023"
+        ],
         "progression": "Hide details with abstractions"
       },
       "bonus": false,
@@ -1574,6 +1733,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-U3_2023"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1601,6 +1763,31 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U3-Mini-ProjectsOverview_2023"
+        ],
+        "lesson.key": "Unit wrap up",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd-ci-3",
+        "activity_section.key": "183b74e5-ce79-4645-a256-fb8cd44d8feb"
+      },
+      "level_keys": [
+        "VPL-CSD-Summer-CI-CSD U3-Mini-ProjectsOverview_2023"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U3L5C1_2023"
+        ],
+        "progression": "Unit Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U3L5C1_2023"
         ],
         "lesson.key": "Unit wrap up",
@@ -1613,11 +1800,14 @@
       ]
     },
     {
-      "chapter": 56,
-      "position": 3,
-      "activity_section_position": 2,
+      "chapter": 57,
+      "position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U3L5C2_2023"
+        ],
         "progression": "Unit Projects"
       },
       "bonus": false,
@@ -1635,11 +1825,14 @@
       ]
     },
     {
-      "chapter": 57,
-      "position": 4,
+      "chapter": 58,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation_2023"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,
@@ -2304,6 +2497,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd-ci-3",
         "activity_section.key": "911de098-9ced-4f0a-83f4-8d81663a3027"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Summer-CI-CSD U3-Mini-ProjectsOverview_2023",
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U3-Mini-ProjectsOverview_2023"
+        ],
+        "lesson.key": "Unit wrap up",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd-ci-3",
+        "activity_section.key": "183b74e5-ce79-4645-a256-fb8cd44d8feb"
       }
     },
     {
