@@ -716,6 +716,12 @@ $small-footer-standard-width: 400px;
   }
 }
 
+/* Override footer position on StudioApp level pages. */
+#page-small-footer .small-footer-base {
+  position: fixed;
+}
+
+
 #copyright-scroll-area {
   overflow-y: auto;
   padding: 0.8em;
