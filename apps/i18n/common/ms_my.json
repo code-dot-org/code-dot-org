@@ -842,6 +842,7 @@
   "explainPairProgramming": "Apabila pengaturcaraan pasangan dihidupkan, pelajar boleh memilih untuk bekerja dengan rakan sekelas di komputer yang sama. Hidupkan tetapan ini jika anda mahu pelajar dapat bekerjasama sambil berkongsi kemajuan.",
   "explainPairProgrammingLearnMore": "Ketahui lebih lanjut tentang pengaturcaraan pasangan.",
   "explainRestrictedSectionEmail": "Jika ditetapkan kepada ‘ya,’ pelajar tidak akan dapat menyertai bahagian ini dengan menggunakan kod bahagian. Anda masih boleh memasukkan pelajar ke dalam bahagian tersebut secara manual dengan memindahkan atau menyalin maklumat mereka dari bahagian lain.",
+  "explainRestrictedSectionEmailToolTip": "Jika ditetapkan kepada ‘ya,’ pelajar tidak akan dapat menyertai bahagian ini dengan menggunakan kod bahagian. Anda masih boleh memasukkan pelajar ke dalam bahagian tersebut secara manual dengan memindahkan atau menyalin maklumat mereka dari bahagian lain.",
   "explainRestrictedSectionWordAndPicture": "Jika ditetapkan kepada ‘ya,’ pelajar tidak akan dapat menyertai bahagian ini dengan menggunakan kod bahagian. Anda masih boleh memasukkan pelajar ke dalam bahagian tersebut secara manual pada tab Uruskan Pelajar.",
   "explainRestrictedSectionLearnMore": "Ketahui lebih lanjut",
   "exploreDataset": "Visualisasikan {datasetName}",

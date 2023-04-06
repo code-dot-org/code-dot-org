@@ -50,12 +50,12 @@ describe('The JSDebugger redux duck', () => {
     interpreter.nextStep = JSInterpreter.StepType.IN;
     interpreter.executeInterpreter(true);
 
-    interpreter.isBreakpointRow = function(row) {
+    interpreter.isBreakpointRow = function (row) {
       return row === 3 || row === 5;
     };
     const observer = new Observer();
     let hitBreakpoint = false;
-    observer.observe(interpreter.onPause, function() {
+    observer.observe(interpreter.onPause, function () {
       hitBreakpoint = true;
     });
     interpreter.paused = false;

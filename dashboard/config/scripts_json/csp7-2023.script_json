@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-04 17:02:06 UTC",
+    "serialized_at": "2023-03-28 22:03:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -76,8 +76,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students work with envelopes and paper to model functions with parameters and return values. Students create their own physical function envelope for drawing a house that takes in different parameters, and then build another function to calculate and return the cost of building that house.  ",
-        "preparation": "* Collect various sizes of sticky notes. Small sticky notes are particularly useful for this activity. \n* Two envelopes per group\n* Pencils/pens\n* One baggy for a teacher demonstration (optional)\n* Print out copies of the Activity Guide for students\n* Review the Unit 7, Lesson 1 slides prior to the class\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-parameters-and-return-values-lessons-1-4/36484) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "In this Explore lesson, students follow a presentation and use manipulatives to understand the basics of creating a function with parameters and return values. ",
+        "preparation": "* Collect various sizes of sticky notes. Small sticky notes are particularly useful for this activity. \n* Two envelopes per group\n* Pencils/pens\n* One baggy for a teacher demonstration (optional)\n* Print out copies of the Activity Guide for students\n* Review the Unit 7, Lesson 1 slides prior to the class\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-parameters-and-return-values-lessons-1-4/36484) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/104BvGOZDwzVgA2Kxv1sKOg-8DkGDHAp6rTPGTozhvm4/edit?usp=sharing)",
         "student_overview": "Develop a mental model for how functions can be generalized using parameters and return values.",
         "unplugged": true
       },
@@ -97,8 +96,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students work with partners to investigate two different apps that use parameters and return values. ",
-        "preparation": "* Review the two apps that students will investigate in the lesson and make sure you understand the goals of the discussion prompts \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-parameters-and-return-values-lessons-1-4/36484) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "As with all Investigate lessons, this is an opportunity for students to dig into programs that use a new concept, in this case parameters and return, in the context of working apps. Encourage students to read the code carefully, discuss their findings with classmates, make connections to the Explore activity from the day before, and start making simple modifications to the program. Students will not leave this lesson as experts in writing programs with parameters and return, but they should understand the high level context and know they can refer back to the code in these investigate projects when they need help getting unstuck in the coming Practice and Make lessons.",
+        "preparation": "* Review the two apps that students will investigate in the lesson and make sure you understand the goals of the discussion prompts \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-parameters-and-return-values-lessons-1-4/36484) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1y306KdijkI9F-bebsez9N7poulRsnWpFYrJroUTxpxw/edit?usp=sharing)",
         "student_overview": "Investigate and modify sample apps that use parameters and return values. "
       },
       "seeding_key": {
@@ -117,8 +115,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students practice writing programs with parameters and return values by creating and debugging functions that use them.",
-        "preparation": "* Review the programming levels students will complete\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-parameters-and-return-values-lessons-1-4/36484) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This is students' opportunity to practice using parameters and return values in a variety of contexts. The progression of levels builds in complexity from students merely calling functions with parameters to designing functions and debugging complex programs that use parameters and return values. This lesson should build students familiarity with these concepts as they prepare for the Make project in the next lesson.",
+        "preparation": "* Review the programming levels students will complete\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-parameters-and-return-values-lessons-1-4/36484) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/12QKZZeyTmZLRTtkewPxbYnMIP3qVTcQOxqihLuYHqcg/edit?usp=sharing)",
         "student_overview": "Practice programming with parameters and return values through a set of programming puzzles."
       },
       "seeding_key": {
@@ -137,8 +134,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students use the knowledge and skills they've developed working with parameters and return values to develop a Rock Paper Scissors App. Unlike typical Make projects, students are given a significant portion of the starter code but are given three functions with parameters and return values that they'll need to develop themselves. At the end students submit their apps which can be assessed using a provided rubric.",
-        "preparation": "* Review the app students will need to make and ideally spend some time working on the project yourself to anticipate the challenges students will encounter\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-parameters-and-return-values-lessons-1-4/36484) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "Make lessons typically ask students to take on an entirely blank screen when writing their program. In this instance students have to take on the \"blank function\" which needs to fit within the larger program they're developing. This is part of a broader mindset shift that students develop in this unit. Functions with parameters and return values operate like their own \"mini programs\" which can be written and tested independently. There is actually less difference than students might think between previous make projects, in which students get the user interface elements and no code, and this project, in which they get some starter code but blank functions with parameters. In each case they need to develop programs that integrate into a larger portion of the project. The focus of this unit is how functions with parameters and return values help further split programs into logical chunks like this.",
+        "preparation": "* Review the app students will need to make and ideally spend some time working on the project yourself to anticipate the challenges students will encounter\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-parameters-and-return-values-lessons-1-4/36484) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/12em1bSUXefv_5SW-40ywMAYU9hyhscI1TjNJHxep7As/edit?usp=sharing)",
         "student_overview": "Make an app that uses functions with parameters and return."
       },
       "seeding_key": {
@@ -157,8 +153,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students learn the basics of libraries while building upon the envelope model of a function with a folder to represent a library. ",
-        "preparation": "* Review the slides and click through all the animations\n* Watch the Libraries video which introduces the Libraries tool in App Lab\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-libraries-lessons-5-7/36485) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "The mental model of a folder containing a group of functions is used to introduce the concept of a library. Throughout this lesson student explore the requirements for working with libraries and documentation. ",
+        "preparation": "* Review the slides and click through all the animations\n* Watch the Libraries video which introduces the Libraries tool in App Lab\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-libraries-lessons-5-7/36485) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1Mtvk4YJCW-PnX7MxqQPIJBiWOM0e-2oZHzdlRwJMXSw/edit?usp=sharing)",
         "student_overview": "Develop a mental model for how libraries work. ",
         "unplugged": true
       },
@@ -178,8 +173,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students work with partners to investigate two apps that use libraries as well as the code used to make a library. Through a series of guided discussions they learn how libraries help programmers simplify and reuse their code.",
-        "preparation": "* Read the code for both sample apps and their associated libraries\n* Practice sharing and importing libraries yourself in order to understand the process\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-libraries-lessons-5-7/36485) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "Students get a chance to see how libraries are used in actual apps before they begin building libraries themselves in the subsequent project. The sample apps are written in a clean and simple manner, helping students understand the usefulness of well-documented libraries. ",
+        "preparation": "* Read the code for both sample apps and their associated libraries\n* Practice sharing and importing libraries yourself in order to understand the process\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-libraries-lessons-5-7/36485) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1UgAG-m6JLbpQ8kjgfYo1ek19bu8zJEyV0C1mFcSi3Rg/edit?usp=sharing)",
         "student_overview": "Investigate and modify sample apps that use libraries learn how libraries help programmers simplify and reuse their code."
       },
       "seeding_key": {
@@ -198,8 +192,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students practice important skills for working with libraries, including testing and debugging libraries, and using libraries to help develop apps. After a brief introduction to these practices by the teacher, students spend the majority of their time programming in a level progression.",
-        "preparation": "* Review the programming levels students will complete\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-libraries-lessons-5-7/36485) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "Using libraries highlights a number of important concepts, skills, and mindsets. Here is a short list\r\n\r\n* Testing: Before sharing a library it is critical to make sure your functions actually work as intended. The best way to do this is to write tests that try out different cases of your program. By doing this like testing positive and negative numbers, or testing out edge cases, it's possible to assure yourself that your code works as you expect.\r\n* Debugging: Closely related to the point above, debugging libraries can be tricky once the program is shared with another student. While students can test functions that were shared with them, it will be up to the original author of the code to make the changes and ensure their library is bug free.\r\n* Abstraction: Libraries allow you to make blocks that are \"higher level\" than other blocks in the toolbox. The result is that the actual programs you write either will be shorter, since library code does the heavy lifting, or more complex, because library code allows you to focus on bigger problems. In either case, libraries help you focus on the high level problem you're solving rather than focus on the low level details, and this is an example of abstraction in programming.",
+        "preparation": "* Review the programming levels students will complete\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-libraries-lessons-5-7/36485) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1Xe8kH5tpV05NFZCXLhTR9dOqH66A2tQNyREtqm4FsDs/edit?usp=sharing)",
         "student_overview": "Practice programming with libraries through a set of programming puzzles."
       },
       "seeding_key": {
@@ -309,21 +302,8 @@
   ],
   "lesson_activities": [
     {
-      "key": "637c9c71-747c-40ab-88c9-acdf19443d30",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "637c9c71-747c-40ab-88c9-acdf19443d30",
-        "lesson.key": "Parameters and Return Explore",
-        "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2023"
-      }
-    },
-    {
       "key": "af9b5fa0-cd63-450a-aae2-6b9598ef3a28",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -337,7 +317,7 @@
     },
     {
       "key": "0428c938-0526-486f-8dca-5132e46970ff",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -351,7 +331,7 @@
     },
     {
       "key": "7f5c2516-d61a-4fdf-8b5f-9697a9637c0d",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -364,21 +344,8 @@
       }
     },
     {
-      "key": "d147af8d-4666-4acf-92b5-51818287f4e6",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d147af8d-4666-4acf-92b5-51818287f4e6",
-        "lesson.key": "Parameters and Return Investigate",
-        "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2023"
-      }
-    },
-    {
       "key": "5c2e4187-7edf-4aab-88b7-462fa271ab9b",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -392,7 +359,7 @@
     },
     {
       "key": "b1fb6ca2-4f51-47f8-8e6b-c87103839e14",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -406,7 +373,7 @@
     },
     {
       "key": "68b79110-2489-459f-bec0-ef00529a7d28",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -420,7 +387,7 @@
     },
     {
       "key": "6f75e21a-d55c-47cd-b4c0-aed13fe2739d",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -431,21 +398,8 @@
       }
     },
     {
-      "key": "079fa8d5-f303-4121-9af6-796d116d0b69",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "079fa8d5-f303-4121-9af6-796d116d0b69",
-        "lesson.key": "Parameters and Return Practice",
-        "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2023"
-      }
-    },
-    {
       "key": "54e56b69-9dc0-45cb-89af-8ecf6e207bec",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -459,7 +413,7 @@
     },
     {
       "key": "c564b5be-1386-4811-9c0a-71f9e668085b",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -473,7 +427,7 @@
     },
     {
       "key": "6f96f247-10dc-4189-b633-b93729cffea4",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -487,7 +441,7 @@
     },
     {
       "key": "140da988-cbf4-4871-90d1-4ef19c67d620",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -498,21 +452,8 @@
       }
     },
     {
-      "key": "4a0ec9e6-7f89-4a9f-af7a-f78d961c170f",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "4a0ec9e6-7f89-4a9f-af7a-f78d961c170f",
-        "lesson.key": "Parameters and Return Make",
-        "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2023"
-      }
-    },
-    {
       "key": "6ab02cd6-4589-4f2f-ae9a-0916332a46bc",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -526,7 +467,7 @@
     },
     {
       "key": "30217421-9fd6-4098-af7f-a9f0489014f5",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -540,7 +481,7 @@
     },
     {
       "key": "7490ac69-242e-46e7-b15a-c963df4e1cda",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -553,21 +494,8 @@
       }
     },
     {
-      "key": "1f9a1909-da1c-4398-bea6-6276edfe92b1",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1f9a1909-da1c-4398-bea6-6276edfe92b1",
-        "lesson.key": "Libraries Explore",
-        "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2023"
-      }
-    },
-    {
       "key": "246b846d-51de-4bdc-8901-3ff95db92367",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -581,7 +509,7 @@
     },
     {
       "key": "ae799a1d-ff01-48ff-9409-80e50d2f17d7",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -595,7 +523,7 @@
     },
     {
       "key": "d7bebddb-a3dc-4fdf-9d75-b1a7261c2446",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -609,7 +537,7 @@
     },
     {
       "key": "64c959d2-dc5f-4ce9-9c2f-5e83452fb25b",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -620,21 +548,8 @@
       }
     },
     {
-      "key": "6aab06be-44f0-47de-933c-acbfbfda0f00",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "6aab06be-44f0-47de-933c-acbfbfda0f00",
-        "lesson.key": "Libraries Investigate",
-        "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2023"
-      }
-    },
-    {
       "key": "76dfee43-73d6-441f-b1e5-5263fb806e21",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -648,7 +563,7 @@
     },
     {
       "key": "cd18f986-3ea3-4cb0-8c6f-684ffa206468",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -662,7 +577,7 @@
     },
     {
       "key": "c8ff8a79-9cec-48d0-9146-7a5dc0341b08",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -675,21 +590,8 @@
       }
     },
     {
-      "key": "506aae89-14e6-4107-a93f-1f93c8c71458",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "506aae89-14e6-4107-a93f-1f93c8c71458",
-        "lesson.key": "Libraries Practice",
-        "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2023"
-      }
-    },
-    {
       "key": "9ca2e408-5e5a-4b8d-b915-d2b37ca7451e",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -703,7 +605,7 @@
     },
     {
       "key": "e7baa204-ea22-4177-a159-d973d92f7332",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -717,7 +619,7 @@
     },
     {
       "key": "37015436-ef1b-4080-a92d-c20eef246723",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -731,7 +633,7 @@
     },
     {
       "key": "e2684355-c6cf-4bbe-9853-40647bcf243e",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -973,17 +875,6 @@
   ],
   "activity_sections": [
     {
-      "key": "85ee1a66-6739-4223-99b8-7af850a63dea",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/104BvGOZDwzVgA2Kxv1sKOg-8DkGDHAp6rTPGTozhvm4/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "85ee1a66-6739-4223-99b8-7af850a63dea",
-        "lesson_activity.key": "637c9c71-747c-40ab-88c9-acdf19443d30"
-      }
-    },
-    {
       "key": "d6c3dc09-0593-4955-a17a-1a57c4eb025a",
       "position": 1,
       "properties": {
@@ -1041,17 +932,6 @@
       "seeding_key": {
         "activity_section.key": "a8d7ae32-0866-42d2-8fb3-be0cc61e8769",
         "lesson_activity.key": "7f5c2516-d61a-4fdf-8b5f-9697a9637c0d"
-      }
-    },
-    {
-      "key": "253d82ad-99bf-4118-91f0-0218355390f1",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1y306KdijkI9F-bebsez9N7poulRsnWpFYrJroUTxpxw/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "253d82ad-99bf-4118-91f0-0218355390f1",
-        "lesson_activity.key": "d147af8d-4666-4acf-92b5-51818287f4e6"
       }
     },
     {
@@ -1192,17 +1072,6 @@
       "seeding_key": {
         "activity_section.key": "95b43cbc-1b33-448c-95e5-5e94d218b7ab",
         "lesson_activity.key": "6f75e21a-d55c-47cd-b4c0-aed13fe2739d"
-      }
-    },
-    {
-      "key": "a5e99303-b1c4-4d4e-9697-787c97d6c308",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1OvnQukZwOyVzTWuFFll6nh9rp0XkrGzA4DLjt7xRzmg/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "a5e99303-b1c4-4d4e-9697-787c97d6c308",
-        "lesson_activity.key": "079fa8d5-f303-4121-9af6-796d116d0b69"
       }
     },
     {
@@ -1418,18 +1287,6 @@
       }
     },
     {
-      "key": "909a28ea-33a8-487f-989c-7c16faefdad6",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/12em1bSUXefv_5SW-40ywMAYU9hyhscI1TjNJHxep7As/edit?usp=sharing) to access the modifications.",
-        "progression_name": "Try the Rock Paper Scissors App"
-      },
-      "seeding_key": {
-        "activity_section.key": "909a28ea-33a8-487f-989c-7c16faefdad6",
-        "lesson_activity.key": "4a0ec9e6-7f89-4a9f-af7a-f78d961c170f"
-      }
-    },
-    {
       "key": "cf157247-5416-433f-8001-3589162888b3",
       "position": 1,
       "properties": {
@@ -1495,7 +1352,13 @@
       "key": "59c4d2b7-9e7b-431b-a960-f6bcd241d4b8",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Quickly review what students will be doing again before they move on to the next step."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Quickly review what students will be doing again before they move on to the next step.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Make lessons typically ask students to take on an entirely blank screen when writing their program. In this instance students have to take on the \"blank function\" which needs to fit within the larger program they're developing. This is part of a broader mindset shift that students develop in this unit. Functions with parameters and return values operate like their own \"mini programs\" which can be written and tested independently. There is actually less difference than students might think between previous make projects, in which students get the user interface elements and no code, and this project, in which they get some starter code but blank functions with parameters. In each case they need to develop programs that integrate into a larger portion of the project. The focus of this unit is how functions with parameters and return values help further split programs into logical chunks like this."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "59c4d2b7-9e7b-431b-a960-f6bcd241d4b8",
@@ -1558,17 +1421,6 @@
       "seeding_key": {
         "activity_section.key": "996c6d64-4fa3-4567-a1cd-59d6ac2b0057",
         "lesson_activity.key": "7490ac69-242e-46e7-b15a-c963df4e1cda"
-      }
-    },
-    {
-      "key": "c9c6a3b5-7eb9-4dc6-92ed-8861c5cd7fc3",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1Mtvk4YJCW-PnX7MxqQPIJBiWOM0e-2oZHzdlRwJMXSw/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "c9c6a3b5-7eb9-4dc6-92ed-8861c5cd7fc3",
-        "lesson_activity.key": "1f9a1909-da1c-4398-bea6-6276edfe92b1"
       }
     },
     {
@@ -1685,17 +1537,6 @@
       "seeding_key": {
         "activity_section.key": "779083e1-b5d9-4fa7-9e69-d354abf5f892",
         "lesson_activity.key": "64c959d2-dc5f-4ce9-9c2f-5e83452fb25b"
-      }
-    },
-    {
-      "key": "d727f7f1-3f3c-48b1-b2f9-b882a472adce",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1UgAG-m6JLbpQ8kjgfYo1ek19bu8zJEyV0C1mFcSi3Rg/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "d727f7f1-3f3c-48b1-b2f9-b882a472adce",
-        "lesson_activity.key": "6aab06be-44f0-47de-933c-acbfbfda0f00"
       }
     },
     {
@@ -1928,17 +1769,6 @@
       }
     },
     {
-      "key": "375289ea-cf29-487c-8586-22af909a55f4",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1Xe8kH5tpV05NFZCXLhTR9dOqH66A2tQNyREtqm4FsDs/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "375289ea-cf29-487c-8586-22af909a55f4",
-        "lesson_activity.key": "506aae89-14e6-4107-a93f-1f93c8c71458"
-      }
-    },
-    {
       "key": "c0b420a0-7aa0-4b34-ab30-776a9359e128",
       "position": 1,
       "properties": {
@@ -2029,7 +1859,13 @@
       "key": "bea52ab0-c3a5-47b4-b0f2-7dfe5fde3827",
       "position": 5,
       "properties": {
-        "description": "\n\n**Levels 3-5 Debugging Libraries:** Students practice debugging code that will be used in a library before sending it to a classmate. This is useful help before the project in the next lesson where students will develop a library.\n\n* Level 3: Students debug a simple library for manipulating numbers\n* Level 4: Students debug a simple library for manipulating strings\n* Level 5: Students debug and finish writing a simple library for manipulating strings\n\n**Extension Opportunities:**\n\n* Levels 1 and 2: Students can add additional features to the two apps in levels 2 and 3 using the library functions made available."
+        "description": "\n\n**Levels 3-5 Debugging Libraries:** Students practice debugging code that will be used in a library before sending it to a classmate. This is useful help before the project in the next lesson where students will develop a library.\n\n* Level 3: Students debug a simple library for manipulating numbers\n* Level 4: Students debug a simple library for manipulating strings\n* Level 5: Students debug and finish writing a simple library for manipulating strings\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using libraries highlights a number of important concepts, skills, and mindsets. Here is a short list\n\n* **Testing:** Before sharing a library it is critical to make sure your functions actually work as intended. The best way to do this is to write tests that try out different cases of your program. By doing this like testing positive and negative numbers, or testing out edge cases, it's possible to assure yourself that your code works as you expect.\n* **Debugging:** Closely related to the point above, debugging libraries can be tricky once the program is shared with another student. While students can test functions that were shared with them, it will be up to the original author of the code to make the changes and ensure their library is bug free.\n* **Abstraction:** Libraries allow you to make blocks that are \"higher level\" than other blocks in the toolbox. The result is that the actual programs you write either will be shorter, since library code does the heavy lifting, or more complex, because library code allows you to focus on bigger problems. In either case, libraries help you focus on the high level problem you're solving rather than focus on the low level details, and this is an example of abstraction in programming."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "bea52ab0-c3a5-47b4-b0f2-7dfe5fde3827",
@@ -2040,7 +1876,13 @@
       "key": "fdcb0d2a-0a76-40f2-be08-7caf860558b7",
       "position": 6,
       "properties": {
-        "progression_name": "Testing Libraries"
+        "progression_name": "Testing Libraries",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Extension Opportunities:** Levels 1 and 2: Students can add additional features to the two apps in levels 1 and 2 using the library functions made available."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fdcb0d2a-0a76-40f2-be08-7caf860558b7",

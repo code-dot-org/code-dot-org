@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-26 16:35:45 UTC",
+    "serialized_at": "2023-04-04 16:00:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -159,7 +159,7 @@
     },
     {
       "key": "Project   Internet Dilemmas Part 1",
-      "name": "Project   Internet Dilemmas Part 1",
+      "name": "Project Internet Dilemmas",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -167,9 +167,8 @@
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students begin working on a two-day project exploring a dilemma at the intersection of the Internet and society. ",
-        "preparation": "* Review the poster from Lesson 1 and pick a few sticky notes to talk about it in the Warm Up. \n* Preview the articles in order to answer student questions. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-internet-dilemmas-unit-2-lessons-7-8/36471) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "In this project, students explore a relevant Internet dilemma: Net Neutrality, Internet Censorship, or the Digital Divide. Students apply their knowledge of how the Internet works to address the core question related to their chosen dilemma. This project addresses the \"so what\" question - why is it important to learn about how the Internet works?",
+        "overview": "Students work on a two-day project exploring a dilemma at the intersection of the Internet and society. In this project, students explore a relevant Internet dilemma: Net Neutrality, Internet Censorship, or the Digital Divide. Students apply their knowledge of how the Internet works to address the core question related to their chosen dilemma. This project addresses the \"so what\" question - why is it important to learn about how the Internet works?",
+        "preparation": "* Review the poster from Lesson 1 and pick a few sticky notes to talk about it in the Warm Up. \n* Preview the articles in order to answer student questions. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-internet-dilemmas-unit-2-lessons-7-8/36471) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our Virtual Lesson Modifications [Day 1](https://docs.google.com/document/d/134Qj6cmMUgyh8Oc53Dof61qmTjvwhkswQ-Rr0ocCLu0/edit?usp=sharing) and [Day 2](https://docs.google.com/document/d/18eYxv3mEQXbeTFTrKY1dNy6b0UT8XD_ulBMzxfHdKFg/edit?usp=sharing)\n",
         "student_overview": "Begin forming your own answer to the question \"Has the Internet made the world better or worse\" by considering your own experiences and then reading articles about the impact of the Internet on the world."
       },
       "seeding_key": {
@@ -222,8 +221,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "7545587d-5d71-4abc-ac96-8e01f28398c6",
+      "key": "3fd212ee-5fac-4f8e-ac98-fd3ad21193ea",
       "position": 1,
+      "properties": {
+        "name": "The Pre-Unit Pulse"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3fd212ee-5fac-4f8e-ac98-fd3ad21193ea",
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2023"
+      }
+    },
+    {
+      "key": "7545587d-5d71-4abc-ac96-8e01f28398c6",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -237,7 +249,7 @@
     },
     {
       "key": "3daf571c-7176-467a-833c-5f2c3dc64898",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -251,7 +263,7 @@
     },
     {
       "key": "f274f0b4-eb4e-4cec-94d2-2931f7b127c6",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -486,24 +498,11 @@
       }
     },
     {
-      "key": "4e39be01-3ab1-40dd-b08d-5aefaa21355a",
+      "key": "629b398c-7f3f-432a-8105-381f42beebc5",
       "position": 1,
       "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "4e39be01-3ab1-40dd-b08d-5aefaa21355a",
-        "lesson.key": "Project   Internet Dilemmas Part 1",
-        "lesson_group.key": "csp_unit2_2020",
-        "script.name": "csp2-2023"
-      }
-    },
-    {
-      "key": "629b398c-7f3f-432a-8105-381f42beebc5",
-      "position": 2,
-      "properties": {
-        "duration": 5,
-        "name": "Warm Up"
+        "duration": 45,
+        "name": "Day 1"
       },
       "seeding_key": {
         "lesson_activity.key": "629b398c-7f3f-432a-8105-381f42beebc5",
@@ -513,25 +512,11 @@
       }
     },
     {
-      "key": "5c099ea7-0f73-426a-b5a5-bcc20236698d",
-      "position": 3,
-      "properties": {
-        "duration": 35,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5c099ea7-0f73-426a-b5a5-bcc20236698d",
-        "lesson.key": "Project   Internet Dilemmas Part 1",
-        "lesson_group.key": "csp_unit2_2020",
-        "script.name": "csp2-2023"
-      }
-    },
-    {
       "key": "8d50c603-a607-4087-b33a-966b2bc95564",
-      "position": 4,
+      "position": 2,
       "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
+        "duration": 45,
+        "name": "Day 2"
       },
       "seeding_key": {
         "lesson_activity.key": "8d50c603-a607-4087-b33a-966b2bc95564",
@@ -638,6 +623,24 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "dd2fb463-af64-4540-806d-05d55c4c172d",
+      "position": 1,
+      "properties": {
+        "description": "Have your students complete these questions independently some time before starting this unit. ",
+        "progression_name": "The Pre-Unit Pulse",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Pre-Unit Pulse Questions:** The answers to these questions can provide insights into the preferences, strengths, and motivations of your students. If you'd like to adapt the questions or add in your own, you may want to make a copy of [this Google Form](https://docs.google.com/forms/d/1gqzFd8b9sxTVsi7PBPyM48l75Y43w_F55eEo3b8PkY8/copy) which already has the existing questions populated.\n\nFor more tips and ideas of how to use these questions, check out the [CSP Guide to Pre-Unit Pulse Questions](https://docs.google.com/document/d/1jx43dakN6og2n7iey_uQrNwcpMHQRbv1RCPZFHpQdYw/edit?usp=sharing)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dd2fb463-af64-4540-806d-05d55c4c172d",
+        "lesson_activity.key": "3fd212ee-5fac-4f8e-ac98-fd3ad21193ea"
+      }
+    },
     {
       "key": "ead7c8b2-fb50-404f-89c8-c57664f14d79",
       "position": 1,
@@ -1956,21 +1959,12 @@
       }
     },
     {
-      "key": "656bc2d6-4466-4ce4-8afc-1992fe8554c7",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/134Qj6cmMUgyh8Oc53Dof61qmTjvwhkswQ-Rr0ocCLu0/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "656bc2d6-4466-4ce4-8afc-1992fe8554c7",
-        "lesson_activity.key": "4e39be01-3ab1-40dd-b08d-5aefaa21355a"
-      }
-    },
-    {
       "key": "8a37ca66-7b48-49da-b999-6da978a4401c",
       "position": 1,
       "properties": {
         "description": "We started this unit by writing down our thoughts on the Internet and how it works. Let's review a few of your questions on these sticky notes, and see if we know the answers now.",
+        "duration": "5",
+        "name": "Warm Up",
         "remarks": true
       },
       "seeding_key": {
@@ -2008,60 +2002,64 @@
       }
     },
     {
-      "key": "63779ab9-ad12-4921-9904-48dacfb1f8a0",
-      "position": 1,
+      "key": "8c73f5f3-4a36-4a81-bedc-6b76da82d59c",
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Today, you are going to pretend that you are the Chief Technology Advisor for a candidate running for elected office. Your candidate is relying on you to help inform her about important technological dilemmas and come up with good policy ideas to address them. For this project you’ll investigate a social dilemma related to the Internet and prepare a report summarizing your findings and making a policy recommendation for your candidate.\n\nLet's take a look at three of the different dilemmas: Net Neutrality, Internet Censorship, and the Digital Divide.",
+        "duration": "35",
+        "name": "Activity",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "63779ab9-ad12-4921-9904-48dacfb1f8a0",
-        "lesson_activity.key": "5c099ea7-0f73-426a-b5a5-bcc20236698d"
+        "activity_section.key": "8c73f5f3-4a36-4a81-bedc-6b76da82d59c",
+        "lesson_activity.key": "629b398c-7f3f-432a-8105-381f42beebc5"
       }
     },
     {
-      "key": "9818a079-eef2-4f17-bf6f-142f5168e3f3",
-      "position": 2,
+      "key": "1a218073-a2ab-4662-b474-72b348a6cb8e",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Distribute:** Give students copies of [r internet_dilemmas/csp/2023]",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Role of the Assessment:** In this lesson, students begin a two day project where they will demonstrate their understanding of key issues surrounding the Internet. This project is designed to be used in tandem with the Unit 2 Assessment to evaluate student progress in Unit 2 content. \n"
+            "markdown": "**Role of the Assessment:** In this lesson, students begin a two day project where they will demonstrate their understanding of key issues surrounding the Internet. This project is designed to be used in tandem with the Unit 2 Assessment to evaluate student progress in Unit 2 content. \n\nFor more information about assessment check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit?usp=sharing)."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "9818a079-eef2-4f17-bf6f-142f5168e3f3",
-        "lesson_activity.key": "5c099ea7-0f73-426a-b5a5-bcc20236698d"
+        "activity_section.key": "1a218073-a2ab-4662-b474-72b348a6cb8e",
+        "lesson_activity.key": "629b398c-7f3f-432a-8105-381f42beebc5"
       }
     },
     {
-      "key": "6804bbcf-548f-4330-8708-df517b22f4f2",
-      "position": 3,
+      "key": "e708faa9-01cb-4a7a-9f3e-a2733d1ff473",
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Read out loud the Background & Core Question for each dilemma. \n\n\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 1 - Choose (3 mins):** Students read over the first page of the Project Guide and pick their Dilemma. At the end of this time, take a quick poll on who is doing what dilemma. You will want to ensure that the dilemmas are evenly covered by the class. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 2 - Review the One-Pager and Rubric (5 mins):** Students review the one pager template and rubric to make sure they understand what they'll be responsible for creating for this project and how it’ll be evaluated.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 3 - Review the Concept Bank (3 mins):** This concept bank includes the key terms and concepts covered in this unit. Students should quickly review them before reading their articles so that they’ll be ready to identify them in their articles. They can also refer to these as they complete their one-pager.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 4 - Review Your Sources (20 mins):** Students review the three sources provided or additional ones they find online. For each source they take notes on instances when their impacted groups are mentioned or technical details that are explained."
       },
       "seeding_key": {
-        "activity_section.key": "6804bbcf-548f-4330-8708-df517b22f4f2",
-        "lesson_activity.key": "5c099ea7-0f73-426a-b5a5-bcc20236698d"
+        "activity_section.key": "e708faa9-01cb-4a7a-9f3e-a2733d1ff473",
+        "lesson_activity.key": "629b398c-7f3f-432a-8105-381f42beebc5"
       }
     },
     {
-      "key": "5715a069-478a-40f2-8a89-75b6da75ef42",
-      "position": 1,
+      "key": "ec3de599-69d3-483a-ad26-b42c47c479dc",
+      "position": 7,
       "properties": {
         "description": "Next time you'll have most of the class to work on your one-pagers and we'll take time at the end to share what you've learned.",
+        "duration": "5",
+        "name": "Wrap Up",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "5715a069-478a-40f2-8a89-75b6da75ef42",
-        "lesson_activity.key": "8d50c603-a607-4087-b33a-966b2bc95564"
+        "activity_section.key": "ec3de599-69d3-483a-ad26-b42c47c479dc",
+        "lesson_activity.key": "629b398c-7f3f-432a-8105-381f42beebc5"
       }
     },
     {
-      "key": "a54c4417-2c64-4146-a06f-88fd1a6ca012",
-      "position": 2,
+      "key": "deda3207-c702-4914-9a13-57b84eebcfb5",
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Students add to their journal the definition for digital divide.",
         "tips": [
@@ -2072,7 +2070,133 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "a54c4417-2c64-4146-a06f-88fd1a6ca012",
+        "activity_section.key": "deda3207-c702-4914-9a13-57b84eebcfb5",
+        "lesson_activity.key": "629b398c-7f3f-432a-8105-381f42beebc5"
+      }
+    },
+    {
+      "key": "28bec9b0-2d5c-4e86-a431-23e91cbe9f8c",
+      "position": 1,
+      "properties": {
+        "description": "Yesterday you began researching for your Internet Dilemma Policy One Pager. Today you will write the One Pager and then share what you've learned.",
+        "duration": "3",
+        "name": "Warm Up",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Get to the Activity:** The warm-up is short today. Continue on to the activity as soon as possible to give students the maximum amount of time to complete their one-pagers. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "28bec9b0-2d5c-4e86-a431-23e91cbe9f8c",
+        "lesson_activity.key": "8d50c603-a607-4087-b33a-966b2bc95564"
+      }
+    },
+    {
+      "key": "38347b2e-6f49-4705-bab1-b52f7a9a8a2c",
+      "position": 2,
+      "properties": {
+        "description": "####Policy One Pagers\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This (30 mins):** Students complete each section of the Internet Dilemma Policy One Pager found in [r internet_dilemmas/csp/2023].",
+        "duration": " 40",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Role of the Assessment:** In this lesson, students finish a two day project where they  demonstrate their understanding of key issues surrounding the Internet. This project is designed to be used in tandem with the Unit 2 Assessment to evaluate student progress in Unit 2 content. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "38347b2e-6f49-4705-bab1-b52f7a9a8a2c",
+        "lesson_activity.key": "8d50c603-a607-4087-b33a-966b2bc95564"
+      }
+    },
+    {
+      "key": "f1277d0f-4f84-4877-81db-f3016d4357f3",
+      "position": 3,
+      "properties": {
+        "description": "####Share Out"
+      },
+      "seeding_key": {
+        "activity_section.key": "f1277d0f-4f84-4877-81db-f3016d4357f3",
+        "lesson_activity.key": "8d50c603-a607-4087-b33a-966b2bc95564"
+      }
+    },
+    {
+      "key": "e1d0a476-4aad-45b2-bc40-ed75815a8e3f",
+      "position": 4,
+      "properties": {
+        "description": "Nice work! We are going to take the rest of class to share out what we've learned about these Digital Dilemmas. I'd like to ask for a couple of volunteers for each Dilemma to quickly share what they've learned about their topic and their recommendations.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Keep an eye on the time for the share out. Students only have a minute or two to share their thoughts. The most important thing is that each dilemma should get equal coverage.  "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e1d0a476-4aad-45b2-bc40-ed75815a8e3f",
+        "lesson_activity.key": "8d50c603-a607-4087-b33a-966b2bc95564"
+      }
+    },
+    {
+      "key": "ee5c8e11-0ee3-49a1-b9b7-364ae01c343e",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Net Neutrality\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Internet Censorship\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** The Digital Divide"
+      },
+      "seeding_key": {
+        "activity_section.key": "ee5c8e11-0ee3-49a1-b9b7-364ae01c343e",
+        "lesson_activity.key": "8d50c603-a607-4087-b33a-966b2bc95564"
+      }
+    },
+    {
+      "key": "df3f0929-1a29-4cd5-a509-2d1132fdffc1",
+      "position": 6,
+      "properties": {
+        "description": "These dilemmas are tough - that's what makes a good dilemma. But hopefully you can now understand why it is so important to understand how the Internet works. You are now prepared to thoughtfully engage in these types of conversations that you may hear politicians talking about or read about in the news.",
+        "duration": "2",
+        "name": "Wrap Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "df3f0929-1a29-4cd5-a509-2d1132fdffc1",
+        "lesson_activity.key": "8d50c603-a607-4087-b33a-966b2bc95564"
+      }
+    },
+    {
+      "key": "86d9d9d9-3738-4166-b64f-fc667ae66591",
+      "position": 7,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "86d9d9d9-3738-4166-b64f-fc667ae66591",
+        "lesson_activity.key": "8d50c603-a607-4087-b33a-966b2bc95564"
+      }
+    },
+    {
+      "key": "39bb44c6-502b-48e9-84a5-c78b27f9103c",
+      "position": 8,
+      "properties": {
+        "description": "####Assessment: Submit\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students turn in the Project Guide for assessment."
+      },
+      "seeding_key": {
+        "activity_section.key": "39bb44c6-502b-48e9-84a5-c78b27f9103c",
+        "lesson_activity.key": "8d50c603-a607-4087-b33a-966b2bc95564"
+      }
+    },
+    {
+      "key": "2e5946e6-b245-4236-b2db-703e774e77cf",
+      "position": 9,
+      "properties": {
+        "progression_name": "End-of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e5946e6-b245-4236-b2db-703e774e77cf",
         "lesson_activity.key": "8d50c603-a607-4087-b33a-966b2bc95564"
       }
     },
@@ -2248,6 +2372,81 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "CSP U2InterestInventoryQ1"
+        ],
+        "progression": "The Pre-Unit Pulse"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U2InterestInventoryQ1"
+        ],
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2023",
+        "activity_section.key": "dd2fb463-af64-4540-806d-05d55c4c172d"
+      },
+      "level_keys": [
+        "CSP U2InterestInventoryQ1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U2InterestInventoryQ3"
+        ],
+        "progression": "The Pre-Unit Pulse"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U2InterestInventoryQ3"
+        ],
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2023",
+        "activity_section.key": "dd2fb463-af64-4540-806d-05d55c4c172d"
+      },
+      "level_keys": [
+        "CSP U2InterestInventoryQ3"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U2InterestInventoryQ2"
+        ],
+        "progression": "The Pre-Unit Pulse"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U2InterestInventoryQ2"
+        ],
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2023",
+        "activity_section.key": "dd2fb463-af64-4540-806d-05d55c4c172d"
+      },
+      "level_keys": [
+        "CSP U2InterestInventoryQ2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "CSP U2L1 Internet Simulator: Sending Text_2023"
         ],
         "progression": "Internet Simulator"
@@ -2267,8 +2466,8 @@
       ]
     },
     {
-      "chapter": 2,
-      "position": 2,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -2292,7 +2491,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2317,7 +2516,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2342,7 +2541,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2367,7 +2566,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 9,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -2392,7 +2591,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2417,7 +2616,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2442,7 +2641,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -2467,7 +2666,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2492,7 +2691,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2517,7 +2716,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 15,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -2542,7 +2741,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2567,7 +2766,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2592,7 +2791,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -2617,14 +2816,11 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csp2_2023"
-        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -2632,17 +2828,17 @@
         "script_level.level_keys": [
           "Student End of Unit Survey_csp2_2023"
         ],
-        "lesson.key": "Project   Internet Dilemmas Part 2",
+        "lesson.key": "Project   Internet Dilemmas Part 1",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2023",
-        "activity_section.key": "33a7fe42-e5b3-4287-992e-bd1c5a1b1224"
+        "activity_section.key": "2e5946e6-b245-4236-b2db-703e774e77cf"
       },
       "level_keys": [
         "Student End of Unit Survey_csp2_2023"
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2668,6 +2864,42 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP U2InterestInventoryQ1",
+        "script_level.level_keys": [
+          "CSP U2InterestInventoryQ1"
+        ],
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2023",
+        "activity_section.key": "dd2fb463-af64-4540-806d-05d55c4c172d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U2InterestInventoryQ3",
+        "script_level.level_keys": [
+          "CSP U2InterestInventoryQ3"
+        ],
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2023",
+        "activity_section.key": "dd2fb463-af64-4540-806d-05d55c4c172d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U2InterestInventoryQ2",
+        "script_level.level_keys": [
+          "CSP U2InterestInventoryQ2"
+        ],
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2023",
+        "activity_section.key": "dd2fb463-af64-4540-806d-05d55c4c172d"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "CSP U2L1 Internet Simulator: Sending Text_2023",
@@ -2854,10 +3086,10 @@
         "script_level.level_keys": [
           "Student End of Unit Survey_csp2_2023"
         ],
-        "lesson.key": "Project   Internet Dilemmas Part 2",
+        "lesson.key": "Project   Internet Dilemmas Part 1",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2023",
-        "activity_section.key": "33a7fe42-e5b3-4287-992e-bd1c5a1b1224"
+        "activity_section.key": "2e5946e6-b245-4236-b2db-703e774e77cf"
       }
     },
     {

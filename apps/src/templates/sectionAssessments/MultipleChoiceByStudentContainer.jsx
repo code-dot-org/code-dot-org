@@ -49,12 +49,12 @@ class MultipleChoiceByStudentContainer extends Component {
   }
 }
 
-export const UnconnectedMultipleChoiceByStudentContainer = MultipleChoiceByStudentContainer;
+export const UnconnectedMultipleChoiceByStudentContainer =
+  MultipleChoiceByStudentContainer;
 
 export default connect(state => ({
-  multipleChoiceStructure: getMultipleChoiceStructureForCurrentAssessment(
-    state
-  ),
+  multipleChoiceStructure:
+    getMultipleChoiceStructureForCurrentAssessment(state),
   studentAnswerData: getStudentMCResponsesForCurrentAssessment(state),
   studentId: state.sectionAssessments.studentId,
   currentStudentHasResponses: currentStudentHasResponses(state)

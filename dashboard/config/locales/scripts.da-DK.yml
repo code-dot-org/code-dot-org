@@ -1190,6 +1190,10 @@ da:
               display_name: Lister
             lessonGroup-3:
               display_name: Løkker
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Vurderinger
         pre-express-2023:
           lesson_groups:
             csf_loops:

@@ -38,28 +38,16 @@
 
 .soundRowLeft {
   width: 15px;
-  margin: 0 4px;
+  margin: 0 6px 0 4px;
   float: left;
 }
 
-.icon-beat {
-  color: #fc55ff;
-}
-
-.icon-bass {
-  color: #00c0ff;
-}
-
-.icon-lead {
-  color: #00ff02;
-}
-
-.icon-fx {
-  color: #ff0;
+.typeIcon {
+  width: 13px;
 }
 
 .soundRowMiddle {
-  width: calc(100% - 23px - 55px);
+  width: calc(100% - 25px - 55px);
   float: left;
 }
 

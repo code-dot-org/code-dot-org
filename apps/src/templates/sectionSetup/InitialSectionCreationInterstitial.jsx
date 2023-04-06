@@ -102,9 +102,6 @@ const styles = {
   }
 };
 
-export default connect(
-  undefined,
-  {
-    beginEditingSection
-  }
-)(InitialSectionCreationInterstitial);
+export default connect(undefined, {
+  beginEditingSection
+})(InitialSectionCreationInterstitial);

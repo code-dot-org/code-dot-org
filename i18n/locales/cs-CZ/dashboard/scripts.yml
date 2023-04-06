@@ -2795,6 +2795,10 @@ cs:
           lesson_groups:
             csp_unit9_2020:
               display_name: '9.  lekce: Data'
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Hodnocení
         csp-playground:
           description_audience: Pisatelé životopisů
           description_short: Na uvádění aktualizací lekcí nebo úrovní mezi verzemi životopisu
@@ -2970,3 +2974,97 @@ cs:
               display_name: Kapitola 1
             lessonGroup-4:
               display_name: Kapitola 2
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Obrázky a animace'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Tvorba her'
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Počítače a řešení problémů'
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Řešení datových problémů'
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Řešení datových problémů'
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Úvod do App Lab
+            lessonGroup-3:
+              display_name: Kapitola 1
+            lessonGroup-4:
+              display_name: Kapitola 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Prototypování aplikací'
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Obrázky a animace'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Tvorba her'
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Prototypování aplikací'
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Řešení datových problémů'
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Úvod do App Lab
+            lessonGroup-4:
+              display_name: Kapitola 2
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'

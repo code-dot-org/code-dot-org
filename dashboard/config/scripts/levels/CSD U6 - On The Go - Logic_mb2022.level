@@ -64,7 +64,8 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "map_reference": "/courses/csd-2022/guides/problem-solving-process-programming"
   },
   "game_id": 41,
   "published": true,
@@ -72,7 +73,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:35.712+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - On The Go - Logic_2222\\\"\"],\"cloned_from\":\"CSD U6 - On The Go - Logic_2222\"},{\"changed_at\":\"2023-02-07 23:17:30 +0000\",\"changed\":[\"makerlab_enabled\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:35.712+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - On The Go - Logic_2222\\\"\"],\"cloned_from\":\"CSD U6 - On The Go - Logic_2222\"},{\"changed_at\":\"2023-02-07 23:17:30 +0000\",\"changed\":[\"makerlab_enabled\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 17:27:28 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

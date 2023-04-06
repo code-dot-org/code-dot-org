@@ -1936,6 +1936,10 @@ ms:
               display_name: Gelung
             lessonGroup-5:
               display_name: Projek
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Penilaian
         csp-playground:
           description_audience: Penulis Kurikulum
           description_short: Untuk mengemas kini pelajaran atau peringkat antara versi kurikulum
@@ -2081,5 +2085,21 @@ ms:
               display_name: Pengenalan kepada Makmal Aplikasi
             lessonGroup-3:
               display_name: Bab 1
+            lessonGroup-4:
+              display_name: Bab 2
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pengenalan kepada Makmal Aplikasi
+            lessonGroup-3:
+              display_name: Bab 1
+            lessonGroup-4:
+              display_name: Bab 2
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bab 1
+            lessonGroup-3:
+              display_name: Pengenalan kepada Makmal Aplikasi
             lessonGroup-4:
               display_name: Bab 2

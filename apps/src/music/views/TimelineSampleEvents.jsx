@@ -20,9 +20,8 @@ const TimelineSampleEvents = ({
   // we call during render don't need to recalculate it.  This also ensures
   // that we recalculate unique sounds, even when there are no entries to
   // render.
-  const currentUniqueSounds = uniqueSoundsRef.current.getUniqueSounds(
-    soundEvents
-  );
+  const currentUniqueSounds =
+    uniqueSoundsRef.current.getUniqueSounds(soundEvents);
 
   const getVerticalOffsetForEventId = id => {
     return (

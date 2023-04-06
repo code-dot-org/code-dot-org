@@ -20,12 +20,7 @@ const setUp = (overrideProps = {}) => {
 describe('StudentRow', () => {
   it('displays name', () => {
     const wrapper = setUp();
-    expect(
-      wrapper
-        .find('td')
-        .at(0)
-        .text()
-    ).to.equal('Jerry');
+    expect(wrapper.find('td').at(0).text()).to.equal('Jerry');
   });
 
   it('has expected status when lockStatus is locked', () => {

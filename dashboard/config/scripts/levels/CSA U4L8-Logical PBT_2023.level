@@ -2,27 +2,28 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "start_sources": {
-      "Runner.java": {
-        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+      "CourseRunner.java": {
+        "text": "public class CourseRunner {\n  public static void main(String[] args) {\n\n    Course csCourse = new Course(\"Ms. Lovelace\");\n    csCourse.promptForGrade();    \n    \n  }\n}",
         "isVisible": true,
         "tabOrder": 0
+      },
+      "Course.java": {
+        "text": "import java.util.Scanner;\n\n/*\n * Represents a course at a school\n */ \npublic class Course {\n\n  private String teacher;    // The name of the teacher\n\n  /*\n   * Sets teacher to the given name of the teacher\n   */\n  public Course(String teacher) {\n    this.teacher = teacher;\n  }\n\n  /*\n   * Prompts the user to enter grades while the input is not -1\n   * and prints the score entered\n   */\n  public void promptForGrade() {\n    Scanner input = new Scanner(System.in);\n    int score = 0;\n\n    while (score != -1) {\n      System.out.print(\"Enter the student's score (or -1 to quit): \");\n      score = input.nextInt();\n      printResult(score);\n    }\n\n    input.close();\n  }\n\n  /*\n   * Prints the score provided by the user\n   */\n  public void printResult(int enteredScore) {\n    if (isValidScore(enteredScore)) {\n      System.out.println(\"Score is: \" + enteredScore);\n    }\n    else {\n      if (enteredScore == -1) {\n        System.out.println(\"Goodbye!\");\n      }\n      else {\n        System.out.println(\"The score is invalid. Please try again.\");\n      }\n    }\n  }\n\n  /*\n   * Returns true if the score is valid, otherwise returns false\n   */\n  public boolean isValidScore(int score) {\n    if (score >= 50 && score <= 100) {\n      return true;\n    }\n    else {\n      return false;\n    }\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
       }
-    },
-    "encrypted_examples": [
-
-    ]
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2023-02-17T18:54:16.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-02-17T18:54:16.854+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L6d_2023\\\"\"],\"cloned_from\":\"CSA U4L7-L6d_2023\"},{\"changed_at\":\"2023-02-17 18:54:18 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-02-17T18:54:16.854+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L6d_2023\\\"\"],\"cloned_from\":\"CSA U4L7-L6d_2023\"},{\"changed_at\":\"2023-02-17 18:54:18 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-29 13:14:54 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-29 13:22:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-29 13:23:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

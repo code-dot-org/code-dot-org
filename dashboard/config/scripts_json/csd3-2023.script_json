@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-24 09:47:30 UTC",
+    "serialized_at": "2023-03-31 22:30:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2481,7 +2481,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Pair programming is a great way to increase student confidence and foster the practices of collaboration and communication. You can read more about Pair Programming in the **[CSD Curriculum Guide](https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view)**\n\n"
+            "markdown": "Pair programming is a great way to increase student confidence and foster the practices of collaboration and communication. You can read more about Pair Programming in the **[CSD Guide to Teaching and Learning Strategies](https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view)**\n\n"
           }
         ]
       },
@@ -16057,22 +16057,418 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "All Code",
+      "url": "/s/csd7-2023/code",
+      "key": "all_code",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csd1-2023/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csd1-2023/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csd1-2023/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
+      "key": "csd_curriculum_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Guide to Debugging",
+      "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
+      "key": "csd_guide_to_debugging",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging"
+      }
+    },
+    {
+      "name": "CSD Guide to Differentiation",
+      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
+      "key": "csd_guide_to_differentiation",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
+      "key": "csd_implementation_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "CSD Learning Frameworks",
+      "url": "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view",
+      "key": "csd_learning_frameworks",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks"
+      }
+    },
+    {
+      "name": "CSD Programming Levels Guide",
+      "url": "https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view",
+      "key": "csd_programming_levels_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_programming_levels_guide"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_code",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_programming_levels_guide",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csd3-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-
+    {
+      "key": "abstraction",
+      "word": "Abstraction",
+      "definition": "a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
+      "key": "boolean_expression",
+      "word": "Boolean Expression",
+      "definition": "in programming, an expression that evaluates to True or False. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "boolean_expression"
+      }
+    },
+    {
+      "key": "bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "key": "condition",
+      "word": "Condition",
+      "definition": "Something a program checks to see whether it is true before deciding to take an action.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "key": "conditionals",
+      "word": "Conditionals",
+      "definition": "Statements that only run when certain conditions are true.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "key": "debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "key": "dot_notation",
+      "word": "Dot notation",
+      "definition": "the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "dot_notation"
+      }
+    },
+    {
+      "key": "function",
+      "word": "Function",
+      "definition": "A named bit of programming instructions.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "key": "parameter",
+      "word": "Parameter",
+      "definition": "Additional information provided as input to a block to customize its functionality",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "parameter"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "property",
+      "word": "Property",
+      "definition": "A label for a characteristic of a sprite, such as its location and appearance",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "property"
+      }
+    },
+    {
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "A character on the screen with properties that describe its location, movement, and look.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A label for a piece of information used in a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "vocabulary.key": "boolean_expression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "vocabulary.key": "parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "vocabulary.key": "dot_notation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "vocabulary.key": "property"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "vocabulary.key": "variable"
+      }
+    }
   ],
   "lessons_programming_expressions": [
     {

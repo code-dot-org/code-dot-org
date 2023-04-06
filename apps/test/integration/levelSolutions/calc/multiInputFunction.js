@@ -248,7 +248,7 @@ module.exports = {
         result: false,
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Calc.__testonly__.appState.message,
           calcMsg.missingFunctionError({functionName: 'f'})
