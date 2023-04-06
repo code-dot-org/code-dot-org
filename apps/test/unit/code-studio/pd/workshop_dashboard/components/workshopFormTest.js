@@ -14,12 +14,29 @@ describe('WorkshopForm test', () => {
     fakeWorkshop = Factory.build('workshop');
   });
 
-  it('renders', () => {
+  it('renders csf intro workshop', () => {
     const wrapper = shallow(
       <WorkshopForm
         permission={new Permission()}
         facilitatorCourses={[]}
         workshop={fakeWorkshop}
+        onSaved={() => {}}
+        readOnly={false}
+      />,
+      {context: {router: {}}}
+    );
+
+    const someControl = wrapper.find(FormControl);
+    assert(someControl.exists());
+  });
+
+  it('renders csp summer workshop', () => {
+    const cspSummerWorkshop = Factory.build('csp summer workshop');
+    const wrapper = shallow(
+      <WorkshopForm
+        permission={new Permission()}
+        facilitatorCourses={[]}
+        workshop={cspSummerWorkshop}
         onSaved={() => {}}
         readOnly={false}
       />,
