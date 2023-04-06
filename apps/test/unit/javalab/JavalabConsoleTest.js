@@ -14,7 +14,7 @@ import javalabConsole, {
   openPhotoPrompter,
   closePhotoPrompter
 } from '@cdo/apps/javalab/redux/consoleRedux';
-import javalab from '@cdo/apps/javalab/javalabRedux';
+import javalab from '@cdo/apps/javalab/redux/javalabRedux';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import sinon from 'sinon';
 import PhotoSelectionView from '@cdo/apps/javalab/components/PhotoSelectionView';
