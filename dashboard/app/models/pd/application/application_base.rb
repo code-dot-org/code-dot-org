@@ -128,7 +128,7 @@ module Pd::Application
       "\"#{applicant_full_name}\" <#{applicant_email}>"
     end
 
-    # Queues an email for this application
+    # Sends an email for this application
     # @param email_type [String] specifies the mailer action
     # @see Pd::Application::Email
     def send_pd_application_email(email_type)
