@@ -450,30 +450,30 @@ module Pd::Application
       assert_equal 3, application.status_log.count
     end
 
-    test 'setting an auto-email status queues up an email if associated with an RP' do
+    test 'setting an auto-email status sends an email if associated with an RP' do
       application_hash = build :pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id
       application = create :pd_teacher_application, form_data_hash: application_hash
       assert_empty application.emails
 
-      application.expects(:queue_email).with('accepted')
       application.update!(status: 'accepted')
+      refute_nil application.reload.emails.find_by(email_type: 'accepted').sent_at
     end
 
-    test 'setting an auto-email status does not queue up an email if no RP' do
+    test 'setting an auto-email status does not send an email if no RP' do
       application = create :pd_teacher_application
       assert_empty application.emails
 
-      application.expects(:queue_email).never
       application.update!(status: 'accepted')
+      assert_empty application.reload.emails
     end
 
-    test 'setting a non auto-email status does not queue up a status email even if associated with an RP' do
+    test 'setting a non auto-email status does not send a status email even if associated with an RP' do
       application_hash = build :pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id
       application = create :pd_teacher_application, form_data_hash: application_hash
       assert_empty application.emails
 
-      application.expects(:queue_email).never
       application.update!(status: 'pending')
+      assert_empty application.reload.emails
     end
 
     test 'setting an auto-email status deletes unsent emails for the application' do
