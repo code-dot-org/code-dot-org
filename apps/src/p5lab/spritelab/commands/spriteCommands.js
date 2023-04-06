@@ -1,5 +1,6 @@
 import {commands as locationCommands} from './locationCommands';
 import {commands as behaviorCommands} from './behaviorCommands';
+import {layoutSpriteGroup} from '../../layoutUtils';
 import * as utils from '@cdo/apps/p5lab/utils';
 
 export const commands = {
@@ -173,5 +174,14 @@ export const commands = {
         );
       sprite.scale *= sprite.baseScale;
     });
+  },
+
+  makeNewSpriteGroup(numSprites, animation, layout) {
+    let spriteGroup = [];
+    for (let i = 0; i < numSprites; i++) {
+      const id = this.addSprite({animation});
+      spriteGroup = spriteGroup.concat(this.getSpriteArray({id}));
+    }
+    layoutSpriteGroup(spriteGroup, layout, this.p5);
   }
 };

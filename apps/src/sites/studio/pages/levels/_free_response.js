@@ -14,7 +14,7 @@ import {getStore} from '@cdo/apps/redux';
 $(document).ready(() => {
   const scriptData = getScriptData('freeresponse');
 
-  $('#containedLevel0 > #summaryEntryPoint').each(function () {
+  $('#summaryEntryPoint').each(function () {
     const container = this;
     const store = getStore();
 
