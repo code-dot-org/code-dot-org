@@ -71,9 +71,7 @@ class MarkdownInstructions extends React.Component {
     }
 
     // Parent needs to readjust some sizing after images have loaded
-    $(thisNode)
-      .find('img')
-      .load(this.props.onResize);
+    $(thisNode).find('img').load(this.props.onResize);
   }
 
   render() {

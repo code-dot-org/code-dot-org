@@ -2,7 +2,7 @@ import {TestResults} from '@cdo/apps/constants';
 var blockUtils = require('@cdo/apps/block_utils');
 
 var REPEAT_REQUIREMENT = {
-  test: function(block) {
+  test: function (block) {
     return block.type === 'controls_repeat';
   },
   type: 'controls_repeat',
@@ -55,7 +55,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.controller.subtype.nectars_.length === 3 &&
           Maze.controller.subtype.honey_ === 3
@@ -83,7 +83,7 @@ module.exports = {
         result: true,
         testResult: TestResults.MISSING_BLOCK_FINISHED
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.controller.subtype.nectars_.length === 3 &&
           Maze.controller.subtype.honey_ === 3
@@ -109,7 +109,7 @@ module.exports = {
         result: false,
         testResult: TestResults.MISSING_BLOCK_FINISHED
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.controller.subtype.nectars_.length === 2 &&
           Maze.controller.subtype.honey_ === 3

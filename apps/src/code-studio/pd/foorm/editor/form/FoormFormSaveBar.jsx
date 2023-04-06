@@ -140,9 +140,7 @@ class FoormFormSaveBar extends Component {
   };
 
   saveNewForm = (saveAsNewVersion = false) => {
-    const newFormName = `${this.state.formCategory}/${
-      this.state.formShortName
-    }`;
+    const newFormName = `${this.state.formCategory}/${this.state.formShortName}`;
     $.ajax({
       url: `/foorm/forms`,
       type: 'post',

@@ -6,3 +6,5 @@ wrong '6 bits'
 markdown <<MARKDOWN
 What is the minimum number of bits you would need to encode the 26 letters of the alphabet plus a space - a total of 27 characters?
 MARKDOWN
+
+allow_multiple_attempts true

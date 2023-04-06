@@ -40,7 +40,8 @@ class MultipleChoiceSurveyOverviewContainer extends Component {
   }
 }
 
-export const UnconnectedMultipleChoiceSurveyOverviewContainer = MultipleChoiceSurveyOverviewContainer;
+export const UnconnectedMultipleChoiceSurveyOverviewContainer =
+  MultipleChoiceSurveyOverviewContainer;
 
 export default connect(state => ({
   multipleChoiceSurveyData: getMultipleChoiceSurveyResults(state),

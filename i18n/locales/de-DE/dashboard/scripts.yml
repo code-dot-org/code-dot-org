@@ -4795,7 +4795,10 @@ de:
         self-paced-pl-csa3-2023: {}
         csa-examples-22: {}
         amy-playground: {}
-        angelina-playground: {}
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Bewertung
         csc-pilot-fa2022-timecapsule: {}
         csc-pilot-fa2022-ecosystem: {}
         csp-playground:
@@ -5015,3 +5018,140 @@ de:
               display_name: Kapitel 1
             lessonGroup-4:
               display_name: Kapitel 2
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+        focus-on-creativity2-2023:
+          title: Webentwicklung
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit.
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder und Animationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Erstellen von Spielen'
+          student_description: In Lerneinheit 3 arbeiten Sie bei der Programmierung von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und baut auf anspruchsvollere spritebasierte Spiele auf, wobei dieselben Programmierkonzepte und der Designprozess eingesetzt werden, die Informatiker täglich verwenden. Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives Programm.
+        csc-starquilts-2023: {}
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+          description_short: Programmieren mit Geräten lernen.
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Computer und Problemlösung'
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datenprobleme lösen'
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme zu lösen.
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können. Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren. Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+          description_short: Programmieren mit Geräten lernen.
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme zu lösen.
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können. Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren. Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datenprobleme lösen'
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme zu lösen.
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können. Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren. Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Einführung in AppLab
+            lessonGroup-3:
+              display_name: Kapitel 1
+            lessonGroup-4:
+              display_name: Kapitel 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+        self-paced-pl-k5-getting-started: {}
+        focus-on-design-with-purpose2-2023:
+          title: Webentwicklung
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit.
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Benutzerzentriertes Design'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: App Prototyping'
+          student_description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie, wie Sie die Bedürfnisse anderer besser verstehen und gleichzeitig eine Lösung für ein Problem entwickeln können. Die zweite Hälfte der Lerneinheit besteht aus einem iterativen Teamprojekt, bei dem die Teams die Möglichkeit haben, einen Bedarf zu identifizieren, der ihnen am Herzen liegt, Lösungen sowohl auf Papier als auch im App-Lab prototypisch zu entwickeln und Lösungen mit realen Benutzern zu testen, um Feedback zu erhalten und die Iteration weiter voranzutreiben.
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+          description_short: Programmieren mit Geräten lernen.
+        self-paced-k5-pl-getting-started: {}
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+        focus-on-coding2-2023:
+          title: Webentwicklung
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit.
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder und Animationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Erstellen von Spielen'
+          student_description: In Lerneinheit 3 arbeiten Sie bei der Programmierung von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und baut auf anspruchsvollere spritebasierte Spiele auf, wobei dieselben Programmierkonzepte und der Designprozess eingesetzt werden, die Informatiker täglich verwenden. Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives Programm.
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+          description_short: Programmieren mit Geräten lernen.
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Benutzerzentriertes Design'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: App Prototyping'
+          student_description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie, wie Sie die Bedürfnisse anderer besser verstehen und gleichzeitig eine Lösung für ein Problem entwickeln können. Die zweite Hälfte der Lerneinheit besteht aus einem iterativen Teamprojekt, bei dem die Teams die Möglichkeit haben, einen Bedarf zu identifizieren, der ihnen am Herzen liegt, Lösungen sowohl auf Papier als auch im App-Lab prototypisch zu entwickeln und Lösungen mit realen Benutzern zu testen, um Feedback zu erhalten und die Iteration weiter voranzutreiben.
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datenprobleme lösen'
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme zu lösen.
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können. Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren. Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Einführung in AppLab
+            lessonGroup-4:
+              display_name: Kapitel 2
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+          description_short: Programmieren mit Geräten lernen.

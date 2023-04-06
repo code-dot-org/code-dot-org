@@ -59,32 +59,21 @@ export const UnconnectedTeacherHomepage = ({
   const teacherReminders = useRef(null);
   const flashes = useRef(null);
 
-  const [displayCensusBanner, setDisplayCensusBanner] = useState(
-    showCensusBanner
-  );
-  const [
-    censusSubmittedSuccessfully,
-    setCensusSubmittedSuccessfully
-  ] = useState(null);
-  const [
-    censusBannerTeachesSelection,
-    setCensusBannerTeachesSelection
-  ] = useState(null);
-  const [
-    censusBannerInClassSelection,
-    setCensusBannerInClassSelection
-  ] = useState(null);
+  const [displayCensusBanner, setDisplayCensusBanner] =
+    useState(showCensusBanner);
+  const [censusSubmittedSuccessfully, setCensusSubmittedSuccessfully] =
+    useState(null);
+  const [censusBannerTeachesSelection, setCensusBannerTeachesSelection] =
+    useState(null);
+  const [censusBannerInClassSelection, setCensusBannerInClassSelection] =
+    useState(null);
   const [showCensusUnknownError, setShowCensusUnknownError] = useState(false);
   const [showCensusInvalidError, setShowCensusInvalidError] = useState(false);
 
   useEffect(() => {
     // The component used here is implemented in legacy HAML/CSS rather than React.
-    $('#teacher_reminders')
-      .appendTo(teacherReminders.current.refs.root)
-      .show();
-    $('#flashes')
-      .appendTo(flashes.current.refs.root)
-      .show();
+    $('#teacher_reminders').appendTo(teacherReminders.current.refs.root).show();
+    $('#flashes').appendTo(flashes.current.refs.root).show();
 
     // A special on-load behavior: If requested by queryparam, automatically
     // launch the Google Classroom rostering flow.
@@ -333,7 +322,6 @@ const styles = {
   }
 };
 
-export default connect(
-  state => ({}),
-  {beginGoogleImportRosterFlow}
-)(UnconnectedTeacherHomepage);
+export default connect(state => ({}), {beginGoogleImportRosterFlow})(
+  UnconnectedTeacherHomepage
+);

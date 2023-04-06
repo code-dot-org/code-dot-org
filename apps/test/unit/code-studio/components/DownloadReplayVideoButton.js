@@ -16,18 +16,18 @@ describe('DownloadReplayVideoButton', () => {
 
   let originalAppOptions;
 
-  before(function() {
+  before(function () {
     originalAppOptions = window.appOptions;
     window.appOptions = {
       signedReplayLogUrl: 'some-url.com'
     };
   });
 
-  after(function() {
+  after(function () {
     window.appOptions = originalAppOptions;
   });
 
-  beforeEach(function() {
+  beforeEach(function () {
     wrapper = shallow(
       <DownloadReplayVideoButton channelId="test" appType="dance" />
     );
@@ -41,7 +41,7 @@ describe('DownloadReplayVideoButton', () => {
     tryDownloadVideoSpy = sinon.spy(wrapper.instance(), 'tryDownloadVideo');
   });
 
-  afterEach(function() {
+  afterEach(function () {
     checkVideoSpy.restore();
     checkVideoUntilSuccessSpy.restore();
     fetchSpy.restore();

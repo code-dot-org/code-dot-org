@@ -54,11 +54,8 @@ const renderCategoryEditor = (category, updateFunc) => {
 export default function ProgrammingEnvironmentEditor({
   initialProgrammingEnvironment
 }) {
-  const {
-    name,
-    showPath,
-    ...remainingProgrammingEnvironment
-  } = initialProgrammingEnvironment;
+  const {name, showPath, ...remainingProgrammingEnvironment} =
+    initialProgrammingEnvironment;
   const [
     programmingEnvironment,
     updateProgrammingEnvironment,

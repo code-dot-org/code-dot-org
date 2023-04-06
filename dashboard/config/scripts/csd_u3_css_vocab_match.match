@@ -9,3 +9,5 @@ answer '2'
 markdown <<MARKDOWN
 Here are some vocabulary words you have seen in the last few levels.  Work with a partner to match the words to their definitions.
 MARKDOWN
+
+allow_multiple_attempts true

@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2021-05-28T01:04:16.000Z",
-  "level_num": "custom",
-  "user_id": 884,
   "properties": {
     "encrypted": "false",
     "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
@@ -17,8 +13,13 @@
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 24421,
-    "name_suffix": "_2021"
+    "name_suffix": "_2021",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2021-05-28T01:04:16.000Z",
+  "user_id": 884,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2019-11-07 00:55:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2020-07-10 00:37:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-10 00:38:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-10 17:12:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-10 17:13:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-23 20:02:29 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-08-03 22:09:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-08-03 22:16:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-08-04 00:04:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-08-18 20:11:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-08-24 14:55:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-08-24 15:10:36 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-08-24 16:19:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-08-24 16:33:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-08-25 22:26:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"

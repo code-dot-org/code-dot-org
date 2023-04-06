@@ -795,7 +795,7 @@ describe('Circuit Playground Components', () => {
           frequencySpy.restore();
         });
 
-        it('stops Piezo.play()', function() {
+        it('stops Piezo.play()', function () {
           // Make a new one since we're spying on a 'prototype'
           return createCircuitPlaygroundComponents(board).then(({buzzer}) => {
             // Set up a song

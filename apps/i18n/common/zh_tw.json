@@ -919,6 +919,7 @@
   "explainPairProgramming": "啟用結對編程後，學生可以和同學兩兩一組，共用一台電腦。如果你希望學生是用分組合作方式來記錄進度，可以啟用這個設置。",
   "explainPairProgrammingLearnMore": "進一步瞭解結對編程。",
   "explainRestrictedSectionEmail": "如果設定成“好”，學生們將無法透過課程編號來加入這個課程。你可以從其他課程移動或複製來將學生加入至這個課程。",
+  "explainRestrictedSectionEmailToolTip": "如果設定成“好”，學生們將無法透過課程編號來加入這個課程。你可以從其他課程移動或複製來將學生加入至這個課程。",
   "explainRestrictedSectionWordAndPicture": "如果設定成“好”，學生們將無法透過課程編號來加入這個課程。你可以從管理學生的頁面手動將他們加入到課程當中。",
   "explainRestrictedSectionLearnMore": "繼續學習",
   "exploreDataset": "視覺化 {datasetName}",

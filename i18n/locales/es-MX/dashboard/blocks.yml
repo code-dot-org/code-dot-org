@@ -2,6 +2,8 @@
 es-MX:
   data:
     blocks:
+      AmysBlocks_addTarget:
+        text: "{TARGET} {OPT} {SPRITE} "
       AmysBlocks_playerBehaviors:
         text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:

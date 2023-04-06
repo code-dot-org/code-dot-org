@@ -107,18 +107,12 @@ describe('CourseEditor', () => {
     const wrapper = createWrapper({});
     expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(2);
     expect(
-      wrapper
-        .find('TextareaWithMarkdownPreview')
-        .at(0)
-        .prop('markdown')
+      wrapper.find('TextareaWithMarkdownPreview').at(0).prop('markdown')
     ).to.equal(
       '# Student description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
     );
     expect(
-      wrapper
-        .find('TextareaWithMarkdownPreview')
-        .at(1)
-        .prop('markdown')
+      wrapper.find('TextareaWithMarkdownPreview').at(1).prop('markdown')
     ).to.equal(
       '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
     );

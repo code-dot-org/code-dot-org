@@ -80,14 +80,14 @@
           border-color: brown;
         }
 
-        &Pink {
-          background-color: pink;
-          border-color: slategray;
+        &Pattern {
+          background-color: black;
+          border-color: white;
         }
 
-        &Orange {
-          background-color: orange;
-          border-color: violet;
+        &Chord {
+          background-color: $light_cyan;
+          border-color: $neutral_dark80;
         }
 
         &Playing {

@@ -23,11 +23,11 @@ import * as shareWarnings from '../shareWarnings';
 import {navigateToHref} from '../utils';
 window.CDOSounds = Sounds.getSingleton();
 
-const noop = function() {};
+const noop = function () {};
 
 // TODO: remove the below monkey patches.
 window.Applab.JSInterpreter = {
-  getNearestUserCodeLine: function() {
+  getNearestUserCodeLine: function () {
     return 0;
   },
   deinitialize: noop

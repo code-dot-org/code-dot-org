@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2019-02-18T06:52:08.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "long_instructions": "# When to use lossy compression?\r\n\r\nIn general, what are reasons that someone would choose to use lossy compression? Write a brief response below including at least one example of a situation when lossy compression would be appropriate.",
     "instructions_important": "false",
@@ -15,8 +11,13 @@
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 14321,
-    "name_suffix": "_2019"
+    "name_suffix": "_2019",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2019-02-18T06:52:08.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2018-05-30 20:59:32 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-05-31 00:36:51 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]"

@@ -21,15 +21,8 @@ class ImageResourceCard extends Component {
   }
 
   render() {
-    const {
-      altText,
-      title,
-      callout,
-      description,
-      buttonText,
-      link,
-      isRtl
-    } = this.props;
+    const {altText, title, callout, description, buttonText, link, isRtl} =
+      this.props;
 
     return (
       <div style={{...styles.card, ...(isRtl && styles.rtl)}}>

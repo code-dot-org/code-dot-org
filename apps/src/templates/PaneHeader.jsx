@@ -101,7 +101,7 @@ export const PaneSection = Radium(
  * has focus. Continuing to wrap with radium because some usage
  * of this component may depend on it.
  */
-export const PaneButton = Radium(function(props) {
+export const PaneButton = Radium(function (props) {
   const {
     isRtl,
     isPressed,

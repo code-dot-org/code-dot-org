@@ -989,6 +989,10 @@ lv:
               display_name: Saraksti
             lessonGroup-3:
               display_name: Cikli
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Novērtējumi
         pre-express-2023:
           lesson_groups:
             csf_loops:

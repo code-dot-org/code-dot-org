@@ -62,10 +62,10 @@ export default class SendToPhone extends React.Component {
 
     var phone = this.refs.phone;
     $(phone).mask('(000) 000-0000', {
-      onComplete: function() {
+      onComplete: function () {
         this.setState({sendState: SendState.canSubmit});
       }.bind(this),
-      onChange: function() {
+      onChange: function () {
         this.setState({sendState: SendState.invalidVal});
       }.bind(this)
     });
@@ -94,13 +94,13 @@ export default class SendToPhone extends React.Component {
 
     $.post('/sms/send', $.param(params))
       .done(
-        function() {
+        function () {
           this.setState({sendState: SendState.sent});
           trackEvent('SendToPhone', 'success');
         }.bind(this)
       )
       .fail(
-        function() {
+        function () {
           this.setState({sendState: SendState.error});
           trackEvent('SendToPhone', 'error');
         }.bind(this)
