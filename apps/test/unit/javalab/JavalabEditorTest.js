@@ -16,7 +16,7 @@ import javalab, {
   setIsReadOnlyWorkspace,
   setHasOpenCodeReview,
   setBackpackEnabled
-} from '@cdo/apps/javalab/javalabRedux';
+} from '@cdo/apps/javalab/redux/javalabRedux';
 import javalabEditor, {
   sourceFileOrderUpdated,
   sourceVisibilityUpdated,

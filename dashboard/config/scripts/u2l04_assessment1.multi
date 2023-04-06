@@ -1,16 +1,19 @@
 name 'U2L04 Assessment1'
-encrypted '//3X2c32bdogRK63l0/yNC7Kgz8qlP0k+AA4n8sN/Q8Oyf7GNrZH7M9viypu
-k0Q9Xdewgz8MHqZOp0YyWu8KwY16zfpsN7RuiO7Cu3mjuzzNKY0nNSEGkQcU
-eJM9JUPcYAfwR2krUQ5r0P2bVqN2XZmo4biYgBFjX/trakAXbOp+g2vIR08Y
-x2q6SfMFT0CvikUG3brabuWPCebX6xeWUxiVzWossYJN1BtFnkROcQ/qbwj4
-gCn5w5cAoacC1+23bByjuQh75crDpkg3mfvQkuIfVPbLi2oLyqQzaFFbhIip
-uP69bVNTsb58QtbELqWsHmIQII9Z+Wn0c8F3CK8iw4/Zu4GT/ypZaMBf3Rvc
-FsRRncPnXTq5d5ODnnUAIxAe6Fyqqald40Pn93jnPLfo2LlA+ece4jDyVgaq
-TPvT6N3648puYfb4qwWFYTvKQWq1zHjt+9rtOVKwUeZaAoLhjEfR6F0ptKwW
-nTptHvMYdXqx+mO+OCUQXWNyyqfowhsZpMXMnr+aEbY0UZEDYyaqix7sYPMC
-MRoBhAvx8ww2VNU6uE19GDe5SsqTZcuMXSRdZ6t5ZfEFLWM6tvS5UW5+W+Se
-Em2hPK4O3k6E7gaadf5A0nrrS7z+jmvl8fUrf8oCvqACWyO/tjzGLT6wJcvU
-v0JBCyk8RiJl2gemmdeC/XbRFTObPwIC6oXecyJA0AhipnpMXk8SNKKehZ51
-tLMc3JnTJwHS+hn9jCluwdpHJRmhv+26+y02k+JK3lBZMz0PXJZZh5OJmDFV
-er/PmVg0cnfYbGjj8LESfSUvaEdKPg/fjmexeXyinYeq4wzAGI5Q
-'
+title 'Routers and Redundancy: Question 1'
+
+question 'In the Internet Simulator, your router knows to send your message to a different router because:'
+wrong 'You set the “other router” bit in the message.'
+wrong 'Everyone is on the same router.'
+right 'The first 4 bits of the address specify the router number that your friend is on.'   
+wrong 'Messages are routed over different paths.'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Answer:
+
+- C: The first 4 bits of the address specify the router number that your friend is on
+MARKDOWN
+
+allow_multiple_attempts true

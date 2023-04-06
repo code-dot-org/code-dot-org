@@ -1,17 +1,13 @@
 :ruby
-  js_data = {
-    responses: @responses&.map do |response|
-      {
-        user_id: response.user_id,
-        text: response.level_source.data,
-      }
-    end
-  }
   level ||= @level
   last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
   in_level_group ||= false
   left_align = local_assigns[:left_align]
   is_contained_level ||= false
+  js_data = {
+    response_count: @responses&.count || 0,
+    is_contained_level: is_contained_level
+  }
 
 - if level.solution.present? && is_contained_level && Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
   %div{id: "containedLevelAnswer0"}
@@ -37,10 +33,9 @@
       }
     );
 
-- if is_contained_level && DCDO.get("show_level_summary_entry_point", false)
-  %div#summaryEntryPoint
-
 .free-response{:class => ('left-aligned' if left_align)}
+  - if DCDO.get("show_level_summary_entry_point", false)
+    %div#summaryEntryPoint
   - title = level.get_property(:title)
   - if title.present? && (!in_level_group || is_contained_level)
     %h1= title
