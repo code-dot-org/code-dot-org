@@ -42,7 +42,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function() {
+      customValidator: function () {
         return Maze.controller.subtype.nectars_.length === 2;
       },
       xml:
@@ -61,7 +61,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function() {
+      customValidator: function () {
         return Maze.controller.subtype.nectars_.length === 3;
       },
       xml:
@@ -81,7 +81,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.controller.subtype.nectars_.length === 1 &&
           Maze.executionInfo.terminationValue() ===
@@ -100,7 +100,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.controller.subtype.nectars_.length === 0 &&
           Maze.executionInfo.terminationValue() ===
@@ -124,12 +124,11 @@ module.exports = {
         result: false,
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
-      customValidator: function() {
+      customValidator: function () {
         return Maze.controller.subtype.nectars_.length === 0;
       },
       // turn left, move forward
-      xml:
-        '<xml><block type="maze_turn"><title name="DIR">turnLeft</title><next><block type="maze_moveForward"></block></next></block></xml>'
+      xml: '<xml><block type="maze_turn"><title name="DIR">turnLeft</title><next><block type="maze_moveForward"></block></next></block></xml>'
     },
     {
       description: 'Fail getting more nectar than there is',
@@ -137,7 +136,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.controller.subtype.nectars_.length === 1 &&
           Maze.executionInfo.terminationValue() ===

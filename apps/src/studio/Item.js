@@ -299,7 +299,7 @@ export default class Item extends Collidable {
         candidates = _.shuffle(candidates);
 
         // then sort everything based on score.
-        candidates.sort(function(a, b) {
+        candidates.sort(function (a, b) {
           return b.score - a.score;
         });
 

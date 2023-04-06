@@ -10,3 +10,5 @@ wrong 'This code will cause an error'
 markdown <<MARKDOWN
 ![](https://images.code.org/01c1cd1999d749a3d6f25ec39d3dc4f5-image-1483980229022.png)
 MARKDOWN
+
+allow_multiple_attempts true

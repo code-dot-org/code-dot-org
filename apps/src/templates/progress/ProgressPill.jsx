@@ -36,12 +36,8 @@ class ProgressPill extends React.Component {
   };
 
   getUrl() {
-    const {
-      levels,
-      disabled,
-      selectedSectionId,
-      onSingleLevelClick
-    } = this.props;
+    const {levels, disabled, selectedSectionId, onSingleLevelClick} =
+      this.props;
 
     const pillLinksToLevel =
       !disabled && !onSingleLevelClick && levels.length === 1;

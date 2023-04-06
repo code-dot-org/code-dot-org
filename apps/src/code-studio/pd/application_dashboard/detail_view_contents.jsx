@@ -165,8 +165,8 @@ export class DetailViewContents extends React.Component {
       scholarship_status: this.props.applicationData.scholarship_status,
       bonus_point_questions: this.scoreableQuestions['bonusPoints'],
       cantSaveStatusReason: '',
-      principalApprovalIsRequired: !this.props.applicationData
-        .principal_approval_not_required
+      principalApprovalIsRequired:
+        !this.props.applicationData.principal_approval_not_required
     };
   }
 
@@ -584,9 +584,7 @@ export class DetailViewContents extends React.Component {
       <div style={styles.headerWrapper}>
         <div>
           <h1>
-            {`${this.props.applicationData.form_data.firstName} ${
-              this.props.applicationData.form_data.lastName
-            }`}
+            {`${this.props.applicationData.form_data.firstName} ${this.props.applicationData.form_data.lastName}`}
           </h1>
           <h4>Meets Guidelines? {this.props.applicationData.meets_criteria}</h4>
           <h4>
@@ -845,11 +843,7 @@ export class DetailViewContents extends React.Component {
       principalApprovalStartsWith(PrincipalApprovalState.inProgress) ||
       principalApprovalStartsWith(PrincipalApprovalState.complete)
     ) {
-      const principalApprovalUrl = `${
-        window.location.origin
-      }/pd/application/principal_approval/${
-        this.props.applicationData.application_guid
-      }`;
+      const principalApprovalUrl = `${window.location.origin}/pd/application/principal_approval/${this.props.applicationData.application_guid}`;
 
       return (
         <div>

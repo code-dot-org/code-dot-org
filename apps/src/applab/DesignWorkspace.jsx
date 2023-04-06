@@ -76,8 +76,8 @@ class DesignWorkspace extends React.Component {
   }
 }
 export default connect(state => ({
-  showProjectTemplateWorkspaceIcon: !!state.pageConstants
-    .showProjectTemplateWorkspaceIcon,
+  showProjectTemplateWorkspaceIcon:
+    !!state.pageConstants.showProjectTemplateWorkspaceIcon,
   isRtl: state.isRtl,
   isRunning: !!state.runState.isRunning,
   showMakerToggle: !!state.pageConstants.showMakerToggle

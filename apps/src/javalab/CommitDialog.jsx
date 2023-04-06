@@ -8,7 +8,7 @@ import StylizedBaseDialog, {
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import CommitDialogBody from './CommitDialogBody';
-import {setCommitSaveStatus} from '@cdo/apps/javalab/javalabRedux';
+import {setCommitSaveStatus} from '@cdo/apps/javalab/redux/javalabRedux';
 import {CompileStatus} from './constants';
 import {BackpackAPIContext} from './BackpackAPIContext';
 
@@ -261,9 +261,8 @@ export class UnconnectedCommitDialog extends React.Component {
             files={files.map(name => ({
               name,
               commit: filesToBackpack.includes(name),
-              hasConflictingName: this.getConflictingBackpackFiles().includes(
-                name
-              )
+              hasConflictingName:
+                this.getConflictingBackpackFiles().includes(name)
             }))}
             notes={commitNotes}
             onToggleFile={this.toggleFileToBackpack}

@@ -118,7 +118,7 @@ export default class BlockSvgFrame {
     Blockly.utils.dom.addClass(this.frameGroup_, 'hidden');
     var frameGroup = this.frameGroup_;
     // Trigger the CSS fade-in transition.
-    setTimeout(function() {
+    setTimeout(function () {
       Blockly.utils.dom.removeClass(frameGroup, 'hidden');
     }, 0);
 

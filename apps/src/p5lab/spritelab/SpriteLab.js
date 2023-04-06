@@ -133,7 +133,7 @@ export default class SpriteLab extends P5Lab {
   setupReduxSubscribers(store) {
     super.setupReduxSubscribers(store);
     let state = {};
-    store.subscribe(function() {
+    store.subscribe(function () {
       const lastState = state;
       state = store.getState();
 

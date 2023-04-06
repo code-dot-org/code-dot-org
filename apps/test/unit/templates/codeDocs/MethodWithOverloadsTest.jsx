@@ -118,24 +118,15 @@ describe('SingleMethod', () => {
     ]);
 
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(0)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(0).props().markdown
     ).to.equal(defaultMethod.syntax);
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(1)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(1).props().markdown
     ).to.contain(defaultMethod.content);
     expect(wrapper.find('ParametersTable').length).to.equal(1);
     expect(wrapper.find('Example').length).to.equal(1);
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(2)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(2).props().markdown
     ).to.contain(defaultMethod.externalDocumentation);
   });
 

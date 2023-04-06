@@ -78,7 +78,7 @@ function generateFakePersonalProjects() {
   return personalProjects;
 }
 
-const createProjectsStore = function(galleryType) {
+const createProjectsStore = function (galleryType) {
   return reduxStore({projects}, {projects: {selectedGallery: galleryType}});
 };
 

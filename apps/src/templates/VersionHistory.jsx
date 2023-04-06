@@ -178,7 +178,7 @@ export default class VersionHistory extends React.Component {
       title = i18n.versionHistory_header();
 
       const rows = this.state.versions.map(
-        function(version) {
+        function (version) {
           return (
             <VersionRow
               key={version.versionId}

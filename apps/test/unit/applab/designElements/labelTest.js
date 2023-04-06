@@ -60,7 +60,7 @@ function expectWiderAlignRight(newRect, oldRect) {
   expect(newRect.left).is.equal(oldRect.left - deltaWidth, 'should move left');
 }
 
-describe('Applab designElements/label component', function() {
+describe('Applab designElements/label component', function () {
   let e;
   const NEW_TEXT = 'longer text';
   const LONG_TEXT =

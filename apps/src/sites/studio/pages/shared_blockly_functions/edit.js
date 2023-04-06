@@ -6,7 +6,7 @@ import {install, customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
 import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/spritelab/constants';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 
-const customSimpleDialog = function({
+const customSimpleDialog = function ({
   bodyText,
   prompt,
   promptPrefill,
@@ -75,9 +75,8 @@ if (childBlock) {
 
 Blockly.behaviorEditor.openAndEditFunction(name || DEFAULT_NAME);
 
-document.querySelector('#functionDescriptionText').value = getInput(
-  'description'
-).value;
+document.querySelector('#functionDescriptionText').value =
+  getInput('description').value;
 
 function getInput(name) {
   return document.querySelector(
