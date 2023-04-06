@@ -1,3 +1,4 @@
+/*
 import appMain from '@cdo/apps/appMain';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import Music from '@cdo/apps/music/Music';
@@ -10,3 +11,4 @@ export default function loadMusic(options) {
   music.injectStudioApp(studioApp());
   appMain(music, levels, options);
 }
+*/
