@@ -11,8 +11,8 @@ export default {
 const Template = args => (
   <Provider store={reduxStore()}>
     <GraduateToNextLevel
-      {...args}
       courseDesc="Ready for the next level? Students will do lots of things and use their brains to solve even more complex problems. By the end of this course, students will be able to do more things. Recommended for lots of grades."
+      {...args}
     />
   </Provider>
 );

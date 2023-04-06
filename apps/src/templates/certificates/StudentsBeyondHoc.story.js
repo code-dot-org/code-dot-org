@@ -59,22 +59,22 @@ ApplabSignedOutEnglish.args = {
   userType: 'signedOut'
 };
 
-export const pre2017MinecraftSignedInEnglishUnder13 = Template.bind({});
-pre2017MinecraftSignedInEnglishUnder13.args = {
+export const MinecraftPre2017SignedInEnglishUnder13 = Template.bind({});
+MinecraftPre2017SignedInEnglishUnder13.args = {
   completedTutorialType: 'pre2017Minecraft',
   userType: 'student',
   isEnglish: true,
   under13: true
 };
 
-export const pre2017MinecraftSignedInEnglishOver13 = Template.bind({});
-pre2017MinecraftSignedInEnglishOver13.args = {
-  ...pre2017MinecraftSignedInEnglishUnder13.args,
+export const MinecraftPre2017SignedInEnglishOver13 = Template.bind({});
+MinecraftPre2017SignedInEnglishOver13.args = {
+  ...MinecraftPre2017SignedInEnglishUnder13.args,
   under13: false
 };
 
-export const pre2017MinecraftSignedInNonEnglish = Template.bind({});
-pre2017MinecraftSignedInNonEnglish.args = {
+export const MinecraftPre2017SignedInNonEnglish = Template.bind({});
+MinecraftPre2017SignedInNonEnglish.args = {
   completedTutorialType: 'pre2017Minecraft',
   userType: 'student',
   isEnglish: false
