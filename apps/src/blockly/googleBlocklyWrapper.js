@@ -509,7 +509,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
         readOnly: true,
         theme: theme,
         plugins: {},
-        RTL: options.rtl
+        RTL: options.rtl,
+        renderer: options.renderer || 'cdo_renderer_thrasos'
       });
       const svg = Blockly.utils.dom.createSvgElement(
         'svg',
@@ -518,7 +519,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
           'xmlns:html': 'http://www.w3.org/1999/xhtml',
           'xmlns:xlink': 'http://www.w3.org/1999/xlink',
           version: '1.1',
-          class: 'geras-renderer modern-theme readOnlyBlockSpace injectionDiv'
+          class:
+            'cdo_renderer_thrasos-renderer modern-theme readOnlyBlockSpace injectionDiv'
         },
         null
       );
@@ -575,7 +577,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
         blockDragger: ScrollBlockDragger,
         metricsManager: CdoMetricsManager
       },
-      renderer: opt_options.renderer || 'cdo_renderer',
+      renderer: opt_options.renderer || 'cdo_renderer_thrasos',
       comments: false
     };
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout

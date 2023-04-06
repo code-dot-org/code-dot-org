@@ -123,4 +123,18 @@ describe('CheckForUnderstanding', () => {
       'test teacher markdown'
     );
   });
+
+  it('does not render response counter/text if no section selected', () => {
+    const wrapper = setUpWrapper({
+      teacherSections: {
+        selectedStudents: [{id: 0}],
+        selectedSectionId: null,
+        sectionIds: [0],
+        sections: [{id: 0, name: 'test section'}]
+      }
+    });
+
+    expect(wrapper.find(`.${styles.studentsSubmittedRight}`).length).to.eq(0);
+    expect(wrapper.find(`.${styles.studentsSubmittedLeft}`).length).to.eq(0);
+  });
 });
