@@ -237,6 +237,14 @@ ul {
     justify-content: space-between;
     flex-wrap: wrap;
 
+    // Use this class if list items need to
+    // stretch to the width of the container
+    &.full-width {
+      li {
+        width: 100%
+      }
+    }
+
     li {
       padding-left: 0 !important;
       text-indent: 0 !important;
