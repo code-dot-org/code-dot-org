@@ -280,7 +280,7 @@ GEM
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
     bindata (2.4.10)
-    binding_of_caller (0.8.0)
+    binding_of_caller (1.0.0)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
@@ -925,7 +925,7 @@ DEPENDENCIES
   bcrypt (= 3.1.13)
   benchmark-ips
   better_errors (>= 2.7.0)
-  binding_of_caller
+  binding_of_caller (~> 1.0.0)
   bootstrap-sass (~> 2.3.2.2)
   brakeman
   cancancan (~> 3.2.0)
