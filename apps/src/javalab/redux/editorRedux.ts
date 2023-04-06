@@ -134,14 +134,12 @@ const javalabEditorSlice = createSlice({
         action: PayloadAction<{oldFilename: string; newFilename: string}>
       ) {
         const source = state.sources[action.payload.oldFilename];
+        // if old filename doesn't exist, this is a no-op
         if (source !== undefined) {
           let newSources = {...state.sources};
           delete newSources[action.payload.oldFilename];
           newSources[action.payload.newFilename] = source;
           state.sources = newSources;
-        } else {
-          // if old filename doesn't exist, can't do a rename
-          return state;
         }
       },
       prepare(oldFilename: string, newFilename: string) {
@@ -228,7 +226,8 @@ const javalabEditorSlice = createSlice({
         state.fileMetadata = action.payload.fileMetadata;
         state.orderedTabKeys = action.payload.orderedTabKeys;
         state.activeTabKey = action.payload.activeTabKey;
-        state.lastTabKeyIndex = action.payload.lastTabKeyIndex;
+        state.lastTabKeyIndex =
+          action.payload.lastTabKeyIndex || state.lastTabKeyIndex;
       },
       prepare(
         fileMetadata: FileMetadata,
