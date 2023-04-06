@@ -319,6 +319,18 @@ Resources:
 <%   end -%>
 <% end -%>
 
+  HourOfCodeCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: <%= CDO.hourofcode_hostname %>
+      SubjectAlternativeNames:
+        - <%= CDO.hourofcode_origin_hostname %>
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: <%= CDO.hourofcode_hostname %>
+          HostedZoneId: <%= CDO.hourofcode_hostedzone_id %>
+        - DomainName: <%= CDO.hourofcode_origin_hostname %>
+          HostedZoneId: <%= CDO.hourofcode_hostedzone_id %>
 
 <% if frontends-%>
   # ---------------------------------------------
