@@ -487,7 +487,7 @@ module Api::V1::Pd
 
         application = create(
           TEACHER_APPLICATION_FACTORY,
-          course: 'csp',
+          course: 'csd',
           form_data_hash: @hash_csd_with_rp,
           user: @serializing_teacher,
           pd_workshop_id: workshop.id
