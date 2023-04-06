@@ -1,3 +1,7 @@
+/**
+ * Redux store for editor-specific Java Lab state.
+ */
+
 import {
   fileMetadataForEditor,
   updateAllSourceFileOrders
