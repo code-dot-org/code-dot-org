@@ -46,8 +46,6 @@ const baseUrl = 'https://curriculum.code.org/media/musiclab/';
  */
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
-    onMount: PropTypes.func,
-
     // populated by Redux
     userId: PropTypes.number,
     userType: PropTypes.string,
@@ -92,10 +90,6 @@ class UnconnectedMusicView extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.onMount) {
-      this.props.onMount();
-    }
-
     this.analyticsReporter.startSession().then(() => {
       this.analyticsReporter.setUserProperties(
         this.props.userId,
@@ -536,16 +530,12 @@ const MusicView = connect(
   })
 )(UnconnectedMusicView);
 
-const MusicLabView = ({onMount}) => {
+const MusicLabView = () => {
   return (
     <Provider store={getStore()}>
-      <MusicView onMount={onMount} />
+      <MusicView  />
     </Provider>
   );
-};
-
-MusicLabView.propTypes = {
-  onMount: PropTypes.func
 };
 
 export default MusicLabView;
