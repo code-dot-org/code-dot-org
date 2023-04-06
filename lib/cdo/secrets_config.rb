@@ -1,6 +1,5 @@
 require 'cdo/config'
 require 'cdo/lazy'
-require 'cdo/aws/cloud_formation'
 
 module Cdo
   # Prepend this module to a Cdo::Config to process lazy-loaded secrets contained in special tags.
@@ -99,8 +98,30 @@ module Cdo
       # latter is environment-specific and we want stack-specific overrides to
       # apply to all environments.
       def stack_specific_secret_path
-        @stack ||= AWS::CloudFormation.current_stack_name
+        @stack ||= current_stack_name
         @stack ? "CfnStack/#{@stack}/#{secret_key}" : nil
+      end
+
+      EC2_METADATA_SERVICE_URL = URI('http://169.254.169.254/latest/meta-data/instance-id')
+
+      # Get the CloudFormation Stack Name that the EC2 Instance this code is executing on belongs to.
+      # @return [String]
+      def current_stack_name
+        metadata_service_request = Net::HTTP.new(EC2_METADATA_SERVICE_URL.host, EC2_METADATA_SERVICE_URL.port)
+        # Set a short timeout so that when not executing on an EC2 Instance we fail fast.
+        metadata_service_request.open_timeout = metadata_service_request.read_timeout = 10
+        ec2_instance_id = metadata_service_request.request_get(EC2_METADATA_SERVICE_URL.path).body
+        ec2_client = Aws::EC2::Client.new
+        ec2_client.
+          describe_tags({filters: [{name: "resource-id", values: [ec2_instance_id]}]}).
+          tags.
+          select {|tag| tag.key == 'aws:cloudformation:stack-name'}.
+          first.
+          value
+      rescue Net::OpenTimeout # This code is not executing on an AWS EC2 Instance nor in an ECS container or Lambda.
+        nil
+      rescue StandardError
+        nil
       end
     end
 
