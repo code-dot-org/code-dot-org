@@ -1,3 +1,8 @@
+const minX = 20;
+const maxX = 400 - minX;
+const minY = 35;
+const maxY = 400 - 40;
+
 /**
  * Given a group of sprites, arrange all sprites of this type in a particular
  * layout. This is likely to change some or all of position/scale for
@@ -16,12 +21,6 @@ export function layoutSpriteGroup(group, layout, p5) {
     sprite.setScale(0.3);
   });
 
-  const minX = 20;
-  const maxX = 400 - minX;
-  const minY = 35;
-  const maxY = 400 - 40;
-  const maxCircleRadius = 165;
-
   if (layout === 'top') {
     createRow(group, 100);
   } else if (layout === 'row') {
@@ -29,6 +28,22 @@ export function layoutSpriteGroup(group, layout, p5) {
   } else if (layout === 'bottom') {
     createRow(group, 300);
   } else if (layout === 'border') {
+    createBorder(group);
+  } else if (layout === 'circle') {
+    createCircle(group);
+  } else if (layout === 'grid') {
+    createGrid(group);
+  } else if (layout === 'left') {
+    createColumn(group, 100);
+  } else if (layout === 'column') {
+    createColumn(group, 200);
+  } else if (layout === 'right') {
+    createColumn(group, 300);
+  } else {
+    throw new Error('Unexpected layout: ' + layout);
+  }
+
+  function createBorder(group) {
     // First fill the four corners.
     // Then split remainder into 4 groups. Distribute group one along the top,
     // group 2 along the right, etc.
@@ -80,7 +95,11 @@ export function layoutSpriteGroup(group, layout, p5) {
         sprite.y = p5.lerp(minY, maxY, (i + 1) / (leftCount + 1));
       }
     }
-  } else if (layout === 'circle') {
+  }
+
+  function createCircle(group) {
+    const maxCircleRadius = 165;
+
     // Adjust radius of circle and size of the sprite according to number of
     // sprites in our group.
     const pct = p5.constrain(count / 10, 0, 1);
@@ -95,7 +114,9 @@ export function layoutSpriteGroup(group, layout, p5) {
       sprite.y = 200 + radius * Math.sin(angle);
       sprite.setScale(scale);
     });
-  } else if (layout === 'grid') {
+  }
+
+  function createGrid(group) {
     // Create a grid where the width is the square root of the count, rounded up,
     // and the height is the number of rows needed to fill in count cells.
     // For our last row, we might have empty cells in our grid (but the row
@@ -109,14 +130,6 @@ export function layoutSpriteGroup(group, layout, p5) {
       sprite.x = p5.lerp(minX, maxX, col / (numCols - 1) || 0);
       sprite.y = p5.lerp(minY, maxY, row / (numRows - 1) || 0);
     });
-  } else if (layout === 'left') {
-    createColumn(group, 100);
-  } else if (layout === 'column') {
-    createColumn(group, 200);
-  } else if (layout === 'right') {
-    createColumn(group, 300);
-  } else {
-    throw new Error('Unexpected layout: ' + layout);
   }
 }
 
