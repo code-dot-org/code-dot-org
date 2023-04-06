@@ -45,7 +45,7 @@ function schoolDropdownOnChange(field, event) {
   renderSchoolDropdown();
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
   const hocEventLocationElement = document.getElementById(
     'hoc-event-location-selector'
   );
@@ -65,7 +65,7 @@ $(document).ready(function() {
 
   renderSchoolDropdown();
 
-  $('#hoc-signup-form').submit(function(event) {
+  $('#hoc-signup-form').submit(function (event) {
     $('#email-invalid-error').hide();
     if (validateFields()) {
       signupFormSubmit(gotoThankYouPage);
@@ -73,11 +73,11 @@ $(document).ready(function() {
     renderSchoolDropdown();
   });
 
-  $('#census-form').submit(function(event) {
+  $('#census-form').submit(function (event) {
     censusFormSubmit();
   });
 
-  $('#continue').click(function() {
+  $('#continue').click(function () {
     $('#email-invalid-error').hide();
     if (validateFields()) {
       signupFormSubmit(showCensusForm);
@@ -85,15 +85,11 @@ $(document).ready(function() {
     renderSchoolDropdown();
   });
 
-  $('#hoc-special-event-flag').change(function() {
+  $('#hoc-special-event-flag').change(function () {
     if ($(this).is(':checked')) {
-      $('#hoc-special-event-details')
-        .closest('.form-group')
-        .slideDown();
+      $('#hoc-special-event-details').closest('.form-group').slideDown();
     } else {
-      $('#hoc-special-event-details')
-        .closest('.form-group')
-        .slideUp();
+      $('#hoc-special-event-details').closest('.form-group').slideUp();
     }
   });
 
@@ -149,11 +145,11 @@ $(document).ready(function() {
     }
   }
 
-  $('#country').change(function() {
+  $('#country').change(function () {
     checkShowNameEventLocation();
   });
 
-  $('#hoc-event-type').change(function() {
+  $('#hoc-event-type').change(function () {
     checkShowNameEventLocation();
   });
 
@@ -170,15 +166,15 @@ $(document).ready(function() {
     }
   }
 
-  $('#twenty-hour-how-much').change(function() {
+  $('#twenty-hour-how-much').change(function () {
     checkShowCensusFollowUp();
   });
 
-  $('#ten-hour-how-much').change(function() {
+  $('#ten-hour-how-much').change(function () {
     checkShowCensusFollowUp();
   });
 
-  $('#role').change(function() {
+  $('#role').change(function () {
     if ($(this).val() === 'TEACHER' || $(this).val() === 'ADMINISTRATOR') {
       $('#pledge').show();
     } else {

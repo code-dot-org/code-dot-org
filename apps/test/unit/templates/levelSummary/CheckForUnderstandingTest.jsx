@@ -44,13 +44,6 @@ const INITIAL_STATE = {
 };
 
 const setUpWrapper = (state = {}, jsData = {}) => {
-  const div = document.createElement('div');
-  div.setAttribute('id', 'attach-to-div');
-  const script = document.createElement('script');
-  script.dataset.summary = JSON.stringify({...JS_DATA, ...jsData});
-  document.head.appendChild(script);
-  document.body.appendChild(div);
-
   const store = createStore(
     combineReducers({
       isRtl,
@@ -63,20 +56,14 @@ const setUpWrapper = (state = {}, jsData = {}) => {
 
   const wrapper = mount(
     <Provider store={store}>
-      <CheckForUnderstanding />
-    </Provider>,
-    {attachTo: div}
+      <CheckForUnderstanding scriptData={{...JS_DATA, ...jsData}} />
+    </Provider>
   );
 
   return wrapper;
 };
 
 describe('CheckForUnderstanding', () => {
-  afterEach(() => {
-    document.head.removeChild(document.querySelector('script[data-summary]'));
-    document.body.removeChild(document.querySelector('#attach-to-div'));
-  });
-
   it('renders elements', () => {
     const wrapper = setUpWrapper();
 
@@ -90,12 +77,14 @@ describe('CheckForUnderstanding', () => {
     expect(wrapper.find('textarea').length).to.eq(1);
     // Student responses.
     expect(wrapper.find(`.${styles.studentsSubmittedRight}`).text()).to.eq(
-      '1/1 students submitted'
+      '1/1 students answered'
     );
     expect(wrapper.find(`div.${styles.studentAnswer}`).length).to.eq(1);
     // Section selector, with one section.
     expect(wrapper.find('SectionSelector').length).to.eq(1);
     expect(wrapper.find('SectionSelector option').length).to.eq(2);
+    // Feedback sharing notification banner
+    expect(wrapper.find('Notification').length).to.eq(1);
   });
 
   it('applies correct classes when rtl', () => {
@@ -107,7 +96,10 @@ describe('CheckForUnderstanding', () => {
         lessons: [
           {
             id: 0,
-            levels: [{activeId: '0', position: 1}, {activeId: '1', position: 2}]
+            levels: [
+              {activeId: '0', position: 1},
+              {activeId: '1', position: 2}
+            ]
           }
         ]
       }
@@ -127,11 +119,22 @@ describe('CheckForUnderstanding', () => {
     );
 
     expect(wrapper.find('SafeMarkdown').length).to.eq(2);
-    expect(
-      wrapper
-        .find('SafeMarkdown')
-        .at(1)
-        .text()
-    ).to.eq('test teacher markdown');
+    expect(wrapper.find('SafeMarkdown').at(1).text()).to.eq(
+      'test teacher markdown'
+    );
+  });
+
+  it('does not render response counter/text if no section selected', () => {
+    const wrapper = setUpWrapper({
+      teacherSections: {
+        selectedStudents: [{id: 0}],
+        selectedSectionId: null,
+        sectionIds: [0],
+        sections: [{id: 0, name: 'test section'}]
+      }
+    });
+
+    expect(wrapper.find(`.${styles.studentsSubmittedRight}`).length).to.eq(0);
+    expect(wrapper.find(`.${styles.studentsSubmittedLeft}`).length).to.eq(0);
   });
 });

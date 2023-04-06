@@ -16,9 +16,9 @@ export default class IconList extends React.Component {
   getMatches(query) {
     const results = {};
 
-    Object.keys(aliases).forEach(function(alias) {
+    Object.keys(aliases).forEach(function (alias) {
       if (query.test(alias)) {
-        aliases[alias].forEach(function(match) {
+        aliases[alias].forEach(function (match) {
           results[match] = alias;
         });
       }

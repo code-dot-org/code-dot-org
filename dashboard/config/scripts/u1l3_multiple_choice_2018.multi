@@ -7,3 +7,5 @@ wrong '4 bits'
 wrong '3 bits'
 right '2 bits'
 wrong '1 bit'
+
+allow_multiple_attempts true

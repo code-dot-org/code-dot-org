@@ -5,7 +5,8 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "ecosystems"
     ],
     "helper_libraries": [
       "NativeSpriteLab",
@@ -18,11 +19,11 @@
     "all_animations_single_frame": "true",
     "use_modal_function_editor": "true",
     "embed": "false",
-    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Your condition should look like this:\\n<xml><block type=\\\"controls_if\\\" deletable=\\\"false\\\" movable=\\\"false\\\" editable=\\\"false\\\"><value name=\\\"IF0\\\"><block type=\\\"logic_compare\\\" deletable=\\\"false\\\" movable=\\\"false\\\" editable=\\\"false\\\"><field name=\\\"OP\\\">GT</field><value name=\\\"A\\\"><block type=\\\"gamelab_countByAnimation\\\" deletable=\\\"false\\\" movable=\\\"false\\\" editable=\\\"false\\\"><value name=\\\"SPRITE\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\" deletable=\\\"false\\\" movable=\\\"false\\\" editable=\\\"false\\\"><field name=\\\"ANIMATION\\\">\\\"green-sea-plant-2\\\"</field></block></value></block></value><value name=\\\"B\\\"><block type=\\\"math_number\\\" deletable=\\\"false\\\" movable=\\\"false\\\" editable=\\\"false\\\"><field name=\\\"NUM\\\">8</field></block></value></block></value><statement name=\\\"DO0\\\"><block type=\\\"gamelab_setAnimation\\\" deletable=\\\"false\\\" movable=\\\"false\\\" editable=\\\"false\\\"><field name=\\\"ANIMATION\\\">\\\"red-coral-dead\\\"</field><value name=\\\"THIS\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\" deletable=\\\"false\\\" movable=\\\"false\\\" editable=\\\"false\\\"><field name=\\\"ANIMATION\\\">\\\"underseadeco_25\\\"</field></block></value><next><block type=\\\"gamelab_setAnimation\\\" deletable=\\\"false\\\" movable=\\\"false\\\" editable=\\\"false\\\"><field name=\\\"ANIMATION\\\">\\\"purple-coral-dead\\\"</field><value name=\\\"THIS\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\" deletable=\\\"false\\\" movable=\\\"false\\\" editable=\\\"false\\\"><field name=\\\"ANIMATION\\\">\\\"underseadeco_24\\\"</field></block></value></block></next></xml>\",\"hint_id\":\"condition_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/44008d613c0ae716fa0c9bba77e54d68/csc_ecosystems_ocean_coral.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"Make sure your operator is set to a greater than sign.\",\"hint_id\":\"greater_than_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/23b00e70a68100459d72fe5a345d331f/csc_ecosystems_ocean_coral.mp3\"}]",
+    "authored_hints": "[]",
     "instructions_important": "false",
     "project_template_level_name": "csc_ecosystems_template_2023",
-    "short_instructions": "Simulate your ecosystem falling out of balance when the fish do not eat enough algae and it takes over the environment damaging the coral reef.",
-    "long_instructions": "**When there is too much algae it damages the coral reef. Simulate your ecosystem falling out of balance.**\r\n\r\nDo This: \r\n- Connect an `if` block under the `when fish touches algae` event block.\r\n- Place two `change costume` blocks inside of the `if` block and set them to change from healthy coral to sick coral.\r\n\r\n\r\n",
+    "short_instructions": "Simulate your ecosystem falling out of balance with an overgrowth of algae.",
+    "long_instructions": "##An Algae Overgrowth!\r\n**When there is too much algae it damages the coral reef. Simulate your ecosystem falling out of balance.**\r\n\r\n- Under the `when fish touches algae`(#6AF36C) event block, add an `if too much algae`(#5ED5DD) block \r\n\r\n- Place the `change costume`(#5ED5DD) block ***inside*** the condition.  \r\n- Set it to change from healthy coral to sick coral.\r\n- Click `Run`(#FFBD46) and watch the simulation.\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -44,12 +45,12 @@
     "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2023-02-22T20:22:28.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2023-02-22T20:22:28.000Z",
   "user_id": 18528,
-  "audit_log": "[{\"changed_at\":\"2023-02-22T20:22:28.500+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_coral_2\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_coral_2\"},{\"changed_at\":\"2023-02-28 15:10:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-02-22T20:22:28.500+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_coral_2\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_coral_2\"},{\"changed_at\":\"2023-02-28 15:10:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-30 00:27:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-30 00:28:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-30 00:28:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-30 00:29:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-30 01:57:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"short_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-30 23:13:17 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -422,39 +423,6 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_makeNumSprites">
-          <field name="ANIMATION_NAME">"fish_10"</field>
-          <value name="NUM">
-            <block type="math_number" can_disconnect_from_parent="false">
-              <field name="NUM">10</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_setProp">
-          <field name="PROPERTY">"scale"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"fish_10"</field>
-            </block>
-          </value>
-          <value name="VAL">
-            <block type="math_number" can_disconnect_from_parent="false">
-              <field name="NUM">50</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_addBehaviorSimple">
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"fish_10"</field>
-            </block>
-          </value>
-          <value name="BEHAVIOR">
-            <block type="gamelab_collectibleBehaviors" can_disconnect_from_parent="false">
-              <field name="BEHAVIOR">new Behavior(wandering, [])</field>
-            </block>
-          </value>
-        </block>
         <block type="gamelab_checkTouching">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
@@ -468,41 +436,25 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_destroy"/>
-        <block type="controls_if">
-          <value name="IF0">
-            <block type="logic_compare" can_disconnect_from_parent="false">
-              <field name="OP">GT</field>
-              <value name="A">
-                <block type="gamelab_countByAnimation" can_disconnect_from_parent="false">
-                  <value name="SPRITE">
-                    <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                      <field name="ANIMATION">"green-sea-plant-2"</field>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <value name="B">
-                <block type="math_number" can_disconnect_from_parent="false">
-                  <field name="NUM">8</field>
-                </block>
-              </value>
-            </block>
+        <block type="ecosystems_eat">
+          <value name="THIS">
+            <block type="gamelab_objectSpritePointer"/>
           </value>
+        </block>
+        <block type="ecosystems_catchMe">
+          <value name="THIS">
+            <block type="gamelab_objectSpritePointer"/>
+          </value>
+        </block>
+        <block type="ecosystems_goldilocks">
+          <field name="CONDITION">"too much"</field>
+          <field name="SPRITE">"green-sea-plant-2"</field>
         </block>
         <block type="gamelab_setAnimation">
           <field name="ANIMATION">"red-coral-dead"</field>
           <value name="THIS">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"underseadeco_25"</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_setAnimation">
-          <field name="ANIMATION">"purple-coral-dead"</field>
-          <value name="THIS">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"underseadeco_24"</field>
             </block>
           </value>
         </block>

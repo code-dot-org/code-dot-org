@@ -112,7 +112,8 @@ const styles = {
   }
 };
 
-export const UnconnectedMultipleChoiceDetailsDialog = MultipleChoiceDetailsDialog;
+export const UnconnectedMultipleChoiceDetailsDialog =
+  MultipleChoiceDetailsDialog;
 
 export default connect(state => ({
   questionAndAnswers: getCurrentQuestion(state),

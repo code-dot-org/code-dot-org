@@ -58,7 +58,7 @@ class ImmersiveReaderButton extends Component {
           borderRadius: hasRoundBorders ? 4 : '4px 0 0 4px'
         }}
         data-locale={locale}
-        onClick={function() {
+        onClick={function () {
           handleLaunchImmersiveReader(locale, title, text);
         }}
         onKeyDown={e => this.handleKeyDown(e, locale, title, text)}

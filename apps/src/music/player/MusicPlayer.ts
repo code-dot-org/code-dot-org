@@ -8,6 +8,7 @@ import {SoundEvent} from './interfaces/SoundEvent';
 import {TrackMetadata} from './interfaces/TrackMetadata';
 import MusicLibrary, {SoundFolder} from './MusicLibrary';
 import SamplePlayer, {SampleEvent} from './SamplePlayer';
+import {generateNotesFromChord, ChordNote} from '../utils/Chords';
 
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
@@ -24,8 +25,7 @@ const DEFAULT_BPM = 120;
 export default class MusicPlayer {
   private bpm: number;
   private playbackEvents: PlaybackEvent[];
-  private lastTriggeredMeasure: number;
-  private lastWhenRunMeasure: number;
+  private lastMeasure: number;
   private tracksMetadata: {[trackId: string]: TrackMetadata};
   private uniqueInvocationIdUpto: number;
   private samplePlayer: SamplePlayer;
@@ -38,8 +38,7 @@ export default class MusicPlayer {
     this.uniqueInvocationIdUpto = 0;
     this.samplePlayer = new SamplePlayer();
     this.library = null;
-    this.lastTriggeredMeasure = 0;
-    this.lastWhenRunMeasure = 0;
+    this.lastMeasure = 0;
   }
 
   /**
@@ -60,6 +59,10 @@ export default class MusicPlayer {
    */
   loadSoundFromBuffer(id: number, buffer: ArrayBuffer) {
     soundApi.LoadSoundFromBuffer(id, buffer);
+  }
+
+  getBPM(): number {
+    return this.bpm;
   }
 
   /**
@@ -92,19 +95,6 @@ export default class MusicPlayer {
       return;
     }
 
-    const endingMeasure = measure + soundData.length - 1;
-    if (insideWhenRun) {
-      this.lastWhenRunMeasure = Math.max(
-        endingMeasure,
-        this.lastWhenRunMeasure
-      );
-    } else {
-      this.lastTriggeredMeasure = Math.max(
-        endingMeasure,
-        this.lastTriggeredMeasure
-      );
-    }
-
     const soundEvent: SoundEvent = {
       type: 'sound',
       id,
@@ -119,7 +109,7 @@ export default class MusicPlayer {
       blockId
     };
 
-    this.playbackEvents.push(soundEvent);
+    this.addNewEvent(soundEvent);
 
     if (this.samplePlayer.playing()) {
       this.samplePlayer.playSamples(this.convertEventToSamples(soundEvent));
@@ -155,10 +145,11 @@ export default class MusicPlayer {
       skipContext,
       effects,
       length: constants.DEFAULT_PATTERN_LENGTH,
-      blockId
+      blockId,
+      id: JSON.stringify(value)
     };
 
-    this.playbackEvents.push(patternEvent);
+    this.addNewEvent(patternEvent);
 
     if (this.samplePlayer.playing()) {
       this.samplePlayer.playSamples(this.convertEventToSamples(patternEvent));
@@ -194,10 +185,11 @@ export default class MusicPlayer {
       skipContext,
       effects,
       length: constants.DEFAULT_CHORD_LENGTH,
-      blockId
+      blockId,
+      id: JSON.stringify(value)
     };
 
-    this.playbackEvents.push(chordEvent);
+    this.addNewEvent(chordEvent);
 
     if (this.samplePlayer.playing()) {
       this.samplePlayer.playSamples(this.convertEventToSamples(chordEvent));
@@ -210,20 +202,46 @@ export default class MusicPlayer {
    * @param id unique ID of the sound
    * @param onStop called when the sound finished playing
    */
-  previewSound(id: string, onStop: () => any) {
+  previewSound(id: string, onStop?: () => any) {
     this.samplePlayer.previewSample(id, onStop);
   }
 
-  previewChord(chordValue: ChordEventValue, onStop: () => any) {
+  previewChord(chordValue: ChordEventValue, onStop?: () => any) {
     const chordEvent: ChordEvent = {
       type: 'chord',
       when: 1,
       value: chordValue,
       triggered: false,
-      length: constants.DEFAULT_CHORD_LENGTH
+      length: constants.DEFAULT_CHORD_LENGTH,
+      id: 'preview'
     };
     this.samplePlayer.previewSamples(
       this.convertEventToSamples(chordEvent),
+      onStop
+    );
+  }
+
+  previewNote(note: number, instrument: string, onStop?: () => any) {
+    const sampleId = this.getSampleForNote(note, instrument);
+    if (sampleId === null) {
+      return;
+    }
+
+    this.previewSound(sampleId, onStop);
+  }
+
+  previewPattern(patternValue: PatternEventValue, onStop?: () => any) {
+    const patternEvent: PatternEvent = {
+      type: 'pattern',
+      when: 1,
+      value: patternValue,
+      triggered: false,
+      length: constants.DEFAULT_PATTERN_LENGTH,
+      id: 'preview'
+    };
+
+    this.samplePlayer.previewSamples(
+      this.convertEventToSamples(patternEvent),
       onStop
     );
   }
@@ -253,26 +271,25 @@ export default class MusicPlayer {
    */
   stopSong() {
     this.samplePlayer.stopPlayback();
-    this.clearTriggeredEvents();
   }
 
   /**
-   * Clear all non-triggered events from the list of playback events, and stop
-   * any sounds that have not yet been played, if playback is in progress.
+   * Clear all from the list of playback events, and stop any sounds that have
+   * not yet been played, if playback is in progress.
    */
-  clearWhenRunEvents() {
-    this.playbackEvents = this.playbackEvents.filter(
-      playbackEvent => playbackEvent.triggered
-    );
+  clearAllEvents() {
+    this.playbackEvents = [];
+    this.lastMeasure = 0;
+    this.tracksMetadata = {};
+
     Object.keys(this.tracksMetadata).forEach(trackId => {
       if (this.tracksMetadata[trackId].insideWhenRun) {
         delete this.tracksMetadata[trackId];
       }
     });
 
-    // If playing, stop all non-triggered samples that have not yet been played.
+    // If playing, stop all samples that have not yet been played.
     this.samplePlayer.stopAllSamplesStillToPlay();
-    this.lastWhenRunMeasure = 0;
   }
 
   getPlaybackEvents(): PlaybackEvent[] {
@@ -280,7 +297,7 @@ export default class MusicPlayer {
   }
 
   getLastMeasure(): number {
-    return Math.max(this.lastWhenRunMeasure, this.lastTriggeredMeasure);
+    return this.lastMeasure;
   }
 
   // Returns the current playhead position, in floating point for an exact position,
@@ -398,10 +415,6 @@ export default class MusicPlayer {
     this.tracksMetadata[trackId].currentMeasure += lengthMeasures;
   }
 
-  clearTracksData() {
-    this.tracksMetadata = {};
-  }
-
   getTracksMetadata(): {[trackId: string]: TrackMetadata} {
     return this.tracksMetadata;
   }
@@ -436,29 +449,12 @@ export default class MusicPlayer {
     return playingBlockIds;
   }
 
-  /**
-   * Clear all triggered events from the list of playback events.
-   */
-  private clearTriggeredEvents() {
-    this.playbackEvents = this.playbackEvents.filter(
-      playbackEvent => !playbackEvent.triggered
-    );
-
-    Object.keys(this.tracksMetadata).forEach(trackId => {
-      if (!this.tracksMetadata[trackId].insideWhenRun) {
-        delete this.tracksMetadata[trackId];
-      }
-    });
-
-    this.lastTriggeredMeasure = 0;
+  private addNewEvent(event: PlaybackEvent) {
+    this.playbackEvents.push(event);
+    this.lastMeasure = Math.max(this.lastMeasure, event.when + event.length - 1);
   }
 
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
-    if (this.library === null) {
-      console.warn('Music Player not initialized');
-      return [];
-    }
-
     if (event.skipContext?.skipSound) {
       return [];
     }
@@ -495,64 +491,72 @@ export default class MusicPlayer {
 
       return results;
     } else if (event.type === 'chord') {
-      const chordEvent = event as ChordEvent;
-      const {instrument, notes, playStyle} = chordEvent.value;
-      if (notes.length === 0) {
-        return [];
-      }
-
-      const results: SampleEvent[] = [];
-
-      const folder: SoundFolder | null = this.library.getFolderForPath(
-        instrument
+      const results: SampleEvent[] = this.convertChordEventToSampleEvents(
+        event
       );
-
-      if (folder === null) {
-        console.warn(`No instrument ${instrument}`);
-        return [];
-      }
-
-      if (playStyle === 'arpeggio-up') {
-        notes.sort();
-      } else if (playStyle === 'arpeggio-down') {
-        notes.sort().reverse();
-      } else if (playStyle === 'arpeggio-random') {
-        // Randomize using Fisher-Yates Algorithm
-        for (let i = notes.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          const temp = notes[i];
-          notes[i] = notes[j];
-          notes[j] = temp;
-        }
-      }
-
-      // Create the array of samples. If the play style is arpeggio, we play one
-      // sound every 16th note, repeating the sequence as many times as needed.
-      // If the play style is "together", then only add each note once, and have them
-      // all play at the start of the given measure.
-      for (let i = 0; i < (playStyle === 'together' ? notes.length : 16); i++) {
-        const note = notes[i % notes.length];
-        const sound = folder.sounds.find(sound => sound.note === note) || null;
-        if (sound === null) {
-          console.warn(
-            `No sound for note value ${note} on instrument ${instrument}`
-          );
-          continue;
-        }
-
-        const noteWhen =
-          playStyle === 'together' ? chordEvent.when : chordEvent.when + i / 16;
-
-        results.push({
-          sampleId: `${instrument}/${sound.src}`,
-          offsetSeconds: this.convertPlayheadPositionToSeconds(noteWhen),
-          ...event
-        });
-      }
-
       return results;
     }
 
     return [];
+  }
+
+  convertChordEventToSampleEvents(event: PlaybackEvent): SampleEvent[] {
+    const chordEvent = event as ChordEvent;
+
+    const {instrument, notes} = chordEvent.value;
+    if (notes.length === 0) {
+      return [];
+    }
+
+    const results: SampleEvent[] = [];
+
+    const generatedNotes: ChordNote[] = generateNotesFromChord(
+      chordEvent.value
+    );
+
+    generatedNotes.forEach(note => {
+      const sampleId = this.getSampleForNote(note.note, instrument);
+      if (sampleId === null) {
+        console.warn(
+          `No sound for note value ${note} on instrument ${instrument}`
+        );
+      } else {
+        const noteWhen = chordEvent.when + (note.tick - 1) / 16;
+
+        results.push({
+          sampleId,
+          offsetSeconds: this.convertPlayheadPositionToSeconds(noteWhen),
+          ...event
+        });
+      }
+    });
+
+    return results;
+  }
+
+  private getSampleForNote(note: number, instrument: string): string | null {
+    if (this.library === null) {
+      console.warn('Music Player not initialized');
+      return null;
+    }
+
+    const folder: SoundFolder | null = this.library.getFolderForPath(
+      instrument
+    );
+
+    if (folder === null) {
+      console.warn(`No instrument ${instrument}`);
+      return null;
+    }
+
+    const sound = folder.sounds.find(sound => sound.note === note) || null;
+    if (sound === null) {
+      console.warn(
+        `No sound for note value ${note} on instrument ${instrument}`
+      );
+      return null;
+    }
+
+    return `${instrument}/${sound.src}`;
   }
 }

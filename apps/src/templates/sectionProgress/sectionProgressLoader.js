@@ -78,9 +78,7 @@ export function loadScriptProgress(scriptId, sectionId) {
   const numPages = Math.ceil(students.length / NUM_STUDENTS_PER_PAGE);
 
   const requests = _.range(1, numPages + 1).map(currentPage => {
-    const url = `/dashboardapi/section_level_progress/${
-      sectionData.id
-    }?script_id=${scriptId}&page=${currentPage}&per=${NUM_STUDENTS_PER_PAGE}`;
+    const url = `/dashboardapi/section_level_progress/${sectionData.id}?script_id=${scriptId}&page=${currentPage}&per=${NUM_STUDENTS_PER_PAGE}`;
     return fetch(url, {credentials: 'include'})
       .then(response => response.json())
       .then(data => {

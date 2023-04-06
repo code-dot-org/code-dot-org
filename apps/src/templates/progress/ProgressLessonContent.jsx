@@ -17,13 +17,8 @@ export default class ProgressLessonContent extends React.Component {
   };
 
   render() {
-    const {
-      description,
-      levels,
-      disabled,
-      selectedSectionId,
-      lessonName
-    } = this.props;
+    const {description, levels, disabled, selectedSectionId, lessonName} =
+      this.props;
     const progressions = progressionsFromLevels(levels);
 
     let bubbles;

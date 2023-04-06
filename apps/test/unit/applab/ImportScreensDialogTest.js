@@ -165,11 +165,7 @@ describe('ImportScreensDialog', () => {
   let dialog, onImport;
 
   function getDialogButton() {
-    return dialog
-      .children()
-      .at(1)
-      .children()
-      .at(0);
+    return dialog.children().at(1).children().at(0);
   }
 
   describe('When given a list of screens', () => {
@@ -209,18 +205,8 @@ describe('ImportScreensDialog', () => {
 
     it('renders a dialog with the list of screens', () => {
       expect(dialog.type()).to.equal(Dialog);
-      expect(
-        dialog
-          .children()
-          .at(0)
-          .type()
-      ).to.equal(Body);
-      expect(
-        dialog
-          .children()
-          .at(1)
-          .type()
-      ).to.equal(Buttons);
+      expect(dialog.children().at(0).type()).to.equal(Body);
+      expect(dialog.children().at(1).type()).to.equal(Buttons);
       expect(dialog.find('MultiCheckboxSelector').length).to.equal(1);
     });
 

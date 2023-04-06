@@ -73,10 +73,7 @@ describe('FoormEntityLoadButtons', () => {
       />
     );
 
-    wrapper
-      .find(SingleCheckbox)
-      .at(0)
-      .prop('onChange')();
+    wrapper.find(SingleCheckbox).at(0).prop('onChange')();
     wrapper.update();
 
     const expectedOrder = [

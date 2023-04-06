@@ -21,12 +21,8 @@ export class UnconnectedRemoveLessonDialog extends Component {
   };
 
   handleConfirm = () => {
-    const {
-      lessonGroupPosition,
-      lessonPosToRemove,
-      removeLesson,
-      handleClose
-    } = this.props;
+    const {lessonGroupPosition, lessonPosToRemove, removeLesson, handleClose} =
+      this.props;
     removeLesson(lessonGroupPosition, lessonPosToRemove);
     handleClose();
   };
@@ -52,10 +48,7 @@ export class UnconnectedRemoveLessonDialog extends Component {
   }
 }
 
-const RemoveLessonDialog = connect(
-  state => ({}),
-  {
-    removeLesson
-  }
-)(UnconnectedRemoveLessonDialog);
+const RemoveLessonDialog = connect(state => ({}), {
+  removeLesson
+})(UnconnectedRemoveLessonDialog);
 export default RemoveLessonDialog;
