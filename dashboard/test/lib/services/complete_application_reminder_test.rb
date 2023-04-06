@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class Services::CompleteApplicationReminderTest < ActiveSupport::TestCase
-  setup do
+  setup_all do
     Pd::Application::TeacherApplication.any_instance.stubs(:deliver_email)
   end
 

@@ -8,6 +8,8 @@ module Api::V1::Pd::Application
     self.use_transactional_test_case = true
 
     setup_all do
+      Pd::Application::ApplicationBase.any_instance.stubs(:deliver_email)
+
       @test_params = {
         form_data: build(TEACHER_APPLICATION_HASH_FACTORY)
       }

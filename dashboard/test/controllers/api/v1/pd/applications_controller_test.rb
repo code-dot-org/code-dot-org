@@ -9,6 +9,8 @@ module Api::V1::Pd
     freeze_time
 
     setup_all do
+      Pd::Application::ApplicationBase.any_instance.stubs(:deliver_email)
+
       @workshop_admin = create :workshop_admin
       @workshop_organizer = create :workshop_organizer
       @program_manager = create :teacher

@@ -2,6 +2,10 @@ require 'test_helper'
 
 module Pd::Application
   class PrincipalApprovalApplicationTest < ActiveSupport::TestCase
+    setup_all do
+      Pd::Application::ApplicationBase.any_instance.stubs(:deliver_email)
+    end
+
     test 'does not require user or status' do
       application = build :pd_principal_approval_application, user: nil, status: nil, approved: 'Yes'
       assert application.valid?
