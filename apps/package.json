@@ -105,7 +105,7 @@
     "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-cdo-custom-rules": "file:./eslint",
     "eslint-plugin-mocha": "^4.12.1",
     "eslint-plugin-prettier": "^4.2.1",
