@@ -137,6 +137,7 @@ const Notification = ({
                     href={detailsLink}
                     style={styles.detailsLink}
                     target={detailsLinkNewWindow ? '_blank' : null}
+                    rel={detailsLinkNewWindow ? 'noreferrer' : undefined}
                   >
                     {detailsLinkText}
                   </a>
