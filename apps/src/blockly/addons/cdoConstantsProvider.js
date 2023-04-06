@@ -1,7 +1,7 @@
 import GoogleBlockly from 'blockly/core';
 import {inputBlockTypes, outputBlockStyleTypes} from './cdoConstants';
 
-export default class CdoConstantsProvider extends GoogleBlockly.geras
+export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
   .ConstantProvider {
   /**
    * Get an object with connection shape and sizing information based on the

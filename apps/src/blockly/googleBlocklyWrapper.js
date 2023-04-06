@@ -19,7 +19,7 @@ import CdoFieldVariable from './addons/cdoFieldVariable';
 import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
-import CdoRenderer from './addons/cdoRenderer';
+import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './themes/cdoTheme';
@@ -147,6 +147,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Blocks');
   blocklyWrapper.wrapReadOnlyProperty('BlockSvg');
   blocklyWrapper.wrapReadOnlyProperty('browserEvents');
+  blocklyWrapper.wrapReadOnlyProperty('blockRendering.ConstantProvider');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
   blocklyWrapper.wrapReadOnlyProperty('ComponentManager');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
@@ -252,8 +253,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.RENDERER,
-    'cdo_renderer',
-    CdoRenderer,
+    'cdo_renderer_geras',
+    CdoRendererGeras,
     true /* opt_allowOverrides */
   );
   blocklyWrapper.blockly_.registry.register(

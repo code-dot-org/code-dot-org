@@ -1216,7 +1216,7 @@ StudioApp.prototype.inject = function (div, options) {
   if (experiments.isEnabled('zelos')) {
     options.renderer = 'cdo_renderer_zelos';
   } else if (experiments.isEnabled('geras')) {
-    options.renderer = 'cdo_renderer';
+    options.renderer = 'cdo_renderer_geras';
   }
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };
