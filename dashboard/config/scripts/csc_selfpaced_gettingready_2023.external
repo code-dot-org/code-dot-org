@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Getting Ready 
 
-## Suggested Planning Activities
-
 <img src="https://images.code.org/a602561da92e97ab5bc1fe1f35cffd16-image-1679955031729.png" style="float: right; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+## Suggested Planning Activities
 
 ##### **Pick a module to add to your scope and sequence** 
 When does the module best fit into what you are already teaching?
@@ -18,12 +18,16 @@ What colleagues (e.g. librarian, technology specialist, general education) may w
 ##### **Make modifications or accomodations**
 How will you adapt the lessons to best meet your students' needs?
 
-
+<hr style="clear:both">
 
 
 ## Suggested Preparing Activities
 
+<img src="https://images.code.org/c46adeb1f3cda223361151b3ab88a71d-image-1680733372700.png" style="float: right; height: 250px; clear: both; margin: 0 20px 20px 0;">
+
 ##### **Preview lessons**
+What lessons (CS or core content) might you need to teach before teaching this module?
+
 What CS concepts or skills might be challenging for your students?  
 
 When will students need support debugging?
