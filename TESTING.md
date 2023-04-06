@@ -85,15 +85,20 @@ To debug tests in Chrome, prepend `BROWSER=Chrome WATCH=1` to any test command.
 See [the apps readme](./apps/README.md) for more details.
 
 ### Dashboard Tests
+
+The following commands should be run from the `dashboard/` directory: 
+
+`cd dashboard`
+
 Before running dashboard tests for the first time, run the below command to seed the required test data
 
- `RAILS_ENV=test bundle exec rake assets:precompile`
+`RAILS_ENV=test bundle exec rake assets:precompile`
 
 To run all dashboard tests, which takes about 15 mintues
 
-`cd dashboard && RAILS_ENV=test bundle exec rails test` 
+`RAILS_ENV=test bundle exec rails test` 
 
-If you just want to run a single file of tests, from the dashboard directory you can run
+If you just want to run a single file of tests
 `bundle exec spring testunit ./path/to/your/test.rb` 
 (if you get a seemingly unrelated error `Unable to autoload constant..` try running `spring stop` and trying again)
 or
