@@ -1,8 +1,13 @@
 name 'CSD U6 MC Q4_2023'
-title 'Question 1'
 type 'multi'
-question 'Placeholder Question Text'
-right 'Placeholder Answer'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
+question 'You are designing a program to respond to the left button on the Circuit Playground. Which line of code are you most likely to see in your program?'
+wrong '![](https://images.code.org/f87b84f7435bab66f72853567a56d81c-CSDunit6input1.png)'
+wrong '![](https://images.code.org/6b795a767cae6a2cc236b25faccf2a59-CSDunit6input2.png)'
+right '![](https://images.code.org/bf94db81e3b9ae8e300697733ac48a9d-CSDunit6input3.png)'
+wrong '![](https://images.code.org/3f432c1b149c74597c97264d8aaa46b5-CSDunit6input4.png)'
+wrong '![](https://images.code.org/2af52e1ae04101fce73d4b259165e76f-CSDunit6input5.png)'
+teacher_markdown <<MARKDOWN
+**Content: Unit 6 Lesson 4**
+
+Since the program should respond to the Circuit Playground, use `onBoardEvent`. The left button is `buttonL`.
+MARKDOWN
