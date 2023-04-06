@@ -90,6 +90,7 @@
   font-family: $gotham-bold, sans-serif;
 }
 
+// Captions
 @mixin figcaption {
   font-size: .875em;
   font-family: $gotham-bold, sans-serif;
@@ -119,4 +120,5 @@ p.overline, .overline { @include overline }
 strong, .strong { @include strong }
 
 // Captions
+// Use on figcaption elements that accompany images or videos
 figcaption, .figcaption { @include figcaption }
