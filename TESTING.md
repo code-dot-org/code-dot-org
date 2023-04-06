@@ -51,14 +51,14 @@ If you have a personal email address additionally added to GitHub, you can re-se
 
 ### Top-level Test Helpers
 
-Our top-level `lib/rake/test.rake` file contains a handful of tasks that can be used to start tests for our different sub-projects. A full, up-to-date list of these can be found by running `rake --tasks | grep test:`.
+Our top-level `lib/rake/test.rake` file contains a handful of tasks that can be used to start tests for our different sub-projects. A full, up-to-date list of these can be found by running `bundle exec rake --tasks | grep test:`.
 
 Worth noting:
 
-* `rake test:all` - runs all tests across all sub-projects
-* `rake test:apps`, `rake test:pegasus`, `rake test:blockly_core` ... etc  - runs tests for specific sub-project
-* `rake test:changed` - detects which sub-projects have changed in this branch, runs those tests
-* `rake test:changed:apps` - runs apps tests if sub-project folder has changed
+* `bundle exec rake test:all` - runs all tests across all sub-projects
+* `bundle exec rake test:apps`, `bundle exec rake test:pegasus`, `bundle exec rake test:blockly_core` ... etc  - runs tests for specific sub-project
+* `bundle exec rake test:changed` - detects which sub-projects have changed in this branch, runs those tests
+* `bundle exec rake test:changed:apps` - runs apps tests if sub-project folder has changed
 
 ### Shared and Lib Tests
 Tests in the `shared/` and `lib/` directories need to be run slightly differently since they are outside of our Rails environment.
