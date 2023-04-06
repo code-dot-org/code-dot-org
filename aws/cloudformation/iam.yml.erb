@@ -208,6 +208,9 @@ Resources:
             Action: logs:*
             Resource: !Sub 'arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*'
       ManagedPolicyArns: [!Ref DevPermissions]
+      Tags:
+        - Key: sqlworkbench-team
+          Value: codedotorg
   DataAnalystRole:
     Type: AWS::IAM::Role
     Properties:
@@ -339,6 +342,9 @@ Resources:
       ManagedPolicyArns:
         - !Ref ContributorS3Policy
         - !Ref ContributorSecretsPolicy
+      Tags:
+        - Key: sqlworkbench-team
+          Value: codedotorg
 
   GoogleContributorIDs:
     Type: AWS::SSM::Parameter
