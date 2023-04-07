@@ -61,6 +61,8 @@ class SectionLoginInfo extends React.Component {
         {section.loginType === SectionLoginType.email && (
           <EmailLogins
             studioUrlPrefix={studioUrlPrefix}
+            // TODO: define this prop
+            // eslint-disable-next-line react/prop-types
             sectionCode={section.code}
             sectionId={section.id}
           />

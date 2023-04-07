@@ -108,7 +108,7 @@
     "eslint-plugin-cdo-custom-rules": "file:./eslint",
     "eslint-plugin-mocha": "^4.12.1",
     "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.11.0",
+    "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.3.0",
     "events": "^3.3.0",
     "fast-memoize": "2.0.2",
