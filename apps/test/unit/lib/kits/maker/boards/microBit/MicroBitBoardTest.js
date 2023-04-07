@@ -5,8 +5,7 @@ import sinon from 'sinon';
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';
 import {itMakesMicroBitComponentsAvailable} from './MicroBitComponentTestUtil';
 import {boardSetupAndStub} from './MicroBitTestHelperFunctions';
-import {
-  MB_COMPONENT_COUNT} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
+import {MB_COMPONENT_COUNT} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
 import ExternalButton from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalButton';
 import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
