@@ -867,6 +867,7 @@
   "explainPairProgramming": "ペアプログラミングがオンになっている場合、生徒はクラスメートと同じコンピューターで作業することを選択できます。生徒が進捗状況を共有しながら一緒に作業できるようにするには、この設定をオンにします。\n",
   "explainPairProgrammingLearnMore": "ペアプログラミングの詳細をご覧ください。\n",
   "explainRestrictedSectionEmail": "「はい」に設定すると、生徒はセクションコードを使用して、このセクションに参加できなくなります。ただ、別のセクションから生徒を移動またはコピーすることで、生徒を手動でセクションに追加することができます。",
+  "explainRestrictedSectionEmailToolTip": "「はい」に設定すると、生徒はセクションコードを使用して、このセクションに参加できなくなります。ただ、別のセクションから生徒を移動またはコピーすることで、生徒を手動でセクションに追加することができます。",
   "explainRestrictedSectionWordAndPicture": "「はい」に設定すると、生徒はセクションコードを使用して、このセクションに参加できなくなります。ただ、「生徒の管理」タブで生徒を手動でセクションに追加することはできます。",
   "explainRestrictedSectionLearnMore": "もっとくわしく見る",
   "exploreDataset": "{datasetName} を視覚化\n",

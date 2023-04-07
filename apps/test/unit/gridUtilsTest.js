@@ -2,8 +2,8 @@ import {assert} from '../util/reconfiguredChai';
 
 var gridUtils = require('@cdo/apps/applab/gridUtils');
 
-describe('snapToGridSize', function() {
-  it('rounds to the nearest GRID_SIZE', function() {
+describe('snapToGridSize', function () {
+  it('rounds to the nearest GRID_SIZE', function () {
     // our GRID_SIZE is 5
     assert.equal(gridUtils.snapToGridSize(0), 0);
     assert.equal(gridUtils.snapToGridSize(1), 0);
@@ -13,8 +13,8 @@ describe('snapToGridSize', function() {
   });
 });
 
-describe('isPointInBounds', function() {
-  it('determines if a coordinate is in bounds or not', function() {
+describe('isPointInBounds', function () {
+  it('determines if a coordinate is in bounds or not', function () {
     assert.equal(
       gridUtils.isPointInBounds(1, 1, 100, 100),
       true,

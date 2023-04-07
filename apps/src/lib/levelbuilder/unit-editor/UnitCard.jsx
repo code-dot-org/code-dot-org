@@ -104,9 +104,10 @@ class UnitCard extends Component {
               lessonGroup={lessonGroup}
               ref={lessonGroupCard => {
                 if (lessonGroupCard) {
-                  const metrics = ReactDOM.findDOMNode(
-                    lessonGroupCard
-                  ).getBoundingClientRect();
+                  const metrics =
+                    ReactDOM.findDOMNode(
+                      lessonGroupCard
+                    ).getBoundingClientRect();
                   this.setLessonGroupMetrics(metrics, lessonGroup.position);
                 }
               }}

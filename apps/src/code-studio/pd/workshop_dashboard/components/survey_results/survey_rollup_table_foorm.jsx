@@ -344,12 +344,8 @@ export default class SurveyRollupTableFoorm extends React.Component {
     let columnLabels = [];
     for (const facilitator in this.props.facilitators) {
       columnLabels.push({
-        thisWorkshopLabel: `${
-          this.props.facilitators[facilitator]
-        }'s average for this workshop`,
-        averageLabel: `Average across all of ${
-          this.props.facilitators[facilitator]
-        }'s ${this.props.courseName} workshops`,
+        thisWorkshopLabel: `${this.props.facilitators[facilitator]}'s average for this workshop`,
+        averageLabel: `Average across all of ${this.props.facilitators[facilitator]}'s ${this.props.courseName} workshops`,
         id: facilitator
       });
     }

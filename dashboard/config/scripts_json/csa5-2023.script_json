@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-29 18:12:00 UTC",
+    "serialized_at": "2023-04-03 12:48:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -234,6 +234,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "assessment": true,
         "overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, students use the skills they have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. Students choose the topic for their personal narrative and the image filters or manipulation techniques they want to use. After brainstorming and planning, students develop their programs to create their personal narrative collage or animation.",
         "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-personal-narrative-project/36348/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, you use the skills you have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. You choose the topic for your personal narrative and the image filters or manipulation techniques you want to use. After brainstorming and planning, you develop your program to create your personal narrative collage or animation."
@@ -289,6 +290,7 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "assessment": true,
         "overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, students use the skills they have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. Students choose the topic for their personal narrative and the image filters or manipulation techniques they want to use. After brainstorming and planning, students develop their programs to create their personal narrative collage or animation.",
         "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-personal-narrative-project/36348/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, you use the skills you have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. You choose the topic for your personal narrative and the image filters or manipulation techniques you want to use. After brainstorming and planning, you develop your program to create your personal narrative collage or animation."
@@ -3225,7 +3227,8 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Personal Narrative Good Project.",
         "duration": "15",
-        "name": "Development"
+        "name": "Development",
+        "progression_name": "Personal Narrative Project"
       },
       "seeding_key": {
         "activity_section.key": "fea2ec89-5d9f-4de2-9769-c82126182c57",
@@ -3753,7 +3756,7 @@
       "key": "fa838400-394b-4237-aa30-3bccc3ecc248",
       "position": 6,
       "properties": {
-        "description": "**Do This:** Explain the potential solution and scoring guidelines:\n* Implementation for `countBlackPixels()` method (Part (a))\n* Implementation for `lightenImage()` method (Part (b))"
+        "description": "**Do This:** Explain the potential solution and scoring guidelines:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `countBlackPixels()` access all entries in `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `countBlackPixels()` compares an element in the array with `BLACK` or with `0` during traversal\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `countBlackPixels()` initializes and increments a counter\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `countBlackPixels()` returns the correct count of the number of black pixels in `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()` accesses all necessary elements in at least one row or one column of `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()` accesses all entries in `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()` increases the value at index `[row][col]` by the value found at index `[row + 2][col + 2]`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()` modifies all appropriate elements of `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()`assigns `WHITE` or `255` to elements of `pixels` that would otherwise have a value greater than `WHITE`"
       },
       "seeding_key": {
         "activity_section.key": "fa838400-394b-4237-aa30-3bccc3ecc248",
@@ -3887,7 +3890,8 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Personal Narrative Good Project.",
         "duration": "20",
-        "name": "Development"
+        "name": "Development",
+        "progression_name": "Personal Narrative Project"
       },
       "seeding_key": {
         "activity_section.key": "749a02be-2608-4aa5-b4db-957f3acc283b",
@@ -4997,6 +5001,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L2_2023"
+        ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
@@ -5019,6 +5026,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L3_2023"
+        ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
@@ -5041,6 +5051,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L4_2023"
+        ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
@@ -5188,6 +5201,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L2_2023"
+        ],
         "progression": "Practice: Image Filters"
       },
       "bonus": false,
@@ -5210,6 +5226,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L3_2023"
+        ],
         "progression": "Practice: Image Filters"
       },
       "bonus": false,
@@ -5232,6 +5251,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L4_2023"
+        ],
         "progression": "Practice: Image Filters"
       },
       "bonus": false,
@@ -5254,6 +5276,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L5_2023"
+        ],
         "progression": "Practice: Image Filters"
       },
       "bonus": false,
@@ -5377,6 +5402,31 @@
       "assessment": true,
       "properties": {
         "level_keys": [
+          "CSA U5 Personal Narrative Project_2023"
+        ],
+        "progression": "Personal Narrative Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5 Personal Narrative Project_2023"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023",
+        "activity_section.key": "fea2ec89-5d9f-4de2-9769-c82126182c57"
+      },
+      "level_keys": [
+        "CSA U5 Personal Narrative Project_2023"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
           "CSA Unit 5 Assessment_2023"
         ],
         "progression": "Unit 5 Assessment"
@@ -5393,6 +5443,31 @@
       },
       "level_keys": [
         "CSA Unit 5 Assessment_2023"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U5 Personal Narrative Project 1-Day_2023"
+        ],
+        "progression": "Personal Narrative Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5 Personal Narrative Project 1-Day_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2023",
+        "activity_section.key": "749a02be-2608-4aa5-b4db-957f3acc283b"
+      },
+      "level_keys": [
+        "CSA U5 Personal Narrative Project 1-Day_2023"
       ]
     }
   ],
@@ -6083,6 +6158,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U5 Personal Narrative Project_2023",
+        "script_level.level_keys": [
+          "CSA U5 Personal Narrative Project_2023"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023",
+        "activity_section.key": "fea2ec89-5d9f-4de2-9769-c82126182c57"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Unit 5 Assessment_2023",
         "script_level.level_keys": [
           "CSA Unit 5 Assessment_2023"
@@ -6091,6 +6178,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa5-2023",
         "activity_section.key": "e659d8a5-512e-423f-8819-65df3768a163"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U5 Personal Narrative Project 1-Day_2023",
+        "script_level.level_keys": [
+          "CSA U5 Personal Narrative Project 1-Day_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2023",
+        "activity_section.key": "749a02be-2608-4aa5-b4db-957f3acc283b"
       }
     }
   ],
@@ -6324,6 +6423,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa5-2023/resources",
+      "key": "all_resources_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_5"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa5-2023/standards",
+      "key": "all_standards_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_5"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa5-2023/vocab",
+      "key": "all_vocabulary_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_5"
+      }
+    },
+    {
       "name": "Column-Major Traversal",
       "url": "https://docs.google.com/presentation/d/1ouaFfonE710Whme4LGVAqkV6eQ1FdkIe6GaSa-Dxqvs/edit?usp=sharing",
       "key": "column-major_traversal",
@@ -6482,6 +6614,19 @@
       },
       "seeding_key": {
         "resource.key": "impacts_of_programs"
+      }
+    },
+    {
+      "name": "Java Quick Reference",
+      "url": "https://drive.google.com/file/d/16EtSldvp1wgbS3M0tMOx2Y5rXkhfXHny/view?usp=share_link",
+      "key": "java_quick_reference_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "java_quick_reference_1"
       }
     },
     {
@@ -6776,6 +6921,18 @@
       }
     },
     {
+      "name": "Unit 5 Overview",
+      "url": "https://docs.google.com/document/d/1A22tMFqIWkq0445i0lKpueZYCu-6RKN9XeBkt5f7TM0/edit?usp=share_link",
+      "key": "unit_5_overview",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_overview"
+      }
+    },
+    {
       "name": "Unit 5 Study Guide",
       "url": "https://docs.google.com/document/d/1XsASO5aI0HzNApY9_21rgkgdi48SVzjbFUZiv9LI_Fw/edit?usp=sharing",
       "key": "unit_5_study_guide",
@@ -6904,6 +7061,12 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "resource.key": "grayscaleimage_frq_scoring_guidelines"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "java_quick_reference_1"
       }
     },
     {
@@ -7250,7 +7413,42 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_5",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_5",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_5",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_guide",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_overview",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_study_guide",
+        "script.name": "csa5-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
