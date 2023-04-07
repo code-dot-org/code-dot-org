@@ -2962,3 +2962,7 @@ ga:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'
