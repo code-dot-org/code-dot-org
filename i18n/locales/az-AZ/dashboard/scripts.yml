@@ -3677,3 +3677,23 @@ az:
               display_name: Proqram laboratoriyasına giriş
             lessonGroup-4:
               display_name: 2-ci Fəsil
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Verilənlər və Nəticələr
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Verilənlər və Nəticələr
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Verilənlər və Nəticələr
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Verilənlər və Nəticələr
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Verilənlər və Nəticələr
