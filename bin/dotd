@@ -444,19 +444,19 @@ end
 def get_honeybadger_issues
   issues = Honeybadger.get_recent_issues
   issues.sort_by! do |issue|
-    [issue[:project], issue[:environment], (issue[:assignee] ? issue[:assignee] : 'ZZZ')]
+    [issue.project_id, issue.environment, (issue.assignee ? issue.assignee : 'ZZZ')]
   end
 
   puts '' if issues.count > 0
   issues.each do |issue|
     environment =
-      if issue[:environment] == 'production'
+      if issue.environment == 'production'
         (red issue[:environment]).to_s
       else
         (bold issue[:environment]).to_s
       end
-    project = bold issue[:project]
-    message = issue[:assignee] ? (dim issue[:message]).to_s : issue[:message]
+    project = bold issue.project_id
+    message = issue[:assignee] ? (dim issue.message).to_s : issue.message
     output = <<-EOS.unindent
       [#{project}, #{environment}]: #{message}
           #{dim issue[:url]}

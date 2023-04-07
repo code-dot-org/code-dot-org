@@ -1,6 +1,5 @@
 require 'honeybadger/ruby'
-require_relative 'env'
-
+require 'cdo/honeybadger/honeybadger_fault_analyzer'
 # Honeybadger extensions for command error logging
 module Honeybadger
   # Notify Honeybadger of a new release. This noops for adhoc and development
@@ -100,27 +99,8 @@ module Honeybadger
   # @return [Array[Hash]] An array of hashes summarizing the recent issues.
   def self.get_recent_issues
     raise 'CDO.honeybadger_api_token undefined' unless CDO.honeybadger_api_token
-    issues = []
 
-    {cronjobs: 45435, dashboard: 3240, pegasus: 34365}.each do |project, project_id|
-      next_url = "/v2/projects/#{project_id}/faults" \
-        "?occurred_after=#{1.day.ago.to_i}&q=-is:resolved%20-is:paused%20-is:ignored"
-      while next_url
-        response = `curl -u #{CDO.honeybadger_api_token}: "https://app.honeybadger.io#{next_url}"`
-        parsed_response = JSON.parse response
-        parsed_response['results'].each do |issue|
-          issues << {
-            environment: issue['environment'] || 'unknown',
-            project: project.to_s,
-            assignee: issue['assignee'] ? issue['assignee']['email'] : nil,
-            url: issue['url'],
-            message: issue['message']
-          }
-        end
-        next_url = parsed_response['links']['next']
-      end
-    end
-
-    issues
+    filters = %w[occurred.after:"2+days+ago" -is:resolved -is:paused -is:ignored"]
+    HoneybadgerFaultAnalyzer.new(filters).get_faults
   end
 end

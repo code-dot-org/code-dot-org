@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+require '../../lib/cdo/honeybadger/honeybadger_fault_analyzer'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+
+def main
+  filters = %w[-is:resolved -is:paused%20 -is:ignored environment:"production" assignee:"nobody" last_occurred.before:\"2+days+ago\"]
+  analyzer = HoneybadgerFaultAnalyzer.new(filters)
+  errors = analyzer.get_faults
+  errors.each do |error|
+    puts error.dotd_fault_response
+  end
+end
+
+main
