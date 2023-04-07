@@ -3672,3 +3672,93 @@ vi:
               display_name: Giới thiệu về AppLab
             lessonGroup-4:
               display_name: Chương 2
+        vpl-csd-ci-1:
+          title: 'Học phần 1: Chuẩn bị giảng dạy về Giải quyết vấn đề và máy tính'
+          description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn
+            chuẩn bị giảng dạy học phần Giải quyết vấn đề và máy tính của Code.org.
+            \n\n**Trong học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen
+            với học phần Giải quyết vấn đề và máy tính.\n-   Thực hành các khái niệm
+            chính có trong bài học.\n-   Khám phá các dự án cuối bài học.\n\n**Thời
+            gian đề xuất:** 30 phút"
+          student_description: "Học phần đào tạo chuyên môn này được thiết kế để giúp
+            bạn chuẩn bị giảng dạy học phần Giải quyết vấn đề và máy tính của Code.org.
+            \n\n**Trong học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen
+            với học phần Giải quyết vấn đề và máy tính.\n-   Thực hành các khái niệm
+            chính có trong bài học.\n-   Khám phá các dự án cuối bài học.\n\n**Thời
+            gian đề xuất:** 30 phút"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Giảng dạy về Phát triển web
+          title: 'Học phần 2: Chuẩn bị giảng dạy về Phát triển web'
+          description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn
+            chuẩn bị giảng dạy học phần Phát triển Web của Code.org. \n\n**Trong học
+            phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần Phát
+            triển web.\n-   Thực hành các khái niệm chính có trong học phần.\n-   Tương
+            tác với Web Lab.\n-   Khám phá các dự án cuối bài học.\n\n**Thời gian
+            đề xuất:** 90 phút"
+          student_description: "Học phần đào tạo chuyên môn này được thiết kế để giúp
+            bạn chuẩn bị giảng dạy học phần Phát triển Web của Code.org. \n\n**Trong
+            học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần
+            Phát triển web.\n-   Thực hành các khái niệm chính có trong học phần.\n-
+            \  Tương tác với Web Lab.\n-   Khám phá các dự án cuối bài học.\n\n**Thời
+            gian đề xuất:** 90 phút"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chuẩn bị giảng dạy về Hoạt ảnh và game tương tác
+          title: 'Học phần 3: Chuẩn bị giảng dạy về Hoạt ảnh và game tương tác '
+          description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn
+            chuẩn bị giảng dạy học phẩn Hoạt ảnh và game tương tác của Code.org. \n\n**Trong
+            Học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần
+            Hoạt ảnh và game tương tác.\n-   Thực hành các khái niệm chính có trong
+            học phần.\n-   Tương tác với Game Lab.\n-   Khám phá các dự án cuối bài
+            học.\n\n**Thời gian đề xuất:** 120 phút"
+          student_description: "Học phần đào tạo chuyên môn này được thiết kế để giúp
+            bạn chuẩn bị giảng dạy học phẩn Hoạt ảnh và game tương tác của Code.org.
+            \n\n**Trong Học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen
+            với học phần Hoạt ảnh và game tương tác.\n-   Thực hành các khái niệm
+            chính có trong học phần.\n-   Tương tác với Game Lab.\n-   Khám phá các
+            dự án cuối bài học.\n\n**Thời gian đề xuất:** 120 phút"
+        vpl-csd-ci-4:
+          title: " Học phần 4: Chuẩn bị giảng dạy về Quy trình thiết kế"
+          description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn
+            chuẩn bị giảng dạy học phần Quy trình thiết kế của Code.org. \n\n**Trong
+            học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần
+            Quy trình thiết kế.\n-   Thực hành các khái niệm chính có trong học phần.\n-
+            \  Tương tác với App Lab.\n-   Khám phá các dự án cuối bài học.\n\n**Thời
+            gian đề xuất:** 90 phút"
+          student_description: "Học phần đào tạo chuyên môn này được thiết kế để giúp
+            bạn chuẩn bị giảng dạy học phần Quy trình thiết kế của Code.org. \n\n**Trong
+            học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần
+            Quy trình thiết kế.\n-   Thực hành các khái niệm chính có trong học phần.\n-
+            \  Tương tác với App Lab.\n-   Khám phá các dự án cuối bài học.\n\n**Thời
+            gian đề xuất:** 90 phút"
+        vpl-csd-ci-5:
+          title: 'Học phần 5: Chuẩn bị giảng dạy về Dữ liệu và xã hội'
+          description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn
+            chuẩn bị giảng dạy học phần Dữ liệu và xã hội của Code.org. \n\n**Trong
+            học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần
+            Dữ liệu và xã hội.\n-   Thực hành các khái niệm chính có trong bài học.\n-
+            \  Khám phá các dự án cuối bài học.\n\n**Thời gian đề xuất:** 90 phút"
+          student_description: "Học phần đào tạo chuyên môn này được thiết kế để giúp
+            bạn chuẩn bị giảng dạy học phần Dữ liệu và xã hội của Code.org. \n\n**Trong
+            học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần
+            Dữ liệu và xã hội.\n-   Thực hành các khái niệm chính có trong bài học.\n-
+            \  Khám phá các dự án cuối bài học.\n\n**Thời gian đề xuất:** 90 phút"
+        vpl-csd-ci-7:
+          title: 'Học phần 7: Chuẩn bị giảng dạy về AI và máy học'
+          description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn
+            chuẩn bị giảng dạy học phần AI và máy học của Code.org. \n\n**Trong học
+            phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần AI
+            và máy học.\n-   Thực hành các khái niệm chính có trong học phần.\n-   Tương
+            tác với AI Lab App Lab.\n-   Khám phá các dự án cuối bài học.\n-   Lên
+            kế hoạch triển khai học phần với học sinh.\n\n**Thời gian đề xuất:** 120
+            phút"
+          student_description: "Học phần đào tạo chuyên môn này được thiết kế để giúp
+            bạn chuẩn bị giảng dạy học phần AI và máy học của Code.org. \n\n**Trong
+            học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần
+            AI và máy học.\n-   Thực hành các khái niệm chính có trong học phần.\n-
+            \  Tương tác với AI Lab App Lab.\n-   Khám phá các dự án cuối bài học.\n-
+            \  Lên kế hoạch triển khai học phần với học sinh.\n\n**Thời gian đề xuất:**
+            120 phút"
