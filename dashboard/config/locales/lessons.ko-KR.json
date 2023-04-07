@@ -1055,7 +1055,7 @@
           "student_overview": "이벤트를 사용하여 스토리를 만들거나 인터랙티브 게임을 만드세요."
         },
         "coursea-2022/Safety in My Online Neighborhood": {
-          "name": "내 온라인 이웃에서 안전",
+          "name": "나의 온라인 세상에서의 안전",
           "overview": "[![커몬 센스 에듀케이션](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\n이 레슨은 원래 [커몬 센스 에듀케이션](https://www.commonsense.org/education/digital-citizenship/curriculum)에서 제작했습니다. [더 알아보기.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\n인터넷의 힘은 학생들에게 직접 가서 볼 수 없는 곳을 경험하고 방문할 수 있게 하는 것입니다. 하지만, 실제 세상을 여행하는 것과 마찬가지로 온라인 상에서 여행할 때도 안전이 중요합니다. 이 가상 소풍에서, 아동은 온라인 모험에서 안전을 유지하는 방법을 연습할 수 있습니다.",
           "preparation": "-   교육 자료를 검토합니다.\n-   각 학생을 위해 유인물을 인쇄합니다.\n-   (선택사항) 교실 전시용 시 포스터를 인쇄합니다.",
           "purpose": "Common Sense Education은 학생들에게 온라인 상에서 안전한 사용 방법을 가르치기 위해 이 수업을 만들었습니다.",
@@ -1144,7 +1144,7 @@
           "purpose": "이 레슨은 학생들에게 그들의 새로운 컴퓨터 과학 기량을 창의적으로 사용할 한 가지 마지막 기회를 줍니다."
         },
         "coursec-2022/Putting a STOP to Online Meanness": {
-          "name": "온라인 상에서 비열한 행동을 멈추게 함",
+          "name": "온라인에서의 비열한 행동을 멈추기",
           "overview": " [![커몬 센스 에듀케이션](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\n이 레슨은 원래 커몬 센스 에듀케이션에서 제작했습니다. [더 알아보기](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\n인터넷은 온갖 종류의 흥미로운 사람들로 가득 차 있지만 종종 그들 중 일부는 서로에게 나쁘게 굴 수 있습니다. 이 역할 놀이로, 학생들이 실제 대면할 때보다 온라인 상에서 더 쉽게 나빠지는 이유가 무엇인지 또한 그런 일을 봤을 때 어떻게 처리해야 하는지 이해하도록 도와주세요.",
           "preparation": "-   교육 자료 검토\n-   학생을 위한 유인물 인쇄\n-   동물 인형 또는 장난감을 학급에 가져오기",
           "purpose": "커몬 센스의 디지털 시민의식 커리큘럼은 아동과 매체, 기술에 관한 최신 연구에 기초하여 세 가지 주요 주제를 다룹니다. 이 레슨은 사이버 폭력과 디지털 드라마 및 혐오적 발언에 중점을 둡니다. 학생들은 이러한 무거운 주제에 대면하며 긍정적이고 서로 지지하는 온라인 커뮤니티를 만들고 온라인 상의 잔인함에 맞서 싸우는 나서서 행동하는 사람 역할을 합니다. ",
@@ -1157,7 +1157,7 @@
           "student_overview": "이 레슨에서는 학급 친구들을 로봇이라고 생각하고 그들이 컵 쌓는 패턴을 만들도록 프로그래밍합니다."
         },
         "coursec-2022/Programming with Angry Birds": {
-          "name": "앵그리 버드로 프로그래밍",
+          "name": "앵그리 버드로 프로그래밍하기",
           "overview": "앵그리버드 게임에 나오는 캐릭터를 사용하여 학생들은 새를 미로의 한 쪽에서 다른 쪽에 있는 돼지에게로 이동시키는 시퀸스 알고리즘을 개발할 것입니다. 이를 위해, 코드 블록을 선형 시퀸스로 쌓고 그것을 똑바로 이동 또는 좌회전, 우회전하게 만들 것입니다.",
           "purpose": "이 레슨에서 학생들은 컴퓨터 플랫폼 상에서 프로그래밍과 디버깅 스킬을 개발할 것입니다. 이러한 퍼즐의 블록 기반 포맷으로 학생들은 완벽한 구문론을 걱정할 필요 없이 시퀸스와 개념에 대해 배웁니다.",
           "student_overview": "앵그리버드로 시퀸스와 알고리즘 배우기."
