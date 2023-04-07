@@ -23,7 +23,7 @@ describe('InstructionsCSF', () => {
     registerReducers({authoredHints, instructions, isRtl, pageConstants});
     getStore().dispatch(
       setPageConstants({
-        showNextHint: function() {},
+        showNextHint: function () {},
         skinId: 'dance'
       })
     );
@@ -69,6 +69,6 @@ describe('InstructionsCSF', () => {
 });
 
 const DEFAULT_PROPS = {
-  adjustMaxNeededHeight: function() {},
-  handleClickCollapser: function() {}
+  adjustMaxNeededHeight: function () {},
+  handleClickCollapser: function () {}
 };

@@ -26,7 +26,7 @@ const colliderTypeDropdown = ['rectangle', 'circle'].map(s => ({
 var gameLab;
 var getAnimationDropdown;
 
-exports.injectGameLab = function(gamelab) {
+exports.injectGameLab = function (gamelab) {
   gameLab = gamelab;
   getAnimationDropdown = gameLab.getAnimationDropdown.bind(gameLab);
   const executeCmd = gameLab.executeCmd.bind(gameLab);
@@ -332,7 +332,7 @@ module.exports.blocks = [
     paletteParams: ['label'],
     params: ['"animation_1"'],
     dropdown: {
-      0: function() {
+      0: function () {
         return getAnimationDropdown();
       }
     },
@@ -1286,7 +1286,7 @@ getWidth()
     paletteParams: ['label'],
     params: ['"animation_1"'],
     dropdown: {
-      0: function() {
+      0: function () {
         return getAnimationDropdown();
       }
     },
@@ -1495,7 +1495,7 @@ draw() - USEFUL?
     params: ['"https://code.org/images/logo.png"'],
     type: 'either',
     dropdown: {
-      0: function() {
+      0: function () {
         return getAssetDropdown('image');
       }
     },

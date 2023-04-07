@@ -14,7 +14,8 @@ const defaultArgs = {
   youngestGrade: 4,
   oldestGrade: 12,
   subjects: ['english_language_arts'],
-  topics: ['cybersecurity']
+  topics: ['cybersecurity'],
+  isTranslated: true
 };
 
 export const BaseCard = Template.bind({});

@@ -20,12 +20,10 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
   const renderLeaf = useCallback(props => <Leaf {...props} />, []);
   const editor = useMemo(() => withReact(createEditor()), []);
   const [commentText, setCommentText] = useState('');
-  const [displayAddCommentFailure, setDisplayAddCommentFailure] = useState(
-    false
-  );
-  const [addCommentFailureMessage, setAddCommentFailureMessage] = useState(
-    null
-  );
+  const [displayAddCommentFailure, setDisplayAddCommentFailure] =
+    useState(false);
+  const [addCommentFailureMessage, setAddCommentFailureMessage] =
+    useState(null);
 
   const onChange = value => {
     const markdownValue = value.map(v => serialize(v)).join('');

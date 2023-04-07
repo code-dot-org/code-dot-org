@@ -20,7 +20,7 @@ const defaultProps = {
   currentUserType: 'student'
 };
 
-describe('AnimationUploadButton', function() {
+describe('AnimationUploadButton', function () {
   describe('student scenarios', () => {
     it('shows warning if should restrict and is not already in restricted mode', () => {
       const body = shallow(<AnimationUploadButton {...defaultProps} />);

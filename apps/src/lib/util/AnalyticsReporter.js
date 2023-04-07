@@ -5,21 +5,15 @@ import {
   identify,
   setUserId
 } from '@amplitude/analytics-browser';
-import {currentLocation} from '@cdo/apps/utils';
 import logToCloud from '@cdo/apps/logToCloud';
+import {
+  getEnvironment,
+  isProductionEnvironment,
+  isStagingEnvironment
+} from '../../utils';
 
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
-
-const Environments = {
-  production: 'production',
-  levelbuilder: 'levelbuilder',
-  test: 'test',
-  staging: 'staging',
-  adhoc: 'adhoc',
-  development: 'development',
-  unknown: 'unknown'
-};
 
 class AnalyticsReporter {
   constructor() {
@@ -74,10 +68,10 @@ class AnalyticsReporter {
     if (!userId) {
       return userIdString;
     }
-    if (this.isProductionEnvironment()) {
+    if (isProductionEnvironment()) {
       return userIdString.padStart(5, '0');
     } else {
-      const environment = this.getEnvironment();
+      const environment = getEnvironment();
       return `${environment}-${userIdString}`;
     }
   }
@@ -92,46 +86,10 @@ class AnalyticsReporter {
     if (alwaysPut) {
       return true;
     }
-    if (this.isProductionEnvironment() || this.isStagingEnvironment()) {
+    if (isProductionEnvironment() || isStagingEnvironment()) {
       return true;
     }
     return false;
-  }
-
-  /**
-   * Returns the current environment.
-   * @return {string} The current environment, e.g., "staging" or "production".
-   */
-  getEnvironment() {
-    const hostname = currentLocation().hostname;
-    if (hostname.includes('adhoc')) {
-      // As adhoc hostnames may include other keywords, check it first.
-      return Environments.adhoc;
-    }
-    if (hostname.includes('test')) {
-      return Environments.test;
-    }
-    if (hostname.includes('levelbuilder')) {
-      return Environments.levelbuilder;
-    }
-    if (hostname.includes('staging')) {
-      return Environments.staging;
-    }
-    if (hostname.includes('localhost') || hostname.includes('127.0.0.1')) {
-      return Environments.development;
-    }
-    if (hostname === 'code.org' || hostname === 'studio.code.org') {
-      return Environments.production;
-    }
-    return Environments.unknown;
-  }
-
-  isStagingEnvironment() {
-    return this.getEnvironment() === Environments.staging;
-  }
-
-  isProductionEnvironment() {
-    return this.getEnvironment() === Environments.production;
   }
 }
 

@@ -100,10 +100,7 @@ describe('ProgressTableContentView', () => {
   it('calls onClickLesson with lesson position when a lesson number is clicked', () => {
     const onClickSpy = sinon.spy();
     const wrapper = setUp({onClickLesson: onClickSpy});
-    wrapper
-      .find(ProgressTableLessonNumber)
-      .at(0)
-      .simulate('click');
+    wrapper.find(ProgressTableLessonNumber).at(0).simulate('click');
     expect(onClickSpy).to.have.been.called;
   });
 

@@ -200,8 +200,8 @@ class UnconnectedMusicView extends React.Component {
 
   setToolboxForProgress = () => {
     if (this.progressManager) {
-      const allowedToolbox = this.progressManager.getCurrentStepDetails()
-        .toolbox;
+      const allowedToolbox =
+        this.progressManager.getCurrentStepDetails().toolbox;
       this.musicBlocklyWorkspace.updateToolbox(allowedToolbox);
     }
   };
@@ -228,7 +228,7 @@ class UnconnectedMusicView extends React.Component {
       const libraryParameter = AppConfig.getValue('library');
       const libraryFilename = libraryParameter
         ? `music-library-${libraryParameter}.json`
-        : 'music-library-by-type.json';
+        : 'music-library.json';
       const response = await fetch(baseUrl + libraryFilename);
       const library = await response.json();
       return library;
