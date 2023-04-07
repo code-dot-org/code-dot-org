@@ -2,6 +2,9 @@
  * Redux store for editor-specific Java Lab state.
  */
 
+// TODO: Can we fix our imports and no longer need to ignore this rule?
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 const {
   fileMetadataForEditor,
   updateAllSourceFileOrders
@@ -89,8 +92,8 @@ const javalabEditorSlice = createSlice({
         filename: string,
         source: string,
         tabOrder: number,
-        isVisible: boolean = true,
-        isValidation: boolean = false
+        isVisible = true,
+        isValidation = false
       ) {
         return {payload: {filename, source, tabOrder, isVisible, isValidation}};
       }
@@ -134,7 +137,7 @@ const javalabEditorSlice = createSlice({
         const source = state.sources[action.payload.oldFilename];
         // if old filename doesn't exist, this is a no-op
         if (source !== undefined) {
-          let newSources = {...state.sources};
+          const newSources = {...state.sources};
           delete newSources[action.payload.oldFilename];
           newSources[action.payload.newFilename] = source;
           state.sources = newSources;
@@ -187,11 +190,14 @@ const javalabEditorSlice = createSlice({
     },
     removeFile(state, action: PayloadAction<string>) {
       const filename = action.payload;
-      let newSources = {...state.sources};
+      const newSources = {...state.sources};
       delete newSources[filename];
       state.sources = newSources;
     },
-    openEditorDialog(state, action: PayloadAction<keyof typeof JavalabEditorDialog>) {
+    openEditorDialog(
+      state,
+      action: PayloadAction<keyof typeof JavalabEditorDialog>
+    ) {
       if (Object.values(JavalabEditorDialog).includes(action.payload)) {
         state.editorOpenDialogName = action.payload;
       }
@@ -255,6 +261,7 @@ const javalabEditorSlice = createSlice({
 
 // Selectors
 // We don't have a type for the entire redux store yet, so we need to use any here.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const selectSources = (state: any) => state.javalabEditor.sources;
 
 export const getSources = createSelector(selectSources, sources => {
