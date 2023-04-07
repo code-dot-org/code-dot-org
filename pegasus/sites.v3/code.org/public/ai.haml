@@ -13,6 +13,9 @@ theme: responsive_full_width
 - icon_sparkles = "fa-solid fa-sparkles"
 - icon_lightbulb = "fa-solid fa-lightbulb"
 - icon_magnifying_glass = "fa-solid fa-magnifying-glass"
+- icon_book = "fa-solid fa-book"
+- icon_person_chalkboard = "fa-solid fa-person-chalkboard"
+- icon_video = "fa-solid fa-video"
 
 %section.hero-banner-basic.bg-neutral-dark{style: "display: block !important"}
   .wrapper
@@ -29,26 +32,26 @@ theme: responsive_full_width
 %section.intro
   .wrapper
     %h2=hoc_s(:ai_intro_heading)
-    %div.col-50{style: "float: left; margin-top: 1em"}
+    %div.col-50{style: "float: left; margin-top: 22px"}
       %figure.video-responsive{style: "max-width: unset"}
         %div
           %iframe{src: "https://www.youtube-nocookie.com/embed/dWRnCXbUDgA", allowFullScreen: 'true', frameborder: '0', title: "Why AI Matters with Deb Raji"}
-        %figcaption=hoc_s(:ai_intro_video_caption, markdown: :inline, locals: {series_url: resolve_url("#")})
+        %figcaption=hoc_s(:ai_intro_video_caption, markdown: :inline, locals: {series_url: resolve_url("#ai-videos")})
     %div.flex-container.col-45{style: "float: right"}
       %ul.icon-bullet-list.full-width{style: "margin-top: 0"}
-        %li
+        %li{style: "width:100%"}
           %div
             %i{class: "#{icon_sparkles}"}
           .text-wrapper
             %h3=hoc_s(:ai_intro_list_title_01)
             %p.no-margin-bottom=hoc_s(:ai_intro_list_desc_01)
-        %li
+        %li{style: "width:100%"}
           %div
             %i{class: "#{icon_lightbulb}"}
           .text-wrapper
             %h3=hoc_s(:ai_intro_list_title_02)
             %p.no-margin-bottom=hoc_s(:ai_intro_list_desc_02)
-        %li.no-margin-bottom
+        %li.no-margin-bottom{style: "width:100%"}
           %div
             %i{class: "#{icon_magnifying_glass}"}
           .text-wrapper
@@ -56,8 +59,56 @@ theme: responsive_full_width
             %p.no-margin-bottom=hoc_s(:ai_intro_list_desc_03)
     .clear
 
-%section
+%section.bg-neutral-light
   .wrapper
     %h2=hoc_s(:ai_why_heading)
     %p=hoc_s(:ai_why_desc)
+    %ul.link-list
+      %li
+        %i{class: "#{icon_book}"}
+        %a{href:"#ai-curricula"}=hoc_s(:ai_why_link_01)
+      %li
+        %i{class: "#{icon_person_chalkboard}"}
+        %a{href:"#ai-pl"}=hoc_s(:ai_why_link_02)
+      %li
+        %i{class: "#{icon_video}"}
+        %a{href:"#ai-videos"}=hoc_s(:ai_why_link_03)
 
+%a{id: "ai-curricula"}
+%section
+  .wrapper
+    %h2 AI curricula
+
+%section.bg-neutral-light
+  .wrapper
+    %h2 Quotes
+
+%a{id: "ai-pl"}
+%section
+  .wrapper
+    %h2 Preparing to teach AI
+
+= view :section_divider_line
+
+%a{id: "ai-videos"}
+%section
+  .wrapper
+    %h2=hoc_s(:ai_video_title_01)
+    %p=hoc_s(:ai_video_desc)
+    .video-series
+      %figure.video-responsive{style: "max-width: unset"}
+        %div
+          %iframe{src: "https://www.youtube-nocookie.com/embed/Ok-xpKjKp2g", allowFullScreen: "true", frameborder: "0", title: hoc_s(:ai_video_title_01)}
+        %figcaption=hoc_s(:ai_video_caption_01)
+
+= view :section_divider_line
+
+%section
+  .wrapper
+    %h2 Additional resources
+
+= view :section_divider_line
+
+%section
+  .wrapper
+    %h2 In partnership w/ Microsoft

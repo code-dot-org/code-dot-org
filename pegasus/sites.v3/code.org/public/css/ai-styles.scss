@@ -1,7 +1,7 @@
 // Custom styles for code.org/ai
 // — supplemental to shared/css/design-system-pegasus.scss
 
-@import'breakpoints';
+@import 'color', 'font', 'breakpoints', 'barlow-semi-condensed-font';
 
 @keyframes fade-in-out {
   0% {

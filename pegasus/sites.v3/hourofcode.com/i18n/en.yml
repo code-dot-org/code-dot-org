@@ -141,7 +141,7 @@
   ai_hero_heading_02: "It's just code!"
   ai_hero_desc: "Demystify artificial intelligence (AI) by learning how it's changing the ways we live, work, and learn."
   ai_intro_heading: "Why learn about AI?"
-  ai_intro_video_caption: "Enjoyed this video? [Check the full Intro to AI series](%{series_url})."
+  ai_intro_video_caption: "Enjoyed this video? [Check out the full Intro to AI series](%{series_url})."
   ai_intro_list_title_01: "Foundational knowledge"
   ai_intro_list_desc_01: "Spark students' interest in technology and help them understand the world around them in a deeper way."
   ai_intro_list_title_02: "Creativity and innovation"
@@ -150,6 +150,12 @@
   ai_intro_list_desc_03: "Encourage students to develop essential skills as they learn to design, build, and evaluate AI systems."
   ai_why_heading: "Why teach AI with Code.org?"
   ai_why_desc: "All the resources you need in one place! Explore our curriculum offerings, professional learning courses, and video series designed for you and your students."
+  ai_why_link_01: "Explore AI curriculums"
+  ai_why_link_02: "See professional learning options"
+  ai_why_link_03: "Watch AI videos"
+  ai_video_desc: "With an introduction by Microsoft CEO Satya Nadella, this series of short videos will introduce you to how artificial intelligence works and why it matters. Then delve into issues like algorithmic bias and the ethics of AI decision-making."
+  ai_video_title_01: "How AI Works"
+  ai_video_caption_01: "Introducing How AI Works"
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'

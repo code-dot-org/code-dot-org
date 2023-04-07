@@ -347,6 +347,38 @@ ul {
     }
   }
 
+  // Lists of links with icons
+  &.link-list {
+    margin: 2em 0 1em;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+
+    li {
+      text-indent: 0 !important;
+      margin: 0 3em 0 0;
+      padding: 0;
+
+      &::before {
+        content: none;
+      }
+
+      i {
+        font-size: 1.25em;
+        margin: 0 4px 0 0;
+        vertical-align: text-bottom;
+
+        &:before {
+          color: $brand_secondary_default;
+        }
+      }
+
+      a {
+        font-size: 1.15em;
+      }
+    }
+  }
+
   li {
     line-height: 1.4;
     margin: 0.5em 0;
