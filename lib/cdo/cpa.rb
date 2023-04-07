@@ -15,7 +15,7 @@ CPA_ALL_USER_LOCKOUT = 'cpa_all_user_lockout'
 # cookie 'cpa_experience'.
 # @param schedule [Map] A map of the CPA phases to dates. Example:
 # {
-# 	“new_user_lockout”: “2023-07-01T00:00:00Z”,
+#   “new_user_lockout”: “2023-07-01T00:00:00Z”,
 #   “all_user_lockout”: “2024-07-01T00:00:00Z”
 # }
 # The DateTime strings must be ISO 8601 formatted.
