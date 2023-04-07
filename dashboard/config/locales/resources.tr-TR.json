@@ -545,10 +545,12 @@
         },
         "cs_fundamentals_final_project/coursef/2022": {
           "name": "CS Fundamentals Final Projesi",
+          "url": "https://docs.google.com/document/d/1xt4PzGNhs-qJo-ZuRWmsoX4VpCLsk4NIqv38ThewhGo/edit",
           "type": "Değerlendirme Tablosu"
         },
         "final_project_design_1/coursef/2022": {
-          "name": "Kurs Projesi Kılavuzunun Sonu"
+          "name": "Kurs Projesi Kılavuzunun Sonu",
+          "url": "https://docs.google.com/document/d/1PWOfzIXpcN3tF32T28fVAMFykNePli7IEBHBK9u7NXQ/edit"
         },
         "2022_change_log/coursee/2022": {
           "name": "2022 Günlüğü değiştir",
@@ -946,6 +948,15 @@
           "url": "https://docs.google.com/document/d/1ex5R2X4uELzPuOpFMwENg01MHAMmF5g_/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Cevap Anahtarı"
         },
+        "all_resources/express/2022": {
+          "url": "/s/express-2022/kaynaklar"
+        },
+        "all_standards/express/2022": {
+          "url": "/s/express-2022/standartlar"
+        },
+        "all_vocabulary/express/2022": {
+          "url": "/s/express-2022/sözcük"
+        },
         "debugging_guide/express/2022": {
           "name": "Hata Ayıklama Kılavuzu",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
@@ -1045,6 +1056,15 @@
           "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
           "type": "Proje Kılavuzu"
         },
+        "all_resources/pre-express/2022": {
+          "url": "/s/pre-express-2022/kaynaklar"
+        },
+        "all_standards/pre-express/2022": {
+          "url": "/s/pre-express-2022/standartlar"
+        },
+        "all_vocabulary/pre-express/2022": {
+          "url": "/s/pre-express-2022/sözcük"
+        },
         "debugging_guide/pre-express/2022": {
           "name": "Hata Ayıklama Kılavuzu",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
@@ -1089,13 +1109,13 @@
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/coursea/2022": {
-          "url": "/s/kursa-2022/kaynaklar"
+          "url": "/s/kursa-2022/resources"
         },
         "all_standards/coursea/2022": {
-          "url": "/s/kursa-2022/standartlar"
+          "url": "/s/kursa-2022/standards"
         },
         "all_vocabulary/coursea/2022": {
-          "url": "/s/kursa-2022/sözcük"
+          "url": "/s/kursa-2022/vocab"
         },
         "common_core_and_ngss_guidance/coursea/2022": {
           "name": "Ortak Çekirdek ve NGSS Rehberliği",
@@ -4609,6 +4629,7 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursee/2021": {
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
