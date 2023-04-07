@@ -2477,3 +2477,7 @@
           lesson_groups:
             lessonGroup-3:
               display_name: 'Kapittel 2: Bygge fysiske prototyper'
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapittel 2: Bygge fysiske prototyper'
