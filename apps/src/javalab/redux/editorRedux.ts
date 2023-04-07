@@ -6,11 +6,9 @@ const {
   fileMetadataForEditor,
   updateAllSourceFileOrders
 } = require('@cdo/apps/javalab/JavalabFileHelper');
-const {
-  JavalabEditorDialog
-} = require('@cdo/apps/javalab/JavalabEditorDialogManager');
 import _ from 'lodash';
 import {createSelector, createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {JavalabEditorDialog} from '../types';
 
 interface Sources {
   [key: string]: {
@@ -32,7 +30,7 @@ interface JavalabEditorState {
   lastTabKeyIndex: number;
   sources: Sources;
   validation: Sources;
-  editorOpenDialogName: string | null;
+  editorOpenDialogName: keyof typeof JavalabEditorDialog | null;
   newFileError: string | null;
   renameFileError: string | null;
   editTabKey: string | null;
@@ -193,8 +191,8 @@ const javalabEditorSlice = createSlice({
       delete newSources[filename];
       state.sources = newSources;
     },
-    openEditorDialog(state, action: PayloadAction<string>) {
-      if (JavalabEditorDialog[action.payload] !== undefined) {
+    openEditorDialog(state, action: PayloadAction<keyof typeof JavalabEditorDialog>) {
+      if (Object.values(JavalabEditorDialog).includes(action.payload)) {
         state.editorOpenDialogName = action.payload;
       }
     },
