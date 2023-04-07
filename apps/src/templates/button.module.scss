@@ -265,27 +265,32 @@ a:visited,
   // Button sizes.
   &.default {
     height: $button-height-default;
-    padding: 0 24px;
+    padding-left: 24px;
+    padding-right: 24px;
     line-height: 34px;
   }
 
   &.large {
     height: $button-height-large;
-    padding: 0 30px;
+    padding-left: 30px;
+    padding-right: 30px;
     line-height: 40px;
   }
 
   &.narrow {
     height: $button-height-narrow;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     line-height: 40px;
   }
 
   &.small {
     height: $button-height-small;
-    padding: 0 5px;
+    padding-left: 5px;
+    padding-right: 5px;
     line-height: 20px;
     position: relative;
+    top: 4px;
 
     .icon {
       font-size: 12px;
