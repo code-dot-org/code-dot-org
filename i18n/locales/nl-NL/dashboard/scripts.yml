@@ -2686,3 +2686,7 @@ nl:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Hoofdstuk 2: Hardware Input'
