@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
@@ -93,7 +94,14 @@ const CustomizableCurriculumCatalogCard = ({
   quickViewButtonText,
   isEnglish
 }) => (
-  <div className={style.curriculumCatalogCardContainer}>
+  <div
+    className={classNames(
+      style.curriculumCatalogCardContainer,
+      isEnglish
+        ? style.curriculumCatalogCardContainer_english
+        : style.curriculumCatalogCardContainer_notEnglish
+    )}
+  >
     <img src={imageSrc} alt={imageAltText} />
     <div className={style.curriculumInfoContainer}>
       {/*TODO [MEG]: Show all subjects and topics rather than only the first one */}
@@ -111,19 +119,20 @@ const CustomizableCurriculumCatalogCard = ({
       <h4>{courseDisplayName}</h4>
       <div className={style.iconWithDescription}>
         <FontAwesome icon="user" className="fa-solid" />
-        <p className={style.iconDescription}>{gradeRange}</p>
+        <p className={style.iconWithDescriptionText}>{gradeRange}</p>
       </div>
       <div className={style.iconWithDescription}>
         {/*TODO [MEG]: Update this to be clock fa-solid when we update FontAwesome */}
         <FontAwesome icon="clock-o" />
-        <p className={style.iconDescription}>{duration}</p>
+        <p className={style.iconWithDescriptionText}>{duration}</p>
       </div>
       <div
-        className={
+        className={classNames(
+          style.buttonsContainer,
           isEnglish
             ? style.buttonsContainerEnglish
             : style.buttonsContainerNotEnglish
-        }
+        )}
       >
         <Button
           color={Button.ButtonColor.neutralDark}
