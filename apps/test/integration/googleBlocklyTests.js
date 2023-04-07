@@ -1,12 +1,14 @@
 import {assert} from '../util/reconfiguredChai';
 import {setupTestGoogleBlockly} from './util/testGoogleBlockly';
 
-let previousBlockly;
-
 describe('test google blockly', function () {
+  const cdoBlockly = window.Blockly ? window.Blockly : {};
   beforeEach(function () {
-    previousBlockly = window.Blockly ? Blockly : undefined;
     setupTestGoogleBlockly();
+  });
+
+  afterEach(function () {
+    Blockly = cdoBlockly;
   });
 
   it('can use domToBlock to create known blocks', function () {
@@ -27,10 +29,5 @@ describe('test google blockly', function () {
     );
     assert(Blockly.getMainWorkspace().getAllBlocks().length === 2);
     assert(Blockly.getMainWorkspace().getAllBlocks()[1].type === 'unknown');
-  });
-
-  afterEach(function () {
-    Blockly.blockly_.ContextMenuRegistry.registry.reset();
-    Blockly = previousBlockly;
   });
 });
