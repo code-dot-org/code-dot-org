@@ -1866,3 +1866,23 @@ se:
               display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
             lessonGroup-3:
               display_name: 'Kapihtal 2: Prototyhpet App:a'
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
