@@ -34,7 +34,7 @@ const SummaryEntryPoint = ({scriptData, students, selectedSection}) => {
       />
 
       {selectedSection && (
-        <div>
+        <>
           <div className={styles.responseIcon}>
             <i className="fa fa-user" />
           </div>
@@ -46,7 +46,7 @@ const SummaryEntryPoint = ({scriptData, students, selectedSection}) => {
               <span className={styles.text}>{i18n.studentsAnswered()}</span>
             </p>
           </div>
-        </div>
+        </>
       )}
     </div>
   );
