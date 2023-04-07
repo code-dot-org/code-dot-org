@@ -1621,7 +1621,7 @@
           "type": "Guida alle attività"
         },
         "code_org_how-to_videos/csd/2022": {
-          "name": "Video dimostrativi su Code.org",
+          "name": "Video dimostrativi di Code.org",
           "url": "https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-"
         },
         "intro_to_problem_solving/csd/2022": {
@@ -1803,6 +1803,10 @@
         },
         "intro_to_problem_solving_spaghetti_/csd/2022": {
           "type": "Diapositive"
+        },
+        "code_org_how-to_video_playlist/csd/2022": {
+          "name": "Playlist video dimostrativi di Code.org",
+          "url": "https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5"
         },
         "intro_to_problem_solving_-_paper_tower/csd/2022": {
           "url": "https://docs.google.com/document/d/1UNCZD2dRyfZB7wW2yW5_zDRF_lzJjmdLeu21YovvmBs/edit?usp=sharing",
@@ -2152,12 +2156,15 @@
           "type": "Diapositive"
         },
         "exploring_web_pages/csd/2022": {
+          "name": "Esplorazione di pagine Web",
           "type": "Modello"
         },
         "exploring_web_pages_1/csd/2022": {
+          "name": "Esplorazione di pagine Web",
           "type": "Guida alle attività"
         },
         "exploring_web_pages_2/csd/2022": {
+          "name": "Esplorazione di pagine Web",
           "type": "Diapositive"
         },
         "html_tags/csd/2022": {
@@ -2237,6 +2244,7 @@
           "type": "Risorse"
         },
         "styling_text_with_css/csd/2022": {
+          "name": "Definire lo stile del testo con i CSS",
           "type": "Diapositive"
         },
         "peer_review_-_your_personal_style/csd/2022": {
@@ -6048,7 +6056,7 @@
           "type": "Guida alle attività"
         },
         "how-to-videos/csd/2021": {
-          "name": "Video dimostrativi su Code.org",
+          "name": "Video dimostrativi di Code.org",
           "url": "https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-"
         },
         "csd_unit_1_-_problem_solving_and_computing/csd/2021": {
@@ -6202,6 +6210,10 @@
           "url": "https://docs.google.com/document/d/1B4c4oTSnJdlhXjUmmkVNgPrWa1WxTn2-QLEIg4ZI5yU/edit",
           "type": "Guida alle attività"
         },
+        "plane-how-to-videos/csd/2021": {
+          "name": "Playlist video dimostrativi di Code.org",
+          "url": "https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5"
+        },
         "exploring-problem-solving-animal-theme-2020/csd/2021": {
           "url": "https://docs.google.com/document/d/1yEDSiEwx6OICs4MZwzl4zBd_aVfVEWd6JlPIqo2mc1c/edit?usp=sharing",
           "type": "Modello"
@@ -6225,9 +6237,11 @@
           "type": "Guida alle attività"
         },
         "exploring-web-pages-exemplar-2020/csd/2021": {
+          "name": "Esplorazione di pagine Web",
           "type": "Modello"
         },
         "exploring-web-pages/csd/2021": {
+          "name": "Esplorazione di pagine Web",
           "type": "Guida alle attività"
         },
         "csd_unit_2_-_web_development/csd/2021": {
