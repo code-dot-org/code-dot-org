@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 import styles from './check-for-understanding.module.scss';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -114,19 +115,23 @@ const CheckForUnderstanding = ({
       <div className={styles.studentResponses}>
         <h2>{i18n.studentResponses()}</h2>
 
-        <div
-          className={
-            isRtl ? styles.studentsSubmittedLeft : styles.studentsSubmittedRight
-          }
-        >
-          <p>
-            <i className="fa fa-user" />
-            <span>
-              {scriptData.responses.length}/{students.length}{' '}
-              {i18n.studentsAnswered()}
-            </span>
-          </p>
-        </div>
+        {selectedSection && (
+          <div
+            className={
+              isRtl
+                ? styles.studentsSubmittedLeft
+                : styles.studentsSubmittedRight
+            }
+          >
+            <p>
+              <i className="fa fa-user" />
+              <span>
+                {scriptData.responses.length}/{students.length}{' '}
+                {i18n.studentsAnswered()}
+              </span>
+            </p>
+          </div>
+        )}
 
         <label>
           {i18n.responsesForClassSection()}
@@ -141,6 +146,16 @@ const CheckForUnderstanding = ({
           ))}
         </div>
       </div>
+
+      {/* Feedback sharing banner */}
+      <Notification
+        type={NotificationType.feedback}
+        notice={i18n.feedbackShareBannerTitle()}
+        details={i18n.feedbackShareBannerDesc()}
+        buttonText={i18n.feedbackShareBannerButton()}
+        buttonLink={'https://forms.gle/XsjRL9L3Mo5aC3KbA'}
+        dismissible={false}
+      />
 
       {/* Teacher Instructions */}
       {teacherMarkdown && (

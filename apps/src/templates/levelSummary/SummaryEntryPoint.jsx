@@ -8,7 +8,7 @@ import styles from './summary-entry-point.module.scss';
 
 const SUMMARY_PATH = '/summary';
 
-const SummaryEntryPoint = ({scriptData, students}) => {
+const SummaryEntryPoint = ({scriptData, students, selectedSection}) => {
   // If viewing the page as Participant, be sure to rewrite the link URL
   // to view as Instructor, so we don't just get redirected back.
   const params = document.location.search.replace(
@@ -33,17 +33,21 @@ const SummaryEntryPoint = ({scriptData, students}) => {
         __useDeprecatedTag
       />
 
-      <div className={styles.responseIcon}>
-        <i className="fa fa-user" />
-      </div>
-      <div className={styles.responseCounter}>
-        <p>
-          <span className={styles.counter}>
-            {scriptData.response_count}/{students.length}{' '}
-          </span>
-          <span className={styles.text}>{i18n.studentsAnswered()}</span>
-        </p>
-      </div>
+      {selectedSection && (
+        <div>
+          <div className={styles.responseIcon}>
+            <i className="fa fa-user" />
+          </div>
+          <div className={styles.responseCounter}>
+            <p>
+              <span className={styles.counter}>
+                {scriptData.response_count}/{students.length}{' '}
+              </span>
+              <span className={styles.text}>{i18n.studentsAnswered()}</span>
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
@@ -55,7 +59,11 @@ SummaryEntryPoint.propTypes = {
       id: PropTypes.number.isRequired,
       name: PropTypes.string
     })
-  )
+  ),
+  selectedSection: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired
+  })
 };
 
 export default connect(
@@ -63,6 +71,8 @@ export default connect(
   // remove the teacher panel, or try to use this component on a page without
   // the teacher panel, it will require extra steps to load in the data.
   state => ({
-    students: state.teacherSections.selectedStudents
+    students: state.teacherSections.selectedStudents,
+    selectedSection:
+      state.teacherSections.sections[state.teacherSections.selectedSectionId]
   })
 )(SummaryEntryPoint);
