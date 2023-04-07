@@ -6,7 +6,10 @@
     %td.heading= 'Date'.pluralize(@workshop.sessions.length) + ':'
     %td
       - @workshop.sessions.each do |session|
-        = session.start_date_with_start_and_end_times_us_format
+        - if @workshop.subject == Pd::Workshop::SUBJECT_CSA_CAPSTONE
+          = session.start_date_us_format
+        - else
+          = session.start_date_with_start_and_end_times_us_format
         %br
   - unless @workshop.location_name.blank?
     %tr
