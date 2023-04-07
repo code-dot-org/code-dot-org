@@ -83,6 +83,8 @@ describe('CheckForUnderstanding', () => {
     // Section selector, with one section.
     expect(wrapper.find('SectionSelector').length).to.eq(1);
     expect(wrapper.find('SectionSelector option').length).to.eq(2);
+    // Feedback sharing notification banner
+    expect(wrapper.find('Notification').length).to.eq(1);
   });
 
   it('applies correct classes when rtl', () => {
@@ -120,5 +122,19 @@ describe('CheckForUnderstanding', () => {
     expect(wrapper.find('SafeMarkdown').at(1).text()).to.eq(
       'test teacher markdown'
     );
+  });
+
+  it('does not render response counter/text if no section selected', () => {
+    const wrapper = setUpWrapper({
+      teacherSections: {
+        selectedStudents: [{id: 0}],
+        selectedSectionId: null,
+        sectionIds: [0],
+        sections: [{id: 0, name: 'test section'}]
+      }
+    });
+
+    expect(wrapper.find(`.${styles.studentsSubmittedRight}`).length).to.eq(0);
+    expect(wrapper.find(`.${styles.studentsSubmittedLeft}`).length).to.eq(0);
   });
 });

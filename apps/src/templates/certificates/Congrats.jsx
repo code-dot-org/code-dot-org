@@ -39,7 +39,12 @@ export default function Congrats(props) {
     }
     return (
       <div style={styles.extraLinkContainer}>
-        <a href={extraLinkUrl} target={'_blank'} style={styles.extraLink}>
+        <a
+          href={extraLinkUrl}
+          target={'_blank'}
+          style={styles.extraLink}
+          rel="noreferrer"
+        >
           {extraLinkText}
         </a>
       </div>
