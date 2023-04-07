@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-27 17:40:36 UTC",
+    "serialized_at": "2023-04-06 22:54:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5811,6 +5811,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd4_2023"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -5833,6 +5836,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch1_2023"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -5855,6 +5861,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-1_2023"
+        ],
         "progression": "Sample Apps for Good"
       },
       "bonus": false,
@@ -5877,6 +5886,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-2_2023"
+        ],
         "progression": "Sample Apps for Good"
       },
       "bonus": false,
@@ -5899,6 +5911,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-3_2023"
+        ],
         "progression": "Sample Apps for Good"
       },
       "bonus": false,
@@ -5921,6 +5936,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-1_2023"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -5943,6 +5961,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-2_2023"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -5965,6 +5986,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-3_2023"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -5987,6 +6011,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-4_2023"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6009,6 +6036,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-5_2023"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6031,6 +6061,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-6_2023"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6053,6 +6086,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 1_2023"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6075,6 +6111,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 2_2023"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6097,6 +6136,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 3_2023"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6119,6 +6161,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 4_2023"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6141,6 +6186,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 5_2023"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -6163,6 +6211,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 6_2023"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -6185,6 +6236,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 7_2023"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -6207,6 +6261,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Design a Screen for your App_2023"
+        ],
         "progression": "Design a Screen for your App"
       },
       "bonus": false,
@@ -6229,6 +6286,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 - Design Mode Project_2023"
+        ],
         "progression": "App Project: Screen Design"
       },
       "bonus": false,
@@ -6251,6 +6311,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 1_2023"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6273,6 +6336,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 1.5_2023"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6295,6 +6361,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 2_2023"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6317,6 +6386,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 2.5_2023"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6339,6 +6411,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 3_2023"
+        ],
         "progression": "Events and Linking Screens"
       },
       "bonus": false,
@@ -6361,6 +6436,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 4_2023"
+        ],
         "progression": "Events and Linking Screens"
       },
       "bonus": false,
@@ -6383,6 +6461,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 5_2023"
+        ],
         "progression": "Events and Linking Screens"
       },
       "bonus": false,
@@ -6405,6 +6486,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Import_2023"
+        ],
         "progression": "Combining Projects"
       },
       "bonus": false,
@@ -6427,6 +6511,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Events_2023"
+        ],
         "progression": "Combining Projects"
       },
       "bonus": false,
@@ -6449,6 +6536,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Bug Feature_2023"
+        ],
         "progression": "Updating Your Prototype"
       },
       "bonus": false,
@@ -6471,6 +6561,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csd4_2023"
+        ],
         "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
@@ -6493,6 +6586,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD User Centered Design Post-Project Test_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6896,13 +6992,125 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "All Code",
+      "url": "/s/focus-on-impact-in-society2-2023/code",
+      "key": "all_code",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/focus-on-impact-in-society2-2023/standards",
+      "key": "all_standards_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_1"
+      }
+    },
+    {
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
+      "key": "csd_curriculum_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Guide to Debugging",
+      "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
+      "key": "csd_guide_to_debugging",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
+      "key": "csd_implementation_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "CSD Learning Frameworks",
+      "url": "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view",
+      "key": "csd_learning_frameworks",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_code",
+        "script.name": "focus-on-impact-in-society2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_1",
+        "script.name": "focus-on-impact-in-society2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "focus-on-impact-in-society2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "focus-on-impact-in-society2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "focus-on-impact-in-society2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks",
+        "script.name": "focus-on-impact-in-society2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "focus-on-impact-in-society2-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
