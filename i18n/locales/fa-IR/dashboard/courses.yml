@@ -79,6 +79,8 @@ fa:
           description_short: آموزش مفاهیم بنیادین علوم کامپیوتر.
         self-paced-pl-csa-2023:
           title: ماژولهای آغاز دوره‌های CSA
+        vpl-csd-summer-ci-2023:
+          title: بررسی دوره آموزشی "کشفیات علوم کامپیوتر"
     resources:
       curriculum/csd/2020:
         name: برنامه آموزشی
