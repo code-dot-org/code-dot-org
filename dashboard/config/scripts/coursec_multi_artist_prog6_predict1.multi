@@ -4,3 +4,5 @@ wrong 'The artist will draw a triangle with three equal sides.', feedback: 'Inco
 wrong 'The artist will draw a single line.', feedback: 'Incorrect.  The artist draws a square.'
 right 'The artist draws a square.', feedback: 'Correct!'
 wrong 'I don\'t know.', feedback: 'The artist draws a square.'
+
+allow_multiple_attempts false

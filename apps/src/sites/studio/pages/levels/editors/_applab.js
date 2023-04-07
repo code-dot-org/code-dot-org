@@ -10,8 +10,8 @@ import {
   getMakerBlocks
 } from '@cdo/apps/lib/kits/maker/dropletConfig';
 
-$(document).ready(function() {
-  $('#level_makerlab_enabled').change(function() {
+$(document).ready(function () {
+  $('#level_makerlab_enabled').change(function () {
     // Get the set of blocks for the Maker Category, the Circuit Category, and the Micro:bit category
 
     // Setting block values to null to match the expected behavior in code_functions.

@@ -98,8 +98,15 @@
     "start_blocks": "//1) Use a `setScale` block to set the scale of the lightSensor from 0-100\r\n\r\n//2) Use an `onBoardEvent` to detect the data from the lightSensor\r\n\r\n//3) If the lightSensor value is greater than 50: hide the `blindsImage` element, which simulates opening the window\r\n\r\n//4) If the lightSensor value is less than 50: show the `blindsImage` element, which simulates closing the window",
     "bubble_choice_description": "Create an app prototype that simulates a device that automatically opens and closes window blinds based on the sunlight outside.",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
+    "encrypted_examples": "nRYU2tAZQVH/TuQNeopcQn16b96CSBwcsa2fA8h8/9Be+qDmXHh4fRKBdHQ+\nfRRJzRW31+cJ6hUpu04zDboA8A==\n",
+    "reference_links": [
+      "/courses/csd-2022/guides/microbit-sensors",
+      "/courses/csd-2022/guides/data-and-change-events",
+      "/courses/csd-2022/guides/changing-sensor-scale",
+      "/courses/csd-2022/guides/board-events",
+      "/courses/csd-2022/guides/microbit-physical-input",
+      "/courses/csd-2022/guides/microbit-display",
+      "/courses/csd-2022/guides/microbit-overview"
     ]
   },
   "game_id": 41,
@@ -108,7 +115,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:01.777+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - ChalE_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - ChalE_2222\"},{\"changed_at\":\"2023-02-09 22:51:20 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:01.777+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - ChalE_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - ChalE_2222\"},{\"changed_at\":\"2023-02-09 22:51:20 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:35:40 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

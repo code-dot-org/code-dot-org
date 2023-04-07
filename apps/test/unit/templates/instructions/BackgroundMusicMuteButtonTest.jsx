@@ -49,10 +49,7 @@ describe('SignedInUser', () => {
         isMinecraft: false
       });
       expect(
-        wrapper
-          .find('#uitest-mute-music-button')
-          .at(0)
-          .props().style.color
+        wrapper.find('#uitest-mute-music-button').at(0).props().style.color
       ).to.equal('rgb(118, 101, 160)');
     });
 
@@ -61,10 +58,7 @@ describe('SignedInUser', () => {
         isMinecraft: true
       });
       expect(
-        wrapper
-          .find('#uitest-mute-music-button')
-          .at(0)
-          .props().isMinecraft
+        wrapper.find('#uitest-mute-music-button').at(0).props().isMinecraft
       ).to.be.true;
     });
   });

@@ -77,13 +77,8 @@ export default class ChangeEmailForm extends React.Component {
   }
 
   render() {
-    const {
-      values,
-      validationErrors,
-      disabled,
-      userType,
-      isPasswordRequired
-    } = this.props;
+    const {values, validationErrors, disabled, userType, isPasswordRequired} =
+      this.props;
     return (
       <div>
         <Field

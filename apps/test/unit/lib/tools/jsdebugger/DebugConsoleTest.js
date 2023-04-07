@@ -110,9 +110,7 @@ describe('The DebugConsole component when the console is enabled', () => {
 
       it('the expressions is added to the list of watch expressions', () => {
         expect(
-          getStore()
-            .getState()
-            .watchedExpressions.getIn([0, 'expression'])
+          getStore().getState().watchedExpressions.getIn([0, 'expression'])
         ).to.equal('a+b');
       });
 

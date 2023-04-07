@@ -22,9 +22,7 @@ export default class OrganizerFormPart extends React.Component {
   }
 
   load() {
-    let url = `/api/v1/pd/workshops/${
-      this.props.workshopId
-    }/potential_organizers`;
+    let url = `/api/v1/pd/workshops/${this.props.workshopId}/potential_organizers`;
 
     $.ajax({
       method: 'GET',

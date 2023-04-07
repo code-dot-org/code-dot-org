@@ -72,9 +72,9 @@ class ScrollButtons extends React.Component {
     // If mouse is held down for half a second, begin gradual continuous
     // scroll
     this.scrollTimeout = setTimeout(
-      function() {
+      function () {
         this.scrollInterval = setInterval(
-          function() {
+          function () {
             let dist = CONTINUOUS_SCROLL_BY;
             if (dir === DIRECTIONS.UP) {
               dist *= -1;

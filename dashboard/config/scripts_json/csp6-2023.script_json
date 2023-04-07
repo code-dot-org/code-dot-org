@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-20 16:33:17 UTC",
+    "serialized_at": "2023-03-28 21:41:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -127,8 +127,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will learn the ways that lists are created, accessed, and changed through a teacher-guided activity using plastic baggies and pieces of paper. The lesson begins with a brief reflection on the value of lists. Students then complete the main activity which introduces the syntax to use lists and the ways they can be used. To wrap up students watch two short videos on lists and record the main concepts in their journals.",
-        "preparation": "* 7+ sandwich baggies per pair of students\n* 1 gallon-sized baggy per pair of students\n* packs of red and orange stickies\n* pens / pencils\n* 1 dry erase marker per four students (pairs can share)\n* Review the slides and click through all animations\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-lists-lessons-1-4/36478) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "In the warmup, students brainstorm different lists of information that they encounter on a daily basis. Then in the activity, students return to baggies and sticky notes from the previous unit to build a concrete model of a list before seeing how lists are programmed in Javascript. Students are exposed to different ways of interacting with a list like accessing, removing, appending, and inserting elements. The wrap up concludes the lesson with a summary video and a journal vocabulary exercise. ",
+        "preparation": "* 7+ sandwich baggies per pair of students\n* 1 gallon-sized baggy per pair of students\n* packs of red and orange stickies\n* pens / pencils\n* 1 dry erase marker per four students (pairs can share)\n* Review the slides and click through all animations\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-lists-lessons-1-4/36478) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1_JiH1xXiHo4N6Uvc_21wnoutnucn006iMWl-Nh1dsnM/edit?usp=sharing)",
         "student_overview": "Develop a mental model for how computers store and access lists of information.",
         "unplugged": true
       },
@@ -147,9 +146,8 @@
       "relative_position": 2,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students work with partners to investigate three different apps that use lists. Students first explore all three apps without seeing the code to notice similarities and predict how they will work. Then they explore the code itself and make additions and modifications to the apps. To conclude the lesson, students review and discuss common programming patterns with conditionals.",
-        "preparation": "* Review the three apps that students will be investigating and the questions about them. Note that there are target responses to each of these questions on the levels.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-lists-lessons-1-4/36478) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "After building a conceptual model for list and list operations in the previous lesson, this lesson allows students to see how they are actually implemented in code. This lesson also introduces common programming patterns when using lists. Students will have some opportunities to modify working code in this lesson, but the most significant practice with lists will come in the following lesson.",
+        "overview": "In this lesson students work with partners to investigate three different apps that use lists. Students first explore all three apps without seeing the code to notice similarities and predict how they will work. Then they explore the code itself and make additions and modifications to the apps. Students are also introduced to the [`getColumn`(#d3e965)](/docs/applab/getColumn/) command and how to use it to populate lists from the datasets in the AppLab Data Library. To conclude the lesson, students review and discuss common programming patterns with conditionals.",
+        "preparation": "* Review the three apps that students will be investigating and the questions about them. Note that there are target responses to each of these questions on the levels.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-lists-lessons-1-4/36478) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/17N0rIzuUkvVioR5SdZnzr_PZ232jLhbBunZJDgufM_Q/edit?usp=sharing)",
         "student_overview": "Investigate and modify sample apps that use lists learn common programming patterns with lists."
       },
       "seeding_key": {
@@ -168,8 +166,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Practice the basics of lists including creating lists and accessing, inserting, and removing elements from lists. ",
-        "preparation": "* Review the slide on string indexes which you'll cover at the beginning of the lesson\n* Review the programming progression to understand what students will be asked to do. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-lists-lessons-1-4/36478) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is students primary opportunity to get hands on with lists in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. ",
+        "preparation": "* Review the slide on string indexes which you'll cover at the beginning of the lesson\n* Review the programming progression to understand what students will be asked to do. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-lists-lessons-1-4/36478) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/12QKZZeyTmZLRTtkewPxbYnMIP3qVTcQOxqihLuYHqcg/edit?usp=sharing)",
         "student_overview": "Practice programming with lists through a set of programming puzzles."
       },
       "seeding_key": {
@@ -188,8 +185,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Reminder app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-lists-lessons-1-4/36478) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-lists-lessons-1-4/36478) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1Lb6Zb8zDD8TjjAl7CGtFHhgplnsTfsx9VZ-ejYYadpE/edit?usp=sharing)",
         "student_overview": "Make an app that uses lists and programming patterns with lists."
       },
       "seeding_key": {
@@ -208,7 +204,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students begin the lesson by discussing the purpose of loops before completing the unplugged activity. This activity involves moving a \"robot\" around a game board while practicing tracing blocks of code by hand. To conclude, the lesson is wrapped up with a vocabulary discussion and a video.  ",
-        "preparation": "* 1 game board per pair of students\n* 1 \"robot\" per pair of students\n* Game pieces, markers, or tokens that can be used to represent barriers\n* Review the Intro to Loops presentation and click through all animations\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-loops-lessons-5-8/36480) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* 1 game board per pair of students\n* 1 \"robot\" per pair of students\n* Game pieces, markers, or tokens that can be used to represent barriers\n* Review the Intro to Loops presentation and click through all animations\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-loops-lessons-5-8/36480) \nforum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/19_bPJDxHCBMvpsqQ_c-VGW2fQLyCkHaz7tGl-ZVFhXw/edit?usp=sharing)",
         "purpose": "Students are introduced to the concept of loops through a robot maze activity. This unplugged lessons provides students a physical mental model they will be able to use when they start programming with loops in the subsequent lessons.",
         "student_overview": "Develop a mental model for how computers repeat instructions over and over using loops.",
         "unplugged": true
@@ -229,8 +225,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students practice using the for loop in order to repeatedly run pieces of code. The lesson begins with a quick investigation of an app that flips coins. After that code investigation students complete another investigation with an app that uses loops to update screen elements. ",
-        "preparation": "- Review the two apps that students will be investigating and the questions about them. Note that there are target responses to each of these questions on the levels.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-loops-lessons-5-8/36480) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is students primary opportunity to get hands on with loops in code prior to the Practice activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. ",
+        "preparation": "- Review the two apps that students will be investigating and the questions about them. Note that there are target responses to each of these questions on the levels.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-loops-lessons-5-8/36480) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1bFsNXxoznFCTa0dNc8cIZ8nle-CRck_KIl-DD47geWE/edit?usp=sharing)",
         "student_overview": "Investigate and modify sample apps that use loops and learn common programming patterns with loops."
       },
       "seeding_key": {
@@ -249,8 +244,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students practice the basics of loops including using while loops, for loops, and updating multiple screen elements with a for loop. Along the way students develop debugging practices with loops.",
-        "preparation": "* Review the programming progression to understand what students will be asked to do\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-loops-lessons-5-8/36480) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is students primary opportunity to get hands on with loops in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. ",
+        "preparation": "* Review the programming progression to understand what students will be asked to do\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-loops-lessons-5-8/36480) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1zHvcREojOLrrbDUeq1YV5k68Y2HptzBUT35zUrE1DzA/edit?usp=sharing)",
         "student_overview": "Practice programming with loops through a set of programming puzzles."
       },
       "seeding_key": {
@@ -269,8 +263,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Lock Screen Maker app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with minimal starting code. A progression of levels guides students on the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-loops-lessons-5-8/36480) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-loops-lessons-5-8/36480) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1ys33Q7bvhxP0y3i5fPRNoH7J9noVoNhuSoZtx2Ih7iE/edit?usp=sharing)",
         "student_overview": "Practice making an app that uses loops and programming patterns with loops."
       },
       "seeding_key": {
@@ -289,8 +282,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "The lesson begins with a quick review of lists and loops before moving into the main activity. Here students explore the concept with the Traversal Machine, a physical model of traversal using a for loop. ",
-        "preparation": "Per pair of students:\n\n* 1 Traversal Machine \n\n\t* The index sheet contains enough sections to divide between six students\n\n* Preview the Intro to Traversals slideshow. Click through all animations.  \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-traversals-lessons-9-12/36481) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "Students are introduced to the concept of traversal using the Traversal Machine. This unplugged lessons provides students a physical mental model they will be able to use when they transition to programming traversals in App Lab. ",
+        "preparation": "Per pair of students:\n\n* 1 Traversal Machine \n\n\t* The index sheet contains enough sections to divide between six students\n\n* Preview the Intro to Traversals slideshow. Click through all animations.  \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-traversals-lessons-9-12/36481) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1dMvP-yw6KGaN1Ufztp09MrxDxOiqT-0RfFUu8upHdqQ/edit?usp=sharing)",
         "student_overview": "Develop a mental model for how computers use loops to traverse and process lists of information.",
         "unplugged": true
       },
@@ -309,9 +301,8 @@
       "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students work with partners to investigate three different apps that use traversal to access items in a lists. Students first explore all three apps without seeing the code to notice similarities and predict how they will work. Then they explore the code itself and make additions and modifications to the apps. To conclude the lesson, students review and discuss common programming patterns with traversals.",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-traversals-lessons-9-12/36481) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "After building a conceptual model using a for loop to traverse a list in the previous lesson, this lesson allows students to see how this is actually implemented in code. This lesson also introduces common programming patterns when using lists and traverals. Students will have some opportunities to modify working code in this lesson, but the most significant practice with lists and traversals will come in the following lesson.",
+        "overview": "In this lesson students work with partners to investigate three different apps that use traversals to access items in a lists. Students first explore all three apps without seeing the code to notice similarities and predict how they will work. Then they explore the code itself and make additions and modifications to the apps. To conclude the lesson, students review and discuss common programming patterns with traversals.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-traversals-lessons-9-12/36481) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1jde5Kjx0A6TDiamplHnYYNkzhBnEvhyfU3uAKzuQjS4/edit?usp=sharing)",
         "student_overview": "Investigate and modify sample apps that use traversals."
       },
       "seeding_key": {
@@ -330,8 +321,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students practice traversing lists, filtering and reducing lists, and using the data import tools. Along the way students develop debugging practices with traversals.",
-        "preparation": "* Review the levels that students will be completing with an eye for how you will encourage them to use the debugging practices emphasized in today's lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-traversals-lessons-9-12/36481) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is students primary opportunity to get hands on with lists in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. ",
+        "preparation": "* Review the levels that students will be completing with an eye for how you will encourage them to use the debugging practices emphasized in today's lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-traversals-lessons-9-12/36481) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1t7-t3vUMMCCBn2RZMJ_d7Dd90nNO5MIOYgf10PxpOlE/edit?usp=sharing)",
         "student_overview": "Practice programming with list traversals through a set of programming puzzles."
       },
       "seeding_key": {
@@ -350,8 +340,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Random Forecaster app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
-        "preparation": "* If time allows, try to build all or part of the Random Forecaster app yourself to understand the challenges involved\n* Review the debugging practices you intend to reinforce and resources you'll direct students towards as they get stuck\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-traversals-lessons-9-12/36481) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
+        "preparation": "* If time allows, try to build all or part of the Random Forecaster app yourself to understand the challenges involved\n* Review the debugging practices you intend to reinforce and resources you'll direct students towards as they get stuck\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-traversals-lessons-9-12/36481) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1V1LBmASIokyCCsrdvncdB6FW8z5GH4mZnSr7FKJ3HzU/edit?usp=sharing)",
         "student_overview": "Practice making an app that processes a list from a data set using traversal. "
       },
       "seeding_key": {
@@ -515,21 +504,8 @@
       }
     },
     {
-      "key": "e8b8c82a-55cf-48fa-876b-6120dbb12c4f",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e8b8c82a-55cf-48fa-876b-6120dbb12c4f",
-        "lesson.key": "Lists Explore",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023"
-      }
-    },
-    {
       "key": "d060c736-ed40-41c9-932a-29a9e374069d",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -543,7 +519,7 @@
     },
     {
       "key": "846550ff-2d82-436d-80bb-ba3e048d39b1",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -557,7 +533,7 @@
     },
     {
       "key": "7cdf3e1a-55e3-4d97-ab65-77619f69476b",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -571,7 +547,7 @@
     },
     {
       "key": "37a8f129-05f2-497e-b460-e7c5dfb17878",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -582,21 +558,8 @@
       }
     },
     {
-      "key": "d047f77b-e2b6-4b6f-8cb3-5d821f0e1eb4",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d047f77b-e2b6-4b6f-8cb3-5d821f0e1eb4",
-        "lesson.key": "Lists Investigate",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023"
-      }
-    },
-    {
       "key": "1302f45a-426b-4cdc-b2ba-2db10e539eae",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -610,7 +573,7 @@
     },
     {
       "key": "7fcc98c5-7cd5-4edf-bada-7bec9429e4d2",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -624,7 +587,7 @@
     },
     {
       "key": "275c1724-72c0-4459-b367-a8f52c7e07dc",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -651,21 +614,8 @@
       }
     },
     {
-      "key": "8d6ae778-641a-41e4-a75c-f426b10133be",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8d6ae778-641a-41e4-a75c-f426b10133be",
-        "lesson.key": "Lists Make",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023"
-      }
-    },
-    {
       "key": "51090a1d-e3cd-4d9d-986d-01efb0f69f39",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -679,7 +629,7 @@
     },
     {
       "key": "7725aea1-cc2d-47a0-a56c-cb1a43543130",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -693,7 +643,7 @@
     },
     {
       "key": "e9ad01bc-829b-4b4d-9ecb-92aab0acb34b",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -706,21 +656,8 @@
       }
     },
     {
-      "key": "31e0163e-3b61-44bc-a32c-f8683953a516",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "31e0163e-3b61-44bc-a32c-f8683953a516",
-        "lesson.key": "Loops Explore",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csp6-2023"
-      }
-    },
-    {
       "key": "1e04f628-9d85-4e63-ac35-3ad7797dfedc",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -734,7 +671,7 @@
     },
     {
       "key": "f2f806cb-a562-450f-9a71-be3751df9ecf",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -748,7 +685,7 @@
     },
     {
       "key": "8c07c21c-5eeb-4be1-847d-a888da186d90",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -761,21 +698,8 @@
       }
     },
     {
-      "key": "ab2f4f86-8777-4524-90fd-f484ee717e7c",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ab2f4f86-8777-4524-90fd-f484ee717e7c",
-        "lesson.key": "Loops Investigate",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csp6-2023"
-      }
-    },
-    {
       "key": "72d8fee7-c00d-4b98-b415-8fe6597d58c3",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -789,7 +713,7 @@
     },
     {
       "key": "6cf23fbd-3da6-41b8-811f-7c2fea3d301d",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -803,7 +727,7 @@
     },
     {
       "key": "a986ea8e-7441-4471-994a-211472089985",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -816,21 +740,8 @@
       }
     },
     {
-      "key": "55f56edc-a7c0-44e5-bb02-6dc9452c99e6",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "55f56edc-a7c0-44e5-bb02-6dc9452c99e6",
-        "lesson.key": "Loops Practice",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csp6-2023"
-      }
-    },
-    {
       "key": "994b725a-2fb1-4803-a528-521d567ee8e6",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -844,7 +755,7 @@
     },
     {
       "key": "ecb0c2a0-be75-43a2-b164-77c9e1f789e3",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -858,7 +769,7 @@
     },
     {
       "key": "4cb9adb8-0fea-418a-9b8d-a679337a7678",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -871,21 +782,8 @@
       }
     },
     {
-      "key": "d58e1dc1-af9f-4d3f-9bf2-44db32beaa8f",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d58e1dc1-af9f-4d3f-9bf2-44db32beaa8f",
-        "lesson.key": "Loops Make",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csp6-2023"
-      }
-    },
-    {
       "key": "439d914e-89a0-44a2-964d-14f65210d705",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 2,
         "name": "Warm Up"
@@ -899,7 +797,7 @@
     },
     {
       "key": "a82a4e77-5923-4c14-bb3c-4785845ac136",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 38,
         "name": "Activity"
@@ -913,7 +811,7 @@
     },
     {
       "key": "b38053fb-73ea-47ec-9b1f-06c846c3fdab",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -926,21 +824,8 @@
       }
     },
     {
-      "key": "d622a819-43a4-4067-8851-c80e34b9121e",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d622a819-43a4-4067-8851-c80e34b9121e",
-        "lesson.key": "Traversals Explore",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csp6-2023"
-      }
-    },
-    {
       "key": "3da96b02-5157-4f09-93f7-30d100f6c6fc",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -954,7 +839,7 @@
     },
     {
       "key": "0da60ee6-768c-446a-a823-8b271070d629",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -968,7 +853,7 @@
     },
     {
       "key": "b6d2eac0-f6b3-4210-97e4-c984d3b4b765",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -981,21 +866,8 @@
       }
     },
     {
-      "key": "d85af534-687c-41d0-b61d-2d8da2fc86b4",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d85af534-687c-41d0-b61d-2d8da2fc86b4",
-        "lesson.key": "Traversals Investigate",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csp6-2023"
-      }
-    },
-    {
       "key": "ba9b932b-a21d-476c-ae96-4631d24cae04",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1009,7 +881,7 @@
     },
     {
       "key": "ca5bf88f-7671-441d-ae70-1d043023e83d",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1023,7 +895,7 @@
     },
     {
       "key": "a9ceb1c8-4f8b-465b-92d4-85306051b728",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1036,21 +908,8 @@
       }
     },
     {
-      "key": "5d110681-29e0-4b78-8917-d97df48bc7cc",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5d110681-29e0-4b78-8917-d97df48bc7cc",
-        "lesson.key": "Traversals Practice",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csp6-2023"
-      }
-    },
-    {
       "key": "43c5be3b-e39a-428a-b71d-b40066454c15",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 2,
         "name": "Warm Up"
@@ -1064,7 +923,7 @@
     },
     {
       "key": "95f2d3aa-aa64-4e1e-9e6b-bec6d45bfd4b",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 38,
         "name": "Activity"
@@ -1078,7 +937,7 @@
     },
     {
       "key": "33479f58-25d4-4bf7-b34c-e074f63cb166",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1091,21 +950,8 @@
       }
     },
     {
-      "key": "67afb3e5-d590-49f6-a392-ea88c359d43e",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "67afb3e5-d590-49f6-a392-ea88c359d43e",
-        "lesson.key": "Traversals Make",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csp6-2023"
-      }
-    },
-    {
       "key": "8381c028-94d4-4f7c-8e1b-047d60f127c1",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 2,
         "name": "Warm Up"
@@ -1119,7 +965,7 @@
     },
     {
       "key": "2727eb11-6513-439e-8b9f-cc09978fc9d7",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 38,
         "name": "Activity"
@@ -1133,7 +979,7 @@
     },
     {
       "key": "c89d2470-3c21-40dd-ab9a-191436daae8a",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1482,17 +1328,6 @@
       }
     },
     {
-      "key": "f2474e60-f70a-4e05-9fee-fca37293385c",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1_JiH1xXiHo4N6Uvc_21wnoutnucn006iMWl-Nh1dsnM/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "f2474e60-f70a-4e05-9fee-fca37293385c",
-        "lesson_activity.key": "e8b8c82a-55cf-48fa-876b-6120dbb12c4f"
-      }
-    },
-    {
       "key": "c5179cab-9b3b-4e11-893f-c400984f97f2",
       "position": 1,
       "properties": {
@@ -1576,17 +1411,6 @@
       }
     },
     {
-      "key": "80ca2b5c-bf56-4354-bb40-744f9f5d7393",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/17N0rIzuUkvVioR5SdZnzr_PZ232jLhbBunZJDgufM_Q/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "80ca2b5c-bf56-4354-bb40-744f9f5d7393",
-        "lesson_activity.key": "d047f77b-e2b6-4b6f-8cb3-5d821f0e1eb4"
-      }
-    },
-    {
       "key": "fccfb46f-d10f-4c84-8dd2-92ca950d2d8a",
       "position": 1,
       "properties": {
@@ -1664,7 +1488,7 @@
       "key": "b9e4528e-6c97-4480-8474-d243c24afc9f",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2 (5 mins):** Students read the code, and then investigate the data tab.  \n\n**Discuss:** Encourage students to share out what they found in the data tab, and how they can interact with it with code.\n\n* **The goal:** The goal of this investigation is to get students comfortable with information inside the “Data” tab and to help them understand the “getColumn” command.  Students should be given some time to explore the Data tab themselves and even try the “Modify” task for a few minutes.  \n    \n* **What to look for:** When you bring the class together, students should be able to describe what information they see in the data tab and how they can use the data tab to help get access to data.  Key points to draw out are:\n    \n    * The “Data Library” on the left hand side has different categories of datasets that students can view.\n    * Students need to “import” a data set to be able to see the data inside it or to use the data in the code.\n    * Once imported, students will see the data set in the “Data Browser” area and can click on the name of the Data Set to see the data in table form.\n    * To use the [`getColumn`(#d3e965)](/docs/applab/getColumn/) command, you need the name of the table you want to use and the name of the column from that table.\n    * [`getColumn`(#d3e965)](/docs/applab/getColumn/) will return the column from your table as a list.  You can see it is a list because when it is printed to the console, it has square brackets `[ ]` around the items which are separated by commas.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Modify:** Students choose a new dataset to import to the project. Then students modify the code to print out a column of data from the chosen dataset. Point out to students that when they pull out a column, they are creating a list.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2 (5 mins):** Students read the code, and then investigate the data tab.  \n\n**Discuss:** Encourage students to share out what they found in the data tab, and how they can interact with it with code.\n\n* **The goal:** The goal of this investigation is to get students comfortable with information inside the “Data” tab and to help them understand the [`getColumn`(#d3e965)](/docs/applab/getColumn/) command.  Students should be given some time to explore the Data tab themselves and even try the “Modify” task for a few minutes.  \n    \n* **What to look for:** When you bring the class together, students should be able to describe what information they see in the data tab and how they can use the data tab to help get access to data.  Key points to draw out are:\n    \n    * The “Data Library” on the left hand side has different categories of datasets that students can view.\n    * Students need to “import” a data set to be able to see the data inside it or to use the data in the code.\n    * Once imported, students will see the data set in the “Data Browser” area and can click on the name of the Data Set to see the data in table form.\n    * To use the [`getColumn`(#d3e965)](/docs/applab/getColumn/) command, you need the name of the table you want to use and the name of the column from that table.\n    * [`getColumn`(#d3e965)](/docs/applab/getColumn/) will return the column from your table as a list.  You can see it is a list because when it is printed to the console, it has square brackets `[ ]` around the items which are separated by commas.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Modify:** Students choose a new dataset to import to the project. Then students modify the code to print out a column of data from the chosen dataset. Point out to students that when they pull out a column, they are creating a list.",
         "name": "Data Tab Investigation",
         "progression_name": "Data Tab Investigation"
       },
@@ -1795,17 +1619,6 @@
       }
     },
     {
-      "key": "2feb4dc1-3e7b-4660-aaf5-87ef932e6027",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1Lb6Zb8zDD8TjjAl7CGtFHhgplnsTfsx9VZ-ejYYadpE/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "2feb4dc1-3e7b-4660-aaf5-87ef932e6027",
-        "lesson_activity.key": "8d6ae778-641a-41e4-a75c-f426b10133be"
-      }
-    },
-    {
       "key": "ec888854-e2dd-4c4f-893f-02d955bbc2ad",
       "position": 1,
       "properties": {
@@ -1933,17 +1746,6 @@
       }
     },
     {
-      "key": "32086048-e1a2-4a00-9117-d3c39e228422",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/19_bPJDxHCBMvpsqQ_c-VGW2fQLyCkHaz7tGl-ZVFhXw/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "32086048-e1a2-4a00-9117-d3c39e228422",
-        "lesson_activity.key": "31e0163e-3b61-44bc-a32c-f8683953a516"
-      }
-    },
-    {
       "key": "e4a9b93a-11be-4a1f-9001-dda04bfd4939",
       "position": 1,
       "properties": {
@@ -2045,17 +1847,6 @@
       "seeding_key": {
         "activity_section.key": "453286c2-9ef5-4507-8ee7-824d0a82d407",
         "lesson_activity.key": "8c07c21c-5eeb-4be1-847d-a888da186d90"
-      }
-    },
-    {
-      "key": "62467e86-fae2-4d08-a0db-54390e60a8d0",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1bFsNXxoznFCTa0dNc8cIZ8nle-CRck_KIl-DD47geWE/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "62467e86-fae2-4d08-a0db-54390e60a8d0",
-        "lesson_activity.key": "ab2f4f86-8777-4524-90fd-f484ee717e7c"
       }
     },
     {
@@ -2256,18 +2047,6 @@
       "seeding_key": {
         "activity_section.key": "658e3c45-f0af-450f-a450-350f8481cf3b",
         "lesson_activity.key": "a986ea8e-7441-4471-994a-211472089985"
-      }
-    },
-    {
-      "key": "8b3a007c-4572-45b6-b7b5-71b9e81d0338",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1zHvcREojOLrrbDUeq1YV5k68Y2HptzBUT35zUrE1DzA/edit?usp=sharing) to access the modifications.",
-        "progression_name": "Check For Understanding: AP Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "8b3a007c-4572-45b6-b7b5-71b9e81d0338",
-        "lesson_activity.key": "55f56edc-a7c0-44e5-bb02-6dc9452c99e6"
       }
     },
     {
@@ -2486,17 +2265,6 @@
       }
     },
     {
-      "key": "a0050de6-6c0e-4e66-b27f-8cc6ebe83bd1",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1ys33Q7bvhxP0y3i5fPRNoH7J9noVoNhuSoZtx2Ih7iE/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "a0050de6-6c0e-4e66-b27f-8cc6ebe83bd1",
-        "lesson_activity.key": "d58e1dc1-af9f-4d3f-9bf2-44db32beaa8f"
-      }
-    },
-    {
       "key": "5b54e011-d808-4671-9be0-ff0193a77d04",
       "position": 1,
       "properties": {
@@ -2643,17 +2411,6 @@
       }
     },
     {
-      "key": "00cd7856-88d8-40b2-93c5-94ccdf92ebb2",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1dMvP-yw6KGaN1Ufztp09MrxDxOiqT-0RfFUu8upHdqQ/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "00cd7856-88d8-40b2-93c5-94ccdf92ebb2",
-        "lesson_activity.key": "d622a819-43a4-4067-8851-c80e34b9121e"
-      }
-    },
-    {
       "key": "88cfb9e1-1b95-4fad-b378-acd8e39fdae7",
       "position": 1,
       "properties": {
@@ -2741,17 +2498,6 @@
       }
     },
     {
-      "key": "a4a4b51e-7cf5-4949-826a-caf899529559",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1jde5Kjx0A6TDiamplHnYYNkzhBnEvhyfU3uAKzuQjS4/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "a4a4b51e-7cf5-4949-826a-caf899529559",
-        "lesson_activity.key": "d85af534-687c-41d0-b61d-2d8da2fc86b4"
-      }
-    },
-    {
       "key": "79f3e3b5-3c32-4fdd-9992-66d5e8e1147b",
       "position": 1,
       "properties": {
@@ -2835,17 +2581,6 @@
       "seeding_key": {
         "activity_section.key": "13f835b8-9604-49e0-a4db-5c1ae134cf8c",
         "lesson_activity.key": "a9ceb1c8-4f8b-465b-92d4-85306051b728"
-      }
-    },
-    {
-      "key": "fe744593-a001-444a-b773-464d5a69dd5e",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1t7-t3vUMMCCBn2RZMJ_d7Dd90nNO5MIOYgf10PxpOlE/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "fe744593-a001-444a-b773-464d5a69dd5e",
-        "lesson_activity.key": "5d110681-29e0-4b78-8917-d97df48bc7cc"
       }
     },
     {
@@ -3008,17 +2743,6 @@
       "seeding_key": {
         "activity_section.key": "70dda953-9c5c-4e27-9d10-981bc8aacd60",
         "lesson_activity.key": "33479f58-25d4-4bf7-b34c-e074f63cb166"
-      }
-    },
-    {
-      "key": "5f839108-b29f-4ec5-86b7-ee57677a6096",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1V1LBmASIokyCCsrdvncdB6FW8z5GH4mZnSr7FKJ3HzU/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "5f839108-b29f-4ec5-86b7-ee57677a6096",
-        "lesson_activity.key": "67afb3e5-d590-49f6-a392-ea88c359d43e"
       }
     },
     {

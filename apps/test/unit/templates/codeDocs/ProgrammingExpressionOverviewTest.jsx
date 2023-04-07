@@ -54,28 +54,16 @@ describe('ProgrammingExpressionOverview', () => {
     ]);
 
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(0)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(0).props().markdown
     ).to.equal(defaultProgrammingExpression.content);
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(1)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(1).props().markdown
     ).to.contain(defaultProgrammingExpression.syntax);
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(2)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(2).props().markdown
     ).to.equal(defaultProgrammingExpression.tips);
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(3)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(3).props().markdown
     ).to.contain(defaultProgrammingExpression.externalDocumentation);
 
     expect(wrapper.text()).to.contain(defaultProgrammingExpression.category);

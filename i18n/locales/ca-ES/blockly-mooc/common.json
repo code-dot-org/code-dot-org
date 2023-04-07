@@ -866,6 +866,7 @@
   "explainPairProgramming": "Quan la programació de parelles està habilitada, els alumnes poden optar per treballar amb un company al mateix ordinador. Activeu aquesta opció si voleu que puguin treballar en parelles i avançar junts.",
   "explainPairProgrammingLearnMore": "Saber més sobre la programació per parelles.",
   "explainRestrictedSectionEmail": "Si marqueu \"sí\", els alumnes no podran unir-se a aquesta lliçó amb el codi de la secció. Podreu afegir-los a la secció manualment si els moveu o els copieu des d'una altra secció.",
+  "explainRestrictedSectionEmailToolTip": "Si marqueu \"sí\", els alumnes no podran unir-se a aquesta lliçó amb el codi de la secció. Podreu afegir-los a la secció manualment si els moveu o els copieu des d'una altra secció.",
   "explainRestrictedSectionWordAndPicture": "Si marqueu \"sí\", els alumnes no podran unir-se a aquesta lliçó amb el codi de la secció. Podreu afegir-los a la secció manualment a la pestanya de Gstionar Alumnes.",
   "explainRestrictedSectionLearnMore": "Més informació",
   "exploreDataset": "Visualitzar {datasetName}",

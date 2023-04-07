@@ -3,3 +3,4 @@ question 'Have you taken Algebra 1 (first year Algebra)?'
 right 'I am currently taking Algebra 1.'
 right 'I have previously taken Algebra 1.'
 right 'I have not yet taken Algebra 1.'
+allow_multiple_attempts true

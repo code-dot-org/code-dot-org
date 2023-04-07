@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-17 23:11:26 UTC",
+    "serialized_at": "2023-04-06 23:36:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -9273,22 +9273,438 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "All Code",
+      "url": "/s/csd7-2023/code",
+      "key": "all_code",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csd1-2023/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csd1-2023/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csd1-2023/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
+      "key": "csd_curriculum_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Guide to Debugging",
+      "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
+      "key": "csd_guide_to_debugging",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging"
+      }
+    },
+    {
+      "name": "CSD Guide to Differentiation",
+      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
+      "key": "csd_guide_to_differentiation",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
+      "key": "csd_implementation_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "CSD Learning Frameworks",
+      "url": "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view",
+      "key": "csd_learning_frameworks",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks"
+      }
+    },
+    {
+      "name": "CSD Programming Levels Guide",
+      "url": "https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view",
+      "key": "csd_programming_levels_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_programming_levels_guide"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_code",
+        "script.name": "csd2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "csd2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "csd2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "csd2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "csd2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation",
+        "script.name": "csd2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks",
+        "script.name": "csd2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_programming_levels_guide",
+        "script.name": "csd2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csd2-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-
+    {
+      "key": "copyright",
+      "word": "Copyright",
+      "definition": "the exclusive legal right to print, publish, perform, film, or record literary, artistic, or musical material, and to authorize others to do the same",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "copyright"
+      }
+    },
+    {
+      "key": "css",
+      "word": "CSS",
+      "definition": "Cascading Style Sheets; a language used to describe how HTML elements should be styled",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "css"
+      }
+    },
+    {
+      "key": "css_class",
+      "word": "CSS Class",
+      "definition": "An identifier that allows multiple elements in an HTML document to be styled in the same way",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "css_class"
+      }
+    },
+    {
+      "key": "css_selector",
+      "word": "CSS Selector",
+      "definition": "the part of a CSS rule-set that defines which HTML elements the style should be applied to",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "css_selector"
+      }
+    },
+    {
+      "key": "digital_footprint",
+      "word": "Digital Footprint",
+      "definition": "The collected information about an individual across multiple websites on the Internet.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "digital_footprint"
+      }
+    },
+    {
+      "key": "heading",
+      "word": "Heading",
+      "definition": "A title or summary for a document or section of a document.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "heading"
+      }
+    },
+    {
+      "key": "html",
+      "word": "HTML",
+      "definition": "Hypertext Markup Language, a language used to create web pages",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "html"
+      }
+    },
+    {
+      "key": "html_element",
+      "word": "HTML Element",
+      "definition": "A piece of a website, marked by a start tag and often closed with an end tag",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "html_element"
+      }
+    },
+    {
+      "key": "html_tag",
+      "word": "HTML Tag",
+      "definition": "The special set of characters that indicates the start and end of an HTML element and that element's type",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "html_tag"
+      }
+    },
+    {
+      "key": "list",
+      "word": "List",
+      "definition": "allows web developers to group a set of related items",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "list"
+      }
+    },
+    {
+      "key": "relevant",
+      "word": "Relevant",
+      "definition": "closely connected to a topic",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "relevant"
+      }
+    },
+    {
+      "key": "search_engine",
+      "word": "Search Engine",
+      "definition": "A program that searches for items on the World Wide Web.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "search_engine"
+      }
+    },
+    {
+      "key": "trustworthy",
+      "word": "Trustworthy",
+      "definition": "reliable, honest, and truthful ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "trustworthy"
+      }
+    },
+    {
+      "key": "website_content",
+      "word": "Website Content",
+      "definition": "the text and images on a website",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "website_content"
+      }
+    },
+    {
+      "key": "website_structure",
+      "word": "Website Structure",
+      "definition": "how the content of a website is organized",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "website_structure"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "CSS Classes",
+        "vocabulary.key": "css_class"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Footprint",
+        "vocabulary.key": "digital_footprint"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "vocabulary.key": "heading"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "vocabulary.key": "list"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "vocabulary.key": "copyright"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "vocabulary.key": "html"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "vocabulary.key": "html_element"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "vocabulary.key": "html_tag"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "vocabulary.key": "website_content"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "vocabulary.key": "website_structure"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "vocabulary.key": "relevant"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "vocabulary.key": "search_engine"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "vocabulary.key": "trustworthy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "vocabulary.key": "css"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "vocabulary.key": "css_selector"
+      }
+    }
   ],
   "lessons_programming_expressions": [
     {

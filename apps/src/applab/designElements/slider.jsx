@@ -134,7 +134,7 @@ export default {
   PropertyTab: SliderProperties,
   EventTab: SliderEvents,
 
-  create: function() {
+  create: function () {
     const element = document.createElement('input');
     element.type = 'range';
     element.style.margin = '0px';
@@ -149,7 +149,7 @@ export default {
     return element;
   },
 
-  onPropertyChange: function(element, name, value) {
+  onPropertyChange: function (element, name, value) {
     switch (name) {
       case 'defaultValue':
         element.defaultValue = value;
@@ -172,7 +172,7 @@ export default {
     return true;
   },
 
-  readProperty: function(element, name) {
+  readProperty: function (element, name) {
     switch (name) {
       case 'defaultValue':
         return element.defaultValue;

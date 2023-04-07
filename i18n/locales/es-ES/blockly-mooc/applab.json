@@ -17,7 +17,7 @@
   "designToolboxDescription": "¡Arrastra los elementos a tu aplicación!",
   "designToolboxHeader": "Caja de Herramientas de Diseño",
   "designWorkspaceDescription": "Pulsa sobre un elemento o selecciónalo en el desplegable de abajo para editar sus propiedades. Crea el código en Eventos.",
-  "designWorkspaceHeader": "Espacio de trabajo: ",
+  "designWorkspaceHeader": "Espacio de trabajo",
   "designElementPhotoSelectClickName": "Cambiar",
   "designElementPhotoSelectClickDescription": "Se activa cuando se selecciona una foto.",
   "downloadMakerAppFor": "Descarga la Aplicación Code.org Maker para {OS} ({installerVersion})",

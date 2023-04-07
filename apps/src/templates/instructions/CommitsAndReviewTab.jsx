@@ -12,7 +12,7 @@ import Button from '@cdo/apps/templates/Button';
 import {
   setIsReadOnlyWorkspace,
   setHasOpenCodeReview
-} from '@cdo/apps/javalab/javalabRedux';
+} from '@cdo/apps/javalab/redux/javalabRedux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 

@@ -121,20 +121,14 @@ describe('VersionHistoryWithCommitsDialog', () => {
       finishVersionHistoryLoad();
       expect(restoreSpy()).not.to.have.been.called;
 
-      wrapper
-        .find('Button')
-        .at(2)
-        .simulate('click');
+      wrapper.find('Button').at(2).simulate('click');
       expect(restoreSpy()).to.have.been.calledOnce;
     });
 
     it('renders an error on failed restore', () => {
       wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       finishVersionHistoryLoad();
-      wrapper
-        .find('Button')
-        .at(2)
-        .simulate('click');
+      wrapper.find('Button').at(2).simulate('click');
 
       failRestoreVersion();
       expect(wrapper.text()).to.include('An error occurred.');
@@ -143,10 +137,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
     it('reloads the page on successful restore', () => {
       wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       finishVersionHistoryLoad();
-      wrapper
-        .find('Button')
-        .at(2)
-        .simulate('click');
+      wrapper.find('Button').at(2).simulate('click');
       expect(utils.reload).not.to.have.been.called;
 
       finishRestoreVersion();
@@ -158,10 +149,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
       finishVersionHistoryLoad();
 
       // Click "Start Over"
-      wrapper
-        .find('Button')
-        .last()
-        .simulate('click');
+      wrapper.find('Button').last().simulate('click');
 
       // Expect confirmation to show
       assert(
@@ -179,10 +167,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
       finishVersionHistoryLoad();
 
       // Click "Start Over"
-      wrapper
-        .find('Button')
-        .last()
-        .simulate('click');
+      wrapper.find('Button').last().simulate('click');
 
       // Expect confirmation to show
       assert(
@@ -195,10 +180,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
       );
 
       // Click "Cancel"
-      wrapper
-        .find('Button')
-        .last()
-        .simulate('click');
+      wrapper.find('Button').last().simulate('click');
 
       // Rendered two version rows
       expect(wrapper.find('VersionWithCommit')).to.have.length(2);
@@ -211,10 +193,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
       finishVersionHistoryLoad();
 
       // Click "Start Over"
-      wrapper
-        .find('Button')
-        .last()
-        .simulate('click');
+      wrapper.find('Button').last().simulate('click');
 
       expect(wrapper.find('.template-level-warning')).to.exist;
     });
@@ -240,14 +219,8 @@ describe('VersionHistoryWithCommitsDialog', () => {
           />
         );
         finishVersionHistoryLoad();
-        wrapper
-          .find('Button')
-          .last()
-          .simulate('click');
-        wrapper
-          .find('Button')
-          .first()
-          .simulate('click');
+        wrapper.find('Button').last().simulate('click');
+        wrapper.find('Button').first().simulate('click');
       });
 
       afterEach(async () => {

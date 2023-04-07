@@ -72,7 +72,7 @@ class MultiCheckboxSelector extends Component {
     if (this.props.checkById) {
       let selectedItems = [];
       if (_.map(this.props.selected, 'id').includes(item.id)) {
-        selectedItems = _.remove(this.props.selected, function(selection) {
+        selectedItems = _.remove(this.props.selected, function (selection) {
           return selection.id !== item.id;
         });
       } else {

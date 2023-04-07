@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2018-05-03T16:36:09.000Z",
-  "level_num": "custom",
-  "user_id": 13,
   "properties": {
     "long_instructions": "Consider the Google Trends graph of dogs and cats below (same graph as previous question).\r\n\r\nGive a plausible explanation or hypothesis for the spike in dog searches that occurred between 2014 and 2015 that would lead to further investigation or research. Give your explanation and what you would want to investigate next.\r\n\r\n<a href=\"https://images.code.org/bd40b81c105978fe26ff787a6bf82795-image-1469633006237.png\" target=_blank><img src=\"https://images.code.org/bd40b81c105978fe26ff787a6bf82795-image-1469633006237.png\"><br>Click to Enlarge</a>",
     "submittable": "true",
@@ -15,8 +11,13 @@
     "skip_sound": true,
     "instructions_important": "false",
     "parent_level_id": 5615,
-    "name_suffix": "_2018"
+    "name_suffix": "_2018",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2018-05-03T16:36:09.000Z",
+  "user_id": 13,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-08-04 19:57:50 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"},{\"changed_at\":\"2017-10-13 16:23:23 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"},{\"changed_at\":\"2017-12-14 20:56:02 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"}]"

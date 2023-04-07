@@ -144,9 +144,6 @@ const styles = {
 };
 export const UnconnectedOwnedSections = OwnedSections;
 
-export default connect(
-  () => ({}),
-  {
-    beginEditingSection
-  }
-)(OwnedSections);
+export default connect(() => ({}), {
+  beginEditingSection
+})(OwnedSections);

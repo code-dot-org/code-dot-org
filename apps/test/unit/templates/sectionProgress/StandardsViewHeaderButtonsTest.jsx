@@ -34,10 +34,7 @@ describe('StandardsViewHeaderButtons', () => {
       />
     );
 
-    wrapper
-      .find('Button')
-      .at(0)
-      .simulate('click');
+    wrapper.find('Button').at(0).simulate('click');
     expect(wrapper.find('LessonStatusDialog')).to.have.lengthOf(1);
   });
   it('opens create report dialog', () => {
@@ -58,10 +55,7 @@ describe('StandardsViewHeaderButtons', () => {
       />
     );
 
-    wrapper
-      .find('Button')
-      .at(1)
-      .simulate('click');
+    wrapper.find('Button').at(1).simulate('click');
     expect(wrapper.find('CreateStandardsReportDialog')).to.have.length(1);
   });
 });
