@@ -1130,6 +1130,13 @@ zh-TW:
     no_teacher_email:
       body_markdown: '你的帳戶沒有電子郵件地址。請於填寫此表格前，[前往你的帳戶設定](%{user_registration}) 新增電子郵件地址。'
   courses_category: '完整課程'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      hello_world: '你好世界'
+      sports: '運動'
+      csf: 'CS 基本原理'
+      csc: '電腦科學聯繫'
   cookie_banner:
     message: '透過繼續瀏覽這個網站或點擊「我同意」按鈕，表示您同意在您的裝置上儲存 cookie。'
     more_information: "檢視 Code.org 的隱私政策。"
