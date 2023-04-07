@@ -32,9 +32,7 @@ describe('SectionsSetUpContainer', () => {
   });
 
   it('renders edit header and save button', () => {
-    const wrapper = shallow(
-      <SectionsSetUpContainer sectionToBeEdited={true} />
-    );
+    const wrapper = shallow(<SectionsSetUpContainer sectionToBeEdited={{}} />);
 
     expect(wrapper.find('h1').length).to.equal(1);
     expect(wrapper.find('Button').length).to.equal(1);
