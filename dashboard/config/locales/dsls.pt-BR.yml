@@ -19045,10 +19045,10 @@ pt-BR:
 
           ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       csf_safety_in_my_online_neighborhood2022:
-        markdown: |-
-          #Minha Vizinhança Online
+        markdown: |
+          # Minha vizinhança on-line
 
-          ##Como você vai com segurança à lugares online?
+          ## Como você vai a lugares online com segurança?
       express_EOC2022:
         description: Você alcançou o final do Curso E! Escolha um projeto para criar.
         display_name: Projeto de Fim do Curso

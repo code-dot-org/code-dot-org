@@ -16,14 +16,14 @@ function apiPath(endpoint, channelId, path) {
 
 function ajaxInternal(method, path, success, error, data) {
   var xhr = new XMLHttpRequest();
-  xhr.addEventListener('load', function() {
+  xhr.addEventListener('load', function () {
     if (xhr.status >= 400) {
       error && error(xhr);
       return;
     }
     success(xhr);
   });
-  xhr.addEventListener('error', function() {
+  xhr.addEventListener('error', function () {
     error && error(xhr);
   });
 
@@ -58,7 +58,7 @@ class CollectionsApi {
   }
 
   ajax(method, file, success, error, data, params = []) {
-    error = error || function() {};
+    error = error || function () {};
     if (!window.dashboard && !this.getProjectId()) {
       error({status: 'No dashboard'});
       return;
@@ -77,7 +77,7 @@ class CollectionsApi {
   }
 
   getFile(file, version, success, error, data) {
-    error = error || function() {};
+    error = error || function () {};
     if (!window.dashboard && !this.getProjectId()) {
       error({status: 'No dashboard'});
       return;

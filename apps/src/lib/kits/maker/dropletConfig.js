@@ -48,11 +48,7 @@ function getBoardEventDropdownForParam(firstParam, componentEvents) {
   const wrapInQuotes = e => `"${e}"`;
   const idealOptions = componentEvents[firstParam];
   if (Array.isArray(idealOptions)) {
-    return _.chain(idealOptions)
-      .sort()
-      .sortedUniq()
-      .map(wrapInQuotes)
-      .value();
+    return _.chain(idealOptions).sort().sortedUniq().map(wrapInQuotes).value();
   }
 
   // If we can't find an ideal subset, use all possible
@@ -250,7 +246,7 @@ const circuitPlaygroundBlocks = [
     allowFunctionDrop: {2: true},
     dropdown: {
       0: Object.keys(CP_COMPONENT_EVENTS),
-      1: function(editor) {
+      1: function (editor) {
         return getBoardEventDropdownForParam(
           getFirstParam('onBoardEvent', this.parent, editor),
           CP_COMPONENT_EVENTS
@@ -480,7 +476,7 @@ const microBitBlocks = [
     allowFunctionDrop: {2: true},
     dropdown: {
       0: Object.keys(MB_COMPONENT_EVENTS),
-      1: function(editor) {
+      1: function (editor) {
         return getBoardEventDropdownForParam(
           getFirstParam('onBoardEvent', this.parent, editor),
           MB_COMPONENT_EVENTS

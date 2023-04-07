@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {openEditorDialog} from './javalabRedux';
+import {openEditorDialog} from './redux/editorRedux';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import PaneHeader, {
@@ -103,7 +103,7 @@ export default connect(
   state => ({
     isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
     backpackEnabled: state.javalab.backpackEnabled,
-    displayTheme: state.javalab.displayTheme,
+    displayTheme: state.javalabView.displayTheme,
     showProjectTemplateWorkspaceIcon:
       !!state.pageConstants.isProjectTemplateLevel &&
       state.javalab.isReadOnlyWorkspace

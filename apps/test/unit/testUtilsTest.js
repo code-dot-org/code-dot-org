@@ -2,8 +2,8 @@
 import {expect} from '../util/reconfiguredChai';
 import {forEveryBooleanPermutation} from '../util/testUtils';
 
-describe('forEveryBooleanPermutation', function() {
-  it('invokes a function with no arguments once', function() {
+describe('forEveryBooleanPermutation', function () {
+  it('invokes a function with no arguments once', function () {
     let invocationCount = 0;
     forEveryBooleanPermutation(() => {
       invocationCount++;
@@ -11,7 +11,7 @@ describe('forEveryBooleanPermutation', function() {
     expect(invocationCount).to.equal(1);
   });
 
-  it('invokes a function with one argument twice, once with true and once with false', function() {
+  it('invokes a function with one argument twice, once with true and once with false', function () {
     let expectedInvocations = [[false], [true]];
     forEveryBooleanPermutation(a => {
       expect([a]).to.deep.equal(expectedInvocations[0]);
@@ -20,7 +20,7 @@ describe('forEveryBooleanPermutation', function() {
     expect(expectedInvocations).to.be.empty;
   });
 
-  it('invokes a function with two arguments four times...', function() {
+  it('invokes a function with two arguments four times...', function () {
     let expectedInvocations = [
       [false, false],
       [false, true],
@@ -34,7 +34,7 @@ describe('forEveryBooleanPermutation', function() {
     expect(expectedInvocations).to.be.empty;
   });
 
-  it('invokes a function with three arguments eight times...', function() {
+  it('invokes a function with three arguments eight times...', function () {
     let expectedInvocations = [
       [false, false, false],
       [false, false, true],

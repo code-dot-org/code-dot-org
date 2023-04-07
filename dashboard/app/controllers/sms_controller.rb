@@ -20,7 +20,8 @@ class SmsController < ApplicationController
   end
 
   private def send_sms_link(link, phone)
-    body = "Check this out on Code Studio: #{link} (reply STOP to stop receiving this)"
+    decorated_link = link + '?sms=true'
+    body = "Check this out on Code Studio: #{decorated_link} (reply STOP to stop receiving this)"
     send_sms(body, phone)
   end
 

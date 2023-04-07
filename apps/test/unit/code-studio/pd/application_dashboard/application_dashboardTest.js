@@ -16,10 +16,7 @@ describe('ApplicationDashboard', () => {
         canLockApplications={false}
       />
     );
-    return applicationDashboard
-      .find('Provider')
-      .prop('store')
-      .getState();
+    return applicationDashboard.find('Provider').prop('store').getState();
   };
 
   describe('heading/title initially', () => {

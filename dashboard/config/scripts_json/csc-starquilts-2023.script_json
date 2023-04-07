@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-starquilts",
-    "serialized_at": "2023-03-22 22:04:11 UTC",
+    "serialized_at": "2023-04-03 20:46:28 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -72,7 +72,7 @@
     },
     {
       "key": "Code Your Star Quilt (beta)",
-      "name": "Code Your Star Quilt",
+      "name": "Coding My Star Quilt",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -256,6 +256,18 @@
       }
     },
     {
+      "key": "6487cf2a-0af7-422c-9805-22a1c8f03d7a",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Star Quilts” video",
+        "progression_name": "Star Quilts Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "6487cf2a-0af7-422c-9805-22a1c8f03d7a",
+        "lesson_activity.key": "4442dd13-c64b-4880-a96c-c0db5e0479cb"
+      }
+    },
+    {
       "key": "bfdd0900-3e45-4697-83fa-d5c358a9d5f4",
       "position": 1,
       "properties": {
@@ -368,8 +380,31 @@
       }
     },
     {
-      "key": "b988c6e8-8fa8-4567-a1c7-0fd6b6d03c50",
+      "key": "2b80152a-1457-4fb6-a04b-e5604d18108d",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Support with Coding” slide\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b80152a-1457-4fb6-a04b-e5604d18108d",
+        "lesson_activity.key": "df49e5ca-d5fc-4a4d-8516-28d6d724518a"
+      }
+    },
+    {
+      "key": "9f26a6e2-6a76-4d32-8b2f-1454a8243e91",
+      "position": 3,
+      "properties": {
+        "description": "Each level has built-in supports to help you as you code. Before you add any blocks, make sure to read the instructions. Then look at the image of the finished example next to the instructions. \n\nThis example will also appear as a shadow design in your play space and your design will go on top. Click “Run” to check your code each time you change something. If you’re feeling stuck, many levels have hints available. You can find these by clicking on the light bulb in the instructions panel.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9f26a6e2-6a76-4d32-8b2f-1454a8243e91",
+        "lesson_activity.key": "df49e5ca-d5fc-4a4d-8516-28d6d724518a"
+      }
+    },
+    {
+      "key": "b988c6e8-8fa8-4567-a1c7-0fd6b6d03c50",
+      "position": 4,
       "properties": {
         "tips": [
           {
@@ -385,7 +420,7 @@
     },
     {
       "key": "8024b39e-a289-4813-a362-4e86091f546a",
-      "position": 3,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-4 - Skill Building” slide\n\n**Do This**: Transition students to their computers, and have them follow the instructions for each level in the skill building section.\n\n**Goal**: In the first few levels of this lesson, students will be programming the Artist to draw a 6-pointed star. It is a very simple shape that looks like an asterisk. Students will draw a line, jump back to the middle, turn the artist and draw another line. Then they learn how to loop the Artist to repeat a chunk of the code. \n\n- **Level 2**: Show students how to drag & drop. Explain that the blocks are like puzzle pieces that must fit together to run. Students may select which color rhombus to use. When finished, students can test their code by pressing “Run.”\n\n- **Level 3**: The Artist must turn 60 degrees before stamping the next rhombus. Explain to students that 60 degrees is the measure of the angle of the rhombus. Students may start anticipating the next lines of code, prompt them to look for patterns.\n\n- **Level 4**: Students will need to repeat the code until they have a 6 point star. This includes turning and stamping the rhombus. Prompt students to notice the patterns in the code.\n",
         "progression_name": "Skill Building"
@@ -397,7 +432,7 @@
     },
     {
       "key": "184feb24-2e06-47f4-8de8-ea845bde4a17",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5 - Repeat Blocks” video\n\n- **Level 5**: Students will be watching a video about looping here. The video is also provided in the slides. Decide if you would like to have students watch the video independently, or regroup the class and watch the video together.\n",
         "progression_name": "Video - Repeat Blocks"
@@ -409,7 +444,7 @@
     },
     {
       "key": "f84c1de8-0b31-4e70-8069-a4cd56805739",
-      "position": 5,
+      "position": 7,
       "properties": {
         "progression_name": "Video"
       },
@@ -420,7 +455,7 @@
     },
     {
       "key": "c04eeb94-b0d4-432d-980b-e732162d2e9a",
-      "position": 6,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6-7 - Skill Building” slide\n\n**Goal:** The next few levels mirror the first levels but with increased complexity. \n\n**Debugging Tips:**\n\n**Level 6**: Show students how to use the angle menu to modify the measurement. Students should select 90 degrees. Remind students to also alter the loop to only repeat 4 times.\n\n**Level 7**: Students should modify the angle measurement to 30 degrees. Remind students to also alter the loop to repeat 12 times.\n\n\n",
         "progression_name": "Skill Building"
@@ -432,7 +467,7 @@
     },
     {
       "key": "aa8ff841-0ae1-4bb4-b1bc-546a46848cc2",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Free Play” slide\n\n**Debugging Tips**:\n\n**Level 8**: This is a free play level for students to make their very own star creation. Students will apply the skills they’ve learned in the previous levels. Students can experiment with colors, angles and loops to make a unique star shape.\n\n\n",
         "progression_name": "Free Play"
@@ -444,7 +479,7 @@
     },
     {
       "key": "22a38af1-dca7-4f0b-8743-78dea7c80e39",
-      "position": 8,
+      "position": 10,
       "properties": {
         "tips": [
           {
@@ -616,6 +651,34 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_star_quilts_intro_video_2023"
+        ],
+        "progression": "Star Quilts Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_star_quilts_intro_video_2023"
+        ],
+        "lesson.key": "Native American Star Quilts (beta)",
+        "lesson_group.key": "",
+        "script.name": "csc-starquilts-2023",
+        "activity_section.key": "6487cf2a-0af7-422c-9805-22a1c8f03d7a"
+      },
+      "level_keys": [
+        "csc_star_quilts_intro_video_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_starquilts_markdown_lesson_1"
+        ],
         "progression": "Unplugged Activity"
       },
       "bonus": false,
@@ -633,11 +696,14 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_star_quilts_artist_intro_2023"
+        ],
         "progression": "Video"
       },
       "bonus": false,
@@ -655,11 +721,14 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-rhombus1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -677,11 +746,14 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-rhombus2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -699,11 +771,14 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-rhombus3_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -721,11 +796,14 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_video_loops2_2023"
+        ],
         "progression": "Video"
       },
       "bonus": false,
@@ -743,11 +821,14 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-4point-repeat_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -765,11 +846,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-12point-repeat_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -787,11 +871,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-rhombus-freeplay_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -809,11 +896,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-comment_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -831,11 +921,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-row1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -853,11 +946,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-row2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -875,11 +971,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-row3_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -897,11 +996,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-row4_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -919,11 +1021,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-row5_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -941,11 +1046,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_video_loops_2023"
+        ],
         "progression": "Video - Repeat Blocks"
       },
       "bonus": false,
@@ -963,11 +1071,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-repeat_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -985,11 +1096,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_starquilts_freeplay_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -1008,6 +1122,18 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csc_star_quilts_intro_video_2023",
+        "script_level.level_keys": [
+          "csc_star_quilts_intro_video_2023"
+        ],
+        "lesson.key": "Native American Star Quilts (beta)",
+        "lesson_group.key": "",
+        "script.name": "csc-starquilts-2023",
+        "activity_section.key": "6487cf2a-0af7-422c-9805-22a1c8f03d7a"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "csc_starquilts_markdown_lesson_1",
@@ -1239,7 +1365,7 @@
       }
     },
     {
-      "name": "Star Quilts",
+      "name": "Coding a Geometric Star Quilt",
       "url": "https://docs.google.com/presentation/d/10F-FnjuE2fM9g1MEmBm5MXJAvhKWCNjX5tAeH9YbggM/template/preview",
       "key": "star_quilts",
       "properties": {
@@ -1252,7 +1378,7 @@
       }
     },
     {
-      "name": "Star Quilts",
+      "name": "War Bonnet Star Quilt",
       "url": "https://youtu.be/Q210ko41yqo?t=90",
       "key": "star_quilts_1",
       "properties": {
@@ -1384,6 +1510,16 @@
       }
     },
     {
+      "key": "concentric",
+      "word": "Concentric",
+      "definition": "Objects or shapes that share the same center",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "concentric"
+      }
+    },
+    {
       "key": "loop",
       "word": "Loop",
       "definition": "A sequence of code that is repeated",
@@ -1445,6 +1581,12 @@
       "seeding_key": {
         "lesson.key": "Getting Started with The Artist (beta)",
         "vocabulary.key": "artist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting Started with The Artist (beta)",
+        "vocabulary.key": "concentric"
       }
     },
     {

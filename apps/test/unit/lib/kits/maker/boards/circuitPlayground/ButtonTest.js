@@ -6,8 +6,8 @@ import {makeStubBoard} from '../makeStubBoard';
 import PlaygroundButton from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Button';
 import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 
-describe('PlaygroundButton', function() {
-  it('is a johnny-five Button component', function() {
+describe('PlaygroundButton', function () {
+  it('is a johnny-five Button component', function () {
     const button = new PlaygroundButton({
       board: makeStubBoard(),
       pin: 0

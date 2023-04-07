@@ -1495,6 +1495,10 @@ lt:
               display_name: Sąrašai
             lessonGroup-3:
               display_name: Kartojimas
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Žinių patikrinimas
         pre-express-2023:
           lesson_groups:
             csf_loops:

@@ -260,21 +260,22 @@ export default class SchoolNotFound extends Component {
               </div>
             )}
         </div>
-        {this.props.schoolZip !== OMIT_FIELD && !this.props.useLocationSearch && (
-          <div style={fieldStyle}>
-            <label style={labelStyle}>
-              {this.renderLabel(i18n.schoolZip())}
-              <input
-                id="school_zipcode"
-                type="text"
-                name={this.props.fieldNames.schoolZip}
-                value={this.props.schoolZip}
-                onChange={this.handleChange.bind(this, 'schoolZip')}
-                style={inputStyle}
-              />
-            </label>
-          </div>
-        )}
+        {this.props.schoolZip !== OMIT_FIELD &&
+          !this.props.useLocationSearch && (
+            <div style={fieldStyle}>
+              <label style={labelStyle}>
+                {this.renderLabel(i18n.schoolZip())}
+                <input
+                  id="school_zipcode"
+                  type="text"
+                  name={this.props.fieldNames.schoolZip}
+                  value={this.props.schoolZip}
+                  onChange={this.handleChange.bind(this, 'schoolZip')}
+                  style={inputStyle}
+                />
+              </label>
+            </div>
+          )}
         {this.props.useLocationSearch && (
           <div style={fieldStyle}>
             <label style={labelStyle}>

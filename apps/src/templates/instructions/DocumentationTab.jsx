@@ -50,7 +50,7 @@ export const UnconnectedDocumentationTab = forwardRef(
       setClassMap(classes);
     }, [data]);
 
-    const getDropdownOptions = function() {
+    const getDropdownOptions = function () {
       const options = [];
       for (const key in classMap) {
         options.push(

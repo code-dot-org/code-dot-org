@@ -30,9 +30,8 @@ const {
 } = scriptData;
 
 $(document).ready(() => {
-  const migrateMultiAuthMountPoint = document.getElementById(
-    'migrate-multi-auth'
-  );
+  const migrateMultiAuthMountPoint =
+    document.getElementById('migrate-multi-auth');
   if (migrateMultiAuthMountPoint) {
     const store = getStore();
     ReactDOM.render(
@@ -120,7 +119,7 @@ function onEmailChanged(newEmail, newHashedEmail) {
 }
 
 function initializeCreatePersonalAccountControls() {
-  $('#edit_user_create_personal_account').on('submit', function(e) {
+  $('#edit_user_create_personal_account').on('submit', function (e) {
     if ($('#create_personal_user_email').length) {
       window.dashboard.hashEmail({
         email_selector: '#create_personal_user_email',

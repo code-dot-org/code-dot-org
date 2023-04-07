@@ -4,7 +4,7 @@ import React from 'react';
 /**
  * A table of inputs and expected outputs that is only used by Calc and Studio.
  */
-var InputOutputTable = function(props) {
+var InputOutputTable = function (props) {
   return (
     <div>
       <table>
@@ -13,7 +13,7 @@ var InputOutputTable = function(props) {
             <th>Input</th>
             <th>Output</th>
           </tr>
-          {props.data.map(function(item, index) {
+          {props.data.map(function (item, index) {
             return (
               <tr key={index}>
                 <td>{item[0]}</td>

@@ -40,7 +40,7 @@ function showDisabledBubblesModal() {
 /**
  * If milestone posts are disabled, show an alert about progress not being tracked.
  */
-progress.showDisabledBubblesAlert = function() {
+progress.showDisabledBubblesAlert = function () {
   const store = getStore();
   const {postMilestoneDisabled} = store.getState().progress;
   if (!postMilestoneDisabled) {
@@ -78,7 +78,7 @@ progress.showDisabledBubblesAlert = function() {
  *   page level.
  * @returns {Promise<void>}
  */
-progress.generateLessonProgress = function(
+progress.generateLessonProgress = function (
   scriptData,
   lessonGroupData,
   lessonData,
@@ -234,7 +234,7 @@ function extractLevelResults(userProgressResponse) {
  * @param {boolean} scriptData.age_13_required
  * Fetch and store progress for the course overview page.
  */
-progress.initCourseProgress = function(scriptData) {
+progress.initCourseProgress = function (scriptData) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
   queryUserProgress(store, scriptData, null);
@@ -242,7 +242,7 @@ progress.initCourseProgress = function(scriptData) {
 
 /* Set our initial view type (Participant or Instructor) from current user's user_type
  * or our query string. */
-progress.initViewAs = function(store, isSignedInUser, isInstructor) {
+progress.initViewAs = function (store, isSignedInUser, isInstructor) {
   // Default to Participant, unless current user is a teacher
   let initialViewAs = ViewType.Participant;
   if (isInstructor) {
@@ -260,7 +260,7 @@ progress.initViewAs = function(store, isSignedInUser, isInstructor) {
   store.dispatch(setViewType(initialViewAs));
 };
 
-progress.retrieveProgress = function(scriptName, scriptData, currentLevelId) {
+progress.retrieveProgress = function (scriptName, scriptData, currentLevelId) {
   const store = getStore();
   return $.getJSON(`/api/script_structure/${scriptName}`, scriptData => {
     initializeStoreWithProgress(store, scriptData, currentLevelId, true);
@@ -290,8 +290,8 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       );
     }
 
-    const postMilestoneDisabled = store.getState().progress
-      .postMilestoneDisabled;
+    const postMilestoneDisabled =
+      store.getState().progress.postMilestoneDisabled;
     if (data.signedIn && postMilestoneDisabled) {
       showDisabledBubblesModal();
     }

@@ -9,3 +9,5 @@ wrong "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-149193
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts false

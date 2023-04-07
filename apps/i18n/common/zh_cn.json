@@ -873,6 +873,7 @@
   "explainPairProgramming": "当配对编程开启后，学生可以选择一个同学在同一台电脑上合作。如果您希望学生可以共享进度，一起合作，请打开此设置。",
   "explainPairProgrammingLearnMore": " 了解更多“配对编程”的信息。",
   "explainRestrictedSectionEmail": "如果设置为“是”，学生将无法使用分区代码加入此分区。您仍然可以通过从另一个分区移动或复制学生来手动将他们添加到分区中。",
+  "explainRestrictedSectionEmailToolTip": "如果设置为“是”，学生将无法使用分区代码加入此分区。您仍然可以通过从另一个分区移动或复制学生来手动将他们添加到分区中。",
   "explainRestrictedSectionWordAndPicture": "如果设置为“是”，学生将无法使用分区代码加入此分区。您仍然可以在“管理学生”选项卡上手动将学生添加到该部分。",
   "explainRestrictedSectionLearnMore": "学习更多内容",
   "exploreDataset": "探索 {datasetName}",

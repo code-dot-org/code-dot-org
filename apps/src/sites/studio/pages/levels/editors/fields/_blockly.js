@@ -30,7 +30,7 @@ if (window.Blockly && !data.uses_droplet) {
   }
   const skinsModule = require('@cdo/apps/' + skinsLocation + 'skins');
   const options = {
-    skin: skinsModule.load(function() {}, data.skin_id),
+    skin: skinsModule.load(function () {}, data.skin_id),
     isK1: data.isK1
   };
   commonBlocks.install(window.Blockly, options);

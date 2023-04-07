@@ -2502,6 +2502,10 @@ bg:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Раздел 9: данни'
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Оценки
         tess-testing-problem-solving-2023:
           title: Разрешаване на Проблеми
         testing-focus-on-creativity1:
@@ -2589,4 +2593,8 @@ bg:
             end_of_course_project:
               display_name: Проект за Края на Курса
         aiml-2023:
+          title: AI и Машинно Обучение
+        focus-on-data3-2023:
+          title: AI и Машинно Обучение
+        focus-on-impact-in-society4-2023:
           title: AI и Машинно Обучение

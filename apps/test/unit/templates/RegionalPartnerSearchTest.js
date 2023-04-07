@@ -132,11 +132,11 @@ describe('RegionalPartnerSearch', () => {
     server.respond();
 
     // Get the WorkshopCard of the course not being offered as a program
-    const notOfferedWorkshopCard = wrapper.findAll('WorkshopCard')[
-      ACTIVE_COURSES.length - 1
-    ];
+    const notOfferedWorkshopCard =
+      wrapper.findAll('WorkshopCard')[ACTIVE_COURSES.length - 1];
     // Get WorkshopCard content
-    const notOfferedWorkshopCardContent = notOfferedWorkshopCard.props.content.props.children[1].props.children.toString();
+    const notOfferedWorkshopCardContent =
+      notOfferedWorkshopCard.props.content.props.children[1].props.children.toString();
 
     // Ensure correct content for the WorkshopCard of the course not offered as a program
     expect(notOfferedWorkshopCardContent).to.contain(
@@ -158,7 +158,8 @@ describe('RegionalPartnerSearch', () => {
     // Get the WorkshopCard of the offered course that does not have a workshop
     const offeredNoWSWorkshopCard = wrapper.findAll('WorkshopCard')[1];
     // Get WorkshopCard content
-    const offeredNoWSWorkshopCardContent = offeredNoWSWorkshopCard.props.content.props.children[0].props.children.toString();
+    const offeredNoWSWorkshopCardContent =
+      offeredNoWSWorkshopCard.props.content.props.children[0].props.children.toString();
 
     // Ensure correct content for the WorkshopCard of the offered program without a workshop
     expect(offeredNoWSWorkshopCardContent).to.contain(

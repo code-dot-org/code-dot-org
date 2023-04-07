@@ -42,7 +42,7 @@ if (IN_UNIT_TEST) {
   let __oldReduxStore;
   let __oldGlobalReducers;
 
-  module.exports.stubRedux = function() {
+  module.exports.stubRedux = function () {
     if (__oldReduxStore) {
       throw new Error(
         'Redux store has already been stubbed. Did you forget to call restore?'
@@ -54,7 +54,7 @@ if (IN_UNIT_TEST) {
     globalReducers = {};
   };
 
-  module.exports.restoreRedux = function() {
+  module.exports.restoreRedux = function () {
     reduxStore = __oldReduxStore;
     globalReducers = __oldGlobalReducers;
     __oldReduxStore = null;
@@ -177,7 +177,7 @@ function createStore(reducer, initialState) {
               'props.showNextHint',
               'props.assetUrl',
               'props.exportApp',
-              'backpackApi'
+              'getChanges'
             ],
             ignoredPaths: [
               'hiddenLesson',
@@ -192,7 +192,8 @@ function createStore(reducer, initialState) {
               'maker',
               'data',
               'screens',
-              'javalab.backpackApi'
+              'header.getLevelBuilderChanges',
+              'getChanges'
             ]
           }
         }).concat(reduxLogger)
