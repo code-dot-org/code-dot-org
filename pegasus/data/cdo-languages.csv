@@ -37,7 +37,7 @@ it,it,it,it-IT,Italiano,Italian,TRUE,TRUE,it,Italian,FALSE,TRUE,TRUE,TRUE,FALSE
 ja,ja,ja,ja-JP,日本語,Japanese,TRUE,TRUE,ja,Japanese,TRUE,TRUE,TRUE,TRUE,FALSE
 ka,ka,ka,ka-GE,ქართული,Georgian,TRUE,TRUE,ka,Georgian,TRUE,TRUE,FALSE,TRUE,TRUE
 kk,kk,kk,kk-KZ,Қазақша,Kazakh,TRUE,TRUE,kk,Kazakh,FALSE,FALSE,FALSE,FALSE,TRUE
-kn,kn,kn,kn-IN,ಕನ್ನಡ,Kannada,TRUE,TRUE,kn,Kannada,TRUE,FALSE,FALSE,TRUE,TRUE
+kn,kn,kn,kn-IN,ಕನ್ನಡ,Kannada,TRUE,TRUE,kn,Kannada,TRUE,TRUE,TRUE,TRUE,TRUE
 km,km,km,km-KH,ភាសាខ្មែរ,Khmer,TRUE,TRUE,km,Khmer,TRUE,TRUE,FALSE,TRUE,FALSE
 ko,ko,ko,ko-KR,한국어,Korean,TRUE,TRUE,ko,Korean,FALSE,FALSE,TRUE,FALSE,TRUE
 ku,ku,ku,ku-IQ,Kurdí,Kurdish,FALSE,FALSE,ku,Kurdish,FALSE,TRUE,FALSE,TRUE,FALSE
