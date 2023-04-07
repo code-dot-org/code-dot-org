@@ -2,7 +2,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 interface ConsoleLog {
-  type: string;
+  type: 'input' | 'output' | 'newline' | 'markdown';
   text?: string;
 }
 
