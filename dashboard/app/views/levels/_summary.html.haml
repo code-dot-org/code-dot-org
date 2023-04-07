@@ -43,3 +43,4 @@
 
 - content_for(:head) do
   %script{src: webpack_asset_path('js/levels/_summary.js'), data: {summary: js_data.to_json}}
+  = stylesheet_link_tag 'levels/summary', media: 'all'
