@@ -1,0 +1,13 @@
+name 'VPL-CSD-pilot-S22-CI-Unit_PSP-U5L3_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Problem Solving Process With Data
+
+##### The Problem Solving Process is a tool for structured problem solving that is woven throughout the entire course to promote student growth and development. The Data and Society unit uses the problem solving process with data. 
+
+
+
+![](https://images.code.org/555810637e9151ad229529f8a8014c9f-image-1680820616525.png)
+MARKDOWN
