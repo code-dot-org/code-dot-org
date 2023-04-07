@@ -3,7 +3,7 @@
 // or overridden for a particular subset of the project.  See
 // other .eslintrc.js files for those rules.
 module.exports = {
-  plugins: ["react", "react-hooks", "mocha", "babel", "cdo-custom-rules"],
+  plugins: ["react-hooks", "mocha", "babel", "cdo-custom-rules"],
   extends: [
     "plugin:prettier/recommended",
     "eslint:recommended",
@@ -44,20 +44,6 @@ module.exports = {
     "no-with": "error",
     "object-curly-spacing": "off",
     "react/button-has-type": "error",
-    "react/display-name": "off",
-    "react/jsx-closing-bracket-location": "error", // autofixable
-    "react/jsx-curly-spacing": "error", // autofixable
-    "react/jsx-first-prop-new-line": ["error", "multiline"],
-    "react/jsx-indent-props": ["error", 2], // autofixable
-    "react/jsx-key": "off",
-    "react/jsx-no-target-blank": "error",
-    "react/jsx-wrap-multilines": "error", // autofixable
-    "react/no-find-dom-node": "off",
-    "react/no-render-return-value": "off",
-    "react/no-string-refs": "off",
-    "react/no-unescaped-entities": "off",
-    "react/self-closing-comp": "error",
-    "react/no-danger": "error",
     "react-hooks/exhaustive-deps": "error",
     "react-hooks/rules-of-hooks": "error",
     semi: "off", // enforced by babel/semi

@@ -14,7 +14,10 @@ const JS_DATA = {
 
 const INITIAL_STATE = {
   teacherSections: {
-    selectedStudents: [{id: 0}]
+    selectedStudents: [{id: 0}],
+    selectedSectionId: 0,
+    sectionIds: [0],
+    sections: [{id: 0, name: 'test section'}]
   }
 };
 
@@ -58,5 +61,19 @@ describe('SummaryEntryPoint', () => {
     const wrapper = setUpWrapper({}, {is_contained_level: true});
 
     expect(wrapper.find(`.${styles.isStandalone}`).length).to.eq(0);
+  });
+
+  it('does not render response counter/text if no section selected', () => {
+    const wrapper = setUpWrapper({
+      teacherSections: {
+        selectedStudents: [{id: 0}],
+        selectedSectionId: null,
+        sectionIds: [0],
+        sections: [{id: 0, name: 'test section'}]
+      }
+    });
+
+    expect(wrapper.find(`.${styles.responseIcon}`).length).to.eq(0);
+    expect(wrapper.find(`.${styles.responseCounter}`).length).to.eq(0);
   });
 });
