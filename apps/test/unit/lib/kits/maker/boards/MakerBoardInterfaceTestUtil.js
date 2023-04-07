@@ -247,32 +247,5 @@ export function itImplementsTheMakerBoardInterface(
         expect(button).to.have.property('isPressed');
       });
     });
-
-    // if (BoardClass === MicroBitBoard || BoardClass === VirtualMBBoard) {
-    //   /**
-    //    * @function
-    //    * @name MakerBoard#createCapacitiveTouchSensor
-    //    * @param {number} pin
-    //    * @return {EventEmitter} a newly constructed CapTouch component
-    //    */
-    //   describe(`createCapacitiveTouchSensor(pin)`, () => {
-    //     // Example code:
-    //     // var newSensor = createCapacitiveTouchSensor(2);
-    //     // onBoardEvent(newSensor, "down", function() {
-    //     //   console.log("pressed");
-    //     // });
-
-    //     beforeEach(() => {
-    //       return board.connect();
-    //     });
-
-    //     it(`returns an Event Emitter with isPressed property`, () => {
-    //       const button = board.createCapacitiveTouchSensor(2);
-    //       // Check the basic button shape
-    //       expect(button).to.be.an.instanceOf(EventEmitter);
-    //       expect(button).to.have.property('isPressed');
-    //     });
-    //   });
-    // }
   });
 }
