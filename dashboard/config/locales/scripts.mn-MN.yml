@@ -4951,3 +4951,27 @@ mn:
             lessonGroup-3:
               display_name: '2-р бүлэг: Биет ноорог үүсгэх'
           description_short: Биет төхөөрөмжөөр програмчилж сур.
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт
