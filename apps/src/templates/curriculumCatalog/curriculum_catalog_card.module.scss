@@ -91,7 +91,7 @@ $container-width: 309px;
 }
 
 .buttonsContainer_notEnglish {
-  flex-direction: column;
+  flex-direction: column-reverse;
   row-gap: 1em;
 
   button {
