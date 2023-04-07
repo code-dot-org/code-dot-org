@@ -124,6 +124,7 @@ const styles = {
   },
   linkBox: {
     display: 'block',
+    paddingBottom: 20,
     textDecoration: 'none'
   }
 };
