@@ -13,3 +13,5 @@ A city is redesigning their traffic light system and has decided to use simulati
     III. Drivers can share feedback about various traffic light configurations.
 
 MARKDOWN
+
+allow_multiple_attempts true

@@ -59,9 +59,7 @@ export default class WorkshopEnrollmentPreSurvey extends React.Component {
       <div style={styles.containerDiv}>
         <Table condensed striped>
           <caption>
-            {`On the pre-survey, attendees indicate where they predict they will be in the curriculum on ${
-              this.props.workshopDate
-            }.`}
+            {`On the pre-survey, attendees indicate where they predict they will be in the curriculum on ${this.props.workshopDate}.`}
           </caption>
           <thead>
             <tr>

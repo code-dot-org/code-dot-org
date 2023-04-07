@@ -1,12 +1,12 @@
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {MicrobitStubBoard} from '../makeStubBoard';
+import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
 
-describe('ExternalLed', function() {
+describe('ExternalLed', function () {
   describe('on() and off()', () => {
     let led;
-    let boardClient = new MicrobitStubBoard();
+    let boardClient = new MBFirmataClientStub();
     let setDigitalOutputSpy;
 
     before(() => {
@@ -37,7 +37,7 @@ describe('ExternalLed', function() {
 
   describe('toggle()', () => {
     let led;
-    let boardClient = new MicrobitStubBoard();
+    let boardClient = new MBFirmataClientStub();
     let setDigitalOutputSpy, onSpy, offSpy;
 
     before(() => {
@@ -73,7 +73,7 @@ describe('ExternalLed', function() {
 
   describe('blink()', () => {
     let led, clock;
-    let boardClient = new MicrobitStubBoard();
+    let boardClient = new MBFirmataClientStub();
 
     before(() => {
       led = new ExternalLed({

@@ -2,8 +2,8 @@ import {assert} from '../util/reconfiguredChai';
 
 var errorMapper = require('@cdo/apps/acemode/errorMapper');
 
-describe('errorMapper correctly maps different errors', function() {
-  it('defined but never used', function() {
+describe('errorMapper correctly maps different errors', function () {
+  it('defined but never used', function () {
     var jslintResults = {
       data: [
         {
@@ -24,7 +24,7 @@ describe('errorMapper correctly maps different errors', function() {
     );
   });
 
-  it('assignment in conditional expression', function() {
+  it('assignment in conditional expression', function () {
     var jslintResults = {
       data: [
         {
@@ -45,7 +45,7 @@ describe('errorMapper correctly maps different errors', function() {
     );
   });
 
-  it('not defined', function() {
+  it('not defined', function () {
     var jslintResults = {
       data: [
         {
@@ -63,13 +63,12 @@ describe('errorMapper correctly maps different errors', function() {
     assert.equal(jslintResults.data[0].text, "'x' hasn't been declared yet.");
   });
 
-  it('reserved words (App lab)', function() {
+  it('reserved words (App lab)', function () {
     var jslintResults = {
       data: [
         {
           column: 0,
-          raw:
-            "Expected an identifier and instead saw '{a}' (a reserved word).",
+          raw: "Expected an identifier and instead saw '{a}' (a reserved word).",
           row: 0,
           text: "Expected an identifier and instead saw 'x' (a reserved word).",
           type: 'error'
@@ -84,13 +83,12 @@ describe('errorMapper correctly maps different errors', function() {
     );
   });
 
-  it('reserved words (Game lab)', function() {
+  it('reserved words (Game lab)', function () {
     var jslintResults = {
       data: [
         {
           column: 0,
-          raw:
-            "Expected an identifier and instead saw '{a}' (a reserved word).",
+          raw: "Expected an identifier and instead saw '{a}' (a reserved word).",
           row: 0,
           text: "Expected an identifier and instead saw 'x' (a reserved word).",
           type: 'error'
@@ -105,7 +103,7 @@ describe('errorMapper correctly maps different errors', function() {
     );
   });
 
-  it('redefining setup', function() {
+  it('redefining setup', function () {
     var jslintResults = {
       data: [
         {

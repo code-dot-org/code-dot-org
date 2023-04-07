@@ -8,7 +8,7 @@ import {
   translatedCourseOfferingSchoolSubjects,
   translatedCourseOfferingDurations
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
-import '../../../style/code-studio/curriculum_catalog_card.scss';
+import style from './curriculum_catalog_card.module.scss';
 
 // TODO [MEG]: remove this placeholder and require() syntax once images are pulled
 const tempImage = require('@cdo/static/resource_cards/anotherhoc.png');
@@ -22,7 +22,7 @@ const CurriculumCatalogCard = ({
   imageSrc,
   subjects,
   topics,
-  ...props
+  isTranslated
 }) => (
   <CustomizableCurriculumCatalogCard
     assignButtonText={i18n.assign()}
@@ -47,6 +47,8 @@ const CurriculumCatalogCard = ({
     })}
     quickViewButtonText={i18n.quickView()}
     imageAltText={imageAltText}
+    isTranslated={isTranslated}
+    translationIconTitle={i18n.courseInYourLanguage()}
   />
 );
 
@@ -58,6 +60,7 @@ CurriculumCatalogCard.propTypes = {
   oldestGrade: PropTypes.number,
   imageAltText: PropTypes.string,
   imageSrc: PropTypes.string.isRequired,
+  isTranslated: PropTypes.bool,
   subjects: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(translatedCourseOfferingSchoolSubjects))
   ).isRequired,
@@ -68,7 +71,8 @@ CurriculumCatalogCard.propTypes = {
 
 CurriculumCatalogCard.defaultProps = {
   imageSrc: tempImage, // TODO [MEG]: remove this default once images are pulled
-  imageAltText: '' // for decorative images
+  imageAltText: '', // for decorative images
+  isTranslated: false
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -79,26 +83,38 @@ const CustomizableCurriculumCatalogCard = ({
   gradeRange,
   imageAltText,
   imageSrc,
+  isTranslated,
+  translationIconTitle,
   subjectsAndTopics,
   quickViewButtonDescription,
   quickViewButtonText
 }) => (
-  <div className="curriculumCatalogCardContainer">
+  <div className={style.curriculumCatalogCardContainer}>
     <img src={imageSrc} alt={imageAltText} />
-    <div className="curriculumInfoContainer">
+    <div className={style.curriculumInfoContainer}>
       {/*TODO [MEG]: Show all subjects and topics rather than only the first one */}
-      <p className="overline">{subjectsAndTopics[0]}</p>
+      <div className={style.tagsAndTranslatabilityContainer}>
+        <p className={style.overline}>{subjectsAndTopics[0]}</p>
+        {/*TODO [MEG]: Ensure this icon matches spec when we update FontAwesome */}
+        {isTranslated && (
+          <FontAwesome
+            icon="language"
+            className="fa-solid"
+            title={translationIconTitle}
+          />
+        )}
+      </div>
       <h4>{courseDisplayName}</h4>
-      <div className={'iconWithDescription'}>
-        <FontAwesome icon={'user'} className={'fa-solid'} />
-        <p className={'iconDescription'}>{gradeRange}</p>
+      <div className={style.iconWithDescription}>
+        <FontAwesome icon="user" className="fa-solid" />
+        <p className={style.iconDescription}>{gradeRange}</p>
       </div>
-      <div className={'iconWithDescription'}>
+      <div className={style.iconWithDescription}>
         {/*TODO [MEG]: Update this to be clock fa-solid when we update FontAwesome */}
-        <FontAwesome icon={'clock-o'} />
-        <p className={'iconDescription'}>{duration}</p>
+        <FontAwesome icon="clock-o" />
+        <p className={style.iconDescription}>{duration}</p>
       </div>
-      <div className="buttonsContainer">
+      <div className={style.buttonsContainer}>
         {/* each button should be same fixed size */}
         <Button
           color={Button.ButtonColor.neutralDark}
@@ -126,6 +142,8 @@ CustomizableCurriculumCatalogCard.propTypes = {
   duration: PropTypes.string.isRequired,
   gradeRange: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
+  isTranslated: PropTypes.bool,
+  translationIconTitle: PropTypes.string.isRequired,
   subjectsAndTopics: PropTypes.arrayOf(PropTypes.string).isRequired,
   quickViewButtonText: PropTypes.string.isRequired,
   assignButtonText: PropTypes.string.isRequired,

@@ -16,13 +16,8 @@ export default class ProgressBox extends Component {
   };
 
   render() {
-    const {
-      started,
-      incomplete,
-      imperfect,
-      perfect,
-      lessonIsAllAssessment
-    } = this.props;
+    const {started, incomplete, imperfect, perfect, lessonIsAllAssessment} =
+      this.props;
 
     const boxWithBorderStyle = {
       ...styles.box,

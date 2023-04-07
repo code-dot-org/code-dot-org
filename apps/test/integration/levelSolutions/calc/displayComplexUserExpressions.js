@@ -48,7 +48,7 @@ function customValidator(assert) {
   var userExpression = document.getElementById('userExpression');
   assert(userExpression);
 
-  var validateTextElementContainer = function(element, items) {
+  var validateTextElementContainer = function (element, items) {
     for (var i = 0; i < items.length; i++) {
       var expectedTextContent = items[i][0].replace(/ /g, '\u00A0\u00A0');
       assert.equal(element.childNodes[i].textContent, expectedTextContent);
@@ -73,7 +73,7 @@ function customValidator(assert) {
     new Equation('age_in_months', [], new ExpressionNode('*', ['age', 12]))
   );
 
-  displayComplexUserExpressionTest(assert, 'correct answer', function() {
+  displayComplexUserExpressionTest(assert, 'correct answer', function () {
     var userSet = targetSet.clone();
     setEquationSets(targetSet, userSet);
 
@@ -106,7 +106,7 @@ function customValidator(assert) {
   displayComplexUserExpressionTest(
     assert,
     'correct answer with different age',
-    function() {
+    function () {
       // compute: age_in_months
       // age = 10
       // age_in_months = age * 12
@@ -147,7 +147,7 @@ function customValidator(assert) {
     }
   );
 
-  displayComplexUserExpressionTest(assert, 'age hard coded', function() {
+  displayComplexUserExpressionTest(assert, 'age hard coded', function () {
     // compute: age_in_months
     // age = 17
     // age_in_months = 17 * 12
@@ -194,7 +194,7 @@ function customValidator(assert) {
     ]);
   });
 
-  displayComplexUserExpressionTest(assert, 'wrong variable name', function() {
+  displayComplexUserExpressionTest(assert, 'wrong variable name', function () {
     // compute: age_in_months2
     // age = 17
     // age_in_months2 = age * 12
@@ -234,7 +234,7 @@ function customValidator(assert) {
     ]);
   });
 
-  displayComplexUserExpressionTest(assert, 'divide by zero error', function() {
+  displayComplexUserExpressionTest(assert, 'divide by zero error', function () {
     // compute: f(10)
     // f(i) = 4 / (4 - 4)
     var userSet = new EquationSet();
@@ -299,7 +299,7 @@ function customValidator(assert) {
   displayComplexUserExpressionTest(
     assert,
     'divide by zero error during freeplay',
-    function() {
+    function () {
       // same thing as previous test, but no targetSet
       // compute: f(10)
       // f(i) = 4 / (4 - 4)
@@ -350,7 +350,7 @@ function customValidator(assert) {
   displayComplexUserExpressionTest(
     assert,
     'divide by zero error with simple target',
-    function() {
+    function () {
       // compute: 4 / (4 - 4)
       var userSet = new EquationSet();
       userSet.addEquation_(
@@ -393,7 +393,7 @@ function customValidator(assert) {
   displayComplexUserExpressionTest(
     assert,
     'non repeating fraction',
-    function() {
+    function () {
       // compute: 1 / 4
       var userSet = new EquationSet();
       userSet.addEquation_(
@@ -417,7 +417,7 @@ function customValidator(assert) {
     }
   );
 
-  displayComplexUserExpressionTest(assert, 'repeating fraction', function() {
+  displayComplexUserExpressionTest(assert, 'repeating fraction', function () {
     // compute: 1 / 9
     var userSet = new EquationSet();
     userSet.addEquation_(
@@ -452,7 +452,7 @@ function customValidator(assert) {
   displayComplexUserExpressionTest(
     assert,
     'function called with expression',
-    function() {
+    function () {
       // f(x) = x
       // f(1 + 1)
       var userSet = new EquationSet();
@@ -490,7 +490,7 @@ function customValidator(assert) {
     }
   );
 
-  displayComplexUserExpressionTest(assert, 'pow block', function() {
+  displayComplexUserExpressionTest(assert, 'pow block', function () {
     // pow(2, 3)
     var userSet = new EquationSet();
     userSet.addEquation_(
@@ -511,7 +511,7 @@ function customValidator(assert) {
     ]);
   });
 
-  displayComplexUserExpressionTest(assert, 'sqr block', function() {
+  displayComplexUserExpressionTest(assert, 'sqr block', function () {
     // sqr(2)
     var userSet = new EquationSet();
     userSet.addEquation_(
@@ -531,7 +531,7 @@ function customValidator(assert) {
     ]);
   });
 
-  displayComplexUserExpressionTest(assert, 'sqrt block', function() {
+  displayComplexUserExpressionTest(assert, 'sqrt block', function () {
     // sqrt(4)
     var userSet = new EquationSet();
     userSet.addEquation_(
@@ -556,7 +556,7 @@ function customValidator(assert) {
   displayComplexUserExpressionTest(
     assert,
     'error when varying function input',
-    function() {
+    function () {
       // f(x) = x
       // compute: f(5)
       var targetSet = new EquationSet();
@@ -614,7 +614,7 @@ function customValidator(assert) {
   displayComplexUserExpressionTest(
     assert,
     'simple target, computesFunctionCall user expression',
-    function() {
+    function () {
       // compute: 1 + 2
       var targetSet = new EquationSet();
       targetSet.addEquation_(
@@ -654,7 +654,7 @@ function customValidator(assert) {
   displayComplexUserExpressionTest(
     assert,
     'target hasVariablesOrFunctions and user does not',
-    function() {
+    function () {
       // x = 1
       // y = 2
       // compute: x + y
@@ -689,7 +689,7 @@ function customValidator(assert) {
   displayComplexUserExpressionTest(
     assert,
     'target is single number',
-    function() {
+    function () {
       // compute: 5
       var targetSet = new EquationSet();
       targetSet.addEquation_(new Equation(null, [], new ExpressionNode(5)));

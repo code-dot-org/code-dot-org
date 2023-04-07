@@ -62,22 +62,12 @@ describe('TutorialSet', () => {
         <Tutorial
           item={TUTORIAL_1}
           key={TUTORIAL_1.code}
-          tutorialClicked={
-            wrapper
-              .find(Tutorial)
-              .at(0)
-              .props().tutorialClicked
-          }
+          tutorialClicked={wrapper.find(Tutorial).at(0).props().tutorialClicked}
         />
         <Tutorial
           item={TUTORIAL_2}
           key={TUTORIAL_2.code}
-          tutorialClicked={
-            wrapper
-              .find(Tutorial)
-              .at(1)
-              .props().tutorialClicked
-          }
+          tutorialClicked={wrapper.find(Tutorial).at(1).props().tutorialClicked}
         />
       </div>
     );
@@ -89,11 +79,7 @@ describe('TutorialSet', () => {
     );
 
     // Call the click callback directly.
-    wrapper
-      .find(Tutorial)
-      .at(0)
-      .props()
-      .tutorialClicked();
+    wrapper.find(Tutorial).at(0).props().tutorialClicked();
 
     const instance = wrapper.instance();
     expect(wrapper).to.containMatchingElement(

@@ -11,3 +11,5 @@ wrong '![](https://images.code.org/3624e09a23ed5409b3dae36e82d79233-image-158024
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts false

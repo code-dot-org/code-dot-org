@@ -17,7 +17,7 @@ import {installCustomBlocks} from '@cdo/apps/block_utils';
  *
  * @param {object[]} list of blocks that can be embedded
  */
-export const prepareBlocklyForEmbedding = function(customBlocksConfig) {
+export const prepareBlocklyForEmbedding = function (customBlocksConfig) {
   if (!customBlocksConfig) {
     return;
   }

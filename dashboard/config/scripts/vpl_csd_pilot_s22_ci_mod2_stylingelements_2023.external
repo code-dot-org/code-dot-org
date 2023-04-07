@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Styling elements with CSS
+# Styling Elements With CSS
 
 ##### CSS properties impact the visual look of a web page and give students more precise control over the layout of their pages. As students expand their knowledge of style properties, many may have questions about how they can do even more with CSS. Curious students can explore more properties at <a href="https://www.w3schools.com/cssref/" target="blank" rel="noopener noreferrer">W3 Schools</a>.
 

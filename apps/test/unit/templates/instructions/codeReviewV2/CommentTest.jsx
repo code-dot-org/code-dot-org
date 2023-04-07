@@ -69,10 +69,7 @@ describe('Code Review Comment', () => {
 
   it('displays hide option for visible resolved comment', () => {
     const wrapper = renderWrapper({isResolved: true});
-    const onClickPromise = wrapper
-      .find('a')
-      .first()
-      .invoke('onClick')();
+    const onClickPromise = wrapper.find('a').first().invoke('onClick')();
     onClickPromise.then(() =>
       expect(wrapper.find('.fa-eye-slash')).to.have.lengthOf(1)
     );
