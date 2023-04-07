@@ -5155,3 +5155,60 @@ de:
             lessonGroup-3:
               display_name: 'Chapter 2: Aufbau von physischen Prototypen'
           description_short: Programmieren mit Geräten lernen.
+        csa9-2023: {}
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        vpl-csd-ci-1:
+          title: 'Modul 1: Vorbereitung auf den Unterricht Problemlösung und Informatik'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Problemlösung und Informatik\" vor. \n\n**Aktivitäten in diesem professionellen Lernmodul:**\n\n– Sie erhalten eine Einführung in das Problemlösen und die Informatik.\n– Sie üben die wichtigsten Konzepte der Unterrichtseinheit.\n– Sie erkunden die Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 30 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Problemlösung und Informatik\" vor. \n\n**Aktivitäten in diesem professionellen Lernmodul:**\n\n– Sie erhalten eine Einführung in das Problemlösen und die Informatik.\n– Sie üben die wichtigsten Konzepte der Unterrichtseinheit.\n– Sie erkunden die Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 30 Minuten"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Webentwicklung unterrichten
+          title: 'Modul 2: Vorbereitung auf das Unterrichten der Webentwicklung'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf die Code.org-Stunde Webentwicklung vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in die Webentwicklung.\n– Üben der wichtigsten Konzepte der Lerneinheit.\n– Beschäftigung mit Web Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf die Code.org-Stunde Webentwicklung vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in die Webentwicklung.\n– Üben der wichtigsten Konzepte der Lerneinheit.\n– Beschäftigung mit Web Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vorbereitung auf das Unterrichten von interaktiven Animationen und Spielen
+          title: 'Modul 3: Vorbereitung auf das Unterrichten von interaktiven Animationen und Spielen '
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde Interaktive Animationen und Spiele vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in interaktive Animationen und Spiele.\n– Üben der wichtigsten Konzepte der Unterrichtseinheit.\n– Beschäftigung mit Game Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde Interaktive Animationen und Spiele vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in interaktive Animationen und Spiele.\n– Üben der wichtigsten Konzepte der Unterrichtseinheit.\n– Beschäftigung mit Game Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+        vpl-csd-ci-4:
+          title: " Modul 4: Vorbereitung auf das Unterrichten des Design-Prozesses"
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Design-Prozess\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Eine Einführung in den Designprozess.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Design-Prozess\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Eine Einführung in den Designprozess.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+        vpl-csd-ci-5:
+          title: 'Modul 5: Vorbereitung auf den Unterricht Fakten und Gesellschaft'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Daten und Gesellschaft\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in das Thema \"Daten und Gesellschaft.\n– Üben der wichtigsten Konzepte der Stunde.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Daten und Gesellschaft\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in das Thema \"Daten und Gesellschaft.\n– Üben der wichtigsten Konzepte der Stunde.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+        vpl-csd-ci-6: {}
+        vpl-csd-ci-7:
+          title: 'Modul 7: Vorbereitung auf den Unterricht KI und maschinelles Lernen'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in KI und maschinelles Lernen.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in KI und maschinelles Lernen.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        ai-temp: {}
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
