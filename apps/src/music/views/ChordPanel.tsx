@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useCallback} from 'react';
-import classNames from "classnames";
+import classNames from 'classnames';
 import {getNoteName, isBlackKey} from '../utils/Notes';
 import MusicLibrary from '../player/MusicLibrary';
 import {ChordEventValue, PlayStyle} from '../player/interfaces/ChordEvent';
