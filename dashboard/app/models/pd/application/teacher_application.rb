@@ -386,7 +386,7 @@ module Pd::Application
 
       # delete any unsent emails, and queue a new status email if appropriate
       emails.unsent.destroy_all
-      queue_email(status) if should_send_decision_email?
+      queue_email(status, deliver_now: true) if should_send_decision_email?
     end
 
     # @override
