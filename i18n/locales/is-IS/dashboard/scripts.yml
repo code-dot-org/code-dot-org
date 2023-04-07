@@ -3295,3 +3295,27 @@ is:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inntök og Úttök
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inntök og Úttök
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inntök og Úttök
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inntök og Úttök
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inntök og Úttök
