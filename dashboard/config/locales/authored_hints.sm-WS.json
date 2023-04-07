@@ -1,0 +1,72 @@
+{
+  "sm-WS": {
+    "data": {
+      "authored_hints": {
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_b": "Manatua e liliu muamua ae lei faaalu, e talu ai e sese le itu o loo faasaga iai Scrat."
+        },
+        "courseD_artist_ramp11": {
+          "courseD_artist_ramp11a": "A fia tusi o se itu, faaaoga le poloka o le 'move forward by 100 pixels', ma sui le 100 i le 200. "
+        },
+        "courseD_maze_ramp7": {
+          "courseD_maze_ramp7_a": "Toe faaaoga poloka e faaalu ai poloka taitasi poo avatu ma toe avatu ni faailo se tele "
+        },
+        "courseD_scrat_ramp1": {
+          "courseC_maze_programming1_a": "Afai e le oo atu Scrat i le fatulaau, e tatau ona gau faatasi uma poloka e tolu, ona oomi lea o le \"Run\"."
+        },
+        "courseD_scrat_ramp2": {
+          "courseC_maze_programming2_b": "Tautuana ia 'move forward' uma poloka e tolu o loo pipii i le poloka 'when run'."
+        },
+        "courseD_scrat_ramp3": {
+          "courseC_maze_programming3_b": "Manatua o le liliu i le taumatau ma le agavale o le vaaiga mai ia Scrat"
+        },
+        "courseD_scrat_ramp5": {
+          "courseC_maze_programming5_b": "O le a le mamao e manaomia ona e alu ina ia e oo i le tulimanu?",
+          "courseC_maze_programming5_c": "E manaomia lou afe i le agavale i le tulimanu ina ia e oo i le fatulaau"
+        },
+        "courseD_scrat_ramp6": {
+          "courseC_maze_programming6a_a": "Faaaoga le lio 'repeat' ina ia faaminoi ma faaalu Scrat."
+        },
+        "courseD_scrat_ramp7": {
+          "courseD_scrat_programming6_b": "Manatua e liliu muamua ae lei faaalu, e talu ai e sese le itu o loo faasaga iai Scrat."
+        },
+        "courseD_scrat_ramp8": {
+          "courseD_maze_ramp7_a": "Toe faaaoga poloka e faaalu ai poloka taitasi poo avatu ma toe avatu ni faailo se tele "
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_a": "A fia tusi o se itu, faaaoga le poloka o le 'move forward by 100 pixels', ma sui le 100 i le 200. ",
+          "courseE_artist_ramp8_b": "A fia tusi o itu e 4, tuu le poloka o le 'move forward by 100 pixels', i totonu o le lio toe taamilo ma taumafai e faatulaga le lio ina ia mafai ona tusi faafa le ata",
+          "courseE_artist_ramp8_c": "O lou lio e tatau ona iai poloka se lua i totonu o le lio: 'move foward' ma le 'turn right by 90 degrees'.",
+          "courseD_artist_ramp12_a": "E faapefea ona tutusa lenei ma le tafafa? E faapefea ona eseese?",
+          "courseD_artist_ramp12_c": "Ina ia tusi itu taitasi, e manaomia ona faaalu i luma le 100 pixels, ona liliu lea i le 120 tikeri. E fia itu e te manaomia?"
+        },
+        "courseE_artist_ramp8": {
+          "courseE_artist_ramp8_a": "A fia tusi o se itu, faaaoga le poloka o le 'move forward by 100 pixels', ma sui le 100 i le 200. ",
+          "courseE_artist_ramp8_b": "A fia tusi o itu e 4, tuu le poloka o le 'move forward by 100 pixels', i totonu o le lio toe taamilo ma taumafai e faatulaga le lio ina ia mafai ona tusi faafa le ata",
+          "courseE_artist_ramp8_c": "O lou lio e tatau ona iai poloka se lua i totonu o le lio: 'move foward' ma le 'turn right by 90 degrees'."
+        },
+        "courseE_artist_ramp8_2": {
+          "courseE_artist_ramp8_a": "A fia tusi o se itu, faaaoga le poloka o le 'move forward by 100 pixels', ma sui le 100 i le 200. ",
+          "courseE_artist_ramp8_b": "A fia tusi o itu e 4, tuu le poloka o le 'move forward by 100 pixels', i totonu o le lio toe taamilo ma taumafai e faatulaga le lio ina ia mafai ona tusi faafa le ata",
+          "courseE_artist_ramp8_c": "O lou lio e tatau ona iai poloka se lua i totonu o le lio: 'move foward' ma le 'turn right by 90 degrees'."
+        },
+        "courseE_artist_ramp9": {
+          "courseD_artist_ramp12_a": "E faapefea ona tutusa lenei ma le tafafa? E faapefea ona eseese?",
+          "courseD_artist_ramp12_c": "Ina ia tusi itu taitasi, e manaomia ona faaalu i luma le 100 pixels, ona liliu lea i le 120 tikeri. E fia itu e te manaomia?"
+        },
+        "courseF_artist_variables3": {
+          "courseF_artist_variables3_b": "O le poloka numera e 50 le tau e tatau ona iai i se nofoaga se tasi: pe a uma ona faatulaga le poloka 'set variable lenght'. "
+        },
+        "courseF_artist_variables4": {
+          "courseF_artist_variables4_a": "O lau faailo e le tele se eseesega mai le paso mulimuli, sei vagana e manaomia ona ki le artist e oso i lalo, ma liliu ina ia toe oso i luma. "
+        },
+        "courseF_playlab_variables7c": {
+          "courseF_playlab_variables7c_a": "Tuu le poloka 'ask' fou i luma o lau faaupuga 'if/else' ina ia mafai ona faaaoga i isi laasaga. "
+        },
+        "courseF_playlab_variables8c": {
+          "courseF_playlab_variables8c_a": "O le poloka 'join' e alu i toto o le poloka 'actor say', ma e tuu atu ia te oe le faaaogaina o fuainumera i fuaiupu lapopoa"
+        }
+      }
+    }
+  }
+}
