@@ -4624,3 +4624,75 @@ zh-CN:
             lessonGroup-3:
               display_name: 第 2 章︰ 创建物理原型
           description_short: 学习使用物理设备编程。
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 输入和输出
+        vpl-csd-ci-1:
+          title: 模块1：准备问题解决和计算教学
+          description: "这个专业学习模块旨在帮助你准备Code.org的问题解决和计算单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
+            \  认识问题解决和计算。\n-   实践单元中包含的关键概念。\n-   探索章节结尾项目。\n\n**建议时间：** 30分钟"
+          student_description: "这个专业学习模块旨在帮助你准备Code.org的问题解决和计算单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
+            \  认识问题解决和计算。\n-   实践单元中包含的关键概念。\n-   探索章节结尾项目。\n\n**建议时间：** 30分钟"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Web开发教学
+          title: 模块2：准备Web开发教学
+          description: "这个专业学习模块旨在帮助你准备Code.org的Web开发单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
+            \  认识Web开发。\n-   实践单元中包含的关键概念。\n-   探索章节结尾项目。\n\n**建议时间：** 90分钟"
+          student_description: "这个专业学习模块旨在帮助你准备Code.org的Web开发单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
+            \  认识Web开发。\n-   实践单元中包含的关键概念。\n-   探索章节结尾项目。\n\n**建议时间：** 90分钟"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 准备互动动画和游戏教学
+          title: '模块3：准备互动动画和游戏教学 '
+          description: "这个专业学习模块旨在帮助你准备Code.org的互动动画和游戏单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
+            \  认识互动动画和游戏。\n-   实践单元中包含的关键概念。\n-   参与游戏实验室。\n-   探索章节结尾项目。\n\n**建议时间：**
+            120分钟"
+          student_description: "这个专业学习模块旨在帮助你准备Code.org的互动动画和游戏单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
+            \  认识互动动画和游戏。\n-   实践单元中包含的关键概念。\n-   参与游戏实验室。\n-   探索章节结尾项目。\n\n**建议时间：**
+            120分钟"
+        vpl-csd-ci-4:
+          title: " 模块4：准备设计进程教学"
+          description: "这个专业学习模块旨在帮助你准备Code.org的设计进程单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
+            \  认识设计进程。\n-   实践单元中包含的关键概念。\n-   参与App实验室。\n-   探索章节结尾项目。\n\n**建议时间：**
+            90分钟"
+          student_description: "这个专业学习模块旨在帮助你准备Code.org的设计进程单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
+            \  认识设计进程。\n-   实践单元中包含的关键概念。\n-   参与App实验室。\n-   探索章节结尾项目。\n\n**建议时间：**
+            90分钟"
+        vpl-csd-ci-5:
+          title: 模块5：准备数据和社会教学
+          description: "这个专业学习模块旨在帮助你准备Code.org的数据和社会单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
+            \  认识数据和社会。\n-   实践单元中包含的关键概念。\n-   探索章节结尾项目。\n\n**建议时间：** 90分钟"
+          student_description: "这个专业学习模块旨在帮助你准备Code.org的数据和社会单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
+            \  认识数据和社会。\n-   实践单元中包含的关键概念。\n-   探索章节结尾项目。\n\n**建议时间：** 90分钟"
+        vpl-csd-ci-7:
+          title: 模块7：准备人工智能和机器学习教学
+          description: "这个专业学习模块旨在帮助你准备Code.org的人工智能和机器学习单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
+            \  认识人工智能和机器学习。\n-   实践单元中包含的关键概念。\n-   参与人工智能实验室和App实验室。\n-   探索章节结尾项目。\n-
+            \  制定一个与学生一起实施本单元的计划。\n\n**建议时间：** 120分钟"
+          student_description: "这个专业学习模块旨在帮助你准备Code.org的人工智能和机器学习单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
+            \  认识人工智能和机器学习。\n-   实践单元中包含的关键概念。\n-   参与人工智能实验室和App实验室。\n-   探索章节结尾项目。\n-
+            \  制定一个与学生一起实施本单元的计划。\n\n**建议时间：** 120分钟"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 第 2 章︰ 创建物理原型
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 输入和输出
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 输入和输出
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 输入和输出
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 输入和输出
