@@ -1205,6 +1205,19 @@ uz:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: "{GROUP}  {FORMAT} sifatida tartiblash"
+        options:
+          FORMAT:
+            '"border"': chegara
+            '"circle"': aylana
+            '"grid"': panjara
+            '"top"': tepa satr
+            '"row"': satr
+            '"bottom"': past satr
+            '"left"': chap ustun
+            '"column"': ustun
+            '"right"': o‘ng ustun
       gamelab_locationAt:
         text: " x: {X} y: {Y} lokatsiya"
       gamelab_locationModifier:
@@ -1227,6 +1240,18 @@ uz:
             '"rain"': yomg‘ir
       gamelab_makeNewSpriteAnon:
         text: " {LOCATION} da yangi {ANIMATION_NAME} sprayt yaratish"
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': chegara
+            '"circle"': aylana
+            '"grid"': panjara
+            '"top"': tepa satr
+            '"row"': satr
+            '"bottom"': past satr
+            '"left"': chap ustun
+            '"column"': ustun
+            '"right"': o‘ng ustun
       gamelab_makeNumSprites:
         text: "{NUM} ta yangi {ANIMATION_NAME} sprayt yaratish"
       gamelab_makeProjectile:
