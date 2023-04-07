@@ -24,7 +24,7 @@ const CurriculumCatalogCard = ({
   subjects,
   topics,
   isTranslated,
-  language
+  isEnglish
 }) => (
   <CustomizableCurriculumCatalogCard
     assignButtonText={i18n.assign()}
@@ -51,7 +51,7 @@ const CurriculumCatalogCard = ({
     imageAltText={imageAltText}
     isTranslated={isTranslated}
     translationIconTitle={i18n.courseInYourLanguage()}
-    isEnglish={language === 'en'}
+    isEnglish={isEnglish}
   />
 );
 
@@ -70,7 +70,7 @@ CurriculumCatalogCard.propTypes = {
   topics: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(translatedCourseOfferingCsTopics))
   ).isRequired,
-  language: PropTypes.string.isRequired
+  isEnglish: PropTypes.bool.isRequired
 };
 
 CurriculumCatalogCard.defaultProps = {
@@ -161,9 +161,9 @@ CustomizableCurriculumCatalogCard.propTypes = {
   gradeRange: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
   isTranslated: PropTypes.bool,
+  isEnglish: PropTypes.bool,
   translationIconTitle: PropTypes.string.isRequired,
   subjectsAndTopics: PropTypes.arrayOf(PropTypes.string).isRequired,
-  isEnglish: PropTypes.bool,
   quickViewButtonText: PropTypes.string.isRequired,
   assignButtonText: PropTypes.string.isRequired,
 
