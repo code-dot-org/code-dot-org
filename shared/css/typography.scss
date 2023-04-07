@@ -1,3 +1,5 @@
+@import 'color', 'font', 'barlow-semi-condensed-font';
+
 // This stylesheet can be imported to maintain typographic
 // consistency across Dashboard and Pegasus sites.
 
@@ -66,34 +68,44 @@
 }
 
 // Paragraph styles
-@mixin body-one {
+@mixin paragraph-common {
   color: $neutral-dark;
-  font-size: 1em;
   line-height: 1.5;
   margin-bottom: 1em;
 }
 
+@mixin body-one {
+  font-family: $gotham-regular, sans-serif;
+  font-size: 1em;
+  @include paragraph-common
+}
+
 @mixin body-two {
-  @include body-one;
+  font-family: $gotham-regular, sans-serif;
   font-size: .875em;
+  @include paragraph-common
 }
 
 @mixin overline {
-  @include body-one;
+  font-family: $gotham-bold, sans-serif;
   font-size: .75em;
-  font-family: $gotham-bold;
   text-transform: uppercase;
   letter-spacing: .5px;
+  @include paragraph-common
 }
 
 @mixin strong {
   font-family: $gotham-bold, sans-serif;
 }
 
+@mixin em {
+  font-family: $gotham-italics, sans-serif;
+}
+
 // Caption styles
 @mixin figcaption {
-  font-size: .875em;
   font-family: $gotham-bold, sans-serif;
+  font-size: .875em;
   margin: .5em 0 1em;
   line-height: 1.2;
 }
@@ -116,8 +128,10 @@ p, .body-one { @include body-one }
 p.body-two, .body-two { @include body-two }
 // Use on small uppercase labels or descriptions
 p.overline, .overline { @include overline }
-// Use on paragraph or span elements for bold text
+// Use in paragraphs to bold text
 strong, .strong { @include strong }
+// Use in paragraphs to italicize text
+em, .em { @include em }
 
 // Captions
 // Use on figcaption elements that accompany images or videos
