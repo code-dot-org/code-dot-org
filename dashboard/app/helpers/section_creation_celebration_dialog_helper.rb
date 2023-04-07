@@ -7,6 +7,9 @@ module SectionCreationCelebrationDialogHelper
     return false unless user
     return false unless user.teacher?
 
-    return true if (Time.now - user.sections.first.created_at) < 1.minute
+    user_sections = user.sections
+    return false if user_sections.empty?
+
+    return true if (Time.now - user_sections.first.created_at) < 1.minute
   end
 end
