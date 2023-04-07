@@ -874,10 +874,27 @@ et:
             '"w"': w
             '"x"': x
             '"z"': z
+      gamelab_layoutSprites:
+        text: paigutus {GROUP} nagu {FORMAT}
+        options:
+          FORMAT:
+            '"border"': piir
+            '"circle"': ring
+            '"grid"': ruudustikus
+            '"row"': rida
+            '"column"': veerg
       gamelab_makeBurst:
         options:
           EFFECT:
             '"rain"': vihm
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': piir
+            '"circle"': ring
+            '"grid"': ruudustikus
+            '"row"': rida
+            '"column"': veerg
       gamelab_makeProjectile:
         options:
           DIRECTION:
