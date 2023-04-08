@@ -164,7 +164,7 @@ class UnconnectedMusicView extends React.Component {
     }
 
     if (prevProps.currentLevel !== this.props.currentLevel) {
-      this.progressManager?.next(this.props.currentLevel);
+      this.onNextPanel(this.props.currentLevel);
     }
 
     if (
@@ -195,8 +195,8 @@ class UnconnectedMusicView extends React.Component {
     return this.props.isPlaying;
   };
 
-  onNextPanel = () => {
-    this.progressManager?.next();
+  onNextPanel = (specificStep = null) => {
+    this.progressManager?.next(specificStep);
     this.stopSong();
     this.clearCode();
     this.setToolboxForProgress();
