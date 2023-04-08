@@ -11,7 +11,7 @@ const enabledClasses = [
   styles.orange,
   styles.yellow,
   styles.green,
-  styles.teal
+  styles.teal,
 ];
 
 /**
@@ -47,8 +47,6 @@ const BeatPad = ({triggers, playTrigger, onClose, isPlaying}) => {
     return rows;
   };
 
-  return null;
-
   return (
     <div className={styles.container}>
       <div className={styles.labelContainer}>
@@ -79,14 +77,14 @@ TriggerButton.propTypes = {
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
   colorClassName: PropTypes.string,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
 };
 
 BeatPad.propTypes = {
   triggers: PropTypes.array.isRequired,
   playTrigger: PropTypes.func.isRequired,
   onClose: PropTypes.func.isRequired,
-  isPlaying: PropTypes.bool.isRequired
+  isPlaying: PropTypes.bool.isRequired,
 };
 
 export default BeatPad;
