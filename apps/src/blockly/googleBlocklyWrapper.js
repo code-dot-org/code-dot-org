@@ -46,7 +46,7 @@ import initializeCss from './addons/cdoCss';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import BlockSvgUnused from './addons/blockSvgUnused';
-import {ToolboxType, Themes} from './constants';
+import {ToolboxType, Themes, Renderers} from './constants';
 import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
@@ -253,19 +253,19 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.RENDERER,
-    'cdo_renderer_geras',
+    Renderers.GERAS,
     CdoRendererGeras,
     true /* opt_allowOverrides */
   );
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.RENDERER,
-    'cdo_renderer_thrasos',
+    Renderers.THRASOS,
     CdoRendererThrasos,
     true /* opt_allowOverrides */
   );
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.RENDERER,
-    'cdo_renderer_zelos',
+    Renderers.ZELOS,
     CdoRendererZelos,
     true /* opt_allowOverrides */
   );
@@ -511,7 +511,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
         theme: theme,
         plugins: {},
         RTL: options.rtl,
-        renderer: options.renderer || 'cdo_renderer_thrasos'
+        renderer: options.renderer || Renderers.DEFAULT
       });
       const svg = Blockly.utils.dom.createSvgElement(
         'svg',
@@ -520,8 +520,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
           'xmlns:html': 'http://www.w3.org/1999/xhtml',
           'xmlns:xlink': 'http://www.w3.org/1999/xlink',
           version: '1.1',
-          class:
-            'cdo_renderer_thrasos-renderer modern-theme readOnlyBlockSpace injectionDiv'
+          class: `${Renderers.DEFAULT}-renderer modern-theme readOnlyBlockSpace injectionDiv`
         },
         null
       );
@@ -578,7 +577,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
         blockDragger: ScrollBlockDragger,
         metricsManager: CdoMetricsManager
       },
-      renderer: opt_options.renderer || 'cdo_renderer_thrasos',
+      renderer: opt_options.renderer || Renderers.DEFAULT,
       comments: false
     };
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout

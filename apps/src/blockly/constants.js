@@ -21,6 +21,13 @@ export const Themes = {
   TRITANOPIA_DARK: 'cdotritanopiadark'
 };
 
+export const Renderers = {
+  GERAS: 'cdo_renderer_geras',
+  THRASOS: 'cdo_renderer_thrasos',
+  ZELOS: 'cdo_renderer_zelos',
+  DEFAULT: 'cdo_renderer_thrasos'
+};
+
 // Used for custom field type ClampedNumber(,)
 // Captures two optional arguments from the type string
 // Allows:
