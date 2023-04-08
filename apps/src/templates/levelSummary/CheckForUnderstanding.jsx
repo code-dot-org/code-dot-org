@@ -46,6 +46,7 @@ const CheckForUnderstanding = ({
       levelType: level.type,
       ...scriptData.reportingData
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

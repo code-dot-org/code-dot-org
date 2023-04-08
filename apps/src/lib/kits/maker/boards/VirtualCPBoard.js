@@ -1,4 +1,4 @@
-/** @file Fake for running Maker apps without an attached board. */
+/** @file For running Maker apps without an attached Circuit Playground board. */
 import _ from 'lodash';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import {
@@ -7,12 +7,13 @@ import {
 } from './circuitPlayground/PlaygroundConstants';
 
 /**
- * Fake Maker Board for running Maker Toolkit apps without a board attached.
- * Attaches fake, no-op components to the interpreter.
+ * Virtual Circuit Playground Maker Board for running Maker Toolkit apps without a
+ * Circuit Playground board attached.
+ * Attaches virtual, no-op components to the interpreter.
  * @extends EventEmitter
  * @implements MakerBoard
  */
-export default class FakeBoard extends EventEmitter {
+export default class VirtualCPBoard extends EventEmitter {
   /**
    * Open a connection to the board on its configured port.
    * @returns {Promise} resolved when the board is ready to use.
@@ -29,6 +30,8 @@ export default class FakeBoard extends EventEmitter {
     return Promise.resolve();
   }
 
+  reset() {}
+
   /**
    * Marshals the board component controllers and appropriate constants into the
    * given JS Interpreter instance so they can be used by student code.
@@ -37,19 +40,19 @@ export default class FakeBoard extends EventEmitter {
    */
   installOnInterpreter(jsInterpreter) {
     const constructors = {
-      Led: FakeLed,
-      Board: FakeComponent,
-      NeoPixel: FakeColorLed,
-      PlaygroundButton: FakeButton,
-      Switch: FakeToggleSwitch,
-      Piezo: FakeBuzzer,
-      Sensor: FakeSensor,
-      Thermometer: FakeThermometer,
-      Pin: FakeComponent,
-      Accelerometer: FakeAccelerometer,
-      Animation: FakeComponent,
-      Servo: FakeComponent,
-      TouchSensor: FakeComponent
+      Led: VirtualLed,
+      Board: VirtualComponent,
+      NeoPixel: VirtualColorLed,
+      PlaygroundButton: VirtualButton,
+      Switch: VirtualToggleSwitch,
+      Piezo: VirtualBuzzer,
+      Sensor: VirtualSensor,
+      Thermometer: VirtualThermometer,
+      Pin: VirtualComponent,
+      Accelerometer: VirtualAccelerometer,
+      Animation: VirtualComponent,
+      Servo: VirtualComponent,
+      TouchSensor: VirtualComponent
     };
 
     for (const constructorName in constructors) {
@@ -59,17 +62,17 @@ export default class FakeBoard extends EventEmitter {
     }
 
     const components = {
-      board: new FakeComponent(),
-      colorLeds: _.range(N_COLOR_LEDS).map(() => new FakeColorLed()),
-      led: new FakeLed(),
-      toggleSwitch: new FakeToggleSwitch(),
-      buzzer: new FakeBuzzer(),
-      soundSensor: new FakeSensor(),
-      lightSensor: new FakeSensor(),
-      tempSensor: new FakeThermometer(),
-      accelerometer: new FakeAccelerometer(),
-      buttonL: new FakeButton(),
-      buttonR: new FakeButton(),
+      board: new VirtualComponent(),
+      colorLeds: _.range(N_COLOR_LEDS).map(() => new VirtualColorLed()),
+      led: new VirtualLed(),
+      toggleSwitch: new VirtualToggleSwitch(),
+      buzzer: new VirtualBuzzer(),
+      soundSensor: new VirtualSensor(),
+      lightSensor: new VirtualSensor(),
+      tempSensor: new VirtualThermometer(),
+      accelerometer: new VirtualAccelerometer(),
+      buttonL: new VirtualButton(),
+      buttonR: new VirtualButton(),
       ...J5_CONSTANTS
     };
 
@@ -120,18 +123,26 @@ export default class FakeBoard extends EventEmitter {
     return false;
   }
 
+  /**
+   * @param {number} pin
+   * @return {VirtualExternalLed}
+   */
   createLed(pin) {
-    return new FakeLed();
+    return new VirtualLed();
   }
 
+  /**
+   * @param {number} pin
+   * @return {VirtualExternalButton}
+   */
   createButton(pin) {
-    return new FakeButton();
+    return new VirtualButton();
   }
 }
 
-class FakeComponent extends EventEmitter {}
+class VirtualComponent extends EventEmitter {}
 
-class FakeLed extends FakeComponent {
+class VirtualLed extends VirtualComponent {
   on() {}
   off() {}
   blink() {}
@@ -139,31 +150,32 @@ class FakeLed extends FakeComponent {
   pulse() {}
 }
 
-class FakeColorLed extends FakeLed {
+class VirtualColorLed extends VirtualLed {
   stop() {}
   intensity() {}
   color() {}
 }
 
-class FakeBuzzer extends FakeComponent {
+class VirtualBuzzer extends VirtualComponent {
   frequency() {}
   note() {}
-  off() {}
   stop() {}
   play() {}
+  playNotes() {}
+  playSong() {}
 }
 
-class FakeToggleSwitch extends FakeComponent {
+class VirtualToggleSwitch extends VirtualComponent {
   constructor() {
     super();
     this.isOpen = false;
   }
 }
 
-class FakeSensor extends FakeComponent {
+class VirtualSensor extends VirtualComponent {
   constructor() {
     super();
-    this.value = null;
+    this.value = 0;
     this.threshold = 0;
   }
 
@@ -175,7 +187,7 @@ class FakeSensor extends FakeComponent {
   }
 }
 
-class FakeThermometer extends FakeComponent {
+class VirtualThermometer extends VirtualComponent {
   constructor() {
     super();
     this.F = 32;
@@ -183,7 +195,7 @@ class FakeThermometer extends FakeComponent {
   }
 }
 
-class FakeAccelerometer extends FakeComponent {
+class VirtualAccelerometer extends VirtualComponent {
   start() {}
 
   getAcceleration() {
@@ -195,7 +207,7 @@ class FakeAccelerometer extends FakeComponent {
   }
 }
 
-class FakeButton extends FakeComponent {
+class VirtualButton extends VirtualComponent {
   constructor() {
     super();
     this.isPressed = false;
