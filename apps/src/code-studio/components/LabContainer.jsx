@@ -48,27 +48,16 @@ class UnconnectedLabContainer extends Component {
     );
 
     return (
-      <div id="lab-container" style={{width: '100%', height: '100%'}}>
+      <div id="lab-container" className={moduleStyles.labContainer}>
         <MusicLabView
           currentLevel={currentLevelIndex}
           onChangeLevel={index => this.changeLevelIndex(index)}
         />
 
         <div
+          id="fade-overlay"
           key={this.props.currentLevelId}
-          className={moduleStyles.fadeinblock}
-          style={{
-            backgroundColor: 'black',
-            width: '100%',
-            height: '100%',
-            position: 'fixed',
-            top: 60,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            pointerEvents: 'none',
-            opacity: 0
-          }}
+          className={moduleStyles.fadeInBlock}
         />
       </div>
     );
