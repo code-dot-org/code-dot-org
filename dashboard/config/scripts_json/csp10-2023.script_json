@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-04 17:06:32 UTC",
+    "serialized_at": "2023-03-23 20:06:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2539,6 +2539,30 @@
   ],
   "resources": [
     {
+      "name": "Algorithmic Efficiency",
+      "url": "https://docs.google.com/presentation/d/1veCmcrjJbloASd7zMXOvmUt6QxuWFik_EwjC41U-h60/template/preview",
+      "key": "algorithmic_efficiency",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "algorithmic_efficiency"
+      }
+    },
+    {
+      "name": "Algorithms Solve Problems",
+      "url": "https://docs.google.com/presentation/d/1m-AeFFpQ6oNfVzHNL9OqDmn3ocoZw8rj6ZanCFlgq_Q/template/preview",
+      "key": "algorithms_solve_problems",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "algorithms_solve_problems"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/s/csp10-2022/resources",
       "key": "all_resources_9",
@@ -2592,45 +2616,6 @@
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"
-      }
-    },
-    {
-      "name": "CSP Unit 10 - Lesson 1 - Algorithms Solve Problems",
-      "url": "https://docs.google.com/presentation/d/1m-AeFFpQ6oNfVzHNL9OqDmn3ocoZw8rj6ZanCFlgq_Q/copy",
-      "key": "csp_unit_10_-_lesson_1_-_algorithms_solve_problems",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1m-AeFFpQ6oNfVzHNL9OqDmn3ocoZw8rj6ZanCFlgq_Q/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_10_-_lesson_1_-_algorithms_solve_problems"
-      }
-    },
-    {
-      "name": "CSP Unit 10 - Lesson 2 - Algorithm Efficiency",
-      "url": "https://docs.google.com/presentation/d/1veCmcrjJbloASd7zMXOvmUt6QxuWFik_EwjC41U-h60/copy",
-      "key": "csp_unit_10_-_lesson_2_-_algorithm_efficiency",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1veCmcrjJbloASd7zMXOvmUt6QxuWFik_EwjC41U-h60/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_10_-_lesson_2_-_algorithm_efficiency"
-      }
-    },
-    {
-      "name": "CSP Unit 10 - Lesson 3 - Unreasonable Time",
-      "url": "https://docs.google.com/presentation/d/17cWIyCFMJIuGcUoI8eRAkWAK9uP1iAeFJyAhEvCMtG0/copy",
-      "key": "csp_unit_10_-_lesson_3_-_unreasonable_time",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/17cWIyCFMJIuGcUoI8eRAkWAK9uP1iAeFJyAhEvCMtG0/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_10_-_lesson_3_-_unreasonable_time"
       }
     },
     {
@@ -2732,19 +2717,31 @@
       "seeding_key": {
         "resource.key": "unreasonable_time"
       }
+    },
+    {
+      "name": "Unreasonable Time",
+      "url": "https://docs.google.com/presentation/d/17cWIyCFMJIuGcUoI8eRAkWAK9uP1iAeFJyAhEvCMtG0/template/preview",
+      "key": "unreasonable_time_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "unreasonable_time_1"
+      }
     }
   ],
   "lessons_resources": [
     {
       "seeding_key": {
         "lesson.key": "Algorithm Efficiency",
-        "resource.key": "csp_unit_10_-_lesson_2_-_algorithm_efficiency"
+        "resource.key": "algorithmic_efficiency"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Algorithms Solve Problems",
-        "resource.key": "csp_unit_10_-_lesson_1_-_algorithms_solve_problems"
+        "resource.key": "algorithms_solve_problems"
       }
     },
     {
@@ -2780,12 +2777,6 @@
     {
       "seeding_key": {
         "lesson.key": "Unreasonable Time",
-        "resource.key": "csp_unit_10_-_lesson_3_-_unreasonable_time"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unreasonable Time",
         "resource.key": "key_-_unreasonable_time"
       }
     },
@@ -2793,6 +2784,12 @@
       "seeding_key": {
         "lesson.key": "Unreasonable Time",
         "resource.key": "unreasonable_time"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "resource.key": "unreasonable_time_1"
       }
     }
   ],

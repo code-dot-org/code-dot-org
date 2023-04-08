@@ -69,8 +69,8 @@ export default class ModuloClock extends React.Component {
 
     this.targetDividend = dividend;
     this.interval = setInterval(this.tick, 33);
-    this.onStep = onStep || function() {};
-    this.onComplete = onComplete || function() {};
+    this.onStep = onStep || function () {};
+    this.onComplete = onComplete || function () {};
     this.duration = Math.min(maximumDuration, dividend * maximumTimePerSegment);
     this.setState({startTime: Date.now(), currentDividend: 0});
   }
@@ -198,8 +198,9 @@ function createWedgePath(arcRadians) {
   const largeArc = arcRadians > Math.PI ? 1 : 0;
   return `
       M ${x1} ${y1}
-      A ${r1} ${r1}, 0, ${largeArc}, 1, ${x1 + r1 * Math.sin(t)} ${y1 +
-    r1 * (1 - Math.cos(t))}
+      A ${r1} ${r1}, 0, ${largeArc}, 1, ${x1 + r1 * Math.sin(t)} ${
+    y1 + r1 * (1 - Math.cos(t))
+  }
       L ${x1 + r2 * Math.sin(t)} ${y2 + r2 * (1 - Math.cos(t))}
       A ${r2} ${r2}, 0, ${largeArc}, 0, ${x1} ${y2}
       Z`;

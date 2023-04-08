@@ -7,7 +7,7 @@ import {
   orgNameMinecraft
 } from '@cdo/apps/tutorialExplorer/util';
 
-describe('TutorialExplorer filterTutorials tests', function() {
+describe('TutorialExplorer filterTutorials tests', function () {
   const longOrgName = 'them-012345678901234567890123456789';
   const tutorials = [
     {
@@ -133,7 +133,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
   ];
   const tutorialsWithSpec = tutorials.concat(specTutorials);
 
-  it('no filter, but do-not-show works', function() {
+  it('no filter, but do-not-show works', function () {
     const props = {
       filters: {},
       locale: 'en-us',
@@ -147,7 +147,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
     assert.equal(filtered.length, tutorials.length - 1);
   });
 
-  it('no filter, but do-not-show and orgname work', function() {
+  it('no filter, but do-not-show and orgname work', function () {
     const props = {
       filters: {},
       locale: 'en-us',
@@ -165,7 +165,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
     assert.equal(filtered[3].name, 'tut1');
   });
 
-  it('filter on platform', function() {
+  it('filter on platform', function () {
     const props = {
       filters: {
         platform: ['mac']
@@ -180,7 +180,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
     assert.equal(filtered[0].name, 'tut2');
   });
 
-  it('filter on platform and subject', function() {
+  it('filter on platform and subject', function () {
     const props = {
       filters: {
         platform: ['iphone'],
@@ -196,7 +196,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
     assert.equal(filtered[0].name, 'tut5');
   });
 
-  it('filter on platform, no locale provided', function() {
+  it('filter on platform, no locale provided', function () {
     const props = {
       filters: {
         platform: ['iphone']
@@ -212,7 +212,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
     assert.equal(filtered[1].name, 'tut6');
   });
 
-  it('filter on subject and language, use hideFilters', function() {
+  it('filter on subject and language, use hideFilters', function () {
     const props = {
       filters: {
         subject: ['history']
@@ -231,7 +231,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
     assert.equal(filtered[1].name, 'tut1');
   });
 
-  it('filter on subject and language, sort by displayweight', function() {
+  it('filter on subject and language, sort by displayweight', function () {
     const props = {
       filters: {
         subject: ['history']
@@ -248,7 +248,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
     assert.equal(filtered[2].name, 'tut1');
   });
 
-  it('filter on subject and language, sort by popularityrank', function() {
+  it('filter on subject and language, sort by popularityrank', function () {
     const props = {
       filters: {
         subject: ['history']
@@ -265,7 +265,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
     assert.equal(filtered[2].name, 'tut3');
   });
 
-  it('show only one language', function() {
+  it('show only one language', function () {
     const props = {
       filters: {},
       locale: 'gr-gr',
@@ -280,7 +280,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
     assert.equal(filtered[1].name, 'tut4');
   });
 
-  it('shows Minecraft as Codeorg tutorial', function() {
+  it('shows Minecraft as Codeorg tutorial', function () {
     const tutorialsWithMinecraft = tutorials.concat([
       {
         name: 'minecraft',
@@ -310,10 +310,9 @@ describe('TutorialExplorer filterTutorials tests', function() {
     assert.equal(filtered[0].name, 'minecraft');
   });
 
-  it('get unique orgnames', function() {
-    const uniqueOrgNames = TutorialExplorer.getUniqueOrgNamesFromTutorials(
-      tutorials
-    );
+  it('get unique orgnames', function () {
+    const uniqueOrgNames =
+      TutorialExplorer.getUniqueOrgNamesFromTutorials(tutorials);
 
     assert.equal(uniqueOrgNames.length, 3);
     assert.equal(uniqueOrgNames[0], 'code');
@@ -321,7 +320,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
     assert.equal(uniqueOrgNames[2], longOrgName);
   });
 
-  it('get tutorials by search term', function() {
+  it('get tutorials by search term', function () {
     const props = {
       filters: {},
       locale: 'en-us',
@@ -354,7 +353,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
     assert.equal(filtered3.length, 0);
   });
 
-  it('get tutorials by search term and subject filter', function() {
+  it('get tutorials by search term and subject filter', function () {
     const props = {
       filters: {
         subject: ['math']

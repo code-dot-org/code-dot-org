@@ -111,9 +111,8 @@ class ManageStudentsTable extends Component {
 
   constructor(props) {
     super(props);
-    this.renderTransferSuccessNotification = this.renderTransferSuccessNotification.bind(
-      this
-    );
+    this.renderTransferSuccessNotification =
+      this.renderTransferSuccessNotification.bind(this);
     this.studentDataMinusBlanks = this.studentDataMinusBlanks.bind(this);
     this.isMoveStudentsEnabled = this.isMoveStudentsEnabled.bind(this);
     this.passwordHeaderFormatter = this.passwordHeaderFormatter.bind(this);

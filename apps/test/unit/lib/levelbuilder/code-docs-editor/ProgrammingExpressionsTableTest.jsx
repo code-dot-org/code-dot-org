@@ -182,11 +182,7 @@ describe('ProgrammingExpressionsTable', () => {
       const fetchCount = fetchStub.callCount;
       expect(fetchCount).to.equal(1);
       wrapper.update();
-      const destroyButton = wrapper
-        .find('BodyRow')
-        .at(1)
-        .find('Button')
-        .at(2);
+      const destroyButton = wrapper.find('BodyRow').at(1).find('Button').at(2);
       destroyButton.simulate('click');
       expect(wrapper.find('StylizedBaseDialog').length).to.equal(1);
       expect(fetchStub.callCount).to.equal(fetchCount);
@@ -200,11 +196,7 @@ describe('ProgrammingExpressionsTable', () => {
     const wrapper = mount(<ProgrammingExpressionsTable {...defaultProps} />);
     return new Promise(resolve => setImmediate(resolve)).then(() => {
       wrapper.update();
-      const destroyButton = wrapper
-        .find('BodyRow')
-        .at(2)
-        .find('Button')
-        .at(1);
+      const destroyButton = wrapper.find('BodyRow').at(2).find('Button').at(1);
       destroyButton.simulate('click');
       expect(wrapper.find('CloneProgrammingExpressionDialog').length).to.equal(
         1

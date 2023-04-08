@@ -1102,8 +1102,46 @@ function checkInteractiveSpriteMovement() {
     }
 }
 
-function checkUsedWhenRun() {
-	console.log(getEventLog());
+
+/**
+ * Checks that a sprite has been moved from their default position in one given dimension by a given amount. 
+ * @returns {boolean} true if the sprite with the given `spriteID` moved an `amount` of pixels in a given `direction`
+ * @see [Click here for example](https://levelbuilder-studio.code.org/levels/44327?show_callouts=1)
+ * @example
+if (World.frameCount == 1) {
+
+  setFailTime(400); // Frames to wait before failing student
+  setDelayTime(90); // Frames to wait after success before stopping program
+  setupPrevious(); //Defines the validationProps.previous{} object. To use it, call updatePrevious() at the end of this box
+  
+  addCriteria(function() {
+    return spriteIds.length >= 1 && checkSpriteMoved(spriteIds[0], 'x', 30);
+  }, "didntMoveUp");  // include i18n feedback string
+
+}
+getHelperVars();
+check();
+updatePrevious();
+
+ */
+
+function checkSpriteMoved(spriteId, direction, amount) {
+	validationProps.initialPosition = validationProps.initialPosition || undefined;
+  	if (validationProps.initialPosition == undefined) {
+		validationProps.initialPosition = [];
+      	validationProps.initialPosition.push(locationOf({"id": spriteId}).x);
+      	validationProps.initialPosition.push(locationOf({"id": spriteId}).y);
+      	console.log(validationProps.initialPosition[1]);
+    }
+ 	if (!amount) { console.log("Amount missing or malformed from checkSpriteMoved call"); }
+  	var sign = 1;
+  	if (amount < 0) { sign = -1; }
+	if (direction !== 'x' && direction !== 'y') { console.log("Direction missing or malformated from checkSpriteMoved call"); }
+  	if (direction === 'x') {
+		return (sign*locationOf({"id": spriteId}).x - (sign * validationProps.initialPosition[0])) > Math.abs(amount);
+	} else if ( direction === 'y') {
+		return (-1*sign*locationOf({"id": spriteId}).y - (-1 * sign * validationProps.initialPosition[1])) > Math.abs(amount);
+    }
 }
 
 function checkSpriteHasBehavior(spriteId, behaviorString) {

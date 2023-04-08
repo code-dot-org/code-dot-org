@@ -36,7 +36,7 @@ store.dispatch(
   )
 );
 
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', function () {
   // Mount and render the letter:
   const mountPoint = document.createElement('div');
   document.body.appendChild(mountPoint);

@@ -186,11 +186,7 @@ const PrincipalApprovalComponent = props => {
           textFieldMap={{
             [TextFields.otherWithText]: 'other'
           }}
-          label={`Are you committed to including ${
-            teacherApplication.course
-          } on the master schedule in ${Year} if ${
-            teacherApplication.name
-          } is accepted into the program? Note: the program may be listed under a different course name as determined by your district.`}
+          label={`Are you committed to including ${teacherApplication.course} on the master schedule in ${Year} if ${teacherApplication.name} is accepted into the program? Note: the program may be listed under a different course name as determined by your district.`}
         />
         <LabeledRadioButtonsWithAdditionalTextFields
           name="replaceCourse"

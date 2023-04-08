@@ -102,8 +102,8 @@ export default class CensusTeacherBanner extends Component {
           'user[school_info_attributes][school_name]': this.state.schoolName,
           'user[school_info_attributes][school_state]': this.state.schoolState,
           'user[school_info_attributes][school_zip]': this.state.schoolZip,
-          'user[school_info_attributes][full_address]': this.state
-            .schoolLocation
+          'user[school_info_attributes][full_address]':
+            this.state.schoolLocation
         };
       } else {
         schoolData = {
@@ -168,7 +168,8 @@ export default class CensusTeacherBanner extends Component {
   isValid = () => {
     return (
       !this.props.teaches ||
-      (this.props.inClass === true || this.props.inClass === false)
+      this.props.inClass === true ||
+      this.props.inClass === false
     );
   };
 
@@ -330,9 +331,7 @@ export default class CensusTeacherBanner extends Component {
         ? this.state.ncesSchoolId
         : this.props.ncesSchoolId;
       const link = encodeURI(
-        `/yourschool?schoolId=${schoolId}&isTeacher=true&name=${
-          this.props.teacherName
-        }&email=${this.props.teacherEmail}#form`
+        `/yourschool?schoolId=${schoolId}&isTeacher=true&name=${this.props.teacherName}&email=${this.props.teacherEmail}#form`
       );
       buttons = (
         <div style={styles.buttonDiv}>

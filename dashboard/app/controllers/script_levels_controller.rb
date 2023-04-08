@@ -131,7 +131,7 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    if request.path != (canonical_path = build_script_level_path(@script_level, @extra_params))
+    if request.path != (canonical_path = build_script_level_path(@script_level, @extra_params)) && params[:view] != 'summary'
       canonical_path << "?#{request.query_string}" unless request.query_string.empty?
       redirect_to canonical_path, status: :moved_permanently
       return
@@ -144,6 +144,19 @@ class ScriptLevelsController < ApplicationController
 
     @level = select_level
     return if redirect_under_13_without_tos_teacher(@level)
+
+    # TODO: If this adds too much to the load time in prod, move it to an API.
+    if current_user&.teacher?
+      @responses = []
+      # We use this for the level summary entry point, so on contained levels
+      # what we actually care about are responses to the contained level.
+      level = @level.contained_levels.any? ? @level.contained_levels.first : @level
+
+      # TODO: Change/remove this check as we add support for more level types.
+      if level.is_a?(FreeResponse)
+        @responses = UserLevel.where(level: level, user: @section&.students)
+      end
+    end
 
     @body_classes = @level.properties['background']
 
@@ -456,7 +469,9 @@ class ScriptLevelsController < ApplicationController
     end
 
     if @level.try(:peer_reviewable?)
-      @peer_reviews = PeerReview.where(level: @level, submitter: current_user).where.not(data: nil, reviewer: nil)
+      @peer_reviews = PeerReview.where(
+        level: @level, submitter: current_user
+      ).where.not(data: nil).where.not(reviewer: nil)
     end
 
     @callback = milestone_script_level_url(
@@ -494,6 +509,7 @@ class ScriptLevelsController < ApplicationController
 
     view_options(
       full_width: true,
+      no_footer: @game&.no_footer?,
       small_footer: @game&.uses_small_footer? || @level&.enable_scrolling?,
       has_i18n: @game.has_i18n?,
       is_challenge_level: @script_level.challenge,

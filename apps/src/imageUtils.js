@@ -121,11 +121,11 @@ export async function toImage(input) {
 
   return new Promise((resolve, reject) => {
     let image = new Image();
-    image.onload = function() {
+    image.onload = function () {
       cleanup();
       resolve(image);
     };
-    image.onerror = function(err) {
+    image.onerror = function (err) {
       cleanup();
       reject(err);
     };

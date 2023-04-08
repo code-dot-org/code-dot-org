@@ -126,6 +126,18 @@ class Pd::WorkshopMailer < ActionMailer::Base
       reply_to: reply_to
   end
 
+  def teacher_pre_workshop_csa(enrollment)
+    @enrollment = enrollment
+    @workshop = enrollment.workshop
+    @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
+
+    mail content_type: 'text/html',
+      from: from_teacher,
+      subject: 'Preparing for your Computer Science A summer workshop',
+      to: email_address(@enrollment.full_name, @enrollment.email),
+      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+  end
+
   def facilitator_enrollment_reminder(user, workshop)
     @user = user
     @workshop = workshop
@@ -307,7 +319,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   end
 
   private def teacher_enrollment_subject(workshop)
-    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
+    if Pd::Workshop::COURSE_ADMIN_COUNSELOR == workshop.course
       "Your upcoming #{workshop.course_name} workshop"
     elsif workshop.local_summer?
       if @is_first_pre_survey_email
@@ -324,7 +336,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   end
 
   private def detail_change_notification_subject(workshop)
-    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
+    if Pd::Workshop::COURSE_ADMIN_COUNSELOR == workshop.course
       "Details for your upcoming #{workshop.course_name} workshop have changed"
     else
       'Details for your upcoming Code.org workshop have changed'
