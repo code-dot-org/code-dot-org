@@ -24,8 +24,8 @@ describe('firebaseMetadata', () => {
     return getConfigRef()
       .set({
         limits: {
-          '15': 5,
-          '60': 10
+          15: 5,
+          60: 10
         },
         maxRecordSize: 100,
         maxPropertySize: 100,

@@ -16,7 +16,7 @@ var NetSimSlider = require('./NetSimSlider');
  * @param {function} sliderChangeCallback
  * @constructor
  */
-var NetSimPulseRateControl = (module.exports = function(
+var NetSimPulseRateControl = (module.exports = function (
   rootDiv,
   initialValue,
   sliderChangeCallback
@@ -41,7 +41,7 @@ NetSimPulseRateControl.inherits(NetSimSlider.DecimalPrecisionSlider);
  * @returns {string} - localized string representation of value
  * @override
  */
-NetSimPulseRateControl.prototype.valueToLabel = function(val) {
+NetSimPulseRateControl.prototype.valueToLabel = function (val) {
   var rounded = Math.floor(val * 100) / 100;
   if (rounded === 1) {
     return i18n.xSecondPerPulse({x: rounded});
@@ -56,6 +56,6 @@ NetSimPulseRateControl.prototype.valueToLabel = function(val) {
  * @returns {string} - localized string representation of value
  * @override
  */
-NetSimPulseRateControl.prototype.valueToShortLabel = function(val) {
+NetSimPulseRateControl.prototype.valueToShortLabel = function (val) {
   return val;
 };

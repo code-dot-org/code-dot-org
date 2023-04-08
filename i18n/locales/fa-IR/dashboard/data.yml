@@ -693,6 +693,7 @@ fa:
         csa_nested_loops: 'CSA: حلقه‌های تودرتو'
         csa_one_dimensional_arrays: 'CSA: آرایه‌های یک بعدی (1D)'
         csa_polymorphism: 'CSA: چند شکلی'
+        csd_sprite_properties: ویژگی‌های اسپرایت
     callout:
       text:
         drag_blocks: یک بلوک "حرکت" را بکش و آن را زیر بلوک دیگری بچسبان

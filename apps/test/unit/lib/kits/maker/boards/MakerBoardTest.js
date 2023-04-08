@@ -3,8 +3,9 @@ import sinon from 'sinon';
 import {EventEmitter} from 'events'; // see node-libs-browser
 import {expect} from '../../../../../util/reconfiguredChai';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
-import FakeBoard from '@cdo/apps/lib/kits/maker/boards/FakeBoard';
+import VirtualCPBoard from '@cdo/apps/lib/kits/maker/boards/VirtualCPBoard';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
+import VirtualMBBoard from '@cdo/apps/lib/kits/maker/boards/VirtualMBBoard';
 
 /**
  * Interface that our board controllers must implement to be usable with
@@ -88,7 +89,7 @@ export function itImplementsTheMakerBoardInterface(
       beforeEach(() => {
         jsInterpreter = {
           globalProperties: {},
-          createGlobalProperty: function(key, value) {
+          createGlobalProperty: function (key, value) {
             jsInterpreter.globalProperties[key] = value;
           },
           addCustomMarshalObject: sinon.spy()
@@ -219,13 +220,16 @@ export function itImplementsTheMakerBoardInterface(
 
       it(`returns an Led component`, () => {
         const led = board.createLed(10);
-        // FakeBoard doesn't provide an LED component, so check the basic LED
+        // VirtualCPBoard doesn't provide an LED component, so check the basic LED
         // shape instead.
         expect(led.on).to.be.a('function');
         expect(led.off).to.be.a('function');
         expect(led.toggle).to.be.a('function');
 
-        if (BoardClass === CircuitPlaygroundBoard || BoardClass === FakeBoard) {
+        if (
+          BoardClass === CircuitPlaygroundBoard ||
+          BoardClass === VirtualCPBoard
+        ) {
           expect(led.blink).to.be.a('function');
           expect(led.pulse).to.be.a('function');
         }
@@ -257,7 +261,7 @@ export function itImplementsTheMakerBoardInterface(
       });
     });
 
-    if (BoardClass === MicroBitBoard) {
+    if (BoardClass === MicroBitBoard || BoardClass === VirtualMBBoard) {
       /**
        * @function
        * @name MakerBoard#createCapacitiveTouchSensor

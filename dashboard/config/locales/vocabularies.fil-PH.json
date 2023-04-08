@@ -149,8 +149,13 @@
         "code/aquatic/unversioned": {
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
+        "condition/aquatic/unversioned": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
+        },
         "conditionals/aquatic/unversioned": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "debugging/aquatic/unversioned": {
           "word": "Pagdedebug",
@@ -164,8 +169,29 @@
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Caesar Cipher ",
+          "definition": "pamamaraan sa pag-encrypt na nagbabago ng alpabeto sa ilang bilang ng mga karakter"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Cipher",
+          "definition": "ang pangkalahatang termino sa pamamaraan (o algorithm) na nagsasagawa ng pag-encrypt"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Pag-crack ng naka-encrypt",
+          "definition": "Kapag sinubukan mong i-decode ang lihim na mensahe nang hindi nalalaman ang lahat ng mga detalye ng cipher, sinusubukan mong \"i-crack\" ang naka-encrypt."
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Decryption",
+          "definition": "proseso na binabaligtad ang pag-encrypt, pagkuha ng lihim na mensahe at paggawa ng orihinal na plain text"
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Pag-Encrypt"
+          "word": "Pag-Encrypt",
+          "definition": "proseso ng pag-encode ng mga mensahe upang panatilihing lihim ang mga ito, kaya ang mga \"awtorisadong\" partido lang ang makakabasa nito."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Random na Pagpapalit ng Cipher",
+          "definition": "diskarte sa pag-encrypt na nagmamapa sa bawat titik ng alpabeto sa random na piniling iba pang mga titik ng alpabeto."
         },
         "code/starwars/unversioned": {
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
@@ -211,6 +237,10 @@
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Lossless Compression",
+          "definition": "isang data compression algorithm na nagbibigay-daan sa orihinal na data na ganap na mabuo mula sa naka-compress na data. Pinakakaraniwang ginagamit sa pag-compress ng text (hal. .zip compression)"
+        },
         "event/outbreak/unversioned": {
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
@@ -220,7 +250,8 @@
           "definition": "isang programa na nagrereplika o ginagaya ang mga pangunahing tampok ng isang totoong kaganapan sa mundo upang siyasatin ang pag-uugali nito nang walang gastos, oras, o panganib ng pagpapatakbo ng isang eksperimento sa totoong buhay."
         },
         "code/sports/unversioned": {
-          "word": "Code"
+          "word": "Code",
+          "definition": "(v) magsulat ng code o magsulat ng mga tagubilin sa computer."
         },
         "debugging/sports/unversioned": {
           "word": "Pagdedebug",
@@ -283,7 +314,8 @@
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "machine_learning/oceans/unversioned": {
-          "word": "Pag-Aaral Ng Makina"
+          "word": "Pag-Aaral Ng Makina",
+          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
         },
         "program/coursed/2022": {
           "word": "Program",
@@ -305,7 +337,12 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "conditionals/coursed/2022": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
+        },
+        "condition/coursed/2022": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
         },
         "behavior/coursef/2022": {
           "word": "Paggawi"
@@ -329,7 +366,8 @@
           "definition": "isang programa na nagrereplika o ginagaya ang mga pangunahing tampok ng isang totoong kaganapan sa mundo upang siyasatin ang pag-uugali nito nang walang gastos, oras, o panganib ng pagpapatakbo ng isang eksperimento sa totoong buhay."
         },
         "machine_learning/coursef/2022": {
-          "word": "Pag-Aaral Ng Makina"
+          "word": "Pag-Aaral Ng Makina",
+          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
         },
         "internet/coursef/2022": {
           "word": "Internet"
@@ -347,8 +385,12 @@
         "function/coursee/2022": {
           "word": "Function"
         },
+        "condition/coursee/2022": {
+          "word": "Condition"
+        },
         "conditionals/coursee/2022": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "copyright/coursee/2022": {
           "word": "Karapatang-ari"
@@ -394,8 +436,13 @@
           "word": "Loop",
           "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
+        "condition/express/2022": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
+        },
         "conditionals/express/2022": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "function/express/2022": {
           "word": "Function",
@@ -484,6 +531,9 @@
         "variable/csd/2022": {
           "word": "Variable"
         },
+        "condition/csd/2022": {
+          "word": "Condition"
+        },
         "conditionals/csd/2022": {
           "word": "Mga conditional"
         },
@@ -503,7 +553,8 @@
           "word": "Interface ng User"
         },
         "machine_learning/csd/2022": {
-          "word": "Pag-Aaral Ng Makina"
+          "word": "Pag-Aaral Ng Makina",
+          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
         },
         "code/poem-art/unversioned": {
           "word": "Code",
@@ -551,7 +602,8 @@
           "definition": "isang programa na nagrereplika o ginagaya ang mga pangunahing tampok ng isang totoong kaganapan sa mundo upang siyasatin ang pag-uugali nito nang walang gastos, oras, o panganib ng pagpapatakbo ng isang eksperimento sa totoong buhay."
         },
         "machine_learning/coursef/2021": {
-          "word": "Pag-Aaral Ng Makina"
+          "word": "Pag-Aaral Ng Makina",
+          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
         },
         "internet/coursef/2021": {
           "word": "Internet"
@@ -636,7 +688,12 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "conditionals/coursed/2021": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
+        },
+        "condition/coursed/2021": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
         },
         "debugging/express/2021": {
           "word": "Pagdedebug",
@@ -657,8 +714,13 @@
           "word": "Loop",
           "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
+        "condition/express/2021": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
+        },
         "conditionals/express/2021": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "function/express/2021": {
           "word": "Function",
@@ -707,14 +769,20 @@
           "word": "Function",
           "definition": "Isang piraso ng code na madali mong magagamit nang paulit-ulit."
         },
+        "condition/coursee/2021": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
+        },
         "conditionals/coursee/2021": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "define/coursee/2021": {
           "word": "magtakda"
         },
         "machine_learning/csd/2021": {
-          "word": "Pag-Aaral Ng Makina"
+          "word": "Pag-Aaral Ng Makina",
+          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
         },
         "user_interface/csd/2021": {
           "word": "Interface ng User"
@@ -729,6 +797,9 @@
         },
         "variable/csd/2021": {
           "word": "Variable"
+        },
+        "condition/csd/2021": {
+          "word": "Condition"
         },
         "conditionals/csd/2021": {
           "word": "Mga conditional"

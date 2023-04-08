@@ -23,6 +23,8 @@ pl:
           {STATEMENT}w przeciwnym razie jeśli w sam raz
           {STATEMENT3}w przeciwnym razie za mało
           {STATEMENT2}
+      AmysBlocks_makeNumSprites:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki {LOCATION}
       AmysBlocks_playerBehaviors:
         text: "{BEHAVIOR}"
         options:
@@ -1125,6 +1127,8 @@ pl:
         text: unikając celów
       gamelab_beginCollectingData:
         text: rozpocznij zbierać dane {BREAK} wartości {VALUE} z etykietami {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} odbija się od {TARGET}"
       gamelab_changePropBy:
@@ -1195,6 +1199,8 @@ pl:
         text: idąc za celami
       gamelab_getAllSprites:
         text: wszystkie duszki
+      gamelab_getCostume:
+        text: duszki z kostiumem {SPRITE}
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1351,6 +1357,8 @@ pl:
         text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
       gamelab_makeNumSprites:
         text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
+      gamelab_makeNumSpritesNear:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
       gamelab_makeProjectile:
         text: |-
           utworzyć pocisk
@@ -1613,7 +1621,7 @@ pl:
           narysuj tablicę wyników
           {SPRITE1COSTUME}wynik{VAR1}{SPRITE2COSTUME}wynik{VAR2}cel{SPRITE3COSTUME}
       gamelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4]
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME}
           z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       gamelab_showTitleScreen:
         text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} podtytuł {SUBTITLE}
@@ -1762,8 +1770,14 @@ pl:
         text: x współrzędna {SPRITE}
       gamelab_yLocationOf:
         text: współrzędna y {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} skocz do {LOCATION}"
+      KatiesBlocks_makeNumSpritesNear:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
       KatiesBlocks_spriteBirdSay:
         text: "{SPRITE} mówi {SPEECH}"
+      KatiesBlocks_tumbling:
+        text: gimnastykowanie się
       Mikelab_addBehaviorSimple:
         text: duszek {SPRITE} rozpoczyna {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2034,7 +2048,7 @@ pl:
           populacja:{SPRITE2N}
           {TOGGLE}wirus
       Mikelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4]
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME}
           z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       Mikelab_showScoreboard:
         options:
@@ -2425,8 +2439,6 @@ pl:
         text: skręć w lewo
       RyanLab_turnRight:
         text: skręć w prawo
-      SpriteLab2Beta_spriteSay:
-        text: duszek {SPRITE} mówi {TEXT} przez {SECONDS} sekund
       Vector_createSpriteWith:
         text: |-
           utwórz duszka
@@ -2557,6 +2569,18 @@ pl:
             new Behavior(wobbling, []): chybotanie
             new Behavior(wandering, []): wędrowanie
             new Behavior(patrolling, []): patrolowanie
+      adaptations_makeNumSpritesNear:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
+      adaptations_spriteBirdSay:
+        text: "{SPRITE} mówi {SPEECH}"
+      adaptations_startFollowing:
+        text: "{SPRITE} zaczyna podążać {TARGET}"
+      adaptations_toggleBehaviorSimple:
+        text: duszek {SPRITE} {TOGGLE} {BEHAVIOR}
+        options:
+          TOGGLE:
+            '"begins"': zaczyna się
+            '"stops"': zatrzymuje się
       binary_drawBin:
         text: narysuj binarny {BIN}
       binary_drawBinScreen:
@@ -2717,7 +2741,3 @@ pl:
         text: monit użytkownika {QUESTION} o zmienną {VAR} z wyborem {A}
       storylab_setSubheading:
         text: ustaw podtytuł {SUBHEADING}
-      validation_validatedBackground:
-        text: ustaw tło na {IMG}
-      validation_validatedSound:
-        text: PLAYSound {SOUND}

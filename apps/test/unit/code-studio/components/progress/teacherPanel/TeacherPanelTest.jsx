@@ -15,7 +15,10 @@ import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
 import * as teacherPanelData from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
 
-const students = [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}];
+const students = [
+  {id: 1, name: 'Student 1'},
+  {id: 2, name: 'Student 2'}
+];
 
 const DEFAULT_PROPS = {
   unitName: 'A unit',
@@ -167,7 +170,7 @@ describe('TeacherPanel', () => {
   it('loads initial data and calls get/set lock status', async () => {
     const teacherSections = [{id: 1, name: 'CSF section'}];
     const sectionLockStatus = {
-      '1': {
+      1: {
         section_id: 1,
         section_name: 'CSF section',
         lessons: []
@@ -286,10 +289,7 @@ describe('TeacherPanel', () => {
     });
 
     it('on level displays SelectedStudentInfo when students have loaded, passes expected props', () => {
-      sinon
-        .stub(utils, 'queryParams')
-        .withArgs('user_id')
-        .returns('1');
+      sinon.stub(utils, 'queryParams').withArgs('user_id').returns('1');
 
       const wrapper = setUp({
         viewAs: ViewType.Instructor,

@@ -140,10 +140,8 @@ class LessonProgress extends Component {
     // Bonus levels should not count towards mastery.
     levels = levels.filter(level => !level.bonus);
 
-    const {
-      headerFullProgressOffset,
-      vignetteStyle
-    } = this.getFullProgressOffset();
+    const {headerFullProgressOffset, vignetteStyle} =
+      this.getFullProgressOffset();
 
     const onBonusLevel = this.isOnBonusLevel();
 

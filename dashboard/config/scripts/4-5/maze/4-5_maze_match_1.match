@@ -18,3 +18,5 @@ question '/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png'
 
 #question '/script_assets/4-5_images/maze/4-5_maze_match_1_q4.png'
 #  answer '/script_assets/4-5_images/maze/4-5_maze_match_1_a4.png'
+
+allow_multiple_attempts true

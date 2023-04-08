@@ -984,6 +984,8 @@ bg:
         text: избягване на цели
       gamelab_beginCollectingData:
         text: започни да събираш данни {BREAK} стойност {VALUE} с етикет {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} отскача от {TARGET}"
       gamelab_changePropBy:
@@ -1524,6 +1526,8 @@ bg:
         text: х координат на {SPRITE}
       gamelab_yLocationOf:
         text: y координат на {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} се плъзга до {LOCATION}"
       Mikelab_addBehaviorSimple:
         text: спрайт {SPRITE} започва да {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2005,8 +2009,6 @@ bg:
         text: завий наляво
       RyanLab_turnRight:
         text: завий надясно
-      SpriteLab2Beta_spriteSay:
-        text: спрайт {SPRITE} казва {TEXT} за {SECONDS} секунди
       Vector_positionCenter:
         text: център
       Vector_push:
@@ -2102,6 +2104,8 @@ bg:
             new Behavior(wobbling, []): люлеене
             new Behavior(wandering, []): блуждаейки
             new Behavior(patrolling, []): патрулиране
+      adaptations_startFollowing:
+        text: "{SPRITE} започва да следва {TARGET}"
       binary_drawBinScreen:
         text: рисуване на екран
       binary_drawPixelHere:
@@ -2239,5 +2243,3 @@ bg:
         text: задай заглавие {HEADING}
       storylab_setSubheading:
         text: задай подзаглавие {SUBHEADING}
-      validation_validatedSound:
-        text: ПУСНИзвук {SOUND}

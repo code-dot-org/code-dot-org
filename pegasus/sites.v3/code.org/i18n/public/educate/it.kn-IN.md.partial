@@ -101,15 +101,25 @@ Code.org ಮತ್ತು ನಮ್ಮ [ಆನ್‌ಲೈನ್ ಕಲಿಕೆ 
 
 ನೀವು Code.org ನ ಆನ್‌ಲೈನ್ ಕೋರ್ಸ್‌ಗಳನ್ನು ಪ್ರಾರಂಭಿಸುವ ಮೊದಲು, ನೀವು ಹೋಗಲು ಉತ್ತಮವಾಗಿರುವಿರಿ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಕೆಳಗಿನ ವೀಡಿಯೊದ ಪ್ಲೇಬ್ಯಾಕ್ ಅನ್ನು ಪರೀಕ್ಷಿಸಿ.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
-ಪಠ್ಯಕ್ರಮದ ಉದ್ದಕ್ಕೂ ಬಳಸುವ ಪ್ಲೇಯರ್ ಇದು. ಇದು YouTube ಮೂಲಕ ವೀಡಿಯೊವನ್ನು ತೋರಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತದೆ ಮತ್ತು YouTube ಅನ್ನು ನಿರ್ಬಂಧಿಸಿದರೆ, ಬದಲಿಗೆ ನಮ್ಮ "ಫಾಲ್‌ಬ್ಯಾಕ್" ಪ್ಲೇಯರ್ ಅನ್ನು ಬಳಸಿಕೊಂಡು Code.org ಹೋಸ್ಟ್ ಮಾಡಿದ ವೀಡಿಯೊವನ್ನು ತೋರಿಸುತ್ತದೆ.
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
+
+This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
 
 ### ವೀಡಿಯೊ ಪ್ಲೇ ಆಗುತ್ತಿಲ್ಲವೇ?
 
-ವೀಡಿಯೊ ಕಾರ್ಯನಿರ್ವಹಿಸದಿದ್ದರೆ, ನೀವು support@code.org ನಲ್ಲಿ ನಮಗೆ ಇಮೇಲ್ ಮಾಡಬಹುದು.
+If video does not work, you can email us at support@code.org.
 
-ಆದಾಗ್ಯೂ, ನೀವು ಇನ್ನೂ ನಮ್ಮ ಟ್ಯುಟೋರಿಯಲ್‌ಗಳನ್ನು ವೀಡಿಯೊ ಇಲ್ಲದೆ ಬಳಸಬಹುದು.
+However, you can still use our tutorials without video.
 
 1. ನಾವು ನಮ್ಮ ಎಲ್ಲಾ ವೀಡಿಯೊಗಳನ್ನು [ಒಟ್ಟಿಗೆ ಡೌನ್‌ಲೋಡ್ ಮಾಡಲು ಲಭ್ಯವಾಗುವಂತೆ](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH) ಮಾಡಿದ್ದೇವೆ. ನಿಮ್ಮ ಶಾಲೆಯು ಕಡಿಮೆ ಬ್ಯಾಂಡ್‌ವಿಡ್ತ್ ಹೊಂದಿದ್ದರೆ, ನೀವು ವೀಡಿಯೊಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಲು ಮತ್ತು ಅವುಗಳನ್ನು ಹಂಚಿಕೊಂಡ ಪರದೆಯಲ್ಲಿ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ತೋರಿಸಲು ನಾವು ಶಿಫಾರಸು ಮಾಡುತ್ತೇವೆ.
 2. ನಮ್ಮ ಟ್ಯುಟೋರಿಯಲ್‌ಗಳಲ್ಲಿ ಸಂಯೋಜಿಸಲಾಗಿದೆ, ನಾವು ಪ್ರತಿ ವೀಡಿಯೊಗೆ ಹಸಿರು ಡೌನ್‌ಲೋಡ್ ಲಿಂಕ್ ಐಕಾನ್ ಅನ್ನು ಸೇರಿಸಿದ್ದೇವೆ, ಇದು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ <img src="/images/green-download.png" width=25 height=25 />ಪ್ರತ್ಯೇಕ ಟ್ಯುಟೋರಿಯಲ್ ವೀಡಿಯೊಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಲು ಅನುವು ಮಾಡಿಕೊಡುತ್ತದೆ.
@@ -119,8 +129,8 @@ Code.org ಮತ್ತು ನಮ್ಮ [ಆನ್‌ಲೈನ್ ಕಲಿಕೆ 
 
 ## Google Apps/G-Suite ಬಳಕೆದಾರರಿಗಾಗಿ ವಿಶೇಷ ಸೆಟ್ಟಿಂಗ್‌ಗಳು
 
-ನೀವು ಜಿ-ಸೂಟ್ ನಿರ್ವಾಹಕರಾಗಿದ್ದರೆ, YouTube ಗಾಗಿ ನಿಮ್ಮ ನಿರ್ಬಂಧದ ಸೆಟ್ಟಿಂಗ್‌ಗಳು ಏನೆಂದು ಪರೀಕ್ಷಿಸಲು ಮರೆಯದಿರಿ. ನೀವು "ಕಟ್ಟುನಿಟ್ಟಾದ ನಿರ್ಬಂಧಿತ YouTube ಪ್ರವೇಶ" ಸೆಟ್ಟಿಂಗ್ ಅನ್ನು ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ್ದರೆ ಅಥವಾ 'ಈ ವೀಡಿಯೊವನ್ನು ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ' ಎಂಬ ಸಂದೇಶಗಳನ್ನು ನೀವು ನೋಡಿದರೆ, ನೀವು ನಮ್ಮ ಚಾನಲ್ ಅನ್ನು ಅನುಮೋದಿತ ಚಾನಲ್‌ಗಳ ಪಟ್ಟಿಗೆ ಸೇರಿಸಬಹುದು. ಅನುಮೋದಿತ ಪಟ್ಟಿಗೆ ನಮ್ಮ ಚಾನಲ್ ಅನ್ನು ಹೇಗೆ ಸೇರಿಸುವುದು ಎಂಬುದರ ಕುರಿತು ತಿಳಿಯಲು Google ನಿಂದ [ಈ ಮಾರ್ಗದರ್ಶಿಯನ್ನು](https://support.google.com/a/answer/6245597) ನೋಡಿ. ವಿಭಿನ್ನ ಸೆಟ್ಟಿಂಗ್‌ಗಳ ಕುರಿತು ಮತ್ತು ನಿಮ್ಮ ತರಗತಿಗೆ ಯಾವುದು ಉತ್ತಮ ಎಂಬುದರ ಕುರಿತು ಇನ್ನಷ್ಟು ತಿಳಿದುಕೊಳ್ಳಲು ನೀವು [ಈ ಮಾರ್ಗದರ್ಶಿಯನ್ನು](https://support.google.com/a/answer/6212415?hl=en) ಸಹ ನೋಡಬಹುದು.
+If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
 
 ## ಇನ್ನೂ ತೊಂದರೆ ಇದೆಯೇ?
 
-ನಾವು ನಿಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತೇವೆ - support@code.org ನಲ್ಲಿ ನಮಗೆ ಇಮೇಲ್ ಮಾಡಿ!
+We'll help you out - just email us at support@code.org!

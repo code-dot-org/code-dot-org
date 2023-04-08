@@ -45,7 +45,7 @@ makerApi.injectExecuteCmd(applabExecuteCmd);
  * Generate a list of screen ids for our setScreen dropdown
  */
 function getScreenIds() {
-  var ret = elementUtils.getScreens().map(function() {
+  var ret = elementUtils.getScreens().map(function () {
     return '"' + elementUtils.getId(this) + '"';
   });
 
@@ -59,7 +59,7 @@ function getScreenIds() {
  * @returns {function} Dropdown function that returns a list of ids for the selector
  */
 function idDropdownWithSelector(selector) {
-  return function() {
+  return function () {
     return Applab.getIdDropdown(selector);
   };
 }
@@ -199,7 +199,7 @@ export var blocks = [
     paletteParams: ['id', 'url'],
     params: ['"id"', '"https://code.org/images/logo.png"'],
     dropdown: {
-      1: function() {
+      1: function () {
         return getAssetDropdown('image');
       }
     },
@@ -212,7 +212,7 @@ export var blocks = [
     paletteParams: ['id'],
     params: ['"id"'],
     dropdown: {
-      0: function() {
+      0: function () {
         return [
           ...idDropdownWithSelector('img')(),
           ...idDropdownWithSelector('.img-upload')()

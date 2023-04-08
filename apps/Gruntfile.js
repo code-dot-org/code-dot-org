@@ -88,6 +88,7 @@ describe('entry tests', () => {
     'spritelab',
     'jigsaw',
     'maze',
+    'music',
     'netsim',
     'poetry',
     'studio',
@@ -145,10 +146,6 @@ describe('entry tests', () => {
       return;
     }
   }
-
-  config.clean = {
-    all: ['build'],
-  };
 
   config.copy = {
     src: {
@@ -448,9 +445,9 @@ describe('entry tests', () => {
   // so that bundled files will be properly served.
   // this is the source of the following warning, which can be ignored:
   // "All files matched by "/tmp/_karma_webpack_425424/**/*" were excluded or matched by prior matchers."
+  const webpackOutputBasePath = path.join(os.tmpdir(), '_karma_webpack_');
   const webpackOutputPath =
-    path.join(os.tmpdir(), '_karma_webpack_') +
-    Math.floor(Math.random() * 1000000);
+    webpackOutputBasePath + Math.floor(Math.random() * 1000000);
   const webpackOutputPublicPath = '/webpack_output/';
 
   config.karma = {
@@ -568,6 +565,17 @@ describe('entry tests', () => {
     },
   };
 
+  config.clean = {
+    build: ['build'],
+    // The karma-webpack-backed unit tests generate several hundred megabytes
+    // worth of assets in /tmp/ on each run which will accumulate indefinitely
+    // on our persistent test server unless we clean them up.
+    unitTest: {
+      options: {force: true},
+      src: [webpackOutputBasePath + '*']
+    }
+  };
+
   var appsEntries = _.fromPairs(
     appsToBuild.map(function (app) {
       return [app, './src/sites/studio/pages/levels-' + app + '-main.js'];
@@ -620,6 +628,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/layouts/_parent_email_banner.js',
     'layouts/_race_interstitial':
       './src/sites/studio/pages/layouts/_race_interstitial.js',
+    'layouts/_section_creation_celebration_dialog':
+      './src/sites/studio/pages/layouts/_section_creation_celebration_dialog.js',
     'layouts/_school_info_confirmation_dialog':
       './src/sites/studio/pages/layouts/_school_info_confirmation_dialog.js',
     'layouts/_school_info_interstitial':
@@ -1407,6 +1417,7 @@ describe('entry tests', () => {
     'exec:convertScssVars',
     'exec:generateSharedConstants',
     'karma:unit',
+    'clean:unitTest'
   ]);
 
   grunt.registerTask('storybookTest', ['karma:storybook']);

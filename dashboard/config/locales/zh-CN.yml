@@ -322,7 +322,7 @@ zh-CN:
         personal_login_created_username: 您已成功创建了个人账号。您现在可以使用用户名(%{username}) 和密码登录。
   nav:
     header:
-      finished_hoc: 完成了！
+      finished_hoc: 我已经完成了我的Hour of Code项目。
       sign_in_to_save: 登录以保存进度
       my_dashboard: 我的控制面板
       course_catalog: 课程分类

@@ -342,7 +342,10 @@ describe('block utils', () => {
       `);
   });
 
-  const TEST_SPRITES = [['dog', '"dog"'], ['cat', '"cat"']];
+  const TEST_SPRITES = [
+    ['dog', '"dog"'],
+    ['cat', '"cat"']
+  ];
 
   describe('interpolateInputs', () => {
     let fakeBlockly, fakeBlock, fakeInput;
@@ -1143,9 +1146,8 @@ describe('block utils', () => {
         const fakeBlock = {
           getFieldValue: () => 'some input with a "quote" in it'
         };
-        const code = generator['test_processAnotherStringValue'].bind(
-          fakeBlock
-        )();
+        const code =
+          generator['test_processAnotherStringValue'].bind(fakeBlock)();
 
         expect(code.trim()).to.equal(
           'processAnotherStringValue("some input with a \\"quote\\" in it");'

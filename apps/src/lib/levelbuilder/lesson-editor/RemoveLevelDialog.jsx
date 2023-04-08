@@ -62,10 +62,7 @@ export class UnconnectedRemoveLevelDialog extends Component {
   }
 }
 
-const RemoveLevelDialog = connect(
-  state => ({}),
-  {
-    removeLevel
-  }
-)(UnconnectedRemoveLevelDialog);
+const RemoveLevelDialog = connect(state => ({}), {
+  removeLevel
+})(UnconnectedRemoveLevelDialog);
 export default RemoveLevelDialog;

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
 import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
@@ -8,6 +7,8 @@ import TimelineSimple2Events from './TimelineSimple2Events';
 import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
 import {PlayerUtilsContext} from '../context';
+import {useDispatch, useSelector} from 'react-redux';
+import {clearSelectedBlockId} from '../redux/musicRedux';
 
 const barWidth = 60;
 const minNumMeasures = 30;
@@ -17,12 +18,12 @@ const eventVerticalSpace = 2;
 /**
  * Renders the music playback timeline.
  */
-const Timeline = ({
-  isPlaying,
-  currentPlayheadPosition,
-  selectedBlockId,
-  onBlockSelected
-}) => {
+const Timeline = () => {
+  const isPlaying = useSelector(state => state.music.isPlaying);
+  const dispatch = useDispatch();
+  const currentPlayheadPosition = useSelector(
+    state => state.music.currentPlayheadPosition
+  );
   const playerUtils = useContext(PlayerUtilsContext);
   const measuresToDisplay = Math.max(
     minNumMeasures,
@@ -52,9 +53,6 @@ const Timeline = ({
     : null;
 
   const timelineElementProps = {
-    currentPlayheadPosition,
-    selectedBlockId,
-    onBlockSelected,
     barWidth,
     eventVerticalSpace,
     getEventHeight
@@ -71,7 +69,7 @@ const Timeline = ({
       <div
         id="timeline-container"
         className={moduleStyles.container}
-        onClick={() => onBlockSelected(undefined)}
+        onClick={() => dispatch(clearSelectedBlockId())}
       >
         <div className={moduleStyles.fullWidthOverlay}>
           {arrayOfMeasures.map((measure, index) => {
@@ -127,12 +125,6 @@ const Timeline = ({
   );
 };
 
-Timeline.propTypes = {
-  isPlaying: PropTypes.bool.isRequired,
-  currentPlayheadPosition: PropTypes.number.isRequired,
-  selectedBlockId: PropTypes.string,
-  onBlockSelected: PropTypes.func,
-  sounds: PropTypes.array
-};
+Timeline.propTypes = {};
 
 export default Timeline;

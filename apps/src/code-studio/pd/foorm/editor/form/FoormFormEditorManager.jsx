@@ -154,9 +154,7 @@ class FoormFormEditorManager extends React.Component {
     }
     if (this.state.libraryError) {
       errors.push(
-        `There is an error in the use of at least one library question. The error is: ${
-          this.state.libraryErrorMessage
-        }`
+        `There is an error in the use of at least one library question. The error is: ${this.state.libraryErrorMessage}`
       );
     }
 
@@ -168,9 +166,7 @@ class FoormFormEditorManager extends React.Component {
       this.props.formName && (
         <div>
           <h2 style={styles.surveyTitle}>
-            {`Form Name: ${this.props.formName}, version ${
-              this.props.formVersion
-            }`}
+            {`Form Name: ${this.props.formName}, version ${this.props.formVersion}`}
           </h2>
           <h3 style={styles.surveyState}>
             {`Form State: ${

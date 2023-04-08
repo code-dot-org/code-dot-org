@@ -1046,6 +1046,8 @@ ko:
         text: 대상 피하기
       gamelab_beginCollectingData:
         text: 데이터 {BREAK} 값 {VALUE}을 라벨 {LABEL}로 수집하기 시작합니다
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE}가 {TARGET}에서 벗어나 튕겨집니다"
       gamelab_changePropBy:
@@ -1659,6 +1661,10 @@ ko:
         text: x 좌표 {SPRITE}
       gamelab_yLocationOf:
         text: y 좌표 {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE}이(가) {LOCATION}(으)로 글라이딩"
+      KatiesBlocks_tumbling:
+        text: 텀블링
       Mikelab_addBehaviorSimple:
         text: 스프라이트 {SPRITE} 시작 {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2236,8 +2242,6 @@ ko:
         text: 왼쪽으로 회전
       RyanLab_turnRight:
         text: 오른쪽으로 회전
-      SpriteLab2Beta_spriteSay:
-        text: 스프라이트 {SPRITE} 말할 {TEXT} 에 대 한 {SECONDS} 초
       Vector_createSpriteWith:
         text: |-
           스프라이트 만들기
@@ -2297,6 +2301,8 @@ ko:
             new Behavior(wobbling, []): 흔들림
             new Behavior(wandering, []): 배회
             new Behavior(patrolling, []): 순찰
+      adaptations_startFollowing:
+        text: "{SPRITE}이(가) {TARGET}을(를) 팔로잉하기 시작함"
       binary_drawBin:
         text: 바이너리 그리기 {BIN}
       binary_drawBinScreen:
@@ -2424,5 +2430,3 @@ ko:
         text: "{HEADING} 헤딩 설정"
       storylab_setSubheading:
         text: "{SUBHEADING} 서브 헤딩 설정"
-      validation_validatedBackground:
-        text: 배경을 {IMG}으로 설정

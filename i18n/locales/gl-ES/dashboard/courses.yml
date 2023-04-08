@@ -32,3 +32,12 @@ gl:
           description_short: Un curso introdutorio da ciencias da información que permite os estudantes crear artefactos auténticos.
         mike-test:
           title: Fundamentos de Informática
+    resources:
+      curriculum/csd/2020:
+        name: Currículo
+      curriculum/csd/2017:
+        name: Currículo
+      curriculum/csd/2019:
+        name: Currículo
+      curriculum/csd/2018:
+        name: Currículo

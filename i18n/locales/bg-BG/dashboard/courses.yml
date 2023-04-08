@@ -32,3 +32,20 @@ bg:
           version_title: "'19-'20"
         mike-test:
           title: Основи на компютърните науки
+    resources:
+      curriculum/csd/2020:
+        name: Учебна програма
+      teacher_forum/csd/2020:
+        name: Учителски форум
+      curriculum/csd/2017:
+        name: Учебна програма
+      teacher_forum_6/csd/2017:
+        name: Учителски форум
+      curriculum/csd/2019:
+        name: Учебна програма
+      teacher_forum/csd/2019:
+        name: Учителски форум
+      curriculum/csd/2018:
+        name: Учебна програма
+      teacher_forum_6/csd/2018:
+        name: Учителски форум

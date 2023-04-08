@@ -72,7 +72,7 @@ var header = {};
  * @param {boolean} isLessonExtras Boolean indicating we are not on a script
  *   level and therefore are on lesson extras
  */
-header.build = function(
+header.build = function (
   scriptData,
   lessonGroupData,
   lessonData,
@@ -110,7 +110,7 @@ header.build = function(
   // to potentially begin before we first render HeaderMiddle, giving HeaderMiddle
   // the opportunity to wait until the app is loaded before rendering.
   const store = getStore();
-  $(document).ready(function() {
+  $(document).ready(function () {
     ReactDOM.render(
       <Provider store={store}>
         <HeaderMiddle
@@ -134,7 +134,7 @@ header.build = function(
   });
 };
 
-header.buildProjectInfoOnly = function() {
+header.buildProjectInfoOnly = function () {
   ReactDOM.render(
     <Provider store={getStore()}>
       <HeaderMiddle projectInfoOnly={true} />
@@ -145,7 +145,7 @@ header.buildProjectInfoOnly = function() {
 
 // When viewing the level page in code review mode, we want to show only the
 // lesson information (which is displayed by the ScriptName component).
-header.buildScriptNameOnly = function(scriptNameData) {
+header.buildScriptNameOnly = function (scriptNameData) {
   ReactDOM.render(
     <Provider store={getStore()}>
       <HeaderMiddle scriptNameData={scriptNameData} scriptNameOnly={true} />
@@ -156,7 +156,7 @@ header.buildScriptNameOnly = function(scriptNameData) {
 
 // When the page is cached, this function is called to retrieve and set the
 // sign-in button or user menu in the DOM.
-header.buildUserMenu = function() {
+header.buildUserMenu = function () {
   // Need to wait until the document is ready so we can accurately check to see
   // if the create menu is present.
   $(document).ready(() => {
@@ -224,12 +224,12 @@ function setUpGlobalData(store) {
 }
 setUpGlobalData(getStore());
 
-header.showMinimalProjectHeader = function() {
+header.showMinimalProjectHeader = function () {
   getStore().dispatch(refreshProjectName());
   getStore().dispatch(showMinimalProjectHeader());
 };
 
-header.showLevelBuilderSaveButton = function(
+header.showLevelBuilderSaveButton = function (
   getChanges,
   overrideHeaderText,
   overrideOnSaveURL
@@ -249,7 +249,7 @@ header.showLevelBuilderSaveButton = function(
  *   showExport: boolean
  * }}
  */
-header.showHeaderForProjectBacked = function(options) {
+header.showHeaderForProjectBacked = function (options) {
   if (options.showShareAndRemix) {
     getStore().dispatch(showProjectBackedHeader());
   }
@@ -258,13 +258,13 @@ header.showHeaderForProjectBacked = function(options) {
   header.updateTimestamp();
 };
 
-header.showProjectHeader = function() {
+header.showProjectHeader = function () {
   header.updateTimestamp();
   getStore().dispatch(refreshProjectName());
   getStore().dispatch(showProjectHeader());
 };
 
-header.updateTimestamp = function() {
+header.updateTimestamp = function () {
   const timestamp = dashboard.project.getCurrentTimestamp();
   getStore().dispatch(setProjectUpdatedAt(timestamp));
 };

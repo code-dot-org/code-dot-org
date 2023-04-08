@@ -17,7 +17,7 @@ describe('SchoolInfoInterstitial', () => {
       authTokenValue: 'fake_auth_token',
       existingSchoolInfo: {}
     },
-    onClose: function() {}
+    onClose: function () {}
   };
 
   beforeEach(() => sinon.stub(firehoseClient, 'putRecord'));

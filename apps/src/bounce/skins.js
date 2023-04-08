@@ -232,7 +232,7 @@ var CONFIGS = {
   }
 };
 
-exports.load = function(assetUrl, id) {
+exports.load = function (assetUrl, id) {
   var skin = skinsBase.load(assetUrl, id);
   var config = CONFIGS[skin.id];
 
@@ -295,7 +295,8 @@ exports.load = function(assetUrl, id) {
   skin.obstacle = skin.assetUrl(config.obstacle || 'obstacle.png');
   skin.background = skin.assetUrl(config.background || 'background.png');
 
-  skin.nonDisappearingPegmanHittingObstacle = !!config.nonDisappearingPegmanHittingObstacle;
+  skin.nonDisappearingPegmanHittingObstacle =
+    !!config.nonDisappearingPegmanHittingObstacle;
 
   skin.obstacleScale = config.obstacleScale || 1.0;
 

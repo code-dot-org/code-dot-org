@@ -31,7 +31,7 @@ function saySpriteRequiredBlock(options) {
 
   return [
     {
-      test: function(block) {
+      test: function (block) {
         if (block.type !== 'studio_saySprite') {
           return false;
         }
@@ -76,7 +76,7 @@ function moveRequiredBlock(options) {
 
   return [
     {
-      test: function(block) {
+      test: function (block) {
         if (block.type !== 'studio_move') {
           return false;
         }
@@ -216,7 +216,7 @@ levels.dog_hello = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.sayComplete > 0;
     }
   },
@@ -236,7 +236,7 @@ levels.playlab_1 = extend(levels.dog_hello, {
   timeoutAfterWhenRun: true,
   firstSpriteIndex: 2, // penguin
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 0;
     }
   },
@@ -285,7 +285,7 @@ levels.dog_and_cat_hello = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.sayComplete > 1;
     }
   },
@@ -306,7 +306,7 @@ levels.playlab_2 = extend(levels.dog_and_cat_hello, {
   timeoutAfterWhenRun: true,
   defaultEmotion: Emotions.HAPPY,
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;
     }
   },
@@ -363,7 +363,7 @@ levels.dog_move_cat = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1);
     }
   },
@@ -379,7 +379,7 @@ levels.k1_3 = extend(levels.dog_move_cat, {
   requiredBlocks: [
     [
       {
-        test: function(block) {
+        test: function (block) {
           return block.type === 'studio_moveEastDistance';
         },
         type: 'studio_moveEastDistance'
@@ -468,7 +468,7 @@ levels.dog_move_cat_hello = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.sayComplete > 0 && Studio.sprite[0].isCollidingWith(1);
     }
   },
@@ -486,7 +486,7 @@ levels.k1_4 = extend(levels.dog_move_cat_hello, {
   requiredBlocks: [
     [
       {
-        test: function(block) {
+        test: function (block) {
           return block.type === 'studio_moveEastDistance';
         },
         type: 'studio_moveEastDistance'
@@ -494,7 +494,7 @@ levels.k1_4 = extend(levels.dog_move_cat_hello, {
     ],
     [
       {
-        test: function(block) {
+        test: function (block) {
           // Make sure they have the right block, and have changed the default
           // text
           return (
@@ -544,7 +544,7 @@ levels.playlab_4 = {
   timeoutFailureTick: 100,
   timeoutAfterWhenRun: true,
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.playSoundCount > 0 && Studio.sprite[0].isCollidingWith(1);
     }
   },
@@ -603,7 +603,7 @@ levels.click_hello = {
   ],
   firstSpriteIndex: 4,
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       if (!this.successState.seenCmd) {
         this.successState.seenCmd = Studio.isCmdCurrentInQueue(
           'saySprite',
@@ -677,7 +677,7 @@ levels.octopus_happy = {
   ],
   firstSpriteIndex: 4,
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return (
         Studio.sprite[0].emotion === Emotions.HAPPY && Studio.tickCount >= 50
       );
@@ -894,7 +894,7 @@ levels.playlab_7 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       // successful after a given period of time as long as we've used all
       // required blocks. this number has us go back and forth twice, and end
       // facing forward
@@ -914,7 +914,7 @@ levels.playlab_7 = {
   requiredBlocks: [
     [
       {
-        test: function(b) {
+        test: function (b) {
           return (
             b.type === 'studio_moveDistance' && b.getFieldValue('DIR') === '2'
           );
@@ -925,7 +925,7 @@ levels.playlab_7 = {
     ],
     [
       {
-        test: function(b) {
+        test: function (b) {
           return (
             b.type === 'studio_moveDistance' && b.getFieldValue('DIR') === '8'
           );
@@ -994,7 +994,7 @@ levels.penguin_ouch = {
   firstSpriteIndex: 2,
   minWorkspaceHeight: 900,
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1);
     }
   },
@@ -1060,7 +1060,7 @@ levels.penguin_touch_octopus = {
   firstSpriteIndex: 2,
   minWorkspaceHeight: 1050,
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.sprite[0].isCollidingWith(2);
     }
   },
@@ -1136,10 +1136,10 @@ levels.playlab_8 = {
   avatarList: ['unicorn', 'wizard'],
   defaultEmotion: Emotions.HAPPY,
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore === 1;
     },
-    failureCondition: function() {
+    failureCondition: function () {
       return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore !== 1;
     }
   },
@@ -1220,7 +1220,7 @@ levels.change_background_and_speed = {
   firstSpriteIndex: 2,
   minWorkspaceHeight: 1250,
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.sprite[0].isCollidingWith(2);
     }
   },
@@ -1310,7 +1310,7 @@ levels.playlab_9 = {
   softButtons: ['leftButton', 'rightButton', 'downButton', 'upButton'],
   avatarList: ['spacebot', 'alien'],
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1);
     }
   },
@@ -1952,83 +1952,35 @@ levels.js_hoc2015_move_right = {
   floatingScore: true,
   map: [
     [
-      0x1020000,
-      0x1020000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00,
+      0x1020000, 0x1020000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00,
       0x0000000
     ],
     [
-      0x1020000,
-      0x1020000,
-      0x0000000,
-      0x0010000,
-      0x0020000,
-      0x0100000,
-      0x00,
+      0x1020000, 0x1020000, 0x0000000, 0x0010000, 0x0020000, 0x0100000, 0x00,
       0x0000000
     ],
     [
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00,
+      0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00,
       0x0000000
     ],
     [
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000010,
-      0x0000000,
-      0x0000001,
-      0x00,
+      0x0000000, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00,
       0x0000000
     ],
     [
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00,
+      0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00,
       0x0000000
     ],
     [
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0100000,
-      0x0010000,
-      0x0120000,
-      0x00,
+      0x0000000, 0x0000000, 0x0000000, 0x0100000, 0x0010000, 0x0120000, 0x00,
       0x0000000
     ],
     [
-      0x0000000,
-      0x1120000,
-      0x1120000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00,
+      0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00,
       0x0100000
     ],
     [
-      0x0000000,
-      0x1120000,
-      0x1120000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00,
+      0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00,
       0x0000000
     ]
   ],
@@ -2090,83 +2042,35 @@ levels.js_hoc2015_move_right_down = {
   floatingScore: true,
   map: [
     [
-      0x0000000,
-      0x0000000,
-      0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00
     ],
     [
-      0x0000000,
-      0x0000000,
-      0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00
     ],
     [
-      0x1100000,
-      0x1100000,
-      0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
+      0x1100000, 0x1100000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00
     ],
     [
-      0x1100000,
-      0x1100000,
-      0x00,
-      0x0000010,
-      0x0000000,
-      0x0000001,
-      0x0000000,
+      0x1100000, 0x1100000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0000000,
       0x00
     ],
     [
-      0x0000000,
-      0x0000000,
-      0x00,
-      0x1010000,
-      0x1010000,
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000,
       0x00
     ],
     [
-      0x0000000,
-      0x0000000,
-      0x00,
-      0x1010000,
-      0x1010000,
-      0x0000001,
-      0x0000000,
+      0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000001, 0x0000000,
       0x00
     ],
     [
-      0x0000000,
-      0x0000000,
-      0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00
     ],
     [
-      0x0000000,
-      0x0000000,
-      0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00
     ]
   ],
@@ -2261,83 +2165,35 @@ levels.js_hoc2015_move_diagonal = {
   floatingScore: true,
   map: [
     [
-      0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
+      0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00
     ],
     [
-      0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0010000,
-      0x0000010,
-      0x0000000,
+      0x00, 0x0000000, 0x0000000, 0x0000000, 0x0010000, 0x0000010, 0x0000000,
       0x00
     ],
     [
-      0x00,
-      0x1100000,
-      0x1100000,
-      0x0000000,
-      0x0000001,
-      0x0000000,
-      0x0000000,
+      0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000001, 0x0000000, 0x0000000,
       0x00
     ],
     [
-      0x00,
-      0x1100000,
-      0x1100000,
-      0x0000001,
-      0x0240000,
-      0x0250000,
-      0x0000000,
+      0x00, 0x1100000, 0x1100000, 0x0000001, 0x0240000, 0x0250000, 0x0000000,
       0x00
     ],
     [
-      0x00,
-      0x0000020,
-      0x0000001,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
+      0x00, 0x0000020, 0x0000001, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00
     ],
     [
-      0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
+      0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00
     ],
     [
-      0x00,
-      0x0000000,
-      0x0000000,
-      0x1340000,
-      0x1340000,
-      0x1350000,
-      0x1350000,
+      0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000,
       0x00
     ],
     [
-      0x00,
-      0x0000000,
-      0x0000000,
-      0x1340000,
-      0x1340000,
-      0x1350000,
-      0x1350000,
+      0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000,
       0x00
     ]
   ],
@@ -2407,83 +2263,35 @@ levels.js_hoc2015_move_around = {
   floatingScore: true,
   map: [
     [
-      0x0000000,
-      0x0000000,
-      0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00
     ],
     [
-      0x0000000,
-      0x0000000,
-      0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00
     ],
     [
-      0x0000000,
-      0x0000000,
-      0x00,
-      0x0000010,
-      0x0000000,
-      0x0000001,
-      0x0010000,
+      0x0000000, 0x0000000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0010000,
       0x00
     ],
     [
-      0x0000000,
-      0x0000000,
-      0x00,
-      0x0040000,
-      0x0020000,
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000000, 0x00, 0x0040000, 0x0020000, 0x0000000, 0x0000000,
       0x00
     ],
     [
-      0x0000000,
-      0x0000000,
-      0x20,
-      0x0140000,
-      0x0000000,
-      0x0000001,
-      0x0000000,
+      0x0000000, 0x0000000, 0x20, 0x0140000, 0x0000000, 0x0000001, 0x0000000,
       0x20
     ],
     [
-      0x1120000,
-      0x1120000,
-      0x00,
-      0x0000000,
-      0x0000001,
-      0x0000000,
-      0x0000000,
+      0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000,
       0x00
     ],
     [
-      0x1120000,
-      0x1120000,
-      0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
+      0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00
     ],
     [
-      0x0000000,
-      0x0000020,
-      0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000020, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00
     ]
   ],
@@ -2533,83 +2341,35 @@ levels.js_hoc2015_move_finale = {
   floatingScore: true,
   map: [
     [
-      0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
+      0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x0000000
     ],
     [
-      0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
+      0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x0000000
     ],
     [
-      0x00,
-      0x0000020,
-      0x0000010,
-      0x0020000,
-      0x0000001,
-      0x0100000,
-      0x0000000,
+      0x00, 0x0000020, 0x0000010, 0x0020000, 0x0000001, 0x0100000, 0x0000000,
       0x0000000
     ],
     [
-      0x00,
-      0x0000000,
-      0x0000000,
-      0x0000001,
-      0x0000000,
-      0x0000001,
-      0x0000020,
+      0x00, 0x0000000, 0x0000000, 0x0000001, 0x0000000, 0x0000001, 0x0000020,
       0x0000000
     ],
     [
-      0x00,
-      0x0000000,
-      0x0000001,
-      0x0120000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
+      0x00, 0x0000000, 0x0000001, 0x0120000, 0x0000000, 0x0000000, 0x0000000,
       0x0000000
     ],
     [
-      0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000020,
-      0x0000000,
-      0x1020000,
+      0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000020, 0x0000000, 0x1020000,
       0x1020000
     ],
     [
-      0x00,
-      0x1010000,
-      0x1010000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x1020000,
+      0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x1020000,
       0x1020000
     ],
     [
-      0x00,
-      0x1010000,
-      0x1010000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
+      0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x0000000
     ]
   ],
@@ -2890,7 +2650,7 @@ levels.js_hoc2015_score = {
   goal: {
     // The level uses completeOnSuccessConditionNotGoals, so make sure this
     // returns null  The progressConditions will take care of completion.
-    successCondition: function() {
+    successCondition: function () {
       return false;
     }
   },
@@ -4179,8 +3939,7 @@ levels.hoc2015_blockly_15 = extend(levels.js_hoc2015_event_free, {
         </next> \
        </block> \
       </next> \
-     </block>' +
-    whenArrowBlocks(200, 80),
+     </block>' + whenArrowBlocks(200, 80),
   toolbox: tb(
     createCategory(
       msg.catCommands(),

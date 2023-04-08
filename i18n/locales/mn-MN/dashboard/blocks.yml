@@ -1762,8 +1762,6 @@ mn:
         text: зүүн эргэх
       RyanLab_turnRight:
         text: баруун эргэх
-      SpriteLab2Beta_spriteSay:
-        text: шидтэн {SPRITE} нь {TEXT}-г {SECONDS} секундын турш хэлсэн
       Vector_createSpriteWith:
         text: |-
           шидтэн бүтээх
@@ -1959,5 +1957,3 @@ mn:
             '"hearts"': зүрхнүүд
             '"rain"': бороотой
             '"starburst"': Оддын тэсрэлт
-      validation_validatedBackground:
-        text: суурь өнгийг {IMG} руу тохируулах

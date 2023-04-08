@@ -20,9 +20,11 @@ import JavalabDialog from '@cdo/apps/javalab/JavalabDialog';
 import NameFileDialog from '@cdo/apps/javalab/NameFileDialog';
 import CommitDialog from '@cdo/apps/javalab/CommitDialog';
 import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
-import javalab, {
+import javalabEditor, {
   setAllSourcesAndFileMetadata
-} from '@cdo/apps/javalab/javalabRedux';
+} from '@cdo/apps/javalab/redux/editorRedux';
+import javalab from '@cdo/apps/javalab/redux/javalabRedux';
+import javalabView from '@cdo/apps/javalab/redux/viewRedux';
 
 describe('JavalabEditorDialogManager', () => {
   let defaultProps;
@@ -152,7 +154,7 @@ describe('JavalabEditorDialogManager', () => {
   describe('Commit Dialog', () => {
     beforeEach(() => {
       stubRedux();
-      registerReducers({javalab});
+      registerReducers({javalab, javalabEditor, javalabView});
     });
 
     afterEach(() => {

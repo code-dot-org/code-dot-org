@@ -26,7 +26,7 @@ export const ADD_MESSAGE = 'spritelab/ADD_MESSAGE';
  * @returns {function}
  */
 export function changeInterfaceMode(interfaceMode) {
-  return function(dispatch) {
+  return function (dispatch) {
     $(window).trigger('appModeChanged');
     dispatch({
       type: CHANGE_INTERFACE_MODE,
@@ -39,7 +39,7 @@ export function changeInterfaceMode(interfaceMode) {
 }
 
 export function toggleGridOverlay(showGridOverlay) {
-  return function(dispatch) {
+  return function (dispatch) {
     dispatch({
       type: TOGGLE_GRID_OVERLAY,
       showGridOverlay: showGridOverlay

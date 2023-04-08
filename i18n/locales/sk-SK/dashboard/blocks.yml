@@ -1619,6 +1619,10 @@ sk:
         text: x súradnica {SPRITE}
       gamelab_yLocationOf:
         text: y súradnica {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} kĺzať sa do {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: kotúľanie
       Mikelab_addBehaviorSimple:
         text: postava {SPRITE} začni {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2182,8 +2186,6 @@ sk:
         text: otoč sa vľavo
       RyanLab_turnRight:
         text: otoč sa vpravo
-      SpriteLab2Beta_spriteSay:
-        text: postava {SPRITE} hovorí {TEXT} po dobu {SECONDS} sekúnd
       Vector_createSpriteWith:
         text: |-
           vytvoriť postavu
@@ -2287,6 +2289,8 @@ sk:
             new Behavior(wobbling, []): kolísanie
             new Behavior(wandering, []): túlať sa
             new Behavior(patrolling, []): hliadkovať
+      adaptations_startFollowing:
+        text: "{SPRITE} začne nasledovať {TARGET}"
       binary_drawBin:
         text: kresliť dvojmo {BIN}
       binary_drawBinScreen:
@@ -2443,5 +2447,3 @@ sk:
         text: nastaviť nadpis {HEADING}
       storylab_setSubheading:
         text: nastaviť podnadpis {SUBHEADING}
-      validation_validatedBackground:
-        text: nastav pozadie na {IMG}

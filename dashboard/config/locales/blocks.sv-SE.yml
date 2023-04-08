@@ -1606,6 +1606,10 @@ sv:
         text: x koordinat {SPRITE}
       gamelab_yLocationOf:
         text: y koordinat {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} glid till {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: tumlande
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} börjar {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2111,8 +2115,6 @@ sv:
         text: sväng vänster
       RyanLab_turnRight:
         text: sväng höger
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} säga {TEXT} för {SECONDS} sekunder
       Vector_createSpriteWith:
         text: |-
           skapa sprite
@@ -2167,6 +2169,8 @@ sv:
         options:
           BEHAVIOR:
             new Behavior(patrolling, []): patrullerar
+      adaptations_startFollowing:
+        text: "{SPRITE} börjar följa {TARGET}"
       binary_drawBin:
         text: rita binär {BIN}
       binary_drawBinScreen:
@@ -2315,5 +2319,3 @@ sv:
             '"hearts"': hjärtan
             '"rain"': regn
             '"starburst"': Stjärnfall
-      validation_validatedBackground:
-        text: ställa in bakgrunden till {IMG}

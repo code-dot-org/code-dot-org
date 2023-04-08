@@ -152,7 +152,9 @@
           "slow": "lent",
           "on": "encès",
           "short": "curt",
-          "long": "llarg"
+          "long": "llarg",
+          "low": "baixa",
+          "high": "alta"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
           "Red": "Vermell",
@@ -266,7 +268,9 @@
           "name": "nom"
         },
         "CSD U6 - Sensors - P_2222": {
-          "text": "text"
+          "text": "text",
+          "high": "alta",
+          "low": "baixa"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "Actualitza",
@@ -392,25 +396,33 @@
           "slow": "lent",
           "fast": "ràpid",
           "short": "curt",
-          "long": "llarg"
+          "long": "llarg",
+          "low": "baixa",
+          "high": "alta"
         },
         "CSD U6 getters debug_2018": {
           "fast": "ràpid",
           "slow": "lent",
           "short": "curt",
-          "long": "llarg"
+          "long": "llarg",
+          "low": "baixa",
+          "high": "alta"
         },
         "CSD U6 getters debug_2019": {
           "fast": "ràpid",
           "slow": "lent",
           "short": "curt",
-          "long": "llarg"
+          "long": "llarg",
+          "low": "baixa",
+          "high": "alta"
         },
         "CSD U6 getters debug_2021": {
           "fast": "ràpid",
           "slow": "lent",
           "short": "curt",
-          "long": "llarg"
+          "long": "llarg",
+          "low": "baixa",
+          "high": "alta"
         },
         "CSD U6 params create colors": {
           "Red": "Vermell",
@@ -429,16 +441,24 @@
           "Blue": "Blau"
         },
         "CSD U6 sensor experiment embedded": {
-          "text": "text"
+          "text": "text",
+          "high": "alta",
+          "low": "baixa"
         },
         "CSD U6 sensor experiment embedded_2018": {
-          "text": "text"
+          "text": "text",
+          "high": "alta",
+          "low": "baixa"
         },
         "CSD U6 sensor experiment embedded_2019": {
-          "text": "text"
+          "text": "text",
+          "high": "alta",
+          "low": "baixa"
         },
         "CSD U6 sensor experiment embedded_2021": {
-          "text": "text"
+          "text": "text",
+          "high": "alta",
+          "low": "baixa"
         },
         "CSD U6 setProperty predict app": {
           "title": "Títol"
@@ -785,7 +805,8 @@
           "Driver Alert System": "Sistema d'alerta del controlador",
           "rain": "pluja",
           "snow": "neu",
-          "Predict": "Fes una predicció"
+          "Predict": "Fes una predicció",
+          "dusk": "capvespre"
         },
         "ml-use model card-example3A_2022": {
           "cloudy": "ennuvolat",
@@ -793,7 +814,8 @@
           "Driver Alert System": "Sistema d'alerta del controlador",
           "rain": "pluja",
           "snow": "neu",
-          "Predict": "Fes una predicció"
+          "Predict": "Fes una predicció",
+          "dusk": "capvespre"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
@@ -1142,7 +1164,9 @@
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
           "short": "curt",
-          "long": "llarg"
+          "long": "llarg",
+          "low": "baixa",
+          "high": "alta"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
           "short": "curt",
@@ -1363,35 +1387,51 @@
         },
         "CSD U6 frequency": {
           "short": "curt",
-          "long": "llarg"
+          "long": "llarg",
+          "low": "baixa",
+          "high": "alta"
         },
         "CSD U6 frequency_2018": {
           "short": "curt",
-          "long": "llarg"
+          "long": "llarg",
+          "low": "baixa",
+          "high": "alta"
         },
         "CSD U6 frequency_2019": {
           "short": "curt",
-          "long": "llarg"
+          "long": "llarg",
+          "low": "baixa",
+          "high": "alta"
         },
         "CSD U6 frequency_2021": {
           "short": "curt",
-          "long": "llarg"
+          "long": "llarg",
+          "low": "baixa",
+          "high": "alta"
         },
         "CSD U6 get toggle": {
           "short": "curt",
-          "long": "llarg"
+          "long": "llarg",
+          "low": "baixa",
+          "high": "alta"
         },
         "CSD U6 get toggle_2018": {
           "short": "curt",
-          "long": "llarg"
+          "long": "llarg",
+          "low": "baixa",
+          "high": "alta"
         },
         "CSD U6 get toggle_2019": {
           "short": "curt",
-          "long": "llarg"
+          "long": "llarg",
+          "low": "baixa",
+          "high": "alta"
         },
         "CSD U6 get toggle_2021": {
           "short": "curt",
-          "long": "llarg"
+          "long": "llarg",
+          "low": "baixa",
+          "high": "alta"
         },
         "CSD U6 interval": {
           "short": "curt",

@@ -1055,6 +1055,8 @@ fil:
         text: iniiwasan ang mga target
       gamelab_beginCollectingData:
         text: simulan ang pagkolekta ng data {BREAK} value {VALUE} may label {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} tumalbog sa {TARGET}"
       gamelab_changePropBy:
@@ -1692,6 +1694,10 @@ fil:
         text: x coordinate ng {SPRITE}
       gamelab_yLocationOf:
         text: y ang mga {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} dumausdos sa {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: gumulung-gulong
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} ay nagsisimula {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2260,8 +2266,6 @@ fil:
         text: kumaliwa
       RyanLab_turnRight:
         text: kumanan
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} sinasabi {TEXT} para sa {SECONDS} segundo
       Vector_createSpriteWith:
         text: |-
           lumikha ng sprite
@@ -2321,6 +2325,8 @@ fil:
             new Behavior(wobbling, []): gumulong-gulong
             new Behavior(wandering, []): gumagala
             new Behavior(patrolling, []): nagpapatrolya
+      adaptations_startFollowing:
+        text: "{SPRITE} nagsisimulang sumunod {TARGET}"
       binary_drawBin:
         text: Gumuhit ng binary {BIN}
       binary_drawBinScreen:
@@ -2437,5 +2443,3 @@ fil:
         text: i-set ang heading {HEADING}
       storylab_setSubheading:
         text: i-set ang subheading {SUBHEADING}
-      validation_validatedBackground:
-        text: Itakda ang background sa {IMG}

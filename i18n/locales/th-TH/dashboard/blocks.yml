@@ -1048,6 +1048,8 @@ th:
         text: หลบเป้าหมาย
       gamelab_beginCollectingData:
         text: เริ่มต้นเก็บข้อมูล {BREAK} ค่า {VALUE} ด้วยป้าย {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} กระโดดไปที่ {TARGET}"
       gamelab_changePropBy:
@@ -1619,6 +1621,10 @@ th:
         text: x พิกัดของ {SPRITE}
       gamelab_yLocationOf:
         text: พิกัด y ของ {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} พุ่งไปที่ {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: ตีลังกา
       Mikelab_addBehaviorSimple:
         text: "{SPRITE} เทพเจ้าเริ่มต้น {BEHAVIOR}"
       Mikelab_addTrainingData:
@@ -2197,8 +2203,6 @@ th:
         text: หันซ้าย
       RyanLab_turnRight:
         text: หันขวา
-      SpriteLab2Beta_spriteSay:
-        text: "[SPRITE]สไปรท์[0] {TEXT} สำหรับ {SECONDS} วินาที"
       Vector_createSpriteWith:
         text: |-
           สร้างเทพดาร
@@ -2258,6 +2262,8 @@ th:
             new Behavior(wobbling, []): โยกเยก
             new Behavior(wandering, []): เคลื่อนที่
             new Behavior(patrolling, []): เดินลาดตระเวน
+      adaptations_startFollowing:
+        text: "{SPRITE} เริ่มตาม {TARGET}"
       binary_drawBin:
         text: วาดเลขฐานสอง {BIN}
       binary_drawBinScreen:
@@ -2413,5 +2419,3 @@ th:
         text: ตั้งค่าหัวเรื่อง {HEADING}
       storylab_setSubheading:
         text: ตั้งค่าหัวข้อย่อย {SUBHEADING}
-      validation_validatedBackground:
-        text: ตั้งค่าพื้นหลังเป็น {IMG}

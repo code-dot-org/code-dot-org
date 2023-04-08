@@ -1045,6 +1045,8 @@ vi:
         text: tránh mục tiêu
       gamelab_beginCollectingData:
         text: bắt đầu thu thập dữ liệu {BREAK} giá trị {VALUE} với nhãn {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} bật khỏi {TARGET}"
       gamelab_changePropBy:
@@ -1636,6 +1638,10 @@ vi:
         text: tọa độ x của nhân vật {SPRITE}
       gamelab_yLocationOf:
         text: tọa độ y của nhân vật {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} trượt tới {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: lộn nhào
       Mikelab_addBehaviorSimple:
         text: nhân vật {SPRITE} bắt đầu {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2216,8 +2222,6 @@ vi:
         text: rẽ trái
       RyanLab_turnRight:
         text: rẽ phải
-      SpriteLab2Beta_spriteSay:
-        text: nhân vật {SPRITE} nói {TEXT} trong {SECONDS} giây
       Vector_createSpriteWith:
         text: |-
           tạo sprite
@@ -2277,6 +2281,8 @@ vi:
             new Behavior(wobbling, []): nhúc nhích
             new Behavior(wandering, []): lang thang
             new Behavior(patrolling, []): tuần tra
+      adaptations_startFollowing:
+        text: "{SPRITE} bắt đầu bám theo {TARGET}"
       binary_drawBin:
         text: vẽ nhị phân {BIN}
       binary_drawBinScreen:
@@ -2432,5 +2438,3 @@ vi:
         text: đặt tiêu đề {HEADING}
       storylab_setSubheading:
         text: đặt tiêu đề phụ {SUBHEADING}
-      validation_validatedBackground:
-        text: đặt hình nền thành {IMG}

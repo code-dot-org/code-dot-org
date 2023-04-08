@@ -1060,6 +1060,8 @@ it:
         text: evitando gli obiettivi
       gamelab_beginCollectingData:
         text: inizia a raccogliere i dati {BREAK} del valore {VALUE} con l'etichetta {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} rimbalza su {TARGET}"
       gamelab_changePropBy:
@@ -1635,6 +1637,10 @@ it:
         text: coordinata x di {SPRITE}
       gamelab_yLocationOf:
         text: coordinata y di {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} scivola a {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: ruzzolando
       Mikelab_addBehaviorSimple:
         text: il personaggio {SPRITE} inizia {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2236,8 +2242,6 @@ it:
         text: gira a sinistra
       RyanLab_turnRight:
         text: gira a destra
-      SpriteLab2Beta_spriteSay:
-        text: personaggio {SPRITE} dice {TEXT} per {SECONDS} secondi
       Vector_createSpriteWith:
         text: |-
           creare personaggio
@@ -2297,6 +2301,8 @@ it:
             new Behavior(wobbling, []): barcollamento
             new Behavior(wandering, []): movimento casuale
             new Behavior(patrolling, []): pattugliamento
+      adaptations_startFollowing:
+        text: "{SPRITE} inizia a seguire {TARGET}"
       binary_drawBin:
         text: disegna in binario {BIN}
       binary_drawBinScreen:
@@ -2453,5 +2459,3 @@ it:
         text: imposta intestazione {HEADING}
       storylab_setSubheading:
         text: imposta intestazione secondaria {SUBHEADING}
-      validation_validatedBackground:
-        text: imposta lo sfondo {IMG}

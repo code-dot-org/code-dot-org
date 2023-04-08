@@ -34,3 +34,20 @@ el:
           version_title: "'19-'20"
         mike-test:
           title: Βασικές αρχές της επιστήμης υπολογιστών
+    resources:
+      curriculum/csd/2020:
+        name: Πρόγραμμα σπουδών
+      teacher_forum/csd/2020:
+        name: Φόρουμ Καθηγητών
+      curriculum/csd/2017:
+        name: Πρόγραμμα σπουδών
+      teacher_forum_6/csd/2017:
+        name: Φόρουμ Καθηγητών
+      curriculum/csd/2019:
+        name: Πρόγραμμα σπουδών
+      teacher_forum/csd/2019:
+        name: Φόρουμ Καθηγητών
+      curriculum/csd/2018:
+        name: Πρόγραμμα σπουδών
+      teacher_forum_6/csd/2018:
+        name: Φόρουμ Καθηγητών

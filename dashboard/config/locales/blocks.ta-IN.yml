@@ -1622,6 +1622,10 @@ ta:
         text: x ஒருங்கிணைப்பு {SPRITE}
       gamelab_yLocationOf:
         text: y ஒருங்கிணைப்பு {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} சறுக்கி {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: உருளும்
       Mikelab_addBehaviorSimple:
         text: ஸ்பிரைட்{SPRITE}தொடக்கம்{BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2219,6 +2223,8 @@ ta:
             new Behavior(wobbling, []): தள்ளாட்டம்
             new Behavior(wandering, []): அலைந்து திரிதல்
             new Behavior(patrolling, []): ரோந்து
+      adaptations_startFollowing:
+        text: "{SPRITE}தொடர்ந்து தொடங்குகிறது{TARGET}"
       binary_move:
         options:
           DIR:
@@ -2302,5 +2308,3 @@ ta:
         text: தலைப்பு அமைக்கவும் {HEADING}
       storylab_setSubheading:
         text: துணைத்தலைப்பு அமைக்கவும் {SUBHEADING}
-      validation_validatedBackground:
-        text: பின்னணி அமைக்க {IMG}

@@ -609,6 +609,7 @@ pt:
     make_my_own_app: 'Criar meu próprio aplicativo'
     how_it_works: 'Como funciona (Ver o Código)'
     try_hour_of_code: 'Faça uma Hora do Código!'
+    store: 'Armazenar'
     cookie_notice: 'Aviso sobre Cookies'
     view_code: 'Ver códigos'
     locale_select: "Selecione o idioma"
@@ -1245,4 +1246,21 @@ pt:
       forbidden: "O usuário não pode atualizar o status bloqueável do aluno"
   reset_predict_progress_button: "Excluir resposta"
   pixelation:
+    raw_format: "Formato bruto"
+    raw_format_alt: "Visualize bits sem qualquer formatação"
+    readable_format: "Formato legível"
+    readable_format_alt: "Exibir bits separados por pixel"
+    save_image: "Salvar imagem"
+    actual_size: "Tamanho real"
+    image_file_format_header: "Formato de arquivo de imagem"
+    image_file_format_width: "Largura: 1 byte"
+    image_file_format_height: "Altura: 1 byte"
+    image_file_format_bits_per_pixel: "Bits por pixel: 1 byte"
+    image_file_format_data_a: "n bits de dados em pixels"
+    image_file_format_data_b: "n = Largura * Altura * Bits por pixel"
+    image_width: "Largura da imagem"
+    image_height: "Altura da imagem"
+    bits_per_pixel_header: "Bits por pixel"
     binary: "Binário"
+    hexadecimal: "Hexadecimal"
+    pixel_format_header: "Formato de pixel"

@@ -42,7 +42,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.controller.subtype.nectars_.length === 2 &&
           Maze.controller.subtype.honey_ === 2
@@ -66,7 +66,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.controller.subtype.nectars_.length === 0 &&
           Maze.controller.subtype.honey_ === 2
@@ -88,7 +88,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.controller.subtype.nectars_.length === 3 &&
           Maze.controller.subtype.honey_ === 2
@@ -113,7 +113,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.controller.subtype.nectars_.length === 2 &&
           Maze.controller.subtype.honey_ === 1 &&
@@ -138,7 +138,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.controller.subtype.nectars_.length === 2 &&
           Maze.controller.subtype.honey_ === 0 &&

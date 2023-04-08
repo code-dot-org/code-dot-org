@@ -1565,6 +1565,10 @@ mr:
         text: "{SPRITE} चे x समन्वयक"
       gamelab_yLocationOf:
         text: "{SPRITE} चे y समन्वयक"
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} {LOCATION} कडे सरकणे"
+      KatiesBlocks_tumbling:
+        text: टंबलिंग
       Mikelab_addBehaviorSimple:
         text: स्प्राइट {SPRITE} सुरू होते {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2102,6 +2106,8 @@ mr:
             new Behavior(wobbling, []): डगमगणे
             new Behavior(wandering, []): भटकणे
             new Behavior(patrolling, []): गस्त घालणे
+      adaptations_startFollowing:
+        text: "{SPRITE} {TARGET} चे अनुसरण करण्यास सुरवात करते"
       binary_move:
         options:
           DIR:
@@ -2181,5 +2187,3 @@ mr:
         text: हेडिंग सेट करा {HEADING}
       storylab_setSubheading:
         text: सबहेडिंग सेट करा {SUBHEADING}
-      validation_validatedBackground:
-        text: "{IMG} वर पार्श्वभूमी सेट करा"
