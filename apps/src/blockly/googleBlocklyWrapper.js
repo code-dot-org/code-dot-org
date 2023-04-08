@@ -4,7 +4,7 @@ import {
   ScrollOptions
 } from '@blockly/plugin-scroll-options';
 import {NavigationController} from '@blockly/keyboard-navigation';
-import {BlocklyVersion} from '@cdo/apps/constants';
+import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 import initializeCdoConstants from './addons/cdoConstants';

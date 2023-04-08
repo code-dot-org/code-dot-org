@@ -1,5 +1,10 @@
 import {makeEnum} from '@cdo/apps/utils';
 
+export const BlocklyVersion = {
+  CDO: 'CDO',
+  GOOGLE: 'Google'
+};
+
 export const ToolboxType = makeEnum('CATEGORIZED', 'UNCATEGORIZED', 'NONE');
 export const BLOCKLY_THEME = 'blocklyTheme';
 export const MenuOptionStates = {
