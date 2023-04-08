@@ -320,6 +320,12 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        vpl-csd-summer-ci-2023:
+          title: CS Discoveries Curriculum Investigation
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'23-'24"
     resources:
       curriculum/csd/2020:
         name: Curriculum
