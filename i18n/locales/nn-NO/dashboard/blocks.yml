@@ -1104,6 +1104,18 @@ nn:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: oppsett {GROUP} som {FORMAT}
+        options:
+          FORMAT:
+            '"border"': kantlinje
+            '"circle"': sirkel
+            '"grid"': rutenett
+            '"row"': rad
+            '"bottom"': nederste rad
+            '"left"': venstre kolonne
+            '"column"': kolonne
+            '"right"': høgre kolonne
       gamelab_locationAt:
         text: 'plassering x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1124,6 +1136,17 @@ nn:
         options:
           EFFECT:
             '"rain"': regn
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': kantlinje
+            '"circle"': sirkel
+            '"grid"': rutenett
+            '"row"': rad
+            '"bottom"': nederste rad
+            '"left"': venstre kolonne
+            '"column"': kolonne
+            '"right"': høgre kolonne
       gamelab_makeProjectile:
         options:
           DIRECTION:
