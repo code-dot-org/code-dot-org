@@ -133,6 +133,12 @@ class LessonProgress extends Component {
     );
   }
 
+  onLevelChanged(levelId, levelUrl) {
+    console.log('bubble clicked', levelId);
+    window.history.pushState({}, 'title', levelUrl + window.location.search);
+    this.props.onLevelChanged(levelId);
+  }
+
   render() {
     const {currentPageNumber, lessonExtrasUrl, lessonName} = this.props;
     let levels = this.props.levels;
@@ -165,10 +171,7 @@ class LessonProgress extends Component {
               }
               const onBubbleClick =
                 currentLevelApp === 'music' && level.app === 'music'
-                  ? () => {
-                      console.log('bubble clicked');
-                      this.props.onLevelChanged(level.id);
-                    }
+                  ? () => this.onLevelChanged(level.id, level.url)
                   : undefined;
 
               return (
