@@ -327,7 +327,8 @@ class ScriptLevel < ApplicationRecord
         url: build_script_level_url(self),
         freePlay: level.try(:free_play) == "true",
         bonus: bonus,
-        display_as_unplugged: level.display_as_unplugged?
+        display_as_unplugged: level.display_as_unplugged?,
+        app: level.game.app
       }
 
       if progression
