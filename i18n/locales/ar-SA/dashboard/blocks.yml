@@ -1253,6 +1253,19 @@ ar:
             '"x"': x
             '"y"': ص
             '"z"': z
+      gamelab_layoutSprites:
+        text: تخطيط {GROUP} كـ {FORMAT}
+        options:
+          FORMAT:
+            '"border"': الحدود
+            '"circle"': دائرة
+            '"grid"': شبكة
+            '"top"': الصف العلوي
+            '"row"': صف
+            '"bottom"': الصف السفلي
+            '"left"': العمود الأيسر
+            '"column"': عمود
+            '"right"': العمود الأيمن
       gamelab_locationAt:
         text: 'الموقع x: {X} Y: {Y}'
       gamelab_locationModifier:
@@ -1279,6 +1292,18 @@ ar:
             '"spiral"': لولبي
       gamelab_makeNewSpriteAnon:
         text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': الحدود
+            '"circle"': دائرة
+            '"grid"': شبكة
+            '"top"': الصف العلوي
+            '"row"': صف
+            '"bottom"': الصف السفلي
+            '"left"': العمود الأيسر
+            '"column"': عمود
+            '"right"': العمود الأيمن
       gamelab_makeNumSprites:
         text: صنع {NUM} نقوش متحركة {ANIMATION_NAME} جديدة
       gamelab_makeProjectile:
