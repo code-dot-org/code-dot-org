@@ -66,7 +66,12 @@
       - unless @level.is_a?(StandaloneVideo) || @level.properties['hide_reference_area']
         = render partial: 'levels/reference_area'
     - elsif @game.app == Game::MUSIC
-      = render partial: 'levels/music'
+      -# When we're in a script, the header will render the lab.
+      - if @script_level
+        - content_for(:head) do
+          %script{src: webpack_asset_path('js/googleblockly.js')}
+      - else
+        = render partial: 'levels/music'
     - else
       = render partial: 'levels/blockly'
 
