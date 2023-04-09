@@ -771,7 +771,7 @@ it-IT:
   volunteer_engineer_submission_field_company: Società (o università)
   volunteer_engineer_submission_field_company_placeholder: Società (o università)
   volunteer_engineer_submission_field_experience_level: Livello di esperienza
-  volunteer_engineer_submission_field_location: Luogo
+  volunteer_engineer_submission_field_location: Posizione
   volunteer_engineer_submission_field_location_desc: Se si immette l'indirizzo esatto
     non lo condivideremo ma mostraremo solo una puntina sulla mappa.
   volunteer_engineer_submission_field_location_placeholder: CAP, città e nazione o
@@ -2369,8 +2369,8 @@ it-IT:
   header_tutorials: Corsi
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: Menu Aiuto
-  app_lab_documentation: Documentazione dell'App Lab
-  app_lab_tutorials: Tutorial dell'App Lab
+  app_lab_documentation: Documentazione dello Sviluppo app
+  app_lab_tutorials: Tutorial dello Sviluppo app
   game_lab_documentation: Documentazione del Game Lab
   game_lab_tutorials: Tutorial del Game Lab
   sprite_lab_documentation: Documentazione Sviluppo App
