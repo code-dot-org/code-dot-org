@@ -1174,6 +1174,18 @@ bg:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': рамка
+            '"circle"': кръг
+            '"grid"': мрежа
+            '"top"': най-горен ред
+            '"row"': ред
+            '"bottom"': най-долен ред
+            '"left"': лява колона
+            '"column"': колона
+            '"right"': дясна колона
       gamelab_locationAt:
         text: 'местоположение х: {X} у: {Y}'
       gamelab_locationModifier:
@@ -1200,6 +1212,18 @@ bg:
             '"spiral"': спирала
       gamelab_makeNewSpriteAnon:
         text: създай нов {ANIMATION_NAME} спрайт на {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': рамка
+            '"circle"': кръг
+            '"grid"': мрежа
+            '"top"': най-горен ред
+            '"row"': ред
+            '"bottom"': най-долен ред
+            '"left"': лява колона
+            '"column"': колона
+            '"right"': дясна колона
       gamelab_makeNumSprites:
         text: създай {NUM} нови {ANIMATION_NAME} спрайтове
       gamelab_makeProjectile:

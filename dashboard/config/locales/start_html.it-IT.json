@@ -8,7 +8,32 @@
           "cute": "carino",
           "Click here to start!": "Clicca qui per iniziare!",
           "Do you like going outside?": "Ti piace uscire di casa?",
-          "Find it!": "Trovalo!"
+          "Find it!": "Trovalo!",
+          "The Ultimate": "Il definitivo",
+          "Pet Chooser!": "Selettore di animali domestici!",
+          "Are you allergic to pet fur?": "Sei allergico al pelo degli animali domestici?",
+          "Should your pet be cute or creepy?": "Il tuo animale domestico dovrebbe essere puccioso o raccapricciante?",
+          "creepy": "raccapricciante",
+          "Would you rather go with the crowd or be different?": "Preferiresti seguire la massa o andare contro corrente?",
+          "Crowd": "Seguire la massa",
+          "Different": "Controcorrente",
+          "How cute should the pet be?": "Quanto dovrebbe essere puccioso l'animaletto?",
+          "Very Cute": "Molto puccioso",
+          "Medium Cute": "Abbastanza puccioso",
+          "Should the pet be noisy?": "L'animale dovrebbe essere rumoroso?",
+          "Do you want to play with the pet?": "Vuoi giocare con l'animale?",
+          "Get a goat!": "Prendi una capra!",
+          "Get a dog!": "Prendi un cane!",
+          "Get a hamster!": "Prendi un criceto!",
+          "Get a rat!": "Prendi un topo!",
+          "Get a tarantula!": "Prendi una tarantola!",
+          "Get a scorpion!": "Prendi uno scorpione!",
+          "Get a parrot!": "Prendi un pappagallo!",
+          "Get a bettafish!": "Prendi un pesce combattente!",
+          "Closest pet shop:": "Negozio di animali più vicino:",
+          "Downtown Pets and More": "Cucciolandia e non solo",
+          "1584 Maple St": "Via degli aceri 1584",
+          "Open Now!": "Aperto in questo momento!"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
           "Yes": "Sì",
@@ -16,35 +41,110 @@
           "cute": "carino",
           "Click here to start!": "Clicca qui per iniziare!",
           "Do you like going outside?": "Ti piace uscire di casa?",
-          "Find it!": "Trovalo!"
+          "Find it!": "Trovalo!",
+          "The Ultimate": "Il definitivo",
+          "Pet Chooser!": "Selettore di animali domestici!",
+          "Are you allergic to pet fur?": "Sei allergico al pelo degli animali domestici?",
+          "Should your pet be cute or creepy?": "Il tuo animale domestico dovrebbe essere puccioso o raccapricciante?",
+          "creepy": "raccapricciante",
+          "Would you rather go with the crowd or be different?": "Preferiresti seguire la massa o andare contro corrente?",
+          "Crowd": "Seguire la massa",
+          "Different": "Controcorrente",
+          "How cute should the pet be?": "Quanto dovrebbe essere puccioso l'animaletto?",
+          "Very Cute": "Molto puccioso",
+          "Medium Cute": "Abbastanza puccioso",
+          "Should the pet be noisy?": "L'animale dovrebbe essere rumoroso?",
+          "Do you want to play with the pet?": "Vuoi giocare con l'animale?",
+          "Get a goat!": "Prendi una capra!",
+          "Get a dog!": "Prendi un cane!",
+          "Get a hamster!": "Prendi un criceto!",
+          "Get a rat!": "Prendi un topo!",
+          "Get a tarantula!": "Prendi una tarantola!",
+          "Get a scorpion!": "Prendi uno scorpione!",
+          "Get a parrot!": "Prendi un pappagallo!",
+          "Get a bettafish!": "Prendi un pesce combattente!",
+          "Closest pet shop:": "Negozio di animali più vicino:",
+          "Downtown Pets and More": "Cucciolandia e non solo",
+          "1584 Maple St": "Via degli aceri 1584",
+          "Open Now!": "Aperto in questo momento!"
         },
         "CSD U1 IO Pet Chooser_2021": {
           "Yes": "Sì",
           "No": "No",
           "cute": "carino",
           "Click here to start!": "Clicca qui per iniziare!",
-          "Do you like going outside?": "Ti piace uscire di casa?"
+          "Do you like going outside?": "Ti piace uscire di casa?",
+          "The Ultimate": "Il definitivo",
+          "Pet Chooser!": "Selettore di animali domestici!",
+          "Are you allergic to pet fur?": "Sei allergico al pelo degli animali domestici?",
+          "Should your pet be cute or creepy?": "Il tuo animale domestico dovrebbe essere puccioso o raccapricciante?",
+          "creepy": "raccapricciante",
+          "Would you rather go with the crowd or be different?": "Preferiresti seguire la massa o andare contro corrente?",
+          "Crowd": "Seguire la massa",
+          "Different": "Controcorrente",
+          "How cute should the pet be?": "Quanto dovrebbe essere puccioso l'animaletto?",
+          "Very Cute": "Molto puccioso",
+          "Medium Cute": "Abbastanza puccioso",
+          "Should the pet be noisy?": "L'animale dovrebbe essere rumoroso?",
+          "Do you want to play with the pet?": "Vuoi giocare con l'animale?",
+          "Get a goat!": "Prendi una capra!",
+          "Get a dog!": "Prendi un cane!",
+          "Get a hamster!": "Prendi un criceto!",
+          "Get a rat!": "Prendi un topo!",
+          "Get a tarantula!": "Prendi una tarantola!",
+          "Get a scorpion!": "Prendi uno scorpione!",
+          "Get a parrot!": "Prendi un pappagallo!",
+          "Get a bettafish!": "Prendi un pesce combattente!"
         },
         "CSD U1 IO Pet Chooser_2022": {
           "Yes": "Sì",
           "No": "No",
           "cute": "carino",
           "Click here to start!": "Clicca qui per iniziare!",
-          "Do you like going outside?": "Ti piace uscire di casa?"
+          "Do you like going outside?": "Ti piace uscire di casa?",
+          "The Ultimate": "Il definitivo",
+          "Pet Chooser!": "Selettore di animali domestici!",
+          "Are you allergic to pet fur?": "Sei allergico al pelo degli animali domestici?",
+          "Should your pet be cute or creepy?": "Il tuo animale domestico dovrebbe essere puccioso o raccapricciante?",
+          "creepy": "raccapricciante",
+          "Would you rather go with the crowd or be different?": "Preferiresti seguire la massa o andare contro corrente?",
+          "Crowd": "Seguire la massa",
+          "Different": "Controcorrente",
+          "How cute should the pet be?": "Quanto dovrebbe essere puccioso l'animaletto?",
+          "Very Cute": "Molto puccioso",
+          "Medium Cute": "Abbastanza puccioso",
+          "Should the pet be noisy?": "L'animale dovrebbe essere rumoroso?",
+          "Do you want to play with the pet?": "Vuoi giocare con l'animale?",
+          "Get a goat!": "Prendi una capra!",
+          "Get a dog!": "Prendi un cane!",
+          "Get a hamster!": "Prendi un criceto!",
+          "Get a rat!": "Prendi un topo!",
+          "Get a tarantula!": "Prendi una tarantola!",
+          "Get a scorpion!": "Prendi uno scorpione!",
+          "Get a parrot!": "Prendi un pappagallo!",
+          "Get a bettafish!": "Prendi un pesce combattente!"
         },
         "CSD U1 IO Story_2021": {
           "Name": "Nome",
           "Color": "Colore",
           "Food": "Cibo",
           "City": "Città",
-          "text": "testo"
+          "text": "testo",
+          "Fill in the blanks to create a custom story!": "Riempi gli spazi vuoti per creare una storia personalizzata!",
+          "Emotion": "Emozione",
+          "Make a Sci-Fi Story!": "Crea una storia di fantascienza!",
+          "Make a Western Story!": "Crea una storia western!"
         },
         "CSD U1 IO Story_2022": {
           "Name": "Nome",
           "Color": "Colore",
           "Food": "Cibo",
           "City": "Città",
-          "text": "testo"
+          "text": "testo",
+          "Fill in the blanks to create a custom story!": "Riempi gli spazi vuoti per creare una storia personalizzata!",
+          "Emotion": "Emozione",
+          "Make a Sci-Fi Story!": "Crea una storia di fantascienza!",
+          "Make a Western Story!": "Crea una storia western!"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
@@ -97,14 +197,16 @@
           "k": "k",
           "0": "0",
           "Which finger is the FASTEST?": "Qual è il dito più veloce?",
-          "It's a tie!": "È un pareggio!"
+          "It's a tie!": "È un pareggio!",
+          "Put one finger on the 's' key and the other on the 'k' key. Then click as fast as you can.": "Metti un dito sul tasto 's' e l'altro sul tasto 'k'. Quindi clicca il più velocemente possibile."
         },
         "CSD U1 processing fastest_2022": {
           "s": "s",
           "k": "k",
           "0": "0",
           "Which finger is the FASTEST?": "Qual è il dito più veloce?",
-          "It's a tie!": "È un pareggio!"
+          "It's a tie!": "È un pareggio!",
+          "Put one finger on the 's' key and the other on the 'k' key. Then click as fast as you can.": "Metti un dito sul tasto 's' e l'altro sul tasto 'k'. Quindi clicca il più velocemente possibile."
         },
         "CSD U1 processing guess_2021": {
           "?": "?",
@@ -191,7 +293,10 @@
           "99": "99",
           "You won!": "Hai vinto!",
           "The number was": "Il numero era",
-          "No more tries!": "Niente più tentativi!"
+          "No more tries!": "Tentativi terminati!",
+          "I'm thinking of a number from 1 to 100.": "Sto pensando a un numero da 1 a 100.",
+          "You haven't guessed yet.": "Ancora non hai indovinato.",
+          "Your guess:": "La tua ipotesi:"
         },
         "CSD U1 processing guess_2022": {
           "?": "?",
@@ -278,41 +383,60 @@
           "99": "99",
           "You won!": "Hai vinto!",
           "The number was": "Il numero era",
-          "No more tries!": "Niente più tentativi!"
+          "No more tries!": "Tentativi terminati!",
+          "I'm thinking of a number from 1 to 100.": "Sto pensando a un numero da 1 a 100.",
+          "You haven't guessed yet.": "Ancora non hai indovinato.",
+          "Your guess:": "La tua ipotesi:"
         },
         "CSD U1 processing live_2021": {
           "walking": "camminare",
           "bear": "Orso",
           "rat": "ratto",
           "Where should you live?": "Dove dovresti vivere?",
-          "Answer the questions for advice on where to live. ": "Rispondi alle domande per ottenere consigli su dove vivere. ",
+          "Answer the questions for advice on where to live. ": "Rispondi alle domande per ottenere suggerimenti su dove vivere. ",
           "You should live in a big city.": "Dovresti vivere in una grande città.",
-          "What do you like to do for fun?": "Cosa ti piace fare per divertirti?",
+          "What do you like to do for fun?": "Cosa preferisci fare per divertirti?",
           "visit museums": "visitare i musei",
           "cookout with friends": "grigliata con gli amici",
           "go camping": "andare in campeggio",
           "public transit": "trasporto pubblico",
           "racoon": "procione",
           "coyote": "coyote",
-          "What food do you like?": "Che cibo ti piace?",
-          "delivery/takeout": "consegna/asporto"
+          "What food do you like?": "Cosa preferisci mangiare?",
+          "delivery/takeout": "cibo a domicilio/da asporto",
+          "go to sports games": "vai ai giochi sportivi",
+          "How do you like to get around?": "Come preferisci spostarti?",
+          "biking": "in bici",
+          "drive": "in macchina",
+          "What animals are you okay with?": "Insieme a quali animali stai bene?",
+          "home cooked meals": "cibo fatto in casa",
+          "trying new restaurants": "esplorare nuovi ristoranti",
+          "my regular restaurants": "il mio solito ristorante"
         },
         "CSD U1 processing live_2022": {
           "walking": "camminare",
           "bear": "Orso",
           "rat": "ratto",
           "Where should you live?": "Dove dovresti vivere?",
-          "Answer the questions for advice on where to live. ": "Rispondi alle domande per ottenere consigli su dove vivere. ",
+          "Answer the questions for advice on where to live. ": "Rispondi alle domande per ottenere suggerimenti su dove vivere. ",
           "You should live in a big city.": "Dovresti vivere in una grande città.",
-          "What do you like to do for fun?": "Cosa ti piace fare per divertirti?",
+          "What do you like to do for fun?": "Cosa preferisci fare per divertirti?",
           "visit museums": "visitare i musei",
           "cookout with friends": "grigliata con gli amici",
           "go camping": "andare in campeggio",
           "public transit": "trasporto pubblico",
           "racoon": "procione",
           "coyote": "coyote",
-          "What food do you like?": "Che cibo ti piace?",
-          "delivery/takeout": "consegna/asporto"
+          "What food do you like?": "Cosa preferisci mangiare?",
+          "delivery/takeout": "cibo a domicilio/da asporto",
+          "go to sports games": "vai ai giochi sportivi",
+          "How do you like to get around?": "Come preferisci spostarti?",
+          "biking": "in bici",
+          "drive": "in macchina",
+          "What animals are you okay with?": "Insieme a quali animali stai bene?",
+          "home cooked meals": "cibo fatto in casa",
+          "trying new restaurants": "esplorare nuovi ristoranti",
+          "my regular restaurants": "il mio solito ristorante"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "Corretto!",
@@ -396,7 +520,11 @@
           "Select your favorite movie": "Seleziona il tuo film preferito",
           "What Should I Watch?": "Cosa dovrei guardare?",
           "You wanted to watch a:": "Volevi guardare un:",
-          "Based on your preferences, we think you should watch:": "In base alle tue preferenze, pensiamo che dovresti guardare:"
+          "Based on your preferences, we think you should watch:": "In base alle tue preferenze, pensiamo che dovresti guardare:",
+          "Tangled": "Rapunzel",
+          "What are you in the mood for?": "Quale genere ti ispira?",
+          "Choose a Kids Movie: Great for Babysitters!": "Scegli un film per bambini: un babysitter perfetto!",
+          "Do you want an animated movie?": "Vuoi un film d'animazione?"
         },
         "CSD U1 storage movies_2022": {
           "Star Wars": "Guerre Stellari",
@@ -410,7 +538,11 @@
           "Select your favorite movie": "Seleziona il tuo film preferito",
           "What Should I Watch?": "Cosa dovrei guardare?",
           "You wanted to watch a:": "Volevi guardare un:",
-          "Based on your preferences, we think you should watch:": "In base alle tue preferenze, pensiamo che dovresti guardare:"
+          "Based on your preferences, we think you should watch:": "In base alle tue preferenze, pensiamo che dovresti guardare:",
+          "Tangled": "Rapunzel",
+          "What are you in the mood for?": "Quale genere ti ispira?",
+          "Choose a Kids Movie: Great for Babysitters!": "Scegli un film per bambini: un babysitter perfetto!",
+          "Do you want an animated movie?": "Vuoi un film d'animazione?"
         },
         "CSD U1 storage outfit_2021": {
           "Clear": "Cancella",
@@ -426,7 +558,7 @@
           "Winter": "Inverno",
           "What season is it?": "Che stagione è?",
           "Cloudy": "Nuvoloso",
-          "Generate Outfit!": "Genera Outfit!"
+          "Generate Outfit!": "Genera abbigliamento!"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "Cancella",
@@ -442,7 +574,7 @@
           "Winter": "Inverno",
           "What season is it?": "Che stagione è?",
           "Cloudy": "Nuvoloso",
-          "Generate Outfit!": "Genera Outfit!"
+          "Generate Outfit!": "Genera abbigliamento!"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -1743,10 +1875,24 @@
           "Predict": "Predict"
         },
         "CSD U1 processing countries_2021": {
-          "have more than a billion people?": "ha più di un miliardo di persone?"
+          "have more than a billion people?": "ha più di un miliardo di persone?",
+          "How Many Countries...": "Quanti Paesi...",
+          "are bigger than Alaska?": "sono più grandi dell'Alaska?",
+          "have no land borders?": "non hanno confini terrestri?",
+          "are decreasing population?": "la loro popolazione sta diminuendo?",
+          "are land locked?": "sono senza sbocco sul mare?",
+          "have won the World Cup?": "hanno vinto i Mondiali?",
+          "have sent people to space?": "hanno mandato gente nello spazio?"
         },
         "CSD U1 processing countries_2022": {
-          "have more than a billion people?": "ha più di un miliardo di persone?"
+          "have more than a billion people?": "ha più di un miliardo di persone?",
+          "How Many Countries...": "Quanti Paesi...",
+          "are bigger than Alaska?": "sono più grandi dell'Alaska?",
+          "have no land borders?": "non hanno confini terrestri?",
+          "are decreasing population?": "la loro popolazione sta diminuendo?",
+          "are land locked?": "sono senza sbocco sul mare?",
+          "have won the World Cup?": "hanno vinto i Mondiali?",
+          "have sent people to space?": "hanno mandato gente nello spazio?"
         },
         "CSDU4 - Design Mode - 17": {
           "Red Button!": "Pulsante Rosso!",

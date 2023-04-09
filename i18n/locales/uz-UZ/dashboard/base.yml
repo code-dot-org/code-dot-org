@@ -1081,6 +1081,11 @@ uz:
     no_teacher_email:
       body_markdown: 'Hisobingizda elektron pochta manzili yo''q. Ushbu shaklni to''ldirishdan oldin elektron pochta manzilingizni qo''shish uchun [hisobingiz sozlamalariga o''ting](%{user_registration}).'
   courses_category: 'To''liq kurslar'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      sports: 'Sport'
+      csf: 'CS asoslari'
   cookie_banner:
     message: 'Bizning saytni ko''rib chiqishni davom ettirish yoki "Men roziman" tugmasini bosish orqali siz cookie-fayllarni kompyuteringizda yoki qurilmangizda saqlashga rozilik bildirasiz.'
     more_information: "Code.org Maxfiylik siyosati bilan tanishing"

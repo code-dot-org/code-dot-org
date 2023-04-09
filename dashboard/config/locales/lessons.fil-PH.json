@@ -366,47 +366,66 @@
           "name": "Kadalasan na Pagsusuri"
         },
         "coursed-2022/Graph Paper Programming": {
-          "name": "Graph Paper Programming"
+          "name": "Graph Paper Programming",
+          "preparation": "-   (Opsyonal) Panoorin ang video na **\\*Lesson in Action**. \n-   I-print ang **\\*worksheet** at **\\*assessment** para sa bawat mag-aaral."
         },
         "coursed-2022/Introduction to Online Puzzles": {
-          "name": "Pambungad sa mga Online na mga Palaisipan"
+          "name": "Pambungad sa mga Online na mga Palaisipan",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo."
         },
         "coursed-2022/Relay Programming": {
-          "name": "Relay Programming"
+          "name": "Relay Programming",
+          "preparation": "-   Panoorin ang **\\*Video ng Guro**. \n-   Maghanap ng malawak na bukas na espasyo sa aktibidad na ito, tulad ng gym o outdoor field. \n-   Mag-print ng **\\*Packet ng Aktibidad** sa bawat pangkat. \n-   Bigyan ang bawat pangkat ng maraming papel at panulat/lapis. \n-   Mag-print ng **\\*Worksheet** sa bawat mag-aaral."
         },
         "coursed-2022/Debugging with Laurel": {
-          "name": "Pagde-debug sa Kolektor"
+          "name": "Pagde-debug sa Kolektor",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo."
         },
         "coursed-2022/Events in Bounce": {
           "name": "Mga Pangyayari sa Bounce",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo.",
           "student_overview": "Nais mo bang maglaro ng mga video game sa paaralan? Sa araling ito, gagawa ka ng laro mismo!"
         },
         "coursed-2022/Build a Star Wars Game": {
           "name": "Bumuo ng Star Wars na Laro",
           "overview": "Sa araling ito, ang mga estudyante ay magsasanay sa paggamit ng mga pangyayari para makabuo ng laro na maaari nilang ibahagi online. Nagpapakita kay R2-D2 at ibang mga karakter sa Star Wars, ang mga estudyante ay gagabayan sa mga pangyayari, pagkatapos ay bibigyan ng lugar para makalikha ng kanilang sariling laro.",
+          "preparation": "-   Maglaro sa mga palaisipan at maghanap ng anumang mga potensyal na aspekto ng problema.",
           "student_overview": "Damdamin ang puwersa habang nagbubuo ka ng iyong sariling Star Wars na laro sa araling ito."
         },
         "coursed-2022/Dance Party": {
           "name": "Dance Party",
+          "preparation": "-   Maglaro sa mga palaisipan upang mahanap ang anumang mga potensyal na aspekto ng problema sa klase mo. \n-   Isaalang-alang ang pangangailangan sa mga headphone. Ang aktibidad na ito ay umaasa sa tunog.",
           "purpose": "Ang leksiyong ito ay nagpapakilala sa pangunahing mga konsepto ng coding ng CS at programming sa event (gamit ang mga block)."
         },
         "coursed-2022/Loops in Ice Age": {
-          "name": "Mga loop sa panahon ng yelo"
+          "name": "Mga loop sa panahon ng yelo",
+          "preparation": "-   (Opsyonal) Pumili ng ilang palaisipang gagawin bilang grupo kasama ng klase mo."
+        },
+        "coursed-2022/Drawing Shapes with Loops": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo."
         },
         "coursed-2022/Nested Loops in Maze": {
-          "name": "Naka-nest na mga Loops sa Maze"
+          "name": "Naka-nest na mga Loops sa Maze",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo."
         },
         "coursed-2022/Conditionals with Cards": {
-          "name": "Mga Conditional gamit ang mga Card"
+          "name": "Mga Conditional gamit ang mga Card",
+          "preparation": "-   Magtipon ng mga deck ng mga card o katulad na bagay. \n-   I-print o ipakita ang **\\*mga sample na program**. \n-   Mag-print ng **\\*pagtatasa** para sa bawat mag-aaral."
         },
         "coursed-2022/Looking Ahead with Minecraft": {
-          "name": "Masdan ang Hinaharap"
+          "name": "Masdan ang Hinaharap",
+          "preparation": "-   Maglaro sa mga palaisipan na nauugnay sa araling ito upang mahanap ang anumang potensyal na aspekto ng problema sa klase mo."
         },
         "coursed-2022/If/Else with Bee": {
-          "name": "Mga Kondisyonal sa Bee"
+          "name": "Mga Kondisyonal sa Bee",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo."
         },
         "coursed-2022/While Loops in Farmer": {
-          "name": "Mga While Loops sa Farmer"
+          "name": "Mga While Loops sa Farmer",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo."
+        },
+        "coursed-2022/Until Loops in Maze": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo."
         },
         "coursed-2022/End of Course Project": {
           "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto."
@@ -634,13 +653,18 @@
           "name": "Mga Loops kasama sina Rey at BB-8"
         },
         "coursec-2022/Harvesting Crops with Loops": {
-          "name": "Mga Loops sa Harvester"
+          "name": "Mga Loops sa Harvester",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo."
         },
         "coursec-2022/The Big Event": {
           "name": "The Big Event"
         },
         "coursec-2022/Build a Flappy Game": {
-          "name": "Bumuo ng Flappy na Laro"
+          "name": "Bumuo ng Flappy na Laro",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo."
+        },
+        "coursec-2022/Mini-Project: Chase Game": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo."
         },
         "coursec-2022/Picturing Data": {
           "name": "Paglalarawan ng Data"
@@ -3165,6 +3189,9 @@
         },
         "allthethings/lesson-48": {
           "name": "Panulaan"
+        },
+        "allthethings/lesson-49": {
+          "name": "Musika"
         },
         "coursef-2021/lesson-6": {
           "name": "Ipinapakilala ang Sprite Lab"
