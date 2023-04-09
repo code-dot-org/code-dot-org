@@ -145,6 +145,8 @@ class LessonProgress extends Component {
 
     const onBonusLevel = this.isOnBonusLevel();
 
+    const currentLevelApp = levels.find(level => level.isCurrentLevel).app;
+
     return (
       <div className="react_stage" style={styles.container}>
         <div
@@ -161,6 +163,14 @@ class LessonProgress extends Component {
               if (isCurrent && level.kind === LevelKind.assessment) {
                 isCurrent = currentPageNumber === level.pageNumber;
               }
+              const onBubbleClick =
+                currentLevelApp === 'music' && level.app === 'music'
+                  ? () => {
+                      console.log('bubble clicked');
+                      this.props.onLevelChanged(level.id);
+                    }
+                  : undefined;
+
               return (
                 <div
                   key={index}
@@ -175,10 +185,7 @@ class LessonProgress extends Component {
                     disabled={false}
                     smallBubble={!isCurrent}
                     lessonName={lessonName}
-                    onClick={() => {
-                      console.log('bubble clicked');
-                      this.props.onLevelChanged(level.id);
-                    }}
+                    onClick={onBubbleClick}
                   />
                 </div>
               );

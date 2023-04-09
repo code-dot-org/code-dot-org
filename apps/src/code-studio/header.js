@@ -91,6 +91,11 @@ header.build = function (
 
   let saveAnswersBeforeNavigation = currentPageNumber !== PUZZLE_PAGE_NONE;
 
+  const currentLevelApp = lessonData.levels.find(
+    level => level.activeId === currentLevelId
+  ).app;
+  const showLabContainer = currentLevelApp === 'music';
+
   // Set up the store immediately. Note that some progress values are populated
   // asynchronously.
   progress.generateLessonProgress(
@@ -119,7 +124,7 @@ header.build = function (
           scriptData={scriptData}
           currentLevelId={currentLevelId}
         />
-        <LabContainer />
+        {showLabContainer && <LabContainer />}
       </Provider>,
       document.querySelector('.header_level')
     );
