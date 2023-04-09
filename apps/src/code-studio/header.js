@@ -26,6 +26,7 @@ import {
   setInitialData
 } from '@cdo/apps/templates/currentUserRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
+import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
 import logToCloud from '../logToCloud';
 
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
@@ -136,6 +137,18 @@ header.build = function (
         document.querySelector('.signin_callout_wrapper')
       );
     }
+  });
+
+  window.addEventListener('popstate', function (event) {
+    console.log(
+      `location: ${document.location}, state: ${JSON.stringify(event.state)}`
+    );
+
+    const path = new URL(document.location).pathname;
+    const values = path.split('/');
+    const levelIndex = Number(values[6]) - 1;
+    const levelId = lessonData.levels[levelIndex].activeId;
+    getStore().dispatch(setCurrentLevelId(levelId));
   });
 };
 
