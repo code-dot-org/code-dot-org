@@ -16,7 +16,7 @@ import {AnalyticsContext, PlayerUtilsContext} from '../context';
 import TopButtons from './TopButtons';
 import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
-import AppConfig from '../appConfig';
+import AppConfig, {setAppConfig} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
 import ProgressManager from '../progress/ProgressManager';
 import MusicValidator from '../progress/MusicValidator';
@@ -45,12 +45,15 @@ const baseUrl = 'https://curriculum.code.org/media/musiclab/';
  */
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
+    appConfig: PropTypes.object,
+    currentLevel: PropTypes.number,
+    onChangeLevel: PropTypes.func,
+
     // populated by Redux
     userId: PropTypes.number,
     userType: PropTypes.string,
     signInState: PropTypes.oneOf(Object.values(SignInState)),
-    onChangeLevel: PropTypes.func,
-    currentLevel: PropTypes.number,
+
     isPlaying: PropTypes.bool,
     setIsPlaying: PropTypes.func,
     setCurrentPlayheadPosition: PropTypes.func,
@@ -75,6 +78,10 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
     this.playingTriggers = [];
+
+    if (this.props.appConfig) {
+      setAppConfig(this.props.appConfig);
+    }
 
     // Set default for instructions position.
     const defaultInstructionsPos = AppConfig.getValue(

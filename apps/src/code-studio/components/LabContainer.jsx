@@ -47,9 +47,15 @@ class UnconnectedLabContainer extends Component {
       this.props.currentLevelId
     );
 
+    const appConfig = {
+      'load-progression': 'true',
+      'local-progression': 'true'
+    };
+
     return (
       <div id="lab-container" className={moduleStyles.labContainer}>
         <MusicLabView
+          appConfig={appConfig}
           currentLevel={currentLevelIndex}
           onChangeLevel={index => this.changeLevelIndex(index)}
         />
