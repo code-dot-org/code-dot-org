@@ -689,11 +689,6 @@ class Pd::Workshop < ApplicationRecord
     end
   end
 
-  def workshop_starts_within_a_month
-    # workshop_starting_date.to_datetime.to_date > Date.today - 1.month
-    true
-  end
-
   # @return [String] url for this workshop in the workshop dashboard
   # Note the latter part of the path is handled by React-Router on the client, and is not known by rails url helpers
   def workshop_dashboard_url
