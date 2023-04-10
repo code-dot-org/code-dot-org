@@ -39,7 +39,7 @@ export default class AnimationPickerBody extends React.Component {
     hideCostumes: PropTypes.bool.isRequired,
     selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
     pickerType: PropTypes.string.isRequired,
-    shouldRestrictAnimationUpload: PropTypes.bool.isRequired
+    shouldWarnOnAnimationUpload: PropTypes.bool.isRequired
   };
 
   state = {
@@ -220,7 +220,7 @@ export default class AnimationPickerBody extends React.Component {
       onDrawYourOwnClick,
       onUploadClick,
       onAnimationSelectionComplete,
-      shouldRestrictAnimationUpload
+      shouldWarnOnAnimationUpload
     } = this.props;
 
     const searching = searchQuery !== '';
@@ -299,9 +299,7 @@ export default class AnimationPickerBody extends React.Component {
                 {!hideUploadOption && (
                   <AnimationUploadButton
                     onUploadClick={onUploadClick}
-                    shouldRestrictAnimationUpload={
-                      shouldRestrictAnimationUpload
-                    }
+                    shouldWarnOnAnimationUpload={shouldWarnOnAnimationUpload}
                     isBackgroundsTab={isBackgroundsTab}
                   />
                 )}

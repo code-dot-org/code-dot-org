@@ -112,14 +112,8 @@ export default class AzureTextToSpeech {
    * const soundResponse = await soundPromise();
    */
   createSoundPromise = opts => () => {
-    const {
-      text,
-      gender,
-      locale,
-      authenticityToken,
-      onFailure,
-      onComplete
-    } = opts;
+    const {text, gender, locale, authenticityToken, onFailure, onComplete} =
+      opts;
     const id = this.cacheKey_(locale, gender, text);
     const cachedSound = this.getCachedSound_(locale, gender, text);
     const wrappedSetCachedSound = soundResponse => {
@@ -146,6 +140,7 @@ export default class AzureTextToSpeech {
     }
 
     // Otherwise, check the text for profanity and request the TTS sound.
+    // eslint-disable-next-line no-async-promise-executor
     return new Promise(async resolve => {
       try {
         const profaneWords = await findProfanity(

@@ -450,16 +450,26 @@ module Pd::Application
       assert_equal 3, application.status_log.count
     end
 
-    test 'setting an auto-email status queues up an email' do
-      application = create :pd_teacher_application
+    test 'setting an auto-email status queues up an email if associated with an RP' do
+      application_hash = build :pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id
+      application = create :pd_teacher_application, form_data_hash: application_hash
       assert_empty application.emails
 
       application.expects(:queue_email).with('accepted')
       application.update!(status: 'accepted')
     end
 
-    test 'setting an non auto-email status does not queue up a status email' do
+    test 'setting an auto-email status does not queue up an email if no RP' do
       application = create :pd_teacher_application
+      assert_empty application.emails
+
+      application.expects(:queue_email).never
+      application.update!(status: 'accepted')
+    end
+
+    test 'setting a non auto-email status does not queue up a status email even if associated with an RP' do
+      application_hash = build :pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id
+      application = create :pd_teacher_application, form_data_hash: application_hash
       assert_empty application.emails
 
       application.expects(:queue_email).never
@@ -526,17 +536,15 @@ module Pd::Application
     end
 
     test 'should_send_decision_email?' do
-      application = build :pd_teacher_application, status: :pending
+      partner = create :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_SYSTEM
+      application_hash = build :pd_teacher_application_hash, regional_partner_id: partner.id
+      application = create :pd_teacher_application, form_data_hash: application_hash
 
       # no auto-email status: no email
       refute application.should_send_decision_email?
 
-      # auto-email status with no partner: yes email
+      # auto-email status with partner emails sent_by_system: yes email
       application.status = :accepted
-      assert application.should_send_decision_email?
-
-      # auto-email status, partner with sent_by_system: yes email
-      application.regional_partner = build(:regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_SYSTEM)
       assert application.should_send_decision_email?
 
       # auto-email status, partner with sent_by_partner: no email
@@ -1097,66 +1105,68 @@ module Pd::Application
       assert application.allow_sending_principal_email?
     end
 
-    test 'test allow_sending_admin_approval_teacher_reminder_email?' do
+    test 'test send_admin_approval_reminders_to_teachers' do
+      TeacherApplication.any_instance.stubs(:deliver_email)
+
+      # If we are any status other than awaiting_admin_approval, we cannot send
+      (TeacherApplication.statuses - ['awaiting_admin_approval']).each do |status|
+        application = create :pd_teacher_application
+        application.update!(status: status)
+        create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
+        TeacherApplication.send_admin_approval_reminders_to_teachers
+        assert_empty application.emails.where(email_type: 'admin_approval_teacher_reminder')
+      end
+
       # If we are awaiting_admin_approval, we can send.
       application = create :pd_teacher_application
       application.update!(status: 'awaiting_admin_approval')
       create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      assert application.allow_sending_admin_approval_teacher_reminder_email?
+      TeacherApplication.send_admin_approval_reminders_to_teachers
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
 
-      # If we are unreviewed, we cannot send.
-      application = create :pd_teacher_application
-      application.update!(status: 'unreviewed')
-      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      refute application.allow_sending_admin_approval_teacher_reminder_email?
-
-      # If we are pending, we cannot send.
-      application = create :pd_teacher_application
-      application.update!(status: 'pending')
-      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      refute application.allow_sending_admin_approval_teacher_reminder_email?
-
-      # If we are pending_space_availability, we can't send.
-      application = create :pd_teacher_application
-      application.update!(status: 'pending_space_availability')
-      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      refute application.allow_sending_admin_approval_teacher_reminder_email?
-
-      # If we're no longer unreviewed/pending, we can't send.
-      application = create :pd_teacher_application
-      application.update!(status: 'accepted')
-      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      refute application.allow_sending_admin_approval_teacher_reminder_email?
-
-      # If we created a teacher reminder email any time before, we can't send.
+      # If we queued a teacher reminder email any time before but didn't send, we still cannot send.
       application = create :pd_teacher_application
       create :pd_application_email, application: application, email_type: 'admin_approval_teacher_reminder', created_at: 14.days.ago
-      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      refute application.allow_sending_admin_approval_teacher_reminder_email?
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 14.days.ago
+      assert_equal 0, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
+      TeacherApplication.send_admin_approval_reminders_to_teachers
+      assert_equal 0, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
+
+      # If we sent a teacher reminder email any time before, we cannot send.
+      application = create :pd_teacher_application
+      create :pd_application_email, application: application, email_type: 'admin_approval_teacher_reminder', created_at: 14.days.ago, sent_at: 14.days.ago
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 14.days.ago, sent_at: 14.days.ago
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
+      TeacherApplication.send_admin_approval_reminders_to_teachers
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
 
       # If principal approval is not required, we can't send.
       application = create :pd_teacher_application
       application.update!(principal_approval_not_required: true)
       create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      refute application.allow_sending_admin_approval_teacher_reminder_email?
+      TeacherApplication.send_admin_approval_reminders_to_teachers
+      assert_empty application.emails.where(email_type: 'admin_approval_teacher_reminder')
 
       # If we already have a principal response, we can't send.
       application = create :pd_teacher_application
       create :pd_principal_approval_application, teacher_application: application
       create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      refute application.allow_sending_admin_approval_teacher_reminder_email?
+      TeacherApplication.send_admin_approval_reminders_to_teachers
+      assert_empty application.emails.where(email_type: 'admin_approval_teacher_reminder')
 
       # If we created a principal email < 5 days ago, we can't send.
       application = create :pd_teacher_application
       application.update!(status: 'awaiting_admin_approval')
       create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 1.day.ago
-      refute application.allow_sending_admin_approval_teacher_reminder_email?
+      TeacherApplication.send_admin_approval_reminders_to_teachers
+      assert_empty application.emails.where(email_type: 'admin_approval_teacher_reminder')
 
       # If we created a principal email >= 5 days ago, we can send.
       application = create :pd_teacher_application
       application.update!(status: 'awaiting_admin_approval')
       create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      assert application.allow_sending_admin_approval_teacher_reminder_email?
+      TeacherApplication.send_admin_approval_reminders_to_teachers
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
     end
 
     def assert_status_log(expected, application)

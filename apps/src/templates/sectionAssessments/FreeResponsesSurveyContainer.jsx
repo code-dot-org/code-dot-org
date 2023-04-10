@@ -65,7 +65,8 @@ const styles = {
   }
 };
 
-export const UnconnectedFreeResponsesSurveyContainer = FreeResponsesSurveyContainer;
+export const UnconnectedFreeResponsesSurveyContainer =
+  FreeResponsesSurveyContainer;
 
 export default connect(
   state => ({

@@ -1466,6 +1466,7 @@ FactoryBot.define do
     group 1
     pl_programs_offered ['CSD', 'CSP']
     applications_principal_approval RegionalPartner::ALL_REQUIRE_APPROVAL
+    is_active true
   end
 
   factory :regional_partner_with_mappings, parent: :regional_partner do

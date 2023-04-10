@@ -147,10 +147,9 @@ export default class CdoBramble {
   }
 
   config() {
-    const {
-      maxProjectCapacity,
-      pageConstants
-    } = this.store.getStore().getState();
+    const {maxProjectCapacity, pageConstants} = this.store
+      .getStore()
+      .getState();
 
     return {
       url: this.url,
@@ -765,8 +764,9 @@ export default class CdoBramble {
   }
 
   createHtmlDocument(head, body) {
-    return `<!DOCTYPE html>\n<html>\n  <head>\n    ${head ||
-      ''}\n  </head>\n  <body>\n    ${body || ''}\n  </body>\n</html>`;
+    return `<!DOCTYPE html>\n<html>\n  <head>\n    ${
+      head || ''
+    }\n  </head>\n  <body>\n    ${body || ''}\n  </body>\n</html>`;
   }
 
   addFileHTML() {

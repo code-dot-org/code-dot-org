@@ -20,7 +20,7 @@ end
 Given /^I am a CSF facilitator named "([^"]*)" for regional partner "([^"]*)"$/ do |facilitator_name, partner_name|
   require_rails_env
 
-  RegionalPartner.find_or_create_by(name: partner_name, group: 1)
+  RegionalPartner.find_or_create_by(name: partner_name, group: 1, is_active: true)
 
   steps %Q{
     And there is a facilitator named "#{facilitator_name}" for course "#{Pd::Workshop::COURSE_CSF}"
@@ -31,7 +31,7 @@ end
 Given /^I am a program manager named "([^"]*)" for regional partner "([^"]*)"$/ do |pm_name, partner_name|
   require_rails_env
 
-  regional_partner = RegionalPartner.find_or_create_by(name: partner_name, group: 1)
+  regional_partner = RegionalPartner.find_or_create_by(name: partner_name, group: 1, is_active: true)
 
   email, password = generate_user(pm_name)
   FactoryBot.create(:program_manager, name: pm_name, email: email, password: password, regional_partner: regional_partner)

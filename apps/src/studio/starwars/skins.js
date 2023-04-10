@@ -158,7 +158,10 @@ export function loadStarWarsEvents(skin) {
     return zones;
   }
 
-  skin.customObstacleZones.endor.grid = skin.customObstacleZones.hoth.grid = skin.customObstacleZones.starship.grid = generateGridObstacleZones();
+  skin.customObstacleZones.endor.grid =
+    skin.customObstacleZones.hoth.grid =
+    skin.customObstacleZones.starship.grid =
+      generateGridObstacleZones();
 
   skin.customObstacleZones.endor.blobs = [
     {minX: 346, maxX: 413, minY: 261, maxY: 344},
@@ -310,7 +313,7 @@ export function loadStarWarsEvents(skin) {
   skin.gridSpriteRenderOffsetY = -40;
 
   skin.avatarList = ['r2-d2', 'c-3po'];
-  skin.avatarList.forEach(function(name) {
+  skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
       walk: skin.assetUrl('walk_' + name + '.png'),
@@ -352,11 +355,11 @@ export function loadStarWarsEvents(skin) {
     {loop: 'c-3po_move_loop', end: 'c-3po_move_end', volume: 0.6}
   ];
 
-  skin.preventProjectileLoop = function(className) {
+  skin.preventProjectileLoop = function (className) {
     return className === '';
   };
 
-  skin.preventItemLoop = function(className) {
+  skin.preventItemLoop = function (className) {
     return className === '';
   };
 
@@ -415,7 +418,7 @@ export function loadStarWarsEvents(skin) {
   // of the two maps that use jumbo pieces ("circle" and "horizontal") we
   // return a special version of the map that just uses regular tile pieces.
 
-  skin.getMap = function(background, map) {
+  skin.getMap = function (background, map) {
     if (background === 'hoth' && (map === 'circle' || map === 'horizontal')) {
       return map + '_nonjumbo';
     } else {
@@ -849,7 +852,7 @@ export function loadStarWarsGrid(skin) {
   skin.gridSpriteRenderOffsetY = -40;
 
   skin.avatarList = ['bb-8'];
-  skin.avatarList.forEach(function(name) {
+  skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
       walk: skin.assetUrl('walk_' + name + '.png'),
@@ -874,11 +877,11 @@ export function loadStarWarsGrid(skin) {
     {begin: 'move4', volume: 0.3}
   ];
 
-  skin.preventProjectileLoop = function(className) {
+  skin.preventProjectileLoop = function (className) {
     return className === '';
   };
 
-  skin.preventItemLoop = function(className) {
+  skin.preventItemLoop = function (className) {
     return className === '';
   };
 

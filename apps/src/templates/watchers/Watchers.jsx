@@ -482,11 +482,7 @@ export default connect(
 
 // http://stackoverflow.com/a/7390612
 function nonValueDescriptor(obj) {
-  return {}.toString
-    .call(obj)
-    .split(' ')[1]
-    .slice(0, -1)
-    .toLowerCase();
+  return {}.toString.call(obj).split(' ')[1].slice(0, -1).toLowerCase();
 }
 
 function wrapValue(index, length) {

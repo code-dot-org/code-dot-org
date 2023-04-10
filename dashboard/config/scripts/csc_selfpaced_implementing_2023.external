@@ -1,0 +1,17 @@
+name 'CSC-SelfPaced-implementing_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Implementing CS Connections
+
+### **Guidance** 
+
+* ##### Consider introducing computer science to students with <a href="https://code.org/helloworld" target="blank" rel="noopener noreferrer">Hello World!</a>.
+
+<img src="https://images.code.org/c014b17c19c8e786f199f952fc46f236-image-1680733765135.png" width="500px" style="border-radius:10px; float:center;">
+
+* ##### Complete all lessons of any module on your own before teaching them.
+
+* ##### Check out <a href="https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview" target="blank" rel="noopener noreferrer">XXXX</a> for more information and additional resources.
+MARKDOWN

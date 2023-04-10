@@ -20,3 +20,5 @@ teacher_markdown <<MARKDOWN
 
 _SSL Definition From: http://info.ssl.com/article.aspx?id=10241_ 
 MARKDOWN
+
+allow_multiple_attempts true

@@ -5,3 +5,5 @@ wrong 'When the tour guide touches Sam, a new **Statue of Liberty sprite** appea
 wrong 'When the tour guide touches Sam, **100 museum sprites** will pop. ', feedback: 'Incorrect.'
 right 'When the tour guide touches Sam, the **background will change.**', feedback: 'Correct!'
 
+
+allow_multiple_attempts false

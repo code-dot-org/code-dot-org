@@ -52,10 +52,7 @@ describe('JavalabSettings', () => {
     const switchThemeButton = wrapper.find('#javalab-settings-switch-theme');
     assert.equal(switchThemeButton.length, 1);
 
-    switchThemeButton
-      .first()
-      .props()
-      .onClick();
+    switchThemeButton.first().props().onClick();
 
     sinon.assert.calledWith(setDisplayTheme, DisplayTheme.LIGHT);
 
@@ -72,10 +69,7 @@ describe('JavalabSettings', () => {
     );
     assert.equal(fontSizeSelector.length, 1);
     assert.isTrue(
-      fontSizeSelector
-        .first()
-        .text()
-        .includes(`${editorFontSize}px`)
+      fontSizeSelector.first().text().includes(`${editorFontSize}px`)
     );
   });
 
@@ -88,18 +82,12 @@ describe('JavalabSettings', () => {
 
     const decreaseButton = wrapper.find('#javalab-settings-decrease-font');
     assert.equal(decreaseButton.length, 1);
-    decreaseButton
-      .first()
-      .props()
-      .onClick();
+    decreaseButton.first().props().onClick();
     sinon.assert.calledOnce(decreaseEditorFontSize);
 
     const increaseButton = wrapper.find('#javalab-settings-increase-font');
     assert.equal(increaseButton.length, 1);
-    increaseButton
-      .first()
-      .props()
-      .onClick();
+    increaseButton.first().props().onClick();
     sinon.assert.calledOnce(increaseEditorFontSize);
   });
 

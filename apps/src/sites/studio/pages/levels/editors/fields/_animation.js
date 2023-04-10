@@ -5,12 +5,12 @@ import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/p5lab/shapes';
 const VALID_COLOR = 'black';
 const INVALID_COLOR = '#d00';
 
-$(document).ready(function() {
+$(document).ready(function () {
   // Live-validate animations JSON using same validation code we use in Gamelab
   const levelStartAnimationsValidationDiv = $(
     '#level-start-animations-validation'
   );
-  const validateAnimationJSON = function(json) {
+  const validateAnimationJSON = function (json) {
     json = json.trim();
     try {
       if (json.length > 0) {

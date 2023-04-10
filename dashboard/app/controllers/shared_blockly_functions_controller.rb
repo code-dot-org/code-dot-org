@@ -23,18 +23,16 @@ class SharedBlocklyFunctionsController < ApplicationController
     end
   end
 
-  private
-
-  def load_block_pool
+  private def load_block_pool
     @pools = Block.all_pool_names
     @block_pool = Block.for(@pools)
   end
 
-  def create_params
+  private def create_params
     update_params
   end
 
-  def update_params
+  private def update_params
     params.require(:shared_blockly_function).permit(
       :name,
       :description,

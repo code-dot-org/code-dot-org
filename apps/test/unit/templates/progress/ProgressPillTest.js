@@ -63,20 +63,8 @@ describe('ProgressPill', () => {
       />
     );
     assert.equal(wrapper.find('ReactTooltip').length, 1);
-    assert.equal(
-      wrapper
-        .find('div')
-        .first()
-        .props()['data-tip'],
-      true
-    );
-    assert.equal(
-      wrapper
-        .find('div')
-        .first()
-        .props()['data-for'],
-      123
-    );
+    assert.equal(wrapper.find('div').first().props()['data-tip'], true);
+    assert.equal(wrapper.find('div').first().props()['data-for'], 123);
   });
 
   it('has an href when single level with url', () => {

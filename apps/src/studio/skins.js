@@ -129,7 +129,7 @@ function loadGumball(skin) {
    * `brew install graphicsmagick`
    * `gm convert +adjoin -crop 200x200 -resize 100x100 *spritesheet* output%02d.png`
    */
-  skin.avatarList.forEach(function(name, i) {
+  skin.avatarList.forEach(function (name, i) {
     skin[name] = {
       sprite: skin.assetUrl('idle_' + name + '.png'),
       walk: skin.assetUrl('walk_' + name + '.png'),
@@ -320,7 +320,7 @@ function loadIceAge(skin) {
    * `brew install graphicsmagick`
    * `gm convert +adjoin -crop 200x200 -resize 100x100 *spritesheet* output%02d.png`
    */
-  skin.avatarList.forEach(function(name) {
+  skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
       walk: skin.assetUrl('walk_' + name + '.png'),
@@ -465,7 +465,7 @@ function loadInfinity(skin) {
   skin.projectileSpriteHeight = 70;
 
   skin.avatarList = ['anna', 'elsa', 'hiro', 'baymax', 'rapunzel'];
-  skin.avatarList.forEach(function(name) {
+  skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
       walk: skin.assetUrl('walk_' + name + '.png'),
@@ -483,11 +483,11 @@ function loadInfinity(skin) {
     };
   });
 
-  skin.preventProjectileLoop = function(className) {
+  skin.preventProjectileLoop = function (className) {
     return className === 'projectile_hiro';
   };
 
-  skin.preventItemLoop = function(className) {
+  skin.preventItemLoop = function (className) {
     return className === 'item_hiro';
   };
 
@@ -708,7 +708,7 @@ function loadStudio(skin) {
    * `brew install graphicsmagick`
    * `gm convert +adjoin -crop 200x200 -resize 100x100 *spritesheet* output%02d.png`
    */
-  skin.avatarList.forEach(function(name) {
+  skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl(name + '_spritesheet_200px.png'),
       dropdownThumbnail: skin.assetUrl(name + '_thumb.png'),
@@ -865,7 +865,7 @@ function loadStudio(skin) {
   ];
 }
 
-exports.load = function(assetUrl, id) {
+exports.load = function (assetUrl, id) {
   var skin = skinsBase.load(assetUrl, id);
 
   // NOTE: all class names should be unique.  eventhandler naming won't work

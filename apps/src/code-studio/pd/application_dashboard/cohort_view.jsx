@@ -62,9 +62,7 @@ class CohortView extends React.Component {
   }
 
   getApiUrl = (format = '') =>
-    `/api/v1/pd/applications/cohort_view${format}?role=${
-      this.props.route.role
-    }`;
+    `/api/v1/pd/applications/cohort_view${format}?role=${this.props.route.role}`;
   getJsonUrl = () => this.getApiUrl();
   getCsvUrl = () => {
     let url = this.getApiUrl('.csv');
@@ -72,9 +70,7 @@ class CohortView extends React.Component {
       this.props.showRegionalPartnerDropdown &&
       this.props.regionalPartnerFilter
     ) {
-      url += `&regional_partner_value=${
-        this.props.regionalPartnerFilter.value
-      }`;
+      url += `&regional_partner_value=${this.props.regionalPartnerFilter.value}`;
     }
 
     return url;

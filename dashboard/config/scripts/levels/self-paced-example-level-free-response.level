@@ -11,13 +11,14 @@
     "optional": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "teacher_markdown": "Teacher only content yay!"
+    "teacher_markdown": "Teacher only content yay!",
+    "allow_multiple_attempts": "true"
   },
-  "game_id": 52,
-  "published": true,
-  "created_at": "2021-11-30T20:44:23.000Z",
   "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2021-12-17T00:48:58.000Z",
   "user_id": 9271,
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2021-11-30T10:44:23.978-05:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L6 Placeholder\\\"\"],\"cloned_from\":\"CSA U6L2-L6 Placeholder\"},{\"changed_at\":\"2021-12-06 15:00:01 -0500\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2021-12-07 13:22:07 -0500\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]",
   "level_concept_difficulty": {
   }

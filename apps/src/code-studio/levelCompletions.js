@@ -8,7 +8,7 @@ import $ from 'jquery';
  * @param {boolean} isSampled - whether Google Analytics sampled.
  * @param {boolean} startDatePresent - whether a start_date parameter was given.
  */
-exports.hideAndShowDomElements = function(isSampled, startDatePresent) {
+exports.hideAndShowDomElements = function (isSampled, startDatePresent) {
   if (isSampled) {
     $('#samplingMessage').show();
   }
@@ -117,7 +117,7 @@ function timeOnSiteRenderer(
 /**
  * Populates the completionTable DOM element.
  */
-exports.populateTable = function(headers, data) {
+exports.populateTable = function (headers, data) {
   $('#completionTable').handsontable({
     data: data,
     startRows: 10,
@@ -170,7 +170,7 @@ exports.populateTable = function(headers, data) {
         data: 'timeOnSite'
       }
     ],
-    cells: function(row, col, prop) {
+    cells: function (row, col, prop) {
       if (col === 3) {
         return {renderer: successRateRenderer};
       } else if (col === 8) {

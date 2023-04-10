@@ -195,9 +195,7 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
       )
     end
 
-    private
-
-    def get_binding
+    private def get_binding
       binding
     end
   end

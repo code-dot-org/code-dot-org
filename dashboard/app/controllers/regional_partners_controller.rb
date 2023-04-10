@@ -143,12 +143,11 @@ class RegionalPartnersController < ApplicationController
     redirect_to @regional_partner
   end
 
-  private
-
   # Never trust parameters from the scary internet, only allow the white list through.
-  def regional_partner_params
+  private def regional_partner_params
     params.require(:regional_partner).permit(
       :name,
+      :is_active,
       :group,
       :urban,
       :cohort_capacity_csd,
@@ -183,7 +182,7 @@ class RegionalPartnersController < ApplicationController
     )
   end
 
-  def restricted_users
+  private def restricted_users
     User.select(RESTRICTED_USER_ATTRIBUTES_FOR_VIEW)
   end
 
@@ -191,7 +190,7 @@ class RegionalPartnersController < ApplicationController
   # has a 'Region' header and is a valid CSV file. If any of the above
   # are false, returns false and sets an alert instead of returning CSV
   # as an object
-  def validate_mappings_csv(file)
+  private def validate_mappings_csv(file)
     unless file
       flash[:alert] = "Replace mappings failed. CSV file not found."
       return false
@@ -222,7 +221,7 @@ class RegionalPartnersController < ApplicationController
   # and, if valid, add to mappings array. If it is invalid add an
   # error to the errors array in the format {region, message}
   # Mappings are not added to any regional partner in this method.
-  def parse_mappings_from_csv(csv)
+  private def parse_mappings_from_csv(csv)
     regions_missing = false
     mappings = []
     errors = []
@@ -257,7 +256,7 @@ class RegionalPartnersController < ApplicationController
   # Replace mappings failed with x error(s):
   # <region> <error message>
   # ...
-  def parse_upload_errors(errors)
+  private def parse_upload_errors(errors)
     error_message = "<b>Replace mappings failed with #{errors.count} error(s)"
     if errors.count > 10
       error_message += ". The first 10 errors are"
