@@ -5,8 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Sprites
 
-##### Sprites are a complex concept, and students may have difficulty understanding exactly what they are. The most important aspect for students to understand is that sprites allow them to organize a lot of information about something that they want to draw to the screen.
+<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px; margin-bottom:20px;">
 
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">Sprites are a complex concept, and students may have difficulty understanding exactly what they are. The most important aspect for students to understand is that sprites allow them to organize a lot of information about something that they want to draw to the screen.
+</p></div>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 <summary style="font-size: 1.5em; font-weight: bold;">🔎 Using the Animation Tab</summary>
@@ -33,7 +35,7 @@ markdown <<MARKDOWN
     <p>
 
 
-##### Students can create a new _sprite_ using the `createSprite()` block.
+##### Students can create a new _sprite_ using the [`createSprite()`(#f78183)](/docs/ide/gamelab/expressions/createSprite) block.
 
 ![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/sprite_map.png)
 
