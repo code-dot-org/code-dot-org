@@ -26,6 +26,11 @@ interface FileMetadata {
   [key: string]: string;
 }
 
+// JavalabEditorDialog is an enum of possible open dialogs.
+// keyof typeof gives us the union type of the all the Enum keys as strings.
+// https://www.typescriptlang.org/docs/handbook/enums.html#enums-at-compile-time
+type JavlabEditorDialogOptions = keyof typeof JavalabEditorDialog;
+
 interface JavalabEditorState {
   fileMetadata: FileMetadata;
   orderedTabKeys: string[];
@@ -33,7 +38,7 @@ interface JavalabEditorState {
   lastTabKeyIndex: number;
   sources: Sources;
   validation: Sources;
-  editorOpenDialogName: keyof typeof JavalabEditorDialog | null;
+  editorOpenDialogName: JavlabEditorDialogOptions | null;
   newFileError: string | null;
   renameFileError: string | null;
   editTabKey: string | null;
@@ -135,7 +140,7 @@ const javalabEditorSlice = createSlice({
         action: PayloadAction<{oldFilename: string; newFilename: string}>
       ) {
         const source = state.sources[action.payload.oldFilename];
-        // if old filename doesn't exist, this is a no-op
+        // if the old filename doesn't exist, this is a no-op
         if (source !== undefined) {
           const newSources = {...state.sources};
           delete newSources[action.payload.oldFilename];
@@ -194,10 +199,7 @@ const javalabEditorSlice = createSlice({
       delete newSources[filename];
       state.sources = newSources;
     },
-    openEditorDialog(
-      state,
-      action: PayloadAction<keyof typeof JavalabEditorDialog>
-    ) {
+    openEditorDialog(state, action: PayloadAction<JavlabEditorDialogOptions>) {
       if (Object.values(JavalabEditorDialog).includes(action.payload)) {
         state.editorOpenDialogName = action.payload;
       }
