@@ -2,11 +2,11 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "✅ **TO DO #1:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Color.java</code>, override the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">equals()</code> method to check if the values in the calling object's 1D array <code style=\"background-color: #ececec; color: black; font-weight: bold;\">colroValues</code> are equivalent to the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">colorValues</code> of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">otherColor</code>. If all values in <code style=\"background-color: #ececec; color: black; font-weight: bold;\">colorValues</code> are equivalent, return <code style=\"background-color: #ececec; color: black; font-weight: bold;\">true</code>, otherwise return <code style=\"background-color: #ececec; color: black; font-weight: bold;\">false</code>.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ColorScene.java</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getUniqueColors()</code> method. The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getUniqueColors()</code> method should:\r\n\r\n1. Traverse the 1D array of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Color</code> objects.\r\n\r\n2. If the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Color</code> occurs in the array only once, add it to a new array.\r\n\r\n3. Return the new array.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Object</code> class in the <strong>Documentation</strong> tab ⬆️ for help overriding and using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">equals()</code> method.\r\n</div>",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console",
+    "csa_view_mode": "theater",
     "start_sources": {
       "Runner.java": {
         "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
@@ -16,13 +16,16 @@
     },
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "Unique Colors",
+    "bubble_choice_description": "Override the `equals()` method in the `Color` class to check if two `Color` objects have the same color values.",
+    "thumbnail_url": "https://images.code.org/88a47a66fef048f21bf92b758082e377-colored-pencils.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-02-17T18:46:45.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-02-17T18:46:45.098+00:00\",\"changed\":[\"cloned from \\\"CSA U4L6-L7c_2023\\\"\"],\"cloned_from\":\"CSA U4L6-L7c_2023\"},{\"changed_at\":\"2023-02-17 18:46:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-17T18:46:45.098+00:00\",\"changed\":[\"cloned from \\\"CSA U4L6-L7c_2023\\\"\"],\"cloned_from\":\"CSA U4L6-L7c_2023\"},{\"changed_at\":\"2023-02-17 18:46:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-07 19:15:38 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
