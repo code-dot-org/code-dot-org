@@ -5,7 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Web Development Mini-Projects 
 
-##### **Mini-projects** are smaller projects that appear throughout the unit. These projects act as checkpoints in the curricula and cover a smaller set of skills than the entire unit. We recommend using these opportunities for formative assessment.
+<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; "><strong>Mini-projects</strong> are smaller projects that appear throughout the unit. These projects act as checkpoints in the curricula and cover a smaller set of skills than the entire unit. We recommend using these opportunities for formative assessment.
+</p></div>
 
 ## Overview of Mini-Projects
 
@@ -15,7 +18,7 @@ markdown <<MARKDOWN
     <summary style="font-size: 1.2em; font-weight: bold;">🔎 Lesson 4: Mini-Project - HTML Web Page</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
-<img src="https://images.code.org/6a1d40f9aced802e9dca21e44fae350e-image-1680635789773.png" alt="Image of exemplar project guide" width="250px" style="float:left; margin-left:20px;  padding-right: 30px;">
+<img src="https://images.code.org/cc052f1bcbe9fcec9e19581ec8dc34db-image-1680971774553.png" alt="Image of exemplar project guide" width="250px" style="float:left; margin-left:20px;  padding-right: 30px;">
 
 **Question of the Day:** How can I use HTML to express a personal value?
 
@@ -34,7 +37,7 @@ Students use what they have learned to create their own personal web page on a t
     <summary style="font-size: 1.2em; font-weight: bold;">🔎 Lesson 7: Mini-Project - Your Personal Style</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
-<img src="https://images.code.org/8a9ae043017bf1a6de880242e2f092ce-image-1680636059277.png" alt="Image of sample websites" width="250px" style="float:left; margin-left:20px;  padding-right: 30px;">
+<img src="https://images.code.org/6f055874ebfd64ad532852c39796e8da-image-1680971821938.png" alt="Image of sample websites" width="250px" style="float:left; margin-left:20px; padding-right: 30px; margin-top: 20px; margin-bottom:40px;">
 
 **Question of the Day:** How can you express your personal style on a web page?
 
@@ -56,5 +59,5 @@ Students use what they have learned to create their own styled web page on a top
 
 ##### Though they are only scoped for a single day, teachers may decide to extend these projects as a way to support or challenge students. Extending these projects may allow you to revisit difficult concepts or support students who may have missed lessons and are trying to catch up. 
 
-
+![]()
 MARKDOWN

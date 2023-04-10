@@ -5,22 +5,32 @@ description 'description here'
 markdown <<MARKDOWN
 # Chapter 2 Project: Propose an App
 
-## Project overview
+<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px; margin-bottom:20px;">
 
-##### To conclude their study of the problem solving process and the input/output/store/process model of a computer, students will propose an app designed to solve a real world problem. This project will be completed across multiple days and will result in students creating a poster highlighting the features of their app that they will present to their classmates. A project guide provides step by step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">To conclude their study of the problem solving process and the input/output/store/process model of a computer, students will propose an app designed to solve a real world problem. This project will be completed across multiple days and will result in students creating a poster highlighting the features of their app that they will present to their classmates. A project guide provides step by step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.
+</p></div>
 
-## Sample student projects
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">✏️ Sample Student Projects</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
 
 ##### Click the images below to view the sample projects in a new tab.
 
-<div style="float: left; text-align:center;"><a href="https://docs.google.com/document/d/1rMOCA8Cc2ERwJEAK3Z_gahajGTrqofL7ysKDfRCafqg/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/b44072afce2f2ce10ee1d155b741bfdd-image-1651178666801.43.05 PM.png" width="250px"; alt="Image of recycling club web page"></a></div>
+<table>
+<tr>
+<td><a href="https://docs.google.com/document/d/1rMOCA8Cc2ERwJEAK3Z_gahajGTrqofL7ysKDfRCafqg/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/b44072afce2f2ce10ee1d155b741bfdd-image-1651178666801.43.05 PM.png" width="300px"; alt="Image of recycling club web page"></a></td>
 
-<div style="float: left; text-align:center;"><a href="https://docs.google.com/document/d/1fQdN2NSWq01sF05gABlgk1FIxeQ8hdsJQ6XQ0LhIXis/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/bb11654cbd01a9b939181098df9082a2-image-1651178615079.43.25 PM.png" width="250px" alt="Image of trip web page"></a></div>
+<td><a href="https://docs.google.com/document/d/1fQdN2NSWq01sF05gABlgk1FIxeQ8hdsJQ6XQ0LhIXis/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/bb11654cbd01a9b939181098df9082a2-image-1651178615079.43.25 PM.png" width="300px" alt="Image of trip web page"></a>
+</td></tr></table>
+
+</p></div></details>
 
 
-<div style="clear:both"/>
-
-## Grouping recommendation
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">🧑🏿‍🤝‍🧑🏽 Grouping Recommendation</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
 
 ##### **Creating Groups:** Ideally, this project is done in pairs. If need be, groups of 3 will work. You should decide beforehand whether you will assign or allow students to pick their partners.
 
@@ -30,9 +40,9 @@ markdown <<MARKDOWN
 - <a href="https://www.youtube.com/watch?v=6GgrUeVT-xs" target="blank" rel="noopener noreferrer">Dealing with Disagreements</a>
 
 ##### Depending on your goals with this project, consider having teams complete a <a href="https://docs.google.com/document/d/1wcSqQAR-PGZWkE9EGaAw9UP6ZyibmSCSbbsuiXIgcWg/view" target="blank" rel="noopener noreferrer">Student Planning Template</a>[](), which reinforces the message in the video.
+</p></div></details>
 
-
-## Project resources
+## Project Resources
 
 * ##### <a href="https://studio.code.org/s/csd1-2023/lessons/8" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
 * ##### <a href="https://docs.google.com/document/d/1Oza12wkU_FWawNSeXBae_v6knPNdO8Ph5EPeYBSvy3k/view" target="blank" rel="noopener noreferrer" >Project guide</a> 
