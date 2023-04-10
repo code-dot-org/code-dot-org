@@ -20,30 +20,28 @@ const CurriculumCatalog = ({curriculaData}) => {
       </div>
       <div className={style.catalogContentContainer}>
         <div className={style.catalogContent}>
-          {/*TODO [MEG]: calculate and pass in duration from backend, use image in imageSrc, add validations on backend for presence of grades, subjects, topics */}
-          {curriculaData.map(
-            ({key, display_name, grade_levels, school_subject, cs_topic}) => {
-              const grade_level_array = grade_levels?.split(',');
+          {/*TODO [MEG]: calculate and pass in duration from backend, use image in imageSrc */}
+          {curriculaData
+            .filter(curriculum => !!curriculum.grade_levels)
+            .map(
+              ({key, display_name, grade_levels, school_subject, cs_topic}) => {
+                // TODO [MEG]: We are currently assuming if there are grade levels, there are at least two
+                // grades and the list is in ascending order.
+                const gradeLevelArray = grade_levels.split(',');
 
-              return (
-                <CurriculumCatalogCard
-                  key={key}
-                  courseDisplayName={display_name}
-                  duration={'quarter'}
-                  youngestGrade={
-                    grade_level_array ? grade_level_array[0] : 'none'
-                  }
-                  oldestGrade={
-                    grade_level_array
-                      ? grade_level_array[grade_level_array.length - 1]
-                      : 'none'
-                  }
-                  subjects={school_subject?.split(',')}
-                  topics={cs_topic?.split(',')}
-                />
-              );
-            }
-          )}
+                return (
+                  <CurriculumCatalogCard
+                    key={key}
+                    courseDisplayName={display_name}
+                    duration={'quarter'}
+                    youngestGrade={gradeLevelArray[0]}
+                    oldestGrade={gradeLevelArray[gradeLevelArray.length - 1]}
+                    subjects={school_subject?.split(',')}
+                    topics={cs_topic?.split(',')}
+                  />
+                );
+              }
+            )}
         </div>
       </div>
     </>
