@@ -3,12 +3,15 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# User Testing
+# Lesson 5 Activity: User Interfaces - User Testing
 
-##### For this activity, students use this paper prototype to test out an app. One person will be the **user**, who will try to use the paper prototype. Another person will be the **computer**, who is in charge of changing the screens and reacting to what the user does. Our goal is to collect feedback so we can make recommendations and improve it.
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px; margin-bottom:20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">For this activity, students use this paper prototype to test out an app. One person will be the <strong>user</strong>, who will try to use the paper prototype. Another person will be the <strong>computer</strong>, who is in charge of changing the screens and reacting to what the user does. Our goal is to collect feedback so we can make recommendations and improve it.
+</p></div>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em; font-weight: bold;">🔎 How does the activity work?</summary>
+<summary style="font-size: 1.5em; font-weight: bold;">❓ How does the activity work?</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p><img src="https://images.code.org/60084109187f504a66a6591bab8ec629-image-1648826166820.15.40 AM.png" alt="Screenshot of an app prototype" style="float:right; margin-left:20px;">
 

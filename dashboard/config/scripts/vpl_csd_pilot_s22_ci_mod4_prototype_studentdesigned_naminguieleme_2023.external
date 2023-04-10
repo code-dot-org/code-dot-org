@@ -5,7 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Naming UI Elements
 
-##### Design Mode in App Lab allows students to place a number of different types of User Interface (or UI) elements on the screen. Many of these elements can be used to take input from the user.
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">Design Mode in App Lab allows students to place a number of different types of User Interface (or UI) elements on the screen. Many of these elements can be used to take input from the user.
+</p></div>
 
 ## Choosing Good IDs
 
@@ -30,7 +33,10 @@ markdown <<MARKDOWN
 * ##### *must* begin with a letter (A-Z or a-z) and may be followed by any number of digits and letters.
 * ##### can contain hyphens ("-"), underscores ("_"), colons (":"), or periods (".").
 
-##### **Case-sensitive?**
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">🔤 Case-sensitive?</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
 
 ##### This means there is a difference between "HomeButton" and "homeButton"  (notice the Capital H on the first one).
 
@@ -39,10 +45,14 @@ markdown <<MARKDOWN
 * **Capitalization (known as "camelCase")** -- "aCamelcaseNameMightLookLikeThis"
 * **Underscores (known as "snake_case")** -- "some&#95;people&#95;like&#95;to&#95;use&#95;underscores&#95;to&#95;separate&#95;words"
 * **Dashes (known as "kebab-case")** -- "others-like-to-use-hyphens-or-dashes"
+</p></div></details>
 
-## Teaching tip
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">💡 Teaching tip</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
 
 ##### Ensuring that all students are both creating unique IDs for all elements and properly namespacing them will go a long way towards avoiding issues later in the unit. It pays to be a stickler here! 
-
+</p></div></details>
 
 MARKDOWN
