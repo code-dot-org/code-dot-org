@@ -5,22 +5,17 @@ description 'description here'
 markdown <<MARKDOWN
 # Lessons 1 - 5
 
-##### The Web Development unit begins with an opportunity for students to think about developing websites for other users. They will first encounter Web Lab by viewing sample web pages created within the tool for different purposes and different users. They will then move into a set of scaffolded lessons that introduce them to the Web Lab tool as the build skills in to setting the structure of a web page using HTML. These first few lessons help students build foundational skills and knowledge that they will use later in the unit where they will need to apply these skills and knowledge to create their own web sites.  
+<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-## Key terms used throughout the Web Development unit
-
-* ##### **Website content** - the text and images on a website
-* ##### **Website structure** - how the content on the website is organized
-* ##### **HTML** - Hypertext Markup Language, a language used to create the structure of web pages
-* ##### **CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled
-* ##### **Digital footprint** - the collected information about an individual across multiple website on the Internet
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">The Web Development unit begins with an opportunity for students to think about developing websites for other users. They will first encounter Web Lab by viewing sample web pages created within the tool for different purposes and different users. They will then move into a set of scaffolded lessons that introduce them to the Web Lab tool as the build skills in to setting the structure of a web page using HTML. These first few lessons help students build foundational skills and knowledge that they will use later in the unit where they will need to apply these skills and knowledge to create their own web sites.  
+</p></div>
 
 ## Overview of Lessons 1 - 5 
 
 ##### Click the dropdown arrows below to view lesson overviews.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.2em; font-weight: bold;">🔎 Lesson 1: Exploring Web Pages</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 1: Exploring Web Pages</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 <img src="https://images.code.org/c3763acba61c040624ee987166a8cc61-image-1680306094547.png" alt="Image of sample websites" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
@@ -42,7 +37,7 @@ To kick off a unit devoted to group problem solving and developing websites for 
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.2em; font-weight: bold;">🔎 Lesson 2: Intro to HTML</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 2: Intro to HTML</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 <img src="https://images.code.org/37a7d09df84a210e970f696ecbd7362f-image-1647659215857.06.44 PM.png" alt="Image of web lab" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
@@ -64,7 +59,7 @@ In this lesson students are introduced to HTML as a solution to the problem of h
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.2em; font-weight: bold;">🔎 Lesson 3: Headings and Lists</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 3: Headings and Lists</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 <img src="https://images.code.org/6323024996ef2c7faa3825b659f96af2-image-1647659305501.08.14 PM.png" alt="Image of a shoe recommender app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
@@ -85,7 +80,7 @@ In this lesson, students continue to use HTML to structure text on web pages, th
 <div style="clear:both"/>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.2em; font-weight: bold;">🔎 Lesson 4: Mini-Project: HTML Web Page</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 4: Mini-Project: HTML Web Page</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 <img src="https://images.code.org/0540a193c76962ecc9c7dff6cb214dcd-image-1647794406294.39.32 AM.png" alt="Image of a shoe recommender app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
@@ -104,7 +99,7 @@ In this optional mini-project, students use what they have learned to create the
 <div style="clear:both"/>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.2em; font-weight: bold;">🔎 Lesson 5: Digital Footprint</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 5: Digital Footprint</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:40px;">
     <p>
 <img src="https://images.code.org/be6d09f34ea6108d5f790f671439849a-image-1647795335543.55.21 AM.png" alt="Image of a shoe recommender app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
@@ -125,7 +120,11 @@ The ultimate point of this lesson is not to scare students, but rather to experi
 </p></div>
 </details>
 
-<div style="clear:both"/>
+## Key Terms Used Throughout the Web Development Unit
 
-![]()
+* ##### **Website content** - the text and images on a website
+* ##### **Website structure** - how the content on the website is organized
+* ##### **HTML** - Hypertext Markup Language, a language used to create the structure of web pages
+* ##### **CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled
+* ##### **Digital footprint** - the collected information about an individual across multiple website on the Internet
 MARKDOWN
