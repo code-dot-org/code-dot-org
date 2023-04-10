@@ -165,6 +165,9 @@ fr:
           description: Tous les types de niveau pour le test de l'interface utilisateur
           description_short: Tous les types de niveau pour le test de l'interface utilisateur
           student_description: Tous les types de niveau pour le test de l'interface utilisateur
+          lessons:
+            lesson-49:
+              name: Musique
         algebraPD2b:
           title: Informatique en DP d'algèbre
           description: 'Phase 2 en ligne : Études estivales mixtes'
@@ -4568,3 +4571,61 @@ fr:
             lessonGroup-3:
               display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
           description_short: Apprend à programmer des objets.
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties
+        vpl-csd-ci-1:
+          title: 'Module 1 : Se préparer à l''enseignement sur la résolution de problèmes et l''informatique'
+          description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner aux élèves la résolution de problèmes et l'informatique de Code.org. \n\n**Dans le cadre de ce module de formation professionnelle, vous pourrez :**\n\n-   Obtenir un aperçu de la résolution de problèmes et de l'informatique.\n-   Mettre en pratique les concepts clés inclus dans le module.\n-   Explorer les projets de fin de chapitre.\n\n\\*\\*Durée prévue : \\*\\* 30 minutes"
+          student_description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner aux élèves la résolution de problèmes et l'informatique de Code.org. \n\n**Dans le cadre de ce module de formation professionnelle, vous pourrez :**\n\n-   Obtenir un aperçu de la résolution de problèmes et de l'informatique.\n-   Mettre en pratique les concepts clés inclus dans le module.\n-   Explorer les projets de fin de chapitre.\n\n\\*\\*Durée prévue : \\*\\* 30 minutes"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Formation au développement Web
+          title: 'Module 2 : Se préparer à enseigner le développement Web'
+          description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner le module de développement Web de Code.org. \n\n**Dans ce module de formation professionnelle, vous allez :**\n\n-   Découvrir le développement Web.\n-   Mettre en pratique les concepts clés inclus dans le module.\n-   Participer au laboratoire Web.\n-   Explorer les projets de fin de chapitre.\n\n**Durée prévue :** 90 minutes"
+          student_description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner le module de développement Web de Code.org. \n\n**Dans ce module de formation professionnelle, vous allez :**\n\n-   Découvrir le développement Web.\n-   Mettre en pratique les concepts clés inclus dans le module.\n-   Participer au laboratoire Web.\n-   Explorer les projets de fin de chapitre.\n\n**Durée prévue :** 90 minutes"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Se préparer à enseigner les animations et les jeux interactifs
+          title: 'Module 3 : Se préparer à enseigner les animations et les jeux interactifs '
+          description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner le module Animations et jeux interactifs de Code.org. \n\n**Dans ce module de formation professionnelle, vous allez :**\n\n-   Découvrir les jeux et animations interactifs.\n-   Mettre en pratique les concepts clés inclus dans le module.\n-   Participer à Game Lab.\n-   Explorer les projets de fin de chapitre.\n\n**Durée prévue :** 120 minutes"
+          student_description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner le module Animations et jeux interactifs de Code.org. \n\n**Dans ce module de formation professionnelle, vous allez :**\n\n-   Découvrir les jeux et animations interactifs.\n-   Mettre en pratique les concepts clés inclus dans le module.\n-   Participer à Game Lab.\n-   Explorer les projets de fin de chapitre.\n\n**Durée prévue :** 120 minutes"
+        vpl-csd-ci-4:
+          title: 'Module 4 : Se préparer à enseigner le processus de conception'
+          description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner le module Processus de conception de Code.org. \n\n**Dans ce module de formation professionnelle, vous allez :**\n\n-   Découvrir le processus de conception.\n-   Mettre en pratique les concepts clés inclus dans le module.\n-   Participer à App Lab.\n-   Explorer les projets de fin de chapitre.\n\n**Durée prévue :** 90 minutes"
+          student_description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner le module Processus de conception de Code.org. \n\n**Dans ce module de formation professionnelle, vous allez :**\n\n-   Découvrir le processus de conception.\n-   Mettre en pratique les concepts clés inclus dans le module.\n-   Participer à App Lab.\n-   Explorer les projets de fin de chapitre.\n\n**Durée prévue :** 90 minutes"
+        vpl-csd-ci-5:
+          title: 'Module 5 : Se préparer à enseigner les Données et la Société'
+          description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner le module Données et société de Code.org. \n\n**Dans ce module de formation professionnelle, vous allez :**\n\n-   Découvrir le cours Données et société.\n-   Mettre en pratique les concepts clés inclus dans le module.\n-   Explorer les projets de fin de chapitre.\n\n**Durée prévue :** 90 minutes"
+          student_description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner le module Données et société de Code.org. \n\n**Dans ce module de formation professionnelle, vous allez :**\n\n-   Découvrir le cours Données et société.\n-   Mettre en pratique les concepts clés inclus dans le module.\n-   Explorer les projets de fin de chapitre.\n\n**Durée prévue :** 90 minutes"
+        vpl-csd-ci-7:
+          title: 'Module 7 : Se préparer à enseigner l''IA et l''apprentissage automatique'
+          description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner le module AI et apprentissage automatique de Code.org. \n\n**Dans ce module de formation professionnelle, vous trouverez :**\n\n-   Une introduction à l'IA et à l'apprentissage automatique.\n-   Pratiquer les concepts clés inclus dans le module.\n-   Participer au AI Lab et à l'App Lab.\n-   Explorer les projets de fin de chapitre.\n-   Élaborer un plan pour la mise en œuvre du module avec vos élèves.\n\n**Durée prévue :** 120 minutes"
+          student_description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner le module AI et apprentissage automatique de Code.org. \n\n**Dans ce module de formation professionnelle, vous trouverez :**\n\n-   Une introduction à l'IA et à l'apprentissage automatique.\n-   Pratiquer les concepts clés inclus dans le module.\n-   Participer au AI Lab et à l'App Lab.\n-   Explorer les projets de fin de chapitre.\n-   Élaborer un plan pour la mise en œuvre du module avec vos élèves.\n\n**Durée prévue :** 120 minutes"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties

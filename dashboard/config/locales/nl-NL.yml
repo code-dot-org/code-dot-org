@@ -1103,6 +1103,11 @@ nl:
         opt_in_yes: Ja
         opt_in_no: Nee
   courses_category: Volledige Cursussen
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      hello_world: Hallo Wereld
+      csf: Basis
   cookie_banner:
     accept: Ik ga akkoord
   page_not_found_title: Pagina niet gevonden

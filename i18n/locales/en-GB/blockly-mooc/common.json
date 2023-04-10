@@ -134,6 +134,7 @@
   "codeMode": "Code",
   "codeTooltip": "See generated JavaScript code.",
   "completedWithoutRecommendedBlock": "Congratulations! You completed Puzzle {puzzleNumber}. (But you could use a different block for stronger code.)",
+  "congratulations": "Congratulations!",
   "continue": "Continue",
   "copy": "Copy",
   "courseOfferingCsTopicCybersecurity": "Cybersecurity",

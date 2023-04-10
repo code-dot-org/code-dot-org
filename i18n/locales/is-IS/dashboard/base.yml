@@ -1089,6 +1089,11 @@ is:
     no_teacher_email:
       body_markdown: 'Aðgangurinn þinn er ekki með skráð netfang. Vinsamlegast [farðu í notendastillingar þínar](%{user_registration}) til að bæta við netfangi þínu áður en þú fyllir út þetta form.'
   courses_category: 'Heil námskeið'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      sports: 'Íþróttir'
+      csf: 'TF Grunnur'
   cookie_banner:
     message: 'Með því að halda áfram að vafra á vef okkar eða smella á "Ég samþykki" samþykkir þú vistun fótspora (cookies) á tölvu þinni eða tæki.'
     more_information: "Sjá persónuverndarstefnu Code.org."

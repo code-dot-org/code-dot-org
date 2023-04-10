@@ -177,6 +177,10 @@ hu:
           description: '2.  Fázis: Online összetett nyári tanulmány'
           description_short: '2.  Fázis: Online összetett nyári tanulmány'
           student_description: '2.  Fázis: Online összetett nyári tanulmány'
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Zene
         algebraPD2b:
           description: '2.  Fázis: Online összetett nyári tanulmány'
           description_short: '2.  Fázis: Online összetett nyári tanulmány'
