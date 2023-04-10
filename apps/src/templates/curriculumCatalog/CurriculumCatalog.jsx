@@ -6,6 +6,7 @@ import style from '../../../style/code-studio/curriculum_catalog_container.modul
 import HeaderBanner from '../HeaderBanner';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
+import {translatedCourseOfferingDurations} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 
 const CurriculumCatalog = ({curriculaData}) => {
   return (
@@ -20,24 +21,42 @@ const CurriculumCatalog = ({curriculaData}) => {
       </div>
       <div className={style.catalogContentContainer}>
         <div className={style.catalogContent}>
-          {/*TODO [MEG]: calculate and pass in duration from backend, use image in imageSrc */}
+          {/*TODO [MEG]: calculate and pass in duration and translated from backend, use image in imageSrc */}
           {curriculaData
-            .filter(curriculum => !!curriculum.grade_levels)
+            .filter(
+              curriculum => !!curriculum.grade_levels && !!curriculum.image
+            )
             .map(
-              ({key, display_name, grade_levels, school_subject, cs_topic}) => {
+              ({
+                key,
+                image,
+                display_name,
+                grade_levels,
+                school_subject,
+                cs_topic
+              }) => {
                 // TODO [MEG]: We are currently assuming if there are grade levels, there are at least two
                 // grades and the list is in ascending order.
                 const gradeLevelArray = grade_levels.split(',');
+                const durationPossibilities = Object.keys(
+                  translatedCourseOfferingDurations
+                );
 
                 return (
                   <CurriculumCatalogCard
                     key={key}
+                    imageSrc={image}
                     courseDisplayName={display_name}
-                    duration={'quarter'}
+                    duration={
+                      durationPossibilities[
+                        Math.floor(Math.random() * durationPossibilities.length)
+                      ]
+                    } // TODO [MEG] actually pass in this data
                     youngestGrade={gradeLevelArray[0]}
                     oldestGrade={gradeLevelArray[gradeLevelArray.length - 1]}
                     subjects={school_subject?.split(',')}
                     topics={cs_topic?.split(',')}
+                    isTranslated={!!Math.round(Math.random())} // TODO [MEG] actually pass in this data
                   />
                 );
               }
