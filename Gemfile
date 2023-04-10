@@ -100,7 +100,7 @@ group :development, :test do
   gem 'rinku'
   gem 'rspec'
   gem 'selenium-webdriver', '3.141.0'
-  gem 'spring'
+  gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
   gem 'webdrivers', '~> 3.0'
 
