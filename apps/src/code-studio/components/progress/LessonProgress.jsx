@@ -151,7 +151,7 @@ class LessonProgress extends Component {
 
     const onBonusLevel = this.isOnBonusLevel();
 
-    const currentLevelApp = levels.find(level => level.isCurrentLevel).app;
+    const currentLevelApp = levels.find(level => level.isCurrentLevel)?.app;
 
     return (
       <div className="react_stage" style={styles.container}>
