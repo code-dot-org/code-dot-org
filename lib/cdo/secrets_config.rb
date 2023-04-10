@@ -104,16 +104,17 @@ module Cdo
         @stack ? "CfnStack/#{@stack}/#{secret_key}" : nil
       end
 
-      EC2_METADATA_SERVICE_URL = URI('http://169.254.169.254/latest/meta-data/instance-id')
+      EC2_METADATA_SERVICE_BASE_URL = URI('http://169.254.169.254/latest/meta-data/')
 
       # Get the CloudFormation Stack Name that the EC2 Instance this code is executing on belongs to.
       # @return [String]
       def current_stack_name
-        metadata_service_request = Net::HTTP.new(EC2_METADATA_SERVICE_URL.host, EC2_METADATA_SERVICE_URL.port)
+        metadata_service_request = Net::HTTP.new(EC2_METADATA_SERVICE_BASE_URL.host, EC2_METADATA_SERVICE_BASE_URL.port)
         # Set a short timeout so that when not executing on an EC2 Instance we fail fast.
         metadata_service_request.open_timeout = metadata_service_request.read_timeout = 10
-        ec2_instance_id = metadata_service_request.request_get(EC2_METADATA_SERVICE_URL.path).body
-        ec2_client = Aws::EC2::Client.new
+        ec2_instance_id = metadata_service_request.request_get(EC2_METADATA_SERVICE_BASE_URL.path + 'instance-id').body
+        region = metadata_service_request.request_get(EC2_METADATA_SERVICE_BASE_URL.path + 'placement/region').body
+        ec2_client = Aws::EC2::Client.new(region: region)
         ec2_client.
           describe_tags({filters: [{name: "resource-id", values: [ec2_instance_id]}]}).
           tags.
