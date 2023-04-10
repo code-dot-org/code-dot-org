@@ -512,7 +512,6 @@ GEM
     kaminari (0.17.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    kgio (2.11.3)
     launchy (2.5.2)
       addressable (~> 2.8)
     libv8 (8.4.255.0)
@@ -1012,6 +1011,7 @@ DEPENDENCIES
   rack_csrf
   rails (= 6.0.6)
   rails-controller-testing (~> 1.0.5)
+  raindrops
   rambling-trie (>= 2.1.1)
   recaptcha
   redcarpet (~> 3.3.4)
