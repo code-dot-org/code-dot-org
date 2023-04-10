@@ -23,9 +23,7 @@ const CurriculumCatalog = ({curriculaData}) => {
         <div className={style.catalogContent}>
           {/*TODO [MEG]: calculate and pass in duration and translated from backend, use image in imageSrc */}
           {curriculaData
-            .filter(
-              curriculum => !!curriculum.grade_levels && !!curriculum.image
-            )
+            .filter(curriculum => !!curriculum.grade_levels)
             .map(
               ({
                 key,
