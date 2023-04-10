@@ -220,7 +220,8 @@ a:visited,
     }
 
     &:focus {
-      border-color: $brand_primary_default;
+      outline: $brand_primary_default solid 2px;
+      outline-offset: 2px;
     }
 
     &:disabled,
@@ -242,7 +243,8 @@ a:visited,
     }
 
     &:focus {
-      border-color: $brand_primary_default;
+      outline: $brand_primary_default solid 2px;
+      outline-offset: 2px;
     }
 
     &:disabled {

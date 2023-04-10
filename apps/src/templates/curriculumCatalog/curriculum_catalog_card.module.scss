@@ -40,12 +40,6 @@ $container-width: 309px;
 
   button {
     margin: 0;
-
-    &:focus {
-      border-color: inherit;
-      outline: $brand_primary_default solid 2px;
-      outline-offset: 2px;
-    }
   }
 
   h4 {
