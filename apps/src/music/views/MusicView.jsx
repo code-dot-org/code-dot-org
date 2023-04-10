@@ -171,7 +171,7 @@ class UnconnectedMusicView extends React.Component {
     }
 
     if (prevProps.currentLevel !== this.props.currentLevel) {
-      this.onNextPanel(this.props.currentLevel);
+      this.goToPanel(this.props.currentLevel);
     }
 
     if (
@@ -202,16 +202,29 @@ class UnconnectedMusicView extends React.Component {
     return this.props.isPlaying;
   };
 
-  onNextPanel = (specificStep = null) => {
+  // When the user initiates going to the next panel in the app.
+  onNextPanel = () => {
+    this.progressManager?.next();
+    this.handlePanelChange();
+
+    // Tell the external system about the new level.
+    const progressState = this.progressManager.getCurrentState();
+    const currentPanel = progressState.step;
+    this.props.onChangeLevel(currentPanel);
+  };
+
+  // When the external system lets us know that the user changed level.
+  goToPanel = specificStep => {
     this.progressManager?.next(specificStep);
+    this.handlePanelChange();
+  };
+
+  // Handle a change in panel.
+  handlePanelChange = () => {
     this.stopSong();
     this.clearCode();
     this.setToolboxForProgress();
     this.setAllowedSoundsForProgress();
-
-    const progressState = this.progressManager.getCurrentState();
-    const currentPanel = progressState.step;
-    this.props.onChangeLevel(currentPanel);
   };
 
   setToolboxForProgress = () => {

@@ -33,16 +33,12 @@ class UnconnectedLabContainer extends Component {
   onSaveProgress() {}
 
   changeLevelIndex(levelIndex) {
-    const levelId = this.props.levels[levelIndex].id;
-    this.props.onLevelChanged('' + levelId);
+    const level = this.props.levels[levelIndex];
+    window.history.pushState({}, 'title', level.url + window.location.search);
+    this.props.onLevelChanged('' + level.id);
   }
 
   render() {
-    //const idChanged = this.lastId !== this.props.currentLevelId;
-    //this.lastId = this.props.currentLevelId;
-
-    //console.log('rendering container again', idChanged);
-
     const currentLevelIndex = this.getCurrentLevelIndex(
       this.props.currentLevelId
     );

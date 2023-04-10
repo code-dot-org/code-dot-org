@@ -134,7 +134,6 @@ class LessonProgress extends Component {
   }
 
   onLevelChanged(levelId, levelUrl) {
-    console.log('bubble clicked', levelId);
     window.history.pushState({}, 'title', levelUrl + window.location.search);
     this.props.onLevelChanged(levelId);
   }
