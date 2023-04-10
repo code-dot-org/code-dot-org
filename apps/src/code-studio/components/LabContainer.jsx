@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {
   levelsForLessonId,
-  lessonExtrasUrl,
   setCurrentLevelId
 } from '@cdo/apps/code-studio/progressRedux';
 import MusicLabView from '@cdo/apps/music/views/MusicView';
@@ -12,14 +11,7 @@ import moduleStyles from './LabContainer.module.scss';
 
 class UnconnectedLabContainer extends Component {
   static propTypes = {
-    labType: PropTypes.string,
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
-    lessonName: PropTypes.string,
-    lessonExtrasUrl: PropTypes.string,
-    isLessonExtras: PropTypes.bool,
-    width: PropTypes.number,
-    setDesiredWidth: PropTypes.func,
-    currentPageNumber: PropTypes.number,
     currentLevelId: PropTypes.string,
     onLevelChanged: PropTypes.func
   };
@@ -69,12 +61,6 @@ class UnconnectedLabContainer extends Component {
 const LabContainer = connect(
   state => ({
     levels: levelsForLessonId(state.progress, state.progress.currentLessonId),
-    lessonExtrasUrl: lessonExtrasUrl(
-      state.progress,
-      state.progress.currentLessonId
-    ),
-    isLessonExtras: state.progress.isLessonExtras,
-    currentPageNumber: state.progress.currentPageNumber,
     currentLevelId: state.progress.currentLevelId
   }),
   dispatch => ({
