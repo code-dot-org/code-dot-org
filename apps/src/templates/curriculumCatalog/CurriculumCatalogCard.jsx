@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
@@ -22,7 +23,8 @@ const CurriculumCatalogCard = ({
   imageSrc,
   subjects,
   topics,
-  isTranslated
+  isTranslated,
+  isEnglish
 }) => (
   <CustomizableCurriculumCatalogCard
     assignButtonText={i18n.assign()}
@@ -49,6 +51,7 @@ const CurriculumCatalogCard = ({
     imageAltText={imageAltText}
     isTranslated={isTranslated}
     translationIconTitle={i18n.courseInYourLanguage()}
+    isEnglish={isEnglish}
   />
 );
 
@@ -66,7 +69,8 @@ CurriculumCatalogCard.propTypes = {
   ).isRequired,
   topics: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(translatedCourseOfferingCsTopics))
-  ).isRequired
+  ).isRequired,
+  isEnglish: PropTypes.bool.isRequired
 };
 
 CurriculumCatalogCard.defaultProps = {
@@ -87,9 +91,17 @@ const CustomizableCurriculumCatalogCard = ({
   translationIconTitle,
   subjectsAndTopics,
   quickViewButtonDescription,
-  quickViewButtonText
+  quickViewButtonText,
+  isEnglish
 }) => (
-  <div className={style.curriculumCatalogCardContainer}>
+  <div
+    className={classNames(
+      style.curriculumCatalogCardContainer,
+      isEnglish
+        ? style.curriculumCatalogCardContainer_english
+        : style.curriculumCatalogCardContainer_notEnglish
+    )}
+  >
     <img src={imageSrc} alt={imageAltText} />
     <div className={style.curriculumInfoContainer}>
       {/*TODO [MEG]: Show all subjects and topics rather than only the first one */}
@@ -107,15 +119,21 @@ const CustomizableCurriculumCatalogCard = ({
       <h4>{courseDisplayName}</h4>
       <div className={style.iconWithDescription}>
         <FontAwesome icon="user" className="fa-solid" />
-        <p className={style.iconDescription}>{gradeRange}</p>
+        <p className={style.iconWithDescriptionText}>{gradeRange}</p>
       </div>
       <div className={style.iconWithDescription}>
         {/*TODO [MEG]: Update this to be clock fa-solid when we update FontAwesome */}
         <FontAwesome icon="clock-o" />
-        <p className={style.iconDescription}>{duration}</p>
+        <p className={style.iconWithDescriptionText}>{duration}</p>
       </div>
-      <div className={style.buttonsContainer}>
-        {/* each button should be same fixed size */}
+      <div
+        className={classNames(
+          style.buttonsContainer,
+          isEnglish
+            ? style.buttonsContainer_english
+            : style.buttonsContainer_notEnglish
+        )}
+      >
         <Button
           color={Button.ButtonColor.neutralDark}
           type="button"
@@ -143,6 +161,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   gradeRange: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
   isTranslated: PropTypes.bool,
+  isEnglish: PropTypes.bool,
   translationIconTitle: PropTypes.string.isRequired,
   subjectsAndTopics: PropTypes.arrayOf(PropTypes.string).isRequired,
   quickViewButtonText: PropTypes.string.isRequired,
