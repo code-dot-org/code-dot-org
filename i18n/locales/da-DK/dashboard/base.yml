@@ -987,6 +987,9 @@ da:
       email_opt_in:
         opt_in_yes: 'Ja'
         opt_in_no: 'Nej'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
   cookie_banner:
     more_information: "Se Code.org's privatlivspolitik."
     accept: 'Jeg er enig'

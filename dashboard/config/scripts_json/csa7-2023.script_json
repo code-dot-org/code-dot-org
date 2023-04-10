@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-31 15:22:00 UTC",
+    "serialized_at": "2023-04-08 13:51:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -26,33 +26,1423 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Content"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Show What You Know"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Alternate Lessons",
+        "description": "This section contains the one-day version of the Creative Coding with The Theater Project."
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa7-2023"
       }
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Project Planning",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Object References as Parameters",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Overloaded Methods",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Private Methods",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Overriding Methods",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Intellectual Property",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Recursion",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Project Development",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "System Reliability",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Creative Coding with The Theater Project",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+        "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. Students first self-assess their work to evaluate their progress in completing project requirements, then continue development of your program. They conduct acceptance testing to determine which of their user stories are complete and use the self-assessment and peer feedback to prioritize their remaining tasks. Students use this feedback to finalize development before sharing their projects with their peers to celebrate their successes.",
+        "preparation": "* Preview the *Software Engineering: Acceptance Testing* video\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou continue to develop your Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. You first self-assess your work to evaluate your progress in completing project requirements, then continue development of your program. You conduct acceptance testing to determine which of your user stories are complete and use the self-assessment and peer feedback to prioritize your remaining tasks. You use this feedback to finalize development before sharing your project with your peers to celebrate your success."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "MusicQueue FRQ",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+        "overview": "**How will I use what I know about `ArrayList`s and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
+        "preparation": "* Print copies of the MusicQueue FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the MusicQueue FRQ Scoring Guidelines (one for each student)\n* Gather several sharpened pencils and scratch paper\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-7-frq-practice/36321/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How will I use what I know about `ArrayList`s and standard algorithms to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Unit 7 Assessment",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+        "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-7-assessment/36320/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "Assess your progress through the Unit 7 Assessment."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Unit 7 Survey",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "Creative Coding with The Theater Project [1-Day Version]",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+        "overview": "**How do I identify and prioritize the tasks I still need to complete for my project?**\n\nStudents continue to develop their Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. Students first self-assess their work to evaluate their progress in completing project requirements, then finish developing their projects. ",
+        "preparation": "* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-2023"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "9d994dea-34df-4480-90f9-63d4bec1c21c",
+      "position": 1,
+      "properties": {
+        "name": "Project Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9d994dea-34df-4480-90f9-63d4bec1c21c",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "dcd8cfa5-4faa-46ae-9eba-3c51c7d13e0c",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dcd8cfa5-4faa-46ae-9eba-3c51c7d13e0c",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "da116fa2-9126-494a-a0e7-a26458f983b5",
+      "position": 3,
+      "properties": {
+        "duration": 45,
+        "name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "da116fa2-9126-494a-a0e7-a26458f983b5",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "77b44595-1e52-45b0-aa13-da14d0b14641",
+      "position": 4,
+      "properties": {
+        "duration": 45,
+        "name": "Day 3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "77b44595-1e52-45b0-aa13-da14d0b14641",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "e7d79a47-bc09-415d-af6e-c4f15959388a",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e7d79a47-bc09-415d-af6e-c4f15959388a",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "4334a32c-7a77-44d9-95d5-e2f71af1617e",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4334a32c-7a77-44d9-95d5-e2f71af1617e",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "85fc2b5e-7c7e-4995-bc44-733412d30a74",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "85fc2b5e-7c7e-4995-bc44-733412d30a74",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "fb8b9226-0015-4e55-aa2e-f3357986c974",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fb8b9226-0015-4e55-aa2e-f3357986c974",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "812e0930-d5ac-43cc-bcc9-16205838b1e7",
+      "position": 2,
+      "properties": {
+        "name": "Wrap Up (Optional)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "812e0930-d5ac-43cc-bcc9-16205838b1e7",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "d858567c-0595-45af-b164-283931fd08c5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d858567c-0595-45af-b164-283931fd08c5",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "5aa70973-1f44-42ba-80a8-abb54bc26042",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5aa70973-1f44-42ba-80a8-abb54bc26042",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "c8baecd8-b2d5-4e27-a089-b312dcdfba7d",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c8baecd8-b2d5-4e27-a089-b312dcdfba7d",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "key": "7f46652b-a230-4d11-b9af-97db52a3e898",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7f46652b-a230-4d11-b9af-97db52a3e898",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-2023"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "dea6cd67-d778-4591-a3df-8ad7d63522f7",
+      "position": 1,
+      "properties": {
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. Students work on the project throughout the unit to brainstorm, plan, and begin developing their program. Students then have three dedicated class periods to refine and complete their projects.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Creative Coding with The Theater Project 1-Day Lesson Plan**](https://studio.code.org/s/csa7-2023/lessons/14). While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+      },
+      "seeding_key": {
+        "activity_section.key": "dea6cd67-d778-4591-a3df-8ad7d63522f7",
+        "lesson_activity.key": "9d994dea-34df-4480-90f9-63d4bec1c21c"
+      }
+    },
+    {
+      "key": "1c99c589-0ed7-4a92-a841-6e4fbf7f866f",
+      "position": 1,
+      "properties": {
+        "description": "Before working towards your final benchmark, review the project requirements and rubric and evaluate your progress. Self-assessing your progress will help you identify which tasks to focus on during your project workdays.",
+        "duration": "10",
+        "name": "Warm Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1c99c589-0ed7-4a92-a841-6e4fbf7f866f",
+        "lesson_activity.key": "dcd8cfa5-4faa-46ae-9eba-3c51c7d13e0c"
+      }
+    },
+    {
+      "key": "bd494742-6525-42ec-8b17-2c9ae91cf0f3",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with The Theater Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nStudents may have questions that are unrelated or beyond the scope of the project. Encourage students to research these questions as extension activities. Focus this discussion on answering questions specific to the content covered in this unit and for the project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bd494742-6525-42ec-8b17-2c9ae91cf0f3",
+        "lesson_activity.key": "dcd8cfa5-4faa-46ae-9eba-3c51c7d13e0c"
+      }
+    },
+    {
+      "key": "94b1e46b-3964-4698-bc71-8b61b56bb152",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
+      },
+      "seeding_key": {
+        "activity_section.key": "94b1e46b-3964-4698-bc71-8b61b56bb152",
+        "lesson_activity.key": "dcd8cfa5-4faa-46ae-9eba-3c51c7d13e0c"
+      }
+    },
+    {
+      "key": "f1dd2fac-3d6e-4b68-89b5-efc66bd5143c",
+      "position": 4,
+      "properties": {
+        "description": "Using the remaining items on your Project Planning Board and the feedback from your peers, continue to develop your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
+        "duration": "15",
+        "name": "Development",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f1dd2fac-3d6e-4b68-89b5-efc66bd5143c",
+        "lesson_activity.key": "dcd8cfa5-4faa-46ae-9eba-3c51c7d13e0c"
+      }
+    },
+    {
+      "key": "712721fc-195c-464b-abc2-a38f30d73733",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with The Theater Project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to refer to their Project Planning Board to decide what tasks to work on during this time. You can also encourage students to request a code review from their peers as they work."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "712721fc-195c-464b-abc2-a38f30d73733",
+        "lesson_activity.key": "dcd8cfa5-4faa-46ae-9eba-3c51c7d13e0c"
+      }
+    },
+    {
+      "key": "993c8a23-d8f9-4501-b42c-8ad1e51755ac",
+      "position": 6,
+      "properties": {
+        "description": "One of the most important aspects of software engineering is an understanding of what it means for an item to be done. You may have considered an item to be done once you have finished writing it into your code. Others may consider it to be done after it has been thoroughly tested and reviewed for bugs. When working for a client, an item is considered to be done when requirements set by engineers and the client have been met.\n\nTo define what it means for an item to be done, software engineers write acceptance criteria for each item.",
+        "duration": "15",
+        "name": "Acceptance Testing",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "993c8a23-d8f9-4501-b42c-8ad1e51755ac",
+        "lesson_activity.key": "dcd8cfa5-4faa-46ae-9eba-3c51c7d13e0c"
+      }
+    },
+    {
+      "key": "83f3d0be-6796-4e4d-88b4-122432741e73",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***acceptance criteria*** and outline the steps for writing acceptance criteria in a scenario-based format.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate an example of scenario-based acceptance criteria.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Software Engineering: Acceptance Testing*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "83f3d0be-6796-4e4d-88b4-122432741e73",
+        "lesson_activity.key": "dcd8cfa5-4faa-46ae-9eba-3c51c7d13e0c"
+      }
+    },
+    {
+      "key": "76364314-e8b6-402b-8a88-d3cd1f101034",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***acceptance testing***."
+      },
+      "seeding_key": {
+        "activity_section.key": "76364314-e8b6-402b-8a88-d3cd1f101034",
+        "lesson_activity.key": "dcd8cfa5-4faa-46ae-9eba-3c51c7d13e0c"
+      }
+    },
+    {
+      "key": "849efbeb-e27e-4ec6-ba42-e7303c75491a",
+      "position": 9,
+      "properties": {
+        "description": "Now it’s your turn to write and test acceptance criteria for your user stories. Your reviewer should test your program and determine which of your user stories are complete and which ones still need work.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "849efbeb-e27e-4ec6-ba42-e7303c75491a",
+        "lesson_activity.key": "dcd8cfa5-4faa-46ae-9eba-3c51c7d13e0c"
+      }
+    },
+    {
+      "key": "0b1c243e-2424-4398-9320-b6b2233c7261",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response."
+      },
+      "seeding_key": {
+        "activity_section.key": "0b1c243e-2424-4398-9320-b6b2233c7261",
+        "lesson_activity.key": "dcd8cfa5-4faa-46ae-9eba-3c51c7d13e0c"
+      }
+    },
+    {
+      "key": "8ae3260d-3034-4940-8f51-d44ddb9d0fb6",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with The Theater Project. Have students write a code review request that includes acceptance criteria for their user stories. Afterward, students review their peer’s code and determine if the acceptance criteria are met.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may be at different points when it is time for the code review. Emphasize to students that their work does not need to be completed to get feedback. Remind students that the problem-solving and development process is iterative and that receiving feedback from peers while they are working can help give them additional insights, perspectives, and guidance."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8ae3260d-3034-4940-8f51-d44ddb9d0fb6",
+        "lesson_activity.key": "dcd8cfa5-4faa-46ae-9eba-3c51c7d13e0c"
+      }
+    },
+    {
+      "key": "cda25e51-7147-4e24-b294-982fbc658d6a",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can review the Project Planning Board as an optional completion assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cda25e51-7147-4e24-b294-982fbc658d6a",
+        "lesson_activity.key": "dcd8cfa5-4faa-46ae-9eba-3c51c7d13e0c"
+      }
+    },
+    {
+      "key": "b156a121-1531-4aaf-ac43-8067323e2dfe",
+      "position": 1,
+      "properties": {
+        "description": "For this unit project, you are using computer science to explore a topic or problem that you are interested in and create a visual or animation that conveys your topic and demonstrates your programming skills. You are also using your software engineering characteristics to create your programs.",
+        "duration": "10",
+        "name": "Warm Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b156a121-1531-4aaf-ac43-8067323e2dfe",
+        "lesson_activity.key": "da116fa2-9126-494a-a0e7-a26458f983b5"
+      }
+    },
+    {
+      "key": "941d5f55-cdcc-4f18-8921-659c4082af66",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Creative Coding with The Theater Project Planning Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "941d5f55-cdcc-4f18-8921-659c4082af66",
+        "lesson_activity.key": "da116fa2-9126-494a-a0e7-a26458f983b5"
+      }
+    },
+    {
+      "key": "d1a481b2-f114-4585-930c-c8dd9a151a78",
+      "position": 3,
+      "properties": {
+        "description": "Using the remaining items on your Project Planning Board and the feedback from your peers, continue to develop your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
+        "duration": "15",
+        "name": "Development",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d1a481b2-f114-4585-930c-c8dd9a151a78",
+        "lesson_activity.key": "da116fa2-9126-494a-a0e7-a26458f983b5"
+      }
+    },
+    {
+      "key": "f967d89c-93ef-49e1-b497-faa2200adaec",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Creative Coding with The Theater Project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to refer to their Project Planning Board to decide what tasks to work on during this time. You can also encourage students to request a code review from their peers as they work."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f967d89c-93ef-49e1-b497-faa2200adaec",
+        "lesson_activity.key": "da116fa2-9126-494a-a0e7-a26458f983b5"
+      }
+    },
+    {
+      "key": "abda1399-092c-4c96-ad7f-dd72db3280b2",
+      "position": 5,
+      "properties": {
+        "description": "This is a good time to commit our code and save our superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "duration": "15",
+        "name": "Code Review",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "abda1399-092c-4c96-ad7f-dd72db3280b2",
+        "lesson_activity.key": "da116fa2-9126-494a-a0e7-a26458f983b5"
+      }
+    },
+    {
+      "key": "8a2d9dd8-a5f5-4d7e-8867-053e6f694873",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8a2d9dd8-a5f5-4d7e-8867-053e6f694873",
+        "lesson_activity.key": "da116fa2-9126-494a-a0e7-a26458f983b5"
+      }
+    },
+    {
+      "key": "7b61e197-d1fd-4978-8fd1-80e40eaa5d5e",
+      "position": 7,
+      "properties": {
+        "description": "You have made a lot of progress in your development work on your project. As we near the end of our project work, let's assess our progress on our last benchmark and get feedback on the work you have done.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7b61e197-d1fd-4978-8fd1-80e40eaa5d5e",
+        "lesson_activity.key": "da116fa2-9126-494a-a0e7-a26458f983b5"
+      }
+    },
+    {
+      "key": "b31d931c-2404-4f7a-8805-68c95149bdda",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with The Theater Project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may be at different points when it is time for the code review. Emphasize to students that their work does not need to be completed to get feedback. Remind students that the problem-solving and development process is iterative and that receiving feedback from peers while they are working can help give them additional insights, perspectives, and guidance."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b31d931c-2404-4f7a-8805-68c95149bdda",
+        "lesson_activity.key": "da116fa2-9126-494a-a0e7-a26458f983b5"
+      }
+    },
+    {
+      "key": "77420beb-ce1b-4f1b-9558-d1cd04144027",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can review the Project Planning Board as an optional completion assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "77420beb-ce1b-4f1b-9558-d1cd04144027",
+        "lesson_activity.key": "da116fa2-9126-494a-a0e7-a26458f983b5"
+      }
+    },
+    {
+      "key": "59d04428-0e9c-4bee-bfdb-35e09a03aaa2",
+      "position": 1,
+      "properties": {
+        "description": "We are almost done with our project! You should be proud of what you have accomplished in this unit and this project.",
+        "duration": "5",
+        "name": "Warm Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "59d04428-0e9c-4bee-bfdb-35e09a03aaa2",
+        "lesson_activity.key": "77b44595-1e52-45b0-aa13-da14d0b14641"
+      }
+    },
+    {
+      "key": "e2467661-6ae8-469a-a66a-ddc3d148c546",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
+      },
+      "seeding_key": {
+        "activity_section.key": "e2467661-6ae8-469a-a66a-ddc3d148c546",
+        "lesson_activity.key": "77b44595-1e52-45b0-aa13-da14d0b14641"
+      }
+    },
+    {
+      "key": "6d1c9697-0507-47d2-8ac2-cc7876a3b87e",
+      "position": 3,
+      "properties": {
+        "description": "It's time to put the finishing touches on our projects!\n\nUsing the remaining items on your Project Planning Board and the feedback from your peers, continue to develop your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
+        "duration": "15",
+        "name": "Development",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6d1c9697-0507-47d2-8ac2-cc7876a3b87e",
+        "lesson_activity.key": "77b44595-1e52-45b0-aa13-da14d0b14641"
+      }
+    },
+    {
+      "key": "34e75e34-6283-4f45-97d4-fc63d1cc5eb5",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish and submit their Creative Coding with The Theater Project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that they may not complete every item on their Project Planning Board or Project Backlog, and that is okay! Software engineers have to make decisions all the time about which features are most important. The purpose of creating Project Planning Boards and Project Backlogs is to focus on completing the most important items first."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "34e75e34-6283-4f45-97d4-fc63d1cc5eb5",
+        "lesson_activity.key": "77b44595-1e52-45b0-aa13-da14d0b14641"
+      }
+    },
+    {
+      "key": "4de356f0-cc54-48fe-b36a-b6399c9fee01",
+      "position": 5,
+      "properties": {
+        "description": "Congratulations! You have completed your creative coding project for this unit. Let's show off our work through a Gallery Walk so you can share your work with your classmates.",
+        "duration": "15",
+        "name": "Peer Presentations",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4de356f0-cc54-48fe-b36a-b6399c9fee01",
+        "lesson_activity.key": "77b44595-1e52-45b0-aa13-da14d0b14641"
+      }
+    },
+    {
+      "key": "220266bd-f582-4b20-a4c4-511a2c684f08",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
+      },
+      "seeding_key": {
+        "activity_section.key": "220266bd-f582-4b20-a4c4-511a2c684f08",
+        "lesson_activity.key": "77b44595-1e52-45b0-aa13-da14d0b14641"
+      }
+    },
+    {
+      "key": "dee59fdd-d825-4953-b151-e7d5d0eb2ba1",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with The Theater Project Planning Guide.",
+        "duration": "10",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor.\n\nGather the Project Planning Boards to reuse in the next unit."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dee59fdd-d825-4953-b151-e7d5d0eb2ba1",
+        "lesson_activity.key": "77b44595-1e52-45b0-aa13-da14d0b14641"
+      }
+    },
+    {
+      "key": "3818d329-5510-4032-be34-970e670bbb21",
+      "position": 8,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "3818d329-5510-4032-be34-970e670bbb21",
+        "lesson_activity.key": "77b44595-1e52-45b0-aa13-da14d0b14641"
+      }
+    },
+    {
+      "key": "ff01c25a-6398-4735-b9c5-6583e139dd33",
+      "position": 9,
+      "properties": {
+        "description": "**Creative Coding with The Theater Project Planning Guide:** Use the rubric in the Creative Coding with The Theater Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff01c25a-6398-4735-b9c5-6583e139dd33",
+        "lesson_activity.key": "77b44595-1e52-45b0-aa13-da14d0b14641"
+      }
+    },
+    {
+      "key": "66610807-21aa-4193-a361-d1bb4a346e9f",
+      "position": 1,
+      "properties": {
+        "description": "Today, you will independently complete an FRQ called `MusicQueue`.\n\nToday's FRQ will be conducted similarly to the AP Exam to prepare you for exam day. The strategies we have been using are the same, but the classroom setup will be more formal.",
+        "name": "Exam Structure",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "66610807-21aa-4193-a361-d1bb4a346e9f",
+        "lesson_activity.key": "e7d79a47-bc09-415d-af6e-c4f15959388a"
+      }
+    },
+    {
+      "key": "030b1f6c-dc18-45ea-b888-371981843f29",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through an animated slide to explain the exam structure. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in one of the breathing exercises."
+      },
+      "seeding_key": {
+        "activity_section.key": "030b1f6c-dc18-45ea-b888-371981843f29",
+        "lesson_activity.key": "e7d79a47-bc09-415d-af6e-c4f15959388a"
+      }
+    },
+    {
+      "key": "1dee239d-ad94-4a5c-b70c-f8c5f7735f77",
+      "position": 1,
+      "properties": {
+        "description": "For this section of the exam, you will use a No. 2 pencil to write your responses. Please raise your hand if you need a No. 2 pencil.",
+        "duration": "5",
+        "name": "Exam Setup",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1dee239d-ad94-4a5c-b70c-f8c5f7735f77",
+        "lesson_activity.key": "4334a32c-7a77-44d9-95d5-e2f71af1617e"
+      }
+    },
+    {
+      "key": "a24ec22d-ff40-4daf-b8f4-c579bfd1aef8",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a sharpened No. 2 pencil to students who raised their hands."
+      },
+      "seeding_key": {
+        "activity_section.key": "a24ec22d-ff40-4daf-b8f4-c579bfd1aef8",
+        "lesson_activity.key": "4334a32c-7a77-44d9-95d5-e2f71af1617e"
+      }
+    },
+    {
+      "key": "adb93bec-6827-4aa9-b009-2cc5d955aee8",
+      "position": 3,
+      "properties": {
+        "description": "I will now distribute the exam materials. Please do not turn over any materials until you are told to do so.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "adb93bec-6827-4aa9-b009-2cc5d955aee8",
+        "lesson_activity.key": "4334a32c-7a77-44d9-95d5-e2f71af1617e"
+      }
+    },
+    {
+      "key": "102d1db1-0136-47d4-b7ac-5e9732da415e",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the MusicQueue FRQ handout, Java Quick Reference, and a sheet of scratch paper faced down on each student’s desk. "
+      },
+      "seeding_key": {
+        "activity_section.key": "102d1db1-0136-47d4-b7ac-5e9732da415e",
+        "lesson_activity.key": "4334a32c-7a77-44d9-95d5-e2f71af1617e"
+      }
+    },
+    {
+      "key": "0f0c3897-9574-4020-a590-cb24b4406988",
+      "position": 5,
+      "properties": {
+        "description": "In front of you, you should have a copy of the MusicQueue FRQ handout, Java Quick Reference handout, and a sheet of scratch paper. Please raise your hand if you are missing any exam materials.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0f0c3897-9574-4020-a590-cb24b4406988",
+        "lesson_activity.key": "4334a32c-7a77-44d9-95d5-e2f71af1617e"
+      }
+    },
+    {
+      "key": "e637bd41-2b61-4213-a8ab-1b22bb270c26",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give any missing exam materials to students who raised their hands."
+      },
+      "seeding_key": {
+        "activity_section.key": "e637bd41-2b61-4213-a8ab-1b22bb270c26",
+        "lesson_activity.key": "4334a32c-7a77-44d9-95d5-e2f71af1617e"
+      }
+    },
+    {
+      "key": "c26bf0b1-318e-47bc-8efb-c64f68991e81",
+      "position": 7,
+      "properties": {
+        "description": "On the cover of the MusicQueue FRQ handout, print your name and today’s date where indicated.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c26bf0b1-318e-47bc-8efb-c64f68991e81",
+        "lesson_activity.key": "4334a32c-7a77-44d9-95d5-e2f71af1617e"
+      }
+    },
+    {
+      "key": "bdecf67d-c0c6-4fae-bb48-4c612eac3fee",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to fill in their names and the current date on the cover of the MusicQueue FRQ handout."
+      },
+      "seeding_key": {
+        "activity_section.key": "bdecf67d-c0c6-4fae-bb48-4c612eac3fee",
+        "lesson_activity.key": "4334a32c-7a77-44d9-95d5-e2f71af1617e"
+      }
+    },
+    {
+      "key": "520e9629-9820-4f75-81d3-39bb51598649",
+      "position": 9,
+      "properties": {
+        "description": "You now have 25 minutes to complete the free response question. You are responsible for pacing yourself and may proceed freely from Part A to Part B. Show all necessary work and final solutions on the MusicQueue FRQ. Solutions written on scratch paper will not be considered. \n\nGood luck! You may now begin the exam.",
+        "duration": "25",
+        "name": "Free Response Question",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "520e9629-9820-4f75-81d3-39bb51598649",
+        "lesson_activity.key": "4334a32c-7a77-44d9-95d5-e2f71af1617e"
+      }
+    },
+    {
+      "key": "e6702a75-33b9-4fa3-ad66-b39ce743dce0",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the free-response question on the MusicQueueFRQ. On the board, write the start and end times.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If there is not a visible clock in the room, consider displaying a 25-minute timer.\n\nDuring the AP Exam, students must sit quietly until the allotted testing time has elapsed. If you decide to adhere to this rule closely, encourage students that finish early to:\n* Continue to work on their FRQ.\n* Trace their code to ensure it is correct.\n* Check their solution to ensure it aligns with their pseudocode solution."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e6702a75-33b9-4fa3-ad66-b39ce743dce0",
+        "lesson_activity.key": "4334a32c-7a77-44d9-95d5-e2f71af1617e"
+      }
+    },
+    {
+      "key": "7951bf07-4343-4b07-87ad-859a216350cd",
+      "position": 1,
+      "properties": {
+        "description": "On the cover of the MusicQueue FRQ handout, print your name and today’s date where indicated.",
+        "name": "Give One, Get One",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7951bf07-4343-4b07-87ad-859a216350cd",
+        "lesson_activity.key": "85fc2b5e-7c7e-4995-bc44-733412d30a74"
+      }
+    },
+    {
+      "key": "b40d658c-c576-4148-b61b-32d4c79e2c8f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Collect the MusicQueue FRQ handout, Java Quick Reference, and scrap paper from each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the MusicQueue FRQ Scoring Guidelines and one sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on their sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One."
+      },
+      "seeding_key": {
+        "activity_section.key": "b40d658c-c576-4148-b61b-32d4c79e2c8f",
+        "lesson_activity.key": "85fc2b5e-7c7e-4995-bc44-733412d30a74"
+      }
+    },
+    {
+      "key": "6ace1e6a-e92d-4fc8-8774-f5c4067383fa",
+      "position": 3,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ace1e6a-e92d-4fc8-8774-f5c4067383fa",
+        "lesson_activity.key": "85fc2b5e-7c7e-4995-bc44-733412d30a74"
+      }
+    },
+    {
+      "key": "025a44c7-9a54-4a0f-b18b-dcdf01adaf78",
+      "position": 4,
+      "properties": {
+        "description": "**MusicQueue FRQ:** The MusicQueue FRQ handout can be used as an optional formative assessment.",
+        "name": "Assessment (Optional)"
+      },
+      "seeding_key": {
+        "activity_section.key": "025a44c7-9a54-4a0f-b18b-dcdf01adaf78",
+        "lesson_activity.key": "85fc2b5e-7c7e-4995-bc44-733412d30a74"
+      }
+    },
+    {
+      "key": "dcb79544-bef2-49a3-a8fa-a7358c25289a",
+      "position": 1,
+      "properties": {
+        "description": "Congratulations, you have made it to the end of Unit 7! You learned a lot about software design and recursion and used these concepts to develop your creative coding project using The Theater. Today, you will complete an assessment to put your skills to the test.",
+        "name": "Unit 7 Assessment",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dcb79544-bef2-49a3-a8fa-a7358c25289a",
+        "lesson_activity.key": "fb8b9226-0015-4e55-aa2e-f3357986c974"
+      }
+    },
+    {
+      "key": "321f2faa-ef39-4f60-bccb-c570cc9b77e9",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 7 Assessment on Code Studio."
+      },
+      "seeding_key": {
+        "activity_section.key": "321f2faa-ef39-4f60-bccb-c570cc9b77e9",
+        "lesson_activity.key": "fb8b9226-0015-4e55-aa2e-f3357986c974"
+      }
+    },
+    {
+      "key": "544305cd-d4ac-4f92-9a65-9fe84159e10f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
+        "name": "Assessment Review",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Discuss any questions that come up and take note of topics where students may need extra review.\n\nAs you review answers with students, consider the following suggested strategies:\n* Students write down solutions to questions in their journals that they answered incorrectly.\n* Identify mostly missed questions and review as a class together.\n* Review answers asynchronously and allow students to do corrections.\n* Place students in pairs to review answers and share areas that need extra review.\n\nIf you do not have time to review answers with students, create a data chart that includes assessment results. For students who did not meet the learning expectation, follow up so they have the opportunity to learn from errors made on the assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "544305cd-d4ac-4f92-9a65-9fe84159e10f",
+        "lesson_activity.key": "812e0930-d5ac-43cc-bcc9-16205838b1e7"
+      }
+    },
+    {
+      "key": "76eb54c8-540a-4fe2-9d4a-989192b5d38d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit 7 Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "76eb54c8-540a-4fe2-9d4a-989192b5d38d",
+        "lesson_activity.key": "d858567c-0595-45af-b164-283931fd08c5"
+      }
+    },
+    {
+      "key": "520f0016-2ee6-4db9-8f4d-77bcf12c3a12",
+      "position": 1,
+      "properties": {
+        "description": "Before working towards your final benchmark, review the project requirements and rubric and evaluate your progress. Self-assessing your progress will help you identify which tasks to focus on during your project workdays.",
+        "name": "Project Self-Assessment",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "520f0016-2ee6-4db9-8f4d-77bcf12c3a12",
+        "lesson_activity.key": "5aa70973-1f44-42ba-80a8-abb54bc26042"
+      }
+    },
+    {
+      "key": "29277997-7ed5-4bca-a41d-55afdab0b86b",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with The Theater Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nStudents may have questions that are unrelated or beyond the scope of the project. Encourage students to research these questions as extension activities. Focus this discussion on answering questions specific to the content covered in this unit and for the project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "29277997-7ed5-4bca-a41d-55afdab0b86b",
+        "lesson_activity.key": "5aa70973-1f44-42ba-80a8-abb54bc26042"
+      }
+    },
+    {
+      "key": "295724b9-e5f6-41db-831b-9b5505b08469",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
+      },
+      "seeding_key": {
+        "activity_section.key": "295724b9-e5f6-41db-831b-9b5505b08469",
+        "lesson_activity.key": "5aa70973-1f44-42ba-80a8-abb54bc26042"
+      }
+    },
+    {
+      "key": "064cc9c6-695e-4ea1-af8f-8d34408b5e24",
+      "position": 1,
+      "properties": {
+        "description": "Using the remaining items on your Project Planning Board and the feedback from your peers, continue to develop your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
+        "name": "Development",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "064cc9c6-695e-4ea1-af8f-8d34408b5e24",
+        "lesson_activity.key": "c8baecd8-b2d5-4e27-a089-b312dcdfba7d"
+      }
+    },
+    {
+      "key": "9a1e2d5e-9432-4124-9970-de1197a8b25d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with The Theater Project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to refer to their Project Planning Board to decide what tasks to work on during this time. You can also encourage students to request a code review from their peers as they work."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9a1e2d5e-9432-4124-9970-de1197a8b25d",
+        "lesson_activity.key": "c8baecd8-b2d5-4e27-a089-b312dcdfba7d"
+      }
+    },
+    {
+      "key": "1b798ccf-4919-4835-8eb5-682f0deae619",
+      "position": 3,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1b798ccf-4919-4835-8eb5-682f0deae619",
+        "lesson_activity.key": "c8baecd8-b2d5-4e27-a089-b312dcdfba7d"
+      }
+    },
+    {
+      "key": "923719cf-9ddf-4802-928b-6905ae29b244",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "923719cf-9ddf-4802-928b-6905ae29b244",
+        "lesson_activity.key": "c8baecd8-b2d5-4e27-a089-b312dcdfba7d"
+      }
+    },
+    {
+      "key": "66b23aab-825e-4cd2-85da-427af9787f50",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with The Theater Project Planning Guide.",
+        "name": "End of Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "66b23aab-825e-4cd2-85da-427af9787f50",
+        "lesson_activity.key": "7f46652b-a230-4d11-b9af-97db52a3e898"
+      }
+    },
+    {
+      "key": "78f2ca38-9943-4419-b1a7-3a9405242b85",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "78f2ca38-9943-4419-b1a7-3a9405242b85",
+        "lesson_activity.key": "7f46652b-a230-4d11-b9af-97db52a3e898"
+      }
+    },
+    {
+      "key": "a4b8cbe6-1638-436a-8313-d6f638a16129",
+      "position": 3,
+      "properties": {
+        "description": "**Creative Coding with The Theater Project:** Use the rubric on the last page of the Creative Coding with The Theater Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "a4b8cbe6-1638-436a-8313-d6f638a16129",
+        "lesson_activity.key": "7f46652b-a230-4d11-b9af-97db52a3e898"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 7 Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa7-2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa7-2023",
+        "activity_section.key": "76eb54c8-540a-4fe2-9d4a-989192b5d38d"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csa7-2023"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "Student End of Unit Survey_csa7-2023",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa7-2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa7-2023",
+        "activity_section.key": "76eb54c8-540a-4fe2-9d4a-989192b5d38d"
+      }
+    }
   ],
   "resources": [
+    {
+      "name": "[EXEMPLAR] Creative Coding with The Theater Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1BDTkK97VuWgVk1ncz0FbwgaKzpj8e3am6VzpXKzjuCw/edit?usp=share_link",
+      "key": "_exemplar_creative_coding_with_the_theater_project_planning_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_creative_coding_with_the_theater_project_planning_guide"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Creative Coding with The Theater Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1aHUzR_rLVtWy2AxE6bvo95nP3tTDWFayQq9BaN3qyeE/edit?usp=share_link",
+      "key": "_exemplar_creative_coding_with_the_theater_project_planning_guide_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_creative_coding_with_the_theater_project_planning_guide_1"
+      }
+    },
+    {
+      "name": "[KEY] MusicQueue FRQ",
+      "url": "https://docs.google.com/document/d/16IVOtfRf0PLA0hWlxuJVHLrq-7yPKq_sGoUinQX3FJU/edit?usp=share_link",
+      "key": "_key_musicqueue_frq",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_musicqueue_frq"
+      }
+    },
+    {
+      "name": "Creative Coding with The Theater Project",
+      "url": "https://docs.google.com/presentation/d/15HgbxJV1-xidPa5ZBnT5zLwb8tjk-ApkZ34WLDenkaw/edit?usp=sharing",
+      "key": "creative_coding_with_the_theater_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "creative_coding_with_the_theater_project"
+      }
+    },
+    {
+      "name": "Creative Coding with The Theater Project",
+      "url": "https://docs.google.com/presentation/d/1PLgzAEep1M_0ESlO2Oc3d56I5Z5btlcfSY6z_Cl71fw/edit?usp=sharing",
+      "key": "creative_coding_with_the_theater_project_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "creative_coding_with_the_theater_project_1"
+      }
+    },
+    {
+      "name": "Creative Coding with The Theater Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1qrL36al2ddgznmuH59modfhyXFsKZzlYzlY2IWlFdNQ/edit?usp=share_link",
+      "key": "creative_coding_with_the_theater_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "creative_coding_with_the_theater_project_planning_guide"
+      }
+    },
+    {
+      "name": "Creative Coding with The Theater Project Planning Guide",
+      "url": "https://docs.google.com/document/d/15-nB8Vema_sBoeRHTpGJQBdemsbFIZ9ZxZx9cIcCoAM/edit?usp=share_link",
+      "key": "creative_coding_with_the_theater_project_planning_guide_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "creative_coding_with_the_theater_project_planning_guide_1"
+      }
+    },
     {
       "name": "Developing Project Management Skills",
       "url": "https://docs.google.com/document/d/1kgVoutrFAiSLDtVwTYUUG_K5ys2vjw-NrBpEx10ZVpY/edit?usp=sharing",
@@ -63,6 +1453,81 @@
       },
       "seeding_key": {
         "resource.key": "developing_project_management_skills"
+      }
+    },
+    {
+      "name": "Java Quick Reference",
+      "url": "https://drive.google.com/file/d/1Z7P-QFWuNUeMIQ60xz-pXrIlSjPAloxX/view?usp=sharing",
+      "key": "java_quick_reference",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "java_quick_reference"
+      }
+    },
+    {
+      "name": "MusicQueue FRQ",
+      "url": "https://docs.google.com/presentation/d/1hXhij3s5LKKIf_2W4QUNd_e_PKeoEhhwjQg90bf5MJM/edit?usp=sharing",
+      "key": "musicqueue_frq",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "musicqueue_frq"
+      }
+    },
+    {
+      "name": "MusicQueue FRQ",
+      "url": "https://docs.google.com/document/d/1pvM_P7DOeVxPDCY2OhtJzoB80MyIh1bBY1149qSwXQI/edit?usp=share_link",
+      "key": "musicqueue_frq_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "musicqueue_frq_1"
+      }
+    },
+    {
+      "name": "MusicQueue FRQ Scoring Guidelines",
+      "url": "https://docs.google.com/document/d/1WzoCzy8PV83ztCaooA-CtmukGa9vfG2b-ybuEZDcjSo/edit?usp=share_link",
+      "key": "musicqueue_frq_scoring_guidelines",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "musicqueue_frq_scoring_guidelines"
+      }
+    },
+    {
+      "name": "Software Engineering: Acceptance Testing",
+      "url": "https://youtu.be/tfcBZ_Kc3lI",
+      "key": "software_engineering_acceptance_testing",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "software_engineering_acceptance_testing"
+      }
+    },
+    {
+      "name": "Unit 7 Assessment",
+      "url": "https://docs.google.com/presentation/d/1U5kqfQyeoXefD2-mUehedQb6ppVarALo76e_hdkpH7o/edit?usp=share_link",
+      "key": "unit_7_assessment",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "unit_7_assessment"
       }
     },
     {
@@ -102,10 +1567,105 @@
       "seeding_key": {
         "resource.key": "unit_7_study_guide"
       }
+    },
+    {
+      "name": "Unlocking Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
+      "key": "unlocking_assessments",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unlocking_assessments"
+      }
     }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_exemplar_creative_coding_with_the_theater_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "creative_coding_with_the_theater_project_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "creative_coding_with_the_theater_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "software_engineering_acceptance_testing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_musicqueue_frq"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "java_quick_reference"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "musicqueue_frq"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "musicqueue_frq_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "musicqueue_frq_scoring_guidelines"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "unit_7_assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "unlocking_assessments"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_exemplar_creative_coding_with_the_theater_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "creative_coding_with_the_theater_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "creative_coding_with_the_theater_project_planning_guide"
+      }
+    }
   ],
   "scripts_resources": [
     {
@@ -137,16 +1697,115 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "acceptance_criteria",
+      "word": "acceptance criteria",
+      "definition": "the conditions that a program must meet to be accepted by a user",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "acceptance_criteria"
+      }
+    },
+    {
+      "key": "acceptance_testing",
+      "word": "acceptance testing",
+      "definition": "a test conducted to determine if requirements are met",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "acceptance_testing"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "acceptance_criteria"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "acceptance_testing"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "3d14c2f9-0528-453b-ad0a-310842f55098",
+      "properties": {
+        "description": "Develop a program using object-oriented programming that portrays a personal interest or solves a problem"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "3d14c2f9-0528-453b-ad0a-310842f55098"
+      }
+    },
+    {
+      "key": "6a1b039f-3c78-45b0-bbfd-b1b75a6ef5f2",
+      "properties": {
+        "description": "Prioritize project tasks based on self-assessment and peer feedback"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "6a1b039f-3c78-45b0-bbfd-b1b75a6ef5f2"
+      }
+    },
+    {
+      "key": "8d873b40-764a-448c-b56c-bca8836d6855",
+      "properties": {
+        "description": "Prioritize project tasks based on self-assessment and peer feedback"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "8d873b40-764a-448c-b56c-bca8836d6855"
+      }
+    },
+    {
+      "key": "c47a1076-65ba-49b4-8edd-d134e24e159b",
+      "properties": {
+        "description": "Implement methods based on a given set of specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "c47a1076-65ba-49b4-8edd-d134e24e159b"
+      }
+    },
+    {
+      "key": "c748263a-2e9b-456c-9d48-db6233e6011d",
+      "properties": {
+        "description": "Plan an algorithm using pseudocode"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "c748263a-2e9b-456c-9d48-db6233e6011d"
+      }
+    },
+    {
+      "key": "d32e53e2-6a61-4b09-951e-78cc2692a404",
+      "properties": {
+        "description": "Develop a program using object-oriented programming that portrays a personal interest or solves a problem"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "d32e53e2-6a61-4b09-951e-78cc2692a404"
+      }
+    },
+    {
+      "key": "d7823c41-efac-45f6-bfba-c579595f41d3",
+      "properties": {
+        "description": "Write scenario-based acceptance criteria for a program feature"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "d7823c41-efac-45f6-bfba-c579595f41d3"
+      }
+    }
   ],
   "lessons_standards": [
 

@@ -1114,6 +1114,10 @@ he:
         opt_in_yes: כן
         opt_in_no: לא
   courses_category: קורסים מלאים
+  course_offering:
+    headers:
+      minecraft: מיינקראפט
+      csf: יסודות מדעי המחשב
   cookie_banner:
     more_information: הצג את מדיניות הפרטיות של Code.org.
     accept: מסכים

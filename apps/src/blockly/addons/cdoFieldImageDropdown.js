@@ -10,10 +10,10 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
     // assuming that the number of options usually won't change that drastically,
     // so the number of columns can probably stay the same.
     const initialOptions = fixMenuGenerator(menuGenerator, width, height);
-    const numColumns =
-      initialOptions.length <= 7
-        ? 1
-        : Math.floor(Math.sqrt(initialOptions.length));
+    const numColumns = Math.max(
+      4,
+      Math.floor(Math.sqrt(initialOptions.length))
+    );
 
     super(
       () => fixMenuGenerator(menuGenerator, width, height),

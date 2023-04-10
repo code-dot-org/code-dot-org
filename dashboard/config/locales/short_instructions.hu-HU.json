@@ -2193,7 +2193,18 @@
         "NEW Course 4 Artist Functions 7": "Kezdesz ráérezni, hogyan kell használni a függvény blokkokat? Módosítsuk most ezt a négyzetet úgy, hogy 200 képpont hosszúak legyenek az oldalai. Kattints a \"szerkeszt\" gombra, és változtasd meg a méretet a `draw a square` (rajzolj négyzetet) függvényben. Ne felejts el a \"Bezár\" gombra kattintani a szerkesztőből való kilépéshez. ",
         "NEW Course 4 Artist Functions 8": "Készítettünk egy új, \"draw a triange\" (rajzolj egy háromszöget) nevű függvényt. Tudod úgy módosítani a függvény megadását, hogy egy 100 képpont oldalú háromszöget rajzoljon?",
         "NEW Course 4 Artist Functions 9": "Meg tudod ezt oldani egyetlen blokk hozzáadásával?",
-        "NEW Course 4 Artist Params 8": "Az itt található háromszög függvény kódja rossz. Meg tudod javítani a függvény kódját, majd tudsz rajzolni 25, 50 és 75 képpont oldalhosszúságú háromszögeket?"
+        "NEW Course 4 Artist Params 8": "Az itt található háromszög függvény kódja rossz. Meg tudod javítani a függvény kódját, majd tudsz rajzolni 25, 50 és 75 képpont oldalhosszúságú háromszögeket?",
+        "course3_artist_functions_challenge2": "Próbáld ki ezt a kódot, és ha látod már, hogyan működik, készítsd el a sajátodat!",
+        "course4_artist_concept_challenge2": "Készíts öt szélforgót  az alábbi kód segítségével.",
+        "course4_artist_functions_challenge2": "Próbáld ki ezt a kódot, és ha látod már, hogyan működik, készítsd el a sajátodat!",
+        "courseE_artist_concept_challenge2": "Készíts öt szélforgót  az alábbi kód segítségével.",
+        "courseE_artist_concept_challenge2_2018": "Készíts öt szélforgót  az alábbi kód segítségével.",
+        "courseE_artist_functions_challenge2": "Próbáld ki ezt a kódot, és ha látod már, hogyan működik, készítsd el a sajátodat!",
+        "courseE_artist_functions_challenge22022": "Próbáld ki ezt a kódot, és ha látod már, hogyan működik, készítsd el a sajátodat!",
+        "courseE_artist_functions_challenge2_2018": "Próbáld ki ezt a kódot, és ha látod már, hogyan működik, készítsd el a sajátodat!",
+        "courseE_artist_functions_challenge2_2019": "Próbáld ki ezt a kódot, és ha látod már, hogyan működik, készítsd el a sajátodat!",
+        "courseE_artist_functions_challenge2_2020": "Próbáld ki ezt a kódot, és ha látod már, hogyan működik, készítsd el a sajátodat!",
+        "courseE_artist_functions_challenge2_2021": "Próbáld ki ezt a kódot, és ha látod már, hogyan működik, készítsd el a sajátodat!"
       }
     }
   }

@@ -154,6 +154,10 @@ it:
           description_short: Impara i princìpi fondamentali dell'informatica.
         self-paced-pl-csa-2023:
           title: CSA Moduli Per Iniziare
+        csd-2023:
+          title: Alla scoperta dell'informatica
+        vpl-csd-summer-ci-2023:
+          title: Investigazione Curriculare di CS Discoveries
     resources:
       curriculum/csd/2020:
         name: Curriculum
