@@ -68,20 +68,15 @@ const javalabSlice = createSlice({
     setHasOpenCodeReview(state, action: PayloadAction<boolean>) {
       state.hasOpenCodeReview = action.payload;
     },
-    setCommitSaveStatus: {
-      reducer(
-        state,
-        action: PayloadAction<{
-          isCommitSaveInProgress: boolean;
-          hasCommitSaveError: boolean;
-        }>
-      ) {
-        state.isCommitSaveInProgress = action.payload.isCommitSaveInProgress;
-        state.hasCommitSaveError = action.payload.hasCommitSaveError;
-      },
-      prepare(isCommitSaveInProgress: boolean, hasCommitSaveError: boolean) {
-        return {payload: {isCommitSaveInProgress, hasCommitSaveError}};
-      }
+    setCommitSaveStatus(
+      state,
+      action: PayloadAction<{
+        isCommitSaveInProgress: boolean;
+        hasCommitSaveError: boolean;
+      }>
+    ) {
+      state.isCommitSaveInProgress = action.payload.isCommitSaveInProgress;
+      state.hasCommitSaveError = action.payload.hasCommitSaveError;
     },
     setValidationPassed(state, action: PayloadAction<boolean>) {
       state.validationPassed = action.payload;
