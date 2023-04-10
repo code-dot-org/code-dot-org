@@ -52,7 +52,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
       bannerId = activeExperimentId;
     }
     return `display-announcement-${bannerId}`;
-  }, [activeExperimentId]);
+  }, [activeExperimentId, announcement.id]);
 
   const onDismiss = () => {
     const bannerKey = getLocalStorageBannerKey();
