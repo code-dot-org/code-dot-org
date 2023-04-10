@@ -78,27 +78,20 @@ module WebPurify
         response = http.request(request)
         result = JSON.parse(response.body)
 
-        status = nil
-        # Note: Need to check that we can check for keys on the response
-        # because there is an edge case where response.body is {"rsp": false}
-        if result[:rsp].respond_to?(:key?) && result[:rsp].key?(:@attributes) && result[:rsp][:@attributes].key?(:stat)
-          status = result[:rsp][:@attributes][:stat]
-        end
+        # Check that we can dig for keys here due to edge case where response.body = {"rsp": false}
+        status = result["rsp"].respond_to?(:dig) ? result.dig("rsp", "@attributes", "stat") : nil
 
         if !response.is_a?(Net::HTTPSuccess) || status != "ok"
           message = "Profanity check failed"
           err_code = err_msg = nil
 
-          if result[:rsp].respond_to?(:key?) && result[:rsp].key?(:err)
+          if result["rsp"].respond_to?(:key?) && result["rsp"].key?("err")
             err_code = result.dig('rsp', 'err', '@attributes', 'code')
-          end
-          message += " with code #{err_code}" if err_code
-
-          if result[:rsp].respond_to?(:key?) && result[:rsp].key?(:err)
             err_msg = result.dig('rsp', 'err', '@attributes', 'msg')
           end
-          message += ": #{err_msg}" if err_msg && !err_msg.empty?
 
+          message += " with code #{err_code}" if err_code
+          message += ": #{err_msg}" if err_msg && !err_msg.empty?
           raise StandardError.new(message)
         end
 

@@ -60,6 +60,11 @@ class WebPurifyTest < Minitest::Test
     assert_equal ['mierda', 'scheiße'], WebPurify.find_potential_profanities('some mierda and some scheiße', ['es', 'de'])
   end
 
+  def test_find_potential_profanities_with_special_characters
+    assert_nil WebPurify.find_potential_profanities('8005555555 t <*>%')
+    assert_equal ['sh1t', 'shit'], WebPurify.find_potential_profanities('<*>% sh1t! holy shit')
+  end
+
   def test_find_potential_profanities_with_long_text
     text = ("aaaa " * 5999) + "shit dcCc d and this has some profanity damn too"
     assert_equal ['shit', 'damn'], WebPurify.find_potential_profanities(text)
@@ -70,5 +75,21 @@ class WebPurifyTest < Minitest::Test
       WebPurify.find_potential_profanities(("a " * 60_000) + "a")
     end
     assert_match "Profanity check failed: text is too long", err.message
+  end
+
+  # Recording for this test was captured with an invalid API key
+  def test_find_potential_profanities_with_invalid_api_key
+    err = assert_raises StandardError do
+      WebPurify.find_potential_profanities("peformed this recording with mocked api key")
+    end
+    assert_match "Profanity check failed with code 100: Invalid API Key", err.message
+  end
+
+  # Recording for this test was captured using special characters and an invalid API key
+  def test_find_potential_profanities_with_false_body
+    err = assert_raises StandardError do
+      WebPurify.find_potential_profanities("< mocked API key and special characters triggers a response of {\"rsp\": false} error > %")
+    end
+    assert_match "Profanity check failed", err.message
   end
 end
