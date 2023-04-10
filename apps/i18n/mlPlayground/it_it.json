@@ -12,6 +12,7 @@
   "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
   "dataCardLastUpdated": "Ultimo aggiornamento",
+  "predictHeader": "Provalo!",
   "predictButton": "Predict",
   "datasets": {
     "medical_priority": {

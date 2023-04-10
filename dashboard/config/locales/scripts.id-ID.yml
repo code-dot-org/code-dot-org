@@ -232,6 +232,9 @@ id:
           description: Semua jenis tingkat untuk pengujian UI
           description_short: Semua jenis tingkat untuk pengujian UI
           student_description: Semua jenis tingkat untuk pengujian UI
+          lessons:
+            lesson-49:
+              name: Musik
         algebraPD2b:
           title: Ilmu komputer dalam aljabar PD
         K5-OnlinePD:
@@ -6248,3 +6251,179 @@ id:
             lessonGroup-3:
               display_name: 'Bab 2: Membangun Prototipe Fisik'
           description_short: Belajar program dengan perangkat fisik.
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Masukan dan keluaran
+        vpl-csd-ci-1:
+          title: 'Modul 1: Bersiap Mengajarkan Pemecahan Masalah dan Komputasi'
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Pemecahan Masalah dan Komputasi Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Pemecahan Masalah dan Komputasi.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mengkesplorasi proyek akhir chapter.
+
+            **Waktu yang disarankan:** 30 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Pemecahan Masalah dan Komputasi Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Pemecahan Masalah dan Komputasi.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mengkesplorasi proyek akhir chapter.
+
+            **Waktu yang disarankan:** 30 menit
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Mengajarkan Pengembangan Web
+          title: 'Modul 2: Bersiap Mengajarkan Pengembangan Web'
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Pengembangan Web Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Pengembangan Web.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba Web Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 90 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Pengembangan Web Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Pengembangan Web.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba Web Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 90 menit
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bersiap Mengajarkan Animasi Interaktif dan Game
+          title: 'Modul 3: Bersiap Mengajarkan Animasi Interaktif dan Game'
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Animasi Interaktif dan Game Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Animasi Interaktif dan Game.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba Game Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 120 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Animasi Interaktif dan Game Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Animasi Interaktif dan Game.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba Game Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 120 menit
+        vpl-csd-ci-4:
+          title: " Modul 4: Bersiap Mengajarkan Proses Desain"
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Proses Desain Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Proses Desain.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba App Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 90 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Proses Desain Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Proses Desain.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba App Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 90 menit
+        vpl-csd-ci-5:
+          title: 'Modul 5: Bersiap Mengajarkan Data dan Masyarakat'
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Data dan Masyarakat Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Data dan Masyarakat.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 90 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Data dan Masyarakat Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Data dan Masyarakat.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 90 menit
+        vpl-csd-ci-7:
+          title: 'Modul 7: Bersiap Mengajarkan AI dan Machine Learning'
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit AI dan Machine Learning Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang AI dan Machine Learning.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba AI Lab dan App Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+            -   Membuat rencana untuk mengimplementasikan unit tersebut bersama siswa Anda.
+
+            **Waktu yang disarankan:** 120 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit AI dan Machine Learning Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang AI dan Machine Learning.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba AI Lab dan App Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+            -   Membuat rencana untuk mengimplementasikan unit tersebut bersama siswa Anda.
+
+            **Waktu yang disarankan:** 120 menit
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Bab 2: Membangun Prototipe Fisik'
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Masukan dan keluaran
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Masukan dan keluaran
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Masukan dan keluaran
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Masukan dan keluaran
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Masukan dan keluaran

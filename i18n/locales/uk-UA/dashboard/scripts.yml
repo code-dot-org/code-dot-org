@@ -128,6 +128,9 @@ uk:
           description: Всі типи рівнів для тестування інтерфейсу
           description_short: Всі типи рівнів для тестування інтерфейсу
           student_description: Всі типи рівнів для тестування інтерфейсу
+          lessons:
+            lesson-49:
+              name: Музика
         algebraPD2b:
           description: 'Етап 2 онлайн: Змішане літнє навчання'
           description_short: 'Етап 2 онлайн: Змішане літнє навчання'
@@ -3256,4 +3259,8 @@ uk:
         csd6a-2023:
           lesson_groups:
             lessonGroup-3:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
               display_name: 'Глава 2: Побудова фізичних прототипів'

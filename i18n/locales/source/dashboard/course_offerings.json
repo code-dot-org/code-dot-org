@@ -397,7 +397,7 @@
   "devices": "Creating Apps for Devices",
   "allthevalidation": "allthevalidation",
   "katies-playground": "katies-playground",
-  "microbit": "microbit",
+  "microbit": "Creating Apps with Devices (micro:bit)",
   "microbit-temp": "microbit-temp",
   "csc-mappinglandmarks": "csc-mappinglandmarks",
   "blockchain": "Blockchain",
@@ -420,5 +420,7 @@
   "focus-on-hardware": "focus-on-hardware",
   "focus-on-impact-in-society": "focus-on-impact-in-society",
   "focus-on-data": "focus-on-data",
-  "focus-on-creativity": "focus-on-creativity"
+  "focus-on-creativity": "focus-on-creativity",
+  "vpl-csd-summer-ci": "vpl-csd-summer-ci",
+  "ai-temp": "ai-temp"
 }

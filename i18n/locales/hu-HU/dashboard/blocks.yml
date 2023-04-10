@@ -1227,6 +1227,19 @@ hu:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: "{GROUP} elrendezése így: {FORMAT}"
+        options:
+          FORMAT:
+            '"border"': határ
+            '"circle"': kör
+            '"grid"': rács
+            '"top"': felső sor
+            '"row"': sor
+            '"bottom"': alsó sor
+            '"left"': bal oszlop
+            '"column"': oszlop
+            '"right"': jobb oszlop
       gamelab_locationAt:
         text: 'hely x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1253,6 +1266,18 @@ hu:
             '"spiral"': spirál
       gamelab_makeNewSpriteAnon:
         text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': határ
+            '"circle"': kör
+            '"grid"': rács
+            '"top"': felső sor
+            '"row"': sor
+            '"bottom"': alsó sor
+            '"left"': bal oszlop
+            '"column"': oszlop
+            '"right"': jobb oszlop
       gamelab_makeNumSprites:
         text: csinálj {NUM} új {ANIMATION_NAME} szereplőt
       gamelab_makeProjectile:

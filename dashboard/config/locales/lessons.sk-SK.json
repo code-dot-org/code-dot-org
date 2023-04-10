@@ -1231,7 +1231,7 @@
           "student_overview": "**Otázka dňa: Ako si môžeme pomocou textu zlepšiť scény a animácie?**\n\nV tejto lekcii sa naučíš využívať textové príkazy prostredia Game Lab na pridanie popisu k scéne. "
         },
         "csd3-2022/Mini-Project - Captioned Scenes": {
-          "name": "Miniprojekt – Scény s popismi",
+          "name": "Miniprojekt – Scény s titulkami",
           "overview": "**Otázka dňa: Ako môžeme pomocou Game Labu prejaviť svoju tvorivosť?**\n\nPo rýchlom zopakovaní kódu, ktorý sa doteraz naučili, sa žiaci oboznámia so svojím prvým tvorivým projektom v rámci tohto tematického celku. Pomocou procesu riešenia problémov ako modelu žiaci definujú scénu, ktorú chcú vytvoriť, pripravia sa premyslením odlišného kódu, ktorý budú potrebovať, vyskúšajú si svoj plán v Game Labe a potom sa zamyslia nad tým, čo vytvorili. Majú tiež možnosť podeliť sa o svoje výtvory so svojimi rovesníkmi.",
           "purpose": "Na tejto hodine majú žiaci možnosť kreatívnejšie využiť získané poznatky. Niektorí žiaci môžu stráviť viac času na karte Animácia kreslením ako programovaním. Povzbuďte žiakov, aby venovali čas častiam aktivity, ktoré ich zaujímajú, pokiaľ spĺňajú požiadavky zadania.\n\nOtvorená povaha tejto lekcie tiež poskytuje učiteľovi flexibilitu pri rozhodovaní o tom, koľko času by mali žiaci stráviť nad svojou prácou, v závislosti od požiadaviek na rozvrhnutie konkrétnej realizácie kurzu.",
           "student_overview": "**Otázka dňa: Ako dokážeme pomocou prostredia Game Lab ukázať svoju tvorivosť?**\n\nV tejto lekcii budeš mať príležitosť ukázať svoju tvorivosť tým, že využiješ postup riešenia problémov na navrhnutie a naprogramovanie scény podľa svojho výberu. "
@@ -1240,7 +1240,7 @@
           "name": "Cyklus kreslenia",
           "overview": "**Otázka dňa: Ako môžeme animovať naše obrázky v Game Labe?**\n\nV tejto lekcii sa žiaci oboznámia s cyklom funkcie draw, ktorý je jednou zo základných programovacích paradigiem v Game Labe. Na začiatku hodiny si žiaci pozrú niekoľko fyzických flipbookov, aby videli, že množstvo snímok s rôznymi obrázkami vytvára dojem pohybu. Potom si žiaci pozrú video, ktoré vysvetľuje, ako cyklus funkcie draw v Game Labe pomáha vytvoriť rovnaký dojem v ich programoch. Žiaci skombinujú cyklus funkcie draw s náhodnými číslami a manipulujú s niekoľkými jednoduchými animáciami s bodkami a potom so sprajtmi.",
           "purpose": "Cyklus funkcie draw je základným prvkom Game Labu. Prostredie Game Labu opakovane volá túto funkciu mnohokrát za sekundu (štandardne 30-krát), čo umožňuje nástroju vytvárať animácie. Táto lekcia má dva ciele. Prvým je, aby žiaci videli, ako animácia vo všeobecnosti závisí od zobrazenia mnohých mierne odlišných obrázkov v sekvencii. Druhým cieľom je, aby žiaci pochopili, ako im cyklus funkcie draw umožňuje vytvoriť toto správanie v Game Labe. Žiaci by mali z lekcie odísť s poznatkom, že príkazy v cykle funkcie draw sa volajú po ostatnom kóde, ale potom sa opakovane volajú, aby sa vytvorila animácia. Žiaci budú mať možnosť pokračovať v rozvíjaní pochopenia tohto správania v nasledujúcich dvoch lekciách, ale položenie silného koncepčného základu v tejto lekcii im dobre poslúži po zvyšok tematického celku.",
-          "student_overview": "**Otázka dňa: Ako dokážeme v Game Labe spraviť z obrázkov animácie?**\n\nV tejto lekcii sa naučíš, ako pomocou cyklu draw() a náhodných čísel vytvoriť svoje prvé jednoduché animácie. "
+          "student_overview": "**Otázka dňa: Ako môžeme v Game Labe spraviť z obrázkov animácie?**\n\nV tejto lekcii sa naučíš, ako pomocou cyklu draw() a náhodných čísel vytvoriť svoje prvé jednoduché animácie. "
         },
         "csd3-2022/Sprite Movement": {
           "name": "Pohyb sprajtov",
@@ -3754,6 +3754,9 @@
         "allthethings/lesson-48": {
           "name": "Poézia"
         },
+        "allthethings/lesson-49": {
+          "name": "Hudba"
+        },
         "coursef-2021/lesson-6": {
           "name": "Predstavenie Sprite Labu",
           "overview": "V rámci hodiny na **vytvorenie kontextu** budú žiaci diskutovať o role počítačov a technológií v ich životoch, pričom sa zamerajú na to, ako aplikácie a nástroje poskytujú ľuďom nové možnosti a ako ich môžu používať. Žiaci tiež preskúmajú aplikácie podobné tým, ktoré sami neskôr vytvoria.",
@@ -4820,7 +4823,7 @@
           "student_overview": "**Otázka dňa: Ako si môžeme pomocou textu zlepšiť scény a animácie?**\n\nV tejto lekcii sa naučíš využívať textové príkazy prostredia Game Lab na pridanie popisu k scéne. "
         },
         "csd3-2021/Mini-Project: Captioned Scenes": {
-          "name": "Miniprojekt – Scény s popismi",
+          "name": "Miniprojekt – Scény s titulkami",
           "overview": "**Otázka dňa: Ako môžeme pomocou Game Labu prejaviť svoju tvorivosť?**\n\nPo rýchlom zopakovaní kódu, ktorý sa doteraz naučili, sa žiaci oboznámia so svojím prvým tvorivým projektom v rámci tohto tematického celku. Pomocou procesu riešenia problémov ako modelu žiaci definujú scénu, ktorú chcú vytvoriť, pripravia sa premyslením odlišného kódu, ktorý budú potrebovať, vyskúšajú si svoj plán v Game Labe a potom sa zamyslia nad tým, čo vytvorili. Majú tiež možnosť podeliť sa o svoje výtvory so svojimi rovesníkmi.",
           "purpose": "Na tejto hodine majú žiaci možnosť kreatívnejšie využiť získané poznatky. Niektorí žiaci môžu stráviť viac času na karte Animácia kreslením ako programovaním. Povzbuďte žiakov, aby venovali čas častiam aktivity, ktoré ich zaujímajú, pokiaľ spĺňajú požiadavky zadania.\n\nOtvorená povaha tejto lekcie tiež poskytuje učiteľovi flexibilitu pri rozhodovaní o tom, koľko času by mali žiaci stráviť nad svojou prácou, v závislosti od požiadaviek na rozvrhnutie konkrétnej realizácie kurzu.",
           "student_overview": "**Otázka dňa: Ako dokážeme pomocou prostredia Game Lab ukázať svoju tvorivosť?**\n\nV tejto lekcii budeš mať príležitosť ukázať svoju tvorivosť tým, že využiješ postup riešenia problémov na navrhnutie a naprogramovanie scény podľa svojho výberu. "
@@ -4830,7 +4833,7 @@
           "overview": "**Otázka dňa: Ako môžeme animovať naše obrázky v Game Labe?**\n\nV tejto lekcii sa žiaci oboznámia s cyklom funkcie draw, ktorý je jednou zo základných programovacích paradigiem v Game Labe. Na začiatku hodiny si žiaci pozrú niekoľko fyzických flipbookov, aby videli, že množstvo snímok s rôznymi obrázkami vytvára dojem pohybu. Potom si žiaci pozrú video, ktoré vysvetľuje, ako cyklus funkcie draw v Game Labe pomáha vytvoriť rovnaký dojem v ich programoch. Žiaci skombinujú cyklus funkcie draw s náhodnými číslami a manipulujú s niekoľkými jednoduchými animáciami s bodkami a potom so sprajtmi.",
           "preparation": "-   Vytlačte a zostavte pomôcky\n-   Pripravte video",
           "purpose": "Cyklus funkcie draw je základným prvkom Game Labu. Prostredie Game Labu opakovane volá túto funkciu mnohokrát za sekundu (štandardne 30-krát), čo umožňuje nástroju vytvárať animácie. Táto lekcia má dva ciele. Prvým je, aby žiaci videli, ako animácia vo všeobecnosti závisí od zobrazenia mnohých mierne odlišných obrázkov v sekvencii. Druhým cieľom je, aby žiaci pochopili, ako im cyklus funkcie draw umožňuje vytvoriť toto správanie v Game Labe. Žiaci by mali z lekcie odísť s poznatkom, že príkazy v cykle funkcie draw sa volajú po ostatnom kóde, ale potom sa opakovane volajú, aby sa vytvorila animácia. Žiaci budú mať možnosť pokračovať v rozvíjaní pochopenia tohto správania v nasledujúcich dvoch lekciách, ale položenie silného koncepčného základu v tejto lekcii im dobre poslúži po zvyšok tematického celku.",
-          "student_overview": "**Otázka dňa: Ako dokážeme v Game Labe spraviť z obrázkov animácie?**\n\nV tejto lekcii sa naučíš, ako pomocou cyklu draw() a náhodných čísel vytvoriť svoje prvé jednoduché animácie. "
+          "student_overview": "**Otázka dňa: Ako môžeme v Game Labe spraviť z obrázkov animácie?**\n\nV tejto lekcii sa naučíš, ako pomocou cyklu draw() a náhodných čísel vytvoriť svoje prvé jednoduché animácie. "
         },
         "csd3-2021/Sprite Movement": {
           "name": "Pohyb sprajtov",
