@@ -5,7 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # The Counter Pattern
 
-##### The concept of the counter pattern builds on the draw loop that students learned previously to create programs with purposeful motion. By either incrementing or decrementing sprite properties, such as [`sprite.x`(#f78183)](/docs/ide/gamelab/expressions/x), students can write programs that move sprites in expected patterns, instead of the randomization that they used in the past. The animations that students learn to create with the counter pattern lay the foundation for all of the animations and games that they will make throughout the rest of the Interactive Animations and Games unit.
+<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">The concept of the counter pattern builds on the draw loop that students learned previously to create programs with purposeful motion. By either <strong>incrementing or decrementing sprite properties</strong>, such as <strong>sprite.x</strong>, students can write programs that <strong>move sprites in expected patterns</strong>, instead of the randomization that they used in the past. The animations that students learn to create with the counter pattern lay the foundation for all of the animations and games that they will make throughout the rest of the Interactive Animations and Games unit.
+</p></div>
 
 ## Key Understandings
 
@@ -18,37 +21,27 @@ markdown <<MARKDOWN
 
 ##### Any block that takes a number as input could be animated using the counter pattern in the draw loop. Take a look at the three following examples, each of which uses the counter pattern to animate a different aspect of the image. Below each image is an example of the code that was used _inside the Draw Loop_ to produce the animation.
 
-<div markdown=1 style="float: left; margin: 10px; width: 30%">
+<table style="width:95%; text-align:center;">
+<tr>
+<td style="width:33%;">
+<img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/counter_rotate.gif">
+</td>
+<td style="width:33%;">
+<img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/counter_scale.gif">
+</td>
+<td style="width:33%;">
+<img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/counter_ellipse.gif">
+</td>
+</tr>
+<tr style="background-color: #DCDCDC; font-family: courier new; font-weight: bold; font-size:10px;">
+<td style="border-style:solid; border-color:#ffffff; border-width:5px;">art.rotation = art.rotation - 1;</td>
+<td style="border-style:solid; border-color:#ffffff; border-width:5px;">art.scale = art.scale + 0.1;</td>
+<td style="border-style:solid; border-color:#ffffff; border-width:5px;">width = width + 1;<br>
+height = height - 1;<br>
+ellipse(200, 200, width, height);</td>
+</tr>
+</table>
 
-![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/counter_rotate.gif)
-
-```
-sprite.rotation = sprite.rotation - 1;
-```
-
-</div>
-
-<div markdown=1 style="float: left; margin: 10px; width: 30%">
-
-![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/counter_scale.gif)
-
-```
-sprite.scale = sprite.scale + 0.1;
-```
-
-</div>
-
-<div markdown=1 style="float: left; margin: 10px; width: 30%">
-
-![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/counter_ellipse.gif)
-
-```
-width = width + 1;
-height = height - 1;
-ellipse(200, 200, width, height);
-```
-
-</div>
 
 
 
