@@ -801,8 +801,7 @@ GEM
       rack (~> 2.2)
       rack-protection (= 2.1.0)
       tilt (~> 2.0)
-    spring (2.0.1)
-      activesupport (>= 4.2)
+    spring (3.1.1)
     spring-commands-testunit (1.0.1)
       spring (>= 0.9.1)
     sprockets-rails (3.3.0)
@@ -1044,7 +1043,7 @@ DEPENDENCIES
   shotgun
   sinatra (= 2.1.0)
   sort_alphabetical!
-  spring
+  spring (~> 3.1.1)
   spring-commands-testunit
   sprockets!
   sprockets-rails (= 3.3.0)
