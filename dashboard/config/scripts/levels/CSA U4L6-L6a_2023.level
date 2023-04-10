@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "## Fix the Error\r\n\r\nThe <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findMatchingDog()</code> method is supposed to return a 1D array containing all <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Dog</code> objects that have the same age as the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">dogToFind</code>, but it has a bug 🪲\r\n\r\nFind and fix the error in the program.\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">🔦 Help! I can't find the bug!</summary>\r\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\r\n    \t<p>The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">equals()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Dog</code> class returns <code style=\"background-color: #ececec; color: black; font-weight: bold;\">true</code> if two <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Dog</code> objects have the same age. Check if this is being used in the condition in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findMatchingDog()</code> method.</p>\r\n    </div>\r\n</details>",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -16,13 +16,16 @@
     },
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "The Dog Class",
+    "bubble_choice_description": "The `findMatchingDog()` method is supposed to return a 1D array containing all `Dog` objects that have the same age as the parameter `dogToFind`, but it has a bug 🪲",
+    "thumbnail_url": "https://images.code.org/972aad478718b122874fcf44d2a401fd-dog.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-02-17T18:45:36.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-02-17T18:45:36.836+00:00\",\"changed\":[\"cloned from \\\"CSA U4L6-L4_2023\\\"\"],\"cloned_from\":\"CSA U4L6-L4_2023\"},{\"changed_at\":\"2023-02-17 18:45:38 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-17T18:45:36.836+00:00\",\"changed\":[\"cloned from \\\"CSA U4L6-L4_2023\\\"\"],\"cloned_from\":\"CSA U4L6-L4_2023\"},{\"changed_at\":\"2023-02-17 18:45:38 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-07 18:51:03 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

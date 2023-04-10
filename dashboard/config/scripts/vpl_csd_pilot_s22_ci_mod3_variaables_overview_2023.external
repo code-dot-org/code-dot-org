@@ -5,10 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # Variables
 
-##### Students should understand that variables hold information and can be accessed using their labels. With simple drawings, students may not see the power of variables, so you may want them to think of some different apps that they use and what information needs to be stored for the app to work, or think about a more complex program that they want to use variables for. Numbers, text, and colors can all go into variables.
+<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 01px 20px 1px 20px; margin-bottom:20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">Students should understand that variables hold information and can be accessed using their labels. With simple drawings, students may not see the power of variables, so you may want them to think of some different apps that they use and what information needs to be stored for the app to work, or think about a more complex program that they want to use variables for. Numbers, text, and colors can all go into variables.
+</p></div>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em; font-weight: bold;">🔎 Variable Basics</summary>
+<summary style="font-size: 1.5em; font-weight: bold;">🖥️ Variable Basics</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -49,7 +52,7 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em; font-weight: bold;">🔎 Naming Rules</summary>
+<summary style="font-size: 1.5em; font-weight: bold;">👍🏽 Naming Rules</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p><img src="https://images.code.org/3d0f162ec256f2ad0c11d3338515b4ea-image-1648220329699.55.57 AM.png" style="float: right; max-width: 400px; margin-top: 20px; margin-bottom: 20px;  margin-left:20px;"/>
 
