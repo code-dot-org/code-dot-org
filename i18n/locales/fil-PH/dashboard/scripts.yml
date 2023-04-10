@@ -102,6 +102,10 @@ fil:
           description: Pagsubok
           description_short: Pagsubok
           student_description: Pagsubok
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Musika
         asUnplugged:
           description_audience: Edad 6-13
         afterschool1:
@@ -3031,3 +3035,31 @@ fil:
             lessonGroup-3:
               display_name: 'Kabanata 2: Input ng Hardware'
           description_short: Matutong mag-program sa mga pisikal na mga kagamitan.
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Mga Input at Mga Output
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kabanata 2: Input ng Hardware'
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Mga Input at Mga Output
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Mga Input at Mga Output
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Mga Input at Mga Output
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Mga Input at Mga Output
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Mga Input at Mga Output

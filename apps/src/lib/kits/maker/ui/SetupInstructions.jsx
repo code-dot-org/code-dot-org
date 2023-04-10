@@ -207,6 +207,20 @@ const downloadButtonStyle = {
   textAlign: 'center'
 };
 
+const getMakerAppAlternatePathMsg = () => {
+  const makerAppAlternatePathMsg = shouldUseWebSerial()
+    ? applabI18n.makerSetupMakerAppAlternatePathWebSerial()
+    : applabI18n.makerSetupMakerAppAlternatePathNoWebSerial();
+  return (
+    <div>
+      <p>{makerAppAlternatePathMsg}</p>
+      <strong>
+        <SafeMarkdown markdown={applabI18n.makerSetupDeprecatingMakerApp()} />
+      </strong>
+    </div>
+  );
+};
+
 class WindowsDownloads extends React.Component {
   state = {installer: null, error: null};
 
@@ -221,7 +235,7 @@ class WindowsDownloads extends React.Component {
     return (
       <div>
         <h2>{applabI18n.makerSetupMakerAppForWindows()}</h2>
-        <p>{applabI18n.makerSetupMakerAppAlternatePath()}</p>
+        {getMakerAppAlternatePathMsg()}
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
@@ -268,7 +282,7 @@ class MacDownloads extends React.Component {
     return (
       <div>
         <h2>{applabI18n.makerSetupMakerAppForMac()}</h2>
-        <p>{applabI18n.makerSetupMakerAppAlternatePath()}</p>
+        {getMakerAppAlternatePathMsg()}
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
@@ -313,7 +327,7 @@ class LinuxDownloads extends React.Component {
     return (
       <div>
         <h2>{applabI18n.makerSetupMakerAppForLinux()}</h2>
-        <p>{applabI18n.makerSetupMakerAppAlternatePath()}</p>
+        {getMakerAppAlternatePathMsg()}
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button

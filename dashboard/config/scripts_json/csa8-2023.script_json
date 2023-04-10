@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-31 15:19:33 UTC",
+    "serialized_at": "2023-04-07 19:49:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -26,31 +26,121 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Content"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Show What You Know"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa8-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa8-2023"
       }
     }
   ],
   "lessons": [
-
+    {
+      "key": "CSA Post-Survey",
+      "name": "CSA Post-Survey",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CSA Post-Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa8-2023"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "cc1e5c30-a0bc-4007-9a2a-0b06e1d4ac41",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cc1e5c30-a0bc-4007-9a2a-0b06e1d4ac41",
+        "lesson.key": "CSA Post-Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa8-2023"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "75381a30-b537-4d5b-ad83-7e801480b995",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "75381a30-b537-4d5b-ad83-7e801480b995",
+        "lesson_activity.key": "cc1e5c30-a0bc-4007-9a2a-0b06e1d4ac41"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-levelgroup_csa_2023"
+        ],
+        "lesson.key": "CSA Post-Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa8-2023",
+        "activity_section.key": "75381a30-b537-4d5b-ad83-7e801480b995"
+      },
+      "level_keys": [
+        "csp-post-survey-levelgroup_csa_2023"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-levelgroup_csa_2023",
+        "script_level.level_keys": [
+          "csp-post-survey-levelgroup_csa_2023"
+        ],
+        "lesson.key": "CSA Post-Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa8-2023",
+        "activity_section.key": "75381a30-b537-4d5b-ad83-7e801480b995"
+      }
+    }
   ],
   "resources": [
     {

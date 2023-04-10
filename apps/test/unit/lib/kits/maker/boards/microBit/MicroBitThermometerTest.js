@@ -1,4 +1,4 @@
-import {MicrobitStubBoard} from '../makeStubBoard';
+import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import MicroBitThermometer from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitThermometer';
@@ -8,7 +8,7 @@ describe('MicroBitThermometer', function () {
   let boardClient, thermometer;
 
   beforeEach(() => {
-    boardClient = new MicrobitStubBoard();
+    boardClient = new MBFirmataClientStub();
     thermometer = new MicroBitThermometer({mb: boardClient});
   });
   afterEach(() => {

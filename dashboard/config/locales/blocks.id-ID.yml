@@ -1252,6 +1252,19 @@ id:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: tata letak {GROUP} sebagai {FORMAT}
+        options:
+          FORMAT:
+            '"border"': batas
+            '"circle"': loop
+            '"grid"': Kisi
+            '"top"': baris atas
+            '"row"': baris
+            '"bottom"': baris bawah
+            '"left"': kolom kiri
+            '"column"': kolom
+            '"right"': kolom kanan
       gamelab_locationAt:
         text: 'lokasi x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1277,6 +1290,18 @@ id:
             '"rain"': hujan
       gamelab_makeNewSpriteAnon:
         text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': batas
+            '"circle"': loop
+            '"grid"': Kisi
+            '"top"': baris atas
+            '"row"': baris
+            '"bottom"': baris bawah
+            '"left"': kolom kiri
+            '"column"': kolom
+            '"right"': kolom kanan
       gamelab_makeNumSprites:
         text: buat {NUM} sprite {ANIMATION_NAME} baru
       gamelab_makeProjectile:

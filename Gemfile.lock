@@ -693,6 +693,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.20.3, < 2.0)
     rainbow (3.0.0)
+    raindrops (0.20.1)
     rake (12.3.3)
     rambling-trie (2.2.1)
     rb-fsevent (0.11.2)
@@ -855,7 +856,7 @@ GEM
     unf_ext (0.0.7.2)
     unicode-display_width (2.1.0)
     unicode_utils (1.4.0)
-    uri (0.12.0)
+    uri (0.12.1)
     user_agent_parser (2.3.0)
     uuid (2.3.9)
       macaddr (~> 1.0)
@@ -1021,6 +1022,7 @@ DEPENDENCIES
   rack_csrf
   rails (= 6.0.6)
   rails-controller-testing (~> 1.0.5)
+  raindrops
   rambling-trie (>= 2.1.1)
   recaptcha
   redcarpet (~> 3.3.4)

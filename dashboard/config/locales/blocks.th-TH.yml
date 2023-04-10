@@ -1240,6 +1240,19 @@ th:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: วางผัง {GROUP} เป็น {FORMAT}
+        options:
+          FORMAT:
+            '"border"': เส้นขอบ
+            '"circle"': วงกลม
+            '"grid"': ตาข่าย
+            '"top"': แถวบนสุด
+            '"row"': แถว
+            '"bottom"': แถวล่างสุด
+            '"left"': คอลัมน์ซ้าย
+            '"column"': คอลัมน์
+            '"right"': คอลัมน์ขวา
       gamelab_locationAt:
         text: 'สถานที่ x: {X} Y: {Y}'
       gamelab_locationModifier:
@@ -1266,6 +1279,18 @@ th:
             '"spiral"': วงก้นหอย
       gamelab_makeNewSpriteAnon:
         text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': เส้นขอบ
+            '"circle"': วงกลม
+            '"grid"': ตาข่าย
+            '"top"': แถวบนสุด
+            '"row"': แถว
+            '"bottom"': แถวล่างสุด
+            '"left"': คอลัมน์ซ้าย
+            '"column"': คอลัมน์
+            '"right"': คอลัมน์ขวา
       gamelab_makeNumSprites:
         text: สร้างสไปร์ท [ANIMATION_NAME] ใหม่ [NUM] ตัว
       gamelab_makeProjectile:

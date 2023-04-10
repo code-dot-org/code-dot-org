@@ -5,8 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Drawing Shapes in Game Lab
 
-##### In the first few lessons of the Interactive Animations and Games unit, students will start to become familiar with Game Lab as they learn to draw and color shapes. Through the process they are also learning basic programming skills such as:
+<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;">
 
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">In the first few lessons of the Interactive Animations and Games unit, students will start to become familiar with Game Lab as they learn to draw and color shapes. Through the process they are also learning basic programming skills such as:
+</p></div>
 
 
 * ##### Only one command can be added per line.
@@ -17,7 +19,7 @@ markdown <<MARKDOWN
 * ##### All x and y values on the display are positive.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.2em; font-weight: bold;">🔎 Code Used To Draw Shapes</summary>
+<summary style="font-size: 1.5em; font-weight: bold;">🖥️ Code Used To Draw Shapes</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 <img src="https://images.code.org/bb48d43af72b17e245007ae96da757b4-image-1648169121141.45.06 PM.png" style="padding-left: 130px;  height: 300px; clear: both; margin: 0 20px 20px 0;">
@@ -40,7 +42,7 @@ markdown <<MARKDOWN
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.2em; font-weight: bold;">🔎 Adding Additional Parameters</summary>
+<summary style="font-size: 1.5em; font-weight: bold;">🖥️ Adding Additional Parameters</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 <img src="https://images.code.org/bb48d43af72b17e245007ae96da757b4-image-1648169121141.45.06 PM.png" style="padding-left: 130px;  height: 300px; clear: both; margin: 0 20px 20px 0;">
@@ -52,7 +54,7 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.2em; font-weight: bold;">🔎 Key vocabulary</summary>
+<summary style="font-size: 1.5em; font-weight: bold;">🔎 Key vocabulary</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 

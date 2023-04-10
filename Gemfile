@@ -122,6 +122,7 @@ gem 'nakayoshi_fork'
 # Ref: https://github.com/puma/puma/pull/1646
 gem 'puma', github: 'wjordan/puma', branch: 'debugging'
 gem 'puma_worker_killer'
+gem 'raindrops'
 
 gem 'chronic', '~> 0.10.2'
 

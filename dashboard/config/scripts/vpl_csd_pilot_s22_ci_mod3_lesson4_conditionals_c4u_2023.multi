@@ -1,5 +1,5 @@
 name 'VPL-CSD-PILOT-S22-CI-mod3-lesson4-conditionals-C4U_2023'
-title 'Check for understanding'
+title 'Check for Understanding'
 description 'A student wants to create a game where one animation is shown when the sprite is moving to the right otherwise, a different animation is shown. Which block would be most helpful in creating this behavior?'
 
 wrong '![](https://images.code.org/ff72337f59de5ce1318dd976f6f5f01a-image-1648656817726.12.56 AM.png)'
