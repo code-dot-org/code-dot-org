@@ -140,9 +140,9 @@ header.build = function (
   });
 
   window.addEventListener('popstate', function (event) {
-    console.log(
-      `location: ${document.location}, state: ${JSON.stringify(event.state)}`
-    );
+    //console.log(
+    //  `popstate location: ${document.location}, state: ${JSON.stringify(event.state)}`
+    //);
 
     const path = new URL(document.location).pathname;
     const values = path.split('/');
