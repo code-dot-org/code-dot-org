@@ -101,8 +101,7 @@ export class WorkshopForm extends React.Component {
       organizer: PropTypes.shape({
         id: PropTypes.number,
         name: PropTypes.string
-      }),
-      workshop_starts_within_a_month: PropTypes.bool
+      })
     }),
     onSaved: PropTypes.func,
     readOnly: PropTypes.bool,
@@ -137,7 +136,8 @@ export class WorkshopForm extends React.Component {
       regional_partner_id: '',
       virtual: false,
       suppress_email: false,
-      third_party_provider: null
+      third_party_provider: null,
+      cannotChangeIfWorkshopVirtual: false
     };
 
     if (props.workshop) {
@@ -261,10 +261,15 @@ export class WorkshopForm extends React.Component {
     if (removedSession && removedSession.id) {
       destroyedSessions.push(removedSession);
     }
+    const cannotChangeIfWorkshopVirtual = this.checkCannotChangeIfWorkshopVirtual(
+      sessions,
+      this.state.course
+    );
     this.setState({
       sessionsModified: true,
       sessions,
-      destroyedSessions
+      destroyedSessions,
+      cannotChangeIfWorkshopVirtual: cannotChangeIfWorkshopVirtual
     });
   };
 
@@ -368,6 +373,30 @@ export class WorkshopForm extends React.Component {
     return this.state.course && Subjects[this.state.course];
   }
 
+  // For summer workshops for CSP and CSA, only workshop admins can change
+  // the “Is this a virtual workshop” field within one month of the workshop
+  // in order to prevent people from changing this last minute without
+  // talking to us or the Friday institute.
+  checkCannotChangeIfWorkshopVirtual(sessions, course) {
+    return (
+      (course === COURSE_CSP || course === COURSE_CSA) &&
+      !this.props.permission.has(WorkshopAdmin) &&
+      sessions.some(this.workshopStartsWithinMonth)
+    );
+  }
+
+  // Returns whether today is within a month before the workshop start.
+  workshopStartsWithinMonth(session) {
+    const today = new Date();
+    const workshopDate = new Date(session.date);
+    const monthBeforeWorkshopDate = new Date(
+      workshopDate.getFullYear(),
+      (workshopDate.getMonth() + 11) % 12,
+      workshopDate.getDate()
+    );
+    return monthBeforeWorkshopDate <= today && today <= workshopDate;
+  }
+
   renderWorkshopTypeOptions(validation) {
     const isCsf = this.state.course === 'CS Fundamentals';
     const isAdminCounselor = this.state.course === 'Admin/Counselor Workshop';
@@ -386,18 +415,7 @@ export class WorkshopForm extends React.Component {
     const showFundedInput = !(
       isAdminCounselor || isCsfSubjectWithHiddenFundedField
     );
-
-    console.log(this.props.workshop.workshop_starts_within_a_month);
-
-    // For summer workshops for CSP and CSA, only workshop admins can
-    // update the “Is this a virtual workshop” field within one month
-    // of the workshop in order to prevent people from changing this
-    // last minute without talking to Friday institute.
-    const nonWSAdminAndStartWithinMonth =
-      (this.state.course === COURSE_CSP || this.state.course === COURSE_CSA) &&
-      !this.props.permission.has(WorkshopAdmin);
-    //   start less than month out;
-    const virtualWorkshopHelpTip = nonWSAdminAndStartWithinMonth ? (
+    const virtualWorkshopHelpTip = this.state.cannotChangeIfWorkshopVirtual ? (
       <p>
         There is less than a month until your workshop. Please contact
         partner@code.org to update this setting.
@@ -405,8 +423,6 @@ export class WorkshopForm extends React.Component {
     ) : (
       <p>Please update your selection if/when your plans change.</p>
     );
-    console.log(this.state.sessions);
-    console.log(this.state.sessions[0].start);
 
     return (
       <FormGroup>
@@ -455,7 +471,11 @@ export class WorkshopForm extends React.Component {
                 readOnly={
                   this.props.readOnly ||
                   VirtualOnlySubjects.includes(this.state.subject) ||
-                  nonWSAdminAndStartWithinMonth
+                  this.state.cannotChangeIfWorkshopVirtual
+                }
+                showVirtualOptions={
+                  !!this.props.workshop ||
+                  !this.state.cannotChangeIfWorkshopVirtual
                 }
               />
               <HelpBlock>{validation.help.virtual}</HelpBlock>
@@ -752,6 +772,10 @@ export class WorkshopForm extends React.Component {
 
   handleCourseChange = event => {
     const course = this.handleFieldChange(event);
+    const cannotChangeIfWorkshopVirtual = this.checkCannotChangeIfWorkshopVirtual(
+      this.state.sessions,
+      course
+    );
 
     // clear facilitators, subject, funding, and email reminders
     this.setState({
@@ -760,7 +784,8 @@ export class WorkshopForm extends React.Component {
       fee: null,
       funded: '',
       funding_type: null,
-      suppress_email: false
+      suppress_email: false,
+      cannotChangeIfWorkshopVirtual: cannotChangeIfWorkshopVirtual
     });
     this.loadAvailableFacilitators(course);
   };
@@ -1146,7 +1171,7 @@ export default connect(state => ({
   facilitatorCourses: state.workshopDashboard.facilitatorCourses
 }))(WorkshopForm);
 
-const SelectIsVirtual = ({value, readOnly, onChange}) => (
+const SelectIsVirtual = ({value, readOnly, onChange, showVirtualOptions}) => (
   <FormControl
     componentClass="select"
     value={value}
@@ -1159,18 +1184,23 @@ const SelectIsVirtual = ({value, readOnly, onChange}) => (
     <option key={'in_person'} value={'in_person'}>
       No, this is an in-person workshop.
     </option>
-    <option key={'friday_institute'} value={'friday_institute'}>
-      Yes, this is a Code.org-Friday Institute virtual workshop.
-    </option>
-    <option key={'regional'} value={'regional'}>
-      Yes, this is a regional virtual workshop.
-    </option>
+    {showVirtualOptions && (
+      <>
+        <option key={'friday_institute'} value={'friday_institute'}>
+          Yes, this is a Code.org-Friday Institute virtual workshop.
+        </option>
+        <option key={'regional'} value={'regional'}>
+          Yes, this is a regional virtual workshop.
+        </option>
+      </>
+    )}
   </FormControl>
 );
 SelectIsVirtual.propTypes = {
   value: PropTypes.string.isRequired,
   readOnly: PropTypes.bool,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  showVirtualOptions: PropTypes.bool.isRequired
 };
 
 const SelectSuppressEmail = ({value, readOnly, onChange}) => (
