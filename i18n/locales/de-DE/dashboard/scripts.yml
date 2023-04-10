@@ -4644,8 +4644,21 @@ de:
               display_name: Inhalt
             lessonGroup-4:
               display_name: Alternate Lessons (alternative Lerneinheiten)
-        csa7-2023: {}
-        csa8-2023: {}
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Geistiges Eigentum
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Umfrage
         vpl-csd3-ayw-pilot-2022: {}
         vpl-csd4-ayw-pilot-2022: {}
         csa-magpie-lab: {}
@@ -5191,6 +5204,9 @@ de:
           student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Daten und Gesellschaft\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in das Thema \"Daten und Gesellschaft.\n– Üben der wichtigsten Konzepte der Stunde.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
         vpl-csd-ci-6: {}
         vpl-csd-ci-7:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Unterrichten von KI und maschinellem Lernen
           title: 'Modul 7: Vorbereitung auf den Unterricht KI und maschinelles Lernen'
           description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in KI und maschinelles Lernen.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
           student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in KI und maschinelles Lernen.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
