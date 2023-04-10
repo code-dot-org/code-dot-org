@@ -5,14 +5,17 @@ description 'description here'
 markdown <<MARKDOWN
 # Foundational Lessons
 
-##### The first several lessons of the unit help students build foundational knowledge that they will continue to draw upon as they move through the unit. 
+<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">The first several lessons of the unit help students build foundational knowledge that they will continue to draw upon as they move through the unit. 
+</p></div>
 
 ## Overview of Lessons 1 - 6
 
 ##### Click the dropdown arrows below to view lesson overviews.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.2em; font-weight: bold;">🔎 Lesson 1: Programming for a Purpose</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 1: Programming for a Purpose</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:50px;">
     <p>
 <img src="https://images.code.org/d66317bfcada6fb0162053e666403c38-image-1680655837044.png" alt="Image of Templates" width="150px" style="float:left; margin-left:10px; margin-right:10px; padding-right: 30px;">
@@ -34,7 +37,7 @@ Students begin by investigating the design of different animations and games. St
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.2em; font-weight: bold;">🔎 Lesson 2: Plotting Shapes</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 2: Plotting Shapes</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 <img src="https://images.code.org/eab1ca733940261c15ef0c280e382175-image-1648858668304.JPG" alt="Image of smiley face in Game Lab" width="250px" style="float:left; margin-bottom:40px; margin-left:10px; margin-right:10px; padding-right: 30px;">
@@ -54,7 +57,7 @@ Students explore the challenges of communicating how to draw with shapes and use
 <div style="clear:both"/>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.2em; font-weight: bold;">🔎 Lesson 3: Drawing in Game Lab</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 3: Drawing in Game Lab</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 <img src="https://images.code.org/f86bbbe77921555476a841575371d2c9-image-1680656312856.png" alt="Image of a purple flower created in Game Lab" width="200px" style="float:left; margin-left:10px; margin-right:10px;margin-bottom:40px;  padding-right: 30px;">
@@ -74,7 +77,7 @@ Students are introduced to Game Lab, the programming environment for this unit, 
 <div style="clear:both"/>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.2em; font-weight: bold;">🔎 Lesson 4: Shapes and Parameters</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 4: Shapes and Parameters</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 <img src="https://images.code.org/fb47328f06de64a012392ae72aaf16c6-image-1680656503196.png" alt="Image of pig created in Game Lab" width="200px" style="float:left; margin-left:10px; margin-right:10px; margin-bottom:40px;  padding-right: 30px;">
@@ -93,7 +96,7 @@ In this lesson students continue to develop their familiarity with Game Lab by m
 <div style="clear:both"/>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.2em; font-weight: bold;">🔎 Lesson 5: Variables</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 5: Variables</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 <img src="https://images.code.org/512ab9f19d266ad1fadfc0b76db7ed5e-image-1680656713927.png" alt="Image of a gray robot created in Game Lab" width="200px" style="float:left; margin-left:10px; margin-right:10px; margin-bottom:40px;  padding-right: 30px;">
@@ -111,7 +114,7 @@ In this lesson students learn how to use variables to label a number. Students b
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.2em; font-weight: bold;">🔎 Lesson 6: Random Numbers</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 6: Random Numbers</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 <img src="https://images.code.org/375aa29ce7950b1c788a7d2c828f5f62-image-1663809341908.com-gif-maker.gif" alt="Image of a gray robot created in Game Lab" width="200px" style="float:left; margin-left:10px; margin-right:10px; margin-bottom:40px;  padding-right: 30px;">
