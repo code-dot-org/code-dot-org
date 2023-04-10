@@ -60,19 +60,18 @@ $container-width: 309px;
   justify-content: space-between;
 
   i {
-    margin-left: auto;
     font-size: 1.5em;
   }
 }
 
 .iconWithDescription {
   display: flex;
-  margin: 0 0 0.5em 0;
   align-items: center;
+  column-gap: 0.5em;
 
   .iconWithDescriptionText {
     font-size: 0.875em;
-    margin: 0 0 0 0.5em;
+    margin: 0;
     color: $neutral_dark;
   }
 }
