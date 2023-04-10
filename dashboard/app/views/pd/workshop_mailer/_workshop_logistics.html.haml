@@ -11,7 +11,7 @@
         - else
           = session.start_date_with_start_and_end_times_us_format
         %br
-  - unless @workshop.location_name.blank? || @workshop.virtual?
+  - unless @workshop.location_name.blank? || (@workshop.virtual? && @workshop.subject != Pd::Workshop::SUBJECT_CSA_CAPSTONE)
     %tr
       %td.heading
         Location:
