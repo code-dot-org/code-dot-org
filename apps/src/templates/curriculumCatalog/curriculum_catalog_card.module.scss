@@ -45,6 +45,13 @@ $container-width: 309px;
   h4 {
     margin-bottom: 0.75em;
     color: $neutral_dark;
+
+    // Shows max two lines before truncating with ellipsis
+    // See https://css-tricks.com/line-clampin/
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 }
 
