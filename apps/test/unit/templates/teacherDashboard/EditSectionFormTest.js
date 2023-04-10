@@ -34,17 +34,11 @@ describe('EditSectionForm', () => {
     assert.equal(loginTypeField.length, 1);
     assert.equal(loginTypeField.find('option').length, 2);
     assert.equal(
-      loginTypeField
-        .find('option')
-        .at(0)
-        .props().value,
+      loginTypeField.find('option').at(0).props().value,
       SectionLoginType.word
     );
     assert.equal(
-      loginTypeField
-        .find('option')
-        .at(1)
-        .props().value,
+      loginTypeField.find('option').at(1).props().value,
       SectionLoginType.picture
     );
   });
@@ -70,17 +64,11 @@ describe('EditSectionForm', () => {
     assert.equal(loginTypeField.length, 1);
     assert.equal(loginTypeField.find('option').length, 2);
     assert.equal(
-      loginTypeField
-        .find('option')
-        .at(0)
-        .props().value,
+      loginTypeField.find('option').at(0).props().value,
       SectionLoginType.word
     );
     assert.equal(
-      loginTypeField
-        .find('option')
-        .at(1)
-        .props().value,
+      loginTypeField.find('option').at(1).props().value,
       SectionLoginType.picture
     );
   });
@@ -109,17 +97,11 @@ describe('EditSectionForm', () => {
     assert.equal(loginTypeField.length, 1);
     assert.equal(loginTypeField.find('option').length, 2);
     assert.equal(
-      loginTypeField
-        .find('option')
-        .at(0)
-        .props().value,
+      loginTypeField.find('option').at(0).props().value,
       SectionLoginType.word
     );
     assert.equal(
-      loginTypeField
-        .find('option')
-        .at(1)
-        .props().value,
+      loginTypeField.find('option').at(1).props().value,
       SectionLoginType.picture
     );
   });
@@ -148,17 +130,11 @@ describe('EditSectionForm', () => {
     assert.equal(loginTypeField.length, 1);
     assert.equal(loginTypeField.find('option').length, 2);
     assert.equal(
-      loginTypeField
-        .find('option')
-        .at(0)
-        .props().value,
+      loginTypeField.find('option').at(0).props().value,
       SectionLoginType.word
     );
     assert.equal(
-      loginTypeField
-        .find('option')
-        .at(1)
-        .props().value,
+      loginTypeField.find('option').at(1).props().value,
       SectionLoginType.picture
     );
   });

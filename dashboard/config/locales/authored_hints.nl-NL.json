@@ -792,13 +792,16 @@
           "mc_4_b": "Het `vernietig blok` kommando kapt de boom om die recht voor je staat."
         },
         "Overworld House Frame Chosen": {
-          "mc_6_c": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen."
+          "mc_6_c": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen.",
+          "mc_6_b": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "Overworld House Frame Chosen_2019": {
-          "mc_6_c": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen."
+          "mc_6_c": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen.",
+          "mc_6_b": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "Overworld House Frame Chosen_2020": {
-          "mc_6_c": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen."
+          "mc_6_c": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen.",
+          "mc_6_b": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "Overworld Move to Sheep": {
           "mc_1_a": "Het `beweeg voorwaarts` blok staat bovenaan de gereedschapskist.",
@@ -814,15 +817,18 @@
         },
         "Overworld Place Wall": {
           "mc_5_a": "Gebruik het `plaats` blok eerst, vervolgens het `beweeg` blok.",
-          "mc_5_b": "Wees er zeker van dat beide blokken in de `herhaal` lus staan zodat de code meer dan één keer wordt uitgevoerd."
+          "mc_5_b": "Wees er zeker van dat beide blokken in de `herhaal` lus staan zodat de code meer dan één keer wordt uitgevoerd.",
+          "mc_5_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "Overworld Place Wall_2019": {
           "mc_5_a": "Gebruik het `plaats` blok eerst, vervolgens het `beweeg` blok.",
-          "mc_5_b": "Wees er zeker van dat beide blokken in de `herhaal` lus staan zodat de code meer dan één keer wordt uitgevoerd."
+          "mc_5_b": "Wees er zeker van dat beide blokken in de `herhaal` lus staan zodat de code meer dan één keer wordt uitgevoerd.",
+          "mc_5_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "Overworld Place Wall_2020": {
           "mc_5_a": "Gebruik het `plaats` blok eerst, vervolgens het `beweeg` blok.",
-          "mc_5_b": "Wees er zeker van dat beide blokken in de `herhaal` lus staan zodat de code meer dan één keer wordt uitgevoerd."
+          "mc_5_b": "Wees er zeker van dat beide blokken in de `herhaal` lus staan zodat de code meer dan één keer wordt uitgevoerd.",
+          "mc_5_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "Overworld Plant Crops": {
           "mc_7_c": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen."
@@ -3172,19 +3178,23 @@
         },
         "courseC_starWars_loops1": {
           "courseC_starWars_loops1_a": "Als BB-8 over schroot heen rolt, pakt hij het vanzelf op.",
-          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen."
+          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen.",
+          "courseC_starWars_loops1_b": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops1_2018": {
           "courseC_starWars_loops1_a": "Als BB-8 over schroot heen rolt, pakt hij het vanzelf op.",
-          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen."
+          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen.",
+          "courseC_starWars_loops1_b": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops1_2019": {
           "courseC_starWars_loops1_a": "Als BB-8 over schroot heen rolt, pakt hij het vanzelf op.",
-          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen."
+          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen.",
+          "courseC_starWars_loops1_b": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops1_2020": {
           "courseC_starWars_loops1_a": "Als BB-8 over schroot heen rolt, pakt hij het vanzelf op.",
-          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen."
+          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen.",
+          "courseC_starWars_loops1_b": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops2": {
           "courseC_starWars_loops2_a": "Als je code wilt herhalen, sleep dan een `herhaal`-lus uit de gereedschapskist, en stop het gewenste blok er in."
@@ -3228,19 +3238,23 @@
         },
         "courseC_starWars_loops10": {
           "courseC_starWars_loops10_a": "Vind je niet dat dit patroon er uit ziet als een paar heel grote treden van een trap? Kijk eens of je kunt gebruiken wat je de vorige puzzles geleerd hebt, om alle draaien te maken.",
-          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop).",
+          "courseC_starWars_loops10_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops10_2018": {
           "courseC_starWars_loops10_a": "Vind je niet dat dit patroon er uit ziet als een paar heel grote treden van een trap? Kijk eens of je kunt gebruiken wat je de vorige puzzles geleerd hebt, om alle draaien te maken.",
-          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop).",
+          "courseC_starWars_loops10_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops10_2019": {
           "courseC_starWars_loops10_a": "Vind je niet dat dit patroon er uit ziet als een paar heel grote treden van een trap? Kijk eens of je kunt gebruiken wat je de vorige puzzles geleerd hebt, om alle draaien te maken.",
-          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop).",
+          "courseC_starWars_loops10_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops10_2020": {
           "courseC_starWars_loops10_a": "Vind je niet dat dit patroon er uit ziet als een paar heel grote treden van een trap? Kijk eens of je kunt gebruiken wat je de vorige puzzles geleerd hebt, om alle draaien te maken.",
-          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop).",
+          "courseC_starWars_loops10_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops6": {
           "courseC_starWars_loops6_a": "Schrijf alle zetten eens op een stuk patroon. Zie je er een patroon in?",
@@ -3264,23 +3278,28 @@
         },
         "courseC_starWars_loops7": {
           "courseC_starWars_loops7_a": "Dit patroon ziet er moeilijker uit dan het is! Begin met een simpel trap patroon. Bereik je daarmee alle schroot?",
-          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet.",
+          "courseC_starWars_loops7_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops7_2018": {
           "courseC_starWars_loops7_a": "Dit patroon ziet er moeilijker uit dan het is! Begin met een simpel trap patroon. Bereik je daarmee alle schroot?",
-          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet.",
+          "courseC_starWars_loops7_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops7_2019": {
           "courseC_starWars_loops7_a": "Dit patroon ziet er moeilijker uit dan het is! Begin met een simpel trap patroon. Bereik je daarmee alle schroot?",
-          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet.",
+          "courseC_starWars_loops7_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops7_2020": {
           "courseC_starWars_loops7_a": "Dit patroon ziet er moeilijker uit dan het is! Begin met een simpel trap patroon. Bereik je daarmee alle schroot?",
-          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet.",
+          "courseC_starWars_loops7_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops7_copy": {
           "courseC_starWars_loops7_a": "Dit patroon ziet er moeilijker uit dan het is! Begin met een simpel trap patroon. Bereik je daarmee alle schroot?",
-          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet.",
+          "courseC_starWars_loops7_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops8": {
           "course_starWars_loops8_a": "Bekijk het probleem eens in kleine stapjes.  Neem er de tijd voor.  Je hoeft het niet allemaal in de eerste poging op te lossen!",
@@ -3929,11 +3948,13 @@
         },
         "courseC_starWars_loops10_2021": {
           "courseC_starWars_loops10_a": "Vind je niet dat dit patroon er uit ziet als een paar heel grote treden van een trap? Kijk eens of je kunt gebruiken wat je de vorige puzzles geleerd hebt, om alle draaien te maken.",
-          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop).",
+          "courseC_starWars_loops10_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops1_2021": {
           "courseC_starWars_loops1_a": "Als BB-8 over schroot heen rolt, pakt hij het vanzelf op.",
-          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen."
+          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen.",
+          "courseC_starWars_loops1_b": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops2_2021": {
           "courseC_starWars_loops2_a": "Als je code wilt herhalen, sleep dan een `herhaal`-lus uit de gereedschapskist, en stop het gewenste blok er in."
@@ -3965,11 +3986,13 @@
         },
         "courseC_starWars_loops7_2021": {
           "courseC_starWars_loops7_a": "Dit patroon ziet er moeilijker uit dan het is! Begin met een simpel trap patroon. Bereik je daarmee alle schroot?",
-          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet.",
+          "courseC_starWars_loops7_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops7_dani": {
           "courseC_starWars_loops7_a": "Dit patroon ziet er moeilijker uit dan het is! Begin met een simpel trap patroon. Bereik je daarmee alle schroot?",
-          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet.",
+          "courseC_starWars_loops7_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops8_2021": {
           "course_starWars_loops8_a": "Bekijk het probleem eens in kleine stapjes.  Neem er de tijd voor.  Je hoeft het niet allemaal in de eerste poging op te lossen!",
@@ -4167,7 +4190,8 @@
           "mc_4_b": "Het `vernietig blok` kommando kapt de boom om die recht voor je staat."
         },
         "Overworld House Frame Chosen_2021": {
-          "mc_6_c": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen."
+          "mc_6_c": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen.",
+          "mc_6_b": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "Overworld Move to Sheep_2021": {
           "mc_1_a": "Het `beweeg voorwaarts` blok staat bovenaan de gereedschapskist.",
@@ -4175,7 +4199,8 @@
         },
         "Overworld Place Wall_2021": {
           "mc_5_a": "Gebruik het `plaats` blok eerst, vervolgens het `beweeg` blok.",
-          "mc_5_b": "Wees er zeker van dat beide blokken in de `herhaal` lus staan zodat de code meer dan één keer wordt uitgevoerd."
+          "mc_5_b": "Wees er zeker van dat beide blokken in de `herhaal` lus staan zodat de code meer dan één keer wordt uitgevoerd.",
+          "mc_5_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "Overworld Plant Crops_2021": {
           "mc_7_c": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen."
@@ -4511,7 +4536,7 @@
           "hw_retro_changePropBy": "Als u de grootte van een sprite steeds opnieuw wilt wijzigen (met events), gebruik dan dit blok:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "Elke sprite heeft een **locatie**. U kunt de locatie instellen door op de pin op dit blok te klikken: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Klik op de pin ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) op het locatieblok en kies een nieuwe positie voor uw sprite op het scherm.\n-   Druk op \"Uitvoeren\" als uw code is voltooid.",
+          "location_hint": "Elke sprite heeft een **locatie**. U kunt de locatie instellen door op de pin op dit blok te klikken: \n\n<xml><block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Poetry_makeNewSpriteAnon\" id=\"1XbbmW9TqiPQBwSeRYvO\">\n  <field name=\"ANIMATION_NAME\">\"twinkling star\"</field>\n  <field name=\"LOCATION\">{\"x\":200,\"y\":200}</field>\n</block></xml>\n\n-   Klik op de pin ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) op het locatieblok en kies een nieuwe positie voor uw sprite op het scherm.\n-   Druk op \"Uitvoeren\" als uw code is voltooid.",
           "remove_hint": "U kunt een sprite op een bepaald regelnummer verwijderen. U kunt een nieuwe sprite toevoegen om deze te vervangen: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
@@ -4689,7 +4714,8 @@
           "mc_4_b": "Het `vernietig blok` kommando kapt de boom om die recht voor je staat."
         },
         "Overworld House Frame Chosen2022": {
-          "mc_6_c": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen."
+          "mc_6_c": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen.",
+          "mc_6_b": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "Overworld Move to Sheep2022": {
           "mc_1_a": "Het `beweeg voorwaarts` blok staat bovenaan de gereedschapskist.",
@@ -4697,7 +4723,8 @@
         },
         "Overworld Place Wall2022": {
           "mc_5_a": "Gebruik het `plaats` blok eerst, vervolgens het `beweeg` blok.",
-          "mc_5_b": "Wees er zeker van dat beide blokken in de `herhaal` lus staan zodat de code meer dan één keer wordt uitgevoerd."
+          "mc_5_b": "Wees er zeker van dat beide blokken in de `herhaal` lus staan zodat de code meer dan één keer wordt uitgevoerd.",
+          "mc_5_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "Overworld Plant Crops2022": {
           "mc_7_c": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen."
@@ -4953,11 +4980,13 @@
         },
         "courseC_starWars_loops102022": {
           "courseC_starWars_loops10_a": "Vind je niet dat dit patroon er uit ziet als een paar heel grote treden van een trap? Kijk eens of je kunt gebruiken wat je de vorige puzzles geleerd hebt, om alle draaien te maken.",
-          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop).",
+          "courseC_starWars_loops10_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops12022": {
           "courseC_starWars_loops1_a": "Als BB-8 over schroot heen rolt, pakt hij het vanzelf op.",
-          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen."
+          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen.",
+          "courseC_starWars_loops1_b": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops22022": {
           "courseC_starWars_loops2_a": "Als je code wilt herhalen, sleep dan een `herhaal`-lus uit de gereedschapskist, en stop het gewenste blok er in."
@@ -4973,7 +5002,8 @@
         },
         "courseC_starWars_loops72022": {
           "courseC_starWars_loops7_a": "Dit patroon ziet er moeilijker uit dan het is! Begin met een simpel trap patroon. Bereik je daarmee alle schroot?",
-          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet.",
+          "courseC_starWars_loops7_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         },
         "courseC_starWars_loops82022": {
           "course_starWars_loops8_a": "Bekijk het probleem eens in kleine stapjes.  Neem er de tijd voor.  Je hoeft het niet allemaal in de eerste poging op te lossen!",
@@ -5230,6 +5260,64 @@
         "helloworld_food_sizes_space-2022": {
           "storyboard_setProp": "U kunt dit blok gebruiken om de grootte van een sprite slechts één keer te wijzigen:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
           "storyboard_changePropBy": "Als u de grootte van een sprite steeds opnieuw wilt wijzigen (met events), gebruik dan dit blok:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+        },
+        "Overworld Shear Sheep": {
+          "mc_3_a": "Het `knippen` blok brengt het schaap recht voor je uit. Sta je tegenover de schapen?",
+          "mc_3_b": "Als je de manier waarop je kijkt wilt veranderen, gebruik dan een `draai` blok.",
+          "mc_3_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
+        },
+        "Overworld Shear Sheep2022": {
+          "mc_3_a": "Het `knippen` blok brengt het schaap recht voor je uit. Sta je tegenover de schapen?",
+          "mc_3_b": "Als je de manier waarop je kijkt wilt veranderen, gebruik dan een `draai` blok.",
+          "mc_3_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
+        },
+        "Overworld Shear Sheep_2019": {
+          "mc_3_a": "Het `knippen` blok brengt het schaap recht voor je uit. Sta je tegenover de schapen?",
+          "mc_3_b": "Als je de manier waarop je kijkt wilt veranderen, gebruik dan een `draai` blok.",
+          "mc_3_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
+        },
+        "Overworld Shear Sheep_2020": {
+          "mc_3_a": "Het `knippen` blok brengt het schaap recht voor je uit. Sta je tegenover de schapen?",
+          "mc_3_b": "Als je de manier waarop je kijkt wilt veranderen, gebruik dan een `draai` blok.",
+          "mc_3_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
+        },
+        "Overworld Shear Sheep_2021": {
+          "mc_3_a": "Het `knippen` blok brengt het schaap recht voor je uit. Sta je tegenover de schapen?",
+          "mc_3_b": "Als je de manier waarop je kijkt wilt veranderen, gebruik dan een `draai` blok.",
+          "mc_3_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
+        },
+        "Underground Iron": {
+          "mc_10_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
+        },
+        "Underground Iron2022": {
+          "mc_10_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
+        },
+        "Underground Iron_2019": {
+          "mc_10_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
+        },
+        "Underground Iron_2020": {
+          "mc_10_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
+        },
+        "Underground Iron_2021": {
+          "mc_10_c": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
+        },
+        "courseB_starWars_prog9": {
+          "courseB_starWars_prog9_a": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
+        },
+        "courseB_starWars_prog92022": {
+          "courseB_starWars_prog9_a": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
+        },
+        "courseB_starWars_prog9_2018": {
+          "courseB_starWars_prog9_a": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
+        },
+        "courseB_starWars_prog9_2019": {
+          "courseB_starWars_prog9_a": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
+        },
+        "courseB_starWars_prog9_2020": {
+          "courseB_starWars_prog9_a": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
+        },
+        "courseB_starWars_prog9_2021": {
+          "courseB_starWars_prog9_a": "Wees niet bang om een fout te maken! Voer de code uit om te zien wat er gebeurt, zelfs als je de puzzel nog niet hebt opgelost."
         }
       }
     }

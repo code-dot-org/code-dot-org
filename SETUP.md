@@ -154,8 +154,6 @@ These steps may need to change over time as 3rd party tools update to have versi
 
 1. Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils sqlite parallel tidy-html5`
 
-1. [Check your rmagick version](#rmagick)
-
 1. Install [Node Version Manager](https://github.com/nvm-sh/nvm) and install Node
     1. Install NVM via `brew install nvm`
 
@@ -271,7 +269,6 @@ These steps may need to change over time as 3rd party tools update to have versi
 1. Install OpenSSL:
     1. `brew install openssl`
     1. `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
-1. [Check rmagick version](#rmagick)
 1. If you want to render personalized certificates locally, see these special instructions regarding [ImageMagick with pango](#imagemagick-with-pango).
 1. Prevent future problems related to the `Too many open files` error:
     1. Add the following to `~/.bash_profile` or your desired shell configuration file:
@@ -486,16 +483,6 @@ Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) fo
 
 ---
 ### Bundle Install Tips
-
-#### rmagick
-If rmagick doesn't install, check your version of imagemagick, and downgrade if >= 7
-- `convert --version`
-- `brew install imagemagick@6`
-- `brew unlink imagemagick`
-- `brew link imagemagick@6 --force`
-If you continue to have issues with rmagick, after changing your imagemagick version, you may need to uninstall/reinstall the gem
-- `gem uninstall rmagick`
-- `gem install rmagick -v 2.16.0`
 
 #### Apple Silicon (M1) bundle install steps
 

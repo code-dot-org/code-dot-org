@@ -100,7 +100,7 @@ blocklyTags.forEach(tag => {
   // Create a React component to wrap each Blockly tag. Since these elements ultimately
   // render as React components, creating a wrapper makes them valid (whereas <xml>
   // is not a valid React tag).
-  blocklyComponentWrappers[tag] = function(props) {
+  blocklyComponentWrappers[tag] = function (props) {
     const BlocklyElement = tag;
     // The "is" attribute prevents React from warning about unrecognized tags:
     // https://github.com/facebook/react/issues/11184#issuecomment-335942439

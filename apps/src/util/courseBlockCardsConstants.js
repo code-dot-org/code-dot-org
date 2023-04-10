@@ -33,7 +33,8 @@ export const InternationalGradeBandCards = [
     linkId: 'course-block-international-grade-band-4-10',
     linkClass: 'linktag',
     heading: i18n.courseBlocksInternationalGradeBandsElementary(),
-    description: i18n.courseBlocksInternationalGradeBandsElementaryDescription(),
+    description:
+      i18n.courseBlocksInternationalGradeBandsElementaryDescription(),
     buttonText: i18n.courseBlocksInternationalGradeBandsElementaryButton(),
     path: pegasus('/educate/curriculum/elementary-school')
   },

@@ -10648,7 +10648,7 @@
           "hw_retro_changePropBy": "スプライトのサイズを（イベントで）何度も変えたい場合は、このブロックを使います。\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "どのスプライトにも **lロケーション**があります。このブロックのピンをクリックすると、ロケーションを設定できます。 \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   ロケーションのブロックのピン ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) をクリックし、次に画面上のスプライトの新しい位置を選びます。\n-   コードが終了しましたら、\"実行\" ボタンを押します。",
+          "location_hint": "どのスプライトにも **lロケーション**があります。このブロックのピンをクリックすると、ロケーションを設定できます。 \n\n<xml><block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Poetry_makeNewSpriteAnon\" id=\"1XbbmW9TqiPQBwSeRYvO\">\n  <field name=\"ANIMATION_NAME\">\"twinkling star\"</field>\n  <field name=\"LOCATION\">{\"x\":200,\"y\":200}</field>\n</block></xml>\n\n-   ロケーションのブロックのピン ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) をクリックし、次に画面上のスプライトの新しい位置を選びます。\n-   コードが終了しましたら、\"実行\" ボタンを押します。",
           "remove_hint": "スプライトは特定の行番号で削除することができます。その後に新しい妖精を入れることができます。"
         },
         "poetry_hoc_backgroundEffects": {

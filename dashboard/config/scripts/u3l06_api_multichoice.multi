@@ -1,29 +1,34 @@
 name 'U3L06-API-multichoice'
-encrypted 'Ad1YHaRjh0i0ih/BYumQuspay6ftuBCFwWyIepz0H/0PTfG8hqdjoqCYf43O
-dCMXDSmANZqwy4bKXYvPASvwPLuVdg6jKB37e2w7nvNG5I0ycVsGbhyGt4xq
-RWbx+tMRQKjlf0trOxxOUceNIDzdBmfVi9QuPO/ooMkVMQEJHaLt6oR3/ibj
-qJC+wQPD9I3XV4pQnCJy1diBn8eyNoMzxMWbOt32kqMs8JVGUkrAQdKG8gts
-KuKZ9mSIM1ZzIyG5JBxz/+xOck0PJL8UZ+C8+8s4ZeXGrojfWjLhaL8q9sFv
-+TDg/nGURNKGvvge8GYYKp3m+sAWNocKqMK+PuuOwGN52mLsXigAnV8DMx01
-2aTvdzEkjzsSDs2NKQiZREy8mqhnJLVEKMQdLZV3XBswP1O4+3lH4uzm1irA
-TKBpGSQHss2hROf3Qs6xV3cjCjdTzvlMGbbXzalueXs4bQ83u2vFapuVIHax
-uNZX963kcBiTH5wZ3oBZINvPMIkcd8p8iJmbQgOEla5pGrXTTX44pQVJynDU
-1jw0iFWYSfjadNaB5YA8l3CE3sS+gAEYwvhMBBen60lIZ9jtCmW3QDwFxg10
-ACNcmiBXsmhRir69KMYZGfAX6pDBhnBuF8gLK4SVrgceyv31GJoqOpT9SYnO
-+kSKLdI8Btf6GF1fwH36AD2EXbFvvCImDHmCc4EXZSEKwepJi/VSx3wRE2Lt
-YzquPiJWkh+dtf46y1R26LTY4nqswcG7FcZHYuUvJ3mRBTxO5exbf+ayvDMV
-+2TFRYXx8UOIErvUw8SkjUIQsn4IKDpQrKdy5Gbs7Cz7760m/Akh6CLy0ZZZ
-ew7D/hNLbvPia+tMEbHmV339XYyHaf24IeWnvP6bFmXbqM82yV//x8XQjeQk
-I3Mdqjr0PESxM/1u9+l7C4uZKEYbSIbW473EZWfkN9T6xBVOEgnzowyU/SEf
-mnjMvx1ojh7wpRsIEhgaxZdkZ7xT8OQdAkNInS3PzWKVVjy6Va57Syt2UJmN
-dZMsg9pQ6Yt9R2akEpFc3MqNiyA7QPeNHKMLPdsav/XFFlWZtjMwVto+OT+A
-TjsVW16jkAX4bhJmJA9aiYCKx1ws9SVN/R6KBYIaOVyWd0DaQiYr7Ogxehlh
-/z8N/TgDYEESHGq56tjXqaJsq/Mdv4vKSobQMhhLYjT9IE0Q0FJ7GDBuX9SW
-XDGesWahu65OxMWAh7jbSXM/9kSVIP6JG1qL/M9wAWIAPvLqdYoOfYVOK1uL
-3TzAdunQVAiTN3ONB+ZB0gd4hiKChF1q5jxYeWF2+53AJFrGpWdC/T9WYa0+
-tFDciortwifc2MVN3Y1GW24cgP6StZD1+ME9vQgUvCqPYXEOFLXo5Sp2VSGm
-1NWlKYUagAbPc6kl0tAslJVruwvhp+o1h+y1mvCUCImcB27nWL4qYTiAfH9J
-8s0G8j60Y6kofbhZZN6w/NgSjhrNJ9KgwW5ulN2E5/sqdYepk3HIUzFhjl7G
-ISHL+0rh7m4RvmsEx6hQN4BPAiL3aLP4ocsWua3UZyRhVSo0dx59VlRP5Xr8
-ddi9+d9iHj5uep1BELU=
-'
+title 'Multiple Choice: What is an API?'
+wrong 'Abstract Programming Inheritance'
+wrong 'Artificial Parameter Intelligence'
+right 'Application Program Interface'
+wrong 'Applied Power Implementation'
+wrong 'Abstract Parameter Interface'
+
+markdown <<MARKDOWN
+Read the definitions provided below and then choose the best answer.
+
+- **Abstract Programming Inheritance** -  The idea that abstractions in languages get "passed down" in newer versions.
+
+- **Artificial Parameter Intelligence** - The idea that function parameters should be intelligent enough to "know" what you want as a programmer.
+
+- **Application Program Interface** - A well-documented library of functions provided in a programming language that helps to simplify complex programming tasks.
+
+- **Applied Power Implementation** - A process by which functions are given extra override power related to parameters.
+
+- **Abstract Parameter Interface** - A programming construct in which parameters are passed down through levels of abstraction.
+
+
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Correct answer:
+
+Application Program Interface
+
+MARKDOWN
+
+allow_multiple_attempts true

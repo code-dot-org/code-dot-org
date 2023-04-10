@@ -8,7 +8,7 @@
   "marketing_initiative": null,
   "grade_levels": "9,10,11,12",
   "header": null,
-  "image": null,
+  "image": "https://images.code.org/6bf3cb2094d2c1016446ba78ba1607f6-Self paced app lab.png",
   "cs_topic": "programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"

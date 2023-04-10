@@ -34,19 +34,13 @@ class TeacherContentToggle extends React.Component {
       throw new Error('Expected level-body');
     }
     // Show this element, as parent div (refs.lockMessage) now owns visibility
-    $('#locked-lesson')
-      .appendTo(this.refs.lockMessage)
-      .show();
-    $('#hidden-lesson')
-      .appendTo(this.refs.hiddenMessage)
-      .show();
+    $('#locked-lesson').appendTo(this.refs.lockMessage).show();
+    $('#hidden-lesson').appendTo(this.refs.hiddenMessage).show();
     // Server initially sets level-body visibility to hidden when viewAs=Participant
     // so that participant view doesnt show content while we make async calls. Once
     // this component has mounted, we move level-body into our first div, which
     // will now own toggling visibility
-    $('#level-body')
-      .css('visibility', '')
-      .appendTo(this.refs.content);
+    $('#level-body').css('visibility', '').appendTo(this.refs.content);
   }
 
   render() {

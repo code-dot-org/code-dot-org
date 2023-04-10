@@ -1527,6 +1527,15 @@ az:
         bitirməmişdən əvvəl email adressinizi əlavə etmək üçün [hesab tənzimləmələrinə
         daxil olun] %{user_registration}
   courses_category: Tam Kurslar
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      hello_world: Salam Dünya
+      sports: İdman
+      csf: Kompüter Elmlərinin əsasları
+      csc: 'CS Əlaqələri
+
+'
   cookie_banner:
     message: Saytımıza baxmağa davam edərək və ya "Razıyam" düyməsini basaraq, kompüterinizdə
       və ya cihazınızda Cookies saxlanmasını qəbul etmiş olursunuz.

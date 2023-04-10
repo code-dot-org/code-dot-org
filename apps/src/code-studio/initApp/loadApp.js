@@ -57,7 +57,7 @@ export function setupApp(appOptions) {
   var baseOptions = {
     containerId: 'codeApp',
     position: {blockYCoordinateInterval: 25},
-    onInitialize: function() {
+    onInitialize: function () {
       createCallouts(this.level.callouts || this.callouts);
       const isTeacher =
         getStore().getState().currentUser?.userType === 'teacher';
@@ -90,7 +90,7 @@ export function setupApp(appOptions) {
       }
       $(document).trigger('appInitialized');
     },
-    onAttempt: function(/*MilestoneReport*/ report) {
+    onAttempt: function (/*MilestoneReport*/ report) {
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
         return tryToUploadShareImageToS3({
           image: report.image,
@@ -130,10 +130,10 @@ export function setupApp(appOptions) {
       }
       reporting.sendReport(report);
     },
-    onResetPressed: function() {
+    onResetPressed: function () {
       reporting.cancelReport();
     },
-    onContinue: function() {
+    onContinue: function () {
       var lastServerResponse = reporting.getLastServerResponse();
       if (lastServerResponse.videoInfo) {
         showVideoDialog(lastServerResponse.videoInfo);
@@ -162,7 +162,7 @@ export function setupApp(appOptions) {
         window.location.href = lastServerResponse.nextRedirect;
       }
     },
-    showInstructionsWrapper: function(showInstructions) {
+    showInstructionsWrapper: function (showInstructions) {
       // Always skip all pre-level popups on share levels or when configured thus
       if (this.share || appOptions.level.skipInstructionsPopup) {
         return;
@@ -170,7 +170,7 @@ export function setupApp(appOptions) {
 
       var afterVideoCallback = showInstructions;
       if (appOptions.level.afterVideoBeforeInstructionsFn) {
-        afterVideoCallback = function() {
+        afterVideoCallback = function () {
           appOptions.level.afterVideoBeforeInstructionsFn(showInstructions);
         };
       }
@@ -339,9 +339,7 @@ async function loadAppAsync(appOptions) {
 
   const sectionId = clientState.queryParams('section_id') || '';
   const exampleSolutionsRequest = $.ajax(
-    `/api/example_solutions/${appOptions.serverScriptLevelId}/${
-      appOptions.serverLevelId
-    }?section_id=${sectionId}`
+    `/api/example_solutions/${appOptions.serverScriptLevelId}/${appOptions.serverLevelId}?section_id=${sectionId}`
   );
 
   // Kick off userAppOptionsRequest before awaiting exampleSolutionsRequest to ensure requests
@@ -468,6 +466,13 @@ const sourceHandler = {
   },
   inRestrictedShareMode() {
     return getAppOptions().level.inRestrictedShareMode;
+  },
+  setTeacherHasConfirmedUploadWarning(teacherHasConfirmedUploadWarning) {
+    getAppOptions().level.teacherHasConfirmedUploadWarning =
+      teacherHasConfirmedUploadWarning;
+  },
+  teacherHasConfirmedUploadWarning() {
+    return getAppOptions().level.teacherHasConfirmedUploadWarning;
   },
   // returns a Promise to the level source
   getLevelSource(currentLevelSource) {

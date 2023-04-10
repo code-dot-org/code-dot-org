@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2022-10-19T18:23:19.000Z",
-  "level_num": "custom",
-  "user_id": 1574,
   "properties": {
     "skip_dialog": true,
     "skip_sound": true,
@@ -14,8 +10,13 @@
     "peer_reviewable": "false",
     "optional": "false",
     "title": "Free Response",
-    "name_suffix": "_2023"
+    "name_suffix": "_2023",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2022-10-19T18:23:19.000Z",
+  "user_id": 1574,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-10-19T18:23:19.086+00:00\",\"changed\":[\"cloned from \\\"U9L7 Free Response2022\\\"\"],\"cloned_from\":\"U9L7 Free Response2022\"}]"
 }]]></config>

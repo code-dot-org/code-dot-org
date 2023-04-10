@@ -23,6 +23,12 @@
         "csd-2022/board-events": {
           "display_name": "Zdarzenia na tablicy"
         },
+        "csd-2022/circuit-playground": {
+          "display_name": "Omówienie placu zabaw"
+        },
+        "csd-2022/circuit-playground-parent": {
+          "display_name": "Adafruit Circuit plac zabaw"
+        },
         "csd-2022/classes": {
           "display_name": "Klasy"
         },
@@ -95,6 +101,27 @@
         "csd-2022/maker-toolkit-overview": {
           "display_name": "Streszczenie"
         },
+        "csd-2022/microbit-circuits-buttons": {
+          "display_name": "Przyciski zewnętrzne na micro:bicie"
+        },
+        "csd-2022/microbit-circuits-leds": {
+          "display_name": "Zewnętrzne diody LED na micro:bicie"
+        },
+        "csd-2022/microbit-display": {
+          "display_name": "Wyświetlacz LED micro:bita"
+        },
+        "csd-2022/microbit-overview": {
+          "display_name": "Przegląd micro:bita"
+        },
+        "csd-2022/microbit-parent": {
+          "display_name": "BBC micro:bit"
+        },
+        "csd-2022/microbit-physical-input": {
+          "display_name": "Wejście fizyczne micro:bita "
+        },
+        "csd-2022/microbit-sensors": {
+          "display_name": "Czujniki micro:bita"
+        },
         "csd-2022/model-cards-in-ai-lab": {
           "display_name": "Karty modeli w AI Lab"
         },
@@ -116,11 +143,20 @@
         "csd-2022/patterns-overview": {
           "display_name": "Streszczenie"
         },
-        "csd-2022/physical-input": {
-          "display_name": "Wejście fizyczne"
-        },
         "csd-2022/playing-notes": {
           "display_name": "Granie z nut"
+        },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Proces rozwiązywania problemów"
+        },
+        "csd-2022/problem-solving-process-design": {
+          "display_name": "Proces rozwiązywania problemów z projektowaniem"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Proces rozwiązywania problemów"
+        },
+        "csd-2022/problem-solving-process-programming": {
+          "display_name": "Proces rozwiązywania problemów z programowaniem"
         },
         "csd-2022/random-numbers": {
           "display_name": "Losowe liczby"

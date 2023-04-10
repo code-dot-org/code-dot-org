@@ -4,22 +4,6 @@
 #   https://www.ruby-lang.org/en/documentation/installation/#ruby-build
 #   https://github.com/rbenv/ruby-build#readme
 
-# Remove old Ruby version packages if present.
-# TODO: remove this (and the old_version attribute) once all existing servers
-# have been updated
-if (old = node['cdo-ruby']['old_version'])
-  include_recipe 'apt'
-  %W[
-    ruby#{old}-dev
-    ruby#{old}
-  ].each do |pkg|
-    apt_package pkg do
-      action :purge
-      notifies :run, 'execute[apt-get autoremove]', :immediately
-    end
-  end
-end
-
 # Arbitrarily use the latest version of ruby build at time this code was
 # written; this probably doesn't matter, but we need to pick something.
 RUBY_BUILD_VERSION = '20221225'.freeze

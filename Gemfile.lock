@@ -1,17 +1,4 @@
 GIT
-  remote: https://github.com/code-dot-org/petit.git
-  revision: bbe411d61d3f78fff59d9fa79d21c14b1c635750
-  specs:
-    petit (0.3.0)
-      activesupport
-      aws-sdk-dynamodb (~> 1)
-      jsonapi-serializers
-      rack-parser
-      rake
-      sinatra
-      unicorn
-
-GIT
   remote: https://github.com/code-dot-org/redis-slave-read.git
   revision: cfe1bd0f5cf65eee5b52560139cab133f22cb880
   ref: cfe1bd0f5cf65eee5b52560139cab133f22cb880
@@ -293,8 +280,6 @@ GEM
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
     bindata (2.4.10)
-    binding_of_caller (0.8.0)
-      debug_inspector (>= 0.0.1)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     brakeman (4.5.0)
@@ -388,10 +373,10 @@ GEM
       nokogiri
       selenium-webdriver
       state_machine
-    factory_bot (4.8.2)
+    factory_bot (4.11.1)
       activesupport (>= 3.0.0)
-    factory_bot_rails (4.8.2)
-      factory_bot (~> 4.8.2)
+    factory_bot_rails (4.11.1)
+      factory_bot (~> 4.11.1)
       railties (>= 3.0.0)
     fakeredis (0.6.0)
       redis (~> 3.2)
@@ -522,8 +507,6 @@ GEM
     json-schema (2.8.1)
       addressable (>= 2.4)
     jsonapi-renderer (0.2.2)
-    jsonapi-serializers (1.0.0)
-      activesupport
     jumphash (0.1.0)
     jwt (2.5.0)
     kaminari (0.17.0)
@@ -673,8 +656,6 @@ GEM
     rack-openid (1.3.1)
       rack (>= 1.1.0)
       ruby-openid (>= 2.1.8)
-    rack-parser (0.7.0)
-      rack
     rack-protection (2.1.0)
       rack
     rack-ssl-enforcer (0.2.9)
@@ -714,7 +695,7 @@ GEM
       thor (>= 0.20.3, < 2.0)
     rainbow (3.0.0)
     raindrops (0.20.0)
-    rake (11.3.0)
+    rake (12.3.3)
     rambling-trie (2.2.1)
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
@@ -800,8 +781,8 @@ GEM
     scenic-mysql_adapter (1.0.1)
       mysql2
       scenic (>= 1.4.0)
-    scss_lint (0.49.0)
-      rake (>= 0.9, < 12)
+    scss_lint (0.55.0)
+      rake (>= 0.9, < 13)
       sass (~> 3.4.20)
     selenium-webdriver (3.141.0)
       childprocess (~> 0.5)
@@ -942,7 +923,6 @@ DEPENDENCIES
   bcrypt (= 3.1.13)
   benchmark-ips
   better_errors (>= 2.7.0)
-  binding_of_caller
   bootstrap-sass (~> 2.3.2.2)
   brakeman
   cancancan (~> 3.2.0)
@@ -961,7 +941,7 @@ DEPENDENCIES
   dotiw
   execjs
   eyes_selenium (= 3.18.4)
-  factory_bot_rails (~> 4.8.2)
+  factory_bot_rails (~> 4.11)
   fakeredis
   firebase
   firebase_token_generator
@@ -1023,7 +1003,6 @@ DEPENDENCIES
   parallel_tests
   paranoia (~> 2.5.0)
   pdf-reader
-  petit!
   pg
   phantomjs (~> 1.9.7.1)
   pry

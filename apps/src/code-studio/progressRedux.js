@@ -278,7 +278,7 @@ function bestResultLevelId(levelIds, progressData) {
   }
   var bestId = attemptedIds[0];
   var bestResult = progressData[bestId];
-  attemptedIds.forEach(function(id) {
+  attemptedIds.forEach(function (id) {
     var result = progressData[id];
     if (result > bestResult) {
       bestId = id;

@@ -228,76 +228,6 @@ Our default style if not mentioned here should be that mentioned in the AirBnb g
 https://github.com/airbnb/javascript/tree/master/react#spacing We're okay with no space in
 self-closing tags, i.e. `<MyComponent/>` and `<MyComponent />` are both valid.
 
-* <a name="js-react-inline-styles"></a>
-Prefer single object for all styles vs. inlined style objects.  Define static styles below the component, and only dynamic styles in the render method.
-```jsx
-// Bad
-var component = (
-  <div style={{color: 'red', display: 'block'}}>
-    <div style={{color: 'blue', fontSize: 10}}>I'm a child</div>
-  </div>
-);
-
-// Good
-var component = (
-  <div style={styles.root}>
-    <div style={styles.child}>I'm a child</div>
-  </div>
-);
-...
-var styles = {
-  root: {
-    color: 'red',
-    display: 'block'
-  },
-  child: {
-    color: 'blue',
-    fontSize: 10
-  }
-};
-
-// Example of defining static and dynamic styles separately
-var Component = function (props) {
-  var styles = _.merge({}, staticStyles, {
-    root: {
-      color: this.props.color
-    }
-  });
-  return (
-    <div style={styles.root}>
-      <div style={styles.child}>I'm a child</div>
-    </div>
-  );
-};
-var staticStyles = {
-  root: {
-    display: 'block'
-  },
-  child: {
-    color: 'blue',
-    fontSize: 10
-  }
-};
-```
-* <a name="js-react-pixel-numbers"></a>
-Prefer numbers vs strings for pixel values
-```jsx
-// Bad
-var styles = {
-  root: {
-    width: '100px',
-    height: '100px'
-  }
-}
-
-// Good
-var styles = {
-  root: {
-    width: 100,
-    height: 100
-  }
-};
-```
 * <a name="js-react-long-components"></a>
 Components with many attributes should have one per line, with 2 spaces of indentation. Child components should have 2 spaces of indentation. Paritally linted by [jsx-first-prop-new-line](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md) and [jsx-indent-props](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md).
 ```jsx
@@ -374,6 +304,82 @@ var selfClosing = (
 );
 ```
 
+### CSS-in-JS
+
+We prefer SCSS modules over CSS-in-JS (see [CSS](#css) for more). If you are working in a file that has
+already-existing CSS-in-JS and cannot migrate the styling over to an SCSS module, please follow these guidelines:
+
+* <a name="js-react-inline-styles"></a>
+  Prefer single object for all styles vs. inlined style objects.  Define static styles below the component, and only dynamic styles in the render method.
+```jsx
+// Bad
+var component = (
+  <div style={{color: 'red', display: 'block'}}>
+    <div style={{color: 'blue', fontSize: 10}}>I'm a child</div>
+  </div>
+);
+
+// Good
+var component = (
+  <div style={styles.root}>
+    <div style={styles.child}>I'm a child</div>
+  </div>
+);
+...
+var styles = {
+  root: {
+    color: 'red',
+    display: 'block'
+  },
+  child: {
+    color: 'blue',
+    fontSize: 10
+  }
+};
+
+// Example of defining static and dynamic styles separately
+var Component = function (props) {
+  var styles = _.merge({}, staticStyles, {
+    root: {
+      color: this.props.color
+    }
+  });
+  return (
+    <div style={styles.root}>
+      <div style={styles.child}>I'm a child</div>
+    </div>
+  );
+};
+var staticStyles = {
+  root: {
+    display: 'block'
+  },
+  child: {
+    color: 'blue',
+    fontSize: 10
+  }
+};
+```
+* <a name="js-react-pixel-numbers"></a>
+  Prefer numbers vs strings for pixel values
+```jsx
+// Bad
+var styles = {
+  root: {
+    width: '100px',
+    height: '100px'
+  }
+}
+
+// Good
+var styles = {
+  root: {
+    width: 100,
+    height: 100
+  }
+};
+```
+
 ### In /apps
 
 Use lodash and jQuery libraries in `/apps`.
@@ -385,6 +391,8 @@ On the frontend, some lint and style rules are enforced by [Stylelint](https://s
 Some key points:
 - Use SCSS modules over CSS-in-JS. The module file takes the name "my-component.module.scss" and lives in the same directory as the component.
 - Use kebab-case (not camelCase nor snake_case) for separating words in IDs, classes, mixins and filenames. 
+- Use `px` for small values (e.g. less than 4 px) and specific values (e.g. 87px). Use `em` for other values.
+  - To convert between `px` and `em` for our site, use a [Pixel to Em converter](https://www.w3schools.com/tags/ref_pxtoemconversion.asp) with 16 as the default pixel size.
 - Avoid inline styles in markup.
 - Use names that are as short as possible but as long as necessary.
 - Use SCSS helpers for vendor prefixing.

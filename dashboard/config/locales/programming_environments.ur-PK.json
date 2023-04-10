@@ -133,6 +133,11 @@
             "ui_controls": {
               "expressions": {
                 "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "سکڑیں اور بڑھیں"
+                    }
+                  },
                   "palette_params": {
                     "callback": {
                       "type": "فنکشن"

@@ -414,3 +414,41 @@ ku:
               display_name: لیستەکان
             lessonGroup-3:
               display_name: گرێکان
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+        express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+            csf_conditionals:
+              display_name: مەرجیەکان
+            csf_functions:
+              display_name: فرمانەکان
+            csf_variables:
+              display_name: گۆڕاوەکان
+        coursea-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+        courseb-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+        coursec-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+        coursed-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+            csf_conditionals:
+              display_name: مەرجیەکان
+        coursee-2023:
+          lesson_groups:
+            csf_functions:
+              display_name: فرمانەکان
+            csf_nested_loops:
+              display_name: مەرجیەکان

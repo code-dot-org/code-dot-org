@@ -662,7 +662,7 @@ en:
         poemart_events: Poem Art Events
         poemart_imagery: Poem Art Imagery
         poemart_celebration: Poem Art Celebration
-        csd_u6_variables_part2: Variables - Part 2
+        csd_u6_variables_part2: Variables - The Counter Pattern
         csd_ml_ethics_ai: 'Ethics and AI '
         outbreak_intro: 'Outbreak Simulation: Introduction'
         outbreak_events: 'Outbreak Simulator: Events'
@@ -765,6 +765,11 @@ en:
         enter_your_own_poem: Enter Your Own Poem
         csa-example-solution-1: 'Live Coding an Example Solution '
         csd_sprite_properties: Sprite Properties
+        csa-pl-documentation: Documentation in Java Lab
+        csc-starquilts-intro: 'CSC: Star Quilts'
+        csc-mapmakers-intro: "CSC: Mapmakers\t"
+        csa-pl-vocab-pm: Project Management Vocabulary
+        csc-ecosystems-intro: Ecosystems Intro
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

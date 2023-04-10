@@ -554,6 +554,7 @@ uz:
         csd_u6_input_output: Input and Output
         csp_applab_parameters: Funksiyalar (parameterlari bilan)
         CS_Changing_Everything: Kompyuter fanlari hamma narsani o‘zgartirmoqda
+        csd_sprite_properties: Sprait hususiyatlari
     callout:
       text:
         drag_blocks: '"move" blokini olib boshqa blok pastiga biriktiring.'

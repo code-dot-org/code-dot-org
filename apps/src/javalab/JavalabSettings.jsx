@@ -13,7 +13,7 @@ import {
   decreaseEditorFontSize,
   increaseEditorFontSize,
   setDisplayTheme
-} from './javalabRedux';
+} from './redux/viewRedux';
 import CloseOnEscape from './components/CloseOnEscape';
 
 /**
@@ -163,10 +163,10 @@ export class UnconnectedJavalabSettings extends Component {
 
 export default connect(
   state => ({
-    displayTheme: state.javalab.displayTheme,
-    canIncreaseFontSize: state.javalab.canIncreaseFontSize,
-    canDecreaseFontSize: state.javalab.canDecreaseFontSize,
-    editorFontSize: state.javalab.editorFontSize
+    displayTheme: state.javalabView.displayTheme,
+    canIncreaseFontSize: state.javalabView.canIncreaseFontSize,
+    canDecreaseFontSize: state.javalabView.canDecreaseFontSize,
+    editorFontSize: state.javalabView.editorFontSize
   }),
   dispatch => ({
     setDisplayTheme: displayTheme => dispatch(setDisplayTheme(displayTheme)),

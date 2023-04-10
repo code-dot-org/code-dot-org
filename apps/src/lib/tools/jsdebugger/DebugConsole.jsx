@@ -187,9 +187,10 @@ export default connect(
                 ? `(${input})`
                 : input
             );
-            result = this.props.jsInterpreter.interpreter.marshalInterpreterToNative(
-              result
-            );
+            result =
+              this.props.jsInterpreter.interpreter.marshalInterpreterToNative(
+                result
+              );
             this.appendLog({
               output: result,
               undefinedInput: input === 'undefined' ? true : false

@@ -181,13 +181,8 @@ class AnimationListItem extends React.Component {
   };
 
   render() {
-    const {
-      allAnimationsSingleFrame,
-      isSelected,
-      isSpriteLab,
-      labType,
-      style
-    } = this.props;
+    const {allAnimationsSingleFrame, isSelected, isSpriteLab, labType, style} =
+      this.props;
     const animationProps = Object.assign(
       {},
       this.getAnimationProps(this.props),

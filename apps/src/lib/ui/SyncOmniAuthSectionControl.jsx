@@ -47,13 +47,8 @@ class SyncOmniAuthSectionControl extends React.Component {
   };
 
   onClick = () => {
-    const {
-      sectionId,
-      sectionCode,
-      sectionName,
-      updateRoster,
-      sectionProvider
-    } = this.props;
+    const {sectionId, sectionCode, sectionName, updateRoster, sectionProvider} =
+      this.props;
     const {buttonState} = this.state;
 
     firehoseClient.putRecord(

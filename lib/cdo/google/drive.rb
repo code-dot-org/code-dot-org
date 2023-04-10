@@ -132,9 +132,7 @@ module Google
       document.acl
     end
 
-    private
-
-    def path_to_title_array(path)
+    private def path_to_title_array(path)
       titles = path.split(::File::SEPARATOR).map {|x| x == '' ? ::File::SEPARATOR : x}
       titles.unshift 'Pegasus'
       titles

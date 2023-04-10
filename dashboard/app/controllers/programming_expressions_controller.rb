@@ -135,9 +135,7 @@ class ProgrammingExpressionsController < ApplicationController
     return redirect_to(programming_environment_programming_expression_path(@programming_expression.programming_environment.name, @programming_expression.key))
   end
 
-  private
-
-  def programming_expression_params
+  private def programming_expression_params
     transformed_params = params.transform_keys(&:underscore)
     transformed_params = transformed_params.permit(
       :name,
@@ -157,7 +155,7 @@ class ProgrammingExpressionsController < ApplicationController
     transformed_params
   end
 
-  def set_expression_by_keys
+  private def set_expression_by_keys
     @programming_expression = ProgrammingExpression.get_from_cache(params[:programming_environment_name], params[:programming_expression_key])
   end
 end

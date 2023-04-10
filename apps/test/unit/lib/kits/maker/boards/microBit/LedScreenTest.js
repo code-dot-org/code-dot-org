@@ -1,12 +1,12 @@
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {MicrobitStubBoard} from '../makeStubBoard';
+import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import LedScreen from '@cdo/apps/lib/kits/maker/boards/microBit/LedScreen';
 
-describe('LedScreen', function() {
+describe('LedScreen', function () {
   describe('on() and off()', () => {
     let led;
-    let boardClient = new MicrobitStubBoard();
+    let boardClient = new MBFirmataClientStub();
     let displaySpy;
     let displayClearSpy;
 
@@ -41,7 +41,7 @@ describe('LedScreen', function() {
 
   describe('toggle()', () => {
     let led;
-    let boardClient = new MicrobitStubBoard();
+    let boardClient = new MBFirmataClientStub();
     let displaySpy;
 
     before(() => {
@@ -79,7 +79,7 @@ describe('LedScreen', function() {
 
   describe('display()', () => {
     let led;
-    let boardClient = new MicrobitStubBoard();
+    let boardClient = new MBFirmataClientStub();
     let displaySpy;
 
     before(() => {
@@ -108,7 +108,7 @@ describe('LedScreen', function() {
 
   describe('scrollString() and scrollNumber()', () => {
     let led;
-    let boardClient = new MicrobitStubBoard();
+    let boardClient = new MBFirmataClientStub();
     let scrollStringSpy;
     let scrollNumSpy;
 

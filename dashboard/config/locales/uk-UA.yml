@@ -1330,6 +1330,11 @@ uk:
         розпочати заявку, перегляньте <a href="%{url}">Огляд програми професійного
         навчання</a>.
   courses_category: Всі курси
+  course_offering:
+    headers:
+      minecraft: Майнкрафт
+      sports: Спорт
+      csf: Основи інформатики
   cookie_banner:
     more_information: Переглянути політику конфіденційності в Code.org.
     accept: Погоджуюся

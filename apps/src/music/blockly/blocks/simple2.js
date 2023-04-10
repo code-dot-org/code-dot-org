@@ -129,9 +129,7 @@ export const triggeredAtSimple2 = {
       };
       var __effects = {};
       ProgramSequencer.playSequentialWithMeasure(
-        Math.ceil(
-          MusicPlayer.getCurrentPlayheadPosition()
-        )
+        Math.ceil(startPosition)
       );
       RandomSkipManager.init();
     `
@@ -158,7 +156,8 @@ export const playSoundAtCurrentLocationSimple2 = {
         null,
         __currentFunction,
         RandomSkipManager.getSkipContext(),
-        __effects
+        __effects,
+        "${block.id}"
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         MusicLibrary.getLengthForId(
@@ -189,7 +188,8 @@ export const playPatternAtCurrentLocationSimple2 = {
         null,
         __currentFunction,
         RandomSkipManager.getSkipContext(),
-        __effects
+        __effects,
+        "${block.id}"
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         ${DEFAULT_PATTERN_LENGTH}
@@ -218,7 +218,8 @@ export const playChordAtCurrentLocationSimple2 = {
         null,
         __currentFunction,
         RandomSkipManager.getSkipContext(),
-        __effects
+        __effects,
+        "${block.id}"
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         ${DEFAULT_CHORD_LENGTH}
@@ -263,7 +264,11 @@ export const setEffectAtCurrentLocationSimple2 = {
       {
         type: 'field_dropdown',
         name: FIELD_EFFECTS_VALUE,
-        options: [['normal', ''], ['medium', 'medium'], ['low', 'low']]
+        options: [
+          ['normal', ''],
+          ['medium', 'medium'],
+          ['low', 'low']
+        ]
       }
     ],
     inputsInline: true,

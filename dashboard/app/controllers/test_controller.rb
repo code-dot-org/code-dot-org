@@ -236,7 +236,7 @@ class TestController < ApplicationController
 
   def create_teacher_application
     return unless (user = current_user)
-    regional_partner = RegionalPartner.create!(name: "regional-partner#{Time.now.to_i}-#{rand(1_000_000)}")
+    regional_partner = RegionalPartner.create!(name: "regional-partner#{Time.now.to_i}-#{rand(1_000_000)}", is_active: true)
 
     RegionalPartnerProgramManager.create!(program_manager_id: user.id, regional_partner_id: regional_partner.id)
 

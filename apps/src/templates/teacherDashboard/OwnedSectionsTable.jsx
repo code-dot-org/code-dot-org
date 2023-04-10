@@ -34,7 +34,7 @@ const participantNames = {
 };
 
 // Cell formatters for sortable OwnedSectionsTable.
-export const sectionLinkFormatter = function(name, {rowData}) {
+export const sectionLinkFormatter = function (name, {rowData}) {
   return (
     <a style={tableLayoutStyles.link} href={teacherDashboardUrl(rowData.id)}>
       {rowData.name}
@@ -42,7 +42,7 @@ export const sectionLinkFormatter = function(name, {rowData}) {
   );
 };
 
-export const courseLinkFormatter = function(course, {rowData}) {
+export const courseLinkFormatter = function (course, {rowData}) {
   const {assignmentNames, assignmentPaths} = rowData;
   return (
     <div>
@@ -79,7 +79,7 @@ export const courseLinkFormatter = function(course, {rowData}) {
   );
 };
 
-export const loginInfoFormatter = function(loginType, {rowData}) {
+export const loginInfoFormatter = function (loginType, {rowData}) {
   let sectionCode = '';
 
   // For managed logins, just show the provider name rather than the login code.
@@ -100,7 +100,7 @@ export const loginInfoFormatter = function(loginType, {rowData}) {
   );
 };
 
-export const studentsFormatter = function(studentCount, {rowData}) {
+export const studentsFormatter = function (studentCount, {rowData}) {
   const manageStudentsUrl = teacherDashboardUrl(rowData.id, '/manage_students');
   const studentHtml =
     rowData.studentCount <= 0 ? (
@@ -125,7 +125,7 @@ export const studentsFormatter = function(studentCount, {rowData}) {
 };
 
 //Displays nothing for hidden column
-const hiddenFormatter = function(id) {
+const hiddenFormatter = function (id) {
   return null;
 };
 
@@ -166,7 +166,7 @@ class OwnedSectionsTable extends Component {
     const gradeCol = COLUMNS.GRADE.toString();
     if (this.state.sortingColumns[gradeCol] && !this.props.isPlSections) {
       const mult = directionArray[0] === 'asc' ? 1 : -1;
-      return sortBy(data, function(obj) {
+      return sortBy(data, function (obj) {
         return (
           mult *
           StudentGradeLevels.concat(null).indexOf(

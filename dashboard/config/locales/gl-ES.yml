@@ -801,6 +801,9 @@ gl:
       email_opt_in:
         opt_in_yes: Si
         opt_in_no: Non
+  course_offering:
+    headers:
+      minecraft: Minecraft
   cookie_banner:
     accept: Acepto
   page_not_found_title: Páxina non atopada

@@ -3,13 +3,23 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Consider real world implications
+# Introduction to Debugging
 
-##### In the next section of this professional learning module, you will be introduced to AI and ethics with a focus on how students will consider the real world impacts of training data bias. 
+##### In the next section of this professional learning module, you will be introduced to debugging. 
+
+
+##### **Bug** - Part of a program that does not work correctly.
+
+##### **Debugging** - Finding and fixing problems in an algorithm or program.
+
+##### **Persistence** - Not giving up.
+* ##### Persistence works best when you try things many different ways, many different times.
+
 
 ## You will:
 
-* ##### Consider real-world implications of AI and machine learning.
+* ##### Practice debugging with CS Connections lessons.
+* ##### Review suggestions for implementing debugging.
 
 ### **Suggested time:** 20 minutes
 

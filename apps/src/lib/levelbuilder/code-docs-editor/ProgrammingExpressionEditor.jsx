@@ -64,10 +64,8 @@ export default function ProgrammingExpressionEditor({
   environmentCategories,
   videoOptions
 }) {
-  const [
-    programmingExpression,
-    setProgrammingExpressionProperty
-  ] = useProgrammingExpression(initialProgrammingExpression);
+  const [programmingExpression, setProgrammingExpressionProperty] =
+    useProgrammingExpression(initialProgrammingExpression);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
@@ -89,6 +87,8 @@ export default function ProgrammingExpressionEditor({
         setIsSaving(false);
         if (response.ok) {
           if (shouldCloseAfterSave) {
+            // TODO: Add prop types for this field
+            // eslint-disable-next-line react/prop-types
             navigateToHref(initialProgrammingExpression.showPath);
           } else {
             setLastUpdated(Date.now());
@@ -277,6 +277,8 @@ export default function ProgrammingExpressionEditor({
         isSaving={isSaving}
         lastSaved={lastUpdated}
         error={error}
+        // TODO: define initialProgrammingExpression.showPath in prop types
+        // eslint-disable-next-line react/prop-types
         handleView={() => navigateToHref(initialProgrammingExpression.showPath)}
       />
     </div>

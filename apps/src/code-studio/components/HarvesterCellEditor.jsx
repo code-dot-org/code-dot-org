@@ -19,7 +19,7 @@ export default class PlanterCellEditor extends CellEditor {
         {super.renderFields(values)}
 
         <label htmlFor="possibleFeatures">Possible Features:</label>
-        {Object.keys(HarvesterCell.FeatureType).map(function(type) {
+        {Object.keys(HarvesterCell.FeatureType).map(function (type) {
           var value = HarvesterCell.FeatureType[type];
           return (
             <label className="checkbox" key={type}>
