@@ -111,8 +111,7 @@ const SITES_CONFIG = {
   }
 };
 
-const ENTRY_POINT_FILE_PATH_PATTERN =
-  /^\.\/src\/sites\/([\w.]+)\/pages\/(.*)\.jsx?$/;
+const ENTRY_POINT_FILE_PATH_PATTERN = /^\.\/src\/sites\/([\w.]+)\/pages\/(.*)\.jsx?$/;
 
 function findTemplatesForSite(siteConfig) {
   const findArgs = siteConfig.templateExtensions
@@ -312,7 +311,7 @@ function checkEntryPoint(entryKey, entryPointPath, stats, options) {
  *   a promise that resolves to a statsu object containing the number of
  *   entry points that passed/failed or were silenced.
  */
-module.exports = function (webpackConfig, options = {verbose: false}) {
+module.exports = function(webpackConfig, options = {verbose: false}) {
   const stats = {
     failed: 0,
     silenced: 0,
