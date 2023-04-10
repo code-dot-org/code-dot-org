@@ -2665,6 +2665,14 @@ fil:
               name: Isang-Dimensiyonal (1D) na Pagkakaayos
             lesson-3:
               name: For Loops
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Intelektwal na Pag-aari
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Pagsisiyasat
         hello-world-space-2022:
           title: 'Hello World: Puwang'
         hello-world-soccer-2022:
