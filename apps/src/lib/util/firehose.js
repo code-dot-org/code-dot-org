@@ -6,6 +6,11 @@ import {
   tryGetLocalStorage
 } from '@cdo/apps/utils';
 import {getStore} from '@cdo/apps/redux';
+import {
+  getEnvironment,
+  isDevelopmentEnvironment,
+  isTestEnvironment
+} from '../../utils';
 
 /**
  * A barebones client for posting data to an AWS Firehose stream.
@@ -58,50 +63,6 @@ class FirehoseClient {
   }
 
   /**
-   * Returns the current environment.
-   * @return {string} The current environment, e.g., "staging" or "production".
-   */
-  getEnvironment() {
-    const hostname = window.location.hostname;
-    if (hostname.includes('adhoc')) {
-      // As adhoc hostnames may include other keywords, check it first.
-      return 'adhoc';
-    }
-    if (hostname.includes('test')) {
-      return 'test';
-    }
-    if (hostname.includes('levelbuilder')) {
-      return 'levelbuilder';
-    }
-    if (hostname.includes('staging')) {
-      return 'staging';
-    }
-    if (hostname.includes('localhost')) {
-      return 'development';
-    }
-    if (hostname.includes('code.org')) {
-      return 'production';
-    }
-    return 'unknown';
-  }
-
-  /**
-   * Returns whether the environment appears to be the test environment.
-   * @return {boolean} Whether the hostname includes "test".
-   */
-  isTestEnvironment() {
-    return this.getEnvironment() === 'test';
-  }
-
-  /**
-   * Returns whether the environment appears to be a development environment.
-   * @return {boolean} Whether the hostname includes "localhost".
-   */
-  isDevelopmentEnvironment() {
-    return this.getEnvironment() === 'development';
-  }
-
-  /**
    * Returns whether the request should be sent through to AWS Firehose.
    * @param {boolean} alwaysPut An override to default environment behavior.
    * @return {boolean} Whether the request should be sent through to AWS
@@ -111,7 +72,7 @@ class FirehoseClient {
     if (alwaysPut) {
       return true;
     }
-    if (this.isTestEnvironment() || this.isDevelopmentEnvironment()) {
+    if (isTestEnvironment() || isDevelopmentEnvironment()) {
       return false;
     }
     return true;
@@ -170,7 +131,7 @@ class FirehoseClient {
    */
   addCommonValues(data, includeUserId, useProgressScriptId) {
     data['created_at'] = new Date().toISOString();
-    data['environment'] = this.getEnvironment();
+    data['environment'] = getEnvironment();
     data['uuid'] = this.getAnalyticsUuid();
     data['device'] = JSON.stringify(this.getDeviceInfo());
     data['locale'] = this.getLocale();
@@ -325,7 +286,7 @@ class FirehoseClient {
 // info, contact the infrastructure team.
 /* eslint-disable */
 function createNewFirehose(AWS, Firehose) {
-  var _0xr0t13 = function(message) {
+  var _0xr0t13 = function (message) {
     return message.replace(/[a-z]/gi, letter =>
       String.fromCharCode(
         letter.charCodeAt(0) + (letter.toLowerCase() <= 'm' ? 13 : -13)
@@ -342,15 +303,15 @@ function createNewFirehose(AWS, Firehose) {
     '\x75\x73\x2d\x65\x61\x73\x74\x2d\x31',
     '\x63\x6f\x6e\x66\x69\x67'
   ];
-  (function(_0xb54a92, _0x4e682a) {
-    var _0x44f3e8 = function(_0x35c55a) {
+  (function (_0xb54a92, _0x4e682a) {
+    var _0x44f3e8 = function (_0x35c55a) {
       while (--_0x35c55a) {
         _0xb54a92['\x70\x75\x73\x68'](_0xb54a92['\x73\x68\x69\x66\x74']());
       }
     };
     _0x44f3e8(++_0x4e682a);
   })(_0x12ed, 0x127);
-  var _0xd12e = function(_0x2cedd5, _0x518781) {
+  var _0xd12e = function (_0x2cedd5, _0x518781) {
     _0x2cedd5 = _0x2cedd5 - 0x0;
     var _0x4291ea = _0x12ed[_0x2cedd5];
     return _0x4291ea;

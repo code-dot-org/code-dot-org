@@ -1,3 +1,10 @@
+/*
+We have to disable the jsx-no-target-blank here because we rely on the
+referrer to determine the abuse url:
+https://github.com/code-dot-org/code-dot-org/blob/b2efc7ca8331f8261ebd55a326e23f64cc29b5d9/apps/src/sites/studio/pages/report_abuse/report_abuse_form.js#L14
+*/
+
+/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable react/no-danger */
 import $ from 'jquery';
 import _ from 'lodash';

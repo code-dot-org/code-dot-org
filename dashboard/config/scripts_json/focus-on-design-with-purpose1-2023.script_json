@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-24 20:11:09 UTC",
+    "serialized_at": "2023-04-06 04:54:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2841,6 +2841,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd1_2023"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,

@@ -136,6 +136,9 @@ nl:
           description: Alle de level types voor UI testing
           description_short: Alle de level types voor UI testing
           student_description: Alle de level types voor UI testing
+          lessons:
+            lesson-49:
+              name: Muziek
         algebraPD2b:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
@@ -2685,4 +2688,8 @@ nl:
         csd6a-2023:
           lesson_groups:
             lessonGroup-3:
+              display_name: 'Hoofdstuk 2: Hardware Input'
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'

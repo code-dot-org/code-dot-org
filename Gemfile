@@ -78,7 +78,6 @@ group :development, :test do
   gem 'active_record_query_trace'
   gem 'benchmark-ips'
   gem 'better_errors', '>= 2.7.0'
-  gem 'binding_of_caller'
   gem 'brakeman'
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'ruby-prof'
@@ -101,7 +100,7 @@ group :development, :test do
   gem 'rinku'
   gem 'rspec'
   gem 'selenium-webdriver', '3.141.0'
-  gem 'spring'
+  gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
   gem 'webdrivers', '~> 3.0'
 

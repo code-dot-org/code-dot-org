@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2022-01-06T19:59:40.000Z",
-  "level_num": "custom",
-  "user_id": 0,
   "properties": {
     "title": "Reflection: Sampling",
     "placeholder": "Enter your reflection here.",
@@ -18,8 +14,13 @@
     "name_suffix": "2022",
     "encrypted_solution": "owsK1VWqunRMx4DULJvpZi46Y54cNFDM8kyYozNh4oJHIImx18d692LFq8O0\n+FvksiLGDXECGVfRh7GY34iReSZsum6GLZtMaPONVXDruBkfCemZzkB8M9Ao\nASoH6gRTb9pCs28+R1dKRC9Zz7ZMzIF7rOXoI5AEJU+sOz42N23DUAk/5jX5\nJx54wdq8RIZ84RbpoX64Mfb34nMUqAGT4Kna0/Y/IZqW6n6dfXR9QmMwcL+C\nOQgtwR83UR5xiHP6TpwK3q3Xh+lkfm52yNxifMAVRuPj+tz+9i1/OnZKil4S\n+wm4zK5c2Kp9KTvFN97OdoKcvFwnYuwG2BN1lxEpZD7Y93vkNLVFqITXmddt\nikCYi4ldK+8/Yag0t1Lb1aR68FKx2PHDpJoBZyAzQ0bC7xPpbpuujZb9H1p9\nj8D7vKs=\n",
     "encrypted": "false",
-    "optional": "false"
+    "optional": "false",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2022-01-06T19:59:40.000Z",
+  "user_id": 0,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-01-06T19:59:40.729+00:00\",\"changed\":[\"cloned from \\\"U1L9 CFU Sampling_2021\\\"\"],\"cloned_from\":\"U1L9 CFU Sampling_2021\"}]"
