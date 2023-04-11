@@ -1260,6 +1260,19 @@ es-MX:
             '"z"': z
       gamelab_layoutGrid:
         text: diseño de sprites como una cuadrícula
+      gamelab_layoutSprites:
+        text: diseño {GROUP} como un {FORMAT}
+        options:
+          FORMAT:
+            '"border"': orilla
+            '"circle"': círculo
+            '"grid"': cuadrícula
+            '"top"': fila superior
+            '"row"': renglon
+            '"bottom"': fila inferior
+            '"left"': columna izquierda
+            '"column"': columna
+            '"right"': columna derecha
       gamelab_locationAt:
         text: 'ubicación x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1286,6 +1299,18 @@ es-MX:
             '"spiral"': espiral
       gamelab_makeNewSpriteAnon:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': orilla
+            '"circle"': círculo
+            '"grid"': cuadrícula
+            '"top"': fila superior
+            '"row"': renglon
+            '"bottom"': fila inferior
+            '"left"': columna izquierda
+            '"column"': columna
+            '"right"': columna derecha
       gamelab_makeNumSprites:
         text: hacer {NUM} nuevos {ANIMATION_NAME} sprites
       gamelab_makeProjectile:

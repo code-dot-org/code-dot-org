@@ -434,9 +434,7 @@ def distribute_translations(upload_manifests)
       next if external_translations.empty?
 
       # Merge new translations
-      existing_translations = File.exist?(ml_playground_path) ?
-                                parse_file(ml_playground_path).dig(locale, "datasets") || {} :
-                                {}
+      existing_translations = File.exist?(ml_playground_path) ? parse_file(ml_playground_path) || {} : {}
       existing_translations['datasets'] = existing_translations['datasets'] || Hash.new
       existing_translations['datasets'][dataset_id] = external_translations
       sanitize_data_and_write(existing_translations, ml_playground_path)

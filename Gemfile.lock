@@ -280,8 +280,6 @@ GEM
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
     bindata (2.4.10)
-    binding_of_caller (0.8.0)
-      debug_inspector (>= 0.0.1)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     brakeman (4.5.0)
@@ -803,8 +801,7 @@ GEM
       rack (~> 2.2)
       rack-protection (= 2.1.0)
       tilt (~> 2.0)
-    spring (2.0.1)
-      activesupport (>= 4.2)
+    spring (3.1.1)
     spring-commands-testunit (1.0.1)
       spring (>= 0.9.1)
     sprockets-rails (3.3.0)
@@ -925,7 +922,6 @@ DEPENDENCIES
   bcrypt (= 3.1.13)
   benchmark-ips
   better_errors (>= 2.7.0)
-  binding_of_caller
   bootstrap-sass (~> 2.3.2.2)
   brakeman
   cancancan (~> 3.2.0)
@@ -1047,7 +1043,7 @@ DEPENDENCIES
   shotgun
   sinatra (= 2.1.0)
   sort_alphabetical!
-  spring
+  spring (~> 3.1.1)
   spring-commands-testunit
   sprockets!
   sprockets-rails (= 3.3.0)

@@ -862,6 +862,10 @@ ne:
       email_opt_in:
         opt_in_yes: हो
         opt_in_no: होइन
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      csf: CS आधारभूत
   cookie_banner:
     accept: I agree
   copy: प्रतिलिपि गर्नुहोस्

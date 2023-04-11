@@ -409,6 +409,9 @@ bn:
       email_opt_in:
         opt_in_yes: '"হ্যাঁ"'
         opt_in_no: না
+  course_offering:
+    headers:
+      minecraft: মাইনক্র্যাফট
   cookie_banner:
     accept: আমি একমত
   copy: অনুলিপি

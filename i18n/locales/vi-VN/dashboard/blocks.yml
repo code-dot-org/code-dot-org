@@ -1238,6 +1238,19 @@ vi:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: bố trí {GROUP} như là {FORMAT}
+        options:
+          FORMAT:
+            '"border"': đường biên
+            '"circle"': vòng tròn
+            '"grid"': lưới
+            '"top"': hàng trên cùng
+            '"row"': hàng
+            '"bottom"': hàng dưới cùng
+            '"left"': cột trái
+            '"column"': cột
+            '"right"': cột phải
       gamelab_locationAt:
         text: 'vị trí x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1262,6 +1275,18 @@ vi:
             '"rain"': mưa
       gamelab_makeNewSpriteAnon:
         text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': đường biên
+            '"circle"': vòng tròn
+            '"grid"': lưới
+            '"top"': hàng trên cùng
+            '"row"': hàng
+            '"bottom"': hàng dưới cùng
+            '"left"': cột trái
+            '"column"': cột
+            '"right"': cột phải
       gamelab_makeNumSprites:
         text: tạo {NUM} nhân vật {ANIMATION_NAME} mới
       gamelab_makeProjectile:

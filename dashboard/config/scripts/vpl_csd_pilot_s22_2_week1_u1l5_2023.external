@@ -5,14 +5,17 @@ description 'description here'
 markdown <<MARKDOWN
 # Chapter 2: Computers and Problem Solving
 
-##### Chapter 2 of the Problem Solving and Computing unit builds on the problem solving theme from Chapter 1 with a focus on how computing is used to solve problems. 
+<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">Chapter 2 of the Problem Solving and Computing unit builds on the problem solving theme from Chapter 1 with a focus on how computing is used to solve problems. 
+</p></div>
 
 ## Overview of Lessons 4 - 7 
 
 ##### Click the dropdown arrows below to view lesson overviews.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.2em; font-weight: bold;">🔎 Lesson 4: What is a Computer?</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 4: What is a Computer?</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 <img src="https://images.code.org/4c8d73dc89099256e349c647e38881bb-image-1651163631001.20.06 AM.png" alt="Image of computer poster example" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
@@ -34,7 +37,7 @@ In this lesson students develop a preliminary definition of a computer. To begin
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.2em; font-weight: bold;">🔎 Lesson 5: Input and Output</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 5: Input and Output</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:50px;">
     <p>
 <img src="https://images.code.org/fb8dc7679c1156d1d6ff35a2b50ab59b-image-1651163628875.23.14 AM.png" alt="Image of an app" width="200px" style="float:left; margin: 0 0 40px 40px; padding-right: 30px;">
@@ -54,7 +57,7 @@ In this lesson students consider how computers get and give information to the u
 <div style="clear:both"/>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.2em; font-weight: bold;">🔎 Lesson 6: Processing</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 6: Processing</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:65px;">
     <p>
 <img src="https://images.code.org/c60bc7e8dac089d47906ed09d38cad20-image-1651163625821.26.55 AM.png" alt="Image of an app" width="185px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
@@ -75,7 +78,7 @@ This lesson introduces students to four common types of processing: if/then (con
 <div style="clear:both"/>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.2em; font-weight: bold;">🔎 Lesson 7: Storage</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 7: Storage</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:50px;">
     <p>
 <img src="https://images.code.org/65531495e24a8c5eea78d0b231348169-image-1651163758693.27.45 AM.png" alt="Image of an app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">

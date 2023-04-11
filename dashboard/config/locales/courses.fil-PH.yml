@@ -13,6 +13,8 @@ fil:
           assignment_family_title: AP® na mga Prinsipyo ng Computer Science
         mike-test:
           title: Mga Batayan ng Computer Science
+        csd-2023:
+          title: Mga Natuklasan sa Computer Science
     resources:
       curriculum/csd/2020:
         name: Kurikulum

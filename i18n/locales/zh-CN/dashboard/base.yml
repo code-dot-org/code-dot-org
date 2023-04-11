@@ -1131,6 +1131,13 @@ zh-CN:
     no_teacher_email:
       body_markdown: '账号还没有填写电子邮件地址。请访问[帐户设置](%{user_registration})，在完成表单前添加电子邮件地址。'
   courses_category: '完整课程'
+  course_offering:
+    headers:
+      minecraft: '我的世界'
+      hello_world: '你好世界'
+      sports: '运动'
+      csf: '计算机科学基本原理'
+      csc: '计算机科学联系'
   cookie_banner:
     message: '通过继续浏览我们的网站或单击"我同意"，您同意在你的计算机或设备上存储 cookies。'
     more_information: "查看 Code.org 的隐私政策。"

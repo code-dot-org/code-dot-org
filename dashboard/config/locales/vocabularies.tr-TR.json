@@ -380,7 +380,7 @@
         },
         "command/coursed/2022": {
           "word": "Komut",
-          "definition": "Bilgisayar için bir talimat. Bir araya getirilen birçok komut, algoritmaları ve bilgisayar programlarını oluşturur. "
+          "definition": "Bilgisayar için bir talimat.  Bir araya getirilen birçok komut, algoritmaları ve bilgisayar programlarını oluşturur."
         },
         "conditionals/coursed/2022": {
           "word": "Koşullar",
@@ -388,7 +388,7 @@
         },
         "pseudocode/coursed/2022": {
           "word": "pseudocode",
-          "definition": "Algoritmadaki adımların düz bir dil açıklaması"
+          "definition": "Bir algoritmadaki adımların basit bir dil açıklaması"
         },
         "condition/coursed/2022": {
           "word": "Koşul",
@@ -396,11 +396,11 @@
         },
         "while_loop/coursed/2022": {
           "word": "Süresince Döngüsü",
-          "definition": "Bir koşul doğru olduğu sürece tekrarlamaya devam eden bir döngü."
+          "definition": "Bir koşul doğru olduğu sürece tekrar etmeye devam eden bir döngü."
         },
         "until/coursed/2022": {
           "word": "Kadar",
-          "definition": "Sadece bir şeyin gerçek olduğu noktaya kadar bir şey yapmanızı söyleyen bir komut."
+          "definition": "Size bir şeyi, yalnızca bir şey gerçek olana kadar yapmanızı söyleyen bir komut."
         },
         "sprite/coursef/2022": {
           "word": "Hareketli nesne",
@@ -536,7 +536,7 @@
         },
         "while_loop/coursee/2022": {
           "word": "Süresince Döngüsü",
-          "definition": "Bir koşul doğru olduğu sürece tekrarlamaya devam eden bir döngü."
+          "definition": "Bir koşul doğru olduğu sürece tekrar etmeye devam eden bir döngü."
         },
         "copyright/coursee/2022": {
           "word": "Telif Hakkı",
@@ -660,7 +660,7 @@
         },
         "command/express/2022": {
           "word": "Komut",
-          "definition": "Bilgisayar için bir talimat. Bir araya getirilen birçok komut, algoritmaları ve bilgisayar programlarını oluşturur. "
+          "definition": "Bilgisayar için bir talimat.  Bir araya getirilen birçok komut, algoritmaları ve bilgisayar programlarını oluşturur."
         },
         "condition/express/2022": {
           "word": "Koşul",
@@ -672,11 +672,11 @@
         },
         "while_loop/express/2022": {
           "word": "Süresince Döngüsü",
-          "definition": "Bir koşul doğru olduğu sürece tekrarlamaya devam eden bir döngü."
+          "definition": "Bir koşul doğru olduğu sürece tekrar etmeye devam eden bir döngü."
         },
         "until/express/2022": {
           "word": "Kadar",
-          "definition": "Sadece bir şeyin gerçek olduğu noktaya kadar bir şey yapmanızı söyleyen bir komut."
+          "definition": "Size bir şeyi, yalnızca bir şey gerçek olana kadar yapmanızı söyleyen bir komut."
         },
         "function/express/2022": {
           "word": "Fonksiyon",
@@ -1235,7 +1235,7 @@
         },
         "command/coursed/2021": {
           "word": "Komut",
-          "definition": "Bilgisayar için bir talimat. Bir araya getirilen birçok komut, algoritmaları ve bilgisayar programlarını oluşturur. "
+          "definition": "Bilgisayar için bir talimat.  Bir araya getirilen birçok komut, algoritmaları ve bilgisayar programlarını oluşturur."
         },
         "conditionals/coursed/2021": {
           "word": "Koşullar",
@@ -1243,7 +1243,7 @@
         },
         "pseudocode/coursed/2021": {
           "word": "pseudocode",
-          "definition": "Algoritmadaki adımların düz bir dil açıklaması"
+          "definition": "Bir algoritmadaki adımların basit bir dil açıklaması"
         },
         "condition/coursed/2021": {
           "word": "Koşul",
@@ -1251,11 +1251,11 @@
         },
         "while_loop/coursed/2021": {
           "word": "Süresince Döngüsü",
-          "definition": "Bir koşul doğru olduğu sürece tekrarlamaya devam eden bir döngü."
+          "definition": "Bir koşul doğru olduğu sürece tekrar etmeye devam eden bir döngü."
         },
         "until/coursed/2021": {
           "word": "Kadar",
-          "definition": "Sadece bir şeyin gerçek olduğu noktaya kadar bir şey yapmanızı söyleyen bir komut."
+          "definition": "Size bir şeyi, yalnızca bir şey gerçek olana kadar yapmanızı söyleyen bir komut."
         },
         "algorithm/express/2021": {
           "word": "Algoritma",
@@ -1307,7 +1307,7 @@
         },
         "command/express/2021": {
           "word": "Komut",
-          "definition": "Bilgisayar için bir talimat. Bir araya getirilen birçok komut, algoritmaları ve bilgisayar programlarını oluşturur. "
+          "definition": "Bilgisayar için bir talimat.  Bir araya getirilen birçok komut, algoritmaları ve bilgisayar programlarını oluşturur."
         },
         "condition/express/2021": {
           "word": "Koşul",
@@ -1319,11 +1319,11 @@
         },
         "while_loop/express/2021": {
           "word": "Süresince Döngüsü",
-          "definition": "Bir koşul doğru olduğu sürece tekrarlamaya devam eden bir döngü."
+          "definition": "Bir koşul doğru olduğu sürece tekrar etmeye devam eden bir döngü."
         },
         "until/express/2021": {
           "word": "Kadar",
-          "definition": "Sadece bir şeyin gerçek olduğu noktaya kadar bir şey yapmanızı söyleyen bir komut."
+          "definition": "Size bir şeyi, yalnızca bir şey gerçek olana kadar yapmanızı söyleyen bir komut."
         },
         "function/express/2021": {
           "word": "Fonksiyon",
@@ -1451,7 +1451,7 @@
         },
         "while_loop/coursee/2021": {
           "word": "Süresince Döngüsü",
-          "definition": "Bir koşul doğru olduğu sürece tekrarlamaya devam eden bir döngü."
+          "definition": "Bir koşul doğru olduğu sürece tekrar etmeye devam eden bir döngü."
         },
         "define/coursee/2021": {
           "word": "Tanımla",

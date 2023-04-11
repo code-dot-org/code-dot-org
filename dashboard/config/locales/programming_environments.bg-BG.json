@@ -1863,6 +1863,54 @@
                   "return_value": "Булеви"
                 }
               }
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "ledScreen.on": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "ledScreen.scrollString": {
+                  "palette_params": {
+                    "String": {
+                      "type": "Низ"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                }
+              }
             }
           }
         },

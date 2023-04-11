@@ -1420,6 +1420,13 @@ id:
         akun Anda](%{user_registration}) untuk menambahkan alamat email sebelum menyelesaikan
         formulir ini.
   courses_category: Kursus Lengkap
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      hello_world: Halo Dunia
+      sports: Olahraga
+      csf: Dasar dasar CS
+      csc: CS Connections
   cookie_banner:
     message: Dengan melanjutkan penelusuran situs kami atau mengklik "Saya setuju,"
       Anda menyetujui penyimpanan cookies di komputer atau perangkat Anda.
