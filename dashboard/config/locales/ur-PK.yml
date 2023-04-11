@@ -346,6 +346,12 @@ ur:
       email_opt_in:
         opt_in_yes: جی
         opt_in_no: نہيں
+  course_offering:
+    headers:
+      hello_world: ہیلو ورلڈ
+      sports: کھیل کود
+      csf: CS کے بنیادی اصول
+      csc: کمپیوٹر سائنس (CS) کنکشنز
   cookie_banner:
     accept: ma manta ho
   copy: کاپی

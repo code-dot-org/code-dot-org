@@ -1955,3 +1955,7 @@ fi:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Luku 2: Laitteiston syöte'
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Luku 2: Laitteiston syöte'

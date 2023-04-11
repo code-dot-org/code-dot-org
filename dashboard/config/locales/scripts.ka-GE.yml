@@ -182,6 +182,10 @@ ka:
           description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
           description_short: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
           student_description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
+        allthethings:
+          lessons:
+            lesson-49:
+              name: მუსიკა
         algebraPD2b:
           description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
           description_short: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
@@ -3321,3 +3325,31 @@ ka:
             lessonGroup-3:
               display_name: 'თავი 2: აპარატული შეყვანა'
           description_short: შეისწავლეთ პროგრამირება ფიზიკური მოწყობილობების საშუალებით.
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია

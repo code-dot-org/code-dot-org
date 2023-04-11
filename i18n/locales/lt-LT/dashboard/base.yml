@@ -686,6 +686,10 @@ lt:
       email_opt_in:
         opt_in_yes: 'Taip'
         opt_in_no: 'Ne'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      sports: 'Sportas'
   cookie_banner:
     accept: 'Sutinku'
   page_not_found_title: "Puslapis nerastas"

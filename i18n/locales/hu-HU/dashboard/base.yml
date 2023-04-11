@@ -1121,6 +1121,13 @@ hu:
     no_teacher_email:
       body_markdown: 'A fiókodnak nincs e-mail-címe. Kérjük, [látogass el a fiók beállításokhoz](%{user_registration}), és az űrlap kitöltése előtt add meg az e-mail-címed.'
   courses_category: 'Komplett tanfolyamok'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      hello_world: 'Helló világ'
+      sports: 'Sportok'
+      csf: 'A számítógép-tudomány alapjai'
+      csc: 'Kapcsolatok az informatikával'
   cookie_banner:
     message: 'A weboldalunk további böngészésével vagy az Elfogadom gombra kattintással hozzájárulsz a sütik számítógépen vagy más eszközön történő tárolásához.'
     more_information: "Lásd a Code.org adatvédelmi irányelveit."

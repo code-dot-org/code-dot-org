@@ -831,6 +831,10 @@ si:
       email_opt_in:
         opt_in_yes: ඔව්
         opt_in_no: නැහැ
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      csf: පරිගණක විද්‍යාවේ මූලිකාංග
   cookie_banner:
     accept: මම එකඟයි
   page_not_found_title: පිටුව සොයාගත නොහැක

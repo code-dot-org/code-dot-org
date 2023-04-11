@@ -942,6 +942,15 @@ ku:
             '"v"': v
             '"w"': w
             '"z"': z
+      gamelab_layoutSprites:
+        text: "{GROUP} ڕێکبخە وەک {FORMAT}"
+        options:
+          FORMAT:
+            '"border"': چوارچێوە
+            '"circle"': بازنە
+            '"grid"': هێڵدار
+            '"row"': ڕیز
+            '"column"': ستوون
       gamelab_locationAt:
         text: 'شوێنی x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -959,6 +968,14 @@ ku:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: سپرایتێکی {ANIMATION_NAME} نوێ دروست بکە لە {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': چوارچێوە
+            '"circle"': بازنە
+            '"grid"': هێڵدار
+            '"row"': ڕیز
+            '"column"': ستوون
       gamelab_mirrorSprite:
         text: "{SPRITE} ڕوودەکاتە {DIRECTION}"
       gamelab_mouseLocation:

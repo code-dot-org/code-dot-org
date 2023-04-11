@@ -1154,6 +1154,15 @@ mr:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: layout {GROUP} as a {FORMAT}
+        options:
+          FORMAT:
+            '"border"': सीमारेषा
+            '"circle"': वर्तुळ
+            '"grid"': ग्रिड
+            '"row"': ओळ
+            '"column"': स्तंभ
       gamelab_locationAt:
         text: 'स्थान x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1180,6 +1189,14 @@ mr:
             '"spiral"': सर्पिलाकार
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': सीमारेषा
+            '"circle"': वर्तुळ
+            '"grid"': ग्रिड
+            '"row"': ओळ
+            '"column"': स्तंभ
       gamelab_makeNumSprites:
         text: "{NUM} नवीन {ANIMATION_NAME} स्प्राइट्स तयार करा"
       gamelab_makeProjectile:

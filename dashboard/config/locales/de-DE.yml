@@ -1580,6 +1580,13 @@ de:
         [Kontoeinstellungen](%{user_registration}), um Ihre E-Mail-Adresse hinzuzufügen,
         bevor Sie dieses Formular ausfüllen.
   courses_category: Vollständige Kurse
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      hello_world: Hallo Welt
+      sports: Sport
+      csf: Einführung in Informatik und Programmieren
+      csc: CS Connections
   cookie_banner:
     message: Indem Sie unsere Website weiter benutzen oder auf "Ich stimme zu" klicken,
       stimmen Sie der Speicherung von Cookies auf Ihrem Computer oder Gerät zu.
