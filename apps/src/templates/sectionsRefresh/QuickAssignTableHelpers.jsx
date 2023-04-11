@@ -43,7 +43,18 @@ function renderOfferings(
   updateCourse,
   setSelectedCourseOffering
 ) {
+  // useEffect(() => {
+  //   const courseValues = Object.values(courseData);
+
+  //   courseValues.map(course =>
+  //     sectionCourse?.courseOfferingId === course.id
+  //       ? setSelectedCourseOffering(course)
+  //       : null
+  //   );
+  // }, []);
+
   const courseValues = Object.values(courseData);
+
   return courseValues.map(course => (
     <div className={moduleStyles.flexDisplay} key={course.display_name}>
       <input
@@ -52,7 +63,7 @@ function renderOfferings(
         type="radio"
         name={course.display_name}
         value={course.display_name}
-        checked={sectionCourse?.displayName === course.display_name}
+        checked={sectionCourse?.courseOfferingId === course.id}
         onChange={() => {
           updateSectionCourse(updateCourse, course);
           setSelectedCourseOffering(course);

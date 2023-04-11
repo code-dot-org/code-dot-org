@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import moduleStyles from './sections-refresh.module.scss';
 import i18n from '@cdo/locale';
@@ -19,6 +19,23 @@ export default function QuickAssignTable({
 }) {
   // Key is type of curriculum e.g. 'Course' or 'Module', which is the singular
   // version of the title we want for the column
+
+  useEffect(() => {
+    const startingData =
+      courseOfferings[marketingAudience][curriculumTypes.course];
+    const headers = Object.keys(startingData);
+
+    headers.map(header => {
+      const courseDataByHeaderValues = Object.values(startingData[header]);
+
+      courseDataByHeaderValues.map(course =>
+        sectionCourse?.courseOfferingId === course.id
+          ? setSelectedCourseOffering(course)
+          : null
+      );
+    });
+  }, []);
+
   const renderTable = (key, title) => {
     return (
       <table className={moduleStyles.table}>
