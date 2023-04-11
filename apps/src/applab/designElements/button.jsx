@@ -202,7 +202,7 @@ export default {
   EventTab: ButtonEvents,
   themeValues: themeValues.button,
 
-  create: function() {
+  create: function () {
     const element = document.createElement('button');
     element.appendChild(document.createTextNode('Button'));
     element.style.padding = '0px';
@@ -226,7 +226,7 @@ export default {
 
     return element;
   },
-  onDeserialize: function(element, updateProperty) {
+  onDeserialize: function (element, updateProperty) {
     const url = element.getAttribute('data-canonical-image-url');
     if (url) {
       updateProperty(element, 'image', url);

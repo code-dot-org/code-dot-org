@@ -7,7 +7,7 @@ var levelBase = require('../level_base');
 var msg = require('./locale');
 
 //TODO: Fix hacky level-number-dependent toolbox.
-var toolbox = function(page, level) {
+var toolbox = function (page, level) {
   var template;
   // Must use switch, since browserify only works on requires with literals.
   switch (page) {
@@ -25,7 +25,7 @@ var toolbox = function(page, level) {
 };
 
 //TODO: Fix hacky level-number-dependent startBlocks.
-var startBlocks = function(page, level) {
+var startBlocks = function (page, level) {
   return require('./karelStartBlocks.xml.ejs')({
     page: page,
     level: level
@@ -34,7 +34,7 @@ var startBlocks = function(page, level) {
 
 // This tests for and creates the "move_forward" block.
 var MOVE_FORWARD = {
-  test: function(block) {
+  test: function (block) {
     return block.type === 'maze_moveForward';
   },
   type: 'maze_moveForward'
@@ -48,7 +48,7 @@ var FILL = {test: 'fill', type: 'maze_fill'};
 
 // This tests for and creates the "controls_repeat" block.
 var REPEAT = {
-  test: function(block) {
+  test: function (block) {
     return block.type === 'controls_repeat';
   },
   type: 'controls_repeat',
@@ -57,7 +57,7 @@ var REPEAT = {
 
 // This tests for and creates the "controls_repeat_ext" block.
 var REPEAT_EXT = {
-  test: function(block) {
+  test: function (block) {
     return block.type === 'controls_repeat_ext';
   },
   type: 'controls_repeat_ext'
@@ -65,7 +65,7 @@ var REPEAT_EXT = {
 
 // This tests for and creates the "controls_for" block.
 var CONTROLS_FOR = {
-  test: function(block) {
+  test: function (block) {
     return block.type === 'controls_for';
   },
   type: 'controls_for'
@@ -73,7 +73,7 @@ var CONTROLS_FOR = {
 
 // This tests for and creates the "variables_get" block.
 var VARIABLES_GET = {
-  test: function(block) {
+  test: function (block) {
     return block.type === 'variables_get';
   },
   type: 'variables_get',
@@ -139,9 +139,9 @@ var IF_OPT_HOLE_PRESENT = {
 var IF_ELSE = {test: '} else {', type: 'karel_ifElse'};
 
 // This tests for and creates the "fill num" block.
-var fill = function(num) {
+var fill = function (num) {
   return {
-    test: function(block) {
+    test: function (block) {
       return block.getFieldValue('NAME') === msg.fillN({shovelfuls: num});
     },
     type: 'procedures_callnoreturn',
@@ -150,9 +150,9 @@ var fill = function(num) {
 };
 
 // This tests for and creates the "remove num" blcok.
-var remove = function(num) {
+var remove = function (num) {
   return {
-    test: function(block) {
+    test: function (block) {
       return block.getFieldValue('NAME') === msg.removeN({shovelfuls: num});
     },
     type: 'procedures_callnoreturn',
@@ -162,7 +162,7 @@ var remove = function(num) {
 
 // This tests for and creates the "avoid the cow and remove 1" block.
 var AVOID_OBSTACLE_AND_REMOVE = {
-  test: function(block) {
+  test: function (block) {
     return block.getFieldValue('NAME') === msg.avoidCowAndRemove();
   },
   type: 'procedures_callnoreturn',
@@ -171,7 +171,7 @@ var AVOID_OBSTACLE_AND_REMOVE = {
 
 // This tests for and creates the "remove piles" block.
 var REMOVE_PILES = {
-  test: function(block) {
+  test: function (block) {
     return block.getFieldValue('NAME') === msg.removeStack({shovelfuls: 4});
   },
   type: 'procedures_callnoreturn',
@@ -180,7 +180,7 @@ var REMOVE_PILES = {
 
 // This tests for and creates the "fill holes" block.
 var FILL_HOLES = {
-  test: function(block) {
+  test: function (block) {
     return block.getFieldValue('NAME') === msg.fillStack({shovelfuls: 2});
   },
   type: 'procedures_callnoreturn',

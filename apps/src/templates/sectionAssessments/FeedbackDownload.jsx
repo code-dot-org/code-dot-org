@@ -71,12 +71,8 @@ class FeedbackDownload extends Component {
   }
 
   render() {
-    const {
-      sectionName,
-      exportableFeedbackData,
-      scriptName,
-      onClickDownload
-    } = this.props;
+    const {sectionName, exportableFeedbackData, scriptName, onClickDownload} =
+      this.props;
 
     // These allow the CSVLink to be styled as a button
     let className = classNames(

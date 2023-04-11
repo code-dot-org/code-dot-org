@@ -31,8 +31,8 @@ const TimelineSimple2Events = ({
   // that we recalculate unique sounds, even when there are no entries to
   // render.
   const currentUniqueSounds = [];
-  for (const songEvent of soundEvents) {
-    const id = songEvent.functionContext.name + ' ' + songEvent.id;
+  for (const soundEvent of soundEvents) {
+    const id = soundEvent.functionContext.name + ' ' + soundEvent.id;
     if (currentUniqueSounds.indexOf(id) === -1) {
       currentUniqueSounds.push(id);
     }

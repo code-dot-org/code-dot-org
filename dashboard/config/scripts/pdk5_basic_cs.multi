@@ -6,3 +6,5 @@ wrong 'a part inside of a computer'
 wrong 'a week-long course to learn about computers'
 right 'a set of instructions you give a computer to execute'
 wrong 'a secret password'
+
+allow_multiple_attempts true

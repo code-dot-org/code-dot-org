@@ -12,9 +12,7 @@ export default class SignUpPanel extends React.Component {
   };
 
   render() {
-    const signupUrl = `${location.origin}/pd/workshops/${
-      this.props.workshopId
-    }/enroll`;
+    const signupUrl = `${location.origin}/pd/workshops/${this.props.workshopId}/enroll`;
 
     return (
       <WorkshopPanel header="Your workshop sign-up link:">

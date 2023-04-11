@@ -1,8 +1,17 @@
 name 'CSD U5 MC Q6_2023'
-title 'Question 1'
 type 'multi'
-question 'Placeholder Question Text'
-right 'Placeholder Answer'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
+question 'Using this ASCII system, what does the message represent?'
+wrong 'HELLO'
+right 'YES'
+wrong 'CSROCKS'
+wrong 'NO'
+wrong 'MAYBE'
+markdown <<MARKDOWN
+| ASCII system      | Message |
+| ----------- | ----------- |
+| <img src="https://images.code.org/74aa8a0e290811d71543e45d7b609267-CSDunit5ASCII.png" style="width:600px">      | <img src="https://images.code.org/8d596117931879a4aabc576334c10dc2-CSDunit5ASCII2.png" style="width:200px"> |
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 3**
+MARKDOWN

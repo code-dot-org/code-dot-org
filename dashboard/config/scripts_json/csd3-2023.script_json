@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-24 09:47:30 UTC",
+    "serialized_at": "2023-04-06 23:37:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2481,7 +2481,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Pair programming is a great way to increase student confidence and foster the practices of collaboration and communication. You can read more about Pair Programming in the **[CSD Curriculum Guide](https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view)**\n\n"
+            "markdown": "Pair programming is a great way to increase student confidence and foster the practices of collaboration and communication. You can read more about Pair Programming in the **[CSD Guide to Teaching and Learning Strategies](https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view)**\n\n"
           }
         ]
       },
@@ -16097,7 +16097,7 @@
     },
     {
       "name": "All Code",
-      "url": "/s/csd3-2023/code",
+      "url": "/s/csd7-2023/code",
       "key": "all_code",
       "properties": {
         "is_rollup": true
@@ -16108,7 +16108,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csd3-2023/resources",
+      "url": "/s/csd1-2023/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -16119,7 +16119,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csd3-2023/standards",
+      "url": "/s/csd1-2023/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -16130,7 +16130,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csd3-2023/vocab",
+      "url": "/s/csd1-2023/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -18206,9 +18206,6 @@
         "resource.key": "robot_faces"
       }
     }
-
-  ],
-  "lessons_resources": [
 
   ],
   "scripts_resources": [

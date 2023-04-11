@@ -6,6 +6,5 @@ import {PlaybackEvent} from './PlaybackEvent';
  */
 export interface SoundEvent extends PlaybackEvent {
   type: 'sound';
-  id: string;
   soundType: SoundType;
 }

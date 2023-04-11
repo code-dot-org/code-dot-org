@@ -52,7 +52,7 @@ window.dashboard.widget = {
 };
 
 // On load (note - widget-specific setup may happen before this!)
-$(document).ready(function() {
+$(document).ready(function () {
   $('#bubble').click(showInstructionsDialog);
 
   reportTeacherReviewingStudentNonLabLevel();

@@ -5,7 +5,14 @@ description 'description here'
 markdown <<MARKDOWN
 # Introducing Sprite Lab
 
-##### Sprite Lab is one learning tool students will use throughout CS Connections.
+##### Sprite Lab is one learning tool students will use with
+
+* ##### Coding with Poetry
+* ##### Coding Interactive Maps
+* ##### Coding Time Capsules
+* ##### Modeling Animal Adaptations
+
+##### ...and more!
 
 ## You will:
 

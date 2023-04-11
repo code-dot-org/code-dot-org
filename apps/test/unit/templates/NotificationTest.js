@@ -13,8 +13,7 @@ const announcement = {
   buttonText: 'Go Beyond',
   description:
     "Go Beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels - and it's free. No experience required - find the next step that's right for your classroom.",
-  link:
-    'http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the'
+  link: 'http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the'
 };
 
 const announcementNoLink = {
@@ -306,17 +305,9 @@ describe('Notification', () => {
       />
     );
     expect(wrapper.find('FontAwesome').length).to.equal(2);
-    expect(
-      wrapper
-        .find('FontAwesome')
-        .at(0)
-        .props().icon
-    ).to.equal('info-circle');
-    expect(
-      wrapper
-        .find('FontAwesome')
-        .at(1)
-        .props().icon
-    ).to.equal('times');
+    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal(
+      'info-circle'
+    );
+    expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal('times');
   });
 });

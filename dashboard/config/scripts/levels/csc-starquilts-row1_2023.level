@@ -46,7 +46,7 @@
     "enable_download_image": "false",
     "long_instructions": "**Make the first row of one point of your star.**\r\n\r\nThere will be 5 rows in all to complete one point of your 8-point star. \r\n<div style=\"float:right;padding:20px\">\r\n<img src=\"https://images.code.org/ba5c12d7a9b393722dc4f38a17cc6cd1-image-1649476785659.59.38 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\r\n<p style=\"text-align: center\">\r\nexample\r\n</p>\r\n</div>\r\n\r\n- Drag a new `comment` block to start Row 1\r\n- Drag a `draw shape` block and snap it under your `comment` block ",
     "project_template_level_name": "csc-starquilts-template_2023",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your code should look like this: \\n<xml><block type=\\\"when_run\\\" deletable=\\\"false\\\" movable=\\\"false\\\" id=\\\"when_run\\\"><next><block type=\\\"comment\\\"><field name=\\\"TEXT\\\">This sets the length of the rhombus to 35</field><next><block type=\\\"variables_set\\\"><field name=\\\"VAR\\\">length</field><value name=\\\"VALUE\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">35</field></block></value><next><block type=\\\"comment\\\"><field name=\\\"TEXT\\\">Row 1</field><next><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusRed45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value></block></next></block></next></block></next></block></next></block></xml>\",\"hint_id\":\"hing1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/847332db1023482a1bb9b6c20b54d7f9/csc-starquilts-row1.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your code should look like this: \\n<xml><block type=\\\"when_run\\\" deletable=\\\"false\\\" movable=\\\"false\\\" id=\\\"when_run\\\"><next><block type=\\\"comment\\\"><field name=\\\"TEXT\\\">This sets the length of the rhombus to 35</field><next><block type=\\\"variables_set\\\"><field name=\\\"VAR\\\">length</field><value name=\\\"VALUE\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">35</field></block></value><next><block type=\\\"comment\\\"><field name=\\\"TEXT\\\">Row 1</field><next><block type=\\\"rhombus_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusRed45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value></block></next></block></next></block></next></block></next></block></xml>\",\"hint_id\":\"hing1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/847332db1023482a1bb9b6c20b54d7f9/csc-starquilts-row1.mp3\"}]",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/9341f3a12ef4c910c25176522a7c5a75=levelbuilder/193482.png",
     "name_suffix": "_2023",
     "preload_asset_list": null
@@ -71,7 +71,7 @@
         <block type="comment">
           <field name="TEXT">Row 1</field>
         </block>
-        <block type="turtle_shape_with_side_length">
+        <block type="rhombus_shape_with_side_length">
           <field name="VALUE">smallRhombusMaroon45</field>
           <value name="SIZE">
             <block type="variables_get">
@@ -99,7 +99,7 @@
                     <block type="comment">
                       <field name="TEXT">Row 1</field>
                       <next>
-                        <block type="turtle_shape_with_side_length">
+                        <block type="rhombus_shape_with_side_length">
                           <field name="VALUE">smallRhombusRed45</field>
                           <value name="SIZE">
                             <block type="variables_get">

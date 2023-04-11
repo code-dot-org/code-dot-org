@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useCallback} from 'react';
+import classNames from 'classnames';
 import {getNoteName, isBlackKey} from '../utils/Notes';
 import MusicLibrary from '../player/MusicLibrary';
 import {ChordEventValue, PlayStyle} from '../player/interfaces/ChordEvent';
@@ -6,7 +7,6 @@ import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
 import PreviewControls from './PreviewControls';
 
 const moduleStyles = require('./chordPanel.module.scss').default;
-const classNames = require('classnames');
 
 const NUM_OCTAVES = 3;
 const START_OCTAVE = 4;

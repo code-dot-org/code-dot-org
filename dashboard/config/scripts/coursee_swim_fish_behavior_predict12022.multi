@@ -5,3 +5,5 @@ wrong 'The tumbleweed will float to the top of the screen.', feedback: 'Incorrec
 right 'The tumbleweed will begin tumbling.', feedback: 'Correct!'
 wrong 'The tumbleweed will blink on and off.', feedback: 'Incorrect. The tumbleweed will begin tumbling.'
 
+
+allow_multiple_attempts false

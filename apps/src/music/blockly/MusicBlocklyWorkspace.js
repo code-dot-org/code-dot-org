@@ -61,7 +61,7 @@ export default class MusicBlocklyWorkspace {
 
     for (let blockType of Object.keys(MUSIC_BLOCKS)) {
       Blockly.Blocks[blockType] = {
-        init: function() {
+        init: function () {
           this.jsonInit(MUSIC_BLOCKS[blockType].definition);
         }
       };
@@ -149,9 +149,10 @@ export default class MusicBlocklyWorkspace {
         if (functionBlock.type === 'procedures_defnoreturn') {
           // Accumulate some custom code that calls all the functions
           // together, simulating tracks mode.
-          const actualFunctionName = GeneratorHelpersSimple2.getSafeFunctionName(
-            functionBlock.getFieldValue('NAME')
-          );
+          const actualFunctionName =
+            GeneratorHelpersSimple2.getSafeFunctionName(
+              functionBlock.getFieldValue('NAME')
+            );
           functionCallsCode += `${actualFunctionName}();
           `;
 
@@ -159,10 +160,11 @@ export default class MusicBlocklyWorkspace {
           const functionCode = Blockly.JavaScript.blockToCode(
             functionBlock.getChildren()[0]
           );
-          functionImplementationsCode += GeneratorHelpersSimple2.getFunctionImplementation(
-            functionBlock.getFieldValue('NAME'),
-            functionCode
-          );
+          functionImplementationsCode +=
+            GeneratorHelpersSimple2.getFunctionImplementation(
+              functionBlock.getFieldValue('NAME'),
+              functionCode
+            );
         }
       });
 
@@ -207,9 +209,8 @@ export default class MusicBlocklyWorkspace {
         if (!this.compiledEvents.tracks) {
           this.compiledEvents.tracks = {code: ''};
         }
-        this.compiledEvents.tracks.code += Blockly.JavaScript.blockToCode(
-          block
-        );
+        this.compiledEvents.tracks.code +=
+          Blockly.JavaScript.blockToCode(block);
       }
 
       if (

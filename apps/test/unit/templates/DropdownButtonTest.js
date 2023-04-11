@@ -31,28 +31,14 @@ describe('DropdownButton', () => {
   it('passes through href', () => {
     const wrapper = shallow(<DropdownButton {...defaultProps} />);
     wrapper.find('Button').simulate('click');
-    assert.strictEqual(
-      wrapper
-        .find('a')
-        .at(0)
-        .props().href,
-      'foo'
-    );
+    assert.strictEqual(wrapper.find('a').at(0).props().href, 'foo');
   });
 
   it('passes through onClick and closes dropdown', () => {
     const wrapper = shallow(<DropdownButton {...defaultProps} />);
     wrapper.find('Button').simulate('click');
-    assert(
-      wrapper
-        .find('a')
-        .at(1)
-        .props().onClick
-    );
-    wrapper
-      .find('a')
-      .at(1)
-      .simulate('click');
+    assert(wrapper.find('a').at(1).props().onClick);
+    wrapper.find('a').at(1).simulate('click');
     assert(clickSpy.calledOnce);
 
     // dropdown is closed
