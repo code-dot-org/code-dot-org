@@ -92,6 +92,18 @@
       }
     },
     {
+      "name": "CSA Syllabus 23-24",
+      "url": "https://docs.google.com/document/d/19G65CZ_Y9njvy6eVgoHNN_at6mP-Ow3bl0C1ZTsUu_8/edit?usp=sharing",
+      "key": "csa_syllabus_23-24",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csa_syllabus_23-24"
+      }
+    },
+    {
       "name": "Culturally Responsive Pedagogy and Equity",
       "url": "https://docs.google.com/document/d/1n2bPN--Cd9dz8P0yOZBUJ3DGY_BQHEMALFXUITJZWN0/edit?usp=sharing",
       "key": "culturally_responsive_pedagogy_and_equity",
