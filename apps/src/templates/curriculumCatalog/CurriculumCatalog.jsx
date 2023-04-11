@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {curriculaDataShape} from './curriculumCatalogShapes';
+import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
 import HeaderBanner from '../HeaderBanner';
@@ -66,7 +66,7 @@ const CurriculumCatalog = ({curriculaData}) => {
 };
 
 CurriculumCatalog.propTypes = {
-  curriculaData: PropTypes.arrayOf(curriculaDataShape)
+  curriculaData: PropTypes.arrayOf(curriculumDataShape)
 };
 
 export default CurriculumCatalog;

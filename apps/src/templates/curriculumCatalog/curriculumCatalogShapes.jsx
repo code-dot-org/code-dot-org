@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const curriculaDataShape = PropTypes.shape({
+export const curriculumDataShape = PropTypes.shape({
   id: PropTypes.string,
   key: PropTypes.string,
   display_name: PropTypes.string.isRequired,
@@ -12,7 +12,7 @@ export const curriculaDataShape = PropTypes.shape({
   grade_levels: PropTypes.string.isRequired,
   header: PropTypes.string,
   image: PropTypes.string,
-  cs_topic: PropTypes.string.isRequired,
-  school_subject: PropTypes.string.isRequired,
+  cs_topic: PropTypes.string,
+  school_subject: PropTypes.string,
   device_compatibility: PropTypes.string
 });
