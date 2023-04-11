@@ -106,6 +106,10 @@ hr:
           description: 'Faza 2 online: Mješoviti ljetni studij'
           description_short: 'Faza 2 online: Mješoviti ljetni studij'
           student_description: 'Faza 2 online: Mješoviti ljetni studij'
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Glazba
         algebraPD2b:
           description: 'Faza 2 online: Mješoviti ljetni studij'
           description_short: 'Faza 2 online: Mješoviti ljetni studij'

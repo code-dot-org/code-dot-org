@@ -762,6 +762,9 @@ hr:
         tvoje podatke s našim međunarodnim partnerom u tvojoj zemlji kako bi oni mogli
         ti oni kao učitelju informatike mogli pomoći.
       facilitator_not_applicable: Nije primjenjivo
+  course_offering:
+    headers:
+      minecraft: Minecraft
   cookie_banner:
     more_information: Pogledaj politiku privatnosti Code.org.
     accept: Slažem se

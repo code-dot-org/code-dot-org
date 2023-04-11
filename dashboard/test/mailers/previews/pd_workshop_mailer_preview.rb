@@ -18,7 +18,8 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
              workshop_params: {
                virtual: true,
                location_name: 'zoom_link',
-               location_address: nil
+               location_address: nil,
+               notes: 'Please join the webinar using zoom_link. The webinar will take place at 8 pm ET/ 5 pm PT.'
              }
       end
 
@@ -31,7 +32,8 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
              workshop_params: {
                virtual: true,
                location_name: 'zoom_link',
-               location_address: nil
+               location_address: nil,
+               notes: 'Please join the webinar using zoom_link. The webinar will take place at 8 pm ET/ 5 pm PT.'
              }
       end
 
@@ -44,7 +46,8 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
              workshop_params: {
                virtual: true,
                location_name: 'zoom_link',
-               location_address: nil
+               location_address: nil,
+               notes: 'Please join the webinar using zoom_link. The webinar will take place at 8 pm ET/ 5 pm PT.'
              }
       end
     end

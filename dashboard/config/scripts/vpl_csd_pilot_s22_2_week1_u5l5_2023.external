@@ -5,7 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Lessons 1 - 5 
 
-##### The early lessons of the Data and Society unit focus on the various ways in which data can be represented. These representations allow computers to recognize and process the data. 
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">The early lessons of the Data and Society unit focus on the various ways in which data can be represented. These representations allow computers to recognize and process the data. 
+</p></div>
 
 ## Overview of Lessons 1 - 5
 
@@ -54,7 +57,7 @@ In this lesson students create their own system for representing information. Th
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 3: ASCII and Binary Representation</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:20px;">
     <p>
 <img src="https://images.code.org/ef62d086c9771dc1ce8281029814e3a4-image-1648862717169.JPG" alt="Image of ASCII sheet" width="250px" style="float:left; margin-left:10px; margin-right:30px; margin-bottom: 30px;">
 

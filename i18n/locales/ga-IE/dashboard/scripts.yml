@@ -106,6 +106,10 @@ ga:
           description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           student_description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Ceol
         algebraPD2b:
           description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
@@ -2961,4 +2965,8 @@ ga:
         csd6a-2023:
           lesson_groups:
             lessonGroup-3:
+              display_name: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
               display_name: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'

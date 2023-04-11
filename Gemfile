@@ -100,7 +100,7 @@ group :development, :test do
   gem 'rinku'
   gem 'rspec'
   gem 'selenium-webdriver', '3.141.0'
-  gem 'spring'
+  gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
   gem 'webdrivers', '~> 3.0'
 
@@ -122,7 +122,7 @@ gem 'nakayoshi_fork'
 # Ref: https://github.com/puma/puma/pull/1646
 gem 'puma', github: 'wjordan/puma', branch: 'debugging'
 gem 'puma_worker_killer'
-gem 'unicorn', '~> 5.1.0'
+gem 'raindrops'
 
 gem 'chronic', '~> 0.10.2'
 

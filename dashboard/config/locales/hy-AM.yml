@@ -715,6 +715,10 @@ hy:
       email_opt_in:
         opt_in_yes: այո
         opt_in_no: ոչ
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      csf: CS Fundamentals
   cookie_banner:
     accept: Ես համաձայն եմ
   copy: պատճեն

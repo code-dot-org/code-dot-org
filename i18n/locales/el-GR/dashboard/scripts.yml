@@ -110,6 +110,10 @@ el:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           student_description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Μουσική
         algebraPD2b:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
