@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-08 02:18:57 UTC",
+    "serialized_at": "2023-04-11 04:40:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -592,6 +592,7 @@
       "position": 1,
       "properties": {
         "description": "Have your students complete these questions independently some time before starting this unit. ",
+        "progression_name": "The Pre-Unit Pulse",
         "tips": [
           {
             "type": "teachingTip",
@@ -2121,6 +2122,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Pre-Unit Pulse Q1"
+        ],
+        "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
       "seeding_key": {
@@ -2142,6 +2147,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Pre-Unit Pulse Q2"
+        ],
+        "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
       "seeding_key": {
@@ -2163,6 +2172,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Pre-Unit Pulse Q3"
+        ],
+        "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
       "seeding_key": {
