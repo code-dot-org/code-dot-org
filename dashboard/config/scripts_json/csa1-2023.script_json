@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-08 13:48:31 UTC",
+    "serialized_at": "2023-04-10 21:35:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2974,7 +2974,7 @@
       "key": "a8354d39-d35e-4b7c-9e97-246221f30435",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the syntax and functionality of a `while` loop and define ***iteration statement*** and ***condition***."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the syntax and functionality of a `while` loop and define ***iteration statement*** and ***condition***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that if the condition evaluates to `false` initially, the loop body is not executed at all."
       },
       "seeding_key": {
         "activity_section.key": "a8354d39-d35e-4b7c-9e97-246221f30435",
@@ -5971,6 +5971,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_21_222022_csa_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7892,6 +7895,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa1-2023"
+        ],
         "progression": "Unit 1 Survey"
       },
       "bonus": false,
