@@ -24,6 +24,15 @@ Factory.define('workshop')
   .attr('organizer', {name: 'Oscar Organzier', email: 'oscar@code.org'})
   .attr('virtual', false);
 
+Factory.define('csp summer workshop')
+  .extend('workshop')
+  .attr('course', 'CS Principles')
+  .attr('subject', '5-day Summer')
+  .attr('sessions', () => Factory.buildList('session', 5))
+  .attr('account_required_for_attendance?', true)
+  .attr('scholarship_workshop?', true)
+  .attr('location_name', 'physical');
+
 Factory.define('session')
   .sequence('id')
   .attr('code', 'TEST')

@@ -13,6 +13,7 @@ import {
   gDocsMsOfficeUrl,
   gDocsCopyUrl
 } from './googleDocsUtils';
+import style from './resource-list.module.scss';
 
 export default class ResourceList extends Component {
   static propTypes = {
@@ -134,6 +135,7 @@ export default class ResourceList extends Component {
             text={i18n.makeACopy()}
             color={Button.ButtonColor.gray}
             size={Button.ButtonSize.small}
+            className={style.dropdownButton}
           >
             <a
               href={gDocsPdfUrl(resource.url)}
