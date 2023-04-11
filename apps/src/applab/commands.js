@@ -789,6 +789,9 @@ applabCommands.drawImageURL = function (opts) {
   };
 
   var image = new Image();
+  if (assetPrefix.ABSOLUTE_CDO_IMAGES_REGEXP.test(opts.url)) {
+    image.crossOrigin = 'Anonymous';
+  }
   image.src = assetPrefix.fixPath(opts.url);
   image.onload = function () {
     var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext('2d');
