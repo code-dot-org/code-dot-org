@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "phase1-design-system";
 
 $border-radius: 4px;
@@ -109,7 +110,7 @@ $container-width: 309px;
   button {
     // width calculated to ensure space between buttons is 12px
     // (totalContainerWidth - 2*padding - minimumSpaceBetweenButtons) / 2
-    width: ($container-width - (2 * 16) - 12) / 2;
+    width: math.div($container-width - (2 * 16) - 12, 2);
     height: 40px;
     font-size: 1em;
   }
