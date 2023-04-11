@@ -32,7 +32,8 @@ Feature: App Lab Scenarios
     And I wait until element "#divApplab > .screen > button#testButton1" is visible
     Then element "#testButton1" contains text "Click me"
     When I press "testButton1"
-    And I wait until element "#testButton1" contains text "Clicked"
+    And I wait for 3 seconds
+    Then element "#testButton1" contains text "Clicked"
 
   Scenario: Can change a dropdown value in shared app
     Given I ensure droplet is in text mode
