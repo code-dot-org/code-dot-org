@@ -383,8 +383,10 @@ module Pd::Application
     def log_status
       self.status_log ||= []
       status_log.push({status: status, at: Time.zone.now})
+    end
 
-      send_pd_application_email(status) if should_send_decision_email?
+    def send_decision_email
+      send_pd_application_email(status)
     end
 
     # @override
