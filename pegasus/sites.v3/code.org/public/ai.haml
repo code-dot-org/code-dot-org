@@ -36,7 +36,8 @@ theme: responsive_full_width
       %figure.video-responsive{style: "max-width: unset"}
         %div
           %iframe{src: "https://www.youtube-nocookie.com/embed/dWRnCXbUDgA", allowFullScreen: 'true', frameborder: '0', title: "Why AI Matters with Deb Raji"}
-        %figcaption=hoc_s(:ai_intro_video_caption, markdown: :inline, locals: {series_url: resolve_url("#ai-videos")})
+        %figcaption
+          %a{href: "#ai-videos"}=hoc_s(:ai_intro_video_caption)
     %div.flex-container.col-45{style: "float: right"}
       %ul.icon-bullet-list.full-width{style: "margin-top: 0"}
         %li{style: "width:100%"}
@@ -77,29 +78,67 @@ theme: responsive_full_width
 %a{id: "ai-curricula"}
 %section
   .wrapper
-    %h2 AI curricula
+    %h2=hoc_s(:ai_curricula_title)
+    %p=hoc_s(:ai_curricula_desc)
+    .action-block__wrapper.action-block__wrapper--three-col
+      .action-block.action-block--one-col
+        %p.overline=hoc_s(:ai_curriculum_grades_01)
+        %h3=hoc_s(:ai_curriculum_title_01)
+        %img{src: "/images/ai/ai-curriclum-machine-learning.png", alt: ""}
+        %p{style: "height: 105px"}=hoc_s(:ai_curriculum_desc_01)
+        %p=hoc_s(:ai_curriculum_duration_01)
+        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1") , class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_01)}}
+          =hoc_s(:call_to_action_explore_unit)
+      .action-block.action-block--one-col
+        %p.overline=hoc_s(:ai_curriculum_grades_02)
+        %h3=hoc_s(:ai_curriculum_title_02)
+        %img{src: "/images/ai/ai-curriclum-ethics.png", alt: ""}
+        %p{style: "height: 105px"}=hoc_s(:ai_curriculum_desc_02)
+        %p=hoc_s(:ai_curriculum_duration_02)
+        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1") , class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_02)}}
+          =hoc_s(:call_to_action_view_lesson_plan)
+      .action-block.action-block--one-col
+        %p.overline=hoc_s(:ai_curriculum_grades_03)
+        %h3=hoc_s(:ai_curriculum_title_03)
+        %img{src: "/images/ai/ai-curriclum-oceans.png", alt: ""}
+        %p{style: "height: 105px"}=hoc_s(:ai_curriculum_desc_03)
+        %p=hoc_s(:ai_curriculum_duration_03)
+        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1") , class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_03)}}
+          =hoc_s(:call_to_action_try_activity)
 
 %section.bg-neutral-light
   .wrapper
     %h2 Quotes
+    = view :pl_middle_high_carousel
 
 %a{id: "ai-pl"}
 %section
   .wrapper
     %h2 Preparing to teach AI
+    .action-block.action-block--two-col
+      %img{src: "/images/professional-learning/pl-teachers-talking.png", alt: "", class: "col-50"}
+      .text-wrapper.col-50
+        %p Your local Code.org Regional Partner provides high quality Code.org professional learning to teachers, and can help guide your school or district on implementation, certification, funding, and more. They are happy to answer any questions you may have about the program!
+        = view :professional_development_workshops_regional_partner_search
+        %a{href: "https://support.code.org/", class: "link-button secondary", target: "_blank", rel: "noopener noreferrer"} Visit our support center
+    .clear
 
 = view :section_divider_line
 
 %a{id: "ai-videos"}
 %section
   .wrapper
-    %h2=hoc_s(:ai_video_title_01)
-    %p=hoc_s(:ai_video_desc)
+    %h2=hoc_s(:ai_video_series_title)
+    %p=hoc_s(:ai_video_series_desc)
     .video-series
-      %figure.video-responsive{style: "max-width: unset"}
-        %div
-          %iframe{src: "https://www.youtube-nocookie.com/embed/Ok-xpKjKp2g", allowFullScreen: "true", frameborder: "0", title: hoc_s(:ai_video_title_01)}
-        %figcaption=hoc_s(:ai_video_caption_01)
+      = view :video_with_fallback, video_code: "Ok-xpKjKp2g", download_path: "//videos.code.org/ai_series/ai-01-intro-to-ai.mp4"
+      = view :ai_vid_intro
+      = view :ai_vid_mlintro
+      = view :ai_vid_trainingdata
+      = view :ai_vid_neuralnetworks
+      = view :ai_vid_computervision
+      = view :ai_vid_ethics1
+      = view :ai_vid_ethics2
 
 = view :section_divider_line
 
