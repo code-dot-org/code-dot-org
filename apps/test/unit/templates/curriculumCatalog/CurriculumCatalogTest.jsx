@@ -1,7 +1,7 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 import {Provider} from 'react-redux';
-import {combineReducers, createStore} from 'redux';
+import {configureStore} from '@reduxjs/toolkit';
 import responsive, {
   setResponsiveSize,
   ResponsiveSize
@@ -40,7 +40,7 @@ describe('CurriculumCatalog', () => {
   const defaultProps = {curriculaData: allCurricula};
 
   beforeEach(() => {
-    const store = createStore(combineReducers({responsive}));
+    const store = configureStore({reducer: {responsive}});
     store.dispatch(setResponsiveSize(ResponsiveSize.lg));
     render(
       <Provider store={store}>
