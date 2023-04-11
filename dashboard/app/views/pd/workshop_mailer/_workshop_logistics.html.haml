@@ -6,9 +6,12 @@
     %td.heading= 'Date'.pluralize(@workshop.sessions.length) + ':'
     %td
       - @workshop.sessions.each do |session|
-        = session.start_date_with_start_and_end_times_us_format
+        - if @workshop.subject == Pd::Workshop::SUBJECT_CSA_CAPSTONE
+          = session.start_date_us_format
+        - else
+          = session.start_date_with_start_and_end_times_us_format
         %br
-  - unless @workshop.location_name.blank? || @workshop.virtual?
+  - unless @workshop.location_name.blank? || (@workshop.virtual? && @workshop.subject != Pd::Workshop::SUBJECT_CSA_CAPSTONE)
     %tr
       %td.heading
         Location:
@@ -31,3 +34,8 @@
           = facilitator.name
           (#{mail_to(facilitator.email)})
           %br
+  - if @workshop.subject == Pd::Workshop::SUBJECT_CSA_CAPSTONE && !@workshop.notes.blank? && @workshop.virtual?
+    %td.heading
+      Notes:
+    %td
+      = @workshop.notes
