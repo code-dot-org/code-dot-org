@@ -244,7 +244,6 @@ Resources:
           Value: lb_cookie
         - Key: stickiness.lb_cookie.duration_seconds
           Value: 30
-
 <%   unless frontends -%>
       Targets:
         - {Id: !Ref <%=daemon%>, Port: 80}
