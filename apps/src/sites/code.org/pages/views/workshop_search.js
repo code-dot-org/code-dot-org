@@ -5,7 +5,7 @@ import colors from '@cdo/apps/util/color';
 
 var map;
 
-$(document).ready(function() {
+$(document).ready(function () {
   initializeMapboxMap();
   map.on('load', loadMapboxWorkshops);
 });
@@ -89,14 +89,14 @@ function placeClusters() {
       'text-allow-overlap': true
     }
   });
-  map.on('click', 'workshop-clusters', function(e) {
+  map.on('click', 'workshop-clusters', function (e) {
     var features = map.queryRenderedFeatures(e.point, {
       layers: ['workshop-clusters']
     });
     var clusterId = features[0].properties.cluster_id;
     map
       .getSource('workshops')
-      .getClusterExpansionZoom(clusterId, function(err, zoom) {
+      .getClusterExpansionZoom(clusterId, function (err, zoom) {
         if (err) {
           console.log(err);
           return;
@@ -108,7 +108,7 @@ function placeClusters() {
         });
       });
   });
-  map.on('mouseenter', 'workshop-clusters', function() {
+  map.on('mouseenter', 'workshop-clusters', function () {
     map.getCanvas().style.cursor = 'pointer';
   });
 }
@@ -137,7 +137,7 @@ function placeIntroWorkshops() {
     });
   });
   map.on('click', 'intro-workshops', onMarkerClick);
-  map.on('mouseenter', 'intro-workshops', function() {
+  map.on('mouseenter', 'intro-workshops', function () {
     map.getCanvas().style.cursor = 'pointer';
   });
 }
@@ -166,7 +166,7 @@ function placeDeepDiveWorkshops() {
     });
   });
   map.on('click', 'deep-dive-workshops', onMarkerClick);
-  map.on('mouseenter', 'deep-dive-workshops', function() {
+  map.on('mouseenter', 'deep-dive-workshops', function () {
     map.getCanvas().style.cursor = 'pointer';
   });
 }
@@ -204,7 +204,7 @@ function compileMapboxPopupHtml(workshops, first) {
     // Add the date(s).
     html += '<div class="workshop-dates">';
     const sessions = workshop.sessions;
-    $.each(sessions, function(i, session) {
+    $.each(sessions, function (i, session) {
       html +=
         '<div class="workshop-date" style="white-space: nowrap;">' +
         session +

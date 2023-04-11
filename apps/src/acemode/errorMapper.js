@@ -13,7 +13,8 @@ var errorMap = [
     replacement: "$1 hasn't been declared yet."
   },
   {
-    original: /Expected an identifier and instead saw (.*)\s\(a reserved word\)./,
+    original:
+      /Expected an identifier and instead saw (.*)\s\(a reserved word\)./,
     applab_replacement:
       '$1 is a reserved word in App Lab. Use a different variable name.',
     gamelab_replacement:
@@ -31,13 +32,13 @@ var errorMap = [
  * our mapping. Note this makes changes in place to the passed in results
  * object.
  */
-module.exports.processResults = function(results, appType) {
-  results.data.forEach(function(item) {
+module.exports.processResults = function (results, appType) {
+  results.data.forEach(function (item) {
     if (item.type === 'info') {
       item.type = 'warning';
     }
 
-    errorMap.forEach(function(errorMapping) {
+    errorMap.forEach(function (errorMapping) {
       if (!errorMapping.original.test(item.text)) {
         return;
       }

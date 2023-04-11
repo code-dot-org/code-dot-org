@@ -42,20 +42,18 @@ describe('Question Averages Table', () => {
       'All my Workshop type',
       'All workshops'
     ]);
-    assertRowEquals(
-      questionAveragesTable
-        .find('tbody tr')
-        .at(0)
-        .find('td'),
-      ['Question 1', '4.5 / 5', '5 / 5', '4.1 / 5']
-    );
-    assertRowEquals(
-      questionAveragesTable
-        .find('tbody tr')
-        .at(1)
-        .find('td'),
-      ['Question 2', '3.2 / 5', '4 / 5', '3.1 / 5']
-    );
+    assertRowEquals(questionAveragesTable.find('tbody tr').at(0).find('td'), [
+      'Question 1',
+      '4.5 / 5',
+      '5 / 5',
+      '4.1 / 5'
+    ]);
+    assertRowEquals(questionAveragesTable.find('tbody tr').at(1).find('td'), [
+      'Question 2',
+      '3.2 / 5',
+      '4 / 5',
+      '3.1 / 5'
+    ]);
     expect(questionAveragesTable.find('tbody tr').length).to.equal(2);
   });
 
@@ -88,20 +86,22 @@ describe('Question Averages Table', () => {
       'All my Workshop type',
       'All workshops'
     ]);
-    assertRowEquals(
-      questionAveragesTable
-        .find('tbody tr')
-        .at(0)
-        .find('td'),
-      ['Question 1', '', '2 / 5', '2.5 / 5', '5 / 5', '4.1 / 5']
-    );
-    assertRowEquals(
-      questionAveragesTable
-        .find('tbody tr')
-        .at(1)
-        .find('td'),
-      ['Question 2', '4.9 / 5', '', '', '4 / 5', '3.1 / 5']
-    );
+    assertRowEquals(questionAveragesTable.find('tbody tr').at(0).find('td'), [
+      'Question 1',
+      '',
+      '2 / 5',
+      '2.5 / 5',
+      '5 / 5',
+      '4.1 / 5'
+    ]);
+    assertRowEquals(questionAveragesTable.find('tbody tr').at(1).find('td'), [
+      'Question 2',
+      '4.9 / 5',
+      '',
+      '',
+      '4 / 5',
+      '3.1 / 5'
+    ]);
     expect(questionAveragesTable.find('tbody tr').length).to.equal(2);
   });
 });

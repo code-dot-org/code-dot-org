@@ -11,7 +11,7 @@ import CrosshairOverlay from '../templates/CrosshairOverlay';
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 import SwipePrompt from '@cdo/apps/templates/SwipePrompt';
 
-var StudioVisualizationColumn = function(props) {
+var StudioVisualizationColumn = function (props) {
   return (
     <span>
       <ProtectedVisualizationDiv>

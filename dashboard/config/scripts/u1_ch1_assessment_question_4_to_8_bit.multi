@@ -14,3 +14,5 @@ Two students have developed a protocol in which they send 4-bit messages to each
 
 
 MARKDOWN
+
+allow_multiple_attempts true

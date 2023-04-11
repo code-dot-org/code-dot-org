@@ -1,0 +1,2286 @@
+{
+  "script": {
+    "name": "ai-temp",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "include_student_lesson_plans": true,
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "ai-temp",
+    "serialized_at": "2023-04-10 15:24:02 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "ai-temp"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to Machine Learning",
+      "name": "Introduction to Machine Learning",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "announcements": [
+          {
+            "notice": "AI/ML Professional Development",
+            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "type": "information",
+            "visibility": "Teacher-only"
+          }
+        ],
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.\n\n**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?",
+        "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "[Computer Vision Lesson]",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "[Neural Networks Lesson]",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "[Generative AI Lesson]",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "Algorithmic Bias",
+      "name": "Algorithmic Bias",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "In this lesson, students will practice cropping images to uncover the bias underlying the Twitter cropping algorithm. Then, students will read and watch a video about the discovery of this biased algorithm. Finally, students will discuss ways to recognize and reduce bias along with analyzing Twitter's response to the allegations of bias in their cropping algorithm.",
+        "preparation": "* Complete the cropping widget activity yourself so you can see what your students will experience with the widget will be and what questions or issues they may bring up.\n* Watch the parts of the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) referenced in the lesson plan.\n* Read the two articles from the links section below.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1PPiJSS7ZdIQl8DKN_x7pB5I1-1gi4S9Y3I6F-PBJKj0/edit?usp=sharing)",
+        "student_overview": "In this lesson, you will work on cropping images and discuss the challenges and bias involved in teaching a machine how to crop an image."
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithmic Bias",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "Our AI Code of Ethics",
+      "name": "Our AI Code of Ethics",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.",
+        "preparation": "- Prepare to share online one **AI Ethics Research Areas** handout per group.\r\n- Print or prepare to share online one **AI Ethics Research Reflection** handout per group.\r\n- Prepare a shareable web document, slide presentation, video template, or any other form of media to be used to comprise your class’ “Our AI Code of Ethics” resource.\r\n- (Optional) Watch our **How AI Works** video series and prepare to share it with students after the lesson.",
+        "student_overview": "Collaboratively research about AI ethics and create a shareable code of conduct."
+      },
+      "seeding_key": {
+        "lesson.key": "Our AI Code of Ethics",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "Blockchain In a Day",
+      "name": "Blockchain In a Day",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "overview": "⚠️This lesson is intended for classrooms that want to show the entire How Blockchain Works video series in a **single day**. It is not intended to be taught in sequence with the other lessons in this unit, which introduces each video one day at a time.\n\nStudents follow along with each video by matching vocabulary from the video, then answering a reflection question about each video. The lesson plan and slides are very sparse and open-ended to allow for improvisation and customization to fit your classroom."
+      },
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "043986ed-e5ec-47f8-8721-5b91cd4a4ffb",
+      "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "043986ed-e5ec-47f8-8721-5b91cd4a4ffb",
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "cb0ca19e-c698-465e-9914-43d8ddf4c7c7",
+      "position": 2,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cb0ca19e-c698-465e-9914-43d8ddf4c7c7",
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "46bdade5-f04b-4924-b7cb-81075cc86c7e",
+      "position": 3,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "46bdade5-f04b-4924-b7cb-81075cc86c7e",
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "57ed185b-d2e8-4766-9661-3f832cec5152",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "57ed185b-d2e8-4766-9661-3f832cec5152",
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "3bbd3bbf-aa1f-407f-be08-e40f71186cdd",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3bbd3bbf-aa1f-407f-be08-e40f71186cdd",
+        "lesson.key": "Algorithmic Bias",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "047f12fd-1c43-475d-8395-211f58e1cdb0",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "047f12fd-1c43-475d-8395-211f58e1cdb0",
+        "lesson.key": "Algorithmic Bias",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "672b41e0-8b3b-44d7-a904-aa6b84585145",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "672b41e0-8b3b-44d7-a904-aa6b84585145",
+        "lesson.key": "Algorithmic Bias",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "f9fcde79-6b74-48fb-8de6-879d9508ac41",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f9fcde79-6b74-48fb-8de6-879d9508ac41",
+        "lesson.key": "Our AI Code of Ethics",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "04a5b7d6-3fbc-4045-a72f-372ff935fbb1",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "04a5b7d6-3fbc-4045-a72f-372ff935fbb1",
+        "lesson.key": "Our AI Code of Ethics",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "00e07751-15c1-4fee-902e-1e6877eaa69e",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "00e07751-15c1-4fee-902e-1e6877eaa69e",
+        "lesson.key": "Our AI Code of Ethics",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "8ed127df-c40b-4809-8803-c1abd706b689",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8ed127df-c40b-4809-8803-c1abd706b689",
+        "lesson.key": "Our AI Code of Ethics",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "c94fe253-e775-4ad1-8d9d-1f4a38793b74",
+      "position": 5,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c94fe253-e775-4ad1-8d9d-1f4a38793b74",
+        "lesson.key": "Our AI Code of Ethics",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "4a5a98de-b492-47df-95a0-6aceefa69ffd",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Introduction to Blockchain"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4a5a98de-b492-47df-95a0-6aceefa69ffd",
+        "lesson.key": "Blockchain In a Day",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "46c8889e-3e6c-4f38-85f7-4355cef430ba",
+      "position": 2,
+      "properties": {
+        "duration": 10,
+        "name": "Why Blockchain?"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "46c8889e-3e6c-4f38-85f7-4355cef430ba",
+        "lesson.key": "Blockchain In a Day",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "1bac79cf-34b0-4d15-b558-c3e4921d6f9b",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Under the Hood"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1bac79cf-34b0-4d15-b558-c3e4921d6f9b",
+        "lesson.key": "Blockchain In a Day",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "e9dc2621-41aa-462f-ad59-bea401630ac9",
+      "position": 4,
+      "properties": {
+        "duration": 10,
+        "name": "Beyond Currencies"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e9dc2621-41aa-462f-ad59-bea401630ac9",
+        "lesson.key": "Blockchain In a Day",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "dc78ffe6-c1cd-49ad-aceb-a39b233a3931",
+      "position": 5,
+      "properties": {
+        "duration": 10,
+        "name": "Marketplace & Price"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dc78ffe6-c1cd-49ad-aceb-a39b233a3931",
+        "lesson.key": "Blockchain In a Day",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "abbb0aa6-d654-4130-ab38-ae014235d655",
+      "position": 6,
+      "properties": {
+        "duration": 10,
+        "name": "Trustworthy or a Scam"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "abbb0aa6-d654-4130-ab38-ae014235d655",
+        "lesson.key": "Blockchain In a Day",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "770d000b-e678-4bf8-a98a-797388320d6b",
+      "position": 7,
+      "properties": {
+        "duration": 10,
+        "name": "Societal Impact"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "770d000b-e678-4bf8-a98a-797388320d6b",
+        "lesson.key": "Blockchain In a Day",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "7ea72882-4b8e-479e-a4bf-2e556ec5d35f",
+      "position": 8,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7ea72882-4b8e-479e-a4bf-2e556ec5d35f",
+        "lesson.key": "Blockchain In a Day",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "efe9075d-e60b-41ca-bbe6-32285a8acd06",
+      "position": 1,
+      "properties": {
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). ",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "efe9075d-e60b-41ca-bbe6-32285a8acd06",
+        "lesson_activity.key": "043986ed-e5ec-47f8-8721-5b91cd4a4ffb"
+      }
+    },
+    {
+      "key": "e2cda095-ba18-4a9b-96e6-ecae1e84b767",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Today we begin a unit on Artificial Intelligence, or AI. What’s an example of AI either in your personal life or that you’ve seen in a movie or book?_",
+        "name": "Journal",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**What Is AI?** At a basic level, artificial intelligence is when a computer program mimics the intelligence of a human being. This can appear as solving a problem, engaging in conversations, displaying emotions, and many other forms. Shortly after this prompt, students will watch a video that further defines AI and the focus of this unit, Machine Learning.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e2cda095-ba18-4a9b-96e6-ecae1e84b767",
+        "lesson_activity.key": "cb0ca19e-c698-465e-9914-43d8ddf4c7c7"
+      }
+    },
+    {
+      "key": "1990c34f-b231-477d-a442-342bc99dbb35",
+      "position": 2,
+      "properties": {
+        "description": "Have students brainstorm silently on their own, then share with their neighbors, and finally share with the whole class."
+      },
+      "seeding_key": {
+        "activity_section.key": "1990c34f-b231-477d-a442-342bc99dbb35",
+        "lesson_activity.key": "cb0ca19e-c698-465e-9914-43d8ddf4c7c7"
+      }
+    },
+    {
+      "key": "2c1da847-9c8d-476a-8ac0-7f74ae30bf1b",
+      "position": 3,
+      "properties": {
+        "description": " **Discussion Goal:** Try to surface any personal connections students may already have with AI. Students may come up with examples from their personal lives, such as recommendation systems or facial recognition. Or they may think of examples in the media, such as the robots in movies like Wall-E or personal assistants like Siri. Students may also come up with examples that aren’t strictly AI - for now, add them to the list anyway. Keep track of any suggestions that students surface without validating them as right or wrong - let students brainstorm freely first.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "2c1da847-9c8d-476a-8ac0-7f74ae30bf1b",
+        "lesson_activity.key": "cb0ca19e-c698-465e-9914-43d8ddf4c7c7"
+      }
+    },
+    {
+      "key": "3b23d37d-ed43-4c33-8c08-8209402f9015",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide with the large venn diagram that includes AI and many applications."
+      },
+      "seeding_key": {
+        "activity_section.key": "3b23d37d-ed43-4c33-8c08-8209402f9015",
+        "lesson_activity.key": "cb0ca19e-c698-465e-9914-43d8ddf4c7c7"
+      }
+    },
+    {
+      "key": "513ef37f-6b68-4d78-b28b-9165d19295b6",
+      "position": 5,
+      "properties": {
+        "description": "Artificial Intelligence is used in a lot of different places in our lives - from facial recognition in our phones to personal recommendations when we browse the web, and even in driverless cars. For the next few weeks, we’re going to focus on a specific type of artificial intelligence called machine learning.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "513ef37f-6b68-4d78-b28b-9165d19295b6",
+        "lesson_activity.key": "cb0ca19e-c698-465e-9914-43d8ddf4c7c7"
+      }
+    },
+    {
+      "key": "7bc53c0c-bee4-42a7-b7b2-50759008dd5c",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r ai_what_is_machine_learning_/ai-temp/unversioned] video in the slides\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7bc53c0c-bee4-42a7-b7b2-50759008dd5c",
+        "lesson_activity.key": "cb0ca19e-c698-465e-9914-43d8ddf4c7c7"
+      }
+    },
+    {
+      "key": "99cb250e-9d1a-40c3-9434-25df471defcb",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** Display the following vocabulary\n\n- **Machine Learning:** How computers recognize patterns and make decisions without being explicitly programmed"
+      },
+      "seeding_key": {
+        "activity_section.key": "99cb250e-9d1a-40c3-9434-25df471defcb",
+        "lesson_activity.key": "cb0ca19e-c698-465e-9914-43d8ddf4c7c7"
+      }
+    },
+    {
+      "key": "9435b3e5-2aa6-4954-941f-319c37fcd34c",
+      "position": 8,
+      "properties": {
+        "description": "Machine learning helps us solve important problems in society. In the next few weeks, we’ll look at how we can create our own machine learning apps to solve problems. To help accomplish our goals, we will use the Problem Solving Process - Define, Prepare, Try, Reflect, and always Empathize. Let's take a look at how these steps appear for Machine Learning in particular",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9435b3e5-2aa6-4954-941f-319c37fcd34c",
+        "lesson_activity.key": "cb0ca19e-c698-465e-9914-43d8ddf4c7c7"
+      }
+    },
+    {
+      "key": "0627a8ca-6cd8-41d2-a465-3deb65ab66b9",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the Problem Solving Process. Read through the additional lines that represent how the process connects to Machine Learning.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of The Day:** How can we use the Problem Solving Process to solve a problem with machine learning?"
+      },
+      "seeding_key": {
+        "activity_section.key": "0627a8ca-6cd8-41d2-a465-3deb65ab66b9",
+        "lesson_activity.key": "cb0ca19e-c698-465e-9914-43d8ddf4c7c7"
+      }
+    },
+    {
+      "key": "44138582-895d-49bb-bf82-a06abd7109ab",
+      "position": 1,
+      "properties": {
+        "description": "In today’s activity, we’re going to use machine learning to help a robot clean up the ocean and learn how to identify fish. We’ll give it lots of examples of fish, give it time to learn from those examples, and then see how well it does in cleaning up the ocean.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "44138582-895d-49bb-bf82-a06abd7109ab",
+        "lesson_activity.key": "46bdade5-f04b-4924-b7cb-81075cc86c7e"
+      }
+    },
+    {
+      "key": "f8d8364a-9f4e-4a7b-9301-53bce8e0efb3",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the Activity Guide for this lesson",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The responses in the activity guide can be used to formatively assess how well students have met the objectives of the lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f8d8364a-9f4e-4a7b-9301-53bce8e0efb3",
+        "lesson_activity.key": "46bdade5-f04b-4924-b7cb-81075cc86c7e"
+      }
+    },
+    {
+      "key": "0e1e66d6-5d15-4edc-a9d8-a31c0818861f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** In front of the classroom, navigate to Level 1 in Code Studio - Recognizing Fish.",
+        "name": "Level 1 - Recognizing Fish",
+        "progression_name": "Recognizing Fish"
+      },
+      "seeding_key": {
+        "activity_section.key": "0e1e66d6-5d15-4edc-a9d8-a31c0818861f",
+        "lesson_activity.key": "46bdade5-f04b-4924-b7cb-81075cc86c7e"
+      }
+    },
+    {
+      "key": "0197b1f6-5d03-4994-8a93-50dbd8132b4a",
+      "position": 4,
+      "properties": {
+        "description": "**Do This:** As a class, go through this level which guides you through the process of training A.I. Bot to recognize fish. As you do, fill in the first part of the activity guide as a class. Consider the following strategies at different stages of the level:",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**A.I. Bot and Pronouns:** These levels purposefully use A.I. Bot’s full name and avoid gendering A.I. Bot as “he” or “she”. Even though some AI systems take on personified gendered roles - such as Siri or Jarvis - actual machine learning programs don’t have genders because they’re just computer programs. Model this same behavior with students by referring to A.I. Bot by it’s full name or using “it” as its pronoun.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0197b1f6-5d03-4994-8a93-50dbd8132b4a",
+        "lesson_activity.key": "46bdade5-f04b-4924-b7cb-81075cc86c7e"
+      }
+    },
+    {
+      "key": "35976cf9-0349-45f5-a866-8ee51c5b1e4a",
+      "position": 5,
+      "properties": {
+        "description": "**Training Screen:**\n\n- Informational text will frequently pop up on the screen. Consider asking students to read the prompts aloud to the class, possibly in their best robot voice, for a little fun\n- Ask students to use thumbs up / thumbs down to decide as a class whether something is a fish\n- At 30 images, the level will ask if you would like to continue or keep training. Ask students to help with this decision and follow their lead - either continue training, or go to the next screen.\n- Before continuing, have students record on their activity guide how many images they used to train A.I. Bot.\n\n**Testing Screen:**\n\n- A.I. Bot will probably misidentify a few objects. Make sure students notice this, and ask them to individually consider why they think this might be happening. This ties in to the discussion at the end of this level.\n\n**Evaluation Screen:**\n\n- Have students count the number of fish that it identified correctly. Record this on the activity guide.\n- It’s okay if A.I. Bot misidentifies some trash as fish - this sets the stage for the discussion.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _If we wanted A.I. Bot to become better at recognizing fish, how do you think we could help it do that?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "35976cf9-0349-45f5-a866-8ee51c5b1e4a",
+        "lesson_activity.key": "46bdade5-f04b-4924-b7cb-81075cc86c7e"
+      }
+    },
+    {
+      "key": "cf2058e3-28d6-4d5a-bf59-e8b706766df8",
+      "position": 6,
+      "properties": {
+        "description": " **Discussion Goal:** Help students understand that A.I. Bot learns better when it has more examples. The best way we can improve its ability to recognize fish is by giving it more examples to look at. Students may also make the connection that this is how humans learn, especially young children - the more examples we have, the better we learn."
+      },
+      "seeding_key": {
+        "activity_section.key": "cf2058e3-28d6-4d5a-bf59-e8b706766df8",
+        "lesson_activity.key": "46bdade5-f04b-4924-b7cb-81075cc86c7e"
+      }
+    },
+    {
+      "key": "810e6a7e-70b4-467f-ae0e-1745845566e2",
+      "position": 7,
+      "properties": {
+        "description": "This is one example of how the Problem Solving Process and Machine Learning can be used to solve a problem. We prepared our data, used it to train A.I. Bot, then reflected on the results and decided what to do next. In this next level, you will follow this process and train A.I. Bot to detect certain kinds of fish - like red fish or blue fish or triangle fish.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "810e6a7e-70b4-467f-ae0e-1745845566e2",
+        "lesson_activity.key": "46bdade5-f04b-4924-b7cb-81075cc86c7e"
+      }
+    },
+    {
+      "key": "f13c2ef1-0faf-450f-b0e7-90e8099aa0a7",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students navigate to Code Studio Level 2 - Recognizing Fish Features. This level lets students train A.I. Bot to recognize a fish by its color or body type. ",
+        "name": "Level 2 - Recognizing Fish Features",
+        "progression_name": "Recognizing Fish Features"
+      },
+      "seeding_key": {
+        "activity_section.key": "f13c2ef1-0faf-450f-b0e7-90e8099aa0a7",
+        "lesson_activity.key": "46bdade5-f04b-4924-b7cb-81075cc86c7e"
+      }
+    },
+    {
+      "key": "759f0525-06da-4c0e-a1a9-c1529d0dcad6",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Have students choose a word that they want to train A.I. Bot to recognize, and record this information on their Activity Guide. Students should progress through the level on their own, recording information on their activity guide.\n\n**Circulate:** Check that students are filling in their activity guide as they complete the stages. After briefly checking in with each student, complete this stage yourself in front of the room and pause at the last screen.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Activity Guides and Code Studio:** Students may struggle initially to keep track of information on their activity guide as they complete levels in Code Studio. One way to help students think about this is similar to being a scientist performing a lab experiment: they are performing an experiment in Code Studio, and keeping track of their results in their Activity Guide. This is a pattern that will continue throughout the unit, so this is a great opportunity to help students manage both the activity guide and Code Studio.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "759f0525-06da-4c0e-a1a9-c1529d0dcad6",
+        "lesson_activity.key": "46bdade5-f04b-4924-b7cb-81075cc86c7e"
+      }
+    },
+    {
+      "key": "18396812-b208-439c-94fb-b09eaafdbd16",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** As students reach the final stage, have them press the white Information icon in the upper-right corner. This displays the features that A.I. Bot is using to help make its decision. In the example here, A.I. Bot has learned that the color matters the most when making a decision and the eyes matter the least.\n\nHave students record the most important and least important features on their activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What features did A.I. Bot think were the most important? Are those the features you were expecting to be most important?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "18396812-b208-439c-94fb-b09eaafdbd16",
+        "lesson_activity.key": "46bdade5-f04b-4924-b7cb-81075cc86c7e"
+      }
+    },
+    {
+      "key": "f28b6bcc-944d-4802-84e4-efaa0ea3e34e",
+      "position": 11,
+      "properties": {
+        "description": " **Discussion Goal:** Students may find that A.I. Bot thinks some features are important when they’re actually completely unrelated to their word. For example, thinking that the mouth of a fish is important when trying to determine if the fish is red. Students can verify this by looking for patterns in the fish that A.I. Bot has accepted - maybe all of their example fishes happened to have the same type of mouth and A.I. Bot mistakenly thought this was important."
+      },
+      "seeding_key": {
+        "activity_section.key": "f28b6bcc-944d-4802-84e4-efaa0ea3e34e",
+        "lesson_activity.key": "46bdade5-f04b-4924-b7cb-81075cc86c7e"
+      }
+    },
+    {
+      "key": "fdd56147-64c7-40cc-843f-a78921844c3c",
+      "position": 12,
+      "properties": {
+        "description": "Some of you noticed that A.I. Bot was learning about parts of the fish that aren’t actually important, like the mouth or eyes or dorsal fin. This happens in real life too - machines can learn patterns we don’t intend even with lots of data, which can cause A.I. Bot to make mistakes. For this situation, it’s pretty easy to tell if A.I. Bot made a mistake - we can quickly see if a fish isn’t actually red or circular. Let’s try a slightly harder challenge - trying to recognize expressions!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fdd56147-64c7-40cc-843f-a78921844c3c",
+        "lesson_activity.key": "46bdade5-f04b-4924-b7cb-81075cc86c7e"
+      }
+    },
+    {
+      "key": "143fb379-8c75-4d60-b1e5-eed9887455e6",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students navigate to Code Studio Level 3 - Recognizing Fish Expressions. This level lets students train A.I. Bot to recognize a fish by its expression, such as “silly” or “serious” or “angry”.",
+        "name": "Level 3 - Recognizing Fish Expressions",
+        "progression_name": "Recognizing Expressions"
+      },
+      "seeding_key": {
+        "activity_section.key": "143fb379-8c75-4d60-b1e5-eed9887455e6",
+        "lesson_activity.key": "46bdade5-f04b-4924-b7cb-81075cc86c7e"
+      }
+    },
+    {
+      "key": "54b00657-4d8c-46cb-808e-db1e5f0920ae",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students choose an expression that they want to train A.I. Bot to recognize, and record this information on their Activity Guide. Students should progress through the level on their own, recording information on their activity guide. On the final screen, have students press the information icon and record the features that A.I. Bot learned were most important.\n\n**Circulate:** Check that students are filling in their activity guide as they complete the stages. Ask students what features they’re looking at to determine if a fish meets their criteria. Students will probably say they primarily use eyes and mouth to help determine expression, but when they click the Information icon on the final screen, A.I. Bot may be using additional features such as color and body to make its decision. Prompt students to think about how they feel about this and compare it to their personal experience - For example, if someone thought they were “silly” or “angry” primarily based on their clothing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide of A.I. Bot learning how to identify fish as “Angry”. Have students discuss the prompt on the screen: _Looking at this screen, why do you think color appeared as the second most important feature?_\n\n **Discussion Goal:** Students should notice that even though the eyes and mouth tend to appear “angry” on every fish, there also appears to be a lot of purple fish on the screen. As a result, A.I. Bot may start to think that the color “purple” is another way to tell if a fish is angry or not.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "54b00657-4d8c-46cb-808e-db1e5f0920ae",
+        "lesson_activity.key": "46bdade5-f04b-4924-b7cb-81075cc86c7e"
+      }
+    },
+    {
+      "key": "77c3ce4f-db00-4ce7-965d-486281bfa2f6",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Do you think it’s okay to consider a fish “angry” by its color?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "77c3ce4f-db00-4ce7-965d-486281bfa2f6",
+        "lesson_activity.key": "46bdade5-f04b-4924-b7cb-81075cc86c7e"
+      }
+    },
+    {
+      "key": "73e8e33f-43a2-4376-beda-7e50e23fde01",
+      "position": 16,
+      "properties": {
+        "description": "**Discussion Goal:** For the first part of the question, guide students to notice that there are a lot of purple fish on the screen so A.I. Bot might think that purple fish are more likely to be angry than other fish.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Job Interviews:** If there is time available, consider showing students [Objective or Biased: On the questionable use of Artificial Intelligence for job applications](https://web.br.de/interaktiv/ki-bewerbung/en/). This is a real-life example of a similar situation where unintended factors, such as wearing glasses or a headscarf, are influencing how an AI system rates job applicants. This can be a useful resource to make a connection between this fish activity and the real-world, but this resource is not designed for a middle-school audience and requires some adjustments and decisions for how to best present to your students.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "73e8e33f-43a2-4376-beda-7e50e23fde01",
+        "lesson_activity.key": "46bdade5-f04b-4924-b7cb-81075cc86c7e"
+      }
+    },
+    {
+      "key": "0708ef2f-0549-41e6-a87f-d2b93bbf72f2",
+      "position": 17,
+      "properties": {
+        "description": "The second part of the question is more open-ended. Students should explore their own ideas and feelings about whether this kind of labeling is appropriate based on the color of the fish. In particular, A.I. Bot has learned “purple fish are angry fish”, which students may have strong reactions to. They may describe similar situations outside of the classroom, such as moments where they’ve been judged by their appearance, gender, or race, to help explain their opinions. This question is designed to start a conversation and connect students’ experiences to the potential pitfalls of machine learning, and it’s okay if the discussion doesn’t come to a firm conclusion. You can let students know that they will continue to learn about and discuss these issues in the rest of the unit. Use the remarks below to help wrap up the discussion."
+      },
+      "seeding_key": {
+        "activity_section.key": "0708ef2f-0549-41e6-a87f-d2b93bbf72f2",
+        "lesson_activity.key": "46bdade5-f04b-4924-b7cb-81075cc86c7e"
+      }
+    },
+    {
+      "key": "72ae012c-853b-4990-a298-38738b6992eb",
+      "position": 18,
+      "properties": {
+        "description": "Even with a small example like this, we see that machine learning can get into trouble and learn something that’s harmful to a particular type of fish. Having more data and making sure it represents all types of fish can help solve this problem. These types of examples happen in real life too and can have serious consequences, such as whether or not you receive medical care or get a job offer. Throughout this unit, as we learn how to use machine learning to solve problems, we need to always be thinking about: What is the impact, and who is being included or excluded?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "72ae012c-853b-4990-a298-38738b6992eb",
+        "lesson_activity.key": "46bdade5-f04b-4924-b7cb-81075cc86c7e"
+      }
+    },
+    {
+      "key": "6b4f0c67-b8b6-49e6-9331-e6fe9b8886a1",
+      "position": 1,
+      "properties": {
+        "description": "**Code Studio:** Have students answer 5 quick survey questions at the beginning of this unit on AI and Machine Learning. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
+        "name": "Reflection",
+        "progression_name": "Check-In Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b4f0c67-b8b6-49e6-9331-e6fe9b8886a1",
+        "lesson_activity.key": "57ed185b-d2e8-4766-9661-3f832cec5152"
+      }
+    },
+    {
+      "key": "dab81f50-3f98-4996-b401-f01699ca1efc",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is something new you learned about machine learning today? What is a new question you have about machine learning?_\n\nEncourage students to choose one of these to share with you on the way out the door, or to write their responses on a post-it note that can be displayed in the classroom. If possible, keep track of these items throughout the unit and refer back to them in later lessons when they are addressed.",
+        "name": "Journal"
+      },
+      "seeding_key": {
+        "activity_section.key": "dab81f50-3f98-4996-b401-f01699ca1efc",
+        "lesson_activity.key": "57ed185b-d2e8-4766-9661-3f832cec5152"
+      }
+    },
+    {
+      "key": "d45e6861-be58-4328-a8d3-8d16dbf7123d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think about a time when you shared a picture with your friends or on social media. Have you ever had to crop a photo you shared? How did you decide what to crop out of the picture?*\n\n**Discussion Goal:** Use this discussion to show that users usually have a reason for sharing photos and the focus depends on that reason.  Students will most likely bring up a wide range of examples that can be used to highlight how there isn’t a one size fits all approach to sharing photos and cropping them. "
+      },
+      "seeding_key": {
+        "activity_section.key": "d45e6861-be58-4328-a8d3-8d16dbf7123d",
+        "lesson_activity.key": "3bbd3bbf-aa1f-407f-be08-e40f71186cdd"
+      }
+    },
+    {
+      "key": "cd7bc965-ade9-43f8-949c-8c1b6052a59a",
+      "position": 2,
+      "properties": {
+        "description": "Today we are going to try our own hands at cropping and then closely examine a real-world situation where training a model to crop photos leads to algorithmic bias.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cd7bc965-ade9-43f8-949c-8c1b6052a59a",
+        "lesson_activity.key": "3bbd3bbf-aa1f-407f-be08-e40f71186cdd"
+      }
+    },
+    {
+      "key": "a4c0a171-63d3-4cb6-903a-694327b90cf6",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Tell students to use the widget to crop the images as if they were uploading them to a social media account. They can also upload their own images and crop them as well.\n\nPair students up for the discussion. Have them go through the images together and discuss their responses to the questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Which images were challenging for you to decide how to crop? Which images did you and your partner crop the same? Which images did you and your partner crop differently?\n\n**Discussion Goal:** Use this discussion to highlight the different experiences and perspectives everyone brings to deciding how to crop an image. Direct students to consider not only what they decided to keep in the picture, but also what they decided to crop out of the picture. What happens when we crop something out of a picture? It never gets seen by the audience. Look back at the photos you cropped. What or who got left out? You may choose to guide the class toward describing general characteristics of images that were challenging to crop.\n",
+        "duration": "10",
+        "name": "Cropping Widget"
+      },
+      "seeding_key": {
+        "activity_section.key": "a4c0a171-63d3-4cb6-903a-694327b90cf6",
+        "lesson_activity.key": "047f12fd-1c43-475d-8395-211f58e1cdb0"
+      }
+    },
+    {
+      "key": "ebdc2bba-de92-41ac-8d5f-1fcd96fa60db",
+      "position": 2,
+      "properties": {
+        "description": "Now imagine we recorded how everyone in this room cropped the images from this widget. We could use that information to train a model, just like we saw in AI for Oceans. This model could be used to crop other photos being uploaded to the social media site, just like the model we trained yesterday was used to identify certain types of fish and sea creatures. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ebdc2bba-de92-41ac-8d5f-1fcd96fa60db",
+        "lesson_activity.key": "047f12fd-1c43-475d-8395-211f58e1cdb0"
+      }
+    },
+    {
+      "key": "b5e783c8-914b-4fd5-a1e1-200c1aaa5add",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** How might the cropping data from our classroom be biased? What are some ways we could address the biases in our data?\n\n**Discussion Goal:** Help students see if this were indeed training a model, bias could arise from a few different places.\n* The limited set of pictures included in the app that are most likely not representative of the photos being shared on social media.\n* The bias of the students themselves. Are teenagers more likely to focus on certain things when cropping? Is this representative of the whole population of social media users?\n",
+        "progression_name": "Cropping Widget",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "When discussing bias, connect back to the training students did in the previous lesson when deciding what an “angry”  or “fun” fish looks like, pushing students to consider how their opinions might lead to problems when training an AI model that would be widely used."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b5e783c8-914b-4fd5-a1e1-200c1aaa5add",
+        "lesson_activity.key": "047f12fd-1c43-475d-8395-211f58e1cdb0"
+      }
+    },
+    {
+      "key": "6dd5d56a-0764-4d4c-8040-e18c883af46a",
+      "position": 4,
+      "properties": {
+        "description": "It turns out that the issue of how to crop an image is something social media platforms have been working on for some time. We are going to watch a video that shows the issues that arose when Twitter used machine learning to train an algorithm to do this cropping. ",
+        "duration": "20",
+        "name": "Twitter Cropping Algorithm",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6dd5d56a-0764-4d4c-8040-e18c883af46a",
+        "lesson_activity.key": "047f12fd-1c43-475d-8395-211f58e1cdb0"
+      }
+    },
+    {
+      "key": "b55dc5c1-d1f4-4f7d-bcd9-b0d05cb6dfd2",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Watch the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) Watch from 0:00-4:05 and 9:30-13:46."
+      },
+      "seeding_key": {
+        "activity_section.key": "b55dc5c1-d1f4-4f7d-bcd9-b0d05cb6dfd2",
+        "lesson_activity.key": "047f12fd-1c43-475d-8395-211f58e1cdb0"
+      }
+    },
+    {
+      "key": "be3bcf60-246d-4bf8-aa86-459610d39838",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In the video, the primary reporter Jos asks her two colleagues, “So do you think this machine is racist?” We might all have different definitions of the term racism, but for the purposes of this discussion we are going to use this definition of racism - prejudice, discrimination, or antagonism directed against a person or people on the basis of their membership in a particular racial or ethnic group, typically one that is a minority or marginalized.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "be3bcf60-246d-4bf8-aa86-459610d39838",
+        "lesson_activity.key": "047f12fd-1c43-475d-8395-211f58e1cdb0"
+      }
+    },
+    {
+      "key": "19478526-9917-4d0c-a778-f556631e17c5",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Using this definition of racism, what aspect(s) of racism did the Twitter cropping algorithm do: prejudice, discrimination, or antagonism?\n\n**Discussion Goal:** Use this discussion to highlight the evidence brought up in the video both from the reporters and the tweets they mention from other users showing how the algorithm was biased or prejudiced towards lighter faces compared with darker faces. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This discussion is framed around the Twitter cropping algorithm and the evidence highlighted in the video. You may choose to open this discussion up to other examples based on your students’ experiences."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "19478526-9917-4d0c-a778-f556631e17c5",
+        "lesson_activity.key": "047f12fd-1c43-475d-8395-211f58e1cdb0"
+      }
+    },
+    {
+      "key": "4dcc8f6b-dfd5-4e6d-a1c9-74253261f166",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** How was the Twitter cropping algorithm trained? According to the video, where is a potential source of bias when training similar cropping algorithms?\n\n**Discussion Goal:** The most important thing for students to come away from this discussion with is the fact that the machine is not racist. The algorithm that the programmers wrote is biased towards lighter faces. Use this discussion to ensure students understand how the model used the saliency datasets discussed in the video and how some of those datasets were trained on photo libraries containing images that do not represent the population as a whole.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The rest of this video dives deeper into machine learning and algorithmic bias, including other examples of how it can lead to harm for certain groups of people. If you’d like to show the entire video to your students, consider watching the parts not listed at the end of class. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4dcc8f6b-dfd5-4e6d-a1c9-74253261f166",
+        "lesson_activity.key": "047f12fd-1c43-475d-8395-211f58e1cdb0"
+      }
+    },
+    {
+      "key": "7881d1dd-8ea4-4990-af26-2d6e340ea09b",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** If you were the CEO of Twitter and found evidence of this bias in your cropping algorithm, how would you respond? What steps would you take?\n\nYou may choose to have students share their responses if there is time, otherwise move to reading the article."
+      },
+      "seeding_key": {
+        "activity_section.key": "7881d1dd-8ea4-4990-af26-2d6e340ea09b",
+        "lesson_activity.key": "047f12fd-1c43-475d-8395-211f58e1cdb0"
+      }
+    },
+    {
+      "key": "7ad67766-8487-49b9-a751-c1bff0708074",
+      "position": 10,
+      "properties": {
+        "description": "Now that you’ve had time to consider how you might respond, we are going to read about how this actually played out and Twitter’s response when presented with evidence of bias in their cropping algorithm.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7ad67766-8487-49b9-a751-c1bff0708074",
+        "lesson_activity.key": "047f12fd-1c43-475d-8395-211f58e1cdb0"
+      }
+    },
+    {
+      "key": "1b31a5b3-03dd-40f8-bcd4-67eaa23acda6",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students read the article [“Twitter says its image-cropping algorithm was biased, so it’s ditching it (CNN)”](https://drive.google.com/file/d/1D27tKtB6cE0qbVKh5mcJI7QOQld0Jc0B/view?usp=sharing). After they are finished reading they should mark up the text with the following:\n* **Highlight / Underline:** Any information in this article that you want to know more about\n* **At The End:** Write a 10-word summary of the article\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**To Print or Not To Print?** This lesson is written assuming that you have printed out the article and have it physically available for students to write on, even though it is also possible to have students interact with this text digitally. If students read the article digitally, it is most important that they still follow the active reading strategies outlined in this lesson - highlighting the text, writing in the margins, and summarizing. This may require some additional time & instruction to teach students your preferred tools of digital annotation, and may require some additional adjustments to some of the later annotation strategies in this lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1b31a5b3-03dd-40f8-bcd4-67eaa23acda6",
+        "lesson_activity.key": "047f12fd-1c43-475d-8395-211f58e1cdb0"
+      }
+    },
+    {
+      "key": "8d417eb1-5125-4593-8ff9-8ebbc996b7c3",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Have students discuss their reactions to the quotes pulled out from Rumman Chowdry, a software engineering director for Twitter’s machine learning ethics, transparency, and accountability team. \n* Do you think Twitter’s response was appropriate?\n* What are the risks and potential harms of systems, such as social media platforms like Twitter, becoming too dependent on machine learning?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "8d417eb1-5125-4593-8ff9-8ebbc996b7c3",
+        "lesson_activity.key": "672b41e0-8b3b-44d7-a904-aa6b84585145"
+      }
+    },
+    {
+      "key": "fbd7a999-53ad-4436-a823-9af545f6053e",
+      "position": 2,
+      "properties": {
+        "description": "The story of Twitter and its photo cropping algorithm shows how something that’s built with one intention, in this case to better highlight photos, can lead to unintended effects, in this case, bias of white faces over black faces, which can also have harmful impacts on society or culture.  And, this case provides an example of a software company that has taken actionable steps to address algorithmic bias by establishing this team (machine learning ethics, transparency, and accountability team) lead by Rumman Chowdry.\n\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fbd7a999-53ad-4436-a823-9af545f6053e",
+        "lesson_activity.key": "672b41e0-8b3b-44d7-a904-aa6b84585145"
+      }
+    },
+    {
+      "key": "71c7f0b9-5087-412b-a759-a804597ab2c6",
+      "position": 3,
+      "properties": {
+        "description": "---\n\n### Assessment: Check For Understanding\n    \n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Which of the following was an unintended effect of the use of the Twitter cropping algorithm?\n",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6",
+        "lesson_activity.key": "672b41e0-8b3b-44d7-a904-aa6b84585145"
+      }
+    },
+    {
+      "key": "0dde8851-174a-476e-bd8c-3182e03aab12",
+      "position": 1,
+      "properties": {
+        "description": "This lesson is not intended to introduce students to sound research practices or how to vet credible sources. Students should come into this lesson with prior knowledge and the skills to be able to:\n\n- recognize credible sources on the internet\n- summarize information from digital sources to support an argument\n- navigate online resources and cite sources appropriately",
+        "name": "Prerequisite Skills"
+      },
+      "seeding_key": {
+        "activity_section.key": "0dde8851-174a-476e-bd8c-3182e03aab12",
+        "lesson_activity.key": "f9fcde79-6b74-48fb-8de6-879d9508ac41"
+      }
+    },
+    {
+      "key": "bfeeb411-a8bb-4ae1-872f-f2a2b2744f9c",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Deciding on a Warm Up:** We’ve provided a quick warm up activity for this lesson, but you may decide to replace it with an activity that more closely aligns with the lessons students have recently completed. If so, it may be helpful to focus on a task that reinforces summarizing an article or determining how an article could be used as evidence in an argument.\n\n**Slides:** The slide icon <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  indicates that there is a slide in the slide deck that corresponds to this activity or prompt. It can be helpful to have the slides open while reading the lesson plan, as there are sometimes visuals or videos that are not included in the lesson plan"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bfeeb411-a8bb-4ae1-872f-f2a2b2744f9c",
+        "lesson_activity.key": "04a5b7d6-3fbc-4045-a72f-372ff935fbb1"
+      }
+    },
+    {
+      "key": "0c21984c-0258-4ddc-9b21-e61f73efb0bd",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _What comes to mind when you hear the term artificial intelligence? What are examples of artificial intelligence you've seen either in real life or in fiction, like movies or music or television?_\n\nHave students record their responses in their journals, then share with a neighbor. Before having a full-group discussion, transition to the next prompt.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Can you think of times when these examples were used for good? Can you think of times when these examples were used for bad, even if unintended? Are there things they do we might consider \"right\" or \"wrong\"?_\n\nHave students think to themselves first, then discuss with a neighbor before asking students to share as a full group. Have students share the example they thought of, then the situation they thought of that could be used for good or bad.",
+        "name": "Journal"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c21984c-0258-4ddc-9b21-e61f73efb0bd",
+        "lesson_activity.key": "04a5b7d6-3fbc-4045-a72f-372ff935fbb1"
+      }
+    },
+    {
+      "key": "fa65b3c2-9343-4132-ac28-2d7a2607c9ed",
+      "position": 3,
+      "properties": {
+        "description": " **Discussion Goal**: This prompt is intentionally open-ended and vague with how we define \"good\", \"bad\", \"right\", and \"wrong\". Give students space to explore how they would describe artificial technology and find examples of \"good\" or \"bad\". Try to hear from a wide variety of voices in your classroom. When ready, advance to the next slide and use the remarks below to wrap up the discussion."
+      },
+      "seeding_key": {
+        "activity_section.key": "fa65b3c2-9343-4132-ac28-2d7a2607c9ed",
+        "lesson_activity.key": "04a5b7d6-3fbc-4045-a72f-372ff935fbb1"
+      }
+    },
+    {
+      "key": "e7888f19-b21d-4e56-a652-6a035037af04",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary**: \n\n- **Ethics:** guidelines for good behavior."
+      },
+      "seeding_key": {
+        "activity_section.key": "e7888f19-b21d-4e56-a652-6a035037af04",
+        "lesson_activity.key": "04a5b7d6-3fbc-4045-a72f-372ff935fbb1"
+      }
+    },
+    {
+      "key": "eed24ce6-024b-4b64-84fc-b807720cfe85",
+      "position": 5,
+      "properties": {
+        "description": "When we discuss right and wrong, good and bad, we are discussing “ethics”. As we create our own apps using machine learning and AI, it's important to consider the ethical impact of our decisions. No matter how “intelligent” machines may appear, they are still tools that humans create. If created or used without the right guidelines, machines with AI can easily make unethical decisions, such as being biased against someone’s gender or race. The more aware we are of ethical issues involving AI, the better we will be able to make sure that AI benefits everyone in society.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "eed24ce6-024b-4b64-84fc-b807720cfe85",
+        "lesson_activity.key": "04a5b7d6-3fbc-4045-a72f-372ff935fbb1"
+      }
+    },
+    {
+      "key": "737b817e-018b-4598-892e-2138f424c1ff",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r ethics_ai_equal_access_and_algorithmic_bias/ai-temp/unversioned] video to setup the activity they will complete today.\n\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "737b817e-018b-4598-892e-2138f424c1ff",
+        "lesson_activity.key": "00e07751-15c1-4fee-902e-1e6877eaa69e"
+      }
+    },
+    {
+      "key": "96148774-43f3-4272-80d5-850dc3d8877c",
+      "position": 2,
+      "properties": {
+        "description": "**Groups**: Place students in groups of three or four.",
+        "name": "Research and Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "96148774-43f3-4272-80d5-850dc3d8877c",
+        "lesson_activity.key": "00e07751-15c1-4fee-902e-1e6877eaa69e"
+      }
+    },
+    {
+      "key": "b27e29ea-22f3-49cc-b5fb-ebccb2f3fe0d",
+      "position": 3,
+      "properties": {
+        "description": "Roleplay time! Today you are a group of AI experts. Each group specializes in a particular area of AI ethics. You are holding a meeting to write an “AI Code of Ethics”, which will be a set of rules for people who work on AI machines and lawmakers worldwide! One example of a rule might be, “AI must treat all people fairly.” Before you begin writing these rules, you will research your area and discuss it with your group members.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b27e29ea-22f3-49cc-b5fb-ebccb2f3fe0d",
+        "lesson_activity.key": "00e07751-15c1-4fee-902e-1e6877eaa69e"
+      }
+    },
+    {
+      "key": "d0097d6a-6380-495f-acfa-0fec2733119e",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Digitally share the [r ai_ethics_research_areas/ai-temp/unversioned] document with each group. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with one copy of the [r ai_ethics_research_reflection/ai-temp/unversioned] handout. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students research their area with  fellow group members, answering questions on the handout along the way. Students can skim the longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\n\n#### AI Ethics Research Reflection\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout.\n\n\n\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d0097d6a-6380-495f-acfa-0fec2733119e",
+        "lesson_activity.key": "00e07751-15c1-4fee-902e-1e6877eaa69e"
+      }
+    },
+    {
+      "key": "cd595daa-684b-41e8-ab6d-a6716923d382",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Once students have completed their research, share an example of an AI code of ethics, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _Your next task is to create a similar resource, an “AI Code of Ethics”. Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow?_\n\nHave students discuss in their groups to brainstorm some initial ideas before regrouping to give a more specific task\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students will write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page).",
+        "name": "Draft “Our AI Code of Ethics” Resource ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Displaying a Class Code of Ethics:** The format of your class Code of Ethics is completely up to you and your students. For example, you might ask groups to create a poster, or for each take a single slide from a shared presentation (such as the one from our [r our-ai-code-of-ethics-template-slides/ai-ethics/unversioned]), or a page from a shared document. You might even ask students to use their webcams to record short video clips that you can compile and publish as a single video. Be as creative as you wish!"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cd595daa-684b-41e8-ab6d-a6716923d382",
+        "lesson_activity.key": "00e07751-15c1-4fee-902e-1e6877eaa69e"
+      }
+    },
+    {
+      "key": "340bfba4-be24-40bc-b080-acd39d6a5767",
+      "position": 1,
+      "properties": {
+        "description": "**Discuss**: _How would you describe “AI ethics” to a family member or friend who didn’t participate in today’s lesson?_\n\nEncourage student to use evidence from their research in explaining what AI Ethics is and the need for an ethical code.",
+        "name": "Journal"
+      },
+      "seeding_key": {
+        "activity_section.key": "340bfba4-be24-40bc-b080-acd39d6a5767",
+        "lesson_activity.key": "8ed127df-c40b-4809-8803-c1abd706b689"
+      }
+    },
+    {
+      "key": "56f9004c-2ac0-42be-b8c2-05a1e278e6da",
+      "position": 1,
+      "properties": {
+        "description": "If you or your students would like to learn more about AI, check out our [r how_ai_works/ai-temp/unversioned] video series.\n\n\n\n\n\n",
+        "name": "Learn more about AI\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "56f9004c-2ac0-42be-b8c2-05a1e278e6da",
+        "lesson_activity.key": "c94fe253-e775-4ad1-8d9d-1f4a38793b74"
+      }
+    },
+    {
+      "key": "8645c99d-e8c5-449c-8ec4-bc7b27c64a3b",
+      "position": 1,
+      "properties": {
+        "description": "Today we're going to learn about Blockchain technology! What is Blockchain you ask? Let's find out together!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8645c99d-e8c5-449c-8ec4-bc7b27c64a3b",
+        "lesson_activity.key": "4a5a98de-b492-47df-95a0-6aceefa69ffd"
+      }
+    },
+    {
+      "key": "97acbc7c-b1d1-4ff0-a0b5-168f430d5a9f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the \n[r how_blockchain_works_introduction/ai-temp/unversioned] video"
+      },
+      "seeding_key": {
+        "activity_section.key": "97acbc7c-b1d1-4ff0-a0b5-168f430d5a9f",
+        "lesson_activity.key": "4a5a98de-b492-47df-95a0-6aceefa69ffd"
+      }
+    },
+    {
+      "key": "f8a286c4-d9e3-4b55-899e-bd3c55a7a9dc",
+      "position": 3,
+      "properties": {
+        "description": "We're going to spend class watching this entire series! Ecah video will have some new vocabulary to keep track of. After each video, there will be a reflection question to answer and discuss. Let's get started!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f8a286c4-d9e3-4b55-899e-bd3c55a7a9dc",
+        "lesson_activity.key": "4a5a98de-b492-47df-95a0-6aceefa69ffd"
+      }
+    },
+    {
+      "key": "2129713a-9817-4395-9242-9056a4bd93c3",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** the [r vocabulary_matching/ai-temp/unversioned] notetaker to students."
+      },
+      "seeding_key": {
+        "activity_section.key": "2129713a-9817-4395-9242-9056a4bd93c3",
+        "lesson_activity.key": "4a5a98de-b492-47df-95a0-6aceefa69ffd"
+      }
+    },
+    {
+      "key": "29b3ec86-58e6-4c7d-9718-d6b00776979e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_why_blockchain_/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+      },
+      "seeding_key": {
+        "activity_section.key": "29b3ec86-58e6-4c7d-9718-d6b00776979e",
+        "lesson_activity.key": "46c8889e-3e6c-4f38-85f7-4355cef430ba"
+      }
+    },
+    {
+      "key": "5aacbc0e-b00f-4a5c-a232-a73416d08301",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is one issue in today’s society that might be improved by blockchain? What is a potential new issue that you think could occur because of Blockchain?"
+      },
+      "seeding_key": {
+        "activity_section.key": "5aacbc0e-b00f-4a5c-a232-a73416d08301",
+        "lesson_activity.key": "46c8889e-3e6c-4f38-85f7-4355cef430ba"
+      }
+    },
+    {
+      "key": "090f25ba-166a-4e6f-b7fb-ef374319a987",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_under_the_hood/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+      },
+      "seeding_key": {
+        "activity_section.key": "090f25ba-166a-4e6f-b7fb-ef374319a987",
+        "lesson_activity.key": "1bac79cf-34b0-4d15-b558-c3e4921d6f9b"
+      }
+    },
+    {
+      "key": "c683ccbf-8b65-409f-b656-fd9221efefbb",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** The blockchain helps facilitate thousands of transactions each day between people who’ve never met or trust each other. What are some of the ways the blockchain helps ensure this trust or helps make sure people don’t abuse the network?"
+      },
+      "seeding_key": {
+        "activity_section.key": "c683ccbf-8b65-409f-b656-fd9221efefbb",
+        "lesson_activity.key": "1bac79cf-34b0-4d15-b558-c3e4921d6f9b"
+      }
+    },
+    {
+      "key": "cfb8bf7d-4bf2-4b17-be26-b05b2946cf02",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_beyond_currencies/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+      },
+      "seeding_key": {
+        "activity_section.key": "cfb8bf7d-4bf2-4b17-be26-b05b2946cf02",
+        "lesson_activity.key": "e9dc2621-41aa-462f-ad59-bea401630ac9"
+      }
+    },
+    {
+      "key": "0b86a3b4-4b47-44de-a8e5-874e7709e7dd",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s a real-world situation that you think smart contracts could help with? What might make them better than how it’s handled now?"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b86a3b4-4b47-44de-a8e5-874e7709e7dd",
+        "lesson_activity.key": "e9dc2621-41aa-462f-ad59-bea401630ac9"
+      }
+    },
+    {
+      "key": "8c4a7f98-250e-49c7-b5f0-cfef533907e7",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_marketplace_price/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+      },
+      "seeding_key": {
+        "activity_section.key": "8c4a7f98-250e-49c7-b5f0-cfef533907e7",
+        "lesson_activity.key": "dc78ffe6-c1cd-49ad-aceb-a39b233a3931"
+      }
+    },
+    {
+      "key": "6f2516e8-0002-4e88-964e-a10e42bae5f2",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s an example of something whose value has changed over time? What factors caused it to change? Did it go mostly up, mostly down, or mostly stay the same?"
+      },
+      "seeding_key": {
+        "activity_section.key": "6f2516e8-0002-4e88-964e-a10e42bae5f2",
+        "lesson_activity.key": "dc78ffe6-c1cd-49ad-aceb-a39b233a3931"
+      }
+    },
+    {
+      "key": "79b13b87-8713-470e-bbc9-17f112e89477",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r blockchain_trustworthy_or_a_scam_/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+      },
+      "seeding_key": {
+        "activity_section.key": "79b13b87-8713-470e-bbc9-17f112e89477",
+        "lesson_activity.key": "abbb0aa6-d654-4130-ab38-ae014235d655"
+      }
+    },
+    {
+      "key": "8f04517c-7491-4a57-afb8-1a5db2ea4c0b",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** After watching the video, do you think Blockchain is mostly trustworthy? Or mostly a scam?"
+      },
+      "seeding_key": {
+        "activity_section.key": "8f04517c-7491-4a57-afb8-1a5db2ea4c0b",
+        "lesson_activity.key": "abbb0aa6-d654-4130-ab38-ae014235d655"
+      }
+    },
+    {
+      "key": "419be35e-d4b1-4ada-8abc-f77c26219c5c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r blockchain_societal_impact/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+      },
+      "seeding_key": {
+        "activity_section.key": "419be35e-d4b1-4ada-8abc-f77c26219c5c",
+        "lesson_activity.key": "770d000b-e678-4bf8-a98a-797388320d6b"
+      }
+    },
+    {
+      "key": "ec8ee443-e7f1-457f-a89d-92bfba916f44",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s one way Blockchain could be beneficial to society? What’s one way Blockchain might be harmful?"
+      },
+      "seeding_key": {
+        "activity_section.key": "ec8ee443-e7f1-457f-a89d-92bfba916f44",
+        "lesson_activity.key": "770d000b-e678-4bf8-a98a-797388320d6b"
+      }
+    },
+    {
+      "key": "ca0eb773-44d3-4664-aa7c-74eb256866f4",
+      "position": 1,
+      "properties": {
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How Blockchain Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLScoKvmhSCoQqK1HxKK_s3ZaCZZkjXnVoHkGKTocqA788wj5ZQ/viewform?usp=sf_link).",
+        "name": "Teacher Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "ca0eb773-44d3-4664-aa7c-74eb256866f4",
+        "lesson_activity.key": "7ea72882-4b8e-479e-a4bf-2e556ec5d35f"
+      }
+    },
+    {
+      "key": "afebd90a-7666-400a-975d-fbdc0960d6bb",
+      "position": 2,
+      "properties": {
+        "description": "Depending on your goals and student interests, you may decide to offer optional extensions related to blockchain and cryptocurrencies. Additional resources and the rest of the How Blockchain Works video series are available on [https://code.org/blockchain](https://code.org/blockchain), including a [Blockchain & Cryptocurreny Hour of Code Activity](https://coinbase.github.io/memorygame/story.html).",
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "afebd90a-7666-400a-975d-fbdc0960d6bb",
+        "lesson_activity.key": "7ea72882-4b8e-479e-a4bf-2e556ec5d35f"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U9L5 Cropping Widget_introai"
+        ],
+        "progression": "Cropping Widget"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U9L5 Cropping Widget_introai"
+        ],
+        "lesson.key": "Algorithmic Bias",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "b5e783c8-914b-4fd5-a1e1-200c1aaa5add"
+      },
+      "level_keys": [
+        "U9L5 Cropping Widget_introai"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp_U9L7_CFU12022_introai"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_U9L7_CFU12022_introai"
+        ],
+        "lesson.key": "Algorithmic Bias",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
+      },
+      "level_keys": [
+        "csp_U9L7_CFU12022_introai"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U9L7 Free Response_introai"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U9L7 Free Response_introai"
+        ],
+        "lesson.key": "Algorithmic Bias",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
+      },
+      "level_keys": [
+        "U9L7 Free Response_introai"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Recognizing Fish"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_FishVTrash_introai"
+        ],
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "0e1e66d6-5d15-4edc-a9d8-a31c0818861f"
+      },
+      "level_keys": [
+        "Oceans_FishVTrash_introai"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Recognizing Fish Features"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Short_introai"
+        ],
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "f13c2ef1-0faf-450f-b0e7-90e8099aa0a7"
+      },
+      "level_keys": [
+        "Oceans_Short_introai"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Recognizing Expressions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Long_introai"
+        ],
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "143fb379-8c75-4d60-b1e5-eed9887455e6"
+      },
+      "level_keys": [
+        "Oceans_Long_introai"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check-In Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aiml-intro-pulse-survey_introai"
+        ],
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "6b4f0c67-b8b6-49e6-9331-e6fe9b8886a1"
+      },
+      "level_keys": [
+        "aiml-intro-pulse-survey_introai"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "U9L5 Cropping Widget_introai",
+        "script_level.level_keys": [
+          "U9L5 Cropping Widget_introai"
+        ],
+        "lesson.key": "Algorithmic Bias",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "b5e783c8-914b-4fd5-a1e1-200c1aaa5add"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_U9L7_CFU12022_introai",
+        "script_level.level_keys": [
+          "csp_U9L7_CFU12022_introai"
+        ],
+        "lesson.key": "Algorithmic Bias",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U9L7 Free Response_introai",
+        "script_level.level_keys": [
+          "U9L7 Free Response_introai"
+        ],
+        "lesson.key": "Algorithmic Bias",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_FishVTrash_introai",
+        "script_level.level_keys": [
+          "Oceans_FishVTrash_introai"
+        ],
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "0e1e66d6-5d15-4edc-a9d8-a31c0818861f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Short_introai",
+        "script_level.level_keys": [
+          "Oceans_Short_introai"
+        ],
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "f13c2ef1-0faf-450f-b0e7-90e8099aa0a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Long_introai",
+        "script_level.level_keys": [
+          "Oceans_Long_introai"
+        ],
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "143fb379-8c75-4d60-b1e5-eed9887455e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aiml-intro-pulse-survey_introai",
+        "script_level.level_keys": [
+          "aiml-intro-pulse-survey_introai"
+        ],
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "6b4f0c67-b8b6-49e6-9331-e6fe9b8886a1"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "AI Code of Ethics",
+      "url": "https://docs.google.com/presentation/d/1R9kSIbLwHtLSY0HoeIz19Kt1eXQKmCCjG6qM_VQhVGc/copy",
+      "key": "ai_code_of_ethics",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ai_code_of_ethics"
+      }
+    },
+    {
+      "name": "AI Ethics Research Areas",
+      "url": "https://docs.google.com/document/d/16D3jRO2Q3KxM8FHvC8sdGLa19sxa5DGperetnX9gqcY/edit?usp=sharing",
+      "key": "ai_ethics_research_areas",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Student Handout"
+      },
+      "seeding_key": {
+        "resource.key": "ai_ethics_research_areas"
+      }
+    },
+    {
+      "name": "AI Ethics Research Reflection",
+      "url": "https://docs.google.com/document/d/19vF4UVAcJa6UsqkdKynWzSR80Mlnb2G3coBoWNxpIYc/edit?usp=sharing",
+      "key": "ai_ethics_research_reflection",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Student Handout"
+      },
+      "seeding_key": {
+        "resource.key": "ai_ethics_research_reflection"
+      }
+    },
+    {
+      "name": "AI: What is Machine Learning?",
+      "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+      "key": "ai_what_is_machine_learning_",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "ai_what_is_machine_learning_"
+      }
+    },
+    {
+      "name": "Blockchain: Societal Impact",
+      "url": "https://www.youtube.com/watch?v=C3C_JfG8cNg",
+      "key": "blockchain_societal_impact",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "blockchain_societal_impact"
+      }
+    },
+    {
+      "name": "Blockchain: Trustworthy or a Scam?",
+      "url": "https://www.youtube.com/watch?v=WzxbwEQRJPo",
+      "key": "blockchain_trustworthy_or_a_scam_",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "blockchain_trustworthy_or_a_scam_"
+      }
+    },
+    {
+      "name": "Classifying Fish",
+      "url": "https://docs.google.com/document/d/1ZCRVbRA6XLj1tRCzPed5fSGfqGjJ2I1ImES-BTo3GmY/view",
+      "key": "classifying_fish",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "classifying_fish"
+      }
+    },
+    {
+      "name": "CSP Unit 5 - Lesson 8 - Algorithmic Bias",
+      "url": "https://docs.google.com/presentation/d/1ySR0KHBdwpQIugYalf5NRnlGvI9YMeAEgvKmZtw8jcs/copy",
+      "key": "csp_unit_5_-_lesson_8_-_algorithmic_bias",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1ySR0KHBdwpQIugYalf5NRnlGvI9YMeAEgvKmZtw8jcs/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_5_-_lesson_8_-_algorithmic_bias"
+      }
+    },
+    {
+      "name": "Ethics & AI: Equal Access and Algorithmic Bias",
+      "url": "https://www.youtube.com/watch?v=tJQSyzBUAew",
+      "key": "ethics_ai_equal_access_and_algorithmic_bias",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "ethics_ai_equal_access_and_algorithmic_bias"
+      }
+    },
+    {
+      "name": "How AI Works",
+      "url": "https://youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y",
+      "key": "how_ai_works",
+      "properties": {
+        "audience": "Student",
+        "type": "Video Series"
+      },
+      "seeding_key": {
+        "resource.key": "how_ai_works"
+      }
+    },
+    {
+      "name": "How Blockchain Works",
+      "url": "https://docs.google.com/presentation/d/12LSqxNVap6ERjOrt5Nl644-6_r4VKrh0yJY5KmS-L3A/template/preview",
+      "key": "how_blockchain_works",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "how_blockchain_works"
+      }
+    },
+    {
+      "name": "How Blockchain Works: Beyond Currencies",
+      "url": "https://www.youtube.com/watch?v=3EwkfUz_BPs",
+      "key": "how_blockchain_works_beyond_currencies",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_blockchain_works_beyond_currencies"
+      }
+    },
+    {
+      "name": "How Blockchain Works: Introduction",
+      "url": "https://www.youtube.com/watch?v=MjibPL4tGqo",
+      "key": "how_blockchain_works_introduction",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_blockchain_works_introduction"
+      }
+    },
+    {
+      "name": "How Blockchain Works: Marketplace & Price",
+      "url": "https://www.youtube.com/watch?v=d9rKkk3oVdY",
+      "key": "how_blockchain_works_marketplace_price",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_blockchain_works_marketplace_price"
+      }
+    },
+    {
+      "name": "How Blockchain Works: Under the Hood",
+      "url": "https://www.youtube.com/watch?v=It_Ivgm5wQA",
+      "key": "how_blockchain_works_under_the_hood",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_blockchain_works_under_the_hood"
+      }
+    },
+    {
+      "name": "How Blockchain Works: Why Blockchain?",
+      "url": "https://www.youtube.com/watch?v=10wYLCnDHao",
+      "key": "how_blockchain_works_why_blockchain_",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_blockchain_works_why_blockchain_"
+      }
+    },
+    {
+      "name": "How Blockchain Works Youtube Playlist",
+      "url": "https://www.youtube.com/playlist?list=PLzdnOPI1iJNdzDlGJxd6B22G1bCDnPzkf",
+      "key": "how_blockchain_works_youtube_playlist",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_blockchain_works_youtube_playlist"
+      }
+    },
+    {
+      "name": "Introduction to Machine Learning",
+      "url": "https://docs.google.com/presentation/d/1ZOSt4G-bEqIiFIWFWQjvY54I2YgHlCURXmtX1FYnpFw/template/preview",
+      "key": "introduction_to_machine_learning",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_machine_learning"
+      }
+    },
+    {
+      "name": "Our AI Code of Ethics [Template]",
+      "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
+      "key": "our_ai_code_of_ethics_template_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "our_ai_code_of_ethics_template_"
+      }
+    },
+    {
+      "name": "Sharing learnings about our image cropping algorithm (Twitter)",
+      "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
+      "key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_"
+      }
+    },
+    {
+      "name": "Twitter says its image-cropping algorithm was biased, so it's ditching it (CNN)",
+      "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html",
+      "key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://drive.google.com/file/d/1D27tKtB6cE0qbVKh5mcJI7QOQld0Jc0B/view?usp=sharing",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_"
+      }
+    },
+    {
+      "name": "Vocabulary Matching",
+      "url": "https://docs.google.com/document/d/1Ns3EMBk8gNumJ9SMbXbnDbvsCi7wA0XjKbIainuiU4M/edit",
+      "key": "vocabulary_matching",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_matching"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithmic Bias",
+        "resource.key": "csp_unit_5_-_lesson_8_-_algorithmic_bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithmic Bias",
+        "resource.key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithmic Bias",
+        "resource.key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "resource.key": "blockchain_societal_impact"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "resource.key": "blockchain_trustworthy_or_a_scam_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "resource.key": "how_blockchain_works"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "resource.key": "how_blockchain_works_beyond_currencies"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "resource.key": "how_blockchain_works_introduction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "resource.key": "how_blockchain_works_marketplace_price"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "resource.key": "how_blockchain_works_under_the_hood"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "resource.key": "how_blockchain_works_why_blockchain_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "resource.key": "how_blockchain_works_youtube_playlist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "resource.key": "vocabulary_matching"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "resource.key": "ai_what_is_machine_learning_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "resource.key": "classifying_fish"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "resource.key": "introduction_to_machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Our AI Code of Ethics",
+        "resource.key": "ai_code_of_ethics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Our AI Code of Ethics",
+        "resource.key": "ai_ethics_research_areas"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Our AI Code of Ethics",
+        "resource.key": "ai_ethics_research_reflection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Our AI Code of Ethics",
+        "resource.key": "ethics_ai_equal_access_and_algorithmic_bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Our AI Code of Ethics",
+        "resource.key": "how_ai_works"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Our AI Code of Ethics",
+        "resource.key": "our_ai_code_of_ethics_template_"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "artificial_intelligence",
+      "word": "Artificial Intelligence",
+      "definition": "the ability of machines to learn and problem-solve.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "artificial_intelligence"
+      }
+    },
+    {
+      "key": "ethics",
+      "word": "Ethics",
+      "definition": "guidelines for good behavior.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "ethics"
+      }
+    },
+    {
+      "key": "machine_learning",
+      "word": "Machine Learning",
+      "definition": "How computers recognize patterns and make decisions without being explicitly programmed",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "machine_learning"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "vocabulary.key": "machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Our AI Code of Ethics",
+        "vocabulary.key": "artificial_intelligence"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Our AI Code of Ethics",
+        "vocabulary.key": "ethics"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "38e5184b-0a73-4d35-9715-dd011d43fc3c",
+      "properties": {
+        "description": "Define artificial intelligence (AI) in their own words, using technologies they encounter in their daily lives as examples."
+      },
+      "seeding_key": {
+        "lesson.key": "Our AI Code of Ethics",
+        "objective.key": "38e5184b-0a73-4d35-9715-dd011d43fc3c"
+      }
+    },
+    {
+      "key": "3f854432-7976-4aa4-98df-299cbac0b553",
+      "properties": {
+        "description": "Describe at least one example of an ethical issue pertaining to AI, along with its impact on society."
+      },
+      "seeding_key": {
+        "lesson.key": "Our AI Code of Ethics",
+        "objective.key": "3f854432-7976-4aa4-98df-299cbac0b553"
+      }
+    },
+    {
+      "key": "85ebf69e-1ef7-4817-abaf-0a8f0efe2c33",
+      "properties": {
+        "description": "Apply the Problem Solving Process to train a computer to solve a problem"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "objective.key": "85ebf69e-1ef7-4817-abaf-0a8f0efe2c33"
+      }
+    },
+    {
+      "key": "97170e18-9a17-4f74-90bd-a0d180dfcd11",
+      "properties": {
+        "description": "Explain how Blockchain works"
+      },
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "objective.key": "97170e18-9a17-4f74-90bd-a0d180dfcd11"
+      }
+    },
+    {
+      "key": "c7db1b9a-c07b-49b3-979c-1b0fa5f83514",
+      "properties": {
+        "description": "Reason about which types of tasks are should not be completed by an algorithm"
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithmic Bias",
+        "objective.key": "c7db1b9a-c07b-49b3-979c-1b0fa5f83514"
+      }
+    },
+    {
+      "key": "cb65d681-bb92-48a1-9f42-2635d27ae0a5",
+      "properties": {
+        "description": "Create at least one guiding principle that addresses an AI ethics issue."
+      },
+      "seeding_key": {
+        "lesson.key": "Our AI Code of Ethics",
+        "objective.key": "cb65d681-bb92-48a1-9f42-2635d27ae0a5"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithmic Bias",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithmic Bias",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithmic Bias",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithmic Bias",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithmic Bias",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithmic Bias",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-ii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iv.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Our AI Code of Ethics",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "9-10.RI.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Our AI Code of Ethics",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "9-10.RI.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Our AI Code of Ethics",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Our AI Code of Ethics",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

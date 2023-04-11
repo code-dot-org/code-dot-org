@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2018-05-03T16:40:15.000Z",
-  "level_num": "custom",
-  "user_id": 0,
   "properties": {
     "title": "Reflection: Frequency Analysis",
     "long_instructions": "Knowing what you know now about frequency analysis, would you feel comfortable sending your password over the Internet using a substitution cipher?\r\n\r\nWhy or why not?\r\n",
@@ -14,8 +10,13 @@
     "submittable": "false",
     "peer_reviewable": "false",
     "parent_level_id": 2548,
-    "name_suffix": "_2018"
+    "name_suffix": "_2018",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2018-05-03T16:40:15.000Z",
+  "user_id": 0,
   "published": true,
   "notes": ""
 }]]></config>

@@ -54,13 +54,13 @@ const JQUERY_JS_CONTENT = 'jquery content';
 const PNG_ASSET_CONTENT = 'asset content';
 const FONTAWESOME_CONTENT = 'fontawesome content';
 
-describe('Applab Exporter,', function() {
+describe('Applab Exporter,', function () {
   var server;
   let stashedCookieKey;
 
   testUtils.setExternalGlobals();
 
-  beforeEach(function() {
+  beforeEach(function () {
     server = sinon.fakeServerWithClock.create();
     server.respondWith(
       /\/blockly\/js\/webpack-runtime\.js\?__cb__=\d+/,
@@ -242,22 +242,22 @@ describe('Applab Exporter,', function() {
     window.userNameCookieKey = 'CoolUser';
   });
 
-  afterEach(function() {
+  afterEach(function () {
     server.restore();
     window.fetch.restore();
     assetPrefix.init({});
     window.userNameCookieKey = stashedCookieKey;
   });
 
-  describe("when assets can't be fetched,", function() {
-    beforeEach(function() {
+  describe("when assets can't be fetched,", function () {
+    beforeEach(function () {
       server.respondWith(
         /\/blockly\/js\/en_us\/common_locale\.js\?__cb__=\d+/,
         [500, {}, '']
       );
     });
 
-    it('should reject the promise with an error', function(done) {
+    it('should reject the promise with an error', function (done) {
       server.respondImmediately = true;
       let zipPromise = Exporter.exportAppToZip(
         'my-app',
@@ -270,11 +270,11 @@ describe('Applab Exporter,', function() {
         </div>`
       );
       zipPromise.then(
-        function() {
+        function () {
           assert.fail('Expected zipPromise not to resolve');
           done();
         },
-        function(error) {
+        function (error) {
           assert.equal(error.message, 'failed to fetch assets');
           done();
         }
@@ -282,9 +282,9 @@ describe('Applab Exporter,', function() {
     });
   });
 
-  describe('when exporting,', function() {
+  describe('when exporting,', function () {
     var zipFiles = {};
-    beforeEach(function(done) {
+    beforeEach(function (done) {
       server.respondImmediately = true;
       let zipPromise = Exporter.exportAppToZip(
         'my-app',
@@ -301,19 +301,19 @@ describe('Applab Exporter,', function() {
         </div>`
       );
 
-      zipPromise.then(function(zip) {
+      zipPromise.then(function (zip) {
         var relativePaths = [];
-        zip.forEach(function(relativePath, file) {
+        zip.forEach(function (relativePath, file) {
           relativePaths.push(relativePath);
         });
-        var zipAsyncPromises = relativePaths.map(function(path) {
+        var zipAsyncPromises = relativePaths.map(function (path) {
           var zipObject = zip.file(path);
           if (zipObject) {
             return zipObject.async('string');
           }
         });
-        Promise.all(zipAsyncPromises).then(function(fileContents) {
-          relativePaths.forEach(function(path, index) {
+        Promise.all(zipAsyncPromises).then(function (fileContents) {
+          relativePaths.forEach(function (path, index) {
             zipFiles[path] = fileContents[index];
           });
           done();
@@ -321,7 +321,7 @@ describe('Applab Exporter,', function() {
       }, done);
     });
 
-    describe('will produce a zip file, which', function() {
+    describe('will produce a zip file, which', function () {
       it('should contain a bunch of files', () => {
         const files = Object.keys(zipFiles);
         files.sort();
@@ -349,7 +349,7 @@ describe('Applab Exporter,', function() {
         ]);
       });
 
-      it('should contain an applab-api.js file', function() {
+      it('should contain an applab-api.js file', function () {
         assert.property(zipFiles, 'my-app/applab/applab-api.js');
         assert.equal(
           zipFiles['my-app/applab/applab-api.js'],
@@ -357,7 +357,7 @@ describe('Applab Exporter,', function() {
         );
       });
 
-      it('should contain an applab.css file', function() {
+      it('should contain an applab.css file', function () {
         assert.property(zipFiles, 'my-app/applab/applab.css');
         assert.equal(
           zipFiles['my-app/applab/applab.css'],
@@ -394,7 +394,7 @@ describe('Applab Exporter,', function() {
         });
       });
 
-      it('should contain a style.css file', function() {
+      it('should contain a style.css file', function () {
         assert.property(zipFiles, 'my-app/style.css');
       });
 
@@ -402,25 +402,25 @@ describe('Applab Exporter,', function() {
         assert.include(zipFiles['my-app/style.css'], STYLE_CSS_CONTENT);
       });
 
-      it('should contain a code.js file', function() {
+      it('should contain a code.js file', function () {
         assert.property(zipFiles, 'my-app/code.js');
       });
 
-      it('should contain a README.txt file', function() {
+      it('should contain a README.txt file', function () {
         assert.property(zipFiles, 'my-app/README.txt');
       });
 
-      it('should contain the asset files used by the project', function() {
+      it('should contain the asset files used by the project', function () {
         assert.property(zipFiles, 'my-app/assets/foo.png');
         assert.property(zipFiles, 'my-app/assets/bar.png');
         assert.property(zipFiles, 'my-app/assets/zoo.mp3');
       });
 
-      it('should contain the sound library files referenced by the project', function() {
+      it('should contain the sound library files referenced by the project', function () {
         assert.property(zipFiles, 'my-app/assets/default.mp3');
       });
 
-      it('should rewrite urls in html to point to the correct asset files', function() {
+      it('should rewrite urls in html to point to the correct asset files', function () {
         var el = document.createElement('html');
         el.innerHTML = zipFiles['my-app/index.html'];
         assert.equal(
@@ -433,7 +433,7 @@ describe('Applab Exporter,', function() {
         );
       });
 
-      it('should rewrite urls in the code to point to the correct asset files', function() {
+      it('should rewrite urls in the code to point to the correct asset files', function () {
         assert.equal(
           zipFiles['my-app/code.js'],
           'console.log("hello");\nplaySound("assets/zoo.mp3");\nplaySound("assets/default.mp3");'

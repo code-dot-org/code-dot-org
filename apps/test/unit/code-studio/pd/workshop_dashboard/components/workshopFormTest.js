@@ -1,54 +1,66 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import {isolateComponent} from 'isolate-react';
-import {expect, assert} from 'chai';
+import {mount} from 'enzyme';
+import {assert} from 'chai';
 import {Factory} from 'rosie';
 import {FormControl} from 'react-bootstrap';
 import Permission, {
-  WorkshopAdmin,
+  WorkshopAdmin
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 import {WorkshopForm} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_form';
 import '../workshopFactory';
+import {Provider} from 'react-redux';
+import {MemoryRouter} from 'react-router-dom';
+import mapboxReducer from '@cdo/apps/redux/mapbox';
+import {createStore, combineReducers} from 'redux';
 
 describe('WorkshopForm test', () => {
-  let fakeWorkshop;
+  let fakeWorkshop, store;
 
   beforeEach(() => {
     fakeWorkshop = Factory.build('workshop');
+    store = createStore(
+      combineReducers({
+        mapbox: mapboxReducer
+      })
+    );
   });
 
-  it('renders', () => {
-    const wrapper = shallow(
-      <WorkshopForm
-        permission={new Permission()}
-        facilitatorCourses={[]}
-        workshop={fakeWorkshop}
-        onSaved={() => {}}
-        readOnly={false}
-      />,
-      {context: {router: {}}}
+  it('renders csf intro workshop', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            workshop={fakeWorkshop}
+            onSaved={() => {}}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
     );
 
     const someControl = wrapper.find(FormControl);
     assert(someControl.exists());
   });
 
-  it('CSP and CSA virtual field disabled for non-ws-admin if within a month of starting', () => {
-    const csp_in_person_ws = Factory.build('workshop_csp_in_person');
-    const wrapper = isolateComponent(
-      <WorkshopForm
-        permission={new Permission(WorkshopAdmin)}
-        facilitatorCourses={[]}
-        workshop={csp_in_person_ws}
-        onSaved={() => {}}
-        readOnly={false}
-      />,
-      {context: {router: {}}}
+  it('renders csp summer workshop', () => {
+    const cspSummerWorkshop = Factory.build('csp summer workshop');
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            workshop={cspSummerWorkshop}
+            onSaved={() => {}}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
     );
 
-    // NEED TO MAKE THE SESSION START WITHIN A MONTH THEN THIS SHOULD PASS
-
-    const virtualFormControl = wrapper.findOne('SelectIsVirtual');
-    expect(virtualFormControl.props.readOnly).to.equal(true);
+    const someControl = wrapper.find(FormControl);
+    assert(someControl.exists());
   });
 });

@@ -244,7 +244,8 @@ const styles = {
   }
 };
 
-export const UnconnectedMatchAssessmentsOverviewTable = MatchAssessmentsOverviewTable;
+export const UnconnectedMatchAssessmentsOverviewTable =
+  MatchAssessmentsOverviewTable;
 
 export default connect(
   state => ({}),

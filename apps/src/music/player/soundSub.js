@@ -47,7 +47,7 @@ function WebAudio() {
   soundEffects = new SoundEffects(audioContext);
 }
 
-WebAudio.prototype.getCurrentTime = function() {
+WebAudio.prototype.getCurrentTime = function () {
   if (audioContext) {
     return audioContext.currentTime;
   } else {
@@ -55,7 +55,7 @@ WebAudio.prototype.getCurrentTime = function() {
   }
 };
 
-WebAudio.prototype.LoadSound = function(url, callback) {
+WebAudio.prototype.LoadSound = function (url, callback) {
   var request = new XMLHttpRequest();
   request.open('GET', url, true);
   request.responseType = 'arraybuffer';
@@ -63,14 +63,14 @@ WebAudio.prototype.LoadSound = function(url, callback) {
   //console.log("loading sound", url);
 
   // Decode asynchronously
-  request.onload = function() {
+  request.onload = function () {
     try {
       audioContext.decodeAudioData(
         request.response,
-        function(buffer) {
+        function (buffer) {
           callback(buffer);
         },
-        function(e) {
+        function (e) {
           console.log('error ' + e);
         }
       );
@@ -81,14 +81,14 @@ WebAudio.prototype.LoadSound = function(url, callback) {
   request.send();
 };
 
-WebAudio.prototype.LoadSoundFromBuffer = function(buffer, callback) {
+WebAudio.prototype.LoadSoundFromBuffer = function (buffer, callback) {
   try {
     audioContext.decodeAudioData(
       buffer,
-      function(buffer) {
+      function (buffer) {
         callback(buffer);
       },
-      function(e) {
+      function (e) {
         console.log('error ', e);
       }
     );
@@ -97,13 +97,13 @@ WebAudio.prototype.LoadSoundFromBuffer = function(buffer, callback) {
   }
 };
 
-WebAudio.prototype.StartPlayback = function() {
+WebAudio.prototype.StartPlayback = function () {
   if (['suspended', 'interrupted'].includes(audioContext.state)) {
     audioContext.resume();
   }
 };
 
-WebAudio.prototype.PlaySoundByBuffer = function(
+WebAudio.prototype.PlaySoundByBuffer = function (
   audioBuffer,
   id,
   when,
@@ -134,7 +134,7 @@ WebAudio.prototype.PlaySoundByBuffer = function(
   return source;
 };
 
-WebAudio.prototype.StopSoundBySource = function(source) {
+WebAudio.prototype.StopSoundBySource = function (source) {
   // todo: investigate whether this condition is needed/useful
   // across browsers.
 

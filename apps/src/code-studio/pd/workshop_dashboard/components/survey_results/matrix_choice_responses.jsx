@@ -51,9 +51,7 @@ export default class MatrixChoiceResponses extends React.Component {
             }
             const numRespondents = answer.num_respondents;
             let possibleAnswersMap = question['columns'];
-            let parsedQuestionName = `${question['title']} -> ${
-              question['rows'][innerQuestionId]
-            }`;
+            let parsedQuestionName = `${question['title']} -> ${question['rows'][innerQuestionId]}`;
             return (
               <ChoiceResponses
                 perFacilitator={section === 'facilitator'}

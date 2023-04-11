@@ -323,9 +323,8 @@ class MaterialLineChart extends GoogleChart {
   render_(dataTable, options) {
     const apiChart = new GoogleChart.lib.charts.Line(this.targetDiv_);
     // Material charts have a built-in options converter for now.
-    const convertedOptions = GoogleChart.lib.charts.Line.convertOptions(
-      options
-    );
+    const convertedOptions =
+      GoogleChart.lib.charts.Line.convertOptions(options);
     apiChart.draw(dataTable, convertedOptions);
   }
 
@@ -387,9 +386,8 @@ class MaterialScatterChart extends GoogleChart {
   render_(dataTable, options) {
     const apiChart = new GoogleChart.lib.charts.Scatter(this.targetDiv_);
     // Material charts have a built-in options converter for now.
-    const convertedOptions = GoogleChart.lib.charts.Scatter.convertOptions(
-      options
-    );
+    const convertedOptions =
+      GoogleChart.lib.charts.Scatter.convertOptions(options);
     apiChart.draw(dataTable, convertedOptions);
   }
 

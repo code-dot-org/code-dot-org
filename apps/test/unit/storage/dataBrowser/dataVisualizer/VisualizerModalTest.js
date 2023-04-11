@@ -179,7 +179,10 @@ describe('VisualizerModal', () => {
     });
 
     it('shows quotes around strings', () => {
-      let records = [{id: 3, col: '123'}, {id: 4, col: 'abc'}];
+      let records = [
+        {id: 3, col: '123'},
+        {id: 4, col: 'abc'}
+      ];
       expect(
         wrapper.instance().getValuesForFilterColumn(records, 'col')
       ).to.deep.equal(['"123"', '"abc"']);

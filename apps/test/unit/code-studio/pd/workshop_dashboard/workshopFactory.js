@@ -7,7 +7,7 @@ import {States} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
  * @see also `workshopShape` and `enrollmentShape` in types.js
  */
 Factory.define('workshop')
-  .sequence('id', (n) => n)
+  .sequence('id', n => n)
   .attr('course', 'CS Fundamentals')
   .attr('subject', 'Intro')
   .attr('sessions', () => Factory.buildList('session', 1))
@@ -24,23 +24,14 @@ Factory.define('workshop')
   .attr('organizer', {name: 'Oscar Organzier', email: 'oscar@code.org'})
   .attr('virtual', false);
 
-Factory.define('workshop_csp_in_person')
-  .sequence('id', (n) => n)
-  .attr('course', 'CS Principals')
-  .attr('subject', 'Intro')
-  .attr('sessions', () => Factory.buildList('session', 1))
-  .attr('state', States[0])
-  .attr('account_required_for_attendance?', false)
-  .attr('scholarship_workshop?', false)
-  .attr('created_at', () => new Date().toISOString())
-  .attr('capacity', 10)
-  .attr('facilitators', [])
-  .attr('location_name', 'fake_location')
-  .attr('on_map', false)
-  .attr('funded', true)
-  .attr('enrolled_teacher_count', 1)
-  .attr('organizer', {name: 'Oscar Organzier', email: 'oscar@code.org'})
-  .attr('virtual', false);
+Factory.define('csp summer workshop')
+  .extend('workshop')
+  .attr('course', 'CS Principles')
+  .attr('subject', '5-day Summer')
+  .attr('sessions', () => Factory.buildList('session', 5))
+  .attr('account_required_for_attendance?', true)
+  .attr('scholarship_workshop?', true)
+  .attr('location_name', 'physical');
 
 Factory.define('session')
   .sequence('id')
