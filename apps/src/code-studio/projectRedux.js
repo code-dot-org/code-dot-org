@@ -105,7 +105,8 @@ export default (state = initialState, action) => {
   if (action.type === REFRESH_TEACHER_HAS_CONFIRMED_UPLOAD_WARNING) {
     return {
       ...state,
-      teacherHasConfirmedUploadWarning: dashboard.project.teacherHasConfirmedUploadWarning()
+      teacherHasConfirmedUploadWarning:
+        dashboard.project.teacherHasConfirmedUploadWarning()
     };
   }
 

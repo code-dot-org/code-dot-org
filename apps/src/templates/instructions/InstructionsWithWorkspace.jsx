@@ -39,10 +39,8 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
    * call adjustTopPaneHeight as our maxHeight may need adjusting.
    */
   onResize = () => {
-    const {
-      windowWidth: lastWindowWidth,
-      windowHeight: lastWindowHeight
-    } = this.state;
+    const {windowWidth: lastWindowWidth, windowHeight: lastWindowHeight} =
+      this.state;
     const windowWidth = $(window).width();
     const windowHeight = $(window).height();
 
@@ -95,12 +93,8 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
   }
 
   render() {
-    const {
-      instructionsStyle,
-      workspaceStyle,
-      instructionsHeight,
-      children
-    } = this.props;
+    const {instructionsStyle, workspaceStyle, instructionsHeight, children} =
+      this.props;
 
     return (
       <span>

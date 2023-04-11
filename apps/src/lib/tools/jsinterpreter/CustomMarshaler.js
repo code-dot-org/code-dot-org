@@ -72,16 +72,16 @@ module.exports = class CustomMarshaler {
     obj.data = nativeObj;
     obj.isCustomMarshal = true;
     obj.type = typeof nativeObj;
-    obj.toBoolean = function() {
+    obj.toBoolean = function () {
       return Boolean(this.data);
     };
-    obj.toNumber = function() {
+    obj.toNumber = function () {
       return Number(this.data);
     };
-    obj.toString = function() {
+    obj.toString = function () {
       return String(this.data);
     };
-    obj.valueOf = function() {
+    obj.valueOf = function () {
       return this.data;
     };
     if (typeof nativeObj === 'object') {

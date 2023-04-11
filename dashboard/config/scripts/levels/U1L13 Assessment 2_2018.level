@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2018-05-03T16:35:34.000Z",
-  "level_num": "custom",
-  "user_id": 0,
   "properties": {
     "title": "Why is compression \"hard\"?",
     "long_instructions": "Why is compression a \"hard problem\" for computers?  Draw on your own experience compressing text with the text compression widget. Is there a way to know when you've compressed it the most? Explain why you can or can't know.\r\n",
@@ -14,8 +10,13 @@
     "submittable": "false",
     "peer_reviewable": "false",
     "parent_level_id": 1938,
-    "name_suffix": "_2018"
+    "name_suffix": "_2018",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2018-05-03T16:35:34.000Z",
+  "user_id": 0,
   "published": true,
   "notes": ""
 }]]></config>

@@ -163,8 +163,8 @@ describe('FoormEntityEditor in Library editing mode', () => {
     // expect second response (upon successful save of the library question)
     server.respond();
 
-    const fetchableLibraryQuestions = store.getState().foorm
-      .fetchableSubEntities;
+    const fetchableLibraryQuestions =
+      store.getState().foorm.fetchableSubEntities;
     assert(
       _.some(fetchableLibraryQuestions, ['id', 1]),
       'Newly saved library question does not appear in list of library questions for selected library'
@@ -200,8 +200,8 @@ describe('FoormEntityEditor in Library editing mode', () => {
     // expect second response (upon successful save of the library question)
     server.respond();
 
-    const fetchableLibraryQuestions = store.getState().foorm
-      .fetchableSubEntities;
+    const fetchableLibraryQuestions =
+      store.getState().foorm.fetchableSubEntities;
     const fetchableLibraries = store.getState().foorm.fetchableEntities;
     assert(
       _.some(fetchableLibraries, ['id', 2]),
@@ -240,10 +240,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
 
     // check that modal pops up
     assert(
-      wrapper
-        .find('ConfirmationDialog')
-        .at(0)
-        .prop('show'),
+      wrapper.find('ConfirmationDialog').at(0).prop('show'),
       'Save ConfirmationDialog is showing'
     );
   });
@@ -303,10 +300,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
 
     // check that modal pops up
     assert(
-      wrapper
-        .find('Modal')
-        .at(0)
-        .prop('show'),
+      wrapper.find('Modal').at(0).prop('show'),
       'Save New Form Modal is showing'
     );
 

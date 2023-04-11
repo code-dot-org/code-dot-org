@@ -14,3 +14,5 @@ answer 'Van Minnen'
 
 question "Where is Brendan from?"
 answer 'Sydney'
+
+allow_multiple_attempts true

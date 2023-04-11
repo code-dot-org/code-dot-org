@@ -4,7 +4,7 @@ import Interpreter from '@code-dot-org/js-interpreter';
 import Observer from '@cdo/apps/Observer';
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 
-describe('The JSInterpreter class', function() {
+describe('The JSInterpreter class', function () {
   var jsInterpreter;
 
   describe('static function getFunctionsAndMetadata', () => {
@@ -84,7 +84,7 @@ describe('The JSInterpreter class', function() {
     // Setup a jsInterpreter instance with `hideSource: true` so an editor isn't
     // needed.
     jsInterpreter = new JSInterpreter({
-      shouldRunAtMaxSpeed: function() {
+      shouldRunAtMaxSpeed: function () {
         return false;
       },
       studioApp: {hideSource: true}
@@ -229,8 +229,8 @@ describe('The JSInterpreter class', function() {
             code: '',
             initGlobals: () => {
               expect(jsInterpreter.interpreter).not.to.be.null;
-              const nativeCallsBackInterpreterFunc = jsInterpreter.interpreter.makeNativeMemberFunction(
-                {
+              const nativeCallsBackInterpreterFunc =
+                jsInterpreter.interpreter.makeNativeMemberFunction({
                   nativeFunc: () => {
                     var state = jsInterpreter.getCurrentState();
                     if (!state.__callCount) {
@@ -249,8 +249,7 @@ describe('The JSInterpreter class', function() {
                   nativeParentObj: {},
                   maxDepth: 5,
                   nativeCallsBackInterpreter: true
-                }
-              );
+                });
               jsInterpreter.interpreter.setProperty(
                 jsInterpreter.globalScope,
                 'nativeCallsBackInterpreterFunc',
@@ -431,7 +430,7 @@ myCallback("this message is coming from inside the interpreter");
   });
 
   let aceEditor;
-  let Range = function(startRow, startColumn, endRow, endColumn) {
+  let Range = function (startRow, startColumn, endRow, endColumn) {
     this.start = {
       row: startRow,
       column: startColumn
@@ -970,7 +969,7 @@ myCallback("this message is coming from inside the interpreter");
     });
   });
 
-  it('steps a `for` loop', function() {
+  it('steps a `for` loop', function () {
     initWithCode('for (var i = 0; i < 2; i++) { 1; }');
     assertCurrentState({node: {type: 'ForStatement'}, mode: undefined});
 
@@ -986,7 +985,7 @@ myCallback("this message is coming from inside the interpreter");
     ]);
   });
 
-  it('steps a `switch` statement', function() {
+  it('steps a `switch` statement', function () {
     initWithCode('switch (5) { case 5: 1; } 2;');
     assertCurrentState({node: {type: 'SwitchStatement'}});
 
@@ -998,9 +997,9 @@ myCallback("this message is coming from inside the interpreter");
     ]);
   });
 
-  it('hits a breakpoint', function() {
+  it('hits a breakpoint', function () {
     initWithCode('0;\n1;\n2;\n3;\n4;\n5;\n6;\n7;');
-    jsInterpreter.isBreakpointRow = function(row) {
+    jsInterpreter.isBreakpointRow = function (row) {
       return row === 3 || row === 5;
     };
 
@@ -1008,7 +1007,7 @@ myCallback("this message is coming from inside the interpreter");
       hitBreakpoint = false,
       MAX_STEPS = 100,
       i;
-    observer.observe(jsInterpreter.onPause, function() {
+    observer.observe(jsInterpreter.onPause, function () {
       hitBreakpoint = true;
     });
 

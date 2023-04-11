@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import ReportAbuseForm from '@cdo/apps/code-studio/components/ReportAbuseForm';
 
-$(document).ready(function() {
+$(document).ready(function () {
   const props = getScriptData('abuse');
   const weblabUrl = window.location.href;
   /*

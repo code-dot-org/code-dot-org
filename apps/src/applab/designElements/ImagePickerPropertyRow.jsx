@@ -52,7 +52,7 @@ export default class ImagePickerPropertyRow extends React.Component {
 
     // We may not have changed file yet (if we still actively editing)
     setTimeout(
-      function() {
+      function () {
         this.changeUnlessEditing(this.state.value);
       }.bind(this),
       USER_INPUT_DELAY

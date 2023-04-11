@@ -1272,6 +1272,10 @@ bs:
               display_name: Liste
             lessonGroup-3:
               display_name: Petlje
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Procjene
         pre-express-2023:
           lesson_groups:
             csf_loops:
@@ -1341,6 +1345,27 @@ bs:
             csf_nested_loops:
               display_name: Uvjeti
         data-society-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
+          description_short: Naučite kako ljudi koriste računala za rješavanje problema
+            podataka.
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
+          description_short: Naučite kako ljudi koriste računala za rješavanje problema
+            podataka.
+        focus-on-data2:
+          description_short: Naučite kako ljudi koriste računala za rješavanje problema
+            podataka.
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
+          description_short: Naučite kako ljudi koriste računala za rješavanje problema
+            podataka.
+        focus-on-impact-in-society3-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Poglavlje 2: Rješavanje problema podataka'

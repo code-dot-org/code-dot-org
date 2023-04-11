@@ -102,10 +102,7 @@ describe('LevelDetailsDialogTest', () => {
     expect(wrapper.contains('This is some text.')).to.be.true;
     expect(wrapper.find('TeacherOnlyMarkdown').length).to.equal(1);
     expect(
-      wrapper
-        .find('TeacherOnlyMarkdown')
-        .first()
-        .props().content
+      wrapper.find('TeacherOnlyMarkdown').first().props().content
     ).to.equal('This is some teacher only text.');
   });
 
@@ -176,10 +173,7 @@ describe('LevelDetailsDialogTest', () => {
     expect(wrapper.contains('Some things to think about.')).to.be.true;
     expect(wrapper.find('TeacherOnlyMarkdown').length).to.equal(1);
     expect(
-      wrapper
-        .find('TeacherOnlyMarkdown')
-        .first()
-        .props().content
+      wrapper.find('TeacherOnlyMarkdown').first().props().content
     ).to.equal('Some things to teach about.');
   });
 
@@ -247,12 +241,9 @@ describe('LevelDetailsDialogTest', () => {
       .instance()
       .handleBubbleChoiceBubbleClick(bubbleChoiceLevel.sublevels[0]);
     expect(wrapper.find('SublevelCard').length).to.equal(0);
-    expect(
-      wrapper
-        .find('SafeMarkdown')
-        .first()
-        .props().markdown
-    ).to.equal('Markdown1');
+    expect(wrapper.find('SafeMarkdown').first().props().markdown).to.equal(
+      'Markdown1'
+    );
     expect(wrapper.find('h1').contains('Choice 1')).to.be.true;
   });
 
@@ -365,26 +356,15 @@ describe('LevelDetailsDialogTest', () => {
       />
     );
     expect(wrapper.find('SafeMarkdown').length).to.equal(2);
-    expect(
-      wrapper
-        .find('SafeMarkdown')
-        .at(0)
-        .props().markdown
-    ).equal(
+    expect(wrapper.find('SafeMarkdown').at(0).props().markdown).equal(
       'Look at the code below and predict how the headings will be displayed.'
     );
-    expect(
-      wrapper
-        .find('SafeMarkdown')
-        .at(1)
-        .props().markdown
-    ).equal('Eggs, Bacon, Waffles');
+    expect(wrapper.find('SafeMarkdown').at(1).props().markdown).equal(
+      'Eggs, Bacon, Waffles'
+    );
     expect(wrapper.find('TeacherOnlyMarkdown').length).to.equal(1);
     expect(
-      wrapper
-        .find('TeacherOnlyMarkdown')
-        .first()
-        .props().content
+      wrapper.find('TeacherOnlyMarkdown').first().props().content
     ).to.equal('This is a multiple choice level.');
   });
 });

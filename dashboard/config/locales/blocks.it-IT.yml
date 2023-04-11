@@ -1256,6 +1256,19 @@ it:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: disponi {GROUP} in {FORMAT}
+        options:
+          FORMAT:
+            '"border"': bordo
+            '"circle"': cerchio
+            '"grid"': griglia
+            '"top"': prima fila
+            '"row"': classe
+            '"bottom"': ultima fila
+            '"left"': colonna a sinistra
+            '"column"': colonna
+            '"right"': colonna a destra
       gamelab_locationAt:
         text: 'posizione x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1282,6 +1295,18 @@ it:
             '"spiral"': spirale
       gamelab_makeNewSpriteAnon:
         text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': bordo
+            '"circle"': cerchio
+            '"grid"': griglia
+            '"top"': prima fila
+            '"row"': classe
+            '"bottom"': ultima fila
+            '"left"': colonna a sinistra
+            '"column"': colonna
+            '"right"': colonna a destra
       gamelab_makeNumSprites:
         text: crea {NUM} nuovi personaggi {ANIMATION_NAME}
       gamelab_makeProjectile:

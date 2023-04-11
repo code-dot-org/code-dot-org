@@ -28,3 +28,5 @@ While procedures/functions may be repeated, they themselves are not iterative.
 (D) This choice is NOT correct.
 Scalability refers to the ease with which a process or system can sustain substantial growth
 MARKDOWN
+
+allow_multiple_attempts true

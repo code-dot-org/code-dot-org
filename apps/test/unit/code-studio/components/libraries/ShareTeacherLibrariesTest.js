@@ -5,7 +5,11 @@ import {ShareTeacherLibraries} from '@cdo/apps/code-studio/components/libraries/
 import sinon from 'sinon';
 
 describe('ShareTeacherLibraries', () => {
-  const SECTIONS = [{id: 1, name: 'a'}, {id: 2, name: 'b'}, {id: 3, name: 'c'}];
+  const SECTIONS = [
+    {id: 1, name: 'a'},
+    {id: 2, name: 'b'},
+    {id: 3, name: 'c'}
+  ];
   const DEFAULT_PROPS = {
     onCancel: () => {},
     sections: SECTIONS,

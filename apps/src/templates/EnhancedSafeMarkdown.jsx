@@ -37,19 +37,16 @@ export class UnconnectedExpandableImagesWrapper extends React.Component {
   }
 }
 
-export const ExpandableImagesWrapper = connect(
-  null,
-  dispatch => ({
-    showImageDialog(imgUrl) {
-      dispatch(
-        openDialog({
-          imgOnly: true,
-          imgUrl
-        })
-      );
-    }
-  })
-)(UnconnectedExpandableImagesWrapper);
+export const ExpandableImagesWrapper = connect(null, dispatch => ({
+  showImageDialog(imgUrl) {
+    dispatch(
+      openDialog({
+        imgOnly: true,
+        imgUrl
+      })
+    );
+  }
+}))(UnconnectedExpandableImagesWrapper);
 
 /**
  * A wrapper for our SafeMarkdown component which adds some extra
