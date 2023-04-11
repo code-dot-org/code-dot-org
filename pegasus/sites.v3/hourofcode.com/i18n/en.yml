@@ -95,6 +95,7 @@
   call_to_action_try_activity: 'Try activity'
   call_to_action_explore_unit: 'Explore unit'
   call_to_action_view_lesson_plan: 'View lesson plan'
+  call_to_action_self_paced_pl: 'Start self-paced professional learning'
 
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: "Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems. Computer science is about so much more than coding! Enjoy Code.org's first step in a new journey to teach more about AI throughout our curriculum."
@@ -155,7 +156,7 @@
   ai_why_link_01: "Explore AI curriculums"
   ai_why_link_02: "See professional learning options"
   ai_why_link_03: "Watch AI videos"
-  ai_curricula_title: "AI Curricula"
+  ai_curricula_heading: "AI Curricula"
   ai_curricula_desc: "Explore the different AI curriculum offerings which meet diverse classroom needs."
   ai_curriculum_title_01: "AI and Machine Learning"
   ai_curriculum_desc_01: "Explore how computers learn from data. Develop machine learning projects around real-world data. Design machine learning app to solve personally relevant problem."
@@ -172,8 +173,18 @@
   ai_curriculum_grades_03: "Grade Levels: 3-12"
   ai_curriculum_duration_03: "Duration: 1 hour"
   ai_curriculum_btn_aria_label_03: "Try the AI for Oceans activity"
+  ai_pl_heading: "Preparing to teach AI"
+  ai_pl_subheading: "Prepare to teach AI using our self-paced online module."
+  ai_pl_list_01: "Get an introduction to artificial intelligence and machine learning."
+  ai_pl_list_02: "Train a machine learning model using AI Lab."
+  ai_pl_list_03: "Engage with machine learning apps."
+  ai_pl_list_04: "Consider real-world implications of AI and machine learning."
+  ai_pl_list_05: "Explore end of chapter projects."
+  ai_pl_duration: "Duration: 2 hours"
   ai_video_series_title: "How AI Works"
   ai_video_series_desc: "With an introduction by Microsoft CEO Satya Nadella, this series of short videos will introduce you to how artificial intelligence works and why it matters. Then delve into issues like algorithmic bias and the ethics of AI decision-making."
+  ai_resources_heading: "Additional resources"
+  ai_resources_desc: "Interested in learning more about AI? Here are some additional resources that can help extend your students' learning."
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'

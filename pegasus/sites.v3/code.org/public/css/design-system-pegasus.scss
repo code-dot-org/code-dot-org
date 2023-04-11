@@ -315,7 +315,8 @@ ul {
       }
 
       a {
-        font-size: 1.15em;
+        @include heading-sm;
+        color: $brand_secondary_default;
       }
     }
   }

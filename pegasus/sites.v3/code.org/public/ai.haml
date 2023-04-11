@@ -78,7 +78,7 @@ theme: responsive_full_width
 %a{id: "ai-curricula"}
 %section
   .wrapper
-    %h2=hoc_s(:ai_curricula_title)
+    %h2=hoc_s(:ai_curricula_heading)
     %p=hoc_s(:ai_curricula_desc)
     .action-block__wrapper.action-block__wrapper--three-col
       .action-block.action-block--one-col
@@ -114,13 +114,19 @@ theme: responsive_full_width
 %a{id: "ai-pl"}
 %section
   .wrapper
-    %h2 Preparing to teach AI
+    %h2=hoc_s(:ai_pl_heading)
     .action-block.action-block--two-col
-      %img{src: "/images/professional-learning/pl-teachers-talking.png", alt: "", class: "col-50"}
+      %img{src: "/images/ai/ai-professional-learning.png", alt: "", class: "col-50"}
       .text-wrapper.col-50
-        %p Your local Code.org Regional Partner provides high quality Code.org professional learning to teachers, and can help guide your school or district on implementation, certification, funding, and more. They are happy to answer any questions you may have about the program!
-        = view :professional_development_workshops_regional_partner_search
-        %a{href: "https://support.code.org/", class: "link-button secondary", target: "_blank", rel: "noopener noreferrer"} Visit our support center
+        %h3.heading-sm=hoc_s(:ai_pl_subheading)
+        %ul{style: "margin-top: 1.5em;"}
+          %li=hoc_s(:ai_pl_list_01)
+          %li=hoc_s(:ai_pl_list_02)
+          %li=hoc_s(:ai_pl_list_03)
+          %li=hoc_s(:ai_pl_list_04)
+          %li=hoc_s(:ai_pl_list_05)
+        %a{href: CDO.studio_url("/s/self-paced-pl-csd5-2022"), class: "link-button"}
+          =hoc_s(:call_to_action_self_paced_pl)
     .clear
 
 = view :section_divider_line
@@ -144,10 +150,11 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    %h2 Additional resources
+    %h2=hoc_s(:ai_resources_heading)
+    %p=hoc_s(:ai_resources_desc)
 
 = view :section_divider_line
 
 %section
   .wrapper
-    %h2 In partnership w/ Microsoft
+    = view :ai_microsoft_block
