@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
 import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
@@ -8,6 +7,8 @@ import TimelineSimple2Events from './TimelineSimple2Events';
 import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
 import {PlayerUtilsContext} from '../context';
+import {useDispatch, useSelector} from 'react-redux';
+import {clearSelectedBlockId} from '../redux/musicRedux';
 
 const barWidth = 60;
 const minNumMeasures = 30;
@@ -17,7 +18,12 @@ const eventVerticalSpace = 2;
 /**
  * Renders the music playback timeline.
  */
-const Timeline = ({isPlaying, currentPlayheadPosition}) => {
+const Timeline = () => {
+  const isPlaying = useSelector(state => state.music.isPlaying);
+  const dispatch = useDispatch();
+  const currentPlayheadPosition = useSelector(
+    state => state.music.currentPlayheadPosition
+  );
   const playerUtils = useContext(PlayerUtilsContext);
   const measuresToDisplay = Math.max(
     minNumMeasures,
@@ -47,7 +53,6 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
     : null;
 
   const timelineElementProps = {
-    currentPlayheadPosition,
     barWidth,
     eventVerticalSpace,
     getEventHeight
@@ -61,7 +66,11 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
 
   return (
     <div id="timeline" className={moduleStyles.wrapper}>
-      <div className={moduleStyles.container}>
+      <div
+        id="timeline-container"
+        className={moduleStyles.container}
+        onClick={() => dispatch(clearSelectedBlockId())}
+      >
         <div className={moduleStyles.fullWidthOverlay}>
           {arrayOfMeasures.map((measure, index) => {
             return (
@@ -77,13 +86,21 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
                       moduleStyles.barLineCurrent
                   )}
                 />
-                <div className={moduleStyles.barNumber}>{measure}</div>
+                <div
+                  className={classNames(
+                    moduleStyles.barNumber,
+                    measure === Math.floor(currentPlayheadPosition) &&
+                      moduleStyles.barNumberCurrent
+                  )}
+                >
+                  {measure}
+                </div>
               </div>
             );
           })}
         </div>
 
-        <div className={moduleStyles.soundsArea}>
+        <div id="timeline-soundsarea" className={moduleStyles.soundsArea}>
           {getBlockMode() === BlockMode.TRACKS ? (
             <TimelineTrackEvents {...timelineElementProps} />
           ) : getBlockMode() === BlockMode.SIMPLE2 ? (
@@ -93,7 +110,7 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
           )}
         </div>
 
-        <div className={moduleStyles.fullWidthOverlay}>
+        <div id="timeline-playhead" className={moduleStyles.fullWidthOverlay}>
           {playHeadOffsetInPixels !== null && (
             <div
               className={moduleStyles.playhead}
@@ -108,10 +125,6 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
   );
 };
 
-Timeline.propTypes = {
-  isPlaying: PropTypes.bool.isRequired,
-  currentPlayheadPosition: PropTypes.number.isRequired,
-  sounds: PropTypes.array
-};
+Timeline.propTypes = {};
 
 export default Timeline;

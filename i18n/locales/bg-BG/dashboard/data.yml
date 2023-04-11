@@ -578,6 +578,7 @@ bg:
         CS_Changing_Everything: Компютърните Науки Променят Всичко
         csa-day-in-pm-pl: Какво прави мениджърът на проекта?
         csa-pl-creating-objects: Създаване на Обекти
+        csd_sprite_properties: Свойства на Спрайта
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок

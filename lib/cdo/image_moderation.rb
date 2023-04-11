@@ -14,11 +14,11 @@ module ImageModeration
       endpoint: CDO.azure_content_moderation_endpoint,
       api_key: CDO.azure_content_moderation_key
     ).rate_image(image_data, content_type, image_url)
-  rescue AzureContentModerator::AzureError => err
+  rescue AzureContentModerator::AzureError => exception
     # If something goes wrong with the image moderation service our fallback
     # behavior is to allow everything through, but we also want to notify
     # Honeybadger so that we can figure out exactly what is going wrong.
-    Honeybadger.notify(err)
+    Honeybadger.notify(exception)
 
     # Log to firehose as well, to have longer-lived data
     FirehoseClient.instance.put_record(
@@ -27,7 +27,7 @@ module ImageModeration
         study: 'azure-content-moderation',
         study_group: 'v1',
         event: 'moderation-error',
-        data_string: err
+        data_string: exception
       }
     )
     :unknown

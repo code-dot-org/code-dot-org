@@ -86,7 +86,7 @@ class FakeStorybook_DEPRECATED {
 
   action() {
     // Intentional no-op
-    return function() {};
+    return function () {};
   }
 
   withExperiments(...experimentList) {

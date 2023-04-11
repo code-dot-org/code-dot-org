@@ -17,24 +17,44 @@ describe('SectionsSetUpContainer', () => {
 
     expect(wrapper.find('h1').length).to.equal(1);
     expect(wrapper.find('Button').length).to.equal(2);
-    expect(
-      wrapper
-        .find('Button')
-        .at(0)
-        .props().text
-    ).to.equal('Save and add another class section');
-    expect(
-      wrapper
-        .find('Button')
-        .at(1)
-        .props().text
-    ).to.equal('Finish creating sections');
+    expect(wrapper.find('Button').at(0).props().text).to.equal(
+      'Save and add another class section'
+    );
+    expect(wrapper.find('Button').at(1).props().text).to.equal(
+      'Finish creating sections'
+    );
   });
 
   it('renders curriculum quick assign', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
     expect(wrapper.find('CurriculumQuickAssign').length).to.equal(1);
+  });
+
+  it('renders advanced settings', () => {
+    const wrapper = shallow(<SectionsSetUpContainer />);
+
+    wrapper
+      .find('FontAwesome')
+      .at(0)
+      .simulate('click', {preventDefault: () => {}});
+
+    expect(wrapper.find('AdvancedSettingToggles').length).to.equal(1);
+  });
+
+  it('updates caret direction when Advacned Settings is clicked', () => {
+    const wrapper = shallow(<SectionsSetUpContainer />);
+
+    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal(
+      'caret-right'
+    );
+    wrapper
+      .find('FontAwesome')
+      .at(0)
+      .simulate('click', {preventDefault: () => {}});
+    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal(
+      'caret-down'
+    );
   });
 
   it('validates the form when save is clicked', () => {

@@ -50,10 +50,7 @@ describe('ProgrammingEnvironmentOverview', () => {
     );
     expect(wrapper.find('EnhancedSafeMarkdown').length).to.equal(1);
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .first()
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').first().props().markdown
     ).to.equal('spritelab description');
     expect(wrapper.find('TextLink').props().href).to.equal('/p/spritelab');
   });

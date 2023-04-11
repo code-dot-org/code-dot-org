@@ -1104,6 +1104,12 @@ fa:
     no_teacher_email:
       body_markdown: 'حساب کاربری شما آدرس ایمیلی ندارد. لطفاً برای افزودن آدرسی ایمیل پیش از تکمیل این فرم [تنظیمات حساب کاربری خود را ببینید.](%{user_registration})'
   courses_category: 'تمام دوره‌ها'
+  course_offering:
+    headers:
+      minecraft: 'ماینکرفت'
+      sports: 'ورزش'
+      csf: 'مبانی cs'
+      csc: 'اتصالهای cs'
   cookie_banner:
     message: 'درصورت ادامه‌ی استفاده از سایت ما و یا با کلیک بر روی "من موافقم"، موافقت خود را با ذخیره‌ی کوکی‌ها بر روی کامپیوتر و یا دستگاه خود اعلام کرده‌اید.'
     more_information: "سیاست حریم خصوصی Code.org را مشاهده کنید."
@@ -1153,5 +1159,6 @@ fa:
     image_width: "عرض تصویر"
     image_height: "ارتفاع تصویر"
     bits_per_pixel_header: "بیت در هر پیکسل"
+    binary: "دو دویی"
     hexadecimal: "سیستم شانزده شانزدهی"
     pixel_format_header: "قالب پیکسل"

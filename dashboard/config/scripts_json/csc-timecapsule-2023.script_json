@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2023-03-09 20:44:48 UTC",
+    "serialized_at": "2023-04-03 20:37:49 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -53,7 +53,7 @@
     },
     {
       "key": "My Time Capsule Story (pilot)",
-      "name": "Writing My Time Capsule Poem",
+      "name": "Writing My Time Capsule",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -90,7 +90,7 @@
     },
     {
       "key": "Sharing My Time Capsule (pilot)",
-      "name": "Sharing My Time Capsule",
+      "name": "Sharing Out",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -370,7 +370,7 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Introduction\" Video ",
         "name": "Digital Time Capsule Intro",
-        "progression_name": "Introduction"
+        "progression_name": "Video"
       },
       "seeding_key": {
         "activity_section.key": "227b8dcb-fb59-4c77-925c-f696d7585eca",
@@ -407,7 +407,7 @@
       "position": 4,
       "properties": {
         "description": "**Do This**: Transition students to their computers, and have them begin following the instructions for each level in the skill building section. \n\n",
-        "progression_name": "Skill Building",
+        "progression_name": "What Is a Time Capsule?",
         "tips": [
           {
             "type": "teachingTip",
@@ -584,8 +584,37 @@
       }
     },
     {
-      "key": "f042313c-2917-4ffd-9613-985abf9bf38a",
+      "key": "d276a6f0-02f4-4608-a819-8a8724b1476b",
       "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show \"Time Capsule Project Rubric\" slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "d276a6f0-02f4-4608-a819-8a8724b1476b",
+        "lesson_activity.key": "15eaf8a7-b87e-4855-a66f-f762fe1796b0"
+      }
+    },
+    {
+      "key": "b96db4da-5890-410b-bce5-f22fc05240d8",
+      "position": 2,
+      "properties": {
+        "description": "You are going to create your own time capsule poem to teach someone in the future about what your life is like now. Before we begin, let’s take a look at the rubric to see what your project will include.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In this lesson, you will be using the provided [rubric](https://docs.google.com/document/d/1oE_z84x5GRJ34fRDLCc-YfKJQIQab90pLjozaGQKaJ0/template/preview) to assess your students' projects. Rubrics are valuable tools that bring consistency and clarity to the evaluation process. By outlining specific criteria and performance levels, rubrics ensure that all students are assessed fairly and objectively. \n\nWe encourage you to share the rubric with your students before they begin their projects. This helps them understand the expectations and work towards meeting the outlined criteria. Additionally, as you grade their work, refer to the rubric consistently, so that each aspect of the project is assessed based on the same set of standards. By adopting this approach, you promote fairness, provide meaningful feedback to students, and help them identify areas for growth and improvement."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b96db4da-5890-410b-bce5-f22fc05240d8",
+        "lesson_activity.key": "15eaf8a7-b87e-4855-a66f-f762fe1796b0"
+      }
+    },
+    {
+      "key": "f042313c-2917-4ffd-9613-985abf9bf38a",
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show \"Plan Your Time Capsule Poem: Sentence Stems\" slide or \"Plan Your Time Capsule Poem: Question Grab Bag\" slide",
         "duration": "10",
@@ -598,7 +627,7 @@
     },
     {
       "key": "b6273d66-4117-4c78-a8c4-2798b310e55a",
-      "position": 2,
+      "position": 4,
       "properties": {
         "description": " Now that we have some inspiration, let’s use this graphic organizer to plan your Time Capsule poem. You will find a partner to help you brainstorm what your poem will say. \n\nRemember that a poem is made up of several lines that can rhyme but don't have to. Use the sentence stems or “grab bag questions” to get started. \n\nWhen you’re brainstorming, it’s helpful to write down as many ideas as you can think of. Then, when all your ideas are on paper, choose the best ones and use that in your final version. Let’s get started. On the count of three, you will find your partner and begin. 1…2…3. ",
         "remarks": true
@@ -610,7 +639,7 @@
     },
     {
       "key": "324597c8-0952-47f0-8a6e-4b27006647cd",
-      "position": 3,
+      "position": 5,
       "properties": {
         "description": "**Do this**: Have students pair up with a partner and read through the brainstorming questions. Students should tell their partner which questions they are going to pick and how they are going to answer those questions.\n\n***Sentence Stems:*** Have students answer all 7 sentence stems.\n\n***Question Grab Bag:*** Have students choose 1 or 2 questions from each section (Me, My Community, and My World). They should answer 3-6 questions in total.\n\nOnce students have had a chance to discuss with a partner, pass out the brainstorming handout so they can write down their ideas. "
       },
@@ -621,7 +650,7 @@
     },
     {
       "key": "9cd53054-4888-4bfb-a0f2-4d95e1eb7bc3",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "***Me:***\n- _I love to…._\n- _I just learned…_\n- _I’m thinking about…_\n\n***My community:***\n- _In my neighborhood…_\n- _People I know like to…_\n\n***My world:***\n- _Something happening right now is…_\n- _…is something popular._",
         "name": "Sentence Stems"
@@ -633,7 +662,7 @@
     },
     {
       "key": "88c3ec0e-5e44-4b92-a130-7b098c21e6f8",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "***Me:***\n- _What is your favorite thing to do?_\n- _What is something you have recently learned how to do?_\n- _What do you like to talk about?_\n- _What is something you worry about?_\n- _What is an accomplishment you are proud of?_\n\n***My Community:***\n- _What do people around you like to do?_\n- _What is something your class has accomplished?_\n- _What is something happening in your neighborhood or school that you want others to know about?_\n- _What is something special about where you live?_\n\n***My World:***\n- _What is an event that is happening in the world today?_\n- _What is something popular?_\n- _What is different about this year from last year?_\n- _What is something new that was recently invented or discovered?_\n",
         "name": "Question Grab Bag"
@@ -645,7 +674,7 @@
     },
     {
       "key": "c57237a1-2ae3-4e47-ab08-e5ac17cda37a",
-      "position": 6,
+      "position": 8,
       "properties": {
         "progression_name": "Unplugged Activity"
       },
@@ -656,7 +685,7 @@
     },
     {
       "key": "7891a7ab-6f7e-48a6-af30-220d542e02df",
-      "position": 7,
+      "position": 9,
       "properties": {
         "tips": [
           {
@@ -672,7 +701,7 @@
     },
     {
       "key": "2fe7f1f4-2ba2-4076-98aa-5a1631b12c84",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Time Capsule Poem” slide\n\n**Do This**: Have students flip their handout to the last page. They will select a couple ideas from their brainstorming session to use for their time capsule poem. Students should come up with a title and about 8 lines of poem. Afterwards, students will begin thinking about how they will code their time capsule poem to bring it to life. They will consider the skills they learned in Lesson 1 and how they will apply them to their own short poem.\n\n**Discussion goal**: Share ideas with classmates, spark new ideas and ensure that everyone has an idea for their own time capsule poem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Example Poem” and “Bring Your Time Capsule to Life” slides \n\n- _What **background** might go with your time capsule poem?_\n\n- _What **text effects** might go with your time capsule poem?_\n\n- _What **sounds** might go with your time capsule poem?_\n\n- _What **sprites** might go with your time capsule poem?_",
         "duration": "20",
@@ -685,7 +714,7 @@
     },
     {
       "key": "58a6d761-adad-465f-b191-8bbdf1d41872",
-      "position": 9,
+      "position": 11,
       "properties": {
         "tips": [
           {
@@ -701,7 +730,7 @@
     },
     {
       "key": "fc8dfdf1-43ae-416c-a132-b0459f760fba",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "This lesson is designed for students to write a time capsule from their own point of view, and can easily be adapted for students to write from another’s perspective. You may choose to have students write a time capsule from the point of view of a local or national historical figure, another student their own age living in a different region, or a character from a book. We encourage you to choose the option that aligns best with your content area standards.",
         "name": "[Optional] Extension Activity"
@@ -962,7 +991,7 @@
         "level_keys": [
           "csc_time capsule_intro video_2023"
         ],
-        "progression": "Introduction"
+        "progression": "Video"
       },
       "bonus": false,
       "seeding_key": {
@@ -984,7 +1013,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "level_keys": [
+          "csc_timecapsule_info_2023"
+        ],
+        "progression": "What Is a Time Capsule?"
       },
       "bonus": false,
       "seeding_key": {
@@ -1281,6 +1313,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_timecapsule_choice_lesson_3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1639,7 +1674,7 @@
       }
     },
     {
-      "name": "Time Capsule",
+      "name": "Coding a Time Capsule",
       "url": "https://docs.google.com/presentation/d/1jgZ_PS7uDb2KuvUNPNpW_PqSxsvfVKap4f8RscZPwVY/template/preview",
       "key": "time_capsule",
       "properties": {

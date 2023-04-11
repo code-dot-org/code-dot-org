@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import OrderableList from './OrderableList';
 import ExampleEditor from './ExampleEditor';
 import ParameterEditor from './ParameterEditor';
-import ImageInput from './ImageInput';
+import ImageInput from '../ImageInput';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -64,10 +64,8 @@ export default function ProgrammingExpressionEditor({
   environmentCategories,
   videoOptions
 }) {
-  const [
-    programmingExpression,
-    setProgrammingExpressionProperty
-  ] = useProgrammingExpression(initialProgrammingExpression);
+  const [programmingExpression, setProgrammingExpressionProperty] =
+    useProgrammingExpression(initialProgrammingExpression);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
@@ -89,6 +87,8 @@ export default function ProgrammingExpressionEditor({
         setIsSaving(false);
         if (response.ok) {
           if (shouldCloseAfterSave) {
+            // TODO: Add prop types for this field
+            // eslint-disable-next-line react/prop-types
             navigateToHref(initialProgrammingExpression.showPath);
           } else {
             setLastUpdated(Date.now());
@@ -277,6 +277,8 @@ export default function ProgrammingExpressionEditor({
         isSaving={isSaving}
         lastSaved={lastUpdated}
         error={error}
+        // TODO: define initialProgrammingExpression.showPath in prop types
+        // eslint-disable-next-line react/prop-types
         handleView={() => navigateToHref(initialProgrammingExpression.showPath)}
       />
     </div>

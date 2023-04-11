@@ -44,8 +44,8 @@ export default class SetupInstructions extends React.Component {
     return (
       <Provider store={getStore()}>
         <div>
-          <Downloads />
           <ConnectionInstructions />
+          <Downloads />
           <Support />
         </div>
       </Provider>
@@ -178,7 +178,7 @@ class Downloads extends React.Component {
     }
 
     return (
-      <div>
+      <div style={{marginTop: 50}}>
         <ToggleGroup selected={platform} onChange={this.onPlatformChange}>
           <button type="button" value={WINDOWS}>
             <FontAwesome icon="windows" /> {i18n.windows()}
@@ -207,6 +207,20 @@ const downloadButtonStyle = {
   textAlign: 'center'
 };
 
+const getMakerAppAlternatePathMsg = () => {
+  const makerAppAlternatePathMsg = shouldUseWebSerial()
+    ? applabI18n.makerSetupMakerAppAlternatePathWebSerial()
+    : applabI18n.makerSetupMakerAppAlternatePathNoWebSerial();
+  return (
+    <div>
+      <p>{makerAppAlternatePathMsg}</p>
+      <strong>
+        <SafeMarkdown markdown={applabI18n.makerSetupDeprecatingMakerApp()} />
+      </strong>
+    </div>
+  );
+};
+
 class WindowsDownloads extends React.Component {
   state = {installer: null, error: null};
 
@@ -221,6 +235,7 @@ class WindowsDownloads extends React.Component {
     return (
       <div>
         <h2>{applabI18n.makerSetupMakerAppForWindows()}</h2>
+        {getMakerAppAlternatePathMsg()}
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
@@ -267,6 +282,7 @@ class MacDownloads extends React.Component {
     return (
       <div>
         <h2>{applabI18n.makerSetupMakerAppForMac()}</h2>
+        {getMakerAppAlternatePathMsg()}
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
@@ -311,6 +327,7 @@ class LinuxDownloads extends React.Component {
     return (
       <div>
         <h2>{applabI18n.makerSetupMakerAppForLinux()}</h2>
+        {getMakerAppAlternatePathMsg()}
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button

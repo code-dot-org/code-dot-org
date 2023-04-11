@@ -797,6 +797,16 @@ hr:
             '0.75': most
             '0.5': half of
             '0.25': few
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): vrteći se udesno
+            new Behavior(spinning_left, []): vrteći se ulijevo
+            new Behavior(fluttering, []): lepršanje
+            new Behavior(jittering, []): treperenje
+            new Behavior(wobbling, []): njihanje
+            new Behavior(wandering, []): lutanje
+            new Behavior(patrolling, []): patroliranje
       binary_move:
         options:
           DIR:

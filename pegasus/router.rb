@@ -348,9 +348,9 @@ class Documents < Sinatra::Base
       remaining_content = match.post_match
       line = content.lines.count - remaining_content.lines.count + 1
       [header, remaining_content, line]
-    rescue => e
+    rescue => exception
       # Append rendered header to error message.
-      e.message << "\n#{match[:yaml]}" if match[:yaml]
+      exception.message << "\n#{match[:yaml]}" if match[:yaml]
       raise
     end
 
@@ -377,10 +377,10 @@ class Documents < Sinatra::Base
 
       response.headers['X-Pegasus-Version'] = '3'
       render_(content, path, line)
-    rescue => e
+    rescue => exception
       # Add document path to backtrace if not already included.
-      if path && [e.message, *e.backtrace].none? {|location| location.include?(path)}
-        e.set_backtrace e.backtrace.unshift(path)
+      if path && [exception.message, *exception.backtrace].none? {|location| location.include?(path)}
+        exception.set_backtrace exception.backtrace.unshift(path)
       end
       raise
     end
@@ -543,9 +543,9 @@ class Documents < Sinatra::Base
 
     def render_template(path, locals={})
       render_(File.read(path), path, 0, locals)
-    rescue => e
-      Honeybadger.context({path: path, e: e})
-      raise "Error rendering #{path}: #{e}"
+    rescue => exception
+      Honeybadger.context({path: path, e: exception})
+      raise "Error rendering #{path}: #{exception}"
     end
 
     def render_(body, path=nil, line=0, locals={})

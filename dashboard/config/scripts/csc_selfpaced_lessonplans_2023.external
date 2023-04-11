@@ -1,0 +1,27 @@
+name 'CSC-SelfPaced-lessonplans_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson Plans
+
+##### The lesson plan explains the lesson in detail with suggestions for discussions, remarks, and teacher actions.
+
+## Example lesson plan
+
+##### Here is an example of lesson plan from Module, <a href="https://www.youtube.com/watch?v=2m2Rn9VxHfU" target="blank">Conditional with Cards</a>.
+
+##### When exploring the example lesson plan, locate...
+* Slide decks
+* Handouts
+* Answer keys
+* 
+
+<img src="https://images.code.org/3df594a4e454e039675486a6e1c4ba83-image-1678904395700.png" width="800px" style="border-radius:0px; float:center; margin: 0 0 40px 40px;">
+
+
+
+
+## Let's keep learning! 
+
+MARKDOWN

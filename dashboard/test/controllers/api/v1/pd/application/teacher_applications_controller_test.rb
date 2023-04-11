@@ -18,7 +18,7 @@ module Api::V1::Pd::Application
       partner = @program_manager.regional_partners.first
       partner.update!(applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL)
       @hash_with_admin_approval = build TEACHER_APPLICATION_HASH_FACTORY, regional_partner_id: partner.id
-      @application = create TEACHER_APPLICATION_FACTORY, regional_partner: partner
+      @application = create TEACHER_APPLICATION_FACTORY, form_data_hash: @hash_with_admin_approval
 
       @program_manager_without_admin_approval = create :program_manager
       partner_without_admin_approval = @program_manager_without_admin_approval.regional_partners.first

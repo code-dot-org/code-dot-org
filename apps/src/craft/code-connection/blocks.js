@@ -39,9 +39,15 @@ const rotateDirections = [
   [i18n.directionRight() + ' \u21BB', 'right']
 ];
 
-const positionTypes = [[i18n.relative(), '~'], [i18n.absolute(), '']];
+const positionTypes = [
+  [i18n.relative(), '~'],
+  [i18n.absolute(), '']
+];
 
-const timeTypes = [[i18n.timeDay(), 'day'], [i18n.timeNight(), 'night']];
+const timeTypes = [
+  [i18n.timeDay(), 'day'],
+  [i18n.timeNight(), 'night']
+];
 
 const weatherTypes = [
   [i18n.weatherTypeClear(), 'clear'],
@@ -82,7 +88,7 @@ export const install = (blockly, blockInstallOptions) => {
   //Vec3 helper block
   blockly.Blocks.craft_vecThree = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setInputsInline(true);
       Blockly.cdoUtils.setHSV(
         this,
@@ -103,7 +109,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_vecThree = function() {
+  blockly.JavaScript.craft_vecThree = function () {
     var x = Blockly.JavaScript.valueToCode(
       this,
       'X',
@@ -128,7 +134,7 @@ export const install = (blockly, blockInstallOptions) => {
   // Agent related blocks
   blockly.Blocks.craft_move = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
@@ -143,14 +149,14 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_move = function() {
+  blockly.JavaScript.craft_move = function () {
     var dir = this.getFieldValue('DIR');
     return `move('block_id_${this.id}','${dir}');`;
   };
 
   blockly.Blocks.craft_turn = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
@@ -165,14 +171,14 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_turn = function() {
+  blockly.JavaScript.craft_turn = function () {
     var dir = this.getFieldValue('DIR');
     return `turn('block_id_${this.id}','${dir}');`;
   };
 
   blockly.Blocks.craft_place = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
@@ -190,7 +196,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_place = function() {
+  blockly.JavaScript.craft_place = function () {
     var dir = this.getFieldValue('DIR');
     var value = Blockly.JavaScript.valueToCode(
       this,
@@ -202,7 +208,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_till = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
@@ -217,14 +223,14 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_till = function() {
+  blockly.JavaScript.craft_till = function () {
     var dir = this.getFieldValue('DIR');
     return `till('block_id_${this.id}','${dir}');`;
   };
 
   blockly.Blocks.craft_attack = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
@@ -239,14 +245,14 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_attack = function() {
+  blockly.JavaScript.craft_attack = function () {
     var dir = this.getFieldValue('DIR');
     return `attack('block_id_${this.id}','${dir}');`;
   };
 
   blockly.Blocks.craft_destroy = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
@@ -261,14 +267,14 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_destroy = function() {
+  blockly.JavaScript.craft_destroy = function () {
     var dir = this.getFieldValue('DIR');
     return `destroy('block_id_${this.id}','${dir}');`;
   };
 
   blockly.Blocks.craft_collectall = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
@@ -283,13 +289,13 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_collectall = function() {
+  blockly.JavaScript.craft_collectall = function () {
     return `collectall('block_id_${this.id}');`;
   };
 
   blockly.Blocks.craft_collect = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
@@ -304,7 +310,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_collect = function() {
+  blockly.JavaScript.craft_collect = function () {
     var itemName = Blockly.JavaScript.valueToCode(
       this,
       'ITEM',
@@ -315,7 +321,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_drop = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
@@ -336,7 +342,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_drop = function() {
+  blockly.JavaScript.craft_drop = function () {
     var dir = this.getFieldValue('DIR');
     var slotNumber = Blockly.JavaScript.valueToCode(
       this,
@@ -353,7 +359,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_dropall = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
@@ -368,14 +374,14 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_dropall = function() {
+  blockly.JavaScript.craft_dropall = function () {
     var dir = this.getFieldValue('DIR');
     return `dropall('block_id_${this.id}','${dir}');`;
   };
 
   blockly.Blocks.craft_detect = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
@@ -389,7 +395,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_detect = function() {
+  blockly.JavaScript.craft_detect = function () {
     var dir = this.getFieldValue('DIR');
     return [
       `detect('block_id_${this.id}','${dir}')`,
@@ -399,7 +405,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_inspect = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
@@ -413,7 +419,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_inspect = function() {
+  blockly.JavaScript.craft_inspect = function () {
     var dir = this.getFieldValue('DIR');
     return [
       `inspect('block_id_${this.id}','${dir}')`,
@@ -423,7 +429,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_inspectdata = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
@@ -437,7 +443,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_inspectdata = function() {
+  blockly.JavaScript.craft_inspectdata = function () {
     var dir = this.getFieldValue('DIR');
     return [
       `inspectdata('block_id_${this.id}','${dir}')`,
@@ -447,7 +453,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_detectredstone = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
@@ -461,7 +467,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_detectredstone = function() {
+  blockly.JavaScript.craft_detectredstone = function () {
     var dir = this.getFieldValue('DIR');
     return [
       `detectredstone('block_id_${this.id}','${dir}')`,
@@ -471,7 +477,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_getitemdetail = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
@@ -487,7 +493,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_getitemdetail = function() {
+  blockly.JavaScript.craft_getitemdetail = function () {
     var slotNumber = Blockly.JavaScript.valueToCode(
       this,
       'SLOTNUM',
@@ -501,7 +507,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_getitemspace = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
@@ -517,7 +523,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_getitemspace = function() {
+  blockly.JavaScript.craft_getitemspace = function () {
     var slotNumber = Blockly.JavaScript.valueToCode(
       this,
       'SLOTNUM',
@@ -531,7 +537,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_getitemcount = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
@@ -547,7 +553,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_getitemcount = function() {
+  blockly.JavaScript.craft_getitemcount = function () {
     var slotNumber = Blockly.JavaScript.valueToCode(
       this,
       'SLOTNUM',
@@ -561,7 +567,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_transfer = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
@@ -585,7 +591,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_transfer = function() {
+  blockly.JavaScript.craft_transfer = function () {
     var srcSlotNumber = Blockly.JavaScript.valueToCode(
       this,
       'SRCSLOTNUM',
@@ -601,14 +607,12 @@ export const install = (blockly, blockInstallOptions) => {
       'QUANTITY',
       Blockly.JavaScript.ORDER_NONE
     );
-    return `transfer('block_id_${
-      this.id
-    }',${srcSlotNumber},${quantity},${dstSlotNumber});`;
+    return `transfer('block_id_${this.id}',${srcSlotNumber},${quantity},${dstSlotNumber});`;
   };
 
   blockly.Blocks.craft_tptoplayer = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
@@ -623,13 +627,13 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_tptoplayer = function() {
+  blockly.JavaScript.craft_tptoplayer = function () {
     return `tptoplayer('block_id_${this.id}');`;
   };
   // Non-agent blocks
   blockly.Blocks.craft_wait = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         customControlColor.h,
@@ -651,14 +655,14 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_wait = function() {
+  blockly.JavaScript.craft_wait = function () {
     var milliseconds = window.parseInt(this.getFieldValue('MILLISECONDS'), 10);
     return `wait('block_id_${this.id}','${milliseconds}');`;
   };
 
   blockly.Blocks.craft_executeasother = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
@@ -681,7 +685,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_executeasother = function() {
+  blockly.JavaScript.craft_executeasother = function () {
     var target = encodeURIComponent(this.getFieldValue('TARGET'));
     var positionType = this.getFieldValue('POSITIONTYPE');
     var vec3 = Blockly.JavaScript.valueToCode(
@@ -690,14 +694,12 @@ export const install = (blockly, blockInstallOptions) => {
       Blockly.JavaScript.ORDER_NONE
     );
     var command = this.getFieldValue('COMMAND');
-    return `executeasother('block_id_${
-      this.id
-    }','${target}',createBlockPosFromVec3(${vec3}, "${positionType}"),'${command}');`;
+    return `executeasother('block_id_${this.id}','${target}',createBlockPosFromVec3(${vec3}, "${positionType}"),'${command}');`;
   };
 
   blockly.Blocks.craft_timesetbyname = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
@@ -712,14 +714,14 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_timesetbyname = function() {
+  blockly.JavaScript.craft_timesetbyname = function () {
     var time = this.getFieldValue('TIME');
     return `timesetbyname('block_id_${this.id}','${time}');`;
   };
 
   blockly.Blocks.craft_timesetbynumber = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
@@ -736,7 +738,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_timesetbynumber = function() {
+  blockly.JavaScript.craft_timesetbynumber = function () {
     var time =
       Blockly.JavaScript.valueToCode(
         this,
@@ -748,7 +750,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_weather = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
@@ -763,14 +765,14 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_weather = function() {
+  blockly.JavaScript.craft_weather = function () {
     var weather = this.getFieldValue('WEATHER');
     return `weather('block_id_${this.id}','${weather}');`;
   };
 
   blockly.Blocks.craft_tptotarget = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
@@ -789,7 +791,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_tptotarget = function() {
+  blockly.JavaScript.craft_tptotarget = function () {
     var victim = encodeURIComponent(this.getFieldValue('VICTIM'));
     var destination = encodeURIComponent(this.getFieldValue('DESTINATION'));
     return `tptotarget('block_id_${this.id}','${victim}','${destination}');`;
@@ -797,7 +799,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_tptopos = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
@@ -817,7 +819,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_tptopos = function() {
+  blockly.JavaScript.craft_tptopos = function () {
     var victim = encodeURIComponent(this.getFieldValue('VICTIM'));
     var positionType = this.getFieldValue('POSITIONTYPE');
     var vec3 = Blockly.JavaScript.valueToCode(
@@ -825,14 +827,12 @@ export const install = (blockly, blockInstallOptions) => {
       'VEC3',
       Blockly.JavaScript.ORDER_NONE
     );
-    return `tptopos('block_id_${
-      this.id
-    }','${victim}',createBlockPosFromVec3(${vec3}, "${positionType}"));`;
+    return `tptopos('block_id_${this.id}','${victim}',createBlockPosFromVec3(${vec3}, "${positionType}"));`;
   };
 
   blockly.Blocks.craft_fill = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
@@ -866,7 +866,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_fill = function() {
+  blockly.JavaScript.craft_fill = function () {
     var fromPositionType = this.getFieldValue('FROMPOSITIONTYPE');
     var fromVec3 = Blockly.JavaScript.valueToCode(
       this,
@@ -884,14 +884,12 @@ export const install = (blockly, blockInstallOptions) => {
       'ITEM',
       Blockly.JavaScript.ORDER_NONE
     );
-    return `fill('block_id_${
-      this.id
-    }',createBlockPosFromVec3(${fromVec3}, "${fromPositionType}"),createBlockPosFromVec3(${toVec3}, "${toPositionType}"),${item}['name'],${item}['data']);`;
+    return `fill('block_id_${this.id}',createBlockPosFromVec3(${fromVec3}, "${fromPositionType}"),createBlockPosFromVec3(${toVec3}, "${toPositionType}"),${item}['name'],${item}['data']);`;
   };
 
   blockly.Blocks.craft_give = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
@@ -913,7 +911,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_give = function() {
+  blockly.JavaScript.craft_give = function () {
     var player = encodeURIComponent(this.getFieldValue('PLAYER'));
     var item = Blockly.JavaScript.valueToCode(
       this,
@@ -931,7 +929,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_kill = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
@@ -947,14 +945,14 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_kill = function() {
+  blockly.JavaScript.craft_kill = function () {
     var target = encodeURIComponent(this.getFieldValue('TARGET'));
     return `kill('block_id_${this.id}','${target}');`;
   };
 
   blockly.Blocks.craft_setblock = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
@@ -983,7 +981,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_setblock = function() {
+  blockly.JavaScript.craft_setblock = function () {
     var positionType = this.getFieldValue('POSITIONTYPE');
     var oldBlockHandling = this.getFieldValue('OLDBLOCKHANDLING');
     var vec3 = Blockly.JavaScript.valueToCode(
@@ -996,14 +994,12 @@ export const install = (blockly, blockInstallOptions) => {
       'ITEM',
       Blockly.JavaScript.ORDER_NONE
     );
-    return `setblock('block_id_${
-      this.id
-    }',createBlockPosFromVec3(${vec3}, "${positionType}"), ${item}, '${oldBlockHandling}');`;
+    return `setblock('block_id_${this.id}',createBlockPosFromVec3(${vec3}, "${positionType}"), ${item}, '${oldBlockHandling}');`;
   };
 
   blockly.Blocks.craft_summon = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
@@ -1025,7 +1021,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_summon = function() {
+  blockly.JavaScript.craft_summon = function () {
     var entityType = this.getFieldValue('ENTITYTYPE');
     var positionType = this.getFieldValue('POSITIONTYPE');
     var vec3 = Blockly.JavaScript.valueToCode(
@@ -1033,14 +1029,12 @@ export const install = (blockly, blockInstallOptions) => {
       'VEC3',
       Blockly.JavaScript.ORDER_NONE
     );
-    return `summon('block_id_${
-      this.id
-    }','${entityType}',createBlockPosFromVec3(${vec3}, "${positionType}"));`;
+    return `summon('block_id_${this.id}','${entityType}',createBlockPosFromVec3(${vec3}, "${positionType}"));`;
   };
 
   blockly.Blocks.craft_testforblock = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
@@ -1063,7 +1057,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_testforblock = function() {
+  blockly.JavaScript.craft_testforblock = function () {
     var positionType = this.getFieldValue('POSITIONTYPE');
     var vec3 = Blockly.JavaScript.valueToCode(
       this,
@@ -1076,9 +1070,7 @@ export const install = (blockly, blockInstallOptions) => {
       Blockly.JavaScript.ORDER_NONE
     );
     return [
-      `testforblock('block_id_${
-        this.id
-      }',createBlockPosFromVec3(${vec3}, "${positionType}"),${item})`,
+      `testforblock('block_id_${this.id}',createBlockPosFromVec3(${vec3}, "${positionType}"),${item})`,
       Blockly.JavaScript.ORDER_FUNCTION_CALL
     ];
   };
@@ -1086,7 +1078,7 @@ export const install = (blockly, blockInstallOptions) => {
   //pelican
   blockly.Blocks.craft_testforblocks = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
@@ -1124,7 +1116,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_testforblocks = function() {
+  blockly.JavaScript.craft_testforblocks = function () {
     var fromPositionType = this.getFieldValue('FROMPOSITIONTYPE');
     var fromVec3 = Blockly.JavaScript.valueToCode(
       this,
@@ -1145,16 +1137,14 @@ export const install = (blockly, blockInstallOptions) => {
     );
     var testMode = this.getFieldValue('TESTMODE');
     return [
-      `testforblocks('block_id_${
-        this.id
-      }',createBlockPosFromVec3(${fromVec3}, "${fromPositionType}"),createBlockPosFromVec3(${toVec3}, "${toPositionType}"),createBlockPosFromVec3(${vec3}, "${positionType}"),'${testMode}')`,
+      `testforblocks('block_id_${this.id}',createBlockPosFromVec3(${fromVec3}, "${fromPositionType}"),createBlockPosFromVec3(${toVec3}, "${toPositionType}"),createBlockPosFromVec3(${vec3}, "${positionType}"),'${testMode}')`,
       Blockly.JavaScript.ORDER_FUNCTION_CALL
     ];
   };
 
   blockly.Blocks.craft_clone = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
@@ -1196,7 +1186,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_clone = function() {
+  blockly.JavaScript.craft_clone = function () {
     var fromPositionType = this.getFieldValue('FROMPOSITIONTYPE');
     var fromVec3 = Blockly.JavaScript.valueToCode(
       this,
@@ -1217,14 +1207,12 @@ export const install = (blockly, blockInstallOptions) => {
     );
     var maskMode = this.getFieldValue('MASKMODE');
     var cloneMode = this.getFieldValue('CLONEMODE');
-    return `clone('block_id_${
-      this.id
-    }',createBlockPosFromVec3(${fromVec3}, "${fromPositionType}"),createBlockPosFromVec3(${toVec3}, "${toPositionType}"),createBlockPosFromVec3(${vec3}, "${positionType}"),'${maskMode}','${cloneMode}');`;
+    return `clone('block_id_${this.id}',createBlockPosFromVec3(${fromVec3}, "${fromPositionType}"),createBlockPosFromVec3(${toVec3}, "${toPositionType}"),createBlockPosFromVec3(${vec3}, "${positionType}"),'${maskMode}','${cloneMode}');`;
   };
 
   blockly.Blocks.craft_clonefiltered = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
@@ -1264,7 +1252,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_clonefiltered = function() {
+  blockly.JavaScript.craft_clonefiltered = function () {
     var fromPositionType = this.getFieldValue('FROMPOSITIONTYPE');
     var fromVec3 = Blockly.JavaScript.valueToCode(
       this,
@@ -1289,15 +1277,13 @@ export const install = (blockly, blockInstallOptions) => {
       'ITEM',
       Blockly.JavaScript.ORDER_NONE
     );
-    return `clonefiltered('block_id_${
-      this.id
-    }',createBlockPosFromVec3(${fromVec3}, "${fromPositionType}"),createBlockPosFromVec3(${toVec3}, "${toPositionType}"),createBlockPosFromVec3(${vec3}, "${positionType}")}','${cloneMode}',${item});`;
+    return `clonefiltered('block_id_${this.id}',createBlockPosFromVec3(${fromVec3}, "${fromPositionType}"),createBlockPosFromVec3(${toVec3}, "${toPositionType}"),createBlockPosFromVec3(${vec3}, "${positionType}")}','${cloneMode}',${item});`;
   };
 
   // Item blocks
 
   blockly.Blocks.craft_createblock = {
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         itemBlockColor.h,
@@ -1314,7 +1300,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_createblock = function() {
+  blockly.JavaScript.craft_createblock = function () {
     var blockType = Blockly.JavaScript.valueToCode(
       this,
       'BLOCKTYPE',
@@ -1332,7 +1318,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.Blocks.craft_block = {
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         itemBlockColor.h,
@@ -1349,7 +1335,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_block = function() {
+  blockly.JavaScript.craft_block = function () {
     var block = this.getFieldValue('BLOCK');
     return [
       `item('block_id_${this.id}','${getName(block)}','${getData(block)}')`,
@@ -1358,7 +1344,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.Blocks.craft_miscellaneous = {
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         itemBlockColor.h,
@@ -1375,7 +1361,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_miscellaneous = function() {
+  blockly.JavaScript.craft_miscellaneous = function () {
     var item = this.getFieldValue('ITEM');
     return [
       `item('block_id_${this.id}','${getName(item)}','${getData(item)}')`,
@@ -1384,7 +1370,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.Blocks.craft_decoration = {
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         itemBlockColor.h,
@@ -1401,7 +1387,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_decoration = function() {
+  blockly.JavaScript.craft_decoration = function () {
     var item = this.getFieldValue('ITEM');
     return [
       `item('block_id_${this.id}','${getName(item)}','${getData(item)}')`,
@@ -1410,7 +1396,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.Blocks.craft_tool = {
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         itemBlockColor.h,
@@ -1427,7 +1413,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_tool = function() {
+  blockly.JavaScript.craft_tool = function () {
     var item = this.getFieldValue('ITEM');
     return [
       `item('block_id_${this.id}','${getName(item)}','${getData(item)}')`,
@@ -1436,7 +1422,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.Blocks.craft_getnameof = {
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         itemBlockColor.h,
@@ -1450,7 +1436,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_getnameof = function() {
+  blockly.JavaScript.craft_getnameof = function () {
     var item = Blockly.JavaScript.valueToCode(
       this,
       'ITEM',
@@ -1460,7 +1446,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.Blocks.craft_getdataof = {
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(
         this,
         itemBlockColor.h,
@@ -1474,7 +1460,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.JavaScript.craft_getdataof = function() {
+  blockly.JavaScript.craft_getdataof = function () {
     var item = Blockly.JavaScript.valueToCode(
       this,
       'ITEM',

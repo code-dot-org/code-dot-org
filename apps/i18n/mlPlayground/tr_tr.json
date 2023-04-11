@@ -13,6 +13,7 @@
   "columnDetailsMaximumValue": "maks",
   "dataCardLastUpdated": "Son güncelleme",
   "predictButton": "Tahmin Et",
+  "uniqueOptionsWarningNotice": "Not",
   "datasets": {
     "medical_priority": {
       "fields": {

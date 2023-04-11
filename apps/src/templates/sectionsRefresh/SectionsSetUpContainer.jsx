@@ -2,9 +2,11 @@ import React, {useState} from 'react';
 import i18n from '@cdo/locale';
 import SingleSectionSetUp from './SingleSectionSetUp';
 import CurriculumQuickAssign from './CurriculumQuickAssign';
+import AdvancedSettingToggles from './AdvancedSettingToggles';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
@@ -14,7 +16,15 @@ const SECTIONS_API = '/api/v1/sections';
 //   - sections: list of objects that represent the sections to create
 //   - updateSection: function to update the section at the given index
 const useSections = () => {
-  const [sections, setSections] = useState([{}]);
+  // added "default properties" for any new section
+  const [sections, setSections] = useState([
+    {
+      pairingAllowed: true,
+      restrictSection: false,
+      ttsAutoplayEnabled: false,
+      lessonExtras: true
+    }
+  ]);
 
   const updateSection = (sectionIdx, keyToUpdate, val) => {
     const newSections = sections.map((section, idx) => {
@@ -72,8 +82,18 @@ const saveSection = (e, section) => {
     });
 };
 
+// TO DO: Add a prop to indicate if this is a new section or an existing section
 export default function SectionsSetUpContainer() {
   const [sections, updateSection] = useSections();
+  const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
+
+  const caretStyle = style.caret;
+  const caret = advancedSettingsOpen ? 'caret-down' : 'caret-right';
+
+  const toggleAdvancedSettingsOpen = () => {
+    setAdvancedSettingsOpen(!advancedSettingsOpen);
+  };
+
   return (
     <form id={FORM_ID}>
       <h1>{i18n.setUpClassSectionsHeader()}</h1>
@@ -92,6 +112,34 @@ export default function SectionsSetUpContainer() {
         updateSection={(key, val) => updateSection(0, key, val)}
         sectionCourse={sections[0].course}
       />
+      <span>
+        <div style={style.div}>
+          <FontAwesome
+            id={'uitest-advanced-settings'}
+            onClick={toggleAdvancedSettingsOpen}
+            icon={caret}
+            style={caretStyle}
+          />
+          <h3
+            style={style.label}
+            onClick={toggleAdvancedSettingsOpen}
+            htmlFor={'uitest-advanced-settings'}
+          >
+            {i18n.advancedSettings()}
+          </h3>
+        </div>
+      </span>
+      <div>
+        {advancedSettingsOpen && (
+          <AdvancedSettingToggles
+            updateSection={(key, val) => updateSection(0, key, val)}
+            section={sections[0]}
+            assignedUnitTextToSpeechEnabled={true}
+            assignedUnitLessonExtrasAvailable={true}
+            label={i18n.pairProgramming()}
+          />
+        )}
+      </div>
       <div className={moduleStyles.buttonsContainer}>
         <Button
           icon="plus"
@@ -111,3 +159,16 @@ export default function SectionsSetUpContainer() {
     </form>
   );
 }
+
+const style = {
+  caret: {
+    marginRight: 10
+  },
+  label: {
+    display: 'inline-block'
+  },
+  div: {
+    cursor: 'pointer',
+    flexGrow: 1
+  }
+};

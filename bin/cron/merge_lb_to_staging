@@ -63,10 +63,10 @@ def main
     "robo-DTS created and merged <a href=\"#{GitHub.url(pr_number)}\">PR#{pr_number}</a>",
     color: 'green'
   )
-rescue Exception => e
+rescue Exception => exception
   ChatClient.message(
     'staging',
-    "<!here> EXCEPTION: #{e.message}",
+    "<!here> EXCEPTION: #{exception.message}",
     color: 'red'
   )
   DevelopersTopic.set_dts 'no (robo-DTS failed (Levelbuilder > Staging))'

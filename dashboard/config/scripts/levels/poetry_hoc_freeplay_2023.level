@@ -1,9 +1,5 @@
 <Poetry>
   <config><![CDATA[{
-  "game_id": 69,
-  "created_at": "2023-03-09T15:12:52.000Z",
-  "level_num": "custom",
-  "user_id": 13468,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -41,12 +37,16 @@
     "standalone_app_name": "poetry_hoc",
     "skip_autosave": true,
     "video_key": "poemart_celebration",
-    "encrypted_examples": "txek4jklMWvLsEBTTFs4XKc9J9kwLqhvfk2wBLp0MOKAUZTGQv4Pe0ZBUpyy\nF4RtlHCazCbczMeveB67DLj01Q==\n",
+    "encrypted_examples": "LKLLOC/Qn1YWpp+t89ngsCG/iQ80lyPIh26f+buAOhd6+PEU7CxXwt+G8+Zt\np5pMwpYSQ1iO+NAUbTDYFXx7gwm55Aaf1B20FbS6BcH1Y81FhYBxeqPcSguI\nMrdl3Cqk+q7uuQ0L0bW3z9Sud3x36RC9ijjpHovwXh+DlpbHGR3Z5zaAzEgv\nuc/XT3pqf3ETiuGUCj4bTAPSce8EVpw5mKWsFfMK+aj39xOSTIc4VhUjtEuG\nrNfGIe/XJ18Pn9j7PcdNBX0BLkzNGHcCgHl+36CvHhSt0847mffGOLX5YfDU\nPslsYHau62gqPXqsLYDLKarUfvexFui2b0YF1igbrA==\n",
     "name_suffix": "_2023",
     "preload_asset_list": null
   },
+  "game_id": 69,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-03-09T15:12:52.685+00:00\",\"changed\":[\"cloned from \\\"poetry_hoc_freeplay\\\"\"],\"cloned_from\":\"poetry_hoc_freeplay\"}]",
+  "created_at": "2023-03-09T15:12:52.000Z",
+  "level_num": "custom",
+  "user_id": 13468,
+  "audit_log": "[{\"changed_at\":\"2023-03-09T15:12:52.685+00:00\",\"changed\":[\"cloned from \\\"poetry_hoc_freeplay\\\"\"],\"cloned_from\":\"poetry_hoc_freeplay\"},{\"changed_at\":\"2023-03-24 21:48:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

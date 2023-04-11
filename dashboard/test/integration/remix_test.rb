@@ -218,8 +218,8 @@ class RemixTest < ActionDispatch::IntegrationTest
   end
 
   private def stub_project_level(type)
-    factory = FactoryGirl.factories.registered?(type) ? type : :level
-    level = FactoryGirl.create(factory)
+    factory = FactoryBot.factories.registered?(type) ? type : :level
+    level = FactoryBot.create(factory)
     ProjectsController.any_instance.stubs(:get_from_cache).returns(level)
   end
 

@@ -17,13 +17,13 @@ function testAsyncProgram(testName, program, doneCondition, validator) {
     description: testName,
     editCode: true,
     xml: program,
-    runBeforeClick: function(assert) {
+    runBeforeClick: function (assert) {
       // add a completion on timeout since this is a freeplay level
       tickWrapper
         .tickAppUntil(Applab, doneCondition.bind(null, assert))
         .then(() => Applab.onPuzzleComplete());
     },
-    customValidator: function(assert) {
+    customValidator: function (assert) {
       validator(assert);
       return true;
     },

@@ -25,7 +25,7 @@ import {Provider} from 'react-redux';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
 
-$(document).ready(function() {
+$(document).ready(function () {
   const lessonData = getScriptData('lesson');
   const relatedLessons = getScriptData('relatedLessons');
   const unitInfo = getScriptData('unitForLesson');

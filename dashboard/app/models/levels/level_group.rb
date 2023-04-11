@@ -181,8 +181,8 @@ class LevelGroup < DSLDefined
       level.clone_sublevels_with_suffix(get_levels_and_texts_by_page, suffix)
       level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
       level
-    rescue Exception => e
-      raise e, "Failed to clone LevelGroup #{name.inspect} as #{new_name.inspect}. Message:\n#{e.message}", e.backtrace
+    rescue Exception => exception
+      raise exception, "Failed to clone LevelGroup #{name.inspect} as #{new_name.inspect}. Message:\n#{exception.message}", exception.backtrace
     end
   end
 

@@ -26,7 +26,7 @@ import {
   CourseRoles
 } from '@cdo/apps/templates/currentUserRedux';
 
-$(document).ready(function() {
+$(document).ready(function () {
   prepareBlockly();
   displayLessonOverview();
   prepareExpandableImageDialog();

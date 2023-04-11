@@ -140,7 +140,7 @@ export function range(start, end) {
  * second function if and only if the first function returns true
  */
 export function executeIfConditional(conditional, fn) {
-  return function() {
+  return function () {
     if (conditional()) {
       return fn.apply(this, arguments);
     }
@@ -169,7 +169,7 @@ export const stripEncapsulatingDoubleQuotes = inputString =>
 /**
  * Defines an inheritance relationship between parent class and this class.
  */
-Function.prototype.inherits = function(parent) {
+Function.prototype.inherits = function (parent) {
   this.prototype = Object.create(parent.prototype);
   this.prototype.constructor = this;
   this.superPrototype = parent.prototype;
@@ -183,14 +183,14 @@ export function wrapNumberValidatorsForLevelBuilder() {
   var nonNeg = Blockly.FieldTextInput.nonnegativeIntegerValidator;
   var numVal = Blockly.FieldTextInput.numberValidator;
 
-  Blockly.FieldTextInput.nonnegativeIntegerValidator = function(text) {
+  Blockly.FieldTextInput.nonnegativeIntegerValidator = function (text) {
     if (text === '???') {
       return text;
     }
     return nonNeg(text);
   };
 
-  Blockly.FieldTextInput.numberValidator = function(text) {
+  Blockly.FieldTextInput.numberValidator = function (text) {
     if (text === '???') {
       return text;
     }
@@ -224,7 +224,7 @@ export function randomKey(obj) {
  * @returns {string} RFC4122-compliant UUID
  */
 export function createUuid() {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
     var r = (Math.random() * 16) | 0,
       v = c === 'x' ? r : (r & 0x3) | 0x8;
     return v.toString(16);
@@ -356,7 +356,7 @@ export function escapeText(text) {
   return (
     first +
     rest
-      .map(function(line) {
+      .map(function (line) {
         return '<div>' + (line.length ? line : '<br>') + '</div>';
       })
       .join('')
@@ -892,11 +892,61 @@ export function hashString(str) {
  * @see https://getbootstrap.com/2.3.2/javascript.html#tooltips
  */
 export function tooltipifyVocabulary() {
-  $('.vocab').each(function() {
+  $('.vocab').each(function () {
     $(this).tooltip({placement: 'bottom'});
   });
 }
 
 export function isBlank(str) {
   return !!(!str || str.trim() === '');
+}
+
+const Environments = {
+  production: 'production',
+  levelbuilder: 'levelbuilder',
+  test: 'test',
+  staging: 'staging',
+  adhoc: 'adhoc',
+  development: 'development',
+  unknown: 'unknown'
+};
+
+export function getEnvironment() {
+  const hostname = currentLocation().hostname;
+  if (hostname.includes('adhoc')) {
+    // As adhoc hostnames may include other keywords, check it first.
+    return Environments.adhoc;
+  }
+  if (hostname.includes('test')) {
+    return Environments.test;
+  }
+  if (hostname.includes('levelbuilder')) {
+    return Environments.levelbuilder;
+  }
+  if (hostname.includes('staging')) {
+    return Environments.staging;
+  }
+  if (hostname.includes('localhost') || hostname.includes('127.0.0.1')) {
+    return Environments.development;
+  }
+  if (hostname === 'code.org' || hostname === 'studio.code.org') {
+    return Environments.production;
+  }
+  return Environments.unknown;
+}
+
+export function isDevelopmentEnvironment() {
+  return getEnvironment() === Environments.development;
+}
+
+export function isStagingEnvironment() {
+  return getEnvironment() === Environments.staging;
+}
+
+export function isTestEnvironment() {
+  return getEnvironment() === Environments.test;
+}
+
+export function isProductionEnvironment() {
+  return getEnvironment() === Environments.production;
 }

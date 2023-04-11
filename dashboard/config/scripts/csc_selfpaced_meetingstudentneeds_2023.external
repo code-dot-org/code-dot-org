@@ -3,21 +3,61 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# CS Concepts and Skills
+# Meeting student needs
 
-##### In the next section of this professional learning module, you will be introduced to lesson levels and have the opportunity to practice using key computer science concepts in CS Connections modules.
 
-## You will:
+## Review
 
-* ##### Preview CS Connections lesson levels.
-* ##### Code using Sprite Lab.
-* ##### Code using different types of events.
-* ##### Identify skills your students will develop.
+#### What did you notice and wonder? 
 
-### **Suggested time:** 20 minutes
+<details>
+
+<summary><strong>Did you notice ...</strong></summary>
+
+<img src="https://images.code.org/9b6959aa8dfe1ff674aad8c0a78119ec-image-1680739466965.gif" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+##### **... students can**
+
+* ##### choose among different sprites?
+* ##### give sprites a location and behaviors?
+
+<hr style="clear:both">
+
+<img src="https://images.code.org/a699901168d72010283137be13ffbf10-image-1680736491646.gif" style="float: left; height: 300px; clear: ; margin: 0 20px 20px 0;">
+
+##### **... events can happen**
+
+* ##### with a click?
+* ##### when sprites touch?
+* ##### during a set amount of time?
+
+</details>
+
+<div style="clear:both"/>
+
+
+<details>
+
+<summary><strong>Did you wonder ...</strong></summary>
+
+* ##### ... what challenges might my students have with sprites?
+* ##### ... what challenges might my students have with events?
+
+</details>
+
+<div style="clear:both"/>
+
+## Keep in mind
+
+<details>
+
+<summary><strong>Teaching tips for sprites and events</strong></summary>
+
+* ##### XXXXX
+* ##### XXXXX
+
+</details>
+
 
 ## Let's keep learning! 
-
-
-
 MARKDOWN

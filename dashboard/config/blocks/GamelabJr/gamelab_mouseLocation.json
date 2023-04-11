@@ -4,6 +4,7 @@
     "expression": "{x: World.mouseX, y: World.mouseY}",
     "name": "mouseLocation",
     "blockText": "mouse location",
-    "returnType": "Location"
+    "returnType": "Location",
+    "style": "location_blocks"
   }
 }
