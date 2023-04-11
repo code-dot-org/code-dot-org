@@ -12,7 +12,12 @@ const ABSOLUTE_CDO_CURRICULUM_REGEXP = new RegExp(
   '^https://curriculum.code.org/',
   'i'
 );
-const ABSOLUTE_CDO_IMAGES_REGEXP = new RegExp('^https://images.code.org/', 'i');
+
+// absolute URL to images.code.org
+export const ABSOLUTE_CDO_IMAGES_REGEXP = new RegExp(
+  '^https://images.code.org/',
+  'i'
+);
 
 export const DATA_URL_PREFIX_REGEX = new RegExp('^data:image');
 
