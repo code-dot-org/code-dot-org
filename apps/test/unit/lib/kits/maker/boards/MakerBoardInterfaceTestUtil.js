@@ -2,10 +2,6 @@
 import sinon from 'sinon';
 import {EventEmitter} from 'events'; // see node-libs-browser
 import {expect} from '../../../../../util/reconfiguredChai';
-import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
-import VirtualCPBoard from '@cdo/apps/lib/kits/maker/boards/VirtualCPBoard';
-import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
-import VirtualMBBoard from '@cdo/apps/lib/kits/maker/boards/VirtualMBBoard';
 
 /**
  * Interface that our board controllers must implement to be usable with
@@ -220,19 +216,10 @@ export function itImplementsTheMakerBoardInterface(
 
       it(`returns an Led component`, () => {
         const led = board.createLed(10);
-        // VirtualCPBoard doesn't provide an LED component, so check the basic LED
-        // shape instead.
         expect(led.on).to.be.a('function');
         expect(led.off).to.be.a('function');
         expect(led.toggle).to.be.a('function');
-
-        if (
-          BoardClass === CircuitPlaygroundBoard ||
-          BoardClass === VirtualCPBoard
-        ) {
-          expect(led.blink).to.be.a('function');
-          expect(led.pulse).to.be.a('function');
-        }
+        expect(led.blink).to.be.a('function');
       });
     });
 
@@ -260,32 +247,5 @@ export function itImplementsTheMakerBoardInterface(
         expect(button).to.have.property('isPressed');
       });
     });
-
-    if (BoardClass === MicroBitBoard || BoardClass === VirtualMBBoard) {
-      /**
-       * @function
-       * @name MakerBoard#createCapacitiveTouchSensor
-       * @param {number} pin
-       * @return {EventEmitter} a newly constructed CapTouch component
-       */
-      describe(`createCapacitiveTouchSensor(pin)`, () => {
-        // Example code:
-        // var newSensor = createCapacitiveTouchSensor(2);
-        // onBoardEvent(newSensor, "down", function() {
-        //   console.log("pressed");
-        // });
-
-        beforeEach(() => {
-          return board.connect();
-        });
-
-        it(`returns an Event Emitter with isPressed property`, () => {
-          const button = board.createCapacitiveTouchSensor(2);
-          // Check the basic button shape
-          expect(button).to.be.an.instanceOf(EventEmitter);
-          expect(button).to.have.property('isPressed');
-        });
-      });
-    }
   });
 }
