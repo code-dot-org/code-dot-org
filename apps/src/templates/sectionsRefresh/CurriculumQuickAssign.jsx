@@ -24,7 +24,7 @@ export default function CurriculumQuickAssign({
   const [courseOfferings, setCourseOfferings] = useState(null);
   const [decideLater, setDecideLater] = useState(false);
   const [marketingAudience, setMarketingAudience] = useState(null);
-  const [selectedCourseOffering, setSelectedCourseOffering] = useState(null);
+  const [selectedCourseOffering, setSelectedCourseOffering] = useState();
 
   const showPlOfferings = queryParams('participantType') !== 'student';
 
@@ -146,6 +146,7 @@ export default function CurriculumQuickAssign({
           }
           updateCourse={course => updateSection('course', course)}
           sectionCourse={sectionCourse}
+          isNewSection={isNewSection}
         />
       )}
       {marketingAudience && isPlOrHoc() && courseOfferings && (
