@@ -35,6 +35,7 @@ Feature: Hour of Code 2015 tutorial is completable
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/2?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
+    And I wait until element "#continue-button" is not visible
     When I ensure droplet is in text mode
     And I append text to droplet "moveRight();\n"
     And I append text to droplet "moveDown();\n"
@@ -47,6 +48,7 @@ Feature: Hour of Code 2015 tutorial is completable
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/3?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
+    And I wait until element "#continue-button" is not visible
     When I ensure droplet is in text mode
     And I append text to droplet "moveUp();\n"
     And I append text to droplet "moveDown();\n"
@@ -61,6 +63,7 @@ Feature: Hour of Code 2015 tutorial is completable
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/4?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
+    And I wait until element "#continue-button" is not visible
     When I append text to droplet "moveLeft();\n"
     And I append text to droplet "moveLeft();\n"
     And I append text to droplet "moveDown();\n"
@@ -74,6 +77,7 @@ Feature: Hour of Code 2015 tutorial is completable
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/5?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
+    And I wait until element "#continue-button" is not visible
     And I append text to droplet "moveRight();\n"
     And I append text to droplet "moveDown();\n"
     And I append text to droplet "moveDown();\n"
@@ -87,6 +91,7 @@ Feature: Hour of Code 2015 tutorial is completable
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/6?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
+    And I wait until element "#continue-button" is not visible
     When I ensure droplet is in text mode
     And I append text to droplet "moveDown();\n"
     And I append text to droplet "moveUp();\n"
@@ -106,6 +111,7 @@ Feature: Hour of Code 2015 tutorial is completable
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/5?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
+    And I wait until element "#continue-button" is not visible
     And I append text to droplet "moveLeft();\n"
     And I append text to droplet "moveLeft();\n"
     And I append text to droplet "moveDown();\n"
@@ -119,7 +125,7 @@ Feature: Hour of Code 2015 tutorial is completable
     And I append text to droplet "moveUp();\n"
     And I press "runButton"
     Then element ".modal" is not visible
-    And element "#continue-button" is not visible
+    And I wait until element "#continue-button" is not visible
 
   @no_ie @no_mobile
   Scenario: Using the "Start Over" button in block mode

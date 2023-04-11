@@ -1,6 +1,7 @@
 And(/^I wait to see Droplet text mode$/) do
   wait = Selenium::WebDriver::Wait.new(timeout: 10)
-  wait.until {@browser.execute_script("return parseInt($('.droplet-ace').css('left')) > 0;")}
+  wait.until {@browser.execute_script("return $('.droplet-gutter > div').css('display') === 'none';")}
+  #wait.until {@browser.execute_script("return parseInt($('.droplet-ace').css('left')) > 0;")}
 end
 
 And(/^I wait to see Droplet block mode$/) do
