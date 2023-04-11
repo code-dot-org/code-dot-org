@@ -96,6 +96,9 @@
   call_to_action_explore_unit: 'Explore unit'
   call_to_action_view_lesson_plan: 'View lesson plan'
   call_to_action_self_paced_pl: 'Start self-paced professional learning'
+  call_to_action_watch_panel: 'Watch panel'
+  call_to_action_learn_about_challenge: 'Learn about challenge'
+  call_to_action_explore_website: 'Explore website'
 
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: "Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems. Computer science is about so much more than coding! Enjoy Code.org's first step in a new journey to teach more about AI throughout our curriculum."
@@ -185,6 +188,15 @@
   ai_video_series_desc: "With an introduction by Microsoft CEO Satya Nadella, this series of short videos will introduce you to how artificial intelligence works and why it matters. Then delve into issues like algorithmic bias and the ethics of AI decision-making."
   ai_resources_heading: "Additional resources"
   ai_resources_desc: "Interested in learning more about AI? Here are some additional resources that can help extend your students' learning."
+  ai_resources_title_01: "Ethics of AI Panel"
+  ai_resources_desc_01: "Go deeper with some of our favorite AI experts! This panel discussion touches on important issues like algorithmic bias and the future of work."
+  ai_resources_btn_aria_label_01: "Watch the Ethics of AI panel"
+  ai_resources_title_02: "Imagine Cup Junior"
+  ai_resources_desc_02: "This global AI for Good challenge introduces students to Microsoft's AI for Good initiatives, empowering them to solve a problem in the world with the power of AI."
+  ai_resources_btn_aria_label_02: "Learn about the Imagine Cup Junior challenge"
+  ai_resources_title_03: "AI for Teachers"
+  ai_resources_desc_03: "Supports integration of Artificial Intelligence knowledge throughout K-12 Offer free professional development, webinars, conference presentations, and peer-to-peer learning opportunities."
+  ai_resources_btn_aria_label_03: "Explore the AI for Teachers website"
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'

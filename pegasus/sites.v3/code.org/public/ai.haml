@@ -152,6 +152,26 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:ai_resources_heading)
     %p=hoc_s(:ai_resources_desc)
+    .action-block__wrapper.action-block__wrapper--three-col
+      .action-block.action-block--one-col
+        %h3=hoc_s(:ai_resources_title_01)
+        %img{src: "/images/ai//ai-resources-ethics-panel.png", alt: ""}
+        %p{style: "height: 125px"}=hoc_s(:ai_resources_desc_01)
+        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1") , class: "link-button", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
+          =hoc_s(:call_to_action_watch_panel)
+      .action-block.action-block--one-col
+        %h3=hoc_s(:ai_resources_title_02)
+        %img{src: "/images/ai/ai-resources-imagine-cup.png", alt: ""}
+        %p{style: "height: 125px"}=hoc_s(:ai_resources_desc_02)
+        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1") , class: "link-button", aria:{label: hoc_s(:ai_resources_btn_aria_label_02)}}
+          =hoc_s(:call_to_action_learn_about_challenge)
+      .action-block.action-block--one-col
+        %h3=hoc_s(:ai_resources_title_03)
+        %img{src: "/images/ai/ai-resources-for-teachers.png", alt: ""}
+        %p{style: "height: 125px"}=hoc_s(:ai_resources_desc_03)
+        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1") , class: "link-button", aria:{label: hoc_s(:ai_resources_btn_aria_label_03)}}
+          =hoc_s(:call_to_action_explore_website)
+
 
 = view :section_divider_line
 
