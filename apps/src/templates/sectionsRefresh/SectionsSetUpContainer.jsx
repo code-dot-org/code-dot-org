@@ -125,6 +125,7 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
         updateSection={(key, val) => updateSection(0, key, val)}
       />
       <CurriculumQuickAssign
+        isNewSection={isNewSection}
         updateSection={(key, val) => updateSection(0, key, val)}
         sectionCourse={sections[0].course}
       />

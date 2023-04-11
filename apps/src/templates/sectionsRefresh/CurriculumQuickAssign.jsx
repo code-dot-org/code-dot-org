@@ -16,7 +16,11 @@ export const MARKETING_AUDIENCE = {
   PL: 'pl'
 };
 
-export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
+export default function CurriculumQuickAssign({
+  isNewSection,
+  updateSection,
+  sectionCourse
+}) {
   const [courseOfferings, setCourseOfferings] = useState(null);
   const [decideLater, setDecideLater] = useState(false);
   const [marketingAudience, setMarketingAudience] = useState(null);
@@ -33,6 +37,55 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
       .then(response => response.json())
       .then(data => setCourseOfferings(data));
   }, []);
+
+  // // if it is a new section OR if there is no course assigened this should return null
+  // const findExistingCourseOffering = (
+  //   isNewSection,
+  //   sectionCourse,
+  //   courseOfferings,
+  //   marketingAudience
+  // ) => {
+  //   if (isNewSection || sectionCourse.courseOfferingId === null) {
+  //     return null;
+  //   } else {
+  //     // return the exisiting course
+  //     // Go through course offerings and see if any of the
+  //     // ids match the coruse offering for sectionCourse.
+  //     // If so set exisitingCourseOffering to that course
+  //     if (marketingAudience) {
+  //       const courseOfferingByMarketingAudience =
+  //         courseOfferings[marketingAudience];
+  //       return findCourse(courseOfferingByMarketingAudience, sectionCourse);
+  //     }
+  //     return null;
+  //   }
+  // };
+
+  // const findCourse = (offerings, sectionCourse) => {
+  //   if (!offerings) {
+  //     return null;
+  //   }
+
+  //   console.log('offerings.id is ' + offerings.id);
+  //   console.log('sectionCourse.id is ' + sectionCourse.id);
+  //   if (offerings.id === sectionCourse.id) {
+  //     console.log(offerings);
+  //     return offerings;
+  //   } else if (offerings.children) {
+  //     offerings.children.forEach(currentChild =>
+  //       findCourse(currentChild, sectionCourse)
+  //     );
+  //   } else {
+  //     return null;
+  //   }
+  // };
+
+  // const exisitingCourseOffering = findExistingCourseOffering(
+  //   isNewSection,
+  //   sectionCourse,
+  //   courseOfferings,
+  //   marketingAudience
+  // );
 
   /*
   When toggling 'decide later', clear out marketing audience or assign one to make
@@ -106,6 +159,7 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
           sectionCourse={sectionCourse}
         />
       )}
+
       <VersionUnitDropdowns
         courseOffering={selectedCourseOffering}
         updateCourse={course => updateSection('course', course)}
@@ -117,5 +171,6 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
 
 CurriculumQuickAssign.propTypes = {
   updateSection: PropTypes.func.isRequired,
-  sectionCourse: PropTypes.object
+  sectionCourse: PropTypes.object,
+  isNewSection: PropTypes.bool
 };
