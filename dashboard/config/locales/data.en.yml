@@ -769,6 +769,8 @@ en:
         csc-starquilts-intro: 'CSC: Star Quilts'
         csc-mapmakers-intro: "CSC: Mapmakers\t"
         csa-pl-vocab-pm: Project Management Vocabulary
+        csc-ecosystems-intro: Ecosystems Intro
+        PL_CSD_MicroBit_Intro: Introduction to the Micro:bit
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
