@@ -20,7 +20,7 @@ const CurriculumCatalog = ({curriculaData}) => (
     </div>
     <div className={style.catalogContentContainer}>
       <div className={style.catalogContent}>
-        {/*TODO [MEG]: calculate and pass in duration and translated from backend, use image in imageSrc */}
+        {/*TODO [MEG]: calculate and pass in duration and translated from backend */}
         {curriculaData
           .filter(curriculum => !!curriculum.grade_levels)
           .map(
