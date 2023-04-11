@@ -106,7 +106,10 @@ he:
         Testing: {}
         cspunit2: {}
         algebraPD2a: {}
-        allthethings: {}
+        allthethings:
+          lessons:
+            lesson-49:
+              name: מוסיקה
         algebraPD2b: {}
         cspfacilitator: {}
         K5-OnlinePD: {}
@@ -2673,3 +2676,22 @@ he:
           lesson_groups:
             lessonGroup-3:
               display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        csa9-2023: {}
+        microbit-2023: {}
+        vpl-csd-ci-1: {}
+        vpl-csd-ci-2: {}
+        vpl-csd-ci-3: {}
+        vpl-csd-ci-4: {}
+        vpl-csd-ci-5: {}
+        vpl-csd-ci-6: {}
+        vpl-csd-ci-7: {}
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        focus-on-creativity4b-2023: {}
+        focus-on-hardware3b-2023: {}
+        focus-on-design-with-purpose4b-2023: {}
+        ai-temp: {}
+        focus-on-coding4b-2023: {}
+        csd6b-2023: {}

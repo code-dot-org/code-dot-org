@@ -75,7 +75,7 @@ it:
   cancel: Annulla
   okay: Ok!
   or: o
-  heading_x_of_y: "%{heading} (pagina %{x} su %{y})"
+  heading_x_of_y: "%{heading} (pagina %{x} di %{y})"
   join_section:
     code:
       title: Iscriviti ad una classe su Code.org
@@ -417,8 +417,8 @@ it:
       professional_learning: Professional learning
       documentation: Documentazione
       tutorials: Corsi
-      app_lab_documentation: Documentazione dell'App Lab
-      app_lab_tutorials: Tutorial dell'App Lab
+      app_lab_documentation: Documentazione dello Sviluppo app
+      app_lab_tutorials: Tutorial dello Sviluppo app
       game_lab_documentation: Documentazione del Game Lab
       game_lab_tutorials: Tutorial del Game Lab
       sprite_lab_documentation: Documentazione Sviluppo App
@@ -516,7 +516,7 @@ it:
       prize_us_only: "(Solo per gli studenti degli Stati Uniti)"
       prizes_link: Più informazioni
   teacher:
-    answer: Rispondi
+    answer: Risposta
     dashboard: Cruscotto dell'Insegnante
     for_teachers_only: Per gli insegnanti
     title:
@@ -1271,11 +1271,11 @@ it:
     download_in_Vietnamese: 'Scarica in vietnamita:'
     windows: Windows (64 bit)
     mac: Mac OS X
-  locked_stage: I contenuti di questa fase non sono visibili perché questa fase è
-    al momento bloccata. Il/La tuo/a insegnante può sbloccare questa fase quando è
-    il momento di lavorarci su o revisionare le tue risposte.
-  hidden_stage: Il/La tuo/a insegnante non ti aspettava qui. Per favore chiedi al/alla
-    tuo/a insegnante su quale lezione dovresti essere.
+  locked_stage: I contenuti di questa lezione non sono visibili perché questa lezione
+    è attualmente bloccata. Il tuo insegnante può sbloccare questa lezione quando
+    è il momento di lavorarci o rivedere le tue risposte.
+  hidden_stage: Il tuo insegnante non si aspettava  in questa lezione. Chiedi al tuo
+    insegnante a quale lezione dovresti partecipare.
   hidden_script: Il tuo insegnante non si aspettava che tu arrivassi qui. Per favore,
     chiedigli in quale lezione dovresti essere.
   no_course_access_student: Non hai accesso a questo corso. Per favore chiedi al tuo
@@ -1437,6 +1437,13 @@ it:
         favore, prima di compilare questo modulo, [vai alle impostazioni del tuo account](%{user_registration})
         per aggiungere il tuo indirizzo email.
   courses_category: Corsi Avanzati
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      hello_world: Ciao mondo
+      sports: Sport
+      csf: Corsi base
+      csc: Informatica interdisciplinare
   cookie_banner:
     message: Continuando a navigare nel nostro sito o cliccando su "Accetto", accetti
       la memorizzazione dei cookie sul tuo computer o dispositivo.

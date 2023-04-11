@@ -140,6 +140,9 @@ pl:
           description_short: Wszystkie typy poziomów dla testowania UI
           student_description: Wszystkie typy poziomów dla testowania UI
           name: wszystkie rzeczy
+          lessons:
+            lesson-49:
+              name: Muzyka
         algebraPD2b:
           description: 'Faza 2 Online: Mieszane letnie studia'
           description_short: 'Faza 2 Online: Mieszane letnie studia'
@@ -4704,6 +4707,8 @@ pl:
               name: Microbit Playground
             lesson-10:
               name: Badanie pulsu do klonowania
+            lesson-12:
+              name: Plac zabaw AI
         csc-pilot-2022-ecosystems:
           name: csc-pilot-2022-ecosystems
         csc-pilot-2022-timecapsule:
@@ -6202,3 +6207,100 @@ pl:
             lessonGroup-3:
               display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
           description_short: Naucz się programować przy pomocy urządzeń fizycznych
+        csa9-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Przegląd i praktyka
+            lessonGroup-3:
+              display_name: Egzaminy próbne
+          name: csa9-2023
+          description_short: Uczniowie przygotowują się do egzaminu AP CSA, ćwicząc odpowiedzi na pytania wielokrotnego wyboru i pytania otwarte.
+          description: Ta jednostka przygotowuje uczniów do egzaminu AP CSA poprzez przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru i pytań z odpowiedziami swobodnymi oraz wzmacnianie strategii pisania testu. Uczniowie identyfikują mocne strony i obszary poprawy, aby tworzyć zindywidualizowane plany studiów, aby skoncentrować ich praktykę i samodzielnie ocenić swoje postępy.
+          student_description: Ta jednostka przygotowuje Ciebie do egzaminu AP CSA poprzez przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru i pytań z odpowiedziami swobodnymi oraz wzmacnianie strategii pisania testu. Identyfikujesz mocne strony i obszary poprawy, aby tworzyć zindywidualizowane plany studiów, aby skoncentrować ich praktykę i samodzielnie ocenić swoje postępy.
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Wprowadzenie do App Lab
+            lessonGroup-3:
+              display_name: Wejścia i wyjścia
+            lessonGroup-4:
+              display_name: Budowanie fizycznych prototypów
+          name: mikrobit-2023
+          title: microbit
+        vpl-csd-ci-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nauczanie rozwiązywania problemów i informatyki
+          name: vpl-csd-ci-1
+        vpl-csd-ci-2:
+          name: vpl-csd-ci-2
+        vpl-csd-ci-3:
+          name: vpl-csd-ci-3
+        vpl-csd-ci-4:
+          name: vpl-csd-ci-4
+        vpl-csd-ci-5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nauczanie o danych i społeczeństwie
+          name: vpl-csd-ci-5
+        vpl-csd-ci-6:
+          name: vpl-csd-ci-6
+        vpl-csd-ci-7:
+          name: vpl-csd-ci-7
+        devices-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Rozdział 1: Dane i wyniki'
+            lessonGroup-4:
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
+          name: urządzenia-2023
+          title: Tworzenie aplikacji z urządzeniami - Circuit Playground ('23-'24)
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Wprowadzenie do App Lab
+            lessonGroup-3:
+              display_name: Wejścia i wyjścia
+            lessonGroup-4:
+              display_name: Budowanie fizycznych prototypów
+          name: focus-on-creativity4b-2023
+          title: Jednostka 4B - (Opcja B) Tworzenie aplikacji z urządzeniami (micro:bit)
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Wprowadzenie do App Lab
+            lessonGroup-3:
+              display_name: Wejścia i wyjścia
+            lessonGroup-4:
+              display_name: Budowanie fizycznych prototypów
+          name: focus-on-hardware3b-2023
+          title: Jednostka 3B - (Opcja B) Tworzenie aplikacji z urządzeniami (micro:bit)
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Wejścia i wyjścia
+            lessonGroup-4:
+              display_name: Budowanie fizycznych prototypów
+          name: focus-on-design-with-purpose4b-2023
+          title: Jednostka 4B - (Opcja B) Tworzenie aplikacji z urządzeniami (micro:bit)
+        ai-temp:
+          name: ai-temp
+          title: "[Temp] Wprowadzenie do AI"
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Wprowadzenie do App Lab
+            lessonGroup-3:
+              display_name: Wejścia i wyjścia
+            lessonGroup-4:
+              display_name: Budowanie fizycznych prototypów
+          name: focus-on-coding4b-2023
+          title: Jednostka 4B - Tworzenie aplikacji za pomocą urządzeń (micro:bit)
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Wprowadzenie do App Lab
+            lessonGroup-3:
+              display_name: Wejścia i wyjścia
+            lessonGroup-4:
+              display_name: Budowanie fizycznych prototypów

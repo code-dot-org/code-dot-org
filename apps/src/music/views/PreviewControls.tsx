@@ -1,6 +1,6 @@
 import React, {useCallback} from 'react';
+import classNames from 'classnames';
 
-const classNames = require('classnames');
 const FontAwesome = require('../../templates/FontAwesome');
 const moduleStyles = require('./preview-controls.module.scss').default;
 

@@ -1282,6 +1282,11 @@ nn:
         dine](%{user_registration}) for å legge til epostadresse før du fullfører
         dette skjemaet.
   courses_category: Alle kurs
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      sports: Sport
+      csf: Grunnleggande informatikk
   cookie_banner:
     message: Ved å fortsatt bruke nettstaden vår eller ved å klikke på "Eg godtar",
       godtar du lagring av informasjonskapslar på datamaskina eller eininga di.

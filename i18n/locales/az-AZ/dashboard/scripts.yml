@@ -255,6 +255,9 @@ az:
           description_short: UI testi üçün bütün səviyyə növləri
           student_description: UI testi üçün bütün səviyyə növləri. Lütfən, applab səviyyələrini sınaqdan keçirmək üçün daxil olun (Dizayna görə, applab səviyyələri yalnız daxil olduqda işləyir. Normalda biz insanları daxil edirik, lakin bu, yalnız bütün skript üçün tətbiq edilə bilər və bu skript üçün bunu etmək bezdirici olardı).
           name: Hər şey
+          lessons:
+            lesson-49:
+              name: Musiqi
         algebraPD2b:
           title: Cəbrd PD də Kompyuter Elmləri
           description: 'Faza 2 Onlayn: Qarışıq Yay Təhsili'
@@ -3677,3 +3680,27 @@ az:
               display_name: Proqram laboratoriyasına giriş
             lessonGroup-4:
               display_name: 2-ci Fəsil
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Verilənlər və Nəticələr
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Verilənlər və Nəticələr
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Verilənlər və Nəticələr
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Verilənlər və Nəticələr
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Verilənlər və Nəticələr
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Verilənlər və Nəticələr
