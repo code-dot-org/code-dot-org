@@ -32,39 +32,39 @@
 }
 
 @mixin heading-xxl {
+  @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
   font-size: 3em;
-  @include heading-common;
 }
 
 @mixin heading-xl {
+  @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
   font-size: 2.125em;
-  @include heading-common;
 }
 
 @mixin heading-lg {
+  @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
   font-size: 1.75em;
-  @include heading-common;
 }
 
 @mixin heading-md {
+  @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
   font-size: 1.5em;
-  @include heading-common;
 }
 
 @mixin heading-sm {
+  @include heading-common;
   font-family: $gotham-bold, sans-serif;
   font-size: 1.25em;
-  @include heading-common;
 }
 
 @mixin heading-xs {
+  @include heading-common;
   font-family: $gotham-bold, sans-serif;
   font-size: 1em;
-  @include heading-common;
 }
 
 // Paragraph styles
@@ -75,23 +75,23 @@
 }
 
 @mixin body-one {
+  @include paragraph-common;
   font-family: $gotham-regular, sans-serif;
   font-size: 1em;
-  @include paragraph-common
 }
 
 @mixin body-two {
+  @include paragraph-common;
   font-family: $gotham-regular, sans-serif;
   font-size: .875em;
-  @include paragraph-common
 }
 
 @mixin overline {
+  @include paragraph-common;
   font-family: $gotham-bold, sans-serif;
   font-size: .75em;
   text-transform: uppercase;
   letter-spacing: .5px;
-  @include paragraph-common
 }
 
 @mixin strong {
