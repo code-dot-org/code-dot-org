@@ -7,6 +7,10 @@ ruby '3.0.5'
 # see https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/
 gem 'thwait'
 
+# Ruby 3.0 no longer provides sorted_set by default, so install it manually
+# see https://github.com/ruby/set/pull/2
+gem 'sorted_set'
+
 # Force HTTPS for github-source gems.
 # This is a temporary workaround - remove when bundler version is >=2.0
 # @see https://github.com/bundler/bundler/issues/4978
