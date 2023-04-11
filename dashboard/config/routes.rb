@@ -1050,7 +1050,7 @@ Dashboard::Application.routes.draw do
     get '/offline-files.json', action: :offline_files, controller: :offline
 
     post '/browser_events/put_logs', to: 'browser_events#put_logs'
-
     get '/get_token', to: 'authenticity_token#get_token'
+    post '/openai/image_generate', to: 'openai#image_generate'
   end
 end

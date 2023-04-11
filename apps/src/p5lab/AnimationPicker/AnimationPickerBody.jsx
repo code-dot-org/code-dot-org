@@ -18,6 +18,8 @@ import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 import {PICKER_TYPE} from './AnimationPicker.jsx';
 import style from './animation-picker-body.module.scss';
+import AnimationGenerateButton from './AnimationGenerateButton.jsx';
+import AnimationPickerImageGenerator from './AnimationPickerImageGenerator.jsx';
 import AnimationUploadButton from './AnimationUploadButton.jsx';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -45,6 +47,7 @@ export default class AnimationPickerBody extends React.Component {
   state = {
     searchQuery: '',
     categoryQuery: '',
+    generating: false,
     currentPage: 0,
   };
 
@@ -157,6 +160,7 @@ export default class AnimationPickerBody extends React.Component {
     this.setState({
       categoryQuery: '',
       searchQuery: '',
+      generating: false,
       currentPage: 0,
       results: [],
       pageCount: 0,
@@ -198,8 +202,13 @@ export default class AnimationPickerBody extends React.Component {
     ));
   }
 
+  onGenerateClick = () => {
+    this.setState({generating: true});
+  };
+
   render() {
     let assetType;
+    console.log('calling render!');
     switch (this.props.pickerType) {
       case PICKER_TYPE.spritelab:
         assetType = msg.costumeMode();
@@ -223,7 +232,11 @@ export default class AnimationPickerBody extends React.Component {
       shouldWarnOnAnimationUpload,
     } = this.props;
 
-    const searching = searchQuery !== '';
+    console.log('this.state.generating', this.state.generating);
+
+    const generating = this.state.generating;
+    const searching = searchQuery !== '' && !generating;
+    console.log('searching', searching);
     const inCategory = categoryQuery !== '';
     const isBackgroundsTab =
       this.props.pickerType === 'backgrounds' &&
@@ -255,63 +268,75 @@ export default class AnimationPickerBody extends React.Component {
         {showingUploadButton && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
-        <SearchBar
-          placeholderText={msg.animationSearchPlaceholder()}
-          onChange={evt => this.onSearchQueryChange(evt.target.value)}
-        />
-        {(searching || inCategory) && (
-          <div className={style.navigation}>
-            {inCategory && (
-              <div className={style.breadCrumbs}>
-                {this.props.navigable && (
-                  <span
-                    onClick={this.onClearCategories}
-                    className={style.allAnimations}
-                  >
-                    {`${msg.animationPicker_allCategories()} > `}
-                  </span>
+        {generating ? (
+          <AnimationPickerImageGenerator />
+        ) : (
+          <>
+            <SearchBar
+              placeholderText={msg.animationSearchPlaceholder()}
+              onChange={evt => this.onSearchQueryChange(evt.target.value)}
+            />
+            {(searching || inCategory) && (
+              <div className={style.navigation}>
+                {inCategory && (
+                  <div className={style.breadCrumbs}>
+                    {this.props.navigable && (
+                      <span
+                        onClick={this.onClearCategories}
+                        className={style.allAnimations}
+                      >
+                        {`${msg.animationPicker_allCategories()} > `}
+                      </span>
+                    )}
+                    <span>{msg[`animationCategory_${categoryQuery}`]()}</span>
+                  </div>
                 )}
-                <span>{msg[`animationCategory_${categoryQuery}`]()}</span>
               </div>
             )}
-          </div>
+            <div ref={this.scrollListContainer}>
+              <ScrollableList
+                className="uitest-animation-picker-list"
+                style={{maxHeight: '55vh'}}
+                onScroll={this.handleScroll}
+              >
+                {' '}
+                {(searching || inCategory) && results.length === 0 && (
+                  <div className={style.emptyResults}>
+                    {msg.animationPicker_noResultsFound()}
+                  </div>
+                )}
+                {showDrawAndUploadButtons && (
+                  <div>
+                    <AnimationPickerListItem
+                      label={msg.animationPicker_drawYourOwn()}
+                      isBackgroundsTab={isBackgroundsTab}
+                      icon="pencil"
+                      onClick={onDrawYourOwnClick}
+                    />
+                    {!hideUploadOption && (
+                      <AnimationUploadButton
+                        onUploadClick={onUploadClick}
+                        shouldWarnOnAnimationUpload={
+                          shouldWarnOnAnimationUpload
+                        }
+                        isBackgroundsTab={isBackgroundsTab}
+                      />
+                    )}
+                    <AnimationGenerateButton
+                      onGenerateClick={this.onGenerateClick}
+                      isBackgroundsTab={isBackgroundsTab}
+                    />
+                  </div>
+                )}
+                {searchQuery === '' &&
+                  categoryQuery === '' &&
+                  this.animationCategoriesRendering()}
+                {(searchQuery !== '' || categoryQuery !== '') &&
+                  this.animationItemsRendering(results || [])}
+              </ScrollableList>
+            </div>
+          </>
         )}
-        <div ref={this.scrollListContainer}>
-          <ScrollableList
-            className="uitest-animation-picker-list"
-            style={{maxHeight: '55vh'}}
-            onScroll={this.handleScroll}
-          >
-            {' '}
-            {(searching || inCategory) && results.length === 0 && (
-              <div className={style.emptyResults}>
-                {msg.animationPicker_noResultsFound()}
-              </div>
-            )}
-            {showDrawAndUploadButtons && (
-              <div>
-                <AnimationPickerListItem
-                  label={msg.animationPicker_drawYourOwn()}
-                  isBackgroundsTab={isBackgroundsTab}
-                  icon="pencil"
-                  onClick={onDrawYourOwnClick}
-                />
-                {!hideUploadOption && (
-                  <AnimationUploadButton
-                    onUploadClick={onUploadClick}
-                    shouldWarnOnAnimationUpload={shouldWarnOnAnimationUpload}
-                    isBackgroundsTab={isBackgroundsTab}
-                  />
-                )}
-              </div>
-            )}
-            {searchQuery === '' &&
-              categoryQuery === '' &&
-              this.animationCategoriesRendering()}
-            {(searchQuery !== '' || categoryQuery !== '') &&
-              this.animationItemsRendering(results || [])}
-          </ScrollableList>
-        </div>
         {(searchQuery !== '' || categoryQuery !== '') && (
           <div className={style.footer}>
             <Button
