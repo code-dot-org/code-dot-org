@@ -4,6 +4,19 @@
       "mini_rubric": {
         "allthethings-mini-rubric-gamelab": {
           "rubric_key_concept": "Concetto Chiave"
+        },
+        "CSD U2 Image assessment_2021": {
+          "rubric_performance_level_1": "L'immagine viene visualizzata correttamente e un attributo `alt` fornisce una descrizione di prova ragionevole dell'immagine. Nessun codice non necessario è incluso nel tag `img`. L'attribuzione è accurata e l'immagine è denominata in modo appropriato."
+        },
+        "CSD U2 classes haikus_2021": {
+          "rubric_key_concept": "Crea classi che possono essere referenziate e modificate come gruppo.",
+          "rubric_performance_level_3": "E vengono creati una classe e un set di regole e almeno alcuni elementi del sito Web rientrano in quella classe, ma potrebbero esserci errori gravi che impediscono di applicare lo stile del testo."
+        },
+        "CSD U2 classes haikus_2022": {
+          "rubric_key_concept": "Crea classi che possono essere referenziate e modificate come gruppo."
+        },
+        "CSD U2 classes summer_2019": {
+          "rubric_key_concept": "Crea classi che possono essere referenziate e modificate come gruppo."
         }
       }
     }

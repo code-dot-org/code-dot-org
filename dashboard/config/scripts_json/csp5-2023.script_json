@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-26 15:11:08 UTC",
+    "serialized_at": "2023-04-10 16:38:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -268,8 +268,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "d6e85240-d9e6-4c88-9445-eac9f3430aec",
+      "key": "65e3480a-0cfb-40ff-8f22-323a3673827b",
       "position": 1,
+      "properties": {
+        "name": "The Pre-Unit Pulse"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "65e3480a-0cfb-40ff-8f22-323a3673827b",
+        "lesson.key": "Learning from Data",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-2023"
+      }
+    },
+    {
+      "key": "d6e85240-d9e6-4c88-9445-eac9f3430aec",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -283,7 +296,7 @@
     },
     {
       "key": "09244814-e460-4612-8bf1-f5d051766d51",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -297,7 +310,7 @@
     },
     {
       "key": "be66f8e9-f4dc-4eea-87e5-fa9daa33c775",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -311,7 +324,7 @@
     },
     {
       "key": "0d268e19-f02c-43b8-920a-6a8d4da0d80b",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -749,6 +762,24 @@
   ],
   "activity_sections": [
     {
+      "key": "497a9815-46df-4b6b-8373-c82f2e3a11c0",
+      "position": 1,
+      "properties": {
+        "description": "\nHave your students complete these questions independently some time before starting this unit. \n",
+        "progression_name": "The Pre-Unit Pulse",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Pre-Unit Pulse Questions:** The answers to these questions can provide insights into the preferences, strengths, and motivations of your students. If you'd like to adapt the questions or add in your own, you may want to make a copy of [this Google Form](https://docs.google.com/forms/d/1a48xFgXuKLcvw6v0iUWXsIop6b0L186sv9XI35uU0o4/copy) which already has the existing questions populated.\n\nFor more tips and ideas of how to use these questions, check out the [CSP Guide to Pre-Unit Pulse Questions](https://docs.google.com/document/d/1jx43dakN6og2n7iey_uQrNwcpMHQRbv1RCPZFHpQdYw/edit?usp=sharing)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "497a9815-46df-4b6b-8373-c82f2e3a11c0",
+        "lesson_activity.key": "65e3480a-0cfb-40ff-8f22-323a3673827b"
+      }
+    },
+    {
       "key": "a28e32af-10b4-4479-bac7-c2ff13a320ea",
       "position": 1,
       "properties": {
@@ -884,7 +915,7 @@
       "key": "95f9197c-20ef-4c8d-845d-c8dc14d4e76c",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students navigate to Level 1 on Code Studio where they open the data tab and look at the metadata for a table. Then they should share with a partner where the data comes from and what they can learn from the metadata.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students navigate to Level 4 on Code Studio where they open the data tab and look at the metadata for a table. Then they should share with a partner where the data comes from and what they can learn from the metadata.",
         "progression_name": "Exploring Metadata",
         "tips": [
           {
@@ -2244,6 +2275,81 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "CSP Pre-Unit Pulse - Data Q1"
+        ],
+        "progression": "The Pre-Unit Pulse"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Pre-Unit Pulse - Data Q1"
+        ],
+        "lesson.key": "Learning from Data",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-2023",
+        "activity_section.key": "497a9815-46df-4b6b-8373-c82f2e3a11c0"
+      },
+      "level_keys": [
+        "CSP Pre-Unit Pulse - Data Q1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Data Q2"
+        ],
+        "progression": "The Pre-Unit Pulse"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Pre-Unit Pulse - Data Q2"
+        ],
+        "lesson.key": "Learning from Data",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-2023",
+        "activity_section.key": "497a9815-46df-4b6b-8373-c82f2e3a11c0"
+      },
+      "level_keys": [
+        "CSP Pre-Unit Pulse - Data Q2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Data Q3"
+        ],
+        "progression": "The Pre-Unit Pulse"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Pre-Unit Pulse - Data Q3"
+        ],
+        "lesson.key": "Learning from Data",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-2023",
+        "activity_section.key": "497a9815-46df-4b6b-8373-c82f2e3a11c0"
+      },
+      "level_keys": [
+        "CSP Pre-Unit Pulse - Data Q3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "CSP U9L1 Metadata_2023"
         ],
         "progression": "Exploring Metadata"
@@ -2263,8 +2369,8 @@
       ]
     },
     {
-      "chapter": 2,
-      "position": 2,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -2288,7 +2394,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2313,7 +2419,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2338,7 +2444,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2363,7 +2469,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2388,7 +2494,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 10,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -2413,7 +2519,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2438,7 +2544,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2463,7 +2569,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -2488,7 +2594,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2513,7 +2619,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2538,7 +2644,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2563,7 +2669,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2588,7 +2694,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 18,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2613,7 +2719,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 19,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -2638,7 +2744,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 20,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -2663,7 +2769,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 21,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -2688,7 +2794,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 22,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -2713,7 +2819,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2738,7 +2844,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2763,7 +2869,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 25,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -2788,7 +2894,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2813,7 +2919,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2838,7 +2944,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2863,7 +2969,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2887,7 +2993,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2913,6 +3019,42 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP Pre-Unit Pulse - Data Q1",
+        "script_level.level_keys": [
+          "CSP Pre-Unit Pulse - Data Q1"
+        ],
+        "lesson.key": "Learning from Data",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-2023",
+        "activity_section.key": "497a9815-46df-4b6b-8373-c82f2e3a11c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Pre-Unit Pulse - Data Q2",
+        "script_level.level_keys": [
+          "CSP Pre-Unit Pulse - Data Q2"
+        ],
+        "lesson.key": "Learning from Data",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-2023",
+        "activity_section.key": "497a9815-46df-4b6b-8373-c82f2e3a11c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Pre-Unit Pulse - Data Q3",
+        "script_level.level_keys": [
+          "CSP Pre-Unit Pulse - Data Q3"
+        ],
+        "lesson.key": "Learning from Data",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-2023",
+        "activity_section.key": "497a9815-46df-4b6b-8373-c82f2e3a11c0"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "CSP U9L1 Metadata_2023",

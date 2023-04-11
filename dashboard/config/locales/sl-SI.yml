@@ -685,6 +685,9 @@ sl:
       email_opt_in:
         opt_in_yes: Da
         opt_in_no: Ne
+  course_offering:
+    headers:
+      minecraft: Minecraft
   cookie_banner:
     accept: Strinjam se
   copy: Kopiraj

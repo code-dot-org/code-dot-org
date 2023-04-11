@@ -3,19 +3,20 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Chapter 1 project: Animated Sceen
+# Chapter 1 Project: Interactive Card
 
-## Project overview
+<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-##### Chapter 1 of the Interactive Animations and Games unit concludes with a project where students will use the skills they have learned throughout the unit to design and create an animated sceen in Lesson 17. Students first review the types of movement and animation they have learned, and brainstorm what types of scenes might need that movement. They then begin to plan out their own animated scenes, which they create in Game Lab. The project concludes with students creating their animated sceen and engage in a gallery walk to see the projects their classmates coded and celebrate the different ideas that were shared. 
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px; font-size: 18px; ">Chapter 1 of the Interactive Animations and Games unit concludes with a project where students will bring together all the skills they have learned so far (drawing, variables, sprites, images, conditionals, user input) in one place. In this project, students plan for and develop an interactive greeting card using all of the programming techniques they've learned to this point. Giving students the opportunity to really be creative after learning all these new concepts will help to engage them further as they head into Chapter 2.
+</p></div>
 
-## Sample student projects
+## Sample Student Projects
 
 ##### Click the images below to view the sample projects in a new tab.
 
-<div style="float: left; text-align:center;"><strong>Monster Music </strong><br /><a href="https://studio.code.org/projects/gamelab/PYYww4gdgma7_JPQwMrX1nwcMftAofr4goWIqGBvpQs/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/29eea57d8f8c150959fa093fab9d3e32-image-1649279163793.JPG" width="250px"; alt="Image of monster music app"></a></div>
+<div style="float: left; text-align:center;"><strong>Monster Music </strong><br /><a href="https://studio.code.org/projects/gamelab/PYYww4gdgma7_JPQwMrX1nwcMftAofr4goWIqGBvpQs/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-left:25px; margin-right:25px; margin-bottom:5px;  margin-top:0px;" src="https://images.code.org/29eea57d8f8c150959fa093fab9d3e32-image-1649279163793.JPG" width="200px"; alt="Image of monster music app"></a></div>
 
-<div style="float: left; text-align:center;"><strong>Happy Birthday</strong><br /><a href="https://studio.code.org/projects/gamelab/YTs75XPApiMUuLPXjIqMj6g1Iv21h_4ME0CBbP0BRqc/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/8690269b9907e761fda6a7e20fdf71ce-image-1652298277832.44.22 PM.png" width="250px" alt="Immage of birthday card"></a></div>
+<div style="float: left; text-align:center;"><strong>Happy Birthday</strong><br /><a href="https://studio.code.org/projects/gamelab/YTs75XPApiMUuLPXjIqMj6g1Iv21h_4ME0CBbP0BRqc/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-left:25px; margin-right:25px; margin-bottom:5px; margin-top:0px;" src="https://images.code.org/8690269b9907e761fda6a7e20fdf71ce-image-1652298277832.44.22 PM.png" width="200px" alt="Immage of birthday card"></a></div>
 
 
 <div style="clear:both"/>
@@ -26,10 +27,10 @@ markdown <<MARKDOWN
 
 ## Project resources
 
-* ##### <a href="https://studio.code.org/s/csd3-2022/lessons/17" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
-* ##### <a href="https://docs.google.com/document/d/1MNe3-GpESINByCaRnDTA_EmyIjENEP2R4_0sKBY9E7M/edit" target="blank" rel="noopener noreferrer" >Project Guide</a> 
-* ##### <a href="https://docs.google.com/document/d/1v25XqBmYj3KmniWzQE4PTNrXcfPCsnSQGey0wTN2WHY/view" target="blank" rel="noopener noreferrer" >Student Checklist</a> 
-* ##### <a href="https://docs.google.com/document/d/1sAILZnk26g21FluRhU0pWqVDOMBZVrNAko1mSVeuKHM/view" target="blank" rel="noopener noreferrer" >Project Rubric</a> 
+* ##### <a href="https://studio.code.org/s/csd3-2023/lessons/18" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
+* ##### <a href="https://docs.google.com/document/d/1iJjh3OSHyZdk1TCBaq5JtfP3v9fXxbp9utiJzIU5bdQ/view" target="blank" rel="noopener noreferrer" >Project Guide</a> 
+* ##### <a href="https://docs.google.com/document/d/1N1iuDi-25VhSto-9zk9_0dc8H4t1nsS22u91I7Uucfw/view" target="blank" rel="noopener noreferrer" >Student Checklist</a> 
+* ##### <a href="https://docs.google.com/document/d/1XE6L1DZaPp8kh_LznaPi5_Fph5buFMHbnoBYNoIeD48/view" target="blank" rel="noopener noreferrer" >Project Rubric</a> 
 
 
 MARKDOWN

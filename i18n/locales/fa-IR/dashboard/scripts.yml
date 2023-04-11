@@ -105,6 +105,10 @@ fa:
           description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
+        allthethings:
+          lessons:
+            lesson-49:
+              name: موسیقی
         algebraPD2b:
           description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
