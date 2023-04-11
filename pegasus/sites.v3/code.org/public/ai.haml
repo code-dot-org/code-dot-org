@@ -21,7 +21,7 @@ theme: responsive_full_width
   .wrapper
     .text-wrapper.col-60
       %h1{style: "color: white; margin-bottom: 0"}=hoc_s(:ai_hero_heading_01)
-      %h2.h1-lookalike-style{style: "color: white"}=hoc_s(:ai_hero_heading_02)
+      %h2.heading-xxl{style: "color: white"}=hoc_s(:ai_hero_heading_02)
       %p{style: "color: white"}=hoc_s(:ai_hero_desc)
     %figure.col-33{style: "float: right"}
       %img.fade-in-out{src: "/images/banners/ai-bot-wizard.svg", alt: "", style: "z-index: 10"}
@@ -40,19 +40,19 @@ theme: responsive_full_width
           %a{href: "#ai-videos"}=hoc_s(:ai_intro_video_caption)
     %div.flex-container.col-45{style: "float: right"}
       %ul.icon-bullet-list.full-width{style: "margin-top: 0"}
-        %li{style: "width:100%"}
+        %li
           %div
             %i{class: "#{icon_sparkles}"}
           .text-wrapper
             %h3=hoc_s(:ai_intro_list_title_01)
             %p.no-margin-bottom=hoc_s(:ai_intro_list_desc_01)
-        %li{style: "width:100%"}
+        %li
           %div
             %i{class: "#{icon_lightbulb}"}
           .text-wrapper
             %h3=hoc_s(:ai_intro_list_title_02)
             %p.no-margin-bottom=hoc_s(:ai_intro_list_desc_02)
-        %li.no-margin-bottom{style: "width:100%"}
+        %li.no-margin-bottom
           %div
             %i{class: "#{icon_magnifying_glass}"}
           .text-wrapper
