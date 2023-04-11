@@ -87,7 +87,7 @@ theme: responsive_full_width
         %img{src: "/images/ai/ai-curriclum-machine-learning.png", alt: ""}
         %p{style: "height: 105px"}=hoc_s(:ai_curriculum_desc_01)
         %p=hoc_s(:ai_curriculum_duration_01)
-        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1") , class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_01)}}
+        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_01)}}
           =hoc_s(:call_to_action_explore_unit)
       .action-block.action-block--one-col
         %p.overline=hoc_s(:ai_curriculum_grades_02)
@@ -95,7 +95,7 @@ theme: responsive_full_width
         %img{src: "/images/ai/ai-curriclum-ethics.png", alt: ""}
         %p{style: "height: 105px"}=hoc_s(:ai_curriculum_desc_02)
         %p=hoc_s(:ai_curriculum_duration_02)
-        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1") , class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_02)}}
+        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_02)}}
           =hoc_s(:call_to_action_view_lesson_plan)
       .action-block.action-block--one-col
         %p.overline=hoc_s(:ai_curriculum_grades_03)
@@ -103,7 +103,7 @@ theme: responsive_full_width
         %img{src: "/images/ai/ai-curriclum-oceans.png", alt: ""}
         %p{style: "height: 105px"}=hoc_s(:ai_curriculum_desc_03)
         %p=hoc_s(:ai_curriculum_duration_03)
-        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1") , class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_03)}}
+        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_03)}}
           =hoc_s(:call_to_action_try_activity)
 
 %section.bg-neutral-light
@@ -137,7 +137,6 @@ theme: responsive_full_width
     %h2=hoc_s(:ai_video_series_title)
     %p=hoc_s(:ai_video_series_desc)
     .video-series
-      = view :video_with_fallback, video_code: "Ok-xpKjKp2g", download_path: "//videos.code.org/ai_series/ai-01-intro-to-ai.mp4"
       = view :ai_vid_intro
       = view :ai_vid_mlintro
       = view :ai_vid_trainingdata
@@ -157,19 +156,19 @@ theme: responsive_full_width
         %h3=hoc_s(:ai_resources_title_01)
         %img{src: "/images/ai//ai-resources-ethics-panel.png", alt: ""}
         %p{style: "height: 125px"}=hoc_s(:ai_resources_desc_01)
-        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1") , class: "link-button", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
+        %a{href: "https://youtu.be/3oqxjPXbynE", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
           =hoc_s(:call_to_action_watch_panel)
       .action-block.action-block--one-col
         %h3=hoc_s(:ai_resources_title_02)
         %img{src: "/images/ai/ai-resources-imagine-cup.png", alt: ""}
         %p{style: "height: 125px"}=hoc_s(:ai_resources_desc_02)
-        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1") , class: "link-button", aria:{label: hoc_s(:ai_resources_btn_aria_label_02)}}
+        %a{href: "https://imaginecup.microsoft.com/en-us/junior", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_02)}}
           =hoc_s(:call_to_action_learn_about_challenge)
       .action-block.action-block--one-col
         %h3=hoc_s(:ai_resources_title_03)
         %img{src: "/images/ai/ai-resources-for-teachers.png", alt: ""}
         %p{style: "height: 125px"}=hoc_s(:ai_resources_desc_03)
-        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1") , class: "link-button", aria:{label: hoc_s(:ai_resources_btn_aria_label_03)}}
+        %a{href: "https://aiforteachers.org/", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_03)}}
           =hoc_s(:call_to_action_explore_website)
 
 

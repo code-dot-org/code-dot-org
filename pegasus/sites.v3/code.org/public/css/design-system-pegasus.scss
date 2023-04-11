@@ -731,4 +731,22 @@ form {
     width: 49%;
     margin-top: 1.25em;
   }
+
+  & > div.col-50 {
+    padding: 0 !important;
+    margin: 0 0 1em 0 !important;
+    width: 49%;
+
+    .video_caption_link {
+      @include figcaption;
+    }
+
+    .play {
+      top: 30%;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      width: 100%;
+    }
+  }
 }
