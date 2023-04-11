@@ -39,10 +39,10 @@ const CurriculumCatalogCard = ({
     })} // TODO [MEG]: Decide on translation strategy for this
     imageSrc={imageSrc}
     subjectsAndTopics={[
-      ...subjects.map(
+      ...subjects?.map(
         subject => translatedCourseOfferingSchoolSubjects[subject]
       ),
-      ...topics.map(topic => translatedCourseOfferingCsTopics[topic])
+      ...topics?.map(topic => translatedCourseOfferingCsTopics[topic])
     ]}
     quickViewButtonDescription={i18n.quickViewDescription({
       course_name: courseDisplayName
@@ -69,7 +69,7 @@ CurriculumCatalogCard.propTypes = {
   ),
   topics: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(translatedCourseOfferingCsTopics))
-  ).isRequired,
+  ),
   isEnglish: PropTypes.bool.isRequired
 };
 
@@ -165,7 +165,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   isTranslated: PropTypes.bool,
   isEnglish: PropTypes.bool,
   translationIconTitle: PropTypes.string.isRequired,
-  subjectsAndTopics: PropTypes.arrayOf(PropTypes.string).isRequired,
+  subjectsAndTopics: PropTypes.arrayOf(PropTypes.string),
   quickViewButtonText: PropTypes.string.isRequired,
   assignButtonText: PropTypes.string.isRequired,
 

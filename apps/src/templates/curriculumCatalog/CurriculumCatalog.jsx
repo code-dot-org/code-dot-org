@@ -54,7 +54,8 @@ const CurriculumCatalog = ({curriculaData}) => {
                     oldestGrade={gradeLevelArray[gradeLevelArray.length - 1]}
                     subjects={school_subject?.split(',')}
                     topics={cs_topic?.split(',')}
-                    isTranslated={!!Math.round(Math.random())} // TODO [MEG] actually pass in this data
+                    isTranslated={!!Math.round(Math.random())} // TODO [MEG]: actually pass in this data
+                    isEnglish={true} // TODO [MEG]: use locale
                   />
                 );
               }
