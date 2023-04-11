@@ -15,37 +15,41 @@ export default function QuickAssignTable({
   courseOfferings,
   setSelectedCourseOffering,
   updateCourse,
-  sectionCourse
+  sectionCourse,
+  isNewSection
 }) {
   // Key is type of curriculum e.g. 'Course' or 'Module', which is the singular
   // version of the title we want for the column
 
   useEffect(() => {
-    // combines all the data into one object
-    const startingData = Object.assign(
-      {},
-      courseOfferings[marketingAudience][curriculumTypes.course],
-      courseOfferings[marketingAudience][curriculumTypes.standalone_unit],
-      courseOfferings[marketingAudience][curriculumTypes.module]
-    );
-
-    const headers = Object.keys(startingData);
-    console.log(startingData);
-
-    // iterates over all courses to find the course assigned
-    headers.map(header => {
-      const courseDataByHeaderValues = Object.values(startingData[header]);
-      courseDataByHeaderValues.map(course =>
-        sectionCourse?.courseOfferingId === course.id
-          ? setSelectedCourseOffering(course)
-          : null
+    if (!isNewSection) {
+      // combines all the data into one object
+      const startingData = Object.assign(
+        {},
+        courseOfferings[marketingAudience][curriculumTypes.course],
+        courseOfferings[marketingAudience][curriculumTypes.standalone_unit],
+        courseOfferings[marketingAudience][curriculumTypes.module]
       );
-    });
+
+      const headers = Object.keys(startingData);
+      console.log(startingData);
+
+      // iterates over all courses to find the course assigned
+      headers.map(header => {
+        const courseDataByHeaderValues = Object.values(startingData[header]);
+        courseDataByHeaderValues.map(course =>
+          sectionCourse?.courseOfferingId === course.id
+            ? setSelectedCourseOffering(course)
+            : null
+        );
+      });
+    }
   }, [
     courseOfferings,
     marketingAudience,
     sectionCourse?.courseOfferingId,
-    setSelectedCourseOffering
+    setSelectedCourseOffering,
+    isNewSection
   ]);
 
   const renderTable = (key, title) => {
@@ -87,5 +91,6 @@ QuickAssignTable.propTypes = {
   courseOfferings: PropTypes.object.isRequired,
   setSelectedCourseOffering: PropTypes.func.isRequired,
   updateCourse: PropTypes.func.isRequired,
-  sectionCourse: PropTypes.object
+  sectionCourse: PropTypes.object,
+  isNewSection: PropTypes.bool
 };
