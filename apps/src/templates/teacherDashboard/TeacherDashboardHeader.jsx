@@ -165,7 +165,8 @@ const styles = {
     flexDirection: 'column-reverse'
   },
   buttonSection: {
-    display: 'flex'
+    display: 'flex',
+    marginBottom: 5
   },
   buttonWithMargin: {
     marginRight: '5px'

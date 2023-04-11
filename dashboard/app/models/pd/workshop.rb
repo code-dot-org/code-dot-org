@@ -829,8 +829,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def pre_survey?
-    # CSP for returning teachers does not have a pre-survey.
-    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS
+    return false if [SUBJECT_CSP_FOR_RETURNING_TEACHERS, SUBJECT_CSA_CAPSTONE].include?(subject)
     PRE_SURVEY_BY_COURSE.key? course
   end
 
