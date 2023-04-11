@@ -1,7 +1,7 @@
 // Custom styles for code.org/ai
 // — supplemental to shared/css/design-system-pegasus.scss
 
-@import 'color', 'font', 'breakpoints', 'barlow-semi-condensed-font';
+@import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
 
 @keyframes fade-in-out {
   0% {
@@ -73,8 +73,33 @@
 
 .video-series {
 
-  @media screen and (max-width: $width-sm) {
-    figure {
+  & > div.col-50 {
+    padding: 0 !important;
+    margin: 0 0 1em 0 !important;
+    width: 49%;
+
+    .video_caption_link {
+      @include figcaption;
+    }
+
+    .play {
+      top: 30%;
+    }
+
+    .modal-body {
+
+      & > div {
+        overflow: unset !important;
+      }
+
+      figure {
+        width: 100%;
+      }
+    }
+
+
+
+    @media screen and (max-width: $width-sm) {
       width: 100%;
     }
   }
