@@ -80,6 +80,7 @@ Feature: App Lab Scenarios
     Then element "#checkbox1" is checked
     And element "#checkbox2" is checked
 
+  @no_ie
   Scenario: Can type in text input on share page
     Given I switch to design mode
     And I drag a TEXT_INPUT into the app
