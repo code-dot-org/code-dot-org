@@ -65,13 +65,7 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.props().style.background, color.lightest_gray);
     assert.equal(wrapper.props().style.borderWidth, 4);
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
-    assert.equal(
-      wrapper
-        .find('div')
-        .at(1)
-        .props().style.opacity,
-      undefined
-    );
+    assert.equal(wrapper.find('div').at(1).props().style.opacity, undefined);
   });
 
   it('renders with dashed border and faded out when locked for user', () => {
@@ -85,13 +79,7 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.props().style.background, color.lightest_gray);
     assert.equal(wrapper.props().style.borderWidth, 4);
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
-    assert.equal(
-      wrapper
-        .find('div')
-        .at(1)
-        .props().style.opacity,
-      0.6
-    );
+    assert.equal(wrapper.find('div').at(1).props().style.opacity, 0.6);
   });
 
   it('renders with dashed border and not faded out when locked for section', () => {
@@ -105,13 +93,7 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.props().style.background, color.lightest_gray);
     assert.equal(wrapper.props().style.borderWidth, 4);
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
-    assert.equal(
-      wrapper
-        .find('div')
-        .at(1)
-        .props().style.opacity,
-      undefined
-    );
+    assert.equal(wrapper.find('div').at(1).props().style.opacity, undefined);
   });
 
   it('disables bubbles when locked for user', () => {
@@ -146,20 +128,8 @@ describe('ProgressLesson', () => {
         lockStatusLoaded={true}
       />
     );
-    assert.equal(
-      wrapper
-        .find('FontAwesome')
-        .at(0)
-        .props().icon,
-      'caret-down'
-    );
-    assert.equal(
-      wrapper
-        .find('FontAwesome')
-        .at(1)
-        .props().icon,
-      'unlock'
-    );
+    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'caret-down');
+    assert.equal(wrapper.find('FontAwesome').at(1).props().icon, 'unlock');
   });
 
   it('has a locked icon when lesson is lockable and locked and lockStatusLoaded', () => {
@@ -171,20 +141,8 @@ describe('ProgressLesson', () => {
         lockStatusLoaded={true}
       />
     );
-    assert.equal(
-      wrapper
-        .find('FontAwesome')
-        .at(0)
-        .props().icon,
-      'caret-down'
-    );
-    assert.equal(
-      wrapper
-        .find('FontAwesome')
-        .at(1)
-        .props().icon,
-      'lock'
-    );
+    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'caret-down');
+    assert.equal(wrapper.find('FontAwesome').at(1).props().icon, 'lock');
   });
 
   it('has both a hidden and a locked icon for instructor when lesson is lockable and locked and hidden and lockStatusLoaded', () => {
@@ -198,27 +156,9 @@ describe('ProgressLesson', () => {
         lockStatusLoaded={true}
       />
     );
-    assert.equal(
-      wrapper
-        .find('FontAwesome')
-        .at(0)
-        .props().icon,
-      'caret-down'
-    );
-    assert.equal(
-      wrapper
-        .find('FontAwesome')
-        .at(1)
-        .props().icon,
-      'eye-slash'
-    );
-    assert.equal(
-      wrapper
-        .find('FontAwesome')
-        .at(2)
-        .props().icon,
-      'lock'
-    );
+    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'caret-down');
+    assert.equal(wrapper.find('FontAwesome').at(1).props().icon, 'eye-slash');
+    assert.equal(wrapper.find('FontAwesome').at(2).props().icon, 'lock');
   });
 
   it('starts collapsed for participant if it is not the current lesson', () => {

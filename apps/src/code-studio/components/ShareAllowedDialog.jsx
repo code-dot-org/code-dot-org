@@ -43,7 +43,7 @@ function recordShare(type) {
 }
 
 function wrapShareClick(handler, type) {
-  return function() {
+  return function () {
     try {
       recordShare(type);
     } finally {
@@ -501,6 +501,8 @@ const styles = {
     fontWeight: 'bold'
   },
   button: {
+    // TODO: [Phase 2] Remove this once we have a new updated button component
+    fontSize: 'large',
     height: 45,
     paddingTop: 12.5,
     paddingBottom: 12.5,
@@ -512,7 +514,7 @@ const styles = {
   },
   buttonDisabled: {
     height: 45,
-    fontSize: 'larger',
+    fontSize: 'large',
     paddingTop: 12.5,
     paddingBottom: 12.5,
     paddingLeft: 10,

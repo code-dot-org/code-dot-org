@@ -716,6 +716,12 @@ $small-footer-standard-width: 400px;
   }
 }
 
+/* Override footer position on some pages, but not published project views */
+#page-small-footer .small-footer-base {
+  position: fixed;
+}
+
+
 #copyright-scroll-area {
   overflow-y: auto;
   padding: 0.8em;
@@ -3036,7 +3042,8 @@ $modal-no-icon-gap: 22px;
 }
 
 h5.dialog-title {
-  font-size: 1.25em;
+  // TODO: [Phase 2] Remove when new typography will be done and used or replace with 1.25em
+  font-size: 20px;
 }
 
 #ok-button {

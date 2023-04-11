@@ -26,13 +26,8 @@ class ManageStudentsLoginInfo extends Component {
   };
 
   render() {
-    const {
-      loginType,
-      sectionId,
-      sectionCode,
-      sectionName,
-      studioUrlPrefix
-    } = this.props;
+    const {loginType, sectionId, sectionCode, sectionName, studioUrlPrefix} =
+      this.props;
 
     return (
       <div style={styles.explanation}>

@@ -1446,6 +1446,54 @@
                   "return_value": "Booleà"
                 }
               }
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "ledScreen.on": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "ledScreen.scrollString": {
+                  "palette_params": {
+                    "String": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                }
+              }
             }
           }
         },

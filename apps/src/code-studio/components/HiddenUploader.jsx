@@ -25,7 +25,7 @@ export default class HiddenUploader extends React.Component {
       // prevent fileupload from replacing the input DOM element, which
       // React does not like
       replaceFileInput: false,
-      add: function(e, data) {
+      add: function (e, data) {
         // onUploadStart method must call data.submit()
         props.onUploadStart(data);
         const audioFileName = data.files[0].name.includes('mp3')
@@ -43,10 +43,10 @@ export default class HiddenUploader extends React.Component {
           );
         }
       },
-      done: function(e, data) {
+      done: function (e, data) {
         props.onUploadDone(data.result);
       },
-      error: function(e, data) {
+      error: function (e, data) {
         if (props.onUploadError) {
           props.onUploadError(e.status);
         }

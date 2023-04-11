@@ -5,7 +5,7 @@ import color from '@cdo/apps/util/color';
 import JavalabConsole from './JavalabConsole';
 import JavalabEditor from './JavalabEditor';
 import JavalabPanels from './JavalabPanels';
-import {setIsRunning, setIsTesting} from './javalabRedux';
+import {setIsRunning, setIsTesting} from './redux/javalabRedux';
 import {appendOutputLog} from './redux/consoleRedux';
 import {setDisplayTheme} from './redux/viewRedux';
 import {DisplayTheme} from './DisplayTheme';

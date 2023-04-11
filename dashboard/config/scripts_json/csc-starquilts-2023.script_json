@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-starquilts",
-    "serialized_at": "2023-03-28 18:14:11 UTC",
+    "serialized_at": "2023-04-03 20:46:28 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -72,7 +72,7 @@
     },
     {
       "key": "Code Your Star Quilt (beta)",
-      "name": "Code Your Star Quilt",
+      "name": "Coding My Star Quilt",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -1365,7 +1365,7 @@
       }
     },
     {
-      "name": "Star Quilts",
+      "name": "Coding a Geometric Star Quilt",
       "url": "https://docs.google.com/presentation/d/10F-FnjuE2fM9g1MEmBm5MXJAvhKWCNjX5tAeH9YbggM/template/preview",
       "key": "star_quilts",
       "properties": {

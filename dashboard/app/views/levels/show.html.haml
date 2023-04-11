@@ -65,6 +65,8 @@
         = render partial: "levels/#{@level.class.to_s.underscore}"
       - unless @level.is_a?(StandaloneVideo) || @level.properties['hide_reference_area']
         = render partial: 'levels/reference_area'
+    - elsif @game.app == Game::MUSIC
+      = render partial: 'levels/music'
     - else
       = render partial: 'levels/blockly'
 

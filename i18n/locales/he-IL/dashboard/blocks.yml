@@ -1209,6 +1209,19 @@ he:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: סדר {GROUP} ב {FORMAT}
+        options:
+          FORMAT:
+            '"border"': גבול
+            '"circle"': עיגול
+            '"grid"': רשת
+            '"top"': שורה עליונה
+            '"row"': טור
+            '"bottom"': שורה תחתונה
+            '"left"': עמודה שמאלית
+            '"column"': עמודה
+            '"right"': עמודה ימנית
       gamelab_locationAt:
         text: 'מיקום: x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1234,6 +1247,18 @@ he:
             '"spiral"': ספירלה
       gamelab_makeNewSpriteAnon:
         text: צור דמות {ANIMATION_NAME} חדשה ב {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': גבול
+            '"circle"': עיגול
+            '"grid"': רשת
+            '"top"': שורה עליונה
+            '"row"': טור
+            '"bottom"': שורה תחתונה
+            '"left"': עמודה שמאלית
+            '"column"': עמודה
+            '"right"': עמודה ימנית
       gamelab_makeNumSprites:
         text: צור {NUM} דמויות {ANIMATION_NAME} חדשות
       gamelab_makeProjectile:

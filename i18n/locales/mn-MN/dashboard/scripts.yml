@@ -97,6 +97,10 @@ mn:
           student_description: Ууртай шувуу, Ургамал ба Зомбигоос сонгосон дүрээр компьютерын шинжлэх ухааны үндсийг оролдоорой!
         text-compression:
           title: Текстийн шахалт
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Хөгжим
         K5-OnlinePD:
           description: Code.org-ийн Компьютерийн шинжлэх ухааны үндсийг ашиглан энэхүү үнэгүй онлайн хичээлийг ашиглан компьютерийн шинжлэх ухааныг заах талаар сурч аваарай.
           description_short: Code.org-ийн Компьютерийн шинжлэх ухааны үндсийг ашиглан энэхүү үнэгүй онлайн хичээлийг ашиглан компьютерийн шинжлэх ухааныг заах талаар сурч аваарай.
@@ -3463,3 +3467,31 @@ mn:
             lessonGroup-3:
               display_name: '2-р бүлэг: Биет ноорог үүсгэх'
           description_short: Биет төхөөрөмжөөр програмчилж сур.
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт

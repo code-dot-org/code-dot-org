@@ -1,6 +1,6 @@
 /*global mapboxgl*/
 
-$(document).ready(function() {
+$(document).ready(function () {
   // We keep some style elements as a Mapbox style for simplicity.
   const stylePath = 'mapbox://styles/codeorg/cjz36duae88ds1cp7ll7smx6s';
   const map = new mapboxgl.Map({
@@ -50,7 +50,7 @@ $(document).ready(function() {
       .addTo(map);
   }
 
-  map.on('load', function() {
+  map.on('load', function () {
     map.addSource('hoctiles', {
       type: 'vector',
       url: 'mapbox://codeorg.hoctiles'
@@ -97,9 +97,7 @@ $(document).ready(function() {
     legend.id = 'inmaplegend';
     legend.className = 'inmap-mapbox-legend';
     legend.index = 1;
-    $('#belowmaplegend div')
-      .clone()
-      .appendTo(legend);
+    $('#belowmaplegend div').clone().appendTo(legend);
     document.getElementById('mapbox-map').appendChild(legend);
 
     function enableMouseControls() {
@@ -108,35 +106,35 @@ $(document).ready(function() {
     }
 
     // Enable mouse controls when the map is clicked
-    map.on('click', function(e) {
+    map.on('click', function (e) {
       enableMouseControls();
     });
     // Enable mouse controls when the zoom (+/-) buttons are pressed
-    map.on('zoom', function(e) {
+    map.on('zoom', function (e) {
       enableMouseControls();
     });
     // Enable mouse controls when we go full screen
-    map.on('resize', function(e) {
+    map.on('resize', function (e) {
       enableMouseControls();
     });
 
     map.on('click', 'hoc-events', e => setPopup(e, false));
     map.on('click', 'hoc-special-events', e => setPopup(e, true));
 
-    map.on('mouseenter', 'hoc-events', function() {
+    map.on('mouseenter', 'hoc-events', function () {
       map.getCanvas().style.cursor = 'pointer';
     });
 
-    map.on('mouseenter', 'hoc-special-events', function() {
+    map.on('mouseenter', 'hoc-special-events', function () {
       map.getCanvas().style.cursor = 'pointer';
     });
 
     // Change it back to a pointer when it leaves.
-    map.on('mouseleave', 'hoc-events', function() {
+    map.on('mouseleave', 'hoc-events', function () {
       map.getCanvas().style.cursor = '';
     });
 
-    map.on('mouseleave', 'hoc-special-events', function() {
+    map.on('mouseleave', 'hoc-special-events', function () {
       map.getCanvas().style.cursor = '';
     });
   });

@@ -47,6 +47,8 @@ class PegasusTest < Minitest::Test
     'text/plain' => %w[
       code.org/health_check
       code.org/robots.txt
+      advocacy.code.org/health_check
+      hourofcode.com/us/health_check
     ]
   }
 

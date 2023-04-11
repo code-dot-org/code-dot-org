@@ -43,7 +43,7 @@ const {
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
-$(document).ready(function() {
+$(document).ready(function () {
   registerReducers({
     teacherSections,
     manageStudents,

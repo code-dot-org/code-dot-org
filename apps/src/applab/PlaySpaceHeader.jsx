@@ -109,7 +109,7 @@ export default connect(
   },
   function propsFromDispatch(dispatch) {
     return {
-      onInterfaceModeChange: function(mode) {
+      onInterfaceModeChange: function (mode) {
         dispatch(actions.changeInterfaceMode(mode));
       }
     };

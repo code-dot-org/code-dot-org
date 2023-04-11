@@ -150,9 +150,7 @@ export class WorkshopAttendance extends React.Component {
     } else {
       const activeSession = this.state.sessions.find(s => s['show_link?']);
       const attendanceUrl = activeSession
-        ? `${window.location.protocol}${window.dashboard.CODE_ORG_URL}/pd/${
-            activeSession.code
-          }`
+        ? `${window.location.protocol}${window.dashboard.CODE_ORG_URL}/pd/${activeSession.code}`
         : null;
       intro = (
         <div>

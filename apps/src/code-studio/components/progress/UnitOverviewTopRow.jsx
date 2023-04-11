@@ -208,39 +208,41 @@ class UnitOverviewTopRow extends React.Component {
         <div style={styles.resourcesRow}>
           {!deeperLearningCourse &&
             viewAs === ViewType.Instructor &&
-            (isMigrated && teacherResources.length > 0) && (
+            isMigrated &&
+            teacherResources.length > 0 && (
               <ResourcesDropdown
                 resources={teacherResources}
                 unitId={scriptId}
               />
             )}
-          {displayPrintingOptionsDropwdown && viewAs === ViewType.Instructor && (
-            <div style={{marginRight: 5}}>
-              <DropdownButton
-                customText={
-                  <div>
-                    <FontAwesome icon="print" style={styles.icon} />
-                    <span style={styles.customText}>
-                      {i18n.printingOptions()}
-                    </span>
-                  </div>
-                }
-                color={Button.ButtonColor.blue}
-              >
-                {pdfDropdownOptions.map(option => (
-                  <a
-                    key={option.key}
-                    href={option.url}
-                    onClick={e =>
-                      this.recordAndNavigateToPdf(e, option.key, option.url)
-                    }
-                  >
-                    {option.name}
-                  </a>
-                ))}
-              </DropdownButton>
-            </div>
-          )}
+          {displayPrintingOptionsDropwdown &&
+            viewAs === ViewType.Instructor && (
+              <div style={{marginRight: 5}}>
+                <DropdownButton
+                  customText={
+                    <div>
+                      <FontAwesome icon="print" style={styles.icon} />
+                      <span style={styles.customText}>
+                        {i18n.printingOptions()}
+                      </span>
+                    </div>
+                  }
+                  color={Button.ButtonColor.blue}
+                >
+                  {pdfDropdownOptions.map(option => (
+                    <a
+                      key={option.key}
+                      href={option.url}
+                      onClick={e =>
+                        this.recordAndNavigateToPdf(e, option.key, option.url)
+                      }
+                    >
+                      {option.name}
+                    </a>
+                  ))}
+                </DropdownButton>
+              </div>
+            )}
           {showCalendar && viewAs === ViewType.Instructor && (
             <UnitCalendarButton
               lessons={unitCalendarLessons}
