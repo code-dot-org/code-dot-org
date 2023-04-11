@@ -369,7 +369,9 @@ en:
 
             If you are a code.org engineer: this script contains all the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
           name: allthethings
-          lessons: {}
+          lessons:
+            lesson-49:
+              name: Music
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'

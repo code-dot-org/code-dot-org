@@ -15,9 +15,14 @@ const defaultArgs = {
   oldestGrade: 12,
   subjects: ['english_language_arts'],
   topics: ['cybersecurity'],
-  isTranslated: true
+  isTranslated: true,
+  isEnglish: true
 };
 
 export const BaseCard = Template.bind({});
 BaseCard.args = defaultArgs;
 BaseCard.storyName = 'CurriculumCatalogCard – Base';
+
+export const NonEnglishCard = Template.bind({});
+NonEnglishCard.args = {...defaultArgs, isEnglish: false};
+NonEnglishCard.storyName = 'CurriculumCatalogCard – Not English Format';
