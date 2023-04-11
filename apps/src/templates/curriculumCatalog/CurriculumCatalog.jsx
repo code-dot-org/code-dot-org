@@ -8,63 +8,61 @@ import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/cour
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import {translatedCourseOfferingDurations} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 
-const CurriculumCatalog = ({curriculaData}) => {
-  return (
-    <>
-      <div className={style.catalogHeader}>
-        <HeaderBanner
-          headingText={i18n.curriculumCatalogHeaderTitle()}
-          subHeadingText={i18n.curriculumCatalogHeaderSubtitle()}
-          short={false}
-          imageUrl={CourseCatalogIllustration01}
-        />
-      </div>
-      <div className={style.catalogContentContainer}>
-        <div className={style.catalogContent}>
-          {/*TODO [MEG]: calculate and pass in duration and translated from backend, use image in imageSrc */}
-          {curriculaData
-            .filter(curriculum => !!curriculum.grade_levels)
-            .map(
-              ({
-                key,
-                image,
-                display_name,
-                grade_levels,
-                school_subject,
-                cs_topic
-              }) => {
-                // TODO [MEG]: We are currently assuming if there are grade levels, there are at least two
-                // grades and the list is in ascending order.
-                const gradeLevelArray = grade_levels.split(',');
-                const durationPossibilities = Object.keys(
-                  translatedCourseOfferingDurations
-                );
+const CurriculumCatalog = ({curriculaData}) => (
+  <>
+    <div className={style.catalogHeader}>
+      <HeaderBanner
+        headingText={i18n.curriculumCatalogHeaderTitle()}
+        subHeadingText={i18n.curriculumCatalogHeaderSubtitle()}
+        short={false}
+        imageUrl={CourseCatalogIllustration01}
+      />
+    </div>
+    <div className={style.catalogContentContainer}>
+      <div className={style.catalogContent}>
+        {/*TODO [MEG]: calculate and pass in duration and translated from backend, use image in imageSrc */}
+        {curriculaData
+          .filter(curriculum => !!curriculum.grade_levels)
+          .map(
+            ({
+              key,
+              image,
+              display_name,
+              grade_levels,
+              school_subject,
+              cs_topic
+            }) => {
+              // TODO [MEG]: We are currently assuming if there are grade levels, there are at least two
+              // grades and the list is in ascending order.
+              const gradeLevelArray = grade_levels.split(',');
+              const durationPossibilities = Object.keys(
+                translatedCourseOfferingDurations
+              );
 
-                return (
-                  <CurriculumCatalogCard
-                    key={key}
-                    imageSrc={image}
-                    courseDisplayName={display_name}
-                    duration={
-                      durationPossibilities[
-                        Math.floor(Math.random() * durationPossibilities.length)
-                      ]
-                    } // TODO [MEG] actually pass in this data
-                    youngestGrade={gradeLevelArray[0]}
-                    oldestGrade={gradeLevelArray[gradeLevelArray.length - 1]}
-                    subjects={school_subject?.split(',')}
-                    topics={cs_topic?.split(',')}
-                    isTranslated={!!Math.round(Math.random())} // TODO [MEG]: actually pass in this data
-                    isEnglish={true} // TODO [MEG]: use locale
-                  />
-                );
-              }
-            )}
-        </div>
+              return (
+                <CurriculumCatalogCard
+                  key={key}
+                  imageSrc={image}
+                  courseDisplayName={display_name}
+                  duration={
+                    durationPossibilities[
+                      Math.floor(Math.random() * durationPossibilities.length)
+                    ]
+                  } // TODO [MEG] actually pass in this data
+                  youngestGrade={gradeLevelArray[0]}
+                  oldestGrade={gradeLevelArray[gradeLevelArray.length - 1]}
+                  subjects={school_subject?.split(',')}
+                  topics={cs_topic?.split(',')}
+                  isTranslated={!!Math.round(Math.random())} // TODO [MEG]: actually pass in this data
+                  isEnglish={true} // TODO [MEG]: use locale
+                />
+              );
+            }
+          )}
       </div>
-    </>
-  );
-};
+    </div>
+  </>
+);
 
 CurriculumCatalog.propTypes = {
   curriculaData: PropTypes.arrayOf(curriculumDataShape)
