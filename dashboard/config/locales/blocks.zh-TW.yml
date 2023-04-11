@@ -1255,6 +1255,19 @@ zh-TW:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: 群組 {GROUP} 分佈成 {FORMAT}
+        options:
+          FORMAT:
+            '"border"': 邊框
+            '"circle"': 圓形
+            '"grid"': 格狀
+            '"top"': 上列
+            '"row"': 橫列
+            '"bottom"': 下列
+            '"left"': 左排
+            '"column"': 直排
+            '"right"': 右排
       gamelab_locationAt:
         text: '座標 x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1279,6 +1292,18 @@ zh-TW:
             '"rain"': 下雨
       gamelab_makeNewSpriteAnon:
         text: 角色 創建一個新的 {ANIMATION_NAME} 定位到 {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': 邊框
+            '"circle"': 圓形
+            '"grid"': 格狀
+            '"top"': 上列
+            '"row"': 橫列
+            '"bottom"': 下列
+            '"left"': 左排
+            '"column"': 直排
+            '"right"': 右排
       gamelab_makeNumSprites:
         text: 產生 {NUM} 個新的 {ANIMATION_NAME} 小怪
       gamelab_makeProjectile:

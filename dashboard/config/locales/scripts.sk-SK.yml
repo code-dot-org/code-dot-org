@@ -161,6 +161,10 @@ sk:
             Birds a Plants vs. Zombies!
         text-compression:
           title: Kompresia textu
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Hudba
         asUnplugged:
           description_audience: Vek 6-13
         afterschool1:
@@ -4375,3 +4379,179 @@ sk:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vstupy a výstupy
+        vpl-csd-ci-1:
+          title: 'Modul 1: Príprava na výučbu riešenia problémov a výpočtovej techniky'
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Riešenie problémov a výpočtová technika Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy riešenia problémov a výpočtovej techniky.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 30 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Riešenie problémov a výpočtová technika Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy riešenia problémov a výpočtovej techniky.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 30 minút
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Výučba v oblasti vývoja webových stránok
+          title: 'Modul 2: Príprava na výučbu vývoja webových stránok'
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Vývoj webových stránok na Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy vývoja webových stránok.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Web Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 90 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Vývoj webových stránok na Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy vývoja webových stránok.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Web Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 90 minút
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Príprava na výučbu interaktívnych animácií a hier
+          title: 'Modul 3: Príprava na výučbu interaktívnych animácií a hier'
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Interaktívne animácie a hry Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy interaktívnych animácií a hier.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Game Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 120 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Interaktívne animácie a hry Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy interaktívnych animácií a hier.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Game Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 120 minút
+        vpl-csd-ci-4:
+          title: 'Modul 4: Príprava na výučbu procesu dizajnu'
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Proces dizajnu Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy procesu navrhovania.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do aplikácie Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 90 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Proces dizajnu Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy procesu navrhovania.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do aplikácie Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 90 minút
+        vpl-csd-ci-5:
+          title: 'Modul 5: Príprava na výučbu údajov a spoločnosti'
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Dáta a spoločnosť na Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy z oblasti Dáta a spoločnosť.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 90 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Dáta a spoločnosť na Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy z oblasti Dáta a spoločnosť.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 90 minút
+        vpl-csd-ci-7:
+          title: 'Modul 7: Príprava na výučbu umelej inteligencie a strojového učenia'
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Umelá inteligencia a strojové učenie Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy umelej inteligencie a strojového učenia.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Ai Lab a aplikácie Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+            -   vytvoríte plán implementácie učebného celku so svojimi študentmi.
+
+            **Odporúčaný čas:** 120 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Umelá inteligencia a strojové učenie Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy umelej inteligencie a strojového učenia.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Ai Lab a aplikácie Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+            -   vytvoríte plán implementácie učebného celku so svojimi študentmi.
+
+            **Odporúčaný čas:** 120 minút
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vstupy a výstupy
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vstupy a výstupy
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vstupy a výstupy
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vstupy a výstupy
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vstupy a výstupy

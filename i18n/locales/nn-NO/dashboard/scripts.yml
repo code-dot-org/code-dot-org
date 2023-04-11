@@ -117,6 +117,9 @@ nn:
           description: Alle nivå typer for UI tester
           description_short: Alle nivå typer for UI tester
           student_description: Alle nivå typer for UI tester
+          lessons:
+            lesson-49:
+              name: Musikk
         algebraPD2b:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
@@ -2855,4 +2858,8 @@ nn:
         csd6a-2023:
           lesson_groups:
             lessonGroup-3:
+              display_name: 'Kapittel 2: Bygge fysiske prototypar'
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
               display_name: 'Kapittel 2: Bygge fysiske prototypar'

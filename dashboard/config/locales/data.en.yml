@@ -768,6 +768,8 @@ en:
         csa-pl-documentation: Documentation in Java Lab
         csc-starquilts-intro: 'CSC: Star Quilts'
         csc-mapmakers-intro: "CSC: Mapmakers\t"
+        csa-pl-vocab-pm: Project Management Vocabulary
+        csc-ecosystems-intro: Ecosystems Intro
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

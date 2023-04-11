@@ -1331,6 +1331,19 @@ en:
             '"z"': z
       gamelab_layoutGrid:
         text: layout sprites as a grid
+      gamelab_layoutSprites:
+        text: layout [GROUP][0] as a [FORMAT][1]
+        options:
+          FORMAT:
+            '"border"': border
+            '"circle"': circle
+            '"grid"': grid
+            '"top"': top row
+            '"row"': row
+            '"bottom"': bottom row
+            '"left"': left column
+            '"column"': column
+            '"right"': right column
       gamelab_locationAt:
         text: 'location x: [X][0] y: [Y][1]'
       gamelab_locationModifier:
@@ -1357,6 +1370,19 @@ en:
             '"spiral"': spiral
       gamelab_makeNewSpriteAnon:
         text: make new [ANIMATION_NAME][0] sprite at [LOCATION][1]
+      gamelab_makeNewSpriteGroup:
+        text: make [N][0] new [GROUP][1] in a [FORMAT][2]
+        options:
+          FORMAT:
+            '"border"': border
+            '"circle"': circle
+            '"grid"': grid
+            '"top"': top row
+            '"row"': row
+            '"bottom"': bottom row
+            '"left"': left column
+            '"column"': column
+            '"right"': right column
       gamelab_makeNumSprites:
         text: make [NUM][0] new [ANIMATION_NAME][1] sprites
       gamelab_makeNumSpritesNear:
@@ -2745,6 +2771,19 @@ en:
           DIR:
             right: right ↻
             left: left ↺
+      ecosystems_catchMe:
+        text: catch [THIS][0]
+      ecosystems_eat:
+        text: eat [THIS][0]
+      ecosystems_goldilocks:
+        text: |2-
+           if [CONDITION][0][SPRITE][1]
+          [STATEMENT][2]
+        options:
+          CONDITION:
+            '"too much"': too much
+            '"just right"': just right
+            '"too little"': too little
       storylab_clearHeadings:
         text: clear headings
       storylab_setForegroundEffect2:

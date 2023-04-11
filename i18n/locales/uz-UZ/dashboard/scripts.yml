@@ -97,6 +97,10 @@ uz:
           student_description: '"Angry Birds" va "Plants vs Zombies" personajlari bilan kompyuter savodxonligi asoslarini sinab ko‘ring!'
         text-compression:
           title: Matnni Zichlash
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Musiqa
         K5-OnlinePD:
           description: Ushbu bepul, o‘z-o‘zini rivojlantirish kursi bilan Code.org ning "Kompyuter savodxonligi asoslari" dan foydalangan holda kompyuter fanlarini qanday o‘qitishni o‘rganing.
           description_short: Ushbu bepul, o‘z-o‘zini rivojlantirish kursi bilan Code.org ning "Kompyuter savodxonligi asoslari" dan foydalangan holda kompyuter fanlarini qanday o‘qitishni o‘rganing.
@@ -3992,3 +3996,31 @@ uz:
             lessonGroup-3:
               display_name: 'Chapter 2: Building Physical Prototypes'
           description_short: Learn to program with physical devices.
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputs and Outputs
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputs and Outputs
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputs and Outputs
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputs and Outputs
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputs and Outputs
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputs and Outputs

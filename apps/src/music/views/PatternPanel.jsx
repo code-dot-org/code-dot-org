@@ -45,6 +45,7 @@ const PatternPanel = ({
 
       onChange(currentValue);
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [currentValue]
   );
 
@@ -76,6 +77,7 @@ const PatternPanel = ({
   const onClear = useCallback(() => {
     currentValue.events = [];
     onChange(currentValue);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentValue]);
 
   const startPreview = useCallback(() => {
@@ -89,6 +91,7 @@ const PatternPanel = ({
       clearInterval(intervalId);
       setCurrentPreviewTick(0);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [setCurrentPreviewTick, currentValue]);
 
   return (
@@ -105,7 +108,14 @@ const PatternPanel = ({
       {currentFolder.sounds.map(sound => {
         return (
           <div className={styles.row} key={sound.src}>
-            <div className={styles.name}>{sound.name}</div>
+            <div className={styles.nameContainer}>
+              <span
+                className={styles.name}
+                onClick={() => previewSound(`${currentValue.kit}/${sound.src}`)}
+              >
+                {sound.name}
+              </span>
+            </div>
             {arrayOfTicks.map(tick => {
               return (
                 <div

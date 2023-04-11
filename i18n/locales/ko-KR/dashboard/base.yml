@@ -1129,6 +1129,13 @@ ko:
     no_teacher_email:
       body_markdown: '계정에 이메일 주소가 없습니다. 이 양식을 작성하기 전 [계정 설정에 방문](%{user_registration})하여 이메일 주소를 추가하세요.'
   courses_category: '전 과정'
+  course_offering:
+    headers:
+      minecraft: '마인크래프트'
+      hello_world: '헬로우 월드'
+      sports: '스포츠'
+      csf: 'CS 기초'
+      csc: 'CS 커넥션'
   cookie_banner:
     message: '사이트를 계속 들러 보거나 또는 "동의함"에 클릭하여, 컴퓨터 또는 기기 상에 쿠키 저장을 동의하세요.'
     more_information: "Code.org의 개인정보 보호정책 참조."

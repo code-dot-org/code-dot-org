@@ -1112,12 +1112,37 @@ mi:
             '"w"': w
             '"x"': x
             '"z"': z
+      gamelab_layoutSprites:
+        text: takotohia {GROUP} ki te {FORMAT}
+        options:
+          FORMAT:
+            '"border"': pae
+            '"circle"': porpwhita
+            '"grid"': tukutuku
+            '"top"': rārangi runga
+            '"row"': rārangi
+            '"bottom"': rārangi raro
+            '"left"': pou māui
+            '"column"': pou
+            '"right"': pou mātau
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
         options:
           EFFECT:
             '"rain"': ua
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': pae
+            '"circle"': porpwhita
+            '"grid"': tukutuku
+            '"top"': rārangi runga
+            '"row"': rārangi
+            '"bottom"': rārangi raro
+            '"left"': pou māui
+            '"column"': pou
+            '"right"': pou mātau
       gamelab_makeProjectile:
         options:
           DIRECTION:

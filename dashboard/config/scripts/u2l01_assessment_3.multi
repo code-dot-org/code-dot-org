@@ -1,21 +1,18 @@
 name 'U2L01 Assessment 3'
-encrypted 'tn+r7E0mfd/Jz+Wnp5ypJHK7zbxhWCV7gKfQiWMcOpWICVcD1qS9g+rIHhGA
-HznYEJ/cXRfv9QijaKmUCNFVjuQYt1Hz68mdnfT/xN6adTzySwi/t7TTOllU
-G6D4ztR9xKFImkvbATUZIlOWmaEi7EOnvTDiWvsBYIV9AVB2AcouBwpxBXh9
-Wg7uKEDLOgGiqVDiBXUm6vs/AZjloQ0I4YgEfwo+MAO2uLOPqzXpKZKy0yMc
-b6IRaeIDjPTkM/c5gfSxWgxsiFuni3XPJmkqOQyR2wBUPT4b4aLTxm0OyBLO
-58JgD7Icyxo+PaPsnRrXpIZXH+umbYk6PX1MdD3Yv2fRTA67mdtQRgu/4X2i
-PQdUFBnYjLKAvqpE+fx8JuTJn0Ec5YdmbOaprKRFE0wxnJfkOVCvVesNtG/g
-PusHhbFFsqfUe2RCTQ+MyGcG3BgLZBt71yEURhFFZktrvGJCADXBjSbzpeeK
-4ayAXqULIriz8i55rNqhz3CF/dbgo/s4M1yTD6bpJOg4eKvavxPFmkcOMHYU
-msxeIf6pn0+Q0f9fy2DHPEEwjF5AqxChEvx97UHnh7oRUuBr8XIjj8H6xSuF
-znWdaNPp2Gk61zU2nu00ss2Bb1s1s+o2sPNupMfx8i1Y1j7M3+isueOxS3KC
-+3NhfCKXfzMwSXmB7vuux3sxuRWUOzr4+ulFrcaNtNOkkhBOc/KymGr1lRh0
-jBMoJgg+TUwS6AmjijejjtstHLPun3sa/03P7UEeMz2xfFQFjp3j/sjguuon
-PWTz0YeiKhcgkN3iT6IXiFu/7LYo7p2tkSRZGxlFK/9WNqxZNpy3ddAiCTu0
-SFP4DGnJCFA0KYowZYLhtlCgWU2sQxy+F2PGA5Px4SlUB+305R253rRDCi++
-RdMN0o0sOmVMtkiHzDkPHQov6Q5nneVWBLTzknyggU0E39k8+RB+lLLd5030
-mQGNJGK8HnwXcmaAfWl4c0gu7WjkqF1muAY7GUG4D8DsVaiECw1+WrentGEQ
-XWHCAvhzMJgCWpPL8Zk2gfjiazlj4seNTlW1IU94UK6pNZ5/j9RVnuOh9bDm
-VwnJdVPaRFfKehhOwO++dlElbm4Vow==
-'
+editor_experiment ''
+title 'The Internet is for Everyone: Assessment 3'
+type 'multi2'
+question 'Choose the two best answers to complete the sentence: If I understand how the internet works then I will be able to:'
+
+right 'make informed choices to support or oppose decisions my government makes about access to the internet. '
+wrong 'connect the latest devices to the internet.'
+right 'make informed choices about my privacy on the internet.'
+wrong 'get the best price for my cell phone plan.'
+wrong 'speed up my downloads of movies I purchase.'
+teacher_markdown <<MARKDOWN
+**Correct Answers:** 
+- make informed choices to support or oppose decisions my government makes about access to the internet.
+- make informed choices about my privacy on the internet.
+MARKDOWN
+
+allow_multiple_attempts true

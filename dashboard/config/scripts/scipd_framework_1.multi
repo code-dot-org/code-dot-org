@@ -14,3 +14,4 @@ wrong 'a subfield of computer science'
 markdown <<MARKDOWN
 
 MARKDOWN
+allow_multiple_attempts true
