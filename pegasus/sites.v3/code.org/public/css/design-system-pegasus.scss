@@ -311,12 +311,20 @@ ul {
 
         &:before {
           color: $brand_secondary_default;
+          transition: color ease-in-out .2s;
         }
       }
 
       a {
         @include heading-sm;
         color: $brand_secondary_default;
+      }
+
+      &:hover {
+
+        i:before {
+          color: $brand_secondary_dark;
+        }
       }
     }
   }
