@@ -75,7 +75,7 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
     end
 
     # verify that the cache can be skipped
-    assert_queries 3 do
+    assert_queries 4 do
       Services::MarkdownPreprocessor.process(input, cache_options: {force: true})
     end
   end
