@@ -18,13 +18,6 @@ section.device-setup { // /maker/circuitplayground
   .flex-container {
     flex-wrap: wrap;
   }
-
-  ul.icon-bullet-list {
-
-    li {
-      width: 100%;
-    }
-  }
 }
 
 @media screen and (max-width: $width-sm) {
