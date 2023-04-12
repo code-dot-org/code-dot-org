@@ -127,5 +127,6 @@
       #{answers || "undefined"},
       #{answers_feedback.to_json},
       #{last_attempt.to_json},
-      #{contained_mode}
+      #{contained_mode},
+      #{!!level.allow_multiple_attempts}
     ));
