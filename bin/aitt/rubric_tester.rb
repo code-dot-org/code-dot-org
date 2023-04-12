@@ -94,7 +94,6 @@ def generate_html_output(output_filename, prompt, accuracy, actual_grades, expec
     file.puts "  <h2>Overall Accuracy: #{accuracy.to_i}%</h2>"
 
     actual_grades.each do |student_id, grades|
-      puts "rendering table for #{student_id}"
       file.puts "  <h3>Student: #{student_id}</h3>"
       file.puts "  <a href=\"#{link_base_url}/#{student_id}.js\">#{student_id}.js</a>"
       file.puts '  <table border="1">'
