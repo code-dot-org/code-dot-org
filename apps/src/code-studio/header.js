@@ -143,16 +143,19 @@ header.build = function (
     setWindowTitle(store);
   });
 
+  // A handler for user-initiated browser back & forward button
+  // presses, when arriving on a page that we pushed onto the
+  // browser session history stack.
   window.addEventListener('popstate', function (event) {
-    //console.log(
-    //  `popstate location: ${document.location}, state: ${JSON.stringify(event.state)}`
-    //);
-
     const path = new URL(document.location).pathname;
     const values = path.split('/');
     const levelIndex = Number(values[6]) - 1;
     const levelId = lessonData.levels[levelIndex].activeId;
+
+    // Update the redux store.
     getStore().dispatch(setCurrentLevelId(levelId));
+
+    // Update the browser.
     setWindowTitle(store);
   });
 };

@@ -23,10 +23,15 @@ class UnconnectedLabContainer extends Component {
     return this.props.levels.findIndex(level => level.isCurrentLevel);
   }
 
+  // A handler when the lab tells us that the level has changed.
   onChangeLevelIndex(levelIndex) {
     const level = this.props.levels[levelIndex];
-    window.history.pushState({}, '', level.url + window.location.search);
+
+    // Update the redux store.
     this.props.onLevelChanged('' + level.id);
+
+    // Update the browser.
+    window.history.pushState({}, '', level.url + window.location.search);
     this.props.setWindowTitle();
   }
 
@@ -35,6 +40,7 @@ class UnconnectedLabContainer extends Component {
       this.props.currentLevelId
     );
 
+    // Some Music Lab-specific configuration.
     const appConfig = {
       'load-progression': 'true',
       'local-progression': 'true'
