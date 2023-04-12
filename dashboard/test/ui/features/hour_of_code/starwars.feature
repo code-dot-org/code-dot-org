@@ -62,8 +62,8 @@ Feature: Hour of Code 2015 tutorial is completable
   Scenario: Solving puzzle 4 in text mode
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/4?noautoplay=true"
     And I rotate to landscape
-    And I wait for the page to fully load
     And I wait until element "#continue-button" is not visible
+    And I wait for the page to fully load
     When I append text to droplet "moveLeft();\n"
     And I append text to droplet "moveLeft();\n"
     And I append text to droplet "moveDown();\n"
@@ -76,8 +76,8 @@ Feature: Hour of Code 2015 tutorial is completable
   Scenario: Solving puzzle 5 in text mode
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/5?noautoplay=true"
     And I rotate to landscape
-    And I wait for the page to fully load
     And I wait until element "#continue-button" is not visible
+    And I wait for the page to fully load
     And I append text to droplet "moveRight();\n"
     And I append text to droplet "moveDown();\n"
     And I append text to droplet "moveDown();\n"
@@ -90,8 +90,8 @@ Feature: Hour of Code 2015 tutorial is completable
   Scenario: Solving puzzle 6 in text mode
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/6?noautoplay=true"
     And I rotate to landscape
-    And I wait for the page to fully load
     And I wait until element "#continue-button" is not visible
+    And I wait for the page to fully load
     When I ensure droplet is in text mode
     And I append text to droplet "moveDown();\n"
     And I append text to droplet "moveUp();\n"
@@ -110,8 +110,8 @@ Feature: Hour of Code 2015 tutorial is completable
   Scenario: Failing puzzle 5 by touching hazard
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/5?noautoplay=true"
     And I rotate to landscape
-    And I wait for the page to fully load
     And I wait until element "#continue-button" is not visible
+    And I wait for the page to fully load
     And I append text to droplet "moveLeft();\n"
     And I append text to droplet "moveLeft();\n"
     And I append text to droplet "moveDown();\n"
