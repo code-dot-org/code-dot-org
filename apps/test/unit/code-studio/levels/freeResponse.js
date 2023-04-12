@@ -5,8 +5,6 @@ import {writeSourceForLevel} from '@cdo/apps/code-studio/clientState';
 
 describe('Free Response', () => {
   const levelId = 1047;
-  const optional = false;
-  const allowMultipleAttempts = false;
   const scriptName = 'test-script';
   const lastAttemptString = 'This is my final answer';
   const otherLastAttemptString = 'This is some other answer';
@@ -31,11 +29,7 @@ describe('Free Response', () => {
 
   describe('Shows last attempt', () => {
     it('shows nothing if there was no last attempt', () => {
-      const freeResponse = new FreeResponse(
-        levelId,
-        optional,
-        allowMultipleAttempts
-      );
+      const freeResponse = new FreeResponse(levelId);
       expect(freeResponse.getResult().response).to.be.empty;
     });
 
@@ -48,11 +42,7 @@ describe('Free Response', () => {
         lastAttemptString
       );
 
-      const freeResponse = new FreeResponse(
-        levelId,
-        optional,
-        allowMultipleAttempts
-      );
+      const freeResponse = new FreeResponse(levelId);
       expect(freeResponse.getResult().response).to.equal(lastAttemptString);
     });
 
@@ -66,11 +56,7 @@ describe('Free Response', () => {
       );
       textarea.value = otherLastAttemptString;
 
-      const freeResponse = new FreeResponse(
-        levelId,
-        optional,
-        allowMultipleAttempts
-      );
+      const freeResponse = new FreeResponse(levelId);
       expect(freeResponse.getResult().response).to.equal(
         otherLastAttemptString
       );
@@ -86,11 +72,7 @@ describe('Free Response', () => {
       lastAttemptString
     );
 
-    const freeResponse = new FreeResponse(
-      levelId,
-      optional,
-      allowMultipleAttempts
-    );
+    const freeResponse = new FreeResponse(levelId);
     expect(freeResponse.getResult().response).to.equal(lastAttemptString);
 
     freeResponse.resetAnswers();
