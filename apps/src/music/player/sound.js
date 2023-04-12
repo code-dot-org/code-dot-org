@@ -22,7 +22,7 @@ export function InitSound(desiredSounds) {
 export function LoadSoundFromBuffer(id, buffer) {
   audioSystem.LoadSoundFromBuffer(
     buffer,
-    function(id, buffer) {
+    function (id, buffer) {
       audioSoundBuffers[id] = buffer;
     }.bind(this, id)
   );
@@ -40,7 +40,7 @@ function LoadSounds(desiredSounds) {
   for (var i = 0; i < soundList.length; i++) {
     audioSystem.LoadSound(
       baseSoundUrl + soundList[i] + '.mp3',
-      function(id, buffer) {
+      function (id, buffer) {
         audioSoundBuffers[id] = buffer;
         //console.log("saving audio", id);
       }.bind(this, i)
@@ -97,7 +97,7 @@ function PlaySoundByIndex(
     when,
     loop,
     effects,
-    function(id) {
+    function (id) {
       // callback received when sound ends
       //console.log("sound ended", id);
 

@@ -103,6 +103,7 @@
   "makerSetupMakerAppForLinux": "Code.org Maker App dla systemu Linux",
   "makerSetupMakerAppForMac": "Code.org Maker App dla komputerów Mac",
   "makerSetupMakerAppForWindows": "Code.org Maker App dla systemu Windows",
+  "makerSetupMicrobitFirmataTransferring": "Poczekaj, aż zaktualizowany plik zostanie przesłany do podłączonego mikro-bitu. Nie odłączaj mikro-bitu ani nie zamykaj tego okna podczas tego procesu.",
   "makerSetupMicrobitFirmataUpdateSuccess": "Twój micro:bit został zaktualizowany!",
   "makerSetupClickRedetect": "Kliknij przycisk „ponownie wykryj” powyżej",
   "makerSetupConfirmConnection": "aby potwierdzić, że możesz teraz pomyślnie połączyć się z płytą.",

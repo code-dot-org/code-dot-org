@@ -284,10 +284,7 @@ describe('UnitOverviewTopRow', () => {
       />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(1);
-    const dropdownLinks = wrapper
-      .find(DropdownButton)
-      .first()
-      .props().children;
+    const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
     expect(dropdownLinks.map(link => link.props.href)).to.eql([
       '/link/to/script_overview.pdf',
       '/link/to/script_resources.pdf'

@@ -53,19 +53,11 @@ describe('AllCodeDocs', () => {
   it('has ProgrammingExpressionsTable and ProgrammingEnvironmentsTable on load', () => {
     const wrapper = shallow(<AllCodeDocs {...defaultProps} />);
     expect(wrapper.find('ProgrammingEnvironmentsTable').length).to.equal(1);
-    expect(
-      wrapper
-        .find('ProgrammingEnvironmentsTable')
-        .first()
-        .props().hidden
-    ).to.be.false;
+    expect(wrapper.find('ProgrammingEnvironmentsTable').first().props().hidden)
+      .to.be.false;
     expect(wrapper.find('ProgrammingExpressionsTable').length).to.equal(1);
-    expect(
-      wrapper
-        .find('ProgrammingExpressionsTable')
-        .first()
-        .props().hidden
-    ).to.be.true;
+    expect(wrapper.find('ProgrammingExpressionsTable').first().props().hidden)
+      .to.be.true;
   });
 
   it('switches visible table when toggle is pressed', () => {

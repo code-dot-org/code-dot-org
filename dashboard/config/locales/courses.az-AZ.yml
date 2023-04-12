@@ -149,6 +149,10 @@ az:
           description_short: Əsas informatika anlayışlarını öyrənin.
         self-paced-pl-csa-2023:
           title: CSA Başlanğıc Modulları
+        csd-2023:
+          title: İnformatika Kəşfləri
+        vpl-csd-summer-ci-2023:
+          title: CS Discoveries Kurikulum Araşdırması
     resources:
       curriculum/csd/2020:
         name: Kurikulum

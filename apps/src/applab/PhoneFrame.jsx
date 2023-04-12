@@ -18,13 +18,8 @@ export default class PhoneFrame extends React.Component {
   };
 
   render() {
-    const {
-      isDark,
-      screenIds,
-      showSelector,
-      isPaused,
-      onScreenCreate
-    } = this.props;
+    const {isDark, screenIds, showSelector, isPaused, onScreenCreate} =
+      this.props;
     return (
       <span id="phoneFrame">
         <div id="phoneFrameWrapper">

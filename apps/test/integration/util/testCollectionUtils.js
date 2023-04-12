@@ -35,7 +35,7 @@ function filterFiles(files) {
 
 module.exports = {
   // Get all json files under directory path
-  getCollections: function() {
+  getCollections: function () {
     var context = require.context('../levelSolutions/', true, /.*\.js$/);
     var files = context.keys();
     var testCollections = [];
@@ -49,7 +49,7 @@ module.exports = {
   /**
    * Gets a cloned copy of a level given a testCollection/testData
    */
-  getLevelFromCollection: function(testCollection, testData, dataItem) {
+  getLevelFromCollection: function (testCollection, testData, dataItem) {
     var level;
 
     var data = dataItem();

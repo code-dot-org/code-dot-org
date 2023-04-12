@@ -5,7 +5,7 @@ theme: responsive_full_width
 
 %script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
 %script{src: webpack_asset_path('js/code.org/public/administrators.js')}
-%link{href: 'shared/css/design-system-pegasus.css', rel: 'stylesheet'}
+%link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
 
 -# Import FontAwesome Pro
 %script{src: "https://kit.fontawesome.com/ea2d9d4413.js", crossorigin: "anonymous"}
@@ -138,7 +138,7 @@ theme: responsive_full_width
 
 %section.bg-primary-light{style: "display: block !important"}
   .wrapper
-    %p.callout.no-margin-bottom Want to see how your district stacks up for computer science offerings? Check out the <a href="/yourschool" target="_blank" rel="noopener noreferrer">CS Access Report</a>!
+    %p.heading-sm.no-margin-bottom Want to see how your district stacks up for computer science offerings? Check out the <a href="/yourschool" target="_blank" rel="noopener noreferrer">CS Access Report</a>!
 
 %a{id: 'email-signup-form'}
 %section{style: "display: block !important"}

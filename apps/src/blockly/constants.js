@@ -29,4 +29,5 @@ export const Themes = {
 //   ClampedNumber(,y)
 //   ClampedNumber(x,)
 //   ClampedNumber(,)
-export const CLAMPED_NUMBER_REGEX = /^ClampedNumber\(\s*([\d.]*)\s*,\s*([\d.]*)\s*\)$/;
+export const CLAMPED_NUMBER_REGEX =
+  /^ClampedNumber\(\s*([\d.]*)\s*,\s*([\d.]*)\s*\)$/;

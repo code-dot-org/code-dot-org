@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-starquilts",
-    "serialized_at": "2023-03-28 18:14:11 UTC",
+    "serialized_at": "2023-04-11 23:35:37 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -72,14 +72,15 @@
     },
     {
       "key": "Code Your Star Quilt (beta)",
-      "name": "Code Your Star Quilt",
+      "name": "Coding My Star Quilt",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
         "overview": "In the final lesson for this activity, students are ready to build their own Star Quilt. Students will build one point of the star and then loop their code to end up with a 8 point traditional Star Quilt. Star Quilts are meant to be gifted so students can share their project with someone special.",
-        "preparation": "- Review the lesson slides.\n- Play through the levels and review the lesson slides.\n- Create your own Star Quilt as an example for students\n"
+        "preparation": "- Review the lesson slides.\n- Play through the levels and review the lesson slides.\n- Create your own Star Quilt as an example for students\n",
+        "purpose": "In Native American tradition, gifting star quilts on special occasions is a way of expressing love, honor, and respect for others. A digital star quilt is a modern version of this tradition that allows students to share their love and appreciation with others in a new and creative way. "
       },
       "seeding_key": {
         "lesson.key": "Code Your Star Quilt (beta)",
@@ -1365,7 +1366,7 @@
       }
     },
     {
-      "name": "Star Quilts",
+      "name": "Coding a Geometric Star Quilt",
       "url": "https://docs.google.com/presentation/d/10F-FnjuE2fM9g1MEmBm5MXJAvhKWCNjX5tAeH9YbggM/template/preview",
       "key": "star_quilts",
       "properties": {

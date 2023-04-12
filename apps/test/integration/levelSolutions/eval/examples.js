@@ -100,7 +100,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EXAMPLE_FAILED
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Eval.message,
           'You need at least two examples in' +
@@ -130,7 +130,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EXAMPLE_FAILED
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Eval.message,
           'The function green-triangle has one or more' +
@@ -185,7 +185,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Eval.message, null);
         return true;
       },
@@ -203,7 +203,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EXAMPLE_FAILED
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Eval.message,
           'You need at least two examples in' +
@@ -221,7 +221,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EXAMPLE_FAILED
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Eval.message,
           'You need at least two examples in' +
@@ -239,13 +239,12 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         var answerElement = document.getElementById('answer');
         var callElement = document.getElementById('test-call');
         var resultElement = document.getElementById('test-result');
-        var triangleBlock = Blockly.mainBlockSpace.findFunctionExamples(
-          'green-triangle'
-        )[0];
+        var triangleBlock =
+          Blockly.mainBlockSpace.findFunctionExamples('green-triangle')[0];
         var contractEditor = Blockly.contractEditor;
 
         // Test result hidden before run

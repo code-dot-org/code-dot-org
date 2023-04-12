@@ -352,6 +352,9 @@ pt:
           description: Todos os tipos de nível para testar UI
           description_short: Todos os tipos de nível para testar UI
           student_description: Todos os tipos de nível para testar UI
+          lessons:
+            lesson-49:
+              name: Música
         algebraPD2b:
           title: Ciência da computação em álgebra PD
           description: 'Fase 2 - on-line: combinado de estudos de verão'
@@ -6186,3 +6189,170 @@ pt:
             lessonGroup-3:
               display_name: 'Capítulo 2: Construindo protótipos físicos'
           description_short: Aprenda a programar com dispositivos físicos.
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+        vpl-csd-ci-1:
+          title: 'Módulo 1: Preparação para ensinar sobre Resolução de Problemas e
+            computação'
+          description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Resolução de Problemas e Computação da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação à Resolução de Problemas e Computação.
+            -   Praticar conceitos-chave incluídos na unidade.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 30 minutos
+          student_description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Resolução de Problemas e Computação da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação à Resolução de Problemas e Computação.
+            -   Praticar conceitos-chave incluídos na unidade.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 30 minutos
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ensinar Programação Web
+          title: 'Módulo 2: Preparação para ensinar Programação Web'
+          description: "Este módulo de aprendizagem profissional foi concebido para
+            o(a) ajudar a preparar as suas aulas da unidade de Programação Web da
+            Code.org. \n\n**Neste módulo de aprendizagem profissional, irá:**\n\n-
+            \  Ter uma apresentação da Programação Web.\n-   Praticar conceitos-chave
+            incluídos na unidade.\n-   Envolver-se no Lab Web.\n-   Explorar projetos
+            de fim de capítulo.\n\n**Duração sugerida:** 90 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi concebido
+            para o(a) ajudar a preparar as suas aulas da unidade de Programação Web
+            da Code.org. \n\n**Neste módulo de aprendizagem profissional, irá:**\n\n-
+            \  Ter uma apresentação da Programação Web.\n-   Praticar conceitos-chave
+            incluídos na unidade.\n-   Envolver-se no Lab Web.\n-   Explorar projetos
+            de fim de capítulo.\n\n**Duração sugerida:** 90 minutos"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparação para ensinar Animações interativas e jogos
+          title: 'Módulo 3: Preparação para ensinar Animações interativas e jogos '
+          description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Animação e jogos interativos da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação sobre Animações e jogos interativos.
+            -   Praticar conceitos-chave incluidos na unidade.
+            -   Envolver-se no Lab de Jogos.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 120 minutos
+          student_description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Animação e jogos interativos da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação sobre Animações e jogos interativos.
+            -   Praticar conceitos-chave incluidos na unidade.
+            -   Envolver-se no Lab de Jogos.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 120 minutos
+        vpl-csd-ci-4:
+          title: " Módulo 4: Preparação para ensinar o processo de design"
+          description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Processo de Design da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação sobre o Processo de Design.
+            -   Praticar conceitos-chave incluidos na unidade.
+            -   Envolver-se com o Lab de App.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 90 minutos
+          student_description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Processo de Design da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação sobre o Processo de Design.
+            -   Praticar conceitos-chave incluidos na unidade.
+            -   Envolver-se com o Lab de App.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 90 minutos
+        vpl-csd-ci-5:
+          title: 'Módulo 5: Preparação para ensinar Dados e Sociedade'
+          description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Dados e Sociedade da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação sobre Dados e Sociedade.
+            -   Praticar conceitos-chave incluídos na unidade.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 90 minutos
+          student_description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Dados e Sociedade da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação sobre Dados e Sociedade.
+            -   Praticar conceitos-chave incluídos na unidade.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 90 minutos
+        vpl-csd-ci-7:
+          title: 'Módulo 7: Preparação para ensinar IA e Aprendizagem Mecânica'
+          description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de IA e Aprendizagem Mecânica da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação sobre a IA e a Aprendizagem Mecânica.
+            -   Praticar conceitos-chave incluidos na unidade.
+            -   Envolver-se com o Lab de App e o Lab de IA.
+            -   Explorar os projetos de fim de capítulo.
+            -   Criar um plano para implementar a unidade com os seus alunos.
+
+            **Duração sugerida:** 120 minutos
+          student_description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de IA e Aprendizagem Mecânica da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação sobre a IA e a Aprendizagem Mecânica.
+            -   Praticar conceitos-chave incluidos na unidade.
+            -   Envolver-se com o Lab de App e o Lab de IA.
+            -   Explorar os projetos de fim de capítulo.
+            -   Criar um plano para implementar a unidade com os seus alunos.
+
+            **Duração sugerida:** 120 minutos
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas

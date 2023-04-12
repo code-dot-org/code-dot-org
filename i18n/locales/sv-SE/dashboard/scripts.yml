@@ -148,6 +148,9 @@ sv:
           description: Alla typer av nivå för UI-tester
           description_short: Alla typer av nivå för UI-tester
           student_description: Alla typer av nivå för UI-tester
+          lessons:
+            lesson-49:
+              name: Musik
         algebraPD2b:
           title: Datavetenskap i Algebra PD
         asUnplugged:

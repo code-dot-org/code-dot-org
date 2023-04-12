@@ -1,3 +1,7 @@
+/**
+ * Redux store for editor-specific Java Lab state.
+ */
+
 import {
   fileMetadataForEditor,
   updateAllSourceFileOrders
@@ -31,12 +35,8 @@ const initialSources = {
   'MyClass.java': {text: '', tabOrder: 0, isVisible: true, isValidation: false}
 };
 
-const {
-  fileMetadata,
-  orderedTabKeys,
-  activeTabKey,
-  lastTabKeyIndex
-} = fileMetadataForEditor(initialSources);
+const {fileMetadata, orderedTabKeys, activeTabKey, lastTabKeyIndex} =
+  fileMetadataForEditor(initialSources);
 
 // exported for testing
 export const initialState = {
@@ -237,12 +237,8 @@ export default function reducer(state = initialState, action) {
     };
   }
   if (action.type === SET_ALL_SOURCES_AND_FILE_METADATA) {
-    const {
-      fileMetadata,
-      orderedTabKeys,
-      activeTabKey,
-      lastTabKeyIndex
-    } = fileMetadataForEditor(action.sources, action.isEditingStartSources);
+    const {fileMetadata, orderedTabKeys, activeTabKey, lastTabKeyIndex} =
+      fileMetadataForEditor(action.sources, action.isEditingStartSources);
     const updatedSources = updateAllSourceFileOrders(
       action.sources,
       fileMetadata,

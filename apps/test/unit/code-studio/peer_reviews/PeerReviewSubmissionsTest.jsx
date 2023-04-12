@@ -55,10 +55,19 @@ describe('PeerReviewSubmissions', () => {
 
     peerReviewSubmissions = mount(
       <PeerReviewSubmissions
-        courseList={[['course_1', 1], ['course_2', 2]]}
+        courseList={[
+          ['course_1', 1],
+          ['course_2', 2]
+        ]}
         courseUnitMap={{
-          1: [['course_1_unit_1', 10], ['course_1_unit_2', 11]],
-          2: [['course_2_unit_1', 20], ['course_2_unit_2', 21]]
+          1: [
+            ['course_1_unit_1', 10],
+            ['course_1_unit_2', 11]
+          ],
+          2: [
+            ['course_2_unit_1', 20],
+            ['course_2_unit_2', 21]
+          ]
         }}
       />
     );

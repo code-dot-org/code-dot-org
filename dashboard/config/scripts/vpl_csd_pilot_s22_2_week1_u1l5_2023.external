@@ -5,15 +5,19 @@ description 'description here'
 markdown <<MARKDOWN
 # Chapter 2: Computers and Problem Solving
 
-##### Chapter 2 of the Problem Solving and Computing unit builds on the problem solving theme from Chapter 1 with a focus on how computing is used to solve problems. 
+<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">Chapter 2 of the Problem Solving and Computing unit builds on the problem solving theme from Chapter 1 with a focus on how computing is used to solve problems. 
+</p></div>
 
 ## Overview of Lessons 4 - 7 
 
 ##### Click the dropdown arrows below to view lesson overviews.
 
-<details>
-<summary><strong>Lesson 4: What is a Computer?</strong></summary>
-
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 4: What is a Computer?</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
 <img src="https://images.code.org/4c8d73dc89099256e349c647e38881bb-image-1651163631001.20.06 AM.png" alt="Image of computer poster example" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 **Question of the Day:** What is a computer?
@@ -26,16 +30,17 @@ In this lesson students develop a preliminary definition of a computer. To begin
 * Choose problems that can be solved with computing and justify those choices.
 * Identify a computer as a machine that works with information
 * Reason about whether particular objects are or are not computers.
-
+</p></div>
 </details>
 
 <div style="clear:both"/>
 
 
-<details>
-<summary><strong>Lesson 5: Input and Output</strong></summary>
-
-<img src="https://images.code.org/fb8dc7679c1156d1d6ff35a2b50ab59b-image-1651163628875.23.14 AM.png" alt="Image of an app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 5: Input and Output</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:50px;">
+    <p>
+<img src="https://images.code.org/fb8dc7679c1156d1d6ff35a2b50ab59b-image-1651163628875.23.14 AM.png" alt="Image of an app" width="200px" style="float:left; margin: 0 0 40px 40px; padding-right: 30px;">
 
 **Question of the Day:** How do computers use input and output to get and give the information that they need to solve problems?
 
@@ -46,15 +51,16 @@ In this lesson students consider how computers get and give information to the u
 **Students will be able to:** 
 * Explain the role that input and output take when computers are used to solve information problems.
 * Select the inputs and outputs used to perform common computing tasks
-
+</p></div>
 </details>
 
 <div style="clear:both"/>
 
-<details>
-<summary><strong>Lesson 6: Processing</strong></summary>
-
-<img src="https://images.code.org/c60bc7e8dac089d47906ed09d38cad20-image-1651163625821.26.55 AM.png" alt="Image of an app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 6: Processing</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:65px;">
+    <p>
+<img src="https://images.code.org/c60bc7e8dac089d47906ed09d38cad20-image-1651163625821.26.55 AM.png" alt="Image of an app" width="185px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 **Question of the Day:** What are the different ways computers can process information?
 
@@ -66,14 +72,15 @@ This lesson introduces students to four common types of processing: if/then (con
 * Define processing as the work done (possibly by a computer) to turn an input into an output
 * Determine which types of processing are appropriate for a particular computing problem.
 * Identify several common types of processing used in computing.
-
+</p></div>
 </details>
 
 <div style="clear:both"/>
 
-<details>
-<summary><strong>Lesson 7: Storage</strong></summary>
-
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 7: Storage</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:50px;">
+    <p>
 <img src="https://images.code.org/65531495e24a8c5eea78d0b231348169-image-1651163758693.27.45 AM.png" alt="Image of an app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 **Question of the Day:** Why is storage an important part of the computing process?
@@ -86,7 +93,7 @@ This lesson introduces the final component of the unit's model of computing: sto
 * Determine which information in a computing problem should be stored for later use.
 * Identify guidelines regarding what information should and should not be stored as part of the computing process.
 * Use the input-output-storage-processing model to describe a computing process.
-
+</p></div>
 </details>
 
 <div style="clear:both"/>

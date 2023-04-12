@@ -26,7 +26,7 @@ export default {
  * @param {boolean} options.rtl
  * @param {boolean} options.tts
  */
-const createCommonStore = function(options = {}) {
+const createCommonStore = function (options = {}) {
   const store = createStore(combineReducers({...commonReducers, isRtl}));
   const pageConstants = {};
   const instructionsConstants = {};
@@ -107,8 +107,7 @@ const createCommonStore = function(options = {}) {
         enable_fallback: true,
         key: 'csd_weblab_intro_2',
         name: 'Intro to Web Lab - Part 2',
-        src:
-          'https://www.youtube-nocookie.com/embed/Hjl6gbg9kmk/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=Hjl6gbg9kmk&wmode=transparent',
+        src: 'https://www.youtube-nocookie.com/embed/Hjl6gbg9kmk/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=Hjl6gbg9kmk&wmode=transparent',
         thumbnail: '/c/video_thumbnails/csd_weblab_intro_2.jpg'
       }
     ];

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-31 05:08:03 UTC",
+    "serialized_at": "2023-04-12 01:17:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1266,7 +1266,7 @@
       "key": "050c2076-742d-44c1-ae13-8913f239cf81",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** What is your definition of information?\n\nHave students silently write their own definition, then share with a partner, and finally have some volunteers share with the room.\n\n**Discussion Goal:** More important than writing a formal definition of information is getting students discussing the term and its diverse forms. If students struggle with defining \"information,\" modify the prompt by asking them to provide examples of information in their world such as texts, books, videos, music, conversations, etc.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** What is your definition of information?\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1280,8 +1280,25 @@
       }
     },
     {
-      "key": "29945e4b-e277-4f6d-a8ca-fd6d8e4b7e84",
+      "key": "b7e099bf-d2c9-4416-b18c-d1993326b1f7",
       "position": 3,
+      "properties": {
+        "description": "Have students silently write their own definition, then share with a partner, and finally have some volunteers share with the room.\n\n**Discussion Goal:** More important than writing a formal definition of information is getting students discussing the term and its diverse forms. If students struggle with defining \"information,\" modify the prompt by asking them to provide examples of information in their world such as texts, books, videos, music, conversations, etc.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the **Retrieve-Pair-Share** strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nFor more ideas on how to adapt this strategy to fit the needs of your class, check out the [**CSP Guide to Classroom Discussions**](https://docs.google.com/document/d/1vTJpyZllcSG5T5aFfSuPs9CByoejkEMnh4U_MMMOr9g/edit?usp=sharing)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b7e099bf-d2c9-4416-b18c-d1993326b1f7",
+        "lesson_activity.key": "fcc36e7f-86ad-4cdb-a69c-da191055b09b"
+      }
+    },
+    {
+      "key": "29945e4b-e277-4f6d-a8ca-fd6d8e4b7e84",
+      "position": 4,
       "properties": {
         "description": "* There are many ways we can think about the word “information,” but one possible definition we’ll explore today is that information is the answer to a question. \r\n* We're going to investigate what it takes to send that information back and forth to one another.",
         "remarks": true
@@ -1365,6 +1382,18 @@
       },
       "seeding_key": {
         "activity_section.key": "c8db8b0f-2d6d-4fe7-8ae3-906c35840b69",
+        "lesson_activity.key": "9d85a2cb-a899-42c1-971b-7640e542ab2d"
+      }
+    },
+    {
+      "key": "7bd04295-383f-4705-930f-5fa85672ec5e",
+      "position": 7,
+      "properties": {
+        "description": "<div style=\"background-color: #d7f4e9; border: 1px solid #43876b; border-radius: 5px; font-size: 1em; padding: 15px; margin-bottom: 0px;\">\n<div style=\"margin-top: 0px; margin-left: 0px; margin-right: 20px; height: 185px\">\n<img src=\"https://images.code.org/73ab5fb605d7065835e32221817b69b7-Unit Journal Icon 4.png\" style=\"margin-right: 40px; float: left\">\n\n<p><i>Sample Unit Journal Explanation </i> </p>\n<br>\n<p>Links:</p>\n<a href=\"https://www.w3schools.com/tags/ref_colornames.asp\" target=\"_blank\">DIGITAL </a>\n\n</div>\n</div>\n",
+        "name": "Unit Journal"
+      },
+      "seeding_key": {
+        "activity_section.key": "7bd04295-383f-4705-930f-5fa85672ec5e",
         "lesson_activity.key": "9d85a2cb-a899-42c1-971b-7640e542ab2d"
       }
     },
@@ -1593,7 +1622,13 @@
       "key": "8435e294-b0fe-4aba-8754-9f1a67d92e88",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Yesterday, you created your own number system using circles and squares. What can we communicate using only two symbols?  Is there a limit?*\n\nStudents should quietly write an answer, then share with a partner, then discuss with the whole class.\n\n**Discussion Goal:**  In previous lessons, students represented information using two options.  This is a quick-thinking question to tap into students’ prior knowledge and experiences.  Once students have mentioned a few of the points below, they can move on.\n\n* The answer to a yes/no or true/false question\n* Flipping a switch on/off\n* Combinations of yes/no answers by using multiple symbols in a row\n* We can keep adding more of the same symbols, so the only limit is how much space we have to write or store those symbols\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Yesterday, you created your own number system using circles and squares. What can we communicate using only two symbols?  Is there a limit?*\n\nStudents should quietly write an answer, then share with a partner, then discuss with the whole class.\n\n**Discussion Goal:**  In previous lessons, students represented information using two options.  This is a quick-thinking question to tap into students’ prior knowledge and experiences.  Once students have mentioned a few of the points below, they can move on.\n\n* The answer to a yes/no or true/false question\n* Flipping a switch on/off\n* Combinations of yes/no answers by using multiple symbols in a row\n* We can keep adding more of the same symbols, so the only limit is how much space we have to write or store those symbols\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the **Retrieve-Pair-Share** strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nFor more ideas on how to adapt this strategy to fit the needs of your class, check out the [**CSP Guide to Classroom Discussions**](https://docs.google.com/document/d/1vTJpyZllcSG5T5aFfSuPs9CByoejkEMnh4U_MMMOr9g/edit?usp=sharing)\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8435e294-b0fe-4aba-8754-9f1a67d92e88",
@@ -1617,7 +1652,13 @@
       "properties": {
         "description": "\n**Question:** Each time we add another bit, what happens to the amount of numbers we can make?\n\n**Question:** Two schools are merging and to adapt to the increased size of the student body, the school is changing its system for keeping track of all student IDs from a system that uses 4-bit binary numbers to one that uses 8-bit binary numbers (AKA 1 byte). Which of the following best describes what effect this change will have?",
         "name": "Peer Instruction",
-        "progression_name": "Check for Understanding"
+        "progression_name": "Mid-Lesson Check for Understanding",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use these questions to help formatively assess your students. You may choose to have them complete these questions before or after working on the Activity Guide. You can use the flowchart below to help use the data you get from these questions to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n\n\n\n\n![](https://images.code.org/95198dfe56cee550d2c3dd32a200305e-CFU_Next_Steps_Flowchart.png)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9c61a65a-90bc-435b-b6cd-23a2cb00ec7e",
@@ -1775,7 +1816,14 @@
       "key": "5dd51167-0d04-4dd0-904b-4926817279b1",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**\n\n* *What happens to the odometer reading?*\n* *Does the odometer still show the distance driven by the car?*\n\n\n**Discussion Goal:** When the odometer turns over -- exceeds the number of place values it can physically display -- the odometer reading correctly shows all but one number in its place value positions. \n\nFor example: \n\n![](https://curriculum.code.org/media/uploads/binary1.png)\n\nAfter the odometer turns over:\n\n![](https://curriculum.code.org/media/uploads/binary3.png)\n\nAs you can see, all the numbers should flip to 0 and the one of the left should flip to 1. But we are out of place values! So the numbers flip to 0, but nothing flips to 1. The number we are trying to represent does not fit in the number of bits we have available to accurately display it.\n\nLike a bathtub that has reached its maximum capacity for holding water and is now overflowing, the odometer has reached its maximum capacity and has reached **overflow**. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**\n\n* *What happens to the odometer reading?*\n* *Does the odometer still show the distance driven by the car?*\n\n\n**Discussion Goal:** When the odometer turns over -- exceeds the number of place values it can physically display -- the odometer reading correctly shows all but one number in its place value positions. \n\nFor example: \n\n![](https://curriculum.code.org/media/uploads/binary1.png)\n\nAfter the odometer turns over:\n\n![](https://curriculum.code.org/media/uploads/binary3.png)\n\nAs you can see, all the numbers should flip to 0 and the one of the left should flip to 1. But we are out of place values! So the numbers flip to 0, but nothing flips to 1. The number we are trying to represent does not fit in the number of bits we have available to accurately display it.\n\nLike a bathtub that has reached its maximum capacity for holding water and is now overflowing, the odometer has reached its maximum capacity and has reached **overflow**. \n",
+        "progression_name": "Check For Understanding",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use this question to help formatively assess your students. You can use the flowchart below to help use the data you get from this question to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n\n\n\n\n![](https://images.code.org/95198dfe56cee550d2c3dd32a200305e-CFU_Next_Steps_Flowchart.png)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5dd51167-0d04-4dd0-904b-4926817279b1",
@@ -1831,7 +1879,7 @@
       "key": "fda325f6-cd09-4d4e-8732-11783b1b9cf2",
       "position": 10,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students work in pairs on setting the four prices for their candy shop.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n* *How did you go about deciding which binary number to use for each price?*\n\n* *In your system, who pays the difference between the true price and the value stored in your computer system: the shop owner or the customer?*\n\n**Discussion Goal:** Use this discussion to highlight that the Flippy Do doesn't have the precision needed to represent these fractional values and in that case, decisions must be made on how to represent those values. In this case, those decisions impact who ends up benefitting when it comes to the price of each candy. You could ask you students to compare different systems.\n",
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students work in pairs on setting the four prices for their candy shop.\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1845,8 +1893,25 @@
       }
     },
     {
-      "key": "8ac5cacb-3ef5-43ef-9d3e-f071b21209f0",
+      "key": "bcaea00f-d3a7-45cb-9741-addff66c1324",
       "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n* *How did you go about deciding which binary number to use for each price?*\n\n* *In your system, who pays the difference between the true price and the value stored in your computer system: the shop owner or the customer?*\n\n**Discussion Goal:** Use this discussion to highlight that the Flippy Do doesn't have the precision needed to represent these fractional values and in that case, decisions must be made on how to represent those values. In this case, those decisions impact who ends up benefitting when it comes to the price of each candy. You could ask you students to compare different systems.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the **Retrieve-Pair-Share** strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nFor more ideas on how to adapt this strategy to fit the needs of your class, check out the [**CSP Guide to Classroom Discussions**](https://docs.google.com/document/d/1vTJpyZllcSG5T5aFfSuPs9CByoejkEMnh4U_MMMOr9g/edit?usp=sharing)\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bcaea00f-d3a7-45cb-9741-addff66c1324",
+        "lesson_activity.key": "176b52c1-6c18-4bf6-890e-f7283396b5e8"
+      }
+    },
+    {
+      "key": "8ac5cacb-3ef5-43ef-9d3e-f071b21209f0",
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What problems could come from having both of these two types of scales in single one of your stores?* \n\n**Discussion Goal:** Use this discussion to highlight the importance of precision. The customers and shop owners are depending on a given amount of candy always having the same price. Computers rely on precision. Think of a calculator. We depend on 1+1 always equaling 2. Rounding is necessary because of the limits of bits, but can lead to errors.   "
       },
@@ -2121,7 +2186,13 @@
       "key": "5ff1480f-5c30-4832-9c3f-9425c6670acb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**\n* *What problem were we trying to solve today?*\n* *What detail from the last few lessons was hidden or out of focus?*\n\n**Discussion Goal:** \n\n* Students should identify they were trying to send text messages.\n\n* Students were using decimal numbers instead of binary numbers or AB patterns\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**\n* *What problem were we trying to solve today?*\n* *What detail from the last few lessons was hidden or out of focus?*\n\n**Discussion Goal:** \n\n* Students should identify they were trying to send text messages.\n\n* Students were using decimal numbers instead of binary numbers or AB patterns\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the **Retrieve-Pair-Share** strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nFor more ideas on how to adapt this strategy to fit the needs of your class, check out the [**CSP Guide to Classroom Discussions**](https://docs.google.com/document/d/1vTJpyZllcSG5T5aFfSuPs9CByoejkEMnh4U_MMMOr9g/edit?usp=sharing)\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5ff1480f-5c30-4832-9c3f-9425c6670acb",
@@ -2190,7 +2261,13 @@
       "key": "4fd1e514-72b3-4e42-b1fb-0ad2ab13ad1d",
       "position": 2,
       "properties": {
-        "description": "\n\nStudents should think for a minute, then share with a partner.  Once students have shared, call on a few students to explain their answers with the class.\n\n**Discussion Goal:** The goal here is for students to realize that, depending on the situation, we may want to take readings more frequently.  Later in the lesson, as students interact with the widget, you can help students make connections that the frequency of readings affects the digital representation that we obtain. "
+        "description": "\n\nStudents should think for a minute, then share with a partner.  Once students have shared, call on a few students to explain their answers with the class.\n\n**Discussion Goal:** The goal here is for students to realize that, depending on the situation, we may want to take readings more frequently.  Later in the lesson, as students interact with the widget, you can help students make connections that the frequency of readings affects the digital representation that we obtain. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the **Retrieve-Pair-Share** strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nFor more ideas on how to adapt this strategy to fit the needs of your class, check out the [**CSP Guide to Classroom Discussions**](https://docs.google.com/document/d/1vTJpyZllcSG5T5aFfSuPs9CByoejkEMnh4U_MMMOr9g/edit?usp=sharing)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4fd1e514-72b3-4e42-b1fb-0ad2ab13ad1d",
@@ -2297,8 +2374,9 @@
       "key": "9f6008d5-00a7-4d04-be97-129052c771a3",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \r\n\r\n* Read values from Challenge A (black or white for each square) and input the values into the widget.\r\n* After Challenge A, answer the questions on the activity guide\r\n* Repeat for Challenge B.\r\n* Answer the questions in the activity guide after each challenge.\r\n\r\n**Regroup:** After students have finished Challenge A & Challenge B, discuss the challenges they encountered while completing the challenges.  Then direct students on to Challenge C.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\n* Read values from Challenge A (black or white for each square) and input the values into the widget.\n* After Challenge A, answer the questions on the activity guide\n* Repeat for Challenge B.\n* Answer the questions in the activity guide after each challenge.\n\n",
         "name": "Challenges A & B\r",
+        "progression_name": "Sampling an Analog Image: Challenges A&B",
         "tips": [
           {
             "type": "teachingTip",
@@ -2312,12 +2390,30 @@
       }
     },
     {
-      "key": "e316989e-520d-4c09-9885-72b5e4b28747",
+      "key": "08553e2c-b3c9-4263-894d-3059ecd855f2",
       "position": 8,
+      "properties": {
+        "description": "**Regroup:** After students have finished Challenge A & Challenge B, discuss the challenges they encountered while completing the challenges. Have your students complete the Check For Understanding question and use that to discuss the concept of sampling.  Then direct students on to Challenge C.\n\n**Question:** Which of the following would result in a better digital approximation of an analog black and white image?",
+        "progression_name": "Check For Understanding",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use this question to help formatively assess your students. You can use the flowchart below to help use the data you get from student responses to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n\n\n![](https://images.code.org/95198dfe56cee550d2c3dd32a200305e-CFU_Next_Steps_Flowchart.png)\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "08553e2c-b3c9-4263-894d-3059ecd855f2",
+        "lesson_activity.key": "c1d4b1e2-abf1-4051-9fb7-54408656b9f6"
+      }
+    },
+    {
+      "key": "e316989e-520d-4c09-9885-72b5e4b28747",
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  \n\n* Select your favorite company logo\n* Decide how you are going to sample this logo - use one of the grids in your Activity Guide. Draw the logo.\n* Recreate the logo in the Pixelation Widget on Level 5.\n* Show it to a classmate. Do they recognize the logo? Make adjustments if needed. For example: You may need to increase the sampling.",
         "name": "Challenge C\r",
-        "progression_name": "Sampling an Analog Image"
+        "progression_name": "Sampling an Analog Image: Challenge C"
       },
       "seeding_key": {
         "activity_section.key": "e316989e-520d-4c09-9885-72b5e4b28747",
@@ -2362,7 +2458,7 @@
       "key": "a6c05f7d-cc81-4f59-98d3-2072e9bde4b2",
       "position": 4,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Assume your friend just sent you 32 bits of pixel data (just the 0s and 1s for black and white pixels) that were encoded after sampling an image. Choose the two statements that are true. \r\n\r\n**Question:** Which of the following would result in a better digital approximation of an analog black and white image?\r\n\r\n**Question:** Your computer science teacher asks you to sample a black and white image that is 4\"x6\". How would you sample the image to provide a good digital approximation using the pixelation widget? What sample size would you use? How would your decision affect the digital representation?",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Assume your friend just sent you 32 bits of pixel data (just the 0s and 1s for black and white pixels) that were encoded after sampling an image. Choose the two statements that are true. \n\n\n\n**Question:** Your computer science teacher asks you to sample a black and white image that is 4\"x6\". How would you sample the image to provide a good digital approximation using the pixelation widget? What sample size would you use? How would your decision affect the digital representation?",
         "name": "Assessment: Check For Understanding\r",
         "progression_name": "Check For Understanding"
       },
@@ -2573,7 +2669,13 @@
       "key": "c512bcb7-ebe6-4d8f-a283-3ed2c37b3511",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How is an image represented on a computer?*\n\n**Discussion Goal:** Students should understand how sampling, pixels, and binary work together to make a digital approximation of an analog image.  They should also understand that while analog images are able to change color values smoothly and continuously, digital images rely on pixels to change from a fixed number of color values discretely using squares of equal size.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What happens at each level of creating a digital color image?*\n\n**Discussion Goal:** Students should understand how sampling, pixels, and binary work together to make a digital approximation of an analog image.  They should also understand that while analog images are able to change color values smoothly and continuously, digital images rely on pixels to change from a fixed number of color values discretely using squares of equal size.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the **Retrieve-Pair-Share** strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nFor more ideas on how to adapt this strategy to fit the needs of your class, check out the [**CSP Guide to Classroom Discussions**](https://docs.google.com/document/d/1vTJpyZllcSG5T5aFfSuPs9CByoejkEMnh4U_MMMOr9g/edit?usp=sharing)\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c512bcb7-ebe6-4d8f-a283-3ed2c37b3511",
@@ -2759,7 +2861,13 @@
       "key": "84cd9e2a-2589-4ed1-b80b-82a8fbcedac5",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What strategies are you using to compress your sample text? Which ones seem most successful?*\n\n**Discussion Goal:** Students will have encountered a variety of strategies, but there are a few worth emphasizing for the full class:\n\n* Look for repeated words, sentences, or even parts of words (like -ing or -th).\n* The widget lets you copy-and-paste to embed symbols within symbols. This was demonstrated in the pitter-patter example where some symbols were ‘unpacked’ to include other symbols.\n* The order of the dictionary matters and trying to rearrange the dictionary once it’s made can lead to problems\n\nIt’s okay if not all of these points are highlighted - the upcoming video will emphasize these same points for students."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What strategies are you using to compress your sample text? Which ones seem most successful?*\n\n**Discussion Goal:** Students will have encountered a variety of strategies, but there are a few worth emphasizing for the full class:\n\n* Look for repeated words, sentences, or even parts of words (like -ing or -th).\n* The widget lets you copy-and-paste to embed symbols within symbols. This was demonstrated in the pitter-patter example where some symbols were ‘unpacked’ to include other symbols.\n* The order of the dictionary matters and trying to rearrange the dictionary once it’s made can lead to problems\n\nIt’s okay if not all of these points are highlighted - the upcoming video will emphasize these same points for students.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the **Retrieve-Pair-Share** strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nFor more ideas on how to adapt this strategy to fit the needs of your class, check out the [**CSP Guide to Classroom Discussions**](https://docs.google.com/document/d/1vTJpyZllcSG5T5aFfSuPs9CByoejkEMnh4U_MMMOr9g/edit?usp=sharing)\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "84cd9e2a-2589-4ed1-b80b-82a8fbcedac5",
@@ -3918,7 +4026,7 @@
         "level_keys": [
           "CSP Binary 4bit to 8bit CFU 2023"
         ],
-        "progression": "Check for Understanding"
+        "progression": "Mid-Lesson Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -3943,7 +4051,7 @@
         "level_keys": [
           "U1L5 CFU adding bits_2023"
         ],
-        "progression": "Check for Understanding"
+        "progression": "Mid-Lesson Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -4053,7 +4161,7 @@
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2023",
-        "activity_section.key": "cc629b3b-6cb1-439d-b15e-e65ecc1ff9ee"
+        "activity_section.key": "5dd51167-0d04-4dd0-904b-4926817279b1"
       },
       "level_keys": [
         "U1L6 CFU beyond odometer_2023"
@@ -4062,7 +4170,7 @@
     {
       "chapter": 11,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -4168,7 +4276,7 @@
         "level_keys": [
           "U1L9 Pixelation Widget challenge a_2023"
         ],
-        "progression": "Sampling an Analog Image"
+        "progression": "Sampling an Analog Image: Challenges A&B"
       },
       "bonus": false,
       "seeding_key": {
@@ -4178,7 +4286,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2023",
-        "activity_section.key": "e316989e-520d-4c09-9885-72b5e4b28747"
+        "activity_section.key": "9f6008d5-00a7-4d04-be97-129052c771a3"
       },
       "level_keys": [
         "U1L9 Pixelation Widget challenge a_2023"
@@ -4193,7 +4301,7 @@
         "level_keys": [
           "U1L9 Pixelation Widget challenge B_2023"
         ],
-        "progression": "Sampling an Analog Image"
+        "progression": "Sampling an Analog Image: Challenges A&B"
       },
       "bonus": false,
       "seeding_key": {
@@ -4203,7 +4311,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2023",
-        "activity_section.key": "e316989e-520d-4c09-9885-72b5e4b28747"
+        "activity_section.key": "9f6008d5-00a7-4d04-be97-129052c771a3"
       },
       "level_keys": [
         "U1L9 Pixelation Widget challenge B_2023"
@@ -4212,13 +4320,38 @@
     {
       "chapter": 17,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L9 Multiple Choice Digital Analog2022_2023"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 Multiple Choice Digital Analog2022_2023"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2023",
+        "activity_section.key": "08553e2c-b3c9-4263-894d-3059ecd855f2"
+      },
+      "level_keys": [
+        "U1L9 Multiple Choice Digital Analog2022_2023"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U1L9 Pixelation Widget challenge C_2023"
         ],
-        "progression": "Sampling an Analog Image"
+        "progression": "Sampling an Analog Image: Challenge C"
       },
       "bonus": false,
       "seeding_key": {
@@ -4235,8 +4368,8 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 6,
+      "chapter": 19,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4260,34 +4393,9 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 7,
-      "activity_section_position": 2,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "U1L9 Multiple Choice Digital Analog2022_2023"
-        ],
-        "progression": "Check For Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U1L9 Multiple Choice Digital Analog2022_2023"
-        ],
-        "lesson.key": "Black and White Images",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023",
-        "activity_section.key": "a6c05f7d-cc81-4f59-98d3-2072e9bde4b2"
-      },
-      "level_keys": [
-        "U1L9 Multiple Choice Digital Analog2022_2023"
-      ]
-    },
-    {
       "chapter": 20,
       "position": 8,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -4740,6 +4848,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 CFU Digital Representation_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4762,6 +4873,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L14 CSP CFU digital information_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4784,6 +4898,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp1_2023"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -4944,7 +5061,7 @@
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2023",
-        "activity_section.key": "cc629b3b-6cb1-439d-b15e-e65ecc1ff9ee"
+        "activity_section.key": "5dd51167-0d04-4dd0-904b-4926817279b1"
       }
     },
     {
@@ -5004,7 +5121,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2023",
-        "activity_section.key": "e316989e-520d-4c09-9885-72b5e4b28747"
+        "activity_section.key": "9f6008d5-00a7-4d04-be97-129052c771a3"
       }
     },
     {
@@ -5016,7 +5133,19 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2023",
-        "activity_section.key": "e316989e-520d-4c09-9885-72b5e4b28747"
+        "activity_section.key": "9f6008d5-00a7-4d04-be97-129052c771a3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 Multiple Choice Digital Analog2022_2023",
+        "script_level.level_keys": [
+          "U1L9 Multiple Choice Digital Analog2022_2023"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2023",
+        "activity_section.key": "08553e2c-b3c9-4263-894d-3059ecd855f2"
       }
     },
     {
@@ -5036,18 +5165,6 @@
         "level.key": "U1L9 CFU pixel data2022_2023",
         "script_level.level_keys": [
           "U1L9 CFU pixel data2022_2023"
-        ],
-        "lesson.key": "Black and White Images",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023",
-        "activity_section.key": "a6c05f7d-cc81-4f59-98d3-2072e9bde4b2"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U1L9 Multiple Choice Digital Analog2022_2023",
-        "script_level.level_keys": [
-          "U1L9 Multiple Choice Digital Analog2022_2023"
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
