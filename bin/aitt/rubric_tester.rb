@@ -47,12 +47,11 @@ def grade_student_work(prompt, rubric, student_code, student_id)
   response = HTTParty.post(api_url, headers: headers, body: data.to_json, timeout: 120)
 
   if response.code == 200
-    puts "#{student_id} response succeeded in #{Time.now - start_time} seconds"
+    puts "#{student_id} response succeeded in #{(Time.now - start_time).to_i} seconds"
     completed_text = response.parsed_response['choices'][0]['message']['content']
     CSV.parse(completed_text.strip, headers: true).map(&:to_h)
   else
     puts "#{student_id} Error calling the API: #{response.code}"
-    puts "#{student_id} response failed in #{Time.now - start_time} seconds"
     puts "#{student_id} Response body: #{response.body}"
     []
   end
