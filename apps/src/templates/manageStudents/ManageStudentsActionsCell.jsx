@@ -253,7 +253,7 @@ class ManageStudentsActionsCell extends Component {
               onClick={this.onCancel}
               color={Button.ButtonColor.gray}
               text={i18n.cancel()}
-              style={styles.buttonWithMargin}
+              style={styles.buttonWithoutMargin}
             />
           </div>
         )}
@@ -264,7 +264,7 @@ class ManageStudentsActionsCell extends Component {
               color={Button.ButtonColor.gray}
               text={i18n.add()}
               disabled={this.props.isSaving || this.props.disableSaving}
-              style={styles.buttonWithMargin}
+              style={styles.buttonWithoutMargin}
             />
           </div>
         )}
@@ -286,7 +286,7 @@ const styles = {
   xIcon: {
     paddingRight: 5
   },
-  buttonWithMargin: {
+  buttonWithoutMargin: {
     margin: 0
   },
   saveButton: {
