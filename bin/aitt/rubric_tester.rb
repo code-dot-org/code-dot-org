@@ -42,13 +42,20 @@ def grade_student_work(prompt, example_code, rubric, student_code)
     ],
   }
 
-  response = HTTParty.post(api_url, headers: headers, body: data.to_json)
+  puts "request data size: #{data.to_json.size}"
+  timeout = 600
+  puts "request timeout: #{timeout} seconds"
+
+  start_time = Time.now
+  response = HTTParty.post(api_url, headers: headers, body: data.to_json, timeout: timeout)
+  puts "response completed in #{Time.now - start_time} seconds with status #{response.code}"
 
   if response.code == 200
     completed_text = response.parsed_response['choices'][0]['message']['content']
     CSV.parse(completed_text.strip, headers: true).map(&:to_h)
   else
     puts "Error calling the API: #{response.code}"
+    puts "Response body: #{response.body}"
     []
   end
 end
