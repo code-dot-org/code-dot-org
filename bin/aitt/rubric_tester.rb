@@ -80,7 +80,7 @@ def compute_cell_color(actual, expected)
   possible_grades = ["No Evidence", "Limited Evidence", "Convincing Evidence", "Extensive Evidence"]
   expected_index = possible_grades.index(expected)
   actual_index = possible_grades.index(actual)
-  grade_difference = expected && actual && (expected_index - actual_index).abs
+  grade_difference = expected_index && actual_index && (expected_index - actual_index).abs
   case grade_difference
   when 0
     'green'
