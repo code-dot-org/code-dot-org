@@ -481,6 +481,43 @@ Resources:
       Value: initial,value
       Description: List of Google IDs of people being granted billing access.
 
+  AdvocacyDirectorOfPolicyRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: AdvocacyDirectorOfPolicy
+      Description: Google-federated AWS Role for the Advocacy Director of Policy.
+      Path: /Advocacy/
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
+            Action: sts:AssumeRoleWithSAML
+            Condition:
+              StringEquals:
+                SAML:aud: https://signin.aws.amazon.com/saml
+      ManagedPolicyArns:
+        - !Ref AdvocacyDirectorOfPolicyS3Policy
+
+  AdvocacyDirectorOfPolicyS3Policy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: ContributorS3Policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - s3:ListBucket
+            Resource: arn:aws:s3:::cdo-census
+          - Effect: Allow
+            Action:
+              - s3:PutObject
+              - s3:PutObjectAcl
+              - s3:GetObject
+              - s3:GetObjectAcl
+            Resource: arn:aws:s3:::cdo-census/*
+
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack
   FirehoseLambdaRole:
