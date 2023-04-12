@@ -373,6 +373,36 @@ module Api::V1::Pd
       assert_equal expected_log, @csd_teacher_application_with_partner.sanitize_status_timestamp_change_log
     end
 
+    test 'update sends a decision email once if status changed to decision and if associated with an RP' do
+      sign_in @program_manager
+      assert_empty @csd_teacher_application_with_partner.emails
+
+      @csd_teacher_application_with_partner.expects(:send_pd_application_email).with('accepted').once
+      @csd_teacher_application_with_partner.update(status: 'accepted')
+
+      # Another update does not trigger another decision email sent
+      @csd_teacher_application_with_partner.update(scholarship_status: 'no')
+    end
+
+    test 'update does not send a decision email if status changed to decision but no RP' do
+      sign_in @program_manager
+      assert_empty @csd_teacher_application.emails
+
+      @csd_teacher_application.expects(:send_pd_application_email).never
+      @csd_teacher_application.update(status: 'accepted')
+    end
+
+    test 'update does not send a decision email if status changed to non-decision even with an RP' do
+      hash_csp_with_rp = build TEACHER_APPLICATION_HASH_FACTORY, :csp, regional_partner_id: @regional_partner.id
+      csp_teacher_application_with_partner = create TEACHER_APPLICATION_FACTORY, form_data_hash: hash_csp_with_rp
+
+      sign_in @program_manager
+      assert_empty csp_teacher_application_with_partner.emails
+
+      csp_teacher_application_with_partner.expects(:send_pd_application_email).never
+      csp_teacher_application_with_partner.update!(status: 'pending')
+    end
+
     test 'workshop admins can update form_data' do
       sign_in @workshop_admin
       updated_form_data = @csd_teacher_application_with_partner.form_data_hash.merge('alternateEmail' => 'my.other@email.net')
