@@ -7,8 +7,7 @@ Evidence".
 In order to help you evaluate the student's work, you will be given a rubric in
 CSV format in which the first column provides the list of criteria to evaluate,
 and the next four columns describe what it means for a program to be classified
-as each of the four possible grades. You will also be given an example program
-which has a grade of "extensive evidence" on all criteria.
+as each of the four possible grades.
 
 when choosing a grade for each criteria, please focus on the contents of the
 rubric and ignore your own interpretation of the phrases "Extensive Evidence",
