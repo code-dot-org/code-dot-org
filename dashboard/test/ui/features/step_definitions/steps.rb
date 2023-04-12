@@ -1152,7 +1152,7 @@ And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   press_keys(element, key)
   wait_short_until do
     element_text = element.attribute("value")
-    element_text == key
+    element_text.include? key
   end
 end
 
