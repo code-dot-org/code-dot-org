@@ -11,8 +11,9 @@ def read_inputs(prompt_file, example_code_file, rubric_file)
   [prompt, example_code, rubric]
 end
 
-def get_student_files
-  Dir.glob('*.js').sort
+def get_student_files(example_code_file)
+  all_js_files = Dir.glob('*.js').sort
+  all_js_files.reject { |filename| filename == example_code_file }
 end
 
 def get_expected_grades(expected_grades_file)
@@ -119,7 +120,7 @@ def main
   output_filename = ARGV[0] || 'output.html'
 
   prompt, example_code, rubric = read_inputs(prompt_file, example_code_file, rubric_file)
-  student_files = get_student_files
+  student_files = get_student_files(example_code_file)
   expected_grades = get_expected_grades(expected_grades_file)
 
   actual_grades = {}
