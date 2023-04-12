@@ -4,11 +4,10 @@ import {onAnswerChanged, resetContainedLevel} from './codeStudioLevels';
 import {sourceForLevel} from '../clientState';
 
 export default class FreeResponse {
-  constructor(levelId, optional, allowMultipleAttempts) {
+  constructor(levelId, optional) {
     this.levelId = levelId;
     // Levelbuilder booleans are undefined, 'true', or 'false'.
     this.optional = [true, 'true'].includes(optional);
-    this.allowMultipleAttempts = [true, 'true'].includes(allowMultipleAttempts);
 
     $(document).ready(function () {
       var textarea = $(`textarea#level_${levelId}.response`);
@@ -54,9 +53,6 @@ export default class FreeResponse {
   }
 
   lockAnswers() {
-    if (this.allowMultipleAttempts) {
-      return;
-    }
     $(`textarea#level_${this.levelId}.response`).prop('disabled', true);
     $('#reset-predict-progress-button')?.prop('disabled', false);
   }
