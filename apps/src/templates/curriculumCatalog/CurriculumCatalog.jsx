@@ -31,8 +31,6 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => (
               school_subject,
               cs_topic
             }) => {
-              // TODO [MEG]: We are currently assuming if there are grade levels, there are at least two
-              // grades and the list is in ascending order.
               const gradeLevelArray = grade_levels.split(',');
 
               return (
@@ -42,7 +40,10 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => (
                   courseDisplayName={display_name}
                   duration={'school_year'} // TODO [MEG] actually pass in this data
                   youngestGrade={gradeLevelArray[0]}
-                  oldestGrade={gradeLevelArray[gradeLevelArray.length - 1]}
+                  oldestGrade={
+                    gradeLevelArray.length > 1 &&
+                    gradeLevelArray[gradeLevelArray.length - 1]
+                  }
                   subjects={school_subject?.split(',')}
                   topics={cs_topic?.split(',')}
                   isTranslated={false} // TODO [MEG]: actually pass in this data

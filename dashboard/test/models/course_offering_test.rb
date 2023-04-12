@@ -541,15 +541,41 @@ class CourseOfferingTest < ActiveSupport::TestCase
       new_course_offering.attributes.except('id', 'created_at', 'updated_at')
   end
 
+  test "validates grade_levels" do
+    assert_raises ActiveRecord::RecordInvalid do
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: '1,2,3, 4')
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: '1,2,3,K')
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: '6,13')
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: '0')
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: 'K8')
+    end
+
+    assert_creates CourseOffering do
+      CourseOffering.create!(key: 'test-key-one-grade', display_name: 'Test One Grade', grade_levels: 'K')
+    end
+  end
+
   test "validates curriculum_type value" do
     assert_raises do
-      CourseOffering.create!(key: 'test-key', curriculum_type: 'Invalid Curriculum Type')
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', curriculum_type: 'Invalid Curriculum Type')
     end
   end
 
   test "validates marketing_initiative value" do
     assert_raises do
-      CourseOffering.create!(key: 'test-key', marketing_initiative: 'Invalid Marketing Initiative')
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', marketing_initiative: 'Invalid Marketing Initiative')
     end
   end
 
