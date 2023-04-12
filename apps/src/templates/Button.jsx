@@ -68,6 +68,7 @@ class Button extends React.Component {
     tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     isPending: PropTypes.bool,
     pendingText: PropTypes.string,
+    useDefaultLineHeight: PropTypes.bool,
     __useDeprecatedTag: PropTypes.bool,
     'aria-label': PropTypes.string
   };
@@ -83,6 +84,8 @@ class Button extends React.Component {
 
   render() {
     const {
+      color = ButtonColor.orange,
+      size = ButtonSize.default,
       href,
       text,
       styleAsText,
@@ -99,12 +102,10 @@ class Button extends React.Component {
       isPending,
       pendingText,
       value,
+      useDefaultLineHeight,
       __useDeprecatedTag,
       'aria-label': ariaLabel
     } = this.props;
-
-    const color = this.props.color || ButtonColor.orange;
-    const size = this.props.size || ButtonSize.default;
 
     if (!href && !onClick) {
       throw new Error('Expect at least one of href/onClick');
@@ -138,7 +139,7 @@ class Button extends React.Component {
           moduleStyles[size],
           Phase1ButtonColor[color] ? moduleStyles.phase1Updated : ''
         ]
-      : [moduleStyles[size], moduleStyles.updated];
+      : [moduleStyles[size], !useDefaultLineHeight && moduleStyles.updated];
 
     // Opening links in new tabs with 'target=_blank' is inherently insecure.
     // Unfortunately, we depend on this functionality in a couple of place.
