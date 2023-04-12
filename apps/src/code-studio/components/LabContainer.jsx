@@ -13,7 +13,8 @@ class UnconnectedLabContainer extends Component {
   static propTypes = {
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     currentLevelId: PropTypes.string,
-    onLevelChanged: PropTypes.func
+    onLevelChanged: PropTypes.func,
+    setWindowTitle: PropTypes.func
   };
 
   getCurrentLevelIndex() {
@@ -22,12 +23,11 @@ class UnconnectedLabContainer extends Component {
     return this.props.levels.findIndex(level => level.isCurrentLevel);
   }
 
-  onSaveProgress() {}
-
-  changeLevelIndex(levelIndex) {
+  onChangeLevelIndex(levelIndex) {
     const level = this.props.levels[levelIndex];
-    window.history.pushState({}, 'title', level.url + window.location.search);
+    window.history.pushState({}, '', level.url + window.location.search);
     this.props.onLevelChanged('' + level.id);
+    this.props.setWindowTitle();
   }
 
   render() {
@@ -45,7 +45,7 @@ class UnconnectedLabContainer extends Component {
         <MusicLabView
           appConfig={appConfig}
           currentLevel={currentLevelIndex}
-          onChangeLevel={index => this.changeLevelIndex(index)}
+          onChangeLevel={index => this.onChangeLevelIndex(index)}
         />
 
         <div

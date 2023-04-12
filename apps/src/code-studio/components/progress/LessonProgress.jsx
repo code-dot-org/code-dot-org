@@ -26,7 +26,8 @@ class LessonProgress extends Component {
     setDesiredWidth: PropTypes.func,
     currentPageNumber: PropTypes.number,
     currentLevelId: PropTypes.string,
-    onLevelChanged: PropTypes.func
+    onLevelChanged: PropTypes.func,
+    setWindowTitle: PropTypes.func
   };
 
   getFullWidth() {
@@ -134,8 +135,9 @@ class LessonProgress extends Component {
   }
 
   onLevelChanged(levelId, levelUrl) {
-    window.history.pushState({}, 'title', levelUrl + window.location.search);
+    window.history.pushState({}, '', levelUrl + window.location.search);
     this.props.onLevelChanged(levelId);
+    this.props.setWindowTitle();
   }
 
   render() {

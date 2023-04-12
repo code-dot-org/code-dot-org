@@ -124,8 +124,11 @@ header.build = function (
           lessonData={lessonData}
           scriptData={scriptData}
           currentLevelId={currentLevelId}
+          setWindowTitle={() => setWindowTitle(store)}
         />
-        {showLabContainer && <LabContainer />}
+        {showLabContainer && (
+          <LabContainer setWindowTitle={() => setWindowTitle(store)} />
+        )}
       </Provider>,
       document.querySelector('.header_level')
     );
@@ -137,6 +140,7 @@ header.build = function (
         document.querySelector('.signin_callout_wrapper')
       );
     }
+    setWindowTitle(store);
   });
 
   window.addEventListener('popstate', function (event) {
@@ -149,6 +153,7 @@ header.build = function (
     const levelIndex = Number(values[6]) - 1;
     const levelId = lessonData.levels[levelIndex].activeId;
     getStore().dispatch(setCurrentLevelId(levelId));
+    setWindowTitle(store);
   });
 };
 
@@ -302,5 +307,33 @@ header.showTryAgainDialog = () => {
 header.hideTryAgainDialog = () => {
   getStore().dispatch(setShowTryAgainDialog(false));
 };
+
+// If we are on a new level without doing a page reload, then we should set the title
+// to match what levels_helper.rb's level_title function would have done.
+function setWindowTitle(store) {
+  const storeState = store.getState();
+  const numLessons = storeState.progress.lessons[0].num_script_lessons;
+  const lessonName = storeState.progress.lessons[0].name;
+  const levelId = storeState.progress.currentLevelId;
+  const lessonIndex =
+    storeState.progress.lessons[0].levels.findIndex(
+      level => level.activeId === levelId
+    ) + 1;
+  const scriptDisplayName = storeState.progress.scriptDisplayName;
+
+  /*
+    Equivalent code:
+
+    if @script_level.script.lessons.many?
+      "#{lesson} ##{position} | #{script}"
+    elsif @script_level.position != 1
+      "#{script} ##{position}"
+  */
+
+  document.title =
+    numLessons > 1
+      ? `${lessonName} #${lessonIndex} | ${scriptDisplayName} - Code.org`
+      : `${lessonName} #${lessonIndex} - Code.org`;
+}
 
 export default header;

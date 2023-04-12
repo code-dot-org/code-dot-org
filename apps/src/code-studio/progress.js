@@ -92,12 +92,13 @@ progress.generateLessonProgress = function (
 ) {
   const store = getStore();
 
-  const {name, disablePostMilestone, age_13_required} = scriptData;
+  const {name, displayName, disablePostMilestone, age_13_required} = scriptData;
 
   initializeStoreWithProgress(
     store,
     {
       name,
+      displayName,
       lessonGroups: lessonGroupData,
       lessons: [lessonData],
       disablePostMilestone,
@@ -336,7 +337,8 @@ function initializeStoreWithProgress(
   isFullProgress,
   saveAnswersBeforeNavigation = false,
   isLessonExtras = false,
-  currentPageNumber
+  currentPageNumber,
+  displayName
 ) {
   store.dispatch(
     initProgress({
@@ -348,6 +350,7 @@ function initializeStoreWithProgress(
       peerReviewLessonInfo: scriptData.peerReviewLessonInfo,
       scriptId: scriptData.id,
       scriptName: scriptData.name,
+      scriptDisplayName: scriptData.displayName,
       unitTitle: scriptData.title,
       unitDescription: scriptData.description,
       unitStudentDescription: scriptData.studentDescription,
