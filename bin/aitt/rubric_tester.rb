@@ -72,47 +72,52 @@ def compute_accuracy(expected_grades, actual_grades)
 end
 
 def generate_html_output(output_filename, prompt, accuracy, actual_grades, expected_grades)
-  builder = Nokogiri::HTML::Builder.new do |doc|
-    doc.html {
-      doc.head {
-        doc.title 'Grading Results'
-      }
-      doc.body {
-        doc.h1 'Grading Results'
-        doc.h3 "System Prompt: #{prompt}"
-        doc.h3 "Overall Accuracy: #{accuracy.round(2)}%"
+  possible_grades = ["No Evidence", "Limited Evidence", "Convincing Evidence", "Extensive Evidence"]
 
-        actual_grades.each do |student_id, criteria|
-          doc.h3 "Student ID: #{student_id}"
-          doc.table(border: '1') {
-            doc.tr {
-              doc.th 'Key Concept'
-              doc.th 'Expected Grade'
-              doc.th 'Actual Grade'
-              doc.th 'Reason'
-            }
-            criteria.each do |row|
-              expected_grade = expected_grades[student_id][row['Key Concept']]
-              cell_color = expected_grade == row['Grade'] ? 'green' : 'red'
-              doc.tr {
-                doc.td row['Key Concept']
-                doc.td expected_grade
-                doc.td(style: "background-color: #{cell_color};") {
-                  doc.text row['Grade']
-                }
-                doc.td row['Reason']
-              }
-            end
-          }
-          doc.br
-        end
+  File.open(output_filename, 'w') do |file|
+    file.puts '<!DOCTYPE html>'
+    file.puts '<html lang="en">'
+    file.puts '<head>'
+    file.puts '  <meta charset="UTF-8">'
+    file.puts '  <meta name="viewport" content="width=device-width, initial-scale=1.0">'
+    file.puts '  <title>Rubric Test Results</title>'
+    file.puts '</head>'
+    file.puts '<body>'
+    file.puts "  <h2>Prompt:</h2>"
+    file.puts "  <pre>#{prompt}</pre>"
+    file.puts "  <h2>Overall Accuracy: #{accuracy}%</h2>"
 
-      }
-    }
+    actual_grades.each do |student_id, grades|
+      puts "rendering table for #{student_id}"
+      file.puts "  <h3>Student: #{student_id}</h3>"
+      file.puts '  <table border="1">'
+      file.puts '    <tr><th>Criteria</th><th>Expected Grade</th><th>Actual Grade</th><th>Reason</th></tr>'
+      grades.each do |grade|
+        criteria = grade['Key Concept']
+        expected = expected_grades[student_id][criteria]
+        actual = grade['Grade']
+        reason = grade['Reason']
+
+        expected_index = possible_grades.index(expected)
+        actual_index = possible_grades.index(actual)
+        grade_difference = expected && actual && (expected_index - actual_index).abs
+        cell_color = case grade_difference
+                     when 0
+                       'green'
+                     when 1
+                       'yellow'
+                     else
+                       'red'
+                     end
+
+        file.puts "    <tr><td>#{criteria}</td><td>#{expected}</td><td style=\"background-color: #{cell_color};\">#{actual}</td><td>#{reason}</td></tr>"
+      end
+      file.puts '  </table>'
+    end
+
+    file.puts '</body>'
+    file.puts '</html>'
   end
-
-  File.write(output_filename, builder.to_html)
-
   output_filename
 end
 
