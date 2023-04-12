@@ -1150,6 +1150,10 @@ end
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   element = @browser.find_element(:css, selector)
   press_keys(element, key)
+  wait_short_until do
+    element_text = element.attribute("value")
+    element_text == key
+  end
 end
 
 When /^I press keys "([^"]*)"$/ do |keys|

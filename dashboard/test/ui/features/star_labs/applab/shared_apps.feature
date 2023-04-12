@@ -86,7 +86,6 @@ Feature: App Lab Scenarios
     When I navigate to the shared version of my project
     And I wait until element ".screen > input" is visible
     And I press keys "GLULX" for element ".screen > input"
-    And I wait for 3 seconds
     Then element ".screen > input" has value "GLULX"
 
   @no_ie
