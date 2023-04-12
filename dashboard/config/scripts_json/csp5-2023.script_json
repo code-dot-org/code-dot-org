@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-10 16:38:12 UTC",
+    "serialized_at": "2023-04-11 23:19:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -190,7 +190,7 @@
     },
     {
       "key": "Project   Tell a Data Story Part 1",
-      "name": "Project   Tell a Data Story Part 1",
+      "name": "Project - Tell a Data Story",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -198,10 +198,9 @@
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This is the first day of a project where students use the Data Analysis Process to tell a data story.  Students complete the first page of the Activity Guide for this project during this lesson.",
-        "preparation": "* Preview the Project Guide\n* Review the example projects linked under the \"Resources\" section of this lesson plan\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-tell-a-data-story-unit-9-lessons-8-9/36490) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "The goal of this lesson is for students to put into use all of the data analysis skills they have practiced throughout this unit.",
-        "student_overview": "You will create an effective visualization that you will use to tell a data story."
+        "overview": "This is lesson is a two-day project where students use the Data Analysis Process to tell a data story.  ",
+        "preparation": "* Preview the Project Guide\n* Review the example projects linked under the \"Resources\" section of this lesson plan\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-tell-a-data-story-unit-9-lessons-8-9/36490) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking the Virtual Modifications for [Day 1](https://docs.google.com/document/d/1nxMIFY-iBLAqrVNtkx4B1sYe_fLmaxHZP33cbMjZwVQ/edit?usp=sharing) and [Day 2](https://docs.google.com/document/d/1abs2EGVx4jdhDUhCq9l94gb7mhibbL-Yrrt1ES18uME/edit?usp=sharing)",
+        "student_overview": "You will create an effective visualization and use it to tell a data story."
       },
       "seeding_key": {
         "lesson.key": "Project   Tell a Data Story Part 1",
@@ -210,33 +209,12 @@
       }
     },
     {
-      "key": "Project   Tell a Data Story Part 2",
-      "name": "Project   Tell a Data Story Part 2",
-      "absolute_position": 9,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 9,
-      "properties": {
-        "assessment": true,
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This is the second day of a project where students use the Data Analysis Process to tell a data story.  Students complete the second page of the Activity Guide for this project during this lesson.",
-        "preparation": "* Review the rubric in the Project Guide\n* Review the example projects linked under the \"Resources\" section of this lesson plan\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-tell-a-data-story-unit-9-lessons-8-9/36490) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "The goal of this lesson is for students to put into use all of the data analysis skills they have practiced throughout this unit. ",
-        "student_overview": "Finish the task you started in the previous lesson by using the Data Analysis Process to tell a data story with the visualization you created."
-      },
-      "seeding_key": {
-        "lesson.key": "Project   Tell a Data Story Part 2",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2023"
-      }
-    },
-    {
       "key": "Assessment Day",
       "name": "Assessment Day",
-      "absolute_position": 10,
+      "absolute_position": 9,
       "lockable": true,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 9,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -253,10 +231,10 @@
     {
       "key": "CS Principles Post-Course Survey",
       "name": "CS Principles Post-Course Survey",
-      "absolute_position": 11,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -599,38 +577,11 @@
       }
     },
     {
-      "key": "66fa3225-0464-4527-bb1d-12a5252e23ec",
+      "key": "db69b82b-f065-4326-85e8-c02543701398",
       "position": 1,
       "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "66fa3225-0464-4527-bb1d-12a5252e23ec",
-        "lesson.key": "Project   Tell a Data Story Part 1",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2023"
-      }
-    },
-    {
-      "key": "c57103dd-78bb-4c2c-b3e6-353df8d4058b",
-      "position": 2,
-      "properties": {
-        "duration": 2,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c57103dd-78bb-4c2c-b3e6-353df8d4058b",
-        "lesson.key": "Project   Tell a Data Story Part 1",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2023"
-      }
-    },
-    {
-      "key": "db69b82b-f065-4326-85e8-c02543701398",
-      "position": 3,
-      "properties": {
-        "duration": 43,
-        "name": "Activity"
+        "duration": 45,
+        "name": "Day 1"
       },
       "seeding_key": {
         "lesson_activity.key": "db69b82b-f065-4326-85e8-c02543701398",
@@ -641,67 +592,14 @@
     },
     {
       "key": "948e6807-b2c9-42bc-b03f-ae57ffd8060f",
-      "position": 4,
+      "position": 2,
       "properties": {
-        "name": "Wrap Up"
+        "duration": 45,
+        "name": "Day 2"
       },
       "seeding_key": {
         "lesson_activity.key": "948e6807-b2c9-42bc-b03f-ae57ffd8060f",
         "lesson.key": "Project   Tell a Data Story Part 1",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2023"
-      }
-    },
-    {
-      "key": "656dae66-e4b3-4a1e-b658-54459e046037",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "656dae66-e4b3-4a1e-b658-54459e046037",
-        "lesson.key": "Project   Tell a Data Story Part 2",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2023"
-      }
-    },
-    {
-      "key": "fd9cf182-56f0-4131-8440-7d3a2fe60346",
-      "position": 2,
-      "properties": {
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "fd9cf182-56f0-4131-8440-7d3a2fe60346",
-        "lesson.key": "Project   Tell a Data Story Part 2",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2023"
-      }
-    },
-    {
-      "key": "5c044d27-de75-4578-98b8-bf9819f4f543",
-      "position": 3,
-      "properties": {
-        "duration": 35,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5c044d27-de75-4578-98b8-bf9819f4f543",
-        "lesson.key": "Project   Tell a Data Story Part 2",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2023"
-      }
-    },
-    {
-      "key": "aeb80130-df4a-46e5-b03a-78024399f45b",
-      "position": 4,
-      "properties": {
-        "duration": 10,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "aeb80130-df4a-46e5-b03a-78024399f45b",
-        "lesson.key": "Project   Tell a Data Story Part 2",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2023"
       }
@@ -2092,33 +1990,26 @@
       }
     },
     {
-      "key": "d9c1eace-8040-4385-a918-5464ec5ee20c",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1nxMIFY-iBLAqrVNtkx4B1sYe_fLmaxHZP33cbMjZwVQ/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "d9c1eace-8040-4385-a918-5464ec5ee20c",
-        "lesson_activity.key": "66fa3225-0464-4527-bb1d-12a5252e23ec"
-      }
-    },
-    {
-      "key": "a291c68f-5658-49dc-abbb-6859d32b6e11",
+      "key": "0de4cf86-fd7a-406d-86c6-55e304a5fe09",
       "position": 1,
       "properties": {
         "description": "For the next few days you will work on a project that tells a data story using the Data Analysis Process. Let's get started!",
+        "duration": "2",
+        "name": "Warm Up",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "a291c68f-5658-49dc-abbb-6859d32b6e11",
-        "lesson_activity.key": "c57103dd-78bb-4c2c-b3e6-353df8d4058b"
+        "activity_section.key": "0de4cf86-fd7a-406d-86c6-55e304a5fe09",
+        "lesson_activity.key": "db69b82b-f065-4326-85e8-c02543701398"
       }
     },
     {
       "key": "5588ae39-b9dd-4b90-8485-be2d8736787a",
-      "position": 1,
+      "position": 2,
       "properties": {
-        "description": "**Distribute:** Make sure that all students have access to the Project Guide. Students can find this on the first level of Lesson 7 on Code Studio."
+        "description": "**Distribute:** Make sure that all students have access to the Project Guide. Students can find this on the first level of Lesson 7 on Code Studio.",
+        "duration": "43",
+        "name": "Activity"
       },
       "seeding_key": {
         "activity_section.key": "5588ae39-b9dd-4b90-8485-be2d8736787a",
@@ -2127,7 +2018,7 @@
     },
     {
       "key": "7b771a5e-424d-4e60-b9f5-1671e3f6c075",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Read through the Project Guide as a class. Students are focusing on Page 1 of the guide today, which covers the first three parts of the Data Analysis Process.",
         "progression_name": "Data Story Workspace",
@@ -2144,70 +2035,64 @@
       }
     },
     {
-      "key": "42176f69-67c8-4289-878d-841945a5f07a",
-      "position": 1,
+      "key": "c4c96b93-153b-4119-b2af-3e3478d12c72",
+      "position": 4,
       "properties": {
-        "description": "**Note:** There is no wrap up today. Allow the full time for students to work on their projects."
+        "description": "**Note:** There is no wrap up today. Allow the full time for students to work on their projects.",
+        "name": "Wrap Up"
       },
       "seeding_key": {
-        "activity_section.key": "42176f69-67c8-4289-878d-841945a5f07a",
+        "activity_section.key": "c4c96b93-153b-4119-b2af-3e3478d12c72",
+        "lesson_activity.key": "db69b82b-f065-4326-85e8-c02543701398"
+      }
+    },
+    {
+      "key": "4564ec99-074a-4b83-8a3f-b3a0618e5a78",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** Move to the activity portion of the lesson.",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "4564ec99-074a-4b83-8a3f-b3a0618e5a78",
         "lesson_activity.key": "948e6807-b2c9-42bc-b03f-ae57ffd8060f"
       }
     },
     {
-      "key": "e1fcf764-b90d-498d-a376-0bfb7537c59e",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1abs2EGVx4jdhDUhCq9l94gb7mhibbL-Yrrt1ES18uME/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "e1fcf764-b90d-498d-a376-0bfb7537c59e",
-        "lesson_activity.key": "656dae66-e4b3-4a1e-b658-54459e046037"
-      }
-    },
-    {
-      "key": "c1ff2939-1c1f-40a7-a2c3-35cbd569b702",
-      "position": 1,
-      "properties": {
-        "description": "**Do This:** Move to the activity portion of the lesson."
-      },
-      "seeding_key": {
-        "activity_section.key": "c1ff2939-1c1f-40a7-a2c3-35cbd569b702",
-        "lesson_activity.key": "fd9cf182-56f0-4131-8440-7d3a2fe60346"
-      }
-    },
-    {
-      "key": "9a910cb4-e082-49df-96e8-6338dc756b64",
-      "position": 1,
+      "key": "347ee632-917d-4d0f-8ef7-1e6a4c1d152e",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students work on Page 2 of the Project Guide that covers the \"New Information\" step of the Data Analysis Process. Encourage students to be thorough in their answers. If they are struggling to answer the prompts, they may want to reconsider their visualization.",
+        "duration": "35",
+        "name": "Activity",
         "progression_name": "Data Story Workspace"
       },
       "seeding_key": {
-        "activity_section.key": "9a910cb4-e082-49df-96e8-6338dc756b64",
-        "lesson_activity.key": "5c044d27-de75-4578-98b8-bf9819f4f543"
+        "activity_section.key": "347ee632-917d-4d0f-8ef7-1e6a4c1d152e",
+        "lesson_activity.key": "948e6807-b2c9-42bc-b03f-ae57ffd8060f"
       }
     },
     {
-      "key": "4c991b62-8f3b-4b4f-a3e4-ab5465db71c8",
-      "position": 1,
+      "key": "f10327b1-2755-4e3a-9007-89c78f32bb58",
+      "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review the rubric\r\n\r\n**Do This:** Collected completed Project Guides from students. \r\n\r\n---\r\n\r\n## Assessment: Project\r\n    \r\nAssess using the rubric on the final page of the Project Guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review the rubric\n\n**Do This:** Collected completed Project Guides from students. \n\n---\n\n## Assessment: Project\n    \nAssess using the rubric on the final page of the Project Guide.",
+        "duration": "10",
+        "name": "Wrap Up"
       },
       "seeding_key": {
-        "activity_section.key": "4c991b62-8f3b-4b4f-a3e4-ab5465db71c8",
-        "lesson_activity.key": "aeb80130-df4a-46e5-b03a-78024399f45b"
+        "activity_section.key": "f10327b1-2755-4e3a-9007-89c78f32bb58",
+        "lesson_activity.key": "948e6807-b2c9-42bc-b03f-ae57ffd8060f"
       }
     },
     {
-      "key": "cc73f93a-2ea1-40e4-b0be-8f039188ced2",
-      "position": 2,
+      "key": "49026f1c-af6f-4c34-a150-e5f76b7eca7d",
+      "position": 4,
       "properties": {
-        "progression_name": "End-of-Unit Survey"
       },
       "seeding_key": {
-        "activity_section.key": "cc73f93a-2ea1-40e4-b0be-8f039188ced2",
-        "lesson_activity.key": "aeb80130-df4a-46e5-b03a-78024399f45b"
+        "activity_section.key": "49026f1c-af6f-4c34-a150-e5f76b7eca7d",
+        "lesson_activity.key": "948e6807-b2c9-42bc-b03f-ae57ffd8060f"
       }
     },
     {
@@ -2920,13 +2805,10 @@
     },
     {
       "chapter": 27,
-      "position": 1,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP U9 Data Story Day 2_2023"
-        ],
         "progression": "Data Story Workspace"
       },
       "bonus": false,
@@ -2934,10 +2816,10 @@
         "script_level.level_keys": [
           "CSP U9 Data Story Day 2_2023"
         ],
-        "lesson.key": "Project   Tell a Data Story Part 2",
+        "lesson.key": "Project   Tell a Data Story Part 1",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2023",
-        "activity_section.key": "9a910cb4-e082-49df-96e8-6338dc756b64"
+        "activity_section.key": "347ee632-917d-4d0f-8ef7-1e6a4c1d152e"
       },
       "level_keys": [
         "CSP U9 Data Story Day 2_2023"
@@ -2945,31 +2827,6 @@
     },
     {
       "chapter": 28,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csp9_2023"
-        ],
-        "progression": "End-of-Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Student End of Unit Survey_csp9_2023"
-        ],
-        "lesson.key": "Project   Tell a Data Story Part 2",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2023",
-        "activity_section.key": "cc73f93a-2ea1-40e4-b0be-8f039188ced2"
-      },
-      "level_keys": [
-        "Student End of Unit Survey_csp9_2023"
-      ]
-    },
-    {
-      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2993,7 +2850,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3337,22 +3194,10 @@
         "script_level.level_keys": [
           "CSP U9 Data Story Day 2_2023"
         ],
-        "lesson.key": "Project   Tell a Data Story Part 2",
+        "lesson.key": "Project   Tell a Data Story Part 1",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2023",
-        "activity_section.key": "9a910cb4-e082-49df-96e8-6338dc756b64"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Student End of Unit Survey_csp9_2023",
-        "script_level.level_keys": [
-          "Student End of Unit Survey_csp9_2023"
-        ],
-        "lesson.key": "Project   Tell a Data Story Part 2",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2023",
-        "activity_section.key": "cc73f93a-2ea1-40e4-b0be-8f039188ced2"
+        "activity_section.key": "347ee632-917d-4d0f-8ef7-1e6a4c1d152e"
       }
     },
     {
@@ -3452,7 +3297,7 @@
       }
     },
     {
-      "name": "CSP U9 Project Guide - Tell a Data Story",
+      "name": "CSP Project Guide - Tell a Data Story",
       "url": "https://docs.google.com/document/d/1my-xp5mA5le05dcPp7kVawrK0-68flRifUZcqCRjltA/edit?usp=sharing",
       "key": "csp_u9_project_guide_-_tell_a_data_story",
       "properties": {
@@ -3543,7 +3388,7 @@
       }
     },
     {
-      "name": "CSP Unit 5 - Lesson 9-11 - Project & Assessment",
+      "name": "Project - Tell a Data Story",
       "url": "https://docs.google.com/presentation/d/1fQ--8Xzl2xepnwUavthElckf2uc8iQft-4ZXKS95uwA/copy",
       "key": "csp_unit_5_-_lesson_9-11_-_project_assessment",
       "properties": {
@@ -3922,42 +3767,6 @@
         "lesson.key": "Project   Tell a Data Story Part 1",
         "resource.key": "u9_sample_project_4"
       }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Tell a Data Story Part 2",
-        "resource.key": "csp_u9_project_guide_-_tell_a_data_story"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Tell a Data Story Part 2",
-        "resource.key": "csp_unit_5_-_lesson_9-11_-_project_assessment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Tell a Data Story Part 2",
-        "resource.key": "u9_sample_project_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Tell a Data Story Part 2",
-        "resource.key": "u9_sample_project_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Tell a Data Story Part 2",
-        "resource.key": "u9_sample_project_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Tell a Data Story Part 2",
-        "resource.key": "u9_sample_project_4"
-      }
     }
   ],
   "scripts_resources": [
@@ -4052,6 +3861,16 @@
       }
     },
     {
+      "key": "2b6ab4bf-1e10-4df6-b685-f0a2e7ab0f75",
+      "properties": {
+        "description": "Describes new insights or decisions that can be made based on a visualization"
+      },
+      "seeding_key": {
+        "lesson.key": "Project   Tell a Data Story Part 1",
+        "objective.key": "2b6ab4bf-1e10-4df6-b685-f0a2e7ab0f75"
+      }
+    },
+    {
       "key": "308bc7eb-bab4-4b38-bba4-1c7a735d32b1",
       "properties": {
         "description": "Create filtered charts that answer specific questions"
@@ -4102,13 +3921,13 @@
       }
     },
     {
-      "key": "6c1cf3af-0ba9-4eac-a916-310c64761416",
+      "key": "6e0b6a90-fbf7-45d1-9a82-902917cbe650",
       "properties": {
-        "description": "Recognize and explain potential bias in a dataset or interpretation"
+        "description": "Explain information in a visualization"
       },
       "seeding_key": {
-        "lesson.key": "Project   Tell a Data Story Part 2",
-        "objective.key": "6c1cf3af-0ba9-4eac-a916-310c64761416"
+        "lesson.key": "Project   Tell a Data Story Part 1",
+        "objective.key": "6e0b6a90-fbf7-45d1-9a82-902917cbe650"
       }
     },
     {
@@ -4122,6 +3941,16 @@
       }
     },
     {
+      "key": "76321106-cc4e-4750-9bcc-1a7f8d705814",
+      "properties": {
+        "description": "Follow the Data Analysis Process to tell a data story"
+      },
+      "seeding_key": {
+        "lesson.key": "Project   Tell a Data Story Part 1",
+        "objective.key": "76321106-cc4e-4750-9bcc-1a7f8d705814"
+      }
+    },
+    {
       "key": "785f7373-63c1-4c66-a4a3-b4ab3d54063d",
       "properties": {
         "description": "Explain the reasons that someone would create either a bar chart or a histogram in order to explore a single column of data"
@@ -4132,13 +3961,13 @@
       }
     },
     {
-      "key": "80d4fb39-1c0f-4508-a89e-24c4bf44e297",
+      "key": "86fbfbd9-3903-4ca9-9380-695b741c3667",
       "properties": {
-        "description": "Explain information in a visualization"
+        "description": "Recognize and explain potential bias in a dataset or interpretation"
       },
       "seeding_key": {
-        "lesson.key": "Project   Tell a Data Story Part 2",
-        "objective.key": "80d4fb39-1c0f-4508-a89e-24c4bf44e297"
+        "lesson.key": "Project   Tell a Data Story Part 1",
+        "objective.key": "86fbfbd9-3903-4ca9-9380-695b741c3667"
       }
     },
     {
@@ -4169,26 +3998,6 @@
       "seeding_key": {
         "lesson.key": "Exploring Two Columns",
         "objective.key": "9ffe5bf7-b8cb-4f43-8232-beb8e86ffce4"
-      }
-    },
-    {
-      "key": "a6c35d96-2293-407b-b7b8-22b489c44535",
-      "properties": {
-        "description": "Follow the Data Analysis Process to tell a data story"
-      },
-      "seeding_key": {
-        "lesson.key": "Project   Tell a Data Story Part 2",
-        "objective.key": "a6c35d96-2293-407b-b7b8-22b489c44535"
-      }
-    },
-    {
-      "key": "ada6e44e-35ba-4f23-8df8-84fdb9d3eb36",
-      "properties": {
-        "description": "Describes new insights or decisions that can be made based on a visualization"
-      },
-      "seeding_key": {
-        "lesson.key": "Project   Tell a Data Story Part 2",
-        "objective.key": "ada6e44e-35ba-4f23-8df8-84fdb9d3eb36"
       }
     },
     {
@@ -4676,27 +4485,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Tell a Data Story Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-DA-06"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Tell a Data Story Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Tell a Data Story Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-DA-05"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Tell a Data Story Part 2",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-DA-06"
       }
