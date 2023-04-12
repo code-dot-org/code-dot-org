@@ -1,1 +1,1 @@
-export const SOURCE_FILE: string = 'main.json';
+export const SOURCE_FILE = 'main.json';

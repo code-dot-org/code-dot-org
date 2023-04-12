@@ -17,10 +17,10 @@ export default class ProjectManager {
 
   private nextSaveTime: number | null = null;
   private readonly saveInterval: number = 30 * 1000; // 30 seconds
-  private saveInProgress: boolean = false;
-  private saveQueued: boolean = false;
+  private saveInProgress = false;
+  private saveQueued = false;
   private eventListeners: {
-    [key in keyof typeof ProjectManagerEvent]?: [(response: Response) => void]
+    [key in keyof typeof ProjectManagerEvent]?: [(response: Response) => void];
   } = {};
 
   constructor(
@@ -113,10 +113,13 @@ export default class ProjectManager {
   private enqueueSave() {
     this.saveQueued = true;
 
-    setTimeout(() => {
-      this.save();
-      this.saveQueued = false;
-    }, this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval);
+    setTimeout(
+      () => {
+        this.save();
+        this.saveQueued = false;
+      },
+      this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval
+    );
   }
 
   addEventListener(type: ProjectManagerEvent, listener: () => void) {
@@ -127,7 +130,10 @@ export default class ProjectManager {
     }
   }
 
-  private executeListeners(type: ProjectManagerEvent, response: Response = new Response()) {
+  private executeListeners(
+    type: ProjectManagerEvent,
+    response: Response = new Response()
+  ) {
     this.eventListeners[type]?.forEach(listener => listener(response));
   }
 }

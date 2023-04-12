@@ -39,7 +39,7 @@ export class S3SourcesStore implements SourcesStore {
     return response;
   }
 
-  async save(channelId: string, source: Source, replace: boolean = false) {
+  async save(channelId: string, source: Source, replace = false) {
     let options = undefined;
     if (this.currentVersionId) {
       options = {
