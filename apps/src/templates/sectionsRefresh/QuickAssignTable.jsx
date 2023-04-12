@@ -24,12 +24,11 @@ export default function QuickAssignTable({
   useEffect(() => {
     if (!isNewSection) {
       // combines all the data into one object
-      const startingData = Object.assign(
-        {},
-        courseOfferings[marketingAudience][curriculumTypes.course],
-        courseOfferings[marketingAudience][curriculumTypes.standalone_unit],
-        courseOfferings[marketingAudience][curriculumTypes.module]
-      );
+      const startingData = {
+        ...courseOfferings[marketingAudience][curriculumTypes.course],
+        ...courseOfferings[marketingAudience][curriculumTypes.standalone_unit],
+        ...courseOfferings[marketingAudience][curriculumTypes.module]
+      };
 
       const headers = Object.keys(startingData);
       console.log(startingData);
