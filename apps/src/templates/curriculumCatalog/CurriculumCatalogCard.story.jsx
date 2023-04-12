@@ -9,10 +9,9 @@ export default {
 const Template = args => <CurriculumCatalogCard {...args} />;
 
 const defaultArgs = {
-  courseDisplayName: 'AI for Oceans',
-  duration: 'quarter',
+  courseDisplayName: 'Computer Science Principles',
+  duration: 'school_year',
   gradesArray: ['1', '2', '3', '4'],
-  subjects: ['math'],
   topics: ['programming', 'artificial_intelligence', 'art_and_design'],
   isTranslated: true,
   isEnglish: true
