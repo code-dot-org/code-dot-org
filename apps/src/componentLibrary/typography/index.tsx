@@ -1,7 +1,11 @@
 import React from 'react';
 import classnames from 'classnames';
+// import styles from './Typography.module.scss';
+
+const styles = require('./typography.module.scss').default;
 
 type TypographyProps = {
+  className?: string;
   children: React.ReactNode;
   semanticTag: 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   visualApproach: string;
@@ -9,11 +13,19 @@ type TypographyProps = {
 const Typography: React.FunctionComponent<TypographyProps> = ({
   semanticTag,
   visualApproach,
-  children
+  children,
+  className
 }) => {
   const Tag = semanticTag;
+  console.log(styles);
+  console.log(visualApproach);
+  console.log(className)
 
-  return <Tag className={classnames('a', 'b')}>{children}</Tag>;
+  return (
+    <Tag className={classnames(styles[visualApproach], className)}>
+      {children}
+    </Tag>
+  );
 };
 
 // Typography.propTypes = {

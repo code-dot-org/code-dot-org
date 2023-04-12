@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import Button from '../Button';
 import color from '../../util/color';
 import Typography, {Heading1} from '../../componentLibrary/typography';
-
+import style from './../dropdown-button.module.scss';
 class ImageResourceCard extends Component {
   static propTypes = {
     altText: PropTypes.string,
@@ -24,6 +24,7 @@ class ImageResourceCard extends Component {
   render() {
     const {altText, title, callout, description, buttonText, link, isRtl} =
       this.props;
+    console.log(style, style.thisIsATestClassName);
 
     return (
       <div style={{...styles.card, ...(isRtl && styles.rtl)}}>
@@ -40,7 +41,11 @@ class ImageResourceCard extends Component {
             <div style={styles.description}>{description}</div>
           </div>
           <Heading1>THIS IS A TESt oF TS IN JS</Heading1>
-          <Typography semanticTag="h1" visualApproach="asd">
+          <Typography
+            semanticTag="h1"
+            visualApproach="body-one"
+            className={style.thisIsATestClassName}
+          >
             TypoGRAPHY TypoGRAPHY TypoGRAPHY TypoGRAPHY TypoGRAPHY
           </Typography>
           <Button
