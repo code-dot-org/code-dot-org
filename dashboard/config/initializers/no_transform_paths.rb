@@ -27,4 +27,7 @@ module Cdo
     end
   end
 end
-ActionDispatch::FileHandler.prepend Cdo::NoTransformPaths
+
+Rails.application.config.to_prepare do
+  ActionDispatch::FileHandler.prepend Cdo::NoTransformPaths
+end

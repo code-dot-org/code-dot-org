@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-11 04:29:03 UTC",
+    "serialized_at": "2023-04-12 01:17:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1382,6 +1382,18 @@
       },
       "seeding_key": {
         "activity_section.key": "c8db8b0f-2d6d-4fe7-8ae3-906c35840b69",
+        "lesson_activity.key": "9d85a2cb-a899-42c1-971b-7640e542ab2d"
+      }
+    },
+    {
+      "key": "7bd04295-383f-4705-930f-5fa85672ec5e",
+      "position": 7,
+      "properties": {
+        "description": "<div style=\"background-color: #d7f4e9; border: 1px solid #43876b; border-radius: 5px; font-size: 1em; padding: 15px; margin-bottom: 0px;\">\n<div style=\"margin-top: 0px; margin-left: 0px; margin-right: 20px; height: 185px\">\n<img src=\"https://images.code.org/73ab5fb605d7065835e32221817b69b7-Unit Journal Icon 4.png\" style=\"margin-right: 40px; float: left\">\n\n<p><i>Sample Unit Journal Explanation </i> </p>\n<br>\n<p>Links:</p>\n<a href=\"https://www.w3schools.com/tags/ref_colornames.asp\" target=\"_blank\">DIGITAL </a>\n\n</div>\n</div>\n",
+        "name": "Unit Journal"
+      },
+      "seeding_key": {
+        "activity_section.key": "7bd04295-383f-4705-930f-5fa85672ec5e",
         "lesson_activity.key": "9d85a2cb-a899-42c1-971b-7640e542ab2d"
       }
     },
@@ -4136,6 +4148,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L6 CFU beyond odometer_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4258,6 +4273,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge a_2023"
+        ],
         "progression": "Sampling an Analog Image: Challenges A&B"
       },
       "bonus": false,
@@ -4280,6 +4298,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge B_2023"
+        ],
         "progression": "Sampling an Analog Image: Challenges A&B"
       },
       "bonus": false,
@@ -4302,6 +4323,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 Multiple Choice Digital Analog2022_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
