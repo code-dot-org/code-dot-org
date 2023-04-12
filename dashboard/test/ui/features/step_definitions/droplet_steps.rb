@@ -72,7 +72,6 @@ When /^I ensure droplet is in text mode$/ do
   if button_text == 'Show Text'
     steps <<-STEPS
       Then I press "show-code-header"
-      And I wait until element "#show-code-header:contains('Show Blocks')" is visible
       And I wait to see Droplet text mode
     STEPS
   end

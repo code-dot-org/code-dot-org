@@ -6,6 +6,7 @@ Feature: Hour of Code 2015 tutorial is completable
     Given I am on "http://studio.code.org/s/starwars/reset"
     And execute JavaScript expression "window.localStorage.clear()"
     And I am on "http://studio.code.org/s/starwars/lessons/1/levels/1?noautoplay=true"
+    Then I wait until I am on "http://studio.code.org/s/starwars/lessons/1/levels/1?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
     When I drag droplet block "moveRight" to line 2
@@ -19,6 +20,7 @@ Feature: Hour of Code 2015 tutorial is completable
 
   Scenario: Solving puzzle 1 in text mode
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/1?noautoplay=true"
+    Then I wait until I am on "http://studio.code.org/s/starwars/lessons/1/levels/1?noautoplay=true"
     And I rotate to landscape
     Then I wait for the page to fully load
     When I ensure droplet is in text mode
@@ -33,9 +35,9 @@ Feature: Hour of Code 2015 tutorial is completable
 
   Scenario: Solving puzzle 2 in text mode
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/2?noautoplay=true"
+    Then I wait until I am on "http://studio.code.org/s/starwars/lessons/1/levels/2?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
-    And I wait until element "#continue-button" is not visible
     When I ensure droplet is in text mode
     And I append text to droplet "moveRight();\n"
     And I append text to droplet "moveDown();\n"
@@ -46,6 +48,7 @@ Feature: Hour of Code 2015 tutorial is completable
 
   Scenario: Solving puzzle 3 in text mode
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/3?noautoplay=true"
+    Then I wait until I am on "http://studio.code.org/s/starwars/lessons/1/levels/3?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
     And I wait until element "#continue-button" is not visible
@@ -61,8 +64,8 @@ Feature: Hour of Code 2015 tutorial is completable
   # Puzzle 4 starts in text mode, so no need to switch to text mode
   Scenario: Solving puzzle 4 in text mode
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/4?noautoplay=true"
+    Then I wait until I am on "http://studio.code.org/s/starwars/lessons/1/levels/4?noautoplay=true"
     And I rotate to landscape
-    And I wait until element "#continue-button" is not visible
     And I wait for the page to fully load
     When I append text to droplet "moveLeft();\n"
     And I append text to droplet "moveLeft();\n"
@@ -75,8 +78,8 @@ Feature: Hour of Code 2015 tutorial is completable
 
   Scenario: Solving puzzle 5 in text mode
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/5?noautoplay=true"
+    Then I wait until I am on "http://studio.code.org/s/starwars/lessons/1/levels/5?noautoplay=true"
     And I rotate to landscape
-    And I wait until element "#continue-button" is not visible
     And I wait for the page to fully load
     And I append text to droplet "moveRight();\n"
     And I append text to droplet "moveDown();\n"
@@ -89,8 +92,8 @@ Feature: Hour of Code 2015 tutorial is completable
 
   Scenario: Solving puzzle 6 in text mode
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/6?noautoplay=true"
+    Then I wait until I am on "http://studio.code.org/s/starwars/lessons/1/levels/6?noautoplay=true"
     And I rotate to landscape
-    And I wait until element "#continue-button" is not visible
     And I wait for the page to fully load
     When I ensure droplet is in text mode
     And I append text to droplet "moveDown();\n"
@@ -109,8 +112,8 @@ Feature: Hour of Code 2015 tutorial is completable
   # stop execution when a hazard is touched.
   Scenario: Failing puzzle 5 by touching hazard
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/5?noautoplay=true"
+    Then I wait until I am on "http://studio.code.org/s/starwars/lessons/1/levels/5?noautoplay=true"
     And I rotate to landscape
-    And I wait until element "#continue-button" is not visible
     And I wait for the page to fully load
     And I append text to droplet "moveLeft();\n"
     And I append text to droplet "moveLeft();\n"
@@ -132,6 +135,7 @@ Feature: Hour of Code 2015 tutorial is completable
     Given I am on "http://studio.code.org/s/starwars/reset"
     And execute JavaScript expression "window.localStorage.clear()"
     And I am on "http://studio.code.org/s/starwars/lessons/1/levels/1?noautoplay=true"
+    Then I wait until I am on "http://studio.code.org/s/starwars/lessons/1/levels/1?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
     When I drag droplet block "moveUp" to line 2
@@ -145,6 +149,7 @@ Feature: Hour of Code 2015 tutorial is completable
     Given I am on "http://studio.code.org/s/starwars/reset"
     And execute JavaScript expression "window.localStorage.clear()"
     And I am on "http://studio.code.org/s/starwars/lessons/1/levels/1?noautoplay=true"
+    Then I wait until I am on "http://studio.code.org/s/starwars/lessons/1/levels/1?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
     When I ensure droplet is in text mode
