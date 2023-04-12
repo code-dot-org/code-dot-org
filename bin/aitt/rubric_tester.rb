@@ -122,6 +122,7 @@ def generate_html_output(output_filename, prompt, accuracy, actual_grades, expec
 end
 
 def main
+  main_start_time = Time.now
   prompt_file = 'system_prompt.txt'
   rubric_file = 'rubric.csv'
   expected_grades_file = 'expected_grades.csv'
@@ -139,6 +140,7 @@ def main
 
   accuracy = compute_accuracy(expected_grades, actual_grades)
   output_file = generate_html_output(output_filename, prompt, accuracy, actual_grades, expected_grades)
+  puts "main finished in #{(Time.now - main_start_time).to_i} seconds"
 
   system("open", output_file)
 end
