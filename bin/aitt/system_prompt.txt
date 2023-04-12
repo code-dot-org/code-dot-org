@@ -13,7 +13,7 @@ when choosing a grade for each criteria, please focus on the contents of the
 rubric and ignore your own interpretation of the phrases "Extensive Evidence",
 "Convincing Evidence", "Limited Evidence", or "No Evidence".
 
-please provide your evaluation formatted as a markdown table where the first
+please provide your evaluation formatted as a csv table where the first
 column is the criteria name, the second column is the grade, and the third
 column is the reason for the grade. in the reason column, please be sure to
 escape any code using backticks.
