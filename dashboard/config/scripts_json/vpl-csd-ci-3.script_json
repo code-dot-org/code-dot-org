@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-06 00:17:41 UTC",
+    "serialized_at": "2023-04-11 20:16:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1758,6 +1758,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-Summer-CI-CSD U3-Mini-ProjectsOverview_2023"
+        ],
         "progression": "Unit Projects"
       },
       "bonus": false,

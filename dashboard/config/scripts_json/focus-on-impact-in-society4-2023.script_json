@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-06 23:04:37 UTC",
+    "serialized_at": "2023-04-11 20:16:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -11356,125 +11356,13 @@
     }
   ],
   "resources": [
-    {
-      "name": "All Code",
-      "url": "/s/focus-on-impact-in-society4-2023/code",
-      "key": "all_code_1",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_code_1"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/s/focus-on-impact-in-society4-2023/standards",
-      "key": "all_standards_3",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_standards_3"
-      }
-    },
-    {
-      "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
-      "key": "csd_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide"
-      }
-    },
-    {
-      "name": "CSD Guide to Debugging",
-      "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
-      "key": "csd_guide_to_debugging",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_debugging"
-      }
-    },
-    {
-      "name": "CSD Guide to Differentiation",
-      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
-      "key": "csd_guide_to_differentiation",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_differentiation"
-      }
-    },
-    {
-      "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
-      "key": "csd_implementation_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_implementation_guide"
-      }
-    },
-    {
-      "name": "Teacher Forum",
-      "url": "https://forum.code.org/c/csd",
-      "key": "teacher_forum",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "teacher_forum"
-      }
-    }
+
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "all_code_1",
-        "script.name": "focus-on-impact-in-society4-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_3",
-        "script.name": "focus-on-impact-in-society4-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
-        "script.name": "focus-on-impact-in-society4-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_debugging",
-        "script.name": "focus-on-impact-in-society4-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_differentiation",
-        "script.name": "focus-on-impact-in-society4-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_implementation_guide",
-        "script.name": "focus-on-impact-in-society4-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "teacher_forum",
-        "script.name": "focus-on-impact-in-society4-2023"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
