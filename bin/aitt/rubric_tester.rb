@@ -4,16 +4,14 @@ require 'httparty'
 require 'nokogiri'
 require 'open3'
 
-def read_inputs(prompt_file, example_code_file, rubric_file)
+def read_inputs(prompt_file, rubric_file)
   prompt = File.read(prompt_file)
-  example_code = File.read(example_code_file)
   rubric = File.read(rubric_file).lines.to_a
-  [prompt, example_code, rubric]
+  [prompt, rubric]
 end
 
-def get_student_files(example_code_file)
-  all_js_files = Dir.glob('*.js').sort
-  all_js_files.reject { |filename| filename == example_code_file }
+def get_student_files
+  Dir.glob('*.js').sort
 end
 
 def get_expected_grades(expected_grades_file)
@@ -25,7 +23,7 @@ def get_expected_grades(expected_grades_file)
   expected_grades
 end
 
-def grade_student_work(prompt, example_code, rubric, student_code)
+def grade_student_work(prompt, rubric, student_code)
   api_url = 'https://api.openai.com/v1/chat/completions'
   headers = {
     'Content-Type' => 'application/json',
@@ -38,7 +36,7 @@ def grade_student_work(prompt, example_code, rubric, student_code)
     temperature: 0,
     messages: [
       {role: 'system', content: prompt},
-      {role: 'user', content: "Example Code:\n#{example_code}\n\nRubric:\n#{rubric_str}\n\nStudent Code:\n#{student_code}"}
+      {role: 'user', content: "Rubric:\n#{rubric_str}\n\nStudent Code:\n#{student_code}"}
     ],
   }
 
@@ -121,20 +119,19 @@ end
 
 def main
   prompt_file = 'system_prompt.txt'
-  example_code_file = 'example_code.js'
   rubric_file = 'rubric.csv'
   expected_grades_file = 'expected_grades.csv'
   output_filename = ARGV[0] || 'output.html'
 
-  prompt, example_code, rubric = read_inputs(prompt_file, example_code_file, rubric_file)
-  student_files = get_student_files(example_code_file)
+  prompt, rubric = read_inputs(prompt_file, rubric_file)
+  student_files = get_student_files
   expected_grades = get_expected_grades(expected_grades_file)
 
   actual_grades = {}
   student_files.each do |student_file|
     student_id = File.basename(student_file, '.js')
     student_code = File.read(student_file)
-    actual_grades[student_id] = grade_student_work(prompt, example_code, rubric, student_code)
+    actual_grades[student_id] = grade_student_work(prompt, rubric, student_code)
   end
 
   accuracy = compute_accuracy(expected_grades, actual_grades)
