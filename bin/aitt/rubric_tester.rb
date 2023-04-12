@@ -18,7 +18,7 @@ end
 def get_expected_grades(expected_grades_file)
   expected_grades = {}
   CSV.foreach(expected_grades_file, headers: true) do |row|
-    student_id = row['StudentID']
+    student_id = row['student']
     expected_grades[student_id] = row.to_h
   end
   expected_grades
@@ -66,7 +66,7 @@ def compute_accuracy(expected_grades, actual_grades)
   actual_grades.each do |student_id, criteria|
     criteria.each do |row|
       total += 1
-      matches += 1 if expected_grades[student_id][row['criteria']] == row['grade']
+      matches += 1 if expected_grades[student_id][row['Key Concept']] == row['Grade']
     end
   end
 
@@ -88,21 +88,21 @@ def generate_html_output(output_filename, prompt, accuracy, actual_grades, expec
           doc.h3 "Student ID: #{student_id}"
           doc.table(border: '1') {
             doc.tr {
-              doc.th 'Criteria'
+              doc.th 'Key Concept'
               doc.th 'Expected Grade'
               doc.th 'Actual Grade'
               doc.th 'Reason'
             }
             criteria.each do |row|
-              expected_grade = expected_grades[student_id][row['criteria']]
-              cell_color = expected_grade == row['grade'] ? 'green' : 'red'
+              expected_grade = expected_grades[student_id][row['Key Concept']]
+              cell_color = expected_grade == row['Grade'] ? 'green' : 'red'
               doc.tr {
-                doc.td row['criteria']
+                doc.td row['Key Concept']
                 doc.td expected_grade
                 doc.td(style: "background-color: #{cell_color};") {
-                  doc.text row['grade']
+                  doc.text row['Grade']
                 }
-                doc.td row['reason']
+                doc.td row['Reason']
               }
             end
           }
