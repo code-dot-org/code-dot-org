@@ -3,6 +3,7 @@ require 'json'
 require 'httparty'
 require 'nokogiri'
 require 'open3'
+require 'parallel'
 
 def read_inputs(prompt_file, rubric_file)
   prompt = File.read(prompt_file)
@@ -127,12 +128,11 @@ def main
   student_files = get_student_files
   expected_grades = get_expected_grades(expected_grades_file)
 
-  actual_grades = {}
-  student_files.each do |student_file|
+  actual_grades = Parallel.map(student_files, in_threads: 7) do |student_file|
     student_id = File.basename(student_file, '.js')
     student_code = File.read(student_file)
-    actual_grades[student_id] = grade_student_work(prompt, rubric, student_code)
-  end
+    [student_id, grade_student_work(prompt, rubric, student_code)]
+  end.to_h
 
   accuracy = compute_accuracy(expected_grades, actual_grades)
   output_file = generate_html_output(output_filename, prompt, accuracy, actual_grades, expected_grades)
