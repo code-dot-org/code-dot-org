@@ -68,6 +68,18 @@
       "syntax": "`public static double pow(double a, double b)`",
       "external_link": null,
       "return_value": null
+    },
+    {
+      "name": "ceil",
+      "position": 5,
+      "key": "ceil",
+      "overload_of": null,
+      "content": "Returns the smallest (closest to negative infinity) `double` value that is greater than or equal to the argument and is equal to a mathematical integer.\n\n**Special cases:**\n- If the argument value is already equal to a mathematical integer, then the result is the same as the argument.\n- If the argument is `NaN` or an infinity or positive zero or negative zero, then the result is the same as the argument.\n- If the argument value is less than zero but greater than `-1.0`, then the result is negative zero.",
+      "parameters": "[{\"name\":\"a\",\"type\":\"double\",\"required\":true,\"description\":\"a value\"}]",
+      "examples": "[]",
+      "syntax": "`public static double ceil(double a)`",
+      "external_link": null,
+      "return_value": null
     }
   ]
 }

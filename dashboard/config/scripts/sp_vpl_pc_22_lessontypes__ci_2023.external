@@ -5,6 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # Unit Structure
 
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">
+The Creating Apps with Devices unit is divided into <strong>two chapters.</strong> Each chapter includes several small projects and activities that provide an opportunity for students to practice new skills. If you are short on time, you may choose to complete only the first chapter of the unit.
+</p></div>
+
 ## Introduction to App Lab
 
 ##### The Creating Apps for Devices unit begins with a lesson on App Lab to get your students familiar with the tool they will use this unit. If your students are already familiar with App Lab, you may decide to skip this lesson. <a href="https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students" target="blank" rel="noopener noreferrer">Click here</a> to learn more about skipping this lesson, allowing your classes to start right away with Chapter 1: Inputs and Outputs.
@@ -12,12 +18,12 @@ markdown <<MARKDOWN
 
 ## Chapters
 
-##### The Creating Apps with Devices unit is divided into **two chapters.** Each chapter includes several small projects and activities that provide an opportunity for students to practice new skills. If you are short on time, you may choose to complete only the first chapter of the unit.
-
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">🔎 Chapter 1: Inputs and Outputs</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
+
+##### <strong>Description:</strong> This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many "smart" hardware they may experience in their day-to-day lives.
 
 * ##### What inputs and outputs are available on a physical device?
 * ##### What inputs and outputs are available on an app?
@@ -30,6 +36,8 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
+##### <strong>Description:</strong> In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.
+
 * ##### How can a physical device use sensors to react to a physical environment?
 * ##### How can simple hardware be used to develop innovative new products?
 </p></div>
@@ -41,7 +49,7 @@ markdown <<MARKDOWN
 ### Lesson components 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Warm up</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🙋‍♀️ Warm up</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -51,7 +59,7 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Activity</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">💃 Activity</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -61,7 +69,7 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Wrap up</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🏁 Wrap up</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -73,7 +81,7 @@ markdown <<MARKDOWN
 ### Lesson types
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Programming lessons</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">💻 Programming lessons</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -82,7 +90,7 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Non-programming lessons</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">✍🏽 Non-programming lessons</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -92,7 +100,7 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Project lessons</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">👩‍💻 Project lessons</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -102,6 +110,5 @@ markdown <<MARKDOWN
 ##### ***Projects*** are multi-day open-ended lessons found at the end of each chapter or unit. Projects challenge students to create using skills developed throughout the unit. Projects often include opportunities for planning, creation, and reflection. 
 </p></div>
 </details>
-
 
 MARKDOWN
