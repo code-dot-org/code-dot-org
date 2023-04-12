@@ -1,3 +1,14 @@
+// LabContainer
+//
+// This React component is used to contain a lab that doesn't need page reloads
+// between levels.  It is hosted by the header React component, and encompasses
+// everything below the header on the page.
+//
+// For now, it's only used for the "music" app, and facilitates instant switching
+// between "music" levels in the same lesson.
+//
+// It plays a fade-in animation when levels are switched.
+
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
