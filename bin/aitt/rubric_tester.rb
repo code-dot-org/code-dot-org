@@ -78,6 +78,7 @@ end
 
 def generate_html_output(output_filename, prompt, accuracy, actual_grades, expected_grades)
   possible_grades = ["No Evidence", "Limited Evidence", "Convincing Evidence", "Extensive Evidence"]
+  link_base_url = "file://#{`pwd`.strip}"
 
   File.open(output_filename, 'w') do |file|
     file.puts '<!DOCTYPE html>'
@@ -95,6 +96,7 @@ def generate_html_output(output_filename, prompt, accuracy, actual_grades, expec
     actual_grades.each do |student_id, grades|
       puts "rendering table for #{student_id}"
       file.puts "  <h3>Student: #{student_id}</h3>"
+      file.puts "  <a href=\"#{link_base_url}/#{student_id}.js\">#{student_id}.js</a>"
       file.puts '  <table border="1">'
       file.puts '    <tr><th>Criteria</th><th>Expected Grade</th><th>Actual Grade</th><th>Reason</th></tr>'
       grades.each do |grade|
