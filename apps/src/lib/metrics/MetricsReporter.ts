@@ -84,10 +84,12 @@ class MetricsReporter {
   }
 
   private fallbackLog(payload: object) {
-    console.log(
-      'Client-side reporting disabled. Attempted to report: ' +
-        JSON.stringify(payload)
-    );
+    if (isDevelopmentEnvironment()) {
+      console.log(
+        'Client-side reporting disabled. Attempted to report: ' +
+          JSON.stringify(payload)
+      );
+    }
   }
 
   private isReportingEnabled(): boolean {
