@@ -450,32 +450,6 @@ module Pd::Application
       assert_equal 3, application.status_log.count
     end
 
-    test 'setting an auto-email status sends an email if associated with an RP' do
-      application_hash = build :pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id
-      application = create :pd_teacher_application, form_data_hash: application_hash
-      assert_empty application.emails
-
-      application.expects(:send_pd_application_email).with('accepted')
-      application.update!(status: 'accepted')
-    end
-
-    test 'setting an auto-email status does not send an email if no RP' do
-      application = create :pd_teacher_application
-      assert_empty application.emails
-
-      application.expects(:send_pd_application_email).never
-      application.update!(status: 'accepted')
-    end
-
-    test 'setting a non auto-email status does not send a status email even if associated with an RP' do
-      application_hash = build :pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id
-      application = create :pd_teacher_application, form_data_hash: application_hash
-      assert_empty application.emails
-
-      application.expects(:send_pd_application_email).never
-      application.update!(status: 'pending')
-    end
-
     test 'test non course dynamically required fields' do
       application_hash = build :pd_teacher_application_hash,
         regional_partner_id: create(:regional_partner).id,

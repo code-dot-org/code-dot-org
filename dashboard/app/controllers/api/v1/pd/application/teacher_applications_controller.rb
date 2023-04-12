@@ -49,7 +49,7 @@ module Api::V1::Pd::Application
 
     def send_principal_approval
       if @application.allow_sending_principal_email?
-        @application.send_pd_application_email :admin_approval, deliver_now: true
+        @application.send_pd_application_email :admin_approval
       end
       render json: {principal_approval: @application.principal_approval_state}
     end
