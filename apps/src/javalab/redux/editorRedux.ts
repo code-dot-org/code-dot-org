@@ -13,7 +13,7 @@ import _ from 'lodash';
 import {createSelector, createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {JavalabEditorDialog} from '../types';
 
-interface Sources {
+interface EditorFilesMap {
   [key: string]: {
     text: string;
     tabOrder: number;
@@ -36,15 +36,15 @@ interface JavalabEditorState {
   orderedTabKeys: string[];
   activeTabKey: string;
   lastTabKeyIndex: number;
-  sources: Sources;
-  validation: Sources;
+  sources: EditorFilesMap;
+  validation: EditorFilesMap;
   editorOpenDialogName: JavlabEditorDialogOptions | null;
   newFileError: string | null;
   renameFileError: string | null;
   editTabKey: string | null;
 }
 
-const initialSources: Sources = {
+const initialSources: EditorFilesMap = {
   'MyClass.java': {text: '', tabOrder: 0, isVisible: true, isValidation: false}
 };
 
@@ -103,14 +103,14 @@ const javalabEditorSlice = createSlice({
         return {payload: {filename, source, tabOrder, isVisible, isValidation}};
       }
     },
-    setAllValidation(state, action: PayloadAction<Sources>) {
+    setAllValidation(state, action: PayloadAction<EditorFilesMap>) {
       state.validation = action.payload;
     },
     setAllSourcesAndFileMetadata: {
       reducer(
         state,
         action: PayloadAction<{
-          sources: Sources;
+          sources: EditorFilesMap;
           isEditingStartSources: boolean;
         }>
       ) {
@@ -130,7 +130,7 @@ const javalabEditorSlice = createSlice({
         state.activeTabKey = activeTabKey;
         state.lastTabKeyIndex = lastTabKeyIndex;
       },
-      prepare(sources: Sources, isEditingStartSources: boolean) {
+      prepare(sources: EditorFilesMap, isEditingStartSources: boolean) {
         return {payload: {sources, isEditingStartSources}};
       }
     },
@@ -262,12 +262,11 @@ const javalabEditorSlice = createSlice({
 });
 
 // Selectors
-// We don't have a type for the entire redux store yet, so we need to use any here.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const selectSources = (state: any) => state.javalabEditor.sources;
+const selectSources = (state: {javalabEditor: JavalabEditorState}) =>
+  state.javalabEditor.sources;
 
 export const getSources = createSelector(selectSources, sources => {
-  const result: Sources = {};
+  const result: EditorFilesMap = {};
   for (const key in sources) {
     if (!sources[key].isValidation) {
       result[key] = {
@@ -281,7 +280,7 @@ export const getSources = createSelector(selectSources, sources => {
 });
 
 export const getValidation = createSelector(selectSources, sources => {
-  const validation: Sources = {};
+  const validation: EditorFilesMap = {};
   for (const key in sources) {
     if (sources[key].isValidation) {
       validation[key] = {
