@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-11 20:16:11 UTC",
+    "serialized_at": "2023-04-06 22:19:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -317,9 +317,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U5_2023"
-        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -342,9 +339,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-pilot-S22-CI-Unit_Overview_U5L2_2023"
-        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -367,9 +361,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-pilot-S22-CI-Unit_PSP-U5L3_2023"
-        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -392,9 +383,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-pilot-S22-2-week1-U5L5_2023"
-        ],
         "progression": "Explore the first week of curriculum"
       },
       "bonus": false,
@@ -417,9 +405,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-mod5-lesson2-overview_2023"
-        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -442,9 +427,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-pilot-S22-5-representing data_2023"
-        ],
         "progression": "Representing letters"
       },
       "bonus": false,
@@ -467,9 +449,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-pilot-S22-5-ASCII_2023"
-        ],
         "progression": "Representing letters"
       },
       "bonus": false,
@@ -492,9 +471,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-pilot-S22-5-Pixels_2023"
-        ],
         "progression": "Representing images"
       },
       "bonus": false,
@@ -517,9 +493,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U5 black white images pixelation_2023"
-        ],
         "progression": "Representing images"
       },
       "bonus": false,
@@ -542,9 +515,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U5 binary video_2023"
-        ],
         "progression": "Representing numbers"
       },
       "bonus": false,
@@ -567,9 +537,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-pilot-S22-5-representing numbers_2023"
-        ],
         "progression": "Representing numbers"
       },
       "bonus": false,
@@ -592,9 +559,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U5 binary widget_2023"
-        ],
         "progression": "Representing numbers"
       },
       "bonus": false,
@@ -617,9 +581,6 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-binary-c4u-6bit_2023"
-        ],
         "progression": "Representing numbers"
       },
       "bonus": false,
@@ -642,9 +603,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U5 binary 8 bits_2023"
-        ],
         "progression": "Representing numbers"
       },
       "bonus": false,
@@ -667,9 +625,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-pilot-S22-5-EncryptionAndDecryption_2023"
-        ],
         "progression": "Data privacy"
       },
       "bonus": false,
@@ -692,9 +647,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-pilot-S22-5-EncryptionAndDecryption-Practice_2023"
-        ],
         "progression": "Data privacy"
       },
       "bonus": false,
@@ -717,9 +669,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U5L6_2023"
-        ],
         "progression": "Wrap up"
       },
       "bonus": false,
@@ -742,9 +691,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-mod5-lesson3-overview_2023"
-        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -767,9 +713,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-mod5-lesson3-PSPwithData_2023"
-        ],
         "progression": "Solve data problems"
       },
       "bonus": false,
@@ -792,9 +735,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U5 Pizza_2023"
-        ],
         "progression": "Solve data problems"
       },
       "bonus": false,
@@ -817,9 +757,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-mod5-InterpretingData_2023"
-        ],
         "progression": "Solve data problems"
       },
       "bonus": false,
@@ -842,9 +779,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-mod5-lesson3-DataDecisions_2023"
-        ],
         "progression": "Solve data problems"
       },
       "bonus": false,
@@ -867,9 +801,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U5 Netflix Data Video_2023"
-        ],
         "progression": "Solve data problems"
       },
       "bonus": false,
@@ -892,9 +823,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U5 test clean multi_2023"
-        ],
         "progression": "Wrap up"
       },
       "bonus": false,
@@ -917,9 +845,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-U5L5_2023"
-        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -942,9 +867,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U5L5C1_2023"
-        ],
         "progression": "Unit Projects"
       },
       "bonus": false,
@@ -967,9 +889,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U5L5C2_2023"
-        ],
         "progression": "Unit Projects"
       },
       "bonus": false,
@@ -992,9 +911,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "-VPL-CSD-PILOT-summer22-navigation_2023"
-        ],
         "progression": "Wrap Up"
       },
       "bonus": false,

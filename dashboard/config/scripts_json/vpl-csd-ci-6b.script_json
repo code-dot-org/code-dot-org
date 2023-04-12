@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-11 20:16:11 UTC",
+    "serialized_at": "2023-04-11 01:46:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -299,9 +299,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computing_-ci_ci-_2023"
-        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -324,9 +321,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-computing_-ci_ci_2023"
-        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -349,9 +343,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-Summer-CI-Unit_PSP-U6L3_2023"
-        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -374,9 +365,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-PC-22-PSP-vid_2023"
-        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -399,9 +387,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-PC-22-LessonTypes_-ci_2023"
-        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -424,9 +409,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_2023"
-        ],
         "progression": "Connect your Circuit Playground"
       },
       "bonus": false,
@@ -449,9 +431,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-CI-U6-MB_setup_ci-6-mb_2023"
-        ],
         "progression": "Connect your Circuit Playground"
       },
       "bonus": false,
@@ -474,9 +453,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-22-CI-mod6-MakerApp-appLab_physical-computing_-c_ci_2023"
-        ],
         "progression": "Connect your Circuit Playground"
       },
       "bonus": false,
@@ -499,9 +475,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-Summer-CI-MB Test-U6L1_2023"
-        ],
         "progression": "Connect your Circuit Playground"
       },
       "bonus": false,
@@ -524,9 +497,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-Overview-U6L3_physical-computing_-ci_ci-6-mb_2023"
-        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -549,9 +519,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI6-CSD circuit video_2023"
-        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -574,9 +541,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Ove_physical-c_ci_2023"
-        ],
         "progression": "Introduction to Inputs and Outputs"
       },
       "bonus": false,
@@ -599,9 +563,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-S23-CI-U6-MB-Back-inputOutput-ci-6-mb_2023"
-        ],
         "progression": "Introduction to Inputs and Outputs"
       },
       "bonus": false,
@@ -624,9 +585,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-Summer-CI-U6 - MB Board Outputs_2023"
-        ],
         "progression": "Introduction to Inputs and Outputs"
       },
       "bonus": false,
@@ -649,9 +607,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-CI-U6-Board Inputs-MB_2023"
-        ],
         "progression": "Introduction to Inputs and Outputs"
       },
       "bonus": false,
@@ -674,9 +629,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-CI-U6- Board Inputs-MB_2023"
-        ],
         "progression": "Introduction to Inputs and Outputs"
       },
       "bonus": false,
@@ -699,9 +651,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-Summer-CI-U6-If Variables_2023"
-        ],
         "progression": "Add Complexity to your App"
       },
       "bonus": false,
@@ -724,9 +673,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-Summer-U6-If Variables-Counter-MB_2023"
-        ],
         "progression": "Add Complexity to your App"
       },
       "bonus": false,
@@ -749,9 +695,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-Summer-U6-If Variables-MB-L8_2023"
-        ],
         "progression": "Add Complexity to your App"
       },
       "bonus": false,
@@ -774,9 +717,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-CI-U6MB-Predict-Combine Inputs_2023"
-        ],
         "progression": "Explore Additional Inputs and Outputs"
       },
       "bonus": false,
@@ -799,9 +739,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-CI-U6MB-Combine Inputs2_2023"
-        ],
         "progression": "Explore Additional Inputs and Outputs"
       },
       "bonus": false,
@@ -824,9 +761,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-CI-U6MB-Combine Inputs-Sliders_2023"
-        ],
         "progression": "Explore Additional Inputs and Outputs"
       },
       "bonus": false,
@@ -849,9 +783,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-CI-U6MB-Combine Inputs-TicTacToe_2023"
-        ],
         "progression": "Explore Additional Inputs and Outputs"
       },
       "bonus": false,
@@ -874,9 +805,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-c_ci_2023"
-        ],
         "progression": "Preview the End of Chapter Project"
       },
       "bonus": false,
@@ -899,9 +827,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-Overview-U6L4_physical-computing_-ci_2023"
-        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -924,9 +849,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-CI-U6MB-Sensors-Play_2023"
-        ],
         "progression": "Use sensors "
       },
       "bonus": false,
@@ -949,9 +871,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-CI-U6MB-Accelerometer-Predict_2023"
-        ],
         "progression": "Use sensors "
       },
       "bonus": false,
@@ -974,9 +893,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_2023"
-        ],
         "progression": "Interact with apps and prototypes "
       },
       "bonus": false,
@@ -999,9 +915,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-CI-U6MB-FunctionsWParameters_2023"
-        ],
         "progression": "Interact with apps and prototypes "
       },
       "bonus": false,
@@ -1024,9 +937,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Rev_2023"
-        ],
         "progression": "Interact with apps and prototypes "
       },
       "bonus": false,
@@ -1049,9 +959,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview_physical-computing_-c_ci_2023"
-        ],
         "progression": "Interact with apps and prototypes "
       },
       "bonus": false,
@@ -1074,9 +981,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-c_ci_2023"
-        ],
         "progression": "Preview the End of Chapter Project"
       },
       "bonus": false,
@@ -1099,9 +1003,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "-VPL-CSD-PILOT-summer22-navigation_2023"
-        ],
         "progression": "Wrap Up"
       },
       "bonus": false,

@@ -24,7 +24,7 @@ export default class TeacherResources extends Component {
             description={i18n.professionalLearningDescription()}
             image="professionallearning.png"
             buttonText={i18n.exploreProfessionalLearning()}
-            link={pegasus('/educate/professional-learning')}
+            link="/my-professional-learning"
           />
           <ImageResourceCard
             title={i18n.csJourneys()}
