@@ -58,10 +58,38 @@ $container-width: 309px;
 
 .tagsAndTranslatabilityContainer {
   display: flex;
+  column-gap: 0.25em;
   justify-content: space-between;
+  margin-bottom: 0.5em;
 
   i {
     font-size: 1.5em;
+  }
+}
+
+.tagsContainer {
+  display: flex;
+  column-gap: 0.5em;
+
+  .tagsText {
+    // font styles
+    font-size: 0.75em;
+    line-height: 0.875em;
+    letter-spacing: 0.04em;
+    font-family: $gotham-bold, sans-serif;
+    text-transform: uppercase;
+    color: $neutral-dark;
+
+    // tag styles
+    padding: 0.6em 0.75em 0 0.75em;
+    background-color: $brand_primary_light;
+    border-radius: 1em;
+
+    // ellipsis overflow
+    max-width: 14em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -75,23 +103,6 @@ $container-width: 309px;
     font-size: 0.875em;
     margin: 0;
     color: $neutral_dark;
-  }
-}
-
-.tagsContainer {
-  display: flex;
-  column-gap: 4px;
-
-  .tagsText {
-    font-size: 0.75em;
-    line-height: 0.875em;
-    letter-spacing: 0.04em;
-    font-family: $gotham-bold, sans-serif;
-    text-transform: uppercase;
-    color: $neutral-dark;
-    padding: 0.5em 1em;
-    background-color: $brand_primary_light;
-    border-radius: 1em;
   }
 }
 

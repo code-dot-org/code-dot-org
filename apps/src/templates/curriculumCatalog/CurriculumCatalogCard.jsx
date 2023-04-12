@@ -94,11 +94,14 @@ const CustomizableCurriculumCatalogCard = ({
   >
     <img src={imageSrc} alt={imageAltText} />
     <div className={style.curriculumInfoContainer}>
-      {/*TODO [MEG]: Show all subjects and topics rather than only the first one */}
       <div className={style.tagsAndTranslatabilityContainer}>
         <div className={style.tagsContainer}>
-          <p className={style.tagsText}>{subjectsAndTopics[0]}</p>
-          <p className={style.tagsText}>{`+${subjectsAndTopics.length - 1}`}</p>
+          <div className={style.tagsText}>{subjectsAndTopics[0]}</div>
+          {subjectsAndTopics.length > 1 && (
+            <div className={style.tagsText}>{`+${
+              subjectsAndTopics.length - 1
+            }`}</div>
+          )}
         </div>
         {/*TODO [MEG]: Ensure this icon matches spec when we update FontAwesome */}
         {isTranslated && (
