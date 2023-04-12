@@ -115,7 +115,7 @@ class Services::CompleteApplicationReminderTest < ActiveSupport::TestCase
 
   test 'both reminders omit applications without an email' do
     Timecop.freeze do
-      teacher_without_email = create :teacher
+      teacher_without_email = create :teacher, :with_school_info, :demigrated
       teacher_without_email.update_attribute(:email, '')
       teacher_without_email.update_attribute(:hashed_email, '')
       application_hash_without_email = build :pd_teacher_application_hash, alternate_email: ''
@@ -124,8 +124,8 @@ class Services::CompleteApplicationReminderTest < ActiveSupport::TestCase
       application_with_email = create :pd_teacher_application
 
       # two applications were created
-      refute_empty Pd::Application::TeacherApplication.find(application_without_email.id)
-      refute_empty Pd::Application::TeacherApplication.find(application_with_email.id)
+      assert Pd::Application::TeacherApplication.exists?(id: application_without_email.id)
+      assert Pd::Application::TeacherApplication.exists?(id: application_with_email.id)
 
       # At 7 days, the only application that gets the first reminder is the application with an email
       Timecop.travel 7.days

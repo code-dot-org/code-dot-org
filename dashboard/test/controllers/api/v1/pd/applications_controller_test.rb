@@ -380,8 +380,8 @@ module Api::V1::Pd
       @csd_teacher_application_with_partner.expects(:send_pd_application_email).with('accepted').once
       @csd_teacher_application_with_partner.update(status: 'accepted')
 
-      # Another update does not trigger another decision email sent
-      @csd_teacher_application_with_partner.update(scholarship_status: 'no')
+      # A different update does not trigger another decision email sent
+      @csd_teacher_application_with_partner.update(notes: 'More notes')
     end
 
     test 'update does not send a decision email if status changed to decision but no RP' do
