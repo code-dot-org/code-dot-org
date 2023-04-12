@@ -24,7 +24,7 @@ def get_expected_grades(expected_grades_file)
   expected_grades
 end
 
-def grade_student_work(prompt, rubric, student_code)
+def grade_student_work(prompt, rubric, student_code, student_id)
   api_url = 'https://api.openai.com/v1/chat/completions'
   headers = {
     'Content-Type' => 'application/json',
@@ -41,20 +41,19 @@ def grade_student_work(prompt, rubric, student_code)
     ],
   }
 
-  puts "request data size: #{data.to_json.size}"
-  timeout = 600
-  puts "request timeout: #{timeout} seconds"
+  puts "#{student_id} request data size: #{data.to_json.size}"
 
   start_time = Time.now
-  response = HTTParty.post(api_url, headers: headers, body: data.to_json, timeout: timeout)
-  puts "response completed in #{Time.now - start_time} seconds with status #{response.code}"
+  response = HTTParty.post(api_url, headers: headers, body: data.to_json, timeout: 120)
 
   if response.code == 200
+    puts "#{student_id} response succeeded in #{Time.now - start_time} seconds"
     completed_text = response.parsed_response['choices'][0]['message']['content']
     CSV.parse(completed_text.strip, headers: true).map(&:to_h)
   else
-    puts "Error calling the API: #{response.code}"
-    puts "Response body: #{response.body}"
+    puts "#{student_id} Error calling the API: #{response.code}"
+    puts "#{student_id} response failed in #{Time.now - start_time} seconds"
+    puts "#{student_id} Response body: #{response.body}"
     []
   end
 end
@@ -131,7 +130,7 @@ def main
   actual_grades = Parallel.map(student_files, in_threads: 7) do |student_file|
     student_id = File.basename(student_file, '.js')
     student_code = File.read(student_file)
-    [student_id, grade_student_work(prompt, rubric, student_code)]
+    [student_id, grade_student_work(prompt, rubric, student_code, student_id)]
   end.to_h
 
   accuracy = compute_accuracy(expected_grades, actual_grades)
