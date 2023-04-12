@@ -108,8 +108,9 @@ theme: responsive_full_width
 
 %section.bg-neutral-light
   .wrapper
-    %h2 Quotes
-    = view :pl_middle_high_carousel
+    %h2=hoc_s(:ai_carousel_heading)
+    .quotes-wrapper
+      = view :ai_carousel
 
 %a{id: "ai-pl"}
 %section

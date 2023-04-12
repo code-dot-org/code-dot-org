@@ -1,0 +1,31 @@
+.carousel-wrapper#ai-carousel
+  .carousel{style: "height: 140px"}
+    .slides
+      .slide
+        %p.quote-text=hoc_s(:ai_carousel_quote_01)
+        %p Seneca Hart <span>•</span> CS Discoveries Teacher
+      .slide
+        %p.quote-text=hoc_s(:ai_carousel_quote_02)
+        %p Betia Bentley <span>•</span> CS Discoveries Teacher
+
+  .pagination
+    #ai-carousel-pagination
+
+%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
+%script{:src=>'/js/jquery.touchSwipe.min.js'}
+:javascript
+  $(document).ready(function() {
+
+    var id = '#ai-carousel';
+    // Define the carousel using the ID.
+    $(id + ' .slides').carouFredSel({
+      items : 1,
+      auto  : false,
+      responsive : true,
+      pagination : '#ai-carousel-pagination',
+      swipe	: {
+        onTouch : true,
+        onMouse : false
+      },
+    });
+  });
