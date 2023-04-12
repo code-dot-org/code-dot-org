@@ -134,9 +134,16 @@ class LessonProgress extends Component {
     );
   }
 
+  // When the user clicks on a level bubble where we support changing level
+  // without reloading the page.  For now, it means the prior level and the
+  // new level both have an app of type "music", and they are obviously in
+  // the same lesson.
   onLevelChanged(levelId, levelUrl) {
-    window.history.pushState({}, '', levelUrl + window.location.search);
+    // Update the redux store.
     this.props.onLevelChanged(levelId);
+
+    // Update the browser.
+    window.history.pushState({}, '', levelUrl + window.location.search);
     this.props.setWindowTitle();
   }
 

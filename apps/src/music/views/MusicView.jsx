@@ -206,10 +206,12 @@ class UnconnectedMusicView extends React.Component {
     this.progressManager?.next();
     this.handlePanelChange();
 
-    // Tell the external system about the new level.
-    const progressState = this.progressManager.getCurrentState();
-    const currentPanel = progressState.step;
-    this.props.onChangeLevel(currentPanel);
+    // Tell the external system (if there is one) about the new level.
+    if (this.props.onChangeLevel) {
+      const progressState = this.progressManager.getCurrentState();
+      const currentPanel = progressState.step;
+      this.props.onChangeLevel(currentPanel);
+    }
   };
 
   // When the external system lets us know that the user changed level.
@@ -471,8 +473,6 @@ class UnconnectedMusicView extends React.Component {
       AppConfig.getValue('show-video') !== 'false' && this.state.showingVideo;
 
     const {timelineAtTop, showInstructions, instructionsPosition} = this.props;
-
-    console.log('current level index:', this.props.currentLevel);
 
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
