@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import MusicLabView from '@cdo/apps/music/views/MusicView';
 
-$(document).ready(function() {
+$(document).ready(function () {
   const channelId = document.querySelector('script[data-channelid]').dataset
     .channelid;
 

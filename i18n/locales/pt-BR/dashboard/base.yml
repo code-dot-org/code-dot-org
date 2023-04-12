@@ -1209,6 +1209,13 @@ pt:
     no_teacher_email:
       body_markdown: 'Sua conta não possui um endereço de email. Por favor visite as configurações de sua conta (%{user_registration}) para adicionar o seu endereço de email antes de completar este formulário.'
   courses_category: 'Cursos Completos'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      hello_world: 'Olá Mundo'
+      sports: 'Esportes'
+      csf: 'Conceitos básicos da CC'
+      csc: 'Conexões de CC'
   cookie_banner:
     message: 'Ao continuar a navegar em nosso site ou ao clicar em "Eu concordo", você concorda com o armazenamento de cookies em seu computador ou dispositivo.'
     more_information: "Consulte a Política de Privacidade do Code.org."

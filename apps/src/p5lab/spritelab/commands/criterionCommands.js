@@ -85,8 +85,9 @@ export const commands = {
       : Object.values(currentVariables);
     for (let i = 0; i < spriteIds.length; i++) {
       values.forEach(value => {
-        const speechText = this.getLastSpeechBubbleForSpriteId(spriteIds[i])
-          ?.text;
+        const speechText = this.getLastSpeechBubbleForSpriteId(
+          spriteIds[i]
+        )?.text;
         const type = typeof speechText;
         // We only want to set result to true here, so that any positive test
         // allows the overall criterion to pass.
@@ -215,9 +216,8 @@ export const commands = {
     const spriteIds = this.getSpriteIdsInUse();
     let result = false;
     for (let i = 0; i < spriteIds.length; i++) {
-      const currentCostume = this.nativeSpriteMap[
-        spriteIds[i]
-      ].getAnimationLabel();
+      const currentCostume =
+        this.nativeSpriteMap[spriteIds[i]].getAnimationLabel();
       const previousCostume =
         this.previous.sprites === undefined
           ? currentCostume
@@ -239,9 +239,8 @@ export const commands = {
     let foundEventSpriteChange = false;
     let foundNoneventSpriteChange = false;
     for (let i = 0; i < spriteIds.length; i++) {
-      const currentCostume = this.nativeSpriteMap[
-        spriteIds[i]
-      ].getAnimationLabel();
+      const currentCostume =
+        this.nativeSpriteMap[spriteIds[i]].getAnimationLabel();
       const previousCostume =
         this.previous.sprites === undefined
           ? currentCostume

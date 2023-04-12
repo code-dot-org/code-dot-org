@@ -199,10 +199,7 @@ describe('SyncOmniAuthSectionControl', () => {
       expect(wrapper.find(BaseDialog).prop('isOpen')).to.equal(true);
       // Now that we're in a failure state, test that we stay
       // in it on click!
-      wrapper
-        .find(BaseDialog)
-        .find(Button)
-        .simulate('click');
+      wrapper.find(BaseDialog).find(Button).simulate('click');
       expect(wrapper.find(BaseDialog).prop('isOpen')).to.equal(false);
       expect(
         wrapper.find(SyncOmniAuthSectionButton).prop('buttonState')

@@ -48,3 +48,5 @@ Break down the lines of code inside the loop to see the main path of the robot. 
 You should end up with a hook-like shape. Keeping your pen on the paper, repeat these steps four times. You will end up with multiple squares on the paper, and thus arrive to the answer. When given a block of code, it is key to go through it line by line to understand what the robot is doing.
 
 MARKDOWN
+
+allow_multiple_attempts true

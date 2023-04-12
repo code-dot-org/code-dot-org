@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-29 01:46:58 UTC",
+    "serialized_at": "2023-04-08 13:50:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -50,9 +50,21 @@
       }
     },
     {
-      "key": "lessonGroup-4",
+      "key": "lessonGroup-5",
       "user_facing": true,
       "position": 3,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 4,
       "properties": {
         "display_name": "Alternate Lessons",
         "description": "This section contains the one-day version of the Personal Narrative Project."
@@ -73,7 +85,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**What if the data I need to store is best represented as a table?**\n\nIn this lesson, students are introduced to two-dimensional (2D) arrays and explore how these can be used to store tables of data. Students discover that 2D arrays are arrays of arrays and identify similarities and differences between the structure and functionality of 1D and 2D arrays. They learn how to declare and initialize 2D arrays using the `new` keyword and initializer lists and practice creating 2D arrays to store data.",
-        "preparation": "* Preview the *Two-Dimensional (2D) Arrays* video\n* Print copies of the Unit 5 Guide (one for each student)\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview the *Two-Dimensional (2D) Arrays* video\n* Print copies of the Unit 5 Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-1-two-dimensional-2d-arrays/37910) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What if the data I need to store is best represented as a table?**\n\nIn this lesson, you are introduced to two-dimensional (2D) arrays and explore how these can be used to store tables of data. You discover that 2D arrays are arrays of arrays and identify similarities and differences between the structure and functionality of 1D and 2D arrays. You learn how to declare and initialize 2D arrays using the `new` keyword and initializer lists and practice creating 2D arrays to store data."
       },
       "seeding_key": {
@@ -91,7 +103,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**How can I access and modify rows and elements in a 2D array?**\n\nStudents now know how to declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list. In this lesson, students explore how to access and modify individual rows and elements in a 2D array and identify similarities and differences between accessing elements in a 2D array and a 1D array. They then practice accessing and modifying rows and elements in a 2D array.",
-        "preparation": "* Preview the *Working with 2D Array Elements* video\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview the *Working with 2D Array Elements* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-2-2d-array-elements/37911) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I access and modify rows and elements in a 2D array?**\n\nYou now know how to declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list. In this lesson, you explore how to access and modify individual rows and elements in a 2D array and identify similarities and differences between accessing elements in a 2D array and a 1D array. You then practice accessing and modifying rows and elements in a 2D array."
       },
       "seeding_key": {
@@ -109,7 +121,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**How can I traverse a 2D array?**\n\nStudents have previously learned how to traverse a 1D array and use nested loops. In this lesson, students build on this knowledge to learn how to traverse a two-dimensional (2D) array in row-major order. Students explore how elements can be accessed in a 2D array using nested loops and consider the types of questions they could ask or problems they could solve with this approach. They trace code segments that traverse a 2D array in row-major order, then practice writing nested loops to traverse a 2D array and access its elements.",
-        "preparation": "* Preview the *Row-Major Traversal* video\n* Print copies of the Tracing 2D Array Traversals handout (one for each student)\n* Print copies of the Writing Algorithms with 2D Arrays handout (one for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview the *Row-Major Traversal* video\n* Print copies of the Tracing 2D Array Traversals handout (one for each student)\n* Print copies of the Writing Algorithms with 2D Arrays handout (one for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-3-row-major-traversal/37912) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I traverse a 2D array?**\n\nYou have previously learned how to traverse a 1D array and use nested loops. In this lesson, you build on this knowledge to learn how to traverse a two-dimensional (2D) array in row-major order. You explore how elements can be accessed in a 2D array using nested loops and consider the types of questions you could ask or problems you could solve with this approach. You trace code segments that traverse a 2D array in row-major order, then practice writing nested loops to traverse a 2D array and access its elements."
       },
       "seeding_key": {
@@ -127,7 +139,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How do I access elements in a 2D array by column?**\n\nStudents learn to use nested loops to traverse a 2D array in column-major order and differentiate between column-major and row-major traversals. Students identify scenarios that are best for traversing in row-major and column-major order and develop an algorithm to traverse a 2D array in column-major order to find the sum of all values in each column of the array. Students then practice applying standard 1D array algorithms to 2D arrays to find information and perform calculations.",
-        "preparation": "* Preview the *Column-Major Traversal* video\n* Print copies of the Tracing Column-Major Traversals handout (one for each student)\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview the *Column-Major Traversal* video\n* Print copies of the Tracing Column-Major Traversals handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-4-column-major-traversal/37913) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How do I access elements in a 2D array by column?**\n\nYou learned to use nested loops to traverse a 2D array in row-major order and discovered that standard 1D array algorithms can be applied to 2D arrays. In this lesson, you learn to use nested loops to traverse a 2D array in column-major order and differentiate between column-major and row-major traversals. You identify scenarios that are best for traversing in row-major and column-major order and develop an algorithm to traverse a 2D array in column-major order to find the sum of all values in each column of the array. You then practice applying standard 1D array algorithms to 2D arrays to find information and perform calculations."
       },
       "seeding_key": {
@@ -145,7 +157,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "**How can I use enhanced `for` loops to traverse a 2D array?**\n\nStudents revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, students discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. Students explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. Students then practice using enhanced `for` loops with 2D arrays.",
-        "preparation": "* Preview the *Enhanced For Loops and 2D Arrays* video\n* Print copies of the Enhanced For Loops Anticipation Guide (one for each student)\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview the *Enhanced For Loops and 2D Arrays* video\n* Print copies of the Enhanced For Loops Anticipation Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-5-enhanced-for-loops/37914) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use enhanced `for` loops to traverse a 2D array?**\n\nYou used enhanced `for` loops with 1D arrays to access each element from first to last. In this lesson, you revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, you discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. You explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. You then practice using enhanced `for` loops with 2D arrays."
       },
       "seeding_key": {
@@ -163,7 +175,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How can I create image filters using The Theater?**\n\nStudents apply their knowledge of 2D arrays and object-oriented programming to create image filters using The Theater. Students learn how images are made up of pixels and that pixels consist of red, green, and blue color values and explore the `Image` and `Pixel` classes. Students write pseudocode to create an image filter that sets a specific color value to zero and then implement their algorithm in Java.",
-        "preparation": "* Preview the *Images and Pixels* video\n* Print copies of the Creating Image Filters handout (one for each student)\n* (Optional) Cut out the manipulatives from the Creating Image Filters handout\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview the *Images and Pixels* video\n* Print copies of the Creating Image Filters handout (one for each student)\n* (Optional) Cut out the manipulatives from the Creating Image Filters handout\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-6-images-in-the-theater/37915) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I create image filters using The Theater?**\n\nYou may have used or seen image filters in various social media apps or photo editing programs. In this lesson, you apply your knowledge of 2D arrays and object-oriented programming to create image filters using The Theater. You learn how images are made up of pixels and that pixels consist of red, green, and blue color values and explore the `Image` and `Pixel` classes. You write pseudocode to create an image filter that sets a specific color value to zero and then implement your algorithm in Java."
       },
       "seeding_key": {
@@ -181,7 +193,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "**How can I use what I know about object-oriented programming and 2D arrays to plan and implement algorithms?**\n\nIn this lesson, students apply what they have learned so far to plan and implement standard algorithms to search or modify a two-dimensional (2D) array. They learn about the `indexOf()` method in the `String` class and how it can be used to check if a specific character or `String` appears in a `String` object and explore algorithms using the `indexOf()` method. Students then work with a partner and use manipulatives to plan and implement an algorithm to search or modify elements in a 2D array.",
-        "preparation": "* Print copies of the Writing Algorithms with 2D Arrays handout (one for each student)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the Writing Algorithms with 2D Arrays handout (one for each student)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-7-2d-array-algorithms/37916) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use what I know about object-oriented programming and 2D arrays to plan and implement algorithms?**\n\nIn this lesson, you apply what you have learned so far to plan and implement standard algorithms to search or modify a two-dimensional (2D) array. You learn about the `indexOf()` method in the `String` class and how it can be used to check if a specific character or `String` appears in a `String` object and explore algorithms using the `indexOf()` method. You then work with a partner and use manipulatives to plan and implement an algorithm to search or modify elements in a 2D array."
       },
       "seeding_key": {
@@ -199,7 +211,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**How can I modify standard algorithms to create image filters?**\n\nStudents practice working with two-dimensional (2D) arrays and modifying standard algorithms to create new image filters using The Theater. Students explore an example of a new image filter and then write pseudocode to create a grayscale image filter. Students implement their algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array.",
-        "preparation": "* Print copies of the Grayscale Images handout (one for each student)\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the Grayscale Images handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-8-modifying-images/37917) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I modify standard algorithms to create image filters?**\n\nIn this lesson, you practice working with two-dimensional (2D) arrays and modifying standard algorithms to create new image filters using The Theater. You explore an example of a new image filter and then write pseudocode to create a grayscale image filter. You implement your algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array."
       },
       "seeding_key": {
@@ -217,7 +229,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**What are the beneficial and harmful impacts of programs?**\n\nIn this lesson, students explore the beneficial and harmful impacts of programs by analyzing and discussing real-world applications of image manipulation, such as deep fakes. Students look at examples of deep fakes and realize the difficulty in identifying the difference between real and manipulated images. After considering the beneficial and harmful impacts of deep fakes, students explore some common image manipulation algorithms used to detect objects in an image or replace parts of an image with a different image.",
-        "preparation": "* Preview the *This is Not Morgan Freeman* video\n* Print copies of the Unit 5 Study Guide (one for each student)\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview the *This is Not Morgan Freeman* video\n* Print copies of the Unit 5 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-9-impacts-of-programs/37918) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What are the beneficial and harmful impacts of programs?**\n\nIn this lesson, you explore the beneficial and harmful impacts of programs by analyzing and discussing real-world applications of image manipulation, such as deep fakes. You look at examples of deep fakes and realize the difficulty in identifying the difference between real and manipulated images. After considering the beneficial and harmful impacts of deep fakes, you explore some common image manipulation algorithms used to detect objects in an image or replace parts of an image with a different image."
       },
       "seeding_key": {
@@ -234,8 +246,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "assessment": true,
         "overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, students use the skills they have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. Students choose the topic for their personal narrative and the image filters or manipulation techniques they want to use. After brainstorming and planning, students develop their programs to create their personal narrative collage or animation.",
-        "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-personal-narrative-project/36348/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-10-personal-narrative-project/37919) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, you use the skills you have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. You choose the topic for your personal narrative and the image filters or manipulation techniques you want to use. After brainstorming and planning, you develop your program to create your personal narrative collage or animation."
       },
       "seeding_key": {
@@ -253,7 +266,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**How will I use what I know about 2D arrays and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock 2D Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
-        "preparation": "* Print copies of the GrayscaleImage FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the GrayscaleImage FRQ Scoring Guidelines (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-frq-practice/36347/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the GrayscaleImage FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the GrayscaleImage FRQ Scoring Guidelines (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-11-grayscaleimage-frq/37920) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I use what I know about 2D arrays and standard algorithms to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock 2D Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
       },
       "seeding_key": {
@@ -272,7 +285,7 @@
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
-        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-12-unit-5-assessment/37921) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Congratulations, you completed Unit 5! Assess your progress through the Unit 5 Assessment."
       },
       "seeding_key": {
@@ -282,15 +295,31 @@
       }
     },
     {
-      "key": "lesson-13",
-      "name": "Personal Narrative Project [1-Day Version]",
+      "key": "lesson-14",
+      "name": "Unit 5 Survey",
       "absolute_position": 13,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 13,
       "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Personal Narrative Project [1-Day Version]",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+        "assessment": true,
         "overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, students use the skills they have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. Students choose the topic for their personal narrative and the image filters or manipulation techniques they want to use. After brainstorming and planning, students develop their programs to create their personal narrative collage or animation.",
-        "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-personal-narrative-project/36348/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-10-personal-narrative-project/37919) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, you use the skills you have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. You choose the topic for your personal narrative and the image filters or manipulation techniques you want to use. After brainstorming and planning, you develop your program to create your personal narrative collage or animation."
       },
       "seeding_key": {
@@ -800,6 +829,18 @@
         "lesson_activity.key": "dc08eb9a-a305-499d-9916-011cabd95d12",
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "42ae0055-aad4-4189-8a7c-bce49ecd79eb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "42ae0055-aad4-4189-8a7c-bce49ecd79eb",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa5-2023"
       }
     },
@@ -2796,6 +2837,7 @@
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 through 5. Students complete a Check for Understanding, then continue to Level 3 to implement their algorithm. On Levels 4 and 5, students complete a choice level to create an image filter.",
+        "progression_name": "Practice: Image Filters",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -3121,7 +3163,7 @@
       "key": "4eb19ac6-5622-47b0-bfa8-0dac5d2e0241",
       "position": 1,
       "properties": {
-        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including choosing and uploading images and creating a new image filter or image manipulation algorithm. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Abstract Data Art Project 1-Day Lesson Plan**](https://studio.code.org/s/csa5-2023/lessons/13). While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including choosing and uploading images and creating a new image filter or image manipulation algorithm. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Abstract Data Art Project 1-Day Lesson Plan**](https://studio.code.org/s/csa5-2023/lessons/14). While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
       },
       "seeding_key": {
         "activity_section.key": "4eb19ac6-5622-47b0-bfa8-0dac5d2e0241",
@@ -3224,7 +3266,8 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Personal Narrative Good Project.",
         "duration": "15",
-        "name": "Development"
+        "name": "Development",
+        "progression_name": "Personal Narrative Project"
       },
       "seeding_key": {
         "activity_section.key": "fea2ec89-5d9f-4de2-9769-c82126182c57",
@@ -3752,7 +3795,7 @@
       "key": "fa838400-394b-4237-aa30-3bccc3ecc248",
       "position": 6,
       "properties": {
-        "description": "**Do This:** Explain the potential solution and scoring guidelines:\n* Implementation for `countBlackPixels()` method (Part (a))\n* Implementation for `lightenImage()` method (Part (b))"
+        "description": "**Do This:** Explain the potential solution and scoring guidelines:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `countBlackPixels()` access all entries in `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `countBlackPixels()` compares an element in the array with `BLACK` or with `0` during traversal\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `countBlackPixels()` initializes and increments a counter\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `countBlackPixels()` returns the correct count of the number of black pixels in `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()` accesses all necessary elements in at least one row or one column of `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()` accesses all entries in `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()` increases the value at index `[row][col]` by the value found at index `[row + 2][col + 2]`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()` modifies all appropriate elements of `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()`assigns `WHITE` or `255` to elements of `pixels` that would otherwise have a value greater than `WHITE`"
       },
       "seeding_key": {
         "activity_section.key": "fa838400-394b-4237-aa30-3bccc3ecc248",
@@ -3838,6 +3881,17 @@
       }
     },
     {
+      "key": "91f545d8-9395-4868-89c9-0433b3736115",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit 5 Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "91f545d8-9395-4868-89c9-0433b3736115",
+        "lesson_activity.key": "42ae0055-aad4-4189-8a7c-bce49ecd79eb"
+      }
+    },
+    {
       "key": "a7fb7960-8762-4988-ad4b-4db772cf49c7",
       "position": 1,
       "properties": {
@@ -3886,7 +3940,8 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Personal Narrative Good Project.",
         "duration": "20",
-        "name": "Development"
+        "name": "Development",
+        "progression_name": "Personal Narrative Project"
       },
       "seeding_key": {
         "activity_section.key": "749a02be-2608-4aa5-b4db-957f3acc283b",
@@ -4997,14 +5052,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U5L8-L2_2023"
+          "CSA U5L7-L2_2023"
         ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U5L8-L2_2023"
+          "CSA U5L7-L2_2023"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5012,7 +5067,7 @@
         "activity_section.key": "be8d31f1-dba8-463d-85f2-e40042aa18b0"
       },
       "level_keys": [
-        "CSA U5L8-L2_2023"
+        "CSA U5L7-L2_2023"
       ]
     },
     {
@@ -5022,14 +5077,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U5L8-L3_2023"
+          "CSA U5L7-L3_2023"
         ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U5L8-L3_2023"
+          "CSA U5L7-L3_2023"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5037,7 +5092,7 @@
         "activity_section.key": "be8d31f1-dba8-463d-85f2-e40042aa18b0"
       },
       "level_keys": [
-        "CSA U5L8-L3_2023"
+        "CSA U5L7-L3_2023"
       ]
     },
     {
@@ -5047,14 +5102,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U5L8-L4_2023"
+          "CSA U5L7-L4_2023"
         ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U5L8-L4_2023"
+          "CSA U5L7-L4_2023"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5062,7 +5117,7 @@
         "activity_section.key": "be8d31f1-dba8-463d-85f2-e40042aa18b0"
       },
       "level_keys": [
-        "CSA U5L8-L4_2023"
+        "CSA U5L7-L4_2023"
       ]
     },
     {
@@ -5192,6 +5247,106 @@
     },
     {
       "chapter": 50,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U5L8-L2_2023"
+        ],
+        "progression": "Practice: Image Filters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L8-L2_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      },
+      "level_keys": [
+        "CSA U5L8-L2_2023"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U5L8-L3_2023"
+        ],
+        "progression": "Practice: Image Filters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L8-L3_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      },
+      "level_keys": [
+        "CSA U5L8-L3_2023"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U5L8-L4_2023"
+        ],
+        "progression": "Practice: Image Filters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L8-L4_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      },
+      "level_keys": [
+        "CSA U5L8-L4_2023"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U5L8-L5_2023"
+        ],
+        "progression": "Practice: Image Filters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L8-L5_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      },
+      "level_keys": [
+        "CSA U5L8-L5_2023"
+      ]
+    },
+    {
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5216,7 +5371,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5241,7 +5396,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5266,7 +5421,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -5291,7 +5446,32 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 58,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U5 Personal Narrative Project_2023"
+        ],
+        "progression": "Personal Narrative Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5 Personal Narrative Project_2023"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023",
+        "activity_section.key": "fea2ec89-5d9f-4de2-9769-c82126182c57"
+      },
+      "level_keys": [
+        "CSA U5 Personal Narrative Project_2023"
+      ]
+    },
+    {
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5313,6 +5493,53 @@
       },
       "level_keys": [
         "CSA Unit 5 Assessment_2023"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 5 Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa5-2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa5-2023",
+        "activity_section.key": "91f545d8-9395-4868-89c9-0433b3736115"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csa5-2023"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U5 Personal Narrative Project 1-Day_2023"
+        ],
+        "progression": "Personal Narrative Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5 Personal Narrative Project 1-Day_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2023",
+        "activity_section.key": "749a02be-2608-4aa5-b4db-957f3acc283b"
+      },
+      "level_keys": [
+        "CSA U5 Personal Narrative Project 1-Day_2023"
       ]
     }
   ],
@@ -5811,9 +6038,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U5L8-L2_2023",
+        "level.key": "CSA U5L7-L2_2023",
         "script_level.level_keys": [
-          "CSA U5L8-L2_2023"
+          "CSA U5L7-L2_2023"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5823,9 +6050,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U5L8-L3_2023",
+        "level.key": "CSA U5L7-L3_2023",
         "script_level.level_keys": [
-          "CSA U5L8-L3_2023"
+          "CSA U5L7-L3_2023"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5835,9 +6062,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U5L8-L4_2023",
+        "level.key": "CSA U5L7-L4_2023",
         "script_level.level_keys": [
-          "CSA U5L8-L4_2023"
+          "CSA U5L7-L4_2023"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5907,6 +6134,54 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U5L8-L2_2023",
+        "script_level.level_keys": [
+          "CSA U5L8-L2_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U5L8-L3_2023",
+        "script_level.level_keys": [
+          "CSA U5L8-L3_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U5L8-L4_2023",
+        "script_level.level_keys": [
+          "CSA U5L8-L4_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U5L8-L5_2023",
+        "script_level.level_keys": [
+          "CSA U5L8-L5_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf234b07-e0bd-4725-9fec-8aa74ea639e0"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U5L9-L1_2023",
         "script_level.level_keys": [
           "CSA U5L9-L1_2023"
@@ -5955,6 +6230,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U5 Personal Narrative Project_2023",
+        "script_level.level_keys": [
+          "CSA U5 Personal Narrative Project_2023"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023",
+        "activity_section.key": "fea2ec89-5d9f-4de2-9769-c82126182c57"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Unit 5 Assessment_2023",
         "script_level.level_keys": [
           "CSA Unit 5 Assessment_2023"
@@ -5963,6 +6250,30 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa5-2023",
         "activity_section.key": "e659d8a5-512e-423f-8819-65df3768a163"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Student End of Unit Survey_csa5-2023",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa5-2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa5-2023",
+        "activity_section.key": "91f545d8-9395-4868-89c9-0433b3736115"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U5 Personal Narrative Project 1-Day_2023",
+        "script_level.level_keys": [
+          "CSA U5 Personal Narrative Project 1-Day_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2023",
+        "activity_section.key": "749a02be-2608-4aa5-b4db-957f3acc283b"
       }
     }
   ],
@@ -6196,6 +6507,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa5-2023/resources",
+      "key": "all_resources_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_5"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa5-2023/standards",
+      "key": "all_standards_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_5"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa5-2023/vocab",
+      "key": "all_vocabulary_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_5"
+      }
+    },
+    {
       "name": "Column-Major Traversal",
       "url": "https://docs.google.com/presentation/d/1ouaFfonE710Whme4LGVAqkV6eQ1FdkIe6GaSa-Dxqvs/edit?usp=sharing",
       "key": "column-major_traversal",
@@ -6354,6 +6698,19 @@
       },
       "seeding_key": {
         "resource.key": "impacts_of_programs"
+      }
+    },
+    {
+      "name": "Java Quick Reference",
+      "url": "https://drive.google.com/file/d/16EtSldvp1wgbS3M0tMOx2Y5rXkhfXHny/view?usp=share_link",
+      "key": "java_quick_reference_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "java_quick_reference_1"
       }
     },
     {
@@ -6648,6 +7005,18 @@
       }
     },
     {
+      "name": "Unit 5 Overview",
+      "url": "https://docs.google.com/document/d/1A22tMFqIWkq0445i0lKpueZYCu-6RKN9XeBkt5f7TM0/edit?usp=share_link",
+      "key": "unit_5_overview",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_overview"
+      }
+    },
+    {
       "name": "Unit 5 Study Guide",
       "url": "https://docs.google.com/document/d/1XsASO5aI0HzNApY9_21rgkgdi48SVzjbFUZiv9LI_Fw/edit?usp=sharing",
       "key": "unit_5_study_guide",
@@ -6776,6 +7145,12 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "resource.key": "grayscaleimage_frq_scoring_guidelines"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "java_quick_reference_1"
       }
     },
     {
@@ -7122,7 +7497,42 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_5",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_5",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_5",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_guide",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_overview",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_study_guide",
+        "script.name": "csa5-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 

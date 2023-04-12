@@ -223,55 +223,56 @@ class SectionAssessments extends Component {
         {!isLoading && assessmentList.length > 0 && (
           <div style={styles.tableContent}>
             {/* Assessments */}
-            {!isCurrentAssessmentSurvey && !isCurrentAssessmentFeedbackOption && (
-              <div>
-                <div style={{...h3Style, ...styles.header}}>
-                  {i18n.selectStudent()}
+            {!isCurrentAssessmentSurvey &&
+              !isCurrentAssessmentFeedbackOption && (
+                <div>
+                  <div style={{...h3Style, ...styles.header}}>
+                    {i18n.selectStudent()}
+                  </div>
+                  <StudentSelector
+                    studentList={studentList}
+                    studentId={studentId}
+                    onChange={this.onSelectStudent}
+                  />
+                  {totalStudentSubmissions > 0 && (
+                    <div style={styles.download}>
+                      <CSVLink
+                        filename="assessments.csv"
+                        data={exportableData}
+                        headers={CSV_ASSESSMENT_HEADERS}
+                        onClick={() => this.onClickDownload('assessments')}
+                      >
+                        <div>{i18n.downloadAssessmentCSV()}</div>
+                      </CSVLink>
+                    </div>
+                  )}
+                  {totalStudentSubmissions <= 0 && (
+                    <div>{i18n.emptyAssessmentSubmissions()}</div>
+                  )}
+                  <SubmissionStatusAssessmentsContainer
+                    onClickDownload={() =>
+                      this.onClickDownload('submission_stats')
+                    }
+                  />
+                  {totalStudentSubmissions > 0 && (
+                    <div>
+                      <MultipleChoiceAssessmentsOverviewContainer
+                        openDialog={this.showMulitpleChoiceDetailDialog}
+                      />
+                      <MultipleChoiceByStudentContainer />
+                      <MatchAssessmentsOverviewContainer
+                        openDialog={this.showMatchDetailDialog}
+                      />
+                      <MatchByStudentContainer
+                        openDialog={this.showMatchDetailDialog}
+                      />
+                      <FreeResponsesAssessmentsContainer
+                        openDialog={this.showFreeResponseDetailDialog}
+                      />
+                    </div>
+                  )}
                 </div>
-                <StudentSelector
-                  studentList={studentList}
-                  studentId={studentId}
-                  onChange={this.onSelectStudent}
-                />
-                {totalStudentSubmissions > 0 && (
-                  <div style={styles.download}>
-                    <CSVLink
-                      filename="assessments.csv"
-                      data={exportableData}
-                      headers={CSV_ASSESSMENT_HEADERS}
-                      onClick={() => this.onClickDownload('assessments')}
-                    >
-                      <div>{i18n.downloadAssessmentCSV()}</div>
-                    </CSVLink>
-                  </div>
-                )}
-                {totalStudentSubmissions <= 0 && (
-                  <div>{i18n.emptyAssessmentSubmissions()}</div>
-                )}
-                <SubmissionStatusAssessmentsContainer
-                  onClickDownload={() =>
-                    this.onClickDownload('submission_stats')
-                  }
-                />
-                {totalStudentSubmissions > 0 && (
-                  <div>
-                    <MultipleChoiceAssessmentsOverviewContainer
-                      openDialog={this.showMulitpleChoiceDetailDialog}
-                    />
-                    <MultipleChoiceByStudentContainer />
-                    <MatchAssessmentsOverviewContainer
-                      openDialog={this.showMatchDetailDialog}
-                    />
-                    <MatchByStudentContainer
-                      openDialog={this.showMatchDetailDialog}
-                    />
-                    <FreeResponsesAssessmentsContainer
-                      openDialog={this.showFreeResponseDetailDialog}
-                    />
-                  </div>
-                )}
-              </div>
-            )}
+              )}
             {/* Feedback Download */}
             {isCurrentAssessmentFeedbackOption && (
               <FeedbackDownload

@@ -136,6 +136,9 @@ ca:
             divertits!
         allthethings:
           title: Totes les coses!
+          lessons:
+            lesson-49:
+              name: Música
         asUnplugged:
           description_audience: Edats 6-13
         afterschool1:
@@ -1829,6 +1832,10 @@ ca:
               display_name: Bucles
             lessonGroup-5:
               display_name: Projecte
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Avaluacions
         tess-testing-problem-solving-2023:
           title: Resolució de problemes
         testing-focus-on-creativity1:
@@ -1981,3 +1988,5 @@ ca:
             dissenyar i crear un joc o un dibuix per compartir-lo amb els amics i
             la família.
           description_audience: De 8 a 12 anys
+        microbit-2023:
+          title: microbit

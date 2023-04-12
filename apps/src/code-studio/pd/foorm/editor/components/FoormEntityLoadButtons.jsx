@@ -130,14 +130,10 @@ class FoormEntityLoadButtons extends React.Component {
 
 export const UnconnectedFoormEntityLoadButtons = FoormEntityLoadButtons;
 
-export default connect(
-  null,
-  dispatch => ({
-    setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
-    setSaveError: saveError => dispatch(setSaveError(saveError)),
-    setHasJSONError: hasJSONError => dispatch(setHasJSONError(hasJSONError)),
-    setHasLintError: hasLintError => dispatch(setHasLintError(hasLintError)),
-    setLastSavedQuestions: questions =>
-      dispatch(setLastSavedQuestions(questions))
-  })
-)(FoormEntityLoadButtons);
+export default connect(null, dispatch => ({
+  setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
+  setSaveError: saveError => dispatch(setSaveError(saveError)),
+  setHasJSONError: hasJSONError => dispatch(setHasJSONError(hasJSONError)),
+  setHasLintError: hasLintError => dispatch(setHasLintError(hasLintError)),
+  setLastSavedQuestions: questions => dispatch(setLastSavedQuestions(questions))
+}))(FoormEntityLoadButtons);

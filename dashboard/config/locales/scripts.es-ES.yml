@@ -384,6 +384,9 @@ es:
           student_description: Todos los tipos de niveles para las pruebas de la Interfaz
             de Usuario
           name: todo lo que hay
+          lessons:
+            lesson-49:
+              name: Música
         algebraPD2b:
           title: Informática en Álgebra PD
           description: 'Fase 2 en línea: Estudio de Verano Semipresencial'
@@ -10445,7 +10448,7 @@ es:
 
             ### Controles de progreso personal del Aula AP
 
-            Para asignar preguntas del banco de preguntas de AP Classroom que se ajusten a esta unidad, cree un cuestionario personalizado en AP Classroom buscando en el banco de preguntas los enunciados de los conocimientos esenciales en la página [\*\*Estándares\*\*](https://studio.code.org/s/csa6-2022/standards) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [\*\*AP Central\*\*](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+            Para asignar preguntas del banco de preguntas de AP Classroom que se ajusten a esta unidad, cree un cuestionario personalizado en AP Classroom buscando en el banco de preguntas los enunciados de los conocimientos esenciales en la página [\*\*Estándares\*\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=6) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [**AP Central**][1].
 
             Las siguientes comprobaciones de progreso personal en el Aula AP se pueden asignar durante la semana de "Demuestra lo que sabes":
 
@@ -11060,6 +11063,10 @@ es:
           lessons:
             lesson-1:
               name: Partículas
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Evaluaciones
         csp-playground:
           title: CSP Playground
           description_audience: Escritores de planes de estudio
@@ -11478,3 +11485,561 @@ es:
             desarrollarás tus propios proyectos de aprendizaje automático en torno
             a datos del mundo real. La unidad culmina con el diseño de tu propia aplicación
             de aprendizaje automático para resolver un problema de relevancia personal.
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: El proceso de resolución de problemas'
+            lessonGroup-3:
+              display_name: Lecciones Alternativas
+          student_description: Resolución de Problemas y Computación es una iniciación
+            altamente interactiva y colaborativa al campo de la informática, enmarcada
+            dentro de la búsqueda más amplia de la resolución de problemas. Practicarás
+            el uso de un proceso de resolución de problemas para abordar una serie
+            de rompecabezas, desafíos y escenarios del mundo real. A continuación,
+            aprenderás cómo los ordenadores introducen, emiten, almacenan y procesan
+            información para ayudar a los humanos a resolver problemas.  La unidad
+            concluye con un proyecto en el que diseñarás una aplicación que ayude
+            a resolver un problema de tu elección.
+        focus-on-creativity2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Creación de páginas Web'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Sitios Web Multipágina'
+          title: Desarrollo Web
+          student_description: En la Unidad 2, aprenderás cómo crear y compartir el
+            contenido en tus propias páginas web. Después de decidir qué contenido
+            deseas compartir con los demás, aprenderás a estructurar y diseñar tus
+            páginas mediante HTML y CSS. También practicarás valiosas habilidades
+            de programación, como depurar y comentar. Al final de la unidad, tendrás
+            un sitio web personal que podrás publicar en Internet.
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Imágenes y animaciones'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Desarrollo de juegos'
+          title: Animaciones Interactivas y Juegos
+          student_description: " En la Unidad 3, desarrollarás tu experiencia de programación
+            a medida que programes animaciones, arte interactivo y juegos en el Laboratorio
+            de juegos. La unidad comienza con formas simples y, a partir de los mismos
+            conceptos de programación y el proceso de diseño que usan los científicos
+            informáticos a diario, añade juegos más sofisticados basados en sprites.
+            En el proyecto final, desarrollarás un programa personalizado e interactivo."
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Entradas y Salidas'
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+          description_short: Aprende a programar con dispositivos físicos.
+          student_description: Esta unidad explora el papel de las plataformas de
+            hardware en la informática y cómo los diferentes sensores pueden proporcionar
+            una entrada y salida más eficaz que el tradicional teclado, ratón y monitor.
+            Utilizando el Laboratorio de Aplicaciones y el Circuit Playground de Adafruit,
+            desarrollarás programas que utilizan las mismas entradas y salidas de
+            hardware que se ven en los dispositivos inteligentes, observando cómo
+            un simple prototipo aproximado puede conducir a un producto terminado.
+            La unidad concluye con un reto de diseño para utilizar el Circuit Playground
+            como base para una innovación de su propio diseño.
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: El proceso de resolución de problemas'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Computadoras y resolución de problemas'
+            lessonGroup-4:
+              display_name: Lecciones Alternativas
+          student_description: Resolución de Problemas y Computación es una iniciación
+            altamente interactiva y colaborativa al campo de la informática, enmarcada
+            dentro de la búsqueda más amplia de la resolución de problemas. Practicarás
+            el uso de un proceso de resolución de problemas para abordar una serie
+            de rompecabezas, desafíos y escenarios del mundo real. A continuación,
+            aprenderás cómo los ordenadores introducen, emiten, almacenan y procesan
+            información para ayudar a los humanos a resolver problemas.  La unidad
+            concluye con un proyecto en el que diseñarás una aplicación que ayude
+            a resolver un problema de tu elección.
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representación de la información'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Resolución de problemas en los datos'
+          title: Datos y Sociedad
+          description_short: Aprende cómo las personas usan las computadoras para
+            resolver problemas de datos.
+          student_description: La Unidad 5 trata sobre la importancia de los datos
+            a la hora de resolver problemas y resalta cómo las computadoras pueden
+            ayudar en este proceso. El primer capítulo explora los diferentes sistemas
+            utilizados para representar información en una computadora, y los desafíos
+            y concesiones planteados al usarlos. En el segundo capítulo, aprenderá
+            cómo se utilizan las colecciones de datos para resolver problemas y cómo
+            las computadoras ayudan a automatizar los pasos de este proceso. Al final
+            del capítulo, se considera cómo se puede aplicar el proceso de resolución
+            de problemas de datos a un área de tu elección.
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Entradas y Salidas'
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+          description_short: Aprende a programar con dispositivos físicos.
+          student_description: Esta unidad explora el papel de las plataformas de
+            hardware en la informática y cómo los diferentes sensores pueden proporcionar
+            una entrada y salida más eficaz que el tradicional teclado, ratón y monitor.
+            Utilizando el Laboratorio de Aplicaciones y el Circuit Playground de Adafruit,
+            desarrollarás programas que utilizan las mismas entradas y salidas de
+            hardware que se ven en los dispositivos inteligentes, observando cómo
+            un simple prototipo aproximado puede conducir a un producto terminado.
+            La unidad concluye con un reto de diseño para utilizar el Circuit Playground
+            como base para una innovación de su propio diseño.
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: El proceso de resolución de problemas'
+            lessonGroup-3:
+              display_name: Lecciones Alternativas
+          student_description: Resolución de Problemas y Computación es una iniciación
+            altamente interactiva y colaborativa al campo de la informática, enmarcada
+            dentro de la búsqueda más amplia de la resolución de problemas. Practicarás
+            el uso de un proceso de resolución de problemas para abordar una serie
+            de rompecabezas, desafíos y escenarios del mundo real. A continuación,
+            aprenderás cómo los ordenadores introducen, emiten, almacenan y procesan
+            información para ayudar a los humanos a resolver problemas.  La unidad
+            concluye con un proyecto en el que diseñarás una aplicación que ayude
+            a resolver un problema de tu elección.
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representación de la información'
+          title: Datos y Sociedad
+          description_short: Aprende cómo las personas usan las computadoras para
+            resolver problemas de datos.
+          student_description: La Unidad 5 trata sobre la importancia de los datos
+            a la hora de resolver problemas y resalta cómo las computadoras pueden
+            ayudar en este proceso. El primer capítulo explora los diferentes sistemas
+            utilizados para representar información en una computadora, y los desafíos
+            y concesiones planteados al usarlos. En el segundo capítulo, aprenderá
+            cómo se utilizan las colecciones de datos para resolver problemas y cómo
+            las computadoras ayudan a automatizar los pasos de este proceso. Al final
+            del capítulo, se considera cómo se puede aplicar el proceso de resolución
+            de problemas de datos a un área de tu elección.
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representación de la información'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Resolución de problemas en los datos'
+          title: Datos y Sociedad
+          description_short: Aprende cómo las personas usan las computadoras para
+            resolver problemas de datos.
+          student_description: La Unidad 5 trata sobre la importancia de los datos
+            a la hora de resolver problemas y resalta cómo las computadoras pueden
+            ayudar en este proceso. El primer capítulo explora los diferentes sistemas
+            utilizados para representar información en una computadora, y los desafíos
+            y concesiones planteados al usarlos. En el segundo capítulo, aprenderá
+            cómo se utilizan las colecciones de datos para resolver problemas y cómo
+            las computadoras ayudan a automatizar los pasos de este proceso. Al final
+            del capítulo, se considera cómo se puede aplicar el proceso de resolución
+            de problemas de datos a un área de tu elección.
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introducción al Laboratorio de aplicaciones
+            lessonGroup-3:
+              display_name: Capítulo 1
+            lessonGroup-4:
+              display_name: Capítulo 2
+          title: Inteligencia Artificial y Aprendizaje Automático
+          student_description: La Unidad 7 es una introducción práctica al desarrollo
+            de un modelo de aprendizaje automático con datos tabulares. Explorarás
+            cómo los ordenadores aprenden de los datos para tomar decisiones, y luego
+            desarrollarás tus propios proyectos de aprendizaje automático en torno
+            a datos del mundo real. La unidad culmina con el diseño de tu propia aplicación
+            de aprendizaje automático para resolver un problema de relevancia personal.
+        k5-onlinepd-2023:
+          lesson_groups:
+            Implementing and Teaching CS:
+              display_name: 'Parte I: Enseñanza y Aplicación de la Informática'
+            k5_basic_concepts_1:
+              display_name: 'Parte II: Conceptos de los Cursos A - F'
+            k5_next_steps_1:
+              display_name: 'Parte III: Próximos Pasos'
+          title: Enseñando los Fundamentos de la Informática ('21-'22)
+          description: "¡Bienvenido al curso en línea gratuito para educadores, a
+            su propio ritmo, de Code.org para iniciarse en los Conceptos Básicos de
+            Informática!"
+          student_description: "¡Bienvenido al curso gratuito en línea  para educadores
+            de Code.org sobre Conceptos Básicos de Informática!"
+          description_short: "¡Bienvenido al curso en línea gratuito para educadores,
+            a su propio ritmo, de Code.org para iniciarse en los Conceptos Básicos
+            de Informática!"
+          description_audience: "¡Bienvenido al curso en línea gratuito para educadores,
+            a su propio ritmo, de Code.org para iniciarse en los Conceptos Básicos
+            de Informática!"
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: El proceso de resolución de problemas'
+            lessonGroup-3:
+              display_name: Lecciones Alternativas
+          student_description: Resolución de Problemas y Computación es una iniciación
+            altamente interactiva y colaborativa al campo de la informática, enmarcada
+            dentro de la búsqueda más amplia de la resolución de problemas. Practicarás
+            el uso de un proceso de resolución de problemas para abordar una serie
+            de rompecabezas, desafíos y escenarios del mundo real. A continuación,
+            aprenderás cómo los ordenadores introducen, emiten, almacenan y procesan
+            información para ayudar a los humanos a resolver problemas.  La unidad
+            concluye con un proyecto en el que diseñarás una aplicación que ayude
+            a resolver un problema de tu elección.
+        focus-on-design-with-purpose2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Creación de páginas Web'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Sitios Web Multipágina'
+          title: Desarrollo Web
+          student_description: En la Unidad 2, aprenderás cómo crear y compartir el
+            contenido en tus propias páginas web. Después de decidir qué contenido
+            deseas compartir con los demás, aprenderás a estructurar y diseñar tus
+            páginas mediante HTML y CSS. También practicarás valiosas habilidades
+            de programación, como depurar y comentar. Al final de la unidad, tendrás
+            un sitio web personal que podrás publicar en Internet.
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Diseño orientado al usuario'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Prototipos de aplicaciones'
+          student_description: La Unidad 4 introduce los impactos sociales más amplios
+            que tiene la computación. A través de una serie de desafíos de diseño,
+            aprenderás a comprender mejor las necesidades de los demás mientras desarrollas
+            una solución a un problema. La segunda mitad de la unidad consiste en
+            un proyecto de equipo iterativo, durante el cual los equipos tienen la
+            oportunidad de identificar una necesidad que les importa, crear prototipos
+            de soluciones tanto en papel como en el Laboratorio de aplicaciones, y
+            probar soluciones con usuarios reales para obtener comentarios y seguir
+            adelante.
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Entradas y Salidas'
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+          description_short: Aprende a programar con dispositivos físicos.
+          student_description: Esta unidad explora el papel de las plataformas de
+            hardware en la informática y cómo los diferentes sensores pueden proporcionar
+            una entrada y salida más eficaz que el tradicional teclado, ratón y monitor.
+            Utilizando el Laboratorio de Aplicaciones y el Circuit Playground de Adafruit,
+            desarrollarás programas que utilizan las mismas entradas y salidas de
+            hardware que se ven en los dispositivos inteligentes, observando cómo
+            un simple prototipo aproximado puede conducir a un producto terminado.
+            La unidad concluye con un reto de diseño para utilizar el Circuit Playground
+            como base para una innovación de su propio diseño.
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: El proceso de resolución de problemas'
+            lessonGroup-3:
+              display_name: Lecciones Alternativas
+          student_description: Resolución de Problemas y Computación es una iniciación
+            altamente interactiva y colaborativa al campo de la informática, enmarcada
+            dentro de la búsqueda más amplia de la resolución de problemas. Practicarás
+            el uso de un proceso de resolución de problemas para abordar una serie
+            de rompecabezas, desafíos y escenarios del mundo real. A continuación,
+            aprenderás cómo los ordenadores introducen, emiten, almacenan y procesan
+            información para ayudar a los humanos a resolver problemas.  La unidad
+            concluye con un proyecto en el que diseñarás una aplicación que ayude
+            a resolver un problema de tu elección.
+        focus-on-coding2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Creación de páginas Web'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Sitios Web Multipágina'
+          title: Desarrollo Web
+          student_description: En la Unidad 2, aprenderás cómo crear y compartir el
+            contenido en tus propias páginas web. Después de decidir qué contenido
+            deseas compartir con los demás, aprenderás a estructurar y diseñar tus
+            páginas mediante HTML y CSS. También practicarás valiosas habilidades
+            de programación, como depurar y comentar. Al final de la unidad, tendrás
+            un sitio web personal que podrás publicar en Internet.
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Imágenes y animaciones'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Desarrollo de juegos'
+          title: Animaciones Interactivas y Juegos
+          student_description: " En la Unidad 3, desarrollarás tu experiencia de programación
+            a medida que programes animaciones, arte interactivo y juegos en el Laboratorio
+            de juegos. La unidad comienza con formas simples y, a partir de los mismos
+            conceptos de programación y el proceso de diseño que usan los científicos
+            informáticos a diario, añade juegos más sofisticados basados en sprites.
+            En el proyecto final, desarrollarás un programa personalizado e interactivo."
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Entradas y Salidas'
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+          description_short: Aprende a programar con dispositivos físicos.
+          student_description: Esta unidad explora el papel de las plataformas de
+            hardware en la informática y cómo los diferentes sensores pueden proporcionar
+            una entrada y salida más eficaz que el tradicional teclado, ratón y monitor.
+            Utilizando el Laboratorio de Aplicaciones y el Circuit Playground de Adafruit,
+            desarrollarás programas que utilizan las mismas entradas y salidas de
+            hardware que se ven en los dispositivos inteligentes, observando cómo
+            un simple prototipo aproximado puede conducir a un producto terminado.
+            La unidad concluye con un reto de diseño para utilizar el Circuit Playground
+            como base para una innovación de su propio diseño.
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: El proceso de resolución de problemas'
+            lessonGroup-3:
+              display_name: Lecciones Alternativas
+          student_description: Resolución de Problemas y Computación es una iniciación
+            altamente interactiva y colaborativa al campo de la informática, enmarcada
+            dentro de la búsqueda más amplia de la resolución de problemas. Practicarás
+            el uso de un proceso de resolución de problemas para abordar una serie
+            de rompecabezas, desafíos y escenarios del mundo real. A continuación,
+            aprenderás cómo los ordenadores introducen, emiten, almacenan y procesan
+            información para ayudar a los humanos a resolver problemas.  La unidad
+            concluye con un proyecto en el que diseñarás una aplicación que ayude
+            a resolver un problema de tu elección.
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Diseño orientado al usuario'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Prototipos de aplicaciones'
+          student_description: La Unidad 4 introduce los impactos sociales más amplios
+            que tiene la computación. A través de una serie de desafíos de diseño,
+            aprenderás a comprender mejor las necesidades de los demás mientras desarrollas
+            una solución a un problema. La segunda mitad de la unidad consiste en
+            un proyecto de equipo iterativo, durante el cual los equipos tienen la
+            oportunidad de identificar una necesidad que les importa, crear prototipos
+            de soluciones tanto en papel como en el Laboratorio de aplicaciones, y
+            probar soluciones con usuarios reales para obtener comentarios y seguir
+            adelante.
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representación de la información'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Resolución de problemas en los datos'
+          title: Datos y Sociedad
+          description_short: Aprende cómo las personas usan las computadoras para
+            resolver problemas de datos.
+          student_description: La Unidad 5 trata sobre la importancia de los datos
+            a la hora de resolver problemas y resalta cómo las computadoras pueden
+            ayudar en este proceso. El primer capítulo explora los diferentes sistemas
+            utilizados para representar información en una computadora, y los desafíos
+            y concesiones planteados al usarlos. En el segundo capítulo, aprenderá
+            cómo se utilizan las colecciones de datos para resolver problemas y cómo
+            las computadoras ayudan a automatizar los pasos de este proceso. Al final
+            del capítulo, se considera cómo se puede aplicar el proceso de resolución
+            de problemas de datos a un área de tu elección.
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Introducción al Laboratorio de aplicaciones
+            lessonGroup-4:
+              display_name: Capítulo 2
+          title: Inteligencia Artificial y Aprendizaje Automático
+          student_description: La Unidad 7 es una introducción práctica al desarrollo
+            de un modelo de aprendizaje automático con datos tabulares. Explorarás
+            cómo los ordenadores aprenden de los datos para tomar decisiones, y luego
+            desarrollarás tus propios proyectos de aprendizaje automático en torno
+            a datos del mundo real. La unidad culmina con el diseño de tu propia aplicación
+            de aprendizaje automático para resolver un problema de relevancia personal.
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Entradas y Salidas'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+          student_description: Esta unidad explora el papel de las plataformas de
+            hardware en la informática y cómo los diferentes sensores pueden proporcionar
+            una entrada y salida más eficaz que el tradicional teclado, ratón y monitor.
+            Utilizando el Laboratorio de Aplicaciones y el Circuit Playground de Adafruit,
+            desarrollarás programas que utilizan las mismas entradas y salidas de
+            hardware que se ven en los dispositivos inteligentes, observando cómo
+            un simple prototipo aproximado puede conducir a un producto terminado.
+            La unidad concluye con un reto de diseño para utilizar el Circuit Playground
+            como base para una innovación de su propio diseño.
+          description_short: Aprende a programar con dispositivos físicos.
+        csa9-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Revisión y Práctica
+            lessonGroup-3:
+              display_name: Simulacros de Exámenes
+          description_short: Los estudiantes se preparan para el examen AP CSA practicando
+            estrategias para las preguntas de opción múltiple y de respuesta libre.
+          description: Esta unidad prepara a los estudiantes para el examen AP CSA
+            repasando los conceptos clave, practicando las preguntas de opción múltiple
+            y de respuesta libre, y reforzando las estrategias para realizar el examen.
+            Los estudiantes identifican los puntos fuertes y las áreas de mejora para
+            crear planes de estudio individualizados para enfocar su práctica y autoevaluar
+            su progreso.
+          student_description: Esta unidad te prepara para el examen AP CSA repasando
+            los conceptos clave, practicando las preguntas de opción múltiple y de
+            respuesta libre, y reforzando las estrategias para realizar el examen.
+            Identificarás los puntos fuertes y las áreas de mejora para crear planes
+            de estudio individualizados que te permitan enfocar tu práctica y autoevaluar
+            el progreso.
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas y salidas
+        vpl-csd-ci-1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Enseñanza de la Resolución de Problemas y la Informática
+          title: 'Módulo 1: Preparación para la Enseñanza de la Resolución de Problemas
+            y la Computación'
+          description: "Este módulo de aprendizaje profesional está diseñado para
+            ayudarte en la enseñanza de la unidad de Resolución de Problemas y Computación
+            de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-
+            \  Obtener una introducción a la Resolución de Problemas y Computación.\n-
+            \  Practicar los conceptos clave incluidos en la unidad.\n-   Explorar
+            los proyectos de fin de capítulo.\n\n**Tiempo sugerido:** 30 minutos"
+          student_description: "Este módulo de aprendizaje profesional está diseñado
+            para ayudarte en la enseñanza de la unidad de Resolución de Problemas
+            y Computación de Code.org. \n\n**En este módulo de aprendizaje profesional,
+            podrás:**\n\n-   Obtener una introducción a la Resolución de Problemas
+            y Computación.\n-   Practicar los conceptos clave incluidos en la unidad.\n-
+            \  Explorar los proyectos de fin de capítulo.\n\n**Tiempo sugerido:**
+            30 minutos"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Enseñando el Desarrollo Web
+          title: 'Módulo 2: Preparación para la Enseñanza del Desarrollo Web'
+          description: "Este módulo de aprendizaje profesional está diseñado para
+            ayudarte en la enseñanza de la unidad del Desarrollo Web de Code.org.
+            \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-   Obtener
+            una introducción al Desarrollo Web.\n-   Practicar los conceptos clave
+            incluidos en la unidad.\n-   Interactuar con el Laboratorio Web.\n-   Explorar
+            los proyectos de fin de capítulo.\n\n**Tiempo sugerido:** 90 minutos"
+          student_description: "Este módulo de aprendizaje profesional está diseñado
+            para ayudarte en la enseñanza de la unidad del Desarrollo Web de Code.org.
+            \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-   Obtener
+            una introducción al Desarrollo Web.\n-   Practicar los conceptos clave
+            incluidos en la unidad.\n-   Interactuar con el Laboratorio Web.\n-   Explorar
+            los proyectos de fin de capítulo.\n\n**Tiempo sugerido:** 90 minutos"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparación para la Enseñanza de Animaciones y Juegos
+                Interactivos
+          title: 'Módulo 3: Preparación para la Enseñanza de Animaciones y Juegos
+            Interactivos '
+          description: "Este módulo de aprendizaje profesional está diseñado para
+            ayudarte en la enseñanza de la unidad de Animaciones y Juegos Interactivos
+            de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-
+            \  Obtener una introducción a las Animaciones y Juegos Interactivos.\n-
+            \  Practicar los conceptos clave incluidos en la unidad.\n-   Interactuar
+            con el Laboratorio Web.\n-   Explorar los proyectos de fin de capítulo.\n\n**Tiempo
+            sugerido:** 120 minutos"
+          student_description: "Este módulo de aprendizaje profesional está diseñado
+            para ayudarte en la enseñanza de la unidad de Animaciones y Juegos Interactivos
+            de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-
+            \  Obtener una introducción a las Animaciones y Juegos Interactivos.\n-
+            \  Practicar los conceptos clave incluidos en la unidad.\n-   Interactuar
+            con el Laboratorio Web.\n-   Explorar los proyectos de fin de capítulo.\n\n**Tiempo
+            sugerido:** 120 minutos"
+        vpl-csd-ci-4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparación para la enseñanza del Proceso de Diseño
+          title: 'Módulo 4:  Preparación para la Enseñanza del Proceso de Diseño'
+          description: "Este módulo de aprendizaje profesional está diseñado para
+            ayudarte en la enseñanza de la unidad del Proceso de Diseño de Code.org.
+            \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-   Obtener
+            una introducción al Proceso de Diseño.\n-   Practicar los conceptos clave
+            incluidos en la unidad.\n-   Interactuar con el Laboratorio Web.\n-   Explorar
+            los proyectos de fin de capítulo.\n\n**Tiempo sugerido:** 90 minutos"
+          student_description: "Este módulo de aprendizaje profesional está diseñado
+            para ayudarte en la enseñanza de la unidad del Proceso de Diseño de Code.org.
+            \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-   Obtener
+            una introducción al Proceso de Diseño.\n-   Practicar los conceptos clave
+            incluidos en la unidad.\n-   Interactuar con el Laboratorio Web.\n-   Explorar
+            los proyectos de fin de capítulo.\n\n**Tiempo sugerido:** 90 minutos"
+        vpl-csd-ci-5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Enseñanza de Datos y Sociedad
+          title: 'Módulo 5: Preparación para la Enseñanza de los Datos y la Sociedad'
+          description: "Este módulo de aprendizaje profesional está diseñado para
+            ayudarte en la enseñanza de la unidad de los Datos y la Sociedad de Code.org.
+            \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-   Obtener
+            una introducción a los Datos y la Sociedad.\n-   Practicar los conceptos
+            clave incluidos en la unidad.\n-   Explorar los proyectos de fin de capítulo.\n\n**Tiempo
+            sugerido:** 90 minutos"
+          student_description: "Este módulo de aprendizaje profesional está diseñado
+            para ayudarte en la enseñanza de la unidad de los Datos y la Sociedad
+            de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-
+            \  Obtener una introducción a los Datos y la Sociedad.\n-   Practicar
+            los conceptos clave incluidos en la unidad.\n-   Explorar los proyectos
+            de fin de capítulo.\n\n**Tiempo sugerido:** 90 minutos"
+        vpl-csd-ci-7:
+          title: 'Módulo 7: Preparación para la Enseñanza de la Inteligencia Artificial
+            y el Aprendizaje Automático'
+          description: "Este módulo de aprendizaje profesional está diseñado para
+            ayudarte en la enseñanza de la unidad de la Inteligencia Artificial y
+            el Aprendizaje Automático de Code.org. \n\n**En este módulo de aprendizaje
+            profesional, podrás:**\n\n-   Obtener una introducción a la Inteligencia
+            Artificial y el Aprendizaje Automático.\n-   Practicar los conceptos clave
+            incluidos en la unidad.\n-   Interactuar con el Laboratorio de IA y el
+            Laboratorio de Apps.\n-   Explorar los proyectos de fin de capítulo.\n-
+            \  Hacer un plan aplicar la unidad con tus estudiantes.\n\n**Tiempo sugerido:**
+            120 minutos"
+          student_description: "Este módulo de aprendizaje profesional está diseñado
+            para ayudarte en la enseñanza de la unidad de la Inteligencia Artificial
+            y el Aprendizaje Automático de Code.org. \n\n**En este módulo de aprendizaje
+            profesional, podrás:**\n\n-   Obtener una introducción a la Inteligencia
+            Artificial y el Aprendizaje Automático.\n-   Practicar los conceptos clave
+            incluidos en la unidad.\n-   Interactuar con el Laboratorio de IA y el
+            Laboratorio de Apps.\n-   Explorar los proyectos de fin de capítulo.\n-
+            \  Hacer un plan aplicar la unidad con tus estudiantes.\n\n**Tiempo sugerido:**
+            120 minutos"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Entradas y Salidas'
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+          student_description: Esta unidad explora el papel de las plataformas de
+            hardware en la informática y cómo los diferentes sensores pueden proporcionar
+            una entrada y salida más eficaz que el tradicional teclado, ratón y monitor.
+            Utilizando el Laboratorio de Aplicaciones y el Circuit Playground de Adafruit,
+            desarrollarás programas que utilizan las mismas entradas y salidas de
+            hardware que se ven en los dispositivos inteligentes, observando cómo
+            un simple prototipo aproximado puede conducir a un producto terminado.
+            La unidad concluye con un reto de diseño para utilizar el Circuit Playground
+            como base para una innovación de su propio diseño.
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas y salidas
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas y salidas
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas y salidas
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas y salidas
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas y salidas

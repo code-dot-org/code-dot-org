@@ -10,7 +10,7 @@ import {
   isConnecting,
   hasConnectionError,
   getConnectionError,
-  useFakeBoardOnNextRun
+  useVirtualBoardOnNextRun
 } from '../redux';
 import {UnsupportedBrowserError} from '../MakerError';
 import OverlayButton from './OverlayButton';
@@ -33,7 +33,7 @@ export class UnconnectedMakerStatusOverlay extends Component {
     hasConnectionError: PropTypes.bool.isRequired,
     handleTryAgain: PropTypes.func.isRequired,
     handleDisableMaker: PropTypes.func.isRequired,
-    useFakeBoardOnNextRun: PropTypes.func.isRequired,
+    useVirtualBoardOnNextRun: PropTypes.func.isRequired,
     handleOpenSetupPage: PropTypes.func.isRequired
   };
 
@@ -65,7 +65,7 @@ export class UnconnectedMakerStatusOverlay extends Component {
         <BoardNotFound
           {...dimensions}
           handleTryAgain={handleTryAgain}
-          useFakeBoardOnNextRun={this.props.useFakeBoardOnNextRun}
+          useVirtualBoardOnNextRun={this.props.useVirtualBoardOnNextRun}
           handleOpenSetupPage={handleOpenSetupPage}
         />
       );
@@ -85,7 +85,7 @@ export default connect(
     }
   }),
   {
-    useFakeBoardOnNextRun
+    useVirtualBoardOnNextRun
   }
 )(UnconnectedMakerStatusOverlay);
 
@@ -203,12 +203,12 @@ class BoardNotFound extends Component {
   static propTypes = {
     ...overlayDimensionsPropTypes,
     handleTryAgain: PropTypes.func.isRequired,
-    useFakeBoardOnNextRun: PropTypes.func.isRequired,
+    useVirtualBoardOnNextRun: PropTypes.func.isRequired,
     handleOpenSetupPage: PropTypes.func.isRequired
   };
 
   handleRunWithoutBoard = () => {
-    this.props.useFakeBoardOnNextRun();
+    this.props.useVirtualBoardOnNextRun();
     this.props.handleTryAgain();
   };
 

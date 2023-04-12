@@ -18,7 +18,7 @@ describe('Gamelab blocks', () => {
     let animationList = {
       orderedKeys: ['1', '2'],
       propsByKey: {
-        '1': {
+        1: {
           sourceUrl: null,
           name: 'drawn',
           frameSize: 0,
@@ -26,7 +26,7 @@ describe('Gamelab blocks', () => {
           looping: false,
           frameDelay: 0
         },
-        '2': {
+        2: {
           sourceUrl: '/v3/library/test.png',
           name: 'library',
           frameSize: 0,

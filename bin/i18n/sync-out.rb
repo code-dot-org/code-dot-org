@@ -430,11 +430,11 @@ def distribute_translations(upload_manifests)
       relative_path = loc_file.delete_prefix(locale_dir)
       next unless file_changed?(locale, relative_path)
 
-      external_translations = JSON.parse(File.read(loc_file))
+      external_translations = parse_file(loc_file)
       next if external_translations.empty?
 
       # Merge new translations
-      existing_translations = JSON.parse(File.read(ml_playground_path))
+      existing_translations = File.exist?(ml_playground_path) ? parse_file(ml_playground_path) || {} : {}
       existing_translations['datasets'] = existing_translations['datasets'] || Hash.new
       existing_translations['datasets'][dataset_id] = external_translations
       sanitize_data_and_write(existing_translations, ml_playground_path)

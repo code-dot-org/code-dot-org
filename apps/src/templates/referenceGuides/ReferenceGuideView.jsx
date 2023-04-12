@@ -56,6 +56,8 @@ export default function ReferenceGuideView({
                   text={guide.display_name}
                   indentLevel={guide.level}
                   href={`${baseUrl}/${guide.key}`}
+                  // TODO: define this prop
+                  // eslint-disable-next-line react/prop-types
                   isActive={guide.key === referenceGuide.key}
                 />
               ))}

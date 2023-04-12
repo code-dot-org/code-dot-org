@@ -11,8 +11,6 @@ markdown <<MARKDOWN
 
 ##### **Step 2:** Click on the course of your choice in the "Courses" column of the "Class Sections" table on the "My Dashboard" page. 
 
-(If you have not created class sections, navigate <a href="https://code.org/maker" target="blank" rel="noopener noreferrer">https://code.org/maker</a> and select "Explore the unit".)
-
 ##### **Step 3:** Navigate to the Lesson you would like to view and click on the "View Lesson Plan" button.
 
 
@@ -22,16 +20,16 @@ markdown <<MARKDOWN
 
 
 
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vTsMcAjhEPf8bUwJ6p1oIXmKaZu40kRwep8HfBRCyx5AN9WAWXmcCMx-vlmLW25V0cgcPcpbUNUIRrA/pub?w=750&h=703"  alt="Screenshot showing the Unit 1 overview page with an orange arrow pointing to the 'View Lesson Plan' button for Lesson 1" style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/0f0c4ed90de92129a5f3b3b6dfeaec5d-image-1680218965406.png"  alt="Screenshot showing the Unit 1 overview page with an orange arrow pointing to the 'View Lesson Plan' button for Lesson 1" style="float: left; height: 250px; clear: both; margin: 0 20px 20px 0;">
 
 
-## Unit overview page
+## Course overview page
 
-The unit overview page contains a short description of each lesson within the unit along with unit level teacher resources. From this page, you can also access management features such as hiding and showing lessons for students. Each lesson has a blue "View Lesson Plan" button to see the lesson plan for the unit.
+The course overview page contains a short description of each lesson within the course along with course level teacher resources. From this page, you can also access management features such as hiding and showing lessons for students. Each lesson has a blue "View Lesson Plan" button to see the lesson plan for the unit.
 
 <hr style="clear:both">
 
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vRp9xZI8Ex6PMPLyUfZLmTvMAGN79K7IX0-W1FfjwWGvX4h9x31QqbeYR0kBEYQ7tsFfwuBPMBb0EfZ/pub?w=696&h=556"  alt="Screenshot showing the Unit 1, Lesson 1 plan with an orange arrow demonstrating how to find other lessons in the unit." style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/c05c509969bda102ece214d5019643c0-image-1680219323736.png"  alt="Screenshot showing the Unit 1, Lesson 1 plan with an orange arrow demonstrating how to find other lessons in the unit." style="float: left; height: 250px; clear: both; margin: 0 20px 20px 0;">
 
 ## Lesson plans
 
@@ -39,5 +37,5 @@ Within the lesson plan, you will find a teaching guide, lesson objectives, links
 
 <div style="clear:both"/>
 
-
+![]()
 MARKDOWN

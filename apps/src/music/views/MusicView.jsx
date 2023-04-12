@@ -75,10 +75,7 @@ class UnconnectedMusicView extends React.Component {
     this.analyticsReporter = new AnalyticsReporter();
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace(props.channelId);
     this.soundUploader = new SoundUploader(this.player);
-
-    // Increments every time a trigger is pressed;
-    // used to differentiate tracks created on the same trigger
-    this.triggerCount = 0;
+    this.playingTriggers = [];
 
     // Set default for instructions position.
     const defaultInstructionsPos = AppConfig.getValue(
@@ -139,6 +136,9 @@ class UnconnectedMusicView extends React.Component {
         this.setAllowedSoundsForProgress();
       }
 
+      Globals.setLibrary(this.library);
+      Globals.setPlayer(this.player);
+
       this.musicBlocklyWorkspace.init(
         document.getElementById('blockly-div'),
         this.onBlockSpaceChange,
@@ -147,9 +147,6 @@ class UnconnectedMusicView extends React.Component {
       );
       this.player.initialize(this.library);
       setInterval(this.updateTimer, 1000 / 30);
-
-      Globals.setLibrary(this.library);
-      Globals.setPlayer(this.player);
     });
   }
 
@@ -205,8 +202,8 @@ class UnconnectedMusicView extends React.Component {
 
   setToolboxForProgress = () => {
     if (this.progressManager) {
-      const allowedToolbox = this.progressManager.getCurrentStepDetails()
-        .toolbox;
+      const allowedToolbox =
+        this.progressManager.getCurrentStepDetails().toolbox;
       this.musicBlocklyWorkspace.updateToolbox(allowedToolbox);
     }
   };
@@ -233,7 +230,7 @@ class UnconnectedMusicView extends React.Component {
       const libraryParameter = AppConfig.getValue('library');
       const libraryFilename = libraryParameter
         ? `music-library-${libraryParameter}.json`
-        : 'music-library-by-type.json';
+        : 'music-library.json';
       const response = await fetch(baseUrl + libraryFilename);
       const library = await response.json();
       return library;
@@ -321,8 +318,13 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
     this.analyticsReporter.onButtonClicked('trigger', {id});
-    this.musicBlocklyWorkspace.executeTrigger(id);
-    this.triggerCount++;
+    const currentPosition = this.player.getCurrentPlayheadPosition();
+    this.musicBlocklyWorkspace.executeTrigger(id, currentPosition);
+
+    this.playingTriggers.push({
+      id,
+      startPosition: currentPosition
+    });
   };
 
   compileSong = () => {
@@ -330,21 +332,21 @@ class UnconnectedMusicView extends React.Component {
       MusicPlayer: this.player,
       ProgramSequencer: this.programSequencer,
       RandomSkipManager: this.randomSkipManager,
-      getTriggerCount: () => this.triggerCount,
+      getTriggerCount: () => this.playingTriggers.length,
       MusicLibrary: this.library
     });
   };
 
   executeCompiledSong = () => {
-    // Clear the events list of when_run sounds, because it will be
-    // populated next.
-    this.player.clearWhenRunEvents();
+    // Clear the events list because it will be populated next.
+    this.player.clearAllEvents();
 
-    this.musicBlocklyWorkspace.executeCompiledSong();
+    this.musicBlocklyWorkspace.executeCompiledSong(this.playingTriggers);
   };
 
   playSong = () => {
     this.player.stopSong();
+    this.playingTriggers = [];
 
     this.compileSong();
 
@@ -359,12 +361,12 @@ class UnconnectedMusicView extends React.Component {
 
   stopSong = () => {
     this.player.stopSong();
+    this.playingTriggers = [];
 
     this.executeCompiledSong();
 
     this.props.setIsPlaying(false);
     this.props.setCurrentPlayheadPosition(0);
-    this.triggerCount = 0;
   };
 
   onFeedbackClicked = () => {

@@ -874,6 +874,9 @@ fi:
       email_opt_in:
         opt_in_yes: 'Kyllä'
         opt_in_no: 'Ei'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
   cookie_banner:
     message: 'Jatkamalla sivustollemme tai napsauttamalla "Hyväksyn," hyväksyt evästeiden tallentamisen laitteellesi.'
     more_information: "Katso Code.org -sivuston tietosuojakäytäntö."

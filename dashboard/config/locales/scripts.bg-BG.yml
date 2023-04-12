@@ -321,6 +321,9 @@ bg:
           student_description: Всички типове нива за тестване на потребителски интерфейс.
             Моля, влезте в акаунта си, за да тествате applab нивата ( applab нивата
             работят само ако сте в профила си).
+          lessons:
+            lesson-49:
+              name: Музика
         algebraPD2b:
           title: Компютърни науки в алгебрата
           description: 'Фаза 2 онлайн: Смесено лятно учене'
@@ -2502,6 +2505,10 @@ bg:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Раздел 9: данни'
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Оценки
         tess-testing-problem-solving-2023:
           title: Разрешаване на Проблеми
         testing-focus-on-creativity1:
@@ -2590,3 +2597,9 @@ bg:
               display_name: Проект за Края на Курса
         aiml-2023:
           title: AI и Машинно Обучение
+        focus-on-data3-2023:
+          title: AI и Машинно Обучение
+        focus-on-impact-in-society4-2023:
+          title: AI и Машинно Обучение
+        microbit-2023:
+          title: микробит

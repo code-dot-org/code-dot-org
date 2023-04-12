@@ -150,7 +150,7 @@ export default {
   EventTab: PhotoChooserEvents,
   themeValues: themeValues.photoSelect,
 
-  create: function() {
+  create: function () {
     const element = document.createElement('label');
     element.setAttribute('class', 'img-upload fa fa-camera');
     element.style.margin = '0';
@@ -178,7 +178,7 @@ export default {
     element.appendChild(newInput);
     return element;
   },
-  onDeserialize: function(element, updateProperty) {
+  onDeserialize: function (element, updateProperty) {
     // Disable image upload events unless running
     $(element).on('click', () => {
       element.childNodes[0].disabled = !Applab.isRunning();

@@ -983,10 +983,27 @@ bs:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: postavka {GROUP} kao {FORMAT}
+        options:
+          FORMAT:
+            '"border"': ivica
+            '"circle"': krug
+            '"grid"': mreža
+            '"row"': red
+            '"column"': kolona
       gamelab_makeBurst:
         options:
           EFFECT:
             '"rain"': kiša
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': ivica
+            '"circle"': krug
+            '"grid"': mreža
+            '"row"': red
+            '"column"': kolona
       gamelab_makeProjectile:
         options:
           DIRECTION:
