@@ -25,7 +25,7 @@ import reducer, {
   __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
 
-// This is some sample lesson data taken a course. I truncated to the first two
+// This is some sample lesson data taken from a course. I truncated to the first two
 // lessons, and also truncated the second lesson to the first 3 levels
 const lessonData = [
   // lesson 1
@@ -52,7 +52,8 @@ const lessonData = [
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: true,
-        sublevels: []
+        sublevels: [],
+        app: 'maze'
       },
       {
         ids: ['323'],
@@ -66,7 +67,8 @@ const lessonData = [
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
-        sublevels: []
+        sublevels: [],
+        app: 'maze'
       },
       {
         ids: ['322'],
@@ -81,7 +83,8 @@ const lessonData = [
         is_concept_level: false,
         bonus: true,
         display_as_unplugged: false,
-        sublevels: []
+        sublevels: [],
+        app: 'maze'
       }
     ],
     lesson_plan_html_url:
@@ -115,7 +118,8 @@ const lessonData = [
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
-        sublevels: []
+        sublevels: [],
+        app: 'maze'
       },
       {
         ids: ['339'],
@@ -128,7 +132,8 @@ const lessonData = [
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
-        sublevels: []
+        sublevels: [],
+        app: 'maze'
       },
       {
         ids: ['341'],
@@ -141,7 +146,8 @@ const lessonData = [
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
-        sublevels: []
+        sublevels: [],
+        app: 'maze'
       }
     ],
     lesson_plan_html_url:
@@ -582,7 +588,8 @@ describe('progressReduxTest', () => {
             isLocked: false,
             bonus: false,
             sublevels: [],
-            teacherFeedbackReviewState: null
+            teacherFeedbackReviewState: null,
+            app: 'maze'
           },
           {
             id: '323',
@@ -603,7 +610,8 @@ describe('progressReduxTest', () => {
             isLocked: false,
             bonus: false,
             sublevels: [],
-            teacherFeedbackReviewState: null
+            teacherFeedbackReviewState: null,
+            app: 'maze'
           },
           {
             id: '322',
@@ -624,7 +632,8 @@ describe('progressReduxTest', () => {
             isLocked: false,
             bonus: true,
             sublevels: [],
-            teacherFeedbackReviewState: null
+            teacherFeedbackReviewState: null,
+            app: 'maze'
           }
         ],
         [
@@ -647,7 +656,8 @@ describe('progressReduxTest', () => {
             isLocked: false,
             bonus: false,
             sublevels: [],
-            teacherFeedbackReviewState: null
+            teacherFeedbackReviewState: null,
+            app: 'maze'
           },
           {
             id: '339',
@@ -668,7 +678,8 @@ describe('progressReduxTest', () => {
             isLocked: false,
             bonus: false,
             sublevels: [],
-            teacherFeedbackReviewState: null
+            teacherFeedbackReviewState: null,
+            app: 'maze'
           },
           {
             id: '341',
@@ -689,7 +700,8 @@ describe('progressReduxTest', () => {
             isLocked: false,
             bonus: false,
             sublevels: [],
-            teacherFeedbackReviewState: null
+            teacherFeedbackReviewState: null,
+            app: 'maze'
           }
         ]
       ];
