@@ -52,7 +52,7 @@
     position: relative;
 
     @media screen and (max-width: $width-md) {
-      width: 33%;
+      width: 23%;
     }
 
     @media screen and (max-width: $width-sm) {
@@ -87,10 +87,6 @@
     }
 
     .modal-body {
-
-      & > div {
-        overflow: unset !important;
-      }
 
       figure {
         width: 100%;
