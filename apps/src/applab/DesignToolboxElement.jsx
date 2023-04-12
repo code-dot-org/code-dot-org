@@ -41,6 +41,7 @@ export default class DesignToolboxElement extends React.Component {
             src={this.props.imageUrl}
             className="design-element-image"
             style={styles.image}
+            alt={this.props.desc}
           />
           <div>{this.props.desc}</div>
         </div>
