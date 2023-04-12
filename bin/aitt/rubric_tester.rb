@@ -24,6 +24,12 @@ def get_expected_grades(expected_grades_file)
   expected_grades
 end
 
+def parse_tsv(tsv_text)
+  rows = tsv_text.split("\n")
+  header = rows.shift.split("\t")
+  rows.map { |row| Hash[header.zip(row.split("\t"))] }
+end
+
 def grade_student_work(prompt, rubric, student_code, student_id)
   api_url = 'https://api.openai.com/v1/chat/completions'
   headers = {
@@ -47,7 +53,8 @@ def grade_student_work(prompt, rubric, student_code, student_id)
   if response.code == 200
     puts "#{student_id} request size #{data.to_json.size} succeeded in #{(Time.now - start_time).to_i} seconds"
     completed_text = response.parsed_response['choices'][0]['message']['content']
-    CSV.parse(completed_text.strip, headers: true).map(&:to_h)
+    tsv_data = parse_tsv(completed_text.strip)
+    tsv_data.map(&:to_h)
   else
     puts "#{student_id} Error calling the API: #{response.code}"
     puts "#{student_id} Response body: #{response.body}"
