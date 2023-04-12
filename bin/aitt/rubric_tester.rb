@@ -83,7 +83,7 @@ def generate_html_output(output_filename, prompt, accuracy, actual_grades, expec
     file.puts '<body>'
     file.puts "  <h2>Prompt:</h2>"
     file.puts "  <pre>#{prompt}</pre>"
-    file.puts "  <h2>Overall Accuracy: #{accuracy}%</h2>"
+    file.puts "  <h2>Overall Accuracy: #{accuracy.to_i}%</h2>"
 
     actual_grades.each do |student_id, grades|
       puts "rendering table for #{student_id}"
