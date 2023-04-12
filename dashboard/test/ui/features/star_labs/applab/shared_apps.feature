@@ -79,7 +79,6 @@ Feature: App Lab Scenarios
     Then element "#checkbox1" is checked
     And element "#checkbox2" is checked
 
-  @no_ie
   Scenario: Can type in text input on share page
     Given I switch to design mode
     And I drag a TEXT_INPUT into the app
@@ -88,7 +87,6 @@ Feature: App Lab Scenarios
     And I press keys "GLULX" for element ".screen > input"
     Then element ".screen > input" has value "GLULX"
 
-  @no_ie
   @no_mobile
   Scenario: Can type in textarea on share page
     Given I switch to design mode
