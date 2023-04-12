@@ -12,8 +12,8 @@ const defaultArgs = {
   courseDisplayName: 'AI for Oceans',
   duration: 'quarter',
   gradesArray: ['1', '2', '3', '4'],
-  subjects: ['english_language_arts'],
-  topics: ['cybersecurity'],
+  subjects: ['math'],
+  topics: ['programming', 'artificial_intelligence', 'art_and_design'],
   isTranslated: true,
   isEnglish: true
 };
