@@ -14,7 +14,8 @@ describe('CurriculumCatalogCard', () => {
       youngestGrade: 4,
       oldestGrade: 12,
       subjects: ['math'],
-      topics: ['cybersecurity']
+      topics: ['cybersecurity'],
+      isEnglish: true
     };
   });
 

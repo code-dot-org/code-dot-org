@@ -81,14 +81,14 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
     return (
       <div className={style.main}>
         <Button
-          __useDeprecatedTag
+          useDefaultLineHeight
           text={text}
           size={size}
           onClick={this.toggleDropdown}
           icon={dropdownOpen ? 'caret-up' : 'caret-down'}
           iconClassName={style.icon}
           color={color}
-          className={this.props.className}
+          className={classNames(style.dropdownButton, this.props.className)}
         >
           {this.props.customText && (
             <div className={style.main}>{this.props.customText}</div>
