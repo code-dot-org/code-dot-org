@@ -76,8 +76,22 @@ def compute_accuracy(expected_grades, actual_grades)
   (matches / total.to_f) * 100
 end
 
-def generate_html_output(output_filename, prompt, accuracy, actual_grades, expected_grades)
+def compute_cell_color(actual, expected)
   possible_grades = ["No Evidence", "Limited Evidence", "Convincing Evidence", "Extensive Evidence"]
+  expected_index = possible_grades.index(expected)
+  actual_index = possible_grades.index(actual)
+  grade_difference = expected && actual && (expected_index - actual_index).abs
+  case grade_difference
+  when 0
+    'green'
+  when 1
+    'yellow'
+  else
+    'red'
+  end
+end
+
+def generate_html_output(output_filename, prompt, accuracy, actual_grades, expected_grades)
   link_base_url = "file://#{`pwd`.strip}"
 
   File.open(output_filename, 'w') do |file|
@@ -103,19 +117,7 @@ def generate_html_output(output_filename, prompt, accuracy, actual_grades, expec
         expected = expected_grades[student_id][criteria]
         actual = grade['Grade']
         reason = grade['Reason']
-
-        expected_index = possible_grades.index(expected)
-        actual_index = possible_grades.index(actual)
-        grade_difference = expected && actual && (expected_index - actual_index).abs
-        cell_color = case grade_difference
-                     when 0
-                       'green'
-                     when 1
-                       'yellow'
-                     else
-                       'red'
-                     end
-
+        cell_color = compute_cell_color(actual, expected)
         file.puts "    <tr><td>#{criteria}</td><td>#{expected}</td><td style=\"background-color: #{cell_color};\">#{actual}</td><td>#{reason}</td></tr>"
       end
       file.puts '  </table>'
