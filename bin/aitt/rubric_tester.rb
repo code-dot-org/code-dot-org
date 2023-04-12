@@ -27,7 +27,7 @@ end
 def parse_tsv(tsv_text)
   rows = tsv_text.split("\n")
   header = rows.shift.split("\t")
-  rows.map { |row| Hash[header.zip(row.split("\t"))] }
+  rows.map {|row| Hash[header.zip(row.split("\t"))]}
 end
 
 def grade_student_work(prompt, rubric, student_code, student_id)
