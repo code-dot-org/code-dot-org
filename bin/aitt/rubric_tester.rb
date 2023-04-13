@@ -12,7 +12,7 @@ def read_inputs(prompt_file, rubric_file)
 end
 
 def get_student_files
-  Dir.glob('*.js').sort
+  Dir.glob('sample_code/*.js').sort
 end
 
 def get_expected_grades(expected_grades_file)
@@ -110,7 +110,7 @@ def rubric_to_html_table(rubric)
 end
 
 def generate_html_output(output_filename, prompt, rubric, accuracy, actual_grades, expected_grades)
-  link_base_url = "file://#{`pwd`.strip}"
+  link_base_url = "file://#{`pwd`.strip}/sample_code"
 
   File.open(output_filename, 'w') do |file|
     file.puts '<!DOCTYPE html>'
