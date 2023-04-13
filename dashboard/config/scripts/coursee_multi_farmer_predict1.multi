@@ -11,4 +11,4 @@ Now there is lettuce at the end of each path.  If there is a path ahead, the far
 
 MARKDOWN
 
-allow_multiple_attempts false
+allow_multiple_attempts true
