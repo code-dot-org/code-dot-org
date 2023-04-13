@@ -29,6 +29,7 @@ import {
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import classnames from 'classnames';
 import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 
 /**
  * Since our progress tables are built out of standard HTML table elements,
@@ -354,6 +355,16 @@ class ProgressTableView extends React.Component {
               {...contentViewProps}
             />
           </div>
+        </div>
+        <div style={{marginTop: '60px'}}>
+          <Notification
+            type={NotificationType.feedback}
+            notice={i18n.feedbackShareBannerTitle()}
+            details={i18n.feedbackShareBannerDesc()}
+            buttonText={i18n.feedbackShareBannerButton()}
+            buttonLink={'about:blank'}
+            dismissible={false}
+          />
         </div>
         {this.props.currentView === ViewType.DETAIL ? (
           <ProgressLegend
