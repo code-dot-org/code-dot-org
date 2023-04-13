@@ -9,14 +9,15 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-12 00:21:07 UTC",
-    "published_state": null,
+    "serialized_at": "2023-04-12 19:42:22 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -3784,6 +3785,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L1-L1_2023"
+        ],
         "progression": "Creative Coding with The Theater Example Projects"
       },
       "bonus": false,
@@ -3806,6 +3810,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L1-L2_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3828,6 +3835,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L1_2023"
+        ],
         "progression": "Predict and Run: Object References as Parameters"
       },
       "bonus": false,
@@ -3850,6 +3860,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L2_2023"
+        ],
         "progression": "Investigate and Modify: Object References as Parameters"
       },
       "bonus": false,
@@ -3872,6 +3885,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L3_2023"
+        ],
         "progression": "Investigate and Modify: Object References as Parameters"
       },
       "bonus": false,
@@ -3894,6 +3910,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L4_2023"
+        ],
         "progression": "Investigate and Modify: Object References as Parameters"
       },
       "bonus": false,
@@ -3916,6 +3935,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L5_2023"
+        ],
         "progression": "Practice: Object References as Parameters"
       },
       "bonus": false,
@@ -3938,6 +3960,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L6_2023"
+        ],
         "progression": "Practice: Object References as Parameters"
       },
       "bonus": false,
@@ -3960,6 +3985,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L7_2023"
+        ],
         "progression": "Practice: Object References as Parameters"
       },
       "bonus": false,
@@ -3982,6 +4010,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L8_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4004,6 +4035,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L1_2023"
+        ],
         "progression": "Predict and Run: Overloaded Methods"
       },
       "bonus": false,
@@ -4026,6 +4060,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L2_2023"
+        ],
         "progression": "Investigate and Modify: Overloaded Methods"
       },
       "bonus": false,
@@ -4048,6 +4085,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L3_2023"
+        ],
         "progression": "Investigate and Modify: Overloaded Methods"
       },
       "bonus": false,
@@ -4070,6 +4110,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L4_2023"
+        ],
         "progression": "Investigate and Modify: Overloaded Methods"
       },
       "bonus": false,
@@ -4092,6 +4135,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L5_2023"
+        ],
         "progression": "Practice: Overloaded Methods"
       },
       "bonus": false,
@@ -4114,6 +4160,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L6_2023"
+        ],
         "progression": "Practice: Overloaded Methods"
       },
       "bonus": false,
@@ -4136,6 +4185,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L7_2023"
+        ],
         "progression": "Practice: Overloaded Methods"
       },
       "bonus": false,
@@ -4158,6 +4210,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L8_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4180,6 +4235,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L1_2023"
+        ],
         "progression": "Investigate and Modify: Private Methods"
       },
       "bonus": false,
@@ -4202,6 +4260,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L2_2023"
+        ],
         "progression": "Investigate and Modify: Private Methods"
       },
       "bonus": false,
@@ -4224,6 +4285,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L3_2023"
+        ],
         "progression": "Investigate and Modify: Private Methods"
       },
       "bonus": false,
@@ -4246,6 +4310,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L4_2023"
+        ],
         "progression": "Practice: Private Methods"
       },
       "bonus": false,
@@ -4268,6 +4335,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L5_2023"
+        ],
         "progression": "Practice: Private Methods"
       },
       "bonus": false,
@@ -4290,6 +4360,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L6_2023"
+        ],
         "progression": "Practice: Private Methods"
       },
       "bonus": false,
@@ -4312,6 +4385,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L7_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4334,6 +4410,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L1_2023"
+        ],
         "progression": "Investigate and Modify: Overriding Methods"
       },
       "bonus": false,
@@ -4356,6 +4435,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L2_2023"
+        ],
         "progression": "Investigate and Modify: Overriding Methods"
       },
       "bonus": false,
@@ -4378,6 +4460,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L3_2023"
+        ],
         "progression": "Investigate and Modify: Overriding Methods"
       },
       "bonus": false,
@@ -4400,6 +4485,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L4_2023"
+        ],
         "progression": "Practice: Overriding Methods"
       },
       "bonus": false,
@@ -4422,6 +4510,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L5_2023"
+        ],
         "progression": "Practice: Overriding Methods"
       },
       "bonus": false,
@@ -4444,6 +4535,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L6_2023"
+        ],
         "progression": "Practice: Overriding Methods"
       },
       "bonus": false,
@@ -4466,6 +4560,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L7_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4488,6 +4585,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L1_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4510,6 +4610,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L7-L1_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4532,6 +4635,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L1_2023"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4554,6 +4660,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L2_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4576,6 +4685,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L1_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4598,6 +4710,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7 Creative Coding with The Theater Project_2023"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4620,6 +4735,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 7 Assessment_2023"
+        ],
         "progression": "Unit 7 Assessment"
       },
       "bonus": false,
@@ -4667,6 +4785,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7 Creative Coding with The Theater Project 1-Day_2023"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -5369,6 +5490,39 @@
       },
       "seeding_key": {
         "resource.key": "_key_u7l9_extra_practice"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csa7-2023/resources",
+      "key": "all_resources_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_8"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa7-2023/standards",
+      "key": "all_standards_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_7"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa7-2023/vocab",
+      "key": "all_vocabulary_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_7"
       }
     },
     {
@@ -6345,6 +6499,24 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_8",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_7",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_7",
+        "script.name": "csa7-2023"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "developing_project_management_skills",
