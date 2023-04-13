@@ -10,3 +10,4 @@ answer 'Internet Simulator'
 
 question 'This tool allows students to design apps that they can share with their friends.'
 answer 'App Lab'
+allow_multiple_attempts true

@@ -20,3 +20,5 @@ Flower rose = tulip;
 
 ```
 MARKDOWN
+
+allow_multiple_attempts true

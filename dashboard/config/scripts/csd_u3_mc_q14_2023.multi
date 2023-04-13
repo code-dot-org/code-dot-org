@@ -11,3 +11,5 @@ teacher_markdown <<MARKDOWN
 
 After the line of code `score = score + 1`, `score` has the value of `1`. Since the condition `health > 90` is true, the line of code `score = score + 5` is run. `score` now has a value of `6`.
 MARKDOWN
+
+allow_multiple_attempts true

@@ -6,4 +6,4 @@ right 'The `remove coral` sprite should be changed to `remove boat` sprite. .', 
 wrong 'The `remove coral` sprite should be changed to `remove fish` sprite.', feedback: 'Incorrect.'
 
 
-allow_multiple_attempts false
+allow_multiple_attempts true

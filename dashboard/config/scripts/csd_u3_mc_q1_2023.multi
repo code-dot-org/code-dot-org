@@ -11,3 +11,5 @@ teacher_markdown <<MARKDOWN
 
 `volume` is the most meaningful name. `loudest` and `silent` are possible values for how loud the music is playing, but they are not good variable names.
 MARKDOWN
+
+allow_multiple_attempts true
