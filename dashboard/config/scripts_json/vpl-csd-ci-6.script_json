@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-11 01:39:38 UTC",
+    "serialized_at": "2023-04-11 17:53:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -375,6 +375,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "SP-VPL-PC-22-LessonTypes_-ci"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-LessonTypes_-ci"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd-ci-6",
+        "activity_section.key": "a835e58c-14fa-4ad1-9a10-008acfa2ec61"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-LessonTypes_-ci"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "VPL-CSD-Summer-CI-Unit_PSP-U6L3_2023"
         ],
         "progression": "Unit Overview"
@@ -394,9 +419,9 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 4,
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -416,31 +441,6 @@
       },
       "level_keys": [
         "SP-VPL-PC-22-PSP-vid_-ci"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "SP-VPL-PC-22-LessonTypes_-ci"
-        ],
-        "progression": "Unit Overview"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-PC-22-LessonTypes_-ci"
-        ],
-        "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "vpl-csd-ci-6",
-        "activity_section.key": "a835e58c-14fa-4ad1-9a10-008acfa2ec61"
-      },
-      "level_keys": [
-        "SP-VPL-PC-22-LessonTypes_-ci"
       ]
     },
     {
@@ -1024,6 +1024,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation_2023"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -1080,6 +1083,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "SP-VPL-PC-22-LessonTypes_-ci",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-LessonTypes_-ci"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd-ci-6",
+        "activity_section.key": "a835e58c-14fa-4ad1-9a10-008acfa2ec61"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "VPL-CSD-Summer-CI-Unit_PSP-U6L3_2023",
         "script_level.level_keys": [
           "VPL-CSD-Summer-CI-Unit_PSP-U6L3_2023"
@@ -1095,18 +1110,6 @@
         "level.key": "SP-VPL-PC-22-PSP-vid_-ci",
         "script_level.level_keys": [
           "SP-VPL-PC-22-PSP-vid_-ci"
-        ],
-        "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "vpl-csd-ci-6",
-        "activity_section.key": "a835e58c-14fa-4ad1-9a10-008acfa2ec61"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "SP-VPL-PC-22-LessonTypes_-ci",
-        "script_level.level_keys": [
-          "SP-VPL-PC-22-LessonTypes_-ci"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
