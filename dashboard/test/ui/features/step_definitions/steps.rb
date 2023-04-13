@@ -1150,13 +1150,11 @@ And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   press_keys(element, key)
 end
 
-And(/^I press keys "([^"]*)" for element "([^"]*)" and wait until value changes$/) do |key, selector|
+And(/^I wait until element "([^"]*)" has the value "([^"]*)"$/) do |selector, value|
   element = @browser.find_element(:css, selector)
-  press_keys(element, key)
   wait_short_until do
     element_text = element.attribute("value")
-    input_key = key.delete "\n"
-    element_text.include? input_key
+    element_text.include? value
   end
 end
 
