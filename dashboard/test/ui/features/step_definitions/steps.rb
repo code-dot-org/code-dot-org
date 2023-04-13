@@ -1155,7 +1155,8 @@ And(/^I press keys "([^"]*)" for element "([^"]*)" and wait until text appears$/
   press_keys(element, key)
   wait_short_until do
     element_text = element.attribute("value")
-    element_text.include? key
+    input_key = key.delete "\n"
+    element_text.include? input_key
   end
 end
 
