@@ -24,7 +24,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Eval.message,
           commonMsg.emptyTopLevelBlock({topLevelBlockName: 'evaluate'})
@@ -39,7 +39,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Eval.message, commonMsg.emptyFunctionalBlock());
         return true;
       },
@@ -63,7 +63,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Eval.message,
           commonMsg.emptyBlockInVariable({name: 'my-image'})
@@ -118,7 +118,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Eval.message,
           commonMsg.emptyBlockInFunction({name: 'red-circle'})
@@ -195,7 +195,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EMPTY_FUNCTION_NAME
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Eval.message, commonMsg.unnamedFunction());
         return true;
       },
@@ -254,7 +254,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EMPTY_FUNCTION_NAME
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Eval.message, commonMsg.unnamedFunction());
         return true;
       },
@@ -302,7 +302,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EMPTY_FUNCTION_NAME
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Eval.message, commonMsg.unnamedFunction());
         return true;
       },

@@ -44,10 +44,7 @@ describe('SublevelCard', () => {
     const thumbnails = wrapper.find('img');
     assert.equal(1, thumbnails.length);
     assert(
-      thumbnails
-        .at(0)
-        .getDOMNode()
-        .src.includes(DEFAULT_SUBLEVEL.thumbnail_url)
+      thumbnails.at(0).getDOMNode().src.includes(DEFAULT_SUBLEVEL.thumbnail_url)
     );
   });
 

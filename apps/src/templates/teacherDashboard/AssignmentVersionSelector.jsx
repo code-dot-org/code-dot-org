@@ -9,9 +9,7 @@ import AssignmentVersionMenuItem, {
 import AssignmentVersionMenuHeader from './AssignmentVersionMenuHeader';
 import _ from 'lodash';
 
-const menuItemWidth = _(columnWidths)
-  .values()
-  .reduce(_.add);
+const menuItemWidth = _(columnWidths).values().reduce(_.add);
 const menuWidth = menuItemWidth + 2 * STANDARD_PADDING;
 
 export default class AssignmentVersionSelector extends Component {
@@ -65,12 +63,8 @@ export default class AssignmentVersionSelector extends Component {
   };
 
   render() {
-    const {
-      dropdownStyle,
-      courseVersions,
-      disabled,
-      selectedCourseVersionId
-    } = this.props;
+    const {dropdownStyle, courseVersions, disabled, selectedCourseVersionId} =
+      this.props;
 
     const popupMenuXOffset = this.props.rightJustifiedPopupMenu
       ? -menuWidth / 2

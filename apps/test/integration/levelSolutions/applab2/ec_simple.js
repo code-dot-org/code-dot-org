@@ -11,11 +11,11 @@ module.exports = {
       description: 'Expected solution.',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // room to add tests here
 
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Applab.onPuzzleComplete();
         }, 1);
       },
@@ -29,16 +29,16 @@ module.exports = {
       description: 'Reset logs milestones.',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         $('#runButton').click();
         $('#resetButton').click();
 
         // Add wait for debouncing
-        setTimeout(function() {
+        setTimeout(function () {
           $('#runButton').click();
           $('#resetButton').click();
           // Add wait for debouncing
-          setTimeout(function() {
+          setTimeout(function () {
             Applab.onPuzzleComplete();
           }, 1100);
         }, 300);
@@ -147,7 +147,7 @@ module.exports = {
       description: 'Block palette categories',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         const expectedCategories = [
           'UI controls',
           'Canvas',
@@ -164,7 +164,7 @@ module.exports = {
         assert.deepEqual(expectedCategories, actualCategories);
 
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Applab.onPuzzleComplete();
         }, 1);
       },

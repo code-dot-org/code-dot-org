@@ -5,7 +5,7 @@
   "danceFeedbackTooManyDancers": "مراقب باشید! اگر  بلوک «ایجاد جدید» را در «هر 2 گام» قرار دهید، رقصندگان زیادی ایجاد خواهید کرد.",
   "danceFeedbackUseSetSize": "از بلوک «set backup_dancer2 size» برای کوچک‌تر کردن آن رقصنده استفاده کنید.",
   "danceFeedbackUseSetTint": "از بلوک «تنظیم رنگ» برای تغییر رنگ رقصنده استفاده کنید.",
-  "danceFeedbackUseStartMapping": "سعی کنید بلوک <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> را به برنامه اضافه کنید.",
+  "danceFeedbackUseStartMapping": "سعی کنید بلوک <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">اسب_شاخدار_راست</title><title name=\"PROPERTY\">\"مقیاس\"</title><title name=\"RANGE\">\"باس\"</title></block></xml> را به برنامه اضافه کنید.",
   "danceFeedbackStartNewMove": "رقصنده شما بعد از گام چهارم حرکت جدیدی انجام نمی‌داد.",
   "danceFeedbackNeedDifferentDance": "باید از رقص متفاوتی استفاده کنید.",
   "danceFeedbackNeedEveryTwoMeasures": "مطمئن شوید که از بلوک «هر ۲ گام» استفاده می‌کنید",

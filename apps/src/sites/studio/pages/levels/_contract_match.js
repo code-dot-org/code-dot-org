@@ -7,7 +7,7 @@ import {LegacyContractMatchErrorDialog} from '@cdo/apps/lib/ui/LegacyDialogConte
 import i18n from '@cdo/locale';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
-$(window).load(function() {
+$(window).load(function () {
   $.widget('custom.coloriconselectmenu', $.ui.selectmenu, {
     /**
      * Override the jQuery selectmenu to add a color square icon driven by the
@@ -17,13 +17,13 @@ $(window).load(function() {
      * @returns {jQuery}
      * @private
      */
-    _renderItem: function(ul, item) {
+    _renderItem: function (ul, item) {
       const li = $('<li>', {text: item.label});
       const color = item.element.attr('data-color');
       makeColorSquareIcon(color).appendTo(li);
       return li.appendTo(ul);
     },
-    styleCurrentValue: function() {
+    styleCurrentValue: function () {
       addSquareIconToButton(this.element);
     }
   });
@@ -262,7 +262,7 @@ $(window).load(function() {
 
     componentDidMount() {
       $(ReactDOM.findDOMNode(this)).coloriconselectmenu({
-        select: function() {
+        select: function () {
           addSquareIconToButton(this);
         },
         change: this.selectmenuChange
@@ -322,7 +322,7 @@ $(window).load(function() {
    * @returns {Function} getResult function
    */
   function generateGetResultFunction(contractForm, levelData) {
-    return function() {
+    return function () {
       /** @type {ContractForm} */
       const functionName = contractForm.getName().trim();
       const rangeType = contractForm.getRangeType();

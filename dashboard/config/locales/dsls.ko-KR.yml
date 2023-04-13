@@ -13112,7 +13112,12 @@ ko-KR:
 
           루프를 사용하여 프로그램을 더 짧게 만드세요!
       MyRoboticFriends-Unplugged2022:
-        markdown: "# 내 로봇 친구 \n\n친구를 위해 코딩을 작성하며 프로그램을 배워 보세요!"
+        markdown: |-
+          # My Robotic Friends
+          내 친구 로봇
+
+          Learn to program by writing code for your friends!
+          내 친구 로봇을 위해 코드를 작성하며 프로그램을 배워보세요!
       PowerOfWords-Unplugged2022_2022_pilot_-2022-2:
         markdown: |
           # 말의 힘
@@ -13177,9 +13182,15 @@ ko-KR:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: 스크랫은 도토리에 도달할 것입니다. 코드에는 버그가 없습니다.
+          feedback: |-
+            Incorrect. Scrat will not reach the acorn because he turns the wrong way.
+            틀렸어요. 스크랫은 잘못된 길로 회전했기 때문에 도토리에 닿지 못할거예요.
         - text: 스크랫은 잘못된 방향으로 회전하기 때문에 도토리에 도달하지 않을 것입니다.
           correct: true
         - text: 스크랫은 `앞으로 이동` 블록이 충분하지 않기 때문에 도토리에 도달하지 않을 것입니다.
+          feedback: |-
+            Incorrect. Scrat will not reach the acorn because he turns the wrong way.
+            틀렸어요. 스크랫은 잘못된 길로 회전했기 때문에 도토리에 닿지 못할거예요.
         - text: 스크랫은 첫 번째 블록에서 이동하지 않을 것입니다.
           feedback: 스크랫은 잘못된 방향으로 회전하기 때문에 도토리에 도달하지 않을 것입니다.
         questions:

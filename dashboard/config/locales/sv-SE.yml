@@ -1012,6 +1012,10 @@ sv:
       email_opt_in:
         opt_in_yes: Ja
         opt_in_no: Nej
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      sports: Sport
   cookie_banner:
     accept: Jag håller med
   page_not_found_button: Återvänd hem

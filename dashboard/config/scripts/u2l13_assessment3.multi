@@ -1,15 +1,14 @@
 name 'U2L13 Assessment3'
-encrypted 'lpMOTIdoUGD5ipL/Q/l1K2VaJUhTO96hdGZh0khYK67XEcgclht6YZCloxC+
-4IXYDAXEv5rDd6L/s7cHPPYPsP96F3VQbXBSA+4qgztC3hFXgAWSYtp0+WkY
-xB2NlEiLeIGIFoW32c1CY2Q43t2B1B2qwLwxgGu9V67h0HrOEDdNmVkJ0Uks
-lGSWjuYd6dRHdbaHBcINWoetZwpueE0NVVSl3LsqLPXZfzBXUqjfGnTZwQ6K
-90+77DuN1DKCz7ezlzYxttk7+OeJQiKSoverCKxUZXWi9QktMNE8vWhdZps2
-FgiKF0lVTMGhnECTa4ukwy0T55JGiGUZrjBYbc8D6on/JvvvdJMU80QvuXtE
-GP6Loclx7gRoIF/GLvkJEpIr8//h60a5g2Ve891M8ye2J0FkLdsihNalNSlG
-srqShEYltLjxKrN2i5nz3kX9FTvwMVhrBtD4AnuC3tAXpdVTjA69bI7xybBZ
-O7ifBamDOgwDy+CcivnZuBiAaypcnLdBwJMIShI+jdr+ydd4ewksy3xhbLpw
-Ds6XzB7k8+5oXwTY3eycbwMq7aoCDEzFp02B+g3YWK/SUBVndat9l5kwJlFl
-vS5hmVKgXfiosuWuxHErKKBzNPgV26UzJ10rbhwkvzDU1jn3vR6rXtTpzFs+
-Um138NOCn0k4LjUP//frh0L8VVohHGQoI4kPENTfhVtsweVP9bhKb8P8azHn
-H4S1f2i862yAojDX8SPCbXgByQU=
-'
+title 'Assessment: Question 2'
+question 'What is the “key” to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?'
+wrong 'A secret word only know by Caesar.'
+right 'The number of characters to shift each letter in the alphabet.'
+wrong 'The letter that occurs most often in the encrypted message.'
+wrong 'The day of the month that the encrypted message was sent.'
+teacher_markdown <<MARKDOWN
+Answer:
+
+- The number of characters to shift each letter in the alphabet.
+MARKDOWN
+
+allow_multiple_attempts true

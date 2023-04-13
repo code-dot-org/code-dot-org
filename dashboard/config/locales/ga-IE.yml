@@ -1342,6 +1342,11 @@ ga:
         duit seoladh ríomhphoist a chur le do chuntas sna [socruithe](%{user_registration})
         sula líonfaidh tú an fhoirm seo isteach.
   courses_category: Cúrsaí Iomlána
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      sports: Spórt
+      csf: Buntús na Ríomheolaíochta
   cookie_banner:
     message: Má chliceálann tú "Glacaim leis" nó má leanann tú ar aghaidh ag brabhsáil,
       glacfaidh tú le stóráil fianán ar do ríomhaire nó gléas soghluaiste.

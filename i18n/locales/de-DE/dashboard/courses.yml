@@ -82,3 +82,29 @@ de:
           description_short: Lerne grundlegende Konzepte der Informatik!
         self-paced-pl-csa-2023: {}
         tess-testing-focus-on-creativity-2023: {}
+        csd-2023:
+          title: Informatik Entdeckungen
+        focus-on-creativity-2023: {}
+        focus-on-hardware-2023: {}
+        focus-on-data-2023: {}
+        focus-on-design-with-purpose-2023: {}
+        focus-on-coding-2023: {}
+        focus-on-impact-in-society-2023: {}
+        vpl-csd-summer-ci-2023: {}
+    resources:
+      curriculum/csd/2020:
+        name: Lehrplan
+      teacher_forum/csd/2020:
+        name: Lehrer Forum
+      curriculum/csd/2017:
+        name: Lehrplan
+      teacher_forum_6/csd/2017:
+        name: Lehrer Forum
+      curriculum/csd/2019:
+        name: Lehrplan
+      teacher_forum/csd/2019:
+        name: Lehrer Forum
+      curriculum/csd/2018:
+        name: Lehrplan
+      teacher_forum_6/csd/2018:
+        name: Lehrer Forum

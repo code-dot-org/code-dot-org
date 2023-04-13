@@ -1,0 +1,23 @@
+name 'CSD U1 Match Q5_2023'
+
+height '75'
+
+description 'You are developing an app that will warn you when the air quality in your city is poor. Match the following with input, processing, and storage'
+
+question 'Measure today\'s air quality'
+question 'Retain the air quality data for each day'
+question 'Compare today\'s air quality with recent days\' air quality'
+
+answer 'Input'
+answer 'Storage'
+answer 'Processing'
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 1 Lesson 5, 6, 7**
+
+
+
+
+MARKDOWN
+
+allow_multiple_attempts true

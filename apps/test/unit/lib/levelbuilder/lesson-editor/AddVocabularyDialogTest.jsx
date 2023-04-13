@@ -26,12 +26,7 @@ describe('AddVocabularyDialog', () => {
   it('renders default props', () => {
     const wrapper = shallow(<AddVocabularyDialog {...defaultProps} />);
     expect(wrapper.contains('Add Vocabulary')).to.be.true;
-    expect(
-      wrapper
-        .find('input')
-        .first()
-        .props().disabled
-    ).to.be.false;
+    expect(wrapper.find('input').first().props().disabled).to.be.false;
   });
 
   it('closes if save is successful', () => {
@@ -120,7 +115,10 @@ describe('AddVocabularyDialog', () => {
     const wrapper = shallow(
       <AddVocabularyDialog
         {...defaultProps}
-        selectableLessons={[{id: 1, name: 'lesson1'}, {id: 2, name: 'lesson2'}]}
+        selectableLessons={[
+          {id: 1, name: 'lesson1'},
+          {id: 2, name: 'lesson2'}
+        ]}
       />
     );
     expect(wrapper.contains('Add Vocabulary')).to.be.true;
@@ -138,7 +136,10 @@ describe('AddVocabularyDialog', () => {
     const wrapper = mount(
       <AddVocabularyDialog
         {...defaultProps}
-        selectableLessons={[{id: 1, name: 'lesson1'}, {id: 2, name: 'lesson2'}]}
+        selectableLessons={[
+          {id: 1, name: 'lesson1'},
+          {id: 2, name: 'lesson2'}
+        ]}
         editingVocabulary={existingVocabulary}
       />
     );
@@ -164,11 +165,6 @@ describe('AddVocabularyDialog', () => {
       />
     );
 
-    expect(
-      wrapper
-        .find('input')
-        .at(1)
-        .props().disabled
-    ).to.be.true;
+    expect(wrapper.find('input').at(1).props().disabled).to.be.true;
   });
 });

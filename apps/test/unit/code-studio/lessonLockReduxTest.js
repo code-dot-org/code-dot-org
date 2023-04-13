@@ -325,8 +325,8 @@ describe('saveLockDialog', () => {
 describe('fullyLockedLessonMapping', () => {
   const sections = {
     // all lessons fully locked
-    '11': {
-      '1360': [
+    11: {
+      1360: [
         {
           // Note: Actual state has more fields, I've filtered to just those
           // that we care about, for simplicity
@@ -338,7 +338,7 @@ describe('fullyLockedLessonMapping', () => {
           locked: true
         }
       ],
-      '1361': [
+      1361: [
         {
           name: 'student1',
           locked: true
@@ -350,9 +350,9 @@ describe('fullyLockedLessonMapping', () => {
       ]
     },
     // no lessons fully locked
-    '12': {
+    12: {
       // some students are locked, others arent
-      '1360': [
+      1360: [
         {
           name: 'student1',
           locked: false
@@ -363,7 +363,7 @@ describe('fullyLockedLessonMapping', () => {
         }
       ],
       // entirely unlocked
-      '1361': [
+      1361: [
         {
           name: 'student1',
           locked: false
@@ -375,8 +375,8 @@ describe('fullyLockedLessonMapping', () => {
       ]
     },
     // mix of fully locked lessons and not
-    '13': {
-      '1360': [
+    13: {
+      1360: [
         {
           name: 'student1',
           locked: true
@@ -387,7 +387,7 @@ describe('fullyLockedLessonMapping', () => {
         }
       ],
       // entirely unlocked
-      '1361': [
+      1361: [
         {
           name: 'student1',
           locked: true
@@ -402,22 +402,22 @@ describe('fullyLockedLessonMapping', () => {
 
   it('maps to true for fully locked lessons', () => {
     assert.deepEqual(fullyLockedLessonMapping(sections['11']), {
-      '1360': true,
-      '1361': true
+      1360: true,
+      1361: true
     });
   });
 
   it('maps to false for non-fully locked lessons', () => {
     assert.deepEqual(fullyLockedLessonMapping(sections['12']), {
-      '1360': false,
-      '1361': false
+      1360: false,
+      1361: false
     });
   });
 
   it('works when some of our lessons are locked and others arent', () => {
     assert.deepEqual(fullyLockedLessonMapping(sections['13']), {
-      '1360': true,
-      '1361': false
+      1360: true,
+      1361: false
     });
   });
 
@@ -453,16 +453,14 @@ describe('refetchSectionLockStatus', () => {
   it('updates lessonsBySectionId', async () => {
     // Initial set up of lessonLockRedux with fakeSectionData
     store.dispatch(setSectionLockStatus(fakeSectionData));
-    let student2 = store.getState().lessonLock.lessonsBySectionId[section1Id][
-      lesson1Id
-    ][1];
+    let student2 =
+      store.getState().lessonLock.lessonsBySectionId[section1Id][lesson1Id][1];
     assert.equal(student2.locked, false);
 
     // Refetch lessonLock data with updated lock status for lesson1 student 2
     store.dispatch(refetchSectionLockStatus(section1Id, scriptId));
-    student2 = store.getState().lessonLock.lessonsBySectionId[section1Id][
-      lesson1Id
-    ][1];
+    student2 =
+      store.getState().lessonLock.lessonsBySectionId[section1Id][lesson1Id][1];
     assert.equal(student2.locked, true);
   });
 });

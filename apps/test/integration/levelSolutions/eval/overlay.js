@@ -35,7 +35,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert(solutionXml);
 
         var user = document.getElementById('user');

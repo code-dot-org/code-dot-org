@@ -26,7 +26,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         var user = document.getElementById('user');
         var circle = user.querySelector('circle');
         var fill = circle.getAttribute('fill');

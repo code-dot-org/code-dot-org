@@ -382,6 +382,9 @@ de:
 
             Wenn du ein Code.org-Ingenieur bist: Dieses Skript enthält alle Leveltypen für UI-Tests. Bitte melde dich an, um Applab Levels zu testen (Applab Levels funktionieren von Haus aus nur, wenn du angemeldet bist. Normalerweise müssen sich die Leute anmelden, aber das ist nur für ein ganzes Skript durchsetzbar und wäre für dieses Skript nervig).
           name: alldieDinge
+          lessons:
+            lesson-49:
+              name: Musik
         algebraPD2b:
           title: Informatik in Algebra PD
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
@@ -6666,6 +6669,12 @@ de:
               display_name: Inhalt
             lessonGroup-4:
               display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         hello-world-space-2022:
           title: 'Hello World: Weltraum'
         hello-world-soccer-2022:
@@ -6833,6 +6842,10 @@ de:
               display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csp-post-survey-2023:
           title: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Bewertung
         csp-playground:
           title: Grundsätze der Informatik - Spielplatz
           description_audience: Lehrpan-Autoren
@@ -6870,3 +6883,554 @@ de:
           title: Problemlösung
         testing-focus-on-creativity2:
           title: Webentwicklung
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_events:
+              display_name: Ereignisse
+          description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in
+            Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen,
+            Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu
+            bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden,
+            Familie und Lehrern teilen können.
+          student_description: Lernen Sie Informatik, indem Sie die folgenden Lektionen
+            in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen,
+            Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu
+            bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden,
+            Familie und Lehrern teilen können.
+          description_short: 'Eine Einführung in die Informatik für Leseanfänger:
+            Kombiniert das Beste aus unseren Kursen für die Vorschule und für Erstklässler.'
+          description_audience: 'Alter: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_sprites:
+              display_name: Sprites
+            lessonGroup-9:
+              display_name: Ereignisse
+            csf_loops:
+              display_name: Schleifen
+            csf_conditionals:
+              display_name: Bedingungen
+            csf_functions:
+              display_name: Funktionen
+            csf_variables:
+              display_name: Variablen
+            csf_for_loops:
+              display_name: Schleifen mit dem Wiederhol-Block
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+          description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in
+            Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen,
+            Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu
+            bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden,
+            Familie und Lehrern teilen können.
+          student_description: Lernen Sie Informatik, indem Sie die folgenden Lektionen
+            in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen,
+            Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu
+            bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden,
+            Familie und Lehrern teilen können.
+          description_short: 'Eine Einführung in die Informatik: kombiniert das Beste
+            aus unserem Grundschullehrplan für ältere SchülerInnen.'
+          description_audience: 'Alter: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_events:
+              display_name: Ereignisse
+            lessonGroup-5:
+              display_name: Projekt am Ende des Kurses
+          title: Kurs A (2021)
+          student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit.
+            Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des
+            Kurses, die mit anderen geteilt werden kann.
+          description_short: Eine Einführung in die Informatik für Leseanfänger.
+          description_audience: 'Alter: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_impacts:
+              display_name: Auswirkungen der Datenverarbeitung
+            csf_events:
+              display_name: Ereignisse
+            lessonGroup-6:
+              display_name: Projekt am Ende des Kurses
+          title: Kurs B (2021)
+          student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit.
+            Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des
+            Kurses, die mit anderen geteilt werden kann.
+          description_short: Eine Einführung in die Informatik für Leseanfänger. (Ähnlich
+            wie Kurs A, aber mit mehr Konzepttiefe.)
+          description_audience: 'Alter: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_events:
+              display_name: Ereignisse
+            csf_data:
+              display_name: Daten
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+          title: Kurs C (2021)
+          student_description: Erstellen Sie Programme mit Sequenzen, Schleifen und
+            Ereignissen. Übersetzen Sie Ihre Initialen in Binärzahlen, untersuchen
+            Sie verschiedene Techniken der Problemlösung und lernen Sie, wie Sie mit
+            Cybermobbing umgehen können. Erstellen Sie am Ende des Kurses Ihr ganz
+            eigenes Spiel oder Ihre eigene Geschichte, die Sie mit anderen teilen
+            können!
+          description_short: Lerne die Grundlagen der Informatik und erstelle Deine
+            eigene Kunst, Geschichten und Spiele.
+          description_audience: 'Alter: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sequencing:
+              display_name: Sequencing
+            csf_events:
+              display_name: Ereignisse
+            csf_loops:
+              display_name: Schleifen
+            csf_conditionals:
+              display_name: Bedingungen
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+          title: Kurs D (2021)
+          description_short: Erfahre mehr über bedingte Anweisungen. Kreiere Deine
+            eigene Kunst, Deine eigenen Spiele und sogar eine Tanzparty.
+          description_audience: 'Alter: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: Verschachtelte Schleifen
+            csf_functions:
+              display_name: Funktionen
+            csf_nested_loops:
+              display_name: Bedingungen
+            lessonGroup-7:
+              display_name: Auswirkungen der Datenverarbeitung
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+          description_short: Erlernen Sie die Grundlagen von Grafikobjekten, Nested
+            Loops und Funktionen.
+          description_audience: 'Alter: 8-12'
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Computer und Problemlösung'
+        web-development-2023:
+          title: Webentwicklung
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren
+            eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden
+            haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie
+            Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem
+            üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging,
+            Verwendung von Ressourcen und Teamarbeit.
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder und Animationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Erstellen von Spielen'
+          student_description: In Lerneinheit 3 arbeiten Sie bei der Programmierung
+            von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer
+            Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und
+            baut auf anspruchsvollere spritebasierte Spiele auf, wobei dieselben Programmierkonzepte
+            und der Designprozess eingesetzt werden, die Informatiker täglich verwenden.
+            Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives
+            Programm.
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Benutzerzentriertes Design'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: App Prototyping'
+          student_description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen
+            der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie,
+            wie Sie die Bedürfnisse anderer besser verstehen und gleichzeitig eine
+            Lösung für ein Problem entwickeln können. Die zweite Hälfte der Lerneinheit
+            besteht aus einem iterativen Teamprojekt, bei dem die Teams die Möglichkeit
+            haben, einen Bedarf zu identifizieren, der ihnen am Herzen liegt, Lösungen
+            sowohl auf Papier als auch im App-Lab prototypisch zu entwickeln und Lösungen
+            mit realen Benutzern zu testen, um Feedback zu erhalten und die Iteration
+            weiter voranzutreiben.
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datenprobleme lösen'
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme
+            zu lösen.
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten
+            bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können.
+            Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung
+            von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben
+            und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel
+            erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden
+            und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren.
+            Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess
+            für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Einführung in AppLab
+            lessonGroup-3:
+              display_name: Kapitel 1
+            lessonGroup-4:
+              display_name: Kapitel 2
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+        focus-on-creativity2-2023:
+          title: Webentwicklung
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren
+            eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden
+            haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie
+            Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem
+            üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging,
+            Verwendung von Ressourcen und Teamarbeit.
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder und Animationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Erstellen von Spielen'
+          student_description: In Lerneinheit 3 arbeiten Sie bei der Programmierung
+            von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer
+            Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und
+            baut auf anspruchsvollere spritebasierte Spiele auf, wobei dieselben Programmierkonzepte
+            und der Designprozess eingesetzt werden, die Informatiker täglich verwenden.
+            Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives
+            Programm.
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+          description_short: Programmieren mit Geräten lernen.
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Computer und Problemlösung'
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datenprobleme lösen'
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme
+            zu lösen.
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten
+            bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können.
+            Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung
+            von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben
+            und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel
+            erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden
+            und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren.
+            Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess
+            für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+          description_short: Programmieren mit Geräten lernen.
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme
+            zu lösen.
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten
+            bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können.
+            Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung
+            von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben
+            und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel
+            erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden
+            und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren.
+            Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess
+            für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datenprobleme lösen'
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme
+            zu lösen.
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten
+            bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können.
+            Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung
+            von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben
+            und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel
+            erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden
+            und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren.
+            Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess
+            für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Einführung in AppLab
+            lessonGroup-3:
+              display_name: Kapitel 1
+            lessonGroup-4:
+              display_name: Kapitel 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+        focus-on-design-with-purpose2-2023:
+          title: Webentwicklung
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren
+            eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden
+            haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie
+            Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem
+            üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging,
+            Verwendung von Ressourcen und Teamarbeit.
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Benutzerzentriertes Design'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: App Prototyping'
+          student_description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen
+            der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie,
+            wie Sie die Bedürfnisse anderer besser verstehen und gleichzeitig eine
+            Lösung für ein Problem entwickeln können. Die zweite Hälfte der Lerneinheit
+            besteht aus einem iterativen Teamprojekt, bei dem die Teams die Möglichkeit
+            haben, einen Bedarf zu identifizieren, der ihnen am Herzen liegt, Lösungen
+            sowohl auf Papier als auch im App-Lab prototypisch zu entwickeln und Lösungen
+            mit realen Benutzern zu testen, um Feedback zu erhalten und die Iteration
+            weiter voranzutreiben.
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+          description_short: Programmieren mit Geräten lernen.
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+        focus-on-coding2-2023:
+          title: Webentwicklung
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren
+            eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden
+            haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie
+            Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem
+            üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging,
+            Verwendung von Ressourcen und Teamarbeit.
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder und Animationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Erstellen von Spielen'
+          student_description: In Lerneinheit 3 arbeiten Sie bei der Programmierung
+            von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer
+            Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und
+            baut auf anspruchsvollere spritebasierte Spiele auf, wobei dieselben Programmierkonzepte
+            und der Designprozess eingesetzt werden, die Informatiker täglich verwenden.
+            Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives
+            Programm.
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+          description_short: Programmieren mit Geräten lernen.
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Benutzerzentriertes Design'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: App Prototyping'
+          student_description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen
+            der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie,
+            wie Sie die Bedürfnisse anderer besser verstehen und gleichzeitig eine
+            Lösung für ein Problem entwickeln können. Die zweite Hälfte der Lerneinheit
+            besteht aus einem iterativen Teamprojekt, bei dem die Teams die Möglichkeit
+            haben, einen Bedarf zu identifizieren, der ihnen am Herzen liegt, Lösungen
+            sowohl auf Papier als auch im App-Lab prototypisch zu entwickeln und Lösungen
+            mit realen Benutzern zu testen, um Feedback zu erhalten und die Iteration
+            weiter voranzutreiben.
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datenprobleme lösen'
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme
+            zu lösen.
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten
+            bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können.
+            Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung
+            von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben
+            und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel
+            erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden
+            und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren.
+            Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess
+            für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Einführung in AppLab
+            lessonGroup-4:
+              display_name: Kapitel 2
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+          description_short: Programmieren mit Geräten lernen.
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        vpl-csd-ci-1:
+          title: 'Modul 1: Vorbereitung auf den Unterricht Problemlösung und Informatik'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf
+            den Unterricht der Code.org-Stunde \"Problemlösung und Informatik\" vor.
+            \n\n**Aktivitäten in diesem professionellen Lernmodul:**\n\n– Sie erhalten
+            eine Einführung in das Problemlösen und die Informatik.\n– Sie üben die
+            wichtigsten Konzepte der Unterrichtseinheit.\n– Sie erkunden die Projekte
+            am Ende des Kapitels.\n\n**Geschätzte Dauer:** 30 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich
+            auf den Unterricht der Code.org-Stunde \"Problemlösung und Informatik\"
+            vor. \n\n**Aktivitäten in diesem professionellen Lernmodul:**\n\n– Sie
+            erhalten eine Einführung in das Problemlösen und die Informatik.\n– Sie
+            üben die wichtigsten Konzepte der Unterrichtseinheit.\n– Sie erkunden
+            die Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 30 Minuten"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Webentwicklung unterrichten
+          title: 'Modul 2: Vorbereitung auf das Unterrichten der Webentwicklung'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf
+            die Code.org-Stunde Webentwicklung vor. \n\n**Aktivitäten dieses professionellen
+            Lernmoduls:**\n\n– Einführung in die Webentwicklung.\n– Üben der wichtigsten
+            Konzepte der Lerneinheit.\n– Beschäftigung mit Web Lab.\n– Erkunden der
+            Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich
+            auf die Code.org-Stunde Webentwicklung vor. \n\n**Aktivitäten dieses professionellen
+            Lernmoduls:**\n\n– Einführung in die Webentwicklung.\n– Üben der wichtigsten
+            Konzepte der Lerneinheit.\n– Beschäftigung mit Web Lab.\n– Erkunden der
+            Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vorbereitung auf das Unterrichten von interaktiven Animationen
+                und Spielen
+          title: 'Modul 3: Vorbereitung auf das Unterrichten von interaktiven Animationen
+            und Spielen '
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf
+            den Unterricht der Code.org-Stunde Interaktive Animationen und Spiele
+            vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in interaktive Animationen und Spiele.\n– Üben der wichtigsten Konzepte
+            der Unterrichtseinheit.\n– Beschäftigung mit Game Lab.\n– Erkunden der
+            Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich
+            auf den Unterricht der Code.org-Stunde Interaktive Animationen und Spiele
+            vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in interaktive Animationen und Spiele.\n– Üben der wichtigsten Konzepte
+            der Unterrichtseinheit.\n– Beschäftigung mit Game Lab.\n– Erkunden der
+            Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+        vpl-csd-ci-4:
+          title: " Modul 4: Vorbereitung auf das Unterrichten des Design-Prozesses"
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf
+            den Unterricht der Code.org-Stunde \"Design-Prozess\" vor. \n\n**Aktivitäten
+            dieses professionellen Lernmoduls:**\n\n– Eine Einführung in den Designprozess.\n–
+            Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit App Lab.\n–
+            Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90
+            Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich
+            auf den Unterricht der Code.org-Stunde \"Design-Prozess\" vor. \n\n**Aktivitäten
+            dieses professionellen Lernmoduls:**\n\n– Eine Einführung in den Designprozess.\n–
+            Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit App Lab.\n–
+            Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90
+            Minuten"
+        vpl-csd-ci-5:
+          title: 'Modul 5: Vorbereitung auf den Unterricht Fakten und Gesellschaft'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf
+            den Unterricht der Code.org-Stunde \"Daten und Gesellschaft\" vor. \n\n**Aktivitäten
+            dieses professionellen Lernmoduls:**\n\n– Einführung in das Thema \"Daten
+            und Gesellschaft.\n– Üben der wichtigsten Konzepte der Stunde.\n– Erkunden
+            der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich
+            auf den Unterricht der Code.org-Stunde \"Daten und Gesellschaft\" vor.
+            \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in das Thema \"Daten und Gesellschaft.\n– Üben der wichtigsten Konzepte
+            der Stunde.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte
+            Dauer:** 90 Minuten"
+        vpl-csd-ci-7:
+          title: 'Modul 7: Vorbereitung auf den Unterricht KI und maschinelles Lernen'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf
+            den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor.
+            \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in KI und maschinelles Lernen.\n– Üben der wichtigsten Konzepte der Einheit.\n–
+            Beschäftigung mit AI Lab und App Lab.\n– Erkunden der Projekte am Ende
+            des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich
+            auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\"
+            vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in KI und maschinelles Lernen.\n– Üben der wichtigsten Konzepte der Einheit.\n–
+            Beschäftigung mit AI Lab und App Lab.\n– Erkunden der Projekte am Ende
+            des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben

@@ -1,0 +1,20 @@
+name 'CSD U1 Match Q6_2023'
+
+height '75'
+
+description 'Five students are planning a block party. Match what the need to do with a step of the Problem Solving Process'
+
+question 'Prepare'
+question 'Reflect'
+question 'Try'
+question 'Define'
+
+answer 'Decide what activities will be at the block party, what food, and who to invite'
+answer 'Discuss what went well and what could be improved'
+answer 'Host the block party'
+answer 'Decide the purpose of the block party'
+teacher_markdown <<MARKDOWN
+**Content: Unit 1 Lesson 2**
+MARKDOWN
+
+allow_multiple_attempts true

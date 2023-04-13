@@ -1,0 +1,10 @@
+name 'CSA U7L7-L1_2023'
+title 'Check for Understanding'
+
+wrong 'wrong'
+wrong 'wrong'
+right 'right'
+wrong 'wrong'
+wrong 'wrong'
+
+allow_multiple_attempts true

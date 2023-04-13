@@ -1154,6 +1154,15 @@ mr:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: layout {GROUP} as a {FORMAT}
+        options:
+          FORMAT:
+            '"border"': सीमारेषा
+            '"circle"': वर्तुळ
+            '"grid"': ग्रिड
+            '"row"': ओळ
+            '"column"': स्तंभ
       gamelab_locationAt:
         text: 'स्थान x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1180,6 +1189,14 @@ mr:
             '"spiral"': सर्पिलाकार
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': सीमारेषा
+            '"circle"': वर्तुळ
+            '"grid"': ग्रिड
+            '"row"': ओळ
+            '"column"': स्तंभ
       gamelab_makeNumSprites:
         text: "{NUM} नवीन {ANIMATION_NAME} स्प्राइट्स तयार करा"
       gamelab_makeProjectile:
@@ -1592,6 +1609,10 @@ mr:
         text: "{SPRITE} चे x समन्वयक"
       gamelab_yLocationOf:
         text: "{SPRITE} चे y समन्वयक"
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} {LOCATION} कडे सरकणे"
+      KatiesBlocks_tumbling:
+        text: टंबलिंग
       Mikelab_addBehaviorSimple:
         text: स्प्राइट {SPRITE} सुरू होते {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2146,6 +2167,8 @@ mr:
             new Behavior(wobbling, []): डगमगणे
             new Behavior(wandering, []): भटकणे
             new Behavior(patrolling, []): गस्त घालणे
+      adaptations_startFollowing:
+        text: "{SPRITE} {TARGET} चे अनुसरण करण्यास सुरवात करते"
       binary_move:
         options:
           DIR:
@@ -2225,5 +2248,3 @@ mr:
         text: हेडिंग सेट करा {HEADING}
       storylab_setSubheading:
         text: सबहेडिंग सेट करा {SUBHEADING}
-      validation_validatedBackground:
-        text: "{IMG} वर पार्श्वभूमी सेट करा"

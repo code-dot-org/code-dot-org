@@ -167,13 +167,13 @@ export default class AnimationUpload extends React.Component {
         var reader = new FileReader();
         //Read the contents of Image File.
         reader.readAsDataURL(file);
-        reader.onload = function(e) {
+        reader.onload = function (e) {
           //Initiate the JavaScript Image object.
           var image = new Image();
           //Set the Base64 string return from FileReader as source.
           image.src = e.target.result;
           //Validate the File Height and Width.
-          image.onload = function() {
+          image.onload = function () {
             AnimationUpload.setState({
               frameSize: {x: this.width, y: this.height}
             });

@@ -82,7 +82,8 @@ CodeReviewGroupsStatusToggle.propTypes = {
   setCodeReviewExpiration: PropTypes.func
 };
 
-export const UnconnectedCodeReviewGroupsStatusToggle = CodeReviewGroupsStatusToggle;
+export const UnconnectedCodeReviewGroupsStatusToggle =
+  CodeReviewGroupsStatusToggle;
 
 export default connect(
   state => ({

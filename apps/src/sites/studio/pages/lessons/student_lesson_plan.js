@@ -12,7 +12,7 @@ import {registerReducers} from '@cdo/apps/redux';
 import StudentLessonOverview from '@cdo/apps/templates/lessonOverview/StudentLessonOverview';
 import {retrieveProgress} from '@cdo/apps/code-studio/progress';
 
-$(document).ready(function() {
+$(document).ready(function () {
   displayLessonOverview();
   prepareExpandableImageDialog();
 });

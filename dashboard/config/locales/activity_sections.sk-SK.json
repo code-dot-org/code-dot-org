@@ -8212,7 +8212,7 @@
           "description": "Doteraz sme mohli ovládať len polohu a animáciu nášho sprajtu, ale dnes sa naučíme, ako meniť ďalšie vlastnosti sprajtu, aby sme mohli vytvárať ešte lepšie programy."
         },
         "430ce76b-c12b-45ff-8ef7-37ce4833bf2f": {
-          "description": "**Otázka dňa: Ako môžeme použiť vlastnosti Spartu na zmenu jeho vzhľadu na obrazovke?**"
+          "description": "**Otázka dňa: Ako môžeme zmeniť vzhľad sprajtu na obrazovke pomocou jeho vlastností?**"
         },
         "a748f14d-ac72-4518-affc-f8afdbd5f545": {
           "description": "**Premostenie:** Požiadajte žiakov, aby si otvorili Code Studio.",
@@ -8625,7 +8625,7 @@
         },
         "217f0a53-2dbd-4305-8f50-4728d7679aee": {
           "name": "Prijímanie vstupov",
-          "description": "**Diskutujte:** Všetky programy, ktoré ste doteraz napísali, bežia bez akéhokoľvek vstupu od používateľa. Ako by mohlo pridanie interakcie používateľa zvýšiť užitočnosť, efektívnosť alebo zábavnosť vašich programov? Ako by mohol používateľ poskytnúť vstup do vášho programu?",
+          "description": "**Diskutujte:** Všetky programy, ktoré sme doteraz napísali, bežia bez akéhokoľvek vstupu od používateľa. Ako by mohlo pridanie interakcie používateľa zvýšiť užitočnosť, efektívnosť alebo zábavnosť našich programov? Ako by mohol používateľ poskytnúť vstup do nášho programu?",
           "tips": [
             "Cieľom nie je podrobne sa zaoberať technickými špecifikami toho, ako môžu programy prijímať vstupy (k tomu sa žiaci dostanú v online časti lekcie), ale skôr primäť žiakov k tomu, aby premýšľali o tom, ako by vstupy používateľov mohli zmeniť programy, ktoré vytvorili. Vyzvite žiakov, aby si spomenuli na prvú lekciu a na rôzne počítačové vstupy a výstupy, ktoré vtedy skúmali. Ktoré vstupy by boli najužitočnejšie pre typy programov, ktoré vytvárali?"
           ]
@@ -26973,7 +26973,7 @@
           "description": "Doteraz sme mohli ovládať len polohu a animáciu nášho sprajtu, ale dnes sa naučíme, ako meniť ďalšie vlastnosti sprajtu, aby sme mohli vytvárať ešte lepšie programy."
         },
         "eba90858-374c-49fd-8bf7-391446b7b506": {
-          "description": "**Otázka dňa: Ako môžeme použiť vlastnosti Spartu na zmenu jeho vzhľadu na obrazovke?**"
+          "description": "**Otázka dňa: Ako môžeme zmeniť vzhľad sprajtu na obrazovke pomocou jeho vlastností?**"
         },
         "903979dd-20fe-4394-8663-c67a84bcd0d7": {
           "description": "**Skupiny:** Rozdeľte žiakov do dvojíc. \n\n**Premostenie:** Požiadajte žiakov, aby otvorili Code Studio."
@@ -27379,7 +27379,7 @@
         },
         "0ee8704d-9ad3-4a31-816f-555813322a78": {
           "name": "Prijímanie vstupov",
-          "description": "**Diskutujte:** Všetky programy, ktoré ste doteraz napísali, bežia bez akéhokoľvek vstupu od používateľa. Ako by mohlo pridanie interakcie používateľa zvýšiť užitočnosť, efektívnosť alebo zábavnosť vašich programov? Ako by mohol používateľ poskytnúť vstup do vášho programu?",
+          "description": "**Diskutujte:** Všetky programy, ktoré sme doteraz napísali, bežia bez akéhokoľvek vstupu od používateľa. Ako by mohlo pridanie interakcie používateľa zvýšiť užitočnosť, efektívnosť alebo zábavnosť našich programov? Ako by mohol používateľ poskytnúť vstup do nášho programu?",
           "tips": [
             "Cieľom nie je podrobne sa zaoberať technickými špecifikami toho, ako môžu programy prijímať vstupy (k tomu sa žiaci dostanú v online časti lekcie), ale skôr primäť žiakov k tomu, aby premýšľali o tom, ako by vstupy používateľov mohli zmeniť programy, ktoré vytvorili. Vyzvite žiakov, aby si spomenuli na prvú lekciu a na rôzne počítačové vstupy a výstupy, ktoré vtedy skúmali. Ktoré vstupy by boli najužitočnejšie pre typy programov, ktoré vytvárali?"
           ]

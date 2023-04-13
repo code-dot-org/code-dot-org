@@ -35,9 +35,10 @@ export const darkTheme = EditorView.theme(
       caretColor: cursor
     },
     '&.cm-focused .cm-cursor': {borderLeftColor: cursor},
-    '&.cm-focused .cm-selectionBackground, .cm-selectionBackground, ::selection': {
-      backgroundColor: selection
-    },
+    '&.cm-focused .cm-selectionBackground, .cm-selectionBackground, ::selection':
+      {
+        backgroundColor: selection
+      },
     '.cm-panels': {backgroundColor: darkBackground, color: color.lighter_gray},
     '.cm-panels button': {color: color.lightest_gray},
     '.cm-panels.cm-panels-top': {borderBottom: '2px solid black'},

@@ -25,3 +25,5 @@ Going through the code line by line:
 * However, since 5 is not less than 5, it will not enter the loop
 * The value of _a_ is then displayed, which equals 5
 MARKDOWN
+
+allow_multiple_attempts true

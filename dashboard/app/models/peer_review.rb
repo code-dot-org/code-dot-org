@@ -216,9 +216,10 @@ class PeerReview < ApplicationRecord
 
   def self.get_potential_reviews(script, user)
     where(
-      script: script,
+      script: script
     ).where.not(
-      submitter: user,
+      submitter: user
+    ).where.not(
       level_source_id: PeerReview.where(reviewer: user, script: script).pluck(:level_source_id)
     )
   end

@@ -18,6 +18,8 @@ describe('LessonLockDataApi', () => {
   let useGetLockStateReturnValue = {
     current: null
   };
+  // TODO: define these props
+  // eslint-disable-next-line react/prop-types
   const UseGetLockStateHarness = ({unitId, lessonId, sectionId}) => {
     useGetLockStateReturnValue.current = useGetLockState(
       unitId,

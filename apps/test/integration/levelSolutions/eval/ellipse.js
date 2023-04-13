@@ -33,7 +33,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         var user = document.getElementById('user');
         var ellipse = user.querySelector('ellipse');
         var fill = ellipse.getAttribute('fill');
