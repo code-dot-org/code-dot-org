@@ -35,9 +35,9 @@ theme: responsive_full_width
     %div.col-50{style: "float: left; margin-top: 22px"}
       %figure.video-responsive{style: "max-width: unset"}
         %div
-          %iframe{src: "https://www.youtube-nocookie.com/embed/dWRnCXbUDgA", allowFullScreen: 'true', frameborder: '0', title: "Why AI Matters with Deb Raji"}
+          %iframe{src: "https://www.youtube-nocookie.com/embed/dWRnCXbUDgA", allowFullScreen: 'true', frameborder: '0', title: hoc_s(:ai_intro_video_title)}
         %figcaption
-          %a{href: "#ai-videos"}=hoc_s(:ai_intro_video_caption)
+          %a{href: "#ai-videos"}=hoc_s(:ai_intro_video_caption_link)
     %div.flex-container.col-45{style: "float: right"}
       %ul.icon-bullet-list.full-width{style: "margin-top: 0"}
         %li
@@ -87,7 +87,7 @@ theme: responsive_full_width
         %img{src: "/images/ai/ai-curriclum-machine-learning.png", alt: ""}
         %p{style: "height: 105px"}=hoc_s(:ai_curriculum_desc_01)
         %p=hoc_s(:ai_curriculum_duration_01)
-        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_01)}}
+        %a{href: CDO.studio_url("/s/aiml"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_01)}}
           =hoc_s(:call_to_action_explore_unit)
       .action-block.action-block--one-col
         %p.overline=hoc_s(:ai_curriculum_grades_02)
@@ -95,7 +95,7 @@ theme: responsive_full_width
         %img{src: "/images/ai/ai-curriclum-ethics.png", alt: ""}
         %p{style: "height: 105px"}=hoc_s(:ai_curriculum_desc_02)
         %p=hoc_s(:ai_curriculum_duration_02)
-        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_02)}}
+        %a{href: CDO.studio_url("/s/ai-ethics-2021/lessons/1"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_02)}}
           =hoc_s(:call_to_action_view_lesson_plan)
       .action-block.action-block--one-col
         %p.overline=hoc_s(:ai_curriculum_grades_03)
@@ -103,7 +103,7 @@ theme: responsive_full_width
         %img{src: "/images/ai/ai-curriclum-oceans.png", alt: ""}
         %p{style: "height: 105px"}=hoc_s(:ai_curriculum_desc_03)
         %p=hoc_s(:ai_curriculum_duration_03)
-        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_03)}}
+        %a{href: CDO.studio_url("/s/oceans"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_03)}}
           =hoc_s(:call_to_action_try_activity)
 
 %section.bg-neutral-light
@@ -117,7 +117,6 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:ai_pl_heading)
     .action-block.action-block--two-col
-      %img{src: "/images/ai/ai-professional-learning.png", alt: "", class: "col-50"}
       .text-wrapper.col-50
         %h3.heading-sm=hoc_s(:ai_pl_subheading)
         %ul{style: "margin-top: 1.5em;"}
@@ -128,6 +127,7 @@ theme: responsive_full_width
           %li=hoc_s(:ai_pl_list_05)
         %a{href: CDO.studio_url("/s/self-paced-pl-csd5-2022"), class: "link-button"}
           =hoc_s(:call_to_action_self_paced_pl)
+      %img{src: "/images/ai/ai-professional-learning.png", alt: "", class: "col-50"}
     .clear
 
 = view :section_divider_line

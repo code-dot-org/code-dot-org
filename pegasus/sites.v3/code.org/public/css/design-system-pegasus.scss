@@ -654,6 +654,31 @@ form {
       }
     }
 
+    .with-image {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media screen and (max-width: $width-sm) {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      img {
+        width: 150px;
+        height: 150px;
+        margin-right: 3em;
+
+        @media screen and (max-width: $width-md) {
+          display: block;
+        }
+
+        @media screen and (max-width: $width-sm) {
+          margin-right: 0;
+        }
+      }
+    }
+
     p {
       font-family: $barlowSemiCondensed-medium, sans-serif;
       font-size: 1.25em;

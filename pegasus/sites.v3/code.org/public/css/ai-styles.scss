@@ -71,11 +71,11 @@
   }
 }
 
-.video-series {
+.video-series,.video {
 
   & > div.col-50 {
     padding: 0 !important;
-    margin: 0 0 1em 0 !important;
+    margin: 1em 0 0 !important;
     width: 49%;
 
     .video_caption_link {
@@ -93,10 +93,23 @@
       }
     }
 
-
-
     @media screen and (max-width: $width-sm) {
       width: 100%;
     }
+  }
+}
+
+.video {
+
+  & > div.col-50 {
+    margin: 22px 0 16px !important;
+
+    @media screen and (max-width: $width-md) {
+      width: 100%;
+    }
+  }
+
+  .video_caption_link {
+    margin: 0.5em !important;
   }
 }
