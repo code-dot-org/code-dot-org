@@ -1150,7 +1150,7 @@ And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   press_keys(element, key)
 end
 
-And(/^I press keys "([^"]*)" for element "([^"]*)" and wait until text appears$/) do |key, selector|
+And(/^I press keys "([^"]*)" for element "([^"]*)" and wait until value changes$/) do |key, selector|
   element = @browser.find_element(:css, selector)
   press_keys(element, key)
   wait_short_until do

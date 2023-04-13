@@ -84,7 +84,7 @@ Feature: App Lab Scenarios
     And I drag a TEXT_INPUT into the app
     When I navigate to the shared version of my project
     And I wait until element ".screen > input" is visible
-    And I press keys "GLULX" for element ".screen > input" and wait until text appears
+    And I press keys "GLULX" for element ".screen > input" and wait until value changes
     Then element ".screen > input" has value "GLULX"
 
   @no_mobile
