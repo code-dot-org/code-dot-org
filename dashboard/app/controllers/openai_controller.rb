@@ -13,8 +13,8 @@ class OpenaiController < ApplicationController
 
     # Build the request body
     data = {
-      model: 'gpt-4',
-      # model: 'gpt-3.5-turbo',
+      # model: 'gpt-4',
+      model: 'gpt-3.5-turbo',
       temperature: 0,
       messages: [
         {role: 'system', content: SYSTEM_PROMPT},
@@ -26,7 +26,7 @@ class OpenaiController < ApplicationController
     puts "Request headers: #{headers}"
 
     # Send the request to the API endpoint
-    response = HTTParty.post(url, headers: headers, body: data.to_json)
+    response = HTTParty.post(url, headers: headers, body: data.to_json, timeout: 120)
 
     puts "Response status: #{response.code}"
     puts "Response body: #{response.body}"
