@@ -1145,13 +1145,11 @@ def convert_keys(keys)
   keys.chars.map {|k| k == "\n" ? :enter : k}
 end
 
-# Known issue: IE does not register the key presses in this step.
-# Add @no_ie tag to your scenario to skip IE when using this step.
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   element = @browser.find_element(:css, selector)
   press_keys(element, key)
-  is_special_case = key.start_with?(":") || selector == ".ace_text-input"
-  check_key_values = !is_special_case
+  only_alphanumeric_backslash = key.gsub(/[^0-9a-z \\]/i, '') == key
+  check_key_values = only_alphanumeric_backslash && selector != ".ace_text-input"
   if check_key_values
     wait_short_until do
       element_text = element.attribute("value")
