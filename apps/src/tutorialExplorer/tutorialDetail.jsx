@@ -2,7 +2,7 @@
  */
 
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {createRef} from 'react';
 import shapes from './shapes';
 import {getTagString, getTutorialDetailString, DoNotShow} from './util';
 import Image from './image';
@@ -20,12 +20,20 @@ export default class TutorialDetail extends React.Component {
     grade: PropTypes.string.isRequired
   };
 
+  constructor(props) {
+    super(props);
+    this.containerRef = createRef();
+  }
+
   componentDidMount() {
     document.addEventListener('keydown', this.onKeyDown);
+    document.addEventListener('focusin', this.focusIn);
+    this.startingScroll = [window.scrollX, window.scrollY];
   }
 
   componentWillUnmount() {
     document.removeEventListener('keydown', this.onKeyDown);
+    document.removeEventListener('focusin', this.focusIn);
   }
 
   onKeyDown = ({keyCode}) => {
@@ -39,6 +47,28 @@ export default class TutorialDetail extends React.Component {
       this.props.changeTutorial(-1);
     } else if (keyCode === 39) {
       this.props.changeTutorial(1);
+    }
+  };
+
+  focusIn = event => {
+    if (window.scrollY !== this.startingScroll[1]) {
+      console.log('GONNA SCROLL MY WINDOW!');
+      window.scrollTo(...this.startingScroll);
+    }
+    if (this.containerRef.current) {
+      const inModal = this.containerRef.current.contains(event.target);
+      if (!inModal) {
+        const firstButton =
+          this.containerRef.current.getElementsByTagName('button')[0];
+        const links = this.containerRef.current.getElementsByTagName('a');
+        const lastLink = links[links.length - 1];
+        console.log('LL : ', lastLink);
+        if (event.relatedTarget === firstButton) {
+          lastLink.focus();
+        } else {
+          firstButton.focus();
+        }
+      }
     }
   };
 
@@ -119,7 +149,11 @@ export default class TutorialDetail extends React.Component {
     );
 
     return (
-      <div id="tutorialPopupFullWidth" style={styles.popupFullWidth}>
+      <div
+        id="tutorialPopupFullWidth"
+        style={styles.popupFullWidth}
+        ref={this.containerRef}
+      >
         <div
           className="modal"
           id="tutorialPopup"
@@ -200,7 +234,11 @@ export default class TutorialDetail extends React.Component {
                       rel="noopener noreferrer"
                       onClick={this.startTutorialClicked}
                     >
-                      <button type="button" style={{marginTop: 20}}>
+                      <button
+                        type="button"
+                        style={{marginTop: 20}}
+                        tabIndex={-1}
+                      >
                         {i18n.startButton()}
                       </button>
                     </a>
