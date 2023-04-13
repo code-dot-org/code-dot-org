@@ -76,7 +76,7 @@ module Services
 
       keys = result.named_captures
       course_version = CourseVersion.joins(:course_offering).
-        find_by(key: keys["CourseVersion"], "course_offerings.key": keys["CourseOffering"], content_root_type: ["Unit", "UnitGroup"])
+        where(key: keys["CourseVersion"], "course_offerings.key": keys["CourseOffering"]).last
       return Resource.find_by(key: keys["Resource"], course_version: course_version)
     end
 
