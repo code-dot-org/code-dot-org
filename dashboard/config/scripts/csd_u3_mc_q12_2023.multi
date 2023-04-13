@@ -9,3 +9,5 @@ wrong 'No change, the program already animates the fish to move left'
 teacher_markdown <<MARKDOWN
 **Content: Unit 3 Lesson 12**
 MARKDOWN
+
+allow_multiple_attempts true

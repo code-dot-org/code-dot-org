@@ -59,7 +59,7 @@ markdown <<MARKDOWN
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 <summary style="font-size: 1.5em; font-weight: bold;">❗ Step 5 - Expected Fail Message!</summary>
- <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+ <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:20px;">
     <p><img src="https://images.code.org/4c4dd175dd548ef9fc95741cf17df2e8-image-1681159311256.png" style="width:500px; margin:5px 20px 0px 10px; float:left;">
 
 #### This process will **fail on the Board Connectable step** (this is expected!) - press the **Update micro:bit** button.

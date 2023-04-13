@@ -8,4 +8,4 @@ markdown <<MARKDOWN
 The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar **once**. 
 MARKDOWN
 
-allow_multiple_attempts false
+allow_multiple_attempts true

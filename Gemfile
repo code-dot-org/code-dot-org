@@ -61,7 +61,7 @@ gem 'rack-mini-profiler'
 group :development do
   gem 'annotate', '~> 3.1.1'
   gem 'aws-google', '~> 0.2.0'
-  gem 'web-console'
+  gem 'web-console', '~> 4.2.0'
 end
 
 # Rack::Cache middleware used in development/test;
@@ -122,7 +122,7 @@ gem 'nakayoshi_fork'
 # Ref: https://github.com/puma/puma/pull/1646
 gem 'puma', github: 'wjordan/puma', branch: 'debugging'
 gem 'puma_worker_killer'
-gem 'unicorn', '~> 5.1.0'
+gem 'raindrops'
 
 gem 'chronic', '~> 0.10.2'
 

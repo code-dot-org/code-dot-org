@@ -5,14 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Introducing Sprite Lab
 
-##### Sprite Lab is one learning tool students will use with
-
-* ##### Coding with Poetry
-* ##### Coding Interactive Maps
-* ##### Coding Time Capsules
-* ##### Modeling Animal Adaptations
-
-##### ...and more!
+##### Sprite Lab is a learning tool that allows students to learn about sprites, sprite behaviors, and events.
 
 ## You will:
 

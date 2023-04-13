@@ -5,4 +5,4 @@ wrong 'The loop does not run long enough for Laurel to get to all of the treasur
 right 'Laurel turns the wrong way *and* the loop doesn\'t run long enough for Laurel to get all of the treasure.', feedback: 'Correct!'
 wrong 'I don\'t know.', feedback: 'Laurel turns the wrong way *and* the loop doesn\'t run long enough for Laurel to get all of the treasure.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
