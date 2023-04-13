@@ -44,6 +44,7 @@ const CheckForUnderstanding = ({
       levelId: level.id,
       levelName: level.name,
       levelType: level.type,
+      sectionSelected: selectedSection ? true : false,
       ...scriptData.reportingData
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
