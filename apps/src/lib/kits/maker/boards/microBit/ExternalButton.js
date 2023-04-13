@@ -22,7 +22,7 @@ export default function ExternalButton(board) {
   // Add a read-only `isPressed` property
   Object.defineProperties(this, {
     isPressed: {
-      get: function() {
+      get: function () {
         return !this.board.mb.digitalInput[this.board.pin];
       }
     }

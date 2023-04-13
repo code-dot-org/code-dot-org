@@ -7,7 +7,7 @@ wrong '`[5, 1, 3, 7, 0]`'
 wrong '`[7, 3, 1, 5, 0]`'
 
 markdown <<MARKDOWN
-Assume that `nums` has been initialized with the following `Integer` objects: `[0, 5, 1, 3, 7]`. What is the value of `nums` after `mystery(5)` executes?
+Assume that `numList` has been initialized with the following `Integer` objects: `[0, 5, 1, 3, 7]`. What is the value of `numList` after `mystery(5)` executes?
 
 ```
 private ArrayList<Integer> numList;
@@ -20,3 +20,5 @@ public void mystery(int n) {
 }
 ```
 MARKDOWN
+
+allow_multiple_attempts true

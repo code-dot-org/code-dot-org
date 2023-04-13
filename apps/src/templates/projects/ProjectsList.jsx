@@ -105,9 +105,7 @@ class ProjectsList extends React.Component {
     const type = encodeURIComponent(rowData.type);
     const channel = encodeURIComponent(rowData.channel);
 
-    const url = `${
-      this.props.studioUrlPrefix
-    }/projects/${type}/${channel}/view`;
+    const url = `${this.props.studioUrlPrefix}/projects/${type}/${channel}/view`;
     return (
       <a
         href={url}

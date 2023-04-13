@@ -12,3 +12,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 NOTE: Doubling the number of bits would obviously make room for more student IDs, but it's inaccurate to say that that doubles the number of possible IDs.  If the number of bits went from 8 to 16, it's 256 TIMES AS MANY possible ids.  8 bits = 256 values and 16 bits = 65,536 IDs.  
 MARKDOWN
+
+allow_multiple_attempts true

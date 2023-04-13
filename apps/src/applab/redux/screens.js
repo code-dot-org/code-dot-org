@@ -91,7 +91,7 @@ function importReducer(state = new ImportProjectState(), action) {
   }
 }
 
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   state = screensReducer(state, action);
   return state.set('importProject', importReducer(state.importProject, action));
 }

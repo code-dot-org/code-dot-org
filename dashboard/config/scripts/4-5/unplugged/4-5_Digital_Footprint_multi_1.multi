@@ -10,3 +10,5 @@ right 'Your favorite food'
 wrong 'Your address'
 wrong "Your parent's credit card number"
 
+
+allow_multiple_attempts true

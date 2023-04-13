@@ -14,3 +14,4 @@ height '100'
 markdown <<MARKDOWN
 
 MARKDOWN
+allow_multiple_attempts true

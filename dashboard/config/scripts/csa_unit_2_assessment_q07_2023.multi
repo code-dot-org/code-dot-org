@@ -46,3 +46,5 @@ z = 6.0 - 5.0
 
 Finally, we evaluate the remaining expression to get the result `1.0`.
 MARKDOWN
+
+allow_multiple_attempts true

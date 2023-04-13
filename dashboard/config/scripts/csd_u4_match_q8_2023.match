@@ -1,0 +1,23 @@
+name 'CSD U4 Match Q8_2023'
+
+height '75'
+
+description 'Match each parameter of the `onEvent()` function to its role. ![](https://images.code.org/db79b580c5f6af0bbad38c1dc78a0711-CSDunit4events.png)'
+
+question '`"home_search_btn"`'
+question '`"click"`'
+question '![](https://images.code.org/11ffa02d8361378fb20f0982ad0663cb-CSDunit4events1.png)'
+
+answer 'The element id'
+answer 'The type of event'
+answer 'What happens on this event'
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 4 Lesson 16**
+
+
+
+
+MARKDOWN
+
+allow_multiple_attempts true

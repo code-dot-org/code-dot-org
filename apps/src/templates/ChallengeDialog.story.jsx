@@ -27,8 +27,7 @@ StartingDialog.args = {
   avatar: '/blockly/media/skins/harvester/static_avatar.png',
   cancelButtonLabel: 'Skip for now',
   primaryButtonLabel: "I'm Ready!",
-  text:
-    'Challenge Puzzles are lessons designed to push your skills to a new level.',
+  text: 'Challenge Puzzles are lessons designed to push your skills to a new level.',
   title: 'Challenge Puzzle!',
   isIntro: true
 };
@@ -38,8 +37,7 @@ StartingDialogWithLargeAvatar.args = {
   avatar: '/blockly/media/spritelab/avatar.png',
   cancelButtonLabel: 'Skip for now',
   primaryButtonLabel: "I'm Ready!",
-  text:
-    'Challenge Puzzles are lessons designed to stretch your brain! Just do the best that you can!',
+  text: 'Challenge Puzzles are lessons designed to stretch your brain! Just do the best that you can!',
   title: 'Challenge Puzzle!',
   isIntro: true
 };
@@ -50,8 +48,7 @@ StartingDialogIfPreviouslyCompleted.args = {
   cancelButtonLabel: 'Skip for now',
   complete: true,
   primaryButtonLabel: "I'm Ready!",
-  text:
-    'Challenge Puzzles are lessons designed to push your skills to a new level.',
+  text: 'Challenge Puzzles are lessons designed to push your skills to a new level.',
   title: 'Challenge Puzzle!',
   isIntro: true
 };
@@ -63,8 +60,7 @@ PassedDialog.args = {
   primaryButtonLabel: 'Continue',
   cancelButtonLabel: 'Try again',
   showPuzzleRatingButtons: true,
-  text:
-    "However, you could've done it with only N blocks. Can you make your program even better?",
+  text: "However, you could've done it with only N blocks. Can you make your program even better?",
   children: [
     <CodeWritten numLinesWritten={9} useChallengeStyles key={0}>
       <GeneratedCode
@@ -82,8 +78,7 @@ PassedDialogWithABird.args = {
   primaryButtonLabel: 'Continue',
   cancelButtonLabel: 'Try again',
   showPuzzleRatingButtons: true,
-  text:
-    "However, you could've done it with only N blocks. Can you make your program even better?",
+  text: "However, you could've done it with only N blocks. Can you make your program even better?",
   children: [
     <CodeWritten numLinesWritten={9} useChallengeStyles key={0}>
       <GeneratedCode

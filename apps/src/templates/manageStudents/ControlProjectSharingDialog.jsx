@@ -40,16 +40,16 @@ class ControlProjectSharingDialog extends Component {
           </div>
           <DialogFooter>
             <Button
-              __useDeprecatedTag
               text={i18n.dialogCancel()}
               onClick={this.props.closeDialog}
               color={Button.ButtonColor.gray}
+              style={styles.buttonWithoutMargin}
             />
             <Button
-              __useDeprecatedTag
               text={i18n.projectSharingDialogButton()}
               onClick={this.handleShowSharingClick}
               color={Button.ButtonColor.orange}
+              style={styles.buttonWithoutMargin}
             />
           </DialogFooter>
         </BaseDialog>
@@ -63,10 +63,14 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20
+  },
+  buttonWithoutMargin: {
+    margin: 0
   }
 };
 
-export const UnconnectedControlProjectSharingDialog = ControlProjectSharingDialog;
+export const UnconnectedControlProjectSharingDialog =
+  ControlProjectSharingDialog;
 
 export default connect(
   state => ({}),

@@ -23,3 +23,5 @@ public String singleChar(String s, int i) {
 
 What is the precondition required so the method works as intended for all values of the parameters that satisfy the preconditions?
 MARKDOWN
+
+allow_multiple_attempts true

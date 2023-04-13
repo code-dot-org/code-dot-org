@@ -35,7 +35,7 @@ const serverProgressResponse = {
   student_progress: {
     100: {},
     101: {
-      '2000': {
+      2000: {
         locked: true,
         status: 'not_tried',
         result: -1,
@@ -44,7 +44,7 @@ const serverProgressResponse = {
         teacher_feedback_review_state: undefined,
         last_progress_at: 12345
       },
-      '2001': {
+      2001: {
         status: 'perfect',
         result: 30,
         paired: true,
@@ -54,7 +54,7 @@ const serverProgressResponse = {
       }
     },
     102: {
-      '2000': {
+      2000: {
         status: 'perfect',
         result: 100,
         paired: false,
@@ -79,7 +79,7 @@ const firstServerProgressResponse = {
   student_progress: {
     100: {},
     101: {
-      '2000': {
+      2000: {
         status: 'not_tried',
         locked: true,
         result: -1,
@@ -88,7 +88,7 @@ const firstServerProgressResponse = {
         teacher_feedback_review_state: undefined,
         last_progress_at: 12345
       },
-      '2001': {
+      2001: {
         status: 'perfect',
         result: 30,
         paired: true,
@@ -111,7 +111,7 @@ const secondServerProgressResponse = {
   },
   student_progress: {
     102: {
-      '2000': {
+      2000: {
         status: 'perfect',
         result: 100,
         paired: false,
@@ -143,7 +143,7 @@ const fullExpectedResult = {
     123: {
       100: {},
       101: {
-        '2000': {
+        2000: {
           pages: null,
           status: 'not_tried',
           locked: true,
@@ -153,7 +153,7 @@ const fullExpectedResult = {
           teacherFeedbackReviewState: undefined,
           lastTimestamp: 12345
         },
-        '2001': {
+        2001: {
           pages: null,
           status: 'perfect',
           locked: false,
@@ -165,7 +165,7 @@ const fullExpectedResult = {
         }
       },
       102: {
-        '2000': {
+        2000: {
           pages: null,
           status: 'perfect',
           locked: false,
@@ -205,9 +205,9 @@ const fullExpectedResult = {
   },
   studentLastUpdateByUnit: {
     123: {
-      '100': null,
-      '101': timeInSeconds,
-      '102': timeInSeconds + 1
+      100: null,
+      101: timeInSeconds,
+      102: timeInSeconds + 1
     }
   }
 };
@@ -411,7 +411,7 @@ describe('sectionProgressLoader.loadScript', () => {
         };
         const expectedResult = {
           unitDataByUnit: {
-            '0': {
+            0: {
               csf: false,
               isCsd: undefined,
               isCsp: undefined,
@@ -425,9 +425,9 @@ describe('sectionProgressLoader.loadScript', () => {
               version_year: undefined
             }
           },
-          studentLevelProgressByUnit: {'0': {}},
-          studentLessonProgressByUnit: {'0': {}},
-          studentLastUpdateByUnit: {'0': {}}
+          studentLevelProgressByUnit: {0: {}},
+          studentLessonProgressByUnit: {0: {}},
+          studentLastUpdateByUnit: {0: {}}
         };
 
         fetchStub.onCall(0).returns({

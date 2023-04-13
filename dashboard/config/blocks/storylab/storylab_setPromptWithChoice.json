@@ -17,6 +17,7 @@
         "name": "A",
         "type": "String"
       }
-    ]
+    ],
+    "style": "default"
   }
 }

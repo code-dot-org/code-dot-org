@@ -7,7 +7,6 @@ import TimelineElement from './TimelineElement';
  * Renders timeline events for the simple2 model.
  */
 const TimelineSimple2Events = ({
-  currentPlayheadPosition,
   barWidth,
   eventVerticalSpace,
   getEventHeight
@@ -32,8 +31,8 @@ const TimelineSimple2Events = ({
   // that we recalculate unique sounds, even when there are no entries to
   // render.
   const currentUniqueSounds = [];
-  for (const songEvent of soundEvents) {
-    const id = songEvent.functionContext.name + ' ' + songEvent.id;
+  for (const soundEvent of soundEvents) {
+    const id = soundEvent.functionContext.name + ' ' + soundEvent.id;
     if (currentUniqueSounds.indexOf(id) === -1) {
       currentUniqueSounds.push(id);
     }
@@ -124,7 +123,6 @@ const TimelineSimple2Events = ({
             left={barWidth * (eventData.when - 1)}
             when={eventData.when}
             skipContext={eventData.skipContext}
-            currentPlayheadPosition={currentPlayheadPosition}
           />
         ))}
       </div>
@@ -133,7 +131,6 @@ const TimelineSimple2Events = ({
 };
 
 TimelineSimple2Events.propTypes = {
-  currentPlayheadPosition: PropTypes.number.isRequired,
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
   getEventHeight: PropTypes.func.isRequired

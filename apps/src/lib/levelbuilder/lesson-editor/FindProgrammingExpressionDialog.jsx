@@ -10,7 +10,7 @@ import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
 import LessonEditorDialog from './LessonEditorDialog';
 import {connect} from 'react-redux';
 
-export const SearchForm = function(props) {
+export const SearchForm = function (props) {
   return (
     <form className="form-search">
       <input
@@ -41,7 +41,7 @@ SearchForm.propTypes = {
   programmingEnvironments: PropTypes.array
 };
 
-export const ProgrammingExpressionTable = function(props) {
+export const ProgrammingExpressionTable = function (props) {
   if (
     !props.programmingExpressions ||
     props.programmingExpressions.length === 0
@@ -160,7 +160,8 @@ export class FindProgrammingExpressionDialog extends Component {
     };
 
     if (this.state.filteredProgrammingEnvironment) {
-      params.programmingEnvironmentName = this.state.filteredProgrammingEnvironment;
+      params.programmingEnvironmentName =
+        this.state.filteredProgrammingEnvironment;
     }
 
     fetch('/programming_expressions/search?' + queryString.stringify(params))

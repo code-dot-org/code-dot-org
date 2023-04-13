@@ -176,10 +176,10 @@ export default {
   },
 
   exportApp(appName, code, animationOpts) {
-    return this.exportAppToZip(appName, code, animationOpts).then(function(
+    return this.exportAppToZip(appName, code, animationOpts).then(function (
       zip
     ) {
-      zip.generateAsync({type: 'blob'}).then(function(blob) {
+      zip.generateAsync({type: 'blob'}).then(function (blob) {
         saveAs(blob, appName + '.zip');
       });
     });
@@ -241,9 +241,8 @@ export default {
 
     return {
       appAssets: [...appAssets, ...animAssets, ...soundAssets],
-      animationListJSON: this.generateExportableAnimationListJSON(
-        rewrittenAnimList
-      )
+      animationListJSON:
+        this.generateExportableAnimationListJSON(rewrittenAnimList)
     };
   }
 };

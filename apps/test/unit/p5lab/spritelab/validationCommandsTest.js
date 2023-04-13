@@ -8,7 +8,7 @@ import {MAX_NUM_TEXTS} from '@cdo/apps/p5lab/spritelab/constants';
 describe('Validation Commands', () => {
   let coreLibrary;
 
-  beforeEach(function() {
+  beforeEach(function () {
     const p5Wrapper = createP5Wrapper();
     coreLibrary = new CoreLibrary(p5Wrapper.p5);
   });

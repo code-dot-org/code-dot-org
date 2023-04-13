@@ -1,0 +1,36 @@
+name 'matching example'
+
+height '75'
+
+description 'Match the following terms with their definitions'
+
+question '1computing device'
+question '2computing system'
+question '3computing network'
+question '4path'
+
+answer '1a machine that can run a program'
+answer '2a group of computers working together for a common purpose'
+answer '3a group of connected computers that can send or receive data'
+answer '4a sequence of direct connections'
+teacher_markdown <<MARKDOWN
+**Explanation:** These definitions were covered in [Lesson 2 - Building a Network](https://studio.code.org/s/csp2-2021/lessons/2) 
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* CSN-1.A.1: A computing device is a physical artifact that can run a program. Some examples include computers, tablets, servers, routers, and smart sensors.
+
+* CSN-1.A.2: A computing system is a group of computing devices and programs working together for a common purpose.
+
+* CSN-1.A.3: A computer network is a group of interconnected computing devices capable of sending or receiving data.
+
+* CSN-1.A.4: A computer network is a type of a computing system.
+
+* CSN-1.A.5: A path between two computing devices on a computer network (a sender or a receiver) is a sequence of directly-connected computing devices beginning at the sender and ending at the receiver.
+
+:::
+
+
+MARKDOWN
+
+allow_multiple_attempts true
