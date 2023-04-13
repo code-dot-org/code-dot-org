@@ -23,3 +23,5 @@ teacher_markdown <<MARKDOWN
 
 
 MARKDOWN
+
+allow_multiple_attempts true

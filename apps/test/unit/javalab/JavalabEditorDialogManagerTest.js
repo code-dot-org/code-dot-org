@@ -13,7 +13,6 @@ import javalabMsg from '@cdo/javalab/locale';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import JavalabEditorDialogManager, {
   DEFAULT_FILE_NAME,
-  JavalabEditorDialog,
   UnconnectedJavalabEditorDialogManager
 } from '@cdo/apps/javalab/JavalabEditorDialogManager';
 import JavalabDialog from '@cdo/apps/javalab/JavalabDialog';
@@ -25,6 +24,7 @@ import javalabEditor, {
 } from '@cdo/apps/javalab/redux/editorRedux';
 import javalab from '@cdo/apps/javalab/redux/javalabRedux';
 import javalabView from '@cdo/apps/javalab/redux/viewRedux';
+import {JavalabEditorDialog} from '@cdo/apps/javalab/types';
 
 describe('JavalabEditorDialogManager', () => {
   let defaultProps;

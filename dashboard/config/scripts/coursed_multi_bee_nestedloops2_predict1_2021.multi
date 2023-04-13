@@ -5,4 +5,4 @@ wrong 'The bee will get only 2 units of nectar.', feedback: 'Incorrect.  The bee
 right 'The bee will get all of the nectar.', feedback: 'Correct!'
 wrong 'The bee will turn the wrong direction.', feedback: 'Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true

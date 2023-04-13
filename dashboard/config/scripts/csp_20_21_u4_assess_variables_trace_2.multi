@@ -1,35 +1,32 @@
 name 'csp-20-21-u4-assess-variables trace 2'
-encrypted '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
-'
+wrong '10'
+wrong '25'
+wrong '30'
+right '35'
+
+markdown <<MARKDOWN
+What number will be output by the console.log command on line 5?
+
+![](https://images.code.org/03b2fe59245906758fefaf3eb3929412-image-1552518062366.00.43 PM.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Walking through the program line by line:
+* On line 1, the variable `kit` is initialized and assigned the value `20`.
+* On line 2, the variable `roo` is initialized and assigned the value `10`.
+* On line 3, the variable `kit` is assigned to its current value (`20`) plus `5`.
+* On line 4, the variable `roo` is assigned to the current value of `kit` (`25`) plus the current value of `roo` (`10`).
+* On line 5, the current value assigned to `roo`, `35`, is output.
+
+This code segment is similar to some of the worked examples in [Lesson 1 - Variables Explore](https://curriculum.code.org/csp-20/unit4/1/).
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* AAP-2.C.1 - Arithmetic operators are part of most programming languages and include addition, subtraction, multiplication, division, and modulus operators.
+* AAP-1.B.1 - The assignment operator allows a program to change the value represented by a variable.
+* AAP-1.B.3 - The value stored in a variable will be the most recent value assigned. For example: a ← 1b ← a a ← 2 display(b) still displays 1.
+
+:::
+MARKDOWN
+
+allow_multiple_attempts true
