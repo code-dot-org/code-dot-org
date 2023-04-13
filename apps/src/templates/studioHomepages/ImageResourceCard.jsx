@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Button from '../Button';
 import color from '../../util/color';
-import Typography, {Heading1} from '../../componentLibrary/typography';
+import Typography from '../../componentLibrary/typography';
 import style from './../dropdown-button.module.scss';
 class ImageResourceCard extends Component {
   static propTypes = {
@@ -40,12 +40,12 @@ class ImageResourceCard extends Component {
             </div>
             <div style={styles.description}>{description}</div>
           </div>
-          <Heading1>THIS IS A TESt oF TS IN JS</Heading1>
+          {/*<Heading1>THIS IS A TESt oF TS IN JS</Heading1>*/}
           <Typography
             semanticTag="h1"
             visualApproach="body-one"
+            // style={styles.button}
             // className={style.thisIsATestClassName}
-            // style={style.thisIsATestClassName}
           >
             TypoGRAPHY TypoGRAPHY TypoGRAPHY TypoGRAPHY TypoGRAPHY
           </Typography>

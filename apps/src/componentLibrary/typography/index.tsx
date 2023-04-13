@@ -9,12 +9,14 @@ type TypographyProps = {
   children: React.ReactNode;
   semanticTag: 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   visualApproach: string;
+  style?: React.CSSProperties;
 };
 const Typography: React.FunctionComponent<TypographyProps> = ({
   semanticTag,
   visualApproach,
   children,
-  className
+  className,
+  style
 }) => {
   const Tag = semanticTag;
   console.log(styles);
@@ -22,7 +24,10 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
   console.log(styles[visualApproach], className);
 
   return (
-    <Tag className={classnames(className, styles[visualApproach] )}>
+    <Tag
+      className={classnames(styles[visualApproach], className )}
+      style={style}
+    >
       {children}
     </Tag>
   );
