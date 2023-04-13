@@ -301,10 +301,8 @@ class CourseOffering < ApplicationRecord
   end
 
   private def grade_levels_format
-    # grade levels can be nil on the backend
     return true if grade_levels.nil?
 
-    # string is made up of only commas, K, and digits
     grade_levels_regex = /^[K|\d]+(,?\d)*$/
     unless grade_levels_regex.match?(grade_levels)
       errors.add(:grade_levels, "must be comma-separated values with optional K first and digits")
@@ -313,7 +311,6 @@ class CourseOffering < ApplicationRecord
 
     array_of_grades = grade_levels.split(',')
 
-    # no duplicates
     unless array_of_grades.length == array_of_grades.uniq.length
       errors.add(:grade_levels, "cannot contain duplicate grades")
       return false
@@ -322,14 +319,12 @@ class CourseOffering < ApplicationRecord
     array_of_grades.delete("K")
     return true if array_of_grades.empty?
 
-    # remaining grades are integers 1-12 (non-digits are mapped to 0 with to_i)
     array_of_integer_grades = array_of_grades.map(&:to_i)
     unless array_of_integer_grades.all? {|grade| (1..13).cover?(grade)}
       errors.add(:grade_levels, "numbers must be between 1 and 12, inclusive")
       return false
     end
 
-    # remaining grades are sorted and in consecutive order
     unless array_of_integer_grades == (array_of_integer_grades.first..array_of_integer_grades.last).to_a
       errors.add(:grade_levels, "must be consecutive and sorted")
       return false
