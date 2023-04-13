@@ -6,7 +6,7 @@ import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtra
 import {
   levelsForLessonId,
   lessonExtrasUrl,
-  setCurrentLevelId
+  navigateToLevelId
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
@@ -134,21 +134,18 @@ class LessonProgress extends Component {
     );
   }
 
-  // When the user clicks on a level bubble where we support changing level
-  // without reloading the page.  For now, it means the prior level and the
-  // new level both have an app of type "music", and they are obviously in
-  // the same lesson.
-  onLevelChanged(levelId, levelUrl) {
-    // Update the redux store.
-    this.props.onLevelChanged(levelId);
-
-    // Update the browser.
-    window.history.pushState({}, '', levelUrl + window.location.search);
-    this.props.setWindowTitle();
+  /*
+   * Returns whether we can safely navigate between the two given level apps
+   * without reloading the whole page.  For now, this only works when moving
+   * from a "music" level to another "music" level.
+   */
+  canChangeLevelInPage(currentLevelApp, newLevelApp) {
+    return currentLevelApp === 'music' && newLevelApp === 'music';
   }
 
   render() {
-    const {currentPageNumber, lessonExtrasUrl, lessonName} = this.props;
+    const {currentPageNumber, lessonExtrasUrl, lessonName, onLevelChanged} =
+      this.props;
     let levels = this.props.levels;
 
     // Bonus levels should not count towards mastery.
@@ -177,10 +174,17 @@ class LessonProgress extends Component {
               if (isCurrent && level.kind === LevelKind.assessment) {
                 isCurrent = currentPageNumber === level.pageNumber;
               }
-              const onBubbleClick =
-                currentLevelApp === 'music' && level.app === 'music'
-                  ? () => this.onLevelChanged(level.id, level.url)
-                  : undefined;
+
+              // When the user clicks on a level bubble for which we support changing to
+              // that level without reloading the page, we use a click handler which
+              // calls through to the progress redux store to change to that level
+              // immediately.
+              const onBubbleClick = this.canChangeLevelInPage(
+                currentLevelApp,
+                level.app
+              )
+                ? () => onLevelChanged(level.id)
+                : undefined;
 
               return (
                 <div
@@ -291,7 +295,7 @@ export default connect(
   }),
   dispatch => ({
     onLevelChanged(levelId) {
-      dispatch(setCurrentLevelId(levelId));
+      dispatch(navigateToLevelId(levelId));
     }
   })
 )(LessonProgress);

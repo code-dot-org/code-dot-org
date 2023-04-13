@@ -26,14 +26,13 @@ import {
   setInitialData
 } from '@cdo/apps/templates/currentUserRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
-import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
 import logToCloud from '../logToCloud';
 
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
 import SignInCalloutWrapper from './components/header/SignInCalloutWrapper';
-
-import LabContainer from '@cdo/apps/code-studio/components/LabContainer';
+import {setupNavigationHandler} from './browserNavigation';
+import {setCurrentLevelId} from './progressRedux';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -92,11 +91,6 @@ header.build = function (
 
   let saveAnswersBeforeNavigation = currentPageNumber !== PUZZLE_PAGE_NONE;
 
-  const currentLevelApp = lessonData.levels.find(level =>
-    level.ids.find(id => id === currentLevelId)
-  )?.app;
-  const showLabContainer = currentLevelApp === 'music';
-
   // Set up the store immediately. Note that some progress values are populated
   // asynchronously.
   progress.generateLessonProgress(
@@ -124,11 +118,7 @@ header.build = function (
           lessonData={lessonData}
           scriptData={scriptData}
           currentLevelId={currentLevelId}
-          setWindowTitle={() => setWindowTitle(store)}
         />
-        {showLabContainer && (
-          <LabContainer setWindowTitle={() => setWindowTitle(store)} />
-        )}
       </Provider>,
       document.querySelector('.header_level')
     );
@@ -140,23 +130,15 @@ header.build = function (
         document.querySelector('.signin_callout_wrapper')
       );
     }
-    setWindowTitle(store);
-  });
+    // Store the current level ID in the progress redux handler.
+    // This is important for levels which don't require reloads between
+    // other levels, since the initial URL determines where we start
+    // in a progression.
+    setCurrentLevelId(currentLevelId);
 
-  // A handler for user-initiated browser back & forward button
-  // presses, when arriving on a page that we pushed onto the
-  // browser session history stack.
-  window.addEventListener('popstate', function (event) {
-    const path = new URL(document.location).pathname;
-    const values = path.split('/');
-    const levelIndex = Number(values[6]) - 1;
-    const levelId = lessonData.levels[levelIndex].activeId;
-
-    // Update the redux store.
-    getStore().dispatch(setCurrentLevelId(levelId));
-
-    // Update the browser.
-    setWindowTitle(store);
+    // Set up a navigation handler, in case we contain levels that don't
+    // require a page reload when switching between them.
+    setupNavigationHandler(lessonData);
   });
 };
 
@@ -310,33 +292,5 @@ header.showTryAgainDialog = () => {
 header.hideTryAgainDialog = () => {
   getStore().dispatch(setShowTryAgainDialog(false));
 };
-
-// If we are on a new level without doing a page reload, then we should set the title
-// to match what levels_helper.rb's level_title function would have done.
-function setWindowTitle(store) {
-  const storeState = store.getState();
-  const numLessons = storeState.progress.lessons[0].num_script_lessons;
-  const lessonName = storeState.progress.lessons[0].name;
-  const levelId = storeState.progress.currentLevelId;
-  const lessonIndex =
-    storeState.progress.lessons[0].levels.findIndex(
-      level => level.activeId === levelId
-    ) + 1;
-  const scriptDisplayName = storeState.progress.scriptDisplayName;
-
-  /*
-    Equivalent code:
-
-    if @script_level.script.lessons.many?
-      "#{lesson} ##{position} | #{script}"
-    elsif @script_level.position != 1
-      "#{script} ##{position}"
-  */
-
-  document.title =
-    numLessons > 1
-      ? `${lessonName} #${lessonIndex} | ${scriptDisplayName} - Code.org`
-      : `${lessonName} #${lessonIndex} - Code.org`;
-}
 
 export default header;
