@@ -25,3 +25,7 @@ BaseCard.storyName = 'CurriculumCatalogCard – Base';
 export const NonEnglishCard = Template.bind({});
 NonEnglishCard.args = {...defaultArgs, isEnglish: false};
 NonEnglishCard.storyName = 'CurriculumCatalogCard – Not English Format';
+
+export const OneGradeCard = Template.bind({});
+OneGradeCard.args = {...defaultArgs, gradesArray: ['K']};
+OneGradeCard.storyName = 'CurriculumCatalogCard – One Grade';

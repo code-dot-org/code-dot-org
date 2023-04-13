@@ -1095,7 +1095,10 @@
   "goToMyDashboard": "Go to my Dashboard",
   "goToUnit": "Go to Unit",
   "grade": "Grade",
-  "gradeRange": "Grades: {youngest_grade}-{oldest_grade}",
+  "gradeRange": {
+    "one": "Grade: {youngest_grade}",
+    "other": "Grades: {youngest_grade}-{oldest_grade}"
+  },
   "greaterThan": "Greater than",
   "greaterThanOrEqualTo": "Greater than or equal to",
   "groups": "Groups",
