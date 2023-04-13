@@ -19,7 +19,7 @@ export class LocalSourcesStore implements SourcesStore {
   }
 
   save(key: string, source: Source) {
-    localStorage.setItem(key, source.toString());
+    localStorage.setItem(key, JSON.stringify(source));
     return Promise.resolve(new Response());
   }
 }
