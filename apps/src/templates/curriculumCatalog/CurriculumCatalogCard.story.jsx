@@ -11,8 +11,7 @@ const Template = args => <CurriculumCatalogCard {...args} />;
 const defaultArgs = {
   courseDisplayName: 'AI for Oceans',
   duration: 'quarter',
-  youngestGrade: '4',
-  oldestGrade: '12',
+  gradesArray: ['1', '2', '3', '4'],
   subjects: ['english_language_arts'],
   topics: ['cybersecurity'],
   isTranslated: true,

@@ -30,28 +30,21 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => (
               grade_levels,
               school_subject,
               cs_topic
-            }) => {
-              const gradeLevelArray = grade_levels.split(',');
-
-              return (
-                <CurriculumCatalogCard
-                  key={key}
-                  imageSrc={image}
-                  courseDisplayName={display_name}
-                  duration={'school_year'} // TODO [MEG] actually pass in this data
-                  youngestGrade={gradeLevelArray[0]}
-                  oldestGrade={
-                    gradeLevelArray.length > 1 &&
-                    gradeLevelArray[gradeLevelArray.length - 1]
-                  }
-                  subjects={school_subject?.split(',')}
-                  topics={cs_topic?.split(',')}
-                  isTranslated={false} // TODO [MEG]: actually pass in this data
-                  isEnglish={isEnglish}
-                />
-              );
-            }
+            }) => (
+              <CurriculumCatalogCard
+                key={key}
+                imageSrc={image}
+                courseDisplayName={display_name}
+                duration={'school_year'} // TODO [MEG] actually pass in this data
+                gradesArray={grade_levels.split(',')}
+                subjects={school_subject?.split(',')}
+                topics={cs_topic?.split(',')}
+                isTranslated={false} // TODO [MEG]: actually pass in this data
+                isEnglish={isEnglish}
+              />
+            )
           )}
+        ;
       </div>
     </div>
   </>
