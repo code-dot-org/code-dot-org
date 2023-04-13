@@ -102,9 +102,16 @@ class UnconnectedMusicView extends React.Component {
     // TODO: the 'beforeunload' callback is advised against as it is not guaranteed to fire on mobile browsers. However,
     // we need a way of reporting analytics when the user navigates away from the page. Check with Amplitude for the
     // correct approach.
-    window.addEventListener('beforeunload', () =>
-      this.analyticsReporter.endSession()
-    );
+    window.addEventListener('beforeunload', event => {
+      this.analyticsReporter.endSession();
+      // force a save before the page unloads, if there are unsaved changes.
+      // If we need to force a save, prevent navigation so we can save first.
+      if (this.musicBlocklyWorkspace.hasUnsavedChanges()) {
+        this.musicBlocklyWorkspace.saveCode(true);
+        event.preventDefault();
+        event.returnValue = '';
+      }
+    });
 
     const promises = [];
     promises.push(this.loadLibrary());

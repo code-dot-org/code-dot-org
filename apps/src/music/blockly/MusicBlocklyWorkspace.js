@@ -369,8 +369,12 @@ export default class MusicBlocklyWorkspace {
     }
   }
 
-  saveCode() {
-    this.projectManager.save();
+  saveCode(forceSave = false) {
+    this.projectManager.save(forceSave);
+  }
+
+  hasUnsavedChanges() {
+    return this.projectManager.hasQueuedSave();
   }
 
   resetCode() {

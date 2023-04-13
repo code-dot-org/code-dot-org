@@ -55,20 +55,24 @@ export default class ProjectManager {
     return new Response(blob);
   }
 
+  hasQueuedSave(): boolean {
+    return this.saveQueued;
+  }
+
   // TODO: Add functionality to reduce channel updates during
   // HoC "emergency mode" (see 1182-1187 in project.js).
-  async save(): Promise<Response> {
-    if (!this.canSave()) {
+  async save(forceSave = false): Promise<Response> {
+    if (!this.canSave(forceSave)) {
       if (!this.saveQueued) {
         this.enqueueSave();
       }
-
       const noopResponse = new Response(null, {status: 304});
       this.executeListeners(ProjectManagerEvent.SaveNoop, noopResponse);
       return noopResponse;
     }
 
     this.saveInProgress = true;
+    this.saveQueued = false;
     this.nextSaveTime = Date.now() + this.saveInterval;
     this.executeListeners(ProjectManagerEvent.SaveStart);
     const project = this.getProject();
@@ -100,9 +104,12 @@ export default class ProjectManager {
     return new Response();
   }
 
-  private canSave(): boolean {
+  private canSave(forceSave: boolean): boolean {
     if (this.saveInProgress) {
       return false;
+    } else if (forceSave) {
+      // If this is a force save, don't wait until the next save time.
+      return true;
     } else if (this.nextSaveTime) {
       return this.nextSaveTime <= Date.now();
     }
@@ -116,7 +123,6 @@ export default class ProjectManager {
     setTimeout(
       () => {
         this.save();
-        this.saveQueued = false;
       },
       this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval
     );
