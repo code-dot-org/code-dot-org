@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-11 04:29:03 UTC",
+    "serialized_at": "2023-04-12 18:42:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1386,6 +1386,18 @@
       }
     },
     {
+      "key": "7bd04295-383f-4705-930f-5fa85672ec5e",
+      "position": 7,
+      "properties": {
+        "description": "<div style=\"background-color: #d7f4e9; border: 1px solid #43876b; border-radius: 5px; font-size: 1em; padding: 15px; margin-bottom: 0px;\">\n<div style=\"margin-top: 0px; margin-left: 0px; margin-right: 20px; height: 185px\">\n<img src=\"https://images.code.org/73ab5fb605d7065835e32221817b69b7-Unit Journal Icon 4.png\" style=\"margin-right: 40px; float: left\">\n\n<p><i>Sample Unit Journal Explanation </i> </p>\n<br>\n<p>Links:</p>\n<a href=\"https://www.w3schools.com/tags/ref_colornames.asp\" target=\"_blank\">DIGITAL </a>\n\n</div>\n</div>\n",
+        "name": "Unit Journal"
+      },
+      "seeding_key": {
+        "activity_section.key": "7bd04295-383f-4705-930f-5fa85672ec5e",
+        "lesson_activity.key": "9d85a2cb-a899-42c1-971b-7640e542ab2d"
+      }
+    },
+    {
       "key": "9d598e36-a6c7-46b6-9933-83abcccdc7d7",
       "position": 1,
       "properties": {
@@ -1640,11 +1652,11 @@
       "properties": {
         "description": "\n**Question:** Each time we add another bit, what happens to the amount of numbers we can make?\n\n**Question:** Two schools are merging and to adapt to the increased size of the student body, the school is changing its system for keeping track of all student IDs from a system that uses 4-bit binary numbers to one that uses 8-bit binary numbers (AKA 1 byte). Which of the following best describes what effect this change will have?",
         "name": "Peer Instruction",
-        "progression_name": "Mid-Lesson Check for Understanding",
+        "progression_name": "Check for Understanding - Flippy Do",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "Use these questions to help formatively assess your students. You may choose to have them complete these questions before or after working on the Activity Guide. You can use the flowchart below to help use the data you get from these questions to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n\n\n\n\n![](https://images.code.org/95198dfe56cee550d2c3dd32a200305e-CFU_Next_Steps_Flowchart.png)"
+            "type": "assessmentOpportunity",
+            "markdown": "Use these questions to help formatively assess your students. You may choose to have them complete these questions before or after working on the Activity Guide. You can use the flowchart below to help use the data you get from these questions to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n\n\n\n![](https://images.code.org/c0c5b92541281d7901e7d2b9a5a33d49-CFU_Next_Steps_Flowchart_25percent.png)"
           }
         ]
       },
@@ -1805,11 +1817,11 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**\n\n* *What happens to the odometer reading?*\n* *Does the odometer still show the distance driven by the car?*\n\n\n**Discussion Goal:** When the odometer turns over -- exceeds the number of place values it can physically display -- the odometer reading correctly shows all but one number in its place value positions. \n\nFor example: \n\n![](https://curriculum.code.org/media/uploads/binary1.png)\n\nAfter the odometer turns over:\n\n![](https://curriculum.code.org/media/uploads/binary3.png)\n\nAs you can see, all the numbers should flip to 0 and the one of the left should flip to 1. But we are out of place values! So the numbers flip to 0, but nothing flips to 1. The number we are trying to represent does not fit in the number of bits we have available to accurately display it.\n\nLike a bathtub that has reached its maximum capacity for holding water and is now overflowing, the odometer has reached its maximum capacity and has reached **overflow**. \n",
-        "progression_name": "Check For Understanding",
+        "progression_name": "Check For Understanding - Overflow",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "Use this question to help formatively assess your students. You can use the flowchart below to help use the data you get from this question to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n\n\n\n\n![](https://images.code.org/95198dfe56cee550d2c3dd32a200305e-CFU_Next_Steps_Flowchart.png)"
+            "type": "assessmentOpportunity",
+            "markdown": "Use this question to help formatively assess your students. You can use the flowchart below to help use the data you get from student responses to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n\n\n![](https://images.code.org/c0c5b92541281d7901e7d2b9a5a33d49-CFU_Next_Steps_Flowchart_25percent.png)\n"
           }
         ]
       },
@@ -2385,8 +2397,8 @@
         "progression_name": "Check For Understanding",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "Use this question to help formatively assess your students. You can use the flowchart below to help use the data you get from student responses to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n\n\n![](https://images.code.org/95198dfe56cee550d2c3dd32a200305e-CFU_Next_Steps_Flowchart.png)\n"
+            "type": "assessmentOpportunity",
+            "markdown": "Use this question to help formatively assess your students. You can use the flowchart below to help use the data you get from student responses to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n\n\n![](https://images.code.org/c0c5b92541281d7901e7d2b9a5a33d49-CFU_Next_Steps_Flowchart_25percent.png)\n"
           }
         ]
       },
@@ -2698,7 +2710,13 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** [How Computers Work](https://www.youtube.com/watch?v=USCBCmwMCDA) Video\n\n",
-        "progression_name": "How Computers Work: Binary and Data"
+        "progression_name": "How Computers Work: Binary and Data",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/edit?usp=sharing).\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9096ea3c-5c41-48af-8c00-8dee52f0f05f",
@@ -2867,7 +2885,13 @@
       "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show [r text_compression_widget_tutorial_/csp/2023] (feel free to skip from 2:30-5:00 if your students are comfortable with how the widget works, but don't miss 5:00+). After the video, be sure to emphasize two things: \n\n* The widget we are using is an example of **lossless compression**\n* The compression percentage at the bottom of the screen is calculated by comparing the number of **bytes** in the original message and the number of **bytes** in the compressed message.\n\n\n",
-        "progression_name": "Video: Text Compression Widget with Aloe Blacc"
+        "progression_name": "Video: Text Compression Widget with Aloe Blacc",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/edit?usp=sharing).\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f6eff8f5-4eee-41e9-af94-fc1701213ee6",
@@ -3365,7 +3389,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The videos in this section are sourced from the [Copyright & Creativity for Ethical Digital Citizens Curriculum](https://www.copyrightandcreativity.org/high-school/). Credit to the Internet Education Foundation and iKeepSafe for these videos."
+            "markdown": "The videos in this section are sourced from the [Copyright & Creativity for Ethical Digital Citizens Curriculum](https://www.copyrightandcreativity.org/high-school/). Credit to the Internet Education Foundation and iKeepSafe for these videos.\n\nVideos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/edit?usp=sharing).\n"
           }
         ]
       },
@@ -4014,7 +4038,7 @@
         "level_keys": [
           "CSP Binary 4bit to 8bit CFU 2023"
         ],
-        "progression": "Mid-Lesson Check for Understanding"
+        "progression": "Check for Understanding - Flippy Do"
       },
       "bonus": false,
       "seeding_key": {
@@ -4039,7 +4063,7 @@
         "level_keys": [
           "U1L5 CFU adding bits_2023"
         ],
-        "progression": "Mid-Lesson Check for Understanding"
+        "progression": "Check for Understanding - Flippy Do"
       },
       "bonus": false,
       "seeding_key": {
@@ -4136,7 +4160,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "level_keys": [
+          "U1L6 CFU beyond odometer_2023"
+        ],
+        "progression": "Check For Understanding - Overflow"
       },
       "bonus": false,
       "seeding_key": {
@@ -4258,6 +4285,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge a_2023"
+        ],
         "progression": "Sampling an Analog Image: Challenges A&B"
       },
       "bonus": false,
@@ -4280,6 +4310,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge B_2023"
+        ],
         "progression": "Sampling an Analog Image: Challenges A&B"
       },
       "bonus": false,
@@ -4302,6 +4335,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 Multiple Choice Digital Analog2022_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,

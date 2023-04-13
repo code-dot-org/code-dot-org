@@ -22,3 +22,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 We recommend that you use this level to assess your classroom's overall understanding of concepts taught today. Answering correctly requires understanding strings and numbers, expressions, and variable assignment. If many of your students answer incorrectly this is a good sign you may need to review core concepts as part of tomorrow's lesson.
 MARKDOWN
+
+allow_multiple_attempts true

@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-06 23:39:15 UTC",
+    "serialized_at": "2023-04-11 20:06:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -44,7 +44,7 @@
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "Chapter 1"
+        "display_name": "Chapter 1: Understanding Machine Learning"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -56,7 +56,7 @@
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "Chapter 2"
+        "display_name": "Chapter 2: Design a Machine Learning App"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
@@ -13015,7 +13015,6 @@
         "resource.key": "types_of_machine_learning_2"
       }
     }
-
   ],
   "scripts_resources": [
     {
@@ -13072,7 +13071,6 @@
         "script.name": "csd7-2023"
       }
     }
-
   ],
   "scripts_student_resources": [
 
@@ -13198,7 +13196,6 @@
         "vocabulary.key": "unsupervised_learning"
       }
     }
-
   ],
   "lessons_vocabularies": [
     {
@@ -13273,7 +13270,6 @@
         "vocabulary.key": "unsupervised_learning"
       }
     }
-
   ],
   "lessons_programming_expressions": [
     {

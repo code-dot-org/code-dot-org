@@ -332,9 +332,6 @@ export default connect(
     hasCommitSaveError: state.javalab.hasCommitSaveError
   }),
   dispatch => ({
-    setCommitSaveStatus: ({
-      isCommitSaveInProgress: isSaveInProgress,
-      hasCommitSaveError: hasError
-    }) => dispatch(setCommitSaveStatus(isSaveInProgress, hasError))
+    setCommitSaveStatus: status => dispatch(setCommitSaveStatus(status))
   })
 )(UnconnectedCommitDialog);

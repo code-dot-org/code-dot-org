@@ -280,6 +280,7 @@ GEM
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
     bindata (2.4.10)
+    bindex (0.8.1)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     brakeman (4.5.0)
@@ -336,7 +337,6 @@ GEM
       json
       json-schema
       rest-client
-    debug_inspector (0.0.3)
     declarative (0.0.20)
     devise (4.7.3)
       bcrypt (~> 3.0)
@@ -859,11 +859,11 @@ GEM
     vcr (3.0.3)
     warden (1.2.7)
       rack (>= 1.0)
-    web-console (3.3.1)
-      actionview (>= 5.0)
-      activemodel (>= 5.0)
-      debug_inspector
-      railties (>= 5.0)
+    web-console (4.2.0)
+      actionview (>= 6.0.0)
+      activemodel (>= 6.0.0)
+      bindex (>= 0.4.0)
+      railties (>= 6.0.0)
     webdrivers (3.7.2)
       net_http_ssl_fix
       nokogiri (~> 1.6)
@@ -1056,7 +1056,7 @@ DEPENDENCIES
   user_agent_parser
   validates_email_format_of
   vcr
-  web-console
+  web-console (~> 4.2.0)
   webdrivers (~> 3.0)
   webmock (~> 3.8)
   xxhash

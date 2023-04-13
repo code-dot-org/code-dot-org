@@ -243,7 +243,6 @@ class ManageStudentsActionsCell extends Component {
         {isEditing && rowType !== RowType.ADD && (
           <div>
             <Button
-              __useDeprecatedTag
               onClick={this.onSave}
               color={Button.ButtonColor.orange}
               text={i18n.save()}
@@ -251,21 +250,21 @@ class ManageStudentsActionsCell extends Component {
               style={styles.saveButton}
             />
             <Button
-              __useDeprecatedTag
               onClick={this.onCancel}
               color={Button.ButtonColor.gray}
               text={i18n.cancel()}
+              style={styles.buttonWithoutMargin}
             />
           </div>
         )}
         {rowType === RowType.ADD && (
           <div>
             <Button
-              __useDeprecatedTag
               onClick={this.onAdd}
               color={Button.ButtonColor.gray}
               text={i18n.add()}
               disabled={this.props.isSaving || this.props.disableSaving}
+              style={styles.buttonWithoutMargin}
             />
           </div>
         )}
@@ -287,7 +286,11 @@ const styles = {
   xIcon: {
     paddingRight: 5
   },
+  buttonWithoutMargin: {
+    margin: 0
+  },
   saveButton: {
+    margin: 0,
     marginRight: 5
   }
 };
