@@ -4,16 +4,6 @@
   display: inline-block;
 }
 
-.divThisIsATestClassName {
-  h1 {
-    color: #f00;
-  }
-}
-
-h1.thisIsATestClassName {
-  color: #f00;
-}
-
 .icon {
   font-size: 24px;
   // we want our icon text to be a different size than our button text, which
@@ -52,4 +42,14 @@ a:visited.anchor {
 
 .nonFirstAnchor {
   border-top: 1px solid $charcoal;
+}
+
+.divThisIsATestClassName {
+  h1 {
+    color: #f00;
+  }
+}
+
+h1.thisIsATestClassName {
+  color: #f00;
 }
