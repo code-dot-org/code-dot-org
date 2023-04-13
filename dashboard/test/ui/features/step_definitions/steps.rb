@@ -1148,14 +1148,14 @@ end
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   element = @browser.find_element(:css, selector)
   press_keys(element, key)
-  only_alphanumeric_backslash = key.gsub(/[^0-9a-z \\]/i, '') == key
-  check_key_values = only_alphanumeric_backslash && selector != ".ace_text-input"
-  if check_key_values
-    wait_short_until do
-      element_text = element.attribute("value")
-      input_key = key.delete "\n"
-      element_text.include? input_key
-    end
+end
+
+And(/^I press keys "([^"]*)" for element "([^"]*)" and wait until text appears$/) do |key, selector|
+  element = @browser.find_element(:css, selector)
+  press_keys(element, key)
+  wait_short_until do
+    element_text = element.attribute("value")
+    element_text.include? key
   end
 end
 
