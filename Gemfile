@@ -110,7 +110,7 @@ group :development, :test do
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
-gem 'factory_bot_rails', '~> 4.11', group: [:development, :staging, :test, :adhoc]
+gem 'factory_bot_rails', '~> 5.0', group: [:development, :staging, :test, :adhoc]
 
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false
