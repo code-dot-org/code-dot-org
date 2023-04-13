@@ -6,4 +6,4 @@ wrong 'The bird will not move at all.', feedback: 'Incorrect. The bird runs into
 wrong 'I don\'t know.', feedback: 'The bird runs into the TNT with his first move.'
 
 
-allow_multiple_attempts false
+allow_multiple_attempts true

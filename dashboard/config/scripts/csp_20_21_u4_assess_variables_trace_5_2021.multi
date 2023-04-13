@@ -1,38 +1,35 @@
 name 'csp-20-21-u4-assess-variables trace 5_2021'
-encrypted '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
-Dj3QTLBfgRk2
-'
+wrong 'Output A'
+wrong 'Output B'
+wrong 'Output C'
+right 'Output D'
+wrong 'Output E'
+
+markdown <<MARKDOWN
+What text will be output by the program?
+
+![](https://images.code.org/fc51a0cf7b571f6eef9989ebac6748a6-image-1552520215522.36.23 PM.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** See the animation below for a walkthrough of code.
+
+![](https://images.code.org/57e458095265f7b70bb0bdf2a007bc72-image-1614016974844.gif)
+
+[Lesson 6 - Conditionals Investigate](https://studio.code.org/s/csp4-2021/lessons/6) provided chances for students to trace code involving `if-else-if` statements containing Boolean expressions with the `&&` and `||` operators.
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+* AAP-1.C.4 - A string is an ordered sequence of characters.
+* AAP-2.F - For relationships between Boolean values: a. Represent using logical operators. b. Evaluate expressions that use logic operators.
+* AAP-2.F.1 - The exam reference sheet provides the logical operators NOT, AND, and OR, which evaluate to a Boolean value.
+* AAP-2.F.3 - The exam reference sheet provides condition1 AND condition2, which evaluates to true if both condition1 and condition2 are true; otherwise it evaluates to false.
+* AAP-2.F.4 - The exam reference sheet provides condition1 OR condition2, which evaluates to true if condition1 is true or if condition2 is true or if both condition1 and condition2 are true; otherwise it evaluates to false.
+
+
+:::
+
+
+MARKDOWN
+
+allow_multiple_attempts true

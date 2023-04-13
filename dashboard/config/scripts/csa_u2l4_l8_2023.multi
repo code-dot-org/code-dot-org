@@ -28,3 +28,5 @@ public class Time {
 
 Which of the following would be an appropriate implementation for the parameterized constructor?
 MARKDOWN
+
+allow_multiple_attempts true

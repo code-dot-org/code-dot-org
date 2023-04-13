@@ -10,4 +10,4 @@ right '/script_assets/k_1_images/unplugged_images/down.png'
 wrong '/script_assets/k_1_images/unplugged_images/left.png'
 wrong '/script_assets/k_1_images/unplugged_images/right.png'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
