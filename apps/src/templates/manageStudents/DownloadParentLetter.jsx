@@ -33,9 +33,9 @@ export default class DownloadParentLetter extends Component {
 
   render() {
     return (
-      <div style={styles.button}>
+      <div style={styles.container}>
         <Button
-          __useDeprecatedTag
+          style={styles.buttonWithoutMargin}
           onClick={this.onDownloadParentLetter}
           target="_blank"
           color={Button.ButtonColor.gray}
@@ -48,7 +48,10 @@ export default class DownloadParentLetter extends Component {
 }
 
 const styles = {
-  button: {
+  container: {
     marginLeft: 5
+  },
+  buttonWithoutMargin: {
+    margin: 0
   }
 };
