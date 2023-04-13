@@ -21,8 +21,8 @@ class BrowserEventsController < ApplicationController
 
     resp = LOGS_CLIENT.put_log_events(
       {
-        log_group_name: "#{LOG_GROUP_NAME_PREFIX}#{Rails.env}",
-        log_stream_name: Rails.env.to_s,
+        log_group_name: "#{LOG_GROUP_NAME_PREFIX}#{rack_env}",
+        log_stream_name: rack_env,
         log_events: logs
       }
     )
@@ -44,8 +44,6 @@ class BrowserEventsController < ApplicationController
     end
 
     log_payload['userId'] = current_user.id if current_user
-    log_payload['signedIn'] = !current_user.nil?
-    log_payload['environment'] = Rails.env.to_s
     log_payload['release'] = GitUtils.git_revision
 
     return log_payload.to_json.to_s
