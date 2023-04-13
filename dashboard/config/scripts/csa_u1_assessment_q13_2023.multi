@@ -21,3 +21,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 The `!` (NOT) operator negates the result of the condition. So `!true` will evaluate to `false`, while `!false` will evaluate to `true`.
 MARKDOWN
+
+allow_multiple_attempts true

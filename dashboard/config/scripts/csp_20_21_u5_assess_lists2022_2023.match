@@ -1,10 +1,16 @@
 name 'csp-20-21-u5-assess-lists2022_2023'
-encrypted '3aV7hBhqaNH7KOiw4/JZACAgvhT49AWQflYrLmMmZFF+fRn++zLwchTGPr2n
-10Ik0gjn2PKxRVVVqY310w8u5lUmxXyXhjoyQojEa2mYZNT2cetfOewl42Q2
-+D4ORY48rs0tQChb4wkrYm4AsNRAOBZD7ZRtod+HDqk7bYdA38Rkaq/WxG+w
-GlHRQAw3XgtK4Gx7OL9eZOTKZ+sQqs1kF1PcBN/aUgZMephj4mXwr9GVMnPR
-LoOgKJ/IK3/i9LvX9ygJuh7nGTEr9Q8vYXkrOBK1U1pnwKog0wAgGbKGRLQh
-GQ9rEXxRiHObXy5bQCwoVkyaFITLaHy5rFs1EYQTS21T8q1wuT7++Vi3r10C
-IJVn3Ete/FW/UwMCnI06cZyjRHtwlHoG1o/p5fogyJJkoyCwBKm4HEgxmGwd
-XiDAMyi4rXca0ehGmAJ9TtbS74SD
-'
+description 'Match the index with the value'
+question 'myNumbers[4]'
+question 'myNumbers[0]'
+question 'myNumbers[3]'
+question 'myNumbers[1]'
+answer '15'
+answer '32'
+answer '0'
+answer '64'
+
+markdown <<MARKDOWN
+`var myNumbers = [32, 64, 33, 0, 15, 26, 3]`
+MARKDOWN
+
+allow_multiple_attempts true

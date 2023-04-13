@@ -1,20 +1,30 @@
 name 'CSD U3 Match Q2_2023'
-encrypted 'nEEGHAE9+DzJHST+qIYmielPz9RJo94krfGSzsHHOasyyqAqO3gskr5Pp4CV
-IUYV3KPDmcpxsqjuM8hGJNQABr+1d2i+glYQR4WzxRPrXVgrX3SA/M3Nmvu6
-GGbd8W0GShN0/NANZ3SH1O3HusBshWMuOKIXrDIO4ZpOlGMaTS6uHi5+oi8r
-t67gGi0uKErHap6NmUa/z39pWIMatMLIkd+xriFtXvj5zYqhh8MSTA0VTefc
-Aa6sbQUF1mxxnZn6i1b18XGSsI2bUSMGULYoTlhKQ1hQLCWc68tmdAiQNM54
-ErrYIr8KyHIiz2bTwvYcWXKoHJL5zoO72iOolg7vXJw4wxVuXaLkhvJKuaep
-9CfHeeZvF8aAKJm0610EEe98nHuWSShKAXXIVfPbqTN1n8qQw6NJK6NaHVzV
-wLReoBoVPrzXh44VJFAVsqrB57jUH9wqqhZ5Gcg8ome/qEVVyT1LY4FaUOxT
-Y0jYTXsMCeICUtmTa6U0inoDPLJjsY2kZaG/3hIrPLPnk60t1sLZZXIcutiw
-SyewRa7Of/fzKiN7IQKQdr77YqY8xxsqGpyKI/XOp9G/x00ySZK3DiSusBMc
-Txd6DJqdAU6iTTUmdQNAH7fnPTM5IWpQdffaKVMri9KQBsVcqsYBTe2tmzPj
-aI8bJ64NCrk6Xk9ycUsOwDlF3XIfs191mZVbGkjHr72JOqU2HnzYCHGaIDLd
-fawuPVTJ8kN/XkPtBbX1a0RFtUCMRURf5HTw8om+Xs8Hf0akvUSrNr6mLD/d
-JymTTPLYswBdfzle7NtivOWSS18qvaa33c9sFaNqDemR4pGfU6tui5EqnKra
-QWFr2nu+pa0wUdb/uE1nd0RT3LvQ2fFi1a9xozSWna3dx/+rnfKQcE5mp3Mi
-ise5vYdqtSmg1NQgxWoPCEkcCZFKuf1MMeB8/8SW8UtbcnB4FysrIySGxUE1
-Y4nmbh/UfUvngx+Snkq4GCHG/gB/H0BhUbOFghIMAN/FCWQIsUTxWaQ1l7xK
-oASy10VBOVEqHadtrgssbfiOIEJFji2zk8IZeEVoDThtXWs=
-'
+
+height '75'
+
+description 'Match each parameter of rect() with it\'s purpose: `rect(parameter1, parameter2, parameter3, paramter4);` Hint: the following program draws this scene.'
+
+question 'parameter1'
+question 'parameter2'
+question 'parameter3'
+question 'parameter4'
+
+answer 'x'
+answer 'y'
+answer 'width'
+answer 'height'
+teacher_markdown <<MARKDOWN
+**Content: Unit 3 Lesson 4**
+
+
+
+
+MARKDOWN
+
+markdown <<MARKDOWN
+| Scene      | Program |
+| ----------- | ----------- |
+| <img src="https://images.code.org/0023d2c67dcfaf7fe07dcf542d8d9ccf-CSDunit3parameters.png" style="height: 200px">      | <img src="https://images.code.org/2ebb00b797f6554cc0eba4ffe9b1d6fe-CSDunit3parameterscode.png" style="height: 200px">     |
+MARKDOWN
+
+allow_multiple_attempts true
