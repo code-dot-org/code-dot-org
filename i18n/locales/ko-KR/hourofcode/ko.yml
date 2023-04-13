@@ -120,6 +120,10 @@ ko:
     (SVM)을 사용합니다. 우리는 물고기의 각 요소 (눈, 입, 몸통)를 보고 구성요소의 메타데이터 (치아 수, 몸통 형태 등) 모두를 각 물고기
     별 숫자 벡터로 어셈블리합니다. 우리는 이러한 벡터를 SVM을 훈련시키는 데 사용합니다. 트레이닝 데이터에 기초하여, SVM은 모든 가능한
     물고기의 "공간"을 우리가 배우려고 하는 클래스 ("파란색" 또는 "파란색이 아닌")에 상응하는 두 개의 부분으로  분리합니다.
+  heading_additional_resources: Additional resources
+  call_to_action_learn_more: 더보기
+  call_to_action_watch_now: Watch now
+  call_to_action_try_activity: Try activity
   social_hoc2019_oceans_title: '바다환경을 위한 AI #CSforGood'
   social_hoc2019_oceans_desc: 인공지능 (AI)과 머신러닝, 트레이닝 데이터, 편견에 관해 배우는 한편 윤리 문제를 탐구하고
     AI로 세계적 문제를 어떻게 해결할지 알아보세요. 컴퓨터 과학은 코딩 그 이상의 것에 관한 학문입니다!  우리의 커리큘럼 전체에서 AI에 관한
@@ -129,9 +133,47 @@ ko:
     and you could win.
   social_maker_title: I'm a Maker!
   social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  social_blockchain_title: How Blockchain Works
+  social_blockchain_desc: Videos and lessons that explore what blockchain is and why
+    it's important.
   pl_superhero_title: Help students become superheroes!
   pl_superhero_desc: Join our highly supportive Professional Learning Program for
     middle and high school educators.
+  blockchain_hero_heading: How Blockchain Works
+  blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
+    our new video series and accompanying lessons!
+  blockchain_intro_heading: See how blockchain works
+  blockchain_intro_desc: The video series, made in partnership with Coinbase, features
+    industry experts and aims to demystify this technology.
+  blockchain_intro_list_heading: 'This series will:'
+  blockchain_intro_list_item_01: Explain what blockchain is
+  blockchain_intro_list_item_02: Explore why it's important
+  blockchain_intro_list_item_03: Unpack its societal impacts — both good and bad
+  blockchain_video_title_01: Introduction to Blockchain
+  blockchain_video_title_02: Why Blockchain
+  blockchain_video_title_03: Under the Hood
+  blockchain_video_title_04: Beyond Currencies
+  blockchain_video_title_05: Marketplace and Price
+  blockchain_video_title_06: Trustworthy or a Scam?
+  blockchain_video_title_07: Societal Impact
+  blockchain_lessons_heading: Blockchain lessons for your class
+  blockchain_lessons_desc: The first five lessons can be taught as part of a "How
+    Blockchain Works" series or can stand alone. The last lesson condenses the whole
+    series to a single day.
+  blockchain_resources_desc: Interested in learning more about blockchain? Here are
+    some additional resources that can help extend your students' learning.
+  blockchain_resources_01_heading: Coinbase Learn
+  blockchain_resources_01_desc: Crypto questions answered, beginner guides, practical
+    tips, and market updates for first-timers, experienced investors, and everyone
+    in between.
+  blockchain_resources_01_button_label: Visit the Coinbase Learn website
+  blockchain_resources_02_heading: Whiteboard Crypto
+  blockchain_resources_02_desc: Watch videos from Whiteboard Crypto's YouTube channel
+    to learn even more about blockchain technology.
+  blockchain_resources_02_button_label: Visit the Whiteboard Crypto YouTube channel
+  blockchain_resources_03_heading: Hour of Code Activity
+  blockchain_resources_03_desc: Try a crypto memory game created by Coinbase.
+  blockchain_resources_03_button_label: Try the Crypto Memory Game activity
   hoc_live: 아워오브코드 라이브
   hoc_live_sign_up_title: 아워오브코드 라이브 가입
   hoc_live_learn_title: Learn with Hour of Code Live

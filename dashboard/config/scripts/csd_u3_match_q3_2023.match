@@ -1,0 +1,26 @@
+name 'CSD U3 Match Q3_2023'
+
+height '75'
+
+description 'Match the boolean expression to their description.'
+
+question '`panda.x > rhino.x`'
+question '`panda.velocityX > 0`'
+question '`rhino.scale > 1`'
+question '`panda.height == rhino.height`'
+question '`panda.height == panda.width`'
+
+answer 'Is the panda sprite\'s x greater than the rhino sprite\'s x?'
+answer 'Is the panda sprite\'s x velocity greater than 0?'
+answer 'Is the rhino sprite\'s x scale greater than 1?'
+answer 'Is the panda sprite\'s height equal to the rhino sprite\'s height?'
+answer 'Is the panda sprite\'s height equal to the panda sprite\'s width?'
+teacher_markdown <<MARKDOWN
+**Content: Unit 3 Lesson 14**
+
+
+
+
+MARKDOWN
+
+allow_multiple_attempts true

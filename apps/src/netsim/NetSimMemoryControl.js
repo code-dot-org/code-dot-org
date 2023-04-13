@@ -13,7 +13,7 @@ var NetSimSlider = require('./NetSimSlider');
  * @param {function} sliderStopCallback
  * @constructor
  */
-var NetSimMemoryControl = (module.exports = function(
+var NetSimMemoryControl = (module.exports = function (
   rootDiv,
   sliderChangeCallback,
   sliderStopCallback
@@ -39,6 +39,6 @@ NetSimMemoryControl.inherits(NetSimSlider.LogarithmicSlider);
  * @returns {string} - localized string representation of value
  * @override
  */
-NetSimMemoryControl.prototype.valueToLabel = function(val) {
+NetSimMemoryControl.prototype.valueToLabel = function (val) {
   return NetSimUtils.bitsToLocalizedRoundedBytesize(val);
 };

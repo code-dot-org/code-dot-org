@@ -40,3 +40,5 @@ int[] c = {5, 5, 7, 7};
 System.out.println(mystery(s, c));
 ```
 MARKDOWN
+
+allow_multiple_attempts true

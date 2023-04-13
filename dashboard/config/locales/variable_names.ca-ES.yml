@@ -30,6 +30,7 @@ ca:
       marginY: margeY
       name: nom
       nectar: nèctar
+      object: objecte
       planet: planeta
       points: puntes
       random: atzar

@@ -52,7 +52,7 @@ export const MAX_PROJECTS_PER_CATEGORY = 100;
 
 // The project table uses the channels API to populate the personal projects
 // and the data needs to be filtered and mapped before displaying.
-export const convertChannelsToProjectData = function(projects) {
+export const convertChannelsToProjectData = function (projects) {
   // Get the ones that aren't hidden, and have a type and id.
   let projectLists = projects.filter(
     project => !project.hidden && project.id && project.projectType

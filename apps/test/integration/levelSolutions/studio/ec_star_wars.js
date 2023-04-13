@@ -27,7 +27,7 @@ export default {
         setMap("circle");
         for (var i = 0; i < 100; i++) goRight();
       `,
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Studio.sprite[0].x, 245);
         return true;
       },
@@ -43,7 +43,7 @@ export default {
         setMap("circle");
         for (var i = 0; i < 100; i++) goRight();
       `,
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Studio.sprite[0].x, 235);
         return true;
       },

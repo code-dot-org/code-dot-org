@@ -268,7 +268,10 @@ export class WorkshopFilter extends React.Component {
       state: urlParams.state,
       course: urlParams.course,
       subject: urlParams.subject,
+      // TODO: Add prop types for these fields
+      // eslint-disable-next-line react/prop-types
       virtual: urlParams.virtual,
+      // eslint-disable-next-line react/prop-types
       facilitator_id: urlParams.facilitator_id,
       organizer_id: urlParams.organizer_id,
       teacher_email: urlParams.teacher_email,

@@ -41,11 +41,11 @@ export default class cc_client {
         type: 'GET',
         url: `${baseUrl}${this.port}/connected`,
         timeout: timeout,
-        success: function(data) {
+        success: function (data) {
           // cc responded
           asyncCallback(data);
         },
-        error: function(jqxhr, textStatus, error) {
+        error: function (jqxhr, textStatus, error) {
           // TODO: handle net::ERR_CONNECTION_REFUSED error gracefully
           asyncCallback(false);
         }
@@ -73,7 +73,7 @@ export default class cc_client {
       $.ajax({
         type: 'GET',
         url: `${baseUrl}${this.port}/${command}`,
-        success: function(data) {
+        success: function (data) {
           console.log(
             `Command : ${command} success result : ${data.toString()}`
           );
@@ -83,7 +83,7 @@ export default class cc_client {
             callback();
           }
         },
-        error: function(jqxhr, textStatus, error) {
+        error: function (jqxhr, textStatus, error) {
           console.log(`Command : ${command} fail`, error);
           callback();
         }

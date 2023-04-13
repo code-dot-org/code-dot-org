@@ -1,0 +1,24 @@
+name 'CSD U3 Match Q1_2023'
+
+height '75'
+
+description 'Match each line of code with its explanation.'
+
+question '`fries.scale = 0.6;`'
+question '`fries.x = 100;`'
+question '`fries.y = 50;`'
+question '`fries.rotation = 45;`'
+
+answer 'Set the scale of the fries sprite to 0.6.'
+answer 'Move the x position of the fries sprite to 100.'
+answer 'Move the y position of the fries sprite to 50.'
+answer 'Rotate the fries sprite.'
+teacher_markdown <<MARKDOWN
+**Content: Unit 3 Lesson 8**
+
+
+
+
+MARKDOWN
+
+allow_multiple_attempts true

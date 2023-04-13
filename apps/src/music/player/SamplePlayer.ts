@@ -14,12 +14,10 @@ export interface SampleEvent {
 interface PlayingSample {
   eventStart: number;
   uniqueId: number;
-  triggered: boolean;
 }
 
 const MAIN_AUDIO_GROUP = 'mainaudio';
 const PREVIEW_GROUP = 'preview';
-const GROUP_PREFIX = 'all';
 
 /**
  * Handles playback of individual samples.
@@ -29,12 +27,14 @@ export default class SamplePlayer {
   private isPlaying: boolean;
   private startPlayingAudioTime: number;
   private isInitialized: boolean;
+  private groupPath: string;
 
   constructor() {
     this.playingSamples = [];
     this.isPlaying = false;
     this.startPlayingAudioTime = -1;
     this.isInitialized = false;
+    this.groupPath = '';
   }
 
   initialize(library: MusicLibrary) {
@@ -48,6 +48,8 @@ export default class SamplePlayer {
       })
       .flat(2);
     soundApi.InitSound(soundList);
+
+    this.groupPath = library.groups[0].path;
 
     this.isInitialized = true;
   }
@@ -72,7 +74,7 @@ export default class SamplePlayer {
     soundApi.StartPlayback();
   }
 
-  previewSample(sampleId: string, onStop: () => any) {
+  previewSample(sampleId: string, onStop?: () => any) {
     if (!this.isInitialized) {
       console.warn('Sample player not initialized.');
       return;
@@ -80,10 +82,15 @@ export default class SamplePlayer {
 
     this.cancelPreviews();
 
-    soundApi.PlaySound(GROUP_PREFIX + '/' + sampleId, PREVIEW_GROUP, 0, onStop);
+    soundApi.PlaySound(
+      this.groupPath + '/' + sampleId,
+      PREVIEW_GROUP,
+      0,
+      onStop
+    );
   }
 
-  previewSamples(events: SampleEvent[], onStop: () => any) {
+  previewSamples(events: SampleEvent[], onStop?: () => any) {
     if (!this.isInitialized) {
       console.warn('Sample player not initialized.');
       return;
@@ -92,17 +99,21 @@ export default class SamplePlayer {
     this.cancelPreviews();
 
     let counter = 0;
-    events.forEach(event => {
-      soundApi.PlaySound(
-        GROUP_PREFIX + '/' + event.sampleId,
-        PREVIEW_GROUP,
-        soundApi.GetCurrentAudioTime() + event.offsetSeconds,
-        () => {
+    const onStopWrapper = onStop
+      ? () => {
           counter++;
           if (counter === events.length) {
             onStop();
           }
         }
+      : undefined;
+
+    events.forEach(event => {
+      soundApi.PlaySound(
+        this.groupPath + '/' + event.sampleId,
+        PREVIEW_GROUP,
+        soundApi.GetCurrentAudioTime() + event.offsetSeconds,
+        onStopWrapper
       );
     });
   }
@@ -149,7 +160,7 @@ export default class SamplePlayer {
 
       if (eventStart >= currentAudioTime - delayCompensation) {
         const uniqueId = soundApi.PlaySound(
-          GROUP_PREFIX + '/' + sampleEvent.sampleId,
+          this.groupPath + '/' + sampleEvent.sampleId,
           MAIN_AUDIO_GROUP,
           eventStart,
           null,
@@ -159,8 +170,7 @@ export default class SamplePlayer {
 
         this.playingSamples.push({
           eventStart,
-          uniqueId,
-          triggered: sampleEvent.triggered
+          uniqueId
         });
       }
     }
@@ -179,7 +189,7 @@ export default class SamplePlayer {
   }
 
   /**
-   * Stops all non-triggered samples that have not yet been played.
+   * Stops all samples that have not yet been played.
    */
   stopAllSamplesStillToPlay() {
     if (!this.isPlaying) {
@@ -187,10 +197,7 @@ export default class SamplePlayer {
     }
 
     for (const sample of this.playingSamples) {
-      if (
-        !sample.triggered &&
-        sample.eventStart > soundApi.GetCurrentAudioTime()
-      ) {
+      if (sample.eventStart > soundApi.GetCurrentAudioTime()) {
         soundApi.StopSoundByUniqueId(MAIN_AUDIO_GROUP, sample.uniqueId);
       }
     }

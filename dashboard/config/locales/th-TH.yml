@@ -700,6 +700,13 @@ th:
       email_opt_in:
         opt_in_yes: ใช่
         opt_in_no: ไม่ใช่
+  course_offering:
+    headers:
+      minecraft: ไมน์คราฟท์
+      hello_world: สวัสดีชาวโลก
+      sports: กีฬา
+      csf: พื้นฐานด้านวิทยาการคอมพิวเตอร์
+      csc: การเชื่อมต่อ CS
   cookie_banner:
     accept: ฉันเห็นด้วย
   page_not_found_header: '404: ไม่พบหน้าดังกล่าว'

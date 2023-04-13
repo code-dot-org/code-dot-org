@@ -1,0 +1,22 @@
+name 'CSD U2 Match Q1_2023'
+
+height '75'
+
+description 'Match CSS with their definitions'
+
+question 'color'
+question 'font-size'
+question 'float'
+
+answer 'specifies the color of text'
+answer 'specifies the size of a font'
+answer 'places an element on the left or right side of the screen and allows text and other elements to wrap around it'
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 2 Lesson 6, 11, 17**
+
+
+
+MARKDOWN
+
+allow_multiple_attempts true

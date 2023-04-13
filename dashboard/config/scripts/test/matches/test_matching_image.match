@@ -18,3 +18,5 @@ answer '/script_assets/matches/images/a3.jpg'
 
 question "/script_assets/matches/images/q4.jpg"
 answer '/script_assets/matches/images/a4.jpg'
+
+allow_multiple_attempts true

@@ -285,40 +285,38 @@ export const assignToSection = (
  * the server
  * @param {number} sectionId
  */
-export const unassignSection = (sectionId, location) => (
-  dispatch,
-  getState
-) => {
-  dispatch(beginEditingSection(sectionId, true));
-  const {initialCourseId, initialUnitId} = getState().teacherSections;
+export const unassignSection =
+  (sectionId, location) => (dispatch, getState) => {
+    dispatch(beginEditingSection(sectionId, true));
+    const {initialCourseId, initialUnitId} = getState().teacherSections;
 
-  dispatch(
-    editSectionProperties({
-      courseId: null,
-      courseOfferingId: null,
-      courseVersionId: null,
-      unitId: null
-    })
-  );
-  firehoseClient.putRecord(
-    {
-      study: 'assignment',
-      event: 'course-unassigned-from-section',
-      data_json: JSON.stringify(
-        {
-          sectionId,
-          scriptId: initialUnitId,
-          courseId: initialCourseId,
-          location: location,
-          date: new Date()
-        },
-        removeNullValues
-      )
-    },
-    {includeUserId: true}
-  );
-  return dispatch(finishEditingSection());
-};
+    dispatch(
+      editSectionProperties({
+        courseId: null,
+        courseOfferingId: null,
+        courseVersionId: null,
+        unitId: null
+      })
+    );
+    firehoseClient.putRecord(
+      {
+        study: 'assignment',
+        event: 'course-unassigned-from-section',
+        data_json: JSON.stringify(
+          {
+            sectionId,
+            scriptId: initialUnitId,
+            courseId: initialCourseId,
+            location: location,
+            date: new Date()
+          },
+          removeNullValues
+        )
+      },
+      {includeUserId: true}
+    );
+    return dispatch(finishEditingSection());
+  };
 
 export const beginCreatingSection = (
   courseOfferingId,
@@ -544,26 +542,24 @@ export const beginGoogleImportRosterFlow = () => dispatch => {
  * @param {string} courseName
  * @return {function():Promise}
  */
-export const importOrUpdateRoster = (courseId, courseName) => (
-  dispatch,
-  getState
-) => {
-  const state = getState();
-  const provider = getRoot(state).rosterProvider;
-  const importSectionUrl = importUrlByProvider[provider];
-  let sectionId;
+export const importOrUpdateRoster =
+  (courseId, courseName) => (dispatch, getState) => {
+    const state = getState();
+    const provider = getRoot(state).rosterProvider;
+    const importSectionUrl = importUrlByProvider[provider];
+    let sectionId;
 
-  dispatch({type: IMPORT_ROSTER_REQUEST});
-  return fetchJSON(importSectionUrl, {courseId, courseName})
-    .then(newSection => (sectionId = newSection.id))
-    .then(() => dispatch(asyncLoadSectionData()))
-    .then(() =>
-      dispatch({
-        type: IMPORT_ROSTER_SUCCESS,
-        sectionId
-      })
-    );
-};
+    dispatch({type: IMPORT_ROSTER_REQUEST});
+    return fetchJSON(importSectionUrl, {courseId, courseName})
+      .then(newSection => (sectionId = newSection.id))
+      .then(() => dispatch(asyncLoadSectionData()))
+      .then(() =>
+        dispatch({
+          type: IMPORT_ROSTER_SUCCESS,
+          sectionId
+        })
+      );
+  };
 
 /**
  * Initial state of this redux module.
@@ -1179,7 +1175,7 @@ export function isSaveInProgress(state) {
 export function assignedCourseOffering(state) {
   const {sectionBeingEdited, courseOfferings} = getRoot(state);
 
-  return courseOfferings[(sectionBeingEdited?.courseOfferingId)];
+  return courseOfferings[sectionBeingEdited?.courseOfferingId];
 }
 
 function assignedUnit(state) {
@@ -1422,8 +1418,8 @@ export function sectionsForDropdown(
       (unitId !== null && section.unitId === unitId) ||
       (courseOfferingId !== null &&
         section.courseOfferingId === courseOfferingId &&
-        (courseVersionId !== null &&
-          section.courseVersionId === courseVersionId))
+        courseVersionId !== null &&
+        section.courseVersionId === courseVersionId)
   }));
 }
 

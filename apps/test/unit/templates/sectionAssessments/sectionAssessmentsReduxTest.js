@@ -299,9 +299,8 @@ describe('sectionAssessmentsRedux', () => {
 
     describe('getMultipleChoiceStructureForCurrentAssessment', () => {
       it('returns an empty array when no assessments in redux', () => {
-        const result = getMultipleChoiceStructureForCurrentAssessment(
-          rootState
-        );
+        const result =
+          getMultipleChoiceStructureForCurrentAssessment(rootState);
         assert.deepEqual(result, []);
       });
 
@@ -333,9 +332,8 @@ describe('sectionAssessmentsRedux', () => {
             }
           }
         };
-        const result = getMultipleChoiceStructureForCurrentAssessment(
-          stateWithAssessment
-        );
+        const result =
+          getMultipleChoiceStructureForCurrentAssessment(stateWithAssessment);
         assert.deepEqual(result, [
           {
             correctAnswer: 'B',
@@ -379,9 +377,8 @@ describe('sectionAssessmentsRedux', () => {
             }
           }
         };
-        const result = getMatchStructureForCurrentAssessment(
-          stateWithAssessment
-        );
+        const result =
+          getMatchStructureForCurrentAssessment(stateWithAssessment);
         assert.deepEqual(result, [
           {
             id: 456,
@@ -432,9 +429,8 @@ describe('sectionAssessmentsRedux', () => {
             }
           }
         };
-        const result = getStudentMCResponsesForCurrentAssessment(
-          stateWithAssessment
-        );
+        const result =
+          getStudentMCResponsesForCurrentAssessment(stateWithAssessment);
         assert.deepEqual(result, {
           id: 1,
           name: 'Saira',
@@ -486,9 +482,8 @@ describe('sectionAssessmentsRedux', () => {
             }
           }
         };
-        const result = getStudentMatchResponsesForCurrentAssessment(
-          stateWithAssessment
-        );
+        const result =
+          getStudentMatchResponsesForCurrentAssessment(stateWithAssessment);
         assert.deepEqual(result, {
           id: 1,
           name: 'Saira',
@@ -1269,9 +1264,8 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
 
-        const totalSubmissions = countSubmissionsForCurrentAssessment(
-          stateWithAssessment
-        );
+        const totalSubmissions =
+          countSubmissionsForCurrentAssessment(stateWithAssessment);
         assert.deepEqual(totalSubmissions, 2);
       });
 
@@ -1307,9 +1301,8 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
 
-        const totalSubmissions = countSubmissionsForCurrentAssessment(
-          stateWithSurvey
-        );
+        const totalSubmissions =
+          countSubmissionsForCurrentAssessment(stateWithSurvey);
         assert.deepEqual(totalSubmissions, 1);
       });
 
@@ -1330,9 +1323,8 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
 
-        const totalSubmissions = countSubmissionsForCurrentAssessment(
-          stateWithSurvey
-        );
+        const totalSubmissions =
+          countSubmissionsForCurrentAssessment(stateWithSurvey);
         assert.deepEqual(totalSubmissions, 0);
       });
     });
@@ -1676,9 +1668,8 @@ describe('sectionAssessmentsRedux', () => {
             }
           }
         };
-        const result = getStudentsMCandMatchSummaryForCurrentAssessment(
-          stateWithAssessment
-        );
+        const result =
+          getStudentsMCandMatchSummaryForCurrentAssessment(stateWithAssessment);
         assert.deepEqual(result, [
           {
             id: 2,
@@ -1738,9 +1729,8 @@ describe('sectionAssessmentsRedux', () => {
           }
         }
       };
-      const result = getStudentsMCandMatchSummaryForCurrentAssessment(
-        stateWithAssessment
-      );
+      const result =
+        getStudentsMCandMatchSummaryForCurrentAssessment(stateWithAssessment);
       assert.deepEqual(result, [
         {
           id: 99,
@@ -1952,9 +1942,8 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
 
-        const answers = getStudentAnswersForCurrentQuestion(
-          stateWithAssessment
-        );
+        const answers =
+          getStudentAnswersForCurrentQuestion(stateWithAssessment);
         assert.deepEqual(answers, [
           {id: 1, name: 'Saira', answer: 'D', correct: false}
         ]);

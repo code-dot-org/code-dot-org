@@ -1,0 +1,24 @@
+name 'CSD U3 Match Q9_2023'
+
+height '75'
+
+description 'Match the following terms with their definitions'
+
+question 'placeholder question1'
+question 'placeholder question2'
+question 'placeholder question3'
+question 'placeholder question4'
+
+answer 'placeholder answer1'
+answer 'placeholder answer2'
+answer 'placeholder answer3'
+answer 'placeholder answer4'
+teacher_markdown <<MARKDOWN
+**Explanation:** These definitions were covered in [Lesson 2 - Building a Network](https://studio.code.org/s/csp2-2021/lessons/2) 
+
+
+
+
+MARKDOWN
+
+allow_multiple_attempts true

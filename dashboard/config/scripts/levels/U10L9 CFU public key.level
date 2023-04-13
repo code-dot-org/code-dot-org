@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2019-11-19T20:28:24.000Z",
-  "level_num": "custom",
-  "user_id": 0,
   "properties": {
     "title": "Reflection: Frequency Analysis",
     "long_instructions": "# Public Key Encryption\r\n\r\nHow does asymmetric (public key) encryption keep data secure?",
@@ -17,8 +13,13 @@
     "name_suffix": "_2019",
     "encrypted": "false",
     "instructions_important": "false",
-    "optional": "false"
+    "optional": "false",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2019-11-19T20:28:24.000Z",
+  "user_id": 0,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2019-11-19 20:30:10 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",

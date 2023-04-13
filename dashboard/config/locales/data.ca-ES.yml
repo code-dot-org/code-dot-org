@@ -610,6 +610,7 @@ ca:
         PL_CS_Journeys_Overview: Viatges informàtics
         csp_applab_parameters: Funcions amb Paràmetres
         CS_Changing_Everything: La informàtica ho està canviant tot
+        csd_sprite_properties: Propietats de l'sprite
     callout:
       text:
         drag_blocks: Arrossegueu un bloc "mou" i enganxeu-lo sota l'altre bloc

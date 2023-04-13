@@ -25,7 +25,7 @@
         },
         "poem-art-2021/Poem Art": {
           "name": "El Arte del Poema",
-          "overview": "En esta lección integrada de informática y lengua inglesa, los alumnos animarán un poema con código para ilustrar el estado de ánimo de un poema. Los alumnos leerán y detectarán el estado de ánimo de un poema. A continuación, encontrarán los efectos e imágenes correspondientes para ayudar a ilustrar el estado de ánimo del poema. Por último, los alumnos utilizarán eventos (código) para ilustrar un cambio de humor o animar la introducción de nuevas imágenes en un poema. \n\nEsta lección puede completarse como una lección independiente de una hora. También existe la opción de utilizar esta lección como la primera del módulo de 5 lecciones llamado [Codificación con Poesía](http://studio.code.org/s/poetry-2021). Al final del módulo Codificación con poesía, los estudiantes escribirán sus propios poemas y crearán una aplicación generadora de poemas para compartir con sus amigos. \n\nCodificación con Poesía forma parte del plan de estudios Conexiones CS de Code.org, cuyo objetivo es integrar las ciencias de la computación en otras asignaturas, como las matemáticas, la lengua inglesa y las ciencias, en consonancia con los estándares CCSS, NGSS y CSTA. ",
+          "overview": "En esta lección integrada CS y ELA, los alumnos animarán un poema con código para ilustrar el estado de ánimo de un poema. Los alumnos leerán y detectarán el estado de ánimo de un poema. Luego encontrarán los efectos e imágenes correspondientes para ayudar a ilustrar el estado de ánimo del poema. Por último, los estudiantes utilizarán eventos (código) para ilustrar un cambio de humor o animar la introducción de nuevas imágenes en un poema. \n\nEsta lección se puede completar como una lección independiente de 1 hora. También hay una opción para usar esta lección como la primera lección del módulo multi-lección llamado [Codificación con poesía](http://studio.code.org/s/poetry-2021).",
           "preparation": "-   Revisa y completa tú mismo el tutorial en línea: [Poem Art](http://studio.code.org/s/poem-art).\n\n-   Asegúrate de probar primero las actividades antes de pedir a tus alumnos que las realicen. \n\n-   Comprueba su tecnología y decide si necesitas solucionar algún problema de antemano.\n\n-   Algunos niveles requieren sonido para jugar. Reparte los auriculares con antelación. \n\n-   [Optional] 2 notas adhesivas por alumno para la Evaluación.",
           "student_overview": "La poesía trata de usar palabras para crear arte. Añade efectos visuales e imágenes a tu propio poema animado."
         },
@@ -512,7 +512,7 @@
         },
         "coursed-2022/End of Course Project": {
           "name": "Proyecto de fin de curso",
-          "overview": "Esta lección de culminación lleva a los alumnos a través del proceso de diseño, desarrollo y exhibición de sus propios proyectos. ",
+          "overview": "¡Esta lección de **proyecto** lleva a los estudiantes a través del proceso de diseñar, desarrollar y exhibir nuevos proyectos!",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para tu clase.\n-   Imprime una **\\*Guía de planificación del proyecto** para cada estudiante (o para cada pareja).\n-   (Opcional) Completa tu propia guía de planificación y codifica tu propio proyecto para mostrárselo a los estudiantes.",
           "purpose": "Esta lección les brinda a los estudiantes la oportunidad de desarrollar un proyecto diseñado por ellos mismos, a través de un proceso paso a paso que requiere planificación y fomenta la creatividad.",
           "student_overview": "¡Prepara las manos para mucha programación! Llegó el momento de comenzar a crear tu proyecto."
@@ -561,7 +561,7 @@
         },
         "coursef-2022/Text and Prompts": {
           "name": "Texto y Comentarios",
-          "overview": "Los alumnos practicarán con las variables en el Laboratorio de Sprite. Los alumnos trabajarán con la entrada del usuario para establecer los valores de sus variables, y luego imprimirán esos valores junto con otro texto.",
+          "overview": "En esta lección de **construcción de destelas**, los estudiantes obtendrán práctica con variables en Sprite Lab. ",
           "preparation": "Explora los niveles y revisa las diapositivas de la lección.",
           "purpose": "Las variables se utilizarán en este curso para almacenar y modificar datos. A este punto, los estudiantes simplemente almacenarán y recuperarán valores sin cambiarlos. En lecciones posteriores, almacenarán valores numéricos y los modificarán con el tiempo para hacer un seguimiento de cosas como la puntuación de un jugador en un juego.",
           "student_overview": "En esta lección practicarás con las variables en el Laboratorio de Sprite."
@@ -573,18 +573,30 @@
           "purpose": "Esta lección no introduce nuevas habilidades o conceptos, sino que brinda a los estudiantes la oportunidad de aplicar lo que han aprendido de forma creativa.",
           "student_overview": "Aplica tus nuevos conocimientos con variables a uno de los tres proyectos abiertos."
         },
+        "coursef-2022/[New] Lots of Sprites": {
+          "name": "Montones de Sprites",
+          "overview": "En esta lección de **contextualización**/**desarrollo de conocimientos**, los alumnos profundizarán en las capacidades de Laboratorio Sprite y aprenderán a gestionar grupos de sprites con el mismo disfraz. ",
+          "preparation": "Juega a través de los niveles y repasa las **diapositivas de la lección**.",
+          "purpose": "Esta lección se aleja temporalmente de las variables y se centra en la programación con grupos de sprites. Más adelante, los alumnos aprenderán más sobre variables y simulaciones. Los tipos de programas que los estudiantes pueden crear en esta lección proporcionarán un contexto adicional para esas lecciones.",
+          "student_overview": "Aprenderás a hacer aún más cosas con el Laboratorio Sprite y a ¡crear proyectos con un montón de sprites!"
+        },
         "coursef-2022/[New] Counting with Variables": {
           "name": "Contando con Variables",
           "overview": "En esta lección de **desarrollo de conocimientos**, los alumnos utilizarán variables para registrar un valor que cambia con el tiempo, como un contador. Esta lección también incluye un breve **mini-proyecto** en el que los alumnos crean un juego sencillo.",
+          "preparation": "Juega a través de los niveles y repasa las **diapositivas de la lección**.",
           "purpose": "En las lecciones anteriores, los alumnos aprendieron a utilizar las variables para almacenar datos que pueden ser recuperados posteriormente. En esta lección, los alumnos comenzarán a aprender a modificar los datos almacenados en una variable. Este conocimiento clave de cómo funcionan las variables también les permitirá crear proyectos más avanzados.",
           "student_overview": "Aprenderás a utilizar variables para hacer un contador o llevar la cuenta de una puntuación en un juego."
         },
         "coursef-2022/[New] Mini-Project: Collector Game": {
-          "name": "Mini-Proyecto: Juego de Coleccionista"
+          "name": "Mini-Proyecto: Juego de Coleccionista",
+          "overview": "En esta lección de **mini-proyecto**, los alumnos crearán un \"juego de coleccionista\" personalizado, en el que el usuario mueve un sprite para recoger objetos.",
+          "preparation": "Juega a través de los niveles y repasa las **diapositivas de la lección**.",
+          "purpose": "Este proyecto está diseñado para que los alumnos apliquen sus nuevos conocimientos sobre variables de una forma divertida. Al comprender cómo modificar el valor almacenado en una variable, los alumnos pueden crear un juego que mantenga automáticamente la puntuación en función de las acciones del jugador.",
+          "student_overview": "¡Colecciona todos los sprites! En este proyecto, crearás un juego al que otros podrán jugar."
         },
         "coursef-2022/Simulating Experiments": {
           "name": "Simulación de experimentos",
-          "overview": "Al ejecutar una simulación simple en el Laboratorio de Sprites, los estudiantes experimentarán cómo la computación se puede utilizar para recopilar datos que identifiquen tendencias o patrones. Luego de ejecutar la simulación varias veces, los estudiantes tendrán la oportunidad de hacer una predicción sobre cómo cambiar una variable en la variable podría tener un impacto en el resultado, y luego probar esa hipótesis.",
+          "overview": "En esta lección **context-setting**, los estudiantes ejecutarán y recopilarán datos de una simulación simple en Sprite Lab. Después de ejecutar la simulación varias veces, los estudiantes tendrán la oportunidad de predecir cómo cambiar una variable en la simulación podría afectar el resultado y probar esa hipótesis.",
           "preparation": "-   Determinar si los estudiantes ejecutaran las simulaciones en sus propios computadores o si lo harán en conjunto como clase.\n-   De ser necesario, prepárate para proyectar las dos simulaciones incluidas en esta lección.",
           "purpose": "Distintas disciplinas de las ciencias utilizan las ciencias de la computación para ejecutar modelos y simulaciones, y así realizar experimentos, recolectar datos y analizarlos para obtener conocimientos. A pesar de que las simulaciones en esta lección son bastante simples, funcionan como un punto de inicio para que los estudiantes consideren cómo usar modelos computacionales más sofisticados para probar hipótesis.",
           "student_overview": "Ejecuta simulaciones en la computadora y experimenta cambiando variables."
@@ -598,20 +610,20 @@
         },
         "coursef-2022/AI For Oceans": {
           "name": "Inteligencia Artificial para océanos",
-          "overview": "Los alumnos clasifican los objetos como \"peces\" o \"no peces\" para intentar eliminar la basura del océano. A continuación, los alumnos tendrán que ampliar su conjunto de datos de entrenamiento para incluir otras criaturas marinas que pertenecen al agua. En la segunda parte de la actividad, los alumnos elegirán sus propias referencias para aplicarlas a imágenes de peces generadas al azar. Estos datos de entrenamiento se utilizan para un modelo de aprendizaje automático que luego debería ser capaz de identificar nuevas imágenes por sí mismo.",
+          "overview": "En esta lección **exploratoria**, los estudiantes entrenarán un modelo de aprendizaje automático clasificando peces y otros objetos.",
           "purpose": "Esta lección está ideada como una introducción rápida al aprendizaje de máquinas, un tipo de inteligencia artificial (IA). Los estudiantes descubrirán cómo los datos de aprendizaje son usados para permitir que un modelo de aprendizaje de máquinas sea capaz de clasificar nuevos datos. Es necesario que los estudiantes tengan una buena experiencia con este tutorial y, más importantemente aún, que se sientan motivados a seguir aprendiendo.",
           "student_overview": "Clasifica los objetos como \"peces\" o \"no peces\" para intentar eliminar la basura del océano. A continuación, amplía tu conjunto de datos de entrenamiento para incluir otras criaturas marinas que pertenecen al agua. En la segunda parte de la actividad, elige tus propias etiquetas para aplicarlas a imágenes de peces generadas aleatoriamente. Estos datos de entrenamiento se utilizan para un modelo de aprendizaje automático que luego debería ser capaz de identificar nuevas imágenes por sí mismo."
         },
         "coursef-2022/The Internet": {
           "name": "Internet",
-          "overview": "A pesar de que muchas personas utilizan Internet todos los días, no muchos saben cómo funciona. En esta lección, los estudiantes viajarán a través de Internet y aprenderán acerca de conexiones, URL, direcciones IP y el DNS.",
+          "overview": "Los estudiantes pretenderán fluir a través de Internet mientras aprenden sobre conexiones, URL, direcciones IP y DNS en esta lección **exploratoria**.",
           "preparation": "-   Vea el video del profesor**\\\\ \\*Internet**.\n-   Imprimir lo suficiente **\\\\ \\*Tarjetas de dirección IP y tarjetas de tipo de entrega** - Manipulativos para cada grupo.\n-   Imprima una evaluación **\\\\ \\*Internet** para cada estudiante.\n-   Acceso a Internet (por ejemplo, **\\\\ \\*get-site-ip.com**.\n-   Asegúrese de que cada alumno tenga un diario de reflexión.",
           "purpose": "Si has realizado cada una de las actividades de este curso, entonces los estudiantes ya han usado Internet. Pero… ¿cuántos saben cómo funciona? Aprender sobre Internet ayudará a los estudiantes a desarrollar una mejor comprensión de sus infinitas posibilidades. ",
           "student_overview": "¿Alguna vez te preguntaste cómo viaja la información a través de Internet? ¡No es magia! Esta lección te enseñará los conceptos básicos de cómo funciona Internet."
         },
         "coursef-2022/End of Course Project": {
           "name": "Proyecto de fin de curso",
-          "overview": "Esta lección de culminación lleva a los alumnos a través del proceso de diseño, desarrollo y exhibición de sus propios proyectos. ",
+          "overview": "¡Esta lección de **proyecto** lleva a los estudiantes a través del proceso de diseñar, desarrollar y exhibir nuevos proyectos!",
           "preparation": "-   Realiza tu propio proyecto tanto con el Artista como con Sprite Lab. Familiarízate con las capacidades y limitaciones de cada herramienta.\n-   Modifica la tabla de evaluación para acomodarla a los objetivos de tu clase e imprime una copia para cada estudiante.\n-   Modifica la guía de diseño de proyectos para acomodarla a tu clase e imprime una copia para cada estudiante.",
           "purpose": "Los estudiantes podrían estar listos para ir directo a desarrollar sus proyectos; sin embargo, esta lección los ayudará a dar forma a sus ideas y ordenarlas como un plan. Esta estructura mantendrá a los más soñadores con los pies en la tierra e iluminará el camino para aquellos que se sientan abandonados en la oscuridad. Dales tanto tiempo como sea necesario para que los estudiantes desarrollen y revisen sus proyectos. El ensayo y error implícito en esta lección los ayudará a desarrollar habilidades de resolución de problemas y a ser perseverantes.",
           "student_overview": "Los proyectos así de grandes toman tiempo y mucha planificación. ¡Encuentra tu inspiración, desarrolla un plan y libera tu creatividad!"
@@ -632,7 +644,7 @@
         },
         "coursee-2022/Swimming Fish with Sprite Lab": {
           "name": "Aprender sprites con Laboratorio de Sprite",
-          "overview": "En esta lección, los estudiantes aprenderán sobre dos conceptos alojados en el corazón del Laboratorio de sprites: sprites y comportamientos. Los sprites son personajes u objetos en la pantalla que los estudiantes pueden mover, cambiar y manipular. Los comportamientos son acciones que los sprites harán continuamente hasta que se los detenga. ",
+          "overview": "Los estudiantes programarán una sencilla escena submarina animada en esta lección de **desarrollo de estudios**.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
           "purpose": "Esta lección está diseñada para presentar a los estudiantes en el vocabulario básico del Sprite Lab y ayudarlos a aplicar los conceptos que aprendieron en otros entornos a esta herramienta. Al crear una pecera, los estudiantes comenzarán a comprender el modelo de programación de esta herramienta y explorarán formas en que pueden utilizarlo para expresarse.",
           "student_overview": "Aprende cómo crear y editar sprites."
@@ -653,14 +665,14 @@
         },
         "coursee-2022/Drawing with Loops": {
           "name": "Dibujar con bucles",
-          "overview": "¡Mira cómo se ilumina el resto de los estudiantes mientras hacen sus propios diseños maravillosos usando un pequeño número de bloques y pegatinas digitales! Esta lección se basa en la comprensión de bucles de lecciones anteriores y da a los/as estudiantes la oportunidad de ser verdaderamente creativos. Esta actividad es fantástica para producir artefactos para carpetas o para reuniones de padres/profesores.",
+          "overview": "Esta lección **context-setting** cambia el enfoque de Sprite Lab al Artista, una nueva herramienta que los estudiantes explorarán a lo largo del resto del curso.  ",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
           "purpose": "Los estudiantes practicarán el uso de bucles, un concepto que repasaremos en las próximas lecciones.",
           "student_overview": "En esta lección, los bucles hacen que sea sencillo crear imágenes incluso más geniales con Artista."
         },
         "coursee-2022/Fancy Shapes using Nested Loops": {
           "name": "Formas elegantes con bucles anidados",
-          "overview": "Los alumnos crearán intrincados diseños utilizando el Artista en el conjunto de rompecabezas de hoy. Al seguir practicando los bucles anidados con nuevos objetivos, los alumnos verán un mayor uso de los bucles en general. Este conjunto de rompecabezas también ofrece mucho más potencial para la creatividad con una oportunidad para que los alumnos creen su propio diseño al final de la lección.",
+          "overview": "En esta lección de **construcción de calificaciones**, los estudiantes crearán diseños intrincados usando el Artista. La lección termina con una oportunidad para que los estudiantes creen sus propios diseños.",
           "preparation": "-   Juega con los desafíos para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que todos los estudiantes tengan un diario de reflexión.\n-   Considera qué apoyos pueden necesitar tus estudiantes con los giros y los ángulos. ",
           "purpose": "En esta actividad en línea, los estudiantes crearán diseños con el artista, los cuales podrán compartir con orgullo con sus seres queridos.  \n\nEl propósito de esta actividad es utilizar los bucles anidados como una manera para inspirar a los estudiantes con mentes artísticas a ver la programación como otra forma de expresarse. Estos desafíos están ideados para desarrollar habilidades de pensamiento crítico, comprensión de geometría básica y creatividad, ¡todo esto con bucles anidados!",
           "student_overview": "¡Más loops anidados! Esta vez, harás algunos SORPRENDENTES dibujos con loops anidados."
@@ -674,41 +686,42 @@
         },
         "coursee-2022/Songwriting": {
           "name": "Composición de canciones",
-          "overview": "Una de las estructuras más magníficas en el mundo de las ciencias de la computación es la función. Las funciones (a veces llamadas procedimientos) son pequeños programas que puedes utilizar una y otra vez dentro de tu programa más grande. Esta clase ayudará a los estudiantes a entender intuitivamente por qué la combinación de partes de código en funciones es una práctica tan útil.",
+          "overview": "Esta lección de**context-setting** ayudará a los estudiantes a entender por qué combinar trozos de código en funciones puede ser una práctica útil.",
           "preparation": "-   (Opcional) Ver el video de la **\\*Lección en Acción**.\n-   Imprime varias **\\*hojas de trabajo** para cada grupo.\n-   Imprime una **\\*evaluación** para cada alumno.\n-   Asegúrate de tener acceso a las canciones y a la letra para la actividad.\n-   Asegúrate de que cada alumno tiene un diario.",
           "purpose": "El uso de funciones ayuda a simplificar el código y desarrollar la capacidad del estudiante para organizar su programa. Los estudiantes reconocerán rápidamente que las funciones de escritura pueden permitir que sus programas largos sean más fáciles de leer y que sea más fáciles de realizar el depuración si algo va mal. ",
           "student_overview": "Incluso las estrellas de rock necesitan conocimientos de programación. Esta lección te enseñará sobre funciones mediante el uso de letras de canciones."
         },
         "coursee-2022/Functions in Minecraft": {
           "name": "Funciones en Minecraft",
-          "overview": "Los estudiantes comenzarán a comprender de qué manera las funciones pueden ser útiles en esta divertida e interactiva aventura de Minecraft.",
+          "overview": "En esta lección de **desarrollo de calificaciones**, ¡los estudiantes comenzarán a entender cómo las funciones pueden ser útiles!",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
           "purpose": "Los estudiantes descubrirán la versatilidad de programar practicando las funciones en diferentes entornos. Aquí, reconocerán patrones que pueden volver a usar y podrán incorporar bloques con nombres para usar funciones predeterminadas.",
           "student_overview": "¿Puedes adivinar cómo usar funciones para el código más eficiente?"
         },
         "coursee-2022/Functions with Artist": {
           "name": "Funciones de Artista",
-          "overview": "Los estudiantes conocerán cómo usar las funciones en Code.org. En Artista, podrán crear y modificar magníficas imágenes con funciones. Para patrones más complicados, los estudiantes aprenderán cómo anidar funciones mediante el llamado a una función desde otra.",
+          "overview": "En esta lección de **desarrollo de estudios**, los estudiantes usarán funciones con el Artista.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
           "purpose": "Uno de los componentes más importantes de esta lección es proporcionar a los estudiantes un espacio para crear algo de lo que se sientan orgullosos. Estos desafíos avanzan hacia imágenes cada vez más complejas, pero cada nuevo desafío se basa en el anterior. Al final de esta lección, los estudiantes se sentirán seguros y orgullosos de su esfuerzo.",
           "student_overview": "¡Usa las funciones para hacer dibujos complejos más fácilmente!"
         },
         "coursee-2022/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Condicionales en Minecraft: Voyage Aquatic",
+          "overview": "En esta lección de **desarrollo de conocimientos/contextualización**, los alumnos tendrán la oportunidad de practicar los contenidos que han aprendido hasta el momento, ¡así como de echar un vistazo a las condicionales!",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para yu clase.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "Este conjunto de desafíos trabajarás para solidificar y desarrollar el conocimiento de los bucles y presentar las condicionales. Al combinar estos dos conceptos, los estudiantes podrán explorar el potencial de crear programas divertidos e innovadores en un entorno nuevo y emocionante.",
           "student_overview": "Aquí aprenderás sobre condicionales en el mundo de Minecraft."
         },
         "coursee-2022/Conditionals with the Farmer": {
           "name": "Condicionales con la Granjera",
-          "overview": "Esta lección introduce a los estudiantes a los bucles `mientras` y las sentencias `si / si no`. _Bucles mientras_ son bucles que repiten comandos mientras una condición sea cierta. Los bucles `mientras` se utilizan cuando el programador no conoce el número exacto de veces que los comandos deben ser repetidos, pero sí sabe la condición que debe ser cierta para que el bucle continúe. Las sentencias `si / si no` ofrecen flexibilidad en la programación al ejecutar el código solo si algo es cierto; de lo contrario, ejecuta otra cosa.",
+          "overview": "Esta lección de **desarrollo de capacidades** se centra en un nuevo tipo de rompecabezas de programación, con un granjero que necesita preparar sus campos para plantar cultivos. ",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
           "purpose": "Esta lección introduce los bucles “mientras” y a las declaraciones “si/si no”.",
           "student_overview": "En esta divertida y desafiante serie podrás decirle a la computadora qué hacer bajo ciertas condiciones."
         },
         "coursee-2022/Functions with Harvester": {
           "name": "Funciones en Cosechadora",
-          "overview": "Los estudiantes practicaron cómo crear diseños maravillosos en el Artista y recorrer laberintos en la Abeja, pero hoy usarán las funciones para cosechar cultivos en la Granjera. Esta lección les permitirá usar las funciones de nuevas maneras y combinarlas con los bucles `mientras` y las sentencias `si / si no`.",
+          "overview": "En esta lección de **construcción de calificaciones**, los estudiantes usarán condicionales con funciones para cosechar cultivos en _Harvester_.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
           "purpose": "Esta lección pretende estimular a los estudiantes a utilizar condicionales con funciones. Estos desafíos pretenden aumentar la resolución de problemas y las habilidades de pensamiento crítico.",
           "student_overview": "¡Las funciones te ahorrarán mucho trabajo mientras ayudas a la granjera con su cosecha!"
@@ -722,14 +735,14 @@
         },
         "coursee-2022/Digital Sharing": {
           "name": "Colaboración digital",
-          "overview": "Esta lección **exploratoria**, desarrollada por el equipo de [Copyright and Creativity](https://www.copyrightandcreativity.org/), tiene como objetivo ayudar a los alumnos a entender los retos y beneficios de respetar la propiedad y los derechos de autor, especialmente en los entornos digitales. Hay que animar a los alumnos a respetar los derechos de los artistas como parte importante de un ciudadano digital ético.",
+          "overview": "Esta lección **exploratoria** ayuda a los estudiantes a comprender los desafíos y beneficios de respetar la propiedad y los derechos de autor, particularmente en entornos digitales. ",
           "preparation": "-   Localiza el **\\*Video Copyright Sharing** en los \"Enlaces\" que aparecen a continuación\n-   Descarga y revisa el plan de estudios completo **\\*Digital Sharing Lesson Plan** de Copyright and Creativity\n-   Como docente, crea una obra de arte para la lección (imagen, canción, presentación de diapositivas, etc.) \n-   Asegúrate de que cada estudiante tenga un diario de reflexión.\n-   Necesitarás una tableta o un teléfono inteligente para replicar la compartición de ese elemento",
           "purpose": "Los estudiantes pronto crearán proyectos para compartir y la mayoría de estos proyectos contendrán código o imágenes que los estudiantes no han creado. Esta lección sirve para mostrar a los estudiantes la forma adecuada de manejar el uso de contenidos que no son propios.",
           "student_overview": "En esta lección, aprenderás sobre los desafíos y los beneficios de la propiedad y los derechos de autor."
         },
         "coursee-2022/End of Course Project": {
           "name": "Proyecto de fin de curso",
-          "overview": "Las próximas cuatro lecciones ofrecen a los estudiantes la oportunidad de poner en práctica sus habilidades de programación en un proyecto final. Este proyecto ayudará a las personas a adquirir experiencia con la programación y crear un ejemplo que pueden compartir con sus compañeros y seres queridos. La experiencia puede durar varias lecciones o semanas en las que los estudiantes aportarán ideas, aprenderán sobre el proceso de diseño, desarrollarán y presentarán su trabajo final. \\\\r\n\\\\r\nEn la etapa de exploración, los estudiantes podrán experimentar con proyectos predefinidos en el Artista y el Laboratorio de sprites para inspirarse. Luego, aprenderán sobre el proceso de diseño y cómo implementarlo en sus propios proyectos. Se les dará el espacio para crear su propio proyecto en el Artista, el Laboratorio de juegos o cualquier otra interfaz que les resulte familiar (esta es, probablemente, la etapa más larga del proyecto.) Finalmente, los estudiantes podrán presentar sus trabajos terminados a sus compañeros de clase.",
+          "overview": "¡Esta lección de **proyecto** lleva a los estudiantes a través del proceso de diseñar, desarrollar y exhibir nuevos proyectos! ",
           "preparation": "-   Realice su propio proyecto tanto con el artista como con Sprite Lab. Familiarízate con las capacidades y limitaciones de cada herramienta.\n-   Modifica la  **\\*tabla de evaluación** para acomodarla a los objetivos de tu clase e imprime una copia para cada estudiante.\n-   Modifica la **\\*Guía de planificación** para acomodarla a tu clase e imprime una copia para cada estudiante.",
           "purpose": "Los estudiantes podrían estar listos para ir directo a desarrollar sus proyectos; sin embargo, esta lección los ayudará a dar forma a sus ideas y ordenarlas como un plan. Esta estructura mantendrá a los más soñadores con los pies en la tierra e iluminará el camino para aquellos que se sientan abandonados en la oscuridad. Dales tanto tiempo como sea necesario para que los estudiantes desarrollen y revisen sus proyectos. El ensayo y error implícito en esta lección los ayudará a desarrollar habilidades de resolución de problemas y a ser perseverantes.",
           "student_overview": "Los proyectos así de grandes toman tiempo y mucha planificación. ¡Encuentra tu inspiración, desarrolla un plan y libera tu creatividad!"
@@ -827,7 +840,7 @@
         },
         "express-2022/Programming with Angry Birds": {
           "name": "Programación con Angry Birds",
-          "overview": "A partir de los personajes del juego Angry Birds, los estudiantes desarrollarán algoritmos secuenciales que les permitirán mover al pájaro desde un lado del laberinto hacia el cerdo que se encuentra al otro lado. Para ello, apilarán bloques de código en una secuencia lineal, lo que hará que el pájaro se mueva derecho, y luego gire a la izquierda o a la derecha.",
+          "overview": "En esta lección de \\*\\*desarrollo de habilidades, los estudiantes desarrollarán algoritmos secuenciales para mover un pájaro de un lado de un laberinto al cerdo del otro lado. Para ello, apilarán bloques de código juntos en una secuencia lineal, haciéndolos moverse rectos, girar a la izquierda o girar a la derecha.",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para los estudiantes.\n-   (Opcional) Elige un par de desafíos para hacer en conjunto con la clase.\n-   Asegúrare de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "En esta lección, los estudiantes desarrollarán habilidades de programación en una plataforma informática. El formato de bloques de estos desafíos permite a los estudiantes aprender sobre conceptos y secuencias, sin la preocupación de perfeccionar la sintaxis.",
           "student_overview": "Aprende acerca de las secuencias y los algoritmos con Angry Birds."
@@ -939,7 +952,7 @@
         },
         "express-2022/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Condicionales en Minecraft: Voyage Aquatic",
-          "overview": "Esta lección se creó originalmente para la Hora del Código, en colaboración con el equipo de Minecraft. Los estudiantes tendrán la oportunidad de practicar las ideas que han aprendido hasta este punto, ¡y también de echar un vistazo a los condicionales!",
+          "overview": "En esta lección **context-setting**, los estudiantes tendrán la oportunidad de practicar contenido que hayan aprendido hasta este momento, ¡además de obtener un vistazo a los condicionales!",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para yu clase.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "En este conjunto de desafíos trabajarás para solidificar y desarrollar el conocimiento de los bucles y las condicionales. Al combinar estos dos conceptos, los estudiantes podrán explorar el potencial de crear programas divertidos e innovadores en un entorno nuevo y emocionante.",
           "student_overview": "Aquí aprenderás sobre condicionales en el mundo de Minecraft."
@@ -960,28 +973,28 @@
         },
         "express-2022/Functions in Minecraft": {
           "name": "Funciones en Minecraft",
-          "overview": "Los estudiantes comenzarán a comprender de qué manera las funciones pueden ser útiles en esta divertida e interactiva aventura de Minecraft.",
+          "overview": "En esta lección de **desarrollo de calificaciones**, ¡los estudiantes comenzarán a entender cómo las funciones pueden ser útiles!",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "Los estudiantes descubrirán la versatilidad de programar practicando las funciones en diferentes entornos. Aquí, reconocerán patrones que pueden volver a usar y podrán incorporar bloques con nombres para usar funciones predeterminadas.",
           "student_overview": "¿Puedes adivinar cómo usar funciones para el código más eficiente?"
         },
         "express-2022/Functions with Harvester": {
           "name": "Funciones en Cosechadora",
-          "overview": "Los estudiantes practicaron cómo crear diseños maravillosos en el Artista y recorrer laberintos en la Abeja, pero hoy usarán las funciones para cosechar cultivos en la Granjera. Esta lección les permitirá usar las funciones de nuevas maneras y combinarlas con los bucles `mientras` y las sentencias `si / si no`.",
+          "overview": "En esta lección de **construcción de estudios**, los estudiantes usarán condicionales con funciones para cosechar cultivos en Harvester.",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "Esta lección está pensada para llevar a los estudiantes más allá en el uso de las funciones en formas más creativas. Aprenderán que hay muchas formas de enfocar un problema, pero algunas son más eficientes que otras. Estos desafíos están hechos para mejorar las habilidades de resolución de problemas y el pensamiento crítico.",
           "student_overview": "¡Las funciones te ahorrarán mucho trabajo mientras ayudas a la granjera con su cosecha!"
         },
         "express-2022/Functions with Artist": {
           "name": "Funciones de Artista",
-          "overview": "Los estudiantes conocerán cómo usar las funciones en Code.org. En Artista, podrán crear y modificar magníficas imágenes con funciones. Para patrones más complicados, los estudiantes aprenderán cómo anidar funciones mediante el llamado a una función desde otra.",
+          "overview": "En esta lección de **desarrollo de estudios**, los estudiantes usarán funciones con el Artista.",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "Uno de los componentes más importantes de esta lección es proporcionar a los estudiantes un espacio para crear algo de lo que se sientan orgullosos. Estos desafíos avanzan hacia imágenes cada vez más complejas, pero cada nuevo desafío se basa en el anterior. Al final de esta lección, los estudiantes se sentirán seguros y orgullosos de su esfuerzo.",
           "student_overview": "¡Usa las funciones para hacer dibujos complejos más fácilmente!"
         },
         "express-2022/Text and Prompts": {
           "name": "Texto y Comentarios",
-          "overview": "Los alumnos practicarán con las variables en el Laboratorio de Sprite. Los alumnos trabajarán con la entrada del usuario para establecer los valores de sus variables, y luego imprimirán esos valores junto con otro texto.",
+          "overview": "En esta lección de **construcción de destelas**, los estudiantes obtendrán práctica con variables en Sprite Lab. ",
           "preparation": "Explora los niveles y revisa las diapositivas de la lección.",
           "purpose": "Las variables se utilizarán en este curso para almacenar y modificar datos. A este punto, los estudiantes simplemente almacenarán y recuperarán valores sin cambiarlos. En lecciones posteriores, almacenarán valores numéricos y los modificarán con el tiempo para hacer un seguimiento de cosas como la puntuación de un jugador en un juego.",
           "student_overview": "En esta lección practicarás con las variables en el Laboratorio de Sprite."
@@ -995,7 +1008,7 @@
         },
         "express-2022/Using Variables with the Artist": {
           "name": "Uso de Variables con el Artista",
-          "overview": "En esta lección, los alumnos explorarán la creación de diseños repetitivos mediante variables en el entorno de Artista. Los alumnos aprenderán cómo usar las variables para que el código sea más fácil de escribir y leer. Luego de los desafíos guiados, los alumnos terminarán en un nivel de juego libre para demostrar lo que han aprendido y crear sus propios diseños.",
+          "overview": "En esta lección de **desarrollo de calificaciones**, los estudiantes explorarán la creación de diseños repetitivos utilizando variables en el entorno Artist. Los estudiantes aprenderán cómo las variables hacen que el código sea más fácil de escribir y más fácil de leer. Después de los acertijos guiados, los alumnos terminarán en un nivel de juego libre para mostrar lo que han aprendido y crear nuevos diseños.",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "Las variables son marcadores de posición de valores desconocidos al momento de ejecutar el programa o de valores que pueden cambiar durante la ejecución. Son vitales para crear código dinámico porque permiten que tu programa cambie y crezca en base a un número de modificaciones potenciales. Esta etapa enseña a los estudiantes qué son las variables, a través de las capacidades más básicas de configuración y uso.",
           "student_overview": "En esta lección, harás dibujos usando variables que cambien mientras el programa se ejecuta."
@@ -1009,7 +1022,7 @@
         },
         "express-2022/For Loops with Bee": {
           "name": "Bucles 'desde' con la Abeja",
-          "overview": "Esta lección con Abeja se centra en bucles `desde` y usa una variable gradual para solucionar los desafíos más complejos. Los alumnos repasarán bucles de lecciones anteriores y luego abordarán el uso de bucles `desde` para resolver problemas más difíciles de manera más efectiva.",
+          "overview": "Esta lección de **desarrollo de calificaciones** se centra en los bucles for y el uso de una variable incremental para resolver acertijos más complicados. ",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "El concepto de hoy, los bucles desde, son un tema muy importante en las ciencias de la computación. No sólo se utilizan mucho, sino que el proceso de aprendizaje de los bucles mejora el aprendizaje de otros conceptos importantes (como variables y parámetros). Los estudiantes podrán aplicar el pensamiento crítico en los problemas determinando los valores iniciales, finales y escalonados para cada bucle desde. Este concepto también usa muchas matemáticas, así que siéntete libre de combinarlo con una lección de matemáticas para lograr una experiencia de aprendizaje aún más profunda.",
           "student_overview": "Bzzz, bzzz. ¡En estos desafíos, usarás bucles `desde` para guiar a una abeja hacia el néctar y la miel!"
@@ -1023,7 +1036,7 @@
         },
         "express-2022/End of Course Project": {
           "name": "Proyecto de fin de curso",
-          "overview": "Esta lección de culminación lleva a los alumnos a través del proceso de diseño, desarrollo y exhibición de sus propios proyectos. ",
+          "overview": "¡Esta lección de **proyecto** lleva a los estudiantes a través del proceso de diseñar, desarrollar y exhibir nuevos proyectos!",
           "preparation": "-   Dedica tiempo a crear tu propio proyecto con las herramientas disponibles para los estudiantes. Familiarízate con las capacidades y limitaciones de cada herramienta.\n-   Modifica la **\\*rúbrica** para adaptarla a los objetivos de tu clase e imprime una copia para cada estudiante.\n-   Modifica la **\\*guía de planificación de proyectos** para que se adapte a tu clase e imprime una para cada estudiante.",
           "purpose": "Esta lección les brinda a los estudiantes la oportunidad de desarrollar un proyecto diseñado por ellos mismos, a través de un proceso paso a paso que requiere planificación y fomenta la creatividad.",
           "student_overview": "¡Prepara las manos para mucha programación! Llegó el momento de comenzar a crear tu proyecto."
@@ -1307,7 +1320,7 @@
         },
         "csd5-2022/Representation Matters": {
           "name": "Asuntos de Representación",
-          "assessment_opportunities": "1.  **Proporcionar ejemplos de cómo la representación de los datos de diferentes maneras puede afectar a su capacidad para resolver diferentes problemas.**\n\n    En el debate al final de la actividad, los estudiantes deben identificar cómo la naturaleza de cada problema se prestaba a una representación particular.  \n\n2.  **Elegir la mejor forma de representar una información en función de cómo se vaya a utilizar.**\n\n    En el debate al final de la actividad, los alumnos deben justificar las representaciones \"mejores\" y \"peores\" en el contexto de los distintos problemas que se les ha pedido que resuelvan.",
+          "assessment_opportunities": "1.  **Proporcionar ejemplos de cómo representar datos de diferentes maneras puede afectar su capacidad para resolver diferentes problemas.**\n\n    En la discusión al final de la actividad, los estudiantes deben identificar cómo la naturaleza de cada problema se prestó a una representación particular.  \n\n2.  **Elige la mejor manera de representar alguna información en función de cómo se va a utilizar.**\n\n    En la discusión al final de la actividad, los estudiantes deben justificar las representaciones “mejores” y “peores” dentro del contexto de los diversos problemas que se les pidió resolver.",
           "overview": "**Pregunta del día: ¿Cómo afectan los datos en las decisiones que tomamos cada día?**\n\nEn la primera lección de la unidad de datos, los estudiantes obtienen una visión general de lo que son los datos y de cómo se utilizan para resolver problemas. Los estudiantes comenzarán la lección con un breve análisis y luego realizarán una reflexión común para comprender qué son los datos. A continuación, se dividen en grupos y utilizan un conjunto de datos para recomendar varios tipos de comidas a personas con diversos criterios. Cada grupo tiene las opciones de comidas representadas de distintas maneras (imágenes, recetas, menú, información nutricional), algunas representaciones tienen más ventajas que otras. Finalmente, los grupos comparan sus respuestas y analizan de qué manera el tener distintas representaciones de los datos de las comidas influyó en la forma en la que resolvieron los distintos problemas.",
           "preparation": "-   Imprime copias del recurso Datos de Comidas para que cada grupo tenga una de las cuatro páginas\n-   Imprime una copia de la guía de actividad para cada grupo\n-   Visita el foro [\"Sala de Profesores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) donde los profesores verificados pueden encontrar estrategias o recursos adicionales compartidos por otros profesores.\n-   Si impartes clases de forma virtual, puedes consultar nuestras [Modificaciones de Lecciones Virtuales](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview).",
           "purpose": "Esta lección presenta un número importante de ideas que los estudiantes explorarán a lo largo de este capítulo. Podrán ver cómo los mismos objetos pueden ser representados de distintas formas. En el capítulo 1, aprenderán los distintos sistemas de representación que las computadoras utilizan para representar la información. También descubrirán la importancia de la representación cuando utilizamos datos para tomar decisiones. En el segundo capítulo de esta unidad, los estudiantes estudiarán más detenidamente las formas en las que los humanos y las computadoras pueden hacer uso de estos datos para tomar decisiones.",
@@ -1315,7 +1328,7 @@
         },
         "csd5-2022/Patterns and Representation": {
           "name": "Patrones y representación",
-          "assessment_opportunities": "1.  **Describir las características necesarias de un sistema para representar información**\n\n    Recapitulación: los alumnos deben identificar las características clave que necesitan sus sistemas para ser eficaces.\n\n2.  **Crear y utilizar un sistema de representación de la información**\n\n    Guía de Actividad: En la guía de actividad debe haber un código único para cada letra, con un sistema para determinar cuándo termina una letra y empieza la otra.  Durante la actividad, también puedes circular para ver los códigos en uso.",
+          "assessment_opportunities": "1.  **Describir las características necesarias de un sistema para representar información**\n\n    Envoltura: los estudiantes deben identificar las características clave que sus sistemas necesitaban para ser efectivos.\n\n2.  **Crear y usar un sistema para representar información**\n\n    Guía de actividades: Debe haber un código único para cada letra en la guía de actividades, con un sistema para determinar cuándo una letra se detiene y comienza la otra. Durante la actividad, es posible que también quieras circular para ver los códigos en uso.",
           "overview": "**Pregunta del día: ¿Cómo podemos crear un sistema para representar la información?**\n\nEn esta lección, los estudiantes crearán su propio sistema para representar información. Comenzarán con una lluvia de ideas de los distintos sistemas que ya utilizan para representar las respuestas sí y no. Luego trabajarán en grupos pequeños para crear un sistema que pueda representar a cada letra en el alfabeto usando distintas tarjetas. Estas tendrán uno de los 6 dibujos posibles (6 animales, 6 colores, etc.), por lo que para representar todo el alfabeto los estudiantes tendrán que utilizar patrones de varias tarjetas en representación de cada letra. Los estudiantes crearán mensajes con sus sistemas y los intercambian con otros grupos para asegurarse de que el sistema funcione correctamente. En el análisis final, la clase revisará las ventajas y desventajas de los distintos sistemas en funcionamiento, reflexionando acerca de las características que todos estos tienen en común, también reconocerán que hay muchas soluciones posibles para este problema y que lo importante es que todos utilicen el mismo sistema arbitrario para comunicarse.",
           "preparation": "-   Imprime una copia de la guía de actividad para cada grupo de 2-3 alumnos\n-   Imprime y recorta una copia del recurso manipulativo para cada grupo de 2-3 alumnos\n-   Visita el foro [\"Sala de Profesores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) donde encontrarás estrategias y recursos compartidos por otros profesores.\n-   Si enseñas virtualmente, considera consultar nuestras [Modificaciones de Lecciones Virtuales](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
           "purpose": "En esta lección, los estudiantes explorarán por sí mismos las cualidades de un buen sistema para representar información. A través de la creación y la comprobación de sus sistemas llegarán a la conclusión de que:\n\n1.  Existen muchos más sistemas con los que se puede representar la información\n2.  Las personas deben acordar una serie de reglas para que estos sistemas funcionen\n\nLas características de los sistemas que los estudiantes crearán en esta lección servirán como punto de referencia en las siguientes lecciones cuando deban explorar los sistemas de representación utilizados actualmente en las computadoras.\n\nEn las siguientes lecciones se presentará a los estudiantes el concepto de binario y cómo las computadoras utilizan señales on-off o los números “0 y 1” para representar información. Aunque es posible que este concepto aparezca en la actividad inicial, debería introducirse formalmente en la siguiente lección.",
@@ -1331,7 +1344,7 @@
         },
         "csd5-2022/Representing Images": {
           "name": "Representar imágenes",
-          "assessment_opportunities": "1.  **Crear y manipular patrones binarios para representar imágenes en blanco y negro**\n\n    Code Studio: En la burbuja 2, el alumno deberá haber creado una cara sonriente con el widget.\n\n2.  **Describir características comunes de los sistemas utilizados para representar información en binario**\n\n    Conclusión: Los alumnos deben identificar las características clave compartidas de los sistemas binarios que han visto.",
+          "assessment_opportunities": "1.  **Crear y manipular patrones binarios para representar imágenes en blanco y negro**\n\n    Code Studio: En la burbuja 2, el alumno deberá crear una cara sonriente con el widget.\n\n2.  **Describir características comunes de los sistemas utilizados para representar información en binario**\n\n    Conclusión: Los alumnos deben identificar las características clave compartidas de los sistemas binarios que han visto.",
           "overview": "**Pregunta del día: ¿Qué sistemas utilizan las computadoras para representar imágenes?**\n\nEn esta lección, los estudiantes aprenderán cómo las computadoras pueden representar imágenes. Para comenzar esta lección, tendrán que plantearse el desafío de demostrar toda la complejidad de una visión en un patrón binario. Mediante una serie de imágenes que muestran esta transformación, se introducirá el concepto de separar las imágenes en pequeños cuadrados o “pixeles”, los que pueden encenderse o apagarse individualmente para crear una imagen completa. Luego, los estudiantes completan una serie de desafíos utilizando la Herramienta de Pixelación para dibujar imágenes en blanco y negro. Los juegos han sido diseñados para demostrar los desafíos que implica esta forma de representar imágenes. En la actividad de cierre, los estudiantes harán conexiones entre el sistema para representar imágenes y el sistema para representar texto que aprendieron en la lección anterior.",
           "preparation": "-   Practica con el Widget de Pixelación durante unos 10 minutos para prepararte y responder a las preguntas.\n-   Visita el foro [\"Sala de Profesores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) donde los profesores verificados pueden encontrar estrategias o recursos adicionales compartidos por otros profesores.\n-   Si enseñas virtualmente, puedes consultar nuestras [Modificaciones de Lecciones Virtuales](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview).",
           "purpose": "Esta lección presenta otro sistema utilizado comúnmente para representar información en binario. Lo más evidente al realizar la actividad con la herramienta de pixelación, será que 1 significa “On” y que 0 significa “Off”. Sin embargo, algo que no será tan notorio es que el ancho y alto de la imagen deberá coincidir para poder interpretar la información de la imagen binaria. Finalmente, esta es una oportunidad para explorar la elaboración de los sistemas de representación de información binaria. Es muy difícil representar una imagen que no ha sido procesada. La idea de convertirla en una cuadricula de cuadrados en blanco y negro simplifica este desafío y lo convierte en un problema que los científicos de la computación sabrían cómo solucionar. Si bien la actividad principal de esta lección dará la impresión de únicamente teclear unos y ceros, en realidad revela mucho acerca de la idea que las personas tienen sobre la representación de información en binario, y de los desafíos e intercambios se generan como resultados.",
@@ -1339,7 +1352,7 @@
         },
         "csd5-2022/Representing Numbers": {
           "name": "Representación de los Números",
-          "assessment_opportunities": "1.  **Utilizar un sistema binario para representar números.**\n\n    Guía de Actividad, página 1: Las respuestas de los alumnos deben coincidir con la clave, teniendo en cuenta que las tres últimas preguntas pueden tener respuestas diferentes en cada alumno.\n\n2.  **Extender un sistema de representación basado en patrones.**\n\n    Guía de Actividad, página 1: En la parte inferior de la página, los alumnos deben ampliar correctamente el patrón para números de 5 y 6 bits.",
+          "assessment_opportunities": "1.  **Usa un sistema binario para representar números.**\n\n    Guía de actividades, página 1: Las respuestas de los estudiantes deben coincidir con la clave, señalando que las últimas tres preguntas pueden tener diferentes respuestas estudiante a alumno.\n\n2.  **Extender un sistema de representación basado en patrones.**\n\n    Guía de actividades, página 1: En la parte inferior de la página, los estudiantes deben extender correctamente el patrón a números de 5 y 6 bits.",
           "overview": "**Pregunta del día: ¿Qué sistemas utilizan las computadoras para representar números?**\n\nEn esta lección, los estudiantes aprenderán acerca del sistema binario. Con un conjunto de tarjetas que representan la ubicación de los valores en un sistema de números binario (base-2) a través de una serie de puntos, los estudiantes podrán convertir bits en “on” y “off” al poner las tarjetas hacia arriba o hacia abajo, luego observarán los números que los distintos patrones arrojan como resultado. Finalmente, los estudiantes extienden el patrón a un sistema genérico de 4 bits.",
           "preparation": "-   Visita el foro [\"Sala de Profesores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) donde los profesores verificados pueden encontrar estrategias o recursos adicionales compartidos por otros profesores.\n-   Si enseñas virtualmente, puedes consultar nuestras [Modificaciones de Lecciones Virtuales](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview).",
           "purpose": "Los estudiantes aprenderán a utilizar el sistema binario para representar números enteros. A diferencia del sistema ASCII, el cual es representado como un mapeo arbitrario de patrones de bit a caracteres, los números binarios son presentados en el contexto de patrones compuestos por números. Los estudiantes utilizarán estos patrones para determinar las representaciones binarias de los distintos números, en lugar de solo analizarlos en una tabla.",
@@ -5123,6 +5136,9 @@
         "allthethings/lesson-48": {
           "name": "Poesía"
         },
+        "allthethings/lesson-49": {
+          "name": "Música"
+        },
         "coursef-2021/lesson-6": {
           "name": "Presentamos el Laboratorio de sprites",
           "overview": "En esta lección **definida por el contexto**, los estudiantes debatirán sobre el rol de las computadores y la tecnología en sus vidas, centrándose en cómo las aplicaciones y las herramientas ofrecen a los usuarios la posibilidad de elegir cómo utilizarlas. Los estudiantes explorarán apps similares a las que crearán más adelante.",
@@ -5167,7 +5183,7 @@
         },
         "coursef-2021/lesson-10": {
           "name": "Texto y Comentarios",
-          "overview": "Los alumnos practicarán con las variables en el Laboratorio de Sprite. Los alumnos trabajarán con la entrada del usuario para establecer los valores de sus variables, y luego imprimirán esos valores junto con otro texto.",
+          "overview": "En esta lección de **construcción de destelas**, los estudiantes obtendrán práctica con variables en Sprite Lab. ",
           "preparation": "Explora los niveles y revisa las diapositivas de la lección.",
           "purpose": "Las variables se utilizarán en este curso para almacenar y modificar datos. A este punto, los estudiantes simplemente almacenarán y recuperarán valores sin cambiarlos. En lecciones posteriores, almacenarán valores numéricos y los modificarán con el tiempo para hacer un seguimiento de cosas como la puntuación de un jugador en un juego.",
           "student_overview": "En esta lección practicarás con las variables en el Laboratorio de Sprite."
@@ -5181,24 +5197,24 @@
         },
         "coursef-2021/Loops with the Artist": {
           "name": "Dibujar con bucles",
-          "overview": "¡Mira cómo se ilumina el resto de los estudiantes mientras hacen sus propios diseños maravillosos usando un pequeño número de bloques y pegatinas digitales! Esta lección se basa en la comprensión de bucles de lecciones anteriores y da a los/as estudiantes la oportunidad de ser verdaderamente creativos. Esta actividad es fantástica para producir artefactos para carpetas o para reuniones de padres/profesores.",
+          "overview": "Esta lección de **desarrollo de calificaciones** cambia el enfoque de Sprite Lab al Artista, una nueva herramienta que los estudiantes explorarán a lo largo del resto del curso.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
           "purpose": "Los estudiantes practicarán el uso de bucles, un concepto que repasaremos en las próximas lecciones.",
           "student_overview": "En esta lección, los bucles hacen que sea sencillo crear imágenes incluso más geniales con Artista."
         },
         "coursef-2021/Variables that Change in Artist": {
           "name": "Uso de Variables con el Artista",
-          "overview": "En esta lección, los alumnos explorarán la creación de diseños repetitivos mediante variables en el entorno de Artista. Los alumnos aprenderán cómo usar las variables para que el código sea más fácil de escribir y leer. Luego de los desafíos guiados, los alumnos terminarán en un nivel de juego libre para demostrar lo que han aprendido y crear sus propios diseños.",
+          "overview": "En esta lección de **desarrollo de calificaciones**, los estudiantes explorarán la creación de diseños repetitivos utilizando variables en el entorno Artist. Los estudiantes aprenderán cómo las variables hacen que el código sea más fácil de escribir y más fácil de leer. Después de los acertijos guiados, los alumnos terminarán en un nivel de juego libre para mostrar lo que han aprendido y crear nuevos diseños.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
           "purpose": "Las variables son marcadores de posición de valores desconocidos al momento de ejecutar el programa o de valores que pueden cambiar durante la ejecución. Son vitales para crear código dinámico porque permiten que tu programa cambie y crezca en base a un número de modificaciones potenciales. Esta etapa enseña a los estudiantes qué son las variables, a través de las capacidades más básicas de configuración y uso.",
           "student_overview": "En esta lección, harás dibujos usando variables que cambien mientras el programa se ejecuta."
         },
         "coursef-2021/Nested Loops in the Maze": {
           "name": "Bucles anidados en Laberinto",
-          "overview": "En esta actividad online, los/as estudiantes tendrán la oportunidad de llevar su comprensión de los loops a un nuevo nivel. Jugando con la Abeja y Plantas versus Zombis, los/as estudiantes aprenderán cómo programar un loop para que esté dentro de otro loop. También se les animará a que descifren cómo cambios pequeños en cualquier loop, afectarán su programa cuando hagan clic en Ejecutar.",
+          "overview": "En esta lección de **desarrollo de estudios**, se animará a los estudiantes a descubrir cómo los cambios menores en los bucles afectarán su programa.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
           "purpose": "Esta lección presenta (o revisa) cómo funcionan los desafíos de la Abeja e introduce el concepto de _bucles anidados_. En la siguiente lección volveremos a las variables.",
-          "student_overview": "Loops dentro de loops dentro de loops. ¿Qué significa esto? Esta lección te enseñará qué sucede cuando colocas un loop dentro de otro loop."
+          "student_overview": "Esta lección te enseñará lo que sucede cuando colocas un bucle dentro de otro bucle."
         },
         "coursef-2021/Variables that Change in Bee": {
           "name": "Cambiar variables con Abeja",
@@ -5209,14 +5225,14 @@
         },
         "coursef-2021/For Loop Fun": {
           "name": "Diversión con bucles Para",
-          "overview": "Sabemos que los bucles nos permiten hacer cosas una y otra vez, pero ahora vamos a aprender cómo usarlos con otras estructuras integradas. A través de estas nuevas estructuras, los estudiantes podrán crear un código más potente y dinámico. ",
+          "overview": "En esta lección de **desarrollo de estudios**, los estudiantes usarán bucles con una estructura nueva y poderosa.",
           "preparation": "-   Mira el vídeo\\*\\*\\\\ \\*.\n-   Imprimir una **\\\\ \\*hoja de trabajo** por grupo.\n-   Imprime una **\\\\ \\*evaluación** para cada alumno.\n-   Asegúrese de que cada alumno tenga un diario de reflexión.",
           "purpose": "A estas alturas, los estudiantes ya dominan los bucles. Hoy aprenderán sobre otro bucle usado comúnmente en la programación. Los bucles “desde” repiten comandos un cierto número de veces, pero además llevan registro de los valores por los que pasa. Por ejemplo, un bucle “desde” que comienza en el número 4, termina en el 8 y tiene un valor de intervalo de paso de 1, se repetirá cuatro veces, pero los valores 4, 5, 6 y 7 serán registrados por si quieren usarlos en algo más. El uso de esta estructura, combinado con variables, puede resultar en programas realmente fantásticos. En la lección de hoy, los estudiantes aprenderán lo básico de los bucles “desde”, antes de sumergirse a programar con ellos en la lecciones futuras.",
           "student_overview": "¡Te vas a divertir mucho mientras aprendes sobre los bucles `desde`!"
         },
         "coursef-2021/For Loops in Bee": {
           "name": "Bucles 'desde' con la Abeja",
-          "overview": "Esta lección con Abeja se centra en bucles `desde` y usa una variable gradual para solucionar los desafíos más complejos. Los alumnos repasarán bucles de lecciones anteriores y luego abordarán el uso de bucles `desde` para resolver problemas más difíciles de manera más efectiva.",
+          "overview": "Esta lección de **desarrollo de calificaciones** se centra en los bucles for y el uso de una variable incremental para resolver acertijos más complicados. ",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
           "purpose": "El concepto de hoy, los bucles “desde”, es un elemento muy importante en las ciencias de la computación. No sólo porque son muy usados, sino también porque el proceso de aprendizaje de estos bucles potencia la comprensión de otros conceptos igual de importantes (como variables y parámetros). Los estudiantes desarrollarán sus habilidades de pensamiento crítico al determinar los valores de inicio, de término y de intervalo de pasos para cada bucle “desde”. Estos bucles involucran muchos conceptos matemáticos, por lo que siéntase libre de acompañar esta lección con una lección matemática y así profundizar en la experiencia de aprendizaje.",
           "student_overview": "Bzzz, bzzz. ¡En estos desafíos, usarás bucles `desde` para guiar a una abeja hacia el néctar y la miel!"
@@ -5230,7 +5246,7 @@
         },
         "coursef-2021/Simulating Experiments": {
           "name": "Simulación de experimentos",
-          "overview": "Al ejecutar una simulación simple en el Laboratorio de Sprites, los estudiantes experimentarán cómo la computación se puede utilizar para recopilar datos que identifiquen tendencias o patrones. Luego de ejecutar la simulación varias veces, los estudiantes tendrán la oportunidad de hacer una predicción sobre cómo cambiar una variable en la variable podría tener un impacto en el resultado, y luego probar esa hipótesis.",
+          "overview": "En esta lección **context-setting**, los estudiantes ejecutarán y recopilarán datos de una simulación simple en Sprite Lab. Después de ejecutar la simulación varias veces, los estudiantes tendrán la oportunidad de predecir cómo cambiar una variable en la simulación podría afectar el resultado y probar esa hipótesis.",
           "preparation": "-   Determinar si los estudiantes ejecutaran las simulaciones en sus propios computadores o si lo harán en conjunto como clase.\n-   De ser necesario, prepárate para proyectar las dos simulaciones incluidas en esta lección.",
           "purpose": "Distintas disciplinas de las ciencias utilizan las ciencias de la computación para ejecutar modelos y simulaciones, y así realizar experimentos, recolectar datos y analizarlos para obtener conocimientos. A pesar de que las simulaciones en esta lección son bastante simples, funcionan como un punto de inicio para que los estudiantes consideren cómo usar modelos computacionales más sofisticados para probar hipótesis.",
           "student_overview": "Ejecuta simulaciones en la computadora y experimenta cambiando variables."
@@ -5244,20 +5260,20 @@
         },
         "coursef-2021/AI for Oceans": {
           "name": "Inteligencia Artificial para océanos",
-          "overview": "Los alumnos clasifican los objetos como \"peces\" o \"no peces\" para intentar eliminar la basura del océano. A continuación, los alumnos tendrán que ampliar su conjunto de datos de entrenamiento para incluir otras criaturas marinas que pertenecen al agua. En la segunda parte de la actividad, los alumnos elegirán sus propias referencias para aplicarlas a imágenes de peces generadas al azar. Estos datos de entrenamiento se utilizan para un modelo de aprendizaje automático que luego debería ser capaz de identificar nuevas imágenes por sí mismo.",
+          "overview": "En esta lección **exploratoria**, los estudiantes entrenarán un modelo de aprendizaje automático clasificando peces y otros objetos.",
           "purpose": "Esta lección está ideada como una introducción rápida al aprendizaje de máquinas, un tipo de inteligencia artificial (IA). Los estudiantes descubrirán cómo los datos de aprendizaje son usados para permitir que un modelo de aprendizaje de máquinas sea capaz de clasificar nuevos datos. Es necesario que los estudiantes tengan una buena experiencia con este tutorial y, más importantemente aún, que se sientan motivados a seguir aprendiendo.",
           "student_overview": "Clasifica los objetos como \"peces\" o \"no peces\" para intentar eliminar la basura del océano. A continuación, amplía tu conjunto de datos de entrenamiento para incluir otras criaturas marinas que pertenecen al agua. En la segunda parte de la actividad, elige tus propias etiquetas para aplicarlas a imágenes de peces generadas aleatoriamente. Estos datos de entrenamiento se utilizan para un modelo de aprendizaje automático que luego debería ser capaz de identificar nuevas imágenes por sí mismo."
         },
         "coursef-2021/Internet": {
           "name": "Internet",
-          "overview": "A pesar de que muchas personas utilizan Internet todos los días, no muchos saben cómo funciona. En esta lección, los estudiantes viajarán a través de Internet y aprenderán acerca de conexiones, URL, direcciones IP y el DNS.",
+          "overview": "Los estudiantes pretenderán fluir a través de Internet mientras aprenden sobre conexiones, URL, direcciones IP y DNS en esta lección **exploratoria**.",
           "preparation": "-   Vea el video del profesor**\\\\ \\*Internet**.\n-   Imprimir lo suficiente **\\\\ \\*Tarjetas de dirección IP y tarjetas de tipo de entrega** - Manipulativos para cada grupo.\n-   Imprima una evaluación **\\\\ \\*Internet** para cada estudiante.\n-   Acceso a Internet (por ejemplo, **\\\\ \\*get-site-ip.com**.\n-   Asegúrese de que cada alumno tenga un diario de reflexión.",
           "purpose": "Si has realizado cada una de las actividades de este curso, entonces los estudiantes ya han usado Internet. Pero… ¿cuántos saben cómo funciona? Aprender sobre Internet ayudará a los estudiantes a desarrollar una mejor comprensión de sus infinitas posibilidades. ",
           "student_overview": "¿Alguna vez te preguntaste cómo viaja la información a través de Internet? ¡No es magia! Esta lección te enseñará los conceptos básicos de cómo funciona Internet."
         },
         "coursef-2021/End of Course Project": {
           "name": "Proyecto de fin de curso",
-          "overview": "Esta lección de culminación lleva a los alumnos a través del proceso de diseño, desarrollo y exhibición de sus propios proyectos. ",
+          "overview": "¡Esta lección de **proyecto** lleva a los estudiantes a través del proceso de diseñar, desarrollar y exhibir nuevos proyectos!",
           "preparation": "-   Realiza tu propio proyecto tanto con el Artista como con Sprite Lab. Familiarízate con las capacidades y limitaciones de cada herramienta.\n-   Modifica la tabla de evaluación para acomodarla a los objetivos de tu clase e imprime una copia para cada estudiante.\n-   Modifica la guía de diseño de proyectos para acomodarla a tu clase e imprime una copia para cada estudiante.",
           "purpose": "Los estudiantes podrían estar listos para ir directo a desarrollar sus proyectos; sin embargo, esta lección los ayudará a dar forma a sus ideas y ordenarlas como un plan. Esta estructura mantendrá a los más soñadores con los pies en la tierra e iluminará el camino para aquellos que se sientan abandonados en la oscuridad. Dales tanto tiempo como sea necesario para que los estudiantes desarrollen y revisen sus proyectos. El ensayo y error implícito en esta lección los ayudará a desarrollar habilidades de resolución de problemas y a ser perseverantes.",
           "student_overview": "Los proyectos así de grandes toman tiempo y mucha planificación. ¡Encuentra tu inspiración, desarrolla un plan y libera tu creatividad!"
@@ -5670,14 +5686,14 @@
         },
         "coursed-2021/End of Course Project": {
           "name": "Proyecto de fin de curso",
-          "overview": "Esta lección de culminación lleva a los alumnos a través del proceso de diseño, desarrollo y exhibición de sus propios proyectos. ",
+          "overview": "¡Esta lección de **proyecto** lleva a los estudiantes a través del proceso de diseñar, desarrollar y exhibir nuevos proyectos!",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para tu clase.\n-   Imprime una **\\*Guía de planificación del proyecto** para cada estudiante (o para cada pareja).\n-   (Opcional) Completa tu propia guía de planificación y codifica tu propio proyecto para mostrárselo a los estudiantes.",
           "purpose": "Esta lección les brinda a los estudiantes la oportunidad de desarrollar un proyecto diseñado por ellos mismos, a través de un proceso paso a paso que requiere planificación y fomenta la creatividad.",
           "student_overview": "¡Prepara las manos para mucha programación! Llegó el momento de comenzar a crear tu proyecto."
         },
         "express-2021/Programming with Angry Birds": {
           "name": "Programación con Angry Birds",
-          "overview": "A partir de los personajes del juego Angry Birds, los estudiantes desarrollarán algoritmos secuenciales que les permitirán mover al pájaro desde un lado del laberinto hacia el cerdo que se encuentra al otro lado. Para ello, apilarán bloques de código en una secuencia lineal, lo que hará que el pájaro se mueva derecho, y luego gire a la izquierda o a la derecha.",
+          "overview": "En esta lección de \\*\\*desarrollo de habilidades, los estudiantes desarrollarán algoritmos secuenciales para mover un pájaro de un lado de un laberinto al cerdo del otro lado. Para ello, apilarán bloques de código juntos en una secuencia lineal, haciéndolos moverse rectos, girar a la izquierda o girar a la derecha.",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para los estudiantes.\n-   (Opcional) Elige un par de desafíos para hacer en conjunto con la clase.\n-   Asegúrare de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "En esta lección, los estudiantes desarrollarán habilidades de programación en una plataforma informática. El formato de bloques de estos desafíos permite a los estudiantes aprender sobre conceptos y secuencias, sin la preocupación de perfeccionar la sintaxis.",
           "student_overview": "Aprende acerca de las secuencias y los algoritmos con Angry Birds."
@@ -5789,7 +5805,7 @@
         },
         "express-2021/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Condicionales en Minecraft: Voyage Aquatic",
-          "overview": "Esta lección se creó originalmente para la Hora del Código, en colaboración con el equipo de Minecraft. Los estudiantes tendrán la oportunidad de practicar las ideas que han aprendido hasta este punto, ¡y también de echar un vistazo a los condicionales!",
+          "overview": "En esta lección **context-setting**, los estudiantes tendrán la oportunidad de practicar contenido que hayan aprendido hasta este momento, ¡además de obtener un vistazo a los condicionales!",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para yu clase.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "En este conjunto de desafíos trabajarás para solidificar y desarrollar el conocimiento de los bucles y las condicionales. Al combinar estos dos conceptos, los estudiantes podrán explorar el potencial de crear programas divertidos e innovadores en un entorno nuevo y emocionante.",
           "student_overview": "Aquí aprenderás sobre condicionales en el mundo de Minecraft."
@@ -5810,35 +5826,35 @@
         },
         "express-2021/Functions in Minecraft": {
           "name": "Funciones en Minecraft",
-          "overview": "Los estudiantes comenzarán a comprender de qué manera las funciones pueden ser útiles en esta divertida e interactiva aventura de Minecraft.",
+          "overview": "En esta lección de **desarrollo de calificaciones**, ¡los estudiantes comenzarán a entender cómo las funciones pueden ser útiles!",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "Los estudiantes descubrirán la versatilidad de programar practicando las funciones en diferentes entornos. Aquí, reconocerán patrones que pueden volver a usar y podrán incorporar bloques con nombres para usar funciones predeterminadas.",
           "student_overview": "¿Puedes adivinar cómo usar funciones para el código más eficiente?"
         },
         "express-2021/Functions with Artist": {
           "name": "Funciones de Artista",
-          "overview": "Los estudiantes conocerán cómo usar las funciones en Code.org. En Artista, podrán crear y modificar magníficas imágenes con funciones. Para patrones más complicados, los estudiantes aprenderán cómo anidar funciones mediante el llamado a una función desde otra.",
+          "overview": "En esta lección de **desarrollo de estudios**, los estudiantes usarán funciones con el Artista.",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "Uno de los componentes más importantes de esta lección es proporcionar a los estudiantes un espacio para crear algo de lo que se sientan orgullosos. Estos desafíos avanzan hacia imágenes cada vez más complejas, pero cada nuevo desafío se basa en el anterior. Al final de esta lección, los estudiantes se sentirán seguros y orgullosos de su esfuerzo.",
           "student_overview": "¡Usa las funciones para hacer dibujos complejos más fácilmente!"
         },
         "express-2021/Functions with Harvester": {
           "name": "Funciones en Cosechadora",
-          "overview": "Los estudiantes practicaron cómo crear diseños maravillosos en el Artista y recorrer laberintos en la Abeja, pero hoy usarán las funciones para cosechar cultivos en la Granjera. Esta lección les permitirá usar las funciones de nuevas maneras y combinarlas con los bucles `mientras` y las sentencias `si / si no`.",
+          "overview": "En esta lección de **construcción de estudios**, los estudiantes usarán condicionales con funciones para cosechar cultivos en Harvester.",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "Esta lección está pensada para llevar a los estudiantes más allá en el uso de las funciones en formas más creativas. Aprenderán que hay muchas formas de enfocar un problema, pero algunas son más eficientes que otras. Estos desafíos están hechos para mejorar las habilidades de resolución de problemas y el pensamiento crítico.",
           "student_overview": "¡Las funciones te ahorrarán mucho trabajo mientras ayudas a la granjera con su cosecha!"
         },
         "express-2021/lesson-4": {
           "name": "Texto y Comentarios",
-          "overview": "Los alumnos practicarán con las variables en el Laboratorio de Sprite. Los alumnos trabajarán con la entrada del usuario para establecer los valores de sus variables, y luego imprimirán esos valores junto con otro texto.",
+          "overview": "En esta lección de **construcción de destelas**, los estudiantes obtendrán práctica con variables en Sprite Lab. ",
           "preparation": "Explora los niveles y revisa las diapositivas de la lección.",
           "purpose": "Las variables se utilizarán en este curso para almacenar y modificar datos. A este punto, los estudiantes simplemente almacenarán y recuperarán valores sin cambiarlos. En lecciones posteriores, almacenarán valores numéricos y los modificarán con el tiempo para hacer un seguimiento de cosas como la puntuación de un jugador en un juego.",
           "student_overview": "En esta lección practicarás con las variables en el Laboratorio de Sprite."
         },
         "express-2021/Variables with Artist": {
           "name": "Uso de Variables con el Artista",
-          "overview": "En esta lección, los alumnos explorarán la creación de diseños repetitivos mediante variables en el entorno de Artista. Los alumnos aprenderán cómo usar las variables para que el código sea más fácil de escribir y leer. Luego de los desafíos guiados, los alumnos terminarán en un nivel de juego libre para demostrar lo que han aprendido y crear sus propios diseños.",
+          "overview": "En esta lección de **desarrollo de calificaciones**, los estudiantes explorarán la creación de diseños repetitivos utilizando variables en el entorno Artist. Los estudiantes aprenderán cómo las variables hacen que el código sea más fácil de escribir y más fácil de leer. Después de los acertijos guiados, los alumnos terminarán en un nivel de juego libre para mostrar lo que han aprendido y crear nuevos diseños.",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "Las variables son marcadores de posición de valores desconocidos al momento de ejecutar el programa o de valores que pueden cambiar durante la ejecución. Son vitales para crear código dinámico porque permiten que tu programa cambie y crezca en base a un número de modificaciones potenciales. Esta etapa enseña a los estudiantes qué son las variables, a través de las capacidades más básicas de configuración y uso.",
           "student_overview": "En esta lección, harás dibujos usando variables que cambien mientras el programa se ejecuta."
@@ -5852,7 +5868,7 @@
         },
         "express-2021/For Loops with Bee": {
           "name": "Bucles 'desde' con la Abeja",
-          "overview": "Esta lección con Abeja se centra en bucles `desde` y usa una variable gradual para solucionar los desafíos más complejos. Los alumnos repasarán bucles de lecciones anteriores y luego abordarán el uso de bucles `desde` para resolver problemas más difíciles de manera más efectiva.",
+          "overview": "Esta lección de **desarrollo de calificaciones** se centra en los bucles for y el uso de una variable incremental para resolver acertijos más complicados. ",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "El concepto de hoy, los bucles desde, son un tema muy importante en las ciencias de la computación. No sólo se utilizan mucho, sino que el proceso de aprendizaje de los bucles mejora el aprendizaje de otros conceptos importantes (como variables y parámetros). Los estudiantes podrán aplicar el pensamiento crítico en los problemas determinando los valores iniciales, finales y escalonados para cada bucle desde. Este concepto también usa muchas matemáticas, así que siéntete libre de combinarlo con una lección de matemáticas para lograr una experiencia de aprendizaje aún más profunda.",
           "student_overview": "Bzzz, bzzz. ¡En estos desafíos, usarás bucles `desde` para guiar a una abeja hacia el néctar y la miel!"
@@ -5866,7 +5882,7 @@
         },
         "express-2021/End of Course Project": {
           "name": "Proyecto de fin de curso",
-          "overview": "Esta lección de culminación lleva a los alumnos a través del proceso de diseño, desarrollo y exhibición de sus propios proyectos. ",
+          "overview": "¡Esta lección de **proyecto** lleva a los estudiantes a través del proceso de diseñar, desarrollar y exhibir nuevos proyectos!",
           "preparation": "-   Dedica tiempo a crear tu propio proyecto con las herramientas disponibles para los estudiantes. Familiarízate con las capacidades y limitaciones de cada herramienta.\n-   Modifica la **\\*rúbrica** para adaptarla a los objetivos de tu clase e imprime una copia para cada estudiante.\n-   Modifica la **\\*guía de planificación de proyectos** para que se adapte a tu clase e imprime una para cada estudiante.",
           "purpose": "Esta lección les brinda a los estudiantes la oportunidad de desarrollar un proyecto diseñado por ellos mismos, a través de un proceso paso a paso que requiere planificación y fomenta la creatividad.",
           "student_overview": "¡Prepara las manos para mucha programación! Llegó el momento de comenzar a crear tu proyecto."
@@ -5954,14 +5970,14 @@
         },
         "coursee-2021/Learning Sprites with Sprite Lab": {
           "name": "Aprender sprites con Laboratorio de Sprite",
-          "overview": "En esta lección, los estudiantes aprenderán sobre dos conceptos alojados en el corazón del Laboratorio de sprites: sprites y comportamientos. Los sprites son personajes u objetos en la pantalla que los estudiantes pueden mover, cambiar y manipular. Los comportamientos son acciones que los sprites harán continuamente hasta que se los detenga. ",
+          "overview": "Los estudiantes programarán una sencilla escena submarina animada en esta lección de **desarrollo de estudios**.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
           "purpose": "Esta lección está diseñada para presentar a los estudiantes en el vocabulario básico del Sprite Lab y ayudarlos a aplicar los conceptos que aprendieron en otros entornos a esta herramienta. Al crear una pecera, los estudiantes comenzarán a comprender el modelo de programación de esta herramienta y explorarán formas en que pueden utilizarlo para expresarse.",
           "student_overview": "Aprende cómo crear y editar sprites."
         },
         "coursee-2021/Alien Dance Party with Sprite Lab": {
           "name": "Fiesta de baile extraterrestre con Laboratorio de Sprite",
-          "overview": "Esta lección presenta el Laboratorio de sprites, una plataforma en donde los estudiantes pueden crear sus propios juegos y animaciones interactivos. Además de los comportamientos, incorporarán las entradas de usuarios como eventos para crear una \"fiesta de baile alienígena\".  ",
+          "overview": "Los estudiantes usarán eventos para hacer que los sprites se muevan por la pantalla en función de la entrada del usuario en esta lección de **construcción de estudios**.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
           "purpose": "Esta lección ofrece una gran introducción a los eventos en la programación e incluso da a los estudiantes la oportunidad de mostrar su creatividad. Al final de la lección, los estudiantes tendrán la oportunidad de compartir sus proyectos.",
           "student_overview": "Crea un proyecto interactivo que puedes compartir con tus compañeros de clase."
@@ -5989,21 +6005,21 @@
         },
         "coursee-2021/Digital Sharing": {
           "name": "Colaboración digital",
-          "overview": "Esta lección **exploratoria**, desarrollada por el equipo de [Copyright and Creativity](https://www.copyrightandcreativity.org/), tiene como objetivo ayudar a los alumnos a entender los retos y beneficios de respetar la propiedad y los derechos de autor, especialmente en los entornos digitales. Hay que animar a los alumnos a respetar los derechos de los artistas como parte importante de un ciudadano digital ético.",
+          "overview": "Esta lección **exploratoria** ayuda a los estudiantes a comprender los desafíos y beneficios de respetar la propiedad y los derechos de autor, particularmente en entornos digitales. ",
           "preparation": "-   Localiza el **\\*Video Copyright Sharing** en los \"Enlaces\" que aparecen a continuación\n-   Descarga y revisa el plan de estudios completo **\\*Digital Sharing Lesson Plan** de Copyright and Creativity\n-   Como docente, crea una obra de arte para la lección (imagen, canción, presentación de diapositivas, etc.) \n-   Asegúrate de que cada estudiante tenga un diario de reflexión.\n-   Necesitarás una tableta o un teléfono inteligente para replicar la compartición de ese elemento",
           "purpose": "Los estudiantes pronto crearán proyectos para compartir y la mayoría de estos proyectos contendrán código o imágenes que los estudiantes no han creado. Esta lección sirve para mostrar a los estudiantes la forma adecuada de manejar el uso de contenidos que no son propios.",
           "student_overview": "En esta lección, aprenderás sobre los desafíos y los beneficios de la propiedad y los derechos de autor."
         },
         "coursee-2021/Programming and Loops with the Artist": {
           "name": "Dibujar con bucles",
-          "overview": "¡Mira cómo se ilumina el resto de los estudiantes mientras hacen sus propios diseños maravillosos usando un pequeño número de bloques y pegatinas digitales! Esta lección se basa en la comprensión de bucles de lecciones anteriores y da a los/as estudiantes la oportunidad de ser verdaderamente creativos. Esta actividad es fantástica para producir artefactos para carpetas o para reuniones de padres/profesores.",
+          "overview": "Esta lección **context-setting** cambia el enfoque de Sprite Lab al Artista, una nueva herramienta que los estudiantes explorarán a lo largo del resto del curso.  ",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
           "purpose": "Los estudiantes practicarán el uso de bucles, un concepto que repasaremos en las próximas lecciones.",
           "student_overview": "En esta lección, los bucles hacen que sea sencillo crear imágenes incluso más geniales con Artista."
         },
         "coursee-2021/Nested Loops in Artist": {
           "name": "Formas elegantes con bucles anidados",
-          "overview": "Los alumnos crearán intrincados diseños utilizando el Artista en el conjunto de rompecabezas de hoy. Al seguir practicando los bucles anidados con nuevos objetivos, los alumnos verán un mayor uso de los bucles en general. Este conjunto de rompecabezas también ofrece mucho más potencial para la creatividad con una oportunidad para que los alumnos creen su propio diseño al final de la lección.",
+          "overview": "En esta lección de **construcción de calificaciones**, los estudiantes crearán diseños intrincados usando el Artista. La lección termina con una oportunidad para que los estudiantes creen sus propios diseños.",
           "preparation": "-   Juega con los desafíos para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que todos los estudiantes tengan un diario de reflexión.\n-   Considera qué apoyos pueden necesitar tus estudiantes con los giros y los ángulos. ",
           "purpose": "En esta actividad en línea, los estudiantes crearán diseños con el artista, los cuales podrán compartir con orgullo con sus seres queridos.  \n\nEl propósito de esta actividad es utilizar los bucles anidados como una manera para inspirar a los estudiantes con mentes artísticas a ver la programación como otra forma de expresarse. Estos desafíos están ideados para desarrollar habilidades de pensamiento crítico, comprensión de geometría básica y creatividad, ¡todo esto con bucles anidados!",
           "student_overview": "¡Más loops anidados! Esta vez, harás algunos SORPRENDENTES dibujos con loops anidados."
@@ -6017,42 +6033,42 @@
         },
         "coursee-2021/Functions: Songwriting": {
           "name": "Composición de canciones",
-          "overview": "Una de las estructuras más magníficas en el mundo de las ciencias de la computación es la función. Las funciones (a veces llamadas procedimientos) son pequeños programas que puedes utilizar una y otra vez dentro de tu programa más grande. Esta clase ayudará a los estudiantes a entender intuitivamente por qué la combinación de partes de código en funciones es una práctica tan útil.",
+          "overview": "Esta lección de**context-setting** ayudará a los estudiantes a entender por qué combinar trozos de código en funciones puede ser una práctica útil.",
           "preparation": "-   (Opcional) Ver el video de la **\\*Lección en Acción**.\n-   Imprime varias **\\*hojas de trabajo** para cada grupo.\n-   Imprime una **\\*evaluación** para cada alumno.\n-   Asegúrate de tener acceso a las canciones y a la letra para la actividad.\n-   Asegúrate de que cada alumno tiene un diario.",
           "purpose": "El uso de funciones ayuda a simplificar el código y desarrollar la capacidad del estudiante para organizar su programa. Los estudiantes reconocerán rápidamente que las funciones de escritura pueden permitir que sus programas largos sean más fáciles de leer y que sea más fáciles de realizar el depuración si algo va mal. ",
           "student_overview": "Incluso las estrellas de rock necesitan conocimientos de programación. Esta lección te enseñará sobre funciones mediante el uso de letras de canciones."
         },
         "coursee-2021/Functions in Minecraft": {
           "name": "Funciones en Minecraft",
-          "overview": "Los estudiantes comenzarán a comprender de qué manera las funciones pueden ser útiles en esta divertida e interactiva aventura de Minecraft.",
+          "overview": "En esta lección de **desarrollo de calificaciones**, ¡los estudiantes comenzarán a entender cómo las funciones pueden ser útiles!",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
           "purpose": "Los estudiantes descubrirán la versatilidad de programar practicando las funciones en diferentes entornos. Aquí, reconocerán patrones que pueden volver a usar y podrán incorporar bloques con nombres para usar funciones predeterminadas.",
           "student_overview": "¿Puedes adivinar cómo usar funciones para el código más eficiente?"
         },
         "coursee-2021/Functions in Artist": {
           "name": "Funciones de Artista",
-          "overview": "Los estudiantes conocerán cómo usar las funciones en Code.org. En Artista, podrán crear y modificar magníficas imágenes con funciones. Para patrones más complicados, los estudiantes aprenderán cómo anidar funciones mediante el llamado a una función desde otra.",
+          "overview": "En esta lección de **desarrollo de estudios**, los estudiantes usarán funciones con el Artista.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
           "purpose": "Uno de los componentes más importantes de esta lección es proporcionar a los estudiantes un espacio para crear algo de lo que se sientan orgullosos. Estos desafíos avanzan hacia imágenes cada vez más complejas, pero cada nuevo desafío se basa en el anterior. Al final de esta lección, los estudiantes se sentirán seguros y orgullosos de su esfuerzo.",
           "student_overview": "¡Usa las funciones para hacer dibujos complejos más fácilmente!"
         },
         "coursee-2021/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Condicionales en Minecraft: Voyage Aquatic",
-          "overview": "Esta lección se creó originalmente para la Hora del Código, en colaboración con el equipo de Minecraft. Los estudiantes tendrán la oportunidad de practicar las ideas que han aprendido hasta este punto, ¡y también de echar un vistazo a los condicionales!",
+          "overview": "En esta lección **context-setting**, los estudiantes tendrán la oportunidad de practicar contenido que hayan aprendido hasta este momento, ¡además de obtener un vistazo a los condicionales!",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para yu clase.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "Este conjunto de desafíos trabajarás para solidificar y desarrollar el conocimiento de los bucles y presentar las condicionales. Al combinar estos dos conceptos, los estudiantes podrán explorar el potencial de crear programas divertidos e innovadores en un entorno nuevo y emocionante.",
           "student_overview": "Aquí aprenderás sobre condicionales en el mundo de Minecraft."
         },
         "coursee-2021/Conditionals": {
           "name": "Condicionales con la Granjera",
-          "overview": "Esta lección introduce a los estudiantes a los bucles `mientras` y las sentencias `si / si no`. _Bucles mientras_ son bucles que repiten comandos mientras una condición sea cierta. Los bucles `mientras` se utilizan cuando el programador no conoce el número exacto de veces que los comandos deben ser repetidos, pero sí sabe la condición que debe ser cierta para que el bucle continúe. Las sentencias `si / si no` ofrecen flexibilidad en la programación al ejecutar el código solo si algo es cierto; de lo contrario, ejecuta otra cosa.",
+          "overview": "Esta lección de **desarrollo de capacidades** se centra en un nuevo tipo de rompecabezas de programación, con un granjero que necesita preparar sus campos para plantar cultivos. ",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
           "purpose": "Esta lección introduce los bucles “mientras” y a las declaraciones “si/si no”.",
           "student_overview": "En esta divertida y desafiante serie podrás decirle a la computadora qué hacer bajo ciertas condiciones."
         },
         "coursee-2021/Functions in Harvester": {
           "name": "Funciones en Cosechadora",
-          "overview": "Los estudiantes practicaron cómo crear diseños maravillosos en el Artista y recorrer laberintos en la Abeja, pero hoy usarán las funciones para cosechar cultivos en la Granjera. Esta lección les permitirá usar las funciones de nuevas maneras y combinarlas con los bucles `mientras` y las sentencias `si / si no`.",
+          "overview": "En esta lección de **construcción de calificaciones**, los estudiantes usarán condicionales con funciones para cosechar cultivos en _Harvester_.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
           "purpose": "Esta lección pretende estimular a los estudiantes a utilizar condicionales con funciones. Estos desafíos pretenden aumentar la resolución de problemas y las habilidades de pensamiento crítico.",
           "student_overview": "¡Las funciones te ahorrarán mucho trabajo mientras ayudas a la granjera con su cosecha!"
@@ -6066,7 +6082,7 @@
         },
         "coursee-2021/End of Course Project": {
           "name": "Proyecto de fin de curso",
-          "overview": "Las próximas cuatro lecciones ofrecen a los estudiantes la oportunidad de poner en práctica sus habilidades de programación en un proyecto final. Este proyecto ayudará a las personas a adquirir experiencia con la programación y crear un ejemplo que pueden compartir con sus compañeros y seres queridos. La experiencia puede durar varias lecciones o semanas en las que los estudiantes aportarán ideas, aprenderán sobre el proceso de diseño, desarrollarán y presentarán su trabajo final. \\\\r\n\\\\r\nEn la etapa de exploración, los estudiantes podrán experimentar con proyectos predefinidos en el Artista y el Laboratorio de sprites para inspirarse. Luego, aprenderán sobre el proceso de diseño y cómo implementarlo en sus propios proyectos. Se les dará el espacio para crear su propio proyecto en el Artista, el Laboratorio de juegos o cualquier otra interfaz que les resulte familiar (esta es, probablemente, la etapa más larga del proyecto.) Finalmente, los estudiantes podrán presentar sus trabajos terminados a sus compañeros de clase.",
+          "overview": "¡Esta lección de **proyecto** lleva a los estudiantes a través del proceso de diseñar, desarrollar y exhibir nuevos proyectos! ",
           "preparation": "-   Realice su propio proyecto tanto con el artista como con Sprite Lab. Familiarízate con las capacidades y limitaciones de cada herramienta.\n-   Modifica la  **\\*tabla de evaluación** para acomodarla a los objetivos de tu clase e imprime una copia para cada estudiante.\n-   Modifica la **\\*Guía de planificación** para acomodarla a tu clase e imprime una copia para cada estudiante.",
           "purpose": "Los estudiantes podrían estar listos para ir directo a desarrollar sus proyectos; sin embargo, esta lección los ayudará a dar forma a sus ideas y ordenarlas como un plan. Esta estructura mantendrá a los más soñadores con los pies en la tierra e iluminará el camino para aquellos que se sientan abandonados en la oscuridad. Dales tanto tiempo como sea necesario para que los estudiantes desarrollen y revisen sus proyectos. El ensayo y error implícito en esta lección los ayudará a desarrollar habilidades de resolución de problemas y a ser perseverantes.",
           "student_overview": "Los proyectos así de grandes toman tiempo y mucha planificación. ¡Encuentra tu inspiración, desarrolla un plan y libera tu creatividad!"
@@ -6509,7 +6525,7 @@
         },
         "csd5-2021/Representation Matters": {
           "name": "Asuntos de Representación",
-          "assessment_opportunities": "1.  **Proporcionar ejemplos de cómo la representación de los datos de diferentes maneras puede afectar a su capacidad para resolver diferentes problemas.**\n\n    En el debate al final de la actividad, los estudiantes deben identificar cómo la naturaleza de cada problema se prestaba a una representación particular.  \n\n2.  **Elegir la mejor forma de representar una información en función de cómo se vaya a utilizar.**\n\n    En el debate al final de la actividad, los alumnos deben justificar las representaciones \"mejores\" y \"peores\" en el contexto de los distintos problemas que se les ha pedido que resuelvan.",
+          "assessment_opportunities": "1.  **Proporcionar ejemplos de cómo representar datos de diferentes maneras puede afectar su capacidad para resolver diferentes problemas.**\n\n    En la discusión al final de la actividad, los estudiantes deben identificar cómo la naturaleza de cada problema se prestó a una representación particular.  \n\n2.  **Elige la mejor manera de representar alguna información en función de cómo se va a utilizar.**\n\n    En la discusión al final de la actividad, los estudiantes deben justificar las representaciones “mejores” y “peores” dentro del contexto de los diversos problemas que se les pidió resolver.",
           "overview": "**Pregunta del día: ¿Cómo afectan los datos en las decisiones que tomamos cada día?**\n\nEn la primera lección de la unidad de datos, los estudiantes obtienen una visión general de lo que son los datos y de cómo se utilizan para resolver problemas. Los estudiantes comenzarán la lección con un breve análisis y luego realizarán una reflexión común para comprender qué son los datos. A continuación, se dividen en grupos y utilizan un conjunto de datos para recomendar varios tipos de comidas a personas con diversos criterios. Cada grupo tiene las opciones de comidas representadas de distintas maneras (imágenes, recetas, menú, información nutricional), algunas representaciones tienen más ventajas que otras. Finalmente, los grupos comparan sus respuestas y analizan de qué manera el tener distintas representaciones de los datos de las comidas influyó en la forma en la que resolvieron los distintos problemas.",
           "preparation": "-   Imprima copias de los Datos de Comidas para que cada grupo pueda tener una de las cuatro páginas\n-   Imprima una copia de la guía de actividades para cada grupo",
           "purpose": "Esta lección presenta un número importante de ideas que los estudiantes explorarán a lo largo de este capítulo. Podrán ver cómo los mismos objetos pueden ser representados de distintas formas. En el capítulo 1, aprenderán los distintos sistemas de representación que las computadoras utilizan para representar la información. También descubrirán la importancia de la representación cuando utilizamos datos para tomar decisiones. En el segundo capítulo de esta unidad, los estudiantes estudiarán más detenidamente las formas en las que los humanos y las computadoras pueden hacer uso de estos datos para tomar decisiones.",
@@ -6517,7 +6533,7 @@
         },
         "csd5-2021/Patterns and Representation": {
           "name": "Patrones y representación",
-          "assessment_opportunities": "1.  **Describir las características necesarias de un sistema para representar información**\n\n    Recapitulación: los alumnos deben identificar las características clave que necesitan sus sistemas para ser eficaces.\n\n2.  **Crear y utilizar un sistema de representación de la información**\n\n    Guía de Actividad: En la guía de actividad debe haber un código único para cada letra, con un sistema para determinar cuándo termina una letra y empieza la otra.  Durante la actividad, también puedes circular para ver los códigos en uso.",
+          "assessment_opportunities": "1.  **Describir las características necesarias de un sistema para representar información**\n\n    Envoltura: los estudiantes deben identificar las características clave que sus sistemas necesitaban para ser efectivos.\n\n2.  **Crear y usar un sistema para representar información**\n\n    Guía de actividades: Debe haber un código único para cada letra en la guía de actividades, con un sistema para determinar cuándo una letra se detiene y comienza la otra. Durante la actividad, es posible que también quieras circular para ver los códigos en uso.",
           "overview": "**Pregunta del día: ¿Cómo podemos crear un sistema para representar la información?**\n\nEn esta lección, los estudiantes crearán su propio sistema para representar información. Comenzarán con una lluvia de ideas de los distintos sistemas que ya utilizan para representar las respuestas sí y no. Luego trabajarán en grupos pequeños para crear un sistema que pueda representar a cada letra en el alfabeto usando distintas tarjetas. Estas tendrán uno de los 6 dibujos posibles (6 animales, 6 colores, etc.), por lo que para representar todo el alfabeto los estudiantes tendrán que utilizar patrones de varias tarjetas en representación de cada letra. Los estudiantes crearán mensajes con sus sistemas y los intercambian con otros grupos para asegurarse de que el sistema funcione correctamente. En el análisis final, la clase revisará las ventajas y desventajas de los distintos sistemas en funcionamiento, reflexionando acerca de las características que todos estos tienen en común, también reconocerán que hay muchas soluciones posibles para este problema y que lo importante es que todos utilicen el mismo sistema arbitrario para comunicarse.",
           "preparation": "-   Imprima una copia de la guía de actividades para cada grupo de 2-3 estudiantes\n-   Imprima y corte una copia del recurso manipulativo para cada grupo de 2-3 estudiantes",
           "purpose": "En esta lección, los estudiantes explorarán por sí mismos las cualidades de un buen sistema para representar información. A través de la creación y la comprobación de sus sistemas llegarán a la conclusión de que:\n\n1.  Existen muchos más sistemas con los que se puede representar la información\n2.  Las personas deben acordar una serie de reglas para que estos sistemas funcionen\n\nLas características de los sistemas que los estudiantes crearán en esta lección servirán como punto de referencia en las siguientes lecciones cuando deban explorar los sistemas de representación utilizados actualmente en las computadoras.\n\nEn las siguientes lecciones se presentará a los estudiantes el concepto de binario y cómo las computadoras utilizan señales on-off o los números “0 y 1” para representar información. Aunque es posible que este concepto aparezca en la actividad inicial, debería introducirse formalmente en la siguiente lección.",
@@ -6533,7 +6549,7 @@
         },
         "csd5-2021/Representing Images": {
           "name": "Representar imágenes",
-          "assessment_opportunities": "1.  **Crear y manipular patrones binarios para representar imágenes en blanco y negro**\n\n    Code Studio: En la burbuja 2, el alumno deberá haber creado una cara sonriente con el widget.\n\n2.  **Describir características comunes de los sistemas utilizados para representar información en binario**\n\n    Conclusión: Los alumnos deben identificar las características clave compartidas de los sistemas binarios que han visto.",
+          "assessment_opportunities": "1.  **Crear y manipular patrones binarios para representar imágenes en blanco y negro**\n\n    Code Studio: En la burbuja 2, el alumno deberá crear una cara sonriente con el widget.\n\n2.  **Describir características comunes de los sistemas utilizados para representar información en binario**\n\n    Conclusión: Los alumnos deben identificar las características clave compartidas de los sistemas binarios que han visto.",
           "overview": "**Pregunta del día: ¿Qué sistemas utilizan las computadoras para representar imágenes?**\n\nEn esta lección, los estudiantes aprenderán cómo las computadoras pueden representar imágenes. Para comenzar esta lección, tendrán que plantearse el desafío de demostrar toda la complejidad de una visión en un patrón binario. Mediante una serie de imágenes que muestran esta transformación, se introducirá el concepto de separar las imágenes en pequeños cuadrados o “pixeles”, los que pueden encenderse o apagarse individualmente para crear una imagen completa. Luego, los estudiantes completan una serie de desafíos utilizando la Herramienta de Pixelación para dibujar imágenes en blanco y negro. Los juegos han sido diseñados para demostrar los desafíos que implica esta forma de representar imágenes. En la actividad de cierre, los estudiantes harán conexiones entre el sistema para representar imágenes y el sistema para representar texto que aprendieron en la lección anterior.",
           "preparation": "-   Practicar utilizando la herramienta de pixelación por aproximadamente 10 minutos como preparación para responder a las preguntas",
           "purpose": "Esta lección presenta otro sistema utilizado comúnmente para representar información en binario. Lo más evidente al realizar la actividad con la herramienta de pixelación, será que 1 significa “On” y que 0 significa “Off”. Sin embargo, algo que no será tan notorio es que el ancho y alto de la imagen deberá coincidir para poder interpretar la información de la imagen binaria. Finalmente, esta es una oportunidad para explorar la elaboración de los sistemas de representación de información binaria. Es muy difícil representar una imagen que no ha sido procesada. La idea de convertirla en una cuadricula de cuadrados en blanco y negro simplifica este desafío y lo convierte en un problema que los científicos de la computación sabrían cómo solucionar. Si bien la actividad principal de esta lección dará la impresión de únicamente teclear unos y ceros, en realidad revela mucho acerca de la idea que las personas tienen sobre la representación de información en binario, y de los desafíos e intercambios se generan como resultados.",
@@ -6541,7 +6557,7 @@
         },
         "csd5-2021/Representing Numbers": {
           "name": "Representación de los Números",
-          "assessment_opportunities": "1.  **Utilizar un sistema binario para representar números.**\n\n    Guía de Actividad, página 1: Las respuestas de los alumnos deben coincidir con la clave, teniendo en cuenta que las tres últimas preguntas pueden tener respuestas diferentes en cada alumno.\n\n2.  **Extender un sistema de representación basado en patrones.**\n\n    Guía de Actividad, página 1: En la parte inferior de la página, los alumnos deben ampliar correctamente el patrón para números de 5 y 6 bits.",
+          "assessment_opportunities": "1.  **Usa un sistema binario para representar números.**\n\n    Guía de actividades, página 1: Las respuestas de los estudiantes deben coincidir con la clave, señalando que las últimas tres preguntas pueden tener diferentes respuestas estudiante a alumno.\n\n2.  **Extender un sistema de representación basado en patrones.**\n\n    Guía de actividades, página 1: En la parte inferior de la página, los estudiantes deben extender correctamente el patrón a números de 5 y 6 bits.",
           "overview": "**Pregunta del día: ¿Qué sistemas utilizan las computadoras para representar números?**\n\nEn esta lección, los estudiantes aprenderán acerca del sistema binario. Con un conjunto de tarjetas que representan la ubicación de los valores en un sistema de números binario (base-2) a través de una serie de puntos, los estudiantes podrán convertir bits en “on” y “off” al poner las tarjetas hacia arriba o hacia abajo, luego observarán los números que los distintos patrones arrojan como resultado. Finalmente, los estudiantes extienden el patrón a un sistema genérico de 4 bits.",
           "purpose": "Los estudiantes aprenderán a utilizar el sistema binario para representar números enteros. A diferencia del sistema ASCII, el cual es representado como un mapeo arbitrario de patrones de bit a caracteres, los números binarios son presentados en el contexto de patrones compuestos por números. Los estudiantes utilizarán estos patrones para determinar las representaciones binarias de los distintos números, en lugar de solo analizarlos en una tabla.",
           "student_overview": "**Pregunta del día: ¿Qué sistemas utilizan las computadoras para representar números?**\n\nEn esta lección, aprenderás sobre el sistema numérico binario real."

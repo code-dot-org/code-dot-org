@@ -146,6 +146,10 @@ ca:
     on the training data, the SVM separates the "space" of all possible fish into
     two parts, which correspond to the classes we are trying to learn (such as "blue"
     or "not blue").
+  heading_additional_resources: Additional resources
+  call_to_action_learn_more: Learn more
+  call_to_action_watch_now: Watch now
+  call_to_action_try_activity: Try activity
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
@@ -156,9 +160,47 @@ ca:
     and you could win.
   social_maker_title: I'm a Maker!
   social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  social_blockchain_title: How Blockchain Works
+  social_blockchain_desc: Videos and lessons that explore what blockchain is and why
+    it's important.
   pl_superhero_title: Help students become superheroes!
   pl_superhero_desc: Join our highly supportive Professional Learning Program for
     middle and high school educators.
+  blockchain_hero_heading: How Blockchain Works
+  blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
+    our new video series and accompanying lessons!
+  blockchain_intro_heading: See how blockchain works
+  blockchain_intro_desc: The video series, made in partnership with Coinbase, features
+    industry experts and aims to demystify this technology.
+  blockchain_intro_list_heading: 'This series will:'
+  blockchain_intro_list_item_01: Explain what blockchain is
+  blockchain_intro_list_item_02: Explore why it's important
+  blockchain_intro_list_item_03: Unpack its societal impacts — both good and bad
+  blockchain_video_title_01: Introduction to Blockchain
+  blockchain_video_title_02: Why Blockchain
+  blockchain_video_title_03: Under the Hood
+  blockchain_video_title_04: Beyond Currencies
+  blockchain_video_title_05: Marketplace and Price
+  blockchain_video_title_06: Trustworthy or a Scam?
+  blockchain_video_title_07: Societal Impact
+  blockchain_lessons_heading: Blockchain lessons for your class
+  blockchain_lessons_desc: The first five lessons can be taught as part of a "How
+    Blockchain Works" series or can stand alone. The last lesson condenses the whole
+    series to a single day.
+  blockchain_resources_desc: Interested in learning more about blockchain? Here are
+    some additional resources that can help extend your students' learning.
+  blockchain_resources_01_heading: Coinbase Learn
+  blockchain_resources_01_desc: Crypto questions answered, beginner guides, practical
+    tips, and market updates for first-timers, experienced investors, and everyone
+    in between.
+  blockchain_resources_01_button_label: Visit the Coinbase Learn website
+  blockchain_resources_02_heading: Whiteboard Crypto
+  blockchain_resources_02_desc: Watch videos from Whiteboard Crypto's YouTube channel
+    to learn even more about blockchain technology.
+  blockchain_resources_02_button_label: Visit the Whiteboard Crypto YouTube channel
+  blockchain_resources_03_heading: Hour of Code Activity
+  blockchain_resources_03_desc: Try a crypto memory game created by Coinbase.
+  blockchain_resources_03_button_label: Try the Crypto Memory Game activity
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -253,7 +295,8 @@ ca:
     No cal experiència.
   hourofcode_homepage_hoc2018_header_line2: Edat de 4 a 104.
   codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
-  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
+  codeorg_homepage_celebrate_cse: Celebrem les ciències de la computació arreu del
+    món!
   codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
     Connections
   codeorg_homepage_csc_long: See how computer science meets language arts, math, and
@@ -291,7 +334,7 @@ ca:
   front_volunteers: Es busquen tècnics voluntaris
   front_start_learning: Comença a aprendre
   header_menu_resources: Recursos
-  header_menu_faq: PMFs
+  header_menu_faq: Preguntes freqüents
   header_menu_how_to: Instruccions
   header_menu_promote: Promote
   header_menu_activities: Activitats
@@ -662,52 +705,59 @@ ca:
     you? (Thanks %{random_donor} for supporting @codeorg)'
   hoc_faq_title: Preguntes freqüents
   hoc_faq_what_is_hoc_q: Què és l'Hora de Codi?
-  hoc_faq_what_is_hoc_a: The Hour of Code started as a one-hour introduction to computer
-    science, designed to demystify "code", to show that anybody can learn the basics,
-    and to broaden participation in the field of computer science. It has since become
-    a worldwide effort to celebrate computer science, starting with 1-hour coding
-    activities but expanding to all sorts of community efforts. Check out the <a href='%{tutorials}'>tutorials
-    and activities</a>. This grassroots campaign is supported by over <a href='%{partners}'>400
-    partners</a> and 200,000 educators worldwide.
-  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
-    to computer science, designed to demystify "code", to show that anybody can learn
-    the basics, and to broaden participation in the field of computer science. It
-    has since become a worldwide effort to celebrate computer science, starting with
-    1-hour coding activities but expanding to all sorts of community efforts. Check
-    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
-    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
+  hoc_faq_what_is_hoc_a: L'Hora del Codi va començar com una introducció d'una hora
+    a la informàtica dissenyada per desmitificar la programació, demostrar que tothom
+    pot aprendre'n els fonaments, i fer que més persones fossin partícips del camp
+    de les ciències de la computació. Des de llavors, s'ha convertit en una iniciativa
+    mundial que celebra la informàtica a partir d'activitats de programació d'una
+    hora que serveix de trampolí per altres iniciatives socials. Feu una ullada als
+    nostres <a href='%{tutorials}'>tutorials i activitats</a>. Aquesta campanya comunitària
+    i associativa aglutina a més de <a href='%{partners}'>400 socis</a> i 200.000
+    docents d'arreu del món.
+  hoc_faq_what_is_hoc_a_markdown: L'Hora del Codi va començar com una introducció
+    d'una hora a la informàtica dissenyada per desmitificar la programació, demostrar
+    que tothom pot aprendre'n els fonaments, i fer que més persones fossin partícips
+    del camp de les ciències de la computació. Des de llavors, s'ha convertit en una
+    iniciativa mundial que celebra la informàtica a partir d'activitats de programació
+    d'una hora que serveix de trampolí per altres iniciatives socials. Feu una ullada
+    als nostres [tutorials i activitats](%{tutorials}). Aquesta campanya comunitària
+    i associativa aglutina a més de [400 socis](%{partners}) i 200.000 docents d'arreu
+    del món.
   hoc_faq_last_year: Prova els tutorials
-  hoc_faq_when_is_hoc_q: Quan és l'Hora de Codi?
-  hoc_faq_when_is_hoc_a: The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer
-    Science Education Week</a>. The %{campaign_date_year} Computer Science Education
-    Week will be %{campaign_date_full}, but you can host an Hour of Code all year-round.
-    Computer Science Education Week is held annually in recognition of the birthday
-    of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a>
-    (December 9, 1906).
-  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
-    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
-    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
-    all year-round. Computer Science Education Week is held annually in recognition
-    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
-    (December 9, 1906).
+  hoc_faq_when_is_hoc_q: Quan és l'Hora del Codi?
+  hoc_faq_when_is_hoc_a: L'Hora del Codi se celebra cada any durant la <a href='%{csedweek_url}'>Setmana
+    de l'Educació en Ciències de la Computació</a>. La Setmana de l'Educació en Ciències
+    de la Computació de l'any %{campaign_date_year} se celebrarà el %{campaign_date_full},
+    però podeu celebrar sessions d'Hora del Codi durant tot l'any. La Setmana de l'Educació
+    en Ciències de la Computació representa també una commemoració del naixement (el
+    9 de desembre de 1906) de <a href='%{grace_hopper}'>l'Almirallessa Grace Murray
+    Hopper</a>, pionera de la computació.
+  hoc_faq_when_is_hoc_a_markdown: L'Hora del Codi se celebra cada any durant la [Setmana
+    de l'Educació en Ciències de la Computació](%{csedweek_url}). La Setmana de l'Educació
+    en Ciències de la Computació de l'any %{campaign_date_year} se celebrarà el %{campaign_date_full},
+    però podeu celebrar sessions d'Hora del Codi durant tot l'any. La Setmana de l'Educació
+    en Ciències de la Computació representa també una commemoració del naixement (el
+    9 de desembre de 1906) de [l'Almirallessa Grace Murray Hopper](%{grace_hopper}),
+    pionera de la computació.
   hoc_faq_why_cs_q: Per què informàtica?
   hoc_faq_why_cs_a: "<i>Cada</i> estudiant ha de tenir l'oportunitat d'aprendre informàtica.
     Ajuda a generar habilitats, lògica i creativitat en la resolució de problemes.
     Començant aviat, els alumnes tindran els fonaments per tenir èxit en qualsevol
     carrera del segle XXI. Veure més informes a <a href='http://code.org'> Code.org</a>."
-  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
-    computer science. It helps nurture problem-solving skills, logic and creativity.
-    By starting early, students will have a foundation for success in any 21st-century
-    career path. See more stats [here](%{stats_url}).
+  hoc_faq_why_cs_a_markdown: _Tots_ els alumnes han de tenir l'oportunitat d'aprendre
+    informàtica, ja que fer-ho ajuda a generar habilitats de resolució de problemes
+    i fomenta l'ús de la lògica i la creativitat. Si comencen aviat, els alumnes tindran
+    els fonaments necessaris per créixer professionalment en qualsevol àmbit propi
+    segle XXI. [Aquí](%{stats_url}) podeu consultar més estadístiques.
   hoc_faq_how_participate_q: Com participo a l'Hora de Codi?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing
-    our how-to guide. You can organize an Hour of Code event at your school or in
-    your community &mdash; like in an extracurricular club, non-profit or at work.
-    Or, just try it yourself when %{campaign_date} arrives."
-  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
-    our how-to guide. You can organize an Hour of Code event at your school or in
-    your community — like in an extracurricular club, non-profit or at work. Or, just
-    try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Comenceu a planejar el vostre esdeveniment</a>
+    amb la nostra guia orientativa. Podeu organitzar una Hora del Codi a la vostra
+    escola o a comunitat com a activitat extraescolar, de voluntariat o de desenvolupament
+    professional. O, si voleu, podeu fer-la pel vostre compte quan arribi el %{campaign_date}."
+  hoc_faq_how_participate_a_markdown: "[Comenceu a planejar el vostre esdeveniment]
+    amb la nostra guia orientativa. Podeu organitzar una Hora del Codi a la vostra
+    escola o a comunitat com a activitat extraescolar, de voluntariat o de desenvolupament
+    professional. O, si voleu, podeu fer-la pel vostre compte quan arribi el %{campaign_date}."
   hoc_faq_behind_hoc_q: Qui hi ha darrere l'Hora de Codi?
   hoc_faq_behind_hoc_a: L'Hora de Codi esta organitzat per <a href='http://code.org'>
     Code.org</a>, una organització pública 501c3 sense ànim de lucre dedicada a promoure
@@ -716,33 +766,38 @@ ca:
     href='http://code.org/about/partners'> coalició sense precedents de socis</a>
     que s'han ajuntat per donar suport a l'Hora de Codi, també &mdash; incloent-hi
     Microsoft, Apple, Amazon, Boys i Girls Clubs d'Amèrica i el Consell Escolar.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
-    by the Hour of Code Review Committee as well as an unprecedented coalition of
-    [partners](%{partner_url}) that have come together to support the Hour of Code
-    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
-    College Board.
+  hoc_faq_behind_hoc_a_markdown: L'Hora del Codi és possible gràcies a l'organització
+    de Code.org i l'impuls del Comitè de Revisió de l'Hora del Codi, juntament amb
+    una coalició sense precedents entre [partners](%{partner_url}) que han unit forces
+    per donar suport a l'Horal del Codi, com ara Microsoft, Apple, Amazon, Boys and
+    Girls Clubs of America i College Board.
   hoc_faq_host_q: Jo no sé res sobre programació. Puc acollir un esdeveniment?
-  hoc_faq_host_a: Of course. Hour of Code activities are self-guided. All you have
-    to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the
-    tutorial you want, and pick an hour &mdash; we take care of the rest. We also
-    have options for every age and experience-level, from kindergarten and up. Start
-    planning your event by reading our <a href='/how-to'>how to guide</a>.
-  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
-    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
-    tutorial you want, and pick an hour — we take care of the rest. We also have options
-    for every age and experience-level, from kindergarten and up. Start planning your
-    event by reading our [how to guide](%{howto}).
-  hoc_faq_devices_q: What devices should I use for my students?
-  hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
-    see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
-    Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
-    activities</a> if your school can't accommodate the tutorials!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_host_a: Per descomptat. Hora de Codi son activitats autoguiades. Només cal
+    que <a href='%{codeorg_url}/learn'>proveu els tutorials actuals</a>, trieu el
+    que voleu fer i seleccioneu una hora, i nosaltres ens ocuparem de la resta. A
+    més, tenim opcions per a cada edat i nivell d'experiència que comencen a partir
+    de la llar d'infants. Llegiu la nostra <a href='/how-to'>guia orientativa</a>
+    per començar a planejar el vostre esdeveniment.
+  hoc_faq_host_a_markdown: Per descomptat. Hora de Codi son activitats autoguiades.
+    Només cal que [proveu els tutorials actuals](%{codeorg_url}/aprendre), trieu el
+    que voleu fer i seleccioneu una hora, i nosaltres ens ocuparem de la resta. A
+    més, tenim opcions per a cada edat i nivell d'experiència que comencen a partir
+    de la llar d'infants. Llegiu la nostra [guia orientativa](%{howto}) per començar
+    a planejar el vostre esdeveniment.
+  hoc_faq_devices_q: Quins recursos necessitaré per als meus alumnes?
+  hoc_faq_devices_a: Els tutorials de Code.org funcionen en tots els dispositius i
+    navegadors. <a href='%{codeorg_url}/educate/it'>Aquí</a> trobareu més informació
+    sobre els requisits tècnics dels tutorials de Code.org. A <a href='%{codeorg_url}/learn'>%{partner_url}/aprendre</a>,
+    a la descripció específica del tutorial, podreu consultar els requisits tècnics
+    dels tutorials externs a Code.org. Recordeu que, si la vostra escola no disposa
+    dels recursos tècnics necessaris, també oferim <a href='%{unplugged_url}'>activitats
+    sense connexió</a>.
+  hoc_faq_devices_a_markdown: Els tutorials de Code.org funcionen en tots els dispositius
+    i navegadors. [Aquí](%{codeorg_url}/educacio/tecnologia). trobareu més informació
+    sobre els requisits tècnics dels tutorials de Code.org. A [%{partner_url}/aprendre](%{codeorg_url}/aprendre)
+    , a la descripció específica del tutorial, podreu consultar els requisits tècnics
+    dels tutorials externs a Code.org. Recordeu que, si la vostra escola no disposa
+    dels recursos tècnics necessaris, també oferim[activitats sense connexió](%{unplugged_url}).
   hoc_faq_need_computers_q: Necessito ordinadors per a cada persona participant?
   hoc_faq_need_computers_a: No. Tenim tutorials d'Hora de Codi que funcionen en PCs,
     smartphones, tauletes i alguns que no requereixen cap ordinador en absolut! Pots
@@ -756,157 +811,174 @@ ca:
     resoldre puzles o respondre preguntes. <li><b>Sense connexió.</b> Oferim tutorials
     que no requereixen cap ordinador. </ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    No. Tenim tutorials de l'Hora del Codi que funcionen en ordinadors de sobretaula, telèfons intel·ligents, tauletes, i alguns que no requereixen cap dispositiu. Podeu formar part de l'Hora del Codi allà on sigueu i amb allò que tingueu al vostre abast.
 
-    _Here are a few options:_
+    _Aquí teniu algunes opcions:_
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - **Treball en parelles.** [Hi ha estudis que demostren](%{pair_programming_research}) que els alumnes aprenen millor si fam [programació per parelles](%{pair_programming_video}), comparteixen l'ordinador i treballen junts. Animeu els alumnes a formar parelles.
+    - **Compariu la pantalla.** Si teniu un projector, un monitor i un ordinador amb connexió a internet, podeu fer l'Hora del Codi com una activitat de grup. Podeu mirar fragments de vídeos junts i fer torns per resoldre els trencaclosques o contestar les preguntes.
+    - **Activitat sense connexió.** Oferim [tutorials pels quals no us faran falta ordinadors](%{unplugged_url}).
   hoc_faq_international_q: Visc a<country>. Com puc participar internacionalment?
-  hoc_faq_international_a: Anyone can organize an Hour of Code event, anywhere in
-    the world. Last year, students worldwide joined together for the Hour of Code.
-    Find out more <a href='/promote'>here</a>.
-  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
-    in the world. Last year, students worldwide joined together for the Hour of Code.
-    Find out more [here](%{promote}).
+  hoc_faq_international_a: Qualsevol pot organitzar un esdeveniment de l'Hora del
+    Codi, a qualsevol lloc del món. L'any passat, alumnes d'arreu del món es van unir
+    per participar en l'Hora del Codi. Descobriu-ne més <a href='target-resources'>aquí</a>.
+  hoc_faq_international_a_markdown: Qualsevol pot organitzar un esdeveniment de l'Hora
+    del Codi, a qualsevol lloc del món. L'any passat, alumnes d'arreu del món es van
+    unir per participar en l'Hora del Codi. Descobriu-ne més [aquí](%{promote}).
   hoc_faq_tutorial_q: Com puc fer una classe d'Hora de Codi?
   hoc_faq_tutorial_a: Si estàs interessat en convertir-te en col·laborador de tutorials,
     <a href='target-tutorial-guidelines'> mira les nostres guies i instruccions</a>.
     Ens agradaria oferir una varietat d'opcions atractives, però l'objectiu principal
     és optimitzar l'experiència per a estudiants i professors que són nous en informàtica.
-  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
-    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
-    a variety of engaging options, but the primary goal is to optimize the experience
-    for students and teachers who are new to computer science.
-  hoc_faq_account_q: Do students need to log on using an account?
-  hoc_faq_account_a: No. Absolutely no signup or login is required for students to
-    try the Hour of Code. Most of the <a href='%{codeorg_url}/learn/beyond'>follow-on
-    courses</a> require account creation to save student progress. Also, signing up
-    for the Hour of Code does NOT automatically create a Code Studio account. If you
-    do want to create accounts for your students, please follow these <a href='https://youtu.be/_smelV_KISE'>instructions</a>.
-  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
-    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
-    require account creation to save student progress. Also, signing up for the Hour
-    of Code does NOT automatically create a Code Studio account. If you do want to
-    create accounts for your students, please follow these [instructions](%{section_instructions_url}).
-  hoc_faq_high_school_q: Which activity should I do with high school students?
-  hoc_faq_high_school_a: Our Star Wars and Minecraft tutorials are great for high
-    schoolers, especially the Star Wars JavaScript version and the free play level
-    on both tutorials. Alternately, we recommend trying one of the beginner tutorials
-    on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
-  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
-    for high schoolers, especially the Star Wars JavaScript version and the free play
-    level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
+  hoc_faq_tutorial_a_markdown: Si us interessa convertir-vos en un dels nostres socis
+    de tutorials, [consulteu les nostres pautes i instruccions](%{tutorial_guidelines}).
+    Volem oferir opcions dinàmiques, però l'objectiu principal és optimitzar l'experiència
+    per als alumnes i els professors que tot just comencen a endinsar-se en el món
+    de la informàtica.
+  hoc_faq_account_q: Els alumnes han d'iniciar sessió amb un compte propi?
+  hoc_faq_account_a: No. No fa falta que els alumnes es registrin o iniciïn sessió
+    per provar l'Hora del Codi. La majoria dels <a href='%{codeorg_url}/learn/beyond'>cursos
+    derivats</a> sí requereixen que l'alumne tingui un compte per poder guardar el
+    seu progrés. Tingueu en compte que inscriure's a l'Hora del Codi NO implica la
+    creació automàtica d'un compte de Code Studio. Si voleu crear comptes per als
+    vostres alumnes, seguiu aquestes <a href='https://youtu.be/_smelV_KISE'>instruccions</a>.
+  hoc_faq_account_a_markdown: No. No fa falta que els alumnes es registrin o iniciïn
+    sessió per provar l'Hora del Codi. La majoria dels [cursos derivats](%{codeorg_url}/aprendre/mes-enlla)
+    sí requereixen que l'alumne tingui un compte per poder guardar el seu progrés.
+    Tingueu en compte que inscriure's a l'Hora del Codi NO implica la creació automàtica
+    d'un compte de Code Studio. Si voleu crear comptes per als vostres alumnes, seguiu
+    aquestes [instruccions](%{section_instructions_url}).
+  hoc_faq_high_school_q: Quina activitat hauria de fer amb els meus alumnes de secundària?
+  hoc_faq_high_school_a: Els tutorials de La guerra de les galàxies i de Minecraft
+    funcionen molt bé amb alumnes de secundària, especialment la versió de JavaScript
+    de La guerra de les galàxies i els nivells de joc lliure de tots dos tutorials.
+    Com a alternativa, us recomanem que comenceu amb un dels tutorials per a principiants
+    de <a href='%{codeorg_url}/learn'>%{partner_url}/aprendre</a>, com ara el d'Angry
+    Birds o el de l'Anna i l'Elsa. Un alumne de secundària hauria de poder fer-los
+    en 30 minuts i passar a fer-ne un de més avançat en JavaScript, com ara els de
+    Khan Academy o CodeHS.
+  hoc_faq_high_school_a_markdown: Els tutorials de La guerra de les galàxies i de
+    Minecraft funcionen molt bé amb alumnes de secundària, especialment la versió
+    de JavaScript de La guerra de les galàxies i els nivells de joc lliure de tots
+    dos tutorials. Com a alternativa, us recomanem que comenceu amb un dels tutorials
+    per a principiants de [%{partner_url}/learn](%{codeorg_url}/aprendre), com ara
+    el d'Angry Birds o el de l'Anna i l'Elsa. Un alumne de secundària hauria de poder
+    fer-los en 30 minuts i passar a fer-ne un de més avançat en JavaScript, com ara
+    els de Khan Academy o CodeHS.
   hoc_faq_scratch_q: Estic fent Scratch per a l' Hora del Codi, però què passa si
     els meus estudiants tenen iPads en lloc de portàtils?
-  hoc_faq_scratch_a: Scratch doesn't run on tablets. If your students are young, they
-    can use the ScratchJR iPad app (for early-readers). If you look at the tutorials
-    on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
-  hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_map_q: Why don't I see my dot on the map?
-  hoc_faq_map_a: We're so sorry you aren't seeing your event on the Hour of Code map.
-    Because of the tens of thousands of organizers who sign up, the map aggregates
-    the data and displays one point for several events. If you click the <a href='%{events_url}'>events
-    page</a> link below the map you will be directed to a list of all events by state
-    and can find your event listed there. Additionally, given the thousands of people
-    signing up for the Hour of Code, the map and event list usually takes 48 hours
-    to update. Check back in a few days!
-  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
-    of Code map. Because of the tens of thousands of organizers who sign up, the map
-    aggregates the data and displays one point for several events. If you click the
-    [events page](%{events_url}) link below the map you will be directed to a list
-    of all events by state and can find your event listed there. Additionally, given
-    the thousands of people signing up for the Hour of Code, the map and event list
-    usually takes 48 hours to update. Check back in a few days!
-  hoc_faq_count_hoc_a: The Hour of Code tracker isn't an exact measurement of usage.
-    We do not count unique student IDs perfectly when tracking participation in the
-    Hour of Code, especially because we don't require students to log in or register.
-    As a result, we both over-count and under-count participants at the same time.
-    Read all the details <a href='%{codeorg_url}/loc'>here</a>.
-  hoc_faq_count_hoc_a_markdown: 'We do not count unique student IDs perfectly when
-    tracking participation in the Hour of Code. Why? Partly because we don''t want
-    the friction of prompting to “login / register” before a student or classroom
-    tries learning for the first time, and partly because there are may activities
-    we cannot track online. We do take certain steps to reduce double-counting, but
-    without a login prompt, this can''t work perfectly. At the same time, there are
-    MANY student activities in the Hour of Code that aren''t tracked at all. For example:
-    (1) students who use a mobile/tablet app to try the Hour of Code are typically
-    not counted (2) students who share a screen for pair-programming or group-programming
-    may be counted as one (3) students trying an unplugged classroom activity cannot
-    be counted online (4) teachers who create their own Hour of Code activities. As
-    a result, there is some under-counting and some double-counting, and so we do
-    not view the Hour of Code tracker to be an exact measure of usage. It is certainly
-    directionally correct, and shows that many tens of millions of students have participated.'
-  hoc_faq_one_hour_q: How much can one learn in an hour?
-  hoc_faq_one_hour_a: The goal of the Hour of Code is not to teach anybody to become
-    an expert computer scientist in one hour. One hour is only enough to learn that
-    computer science is fun and creative, that it is accessible at all ages, for all
-    students, regardless of background. The measure of success of this campaign is
-    not in how much CS students learn - the success is reflected in broad participation
-    across gender and ethnic and socioeconomic groups, and the resulting increase
-    in enrollment and participation we see in CS courses at all grade levels. Millions
-    of the participating teachers and students have decided to go beyond one hour
-    -  to learn for a whole day or a whole week or longer, and many students have
-    decided to enroll in a whole course (or even a college major) as a result. <br/><br/>
-    Besides the students, another "learner" is the educator who gains the confidence
-    after one hour that they can teach computer science even though they may not have
-    a college degree as a computer scientist. Tens of thousands of teachers decide
-    to pursue computer science further, either attending PD or offering follow-on
-    online courses, or both. And this applies to school administrators too, who realize
-    that computer science is something their students want and their teachers are
-    capable of. <br/><br/> Above all, what all participants can learn in an hour is
-    that we can do this.
+  hoc_faq_scratch_a: El tutorial de l'Scratch no és compatible amb les tauletes. Si
+    els vostres alumnes són petits, podeu ver servir l'aplicació ScratchJr per iPad
+    (per lectors principiants). Si feu una ullada als tutorials de <a href='%{codeorg_url}/learn'>%{partner_url}/aprendre</a>,
+    trobareu altres tutorials de Code.org, Tynker, Lightbot o CodeSpark compatibles
+    amb iPad.
+  hoc_faq_scratch_a_markdown: El tutorial de l'Scratch no és compatible amb les tauletes.
+    Si els vostres alumnes són petits, podeu ver servir l'aplicació ScratchJr per
+    iPad (per lectors principiants). Si feu una ullada als tutorials de[%{partner_url}/aprendre](%{codeorg_url}/aprendre),
+    trobareu altres tutorials de Code.org, Tynker, Lightbot o CodeSpark compatibles
+    amb iPad.
+  hoc_faq_count_hoc_q: Com es compten les Hores del Codi?
+  hoc_faq_map_q: Per què el meu punt no apareix al mapa?
+  hoc_faq_map_a: Sentim que no trobis el teu esdeveniment al mapa de l'Hora del Codi.
+    Hi ha desenes de milers d'organitzadors que s'inscriuen per fer l'esdeveniment,
+    de manera que el mapa agrega les dades i mostra un punt per diversos esdeveniments
+    junts. Si veu clic a l'enllaç de la <a href='%{events_url}'>pàgina d'esdeveniments</a>
+    que trobareu a continuació, us redirigirem a una llista de tots els esdeveniments
+    per regions perquè pugueu trobar-hi el vostre. A més, com que hi ha milers de
+    persones que s'incriuen per fer l'Hora del Codi, el mapa i la llista de l'esdeveniment
+    s'actualitza cada 48 hores. Torneu a consultar-los en un parell de dies!
+  hoc_faq_map_a_markdown: Sentim que no trobis el teu esdeveniment al mapa de l'Hora
+    del Codi. Hi ha desenes de milers d'organitzadors que s'inscriuen per fer l'esdeveniment,
+    de manera que el mapa agrega les dades i mostra un punt per diversos esdeveniments
+    junts. Si veu clic a l'enllaç de la [pàgina d'esdeveniments](%{events_url}) que
+    trobareu a continuació, us redirigirem a una llista de tots els esdeveniments
+    per regions perquè pugueu trobar-hi el vostre. A més, com que hi ha milers de
+    persones que s'incriuen per fer l'Hora del Codi, el mapa i la llista de l'esdeveniment
+    s'actualitza cada 48 hores. Torneu a consultar-los en un parell de dies!
+  hoc_faq_count_hoc_a: L'eina de seguiment de l'Hora del Codi no fa lectures exactes.
+    No comptem els identificadors únics dels alumnes d'una manera precisa per fer
+    seguiment de la participació en l'Hora del Codi, sobre tot perquè no demanem que
+    els alumnes es registrin o inicïin sessió. Això fa que els recomptes dels participants
+    siguin a l'alça i a la baixa alhora. Podeu consultar tots els detalls <a href='%{codeorg_url}/loc'>aquí</a>.
+  hoc_faq_count_hoc_a_markdown: 'No comptem els identificadors únics dels alumnes
+    d''una manera precisa per fer seguiment de la participació en l''Hora del Cod.
+    Per què? En part, perquè no volem provocar friccions en demanar l''alumne o la
+    classe que es registri o iniciï sesió abans de començar a aprendre per primera
+    vegada, i en part perquè hi ha moltes activitats de les quals no podem fer seguiment
+    en línia. Hem implementat certes mesures per reduir els recomptes dobles, però
+    en l''absència d''inicis de sessió, el procés no pot ser totalment precís. A més,
+    hi ha moltes activitats a l''Hora del Codi de les quals no fem cap tipus de seguiment.
+    Per exemple: (1) els alumnes que utilitzen una aplicació per mòbil o tauleta per
+    fer l''Hora del Codi no se solen comptar; (2) els alumnes que comparteixen pantalla
+    per programar per parelles o en grup es compten com un de sol; (3) els alumnes
+    que fan activitats sense connexió no es poden comptar en línia; (4) els alumnes
+    que creen les seves pròpies activitats de l''Hora del Codi no es poden comptar.
+    Això provoca que hi hagi recomptes a la baixa i recomptes dobles, i per aquesta
+    raó no veiem l''eina de seguiment de l''Hora del Codi com una eina precisa per
+    mesurar l''ús. Tot i això, la direcció que indica és correcta, i mostra que hi
+    han participat desenes de milions d''alumnes. '
+  hoc_faq_one_hour_q: Quant s'aprèn en una hora?
+  hoc_faq_one_hour_a: L’objectiu de l’Hora del Codi no és que ningú es converteixi
+    en un informàtic experimentat en el transcurs d’una hora. Una hora només permet
+    descobrir que la informàtica és divertida i creativa i que està a l’abast de persones
+    de totes les edats i de tots els alumnes, independentment dels seus coneixements
+    previs. L’èxit d’aquesta campanya no es mesura segons quant aprenen els alumnes,
+    sinó a partir de com d’àmplia és la participació dels diferents gèneres i grups
+    ètnics i socioeconòmics i de l’augment de les inscripcions i de la participació
+    que veiem en els cursos d’informàtica de tots els nivells. Milions de professors
+    i alumnes que han participat en l’Hora del Codi han decidit seguir aprenent, tant
+    durant un dia sencer com durant una setmana o més temps, i molts alumnes han decidit
+    fer un curs sencer (o fins i tot una carrera universitària) gràcies a aquesta
+    experiència. <br/><br/> Els alumnes no són els únics que aprenen; també ho fan
+    els docents que, després d’aquesta primera hora, se senten més preparats per ensenyar
+    informàtica tot i no tenir formació universitària en la matèria. Desenes de milers
+    de professors han decidit seguir aprenent informàtica o bé inscrivint-se en els
+    nostres cursos de formació per a professionals o bé oferint cursos relacionats
+    per internet, o totes dues. I això també aplica als administradors dels centres
+    escolars, qui s’adonen que els alumnes volen aprendre informàtica i que els professors
+    són capaços d’ensenyar-la. <br/><br/> I, sobretot, tots els implicats descobreixen,
+    en el transcurs d’una hora, que tot això és possible.
   hoc_faq_one_hour_a_markdown: |-
-    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender, racial/ethnic, and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+    L’objectiu de l’Hora del Codi no és que ningú es converteixi en un informàtic experimentat en el transcurs d’una hora. Una hora només permet descobrir que la informàtica és divertida i creativa i que està a l’abast de persones de totes les edats i de tots els alumnes, independentment dels seus coneixements previs. L’èxit d’aquesta campanya no es mesura segons quant aprenen els alumnes, sinó a partir de com d’àmplia és la participació dels diferents gèneres i grups ètnics i socioeconòmics i de l’augment de les inscripcions i de la participació que veiem en els cursos d’informàtica de tots els nivells. Milions de professors i alumnes que han participat en l’Hora del Codi han decidit seguir aprenent, tant durant un dia sencer com durant una setmana o més temps, i molts alumnes han decidit fer un curs sencer (o fins i tot una carrera universitària) gràcies a aquesta experiència.
 
-    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+    Els alumnes no són els únics que aprenen; també ho fan els docents que, després d’aquesta primera hora, se senten més preparats per ensenyar informàtica tot i no tenir formació universitària en la matèria. Desenes de milers de professors han decidit seguir aprenent informàtica o bé inscrivint-se en els nostres cursos de formació per a professionals o bé oferint cursos relacionats per internet, o totes dues. I això també aplica als administradors dels centres escolars, qui s’adonen que els alumnes volen aprendre informàtica i que els professors són capaços d’ensenyar-la.
 
-    Above all, what all participants can learn in an hour is that we can do this.
+    I, sobretot, tots els implicats descobreixen, en el transcurs d’una hora, que tot això és possible.
   hoc_faq_more_questions_q: Teniu encara més preguntes?
   hoc_faq_more_questions_a: Intenteu trobar una resposta en el nostre  <a href='http://support.code.org'>support
     forum</a>.
-  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
-  hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
-  hoc_faq_keep_learning_a: Anyone can host an Hour of Code at any time. The tutorials
-    stay up year-round. You can expect all our tutorials and curriculum to be available
-    on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for
-    event how-to guides and other resources to help make your Hour of Code event a
-    success.
-  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
-    tutorials stay up year-round. You can expect all our tutorials and curriculum
-    to be available on our site in perpetuity. Please go to [our resources](%{promote})
-    for event how-to guides and other resources to help make your Hour of Code event
-    a success.
-  hoc_faq_certificates_q: Where can I print certificates for my students?
-  hoc_faq_certificates_a: Go to our <a href='%{codeorg_url}/certificates'>certificates
-    page</a> where you can print certificates for your entire class ahead of time.
-    You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special
-    certificates</a> for students doing the Minecraft tutorial.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
-  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or
-    name?
-  hoc_faq_logo_a: Hour of Code is trademarked. We don't want to prevent its usage,
-    but we want to make sure its usage fits within a few limits. Please see <a href='%{logo_url}'>these
-    guidelines for usage</a>.
-  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
-    usage, but we want to make sure its usage fits within a few limits. Please see
-    [these guidelines for usage](%{logo_url}).
+  hoc_faq_more_questions_a_markdown: Consulteu el nostre [fòrum d'ajuda](http://support.code.org)
+    per trobar la resposta.
+  hoc_faq_keep_learning_q: Com puc seguir aprenent després de l'Hora del Codi?
+  hoc_faq_keep_learning_a: Podeu celebrar una Hora del Codi quan vulgueu. Els tutorials
+    estan disponibles durant tot l’any, i sempre tindreu accés tant als tutorials
+    com al pla d’estudis des de la nostra pàgina web. Consulteu l’apartat dels <a
+    href='/promote'>nostres recursos</a>, on trobareu guies orientatives i altres
+    recursos que us ajudaran a fer que el vostre esdeveniment de l’Hora del Codi sigui
+    tot un èxit.
+  hoc_faq_keep_learning_a_markdown: Podeu celebrar una Hora del Codi quan vulgueu.
+    Els tutorials estan disponibles durant tot l’any, i sempre tindreu accés tant
+    als tutorials com al pla d’estudis des de la nostra pàgina web. Consulteu l’apartat
+    dels [nostres recursos](%{promote}), on trobareu guies orientatives i altres recursos
+    que us ajudaran a fer que el vostre esdeveniment de l’Hora del Codi sigui tot
+    un èxit.
+  hoc_faq_certificates_q: Des d'on imprimeixo els certificats per als alumnes?
+  hoc_faq_certificates_a: Des de la <a href='%{codeorg_url}/certificates'>pàgina de
+    certificats</a> podreu imprimir els certificats per a tota la classe amb antelació.
+    També podeu imprimir <a href='%{codeorg_url}/certificates?course=mc'>certificats
+    especials</a> per als alumnes que facin el tutorial de Minecraft.
+  hoc_faq_certificates_a_markdown: Des de la [pàgina de certificats](%{codeorg_url}/certificats)
+    podreu imprimir els certificats per a tota la classe amb antelació. També podeu
+    imprimir [certificats especials](%{codeorg_url}/certificats?curs=mc) per als alumnes
+    que facin el tutorial de Minecraft.
+  hoc_faq_logo_q: Existeix alguna limitació d'ús en relació amb el logotip o del nom
+    de l'Hora del Codi?
+  hoc_faq_logo_a: L'Hora del Codi és una marca registrada. No volem evitar que ningú
+    el faci servir, però sí que volem assegurar-nos que el seu ús entri dins d'unes
+    certes limitacions. Consulteu <a href='%{logo_url}'>aquestes pautes d'ús</a>.
+  hoc_faq_logo_a_markdown: L'Hora del Codi és una marca registrada. No volem evitar
+    que ningú el faci servir, però sí que volem assegurar-nos que el seu ús entri
+    dins d'unes certes limitacions. Consulteu [aquestes pautes d'ús](%{logo_url}).
   stats_hoc_2013_image_alt: Estadístiques de 2013 d'Hora de Codi
   stats_growth: Va ser el més ràpid d'arribar a 15 milions d'usuaris.
   stats_i18n: Students are learning in over 45 languages
