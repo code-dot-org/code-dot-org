@@ -280,6 +280,7 @@ GEM
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
     bindata (2.4.10)
+    bindex (0.8.1)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     brakeman (4.5.0)
@@ -338,7 +339,6 @@ GEM
       rubyzip
       tableschema
     date (3.3.3)
-    debug_inspector (0.0.3)
     declarative (0.0.20)
     devise (4.7.3)
       bcrypt (~> 3.0)
@@ -552,7 +552,7 @@ GEM
     mysql2 (0.5.5)
     nakayoshi_fork (0.0.4)
     naturally (2.1.0)
-    net-http-persistent (4.0.1)
+    net-http-persistent (4.0.2)
       connection_pool (~> 2.2)
     net-scp (2.0.0)
       net-ssh (>= 2.6.5, < 6.0.0)
@@ -693,7 +693,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.20.3, < 2.0)
     rainbow (3.0.0)
-    raindrops (0.20.1)
+    raindrops (0.20.0)
     rake (12.3.3)
     rambling-trie (2.3.0)
     rb-fsevent (0.11.2)
@@ -875,11 +875,11 @@ GEM
     vcr (3.0.3)
     warden (1.2.7)
       rack (>= 1.0)
-    web-console (3.3.1)
-      actionview (>= 5.0)
-      activemodel (>= 5.0)
-      debug_inspector
-      railties (>= 5.0)
+    web-console (4.2.0)
+      actionview (>= 6.0.0)
+      activemodel (>= 6.0.0)
+      bindex (>= 0.4.0)
+      railties (>= 6.0.0)
     webdrivers (3.7.2)
       net_http_ssl_fix
       nokogiri (~> 1.6)
@@ -1073,7 +1073,7 @@ DEPENDENCIES
   user_agent_parser
   validates_email_format_of
   vcr
-  web-console
+  web-console (~> 4.2.0)
   webdrivers (~> 3.0)
   webmock (~> 3.8)
   xxhash

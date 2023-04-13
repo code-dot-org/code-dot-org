@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2023-04-11T01:42:45.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -24,7 +20,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "<div style=\"float:right;\" markdown=1> \r\n\r\n![expandable](https://images.code.org/8247017cd8622167efdfe1d2daeb1ab1-image-1675457352714.png) \r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Using Board Events\r\n\r\nRight now the LED turns on when the A button (`buttonA`) is pressed down. Add code so it turns off when the B button (`buttonB`) is pressed down.\r\n\r\n## Do This\r\n\r\n1) When buttonB is pressed, turn the red LED off.\r\n\t- Add another [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block to turn the LED off when the B button is pressed down.",
+    "long_instructions": "<div style=\"float:right;\" markdown=1> \r\n\r\n![expandable](https://images.code.org/8247017cd8622167efdfe1d2daeb1ab1-image-1675457352714.png) \r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Using Board Events\r\n\r\nStudents will learn how to program the A and B buttons on the micro:bit and use them for input and/or to create an output.\r\n\r\nRight now the LED turns on when the A button (`buttonA`) is pressed down. Add code so it turns off when the B button (`buttonB`) is pressed down.\r\n\r\n## Do This\r\n\r\n1) When buttonB is pressed, turn the red LED off.\r\n\t- Add another [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block to turn the LED off when the B button is pressed down.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -80,9 +76,13 @@
     ],
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2023-04-11T01:42:45.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-04-11T01:42:45.941+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-CI-U6-Board Inputs-MB\\\"\"],\"cloned_from\":\"VPL-CSD-CI-U6-Board Inputs-MB\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-11T01:42:45.941+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-CI-U6-Board Inputs-MB\\\"\"],\"cloned_from\":\"VPL-CSD-CI-U6-Board Inputs-MB\"},{\"changed_at\":\"2023-04-11 20:59:19 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

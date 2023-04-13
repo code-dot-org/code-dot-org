@@ -4,12 +4,12 @@ type 'multi'
 question 'Given the following website, what would you add to the CSS file so the images of clouds and rainbows have a height of 50 px?
 
 
-![](https://images.code.org/c38dded367d314cbfd698e61e03acad8-CSDunit2cssclass.png)'
-wrong '![](https://images.code.org/19d4b426ab2967d0e07a92c3fb8ce260-CSDunit2cssclass1.png)'
-right '![](https://images.code.org/2a5d7d517ba6b03ae11a6ced48ae5f0c-CSDunit2cssclass2.png)'
-wrong '![](https://images.code.org/1e1dcfb7ef9fae328e91a0825a29bb8a-CSDunit2cssclass3.png)'
-wrong '![](https://images.code.org/79bdc8b4b83b9e859fa5c7386cd6b263-CSDunit2cssclass4.png)'
-wrong '![](https://images.code.org/d4cb5cd8a9f0391399d2ae4ce04eb521-CSDunit2cssclass5.png)'
+![](https://images.code.org/38a38bae67a6e5649ea73a2764789caa-Q4Q.png)'
+wrong '![](https://images.code.org/d49981e345a88ce58647add3ba6807bc-Q4A.png)'
+right '![](https://images.code.org/540bb99c455f60eef6b53dbc2a331800-Q4B.png)'
+wrong '![](https://images.code.org/190cfc23694120427d44f5906d8010f6-Q4C.png)'
+wrong '![](https://images.code.org/74ea8b1198ccf40d8db98e24bec9d736-Q4D.png)'
+wrong '![](https://images.code.org/ff1b9a3fb0056055aee686115100e6f4-Q4E.png)'
 
 
 teacher_markdown <<MARKDOWN
@@ -17,3 +17,5 @@ teacher_markdown <<MARKDOWN
 
 The image of clouds and the image of rainbows both have the class weather. To write a style rule-set for that class, the selector for the rule-set has a `.` before the class name.
 MARKDOWN
+
+allow_multiple_attempts true
