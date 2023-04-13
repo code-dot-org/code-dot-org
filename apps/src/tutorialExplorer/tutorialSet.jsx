@@ -24,8 +24,25 @@ export default class TutorialSet extends React.Component {
   tutorialClicked = item =>
     this.setState({showingDetail: true, chosenItem: item});
 
-  tutorialDetailClosed = () =>
+  tutorialDetailClosed = () => {
+    console.log('TDC : ', document.activeElement, this.state.chosenItem);
+    const tutorialDiv = document.querySelectorAll(
+      `[data-tutorial-code="${this.state.chosenItem.code}"]`
+    )[0];
+    console.log(
+      'TDC M : ',
+      document.activeElement === tutorialDiv,
+      tutorialDiv
+    );
+    if (document.activeElement !== tutorialDiv) {
+      console.log('FOCUS IN');
+      setTimeout(() => {
+        tutorialDiv.focus();
+        tutorialDiv.scrollIntoView();
+      }, 0);
+    }
     this.setState({showingDetail: false, chosenItem: null});
+  };
 
   changeTutorial = delta => {
     const index = this.props.tutorials.indexOf(this.state.chosenItem);
