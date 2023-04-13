@@ -1,5 +1,10 @@
 require 'cdo/activity_constants'
 
+# FactoryBot changed the default functionality here in v5; our codebase still
+# assumes the old default, so override it here.
+# https://github.com/thoughtbot/factory_bot/blob/master/GETTING_STARTED.md#build-strategies-1
+FactoryBot.use_parent_strategy = false
+
 FactoryBot.define do
   factory :course_offering do
     sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
