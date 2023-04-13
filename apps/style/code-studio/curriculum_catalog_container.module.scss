@@ -1,18 +1,17 @@
 @use "color.scss";
-@import "style-constants";
 
 .catalogHeader {
   background-color: color.$darkest_gray;
 }
 
 .catalogContentContainer {
-  display: flex;
-  justify-content: center;
-  margin-top: 16px;
+  max-width: 60em;
+  margin: 1em auto;
 }
 
 .catalogContent {
-  max-width: $content-width;
-  width: 100%;
-  margin: 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
 }

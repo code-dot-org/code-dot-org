@@ -39,10 +39,10 @@ const CurriculumCatalogCard = ({
     })} // TODO [MEG]: Decide on translation strategy for this
     imageSrc={imageSrc}
     subjectsAndTopics={[
-      ...subjects.map(
+      ...subjects?.map(
         subject => translatedCourseOfferingSchoolSubjects[subject]
       ),
-      ...topics.map(topic => translatedCourseOfferingCsTopics[topic])
+      ...topics?.map(topic => translatedCourseOfferingCsTopics[topic])
     ]}
     quickViewButtonDescription={i18n.quickViewDescription({
       course_name: courseDisplayName
@@ -59,24 +59,26 @@ CurriculumCatalogCard.propTypes = {
   courseDisplayName: PropTypes.string.isRequired,
   duration: PropTypes.oneOf(Object.keys(translatedCourseOfferingDurations))
     .isRequired,
-  youngestGrade: PropTypes.number,
-  oldestGrade: PropTypes.number,
+  youngestGrade: PropTypes.string.isRequired,
+  oldestGrade: PropTypes.string.isRequired,
   imageAltText: PropTypes.string,
   imageSrc: PropTypes.string.isRequired,
   isTranslated: PropTypes.bool,
   subjects: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(translatedCourseOfferingSchoolSubjects))
-  ).isRequired,
+  ),
   topics: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(translatedCourseOfferingCsTopics))
-  ).isRequired,
+  ),
   isEnglish: PropTypes.bool.isRequired
 };
 
 CurriculumCatalogCard.defaultProps = {
   imageSrc: tempImage, // TODO [MEG]: remove this default once images are pulled
   imageAltText: '', // for decorative images
-  isTranslated: false
+  isTranslated: false,
+  subjects: [],
+  topics: []
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -163,7 +165,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   isTranslated: PropTypes.bool,
   isEnglish: PropTypes.bool,
   translationIconTitle: PropTypes.string.isRequired,
-  subjectsAndTopics: PropTypes.arrayOf(PropTypes.string).isRequired,
+  subjectsAndTopics: PropTypes.arrayOf(PropTypes.string),
   quickViewButtonText: PropTypes.string.isRequired,
   assignButtonText: PropTypes.string.isRequired,
 
