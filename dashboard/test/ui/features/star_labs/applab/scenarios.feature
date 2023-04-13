@@ -74,6 +74,7 @@ Feature: App Lab Scenarios
     Then element "#debug-output" has escaped text "\"text_input1: 123\"\"text_input1: 123456\""
     And I blur selector "#text_input1"
     Then element "#debug-output" has escaped text "\"text_input1: 123\"\"text_input1: 123456\""
+
     # in a text area, blur produces a change event. sending keystrokes (especially 'enter')
     # to a contentetiable div was too hard to test here due to browser differences.
     When I press "resetButton"
