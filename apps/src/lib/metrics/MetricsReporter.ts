@@ -3,7 +3,15 @@ import MetricsApi from './MetricsApi';
 const isDevelopmentEnvironment =
   require('../../utils').isDevelopmentEnvironment;
 
-const CHECK_CAN_REPORT_INTERVAL = 30 * 60 * 1000; // 30 minutes in ms
+/**
+ * If we receive an unauthorized response from the server, this may
+ * indicate that browser event reporting has been temporarily disabled.
+ * We will wait for a specific time interval (defined below) before making
+ * a request again, so as to not flood the server with requests.
+ */
+const CHECK_CAN_REPORT_INTERVAL_MINUTES = 30;
+const CHECK_CAN_REPORT_INTERVAL_MS =
+  CHECK_CAN_REPORT_INTERVAL_MINUTES * 60 * 1000;
 const LOCAL_STORAGE_KEY_NAME = 'cdo-metrics-reporter-last-check-time';
 
 type LogLevel = 'INFO' | 'WARNING' | 'SEVERE';
@@ -93,7 +101,9 @@ class MetricsReporter {
   }
 
   private isReportingEnabled(): boolean {
-    return Date.now() - this.lastCheckCanReportTime > CHECK_CAN_REPORT_INTERVAL;
+    return (
+      Date.now() - this.lastCheckCanReportTime > CHECK_CAN_REPORT_INTERVAL_MS
+    );
   }
 
   private setReportingDisabled() {
