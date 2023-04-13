@@ -1,5 +1,3 @@
-FactoryBot.allow_class_lookup = false
-
 FactoryBot.define do
   # example zip: 35010
   factory :regional_partner_alabama, parent: :regional_partner_with_summer_workshops do
