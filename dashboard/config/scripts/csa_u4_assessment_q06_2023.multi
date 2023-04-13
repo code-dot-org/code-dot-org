@@ -26,3 +26,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 In this problem, the message `"The sprinklers are on."` should print when `degrees` is less than or equal to `75`. However, the condition for the `if` statement only checks if `degrees` is less than `75`. If `degrees` is `75`, the code in the `else` branch will execute, resulting in the incorrect message being printed.
 MARKDOWN
+
+allow_multiple_attempts true

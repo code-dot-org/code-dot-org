@@ -22,3 +22,5 @@ II.  `int[] myNums = int(6);`
 III. `int[] myNums = {3, 2, 1, 0, 5, 2};`
 
 MARKDOWN
+
+allow_multiple_attempts true

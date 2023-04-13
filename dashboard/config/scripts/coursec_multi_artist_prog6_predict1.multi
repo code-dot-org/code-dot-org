@@ -5,4 +5,4 @@ wrong 'The artist will draw a single line.', feedback: 'Incorrect.  The artist d
 right 'The artist draws a square.', feedback: 'Correct!'
 wrong 'I don\'t know.', feedback: 'The artist draws a square.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
