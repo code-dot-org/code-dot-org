@@ -381,7 +381,6 @@ export default class MusicBlocklyWorkspace {
     const defaultCodeFilename = 'defaultCode' + getBlockMode();
     const defaultCode = require(`@cdo/static/music/${defaultCodeFilename}.json`);
     Blockly.serialization.workspaces.load(defaultCode, this.workspace);
-    // This will overwrite data on the server.
     this.saveCode();
   }
 
@@ -401,6 +400,8 @@ export default class MusicBlocklyWorkspace {
     this.workspace.updateToolbox(toolbox);
   }
 
+  // Get the project manager for the current storage type.
+  // If no storage type is specified in AppConfig, use local storage.
   getProjectManager(channelId) {
     let storageType = AppConfig.getValue('storage-type');
     if (!storageType || !channelId) {
