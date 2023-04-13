@@ -11,3 +11,5 @@ teacher_markdown <<MARKDOWN
 
 `drawSprites()` should be called after all the sprites have been created.
 MARKDOWN
+
+allow_multiple_attempts true

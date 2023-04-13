@@ -6,4 +6,4 @@ right 'timesFour', feedback: 'Correct!'
 wrong 'plusFour', feedback: 'Incorrect. This function should be named **timesFour**.'
 
 
-allow_multiple_attempts false
+allow_multiple_attempts true

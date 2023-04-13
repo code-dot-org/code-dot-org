@@ -1,0 +1,56 @@
+name 'CSC-SelfPaced-studentfeaturesgifs2_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# More student features
+
+
+### Pause button
+
+Students can on the pause button to stop their code from running.  This is useful when debugging!
+
+<details>
+
+<summary><strong>Demo of pause button</strong></summary>
+
+<img src="https://images.code.org/9b6959aa8dfe1ff674aad8c0a78119ec-image-1680739466965.gif" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+</details>
+
+<div style="clear:both"/>
+
+<hr style="clear:both">
+
+### Version history
+
+Students can click on the version history button followed by the "Start Over" button to reset the code on the current level.
+<details>
+
+<summary><strong>Demo of version history</strong></summary>
+
+<img src="https://images.code.org/9b6959aa8dfe1ff674aad8c0a78119ec-image-1680739466965.gif" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+</details>
+
+<div style="clear:both"/>
+
+<hr style="clear:both">
+
+### Levels part of larger projects 
+
+When this icon appears, students' work and changes are saved between levels to help them create a their project.
+
+<details>
+
+<summary><strong>Demo of levels part of larger projects</strong></summary>
+
+<img src="https://images.code.org/9b6959aa8dfe1ff674aad8c0a78119ec-image-1680739466965.gif" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+</details>
+
+<div style="clear:both"/>
+
+
+## Let's keep learning! 
+MARKDOWN

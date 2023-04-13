@@ -1,0 +1,76 @@
+name 'CSC-SelfPaced-studentfeaturesgifs_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introducing student features
+
+
+### Adjusting windows
+
+Students can click and drag the three dots of the workspace or playspace to adjust the size of each.
+
+<details>
+
+<summary><strong>Demo of adjusting windows</strong></summary>
+
+<img src="https://images.code.org/9b6959aa8dfe1ff674aad8c0a78119ec-image-1680739466965.gif" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+</details>
+
+<div style="clear:both"/>
+
+<hr style="clear:both">
+
+### Instruction hints
+
+Students can click on the lightbulb to get hints throughout a level.
+
+<details>
+
+<summary><strong>Demo of instruction hints</strong></summary>
+
+<img src="https://images.code.org/9b6959aa8dfe1ff674aad8c0a78119ec-image-1680739466965.gif" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+</details>
+
+<div style="clear:both"/>
+
+<hr style="clear:both">
+
+### Video hints
+
+Students can watch videos provided in some levels to review the CS concept they are practicing.
+
+<details>
+
+<summary><strong>Demo of video hints</strong></summary>
+
+<img src="https://images.code.org/9b6959aa8dfe1ff674aad8c0a78119ec-image-1680739466965.gif" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+</details>
+
+<div style="clear:both"/>
+
+<hr style="clear:both">
+
+### Text-to-speech
+
+Students can click on the audio icon to have the text read to them.
+
+<details>
+
+<summary><strong>Demo of text-to-speech</strong></summary>
+
+<img src="https://images.code.org/9b6959aa8dfe1ff674aad8c0a78119ec-image-1680739466965.gif" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+</details>
+
+<div style="clear:both"/>
+
+<hr style="clear:both">
+
+
+
+## Let's keep learning! 
+MARKDOWN

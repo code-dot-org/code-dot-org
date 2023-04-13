@@ -6,4 +6,4 @@ right 'If there are more than 8 algae, change healthy coral to sick coral.', fee
 wrong 'If the coral is dirty, change it to clean coral.', feedback: 'Incorrect.'
 
 
-allow_multiple_attempts false
+allow_multiple_attempts true

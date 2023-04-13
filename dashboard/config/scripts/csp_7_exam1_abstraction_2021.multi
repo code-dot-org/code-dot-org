@@ -1,32 +1,29 @@
 name 'csp-7-exam1-abstraction_2021'
-encrypted 'iM9U43k7IS4l8CZx/0TmLmyH7cUu1oTqMaN4hxbXhuiEDrGrTdZgAeM9KXYg
-BWW2ICgsxyJlCkl7rC7EwRF1O/POaIrOKEGJypxGNmqDgyycM3APzDiSlOxk
-wyKI+8Po4zcz/KewTjElR8Vkr+mjTudbT9X0BeLgnyFGo+u0s6+wf+i0t4+J
-kVT6mfBUABs+WVvHiPPWUYVAxSVQKnx9zmmDunlEZJ9eWvH6QUTw4fPm+c8J
-0u6UOImVz1MUqom+NjcBM0U/5zLLjHrrNyDKk2fY4GLT3nJe2wCPbtZNx2M0
-z077M/74ySlgrsjJUwA/kZmNF68d4QZsNM8Gee+KqUOoe9E8+9HPFp+YxGye
-MOyochYf0Q7FrT1Xm/udMGcrKw5JDf3uKSn8zKqGqJA433zeDP/wOHMPxzkS
-AYarlL/sflAI/+zAwhH7Wy/57gD2f6z2GBt/Yib1pasqQVUhr+9QbF5KyOwD
-qiDv85X182HHvH62/6jxFIMcJaFdz+LoV4IpELFTbf3anGlF9VV0vyuPLApy
-nNXu35QUAGpiJf5rsjR7xZAvDFlk4WyjtHc9CBEYmN2ewZPzXw3hSjCsEsQT
-X7VGH6wALsiZgQIJkmimgmqBPPsV6R4wGJjGY6FiYC1TS6SscroQKTphEhNc
-pE67m3Lnb0NKbLw8XVfFyc7ABLiX8babfwJXlXVJT66veduEB1wg9lZlCUQp
-eBjnb6VXq+eSFQEAlLwrOvygTIKt4oB98egYI4+7K8Uq4Zb6SkzaNPw0p5sG
-u5SHKZwBoz5NODrNMJXXKk+1b1Uavp0rBYCaGPBn8ofjdxObzmK45SuljUIR
-cJcW3euDTrc3G3pe0mbFzauCs1nPsE3/0nbWaCGpZuz8i4A1ftcB49Uz3+Kh
-Lw3L6KCJ50av2D3SboLPlt0mnYTpEqh9D7qRldgw9ifzWez5cUN7Ac+Nm4ln
-2616KE3tJg0x3OhbiNjbySavB/bW4STcECQcwEZoy9476r58GfYvz0Yo3ZTB
-o7/3Ei6RFeMRkTjTdR7FWVbOu0mpNwcNzbVojb/V92L0Bpfflufd4h2/rtuz
-I5Bj0403sWeHDZYVUA0DBRAVGq3MmpeJb70hDDKHeLyanXmMIDLi2zd3rZ59
-KquuYgVu/CGU6Mu4Xlnm9xbwL5jkYbbRF1sJ8AR2mb7XcwR+x5N7E0aXxemk
-RwVg8VkjZh7NJ5jf7DoCMLRC527sFwrddkct9bXyVLqA6hcGErG4qOWm8Tuk
-y6+zac4pMp7VkSyi0CsWE28DNwSCyjwujkJVGZYU4Ybbc/CTQ68SmM44NHHS
-GSMTQ1eK0IDa+TLar5lFQKnUEdN0IXoh1gC4BKpP/tMnulzUWCs8UDvMjwaf
-PaHI/ewWRGJlzvVbwOOWm7C3wo4hILQHIvnEebqOdjfTMnMugCIQ1iTWQ0ZN
-5fi7QCwIfSco5kQwc1PY+XLcycGQlB6YuOTwe8kLa4hoRfqyjuWBcC9JlcSh
-Wjm2SshHQqEZEr4Je1tqAnI2G5Zilpci7zzL4DqVYHCbTLwZQYdk3VB828Ic
-mAGHDZcdBynIE3Ar3Ejqk+cIR9WOvJq5iCNmY83Zp7Rpuj9Ee53LdZDbroSQ
-LWsrfd7VL+c29VOngqCGc0S2HibQhKiwmieZy3WnLq8/ZqFBBGmSaS60vove
-vxirIiijqpzDWi8wvEHQ6hhXCtdRX4UqNDmA2Rf/rsJJNztLPQbExslzUUrl
-BBobcr8TCKUMxyePAiGR2UoLZEfeWcE=
-'
+editor_experiment ''
+right 'procedural abstraction'
+wrong 'API'
+wrong 'parameter'
+wrong 'library'
+
+markdown <<MARKDOWN
+Which term refers to a solution to a large problem that is based on the solutions of smaller subproblems. 
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** While there are many benefits to using procedural abstraction, it does not directly impact the speed at which a program executes. 
+
+The wrap up of [Lesson 2 - Parameters and Return Investigate](https://studio.code.org/s/csp7-2021/lessons/2) explained the benefits of procedural abstraction.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* AAP-3.B.1: One common type of abstraction is procedural abstraction, which provides a name for a process and allows a procedure to be used only knowing what it does, not how it does it.
+
+* AAP-3.B.2: Procedural abstraction allows a solution to a large problem to be based on the solution of smaller 
+
+* AAP-3.B.4: A procedural abstraction may extract shared features to generalize functionality instead of duplicating code. This allows for program code reuse, which helps manage complexity.subproblems. This is accomplished by creating procedures to solve each of the subproblems.
+:::
+
+
+MARKDOWN
+
+allow_multiple_attempts true
