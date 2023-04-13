@@ -11,8 +11,8 @@ describe('CurriculumCatalogCard', () => {
     defaultProps = {
       courseDisplayName: 'AI for Oceans',
       duration: 'quarter',
-      youngestGrade: 4,
-      oldestGrade: 12,
+      youngestGrade: '4',
+      oldestGrade: '12',
       subjects: ['math'],
       topics: ['cybersecurity'],
       isEnglish: true
