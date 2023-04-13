@@ -154,6 +154,8 @@ frontend_device_name ||= '/dev/sda1'
           Ebs:
             VolumeSize: <%=frontend_volume_size * 2%> # Double volume size to leave room for logs written to disk
             VolumeType: gp2
+      MetadataOptions:
+        InstanceMetadataTags: enabled
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash -x
