@@ -1150,10 +1150,14 @@ end
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   element = @browser.find_element(:css, selector)
   press_keys(element, key)
-  wait_short_until do
-    element_text = element.attribute("value")
-    input_key = key.delete "\n"
-    element_text.include? input_key
+  is_special_case = key.start_with?(":") || selector == ".ace_text-input"
+  check_key_values = !is_special_case
+  if check_key_values
+    wait_short_until do
+      element_text = element.attribute("value")
+      input_key = key.delete "\n"
+      element_text.include? input_key
+    end
   end
 end
 
