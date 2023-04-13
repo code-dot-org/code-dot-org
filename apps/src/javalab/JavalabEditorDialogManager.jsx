@@ -2,7 +2,6 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {makeEnum} from '@cdo/apps/utils';
 import javalabMsg from '@cdo/javalab/locale';
 import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 import JavalabDialog from './JavalabDialog';
@@ -14,14 +13,7 @@ import {
   clearRenameFileError,
   closeEditorDialog
 } from './redux/editorRedux';
-
-export const JavalabEditorDialog = makeEnum(
-  'RENAME_FILE',
-  'DELETE_FILE',
-  'CREATE_FILE',
-  'COMMIT_FILES',
-  'VERSION_HISTORY'
-);
+import {JavalabEditorDialog} from './types';
 
 export const DEFAULT_FILE_NAME = '.java';
 
