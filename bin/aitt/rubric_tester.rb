@@ -7,7 +7,7 @@ require 'parallel'
 
 def read_inputs(prompt_file, rubric_file)
   prompt = File.read(prompt_file)
-  rubric = File.read(rubric_file).lines.to_a
+  rubric = File.read(rubric_file)
   [prompt, rubric]
 end
 
@@ -36,14 +36,13 @@ def grade_student_work(prompt, rubric, student_code, student_id)
     'Content-Type' => 'application/json',
     'Authorization' => "Bearer #{ENV['OPENAI_API_KEY']}"
   }
-  rubric_str = rubric.join
 
   data = {
     model: 'gpt-4',
     temperature: 0,
     messages: [
       {role: 'system', content: prompt},
-      {role: 'user', content: "Rubric:\n#{rubric_str}\n\nStudent Code:\n#{student_code}"}
+      {role: 'user', content: "Rubric:\n#{rubric}\n\nStudent Code:\n#{student_code}"}
     ],
   }
 
