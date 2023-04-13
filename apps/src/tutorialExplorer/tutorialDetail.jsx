@@ -51,10 +51,27 @@ export default class TutorialDetail extends React.Component {
   };
 
   focusIn = event => {
+    // for starters, if our scroll has changed since the dialog opened, then reset it to where we were at
+    // the beginning. Otherwise, if you shift-tab above the detail on the first tutorial or tab below the detail
+    // on a tutorial towards the end of the window, it'll fidget the scroll. This keeps it consistent.
     if (window.scrollY !== this.startingScroll[1]) {
-      console.log('GONNA SCROLL MY WINDOW!');
       window.scrollTo(...this.startingScroll);
     }
+
+    /*
+      We've kept a ref to our dialog container, so when the user is adjusting focus we look to see if we're
+      focusing onto an element that's still in the modal. If so, then awesome! We're done. If not, then we look
+      in our modal and find the first button (which is the X to close) or the last link (which could vary based upon
+      what's in there).
+
+      If we're shifting focus away from the first button (and have left the modal), then we wrap around to the last link.
+      Otherwise, if we're leaving, we return to the start at the first button.
+
+      This feels very clunky. :-(
+
+      But it's to ensure that the user can only tab within the modal while it is open and cannot shift focus outside.
+
+     */
     if (this.containerRef.current) {
       const inModal = this.containerRef.current.contains(event.target);
       if (!inModal) {
@@ -62,7 +79,6 @@ export default class TutorialDetail extends React.Component {
           this.containerRef.current.getElementsByTagName('button')[0];
         const links = this.containerRef.current.getElementsByTagName('a');
         const lastLink = links[links.length - 1];
-        console.log('LL : ', lastLink);
         if (event.relatedTarget === firstButton) {
           lastLink.focus();
         } else {

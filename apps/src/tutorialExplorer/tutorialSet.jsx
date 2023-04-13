@@ -25,22 +25,24 @@ export default class TutorialSet extends React.Component {
     this.setState({showingDetail: true, chosenItem: item});
 
   tutorialDetailClosed = () => {
-    console.log('TDC : ', document.activeElement, this.state.chosenItem);
+    // okay, so while the tutorialDetail window is open, it's possible that the focus has changed
+    // the user could've hit left/right arrows while the detail was open and moved focus, or also could've
+    // changed focus into the dialog, so before we wipe out the chosenItem, we find the associated
+    // item in the tutorial list and focus it, and also make sure to scroll it into view because it's possible
+    // the user navigated through enough of them to be off screen.
     const tutorialDiv = document.querySelectorAll(
       `[data-tutorial-code="${this.state.chosenItem.code}"]`
     )[0];
-    console.log(
-      'TDC M : ',
-      document.activeElement === tutorialDiv,
-      tutorialDiv
-    );
     if (document.activeElement !== tutorialDiv) {
-      console.log('FOCUS IN');
+      // when in doubt, set timeout! _something_ is happening here that's fiddling with the focus, so we
+      // just defer it to the next run through of the even loop. if you remove this, the focus call will
+      // fail, although the scrollIntoView will work.
       setTimeout(() => {
         tutorialDiv.focus();
         tutorialDiv.scrollIntoView();
       }, 0);
     }
+
     this.setState({showingDetail: false, chosenItem: null});
   };
 
