@@ -498,7 +498,7 @@ FactoryBot.define do
     street_address {'333 Hogwarts Place'}
     city {'Magic City'}
     state {'Washington'}
-    add_attribute :zip_code, '98101'
+    add_attribute(:zip_code) {'98101'}
     association :school
     principal_role {'Headmaster'}
     principal_first_name {'Albus'}
