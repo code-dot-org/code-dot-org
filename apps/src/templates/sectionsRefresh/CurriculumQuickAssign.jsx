@@ -44,6 +44,7 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
     updateSection('course', {});
     if (marketingAudience !== '') {
       setMarketingAudience('');
+      setSelectedCourseOffering(null);
     } else {
       setMarketingAudience(MARKETING_AUDIENCE.ELEMENTARY);
     }
