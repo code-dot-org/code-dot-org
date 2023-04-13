@@ -4,7 +4,13 @@
   display: inline-block;
 }
 
-.thisIsATestClassName {
+.divThisIsATestClassName {
+  h1 {
+    color: #f00;
+  }
+}
+
+h1.thisIsATestClassName {
   color: #f00;
 }
 

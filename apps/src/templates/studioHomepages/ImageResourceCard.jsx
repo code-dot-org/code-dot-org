@@ -28,7 +28,7 @@ class ImageResourceCard extends Component {
 
     return (
       <div style={{...styles.card, ...(isRtl && styles.rtl)}}>
-        <div style={styles.textbox}>
+        <div style={styles.textbox} className={style.divThisIsATestClassName}>
           <div>
             <div style={styles.titleContainer}>
               <div style={styles.title}>{title}</div>
@@ -44,7 +44,8 @@ class ImageResourceCard extends Component {
           <Typography
             semanticTag="h1"
             visualApproach="body-one"
-            className={style.thisIsATestClassName}
+            // className={style.thisIsATestClassName}
+            // style={style.thisIsATestClassName}
           >
             TypoGRAPHY TypoGRAPHY TypoGRAPHY TypoGRAPHY TypoGRAPHY
           </Typography>

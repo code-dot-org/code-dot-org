@@ -19,10 +19,10 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
   const Tag = semanticTag;
   console.log(styles);
   console.log(visualApproach);
-  console.log(className)
+  console.log(styles[visualApproach], className);
 
   return (
-    <Tag className={classnames(styles[visualApproach], className)}>
+    <Tag className={classnames(className, styles[visualApproach] )}>
       {children}
     </Tag>
   );

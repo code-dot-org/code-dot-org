@@ -138,7 +138,8 @@ h6,
 
 // Paragraphs
 // Use on default paragraphs
-p.body-one { @include body-one; }
+p.body-one,
+.body-one { @include body-one; }
 // Use on course block descriptions or anywhere
 // else that needs smaller paragraph text
 p.body-two,
