@@ -5,8 +5,8 @@ import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
 import {getToolbox} from './toolbox';
 import FieldSounds from './FieldSounds';
 import FieldPattern from './FieldPattern';
-import {getBlockMode} from '../appConfig';
-import {BlockMode} from '../constants';
+import AppConfig, {getBlockMode} from '../appConfig';
+import {BlockMode, LOCAL_STORAGE} from '../constants';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DYNAMIC_TRIGGER_EXTENSION,
@@ -21,8 +21,11 @@ import {
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
 import ProjectManager from '@cdo/apps/labs/ProjectManager';
-import {S3SourcesStore} from '@cdo/apps/labs/SourcesStore';
-import {S3ChannelsStore} from '@cdo/apps/labs/ChannelsStore';
+import {S3SourcesStore, LocalSourcesStore} from '@cdo/apps/labs/SourcesStore';
+import {
+  S3ChannelsStore,
+  LocalChannelsStore
+} from '@cdo/apps/labs/ChannelsStore';
 import FieldChord from './FieldChord';
 
 /**
@@ -34,14 +37,8 @@ export default class MusicBlocklyWorkspace {
     this.codeHooks = {};
     this.compiledEvents = null;
     this.lastExecutedEvents = null;
-
     this.channel = {id: channelId};
-    this.projectManager = new ProjectManager(
-      channelId || this.getLocalStorageKeyName(),
-      new S3SourcesStore(),
-      new S3ChannelsStore(),
-      this.getProject.bind(this)
-    );
+    this.projectManager = this.getProjectManager(channelId);
   }
 
   triggerIdToEvent = id => `triggeredAtButton-${id}`;
@@ -398,5 +395,29 @@ export default class MusicBlocklyWorkspace {
   updateToolbox(allowList) {
     const toolbox = getToolbox(allowList);
     this.workspace.updateToolbox(toolbox);
+  }
+
+  getProjectManager(channelId) {
+    let storageType = AppConfig.getValue('storage-type');
+    if (!storageType || !channelId) {
+      storageType = LOCAL_STORAGE;
+    }
+    storageType = storageType.toLowerCase();
+
+    if (storageType === LOCAL_STORAGE) {
+      return new ProjectManager(
+        this.getLocalStorageKeyName(),
+        new LocalSourcesStore(),
+        new LocalChannelsStore(),
+        this.getProject.bind(this)
+      );
+    } else {
+      return new ProjectManager(
+        channelId,
+        new S3SourcesStore(),
+        new S3ChannelsStore(),
+        this.getProject.bind(this)
+      );
+    }
   }
 }
