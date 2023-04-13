@@ -90,7 +90,26 @@ def compute_cell_color(actual, expected)
   end
 end
 
-def generate_html_output(output_filename, prompt, accuracy, actual_grades, expected_grades)
+def rubric_to_html_table(rubric)
+  parsed_rubric = CSV.parse(rubric)
+  header_row = parsed_rubric.shift
+
+  header_html = header_row.map {|header| "<th>#{header}</th>"}.join
+  rows_html = parsed_rubric.map {|row| "<tr>#{row.map {|cell| "<td>#{cell}</td>"}.join}</tr>"}.join
+
+  <<-HTML
+    <table border="1">
+      <thead>
+        <tr>#{header_html}</tr>
+      </thead>
+      <tbody>
+        #{rows_html}
+      </tbody>
+    </table>
+  HTML
+end
+
+def generate_html_output(output_filename, prompt, rubric, accuracy, actual_grades, expected_grades)
   link_base_url = "file://#{`pwd`.strip}"
 
   File.open(output_filename, 'w') do |file|
@@ -104,6 +123,8 @@ def generate_html_output(output_filename, prompt, accuracy, actual_grades, expec
     file.puts '<body>'
     file.puts "  <h2>Prompt:</h2>"
     file.puts "  <pre>#{prompt}</pre>"
+    file.puts "  <h2>Rubric:</h2>"
+    file.puts rubric_to_html_table(rubric)
     file.puts "  <h2>Overall Accuracy: #{accuracy.to_i}%</h2>"
 
     actual_grades.each do |student_id, grades|
@@ -146,7 +167,7 @@ def main
   end.to_h
 
   accuracy = compute_accuracy(expected_grades, actual_grades)
-  output_file = generate_html_output(output_filename, prompt, accuracy, actual_grades, expected_grades)
+  output_file = generate_html_output(output_filename, prompt, rubric, accuracy, actual_grades, expected_grades)
   puts "main finished in #{(Time.now - main_start_time).to_i} seconds"
 
   system("open", output_file)
