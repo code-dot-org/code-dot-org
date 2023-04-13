@@ -6,7 +6,7 @@
 // If the ChannelsApi on the server doesn't care about these, they should
 // live elsewhere.
 // The library data should definitely live elsewhere.
-export type Channel = {
+export interface Channel {
   id: string;
   name: string;
   isOwner: boolean;
@@ -14,23 +14,44 @@ export type Channel = {
   publishedAt: string; // TODO: Is this the correct type?
   createdAt: string; // TODO: Is this the correct type?
   updatedAt: string; // TODO: Is this the correct type?
-};
+}
 
 export type DefaultChannel = Pick<Channel, 'name'>;
 
-export type Source = {
-  // TODO: Extend source to allow for Javalab, which uses an object.
-  source: string;
-};
+// We will eventually make this a union type to include other source types.
+export type Source = BlocklySource;
 
-export type SourceUpdateOptions = {
+export interface SourceUpdateOptions {
   currentVersion: string;
   replace: boolean;
   firstSaveTimestamp: string;
   tabId: string | null;
-};
+}
 
-export type Project = {
+export interface Project {
   source: Source;
   channel: Channel;
-};
+}
+
+export interface BlocklySource {
+  blocks: {
+    languageVersion: number;
+    blocks: BlocklyBlock[];
+  };
+  variables: BlocklyVariable[];
+}
+
+export interface BlocklyBlock {
+  type: string;
+  id: string;
+  x: number;
+  y: number;
+  next: {
+    block: BlocklyBlock;
+  };
+}
+
+export interface BlocklyVariable {
+  name: string;
+  id: string;
+}
