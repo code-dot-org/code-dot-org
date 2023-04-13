@@ -1,7 +1,5 @@
 require 'cdo/activity_constants'
 
-FactoryBot.allow_class_lookup = false
-
 FactoryBot.define do
   factory :course_offering do
     sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
