@@ -33,7 +33,10 @@ export default class TutorialSet extends React.Component {
     const tutorialDiv = document.querySelectorAll(
       `[data-tutorial-code="${this.state.chosenItem.code}"]`
     )[0];
-    if (document.activeElement !== tutorialDiv) {
+    if (
+      document.activeElement.hasAttribute('data-tutorial-code)') &&
+      document.activeElement !== tutorialDiv
+    ) {
       // when in doubt, set timeout! _something_ is happening here that's fiddling with the focus, so we
       // just defer it to the next run through of the even loop. if you remove this, the focus call will
       // fail, although the scrollIntoView will work.
