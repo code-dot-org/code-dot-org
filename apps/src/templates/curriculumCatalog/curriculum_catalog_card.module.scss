@@ -90,6 +90,11 @@ $container-width: 309px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    &:hover {
+      max-width: inherit;
+      overflow: inherit;
+    }
   }
 }
 
