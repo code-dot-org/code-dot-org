@@ -15,10 +15,12 @@ import {
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {authorizeLockable} from './lessonLockRedux';
+import {handleNavigateToLevel} from './browserNavigation';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
 const SET_CURRENT_LEVEL_ID = 'progress/SET_CURRENT_LEVEL_ID';
+const NAVIGATE_TO_LEVEL_ID = 'progress/NAVIGATE_TO_LEVEL_ID';
 const SET_UNIT_PROGRESS = 'progress/SET_UNIT_PROGRESS';
 const CLEAR_RESULTS = 'progress/CLEAR_RESULTS';
 const MERGE_RESULTS = 'progress/MERGE_RESULTS';
@@ -115,6 +117,19 @@ export default function reducer(state = initialState, action) {
   }
 
   if (action.type === SET_CURRENT_LEVEL_ID) {
+    return {
+      ...state,
+      currentLevelId: action.levelId
+    };
+  }
+
+  if (action.type === NAVIGATE_TO_LEVEL_ID) {
+    const newLevel = state.lessons[0].levels.find(level =>
+      level.ids.find(id => id === action.levelId)
+    );
+
+    handleNavigateToLevel(state, newLevel.url, action.levelId);
+
     return {
       ...state,
       currentLevelId: action.levelId
@@ -439,6 +454,11 @@ export const setCurrentLevelId = levelId => ({
   levelId: levelId
 });
 
+export const navigateToLevelId = levelId => ({
+  type: NAVIGATE_TO_LEVEL_ID,
+  levelId: levelId
+});
+
 /**
  * Returns action that sets (overwrites) unitProgress in the redux store.
  *
@@ -660,7 +680,7 @@ export const levelsByLesson = ({
  * Get data for a particular lesson
  */
 export const levelsForLessonId = (state, lessonId) => {
-  const lesson = state.lessons.find(lesson => lesson.id === lessonId);
+  const lesson = state.lessons?.find(lesson => lesson.id === lessonId);
   return lesson.levels.map(level =>
     levelWithProgress(state, level, lesson.lockable)
   );

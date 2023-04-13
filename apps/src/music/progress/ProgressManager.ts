@@ -52,6 +52,7 @@ export default class ProgressManager {
 
   constructor(
     progression: Progression,
+    initialStep: number | undefined,
     validator: Validator,
     onProgressChange: () => void
   ) {
@@ -59,6 +60,9 @@ export default class ProgressManager {
     this.validator = validator;
     this.onProgressChange = onProgressChange;
     this.currentProgressState = initialProgressState;
+    if (initialStep) {
+      this.currentProgressState.step = initialStep;
+    }
   }
 
   getProgression(): Progression {
