@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :foorm_form, class: 'Foorm::Form' do
     sequence(:name) {|n| "FormName#{n}"}
-    version 0
+    version {0}
     questions do
       {
         pages: [
@@ -84,9 +84,9 @@ FactoryBot.define do
   end
 
   factory :basic_foorm_submission, class: 'Foorm::Submission' do
-    form_name "surveys/pd/sample"
+    form_name {"surveys/pd/sample"}
     foorm_submission_metadata
-    answers '{}'
+    answers {'{}'}
 
     trait :with_multi_select_answer do
       answers do
@@ -110,7 +110,7 @@ FactoryBot.define do
   factory :day_5_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
     association :pd_workshop, factory: :csd_summer_workshop
     association :user, factory: :teacher
-    day 5
+    day {5}
 
     trait :answers_low do
       association :foorm_submission, factory: [:daily_workshop_day_5_foorm_submission, :answers_low]
@@ -122,9 +122,9 @@ FactoryBot.define do
   end
 
   factory :daily_workshop_day_5_foorm_submission, class: 'Foorm::Submission' do
-    form_name "surveys/pd/summer_workshop_post_survey_test"
+    form_name {"surveys/pd/summer_workshop_post_survey_test"}
     foorm_submission_metadata
-    answers '{}'
+    answers {'{}'}
 
     trait :answers_low do
       answers do
@@ -208,29 +208,49 @@ FactoryBot.define do
   factory :pd_pre_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
     association :pd_workshop, factory: :csd_summer_workshop
     association :user, factory: :teacher
-    day 0
+    day {0}
 
     association :foorm_submission, factory: :pre_workshop_foorm_submission
   end
 
   # this factory uses the real summer workshop pre survey.
   factory :pre_workshop_foorm_submission, class: 'Foorm::Submission' do
-    form_name "surveys/pd/summer_workshop_pre_survey"
+    form_name {"surveys/pd/summer_workshop_pre_survey"}
     foorm_submission_metadata
 
-    answers '{"workshop_course":"CS Discoveries","workshop_subject":"5-day Summer","regional_partner_name":"Partner1",
-              "is_virtual":"true","num_facilitators":"1","day":"0","is_friday_institute":"false","workshop_agenda":"",
-              "required_course_status":"required","course_length_weeks":"11_15","section_time_minutes":"50_less",
-              "grade_levels_csd":["11","9"],"total_pd_time":"16_35","cs_community":{"someone_to_turn_to":"6",
-              "know_teacher_leaders":"6"},"lead_learner":"4","recruit_responsibility":"2",
-              "highest_level_cs_education":"college_courses","assigned_or_chose_to_teach":"assigned",
-              "gender_identity":"female","racial_ethnic_identity":["white"]}'
+    answers do
+      {
+        workshop_course: "CS Discoveries",
+        workshop_subject: "5-day Summer",
+        regional_partner_name: "Partner1",
+        is_virtual: "true",
+        num_facilitators: "1",
+        day: "0",
+        is_friday_institute: "false",
+        workshop_agenda: "",
+        required_course_status: "required",
+        course_length_weeks: "11_15",
+        section_time_minutes: "50_less",
+        grade_levels_csd: ["11", "9"],
+        total_pd_time: "16_35",
+        cs_community: {
+          someone_to_turn_to: "6",
+          know_teacher_leaders: "6"
+        },
+        lead_learner: "4",
+        recruit_responsibility: "2",
+        highest_level_cs_education: "college_courses",
+        assigned_or_chose_to_teach: "assigned",
+        gender_identity: "female",
+        racial_ethnic_identity: ["white"]
+      }.to_json
+    end
   end
 
   factory :day_0_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
     association :pd_workshop, factory: :csd_summer_workshop
     association :user, factory: :teacher
-    day 0
+    day {0}
 
     trait :answers_low do
       association :foorm_submission, factory: [:daily_workshop_day_0_foorm_submission, :answers_low]
@@ -242,7 +262,7 @@ FactoryBot.define do
   end
 
   factory :daily_workshop_day_0_foorm_submission, class: 'Foorm::Submission' do
-    form_name "surveys/pd/summer_workshop_pre_survey_test"
+    form_name {"surveys/pd/summer_workshop_pre_survey_test"}
     foorm_submission_metadata
 
     trait :answers_low do
@@ -271,10 +291,10 @@ FactoryBot.define do
   end
 
   factory :foorm_form_with_inconsistent_questions, class: 'Foorm::Form' do
-    name "surveys/pd/sample_survey"
-    version 0
-    created_at "2020-03-26 21:58:28"
-    updated_at "2020-03-26 21:58:28"
+    name {"surveys/pd/sample_survey"}
+    version {0}
+    created_at {"2020-03-26 21:58:28"}
+    updated_at {"2020-03-26 21:58:28"}
     questions do
       {
         pages: [
@@ -316,13 +336,13 @@ FactoryBot.define do
   end
 
   factory :facilitator_post_survey_foorm_submission, class: 'Foorm::Submission' do
-    form_name 'surveys/pd/csd_csp_facilitator_post_survey'
+    form_name {'surveys/pd/csd_csp_facilitator_post_survey'}
     foorm_submission_metadata
-    answers '{}'
+    answers {'{}'}
   end
 
   factory :csf_intro_post_foorm_submission, class: 'Foorm::Submission' do
-    form_name "surveys/pd/workshop_csf_intro_post_test"
+    form_name {"surveys/pd/workshop_csf_intro_post_test"}
     foorm_submission_metadata
 
     trait :answers_low do
@@ -371,7 +391,7 @@ FactoryBot.define do
   end
 
   factory :csf_intro_post_facilitator_workshop_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
-    facilitator_id 1
+    facilitator_id {1}
     association :pd_workshop, factory: :csf_101_workshop
     association :user, factory: :teacher
 
@@ -385,7 +405,7 @@ FactoryBot.define do
   end
 
   factory :csf_intro_post_facilitator_foorm_submission, class: 'Foorm::Submission' do
-    form_name "surveys/pd/workshop_csf_intro_post_test"
+    form_name {"surveys/pd/workshop_csf_intro_post_test"}
     foorm_submission_metadata
 
     trait :answers_low do
@@ -426,14 +446,14 @@ FactoryBot.define do
   end
 
   trait :foorm_submission_metadata do
-    form_version 0
+    form_version {0}
   end
 
   factory :foorm_form_summer_pre_survey, class: 'Foorm::Form' do
-    name 'surveys/pd/summer_workshop_pre_survey_test'
-    version 0
-    created_at '2020-03-25 21:58:28'
-    updated_at '2020-03-26 21:58:28'
+    name {'surveys/pd/summer_workshop_pre_survey_test'}
+    version {0}
+    created_at {'2020-03-25 21:58:28'}
+    updated_at {'2020-03-26 21:58:28'}
     questions do
       {
         pages: [
@@ -618,10 +638,10 @@ FactoryBot.define do
   end
 
   factory :foorm_form_summer_post_survey, class: 'Foorm::Form' do
-    name 'surveys/pd/summer_workshop_post_survey_test'
-    version 0
-    created_at '2020-03-25 21:58:28'
-    updated_at '2020-03-26 21:58:28'
+    name {'surveys/pd/summer_workshop_post_survey_test'}
+    version {0}
+    created_at {'2020-03-25 21:58:28'}
+    updated_at {'2020-03-26 21:58:28'}
     questions do
       {
         pages: [
@@ -865,10 +885,10 @@ FactoryBot.define do
   end
 
   factory :foorm_form_csf_intro_post_survey, class: 'Foorm::Form' do
-    name 'surveys/pd/workshop_csf_intro_post_test'
-    version 0
-    created_at '2020-03-30 21:58:28'
-    updated_at '2020-03-31 21:58:28'
+    name {'surveys/pd/workshop_csf_intro_post_test'}
+    version {0}
+    created_at {'2020-03-30 21:58:28'}
+    updated_at {'2020-03-31 21:58:28'}
     questions do
       {
         title: "Satisfaction Survey for Code.org\'s CS Fundamentals 5-day Summer Professional Development Workshop",
@@ -1103,26 +1123,26 @@ FactoryBot.define do
   end
 
   factory :foorm_form_summer_daily_survey, class: 'Foorm::Form' do
-    name 'surveys/pd/summer_workshop_daily_survey_test'
-    version 0
-    created_at '2020-03-25 21:58:28'
-    updated_at '2020-03-26 21:58:28'
-    questions '{}'
+    name {'surveys/pd/summer_workshop_daily_survey_test'}
+    version {0}
+    created_at {'2020-03-25 21:58:28'}
+    updated_at {'2020-03-26 21:58:28'}
+    questions {'{}'}
   end
 
   factory :foorm_form_teacher_end_of_year_survey, class: 'Foorm::Form' do
-    name 'surveys/teachers/teacher_end_of_year_survey_test'
-    version 0
-    created_at '2020-03-25 21:58:28'
-    updated_at '2020-03-26 21:58:28'
-    questions '{}'
+    name {'surveys/teachers/teacher_end_of_year_survey_test'}
+    version {0}
+    created_at {'2020-03-25 21:58:28'}
+    updated_at {'2020-03-26 21:58:28'}
+    questions {'{}'}
   end
 
   factory :foorm_form_duplicate_question_survey, class: 'Foorm::Form' do
-    name 'surveys/teachers/duplicate_question_test'
-    version 0
-    created_at '2020-03-25 21:58:28'
-    updated_at '2020-03-26 21:58:28'
+    name {'surveys/teachers/duplicate_question_test'}
+    version {0}
+    created_at {'2020-03-25 21:58:28'}
+    updated_at {'2020-03-26 21:58:28'}
     questions do
       {
         title: "Sample Survey",
@@ -1148,10 +1168,10 @@ FactoryBot.define do
   end
 
   factory :foorm_form_duplicate_choice_survey, class: 'Foorm::Form' do
-    name 'surveys/teachers/duplicate_choice_test'
-    version 0
-    created_at '2020-03-25 21:58:28'
-    updated_at '2020-03-26 21:58:28'
+    name {'surveys/teachers/duplicate_choice_test'}
+    version {0}
+    created_at {'2020-03-25 21:58:28'}
+    updated_at {'2020-03-26 21:58:28'}
     questions do
       {
         title: "Sample Survey",
@@ -1208,7 +1228,7 @@ FactoryBot.define do
 
   factory :foorm_library_question, class: 'Foorm::LibraryQuestion' do
     sequence(:library_name) {|n| "surveys/pd/library_name#{n}"}
-    library_version 0
+    library_version {0}
     sequence(:question_name) {|n| "what_supported#{n}"}
     sequence(:question) do |n|
       {
@@ -1221,12 +1241,12 @@ FactoryBot.define do
 
   factory :foorm_library, class: 'Foorm::Library' do
     sequence(:name) {|n| "surveys/pd/library_name#{n}"}
-    version 0
-    published true
+    version {0}
+    published {true}
 
     trait :with_questions do
       transient do
-        number_of_questions 1
+        number_of_questions {1}
       end
 
       after(:create) do |library, evaluator|
@@ -1241,8 +1261,8 @@ FactoryBot.define do
 
   factory :foorm_simple_survey_form, class: 'Foorm::SimpleSurveyForm' do
     sequence(:path) {|n| "test_path_#{n}"}
-    form_name 'A form that does not actually exist'
-    form_version 0
+    form_name {'A form that does not actually exist'}
+    form_version {0}
   end
 
   factory :foorm_simple_survey_submission, class: 'Foorm::SimpleSurveySubmission' do
