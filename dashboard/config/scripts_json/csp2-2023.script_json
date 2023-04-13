@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-12 05:02:58 UTC",
+    "serialized_at": "2023-04-12 18:48:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -637,7 +637,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Use the video to normalize students' misconceptions about how the Internet works. Over the course of the unit, we will work to address those points of confusion.\r\n\r\n"
+            "markdown": "Use the video to normalize students' misconceptions about how the Internet works. Over the course of the unit, we will work to address those points of confusion.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/edit?usp=sharing)."
           }
         ]
       },
@@ -1107,7 +1107,13 @@
       "key": "b0ca0da4-1425-4ab6-b763-cb2f64c83f4b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:**  [r the_internet_ip_addresses_and_dns/csp/2023].  You can stop the video at the 3:23 mark.  We watch the second half of this video in a later lesson on DNS."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:**  [r the_internet_ip_addresses_and_dns/csp/2023].  You can stop the video at the 3:23 mark.  We watch the second half of this video in a later lesson on DNS.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/edit?usp=sharing)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b0ca0da4-1425-4ab6-b763-cb2f64c83f4b",
@@ -1606,7 +1612,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Key Video Takeaways:** The video includes a lot of information about how packets move through the Internet. The most important points for students to understand are that\r\n\r\n* Large files are split into packets to be sent\r\n* Packets may take different routes through the network and arrive out of order\r\n* TCP ensures that packets that arrive out of order or are lost are re-ordered\r\n* Packets include metadata like their IP address or a packet number to help move them through the network or reorganize them when they arrive\r\n* Collectively this system makes the Internet more reliable\r\n\r\n**Covering UDP:** UDP is not covered in the video and students do not need to understand it in great detail. The depth of explanation in the slides is sufficient to explain the differences between them and why each would be used.\r\n"
+            "markdown": "**Key Video Takeaways:** The video includes a lot of information about how packets move through the Internet. The most important points for students to understand are that\n\n* Large files are split into packets to be sent\n* Packets may take different routes through the network and arrive out of order\n* TCP ensures that packets that arrive out of order or are lost are re-ordered\n* Packets include metadata like their IP address or a packet number to help move them through the network or reorganize them when they arrive\n* Collectively this system makes the Internet more reliable\n\n**Covering UDP:** UDP is not covered in the video and students do not need to understand it in great detail. The depth of explanation in the slides is sufficient to explain the differences between them and why each would be used.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/edit?usp=sharing).\n"
           }
         ]
       },
@@ -1751,7 +1757,13 @@
       "key": "f4efaae8-b9b5-4456-802b-99204aceae6d",
       "position": 3,
       "properties": {
-        "description": "Have students discuss responses with their partners, then share out with the class. Focus on the main takeaways in the discussion goal.\n\n**Discussion Goal:** The main takeaways from this video should be:\n\n* The DNS is a network of servers that track the IP addresses of different domain names like example.com\n* When you visit a website you first ask the DNS for the IP address of the domain you want to visit. The first server to ask may have to ask other servers for this information. \n* This system allows billions of devices to get added to the network without putting pressure on any one computer or server to know all the IP addresses in the world. \n"
+        "description": "Have students discuss responses with their partners, then share out with the class. Focus on the main takeaways in the discussion goal.\n\n**Discussion Goal:** The main takeaways from this video should be:\n\n* The DNS is a network of servers that track the IP addresses of different domain names like example.com\n* When you visit a website you first ask the DNS for the IP address of the domain you want to visit. The first server to ask may have to ask other servers for this information. \n* This system allows billions of devices to get added to the network without putting pressure on any one computer or server to know all the IP addresses in the world. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/edit?usp=sharing)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f4efaae8-b9b5-4456-802b-99204aceae6d",
@@ -1797,8 +1809,8 @@
         "progression_name": "Check For Understanding - DNS",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "Use this question to help formatively assess your students. You can use the flowchart below to help use the data you get from student responses to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n\n\n![](https://images.code.org/95198dfe56cee550d2c3dd32a200305e-CFU_Next_Steps_Flowchart.png)\n"
+            "type": "assessmentOpportunity",
+            "markdown": "Use this question to help formatively assess your students. You can use the flowchart below to help use the data you get from student responses to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n\n![](https://images.code.org/c0c5b92541281d7901e7d2b9a5a33d49-CFU_Next_Steps_Flowchart_25percent.png)\n"
           }
         ]
       },
@@ -1847,7 +1859,13 @@
       "key": "9afd9afe-16d0-4701-8e9f-9490799634e2",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss** Have students discuss their responses with a partner before sharing out with the class to make sure students understand the key takeaways about HTTP.\n\n**Discussion Goal:** Here are the most important points for students to take away about HTTP and the way it works\n\n* When you visit a website you're actually getting sent a file by a server. HTTP is solving the problem of how to ask for that file.\n* Your computer and that server communicate using a protocol called HTTP. \n* HTTP is plain-text, so it literally includes the ASCII word \"GET ...\" and the file name requested.\n* All of your communications are being sent over the Internet so these requests are being sent inside TCP/IP packets and over the physical wires of the Internet.\n* There are other secure ways of sending information online because using HTTP, all our information would otherwise be sent as plain text.\n* Certificate authorities ensure that when you start a secure connection you're talking to the website you think you're talking to.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss** Have students discuss their responses with a partner before sharing out with the class to make sure students understand the key takeaways about HTTP.\n\n**Discussion Goal:** Here are the most important points for students to take away about HTTP and the way it works\n\n* When you visit a website you're actually getting sent a file by a server. HTTP is solving the problem of how to ask for that file.\n* Your computer and that server communicate using a protocol called HTTP. \n* HTTP is plain-text, so it literally includes the ASCII word \"GET ...\" and the file name requested.\n* All of your communications are being sent over the Internet so these requests are being sent inside TCP/IP packets and over the physical wires of the Internet.\n* There are other secure ways of sending information online because using HTTP, all our information would otherwise be sent as plain text.\n* Certificate authorities ensure that when you start a secure connection you're talking to the website you think you're talking to.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/edit?usp=sharing)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9afd9afe-16d0-4701-8e9f-9490799634e2",
@@ -2533,6 +2551,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L4 Multiple Choice packets2022_2023"
+        ],
         "progression": "Check for Understanding - Packets"
       },
       "bonus": false,
@@ -2555,6 +2576,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L4 CSP CFU terms2022_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2602,6 +2626,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L5 CSP CFU subgroups_2023"
+        ],
         "progression": "Check For Understanding - DNS"
       },
       "bonus": false,
