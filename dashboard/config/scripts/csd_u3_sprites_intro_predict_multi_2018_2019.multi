@@ -12,4 +12,4 @@ markdown <<MARKDOWN
 
 MARKDOWN
 
-allow_multiple_attempts false
+allow_multiple_attempts true

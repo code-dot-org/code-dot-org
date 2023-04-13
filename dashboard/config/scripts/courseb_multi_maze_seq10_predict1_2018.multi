@@ -6,4 +6,4 @@ wrong 'Scrat will not move at all.', feedback: 'Incorrect. Scrat breaks the ice 
 wrong 'I don\'t know.', feedback: 'Scrat breaks the ice with his first move.'
 
 
-allow_multiple_attempts false
+allow_multiple_attempts true
