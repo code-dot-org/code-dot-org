@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-ecosystems",
-    "serialized_at": "2023-04-12 21:10:19 UTC",
+    "serialized_at": "2023-04-13 21:06:44 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -316,6 +316,7 @@
       "key": "e275f8a3-27ab-4dd2-8a83-f9a359a4136f",
       "position": 8,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6” slide",
         "progression_name": "Balancing Your Ecosystem"
       },
       "seeding_key": {
@@ -370,7 +371,7 @@
       "key": "09821d1f-e78a-404c-9576-4dd20147b4d9",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6” and \"Level 7\" slides\n \n**Do This**: Point out the science of the cause and effect of fish being removed from the ecosystem and show the conditional statement blocks that will check if the number of algae is high (>8) or low (<8).  After discussing conditionals and previewing levels 6 and 7, send students to resume working at their own pace for the remainder of the lesson.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Level 7\" slide\n \n**Do This**: Point out the science of the cause and effect of fish being removed from the ecosystem and show the conditional statement blocks that will check if the number of algae is high (>8) or low (<8).  After discussing conditionals and previewing levels 6 and 7, send students to resume working at their own pace for the remainder of the lesson.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -382,7 +383,7 @@
       "key": "e80f80af-6397-47b0-b191-c0b4cb056f89",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9” slide",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -394,7 +395,6 @@
       "key": "8aa3a6e2-5df5-4f7c-bafa-b5363f7cb1dc",
       "position": 14,
       "properties": {
-        "name": "Skill",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -406,7 +406,6 @@
       "key": "f4e6e28f-0502-44fb-bbe9-3beeeb232d1d",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9” slide\n",
         "progression_name": "Multiple Choice",
         "tips": [
           {
@@ -1064,6 +1063,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_overfishing_solutions_overview"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1285,6 +1287,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_unbalanced_cfu2_parent_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
