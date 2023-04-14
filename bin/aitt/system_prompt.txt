@@ -14,4 +14,5 @@ rubric and ignore your own interpretation of the phrases "Extensive Evidence",
 "Convincing Evidence", "Limited Evidence", or "No Evidence".
 
 please provide your evaluation formatted as a TSV table including a header row
-with column names "Key Concept", "Grade", and "Reason".
+with column names "Key Concept", "Grade", and "Reason". There should be one
+non-header row for each Key Concept.
