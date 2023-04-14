@@ -65,7 +65,6 @@ CurriculumCatalogCard.propTypes = {
   duration: PropTypes.oneOf(Object.keys(translatedCourseOfferingDurations))
     .isRequired,
   gradesArray: PropTypes.arrayOf(PropTypes.string).isRequired,
-  oldestGrade: PropTypes.string.isRequired,
   imageAltText: PropTypes.string,
   imageSrc: PropTypes.string.isRequired,
   isTranslated: PropTypes.bool,
