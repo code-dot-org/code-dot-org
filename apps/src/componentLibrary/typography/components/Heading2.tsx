@@ -1,12 +1,12 @@
 import React from 'react';
 import Typography, {VisualApproach} from './../index';
 
-type Heading2Props = {
+interface Heading2Props {
   visualApproach?: VisualApproach;
   className?: string;
   style?: React.CSSProperties;
   children: React.ReactNode;
-};
+}
 
 const Heading2: React.FunctionComponent<Heading2Props> = ({
   visualApproach,
