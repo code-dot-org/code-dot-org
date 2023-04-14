@@ -10,5 +10,3 @@ teacher_markdown <<MARKDOWN
 
 Since the green ellipse is on top of the red rectangle, the red rectangle should be drawn first, then the green ellipse.
 MARKDOWN
-
-allow_multiple_attempts true
