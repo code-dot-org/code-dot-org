@@ -12,5 +12,3 @@ teacher_markdown <<MARKDOWN
 
 "Thanks for asking!" and "Anything with my friends" don't fit any category. The others can be updated to fit into a category.
 MARKDOWN
-
-allow_multiple_attempts true

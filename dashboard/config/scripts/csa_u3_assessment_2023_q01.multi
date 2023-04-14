@@ -44,5 +44,3 @@ for (int i: nums) {
 }
 ```
 MARKDOWN
-
-allow_multiple_attempts true

@@ -28,5 +28,3 @@ public static int[][] shift(int[][] arr) {
 
 Which choice could replace `/* missing statement */` so that `shift` works as intended?
 MARKDOWN
-
-allow_multiple_attempts true
