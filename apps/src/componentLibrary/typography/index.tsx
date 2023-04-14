@@ -5,11 +5,37 @@ import classnames from 'classnames';
 const styles = require('./typography.module.scss').default;
 
 type TypographyProps = {
-  className?: string;
-  children: React.ReactNode;
-  semanticTag: 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-  visualApproach: string;
+  // Html tag to use for the typography element
+  semanticTag:
+    | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'h5'
+    | 'h6'
+    | 'p'
+    | 'strong'
+    | 'em'
+    | 'figcaption';
+  // Scss module classname to use for the typography element
+  visualApproach?:
+    | 'heading-xxl'
+    | 'heading-xl'
+    | 'heading-lg'
+    | 'heading-md'
+    | 'heading-sm'
+    | 'heading-xs'
+    | 'body-one'
+    | 'body-two'
+    | 'overline'
+    | 'strong'
+    | 'em';
+  // Inline styles to apply to the typography element
   style?: React.CSSProperties;
+  // Additional classnames to apply to the typography element
+  className?: string;
+  // Text or other elements to render inside the typography element
+  children: React.ReactNode;
 };
 const Typography: React.FunctionComponent<TypographyProps> = ({
   semanticTag,
@@ -21,23 +47,20 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
   const Tag = semanticTag;
   console.log(styles);
   console.log(visualApproach);
-  console.log(styles[visualApproach], className);
+  // console.log(styles[visualApproach], className);
 
   return (
     <Tag
-      className={classnames(styles[visualApproach], className )}
+      className={classnames(
+        visualApproach && styles[visualApproach],
+        className
+      )}
       style={style}
     >
       {children}
     </Tag>
   );
 };
-
-// Typography.propTypes = {
-//   children: PropTypes.node,
-//   semanticTag: PropTypes.oneOf(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']).isRequired,
-//   visualApproach: PropTypes.string.isRequired
-// };
 
 export {default as Heading1} from './Heading1';
 export default Typography;
