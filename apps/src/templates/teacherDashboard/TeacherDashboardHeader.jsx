@@ -119,7 +119,6 @@ class TeacherDashboardHeader extends React.Component {
           <div style={styles.rightColumn}>
             <div style={styles.buttonSection}>
               <Button
-                __useDeprecatedTag
                 onClick={() => {
                   this.props.openEditSectionDialog(
                     this.props.selectedSection.id
@@ -169,7 +168,8 @@ const styles = {
     marginBottom: 5
   },
   buttonWithMargin: {
-    marginRight: '5px'
+    margin: 0,
+    marginRight: 5
   }
 };
 
