@@ -13,6 +13,5 @@ when choosing a grade for each Key Concept, please focus on the contents of the
 rubric and ignore your own interpretation of the phrases "Extensive Evidence",
 "Convincing Evidence", "Limited Evidence", or "No Evidence".
 
-please provide your evaluation formatted as a TSV table where the first
-column is the Key Concept name, the second column is the Grade, and the third
-column is the Reason for the grade.
+please provide your evaluation formatted as a TSV table including a header row
+with column names "Key Concept", "Grade", and "Reason".
