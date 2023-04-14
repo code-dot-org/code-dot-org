@@ -41,7 +41,7 @@ export default class MusicValidator extends Validator {
     const currentPlayheadPosition = this.player.getCurrentPlayheadPosition();
 
     this.player.getPlaybackEvents().forEach((eventData: PlaybackEvent) => {
-      let length = eventData.length;
+      const length = eventData.length;
 
       if (
         eventData.when <= currentPlayheadPosition &&
