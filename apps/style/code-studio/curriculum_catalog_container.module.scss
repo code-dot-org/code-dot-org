@@ -1,15 +1,15 @@
 @use "color.scss";
 @use "breakpoints.scss";
+@import "style-constants";
 
 .catalogHeader {
   position: relative;
-  padding: 4em 2em;
+  padding: 2em 2em;
   background-color: color.$darkest_gray;
 }
 
 .catalogHeaderContent {
-  // AAAAAAAAAAAAAA MAX WIDTH
-  max-width: 960px;
+  max-width: $content-width;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -22,16 +22,17 @@
   float: left;
   width: 60%;
 
-  // @media screen and (max-width: breakpoints.$width-md) {
-  //   width: 60%;
-  // }
-
   @media screen and (max-width: breakpoints.$width-sm) {
     width: 100%;
   }
 }
 
-.headerText {
+.headerTitle {
+  color: color.$white;
+  margin-bottom: 0.5em;
+}
+
+.headerSubtitle {
   color: color.$white;
 }
 
@@ -40,21 +41,15 @@
   width: 33%;
   float: right;
 
-  // @media screen and (max-width: breakpoints.$width-md) {
-  //   width: 33%;
-  // }
-
   @media screen and (max-width: breakpoints.$width-sm) {
     width: 100%;
-    margin-top: 2em;
+    margin-top: 1em;
   }
 }
 
 .headerImage {
   position: relative;
-  width: 100%;
-  top: 0;
-  right: 0;
+  width: 80%;
 
   @media screen and (max-width: breakpoints.$width-md) {
     display: block;

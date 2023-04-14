@@ -12,10 +12,10 @@ const CurriculumCatalog = ({curriculaData}) => (
     <div className={style.catalogHeader}>
       <div className={style.catalogHeaderContent}>
         <div className={style.headerTextWrapper}>
-          <h1 className={style.headerText}>
+          <h1 className={style.headerTitle}>
             {i18n.curriculumCatalogHeaderTitle()}
           </h1>
-          <p className={style.headerText}>
+          <p className={style.headerSubtitle}>
             {i18n.curriculumCatalogHeaderSubtitle()}
           </p>
         </div>
