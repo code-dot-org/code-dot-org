@@ -32,6 +32,29 @@ def parse_tsv(tsv_text)
   rows.map {|row| Hash[header.zip(row.split("\t"))]}
 end
 
+def validate_server_response(tsv_data, rubric)
+  expected_columns = ["Key Concept", "Grade", "Reason"]
+  valid_grades = ["Extensive Evidence", "Convincing Evidence", "Limited Evidence", "No Evidence"]
+
+  # Get the list of key concepts from the rubric
+  rubric_key_concepts = CSV.parse(rubric, headers: true).map {|row| row['Key Concept']}.uniq
+
+  # 1. The response represents a table in TSV format
+  return false unless tsv_data.is_a?(Array)
+
+  # 2. The table's column names are "Key Concept", "Grade", and "Reason"
+  return false unless tsv_data.all? {|row| (row.keys & expected_columns) == expected_columns}
+
+  # 3. The Key Concept column contains one entry for each Key Concept listed in the rubric
+  key_concepts_from_response = tsv_data.map {|row| row["Key Concept"]}.uniq
+  return false unless rubric_key_concepts.sort == key_concepts_from_response.sort
+
+  # 4. All entries in the Grade column are one of the valid values
+  return false unless tsv_data.all? {|row| valid_grades.include?(row["Grade"])}
+
+  true
+end
+
 def grade_student_work(prompt, rubric, student_code, student_id)
   api_url = 'https://api.openai.com/v1/chat/completions'
   headers = {
@@ -55,11 +78,16 @@ def grade_student_work(prompt, rubric, student_code, student_id)
     puts "#{student_id} request size #{data.to_json.size} succeeded in #{(Time.now - start_time).to_i} seconds"
     completed_text = response.parsed_response['choices'][0]['message']['content']
     tsv_data = parse_tsv(completed_text.strip)
-    tsv_data.map(&:to_h)
+    if validate_server_response(tsv_data, rubric)
+      tsv_data.map(&:to_h)
+    else
+      puts "#{student_id} Invalid api response:\n#{completed_text}}"
+      nil
+    end
   else
     puts "#{student_id} Error calling the API: #{response.code}"
     puts "#{student_id} Response body: #{response.body}"
-    []
+    nil
   end
 end
 
@@ -208,7 +236,10 @@ def main
     student_id = File.basename(student_file, '.js')
     student_code = File.read(student_file)
     [student_id, grade_student_work(prompt, rubric, student_code, student_id)]
-  end.to_h
+  end
+
+  # skip students with invalid api response
+  actual_grades = actual_grades.select(&:last).to_h
 
   accuracy_by_criteria, overall_accuracy = compute_accuracy(expected_grades, actual_grades)
   output_file = generate_html_output(
