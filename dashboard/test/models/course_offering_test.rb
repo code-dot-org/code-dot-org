@@ -562,8 +562,24 @@ class CourseOfferingTest < ActiveSupport::TestCase
       CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: 'K1')
     end
 
+    assert_raises ActiveRecord::RecordInvalid do
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: 'K,K,1')
+    end
+
     assert_creates CourseOffering do
-      CourseOffering.create!(key: 'test-key-one-grade', display_name: 'Test One Grade', grade_levels: 'K')
+      CourseOffering.create!(key: 'one-grade', display_name: 'Test One Grade', grade_levels: 'K')
+    end
+
+    assert_creates CourseOffering do
+      CourseOffering.create!(key: 'middle-grades', display_name: 'Test Middle Grades', grade_levels: '7,8')
+    end
+
+    assert_creates CourseOffering do
+      CourseOffering.create!(key: 'high-grades', display_name: 'Test High Grades', grade_levels: '10,11,12')
+    end
+
+    assert_creates CourseOffering do
+      CourseOffering.create!(key: 'all-grades', display_name: 'Test All Grades', grade_levels: 'K,1,2,3,4,5,6,7,8,9,10,11,12')
     end
   end
 
