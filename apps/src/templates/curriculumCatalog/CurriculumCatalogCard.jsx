@@ -32,16 +32,11 @@ const CurriculumCatalogCard = ({
     })}
     courseDisplayName={courseDisplayName}
     duration={translatedCourseOfferingDurations[duration]}
-    gradeRange={
-      gradesArray.length === 1
-        ? i18n.gradeRangeSingle({
-            youngestGrade: gradesArray[0]
-          })
-        : i18n.gradeRange({
-            youngestGrade: gradesArray[0],
-            oldestGrade: gradesArray[gradesArray.length - 1]
-          })
-    }
+    gradeRange={i18n.gradeRange({
+      numGrades: gradesArray.length,
+      youngestGrade: gradesArray[0],
+      oldestGrade: gradesArray[gradesArray.length - 1]
+    })}
     imageSrc={imageSrc}
     subjectsAndTopics={[
       ...subjects?.map(
