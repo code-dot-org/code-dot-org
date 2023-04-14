@@ -48,7 +48,7 @@ Feature: App Lab Scenarios
     When I press "runButton"
     And I wait until element "#divApplab > .screen > div#text_area1" is visible
     Then element "div#text_area1" has html "Line 1<div>Line 2</div><div><br></div><div>Line3</div>"
-     
+
   Scenario: Change event works in text input and text area
     Given I switch to design mode
     And I drag a TEXT_INPUT into the app
