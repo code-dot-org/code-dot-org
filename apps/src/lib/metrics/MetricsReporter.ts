@@ -1,4 +1,4 @@
-import MetricsApi from './MetricsApi';
+import {MetricsApi} from './MetricsApi';
 
 const isDevelopmentEnvironment =
   require('../../utils').isDevelopmentEnvironment;
@@ -26,6 +26,8 @@ type LogLevel = 'INFO' | 'WARNING' | 'SEVERE';
  * For legacy client-side reporting see {@link firehose} for AWS
  * Firehose reporting and {@link logToCloud} for New Relic reporting.
  */
+// TODO: This class will be used once more functionality is implemented.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 class MetricsReporter {
   private lastCheckCanReportTime: number;
 
