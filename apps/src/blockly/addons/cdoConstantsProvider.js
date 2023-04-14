@@ -12,7 +12,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
    * @override
    */
   shapeFor(connection) {
-    const connectorTypeShapeMap = {
+    const blockTypeShapeMap = {
       [blockTypes.SPRITE]: this.TRI_INPUT_OUTPUT,
       [blockTypes.BEHAVIOR]: this.ROUND_INPUT_OUTPUT,
       [blockTypes.LOCATION]: this.RECT_INPUT_OUTPUT
@@ -21,7 +21,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
     switch (connection.type) {
       case GoogleBlockly.ConnectionType.INPUT_VALUE:
       case GoogleBlockly.ConnectionType.OUTPUT_VALUE:
-        return connectorTypeShapeMap[connectorType] || this.PUZZLE_TAB;
+        return blockTypeShapeMap[connectorType] || this.PUZZLE_TAB;
       case GoogleBlockly.ConnectionType.PREVIOUS_STATEMENT:
       case GoogleBlockly.ConnectionType.NEXT_STATEMENT:
         return this.NOTCH;
