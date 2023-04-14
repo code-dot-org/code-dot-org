@@ -19,5 +19,3 @@ answer 'Traverse'
 
 question 'A variable declared and used within a loop to count iterations through the loop'
 answer 'Loop Control Variable'
-
-allow_multiple_attempts true

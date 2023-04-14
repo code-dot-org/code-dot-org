@@ -6,4 +6,4 @@ right 'Humans should catch some of the fish and fish should eat some of the alga
 wrong 'Fish should eat all the coral so the algae can grow faster.', feedback: 'Incorrect.'
 
 
-allow_multiple_attempts true
+allow_multiple_attempts false

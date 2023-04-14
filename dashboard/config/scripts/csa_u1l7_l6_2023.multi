@@ -36,5 +36,3 @@ public returnType methodName() {
 }
 ```
 MARKDOWN
-
-allow_multiple_attempts true

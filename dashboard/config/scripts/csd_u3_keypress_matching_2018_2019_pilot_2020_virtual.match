@@ -8,5 +8,3 @@ answer 'keyWentUp()'
 question 'Is true the whole time the key is pressed or held down.'
 answer 'keyDown()'
 
-
-allow_multiple_attempts true
