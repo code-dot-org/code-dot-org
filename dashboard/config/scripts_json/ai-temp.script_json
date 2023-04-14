@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-04-12 02:51:25 UTC",
+    "serialized_at": "2023-04-13 23:12:34 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -116,7 +116,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "In this lesson, students will practice cropping images to uncover the bias underlying the Twitter cropping algorithm. Then, students will read and watch a video about the discovery of this biased algorithm. Finally, students will discuss ways to recognize and reduce bias along with analyzing Twitter's response to the allegations of bias in their cropping algorithm.",
-        "preparation": "* Complete the cropping widget activity yourself so you can see what your students will experience with the widget will be and what questions or issues they may bring up.\n* Watch the parts of the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) referenced in the lesson plan.\n* Read the two articles from the links section below.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1PPiJSS7ZdIQl8DKN_x7pB5I1-1gi4S9Y3I6F-PBJKj0/edit?usp=sharing)",
+        "preparation": "* Complete the cropping widget activity yourself so you can see what your students will experience with the widget will be and what questions or issues they may bring up.\n* Watch the parts of the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) referenced in the lesson plan.\n* Read the two articles from the links section below.",
         "student_overview": "In this lesson, you will work on cropping images and discuss the challenges and bias involved in teaching a machine how to crop an image."
       },
       "seeding_key": {
@@ -862,7 +862,7 @@
       "key": "ebdc2bba-de92-41ac-8d5f-1fcd96fa60db",
       "position": 2,
       "properties": {
-        "description": "Now imagine we recorded how everyone in this room cropped the images from this widget. We could use that information to train a model, just like we saw in AI for Oceans. This model could be used to crop other photos being uploaded to the social media site, just like the model we trained yesterday was used to identify certain types of fish and sea creatures. ",
+        "description": "Now imagine we recorded how everyone in this room cropped the images from this widget. We could use that information to train a model. This model could be used to crop other photos being uploaded to the social media site.",
         "remarks": true
       },
       "seeding_key": {
@@ -875,13 +875,7 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** How might the cropping data from our classroom be biased? What are some ways we could address the biases in our data?\n\n**Discussion Goal:** Help students see if this were indeed training a model, bias could arise from a few different places.\n* The limited set of pictures included in the app that are most likely not representative of the photos being shared on social media.\n* The bias of the students themselves. Are teenagers more likely to focus on certain things when cropping? Is this representative of the whole population of social media users?\n",
-        "progression_name": "Cropping Widget",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "When discussing bias, connect back to the training students did in the previous lesson when deciding what an “angry”  or “fun” fish looks like, pushing students to consider how their opinions might lead to problems when training an AI model that would be widely used."
-          }
-        ]
+        "progression_name": "Cropping Widget"
       },
       "seeding_key": {
         "activity_section.key": "b5e783c8-914b-4fd5-a1e1-200c1aaa5add",
@@ -1000,8 +994,19 @@
       }
     },
     {
-      "key": "8d417eb1-5125-4593-8ff9-8ebbc996b7c3",
+      "key": "11b9c974-2a82-4453-babd-af1299b2c3f0",
       "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Watch the video [“Introduction to AI - Societal Impact ”](https://youtu.be/tJQSyzBUAew)"
+      },
+      "seeding_key": {
+        "activity_section.key": "11b9c974-2a82-4453-babd-af1299b2c3f0",
+        "lesson_activity.key": "672b41e0-8b3b-44d7-a904-aa6b84585145"
+      }
+    },
+    {
+      "key": "8d417eb1-5125-4593-8ff9-8ebbc996b7c3",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Have students discuss their reactions to the quotes pulled out from Rumman Chowdry, a software engineering director for Twitter’s machine learning ethics, transparency, and accountability team. \n* Do you think Twitter’s response was appropriate?\n* What are the risks and potential harms of systems, such as social media platforms like Twitter, becoming too dependent on machine learning?\n"
       },
@@ -1012,7 +1017,7 @@
     },
     {
       "key": "fbd7a999-53ad-4436-a823-9af545f6053e",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "The story of Twitter and its photo cropping algorithm shows how something that’s built with one intention, in this case to better highlight photos, can lead to unintended effects, in this case, bias of white faces over black faces, which can also have harmful impacts on society or culture.  And, this case provides an example of a software company that has taken actionable steps to address algorithmic bias by establishing this team (machine learning ethics, transparency, and accountability team) lead by Rumman Chowdry.\n\n",
         "remarks": true
@@ -1024,7 +1029,7 @@
     },
     {
       "key": "71c7f0b9-5087-412b-a759-a804597ab2c6",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "---\n\n### Assessment: Check For Understanding\n    \n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Which of the following was an unintended effect of the use of the Twitter cropping algorithm?\n",
         "progression_name": "Check For Understanding"
@@ -1407,81 +1412,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U9L5 Cropping Widget_introai"
-        ],
-        "progression": "Cropping Widget"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U9L5 Cropping Widget_introai"
-        ],
-        "lesson.key": "Algorithmic Bias",
-        "lesson_group.key": "",
-        "script.name": "ai-temp",
-        "activity_section.key": "b5e783c8-914b-4fd5-a1e1-200c1aaa5add"
-      },
-      "level_keys": [
-        "U9L5 Cropping Widget_introai"
-      ]
-    },
-    {
-      "chapter": 2,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "csp_U9L7_CFU12022_introai"
-        ],
-        "progression": "Check For Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csp_U9L7_CFU12022_introai"
-        ],
-        "lesson.key": "Algorithmic Bias",
-        "lesson_group.key": "",
-        "script.name": "ai-temp",
-        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
-      },
-      "level_keys": [
-        "csp_U9L7_CFU12022_introai"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "U9L7 Free Response_introai"
-        ],
-        "progression": "Check For Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U9L7 Free Response_introai"
-        ],
-        "lesson.key": "Algorithmic Bias",
-        "lesson_group.key": "",
-        "script.name": "ai-temp",
-        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
-      },
-      "level_keys": [
-        "U9L7 Free Response_introai"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "Oceans_FishVTrash_introai"
         ],
         "progression": "Recognizing Fish"
@@ -1501,7 +1431,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 2,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1526,7 +1456,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 3,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1551,7 +1481,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 4,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -1574,12 +1504,20 @@
       "level_keys": [
         "aiml-intro-pulse-survey_introai"
       ]
-    }
-  ],
-  "levels_script_levels": [
+    },
     {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U9L5 Cropping Widget_introai"
+        ],
+        "progression": "Cropping Widget"
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "U9L5 Cropping Widget_introai",
         "script_level.level_keys": [
           "U9L5 Cropping Widget_introai"
         ],
@@ -1587,11 +1525,24 @@
         "lesson_group.key": "",
         "script.name": "ai-temp",
         "activity_section.key": "b5e783c8-914b-4fd5-a1e1-200c1aaa5add"
-      }
+      },
+      "level_keys": [
+        "U9L5 Cropping Widget_introai"
+      ]
     },
     {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp_U9L7_CFU12022_introai"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csp_U9L7_CFU12022_introai",
         "script_level.level_keys": [
           "csp_U9L7_CFU12022_introai"
         ],
@@ -1599,11 +1550,24 @@
         "lesson_group.key": "",
         "script.name": "ai-temp",
         "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
-      }
+      },
+      "level_keys": [
+        "csp_U9L7_CFU12022_introai"
+      ]
     },
     {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U9L7 Free Response_introai"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "U9L7 Free Response_introai",
         "script_level.level_keys": [
           "U9L7 Free Response_introai"
         ],
@@ -1611,8 +1575,13 @@
         "lesson_group.key": "",
         "script.name": "ai-temp",
         "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
-      }
-    },
+      },
+      "level_keys": [
+        "U9L7 Free Response_introai"
+      ]
+    }
+  ],
+  "levels_script_levels": [
     {
       "seeding_key": {
         "level.key": "Oceans_FishVTrash_introai",
@@ -1659,6 +1628,42 @@
         "lesson_group.key": "",
         "script.name": "ai-temp",
         "activity_section.key": "6b4f0c67-b8b6-49e6-9331-e6fe9b8886a1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U9L5 Cropping Widget_introai",
+        "script_level.level_keys": [
+          "U9L5 Cropping Widget_introai"
+        ],
+        "lesson.key": "Algorithmic Bias",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "b5e783c8-914b-4fd5-a1e1-200c1aaa5add"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_U9L7_CFU12022_introai",
+        "script_level.level_keys": [
+          "csp_U9L7_CFU12022_introai"
+        ],
+        "lesson.key": "Algorithmic Bias",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U9L7 Free Response_introai",
+        "script_level.level_keys": [
+          "U9L7 Free Response_introai"
+        ],
+        "lesson.key": "Algorithmic Bias",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
       }
     }
   ],
@@ -1873,6 +1878,18 @@
       }
     },
     {
+      "name": "Introduction to AI - Societal Impact",
+      "url": "https://youtu.be/tJQSyzBUAew",
+      "key": "introduction_to_ai_-_societal_impact",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_-_societal_impact"
+      }
+    },
+    {
       "name": "Introduction to Machine Learning",
       "url": "https://docs.google.com/presentation/d/1ZOSt4G-bEqIiFIWFWQjvY54I2YgHlCURXmtX1FYnpFw/template/preview",
       "key": "introduction_to_machine_learning",
@@ -1940,6 +1957,12 @@
       "seeding_key": {
         "lesson.key": "Algorithmic Bias",
         "resource.key": "csp_unit_5_-_lesson_8_-_algorithmic_bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithmic Bias",
+        "resource.key": "introduction_to_ai_-_societal_impact"
       }
     },
     {
@@ -2193,48 +2216,6 @@
     }
   ],
   "lessons_standards": [
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithmic Bias",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.B.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithmic Bias",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.B.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithmic Bias",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.D.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithmic Bias",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.D.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithmic Bias",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.D.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithmic Bias",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.F.11"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "Introduction to Machine Learning",
