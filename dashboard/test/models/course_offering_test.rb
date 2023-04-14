@@ -551,7 +551,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     end
 
     assert_raises ActiveRecord::RecordInvalid do
-      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: '6,13')
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: '10,11,12,13')
     end
 
     assert_raises ActiveRecord::RecordInvalid do
@@ -559,7 +559,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     end
 
     assert_raises ActiveRecord::RecordInvalid do
-      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: 'K8')
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: 'K1')
     end
 
     assert_creates CourseOffering do
