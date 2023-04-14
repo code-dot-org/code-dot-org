@@ -90,7 +90,7 @@ FactoryBot.define do
 
     trait :with_multi_select_answer do
       answers do
-        '{not_members_spice_girls": ["radical", "spicy"]}'
+        '{"not_members_spice_girls": ["radical", "spicy"]}'
       end
     end
 
