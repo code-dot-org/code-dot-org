@@ -24,5 +24,3 @@ wrong '11'
 wrong '12'
 right '13'
 wrong '14'
-
-allow_multiple_attempts true

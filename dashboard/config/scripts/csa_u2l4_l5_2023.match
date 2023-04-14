@@ -14,4 +14,3 @@ answer 'the value to be passed to a constructor or method'
 
 question 'actual parameter'
 answer 'the value to assign to the formal parameter'
-allow_multiple_attempts true

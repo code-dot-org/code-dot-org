@@ -1,22 +1,13 @@
 name 'CSD U2 Match Q1_2023'
-
-height '75'
-
-description 'Match CSS with their definitions'
-
-question 'color'
-question 'font-size'
-question 'float'
-
-answer 'specifies the color of text'
-answer 'specifies the size of a font'
-answer 'places an element on the left or right side of the screen and allows text and other elements to wrap around it'
-
-teacher_markdown <<MARKDOWN
-**Content: Unit 2 Lesson 6, 11, 17**
-
-
-
-MARKDOWN
-
-allow_multiple_attempts true
+encrypted 'sZ8y53OFW5Q1eXQ6xLGEt8O60W9oO+aUO1j8cvqFJ/6MiJsTbcmQBktAUGma
+qKCyhX1TmkmH1+x5v+Zjkd94PrvdlVs+ViMz+uUfaN84izKTz9U4x8s1BHXk
+c0uVoSSw6pO86+slUPv3VuayoTvsc+y08WwdXHMtXBvWz5yNyt2x5EEZit/c
+WxVlL2ivDjEf2iMt1njwCQwVPOiZnTKMP75QsRAKhnxAHRCadjoqo6iZmbJx
+6aenIvhdDzECC8yb6An9TLxiakk4uSwq1mAJeG2NJrAyQqePxAJdkRBNlI7/
+XFORu/T1xpNLraeDyKPx1EvIu6c7jk3gLNGU+zLnLoXxMxlBm6faZoIhIStg
+hxATybPF0ojD47pFRhyyKXAqqdOFkp2prrPXCV5iQU7Kphr07BcdV9Eq/58H
+qsrFJ0UFDQzVQXUtBELq5u3EtCBvqmE+DgA0McT1fObhcRVyW04SQLcdwab8
+GPnCeM2CX3kz6j4xBfQCRvjHw5MFzwkK42WQbx8DZg+MW/+Tl88Ln4ZRw2v2
+LZYDBtCaYaAvcZ3qBpC5DSqCmFc2+ery0C6x6LXFt2u0Ju3v5oeJ/SpXg78C
+ZqEpII6vbQZFvyTwgj0=
+'

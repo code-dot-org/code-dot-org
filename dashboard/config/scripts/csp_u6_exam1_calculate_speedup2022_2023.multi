@@ -1,46 +1,38 @@
 name 'csp-u6-exam1-calculate-speedup2022_2023'
-editor_experiment ''
-wrong '6 minutes'
-wrong '4 minutes'
-right '2'
-wrong '3'
-
-markdown <<MARKDOWN
-A sequential algorithm  is broken into three stages
-
-**Sequential Algorithm Time**
-
-* Download stage: 1 minute
-* Sorting stage: 6 minutes
-* Upload stage: 1 minute
-
-A parallel version of the algorithm completes the sorting stage in parallel leading to a new set of times
-
-**Parallel Algorithm Time**
-
-* Download stage: 1 minute
-* Sorting stage: 2 minutes
-* Upload stage: 1 minute
-
-What is the speedup of the parallel solution?
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-**Explanation:** Speedup is found by taking the total sequential time and dividing by the total parallel time. In this case, 8min/4min = 2.
-
-Students calculated their own speedup when sorting cards in  [Lesson 5 - Parallel and Distributed Algorithms](https://studio.code.org/s/csp6-2021/lessons/5).
-
-::: details [**Essential Knowledge Connected To This Question**]
-
-* CSN-2.B.1: Comparing efficiency of solutions can be done by comparing the time it takes them to perform the same task
-
-* CSN-2.B.2: A sequential solution takes as long as the sum of all of its steps. 
-
-* CSN-2.B.3: A parallel computing solution takes as long as its sequential tasks plus the longest of the tasks done in parallel. 
-
-* CSN-2.B.4: The “speedup” of a parallel solution is measured in the time it took to complete the task sequentially divided by the time it took to complete the task when done in parallel.
-:::
-
-MARKDOWN
-
-allow_multiple_attempts true
+encrypted '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
+BLxgnhClFu1Q
+'
