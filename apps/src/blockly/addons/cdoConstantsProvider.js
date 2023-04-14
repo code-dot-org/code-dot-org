@@ -1,5 +1,5 @@
 import GoogleBlockly from 'blockly/core';
-import {inputBlockTypes, outputBlockStyleTypes} from './cdoConstants';
+import {blockTypes} from './cdoConstants';
 
 export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
   .ConstantProvider {
@@ -12,23 +12,16 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
    * @override
    */
   shapeFor(connection) {
-    const inputTypeShapeMap = {
-      [inputBlockTypes.SPRITE]: this.TRI_INPUT_OUTPUT,
-      [inputBlockTypes.BEHAVIOR]: this.ROUND_INPUT_OUTPUT,
-      [inputBlockTypes.LOCATION]: this.RECT_INPUT_OUTPUT
+    const connectorTypeShapeMap = {
+      [blockTypes.SPRITE]: this.TRI_INPUT_OUTPUT,
+      [blockTypes.BEHAVIOR]: this.ROUND_INPUT_OUTPUT,
+      [blockTypes.LOCATION]: this.RECT_INPUT_OUTPUT
     };
-    const outputStyleShapeMap = {
-      [outputBlockStyleTypes.SPRITE_TYPE]: this.TRI_INPUT_OUTPUT,
-      [outputBlockStyleTypes.BEHAVIOR_TYPE]: this.ROUND_INPUT_OUTPUT,
-      [outputBlockStyleTypes.LOCATION_TYPE]: this.RECT_INPUT_OUTPUT
-    };
-    const blockStyleName = connection.getSourceBlock().styleName_;
-    const inputType = connection.check_ ? connection.check_[0] : null;
+    const connectorType = connection.check_ ? connection.check_[0] : null;
     switch (connection.type) {
       case GoogleBlockly.ConnectionType.INPUT_VALUE:
-        return inputTypeShapeMap[inputType] || this.PUZZLE_TAB;
       case GoogleBlockly.ConnectionType.OUTPUT_VALUE:
-        return outputStyleShapeMap[blockStyleName] || this.PUZZLE_TAB;
+        return connectorTypeShapeMap[connectorType] || this.PUZZLE_TAB;
       case GoogleBlockly.ConnectionType.PREVIOUS_STATEMENT:
       case GoogleBlockly.ConnectionType.NEXT_STATEMENT:
         return this.NOTCH;

@@ -46,13 +46,7 @@ export const frameSizes = {
   HEADER_HEIGHT: 25
 };
 
-export const outputBlockStyleTypes = {
-  SPRITE_TYPE: 'sprite_blocks',
-  BEHAVIOR_TYPE: 'behavior_blocks',
-  LOCATION_TYPE: 'location_blocks'
-};
-
-export const inputBlockTypes = {
+export const blockTypes = {
   SPRITE: 'Sprite',
   BEHAVIOR: 'Behavior',
   LOCATION: 'Location'
