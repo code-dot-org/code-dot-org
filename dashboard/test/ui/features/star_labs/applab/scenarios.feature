@@ -60,13 +60,13 @@ Feature: App Lab Scenarios
 
     # in text input, blur produces a change event
     When I press "runButton"
-    And I wait until element "#divApplab > .screen > div#text_input1" is visible
-    And I press keys "123" for element "#text_input1"
+    And I wait until element ".screen > input" is visible
+    And I press keys "123" for element ".screen > input"
     And I blur selector "#text_input1"
     Then element "#debug-output" has escaped text "\"text_input1: 123\""
 
     # in a text input, enter produces a change event but then blur does not
-    When I press keys "456\n" for element "#text_input1"
+    When I press keys "456\n" for element ".screen > input"
     Then element "#debug-output" has escaped text "\"text_input1: 123\"\"text_input1: 123456\""
     And I blur selector "#text_input1"
     Then element "#debug-output" has escaped text "\"text_input1: 123\"\"text_input1: 123456\""
