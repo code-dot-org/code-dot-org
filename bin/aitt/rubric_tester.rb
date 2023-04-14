@@ -197,8 +197,8 @@ def generate_html_output(output_filename, prompt, rubric, accuracy, actual_grade
     file.puts "  <h2>Rubric:</h2>"
     file.puts rubric_to_html_table(rubric)
     if errors.count > 0
-      file.puts "  <h2>Errors: #{errors.count}</h2>"
-      file.puts "  #{errors.join(', ')} failed to load"
+      file.puts "  <h2 style=\"color: red\">Errors: #{errors.count}</h2>"
+      file.puts "  <p style=\"color: red\">#{errors.join(', ')} failed to load</p>"
     end
     file.puts "  <h2>Overall Accuracy: #{accuracy.to_i}%</h2>"
     file.puts "  <h2>Accuracy by Key Concept:</h2>"
