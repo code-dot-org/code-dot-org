@@ -25,5 +25,3 @@ II.  `numberOfLeaves * 2 = numberOfLeaves;`
 
 III. `int numberOfLeaves = numberOfLeaves * 2;`
 MARKDOWN
-
-allow_multiple_attempts true

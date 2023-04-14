@@ -11,5 +11,3 @@ answer '6'
 markdown <<MARKDOWN
  
 MARKDOWN
-
-allow_multiple_attempts true

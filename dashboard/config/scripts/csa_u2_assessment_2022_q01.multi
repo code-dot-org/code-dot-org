@@ -9,5 +9,3 @@ wrong '`String material = "canvas";`'
 markdown <<MARKDOWN
 Which one of the following declarations are NOT correct?
 MARKDOWN
-
-allow_multiple_attempts true

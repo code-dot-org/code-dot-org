@@ -5,4 +5,4 @@ wrong 'The artist will draw a 50-sided polygon with 3 pixel sides.', feedback: '
 wrong 'The artist will draw three open sides with 50 degree turns.', feedback: 'Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.'
 wrong 'I don\'t know.', feedback: 'The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.'
 
-allow_multiple_attempts true
+allow_multiple_attempts false
