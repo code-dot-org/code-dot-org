@@ -375,21 +375,26 @@ module Api::V1::Pd
 
     test 'update sends a decision email once if status changed to decision and if associated with an RP' do
       sign_in @program_manager
-      assert_empty @csd_teacher_application_with_partner.emails
+      Pd::Application::TeacherApplicationMailer.expects(:accepted).once
 
-      @csd_teacher_application_with_partner.expects(:send_pd_application_email).with('accepted').once
-      @csd_teacher_application_with_partner.update(status: 'accepted')
+      post :update, params: {id: @csd_teacher_application_with_partner.id, application: {
+        status: 'accepted'
+      }}
 
       # A different update does not trigger another decision email sent
-      @csd_teacher_application_with_partner.update(notes: 'More notes')
+      post :update, params: {id: @csd_teacher_application_with_partner.id, application: {
+        notes: 'More notes'
+      }}
+      assert_equal 1, @csd_teacher_application_with_partner.emails.where.not(sent_at: nil).where(email_type: 'accepted').count
     end
 
     test 'update does not send a decision email if status changed to decision but no RP' do
       sign_in @program_manager
-      assert_empty @csd_teacher_application.emails
+      Pd::Application::TeacherApplicationMailer.expects(:accepted).never
 
-      @csd_teacher_application.expects(:send_pd_application_email).never
-      @csd_teacher_application.update(status: 'accepted')
+      post :update, params: {id: @csd_teacher_application.id, application: {
+        status: 'accepted'
+      }}
     end
 
     test 'update does not send a decision email if status changed to non-decision even with an RP' do
@@ -397,10 +402,12 @@ module Api::V1::Pd
       csp_teacher_application_with_partner = create TEACHER_APPLICATION_FACTORY, form_data_hash: hash_csp_with_rp
 
       sign_in @program_manager
-      assert_empty csp_teacher_application_with_partner.emails
+      Pd::Application::TeacherApplicationMailer.expects(:accepted).never
 
       csp_teacher_application_with_partner.expects(:send_pd_application_email).never
-      csp_teacher_application_with_partner.update!(status: 'pending')
+      post :update, params: {id: csp_teacher_application_with_partner.id, application: {
+        status: 'pending'
+      }}
     end
 
     test 'workshop admins can update form_data' do
