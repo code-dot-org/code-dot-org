@@ -80,17 +80,17 @@ module Api::V1::Pd::Application
       assert_response :success
     end
 
-    test 'does not send principal approval email on successful create if RP has selective principal approval' do
+    test 'does not create principal approval email on successful create if RP has selective principal approval' do
       sign_in @applicant
+      Pd::Application::TeacherApplicationMailer.expects(:admin_approval).never
 
       put :create, params: {form_data: @hash_without_admin_approval}
       application = TEACHER_APPLICATION_CLASS.last
       assert_equal 1, application.emails.where(email_type: 'confirmation').count
-      assert_empty application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval')
       assert_response :success
     end
 
-    test 'does not send confirmation mail on unsuccessful create' do
+    test 'does not create confirmation mail on unsuccessful create' do
       Pd::Application::TeacherApplicationMailer.expects(:admin_approval).never
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).never
       PRINCIPAL_APPROVAL_APPLICATION_CLASS.expects(:create_placeholder_and_send_mail).never
@@ -186,11 +186,12 @@ module Api::V1::Pd::Application
 
     test 'autoscores and sends only confirmation email on submit when approval is not required' do
       sign_in @applicant
+      Pd::Application::TeacherApplicationMailer.expects(:admin_approval).never
+
       put :create, params: {form_data: @hash_without_admin_approval, isSaving: false}
       application = TEACHER_APPLICATION_CLASS.last
       assert_equal 'unreviewed', application.status
       assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'confirmation').count
-      assert_empty application.emails.where(email_type: 'admin_approval')
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
       assert_response :created
     end
@@ -210,13 +211,13 @@ module Api::V1::Pd::Application
 
     test 'autoscores and sends only confirmation email once incomplete apps are submitted with approval not required' do
       application = create TEACHER_APPLICATION_FACTORY, form_data_hash: @hash_without_admin_approval, user: @applicant, status: 'incomplete'
+      Pd::Application::TeacherApplicationMailer.expects(:admin_approval).never
 
       sign_in @applicant
       put :update, params: {id: application.id, form_data: @hash_without_admin_approval, isSaving: false}
       application = TEACHER_APPLICATION_CLASS.last
       assert_equal 'unreviewed', application.status
       assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'confirmation').count
-      assert_empty application.emails.where(email_type: 'admin_approval')
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
       assert_response :ok
     end
