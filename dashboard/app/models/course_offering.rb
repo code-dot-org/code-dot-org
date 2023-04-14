@@ -320,7 +320,7 @@ class CourseOffering < ApplicationRecord
     return true if array_of_grades.empty?
 
     array_of_integer_grades = array_of_grades.map(&:to_i)
-    unless array_of_integer_grades.all? {|grade| (1..13).cover?(grade)}
+    unless array_of_integer_grades.all? {|grade| (1..12).cover?(grade)}
       errors.add(:grade_levels, "numbers must be between 1 and 12, inclusive")
       return false
     end
