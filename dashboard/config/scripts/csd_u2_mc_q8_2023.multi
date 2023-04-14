@@ -1,10 +1,10 @@
 name 'CSD U2 MC Q8_2023'
 question 'Given this webpage and HTML, predict the CSS.'
-wrong '![](https://images.code.org/d7cf5a617d8b8d43c84833f20ddba977-CSDunit2css1.png)'
-wrong '![](https://images.code.org/9dc157eab97266dc7ff361f8259a0ed6-CSDunit2css2.png)'
-right '![](https://images.code.org/899076fa7e97005fc27433b4f62caa89-CSDunit2css3.png)'
-wrong '![](https://images.code.org/d5ff15d8d6e7b730ed01a4e5648efb22-CSDunit2css4.png)'
-wrong '![](https://images.code.org/1c1d19bf62bcf0310b12e27244831781-CSDunit2css5.png)'
+wrong '![](https://images.code.org/ac762e4fe3140059502bb732b090ad6f-Q7A.png)'
+wrong '![](https://images.code.org/0fa7bd96dbfa60be99c5dd71ed9951dd-Q7B.png)'
+right '![](https://images.code.org/19afd172367c596ac262dfa63fec531f-Q7C.png)'
+wrong '![](https://images.code.org/31dc21ab905ced882b83096b77e8c905-Q7D.png)'
+wrong '![](https://images.code.org/eb3daf7e55fc47da35adce7e68bdfa07-Q7E.png)'
 markdown <<MARKDOWN
 | Webpage      | HTML |
 | ----------- | ----------- |
@@ -16,3 +16,5 @@ teacher_markdown <<MARKDOWN
 
 The font size in `<h1>` is smaller than the font size in `<p>`, and the color is blue in `<p>`.
 MARKDOWN
+
+allow_multiple_attempts true

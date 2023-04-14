@@ -4,4 +4,4 @@ description 'description here'
 question 'Question'
 wrong 'wrong answer'
 right 'right answer'
-allow_multiple_attempts nil
+allow_multiple_attempts true

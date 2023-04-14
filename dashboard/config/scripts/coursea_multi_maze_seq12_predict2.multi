@@ -5,4 +5,4 @@ wrong 'The bird will only go straight.', feedback: 'Incorrect. The bird turns th
 right 'The bird will turn the wrong way at the end.', feedback: 'Correct!'
 wrong 'I don\'t know.', feedback: 'The bird should go North at the end, not South.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true

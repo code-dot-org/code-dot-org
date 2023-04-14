@@ -1,37 +1,46 @@
 name 'csp-u6-exam1-calculate-speedup2022'
-encrypted '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
-'
+editor_experiment ''
+wrong '6 minutes'
+wrong '4 minutes'
+right '2'
+wrong '3'
+
+markdown <<MARKDOWN
+A sequential algorithm  is broken into three stages
+
+**Sequential Algorithm Time**
+
+* Download stage: 1 minute
+* Sorting stage: 6 minutes
+* Upload stage: 1 minute
+
+A parallel version of the algorithm completes the sorting stage in parallel leading to a new set of times
+
+**Parallel Algorithm Time**
+
+* Download stage: 1 minute
+* Sorting stage: 2 minutes
+* Upload stage: 1 minute
+
+What is the speedup of the parallel solution?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Speedup is found by taking the total sequential time and dividing by the total parallel time. In this case, 8min/4min = 2.
+
+Students calculated their own speedup when sorting cards in  [Lesson 5 - Parallel and Distributed Algorithms](https://studio.code.org/s/csp6-2021/lessons/5).
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* CSN-2.B.1: Comparing efficiency of solutions can be done by comparing the time it takes them to perform the same task
+
+* CSN-2.B.2: A sequential solution takes as long as the sum of all of its steps. 
+
+* CSN-2.B.3: A parallel computing solution takes as long as its sequential tasks plus the longest of the tasks done in parallel. 
+
+* CSN-2.B.4: The “speedup” of a parallel solution is measured in the time it took to complete the task sequentially divided by the time it took to complete the task when done in parallel.
+:::
+
+MARKDOWN
+
+allow_multiple_attempts true

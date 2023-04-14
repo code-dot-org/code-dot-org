@@ -5,4 +5,4 @@ right 'Laurel will move forward and get treasure three times in a row.', feedbac
 wrong 'Laurel will move forward and get all of the treasure.', feedback: 'Incorrect. The `repeat` loop only instructs Laurel to move forward and get treasure three times.'
 wrong 'I don\'t know.', feedback: 'The program uses a `repeat` loop to get Laurel to move forward three times.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true

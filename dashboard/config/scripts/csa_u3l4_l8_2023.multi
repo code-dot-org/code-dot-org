@@ -24,3 +24,5 @@ The following demonstrates tracing this `for` loop:
 
 ![](https://images.code.org/4f9d4d9a697b6fe6f7c585d11286d96c-image-1674143991558.gif)
 MARKDOWN
+
+allow_multiple_attempts true

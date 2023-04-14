@@ -5,4 +5,4 @@ right 'Scrat will go the wrong way after his final turn.', feedback: 'Correct!'
 wrong 'Scrat takes one too few steps and ends up short of the acorn.', feedback: 'Incorrect. Taking one too few steps happens after Scrat turns the wrong way.'
 wrong 'I don\'t know.', feedback: 'The first error is that Scrat goes the wrong way after his final turn. '
 
-allow_multiple_attempts false
+allow_multiple_attempts true

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-adaptations",
-    "serialized_at": "2023-04-03 20:42:17 UTC",
+    "serialized_at": "2023-04-13 23:12:53 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -43,6 +43,7 @@
       "properties": {
         "overview": "In this **skill-building** lesson, students will learn to create and animate sprites and use events to make them interactive. \n\nStudents will code an event-based cause-and-effect model in Sprite Lab to demonstrate how species survive by adapting to their environments over time. Interactive models and simulations are used in the real world to help engineers and scientists identify patterns, understand nature, make predictions about future changes, and design solutions to prepare for and/or combat major disruptions. \n\nStudents will explore examples of evolution, adaptation, migration, natural selection, and survival in groups. \n",
         "preparation": "- Review and complete the online tutorial yourself.\n- Determine in advance which levels might be more challenging for students.\n- Review slides and decide on pacing between student work time and whole group instruction.\n\n#####Optional\n- Prerequisite: Complete [Hello World](https://studio.code.org/s/hello-world-food-2021/lessons/1)\n- Pair Programming: Decide if you want students to engage in pair programming. Watch this video and visit this Support page for more information about pair programming.\n",
+        "purpose": "This lesson provides an engaging and interactive learning experience that integrates science and technology. By using code to model a cause-and-effect relationship, students can explore how animals adapt to their environments and gain a deeper understanding of the natural world. Later, this lesson encourages creativity and self-expression by allowing students to personalize their models with their own unique style and ideas.",
         "student_overview": "In this lesson, you will model how animals adapt to their environments over time. You’ll learn to code how giraffes got their long necks, how bunnies have changed their fur color to hide better, and how birds have developed different shaped beaks."
       },
       "seeding_key": {
@@ -61,6 +62,7 @@
       "properties": {
         "overview": "In this CS and science-integrated lesson, students will use behaviors in computer science to represent animal survival behaviors. When students use `behaviors` in Sprite Lab, they are giving their sprite a set of instructions to execute over and over like an animation. First, students will try out different pre-defined behaviors, including migratory patterns for whales and butterflies, bird dances used to attract a mate, and fish traveling in groups. Then, students will practice modifying and coding their own animal behaviors.    ",
         "preparation": "- Review and complete the online tutorial yourself.\n- Determine in advance which levels might be more challenging for students.\n- Review slides and decide on pacing between student work time and whole group instruction.\n\n#####Optional\n- Prerequisite: \n   - Complete [Animal Adaptations: Lesson 1](https://studio.code.org/s/csc-adaptations-2023/lessons/1/levels/1)\n   - Complete [Hello World](https://studio.code.org/s/hello-world-food-2021/lessons/1)\n   - Complete [CSF: Course F, Sprites in Action](https://studio.code.org/s/coursef/lessons/4/levels/1)\n",
+        "purpose": "By using coding to model animal group behaviors, students can explore the patterns and dynamics of social animals in a hands-on and immersive way. This lesson encourages students to apply their coding skills in a meaningful and relevant context. With the \"Upload My Own\" sprite costume and background feature, students can create an environment that is entirely their own. ",
         "student_overview": "Today you will explore many animals and their (sometimes silly) behaviors. Animals have developed certain movements and behaviors to survive and reproduce. Your code will control sprite animations in the playspace. "
       },
       "seeding_key": {
@@ -246,7 +248,7 @@
       "key": "8c2f83ad-c319-45f6-aef5-d6bd464c1f0e",
       "position": 3,
       "properties": {
-        "description": "**Discuss**: _What do these animals have in common? Frog, duck, otter, penguin, alligator._ \n\n- _Where do they live?_ \n- _How much time do they spend in water?_\n- _What do their feet look like?_\n- _What is the best kind of foot for swimming? Why?_\n\nUse the example of webbed feet to help students understand that animals have developed body parts which help them in their specific environments. This will be a great introduction to other animal adaptations. Students should discuss similarities and differences between the animals listed. Let them start with very broad points such as: \n\n- _They’re all alive._ \n- _They live on Earth._ \n- _They all have a body._ \n- _They all have a head._\n- _They all have legs._ \n- _They live near or in water._\n\nThen when students start on the right track, help them get more specific:\n\n- _They all have feet._ \n- _Their feet help them swim._\n\nReveal one hint at a time on the slides to help students reach the answer: \n- _They all have webbed feet._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n"
+        "description": "**Discuss**: _What do these animals have in common? Frog, duck, otter, penguin, alligator._ \n\n**Discussion Goal**: Students should discuss similarities and differences between the animals listed. Let them start with very broad answers to the questions such as: \n\n- _They’re all alive._ \n- _They live on Earth._ \n- _They all have a body._ \n- _They all have a head._\n- _They all have legs._ \n- _They live near or in water._\n\nThen when students start on the right track, help them get more specific:\n\n- _They all have feet._ \n- _Their feet help them swim._\n\nReveal one hint at a time on the slides to help students reach the answer: \n- _They all have webbed feet._\n\nUse the example of webbed feet to help students understand that animals have developed body parts which help them in their specific environments. This will be a great introduction to other animal adaptations. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n"
       },
       "seeding_key": {
         "activity_section.key": "8c2f83ad-c319-45f6-aef5-d6bd464c1f0e",
@@ -359,8 +361,8 @@
       "key": "d8ad2443-d4db-413f-8b6e-deeb10d2c3b2",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Welcome to Sprite Lab” video",
-        "progression_name": "Video: Hello World: Welcome to Sprite Lab"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Animal Adaptations Introduction\" video",
+        "progression_name": "Video: Animal Adaptations Introduction"
       },
       "seeding_key": {
         "activity_section.key": "d8ad2443-d4db-413f-8b6e-deeb10d2c3b2",
@@ -421,7 +423,7 @@
       "key": "9b011b7d-ac36-4362-bf14-0a9c4c6a33ec",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n- _Name some animals that live in our state_ \n- _What challenges do they have in their current environment?_ \n- _If we had a time machine and visited these animals 1000 years from now, how might they have adapted to survive those threats?_\n\n**Discussion Goal**: The goal of this short discussion is to draw a connection to animals students have seen in their local environment. Through this discussion, students will be able to explain that animals change in order to survive. Survival may mean growing a longer neck to reach the food, changing fur colors to escape predators, moving to more hospitable climates, or gathering in groups. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n- _Name some animals that live in our state._ \n- _What challenges do they have in their current environment?_ \n- _If we had a time machine and visited these animals 1000 years from now, how might they have adapted to survive those threats?_\n\n**Discussion Goal**: The goal of this short discussion is to draw a connection to animals students have seen in their local environment. Through this discussion, students will be able to explain that animals change in order to survive. Survival may mean growing a longer neck to reach the food, changing fur colors to escape predators, moving to more hospitable climates, or gathering in groups. ",
         "duration": "5",
         "name": "Discuss"
       },
@@ -434,7 +436,7 @@
       "key": "f8b819ac-8167-4a55-8c10-fa7febe38b15",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think About It” slide \n\n**Do This:** Read the two questions out loud. Allow students 2-4 minutes to think or write independently.\n\n**Discuss:** \n- _What are these animals doing?_\n- _What do the pictures have in common?_\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think About It” slide \n\n**Do This:** Read the two questions out loud. Allow students 2-4 minutes to think or write independently.\n\n**Discuss:** \n- _What are these animals doing?_\n- _What do the pictures have in common?_\n\n**Discussion Goal**: Students should start to notice that both pictures show animals moving in groups. This is a behavior for survival! \n\n",
         "duration": "10",
         "name": "Think & Discuss"
       },
@@ -722,7 +724,7 @@
         "level_keys": [
           "coursee_helloworld_introtosprites_2023"
         ],
-        "progression": "Video: Hello World: Welcome to Sprite Lab"
+        "progression": "Video: Animal Adaptations Introduction"
       },
       "bonus": false,
       "seeding_key": {
@@ -1847,6 +1849,18 @@
         "lesson.key": "Modeling Animal Adaptations (pilot)",
         "resource.key": "ecosystems"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "ecosystems"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "ecosystems"
+      }
     }
   ],
   "scripts_resources": [
@@ -1874,6 +1888,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "key": "camouflage",
+      "word": "Camouflage",
+      "definition": "A defense mechanism organisms use to disguise their appearance and blend in with their environment",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "camouflage"
       }
     },
     {
@@ -1922,6 +1946,12 @@
       "seeding_key": {
         "lesson.key": "Modeling Animal Adaptations (pilot)",
         "vocabulary.key": "adaptation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Modeling Animal Adaptations (pilot)",
+        "vocabulary.key": "camouflage"
       }
     },
     {
@@ -2228,6 +2258,34 @@
         "lesson.key": "lesson-2",
         "framework.shortcode": "ngss",
         "standard.shortcode": "3-LS4-3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-17"
       }
     },
     {

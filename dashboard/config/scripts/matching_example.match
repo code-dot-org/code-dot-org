@@ -1,33 +1,36 @@
 name 'matching example'
-encrypted '7eF8rIvAiLxUMwyk9/vGQBp4rqDK+Fxk2/iTMh8aK2rgHEZqmJF4OcFzS3xf
-DYrto8aXOIKRwcSO7E70tGIbpZOV7v3JhUbrXlFNvd9Gg17R6zvISTVy+uJW
-afY2UrcldTpF30PksQnI+Q1L21w6VPc89m8CC+t9bFcIvTSB7U/PSnl6g1g1
-Vn+/FR+Cz6vSB9gXo2+X5hYa2irr1yDKAr++vLT0bfULGq9YcJEL5ST91ycV
-FIwt33ZcPptbJ+VTmxYP20blGXkZBY3FGFC9ayFvf5fgxKG4TW1cLSea1yTW
-iYMMnH7ynEKDj+Jsb0S3XNN4mRS3TnJx23jn2MV1kvclTb6KfdK3IjCopTY2
-TGGUlgYG1QCGF2CM3yXWd2xO///q+ATZVPNYBu2LE0a6dn4sQlOcXaRTkRex
-beATY+tr1q7kGLF34OPS15P6VAx85yZQXgnkCDEs5MQ6plSJ7YVI/xMZvzlt
-rwMgP6JELzuiQ6qY3RtX4i+cjjAYavZgBcZcJQot7+stNPy6hZhIPqLfrzhc
-Ldj0sd0YdA8ydS0Is6c6YEmpDScvMtPoM6UGsIal8+rQw5EQcVADEffdUsJ+
-Z8KsSwNqw00XLn+OfqsxwsuoqUyhLFRnicFHUcPvPwQf6XS0CIbgIAfzF0T8
-g+dzCn+wi3sMIhXZ2vLP0egNCe8G+Dk1YEUARRdRxynILw+ZAwrlLherIPvw
-GGWMN63L1gRelvjNcxmOyiP3t+mkKHpY+SJeAYkKgkxacmQjdOHTMGSheiRU
-xkbhf/z3J+7B23P66LPsbmxRr2op0gGOWVKxn6i32vVnvqO9DrDgqD2u7Bsb
-W8hWGWN6uGB87eZS8+5/umC+nF6+92MfVQiEMr1pfJgqnYfXxlwQed+I4XNn
-9a+XURI7DAGNZxwrO57s3s2OtFLfrP3jdNqvlg4QO40mM9ouXAfBLURVU7wH
-zXkH+AF/Hgvlase0QcicfI4VzAEVwwDiBsFKgFgQ8TJWUe9l/swZLO6uPi88
-9Lf6s1ycaBdv38T9OAKLoUSNZJqH4cSBYwg/Jh8m5Sto2hH+2qigDhnoQy0c
-MaM5l0WY7WC/IHClJK+z7E19J8JBv0K7wu6QHz8mRYRekX6kpTk90A2iOyZz
-p7bIFTKP4PpKxU/yPVn8uAMs77mAxC0l3rbCWSaGub3XL3XLnnwnqAcNSonW
-uPrQwJErZomKOvg8jLYmax0AX10+zdhzOo/Sqe/RCmnpK4gRxGHwVCotFXx3
-XE36lcJWMIDXJGaaNAG97KeEFCGCBkwYI7OTyqN+woRRAWoE8wQ2h//me+ba
-lSNFKOoWhInixwlCX+eilbbsrPKSzzO9FXwLCY0IHKyzQdoxSW63ua4QmT8A
-K8n9Rh2rI/QbPmjv4eK3R+jzMIgaGzjlF3NXqSiyt0fZDDorHKl95leVlY87
-Ol3NcRxoVOYgpPpolTCBwa3sqQlxqfYgBgXWhBppRbllXrdt6DDsvSX/IcJU
-8Iad9ThDZl/TBxBUdhoApyR5FmG75m5O4u/I4tIZiHJjzJduFKsROavMMgBT
-FKFaNI0gb7gDE9L+sxbrNIyZBAizrIvEEDSGb+2D5Wj/ueypZHPlzPeELdhu
-EaeDHHC57uxTIP5rdxtbK7FmdAwSf0AxHgFqi6i1y43k1f9yJfXmrsRRSfpT
-ChWSHEZx5cnHS2WGhiW5Eyo8Ow2fDQSRWPOs+Qh4sZ4jfzIAscStQcGwoXd6
-oFnoY9HFjr/0OzGfCWvTa534jlkvzcWFcv/SeDIObwzARN2SxVl/aIr5hbm+
-Mv+/J7ioHvsrjftZtRLPsk+cV5l5K9YKaROHthmfV9qPk0MLFCCvGykg
-'
+
+height '75'
+
+description 'Match the following terms with their definitions'
+
+question '1computing device'
+question '2computing system'
+question '3computing network'
+question '4path'
+
+answer '1a machine that can run a program'
+answer '2a group of computers working together for a common purpose'
+answer '3a group of connected computers that can send or receive data'
+answer '4a sequence of direct connections'
+teacher_markdown <<MARKDOWN
+**Explanation:** These definitions were covered in [Lesson 2 - Building a Network](https://studio.code.org/s/csp2-2021/lessons/2) 
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* CSN-1.A.1: A computing device is a physical artifact that can run a program. Some examples include computers, tablets, servers, routers, and smart sensors.
+
+* CSN-1.A.2: A computing system is a group of computing devices and programs working together for a common purpose.
+
+* CSN-1.A.3: A computer network is a group of interconnected computing devices capable of sending or receiving data.
+
+* CSN-1.A.4: A computer network is a type of a computing system.
+
+* CSN-1.A.5: A path between two computing devices on a computer network (a sender or a receiver) is a sequence of directly-connected computing devices beginning at the sender and ending at the receiver.
+
+:::
+
+
+MARKDOWN
+
+allow_multiple_attempts true

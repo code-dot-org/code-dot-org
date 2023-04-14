@@ -9,13 +9,14 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-10 21:35:50 UTC",
+    "serialized_at": "2023-04-13 14:11:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2021,7 +2022,7 @@
       "key": "8cd52d1e-03e5-4c59-9395-6eae7402e05f",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code and their responses to The Painter handout.\n\n**Do This:** Explain the components of the `Painter` class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the `Painter` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***attribute***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***behavior***",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code and their responses to The Painter handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce UML diagrams.\n\n**Do This:** Explain the components of the `Painter` class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the `Painter` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***attribute***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***behavior***",
         "tips": [
           {
             "type": "teachingTip",
