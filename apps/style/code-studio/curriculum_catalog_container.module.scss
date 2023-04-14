@@ -1,7 +1,64 @@
 @use "color.scss";
+@use "breakpoints.scss";
 
 .catalogHeader {
+  position: relative;
+  padding: 4em 2em;
   background-color: color.$darkest_gray;
+}
+
+.catalogHeaderContent {
+  // AAAAAAAAAAAAAA MAX WIDTH
+  max-width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.headerTextWrapper {
+  position: relative;
+  float: left;
+  width: 60%;
+
+  // @media screen and (max-width: breakpoints.$width-md) {
+  //   width: 60%;
+  // }
+
+  @media screen and (max-width: breakpoints.$width-sm) {
+    width: 100%;
+  }
+}
+
+.headerText {
+  color: color.$white;
+}
+
+.headerImageContainer {
+  position: relative;
+  width: 33%;
+  float: right;
+
+  // @media screen and (max-width: breakpoints.$width-md) {
+  //   width: 33%;
+  // }
+
+  @media screen and (max-width: breakpoints.$width-sm) {
+    width: 100%;
+    margin-top: 2em;
+  }
+}
+
+.headerImage {
+  position: relative;
+  width: 100%;
+  top: 0;
+  right: 0;
+
+  @media screen and (max-width: breakpoints.$width-md) {
+    display: block;
+  }
 }
 
 .catalogContentContainer {

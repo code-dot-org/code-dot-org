@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
-import HeaderBanner from '../HeaderBanner';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import {translatedCourseOfferingDurations} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
@@ -11,12 +10,22 @@ import {translatedCourseOfferingDurations} from '@cdo/apps/templates/teacherDash
 const CurriculumCatalog = ({curriculaData}) => (
   <>
     <div className={style.catalogHeader}>
-      <HeaderBanner
-        headingText={i18n.curriculumCatalogHeaderTitle()}
-        subHeadingText={i18n.curriculumCatalogHeaderSubtitle()}
-        short={false}
-        imageUrl={CourseCatalogIllustration01}
-      />
+      <div className={style.catalogHeaderContent}>
+        <div className={style.headerTextWrapper}>
+          <h1 className={style.headerText}>
+            {i18n.curriculumCatalogHeaderTitle()}
+          </h1>
+          <p className={style.headerText}>
+            {i18n.curriculumCatalogHeaderSubtitle()}
+          </p>
+        </div>
+        <div className={style.headerImageContainer}>
+          <img
+            className={style.headerImage}
+            src={CourseCatalogIllustration01}
+          />
+        </div>
+      </div>
     </div>
     <div className={style.catalogContentContainer}>
       <div className={style.catalogContent}>
