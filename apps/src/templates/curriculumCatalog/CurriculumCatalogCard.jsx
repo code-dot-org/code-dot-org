@@ -7,8 +7,10 @@ import i18n from '@cdo/locale';
 import {
   translatedCourseOfferingCsTopics,
   translatedCourseOfferingSchoolSubjects,
-  translatedCourseOfferingDurations
+  translatedCourseOfferingDurations,
+  subjectsAndTopicsOrder
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
+import {concat, intersection} from 'lodash';
 import style from './curriculum_catalog_card.module.scss';
 
 const CurriculumCatalogCard = ({
@@ -35,12 +37,14 @@ const CurriculumCatalogCard = ({
       oldestGrade: gradesArray[gradesArray.length - 1]
     })}
     imageSrc={imageSrc}
-    subjectsAndTopics={[
-      ...subjects?.map(
-        subject => translatedCourseOfferingSchoolSubjects[subject]
-      ),
-      ...topics?.map(topic => translatedCourseOfferingCsTopics[topic])
-    ]}
+    subjectsAndTopics={intersection(
+      subjectsAndTopicsOrder,
+      concat(subjects, topics)
+    )?.map(
+      subject_or_topic_key =>
+        translatedCourseOfferingSchoolSubjects[subject_or_topic_key] ||
+        translatedCourseOfferingCsTopics[subject_or_topic_key]
+    )}
     quickViewButtonDescription={i18n.quickViewDescription({
       course_name: courseDisplayName
     })}
