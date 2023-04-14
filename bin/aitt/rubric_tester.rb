@@ -40,19 +40,19 @@ def validate_server_response(tsv_data, rubric)
   rubric_key_concepts = CSV.parse(rubric, headers: true).map {|row| row['Key Concept']}.uniq
 
   # 1. The response represents a table in TSV format
-  return false unless tsv_data.is_a?(Array)
+  return [false, 'invalid format'] unless tsv_data.is_a?(Array)
 
   # 2. The table's column names are "Key Concept", "Grade", and "Reason"
-  return false unless tsv_data.all? {|row| (row.keys & expected_columns) == expected_columns}
+  return [false, 'incorrect column names'] unless tsv_data.all? {|row| (row.keys & expected_columns) == expected_columns}
 
   # 3. The Key Concept column contains one entry for each Key Concept listed in the rubric
   key_concepts_from_response = tsv_data.map {|row| row["Key Concept"]}.uniq
-  return false unless rubric_key_concepts.sort == key_concepts_from_response.sort
+  return [false, 'invalid or missing key concept'] unless rubric_key_concepts.sort == key_concepts_from_response.sort
 
   # 4. All entries in the Grade column are one of the valid values
-  return false unless tsv_data.all? {|row| valid_grades.include?(row["Grade"])}
+  return [false, 'invalid grade value'] unless tsv_data.all? {|row| valid_grades.include?(row["Grade"])}
 
-  true
+  [true, nil]
 end
 
 def grade_student_work(prompt, rubric, student_code, student_id)
@@ -78,10 +78,11 @@ def grade_student_work(prompt, rubric, student_code, student_id)
     puts "#{student_id} request size #{data.to_json.size} succeeded in #{(Time.now - start_time).to_i} seconds"
     completed_text = response.parsed_response['choices'][0]['message']['content']
     tsv_data = parse_tsv(completed_text.strip)
-    if validate_server_response(tsv_data, rubric)
+    valid, reason = validate_server_response(tsv_data, rubric)
+    if valid
       tsv_data.map(&:to_h)
     else
-      puts "#{student_id} Invalid api response:\n#{completed_text}}"
+      puts "#{student_id} Invalid api response: #{reason}\n#{completed_text}}"
       nil
     end
   else
