@@ -98,7 +98,7 @@ module Api::V1::Pd
     def update
       application_data = application_params.to_h
 
-      if application_data[:status] != @application.status
+      if application_data[:status] && (application_data[:status] != @application.status)
         status_changed = true
       end
 
