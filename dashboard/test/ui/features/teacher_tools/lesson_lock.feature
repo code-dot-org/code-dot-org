@@ -1,4 +1,4 @@
-Feature: Stage Locking
+Feature: Lesson Locking
 
 @eyes
 Scenario: Stage Locking Dialog
