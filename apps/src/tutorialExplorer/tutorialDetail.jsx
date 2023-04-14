@@ -9,6 +9,9 @@ import Image from './image';
 import i18n from '@cdo/tutorialExplorer/locale';
 /* global ga */
 
+const QUERYABLE_ELEMENTS =
+  'a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])';
+
 export default class TutorialDetail extends React.Component {
   static propTypes = {
     showing: PropTypes.bool.isRequired,
@@ -28,12 +31,20 @@ export default class TutorialDetail extends React.Component {
   componentDidMount() {
     document.addEventListener('keydown', this.onKeyDown);
     document.addEventListener('focusin', this.focusIn);
-    this.startingScroll = [window.scrollX, window.scrollY];
   }
 
   componentWillUnmount() {
     document.removeEventListener('keydown', this.onKeyDown);
     document.removeEventListener('focusin', this.focusIn);
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    // If we weren't previously showing and are now, then keep track of our scroll position.
+    // This is because if we tab off the first element or past the last tutorial on the screen, it can adjust the
+    // scroll position, and we'll use this later to reset to where we started from.
+    if (this.props.showing && !prevProps.showing) {
+      this.startingScroll = [window.scrollX, window.scrollY];
+    }
   }
 
   onKeyDown = ({keyCode}) => {
@@ -51,10 +62,13 @@ export default class TutorialDetail extends React.Component {
   };
 
   focusIn = event => {
-    // for starters, if our scroll has changed since the dialog opened, then reset it to where we were at
-    // the beginning. Otherwise, if you shift-tab above the detail on the first tutorial or tab below the detail
-    // on a tutorial towards the end of the window, it'll fidget the scroll. This keeps it consistent.
-    if (window.scrollY !== this.startingScroll[1]) {
+    if (!this.props.showing) {
+      return;
+    }
+
+    // First of all, if we've drifted from it (by tabbing before the first tutorial or past one at the end of the
+    // window), then reset our scroll position.
+    if (this.startingScroll && window.scrollY !== this.startingScroll[1]) {
       window.scrollTo(...this.startingScroll);
     }
 
@@ -67,22 +81,20 @@ export default class TutorialDetail extends React.Component {
       If we're shifting focus away from the first button (and have left the modal), then we wrap around to the last link.
       Otherwise, if we're leaving, we return to the start at the first button.
 
-      This feels very clunky. :-(
-
       But it's to ensure that the user can only tab within the modal while it is open and cannot shift focus outside.
 
      */
     if (this.containerRef.current) {
       const inModal = this.containerRef.current.contains(event.target);
       if (!inModal) {
-        const firstButton =
-          this.containerRef.current.getElementsByTagName('button')[0];
-        const links = this.containerRef.current.getElementsByTagName('a');
-        const lastLink = links[links.length - 1];
-        if (event.relatedTarget === firstButton) {
-          lastLink.focus();
+        const queryables =
+          this.containerRef.current.querySelectorAll(QUERYABLE_ELEMENTS);
+        const first = queryables[0];
+        const last = queryables[queryables.length - 1];
+        if (event.relatedTarget === first) {
+          last.focus();
         } else {
-          firstButton.focus();
+          first.focus();
         }
       }
     }

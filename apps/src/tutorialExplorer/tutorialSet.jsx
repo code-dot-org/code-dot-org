@@ -8,6 +8,17 @@ import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
 import i18n from '@cdo/tutorialExplorer/locale';
 
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
 export default class TutorialSet extends React.Component {
   static propTypes = {
     tutorials: PropTypes.arrayOf(shapes.tutorial.isRequired).isRequired,
@@ -25,24 +36,27 @@ export default class TutorialSet extends React.Component {
     this.setState({showingDetail: true, chosenItem: item});
 
   tutorialDetailClosed = () => {
-    // okay, so while the tutorialDetail window is open, it's possible that the focus has changed
-    // the user could've hit left/right arrows while the detail was open and moved focus, or also could've
+    // Okay, so while the tutorialDetail window is open, it's possible that the focus has changed.
+    // The user could've hit left/right arrows while the detail was open and moved focus, or also could've
     // changed focus into the dialog, so before we wipe out the chosenItem, we find the associated
     // item in the tutorial list and focus it, and also make sure to scroll it into view because it's possible
     // the user navigated through enough of them to be off screen.
     const tutorialDiv = document.querySelectorAll(
       `[data-tutorial-code="${this.state.chosenItem.code}"]`
     )[0];
+
     if (
-      document.activeElement.hasAttribute('data-tutorial-code)') &&
+      document.activeElement.hasAttribute('data-tutorial-code') &&
       document.activeElement !== tutorialDiv
     ) {
-      // when in doubt, set timeout! _something_ is happening here that's fiddling with the focus, so we
-      // just defer it to the next run through of the even loop. if you remove this, the focus call will
+      // When in doubt, set timeout! _something_ is happening here that's fiddling with the focus, so we
+      // just defer it to the next run through of the even loop. if the setTimeout is removed, the focus call will
       // fail, although the scrollIntoView will work.
       setTimeout(() => {
         tutorialDiv.focus();
-        tutorialDiv.scrollIntoView();
+        if (!isInViewport(tutorialDiv)) {
+          tutorialDiv.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+        }
       }, 0);
     }
 
