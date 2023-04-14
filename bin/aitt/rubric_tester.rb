@@ -174,7 +174,7 @@ def generate_accuracy_table(accuracy_by_criteria)
   accuracy_table << '<tr><th>Key Concept</th><th>Accuracy</th></tr>'
   accuracy_by_criteria.each do |criteria, accuracy|
     color = calculate_accuracy_color(accuracy)
-    accuracy_table << "<tr><td>#{criteria}</td><td style=\"background-color: #{color};\">#{format('%.2f', accuracy)}%</td></tr>"
+    accuracy_table << "<tr><td>#{criteria}</td><td style=\"background-color: #{color};\">#{accuracy.to_i}%</td></tr>"
   end
   accuracy_table << '</table>'
   accuracy_table
