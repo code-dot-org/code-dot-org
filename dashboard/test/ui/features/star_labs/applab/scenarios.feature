@@ -5,6 +5,29 @@ Feature: App Lab Scenarios
     Given I start a new Applab project
     And I wait for the page to fully load
 
+  Scenario:
+    # Project Template Workspace Icon should not appear since this is not a project template backed level
+    Then element ".projectTemplateWorkspaceIcon" is not visible
+
+  Scenario: App Lab Http Image
+    # Create an app with an http image.
+    When I ensure droplet is in text mode
+    And I append text to droplet "image('test123', 'http://example.com')"
+    And I press "runButton"
+    And I wait until element "#divApplab > .screen > img#test123" is visible
+    And element "#divApplab > .screen > img#test123" has attribute "src" equal to "//studio.code.org/media?u=http%3A%2F%2Fexample.com"
+
+  Scenario: App Lab Clear Puzzle and Design Mode
+    # Create an app with a design mode button, then clear the puzzle
+    Given I switch to design mode
+    And I drag a BUTTON into the app
+    And I switch to code mode
+    And Applab HTML has a button
+    And I reset the puzzle to the starting version
+    And I wait to see "#divApplab"
+    And I wait until element "#divApplab" is visible
+    And Applab HTML has no button
+
   Scenario: Can read and set button text
     Given I ensure droplet is in text mode
     And I append text to droplet "button('testButton1', 'Peanut Butter');\n"
@@ -37,13 +60,13 @@ Feature: App Lab Scenarios
 
     # in text input, blur produces a change event
     When I press "runButton"
-    And I wait until element with id "text_input1" is visible
-    And I press keys "123" for element with id "text_input1"
+    And I wait until element "#divApplab > .screen > div#text_input1" is visible
+    And I press keys "123" for element "#text_input1"
     And I blur selector "#text_input1"
     Then element "#debug-output" has escaped text "\"text_input1: 123\""
 
     # in a text input, enter produces a change event but then blur does not
-    When I press keys "456\n" for element with id "text_input1"
+    When I press keys "456\n" for element "#text_input1"
     Then element "#debug-output" has escaped text "\"text_input1: 123\"\"text_input1: 123456\""
     And I blur selector "#text_input1"
     Then element "#debug-output" has escaped text "\"text_input1: 123\"\"text_input1: 123456\""
