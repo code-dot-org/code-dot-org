@@ -191,7 +191,7 @@ def generate_html_output(output_filename, prompt, rubric, accuracy, actual_grade
     file.puts '  <meta name="viewport" content="width=device-width, initial-scale=1.0">'
     file.puts '  <title>Rubric Test Results</title>'
     file.puts '</head>'
-    file.puts '<body>'
+    file.puts '<body style="-webkit-print-color-adjust: exact;">'
     file.puts "  <h2>Prompt:</h2>"
     file.puts "  <pre>#{prompt}</pre>"
     file.puts "  <h2>Rubric:</h2>"
