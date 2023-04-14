@@ -723,6 +723,7 @@ pl:
         csd_sprite_properties: Właściwości duszka
         csa-pl-documentation: Dokumentacja w Java Lab
         csc-starquilts-intro: 'CSC: Gwiezdne Kołdry'
+        csc-mapmakers-intro: "CSC: Twórcy map\\t"
         csa-pl-vocab-pm: Słownictwo zarządzania projektami
     callout:
       text:

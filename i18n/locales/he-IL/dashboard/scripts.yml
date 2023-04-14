@@ -2334,7 +2334,10 @@ he:
         csa5-2023: {}
         csa6-2023: {}
         csa7-2023: {}
-        csa8-2023: {}
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: סקר
         vpl-csd3-ayw-pilot-2022: {}
         vpl-csd4-ayw-pilot-2022: {}
         csa-magpie-lab: {}

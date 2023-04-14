@@ -20567,7 +20567,7 @@
         },
         "9a413780-6d7b-4341-9041-e8a1e3f540b6": {
           "name": "Algoritmayı Takip Edin",
-          "description": "Bugün hızlı bir oyunla başlayacağız. Bu oyunda, sana takip etmen için tüm emirleri vereceğim ve senin görevin talimatlarıma uymak. Komutlar her zaman “start” veya “dur” ile başlayacaktır. Eğer sana bir şey yapmaya başla dersem, bu davranışa başlaman ve ben sana durmanı söyleyene kadar devam etmelisin. Ayrıca sana “her şeyi durdurmanı” da söyleyebilirim. Bu da şu ana kadar sana verdiğim tüm davranışlara son verebileceğin anlamına geliyor. Üç raunt oynayacağız ve her turdan sonra size birkaç soru soracağım.",
+          "description": "Bugün hızlı bir oyunla başlayacağız. Bu oyunda, sana takip etmen için tüm emirleri vereceğim ve senin görevin talimatlarıma uymak. Komutlar her zaman “başla\" veya “dur” ile başlayacaktır. Eğer sana bir şey yapmaya başla dersem, bu davranışa başlaman ve ben sana durmanı söyleyene kadar devam etmelisin. Ayrıca sana “her şeyi durdurmanı” da söyleyebilirim. Bu da şu ana kadar sana verdiğim tüm davranışlara son verebileceğin anlamına geliyor. Üç raunt oynayacağız ve her turdan sonra size birkaç soru soracağım.",
           "progression_name": "Algoritmayı İzle - Bağlantısız Aktivite"
         },
         "0a66d8ca-05c2-4614-8349-39caa7d993db": {

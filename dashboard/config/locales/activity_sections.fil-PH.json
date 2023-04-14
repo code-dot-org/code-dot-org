@@ -2174,21 +2174,32 @@
           "description": " \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipan” na slide\n\n**Pag-isipan:** _Anong mga conditional ang ginamit mo sa iyong code ngayon?_"
         },
         "f909f46d-5551-4020-b2d5-402aa7f10361": {
-          "name": "Panimula"
+          "name": "Panimula",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipan” na slide\n\n**Pag-isipan:** _Kailan ka gagamit ng conditional statement sa iyong pang-araw-araw na buhay? Halimbawa: Kung malamig sa labas, magsusuot ako ng jacket._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Talakayin” na slide\n\n**Sabihin:** _Habang umuulan, gagamitin ko ang payong ko._\n\n**Talakayin:**\n\n-   _Ano ang ibig sabihin ng salitang \"habang\"?_\n\n_Kung sasabihin kong \"habang may butas, punan mo ng dumi\"_\n\n-   _Ano ang gagawin mo?_\n-   _Hanggang kailan mo gagawin iyon?_\n\nKapag gumamit ka ng salitang tulad ng \"habang\", umaasa ka sa isang kondisyon para sabihin sa computer kung gaano katagal dapat tumakbo ang loop. Ang kondisyon ay isang pahayag na sinubok at napag-alamang totoo o mali. Sa kaso sa itaas, ang kondisyon ay kung may butas. Posible lamang na mayroong butas o walang butas, kaya ang pahayag ay totoo o mali lamang.\n\nSabihin sa mga mag-aaral na matututo sila tungkol sa bagong uri ng loop. Dati, ang mga mag-aaral ay gumagamit lamang ng mga loop upang ulitin ang isang utos sa isang tiyak na bilang ng beses. Dito, hindi nila palaging malalaman kung ilang beses uulitin ang utos, gayunpaman, malalaman nila kung kailan hihinto o kung kailan magpapatuloy. Habang ang mga loop ay nagpapahintulot sa programmer na ulitin ang isang utos hangga't ang isang kondisyon ay totoo pa rin. Sa nakaraang halimbawa, ang kondisyon ay ang pagkakaroon ng butas.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang susunod na slide\n\n**Sabihin:** _Narito ang ilang beses na magiging kapaki-pakinabang ang paggamit ng habang na loop:_\n\n-   _Pagtakbo patungo sa bola habang nasa harap mo ito._\n-   _Pagpuno ng baso habang may espasyo para sa mas maraming likido._\n-   _Maglakad pasulong habang may landas sa unahan._\n\n _May naiisip ka bang iba?_"
+        },
+        "7940bfbf-6888-4db2-b1a7-290d2eb76ba4": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Preview ng Mga Online na Palaisipan” na slide\n\nKumuha ng palaisipan sa mga online na palaisipan ngayon na Code Studio. Inirerekomenda namin ang Palaisipan 6.\n\n-   Itanong sa klase kung ano ang dapat gawin ng magsasaka kapag nakarating siya sa bunton ng dumi.\n    -   Dapat siyang gumamit ng habang na loop para simulan ang pag-alis ng dumi.\n-   Gamitin ang `habang may pile / gawin` na block. Itanong sa klase kung ano ang dapat gawin ng magsasaka sa loob ng habang na loop. \n    -   Dapat ang magsasaka `alisin ang 1`. Ang magsasaka ay patuloy na \"magtatanggal ng 1 dumi\" habang may dumi. Sa madaling salita, kapag walang dumi, hindi na ipapatupad ang `alisin ang 1`!\n\nPunan ang natitirang code at pindutin ang `Run`. Talakayin sa klase kung bakit ito gumana."
+        },
+        "e65978b6-0ceb-4b82-b5b1-eafd778b8587": {
+          "description": "### Bokabularyo\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Bokabularyo” na slide\n\n-   **Kondisyon** - Isang bagay na sinusuri ng isang program upang makita kung ito ay totoo bago payagan ang isang aksiyon.\n\n-   **Loop** - Ang aksiyong paulit-ulit na paggawa ng isang bagay.\n\n-   **Repeat** - Upang gumawa ng isang bagay muli.\n\n-   **Habang na Loop** - Isang loop na patuloy na umuulit habang ang isang kondisyon ay totoo."
         },
         "6ff7be87-b051-4758-93c0-c618a6b80b3c": {
           "name": "Mga While Loops sa Farmer"
         },
         "e1adf430-4152-42c1-a520-f40716ca9378": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 1-3 - Pagbuo ng Kasanayan” na slide",
           "progression_name": "Pagbuo ng Kasanayan"
         },
         "0fa595d7-bcf7-4bf3-a292-22abb41aa813": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 4 - Mga Habang na Loop sa Magsasaka ” na video",
           "progression_name": "Video: Habang Nakikipag-Loop sa Magsasaka"
         },
         "af4d5d9b-dc83-44f1-b884-1aa62fcf1560": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 5 - Hulaan” na slide",
           "progression_name": "Prediksiyon"
         },
         "26d62974-617f-4322-ab5d-29e79e49cc87": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 6-9 - Pagbuo ng Kasanayan” na slide",
           "progression_name": "Pagbuo ng Kasanayan"
         },
         "9130d756-a245-4997-93d3-94264979355b": {
@@ -2204,6 +2215,7 @@
           "progression_name": "Prediksiyon"
         },
         "98a0f038-bf2d-4af7-9608-1ca327e1ef01": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 14 - Hamon” na slide",
           "progression_name": "Hamon"
         },
         "3694bab1-5f1b-411a-8170-601003b9d32c": {
@@ -2211,40 +2223,60 @@
           "progression_name": "Mga Ekstrang Aralin"
         },
         "44daf4e4-d94e-4ba5-9364-8e3a93dc267e": {
-          "name": "Pagmumuni-muni"
+          "name": "Pagmumuni-muni",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipan” na slide \n\n**Pag-isipan:** _Magbigay ng halimbawa ng puzzle kung saan gagamit ka ng habang na loop, ngunit huwag gumamit ng repeat na loop. Maaari ka bang magbigay ng halimbawa ng palaisipan kung saan gagamit ka ng repeat na loop, ngunit hindi habang na loop?_"
         },
         "cefe1ce5-6a04-45e4-8805-e5b94fff2197": {
           "name": "Panimula"
         },
+        "a7a4d003-5444-47f4-b1ba-5a9f9f5df724": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipan” na slide\n\n**Pag-isipan:** _Ilarawan ang isang oras kung kailan inulit mo ang isang aksiyon hanggang sa maging totoo ang ilang kondisyon._\n\n#### Preview ng Mga Online na Palaisipan\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Preview - Hanggang sa Loop ng Maze” na slide.\n\nKumuha ng palaisipan sa mga palaisipan ngayon ng Code Studio. Inirerekomenda namin ang Palaisipan 4. \n\n-   Itanong sa klase kung ano ang dapat ulitin ng ibon para makarating sa baboy.\n    -   Dapat ulitin ng ibon ang \"sumulong\", \"lumiko pakanan\", \"sumulong\", at pagkatapos ay \"lumiko pakaliwa\".\n-   Itanong sa klase kung ano ang magagamit nila para ulitin ang code na ito. \n    -   Dapat ulitin ng ibon ang pattern na ito _hanggang_ maabot nito ang baboy. \n\nPunan ang natitirang code gamit ang loop na \"ulitin hanggang\" at pindutin ang \"Run\". Talakayin sa klase kung bakit ito gumana."
+        },
+        "e2971c5e-0a19-4b23-a541-e8616aa68350": {
+          "description": "### Bokabularyo\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Bokabularyo” na slide\n\n-   **Kondisyon** - Isang bagay na sinusuri ng isang program upang makita kung ito ay totoo bago payagan ang isang aksiyon.\n\n-   **Mga Conditional** - Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga kondisyon.\n\n-   **Loop** - Ang aksiyon ng paulit-ulit na paggawa ng isang bagay.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Bokabularyo (pinagpatuloy)” na slide\n\n-   **Repeat** - Upang gumawa ng isang bagay muli.\n\n-   **Hanggang** - Isang utos na nagsasabi sa iyo na gawin ang isang bagay hanggang sa punto na ang isang bagay ay magiging totoo."
+        },
         "88a4ca9a-f917-418e-8c1c-2cc4ac814afd": {
+          "description": "#### Mga Online na Palaisipan\n\nAng pagsasama-sama ng mga konsepto ay hindi madali, ngunit ang hanay ng mga aralin na ito ay nilalayong tulungan ang mga mag-aaral na makita ang walang katapusang mga posibilidad ng coding kapag gumagamit ng mga kondisyon. Kung nahihirapan ang mga mag-aaral sa pag-unawa sa mga pagkakatulad o pagkakaiba sa pagitan ng mga loop na \"habang\" at mga loop na \"hanggang\", subukan nilang isipin kung paano nila gagamitin ang mga katulad na pahayag sa kanilang totoong buhay.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakitaang “Antas 1 - Pagbuo ng Kasanayan” na slide",
           "progression_name": "Pagbuo ng Kasanayan"
         },
         "fad7d572-0e05-4122-854b-ee145920d5ec": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Ulitin ang Hanggang Mga Pahayag” na video",
           "progression_name": "Video: Ulitin Hanggang sa Mga Pahayag"
         },
         "0878bb75-72da-454e-8ac9-d06588287cde": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 3 - Hula” na slide ",
           "progression_name": "Prediksiyon"
         },
         "34a17d75-d294-42da-b0ca-57ddd75b50cb": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 4-8 - Pagbuo ng Kasanayan” na slide",
           "progression_name": "Pagbuo ng Kasanayan"
         },
         "0664bded-dced-45bc-954d-8bc7d7734235": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 9 - Hamon” na slide",
           "progression_name": "Hamon"
         },
         "9ee3da3a-7860-4af1-9e89-3c3f7f99192d": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 10 - Magsanay” na slide",
           "progression_name": "Pagsasanay"
         },
         "c5b4eff7-95ff-4c51-acb5-2c23f8758991": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 11 - Hula” na slide ",
           "progression_name": "Prediksiyon"
         },
         "baf8f43c-6977-4f51-a3c6-3b571a735941": {
+          "description": "#### Mga Ekstrang Aralin\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Mga Ekstrang Aralin\" na slide",
           "progression_name": "Mga Ekstrang Aralin"
         },
         "4ebb7582-e4f3-4765-b03c-b08a688ad90f": {
-          "name": "Pakikipagtalakayan"
+          "name": "Pakikipagtalakayan",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Talakayin” na slide"
+        },
+        "9c905d42-483f-425e-b23f-6049994cc2d8": {
+          "description": "Mayroong walang katapusang mga posibilidad ng coding kapag gumagamit ng mga kondisyon. \n\nNgayon isipin kung paano mo gagamitin ang mga pahayag na may \"habang\" at \"hanggang\" sa totoong buhay mo."
         },
         "3f2558c3-0eb6-492f-b17b-0eeb7f5f393a": {
-          "name": "Pagmumuni-muni"
+          "name": "Pagmumuni-muni",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipa” na slide\n\n**Pag-isipan:** - _Ano ang pagkakaiba sa pagitan ng \"hanggang\" na loop at ng \"habang\" na loop?_"
         },
         "48252ddc-731f-41bc-9552-10c5aa32acce": {
           "name": "Pagmumuni-muni"
@@ -2948,6 +2980,7 @@
           "name": "Panimula"
         },
         "a24e03d0-5524-46ec-ab96-a0b1d9b24d8b": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 1-3 - Pagbuo ng Kasanayan” na slide",
           "tips": [
             null
           ],
@@ -2957,9 +2990,11 @@
           "progression_name": "Video: Habang Nakikipag-Loop sa Magsasaka"
         },
         "ee4b7d3c-b6b2-4e05-bcb8-cedc77db80c0": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 5 - Hulaan” na slide",
           "progression_name": "Prediksiyon"
         },
         "2908bd65-d321-4b6f-a5f3-6d550564bbaa": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 6-9 - Pagbuo ng Kasanayan” na slide",
           "progression_name": "Pagbuo ng Kasanayan"
         },
         "e81da78c-ac8a-4212-bbe4-07ba9cfebc9e": {

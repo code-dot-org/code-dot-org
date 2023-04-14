@@ -3086,6 +3086,14 @@ mn:
           lessons:
             lesson-3:
               name: Гогцоонд зориулав
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Оюуны өмч
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Судалгаа
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

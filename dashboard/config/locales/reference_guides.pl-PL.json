@@ -12,10 +12,12 @@
           "display_name": "Karta Animacja"
         },
         "csd-2022/app-lab": {
-          "display_name": "App Lab"
+          "display_name": "App Lab",
+          "content": "App Lab to narzędzie zbudowane z [JavaScript](/concepts/javascript/), które może być używane do tworzenia aplikacji. Więcej informacji na temat poleceń w aplikacji App Lab znajduje się w [Dokumentacja App Lab](/docs/applab/)."
         },
         "csd-2022/applab-overview": {
-          "display_name": "Streszczenie"
+          "display_name": "Streszczenie",
+          "content": "App Lab to narzędzie zbudowane z [JavaScript](/concepts/javascript/), które może być używane do tworzenia aplikacji. Więcej informacji na temat poleceń w aplikacji App Lab znajduje się w [Dokumentacja App Lab](/docs/applab/)."
         },
         "csd-2022/arrays": {
           "display_name": "Tablice"
@@ -23,11 +25,15 @@
         "csd-2022/board-events": {
           "display_name": "Zdarzenia na tablicy"
         },
+        "csd-2022/checking-multiple-conditions-with-if-else-if": {
+          "display_name": "Sprawdzanie wielu warunków za pomocą If-Else-If (jeśli ... w przeciwnym razie ... jeśli)"
+        },
         "csd-2022/circuit-playground": {
           "display_name": "Omówienie placu zabaw"
         },
         "csd-2022/circuit-playground-parent": {
-          "display_name": "Adafruit Circuit plac zabaw"
+          "display_name": "Adafruit Circuit plac zabaw",
+          "content": "Te zasoby odnoszą się konkretnie do funkcji [Circuit Playground](/maker/circuitplayground)."
         },
         "csd-2022/classes": {
           "display_name": "Klasy"
@@ -41,9 +47,15 @@
         "csd-2022/css-overview": {
           "display_name": "Streszczenie"
         },
+        "csd-2022/data-and-change-events": {
+          "display_name": "Zdarzenia danych i zmian"
+        },
         "csd-2022/debugging-html": {
           "display_name": "Debugowanie w HTML",
           "content": "## Debugowanie w HTML\n\n\\*\\* Co to jest błąd? \\*\\*\n\nBłędy to pomyłki w kodzie, które powodują, że nie działa on zgodnie z planem.\n\n\\*\\* Co to jest debugowanie? \\*\\*\n\nDebugowanie to proces znajdowania i naprawiania błędów. Debugowanie jest procesem rozwiązywania problemów, więc użyj kroków rozwiązywania problemów podczas próby debugowania.\n\n\\*\\*Jakie są przykłady błędów? \\*\\* \n\nBłędem może być wszystko, co powoduje, że kod nie działa zgodnie z planem. Niektóre przykłady to błędna pisownia, umieszczenie kodu w niewłaściwym miejscu, użycie niewłaściwego tagu, lub zapominanie o zamknięciu tagu."
+        },
+        "csd-2022/debugging-variable-scope-functions": {
+          "display_name": "Zakres debugowania zmiennej: Funkcje"
         },
         "csd-2022/design-mode": {
           "display_name": "Tryb projektowania"
@@ -93,7 +105,8 @@
           "display_name": "Streszczenie"
         },
         "csd-2022/lists": {
-          "display_name": "Listy"
+          "display_name": "Listy",
+          "content": "W HTML-u są dwa rodzaje list, uporządkowane i nieuporządkowane.\n\n## Listy uporządkowane\n\nUporządkowana lista to zbiór numerowanych pozycji.\n\n<table border=\"1\" style=\"float:right; margin-left: 20px;\">\n<tr>\n<td>Przykład</td>\n<td>Wynik</td>\n</tr>\n<tr>\n<td>\n<pre>\n&lt;ol&gt;\n    &lt;li&gt;Krok 1 &lt;/li&gt;\n    &lt;li&gt;Krok 2 &lt;/li&gt;\n    &lt;li&gt;Krok 3 &lt;/li&gt;\n&lt;/ol&gt;\n</pre></td>\n<td><img src=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04 PM.png\" style=\"width:150px\"></td>\n</tr>\n</table>\n\nLista uporządkowana ma znacznik '<ol>'. Jest to skrót od <strong>O</strong>rdered <strong>L</strong>ist. Każda pozycja na tej liście jest oznaczona elementem pozycji listy '<li>'. Jest to skrót od <strong>L</strong>ist <strong>I</strong>tem. Element listy jest elementem podrzędnym w stosunku do elementu nadrzędnego, uporządkowanej listy (`<ol>`).\n\nUtworzenie uporządkowanej listy składa się z dwóch kroków: utworzenia listy i dodawania elementów listy. Aby utworzyć uporządkowaną listę, wpisz tagi listy uporządkowanej `<ol> </ol>`, a następnie dodawaj elementy listy **wewnątrz** tagów listy uporządkowanej. Aby utworzyć element takiej listy, użyj tagów elementu listy `<li> </li>` i umieść element tej listy wewnątrz tych tagów.\n\nPrzydatne może być wcięcie znaczników '<li>', aby było jasne, że są one zawarte w znaczniku '<ol>'.\n\n## Listy nieuporządkowane\n\nLista nieuporządkowana to zbiór elementów punktowanych.\n\n<table border=\"1\" style=\"float: right; margin-left: 20px;\">\n<tr>\n<td>Przykład</td>\n<td>Wynik</td>\n</tr>\n<tr>\n<td>\n<pre>\n&lt;ul&gt;\n    &lt;li&gt;Czerwony &lt;/li&gt;\n    &lt;li&gt;Zielony &lt;/li&gt;\n    &lt;li&gt;Niebieski&lt;/li&gt;\n&lt;/ul&gt;\n</pre>\n</td>\n<td><img src=\"https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32 PM.png\" style=\"width:150px\"></td>\n</tr>\n</table>\n\nLista nieuporządkowana ma znacznik `<ul>'. Jest to skrót od <strong>U</strong>nordered <strong>L</strong>ist. Każda pozycja na tej liście jest oznaczona elementem pozycji '<li>'. Jest to skrót od <strong>L</strong>ist <strong>I</strong>tem. Element listy jest elementem podrzędnymw stosunku do elementu nadrzędnego, nieuporządkowanej listy (`<ul>\\`).\n\nUtworzenie nieuporządkowanej listy składa się z dwóch kroków: utworzenia listy i dodawania elementów listy. Aby utworzyć listę nieuporządkowaną, wpisz tagi listy nieuporządkowane `<ul> </ul>`, a następnie dodawaj elementy listy **wewnątrz**  tagów listy nieuporządkowanej. Aby utworzyć element takiej listy, użyj tagów elementów listy `<li> </li>` i umieść element tej listy wewnątrz tych tagów.\n\nPomocne może być wcięcie znaczników `</li>`, aby było jasne, że są one zawarte w znaczniku `<ul>`.\n\n## Dodatkowe informacje o strukturze\n\n<img src=\"https://images.code.org/d9b5053f9b13286dad2714f6416c0a09-image-1664558778316.jpg\" style=\"width:500px\">\n\n## Lista zawartość pozycji\n\n<img src=\"https://images.code.org/a00a4377aa5b6688e8b0f554008e6210-image-1664558975676.jpg\" style=\"width:500px \">\n\n**W3 Linki szkolne**\n\n-   [\\\\\\<li>](https://www.w3schools.com/tags/tag_li.asp)\n-   [\\\\\\<ul>](https://www.w3schools.com/tags/tag_ul.asp)\n-   [\\\\\\<ol>](https://www.w3schools.com/tags/tag_ol.asp)"
         },
         "csd-2022/maker-toolkit": {
           "display_name": "Przybornik konstruktora"
@@ -114,7 +127,8 @@
           "display_name": "Przegląd micro:bita"
         },
         "csd-2022/microbit-parent": {
-          "display_name": "BBC micro:bit"
+          "display_name": "BBC micro:bit",
+          "content": "Te zasoby odnoszą się konkretnie do funkcji [BBC micro:bit](/maker/microbit)"
         },
         "csd-2022/microbit-physical-input": {
           "display_name": "Wejście fizyczne micro:bita "
@@ -124,6 +138,9 @@
         },
         "csd-2022/model-cards-in-ai-lab": {
           "display_name": "Karty modeli w AI Lab"
+        },
+        "csd-2022/multi-frame-animations": {
+          "display_name": "Animacje wieloklatkowe"
         },
         "csd-2022/multi-screen-apps": {
           "display_name": "Aplikacje wieloekranowe"
@@ -138,7 +155,8 @@
           "display_name": "Wzorce"
         },
         "csd-2022/patterns-2": {
-          "display_name": "Wzorce"
+          "display_name": "Wzorce",
+          "content": "Przydatne wzorce programowania"
         },
         "csd-2022/patterns-overview": {
           "display_name": "Streszczenie"
@@ -158,14 +176,27 @@
         "csd-2022/problem-solving-process-programming": {
           "display_name": "Proces rozwiązywania problemów z programowaniem"
         },
+        "csd-2022/random-list-access": {
+          "display_name": "Losowy wzór dostępu do listy"
+        },
         "csd-2022/random-numbers": {
           "display_name": "Losowe liczby"
+        },
+        "csd-2022/saving-and-uploading-csv-files": {
+          "display_name": "Zapisywanie i przesyłanie plików CSV",
+          "content": "## Video\n\n(Otwiera YouTube w nowej karcie)\n\n[![Wyświetl i pobierz dane ankietowe](https://curriculum.code.org/media/uploads/Capture_y8455Uw.PNG)](https://www.youtube.com/watch?v=J0Avopx7FpM)"
         },
         "csd-2022/sprite-properties": {
           "display_name": "Właściwości duszka"
         },
         "csd-2022/sprites": {
           "display_name": "Duszki"
+        },
+        "csd-2022/update-screen-pattern": {
+          "display_name": "Wzorzec updateScreen()"
+        },
+        "csd-2022/variable-with-string-concatenation-pattern": {
+          "display_name": "Zmienna ze wzorem konkatenacji łańcuchów"
         },
         "csd-2022/variables": {
           "display_name": "Zmienne"
