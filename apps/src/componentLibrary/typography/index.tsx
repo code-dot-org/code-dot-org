@@ -1,42 +1,47 @@
 import React from 'react';
 import classnames from 'classnames';
-// import styles from './Typography.module.scss';
 
 const styles = require('./typography.module.scss').default;
 
-type TypographyProps = {
+type SemanticTag =
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'h6'
+  | 'p'
+  | 'strong'
+  | 'em'
+  | 'figcaption';
+
+type VisualApproach =
+  | 'heading-xxl'
+  | 'heading-xl'
+  | 'heading-lg'
+  | 'heading-md'
+  | 'heading-sm'
+  | 'heading-xs'
+  | 'body-one'
+  | 'body-two'
+  | 'overline'
+  | 'strong'
+  | 'em';
+
+interface TypographyProps {
   // Html tag to use for the typography element
-  semanticTag:
-    | 'h1'
-    | 'h2'
-    | 'h3'
-    | 'h4'
-    | 'h5'
-    | 'h6'
-    | 'p'
-    | 'strong'
-    | 'em'
-    | 'figcaption';
+  semanticTag: SemanticTag;
   // Scss module classname to use for the typography element
-  visualApproach?:
-    | 'heading-xxl'
-    | 'heading-xl'
-    | 'heading-lg'
-    | 'heading-md'
-    | 'heading-sm'
-    | 'heading-xs'
-    | 'body-one'
-    | 'body-two'
-    | 'overline'
-    | 'strong'
-    | 'em';
-  // Inline styles to apply to the typography element
-  style?: React.CSSProperties;
+  visualApproach?: VisualApproach;
+
   // Additional classnames to apply to the typography element
   className?: string;
+  // Inline styles to apply to the typography element
+  style?: React.CSSProperties;
   // Text or other elements to render inside the typography element
   children: React.ReactNode;
-};
+}
+
 const Typography: React.FunctionComponent<TypographyProps> = ({
   semanticTag,
   visualApproach,
@@ -62,5 +67,11 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
   );
 };
 
-export {default as Heading1} from './Heading1';
+export {SemanticTag, VisualApproach};
+export {default as Heading1} from './components/Heading1';
+export {default as Heading2} from './components/Heading2';
+export {default as Heading3} from './components/Heading3';
+export {default as Heading4} from './components/Heading4';
+export {default as Heading5} from './components/Heading5';
+export {default as Heading6} from './components/Heading6';
 export default Typography;
