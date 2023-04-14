@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-adaptations",
-    "serialized_at": "2023-04-12 21:28:29 UTC",
+    "serialized_at": "2023-04-13 23:12:53 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -248,7 +248,7 @@
       "key": "8c2f83ad-c319-45f6-aef5-d6bd464c1f0e",
       "position": 3,
       "properties": {
-        "description": "**Discuss**: _What do these animals have in common? Frog, duck, otter, penguin, alligator._ \n\n- _Where do they live?_ \n- _How much time do they spend in water?_\n- _What do their feet look like?_\n- _What is the best kind of foot for swimming? Why?_\n\nUse the example of webbed feet to help students understand that animals have developed body parts which help them in their specific environments. This will be a great introduction to other animal adaptations. Students should discuss similarities and differences between the animals listed. Let them start with very broad points such as: \n\n- _They’re all alive._ \n- _They live on Earth._ \n- _They all have a body._ \n- _They all have a head._\n- _They all have legs._ \n- _They live near or in water._\n\nThen when students start on the right track, help them get more specific:\n\n- _They all have feet._ \n- _Their feet help them swim._\n\nReveal one hint at a time on the slides to help students reach the answer: \n- _They all have webbed feet._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n"
+        "description": "**Discuss**: _What do these animals have in common? Frog, duck, otter, penguin, alligator._ \n\n**Discussion Goal**: Students should discuss similarities and differences between the animals listed. Let them start with very broad answers to the questions such as: \n\n- _They’re all alive._ \n- _They live on Earth._ \n- _They all have a body._ \n- _They all have a head._\n- _They all have legs._ \n- _They live near or in water._\n\nThen when students start on the right track, help them get more specific:\n\n- _They all have feet._ \n- _Their feet help them swim._\n\nReveal one hint at a time on the slides to help students reach the answer: \n- _They all have webbed feet._\n\nUse the example of webbed feet to help students understand that animals have developed body parts which help them in their specific environments. This will be a great introduction to other animal adaptations. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n"
       },
       "seeding_key": {
         "activity_section.key": "8c2f83ad-c319-45f6-aef5-d6bd464c1f0e",
@@ -361,8 +361,8 @@
       "key": "d8ad2443-d4db-413f-8b6e-deeb10d2c3b2",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Welcome to Sprite Lab” video",
-        "progression_name": "Video: Hello World: Welcome to Sprite Lab"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Animal Adaptations Introduction\" video",
+        "progression_name": "Video: Animal Adaptations Introduction"
       },
       "seeding_key": {
         "activity_section.key": "d8ad2443-d4db-413f-8b6e-deeb10d2c3b2",
@@ -423,7 +423,7 @@
       "key": "9b011b7d-ac36-4362-bf14-0a9c4c6a33ec",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n- _Name some animals that live in our state_ \n- _What challenges do they have in their current environment?_ \n- _If we had a time machine and visited these animals 1000 years from now, how might they have adapted to survive those threats?_\n\n**Discussion Goal**: The goal of this short discussion is to draw a connection to animals students have seen in their local environment. Through this discussion, students will be able to explain that animals change in order to survive. Survival may mean growing a longer neck to reach the food, changing fur colors to escape predators, moving to more hospitable climates, or gathering in groups. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n- _Name some animals that live in our state._ \n- _What challenges do they have in their current environment?_ \n- _If we had a time machine and visited these animals 1000 years from now, how might they have adapted to survive those threats?_\n\n**Discussion Goal**: The goal of this short discussion is to draw a connection to animals students have seen in their local environment. Through this discussion, students will be able to explain that animals change in order to survive. Survival may mean growing a longer neck to reach the food, changing fur colors to escape predators, moving to more hospitable climates, or gathering in groups. ",
         "duration": "5",
         "name": "Discuss"
       },
@@ -436,7 +436,7 @@
       "key": "f8b819ac-8167-4a55-8c10-fa7febe38b15",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think About It” slide \n\n**Do This:** Read the two questions out loud. Allow students 2-4 minutes to think or write independently.\n\n**Discuss:** \n- _What are these animals doing?_\n- _What do the pictures have in common?_\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think About It” slide \n\n**Do This:** Read the two questions out loud. Allow students 2-4 minutes to think or write independently.\n\n**Discuss:** \n- _What are these animals doing?_\n- _What do the pictures have in common?_\n\n**Discussion Goal**: Students should start to notice that both pictures show animals moving in groups. This is a behavior for survival! \n\n",
         "duration": "10",
         "name": "Think & Discuss"
       },
@@ -724,7 +724,7 @@
         "level_keys": [
           "coursee_helloworld_introtosprites_2023"
         ],
-        "progression": "Video: Hello World: Welcome to Sprite Lab"
+        "progression": "Video: Animal Adaptations Introduction"
       },
       "bonus": false,
       "seeding_key": {
@@ -1891,6 +1891,16 @@
       }
     },
     {
+      "key": "camouflage",
+      "word": "Camouflage",
+      "definition": "A defense mechanism organisms use to disguise their appearance and blend in with their environment",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "camouflage"
+      }
+    },
+    {
       "key": "code",
       "word": "Code",
       "definition": "(v) To write instructions for a computer",
@@ -1936,6 +1946,12 @@
       "seeding_key": {
         "lesson.key": "Modeling Animal Adaptations (pilot)",
         "vocabulary.key": "adaptation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Modeling Animal Adaptations (pilot)",
+        "vocabulary.key": "camouflage"
       }
     },
     {

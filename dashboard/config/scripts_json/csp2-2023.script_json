@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-12 18:48:27 UTC",
+    "serialized_at": "2023-04-13 20:51:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3011,16 +3011,6 @@
       }
     },
     {
-      "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
-      "key": "csp_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide"
-      }
-    },
-    {
       "name": "CSP Unit 2 - The Internet",
       "url": "https://docs.google.com/presentation/d/1_zu1SnbU6qUkfR16tk6eWHyQzoCrwhUP4IhnHQXCmLE/copy",
       "key": "csp_unit_2_-_the_internet",
@@ -3272,6 +3262,18 @@
       }
     },
     {
+      "name": "Unit 2 Journal",
+      "url": "https://docs.google.com/presentation/d/1NtMSIh3MvntilZoShxE5VhXdxS6Aqfo3SxGIdrbc_Cs/edit?usp=share_link",
+      "key": "unit_2_journal",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_journal"
+      }
+    },
+    {
       "name": "Welcome to the Internet",
       "url": "https://docs.google.com/presentation/d/10FQTUZnQE_H6pfaNhQ2S28hQAkZ8ITqFMJUjESVoZF0/template/preview",
       "key": "welcome_to_the_internet",
@@ -3452,19 +3454,24 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
+        "resource.key": "teacher_forum",
         "script.name": "csp2-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "teacher_forum",
+        "resource.key": "unit_2_journal",
         "script.name": "csp2-2023"
       }
     }
   ],
   "scripts_student_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "unit_2_journal",
+        "script.name": "csp2-2023"
+      }
+    }
   ],
   "vocabularies": [
 

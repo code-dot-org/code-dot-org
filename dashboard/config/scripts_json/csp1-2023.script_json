@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-12 18:42:59 UTC",
+    "serialized_at": "2023-04-13 20:51:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5595,16 +5595,6 @@
       }
     },
     {
-      "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
-      "key": "csp_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide"
-      }
-    },
-    {
       "name": "csp_unit_1-10_-_digital_information",
       "url": "https://docs.google.com/presentation/d/1JJ-IX_dV6497KXmimsIOussZQoDOS9cV8udzeRaeJ-E/",
       "key": "csp_unit_1-10_-_digital_information",
@@ -6057,13 +6047,15 @@
       }
     },
     {
-      "name": "Virtual Modification Resources",
-      "url": "https://docs.google.com/document/d/11hSBtl5mdkbbRNrjzafjKnVJntAdIj8JjtN2bFkbol0/view",
-      "key": "virtual_modification_resources",
+      "name": "Unit 1 Journal",
+      "url": "https://docs.google.com/presentation/d/1nCwU7a83mgtEIKId1Fw-JzsZkHicWN12WeCTDMJkw68/edit?usp=share_link",
+      "key": "unit_1_journal",
       "properties": {
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "virtual_modification_resources"
+        "resource.key": "unit_1_journal"
       }
     }
   ],
@@ -6354,25 +6346,24 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
-        "script.name": "csp1-2023"
-      }
-    },
-    {
-      "seeding_key": {
         "resource.key": "teacher_forum",
         "script.name": "csp1-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "virtual_modification_resources",
+        "resource.key": "unit_1_journal",
         "script.name": "csp1-2023"
       }
     }
   ],
   "scripts_student_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "unit_1_journal",
+        "script.name": "csp1-2023"
+      }
+    }
   ],
   "vocabularies": [
 
