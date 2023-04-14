@@ -140,6 +140,7 @@ module Cdo
     end
 
     def javabuilder_url(path = '', scheme = '')
+      # return 'wss://javabuilder-demo.code.org'
       if rack_env?(:development)
         # Since pegasus and dashboard share the same port, we have a Route53
         # DNS record that redirects requests to localhost. Javabuilder, as a
@@ -159,6 +160,7 @@ module Cdo
     end
 
     def javabuilder_upload_url(path = '', scheme = '')
+      # return 'https://javabuilder-demo-http.code.org/seedsources/sources.json'
       if rack_env?(:development)
         # On localhost, we default to using the "test" Javabuilder stack. To point
         # to your Javabuilder WebSocket server running on localhost, set

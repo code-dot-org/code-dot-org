@@ -4,7 +4,7 @@ require 'cdo/firehose'
 
 class JavabuilderSessionsController < ApplicationController
   include JavalabFilesHelper
-  authorize_resource class: false
+  # authorize_resource class: false
 
   PRIVATE_KEY = CDO.javabuilder_private_key
   PASSWORD = CDO.javabuilder_key_password
@@ -60,9 +60,20 @@ class JavabuilderSessionsController < ApplicationController
   end
 
   private def upload_project_files_and_render(session_id, project_files, encoded_payload)
-    response = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload)
+    # this gets called from all of the access token methods, not sure if that's desired/necessary
+    # how do we want this to interact with local development?
+    if current_user.verified_instructor? || current_user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
+      javabuilder_url = CDO.javabuilder_url
+      javabuilder_upload_url = CDO.javabuilder_upload_url
+    else
+      javabuilder_url = 'wss://javabuilder-demo.code.org'
+      javabuilder_upload_url = 'https://javabuilder-demo-http.code.org/seedsources/sources.json'
+    end
+    # add condition for non-teacher accounts
+
+    response = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload, javabuilder_upload_url)
     if response
-      return render(json: {token: encoded_payload, session_id: session_id}) if response.code == '200'
+      return render(json: {token: encoded_payload, session_id: session_id, javabuilder_url: javabuilder_url}) if response.code == '200'
       return render(status: response.code, json: response.body)
     else
       return render(status: :internal_server_error, json: {error: "Error uploading sources."})
@@ -100,8 +111,10 @@ class JavabuilderSessionsController < ApplicationController
     create_encoded_payload(payload)
   end
 
+  # turn off classroom limit?
+  # need to update this to include the unverified teacher ID in eval mode
   private def get_teacher_list
-    if current_user.verified_instructor?
+    if current_user.verified_instructor? || current_user.teacher?
       return [current_user.id]
     end
     teachers = []
