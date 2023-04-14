@@ -45,22 +45,17 @@ export default class TutorialSet extends React.Component {
       `[data-tutorial-code="${this.state.chosenItem.code}"]`
     )[0];
 
+    this.setState({showingDetail: false, chosenItem: null});
+
     if (
       document.activeElement.hasAttribute('data-tutorial-code') &&
       document.activeElement !== tutorialDiv
     ) {
-      // When in doubt, set timeout! _something_ is happening here that's fiddling with the focus, so we
-      // just defer it to the next run through of the even loop. if the setTimeout is removed, the focus call will
-      // fail, although the scrollIntoView will work.
-      setTimeout(() => {
-        tutorialDiv.focus();
-        if (!isInViewport(tutorialDiv)) {
-          tutorialDiv.scrollIntoView({behavior: 'smooth', block: 'nearest'});
-        }
-      }, 0);
+      tutorialDiv.focus();
+      if (!isInViewport(tutorialDiv)) {
+        tutorialDiv.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+      }
     }
-
-    this.setState({showingDetail: false, chosenItem: null});
   };
 
   changeTutorial = delta => {
