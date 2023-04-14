@@ -1,4 +1,4 @@
-Feature: Stage Locking
+Feature: Lesson Locking Retake
 
 @eyes
 Scenario: Lock settings for retake not submit scenario
