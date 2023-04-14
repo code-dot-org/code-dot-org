@@ -35,7 +35,7 @@ export default class JavabuilderConnection {
     onConnectDone
   ) {
     this.channelId = project.getCurrentId();
-    this.javabuilderUrl = javabuilderUrl;
+    // this.javabuilderUrl = javabuilderUrl;
     this.onOutputMessage = onMessage;
     this.miniApp = miniApp;
     this.levelId = serverLevelId;
@@ -149,6 +149,7 @@ export default class JavabuilderConnection {
 
     try {
       const result = await $.ajax(ajaxPayload);
+      this.javabuilderUrl = result.javabuilder_url;
       this.establishWebsocketConnection(result.token);
     } catch (error) {
       if (error.status === 403) {
