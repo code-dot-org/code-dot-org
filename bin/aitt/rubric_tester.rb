@@ -180,7 +180,7 @@ def generate_accuracy_table(accuracy_by_criteria)
   accuracy_table
 end
 
-def generate_html_output(output_filename, prompt, rubric, accuracy, actual_grades, expected_grades, accuracy_by_criteria)
+def generate_html_output(output_filename, prompt, rubric, accuracy, actual_grades, expected_grades, accuracy_by_criteria, errors)
   link_base_url = "file://#{`pwd`.strip}/sample_code"
 
   File.open(output_filename, 'w') do |file|
@@ -196,6 +196,10 @@ def generate_html_output(output_filename, prompt, rubric, accuracy, actual_grade
     file.puts "  <pre>#{prompt}</pre>"
     file.puts "  <h2>Rubric:</h2>"
     file.puts rubric_to_html_table(rubric)
+    if errors.count > 0
+      file.puts "  <h2>Errors: #{errors.count}</h2>"
+      file.puts "  #{errors.join(', ')} failed to load"
+    end
     file.puts "  <h2>Overall Accuracy: #{accuracy.to_i}%</h2>"
     file.puts "  <h2>Accuracy by Key Concept:</h2>"
     file.puts generate_accuracy_table(accuracy_by_criteria)
@@ -240,11 +244,12 @@ def main
   end
 
   # skip students with invalid api response
+  errors = actual_grades.reject(&:last).map(&:first)
   actual_grades = actual_grades.select(&:last).to_h
 
   accuracy_by_criteria, overall_accuracy = compute_accuracy(expected_grades, actual_grades)
   output_file = generate_html_output(
-    output_filename, prompt, rubric, overall_accuracy, actual_grades, expected_grades, accuracy_by_criteria
+    output_filename, prompt, rubric, overall_accuracy, actual_grades, expected_grades, accuracy_by_criteria, errors
   )
   puts "main finished in #{(Time.now - main_start_time).to_i} seconds"
 
