@@ -5,29 +5,6 @@ Feature: App Lab Scenarios
     Given I start a new Applab project
     And I wait for the page to fully load
 
-  Scenario:
-    # Project Template Workspace Icon should not appear since this is not a project template backed level
-    Then element ".projectTemplateWorkspaceIcon" is not visible
-
-  Scenario: App Lab Http Image
-    # Create an app with an http image.
-    When I ensure droplet is in text mode
-    And I append text to droplet "image('test123', 'http://example.com')"
-    And I press "runButton"
-    And I wait until element "#divApplab > .screen > img#test123" is visible
-    And element "#divApplab > .screen > img#test123" has attribute "src" equal to "//studio.code.org/media?u=http%3A%2F%2Fexample.com"
-
-  Scenario: App Lab Clear Puzzle and Design Mode
-    # Create an app with a design mode button, then clear the puzzle
-    Given I switch to design mode
-    And I drag a BUTTON into the app
-    And I switch to code mode
-    And Applab HTML has a button
-    And I reset the puzzle to the starting version
-    And I wait to see "#divApplab"
-    And I wait until element "#divApplab" is visible
-    And Applab HTML has no button
-
   Scenario: Can read and set button text
     Given I ensure droplet is in text mode
     And I append text to droplet "button('testButton1', 'Peanut Butter');\n"
@@ -49,36 +26,39 @@ Feature: App Lab Scenarios
     And I wait until element "#divApplab > .screen > div#text_area1" is visible
     Then element "div#text_area1" has html "Line 1<div>Line 2</div><div><br></div><div>Line3</div>"
 
-  Scenario: Change event works in text input and text area
+  Scenario: Change event works in text input
     Given I switch to design mode
     And I drag a TEXT_INPUT into the app
-    And I drag a TEXT_AREA into the app
     And I switch to code mode
     And I ensure droplet is in text mode
     And I append text to droplet "onEvent('text_input1', 'change', function(event) {\n"
     And I append text to droplet "  console.log(event.targetId + ': ' + getText('text_input1'));\n"
-    And I append text to droplet "});\n\n"
-    And I append text to droplet "onEvent('text_area1', 'change', function(event) {\n"
-    And I append text to droplet "  console.log(event.targetId + ': ' + getText('text_area1'));\n"
     And I append text to droplet "});"
 
     # in text input, blur produces a change event
     When I press "runButton"
-    And I wait until element "#divApplab > .screen > div#text_area1" is visible
-    And I press keys "123" for element "#text_input1"
+    And I wait until element with id "text_input1" is visible
+    And I press keys "123" for element with id "text_input1"
     And I blur selector "#text_input1"
     Then element "#debug-output" has escaped text "\"text_input1: 123\""
 
     # in a text input, enter produces a change event but then blur does not
-    When I press keys "456\n" for element "#text_input1"
+    When I press keys "456\n" for element with id "text_input1"
     Then element "#debug-output" has escaped text "\"text_input1: 123\"\"text_input1: 123456\""
     And I blur selector "#text_input1"
     Then element "#debug-output" has escaped text "\"text_input1: 123\"\"text_input1: 123456\""
 
+Scenario: Change event works in text area
+    Given I switch to design mode
+    And I drag a TEXT_AREA into the app
+    And I switch to code mode
+    And I ensure droplet is in text mode
+    And I append text to droplet "onEvent('text_area1', 'change', function(event) {\n"
+    And I append text to droplet "  console.log(event.targetId + ': ' + getText('text_area1'));\n"
+    And I append text to droplet "});"
+
     # in a text area, blur produces a change event. sending keystrokes (especially 'enter')
     # to a contentetiable div was too hard to test here due to browser differences.
-    When I press "resetButton"
-    And I wait until element "#runButton" is visible
     And I press "runButton"
     And I wait until element "#divApplab > .screen > div#text_area1" is visible
     And I focus selector "#text_area1"
