@@ -39,10 +39,8 @@
   = render partial: 'virtual_tips'
 - elsif !@workshop.virtual? && @is_reminder
   = render partial: 'supply_list'
-
-%h3
-  Health and wellness precautions
-- if !@workshop.virtual?
+  %h3
+    Health and wellness precautions
   %p
     Our workshops are highly interactive. If you are feeling ill, or show
     any flu-like symptoms such as a fever or cough, please inform your
