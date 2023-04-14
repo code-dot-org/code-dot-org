@@ -66,7 +66,11 @@ module.exports = {
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
         // We can rely on typescript types instead of prop types
-        'react/prop-types': 'off'
+        'react/prop-types': 'off',
+        // TODO: We are temporarily disabling this rule to allow using require() to import
+        // JavaScript files in TypeScript. Instead, we should add 'allowJs': true to our
+        // tsconfig.json file, but this is currently causing some build issues (SL-791)
+        '@typescript-eslint/no-var-requires': 'off'
       }
     }
   ]
