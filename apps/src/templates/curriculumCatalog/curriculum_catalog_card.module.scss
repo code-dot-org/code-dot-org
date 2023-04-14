@@ -19,11 +19,11 @@ $container-width: 309px;
 }
 
 .curriculumCatalogCardContainer_english {
-  height: 24em;
+  height: 25em;
 }
 
 .curriculumCatalogCardContainer_notEnglish {
-  height: 26.5em;
+  height: 27em;
 }
 
 .curriculumInfoContainer {
@@ -61,6 +61,7 @@ $container-width: 309px;
   column-gap: 0.25em;
   justify-content: space-between;
   margin-bottom: 0.5em;
+  height: 1.5em;
 
   i {
     font-size: 1.5em;
@@ -86,7 +87,7 @@ $container-width: 309px;
     border-radius: 1em;
 
     // ellipsis overflow
-    max-width: 14em;
+    max-width: 15em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
