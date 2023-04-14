@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-06 23:36:38 UTC",
+    "serialized_at": "2023-04-13 17:19:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5615,7 +5615,7 @@
     },
     {
       "name": "Project Guide Exemplar",
-      "url": "https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit",
+      "url": "https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/edit",
       "key": "project_guide_exemplar",
       "properties": {
         "audience": "Verified Teacher",
@@ -5627,10 +5627,11 @@
     },
     {
       "name": "Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/17C1pGuIk1FL84FjMvUIisYa6x_U8aKREcljfqnEm21c/edit",
+      "url": "https://docs.google.com/document/d/1fbImuYWBio4mkmFMWWGBolyEWihxFPlvtxgxGhRokIc/edit",
       "key": "sample_marked_rubrics",
       "properties": {
         "audience": "Verified Teacher",
+        "include_in_pdf": true,
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5737,13 +5738,13 @@
       }
     },
     {
-      "name": "The Problem Solving Process",
-      "url": "https://docs.google.com/document/d/1KczAoklRXU1MemCJaah68E9-YtM4Qny00uZJE5f_Ly0/view",
+      "name": "The Problem Solving Process ",
+      "url": "https://www.youtube.com/watch?v=z7RaFPT3DTE",
       "key": "the_problem_solving_process",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
+        "download_url": "https://videos.code.org/levelbuilder/problemsolvingprocess-mp4.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "the_problem_solving_process"
@@ -5836,7 +5837,6 @@
       "seeding_key": {
         "resource.key": "what_is_a_computer_version_b_"
       }
-
     }
   ],
   "lessons_resources": [
@@ -6170,7 +6170,6 @@
         "resource.key": "what_is_a_computer_version_b_"
       }
     }
-
   ],
   "scripts_resources": [
     {
@@ -6215,7 +6214,6 @@
         "script.name": "csd1-2023"
       }
     }
-
   ],
   "scripts_student_resources": [
 
@@ -6271,7 +6269,6 @@
         "vocabulary.key": "storage"
       }
     }
-
   ],
   "lessons_vocabularies": [
     {
@@ -6304,7 +6301,6 @@
         "vocabulary.key": "computer"
       }
     }
-
   ],
   "lessons_programming_expressions": [
 
