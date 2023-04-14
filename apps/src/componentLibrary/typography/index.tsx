@@ -26,7 +26,8 @@ type VisualApproach =
   | 'body-two'
   | 'overline'
   | 'strong'
-  | 'em';
+  | 'em'
+  | 'figcaption';
 
 interface TypographyProps {
   // Html tag to use for the typography element
@@ -50,9 +51,6 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
   style
 }) => {
   const Tag = semanticTag;
-  console.log(styles);
-  console.log(visualApproach);
-  // console.log(styles[visualApproach], className);
 
   return (
     <Tag
@@ -74,4 +72,10 @@ export {default as Heading3} from './components/Heading3';
 export {default as Heading4} from './components/Heading4';
 export {default as Heading5} from './components/Heading5';
 export {default as Heading6} from './components/Heading6';
+export {default as BodyOneText} from './components/BodyOneText';
+export {default as BodyTwoText} from './components/BodyTwoText';
+export {default as OverlineText} from './components/OverlineText';
+export {default as StrongText} from './components/StrongText';
+export {default as EmText} from './components/EmText';
+export {default as Figcaption} from './components/Figcaption';
 export default Typography;

@@ -1,14 +1,14 @@
 import React from 'react';
 import Typography, {VisualApproach} from './../index';
 
-interface Heading1Props {
+interface OverlineTextProps {
   visualApproach?: VisualApproach;
   className?: string;
   style?: React.CSSProperties;
   children: React.ReactNode;
 }
 
-const Heading1: React.FunctionComponent<Heading1Props> = ({
+const OverlineText: React.FunctionComponent<OverlineTextProps> = ({
   visualApproach,
   className,
   style,
@@ -16,8 +16,8 @@ const Heading1: React.FunctionComponent<Heading1Props> = ({
 }) => {
   return (
     <Typography
-      semanticTag="h1"
-      visualApproach={visualApproach}
+      semanticTag="p"
+      visualApproach={visualApproach || 'overline'}
       className={className}
       style={style}
     >
@@ -26,4 +26,4 @@ const Heading1: React.FunctionComponent<Heading1Props> = ({
   );
 };
 
-export default Heading1;
+export default OverlineText;

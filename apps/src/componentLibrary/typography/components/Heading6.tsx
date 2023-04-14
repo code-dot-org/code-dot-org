@@ -13,7 +13,7 @@ const Heading6: React.FunctionComponent<Heading6Props> = ({
   className,
   style,
   children
-}: Heading6Props) => {
+}) => {
   return (
     <Typography
       semanticTag="h6"
