@@ -32,12 +32,10 @@ theme: responsive_full_width
 %section.intro
   .wrapper
     %h2=hoc_s(:ai_intro_heading)
-    %div.col-50{style: "float: left; margin-top: 22px"}
-      %figure.video-responsive{style: "max-width: unset"}
-        %div
-          %iframe{src: "https://www.youtube-nocookie.com/embed/dWRnCXbUDgA", allowFullScreen: 'true', frameborder: '0', title: hoc_s(:ai_intro_video_title)}
-        %figcaption
-          %a{href: "#ai-videos"}=hoc_s(:ai_intro_video_caption_link)
+    %figure.video.col-50{style: "margin-top: 22px;"}
+      = view :ai_vid_whyaimatters
+      %figcaption
+        %a{href: "#ai-videos"}=hoc_s(:ai_intro_video_caption_link)
     %div.flex-container.col-45{style: "float: right"}
       %ul.icon-bullet-list.full-width{style: "margin-top: 0"}
         %li

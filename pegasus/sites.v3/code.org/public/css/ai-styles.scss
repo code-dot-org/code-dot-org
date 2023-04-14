@@ -71,7 +71,8 @@
   }
 }
 
-.video-series,.video {
+.video-series,
+.video {
 
   & > div.col-50 {
     padding: 0 !important;
@@ -80,10 +81,6 @@
 
     .video_caption_link {
       @include figcaption;
-    }
-
-    .play {
-      top: 30%;
     }
 
     .modal-body {
@@ -97,19 +94,8 @@
       width: 100%;
     }
   }
-}
 
-.video {
-
-  & > div.col-50 {
-    margin: 22px 0 16px !important;
-
-    @media screen and (max-width: $width-md) {
-      width: 100%;
-    }
-  }
-
-  .video_caption_link {
-    margin: 0.5em !important;
+  .play {
+    top: 30% !important;
   }
 }
