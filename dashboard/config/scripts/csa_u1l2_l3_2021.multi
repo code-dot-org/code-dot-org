@@ -8,4 +8,4 @@ wrong 'option 2'
 right 'option 3'
 wrong 'option 4'
 
-allow_multiple_attempts true
+allow_multiple_attempts false

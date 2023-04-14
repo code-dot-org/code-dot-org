@@ -40,5 +40,3 @@ Then the `changeNumber()` method is called, which increases the value assigned t
 
 When the second print statement is executed, it prints the current value assigned to `number`, which is `15`.
 MARKDOWN
-
-allow_multiple_attempts true

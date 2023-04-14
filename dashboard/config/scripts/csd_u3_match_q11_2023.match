@@ -1,24 +1,15 @@
 name 'CSD U3 Match Q11_2023'
-
-height '75'
-
-description 'Match the following terms with their definitions'
-
-question 'placeholder question1'
-question 'placeholder question2'
-question 'placeholder question3'
-question 'placeholder question4'
-
-answer 'placeholder answer1'
-answer 'placeholder answer2'
-answer 'placeholder answer3'
-answer 'placeholder answer4'
-teacher_markdown <<MARKDOWN
-**Explanation:** These definitions were covered in [Lesson 2 - Building a Network](https://studio.code.org/s/csp2-2021/lessons/2) 
-
-
-
-
-MARKDOWN
-
-allow_multiple_attempts true
+encrypted 's+L+mnW7y3W8wNibCD0ysSBm0a46Ot3UOTdHgOTwWdiX/lcid3jhbSTMN/oR
+OO0t2DajrVLhTyUdqCT0yHZp1rCw4p5Ie/ALuFvoMW0nqmP24cCd91amObS8
+dd9/vqV5hmca3pLyE2kpZ5OfMTRXqZ24fRuJZc9SRxQm2pBnCHuzCTSBjPo2
+upl1I6caBUOLxZSy1oEU+8drZdozCeOAzASB6qOzcdt/gJlAyKQKPlghLThL
+YSWKGiO4spSrF48yJtC9dKXLJt/kfnkieqzCmdk+r4zv4avkiCCaGnMGv7Lo
+6cdw4eA6hY8JYqCKBj59hGxk/3ICGN9HDJ6jFWbtV/e7XoaHBTJWSbjepRx6
+EHbbQ58WsKRr6JDQu9pScVvKDZYhWnLV+TMTHe1HuBHDA206eJmiqq60hVo2
+WihShJsMNy7hb4k9hoa5KfZEagW2z8/CKMuUt5jg9WySSGBYlgXvRGhs+tq8
+oKwvwLq4pV+JzCFzLnGzkVijPqYO3B6nmCH/9dcqEPWTLw2nQwvMYsrbSQ9+
+6iRk7GbSqRxRpnKM6gcyF4YqRQyKigka1EGFFqK80f9yNX97u5E/h8q+zVsn
+Or2Uz66ZIsQMW/anVdtas9U7EIX5+0JToJDBPxcEIpbZOJzSQD+oBy5Us2qH
+h2Fp3IdTNsPtJNGJl+vMhVKKydLClNedx+P1jZd5RJNTQ41x4TFrxfMDxSGR
+abYiZM0wi64XmlUr/iqfjibtZ44e7hEblWcHx8OOPaDKnpVm
+'

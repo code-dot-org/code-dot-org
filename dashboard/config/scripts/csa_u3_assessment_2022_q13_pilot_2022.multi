@@ -19,5 +19,3 @@ public void addFive() {
 }
 ```
 MARKDOWN
-
-allow_multiple_attempts true

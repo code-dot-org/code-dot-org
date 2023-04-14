@@ -57,5 +57,3 @@ for (int[] j : arr) {
 }
 ```
 MARKDOWN
-
-allow_multiple_attempts true

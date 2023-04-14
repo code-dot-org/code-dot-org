@@ -15,5 +15,3 @@ dessert1 == dessert2;
 
 What assumptions can be made about `dessert1` and `dessert2`?
 MARKDOWN
-
-allow_multiple_attempts true
