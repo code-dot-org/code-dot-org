@@ -23,8 +23,7 @@ class HeaderMiddle extends React.Component {
     lessonData: PropTypes.object,
     scriptData: PropTypes.object,
     currentLevelId: PropTypes.string,
-    isRtl: PropTypes.bool,
-    setWindowTitle: PropTypes.func
+    isRtl: PropTypes.bool
   };
 
   constructor(props) {
@@ -177,14 +176,8 @@ class HeaderMiddle extends React.Component {
   }
 
   render() {
-    const {
-      scriptNameData,
-      lessonData,
-      scriptData,
-      currentLevelId,
-      isRtl,
-      setWindowTitle
-    } = this.props;
+    const {scriptNameData, lessonData, scriptData, currentLevelId, isRtl} =
+      this.props;
 
     const showFinish = !!(
       this.props.lessonData && this.props.lessonData.finishLink
@@ -286,7 +279,6 @@ class HeaderMiddle extends React.Component {
                   this.setDesiredWidth('lessonProgress', width);
                 }}
                 lessonName={lessonData.name}
-                setWindowTitle={setWindowTitle}
               />
             </div>
           )}
