@@ -2222,6 +2222,16 @@
           lesson_groups:
             lessonGroup-2:
               display_name: Innhold
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+            lessonGroup-4:
+              display_name: Undersøkelse
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
