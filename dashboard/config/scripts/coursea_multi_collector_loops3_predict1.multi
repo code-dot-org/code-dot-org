@@ -5,4 +5,4 @@ right 'Laurel will move forward and get treasure five times in a row.', feedback
 wrong 'Laurel will move forward and get treasure one time.', feedback: 'Incorrect. The program uses a `repeat` loop to get Laurel to move forward five times.'
 wrong 'I don\'t know.', feedback: 'The program uses a `repeat` loop to get Laurel to move forward five times.'
 
-allow_multiple_attempts true
+allow_multiple_attempts false

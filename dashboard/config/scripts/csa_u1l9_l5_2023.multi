@@ -31,5 +31,3 @@ The syntax for calling a method is:
 nameOfObject.nameOfMethod()
 ```
 MARKDOWN
-
-allow_multiple_attempts true
