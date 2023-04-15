@@ -108,14 +108,9 @@ export default class TutorialDetail extends React.Component {
       .replace('.png', '.jpg');
 
     const imageComponent = (
-      <div
-        style={styles.tutorialDetailImageOuterContainer}
-        className="col-xs-12 col-sm-6"
-      >
-        <div style={styles.tutorialDetailImageContainer}>
-          <div style={styles.tutorialDetailImageBackground} />
-          <Image style={styles.tutorialDetailImage} src={imageSrc} />
-        </div>
+      <div style={styles.tutorialDetailImageBounds}>
+        <div style={styles.tutorialDetailImageBackground} />
+        <Image style={styles.tutorialDetailImage} src={imageSrc} />
       </div>
     );
 
@@ -140,13 +135,11 @@ export default class TutorialDetail extends React.Component {
                   <button
                     className="close"
                     data-dismiss="modal"
-                    style={{height: 48}}
+                    style={styles.tutorialDetailCloseButton}
                     type="button"
                     onClick={this.props.closeClicked}
                   >
-                    <span aria-hidden="true" style={{fontSize: 48}}>
-                      ×
-                    </span>
+                    <i className="fa fa-close" aria-hidden={true} />
                     <span className="sr-only">Close</span>
                   </button>
                   <div style={{clear: 'both'}} />
@@ -154,19 +147,25 @@ export default class TutorialDetail extends React.Component {
                 <div
                   className="modal-body"
                   style={styles.tutorialDetailModalBody}
+                  tabIndex={-1}
                 >
-                  {!this.props.disabledTutorial && (
-                    <a
-                      href={this.props.item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={this.startTutorialClicked}
-                    >
-                      {imageComponent}
-                    </a>
-                  )}
-                  {this.props.disabledTutorial && imageComponent}
-
+                  <div
+                    style={styles.tutorialDetailImageOuterContainer}
+                    className="col-xs-12 col-sm-6"
+                  >
+                    {!this.props.disabledTutorial && (
+                      <a
+                        href={this.props.item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={styles.tutorialDetailImageLink}
+                        onClick={this.startTutorialClicked}
+                      >
+                        {imageComponent}
+                      </a>
+                    )}
+                    {this.props.disabledTutorial && imageComponent}
+                  </div>
                   <div
                     style={styles.tutorialDetailInfoContainer}
                     className="col-xs-12 col-sm-6"
@@ -202,9 +201,9 @@ export default class TutorialDetail extends React.Component {
                         rel="noopener noreferrer"
                         onClick={this.startTutorialClicked}
                       >
-                        <button type="button" style={{marginTop: 20}}>
+                        <div style={styles.tutorialDetailStartButton}>
                           {i18n.startButton()}
-                        </button>
+                        </div>
                       </a>
                     )}
                   </div>
@@ -291,8 +290,9 @@ const styles = {
   tutorialDetailModalHeader: {
     borderBottomWidth: 0,
     paddingTop: 0,
-    paddingBottom: 4,
-    height: 48
+    paddingBottom: 0,
+    height: 44,
+    paddingRight: 11
   },
   tutorialDetailModalBody: {
     paddingTop: 0,
@@ -307,11 +307,30 @@ const styles = {
     top: 0,
     width: '100%'
   },
+  tutorialDetailCloseButton: {
+    position: 'absolute',
+    top: 8,
+    right: 8,
+    height: 36,
+    width: 36,
+    fontSize: 36,
+    marginTop: 8,
+    marginRight: 6
+  },
   tutorialDetailImageOuterContainer: {
     float: 'left',
-    paddingBottom: 10
+    paddingLeft: 0,
+    paddingRight: 0,
+    marginBottom: 6
   },
-  tutorialDetailImageContainer: {
+  tutorialDetailImageLink: {
+    display: 'inline-block',
+    width: '100%',
+    height: '100%',
+    padding: 4,
+    marginTop: 4
+  },
+  tutorialDetailImageBounds: {
     position: 'relative',
     width: '100%',
     height: 0,
@@ -334,7 +353,17 @@ const styles = {
   },
   tutorialDetailInfoContainer: {
     float: 'left',
+    paddingTop: 8,
     paddingLeft: 20
+  },
+  tutorialDetailStartButton: {
+    display: 'inline-block',
+    padding: '6px 12px',
+    color: 'white',
+    backgroundColor: '#ffa400',
+    borderColor: '#ffa400',
+    borderRadius: 4,
+    marginTop: 20
   },
   tutorialDetailName: {
     fontFamily: '"Gotham 5r", sans-serif',
