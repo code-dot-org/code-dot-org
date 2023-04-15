@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-14 12:28:42 UTC",
+    "serialized_at": "2023-04-15 01:05:29 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -2682,7 +2682,7 @@
       "key": "495c5a00-bf0b-4d61-ab8b-7050b4744c5a",
       "position": 12,
       "properties": {
-        "description": "**Do This:** Explain how to override the `equals()` method:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The method signature must be the same as the `equals()` method in the `Object` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Cast the `Object` parameter as the type we need\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Checking if the `Object` parameter is null\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to Level 6 to complete a choice level to debug the program. On Level 7, students override and use the `equals()` method.",
+        "description": "**Do This:** Explain how to override the `equals()` method:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The method signature must be the same as the `equals()` method in the `Object` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Cast the `Object` parameter as the type we need\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Checking if the `Object` parameter point to the same object as `this` object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Using the `instanceof` operator to check if the `Object` parameter is an instance of the class\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to Level 6 to complete a choice level to debug the program. On Level 7, students override and use the `equals()` method.",
         "progression_name": "Practice: The equals() Method",
         "tips": [
           {
