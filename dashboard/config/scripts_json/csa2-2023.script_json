@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-12 19:41:08 UTC",
+    "serialized_at": "2023-04-14 12:27:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7818,6 +7818,18 @@
       }
     },
     {
+      "name": "[EXEMPLAR] Unit 2 Guide",
+      "url": "https://docs.google.com/document/d/1TXYNiTnbkFzpuEvReolnu7mrtd8LU6hE1iqx91mNUno/edit?usp=share_link",
+      "key": "_exemplar_unit_2_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_2_guide"
+      }
+    },
+    {
       "name": "[KEY] Anticipation Guide",
       "url": "https://docs.google.com/document/d/1pNBHHn3W7xYTXfnCr9unJ9dL7NfQ4AAkmNGJyFy9nOU/edit?usp=sharing",
       "key": "_key_anticipation_guide",
@@ -8994,6 +9006,12 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_2_guide",
+        "script.name": "csa2-2023"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "all_resources_2",
