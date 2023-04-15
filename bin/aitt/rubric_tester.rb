@@ -75,7 +75,8 @@ def grade_student_work(prompt, rubric, student_code, student_id)
   response = HTTParty.post(api_url, headers: headers, body: data.to_json, timeout: 120)
 
   if response.code == 200
-    puts "#{student_id} request size #{data.to_json.size} succeeded in #{(Time.now - start_time).to_i} seconds"
+    tokens = response.parsed_response['usage']['total_tokens']
+    puts "#{student_id} request succeeded in #{(Time.now - start_time).to_i} seconds. #{tokens} tokens used."
     completed_text = response.parsed_response['choices'][0]['message']['content']
     tsv_data = parse_tsv(completed_text.strip)
     valid, reason = validate_server_response(tsv_data, rubric)
