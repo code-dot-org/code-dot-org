@@ -1,36 +1,34 @@
 name 'csp-7-exam1-api-documentation_2022a'
-editor_experiment ''
-right ' 1 '
-wrong ' 4 '
-wrong ' 0 '
-wrong ' 3 '
-
-markdown <<MARKDOWN
-You have imported a library with the `birthMonth()` function. Based on the API, how many strings are inputed to calculate the birth month?
-
-```
-// calculate birth month based on the day of the month, day of the week, and the birth year
-// dayMonth {number} - a day of a month from 1 to 31
-// dayWeek {string} - the name of the day of the week
-// year {number} - the birth year
-// return {string} - the month you were born 
-BirthdayLibrary.birthMonth(dayMonth, dayWeek, year);
-```
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-**Explanation:** This function has three parameters and one return value. Out of the three parameters, two are numbers (`dayMonth` and `year`). That means only one string, `dayWeek`, is passed in to the function.
-
- [Lesson 5 - Libraries Explore](https://studio.code.org/s/csp7-2021/lessons/5) introduced the need for API and how this type of documentation is formatted.
-
-::: details [**Essential Knowledge Connected To This Question**]
-
-* AAP-3.D.4: Application program interfaces (APIs) are specifications for how the procedures in a library behave and can be used.
-
-* AAP-3.D.5: Documentation for an API/library is necessary in understanding the behavior(s) provided by the API/library and how to use them.
-:::
-
-
-MARKDOWN
-
-allow_multiple_attempts true
+encrypted 'X1jJS8Mem9rBEmHhLrGW/rc+een6vVf8ScOVU/qC9lGGJQrxuApycLogY6Uz
+enZyB+rlHF2w9DHbd3h453WnwFn2joXW79oHHi8lqLx11ySPi9Fpf70hvT2/
+Ph+RrmVVgHmh61znNOCio7v/scXrI6M+iGNUPR10K6PMPHuj/+I9Sv2wkHSQ
+TBdYelE+ENjRJ4nWi81yAHJoCUpSBFDjj9bEzmMup5GexCTdbtHp/chiy4X0
+w8ar1BrTjEliGLSuXLhfPRAFl4iXhnbP2oHRAt+PCqofQNM7DBt8j5o4l1gF
+tUeR2s/bnCM2+PJarSPyXl0Rg/TcP0TU8INbrxwgfXbrZzuc5cJDFR1G2jGc
+qgmAxW+XZ4dgleVmTKwRpOMrD1SJr2mGDNB5ZIaYW1tU2YdN0wvMQVS4I+rR
+NC5IGhov97kIDoWy834MKSuRg3p4rZA6dolaEtQasyyW78g/0r6oP/I1Gtpo
++Ks2OJHAvckJLb3uLmadT0tXJsb1EFwRiZdvXol6LRWFwqD+0PtBRR3ByJuk
+oR6RhCyXqdB0ZAEj+BzyQaeLbf4aU9dwgpokSV8tEjfDHFDyNrDSScCm5s7V
+5HkjNdYLWy7MMi3/Xm/KOZ5RuvJC71CNgTPRJ9hX8/o9TUkPQEO1POClv1/y
+WcrzPuEDpZ5Wul5Vv5T8utJDchIRl0XeUYCY1bIJJ7gIUDARrNmZmNYM3ikU
+6Z7dbhDTmQetrC3Wy8a8sQtapzD1kGOrnq0JrpX7E/KaC1OmWpxlqp936eLI
+eK9MQAOAsv1/iBl0Lf1DVfe/4WzDyIVVFmmQg9b/8GZh5Ab9ibjeAFO/W/N2
+9veiUyBQUDGPWA1GWhJhzhPnKeDeDjlRxTMdR5Cjky/xtDai/4mG+8X66tS+
+Q2jA/jNnoSA+HF4Wiu3SQUPReVS3z2p9pUmOO9sxjTTRR95u1LV3AksRSNC0
+ekq2ZL7gLO4tDx83mgiiLAOcIhUOxY4bckZuv+411lpdZf48sE/Z4V1G9/od
+gCIAlg0iqypVzdFtQqshcVKqWo8MeHsOoK6KNZH889eKqrs0d2KanqrlhupE
+RA3dvkNQ0LPQ5K9t0MtgHsjOtF3q2KW58effs7Sp2vmVx+wDcO9/V2pp50TE
+FGE5rifT1gPFDF5H/EPys4x8YVbAN6Yhzu+uZj5AN712xXBaC+99uAh/fCsJ
+/2UN9SIkTAAVhjriG1TesGcAy4UgBemVLOgayvNDeAZ6pn6n3XwRNq1TD2QU
+ZSLZmXf8KJ+RL4+Z0MPNcXC6geCfpfpsYZ/L9ChAdrp9sZ0HsK2+A/ihie4R
+AIFjmPkIZfSJNDKiA+cCa6168+6sRTrG+Z4GjFT3wnOiDoY5/fiskFisXq7f
+AFZ3a4HXopf+G/NvUxNsl7MGFAzgcnafmLr6DfIIQxG7S3mB28UePI+ok7I8
+cfesVkFHWnVbA+VWzJdV1uMVQxEpjAZOCLSUskIGe61TC0WCyD5wHOwaL4TY
+Q+Mdzp1iRdx0jEuEoWmJfZNXkVJr1cgqkSL2lEML79RheErmP8a2Fbrv6r/5
+cfZYq6TsPLoTNUKZJsVimYpKWAwk3W6pMaecRwpZRii4IJZuEaCY7ut+BlVw
+5bRe645FLsMcayergHR6iyBxgqqm7XbI6bYBoxXhA2x+EO9hYTVhS/od2pfW
+30IpFL3q7AqdkUPOtUfats1a3edgwjzCpYNZ1AEzNz60cVV0QrVdFX0tFC/i
+gwqgUVFlQRfaekuvhxP/mDPn2glUUtb7sEKtJA8+5UqGjc806LUerk3JOwz6
+pnnJOajq7gWIMOpM6iXdP18gc1SPdJfqIFd1z//9CStsbGPWZ+z0liiqxqUL
+01hbFLTg9AxsJOiNQX5NOqGDOqFPEDsuS2xheoc=
+'

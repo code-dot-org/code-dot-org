@@ -19,5 +19,3 @@ System.out.println(date.indexOf("2"));
 
 What is printed as a result executing the code?
 MARKDOWN
-
-allow_multiple_attempts true

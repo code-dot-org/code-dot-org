@@ -8,5 +8,3 @@ wrong 'functions with parameters'
 right 'getters/getProperty'
 wrong 'analog to digital conversion'
 
-
-allow_multiple_attempts true

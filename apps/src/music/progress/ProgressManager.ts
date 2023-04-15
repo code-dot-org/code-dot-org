@@ -74,8 +74,8 @@ export default class ProgressManager {
   }
 
   updateProgress(): void {
-    const validations = this.progression.steps[this.currentProgressState.step]
-      .validations;
+    const validations =
+      this.progression.steps[this.currentProgressState.step].validations;
 
     if (!validations) {
       return;

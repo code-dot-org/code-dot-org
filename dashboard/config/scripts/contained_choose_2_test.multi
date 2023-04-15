@@ -29,4 +29,4 @@ Consider the following incorrect program, which is intended to move the robot ar
 
 MARKDOWN
 
-allow_multiple_attempts true
+allow_multiple_attempts false

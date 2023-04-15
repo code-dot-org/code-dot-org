@@ -14,4 +14,3 @@ answer 'an array that is nested inside another array'
 
 question 'outer array'
 answer 'the outermost array of a two-dimensional array'
-allow_multiple_attempts true
