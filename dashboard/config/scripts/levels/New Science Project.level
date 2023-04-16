@@ -1,4 +1,4 @@
-<GamelabJr>
+\<GamelabJr>
   <config><![CDATA[{
   "properties": {
     "skin": "gamelab",
@@ -51,7 +51,10 @@
     "block_pool": "gamelab",
     "block_pools": [
       "GamelabJr",
-      "ParticlesBlocks"
+      "ParticlesBlocks",
+      "adaptations",
+      "ecosystems",
+      "Outbreak"
     ],
     "mini_rubric": "false",
     "encrypted": "false",
