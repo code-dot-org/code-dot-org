@@ -2894,6 +2894,15 @@
         },
         "helloworld_food_click_space-2022": {
           "hw_Run": "Önce buraya tıklayın!"
+        },
+        "courseF_collector_items_-2022-2": {
+          "costumes_tab_callout": "Kostümler sekmesi"
+        },
+        "courseF_collector_player_move_-2022-2": {
+          "costumes_tab_callout": "Kostümler sekmesi"
+        },
+        "courseF_groups_size_-2022-2": {
+          "mini-toolbox-blue-button": "Açmak veya kapatmak için mavi düğmeyi tıklayın."
         }
       }
     }

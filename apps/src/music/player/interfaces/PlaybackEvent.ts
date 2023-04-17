@@ -4,7 +4,7 @@ import {SkipContext} from './SkipContext';
 
 export interface PlaybackEvent {
   /** Type of event */
-  type: 'sound' | 'pattern';
+  type: 'sound' | 'pattern' | 'chord';
   /** Measure when this event occurs */
   when: number;
   /** Whether this event was triggered or scheduled via standard playback */
@@ -17,4 +17,10 @@ export interface PlaybackEvent {
   skipContext?: SkipContext;
   /** Effects applied to this event */
   effects?: Effects;
+  /** length of the event in measures */
+  length: number;
+  /** The ID of the block that created this event */
+  blockId?: string;
+  /** A unique ID used to group same sounds together in the timeline */
+  id: string;
 }

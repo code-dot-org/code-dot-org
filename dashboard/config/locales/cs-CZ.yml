@@ -1395,6 +1395,13 @@ cs:
       body_markdown: Váš účet nemá e-mailovou adresu. Přidejte si před odesláním tohoto
         formuláře [v uživatelském nastavení](%{user_registration}) e-mailovou adresu.
   courses_category: Kompletní kurzy
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      hello_world: Ahoj, světe
+      sports: Sporty
+      csf: Základy informatiky
+      csc: Napojení na počítačovou vědu
   cookie_banner:
     message: Pokud budete pokračovat v prohlížení naší stránky nebo kliknete na "Souhlasím",
       souhlasíte s uložením cookies na svém počítači nebo přístroji.

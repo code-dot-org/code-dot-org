@@ -15,7 +15,7 @@ import {
   setInstructionsFullHeight,
   setConsoleHeight,
   setEditorColumnHeight
-} from './javalabRedux';
+} from './redux/viewRedux';
 import {DisplayTheme} from './DisplayTheme';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 import globalStyleConstants from '../styleConstants';
@@ -201,8 +201,9 @@ class JavalabPanels extends React.Component {
     // currently no-op in other viewModes.
     // The visualization and its overlay have different default sizes and are thus scaled
     // differently. See ./constants.module.scss for details.
-    const overlayScaleCss = `scale(${scale *
-      parseInt(styleConstants.visualizationOverlayScale)})`;
+    const overlayScaleCss = `scale(${
+      scale * parseInt(styleConstants.visualizationOverlayScale)
+    })`;
     $('#visualizationOverlay').css('transform', overlayScaleCss);
     resizeCrosshairOverlay();
 
@@ -350,16 +351,16 @@ const styles = {
 
 export default connect(
   state => ({
-    displayTheme: state.javalab.displayTheme,
-    editorColumnHeight: state.javalab.editorColumnHeight,
-    leftWidth: state.javalab.leftWidth,
-    rightWidth: state.javalab.rightWidth,
-    instructionsHeight: state.javalab.instructionsHeight,
-    instructionsFullHeight: state.javalab.instructionsFullHeight,
+    displayTheme: state.javalabView.displayTheme,
+    editorColumnHeight: state.javalabView.editorColumnHeight,
+    leftWidth: state.javalabView.leftWidth,
+    rightWidth: state.javalabView.rightWidth,
+    instructionsHeight: state.javalabView.instructionsHeight,
+    instructionsFullHeight: state.javalabView.instructionsFullHeight,
     instructionsRenderedHeight: state.instructions.renderedHeight,
-    consoleHeight: state.javalab.consoleHeight,
-    editorColumnFullHeight: state.javalab.editorColumnFullHeight,
-    isVisualizationCollapsed: state.javalab.isVisualizationCollapsed,
+    consoleHeight: state.javalabView.consoleHeight,
+    editorColumnFullHeight: state.javalabView.editorColumnFullHeight,
+    isVisualizationCollapsed: state.javalabView.isVisualizationCollapsed,
     isInstructionsCollapsed: state.instructions.isCollapsed
   }),
   dispatch => ({

@@ -182,7 +182,7 @@ export default {
   PropertyTab: ImageProperties,
   EventTab: ImageEvents,
 
-  create: function() {
+  create: function () {
     const element = document.createElement('img');
     element.style.height = '100px';
     element.style.width = '100px';
@@ -198,7 +198,7 @@ export default {
 
     return element;
   },
-  onDeserialize: function(element, updateProperty) {
+  onDeserialize: function (element, updateProperty) {
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element);
 
@@ -219,7 +219,7 @@ export default {
       setObjectFitStyles(element, objectFitValue);
     }
   },
-  onPropertyChange: function(element, name, value) {
+  onPropertyChange: function (element, name, value) {
     switch (name) {
       case 'objectFit':
         element.setAttribute('data-object-fit', value);
@@ -230,7 +230,7 @@ export default {
     }
     return true;
   },
-  readProperty: function(element, name) {
+  readProperty: function (element, name) {
     switch (name) {
       case 'objectFit':
         return element.getAttribute('data-object-fit');

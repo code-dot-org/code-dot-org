@@ -15,10 +15,7 @@ describe('VerifiedResourcesNotification', () => {
     );
 
     expect(
-      wrapper
-        .find('Connect(Notification)')
-        .first()
-        .props().details
+      wrapper.find('Connect(Notification)').first().props().details
     ).to.equal(
       'This course provides extra resources which are only available to verified teachers.'
     );
@@ -30,10 +27,7 @@ describe('VerifiedResourcesNotification', () => {
     );
 
     expect(
-      wrapper
-        .find('Connect(Notification)')
-        .first()
-        .props().details
+      wrapper.find('Connect(Notification)').first().props().details
     ).to.equal(
       'This lesson contains extra resources or levels which are only available to verified teachers.'
     );

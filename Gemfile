@@ -61,7 +61,7 @@ gem 'rack-mini-profiler'
 group :development do
   gem 'annotate', '~> 3.1.1'
   gem 'aws-google', '~> 0.2.0'
-  gem 'web-console'
+  gem 'web-console', '~> 4.2.0'
 end
 
 # Rack::Cache middleware used in development/test;
@@ -70,12 +70,6 @@ gem 'rack-cache'
 
 group :development, :test do
   gem 'rerun'
-
-  # Ref: https://github.com/e2/ruby_dep/issues/24
-  # https://github.com/e2/ruby_dep/issues/25
-  # https://github.com/e2/ruby_dep/issues/30
-  gem 'ruby_dep', '~> 1.3.1'
-
   gem 'shotgun'
   gem 'thin'
   # Use debugger
@@ -84,7 +78,6 @@ group :development, :test do
   gem 'active_record_query_trace'
   gem 'benchmark-ips'
   gem 'better_errors', '>= 2.7.0'
-  gem 'binding_of_caller'
   gem 'brakeman'
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'ruby-prof'
@@ -107,7 +100,7 @@ group :development, :test do
   gem 'rinku'
   gem 'rspec'
   gem 'selenium-webdriver', '3.141.0'
-  gem 'spring'
+  gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
   gem 'webdrivers', '~> 3.0'
 
@@ -117,7 +110,7 @@ group :development, :test do
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
-gem 'factory_girl_rails', group: [:development, :staging, :test, :adhoc]
+gem 'factory_bot_rails', '~> 4.11', group: [:development, :staging, :test, :adhoc]
 
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false
@@ -129,7 +122,7 @@ gem 'nakayoshi_fork'
 # Ref: https://github.com/puma/puma/pull/1646
 gem 'puma', github: 'wjordan/puma', branch: 'debugging'
 gem 'puma_worker_killer'
-gem 'unicorn', '~> 5.1.0'
+gem 'raindrops'
 
 gem 'chronic', '~> 0.10.2'
 
@@ -151,7 +144,7 @@ gem 'phantomjs', '~> 1.9.7.1'
 gem 'gemoji'
 
 # Authentication and permissions.
-gem 'cancancan', '~> 3.1.0'
+gem 'cancancan', '~> 3.2.0'
 gem 'devise', '~> 4.7.0'
 gem 'devise_invitable', '~> 2.0.2'
 
@@ -221,7 +214,6 @@ gem 'sequel'
 gem 'user_agent_parser'
 
 gem 'paranoia', '~> 2.5.0'
-gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
 gem 'active_model_serializers', '~> 0.10.13'

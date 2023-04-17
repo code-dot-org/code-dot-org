@@ -58,9 +58,8 @@ export default class AuthoredHints {
    * @param {BlockHint[]} blocks {@see authoredHintUtils.createContextualHintsFromBlocks}
    */
   displayMissingBlockHints(blocks) {
-    const newContextualHints = authoredHintUtils.createContextualHintsFromBlocks(
-      blocks
-    );
+    const newContextualHints =
+      authoredHintUtils.createContextualHintsFromBlocks(blocks);
     getStore().dispatch(displayMissingBlockHints(newContextualHints));
 
     if (newContextualHints.length > 0 && this.getUnseenHints().length > 0) {

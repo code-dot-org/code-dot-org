@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {setRenderedHeight, setEditorColumnHeight} from './redux/viewRedux';
 import {
   setSource,
   sourceTextUpdated,
@@ -8,8 +9,6 @@ import {
   sourceFileOrderUpdated,
   renameFile,
   removeFile,
-  setRenderedHeight,
-  setEditorColumnHeight,
   setEditTabKey,
   setActiveTabKey,
   setOrderedTabKeys,
@@ -21,7 +20,7 @@ import {
   setNewFileError,
   clearNewFileError,
   setRenameFileError
-} from './javalabRedux';
+} from './redux/editorRedux';
 import {DisplayTheme} from './DisplayTheme';
 import PropTypes from 'prop-types';
 import {EditorView} from '@codemirror/view';
@@ -44,9 +43,8 @@ import {
 } from './JavalabFileHelper';
 import {darkMode, lightMode} from './editorThemes';
 import {hasQueryParam} from '@cdo/apps/code-studio/utils';
-import JavalabEditorDialogManager, {
-  JavalabEditorDialog
-} from './JavalabEditorDialogManager';
+import JavalabEditorDialogManager from './JavalabEditorDialogManager';
+import {JavalabEditorDialog} from './types';
 import JavalabEditorHeader from './JavalabEditorHeader';
 import {java} from '@codemirror/lang-java';
 import CloseOnEscape from './components/CloseOnEscape';
@@ -202,12 +200,8 @@ class JavalabEditor extends React.Component {
   }
 
   createEditor(key, doc) {
-    const {
-      displayTheme,
-      isReadOnlyWorkspace,
-      fileMetadata,
-      editorFontSize
-    } = this.props;
+    const {displayTheme, isReadOnlyWorkspace, fileMetadata, editorFontSize} =
+      this.props;
     const extensions = [...editorSetup];
 
     extensions.push(
@@ -820,20 +814,20 @@ class JavalabEditor extends React.Component {
 
 export default connect(
   state => ({
-    sources: state.javalab.sources,
-    validation: state.javalab.validation,
-    displayTheme: state.javalab.displayTheme,
+    sources: state.javalabEditor.sources,
+    validation: state.javalabEditor.validation,
+    displayTheme: state.javalabView.displayTheme,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
     hasOpenCodeReview: state.javalab.hasOpenCodeReview,
     isViewingOwnProject: state.pageConstants.isViewingOwnProject,
     codeOwnersName: state.pageConstants.codeOwnersName,
-    fileMetadata: state.javalab.fileMetadata,
-    orderedTabKeys: state.javalab.orderedTabKeys,
-    activeTabKey: state.javalab.activeTabKey,
-    lastTabKeyIndex: state.javalab.lastTabKeyIndex,
-    editTabKey: state.javalab.editTabKey,
-    editorFontSize: state.javalab.editorFontSize
+    fileMetadata: state.javalabEditor.fileMetadata,
+    orderedTabKeys: state.javalabEditor.orderedTabKeys,
+    activeTabKey: state.javalabEditor.activeTabKey,
+    lastTabKeyIndex: state.javalabEditor.lastTabKeyIndex,
+    editTabKey: state.javalabEditor.editTabKey,
+    editorFontSize: state.javalabView.editorFontSize
   }),
   dispatch => ({
     setSource: (filename, source, tabOrder) =>

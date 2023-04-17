@@ -21,7 +21,10 @@ const LEVEL_WITH_PROGRESS = {
 const DEFAULT_SELECTED_USER = 1;
 
 const DEFAULT_PROPS = {
-  students: [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}],
+  students: [
+    {id: 1, name: 'Student 1'},
+    {id: 2, name: 'Student 2'}
+  ],
   levelsWithProgress: [
     {...LEVEL_WITH_PROGRESS, userId: 1},
     {...LEVEL_WITH_PROGRESS, userId: 2},

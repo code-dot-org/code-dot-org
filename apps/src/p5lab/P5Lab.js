@@ -272,7 +272,7 @@ export default class P5Lab {
       spritelab: this.isBlockly
     });
 
-    config.afterClearPuzzle = function() {
+    config.afterClearPuzzle = function () {
       let startLibraries;
       if (config.level.startLibraries) {
         startLibraries = JSON.parse(config.level.startLibraries);
@@ -304,12 +304,12 @@ export default class P5Lab {
     config.noHowItWorks = config.droplet;
 
     config.shareWarningInfo = {
-      hasDataAPIs: function() {
+      hasDataAPIs: function () {
         return this.hasDataStoreAPIs(
           this.studioApp_.getCode(true /* opt_showHidden */)
         );
       }.bind(this),
-      onWarningsComplete: function() {
+      onWarningsComplete: function () {
         if (config.share) {
           window.setTimeout(this.studioApp_.runButtonClick, 0);
         }
@@ -421,9 +421,9 @@ export default class P5Lab {
 
     var showDebugButtons =
       config.level.editCode &&
-      (!config.hideSource &&
-        !config.level.debuggerDisabled &&
-        !config.level.iframeEmbedAppAndCode);
+      !config.hideSource &&
+      !config.level.debuggerDisabled &&
+      !config.level.iframeEmbedAppAndCode;
     var showPauseButton = this.isBlockly && !config.level.hidePauseButton;
     var showDebugConsole = config.level.editCode && !config.hideSource;
     this.debuggerEnabled =
@@ -742,7 +742,7 @@ export default class P5Lab {
 
     window.addEventListener(
       'resize',
-      function() {
+      function () {
         this.p5Wrapper.scale = this.calculateVisualizationScale_();
       }.bind(this)
     );
@@ -906,27 +906,34 @@ export default class P5Lab {
       program = encodeURIComponent(this.studioApp_.getCode());
       this.message = null;
     } else {
-      // We're using blockly, report the program as xml
-      var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+      let textBlocks;
+      if (Blockly.version === 'Google') {
+        // We're using Google Blockly, report the program as JSON
+        textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+      } else {
+        // We're using CDO Blockly, report the program as xml
+        var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
 
-      // When SharedFunctions (aka shared behavior_definitions) are enabled, they
-      // are always appended to startBlocks on page load.
-      // See StudioApp -> setStartBlocks_
-      // Because of this, we need to remove the SharedFunctions when we are in
-      // toolbox edit mode. Otherwise, they end up in a student's toolbox.
-      if (this.level.edit_blocks === TOOLBOX_EDIT_MODE) {
-        var allBlocks = Array.from(xml.querySelectorAll('xml > block'));
-        var toRemove = allBlocks.filter(element => {
-          return (
-            element.getAttribute('type') === 'behavior_definition' &&
-            element.getAttribute('usercreated') !== 'true'
-          );
-        });
-        toRemove.forEach(element => {
-          xml.removeChild(element);
-        });
+        // When SharedFunctions (aka shared behavior_definitions) are enabled, they
+        // are always appended to startBlocks on page load.
+        // See StudioApp -> setStartBlocks_
+        // Because of this, we need to remove the SharedFunctions when we are in
+        // toolbox edit mode. Otherwise, they end up in a student's toolbox.
+        if (this.level.edit_blocks === TOOLBOX_EDIT_MODE) {
+          var allBlocks = Array.from(xml.querySelectorAll('xml > block'));
+          var toRemove = allBlocks.filter(element => {
+            return (
+              element.getAttribute('type') === 'behavior_definition' &&
+              element.getAttribute('usercreated') !== 'true'
+            );
+          });
+          toRemove.forEach(element => {
+            xml.removeChild(element);
+          });
+        }
+        textBlocks = Blockly.Xml.domToText(xml);
       }
-      program = encodeURIComponent(Blockly.Xml.domToText(xml));
+      program = encodeURIComponent(textBlocks);
     }
 
     if (this.testResults >= TestResults.FREE_PLAY) {
@@ -1084,8 +1091,10 @@ export default class P5Lab {
       studioApp: this.studioApp_,
       maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
       shouldRunAtMaxSpeed: () => this.p5Wrapper.stepSpeed >= 1,
-      customMarshalGlobalProperties: this.p5Wrapper.getCustomMarshalGlobalProperties(),
-      customMarshalBlockedProperties: this.p5Wrapper.getCustomMarshalBlockedProperties(),
+      customMarshalGlobalProperties:
+        this.p5Wrapper.getCustomMarshalGlobalProperties(),
+      customMarshalBlockedProperties:
+        this.p5Wrapper.getCustomMarshalBlockedProperties(),
       customMarshalObjectList: this.p5Wrapper.getCustomMarshalObjectList()
     });
     this.JSInterpreter.onExecutionError.register(
@@ -1131,14 +1140,13 @@ export default class P5Lab {
     p5SpriteWrapper.injectJSInterpreter(this.JSInterpreter);
     p5GroupWrapper.injectJSInterpreter(this.JSInterpreter);
 
-    this.p5Wrapper.p5specialFunctions.forEach(function(eventName) {
+    this.p5Wrapper.p5specialFunctions.forEach(function (eventName) {
       var func = this.JSInterpreter.findGlobalFunction(eventName);
       if (func) {
-        this.eventHandlers[
-          eventName
-        ] = CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction(
-          func
-        );
+        this.eventHandlers[eventName] =
+          CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction(
+            func
+          );
       }
     }, this);
 
@@ -1175,10 +1183,10 @@ export default class P5Lab {
    * code for each event name.
    */
   onP5ExecutionStarting() {
-    this.p5Wrapper.p5eventNames.forEach(function(eventName) {
+    this.p5Wrapper.p5eventNames.forEach(function (eventName) {
       this.p5Wrapper.registerP5EventHandler(
         eventName,
-        function() {
+        function () {
           if (this.JSInterpreter && this.eventHandlers[eventName]) {
             this.eventHandlers[eventName].apply(null);
           }
@@ -1381,8 +1389,9 @@ export default class P5Lab {
   runValidationCode() {
     if (this.level.validationCode) {
       try {
-        const validationResult = this.JSInterpreter.interpreter.marshalInterpreterToNative(
-          this.JSInterpreter.evalInCurrentScope(`
+        const validationResult =
+          this.JSInterpreter.interpreter.marshalInterpreterToNative(
+            this.JSInterpreter.evalInCurrentScope(`
               (function () {
                 validationState = null;
                 validationResult = null;
@@ -1395,7 +1404,7 @@ export default class P5Lab {
                 };
               })();
             `)
-        );
+          );
         if (validationResult.state === 'succeeded') {
           const testResult = validationResult.result || TestResults.ALL_PASS;
           this.onPuzzleComplete(false, testResult);

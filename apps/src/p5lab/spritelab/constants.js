@@ -54,7 +54,7 @@ export const SpritelabReservedWords = [
   'everyInterval'
 ];
 
-export const valueTypeTabShapeMap = function(blockly) {
+export const valueTypeTabShapeMap = function (blockly) {
   return {
     [blockly.BlockValueType.SPRITE]: 'angle',
     [blockly.BlockValueType.BEHAVIOR]: 'rounded',

@@ -76,9 +76,8 @@ UnconnectedContainedLevelResetButton.propTypes = {
 
 export default connect(
   state => ({
-    hasLevelResults: !!state.progress.levelResults[
-      parseInt(state.progress.currentLevelId)
-    ],
+    hasLevelResults:
+      !!state.progress.levelResults[parseInt(state.progress.currentLevelId)],
     userId: state.pageConstants.userId,
     userRoleInCourse: state.currentUser.userRoleInCourse,
     codeIsRunning: state.runState.isRunning,

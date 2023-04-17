@@ -81,7 +81,7 @@ var authoredHintUtils = {};
 
 module.exports = authoredHintUtils;
 
-authoredHintUtils.getFromLocalStorage_ = function(key, defaultValue) {
+authoredHintUtils.getFromLocalStorage_ = function (key, defaultValue) {
   var result = localStorage.getItem(key);
   try {
     result = result ? JSON.parse(result) : defaultValue;
@@ -94,7 +94,7 @@ authoredHintUtils.getFromLocalStorage_ = function(key, defaultValue) {
 /**
  * @return {UnfinishedHint[]}
  */
-authoredHintUtils.getUnfinishedHints_ = function() {
+authoredHintUtils.getUnfinishedHints_ = function () {
   return authoredHintUtils.getFromLocalStorage_(
     'unfinished_authored_hint_views',
     []
@@ -104,7 +104,7 @@ authoredHintUtils.getUnfinishedHints_ = function() {
 /**
  * @return {FinishedHint[]}
  */
-authoredHintUtils.getFinishedHints_ = function() {
+authoredHintUtils.getFinishedHints_ = function () {
   return authoredHintUtils.getFromLocalStorage_(
     'finished_authored_hint_views',
     []
@@ -114,7 +114,7 @@ authoredHintUtils.getFinishedHints_ = function() {
 /**
  * @return {AttemptRecord}
  */
-authoredHintUtils.getLastAttemptRecord_ = function() {
+authoredHintUtils.getLastAttemptRecord_ = function () {
   return authoredHintUtils.getFromLocalStorage_(
     'last_attempt_record',
     undefined
@@ -125,7 +125,7 @@ authoredHintUtils.getLastAttemptRecord_ = function() {
  * Appends the given hints to the array of existing FinishedHints
  * @param {FinishedHint[]} hints
  */
-authoredHintUtils.recordFinishedHints_ = function(hints) {
+authoredHintUtils.recordFinishedHints_ = function (hints) {
   var finishedHintViews = authoredHintUtils.getFinishedHints_();
   finishedHintViews = finishedHintViews.concat(hints);
   trySetLocalStorage(
@@ -134,23 +134,23 @@ authoredHintUtils.recordFinishedHints_ = function(hints) {
   );
 };
 
-authoredHintUtils.clearUnfinishedHints = function() {
+authoredHintUtils.clearUnfinishedHints = function () {
   trySetLocalStorage('unfinished_authored_hint_views', JSON.stringify([]));
 };
 
-authoredHintUtils.clearFinishedHints_ = function() {
+authoredHintUtils.clearFinishedHints_ = function () {
   trySetLocalStorage('finished_authored_hint_views', JSON.stringify([]));
 };
 
 /**
  * @return {FinalizedHint[]}
  */
-authoredHintUtils.finalizeHints_ = function() {
+authoredHintUtils.finalizeHints_ = function () {
   var finalAttemptRecord = authoredHintUtils.getLastAttemptRecord_();
   localStorage.removeItem('last_attempt_record');
   var hints = authoredHintUtils.getFinishedHints_();
   if (finalAttemptRecord) {
-    hints = hints.map(function(hint) {
+    hints = hints.map(function (hint) {
       hint = Object.assign(
         {
           finalTime: finalAttemptRecord.time,
@@ -175,7 +175,7 @@ authoredHintUtils.finalizeHints_ = function() {
  *
  * @param {HintData} hint
  */
-authoredHintUtils.recordUnfinishedHint = function(hint) {
+authoredHintUtils.recordUnfinishedHint = function (hint) {
   var lastAttemptRecord = authoredHintUtils.getLastAttemptRecord_();
   if (lastAttemptRecord) {
     hint = Object.assign(
@@ -200,14 +200,14 @@ authoredHintUtils.recordUnfinishedHint = function(hint) {
 /**
  * @param {AttemptRecord} nextAttemptRecord
  */
-authoredHintUtils.finishHints = function(nextAttemptRecord) {
+authoredHintUtils.finishHints = function (nextAttemptRecord) {
   if (!nextAttemptRecord) {
     return;
   }
   trySetLocalStorage('last_attempt_record', JSON.stringify(nextAttemptRecord));
   var unfinishedHintViews = authoredHintUtils.getUnfinishedHints_();
   authoredHintUtils.clearUnfinishedHints();
-  var finishedHintViews = unfinishedHintViews.map(function(hint) {
+  var finishedHintViews = unfinishedHintViews.map(function (hint) {
     hint = Object.assign(
       {
         nextTime: nextAttemptRecord.time,
@@ -226,7 +226,7 @@ authoredHintUtils.finishHints = function(nextAttemptRecord) {
 /**
  * @param {string} url
  */
-authoredHintUtils.submitHints = function(url) {
+authoredHintUtils.submitHints = function (url) {
   // first, finish all unfinished hints
   var unfinishedHints = authoredHintUtils.getUnfinishedHints_();
   if (unfinishedHints && unfinishedHints.length) {
@@ -250,7 +250,7 @@ authoredHintUtils.submitHints = function(url) {
       method: 'POST',
       contentType: 'application/json',
       data: JSON.stringify({hints: hints}),
-      complete: function() {
+      complete: function () {
         authoredHintUtils.clearFinishedHints_();
       }
     });
@@ -264,8 +264,8 @@ authoredHintUtils.submitHints = function(url) {
  *        create hints.
  * @return {AuthoredHint[]}
  */
-authoredHintUtils.createContextualHintsFromBlocks = function(blocks) {
-  var hints = blocks.map(function(block) {
+authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
+  var hints = blocks.map(function (block) {
     var xmlBlock = parseXmlElement(
       FeedbackBlocks.generateXMLForBlocks([block])
     );
@@ -288,7 +288,7 @@ authoredHintUtils.createContextualHintsFromBlocks = function(blocks) {
  * @param {string} levelBuilderAuthoredHints - JSON representing an array of hints
  * @return {AuthoredHint[]}
  */
-authoredHintUtils.generateAuthoredHints = function(levelBuilderAuthoredHints) {
+authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
   /**
    * @type {{
    *   hint_markdown,
@@ -304,7 +304,7 @@ authoredHintUtils.generateAuthoredHints = function(levelBuilderAuthoredHints) {
   } catch (e) {
     hints = [];
   }
-  return hints.map(function(hint) {
+  return hints.map(function (hint) {
     return {
       markdown: hint.hint_markdown,
       hintId: hint.hint_id,
@@ -322,7 +322,7 @@ authoredHintUtils.generateAuthoredHints = function(levelBuilderAuthoredHints) {
  * @return {number} number of hints that the user has opened on the given level, but
  * haven't been reported to the server yet.
  */
-authoredHintUtils.currentOpenedHintCount = function(levelId) {
+authoredHintUtils.currentOpenedHintCount = function (levelId) {
   const unfinished = authoredHintUtils.getUnfinishedHints_();
   const finished = authoredHintUtils.getFinishedHints_();
   return unfinished.concat(finished).filter(hint => {

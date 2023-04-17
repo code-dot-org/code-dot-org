@@ -75,7 +75,7 @@
       "/courses/csd-2022/guides/shapes-and-parameters",
       "/courses/csd-2022/guides/sprite-interactions"
     ],
-    "video_key": "csd_gamelab_animation_tab",
+    "video_key": "csd_sprite_properties",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
@@ -90,8 +90,8 @@
     "display_name": "Scale Property",
     "encrypted_examples": "ymHT2xd7LVnS0xr7pYkKNnaOT31+qwP3A3J31Ob/Nf4nL6KfQempAUtAxcai\nFWUzfADf2zyv/BvjhTfMg/iBuw==\n",
     "map_reference": "/courses/csd-2022/guides/sprite-properties",
-    "preload_asset_list": null,
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "preload_asset_list": null
   },
   "game_id": 50,
   "published": true,
@@ -99,7 +99,7 @@
   "level_num": "custom",
   "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:53:39.540+00:00\",\"changed\":[\"cloned from \\\"CSD Games bubble choice properties scale_2022\\\"\"],\"cloned_from\":\"CSD Games bubble choice properties scale_2022\"},{\"changed_at\":\"2023-01-10 23:36:46 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-10 23:44:08 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:53:39.540+00:00\",\"changed\":[\"cloned from \\\"CSD Games bubble choice properties scale_2022\\\"\"],\"cloned_from\":\"CSD Games bubble choice properties scale_2022\"},{\"changed_at\":\"2023-01-10 23:36:46 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-10 23:44:08 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-16 19:56:33 +0000\",\"changed\":[\"code_functions\",\"video_key\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

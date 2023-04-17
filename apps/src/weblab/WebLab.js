@@ -40,7 +40,7 @@ let webLab_ = null;
 // The max size in bytes for a WebLab project. 20 megabytes == 20971520 bytes
 const MAX_PROJECT_CAPACITY = 20971520;
 
-const WebLab = function() {
+const WebLab = function () {
   this.skin = null;
   this.level = null;
 
@@ -58,21 +58,21 @@ const WebLab = function() {
  * Forward a log message to both logger objects.
  * @param {?} object
  */
-WebLab.prototype.log = function(object) {
+WebLab.prototype.log = function (object) {
   this.consoleLogger_.log(object);
 };
 
 /**
  * Clear logs for both logger objects.
  */
-WebLab.prototype.clear = function() {
+WebLab.prototype.clear = function () {
   this.consoleLogger_.clear;
 };
 
 /**
  * Inject the studioApp singleton.
  */
-WebLab.prototype.injectStudioApp = function(studioApp) {
+WebLab.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
   this.studioApp_.reset = this.reset.bind(this);
 };
@@ -81,14 +81,14 @@ WebLab.prototype.injectStudioApp = function(studioApp) {
  * Returns the global singleton. For use by Bramble host to get the Web Lab interface.
  * Set on the window object so that Bramble host can get to it from inside its iframe.
  */
-window.getWebLab = function() {
+window.getWebLab = function () {
   return webLab_;
 };
 
 /**
  * Initialize this WebLab instance.  Called on page load.
  */
-WebLab.prototype.init = function(config) {
+WebLab.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error('WebLab requires a StudioApp');
   }
@@ -257,7 +257,7 @@ WebLab.prototype.init = function(config) {
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));
 };
 
-WebLab.prototype.onMount = function(config) {
+WebLab.prototype.onMount = function (config) {
   this.setupReduxSubscribers(getStore());
 
   // TODO: understand if we need to call studioApp
@@ -293,7 +293,7 @@ WebLab.prototype.onMount = function(config) {
   });
 };
 
-WebLab.prototype.onToggleInspector = function() {
+WebLab.prototype.onToggleInspector = function () {
   if (this.brambleHost) {
     if (getStore().getState().inspectorOn) {
       this.brambleHost.disableInspector();
@@ -303,7 +303,7 @@ WebLab.prototype.onToggleInspector = function() {
   }
 };
 
-WebLab.prototype.onStartFullScreenPreview = function() {
+WebLab.prototype.onStartFullScreenPreview = function () {
   if (this.brambleHost) {
     this.brambleHost.enableFullscreenPreview(() => {
       // We always want to disable the inspector as we enter fullscreen preview,
@@ -316,7 +316,7 @@ WebLab.prototype.onStartFullScreenPreview = function() {
   }
 };
 
-WebLab.prototype.beforeUnload = function(event) {
+WebLab.prototype.beforeUnload = function (event) {
   if (project.hasOwnerChangedProject()) {
     // Manually trigger an autosave instead of waiting for the next autosave.
     project.autosave();
@@ -328,7 +328,7 @@ WebLab.prototype.beforeUnload = function(event) {
   }
 };
 
-WebLab.prototype.reportResult = function(submit, validated) {
+WebLab.prototype.reportResult = function (submit, validated) {
   let onComplete, testResult;
 
   if (validated) {
@@ -361,7 +361,7 @@ WebLab.prototype.reportResult = function(submit, validated) {
   });
 };
 
-WebLab.prototype.onFinish = function(submit) {
+WebLab.prototype.onFinish = function (submit) {
   if (this.level.validationEnabled) {
     this.brambleHost.validateProjectChanged(validated =>
       this.reportResult(submit, validated)
@@ -371,7 +371,7 @@ WebLab.prototype.onFinish = function(submit) {
   }
 };
 
-WebLab.prototype.getCodeAsync = function() {
+WebLab.prototype.getCodeAsync = function () {
   return new Promise((resolve, reject) => {
     if (this.brambleHost) {
       this.syncBrambleFiles(err => {
@@ -389,28 +389,28 @@ WebLab.prototype.getCodeAsync = function() {
   });
 };
 
-WebLab.prototype.prepareForRemix = function() {
+WebLab.prototype.prepareForRemix = function () {
   return new Promise((resolve, reject) => {
     filesApi.prepareForRemix(resolve);
   });
 };
 
 // Called by Bramble to get source files to initialize with
-WebLab.prototype.getStartSources = function() {
+WebLab.prototype.getStartSources = function () {
   return this.startSources;
 };
 
 // Called by Bramble to get the current fileEntries
-WebLab.prototype.getCurrentFileEntries = function() {
+WebLab.prototype.getCurrentFileEntries = function () {
   return this.fileEntries;
 };
 
-WebLab.prototype.getCurrentFilesVersionId = function() {
+WebLab.prototype.getCurrentFilesVersionId = function () {
   return project.filesVersionId || this.initialFilesVersionId;
 };
 
 // Called by Bramble when a file has been deleted
-WebLab.prototype.deleteProjectFile = function(filename, callback) {
+WebLab.prototype.deleteProjectFile = function (filename, callback) {
   filesApi.deleteFile(
     filename,
     xhr => {
@@ -424,7 +424,11 @@ WebLab.prototype.deleteProjectFile = function(filename, callback) {
 };
 
 // Called by Bramble when a file has been renamed
-WebLab.prototype.renameProjectFile = function(filename, newFilename, callback) {
+WebLab.prototype.renameProjectFile = function (
+  filename,
+  newFilename,
+  callback
+) {
   filesApi.renameFile(
     filename,
     newFilename,
@@ -439,7 +443,7 @@ WebLab.prototype.renameProjectFile = function(filename, newFilename, callback) {
 };
 
 // Called by Bramble when a file has been changed or created
-WebLab.prototype.changeProjectFile = function(
+WebLab.prototype.changeProjectFile = function (
   filename,
   fileData,
   callback,
@@ -464,7 +468,7 @@ WebLab.prototype.changeProjectFile = function(
  * @param {Function} hook to be called once before a filesApi write.
  *   hook should be hook(callback) and callback is callback(err)
  */
-WebLab.prototype.registerBeforeFirstWriteHook = function(hook) {
+WebLab.prototype.registerBeforeFirstWriteHook = function (hook) {
   filesApi.registerBeforeFirstWriteHook(hook);
   filesApi.registerErrorAction(() => {
     dashboard.assets.hideAssetManager();
@@ -473,7 +477,7 @@ WebLab.prototype.registerBeforeFirstWriteHook = function(hook) {
 };
 
 // Called by Bramble when project has changed
-WebLab.prototype.onProjectChanged = function() {
+WebLab.prototype.onProjectChanged = function () {
   if (!this.readOnly) {
     // let dashboard project object know project has changed, which will trigger autosave
     project.projectChanged();
@@ -483,7 +487,7 @@ WebLab.prototype.onProjectChanged = function() {
 /**
  * @returns {String} current project path (project id plus initial version)
  */
-WebLab.prototype.getProjectId = function() {
+WebLab.prototype.getProjectId = function () {
   if (this.suppliedFilesVersionId) {
     return `${project.getCurrentId()}-${this.suppliedFilesVersionId}`;
   } else {
@@ -495,7 +499,7 @@ WebLab.prototype.getProjectId = function() {
  * Subscribe to state changes on the store.
  * @param {!Store} store
  */
-WebLab.prototype.setupReduxSubscribers = function(store) {
+WebLab.prototype.setupReduxSubscribers = function (store) {
   let state = {};
   store.subscribe(() => {
     let lastState = state;
@@ -510,9 +514,9 @@ WebLab.prototype.setupReduxSubscribers = function(store) {
   });
 };
 
-WebLab.prototype.onIsRunningChange = function() {};
+WebLab.prototype.onIsRunningChange = function () {};
 
-WebLab.prototype.onFilesReady = function(files, filesVersionId) {
+WebLab.prototype.onFilesReady = function (files, filesVersionId) {
   // Gather information when the weblab manifest is empty but should
   // contain references to files (i.e. after changes have been made to the project)
   if (filesVersionId && files && files.length === 0) {
@@ -547,7 +551,7 @@ WebLab.prototype.onFilesReady = function(files, filesVersionId) {
 /**
  * Load the file entry list and store it as this.fileEntries
  */
-WebLab.prototype.loadFileEntries = function() {
+WebLab.prototype.loadFileEntries = function () {
   filesApi.getFiles(
     result => this.onFilesReady(result.files, result.filesVersionId),
     xhr => {
@@ -569,11 +573,11 @@ WebLab.prototype.loadFileEntries = function() {
  * @param {boolean} ignore Required by the API but ignored by this
  *     implementation.
  */
-WebLab.prototype.reset = function(ignore) {
+WebLab.prototype.reset = function (ignore) {
   // TODO - implement
 };
 
-WebLab.prototype.openFatalErrorDialog = function(
+WebLab.prototype.openFatalErrorDialog = function (
   message,
   type = FatalErrorType.Default
 ) {
@@ -606,7 +610,7 @@ WebLab.prototype.openFatalErrorDialog = function(
   );
 };
 
-WebLab.prototype.openDisallowedHtmlDialog = function(
+WebLab.prototype.openDisallowedHtmlDialog = function (
   filename,
   disallowedTags,
   onClose
@@ -626,27 +630,27 @@ WebLab.prototype.openDisallowedHtmlDialog = function(
   );
 };
 
-WebLab.prototype.openUploadErrorDialog = function() {
+WebLab.prototype.openUploadErrorDialog = function () {
   actions.openDialog(
     <UploadErrorDialog isOpen handleClose={this.closeDialog} />
   );
 };
 
-WebLab.prototype.openResetSuccessDialog = function() {
+WebLab.prototype.openResetSuccessDialog = function () {
   actions.openDialog(
     <ResetSuccessDialog isOpen handleClose={this.closeDialog} />
   );
 };
 
-WebLab.prototype.closeDialog = function() {
+WebLab.prototype.closeDialog = function () {
   actions.closeDialog();
 };
 
-WebLab.prototype.getAppReducers = function() {
+WebLab.prototype.getAppReducers = function () {
   return reducers;
 };
 
-WebLab.prototype.redux = function() {
+WebLab.prototype.redux = function () {
   return {
     getStore,
     reducers,
@@ -659,12 +663,12 @@ WebLab.prototype.redux = function() {
  * Defined here instead of in CdoBramble.js because logToCloud relies on window.newrelic
  * being set. Bramble is hosted within an iframe, so window is different in that context.
  */
-WebLab.prototype.addPageAction = function(...args) {
+WebLab.prototype.addPageAction = function (...args) {
   logToCloud.addPageAction(...args);
 };
 
 // Some temporary logging to diagnose possible loading issues.
-WebLab.prototype.tempLog = function(event, data = null) {
+WebLab.prototype.tempLog = function (event, data = null) {
   firehoseClient.putRecord(
     {
       study: 'weblab_loading_investigation_2022',
@@ -675,7 +679,7 @@ WebLab.prototype.tempLog = function(event, data = null) {
   );
 };
 
-WebLab.prototype.syncBrambleFiles = function(callback = () => {}) {
+WebLab.prototype.syncBrambleFiles = function (callback = () => {}) {
   this.brambleHost?.syncFiles(
     this.getCurrentFileEntries(),
     this.getCurrentFilesVersionId(),
@@ -690,11 +694,11 @@ WebLab.prototype.syncBrambleFiles = function(callback = () => {}) {
  * index.html error).
  * @param {Object} brambleHost
  */
-WebLab.prototype.onBrambleMountable = function(brambleHost) {
+WebLab.prototype.onBrambleMountable = function (brambleHost) {
   this.brambleHost = brambleHost;
 };
 
-WebLab.prototype.onBrambleReady = function() {
+WebLab.prototype.onBrambleReady = function () {
   if (!this.brambleHost) {
     console.error(`No brambleHost set in WebLab.`);
     return;
@@ -709,7 +713,7 @@ WebLab.prototype.onBrambleReady = function() {
   this.syncBrambleFiles();
 };
 
-WebLab.prototype.brambleApi = function() {
+WebLab.prototype.brambleApi = function () {
   return {
     addPageAction: this.addPageAction.bind(this),
     changeProjectFile: this.changeProjectFile.bind(this),

@@ -33,3 +33,5 @@ The condition to exit the while loop is when the die is rolled a total of 100 ti
 
 When one of the conditions is false, it means the die was either rolled more than 100 times or a six was rolled more than 25 times and thus, should exit while loop.
 MARKDOWN
+
+allow_multiple_attempts true

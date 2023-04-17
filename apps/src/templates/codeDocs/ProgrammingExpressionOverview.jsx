@@ -1,3 +1,5 @@
+// TODO: Fix all prop types for this file.
+/* eslint-disable react/prop-types */
 import React, {createRef, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
@@ -165,7 +167,8 @@ export default function ProgrammingExpressionOverview({
           <h2>{i18n.additionalInformationHeader()}</h2>
           <EnhancedSafeMarkdown
             markdown={i18n.additionalInformationText({
-              externalDocumentationUrl: programmingExpression.externalDocumentation.trim()
+              externalDocumentationUrl:
+                programmingExpression.externalDocumentation.trim()
             })}
             className="docs-pages"
           />

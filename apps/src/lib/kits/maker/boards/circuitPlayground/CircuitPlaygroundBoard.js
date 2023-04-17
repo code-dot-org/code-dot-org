@@ -108,9 +108,8 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   initializePlaygroundAndBoard(serialPort, name, resolve, reject) {
-    const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
-      serialPort
-    );
+    const playground =
+      CircuitPlaygroundBoard.makePlaygroundTransport(serialPort);
     const board = new five.Board({
       io: playground,
       repl: false,
@@ -436,7 +435,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
         const toSend = port.queue.shift();
         sendPending = true;
-        oldWrite.call(port, toSend, 'binary', function() {
+        oldWrite.call(port, toSend, 'binary', function () {
           sendPending = false;
 
           if (port.queue.length !== 0) {
@@ -461,10 +460,10 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     // for this on every connection attempt.
     // Here we explicitly request a version as soon as the serialport is open
     // to speed up the connection process.
-    playground.on('open', function() {
+    playground.on('open', function () {
       // Requesting the version requires both of these calls. ¯\_(ツ)_/¯
-      playground.reportVersion(function() {});
-      playground.queryFirmware(function() {});
+      playground.reportVersion(function () {});
+      playground.queryFirmware(function () {});
     });
     return playground;
   }

@@ -1,6 +1,6 @@
-FactoryGirl.allow_class_lookup = false
+FactoryBot.allow_class_lookup = false
 
-FactoryGirl.define do
+FactoryBot.define do
   # example zip: 35010
   factory :regional_partner_alabama, parent: :regional_partner_with_summer_workshops do
     mappings {[create(:pd_regional_partner_mapping, state: "AL")]}
