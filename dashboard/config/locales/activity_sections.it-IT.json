@@ -9617,135 +9617,257 @@
           ],
           "progression_name": "Istruzioni per il sondaggio post-corso"
         },
+        "2c18236d-898f-423a-945f-b7580dfbb1eb": {
+          "description": "**Mostra**  l'immagine del processo di risoluzione dei problemi, che ora include una sezione _Empatizza_ in fondo all'intero processo.\n\n#### Attività sul diario\n\n**Discussione:** abbiamo utilizzato questo processo di risoluzione dei problemi diverse volte durante questo corso. In questa unità, stiamo aggiungendo un nuovo elemento: **Empatizza**. Cosa significa empatizzare? In quale altro posto hai già sentito questo termine?"
+        },
         "a2d36b0f-a20a-4db5-a14d-c421661a4244": {
+          "description": "\\*\\*Discussione: \\*\\* gli studenti devono prima scrivere le loro risposte nel loro diario, poi condividere le loro idee con un compagno prima di discuterne di fronte a tutta la classe. Eventualmente potrà esserci una discussione sul fatto che entrare in empatia con le altre persone significa considerare i loro desideri, bisogni o preoccupazioni.",
           "tips": [
-            null
+            "\\*\\*Obiettivo: \\*\\* questa discussione può essere abbastanza fluida e aperta. Anche se alla fine vuoi arrivare a una definizione condivisa di cosa significhi empatizzare, gli studenti lavoreranno sulla loro comprensione della parola nell'intera unità. Non è necessario accontentarsi di un'unica definizione fissa, quindi considera questa discussione come un'introduzione a un tema dell'unità."
           ]
         },
+        "46123fe3-b4ff-4025-b625-51f52f9c63d5": {
+          "description": "\\*\\*Glossario: \\*\\* mostra il seguente glossario come transizione all'attività principale:\n\n-   Empatia - Durante la progettazione, prestare attenzione ailla sensibilità e alle esigenze di un utente durante la progettazione di un prodotto\n-   Utente - Chi utilizzi un qualsiasi oggetto, inclusi software e hardware"
+        },
+        "a769602d-1ba9-44bc-a579-3fca4029b823": {
+          "description": "In questa unità inizieremo a pensare molto di più alla progettazione per altre persone. Si tratta ancora in gran parte di un processo di risoluzione dei problemi, ma ora dovremo riflettere molto più da vicino sulle esigenze dei nostri utenti. In altre parole, l'empatia sarà un tema importante man mano che impareremo di più sulla progettazione."
+        },
+        "fe45cc22-f6d8-4ae3-9ba7-62de8c8fb491": {
+          "description": "\\*\\*Domanda del giorno: \\*\\* come possiamo scegliere i prodotti in base alle esigenze di un utente?"
+        },
         "0981bfb1-4984-4042-b56c-11277092d391": {
+          "description": "**Distribuisci** copie della Guida alla attività \"Stabilisci la tipologia di utente\".",
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**\n\nL'unità 4 contiene molti materiali stampati. Le aule con capacità di stampa limitata possono invece scegliere una delle seguenti opzioni.\n\n**Opzione 1: guide alle attività online**\n\nTutte le nostre guide alle attività sono disponibili nei formati modificabili di Google Doc e Microsoft Doc. Le aule che utilizzano prodotti Google o Microsoft possono distribuire copie digitali agli studenti, che possono completare la maggior parte delle guide alle attività interamente online.\n\n**Opzione 2: diari degli studenti**\n\nMolte guide alle attività possono essere convertite in attività di diario. Gli insegnanti possono proiettare le istruzioni e i suggerimenti o consentire agli studenti di visualizzarli online, quindi completare l'attività stessa in un diario.\n\nCerca suggerimenti didattici sulle lezioni pertinenti per indicare quando puoi evitare di stampare utilizzando una di queste opzioni."
           ]
         },
         "d5cbe650-e941-402e-9253-acebd19f07d1": {
+          "description": "### **_Progettare con empatia_**\n\n#### Stabilisci la tipologia di utente\n\n\\*\\*Panoramica: \\*\\* chiedi agli studenti di leggere la sezione Stabilisci la tipologia di utente e della Guida alle attività. La prima parte di questa attività chiede agli studenti di abbinare tra le diverse scarpe quelle più adatte a un certo utente. Chiedi agli studenti di svolgere questa attività in coppia, incoraggiando la discussione sul perché esattamente stanno scegliendo di stabilire quell'abbinamento. Questo è un ottimo posto per discutere del progetto delle scarpe e delle esigenze degli utenti.\n\n\\*\\*Girando tra i banchi: \\*\\* monitora gli studenti mentre completano la prima pagina della guida alle attività, chiedendo agli studenti di giustificare alcune delle decisioni che hanno preso. Va bene se gli studenti non sono d'accordo su una particolare scelta di scarpe. Qui non ci sono risposte giuste o sbagliate: ciò che conta sono la discussione e la capacità di giustificare ragionevolmente una decisione.",
           "tips": [
             null
           ]
         },
         "e30c705b-aace-4ec1-b2b3-f34f796db40e": {
+          "description": "\\*\\*Condividi: \\*\\* chiedi agli studenti di discutere le seguenti domande in piccoli gruppi prima di passare a una discussione completa in classe:\n\n-   Per quali utenti è stato più facile trovare risposte?\n-   Per quali utenti è stato più difficile trovare corrispondenze?\n\nIn base alle tue osservazioni durante la circolazione, dovresti anche identificare alcuni utenti specifici sui quali chiedere alla classe di discutere, in particolare utenti per i quali più studenti hanno scelto scarpe diverse. Incoraggia gli studenti ad ascoltare diverse giustificazioni per le loro scelte, sottolineando che la logica è più importante della scelta stessa.",
           "tips": [
-            null
+            "Mentre gli studenti spiegano il motivo delle loro scelte, verifica che stiano identificando le esigenze e le caratteristiche particolari dell'utente, piuttosto che i motivi generali per preferire una determinata scarpa. Potresti sfidare gli studenti a distinguere le proprie esigenze e preferenze da quelle degli utenti descritti."
           ]
+        },
+        "4f9b734f-0741-49cd-9473-f105bdfbabef": {
+          "name": "Riscontro sul progetto",
+          "description": "Ora impareremo come fornire riscontri su un progetto. Esprimeremo la nostra opinione sugli aspetti positivi e negativi di queste scarpe. È importante fornire un riscontro che costituisca un contributo positivo verso il miglioramento, piuttosto che un riscontro negativo e accusatorio che non aiuta a migliorare il prodotto."
+        },
+        "961dfe89-b7d5-4731-8a11-4efd84c1ed51": {
+          "description": "\\*\\*Riscontro sul progetto: \\*\\* chiedi agli studenti di leggere la sezione \"Riscontro sul progetto\" della guida alle attività nella seconda pagina. Questa seconda attività offre agli studenti l'opportunità di fornire riscontri su quattro scarpe. La struttura di questa pagina riflette l'approccio generale che utilizzeremo per il riscontro, utilizzando le tre affermazioni:\n\n-   Mi piace... (un punto di forza)\n-   Vorrei... (una debolezza)\n-   E se... (un suggerimento)"
         },
         "13bb3ea9-72ed-4b30-b2d2-d96911110165": {
+          "description": "\\*\\*Girando tra i banchi: \\*\\* monitora gli studenti mentre completano questa attività, assicurandoti che forniscano riscontri concreti che possono portare a miglioramenti piuttosto che riscontri generici o inutili che sembrano più un giudizio che un suggerimento.",
           "tips": [
-            null
+            "Il primo passo verso la creazione di un progetto che possa essere efficacemente utilizzato da molte persone è capire che non tutti la pensano allo stesso modo o guardano un oggetto o un progetto allo stesso modo. Questo è il primo esercizio in cui gli studenti provano a pensare guardando le cose da una prospettiva esterna e a riflettere su come gli altri possono percepire gli oggetti del mondo."
           ]
+        },
+        "698c20b3-004d-4b6e-8e72-0738b6d7a160": {
+          "description": "**Condivisione:** chiedi agli studenti di discutere le seguenti domande in piccoli gruppi prima di portarli a una discussione completa in classe:\n\n-   Qual era la tua scarpa preferita? Perché?\n-   Quale di queste scarpe pensi che sarebbe la preferita di qualcuno della tua famiglia? Perché?\n\nIncoraggia gli studenti a pensare a se stessi e agli altri membri della loro vita, come un membro della famiglia. Questo aiuta a sottolineare che progettare significa pensare non solo ai propri bisogni e desideri, ma anche a come reagiranno gli altri a un prodotto."
+        },
+        "18f805f7-fdf6-4e61-9b9a-334b2736da84": {
+          "description": "Una parte importante di questa attività è pensare a come vengono realizzati prodotti diversi per persone diverse e a come ci sia sempre spazio per migliorare un prodotto in modo che sia utile a più utenti. In questa unità, continueremo a pensare a come persone diverse utilizzano gli oggetti per diversi motivi, in modo da poter progettare app per il maggior numero possibile di utenti!"
         },
         "8de8ca69-30c2-4f67-b234-816f7fa55eab": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "\\*\\*Discussione: \\*\\* scegli uno o due degli oggetti che hai analizzato oggi. Cosa potresti cambiare per rendere questo oggetto più utilizzabile per te? Sentiti libero di usare parole, immagini o una combinazione di entrambi"
         },
         "930b6488-eded-4752-8c9b-0f59b4332429": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "\\*\\*Discussione: \\*\\* pensiamo ai prodotti che hanno un bell'aspetto rispetto a quelli facili da usare. \n\n-   Riesci a pensare a qualche esempio di prodotto che aveva un bell'aspetto ma era difficile da usare? \n-   Che ne dici di qualcosa che fosse facile da usare, ma che non ti piacesse come appariva."
         },
         "f042db09-5e5b-44bc-8888-bb78223e4514": {
+          "description": "\\*\\*Discussione: \\*\\* chiedi agli studenti di scrivere un diario dei loro pensieri. Mentre condividono con i loro compagni di banco ciò che hanno scritto, chiedi loro anche di discutere se sono interessati a un prodotto che sia utilizzabile o di bell'aspetto. Dopo un paio di minuti, dai modo a un paio di compagni di riassumere ciò di cui hanno discusso.",
           "tips": [
-            null
+            "\\*\\*Obiettivo: \\*\\* sottolinea il fatto che esistono molti tipi di esigenze degli utenti con cui dobbiamo entrare in empatia come progettisti. In particolare, ricorda che l'usabilità di un prodotto è una considerazione importante e separata dal fatto che sia semplicemente esteticamente gradevole."
           ]
+        },
+        "40a2b00d-db9f-4684-ba49-98e507e4ed7e": {
+          "description": "Sono evidentemente molte le tipologie di esigenze nell'utilizzo dei prodotti. L' _usabilità_ dei nostri progetti influirà in primo luogo sulla possibilità di utilizzo del prodotto da parte di un utente. Tuttavia, se un prodotto non è attraente, potrebbe non essere mai utilizzato affatto. Man mano che pensiamo di più alla progettazione per altre persone, vorremo avere in mente molti tipi diversi di esigenze."
+        },
+        "03c7bd35-ec3b-48f6-9b1f-ccb7a763d2ae": {
+          "description": "\\*\\*Domanda del giorno: \\*\\* come possiamo assicurarci che un prodotto soddisfi le esigenze di un utente?"
         },
         "f9039465-978f-47ed-8cc5-4973dd0773bb": {
+          "description": "\\*\\*Distribuisci \\*\\* un volantino del profilo utente a ogni studente. Prova a variare i profili utente all'interno dei gruppi di studenti in modo che non siano tutti uguali.",
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**\n\nI profili utente vengono utilizzati solo come riferimento. Gli studenti possono guardare le versioni digitali durante questa attività. Assegna a ogni studente un link, anziché distribuire i profili effettivi.\n\nSe scegli di stampare i profili utente, questi possono essere riutilizzati, a condizione che agli studenti venga detto di non scriverci sopra."
           ]
+        },
+        "ff6bfe69-93e1-4a48-a9c1-d51519ede9db": {
+          "description": "Prenditi qualche minuto per leggere il tuo profilo utente assegnato: dovrai «entrare nella testa» del tuo utente per la nostra attività odierna. In effetti, per il resto della giornata imparerai a entrare in empatia con i tuoi utenti e a rispondere alle situazioni come potrebbero fare i tuoi utenti."
+        },
+        "2b125396-7a00-4d25-bc11-85079cf20b95": {
+          "description": "\\*\\*Girando tra i banchi: \\*\\* lascia qualche minuto agli studenti per leggere i loro profili, incoraggiandoli a pensare come l'utente assegnato, quasi come se stessero interpretando un ruolo in un film o in un'opera teatrale. Per il resto della giornata, gli studenti cercheranno di entrare in empatia con i propri utenti e di rispondere alle situazioni come dovrebbero fare i loro utenti."
+        },
+        "245c9697-0b0b-47b9-a8da-65d270ce17c9": {
+          "name": "Pensa come un utente",
+          "description": "**Mostra:** le tre diapositive successive contengono scelte diverse per lo stesso prodotto: un animale domestico, uno zaino e un'auto. Per ogni diapositiva, chiedi agli studenti di scegliere un angolo in base all'immagine da cui _il loro utente_ sarebbe attratto. Quindi chiedi agli studenti di andare all'angolo (A, B, C o D) in cui hanno scelto di discutere con altri studenti.\n\n\\*\\*Condivisione: \\*\\* chiedi ai gruppi in ogni angolo di discutere brevemente (1-2 minuti) del motivo per cui pensano che il loro utente sia attratto da questa versione del prodotto. Chiedi a uno o due studenti o gruppi di condividere ciò di cui hanno discusso con l'intera classe. Ripeti l'operazione per ognuna delle diapositive.\n\n\\*\\*Forma i gruppi: \\*\\* dopo aver ripetuto questa attività per tutti gli oggetti delle diapositive, crea gruppi di 3-5 studenti in base al profilo utente assegnato: gli studenti con lo stesso profilo lavoreranno insieme durante l'attività successiva."
         },
         "851e69fc-a3b3-4d76-a9a5-8206bedb0afe": {
+          "description": "\\*\\*Distribuisci \\*\\* le copie della guida alle attività a ciascuno studente.",
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**\n\n\\*\\*Opzione online: \\*\\* la guida alle attività può essere completata online. Gli studenti possono «cerchiare» le valutazioni scelte mettendo un bordo attorno ad esse o digitando la valutazione nella casella. Per il design della sedia, gli studenti possono disegnare il loro design online o inviare una versione cartacea del loro design separatamente.\n\n\\*\\*Opzione diario: \\*\\* questa attività può essere completata come voce di diario. Gli studenti possono utilizzare una versione digitale della Guida alle attività come suggerimento, copiando i grafici e le domande nei loro diari.\n\n\\*\\*Suggerimento: \\*\\* più finestre o schede aperte sullo stesso computer possono creare confusione. Fai collaborare i gruppi con un computer che visualizza il profilo utente mentre un altro visualizza la Guida alle attività."
           ]
         },
+        "2e7e992f-bed6-44cf-80d2-4c00742c6055": {
+          "description": "#### Reagire come il tuo utente"
+        },
         "962479f8-9bcf-4cdf-867b-1f89b7bd3e75": {
+          "description": "**Mostra**: le tre diapositive successive contengono prodotti diversi a cui ogni gruppo di utenti può reagire: stivali impermeabili, una bicicletta e dolcetti al cioccolato. Gli studenti reagiranno a ciascun prodotto come utente compilando una riga nella guida alle attività. La guida chiede agli studenti di fare una distinzione tra l' _usabilità_ di un articolo per il proprio utente e se a un utente piace o non piace. Potresti voler esaminare il primo come gruppo in modo da poter modellare che un prodotto può essere esteticamente accattivante, ma non molto utilizzabile, o utilizzabile ma non esteticamente accattivante.",
           "tips": [
-            null
+            "\\*\\*Adattamento dell'attività: \\*\\* le diapositive fornite includono già diversi prodotti, ma potresti aggiungere altri prodotti e immagini che ritieni possano interessare i tuoi studenti."
           ]
         },
         "929fc745-62d2-4288-bf1f-d584f0c7fb6d": {
+          "description": "\\*\\*Girando tra i banchi: \\*\\* monitora gli studenti mentre completano la guida alle attività, assicurandoti che assumano il ruolo di utenti anziché reagire al prodotto come loro stessi. Ricorda agli studenti che questa è una parte intenzionale dell'attività: vedere il mondo attraverso gli occhi di un'altra persona e non solo con se stessi.",
           "tips": [
-            null
+            "Nella prima pagina, verifica che il ragionamento degli studenti includa riferimenti al profilo utente e connetta ragionevolmente la descrizione dell'utente alla preferenza che lo studente ha scelto.\n\nNella parte inferiore della seconda pagina, verifica che gli studenti abbiano stabilito connessioni esplicite tra il profilo utente e le funzionalità che hanno aggiunto alla loro sedia."
           ]
+        },
+        "fb8a5110-d689-4c5d-8946-4387d826df44": {
+          "description": "\\*\\*Condivisione: \\*\\* chiedi ad alcuni gruppi di condividere le loro reazioni a ciascun prodotto.\n\n\\*\\*Mostra: \\*\\* la diapositiva finale contiene un tavolo con diverse sedie, utilizzato per la seconda pagina della guida alle attività. Gli studenti possono lavorare individualmente sulla seconda pagina, che chiede loro di considerare quale delle sedie esposte si adatta meglio al loro utente. Dopo aver riflettuto sulle caratteristiche che li portano a scegliere una sedia specifica, gli studenti hanno uno spazio per progettare una sedia ancora più adatta al loro utente. Questa è un'attività creativa e gli studenti possono scegliere di affrontarla nel modo più espressivo per loro, incluso il disegno del loro design.\n\n\\*\\*Condivisione: \\*\\* fai un giro nella stanza per condividere alcuni dei progetti delle sedie, inducendo gli studenti a definire nello specifico cos'è che rende il loro progetto la scelta migliore per il loro utente."
         },
         "fa2c61fe-5180-47e4-a280-fb82bb0917aa": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "\\*\\*Discussione: \\*\\* \n\n-   Quali erano le 3 esigenze del tuo utente che differivano da quelle che ti riguardavano in prima persona?\n-   Quali sono state le 2 volte in cui hai avuto difficoltà a entrare in empatia con il tuo utente?\n-   Qual è la cosa che della sedia che hai progettato pensi sia veramente piaciuta al tuo utente?"
         },
         "60b1482a-9f22-4ad6-8f07-3be2ae70c082": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "**Discussione:** nelle ultime due lezioni abbiamo visto che i prodotti sono progettati con uno scopo e che design diversi sono più utili o piacevoli per persone diverse. Poiché persone diverse hanno esigenze o interessi diversi, quali potrebbero essere le sfide se stai cercando di progettare un prodotto per qualcun altro?"
         },
         "75ace3dd-fffb-4684-9b8e-652866b32638": {
+          "description": "\\*\\*Discussione: \\*\\* chiedi agli studenti di riflettere in silenzio prima di condividerli con i singoli tavoli e, successivamente, insieme a tutta la classe.",
           "tips": [
-            null
+            "\\*\\*Obiettivo: \\*\\* questa dovrebbe essere un'introduzione molto rapida alla lezione. Stai cercando di sottolineare che progettare per altre persone richiede di considerare le loro esigenze anziché le tue, il che spesso può essere difficile. Questa discussione condurrà al video presentato subito dopo la fase di avvio."
           ]
+        },
+        "c3e3e573-3c00-4fc0-97f7-c0c6174f8dae": {
+          "description": "Progettare per altre persone può essere difficile per molte ragioni, ma una delle più importanti è che ci sfida a considerare ciò che un'altra persona apprezza, apprezza o è preoccupata. In altre parole, dobbiamo provare empatia per qualcun altro. Oggi faremo una mini attività di progettazione per aiutarci a mettere in pratica l'intero processo da soli."
+        },
+        "dec16dfd-5660-4694-853d-b341629ae502": {
+          "description": "\\*\\*Domanda del giorno: come possiamo progettare per persone diverse da noi stessi? \\*\\*"
         },
         "094be521-914c-4126-a6f4-d40f5d4902d3": {
+          "name": "Introduci il pensiero progettuale",
+          "description": "\\*\\*Video: \\*\\* guarda con gli studenti il video del \"Processo del pensiero progettuale\". Interrompi il video dopo la 5a parte (circa 3:10).",
           "tips": [
-            null
+            "**Pensiero progettuale:** L'attività di oggi, così come l'intera unità, è fortemente influenzata dal \"Pensiero progettuale\". Questo è un processo creativo molto aperto che potrebbe essere difficile da immaginare se non hai mai partecipato tu stesso a un'attività di pensiero progettuale. Le risorse seguenti possono aiutarti a immaginare come sarà la tua classe durante queste attività di pensiero progettuale. \n\n-   [Cos'è il pensiero progettuale? Una guida pratica per gli educatori](https://www.makersempire.com/what-is-design-thinking-a-handy-guide-for-classroom-teachers/).\n-   [Pensiero progettuale: lezioni per la classe](https://www.edutopia.org/blog/design-thinking-betty-ray)\n-   [Formazione per insegnanti di pensiero progettuale (Video)](https://www.youtube.com/watch?v=qqM8lf3zfFo)\n\nAlcune di queste risorse sono incentrate su aule di scienze o prototipi fisici, il che è diverso da questa unità che si concentra in ultima analisi sulla creazione di app. Indipendentemente da ciò, dovrebbero offrire una certa chiarezza su come si presenta l'intero processo dall'inizio alla fine e su quale potrebbero essere forma e ritmo delle tue lezioni durante queste attività."
           ]
+        },
+        "87cdf0a2-66ce-47b9-b60b-39a64b310214": {
+          "description": "\\*\\*Mostra: \\*\\* visualizza i passaggi del processo di pensiero progettuale. Mentre parli di questo processo, fai clic sull'animazione sulla diapositiva per far scomparire questi passaggi e passare al Processo di risoluzione dei problemi."
+        },
+        "acccddb1-132a-4dd5-9589-0a1f5628c88f": {
+          "description": "Il processo del pensiero progettuale è molto simile al nostro processo di risoluzione dei problemi: entrambi sono incentrati sull'empatia ed entrambi hanno un ciclo simile per definire, preparare, provare e riflettere. Nelle prossime settimane, metteremo in pratica questo processo in modo da poter progettare prodotti e app per le persone nella nostra comunità e in tutto il mondo. Oggi e domani metteremo in pratica una versione più breve di questo processo, raccogliendo idee su diversi gruppi di persone e sulle loro esigenze, quindi progettando prodotti di abbigliamento intelligenti per soddisfare tali esigenze."
+        },
+        "7e812294-46b2-484f-9780-3587e41625d9": {
+          "name": "Introduci l'attività",
+          "description": "\\*\\*Forma i gruppi: \\*\\* le squadre saranno formate da un numero di studenti che vada da 3 a 5."
         },
         "7fadeba7-aa4e-4114-9584-475ee5610f22": {
+          "description": "\\*\\*Distribuisci \\*\\* la guida alle attività a ogni studente e dai a ogni gruppo pennarelli, foglietti adesivi e carta per il cartellone.",
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**\n\n\\*\\*Opzione online: \\*\\* La guida alle attività può essere completata online. Per il disegno, gli studenti possono disegnare il loro prodotto online o inviare una versione cartacea del loro prodotto separatamente.\n\n\\*\\*Opzione diario: \\*\\* questa attività può essere completata come voce di diario. Gli studenti possono utilizzare una versione digitale della Guida alle attività come suggerimento, copiando i grafici e le domande nei loro diari."
           ]
         },
+        "194cd9b0-962a-41ae-8eb3-6267166ac94b": {
+          "description": "#### Progettazione focalizzata sull'utente"
+        },
         "7c779ccd-2298-4070-8c48-4116499cb04e": {
+          "description": "\\*\\*Panoramica: \\*\\* durante la lezione, leggete la sezione «Panoramica» per assicurarvi che i gruppi comprendano l'obiettivo dell'attività.",
           "tips": [
-            null
+            "**Perché vestiti intelligenti? :** questo tipo di prodotto è stato scelto perché esistono ampie applicazioni per combinare la tecnologia informatica con l'abbigliamento che potrebbero avvantaggiare molti tipi di utenti. Un ulteriore vantaggio è che il campo non è ancora ben definito e quindi offre agli studenti più margine di manovra per sviluppare idee su come risolvere i problemi delle persone piuttosto che affidarsi a soluzioni più consolidate. "
           ]
         },
         "cc71d597-f0fb-426b-8a56-6434c1a1b55a": {
           "name": "Definisci",
+          "description": "\\*\\*Riflessione condivisa in gruppi di utenti: \\*\\* chiedi agli studenti di elencare nelle loro guide alle attività tutti i diversi gruppi di potenziali utenti di abbigliamento intelligente a cui riescono a pensare. Il video ha fornito un esempio di persone anziane, ma gli studenti possono trovare diversi gruppi di persone. Concedi agli studenti un paio di minuti per fare riflessione condivisa in modo indipendente. Una volta terminati, chiedi a ogni studente di creare un post-it per i due o tre gruppi di utenti che ritiene più interessanti.",
           "tips": [
-            null
+            "\\*\\*Riflessione condivisa in gruppi di utenti: \\*\\* in questa prima attività di riflessione condivisa, prova a modellare attentamente questo processo. Incoraggia gli studenti a considerare diversi fattori identificativi durante il brainstorming degli utenti, ad esempio identificando gli utenti in base all'età, all'occupazione o alla situazione di vita. Dovrebbero essere risposte ampie, di una o due parole che identifichino ampi gruppi di persone nella popolazione. Alcuni esempi possono includere: giovani studenti, militari, medici, proprietari di animali domestici, vivono in una fattoria, ecc. \n\nIncoraggia gli studenti ad attingere da persone che conoscono nella loro vita per aiutare a generalizzare a un certo tipo di utente. Sottolinea il fatto che non ci sono idee giuste o sbagliate e gli studenti avranno la possibilità di restringere le loro scelte in seguito. "
           ]
         },
         "929e1c15-045a-49f1-bfa5-9a00dc1eca45": {
+          "description": "\\*\\*Classifica gli utenti: \\*\\* chiedi agli studenti di raggruppare i post-it dei loro utenti in categorie simili sulla bacheca, ad esempio per età o occupazione. Va bene se alcuni post-it non rientrano in gruppi simili e vengono lasciati da soli.",
           "tips": [
-            null
+            "\\*\\*Classificazione degli utenti: \\*\\* l'obiettivo principale è che gli studenti notino eventuali schemi o somiglianze tra i gruppi su cui ogni persona ha elaborato indipendentemente la riflessione condivisa. Le categorie possono continuare a generalizzare i gruppi di utenti: ad esempio, post-it come «polizia» e «vigili del fuoco» e «paramedici» potrebbero essere raggruppati insieme perché sono tutti «primi soccorritori».\n\nQuando crei delle categorie, sottolinea che ancora una volta non esistono categorie «giuste», ricorda invece agli studenti che l'obiettivo qui è definire il problema che cercheranno di risolvere e questo processo è un modo utile per iniziare a concentrarsi su un problema specifico."
           ]
+        },
+        "bd5d9144-dd51-4a83-90b1-77f2f8b5a61f": {
+          "description": "\\*\\*Scegli un utente specifico: \\*\\* chiedi ai gruppi di scegliere una delle categorie di utenti che hanno creato. Fai del tuo meglio per garantire un buon mix di categorie in classe, ma non è un problema se alcuni gruppi scelgono categorie di utenti simili.\n\n\\*\\*Riflessione di gruppo & classificazione delle esigenze: \\*\\* gli studenti ripeteranno il processo di riflessione condivisa per identificare un elenco di potenziali preoccupazioni, interessi ed esigenze dell'utente che hanno scelto. Inizia facendo una riflessione di gruppo sulla guida alle attività, quindi crea dei post-it per due o tre delle loro idee da condividere sulla bacheca. Incoraggia gli studenti a riflettere attentamente su ciò che potrebbe essere importante per quelle persone."
         },
         "9cd9cb75-8a3c-4e2e-a7db-588a81f2799a": {
+          "description": "\\*\\*Girando tra i banchi: \\*\\* gli studenti devono ripetere lo stesso processo di creazione di frammenti di carta per ogni esigenza, interesse o preoccupazione del loro utente e quindi raggrupparli. Gli studenti possono utilizzare i pennarelli e la carta per il cartellone così da eseguire questo passaggio se hai fornito questi materiali.",
           "tips": [
-            null
+            "Mentre vai in giro per la stanza, controlla che gli studenti raggruppino le idee in categorie significative. Le categorie devono essere sufficientemente ampie da includere diverse idee correlate, ma non così ampie da contenere solo una o due categorie per l'intero gruppo."
           ]
+        },
+        "1cd83da3-b5d4-465b-8ca7-4db750a91729": {
+          "description": "\\*\\*Scegli un'esigenza specifica: \\*\\* chiedi ai gruppi di selezionare l'esigenza specifica del loro utente cui vogliono rispondere. Dovrebbero cercare di individuare un'esigenza che ritengono possa essere soddisfatta con un abbigliamento intelligente, quindi in alcuni casi potrebbero aver bisogno di essere un po' creativi nel pensare a queste esigenze.\n\n\\*\\*Condivisione: \\*\\* a questo punto, ogni gruppo dovrebbe aver scelto un gruppo di utenti specifico e una necessità o un interesse del gruppo. Chiedi ai gruppi di condividere il proprio gruppo di utenti e le proprie esigenze con il resto della classe."
         },
         "687f7614-61f3-4773-80c5-fd9422853b4d": {
-          "name": "Prepara"
+          "name": "Prepara",
+          "description": "\\*\\*Soluzioni per la riflessione di gruppo: \\*\\* chiedi agli studenti di riflettere sui possibili modi in cui l'abbigliamento intelligente potrebbe essere utilizzato per affrontare il problema che hanno deciso di risolvere. annota i loro pensieri nella seconda pagina della loro guida alle attività."
         },
         "01855f3f-3942-4bce-ab27-5790b102577e": {
+          "description": "\\*\\*Discuti dei pro e dei contro: \\*\\* una volta che gli studenti hanno elaborato le soluzioni individualmente, chiedi agli studenti di condividere le loro idee con il loro gruppo e di discutere i pro e i contro di ciascuna soluzione. Incoraggia gli studenti a utilizzare la discussione per sviluppare le reciproche idee, generando possibilmente ancora più potenziali soluzioni.",
           "tips": [
-            null
+            "\\*\\*Discussione dei pro e dei contro: \\*\\* gli studenti dovrebbero parlare dal punto di vista del loro utente, immaginando eventuali benefici e danni intenzionali o non intenzionali per ciascuna soluzione proposta. Non giudicano le idee come «buone» o «cattive», ma stanno invece discutendo se la soluzione soddisfi o meno le esigenze e gli interessi dei loro utenti. Alcune frasi utili durante la discussione sono dire «Sì e…» quando sentono un argomento favorevole e dire «No, ma…» quando sentono un argomento a sfavore."
           ]
+        },
+        "eb2da759-2abb-495d-88a2-b8a303036196": {
+          "description": "\\*\\*Scegli una soluzione specifica: \\*\\* chiedi al gruppo di scegliere una soluzione specifica su cui concentrarsi. Possono decidere di combinare le soluzioni della discussione o utilizzare una soluzione nuova di zecca sviluppata durante la discussione. Questa decisione guiderà il prodotto che creeranno nell'attività di domani."
+        },
+        "09e2dd45-5339-44b0-99f3-c155c3fb03b3": {
+          "description": "Oggi abbiamo completato le fasi di definizione e preparazione del nostro processo di progettazione: abbiamo determinato i nostri utenti e raccolto le loro esigenze, e ora siamo pronti a progettare una soluzione utilizzando abbigliamento intelligente. Domani completeremo le fasi \"prova e rifletti\", in cui creerai il tuo progetto di abbigliamento intelligente e condividerai le tue idee con la classe."
+        },
+        "042ba1b7-983a-4cfb-beb7-d12067146867": {
+          "description": "\\*\\*Raccogli \\*\\*  le guide delle attività da ogni studente o chiedi loro di conservarle in un luogo sicuro: verranno utilizzate nell'attività di domani."
         },
         "2fdde648-9704-4e65-bc82-db84c33809c1": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "\\*\\*Discussione: \\*\\* l'attività odierna ha comportato un certo numero di riflessioni con il tuo gruppo. Qual è un esempio di oggi in cui un membro del gruppo ha avuto un'idea che non avevi preso in considerazione prima? In che modo quell'idea ha influito su alcune delle decisioni che hai preso?"
         },
         "e9689ec6-922e-4fa9-99b3-878d4b0ddc7c": {
+          "description": "\\*\\*Discussione: \\*\\* dai modo agli studenti di riflettere in silenzio prima di condividerli nel proprio tavolo e poi con la classe nel suo insieme.",
           "tips": [
-            null
+            "\\*\\*Obiettivo: \\*\\* gli studenti dovrebbero riflettere su come voci diverse hanno contribuito a elevare le idee che il gruppo aveva e potrebbe aver contribuito al prodotto che inizieranno a progettare domani. Questa attenzione al lavoro di squadra e alla valorizzazione delle idee altrui sarà importante in tutta l'unità poiché gli studenti lavoreranno insieme per sviluppare app per gli altri."
           ]
+        },
+        "eedba90d-8e34-46c9-bc05-69a703c41acc": {
+          "description": "\\*\\*Distribuisci: \\*\\* quando gli studenti entrano in classe, ridistribuisci le guide alle attività di ieri. Se uno studente era assente, invitalo a unirsi a un gruppo esistente e a utilizzare lo stesso utente, le stesse esigenze e le stesse soluzioni di quel gruppo."
         },
         "a4596a2a-17fd-4714-8a1d-eb0145de497c": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "\\*\\*Discussione: \\*\\* consulta la tua guida alle attività di ieri ed elenca:\n\n-   L'utente per cui stai disegnando\n-   La sua esigenza o interesse specifico\n-   La soluzione che hai scelto per le sue esigenze\n\nQuindi scrivi un'idea per un tipo specifico di abbigliamento intelligente che potresti progettare in base alla tua soluzione."
         },
         "f1d738b8-2bd2-4268-9553-f2221c41a4b1": {
+          "description": "\\*\\*Discussione: \\*\\* dai un minuto agli studenti per ricordare a se stessi il lavoro svolto ieri. Una volta che hanno scritto questi appunti nel loro diario, chiedi loro di condividere a turno queste informazioni con i loro gruppi di ieri.",
           "tips": [
-            null
+            "\\*\\*Obiettivo: \\*\\* questo è un rapido aggiornamento del lavoro svolto ieri dagli studenti e un'opportunità per condividere diverse idee di prodotto prima di prendere una decisione in gruppo nella prima parte dell'attività."
           ]
+        },
+        "e9aa9047-04a7-4a61-a0d0-555a718d7c2b": {
+          "description": "Ci sono molti utenti ed esigenze diverse per cui stiamo progettando. Oggi completeremo le fasi \"prova e rifletti\" di questa attività. Il tuo gruppo avrà la possibilità di progettare il tuo prodotto di abbigliamento intelligente per i tuoi utenti e condividere le tue idee con la classe."
+        },
+        "afa53a12-e99a-4cf1-bf45-b0a2a8057ef5": {
+          "description": "\\*\\*Domanda del giorno: come possiamo progettare un prodotto per soddisfare le esigenze di un utente? \\*\\*"
         },
         "0f6c027d-5e5a-49c9-96f1-85cddad08e99": {
           "tips": [
-            null
+            "\\*\\*Ricerca sull'abbigliamento intelligente: \\*\\* se gli studenti non hanno familiarità con l'abbigliamento intelligente, incoraggiali a utilizzare Internet per fare prima delle ricerche iniziali su come funziona o è stato usato l'abbigliamento intelligente per risolvere i problemi. Dovrebbero evitare di cercare un prodotto di abbigliamento intelligente esistente che soddisfi le esigenze dei loro utenti, ma possono comunque studiare gli usi più comuni dell'abbigliamento intelligente se non lo conoscono."
           ]
         },
+        "50fd54e6-41b7-4d74-9ab4-1c1e8415d870": {
+          "description": "\\*\\*Distribuisci \\*\\* la guida alle attività di \"Progettazione focalizzata sull'utente\" (prova e rifletti) presso ogni gruppo. Se disponibile, distribuisci presso ogni gruppo, la carta per il cartellone.\n\n#### Progettazione focalizzata sull'utente (prova e rifletti)"
+        },
         "e916fb49-88fb-46e4-9d65-811f5ba52983": {
-          "name": "Prova"
+          "name": "Prova",
+          "description": "\\*\\*Panoramica: \\*\\* leggi la panoramica in classe per assicurarti che gli studenti comprendano l'attività. Approfondisci l'aspetto dei giochi di ruolo di questo progetto, incoraggiando gli studenti a immaginare di avere tutte le risorse di cui hanno bisogno per completare questo compito.\n\n\\*\\*Assegna ruoli: \\*\\* Chiedi agli studenti di assegnare ruoli: uno scriba, un artista, un cronometrista e un presentatore. Assicurati che gli studenti siano chiari sui loro ruoli e incarichi durante questo compito.\n\n\\*\\*Fai questo: \\*\\* gli studenti dovrebbero lavorare insieme per progettare un prodotto di abbigliamento intelligente che soddisfi le esigenze dei loro utenti. Possono utilizzare la discussione durante l'attività di avvio per guidare questo processo. Dovrebbero anche creare uno schizzo di come potrebbe apparire il progetto, con frecce ed etichette per aiutare a comunicare il funzionamento del prodotto. L'artista può disegnare il proprio prodotto sulla guida alle attività o sulla carta fornita per il cartellone. Guarda l'esempio incluso per un esempio di ciò che gli studenti potrebbero finire per creare. Concedi agli studenti un limite di tempo e assicurati che il cronometrista di ogni gruppo ne sia a conoscenza.\n\n**Girando tra i banchi**: monitora gli studenti durante la fase di prova, verificando che le esigenze degli utenti guidino le decisioni relative al loro prodotto. Se necessario, ricorda agli studenti di «entrare nella testa» del loro utente in modo simile alla lezione \"Comprendere il tuo utente\"."
         },
         "beb86e5b-f979-4a92-b8bb-05ea34ffe7ce": {
           "name": "Rifletti"
@@ -9766,7 +9888,7 @@
         },
         "d61de363-299c-4631-a519-0b8c3e9628df": {
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**\n\nQuesti materiali per le attività manuali possono essere riutilizzati se gli studenti non vi scrivono sopra. Ne avrai bisogno anche per l'attività della prossima lezione."
           ]
         },
         "dfef697e-3e7d-4797-992f-ab23891e441e": {
@@ -9776,7 +9898,7 @@
         },
         "858a955e-bdda-4241-832b-0fe6502f81f8": {
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**\n\n**Guida alle attività del computer** le guide alle attività del computer vengono utilizzate solo come riferimento. Gli studenti possono guardare le versioni digitali durante questa attività. Se scegli di stampare la guida, puoi riutilizzarla, a patto che agli studenti venga detto di non scriverci sopra.\n\n\\*\\*Guida alle attività dell'utente: \\*\\* la guida alle attività dell'utente può essere completata online o come attività del diario. Gli studenti possono utilizzare una versione digitale della Guida alle attività come suggerimento, copiando i grafici e le domande nei loro diari."
           ]
         },
         "deb75344-6ca6-449f-8aea-7efb28d572fa": {
@@ -9803,7 +9925,7 @@
         },
         "22a3e29c-7fa0-4fa9-9b07-df78d19e2729": {
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**\n\nLe stampe con le schermate di riscontro sul prototipo e dell'interfaccia utente possono essere riutilizzate, a condizione che gli studenti non vi scrivano sopra. Le stampe con le schermate dell'interfaccia utente dovrebbero già essere stampate dalla lezione precedente.\n\nLa Guida alle attività può essere completata online o come attività di diario. Gli studenti che completano l'attività online possono scegliere di utilizzare uno strumento di disegno online per disegnare l'interfaccia utente migliorata o inviare lo schizzo separatamente su carta."
           ]
         },
         "e127492b-ea87-427d-b492-3367ba4434a4": {
@@ -9829,7 +9951,7 @@
         },
         "69fc5b13-3cf8-45c6-a954-d2c1b80d86e7": {
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**: questa guida alle attività può essere completata online o come attività di diario.\n\n\\*\\*Legami con la comunità: \\*\\* invece di utilizzare le interviste agli utenti di esempio, potresti voler raccogliere interviste reali agli utenti della tua comunità. Valuta la possibilità di chiedere alle persone della tua scuola, delle piccole imprese o ai genitori e ai familiari dei tuoi studenti di rispondere a domande simili. Di conseguenza, gli studenti possono prototipare app che soddisfano le esigenze di persone reali e possono avere un impatto diretto sulla loro comunità."
           ]
         },
         "a7efe5ba-a6e2-4b11-b62c-5d2b14f44649": {
@@ -9875,6 +9997,9 @@
         "9680a7eb-64bc-464e-a2fd-3b0e82681ed9": {
           "name": "Preparazione"
         },
+        "1d3ade5b-c586-47e4-a409-cf8f7aeb9225": {
+          "name": "Collaudo di un prototipo"
+        },
         "9b779d91-6724-4b98-be00-bc17491f3680": {
           "tips": [
             null
@@ -9916,6 +10041,7 @@
           ]
         },
         "79a5148b-1c7b-48b0-a8c9-ee7cbedc102e": {
+          "description": "\\*\\*Mostra: \\*\\* prepara 2-3 app di esempio da mostrare agli studenti. Alcune sono suggerite dalle diapositive, ma puoi anche usare app della risorsa \"Esempi di app per fare del bene\" o altre app per studenti della tua scuola o della tua comunità. Per ogni app:\n\n\\*\\*Discussione: \\*\\* quale pensi sia il problema sociale che questa app è stata progettata per risolvere? Come si ottiene questo risultato?",
           "tips": [
             null
           ]
@@ -9927,7 +10053,7 @@
         },
         "fb9a1d4f-f227-4d94-a919-037211bfe2b9": {
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**: questa guida può essere completata online o come attività di diario."
           ]
         },
         "0b0c2586-ba90-460b-a640-d63de42be967": {
@@ -9963,8 +10089,11 @@
         },
         "dbe040e2-3a57-4260-8ccd-859946c4a223": {
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**: questa guida alle attività può essere completata online o come attività di diario."
           ]
+        },
+        "d0a26891-e4cd-488e-9ec6-121686e29fac": {
+          "description": "\\*\\*Mostra: \\*\\* leggi le istruzioni sulla guida alle attività di \"ricerca di mercato\". Ogni studente dovrebbe trovare almeno un'app da analizzare per il gruppo di lavoro. Dai agli studenti il tempo di fare ricerche prima individualmente, poi il tempo di condividere le app che hanno trovato nei loro gruppi di lavoro. Dovrebbero prestare particolare attenzione se ci sono funzionalità delle app che hanno scoperto che potrebbero «prendere in prestito» per la propria app.\n\n\\*\\*Ricerca di app: \\*\\* ecco alcuni posti in cui gli studenti possono cercare:\n\n-   [Galleria pubblica di Code.org](//studio.code.org/projects/public)\n-   Lezioni o concorsi di app per dispositivi mobili come:\n    -   [App per fare del bene](https://www.appsforgood.org/)\n    -   [Technovation](http://www.technovationchallenge.org/)\n-   App store per dispositivi mobili come Apple App Store o Google Play\n-   Ricerca generica sul web con Google o Bing\n    -   Prova frasi come «concorso app» o «app per il bene della società»\n    -   Includi il nome del tuo stato per idee o concorsi locali"
         },
         "701bc509-9dcb-403e-becd-aa35133b39c7": {
           "tips": [
@@ -9994,7 +10123,7 @@
         },
         "e1bdfa80-105e-429f-81fd-ad04daba7d23": {
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati:** la guida alle attività può essere completata online o come attività di diario. Le cartoline 3\"x5\" (7,62x12,7cm) possono essere sostituite con carta tagliata in 4-6 rettangoli."
           ]
         },
         "27e610c0-e86c-4816-9406-433c723607e4": {
@@ -10072,6 +10201,9 @@
             null
           ]
         },
+        "4a48d593-ad1b-4693-a027-041759320afd": {
+          "name": "Modalità di progettazione in \"Sviluppo App\""
+        },
         "95d0c831-8b6a-4a34-80b1-92befbf89ba0": {
           "tips": [
             null
@@ -10091,7 +10223,7 @@
         },
         "b847f937-5ff0-4293-9349-d586d87827cf": {
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati:** questa guida alle attività può essere completata come attività di diario. Le aule che hanno scelto l'opzione online possono anche svolgere questa attività su un foglio di carta separato o utilizzare uno strumento di disegno online per progettare lo schermo."
           ]
         },
         "4139b8b3-2b60-47e7-b4b2-a616572e197f": {
@@ -10209,7 +10341,7 @@
         },
         "2c65f587-4fb1-4254-8e00-c5665ce6e8a7": {
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**: questa guida alle attività può essere completata online o come attività di diario."
           ]
         },
         "4c8429dd-78eb-4341-8a31-df301ad7aa1a": {
@@ -10242,6 +10374,9 @@
           "tips": [
             null
           ]
+        },
+        "78b008c1-6a8f-446c-a9e0-018dbd7c7e6d": {
+          "progression_name": "Aggiornamento del tuo prototipo"
         },
         "2dfc86e0-a293-4785-b796-da4936c042d9": {
           "tips": [
@@ -10952,6 +11087,9 @@
             null
           ]
         },
+        "0df80003-d722-4a46-aaab-0e6dbe1c2f27": {
+          "description": "L'apprendimento automatico (machine learning) ci aiuta a risolvere problemi importanti della società. Nelle prossime settimane vedremo come creare le nostre app di apprendimento automatico per risolvere problemi. Per aiutarci a raggiungere i nostri obiettivi, useremo il processo di risoluzione dei problemi: definisci, prepara, prova, rifletti ed empatizza sempre. Diamo un'occhiata a come appaiono questi passaggi in particolare per l'apprendimento automatico "
+        },
         "861ba0ea-3d12-44d8-8114-da49c3d65081": {
           "tips": [
             null
@@ -11372,13 +11510,14 @@
           "name": "Diario"
         },
         "d212a1de-7271-46d1-a950-956443922687": {
+          "name": "Esposizione di un problema (issue statement)",
           "tips": [
             null
           ]
         },
         "6f2134b8-5066-4311-9ad1-0f57eb91ec37": {
           "tips": [
-            null
+            "**L'esposizione strutturata di un problema (issue statement)** fa parte del pensiero progettuale e costituisce un contesto più ampio per affrontare in modo creativo i problemi della comunità. Per ulteriori suggerimenti e informazioni sulle dichiarazioni di problemi, considera la lettura di questi articoli [here](https://www.interaction-design.org/literature/article/stage-2-in-the-design-thinking-process-define-the-problem-and-interpret-the-results) e [here](https://careerfoundry.com/en/blog/ux-design/stage-two-design-thinking-define-the-problem/)"
           ]
         },
         "2e00cb64-89aa-4cea-a333-fa8af48559b8": {
@@ -20294,6 +20433,9 @@
             null
           ]
         },
+        "9e4a63b0-d249-4594-a8ad-fb0c4ad728dc": {
+          "description": "L'apprendimento automatico (machine learning) ci aiuta a risolvere problemi importanti della società. Nelle prossime settimane vedremo come creare le nostre app di apprendimento automatico per risolvere problemi. Per aiutarci a raggiungere i nostri obiettivi, useremo il processo di risoluzione dei problemi: definisci, prepara, prova, rifletti ed empatizza sempre. Diamo un'occhiata a come appaiono questi passaggi in particolare per l'apprendimento automatico "
+        },
         "aa866b7f-747f-49e4-9578-f937dbef61e4": {
           "tips": [
             null
@@ -20674,13 +20816,14 @@
           "name": "Diario"
         },
         "f2c599ed-2dc6-4fa2-8ebd-5123c77dd9c3": {
+          "name": "Esposizione di un problema (issue statement)",
           "tips": [
             null
           ]
         },
         "38761f3b-2e5b-4626-8f10-3a562e8d0c3b": {
           "tips": [
-            null
+            "**L'esposizione strutturata di un problema (issue statement)** fa parte del pensiero progettuale e costituisce un contesto più ampio per affrontare in modo creativo i problemi della comunità. Per ulteriori suggerimenti e informazioni sulle dichiarazioni di problemi, considera la lettura di questi articoli [here](https://www.interaction-design.org/literature/article/stage-2-in-the-design-thinking-process-define-the-problem-and-interpret-the-results) e [here](https://careerfoundry.com/en/blog/ux-design/stage-two-design-thinking-define-the-problem/)"
           ]
         },
         "bb1e1371-d01e-43c2-913a-5fe680de2bf4": {
@@ -20837,130 +20980,254 @@
           ],
           "progression_name": "Istruzioni per il sondaggio post-corso"
         },
+        "02c742eb-e175-4fbb-869a-4f1a5a9d8085": {
+          "description": "**Mostra**  l'immagine del processo di risoluzione dei problemi, che ora include una sezione _Empatizza_ in fondo all'intero processo.\n\n#### Attività sul diario\n\n**Discussione:** abbiamo utilizzato questo processo di risoluzione dei problemi diverse volte durante questo corso. In questa unità, stiamo aggiungendo un nuovo elemento: **Empatizza**. Cosa significa empatizzare? In quale altro posto hai già sentito questo termine?"
+        },
         "a6722c40-2f55-4b5c-8ffa-f9e3982f232b": {
+          "description": "\\*\\*Discussione: \\*\\* gli studenti devono prima scrivere le loro risposte nel loro diario, poi condividere le loro idee con un compagno prima di discuterne di fronte a tutta la classe. Eventualmente potrà esserci una discussione sul fatto che entrare in empatia con le altre persone significa considerare i loro desideri, bisogni o preoccupazioni.",
           "tips": [
-            null
+            "\\*\\*Obiettivo: \\*\\* questa discussione può essere abbastanza fluida e aperta. Anche se alla fine vuoi arrivare a una definizione condivisa di cosa significhi empatizzare, gli studenti lavoreranno sulla loro comprensione della parola nell'intera unità. Non è necessario accontentarsi di un'unica definizione fissa, quindi considera questa discussione come un'introduzione a un tema dell'unità."
           ]
+        },
+        "07dbc06d-25e3-4a72-a67e-cddd7c698a2b": {
+          "description": "\\*\\*Glossario: \\*\\* mostra il seguente glossario come transizione all'attività principale:\n\n-   Empatia - Durante la progettazione, prestare attenzione ailla sensibilità e alle esigenze di un utente durante la progettazione di un prodotto\n-   Utente - Chi utilizzi un qualsiasi oggetto, inclusi software e hardware"
+        },
+        "e27ed593-a4f0-417e-a786-0f7aa8d8787c": {
+          "description": "In questa unità inizieremo a pensare molto di più alla progettazione per altre persone. Si tratta ancora in gran parte di un processo di risoluzione dei problemi, ma ora dovremo riflettere molto più da vicino sulle esigenze dei nostri utenti. In altre parole, l'empatia sarà un tema importante man mano che impareremo di più sulla progettazione."
+        },
+        "d523037f-e439-4bf8-8a69-a94a4723cecd": {
+          "description": "\\*\\*Domanda del giorno: \\*\\* come possiamo scegliere i prodotti in base alle esigenze di un utente?"
         },
         "0aae65e7-d504-4b63-9b0e-f9145959ac27": {
+          "description": "**Distribuisci** copie della Guida alla attività \"Stabilisci la tipologia di utente\".",
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**\n\nL'unità 4 contiene molti materiali stampati. Le aule con capacità di stampa limitata possono invece scegliere una delle seguenti opzioni.\n\n**Opzione 1: guide alle attività online**\n\nTutte le nostre guide alle attività sono disponibili nei formati modificabili di Google Doc e Microsoft Doc. Le aule che utilizzano prodotti Google o Microsoft possono distribuire copie digitali agli studenti, che possono completare la maggior parte delle guide alle attività interamente online.\n\n**Opzione 2: diari degli studenti**\n\nMolte guide alle attività possono essere convertite in attività di diario. Gli insegnanti possono proiettare le istruzioni e i suggerimenti o consentire agli studenti di visualizzarli online, quindi completare l'attività stessa in un diario.\n\nCerca suggerimenti didattici sulle lezioni pertinenti per indicare quando puoi evitare di stampare utilizzando una di queste opzioni."
           ]
+        },
+        "d525de1b-c25a-48e6-b371-e382b8186757": {
+          "description": "### **_Progettare con empatia_**\n\n#### Stabilisci la tipologia di utente\n\n\\*\\*Panoramica: \\*\\* chiedi agli studenti di leggere la sezione Stabilisci la tipologia di utente e della Guida alle attività. La prima parte di questa attività chiede agli studenti di abbinare tra le diverse scarpe quelle più adatte a un certo utente. Chiedi agli studenti di svolgere questa attività in coppia, incoraggiando la discussione sul perché esattamente stanno scegliendo di stabilire quell'abbinamento. Questo è un ottimo posto per discutere del progetto delle scarpe e delle esigenze degli utenti.\n\n\\*\\*Girando tra i banchi: \\*\\* monitora gli studenti mentre completano la prima pagina della guida alle attività, chiedendo agli studenti di giustificare alcune delle decisioni che hanno preso. Va bene se gli studenti non sono d'accordo su una particolare scelta di scarpe. Qui non ci sono risposte giuste o sbagliate: ciò che conta sono la discussione e la capacità di giustificare ragionevolmente una decisione."
         },
         "0ffa0382-8df9-42a1-8f6b-62612e26f301": {
+          "description": "\\*\\*Condividi: \\*\\* chiedi agli studenti di discutere le seguenti domande in piccoli gruppi prima di passare a una discussione completa in classe:\n\n-   Per quali utenti è stato più facile trovare risposte?\n-   Per quali utenti è stato più difficile trovare corrispondenze?\n\nIn base alle tue osservazioni durante la circolazione, dovresti anche identificare alcuni utenti specifici sui quali chiedere alla classe di discutere, in particolare utenti per i quali più studenti hanno scelto scarpe diverse. Incoraggia gli studenti ad ascoltare diverse giustificazioni per le loro scelte, sottolineando che la logica è più importante della scelta stessa.",
           "tips": [
-            null
+            "Mentre gli studenti spiegano il motivo delle loro scelte, verifica che stiano identificando le esigenze e le caratteristiche particolari dell'utente, piuttosto che i motivi generali per preferire una determinata scarpa. Potresti sfidare gli studenti a distinguere le proprie esigenze e preferenze da quelle degli utenti descritti."
           ]
+        },
+        "ee03bf4e-0d6c-494f-90aa-24d1b2ae3df7": {
+          "name": "Riscontro sul progetto",
+          "description": "Ora impareremo come fornire riscontri su un progetto. Esprimeremo la nostra opinione sugli aspetti positivi e negativi di queste scarpe. È importante fornire un riscontro che costituisca un contributo positivo verso il miglioramento, piuttosto che un riscontro negativo e accusatorio che non aiuta a migliorare il prodotto."
+        },
+        "77d36a73-ea24-4f41-970a-2b2485d1be8e": {
+          "description": "\\*\\*Riscontro sul progetto: \\*\\* chiedi agli studenti di leggere la sezione \"Riscontro sul progetto\" della guida alle attività nella seconda pagina. Questa seconda attività offre agli studenti l'opportunità di fornire riscontri su quattro scarpe. La struttura di questa pagina riflette l'approccio generale che utilizzeremo per il riscontro, utilizzando le tre affermazioni:\n\n-   Mi piace... (un punto di forza)\n-   Vorrei... (una debolezza)\n-   E se... (un suggerimento)"
         },
         "0158f751-e444-4cd5-ae72-c6daa9d0f859": {
+          "description": "\\*\\*Girando tra i banchi: \\*\\* monitora gli studenti mentre completano questa attività, assicurandoti che forniscano riscontri concreti che possono portare a miglioramenti piuttosto che riscontri generici o inutili che sembrano più un giudizio che un suggerimento.",
           "tips": [
-            null
+            "Il primo passo verso la creazione di un progetto che possa essere efficacemente utilizzato da molte persone è capire che non tutti la pensano allo stesso modo o guardano un oggetto o un progetto allo stesso modo. Questo è il primo esercizio in cui gli studenti provano a pensare guardando le cose da una prospettiva esterna e a riflettere su come gli altri possono percepire gli oggetti del mondo."
           ]
+        },
+        "7a54430f-eea6-4be2-bbad-ecf7bf32f999": {
+          "description": "**Condivisione:** chiedi agli studenti di discutere le seguenti domande in piccoli gruppi prima di portarli a una discussione completa in classe:\n\n-   Qual era la tua scarpa preferita? Perché?\n-   Quale di queste scarpe pensi che sarebbe la preferita di qualcuno della tua famiglia? Perché?\n\nIncoraggia gli studenti a pensare a se stessi e agli altri membri della loro vita, come un membro della famiglia. Questo aiuta a sottolineare che progettare significa pensare non solo ai propri bisogni e desideri, ma anche a come reagiranno gli altri a un prodotto."
+        },
+        "37c5161d-636f-481e-9a9d-3d3cfad75432": {
+          "description": "Una parte importante di questa attività è pensare a come vengono realizzati prodotti diversi per persone diverse e a come ci sia sempre spazio per migliorare un prodotto in modo che sia utile a più utenti. In questa unità, continueremo a pensare a come persone diverse utilizzano gli oggetti per diversi motivi, in modo da poter progettare app per il maggior numero possibile di utenti!"
         },
         "3fe573d7-2c09-4e1c-ae7e-d4029f905d35": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "\\*\\*Discussione: \\*\\* scegli uno o due degli oggetti che hai analizzato oggi. Cosa potresti cambiare per rendere questo oggetto più utilizzabile per te? Sentiti libero di usare parole, immagini o una combinazione di entrambi"
         },
         "bffb7609-21c3-4e03-b16a-e4753c421cbc": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "\\*\\*Discussione: \\*\\* pensiamo ai prodotti che hanno un bell'aspetto rispetto a quelli facili da usare. \n\n-   Riesci a pensare a qualche esempio di prodotto che aveva un bell'aspetto ma era difficile da usare? \n-   Che ne dici di qualcosa che fosse facile da usare, ma che non ti piacesse come appariva."
         },
         "7c0f6057-1b87-4d67-a58d-c511e59b2e62": {
+          "description": "\\*\\*Discussione: \\*\\* chiedi agli studenti di scrivere un diario dei loro pensieri. Mentre condividono con i loro compagni di banco ciò che hanno scritto, chiedi loro anche di discutere se sono interessati a un prodotto che sia utilizzabile o di bell'aspetto. Dopo un paio di minuti, dai modo a un paio di compagni di riassumere ciò di cui hanno discusso.",
           "tips": [
-            null
+            "\\*\\*Obiettivo: \\*\\* sottolinea il fatto che esistono molti tipi di esigenze degli utenti con cui dobbiamo entrare in empatia come progettisti. In particolare, ricorda che l'usabilità di un prodotto è una considerazione importante e separata dal fatto che sia semplicemente esteticamente gradevole."
           ]
+        },
+        "d52af850-0d61-4276-800e-243f7df01518": {
+          "description": "Sono evidentemente molte le tipologie di esigenze nell'utilizzo dei prodotti. L' _usabilità_ dei nostri progetti influirà in primo luogo sulla possibilità di utilizzo del prodotto da parte di un utente. Tuttavia, se un prodotto non è attraente, potrebbe non essere mai utilizzato affatto. Man mano che pensiamo di più alla progettazione per altre persone, vorremo avere in mente molti tipi diversi di esigenze."
+        },
+        "66cabdfb-9de1-4019-8c82-60f8bcc9d565": {
+          "description": "\\*\\*Domanda del giorno: \\*\\* come possiamo assicurarci che un prodotto soddisfi le esigenze di un utente?"
         },
         "e90bcc9b-7ad0-4e59-9c21-3e80d85c08f4": {
+          "description": "\\*\\*Distribuisci \\*\\* un volantino del profilo utente a ogni studente. Prova a variare i profili utente all'interno dei gruppi di studenti in modo che non siano tutti uguali.",
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**\n\nI profili utente vengono utilizzati solo come riferimento. Gli studenti possono guardare le versioni digitali durante questa attività. Assegna a ogni studente un link, anziché distribuire i profili effettivi.\n\nSe scegli di stampare i profili utente, questi possono essere riutilizzati, a condizione che agli studenti venga detto di non scriverci sopra."
           ]
+        },
+        "d778eaad-e4e5-42dc-8cdc-fd1426102f7c": {
+          "description": "Prenditi qualche minuto per leggere il tuo profilo utente assegnato: dovrai «entrare nella testa» del tuo utente per la nostra attività odierna. In effetti, per il resto della giornata imparerai a entrare in empatia con i tuoi utenti e a rispondere alle situazioni come potrebbero fare i tuoi utenti."
+        },
+        "c0e00399-f06d-4568-9594-85b46759e863": {
+          "description": "\\*\\*Girando tra i banchi: \\*\\* lascia qualche minuto agli studenti per leggere i loro profili, incoraggiandoli a pensare come l'utente assegnato, quasi come se stessero interpretando un ruolo in un film o in un'opera teatrale. Per il resto della giornata, gli studenti cercheranno di entrare in empatia con i propri utenti e di rispondere alle situazioni come dovrebbero fare i loro utenti."
+        },
+        "273655dd-a5a5-4702-8c3a-e362a3781b3c": {
+          "name": "Pensa come un utente",
+          "description": "**Mostra:** le tre diapositive successive contengono scelte diverse per lo stesso prodotto: un animale domestico, uno zaino e un'auto. Per ogni diapositiva, chiedi agli studenti di scegliere un angolo in base all'immagine da cui _il loro utente_ sarebbe attratto. Quindi chiedi agli studenti di andare all'angolo (A, B, C o D) in cui hanno scelto di discutere con altri studenti.\n\n\\*\\*Condivisione: \\*\\* chiedi ai gruppi in ogni angolo di discutere brevemente (1-2 minuti) del motivo per cui pensano che il loro utente sia attratto da questa versione del prodotto. Chiedi a uno o due studenti o gruppi di condividere ciò di cui hanno discusso con l'intera classe. Ripeti l'operazione per ognuna delle diapositive.\n\n\\*\\*Forma i gruppi: \\*\\* dopo aver ripetuto questa attività per tutti gli oggetti delle diapositive, crea gruppi di 3-5 studenti in base al profilo utente assegnato: gli studenti con lo stesso profilo lavoreranno insieme durante l'attività successiva."
         },
         "9a00392e-73f9-4bf0-9ca9-fc29a07a6bf1": {
+          "description": "\\*\\*Distribuisci \\*\\* le copie della guida alle attività a ciascuno studente.",
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**\n\n\\*\\*Opzione online: \\*\\* la guida alle attività può essere completata online. Gli studenti possono «cerchiare» le valutazioni scelte mettendo un bordo attorno ad esse o digitando la valutazione nella casella. Per il design della sedia, gli studenti possono disegnare il loro design online o inviare una versione cartacea del loro design separatamente.\n\n\\*\\*Opzione diario: \\*\\* questa attività può essere completata come voce di diario. Gli studenti possono utilizzare una versione digitale della Guida alle attività come suggerimento, copiando i grafici e le domande nei loro diari.\n\n\\*\\*Suggerimento: \\*\\* più finestre o schede aperte sullo stesso computer possono creare confusione. Fai collaborare i gruppi con un computer che visualizza il profilo utente mentre un altro visualizza la Guida alle attività."
           ]
         },
+        "808ef3ce-a3c8-4d25-9f27-019fbbaf2e05": {
+          "description": "#### Reagire come il tuo utente"
+        },
         "8accf144-8730-45d6-a806-475e5164395c": {
+          "description": "**Mostra**: le tre diapositive successive contengono prodotti diversi a cui ogni gruppo di utenti può reagire: stivali impermeabili, una bicicletta e dolcetti al cioccolato. Gli studenti reagiranno a ciascun prodotto come utente compilando una riga nella guida alle attività. La guida chiede agli studenti di fare una distinzione tra l' _usabilità_ di un articolo per il proprio utente e se a un utente piace o non piace. Potresti voler esaminare il primo come gruppo in modo da poter modellare che un prodotto può essere esteticamente accattivante, ma non molto utilizzabile, o utilizzabile ma non esteticamente accattivante.",
           "tips": [
-            null
+            "\\*\\*Adattamento dell'attività: \\*\\* le diapositive fornite includono già diversi prodotti, ma potresti aggiungere altri prodotti e immagini che ritieni possano interessare i tuoi studenti."
           ]
         },
         "d567345f-60b1-4c26-b5b7-d78d4e4ca1e9": {
+          "description": "\\*\\*Girando tra i banchi: \\*\\* monitora gli studenti mentre completano la guida alle attività, assicurandoti che assumano il ruolo di utenti anziché reagire al prodotto come loro stessi. Ricorda agli studenti che questa è una parte intenzionale dell'attività: vedere il mondo attraverso gli occhi di un'altra persona e non solo con se stessi.",
           "tips": [
-            null
+            "Nella prima pagina, verifica che il ragionamento degli studenti includa riferimenti al profilo utente e connetta ragionevolmente la descrizione dell'utente alla preferenza che lo studente ha scelto.\n\nNella parte inferiore della seconda pagina, verifica che gli studenti abbiano stabilito connessioni esplicite tra il profilo utente e le funzionalità che hanno aggiunto alla loro sedia."
           ]
+        },
+        "82b86ad9-04a5-4f6c-aae0-1a6b85532fd9": {
+          "description": "\\*\\*Condivisione: \\*\\* chiedi ad alcuni gruppi di condividere le loro reazioni a ciascun prodotto.\n\n\\*\\*Mostra: \\*\\* la diapositiva finale contiene un tavolo con diverse sedie, utilizzato per la seconda pagina della guida alle attività. Gli studenti possono lavorare individualmente sulla seconda pagina, che chiede loro di considerare quale delle sedie esposte si adatta meglio al loro utente. Dopo aver riflettuto sulle caratteristiche che li portano a scegliere una sedia specifica, gli studenti hanno uno spazio per progettare una sedia ancora più adatta al loro utente. Questa è un'attività creativa e gli studenti possono scegliere di affrontarla nel modo più espressivo per loro, incluso il disegno del loro design.\n\n\\*\\*Condivisione: \\*\\* fai un giro nella stanza per condividere alcuni dei progetti delle sedie, inducendo gli studenti a definire nello specifico cos'è che rende il loro progetto la scelta migliore per il loro utente."
         },
         "ac33d632-f30f-4def-b290-37aa318342ca": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "\\*\\*Discussione: \\*\\* \n\n-   Quali erano le 3 esigenze del tuo utente che differivano da quelle che ti riguardavano in prima persona?\n-   Quali sono state le 2 volte in cui hai avuto difficoltà a entrare in empatia con il tuo utente?\n-   Qual è la cosa che della sedia che hai progettato pensi sia veramente piaciuta al tuo utente?"
         },
         "5becca11-20b8-4141-9617-ef7c518a3d99": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "**Discussione:** nelle ultime due lezioni abbiamo visto che i prodotti sono progettati con uno scopo e che design diversi sono più utili o piacevoli per persone diverse. Poiché persone diverse hanno esigenze o interessi diversi, quali potrebbero essere le sfide se stai cercando di progettare un prodotto per qualcun altro?"
         },
         "aed2c64f-4f98-4bf6-adf7-f7cd80ab941a": {
+          "description": "\\*\\*Discussione: \\*\\* chiedi agli studenti di riflettere in silenzio prima di condividerli con i singoli tavoli e, successivamente, insieme a tutta la classe.",
           "tips": [
-            null
+            "\\*\\*Obiettivo: \\*\\* questa dovrebbe essere un'introduzione molto rapida alla lezione. Stai cercando di sottolineare che progettare per altre persone richiede di considerare le loro esigenze anziché le tue, il che spesso può essere difficile. Questa discussione condurrà al video presentato subito dopo la fase di avvio."
           ]
+        },
+        "d8cd0a38-ce50-4111-a340-284cadf1d176": {
+          "description": "Progettare per altre persone può essere difficile per molte ragioni, ma una delle più importanti è che ci sfida a considerare ciò che un'altra persona apprezza, apprezza o è preoccupata. In altre parole, dobbiamo provare empatia per qualcun altro. Oggi faremo una mini attività di progettazione per aiutarci a mettere in pratica l'intero processo da soli."
+        },
+        "abdaf61c-0cf9-48e6-86f3-b2883c09332d": {
+          "description": "\\*\\*Domanda del giorno: come possiamo progettare per persone diverse da noi stessi? \\*\\*"
         },
         "b1931821-27e8-4550-98c6-ffc17f93cb62": {
+          "name": "Introduci il pensiero progettuale",
+          "description": "\\*\\*Video: \\*\\* guarda con gli studenti il video del \"Processo del pensiero progettuale\". Interrompi il video dopo la 5a parte (circa 3:10).",
           "tips": [
-            null
+            "**Pensiero progettuale:** L'attività di oggi, così come l'intera unità, è fortemente influenzata dal \"Pensiero progettuale\". Questo è un processo creativo molto aperto che potrebbe essere difficile da immaginare se non hai mai partecipato tu stesso a un'attività di pensiero progettuale. Le risorse seguenti possono aiutarti a immaginare come sarà la tua classe durante queste attività di pensiero progettuale. \n\n-   [Cos'è il pensiero progettuale? Una guida pratica per gli educatori](https://www.makersempire.com/what-is-design-thinking-a-handy-guide-for-classroom-teachers/).\n-   [Pensiero progettuale: lezioni per la classe](https://www.edutopia.org/blog/design-thinking-betty-ray)\n-   [Formazione per insegnanti di pensiero progettuale (Video)](https://www.youtube.com/watch?v=qqM8lf3zfFo)\n\nAlcune di queste risorse sono incentrate su aule di scienze o prototipi fisici, il che è diverso da questa unità che si concentra in ultima analisi sulla creazione di app. Indipendentemente da ciò, dovrebbero offrire una certa chiarezza su come si presenta l'intero processo dall'inizio alla fine e su quale potrebbero essere forma e ritmo delle tue lezioni durante queste attività."
           ]
+        },
+        "44cf2df5-54a8-46bb-97d0-e2f2d1c56afe": {
+          "description": "\\*\\*Mostra: \\*\\* visualizza i passaggi del processo di pensiero progettuale. Mentre parli di questo processo, fai clic sull'animazione sulla diapositiva per far scomparire questi passaggi e passare al Processo di risoluzione dei problemi."
+        },
+        "51bb0221-f877-4a56-9ba5-6e88419d08b6": {
+          "description": "Il processo del pensiero progettuale è molto simile al nostro processo di risoluzione dei problemi: entrambi sono incentrati sull'empatia ed entrambi hanno un ciclo simile per definire, preparare, provare e riflettere. Nelle prossime settimane, metteremo in pratica questo processo in modo da poter progettare prodotti e app per le persone nella nostra comunità e in tutto il mondo. Oggi e domani metteremo in pratica una versione più breve di questo processo, raccogliendo idee su diversi gruppi di persone e sulle loro esigenze, quindi progettando prodotti di abbigliamento intelligenti per soddisfare tali esigenze."
+        },
+        "1e779b96-330b-4c2d-8823-0a99e975a847": {
+          "name": "Introduci l'attività",
+          "description": "\\*\\*Forma i gruppi: \\*\\* le squadre saranno formate da un numero di studenti che vada da 3 a 5."
         },
         "d9db5d0e-f332-4e7f-8526-6bf166cae8a7": {
+          "description": "\\*\\*Distribuisci \\*\\* la guida alle attività a ogni studente e dai a ogni gruppo pennarelli, foglietti adesivi e carta per il cartellone.",
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**\n\n\\*\\*Opzione online: \\*\\* La guida alle attività può essere completata online. Per il disegno, gli studenti possono disegnare il loro prodotto online o inviare una versione cartacea del loro prodotto separatamente.\n\n\\*\\*Opzione diario: \\*\\* questa attività può essere completata come voce di diario. Gli studenti possono utilizzare una versione digitale della Guida alle attività come suggerimento, copiando i grafici e le domande nei loro diari."
           ]
         },
+        "d87d2b1b-c32f-4e92-94b2-5dd42d5f3da0": {
+          "description": "#### Progettazione focalizzata sull'utente"
+        },
         "f5c05e62-80c7-422f-b578-b9ba663db140": {
+          "description": "\\*\\*Panoramica: \\*\\* durante la lezione, leggete la sezione «Panoramica» per assicurarvi che i gruppi comprendano l'obiettivo dell'attività.",
           "tips": [
-            null
+            "**Perché vestiti intelligenti? :** questo tipo di prodotto è stato scelto perché esistono ampie applicazioni per combinare la tecnologia informatica con l'abbigliamento che potrebbero avvantaggiare molti tipi di utenti. Un ulteriore vantaggio è che il campo non è ancora ben definito e quindi offre agli studenti più margine di manovra per sviluppare idee su come risolvere i problemi delle persone piuttosto che affidarsi a soluzioni più consolidate. "
           ]
         },
         "ceaa3d86-c33a-4a0a-b56c-75b2b938786f": {
           "name": "Definisci",
+          "description": "\\*\\*Riflessione condivisa in gruppi di utenti: \\*\\* chiedi agli studenti di elencare nelle loro guide alle attività tutti i diversi gruppi di potenziali utenti di abbigliamento intelligente a cui riescono a pensare. Il video ha fornito un esempio di persone anziane, ma gli studenti possono trovare diversi gruppi di persone. Concedi agli studenti un paio di minuti per fare riflessione condivisa in modo indipendente. Una volta terminati, chiedi a ogni studente di creare un post-it per i due o tre gruppi di utenti che ritiene più interessanti.",
           "tips": [
-            null
+            "\\*\\*Riflessione condivisa in gruppi di utenti: \\*\\* in questa prima attività di riflessione condivisa, prova a modellare attentamente questo processo. Incoraggia gli studenti a considerare diversi fattori identificativi durante il brainstorming degli utenti, ad esempio identificando gli utenti in base all'età, all'occupazione o alla situazione di vita. Dovrebbero essere risposte ampie, di una o due parole che identifichino ampi gruppi di persone nella popolazione. Alcuni esempi possono includere: giovani studenti, militari, medici, proprietari di animali domestici, vivono in una fattoria, ecc. \n\nIncoraggia gli studenti ad attingere da persone che conoscono nella loro vita per aiutare a generalizzare a un certo tipo di utente. Sottolinea il fatto che non ci sono idee giuste o sbagliate e gli studenti avranno la possibilità di restringere le loro scelte in seguito. "
           ]
         },
         "a400fd77-feee-4d7d-8be6-7ceb8e378cd0": {
+          "description": "\\*\\*Classifica gli utenti: \\*\\* chiedi agli studenti di raggruppare i post-it dei loro utenti in categorie simili sulla bacheca, ad esempio per età o occupazione. Va bene se alcuni post-it non rientrano in gruppi simili e vengono lasciati da soli.",
           "tips": [
-            null
+            "\\*\\*Classificazione degli utenti: \\*\\* l'obiettivo principale è che gli studenti notino eventuali schemi o somiglianze tra i gruppi su cui ogni persona ha elaborato indipendentemente la riflessione condivisa. Le categorie possono continuare a generalizzare i gruppi di utenti: ad esempio, post-it come «polizia» e «vigili del fuoco» e «paramedici» potrebbero essere raggruppati insieme perché sono tutti «primi soccorritori».\n\nQuando crei delle categorie, sottolinea che ancora una volta non esistono categorie «giuste», ricorda invece agli studenti che l'obiettivo qui è definire il problema che cercheranno di risolvere e questo processo è un modo utile per iniziare a concentrarsi su un problema specifico."
           ]
+        },
+        "398782e5-226b-4a53-8a89-2325552fa7dc": {
+          "description": "\\*\\*Scegli un utente specifico: \\*\\* chiedi ai gruppi di scegliere una delle categorie di utenti che hanno creato. Fai del tuo meglio per garantire un buon mix di categorie in classe, ma non è un problema se alcuni gruppi scelgono categorie di utenti simili.\n\n\\*\\*Riflessione di gruppo & classificazione delle esigenze: \\*\\* gli studenti ripeteranno il processo di riflessione condivisa per identificare un elenco di potenziali preoccupazioni, interessi ed esigenze dell'utente che hanno scelto. Inizia facendo una riflessione di gruppo sulla guida alle attività, quindi crea dei post-it per due o tre delle loro idee da condividere sulla bacheca. Incoraggia gli studenti a riflettere attentamente su ciò che potrebbe essere importante per quelle persone."
         },
         "11e8295e-4b2e-4844-91cd-3d02533f89ce": {
+          "description": "\\*\\*Girando tra i banchi: \\*\\* gli studenti devono ripetere lo stesso processo di creazione di frammenti di carta per ogni esigenza, interesse o preoccupazione del loro utente e quindi raggrupparli. Gli studenti possono utilizzare i pennarelli e la carta per il cartellone così da eseguire questo passaggio se hai fornito questi materiali.",
           "tips": [
-            null
+            "Mentre vai in giro per la stanza, controlla che gli studenti raggruppino le idee in categorie significative. Le categorie devono essere sufficientemente ampie da includere diverse idee correlate, ma non così ampie da contenere solo una o due categorie per l'intero gruppo."
           ]
+        },
+        "43cd587e-fe86-499c-ad1f-9ee8665da856": {
+          "description": "\\*\\*Scegli un'esigenza specifica: \\*\\* chiedi ai gruppi di selezionare l'esigenza specifica del loro utente cui vogliono rispondere. Dovrebbero cercare di individuare un'esigenza che ritengono possa essere soddisfatta con un abbigliamento intelligente, quindi in alcuni casi potrebbero aver bisogno di essere un po' creativi nel pensare a queste esigenze.\n\n\\*\\*Condivisione: \\*\\* a questo punto, ogni gruppo dovrebbe aver scelto un gruppo di utenti specifico e una necessità o un interesse del gruppo. Chiedi ai gruppi di condividere il proprio gruppo di utenti e le proprie esigenze con il resto della classe."
         },
         "8e25228f-7396-4a9d-9dab-ff41c9ceeb53": {
-          "name": "Prepara"
+          "name": "Prepara",
+          "description": "\\*\\*Soluzioni per la riflessione di gruppo: \\*\\* chiedi agli studenti di riflettere sui possibili modi in cui l'abbigliamento intelligente potrebbe essere utilizzato per affrontare il problema che hanno deciso di risolvere. annota i loro pensieri nella seconda pagina della loro guida alle attività."
         },
         "6c2b2e0f-0ca5-4f49-b7a4-e90ddc47860d": {
+          "description": "\\*\\*Discuti dei pro e dei contro: \\*\\* una volta che gli studenti hanno elaborato le soluzioni individualmente, chiedi agli studenti di condividere le loro idee con il loro gruppo e di discutere i pro e i contro di ciascuna soluzione. Incoraggia gli studenti a utilizzare la discussione per sviluppare le reciproche idee, generando possibilmente ancora più potenziali soluzioni.",
           "tips": [
-            null
+            "\\*\\*Discussione dei pro e dei contro: \\*\\* gli studenti dovrebbero parlare dal punto di vista del loro utente, immaginando eventuali benefici e danni intenzionali o non intenzionali per ciascuna soluzione proposta. Non giudicano le idee come «buone» o «cattive», ma stanno invece discutendo se la soluzione soddisfi o meno le esigenze e gli interessi dei loro utenti. Alcune frasi utili durante la discussione sono dire «Sì e…» quando sentono un argomento favorevole e dire «No, ma…» quando sentono un argomento a sfavore."
           ]
+        },
+        "d3efa834-c54a-4cc1-ac97-95ef774a3089": {
+          "description": "\\*\\*Scegli una soluzione specifica: \\*\\* chiedi al gruppo di scegliere una soluzione specifica su cui concentrarsi. Possono decidere di combinare le soluzioni della discussione o utilizzare una soluzione nuova di zecca sviluppata durante la discussione. Questa decisione guiderà il prodotto che creeranno nell'attività di domani."
+        },
+        "d791987f-64f5-4b3b-b15e-888be2ac882e": {
+          "description": "Oggi abbiamo completato le fasi di definizione e preparazione del nostro processo di progettazione: abbiamo determinato i nostri utenti e raccolto le loro esigenze, e ora siamo pronti a progettare una soluzione utilizzando abbigliamento intelligente. Domani completeremo le fasi \"prova e rifletti\", in cui creerai il tuo progetto di abbigliamento intelligente e condividerai le tue idee con la classe."
+        },
+        "c89c9fd3-9638-4b06-9b4a-03ae2ffe446a": {
+          "description": "\\*\\*Raccogli \\*\\*  le guide delle attività da ogni studente o chiedi loro di conservarle in un luogo sicuro: verranno utilizzate nell'attività di domani."
         },
         "32060f67-52fc-496b-9178-29bbcd0a854e": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "\\*\\*Discussione: \\*\\* l'attività odierna ha comportato un certo numero di riflessioni con il tuo gruppo. Qual è un esempio di oggi in cui un membro del gruppo ha avuto un'idea che non avevi preso in considerazione prima? In che modo quell'idea ha influito su alcune delle decisioni che hai preso?"
         },
         "0e79724e-4dc4-491d-ac17-f4839c30ce19": {
+          "description": "\\*\\*Discussione: \\*\\* dai modo agli studenti di riflettere in silenzio prima di condividerli nel proprio tavolo e poi con la classe nel suo insieme.",
           "tips": [
-            null
+            "\\*\\*Obiettivo: \\*\\* gli studenti dovrebbero riflettere su come voci diverse hanno contribuito a elevare le idee che il gruppo aveva e potrebbe aver contribuito al prodotto che inizieranno a progettare domani. Questa attenzione al lavoro di squadra e alla valorizzazione delle idee altrui sarà importante in tutta l'unità poiché gli studenti lavoreranno insieme per sviluppare app per gli altri."
           ]
+        },
+        "0aafe4f1-ca8b-4dbc-bf46-97a5a91574ae": {
+          "description": "\\*\\*Distribuisci: \\*\\* quando gli studenti entrano in classe, ridistribuisci le guide alle attività di ieri. Se uno studente era assente, invitalo a unirsi a un gruppo esistente e a utilizzare lo stesso utente, le stesse esigenze e le stesse soluzioni di quel gruppo."
         },
         "77645736-2519-4d27-b58f-460674b37ac3": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "\\*\\*Discussione: \\*\\* consulta la tua guida alle attività di ieri ed elenca:\n\n-   L'utente per cui stai disegnando\n-   La sua esigenza o interesse specifico\n-   La soluzione che hai scelto per le sue esigenze\n\nQuindi scrivi un'idea per un tipo specifico di abbigliamento intelligente che potresti progettare in base alla tua soluzione."
         },
         "ef056da0-16f9-479a-95ea-42f70ae6a9aa": {
+          "description": "\\*\\*Discussione: \\*\\* dai un minuto agli studenti per ricordare a se stessi il lavoro svolto ieri. Una volta che hanno scritto questi appunti nel loro diario, chiedi loro di condividere a turno queste informazioni con i loro gruppi di ieri.",
           "tips": [
-            null
+            "\\*\\*Obiettivo: \\*\\* questo è un rapido aggiornamento del lavoro svolto ieri dagli studenti e un'opportunità per condividere diverse idee di prodotto prima di prendere una decisione in gruppo nella prima parte dell'attività."
           ]
+        },
+        "233d29c4-7eb9-4004-a440-8b397262d9d8": {
+          "description": "Ci sono molti utenti ed esigenze diverse per cui stiamo progettando. Oggi completeremo le fasi \"prova e rifletti\" di questa attività. Il tuo gruppo avrà la possibilità di progettare il tuo prodotto di abbigliamento intelligente per i tuoi utenti e condividere le tue idee con la classe."
+        },
+        "2ab94314-31c6-4d42-9fb3-e4c4d1885c00": {
+          "description": "\\*\\*Domanda del giorno: come possiamo progettare un prodotto per soddisfare le esigenze di un utente? \\*\\*"
         },
         "667167ce-9c2f-4059-9a2a-71bdd0adccbc": {
           "tips": [
-            null
+            "\\*\\*Ricerca sull'abbigliamento intelligente: \\*\\* se gli studenti non hanno familiarità con l'abbigliamento intelligente, incoraggiali a utilizzare Internet per fare prima delle ricerche iniziali su come funziona o è stato usato l'abbigliamento intelligente per risolvere i problemi. Dovrebbero evitare di cercare un prodotto di abbigliamento intelligente esistente che soddisfi le esigenze dei loro utenti, ma possono comunque studiare gli usi più comuni dell'abbigliamento intelligente se non lo conoscono."
           ]
         },
+        "e47eea09-c3ea-4ba3-8b4d-6976340b86ef": {
+          "description": "\\*\\*Distribuisci \\*\\* la guida alle attività di \"Progettazione focalizzata sull'utente\" (prova e rifletti) presso ogni gruppo. Se disponibile, distribuisci presso ogni gruppo, la carta per il cartellone.\n\n#### Progettazione focalizzata sull'utente (prova e rifletti)"
+        },
         "3c36a33c-4c3d-4f93-8c89-a1a7dbdfd58c": {
-          "name": "Prova"
+          "name": "Prova",
+          "description": "\\*\\*Panoramica: \\*\\* leggi la panoramica in classe per assicurarti che gli studenti comprendano l'attività. Approfondisci l'aspetto dei giochi di ruolo di questo progetto, incoraggiando gli studenti a immaginare di avere tutte le risorse di cui hanno bisogno per completare questo compito.\n\n\\*\\*Assegna ruoli: \\*\\* Chiedi agli studenti di assegnare ruoli: uno scriba, un artista, un cronometrista e un presentatore. Assicurati che gli studenti siano chiari sui loro ruoli e incarichi durante questo compito.\n\n\\*\\*Fai questo: \\*\\* gli studenti dovrebbero lavorare insieme per progettare un prodotto di abbigliamento intelligente che soddisfi le esigenze dei loro utenti. Possono utilizzare la discussione durante l'attività di avvio per guidare questo processo. Dovrebbero anche creare uno schizzo di come potrebbe apparire il progetto, con frecce ed etichette per aiutare a comunicare il funzionamento del prodotto. L'artista può disegnare il proprio prodotto sulla guida alle attività o sulla carta fornita per il cartellone. Guarda l'esempio incluso per un esempio di ciò che gli studenti potrebbero finire per creare. Concedi agli studenti un limite di tempo e assicurati che il cronometrista di ogni gruppo ne sia a conoscenza.\n\n**Girando tra i banchi**: monitora gli studenti durante la fase di prova, verificando che le esigenze degli utenti guidino le decisioni relative al loro prodotto. Se necessario, ricorda agli studenti di «entrare nella testa» del loro utente in modo simile alla lezione \"Comprendere il tuo utente\"."
         },
         "b640029f-89eb-45d2-a087-e6d57d703c12": {
           "name": "Rifletti"
@@ -20981,7 +21248,7 @@
         },
         "889b61a1-6e88-49a4-9250-5e48853f289c": {
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**\n\nQuesti materiali per le attività manuali possono essere riutilizzati se gli studenti non vi scrivono sopra. Ne avrai bisogno anche per l'attività della prossima lezione."
           ]
         },
         "6519fc7c-05b3-464d-a3ea-3cd9b239a023": {
@@ -20991,7 +21258,7 @@
         },
         "b7a9b018-0728-4b91-935e-b3ec7c723623": {
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**\n\n**Guida alle attività del computer** le guide alle attività del computer vengono utilizzate solo come riferimento. Gli studenti possono guardare le versioni digitali durante questa attività. Se scegli di stampare la guida, puoi riutilizzarla, a patto che agli studenti venga detto di non scriverci sopra.\n\n\\*\\*Guida alle attività dell'utente: \\*\\* la guida alle attività dell'utente può essere completata online o come attività del diario. Gli studenti possono utilizzare una versione digitale della Guida alle attività come suggerimento, copiando i grafici e le domande nei loro diari."
           ]
         },
         "9ed017b1-a7ee-4c38-87f0-8dea971bd9e6": {
@@ -21018,7 +21285,7 @@
         },
         "2ee54cfb-c1d2-4524-86c2-6ef303a598ea": {
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**\n\nLe stampe con le schermate di riscontro sul prototipo e dell'interfaccia utente possono essere riutilizzate, a condizione che gli studenti non vi scrivano sopra. Le stampe con le schermate dell'interfaccia utente dovrebbero già essere stampate dalla lezione precedente.\n\nLa Guida alle attività può essere completata online o come attività di diario. Gli studenti che completano l'attività online possono scegliere di utilizzare uno strumento di disegno online per disegnare l'interfaccia utente migliorata o inviare lo schizzo separatamente su carta."
           ]
         },
         "2c2e61bd-0e80-4e8a-8377-5680d0d95f90": {
@@ -21044,7 +21311,7 @@
         },
         "1715dc9b-df4c-4292-8b4a-f5cc8aea73a4": {
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**: questa guida alle attività può essere completata online o come attività di diario.\n\n\\*\\*Legami con la comunità: \\*\\* invece di utilizzare le interviste agli utenti di esempio, potresti voler raccogliere interviste reali agli utenti della tua comunità. Valuta la possibilità di chiedere alle persone della tua scuola, delle piccole imprese o ai genitori e ai familiari dei tuoi studenti di rispondere a domande simili. Di conseguenza, gli studenti possono prototipare app che soddisfano le esigenze di persone reali e possono avere un impatto diretto sulla loro comunità."
           ]
         },
         "69cdfd66-ff99-4e25-b8e7-e6d920f36fb1": {
@@ -21087,6 +21354,9 @@
         "9afae521-da27-48d1-9d5f-e90c8690923f": {
           "name": "Preparazione"
         },
+        "8d94bfb4-8b4f-47e4-975d-28814e71b929": {
+          "name": "Collaudo di un prototipo"
+        },
         "8672a531-0212-4a3a-9831-5c522d710bd4": {
           "tips": [
             null
@@ -21128,6 +21398,7 @@
           ]
         },
         "233defe7-9977-4539-8a42-7e146979db0e": {
+          "description": "\\*\\*Mostra: \\*\\* prepara 2-3 app di esempio da mostrare agli studenti. Alcune sono suggerite dalle diapositive, ma puoi anche usare app della risorsa \"Esempi di app per fare del bene\" o altre app per studenti della tua scuola o della tua comunità. Per ogni app:\n\n\\*\\*Discussione: \\*\\* quale pensi sia il problema sociale che questa app è stata progettata per risolvere? Come si ottiene questo risultato?",
           "tips": [
             null
           ]
@@ -21139,7 +21410,7 @@
         },
         "d12014de-c29c-4d8d-891b-2dca9c37974f": {
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**: questa guida può essere completata online o come attività di diario."
           ]
         },
         "eb20582a-3ffa-45d7-8ce4-5505dc1e9f17": {
@@ -21175,8 +21446,11 @@
         },
         "ac59be9d-db06-4340-a5f3-2f74f4d22f72": {
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**: questa guida alle attività può essere completata online o come attività di diario."
           ]
+        },
+        "fe2928a5-5696-46a3-9e5f-6cd655e44bc4": {
+          "description": "\\*\\*Mostra: \\*\\* leggi le istruzioni sulla guida alle attività di \"ricerca di mercato\". Ogni studente dovrebbe trovare almeno un'app da analizzare per il gruppo di lavoro. Dai agli studenti il tempo di fare ricerche prima individualmente, poi il tempo di condividere le app che hanno trovato nei loro gruppi di lavoro. Dovrebbero prestare particolare attenzione se ci sono funzionalità delle app che hanno scoperto che potrebbero «prendere in prestito» per la propria app.\n\n\\*\\*Ricerca di app: \\*\\* ecco alcuni posti in cui gli studenti possono cercare:\n\n-   [Galleria pubblica di Code.org](//studio.code.org/projects/public)\n-   Lezioni o concorsi di app per dispositivi mobili come:\n    -   [App per fare del bene](https://www.appsforgood.org/)\n    -   [Technovation](http://www.technovationchallenge.org/)\n-   App store per dispositivi mobili come Apple App Store o Google Play\n-   Ricerca generica sul web con Google o Bing\n    -   Prova frasi come «concorso app» o «app per il bene della società»\n    -   Includi il nome del tuo stato per idee o concorsi locali"
         },
         "7e704d36-1603-46a8-be78-8f13dcdae93f": {
           "tips": [
@@ -21206,7 +21480,7 @@
         },
         "7fd85c65-ad1b-4f7d-a93d-eed09e89386c": {
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati:** la guida alle attività può essere completata online o come attività di diario. Le cartoline 3\"x5\" (7,62x12,7cm) possono essere sostituite con carta tagliata in 4-6 rettangoli."
           ]
         },
         "69c31664-67a3-406f-aef7-9be5281299ee": {
@@ -21285,6 +21559,7 @@
           ]
         },
         "2e5264db-0d1d-4fc1-adf1-c5bf13967af5": {
+          "name": "Modalità di progettazione in \"Sviluppo App\"",
           "tips": [
             null
           ]
@@ -21297,7 +21572,7 @@
         },
         "648adba7-4a69-4bce-9109-9d50e9d71087": {
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati:** questa guida alle attività può essere completata come attività di diario. Le aule che hanno scelto l'opzione online possono anche svolgere questa attività su un foglio di carta separato o utilizzare uno strumento di disegno online per progettare lo schermo."
           ]
         },
         "3ae6c2fa-0e47-40a3-894b-b1995fe98c91": {
@@ -21417,7 +21692,7 @@
         },
         "0e136518-de25-4ad4-a786-e9736f9b4354": {
           "tips": [
-            null
+            "**Ridurre la quantità di materiali stampati**: questa guida alle attività può essere completata online o come attività di diario."
           ]
         },
         "e4c15ff3-00e4-45d9-b9ad-78e5b332b058": {
@@ -21450,6 +21725,9 @@
           "tips": [
             null
           ]
+        },
+        "98d47c66-d1b6-4d05-bada-bd58b317813b": {
+          "progression_name": "Aggiornamento del tuo prototipo"
         },
         "2e7e6d2b-ce4c-48ee-ab67-a7002104dad7": {
           "tips": [
@@ -22143,6 +22421,9 @@
           "tips": [
             null
           ]
+        },
+        "6fc7958a-8055-43c0-b691-c935982236fd": {
+          "description": "**Il processo di risoluzione dei problemi:** ricorda agli studenti il processo di risoluzione dei problemi: definisci, prepara, prova, rifletti. Useremo questo processo per risolvere il problema di oggi.\n\n**Forma i gruppi:** crea gruppi di 3-4 studenti\n\n**Distribuisci** una copia di [r problem-solving-with-data/csd/2021] per ciascuno studente.\n\n#### Risoluzione di un problema relativo alle informazioni"
         },
         "928ac428-64ef-4359-ad63-12d175fa700e": {
           "name": "Definisci"

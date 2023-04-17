@@ -538,9 +538,9 @@ it:
         csd4-2017:
           lesson_groups:
             csd4_1:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             csd4_2:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
             csd_survey:
               display_name: Sondaggio Post-corso
         minecraft:
@@ -905,9 +905,9 @@ it:
         csd4-draft:
           lesson_groups:
             csd4_1:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             csd4_2:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
         applab-intro:
           title: Introduzione a Sviluppo App
           description_short: Crea la tua app in JavaScript usando la programmazione
@@ -968,9 +968,9 @@ it:
         csd4-old:
           lesson_groups:
             csd4_1:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             csd4_2:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
         csp3-staging:
           lesson_groups:
             csp3_1:
@@ -1206,9 +1206,9 @@ it:
         csd4-2018:
           lesson_groups:
             csd4_1:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             csd4_2:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
             cspSurvey:
               display_name: Sondaggio
         csd5-2018:
@@ -1715,9 +1715,9 @@ it:
         csd4-2019:
           lesson_groups:
             csd4_1:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             csd4_2:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
             csd5_2:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
@@ -2227,9 +2227,9 @@ it:
         csd4-2020:
           lesson_groups:
             csd4_1:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             csd4_2:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
             csd5_2:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
@@ -2718,11 +2718,12 @@ it:
             cspSurvey:
               display_name: Sondaggio
         csd4-2021:
+          title: Il processo di progettazione ('21-'22)
           lesson_groups:
             csd4_1:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             csd4_2:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
             csd5_2:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
@@ -3068,9 +3069,9 @@ it:
         csd4-preview-2021:
           lesson_groups:
             csd4_1:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             csd4_2:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
             csd5_2:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
@@ -3993,9 +3994,9 @@ it:
         csd4-2022:
           lesson_groups:
             csd4_1:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             csd4_2:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
             cspSurvey:
               display_name: Sondaggio
         csd5-2022:
@@ -4164,9 +4165,9 @@ it:
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             lessonGroup-3:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4526,9 +4527,9 @@ it:
         design-process-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             lessonGroup-3:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
         data-society-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4614,9 +4615,9 @@ it:
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             lessonGroup-3:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
         focus-on-design-with-purpose4a-2023:
           lesson_groups:
             lessonGroup-4:
@@ -4648,9 +4649,9 @@ it:
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             lessonGroup-3:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
         focus-on-impact-in-society3-2023:
           lesson_groups:
             lessonGroup-2:

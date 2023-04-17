@@ -1430,6 +1430,111 @@
         "e4c8ad1e-3f96-4fbf-9078-c569f5ef247c": {
           "description": "dare e ricevere riscontri"
         },
+        "608b3d15-c429-49e9-84e0-26c7e151143c": {
+          "description": "riconoscere l'empatia verso l'utente come una componente importante del processo di progettazione"
+        },
+        "a623c1a7-f58d-44fd-80da-924e9ad6ec1c": {
+          "description": " valutare criticamente un oggetto per determinare quanto il suo design soddisfi una determinata gamma di esigenze"
+        },
+        "28bcb96e-7769-49a0-a8f6-b183cce873e9": {
+          "description": " operare critiche a un progetto attraverso il punto di vista di un profilo utente."
+        },
+        "52c71d11-1250-424c-a113-6c36c3083342": {
+          "description": " migliorare il progetto di un prodotto partendo dalle esigenze di un profilo utente."
+        },
+        "04151a07-8251-4216-a51e-e12e64b568aa": {
+          "description": "organizzare idee e strategie secondo categorie significative."
+        },
+        "7dc164da-e876-45b2-94cc-360b92c7e2ee": {
+          "description": "generare una molteplicità di strategie per soddisfare le esigenze degli utenti."
+        },
+        "e5edbdd5-a926-4a68-9b96-2e206b4330dd": {
+          "description": "analizzare e scegliere le strategie più appropriate per soddisfare le esigenze degli utenti."
+        },
+        "2b3a24a7-98b6-4a3d-b446-4630bd4e7a9a": {
+          "description": "raccogliere e analizzare il riscontro dei test effettuati dagli utenti con un prototipo su carta."
+        },
+        "3c008c53-63fc-4e2c-b766-5e35441f0b48": {
+          "description": "utilizzare il riscontro degli utenti al fine di pianificare l'ulteriore sviluppo di un'app"
+        },
+        "4c0488ad-53bf-4650-abbf-6e249543b988": {
+          "description": "migliorare la progettazione della disposizione dello schermo in base al riscontro degli utenti."
+        },
+        "b3491bac-8eca-4817-8658-c1d0dd04e8ec": {
+          "description": "classificare e assegnare priorità per un'app, in base al riscontro degli utenti"
+        },
+        "3b81f029-8a75-4223-94c2-f5540e612c27": {
+          "description": "analizzare le note di intervista per individuare le esigenze specifiche degli utenti"
+        },
+        "6fcd183a-7d4e-44e5-bf7f-d7d8f7279c31": {
+          "description": "progettare l'interfaccia utente di un'app"
+        },
+        "95694b30-9acd-47d3-9dd8-6f000dad8fba": {
+          "description": "progettare un prototipo su carta di un'app per soddisfare le esigenze specifiche di un utente"
+        },
+        "b5f3f0ec-c563-45e9-bd12-6d2a9a01b7e6": {
+          "description": "descrivere gli utenti \"obiettivo\" per un artefatto di natura computazionale"
+        },
+        "b6d3f91f-3252-45cd-b183-adbf3a0e0691": {
+          "description": "sviluppare un piano per collaborare con altri per progettare un artefatto di natura computazionale"
+        },
+        "3d2d0f94-7396-4f69-95b5-dfd8b7c95e4c": {
+          "description": "valutare un progetto in base alla sua capacità di soddisfare le esigenze dell'utente definito"
+        },
+        "fd2f3a3b-d981-4d9b-ad8e-4e0f2bbdf420": {
+          "description": "valutare lo scopo e l'impatto di un artefatto di natura computazionale"
+        },
+        "96ace636-3dcb-4db1-93e3-de7c699751cc": {
+          "description": "spiegare lo scopo dei singoli elementi dell'interfaccia utente durante lo sviluppo di un'app"
+        },
+        "1afb5069-3b9a-4b3f-a555-a51aa337780f": {
+          "description": "spiegare il ruolo dei prototipi su carta nello sviluppo di app."
+        },
+        "3a0160d2-7fac-4428-b229-41af43564cb1": {
+          "description": "creare un prototipo su carta che incorpori il flusso utente per un artefatto di natura computazionale."
+        },
+        "410169f4-ccb1-42f7-9ddf-fef8068c2a7b": {
+          "description": "progettare ed eseguire test che utilizzano prototipi cartacei per raccogliere riscontri su un progetto"
+        },
+        "7b87ea5b-d720-4f00-a3bd-e70600dfcad2": {
+          "description": "analizzare i dati dei test effettuati dagli utenti per individuare le funzionalità che devono essere rimosse, aggiunte o migliorate"
+        },
+        "50029d66-c4d2-4804-a227-01d50bf73769": {
+          "description": "selezionare l'elemento di input appropriato per un determinato tipo di informazioni"
+        },
+        "abc7ae72-467a-4e13-b4b4-00cdc60a9a0c": {
+          "description": "assegnare ruoli e responsabilità a ciascun membro del team quando si collabora per creare un artefatto digitale"
+        },
+        "a720d628-20d7-45f5-a183-eb6823bf8b6f": {
+          "description": "creare il prototipo digitale della schermata di un'applicazione"
+        },
+        "32449f20-2f87-4259-99ef-cd7e58d4b8f3": {
+          "description": "creare un evento che rileva e risponde in base ai dati di ingresso dell'utente"
+        },
+        "e0f97525-eabc-4a77-ac9c-ef7e3e869a47": {
+          "description": "creare un prototipo digitale che incorpori il flusso degli utenti per un artefatto di natura computazionale"
+        },
+        "f902f391-277d-45cb-8ae4-279065ec94c4": {
+          "description": "integrare tutti i componenti del lavoro collaborativo in un artefatto finale di natura computazionale."
+        },
+        "723b01ab-9a3f-4767-8978-f241abba9115": {
+          "description": "progettare ed eseguire test che utilizzano prototipi digitali per raccogliere riscontri su un progetto"
+        },
+        "0ecde430-f617-4c96-9b1c-c9863bb8a273": {
+          "description": "classificare e assegnare priorità ai problemi in base all'impatto e alla facilità di implementazione"
+        },
+        "6fa6528c-a414-44aa-82c1-6ac34fbab03e": {
+          "description": "analizzare il riscontro da parte degli utenti e verificare i risultati su un artefatto di natura computazionale"
+        },
+        "88c2d538-8d11-431a-b799-d28d085a3c15": {
+          "description": "monitorare i progressi apportando modifiche alla propria app"
+        },
+        "6381f927-324f-4efe-9e8b-a52c76750bc9": {
+          "description": "riflettiere sullo sviluppo di un progetto in corso"
+        },
+        "9cffd1e7-8cf5-43a8-800e-2aab85f50f5b": {
+          "description": "presentare informazioni tecniche in modo chiaro agli utenti non tecnici"
+        },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
           "description": "sviluppare programmi che rispondano ad eventi temporizzati."
         },
@@ -2419,6 +2524,111 @@
         },
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "articolare il processo di progettazione ed evidenziare in che modo questo ha contribuito a dare forma al progetto di finale"
+        },
+        "ad6a4213-49c3-49e2-ace9-5a7d36daa458": {
+          "description": " valutare criticamente un oggetto per determinare quanto il suo design soddisfi una determinata gamma di esigenze"
+        },
+        "5b050fa6-537c-42bd-ab68-8da930f96fc1": {
+          "description": "riconoscere l'empatia verso l'utente come una componente importante del processo di progettazione"
+        },
+        "c570aee0-75a6-4698-a3d7-b211adcd5ef8": {
+          "description": " operare critiche a un progetto attraverso il punto di vista di un profilo utente."
+        },
+        "6b88c767-4b50-4334-8b24-fff5e79a467d": {
+          "description": " migliorare il progetto di un prodotto partendo dalle esigenze di un profilo utente."
+        },
+        "8885beeb-2915-4569-b3b2-2ceca9293597": {
+          "description": "generare una molteplicità di strategie per soddisfare le esigenze degli utenti."
+        },
+        "ce14b7c8-ae41-4118-9fa2-56086e2298a1": {
+          "description": "organizzare idee e strategie secondo categorie significative."
+        },
+        "33a9d6e5-89ba-422e-a8f1-c3a200a8c2ba": {
+          "description": "analizzare e scegliere le strategie più appropriate per soddisfare le esigenze degli utenti."
+        },
+        "6c20f4f3-4375-4dee-9f00-012a33e7d2af": {
+          "description": "raccogliere e analizzare il riscontro dei test effettuati dagli utenti con un prototipo su carta."
+        },
+        "cff6cc90-bf04-4c7d-9dac-c6f1a28310a8": {
+          "description": "utilizzare il riscontro degli utenti al fine di pianificare l'ulteriore sviluppo di un'app"
+        },
+        "3b9c322a-6a98-4473-8079-d20160c3e352": {
+          "description": "classificare e assegnare priorità per un'app, in base al riscontro degli utenti"
+        },
+        "95e992b6-6a6c-42f6-aa5c-aee60535a00a": {
+          "description": "migliorare la progettazione della disposizione dello schermo in base al riscontro degli utenti."
+        },
+        "b09ef219-e569-45de-94f7-3e7beec34d72": {
+          "description": "analizzare le note di intervista per individuare le esigenze specifiche degli utenti"
+        },
+        "c6441f90-9643-4b1d-9ac8-90e4ee024f61": {
+          "description": "progettare un prototipo su carta di un'app per soddisfare le esigenze specifiche di un utente"
+        },
+        "91be4c6c-f556-4fc4-85b4-8cb5bbdf8e29": {
+          "description": "progettare l'interfaccia utente di un'app"
+        },
+        "b3622011-d99b-4a7b-9818-63ff04be86f8": {
+          "description": "sviluppare un piano per collaborare con altri per progettare un artefatto di natura computazionale"
+        },
+        "6fa760e4-910d-4f77-99be-68f7673581d6": {
+          "description": "descrivere gli utenti \"obiettivo\" per un artefatto di natura computazionale"
+        },
+        "d1a36c22-f6c1-42c6-bf97-88091a1201c6": {
+          "description": "valutare un progetto in base alla sua capacità di soddisfare le esigenze dell'utente definito"
+        },
+        "3e59ba97-41b3-4967-9366-d38699ab43bb": {
+          "description": "valutare lo scopo e l'impatto di un artefatto di natura computazionale"
+        },
+        "01fafc69-a442-46b9-8274-d8ec27670236": {
+          "description": "spiegare lo scopo dei singoli elementi dell'interfaccia utente durante lo sviluppo di un'app"
+        },
+        "c2f81013-f143-44b7-940d-fba98243bb3d": {
+          "description": "spiegare il ruolo dei prototipi su carta nello sviluppo di app."
+        },
+        "3a6f69e7-fc2d-4f5a-bebe-8336c819e788": {
+          "description": "creare un prototipo su carta che incorpori il flusso utente per un artefatto di natura computazionale."
+        },
+        "41aa43b4-0a6f-4377-927a-e1d6042149cb": {
+          "description": "progettare ed eseguire test che utilizzano prototipi cartacei per raccogliere riscontri su un progetto"
+        },
+        "b6e2c14d-12b9-44dd-96fa-82de930560a1": {
+          "description": "analizzare i dati dei test effettuati dagli utenti per individuare le funzionalità che devono essere rimosse, aggiunte o migliorate"
+        },
+        "0e89a393-31c9-4c3c-b1bb-0285a4a618c7": {
+          "description": "assegnare ruoli e responsabilità a ciascun membro del team quando si collabora per creare un artefatto digitale"
+        },
+        "fec5eaa1-f93f-4255-b69a-080150de17c0": {
+          "description": "selezionare l'elemento di input appropriato per un determinato tipo di informazioni"
+        },
+        "a39d3b79-7607-4435-9ecb-d2b1041334ec": {
+          "description": "creare il prototipo digitale della schermata di un'applicazione"
+        },
+        "6ee3d556-8e43-4ecb-9805-dc5596471be8": {
+          "description": "creare un evento che rileva e risponde in base ai dati di ingresso dell'utente"
+        },
+        "12ae5d81-38da-43a1-bf10-53d10c0e3e04": {
+          "description": "integrare tutti i componenti del lavoro collaborativo in un artefatto finale di natura computazionale."
+        },
+        "f027b687-253c-4337-bfa7-815483f163d6": {
+          "description": "creare un prototipo digitale che incorpori il flusso degli utenti per un artefatto di natura computazionale"
+        },
+        "d40519ba-f2c6-485e-919d-b4752a96e391": {
+          "description": "progettare ed eseguire test che utilizzano prototipi digitali per raccogliere riscontri su un progetto"
+        },
+        "6aab1c32-4afe-4d2a-a747-61bf6f0ce7b3": {
+          "description": "analizzare il riscontro da parte degli utenti e verificare i risultati su un artefatto di natura computazionale"
+        },
+        "db9fbd1e-9028-4c08-8490-2906a54bee8a": {
+          "description": "classificare e assegnare priorità ai problemi in base all'impatto e alla facilità di implementazione"
+        },
+        "f6bad7b7-7a94-46b6-8375-016077a5bf54": {
+          "description": "monitorare i progressi apportando modifiche alla propria app"
+        },
+        "f86060e6-0c95-4d92-85c1-52fc82c32257": {
+          "description": "presentare informazioni tecniche in modo chiaro agli utenti non tecnici"
+        },
+        "3f8b9c32-15fb-4b26-9360-9cb6fdfe7ed3": {
+          "description": "riflettiere sullo sviluppo di un progetto in corso"
         },
         "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
           "description": "addestrare e testare un modello di apprendimento automatico"

@@ -951,9 +951,17 @@
           "word": "Classe CSS",
           "definition": "un identificatore che consente a più elementi di un documento HTML di avere lo stesso stile"
         },
+        "empathy/csd/2022": {
+          "word": "Empatia",
+          "definition": "Durante la fase di progettazione, prestare attenzione alla sensibilità e alle esigenze dell'utente mentre viene progettato un prodotto."
+        },
         "user/csd/2022": {
           "word": "Utente",
           "definition": "Chi fa uso di un oggetto, inclusi software e hardware."
+        },
+        "usability/csd/2022": {
+          "word": "Usabilità",
+          "definition": "Com'è facile, efficiente e soddisfacente utilizzare un oggetto o un dispositivo creato dall'uomo (incluso il software)."
         },
         "user_interface/csd/2022": {
           "word": "Interfaccia Utente"
@@ -1514,9 +1522,17 @@
           "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
           "definition": "In che modo i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
         },
+        "empathy/csd/2021": {
+          "word": "Empatia",
+          "definition": "Durante la fase di progettazione, prestare attenzione alla sensibilità e alle esigenze dell'utente mentre viene progettato un prodotto."
+        },
         "user/csd/2021": {
           "word": "Utente",
           "definition": "Chi fa uso di un oggetto, inclusi software e hardware."
+        },
+        "usability/csd/2021": {
+          "word": "Usabilità",
+          "definition": "Com'è facile, efficiente e soddisfacente utilizzare un oggetto o un dispositivo creato dall'uomo (incluso il software)."
         },
         "user_interface/csd/2021": {
           "word": "Interfaccia Utente"
