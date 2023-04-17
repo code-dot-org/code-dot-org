@@ -10,7 +10,8 @@ theme: responsive
 
 - Inirerekomenda namin ang hindi bababa sa 15 MBit/sec na koneksiyon sa Internet para sa paaralan mo.
 - 1024 x 728 px ang pinakamaliit na laki ng screen na sinusuportahan namin.
-- Kakailanganin mo ng desktop o laptop na computer na may mouse (o touchpad) at keyboard para sa mga kurso namin sa antas ng middle at high school: CS Discoveries, CS Principles, at Intro to App Lab. Hindi suportado ang karamihan sa mga tablet at mobile device para sa mga kursong ito. Tingnan ang "Mga Detalye ng Suporta sa Mobile at Tablet" sa ibaba para sa mga pagbubukod sa device-specific.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Tingnan ang "Mga Detalye ng Suporta sa Mobile at Tablet" sa ibaba para sa mga pagbubukod sa device-specific.
 - Tugma sa mga iPad at Chromebook ang lahat ng iba pang content, gaya ng mga K-5 courses (Computer Science Fundamentals) at Hour of Code na aktibidad bilang karagdagan sa lahat ng iba pang modernong tablet at laptop o desktop computer.
 - Naghahanap ng mga detalye ng suporta sa mobile device? Basahin sa ibaba.
 
@@ -82,12 +83,12 @@ Para sa pinakamagandang karanasan sa lahat ng nilalaman ng Code.org, inirerekume
 
 ## Mga Detalye ng Suporta sa Mobile at Tablet
 
-Hindi tugma sa mga tablet o mobile device ang lahat ng CS Discoveries, CS Principles, at Intro to App Lab na mga kurso - kinakailangan ang isang buong keyboard at mouse (o touchpad, tulad ng sa MacBooks). Hindi suportado ang karamihan sa mga tablet, kasama ang mga sumusunod na pagbubukod:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Hindi suportado ang karamihan sa mga tablet, kasama ang mga sumusunod na pagbubukod:
 
 - Microsoft Surface Pro na may external na keyboard
 - iPad na nagpapatakbo ng iPadOS 13.4 o mas bago na may external na keyboard at external na mouse o touchpad
 
-Tugma sa mga iPad at Chromebook ang lahat ng iba pang content, gaya ng mga K-5 courses (Computer Science Fundamentals) at Hour of Code na aktibidad bilang karagdagan sa lahat ng iba pang modernong tablet at laptop o desktop computer.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### Mga Mobile Phone
 

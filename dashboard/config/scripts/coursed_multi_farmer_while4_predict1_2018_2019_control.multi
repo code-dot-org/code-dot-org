@@ -7,4 +7,4 @@ right 'The farmer will remove dirt as long as there is a pile, then stop when th
 wrong 'I don\'t know.', feedback: 'The farmer will remove dirt as long as there is a pile, then stop when the pile is gone'
 
 
-allow_multiple_attempts true
+allow_multiple_attempts false

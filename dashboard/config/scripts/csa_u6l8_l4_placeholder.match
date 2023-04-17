@@ -14,4 +14,3 @@ answer 'the process of dividing text into parts for analysis or conversion'
 
 question 'postcondition'
 answer 'a condition that must be true just after a block of code executes'
-allow_multiple_attempts true
