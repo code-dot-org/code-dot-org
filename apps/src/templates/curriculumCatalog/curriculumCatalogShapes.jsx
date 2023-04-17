@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 export const curriculumDataShape = PropTypes.shape({
   id: PropTypes.string,
-  key: PropTypes.string,
+  key: PropTypes.string.isRequired,
   display_name: PropTypes.string.isRequired,
   category: PropTypes.string,
   is_featured: PropTypes.bool,
