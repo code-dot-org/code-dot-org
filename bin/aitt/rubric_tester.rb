@@ -115,8 +115,9 @@ def compute_accuracy(expected_grades, actual_grades)
   end
 
   accuracy_by_criteria = {}
-  matches_by_criteria.each do |criteria, matches|
-    accuracy_by_criteria[criteria] = (matches / total_by_criteria[criteria].to_f) * 100
+  total_by_criteria.each do |criteria, total|
+    matches = matches_by_criteria[criteria] || 0
+    accuracy_by_criteria[criteria] = (matches / total.to_f) * 100
   end
 
   overall_accuracy = (overall_matches / overall_total.to_f) * 100
