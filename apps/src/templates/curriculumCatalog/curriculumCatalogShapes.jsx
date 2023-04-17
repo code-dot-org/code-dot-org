@@ -9,7 +9,7 @@ export const curriculumDataShape = PropTypes.shape({
   assignable: PropTypes.bool,
   curriculum_type: PropTypes.string,
   marketing_initiative: PropTypes.string,
-  grade_levels: PropTypes.string.isRequired,
+  grade_levels: PropTypes.string,
   header: PropTypes.string,
   image: PropTypes.string,
   cs_topic: PropTypes.string,
