@@ -23,10 +23,11 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
     // one value type that is accepted so we assign connectorType to the first
     // element in the list.
     const connectorType = connection.check_ ? connection.check_[0] : null;
-    console.log('connection.check_', connection.check_);
     switch (connection.type) {
       case GoogleBlockly.ConnectionType.INPUT_VALUE:
       case GoogleBlockly.ConnectionType.OUTPUT_VALUE:
+        // PUZZLE_TAB is the default shape for the connector if the value type is not
+        // included in `blockTypeShapeMap`
         return blockTypeShapeMap[connectorType] || this.PUZZLE_TAB;
       case GoogleBlockly.ConnectionType.PREVIOUS_STATEMENT:
       case GoogleBlockly.ConnectionType.NEXT_STATEMENT:
