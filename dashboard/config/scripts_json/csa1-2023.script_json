@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-14 12:27:00 UTC",
+    "serialized_at": "2023-04-15 16:16:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5956,7 +5956,7 @@
       "key": "40c4203e-b918-4c71-8ec5-8004174984eb",
       "position": 3,
       "properties": {
-        "description": "**Asphalt Art Project:** Use the rubric on the last page of the Asphalt Art Project Planning Guide to assess the projects.",
+        "description": "**Asphalt Art Project:** Use the rubric in the Asphalt Art Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
       },
       "seeding_key": {
