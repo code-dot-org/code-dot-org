@@ -1482,26 +1482,129 @@
           "name": "استطلاع رأي بعد انتهاء دورة مقدمات علوم الحاسوب"
         },
         "csd6-2022/Innovations in Computing": {
-          "name": "ابتكارات في الحوسبة"
+          "name": "ابتكارات في الحوسبة",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
         },
         "csd6-2022/The Circuit Playground": {
-          "name": "لوحة الأضواء الدائرية"
+          "name": "لوحة الأضواء الدائرية",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd6-2022/Updating Screen Elements": {
+          "name": "",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
         },
         "csd6-2022/Board Events": {
-          "name": "أحداث اللوحة"
+          "name": "أحداث اللوحة",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd6-2022/Variables and If Statements": {
+          "name": "",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd6-2022/Mini-Project: On-The-Go App": {
+          "name": "",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd6-2022/Color LEDs": {
+          "name": "",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd6-2022/Getting Screen Inputs": {
+          "name": "",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd6-2022/Combining Inputs and Outputs": {
+          "name": "",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd6-2022/Project: Human Device Interaction": {
+          "name": "",
+          "overview": "",
+          "preparation": ""
+        },
+        "csd6-2022/Board Sensors": {
+          "name": "",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
         },
         "csd6-2022/Accelerometer": {
-          "name": "مقياس التسارع"
+          "name": "مقياس التسارع",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
         },
         "csd6-2022/Making Music": {
-          "name": "إنشاء موسيقى"
+          "name": "إنشاء موسيقى",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
         },
         "csd6-2022/Functions": {
-          "name": "دوال"
+          "name": "دوال",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd6-2022/Mini-Project: Interactive Art": {
+          "name": "",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd6-2022/Physical Outputs and LEDs": {
+          "name": "",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd6-2022/Physical Inputs and Buttons": {
+          "name": "",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
         },
         "csd6-2022/Project - Prototype an Innovation": {
           "name": "المشروع: إعداد نموذج أولي لابتكار",
-          "overview": "في هذا المشروع النهائي للدورة، يتعاون الطلاب على تطوير واختبار نموذج أولي لجهاز حاسوبي مبتكر يعتمد على لوحة الأضواء الدائرية. باستخدام المدخلات والمخرجات المتاحة على اللوحة، ستقوم المجموعات بإنشاء برامج تسمح بتفاعلات المستخدم المثيرة للاهتمام والفريدة."
+          "assessment_opportunities": "",
+          "overview": "في هذا المشروع النهائي للدورة، يتعاون الطلاب على تطوير واختبار نموذج أولي لجهاز حاسوبي مبتكر يعتمد على لوحة الأضواء الدائرية. باستخدام المدخلات والمخرجات المتاحة على اللوحة، ستقوم المجموعات بإنشاء برامج تسمح بتفاعلات المستخدم المثيرة للاهتمام والفريدة.",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd6-2022/CS Discoveries Post-Course Survey": {
           "name": "استطلاع رأي بعد انتهاء دورة مقدمات علوم الحاسوب"
@@ -5315,80 +5418,205 @@
           "name": "استطلاع رأي بعد انتهاء دورة مقدمات علوم الحاسوب"
         },
         "csd3-2021/Programming for Entertainment": {
-          "name": "البرمجة للتسلية"
+          "name": "البرمجة للتسلية",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Plotting Shapes": {
-          "name": "رسم الأشكال"
+          "name": "رسم الأشكال",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Drawing in Game Lab": {
-          "name": "الرسم في مختبر الألعاب"
+          "name": "الرسم في مختبر الألعاب",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Shapes and Parameters": {
+          "name": "",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Variables": {
           "name": "المتغيرات",
-          "overview": "**سؤال اليوم: كيف يمكننا استخدام المتغيرات لتخزين المعلومات في برامجنا؟**\n\nيتعلم الطلاب في هذا الدرس كيفية استخدام المتغيرات لتسمية رقم. يبدأ الطلاب الدرس بوصف مبسطٍ جدًا للغرض من المتغير في سياق مكون التخزين ضمن نموذج \"الإدخال والتخزين والمعالجة والإخراج\". ثم يكمل الطلاب مستوى الارتقاء الذي يعزز نموذج المتغير بوصفه وسيلة لتسمية أو تحديد رقم."
+          "assessment_opportunities": "",
+          "overview": "**سؤال اليوم: كيف يمكننا استخدام المتغيرات لتخزين المعلومات في برامجنا؟**\n\nيتعلم الطلاب في هذا الدرس كيفية استخدام المتغيرات لتسمية رقم. يبدأ الطلاب الدرس بوصف مبسطٍ جدًا للغرض من المتغير في سياق مكون التخزين ضمن نموذج \"الإدخال والتخزين والمعالجة والإخراج\". ثم يكمل الطلاب مستوى الارتقاء الذي يعزز نموذج المتغير بوصفه وسيلة لتسمية أو تحديد رقم.",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Random Numbers": {
+          "name": "",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Sprites": {
-          "name": "النقوش المتحركة"
+          "name": "النقوش المتحركة",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Sprite Properties": {
-          "name": "خصائص الكائنات"
+          "name": "خصائص الكائنات",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Text": {
-          "name": "النص"
+          "name": "النص",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Mini-Project: Captioned Scenes": {
-          "name": "مشروع صغير: المشاهدات ذات التعليقات التوضيحية"
+          "name": "مشروع صغير: المشاهدات ذات التعليقات التوضيحية",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/The Draw Loop": {
-          "name": "حلقة الرسم"
+          "name": "حلقة الرسم",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Sprite Movement": {
-          "name": "حركة الرسوم المتحركة"
+          "name": "حركة الرسوم المتحركة",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Mini-Project: Animation": {
-          "name": "مشروع صغير: الرسوم المتحركة"
+          "name": "مشروع صغير: الرسوم المتحركة",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Conditionals": {
-          "name": "الجمل الشرطية"
+          "name": "الجمل الشرطية",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Keyboard Input": {
-          "name": "مدخلات لوحة المفاتيح"
+          "name": "مدخلات لوحة المفاتيح",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Mouse Input": {
-          "name": "مدخلات الماوس"
+          "name": "مدخلات الماوس",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Project - Interactive Card": {
-          "name": "المشروع - البطاقة التفاعلية"
+          "name": "المشروع - البطاقة التفاعلية",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Velocity": {
-          "name": "السرعة"
+          "name": "السرعة",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Collision Detection": {
-          "name": "كشف التصادم"
+          "name": "كشف التصادم",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Mini-Project: Side Scroller": {
-          "name": "مشروع صغير: التمرير الجانبي"
+          "name": "مشروع صغير: التمرير الجانبي",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Complex Sprite Movement": {
-          "name": "الحركة المعقدة للنقش المتحرك"
+          "name": "الحركة المعقدة للنقش المتحرك",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Collisions": {
-          "name": "التصادمات"
+          "name": "التصادمات",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Mini-Project: Flyer Game": {
-          "name": "مشروع صغير: لعبة التحليق"
+          "name": "مشروع صغير: لعبة التحليق",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Functions": {
-          "name": "دوال"
+          "name": "دوال",
+          "assessment_opportunities": "",
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/The Game Design Process": {
-          "name": "عملية تصميم اللعبة"
+          "name": "عملية تصميم اللعبة",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Using the Game Design Process": {
-          "name": "استخدام عملية تصميم اللعبة"
+          "name": "استخدام عملية تصميم اللعبة",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/Project - Design a Game": {
-          "name": "المشروع - تصميم لعبة"
+          "name": "المشروع - تصميم لعبة",
+          "assessment_opportunities": "",
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "csd3-2021/lesson-1": {
           "name": "استطلاع رأي بعد انتهاء دورة مقدمات علوم الحاسوب"

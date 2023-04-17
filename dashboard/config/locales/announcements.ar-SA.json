@@ -29,11 +29,26 @@
         "2e1b13ae-2ab8-4996-bf23-ca3e0fa1f8be": {
           "buttonText": "تعلّم المزيد"
         },
+        "89b889db-2e3a-4afa-8df5-b424eb0d62d1": {
+          "notice": "",
+          "details": "",
+          "buttonText": ""
+        },
         "cd936bbe-e57c-4568-aad1-832ee483d149": {
+          "notice": "",
+          "details": "",
           "buttonText": "تعلّم المزيد"
         },
         "ed6a61e5-23b1-4249-a182-874156f2d135": {
           "buttonText": "تعلّم المزيد"
+        },
+        "69e413fa-9081-4fac-8d73-9294b6fa1f11": {
+          "notice": "",
+          "details": ""
+        },
+        "4fc301ee-93c8-4d3c-b4f6-8ad16536da1a": {
+          "notice": "",
+          "details": ""
         }
       }
     }

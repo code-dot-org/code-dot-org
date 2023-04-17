@@ -840,7 +840,8 @@
           "definition": "طريقة تمثيل معلومات باستخدام خيارين فقط."
         },
         "input/csd/2022": {
-          "word": "الإدخال"
+          "word": "الإدخال",
+          "definition": ""
         },
         "processing/csd/2022": {
           "word": "المعالجة"
@@ -886,6 +887,22 @@
         "user/csd/2022": {
           "word": "مستخدم",
           "definition": "شخص يستخدم شيئاً، بما في ذلك البرامج والأجهزة."
+        },
+        "innovation/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "output/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "prototype/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "circuit/csd/2022": {
+          "word": "",
+          "definition": ""
         },
         "machine_learning/csd/2022": {
           "word": "التعلم الآلي",
@@ -1457,24 +1474,45 @@
           "word": "البرنامج",
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
+        "parameter/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
         "variable/csd/2021": {
           "word": "متغير",
           "definition": "اسم لجزء من المعلومات المستخدمة في البرنامج."
         },
+        "property/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
         "sprite/csd/2021": {
-          "word": "كائن"
+          "word": "كائن",
+          "definition": ""
+        },
+        "dot_notation/csd/2021": {
+          "word": "",
+          "definition": ""
         },
         "condition/csd/2021": {
-          "word": "الشرط"
+          "word": "الشرط",
+          "definition": ""
         },
         "conditionals/csd/2021": {
-          "word": "الجمل الشرطية"
+          "word": "الجمل الشرطية",
+          "definition": ""
+        },
+        "boolean_expression/csd/2021": {
+          "word": "",
+          "definition": ""
         },
         "abstraction/csd/2021": {
-          "word": "خلاصة"
+          "word": "خلاصة",
+          "definition": ""
         },
         "function/csd/2021": {
-          "word": "وظيفة "
+          "word": "وظيفة ",
+          "definition": ""
         },
         "input/csd/2021": {
           "word": "الإدخال"
