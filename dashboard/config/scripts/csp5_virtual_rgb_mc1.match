@@ -23,5 +23,3 @@ answer '**red: 107, green: 142, blue: 35 - rgb(107,142,35)**'
 markdown <<MARKDOWN
 
 MARKDOWN
-
-allow_multiple_attempts true

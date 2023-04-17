@@ -10,7 +10,8 @@ theme: responsive
 
 - Kami menyarankan koneksi Internet paling tidak 15MBit/dtk dtk untuk sekolah Anda.
 - Ukuran layar terkecil yang kami dukung adalah 1024 x 728 px.
-- Anda akan memerlukan komputer desktop atau laptop dengan mouse (atau touchpad) dan keyboard untuk kursus tingkat SMP dan SMA: CS Discoveries, CS Principles, dan Intro to App Lab. Sebagian besar tablet dan perangkat seluler tidak didukung untuk kursus-kursus ini. Lihat "Detail Dukungaun untuk Ponsel dan Tablet" berikut untuk mendapatkan pengecualian khusus.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Lihat "Detail Dukungaun untuk Ponsel dan Tablet" berikut untuk mendapatkan pengecualian khusus.
 - Semua konten lain, seperti kursus K-5 (Dasar-dasar Ilmu Komputer) dan kegiatan Hour of Code kompatibel pada iPad dan Chromebook seperti halnya pada semua tablet modern lain dan laptop atau komputer desktop.
 - Mencari detail dukungan untuk perangkat seluler? Baca di bawah.
 
@@ -82,12 +83,12 @@ Untuk mendapatkan pengalaman terbaik dengan semua konten Code.org, kami sarankan
 
 ## Detail Dukungan untuk Ponsel dan Tablet
 
-Semua kursus CS Discoveries, CS Principles, dan Intro to App Lab tidak kompatibel dengan tablet atau perangkat seluler. Anda wajib menggunakan keyboard dan mouse (atau touchpad, seperti pada MacBook). Sebagian besar tablet tidak didukung, dengan pengecualian berikut:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Sebagian besar tablet tidak didukung, dengan pengecualian berikut:
 
 - Microsoft Surface Pro dengan keyboard eksternal
 - iPad yang menggunakan iPadOS 13.4 atau di atasnya dengan keyboard eksternal dan mouse atau touchpad eksternal
 
-Semua konten lain, seperti kursus K-5 (Dasar-dasar Ilmu Komputer) dan kegiatan Hour of Code kompatibel pada iPad dan Chromebook seperti halnya pada semua tablet modern lain dan laptop atau komputer desktop.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### Ponsel
 

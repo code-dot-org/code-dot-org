@@ -13,5 +13,3 @@ answer '`String`'
 
 question 'If the student has permission to leave campus during lunch'
 answer '`boolean`'
-
-allow_multiple_attempts true

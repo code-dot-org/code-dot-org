@@ -206,6 +206,14 @@ pl:
       teacher_forum/csd/2019:
         name: Forum Nauczycieli
         url: https://forum.code.org/c/csd
+      all_code_2/csd/2023:
+        name: Cały kod
+      all_resources_2/csd/2023:
+        name: Wszystkie zasoby
+      all_standards_2/csd/2023:
+        name: Wszystkie standardy
+      all_vocabulary_2/csd/2023:
+        name: Całe słownictwo
       all_code/csd/2021:
         name: Cały kod
         url: "/courses/csd-2021/code"

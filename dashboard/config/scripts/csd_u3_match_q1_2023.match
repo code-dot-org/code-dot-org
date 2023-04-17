@@ -1,24 +1,14 @@
 name 'CSD U3 Match Q1_2023'
-
-height '75'
-
-description 'Match each line of code with its explanation.'
-
-question '`fries.scale = 0.6;`'
-question '`fries.x = 100;`'
-question '`fries.y = 50;`'
-question '`fries.rotation = 45;`'
-
-answer 'Set the scale of the fries sprite to 0.6.'
-answer 'Move the x position of the fries sprite to 100.'
-answer 'Move the y position of the fries sprite to 50.'
-answer 'Rotate the fries sprite.'
-teacher_markdown <<MARKDOWN
-**Content: Unit 3 Lesson 8**
-
-
-
-
-MARKDOWN
-
-allow_multiple_attempts true
+encrypted '0uujxOKHFrswUHT2ZFKV+lFkvf1iGozMRuXuFqO548IeVGkvs5VAJAlZCvYz
+DT1Q3xg+qzL30/NrvL8FbiIubd6fYHNoyx1M4ba4CTewXcu1eglJSNqbd5dD
+ln8dA1QzvuaPxknW/juz3cdWLH9GR2TG9vfQI9U8WDbT62MX73XJgsJQNRef
+QNnGUR+xyAmPwWynG170msm79zewccC67Nl55OGLBh4rONLbB2vUmRCCJ3L5
+0Fx6z22qs3vJoSF/AydNwvcYoPyzn7LdW9m0PW05GExGyX7IHZgBvtqX/To3
+wHix3+vnXr+X9Lmhfd6dl+4PscGSLMR8TniQxHtfe9yj9a6LnZfTJM7jNirk
+6psjkGa7acbAzgsAVKy1QN9VDE8/Z6f9BJhY53cxuCfuOAYlAq9meQLG9nv4
+M3nA0zdO+RoJ5JLtJXFppc3aMUZtJHyjO5nJZOvxb0xhKdVRWfOIxdPo3QZ9
+HpiNngaj88uXlYr6zVzmvPWC1nqmUYCc3Ug1j20jxdRSRJXDCuyj85pX6aqW
+4dYk2dXy4oQ7KMUNA8d88XWVIwBe790iF7Oe5jaaTAZdJOtDfw4EFKRsLlfz
+P0OdEkL/lyIQz44cHOW0S10JMDbszov1XTrBKL4UorMwpkpSKemf40FOdkK9
+Po7YNS0genmzJpZy1b76CMDYtxI+xl+r5ZtvVbCuPuQB
+'

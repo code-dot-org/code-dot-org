@@ -8,7 +8,6 @@ Scenario: Should see callout on 20-hour farmer lesson
   And element ".uitest-login-callout" is visible
 
 @no_mobile
-@no_ie
 Scenario: Should be able to clear cookies and session storage to see callout again
   Given I am on "http://studio.code.org/s/20-hour/lessons/9/levels/1?noautoplay=true"
   And I rotate to landscape
@@ -38,7 +37,6 @@ Scenario: Should not see callout on CSF coursea lesson if logged in
   And element ".uitest-login-callout" is not visible
 
 @no_mobile
-@no_ie
 Scenario: Clicking anywhere should dismiss the login reminder
   Given I am on "http://studio.code.org/s/20-hour/lessons/9/levels/1?noautoplay=true"
   And I rotate to landscape
@@ -59,7 +57,6 @@ Scenario: See age callout, not signin callout on hour of code
   And I select age 10 in the age dialog
 
 @no_mobile
-@no_ie
 Scenario: After dismissing the callout, it should not reappear upon refresh
   Given I am on "http://studio.code.org/s/20-hour/lessons/9/levels/1?noautoplay=true"
   And I rotate to landscape
@@ -72,7 +69,6 @@ Scenario: After dismissing the callout, it should not reappear upon refresh
   And I clear session storage
 
 @no_mobile
-@no_ie
 Scenario: Nested callouts should work as expected
   Given I am on "http://studio.code.org/s/coursea-2020/lessons/2/levels/2?noautoplay=true"
   And I rotate to landscape
