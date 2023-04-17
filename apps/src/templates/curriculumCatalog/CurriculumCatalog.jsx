@@ -23,6 +23,7 @@ const CurriculumCatalog = ({curriculaData}) => (
           <img
             className={style.headerImage}
             src={CourseCatalogIllustration01}
+            alt=""
           />
         </div>
       </div>
