@@ -43,7 +43,7 @@ module AWS
     def self.current_stack_name
       metadata_service_request = Net::HTTP.new(EC2_METADATA_SERVICE_URL.host, EC2_METADATA_SERVICE_URL.port)
       # Set a short timeout so that when not executing on an EC2 Instance we fail fast.
-      metadata_service_request.open_timeout = metadata_service_request.read_timeout = 3
+      metadata_service_request.open_timeout = metadata_service_request.read_timeout = 10
       ec2_instance_id = metadata_service_request.request_get(EC2_METADATA_SERVICE_URL.path).body
       ec2_client = Aws::EC2::Client.new
       ec2_client.
@@ -54,8 +54,7 @@ module AWS
         value
     rescue Net::OpenTimeout # This code is not executing on an AWS EC2 Instance nor in an ECS container or Lambda.
       nil
-    rescue StandardError => error
-      CDO.log.info error.message
+    rescue StandardError
       nil
     end
 
@@ -97,14 +96,12 @@ module AWS
       end
     end
 
-    private
-
     # @return [Aws::CloudFormation::Client]
-    def cfn
+    private def cfn
       @cfn ||= Aws::CloudFormation::Client.new
     end
 
-    def change_stack
+    private def change_stack
       template = stack.render
       if options[:verbose]
         log.info template.lines.map.with_index(1) {|line, i| format("[%3d] %s", i, line)}.join
@@ -119,7 +116,7 @@ module AWS
     end
 
     # Prepare changes to a stack using a Change Set.
-    def prepare_changes(stack_options, name)
+    private def prepare_changes(stack_options, name)
       action = stack_options[:change_set_type].downcase.to_sym
       log.info "Pending #{action} for stack `#{stack_name}`:" unless options[:quiet]
       change_set_id = cfn.create_change_set(
@@ -156,7 +153,7 @@ module AWS
       end
     end
 
-    def apply_changes(stack_options, change_set_id, action)
+    private def apply_changes(stack_options, change_set_id, action)
       # Change Set does not support `on_failure` or `stack_policy` options
       # which are useful for stack creation, so apply create action directly.
       if action == :create
@@ -178,7 +175,7 @@ module AWS
     end
 
     # Returns an inline string or S3 URL depending on the size of the template.
-    def string_or_url(template)
+    private def string_or_url(template)
       # Upload the template to S3 if it's too large to be passed directly.
       if template.length < TEMPLATE_MAX
         {template_body: template}
@@ -197,7 +194,7 @@ module AWS
       end
     end
 
-    def parameters(template)
+    private def parameters(template)
       # These templates include complex classes like Dates that are not
       # supported by safe_load
       #
@@ -225,7 +222,7 @@ module AWS
       end.compact
     end
 
-    def base_options
+    private def base_options
       # All stacks use the same shared Service Role for CloudFormation resource-management permissions.
       # Pass `ADMIN=1` to update admin resources with a privileged Service Role.
       role_name = "CloudFormation#{ENV['ADMIN'] ? 'Admin' : 'Service'}"
@@ -236,7 +233,7 @@ module AWS
       }
     end
 
-    def stack_options(template)
+    private def stack_options(template)
       @stack_options ||= base_options.merge(string_or_url(template)).merge(
         parameters: parameters(template),
         tags: stack.tags,
@@ -248,7 +245,7 @@ module AWS
     end
 
     # Sets options specific to the CreateChangeSet operation.
-    def change_set_options(template)
+    private def change_set_options(template)
       opts = stack_options(template)
       if (imports = options[:import_resources]&.split(','))
         opts[:change_set_type] = 'IMPORT'
@@ -269,7 +266,7 @@ module AWS
       opts
     end
 
-    def stack_action(method, stack_options)
+    private def stack_action(method, stack_options)
       start = Time.now
       begin
         result = cfn.method("#{method}_stack").call(stack_options)
@@ -288,7 +285,7 @@ module AWS
     end
 
     # Only way to determine whether a given stack exists using the Ruby API.
-    def stack_exists?
+    private def stack_exists?
       @stack_resource ||=
         begin
           cfn.describe_stacks(stack_name: stack_name).stacks.first.tap do |stack|
@@ -302,7 +299,7 @@ module AWS
     end
 
     # Prints the latest CloudFormation stack events.
-    def tail_events(start)
+    private def tail_events(start)
       @last_event ||= start
       stack_events = cfn.describe_stack_events(stack_name: @stack_id).stack_events
       stack_events.reject! do |event|
@@ -321,7 +318,7 @@ module AWS
       @last_event = ([@last_event] + stack_events.map(&:timestamp)).max
     end
 
-    def wait_for_stack(action)
+    private def wait_for_stack(action)
       log.info "Stack #{action} requested, waiting for provisioning to complete..."
       yield rescue nil
       begin

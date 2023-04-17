@@ -1,4 +1,10 @@
-import React, {useState, useEffect, useCallback, useMemo} from 'react';
+import React, {
+  useState,
+  useEffect,
+  useCallback,
+  useMemo,
+  forwardRef
+} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
@@ -12,14 +18,14 @@ import Button from '@cdo/apps/templates/Button';
 import {
   setIsReadOnlyWorkspace,
   setHasOpenCodeReview
-} from '@cdo/apps/javalab/javalabRedux';
+} from '@cdo/apps/javalab/redux/javalabRedux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 
-const CommitsAndReviewTab = props => {
-  const {
+const CommitsAndReviewTab = forwardRef(function (
+  {
     channelId,
     serverLevelId,
     serverProjectLevelId,
@@ -34,8 +40,9 @@ const CommitsAndReviewTab = props => {
     setHasOpenCodeReview,
     isCommitSaveInProgress,
     hasCommitSaveError
-  } = props;
-
+  },
+  ref
+) {
   const [isLoadingTimelineData, setIsLoadingTimelineData] = useState(false);
   const [openReviewData, setOpenReviewData] = useState(null);
   const [timelineData, setTimelineData] = useState([]);
@@ -172,7 +179,10 @@ const CommitsAndReviewTab = props => {
   // comments cannot be made on projects in this state.
   if (!channelId) {
     return (
-      <div style={{...styles.reviewsContainer, ...styles.messageText}}>
+      <div
+        ref={ref}
+        style={{...styles.reviewsContainer, ...styles.messageText}}
+      >
         {javalabMsg.noCodeReviewUntilStudentEditsCode()}
       </div>
     );
@@ -180,14 +190,14 @@ const CommitsAndReviewTab = props => {
 
   if (isLoadingTimelineData) {
     return (
-      <div style={styles.loadingContainer}>
+      <div ref={ref} style={styles.loadingContainer}>
         <Spinner size="large" />
       </div>
     );
   }
 
   return (
-    <div style={styles.reviewsContainer}>
+    <div ref={ref} style={styles.reviewsContainer}>
       <div style={styles.header}>
         <div style={styles.navigator}>
           {codeReviewEnabled && !viewAsTeacher && (
@@ -254,7 +264,7 @@ const CommitsAndReviewTab = props => {
       )}
     </div>
   );
-};
+});
 
 export const UnconnectedCommitsAndReviewTab = CommitsAndReviewTab;
 export default connect(
@@ -277,7 +287,9 @@ export default connect(
       dispatch(setIsReadOnlyWorkspace(isReadOnly)),
     setHasOpenCodeReview: hasOpenCodeReview =>
       dispatch(setHasOpenCodeReview(hasOpenCodeReview))
-  })
+  }),
+  null,
+  {forwardRef: true}
 )(CommitsAndReviewTab);
 
 CommitsAndReviewTab.propTypes = {

@@ -37,3 +37,12 @@ export const translatedCourseOfferingDeviceCompatibilityLevels = {
   not_recommended: i18n.courseOfferingDeviceCompatibilityLevelNotRecommended(),
   incompatible: i18n.courseOfferingDeviceCompatibilityLevelIncompatible()
 };
+
+export const translatedCourseOfferingDurations = {
+  school_year: i18n.schoolYear(),
+  semester: i18n.semester(),
+  quarter: i18n.quarter(),
+  month: i18n.month(),
+  week: i18n.week(),
+  lesson: i18n.lesson()
+};

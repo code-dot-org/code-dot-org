@@ -135,7 +135,7 @@ export default connect(
     appendLog: actions.appendLog
   },
   null,
-  {withRef: true}
+  {forwardRef: true}
 )(
   class DebugConsole extends React.Component {
     static propTypes = {
@@ -187,9 +187,10 @@ export default connect(
                 ? `(${input})`
                 : input
             );
-            result = this.props.jsInterpreter.interpreter.marshalInterpreterToNative(
-              result
-            );
+            result =
+              this.props.jsInterpreter.interpreter.marshalInterpreterToNative(
+                result
+              );
             this.appendLog({
               output: result,
               undefinedInput: input === 'undefined' ? true : false

@@ -2,8 +2,35 @@
 pl:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: przesuwanie NESW za pomocą klawiszy strzałek
+      AmysBlocks_addTarget:
+        text: "{TARGET} {OPT} {SPRITE} "
+        options:
+          OPT:
+            '"follows"': następuje
+            '"avoids"': unika
+      AmysBlocks_goldilocks:
+        text: |2-
+           jeśli {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': za dużo
+            '"just right"': w sam raz
+            '"too little"': za mało
+      AmysBlocks_goldilocksElse:
+        text: |2-
+           jeśli za dużo{SPRITE}
+          {STATEMENT}w przeciwnym razie jeśli w sam raz
+          {STATEMENT3}w przeciwnym razie za mało
+          {STATEMENT2}
+      AmysBlocks_makeNumSprites:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki {LOCATION}
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): przenoszenie NSEW za pomocą
+              klawiszy strzałek
       AmysBlocks_setPromptWithChoices:
         text: poproś użytkownika {QUESTION} o zmienne {VAR} z wyborami {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -1100,6 +1127,8 @@ pl:
         text: unikając celów
       gamelab_beginCollectingData:
         text: rozpocznij zbierać dane {BREAK} wartości {VALUE} z etykietami {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} odbija się od {TARGET}"
       gamelab_changePropBy:
@@ -1170,6 +1199,8 @@ pl:
         text: idąc za celami
       gamelab_getAllSprites:
         text: wszystkie duszki
+      gamelab_getCostume:
+        text: duszki z kostiumem {SPRITE}
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1298,6 +1329,19 @@ pl:
             '"z"': z
       gamelab_layoutGrid:
         text: układ duszków jako siatka
+      gamelab_layoutSprites:
+        text: formacja {GROUP} jako {FORMAT}
+        options:
+          FORMAT:
+            '"border"': brzeg
+            '"circle"': koło
+            '"grid"': siatka
+            '"top"': górny wiersz
+            '"row"': wiersz
+            '"bottom"': dolny wiersz
+            '"left"': lewa kolumna
+            '"column"': kolumna
+            '"right"': prawa kolumna
       gamelab_locationAt:
         text: 'pozycja x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1324,8 +1368,23 @@ pl:
             '"spiral"': spirala
       gamelab_makeNewSpriteAnon:
         text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        text: zrób {N} nową {GROUP} w {FORMAT}
+        options:
+          FORMAT:
+            '"border"': brzeg
+            '"circle"': koło
+            '"grid"': siatka
+            '"top"': górny wiersz
+            '"row"': wiersz
+            '"bottom"': dolny wiersz
+            '"left"': lewa kolumna
+            '"column"': kolumna
+            '"right"': prawa kolumna
       gamelab_makeNumSprites:
         text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
+      gamelab_makeNumSpritesNear:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
       gamelab_makeProjectile:
         text: |-
           utworzyć pocisk
@@ -1737,6 +1796,20 @@ pl:
         text: x współrzędna {SPRITE}
       gamelab_yLocationOf:
         text: współrzędna y {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} skocz do {LOCATION}"
+      KatiesBlocks_makeNumSpritesNear:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
+      KatiesBlocks_spriteBirdSay:
+        text: "{SPRITE} mówi {SPEECH}"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': Mój dziób
+              jest spiczasty i silny, aby znaleźć owady w korze drzewa.
+            '"I have a beak like a scoop to catch fish."': Mam dziób jak czerpak do
+              łowienia ryb.
+      KatiesBlocks_tumbling:
+        text: gimnastykowanie się
       Mikelab_addBehaviorSimple:
         text: duszek {SPRITE} rozpoczyna {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2398,8 +2471,6 @@ pl:
         text: skręć w lewo
       RyanLab_turnRight:
         text: skręć w prawo
-      SpriteLab2Beta_spriteSay:
-        text: duszek {SPRITE} mówi {TEXT} przez {SECONDS} sekund
       Vector_createSpriteWith:
         text: |-
           utwórz duszka
@@ -2519,6 +2590,35 @@ pl:
             '"quarantining"': poddaje się kwarantannie, gdy jest chory
             '"avoiding"': dystans społeczny
             '"none"': nie ruszać się
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): obracanie się w prawo
+            new Behavior(spinning_left, []): obracanie się w lewo
+            new Behavior(fluttering, []): trzepotanie
+            new Behavior(jittering, []): trzęsienie się
+            new Behavior(wobbling, []): chybotanie
+            new Behavior(wandering, []): wędrowanie
+            new Behavior(patrolling, []): patrolowanie
+      adaptations_makeNumSpritesNear:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
+      adaptations_spriteBirdSay:
+        text: "{SPRITE} mówi {SPEECH}"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': Mój dziób
+              jest spiczasty i silny, aby znaleźć owady w korze drzewa.
+            '"I have a beak like a scoop to catch fish."': Mam dziób jak czerpak do
+              łowienia ryb.
+      adaptations_startFollowing:
+        text: "{SPRITE} zaczyna podążać {TARGET}"
+      adaptations_toggleBehaviorSimple:
+        text: duszek {SPRITE} {TOGGLE} {BEHAVIOR}
+        options:
+          TOGGLE:
+            '"begins"': zaczyna się
+            '"stops"': zatrzymuje się
       binary_drawBin:
         text: narysuj binarny {BIN}
       binary_drawBinScreen:
@@ -2661,6 +2761,19 @@ pl:
           DIR:
             right: w prawo ↻
             left: w lewo ↺
+      ecosystems_catchMe:
+        text: złap {THIS}
+      ecosystems_eat:
+        text: jedz {THIS}
+      ecosystems_goldilocks:
+        text: |2-
+           jeśli {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': za dużo
+            '"just right"': w sam raz
+            '"too little"': za mało
       storylab_clearHeadings:
         text: wyczyść nagłówki
       storylab_setForegroundEffect2:
@@ -2679,7 +2792,3 @@ pl:
         text: monit użytkownika {QUESTION} o zmienną {VAR} z wyborem {A}
       storylab_setSubheading:
         text: ustaw podtytuł {SUBHEADING}
-      validation_validatedBackground:
-        text: ustaw tło na {IMG}
-      validation_validatedSound:
-        text: PLAYSound {SOUND}

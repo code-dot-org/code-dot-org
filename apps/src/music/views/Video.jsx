@@ -14,7 +14,9 @@ function useWindowSize() {
   const [size, setSize] = useState([0, 0]);
   useLayoutEffect(() => {
     function updateSize() {
-      setSize([window.innerWidth, window.innerHeight]);
+      const width = document.documentElement.clientWidth;
+      const height = document.documentElement.clientHeight;
+      setSize([width, height]);
     }
     window.addEventListener('resize', updateSize);
     updateSize();
@@ -62,7 +64,7 @@ const Video = ({id, onClose}) => {
             width="100%"
             height="100%"
             style={{border: 'none'}}
-            src="https://www.youtube-nocookie.com/embed/qYZF6oIZtfc"
+            src="https://www.youtube-nocookie.com/embed/ab2SBrfkKXU?rel=0"
             title=""
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen

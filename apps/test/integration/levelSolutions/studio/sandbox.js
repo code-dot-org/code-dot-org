@@ -14,11 +14,11 @@ module.exports = {
     {
       description: 'Expected solution.',
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // room to add tests here
 
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 100);
       },
@@ -82,9 +82,9 @@ module.exports = {
         '   </next>' +
         ' </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 1000);
       },
@@ -142,12 +142,13 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
-        tickWrapper.runOnAppTick(Studio, 5, function() {
+      runBeforeClick: function (assert) {
+        tickWrapper.runOnAppTick(Studio, 5, function () {
           assert(Studio.projectiles.length === 1);
           assert(Studio.projectiles[0].dir === Direction.EAST);
-          var proj = document.getElementById('studioanimation_clippath_20')
-            .nextSibling;
+          var proj = document.getElementById(
+            'studioanimation_clippath_20'
+          ).nextSibling;
           assert(
             proj
               .getAttribute('xlink:href')
@@ -160,11 +161,11 @@ module.exports = {
           );
         });
         // our fireball should collide at tick 24, so by 25 we should be finished
-        tickWrapper.runOnAppTick(Studio, 25, function() {
+        tickWrapper.runOnAppTick(Studio, 25, function () {
           assert(Studio.projectiles[0].dir === Direction.WEST);
         });
         // we should have hit actor 1 and disappeared
-        tickWrapper.runOnAppTick(Studio, 50, function() {
+        tickWrapper.runOnAppTick(Studio, 50, function () {
           assert(Studio.projectiles.length === 0);
           Studio.onPuzzleComplete();
         });
@@ -223,17 +224,17 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
-        tickWrapper.runOnAppTick(Studio, 5, function() {
+      runBeforeClick: function (assert) {
+        tickWrapper.runOnAppTick(Studio, 5, function () {
           assert(Studio.projectiles.length === 1);
           assert(Studio.projectiles[0].dir === Direction.EAST);
         });
         // our fireball should collide at tick 24, so by 25 we should be finished
-        tickWrapper.runOnAppTick(Studio, 25, function() {
+        tickWrapper.runOnAppTick(Studio, 25, function () {
           assert(Studio.projectiles[0].dir === Direction.WEST);
         });
         // we should have hit actor 1 and started east again...
-        tickWrapper.runOnAppTick(Studio, 50, function() {
+        tickWrapper.runOnAppTick(Studio, 50, function () {
           assert(Studio.projectiles[0].dir === Direction.EAST);
           Studio.onPuzzleComplete();
         });
@@ -298,9 +299,9 @@ module.exports = {
         '   </next>' +
         ' </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 1000);
       },
@@ -344,9 +345,9 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // our fireball should collide at tick 24, so by 25 we should be finished
-        tickWrapper.runOnAppTick(Studio, 25, function() {
+        tickWrapper.runOnAppTick(Studio, 25, function () {
           assert(Studio.playerScore === 1, 'Scored a point after colliding');
           Studio.onPuzzleComplete();
         });
@@ -384,8 +385,8 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
-        tickWrapper.runOnAppTick(Studio, 5, function() {
+      runBeforeClick: function (assert) {
+        tickWrapper.runOnAppTick(Studio, 5, function () {
           assert(
             Studio.projectiles.length === 0,
             'No projectile for hidden sprite'
@@ -433,13 +434,13 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         assert(Studio.sprite[0].visible === false, 'Actor 1 starts out hidden');
         var visibility = Studio.sprite[0]
           .getLegacyElement()
           .getAttribute('visibility');
         assert(visibility === 'hidden', 'Actor 1 html element is not visible');
-        tickWrapper.runOnAppTick(Studio, 50, function() {
+        tickWrapper.runOnAppTick(Studio, 50, function () {
           assert(Studio.sprite[0].x === 250, 'Actor 1 finished moving');
           assert(Studio.sprite[1].x === 250, 'Actor 2 is in the same place');
           assert(
@@ -520,12 +521,12 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
-        tickWrapper.runOnAppTick(Studio, 22, function() {
+      runBeforeClick: function (assert) {
+        tickWrapper.runOnAppTick(Studio, 22, function () {
           assert(Studio.playerScore === 1, 'score incremented');
           assert(Studio.sayComplete === 0, 'nothing was said yet');
         });
-        tickWrapper.runOnAppTick(Studio, 200, function() {
+        tickWrapper.runOnAppTick(Studio, 200, function () {
           assert(Studio.playerScore === 2, 'score incremented again');
           assert(Studio.sayComplete === 1, 'something was said');
           Studio.onPuzzleComplete();
@@ -589,8 +590,8 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
-        tickWrapper.runOnAppTick(Studio, 22, function() {
+      runBeforeClick: function (assert) {
+        tickWrapper.runOnAppTick(Studio, 22, function () {
           assert(Studio.playerScore === 2, 'score incremented');
           Studio.onPuzzleComplete();
         });
@@ -647,12 +648,12 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
-        tickWrapper.runOnAppTick(Studio, 22, function() {
+      runBeforeClick: function (assert) {
+        tickWrapper.runOnAppTick(Studio, 22, function () {
           assert(Studio.playerScore === 1, 'score incremented');
           assert(Studio.sayComplete === 0, 'nothing was said yet');
         });
-        tickWrapper.runOnAppTick(Studio, 180, function() {
+        tickWrapper.runOnAppTick(Studio, 180, function () {
           assert(Studio.playerScore === 2, 'score incremented again');
           assert(Studio.sayComplete === 1, 'something was said');
           Studio.onPuzzleComplete();
@@ -715,12 +716,12 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
-        tickWrapper.runOnAppTick(Studio, 24, function() {
+      runBeforeClick: function (assert) {
+        tickWrapper.runOnAppTick(Studio, 24, function () {
           assert(Studio.playerScore === 1, 'score incremented');
           assert(Studio.sayComplete === 0, 'nothing was said yet');
         });
-        tickWrapper.runOnAppTick(Studio, 130, function() {
+        tickWrapper.runOnAppTick(Studio, 130, function () {
           assert(Studio.playerScore === 2, 'score incremented again');
           assert(Studio.sayComplete === 1, 'something was said');
           Studio.onPuzzleComplete();
@@ -773,19 +774,19 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
-        tickWrapper.runOnAppTick(Studio, 19, function() {
+      runBeforeClick: function (assert) {
+        tickWrapper.runOnAppTick(Studio, 19, function () {
           assert(Studio.playerScore === 1, 'one point for fireball collision');
         });
-        tickWrapper.runOnAppTick(Studio, 38, function() {
+        tickWrapper.runOnAppTick(Studio, 38, function () {
           assert(Studio.playerScore === 2, 'second point for actor collision');
         });
-        tickWrapper.runOnAppTick(Studio, 66, function() {
+        tickWrapper.runOnAppTick(Studio, 66, function () {
           assert(Studio.playerScore === 3, 'third point for edge collision');
           Studio.onPuzzleComplete();
         });
 
-        tickWrapper.runOnAppTick(Studio, 100, function() {
+        tickWrapper.runOnAppTick(Studio, 100, function () {
           Studio.onPuzzleComplete();
         });
       },
@@ -817,8 +818,8 @@ module.exports = {
           )
         ) +
         '</xml>',
-      runBeforeClick: function(assert) {
-        tickWrapper.runOnAppTick(Studio, 5, function() {
+      runBeforeClick: function (assert) {
+        tickWrapper.runOnAppTick(Studio, 5, function () {
           var sprite = Studio.sprite[0].getLegacyElement();
           var vis = sprite.getAttribute('visibility');
           assert(
@@ -830,7 +831,7 @@ module.exports = {
           var background = document.getElementById('background');
           assert(background.getAttribute('xlink:href') !== undefined);
         });
-        tickWrapper.runOnAppTick(Studio, 6, function() {
+        tickWrapper.runOnAppTick(Studio, 6, function () {
           Studio.onPuzzleComplete();
         });
       },
@@ -872,7 +873,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EMPTY_FUNCTION_NAME
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Studio.message, commonMsg.unnamedFunction());
         return true;
       }
@@ -908,8 +909,8 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
-        tickWrapper.runOnAppTick(Studio, 50, function() {
+      runBeforeClick: function (assert) {
+        tickWrapper.runOnAppTick(Studio, 50, function () {
           assert(Studio.sprite[0].y === 50, 'Actor 1 moved by score amount');
           assert(Studio.playerScore === 50, 'Score set to 50');
           Studio.onPuzzleComplete();

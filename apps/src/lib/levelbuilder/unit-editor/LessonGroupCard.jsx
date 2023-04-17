@@ -225,11 +225,8 @@ class LessonGroupCard extends Component {
   };
 
   render() {
-    const {
-      lessonGroup,
-      targetLessonGroupPos,
-      allowMajorCurriculumChanges
-    } = this.props;
+    const {lessonGroup, targetLessonGroupPos, allowMajorCurriculumChanges} =
+      this.props;
     const {draggedLessonPos} = this.state;
     const isTargetLessonGroup = targetLessonGroupPos === lessonGroup.position;
     return (
@@ -293,9 +290,8 @@ class LessonGroupCard extends Component {
           <LessonToken
             ref={lessonToken => {
               if (lessonToken) {
-                const metrics = ReactDOM.findDOMNode(
-                  lessonToken
-                ).getBoundingClientRect();
+                const metrics =
+                  ReactDOM.findDOMNode(lessonToken).getBoundingClientRect();
                 this.metrics[lesson.position] = metrics;
               }
             }}
@@ -413,5 +409,7 @@ export default connect(
     setLessonGroup,
     reorderLesson,
     updateLessonGroupField
-  }
+  },
+  null,
+  {forwardRef: true}
 )(LessonGroupCard);

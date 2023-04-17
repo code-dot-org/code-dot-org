@@ -177,15 +177,11 @@
       "comment": null
     },
     "show_debug_watch": "true",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "free_play": "false",
@@ -200,14 +196,19 @@
     "contained_level_names": [
       "CSD_U3L24 Predict L1"
     ],
-    "start_blocks": "drawBackground();\r\ndrawPlanet();\r\ndrawPlanet();\r\n\r\n\r\nfunction drawBackground() {\r\n  noStroke();\r\n  background(\"black\");\r\n  drawStar();\r\n  drawStar();\r\n  drawStar();\r\n  drawStar();\r\n  drawStar();\r\n}\r\n\r\n\r\nfunction drawStar() {\r\n  fill(\"yellow\");\r\n  ellipse(random(0,400),random(0,400),5,5);\r\n}\r\n\r\n\r\nfunction drawPlanet() {\r\n  noStroke();\r\n  fill(rgb(random(100,255), random(100,255), random(100,255)));\r\n  ellipse(random(10, 350), random(10,350), 50, 50);\r\n}\r\n"
+    "start_blocks": "drawBackground();\r\ndrawPlanet();\r\ndrawPlanet();\r\n\r\n\r\nfunction drawBackground() {\r\n  noStroke();\r\n  background(\"black\");\r\n  drawStar();\r\n  drawStar();\r\n  drawStar();\r\n  drawStar();\r\n  drawStar();\r\n}\r\n\r\n\r\nfunction drawStar() {\r\n  fill(\"yellow\");\r\n  ellipse(random(0,400),random(0,400),5,5);\r\n}\r\n\r\n\r\nfunction drawPlanet() {\r\n  noStroke();\r\n  fill(rgb(random(100,255), random(100,255), random(100,255)));\r\n  ellipse(random(10, 350), random(10,350), 50, 50);\r\n}\r\n",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "video_key": "csd_gamelab_functions"
   },
   "game_id": 50,
   "published": true,
   "created_at": "2023-02-22T16:46:42.000Z",
   "level_num": "custom",
   "user_id": 18602,
-  "audit_log": "[{\"changed_at\":\"2023-02-22 16:46:52 +0000\",\"changed\":[\"validation_enabled\",\"code_functions\",\"show_debug_watch\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-22 18:27:47 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-22 18:48:35 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-22 16:46:52 +0000\",\"changed\":[\"validation_enabled\",\"code_functions\",\"show_debug_watch\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-22 18:27:47 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-22 18:48:35 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-15 00:20:55 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

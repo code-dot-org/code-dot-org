@@ -494,9 +494,8 @@ class ActivitySectionCard extends Component {
               <LevelToken
                 ref={levelToken => {
                   if (levelToken) {
-                    const metrics = ReactDOM.findDOMNode(
-                      levelToken
-                    ).getBoundingClientRect();
+                    const metrics =
+                      ReactDOM.findDOMNode(levelToken).getBoundingClientRect();
                     this.levelTokenMetrics[scriptLevel.position] = metrics;
                   }
                 }}
@@ -625,5 +624,7 @@ export default connect(
     moveActivitySection,
     removeActivitySection,
     updateActivitySectionField
-  }
+  },
+  null,
+  {forwardRef: true}
 )(ActivitySectionCard);

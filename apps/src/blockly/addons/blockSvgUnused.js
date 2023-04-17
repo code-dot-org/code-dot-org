@@ -55,7 +55,7 @@ export default class BlockSvgUnused extends BlockSvgFrame {
       this.frameHelp_,
       'mousedown',
       this,
-      function(e) {
+      function (e) {
         if (Blockly.utils.isRightButton(e)) {
           // Right-click.
           return;

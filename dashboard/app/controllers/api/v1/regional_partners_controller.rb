@@ -77,13 +77,11 @@ class Api::V1::RegionalPartnersController < ApplicationController
     )
   end
 
-  private
-
   # Get the regional partner's cohort capacity for a specific role
   # @param role (ex: 'csd_teachers' or 'csf_facilitators')
   # @param regional_partner_value is 'none', 'all', or a regional partner's id
   # @return the partner's capacity for that role if an id is given, otherwise nil
-  def get_partner_cohort_capacity(regional_partner_value, role)
+  private def get_partner_cohort_capacity(regional_partner_value, role)
     unless ['none', 'all'].include? regional_partner_value
       partner_id = regional_partner_value ? regional_partner_value : current_user.regional_partners.first
       regional_partner = RegionalPartner.find_by(id: partner_id)
@@ -104,7 +102,7 @@ class Api::V1::RegionalPartnersController < ApplicationController
   # @return [Integer, nil] nil if regional_partner_id is invalid, otherwise returns a count
   # @see Api::V1::Pd::ApplicationsController:ROLES
   #
-  def get_partner_enrollment_count(regional_partner_id, role)
+  private def get_partner_enrollment_count(regional_partner_id, role)
     partner = RegionalPartner.find_by_id(regional_partner_id)
     return unless partner
 

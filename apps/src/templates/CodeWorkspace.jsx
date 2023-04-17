@@ -50,7 +50,7 @@ class CodeWorkspace extends React.Component {
     // update styles. However, we do want to prevent property changes that would
     // change the DOM structure.
     Object.keys(nextProps).forEach(
-      function(key) {
+      function (key) {
         // isRunning and style only affect style, and can be updated
         // workspaceAlert is involved in displaying or closing workspace alert
         // therefore this key can be updated
@@ -300,7 +300,10 @@ const styles = {
     fontSize: 18
   },
   runningIcon: {
-    color: color.dark_charcoal
+    color: color.neutral_white,
+    ':hover': {
+      color: color.neutral_dark20
+    }
   },
   oldVersionWarning: {
     zIndex: 99,
@@ -333,11 +336,11 @@ const styles = {
     border: 'none',
     lineHeight: styleConstants['workspace-headers-height'] + 'px',
     backgroundColor: 'transparent',
-    color: color.lighter_purple,
+    color: color.neutral_white,
     fontSize: 18,
     ':hover': {
       cursor: 'pointer',
-      color: color.white,
+      color: color.neutral_dark20,
       boxShadow: 'none'
     }
   },
@@ -363,8 +366,8 @@ export default connect(
       state.pageConstants.showDebugConsole
     ),
     pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
-    showProjectTemplateWorkspaceIcon: !!state.pageConstants
-      .showProjectTemplateWorkspaceIcon,
+    showProjectTemplateWorkspaceIcon:
+      !!state.pageConstants.showProjectTemplateWorkspaceIcon,
     isMinecraft: !!state.pageConstants.isMinecraft,
     runModeIndicators: shouldUseRunModeIndicators(state),
     showMakerToggle: !!state.pageConstants.showMakerToggle,

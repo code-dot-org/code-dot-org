@@ -86,11 +86,14 @@
         "csd-2022/patterns-overview": {
           "display_name": "개요"
         },
-        "csd-2022/physical-input": {
-          "display_name": "물리적 인풋"
-        },
         "csd-2022/playing-notes": {
           "display_name": "플레잉 노트 "
+        },
+        "csd-2022/problem-solving-process": {
+          "display_name": "문제 해결 과정"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "문제 해결 과정"
         },
         "csd-2022/selecting-a-label": {
           "display_name": "라벨 선택"

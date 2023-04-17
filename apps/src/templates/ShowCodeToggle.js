@@ -8,8 +8,6 @@ import msg from '@cdo/locale';
 import UserPreferences from '../lib/util/UserPreferences';
 import project from '../code-studio/initApp/project';
 
-const BLOCKS_GLYPH_LIGHT =
-  'data:image/gif;base64,R0lGODlhEAAQAIAAAP///////yH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==';
 const BLOCKS_GLYPH_DARK =
   'data:image/gif;base64,R0lGODlhEAAQAIAAAE1XX01XXyH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==';
 
@@ -45,12 +43,13 @@ class ShowCodeButton extends Component {
       ...styles.blocksGlyph,
       ...(this.props.isRtl && styles.blocksGlyphRtl)
     };
+    const iconImageStyle = {
+      ...styles.iconImage,
+      ...(this.props.isRtl && styles.blocksGlyphImageRtl)
+    };
     const blocksGlyphIcon = (
       <i style={blockGlyphIconStyle}>
-        <img
-          src={this.props.hasFocus ? BLOCKS_GLYPH_LIGHT : BLOCKS_GLYPH_DARK}
-          style={this.props.isRtl ? styles.blocksGlyphImageRtl : {}}
-        />
+        <img src={BLOCKS_GLYPH_DARK} style={iconImageStyle} />
       </i>
     );
     return (
@@ -196,6 +195,9 @@ const styles = {
     paddingRight: 8,
     fontSize: 15,
     fontWeight: 'bold'
+  },
+  iconImage: {
+    verticalAlign: 'text-bottom'
   },
   blocksGlyphRtl: {
     paddingRight: 0,

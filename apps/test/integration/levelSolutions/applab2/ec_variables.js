@@ -14,9 +14,9 @@ module.exports = {
       xml:
         'var str = "Hello World";\n' +
         'textInput("id", str.substring(1, 5));\n',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert.equal(document.getElementById('id').value, 'ello');
           Applab.onPuzzleComplete();
         });
@@ -32,9 +32,9 @@ module.exports = {
       xml:
         'var str = "Hello World";\n' +
         'textInput("id", str.indexOf("World"));\n',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert.equal(document.getElementById('id').value, '6');
           Applab.onPuzzleComplete();
         });
@@ -51,9 +51,9 @@ module.exports = {
         'var str = "Hello World";\n' +
         'textInput("id1", str.includes("World"));\n' +
         'textInput("id2", str.includes("NOPE"));\n',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert.equal(document.getElementById('id1').value, 'true');
           assert.equal(document.getElementById('id2').value, 'false');
           Applab.onPuzzleComplete();
@@ -68,9 +68,9 @@ module.exports = {
       description: 'str.length',
       editCode: true,
       xml: 'var str = "Hello World";\n' + 'textInput("id", str.length);\n',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert.equal(document.getElementById('id').value, '11');
           Applab.onPuzzleComplete();
         });
@@ -87,9 +87,9 @@ module.exports = {
         'var str = "Hello World";\n' +
         'textInput("id1", str.toUpperCase());\n' +
         'textInput("id2", str.toLowerCase());\n',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert.equal(document.getElementById('id1').value, 'HELLO WORLD');
           assert.equal(document.getElementById('id2').value, 'hello world');
           Applab.onPuzzleComplete();

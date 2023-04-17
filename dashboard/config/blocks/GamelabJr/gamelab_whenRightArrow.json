@@ -6,6 +6,7 @@
       1,
       0.74
     ],
+    "style": "event_blocks",
     "func": "whenRightArrow",
     "blockText": "when right arrow pressed",
     "args": [

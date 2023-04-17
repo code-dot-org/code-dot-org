@@ -22,7 +22,7 @@ commonStyles.purpleHeader = {
 
 commonStyles.purpleHeaderUnfocused = {
   backgroundColor: color.lighter_purple,
-  color: color.dark_charcoal
+  color: color.neutral_white
 };
 
 commonStyles.teacherBlueHeader = {

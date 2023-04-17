@@ -72,8 +72,8 @@ export default class ProgressTableContentView extends React.Component {
     const lesson = this.props.scriptData.lessons[columnIndex];
     const includeArrow =
       this.props.includeHeaderArrows &&
-      (lessonHasLevels(lesson) &&
-        (lesson.levels.length > 1 || lesson.levels[0].isUnplugged));
+      lessonHasLevels(lesson) &&
+      (lesson.levels.length > 1 || lesson.levels[0].isUnplugged);
     return (
       <div
         style={styles.headerContainer}

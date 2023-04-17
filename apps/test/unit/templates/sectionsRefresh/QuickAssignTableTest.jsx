@@ -10,30 +10,37 @@ import {
 } from './CourseOfferingsTestData';
 import i18n from '@cdo/locale';
 
+const DEFAULT_PROPS = {
+  marketingAudience: MARKETING_AUDIENCE.HIGH,
+  courseOfferings: highSchoolCourseOfferings,
+  setSelectedCourseOffering: () => {},
+  updateCourse: () => {},
+  sectionCourse: {}
+};
+
+const setUpShallow = (overrideProps = {}) => {
+  const props = {...DEFAULT_PROPS, ...overrideProps};
+  return shallow(<QuickAssignTable {...props} />);
+};
+
+const setUpMount = (overrideProps = {}) => {
+  const props = {...DEFAULT_PROPS, ...overrideProps};
+  return mount(<QuickAssignTable {...props} />);
+};
+
 describe('QuickAssignTable', () => {
   it('renders Course as the first and only table/column header', () => {
-    const wrapper = shallow(
-      <QuickAssignTable
-        marketingAudience={MARKETING_AUDIENCE.ELEMENTARY}
-        courseOfferings={elementarySchoolCourseOffering}
-        updateCourse={() => {}}
-        sectionCourse={{}}
-      />
-    );
+    const wrapper = setUpShallow({
+      marketingAudience: MARKETING_AUDIENCE.ELEMENTARY,
+      courseOfferings: elementarySchoolCourseOffering
+    });
 
     expect(wrapper.find('table').length).to.equal(1);
     expect(wrapper.contains(i18n.courses())).to.be.true;
   });
 
   it('renders two tables with correct headers', () => {
-    const wrapper = shallow(
-      <QuickAssignTable
-        marketingAudience={MARKETING_AUDIENCE.HIGH}
-        courseOfferings={highSchoolCourseOfferings}
-        updateCourse={() => {}}
-        sectionCourse={{}}
-      />
-    );
+    const wrapper = setUpShallow();
     expect(wrapper.find('table').length).to.equal(2);
     expect(wrapper.contains(i18n.courses())).to.be.true;
     expect(wrapper.contains(i18n.standaloneUnits())).to.be.true;
@@ -41,14 +48,7 @@ describe('QuickAssignTable', () => {
 
   it('calls updateSection when a radio button is pressed', () => {
     const updateSpy = sinon.spy();
-    const wrapper = mount(
-      <QuickAssignTable
-        marketingAudience={MARKETING_AUDIENCE.HIGH}
-        courseOfferings={highSchoolCourseOfferings}
-        updateCourse={updateSpy}
-        sectionCourse={{}}
-      />
-    );
+    const wrapper = setUpMount({updateCourse: updateSpy});
 
     const radio = wrapper.find("input[value='Computer Science A']");
     expect(updateSpy).not.to.have.been.called;
@@ -59,14 +59,9 @@ describe('QuickAssignTable', () => {
   });
 
   it('automatically checks correct radio button if course is already assigned', () => {
-    const wrapper = mount(
-      <QuickAssignTable
-        marketingAudience={MARKETING_AUDIENCE.HIGH}
-        courseOfferings={highSchoolCourseOfferings}
-        updateCourse={() => {}}
-        sectionCourse={{displayName: 'Computer Science A'}}
-      />
-    );
+    const wrapper = setUpMount({
+      sectionCourse: {displayName: 'Computer Science A'}
+    });
 
     const radio = wrapper.find("input[value='Computer Science A']");
     expect(radio.props().checked).to.be.true;
