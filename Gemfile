@@ -337,7 +337,7 @@ gem 'datapackage'
 
 gem 'ruby-progressbar'
 
-gem 'pry'
+gem 'pry', '~> 0.14.0'
 
 # Google's Compact Language Detector
 gem 'cld'
