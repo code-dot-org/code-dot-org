@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-24 09:47:33 UTC",
+    "serialized_at": "2023-04-06 23:37:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5341,7 +5341,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csd5-2023/resources",
+      "url": "/s/csd1-2023/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -5352,7 +5352,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csd5-2023/standards",
+      "url": "/s/csd1-2023/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -5363,7 +5363,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csd5-2023/vocab",
+      "url": "/s/csd1-2023/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -6762,9 +6762,6 @@
         "resource.key": "structuring_data_2021"
       }
     }
-
-  ],
-  "lessons_resources": [
 
   ],
   "scripts_resources": [

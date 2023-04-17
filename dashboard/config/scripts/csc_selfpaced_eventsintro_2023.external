@@ -3,9 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introducing to Events
+# Introducing Events
 
-##### Next, you will be introduced to the CS concept of **events**, an action that causes something to happen. 
+##### The previous level was a preview of **events**.  When the two sprites were each clicked, each sprite said something.  Events in computer science are actions that cause something to happen.  
 
 ## You will:
 

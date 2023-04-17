@@ -36,7 +36,7 @@ class Match < DSLDefined
       description 'description here'
       question 'Question'
       answer 'Answer 1'
-      allow_multiple_attempts nil
+      allow_multiple_attempts false
     RUBY
   end
 

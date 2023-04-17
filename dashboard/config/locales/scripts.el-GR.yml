@@ -190,6 +190,10 @@ el:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           student_description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Μουσική
         algebraPD2b:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
@@ -2026,6 +2030,10 @@ el:
           lessons:
             lesson-3:
               name: Βρόχοι Για
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
         hello-world-space-2022:
           title: 'Γεια σας κόσμο: Διάστημα'
         hello-world-soccer-2022:
@@ -2068,6 +2076,10 @@ el:
           lesson_groups:
             csp_libraries:
               display_name: Βιβλιοθήκες
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Αξιολογήσεις
         tess-testing-problem-solving-2023:
           title: Επίλυση Προβλημάτων
         testing-focus-on-creativity1:

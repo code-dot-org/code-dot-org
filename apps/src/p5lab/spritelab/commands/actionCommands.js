@@ -1,4 +1,5 @@
 import {commands as behaviorCommands} from './behaviorCommands';
+import {layoutSpriteGroup} from '../../layoutUtils';
 
 function move(coreLibrary, spriteArg, distance) {
   let sprites = coreLibrary.getSpriteArray(spriteArg);
@@ -118,6 +119,11 @@ export const commands = {
       return false;
     }
     return sprites.every(sprite => sprite.getAnimationLabel() === costumeName);
+  },
+
+  layoutSprites(costume, layout) {
+    const group = this.getSpriteArray({costume});
+    layoutSpriteGroup(group, layout, this.p5);
   },
 
   isKeyPressed(key) {

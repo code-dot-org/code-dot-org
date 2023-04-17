@@ -700,7 +700,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should load file contents when editing a dsl defined level" do
-    level_path = 'config/scripts/test_demo_level.external'
+    level_path = "#{Rails.root}/config/scripts/test_demo_level.external"
     contents = File.read(level_path)
     data, _ = External.parse(contents, level_path)
     External.setup data
@@ -713,7 +713,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should load encrypted file contents when editing a dsl defined level with the wrong encryption key" do
-    level_path = 'config/scripts/test_external_markdown.external'
+    level_path = "#{Rails.root}/config/scripts/test_external_markdown.external"
     contents = File.read(level_path)
     data, _ = External.parse(contents, level_path)
     External.setup data

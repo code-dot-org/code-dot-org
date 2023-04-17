@@ -71,7 +71,7 @@ export const styles = {
 };
 
 // Cell formatters.
-const thumbnailFormatter = function(thumbnailUrl, {rowData}) {
+const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/`;
   thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
   return (

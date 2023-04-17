@@ -87,7 +87,8 @@ const styles = {
   }
 };
 
-export const UnconnectedSubmissionStatusAssessmentsContainer = SubmissionStatusAssessmentsContainer;
+export const UnconnectedSubmissionStatusAssessmentsContainer =
+  SubmissionStatusAssessmentsContainer;
 
 export default connect(state => ({
   localeCode: state.locales.localeCode,

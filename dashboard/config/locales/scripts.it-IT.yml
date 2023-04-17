@@ -223,6 +223,9 @@ it:
             utente
           student_description: Tutte le tipologie di livello per il test dell'interfaccia
             utente
+          lessons:
+            lesson-49:
+              name: Musica
         algebraPD2b:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
@@ -2207,6 +2210,10 @@ it:
               display_name: 'Capitolo 2: Styling e CSS'
             cspSurvey:
               display_name: Sondaggio
+            csd2_1v2:
+              display_name: 'Capitolo 1: Creazione di pagine Web'
+            csd2_2v2:
+              display_name: 'Capitolo 2: Siti web multipagina'
         csd1-2020:
           lesson_groups:
             cspSurvey:
@@ -2619,24 +2626,95 @@ it:
               display_name: Sondaggio
             csd1_1:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+              big_questions: "-   Quali strategie e processi posso utilizzare per
+                diventare più efficace come risolutore di problemi?"
+              description: Questo capitolo guida gli studenti a sviluppare e adottare
+                un più formale processo di risoluzione dei problemi strutturato, riflettendo
+                sui problemi che hanno incontrato, sia in classe che nella vita quotidiana.
+                Nella risoluzione di una serie diversificata di problemi, come enigmi
+                logici, sfide ingegneristiche e nella pianificazione di un viaggio,
+                gli studenti imparano a identificare diverse tipologie di problemi,
+                a scomporre problemi di grandi dimensioni e a sviluppare le proprie
+                capacità personali di risoluzione dei problemi.
             csd1_2:
               display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+              big_questions: |-
+                -   In che modo i computer aiutano le persone a risolvere i problemi?
+                -   In che modo persone e computer affrontano i problemi in modo diverso?
+                -   Di cosa ha bisogno un computer da parte delle persone per risolvere i problemi in modo efficace?
+              description: Questo capitolo presenta i computer come macchine che risolvono
+                problemi relativi ai dati. Gli studenti iniziano creando una definizione
+                comune per un computer che si concentri sulla funzionalità anziché
+                sull'hardware specifico. Quindi esplorano i modi in cui i computer
+                affrontano i problemi. Per il loro progetto finale, gli studenti propongono
+                un'app che potrebbe essere utilizzata per risolvere un problema di
+                loro scelta.
             csd1_3:
               display_name: Lezioni alternative
+              description: 'Questo capitolo fornisce lezioni alternative per questa
+                unità.  '
         csd2-2021:
+          title: Sviluppo Web ('21-'22)
           description_short: "  Imparare a costruire il tuo sito web con Sviluppo
             Web."
           lesson_groups:
+            csd2_1v2:
+              display_name: 'Capitolo 1: Creazione di pagine Web'
+              big_questions: |-
+                -   Perché le persone creano siti Web?
+                -   In che modo il testo può comunicare contenuto, struttura e stile di una pagina web?
+                -   Come posso utilizzare in modo sicuro e appropriato i contenuti pubblicati su Internet?
+                -   Quali strategie posso utilizzare durante la programmazione per trovare e risolvere i problemi?
+              description: Gli studenti usano l'informatica come forma di espressione
+                personale mentre progettano e sviluppano pagine Web di base. Concentrandosi
+                sui tag, sulle parole chiave e sulla sintassi utilizzati per comunicare
+                le istruzioni al computer, gli studenti utilizzano l'HTML per strutturare
+                il contenuto di una pagina Web. Esplorano anche le implicazioni sulla
+                privacy e sulla proprietà intellettuale della pubblicazione dei propri
+                lavori online.
+            csd2_2v2:
+              display_name: 'Capitolo 2: Siti web multipagina'
+              big_questions: |-
+                -   Come possono essere utilizzati i siti Web per risolvere i problemi nel mondo?
+                -   Quali strategie possono utilizzare i gruppi di lavoro per lavorare meglio insieme?
+                -   Come faccio a sapere quali informazioni online possono essere considerate attendibili?
+              description: Gli studenti ampliano le loro idee sui siti Web oltre l'espressione
+                personale e iniziano a vederli come un modo per risolvere i problemi.
+                Gli studenti sfruttano le loro capacità collaborative e lavorano in
+                gruppo per creare siti web multipagina che risolvono un problema.
             cspSurvey:
               display_name: Sondaggio
         csd3-2021:
+          title: Animazioni e giochi interattivi ('21-'22)
           description_short: Impara a programmare animazioni, arte interattiva e giochi
             in Sviluppo Giochi.
           lesson_groups:
             csd3_1:
               display_name: 'Capitolo 1: Immagini e animazioni'
+              big_questions: |-
+                -   Cos'è un programma per computer?
+                -   Quali sono le caratteristiche principali della maggior parte dei linguaggi di programmazione?
+                -   In che modo la programmazione consente la creatività e l'espressione individuale?
+                -   Quali pratiche e strategie mi aiuteranno nella stesura dei programmi?
+              description: Gli studenti iniziano a programmare animazioni interattive
+                nell'ambiente Sviluppo giochi. Iniziano con forme semplici e oggetti
+                "personaggio", quindi usano i cicli per creare animazioni in stile
+                flipbook. Successivamente, imparano a usare i valori booleani e le
+                istruzioni condizionali per rispondere all'input dell'utente. Alla
+                fine del capitolo, gli studenti progettano e creano un'animazione
+                interattiva che possono condividere con chiunque.
             csd3_2:
               display_name: 'Capitolo 2: Costruzione di Giochi'
+              big_questions: |-
+                -   In che modo gli sviluppatori di software gestiscono la complessità e la scalabilità?
+                -   Come possono essere organizzati i programmi in modo che i problemi comuni debbano essere risolti solo una volta?
+                -   Come posso basarmi sulle soluzioni precedenti per creare comportamenti ancora più complessi?
+              description: In questo capitolo gli studenti combinano i costrutti appresi
+                nel primo capitolo per programmare movimenti e collisioni più complessi
+                nei loro personaggi. Man mano che creano programmi più complessi,
+                iniziano a utilizzare le funzioni per organizzare il codice. Alla
+                fine, gli studenti utilizzano un processo di progettazione per creare
+                un gioco originale.
             cspSurvey:
               display_name: Sondaggio
         csd4-2021:
@@ -3298,6 +3376,7 @@ it:
           title: 'Unità 5: organizzazione degli oggetti [Exemplars]'
         csd-post-survey-2021:
           name: csd-post-survey-2021
+          title: Sondaggio Post-corso di Alla Scoperta dell'Informatica
           description: Questa unità contiene il sondaggio post-corso CS Discoveries.
             Questa unità può essere assegnata dopo che gli studenti hanno completato
             la loro unità finale in CS Discoveries.
@@ -3893,6 +3972,10 @@ it:
               display_name: Lezioni alternative
         csd2-2022:
           lesson_groups:
+            csd2_1v2:
+              display_name: 'Capitolo 1: Creazione di pagine Web'
+            csd2_2v2:
+              display_name: 'Capitolo 2: Siti web multipagina'
             cspSurvey:
               display_name: Sondaggio
           description_short: "  Imparare a costruire il tuo sito web con Sviluppo
@@ -3935,6 +4018,7 @@ it:
             lessonGroup-4:
               display_name: Sondaggio
         csd-post-survey-2022:
+          title: Sondaggio Post-corso di Alla Scoperta dell'Informatica
           description: Questa unità contiene il sondaggio post-corso CS Discoveries.
             Questa unità può essere assegnata dopo che gli studenti hanno completato
             la loro unità finale in CS Discoveries.
@@ -4046,6 +4130,21 @@ it:
               display_name: Contenuto
             lessonGroup-4:
               display_name: Lezioni alternative
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Proprietà intellettuale
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-5:
+              display_name: Lezioni alternative
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-4:
+              display_name: Sondaggio
         hello-world-space-2022:
           title: Ciao mondo - Spazio
         hello-world-soccer-2022:
@@ -4056,6 +4155,12 @@ it:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             lessonGroup-3:
               display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+        csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Creazione di pagine Web'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Siti web multipagina'
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4161,6 +4266,10 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Sondaggio Post-corso
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Risultati dei test
         csp-playground:
           description_audience: Scrittori di curriculum
           description_short: Per allestire gli aggiornamenti nelle lezioni o nei livelli
@@ -4193,6 +4302,12 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Capitolo 1
+        testing-focus-on-creativity2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Creazione di pagine Web'
+            lessonGroup-4:
+              display_name: 'Capitolo 2: Siti web multipagina'
         pre-express-2023:
           lesson_groups:
             csf_sequencing:
@@ -4396,6 +4511,12 @@ it:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             lessonGroup-3:
               display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Creazione di pagine Web'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Siti web multipagina'
         interactive-games-animations-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4422,3 +4543,267 @@ it:
               display_name: Capitolo 1
             lessonGroup-4:
               display_name: Capitolo 2
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+        focus-on-creativity2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Creazione di pagine Web'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Siti web multipagina'
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Immagini e animazioni'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Costruzione di Giochi'
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Capitolo 2: Input Hardware'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Capitolo 2: Input Hardware'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduzione a Sviluppo App
+            lessonGroup-3:
+              display_name: Capitolo 1
+            lessonGroup-4:
+              display_name: Capitolo 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+        focus-on-design-with-purpose2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Creazione di pagine Web'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Siti web multipagina'
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Design a cura dell''Utente'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Prototipazione di App'
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Capitolo 2: Input Hardware'
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+        focus-on-coding2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Creazione di pagine Web'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Siti web multipagina'
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Immagini e animazioni'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Costruzione di Giochi'
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Capitolo 2: Input Hardware'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Design a cura dell''Utente'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Prototipazione di App'
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolo 1
+            lessonGroup-3:
+              display_name: Introduzione a Sviluppo App
+            lessonGroup-4:
+              display_name: Capitolo 2
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Input Hardware'
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ingressi e uscite
+        vpl-csd-ci-1:
+          title: 'Modulo 1: preparazione all''insegnamento della risoluzione dei problemi
+            e dell''informatica'
+          description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento sull'unità Risoluzione dei
+            problemi e Informatica di Code.org. \n\n**In questo modulo di apprendimento
+            professionale, imparerai a:**\n\n-   Riceverai un'introduzione alla Risoluzione
+            dei problemi e all'Informatica.\n-   Ti eserciterai con i concetti chiave
+            inclusi nell'unità.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo
+            suggerito:** 30 minuti"
+          student_description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento sull'unità Risoluzione dei
+            problemi e Informatica di Code.org. \n\n**In questo modulo di apprendimento
+            professionale, imparerai a:**\n\n-   Riceverai un'introduzione alla Risoluzione
+            dei problemi e all'Informatica.\n-   Ti eserciterai con i concetti chiave
+            inclusi nell'unità.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo
+            suggerito:** 30 minuti"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Insegnamento dello Sviluppo Web
+          title: 'Modulo 2: preparazione all''insegnamento dello Sviluppo Web'
+          description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento dell'unità Sviluppo Web di
+            Code.org. \n\n**In questo modulo di apprendimento professionale, imparerai
+            a:**\n\n-   Ottenere un'introduzione allo Sviluppo Web.\n-   Esercitarti
+            con i concetti chiave inclusi nell'unità.\n-   Impegnarti con il Web Lab.\n-
+            \  Scoprire la fine dei progetti dei capitoli.\n\n**Tempo stimato:** 90
+            minuti"
+          student_description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento dell'unità Sviluppo Web di
+            Code.org. \n\n**In questo modulo di apprendimento professionale, imparerai
+            a:**\n\n-   Ottenere un'introduzione allo Sviluppo Web.\n-   Esercitarti
+            con i concetti chiave inclusi nell'unità.\n-   Impegnarti con il Web Lab.\n-
+            \  Scoprire la fine dei progetti dei capitoli.\n\n**Tempo stimato:** 90
+            minuti"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparazione all'insegnamento di animazioni e giochi interattivi
+          title: 'Modulo 3: preparazione all''insegnamento di Animazioni e Giochi
+            interattivi'
+          description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per 'insegnamento dell'unità Animazioni e Giochi
+            interattivi di Code.org. \n\n**In questo modulo di apprendimento professionale,
+            imparerai a:**\n\n-   Ottenere un'introduzione su Animazioni e Giochi
+            interattivi.\n-   Esercitarti con i concetti chiave inclusi nell'unità.\n-
+            \  Impegnarti con il Web Lab.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo
+            stimato:** 120 minuti"
+          student_description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per 'insegnamento dell'unità Animazioni e Giochi
+            interattivi di Code.org. \n\n**In questo modulo di apprendimento professionale,
+            imparerai a:**\n\n-   Ottenere un'introduzione su Animazioni e Giochi
+            interattivi.\n-   Esercitarti con i concetti chiave inclusi nell'unità.\n-
+            \  Impegnarti con il Web Lab.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo
+            stimato:** 120 minuti"
+        vpl-csd-ci-4:
+          title: " Modulo 4: preparazione all'insegnamento del Processo di progettazione"
+          description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento dell'unità Processo di progettazione
+            di Code.org. \n\n**In questo modulo di apprendimento professionale, imparerai
+            a:**\n\n-   Ottenere un'introduzione su Il Processo di progettazione.\n-
+            \  Esercitarti con i concetti chiave inclusi nell'unità.\n-   Impegnarti
+            con il Web Lab.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo
+            stimato:** 90 minuti"
+          student_description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento dell'unità Processo di progettazione
+            di Code.org. \n\n**In questo modulo di apprendimento professionale, imparerai
+            a:**\n\n-   Ottenere un'introduzione su Il Processo di progettazione.\n-
+            \  Esercitarti con i concetti chiave inclusi nell'unità.\n-   Impegnarti
+            con il Web Lab.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo
+            stimato:** 90 minuti"
+        vpl-csd-ci-5:
+          title: 'Modulo 5: preparazione all''insegnamento dei Dati e della Società'
+          description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento dell'unità Dati e Società
+            di Code.org. \n\n**In questo modulo di apprendimento professionale, imparerai
+            a:**\n\n-   Ottenere un'introduzione su Dati e Società.\n-   Esercitarti
+            con i concetti chiave inclusi nell'unità.\n-   Scoprire la fine dei progetti
+            dei capitoli.\n\n**Tempo stimato:** 90 minuti"
+          student_description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento dell'unità Dati e Società
+            di Code.org. \n\n**In questo modulo di apprendimento professionale, imparerai
+            a:**\n\n-   Ottenere un'introduzione su Dati e Società.\n-   Esercitarti
+            con i concetti chiave inclusi nell'unità.\n-   Scoprire la fine dei progetti
+            dei capitoli.\n\n**Tempo stimato:** 90 minuti"
+        vpl-csd-ci-7:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Insegnare IA e Apprendimento Automatico
+          title: 'Modulo 7: preparazione all''insegnamento dell''intelligenza Artificiale
+            e dell''Apprendimento Automatico'
+          description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento dell'unità Intelligenza artificiale
+            e Apprendimento automatico di Code.org. \n\n**In questo modulo di apprendimento
+            professionale, imparerai a:**\n\n-   Ottenere un'introduzione su Dati
+            e Società.\n-   Esercitarti con i concetti chiave inclusi nell'unità.\n-
+            \  Impegnarti con il Laboratorio di Intelligenza Artificiale e l'App Lab.\n-
+            \  Scoprire la fine dei progetti dei capitoli.\n-   Creare un piano per
+            l'implementazione dell'unità con i tuoi studenti.\n\n**Tempo stimato:**
+            120 minuti"
+          student_description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento dell'unità Intelligenza artificiale
+            e Apprendimento automatico di Code.org. \n\n**In questo modulo di apprendimento
+            professionale, imparerai a:**\n\n-   Ottenere un'introduzione su Dati
+            e Società.\n-   Esercitarti con i concetti chiave inclusi nell'unità.\n-
+            \  Impegnarti con il Laboratorio di Intelligenza Artificiale e l'App Lab.\n-
+            \  Scoprire la fine dei progetti dei capitoli.\n-   Creare un piano per
+            l'implementazione dell'unità con i tuoi studenti.\n\n**Tempo stimato:**
+            120 minuti"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Capitolo 2: Input Hardware'
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ingressi e uscite
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ingressi e uscite
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ingressi e uscite
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ingressi e uscite
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ingressi e uscite

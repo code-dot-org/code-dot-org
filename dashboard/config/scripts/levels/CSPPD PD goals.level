@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2016-04-13T21:08:00.000Z",
-  "level_num": "custom",
-  "user_id": 0,
   "properties": {
     "title": "Documenting Your PD Goals",
     "height": "100",
@@ -14,8 +10,13 @@
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
-    "optional": "false"
+    "optional": "false",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:00.000Z",
+  "user_id": 0,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2019-02-14 12:58:59 +0000\",\"changed\":[\"notes\",\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",

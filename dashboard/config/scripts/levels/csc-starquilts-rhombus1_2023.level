@@ -1,9 +1,5 @@
 <Artist>
   <config><![CDATA[{
-  "game_id": 23,
-  "created_at": "2023-03-22T21:49:47.000Z",
-  "level_num": "custom",
-  "user_id": 16,
   "properties": {
     "skin": "artist",
     "is_k1": "false",
@@ -44,15 +40,19 @@
     "validation_enabled": "false",
     "enable_download_image": "false",
     "authored_hints": "[]",
-    "long_instructions": "<div style=\"float:right;padding:20px\">\r\n<img src=\"https://images.code.org/117504ea63c4b71c2f06499eb7749e32-image-1649477817617.16.50 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\r\n<p style=\"text-align: center\">\r\nexample\r\n</p>\r\n</div>\r\n\r\n**Use a rhombus stamp**\r\n\r\n- Drag the `draw shape` block and snap it under the `when run` block.\r\n- Use the drop down menu to select a rhombus color.\r\n- Click run to test your code and then click finish to move on to the next level.",
+    "long_instructions": "<div style=\"float:right;padding:20px\">\r\n<img src=\"https://images.code.org/117504ea63c4b71c2f06499eb7749e32-image-1649477817617.16.50 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\r\n<p style=\"text-align: center\">\r\nexample\r\n</p>\r\n</div>\r\n\r\n**Use a rhombus stamp**\r\n\r\n- Drag the <code style=\"color:black; background-color:#5ED5DD\">draw shape</code> block and snap it under the <code style=\"color:black; background-color:#FFBD46\">when run</code> block.\r\n- Use the drop down menu to select a rhombus color.\r\n- Click run to test your code and then click finish to move on to the next level.",
     "project_template_level_name": "csc-starquilts-lesson1-template_2023",
     "name_suffix": "_2023",
     "encrypted_examples": "m8JgXfT9tn8rQfS+tSKQLXaBqE2hHsEp+rYuc8yI8GcunRGl7Btzz7IeD4RI\nkZxwYs//MUodzsS9lsyzg7uWgw==\n",
     "preload_asset_list": null
   },
+  "game_id": 23,
   "published": true,
+  "created_at": "2023-03-22T21:49:47.000Z",
+  "level_num": "custom",
+  "user_id": 16,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-22T21:49:47.880+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-rhombus1_2022\\\"\"],\"cloned_from\":\"csc-starquilts-rhombus1_2022\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-22T21:49:47.880+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-rhombus1_2022\\\"\"],\"cloned_from\":\"csc-starquilts-rhombus1_2022\"},{\"changed_at\":\"2023-04-12 19:33:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -174,7 +174,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="turtle_shape_with_side_length">
+        <block type="rhombus_shape_with_side_length">
           <field name="VALUE">smallRhombusMaroon</field>
           <value name="SIZE">
             <block type="math_number" editable="false" can_disconnect_from_parent="false">
@@ -188,7 +188,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="turtle_shape_with_side_length">
+            <block type="rhombus_shape_with_side_length">
               <field name="VALUE">smallRhombusMaroon</field>
               <value name="SIZE">
                 <block type="math_number">

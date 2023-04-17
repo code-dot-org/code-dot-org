@@ -17,7 +17,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
     },
     Pd::Workshop::COURSE_CSA => {
       Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP => 'csa_summer_workshop',
-      Pd::Workshop::SUBJECT_CSA_WORKSHOP_1 => 'csa_ayw1'
+      Pd::Workshop::SUBJECT_CSA_WORKSHOP_1 => 'csa_ayw1',
+      Pd::Workshop::SUBJECT_CSA_CAPSTONE => 'csa_capstone'
     },
     Pd::Workshop::COURSE_CSD => {
       Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP => 'csd_summer_workshop',
@@ -124,6 +125,18 @@ class Pd::WorkshopMailer < ActionMailer::Base
       subject: teacher_enrollment_subject(@workshop),
       to: email_address(@enrollment.full_name, @enrollment.email),
       reply_to: reply_to
+  end
+
+  def teacher_pre_workshop_csa(enrollment)
+    @enrollment = enrollment
+    @workshop = enrollment.workshop
+    @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
+
+    mail content_type: 'text/html',
+      from: from_teacher,
+      subject: 'Preparing for your Computer Science A summer workshop',
+      to: email_address(@enrollment.full_name, @enrollment.email),
+      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
   def facilitator_enrollment_reminder(user, workshop)

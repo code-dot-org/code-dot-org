@@ -29,3 +29,5 @@ It's worth noting that **D** is accidentally not horrible, but only if you know 
 So **B** is the best choice here because there is nothing potentially misleading, and it also allows you to quickly see the answer to the intended question: for each state which types of students are most likely to stay in state?  All of the other choices you have to do work to answer that question.  In graph **D** for example, you just have to read the numbers, which defeats the purpose of having a chart - you could just look at the data.
 
 MARKDOWN
+
+allow_multiple_attempts true

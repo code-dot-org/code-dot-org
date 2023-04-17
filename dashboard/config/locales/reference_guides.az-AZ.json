@@ -8,9 +8,6 @@
         "csd-2022/ai-lab": {
           "display_name": "Suni İntellekt Labaratoriyası"
         },
-        "csd-2022/analog-sensors": {
-          "display_name": "Analoq sensorlar"
-        },
         "csd-2022/app-lab": {
           "display_name": "Proqram Labı"
         },
@@ -25,6 +22,9 @@
         },
         "csd-2022/changing-screens": {
           "display_name": "Ekranların dəyişdirilməsi"
+        },
+        "csd-2022/circuit-playground": {
+          "display_name": "Oyun ərazisinə ümumi baxış"
         },
         "csd-2022/classes": {
           "display_name": "Dərslər"

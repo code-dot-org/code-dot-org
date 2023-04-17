@@ -6,20 +6,64 @@
     "csd3-2023",
     "csd4-2023",
     "csd5-2023",
-    "csd7-2023",
-    "csd6a-2023"
+    "csd6a-2023",
+    "csd6b-2023",
+    "csd7-2023"
   ],
-  "published_state": "in_development",
+  "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "csd",
-    "has_numbered_units": true,
+    "has_verified_resources": true,
     "version_year": "2023"
   },
   "resources": [
-
+    {
+      "name": "All Code",
+      "url": "/courses/csd-2023/code",
+      "key": "all_code_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code_2"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/courses/csd-2023/resources",
+      "key": "all_resources_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_2"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/csd-2023/standards",
+      "key": "all_standards_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_2"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/csd-2023/vocab",
+      "key": "all_vocabulary_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2"
+      }
+    }
   ],
   "student_resources": [
 

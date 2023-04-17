@@ -13,7 +13,7 @@ const SIGNED_IN_USER = {
 };
 describe('NetSimLobby', () => {
   let rootDiv, netsim, getUserSectionsStub;
-  beforeEach(function() {
+  beforeEach(function () {
     getUserSectionsStub = sinon.stub(userSectionClient, 'getUserSections');
     NetSimTestUtils.initializeGlobalsToDefaultValues();
     rootDiv = $('<div>');
@@ -26,7 +26,7 @@ describe('NetSimLobby', () => {
     };
   });
 
-  afterEach(function() {
+  afterEach(function () {
     userSectionClient.getUserSections.restore();
   });
 

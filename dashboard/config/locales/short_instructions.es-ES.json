@@ -4272,7 +4272,6 @@
         "courseD_artist_42022": "¡Agrega una forma pequeña al final de tu línea!",
         "courseD_artist_52022": "¡Juega con los copos de nieve!",
         "courseD_artist_62022": "Intenta transformar tu línea de 150 pixeles de largo en 6 líneas cortas de **25** pixeles, con pequeños giros al final.  ",
-        "courseD_artist_nestedLoops102022": "Toma los cuadrados anteriores, pero esta vez dibuja solo 7 de ellos y ponlos en fila.",
         "courseD_artist_nestedLoops12022": "Dibuja un triángulo para comenzar esta etapa.\\\\ \n(Cada lado tiene 100 pixeles de largo y necesitarás girar 120 grados para cada ángulo exterior).",
         "courseD_artist_nestedLoops1a2022": "Ahora haz un bucle con el triángulo 6 veces. ",
         "courseD_artist_nestedLoops22022": "Esta vez, completa el desafío con la menor cantidad de bloques posible.",
@@ -4622,7 +4621,8 @@
         "allthethings level dataTables": "Por favor, inicia sesión para probar los niveles de Laboratorio de Aplicaciones (Por diseño, los niveles de Laboratorio de Aplicaciones sólo funcionan si se inicia sesión. Normalmente, hacemos que la gente se registre, pero esto sólo es aplicable a un guión completo y sería molesto hacerlo para el guión allthethings).",
         "allthethings_moviebot": "Este nivel está clonado de \"U3 Digital Assistant Target\"",
         "allthethings_template_backed1": "Con la ayuda de una plantilla #1. Por favor, inicia sesión para probar los niveles de Laboratorio de Aplicaciones (Por diseño, los niveles de Laboratorio de Aplicaciones sólo funcionan si se inicia sesión. Normalmente, hacemos que la gente se registre, pero esto sólo es aplicable a un guión completo y sería molesto hacerlo para el guión allthethings). ",
-        "allthethings_template_backed2": "Con la ayuda de una plantilla #2. Por favor, inicia sesión para probar los niveles de Laboratorio de Aplicaciones (Por diseño, los niveles de Laboratorio de Aplicaciones sólo funcionan si se inicia sesión. Normalmente, hacemos que la gente se registre, pero esto sólo es aplicable a un guión completo y sería molesto hacerlo para el guión allthethings)."
+        "allthethings_template_backed2": "Con la ayuda de una plantilla #2. Por favor, inicia sesión para probar los niveles de Laboratorio de Aplicaciones (Por diseño, los niveles de Laboratorio de Aplicaciones sólo funcionan si se inicia sesión. Normalmente, hacemos que la gente se registre, pero esto sólo es aplicable a un guión completo y sería molesto hacerlo para el guión allthethings).",
+        "courseD_artist_nestedLoops102022": "En la lección anterior (Lección 6: Dibujando con bucles) aprendiste a codificar un cuadrado. Esta vez, harás 7 de ellos, y los colocarás en una fila.\n\n-   Cada cuadrado tiene una longitud lateral de 50 píxeles.\n-   Cada cuadrado comienza a 50 píxeles de donde terminó el anterior."
       }
     }
   }
