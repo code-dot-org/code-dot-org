@@ -39,9 +39,9 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
      * define a function to generate the path for both.
      */
     function makeMainPath(up) {
-      return Blockly.utils.svgPaths.line([
-        Blockly.utils.svgPaths.point(-width, (-1 * up * height) / 2),
-        Blockly.utils.svgPaths.point(width, (-1 * up * height) / 2)
+      return GoogleBlockly.utils.svgPaths.line([
+        GoogleBlockly.utils.svgPaths.point(-width, (-1 * up * height) / 2),
+        GoogleBlockly.utils.svgPaths.point(width, (-1 * up * height) / 2)
       ]);
     }
 
@@ -65,10 +65,10 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
      * define a function to generate the path for both.
      */
     function makeMainPath(up) {
-      return Blockly.utils.svgPaths.line([
-        Blockly.utils.svgPaths.point(-width, 0),
-        Blockly.utils.svgPaths.point(0, -1 * up * height),
-        Blockly.utils.svgPaths.point(width, 0)
+      return GoogleBlockly.utils.svgPaths.line([
+        GoogleBlockly.utils.svgPaths.point(-width, 0),
+        GoogleBlockly.utils.svgPaths.point(0, -1 * up * height),
+        GoogleBlockly.utils.svgPaths.point(width, 0)
       ]);
     }
 
@@ -87,7 +87,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
     const width = this.TAB_WIDTH;
     const height = this.TAB_HEIGHT;
     function makeMainPath(up) {
-      const path = Blockly.utils.svgPaths.curve('c', [
+      const path = GoogleBlockly.utils.svgPaths.curve('c', [
         -width * 1.5 + ', 0 ',
         -width * 1.5 + ', ' + -1 * up * height + ' ',
         '0, ' + -1 * up * height + ' '
