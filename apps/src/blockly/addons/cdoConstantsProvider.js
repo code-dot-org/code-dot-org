@@ -52,8 +52,8 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
       ]);
     }
 
-    var pathUp = makeMainPath(1);
-    var pathDown = makeMainPath(-1);
+    const pathUp = makeMainPath(1);
+    const pathDown = makeMainPath(-1);
 
     return {
       width: width,
@@ -79,8 +79,8 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
       ]);
     }
 
-    var pathUp = makeMainPath(1);
-    var pathDown = makeMainPath(-1);
+    const pathUp = makeMainPath(1);
+    const pathDown = makeMainPath(-1);
 
     return {
       width: width,
@@ -103,8 +103,8 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
       return path;
     }
 
-    var pathUp = makeMainPath(1);
-    var pathDown = makeMainPath(-1);
+    const pathUp = makeMainPath(1);
+    const pathDown = makeMainPath(-1);
 
     return {
       width: width,
