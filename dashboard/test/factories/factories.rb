@@ -1514,7 +1514,7 @@ FactoryBot.define do
   end
 
   factory :regional_partners_school_district do
-    association :school_district
+    association :school_district, strategy: build
     association :regional_partner
   end
 
