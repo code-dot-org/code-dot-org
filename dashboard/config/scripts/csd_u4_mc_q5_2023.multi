@@ -10,5 +10,3 @@ wrong 'Select between multiple options'
 teacher_markdown <<MARKDOWN
 **Content: Unit 4 Lesson 11**
 MARKDOWN
-
-allow_multiple_attempts true

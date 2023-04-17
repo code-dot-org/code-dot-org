@@ -1,5 +1,4 @@
 @no_mobile
-@no_ie
 Feature: Commit Code
 
 Background:

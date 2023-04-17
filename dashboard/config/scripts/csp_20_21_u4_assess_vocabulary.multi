@@ -1,22 +1,24 @@
 name 'csp-20-21-u4-assess-vocabulary'
-right 'affects the sequential flow of control by executing different statements based on the value of a Boolean expression'
-wrong 'stores information as a number, String, or Boolean'
-wrong 'joins together two or more strings end-to-end to make a new string'
-wrong 'an ordered sequence of characters'
-
-markdown <<MARKDOWN
-Choose the correct definition for **Conditional Statement**
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-
-**Explanation:** [Lesson 5 - Conditionals Explore](https://curriculum.code.org/csp-20/unit4/5/) introduced students to flowcharts as tool to help illustrate the steps involved in making decisions using conditional statements.
-
-::: details [**Essential Knowledge Connected To This Question**]
-* AAP-2.H.1 - Conditional statements or “if-statements” affect the sequential flow of control by executing different statements based on the value of a Boolean expression.
-
-:::
-
-MARKDOWN
-
-allow_multiple_attempts true
+encrypted 'VRrEsmbuoYoKedr0vdRUWTfKKC13RxdL/paMbQuwQXiJhMy03vJqQCTxQDni
+lQDsTTz7JLw3fpMi/RAaz1vvyii66hR5HucGQNhUjNisK2cVQOAUxaVYesHT
+P8o4QulELuHnn2vk7AXqdtEul/J2vrpj4MCDAfbWRgYRrvq31v7tuTlnpEiE
+sW+gzMClD8R6veeAtZTKOYj4bm6KE/+veMvgTRMpNIZEBbjTxNyxpnNzoO8W
+N1EyJrEw1zWbdzgTX4FSRh8UCT6NUORT5L1UWiXA/Jt10wY/N1A1sbt2Uah6
+Ed5fvNYH1Vaz1s+vrWtO9EOehrREShfafWHXCl1+vdTsvhKVGT+p7pOfGhcL
+vWCq0pc0Wn9gXQQa1F7gXArDgGFNcHHZHq5QUw5+ldK9LeSz5K7CJFKCIycm
+BQNWUGMJWH33xsEYahQs1ejomXQ3hEKDZ3OL/vWdbyE3Sc/8i9GLryjyvbjQ
+pCt6ZnE5xfYOzTekEEF+xNST7DxMc51EEEwSccMiWPhWivasJRaSJ0GWUktt
+DGyhREWy2yvJMTyZ0KoG5clFP2WWxIqUYR9SU5tYQwRExvStnNFdtDQ3A+m2
+UQyd0xdRpRFx9pvnvLk8RYegoDsAsLRpR1uAe6/Rz5eEmMiAeKWA2EZOv3J3
+Xtl4otiw63o0Sv+XfqkP7C6G+w/HFRvZJRSZrneV5G8ZnljdskKMz+8B/wqy
+XHTIOPS5hpIo0/9C/IT6UROjPLtQayj3hZ3AG6eMHgRwh5WCuwqLqJuQJEK9
+hc23ffqI2sQ+vlw1XRQ3QcnZ4+Qo5xfln4OOa5SXAAjOC7oW6BZqJ6DOBlYV
+eb2kvnCb81zcNDhRT3+N9wolNJSMgqQ63NfrOU/ouA3b/xYBoUY1/8RmoV7t
+8Kbr8PZNnL51sE/7oYFDYj2csUq/AbNUQsFAPU+0iiH9Be8ICc65tFLDmM8x
+/iBZbThOK+9DxfD+I3B0cHVc0ViUkx9WUYFCwGW7IX7b6s/DHU3sibrn5mm/
+2LzIpXfML7uwKW6UaV87h72rbAylEYJxD1kRe6LjLyyRx3ExOEL8+O2tuEha
+Ij5X/Cota/GXPKYqTTsHSoLA9QyfcpzPJEBnA2/EWssLGkXq3Ttt89vZMIzK
+K1Ywly7GYdkeBN9dBW6tygYqqS3hi5vT/DWPPZ0PGntvsS/XY4xwvu8ifZMm
+02B2+kBZhAhTTBVnb4wLK+9nOk1aNpBYG6ONM5FUMLyWsczlgZRqigxYd+Ok
++GNJvP8Pt9szy9QHBKvjrVgQYU9KdUPt52Ns0TsqjQ==
+'
