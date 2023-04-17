@@ -50,11 +50,11 @@
     "include_shared_functions": "true",
     "block_pool": "gamelab",
     "block_pools": [
-      "GamelabJr",
-      "ParticlesBlocks",
       "adaptations",
       "ecosystems",
+      "GamelabJr",
       "Outbreak"
+      "ParticlesBlocks",      
     ],
     "mini_rubric": "false",
     "encrypted": "false",
