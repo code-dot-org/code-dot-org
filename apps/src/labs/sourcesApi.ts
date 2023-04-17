@@ -1,6 +1,5 @@
 import {Source, SourceUpdateOptions} from './types';
 import {SOURCE_FILE} from './constants';
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const {stringifyQueryParams} = require('@cdo/apps/utils');
 
 const rootUrl = (channelId: string) =>

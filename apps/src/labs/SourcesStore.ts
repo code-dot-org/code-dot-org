@@ -1,6 +1,5 @@
 import {Source} from './types';
 import * as sourcesApi from './sourcesApi';
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const {getTabId} = require('@cdo/apps/utils');
 
 export interface SourcesStore {

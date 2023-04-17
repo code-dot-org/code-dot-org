@@ -72,4 +72,4 @@ export const DEFAULT_CHORD = {
 export const DEFAULT_CHORD_LENGTH = 1;
 
 export const LOCAL_STORAGE = 'local';
-export const S3_STORAGE = 's3';
+export const REMOTE_STORAGE = 'remote';

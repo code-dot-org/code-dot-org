@@ -68,6 +68,7 @@ module.exports = class Maze {
 
     const skin = config.skin;
     const level = config.level;
+    console.log(config);
 
     // Override scalars.
     for (var key in level.scale) {

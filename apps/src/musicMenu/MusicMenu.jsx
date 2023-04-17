@@ -1,5 +1,5 @@
 import React from 'react';
-import {LOCAL_STORAGE, S3_STORAGE} from '../music/constants';
+import {LOCAL_STORAGE, REMOTE_STORAGE} from '../music/constants';
 
 const baseUrl = window.location.origin + '/musiclab';
 
@@ -90,7 +90,7 @@ const optionsList = [
     type: 'radio',
     values: [
       {value: LOCAL_STORAGE, description: 'Save to local storage (default).'},
-      {value: S3_STORAGE, description: 'Save to S3.'}
+      {value: REMOTE_STORAGE, description: 'Save to remote storage.'}
     ]
   }
 ];
