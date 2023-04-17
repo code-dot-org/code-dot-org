@@ -5217,6 +5217,19 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Intellectual Property
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+            lessonGroup-4:
+              display_name: Survey
         hello-world-space-2022:
           title: 'Salom Dunyo: Kosmik'
         hello-world-soccer-2022:

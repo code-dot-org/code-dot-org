@@ -855,7 +855,7 @@
   "exampleErrorMessage": "La funzione {functionName} ha uno o più esempi che devono essere adattati. Assicurati che essi corrispondano alla tua definizione e rispondi alla domanda.",
   "examples": "Esempi",
   "examplesFailedOnClose": "Uno o più dei tuoi esempi non corrispondono alla tua definizione. Verifica i tuoi esempi prima di chiudere",
-  "exampleSolution": "Esempio Soluzione {number}",
+  "exampleSolution": "Soluzione di esempio {number}",
   "explainCourseAssignmentsLearnMore": " Scopri cosa succede quando assegni un corso.",
   "explainTtsAutoplay": "Solo per i browser Chrome, Internet Explorer ed Edge: Quando quest'impostazione è attiva, le istruzioni del livello saranno automaticamente lette ad alta voce agli studenti usando la sintesi vocale ogni volta che aprono un livello. Questo li semplifica per studenti non ancora fluenti lettori per completare le lezioni.",
   "explainLessonExtras": "Quando gli Esercizi supplementari sono abilitati, verranno proposti dei progetti creativi e delle sfide aggiuntive al termine della lezione invece di passare automaticamente alla lezione successiva. In questo modo si permette agli studenti di ampliare la loro conoscenza ed esercitarsi maggiormente, senza però andare troppo avanti rispetto ai propri compagni di classe.",

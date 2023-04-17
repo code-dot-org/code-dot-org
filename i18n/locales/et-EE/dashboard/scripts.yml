@@ -1814,6 +1814,16 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+            lessonGroup-4:
+              display_name: Uuring
         csp1-2023:
           lesson_groups:
             cspSurvey:
