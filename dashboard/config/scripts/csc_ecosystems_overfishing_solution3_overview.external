@@ -1,0 +1,20 @@
+name 'csc_ecosystems_overfishing_solution3_overview'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+#Sustainable Solution #3: 
+
+
+<img src="https://images.code.org/340c1771d52bb0de79fdce2616bf1e90-image-1680897683881.jpg" style="margin-left: 60px; float: right">
+</div>
+
+##Set Fishing Limits
+**Scientists can figure out how many fish can be caught without hurting the ocean. Then they can tell the fishermen to only catch that many fish.**
+
+
+<br>
+
+>Overfishing is a problem that can harm marine life ecosystems and the people who rely on them. It's important to practice sustainable fishing to help protect these ecosystems and ensure that fish populations remain healthy. By working together, we can help keep our oceans full of life for generations to come!
+
+MARKDOWN

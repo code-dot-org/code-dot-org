@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "A researcher wants to compare the number of fires caused by fireworks to the number of fires caused by lightning each year.\r\n\r\n✅ **TO DO #1:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">FireData.java</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getNumFires()</code> method to traverse the 1D array of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Fire</code> objects and return a 1D array containing the number of fires caused by the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">cause</code> each year.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner.java</code>, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawResult()</code> method with the 1D array returned from calling the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getNumFires()</code> method.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing nested <code style=\"background-color: #ececec; color: black; font-weight: bold;\">if</code> statements.\r\n</div>",
+    "long_instructions": "A researcher wants to compare the number of fires caused by fireworks to the number of fires caused by lightning each year.\r\n\r\n✅ **TO DO #1:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">FireData.java</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getNumFires()</code> method to traverse the 1D array of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Fire</code> objects and return a 1D array containing the number of fires caused by the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">cause</code> each year where the length of the name of the fire is greater than <code style=\"background-color: #ececec; color: black; font-weight: bold;\">6</code>.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner.java</code>, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawResult()</code> method with the 1D array returned from calling the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getNumFires()</code> method.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing nested <code style=\"background-color: #ececec; color: black; font-weight: bold;\">if</code> statements.\r\n</div>",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -14,18 +14,18 @@
         "tabOrder": 0
       }
     },
-    "encrypted_examples": [
-
-    ],
     "display_name": "Causes of Fires",
     "bubble_choice_description": "A researcher wants to compare the number of fires caused by fireworks to the number of fires caused by lightning each year.",
-    "thumbnail_url": "https://images.code.org/f69e52ce576aa369dc17c1a8ad1c73bf-fire.png"
+    "thumbnail_url": "https://images.code.org/f69e52ce576aa369dc17c1a8ad1c73bf-fire.png",
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-02-17T18:51:21.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-02-17T18:51:21.158+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-Nested If PBT_2023\\\"\"],\"cloned_from\":\"CSA U4L7-Nested If PBT_2023\"},{\"changed_at\":\"2023-02-17 18:51:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-07 21:20:21 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-17T18:51:21.158+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-Nested If PBT_2023\\\"\"],\"cloned_from\":\"CSA U4L7-Nested If PBT_2023\"},{\"changed_at\":\"2023-02-17 18:51:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-07 21:20:21 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-15 02:01:29 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
