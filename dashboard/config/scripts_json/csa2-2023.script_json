@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-14 12:27:41 UTC",
+    "serialized_at": "2023-04-15 16:17:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4782,7 +4782,7 @@
       "key": "8658f7a1-39ce-405c-b6fc-6d4b31d4dea4",
       "position": 3,
       "properties": {
-        "description": "**Store Management Project:** Use the rubric on the last page of the Store Management Project Planning Guide to assess the projects.",
+        "description": "**Store Management Project:** Use the rubric in the Store Management Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
       },
       "seeding_key": {
