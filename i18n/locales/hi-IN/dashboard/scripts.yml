@@ -3596,6 +3596,14 @@ hi:
           lessons:
             lesson-9:
               name: बेतरतीब
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: बौद्धिक विशेषता
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         hello-world-space-2022:
           title: 'हेलो वर्ल्ड: स्पेस'
         hello-world-soccer-2022:

@@ -11,8 +11,7 @@ describe('CurriculumCatalogCard', () => {
     defaultProps = {
       courseDisplayName: 'AI for Oceans',
       duration: 'quarter',
-      youngestGrade: 4,
-      oldestGrade: 12,
+      gradesArray: ['4', '5', '6', '7', '8'],
       subjects: ['math'],
       topics: ['cybersecurity'],
       isEnglish: true
@@ -67,9 +66,21 @@ describe('CurriculumCatalogCard', () => {
 
     screen.getByText(
       new RegExp(
-        `Grades: ${defaultProps.youngestGrade}-${defaultProps.oldestGrade}`
+        `Grades: ${defaultProps.gradesArray[0]}-${
+          defaultProps.gradesArray[defaultProps.gradesArray.length - 1]
+        }`
       )
     );
+    expect(container.querySelectorAll('i[class*=user]')).to.have.length(1);
+  });
+
+  it('renders single grade with icon when one grade passed in', () => {
+    const grade = '12';
+    const {container} = render(
+      <CurriculumCatalogCard {...defaultProps} gradesArray={[grade]} />
+    );
+
+    screen.getByText(new RegExp(`Grade: ${grade}`));
     expect(container.querySelectorAll('i[class*=user]')).to.have.length(1);
   });
 

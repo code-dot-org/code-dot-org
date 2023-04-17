@@ -61,7 +61,7 @@ gem 'rack-mini-profiler'
 group :development do
   gem 'annotate', '~> 3.1.1'
   gem 'aws-google', '~> 0.2.0'
-  gem 'web-console'
+  gem 'web-console', '~> 4.2.0'
 end
 
 # Rack::Cache middleware used in development/test;
@@ -210,7 +210,7 @@ gem 'twilio-ruby' # SMS API for send-to-phone feature
 # - /pegasus/sites.v3/hourofcode/public/fonts/
 gem 'font-awesome-rails', '~> 4.7.0.8'
 
-gem 'sequel'
+gem 'sequel', '~> 5.29'
 gem 'user_agent_parser'
 
 gem 'paranoia', '~> 2.5.0'
@@ -337,7 +337,7 @@ gem 'datapackage'
 
 gem 'ruby-progressbar'
 
-gem 'pry'
+gem 'pry', '~> 0.14.0'
 
 # Google's Compact Language Detector
 gem 'cld'

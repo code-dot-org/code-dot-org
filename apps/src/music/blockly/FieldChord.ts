@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ChordPanel, {ChordPanelProps} from '../views/ChordPanel';
-import {BlockSvg, DropDownDiv, Field, WidgetDiv} from 'blockly/core';
+import GoogleBlockly, {BlockSvg, DropDownDiv, Field} from 'blockly/core';
 import {ChordEventValue} from '../player/interfaces/ChordEvent';
 import MusicLibrary from '../player/MusicLibrary';
 import {getNoteName} from '../utils/Notes';
-import GoogleBlockly from 'blockly/core';
 import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
 const experiments = require('@cdo/apps/util/experiments');
 
@@ -60,15 +59,14 @@ export default class FieldChord extends Field {
       this.borderRect_.classList.add('blocklyDropdownRect');
     }
 
-    this.backgroundElement = GoogleBlockly.utils.dom.createSvgElement<
-      SVGGraphicsElement
-    >(
-      'g',
-      {
-        transform: 'translate(1,1)'
-      },
-      this.fieldGroup_
-    );
+    this.backgroundElement =
+      GoogleBlockly.utils.dom.createSvgElement<SVGGraphicsElement>(
+        'g',
+        {
+          transform: 'translate(1,1)'
+        },
+        this.fieldGroup_
+      );
 
     this.updateSize_();
   }

@@ -5912,6 +5912,19 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Propriedade intelectual
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Questionário
         hello-world-space-2022:
           title: 'Olá, Mundo: Espaço'
         hello-world-soccer-2022:

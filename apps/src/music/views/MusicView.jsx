@@ -320,6 +320,10 @@ class UnconnectedMusicView extends React.Component {
     }
   };
 
+  togglePlaying = () => {
+    this.setPlaying(!this.props.isPlaying);
+  };
+
   playTrigger = id => {
     if (!this.props.isPlaying) {
       return;
@@ -463,7 +467,7 @@ class UnconnectedMusicView extends React.Component {
           }}
         >
           <KeyHandler
-            togglePlaying={() => this.setPlaying(!this.props.isPlaying)}
+            togglePlaying={this.togglePlaying}
             playTrigger={this.playTrigger}
           />
           <div id="music-lab-container" className={moduleStyles.container}>

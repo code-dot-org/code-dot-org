@@ -177,6 +177,14 @@ es-MX:
         name: Plan de estudios
       teacher_forum/csd/2019:
         name: Foro de profesores
+      all_code_2/csd/2023:
+        name: Todo el Código
+      all_resources_2/csd/2023:
+        name: Todos los Recursos
+      all_standards_2/csd/2023:
+        name: Todos los Estándares
+      all_vocabulary_2/csd/2023:
+        name: Todo el Vocabulario
       all_code/csd/2021:
         name: Todo el Código
       all_resources_1/csd/2021:

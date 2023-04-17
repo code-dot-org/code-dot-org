@@ -43,9 +43,8 @@ import {
 } from './JavalabFileHelper';
 import {darkMode, lightMode} from './editorThemes';
 import {hasQueryParam} from '@cdo/apps/code-studio/utils';
-import JavalabEditorDialogManager, {
-  JavalabEditorDialog
-} from './JavalabEditorDialogManager';
+import JavalabEditorDialogManager from './JavalabEditorDialogManager';
+import {JavalabEditorDialog} from './types';
 import JavalabEditorHeader from './JavalabEditorHeader';
 import {java} from '@codemirror/lang-java';
 import CloseOnEscape from './components/CloseOnEscape';

@@ -9,13 +9,14 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-10 23:32:32 UTC",
+    "serialized_at": "2023-04-15 16:17:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7134,6 +7135,18 @@
       }
     },
     {
+      "name": "[EXEMPLAR] Unit 3 Guide",
+      "url": "https://docs.google.com/document/d/1KJesb8rg_e5Mf0VAEHNYcaksJH86GVDeMnM-lIXHQNs/edit?usp=share_link",
+      "key": "_exemplar_unit_3_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_3_guide"
+      }
+    },
+    {
       "name": "[KEY] Finding Duplicates",
       "url": "https://docs.google.com/document/d/1y5kEpgsfxc4R2RyRqq4XVtd1KiCL6DoqFQ83rColQC0/edit?usp=sharing",
       "key": "_key_finding_duplicates",
@@ -8302,6 +8315,12 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_3_guide",
+        "script.name": "csa3-2023"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "all_resources_3",

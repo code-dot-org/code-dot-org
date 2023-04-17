@@ -28,12 +28,12 @@ describe('CurriculumQuickAssign', () => {
       <CurriculumQuickAssign updateSection={() => {}} sectionCourse={{}} />
     );
 
-    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-down');
+    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-right');
     wrapper
       .find('Button')
       .at(0)
       .simulate('click', {preventDefault: () => {}});
-    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-up');
+    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-down');
   });
 
   it('clears decide later when marketing audience selected', () => {

@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "phase1-design-system";
 
 $border-radius: 4px;
@@ -22,7 +23,7 @@ $container-width: 309px;
 }
 
 .curriculumCatalogCardContainer_notEnglish {
-  height: 26em;
+  height: 26.5em;
 }
 
 .curriculumInfoContainer {
@@ -45,6 +46,13 @@ $container-width: 309px;
   h4 {
     margin-bottom: 0.75em;
     color: $neutral_dark;
+
+    // Shows max two lines before truncating with ellipsis
+    // See https://css-tricks.com/line-clampin/
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 }
 
@@ -53,19 +61,19 @@ $container-width: 309px;
   justify-content: space-between;
 
   i {
-    margin-left: auto;
     font-size: 1.5em;
   }
 }
 
 .iconWithDescription {
   display: flex;
-  margin: 0 0 0.5em 0;
   align-items: center;
+  column-gap: 0.5em;
+  margin: 0 0 0.5em 0;
 
   .iconWithDescriptionText {
     font-size: 0.875em;
-    margin: 0 0 0 0.5em;
+    margin: 0;
     color: $neutral_dark;
   }
 }
@@ -102,7 +110,7 @@ $container-width: 309px;
   button {
     // width calculated to ensure space between buttons is 12px
     // (totalContainerWidth - 2*padding - minimumSpaceBetweenButtons) / 2
-    width: ($container-width - (2 * 16) - 12) / 2;
+    width: math.div($container-width - (2 * 16) - 12, 2);
     height: 40px;
     font-size: 1em;
   }
