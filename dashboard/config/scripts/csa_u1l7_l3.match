@@ -16,5 +16,3 @@ answer 'an instruction for the computer'
 
 question 'efficiency'
 answer 'getting the best outcome with the least amount of waste'
-
-allow_multiple_attempts true

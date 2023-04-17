@@ -21,4 +21,4 @@ markdown <<MARKDOWN
 
 MARKDOWN
 
-allow_multiple_attempts true
+allow_multiple_attempts false

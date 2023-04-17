@@ -9,38 +9,37 @@ markdown <<MARKDOWN
 
 ## Suggested Planning Activities
 
-##### **Pick a module to add to your scope and sequence** 
-When does the module best fit into what you are already teaching?
+<hr style="clear:left">
 
-##### **Consider co-teaching** 
-What colleagues (e.g. librarian, technology specialist, general education) may want to teach lessons with you?
+#### **Pick a module to add to your scope and sequence** 
+##### When does the module best fit into what you are already teaching?
 
-##### **Make modifications or accomodations**
-How will you adapt the lessons to best meet your students' needs?
+#### **Consider co-teaching** 
+##### What colleagues (e.g. librarian, technology specialist, general education) may want to teach lessons with you?
 
-<hr style="clear:both">
+#### **Make modifications or accomodations**
+##### How will you adapt the lessons to best meet your students' needs?
+
 
 
 ## Suggested Preparing Activities
 
 <img src="https://images.code.org/c46adeb1f3cda223361151b3ab88a71d-image-1680733372700.png" style="float: right; height: 250px; clear: both; margin: 0 20px 20px 0;">
 
-##### **Preview lessons**
-What lessons (CS or core content) might you need to teach before teaching this module?
+<hr style="clear:left">
 
-What CS concepts or skills might be challenging for your students?  
+#### **Preview lessons**
+##### What lessons (CS or core content) might you need to teach before teaching the module?
+##### What CS concepts or skills might be challenging for your students?  
+##### When will students need support debugging?
 
-When will students need support debugging?
+#### **Develop a general lesson flow**
+##### When will teacher-led learning happen as a whole group?  
+##### When will student-led learning happen for individual students or pairs?
 
-##### **Develop a general lesson flow**
-When will teacher-led learning happen as a whole group?  
-
-When will student-led learning happen for individual students or pairs?
-
-##### **Keep the end in mind**
-What final project are students working towards?  
-
-How will students showcase and share their final projects?
+#### **Keep the end in mind**
+##### What final project are students working towards?  
+##### How will students showcase and share their final projects?
 
 
 MARKDOWN

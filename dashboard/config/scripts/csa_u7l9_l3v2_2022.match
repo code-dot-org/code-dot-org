@@ -14,4 +14,3 @@ answer 'when a method calls itself'
 
 question 'recursive case'
 answer 'the instance where a recursive method calls itself'
-allow_multiple_attempts true

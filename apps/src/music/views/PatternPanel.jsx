@@ -45,8 +45,7 @@ const PatternPanel = ({
 
       onChange(currentValue);
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [currentValue]
+    [onChange, previewSound, currentValue]
   );
 
   const hasEvent = (sound, tick) => {
@@ -77,8 +76,7 @@ const PatternPanel = ({
   const onClear = useCallback(() => {
     currentValue.events = [];
     onChange(currentValue);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentValue]);
+  }, [onChange, currentValue]);
 
   const startPreview = useCallback(() => {
     setCurrentPreviewTick(1);
@@ -91,8 +89,7 @@ const PatternPanel = ({
       clearInterval(intervalId);
       setCurrentPreviewTick(0);
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [setCurrentPreviewTick, currentValue]);
+  }, [previewPattern, bpm, setCurrentPreviewTick, currentValue]);
 
   return (
     <div className={styles.patternPanel}>

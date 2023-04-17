@@ -21,5 +21,3 @@ zipcodes.remove(2);
 System.out.println(zipcodes);
 ```
 MARKDOWN
-
-allow_multiple_attempts true
