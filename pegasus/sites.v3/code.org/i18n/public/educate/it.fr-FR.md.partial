@@ -10,7 +10,8 @@ theme: responsive
 
 - Nous vous recommandons de mettre à la disposition de votre école une connexion Internet d'au moins 15 MBit/sec.
 - La plus petite taille d'écran supportée est de 1024 x 728 px.
-- Vous aurez besoin d'un ordinateur de bureau ou portable avec une souris (ou un pavé tactile) et un clavier pour nos cours de niveau collège et lycée : CS Discoveries, CS Principles, et Introduction à App Lab. La plupart des tablettes et des appareils mobiles ne sont pas adaptés à ces cours. Voir "Détails relatifs à la prise en charge des téléphones mobiles et des tablettes" ci-dessous pour connaître les particularités liées aux appareils.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Voir "Détails relatifs à la prise en charge des téléphones mobiles et des tablettes" ci-dessous pour connaître les particularités liées aux appareils.
 - Tous les autres contenus, comme les cours K-5 ( Fondamentaux de l'informatique) et les activités de Hour of Code, sont compatibles avec les iPads et les Chromebooks, en plus de toutes les autres tablettes modernes et ordinateurs portables ou de bureau.
 - Besoin de détails sur les appareils mobiles pris en charge ? Lire la suite.
 
@@ -82,12 +83,12 @@ Pour une meilleure utilisation de tout le contenu de Code.org, nous vous recomma
 
 ## Détails relatifs à la prise en charge des appareils mobiles et tablettes
 
-Tous les cours intitulés CS Discoveries, CS Principles, et Introduction à App Lab ne sont pas compatibles avec les tablettes ou les appareils mobiles - vous devez disposer d'un clavier complet et d'une souris (ou d'un pavé tactile, comme sur les MacBooks). La plupart des tablettes ne sont pas prises en charge, à l'exception des cas suivants :
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. La plupart des tablettes ne sont pas prises en charge, à l'exception des cas suivants :
 
 - Microsoft Surface Pro avec clavier externe
 - iPad fonctionnant sous iPadOS 13.4 ou une version ultérieure, avec un clavier externe et une souris ou un pavé tactile externe
 
-Tous les autres contenus, comme les cours K-5 ( Fondamentaux de l'informatique) et les activités de Hour of Code, sont compatibles avec les iPads et les Chromebooks, en plus de toutes les autres tablettes modernes et ordinateurs portables ou de bureau.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### Téléphone mobile
 
