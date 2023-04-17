@@ -279,7 +279,7 @@ en:
           description_teacher: ''
           version_title: ''
         csd-2023:
-          title: csd-2023
+          title: Computer Science Discoveries
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -320,6 +320,12 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        vpl-csd-summer-ci-2023:
+          title: CS Discoveries Curriculum Investigation
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'23-'24"
     resources:
       curriculum/csd/2020:
         name: Curriculum
@@ -378,6 +384,18 @@ en:
       teacher_forum/csd/2019:
         name: Teacher Forum
         url: https://forum.code.org/c/csd
+      all_code_2/csd/2023:
+        name: All Code
+        url: "/courses/csd-2023/code"
+      all_resources_2/csd/2023:
+        name: All Resources
+        url: "/courses/csd-2023/resources"
+      all_standards_2/csd/2023:
+        name: All Standards
+        url: "/courses/csd-2023/standards"
+      all_vocabulary_2/csd/2023:
+        name: All Vocabulary
+        url: "/courses/csd-2023/vocab"
       all_code/csd/2021:
         name: All Code
         url: "/courses/csd-2021/code"

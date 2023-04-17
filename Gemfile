@@ -61,7 +61,7 @@ gem 'rack-mini-profiler'
 group :development do
   gem 'annotate', '~> 3.1.1'
   gem 'aws-google', '~> 0.2.0'
-  gem 'web-console'
+  gem 'web-console', '~> 4.2.0'
 end
 
 # Rack::Cache middleware used in development/test;
@@ -78,7 +78,6 @@ group :development, :test do
   gem 'active_record_query_trace'
   gem 'benchmark-ips'
   gem 'better_errors', '>= 2.7.0'
-  gem 'binding_of_caller'
   gem 'brakeman'
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'ruby-prof'
@@ -101,7 +100,7 @@ group :development, :test do
   gem 'rinku'
   gem 'rspec'
   gem 'selenium-webdriver', '3.141.0'
-  gem 'spring'
+  gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
   gem 'webdrivers', '~> 3.0'
 
@@ -123,7 +122,7 @@ gem 'nakayoshi_fork'
 # Ref: https://github.com/puma/puma/pull/1646
 gem 'puma', github: 'wjordan/puma', branch: 'debugging'
 gem 'puma_worker_killer'
-gem 'unicorn', '~> 5.1.0'
+gem 'raindrops'
 
 gem 'chronic', '~> 0.10.2'
 
@@ -211,7 +210,7 @@ gem 'twilio-ruby' # SMS API for send-to-phone feature
 # - /pegasus/sites.v3/hourofcode/public/fonts/
 gem 'font-awesome-rails', '~> 4.7.0.8'
 
-gem 'sequel'
+gem 'sequel', '~> 5.29'
 gem 'user_agent_parser'
 
 gem 'paranoia', '~> 2.5.0'
@@ -338,7 +337,7 @@ gem 'datapackage'
 
 gem 'ruby-progressbar'
 
-gem 'pry'
+gem 'pry', '~> 0.14.0'
 
 # Google's Compact Language Detector
 gem 'cld'

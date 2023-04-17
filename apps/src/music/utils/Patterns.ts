@@ -20,7 +20,6 @@ interface GenerateGraphDataFromPatternOptions {
   width: number;
   height: number;
   padding: number;
-  eventScale: number;
   library: MusicLibrary;
 }
 
@@ -30,7 +29,6 @@ export function generateGraphDataFromPattern({
   width,
   height,
   padding,
-  eventScale,
   library
 }: GenerateGraphDataFromPatternOptions): PatternGraphEvent[] {
   // Event widths fit in the space; event heights match the widths.

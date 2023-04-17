@@ -198,7 +198,7 @@ class MoveStudents extends Component {
     return (
       <div>
         <Button
-          __useDeprecatedTag
+          style={styles.buttonWithoutMargin}
           onClick={this.openDialog}
           color={Button.ButtonColor.gray}
           text={i18n.moveStudents()}
@@ -270,13 +270,13 @@ class MoveStudents extends Component {
           </SortedTableSelect>
           <DialogFooter>
             <Button
-              __useDeprecatedTag
+              style={styles.buttonWithoutMargin}
               text={i18n.dialogCancel()}
               onClick={this.closeDialog}
               color={Button.ButtonColor.gray}
             />
             <Button
-              __useDeprecatedTag
+              style={styles.buttonWithoutMargin}
               text={i18n.moveStudents()}
               onClick={this.transfer}
               color={Button.ButtonColor.orange}
@@ -296,6 +296,9 @@ const styles = {
     padding: PADDING,
     width: DIALOG_WIDTH,
     marginLeft: -(DIALOG_WIDTH / 2)
+  },
+  buttonWithoutMargin: {
+    margin: 0
   },
   label: {
     paddingTop: PADDING / 2

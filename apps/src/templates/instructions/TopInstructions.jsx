@@ -139,7 +139,7 @@ class TopInstructions extends Component {
 
     const teacherViewingStudentWork =
       this.isViewingAsTeacher &&
-      this.props.readOnlyWorkspace &&
+      !!this.props.readOnlyWorkspace &&
       studentUserIdIncluded;
 
     this.state = {

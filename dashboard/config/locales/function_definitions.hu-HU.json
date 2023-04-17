@@ -885,7 +885,8 @@
             "description": "rajzolj egy sor négyzetet "
           },
           "draw a square 40": {
-            "name": "rajzolj négyzetet 40"
+            "name": "rajzolj négyzetet 40",
+            "description": "Rajzolj 40-es négyzetet"
           },
           "draw a square 20": {
             "name": "rajzolj 20-as négyzetet",

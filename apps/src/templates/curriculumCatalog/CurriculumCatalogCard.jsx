@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
@@ -8,7 +9,7 @@ import {
   translatedCourseOfferingSchoolSubjects,
   translatedCourseOfferingDurations
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
-import '../../../style/code-studio/curriculum_catalog_card.scss';
+import style from './curriculum_catalog_card.module.scss';
 
 // TODO [MEG]: remove this placeholder and require() syntax once images are pulled
 const tempImage = require('@cdo/static/resource_cards/anotherhoc.png');
@@ -16,13 +17,13 @@ const tempImage = require('@cdo/static/resource_cards/anotherhoc.png');
 const CurriculumCatalogCard = ({
   courseDisplayName,
   duration,
-  youngestGrade,
-  oldestGrade,
+  gradesArray,
   imageAltText,
   imageSrc,
   subjects,
   topics,
-  isTranslated
+  isTranslated,
+  isEnglish
 }) => (
   <CustomizableCurriculumCatalogCard
     assignButtonText={i18n.assign()}
@@ -32,15 +33,16 @@ const CurriculumCatalogCard = ({
     courseDisplayName={courseDisplayName}
     duration={translatedCourseOfferingDurations[duration]}
     gradeRange={i18n.gradeRange({
-      youngest_grade: youngestGrade,
-      oldest_grade: oldestGrade
-    })} // TODO [MEG]: Decide on translation strategy for this
+      numGrades: gradesArray.length,
+      youngestGrade: gradesArray[0],
+      oldestGrade: gradesArray[gradesArray.length - 1]
+    })}
     imageSrc={imageSrc}
     subjectsAndTopics={[
-      ...subjects.map(
+      ...subjects?.map(
         subject => translatedCourseOfferingSchoolSubjects[subject]
       ),
-      ...topics.map(topic => translatedCourseOfferingCsTopics[topic])
+      ...topics?.map(topic => translatedCourseOfferingCsTopics[topic])
     ]}
     quickViewButtonDescription={i18n.quickViewDescription({
       course_name: courseDisplayName
@@ -49,6 +51,7 @@ const CurriculumCatalogCard = ({
     imageAltText={imageAltText}
     isTranslated={isTranslated}
     translationIconTitle={i18n.courseInYourLanguage()}
+    isEnglish={isEnglish}
   />
 );
 
@@ -56,23 +59,25 @@ CurriculumCatalogCard.propTypes = {
   courseDisplayName: PropTypes.string.isRequired,
   duration: PropTypes.oneOf(Object.keys(translatedCourseOfferingDurations))
     .isRequired,
-  youngestGrade: PropTypes.number,
-  oldestGrade: PropTypes.number,
+  gradesArray: PropTypes.arrayOf(PropTypes.string).isRequired,
   imageAltText: PropTypes.string,
   imageSrc: PropTypes.string.isRequired,
   isTranslated: PropTypes.bool,
   subjects: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(translatedCourseOfferingSchoolSubjects))
-  ).isRequired,
+  ),
   topics: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(translatedCourseOfferingCsTopics))
-  ).isRequired
+  ),
+  isEnglish: PropTypes.bool.isRequired
 };
 
 CurriculumCatalogCard.defaultProps = {
   imageSrc: tempImage, // TODO [MEG]: remove this default once images are pulled
   imageAltText: '', // for decorative images
-  isTranslated: false
+  isTranslated: false,
+  subjects: [],
+  topics: []
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -87,35 +92,49 @@ const CustomizableCurriculumCatalogCard = ({
   translationIconTitle,
   subjectsAndTopics,
   quickViewButtonDescription,
-  quickViewButtonText
+  quickViewButtonText,
+  isEnglish
 }) => (
-  <div className="curriculumCatalogCardContainer">
+  <div
+    className={classNames(
+      style.curriculumCatalogCardContainer,
+      isEnglish
+        ? style.curriculumCatalogCardContainer_english
+        : style.curriculumCatalogCardContainer_notEnglish
+    )}
+  >
     <img src={imageSrc} alt={imageAltText} />
-    <div className="curriculumInfoContainer">
+    <div className={style.curriculumInfoContainer}>
       {/*TODO [MEG]: Show all subjects and topics rather than only the first one */}
-      <div className="tagsAndTranslatabilityContainer">
-        <p className="overline">{subjectsAndTopics[0]}</p>
+      <div className={style.tagsAndTranslatabilityContainer}>
+        <p className={style.overline}>{subjectsAndTopics[0]}</p>
         {/*TODO [MEG]: Ensure this icon matches spec when we update FontAwesome */}
         {isTranslated && (
           <FontAwesome
-            icon={'language'}
-            className={'fa-solid'}
+            icon="language"
+            className="fa-solid"
             title={translationIconTitle}
           />
         )}
       </div>
       <h4>{courseDisplayName}</h4>
-      <div className={'iconWithDescription'}>
-        <FontAwesome icon={'user'} className={'fa-solid'} />
-        <p className={'iconDescription'}>{gradeRange}</p>
+      <div className={style.iconWithDescription}>
+        <FontAwesome icon="user" className="fa-solid" />
+        <p className={style.iconWithDescriptionText}>{gradeRange}</p>
       </div>
-      <div className={'iconWithDescription'}>
+      <div className={style.iconWithDescription}>
         {/*TODO [MEG]: Update this to be clock fa-solid when we update FontAwesome */}
-        <FontAwesome icon={'clock-o'} />
-        <p className={'iconDescription'}>{duration}</p>
+        <FontAwesome icon="clock-o" />
+        <p className={style.iconWithDescriptionText}>{duration}</p>
       </div>
-      <div className="buttonsContainer">
-        {/* each button should be same fixed size */}
+      <div
+        className={classNames(
+          style.buttonsContainer,
+          isEnglish
+            ? style.buttonsContainer_english
+            : style.buttonsContainer_notEnglish
+        )}
+      >
         <Button
           color={Button.ButtonColor.neutralDark}
           type="button"
@@ -143,8 +162,9 @@ CustomizableCurriculumCatalogCard.propTypes = {
   gradeRange: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
   isTranslated: PropTypes.bool,
+  isEnglish: PropTypes.bool,
   translationIconTitle: PropTypes.string.isRequired,
-  subjectsAndTopics: PropTypes.arrayOf(PropTypes.string).isRequired,
+  subjectsAndTopics: PropTypes.arrayOf(PropTypes.string),
   quickViewButtonText: PropTypes.string.isRequired,
   assignButtonText: PropTypes.string.isRequired,
 

@@ -45,7 +45,7 @@ const PatternPanel = ({
 
       onChange(currentValue);
     },
-    [currentValue]
+    [onChange, previewSound, currentValue]
   );
 
   const hasEvent = (sound, tick) => {
@@ -76,7 +76,7 @@ const PatternPanel = ({
   const onClear = useCallback(() => {
     currentValue.events = [];
     onChange(currentValue);
-  }, [currentValue]);
+  }, [onChange, currentValue]);
 
   const startPreview = useCallback(() => {
     setCurrentPreviewTick(1);
@@ -89,7 +89,7 @@ const PatternPanel = ({
       clearInterval(intervalId);
       setCurrentPreviewTick(0);
     });
-  }, [setCurrentPreviewTick, currentValue]);
+  }, [previewPattern, bpm, setCurrentPreviewTick, currentValue]);
 
   return (
     <div className={styles.patternPanel}>
