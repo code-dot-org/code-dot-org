@@ -8,19 +8,20 @@
     vertical-align: top;
   }
 
-%h3
-  Before the Workshop
-- if @workshop.course == Pd::Workshop::COURSE_CSA
-  %p
-    Reminder: For the best professional development experience, we strongly
-    encourage you to engage in the pre-work that is specifically designed for
-    CSA. The pre-work can be found at
-    = link_to('studio.code.org/courses/self-paced-pl-csa', 'https://studio.code.org/courses/self-paced-pl-csa') + '.'
-- else
-  %p
-    There is no requirement that you are familiar with the course before you
-    join the workshop - we will walk you through what you need to know in our
-    time together.
+- if @workshop.subject == Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+  %h3
+    Before the Workshop
+  - if @workshop.course == Pd::Workshop::COURSE_CSA
+    %p
+      Reminder: For the best professional development experience, we strongly
+      encourage you to engage in the pre-work that is specifically designed for
+      CSA. The pre-work can be found at
+      = link_to('studio.code.org/courses/self-paced-pl-csa', 'https://studio.code.org/courses/self-paced-pl-csa') + '.'
+  - else
+    %p
+      There is no requirement that you are familiar with the course before you
+      join the workshop - we will walk you through what you need to know in our
+      time together.
 
 - if @is_reminder && @workshop.course == Pd::Workshop::COURSE_CSD && @workshop.subject == Pd::Workshop::SUBJECT_CSD_WORKSHOP_4
   %h3
