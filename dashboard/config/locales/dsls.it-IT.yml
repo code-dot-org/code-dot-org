@@ -655,8 +655,14 @@ it-IT:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
-        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
-          Scegli da una delle opzioni a destra.
+        content1: Guarda il codice qui sotto e prevedi come verranno visualizzati
+          i titoli. Scegli una delle opzioni a destra.
+        markdown: |
+          <pre>
+          &lt;h3&gt; Uova &lt;/h3&gt;
+          &lt;h1&gt; Pancetta &lt;/h1&gt;
+          &lt;h6&gt; Cialde &lt;/h6&gt;
+          </pre>
       CSD Header Size MC_2018:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -668,8 +674,14 @@ it-IT:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
-        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
-          Scegli da una delle opzioni a destra.
+        content1: Guarda il codice qui sotto e prevedi come verranno visualizzati
+          i titoli. Scegli una delle opzioni a destra.
+        markdown: |
+          <pre>
+          &lt;h3&gt; Uova &lt;/h3&gt;
+          &lt;h1&gt; Pancetta &lt;/h1&gt;
+          &lt;h6&gt; Cialde &lt;/h6&gt;
+          </pre>
       CSD Header Size MC_2018_2019:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -681,14 +693,20 @@ it-IT:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
-        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
-          Scegli da una delle opzioni a destra.
+        content1: Guarda il codice qui sotto e prevedi come verranno visualizzati
+          i titoli. Scegli una delle opzioni a destra.
         teacher_markdown: |-
           <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
 
           **Tipi di livello:** Questa domanda a scelta multipla chiede agli studenti di scegliere come visualizzare le intestazioni HTML su una pagina web. Puoi vedere quali studenti hanno risposto correttamente alla domanda andando a quel livello e richiamando il riquadro Insegnante dal lato destro.  Gli studenti che hanno risposto correttamente alla domanda avranno una bolla verde.  Gli studenti hanno tutte le possibilità che vogliono per rispondere correttamente, quindi indovinare e controllare può anche portare ad una risposta corretta.
 
           <div class="clear"></div>
+        markdown: |
+          <pre>
+          &lt;h3&gt; Uova &lt;/h3&gt;
+          &lt;h1&gt; Pancetta &lt;/h1&gt;
+          &lt;h6&gt; Cialde &lt;/h6&gt;
+          </pre>
       CSD U1 Lesson 5 Overview:
         markdown: |
           # Panoramica
@@ -9817,14 +9835,20 @@ it-IT:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
-        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
-          Scegli da una delle opzioni a destra.
+        content1: Guarda il codice qui sotto e prevedi come verranno visualizzati
+          i titoli. Scegli una delle opzioni a destra.
         teacher_markdown: |-
           <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
 
           **Tipi di livello:** Questa domanda a scelta multipla chiede agli studenti di scegliere come visualizzare le intestazioni HTML su una pagina web. Puoi vedere quali studenti hanno risposto correttamente alla domanda andando a quel livello e richiamando il riquadro Insegnante dal lato destro.  Gli studenti che hanno risposto correttamente alla domanda avranno una bolla verde.  Gli studenti hanno tutte le possibilità che vogliono per rispondere correttamente, quindi indovinare e controllare può anche portare ad una risposta corretta.
 
           <div class="clear"></div>
+        markdown: |
+          <pre>
+          &lt;h3&gt; Uova &lt;/h3&gt;
+          &lt;h1&gt; Pancetta &lt;/h1&gt;
+          &lt;h6&gt; Cialde &lt;/h6&gt;
+          </pre>
       CSD Interactive Animations and Games Post-Project Test_pilot_2021:
         title: Animazioni Interattive e Test Post-Progetto dei Giochi
       CSD Physical Computing Post-Project Test_2021:
@@ -10091,14 +10115,20 @@ it-IT:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
-        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
-          Scegli da una delle opzioni a destra.
+        content1: Guarda il codice qui sotto e prevedi come verranno visualizzati
+          i titoli. Scegli una delle opzioni a destra.
         teacher_markdown: |-
           <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
 
           **Tipi di livello:** Questa domanda a scelta multipla chiede agli studenti di scegliere come visualizzare le intestazioni HTML su una pagina web. Puoi vedere quali studenti hanno risposto correttamente alla domanda andando a quel livello e richiamando il riquadro Insegnante dal lato destro.  Gli studenti che hanno risposto correttamente alla domanda avranno una bolla verde.  Gli studenti hanno tutte le possibilità che vogliono per rispondere correttamente, quindi indovinare e controllare può anche portare ad una risposta corretta.
 
           <div class="clear"></div>
+        markdown: |
+          <pre>
+          &lt;h3&gt; Uova &lt;/h3&gt;
+          &lt;h1&gt; Pancetta &lt;/h1&gt;
+          &lt;h6&gt; Cialde &lt;/h6&gt;
+          </pre>
       CSD Interactive Animations and Games Post-Project Test_pilot_2022:
         title: Animazioni Interattive e Test Post-Progetto dei Giochi
       CSD Physical Computing Post-Project Test_2022:
@@ -21141,3 +21171,24 @@ it-IT:
       ml-models in applab-choice parent_2022:
         description: Metti alla prova ciò che hai imparato in una o più delle seguenti
           attività.
+      csd-post-survey-markdown-with-link-to-survey_2021:
+        markdown: |+
+          # Sondaggio post-corso Alla scoperta dell'informatica
+
+          **Il tuo contributo e il tuo riscontro sono importanti per noi! ** Lo usiamo per:
+
+          *   comprendere la tua esperienza
+          *   apportare miglioramenti al corso
+
+          Grazie per aver dedicato del tempo per contribuire a rendere Alla scoperta dell'informatica ancora migliore!
+
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey-2021/lockable/1/levels/1/page/1" target="top">Fai clic qui per completare il sondaggio post-corso di Alla scoperta dell'informatica</a>
+
+          (si apre in una nuova scheda)
+
+          <br>
+
+
+
+
+

@@ -5945,6 +5945,21 @@ fr:
               display_name: Contenu
             lessonGroup-4:
               display_name: Leçons alternatives
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Propriété intellectuelle
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-5:
+              display_name: Leçons alternatives
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-4:
+              display_name: Enquête
         hello-world-space-2022:
           title: 'Bonjour tout le monde : Espace'
         hello-world-soccer-2022:

@@ -1418,6 +1418,14 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
         csp4-2023:
           lesson_groups:
             csp_variables:
