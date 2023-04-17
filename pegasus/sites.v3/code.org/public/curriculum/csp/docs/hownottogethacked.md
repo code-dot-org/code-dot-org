@@ -9,7 +9,7 @@ theme: responsive
 The Internet is open, so everything that happens on it can be seen unless it’s protected. In modern countries, people are more worried about getting hacked than about any other crime. Why? Because every computer or phone on the Internet is regularly being tested for vulnerabilities by criminals, terrorists, or even state actors. If you’re not careful, somebody could hack your device or accounts, and even steal your identity or your money.
 
 <div style="text-align:center; margin:20px 20px;">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AuYNXgO_f3Y" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLzdnOPI1iJNf1vuNF_Dg0EykzOpXWS7vC" title="How Not to Get Hacked Playlist" frameborder="0" allowfullscreen></iframe>
 </div>
 
 So how can you make sure your information is safe?  Here are 9 tips to keep in mind. These aren’t just friendly recommendations, they are critically important. In fact, if you don’t follow these tips, it’s almost guaranteed criminals and hackers will collect your personal information and use it in ways you don’t expect.

@@ -12,8 +12,8 @@ export default storybook => {
     [0, 17956864, 17956864, 0, 0, 0, 0, 1048576],
     [0, 17956864, 17956864, 0, 0, 0, 0, 0]
   ];
-  const serializedMaze = starWarsGrid.map(function(row) {
-    return row.map(function(cell) {
+  const serializedMaze = starWarsGrid.map(function (row) {
+    return row.map(function (cell) {
       return {tileType: cell};
     });
   });

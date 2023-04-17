@@ -6,10 +6,10 @@ var sinon = require('sinon');
 var shareWarnings = require('@cdo/apps/shareWarnings');
 import * as utils from '@cdo/apps/utils';
 
-describe('shareWarnings', function() {
+describe('shareWarnings', function () {
   testUtils.setExternalGlobals();
 
-  describe('checkSharedAppWarnings function', function() {
+  describe('checkSharedAppWarnings function', function () {
     beforeEach(() => {
       localStorage.removeItem('is13Plus');
       localStorage.removeItem('dataAlerts');

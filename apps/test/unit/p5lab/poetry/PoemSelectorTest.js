@@ -25,24 +25,11 @@ describe('PoemEditor', () => {
         />
       );
 
-      expect(
-        wrapper
-          .find('input')
-          .at(0)
-          .props().value
-      ).to.equal('My title');
-      expect(
-        wrapper
-          .find('input')
-          .at(1)
-          .props().value
-      ).to.be.empty;
-      expect(
-        wrapper
-          .find('textarea')
-          .at(0)
-          .props().value
-      ).to.equal('this is\na good poem');
+      expect(wrapper.find('input').at(0).props().value).to.equal('My title');
+      expect(wrapper.find('input').at(1).props().value).to.be.empty;
+      expect(wrapper.find('textarea').at(0).props().value).to.equal(
+        'this is\na good poem'
+      );
     });
   });
 

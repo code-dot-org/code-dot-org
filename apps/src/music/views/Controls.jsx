@@ -1,18 +1,21 @@
 import PropTypes from 'prop-types';
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useEffect, useContext} from 'react';
 import classNames from 'classnames';
 import FontAwesome from '../../templates/FontAwesome';
 import {Triggers} from '@cdo/apps/music/constants';
 import moduleStyles from './controls.module.scss';
 import BeatPad from './BeatPad';
 import {AnalyticsContext} from '../context';
+import {useDispatch, useSelector} from 'react-redux';
+import {hideBeatPad, showBeatPad, toggleBeatPad} from '../redux/musicRedux';
+
+const documentationUrl = '/docs/ide/projectbeats';
 
 /**
  * Renders the playback controls bar, including the play/pause button, show/hide beat pad button,
  * and show/hide instructions button.
  */
 const Controls = ({
-  isPlaying,
   setPlaying,
   playTrigger,
   top,
@@ -20,12 +23,15 @@ const Controls = ({
   toggleInstructions,
   instructionsOnRight
 }) => {
-  const [isShowingBeatPad, setBeatPadShowing] = useState(false);
+  const isPlaying = useSelector(state => state.music.isPlaying);
+  const isBeatPadShowing = useSelector(state => state.music.isBeatPadShowing);
+  const dispatch = useDispatch();
+
   useEffect(() => {
     if (isPlaying) {
-      setBeatPadShowing(true);
+      dispatch(showBeatPad());
     }
-  }, [isPlaying]);
+  }, [dispatch, isPlaying]);
 
   const analyticsReporter = useContext(AnalyticsContext);
 
@@ -42,7 +48,7 @@ const Controls = ({
           triggers={Triggers}
           playTrigger={playTrigger}
           onClose={() => {
-            setBeatPadShowing(false);
+            dispatch(hideBeatPad());
             analyticsReporter.onButtonClicked('show-hide-beatpad', {
               showing: false
             });
@@ -65,9 +71,9 @@ const Controls = ({
 
   const beatPadIconSection = renderIconButton('th', () => {
     analyticsReporter.onButtonClicked('show-hide-beatpad', {
-      showing: !isShowingBeatPad
+      showing: !isBeatPadShowing
     });
-    setBeatPadShowing(!isShowingBeatPad);
+    dispatch(toggleBeatPad());
   });
   const infoIconSection = instructionsAvailable
     ? renderIconButton('info-circle', toggleInstructions)
@@ -79,7 +85,7 @@ const Controls = ({
 
   return (
     <div id="controls" className={moduleStyles.controlsContainer}>
-      {isShowingBeatPad && renderBeatPad()}
+      {isBeatPadShowing && renderBeatPad()}
       {leftIcon}
       <div
         className={classNames(moduleStyles.controlButtons, moduleStyles.center)}
@@ -90,13 +96,28 @@ const Controls = ({
           className={moduleStyles.iconButton}
         />
       </div>
+      <div
+        className={classNames(moduleStyles.controlButtons, moduleStyles.side)}
+      >
+        <a href={documentationUrl} target="_blank" rel="noopener noreferrer">
+          <FontAwesome
+            icon={'question-circle-o'}
+            onClick={() => {
+              analyticsReporter.onButtonClicked('documentation-link');
+            }}
+            className={classNames(
+              moduleStyles.iconButton,
+              moduleStyles.iconButtonLink
+            )}
+          />
+        </a>
+      </div>
       {rightIcon}
     </div>
   );
 };
 
 Controls.propTypes = {
-  isPlaying: PropTypes.bool.isRequired,
   setPlaying: PropTypes.func.isRequired,
   playTrigger: PropTypes.func.isRequired,
   top: PropTypes.bool.isRequired,

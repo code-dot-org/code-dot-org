@@ -25,18 +25,18 @@ module.exports = {
         'var g = World.frameCount;\n' +
         'var h = World.seconds;\n' +
         'console.log("done")',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper
-          .tickAppUntil(Gamelab, function() {
+          .tickAppUntil(Gamelab, function () {
             var debugOutput = document.getElementById('debug-output');
             return debugOutput.textContent !== '';
           })
-          .then(function() {
+          .then(function () {
             Gamelab.onPuzzleComplete();
           });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '"done"');
@@ -60,18 +60,18 @@ module.exports = {
         'var g = Game.frameCount;\n' +
         'var h = Game.seconds;\n' +
         'console.log("done")',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper
-          .tickAppUntil(Gamelab, function() {
+          .tickAppUntil(Gamelab, function () {
             var debugOutput = document.getElementById('debug-output');
             return debugOutput.textContent !== '';
           })
-          .then(function() {
+          .then(function () {
             Gamelab.onPuzzleComplete();
           });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '"done"');
@@ -95,18 +95,18 @@ module.exports = {
         'if (!topEdge) console.log("Fail: edges was falsy");\n' +
         'if (!bottomEdge) console.log("Fail: edges was falsy");\n' +
         'console.log("done")',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper
-          .tickAppUntil(Gamelab, function() {
+          .tickAppUntil(Gamelab, function () {
             var debugOutput = document.getElementById('debug-output');
             return debugOutput.textContent !== '';
           })
-          .then(function() {
+          .then(function () {
             Gamelab.onPuzzleComplete();
           });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '"done"');

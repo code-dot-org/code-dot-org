@@ -8,7 +8,7 @@ class TraverseMailPreviewsTest < ActiveSupport::TestCase
     end
 
     classes.each do |klass|
-      methods =  klass.instance_methods - FactoryGirl::Syntax::Methods.methods - FactoryGirl::Syntax::Methods.instance_methods
+      methods =  klass.instance_methods - FactoryBot::Syntax::Methods.methods - FactoryBot::Syntax::Methods.instance_methods
 
       failed_runs = []
 

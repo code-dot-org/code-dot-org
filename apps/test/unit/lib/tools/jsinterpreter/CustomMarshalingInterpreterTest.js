@@ -89,7 +89,7 @@ describe('The CustomMarshalingInterpreter', () => {
         }
       ];
       const nativeValue = [1, 2, 3];
-      nativeValue.draw = function() {
+      nativeValue.draw = function () {
         return this.join(',');
       };
       value = makeAssertableObj(interpreter, nativeValue);
@@ -214,7 +214,7 @@ describe('The CustomMarshalingInterpreter', () => {
 
     describe('when used for setting object/array/function properties on custom marshaled objects', () => {
       let nativeObject;
-      let existingFunction = function() {
+      let existingFunction = function () {
         return 5;
       };
       beforeEach(() => {
@@ -771,7 +771,7 @@ describe('The CustomMarshalingInterpreter', () => {
     describe('when given a native function, the corresponding interpreter object', () => {
       let nativeFunc;
       beforeEach(() => {
-        nativeFunc = function(a, b) {
+        nativeFunc = function (a, b) {
           return a + b;
         };
         Object.defineProperty(nativeFunc, 'foo', {
@@ -920,14 +920,14 @@ describe('The CustomMarshalingInterpreter', () => {
     });
 
     it('marshals functions by delegating to CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction', () => {
-      CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction = sinon
-        .stub()
-        .returns('foo');
+      CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction =
+        sinon.stub().returns('foo');
       expect(evalExpression(`function (a,b) { return a+b; }`)).to.equal('foo');
       expect(
         CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction
       ).to.have.been.calledOnce;
-      CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction = null;
+      CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction =
+        null;
     });
 
     it('marshals functions by doing nothing when CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction is not set', () => {

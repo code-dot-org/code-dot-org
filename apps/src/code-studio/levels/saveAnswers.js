@@ -8,7 +8,7 @@ function saveAnswersAndNavigate(url) {
   if (window.appOptions.readonlyWorkspace) {
     window.location.href = url;
   } else {
-    saveAnswers(function() {
+    saveAnswers(function () {
       window.location.href = url;
     });
   }

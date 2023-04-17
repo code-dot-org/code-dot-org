@@ -156,9 +156,7 @@ class AllVocabulariesEditor extends Component {
         )}
         {this.state.vocabularyForDeletion && (
           <Dialog
-            body={`Are you sure you want to permanently delete vocabulary "${
-              this.state.vocabularyForDeletion.word
-            }"?`}
+            body={`Are you sure you want to permanently delete vocabulary "${this.state.vocabularyForDeletion.word}"?`}
             cancelText="Cancel"
             confirmText="Delete"
             confirmType="danger"
@@ -211,7 +209,8 @@ const styles = {
 
 export const UnconnectedAllVocabulariesEditor = AllVocabulariesEditor;
 
-export default connect(
-  state => ({vocabularies: state.vocabularies}),
-  {addVocabulary, updateVocabulary, removeVocabulary}
-)(AllVocabulariesEditor);
+export default connect(state => ({vocabularies: state.vocabularies}), {
+  addVocabulary,
+  updateVocabulary,
+  removeVocabulary
+})(AllVocabulariesEditor);

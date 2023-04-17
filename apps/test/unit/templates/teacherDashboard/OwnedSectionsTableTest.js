@@ -3,8 +3,13 @@ import React from 'react';
 import {shallow, mount} from 'enzyme';
 import * as Table from 'reactabular-table';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
 import {
   UnconnectedOwnedSectionsTable as OwnedSectionsTable,
   sectionLinkFormatter,
@@ -14,7 +19,9 @@ import {
   COLUMNS
 } from '@cdo/apps/templates/teacherDashboard/OwnedSectionsTable';
 import Button from '@cdo/apps/templates/Button';
-import {teacherSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teacherSections, {
+  setSections
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const GRADE_COLUMN = COLUMNS.GRADE.toString();
 
@@ -212,27 +219,28 @@ const plSectionRowData = [
 ];
 
 // Scramble these for the table to start un-ordered
-const initialState = {
-  teacherSections: {
-    sections: {
-      '1': sectionGradesRowData[5],
-      '2': sectionGradesRowData[0],
-      '3': sectionGradesRowData[2],
-      '4': sectionGradesRowData[4],
-      '5': sectionGradesRowData[3],
-      '6': sectionGradesRowData[1],
-      '7': sectionGradesRowData[6]
-    }
-  }
-};
+const sections = [
+  sectionGradesRowData[5],
+  sectionGradesRowData[0],
+  sectionGradesRowData[2],
+  sectionGradesRowData[4],
+  sectionGradesRowData[3],
+  sectionGradesRowData[1],
+  sectionGradesRowData[6]
+];
 
 describe('OwnedSectionsTable Sorting', () => {
-  const store = createStore(
-    combineReducers({
-      teacherSections
-    }),
-    initialState
-  );
+  let store;
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({teacherSections});
+    store = getStore();
+    store.dispatch(setSections(sections));
+  });
+
+  afterEach(() => {
+    restoreRedux();
+  });
 
   it('can be sorted correctly by grade', () => {
     const wrapper = mount(
@@ -400,14 +408,8 @@ describe('OwnedSectionsTable', () => {
     it('courseLinkFormatter provides links to course information and section information', () => {
       const rowData = sectionRowData[0];
       const courseLinkCol = shallow(courseLinkFormatter(null, {rowData}));
-      const courseLink = courseLinkCol
-        .find('a')
-        .at(0)
-        .props().href;
-      const sectionLink = courseLinkCol
-        .find('a')
-        .at(1)
-        .props().href;
+      const courseLink = courseLinkCol.find('a').at(0).props().href;
+      const sectionLink = courseLinkCol.find('a').at(1).props().href;
       assert.equal(
         courseLink,
         '//localhost-studio.code.org:3000/courses/csd?section_id=1'
@@ -421,14 +423,8 @@ describe('OwnedSectionsTable', () => {
     it('courseLinkFormatter contains course text and section text', () => {
       const rowData = sectionRowData[0];
       const courseLinkCol = shallow(courseLinkFormatter(null, {rowData}));
-      const courseText = courseLinkCol
-        .find('a')
-        .at(0)
-        .text();
-      const sectionText = courseLinkCol
-        .find('a')
-        .at(1)
-        .text();
+      const courseText = courseLinkCol.find('a').at(0).text();
+      const sectionText = courseLinkCol.find('a').at(1).text();
       assert.equal(courseText, 'CS Discoveries');
       assert.equal(sectionText, 'Unit 1: Problem Solving');
     });

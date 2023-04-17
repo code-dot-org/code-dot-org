@@ -46,7 +46,8 @@ class SharingControlActionsHeaderCell extends Component {
   }
 }
 
-export const UnconnectedSharingControlActionsHeaderCell = SharingControlActionsHeaderCell;
+export const UnconnectedSharingControlActionsHeaderCell =
+  SharingControlActionsHeaderCell;
 
 export default connect(
   state => ({}),

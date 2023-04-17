@@ -1,6 +1,7 @@
 require 'cdo/config'
 require 'cdo/lazy'
-require 'cdo/aws/cloud_formation'
+require 'aws-sdk-ec2'
+require 'net/http'
 
 module Cdo
   # Prepend this module to a Cdo::Config to process lazy-loaded secrets contained in special tags.
@@ -45,8 +46,6 @@ module Cdo
       end
     end
 
-    private
-
     # Stores a reference to a secret so it can be resolved later.
     #
     # Specifically, stores a reference to both the unique key which can
@@ -68,6 +67,11 @@ module Cdo
     end
 
     class StackSecret < Secret
+      # This attribute is used by the Cdo::Secrets.required (and require!) methods to determine which AWS Secret to get.
+      def key
+        stack_specific_secret_path
+      end
+
       # Extend the default lookup functionality to support checking for
       # stack-specific secrets, defaulting to the original functionality if
       # none are found.
@@ -94,8 +98,31 @@ module Cdo
       # latter is environment-specific and we want stack-specific overrides to
       # apply to all environments.
       def stack_specific_secret_path
-        @stack ||= AWS::CloudFormation.current_stack_name
+        @stack ||= current_stack_name
         @stack ? "CfnStack/#{@stack}/#{secret_key}" : nil
+      end
+
+      EC2_METADATA_SERVICE_BASE_URL = URI('http://169.254.169.254/latest/meta-data/')
+
+      # Get the CloudFormation Stack Name that the EC2 Instance this code is executing on belongs to.
+      # @return [String]
+      def current_stack_name
+        metadata_service_request = Net::HTTP.new(EC2_METADATA_SERVICE_BASE_URL.host, EC2_METADATA_SERVICE_BASE_URL.port)
+        # Set a short timeout so that when not executing on an EC2 Instance we fail fast.
+        metadata_service_request.open_timeout = metadata_service_request.read_timeout = 10
+        ec2_instance_id = metadata_service_request.request_get(EC2_METADATA_SERVICE_BASE_URL.path + 'instance-id').body
+        region = metadata_service_request.request_get(EC2_METADATA_SERVICE_BASE_URL.path + 'placement/region').body
+        ec2_client = Aws::EC2::Client.new(region: region)
+        ec2_client.
+          describe_tags({filters: [{name: "resource-id", values: [ec2_instance_id]}]}).
+          tags.
+          select {|tag| tag.key == 'aws:cloudformation:stack-name'}.
+          first.
+          value
+      rescue Net::OpenTimeout # This code is not executing on an AWS EC2 Instance nor in an ECS container or Lambda.
+        nil
+      rescue StandardError
+        nil
       end
     end
 
@@ -104,7 +131,7 @@ module Cdo
     YAML.add_domain_type('', 'StackSecret') {StackSecret.new}
 
     # Processes `Secret` references in the provided config hash.
-    def process_secrets!(config)
+    private def process_secrets!(config)
       return if config.nil?
       config.select {|_, v| v.is_a?(Secret)}.each do |key, secret|
         secret.secret_prefix ||= env
@@ -113,7 +140,7 @@ module Cdo
     end
 
     # Resolve secret references to lazy-loaded values.
-    def lazy_load_secrets!
+    private def lazy_load_secrets!
       self.cdo_secrets ||= Cdo.lazy do
         require 'cdo/secrets'
         Cdo::Secrets.new(logger: log)
@@ -143,7 +170,7 @@ module Cdo
 
     # Returns a YAML fragment clearing all secrets by overriding their values to `nil`.
     # Any exceptions or defaults can be re-added later in the YAML document, after secrets have been cleared.
-    def clear_secrets
+    private def clear_secrets
       @secrets ||= []
       @secrets |= table.select {|_, v| v.is_a?(Secret)}.keys.map(&:to_s)
       @secrets.product([nil]).to_h.to_yaml.sub(/^---.*\n/, '')

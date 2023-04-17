@@ -13,3 +13,4 @@ MARKDOWN
 
 question 'Are you ready to move on?'
 right 'Yes'
+allow_multiple_attempts true

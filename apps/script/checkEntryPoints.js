@@ -56,6 +56,7 @@ const SILENCED = [
   'javalab',
   'jigsaw',
   'maze',
+  'music',
   'netsim',
   'poetry',
   'spritelab',
@@ -69,7 +70,6 @@ const SILENCED = [
 
   // referenced by embedded multi/match levels
   'embedBlocks',
-  'embedVideo',
 
   // referenced from dashboard/public
   'publicKeyCryptography',

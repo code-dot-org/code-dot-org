@@ -78,8 +78,5 @@ export function environmentSpecificCookieName(name) {
  * @returns {string} The root domain name for the host name
  */
 export function getRootDomainFromHostname(hostname) {
-  return hostname
-    .split('.')
-    .slice(-2)
-    .join('.');
+  return hostname.split('.').slice(-2).join('.');
 }

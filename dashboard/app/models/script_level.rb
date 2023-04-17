@@ -726,9 +726,7 @@ class ScriptLevel < ApplicationRecord
     level_example_links
   end
 
-  private
-
-  def kind
+  private def kind
     if level.unplugged?
       LEVEL_KIND.unplugged
     elsif assessment
@@ -738,7 +736,7 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  def build_exemplar_url(path)
+  private def build_exemplar_url(path)
     CDO.studio_url(path, CDO.default_scheme) + '?exemplar=true'
   end
 end
