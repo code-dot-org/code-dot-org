@@ -15,6 +15,9 @@ const defaultFrameRate = 30;
  * specific places to enable GameLab functionality
  */
 var P5Wrapper = function () {
+  if (this.p5) {
+    this.p5._onblur();
+  }
   this.p5 = null;
   this.p5decrementPreload = null;
   this.p5eventNames = [
@@ -162,6 +165,7 @@ P5Wrapper.prototype.resetExecution = function () {
 
   if (this.p5) {
     this.p5.remove();
+    this.p5._onblur();
     this.p5 = null;
     this.p5decrementPreload = null;
   }
