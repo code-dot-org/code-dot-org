@@ -1022,6 +1022,8 @@ pl:
         csc-mapmakers-intro: 'CSC: Twórcy map\t'
         csa-pl-vocab-pm: Słownictwo zarządzania projektami
         csc-ecosystems-intro: Wprowadzenie do ekosystemów
+        PL_CSD_MicroBit_Intro: Wprowadzenie do micro:bita
+        csc_animal_adaptations_intro: Wprowadzenie do adaptacji zwierząt
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku
