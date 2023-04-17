@@ -31,8 +31,11 @@ class Homepage
       # If the banner has an array of languages, then the current language must be one of them.
       next if banner["languages"] && !banner["languages"].include?(request.language)
 
-      # If the banner has an array of countries, then the current country must be one of them.
-      next if banner["countries"] && !banner["countries"].include?(request.country)
+      # If the banner is shown internationally don't show in the US.
+      # If the banner is not shown internationally, show in the US.
+      location = Geocoder.search(request.ip)&.first
+      in_us = location&.country_code.to_s.casecmp?('us')
+      next unless banner["showInternationally"] ^ in_us
 
       # We have a banner.  Add the ID to the hash that we return.
       return banner.merge({id: banner_id_for_page})
