@@ -31,6 +31,9 @@ class Homepage
       # If the banner has an array of languages, then the current language must be one of them.
       next if banner["languages"] && !banner["languages"].include?(request.language)
 
+      # If the banner has an array of countries, then the current country must be one of them.
+      next if banner["countries"] && !banner["countries"].include?(request.country)
+
       # We have a banner.  Add the ID to the hash that we return.
       return banner.merge({id: banner_id_for_page})
     end

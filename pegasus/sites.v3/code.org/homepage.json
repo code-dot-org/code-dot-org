@@ -75,6 +75,7 @@
     "pl-launch-superhero": {
       "dcdo": "pl-launch-hero-banner",
       "languages": ["en"],
+      "countries": ["US"],
       "class": "pl-banner-superhero homepage",
       "desktopImage": "/images/pl-superhero-banner-yellow-bg.svg",
       "actions": [
