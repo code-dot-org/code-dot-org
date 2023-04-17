@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-12 19:42:34 UTC",
+    "serialized_at": "2023-04-14 12:30:13 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -328,6 +328,18 @@
   ],
   "resources": [
     {
+      "name": "[EXEMPLAR] Unit 8 Guide",
+      "url": "https://docs.google.com/document/d/1cLxDHJ_5S5R0k-W1feAj2VtTSctg1W1csmTXDUd39ys/edit?usp=share_link",
+      "key": "_exemplar_unit_8_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_8_guide"
+      }
+    },
+    {
       "name": "Developing Project Management Skills",
       "url": "https://docs.google.com/document/d/1kgVoutrFAiSLDtVwTYUUG_K5ys2vjw-NrBpEx10ZVpY/edit?usp=sharing",
       "key": "developing_project_management_skills",
@@ -382,6 +394,12 @@
 
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_8_guide",
+        "script.name": "csa8-2023"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "developing_project_management_skills",
