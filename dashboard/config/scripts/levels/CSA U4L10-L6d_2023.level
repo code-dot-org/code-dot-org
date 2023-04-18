@@ -14,18 +14,22 @@
         "tabOrder": 0
       }
     },
+    "display_name": "Car Loan",
+    "bubble_choice_description": "Implement your algorithm to determine a customer's monthly payment for a car loan.",
+    "thumbnail_url": "https://images.code.org/47b9cd91c4a5d73be5f0bbc31c65aff0-car.png",
     "encrypted_examples": [
 
     ],
-    "display_name": "Car Loan",
-    "bubble_choice_description": "Implement your algorithm to determine a customer's monthly payment for a car loan.",
-    "thumbnail_url": "https://images.code.org/47b9cd91c4a5d73be5f0bbc31c65aff0-car.png"
+    "reference_links": [
+      "/courses/csa-2023/guides/multi-selection-statements"
+    ],
+    "video_key": "csa_multi-selection_statements"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-02-17T19:06:05.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-02-17T19:06:05.633+00:00\",\"changed\":[\"cloned from \\\"CSA U4L10-L6c_2023\\\"\"],\"cloned_from\":\"CSA U4L10-L6c_2023\"},{\"changed_at\":\"2023-02-17 19:06:07 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-10 21:31:06 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-11 18:37:08 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-17T19:06:05.633+00:00\",\"changed\":[\"cloned from \\\"CSA U4L10-L6c_2023\\\"\"],\"cloned_from\":\"CSA U4L10-L6c_2023\"},{\"changed_at\":\"2023-02-17 19:06:07 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-10 21:31:06 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-11 18:37:08 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 13:46:22 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
