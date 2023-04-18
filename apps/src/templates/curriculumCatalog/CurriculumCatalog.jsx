@@ -9,7 +9,7 @@ import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/Curricu
 import CheckboxDropdown from '../CheckboxDropdown';
 
 const CurriculumCatalog = ({curriculaData, isEnglish}) => {
-  // Add test file for separate component
+  // Add CollapserIcon.jsx? (if so add tests for its presence and function)
   // Connect to real information
   // Start styling
 
