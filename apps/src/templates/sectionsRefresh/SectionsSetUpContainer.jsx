@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import SingleSectionSetUp from './SingleSectionSetUp';
 import CurriculumQuickAssign from './CurriculumQuickAssign';
@@ -43,7 +44,7 @@ const useSections = () => {
   return [sections, updateSection];
 };
 
-const saveSection = (e, section) => {
+const saveSection = (e, section, shouldShowCelebrationDialogOnRedirect) => {
   e.preventDefault();
 
   const form = document.querySelector(`#${FORM_ID}`);
@@ -74,7 +75,11 @@ const saveSection = (e, section) => {
     .then(response => response.json())
     .then(data => {
       // Redirect to the sections list.
-      window.location.href = window.location.origin + '/home';
+      let redirectUrl = window.location.origin + '/home';
+      if (shouldShowCelebrationDialogOnRedirect) {
+        redirectUrl += '?showSectionCreationDialog=true';
+      }
+      window.location.href = redirectUrl;
     })
     .catch(err => {
       // TODO: Design how we want to show errors.
@@ -83,7 +88,7 @@ const saveSection = (e, section) => {
 };
 
 // TO DO: Add a prop to indicate if this is a new section or an existing section
-export default function SectionsSetUpContainer() {
+export default function SectionsSetUpContainer({isUsersFirstSection}) {
   const [sections, updateSection] = useSections();
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
 
@@ -153,12 +158,16 @@ export default function SectionsSetUpContainer() {
         <Button
           text={i18n.finishCreatingSections()}
           color="purple"
-          onClick={e => saveSection(e, sections[0])}
+          onClick={e => saveSection(e, sections[0], !!isUsersFirstSection)}
         />
       </div>
     </form>
   );
 }
+
+SectionsSetUpContainer.propTypes = {
+  isUsersFirstSection: PropTypes.bool
+};
 
 const style = {
   caret: {
