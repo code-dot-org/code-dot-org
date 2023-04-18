@@ -9,7 +9,7 @@ import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/Curricu
 import {translatedCourseOfferingDurations} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 
 const CurriculumCatalog = ({curriculaData}) => {
-  const filterTypes = ['testFilter1', 'testFilter2'];
+  const filterTypes = ['testFilter1'];
 
   // TODO: Make initialState more dynamically defined
   const initialState = {};
@@ -17,7 +17,7 @@ const CurriculumCatalog = ({curriculaData}) => {
   initialState[filterTypes[1]] = [];
 
   const [appliedFilters, setAppliedFilters] = useState(initialState);
-  const listData = [
+  const filter1Data = [
     {id: '1', value: 'Javascript'},
     {id: '2', value: 'Python'},
     {id: '3', value: 'Java'},
@@ -54,31 +54,36 @@ const CurriculumCatalog = ({curriculaData}) => {
           imageUrl={CourseCatalogIllustration01}
         />
       </div>
-      <div>
-        <p>aaaa</p>
-        {listData.map((item, index) => {
-          return (
-            <div key={item.id} className="checkbox-container">
-              <input
-                type="checkbox"
-                name="testFilter1"
-                value={item.value}
-                onChange={e => handleSelect(e, 'testFilter1')}
-              />
-              <label>{item.value}</label>
-            </div>
-          );
-        })}
-        <div className="list-container">
-          <label>You Selected:</label>
-          {appliedFilters['testFilter1'].map((item, index) => {
-            return (
-              <div className="chip">
-                <p className="chip-label">{item}</p>
-              </div>
-            );
-          })}
-        </div>
+      <div className="dropdown" id="filter1dropdown">
+        <button
+          id="filter1DropdownButton"
+          type="button"
+          className="selectbox"
+          data-toggle="dropdown"
+        >
+          FILTER 1
+        </button>
+        <ul className="dropdown-menu" aria-labelledby="dLabel">
+          <form>
+            {filter1Data.map(item => {
+              return (
+                <li
+                  key={`filter1-${item.value}-item`}
+                  className="checkbox form-group"
+                >
+                  <input
+                    type="checkbox"
+                    id={`filter1-${item.value}`}
+                    name={item.value}
+                    value={item.value}
+                    onChange={e => handleSelect(e, 'testFilter1')}
+                  />
+                  <label htmlFor={`filter1-${item.value}`}>{item.value}</label>
+                </li>
+              );
+            })}
+          </form>
+        </ul>
       </div>
       <div className={style.catalogContentContainer}>
         <div className={style.catalogContent}>
