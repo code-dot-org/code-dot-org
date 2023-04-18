@@ -1,11 +1,14 @@
 class SectionsController < ApplicationController
   include UsersHelper
   before_action :load_section_by_code, only: [:log_in, :show]
+  authorize_resource :section, only: [:new]
 
   def new
-    return head :forbidden unless current_user&.admin
+    return head :forbidden unless current_user.admin
 
     redirect_to '/home' unless params[:loginType] && params[:participantType]
+
+    @is_users_first_section = current_user.sections.empty?
   end
 
   def show
