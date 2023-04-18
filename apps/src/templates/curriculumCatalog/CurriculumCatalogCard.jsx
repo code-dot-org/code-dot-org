@@ -11,18 +11,15 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import style from './curriculum_catalog_card.module.scss';
 
-// TODO [MEG]: remove this placeholder and require() syntax once images are pulled
-const tempImage = require('@cdo/static/resource_cards/anotherhoc.png');
-
 const CurriculumCatalogCard = ({
   courseDisplayName,
   duration,
   gradesArray,
-  imageAltText,
-  imageSrc,
-  subjects,
-  topics,
-  isTranslated,
+  imageAltText = '', // for decorative images
+  imageSrc = 'https://images.code.org/0a24eb3b51bd86e054362f0760c6e64e-image-1681413990565.png',
+  subjects = [],
+  topics = [],
+  isTranslated = false,
   isEnglish
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -61,7 +58,7 @@ CurriculumCatalogCard.propTypes = {
     .isRequired,
   gradesArray: PropTypes.arrayOf(PropTypes.string).isRequired,
   imageAltText: PropTypes.string,
-  imageSrc: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string,
   isTranslated: PropTypes.bool,
   subjects: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(translatedCourseOfferingSchoolSubjects))
@@ -70,14 +67,6 @@ CurriculumCatalogCard.propTypes = {
     PropTypes.oneOf(Object.keys(translatedCourseOfferingCsTopics))
   ),
   isEnglish: PropTypes.bool.isRequired
-};
-
-CurriculumCatalogCard.defaultProps = {
-  imageSrc: tempImage, // TODO [MEG]: remove this default once images are pulled
-  imageAltText: '', // for decorative images
-  isTranslated: false,
-  subjects: [],
-  topics: []
 };
 
 const CustomizableCurriculumCatalogCard = ({
