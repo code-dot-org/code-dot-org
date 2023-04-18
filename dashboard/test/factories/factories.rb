@@ -1280,8 +1280,10 @@ FactoryBot.define do
     end
 
     trait :with_school do
-      # Use state and school_type from the parent school_info
-      school {build :public_school, state: state, school_type: school_type}
+      # Use state and school_type from the parent school_info. Also make sure
+      # that we create rather than just building the school, to accommodate the
+      # custom School#id logic
+      school {create :public_school, state: state, school_type: school_type}
     end
   end
 
