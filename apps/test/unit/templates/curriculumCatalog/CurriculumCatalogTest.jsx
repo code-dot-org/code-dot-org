@@ -37,7 +37,7 @@ describe('CurriculumCatalog', () => {
   };
 
   const allCurricula = [makerCurriculum, countingCurriculum, course1Curriculum];
-  const defaultProps = {curriculaData: allCurricula};
+  const defaultProps = {curriculaData: allCurricula, isEnglish: false};
 
   beforeEach(() => {
     const store = configureStore({reducer: {responsive}});
