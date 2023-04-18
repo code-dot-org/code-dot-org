@@ -21,6 +21,7 @@ import {
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
 import FieldChord from './FieldChord';
+import {Renderers} from '@cdo/apps/blockly/constants';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -78,8 +79,8 @@ export default class MusicBlocklyWorkspace {
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
       theme: CdoDarkTheme,
       renderer: experiments.isEnabled('zelos')
-        ? 'cdo_renderer_zelos'
-        : 'cdo_renderer_thrasos',
+        ? Renderers.ZELOS
+        : Renderers.DEFAULT,
       noFunctionBlockFrame: true,
       zoom: {
         startScale: experiments.isEnabled('zelos') ? 0.9 : 1
