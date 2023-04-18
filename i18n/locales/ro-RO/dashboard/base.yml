@@ -1096,6 +1096,13 @@ ro:
     no_teacher_email:
       body_markdown: 'Contul tău nu are o adresă de email. Te rugăm [să viziezi setările contului tău](%{user_registration})să adaugi adresa ta de email înainte de finalizarea acestui formular.'
   courses_category: 'Toate cursurile'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      hello_world: 'Bună Lume'
+      sports: 'Sporturi (Sports)'
+      csf: 'Fundamentele CS'
+      csc: 'Conexiuni CS'
   cookie_banner:
     message: 'Dacă continuați să navigați site-ul nostru sau faceți clic pe " Sunt de acord", sunteți de acord cu stocarea cookie-urilor pe computerul sau pe dispozitivul dumneavoastră.'
     more_information: "Consultaţi Politica de confidenţialitate a Code.org."

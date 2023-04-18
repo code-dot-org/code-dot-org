@@ -262,6 +262,9 @@ zh-TW:
           description: 用於 UI 測試的所有關卡類型。請登入以測試 applab 關卡（根據設計，applab 的關卡僅在登入後才可使用。我們通常讓人們登入，但只針對整個腳本時才強制執行，對於此腳本來說，這樣做會很煩人）。
           description_short: 用於 UI 測試的所有關卡類型
           student_description: 用於 UI 測試的所有關卡類型。請登入以測試 applab 關卡（根據設計，applab 的關卡僅在登入後才可使用。我們通常讓人們登入，但只針對整個腳本時才強制執行，對於此腳本來說，這樣做會很煩人）。
+          lessons:
+            lesson-49:
+              name: 音樂
         algebraPD2b:
           title: 代數裡的計算機科學 PD
           description: 階段 2 暑假的線上混合式學習
@@ -4649,6 +4652,21 @@ zh-TW:
               display_name: 內容
             lessonGroup-4:
               display_name: 替代課程
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: 知識產權
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-5:
+              display_name: 替代課程
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-4:
+              display_name: 問卷
         hello-world-space-2022:
           title: 你好世界：太空
         hello-world-soccer-2022:
@@ -5145,3 +5163,61 @@ zh-TW:
             lessonGroup-3:
               display_name: 第 2 章：建立物理原型
           description_short: 在實體裝置上開發程式
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 輸入與輸出
+        vpl-csd-ci-1:
+          title: 模組1：準備問題解決和計算教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的問題解決和計算單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-   認識問題解決和計算。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 30分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的問題解決和計算單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-   認識問題解決和計算。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 30分鐘"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Web開發教學
+          title: 模組2：準備Web開發教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的Web開發單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-   認識Web開發。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 90分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的Web開發單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-   認識Web開發。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 90分鐘"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 準備互動動畫和遊戲教學
+          title: 模組3：準備互動動畫和遊戲教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的互動動畫和遊戲單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-   認識互動動畫和遊戲。\n-   實踐單元中包含的關鍵概念。\n-   參與遊戲實驗室。\n-   探索章節結尾項目。\n\n**建議時間：** 120分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的互動動畫和遊戲單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-   認識互動動畫和遊戲。\n-   實踐單元中包含的關鍵概念。\n-   參與遊戲實驗室。\n-   探索章節結尾項目。\n\n**建議時間：** 120分鐘"
+        vpl-csd-ci-4:
+          title: 模組4：準備設計進程教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的設計進程單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-   認識設計進程。\n-   實踐單元中包含的關鍵概念。\n-   參與App實驗室。\n-   探索章節結尾項目。\n\n**建議時間：** 90分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的設計進程單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-   認識設計進程。\n-   實踐單元中包含的關鍵概念。\n-   參與App實驗室。\n-   探索章節結尾項目。\n\n**建議時間：** 90分鐘"
+        vpl-csd-ci-5:
+          title: 模組5：準備數據和社會教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的數據和社會單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-   認識數據和社會。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 90分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的數據和社會單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-   認識數據和社會。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 90分鐘"
+        vpl-csd-ci-7:
+          title: 模組7：準備人工智慧和機器學習教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的人工智慧和機器學習單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-   認識人工智慧和機器學習。\n-   實踐單元中包含的關鍵概念。\n-   參與人工智慧實驗室和App實驗室。\n-   探索章節結尾項目。\n-   制定一個與學生一起實施本單元的計畫。\n\n**建議時間：** 120分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的人工智慧和機器學習單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-   認識人工智慧和機器學習。\n-   實踐單元中包含的關鍵概念。\n-   參與人工智慧實驗室和App實驗室。\n-   探索章節結尾項目。\n-   制定一個與學生一起實施本單元的計畫。\n\n**建議時間：** 120分鐘"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 第 2 章：建立物理原型
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 輸入與輸出
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 輸入與輸出
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 輸入與輸出
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 輸入與輸出
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 輸入與輸出

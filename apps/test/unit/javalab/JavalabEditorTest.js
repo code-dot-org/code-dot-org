@@ -38,7 +38,7 @@ import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import {allowConsoleWarnings} from '../../util/throwOnConsole';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import javalabMsg from '@cdo/javalab/locale';
-import {JavalabEditorDialog} from '@cdo/apps/javalab/JavalabEditorDialogManager';
+import {JavalabEditorDialog} from '@cdo/apps/javalab/types';
 import {darkMode, lightMode} from '@cdo/apps/javalab/editorThemes';
 import {BackpackAPIContext} from '../../../src/javalab/BackpackAPIContext';
 

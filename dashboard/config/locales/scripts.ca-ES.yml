@@ -136,6 +136,9 @@ ca:
             divertits!
         allthethings:
           title: Totes les coses!
+          lessons:
+            lesson-49:
+              name: Música
         asUnplugged:
           description_audience: Edats 6-13
         afterschool1:
@@ -1985,3 +1988,9 @@ ca:
             dissenyar i crear un joc o un dibuix per compartir-lo amb els amics i
             la família.
           description_audience: De 8 a 12 anys
+        microbit-2023:
+          title: microbit
+        vpl-csd-ci-7:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ensenyar I.A. i aprenentatge automàtic

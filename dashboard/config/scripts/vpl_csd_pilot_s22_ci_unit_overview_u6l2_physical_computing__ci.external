@@ -5,22 +5,26 @@ description 'description here'
 markdown <<MARKDOWN
 # Unit Overview
 
-##### In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-## Students will:
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.
+</p></div>
+
+<div style="float:right; margin-left:10px; margin-right:10px;">
+<img src="https://images.code.org/e78e4d2060dd3092f19834442770799e-image-1648879294294.JPG" alt="Image of app asking the user what colors to display on a small circuit board"  style="height: 250px; clear: both; margin-left:25px; margin-right:25px; margin-top:10px; margin-bottom:20px;">
+
+<img src="https://images.code.org/23b0c0fba77d686d247d41e79f932f68-image-1648881074935.png" alt="Image of a small circuit board"  style="height: 225px; clear: both; margin-left:25px; margin-right:25px; margin-top:10px; margin-bottom:20px;">
+</div>
+
+### **Students Will:**
 * ##### Design and build a physical computing device that integrates physical inputs and outputs with digital apps. 
 * ##### Create app prototypes that use a physical device to solve real-world problems
 * ##### Use physical computing to solve problems in fun and innovative ways.
 
+<div style="clear:both;">
 
-## 
-
-<img src="https://images.code.org/e78e4d2060dd3092f19834442770799e-image-1648879294294.JPG" alt="Image of app asking the user what colors to display on a small circuit board"  style="padding-left: 120px; height: 250px; clear: both; margin: 0 20px 20px 0;">
-
-<img src="https://images.code.org/23b0c0fba77d686d247d41e79f932f68-image-1648881074935.png" alt="Image of a small circuit board"  style="padding-left: 120px; height: 250px; clear: both; margin: 0 20px 20px 0;">
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.4em; font-weight: bold;">🔎 Do I need a class set of Circuit Playgrounds to teach the Creating Apps with Devices unit?</summary>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-top:50px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.4em; font-weight: bold;">❓ Do I need a class set of Circuit Playgrounds to teach the Creating Apps with Devices unit?</summary>
  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -32,7 +36,7 @@ markdown <<MARKDOWN
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.4em; font-weight: bold;">🔎 Do my students need computers to complete the activities in the Creating Apps for Devices unit?</summary>
+<summary style="font-size: 1.4em; font-weight: bold;">💻 Do my students need computers to complete the activities in the Creating Apps for Devices unit?</summary>
  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -44,7 +48,7 @@ markdown <<MARKDOWN
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.4em; font-weight: bold;">🔎 Are there prerequisites for the Creating Apps with Devices Unit?</summary>
+<summary style="font-size: 1.4em; font-weight: bold;">✔️ Are there prerequisites for the Creating Apps with Devices Unit?</summary>
  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -53,21 +57,21 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.4em; font-weight: bold;">🔎 Is the Creating Apps with Devices unit mapped to standards?</summary>
+<summary style="font-size: 1.4em; font-weight: bold;">✍🏽 Is the Creating Apps with Devices unit mapped to standards?</summary>
  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-##### The Creating Apps with Devices unit was written using both the K-12 Framework for Computer Science and the **2017 CSTA standards** as guidance. Currently, every lesson maps to the relevant 2017 CSTA standards. The summary of of all CSTA 2017 mappings can be found at <a href="https://studio.code.org/s/devices-2022/standards" target="blank" rel="noopener noreferrer">https://studio.code.org/s/devices-2023/standards</a>. 
+##### The Creating Apps with Devices unit was written using both the K-12 Framework for Computer Science and the **2017 CSTA standards** as guidance. Currently, every lesson maps to the relevant 2017 CSTA standards. The summary of of all CSTA 2017 mappings can be found at <a href="https://studio.code.org/s/devices-2022/standards" target="blank" rel="noopener noreferrer">https://studio.code.org/s/csd6-2023/standards</a>. 
 </p></div>
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.4em; font-weight: bold;">🔎 How much time do I need to teach the Creating Apps with Devices unit?</summary>
+<summary style="font-size: 1.4em; font-weight: bold;">⏳ How much time do I need to teach the Creating Apps with Devices unit?</summary>
  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
 #### **Time needed to teach this unit:** 6 weeks 
-##### The recommended time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/devices-2023" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
+##### The recommended time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd6-2023" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
 
 </p></div>
 </details>

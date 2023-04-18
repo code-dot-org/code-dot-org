@@ -16,13 +16,14 @@
     },
     "encrypted_examples": [
 
-    ]
+    ],
+    "video_key": "csa_working_with_2d_array_elements"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-03-27T23:47:01.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-03-27T23:47:01.296+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L7a_2023\\\"\"],\"cloned_from\":\"CSA U5L2-L7a_2023\"},{\"changed_at\":\"2023-03-27 23:47:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-27T23:47:01.296+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L7a_2023\\\"\"],\"cloned_from\":\"CSA U5L2-L7a_2023\"},{\"changed_at\":\"2023-03-27 23:47:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:41:44 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

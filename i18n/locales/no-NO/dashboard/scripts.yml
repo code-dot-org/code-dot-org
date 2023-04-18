@@ -113,6 +113,9 @@
           description: Alle nivå typer for UI tester
           description_short: Alle nivå typer for UI tester
           student_description: Alle nivå typer for UI tester
+          lessons:
+            lesson-49:
+              name: Musikk
         algebraPD2b:
           description: Lär ut funktionell programmering genom algebra
           description_short: Lär ut funktionell programmering genom algebra
@@ -2219,6 +2222,16 @@
           lesson_groups:
             lessonGroup-2:
               display_name: Innhold
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+            lessonGroup-4:
+              display_name: Undersøkelse
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2476,4 +2489,8 @@
         csd6a-2023:
           lesson_groups:
             lessonGroup-3:
+              display_name: 'Kapittel 2: Bygge fysiske prototyper'
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
               display_name: 'Kapittel 2: Bygge fysiske prototyper'

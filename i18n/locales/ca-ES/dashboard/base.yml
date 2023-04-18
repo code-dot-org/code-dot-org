@@ -1189,6 +1189,13 @@ ca:
     no_teacher_email:
       body_markdown: 'El vostre compte no té un correu electrònic vinculat. [Visiteu la pàgina de configuració del compte](%{user_registration}) per afegir-lo abans d''emplenar el formulari.'
   courses_category: 'Cursos complets'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      hello_world: 'Hola, món'
+      sports: 'Esports'
+      csf: 'Fonaments de la Informàtica'
+      csc: 'Connexions CS'
   cookie_banner:
     message: 'Si continueu fent servir la nostra pàgina web o feu clic a "Accepto", accepteu que es guardin galetes al vostre ordinador o dispositiu.'
     more_information: "Vegeu la Política de privacitat de Code.org."

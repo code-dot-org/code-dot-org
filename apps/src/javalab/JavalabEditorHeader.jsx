@@ -10,7 +10,7 @@ import PaneHeader, {
 } from '@cdo/apps/templates/PaneHeader';
 import {DisplayTheme} from './DisplayTheme';
 import Backpack from './Backpack';
-import {JavalabEditorDialog} from './JavalabEditorDialogManager';
+import {JavalabEditorDialog} from './types';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 
 /**

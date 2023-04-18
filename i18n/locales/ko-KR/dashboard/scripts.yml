@@ -121,6 +121,9 @@ ko:
           description: UI 테스트에 대한 모든 레벨의 종류
           description_short: UI 테스트에 대한 모든 레벨의 종류
           student_description: UI 테스트에 대한 모든 레벨의 종류
+          lessons:
+            lesson-49:
+              name: 음악
         algebraPD2b:
           description: '단계 2 온라인: 혼합된 여름 공부'
           description_short: '단계 2 온라인: 혼합된 여름 공부'
@@ -4202,6 +4205,21 @@ ko:
               display_name: 컨텐츠
             lessonGroup-4:
               display_name: 대체 레슨
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: 지적 재산
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 대체 레슨
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 설문조사
         hello-world-space-2022:
           title: '헬로 월드: 스페이스'
         hello-world-soccer-2022:
@@ -4697,3 +4715,61 @@ ko:
             lessonGroup-3:
               display_name: '챕터 2: 물리적 프로토타입 만들기'
           description_short: 물리적 기기로 프로그램 하는 법 배우기
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 인풋 및 아웃풋
+        vpl-csd-ci-1:
+          title: '모듈 1: 문제 해결과 컴퓨팅 교습 준비'
+          description: "이 전문 학습 모듈은 귀하가 Code.org의 문제해결 및 컴퓨팅 단원을 가르칠 준비를 하는 데 도움을 주도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다.**\n\n-   문제 해결 및 컴퓨팅에 대한 소개 학습.\n-   해당 단원에 포함된 핵심 개념 연습.\n-   챕터 마지막의 프로젝트 탐구.\n\n**권장 시간:** 30분"
+          student_description: "이 전문 학습 모듈은 귀하가 Code.org의 문제해결 및 컴퓨팅 단원을 가르칠 준비를 하는 데 도움을 주도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다.**\n\n-   문제 해결 및 컴퓨팅에 대한 소개 학습.\n-   해당 단원에 포함된 핵심 개념 연습.\n-   챕터 마지막의 프로젝트 탐구.\n\n**권장 시간:** 30분"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 교습 웹 개발
+          title: '모듈 2: 웹 개발 교습 준비'
+          description: "이 전문 학습 모듈은 Code.org의 웹 개발 단원을 교습할 준비를 돕도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다:**\n\n-   웹 개발에 대한 도입 확보.\n-   단원에 포함된 키 개념 연습.\n-   웹 랩에 참여.\n-   챕터 말 프로젝트 탐구.\n\n**권장 시간:** 90분"
+          student_description: "이 전문 학습 모듈은 Code.org의 웹 개발 단원을 교습할 준비를 돕도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다:**\n\n-   웹 개발에 대한 도입 확보.\n-   단원에 포함된 키 개념 연습.\n-   웹 랩에 참여.\n-   챕터 말 프로젝트 탐구.\n\n**권장 시간:** 90분"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 인터랙티브 애니메이션 및 게임 교습 준비
+          title: '모듈 3: 인터랙티브 애니메이션과 게임 교습 준비'
+          description: "이 전문 학습 모듈은 Code.org의 인터랙티브 애니메이션과 게임 단원을 교습할 준비를 돕도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다:**\n\n-   인터랙티브 애니메이션 및 게임에 대한 도입 학습.\n-   단원에 포함된 핵심 개념 연습.\n-   게임 랩에 참여.\n-   챕터 마지막 프로젝트 탐구.\n\n**권장 시간:** 120분"
+          student_description: "이 전문 학습 모듈은 Code.org의 인터랙티브 애니메이션과 게임 단원을 교습할 준비를 돕도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다:**\n\n-   인터랙티브 애니메이션 및 게임에 대한 도입 학습.\n-   단원에 포함된 핵심 개념 연습.\n-   게임 랩에 참여.\n-   챕터 마지막 프로젝트 탐구.\n\n**권장 시간:** 120분"
+        vpl-csd-ci-4:
+          title: " 모듈 4: 디자인 프로세스 교습 준비"
+          description: "이 전문 학습 모듈은 Code.org의 디자인 프로세스 단원을 교습할 준비를 돕도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다:**\n\n-   디자인 프로세스에 대한 도입 학습.\n-   단원에 포함된 핵심 개념 연습.\n-   앱 랩에 참여.\n-   챕터 마지막 프로젝트 탐구.\n\n**권장 시간:** 90분"
+          student_description: "이 전문 학습 모듈은 Code.org의 디자인 프로세스 단원을 교습할 준비를 돕도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다:**\n\n-   디자인 프로세스에 대한 도입 학습.\n-   단원에 포함된 핵심 개념 연습.\n-   앱 랩에 참여.\n-   챕터 마지막 프로젝트 탐구.\n\n**권장 시간:** 90분"
+        vpl-csd-ci-5:
+          title: '모듈 5: 데이터 및 사회 교습 준비'
+          description: "이 전문 학습 모듈은 귀하가 Code.org의 데이터 및 사회 단원을 가르칠 준비를 하는 데 도움을 주도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다.**\n\n-   데이터 및 사회에 대한 소개 학습.\n-   해당 단원에 포함된 핵심 개념 연습.\n-   챕터 마지막의 프로젝트 탐구.\n\n**권장 시간:** 90분"
+          student_description: "이 전문 학습 모듈은 귀하가 Code.org의 데이터 및 사회 단원을 가르칠 준비를 하는 데 도움을 주도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다.**\n\n-   데이터 및 사회에 대한 소개 학습.\n-   해당 단원에 포함된 핵심 개념 연습.\n-   챕터 마지막의 프로젝트 탐구.\n\n**권장 시간:** 90분"
+        vpl-csd-ci-7:
+          title: '모듈 7: AI와 머신 러닝 교습 준비'
+          description: "이 전문 학습 모듈은 귀하가 Code.org의 AI 및 머신 러닝을 가르칠 준비를 하는 데 도움을 주도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다.**\n\n-   AI 및 머신 러닝에 대한 소개 학습.\n-   이 단원에 포함된 핵심 개념 연습.\n-   AI 랩과 앱 랩 사용.\n-   챕터 마지막의 프로젝트 탐구.\n-   학생들과 단원을 이행하는 계획 수립.\n\n**권장 시간:** 120분"
+          student_description: "이 전문 학습 모듈은 귀하가 Code.org의 AI 및 머신 러닝을 가르칠 준비를 하는 데 도움을 주도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다.**\n\n-   AI 및 머신 러닝에 대한 소개 학습.\n-   이 단원에 포함된 핵심 개념 연습.\n-   AI 랩과 앱 랩 사용.\n-   챕터 마지막의 프로젝트 탐구.\n-   학생들과 단원을 이행하는 계획 수립.\n\n**권장 시간:** 120분"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '챕터 2: 물리적 프로토타입 만들기'
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 인풋 및 아웃풋
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 인풋 및 아웃풋
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 인풋 및 아웃풋
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 인풋 및 아웃풋
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 인풋 및 아웃풋

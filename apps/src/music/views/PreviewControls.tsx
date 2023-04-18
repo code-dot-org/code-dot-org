@@ -1,6 +1,6 @@
 import React, {useCallback} from 'react';
+import classNames from 'classnames';
 
-const classNames = require('classnames');
 const FontAwesome = require('../../templates/FontAwesome');
 const moduleStyles = require('./preview-controls.module.scss').default;
 
@@ -30,7 +30,11 @@ const ClearButton: React.FunctionComponent<ClearButtonProps> = ({
     onClickClear();
   }, [cancelPreviews, onClickClear]);
   return (
-    <button className={moduleStyles.buttonContainer} onClick={onClick}>
+    <button
+      className={moduleStyles.buttonContainer}
+      onClick={onClick}
+      type="button"
+    >
       <FontAwesome icon={'trash-o'} className={moduleStyles.previewButton} />
     </button>
   );
@@ -49,6 +53,7 @@ const PreviewButton: React.FunctionComponent<PreviewButtonProps> = ({
     <button
       className={moduleStyles.buttonContainer}
       onClick={enabled ? playPreview : undefined}
+      type="button"
     >
       <FontAwesome
         icon={'play-circle'}
