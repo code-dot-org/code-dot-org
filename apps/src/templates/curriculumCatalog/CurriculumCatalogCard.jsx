@@ -99,14 +99,6 @@ const CustomizableCurriculumCatalogCard = ({
     <img src={imageSrc} alt={imageAltText} />
     <div className={style.curriculumInfoContainer}>
       <div className={style.labelsAndTranslatabilityContainer}>
-        {/*TODO [MEG]: Ensure this icon matches spec when we update FontAwesome */}
-        {isTranslated && (
-          <FontAwesome
-            icon="language"
-            className="fa-solid"
-            title={translationIconTitle}
-          />
-        )}
         {subjectsAndTopics.length > 0 && (
           <div className={style.labelsContainer}>
             <div>{subjectsAndTopics[0]}</div>
@@ -114,6 +106,14 @@ const CustomizableCurriculumCatalogCard = ({
               <div>{`+${subjectsAndTopics.length - 1}`}</div>
             )}
           </div>
+        )}
+        {/*TODO [MEG]: Ensure this icon matches spec when we update FontAwesome */}
+        {isTranslated && (
+          <FontAwesome
+            icon="language"
+            className="fa-solid"
+            title={translationIconTitle}
+          />
         )}
       </div>
       <h4>{courseDisplayName}</h4>
