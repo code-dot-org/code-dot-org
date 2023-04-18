@@ -2001,6 +2001,10 @@ he:
           lessons:
             lesson-3:
               name: בשביל לולאות
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: סקר
         hello-world-space-2022:
           title: 'שלום, עולם: שטח'
         csd1-2023:

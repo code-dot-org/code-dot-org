@@ -14,18 +14,22 @@
         "tabOrder": 0
       }
     },
+    "display_name": "Fashion Trends",
+    "bubble_choice_description": "Implement your algorithm to create a visual displaying the most common brands purchased.",
+    "thumbnail_url": "https://images.code.org/9839124f82fbf0c41d77e41da7c076a4-fashion.png",
     "encrypted_examples": [
 
     ],
-    "display_name": "Fashion Trends",
-    "bubble_choice_description": "Implement your algorithm to create a visual displaying the most common brands purchased.",
-    "thumbnail_url": "https://images.code.org/9839124f82fbf0c41d77e41da7c076a4-fashion.png"
+    "reference_links": [
+      "/courses/csa-2023/guides/multi-selection-statements"
+    ],
+    "video_key": "csa_multi-selection_statements"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-02-17T19:04:29.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-02-17T19:04:29.388+00:00\",\"changed\":[\"cloned from \\\"CSA U4L10-L4_2023\\\"\"],\"cloned_from\":\"CSA U4L10-L4_2023\"},{\"changed_at\":\"2023-02-17 19:04:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-10 21:10:38 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-10 21:16:49 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-17T19:04:29.388+00:00\",\"changed\":[\"cloned from \\\"CSA U4L10-L4_2023\\\"\"],\"cloned_from\":\"CSA U4L10-L4_2023\"},{\"changed_at\":\"2023-02-17 19:04:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-10 21:10:38 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-10 21:16:49 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 13:46:42 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

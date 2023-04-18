@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-04-13 23:12:34 UTC",
+    "serialized_at": "2023-04-18 03:33:37 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -42,18 +42,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "announcements": [
-          {
-            "notice": "AI/ML Professional Development",
-            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
-            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.\n\n**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?",
-        "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n",
         "student_overview": "Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean"
       },
       "seeding_key": {
@@ -135,7 +126,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.",
-        "preparation": "- Prepare to share online one **AI Ethics Research Areas** handout per group.\r\n- Print or prepare to share online one **AI Ethics Research Reflection** handout per group.\r\n- Prepare a shareable web document, slide presentation, video template, or any other form of media to be used to comprise your class’ “Our AI Code of Ethics” resource.\r\n- (Optional) Watch our **How AI Works** video series and prepare to share it with students after the lesson.",
+        "preparation": "- Prepare to share online one **AI Ethics Research Areas** handout per group.\n- Print or prepare to share online one **AI Ethics Research Reflection** handout per group.\n- Prepare a shareable web document, slide presentation, video template, or any other form of media to be used to comprise your class’ “Our AI Code of Ethics” resource.",
         "student_overview": "Collaboratively research about AI ethics and create a shareable code of conduct."
       },
       "seeding_key": {
@@ -146,13 +137,13 @@
     },
     {
       "key": "Blockchain In a Day",
-      "name": "Blockchain In a Day",
+      "name": "Introduction to AI In a Day",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "⚠️This lesson is intended for classrooms that want to show the entire How Blockchain Works video series in a **single day**. It is not intended to be taught in sequence with the other lessons in this unit, which introduces each video one day at a time.\n\nStudents follow along with each video by matching vocabulary from the video, then answering a reflection question about each video. The lesson plan and slides are very sparse and open-ended to allow for improvisation and customization to fit your classroom."
+        "overview": "⚠️This lesson is intended for classrooms that want to show the entire Introduction to AI video series in a **single day**. It is not intended to be taught in sequence with the other lessons in this unit, which introduces each video one day at a time.\n\nStudents follow along with each video by matching vocabulary from the video, then answering a reflection question about each video. The lesson plan and slides are very sparse and open-ended to allow for improvisation and customization to fit your classroom."
       },
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
@@ -314,24 +305,11 @@
       }
     },
     {
-      "key": "c94fe253-e775-4ad1-8d9d-1f4a38793b74",
-      "position": 5,
-      "properties": {
-        "name": "Extended Learning"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c94fe253-e775-4ad1-8d9d-1f4a38793b74",
-        "lesson.key": "Our AI Code of Ethics",
-        "lesson_group.key": "",
-        "script.name": "ai-temp"
-      }
-    },
-    {
       "key": "4a5a98de-b492-47df-95a0-6aceefa69ffd",
       "position": 1,
       "properties": {
         "duration": 5,
-        "name": "Introduction to Blockchain"
+        "name": "Introduction to AI"
       },
       "seeding_key": {
         "lesson_activity.key": "4a5a98de-b492-47df-95a0-6aceefa69ffd",
@@ -345,7 +323,7 @@
       "position": 2,
       "properties": {
         "duration": 10,
-        "name": "Why Blockchain?"
+        "name": "What is Machine Learning?"
       },
       "seeding_key": {
         "lesson_activity.key": "46c8889e-3e6c-4f38-85f7-4355cef430ba",
@@ -359,7 +337,7 @@
       "position": 3,
       "properties": {
         "duration": 10,
-        "name": "Under the Hood"
+        "name": "Training Data and Bias"
       },
       "seeding_key": {
         "lesson_activity.key": "1bac79cf-34b0-4d15-b558-c3e4921d6f9b",
@@ -373,7 +351,7 @@
       "position": 4,
       "properties": {
         "duration": 10,
-        "name": "Beyond Currencies"
+        "name": "WIP Beyond Currencies"
       },
       "seeding_key": {
         "lesson_activity.key": "e9dc2621-41aa-462f-ad59-bea401630ac9",
@@ -387,7 +365,7 @@
       "position": 5,
       "properties": {
         "duration": 10,
-        "name": "Marketplace & Price"
+        "name": "WIP Marketplace & Price"
       },
       "seeding_key": {
         "lesson_activity.key": "dc78ffe6-c1cd-49ad-aceb-a39b233a3931",
@@ -401,7 +379,7 @@
       "position": 6,
       "properties": {
         "duration": 10,
-        "name": "Trustworthy or a Scam"
+        "name": "Ethics & AI: Equal Access and Algorithmic Bias"
       },
       "seeding_key": {
         "lesson_activity.key": "abbb0aa6-d654-4130-ab38-ae014235d655",
@@ -415,7 +393,7 @@
       "position": 7,
       "properties": {
         "duration": 10,
-        "name": "Societal Impact"
+        "name": "Ethics & AI: Privacy & the Future of Work"
       },
       "seeding_key": {
         "lesson_activity.key": "770d000b-e678-4bf8-a98a-797388320d6b",
@@ -443,7 +421,7 @@
       "key": "efe9075d-e60b-41ca-bbe6-32285a8acd06",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). ",
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). ",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
@@ -798,15 +776,13 @@
       }
     },
     {
-      "key": "6b4f0c67-b8b6-49e6-9331-e6fe9b8886a1",
+      "key": "679a6819-0166-4683-8110-c81c20e37457",
       "position": 1,
       "properties": {
-        "description": "**Code Studio:** Have students answer 5 quick survey questions at the beginning of this unit on AI and Machine Learning. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
-        "name": "Reflection",
-        "progression_name": "Check-In Survey"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the  video in the slides\n[r introduction_to_ai_-_training_data_and_bias/ai-temp/unversioned]"
       },
       "seeding_key": {
-        "activity_section.key": "6b4f0c67-b8b6-49e6-9331-e6fe9b8886a1",
+        "activity_section.key": "679a6819-0166-4683-8110-c81c20e37457",
         "lesson_activity.key": "57ed185b-d2e8-4766-9661-3f832cec5152"
       }
     },
@@ -997,7 +973,7 @@
       "key": "11b9c974-2a82-4453-babd-af1299b2c3f0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Watch the video [“Introduction to AI - Societal Impact ”](https://youtu.be/tJQSyzBUAew)"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Watch the video \n[r introduction_to_ai_-_societal_impact/ai-temp/unversioned]"
       },
       "seeding_key": {
         "activity_section.key": "11b9c974-2a82-4453-babd-af1299b2c3f0",
@@ -1114,19 +1090,8 @@
       }
     },
     {
-      "key": "737b817e-018b-4598-892e-2138f424c1ff",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r ethics_ai_equal_access_and_algorithmic_bias/ai-temp/unversioned] video to setup the activity they will complete today.\n\n\n\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "737b817e-018b-4598-892e-2138f424c1ff",
-        "lesson_activity.key": "00e07751-15c1-4fee-902e-1e6877eaa69e"
-      }
-    },
-    {
       "key": "96148774-43f3-4272-80d5-850dc3d8877c",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "**Groups**: Place students in groups of three or four.",
         "name": "Research and Reflect"
@@ -1138,7 +1103,7 @@
     },
     {
       "key": "b27e29ea-22f3-49cc-b5fb-ebccb2f3fe0d",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "Roleplay time! Today you are a group of AI experts. Each group specializes in a particular area of AI ethics. You are holding a meeting to write an “AI Code of Ethics”, which will be a set of rules for people who work on AI machines and lawmakers worldwide! One example of a rule might be, “AI must treat all people fairly.” Before you begin writing these rules, you will research your area and discuss it with your group members.",
         "remarks": true
@@ -1150,7 +1115,7 @@
     },
     {
       "key": "d0097d6a-6380-495f-acfa-0fec2733119e",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Digitally share the [r ai_ethics_research_areas/ai-temp/unversioned] document with each group. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with one copy of the [r ai_ethics_research_reflection/ai-temp/unversioned] handout. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students research their area with  fellow group members, answering questions on the handout along the way. Students can skim the longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\n\n#### AI Ethics Research Reflection\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout.\n\n\n\n\n\n"
       },
@@ -1161,14 +1126,14 @@
     },
     {
       "key": "cd595daa-684b-41e8-ab6d-a6716923d382",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Once students have completed their research, share an example of an AI code of ethics, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _Your next task is to create a similar resource, an “AI Code of Ethics”. Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow?_\n\nHave students discuss in their groups to brainstorm some initial ideas before regrouping to give a more specific task\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students will write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page).",
         "name": "Draft “Our AI Code of Ethics” Resource ",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Displaying a Class Code of Ethics:** The format of your class Code of Ethics is completely up to you and your students. For example, you might ask groups to create a poster, or for each take a single slide from a shared presentation (such as the one from our [r our-ai-code-of-ethics-template-slides/ai-ethics/unversioned]), or a page from a shared document. You might even ask students to use their webcams to record short video clips that you can compile and publish as a single video. Be as creative as you wish!"
+            "markdown": "**Displaying a Class Code of Ethics:** The format of your class Code of Ethics is completely up to you and your students. For example, you might ask groups to create a poster, or for each take a single slide from a shared presentation (such as the one from our [r our_ai_code_of_ethics_template_/ai-temp/unversioned]), or a page from a shared document. You might even ask students to use their webcams to record short video clips that you can compile and publish as a single video. Be as creative as you wish!"
           }
         ]
       },
@@ -1178,10 +1143,21 @@
       }
     },
     {
-      "key": "340bfba4-be24-40bc-b080-acd39d6a5767",
+      "key": "cadd45cc-05e2-430c-94c3-5b67aef18696",
       "position": 1,
       "properties": {
-        "description": "**Discuss**: _How would you describe “AI ethics” to a family member or friend who didn’t participate in today’s lesson?_\n\nEncourage student to use evidence from their research in explaining what AI Ethics is and the need for an ethical code.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Watch the video \n[r introduction_to_ai_-_privacy_and_future_of_work/ai-temp/unversioned]"
+      },
+      "seeding_key": {
+        "activity_section.key": "cadd45cc-05e2-430c-94c3-5b67aef18696",
+        "lesson_activity.key": "8ed127df-c40b-4809-8803-c1abd706b689"
+      }
+    },
+    {
+      "key": "340bfba4-be24-40bc-b080-acd39d6a5767",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _How would you describe “AI ethics” to a family member or friend who didn’t participate in today’s lesson?_\n\nEncourage student to use evidence from their research in explaining what AI Ethics is and the need for an ethical code.",
         "name": "Journal"
       },
       "seeding_key": {
@@ -1190,22 +1166,10 @@
       }
     },
     {
-      "key": "56f9004c-2ac0-42be-b8c2-05a1e278e6da",
-      "position": 1,
-      "properties": {
-        "description": "If you or your students would like to learn more about AI, check out our [r how_ai_works/ai-temp/unversioned] video series.\n\n\n\n\n\n",
-        "name": "Learn more about AI\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "56f9004c-2ac0-42be-b8c2-05a1e278e6da",
-        "lesson_activity.key": "c94fe253-e775-4ad1-8d9d-1f4a38793b74"
-      }
-    },
-    {
       "key": "8645c99d-e8c5-449c-8ec4-bc7b27c64a3b",
       "position": 1,
       "properties": {
-        "description": "Today we're going to learn about Blockchain technology! What is Blockchain you ask? Let's find out together!",
+        "description": "Today we're going to learn about AI technology! What is AI you ask? Let's find out together!",
         "remarks": true
       },
       "seeding_key": {
@@ -1217,7 +1181,8 @@
       "key": "97acbc7c-b1d1-4ff0-a0b5-168f430d5a9f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the \n[r how_blockchain_works_introduction/ai-temp/unversioned] video"
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the \n[r how_blockchain_works_introduction/ai-temp/unversioned] video",
+        "name": "WIP: to be deleted"
       },
       "seeding_key": {
         "activity_section.key": "97acbc7c-b1d1-4ff0-a0b5-168f430d5a9f",
@@ -1228,7 +1193,7 @@
       "key": "f8a286c4-d9e3-4b55-899e-bd3c55a7a9dc",
       "position": 3,
       "properties": {
-        "description": "We're going to spend class watching this entire series! Ecah video will have some new vocabulary to keep track of. After each video, there will be a reflection question to answer and discuss. Let's get started!",
+        "description": "We're going to spend class watching this entire series! Each video will have some new vocabulary to keep track of. After each video, there will be a reflection question to answer and discuss. Let's get started!",
         "remarks": true
       },
       "seeding_key": {
@@ -1251,7 +1216,7 @@
       "key": "29b3ec86-58e6-4c7d-9718-d6b00776979e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_why_blockchain_/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n [r introduction_to_ai_what_is_machine_learning_/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker.\n"
       },
       "seeding_key": {
         "activity_section.key": "29b3ec86-58e6-4c7d-9718-d6b00776979e",
@@ -1262,7 +1227,7 @@
       "key": "5aacbc0e-b00f-4a5c-a232-a73416d08301",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is one issue in today’s society that might be improved by blockchain? What is a potential new issue that you think could occur because of Blockchain?"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s an example of AI either in your personal life or that you’ve seen in a movie or book?"
       },
       "seeding_key": {
         "activity_section.key": "5aacbc0e-b00f-4a5c-a232-a73416d08301",
@@ -1273,7 +1238,7 @@
       "key": "090f25ba-166a-4e6f-b7fb-ef374319a987",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_under_the_hood/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the [r introduction_to_ai_training_data_and_bias/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker.\n"
       },
       "seeding_key": {
         "activity_section.key": "090f25ba-166a-4e6f-b7fb-ef374319a987",
@@ -1284,7 +1249,7 @@
       "key": "c683ccbf-8b65-409f-b656-fd9221efefbb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** The blockchain helps facilitate thousands of transactions each day between people who’ve never met or trust each other. What are some of the ways the blockchain helps ensure this trust or helps make sure people don’t abuse the network?"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How does learning about human bias in machine learning change your thoughts on AI?"
       },
       "seeding_key": {
         "activity_section.key": "c683ccbf-8b65-409f-b656-fd9221efefbb",
@@ -1339,7 +1304,7 @@
       "key": "79b13b87-8713-470e-bbc9-17f112e89477",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r blockchain_trustworthy_or_a_scam_/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the [r introduction_to_ai_ethics_ai_equal_access_and_algorithmic_bias/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker.\n"
       },
       "seeding_key": {
         "activity_section.key": "79b13b87-8713-470e-bbc9-17f112e89477",
@@ -1350,7 +1315,7 @@
       "key": "8f04517c-7491-4a57-afb8-1a5db2ea4c0b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** After watching the video, do you think Blockchain is mostly trustworthy? Or mostly a scam?"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How would you describe “AI ethics” to a family member or friend?"
       },
       "seeding_key": {
         "activity_section.key": "8f04517c-7491-4a57-afb8-1a5db2ea4c0b",
@@ -1361,7 +1326,7 @@
       "key": "419be35e-d4b1-4ada-8abc-f77c26219c5c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r blockchain_societal_impact/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the [r introduction_to_ai_ethics_ai_privacy_the_future_of_work/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker.\n"
       },
       "seeding_key": {
         "activity_section.key": "419be35e-d4b1-4ada-8abc-f77c26219c5c",
@@ -1372,7 +1337,7 @@
       "key": "ec8ee443-e7f1-457f-a89d-92bfba916f44",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s one way Blockchain could be beneficial to society? What’s one way Blockchain might be harmful?"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How does AI change your thoughts on your future work and careers?\n\n"
       },
       "seeding_key": {
         "activity_section.key": "ec8ee443-e7f1-457f-a89d-92bfba916f44",
@@ -1482,31 +1447,6 @@
     },
     {
       "chapter": 4,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "aiml-intro-pulse-survey_introai"
-        ],
-        "progression": "Check-In Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "aiml-intro-pulse-survey_introai"
-        ],
-        "lesson.key": "Introduction to Machine Learning",
-        "lesson_group.key": "",
-        "script.name": "ai-temp",
-        "activity_section.key": "6b4f0c67-b8b6-49e6-9331-e6fe9b8886a1"
-      },
-      "level_keys": [
-        "aiml-intro-pulse-survey_introai"
-      ]
-    },
-    {
-      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1531,7 +1471,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 5,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -1556,7 +1496,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 6,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -1620,18 +1560,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "aiml-intro-pulse-survey_introai",
-        "script_level.level_keys": [
-          "aiml-intro-pulse-survey_introai"
-        ],
-        "lesson.key": "Introduction to Machine Learning",
-        "lesson_group.key": "",
-        "script.name": "ai-temp",
-        "activity_section.key": "6b4f0c67-b8b6-49e6-9331-e6fe9b8886a1"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "U9L5 Cropping Widget_introai",
         "script_level.level_keys": [
           "U9L5 Cropping Widget_introai"
@@ -1670,7 +1598,7 @@
   "resources": [
     {
       "name": "AI Code of Ethics",
-      "url": "https://docs.google.com/presentation/d/1R9kSIbLwHtLSY0HoeIz19Kt1eXQKmCCjG6qM_VQhVGc/copy",
+      "url": "https://docs.google.com/presentation/d/18r16dGGz9ZYwG-lSdC7s35-J4yrbc_glpubFZqYsuBg/copy",
       "key": "ai_code_of_ethics",
       "properties": {
         "audience": "Teacher",
@@ -1682,12 +1610,11 @@
     },
     {
       "name": "AI Ethics Research Areas",
-      "url": "https://docs.google.com/document/d/16D3jRO2Q3KxM8FHvC8sdGLa19sxa5DGperetnX9gqcY/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1wfEQVKhZGmlybOevVoWFfpyqpHjTXTvj0ZZWf-8wme0/edit?usp=sharing",
       "key": "ai_ethics_research_areas",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Student Handout"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "ai_ethics_research_areas"
@@ -1695,19 +1622,18 @@
     },
     {
       "name": "AI Ethics Research Reflection",
-      "url": "https://docs.google.com/document/d/19vF4UVAcJa6UsqkdKynWzSR80Mlnb2G3coBoWNxpIYc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing",
       "key": "ai_ethics_research_reflection",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Student Handout"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "ai_ethics_research_reflection"
       }
     },
     {
-      "name": "AI: What is Machine Learning?",
+      "name": "Introduction to AI - What is Machine Learning?",
       "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
       "key": "ai_what_is_machine_learning_",
       "properties": {
@@ -1720,32 +1646,8 @@
       }
     },
     {
-      "name": "Blockchain: Societal Impact",
-      "url": "https://www.youtube.com/watch?v=C3C_JfG8cNg",
-      "key": "blockchain_societal_impact",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "blockchain_societal_impact"
-      }
-    },
-    {
-      "name": "Blockchain: Trustworthy or a Scam?",
-      "url": "https://www.youtube.com/watch?v=WzxbwEQRJPo",
-      "key": "blockchain_trustworthy_or_a_scam_",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "blockchain_trustworthy_or_a_scam_"
-      }
-    },
-    {
       "name": "Classifying Fish",
-      "url": "https://docs.google.com/document/d/1ZCRVbRA6XLj1tRCzPed5fSGfqGjJ2I1ImES-BTo3GmY/view",
+      "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view",
       "key": "classifying_fish",
       "properties": {
         "audience": "Student",
@@ -1770,111 +1672,27 @@
       }
     },
     {
-      "name": "Ethics & AI: Equal Access and Algorithmic Bias",
-      "url": "https://www.youtube.com/watch?v=tJQSyzBUAew",
-      "key": "ethics_ai_equal_access_and_algorithmic_bias",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "ethics_ai_equal_access_and_algorithmic_bias"
-      }
-    },
-    {
-      "name": "How AI Works",
-      "url": "https://youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y",
-      "key": "how_ai_works",
-      "properties": {
-        "audience": "Student",
-        "type": "Video Series"
-      },
-      "seeding_key": {
-        "resource.key": "how_ai_works"
-      }
-    },
-    {
-      "name": "How Blockchain Works",
-      "url": "https://docs.google.com/presentation/d/12LSqxNVap6ERjOrt5Nl644-6_r4VKrh0yJY5KmS-L3A/template/preview",
-      "key": "how_blockchain_works",
+      "name": "Introduction to AI",
+      "url": "https://docs.google.com/presentation/d/1Ca1i3-7p6sjC16TuEVF5chfC6Fw3ecM12inLOFXEKQg/template/preview",
+      "key": "introduction_to_ai",
       "properties": {
         "audience": "Teacher",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "how_blockchain_works"
+        "resource.key": "introduction_to_ai"
       }
     },
     {
-      "name": "How Blockchain Works: Beyond Currencies",
-      "url": "https://www.youtube.com/watch?v=3EwkfUz_BPs",
-      "key": "how_blockchain_works_beyond_currencies",
+      "name": "Introduction to AI - Privacy and Future of Work",
+      "url": "https://youtu.be/zNxw5gJtHLc",
+      "key": "introduction_to_ai_-_privacy_and_future_of_work",
       "properties": {
         "audience": "Student",
         "type": "Video"
       },
       "seeding_key": {
-        "resource.key": "how_blockchain_works_beyond_currencies"
-      }
-    },
-    {
-      "name": "How Blockchain Works: Introduction",
-      "url": "https://www.youtube.com/watch?v=MjibPL4tGqo",
-      "key": "how_blockchain_works_introduction",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "how_blockchain_works_introduction"
-      }
-    },
-    {
-      "name": "How Blockchain Works: Marketplace & Price",
-      "url": "https://www.youtube.com/watch?v=d9rKkk3oVdY",
-      "key": "how_blockchain_works_marketplace_price",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "how_blockchain_works_marketplace_price"
-      }
-    },
-    {
-      "name": "How Blockchain Works: Under the Hood",
-      "url": "https://www.youtube.com/watch?v=It_Ivgm5wQA",
-      "key": "how_blockchain_works_under_the_hood",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "how_blockchain_works_under_the_hood"
-      }
-    },
-    {
-      "name": "How Blockchain Works: Why Blockchain?",
-      "url": "https://www.youtube.com/watch?v=10wYLCnDHao",
-      "key": "how_blockchain_works_why_blockchain_",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "how_blockchain_works_why_blockchain_"
-      }
-    },
-    {
-      "name": "How Blockchain Works Youtube Playlist",
-      "url": "https://www.youtube.com/playlist?list=PLzdnOPI1iJNdzDlGJxd6B22G1bCDnPzkf",
-      "key": "how_blockchain_works_youtube_playlist",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "how_blockchain_works_youtube_playlist"
+        "resource.key": "introduction_to_ai_-_privacy_and_future_of_work"
       }
     },
     {
@@ -1890,8 +1708,68 @@
       }
     },
     {
+      "name": "Introduction to AI - Training Data and Bias",
+      "url": "https://youtu.be/x2mRoFNm22g",
+      "key": "introduction_to_ai_-_training_data_and_bias",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_-_training_data_and_bias"
+      }
+    },
+    {
+      "name": "Introduction to AI: Ethics & AI: Equal Access and Algorithmic Bias",
+      "url": "https://youtu.be/tJQSyzBUAew",
+      "key": "introduction_to_ai_ethics_ai_equal_access_and_algorithmic_bias",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_ethics_ai_equal_access_and_algorithmic_bias"
+      }
+    },
+    {
+      "name": "Introduction to AI: Ethics & AI: Privacy & the Future of Work",
+      "url": "https://youtu.be/zNxw5gJtHLc",
+      "key": "introduction_to_ai_ethics_ai_privacy_the_future_of_work",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_ethics_ai_privacy_the_future_of_work"
+      }
+    },
+    {
+      "name": "Introduction to AI: Training Data and Bias",
+      "url": "https://youtu.be/x2mRoFNm22g",
+      "key": "introduction_to_ai_training_data_and_bias",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_training_data_and_bias"
+      }
+    },
+    {
+      "name": "Introduction to AI: What is Machine Learning?",
+      "url": "https://youtu.be/KHbwOetbmbs",
+      "key": "introduction_to_ai_what_is_machine_learning_",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_what_is_machine_learning_"
+      }
+    },
+    {
       "name": "Introduction to Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1ZOSt4G-bEqIiFIWFWQjvY54I2YgHlCURXmtX1FYnpFw/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Vj24zhtV4La9t-MRONHhg2L4ZPYYiGW9eXUBN5lM9LQ/copy",
       "key": "introduction_to_machine_learning",
       "properties": {
         "audience": "Teacher",
@@ -1980,55 +1858,31 @@
     {
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
-        "resource.key": "blockchain_societal_impact"
+        "resource.key": "introduction_to_ai"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
-        "resource.key": "blockchain_trustworthy_or_a_scam_"
+        "resource.key": "introduction_to_ai_ethics_ai_equal_access_and_algorithmic_bias"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
-        "resource.key": "how_blockchain_works"
+        "resource.key": "introduction_to_ai_ethics_ai_privacy_the_future_of_work"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
-        "resource.key": "how_blockchain_works_beyond_currencies"
+        "resource.key": "introduction_to_ai_training_data_and_bias"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
-        "resource.key": "how_blockchain_works_introduction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Blockchain In a Day",
-        "resource.key": "how_blockchain_works_marketplace_price"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Blockchain In a Day",
-        "resource.key": "how_blockchain_works_under_the_hood"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Blockchain In a Day",
-        "resource.key": "how_blockchain_works_why_blockchain_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Blockchain In a Day",
-        "resource.key": "how_blockchain_works_youtube_playlist"
+        "resource.key": "introduction_to_ai_what_is_machine_learning_"
       }
     },
     {
@@ -2047,6 +1901,12 @@
       "seeding_key": {
         "lesson.key": "Introduction to Machine Learning",
         "resource.key": "classifying_fish"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "resource.key": "introduction_to_ai_-_training_data_and_bias"
       }
     },
     {
@@ -2076,13 +1936,7 @@
     {
       "seeding_key": {
         "lesson.key": "Our AI Code of Ethics",
-        "resource.key": "ethics_ai_equal_access_and_algorithmic_bias"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Our AI Code of Ethics",
-        "resource.key": "how_ai_works"
+        "resource.key": "introduction_to_ai_-_privacy_and_future_of_work"
       }
     },
     {
@@ -2187,7 +2041,7 @@
     {
       "key": "97170e18-9a17-4f74-90bd-a0d180dfcd11",
       "properties": {
-        "description": "Explain how Blockchain works"
+        "description": "Explain how AI works"
       },
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",

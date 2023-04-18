@@ -31,8 +31,14 @@ on_worker_boot do |_index|
   ActiveRecord::Base.establish_connection
 end
 
-require 'gctools/oobgc'
-out_of_band {GC::OOB.run}
+# Temporarily wrap this middleware in a DCDO flag so we can evaluate whether or
+# not this still has a performance impact on this version of Ruby
+# TODO: either remove the flag or this entire block, depending on the results
+require 'dynamic_config/dcdo'
+unless DCDO.get('oobgc_middleware_disabled', false)
+  require 'gctools/oobgc'
+  out_of_band {GC::OOB.run}
+end
 
 # Log thread backtraces and GC stats from all worker processes every second when enabled.
 plugin :log_stats
