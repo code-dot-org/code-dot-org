@@ -8,35 +8,38 @@ import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/cour
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 
 const CurriculumCatalog = ({curriculaData, isEnglish}) => {
-  const filterTypes = ['testFilter1'];
+  // Move to separate component? (CheckboxDropdown)
+  // Add test file for separate component
+  // Connect to real information
+  // Start styling
 
-  // TODO: Make initialState more dynamically defined
-  const initialState = {};
-  initialState[filterTypes[0]] = [];
-  initialState[filterTypes[1]] = [];
-
-  const [appliedFilters, setAppliedFilters] = useState(initialState);
-  const filter1Data = [
-    {id: '1', value: 'Javascript'},
-    {id: '2', value: 'Python'},
-    {id: '3', value: 'Java'},
-    {id: '4', value: 'Kotlin'},
-    {id: '5', value: 'Dart'},
-    {id: '6', value: 'C#'}
+  const filterTypes = [
+    {name: 'course', label: 'Course', options: ['CSA', 'CSD', 'CSP', 'CSF']},
+    {name: 'color', label: 'Color', options: ['Red', 'Blue', 'Green']}
   ];
 
-  const handleSelect = (event, dropdown) => {
+  const getClearedFilters = () => {
+    let filters = {};
+    filterTypes.forEach(filter => {
+      filters[filter.name] = [];
+    });
+    return filters;
+  };
+
+  const [appliedFilters, setAppliedFilters] = useState(getClearedFilters());
+
+  const handleSelect = (event, filterName) => {
     const value = event.target.value;
     const isChecked = event.target.checked;
 
     let newFilters = appliedFilters;
     if (isChecked) {
       //Add checked item into applied filters
-      newFilters[dropdown] = [...appliedFilters[dropdown], value];
+      newFilters[filterName] = [...appliedFilters[filterName], value];
       setAppliedFilters(newFilters);
     } else {
       //Remove unchecked item from applied filters
-      newFilters[dropdown] = appliedFilters[dropdown].filter(
+      newFilters[filterName] = appliedFilters[filterName].filter(
         item => item !== value
       );
       setAppliedFilters(newFilters);
@@ -53,36 +56,48 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
           imageUrl={CourseCatalogIllustration01}
         />
       </div>
-      <div className="dropdown" id="filter1dropdown">
-        <button
-          id="filter1DropdownButton"
-          type="button"
-          className="selectbox"
-          data-toggle="dropdown"
-        >
-          FILTER 1
-        </button>
-        <ul className="dropdown-menu" aria-labelledby="dLabel">
-          <form>
-            {filter1Data.map(item => {
-              return (
-                <li
-                  key={`filter1-${item.value}-item`}
-                  className="checkbox form-group"
-                >
-                  <input
-                    type="checkbox"
-                    id={`filter1-${item.value}`}
-                    name={item.value}
-                    value={item.value}
-                    onChange={e => handleSelect(e, 'testFilter1')}
-                  />
-                  <label htmlFor={`filter1-${item.value}`}>{item.value}</label>
-                </li>
-              );
-            })}
-          </form>
-        </ul>
+      <div className={style.catalogFiltersContainer}>
+        {filterTypes.map(filterType => {
+          return (
+            <div
+              id={`${filterType.name}-dropdown`}
+              key={`${filterType.name}-dropdown`}
+              className="dropdown"
+            >
+              <button
+                id={`${filterType.name}-dropdown-button`}
+                type="button"
+                className="selectbox"
+                data-toggle="dropdown"
+              >
+                {filterType.label}
+              </button>
+              <ul className="dropdown-menu">
+                <form>
+                  {filterType.options.map(option => {
+                    return (
+                      <li
+                        key={`${filterType.name}-${option}`}
+                        className="checkbox form-group"
+                      >
+                        <input
+                          type="checkbox"
+                          id={`${filterType.name}-${option}-check`}
+                          name={option}
+                          value={option}
+                          onChange={e => handleSelect(e, filterType.name)}
+                        />
+                        <label htmlFor={`${filterType.name}-${option}-check`}>
+                          {option}
+                        </label>
+                      </li>
+                    );
+                  })}
+                </form>
+              </ul>
+            </div>
+          );
+        })}
       </div>
       <div className={style.catalogContentContainer}>
         <div className={style.catalogContent}>
