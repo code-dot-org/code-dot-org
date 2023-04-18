@@ -1,5 +1,10 @@
 import {makeEnum} from '@cdo/apps/utils';
 
+export const BlocklyVersion = {
+  CDO: 'CDO',
+  GOOGLE: 'Google'
+};
+
 export const ToolboxType = makeEnum('CATEGORIZED', 'UNCATEGORIZED', 'NONE');
 export const BLOCKLY_THEME = 'blocklyTheme';
 export const MenuOptionStates = {
@@ -19,6 +24,13 @@ export const Themes = {
   DEUTERANOPIA_DARK: 'cdodeuteranopiadark',
   TRITANOPIA: 'cdotritanopia',
   TRITANOPIA_DARK: 'cdotritanopiadark'
+};
+
+export const Renderers = {
+  GERAS: 'cdo_renderer_geras',
+  THRASOS: 'cdo_renderer_thrasos',
+  ZELOS: 'cdo_renderer_zelos',
+  DEFAULT: 'cdo_renderer_thrasos'
 };
 
 // Used for custom field type ClampedNumber(,)
