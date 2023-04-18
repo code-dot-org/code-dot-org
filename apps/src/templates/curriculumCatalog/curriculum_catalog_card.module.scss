@@ -56,7 +56,7 @@ $container-width: 309px;
   }
 }
 
-.tagsAndTranslatabilityContainer {
+.labelsAndTranslatabilityContainer {
   display: flex;
   column-gap: 0.25em;
   justify-content: space-between;
@@ -68,11 +68,11 @@ $container-width: 309px;
   }
 }
 
-.tagsContainer {
+.labelsContainer {
   display: flex;
   column-gap: 0.5em;
 
-  .tagsText {
+  .labelsText {
     // font styles
     font-size: 0.75em;
     line-height: 0.875em;
@@ -81,7 +81,7 @@ $container-width: 309px;
     text-transform: uppercase;
     color: $neutral-dark;
 
-    // tag styles
+    // label styles
     padding: 0.6em 0.75em 0 0.75em;
     background-color: $brand_primary_light;
     border-radius: 1em;

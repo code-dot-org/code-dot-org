@@ -98,12 +98,12 @@ const CustomizableCurriculumCatalogCard = ({
   >
     <img src={imageSrc} alt={imageAltText} />
     <div className={style.curriculumInfoContainer}>
-      <div className={style.tagsAndTranslatabilityContainer}>
+      <div className={style.labelsAndTranslatabilityContainer}>
         {subjectsAndTopics.length > 0 && (
-          <div className={style.tagsContainer}>
-            <div className={style.tagsText}>{subjectsAndTopics[0]}</div>
+          <div className={style.labelsContainer}>
+            <div className={style.labelsText}>{subjectsAndTopics[0]}</div>
             {subjectsAndTopics.length > 1 && (
-              <div className={style.tagsText}>{`+${
+              <div className={style.labelsText}>{`+${
                 subjectsAndTopics.length - 1
               }`}</div>
             )}

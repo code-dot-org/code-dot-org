@@ -29,6 +29,6 @@ export const OneGradeCard = Template.bind({});
 OneGradeCard.args = {...defaultArgs, gradesArray: ['K']};
 OneGradeCard.storyName = 'CurriculumCatalogCard – One Grade';
 
-export const NoTagsCard = Template.bind({});
-NoTagsCard.args = {...defaultArgs, topics: []};
-NoTagsCard.storyName = 'CurriculumCatalogCard – No Tags';
+export const NoLabelsCard = Template.bind({});
+NoLabelsCard.args = {...defaultArgs, topics: []};
+NoLabelsCard.storyName = 'CurriculumCatalogCard – No Tags';
