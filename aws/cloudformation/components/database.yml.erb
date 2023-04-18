@@ -132,8 +132,6 @@
       Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reporting"
       SecretString: !GetAtt ReportingDBProxyEndpoint.Endpoint
 
-
-
 # We don't provision these in production via CloudFormation ... yet!
 <% unless rack_env?(:production)%>
   AuroraCluster:
