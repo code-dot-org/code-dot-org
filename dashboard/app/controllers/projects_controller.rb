@@ -417,7 +417,7 @@ class ProjectsController < ApplicationController
   end
 
   private def uses_animation_bucket?(project_type)
-    %w(gamelab spritelab).include? project_type
+    %w(gamelab poetry science spritelab story).include? project_type
   end
 
   private def uses_file_bucket?(project_type)
