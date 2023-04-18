@@ -205,6 +205,7 @@ P5Wrapper.prototype.startExecution = function () {
   new window.p5(
     function (p5obj) {
       this.p5 = p5obj;
+      this.p5._onblur(); // This is to explicitly wipe out the downKeys object over in p5.js so no old keys hang around.
       // Tell p5.play that we don't want it to have Sprite do anything
       // within _syncAnimationSizes()
       this.p5._fixedSpriteAnimationFrameSizes = true;
