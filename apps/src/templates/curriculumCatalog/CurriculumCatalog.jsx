@@ -33,8 +33,8 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => (
             }) => (
               <CurriculumCatalogCard
                 key={key}
-                imageSrc={image}
                 courseDisplayName={display_name}
+                imageSrc={image || undefined}
                 duration={'school_year'} // TODO [MEG] actually pass in this data
                 gradesArray={grade_levels.split(',')}
                 subjects={school_subject?.split(',')}

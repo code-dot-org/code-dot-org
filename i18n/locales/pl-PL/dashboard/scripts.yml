@@ -5351,12 +5351,28 @@ pl:
           lessons:
             lesson-1:
               name: Planowanie projektu
+            lesson-2:
+              name: Wyszukiwanie
+            lesson-3:
+              name: Wyszukiwanie binarne
+            lesson-4:
+              name: Porządkowanie przez wybór
+            lesson-5:
+              name: Porządkowanie przez wstawianie
+            lesson-6:
+              name: Porządkowanie przez scalanie
             lesson-7:
               name: Wyszukiwanie i porządkowanie
             lesson-8:
               name: Rozwój projektu
+            lesson-9:
+              name: Prywatność i bezpieczeństwo
+            lesson-10:
+              name: Kreatywne kodowanie za pomocą konsoli
             lesson-11:
               name: Praktyka FRQ
+            lesson-12:
+              name: Jednostka 8 Sprawdzian
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -5775,6 +5791,8 @@ pl:
           lessons:
             lesson-1:
               name: Pomysły FM
+            lesson-4:
+              name: Maszyny funkcyjne w Artyście
           name: katies-playground
           title: Miejsce Katie do robienia rzeczy
         microbit-2022:
@@ -6376,6 +6394,13 @@ pl:
           title: Jednostka 4B - (Opcja B) Tworzenie aplikacji z urządzeniami (micro:bit)
           student_description: Ta jednostka bada rolę platform sprzętowych w obliczeniach i jak różne czujniki mogą zapewnić bardziej efektywne wejście i wyjście danych niż tradycyjna klawiatura, mysz i monitor. Korzystając z App Lab i BBC micro:bita, opracujesz programy, które wykorzystują te same wejścia i wyjścia sprzętowe, które widzisz w inteligentnych urządzeniach, patrząc na to, jak prosty prototyp może doprowadzić do gotowego produktu. Jednostka kończy się wyzwaniem projektowym, aby użyć micro:bita jako bazy dla innowacji we własnym projekcie.
         ai-temp:
+          lessons:
+            lesson-5:
+              name: "[Lekcja na temat sieci neuronowych]"
+            lesson-6:
+              name: "[Lekcja na temat wizji komputerowej]"
+            lesson-7:
+              name: "[Lekcja na temat generatywnej sztucznej inteligencji]"
           name: ai-temp
           title: "[Temp] Wprowadzenie do AI"
         focus-on-coding4b-2023:
@@ -6400,3 +6425,8 @@ pl:
           name: csd6b-2023
           title: Jednostka 6B - (Opcja B) Tworzenie aplikacji z urządzeniami (micro:bit)
           student_description: Ta jednostka bada rolę platform sprzętowych w obliczeniach i jak różne czujniki mogą zapewnić bardziej efektywne wejście i wyjście danych niż tradycyjna klawiatura, mysz i monitor. Korzystając z App Lab i BBC micro:bita, opracujesz programy, które wykorzystują te same wejścia i wyjścia sprzętowe, które widzisz w inteligentnych urządzeniach, patrząc na to, jak prosty prototyp może doprowadzić do gotowego produktu. Jednostka kończy się wyzwaniem projektowym, aby użyć micro:bita jako bazy dla innowacji we własnym projekcie.
+        vpl-csd-ci-6b:
+          name: vpl-csd-ci-6b
+          title: Przygotowanie do nauczania tworzenia aplikacji na urządzenia (Opcja B - micro:bit)
+          description: "**Czeka Cię:**\n\n-   Uzyskasz wprowadzenie do tworzenia aplikacji dla urządzeń.\n-   Skonfigurujesz swój micro:bit. \n-   Przećwiczysz kluczowe pojęcia zawarte w jednostce.\n-   Przeglądniesz projekty na zakończenie rozdziału.\n-   Rozważysz rolę nauczyciela w klasie dotyczącej informatyki.\n\n**Sugerowany czas:** 100 minut"
+          student_description: "**Czeka Cię:**\n\n-   Uzyskasz wprowadzenie do tworzenia aplikacji dla urządzeń.\n-   Skonfigurujesz swój micro:bit. \n-   Przećwiczysz kluczowe pojęcia zawarte w jednostce.\n-   Przeglądniesz projekty na zakończenie rozdziału.\n-   Rozważysz rolę nauczyciela w klasie dotyczącej informatyki.\n\n**Sugerowany czas:** 100 minut"
