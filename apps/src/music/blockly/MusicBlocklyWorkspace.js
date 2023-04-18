@@ -6,7 +6,7 @@ import {getToolbox} from './toolbox';
 import FieldSounds from './FieldSounds';
 import FieldPattern from './FieldPattern';
 import AppConfig, {getBlockMode} from '../appConfig';
-import {BlockMode, LOCAL_STORAGE} from '../constants';
+import {BlockMode, LOCAL_STORAGE, REMOTE_STORAGE} from '../constants';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DYNAMIC_TRIGGER_EXTENSION,
@@ -409,18 +409,18 @@ export default class MusicBlocklyWorkspace {
     }
     storageType = storageType.toLowerCase();
 
-    if (storageType === LOCAL_STORAGE) {
-      return new ProjectManager(
-        this.getLocalStorageKeyName(),
-        new LocalSourcesStore(),
-        new LocalChannelsStore(),
-        this.getProject.bind(this)
-      );
-    } else {
+    if (storageType === REMOTE_STORAGE) {
       return new ProjectManager(
         channelId,
         new S3SourcesStore(),
         new S3ChannelsStore(),
+        this.getProject.bind(this)
+      );
+    } else {
+      return new ProjectManager(
+        this.getLocalStorageKeyName(),
+        new LocalSourcesStore(),
+        new LocalChannelsStore(),
         this.getProject.bind(this)
       );
     }

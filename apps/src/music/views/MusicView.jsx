@@ -295,9 +295,6 @@ class UnconnectedMusicView extends React.Component {
       // This is a way to tell React to re-render the scene, notably
       // the timeline.
       this.setState({updateNumber: this.state.updateNumber + 1});
-
-      // This may no-op due to throttling.
-      this.musicBlocklyWorkspace.saveCode();
     }
 
     if (e.type === Blockly.Events.SELECTED) {
@@ -308,6 +305,9 @@ class UnconnectedMusicView extends React.Component {
         this.props.selectBlockId(e.newElementId);
       }
     }
+
+    // This may no-op due to throttling.
+    this.musicBlocklyWorkspace.saveCode();
   };
 
   setPlaying = play => {
