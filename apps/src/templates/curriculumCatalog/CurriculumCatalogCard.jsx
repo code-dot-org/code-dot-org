@@ -17,8 +17,7 @@ const tempImage = require('@cdo/static/resource_cards/anotherhoc.png');
 const CurriculumCatalogCard = ({
   courseDisplayName,
   duration,
-  youngestGrade,
-  oldestGrade,
+  gradesArray,
   imageAltText,
   imageSrc,
   subjects,
@@ -34,9 +33,10 @@ const CurriculumCatalogCard = ({
     courseDisplayName={courseDisplayName}
     duration={translatedCourseOfferingDurations[duration]}
     gradeRange={i18n.gradeRange({
-      youngest_grade: youngestGrade,
-      oldest_grade: oldestGrade
-    })} // TODO [MEG]: Decide on translation strategy for this
+      numGrades: gradesArray.length,
+      youngestGrade: gradesArray[0],
+      oldestGrade: gradesArray[gradesArray.length - 1]
+    })}
     imageSrc={imageSrc}
     subjectsAndTopics={[
       ...subjects?.map(
@@ -59,8 +59,7 @@ CurriculumCatalogCard.propTypes = {
   courseDisplayName: PropTypes.string.isRequired,
   duration: PropTypes.oneOf(Object.keys(translatedCourseOfferingDurations))
     .isRequired,
-  youngestGrade: PropTypes.string.isRequired,
-  oldestGrade: PropTypes.string.isRequired,
+  gradesArray: PropTypes.arrayOf(PropTypes.string).isRequired,
   imageAltText: PropTypes.string,
   imageSrc: PropTypes.string.isRequired,
   isTranslated: PropTypes.bool,
