@@ -12,5 +12,3 @@ teacher_markdown <<MARKDOWN
 
 Whenever you want to use a function you need to call it by its name. To do this you just write the name of the function followed by parentheses.
 MARKDOWN
-
-allow_multiple_attempts true

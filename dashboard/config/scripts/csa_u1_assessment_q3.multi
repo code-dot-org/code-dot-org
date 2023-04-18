@@ -27,5 +27,3 @@ if (!sherald.facingNorth()){
 }  
 ```
 MARKDOWN
-
-allow_multiple_attempts true

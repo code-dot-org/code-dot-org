@@ -1,35 +1,33 @@
 name 'csp-20-21-u4-assess-variables trace 32022_2023'
-wrong '10'
-wrong '11'
-wrong '12'
-wrong '13'
-right '16'
-
-markdown <<MARKDOWN
-What number will be output by the console.log command on line 5?
-
-
-![](https://images.code.org/0aed97e9027245fceb9d81919e1756cc-image-1552518695843.10.16 PM.png)
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-
-**Explanation:** Walking through the program line by line:
-* On line 1, the variable `oop` is initialized and the value `10` is stored in it
-* On line 2, the variable `oop` is assigned its current value (`10`) plus `1`.
-* On line 3, the variable `oop` is assigned its current value (`11`) plus `2`.
-* On line 4, the variable `oop` is assigned its current value (`13`) plus `3`.
-* On line 5, the current value assigned to `oop`, `16`, is output.
-
-[Lesson 1 - Variables Explore](https://studio.code.org/s/csp4-2021/lessons/1) walked through examples of using variables in expressions to assign new values to variables.
-
-::: details [**Essential Knowledge Connected To This Question**]
-
-* AAP-2.B.3 - An expression can consist of a value, a variable, an operator, or a procedure call that returns a value.
-* AAP-2.B.4 - Expressions are evaluated to produce a single value.
-* AAP-2.B.5 - The evaluation of expressions follows a set order of operations defined by the programming language.
-:::
-
-MARKDOWN
-
-allow_multiple_attempts true
+encrypted 'y2hDDn10oX5tuisU8dEPKQosG1Z490LiSMtWPJyjT6a6YK4K3BfbUFKwoDBr
+chxBCsh+w5fHxtX298BQFPbx1S8n49hwNWZDKr/SSFzegT3hNfwOu+6r9f5e
+tPTw0Ey7C7XblxoYNrddTrGJFuzr2Pbtskkqjtbk5R8Nxn0DYtCg7J2O9sX6
+eF7dkq1BIkdK1HLErrw5kdkM25cMFgoDKF9lviqmVxqu+YRlArmD2niwx+FH
+8bHSjRnAqWn2QZ61Gnpss93P1Ya/oCiMOUnumgK4/YsvdEyO+FoUTaX0L1Tv
+TOfXt1XeBUb894UOs95RFk1luqAHI97fY6DjE+GLVpZ16i2IRo7h9+nYm2zr
+Sb7WH8ZoiY0E8KpXdJoNg0B01YRhvduCsAKc71j0+HaY552GN7PjWkHHcYt3
+U6vxZApcRR5+O508eeH/z0LwVUDLQcayBu13yKM0Pj7ZFskh6w1UlpqeOcC1
+Kv2Mu7Z9hL+b/5dS3yIGwrCp1O5eoCXQswz615u++auNQuzZvis+km7xIkyh
+OehkkDzXyzPUBnuMc3seLP9ktWZ1Qttg9MGN4/jhhElZBjON7RacdFDUdWsy
+Z15t+/tIvD2ITVO8Bw5EiXS+YaM/cQFSEZ5sAaAsfmYkNQdpjWOueGozoocx
+pNti+Qb+8pVVzcUpi/PTeV3kbB5Wet7V5J8HK4GGsttQ07X7xByy1H/vfKmd
+r5hoVK+ftTN+hhZB1y5nMLJVdl7D1Lpv7kQ8hn8PMpc2LTKPLZiyTp6FnJyC
+uRz/vr2Se1wsxxAq89BaLabVtF0GmKTexrZ8PkaRWySK7ozNMR71wfqLi9LX
+OHljgdmQ2QfFR1K7kcEcwbFAp8DeUrXQm/63EN3MVSJWmdGTUxDnwUW9mOXl
+EoHscqwkaj+usGPqS0WgG6r+zvxL3PyOziO+9SaZXf4hWwf4rzHNj2bvNd/j
+A9yPz8Hcrogq56e8UVHsLDN2ifrDofEH+XVjjcBVYYqZdBmsdrVyJKN0mn12
+728C929K1jCuhhA1AjB/NoJz9dh08wk29TQCd4SAEr6fxjg1rDzINGg0x/zV
++Fl1TI+DXIGq/jcyG9bwh9X3riCfYKMIkps7sJcaXo/SVcsJhU8XMYakg/tp
+bnQxyofX/bjGiFBIV9aZesiHateq1wSVGgaWTwqPs0WP6svxVznff9itkUuj
+mF1SiXGbYtp1IxlPzv7rHUPme7NTtiIHO9dkXo8NnnkWcCIbxa46aHoYdyRP
+veif3OKlikFLdw+3sQjPnO7j5KCc9EAEQY93xxuyoG8SYf+A4ypoEubj+MBN
+9TiaG0ZJaRbO4PF+8V+4HFFXtmMqYvB7ic0+tmQsl502aAetFFrOv7qCxILa
+bfHOTsgS/hRHcQ3Oa57XciA3pIUCAqPoUc+aTCO1czqXkewwbmkNmU/Hd6da
+w22LHR+e7/nZ7z8KNIyfmL8gBi0hhz6YJ519KVdWMbLzPL5Cst9fz0CuvUKb
+VJkE+oaxVPlEDI+06oijrzvnNklJ2Mo73i0rrpOjQ1Ft2sZCsALWrifvB8ou
+rdAMm+fuXVCeA+amofS46f3FvfHY6uYY69EKPI8WuM0Aw4o42whcYzO6fRFD
+lMtAbKgJi5DpvFomQ3Hj8NIxm0up2AnSEGW7ghG37uFhwc1ycWe2mcFQE8+v
+1LkTKfngIKxzWyUGOkNO/l5Dz55fJW4qP8++Q01qbMPM4/koHu9M/gYBftAY
+TNGfEr3Q/wtHvDDbMeQYPL8f3QIxBUS6ZDOAiMGmaeQeUYZhniI/HRw0aZUW
+GA7HqQuMskh4pMOrGvfwUDzApD7YZWA1W78=
+'

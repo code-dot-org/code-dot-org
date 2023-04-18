@@ -21,6 +21,7 @@ function wrapperWithProps(short, subheading, description) {
         subHeadingText={subheading}
         description={description}
         short={short}
+        backgroundUrl="/shared/images/banners/courses-hero-student.jpg"
       />
     </Provider>
   );

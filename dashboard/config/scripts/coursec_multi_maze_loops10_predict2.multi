@@ -5,4 +5,4 @@ wrong 'The bird will travel too far in the first loop.', feedback: 'Incorrect. T
 wrong 'The bird will reach the pig with no problems.', feedback: 'Incorrect. The first loop only lets the bird move forward 1 space, when it needs to move forward 3.'
 wrong 'I don\'t know.', feedback: 'The first loop only lets the bird move forward 1 space, when it needs to move forward 3.'
 
-allow_multiple_attempts true
+allow_multiple_attempts false

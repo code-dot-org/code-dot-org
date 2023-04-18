@@ -5,4 +5,4 @@ right 'Alternate between on and off each click'
 wrong 'Never turn on'
 wrong 'Blink on and off randomly'
 
-allow_multiple_attempts true
+allow_multiple_attempts false

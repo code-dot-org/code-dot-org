@@ -3,4 +3,3 @@ question 'Have you completed coding lessons on Code.org (not including the Hour 
 right 'Yes'
 right 'No'
 right "I don't know"
-allow_multiple_attempts true

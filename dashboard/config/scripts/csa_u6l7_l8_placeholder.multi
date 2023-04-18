@@ -18,4 +18,3 @@ wrong 'Once UTime'
 wrong 'On e Time'
 right 'One Time'
 wrong 'One T'
-allow_multiple_attempts true

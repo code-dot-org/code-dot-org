@@ -10,7 +10,8 @@ theme: responsive
 
 - Us recomanem que la vostra escola tingui una connexió a internet d'almenys 15 Mbit/segon.
 - La mida de pantalla més petita compatible és 1024 x 728 px.
-- Necessitareu un ordinador de sobretaula o portàtil amb un ratolí (o ratolí tàctil) i teclat per als cursos de primària i secundària següents: Descobriments Informàtics, Principis de la Informàtica i Introducció al Laboratori d'Aplicacions. La majoria de tauletes i dispositius mòbils no són compatibles amb aquests cursos. Consulteu l'apartat de "Detalls sobre dispositius mòbils i tauletes compatibles" per veure les excepcions específiques.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Consulteu l'apartat de "Detalls sobre dispositius mòbils i tauletes compatibles" per veure les excepcions específiques.
 - La resta del contingut, com ara els cursos des d'infantil fins a 5è de primària (Fonaments de la Informàtica) i les activitats de l'Hora del Codi, són compatibles amb iPad i Chromebook, així com amb la resta de tauletes i ordinadors de sobretaula o portàtils actuals.
 - Busqueu informació de suport tècnic sobre dispositius mòbils? Seguiu llegint.
 
@@ -82,12 +83,12 @@ Per poder gaudir de la millor experiència possible amb el contingut de Code.org
 
 ## Informació de suport tècnic per a dispositius mòbils i tauletes
 
-Els cursos de Descobriments Informàtics, Principis de la Informàtica i Introducció al Laboratori d'Aplicacions no són compatibles amb les tauletes o els dispositius mòbils: necessitareu un teclat i un ratolí (o ratolí tàctil com els dels MacBooks). La majoria de les tauletes no són compatibles, amb les següents excepcions:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. La majoria de les tauletes no són compatibles, amb les següents excepcions:
 
 - Microsoft Surface Pro amb teclat extern
 - iPad amb sistema operatiu iPadOS 13.4 o superior amb un teclat extern i un ratolí o ratolí tàctil extern
 
-La resta del contingut, com ara els cursos des d'infantil fins a 5è de primària (Fonaments de la Informàtica) i les activitats de l'Hora del Codi, són compatibles amb iPad i Chromebook, així com amb la resta de tauletes i ordinadors de sobretaula o portàtils actuals.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### Telèfons mòbils
 
