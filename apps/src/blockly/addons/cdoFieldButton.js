@@ -4,13 +4,11 @@ const CORNER_RADIUS = 3;
 const INNER_HEIGHT = 16;
 
 export default class CdoFieldButton extends GoogleBlockly.Field {
-  constructor(title, opt_buttonHandler, opt_color, opt_changeHandler) {
+  constructor(title, opt_buttonHandler, _, opt_changeHandler) {
     super('');
 
-    // remove color_ parameter?
     this.title_ = title;
     this.buttonHandler_ = opt_buttonHandler;
-    this.color_ = opt_color;
     this.changeHandler_ = opt_changeHandler;
   }
 
@@ -30,7 +28,8 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
       this.fieldGroup_
     );
     this.buttonElement_.style.fillOpacity = 1;
-    this.buttonElement_.style.fill = this.getSourceBlock().style.colourSecondary;
+    this.buttonElement_.style.fill =
+      this.getSourceBlock().style.colourSecondary;
 
     this.textElement_.style.fontSize = '11pt';
     this.textElement_.style.fill = this.getSourceBlock().style.colourPrimary;
@@ -63,20 +62,22 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     this.buttonHandler_(this.setValue.bind(this));
   }
 
-  updateWidth_() {
-    super.updateWidth_();
-    if (this.buttonElement_) {
-      this.buttonElement_.setAttribute('width', this.size_.width + 8);
-    }
-  }
+  updateSize_() {
+    super.updateSize_();
 
-  positionBorderRect_() {
-    super.positionBorderRect_();
     if (this.buttonElement_) {
       this.buttonElement_.setAttribute('width', this.size_.width - 2);
       this.buttonElement_.setAttribute('height', this.size_.height - 2);
-      this.buttonElement_.style.fill = this.getSourceBlock().style.colourSecondary;
-      this.textElement_.style.fill = this.getSourceBlock().style.colourPrimary;
+    }
+  }
+
+  applyColour() {
+    const sourceBlock = this.getSourceBlock();
+    if (this.buttonElement_) {
+      this.buttonElement_.style.fill = sourceBlock.style.colourSecondary;
+    }
+    if (this.textElement_) {
+      this.textElement_.style.fill = sourceBlock.style.colourPrimary;
     }
   }
 }
