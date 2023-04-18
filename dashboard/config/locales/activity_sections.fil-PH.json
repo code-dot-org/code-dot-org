@@ -3072,17 +3072,27 @@
         "ad3b60a9-c96d-4e0b-b124-5f6f34d1c85c": {
           "progression_name": "Gumawa ng proyekto mo"
         },
+        "ba61b408-4ce9-4056-8e42-3efac281242e": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Araw 2: Tukuyin at Maghanda\" na slide\n\n**Layunin:** Ang mga mag-aaral ay gagawa ng proyekto at paplanuhin ang kanilang diskarte sa pagprogram ng proyektong iyon sa isang araw. Ang mga mag-aaral ay dapat magkaroon ng sketch ng proyekto at paglalarawan sa oras na matapos ang araw.\n\n#### Paghahanda sa mga Mag-aaral sa Proseso:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita:** Ipakita ang “Rubric ng Proyekto sa Pagtatapos ng Kurso” na slide\n\nAng pinakamahalagang responsibilidad na mayroon ka sa pagsisimula ng segment na ito ay tulungan ang klase mo na maunawaan ang saklaw ng proyektong ito. Ang mga mag-aaral ay dapat maging malinaw tungkol sa iba't ibang mga inaasahan sa mga darating na linggo upang sila ay makapaghanda sa kanilang mga repaso at presentasyon nang naaangkop.  \n\nUpang matulungan ang iyong klase na pamahalaan ang multi-stage na gawaing ito, dapat silang bigyan ng parehong **\\*Pangwakas na Project Design na Worksheet** at **\\*Final Project Rubric** sa unang araw ng pagpaplano. Magagawang sundin ng mga mag-aaral ang rubric sa bawat hakbang ng paraan upang mahulaan kung ano ang magiging marka ng kanilang proyekto sa huli.  \n\nAng Pangwakas na Project Design Worksheet ay magbibigay ng lugar para sa mga mag-aaral na makuha ang mga kaugnay na kaisipan at proseso habang sila ay nagpapatuloy, kaya mas handa sila para sa kanilang mga repaso at presentasyon sa huli.  \n\nBilang guro, dapat kang mag-download ng kopya ng mga dokumento at magpasya kung aling mga elemento ang mahalaga sa iyo. Siguraduhing i-edit o alisin ang anumang bagay na hindi mo nilalayong iguhit ang focus ng mag-aaral."
+        },
         "de7ab6f7-a853-4f00-b05d-a9db0bb2da2d": {
           "tips": [
             null
           ]
         },
+        "22af53a6-e604-4f5d-ae02-38f19f994885": {
+          "description": "#### Handout - Tukuyin at Maghanda:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Handout: Tukuyin at Maghanda” na slide\n\nNgayong nasa kamay na ng klase ang kanilang **\\*Gabay sa Pangwakas na Proyekto**, dapat nilang simulan ang pagsagot sa mga tanong sa ilalim ng seksiyong **Tukuyin at Maghanda**.\n\nAng mga mag-aaral ay malamang na kailangang sumangguni sa kanilang mga tala mula sa paglalaro ng mga halimbawang proyekto, lalo na kung wala silang access sa mga online na antas ng proyekto ng Artist o Play Lab habang sila ay nagpaplano. \n\nDapat tumuon ang mga mag-aaral sa pagtukoy at pagpaplano ng kanilang proyekto sa Araw 1, at hindi tumawid sa pagbuo hanggang sa naisulat at/o nailabas ang kanilang mga ideya.\n\nKung natigil ang mga mag-aaral, tulungan silang gumawa ng mga ideya sa pamamagitan ng pagtatanong at pag-alala ng mga halimbawa, sa halip na mag-alok ng mga solusyon."
+        },
+        "3591fc28-830a-4a32-94e4-3468853cea32": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Araw 3: Subukan” na slide\n\n**Layunin:** Gagamitin ng mga mag-aaral ang araw na ito upang bumuo ng paunang bersiyon ng kanilang proyekto.\n\nGamit ang kanilang **\\*Pangwakas na Project Design na Worksheet**, dapat magtungo ang mga mag-aaral sa mga computer upang simulan ang pagbibigay-buhay sa kanilang mga proyekto. \n\nAng prosesong ito ay kumpleto na may maraming pagsubok at error. Ang mga proyekto ay malamang na maging mga pinutol na bersyon ng orihinal na saklaw (kung hindi ganap na morphed). Paalalahanan ang mga mag-aaral na ang ganitong uri ng kompromiso ay karaniwan sa disenyo ng software, ngunit kailangan nilang tiyaking idokumento ang mga dahilan sa mga pagbabago sa kanilang produkto.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Handout: Subukan” na slide\n\nPaalalahanan ang klase na punan ang **Subukan** na seksiyon ng kanilang **\\*Gabay sa Pangwakas na Proyekto** habang nagpapatuloy sila. Maaaring makatulong na imungkahi na ang mga pares/grupo ay magpahinga sa worksheet upang simulan ang pagtalakay sa mga tanong na ito tungkol sa kalahati ng kanilang oras sa lab. Bilang kahalili, maaaring panatilihing bukas ng navigator ang kanilang mga mata sa mga nauugnay na sagot habang nagko-code ang driver.  \n\nSiguraduhin na ang bawat miyembro ng team ay may sariling **\\*Pangwakas na Project Design na Worksheet**, dahil may mga tanong tungkol sa sariling indibidwal na pag-iisip at pag-uugali ng bawat mag-aaral na kailangang makuha."
+        },
         "bad6c34f-b32e-4116-908c-7eb4fc2ca6a4": {
           "tips": [
-            null
+            "Habang nagko-code ang mga mag-aaral sa kanilang mga proyekto, hikayatin silang gamitin ang kanilang mga kasanayan sa pag-debug. Paalalahanan sila na ang pag-debug ay mahalagang bahagi ng proseso ng programming. Maaari ka ring gumawa ng Bug Hall of Fame para mai-post ng mga mag-aaral ang kanilang matagumpay na pagtatangka sa pag-debug ng sarili nilang code o code ng kanilang mga kaklase."
           ]
         },
         "7cb6ed54-d6cc-4905-95d7-dd3c9ed28e09": {
+          "name": "Feedback at Mga Pag-edit ",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Araw 4: Feedback at Mga Pag-edit” na slide\n\n#### Introduksiyon (5 minuto)\n\n**Gawin ito**: Ipaliwanag sa mga mag-aaral na susubukan nila ang mga proyekto ng kanilang mga kaklase at bibigyan sila ng feedback. Pagkatapos ay susuriin ng mga mag-aaral ang feedback na kanilang natanggap at gamitin ito upang baguhin ang kanilang sariling mga proyekto.\n\n**Layunin:** Makikipagtulungan ang mga mag-aaral sa isa pang grupo upang magbigay at tumanggap ng feedback sa pagsisikap na palakasin ang mga proyekto ng bawat isa.\n\n#### Feedback (25 minuto)\n\nSa feedback, ipares sa bawat grupo ang isa pang grupo upang subukan ang mga proyekto ng bawat isa sa loob ng humigit-kumulang 10 minuto. Pagkatapos ay ipatalakay sa mga grupo ang mga tanong sa **\\*Worksheet ng Final Project Design**.  \n\nHikayatin ang mga mag-aaral na itanong ang mga tanong sa **\\*Worksheet ng Final Project Design** at isulat ang feedback na ibinigay ng kanilang mga reviewing team upang maaari silang sumangguni dito sa ibang pagkakataon. Ang bahaging ito ay dapat tumagal ng humigit-kumulang 15 minuto."
         },
         "38c0b06f-e0b8-4739-b359-6513f419fd11": {
@@ -3093,21 +3103,29 @@
         "f0e1400e-a690-4e5a-bbc5-dbdb6ddcdada": {
           "description": "#### Mga Pag-edit (15 minuto)\n\nSa kanilang mga bagong pagmumuni-muni sa kamay, ang mga mag-aaral ay maaaring bumalik sa kanilang mga makina upang gumawa ng ilang mga pag-edit. Sa 15 minuto na lang ang natitira, malamang na kailangan lang nilang piliin ang pinakamahalagang feedback na isasama."
         },
+        "0d190d49-c24a-4c56-8322-5a72e797a075": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Araw 5 & 6: Ipakita at Pag-isipan” na slide \n\n**Layunin:** Ang mga mag-aaral ay lumikha at ipakita ang kanilang mga proyekto sa aprubadong paraan (nakasulat, pasalita, o gamit ang multimedia)."
+        },
         "4b48da8b-113d-4b9b-94ff-c776a0cab3b9": {
           "tips": [
             null
           ]
         },
+        "1dd0b830-db2a-465b-a698-6344eb2bbbc1": {
+          "description": "#### Lumikha\n\nSa isip, magkakaroon ka ng oras sa klase upang bigyan ang mga mag-aaral na magtrabaho sa kanilang mga presentasyon. Ito ay magbibigay-daan sa kanila na isama ang mga rich multimedia component, tulad ng _Google Slides_.\n\nHikayatin ang mga mag-aaral na isama ang lahat ng impormasyon sa Seksiyon J ng Worksheet ng Final Project Design sa kanilang presentasyon, pati na rin ang dalawa o higit pang mga tanong sa Seksiyon K.\n\n#### Ipakita\n\nDapat munang ipakita ng mga mag-aaral ang kanilang mga app, pagkatapos ay maaari nilang talakayin ang mga tanong na tinalakay nila sa kanilang mga presentasyon. \n\nMalaki ang maitutulong na magpa-sign up ang mga mag-aaral sa partikular na pagkakasunud-sunod kung saan ibibigay ang kanilang mga presentasyon, upang ma-enjoy nila ang mga demonstrasyon ng kanilang mga kaklase nang hindi nababahala kung sila ay tatawagin sa susunod."
+        },
         "1b707283-b28d-4147-921e-691c3e5325fe": {
           "tips": [
-            null
+            "Sa pagtatapos ng mga presentasyon, maglaan ng oras upang ipagdiwang ang pagsusumikap ng mga mag-aaral! Maaari mong piliing mag-print ng [mga sertipiko ng pagkumpleto](https://code.org/congrats/course1) para sa mga mag-aaral o mag-host ng seremonya ng parangal. Kung pipiliin mong magbigay ng mga parangal sa iyong mga mag-aaral, tumuon sa kanilang mga kakayahan at kontribusyon bilang isang kaklase sa halip na sa pagiging kumplikado ng kanilang huling proyekto. Halimbawa, isaalang-alang ang mga parangal gaya ng Most Improved Coder, Most Persistent Debugger, at Best Teammate."
           ]
         },
         "e5a4600f-c0cb-4f61-82bc-b1fdff9ad731": {
+          "name": "Pag-isipan ",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipan” na slide\n\n**Pag-isipan:** \n\n-   _Ano ang natutunan mo sa paggawa ng proyektong ito?_\n-   _Ano ang pinakamahirap na bahagi tungkol sa karanasang ito? Paano mo nalampasan ang hamon na iyon?_\n\nPagnilayan ng mga mag-aaral ang kanilang gawain sa pamamagitan ng pagkumpleto sa huling **Pag-isipan** na seksiyon ng kanilang **\\*Gabay sa Pangwakas na Proyekto** na mga packet."
         },
         "d7eee78e-d5fd-418e-9dce-3cb0f1be8122": {
-          "name": "Mga Extension na Aralin sa micro:bit"
+          "name": "Mga Extension na Aralin sa micro:bit",
+          "description": "Upang mabuo ang mga kasanayang natutunan mo sa CS Fundamentals Course F, mag-click [here](http://code.org/maker/csf-microbit) para tingnan ang Extension Lessons gamit ang micro:bit. Ang mga [4 na micro:bit na aralin](https://code.org/maker/assets/CSF-Booklet-Course-F-v3.pdf) ay sumasaklaw sa mga sumusunod na paksa: Kilalanin ang iyong micro:bit, Mga Variable, Data, Mga Event, Simulation, Mga Loop, at Mga Conditional."
         },
         "3c23fa37-7254-47f3-b576-da07d0b605dd": {
           "progression_name": "Maging Super Digital na Mamamayan"

@@ -12,7 +12,7 @@ import animationList, {
 } from '@cdo/apps/p5lab/redux/animationList';
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import {BlocklyVersion} from '@cdo/apps/constants';
+import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 
 const VALID_COLOR = 'black';
 const INVALID_COLOR = '#d00';
