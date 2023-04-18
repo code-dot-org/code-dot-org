@@ -72,7 +72,7 @@ $container-width: 309px;
   display: flex;
   column-gap: 0.5em;
 
-  .labelsText {
+  > div {
     // font styles
     font-size: 0.75em;
     line-height: 0.875em;
@@ -105,7 +105,7 @@ $container-width: 309px;
   column-gap: 0.5em;
   margin: 0 0 0.5em 0;
 
-  .iconWithDescriptionText {
+  > p {
     font-size: 0.875em;
     margin: 0;
     color: $neutral_dark;

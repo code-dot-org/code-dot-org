@@ -101,11 +101,9 @@ const CustomizableCurriculumCatalogCard = ({
       <div className={style.labelsAndTranslatabilityContainer}>
         {subjectsAndTopics.length > 0 && (
           <div className={style.labelsContainer}>
-            <div className={style.labelsText}>{subjectsAndTopics[0]}</div>
+            <div>{subjectsAndTopics[0]}</div>
             {subjectsAndTopics.length > 1 && (
-              <div className={style.labelsText}>{`+${
-                subjectsAndTopics.length - 1
-              }`}</div>
+              <div>{`+${subjectsAndTopics.length - 1}`}</div>
             )}
           </div>
         )}
@@ -121,12 +119,12 @@ const CustomizableCurriculumCatalogCard = ({
       <h4>{courseDisplayName}</h4>
       <div className={style.iconWithDescription}>
         <FontAwesome icon="user" className="fa-solid" />
-        <p className={style.iconWithDescriptionText}>{gradeRange}</p>
+        <p>{gradeRange}</p>
       </div>
       <div className={style.iconWithDescription}>
         {/*TODO [MEG]: Update this to be clock fa-solid when we update FontAwesome */}
         <FontAwesome icon="clock-o" />
-        <p className={style.iconWithDescriptionText}>{duration}</p>
+        <p>{duration}</p>
       </div>
       <div
         className={classNames(
