@@ -356,13 +356,15 @@ class ProgressTableView extends React.Component {
             />
           </div>
         </div>
-        <div style={{marginTop: '60px'}}>
+        <div style={styles.midpageBanner}>
           <Notification
             type={NotificationType.feedback}
             notice={i18n.feedbackShareBannerTitle()}
             details={i18n.feedbackShareBannerDesc()}
             buttonText={i18n.feedbackShareBannerButton()}
-            buttonLink={'about:blank'}
+            buttonLink={
+              'https://studio.code.org/form/share_feedback_progress_table'
+            }
             dismissible={false}
           />
         </div>
@@ -391,6 +393,9 @@ const styles = {
   contentView: {
     display: 'inline-block',
     width: parseInt(progressTableStyleConstants.CONTENT_VIEW_WIDTH)
+  },
+  midpageBanner: {
+    marginTop: '60px'
   }
 };
 
