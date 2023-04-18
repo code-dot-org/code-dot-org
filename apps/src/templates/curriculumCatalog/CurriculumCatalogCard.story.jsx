@@ -17,9 +17,13 @@ const defaultArgs = {
   isEnglish: true
 };
 
-export const BaseCard = Template.bind({});
-BaseCard.args = defaultArgs;
-BaseCard.storyName = 'CurriculumCatalogCard – Base';
+export const AllOptionsCard = Template.bind({});
+AllOptionsCard.args = defaultArgs;
+AllOptionsCard.storyName = 'CurriculumCatalogCard – All Options';
+
+export const NotTranslatedCard = Template.bind({});
+NotTranslatedCard.args = {...defaultArgs, isTranslated: false};
+NotTranslatedCard.storyName = 'CurriculumCatalogCard – Not Translated';
 
 export const NonEnglishCard = Template.bind({});
 NonEnglishCard.args = {...defaultArgs, isEnglish: false};
@@ -31,4 +35,4 @@ OneGradeCard.storyName = 'CurriculumCatalogCard – One Grade';
 
 export const NoLabelsCard = Template.bind({});
 NoLabelsCard.args = {...defaultArgs, topics: []};
-NoLabelsCard.storyName = 'CurriculumCatalogCard – No Tags';
+NoLabelsCard.storyName = 'CurriculumCatalogCard – No Labels';

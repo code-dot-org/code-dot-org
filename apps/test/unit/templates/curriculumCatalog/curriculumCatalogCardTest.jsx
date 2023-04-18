@@ -69,7 +69,7 @@ describe('CurriculumCatalogCard', () => {
     });
   });
 
-  it('renders tag of number of remaining subjects and topics when there is more than one present', () => {
+  it('renders label of number of remaining subjects and topics when there is more than one present', () => {
     render(
       <CurriculumCatalogCard
         {...defaultProps}
@@ -89,7 +89,7 @@ describe('CurriculumCatalogCard', () => {
     });
   });
 
-  it('does not render number of remaining tag when exactly one subject or one topic is present', () => {
+  it('does not render label of remaining subjects and topics when exactly one subject or topic is present', () => {
     render(
       <CurriculumCatalogCard
         {...defaultProps}
