@@ -1,0 +1,20 @@
+{
+  "pages": {
+    "homepage": [
+      "show-in-US"
+    ]
+  },
+
+  "banners": {
+    "show-in-US": {
+      "desktopImage": "/images/globe.png",
+      "showInternationally": false,
+      "actions": [
+        {
+          "type": "text",
+          "text": "Showing only in US"
+        }
+      ]
+    }
+  }
+}
