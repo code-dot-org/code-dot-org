@@ -154,8 +154,6 @@ These steps may need to change over time as 3rd party tools update to have versi
 
 1. Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils sqlite parallel tidy-html5`
 
-1. [Check your rmagick version](#rmagick)
-
 1. Install [Node Version Manager](https://github.com/nvm-sh/nvm) and install Node
     1. Install NVM via `brew install nvm`
 
@@ -271,7 +269,6 @@ These steps may need to change over time as 3rd party tools update to have versi
 1. Install OpenSSL:
     1. `brew install openssl`
     1. `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
-1. [Check rmagick version](#rmagick)
 1. If you want to render personalized certificates locally, see these special instructions regarding [ImageMagick with pango](#imagemagick-with-pango).
 1. Prevent future problems related to the `Too many open files` error:
     1. Add the following to `~/.bash_profile` or your desired shell configuration file:
@@ -364,10 +361,13 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
     * If you want to follow the Ubuntu setup exactly, Ubuntu 18.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
 1. Make sure virtualization is turned on your BIOS settings.
 1. From the command line, run `wsl`, or from the Start menu, find and launch 'Ubuntu'. When this runs for the first time, WSL will complete installation in the resulting terminal window.
-1. Ensure chromium-browser or alternatively google-chrome is installed
-    * Try running `chromium-browser`. If this does not work with the error message `Command '/usr/bin/chromium-browser' requires the chromium snap to be installed.`. You can instead install google chrome by running the following:
-        1. `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
-        2. `sudo apt install ./google-chrome-stable_current_amd64.deb`
+1. Make it so that you can run apps tests locally. You have two options here:
+    1. If you have Google Chrome installed on Windows, add the following to `~/.bashrc` or your desired shell configuration file to make it accessible from WSL:
+        1. `export CHROME_BIN='/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe'`
+    1. Alternatively, ensure chromium-browser or alternatively google-chrome is installed in WSL
+        1. Try running `chromium-browser`. If this does not work with the error message `Command '/usr/bin/chromium-browser' requires the chromium snap to be installed.`, you can instead install google chrome by running the following:
+            1. `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
+            1. `sudo apt install ./google-chrome-stable_current_amd64.deb`
 1. Followed by the [Ubuntu instructions](#ubuntu-1804) to install required tools on the Ubuntu instance, _with the following observations_:
     * If google-chrome was installed in the last step, update CHROME_BIN variable to point to google chrome (in step 9), `export CHROME_BIN=$(which google-chrome)`
     * Before updating the root password to empty in SQL (step 10), restart MySQL using `sudo /etc/init.d/mysql restart`
@@ -486,16 +486,6 @@ Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) fo
 
 ---
 ### Bundle Install Tips
-
-#### rmagick
-If rmagick doesn't install, check your version of imagemagick, and downgrade if >= 7
-- `convert --version`
-- `brew install imagemagick@6`
-- `brew unlink imagemagick`
-- `brew link imagemagick@6 --force`
-If you continue to have issues with rmagick, after changing your imagemagick version, you may need to uninstall/reinstall the gem
-- `gem uninstall rmagick`
-- `gem install rmagick -v 2.16.0`
 
 #### Apple Silicon (M1) bundle install steps
 

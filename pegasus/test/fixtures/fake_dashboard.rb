@@ -236,12 +236,12 @@ module FakeDashboard
 
   # Patch Mysql2Adapter to only create the specified tables when loading the schema.
   module SchemaTableFilter
-    def create_table(name, options = {})
+    def create_table(name, **)
       if (::FakeDashboard::FAKE_DB.keys.map(&:to_s) + [
         ActiveRecord::Base.schema_migrations_table_name,
         ActiveRecord::Base.internal_metadata_table_name,
       ]).include?(name)
-        super(name, options)
+        super
       end
     end
   end
@@ -249,15 +249,15 @@ module FakeDashboard
 
   # Patch Mysql2Adapter to stub create_view when loading the schema.
   module SchemaViewFilter
-    def create_view(name, options = {})
+    def create_view(name, **)
     end
   end
   ActiveRecord::ConnectionAdapters::Mysql2Adapter.prepend SchemaViewFilter
 
   # Patch Mysql2Adapter to create temporary tables instead of persistent ones.
   module TempTableFilter
-    def create_table(name, options = {})
-      super(name, options.merge(temporary: true))
+    def create_table(name, **options)
+      super(name, **options.merge(temporary: true))
     end
 
     # Temporary tables may shadow persistent tables we don't want to drop.

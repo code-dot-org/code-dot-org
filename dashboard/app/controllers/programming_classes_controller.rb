@@ -100,9 +100,7 @@ class ProgrammingClassesController < ApplicationController
     end
   end
 
-  private
-
-  def programming_class_params
+  private def programming_class_params
     transformed_params = params.transform_keys(&:underscore)
     transformed_params = transformed_params.permit(
       :name,
@@ -120,7 +118,7 @@ class ProgrammingClassesController < ApplicationController
     transformed_params
   end
 
-  def set_class_by_keys
+  private def set_class_by_keys
     @programming_class = ProgrammingClass.get_from_cache(params[:programming_environment_name], params[:programming_class_key])
   end
 end

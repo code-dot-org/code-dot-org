@@ -3,7 +3,7 @@ import blockUtils from '@cdo/apps/block_utils';
 
 let _ = require('lodash');
 
-let blankPlane = _.range(100).map(function() {
+let blankPlane = _.range(100).map(function () {
   return '';
 });
 let actionPlane = _.clone(blankPlane);
@@ -47,8 +47,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      xml:
-        '<xml><block type="craft_moveForward"><next><block type="craft_turn"><title name="DIR">right</title></block></next></block></xml>'
+      xml: '<xml><block type="craft_moveForward"><next><block type="craft_turn"><title name="DIR">right</title></block></next></block></xml>'
     },
     {
       description: 'walk forward with too few blocks to reach sheep',

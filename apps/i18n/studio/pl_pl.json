@@ -223,7 +223,7 @@
   "ifDroidN": "droid {spriteIndex}",
   "ifSprite": "postać",
   "ifSpriteN": "postać {spriteIndex}",
-  "incrementPlayerScore": "wynik punktowy",
+  "incrementPlayerScore": "dodaj punkt",
   "isSet": "ustawiono",
   "itemIAProjectile1": "serca",
   "itemIAProjectile2": "głaz",

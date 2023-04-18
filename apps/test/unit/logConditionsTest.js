@@ -3,14 +3,14 @@ import {TestResults} from '@cdo/apps/constants';
 
 var executionLog = require('@cdo/apps/executionLog');
 
-describe('logConditions: getResultsFromLog', function() {
-  it('returns ALL_PASS with empty logConditions and executionLog', function() {
+describe('logConditions: getResultsFromLog', function () {
+  it('returns ALL_PASS with empty logConditions and executionLog', function () {
     var results = executionLog.getResultsFromLog([], []);
 
     assert.equal(results.testResult, TestResults.ALL_PASS);
   });
 
-  it('returns ALL_PASS with empty logConditions', function() {
+  it('returns ALL_PASS with empty logConditions', function () {
     var results = executionLog.getResultsFromLog(
       [],
       ['function1', 'function2']
@@ -19,7 +19,7 @@ describe('logConditions: getResultsFromLog', function() {
     assert.equal(results.testResult, TestResults.ALL_PASS);
   });
 
-  it('returns ALL_PASS with simple one-item logCondition', function() {
+  it('returns ALL_PASS with simple one-item logCondition', function () {
     var results = executionLog.getResultsFromLog(
       [
         {
@@ -35,7 +35,7 @@ describe('logConditions: getResultsFromLog', function() {
     assert.equal(results.testResult, TestResults.ALL_PASS);
   });
 
-  it('returns failure and message with simple one-item logCondition', function() {
+  it('returns failure and message with simple one-item logCondition', function () {
     var results = executionLog.getResultsFromLog(
       [
         {
@@ -54,7 +54,7 @@ describe('logConditions: getResultsFromLog', function() {
     });
   });
 
-  it('returns ALL_PASS with multi-item logConditions', function() {
+  it('returns ALL_PASS with multi-item logConditions', function () {
     var results = executionLog.getResultsFromLog(
       [
         {
@@ -76,7 +76,7 @@ describe('logConditions: getResultsFromLog', function() {
     assert.equal(results.testResult, TestResults.ALL_PASS);
   });
 
-  it('returns failure and message with mixed logConditions', function() {
+  it('returns failure and message with mixed logConditions', function () {
     var results = executionLog.getResultsFromLog(
       [
         {
@@ -101,7 +101,7 @@ describe('logConditions: getResultsFromLog', function() {
     });
   });
 
-  it('returns ALL_PASS with two item exact logCondition', function() {
+  it('returns ALL_PASS with two item exact logCondition', function () {
     var results = executionLog.getResultsFromLog(
       [
         {
@@ -117,7 +117,7 @@ describe('logConditions: getResultsFromLog', function() {
     assert.equal(results.testResult, TestResults.ALL_PASS);
   });
 
-  it('returns failure and message with insufficient minTimes logCondition', function() {
+  it('returns failure and message with insufficient minTimes logCondition', function () {
     var results = executionLog.getResultsFromLog(
       [
         {
@@ -136,7 +136,7 @@ describe('logConditions: getResultsFromLog', function() {
     });
   });
 
-  it('returns ALL_PASS with two item inexact logCondition', function() {
+  it('returns ALL_PASS with two item inexact logCondition', function () {
     var results = executionLog.getResultsFromLog(
       [
         {
@@ -152,7 +152,7 @@ describe('logConditions: getResultsFromLog', function() {
     assert.equal(results.testResult, TestResults.ALL_PASS);
   });
 
-  it('returns failure and message with insufficient minTimes inexact logCondition', function() {
+  it('returns failure and message with insufficient minTimes inexact logCondition', function () {
     var results = executionLog.getResultsFromLog(
       [
         {
@@ -171,7 +171,7 @@ describe('logConditions: getResultsFromLog', function() {
     });
   });
 
-  it('returns ALL_PASS with two item inexact logCondition not exceeding maxTimes', function() {
+  it('returns ALL_PASS with two item inexact logCondition not exceeding maxTimes', function () {
     var results = executionLog.getResultsFromLog(
       [
         {
@@ -187,7 +187,7 @@ describe('logConditions: getResultsFromLog', function() {
     assert.equal(results.testResult, TestResults.ALL_PASS);
   });
 
-  it('returns failure and message with two item inexact logCondition exceeding maxTimes', function() {
+  it('returns failure and message with two item inexact logCondition exceeding maxTimes', function () {
     var results = executionLog.getResultsFromLog(
       [
         {
@@ -215,7 +215,7 @@ describe('logConditions: getResultsFromLog', function() {
     });
   });
 
-  it('returns ALL_PASS with sufficient arguments logCondition', function() {
+  it('returns ALL_PASS with sufficient arguments logCondition', function () {
     var results = executionLog.getResultsFromLog(
       [
         {
@@ -231,7 +231,7 @@ describe('logConditions: getResultsFromLog', function() {
     assert.equal(results.testResult, TestResults.ALL_PASS);
   });
 
-  it('returns failure and message with insufficient arguments logCondition', function() {
+  it('returns failure and message with insufficient arguments logCondition', function () {
     var results = executionLog.getResultsFromLog(
       [
         {

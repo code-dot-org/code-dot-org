@@ -1,0 +1,117 @@
+@use "sass:math";
+@import "phase1-design-system";
+
+$border-radius: 4px;
+$container-width: 309px;
+
+.curriculumCatalogCardContainer {
+  display: flex;
+  flex-flow: column;
+  background-color: $neutral_light;
+  border-radius: $border-radius;
+  width: $container-width;
+
+  img {
+    height: 140px;
+    object-fit: cover;
+    border-radius: $border-radius $border-radius 0 0;
+  }
+}
+
+.curriculumCatalogCardContainer_english {
+  height: 24em;
+}
+
+.curriculumCatalogCardContainer_notEnglish {
+  height: 26.5em;
+}
+
+.curriculumInfoContainer {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  border: 1px solid $neutral_dark20;
+  border-top: 0;
+  border-radius: 0 0 $border-radius $border-radius;
+  padding: 1.25em 1em;
+
+  i {
+    color: $neutral_dark80;
+  }
+
+  button {
+    margin: 0;
+  }
+
+  h4 {
+    margin-bottom: 0.75em;
+    color: $neutral_dark;
+
+    // Shows max two lines before truncating with ellipsis
+    // See https://css-tricks.com/line-clampin/
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.tagsAndTranslatabilityContainer {
+  display: flex;
+  justify-content: space-between;
+
+  i {
+    font-size: 1.5em;
+  }
+}
+
+.iconWithDescription {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5em;
+  margin: 0 0 0.5em 0;
+
+  .iconWithDescriptionText {
+    font-size: 0.875em;
+    margin: 0;
+    color: $neutral_dark;
+  }
+}
+
+.overline {
+  color: $brand_primary_default;
+  margin-bottom: 0.5em;
+  font-size: 0.75em;
+  font-family: $gotham-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.buttonsContainer_notEnglish {
+  flex-direction: column-reverse;
+  row-gap: 1em;
+
+  button {
+    width: 100%;
+    height: 34px;
+    font-size: 1em;
+  }
+}
+
+.buttonsContainer_english {
+  justify-content: space-between;
+
+  button {
+    // width calculated to ensure space between buttons is 12px
+    // (totalContainerWidth - 2*padding - minimumSpaceBetweenButtons) / 2
+    width: math.div($container-width - (2 * 16) - 12, 2);
+    height: 40px;
+    font-size: 1em;
+  }
+}

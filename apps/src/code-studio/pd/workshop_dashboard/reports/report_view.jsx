@@ -117,9 +117,7 @@ export default class ReportView extends React.Component {
     const report = newState.report || this.state.report;
 
     const course_param = course ? `&course=${course}` : '';
-    const url = `${
-      this.props.location.pathname
-    }?start=${startDate}&end=${endDate}&queryBy=${queryBy}${course_param}&report=${report}`;
+    const url = `${this.props.location.pathname}?start=${startDate}&end=${endDate}&queryBy=${queryBy}${course_param}&report=${report}`;
     this.context.router.replace(url);
 
     if (!_.isEmpty(newState)) {

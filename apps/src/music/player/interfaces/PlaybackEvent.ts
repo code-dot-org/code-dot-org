@@ -19,4 +19,8 @@ export interface PlaybackEvent {
   effects?: Effects;
   /** length of the event in measures */
   length: number;
+  /** The ID of the block that created this event */
+  blockId?: string;
+  /** A unique ID used to group same sounds together in the timeline */
+  id: string;
 }

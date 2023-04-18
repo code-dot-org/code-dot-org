@@ -12,11 +12,14 @@ import animationList, {
 } from '@cdo/apps/p5lab/redux/animationList';
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 
 const VALID_COLOR = 'black';
 const INVALID_COLOR = '#d00';
 
 let poolField, nameField, helperEditor, configEditor, validationDiv;
+let hasLintingErrors = false;
+let isValidBlockConfig = false;
 
 $(document).ready(() => {
   registerReducers({animationList: animationList});
@@ -70,21 +73,33 @@ function initializeEditPage(defaultSprites) {
 
   if (blocks) {
     updateBlockPreview();
+    validateBlockConfig();
   }
+  setSubmitButtonState();
 
-  $('.alert.alert-success')
-    .delay(5000)
-    .fadeOut(1000);
+  $('.alert.alert-success').delay(5000).fadeOut(1000);
 }
 
 function onUpdateLinting(_, errors) {
-  const submitButton = document.querySelector('#block_submit');
   if (errors.length) {
-    submitButton.setAttribute('disabled', 'disabled');
+    hasLintingErrors = true;
   } else {
-    submitButton.removeAttribute('disabled');
+    hasLintingErrors = false;
   }
+  setSubmitButtonState();
 }
+
+const setSubmitButtonState = () => {
+  const disabled = hasLintingErrors || !isValidBlockConfig;
+  ['#block_clone', '#block_submit'].forEach(buttonId => {
+    const button = document.querySelector(buttonId);
+    if (disabled) {
+      button.setAttribute('disabled', 'disabled');
+    } else {
+      button.removeAttribute('disabled');
+    }
+  });
+};
 
 function validateBlockConfig(editor) {
   try {
@@ -92,11 +107,26 @@ function validateBlockConfig(editor) {
       JSON.parse(editor.getValue());
     }
     updateBlockPreview();
+    validateBlockRenders();
+    isValidBlockConfig = true;
     validationDiv.text('Config and helper code appear valid.');
     validationDiv.css('color', VALID_COLOR);
   } catch (err) {
+    isValidBlockConfig = false;
     validationDiv.text(err.toString());
     validationDiv.css('color', INVALID_COLOR);
+  }
+}
+
+// Only apply this validation to pools being rendered in Google Blockly,
+// as those are the pools where we have UI tests and want to prevent
+// levelbuilder changes from causing them to fail
+function validateBlockRenders() {
+  if (
+    Blockly.version === BlocklyVersion.GOOGLE &&
+    Blockly.mainBlockSpace.getAllBlocks().some(block => !!block.unknownBlock)
+  ) {
+    throw 'Blockly is unable to render a block with the given configuration.';
   }
 }
 
@@ -142,7 +172,6 @@ function updateBlockPreview() {
 }
 
 function onBlockSpaceChange() {
-  document.getElementById(
-    'code-preview'
-  ).innerText = Blockly.getWorkspaceCode();
+  document.getElementById('code-preview').innerText =
+    Blockly.getWorkspaceCode();
 }

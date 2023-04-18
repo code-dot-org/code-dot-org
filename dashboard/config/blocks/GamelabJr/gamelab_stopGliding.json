@@ -6,6 +6,7 @@
       1,
       0.74
     ],
+    "style": "default",
     "func": "stopGliding",
     "blockText": "{SPRITE} stops gliding",
     "args": [

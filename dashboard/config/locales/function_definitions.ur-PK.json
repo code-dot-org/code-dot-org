@@ -1274,16 +1274,23 @@
             "parameters": {
               "length": "لمبائی",
               "points": "نقاط"
-            }
+            },
+            "description": "دیئے گئے پوائنٹس اور دی لمبائی کے اطراف کے ساتھ ایک ستارہ اپنی طرف متوجہ"
           },
           "draw a circle": {
-            "name": "ایک دائرہ بنائیں"
+            "name": "ایک دائرہ بنائیں",
+            "description": "دیئے گئے رداس کے ایک دائرے کو اپنی طرف متوجہ",
+            "parameters": {
+              "radius": "رداس"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "لمبائی",
-              "repeat": "دوبارہ"
-            }
+              "repeat": "دوبارہ",
+              "sides": "اطراف"
+            },
+            "name": "ایک پنواہیل اپنی طرف متوجہ"
           },
           "draw a triangle": {
             "name": "ایک مثلث بنائیں",
@@ -1293,8 +1300,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "لمبائی"
-            }
+              "length": "لمبائی",
+              "sides": "اطراف"
+            },
+            "name": "ایک شکل اپنی طرف متوجہ"
           },
           "draw a house": {
             "name": "ایک گھر بنائیں",
@@ -1305,8 +1314,21 @@
           "draw a square": {
             "name": "ایک مربع بنائیں",
             "parameters": {
-              "length": "لمبائی"
+              "length": "لمبائی",
+              "sides": "اطراف"
             }
+          },
+          "small flower": {
+            "name": "چھوٹے پھول"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "منطق پھول 2"
+          },
+          "LOGIC FLOWER": {
+            "name": "منطق پھول"
+          },
+          "LOGIC FLOWERS": {
+            "name": "منطق پھول"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -1315,16 +1337,23 @@
             "parameters": {
               "length": "لمبائی",
               "points": "نقاط"
-            }
+            },
+            "description": "دیئے گئے پوائنٹس اور دی لمبائی کے اطراف کے ساتھ ایک ستارہ اپنی طرف متوجہ"
           },
           "draw a circle": {
-            "name": "ایک دائرہ بنائیں"
+            "name": "ایک دائرہ بنائیں",
+            "description": "دیئے گئے رداس کے ایک دائرے کو اپنی طرف متوجہ",
+            "parameters": {
+              "radius": "رداس"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "لمبائی",
-              "repeat": "دوبارہ"
-            }
+              "repeat": "دوبارہ",
+              "sides": "اطراف"
+            },
+            "name": "ایک پنواہیل اپنی طرف متوجہ"
           },
           "draw a triangle": {
             "name": "ایک مثلث بنائیں",
@@ -1334,8 +1363,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "لمبائی"
-            }
+              "length": "لمبائی",
+              "sides": "اطراف"
+            },
+            "name": "ایک شکل اپنی طرف متوجہ"
           },
           "draw a house": {
             "name": "ایک گھر بنائیں",
@@ -1356,16 +1387,23 @@
             "parameters": {
               "length": "لمبائی",
               "points": "نقاط"
-            }
+            },
+            "description": "دیئے گئے پوائنٹس اور دی لمبائی کے اطراف کے ساتھ ایک ستارہ اپنی طرف متوجہ"
           },
           "draw a circle": {
-            "name": "ایک دائرہ بنائیں"
+            "name": "ایک دائرہ بنائیں",
+            "description": "دیئے گئے رداس کے ایک دائرے کو اپنی طرف متوجہ",
+            "parameters": {
+              "radius": "رداس"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "لمبائی",
-              "repeat": "دوبارہ"
-            }
+              "repeat": "دوبارہ",
+              "sides": "اطراف"
+            },
+            "name": "ایک پنواہیل اپنی طرف متوجہ"
           },
           "draw a triangle": {
             "name": "ایک مثلث بنائیں",
@@ -1375,8 +1413,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "لمبائی"
-            }
+              "length": "لمبائی",
+              "sides": "اطراف"
+            },
+            "name": "ایک شکل اپنی طرف متوجہ"
           },
           "draw a house": {
             "name": "ایک گھر بنائیں",
@@ -1397,16 +1437,23 @@
             "parameters": {
               "length": "لمبائی",
               "points": "نقاط"
-            }
+            },
+            "description": "دیئے گئے پوائنٹس اور دی لمبائی کے اطراف کے ساتھ ایک ستارہ اپنی طرف متوجہ"
           },
           "draw a circle": {
-            "name": "ایک دائرہ بنائیں"
+            "name": "ایک دائرہ بنائیں",
+            "description": "دیئے گئے رداس کے ایک دائرے کو اپنی طرف متوجہ",
+            "parameters": {
+              "radius": "رداس"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "لمبائی",
-              "repeat": "دوبارہ"
-            }
+              "repeat": "دوبارہ",
+              "sides": "اطراف"
+            },
+            "name": "ایک پنواہیل اپنی طرف متوجہ"
           },
           "draw a triangle": {
             "name": "ایک مثلث بنائیں",
@@ -1416,8 +1463,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "لمبائی"
-            }
+              "length": "لمبائی",
+              "sides": "اطراف"
+            },
+            "name": "ایک شکل اپنی طرف متوجہ"
           },
           "draw a house": {
             "name": "ایک گھر بنائیں",
@@ -1436,7 +1485,11 @@
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "شعلے کو اپنی طرف متوجہ"
+          },
+          "draw fire": {
+            "name": "آگ اپنی طرف متوجہ"
           }
         },
         "courseC_data wizard_2021": {
@@ -1447,11 +1500,20 @@
         "courseE_artist_functions10_2021": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "draw hexagon": {
+            "name": "مسدس اپنی طرف متوجہ"
+          },
+          "draw line of hexagons": {
+            "name": "hexagons کی لائن کو اپنی طرف متوجہ"
           }
         },
         "courseE_artist_functions2_2021": {
           "draw a square": {
             "name": "ایک مربع بنائیں"
+          },
+          "draw ear stems": {
+            "name": "کان تنوں کو اپنی طرف متوجہ"
           }
         },
         "courseE_artist_functions2_dani": {
@@ -1482,6 +1544,15 @@
         "courseE_artist_functions8_2021": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "staggered squares": {
+            "name": "ڈگمگایا چوکوں"
+          },
+          "draw a line of squares": {
+            "name": "چوکوں کی ایک لائن کو اپنی طرف متوجہ"
+          },
+          "draw square": {
+            "name": "مربع اپنی طرف متوجہ"
           }
         },
         "courseE_artist_functions8a_2021": {
@@ -1495,26 +1566,53 @@
         "courseE_artist_functions8b_2021": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "draw a line of squares": {
+            "name": "چوکوں کی ایک لائن کو اپنی طرف متوجہ"
+          },
+          "draw square": {
+            "name": "مربع اپنی طرف متوجہ"
           }
         },
         "courseE_artist_functions8c_2021": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "draw a line of squares": {
+            "name": "چوکوں کی ایک لائن کو اپنی طرف متوجہ"
+          },
+          "draw square": {
+            "name": "مربع اپنی طرف متوجہ"
+          },
+          "staggered squares": {
+            "name": "ڈگمگایا چوکوں"
           }
         },
         "courseE_artist_functions9_2021": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "draw triangle": {
+            "name": "مثلث اپنی طرف متوجہ"
+          },
+          "draw line of triangles": {
+            "name": "مثلث کی لائن کو اپنی طرف متوجہ"
           }
         },
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "my design": {
+            "name": "میرا ڈیزائن"
           }
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "my design": {
+            "name": "میرا ڈیزائن"
           }
         },
         "courseE_artist_functions_predict1_2021": {
@@ -1530,6 +1628,12 @@
         "courseE_artist_functions_predict2_2021": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "draw line of polygons": {
+            "name": "کثیرالاضلاع کی لائن کو اپنی طرف متوجہ"
+          },
+          "draw polygon": {
+            "name": "کثیرالاضلاع اپنی طرف متوجہ"
           }
         },
         "courseF_apps_collector": {
@@ -1768,6 +1872,18 @@
             "parameters": {
               "length": "لمبائی"
             }
+          },
+          "small flower": {
+            "name": "چھوٹے پھول"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "منطق پھول 2"
+          },
+          "LOGIC FLOWER": {
+            "name": "منطق پھول"
+          },
+          "LOGIC FLOWERS": {
+            "name": "منطق پھول"
           }
         },
         "CourseD_EOC_artist2022": {
@@ -1966,6 +2082,163 @@
         "courseF_apps_collector_-2022-2": {
           "end game": {
             "name": "کھیل ختم کریں"
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "ری سیٹ کھیل"
+          }
+        },
+        "CourseF_app_computer2022": {
+          "reset game": {
+            "name": "ری سیٹ کھیل"
+          }
+        },
+        "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "ری سیٹ کھیل"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "فنکشن 1"
+          },
+          "function 2": {
+            "name": "فنکشن 2"
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "ممکنہ حل"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "بوسٹر"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "ایک ونڈو اپنی طرف متوجہ"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw hexagon": {
+            "name": "مسدس اپنی طرف متوجہ"
+          },
+          "draw line of hexagons": {
+            "name": "hexagons کی لائن کو اپنی طرف متوجہ"
+          },
+          "staggered squares": {
+            "name": "ڈگمگایا چوکوں"
+          },
+          "draw a line of squares": {
+            "name": "چوکوں کی ایک لائن کو اپنی طرف متوجہ"
+          },
+          "draw square": {
+            "name": "مربع اپنی طرف متوجہ"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "pick along path": {
+            "name": "راستے کے ساتھ ساتھ لینے"
+          },
+          "check square for corn": {
+            "name": "مکئی کے لئے مربع چیک کریں"
+          },
+          "get all pumpkins": {
+            "name": "تمام کدو حاصل"
+          },
+          "pumpkin square": {
+            "name": "قددو مربع"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "pick along path": {
+            "name": "راستے کے ساتھ ساتھ لینے"
+          },
+          "pumpkin square": {
+            "name": "قددو مربع"
+          },
+          "check square for corn": {
+            "name": "مکئی کے لئے مربع چیک کریں"
+          },
+          "get produce": {
+            "name": "پیداوار حاصل کریں"
+          },
+          "get all pumpkins": {
+            "name": "تمام کدو حاصل"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "راستے کے ساتھ ساتھ لینے"
+          },
+          "check for corn": {
+            "name": "مکئی کے لئے چیک کریں"
+          },
+          "corn rectangle": {
+            "name": "مکئی مستطیل"
+          },
+          "lettuce stairs": {
+            "name": "لیٹش سیڑھیاں"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "مکئی کے لئے مربع چیک کریں"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "مکئی کے لئے مربع چیک کریں"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "مکئی کے لئے مربع چیک کریں"
+          },
+          "get all pumpkins": {
+            "name": "تمام کدو حاصل"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "pick along path": {
+            "name": "راستے کے ساتھ ساتھ لینے"
+          },
+          "check square for corn": {
+            "name": "مکئی کے لئے مربع چیک کریں"
+          },
+          "get all pumpkins": {
+            "name": "تمام کدو حاصل"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "مکئی کے لئے مربع چیک کریں"
+          },
+          "get all pumpkins": {
+            "name": "تمام کدو حاصل"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "باغ مربع"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "باغ مربع"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "باغ مربع"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "اقدام اور انسداد کے ساتھ امرت حاصل"
           }
         }
       }

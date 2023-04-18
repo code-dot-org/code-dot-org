@@ -1,28 +1,16 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-09-21T13:19:20.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
       "var myLed = createLed": null,
-      "led.blink": null,
-      "led.pulse": null,
       "onEvent": null,
-      "setText": null,
-      "setProperty": null,
-      "ifBlock": null,
       "on": null,
       "off": null,
       "pulse": null,
       "toggle": null,
       "blink": null,
       "color": null,
-      "led.on": null,
-      "led.off": null,
-      "led.toggle": null,
       "onBoardEvent": null
     },
     "edit_code": true,
@@ -56,16 +44,16 @@
     "autocomplete_palette_apis_only": "false",
     "execute_palette_apis_only": "false",
     "design_mode_at_start": "false",
-    "hide_design_mode": "false",
+    "hide_design_mode": "true",
     "beginner_mode": "false",
     "hide_view_data_button": "true",
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
-    "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/4d3ebc7afabfb5f6ca7448441ec20249-image-1650058011924.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Controlling LEDs\r\n\r\nCreate an app that uses the toggle switch to either turn on the 10 `colorLEDs` on the Circuit Playground, or turns on two external LEDs connected to pins `\"A0\"` or `\"A7\"`.\r\n\r\n_Note: You can start this app in block mode, but you will need to switch to text mode eventually to finish the app_\r\n\r\n## Do This\r\n\r\n**Wiring Your Device**\r\n\r\n1) ::: details [Connect an LED to pin `\"A0\"` using two wires.]\r\n\t- One wire connects the `GND` pin to the negative (-) part of the LED\r\n    - Another wire connects the `\"A0\"` pin to the positive (+) part of the LED\r\n    :::\r\n2) ::: details [Connect an LED to pin `\"A7\"` using two wires.]\r\n\t- One wire connects the `GND` pin to the negative (-) part of the LED\r\n    - Another wire connects the `\"A7\"` pin to the positive (+) part of the LED\r\n    :::\r\n\r\n**Coding Your Device**\r\n\r\n1) ::: details [Create two LED variables on pins `\"A0\"` and `\"A7\"`]\r\n\t- Drag out two [`createLed()`(#4dd0e1)](/docs/applab/createLed/) blocks\r\n    - Set the pins to `\"A0\"` and `\"A7\"`\r\n    :::\r\n2) ::: details [When the `toggleSwitch` is closed: turn on the `colorLEDs` and turn off the external LEDs]\r\n\t- Use an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block to detect with the `toggleSwitch` is `closed`\r\n\t- Turn on all of the `colorLEDs` using ten [`on()`(#f78183)](/docs/applab/on/) blocks\r\n    - Drag out two [`led.off()`(#f78183)](/docs/applab/led.off/) blocks\r\n    - Use text mode to replace `led` with your two variable names\r\n    :::\r\n3) ::: details [When the `toggleSwitch` is open: turn off the `colorLEDs` and turn on the external LEDs]\r\n\t- Use an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block to detect with the `toggleSwitch` is `open`\r\n\t- Turn off all of the `colorLEDs` using ten [`off()`(#f78183)](/docs/applab/off/) blocks\r\n    - Drag out two [`led.on()`(#f78183)](/docs/applab/led.on/) blocks\r\n    - Use text mode to replace `led` with your two variable names\r\n    :::",
-    "text_mode_at_start": "true",
+    "makerlab_enabled": "circuitPlayground",
+    "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/4d3ebc7afabfb5f6ca7448441ec20249-image-1650058011924.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Controlling LEDs\r\n\r\nCreate an app that uses the toggle switch to either turn on the 10 `colorLEDs` on the Circuit Playground, or turns on two external LEDs connected to pins `\"A0\"` or `\"A7\"`.\r\n\r\n## Do This\r\n\r\n**Wiring Your Device**\r\n\r\n1) ::: details [Connect an LED to pin `\"A0\"` using two wires.]\r\n\t- One wire connects the `GND` pin to the negative (-) part of the LED\r\n    - Another wire connects the `\"A0\"` pin to the positive (+) part of the LED\r\n    :::\r\n2) ::: details [Connect an LED to pin `\"A7\"` using two wires.]\r\n\t- One wire connects the `GND` pin to the negative (-) part of the LED\r\n    - Another wire connects the `\"A7\"` pin to the positive (+) part of the LED\r\n    :::\r\n\r\n**Coding Your Device**\r\n\r\n1) ::: details [Create two LED variables on pins `\"A0\"` and `\"A7\"`]\r\n\t- Drag out two [`createLed()`(#4dd0e1)](/docs/applab/createLed/) blocks\r\n    - Set the pins to `\"A0\"` and `\"A7\"`\r\n    :::\r\n2) ::: details [When the `toggleSwitch` is closed: turn on the `colorLEDs` and turn off the external LEDs]\r\n\t- Use an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block to detect with the `toggleSwitch` is `closed`\r\n\t- Turn on all of the `colorLEDs` using ten [`on()`(#f78183)](/docs/applab/on/) blocks\r\n    - Drag out two `___.off()`(#f78183) blocks\r\n    - Replace the blanks with your variable names\r\n    :::\r\n3) ::: details [When the `toggleSwitch` is open: turn off the `colorLEDs` and turn on the external LEDs]\r\n\t- Use an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block to detect with the `toggleSwitch` is `open`\r\n\t- Turn off all of the `colorLEDs` using ten [`off()`(#f78183)](/docs/applab/off/) blocks\r\n    - Drag out two `___.on()`(#f78183) blocks\r\n    - Replace the blanks with your variable names\r\n    :::",
+    "text_mode_at_start": "false",
     "parent_level_id": 20596,
     "name_suffix": "_2023",
     "map_reference": "/courses/csd-2022/guides/circuits-and-leds",
@@ -82,9 +70,13 @@
     "encrypted_examples": "urljaFV4Yfd6lcoWxiAfSE1GyBwjKgsS8+GV3513rIfIslgjMk55ogqJQUct\nLZUKsQl/udOqmUPJQJDoCqyKmw==\n",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-09-21T13:19:20.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:19:20.990+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Output - PB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Output - PB_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:19:20.990+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Output - PB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Output - PB_2222\"},{\"changed_at\":\"2023-03-17 16:34:59 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"makerlab_enabled\",\"long_instructions\",\"text_mode_at_start\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-17 16:35:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

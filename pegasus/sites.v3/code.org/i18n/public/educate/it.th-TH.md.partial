@@ -10,7 +10,8 @@ theme: responsive
 
 - เราแนะนำให้เชื่อมต่ออินเทอร์เน็ตด้วยความเร็วอย่างน้อย 15 เบกาบิต/วินาทีในโรงเรียนของคุณ
 - ขนาดหน้าจอที่เล็กที่สุดที่รองรับคือ 1024 x 728 พิกเซล
-- คุณจะต้องใช้คอมพิวเตอร์เดสก์ท็อปหรือแล็ปท็อปที่มีเมาส์ (หรือทัชแพด) และแป้นพิมพ์สำหรับการเข้าเรียนหลักสูตรระดับกลางและระดับสูงของเรา ได้แก่ หลักสูตรทำความรู้จักกับ CS  หลักสูตรหลักการ CS และหลักสูตรบทนำสู่ App Lab แท็บเล็ตและอุปกรณ์มือถือส่วนใหญ่จะไม่รองรับหลักสูตรดังกล่าวนี้ ดู "รายละเอียดมือถือและแท็บเล็ตที่รองรับ" ด้านล่าง สำหรับข้อยกเว้นเฉพาะอุปกรณ์
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. ดู "รายละเอียดมือถือและแท็บเล็ตที่รองรับ" ด้านล่าง สำหรับข้อยกเว้นเฉพาะอุปกรณ์
 - เนื้อหาอื่นๆ ทั้งหมด เช่น หลักสูตร K-5 (ความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์) และกิจกรรมชั่วโมงแห่งการโค้ด สามารถใช้งานร่วมกับ iPads และ Chromebook ได้ รวมถึงอุปกรณ์แท็บเล็ตและแล็ปท็อปหรือคอมพิวเตอร์เดสก์ท็อปรุ่นใหม่ๆ ทั้งหมด
 - กำลังมองหารายละเอียดอุปกรณ์มือถือที่รองรับใช่หรือไม่? โปรดอ่านด้านล่าง
 
@@ -82,12 +83,12 @@ theme: responsive
 
 ## รายละเอียดกอุปกรณ์มือถือและแท็บเล็ตที่รองรับ
 
-แท็บเล็ตหรืออุปกรณ์มือถือไม่สามารถรองรับการเรียนรู้ในหลักสูตรทำความรู้จักกับ CS  หลักสูตรหลักการ CS และหลักสูตรบทนำสู่ App Lab หลักสูตรดังกล่าวจำเป็นต้องใช้แป้นพิมพ์และเมาส์เต็มรูปแบบ (หรือทัชแพด เช่น MacBook เป็นต้น) แท็บเล็ตส่วนใหญ่ไม่รองรับ แต่มีข้อยกเว้นในกรณีดังต่อไปนี้
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. แท็บเล็ตส่วนใหญ่ไม่รองรับ แต่มีข้อยกเว้นในกรณีดังต่อไปนี้
 
 - Microsoft Surface Pro พร้อมแป้นพิมพ์ภายนอก
 - iPad ที่ใช้ iPadOS 13.4 หรือรุ่นที่ใหม่กว่าที่มีแป้นพิมพ์ภายนอกและเมาส์ภายนอกหรือทัชแพด
 
-เนื้อหาอื่นๆ ทั้งหมด เช่น หลักสูตร K-5 (ความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์) และกิจกรรมชั่วโมงแห่งการโค้ด สามารถใช้งานร่วมกับ iPads และ Chromebook ได้ รวมถึงอุปกรณ์แท็บเล็ตและแล็ปท็อปหรือคอมพิวเตอร์เดสก์ท็อปรุ่นใหม่ๆ ทั้งหมด
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### โทรศัพท์มือถือ
 
@@ -101,15 +102,25 @@ theme: responsive
 
 ก่อนที่คุณจะเริ่มหลักสูตรออนไลน์ของ Code.org ให้ทดสอบการเล่นวิดีโอด้านล่างเพื่อให้แน่ใจว่าคุณสามารถเล่นวิดีโอได้
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
-เพราะตัวเล่นวิดีโอนี้จะถูกใช้ตลอดหลักสูตร ตัวเล่นนี้พยายามเล่นวิดีโอผ่าน YouTube และหาก YouTube ถูกบล็อก จะแสดงวิดีโอที่ฝังอยู่ใน Code.org โดยใช้โปรแกรมเล่น "สำรอง" ของเราแทน
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
+
+This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
 
 ### เล่นวิดีโอไม่ได้?
 
-หากไม่สามารถเล่นวิดีโอได้ คุณสามารถส่งอีเมลหาเราได้ที่ support@code.org
+If video does not work, you can email us at support@code.org.
 
-อย่างไรก็ตาม คุณยังสามารถใช้คู่มือการใช้งานของเราได้โดยไม่ต้องใช้วิดีโอ
+However, you can still use our tutorials without video.
 
 1. เราได้ทำให้วิดีโอของเรา[พร้อมสำหรับการดาวน์โหลดด้วยกัน](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH)แล้ว หากโรงเรียนของคุณมีแบนด์วิดธ์ต่ำ เราขอแนะนำให้คุณดาวน์โหลดวิดีโอและแสดงวิดีโอให้นักเรียนดูบนหน้าจอที่ใช้ร่วมกัน
 2. เช่นเดียวกับคู่มือการใช้งานของเรา เราได้เพิ่มไอคอนสีเขียวของลิงก์ดาวน์โหลด <img src="/images/green-download.png" width=25 height=25 /> สำหรับแต่ละวิดีโอ ทำให้นักเรียนสามารถดาวน์โหลดวิดีโอได้
@@ -119,8 +130,8 @@ theme: responsive
 
 ## การตั้งค่าพิเศษสำหรับผู้ใช้ Google Apps/G-Suite
 
-หากคุณเป็นผู้ดูแลระบบ G-suite อย่าลืมตรวจสอบการตั้งค่าการจำกัดการเข้าถึงของคุณในการใช้งาน YouTube หากคุณตั้งค่า "การจำกัดการเข้าถึง YouTube อย่างเข้มงวด" หรือหากคุณเห็นข้อความที่ระบุว่า 'วิดีโอนี้ถูกจำกัดการเข้าถึง' คุณสามารถทำการเพิ่มช่องของเราลงในรายการช่องที่ได้รับอนุมัติได้ ดู[คู่มือนี้](https://support.google.com/a/answer/6245597)จาก Google เพื่อเรียนรู้เกี่ยวกับวิธีการเพิ่มช่องของเราในรายการช่องที่ได้รับอนุมัติ คุณสามารถดู[คู่มือนี้](https://support.google.com/a/answer/6212415?hl=th)เพื่อเรียนรู้เพิ่มเติมเกี่ยวกับการตั้งค่าต่างๆ และการตั้งค่าที่ดีที่สุดสำหรับห้องเรียนของคุณ
+If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
 
 ## ยังคงประสบปัญหาอยู่ใช่หรือไม่?
 
-เราช่วยคุณได้ เพียงส่งอีเมลถึงเราที่ support@code.org!
+We'll help you out - just email us at support@code.org!

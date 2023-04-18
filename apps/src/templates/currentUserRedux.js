@@ -19,10 +19,11 @@ export const setCurrentUserName = userName => ({
   type: SET_CURRENT_USER_NAME,
   userName
 });
-export const setCurrentUserHasSeenStandardsReportInfo = hasSeenStandardsReport => ({
-  type: SET_HAS_SEEN_STANDARDS_REPORT,
-  hasSeenStandardsReport
-});
+export const setCurrentUserHasSeenStandardsReportInfo =
+  hasSeenStandardsReport => ({
+    type: SET_HAS_SEEN_STANDARDS_REPORT,
+    hasSeenStandardsReport
+  });
 export const setUserSignedIn = isSignedIn => ({
   type: SET_USER_SIGNED_IN,
   isSignedIn

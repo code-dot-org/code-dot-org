@@ -1431,6 +1431,13 @@ ms:
         akaun anda](%{user_registration}) untuk menambah alamat e-mel anda sebelum
         melengkapkan borang ini.
   courses_category: Semua Kursus
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      hello_world: Helo Dunia
+      sports: Sukan
+      csf: Asas CS
+      csc: Sambungan CS
   cookie_banner:
     message: Dengan meneruskan menyemak imbas tapak kami atau mengklik "Saya setuju",
       anda bersetuju untuk menyimpan kuki pada komputer atau peranti anda.

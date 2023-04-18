@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-pl-csc",
-    "serialized_at": "2023-03-15 22:03:19 UTC",
+    "serialized_at": "2023-04-14 20:15:01 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "universal_instructor",
@@ -38,7 +38,7 @@
   "lessons": [
     {
       "key": "Introduction to AI and machine learning",
-      "name": "CS Connections Modules",
+      "name": "Introduction and Overview",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
@@ -157,10 +157,21 @@
   ],
   "activity_sections": [
     {
-      "key": "caaa8191-690b-4008-8b61-186f9d0d1e8b",
+      "key": "049172a2-c98d-495c-b9cc-6bc776956c99",
       "position": 1,
       "properties": {
-        "progression_name": "Overview"
+        "progression_name": "Welcome"
+      },
+      "seeding_key": {
+        "activity_section.key": "049172a2-c98d-495c-b9cc-6bc776956c99",
+        "lesson_activity.key": "9b4974df-015c-4953-8487-116f18d9e658"
+      }
+    },
+    {
+      "key": "caaa8191-690b-4008-8b61-186f9d0d1e8b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Sample projects"
       },
       "seeding_key": {
         "activity_section.key": "caaa8191-690b-4008-8b61-186f9d0d1e8b",
@@ -169,7 +180,7 @@
     },
     {
       "key": "0f784a9a-7f80-4de4-8575-9f2cef15f754",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Planning for CS Connections"
       },
@@ -179,21 +190,10 @@
       }
     },
     {
-      "key": "049172a2-c98d-495c-b9cc-6bc776956c99",
-      "position": 3,
-      "properties": {
-        "progression_name": "Lesson activities"
-      },
-      "seeding_key": {
-        "activity_section.key": "049172a2-c98d-495c-b9cc-6bc776956c99",
-        "lesson_activity.key": "9b4974df-015c-4953-8487-116f18d9e658"
-      }
-    },
-    {
       "key": "fe95eeab-7711-4f97-b8f5-96b099ba47fc",
       "position": 1,
       "properties": {
-        "progression_name": "Introduction to Sprite Lab"
+        "progression_name": "Introducing Sprite Lab"
       },
       "seeding_key": {
         "activity_section.key": "fe95eeab-7711-4f97-b8f5-96b099ba47fc",
@@ -204,7 +204,7 @@
       "key": "54aab54a-fc2e-4d57-899a-cf08665d7cb6",
       "position": 2,
       "properties": {
-        "progression_name": "Introduction to events"
+        "progression_name": "Introducing events"
       },
       "seeding_key": {
         "activity_section.key": "54aab54a-fc2e-4d57-899a-cf08665d7cb6",
@@ -245,8 +245,19 @@
       }
     },
     {
-      "key": "954baf99-76d1-4fef-aef0-484b0c27d331",
+      "key": "c1bc323c-09f7-43b3-ae5d-d3fa83496c17",
       "position": 3,
+      "properties": {
+        "progression_name": "Customization features"
+      },
+      "seeding_key": {
+        "activity_section.key": "c1bc323c-09f7-43b3-ae5d-d3fa83496c17",
+        "lesson_activity.key": "e1c5cfdc-5f73-4b9c-b984-251ae2ad0cf6"
+      }
+    },
+    {
+      "key": "954baf99-76d1-4fef-aef0-484b0c27d331",
+      "position": 4,
       "properties": {
         "progression_name": "Teacher features"
       },
@@ -257,7 +268,7 @@
     },
     {
       "key": "617a6f23-564d-40f0-97c0-3b0c15e9132a",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Using teacher features"
       },
@@ -268,9 +279,9 @@
     },
     {
       "key": "8f32a481-bdab-4606-b383-3fb3220264ce",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "progression_name": "Types of Levels"
+        "progression_name": "Types of levels"
       },
       "seeding_key": {
         "activity_section.key": "8f32a481-bdab-4606-b383-3fb3220264ce",
@@ -279,12 +290,23 @@
     },
     {
       "key": "166eb6d0-cf41-4c99-95b8-f71a7d48fff6",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Preview of teacher and student resources"
       },
       "seeding_key": {
         "activity_section.key": "166eb6d0-cf41-4c99-95b8-f71a7d48fff6",
+        "lesson_activity.key": "e1c5cfdc-5f73-4b9c-b984-251ae2ad0cf6"
+      }
+    },
+    {
+      "key": "ec23343a-00d7-4757-8645-0b7ecd7f6f78",
+      "position": 8,
+      "properties": {
+        "progression_name": "Using teacher features"
+      },
+      "seeding_key": {
+        "activity_section.key": "ec23343a-00d7-4757-8645-0b7ecd7f6f78",
         "lesson_activity.key": "e1c5cfdc-5f73-4b9c-b984-251ae2ad0cf6"
       }
     },
@@ -322,24 +344,24 @@
       }
     },
     {
-      "key": "a7a72337-60a3-4976-9f4e-e35af08b86d4",
-      "position": 4,
-      "properties": {
-        "progression_name": "Using pair programming"
-      },
-      "seeding_key": {
-        "activity_section.key": "a7a72337-60a3-4976-9f4e-e35af08b86d4",
-        "lesson_activity.key": "892c42a2-6fa3-4273-8bdf-2afcb4dd1206"
-      }
-    },
-    {
       "key": "36b52dd6-ea32-4a0e-84b9-51105db7c9cb",
-      "position": 5,
+      "position": 4,
       "properties": {
         "progression_name": "Creating positive CS learning experiences"
       },
       "seeding_key": {
         "activity_section.key": "36b52dd6-ea32-4a0e-84b9-51105db7c9cb",
+        "lesson_activity.key": "892c42a2-6fa3-4273-8bdf-2afcb4dd1206"
+      }
+    },
+    {
+      "key": "a7a72337-60a3-4976-9f4e-e35af08b86d4",
+      "position": 5,
+      "properties": {
+        "progression_name": "Using pair programming"
+      },
+      "seeding_key": {
+        "activity_section.key": "a7a72337-60a3-4976-9f4e-e35af08b86d4",
         "lesson_activity.key": "892c42a2-6fa3-4273-8bdf-2afcb4dd1206"
       }
     }
@@ -351,7 +373,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Overview"
+        "progression": "Welcome"
       },
       "bonus": false,
       "seeding_key": {
@@ -361,7 +383,7 @@
         "lesson.key": "Introduction to AI and machine learning",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "caaa8191-690b-4008-8b61-186f9d0d1e8b"
+        "activity_section.key": "049172a2-c98d-495c-b9cc-6bc776956c99"
       },
       "level_keys": [
         "CSC-SelfPaced-intro_2023"
@@ -370,32 +392,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Overview"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSC-SelfPaced-intro1_2023"
+        "level_keys": [
+          "CSC-SelfPaced-overviewmodules_2023"
         ],
-        "lesson.key": "Introduction to AI and machine learning",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "caaa8191-690b-4008-8b61-186f9d0d1e8b"
-      },
-      "level_keys": [
-        "CSC-SelfPaced-intro1_2023"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Overview"
+        "progression": "Sample projects"
       },
       "bonus": false,
       "seeding_key": {
@@ -412,20 +415,20 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 3,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "SP-VPL-21-CSD-mod5-2-4Overview-AIML_-22_2023"
+          "CSC-SelfPaced-gettingready_2023"
         ],
         "progression": "Planning for CS Connections"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-21-CSD-mod5-2-4Overview-AIML_-22_2023"
+          "CSC-SelfPaced-gettingready_2023"
         ],
         "lesson.key": "Introduction to AI and machine learning",
         "lesson_group.key": "lessonGroup-2",
@@ -433,24 +436,24 @@
         "activity_section.key": "0f784a9a-7f80-4de4-8575-9f2cef15f754"
       },
       "level_keys": [
-        "SP-VPL-21-CSD-mod5-2-4Overview-AIML_-22_2023"
+        "CSC-SelfPaced-gettingready_2023"
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 4,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "SP-VPL-21-CSD-mod5-L5overview-AIML_-22_2023"
+          "CSC-SelfPaced-implementing_2023"
         ],
         "progression": "Planning for CS Connections"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-21-CSD-mod5-L5overview-AIML_-22_2023"
+          "CSC-SelfPaced-implementing_2023"
         ],
         "lesson.key": "Introduction to AI and machine learning",
         "lesson_group.key": "lessonGroup-2",
@@ -458,16 +461,19 @@
         "activity_section.key": "0f784a9a-7f80-4de4-8575-9f2cef15f754"
       },
       "level_keys": [
-        "SP-VPL-21-CSD-mod5-L5overview-AIML_-22_2023"
+        "CSC-SelfPaced-implementing_2023"
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Introduction to Sprite Lab"
+        "level_keys": [
+          "CSC-SelfPaced-introspritelab_2023"
+        ],
+        "progression": "Introducing Sprite Lab"
       },
       "bonus": false,
       "seeding_key": {
@@ -484,7 +490,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -492,7 +498,7 @@
         "level_keys": [
           "CSC-SelfPaced-introsprites_2023"
         ],
-        "progression": "Introduction to Sprite Lab"
+        "progression": "Introducing Sprite Lab"
       },
       "bonus": false,
       "seeding_key": {
@@ -509,7 +515,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -517,7 +523,7 @@
         "level_keys": [
           "CSC-SelfPaced-sprite1_2023"
         ],
-        "progression": "Introduction to Sprite Lab"
+        "progression": "Introducing Sprite Lab"
       },
       "bonus": false,
       "seeding_key": {
@@ -534,12 +540,15 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 8,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Introduction to Sprite Lab"
+        "level_keys": [
+          "CSC-SelfPaced-sprite2_2023"
+        ],
+        "progression": "Introducing Sprite Lab"
       },
       "bonus": false,
       "seeding_key": {
@@ -556,15 +565,40 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 9,
       "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSC-SelfPaced-eventsclick2_2023"
+        ],
+        "progression": "Introducing Sprite Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSC-SelfPaced-eventsclick2_2023"
+        ],
+        "lesson.key": "Train a machine learning model",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csc-2023",
+        "activity_section.key": "fe95eeab-7711-4f97-b8f5-96b099ba47fc"
+      },
+      "level_keys": [
+        "CSC-SelfPaced-eventsclick2_2023"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSC-SelfPaced-eventsintro_2023"
         ],
-        "progression": "Introduction to events"
+        "progression": "Introducing events"
       },
       "bonus": false,
       "seeding_key": {
@@ -582,14 +616,14 @@
     },
     {
       "chapter": 11,
-      "position": 6,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSC-SelfPaced-eventsvideo_2023"
         ],
-        "progression": "Introduction to events"
+        "progression": "Introducing events"
       },
       "bonus": false,
       "seeding_key": {
@@ -607,14 +641,39 @@
     },
     {
       "chapter": 12,
-      "position": 7,
+      "position": 8,
       "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSC-SelfPaced-spritebehavior_2023"
+        ],
+        "progression": "Introducing events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSC-SelfPaced-spritebehavior_2023"
+        ],
+        "lesson.key": "Train a machine learning model",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csc-2023",
+        "activity_section.key": "54aab54a-fc2e-4d57-899a-cf08665d7cb6"
+      },
+      "level_keys": [
+        "CSC-SelfPaced-spritebehavior_2023"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 9,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSC-SelfPaced-eventsclick_2023"
         ],
-        "progression": "Introduction to events"
+        "progression": "Introducing events"
       },
       "bonus": false,
       "seeding_key": {
@@ -631,20 +690,20 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 8,
-      "activity_section_position": 4,
+      "chapter": 14,
+      "position": 10,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSC-SelfPaced-eventsclickvideo_2023"
+          "CSC-SelfPaced-touches_2023"
         ],
-        "progression": "Introduction to events"
+        "progression": "Introducing events"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSC-SelfPaced-eventsclickvideo_2023"
+          "CSC-SelfPaced-touches_2023"
         ],
         "lesson.key": "Train a machine learning model",
         "lesson_group.key": "lessonGroup-2",
@@ -652,19 +711,19 @@
         "activity_section.key": "54aab54a-fc2e-4d57-899a-cf08665d7cb6"
       },
       "level_keys": [
-        "CSC-SelfPaced-eventsclickvideo_2023"
+        "CSC-SelfPaced-touches_2023"
       ]
     },
     {
-      "chapter": 14,
-      "position": 9,
-      "activity_section_position": 5,
+      "chapter": 15,
+      "position": 11,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSC-SelfPaced-eventtimed_2023"
         ],
-        "progression": "Introduction to events"
+        "progression": "Introducing events"
       },
       "bonus": false,
       "seeding_key": {
@@ -681,8 +740,8 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 10,
+      "chapter": 16,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -706,11 +765,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSC-SelfPaced-studentfeatures_2023"
+        ],
         "progression": "Student features"
       },
       "bonus": false,
@@ -728,33 +790,111 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Using student features"
+        "level_keys": [
+          "CSC-SelfPaced-studentfeaturesgifs_2023"
+        ],
+        "progression": "Student features"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSC-SelfPaced-STfeaturespractice_2023"
+          "CSC-SelfPaced-studentfeaturesgifs_2023"
         ],
         "lesson.key": "Engage with machine learning apps",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "7f72ab5f-a710-4831-8ce7-acb172913e0c"
+        "activity_section.key": "cc65f293-ecce-4d72-b555-1706da9de781"
       },
       "level_keys": [
-        "CSC-SelfPaced-STfeaturespractice_2023"
+        "CSC-SelfPaced-studentfeaturesgifs_2023"
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSC-SelfPaced-studentfeaturesgifs2_2023"
+        ],
+        "progression": "Student features"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSC-SelfPaced-studentfeaturesgifs2_2023"
+        ],
+        "lesson.key": "Engage with machine learning apps",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csc-2023",
+        "activity_section.key": "cc65f293-ecce-4d72-b555-1706da9de781"
+      },
+      "level_keys": [
+        "CSC-SelfPaced-studentfeaturesgifs2_2023"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Customization features"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSC-SelfPaced-customizegifs_2023"
+        ],
+        "lesson.key": "Engage with machine learning apps",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csc-2023",
+        "activity_section.key": "c1bc323c-09f7-43b3-ae5d-d3fa83496c17"
+      },
+      "level_keys": [
+        "CSC-SelfPaced-customizegifs_2023"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSC-SelfPaced-customization1_2023"
+        ],
+        "progression": "Customization features"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSC-SelfPaced-customization1_2023"
+        ],
+        "lesson.key": "Engage with machine learning apps",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csc-2023",
+        "activity_section.key": "c1bc323c-09f7-43b3-ae5d-d3fa83496c17"
+      },
+      "level_keys": [
+        "CSC-SelfPaced-customization1_2023"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSC-SelfPaced-teacherfeatures_2023"
+        ],
         "progression": "Teacher features"
       },
       "bonus": false,
@@ -772,34 +912,59 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 4,
-      "activity_section_position": 1,
+      "chapter": 23,
+      "position": 7,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Using teacher features"
+        "progression": "Teacher features"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSC-SelfPaced-Tfeaturespractice_2023"
+          "CSC-SelfPaced-Tfeaturesgif_2023"
         ],
         "lesson.key": "Engage with machine learning apps",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "617a6f23-564d-40f0-97c0-3b0c15e9132a"
+        "activity_section.key": "954baf99-76d1-4fef-aef0-484b0c27d331"
       },
       "level_keys": [
-        "CSC-SelfPaced-Tfeaturespractice_2023"
+        "CSC-SelfPaced-Tfeaturesgif_2023"
       ]
     },
     {
-      "chapter": 20,
-      "position": 5,
+      "chapter": 24,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Teacher features"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSC-SelfPaced-teacherpanel_2023"
+        ],
+        "lesson.key": "Engage with machine learning apps",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csc-2023",
+        "activity_section.key": "954baf99-76d1-4fef-aef0-484b0c27d331"
+      },
+      "level_keys": [
+        "CSC-SelfPaced-teacherpanel_2023"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Types of Levels"
+        "level_keys": [
+          "CSC-SelfPaced-lessonactivities_2023"
+        ],
+        "progression": "Types of levels"
       },
       "bonus": false,
       "seeding_key": {
@@ -816,12 +981,15 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 6,
+      "chapter": 26,
+      "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Types of Levels"
+        "level_keys": [
+          "CSC-SelfPaced-planlevel_2023"
+        ],
+        "progression": "Types of levels"
       },
       "bonus": false,
       "seeding_key": {
@@ -838,12 +1006,15 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 7,
+      "chapter": 27,
+      "position": 11,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Types of Levels"
+        "level_keys": [
+          "CSC-SelfPaced-explorelevel_2023"
+        ],
+        "progression": "Types of levels"
       },
       "bonus": false,
       "seeding_key": {
@@ -860,12 +1031,15 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 8,
+      "chapter": 28,
+      "position": 12,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Types of Levels"
+        "level_keys": [
+          "CSC-SelfPaced-freeplaylevel_2023"
+        ],
+        "progression": "Types of levels"
       },
       "bonus": false,
       "seeding_key": {
@@ -882,12 +1056,15 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 9,
+      "chapter": 29,
+      "position": 13,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Types of Levels"
+        "level_keys": [
+          "CSC-SelfPaced-skillbuildinglevel_2023"
+        ],
+        "progression": "Types of levels"
       },
       "bonus": false,
       "seeding_key": {
@@ -904,8 +1081,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 10,
+      "chapter": 30,
+      "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -929,11 +1106,14 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 11,
+      "chapter": 31,
+      "position": 15,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSC-SelfPaced-landpage_2023"
+        ],
         "progression": "Preview of teacher and student resources"
       },
       "bonus": false,
@@ -951,11 +1131,14 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 12,
+      "chapter": 32,
+      "position": 16,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSC-SelfPaced-lessonplans_2023"
+        ],
         "progression": "Preview of teacher and student resources"
       },
       "bonus": false,
@@ -973,11 +1156,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSC-SelfPaced-TLintro_2023"
+        ],
         "progression": "Teaching and learning with debugging"
       },
       "bonus": false,
@@ -995,183 +1181,33 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 34,
       "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "SP-VPL-21-CSD-mod5-BiasOverview-AIML_-22_2023"
-        ],
-        "progression": "Using debugging"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-21-CSD-mod5-BiasOverview-AIML_-22_2023"
-        ],
-        "lesson.key": "Consider real world implications",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "6643dbb8-33f1-4d3a-a9f7-d78aed6179b5"
-      },
-      "level_keys": [
-        "SP-VPL-21-CSD-mod5-BiasOverview-AIML_-22_2023"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "SP-VPL-CSD-21-mod5-TrainingDataBias-vid_2023"
+          "CSC-SelfPaced-debugging2_2023"
         ],
-        "progression": "Using debugging"
+        "progression": "Teaching and learning with debugging"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-CSD-21-mod5-TrainingDataBias-vid_2023"
+          "CSC-SelfPaced-debugging2_2023"
         ],
         "lesson.key": "Consider real world implications",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "6643dbb8-33f1-4d3a-a9f7-d78aed6179b5"
+        "activity_section.key": "678cf59f-0b3e-4b19-9d91-e05969e91dc0"
       },
       "level_keys": [
-        "SP-VPL-CSD-21-mod5-TrainingDataBias-vid_2023"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 4,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2_2023"
-        ],
-        "progression": "Using debugging"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2_2023"
-        ],
-        "lesson.key": "Consider real world implications",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "6643dbb8-33f1-4d3a-a9f7-d78aed6179b5"
-      },
-      "level_keys": [
-        "SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2_2023"
-      ]
-    },
-    {
-      "chapter": 32,
-      "position": 5,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "SP-VPL-CSD-21-mod5-ml-model card-medical-3_-22_2023"
-        ],
-        "progression": "Using debugging"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-CSD-21-mod5-ml-model card-medical-3_-22_2023"
-        ],
-        "lesson.key": "Consider real world implications",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "6643dbb8-33f1-4d3a-a9f7-d78aed6179b5"
-      },
-      "level_keys": [
-        "SP-VPL-CSD-21-mod5-ml-model card-medical-3_-22_2023"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 6,
-      "activity_section_position": 5,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "SP-VPL-21-CSD-mod5-ModelCards-c4u_-22_2023"
-        ],
-        "progression": "Using debugging"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-21-CSD-mod5-ModelCards-c4u_-22_2023"
-        ],
-        "lesson.key": "Consider real world implications",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "6643dbb8-33f1-4d3a-a9f7-d78aed6179b5"
-      },
-      "level_keys": [
-        "SP-VPL-21-CSD-mod5-ModelCards-c4u_-22_2023"
-      ]
-    },
-    {
-      "chapter": 34,
-      "position": 7,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "SP-VPL-CSD-21-mod5-EqualAccessAndBias-vid_2023"
-        ],
-        "progression": "Using debugging"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-CSD-21-mod5-EqualAccessAndBias-vid_2023"
-        ],
-        "lesson.key": "Consider real world implications",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "6643dbb8-33f1-4d3a-a9f7-d78aed6179b5"
-      },
-      "level_keys": [
-        "SP-VPL-CSD-21-mod5-EqualAccessAndBias-vid_2023"
+        "CSC-SelfPaced-debugging2_2023"
       ]
     },
     {
       "chapter": 35,
-      "position": 8,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "SP-VPL-21-CSD-mod5-L14examples-AIML_-22_2023"
-        ],
-        "progression": "Using debugging"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-21-CSD-mod5-L14examples-AIML_-22_2023"
-        ],
-        "lesson.key": "Consider real world implications",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "6643dbb8-33f1-4d3a-a9f7-d78aed6179b5"
-      },
-      "level_keys": [
-        "SP-VPL-21-CSD-mod5-L14examples-AIML_-22_2023"
-      ]
-    },
-    {
-      "chapter": 36,
-      "position": 9,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1195,33 +1231,58 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 10,
-      "activity_section_position": 1,
+      "chapter": 36,
+      "position": 4,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSC-SelfPaced-usingpairprogramming_2023"
+          "elementary_video_pairProgramming_2023"
         ],
-        "progression": "Using pair programming"
+        "progression": "Teaching and learning with pair programming"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSC-SelfPaced-usingpairprogramming_2023"
+          "elementary_video_pairProgramming_2023"
         ],
         "lesson.key": "Consider real world implications",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "a7a72337-60a3-4976-9f4e-e35af08b86d4"
+        "activity_section.key": "530ee52b-3899-43a4-ae27-a83c2aef3164"
       },
       "level_keys": [
-        "CSC-SelfPaced-usingpairprogramming_2023"
+        "elementary_video_pairProgramming_2023"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSC-SelfPaced-pairprogramming2_2023"
+        ],
+        "progression": "Teaching and learning with pair programming"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSC-SelfPaced-pairprogramming2_2023"
+        ],
+        "lesson.key": "Consider real world implications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csc-2023",
+        "activity_section.key": "530ee52b-3899-43a4-ae27-a83c2aef3164"
+      },
+      "level_keys": [
+        "CSC-SelfPaced-pairprogramming2_2023"
       ]
     },
     {
       "chapter": 38,
-      "position": 11,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1255,19 +1316,7 @@
         "lesson.key": "Introduction to AI and machine learning",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "caaa8191-690b-4008-8b61-186f9d0d1e8b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSC-SelfPaced-intro1_2023",
-        "script_level.level_keys": [
-          "CSC-SelfPaced-intro1_2023"
-        ],
-        "lesson.key": "Introduction to AI and machine learning",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "caaa8191-690b-4008-8b61-186f9d0d1e8b"
+        "activity_section.key": "049172a2-c98d-495c-b9cc-6bc776956c99"
       }
     },
     {
@@ -1284,9 +1333,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-21-CSD-mod5-2-4Overview-AIML_-22_2023",
+        "level.key": "CSC-SelfPaced-gettingready_2023",
         "script_level.level_keys": [
-          "SP-VPL-21-CSD-mod5-2-4Overview-AIML_-22_2023"
+          "CSC-SelfPaced-gettingready_2023"
         ],
         "lesson.key": "Introduction to AI and machine learning",
         "lesson_group.key": "lessonGroup-2",
@@ -1296,9 +1345,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-21-CSD-mod5-L5overview-AIML_-22_2023",
+        "level.key": "CSC-SelfPaced-implementing_2023",
         "script_level.level_keys": [
-          "SP-VPL-21-CSD-mod5-L5overview-AIML_-22_2023"
+          "CSC-SelfPaced-implementing_2023"
         ],
         "lesson.key": "Introduction to AI and machine learning",
         "lesson_group.key": "lessonGroup-2",
@@ -1356,6 +1405,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSC-SelfPaced-eventsclick2_2023",
+        "script_level.level_keys": [
+          "CSC-SelfPaced-eventsclick2_2023"
+        ],
+        "lesson.key": "Train a machine learning model",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csc-2023",
+        "activity_section.key": "fe95eeab-7711-4f97-b8f5-96b099ba47fc"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSC-SelfPaced-eventsintro_2023",
         "script_level.level_keys": [
           "CSC-SelfPaced-eventsintro_2023"
@@ -1380,6 +1441,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSC-SelfPaced-spritebehavior_2023",
+        "script_level.level_keys": [
+          "CSC-SelfPaced-spritebehavior_2023"
+        ],
+        "lesson.key": "Train a machine learning model",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csc-2023",
+        "activity_section.key": "54aab54a-fc2e-4d57-899a-cf08665d7cb6"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSC-SelfPaced-eventsclick_2023",
         "script_level.level_keys": [
           "CSC-SelfPaced-eventsclick_2023"
@@ -1392,9 +1465,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSC-SelfPaced-eventsclickvideo_2023",
+        "level.key": "CSC-SelfPaced-touches_2023",
         "script_level.level_keys": [
-          "CSC-SelfPaced-eventsclickvideo_2023"
+          "CSC-SelfPaced-touches_2023"
         ],
         "lesson.key": "Train a machine learning model",
         "lesson_group.key": "lessonGroup-2",
@@ -1440,14 +1513,50 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSC-SelfPaced-STfeaturespractice_2023",
+        "level.key": "CSC-SelfPaced-studentfeaturesgifs_2023",
         "script_level.level_keys": [
-          "CSC-SelfPaced-STfeaturespractice_2023"
+          "CSC-SelfPaced-studentfeaturesgifs_2023"
         ],
         "lesson.key": "Engage with machine learning apps",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "7f72ab5f-a710-4831-8ce7-acb172913e0c"
+        "activity_section.key": "cc65f293-ecce-4d72-b555-1706da9de781"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSC-SelfPaced-studentfeaturesgifs2_2023",
+        "script_level.level_keys": [
+          "CSC-SelfPaced-studentfeaturesgifs2_2023"
+        ],
+        "lesson.key": "Engage with machine learning apps",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csc-2023",
+        "activity_section.key": "cc65f293-ecce-4d72-b555-1706da9de781"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSC-SelfPaced-customizegifs_2023",
+        "script_level.level_keys": [
+          "CSC-SelfPaced-customizegifs_2023"
+        ],
+        "lesson.key": "Engage with machine learning apps",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csc-2023",
+        "activity_section.key": "c1bc323c-09f7-43b3-ae5d-d3fa83496c17"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSC-SelfPaced-customization1_2023",
+        "script_level.level_keys": [
+          "CSC-SelfPaced-customization1_2023"
+        ],
+        "lesson.key": "Engage with machine learning apps",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csc-2023",
+        "activity_section.key": "c1bc323c-09f7-43b3-ae5d-d3fa83496c17"
       }
     },
     {
@@ -1464,14 +1573,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSC-SelfPaced-Tfeaturespractice_2023",
+        "level.key": "CSC-SelfPaced-Tfeaturesgif_2023",
         "script_level.level_keys": [
-          "CSC-SelfPaced-Tfeaturespractice_2023"
+          "CSC-SelfPaced-Tfeaturesgif_2023"
         ],
         "lesson.key": "Engage with machine learning apps",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "617a6f23-564d-40f0-97c0-3b0c15e9132a"
+        "activity_section.key": "954baf99-76d1-4fef-aef0-484b0c27d331"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSC-SelfPaced-teacherpanel_2023",
+        "script_level.level_keys": [
+          "CSC-SelfPaced-teacherpanel_2023"
+        ],
+        "lesson.key": "Engage with machine learning apps",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csc-2023",
+        "activity_section.key": "954baf99-76d1-4fef-aef0-484b0c27d331"
       }
     },
     {
@@ -1584,86 +1705,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-21-CSD-mod5-BiasOverview-AIML_-22_2023",
+        "level.key": "CSC-SelfPaced-debugging2_2023",
         "script_level.level_keys": [
-          "SP-VPL-21-CSD-mod5-BiasOverview-AIML_-22_2023"
+          "CSC-SelfPaced-debugging2_2023"
         ],
         "lesson.key": "Consider real world implications",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "6643dbb8-33f1-4d3a-a9f7-d78aed6179b5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "SP-VPL-CSD-21-mod5-TrainingDataBias-vid_2023",
-        "script_level.level_keys": [
-          "SP-VPL-CSD-21-mod5-TrainingDataBias-vid_2023"
-        ],
-        "lesson.key": "Consider real world implications",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "6643dbb8-33f1-4d3a-a9f7-d78aed6179b5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2_2023",
-        "script_level.level_keys": [
-          "SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2_2023"
-        ],
-        "lesson.key": "Consider real world implications",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "6643dbb8-33f1-4d3a-a9f7-d78aed6179b5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "SP-VPL-CSD-21-mod5-ml-model card-medical-3_-22_2023",
-        "script_level.level_keys": [
-          "SP-VPL-CSD-21-mod5-ml-model card-medical-3_-22_2023"
-        ],
-        "lesson.key": "Consider real world implications",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "6643dbb8-33f1-4d3a-a9f7-d78aed6179b5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "SP-VPL-21-CSD-mod5-ModelCards-c4u_-22_2023",
-        "script_level.level_keys": [
-          "SP-VPL-21-CSD-mod5-ModelCards-c4u_-22_2023"
-        ],
-        "lesson.key": "Consider real world implications",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "6643dbb8-33f1-4d3a-a9f7-d78aed6179b5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "SP-VPL-CSD-21-mod5-EqualAccessAndBias-vid_2023",
-        "script_level.level_keys": [
-          "SP-VPL-CSD-21-mod5-EqualAccessAndBias-vid_2023"
-        ],
-        "lesson.key": "Consider real world implications",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "6643dbb8-33f1-4d3a-a9f7-d78aed6179b5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "SP-VPL-21-CSD-mod5-L14examples-AIML_-22_2023",
-        "script_level.level_keys": [
-          "SP-VPL-21-CSD-mod5-L14examples-AIML_-22_2023"
-        ],
-        "lesson.key": "Consider real world implications",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "6643dbb8-33f1-4d3a-a9f7-d78aed6179b5"
+        "activity_section.key": "678cf59f-0b3e-4b19-9d91-e05969e91dc0"
       }
     },
     {
@@ -1680,14 +1729,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSC-SelfPaced-usingpairprogramming_2023",
+        "level.key": "elementary_video_pairProgramming_2023",
         "script_level.level_keys": [
-          "CSC-SelfPaced-usingpairprogramming_2023"
+          "elementary_video_pairProgramming_2023"
         ],
         "lesson.key": "Consider real world implications",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csc-2023",
-        "activity_section.key": "a7a72337-60a3-4976-9f4e-e35af08b86d4"
+        "activity_section.key": "530ee52b-3899-43a4-ae27-a83c2aef3164"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSC-SelfPaced-pairprogramming2_2023",
+        "script_level.level_keys": [
+          "CSC-SelfPaced-pairprogramming2_2023"
+        ],
+        "lesson.key": "Consider real world implications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csc-2023",
+        "activity_section.key": "530ee52b-3899-43a4-ae27-a83c2aef3164"
       }
     },
     {

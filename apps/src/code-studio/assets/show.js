@@ -66,7 +66,7 @@ function showAssetManager(assetChosen, typeFilter, onClose, options) {
       uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),
       useFilesApi: !!options.useFilesApi,
       assetChosen: showChoseImageButton
-        ? function(fileWithPath, timestamp) {
+        ? function (fileWithPath, timestamp) {
             dialog.hide();
             assetChosen(fileWithPath, timestamp);
           }
