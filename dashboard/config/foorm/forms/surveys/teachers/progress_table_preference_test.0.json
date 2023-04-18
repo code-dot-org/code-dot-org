@@ -13,15 +13,21 @@
           "choices": [
             {
               "value": "green_dots",
-              "imageLink": "https://images.code.org/progress_mock_green_dots.png"
+              "type": "image",
+              "imageLink": "https://images.code.org/progress_mock_green_dots.png",
+              "imageWidth": 420
             },
             {
               "value": "grey_dots",
-              "imageLink": "https://images.code.org/progress_mock_grey_dots.png"
+              "type": "image",
+              "imageLink": "https://images.code.org/progress_mock_grey_dots.png",
+              "imageWidth": 420
             },
             {
               "value": "green_checkmarks",
-              "imageLink": "https://images.code.org/progress_mock_green_checkmarks.png"
+              "type": "image",
+              "imageLink": "https://images.code.org/progress_mock_green_checkmarks.png",
+              "imageWidth": 420
             }
           ],
           "choicesOrder": "random"
@@ -42,21 +48,24 @@
           "title": "In the previous question, you chose this progress view:",
           "name": "ref_image_green_dots",
           "visibleIf": "{progress_preference} = 'green_dots'",
-          "imageLink": "https://images.code.org/progress_mock_green_dots.png"
+          "imageLink": "https://images.code.org/progress_mock_green_dots.png",
+          "imageWidth": 420
         },
         {
           "type": "image",
           "title": "In the previous question, you chose this progress view:",
           "name": "ref_image_grey_checkmarks",
           "visibleIf": "{progress_preference} = 'grey_dots'",
-          "imageLink": "https://images.code.org/progress_mock_grey_dots.png"
+          "imageLink": "https://images.code.org/progress_mock_grey_dots.png",
+          "imageWidth": 420
         },
         {
           "type": "image",
           "title": "In the previous question, you chose this progress view:",
           "name": "ref_image_green_checkmarks",
           "visibleIf": "{progress_preference} = 'green_checkmarks'",
-          "imageLink": "https://images.code.org/progress_mock_green_checkmarks.png"
+          "imageLink": "https://images.code.org/progress_mock_green_checkmarks.png",
+          "imageWidth": 420
         },
         {
           "type": "comment",
