@@ -166,7 +166,7 @@
   ai_curricula_heading: "AI Curricula"
   ai_curricula_desc: "Explore the different AI curriculum offerings which meet diverse classroom needs."
   ai_curriculum_title_01: "AI and Machine Learning"
-  ai_curriculum_desc_01: "Explore how computers learn from data. Develop machine learning projects around real-world data. Design machine learning app to solve personally relevant problem."
+  ai_curriculum_desc_01: "Explore how computers learn from data. Develop machine learning projects around real-world data. Design a machine learning app to solve a personally relevant problem."
   ai_curriculum_grades_01: "Grade Levels: 6-12"
   ai_curriculum_duration_01: "Duration: 20 hours"
   ai_curriculum_btn_aria_label_01: "Explore the AI and Machine Learning unit"
@@ -202,7 +202,7 @@
   ai_resources_desc_02: "This global AI for Good challenge introduces students to Microsoft's AI for Good initiatives, empowering them to solve a problem in the world with the power of AI."
   ai_resources_btn_aria_label_02: "Learn about the Imagine Cup Junior challenge"
   ai_resources_title_03: "AI for Teachers"
-  ai_resources_desc_03: "Supports integration of Artificial Intelligence knowledge throughout K-12 Offer free professional development, webinars, conference presentations, and peer-to-peer learning opportunities."
+  ai_resources_desc_03: "Supports integration of Artificial Intelligence knowledge throughout K-12. Offer free professional development, webinars, conference presentations, and peer-to-peer learning opportunities."
   ai_resources_btn_aria_label_03: "Explore the AI for Teachers website"
 
   hoc_live: 'Hour of Code Live'
