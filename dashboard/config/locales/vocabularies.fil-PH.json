@@ -345,7 +345,8 @@
           "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
         },
         "behavior/coursef/2022": {
-          "word": "Paggawi"
+          "word": "Paggawi",
+          "definition": "Isang aksiyon sa Sprite Lab na patuloy na ginagawa ng sprite hanggang sa sabihing huminto ito."
         },
         "program/coursef/2022": {
           "word": "Program",
@@ -383,10 +384,20 @@
           "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
         "function/coursee/2022": {
-          "word": "Function"
+          "word": "Function",
+          "definition": "Isang piraso ng code na maaari mong tawagin nang paulit-ulit."
+        },
+        "call_a_function/coursee/2022": {
+          "word": "Tumawag ng Function",
+          "definition": "Ginamit ang pangalan ng function upang sabihin sa computer na patakbuhin ang code na nakasulat sa function."
+        },
+        "declare_a_function/coursee/2022": {
+          "word": "Magdeklara ng Function",
+          "definition": "Punan ang isang function na may code at bigyan ang function ng pangalan."
         },
         "condition/coursee/2022": {
-          "word": "Condition"
+          "word": "Condition",
+          "definition": "Isang pahayag na sinusuri ng program upang makita kung ito ay totoo o mali. Kung totoo, may gagawing aksiyon. Kung hindi, ang aksiyon ay hindi papansinin"
         },
         "conditionals/coursee/2022": {
           "word": "Mga conditional",
@@ -500,6 +511,13 @@
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
+        "persistence/coursec/2022": {
+          "definition": "Hindi pagsuko."
+        },
+        "angle/coursec/2022": {
+          "word": "Anggulo",
+          "definition": "Kung saan nagsasama-sama ang dalawang panig ng hugis, na sinusukat sa mga degree."
+        },
         "loop/coursec/2022": {
           "word": "Loop",
           "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
@@ -509,7 +527,12 @@
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
         "data/coursec/2022": {
-          "word": "Data"
+          "word": "Data",
+          "definition": "Isang koleksiyon ng impormasyon"
+        },
+        "graph/coursec/2022": {
+          "word": "Graph",
+          "definition": "Isang larawan o diagram na kumakatawan sa data o mga value sa organisadong paraan"
         },
         "binary/coursec/2022": {
           "word": "Binary"

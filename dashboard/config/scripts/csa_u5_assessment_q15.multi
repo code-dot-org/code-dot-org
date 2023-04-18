@@ -36,5 +36,3 @@ public int findElement(int[][] values) {
 
 Which of the following best describes what is returned by the `findElement` method?
 MARKDOWN
-
-allow_multiple_attempts true

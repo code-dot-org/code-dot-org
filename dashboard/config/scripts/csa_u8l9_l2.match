@@ -14,4 +14,3 @@ answer 'the content cannot be changed once it is created'
 
 question 'polymorphism'
 answer 'the ability to perform an action in different ways'
-allow_multiple_attempts true

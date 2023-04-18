@@ -21,5 +21,3 @@ answer 'definition 4'
 teacher_markdown <<MARKDOWN
 
 MARKDOWN
-
-allow_multiple_attempts true

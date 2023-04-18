@@ -12,4 +12,3 @@ answer 'a copy of the value is given to where the method is called'
 
 question 'concatenation'
 answer 'the act of merging two strings into one'
-allow_multiple_attempts true

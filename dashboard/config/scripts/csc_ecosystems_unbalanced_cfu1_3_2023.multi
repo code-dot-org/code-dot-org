@@ -6,7 +6,7 @@ wrong 'Allow fishing only during specific times of the year. ', feedback: 'Incor
 wrong 'No fishing allowed.', feedback: 'Incorrect.'
 
 
-allow_multiple_attempts true
+allow_multiple_attempts false
 markdown <<MARKDOWN
 
 MARKDOWN

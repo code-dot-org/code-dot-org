@@ -10,7 +10,8 @@ theme: responsive
 
 - Okulunuz için en az 15 MBit/sn İnternet bağlantısı öneriyoruz.
 - Desteklediğimiz en küçük ekran boyutu 1024 x 728 pikseldir.
-- Ortaokul ve lise düzeyindeki kurslarımız için fareli (veya dokunmatik yüzeyli) ve klavyeli bir masaüstü veya dizüstü bilgisayara ihtiyacınız olacak: Bilgisayar Bilimi Keşifleri, Bilgisayar Bilimi İlkeleri ve Uygulama Laboratuvarına Giriş. Çoğu tablet ve mobil cihaz bu kurslar için desteklenmez. Cihaza özel durumlar için aşağıdaki "Mobil ve Tablet Destek Ayrıntıları"na bakın.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Cihaza özel durumlar için aşağıdaki "Mobil ve Tablet Destek Ayrıntıları"na bakın.
 - K-5 kursları (Bilgisayar Bilimi Temelleri) ve Kodlama Saati etkinlikleri gibi diğer tüm içerikler, diğer tüm modern tabletler ve dizüstü veya masaüstü bilgisayarların yanı sıra iPad'lerde ve Chromebook'larda uyumludur.
 - Mobil cihaz desteği ile ilgili ayrıntılarını mı arıyorsunuz? Aşağıdakileri okuyun.
 
@@ -82,12 +83,12 @@ Tüm Code.org içeriklerinde en iyi deneyimi yaşamak için, aşağıdaki sitele
 
 ## Mobil ve Tablet Destek detayları
 
-Tüm Bilgisayar Bilimi Keşifleri, Bilgisayar Bilimi İlkeleri ve Uygulama Laboratuvarına Giriş kursları tabletler veya mobil cihazlarla uyumlu değildir - klavye ve fare (veya MacBook'larda olduğu gibi dokunmatik yüzey) gereklidir. Aşağıdaki istisnalar hariç, çoğu tablet desteklenmez:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Aşağıdaki istisnalar hariç, çoğu tablet desteklenmez:
 
 - Harici klavyesi olan Microsoft Surface Pro
 - iPadOS 13.4 veya daha sonraki sürümleri kullanan ve harici klavyesi, harici faresi veya dokunmatik ekranı olan iPad
 
-K-5 kursları (Bilgisayar Bilimi Temelleri) ve Kodlama Saati etkinlikleri gibi diğer tüm içerikler, diğer tüm modern tabletler ve dizüstü veya masaüstü bilgisayarların yanı sıra iPad'lerde ve Chromebook'larda uyumludur.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### Cep Telefonları
 
