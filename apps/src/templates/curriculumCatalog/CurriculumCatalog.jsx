@@ -6,9 +6,9 @@ import style from '../../../style/code-studio/curriculum_catalog_container.modul
 import HeaderBanner from '../HeaderBanner';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
+import CheckboxDropdown from '../CheckboxDropdown';
 
 const CurriculumCatalog = ({curriculaData, isEnglish}) => {
-  // Move to separate component? (CheckboxDropdown)
   // Add test file for separate component
   // Connect to real information
   // Start styling
@@ -59,43 +59,13 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
       <div className={style.catalogFiltersContainer}>
         {filterTypes.map(filterType => {
           return (
-            <div
-              id={`${filterType.name}-dropdown`}
+            <CheckboxDropdown
               key={`${filterType.name}-dropdown`}
-              className="dropdown"
-            >
-              <button
-                id={`${filterType.name}-dropdown-button`}
-                type="button"
-                className="selectbox"
-                data-toggle="dropdown"
-              >
-                {filterType.label}
-              </button>
-              <ul className="dropdown-menu">
-                <form>
-                  {filterType.options.map(option => {
-                    return (
-                      <li
-                        key={`${filterType.name}-${option}`}
-                        className="checkbox form-group"
-                      >
-                        <input
-                          type="checkbox"
-                          id={`${filterType.name}-${option}-check`}
-                          name={option}
-                          value={option}
-                          onChange={e => handleSelect(e, filterType.name)}
-                        />
-                        <label htmlFor={`${filterType.name}-${option}-check`}>
-                          {option}
-                        </label>
-                      </li>
-                    );
-                  })}
-                </form>
-              </ul>
-            </div>
+              name={filterType.name}
+              label={filterType.label}
+              options={filterType.options}
+              onChange={e => handleSelect(e, filterType.name)}
+            />
           );
         })}
       </div>
