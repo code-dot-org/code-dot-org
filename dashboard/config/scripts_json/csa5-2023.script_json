@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-14 12:29:04 UTC",
+    "serialized_at": "2023-04-17 16:21:22 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -7631,6 +7631,16 @@
       }
     },
     {
+      "key": "row_major_order",
+      "word": "row-major order",
+      "definition": "traversing a 2D array by accessing each row from top to bottom",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "row_major_order"
+      }
+    },
+    {
       "key": "two_dimensional_d_array",
       "word": "two-dimensional (2D) array",
       "definition": "an array of arrays often represented as a table with rows and columns",
@@ -7670,6 +7680,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "vocabulary.key": "two_dimensional_d_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "row_major_order"
       }
     },
     {
