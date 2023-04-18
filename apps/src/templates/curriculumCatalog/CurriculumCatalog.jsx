@@ -3,31 +3,21 @@ import PropTypes from 'prop-types';
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
+import HeaderBanner from '../HeaderBanner';
+import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-illustration-01.png';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import {translatedCourseOfferingDurations} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 
 const CurriculumCatalog = ({curriculaData}) => (
   <>
-    <div className={style.catalogHeader}>
-      <div className={style.catalogHeaderContent}>
-        <div className={style.headerTextWrapper}>
-          <h1 className={style.headerTitle}>
-            {i18n.curriculumCatalogHeaderTitle()}
-          </h1>
-          <p className={style.headerSubtitle}>
-            {i18n.curriculumCatalogHeaderSubtitle()}
-          </p>
-        </div>
-        <div className={style.headerImageContainer}>
-          <img
-            className={style.headerImage}
-            src={CourseCatalogIllustration01}
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
+    <HeaderBanner
+      headingText={i18n.curriculumCatalogHeaderTitle()}
+      subHeadingText={i18n.curriculumCatalogHeaderSubtitle()}
+      short={false}
+      backgroundUrl={CourseCatalogBannerBackground}
+      imageUrl={CourseCatalogIllustration01}
+    />
     <div className={style.catalogContentContainer}>
       <div className={style.catalogContent}>
         {/*TODO [MEG]: calculate and pass in duration and translated from backend */}
