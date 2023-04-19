@@ -17,7 +17,7 @@ const EmText: React.FunctionComponent<EmTextProps> = ({
   return (
     <Typography
       semanticTag="em"
-      visualApproach={visualApproach || 'em'}
+      visualApproach={visualApproach}
       className={className}
       style={style}
     >

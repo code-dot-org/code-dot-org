@@ -17,7 +17,7 @@ const Figcaption: React.FunctionComponent<FigcaptionProps> = ({
   return (
     <Typography
       semanticTag="figcaption"
-      visualApproach={visualApproach || 'figcaption'}
+      visualApproach={visualApproach}
       className={className}
       style={style}
     >

@@ -17,7 +17,7 @@ const StrongText: React.FunctionComponent<StrongTextProps> = ({
   return (
     <Typography
       semanticTag="strong"
-      visualApproach={visualApproach || 'strong'}
+      visualApproach={visualApproach}
       className={className}
       style={style}
     >
