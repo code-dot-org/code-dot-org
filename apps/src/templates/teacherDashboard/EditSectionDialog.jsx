@@ -6,6 +6,8 @@ import BaseDialog from '../BaseDialog';
 import EditSectionForm, {ReloadAfterEditSectionForm} from './EditSectionForm';
 import PadAndCenter from './PadAndCenter';
 import {isEditingSection} from './teacherSectionsRedux';
+import {navigateToHref} from '@cdo/apps/utils';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * UI for a teacher to edit details of an existing class section.
@@ -14,30 +16,47 @@ import {isEditingSection} from './teacherSectionsRedux';
 function editSectionDialog(Form) {
   class EditSectionDialog extends Component {
     static propTypes = {
-      isOpen: PropTypes.bool.isRequired // From Redux
+      // From Redux
+      isOpen: PropTypes.bool.isRequired,
+      loginType: PropTypes.string.isRequired,
+      participantType: PropTypes.string.isRequired
     };
 
+    redirectToNewSectionEditPage() {
+      if (experiments.isEnabled('sectionSetupRefresh')) {
+        navigateToHref(
+          `/sections/edit?participantType=${this.props.participantType}&loginType=${this.props.loginType}`
+        );
+      }
+    }
+
     render() {
-      return (
-        <BaseDialog
-          useUpdatedStyles
-          fixedWidth={1010}
-          fullHeight
-          isOpen={this.props.isOpen}
-          uncloseable
-        >
-          <PadAndCenter>
-            <Form title={i18n.editSectionDetails()} isNewSection={false} />
-          </PadAndCenter>
-        </BaseDialog>
-      );
+      if (experiments.isEnabled('sectionSetupRefresh')) {
+        this.redirectToNewSectionEditPage();
+      } else {
+        return (
+          <BaseDialog
+            useUpdatedStyles
+            fixedWidth={1010}
+            fullHeight
+            isOpen={this.props.isOpen}
+            uncloseable
+          >
+            <PadAndCenter>
+              <Form title={i18n.editSectionDetails()} isNewSection={false} />
+            </PadAndCenter>
+          </BaseDialog>
+        );
+      }
     }
   }
   return EditSectionDialog;
 }
 
 export default connect(state => ({
-  isOpen: isEditingSection(state.teacherSections)
+  isOpen: isEditingSection(state.teacherSections),
+  loginType: state.teacherSections.loginType,
+  participantType: state.teacherSections.participantType
 }))(editSectionDialog(EditSectionForm));
 
 export const ReloadAfterEditSectionDialog = connect(state => ({
