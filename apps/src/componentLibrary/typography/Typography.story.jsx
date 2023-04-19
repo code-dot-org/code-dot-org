@@ -20,34 +20,19 @@ const Template = args => <Typography {...DEFAULT_PROPS} {...args} />;
 //
 // STORIES
 //
-export const Default = Template.bind({});
-
-export const Heading1asHeading3 = Template.bind({});
-Heading1asHeading3.args = {
-  semanticTag: 'h1',
-  visualApproach: 'heading-lg',
-  children: 'This is a Typography Component. (H1 as H3)'
-};
-
-export const Heading3asHeading5 = Template.bind({});
-Heading3asHeading5.args = {
-  semanticTag: 'h3',
-  visualApproach: 'heading-sm',
-  children: 'This is a Typography Component. (H3 as H5)'
-};
-
-export const Heading2asBodyOne = Template.bind({});
-Heading2asBodyOne.args = {
-  semanticTag: 'h2',
-  visualApproach: 'body-one',
-  children: 'This is a Typography Component. (H2 as p.body-one)'
-};
 
 export const Heading1 = Template.bind({});
 Heading1.args = {
   semanticTag: 'h1',
   visualApproach: 'heading-xxl',
   children: 'This is a Typography Component. (H1)'
+};
+
+export const Heading1asHeading3 = Template.bind({});
+Heading1asHeading3.args = {
+  semanticTag: 'h1',
+  visualApproach: 'heading-lg',
+  children: 'This is a Typography Component. (H1 as H3)'
 };
 
 export const Heading2 = Template.bind({});
@@ -57,11 +42,25 @@ Heading2.args = {
   children: 'This is a Typography Component. (H2)'
 };
 
+export const Heading2asBodyOne = Template.bind({});
+Heading2asBodyOne.args = {
+  semanticTag: 'h2',
+  visualApproach: 'body-one',
+  children: 'This is a Typography Component. (H2 as p.body-one)'
+};
+
 export const Heading3 = Template.bind({});
 Heading3.args = {
   semanticTag: 'h3',
   visualApproach: 'heading-lg',
   children: 'This is a Typography Component. (H3)'
+};
+
+export const Heading3asHeading5 = Template.bind({});
+Heading3asHeading5.args = {
+  semanticTag: 'h3',
+  visualApproach: 'heading-sm',
+  children: 'This is a Typography Component. (H3 as H5)'
 };
 
 export const Heading4 = Template.bind({});
