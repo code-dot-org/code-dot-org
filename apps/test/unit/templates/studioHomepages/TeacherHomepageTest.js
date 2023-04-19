@@ -149,8 +149,8 @@ describe('TeacherHomepage', () => {
     assert(wrapper.find('CensusTeacherBanner').exists());
   });
 
-  it('renders a DonorTeacherBanner if isEnglish and donorBannerName exists', () => {
-    const wrapper = setUp({isEnglish: true, donorBannerName: 'Donor Name'});
+  it('renders a DonorTeacherBanner if isEnglish and afeEligible is true', () => {
+    const wrapper = setUp({isEnglish: true, afeEligible: true});
     assert(wrapper.find('DonorTeacherBanner').exists());
   });
 
