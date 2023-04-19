@@ -24,5 +24,3 @@ public int addCall(int num) {
 
 What value is returned as a result of the call `addCall(6)`?
 MARKDOWN
-
-allow_multiple_attempts true

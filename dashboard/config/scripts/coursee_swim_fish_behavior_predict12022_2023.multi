@@ -6,4 +6,4 @@ right 'The tumbleweed will begin tumbling.', feedback: 'Correct!'
 wrong 'The tumbleweed will blink on and off.', feedback: 'Incorrect. The tumbleweed will begin tumbling.'
 
 
-allow_multiple_attempts true
+allow_multiple_attempts false

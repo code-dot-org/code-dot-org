@@ -15,5 +15,3 @@ public boolean mystery()
 
 How many arguments are needed when calling the `mystery()` method?
 MARKDOWN
-
-allow_multiple_attempts true

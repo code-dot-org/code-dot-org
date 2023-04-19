@@ -13,5 +13,3 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Variables of an `int` data type can only be assigned whole numbers. For decimal values, the variable should be a `double`.
 MARKDOWN
-
-allow_multiple_attempts true

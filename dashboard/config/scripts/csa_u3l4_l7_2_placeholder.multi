@@ -27,5 +27,3 @@ wrong 'II only'
 wrong 'III only'
 wrong 'I and II'
 right 'II and III'
-
-allow_multiple_attempts true

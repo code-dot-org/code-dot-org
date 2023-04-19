@@ -4188,6 +4188,21 @@ ar:
               display_name: محتوى
             lessonGroup-4:
               display_name: دروس بديلة
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: الملكية الفكرية
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+            lessonGroup-5:
+              display_name: دروس بديلة
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+            lessonGroup-4:
+              display_name: استبيان
         hello-world-space-2022:
           title: 'مرحبا بالعالم: الفضاء'
         hello-world-soccer-2022:

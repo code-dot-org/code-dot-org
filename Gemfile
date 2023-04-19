@@ -114,7 +114,7 @@ group :development, :test do
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
-gem 'factory_bot_rails', '~> 4.11', group: [:development, :staging, :test, :adhoc]
+gem 'factory_bot_rails', '~> 6.2', group: [:development, :staging, :test, :adhoc]
 
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false
@@ -214,7 +214,7 @@ gem 'twilio-ruby' # SMS API for send-to-phone feature
 # - /pegasus/sites.v3/hourofcode/public/fonts/
 gem 'font-awesome-rails', '~> 4.7.0.8'
 
-gem 'sequel', '5.29.0'
+gem 'sequel', '~> 5.29'
 gem 'user_agent_parser'
 
 gem 'paranoia', '~> 2.5.0'
@@ -341,7 +341,7 @@ gem 'datapackage'
 
 gem 'ruby-progressbar'
 
-gem 'pry'
+gem 'pry', '~> 0.14.0'
 
 # Google's Compact Language Detector
 gem 'cld'

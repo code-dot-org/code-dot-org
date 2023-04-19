@@ -20,4 +20,3 @@ wrong 'L'
 wrong 'M'
 right 'N'
 wrong '`ArrayIndexOutOfBounds`'
-allow_multiple_attempts true
