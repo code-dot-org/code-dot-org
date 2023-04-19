@@ -87,7 +87,6 @@ Feature: App Lab Scenarios
     And I press keys "GLULX" for element ".screen > input"
     Then element ".screen > input" has value "GLULX"
 
-  @no_ie
   @no_mobile
   Scenario: Can type in textarea on share page
     Given I switch to design mode

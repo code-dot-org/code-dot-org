@@ -18,5 +18,3 @@ sum += values[6];
 
 What is stored in `sum` after this code segment is run?
 MARKDOWN
-
-allow_multiple_attempts true

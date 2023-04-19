@@ -23,4 +23,3 @@ wrong 'constructor'
 right 'overloaded constructors'
 wrong 'constructor signature'
 wrong 'call by value'
-allow_multiple_attempts true

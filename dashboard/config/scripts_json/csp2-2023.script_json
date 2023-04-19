@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-13 20:51:41 UTC",
+    "serialized_at": "2023-04-14 22:23:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -554,8 +554,25 @@
       }
     },
     {
-      "key": "ead7c8b2-fb50-404f-89c8-c57664f14d79",
+      "key": "066b93eb-b6ca-4229-9738-c3e09a104b77",
       "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student a copy of the [Unit 2 Journal](\thttps://docs.google.com/presentation/d/1NtMSIh3MvntilZoShxE5VhXdxS6Aqfo3SxGIdrbc_Cs/edit?usp=share_link) or have students set up a new section in their CSP journals.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Journaling:** Journaling can take many different forms, but in general, it’s a tool for individual processing and reflection in a form that can be revisited as students develop their skills and understandings. The medium used for journaling can vary depending on classroom needs. \n\nFor more guidance and examples, check out the [**CSP Guide to Journaling**](https://docs.google.com/document/d/1d9Lq_-K5vNi8osaI-VNVqcgbb-aDr4BJtHADe-MRoKU/edit?usp=sharing)\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "066b93eb-b6ca-4229-9738-c3e09a104b77",
+        "lesson_activity.key": "7545587d-5d71-4abc-ac96-8e01f28398c6"
+      }
+    },
+    {
+      "key": "ead7c8b2-fb50-404f-89c8-c57664f14d79",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>    **Discuss:**  *We’ve learned to represent images, text, and sound digitally - but, we haven’t discussed what we do with all this digital data. How do you see people sharing this kind of data in the real world? Who do they want to share it with and why?*\n\n**Discussion Goal:** This discussion can be open-ended and feel like a brainstorm to help setup the transition from Unit 1 into Unit 2. It is important to draw on students’ personal experiences with sharing data on the internet, social media websites & apps, and connected devices. \n\nThinking about this unit as a whole, it is helpful to validate ideas that consider the motivations and consequences of how digital information is shared. These can be important points to return to at the end of the unit when introducing the Internet Dilemma’s project.\n"
       },
@@ -566,7 +583,7 @@
     },
     {
       "key": "0c24f5a8-c60c-4a77-931b-a98ba40fcecc",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "So far this year, we’ve investigated how to represent information digitally. Today, we’re going to investigate what it would take to communicate this information with others.",
         "remarks": true
@@ -3418,6 +3435,12 @@
       "seeding_key": {
         "lesson.key": "The Need for Addressing",
         "resource.key": "u2l03_the_need_for_addressing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to the Internet",
+        "resource.key": "unit_2_journal"
       }
     },
     {

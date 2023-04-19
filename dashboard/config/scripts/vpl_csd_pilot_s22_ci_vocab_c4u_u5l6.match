@@ -32,5 +32,3 @@ answer 'to change information so that its meaning is hidden'
 teacher_markdown <<MARKDOWN
 
 MARKDOWN
-
-allow_multiple_attempts true

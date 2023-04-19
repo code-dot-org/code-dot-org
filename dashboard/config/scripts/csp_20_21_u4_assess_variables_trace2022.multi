@@ -1,25 +1,29 @@
 name 'csp-20-21-u4-assess-variables trace2022'
-wrong '10'
-right '100'
-wrong '20'
-wrong '200'
-
-markdown <<MARKDOWN
-What number will be output by the console.log command on line 7?
-
-![](https://images.code.org/5b63525b6fac685a0058839083a0a5a4-image-1552517712604.55.03 PM.png)
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-**Explanation:** The variable `bop` is initialized on line 2. On line 3, the variable `bop` is assigned the value `10`. On line 5, the variable `bop` is assigned the value `100`. Since the most recent value `bop` has been assigned is `100`, that is the value that will be printed by the command on line 7.
-
-[Lesson 1 - Variables Explore](https://studio.code.org/s/csp4-2021/lessons/1) showed students examples of programs like this one where variables are assigned values more than once.
-
-::: details [**Essential Knowledge Connected To This Question**]
-
-* AAP-1.B.1 - The assignment operator allows a program to change the value represented by a variable.
-* AAP-1.B.3 - The value stored in a variable will be the most recent value assigned. For example: a ← 1b ← a a ← 2 display(b) still displays 1.
-:::
-MARKDOWN
-
-allow_multiple_attempts true
+encrypted 'M/7PWq39lFGAprIgAlxDfKJpwY1qQ5LZ0faYuU4LVOj2giQ+4tXyk7Wthztm
+OZPgloR+WSU7kNA5HZ7XeW9OXz6MGIP2BD1RKu2jT79IH/4vRstFuV6VgXlq
+7arsrpPMXjVEZ4Ca8ndgbD+jZ98muPBEPuzGVCFCkrFO1vpa2yBMxz2BWLxc
+t32KGpsYEvL1/aap60O7nr7uPHukZESMFfkRB+IL7mjDZxo4fceI8pzxhFfv
+ubHmBEk2n1cGYPvBghyyfVqaXZ8F2aGBeLZj5RneWTMX87Wy7DlDpJSrKl8T
+KjJPQ9foaQ+dQ9Z5tl+meKGSdlerMriXhpKQtVnZXrz/Id/YqQT0qSyHnKOM
+veIkc4Gc8ksTxDylm3r9+kq3fc6hPz+PB5vRHz913W48Z7YyV16pdc2tC6PD
+EzmxJ9CTxxaVRabKVjCqUS2UZ5ID3KCMc2IiA1a96Ju0wzggy56A/oVt464V
+OQ1/2dm9Yzb0hztpRdKbgWR7jsyueBXJt0vp+S1FWeA82esO9ljLwgpsAmUF
+vYzj6uCw5CnV0BUxvyxhC2hCrOGiTBO+ziVn3FEGXQzMoaLHItbg/1C6loKu
+RU1t1khi5/eTxJymnIEmkoyBWYaJl8UhKWpDR3n4u7Vb4qLMtZLb2s2e6JA6
+eJX1lTummvACgp+BNf3vTuVTjt2DGZ+9FbOqINqb2IaPKZsCcj4I1DFcKzlM
+aI+pC5/tS2t5pd4GkVCTWzAHiGd+/uAdQAArgNroCapnMdvnlbr3F3yYUy0t
+IZGRfYD/RasbsVq2pZx73KEZMMCrkvjyrw19YoMIXRSh08k32x5lXsEBmJwb
+vLpYozEpW9KqaoZKzWbl2IFW0/8H56FZX78AK8jh7xBrt5n3CbnrIVi+Ayv4
+O0OJpCki3jJvdxNDIEes+PpshBZ4Y3b0tiNxT0gjgvc2CSkujHeJm5J86EKX
+qipLqhG3wYMt8mTHMLmP2IvpAYUUdOim3GyoOLzZku5mvkM2QE5ygWZSx0IH
+aVdppkbLJCCBlrRjAOI8LxO856lPUJftMateoh/TOkSdlk8aKIzoUqpK5/Zu
+pscW+saQ3l7ri8hf0xgnOdGV8//AHilPn9askrYZXEa8udou7Ai1iuO50TkR
+2DhZd71jeMtVQJthhumL2wC1ZkmOQ/Gzv6Ld3bCclDUVYrgmDI58xNTAVYT7
+p564pL588glx7LZ3EfqcV2WkweQNwNmHWNSXkOucizCgwqMX4IYR4Czn6ek2
+R2LIKXS1QOEtNGhb1pl85o2amSLYeVm0MVYy/8nguug8IQrSYS1F6CpzSjPS
+5cjCiFDqrxbyi5zSMoqG4PQ1TFWech1ojZrQ0+VledUbVK9TYQzAm7EGf13/
+DoDOcNkqCbZiFyThNyNT/AeF9KgTnU+1eMzf5EQHcoCqlvlgy//zUNpdhCXV
+0cyPEJ71fczcI+gYyYZ2AoRSo8f1e3RMBo65lQ5s31MlNRiQdCXtf1Bj+MAS
+OyGOIe18lc+axANEIKrqzaQgy/9SAl2iF46aoT90wndIBYgEk3bYqANXGbB9
+j7vuxHhKDgsVmbrIGE8=
+'

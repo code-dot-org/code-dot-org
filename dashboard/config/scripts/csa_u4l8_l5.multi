@@ -30,4 +30,3 @@ wrong '1'
 wrong '2'
 right '3'
 wrong '4'
-allow_multiple_attempts true

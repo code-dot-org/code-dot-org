@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-13 21:19:57 UTC",
+    "serialized_at": "2023-04-14 22:21:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -609,12 +609,12 @@
       "key": "ee78feeb-796b-4cfd-9d3c-5cc06fb22771",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student a copy of the Unit 3 Journal or have students set up a new section in their CSP journals.",
+        "description": "**Distribute:** Give each student a copy of the [Unit 3 Journal](\thttps://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit?usp=share_link) or have students set up a new section in their CSP journals.",
         "name": "Preview the Unit",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Journaling:** Journaling can take many different forms, but in general, it’s a tool for individual processing and reflection in a form that can be revisited as students develop their skills and understandings. The medium used for journaling can vary depending on classroom needs. The most common approaches include: [Digital Journals](), [Interactive Journals](), and [Packet Journals]().\n\nFor more guidance and examples, check out the [**CSP Guide to Journaling**](https://docs.google.com/document/d/1d9Lq_-K5vNi8osaI-VNVqcgbb-aDr4BJtHADe-MRoKU/edit?usp=sharing)\n"
+            "markdown": "**Journaling:** Journaling can take many different forms, but in general, it’s a tool for individual processing and reflection in a form that can be revisited as students develop their skills and understandings. The medium used for journaling can vary depending on classroom needs. \n\nFor more guidance and examples, check out the [**CSP Guide to Journaling**](https://docs.google.com/document/d/1d9Lq_-K5vNi8osaI-VNVqcgbb-aDr4BJtHADe-MRoKU/edit?usp=sharing)\n"
           }
         ]
       },

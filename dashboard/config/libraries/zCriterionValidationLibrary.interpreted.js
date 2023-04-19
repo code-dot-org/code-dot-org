@@ -765,6 +765,94 @@ function checkNewSpriteSpeakThisFrame(spriteId) {
   return validationProps.spriteSpeeches[spriteId] != validationProps.previous.spriteSpeeches[spriteId];
 }
 
+/**
+ * Updates current sprite costume for given sprite id. Meant to be called every frame, similar to getHelperVars()
+ @param {number} spriteId - the id of the sprite to track, usually by passing an index of the spriteIds object
+ @example
+if(World.frameCount == 1) {
+  setFailTime(150);
+  setDelayTime(90);
+  setupPrevious(); 
+  addCriteria(function() {
+    //update to the criteria you want
+    return minimumSprites(1) && checkThisSpriteClickedThisFrame(spriteIds[0]) && checkNewSpriteCostumeThisFrame(spriteIds[0]);
+  }, "Make sure you change the costume of your sprite!");
+}
+getHelperVars();
+trackSpriteCostume(spriteIds[0]); // <-------
+check();
+updatePrevSpriteCostume(spriteIds[0]);
+updatePrevious();
+ */
+function trackSpriteCostume(spriteId) {
+  if(!validationProps.spriteCostumes) {
+    validationProps.spriteCostumes = {};
+  }
+  if(!validationProps.previous.spriteCostumes) {
+    validationProps.previous.spriteCostumes = {};
+  }
+  
+  validationProps.spriteCostumes[spriteId] = getProp({id: spriteId}, "costume");
+}
+
+/**
+ * Keeps track of previous frame sprite costume. Meant to be called just before the end of the validation loop, similar to updatePrevious();
+ @param {number} spriteId - the id of the sprite to track, usually by passing an index of the spriteIds object
+ @example
+if(World.frameCount == 1) {
+  setFailTime(150);
+  setDelayTime(90);
+  setupPrevious(); 
+  addCriteria(function() {
+    //update to the criteria you want
+    return minimumSprites(1) && checkThisSpriteClickedThisFrame(spriteIds[0]) && checkNewSpriteCostumeThisFrame(spriteIds[0]);
+  }, "Make sure you change the costume of your sprite!");
+}
+getHelperVars();
+trackSpriteCostume(spriteIds[0]); 
+check();
+updatePrevSpriteCostume(spriteIds[0]); // <-------
+updatePrevious();
+ */
+function updatePrevSpriteCostume(spriteId) {
+  if(!validationProps.spriteCostumes) {
+    validationProps.spriteCostumes = {};
+  }
+  if(!validationProps.previous.spriteCostumes) {
+    validationProps.previous.spriteCostumes = {};
+  }
+  
+  validationProps.previous.spriteCostumes[spriteId] = validationProps.spriteCostumes[spriteId];
+}
+
+/**
+ * Checks if the sprite's costume changed this frame
+ @param {number} spriteId - the id of the sprite to track, usually by passing an index of the spriteIds object
+ @example
+if(World.frameCount == 1) {
+  setFailTime(150);
+  setDelayTime(90);
+  setupPrevious(); 
+  addCriteria(function() {
+    //update to the criteria you want
+    return minimumSprites(1) && checkThisSpriteClickedThisFrame(spriteIds[0]) && checkNewSpriteCostumeThisFrame(spriteIds[0]); // <-------
+  }, "Make sure you change the costume of your sprite!");
+}
+getHelperVars();
+trackSpriteCostume(spriteIds[0]); 
+check();
+updatePrevSpriteCostume(spriteIds[0]); 
+updatePrevious();
+ */
+function checkNewSpriteCostumeThisFrame(spriteId) {
+  if(!validationProps.spriteCostumes) {
+    console.log("Validation error - in order to use checkNewSpriteCostumeThisFrame, you must also call trackSpriteCostume() and updatePrevSpriteCostume(). See documentation for more information.");
+    return false;
+  }
+  return validationProps.spriteCostumes[spriteId] != validationProps.previous.spriteCostumes[spriteId];
+}
+
+
 // NEWSECTION
 // # <a name="promptPrintValidation">Prompt & Print Validation</a>
 

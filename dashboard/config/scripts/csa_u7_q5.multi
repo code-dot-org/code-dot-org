@@ -70,5 +70,3 @@ public void location() {
 
 E. `location` cannot be overridden.
 MARKDOWN
-
-allow_multiple_attempts true

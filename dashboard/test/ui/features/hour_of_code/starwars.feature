@@ -1,7 +1,7 @@
 @single_session
 Feature: Hour of Code 2015 tutorial is completable
 
-  @no_ie @no_mobile
+  @no_mobile
   Scenario: Solving puzzle 1 in block mode
     Given I am on "http://studio.code.org/s/starwars/reset"
     And execute JavaScript expression "window.localStorage.clear()"
@@ -130,7 +130,7 @@ Feature: Hour of Code 2015 tutorial is completable
     Then element ".modal" is not visible
     And element "#continue-button" is not visible
 
-  @no_ie @no_mobile
+  @no_mobile
   Scenario: Using the "Start Over" button in block mode
     Given I am on "http://studio.code.org/s/starwars/reset"
     And execute JavaScript expression "window.localStorage.clear()"

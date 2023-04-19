@@ -408,7 +408,7 @@
         "coursed-2022/Graph Paper Programming": {
           "name": "Grafik Kağıdı Programlama",
           "overview": "Resim çizmesi için bir başkasını \"programlayarak\", öğrenciler programlamanın ana kavramlarından bazılarını eğlenceli ve ulaşılabilir bir şekilde deneyimleme fırsatını bulur. Öğrencilerin, önceden oluşturulmuş bir resmi yeniden üretmeye gayret ederek grafik kağıt üzerindeki kareleri boyamak üzere birbirlerini yönlendirmek üzere sembolleri kullanmasıyla sınıf başlayacaktır. Eğer vaktiniz olursa, ders öğrencilerin kendi oluşturacakları resimlerle tamamlanabilir.  ",
-          "preparation": "-   (İsteğe bağlı) **\\\\ \\*Eylem Dersi** videosunu izleyin.\n-   Her öğrenci için bir**\\\\ \\* çalışma sayfası** ve **\\\\ \\* değerlendirme** yazdırın.",
+          "preparation": "-   (İsteğe bağlı) **\\*Eylem Dersi** videosunu izleyin.\n-   Her öğrenci için bir**\\*çalışma sayfası** ve **\\*değerlendirme** yazdırın.",
           "purpose": "Bu etkinliğin amacı, kurs boyunca kullanılacak bazı temel programlama kavramlarını tanıtırken, kurs için eleştirel düşünme becerileri ve heyecan oluşturmaktır.  Sıralama ve algoritmalar gibi temel kavramları sınıfa bağlantısız bir etkinlikle tanıtarak, bilgisayarlardan korkan öğrenciler yine de bu konularda bir anlayış temeli oluşturabilirler.  Bu derste, öğrenciler bir algoritma geliştirmeyi ve onu bir programa kodlamayı öğrenecekler.",
           "student_overview": "Bu derste, resimleri çizmesi için sınıf arkadaşınızı programlayacaksınız!"
         },
@@ -422,7 +422,7 @@
         "coursed-2022/Relay Programming": {
           "name": "Röle Programlama",
           "overview": "Bu **bağlam belirleme** dersi, hata ayıklama ve sebat üzerine kısa bir dersle başlayacak, ardından öğrenciler takımlara ayrılıp her seferinde bir talimat içeren bir program yazmak için birlikte çalışırken hızla zamana karşı bir yarışa geçecektir.",
-          "preparation": "-   \\*\\* \\*Öğretmen Videosunu izleyin \\*\\*.\n-   Spor salonu veya dış bahçe gibi bu aktivite için geniş bir açık alan bulun.\n-   Her grup için bir \\*\\* \\*Etkinlik Paketi \\*\\* yazdırın.\n-   Her gruba bol miktarda kağıt ve kalem sağlayın.\n-   Her öğrenci için bir \\*\\* \\*Çalışma Sayfası \\*\\* yazdırın.",
+          "preparation": "-   **\\*Öğretmen Videosunu** izleyin .\n-   Spor salonu veya dış bahçe gibi bu aktivite için geniş bir açık alan bulun.\n-   Her grup için bir **\\*Etkinlik Paketi** yazdırın.\n-   Her gruba bol miktarda kağıt ve kalem sağlayın.\n-   Her öğrenci için bir **\\*Çalışma Sayfası** yazdırın.",
           "purpose": "Bilgisayar biliminde takım çalışması çok önemlidir.  Ekipler, bireysel olarak çalışmak yerine birbirleriyle kod yazar ve hata ayıklar.  Bu derste, öğrenciler mümkün olduğunca verimli olurken birlikte çalışmayı öğrenecekler.\n\n Bu aktivite aynı zamanda öğrencilere zamanlarını dikkatli bir şekilde dengelemeyi ve çok geride kalmadan hatalardan kaçınmayı öğretecek bir aciliyet duygusu sağlar.  Bu deneyim stresli olabilir (ki bu beklenir!) Öğrencilerinize olası hayal kırıklıklarıyla başa çıkmaları için gereken araçları sağladığınızdan emin olun.",
           "student_overview": "Kursun başında kodla çizim yaptığınız zamanı hatırlıyor musunuz?  Bu derste, buna çok benzer bir şey yapmak için bir ekiple birlikte çalışıyor olacaksınız!"
         },
@@ -665,7 +665,7 @@
         },
         "coursee-2022/Drawing with Loops": {
           "name": "Döngüler ile çizim",
-          "overview": "Az sayıda blok ve dijital etiketleri kullanarak kendi mükemmel tasarımlarını yaptıkça öğrencilerinizin ne kadar neşelendiğine bakın! Bu ders, önceki derslerden döngülerin anlaşılmasını geliştirir ve öğrencilere gerçek bir yaratıcı olma şansını verir. Bu aktivite, portföyler veya anne-baba/öğretmen konferansları için  eserler üretmek için mükemmeldir.",
+          "overview": "Bu **bağlam belirleme** dersi, odağı Sprite Lab'den öğrencilerin kursun geri kalanında keşfedecekleri yeni bir araç olan Artist'e kaydırır.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
           "purpose": "Öğrenciler, yaklaşan dersler boyunca tekrar gözden geçirilecek bir kavram olan döngüleri kullanarak pratik yapacaklar.",
           "student_overview": "Bu derste döngüler, Sanatçı ile daha güzel resimler yapmayı kolaylaştırır."
@@ -675,7 +675,7 @@
           "overview": "Bu **beceri geliştirme** dersinde öğrenciler Sanatçıyı kullanarak karmaşık tasarımlar oluşturacaklar. Ders, öğrencilerin kendi tasarımlarını yaratmaları için bir fırsatla sona erer.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak üzere bulmacalarla oynayın.\n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.\n-   Dönüşler ve açılarla ilgili olarak öğrencilerinizin ne tür desteklere ihtiyaç duyabileceğini düşünün.",
           "purpose": "Bu çevrimiçi aktivitede öğrenciler, Oyuncuda, sevdikleri ile gururla paylaşabilecekleri tasarımlar oluşturacaklar. \n\nBu aktivitenin amacı, sanatsal zihinleri olan öğrencilere kodlamayı başka bir yaratıcı çıkış noktası olarak görmeleri için ilham vermenin bir yolu olarak iç içe geçmiş döngüleri kullanmaktır. Bu bulmaca dizisi, tamamı iç içe döngüler kapsamında olan eleştirel düşünme becerileri, temel geometriyi anlama ve yaratıcılığı geliştirmek üzere oluşturulmuştur.",
-          "student_overview": "Daha iç içe döngüler! Bu sefer, iç içe geçmiş döngülerle biraz İLGİNÇ çizimler yapacaksınız."
+          "student_overview": "Daha fazla iç içe döngüler! Bu sefer, iç içe geçmiş döngülerle biraz İLGİNÇ çizimler yapacaksınız."
         },
         "coursee-2022/Mini-Project: Design a Snowflake": {
           "name": "Mini Proje: Bir Kar Tanesi Tasarlayın",
@@ -721,7 +721,7 @@
         },
         "coursee-2022/Functions with Harvester": {
           "name": "Hasatçı Fonksiyonları",
-          "overview": "Öğrenciler, Sanatçıda etkileyici tasarımlar oluşturma ve Arıda labirentlerde gezinmede pratik yapmıştır ama bugün Hasatçıda ürünleri hasat etmek için fonksiyonları kullanacaktır. Bu ders, `süresince` döngüleri ve `eğer / değilse` ifadeleri ile bunları birleştirerek öğrencilerin bu fonksiyonları yeni şekillerde kullanmasını sağlayacaktır.",
+          "overview": "Bu **beceri geliştirme** dersinde öğrenciler, _Hasatçı_'da ekinleri hasat etmek için işlevlere sahip koşul ifadeleri kullanacaklar.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
           "purpose": "Bu ders, öğrencileri fonksiyonlarla koşulları kullanmaya daha fazla teşvik etmek içindir. Bu bulmacalar problem çözme ve eleştirel düşünme becerilerini geliştirmeyi amaçlamaktadır.",
           "student_overview": "Çiftçiye hasadında yardımcı olduğunuz gibi fonksiyonlar da sizi işlerin çoğunda kurtarır!"
@@ -1643,6 +1643,12 @@
         "courseb-2018/Events in Play Lab": {
           "name": "Etkinliklerle Kraliyet Savaşı"
         },
+        "coursea-2018/Debugging: Unspotted Bugs": {
+          "name": "Fark Edilmeyen Hatalar"
+        },
+        "coursea-2018/Persistence & Frustration: Stevie and the Big Project": {
+          "name": "Stevie ve Büyük Proje"
+        },
         "coursea-2018/Real-life Algorithms: Plant a Seed": {
           "name": "Bir Tohum Ek"
         },
@@ -1735,6 +1741,9 @@
         },
         "coursed-2018/Artist Binary": {
           "name": "Oyuncu ile İkili Resimler"
+        },
+        "coursef-2018/Programming: My Robotic Friends": {
+          "name": "Robotik Arkadaşlarım"
         },
         "coursef-2018/Sequence in Maze": {
           "name": "Yorumlarla Kodlama"
@@ -1952,6 +1961,9 @@
         "express-2018/Crowdsourcing": {
           "name": "Kalabalık Kaynaklandırma 'Crowdsourcing'"
         },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "Robotik Arkadaşlarım"
+        },
         "coursee-2018/Sequence in Maze": {
           "name": "Yorumlarla Kodlama"
         },
@@ -2080,6 +2092,12 @@
         },
         "coursec-2018/Binary Bracelets": {
           "name": "İkilik Bileklikler"
+        },
+        "pre-express-2018/Debugging: Unspotted Bugs": {
+          "name": "Fark Edilmeyen Hatalar"
+        },
+        "pre-express-2018/Persistence & Frustration: Stevie and the Big Project": {
+          "name": "Stevie ve Büyük Proje"
         },
         "pre-express-2018/Move It, Move It": {
           "name": "Oynat, Oynat"
@@ -5187,7 +5205,7 @@
         },
         "coursee-2021/Programming and Loops with the Artist": {
           "name": "Döngüler ile çizim",
-          "overview": "Az sayıda blok ve dijital etiketleri kullanarak kendi mükemmel tasarımlarını yaptıkça öğrencilerinizin ne kadar neşelendiğine bakın! Bu ders, önceki derslerden döngülerin anlaşılmasını geliştirir ve öğrencilere gerçek bir yaratıcı olma şansını verir. Bu aktivite, portföyler veya anne-baba/öğretmen konferansları için  eserler üretmek için mükemmeldir.",
+          "overview": "Bu **bağlam belirleme** dersi, odağı Sprite Lab'den öğrencilerin kursun geri kalanında keşfedecekleri yeni bir araç olan Artist'e kaydırır.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
           "purpose": "Öğrenciler, yaklaşan dersler boyunca tekrar gözden geçirilecek bir kavram olan döngüleri kullanarak pratik yapacaklar.",
           "student_overview": "Bu derste döngüler, Sanatçı ile daha güzel resimler yapmayı kolaylaştırır."
@@ -5197,7 +5215,7 @@
           "overview": "Bu **beceri geliştirme** dersinde öğrenciler Sanatçıyı kullanarak karmaşık tasarımlar oluşturacaklar. Ders, öğrencilerin kendi tasarımlarını yaratmaları için bir fırsatla sona erer.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak üzere bulmacalarla oynayın.\n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.\n-   Dönüşler ve açılarla ilgili olarak öğrencilerinizin ne tür desteklere ihtiyaç duyabileceğini düşünün.",
           "purpose": "Bu çevrimiçi aktivitede öğrenciler, Oyuncuda, sevdikleri ile gururla paylaşabilecekleri tasarımlar oluşturacaklar. \n\nBu aktivitenin amacı, sanatsal zihinleri olan öğrencilere kodlamayı başka bir yaratıcı çıkış noktası olarak görmeleri için ilham vermenin bir yolu olarak iç içe geçmiş döngüleri kullanmaktır. Bu bulmaca dizisi, tamamı iç içe döngüler kapsamında olan eleştirel düşünme becerileri, temel geometriyi anlama ve yaratıcılığı geliştirmek üzere oluşturulmuştur.",
-          "student_overview": "Daha iç içe döngüler! Bu sefer, iç içe geçmiş döngülerle biraz İLGİNÇ çizimler yapacaksınız."
+          "student_overview": "Daha fazla iç içe döngüler! Bu sefer, iç içe geçmiş döngülerle biraz İLGİNÇ çizimler yapacaksınız."
         },
         "coursee-2021/Nested Loops in Frozen": {
           "name": "Mini Proje: Bir Kar Tanesi Tasarlayın",
@@ -5243,7 +5261,7 @@
         },
         "coursee-2021/Functions in Harvester": {
           "name": "Hasatçı Fonksiyonları",
-          "overview": "Öğrenciler, Sanatçıda etkileyici tasarımlar oluşturma ve Arıda labirentlerde gezinmede pratik yapmıştır ama bugün Hasatçıda ürünleri hasat etmek için fonksiyonları kullanacaktır. Bu ders, `süresince` döngüleri ve `eğer / değilse` ifadeleri ile bunları birleştirerek öğrencilerin bu fonksiyonları yeni şekillerde kullanmasını sağlayacaktır.",
+          "overview": "Bu **beceri geliştirme** dersinde öğrenciler, _Hasatçı_'da ekinleri hasat etmek için işlevlere sahip koşul ifadeleri kullanacaklar.",
           "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
           "purpose": "Bu ders, öğrencileri fonksiyonlarla koşulları kullanmaya daha fazla teşvik etmek içindir. Bu bulmacalar problem çözme ve eleştirel düşünme becerilerini geliştirmeyi amaçlamaktadır.",
           "student_overview": "Çiftçiye hasadında yardımcı olduğunuz gibi fonksiyonlar da sizi işlerin çoğunda kurtarır!"

@@ -6,4 +6,4 @@ right 'If there is too much algae, the coral gets sick.', feedback: 'Correct!'
 wrong 'If the coral is dirty, it changes to clean coral.', feedback: 'Incorrect.'
 
 
-allow_multiple_attempts true
+allow_multiple_attempts false

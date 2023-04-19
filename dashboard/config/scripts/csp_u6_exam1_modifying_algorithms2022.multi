@@ -1,39 +1,28 @@
 name 'csp-u6-exam1-modifying-algorithms2022'
-editor_experiment ''
-wrong 'Line 01 becomes `target <- list[2]`'
-right 'Line 04 becomes `IF (num < target)`'
-wrong 'Line 04 becomes `IF (num = target)`'
-wrong 'Line 01 becomes `list[0] <- target`'
-
-markdown <<MARKDOWN
-The algorithm below is used to find the largest element in a list of numbers.
-
-By modifying one of the lines in the program it is possible to make the algorithm find the SMALLEST element. Which line would need to be modified and how?
-
-```
-01 target <- list[1]
-02 FOR EACH num IN list
-03 {
-04   IF(num > target)
-05   {
-06     target <- num
-07   }
-08 }
-09 DISPLAY(target)
-```
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-**Explanation:** By checking to see if the value stored in num is less than the value stored in the variable target for each element in the list, this change will ensure that target will always end up holding the smallest element.
-
-::: details [**Essential Knowledge Connected To This Question**]
-
-* AAP-2.M:
-For algorithms: 
-a. Create algorithms. 
-b. Combine and modify existing algorithms.
-:::
-
-MARKDOWN
-
-allow_multiple_attempts true
+encrypted 'zyYJQO7jfT1tV+lZZufiUoxXppTfyS0HIqoFOIGK6/OuGd+ds0/iZJTdUElx
+lUUnV5rthw8E0UYq3QhPYtYm9sOZiYnHboLRmMQmJUDU79BuH9kItDgiXMxr
+77ffCtLHYCFdwpTErgUGWnS1lYi36ejVW9gAOEyYMtgDvYtFmPFdYr5UjgH/
+vrHDLjfPxm6YSCsXnxaDqDu0jkFe7siWfZUAX5VMgjlVjFe/zYbZxRPyx1nn
+5f95yYzWuvd/EM5fwk5K+A3m4VZe/qE4yaIKukCqza0habeXzBwsqB2M9MgB
+3g2IbTaXO5tq363oFtIyKgPNXVaMdalbb3O/Ys+xFvRL+JCS5zqNGHZTrhEg
+385x1waOry6IbhRuuMXFisAUurzJ10yCkecbjIzcM37+HwxwvWhgMkOd1nqX
+D4eSyr24gM6TU6XLqjc8jGAerYZo9E+3pxyo/Y7gLvimrBAUMHh62qSDfS01
+bGB0CnChFjyWtQWtxs5SVYf6xnAMhrsbkq2qQivJ5Rg5pDigDaNNHd1rKA/x
+k1fRUTsQgLWyuUKmhNH2aqpBZVe0PwJzWejnMo3+y/gZC4S5fRjciqLmnexq
+UyMlxgVNkPmTgCUH8B98u+k/E+DCxXfrLE9932WRAfw2piEq5rKEzi/ZLCx9
+6Lm4myKGOsHXYI+qQBOCZH5r6EDZLuoabWGUWDYjyt7M/6RoMwZ++m3FCDK0
+M+nlk2CsbMnSD5+LKMTHlGcrlsLSwc4a9HMNk9lLILuNDYBualyq6YhRxvBf
+6/ne7UOJ2Og+wIU6Rwy8OFJQXg+ttHffSeOr76itffaEFFsZs31XEyKB0S/o
+tfUPlumRMkn+kcKTpPHjj9Y9O4Gzi8YQbWq6ksembCyYO36r+YtY2LHxeknO
+Z7xFvudHJG5zYaWHh2Lbs8wsSwA7JDM4hh3KhGt8NYjf+Vz7t9hvAyLgTRD2
+KGGzIA1ZhU7FZYoze36KF10BD5w4pcUvXNwhESaDapWbzw4H6Qw7U41Qo5MX
+u9dzNQtM7zTVWxhEpYqb61POVUtm4y4fNi13kLerWPEltDxT5VXGOKntkUCx
+yg5pdNqH2Kew91z0LUwN9whUmto9MoDXFWbtFAkZxWiLlwJoxzuLykwk6lox
+pJ1rijTV4GQPQhBkIjarsOsh7hbKegeRYvaIR0wQHFaVfxMu70DrLQXF59Ko
+FAcih80HFnq1nBF4EnWO7iPyf/YjrooIVOGPWpPgYOv0+/i8Gynlxq1M8SMc
+7w3w/E12mSsyEMobcZ/2Bssb353SuE5xBFOGk6vYekUJUjspbUGwTYa58/rO
+28SkGEWdrmxyVTgh4YE5hpClXuQlRl9cOFnX0fiQt0C2FnH+01aYn3oJPBbh
+J8lwyp+uI27NNKQJ9XptTuhK2+LI4STrgCK0qlcCcODuuYt2bA17Y7nWUcsP
+j5TWlp3Lx3uC21hKTo9GxpReyWjUvUyFv62w53IhBgGlWu5ftdfQ9hDOyPe8
+tQefCqJUR4sNDWk=
+'
