@@ -6,15 +6,15 @@ class HomepageTest < ActiveSupport::TestCase
   end
 
   test 'banner with showInternationally false is seen only by users in the US and with unknown country' do
-    Homepage.class_variable_set(:@@json_path, File.join("#{dashboard_dir}/test/lib/homepage", 'homepage_test_in_US_banner.json'))
+    Homepage.class_variable_set(:@@json_path, File.join("#{dashboard_dir}/test/lib/homepage", 'homepage_test_in_US_or_unknown_location_banner.json'))
 
     @request.stubs(:country).returns("US")
     banner = Homepage.get_announcement_for_page("homepage", @request)
-    assert_equal("show-in-US", banner[:id])
+    assert_equal("show-in-US-or-unknown-location", banner[:id])
 
     @request.stubs(:country).returns(nil)
     banner = Homepage.get_announcement_for_page("homepage", @request)
-    assert_equal("show-in-US", banner[:id])
+    assert_equal("show-in-US-or-unknown-location", banner[:id])
 
     @request.stubs(:country).returns("AF")
     banner = Homepage.get_announcement_for_page("homepage", @request)

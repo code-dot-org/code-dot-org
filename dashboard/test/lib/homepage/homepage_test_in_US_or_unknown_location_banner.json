@@ -1,18 +1,18 @@
 {
   "pages": {
     "homepage": [
-      "show-in-US"
+      "show-in-US-or-unknown-location"
     ]
   },
 
   "banners": {
-    "show-in-US": {
+    "show-in-US-or-unknown-location": {
       "desktopImage": "/images/globe.png",
       "showInternationally": false,
       "actions": [
         {
           "type": "text",
-          "text": "Showing only in US"
+          "text": "Showing only in US or unknown location"
         }
       ]
     }
