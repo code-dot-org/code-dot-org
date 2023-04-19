@@ -17,7 +17,7 @@ class HeaderBanner extends React.Component {
     children: PropTypes.node,
     short: PropTypes.bool,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
-    backgroundUrl: PropTypes.string,
+    backgroundUrl: PropTypes.string.isRequired,
     imageUrl: PropTypes.string
   };
 
@@ -101,7 +101,9 @@ class HeaderBanner extends React.Component {
                 <div className={'children'}>{this.props.children}</div>
               )}
             </div>
-            {imageUrl && <img style={bannerContentImageStyle} src={imageUrl} />}
+            {imageUrl && (
+              <img style={bannerContentImageStyle} src={imageUrl} alt="" />
+            )}
           </div>
         </div>
       );

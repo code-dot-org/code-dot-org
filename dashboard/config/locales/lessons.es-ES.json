@@ -76,7 +76,7 @@
           "overview": "En esta lección, los estudiantes asumirán el control del Artista para completar los dibujos en la pantalla. Esta etapa del Artista permitirá a los estudiantes crear imágenes de complejidad creciente utilizando bloques de programación como \"avanzar 100 píxeles\" y \"girar 90 grados a la derecha\".",
           "preparation": "### Una Semana Antes de la Hora del Código\n\n-   Revisa la [Guía del Profesor de La Hora del Código](http://hourofcode.com/resources/how-to/) y las [Buenas Prácticas de los Educadores de Éxito](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) para empezar a planificar tu evento de La Hora del Código. \n-   Registra tu evento de La Hora del Código][2] si quieres recibir obsequios o apoyo en el aula.\n-   Revisa y completa tú mismo el tutorial en línea: [Artista](https://studio.code.org/s/artist/lessons/1/levels/1) \n-   Asegúrate de probarlo tú primero antes de pedir a tus alumnos que lo completen. Comprueba tu tecnología y decide si necesitas solucionar algún problema antes de la Hora del Código.\n\n### Un Día Antes de la Hora del Código\n\n-   Imprime uno o varios de los [ejemplos de Boletos de Salida](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) que aparecen al final de este plan de estudio, o crea los tuyos propios. \n\n-   Cada alumno que complete la actividad debe recibir un [certificate](https://studio.code.org/certificates/batch). Imprime uno para cada alumno con antelación para facilitar la entrega al final de la Hora del Código.\n\n-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n\n-   (Opcional) Consigue transportadores para que tu clase observe los ángulos que deben utilizar para completar los rompecabezas.\n\n-   Imprime un **Giros y Ángulos - Guía del Alumno** para cada estudiante.",
           "purpose": "Esta lección servirá para inspirar más creatividad en la codificación. El propósito de esta lección es aumentar el conocimiento sobre la secuenciación mediante la introducción de bloques de programación y objetivos. En este caso, los estudiantes aprenden sobre los píxeles y los ángulos utilizando los bloques de programación, a la vez que incorporan técnicas de secuenciación. Además, los alumnos podrán contemplar nuevos objetivos como la programación del Artista para dibujar un cuadrado.",
-          "student_overview": "Programa el Artista para crear imágenes hermosas."
+          "student_overview": "Crea bellas imágenes programando al Artista."
         },
         "gumball/Gumball Play Lab": {
           "name": "Laboratorio de juegos de Gumball",
@@ -396,7 +396,7 @@
           "name": "Hora del Código de la Recolectora 2017"
         },
         "frequency_analysis/Frequency Analysis": {
-          "name": "Análisis de frecuencia"
+          "name": "Análisis de Frecuencia"
         },
         "coursed-2022/Password Power-Up": {
           "name": "Contraseña de Encendido",
@@ -864,7 +864,7 @@
           "overview": "En esta lección, los estudiantes tomarán control del Artista para completar los dibujos en pantalla. En esta etapa del Artista, los estudiantes podrán crear imágenes de mayor complejidad mediante nuevos bloques, tales como como `avanzar 100 pixeles` y `girar 90 grados a la derecha`.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   (Opcional) Consigue transportadores para que tu clase visualice los ángulos que deben utilizar para completar los rompecabezas.\n-   Imprime un **\\*Folleto del Alumno** para cada estudiante.",
           "purpose": "Partiendo de la experiencia previa de los/as estudiantes con la secuenciación, esta lección trabajará para inspirar más creatividad con la programación. El propósito de esta lección es consolidar el conocimiento de la secuenciación mediante la introducción de nuevos bloques y objetivos. En este caso, los/as estudiantes aprenden más sobre los píxeles y ángulos usando los nuevos bloques, mientras practican sus habilidades de secuenciación. Además, los/as estudiantes podrán visualizar nuevas metas, tales como programar al Artista para dibujar un cuadrado.",
-          "student_overview": "Programa el Artista para crear imágenes hermosas."
+          "student_overview": "Crea bellas imágenes programando al Artista."
         },
         "express-2022/Swimming Fish in Sprite Lab": {
           "name": "Aprender sprites con Laboratorio de Sprite",
@@ -1246,7 +1246,7 @@
           "overview": "En esta lección, los estudiantes tomarán control del Artista para completar los dibujos en pantalla. En esta etapa del Artista, los estudiantes podrán crear imágenes de mayor complejidad mediante nuevos bloques, tales como como `avanzar 100 pixeles` y `girar 90 grados a la derecha`.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   (Opcional) Consigue transportadores para que tu clase visualice los ángulos que deben utilizar para completar los rompecabezas.\n-   Imprime un **\\*Folleto del Alumno** para cada estudiante.",
           "purpose": "Partiendo de la experiencia previa de los/as estudiantes con la secuenciación, esta lección trabajará para inspirar más creatividad con la programación. El propósito de esta lección es consolidar el conocimiento de la secuenciación mediante la introducción de nuevos bloques y objetivos. En este caso, los/as estudiantes aprenden más sobre los píxeles y ángulos usando los nuevos bloques, mientras practican sus habilidades de secuenciación. Además, los/as estudiantes podrán visualizar nuevas metas, tales como programar al Artista para dibujar un cuadrado.",
-          "student_overview": "Programa el Artista para crear imágenes hermosas."
+          "student_overview": "Crea bellas imágenes programando al Artista."
         },
         "coursec-2022/My Loopy Robotic Friends Jr": {
           "name": "Mis amigos robóticos y repetitivos Jr.",
@@ -5333,7 +5333,7 @@
           "overview": "En esta lección, los estudiantes tomarán control del Artista para completar los dibujos en pantalla. En esta etapa del Artista, los estudiantes podrán crear imágenes de mayor complejidad mediante nuevos bloques, tales como como `avanzar 100 pixeles` y `girar 90 grados a la derecha`.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   (Opcional) Consigue transportadores para que tu clase visualice los ángulos que deben utilizar para completar los rompecabezas.\n-   Imprime un **\\*Folleto del Alumno** para cada estudiante.",
           "purpose": "Partiendo de la experiencia previa de los/as estudiantes con la secuenciación, esta lección trabajará para inspirar más creatividad con la programación. El propósito de esta lección es consolidar el conocimiento de la secuenciación mediante la introducción de nuevos bloques y objetivos. En este caso, los/as estudiantes aprenden más sobre los píxeles y ángulos usando los nuevos bloques, mientras practican sus habilidades de secuenciación. Además, los/as estudiantes podrán visualizar nuevas metas, tales como programar al Artista para dibujar un cuadrado.",
-          "student_overview": "Programa el Artista para crear imágenes hermosas."
+          "student_overview": "Crea bellas imágenes programando al Artista."
         },
         "coursec-2021/Loops: My Loopy Robotic Friends": {
           "name": "Mis amigos robóticos y repetitivos Jr.",
@@ -5550,7 +5550,7 @@
           "overview": "En esta lección, los estudiantes tomarán control del Artista para completar los dibujos en pantalla. En esta etapa del Artista, los estudiantes podrán crear imágenes de mayor complejidad mediante nuevos bloques, tales como como `avanzar 100 pixeles` y `girar 90 grados a la derecha`.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   (Opcional) Consigue transportadores para que tu clase visualice los ángulos que deben utilizar para completar los rompecabezas.\n-   Imprime un **\\*Folleto del Alumno** para cada estudiante.",
           "purpose": "Partiendo de la experiencia previa de los/as estudiantes con la secuenciación, esta lección trabajará para inspirar más creatividad con la programación. El propósito de esta lección es consolidar el conocimiento de la secuenciación mediante la introducción de nuevos bloques y objetivos. En este caso, los/as estudiantes aprenden más sobre los píxeles y ángulos usando los nuevos bloques, mientras practican sus habilidades de secuenciación. Además, los/as estudiantes podrán visualizar nuevas metas, tales como programar al Artista para dibujar un cuadrado.",
-          "student_overview": "Programa el Artista para crear imágenes hermosas."
+          "student_overview": "Crea bellas imágenes programando al Artista."
         },
         "express-2021/Swimming Fish in Sprite Lab": {
           "name": "Aprender sprites con Laboratorio de Sprite",

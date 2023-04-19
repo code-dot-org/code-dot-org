@@ -4,7 +4,7 @@ import {
   ScrollOptions
 } from '@blockly/plugin-scroll-options';
 import {NavigationController} from '@blockly/keyboard-navigation';
-import {BlocklyVersion} from '@cdo/apps/constants';
+import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 import initializeCdoConstants from './addons/cdoConstants';
@@ -19,7 +19,7 @@ import CdoFieldVariable from './addons/cdoFieldVariable';
 import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
-import CdoRenderer from './addons/cdoRenderer';
+import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './themes/cdoTheme';
@@ -46,7 +46,7 @@ import initializeCss from './addons/cdoCss';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import BlockSvgUnused from './addons/blockSvgUnused';
-import {ToolboxType, Themes} from './constants';
+import {ToolboxType, Themes, Renderers} from './constants';
 import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
@@ -147,9 +147,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Blocks');
   blocklyWrapper.wrapReadOnlyProperty('BlockSvg');
   blocklyWrapper.wrapReadOnlyProperty('browserEvents');
+  blocklyWrapper.wrapReadOnlyProperty('blockRendering.ConstantProvider');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
   blocklyWrapper.wrapReadOnlyProperty('ComponentManager');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
+  blocklyWrapper.wrapReadOnlyProperty('ConnectionType');
   blocklyWrapper.wrapReadOnlyProperty('ContextMenu');
   blocklyWrapper.wrapReadOnlyProperty('contractEditor');
   blocklyWrapper.wrapReadOnlyProperty('createSvgElement');
@@ -251,19 +253,19 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.RENDERER,
-    'cdo_renderer',
-    CdoRenderer,
+    Renderers.GERAS,
+    CdoRendererGeras,
     true /* opt_allowOverrides */
   );
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.RENDERER,
-    'cdo_renderer_thrasos',
+    Renderers.THRASOS,
     CdoRendererThrasos,
     true /* opt_allowOverrides */
   );
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.RENDERER,
-    'cdo_renderer_zelos',
+    Renderers.ZELOS,
     CdoRendererZelos,
     true /* opt_allowOverrides */
   );
@@ -509,7 +511,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
         theme: theme,
         plugins: {},
         RTL: options.rtl,
-        renderer: options.renderer || 'cdo_renderer_thrasos'
+        renderer: options.renderer || Renderers.DEFAULT
       });
       const svg = Blockly.utils.dom.createSvgElement(
         'svg',
@@ -518,8 +520,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
           'xmlns:html': 'http://www.w3.org/1999/xhtml',
           'xmlns:xlink': 'http://www.w3.org/1999/xlink',
           version: '1.1',
-          class:
-            'cdo_renderer_thrasos-renderer modern-theme readOnlyBlockSpace injectionDiv'
+          class: `${Renderers.DEFAULT}-renderer modern-theme readOnlyBlockSpace injectionDiv`
         },
         null
       );
@@ -576,7 +577,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
         blockDragger: ScrollBlockDragger,
         metricsManager: CdoMetricsManager
       },
-      renderer: opt_options.renderer || 'cdo_renderer_thrasos',
+      renderer: opt_options.renderer || Renderers.DEFAULT,
       comments: false
     };
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
