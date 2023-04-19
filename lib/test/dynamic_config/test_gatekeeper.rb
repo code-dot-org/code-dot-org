@@ -54,7 +54,7 @@ class DynamicConfigGatekeeperTest < Minitest::Test
 
   def test_delete
     assert_raises ArgumentError do
-      @gatekeeper.delete(:invalid_key, {})
+      @gatekeeper.delete(:invalid_key, where: {})
     end
 
     @gatekeeper.stubs(:get_rule_map).returns({"[[\"type\",\"query\"]]" => true})

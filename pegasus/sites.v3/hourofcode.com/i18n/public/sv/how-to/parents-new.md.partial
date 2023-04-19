@@ -2,7 +2,7 @@
 title: Handledning för föräldrar
 ---
 
-# How to do an Hour of Code with your child
+# Hur man gör Hour of Code med sitt barn
 Att prova Hour of Code är ett lätt och roligt sätt att introducera ditt barn till datavetenskap, kanske för första gången.     Datavetenskap är inte bara grunden för fortsatta studier inom alla områden, <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">färska studier visar dessutom att</a>:barn som lär sig datavetenskap uppnår bättre resultat inom andra studieämnen, är bättre på problemlösning och har <font color="00adbc"><b>17 % högre sannolikhet att genomföra högskolestudier</b></font>.
 
 Du kan bli en av tiotals miljoner elever över hela världen som deltar i det här eventet.     Tillsammans kan vi inspirera barn att lära, undanröja stereotyper och hjälpa ungdomar att upptäcka ett nytt intresse.     Du har redan allt du behöver för att ta del av Hour of Code hemifrån!

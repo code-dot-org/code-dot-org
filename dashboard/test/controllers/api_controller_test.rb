@@ -1134,7 +1134,7 @@ class ApiControllerTest < ActionController::TestCase
     level1a = create :maze, name: 'maze 1'
     level1b = create :maze, name: 'maze 1 new'
     level_source = create :level_source, level: level1a, data: 'level source'
-    create :script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {'active': false}}
+    create :script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {active: false}}
     create :user_level, user: @student_1, script: script, level: level1a, level_source: level_source
 
     get :user_app_options, params: {

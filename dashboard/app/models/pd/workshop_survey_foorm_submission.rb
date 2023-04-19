@@ -58,9 +58,7 @@ class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
     !facilitator_id.nil?
   end
 
-  private
-
-  def day_for_workshop
+  private def day_for_workshop
     if pd_workshop && !day.nil?
       session_count = pd_workshop.sessions.count
       if day > session_count

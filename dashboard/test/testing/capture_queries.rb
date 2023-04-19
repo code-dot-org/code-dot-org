@@ -16,22 +16,22 @@ module CaptureQueries
 
     def logger
       @output ||= StringIO.new
-      @log ||= Logger.new(@output).tap do |l|
+      @logger ||= Logger.new(@output).tap do |l|
         l.level = Logger::DEBUG
         l.formatter = ->(*, msg) {msg}
       end
     end
   end
 
-  def assert_queries(num, *args, &block)
+  def assert_queries(num, *args, **kwargs, &block)
     return yield if num.nil?
-    queries = capture_queries(*args, &block)
+    queries = capture_queries(*args, **kwargs, &block)
     assert_equal num, queries.count, "Wrong query count:\n#{queries.join("\n")}\n"
   end
 
-  def assert_cached_queries(num, *args, &block)
+  def assert_cached_queries(num, *args, **kwargs, &block)
     Retryable.retryable(on: Minitest::Assertion, matching: /Wrong query count/, tries: 2, sleep: 0) do
-      assert_queries(num, *args, &block)
+      assert_queries(num, *args, **kwargs, &block)
     end
   end
 

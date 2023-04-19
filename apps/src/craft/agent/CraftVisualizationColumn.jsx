@@ -8,7 +8,7 @@ var BelowVisualization = require('../../templates/BelowVisualization');
 import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv';
 import SwipePrompt from '@cdo/apps/templates/SwipePrompt';
 
-var CraftVisualizationColumn = function(props) {
+var CraftVisualizationColumn = function (props) {
   return (
     <span>
       <ProtectedVisualizationDiv>

@@ -120,8 +120,9 @@ class Cell extends React.Component {
         tdStyle.backgroundImage =
           "url('/blockly/media/skins/hoc2015x/tiles_background1.png')";
         tdStyle.backgroundSize = '800% 800%';
-        tdStyle.backgroundPosition = `-${x * CELL_WIDTH}px -${y *
-          CELL_HEIGHT}px`;
+        tdStyle.backgroundPosition = `-${x * CELL_WIDTH}px -${
+          y * CELL_HEIGHT
+        }px`;
       }
     } else if (this.props.skin === 'bounce') {
       const images = [

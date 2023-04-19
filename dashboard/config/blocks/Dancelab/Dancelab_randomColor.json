@@ -4,10 +4,6 @@
     "func": "randomColor",
     "blockText": "random color",
     "returnType": "Colour",
-    "color": [
-      196,
-      1,
-      0.79
-    ]
+    "style": "colour_blocks"
   }
 }

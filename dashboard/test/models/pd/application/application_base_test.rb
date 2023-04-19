@@ -191,7 +191,7 @@ module Pd::Application
         filtered_question: 'to be removed'
       }
 
-      application.stubs(sanitize_form_data_hash: form_data)
+      application.stubs(sanitized_form_data_hash: form_data)
       ApplicationBase.stubs(filtered_labels: form_data.except(:filtered_question))
 
       expected_full_answers = {
@@ -247,7 +247,7 @@ module Pd::Application
         string_question_with_extra: 'Other:',
         string_question_with_extra_other: 'my other string answer',
       }
-      application.stubs(sanitize_form_data_hash: form_data)
+      application.stubs(sanitized_form_data_hash: form_data)
       ApplicationBase.stubs(filtered_labels: form_data)
 
       expected_full_answers = {
@@ -383,7 +383,7 @@ module Pd::Application
 
       assert teacher_without_email.email.blank?
 
-      formatted_alternate_email = "\"#{application.applicant_full_name}\" <#{application.sanitize_form_data_hash[:alternate_email]}>"
+      formatted_alternate_email = "\"#{application.applicant_full_name}\" <#{application.sanitized_form_data_hash[:alternate_email]}>"
       assert_equal formatted_alternate_email, application.formatted_applicant_email
     end
 
@@ -395,7 +395,7 @@ module Pd::Application
       application_without_email = create :pd_teacher_application, user: teacher_without_email, form_data: application_hash_without_email.to_json
 
       assert teacher_without_email.email.blank?
-      assert application_without_email.sanitize_form_data_hash[:alternate_email].blank?
+      assert application_without_email.sanitized_form_data_hash[:alternate_email].blank?
       assert_raises_matching("invalid email address for application #{application_without_email.id}") do
         application_without_email.formatted_applicant_email
       end

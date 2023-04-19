@@ -1,0 +1,125 @@
+@import "color.scss";
+@import "font.scss";
+
+.classNameTextField {
+  width: 100%;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonRow {
+  // ensure we have height when we only have our toggle (which is floated)
+  min-height: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonsInRow {
+  display: flex;
+  align-items: center;
+}
+
+.buttonsInRow .buttonStyle {
+  background-color: $white;
+  padding: 10px;
+  color: inherit;
+  border: none;
+  font-size: 14px;
+}
+
+.buttonsInRow .buttonStyle:hover {
+  color: $brand_primary_default;
+}
+
+.flexDisplay {
+  display: flex;
+}
+
+.input .inputBox {
+  float: right;
+  margin-top: 15px;
+}
+
+.decideLater {
+  float: right;
+  margin: 10px 5px 0 5px;
+  font-weight: 350;
+  font-size: 16px;
+}
+
+.table {
+  background-color: $neutral_dark10;
+  margin: 4px;
+  flex: 1 1 0px;
+}
+
+.headerRow {
+  background-color: $brand_primary_default;
+  color: $white;
+  height: 42px;
+}
+
+.headerCell {
+  font-weight: 500;
+  font-size: 24px;
+  padding: 12px;
+}
+
+.tableBody {
+  padding: 10px;
+  display: grid;
+}
+
+.courseHeaders {
+  font-weight: 350;
+  font-size: 20px;
+  line-height: 24px;
+  position: relative;
+  left: 10px;
+}
+
+.flexDisplay .radio {
+  min-height: 40px;
+  margin: 0 0 0 0;
+}
+
+.label {
+  margin: 10px 10px 0 5px;
+}
+
+.unitDropdown {
+  margin: 4px 0 0 10px;
+  font-family: "Gotham 5r", sans-serif;
+  padding: 0.3em;
+}
+
+.toolTipContainer {
+  display: flex;
+  align-items: center;
+}
+
+.celebrationDialogBody {
+  padding: 36px;
+  font: $barlowSemiCondensed-medium;
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.celebrationDialogBody .celebrationGif {
+  margin: 14px;
+}
+
+.celebrationDialogFooter {
+  padding-right: 36px;
+  padding-bottom: 36px;
+  padding-left: 0;
+  padding-top: 0;
+  display: flex;
+  justify-content: flex-end;
+}

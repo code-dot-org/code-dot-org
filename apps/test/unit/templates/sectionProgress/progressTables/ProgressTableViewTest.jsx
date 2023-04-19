@@ -234,9 +234,7 @@ describe('ProgressTableView', () => {
   });
 
   it('adds rows to state when a row is toggled', () => {
-    const wrapper = setUp()
-      .find(UnconnectedProgressTableView)
-      .instance();
+    const wrapper = setUp().find(UnconnectedProgressTableView).instance();
 
     expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
 
@@ -250,9 +248,7 @@ describe('ProgressTableView', () => {
   });
 
   it('restores original rows when a row is toggled twice', () => {
-    const wrapper = setUp()
-      .find(UnconnectedProgressTableView)
-      .instance();
+    const wrapper = setUp().find(UnconnectedProgressTableView).instance();
 
     expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
 

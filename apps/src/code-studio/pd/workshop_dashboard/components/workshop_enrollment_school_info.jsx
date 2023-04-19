@@ -34,9 +34,8 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     this.handleClickDelete = this.handleClickDelete.bind(this);
     this.handleDeleteCanceled = this.handleDeleteCanceled.bind(this);
     this.handleDeleteConfirmed = this.handleDeleteConfirmed.bind(this);
-    this.handleScholarshipStatusChange = this.handleScholarshipStatusChange.bind(
-      this
-    );
+    this.handleScholarshipStatusChange =
+      this.handleScholarshipStatusChange.bind(this);
   }
 
   handleClickDelete(event) {
@@ -88,11 +87,10 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
           }
         });
         // remove the updated enrollment from the list of enrollments pending an update
-        const pendingScholarshipUpdates = state.pendingScholarshipUpdates.filter(
-          e => {
+        const pendingScholarshipUpdates =
+          state.pendingScholarshipUpdates.filter(e => {
             return e !== data.id;
-          }
-        );
+          });
         return {enrollments, pendingScholarshipUpdates};
       });
     });
@@ -298,9 +296,7 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     if (!!pendingDelete) {
       const bodyText =
         'Are you sure you want to delete the enrollment for ' +
-        `${pendingDelete.first_name} ${pendingDelete.last_name} (${
-          pendingDelete.email
-        })?`;
+        `${pendingDelete.first_name} ${pendingDelete.last_name} (${pendingDelete.email})?`;
 
       confirmationDialog = (
         <ConfirmationDialog

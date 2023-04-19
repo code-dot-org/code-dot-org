@@ -20,7 +20,7 @@ var NetSimUtils = require('./NetSimUtils');
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimStatusPanel = (module.exports = function(rootDiv, callbacks) {
+var NetSimStatusPanel = (module.exports = function (rootDiv, callbacks) {
   /**
    * @type {function}
    * @private
@@ -44,7 +44,7 @@ NetSimStatusPanel.inherits(NetSimPanel);
  * @param {number} [data.myAddress] - Local node address assigned by router
  * @param {string} [data.shareLink] - URL for sharing private shard
  */
-NetSimStatusPanel.prototype.render = function(data) {
+NetSimStatusPanel.prototype.render = function (data) {
   data = data || {};
 
   // Capture title before we render the wrapper panel.

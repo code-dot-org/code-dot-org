@@ -7,6 +7,14 @@ clone:
   disable: true
 
 steps:
+  - name: info
+    image: curlimages/curl
+    commands:
+      # If running on EC2, get hostname from ec2 metadata
+      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
+      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
+      - echo "Running on $hostname"
+
   - name: clone
     image: docker:git
     commands:
@@ -44,8 +52,6 @@ steps:
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
     commands:
-      # If running on EC2, get hostname from ec2 metadata
-      - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
       - sudo chown -R circleci:circleci .
       # cache is restored to source directory, so we need to copy it into the right place
       - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
@@ -99,6 +105,14 @@ services:
       - 6379
 
 steps:
+  - name: info
+    image: curlimages/curl
+    commands:
+      # If running on EC2, get hostname from ec2 metadata
+      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
+      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
+      - echo "Running on $hostname"
+
   - name: clone
     image: docker:git
     commands:
@@ -146,8 +160,6 @@ steps:
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
     commands:
-      # If running on EC2, get hostname from ec2 metadata
-      - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
       - sudo chown -R circleci:circleci .
       # cache is restored to source directory, so we need to copy it into the right place
       - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
@@ -188,6 +200,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: bb9d5b8edd6b1b4b39a54e6f37561bbb74b9a6139e584eba1ab7fd04d9635036
+hmac: 753cfe2cb54dcd48fe3b7e788a03307b83b40c6550e6d84d62813b108308f350
 
 ...

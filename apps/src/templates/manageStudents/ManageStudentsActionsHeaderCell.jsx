@@ -61,7 +61,8 @@ class ManageStudentsActionsHeaderCell extends Component {
   }
 }
 
-export const UnconnectedManageStudentsActionsHeaderCell = ManageStudentsActionsHeaderCell;
+export const UnconnectedManageStudentsActionsHeaderCell =
+  ManageStudentsActionsHeaderCell;
 
 export default connect(
   state => ({}),

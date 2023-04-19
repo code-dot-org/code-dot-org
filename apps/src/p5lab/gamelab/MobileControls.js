@@ -56,9 +56,8 @@ export default class MobileControls {
   init(opts) {
     this.opts = opts || {};
 
-    document.getElementById(
-      GAMELAB_DPAD_CONTAINER_ID
-    ).innerHTML = gameLabDPadHtmlEjs();
+    document.getElementById(GAMELAB_DPAD_CONTAINER_ID).innerHTML =
+      gameLabDPadHtmlEjs();
 
     // Connect up arrow button event handlers
     for (const btn in ArrowIds) {
@@ -90,18 +89,15 @@ export default class MobileControls {
     const dpadDisplayStyle =
       dpadVisible && mobileControlsOk ? 'inline' : 'none';
     document.getElementById('studio-dpad-rim').style.display = dpadDisplayStyle;
-    document.getElementById(
-      'studio-dpad-cone'
-    ).style.display = dpadDisplayStyle;
-    document.getElementById(
-      'studio-dpad-button'
-    ).style.display = dpadDisplayStyle;
+    document.getElementById('studio-dpad-cone').style.display =
+      dpadDisplayStyle;
+    document.getElementById('studio-dpad-button').style.display =
+      dpadDisplayStyle;
 
     const spaceButtonDisplayStyle =
       spaceButtonVisible && mobileControlsOk ? 'inline' : 'none';
-    document.getElementById(
-      'studio-space-button'
-    ).style.display = spaceButtonDisplayStyle;
+    document.getElementById('studio-space-button').style.display =
+      spaceButtonDisplayStyle;
 
     if (this.dpadFourWay !== dpadFourWay) {
       if (this.dPadState.trackingMouseMove) {

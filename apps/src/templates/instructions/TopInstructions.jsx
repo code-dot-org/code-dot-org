@@ -99,6 +99,7 @@ class TopInstructions extends Component {
     teacherMarkdown: PropTypes.string,
     hidden: PropTypes.bool.isRequired,
     shortInstructions: PropTypes.string,
+    isOldPurpleColorHeader: PropTypes.bool,
     isMinecraft: PropTypes.bool.isRequired,
     isBlockly: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
@@ -138,7 +139,7 @@ class TopInstructions extends Component {
 
     const teacherViewingStudentWork =
       this.isViewingAsTeacher &&
-      this.props.readOnlyWorkspace &&
+      !!this.props.readOnlyWorkspace &&
       studentUserIdIncluded;
 
     this.state = {
@@ -168,12 +169,8 @@ class TopInstructions extends Component {
    * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
-    const {
-      user,
-      serverLevelId,
-      serverScriptId,
-      dynamicInstructions
-    } = this.props;
+    const {user, serverLevelId, serverScriptId, dynamicInstructions} =
+      this.props;
     const {studentId} = this.state;
 
     window.addEventListener('resize', this.adjustMaxNeededHeight);
@@ -486,9 +483,9 @@ class TopInstructions extends Component {
     {leading: true}
   );
 
-  setInstructionsRef(ref) {
+  setInstructionsRef = ref => {
     this.instructions = ref;
-  }
+  };
 
   renderInstructions(isCSF) {
     const {
@@ -498,7 +495,8 @@ class TopInstructions extends Component {
       hasContainedLevels,
       isEmbedView,
       isBlockly,
-      noInstructionsWhenCollapsed
+      noInstructionsWhenCollapsed,
+      isOldPurpleColorHeader
     } = this.props;
     const {teacherViewingStudentWork, tabSelected} = this.state;
 
@@ -506,7 +504,7 @@ class TopInstructions extends Component {
       return (
         <div>
           <ContainedLevel
-            ref={ref => this.setInstructionsRef(ref)}
+            ref={this.setInstructionsRef}
             hidden={tabSelected !== TabType.INSTRUCTIONS}
           />
           {!this.props.inLessonPlan && tabSelected === TabType.INSTRUCTIONS && (
@@ -519,7 +517,7 @@ class TopInstructions extends Component {
     } else if (isCSF && tabSelected === TabType.INSTRUCTIONS) {
       return (
         <InstructionsCSF
-          setInstructionsRef={ref => this.setInstructionsRef(ref)}
+          setInstructionsRef={this.setInstructionsRef}
           handleClickCollapser={this.handleClickCollapser}
           adjustMaxNeededHeight={this.adjustMaxNeededHeight}
           isEmbedView={isEmbedView}
@@ -530,7 +528,7 @@ class TopInstructions extends Component {
       if (dynamicInstructions) {
         return (
           <DynamicInstructions
-            ref={ref => this.setInstructionsRef(ref)}
+            ref={this.setInstructionsRef}
             dynamicInstructions={dynamicInstructions}
             dynamicInstructionsKey={dynamicInstructionsKey}
             setInstructionsRenderedHeight={height => {
@@ -541,10 +539,12 @@ class TopInstructions extends Component {
       } else {
         return (
           <Instructions
-            ref={ref => this.setInstructionsRef(ref)}
+            ref={this.setInstructionsRef}
             instructions={longInstructions}
             onResize={this.adjustMaxNeededHeight}
             inTopPane
+            isImmersiveButtonHasRoundBorders
+            isLegacyImmersiveStyles={isOldPurpleColorHeader}
             isBlockly={isBlockly}
             noInstructionsWhenCollapsed={noInstructionsWhenCollapsed}
           />
@@ -572,6 +572,9 @@ class TopInstructions extends Component {
       levelVideos,
       mapReference,
       referenceLinks,
+      // TODO: [Phase 2] Legacy header color logic. Delete once get rid of legacy header colors.
+      //  More info here: https://github.com/code-dot-org/code-dot-org/pull/50895
+      isOldPurpleColorHeader,
       isMinecraft,
       teacherMarkdown,
       isCollapsed,
@@ -675,6 +678,7 @@ class TopInstructions extends Component {
       >
         <TopInstructionsHeader
           teacherOnly={teacherOnly}
+          isOldPurpleColor={isOldPurpleColorHeader}
           tabSelected={tabSelected}
           isCSDorCSP={isCSDorCSP}
           displayHelpTab={displayHelpTab}
@@ -914,5 +918,5 @@ export default connect(
     }
   }),
   null,
-  {withRef: true}
+  {forwardRef: true}
 )(Radium(TopInstructions));

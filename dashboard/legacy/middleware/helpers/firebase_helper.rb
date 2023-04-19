@@ -70,7 +70,7 @@ class FirebaseHelper
 
   def upload_shared_table(table_name, records, columns)
     escaped_table_name = escape_table_name(table_name)
-    response = @firebase.set("/v3/channels/shared/counters/tables/#{escaped_table_name}", {"lastId": records.length, "rowCount": records.length})
+    response = @firebase.set("/v3/channels/shared/counters/tables/#{escaped_table_name}", {lastId: records.length, rowCount: records.length})
     return response unless response.success?
     response = @firebase.set("/v3/channels/shared/storage/tables/#{escaped_table_name}/records", records)
     return response unless response.success?

@@ -48,7 +48,7 @@ var audioStyle = {
     height: '32px'
   },
   buttonImg: {
-    lineHeight: '32px',
+    lineHeight: '28px',
     fontSize: 20
   }
 };

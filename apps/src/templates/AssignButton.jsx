@@ -99,7 +99,7 @@ class AssignButton extends React.Component {
       <div>
         <div style={buttonMarginStyle}>
           <Button
-            __useDeprecatedTag
+            style={styles.boxShadow}
             color={Button.ButtonColor.orange}
             text={i18n.assignToSection()}
             icon="plus"
@@ -130,6 +130,9 @@ const styles = {
     marginRight: 10,
     display: 'flex',
     alignItems: 'center'
+  },
+  boxShadow: {
+    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 63%)'
   }
 };
 

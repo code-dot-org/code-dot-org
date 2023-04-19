@@ -7,6 +7,8 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 ## Overview
 
+1. Request and Configure AWS access (code.org staff) or configure local secrets (open source contributors). See [Configure AWS Access or Secrets](#configure-aws-access-or-secrets) below. This step is not required until rake is first run below, but staff may wish to submit the request first so its ready when rake is.
+
 1. Install OS-specific prerequisites
    - See the appropriate section below: [OS X](#os-x-monterey---including-apple-silicon-m1), [Ubuntu](#ubuntu-1804-download-iso), [Windows](#windows)
    - *Important*: When done, check for correct versions of these dependencies:
@@ -24,6 +26,8 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `gem install bundler -v 2.3.22`
 
 1. `rbenv rehash`
+
+1. `bundle config --local without staging test production levelbuilder`
 
 1. `bundle install`
     - This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
@@ -46,9 +50,15 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
     </details>
     <details>
-      <summary>Troubleshoot: `FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError` </summary>
+      <summary>Troubleshoot: `FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError` or similar `Aws::SecretsManager` errors</summary>
+      Reported when missing credentials for access to our AWS Account or local secret configuration.
 
-      - If you have issue `"rake aborted! FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError: unable to sign request without credentials set"`, see instructions for i) [AWS Account Login - Getting AWS access for a new user](https://docs.google.com/document/d/1dDfEOhyyNYI2zIv4LI--ErJj6OVEJopFLqPxcI0RXOA/edit#heading=h.nbv3dv2smmks) and ii) [Install AWS Command Line Interface v2](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)      
+      See [Configure AWS Access or Secrets](#configure-aws-access-or-secrets)
+    </details>
+    <details>
+      <summary>Troubleshoot: `WSL: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock'` </summary>
+
+      - This is an issue specific to Windows System for Linux (WSL) OS configuration where connection to mysql without sudo would fail with the above error. This can be rectified with some permission updates on mysql files and updating SQL client side configuration as called out [in this SO post](https://stackoverflow.com/a/66949451)
     </details>
 
 1. `bundle exec rake install`
@@ -61,9 +71,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 1. `bundle exec rake build`
     - This may fail if your are on a Mac and your OSX XCode Command Line Tools were not installed properly. See [Bundle Install Tips](#bundle-install-tips) for more information.
-
-1. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
-    - Some functionality will not work on your local site without this, for example, some project-backed level types such as <https://studio.code.org/projects/gamelab>. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
+    - This may fail for external contributors who don't have permissions to access Code.org AWS Secrets. Assign placeholder values to any configuration settings that are [ordinarily populated in Development environments from AWS Secrets](https://github.com/code-dot-org/code-dot-org/blob/staging/config/development.yml.erb) as indicated in this example: https://github.com/code-dot-org/code-dot-org/blob/5b3baed4a9c2e7226441ca4492a3bca23a4d7226/locals.yml.default#L136-L139
 
 1. Run the website `bin/dashboard-server`
 
@@ -72,6 +80,21 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Install necessary plugins described in the [Editor configuration](#editor-configuration) section below.
 
 After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
+
+## Configure AWS Access or Secrets
+
+### For Code.org Staff
+
+Staff should see instructions for requesting AWS account access in our "AWS Account Access" doc linked from "Getting started as a Developer", and follow the setup steps in the "API access (for local development)" section.
+Some functionality will not work on your local site without this, for example, some project-backed level types such as <https://studio.code.org/projects/gamelab>. 
+### For external contributors
+
+External contributors can supply alternate placeholder values for secrets normally retrieved from AWS Secrets Manager by creating a file named "locals.yml", copying contents from ["locals.yml.default"](locals.yml.default) and uncommenting following configurations to use placeholder values
+          - slack_bot_token: localoverride
+          - pardot_private_key: localoverride
+          - firebase_secret: localoverride
+          - firebase_shared_secret: localoverride
+          - properties_encryption_key: localoverride
 
 ## OS-specific prerequisites
 
@@ -110,15 +133,23 @@ These steps may need to change over time as 3rd party tools update to have versi
    1. Set up your local MySQL server
       1. Force link 5.7 version via `brew link mysql@5.7 --force`
       2. Start mysql with `brew services start mysql@5.7`, which uses [Homebrew services](https://github.com/Homebrew/homebrew-services) to manage things for you.
+      3. Confirm that MySQL has started by running `brew services`. The status should show "started". If the status shows "stopped", you may need to initialize mysql first.
+          1. `brew services stop mysql@5.7`
+          2. `mysqld --initialize-insecure` (this will leave the root password blank, which is required)
+          3. `brew services start mysql@5.7`
+          4. Confirm MySQL has started by running `brew services` again.
 
 1. Install the **Java 8 JSK**
-   1. Either explicitly via `brew cask install adoptopenjdk/openjdk/adoptopenjdk8` or for M1 in Rosetta, `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
+   1. `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
    2. Or by installing [sdkman](https://sdkman.io/) and installing a suitable JDK. Similar to **rbenv** and **nvm**, **sdkman** allows you to switch between versions of Java.
       1. Different versions will be available depending on your system architecture, use `sdk list java` to identify a Java 8 JDK available for ARM architecture.
       2. `sdk install java <version identifier>` to install a version
       3. `sdk default java <installed version>` to ensure it is the default for future shells.
 
-1. Install **rbenv** via `brew install rbenv`
+1. Install and configure **rbenv**
+    1. Install: `brew install rbenv`
+    2. Run `echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc` to configure ZSH to use **rbenv**. See https://github.com/rbenv/rbenv#basic-git-checkout for instructions on configuring bash and other shells.
+    3. Reload your .zshrc to load **rbenv**: `source ~/.zshrc`
 
 1. Install **Ruby**
     1. For non-M1 systems (including M1 systems using Rosetta), running `rbenv install` from the project root directory should be sufficient.
@@ -137,8 +168,6 @@ These steps may need to change over time as 3rd party tools update to have versi
     ```
 
 1. Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils sqlite parallel tidy-html5`
-
-1. [Check your rmagick version](#rmagick)
 
 1. Install [Node Version Manager](https://github.com/nvm-sh/nvm) and install Node
     1. Install NVM via `brew install nvm`
@@ -255,7 +284,6 @@ These steps may need to change over time as 3rd party tools update to have versi
 1. Install OpenSSL:
     1. `brew install openssl`
     1. `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
-1. [Check rmagick version](#rmagick)
 1. If you want to render personalized certificates locally, see these special instructions regarding [ImageMagick with pango](#imagemagick-with-pango).
 1. Prevent future problems related to the `Too many open files` error:
     1. Add the following to `~/.bash_profile` or your desired shell configuration file:
@@ -277,7 +305,8 @@ These steps may need to change over time as 3rd party tools update to have versi
 
 1. [Download](https://www.google.com/chrome/) and install Google Chrome, if you have not already. This is needed in order to be able to run apps tests locally.
 
-### Ubuntu 18.04 ([Download iso][ubuntu-iso-url])
+### Ubuntu 18.04
+[Ubuntu 18.04 iso download][ubuntu-iso-url]
 
 Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
 
@@ -347,15 +376,18 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
     * If you want to follow the Ubuntu setup exactly, Ubuntu 18.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
 1. Make sure virtualization is turned on your BIOS settings.
 1. From the command line, run `wsl`, or from the Start menu, find and launch 'Ubuntu'. When this runs for the first time, WSL will complete installation in the resulting terminal window.
-
-* `chromium-browser` might not work with the error message `Command '/usr/bin/chromium-browser' requires the chromium snap to be installed.`. You can instead install chrome by running the following:
-   1. `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
-   2. `sudo apt install ./google-chrome-stable_current_amd64.deb`
-   3. modify step 8 of the Ubuntu instructions to read `export CHROME_BIN=$(which google-chrome)`
-* Before step 9, you may have to restart MySQL using `sudo /etc/init.d/mysql restart`
-
-...followed by the [overview instructions](#overview), _with the following observation_:
-* Before running `bundle exec rake install`, you may have to start the mysql service: `sudo service mysql start`
+1. Make it so that you can run apps tests locally. You have two options here:
+    1. If you have Google Chrome installed on Windows, add the following to `~/.bashrc` or your desired shell configuration file to make it accessible from WSL:
+        1. `export CHROME_BIN='/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe'`
+    1. Alternatively, ensure chromium-browser or alternatively google-chrome is installed in WSL
+        1. Try running `chromium-browser`. If this does not work with the error message `Command '/usr/bin/chromium-browser' requires the chromium snap to be installed.`, you can instead install google chrome by running the following:
+            1. `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
+            1. `sudo apt install ./google-chrome-stable_current_amd64.deb`
+1. Followed by the [Ubuntu instructions](#ubuntu-1804) to install required tools on the Ubuntu instance, _with the following observations_:
+    * If google-chrome was installed in the last step, update CHROME_BIN variable to point to google chrome (in step 9), `export CHROME_BIN=$(which google-chrome)`
+    * Before updating the root password to empty in SQL (step 10), restart MySQL using `sudo /etc/init.d/mysql restart`
+1. Followed by the [overview instructions](#overview), _with the following observations_:
+    * Before running `bundle exec rake install`, restart the mysql service: `sudo service mysql start`
 
 ### Alternative: Use an Ubuntu VM
 
@@ -469,16 +501,6 @@ Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) fo
 
 ---
 ### Bundle Install Tips
-
-#### rmagick
-If rmagick doesn't install, check your version of imagemagick, and downgrade if >= 7
-- `convert --version`
-- `brew install imagemagick@6`
-- `brew unlink imagemagick`
-- `brew link imagemagick@6 --force`
-If you continue to have issues with rmagick, after changing your imagemagick version, you may need to uninstall/reinstall the gem
-- `gem uninstall rmagick`
-- `gem install rmagick -v 2.16.0`
 
 #### Apple Silicon (M1) bundle install steps
 
@@ -627,6 +649,16 @@ If you run into an error message about `Could not find MIME type database in the
 - `brew install shared-mime-info`
 
 (More info on mimemagic dependencies [here](https://github.com/mimemagicrb/mimemagic#dependencies), including help for OSes that don't support Homebrew.)
+
+#### eventmachine
+
+If bundle install fails with an error referencing `eventmachine`, try
+
+- `gem install eventmachine -v ‘[VERSION]’ -- --with-openssl-dir=$(brew --prefix libressl)`
+
+Where [VERSION] is the current version of eventmachine in Gemfile.lock. For example:
+
+- `gem install eventmachine -v ‘1.2.7’ -- --with-openssl-dir=$(brew --prefix libressl)`
 
 #### Xcode Set Up
 

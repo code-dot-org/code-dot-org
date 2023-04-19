@@ -28,6 +28,8 @@ import {
 } from '../../form_components_func/labeled/LabeledRadioButtons';
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {useRegionalPartner} from '../../components/useRegionalPartner';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const MANUAL_SCHOOL_FIELDS = [
   'schoolName',
@@ -184,11 +186,7 @@ const PrincipalApprovalComponent = props => {
           textFieldMap={{
             [TextFields.otherWithText]: 'other'
           }}
-          label={`Are you committed to including ${
-            teacherApplication.course
-          } on the master schedule in ${Year} if ${
-            teacherApplication.name
-          } is accepted into the program? Note: the program may be listed under a different course name as determined by your district.`}
+          label={`Are you committed to including ${teacherApplication.course} on the master schedule in ${Year} if ${teacherApplication.name} is accepted into the program? Note: the program may be listed under a different course name as determined by your district.`}
         />
         <LabeledRadioButtonsWithAdditionalTextFields
           name="replaceCourse"
@@ -422,6 +420,12 @@ PrincipalApprovalComponent.getErrorMessages = data => {
       formatErrors[key] = 'Must be a valid percent between 0 and 100';
     }
   });
+
+  if (Object.keys(formatErrors).length > 0) {
+    analyticsReporter.sendEvent(EVENTS.ADMIN_APPROVAL_RECEIVED_EVENT, {
+      'error messages': JSON.stringify(formatErrors)
+    });
+  }
 
   return formatErrors;
 };

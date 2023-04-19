@@ -130,7 +130,7 @@ class ContactRollupsV2
   # The results are then copied over to ContactRollupsFinal for further analysis.
   def process_contacts
     start_time = Time.now
-    @log_collector.time!('Processes all extracted data') do
+    @log_collector.time!("Processes all extracted data with batch size #{ContactRollupsProcessed::BATCH_SIZE}") do
       results = ContactRollupsProcessed.import_from_raw_table
       @log_collector.record_metrics({ContactsWithInvalidData: results[:invalid_contacts]})
     end
@@ -169,8 +169,8 @@ class ContactRollupsV2
         ContactRollupsPardotMemory.download_pardot_ids
       end
     end
-  rescue StandardError => e
-    @log_collector.record_exception e
+  rescue StandardError => exception
+    @log_collector.record_exception exception
   ensure
     @log_collector.record_metrics(
       {SyncNewContactsDuration: Time.now - start_time}

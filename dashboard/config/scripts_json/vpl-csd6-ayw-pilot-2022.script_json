@@ -13,8 +13,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-12-15 23:20:18 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-02-15 22:07:48 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -116,6 +116,21 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd6-ayw-pilot-2022"
       }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Asynchronous Curriculum Investigation",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd6-ayw-pilot-2022"
+      }
     }
   ],
   "lesson_activities": [
@@ -166,6 +181,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd6-ayw-pilot-2022"
       }
+    },
+    {
+      "key": "f4aa7682-16f6-4c2f-bd76-d1590d600352",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f4aa7682-16f6-4c2f-bd76-d1590d600352",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd6-ayw-pilot-2022"
+      }
     }
   ],
   "activity_sections": [
@@ -208,13 +235,57 @@
         "activity_section.key": "ab951b72-7ba2-439f-a283-d5aafdb6b6f5",
         "lesson_activity.key": "befdbb1d-2fb4-4667-baaa-77e737b89000"
       }
+    },
+    {
+      "key": "cacd68d3-a5eb-45c7-86fd-66051eaa669e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cacd68d3-a5eb-45c7-86fd-66051eaa669e",
+        "lesson_activity.key": "f4aa7682-16f6-4c2f-bd76-d1590d600352"
+      }
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M56-Async"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M56-Async"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd6-ayw-pilot-2022",
+        "activity_section.key": "cacd68d3-a5eb-45c7-86fd-66051eaa669e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M56-Async"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M56-Async",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M56-Async"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd6-ayw-pilot-2022",
+        "activity_section.key": "cacd68d3-a5eb-45c7-86fd-66051eaa669e"
+      }
+    }
   ],
   "resources": [
     {

@@ -30,11 +30,5 @@ class ChannelsBase64ErrorTest < Minitest::Test
 
     @channels.delete "/v3/channels/#{channel_id}"
     assert_equal 400, @channels.last_response.status
-
-    @channels.get "/v3/channels/#{channel_id}/abuse"
-    assert_equal 400, @channels.last_response.status
-
-    @channels.post "/v3/channels/#{channel_id}/abuse", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    assert_equal 400, @channels.last_response.status
   end
 end

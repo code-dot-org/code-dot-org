@@ -33,9 +33,7 @@ export default class AttendancePanel extends React.Component {
       return null;
     }
 
-    return `${window.location.protocol}${window.dashboard.CODE_ORG_URL}/pd/${
-      session.code
-    }`;
+    return `${window.location.protocol}${window.dashboard.CODE_ORG_URL}/pd/${session.code}`;
   }
 
   getAttendanceUrl(sessionId) {

@@ -17,7 +17,7 @@ import {
 } from '@cdo/apps/lib/kits/maker/portScanning';
 import sinon from 'sinon';
 
-describe('maker/portScanning.js', function() {
+describe('maker/portScanning.js', function () {
   let userAgentSpy;
   describe(`findPortWithViableDevice()`, () => {
     beforeEach(() => {

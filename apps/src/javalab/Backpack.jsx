@@ -12,6 +12,8 @@ import {DisplayTheme} from './DisplayTheme';
 import {makeEnum} from '@cdo/apps/utils';
 import JavalabDialog from './JavalabDialog';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
+import CloseOnEscape from './components/CloseOnEscape';
+import {BackpackAPIContext} from './BackpackAPIContext';
 
 const Dialog = makeEnum(
   'IMPORT_WARNING',
@@ -30,11 +32,12 @@ class Backpack extends Component {
     isButtonDisabled: PropTypes.bool.isRequired,
     onImport: PropTypes.func.isRequired,
     // populated by redux
-    backpackApi: PropTypes.object.isRequired,
     sources: PropTypes.object.isRequired,
     validation: PropTypes.object.isRequired,
     backpackEnabled: PropTypes.bool
   };
+
+  static contextType = BackpackAPIContext;
 
   state = {
     dropdownOpen: false,
@@ -55,9 +58,9 @@ class Backpack extends Component {
       selectedFiles: [],
       backpackFilenames: []
     });
-    if (this.props.backpackApi.hasBackpack()) {
+    if (this.context.hasBackpack()) {
       this.setState({backpackFilesLoading: true});
-      this.props.backpackApi.getFileList(
+      this.context.getFileList(
         this.onFileListLoadError,
         this.onFileListLoadSuccess
       );
@@ -92,7 +95,7 @@ class Backpack extends Component {
   handleDelete = () => {
     const {selectedFiles} = this.state;
     this.setState({isDeleting: true});
-    this.props.backpackApi.deleteFiles(
+    this.context.deleteFiles(
       selectedFiles,
       (_, failedFileList) => this.onDeleteFailed(failedFileList, selectedFiles),
       this.collapseDropdown
@@ -133,7 +136,7 @@ class Backpack extends Component {
   importFiles = selectedFiles => {
     let failedServerImportFiles = [];
     selectedFiles.forEach(filename => {
-      this.props.backpackApi.fetchFile(
+      this.context.fetchFile(
         filename,
         () => failedServerImportFiles.push(filename),
         fileContents =>
@@ -307,6 +310,9 @@ class Backpack extends Component {
 
     const backpackIcon = (
       <i style={{marginRight: 8, fontSize: 13}}>
+        {/* TODO: [Phase 2] This is legacy style of backpack image.
+         Once we move to new styles, make sure to use backpack_neutraldark.png instead to match colors
+         More info here: https://github.com/code-dot-org/code-dot-org/pull/50895 */}
         <img
           src="/blockly/media/javalab/backpack.png"
           alt="backpack icon"
@@ -319,12 +325,13 @@ class Backpack extends Component {
     // to align with other buttons in the JavalabEditor header,
     // which all use PaneButton.
     return (
-      <>
+      <CloseOnEscape handleClose={this.handleClickOutside}>
         <PaneButton
           id="javalab-editor-backpack"
           icon={backpackIcon}
           onClick={this.toggleDropdown}
           headerHasFocus
+          isLegacyStyles
           isRtl={false}
           label={javalabMsg.backpackLabel()}
           leftJustified
@@ -456,7 +463,7 @@ class Backpack extends Component {
           displayTheme={displayTheme}
           confirmButtonText={msg.dialogOK()}
         />
-      </>
+      </CloseOnEscape>
     );
   }
 }
@@ -469,8 +476,7 @@ const styles = {
 
 export const UnconnectedBackpack = Backpack;
 export default connect(state => ({
-  backpackApi: state.javalab.backpackApi,
-  sources: state.javalab.sources,
-  validation: state.javalab.validation,
+  sources: state.javalabEditor.sources,
+  validation: state.javalabEditor.validation,
   backpackEnabled: state.javalab.backpackEnabled
 }))(onClickOutside(UnconnectedBackpack));

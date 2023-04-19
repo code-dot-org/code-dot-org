@@ -18,22 +18,24 @@ social:
 
 W informatyce 101, pierwszy program, który tworzy wielu uczniów, jest prosty i wyświetla kultową linię tekstu: „Hello World!” Przywitaj się ze światem informatyki dzięki temu ćwiczeniu wprowadzającemu, które wyposaża uczniów w podstawowe umiejętności kodowania i pewność podczas tworzenia aplikacji. Wybierz jeden z sześciu zabawnych motywów, aby kodować interaktywne postacie w świecie, który tworzysz!
 
-# Wybierz swój motyw Hello World
+## Wybierz swój motyw Hello World
 
-{{spritelab_module, title: "NOWOŚĆ! Przestrzeń", color: "#d41f33", image: "images/csc/helloworld/helloworldspacetheme.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
-{{spritelab_module, title: "NOWOŚĆ! Soccer", color: "#3ba467", image: "images/csc/helloworld/helloworldsoccertheme.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-{{ spritelab_module, title: "Żywność", color: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
-{{ spritelab_module, title: "Zwierzęta", color: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
-{{ spritelab_module, title: "Retro", color: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
-{{ spritelab_module, title: "Emotikon", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
+{{spritelab_module, title: "NOWOŚĆ! Kosmos”, color: "#d41f33 „, image:" images/csc/helloworld/helloworldspacetheme.png „, alt_text: „Dwie urocze postacie astronautów i corgi unoszące się w kosmosie”, url: "https://studio.code.org/s/hello-world-space-2022/reset"}}
+{{spritelab_module, title: "NOWOŚĆ! Piłka nożna”, color: "#3ba467 „, image:" images/csc/helloworld/helloworldsoccertheme.png „, alt_text: „Trzy postacie żyrafy, tygrysa i nosorożca na boisku przed rozpoczęciemj meczu w piłkę nożną”, url: "https://studio.code.org/s/hello-world-soccer-2022/reset"}}
+{{spritelab_module, title: „Jedzenie”, color: "#C14790 „, image:" images/csc/helloworld/helloworldhappyfoodtheme.png „, alt_text: „Trzy uśmiechnięte postacie pizzy, cheeseburgera i taco na talerzu”, url: "https://studio.code.org/s/hello-world-food-2021/reset"}}
+{{spritelab_module, title: „Zwierzęta”, color: "#00ADBC „, image:" images/csc/helloworld/helloworldanimalstheme.png „, alt_text: „Trzy postacie tygrysa, niedźwiedzia i słonia na trawiastym polu w świecącym słońcu”, url: "https://studio.code.org/s/hello-world-animals-2021/reset"}}
+{{spritelab_module, title: „Retro”, color: "#FFA400 „, image:" images/csc/helloworld/helloworldretrotheme.png „, alt_text: „8-bitowa gra z obcymi postaciami poruszającymi się w labiryncie „, url:" https://studio.code.org/s/hello-world-retro-2021/reset "}}
+{{spritelab_module, title: „Emoji”, color: "#0094CA „, image:" images/csc/helloworld/helloworldemojitheme.png „, alt_text: „Trzy zabawne postacie emoji z różnymi ekspresjami przed kulą dyskotekową”, url: "https://studio.code.org/s/hello-world-emoji-2021/reset"}}
 {{ clearfix }}
 
 {{teacher_info, heading: "Informacje dla nauczycieli”, title: „Jak kontynuować naukę po Hello World”, description: "Hello World to idealny pierwszy krok dla klas przed wypróbowaniem otwartych projektów w ramach naszego nowego programu nauczania, Powiązania Informatyki! Po zapoznaniu się z podstawami kodowania, uczniowie będą mogli przejść do międzyprzedmiotowych projektów Powiązania Informatyki.", button_text: "Dowiedz się więcej”, url: "/educate/csc”}}
 
 ## Wyróżnione wytwory uczniów
 
-{{ featured_project, title: "Żywność", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood2.gif", url: "https://studio.code.org/projects/spritelab/sC_ZiNi_x5GUqsWHE2M4CrcbjU8XvtD3VNT7TM0Y0N8" }}
-{{ featured_project, title: "Emotikon", author: "D", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
-{{ featured_project, title: "Zwierzęta", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
-{{ featured_project, title: "Retro", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
+{{featured_project, title: „Jedzenie”, author: „M”, age: „13+”, image: "images/csc/helloworld/cschelloworld_happyfood2.gif „, alt_text: „Projekt uczniowski z animowanym gifem widelca, poruszającego się po talerzu obok postaci awokado i pizzy”, url: "https://studio.code.org/projects/spritelab/sC_ZiNi_x5GUqsWHE2M4CrcbjU8XvtD3VNT7TM0Y0N8"}}
+{{featured_project, title: „Emoji”, author: „D”, age: „8+”, image: "images/csc/helloworld/cschelloworld_emoji.gif „, alt_text: „Projekt uczniowski z animowanym gifem różnych emotikonów z napisem Click Me”, url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc"}}
+{{featured_project, title: „Zwierzęta”, author: „B”, age: „18+”, image: "images/csc/helloworld/cschelloworld_animals.gif „, alt_text: „Projekt uczniowski z animowanym gifem podwodnej sceny z delfinami, rybami i meduzami przed wrakiem statku”, url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4"}}
+{{featured_project, title: „Retro”, author: „W”, age: „13+”, image: "images/csc/helloworld/cschelloworld_retro.gif „, alt_text: „Projekt uczniowski z animowanym gifem gry w tag z dwoma obcymi postaciami na odległej planecie”, url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo"}}
 {{ clearfix }}
+
+{{ helloworld }}

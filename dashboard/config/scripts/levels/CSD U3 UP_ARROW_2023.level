@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-09-19T22:58:00.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -85,7 +81,6 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Add an if statement and place your movement code inside it\",\r\n  \"element_id\": \".droplet-gutter-line:nth-child(5)\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "project_template_level_name": "CSD U3- arrows template_2023",
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
@@ -112,16 +107,22 @@
     ],
     "show_type_hints": "false",
     "encrypted_examples": "kFgCW2uTW7KVwzdGVIU0hhbchGxscFfkVKK1D7yZ3sljKe1lHLEmxzfC/HLo\nSijsQDRdSusgaa825fdm7Hp4mQ==\n",
-    "long_instructions": "# Moving Sprites\r\n\r\nYou can change your sprite's position based on key presses in the same way you changed its animations.\r\n\r\n# Do This\r\n\r\n* Add an `if` statement inside your draw loop.\r\n* Check whether the right arrow key has been pressed down.\r\n* Add code inside the conditional to move the sprite right if the right arrow is down.\r\n\r\n_Do you need to change sprite's x or y property to move it right?_",
+    "long_instructions": "# Moving Sprites\r\n\r\nYou can change your sprite's position based on key presses in the same way you changed its animations.\r\n\r\n# Do This\r\n\r\n1) Add a conditional statement to check if the right arrow key has been pressed down.\r\n   - Add an [`if ()`(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock) statement inside your draw loop.\r\n   - Use the [`keyDown()`(#fff176)](/docs/ide/gamelab/expressions/keyDown) to detect if the **right** arrow key has been pressed.\r\n2) Add code to move the sprite right if the right arrow is down.\r\n   - Add the counter pattern **inside** the [`if ()`(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock) statement to make the sprite move to the right.\r\n\r\n_Do you need to change sprite's [`x`(#f78183)](/docs/ide/gamelab/expressions/x) or [`y`(#f78183)](/docs/ide/gamelab/expressions/y) property to move it right?_",
     "name_suffix": "_2023",
     "encrypted": "false",
     "mini_rubric": "false",
     "libraries_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "start_blocks": "var bug = createSprite(200, 200);\r\nbug.setAnimation(\"ladybug\");\r\n\r\nfunction draw() {\r\n  //Draw Background\r\n  background(\"white\");\r\n  //1) Add a conditional statement to check if the right arrow key has been pressed down.\r\n\r\n  //2) Add code to move the sprite right if the right arrow is down.\r\n\r\n\r\n  //Draw Animations\r\n  drawSprites();\r\n}\r\n",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"632b7a80-3526-48b4-8b27-333199f6d3cf\",\r\n    \"0f775d6a-177e-4b8e-a152-df070aa5e3d2\",\r\n    \"05abc816-2a69-4696-b6a7-f31a576a7d6c\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"632b7a80-3526-48b4-8b27-333199f6d3cf\": {\r\n      \"name\": \"bee\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2FEW437bB2p4TGfLNBA8qyYQ%2F632b7a80-3526-48b4-8b27-333199f6d3cf.png%3Fversion%3DnfTVVs5JWn8Ba7xwkLzgyOP_g6ACT24W\",\r\n      \"frameSize\": {\r\n        \"x\": 102,\r\n        \"y\": 102\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"nfTVVs5JWn8Ba7xwkLzgyOP_g6ACT24W\"\r\n    },\r\n    \"0f775d6a-177e-4b8e-a152-df070aa5e3d2\": {\r\n      \"name\": \"fly\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2FEW437bB2p4TGfLNBA8qyYQ%2F0f775d6a-177e-4b8e-a152-df070aa5e3d2.png%3Fversion%3DDcfnQX1eXXw23.KZayenLB2s9ugANk_N\",\r\n      \"frameSize\": {\r\n        \"x\": 104,\r\n        \"y\": 104\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"DcfnQX1eXXw23.KZayenLB2s9ugANk_N\"\r\n    },\r\n    \"05abc816-2a69-4696-b6a7-f31a576a7d6c\": {\r\n      \"name\": \"ladybug\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2FEW437bB2p4TGfLNBA8qyYQ%2F05abc816-2a69-4696-b6a7-f31a576a7d6c.png%3Fversion%3DtL7rz4wVjyUS51LtPOqyZ8onGkcG4_nv\",\r\n      \"frameSize\": {\r\n        \"x\": 106,\r\n        \"y\": 106\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"tL7rz4wVjyUS51LtPOqyZ8onGkcG4_nv\"\r\n    }\r\n  }\r\n}"
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-09-19T22:58:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:58:00.436+00:00\",\"changed\":[\"cloned from \\\"CSD U3 UP_ARROW_2022\\\"\"],\"cloned_from\":\"CSD U3 UP_ARROW_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:58:00.436+00:00\",\"changed\":[\"cloned from \\\"CSD U3 UP_ARROW_2022\\\"\"],\"cloned_from\":\"CSD U3 UP_ARROW_2022\"},{\"changed_at\":\"2023-01-14 19:50:26 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 19:53:49 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

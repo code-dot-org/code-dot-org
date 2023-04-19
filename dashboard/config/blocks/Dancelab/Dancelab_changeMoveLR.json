@@ -3,11 +3,7 @@
   "config": {
     "func": "changeMoveLR",
     "blockText": "{SPRITE} do {MOVE} {DIR} forever",
-    "color": [
-      270,
-      ".7",
-      ".7"
-    ],
+    "style": "lab_blocks",
     "args": [
       {
         "name": "SPRITE",

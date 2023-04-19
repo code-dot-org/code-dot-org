@@ -37,7 +37,7 @@ class TeacherDashboardHeader extends React.Component {
   getDropdownOptions(optionMetricName) {
     let self = this;
 
-    let options = self.props.sections.map(function(section, i) {
+    let options = self.props.sections.map(function (section, i) {
       let optionOnClick = () => {
         switchToSection(section.id, self.props.selectedSection.id);
         recordSwitchToSection(
@@ -61,7 +61,7 @@ class TeacherDashboardHeader extends React.Component {
 
   lockedSectionNotification = ({restrictSection, loginType}) =>
     restrictSection &&
-    (loginType !==
+    loginType !==
       (SectionLoginType.google_classroom || SectionLoginType.clever) && (
       <Notification
         type={NotificationType.failure}
@@ -69,7 +69,7 @@ class TeacherDashboardHeader extends React.Component {
         details={i18n.manageStudentsNotificationLockedDetails({loginType})}
         dismissable={false}
       />
-    ));
+    );
 
   progressNotSavingNotification() {
     return (
@@ -119,7 +119,6 @@ class TeacherDashboardHeader extends React.Component {
           <div style={styles.rightColumn}>
             <div style={styles.buttonSection}>
               <Button
-                __useDeprecatedTag
                 onClick={() => {
                   this.props.openEditSectionDialog(
                     this.props.selectedSection.id
@@ -165,10 +164,12 @@ const styles = {
     flexDirection: 'column-reverse'
   },
   buttonSection: {
-    display: 'flex'
+    display: 'flex',
+    marginBottom: 5
   },
   buttonWithMargin: {
-    marginRight: '5px'
+    margin: 0,
+    marginRight: 5
   }
 };
 

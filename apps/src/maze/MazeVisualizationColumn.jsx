@@ -7,7 +7,7 @@ import CollectorGemCounter from './CollectorGemCounter';
 import GameButtons from '../templates/GameButtons';
 import BelowVisualization from '../templates/BelowVisualization';
 
-const MazeVisualizationColumn = function(props) {
+const MazeVisualizationColumn = function (props) {
   return (
     <span>
       <Visualization />

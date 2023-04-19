@@ -1,0 +1,67 @@
+{
+  "name": "focus-on-hardware-2023",
+  "script_names": [
+    "focus-on-hardware1-2023",
+    "focus-on-hardware2-2023",
+    "focus-on-hardware3a-2023",
+    "focus-on-hardware3b-2023"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "focus-on-hardware",
+    "has_verified_resources": true,
+    "version_year": "2023"
+  },
+  "resources": [
+    {
+      "name": "All Code",
+      "url": "/courses/focus-on-hardware-2023/code",
+      "key": "all_code_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code_2"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/courses/focus-on-hardware-2023/resources",
+      "key": "all_resources_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_4"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/focus-on-hardware-2023/standards",
+      "key": "all_standards_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_4"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/focus-on-hardware-2023/vocab",
+      "key": "all_vocabulary_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4"
+      }
+    }
+  ],
+  "student_resources": [
+
+  ]
+}

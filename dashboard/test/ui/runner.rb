@@ -64,8 +64,8 @@ def main(options)
 
   run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
     run_feature browser, feature, options
-  rescue => e
-    ChatClient.log "Exception: #{e.message}", color: 'red'
+  rescue => exception
+    ChatClient.log "Exception: #{exception.message}", color: 'red'
     raise
   end
 
@@ -285,10 +285,12 @@ end
 # @return [String] a public hyperlink to the uploaded log, or empty string.
 def upload_log_and_get_public_link(filename, metadata)
   return '' unless $options.html
-  log_url = LOG_UPLOADER.upload_file(filename, {metadata: metadata})
+  # Assume all log files are Cucumber reports in html format.
+  # TODO: Set content type dynamically based on filename extension.
+  log_url = LOG_UPLOADER.upload_file(filename, {content_type: 'text/html', metadata: metadata})
   " <a href='#{log_url}'>☁ Log on S3</a>"
-rescue Exception => msg
-  ChatClient.log "Uploading log to S3 failed: #{msg}"
+rescue Exception => exception
+  ChatClient.log "Uploading log to S3 failed: #{exception}"
   return ''
 end
 
@@ -440,8 +442,9 @@ end
 def generate_status_page(suite_start_time)
   test_status_template = File.read('test_status.haml')
   haml_engine = Haml::Engine.new(test_status_template)
-  File.open(status_page_filename, 'w') do |file|
-    file.write haml_engine.render(
+  File.write(
+    status_page_filename,
+    haml_engine.render(
       Object.new,
       {
         api_origin: CDO.studio_url('', scheme_for_environment),
@@ -454,7 +457,7 @@ def generate_status_page(suite_start_time)
         browser_features: browser_features
       }
     )
-  end
+  )
   ChatClient.log "A <a href=\"#{status_page_url}\">status page</a> has been generated for this #{test_type} test run."
 end
 
@@ -472,8 +475,8 @@ end
 def flakiness_for_test(test_run_identifier)
   return nil if $stop_calculating_flakiness
   TestFlakiness.summary_for(:test_flakiness, test_run_identifier)
-rescue Exception => e
-  puts "Error calculating flakiness: #{e.full_message}. Will stop calculating test flakiness for this run."
+rescue Exception => exception
+  puts "Error calculating flakiness: #{exception.full_message}. Will stop calculating test flakiness for this run."
   $stop_calculating_flakiness = true
   nil
 end
@@ -482,8 +485,8 @@ end
 def estimate_for_test(test_run_identifier)
   return nil if $stop_calculating_flakiness
   TestFlakiness.summary_for(:test_estimate, test_run_identifier)
-rescue Exception => e
-  puts "Error calculating estimate: #{e.full_message}. Will stop calculating test flakiness for this run."
+rescue Exception => exception
+  puts "Error calculating estimate: #{exception.full_message}. Will stop calculating test flakiness for this run."
   $stop_calculating_flakiness = true
   nil
 end
@@ -628,9 +631,6 @@ def cucumber_arguments_for_browser(browser, options)
       if browser['mobile']
         # iOS browsers will only run eyes tests tagged with @eyes_mobile.
         tag('@eyes_mobile')
-      elsif browser['browserName'] == 'Internet Explorer'
-        # IE will only run eyes tests tagged with @eyes_ie.
-        tag('@eyes_ie')
       else
         # All other desktop browsers, including Chrome, will run any eyes test
         # tagged with @eyes.
@@ -639,7 +639,6 @@ def cucumber_arguments_for_browser(browser, options)
   else
     # Make sure eyes tests don't run when --eyes is not specified.
     arguments += skip_tag('@eyes_mobile')
-    arguments += skip_tag('@eyes_ie')
     arguments += skip_tag('@eyes')
   end
 
@@ -648,12 +647,11 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@no_phone') if browser['name'] == 'iPhone'
   arguments += skip_tag('@only_phone') unless browser['name'] == 'iPhone'
   arguments += skip_tag('@no_circle') if options.is_circle
-  arguments += skip_tag('@no_ie') if browser['browserName'] == 'Internet Explorer'
 
-  # Only run in IE during a DTT. always run locally or during circle runs.
+  # always run locally or during circle runs.
   # Note that you may end up running in more than one browser if you use flags
-  # like [test safari], [test ie] or [test firefox] during a circle run.
-  arguments += skip_tag('@only_one_browser') if browser['browserName'] != 'Internet Explorer' && !options.local && !options.is_circle
+  # like [test safari] or [test firefox] during a circle run.
+  arguments += skip_tag('@only_one_browser') if !options.local && !options.is_circle
 
   arguments += skip_tag('@chrome') if browser['browserName'] != 'chrome' && !options.local
   arguments += skip_tag('@no_chrome') if browser['browserName'] == 'chrome'

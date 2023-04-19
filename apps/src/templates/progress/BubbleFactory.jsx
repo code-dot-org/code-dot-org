@@ -93,6 +93,7 @@ export function BubbleLink({url, onClick, children, a11y_description}) {
       onClick={onClick}
       className="progress-bubble-link"
       title={a11y_description}
+      aria-label={a11y_description}
     >
       {children}
     </a>

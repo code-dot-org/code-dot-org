@@ -51,15 +51,16 @@ If you have a personal email address additionally added to GitHub, you can re-se
 
 ### Top-level Test Helpers
 
-Our top-level `lib/rake/test.rake` file contains a handful of tasks that can be used to start tests for our different sub-projects. A full, up-to-date list of these can be found by running `rake --tasks | grep test:`.
+Our top-level `lib/rake/test.rake` file contains a handful of tasks that can be used to start tests for our different sub-projects. A full, up-to-date list of these can be found by running `bundle exec rake --tasks | grep test:`.
 
 Worth noting:
 
-* `rake test:all` - runs all tests across all sub-projects
-* `rake test:apps`, `rake test:pegasus`, `rake test:blockly_core` ... etc  - runs tests for specific sub-project
-* `rake test:changed` - detects which sub-projects have changed in this branch, runs those tests
-* `rake test:changed:apps` - runs apps tests if sub-project folder has changed
-
+* `bundle exec rake test:all` - runs all tests across all sub-projects
+* `bundle exec rake test:apps`, `bundle exec rake test:pegasus`, `bundle exec rake test:blockly_core` ... etc  - runs tests for specific sub-project
+* `bundle exec rake test:changed` - detects which sub-projects have changed in this branch, runs those tests
+* `bundle exec rake test:changed:apps` - runs apps tests if sub-project folder has changed
+* `bundle exec rake test:dashboard` - runs dashboard tests, but see [Dashboard Tests](#dashboard-tests) below for first time setup
+  
 ### Shared and Lib Tests
 Tests in the `shared/` and `lib/` directories need to be run slightly differently since they are outside of our Rails environment.
 
@@ -85,30 +86,46 @@ To debug tests in Chrome, prepend `BROWSER=Chrome WATCH=1` to any test command.
 See [the apps readme](./apps/README.md) for more details.
 
 ### Dashboard Tests
-`cd dashboard && RAILS_ENV=test bundle exec rails test` will run all of our dashboard Ruby tests. This can take about 15 minutes to run.
 
-If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, here are some things you can try in order from least to most drastic before running your tests again:
+Dashboard tests commands below should be run from the `dashboard/` directory: 
 
-1. `RAILS_ENV=test bundle exec rake seed:secret_pictures seed:secret_words` to seed the missing data, or
+`cd dashboard`
 
-2. recreate your local dashboard test db and reseed the data via:
-    * `UTF8=1 RAILS_ENV=test bundle exec rake db:reset db:test:prepare`
-    * if you forgot to specify `UTF8=1`, fix it by running: `echo "ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -uroot`
+Before running dashboard tests for the first time, run the below command to seed the required test data
 
-If you just want to run a single file of tests, from the dashboard directory you can run
+`RAILS_ENV=test bundle exec rake assets:precompile`
+
+To run all dashboard tests, which takes about 15 mintues
+
+`RAILS_ENV=test bundle exec rails test` 
+
+If you just want to run a single file of tests
 `bundle exec spring testunit ./path/to/your/test.rb` 
 (if you get a seemingly unrelated error `Unable to autoload constant..` try running `spring stop` and trying again)
 or
 `RAILS_ENV=test bundle exec spring testunit ./path/to/your/test.rb`
 
-To run a specific unit test, from the dashboard directory you can run
+To run a specific unit test
 `bundle exec spring testunit ./path/to/your/test.rb --name your_amazing_test_name`
 The test name is `test_` concatenated with the name of the test listed in the test file (convert spaces to underscores). Ex: If the test is called "testing some unit" you would use `--name test_testing_some_unit`.
 
 You can get a local coverage report with
 `COVERAGE=1 bundle exec ruby -Itest ./path/to/your/test.rb`
 
-If you get an error about missing db fields, try migrating your test database:
+#### Common issues and potential fixes
+
+1. If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, here are some things you can try in order from least to most drastic before running your tests again:
+
+    1. `RAILS_ENV=test bundle exec rake seed:secret_pictures seed:secret_words`
+    
+    2. Stop spring process (which can sometimes have stale data) and then rerun the tests, which will automatically start a new instance of spring.
+      `spring stop` 
+
+    3. recreate your local dashboard test db and reseed the data via:
+        * `UTF8=1 RAILS_ENV=test bundle exec rake db:reset db:test:prepare`
+        * if you forgot to specify `UTF8=1`, fix it by running: `echo "ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -uroot`
+
+2. If you get an error about missing db fields, try migrating your test database:
 `RAILS_ENV=test rake db:migrate`
 
 ### UI Tests and Eyes Tests

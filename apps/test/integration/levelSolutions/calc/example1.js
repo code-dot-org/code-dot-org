@@ -57,7 +57,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Calc.__testonly__.appState.message,
           commonMsg.emptyTopLevelBlock({topLevelBlockName: 'evaluate'})
@@ -72,7 +72,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Calc.__testonly__.appState.message,
           commonMsg.emptyFunctionalBlock()
@@ -93,7 +93,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Calc.__testonly__.appState.message,
           commonMsg.emptyBlockInVariable({name: 'age'})
@@ -125,7 +125,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Calc.__testonly__.appState.message,
           commonMsg.emptyBlockInFunction({name: 'f'})
@@ -181,7 +181,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Calc.__testonly__.appState.message,
           calcMsg.divideByZeroError()
@@ -199,7 +199,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Calc.__testonly__.appState.message,
           calcMsg.imaginaryNumberError()
@@ -214,7 +214,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EMPTY_FUNCTION_NAME
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Calc.__testonly__.appState.message,
           commonMsg.unnamedFunction()
@@ -251,7 +251,7 @@ module.exports = {
         result: false,
         testResult: TestResults.EMPTY_FUNCTION_NAME
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Calc.__testonly__.appState.message,
           commonMsg.unnamedFunction()

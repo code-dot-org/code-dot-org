@@ -12,7 +12,8 @@ class ProjectRemix extends React.Component {
   static propTypes = {
     isSignedIn: PropTypes.bool,
     lightStyle: PropTypes.bool,
-    refreshProjectName: PropTypes.func.isRequired
+    refreshProjectName: PropTypes.func.isRequired,
+    inRestrictedShareMode: PropTypes.bool
   };
 
   remixProject = () => {
@@ -42,11 +43,12 @@ class ProjectRemix extends React.Component {
   };
 
   render() {
+    const {lightStyle, inRestrictedShareMode} = this.props;
     let className = 'project_remix header_button no-mc';
-    if (this.props.lightStyle) {
+    if (lightStyle) {
       className += ' header_button_light';
     }
-    return (
+    return !inRestrictedShareMode ? (
       <button
         type="button"
         className={className}
@@ -55,14 +57,15 @@ class ProjectRemix extends React.Component {
       >
         {i18n.remix()}
       </button>
-    );
+    ) : null;
   }
 }
 
 export const UnconnectedProjectRemix = ProjectRemix;
 export default connect(
   state => ({
-    isSignedIn: state.pageConstants && state.pageConstants.isSignedIn
+    isSignedIn: state.pageConstants && state.pageConstants.isSignedIn,
+    inRestrictedShareMode: state.project && state.project.inRestrictedShareMode
   }),
   {refreshProjectName}
 )(ProjectRemix);

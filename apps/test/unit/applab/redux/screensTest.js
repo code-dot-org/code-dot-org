@@ -16,14 +16,14 @@ import screensReducer, {
 } from '@cdo/apps/applab/redux/screens';
 import * as importFuncs from '@cdo/apps/applab/import';
 
-describe('Applab Screens Reducer', function() {
+describe('Applab Screens Reducer', function () {
   var store;
 
   beforeEach(() => {
     store = createStore(screensReducer);
   });
 
-  it('should initialize to the following', function() {
+  it('should initialize to the following', function () {
     expect(store.getState().isImportingScreen).to.equal(false);
     expect(store.getState().currentScreenId).to.equal(null);
   });

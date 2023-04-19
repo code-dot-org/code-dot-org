@@ -13,3 +13,4 @@ markdown <<MARKDOWN
 
 **Be in the know by reading computer science news:** There are plenty of ways to keep up with the news in the computer science education community. While this feels like shameless self-promotion, Code.org's facebook page has neat updates on the computer science world.
 MARKDOWN
+allow_multiple_attempts true

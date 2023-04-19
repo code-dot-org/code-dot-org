@@ -6,3 +6,4 @@ answer 'While Loops', weight: 1, lesson_name: 'While Loops and Introduction to A
 answer 'Simple Arrays', weight: 1, lesson_name: 'While Loops and Introduction to Arrays'
 answer 'Processing Arrays', weight: 1, lesson_name: 'Processing Arrays and Functions with Return Values'
 answer 'Creating Functions that Return Values', weight: 1, lesson_name: 'Processing Arrays and Functions with Return Values'
+allow_multiple_attempts true
