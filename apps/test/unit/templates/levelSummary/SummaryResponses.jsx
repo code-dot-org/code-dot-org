@@ -3,7 +3,7 @@ import {mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
-import CheckForUnderstanding from '@cdo/apps/templates/levelSummary/CheckForUnderstanding';
+import SummaryResponses from '@cdo/apps/templates/levelSummary/SummaryResponses';
 import styles from '@cdo/apps/templates/levelSummary/check-for-understanding.module.scss';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import viewAs from '@cdo/apps/code-studio/viewAsRedux';
@@ -12,14 +12,9 @@ import progress from '@cdo/apps/code-studio/progressRedux';
 
 const JS_DATA = {
   level: {
-    type: 'FreeResponse',
     id: 0,
-    properties: {
-      long_instructions: 'test',
-    },
   },
-  last_attempt: 'teacher answer',
-  responses: [{user_id: 0, text: 'student answer'}],
+  responses: [{user_id: 0, text: 'student answer'}]
 };
 
 const INITIAL_STATE = {
@@ -56,25 +51,17 @@ const setUpWrapper = (state = {}, jsData = {}) => {
 
   const wrapper = mount(
     <Provider store={store}>
-      <CheckForUnderstanding scriptData={{...JS_DATA, ...jsData}} />
+      <SummaryResponses scriptData={{...JS_DATA, ...jsData}} />
     </Provider>
   );
 
   return wrapper;
 };
 
-describe('CheckForUnderstanding', () => {
+describe('SummaryResponses', () => {
   it('renders elements', () => {
     const wrapper = setUpWrapper();
 
-    // Back link, but no next link.
-    expect(wrapper.find(`.${styles.navLinks} a`).length).to.eq(1);
-    // Question markdown, but no teacher markdown.
-    expect(wrapper.find('SafeMarkdown').length).to.eq(1);
-    // No question title.
-    expect(wrapper.find('h1').length).to.eq(0);
-    // Free response question.
-    expect(wrapper.find('textarea').length).to.eq(1);
     // Student responses.
     expect(wrapper.find(`.${styles.studentsSubmittedRight}`).text()).to.eq(
       '1/1 students answered'
@@ -107,21 +94,6 @@ describe('CheckForUnderstanding', () => {
 
     expect(wrapper.find(`.${styles.studentsSubmittedRight}`).length).to.eq(0);
     expect(wrapper.find(`.${styles.studentsSubmittedLeft}`).length).to.eq(1);
-
-    expect(wrapper.find(`.${styles.navLinkRight}`).length).to.eq(0);
-    expect(wrapper.find(`.${styles.navLinkLeft}`).length).to.eq(1);
-  });
-
-  it('renders teacher markdown if defined', () => {
-    const wrapper = setUpWrapper(
-      {},
-      {teacher_markdown: 'test teacher markdown'}
-    );
-
-    expect(wrapper.find('SafeMarkdown').length).to.eq(2);
-    expect(wrapper.find('SafeMarkdown').at(1).text()).to.eq(
-      'test teacher markdown'
-    );
   });
 
   it('does not render response counter/text if no section selected', () => {

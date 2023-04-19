@@ -39,7 +39,26 @@
   }
 
 
-#check-for-understanding
+#summary-content
+  #summary-top-links
+
+  .container#level-question
+    - if level.is_a?(FreeResponse)
+      .free-response
+        - title = level.get_property(:title)
+        - if title.present? && !in_level_group
+          %h1= title
+        - long_instructions = level.get_property("long_instructions")
+        - if long_instructions
+          / Markdown will be rendered clientside by _free_response.js
+          .markdown-container{data: {markdown: long_instructions}}
+
+        - height = level.height || '80'
+        - placeholder = level.get_property(:placeholder) || I18n.t('free_response.placeholder')
+        %textarea.response{id: "level_#{level.id}", placeholder: placeholder, style: "height: #{height}px;", readonly: true}= last_attempt
+
+  #summary-responses
+  #summary-teacher-instructions
 
 - content_for(:head) do
   %script{src: webpack_asset_path('js/levels/_summary.js'), data: {summary: js_data.to_json}}
