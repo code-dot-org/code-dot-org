@@ -417,9 +417,12 @@ class ProjectsController < ApplicationController
   end
 
   private def uses_animation_bucket?(project_type)
-    has_standalone_app_method = defined? (@level.standalone_app_name)
-    is_spritelab = has_standalone_app_method == 'method'
-    return project_type == 'gamelab' || is_spritelab
+    available_projects = ['gamelab']
+    poetry_subtypes = Poetry.standalone_app_names.map {|item| item[1]}
+    spritelab_subtypes = GamelabJr.standalone_app_names.map {|item| item[1]}
+    available_projects.concat(poetry_subtypes)
+    available_projects.concat(spritelab_subtypes)
+    return available_projects.include?(project_type)
   end
 
   private def uses_file_bucket?(project_type)
