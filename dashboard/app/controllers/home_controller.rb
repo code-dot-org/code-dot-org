@@ -166,7 +166,7 @@ class HomeController < ApplicationController
       end
 
       unless current_user.donor_teacher_banner_dismissed
-        afe_eligible = current_user.school_info.school.afe_high_needs?
+        afe_eligible = current_user&.school_info&.school&.afe_high_needs?
       end
 
       afe_eligible ||= params[:forceDonorTeacherBanner]
