@@ -146,6 +146,21 @@ class SchoolDistrict < ApplicationRecord
           }
         end
       end
+
+      CDO.log.info "Seeding 2021-2022 school district data"
+      import_options_2122 = {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}
+      AWS::S3.seed_from_file('cdo-nces', "2021-2022/ccd/district.csv") do |filename|
+        SchoolDistrict.merge_from_csv(filename, import_options_2122, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
+          {
+            id:                           row['Agency ID - NCES Assigned [District] Latest available year'].tr('"=', '').to_i,
+            name:                         row['Agency Name'].upcase,
+            city:                         row['Location City [District] 2021-22'].to_s.upcase.presence,
+            state:                        row['Location State Abbr [District] 2021-22'].strip.to_s.upcase.presence,
+            zip:                          row['Location ZIP [District] 2021-22'].tr('"=', ''),
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [District] 2021-22']) ? '2021-2022' : nil
+          }
+        end
+      end
     end
   end
 
@@ -184,9 +199,10 @@ class SchoolDistrict < ApplicationRecord
     new_districts = []
     updated_districts = 0
     unchanged_districts = 0
-
+    CDO.log.info "summary_message: #{is_dry_run ? 'Dry run' : 'Importing'} school districts from #{filename}"
     ActiveRecord::Base.transaction do
       districts = CSV.read(filename, **options).each do |row|
+        CDO.log.info "Processing row: #{row.inspect}"
         parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
         loaded = find_by_id(parsed[:id])
         if loaded.nil?
