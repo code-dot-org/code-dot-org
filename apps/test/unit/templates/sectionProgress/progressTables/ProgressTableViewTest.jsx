@@ -23,7 +23,7 @@ import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
 import * as Sticky from 'reactabular-sticky';
 import locales from '@cdo/apps/redux/localesRedux';
-import isRtl from '@cdo/apps/redux/rtlRedux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {
   fakeLessonWithLevels,
   fakeStudents,
