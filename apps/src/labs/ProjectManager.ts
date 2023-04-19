@@ -41,8 +41,11 @@ export default class ProjectManager {
 
   async load(): Promise<Response> {
     const sourceResponse = await this.sourcesStore.load(this.channelId);
-    if (!sourceResponse.ok) {
-      return sourceResponse;
+    // If sourceResponse is not ok, we still want to load the channel. Source can
+    // return not found if the project is new.
+    let source = {};
+    if (sourceResponse.ok) {
+      source = await sourceResponse.json();
     }
 
     const channelResponse = await this.channelsStore.load(this.channelId);
@@ -50,11 +53,9 @@ export default class ProjectManager {
       return channelResponse;
     }
 
-    const source = await sourceResponse.json();
     const channel = await channelResponse.json();
     // ensure the project type is set on the channel
     channel.projectType = this.appOptionsStore.getProjectType();
-    console.log(channel);
     const project = {source, channel};
     const blob = new Blob([JSON.stringify(project, null, 2)], {
       type: 'application/json'

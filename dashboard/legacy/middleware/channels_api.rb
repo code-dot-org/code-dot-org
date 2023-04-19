@@ -157,8 +157,6 @@ class ChannelsApi < Sinatra::Base
 
     begin
       value = JSON.parse(request.body.read)
-      puts "original value:"
-      puts value
     rescue JSON::ParserError
       bad_request
     end
@@ -188,8 +186,6 @@ class ChannelsApi < Sinatra::Base
 
     dont_cache
     content_type :json
-    puts "updated value:"
-    puts value
     value.to_json
   end
   patch %r{/v3/channels/([^/]+)$} do |_id|

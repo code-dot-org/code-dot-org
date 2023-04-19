@@ -29,7 +29,6 @@ export class S3ChannelsStore implements ChannelsStore {
 
   save(channel: Channel) {
     channel = {...this.defaultChannel, ...channel};
-    console.log('Saving channel', channel);
     return channelsApi.update(channel);
   }
 }

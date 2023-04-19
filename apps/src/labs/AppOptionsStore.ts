@@ -1,6 +1,4 @@
 // Load and parse app options data for a given level.
-// This should only contain data this is specific to a level, not a user.
-
 import {AppOptions, ProjectType} from './types';
 
 export class AppOptionsStore {

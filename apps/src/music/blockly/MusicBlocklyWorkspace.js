@@ -30,7 +30,6 @@ import {Renderers} from '@cdo/apps/blockly/constants';
  */
 export default class MusicBlocklyWorkspace {
   constructor(appOptions) {
-    console.log('appOptions', appOptions);
     this.codeHooks = {};
     this.compiledEvents = null;
     this.lastExecutedEvents = null;
