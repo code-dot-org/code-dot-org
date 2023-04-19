@@ -95,7 +95,7 @@ function showHomepage() {
             showReturnToReopenedTeacherApplication={
               homepageData.showReturnToReopenedTeacherApplication
             }
-            donorBannerName={homepageData.donorBannerName}
+            afeEligible={homepageData.afeEligible}
             teacherName={homepageData.teacherName}
             teacherId={homepageData.teacherId}
             teacherEmail={homepageData.teacherEmail}
