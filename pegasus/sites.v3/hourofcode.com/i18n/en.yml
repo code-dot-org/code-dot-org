@@ -118,6 +118,13 @@
   pl_superhero_title: "Help students become superheroes!"
   pl_superhero_desc: "Join our highly supportive Professional Learning Program for middle and high school educators."
 
+  ai_hero_title: "AI education for the world"
+  ai_hero_desc: "Code.org is forming a coalition for AI education and planning big updates to integrate AI into our platform!"
+  ai_skinny_desc: "See how we're planning to bring AI education to classrooms everywhere."
+  ai_announcement_title_student: "Explore Artificial Intelligence (AI)"
+  ai_announcement_desc_student: "AI is changing everything. Learn more about this technology and how it works."
+  ai_announcement_desc_teacher: "See how we're planning to bring AI education to students around the world."
+
   blockchain_hero_heading: 'How Blockchain Works'
   blockchain_hero_desc: 'Dive into the world of blockchain with "How Blockchain Works," our new video series and accompanying lessons!'
   blockchain_intro_heading: 'See how blockchain works'

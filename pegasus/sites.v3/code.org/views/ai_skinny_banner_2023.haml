@@ -1,0 +1,12 @@
+= inline_css '/generated/ai-skinny-banner-2023.css'
+
+.ai-skinny-banner
+  %a{href: "/ai"}
+    .wrapper
+      %img{src: "/images/banners/ai-bot-crop.svg", alt: ""}
+      .text-wrapper
+        %h1=hoc_s(:ai_hero_title)
+        %p=hoc_s(:ai_skinny_desc)
+      .button-wrapper
+        %button=hoc_s(:call_to_action_learn_more)
+.clear
