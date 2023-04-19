@@ -1,8 +1,15 @@
 # Testing
 
-We use automated tests to maintain quality in our codebase. Here's an overview of the kinds of tests we use, and how to run them.
+If you're new to code.org, try getting these tests working first:
+1. [Apps Tests](#apps-tests)
+2. [Dashboard Tests](#dashboard-tests)
+
+Before running tests, you should follow the [setup guide](./SETUP.md).
 
 ## Kinds of tests
+
+We use automated tests to maintain quality in our codebase. Here's an overview of the kinds of tests we use, and how to run them:
+
 * Apps directory
   * Unit Tests - Used to test client-side functionality of some of our levels, applab, and applab controls
   * Integration Tests - Used to test level solutions and some block behaviors
@@ -68,9 +75,11 @@ Before running dashboard tests for the first time, run these commands to seed th
 2. `RAILS_ENV=test UTF8=1 bundle exec rake db:reset db:test:prepare` : seed the DB with test data
 3. `cd ../pegasus && RAILS_ENV=test rake test:reset_dependencies && cd ../dashboard` : the pegasus test DB must be seeded as well.
 
-To run all dashboard tests, which takes about 15 mintues
+To run all dashboard tests, which takes about 15 mintues:
 
 `RAILS_ENV=test bundle exec rails test`
+
+If you have trouble running the tests, see [troubleshooting dashboard tests](#troubleshooting-dashboard-tests) below.
 
 #### Running a subset of Dashboard tests
 
@@ -85,21 +94,7 @@ The test name is `test_` concatenated with the name of the test listed in the te
 You can get a local coverage report with
 `COVERAGE=1 bundle exec ruby -Itest ./path/to/your/test.rb`
 
-#### Common issues and potential fixes
 
-1. If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, here are some things you can try in order from least to most drastic before running your tests again:
-
-    1. `RAILS_ENV=test bundle exec rake seed:secret_pictures seed:secret_words`
-    
-    2. Stop spring process (which can sometimes have stale data) and then rerun the tests, which will automatically start a new instance of spring.
-      `spring stop` 
-
-    3. recreate your local dashboard test db and reseed the data via:
-        * `UTF8=1 RAILS_ENV=test bundle exec rake db:reset db:test:prepare`
-        * if you forgot to specify `UTF8=1`, fix it by running: `echo "ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -uroot`
-
-2. If you get an error about missing db fields, try migrating your test database:
-`RAILS_ENV=test rake db:migrate`
 
 ### UI Tests and Eyes Tests
 We have a set of integration tests, divided into "UI tests" (Selenium+Cucumber) and "Eyes tests" (Selenium+Cucumber+Applitools).  These tests live in [dashboard/test/ui](dashboard/test/ui) - for information on setting up and running these tests, see [the README in that directory](dashboard/test/ui) and our [guide to adding an eyes test](docs/testing-with-applitools-eyes.md).
@@ -140,6 +135,23 @@ If you've made a change that caused an eyes failiure, log into Applitools and ch
 * [Testing IE9](docs/testing-ie9.md)
 
 # Troubleshooting
+
+## Troubleshooting dashboard tests
+
+1. If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, here are some things you can try in order from least to most drastic before running your tests again:
+
+    1. `RAILS_ENV=test bundle exec rake seed:secret_pictures seed:secret_words`
+    
+    2. Stop spring process (which can sometimes have stale data) and then rerun the tests, which will automatically start a new instance of spring.
+      `spring stop` 
+
+    3. recreate your local dashboard test db and reseed the data via:
+        * `UTF8=1 RAILS_ENV=test bundle exec rake db:reset db:test:prepare`
+        * if you forgot to specify `UTF8=1`, fix it by running: `echo "ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -uroot`
+
+2. If you get an error about missing db fields, try migrating your test database:
+`RAILS_ENV=test rake db:migrate`
+
 ## Linux
 ### SyntheticEvent.augmentClass is not a function
 ```
