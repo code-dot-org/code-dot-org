@@ -169,7 +169,7 @@ class HomeController < ApplicationController
         afe_eligible = current_user&.school_info&.school&.afe_high_needs?
       end
 
-      afe_eligible ||= params[:forceDonorTeacherBanner]
+      afe_eligible ||= params[:forceAFEBanner]
       show_census_banner = !!current_user.show_census_teacher_banner?
 
       # The following cookies are used by marketing to create personalized experiences for teachers, such as displaying
