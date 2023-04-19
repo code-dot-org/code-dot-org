@@ -10,9 +10,32 @@ Since we're using scss modules and classnames inside, to overwrite the styles of
 overwriting styles has highest styles priority. Here's some examples:
 
 ```javascript
- // Assuming we want to make an h1 component with a different color than Typography's default.
+ // Assuming we want to make h1 element that will look like h1 with a different color than Typography's default.
     <div>
         <Heading1>
+            Some Heading
+        </Heading1>
+    </div>
+
+// Just add any classname style in your scss module to the Heading1.
+//     <style>
+//     .heading1Style {
+//       color: #f00;
+//     }
+//     </style>
+
+    <div>
+        <Heading1 className={scssModule.heading1Style}>
+            Some Heading
+        </Heading1>
+    </div>
+
+```
+
+```javascript
+ // Assuming we want to make h1 element that will look like h5 with a different color than Typography's default.
+    <div>
+        <Heading1 visualApproach="heading-sm">
             Some Heading
         </Heading1>
     </div>
@@ -27,7 +50,7 @@ overwriting styles has highest styles priority. Here's some examples:
 //     </style>
 
             <div className={scssModule.parentDiv}>
-                <Heading1>
+                <Heading1 visualApproach="heading-lg">
                     Some Heading
                 </Heading1>
             </div>
@@ -41,14 +64,14 @@ overwriting styles has highest styles priority. Here's some examples:
 //     </style>
 
             <div>
-                <Heading1 className={scssModule.customHeadingStyle}>
+                <Heading1 visualApproach="heading-lg" className={scssModule.customHeadingStyle}>
                     Some Heading
                 </Heading1>
             </div>
 
 // 2. Use inline styles:
             <div>
-                <Heading1 style={{color: '#f00'}}>
+                <Heading1 visualApproach="heading-lg" style={{color: '#f00'}}>
                     Some Heading
                 </Heading1>
             </div>
