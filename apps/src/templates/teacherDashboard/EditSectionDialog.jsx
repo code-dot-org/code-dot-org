@@ -16,17 +16,12 @@ import experiments from '@cdo/apps/util/experiments';
 function editSectionDialog(Form) {
   class EditSectionDialog extends Component {
     static propTypes = {
-      // From Redux
-      isOpen: PropTypes.bool.isRequired,
-      loginType: PropTypes.string.isRequired,
-      participantType: PropTypes.string.isRequired
+      isOpen: PropTypes.bool.isRequired // From Redux
     };
 
     redirectToNewSectionEditPage() {
       if (experiments.isEnabled('sectionSetupRefresh')) {
-        navigateToHref(
-          `/sections/edit?participantType=${this.props.participantType}&loginType=${this.props.loginType}`
-        );
+        navigateToHref(`/sections/edit`);
       }
     }
 
@@ -54,9 +49,7 @@ function editSectionDialog(Form) {
 }
 
 export default connect(state => ({
-  isOpen: isEditingSection(state.teacherSections),
-  loginType: state.teacherSections.loginType,
-  participantType: state.teacherSections.participantType
+  isOpen: isEditingSection(state.teacherSections)
 }))(editSectionDialog(EditSectionForm));
 
 export const ReloadAfterEditSectionDialog = connect(state => ({
