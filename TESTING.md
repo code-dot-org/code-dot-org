@@ -28,26 +28,6 @@ We use automated tests to maintain quality in our codebase. Here's an overview o
 
 ## Running tests
 
-### Using CircleCI
-
-By default, commits on branches will be tested using CircleCI, which performs a full install, build, and runs tests for changed sub-projects.
-
-Tests are run for the last commit in any given push. E.g., if you make 5 commits, push them all, only the last commit will get tested.
-
-Controlling tests:
-
-* CI can be skipped for a given commit by including the text `[ci skip]` in the commit message
-* By default, tests are only run for sub-projects which have been changed in your given branch. You can force-run all tests for a given commit by including the text `[test all]` in your commit message.
-* UI tests are run automatically. They can be disabled for a given run by including `[skip ui]` in your commit message
-* There are several other options for which tests are run on circle, which are documented here: https://github.com/code-dot-org/code-dot-org/blob/003a3e89e7eca48873827b53de8c69ab8808ec0d/lib/rake/circle.rake#L16-L51
-* Tests can be re-run with the "Rebuild" button on CircleCI.
-* Tests can be debugged by running "Rebuild with SSH", which enables SSH for the duration of the test and keeps it open for 30 minutes after tests are complete.
-
-If you’d like to make an empty commit to force run tests with a flag, you can use git’s --allow-empty command: `git commit --allow-empty -m "Run all tests [test all]"`
-
-Contributor pull requests do not build by default, but can be triggered to build by a GitHub organization team member. Note that the given PR should be scanned to ensure there is no malicious code and that no secrets would be displayed in test output.
-
-If you have a personal email address additionally added to GitHub, you can re-set code-dot-org build notifications to go to your @code.org email address at: https://circleci.com/account/notifications
 
 ### Top-level Test Helpers
 
