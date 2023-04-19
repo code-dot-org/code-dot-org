@@ -41,15 +41,6 @@ Worth noting:
 * `bundle exec rake test:changed:apps` - runs apps tests if sub-project folder has changed
 * `bundle exec rake test:dashboard` - runs dashboard tests, but see [Dashboard Tests](#dashboard-tests) below for first time setup
   
-### Shared and Lib Tests
-Tests in the `shared/` and `lib/` directories need to be run slightly differently since they are outside of our Rails environment.
-
-To run a test file in either directory, `cd` into it before running the tests.
-
-```bash
-cd shared
-bundle exec ruby -Itest ./test/path/to/your/test.rb
-``` 
 
 ### Apps Tests
 `npm test` will lint all of the apps code and run unit and integration tests. Run this from the `apps` directory. You can expect a full test run to take about 4-8 minutes.
@@ -115,6 +106,16 @@ We have a set of integration tests, divided into "UI tests" (Selenium+Cucumber) 
 Or you can just use this shortcut (after you've installed chromedriver):
 
 `bundle exec rake test:ui feature=dashboard/test/ui/features/sometest.feature`
+
+### Shared and Lib Tests
+Tests in the `shared/` and `lib/` directories need to be run slightly differently since they are outside of our Rails environment.
+
+To run a test file in either directory, `cd` into it before running the tests.
+
+```bash
+cd shared
+bundle exec ruby -Itest ./test/path/to/your/test.rb
+``` 
 
 ### Pegasus Tests
 `cd pegasus && rake test` will run all of our pegasus Ruby tests. This usually takes ~20 seconds to run.
