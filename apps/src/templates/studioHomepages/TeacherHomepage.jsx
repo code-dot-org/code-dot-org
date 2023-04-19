@@ -33,7 +33,7 @@ export const UnconnectedTeacherHomepage = ({
   censusQuestion,
   plCourses,
   courses,
-  donorBannerName,
+  afeEligible,
   isEnglish,
   joinedStudentSections,
   joinedPlSections,
@@ -143,7 +143,7 @@ export const UnconnectedTeacherHomepage = ({
   // Verify background image works for both LTR and RTL languages.
   const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
 
-  const showDonorBanner = isEnglish && donorBannerName;
+  const showAFEBanner = isEnglish && afeEligible;
 
   // Send one analytics event when a teacher logs in. Use session storage to determine
   // whether they've just logged in.
@@ -241,7 +241,7 @@ export const UnconnectedTeacherHomepage = ({
             <br />
           </div>
         )}
-        {showDonorBanner && (
+        {showAFEBanner && (
           <div>
             <DonorTeacherBanner showPegasusLink={true} source="teacher_home" />
             <div style={styles.clear} />
@@ -292,7 +292,7 @@ UnconnectedTeacherHomepage.propTypes = {
   censusQuestion: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']),
   plCourses: shapes.courses,
   courses: shapes.courses,
-  donorBannerName: PropTypes.string,
+  afeEligible: PropTypes.bool,
   hocLaunch: PropTypes.string,
   isEnglish: PropTypes.bool.isRequired,
   joinedStudentSections: shapes.sections,

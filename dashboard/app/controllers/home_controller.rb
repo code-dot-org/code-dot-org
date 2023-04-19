@@ -167,9 +167,11 @@ class HomeController < ApplicationController
 
       unless current_user.donor_teacher_banner_dismissed
         donor_banner_name = current_user.school_donor_name
+        afe_eligible = current_user.school_info.school.afe_high_needs?
       end
 
       donor_banner_name ||= params[:forceDonorTeacherBanner]
+      afe_eligible ||= params[:forceDonorTeacherBanner]
       show_census_banner = !!(!donor_banner_name && current_user.show_census_teacher_banner?)
 
       # The following cookies are used by marketing to create personalized experiences for teachers, such as displaying
@@ -188,7 +190,7 @@ class HomeController < ApplicationController
       @homepage_data[:showNpsSurvey] = show_nps_survey?
       @homepage_data[:showFinishTeacherApplication] = has_incomplete_application?
       @homepage_data[:showReturnToReopenedTeacherApplication] = has_reopened_application?
-      @homepage_data[:donorBannerName] = donor_banner_name
+      @homepage_data[:afeEligible] = afe_eligible
       @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
       @homepage_data[:showIncubatorBanner] = show_incubator_banner?
 
