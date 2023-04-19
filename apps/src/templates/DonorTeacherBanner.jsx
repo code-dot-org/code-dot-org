@@ -79,7 +79,7 @@ export default class DonorTeacherBanner extends Component {
           {this.props.showPegasusLink && (
             <span>
               <a href={pegasus('/amazon-future-engineer')}>
-                Amazon Future Engineer Program? Learn more
+                Amazon Future Engineer Program?
               </a>
             </span>
           )}
@@ -121,7 +121,7 @@ export default class DonorTeacherBanner extends Component {
   renderDonorForm() {
     return (
       <TeacherInfoBanner
-        header="Free stuff from Amazon for your classroom"
+        header="Free resources from Amazon for your classroom"
         primaryButton={{
           onClick: this.handleSubmit,
           text: 'Submit',
