@@ -288,6 +288,47 @@ ul {
     }
   }
 
+  // Lists of links with icons
+  &.link-list {
+    margin: 2em 0 1em;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+
+    li {
+      text-indent: 0 !important;
+      margin: 1em 3em 1em 0;
+      padding: 0;
+
+      &::before {
+        content: none;
+      }
+
+      i {
+        font-size: 1.25em;
+        margin: 0 4px 0 0;
+        vertical-align: text-bottom;
+
+        &:before {
+          color: $brand_secondary_default;
+          transition: color ease-in-out .2s;
+        }
+      }
+
+      a {
+        @include heading-sm;
+        color: $brand_secondary_default;
+      }
+
+      &:hover {
+
+        i:before {
+          color: $brand_secondary_dark;
+        }
+      }
+    }
+  }
+
   li {
     line-height: 1.4;
     margin: 0.5em 0;
@@ -613,7 +654,33 @@ form {
       }
     }
 
+    .with-image {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media screen and (max-width: $width-sm) {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      img {
+        width: 150px;
+        height: 150px;
+        margin-right: 3em;
+
+        @media screen and (max-width: $width-md) {
+          display: block;
+        }
+
+        @media screen and (max-width: $width-sm) {
+          margin-right: 0;
+        }
+      }
+    }
+
     p {
+      font-family: $barlowSemiCondensed-medium, sans-serif;
       font-size: 1.25em;
 
       &.quote-text {

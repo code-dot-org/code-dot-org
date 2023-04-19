@@ -1,4 +1,4 @@
-import {BlocklyVersion} from '@cdo/apps/constants';
+import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 import {CLAMPED_NUMBER_REGEX} from './constants';
 
 const INFINITE_LOOP_TRAP =
