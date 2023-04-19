@@ -24,7 +24,7 @@
       "embed_app_with_code_height": 310
     },
     {
-      "name": "",
+      "name": "Simple Button Press",
       "description": "",
       "code": "```\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  colorLeds[0].blink();\r\n});\r\n\n```",
       "app": "",

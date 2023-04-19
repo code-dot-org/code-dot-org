@@ -61,7 +61,7 @@ const ArrowIds = {
  * @constructor
  * @implements LogTarget
  */
-var Dance = function() {
+var Dance = function () {
   this.skin = null;
   this.level = null;
   this.btnState = {};
@@ -86,7 +86,7 @@ module.exports = Dance;
 /**
  * Inject the studioApp singleton.
  */
-Dance.prototype.injectStudioApp = function(studioApp) {
+Dance.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
   this.studioApp_.reset = this.reset.bind(this);
   this.studioApp_.runButtonClick = this.runButtonClick.bind(this);
@@ -99,7 +99,7 @@ Dance.prototype.injectStudioApp = function(studioApp) {
  * @param {!AppOptionsConfig} config
  * @param {!Dancelab} config.level
  */
-Dance.prototype.init = function(config) {
+Dance.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error('Dance requires a StudioApp');
   }
@@ -117,7 +117,7 @@ Dance.prototype.init = function(config) {
   this.level.softButtons = this.level.softButtons || {};
   this.initialThumbnailCapture = true;
 
-  config.afterClearPuzzle = function() {
+  config.afterClearPuzzle = function () {
     this.studioApp_.resetButtonClick();
   }.bind(this);
 
@@ -170,7 +170,7 @@ Dance.prototype.init = function(config) {
 /**
  * Fire-and-forget asynchronous waits to update timing metrics.
  */
-Dance.prototype.awaitTimingMetrics = function() {
+Dance.prototype.awaitTimingMetrics = function () {
   $(document).one('appInitialized', () => {
     this.performanceData_.timeToInteractive = performance.now();
   });
@@ -183,7 +183,7 @@ Dance.prototype.awaitTimingMetrics = function() {
     });
 };
 
-Dance.prototype.initSongs = async function(config) {
+Dance.prototype.initSongs = async function (config) {
   // Check for a user-specified manifest file.
   const manifest = queryString.parse(window.location.search).manifest;
   const songManifest = await getSongManifest(
@@ -224,7 +224,7 @@ Dance.prototype.initSongs = async function(config) {
   }
 };
 
-Dance.prototype.setSongCallback = function(songId) {
+Dance.prototype.setSongCallback = function (songId) {
   const lastSongId = getStore().getState().songs.selectedSong;
   const songData = getStore().getState().songs.songData;
 
@@ -267,7 +267,7 @@ Dance.prototype.setSongCallback = function(songId) {
   }
 };
 
-Dance.prototype.loadAudio_ = function() {
+Dance.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.winSound, 'win');
   this.studioApp_.loadAudio(this.skin.startSound, 'start');
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
@@ -293,7 +293,7 @@ function keyCodeFromArrow(idBtn) {
   }
 }
 
-Dance.prototype.onArrowButtonDown = function(buttonId, e) {
+Dance.prototype.onArrowButtonDown = function (buttonId, e) {
   // Store the most recent event type per-button
   this.btnState[buttonId] = ButtonState.DOWN;
   e.preventDefault(); // Stop normal events so we see mouseup later.
@@ -301,14 +301,14 @@ Dance.prototype.onArrowButtonDown = function(buttonId, e) {
   this.nativeAPI.onKeyDown(keyCodeFromArrow(buttonId));
 };
 
-Dance.prototype.onArrowButtonUp = function(buttonId, e) {
+Dance.prototype.onArrowButtonUp = function (buttonId, e) {
   // Store the most recent event type per-button
   this.btnState[buttonId] = ButtonState.UP;
 
   this.nativeAPI.onKeyUp(keyCodeFromArrow(buttonId));
 };
 
-Dance.prototype.onMouseUp = function(e) {
+Dance.prototype.onMouseUp = function (e) {
   // Reset all arrow buttons on "global mouse up" - this handles the case where
   // the mouse moved off the arrow button and was released somewhere else
 
@@ -326,7 +326,7 @@ Dance.prototype.onMouseUp = function(e) {
 /**
  * Code called after the blockly div + blockly core is injected into the document
  */
-Dance.prototype.afterInject_ = function() {
+Dance.prototype.afterInject_ = function () {
   // Connect up arrow button event handlers
   for (const btn in ArrowIds) {
     dom.addMouseUpTouchEvent(
@@ -421,7 +421,7 @@ Dance.prototype.afterInject_ = function() {
   }
 };
 
-Dance.prototype.playSong = function(url, callback, onEnded) {
+Dance.prototype.playSong = function (url, callback, onEnded) {
   audioCommands.playSound({
     url: url,
     callback: callback,
@@ -435,7 +435,7 @@ Dance.prototype.playSong = function(url, callback, onEnded) {
 /**
  * Reset Dance to its initial state.
  */
-Dance.prototype.reset = function() {
+Dance.prototype.reset = function () {
   var clickToRunImage = document.getElementById('danceClickToRun');
   if (clickToRunImage) {
     clickToRunImage.style.display = 'block';
@@ -456,7 +456,7 @@ Dance.prototype.reset = function() {
   }
 };
 
-Dance.prototype.onPuzzleComplete = function(result, message) {
+Dance.prototype.onPuzzleComplete = function (result, message) {
   // Stop everything on screen.
   this.reset();
 
@@ -475,9 +475,10 @@ Dance.prototype.onPuzzleComplete = function(result, message) {
   // If we know they succeeded, mark `levelComplete` true.
   const levelComplete = result;
 
-  // We're using blockly, report the program as xml.
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  let program = encodeURIComponent(Blockly.Xml.domToText(xml));
+  // We're using blockly, report the program as JSON.
+  let program = encodeURIComponent(
+    Blockly.cdoUtils.getCode(Blockly.mainBlockSpace)
+  );
 
   if (this.testResults >= TestResults.FREE_PLAY) {
     this.studioApp_.playAudio('win');
@@ -503,7 +504,7 @@ Dance.prototype.onPuzzleComplete = function(result, message) {
  * Function to be called when the service report call is complete
  * @param {MilestoneResponse} response - JSON response (if available)
  */
-Dance.prototype.onReportComplete = function(response) {
+Dance.prototype.onReportComplete = function (response) {
   this.response = response;
   this.studioApp_.onReportComplete(response);
   this.displayFeedback_();
@@ -512,7 +513,7 @@ Dance.prototype.onReportComplete = function(response) {
 /**
  * Click the run button.  Start the program.
  */
-Dance.prototype.runButtonClick = async function() {
+Dance.prototype.runButtonClick = async function () {
   var clickToRunImage = document.getElementById('danceClickToRun');
   if (clickToRunImage) {
     clickToRunImage.style.display = 'none';
@@ -564,7 +565,7 @@ Dance.prototype.runButtonClick = async function() {
   }
 };
 
-Dance.prototype.execute = async function() {
+Dance.prototype.execute = async function () {
   this.testResults = TestResults.NO_TESTS_RUN;
   this.response = null;
 
@@ -609,7 +610,7 @@ Dance.prototype.execute = async function() {
   });
 };
 
-Dance.prototype.initInterpreter = function() {
+Dance.prototype.initInterpreter = function () {
   const nativeAPI = this.nativeAPI;
   const api = new DanceAPI(nativeAPI);
 
@@ -632,7 +633,7 @@ Dance.prototype.initInterpreter = function() {
   return this.computeCharactersReferenced(studentCode);
 };
 
-Dance.prototype.computeCharactersReferenced = function(studentCode) {
+Dance.prototype.computeCharactersReferenced = function (studentCode) {
   // Process studentCode to determine which characters are referenced and create
   // charactersReferencedSet with the results:
   const charactersReferencedSet = new Set();
@@ -648,18 +649,18 @@ Dance.prototype.computeCharactersReferenced = function(studentCode) {
   return Array.from(charactersReferencedSet);
 };
 
-Dance.prototype.shouldShowSharing = function() {
+Dance.prototype.shouldShowSharing = function () {
   return !!this.level.freePlay;
 };
 
-Dance.prototype.updateSongMetadata = function(id) {
+Dance.prototype.updateSongMetadata = function (id) {
   this.songMetadataPromise = loadSongMetadata(id);
 };
 
 /**
  * This is called while DanceParty is in a draw() call.
  */
-Dance.prototype.onHandleEvents = function(currentFrameEvents) {
+Dance.prototype.onHandleEvents = function (currentFrameEvents) {
   this.hooks.find(v => v.name === 'runUserEvents').func(currentFrameEvents);
   this.captureThumbnailImage();
 };
@@ -668,7 +669,7 @@ Dance.prototype.onHandleEvents = function(currentFrameEvents) {
  * App specific displayFeedback function that calls into
  * this.studioApp_.displayFeedback when appropriate
  */
-Dance.prototype.displayFeedback_ = function() {
+Dance.prototype.displayFeedback_ = function () {
   const isSignedIn =
     getStore().getState().currentUser.signInState === SignInState.SignedIn;
 
@@ -709,7 +710,7 @@ Dance.prototype.displayFeedback_ = function() {
   this.studioApp_.displayFeedback(feedbackOptions);
 };
 
-Dance.prototype.getAppReducers = function() {
+Dance.prototype.getAppReducers = function () {
   return reducers;
 };
 
@@ -718,7 +719,7 @@ Dance.prototype.getAppReducers = function() {
  * will be saved to the server. Every thumbnail captured after the initial capture will be
  * stored in memory until the project is saved.
  */
-Dance.prototype.captureThumbnailImage = function() {
+Dance.prototype.captureThumbnailImage = function () {
   const canvas = document.getElementById('defaultCanvas0');
   if (this.initialThumbnailCapture) {
     this.initialThumbnailCapture = false;

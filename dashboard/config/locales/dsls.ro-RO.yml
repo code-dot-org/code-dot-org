@@ -12203,22 +12203,15 @@ ro-RO:
         answers:
         - text: Scrat va ajunge la ghindă. Nu există erori în cod.
           correct: true
-          feedback: Greșit. Mai întâi, Scrat se întoarce în direcția greșită, apoi
-            Scrat nu se deplasează înainte de suficiente ori pentru a ajunge la ghindă.
         - text: Scrat nu va ajunge la ghindă pentru că se întoarce în direcția greșită.
           correct: true
-          feedback: Corect! Mai întâi, Scrat se întoarce în direcția greșită, apoi
-            Scrat nu se deplasează înainte de suficiente ori pentru a ajunge la ghindă.
         - text: Scrat nu va ajunge la ghindă pentru că nu sunt suficiente blocuri
             `move forward`.
           correct: true
-          feedback: Corect! Mai întâi, Scrat se întoarce în direcția greșită, apoi
-            Scrat nu se deplasează înainte de suficiente ori pentru a ajunge la ghindă.
         - text: Scrat nu se va deplasa de pe primul bloc.
           correct: true
-          feedback: Există două erori în acest cod. Mai întâi, Scrat se întoarce în
-            direcția greșită, apoi Scrat nu se deplasează înainte de suficiente ori
-            pentru a ajunge la ghindă.
+          feedback: Scrat nu va ajunge la ghindă pentru că se întoarce în direcția
+            greșită.
         questions:
         - text: Căutați erorile din acest cod. Va ajunge Scrat la ghindă sau există
             o problemă?

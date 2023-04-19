@@ -186,7 +186,7 @@ class SchoolDistrict < ApplicationRecord
     unchanged_districts = 0
 
     ActiveRecord::Base.transaction do
-      districts = CSV.read(filename, options).each do |row|
+      districts = CSV.read(filename, **options).each do |row|
         parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
         loaded = find_by_id(parsed[:id])
         if loaded.nil?

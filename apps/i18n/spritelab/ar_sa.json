@@ -79,7 +79,6 @@
   "didntMoveRight": "لم يتحرك رسومك المتحرك لليمين.",
   "didntMoveUp": "لم يتحرك رسومك المتحرك للأعلى.",
   "didntPressKey": "تأكد من الضغط على مفتاح السهم بعد الضغط على *\"تشغيل\"*. يمكنك النقر فوق الأزرار البرتقالية أسفل منطقة التشغيل أو الضغط على المفاتيح الموجودة على لوحة المفاتيح.",
-  "errorLoadingAnimation": "يبدو أننا نواجه مشكلة في تحميل الرسوم المتحركة \"{animationName}\". تأكد من أن لديك اتصال جيد بالإنترنت وحاول إعادة تحميل الصفحة. إذا استمرت هذه المشكلة، فمن الممكن أن تكون هذه الرسوم المتحركة معطلة. في هذه الحالة، قد تحتاج إلى المتابعة عن طريق إزالة الرسم المتحرك.",
   "eventNotDetected": "لم يتم اكتشاف الحدث. تأكد من وجود كتل الأحداث الصحيحة في مساحة العمل الخاصة بك وأنك اخترت *الزي الصحيح* في كل مجموعة من التعليمات البرمجية. \n <xml><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">«الافتراضي»</title></block></xml>",
   "eventsOneChange": "تغير الكائن الخاص بك، ولكن مرة واحدة فقط. اختبر برنامجك بالضغط على المفتاح عدة مرات، وتأكد من استخدام الكتلة الصحيحة.\n <xml><block type=\"gamelab_changePropBy\"><title name=\"PROPERTY\">\"تغيير الحجم\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"creature_10_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value></block></xml>",
   "eventsWrongBehaviors": "يجب أن يمتلك كائنك 3 سلوكيات بالضبط. حاول نقل كتلة \"إيقاف كل شيء\" إلى مكان مختلف في الكود.",

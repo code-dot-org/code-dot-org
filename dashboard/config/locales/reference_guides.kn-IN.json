@@ -14,6 +14,9 @@
         "csd-2022/css-overview": {
           "display_name": "ಮುನ್ನೋಟ"
         },
+        "csd-2022/for-loops": {
+          "display_name": "ಲೂಪ್ಸಗಾಗಿ"
+        },
         "csd-2022/game-lab-overview": {
           "display_name": "ಮುನ್ನೋಟ"
         },
@@ -49,6 +52,9 @@
         },
         "csd-2022/variables": {
           "display_name": "ವೇರಿಯಬಲ್‌ಗಳು"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "ವೆಬ್ ಲ್ಯಾಬ್"
         }
       }
     }

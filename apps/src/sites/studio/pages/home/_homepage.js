@@ -103,6 +103,7 @@ function showHomepage() {
             specialAnnouncement={specialAnnouncement}
             hasFeedback={homepageData.hasFeedback}
             showIncubatorBanner={homepageData.showIncubatorBanner}
+            currentUserId={homepageData.currentUserId}
           />
         )}
         {!isTeacher && (
@@ -136,8 +137,7 @@ function getTeacherAnnouncement(override) {
     heading: i18n.announcementHeadingBackToSchoolRemote(),
     buttonText: i18n.announcementButtonBackToSchool(),
     description: i18n.announcementDescriptionBackToSchoolRemote(),
-    link:
-      'https://support.code.org/hc/en-us/articles/360013399932-Back-to-School-FAQ',
+    link: 'https://support.code.org/hc/en-us/articles/360013399932-Back-to-School-FAQ',
     image: '',
     type: 'bullhorn',
     id: 'back_to_school_2018'

@@ -1,1 +1,22 @@
---- {}
+---
+ca:
+  data:
+    shared_functions:
+      driving with arrow keys: dirigir amb les tecles de fletxa
+      fluttering: voletejar
+      growing: créixer
+      jittering: tremolar
+      moving east: anar cap a l'est
+      moving east and looping: anar cap a l'est en bucle
+      moving north: anar cap al nord
+      moving south: anar cap al sud
+      moving west: anar cap a l'oest
+      moving west and looping: anar cap a l'oest en bucle
+      moving with arrow keys: moure amb les tecles de fletxa
+      patrolling: rondar
+      shrinking: encongir-se
+      spinning left: voltejar cap a l'esquerra
+      spinning right: voltejar cap a la dreta
+      swimming left and right: nedar cap a l'esquerra i cap a la dreta
+      wandering: deambular
+      wobbling: balancejar

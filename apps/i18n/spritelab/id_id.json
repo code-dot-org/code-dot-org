@@ -77,7 +77,6 @@
   "didntMoveRight": "Sprite kamu tidak bergerak ke kanan.",
   "didntMoveUp": "Sprite kamu tidak bergerak ke atas.",
   "didntPressKey": "Pastikan untuk menekan tombol panah setelah menekan *\"Jalankan\"*. Kamu dapat mengklik tombol jingga di bawah area putar atau menekan tombol di keyboard.",
-  "errorLoadingAnimation": "Sepertinya kami mengalami kesulitan saat memuat animasi \"{animationName}\". Pastikan kamu tersambung dengan internet dan coba muat ulang halaman ini. Jika tetap masalah, animasi ini munkin rusak. Jika seperti itu, kamu bisa melanjutkan dengan menghapus animasinya.",
   "eventsOneChange": "Sprite kamu berubah, tapi hanya satu kali. Uji programmu dengan menekan tombol beberapa kali, dan pastikan untuk menggunakan blok yang tepat. \n <xml><block type=\"gamelab_changePropBy\"><title name=\"PROPERTY\">\"skala\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"creature_10_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value></block></xml>",
   "eventsWrongBehaviors": "Sprite kamu harus memiliki tepat 3 perilaku. Coba pindahkan blok `menghentikan semuanya` ke tempat lain di kode kamu.",
   "foodNotTouchPet": "Tarik sprite makananmu agar menyentuh sprite peliharaanmu.",

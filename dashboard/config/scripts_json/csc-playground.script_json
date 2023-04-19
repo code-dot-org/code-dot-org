@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "playground",
-    "serialized_at": "2022-11-18 21:14:30 UTC",
+    "serialized_at": "2023-01-10 23:59:38 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -122,6 +122,21 @@
         "lesson_group.key": "",
         "script.name": "csc-playground"
       }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Maze functions",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "csc-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -219,6 +234,18 @@
       "seeding_key": {
         "lesson_activity.key": "89613352-910f-4326-9561-302e32109ed1",
         "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "csc-playground"
+      }
+    },
+    {
+      "key": "4f509d0c-8328-4890-9b74-fc5829f19076",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4f509d0c-8328-4890-9b74-fc5829f19076",
+        "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "csc-playground"
       }
@@ -436,6 +463,16 @@
       "seeding_key": {
         "activity_section.key": "4789b720-e7e6-44ff-9fe3-327a4d7c5e75",
         "lesson_activity.key": "89613352-910f-4326-9561-302e32109ed1"
+      }
+    },
+    {
+      "key": "9caf8388-ad88-418e-86f1-d5fd8eb6fa0a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9caf8388-ad88-418e-86f1-d5fd8eb6fa0a",
+        "lesson_activity.key": "4f509d0c-8328-4890-9b74-fc5829f19076"
       }
     }
   ],
@@ -1515,6 +1552,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "kjf_test_landmarks"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1528,6 +1568,69 @@
       },
       "level_keys": [
         "kjf_test_landmarks"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "harvester_playground_functions"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "9caf8388-ad88-418e-86f1-d5fd8eb6fa0a"
+      },
+      "level_keys": [
+        "harvester_playground_functions"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "laurel_playground_functions"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "9caf8388-ad88-418e-86f1-d5fd8eb6fa0a"
+      },
+      "level_keys": [
+        "laurel_playground_functions"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "laurel_playground_abw"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "9caf8388-ad88-418e-86f1-d5fd8eb6fa0a"
+      },
+      "level_keys": [
+        "laurel_playground_abw"
       ]
     }
   ],
@@ -2058,6 +2161,42 @@
         "lesson_group.key": "",
         "script.name": "csc-playground",
         "activity_section.key": "4789b720-e7e6-44ff-9fe3-327a4d7c5e75"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "harvester_playground_functions",
+        "script_level.level_keys": [
+          "harvester_playground_functions"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "9caf8388-ad88-418e-86f1-d5fd8eb6fa0a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "laurel_playground_functions",
+        "script_level.level_keys": [
+          "laurel_playground_functions"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "9caf8388-ad88-418e-86f1-d5fd8eb6fa0a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "laurel_playground_abw",
+        "script_level.level_keys": [
+          "laurel_playground_abw"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "9caf8388-ad88-418e-86f1-d5fd8eb6fa0a"
       }
     }
   ],

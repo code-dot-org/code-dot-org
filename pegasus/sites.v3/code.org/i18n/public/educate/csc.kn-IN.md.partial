@@ -77,3 +77,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>ಸಿಎಸ್ ಕನೆಕ್ಷನ್ ಚಟುವಟಿಕೆ ಮುಗಿಸಿದ್ದೀರಿ ಮತ್ತು/ಅಥವಾ ನಿಮ್ಮ ಕ್ಲಾಸ್‌ರೂಮ್‌ಗೆ ಇನ್ನಷ್ಟು ಆಯ್ಕೆಗಳನ್ನು ಎದುರು ನೋಡುತ್ತಿದ್ದೀರಾ? ದಯವಿಟ್ಟು <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆ</a> ಮತ್ತು ಐಡಿಯಾಗಳನ್ನು ಇನ್ನಷ್ಟು ಅಧ್ಯಾಯಗಳಿಗೆ ಇಲ್ಲಿ ಹಂಚಿಕೊಳ್ಳಿ!</em>
+
+{{ visit_partial_event_logger }}

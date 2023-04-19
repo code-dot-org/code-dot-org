@@ -27,6 +27,8 @@ import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/Ve
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import FontAwesome from '../FontAwesome';
 import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 class LessonOverview extends Component {
   static propTypes = {
@@ -40,6 +42,19 @@ class LessonOverview extends Component {
     isVerifiedInstructor: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired
   };
+
+  constructor(props) {
+    super(props);
+
+    analyticsReporter.sendEvent(EVENTS.LESSON_OVERVIEW_PAGE_VISITED_EVENT, {
+      lessonId: props.lesson.id,
+      lessonName: props.lesson.displayName,
+      lessonLink: document.location.pathname,
+      referrer: document.referrer,
+      unitName: props.lesson.unit.displayName,
+      unitLink: props.lesson.unit.link
+    });
+  }
 
   recordAndNavigateToPdf = (e, firehoseKey, url) => {
     // Prevent navigation to url until callback

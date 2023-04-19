@@ -565,13 +565,10 @@ describe('FormController', () => {
         page1Field3: 'will be modified'
       };
 
-      DummyPage1.processPageData = sinon
-        .stub()
-        .withArgs(pageData)
-        .returns({
-          page1Field2: undefined,
-          page1Field3: 'modified'
-        });
+      DummyPage1.processPageData = sinon.stub().withArgs(pageData).returns({
+        page1Field2: undefined,
+        page1Field3: 'modified'
+      });
 
       DummyPage1.associatedFields = [
         'page1Field1',

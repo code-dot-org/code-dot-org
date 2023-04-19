@@ -86,7 +86,6 @@ export default class ParticipantSections extends Component {
           <div>
             <div style={styles.buttonContainer}>
               <Button
-                __useDeprecatedTag
                 className="ui-test-show-hide"
                 onClick={this.toggleViewHidden}
                 icon={viewHidden ? 'caret-up' : 'caret-down'}
@@ -96,6 +95,7 @@ export default class ParticipantSections extends Component {
                     : i18n.viewArchivedSections()
                 }
                 color={Button.ButtonColor.gray}
+                style={{margin: 0}}
               />
             </div>
             {viewHidden && (

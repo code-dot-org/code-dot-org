@@ -6,6 +6,8 @@ import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -15,6 +17,7 @@ const TEACHER_ONLY_FIELDS = [
 ];
 const STUDENT_ONLY_FIELDS = [
   '#student-name-label',
+  '#gender-dropdown',
   '#age-dropdown',
   '#student-consent',
   '#parent-email-container',
@@ -77,7 +80,7 @@ $(document).ready(() => {
   }
 
   let alreadySubmitted = false;
-  $('.finish-signup').submit(function() {
+  $('.finish-signup').submit(function () {
     // prevent multiple submission. We want to do this to defend against
     // attempting to create multiple accounts, and it's valid to simply disable
     // after the first attempt here since this form is submitted via HTML and
@@ -92,6 +95,7 @@ $(document).ready(() => {
       cleanSchoolInfo();
       $('#user_age').val('21+');
     }
+    analyticsReporter.sendEvent(EVENTS.SIGN_UP_FINISHED_EVENT);
   });
 
   function cleanSchoolInfo() {
@@ -111,14 +115,12 @@ $(document).ready(() => {
     }
   }
 
-  $('#user_parent_email_preference_opt_in_required').change(function() {
+  $('#user_parent_email_preference_opt_in_required').change(function () {
     // If the user_type is currently blank, switch the user_type to 'student' because that is the only user_type which
     // allows the parent sign up section of the form.
     if (user_type === '') {
       setUserType('student');
-      $('#user_user_type')
-        .val('student')
-        .change();
+      $('#user_user_type').val('student').change();
     }
     renderParentSignUpSection();
   });
@@ -135,7 +137,7 @@ $(document).ready(() => {
   }
 
   // Keep if sign-up user type experiment favors original (just func. below)
-  $('#user_user_type').change(function() {
+  $('#user_user_type').change(function () {
     var value = $(this).val();
     setUserType(value);
   });
@@ -195,6 +197,9 @@ $(document).ready(() => {
       study_group: 'experiment-v4',
       event: 'select-' + type,
       data_string: signUpUID
+    });
+    analyticsReporter.sendEvent(EVENTS.ACCOUNT_TYPE_PICKED_EVENT, {
+      'account type': type
     });
   }
 

@@ -77,7 +77,6 @@
   "didntMoveRight": "Váš sprajt se nepohnul doprava.",
   "didntMoveUp": "Váš sprajt se nepohnul nahoru.",
   "didntPressKey": "Zajistěte, abyste po stisknutí „Spustit“ stiskli tlačítko šipky. V hrací oblasti můžete kliknout na oranžové tlačítko nebo na tlačítka na Vaší klávesnici.",
-  "errorLoadingAnimation": "Zdá se, že se nám nedaří načíst Vaši animaci \"{animationName}\". Ujistěte se, zda máte dobré připojení k internetu a zkuste stránku načíst znovu. Jestliže tento problém přetrvává, je možné, že he tato animace pokažená. V tom případě budete možná muset postupovat odstraněním animace.",
   "eventsOneChange": "Váš sprajt se změnil, ale jen jednou. Vyzkoušejte svůj program několika stisky tlačítka a zajistěte, abyste použili správný blok. \n <xml><block type=\"gamelab_changePropBy\"><title name=\"PROPERTY\">\"měřítko\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"tvor_10_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value></block></xml>",
   "eventsWrongBehaviors": "Váš sprajt musí mít přesně 3 chování. Pokuste se přesunout blok `všechno zastaví` na jiné místo svého kódu.",
   "foodNotTouchPet": "Táhněte sprajt svého jídla tak, aby se dotkl sprajtu vašeho zvířete.",

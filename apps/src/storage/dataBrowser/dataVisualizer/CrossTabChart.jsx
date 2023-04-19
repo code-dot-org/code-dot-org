@@ -125,7 +125,7 @@ export function createPivotTable(records, numericColumns, rowName, columnName) {
   // Sort columns
   let columns;
   if (numericColumns.includes(columnName)) {
-    columns = [...pivotedColumns].sort(function(a, b) {
+    columns = [...pivotedColumns].sort(function (a, b) {
       return a - b;
     });
   } else {

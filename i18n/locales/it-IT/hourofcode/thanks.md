@@ -12,7 +12,7 @@ You just joined the Hour of Code movement. Tell your friends with **#HourOfCode*
 
 {{ social_media_hoc }} <br /> Encourage others to participate [with our sample emails.]({{ promote/sample_emails }}) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Non c'è bisogno di stare a scuola per acquisire nuove competenze. Invite a local politician or policy maker to visit your school for the Hour of Code. Può aiutare a costruire un supporto per l'informatica nella tua zona che va oltre un ora.
 
-Use these [posters, banners, stickers, videos and more]({{ promote/resources }}) for your own event.
+Adatta questi [poster, banner, adesivi, video e altro]({{ promote/resources }}) per il tuo evento.
 
 ## 2. Trova un volontario vicino a te per farti aiutare con il tuo evento
 

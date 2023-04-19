@@ -17,11 +17,16 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "debugging/minecraft/unversioned": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "event/minecraft/unversioned": {
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
+        "loop/minecraft/unversioned": {
+          "word": "Loop",
+          "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
         "program/minecraft/unversioned": {
           "word": "Program",
@@ -31,31 +36,44 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "debugging/hero/unversioned": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "function/hero/unversioned": {
-          "word": "Function"
+          "word": "Function",
+          "definition": "Isang piraso ng code na madali mong magagamit nang paulit-ulit."
         },
         "program/hero/unversioned": {
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "code/poem-art/2021": {
-          "word": "Code"
+          "word": "Code",
+          "definition": "(v) upang magsulat ng mga tagubilin sa isang computer."
         },
         "event/poem-art/2021": {
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
+        "line/poem-art/2021": {
+          "word": "Linya",
+          "definition": "(tula) - isang subdibisyon ng tula na nakaayos ng sunud-sunod na nagtatapos sa kanang gilid. "
+        },
+        "mood/poem-art/2021": {
+          "word": "Mood",
+          "definition": "pagpapahayag ng damdamin, kapaligiran, o emosyon sa sining o pagsulat."
+        },
         "program/poem-art/2021": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "Serye ng mga hakbang na naka-code sa isang bagay na maaaring patakbuhin ng makina."
         },
         "code/flappy/unversioned": {
           "word": "code",
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "debugging/flappy/unversioned": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/flappy/unversioned": {
           "word": "Program",
@@ -65,7 +83,8 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "debugging/hourofcode/unversioned": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/hourofcode/unversioned": {
           "word": "Program",
@@ -75,7 +94,8 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "debugging/frozen/unversioned": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/frozen/unversioned": {
           "word": "Program",
@@ -85,7 +105,8 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "debugging/iceage/unversioned": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/iceage/unversioned": {
           "word": "Program",
@@ -96,7 +117,8 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "debugging/artist/unversioned": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/artist/unversioned": {
           "word": "Program",
@@ -106,7 +128,8 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "debugging/gumball/unversioned": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/gumball/unversioned": {
           "word": "Program",
@@ -126,27 +149,56 @@
         "code/aquatic/unversioned": {
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
+        "condition/aquatic/unversioned": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
+        },
         "conditionals/aquatic/unversioned": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "debugging/aquatic/unversioned": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "loops/aquatic/unversioned": {
-          "word": "Mga loop"
+          "word": "Mga loop",
+          "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
         "program/aquatic/unversioned": {
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Caesar Cipher ",
+          "definition": "pamamaraan sa pag-encrypt na nagbabago ng alpabeto sa ilang bilang ng mga karakter"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Cipher",
+          "definition": "ang pangkalahatang termino sa pamamaraan (o algorithm) na nagsasagawa ng pag-encrypt"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Pag-crack ng naka-encrypt",
+          "definition": "Kapag sinubukan mong i-decode ang lihim na mensahe nang hindi nalalaman ang lahat ng mga detalye ng cipher, sinusubukan mong \"i-crack\" ang naka-encrypt."
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Decryption",
+          "definition": "proseso na binabaligtad ang pag-encrypt, pagkuha ng lihim na mensahe at paggawa ng orihinal na plain text"
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Pag-Encrypt"
+          "word": "Pag-Encrypt",
+          "definition": "proseso ng pag-encode ng mga mensahe upang panatilihing lihim ang mga ito, kaya ang mga \"awtorisadong\" partido lang ang makakabasa nito."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Random na Pagpapalit ng Cipher",
+          "definition": "diskarte sa pag-encrypt na nagmamapa sa bawat titik ng alpabeto sa random na piniling iba pang mga titik ng alpabeto."
         },
         "code/starwars/unversioned": {
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "debugging/starwars/unversioned": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/starwars/unversioned": {
           "word": "Program",
@@ -156,7 +208,8 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "debugging/mc/unversioned": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/mc/unversioned": {
           "word": "Program",
@@ -166,7 +219,8 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "debugging/playlab/unversioned": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/playlab/unversioned": {
           "word": "Program",
@@ -176,11 +230,16 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "debugging/starwarsblocks/unversioned": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/starwarsblocks/unversioned": {
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Lossless Compression",
+          "definition": "isang data compression algorithm na nagbibigay-daan sa orihinal na data na ganap na mabuo mula sa naka-compress na data. Pinakakaraniwang ginagamit sa pag-compress ng text (hal. .zip compression)"
         },
         "event/outbreak/unversioned": {
           "word": "Event",
@@ -191,10 +250,12 @@
           "definition": "isang programa na nagrereplika o ginagaya ang mga pangunahing tampok ng isang totoong kaganapan sa mundo upang siyasatin ang pag-uugali nito nang walang gastos, oras, o panganib ng pagpapatakbo ng isang eksperimento sa totoong buhay."
         },
         "code/sports/unversioned": {
-          "word": "Code"
+          "word": "Code",
+          "definition": "(v) magsulat ng code o magsulat ng mga tagubilin sa computer."
         },
         "debugging/sports/unversioned": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "event/sports/unversioned": {
           "word": "Event",
@@ -208,7 +269,8 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "debugging/infinity/unversioned": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/infinity/unversioned": {
           "word": "Program",
@@ -218,7 +280,8 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "debugging/basketball/unversioned": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "event/basketball/unversioned": {
           "word": "Event",
@@ -251,14 +314,20 @@
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "machine_learning/oceans/unversioned": {
-          "word": "Pag-Aaral Ng Makina"
+          "word": "Pag-Aaral Ng Makina",
+          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
         },
         "program/coursed/2022": {
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "debugging/coursed/2022": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
+        },
+        "loop/coursed/2022": {
+          "word": "Loop",
+          "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
         "event/coursed/2022": {
           "word": "Event",
@@ -268,10 +337,16 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "conditionals/coursed/2022": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
+        },
+        "condition/coursed/2022": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
         },
         "behavior/coursef/2022": {
-          "word": "Paggawi"
+          "word": "Paggawi",
+          "definition": "Isang aksiyon sa Sprite Lab na patuloy na ginagawa ng sprite hanggang sa sabihing huminto ito."
         },
         "program/coursef/2022": {
           "word": "Program",
@@ -292,7 +367,8 @@
           "definition": "isang programa na nagrereplika o ginagaya ang mga pangunahing tampok ng isang totoong kaganapan sa mundo upang siyasatin ang pag-uugali nito nang walang gastos, oras, o panganib ng pagpapatakbo ng isang eksperimento sa totoong buhay."
         },
         "machine_learning/coursef/2022": {
-          "word": "Pag-Aaral Ng Makina"
+          "word": "Pag-Aaral Ng Makina",
+          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
         },
         "internet/coursef/2022": {
           "word": "Internet"
@@ -303,11 +379,29 @@
         "behavior/coursee/2022": {
           "word": "Paggawi"
         },
+        "loop/coursee/2022": {
+          "word": "Loop",
+          "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
+        },
         "function/coursee/2022": {
-          "word": "Function"
+          "word": "Function",
+          "definition": "Isang piraso ng code na maaari mong tawagin nang paulit-ulit."
+        },
+        "call_a_function/coursee/2022": {
+          "word": "Tumawag ng Function",
+          "definition": "Ginamit ang pangalan ng function upang sabihin sa computer na patakbuhin ang code na nakasulat sa function."
+        },
+        "declare_a_function/coursee/2022": {
+          "word": "Magdeklara ng Function",
+          "definition": "Punan ang isang function na may code at bigyan ang function ng pangalan."
+        },
+        "condition/coursee/2022": {
+          "word": "Condition",
+          "definition": "Isang pahayag na sinusuri ng program upang makita kung ito ay totoo o mali. Kung totoo, may gagawing aksiyon. Kung hindi, ang aksiyon ay hindi papansinin"
         },
         "conditionals/coursee/2022": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "copyright/coursee/2022": {
           "word": "Karapatang-ari"
@@ -316,7 +410,8 @@
           "word": "magtakda"
         },
         "debugging/courseb/2022": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "drop/courseb/2022": {
           "word": "Drop"
@@ -325,12 +420,17 @@
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
+        "loop/courseb/2022": {
+          "word": "Loop",
+          "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
+        },
         "event/courseb/2022": {
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
         "debugging/express/2022": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/express/2022": {
           "word": "Program",
@@ -343,11 +443,21 @@
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
+        "loop/express/2022": {
+          "word": "Loop",
+          "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
+        },
+        "condition/express/2022": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
+        },
         "conditionals/express/2022": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "function/express/2022": {
-          "word": "Function"
+          "word": "Function",
+          "definition": "Isang piraso ng code na madali mong magagamit nang paulit-ulit."
         },
         "variable/express/2022": {
           "word": "Variable"
@@ -359,18 +469,24 @@
           "word": "Drop"
         },
         "debugging/pre-express/2022": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/pre-express/2022": {
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "loop/pre-express/2022": {
+          "word": "Loop",
+          "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
         "event/pre-express/2022": {
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
         "debugging/coursea/2022": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/coursea/2022": {
           "word": "Program",
@@ -379,23 +495,44 @@
         "drop/coursea/2022": {
           "word": "Drop"
         },
+        "loop/coursea/2022": {
+          "word": "Loop",
+          "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
+        },
         "event/coursea/2022": {
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
         "debugging/coursec/2022": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/coursec/2022": {
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "persistence/coursec/2022": {
+          "definition": "Hindi pagsuko."
+        },
+        "angle/coursec/2022": {
+          "word": "Anggulo",
+          "definition": "Kung saan nagsasama-sama ang dalawang panig ng hugis, na sinusukat sa mga degree."
+        },
+        "loop/coursec/2022": {
+          "word": "Loop",
+          "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
         "event/coursec/2022": {
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
         "data/coursec/2022": {
-          "word": "Data"
+          "word": "Data",
+          "definition": "Isang koleksiyon ng impormasyon"
+        },
+        "graph/coursec/2022": {
+          "word": "Graph",
+          "definition": "Isang larawan o diagram na kumakatawan sa data o mga value sa organisadong paraan"
         },
         "binary/coursec/2022": {
           "word": "Binary"
@@ -407,7 +544,8 @@
           "word": "Pagproseso"
         },
         "debugging/csd/2022": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/csd/2022": {
           "word": "Program",
@@ -415,6 +553,9 @@
         },
         "variable/csd/2022": {
           "word": "Variable"
+        },
+        "condition/csd/2022": {
+          "word": "Condition"
         },
         "conditionals/csd/2022": {
           "word": "Mga conditional"
@@ -435,11 +576,12 @@
           "word": "Interface ng User"
         },
         "machine_learning/csd/2022": {
-          "word": "Pag-Aaral Ng Makina"
+          "word": "Pag-Aaral Ng Makina",
+          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
         },
         "code/poem-art/unversioned": {
           "word": "Code",
-          "definition": ""
+          "definition": "(v) upang magsulat ng mga tagubilin sa isang computer."
         },
         "event/poem-art/unversioned": {
           "word": "Event",
@@ -447,15 +589,15 @@
         },
         "program/poem-art/unversioned": {
           "word": "Program",
-          "definition": ""
+          "definition": "Serye ng mga hakbang na naka-code sa isang bagay na maaaring patakbuhin ng makina."
         },
         "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Mood",
+          "definition": "pagpapahayag ng damdamin, kapaligiran, o emosyon sa sining o pagsulat."
         },
         "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Linya",
+          "definition": "(tula) - isang subdibisyon ng tula na nakaayos ng sunud-sunod na nagtatapos sa kanang gilid. "
         },
         "behavior/coursef/2021": {
           "word": "Paggawi"
@@ -474,12 +616,17 @@
         "input/coursef/2021": {
           "word": "Input"
         },
+        "loop/coursef/2021": {
+          "word": "Loop",
+          "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
+        },
         "models_and_simulations/coursef/2021": {
           "word": "Mga Modelo at Simulation",
           "definition": "isang programa na nagrereplika o ginagaya ang mga pangunahing tampok ng isang totoong kaganapan sa mundo upang siyasatin ang pag-uugali nito nang walang gastos, oras, o panganib ng pagpapatakbo ng isang eksperimento sa totoong buhay."
         },
         "machine_learning/coursef/2021": {
-          "word": "Pag-Aaral Ng Makina"
+          "word": "Pag-Aaral Ng Makina",
+          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
         },
         "internet/coursef/2021": {
           "word": "Internet"
@@ -488,7 +635,8 @@
           "word": "magtakda"
         },
         "debugging/courseb/2021": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "drop/courseb/2021": {
           "word": "Drop"
@@ -497,12 +645,17 @@
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
+        "loop/courseb/2021": {
+          "word": "Loop",
+          "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
+        },
         "event/courseb/2021": {
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
         "debugging/coursea/2021": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/coursea/2021": {
           "word": "Program",
@@ -511,16 +664,25 @@
         "drop/coursea/2021": {
           "word": "Drop"
         },
+        "loop/coursea/2021": {
+          "word": "Loop",
+          "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
+        },
         "event/coursea/2021": {
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
         "debugging/coursec/2021": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/coursec/2021": {
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "loop/coursec/2021": {
+          "word": "Loop",
+          "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
         "event/coursec/2021": {
           "word": "Event",
@@ -534,7 +696,12 @@
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "debugging/coursed/2021": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
+        },
+        "loop/coursed/2021": {
+          "word": "Loop",
+          "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
         "event/coursed/2021": {
           "word": "Event",
@@ -544,10 +711,16 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "conditionals/coursed/2021": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
+        },
+        "condition/coursed/2021": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
         },
         "debugging/express/2021": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/express/2021": {
           "word": "Program",
@@ -560,11 +733,21 @@
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
+        "loop/express/2021": {
+          "word": "Loop",
+          "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
+        },
+        "condition/express/2021": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
+        },
         "conditionals/express/2021": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "function/express/2021": {
-          "word": "Function"
+          "word": "Function",
+          "definition": "Isang piraso ng code na madali mong magagamit nang paulit-ulit."
         },
         "variable/express/2021": {
           "word": "Variable"
@@ -576,11 +759,16 @@
           "word": "Drop"
         },
         "debugging/pre-express/2021": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/pre-express/2021": {
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "loop/pre-express/2021": {
+          "word": "Loop",
+          "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
         "event/pre-express/2021": {
           "word": "Event",
@@ -596,23 +784,35 @@
         "copyright/coursee/2021": {
           "word": "Karapatang-ari"
         },
+        "loop/coursee/2021": {
+          "word": "Loop",
+          "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
+        },
         "function/coursee/2021": {
-          "word": "Function"
+          "word": "Function",
+          "definition": "Isang piraso ng code na madali mong magagamit nang paulit-ulit."
+        },
+        "condition/coursee/2021": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
         },
         "conditionals/coursee/2021": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "define/coursee/2021": {
           "word": "magtakda"
         },
         "machine_learning/csd/2021": {
-          "word": "Pag-Aaral Ng Makina"
+          "word": "Pag-Aaral Ng Makina",
+          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
         },
         "user_interface/csd/2021": {
           "word": "Interface ng User"
         },
         "debugging/csd/2021": {
-          "word": "Pagdedebug"
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "program/csd/2021": {
           "word": "Program",
@@ -620,6 +820,9 @@
         },
         "variable/csd/2021": {
           "word": "Variable"
+        },
+        "condition/csd/2021": {
+          "word": "Condition"
         },
         "conditionals/csd/2021": {
           "word": "Mga conditional"

@@ -25,8 +25,17 @@
             },
             {
               "type": "rating",
+              "name": "csdpilot_discuss_with_peers_m5",
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '12272' or {workshop_id} = '12784')",
+              "title": "I had opportunities to discuss CS Discoveries course implementation roadblocks and successes with peers during this module.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
               "name": "better_prepared_unit5csd",
-              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12272' and {workshop_id} <> '12784'",
               "title": "I feel prepared to teach Unit 5 after attending this workshop.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
@@ -35,7 +44,7 @@
             {
               "type": "rating",
               "name": "opportunities_discuss_peers_m5",
-              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "visibleIf": "{workshop_course}='CS Discoveries' or  {workshop_course}='CS Principles'",
               "title": "I had opportunities to discuss teaching strategies with peers during this module.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
@@ -43,8 +52,17 @@
             },
             {
               "type": "rating",
+              "name": "csdpilot_confidence_cs_concepts_m5",
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '12272' or {workshop_id} = '12784')",
+              "title": "As a result of this workshop, I feel confident about the computer science concepts I need to master before teaching CS Discoveries next week.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
               "name": "find_resources_m5",
-              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "visibleIf": "({workshop_course}='CS Discoveries' and {workshop_id} <> '12272' and {workshop_id} <> '12784') or {workshop_course}='CS Principles'",
               "title": "I know where to find resources to help me teach the units we have covered.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
@@ -89,7 +107,7 @@
             {
               "type": "rating",
               "name": "learning_in_context_m5",
-              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12272' and {workshop_id} <> '12784'",
               "title": "After attending this workshop I feel prepared to incorporate strategies to promote learning in context in my CS classroom.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
@@ -107,7 +125,7 @@
             {
               "type": "rating",
               "name": "differentiation_m5",
-              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12272' and {workshop_id} <> '12784'",
               "title": "After attending this workshop I understand how to apply differentiation strategies when teaching Unit 5.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
@@ -116,7 +134,7 @@
             {
               "type": "rating",
               "name": "data_analysis_m5",
-              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12272' and {workshop_id} <> '12784'",
               "title": "Through this workshop, I feel ready to guide students in the use of the Problem Solving Process for Data to draw conclusions about data.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",

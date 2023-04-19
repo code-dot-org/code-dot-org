@@ -1,0 +1,35 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Create a scene that draws park images based on the area in acres of each national park.\r\n\r\n✅ **TO DO:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ParkScene.java</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">chooseSize()</code> method to check the area in acres of each national park and return the size to draw the image.\r\n\r\n1. If the number of acres is greater than <code style=\"background-color: #ececec; color: black; font-weight: bold;\">1000000</code>, return a size of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">100</code>.\r\n\r\n2. If the number of acres is greater than or equal to <code style=\"background-color: #ececec; color: black; font-weight: bold;\">100000</code>, return a size of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">50</code>.\r\n\r\n3. Otherwise, return a size of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">25</code>.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing multi-selection statements.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "display_name": "National Parks",
+    "bubble_choice_description": "Create a visualization based on the area in acres of each national park.",
+    "thumbnail_url": "https://images.code.org/84b9359f0aa6687415053452f0d1277c-image-1650719759035.png",
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/multi-selection-statements"
+    ],
+    "video_key": "csa_multi-selection_statements"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-02-17T19:06:17.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-02-17T19:06:17.001+00:00\",\"changed\":[\"cloned from \\\"CSA U4L10-L6d_2023\\\"\"],\"cloned_from\":\"CSA U4L10-L6d_2023\"},{\"changed_at\":\"2023-02-17 19:06:18 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-10 21:17:32 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-10 21:18:06 +0000\",\"changed\":[\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-10 21:19:27 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 13:46:16 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

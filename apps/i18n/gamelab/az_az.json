@@ -1,11 +1,19 @@
 {
+  "dropletBlock_Game.width_description": "Rəsm kətanının eni.",
+  "dropletBlock_Game.height_description": "Rəsm kətanının hündürlüyü.",
+  "dropletBlock_createSprite_description": "İlkin göstərilən mövqedə bir uc nöqtəsi yaradır.",
+  "dropletBlock_createSprite_param0_description": "İlkin x koordinatı.",
+  "dropletBlock_createSprite_param1_description": "İlkin y koordinatı.",
   "dropletBlock_createSprite_param2": "enlik",
   "dropletBlock_createSprite_param3": "hündürlük",
+  "dropletBlock_group.bounce_signatureOverride": "[Group].sıçrat(hədəf)",
   "dropletBlock_setCollider_param0": "tip",
+  "dropletBlock_setCollider_param3": "en/radius",
   "dropletBlock_setCollider_param4": "hündürlük",
   "dropletBlock_setColliderEach_param0": "tip",
+  "dropletBlock_setColliderEach_param3": "en/radius",
   "dropletBlock_setColliderEach_param4": "hündürlük",
-  "errorLoadingAnimation": "\"{AnimationName}\" animasiyanızı yükləməkdə çətinlik çəkirik. Yaxşı bir internet bağlantınız olduğundan əmin olun və səhifəni yenidən yükləməyə çalışın. Bu problem davam edərsə, bu animasiyanın pozulması mümkündür. Bu vəziyyətdə animasiyanı silməklə davam etməyiniz lazım ola bilər.",
+  "dropletBlock_Group_description": "Boş qrup yaradır.",
   "reinfFeedbackMsg": "Bitirdin! Növbəti səviyyəyə keçmək üçün \"Continue\" düyməsini basın.",
   "shareGame": "Oyununuzu bölüşün:"
 }

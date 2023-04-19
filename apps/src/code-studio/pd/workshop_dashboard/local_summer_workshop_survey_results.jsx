@@ -9,50 +9,42 @@ const rowOrder = [
   {text: 'Number of survey responses', key: 'num_surveys'},
 
   {
-    text:
-      'Overall, how much have you learned about computer science from your workshop?',
+    text: 'Overall, how much have you learned about computer science from your workshop?',
     key: 'how_much_learned',
     score_base: 5
   },
   {
-    text:
-      'During your workshop, how motivating were the activities that this program  had you do?',
+    text: 'During your workshop, how motivating were the activities that this program  had you do?',
     key: 'how_motivating',
     score_base: 5
   },
   {
-    text:
-      'For this workshop, how clearly did your facilitator present the information that you needed to learn?',
+    text: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?',
     key: 'how_clearly_presented',
     score_base: 5
   },
   {
-    text:
-      'How interesting did your facilitator make what you learned in the workshop?',
+    text: 'How interesting did your facilitator make what you learned in the workshop?',
     key: 'how_interesting',
     score_base: 5
   },
   {
-    text:
-      'How often did your facilitator give you feedback that helped you learn?',
+    text: 'How often did your facilitator give you feedback that helped you learn?',
     key: 'how_often_given_feedback',
     score_base: 5
   },
   {
-    text:
-      'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?',
+    text: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?',
     key: 'how_comfortable_asking_questions',
     score_base: 5
   },
   {
-    text:
-      "How often did your facilitator teach you things that you didn't know before taking this workshop?",
+    text: "How often did your facilitator teach you things that you didn't know before taking this workshop?",
     key: 'how_often_taught_new_things',
     score_base: 5
   },
   {
-    text:
-      'When you needed extra help, how good was your facilitator at giving you that help?',
+    text: 'When you needed extra help, how good was your facilitator at giving you that help?',
     key: 'help_quality',
     score_base: 5
   },
@@ -63,20 +55,17 @@ const rowOrder = [
     score_base: 5
   },
   {
-    text:
-      'When you are not in workshops about the Code.org curriculum how often do you talk about the ideas from the workshops?',
+    text: 'When you are not in workshops about the Code.org curriculum how often do you talk about the ideas from the workshops?',
     key: 'how_often_talk_about_ideas_outside',
     score_base: 5
   },
   {
-    text:
-      'How often did you get so focused on workshop activities that you lost track of time?',
+    text: 'How often did you get so focused on workshop activities that you lost track of time?',
     key: 'how_often_lost_track_of_time',
     score_base: 5
   },
   {
-    text:
-      'Before the workshop, how excited were you about going to your workshop?',
+    text: 'Before the workshop, how excited were you about going to your workshop?',
     key: 'how_excited_before',
     score_base: 5
   },
@@ -87,8 +76,7 @@ const rowOrder = [
   },
 
   {
-    text:
-      'I feel more prepared to teach the material covered in this workshop than before I came.',
+    text: 'I feel more prepared to teach the material covered in this workshop than before I came.',
     key: 'more_prepared_than_before',
     score_base: 6
   },
@@ -98,8 +86,7 @@ const rowOrder = [
     score_base: 6
   },
   {
-    text:
-      'This professional development was suitable for my level of experience with teaching this course.',
+    text: 'This professional development was suitable for my level of experience with teaching this course.',
     key: 'suitable_for_my_experience',
     score_base: 6
   },
@@ -109,8 +96,7 @@ const rowOrder = [
     score_base: 6
   },
   {
-    text:
-      'I feel more connected to the community of computer science teachers after this workshop.',
+    text: 'I feel more connected to the community of computer science teachers after this workshop.',
     key: 'part_of_community',
     score_base: 6
   },
@@ -126,8 +112,7 @@ const rowOrder = [
     score_base: 6
   },
   {
-    text:
-      'I received clear communication about when and where the workshop would take place',
+    text: 'I received clear communication about when and where the workshop would take place',
     key: 'received_clear_communication',
     score_base: 6
   },
@@ -140,18 +125,15 @@ const rowOrder = [
 
 const freeResponseQuestions = [
   {
-    text:
-      'Do you have feedback about the venue and the way logistics were run for this workshop?',
+    text: 'Do you have feedback about the venue and the way logistics were run for this workshop?',
     key: 'venue_feedback'
   },
   {
-    text:
-      'What were the two things you liked most about the activities you did in this workshop and why?',
+    text: 'What were the two things you liked most about the activities you did in this workshop and why?',
     key: 'things_you_liked'
   },
   {
-    text:
-      'What are the two things you would change about the activities you did in this workshop? How would you improve them for future participants?',
+    text: 'What are the two things you would change about the activities you did in this workshop? How would you improve them for future participants?',
     key: 'things_you_would_change'
   },
   {
@@ -180,9 +162,7 @@ export default class LocalSummerWorkshopSurveyResults extends React.Component {
   }
 
   load() {
-    const url = `/api/v1/pd/workshops/${
-      this.props.params['workshopId']
-    }/local_workshop_survey_report`;
+    const url = `/api/v1/pd/workshops/${this.props.params['workshopId']}/local_workshop_survey_report`;
 
     this.loadRequest = $.ajax({
       method: 'GET',

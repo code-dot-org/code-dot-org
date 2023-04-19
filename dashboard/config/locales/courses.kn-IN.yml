@@ -1,1 +1,16 @@
---- {}
+---
+kn:
+  data:
+    course:
+      name:
+        mike-test:
+          title: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್
+    resources:
+      teacher_forum/csd/2020:
+        name: ಶಿಕ್ಷಕರ ವೇದಿಕೆ
+      teacher_forum_6/csd/2017:
+        name: ಶಿಕ್ಷಕರ ವೇದಿಕೆ
+      teacher_forum/csd/2019:
+        name: ಶಿಕ್ಷಕರ ವೇದಿಕೆ
+      teacher_forum_6/csd/2018:
+        name: ಶಿಕ್ಷಕರ ವೇದಿಕೆ

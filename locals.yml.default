@@ -1,6 +1,13 @@
 # Example configuration file set up with sensible defaults for local development.
 # See `config.yml.erb` for full list of available configuration options.
 
+# Some items in config.yml.erb are resolved via `!Secret`, which retrieves from
+# AWS Secrets Manager. These will be unavailable to external Contributors, but are
+# also not necessary for basic local development. Override them here to avoid
+# errors accessing Secrets Manager.
+#slack_bot_token: localoverride
+#pardot_private_key: localoverride
+
 # Whether to prefix bundler commands with 'sudo'.
 # It may be useful to set this false when doing local development on Linux.
 #bundler_use_sudo: false
@@ -93,7 +100,8 @@ use_my_apps: true
 # Credentials for connecting to Firebase to use data blocks or data browser
 # in Applab.
 #firebase_name: 'cdo-v3-dev'
-#firebase_secret:
+#firebase_secret: localoverride
+#firebase_shared_secret localoverride
 
 
 # Configuration and credentials for the Geocoder gem.  Google Maps provides a

@@ -882,8 +882,49 @@
           "word": "머신 러닝",
           "definition": "명확하게 프로그래밍되지 않아도 컴퓨터가 패턴을 인식하고 결정을 내림."
         },
+        "features/csd/2022": {
+          "word": "특징",
+          "definition": "모델이 의사 결정을 내리는 데 사용하는 입력"
+        },
+        "label/csd/2022": {
+          "word": "라벨",
+          "definition": "모델을 사용하여 결정하거나 예측하려는 결과"
+        },
+        "model/csd/2022": {
+          "word": "모델",
+          "definition": "의사결정을 내리도록 설계된 컴퓨터 프로그램"
+        },
+        "supervised_learning/csd/2022": {
+          "word": "지도형 학습",
+          "definition": "사람이 모델에게 예를 가지고 학습하도록 교육시킬 때"
+        },
+        "training/csd/2022": {
+          "word": "교육",
+          "definition": "모델이 학습할 수 있도록 모델에게 예를 제공"
+        },
+        "unsupervised_learning/csd/2022": {
+          "word": "비지도 학습",
+          "definition": "라벨이 없는 데이터에서 패턴 찾기"
+        },
+        "categorical_data/csd/2022": {
+          "word": "범주형 데이터",
+          "definition": "그룹으로 분리할 수 있는 데이터"
+        },
+        "classification/csd/2022": {
+          "word": "분류",
+          "definition": "다른 특징을 기반으로 카테고리 예측"
+        },
+        "bias/csd/2022": {
+          "word": "편향",
+          "definition": "결정이 어떤 것에는 유리하게 이루어지고 어떤 것에는 우선순위를 낮추거나 제외시키는 경우"
+        },
+        "numerical_data/csd/2022": {
+          "word": "수치 데이터",
+          "definition": "셀 수 있거나 또는 측정할 수 있는 데이터"
+        },
         "ethics/csd/2022": {
-          "word": "윤리"
+          "word": "윤리",
+          "definition": "좋은 행동을 위한 지침."
         },
         "code/poem-art/unversioned": {
           "word": "코드",
@@ -1435,8 +1476,49 @@
           "word": "머신 러닝",
           "definition": "명확하게 프로그래밍되지 않아도 컴퓨터가 패턴을 인식하고 결정을 내림."
         },
+        "features/csd/2021": {
+          "word": "특징",
+          "definition": "모델이 의사 결정을 내리는 데 사용하는 입력"
+        },
+        "label/csd/2021": {
+          "word": "라벨",
+          "definition": "모델을 사용하여 결정하거나 예측하려는 결과"
+        },
+        "model/csd/2021": {
+          "word": "모델",
+          "definition": "의사결정을 내리도록 설계된 컴퓨터 프로그램"
+        },
+        "supervised_learning/csd/2021": {
+          "word": "지도형 학습",
+          "definition": "사람이 모델에게 예를 가지고 학습하도록 교육시킬 때"
+        },
+        "training/csd/2021": {
+          "word": "교육",
+          "definition": "모델이 학습할 수 있도록 모델에게 예를 제공"
+        },
+        "unsupervised_learning/csd/2021": {
+          "word": "비지도 학습",
+          "definition": "라벨이 없는 데이터에서 패턴 찾기"
+        },
+        "categorical_data/csd/2021": {
+          "word": "범주형 데이터",
+          "definition": "그룹으로 분리할 수 있는 데이터"
+        },
+        "classification/csd/2021": {
+          "word": "분류",
+          "definition": "다른 특징을 기반으로 카테고리 예측"
+        },
+        "bias/csd/2021": {
+          "word": "편향",
+          "definition": "결정이 어떤 것에는 유리하게 이루어지고 어떤 것에는 우선순위를 낮추거나 제외시키는 경우"
+        },
+        "numerical_data/csd/2021": {
+          "word": "수치 데이터",
+          "definition": "셀 수 있거나 또는 측정할 수 있는 데이터"
+        },
         "ethics/csd/2021": {
-          "word": "윤리"
+          "word": "윤리",
+          "definition": "좋은 행동을 위한 지침."
         },
         "user/csd/2021": {
           "word": "사용자",

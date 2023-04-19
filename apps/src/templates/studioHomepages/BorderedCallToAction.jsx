@@ -40,7 +40,7 @@ const BorderedCallToAction = ({
 };
 
 BorderedCallToAction.defaultProps = {
-  buttonColor: Button.ButtonColor.gray
+  buttonColor: Button.ButtonColor.brandSecondaryDefault
 };
 
 BorderedCallToAction.propTypes = {
@@ -61,7 +61,7 @@ const styles = {
   outerBox: {
     width: styleConstants['content-width'],
     backgroundColor: color.white,
-    borderColor: color.border_gray,
+    borderColor: color.neutral_dark20,
     boxSizing: 'border-box',
     marginBottom: 20,
     display: 'flex',
@@ -84,12 +84,12 @@ const styles = {
     fontSize: 20,
     fontFamily: 'Gotham 5r',
     fontWeight: 'bold',
-    color: color.teal,
+    color: color.neutral_dark,
     paddingTop: extraSpace
   },
   description: {
     fontSize: 14,
-    color: color.charcoal,
+    color: color.neutral_dark,
     paddingTop: 5,
     paddingBottom: extraSpace
   },
@@ -97,8 +97,8 @@ const styles = {
     flexShrink: 0,
     marginLeft: extraSpace,
     marginRight: extraSpace,
-    paddingLeft: extraSpace,
-    paddingRight: extraSpace
+    paddingLeft: 16,
+    paddingRight: 16
   }
 };
 

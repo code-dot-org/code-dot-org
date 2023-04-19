@@ -77,3 +77,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>Menyelesaikan kegiatan CS Connection dan/atau mencari opsi lainnya untuk kelas Anda? Harap <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">sampaikan masukan Anda</a> atau ide-ide untuk pelajaran lainnya di sini!</em>
+
+{{ visit_partial_event_logger }}

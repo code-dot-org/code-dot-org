@@ -5,6 +5,9 @@
         "csd-2022/accelerometer-events": {
           "display_name": "가속도계 이벤트"
         },
+        "csd-2022/accuracy-in-ai-lab": {
+          "display_name": "AI Lab에서의 정확도"
+        },
         "csd-2022/ai-lab": {
           "display_name": "AI 랩"
         },
@@ -22,6 +25,9 @@
         },
         "csd-2022/collision-detection": {
           "display_name": "충돌 감지"
+        },
+        "csd-2022/creating-a-survey": {
+          "display_name": "설문조사 만들기"
         },
         "csd-2022/css-overview": {
           "display_name": "개요"
@@ -46,6 +52,9 @@
         },
         "csd-2022/html-tags": {
           "display_name": "HTML 태그"
+        },
+        "csd-2022/importing-a-model-in-app-lab": {
+          "display_name": "App Lab에서 모델 가져오기"
         },
         "csd-2022/introduction-to-ai-lab": {
           "display_name": "AI 연구실 소개"
@@ -77,17 +86,32 @@
         "csd-2022/patterns-overview": {
           "display_name": "개요"
         },
-        "csd-2022/physical-input": {
-          "display_name": "물리적 인풋"
-        },
         "csd-2022/playing-notes": {
           "display_name": "플레잉 노트 "
+        },
+        "csd-2022/problem-solving-process": {
+          "display_name": "문제 해결 과정"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "문제 해결 과정"
+        },
+        "csd-2022/selecting-a-label": {
+          "display_name": "라벨 선택"
+        },
+        "csd-2022/selecting-features": {
+          "display_name": "특징 선택"
         },
         "csd-2022/sprite-properties": {
           "display_name": "스프라이트 속성"
         },
         "csd-2022/sprites": {
           "display_name": "스프라이트"
+        },
+        "csd-2022/using-data-with-categorical-features": {
+          "display_name": "범주형 특징이 있는 데이터 사용"
+        },
+        "csd-2022/using-data-with-numerical-features": {
+          "display_name": "수치적 특징이 있는 데이터 사용"
         },
         "csd-2022/variables": {
           "display_name": "변수"
@@ -97,6 +121,9 @@
         },
         "csd-2022/velocity-and-the-counter-pattern": {
           "display_name": "속도 및 카운터 패턴"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "웹 랩"
         },
         "csd-2022/which-type-of-chart": {
           "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"

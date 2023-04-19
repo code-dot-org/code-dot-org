@@ -23,10 +23,6 @@ export class JavalabEditorTabMenu extends Component {
     orderedTabKeys: PropTypes.array
   };
 
-  state = {
-    dropdownOpen: false
-  };
-
   dropdownElements = () => {
     const {
       renameFromTabMenu,

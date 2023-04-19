@@ -5,12 +5,9 @@ import color from '@cdo/apps/util/color';
 import JavalabConsole from './JavalabConsole';
 import JavalabEditor from './JavalabEditor';
 import JavalabPanels from './JavalabPanels';
-import {
-  appendOutputLog,
-  setDisplayTheme,
-  setIsRunning,
-  setIsTesting
-} from './javalabRedux';
+import {setIsRunning, setIsTesting} from './redux/javalabRedux';
+import {appendOutputLog} from './redux/consoleRedux';
+import {setDisplayTheme} from './redux/viewRedux';
 import {DisplayTheme} from './DisplayTheme';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions, {
@@ -204,6 +201,7 @@ class JavalabView extends React.Component {
             topLeftPanel={height => (
               <TopInstructions
                 mainStyle={styles.instructions}
+                isOldPurpleColorHeader
                 standalone
                 displayDocumentationTab
                 displayReviewTab
@@ -319,13 +317,13 @@ export default connect(
   state => ({
     isProjectLevel: state.pageConstants.isProjectLevel,
     channelId: state.pageConstants.channelId,
-    displayTheme: state.javalab.displayTheme,
+    displayTheme: state.javalabView.displayTheme,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isRunning: state.javalab.isRunning,
     isTesting: state.javalab.isTesting,
     canRun: !state.javalab.isTesting,
     canTest: !state.javalab.isRunning,
-    editorColumnHeight: state.javalab.editorColumnHeight,
+    editorColumnHeight: state.javalabView.editorColumnHeight,
     longInstructions: state.instructions.longInstructions,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     awaitingContainedResponse: state.runState.awaitingContainedResponse,

@@ -1582,7 +1582,9 @@
   hoc_overview_dance_title: "Rəqs şənliyi"
   hoc_overview_dance_subtitle: "Dostlarnızla paylaşmaq üçün rəqs şənliyini kodlaşdırarın. Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, və 25 -dən çox iştirakçı ilə!"
   hoc_overview_dance_2019_subtitle: "Dostlarnızla paylaşmaq üçün rəqs şənliyini kodlaşdırarın. Katy Perry, Shawn Mendes, Şənlikdə panika!, Lil Nas X, Jonas Brothers, Nicki Minaj, və 34-dən çox iştirakçı ilə!"
+  hoc_overview_dance_2022_subtitle: "Dostlarınızla bölüşmək üçün Rəqs Partiyası kodla. Beyonse, Harri Stayts, Lizzo, Lil Nas X, Selena Qomez, Disneyin \"Encanto\"larından musiqi və daha çox şey ifa edir!"
   hoc_overview_hello_world_2022_subtitle: "Yaratdığınız dünyada interaktiv simvolları kodlaşdırmaq üçün dörd əyləncəli mövzudan birini seçin."
+  hoc_overview_hello_world_2022_alt_text: "Animasiyalı astronavt və heyvan personajları Yer kürəsi illüstrasiyası ətrafında üzürlər."
   hoc_overview_title: "Code.org-dan Kod saatı Aktivlikləri"
   hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">Kod Saatı</a> 180-dən çox ölkədə on milyonlarla tələbəni əhatə edən qlobal hərəkatdır. Hər kəs, istənilən yerdə Kod Saatı tədbiri təşkil edə və ya 45-dən çox dildə mövcud olan 500+ bir saatlıq dərsliklərdən hər hansı birini sınaya bilər."
   hoc_overview_subtitle_markdown: "[Hour of Code](https://hourofcode.com) 180+ ölkədə on milyonlarla tələbəni əhatə edən qlobal hərəkatdır. Hər kəs, istənilən yerdə Kod Saatı tədbiri təşkil edə və ya 45-dən çox dildə mövcud olan 500+ bir saatlıq dərsliklərdən hər hansı birini sınaya bilər."
@@ -1628,9 +1630,13 @@
   hoc2018_mc_educators_box3_title: "Pulsuz tələbə seminarında iştirak edin"
   hoc2018_mc_educators_box3_desc: "Pulsuz Kod Saatı seminarı üçün ərazinizdəki Microsoft Mağazasına baş çəkin. Altı yaşdan yuxarı bütün bacarıq səviyyələrində olan iştirakçılar üçün."
   hoc2018_mc_educators_box3_button: "Bir atelye tapın"
+  hoc2022_mc_educators_box3_desc_markdown: 'Bunu tələb [pulsuz kurs](%{free_course_link}) tələbi ilə istifadə edin və ya qonaq müəllimlə canlı Kod Saatı seminarında iştirak etmək üçün bütün sinifinizi qeydiyyatdan keçirin. Bakı, 2006, s.66- 11. '
+  hoc2022_mc_educators_box3_button: "İndi qeydiyyatdan keçin"
   hoc2018_mc_educators_box4_title: "Daha çox kompüter elmi resursuna daxil olun"
   hoc2018_mc_educators_box4_desc: "Microsoft-dan rəqəmsal bacarıqlar və kompüter elmləri üzrə təhsil resursları ilə icmanızda dəyişiklik yaradın."
   hoc2018_mc_educators_box4_button: "Resursları araşdırın"
+  hoc2022_mc_educators_box4_desc: "200 saat kompüter elmləri üzrə tədris proqramı ilə K-12 öyrənənlərdə STEM ehtirası ruhlandır. Blokdan pythona qədər, peşəkar inkişaf tərəfindən dəstəklənir."
+  hoc2022_mc_educators_box4_button: "Öyrənməyə davam edin"
   hoc2018_mc_watch_videos: "Başlamazdan əvvəl bu həvəsləndirici videolardan birinə baxın"
   hoc2018_mc_videos_more: "Məşhurlar və Aktyorların iştirakı ilə daha çox <a href='%{inspiring_videos_playlist}'>həvəsləndirici videolar</a>"
   hoc2018_mc_careers_more: "Texnologiya sahəsindəki məşhurların iştirakı ilə daha çox <a href='%{careers_url}' target='_blank'>həvəsləndirici videolar</a>"
@@ -1746,6 +1752,9 @@
   hoc2021_mc_mee_villages_description: 'Tələbələrinlə Minecraft''da kodlaşdırmanın əsaslarını öyrən: Təhsil Buraxılışı'
   hoc2021_mc_mee_ai_title: "Yaxşılıq üçün AI"
   hoc2021_mc_mee_ai_description: 'Tələbələrinlə Al''ı kəşf et və kodlaşdırmanən əsaslarını öyrən: Education Eddition.'
+  hoc2022_mc_mee_title: "Minecraft Qurtuluş Əmlakı"
+  hoc2022_mc_mee_description: 'Sübh tezdən sirli köşkdən qaçıb milyon zümrüd qazan! Yeni Minecraft Kod Saarı təlimatı hal-hazırda Minecraft: Education Edition-da Windows, Mac, Chromebook, Ipad və Mobile-da mövcuddur. Pulsuz tədris resursları, təlimlər və videolarla başlayın. '
+  hoc2022_mc_mee_timecraft_description: 'Minecraft: Education Edition adlı bu pulsuz kodlaşdırma dərsində gələcəyi xilas etmək üçün vaxtda geriyə səyahət edin.'
   footer_powered_by_aws: "Amazon Veb Xidmətləri və “Powered by AWS” loqosu Amazon.com, Inc. və ya onun ABŞ və/və ya digər ölkələrdəki filiallarının ticarət nişanlarıdır."
   footer_built_on_github: "Microsoft tərəfindən GitHub-da qurulub"
   codebytes_skinny_banner_title: "7-11 dekabr CodeBytes canlı mini dərslərimizə qoşulun!"
@@ -1820,6 +1829,13 @@
   hoc2022_cta_primary: "Yeniliklərə baxın"
   hoc2022_cta_secondary: "Daha çox fəaliyyət sınayın"
   hoc2022_landing_page_explore_title: "Araşdır"
+  hoc2022_landing_page_explore_description: "Kompüter elmləri ilə yeni dünyalara qapılar açın!"
   hoc2022_landing_page_play_title: "Oyna"
+  hoc2022_landing_page_play_description: "Sahəni götür və hesab et!"
   hoc2022_landing_page_create_title: "Düzəlt"
+  hoc2022_landing_page_create_description: "Qəribə və gözəl bir şey edin!"
+  hoc2022_landing_page_banner_alt_left: "Kosmosda Saturnun yanında rəqs edən yadplanetli"
   try_it_yourself: "Özünüz edin!"
+  try_an_activity: "Aktivitə sınayın"
+  see_more_activities: "Daha çox aktivitəyə bax"
+  microsoft_logo_alt: "Microsoft Loqosu"

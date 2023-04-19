@@ -977,8 +977,12 @@
   coursef-2020_name: 과정 F (2020)
   coursea-2021_name: 과정 A (2021)
   coursed-2021_name: 과정 D (2021)
-  coursea-2022_name: 과정 A (2021)
-  coursed-2022_name: 과정 D (2021)
+  coursea-2022_name: 과정 A (2022)
+  courseb-2022_name: 과정 B (2022)
+  coursec-2022_name: 과정 C (2022)
+  coursed-2022_name: 과정 D (2022)
+  coursee-2022_name: 과정 E (2022)
+  coursef-2022_name: 과정 F (2022)
   express-2018_name: 익스프레스 과정 (2018)
   pre-express-2018_name: 프리 리더 익스프레스 과정 (2018)
   express-2019_name: 익스프레스 과정(2019)
@@ -1811,6 +1815,7 @@
   ai_cognimates: "코그니메이츠"
   ai_cognimates_description: "게임을 만들고 로봇을 프로그램하고 트레이닝하기 위한 AI 교육 플랫폼."
   ai_try_activity: "활동 시도"
+  outbreak_tile_title: "아웃브레이크"
   outbreak_tile_subtitle: "몬스터 타운이 바이러스에 감염되었습니다! 아웃브레이크 시뮬레이터의 코드를 작성해 몬스터 타운 이웃들에게 어떤 일이 일어날지를 예측하세요."
   outbreak_tile_alt: "한 무리의 보라색 괴물을 통한 바이러스 확산을 보여주는 시뮬레이션"
   footer_cookie_notice: "쿠키 방침"

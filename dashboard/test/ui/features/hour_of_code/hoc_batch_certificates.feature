@@ -9,7 +9,7 @@ Scenario: Printing a batch of certificates
 
   When I wait until I am on "http://studio.code.org/print_certificates/batch"
   And I wait until element ".hide-print" is visible
-  Then evaluate JavaScript expression "$('img').length === 3"
+  Then evaluate JavaScript expression "$('#print-certificate-batch img').length === 3"
 
 @eyes
 Scenario: Eyes test for oceans certificate on bulk print page

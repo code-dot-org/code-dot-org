@@ -53,7 +53,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
 
     assert_cached_queries(4) do
       get user_app_options_path,
-        headers: {'HTTP_USER_AGENT': 'test'}
+        headers: {HTTP_USER_AGENT: 'test'}
       assert_response :success
     end
   end

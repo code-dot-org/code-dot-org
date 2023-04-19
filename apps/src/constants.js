@@ -187,7 +187,4 @@ export const TOOLBOX_EDIT_MODE = 'toolbox_blocks';
 
 export const NOTIFICATION_ALERT_TYPE = 'notification';
 
-export const BlocklyVersion = {
-  CDO: 'CDO',
-  GOOGLE: 'Google'
-};
+export const START_BLOCKS = 'start_blocks';

@@ -226,16 +226,16 @@
           "Infinity_repeat_callout": "Place les bloc « Déplacer » ici à l'intérieur"
         },
         "InspirationalArtwork": {
-          "InspirationalArtwork_1": "Essaie le nouveau bloc \"commentaire\" sous cette étiquette pour te laisser des notes à l'intérieur de ton programme !"
+          "InspirationalArtwork_1": "Essaie le nouveau bloc « commentaire » sous cette étiquette pour te laisser des notes à l'intérieur de ton programme !"
         },
         "InspirationalArtwork_2018": {
           "InspirationalArtwork_1": "Essaie d'utiliser le bloc `commentaire` sous cette étiquette pour te laisser des notes, à l'intérieur de ton programme !\n"
         },
         "MC HOC 2016 Level 2-2": {
-          "craft2_run_button_callout": "Lorsque tu es prêt, appuie sur \"Démarrer\" pour tester ton programme."
+          "craft2_run_button_callout": "Lorsque tu es prêt, appuie sur « Démarrer » pour tester ton programme."
         },
         "MC HOC 2016 New Walk": {
-          "MC_HOC_2016_New_Walk_callout2": "Appuie sur \"Démarrer\" pour commencer à bouger."
+          "MC_HOC_2016_New_Walk_callout2": "Appuie sur « Démarrer » pour commencer à bouger."
         },
         "MC_HOC_2017_03_Cole": {
           "MC_HOC_2017_03_Cole_1": "Ceci est une boucle « répéter » ! Déplace-là vers l'espace de travail et ajoutes-y le code que tu veux exécuter en boucle."
@@ -294,7 +294,7 @@
         },
         "New Artist Project": {
           "New Artist Project_callout1": "Cliques sur les catégories pour voir les blocs dans ta boîte à outils! Fais glisser les blocs vers l'espace de travail et ajoutes-les à ton programme.",
-          "New Artist Project_callout2": "Clique sur \"Démarrer\" pour sauvegarder et Démarrer ton programme",
+          "New Artist Project_callout2": "Clique sur « Démarrer » pour sauvegarder et Démarrer ton programme",
           "sign_in_to_save_project": "Vous souhaitez accéder à votre projet plus tard ? Connectez-vous pour enregistrer ce projet sur votre compte !"
         },
         "New Frozen Project": {
@@ -302,7 +302,7 @@
         },
         "New Play Lab Project": {
           "New Play Lab Project_callout1": "Clique sur les catégories pour voir les blocs dans ta boîte à outils. Amener les blocs dans l'espace de travail les ajoute à ton programme.",
-          "New Play Lab Project_callout2": "Clique sur \"Démarrer\" pour sauvegarder et Démarrer ton programme",
+          "New Play Lab Project_callout2": "Clique sur « Démarrer » pour sauvegarder et Démarrer ton programme",
           "sign_in_to_save_project": "Vous souhaitez accéder à votre projet plus tard ? Connectez-vous pour enregistrer ce projet sur votre compte !"
         },
         "OPD-K5-forloops-5": {
@@ -360,10 +360,10 @@
           "craft_inside_repeat": "Répète des actions en plaçant des blocs ici à l'intérieur"
         },
         "Robot Doodle": {
-          "4-5_Artist_Patterns_Free_Play_2": "Essaie le nouveau bloc \"commentaire\" sous cette étiquette pour te laisser des notes à l'intérieur de ton programme !"
+          "4-5_Artist_Patterns_Free_Play_2": "Essaie le nouveau bloc « commentaire » sous cette étiquette pour te laisser des notes à l'intérieur de ton programme !"
         },
         "Robot Doodle_2018": {
-          "4-5_Artist_Patterns_Free_Play_2": "Essaie le nouveau bloc \"commentaire\" sous cette étiquette pour te laisser des notes à l'intérieur de ton programme !"
+          "4-5_Artist_Patterns_Free_Play_2": "Essaie le nouveau bloc « commentaire » sous cette étiquette pour te laisser des notes à l'intérieur de ton programme !"
         },
         "Underground Avoiding Lava": {
           "craft_callout_moveforward": "Ce code recherchera de la lave, peux-tu ajouter une commande pour avancer ?"
@@ -536,7 +536,7 @@
           "courseA_maze_seq1_1": "Clique sur l'ampoule si tu as besoin d'un indice !"
         },
         "courseA_maze_seq2": {
-          "courseA_maze_seqA_callout1": "Utilise le bouton \"Étape\" pour avancer pas-à-pas dans le programme. Cela t'aidera à trouver le bug!"
+          "courseA_maze_seqA_callout1": "Utilise le bouton « Étape » pour avancer pas-à-pas dans le programme. Cela t'aidera à trouver le bug!"
         },
         "courseA_maze_seq4": {
           "made_of_stone": "Ces blocs sont en pierre. Tu peux les déplacer, mais tu ne peux pas les effacer!"
@@ -632,7 +632,7 @@
           "courseB_maze_seq1": "Clique sur l'ampoule si tu as besoin d'un indice !"
         },
         "courseB_maze_seq2": {
-          "courseB_maze_seq2_callout1": "Utilise le bouton \"Étape\" pour avancer pas-à-pas dans le programme. Cela t'aidera à trouver le bug!"
+          "courseB_maze_seq2_callout1": "Utilise le bouton « Étape » pour avancer pas-à-pas dans le programme. Cela t'aidera à trouver le bug!"
         },
         "courseB_maze_seq3": {
           "courseB_maze_seq3_1": "Les blocs gris sont faits de pierre et ne peuvent pas être jetés."
@@ -1182,10 +1182,10 @@
           "courseF_artist_for1_1": "La boîte à outils est en mode « catégories » pour laisser plus de place à ton code. Les boucles « pour » se trouvent ici."
         },
         "courseF_artist_fwp1": {
-          "courseF_artist_fwp1_1": "Clique sur le bouton \"éditer \" pour changer le code à l'intérieur de la fonction."
+          "courseF_artist_fwp1_1": "Clique sur le bouton « éditer «  pour changer le code à l'intérieur de la fonction."
         },
         "courseF_artist_fwp4": {
-          "courseF_artist_fwp4_1": "Pour réaliser ton polygone, assure-toi de toujours tourner de 360 ÷ \"côtés\" degrés."
+          "courseF_artist_fwp4_1": "Pour réaliser ton polygone, assure-toi de toujours tourner de 360 ÷ « côtés » degrés."
         },
         "courseF_artist_fwp5": {
           "courseF_artist_fwp5_1": "Tu trouveras la fonction polygone ici."
@@ -1276,7 +1276,7 @@
           "courseF_bee_fwp3_1": "Cette même fonction peut être utilisée pour vérifier l’existence d’espaces vides ainsi que de nuages."
         },
         "courseF_bee_fwp4": {
-          "courseF_bee_fwp4_1": "Appuie sur le bouton \"edit\" pour ajouter un paramètre à cette fonction."
+          "courseF_bee_fwp4_1": "Appuie sur le bouton « edit » pour ajouter un paramètre à cette fonction."
         },
         "courseF_bee_fwp_challenge2": {
           "courseF_bee_fwp_challenge2_callout1": "Cette fonction fera un bon travail avec le maïs, mais qu'en est-il des autres légumes ?"
@@ -1300,7 +1300,7 @@
           "courseF_playlab_variables5c_1": "Tu trouveras ton bloc variable ici."
         },
         "courseF_playlab_variables7c": {
-          "courseF_playlab_variables7c_1": "Trouve le bloc \"demander\" ici !"
+          "courseF_playlab_variables7c_1": "Trouve le bloc « demander » ici !"
         },
         "coursea_maze_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "Après avoir enclenché tous les blocs ensemble, appuie sur « Exécuter » pour lancer ton programme."
@@ -1337,7 +1337,7 @@
           "snowflake_dropdown": "Utilise ce menu déroulant pour créer différents flocons de neige !"
         },
         "frozen line": {
-          "run": "Clique sur \"Démarrer\" pour essayer ton programme!",
+          "run": "Clique sur « Démarrer » pour essayer ton programme!",
           "move_elsa_forward": "Fais glisser un bloc «Avancer» et emboite-le sous le bloc « Lors du lancement » pour faire avancer Elsa."
         },
         "frozen perpendicular": {
@@ -1433,7 +1433,7 @@
           "Function_intro_Ryan_1": "Cette petite instruction indique à l'ordinateur d'exécuter le GROS morceau de code du même nom dans l'espace de travail."
         },
         "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_1": "Ceci est une boucle « repeat » !  Cliquez dessus dans l'espace de travail et ajoutez le code que vous voulez exécuter en boucle."
+          "MC_HOC_2017_03_Cole_1": "Ceci est une boucle « répéter » ! Déplace-là vers l'espace de travail et ajoutes-y le code que tu veux exécuter en boucle."
         },
         "MC_HOC_2017_04_Cole_2021": {
           "MC_HOC_2017_04_Cole_a": "L'Agent peut planer sur l'eau, mais le joueur ne le peut pas !"
@@ -1494,7 +1494,7 @@
           "courseA_playLab_events6_1": "Ceci te permet de choisir un son « au hasard », ce qui veut dire que tu ne sais pas ce qui sortira avant de l'entendre !"
         },
         "courseB_Scrat_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "Après avoir connecté tous les blocs, appuie sur \"Exécuter\" pour lancer ton programme."
+          "grade2_CaringForNewPet_0_1": "Après avoir connecté tous les blocs, appuie sur « Exécuter » pour lancer ton programme."
         },
         "courseB_Scrat_ramp3a_2021": {
           "courseC_maze_programming2_1": "Voici la boîte à outils. On peut y trouver des blocs supplémentaires pour compléter les casse-têtes."
@@ -1603,7 +1603,7 @@
           "": "Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que tu veux !"
         },
         "courseE_aboutme_2_2021": {
-          "": "Clique ici !\n"
+          "": "Clique ici !\n"
         },
         "courseE_artist_functions1_dani": {
           "courseD_artist_functions1_1": "Commençons par utiliser ce bloc pour aider à créer le premier carré."
@@ -1650,16 +1650,16 @@
           "courseF_bee_functions_1_2018_1": "Tu peux trouver tes variables en dessous d'ici !\n"
         },
         "courseF_events_predict": {
-          "behaviors_edit": "Clique ici pour voir comment ce comportement fonctionne.\n"
+          "behaviors_edit": "Clique ici pour voir comment ce comportement marche. \n"
         },
         "coursea_maze_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "Après avoir enclenché tous les blocs ensemble, appuie sur « Exécuter » pour lancer ton programme."
+          "grade2_CaringForNewPet_0_1": "Après avoir connecté tous les blocs, appuie sur « Démarrer » pour lancer ton programme."
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Fais glisser les blocs de la boîte à outils jusqu'à ton espace de travail."
         },
         "courseF_apps_aquarium": {
-          "run_button": "Appuie d'abord sur le bouton Exécuter ! ",
+          "run_button": "D'abord, appuie sur le bouton « Démarrer » ! ",
           "visualizationResizeBar": "Fais glisser les 3 points pour redimensionner la zone de jeu. "
         },
         "courseF_apps_card": {
@@ -1670,7 +1670,7 @@
           "visualizationResizeBar": "Fais glisser les 3 points pour changer les dimensions de la zone de jeu. "
         },
         "courseF_apps_collector": {
-          "run_button": "Appuie d'abord sur le bouton Exécuter ! ",
+          "run_button": "D'abord, appuie sur le bouton « Démarrer » ! ",
           "visualizationResizeBar": "Fais glisser les 3 points pour changer les dimensions de la zone de jeu. "
         },
         "courseF_apps_madlib": {

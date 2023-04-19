@@ -1,5 +1,6 @@
 ---
 title: Contact your Regional Partner
+theme: responsive
 ---
 
 # Contact your Regional Partner

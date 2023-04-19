@@ -6,7 +6,23 @@
           "name": "Web Lab",
           "categories": {
             "html_tags": {
-              "name": "HTML tag-y"
+              "name": "HTML tag-y",
+              "expressions": {
+                "style": {
+                  "examples": {
+                    "Style": {
+                      "name": "Štýl"
+                    }
+                  }
+                },
+                "title": {
+                  "examples": {
+                    "Title": {
+                      "name": "Názov"
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -14,19 +30,129 @@
           "name": "Game Lab",
           "categories": {
             "game_lab": {
-              "name": "Game Lab"
+              "name": "Game Lab",
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprajt"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprajt"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Čierna a biela"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Prehrá MP3 zvukový súbor zo zadanej URL adresy."
+                }
+              }
             },
             "sprites": {
-              "name": "Sprajty"
+              "name": "Sprajty",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Špirála"
+                    }
+                  }
+                }
+              }
             },
             "groups": {
-              "name": "Skupiny"
+              "name": "Skupiny",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprajt"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprajt"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprajt"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Farba"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Farba"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
-              "name": "Kreslenie"
+              "name": "Kreslenie",
+              "expressions": {
+                "background": {
+                  "examples": {
+                    "RGB Colors": {
+                      "name": "RGB farby"
+                    }
+                  }
+                },
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Star"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Matematika"
+              "name": "Matematika",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Najnižšie vrátené číslo"
+                    },
+                    "max": {
+                      "description": "Najvyššie vrátené číslo"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Najnižšie vrátené číslo"
+                    },
+                    "max": {
+                      "description": "Najvyššie vrátené číslo"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
               "name": "Premenné"
@@ -40,14 +166,203 @@
           "name": "App Lab",
           "description": "App Lab je programovacie prostredie, v ktorom si môžeš vytvoriť jednoduché aplikácie. Navrhni vlastnú appku, naprogramuj ju pomocou blokov alebo JavaScriptu a zdieľaj ju v priebehu niekoľkých sekúnd.",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Rastieme a zmenšujeme sa"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcia"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Prehrá MP3 zvukový súbor zo zadanej URL adresy."
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "predmet"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "predmet"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "predmet"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "predmet"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "predmet"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "predmet"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "predmet"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "predmet"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "predmet"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "predmet"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "Dáta"
+              "name": "Dáta",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "predmet"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "predmet"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "predmet"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "predmet"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcia"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "predmet"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "predmet"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcia"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Matematika"
+              "name": "Matematika",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Najnižšie vrátené číslo"
+                    },
+                    "max": {
+                      "description": "Najvyššie vrátené číslo"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Najnižšie vrátené číslo"
+                    },
+                    "max": {
+                      "description": "Najvyššie vrátené číslo"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Premenné"
+              "name": "Premenné",
+              "expressions": {
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Interaktívny príbeh"
+                    }
+                  }
+                },
+                "addPair": {
+                  "return_value": "Žiadne"
+                }
+              }
             },
             "functions": {
               "name": "Funkcie"

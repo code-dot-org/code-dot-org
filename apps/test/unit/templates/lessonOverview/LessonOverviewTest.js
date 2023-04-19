@@ -13,6 +13,9 @@ import {
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
 import _ from 'lodash';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import sinon from 'sinon';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 describe('LessonOverview', () => {
   let defaultProps;
@@ -304,10 +307,7 @@ describe('LessonOverview', () => {
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(1);
-    const dropdownLinks = wrapper
-      .find(DropdownButton)
-      .first()
-      .props().children;
+    const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
     expect(dropdownLinks.map(link => link.props.href)).to.eql([
       '/link/to/lesson_plan.pdf',
       '/link/to/script_resources.pdf'
@@ -328,10 +328,7 @@ describe('LessonOverview', () => {
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(1);
-    const dropdownLinks = wrapper
-      .find(DropdownButton)
-      .first()
-      .props().children;
+    const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
     expect(dropdownLinks.map(link => link.props.href)).to.eql([
       '/link/to/lesson_plan.pdf'
     ]);
@@ -355,10 +352,7 @@ describe('LessonOverview', () => {
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(1);
-    const dropdownLinks = wrapper
-      .find(DropdownButton)
-      .first()
-      .props().children;
+    const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
     expect(dropdownLinks.map(link => link.props.href)).to.eql([
       '/link/to/script_resources.pdf'
     ]);
@@ -382,15 +376,24 @@ describe('LessonOverview', () => {
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(1);
-    const dropdownLinks = wrapper
-      .find(DropdownButton)
-      .first()
-      .props().children;
+    const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
     expect(dropdownLinks.map(link => link.props.href)).to.eql([
       '/link/to/script_resources.pdf'
     ]);
     expect(dropdownLinks.map(link => link.props.children)).to.eql([
       'Print Handouts'
     ]);
+  });
+
+  it('logs Amplitude event when rendered', () => {
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    shallow(<LessonOverview {...defaultProps} />);
+
+    expect(analyticsSpy).to.have.been.calledOnce;
+    assert.equal(
+      analyticsSpy.getCall(0).firstArg,
+      EVENTS.LESSON_OVERVIEW_PAGE_VISITED_EVENT
+    );
+    analyticsSpy.restore();
   });
 });

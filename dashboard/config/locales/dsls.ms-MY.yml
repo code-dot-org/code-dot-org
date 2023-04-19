@@ -11651,22 +11651,14 @@ ms-MY:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat akan sampai kepada buah oak. Tiada pepijat dalam kod.
-          feedback: Tidak betul! Mula-mula, Scrat berpusing ke arah yang salah, kemudian
-            Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
         - text: Scrat tidak akan sampai kepada buah oak kerana ia berpusing ke arah
             yang salah.
           correct: true
-          feedback: Betul! Mula-mula, Scrat berpusing ke arah yang salah, kemudian
-            Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
         - text: Scrat tidak akan sampai kepada buah oak kerana blok `bergerak ke hadapan`
             tidak mencukupi.
-          correct: true
-          feedback: Betul! Mula-mula, Scrat berpusing ke arah yang salah, kemudian
-            Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
         - text: Scrat tidak akan bergerak daripada blok pertama.
-          feedback: Terdapat dua pepijat dalam kod. Mula-mula, Scrat berpusing ke
-            arah yang salah, kemudian Scrat tidak sempat bergerak ke hadapan untuk
-            mencapai buah oak itu.
+          feedback: Scrat tidak akan sampai kepada buah oak kerana ia berpusing ke
+            arah yang salah.
         questions:
         - text: Cari pepijat dalam kod ini. Adakah Scrat akan mencapai buah oak atau
             terdapat masalah?

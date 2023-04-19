@@ -17,6 +17,9 @@
         "csd-2022/changing-screens": {
           "display_name": "Изменение экранов"
         },
+        "csd-2022/circuit-playground": {
+          "display_name": "Обзор Окружной Игровой Площадки"
+        },
         "csd-2022/collision-detection": {
           "display_name": "Обнаружение столкновений"
         },
@@ -113,6 +116,12 @@
         "csd-2022/playing-notes": {
           "display_name": "Игра в Notes"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Процесс решения проблем"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Процесс решения проблем"
+        },
         "csd-2022/random-numbers": {
           "display_name": "Случайные числа"
         },
@@ -130,6 +139,9 @@
         },
         "csd-2022/velocity-and-the-counter-pattern": {
           "display_name": "Скорость и шаблон Счетчика"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Веб-лаборатория"
         },
         "csd-2022/which-type-of-chart": {
           "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"

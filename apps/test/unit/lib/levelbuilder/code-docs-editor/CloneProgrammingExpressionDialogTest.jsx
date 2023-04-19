@@ -111,10 +111,7 @@ describe('CloneFormDialog', () => {
     fetchStub
       .withArgs('/programming_expressions/7/clone')
       .returns(Promise.resolve({ok: true, json: () => returnData}));
-    wrapper
-      .find('Button')
-      .last()
-      .simulate('click');
+    wrapper.find('Button').last().simulate('click');
     return new Promise(resolve => setImmediate(resolve)).then(() => {
       expect(onCloneSuccessSpy).to.be.calledOnce;
       fetchStub.restore();
@@ -177,10 +174,7 @@ describe('CloneProgrammingExpressionDialog integration test', () => {
     fetchStub
       .withArgs('/programming_expressions/7/clone')
       .returns(Promise.resolve({ok: true, json: () => returnData}));
-    wrapper
-      .find('Button')
-      .last()
-      .simulate('click');
+    wrapper.find('Button').last().simulate('click');
     return new Promise(resolve => setImmediate(resolve)).then(() => {
       wrapper.update();
       expect(wrapper.find('Button').length).to.equal(1);
