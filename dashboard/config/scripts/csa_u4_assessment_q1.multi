@@ -26,3 +26,5 @@ System.out.print(val + “ “);
 ```
 What is printed as a result of executing the code segment?
 MARKDOWN
+
+allow_multiple_attempts true

@@ -7,3 +7,5 @@ right 'Separating out headings from paragraphs'
 wrong 'Putting borders on an image'
 wrong 'Adding information about the copyright'
 right 'Organizing text into a list'
+
+allow_multiple_attempts true
