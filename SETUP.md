@@ -107,6 +107,8 @@ Notes:
 - These steps may need to change over time as 3rd party tools update to have versions compatible with the new architecture.
 - As macOS Catalina is no longer receiving security updates, we cannot recommend using it. If you still need support, see [old setup.md instructions for Catalina](https://github.com/code-dot-org/code-dot-org/blob/138d08a6f304c289e2b4388f513d81954ec85158/SETUP.md#os-x-catalina)
 
+Setup steps for macOS:
+
 1. _(M1 Mac users only)_ Install Rosetta 2.
 
   - Check if Rosetta is already installed: `/usr/bin/pgrep -q oahd && echo Yes || echo No`
