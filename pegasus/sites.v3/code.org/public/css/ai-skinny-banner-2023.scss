@@ -1,6 +1,6 @@
 @import "color", "font", "breakpoints";
 
-.ai-skinny-banner {
+.ai-skinny-banner-2023-default {
   box-sizing: content-box;
   height: 130px;
   background: url("/images/banners/ai-bg.png") top center no-repeat;
@@ -11,7 +11,8 @@
   }
 
   @media screen and (max-width: $width-sm) {
-    padding: 1em 1em 1.5em;
+    padding: 1em 1em 0.5em;
+    height: unset;
   }
 
   a:hover,
@@ -45,6 +46,11 @@
       width: 50px;
       margin-right: 1.5em;
     }
+
+    @media screen and (max-width: $width-xs) {
+      width: 50px;
+      margin: 0 0 1em 0;
+    }
   }
 
   .text-wrapper {
@@ -60,6 +66,11 @@
       width: 75%;
     }
 
+    @media screen and (max-width: $width-xs) {
+      width: 100%;
+      text-align: center;
+    }
+
     h1 {
       font-family: $barlowSemiCondensed-semibold;
       font-size: 2.125em;
@@ -68,7 +79,7 @@
       margin: 0 auto 6px;
 
       @media screen and (max-width: $width-sm) {
-        font-size: 1.875em;
+        font-size: 1.65em;
       }
     }
 
