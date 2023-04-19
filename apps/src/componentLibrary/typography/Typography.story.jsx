@@ -6,16 +6,10 @@ export default {
   component: Typography
 };
 
-const DEFAULT_PROPS = {
-  semanticTag: 'h1',
-  visualApproach: 'heading-xxl',
-  children: 'H1 as H1. This is a Typography Component.'
-};
-
 //
 // TEMPLATE
 //
-const Template = args => <Typography {...DEFAULT_PROPS} {...args} />;
+const Template = args => <Typography {...args} />;
 
 //
 // STORIES
