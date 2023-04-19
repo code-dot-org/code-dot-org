@@ -365,7 +365,7 @@ class ProgressTableView extends React.Component {
             buttonLink={
               'https://studio.code.org/form/share_feedback_progress_table'
             }
-            dismissible={false}
+            dismissible={true}
           />
         </div>
         {this.props.currentView === ViewType.DETAIL ? (
