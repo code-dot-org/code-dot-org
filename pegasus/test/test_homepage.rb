@@ -1,5 +1,5 @@
-require_relative '../test_helper'
-require_relative '../../src/homepage'
+require_relative './test_helper'
+require_relative '../src/homepage'
 require 'cdo/rack/request'
 require 'minitest/autorun'
 require 'active_support/hash_with_indifferent_access'
