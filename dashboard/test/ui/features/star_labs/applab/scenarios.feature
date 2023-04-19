@@ -66,7 +66,7 @@ Feature: App Lab Scenarios
     Then element "#debug-output" has escaped text "\"text_input1: 123\""
 
     # In a text input, enter produces a change event but then blur does not.
-    And I press keys "456\n" for element ".screen > input"
+    And I press keys "456\n" for element "#text_input1"
     Then element "#debug-output" has escaped text "\"text_input1: 123\"\"text_input1: 123456\""
     And I blur selector "#text_input1"
     Then element "#debug-output" has escaped text "\"text_input1: 123\"\"text_input1: 123456\""
