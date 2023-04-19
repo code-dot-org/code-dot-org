@@ -8,4 +8,4 @@ markdown <<MARKDOWN
 Sometimes a cloud covers a flower, sometimes it covers a honeycomb! Either way, there will only ever be **one** flower or **one** honeycomb under each cloud. 
 MARKDOWN
 
-allow_multiple_attempts true
+allow_multiple_attempts false

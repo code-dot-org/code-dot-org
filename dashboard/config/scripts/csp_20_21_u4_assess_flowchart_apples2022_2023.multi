@@ -1,29 +1,26 @@
 name 'csp-20-21-u4-assess-flowchart apples2022_2023'
-
-wrong '1'
-right '2'
-wrong '3'
-wrong '4'
-
-
-markdown <<MARKDOWN
-What will the value of the variable `bags` be at the end of the flowchart shown here?
-
-![](https://images.code.org/fd182e09dd9404757873eb606d8a1c3b-image-1552685338258.jpg)
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-**Explanation:** See the graphic below for a walkthrough. 
-
-<img src="https://images.code.org/0cdf2b65a35e8aa7e003434d5194a150-image-1614023795128.gif"
-style="width:350px">
-
-Students practiced tracing and drawing flowcharts in lessons [Lesson 5 - Conditionals Explore](https://studio.code.org/s/csp4-2021/lessons/5) and [Lesson 6 - Conditionals Investigate](https://studio.code.org/s/csp4-2021/lessons/6). 
-
-::: details [**Essential Knowledge Connected To This Question**]
-* AAP-2.E - For relationships between two variables, expressions, or values: a. Represent using relational operators b. Evaluate expressions that use relational operators.
-:::
-
-MARKDOWN
-
-allow_multiple_attempts true
+encrypted 'FIvDGGrIAsu03WhZZF1ME4c0INt3KQNNaC2wcAWAyEHZEmaCrwM9I5SQulIn
+vMKAv4sOe20sCo4bOYD9+Sm20ckBGy9Ik6vI9nn5pY/O3fXATxKXer+I//sh
+mpbLNQ02wgUHrop3iXk5JoVIy/YcEyAZX3AT4lcKfM/aQzWPLQ61fAEGALWn
++9Rev7ozxkQOCI4oRHO3XSnE9JTFlx672K1DDtzsd5FHE/AHTb+W5adKg527
+DZnJpZajFB/pQiFy5UXdrJOkUlZml11loNh9HknreheKE6p1vKmMb3Q2RRB1
+hzBWrJulnKQkIsHnJKpiSCdRRQMX/tGbDvc+mGIzTlHcoohjINUG9MQVaTne
+/DAkEIGk15hUNYNtdvNHJ8Ri38mVN3LiN+UcQhEa09Q9gz/8XrkuJnY9VPDN
+MDPNa/Mq6yUbd6QhW7htfK7811jWXlNcn0Pth/PbsFwO/9W5zX/n/fO2/Ms/
+IcJkMtaEgcG6I7IQmNkE0e3XJTybTmoXe0zO+KO5vu5ASaSfYagFM/8JQWG/
+rgZPnXQkY+XlWA03n7AsuQFxcNpEkuV+OSW3QKOEg0xnTDQ3F5bwBl4Tmi5I
+uwaQS5wp013Qi2vapZTxbr/oGt0VpH8a7SCG7bGKfKNSmd8u9TSSFTHDNcjB
+vcpe7+k6sPukHq4Zs26SZ3sNKyR3OPVrdvdX26T9oMiOQW7tOiTWQJxyG09K
+4H7vHotHzg4ccjonHbcSO98UhFuJaqqovQ7LdAmc4yQ5YXrZTY5xcIaQlqDX
+2B35JlU6v33yYWg76aNjOkUFOLb+KPKUD7vL+811epP2csS/C+qgPRxcZpRD
+xiWcGKvfDY7lppjbxNX3dqAEFefc6Vox7EIAB8CTSBiUMVCXmHHl2Dbo9CQS
+K4EDjZORziZVh6IfjOwkubuw8cadkOMcQDzBm90LKGv7CUSUEAkUSQI5xUQu
+yeSQfq0A5eWGQwMEIzthMU051ZfABIunb5B9dmIigEwSnZnOC9YcOwbWMlMw
+6qNbozdx0GWf+m2guZTB4L9t6gl9T53QpIp5/Nsuh5ARyaJz+D+myAd0tASh
+EP4fxV9UXpYgSnXMOOdw6ztafeFnoAXZUXzP3+HLmlNgQcxNDdd1R73ilyo8
+oiAsX053SOZqxyuPyxtcqqQFZeOCY/JwzA7sJolAzkPko/Kylf6K8hZieEy/
+oo921YMp6BJoq5UMzRlftUDE7K/byVb0NQolQo6+iV3/e/dGTIQe9OCNjw+E
+UYqNu2PZfaHIYYgi9CrstHRd6QlrVNcLWAFAfghsZfeZeI00hE9yJPOAVbUv
+sc3gQyrWtnHRtR1uEfTnfsZzN3UvYzaAqAKoLXcdd349x69FxCuRbt+EN4Sn
+tct0C4w=
+'

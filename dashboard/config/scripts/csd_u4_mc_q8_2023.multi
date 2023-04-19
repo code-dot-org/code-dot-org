@@ -6,5 +6,3 @@ wrong 'Users don\'t like the colors in the app'
 teacher_markdown <<MARKDOWN
 **Content: Unit 4 Lesson 19**
 MARKDOWN
-
-allow_multiple_attempts true

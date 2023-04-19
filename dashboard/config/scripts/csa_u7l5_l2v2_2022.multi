@@ -28,5 +28,3 @@ public class Evaluator extends Calculator {
 }
 ```
 MARKDOWN
-
-allow_multiple_attempts true

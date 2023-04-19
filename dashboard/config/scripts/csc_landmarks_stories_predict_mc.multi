@@ -6,4 +6,4 @@ wrong 'When the tour guide touches Sam, **100 museum sprites** will pop. ', feed
 right 'When the tour guide touches Sam, the **background will change.**', feedback: 'Correct!'
 
 
-allow_multiple_attempts true
+allow_multiple_attempts false

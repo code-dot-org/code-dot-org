@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-12 22:30:41 UTC",
+    "serialized_at": "2023-04-14 22:21:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -606,11 +606,28 @@
       }
     },
     {
-      "key": "6727bfea-9114-4e1f-83ef-31395ad45601",
+      "key": "ee78feeb-796b-4cfd-9d3c-5cc06fb22771",
       "position": 1,
       "properties": {
-        "description": "Now that we've learned how to represent information digitally and how the Internet works, it's time to think about creating digital content for others to interact with.",
+        "description": "**Distribute:** Give each student a copy of the [Unit 3 Journal](\thttps://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit?usp=share_link) or have students set up a new section in their CSP journals.",
         "name": "Preview the Unit",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Journaling:** Journaling can take many different forms, but in general, it’s a tool for individual processing and reflection in a form that can be revisited as students develop their skills and understandings. The medium used for journaling can vary depending on classroom needs. \n\nFor more guidance and examples, check out the [**CSP Guide to Journaling**](https://docs.google.com/document/d/1d9Lq_-K5vNi8osaI-VNVqcgbb-aDr4BJtHADe-MRoKU/edit?usp=sharing)\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ee78feeb-796b-4cfd-9d3c-5cc06fb22771",
+        "lesson_activity.key": "b70bf83c-7531-4691-aefb-5053221bed41"
+      }
+    },
+    {
+      "key": "6727bfea-9114-4e1f-83ef-31395ad45601",
+      "position": 2,
+      "properties": {
+        "description": "Now that we've learned how to represent information digitally and how the Internet works, it's time to think about creating digital content for others to interact with.",
         "remarks": true
       },
       "seeding_key": {
@@ -620,7 +637,7 @@
     },
     {
       "key": "e977cf40-f15d-4aae-a238-1e584f3836b8",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What are apps? How do we interact with them? What kinds of things do apps do?*\n\n**Discussion Goal:** Apps are designed to solve a problem by providing a service\n\n* Entertainment: images, movies, tv shows, etc.\n* Social: social media, chatting\n* Commerce: marketplaces\n* Finding Information: search engines, maps\n \n Apps have screens or *User Interfaces* to display and collect information to and from users\n\n* These things collect information: Buttons, sliders, text boxes, etc.\n* This is the type of information that can be displayed: Sounds, images, video, text\n"
       },
@@ -2865,6 +2882,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event vs Seq Predict_2023"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -3087,6 +3107,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3 Debugging Predict_2023"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -3882,16 +3905,6 @@
       }
     },
     {
-      "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
-      "key": "csp_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide"
-      }
-    },
-    {
       "name": "CSP Unit 3 - Intro to App Design",
       "url": "https://docs.google.com/presentation/d/1A9JhTTjQ4IGsCgO_uStJ1l3EMd9pHJsmMbSMSBjJzMQ/copy",
       "key": "csp_unit_3_-_intro_to_app_design",
@@ -4050,6 +4063,18 @@
       "seeding_key": {
         "resource.key": "the_need_for_programming_languages"
       }
+    },
+    {
+      "name": "Unit 3 Journal",
+      "url": "https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit?usp=share_link",
+      "key": "unit_3_journal",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_3_journal"
+      }
     }
   ],
   "lessons_resources": [
@@ -4105,6 +4130,12 @@
       "seeding_key": {
         "lesson.key": "Introduction to Apps",
         "resource.key": "introduction_to_apps"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Apps",
+        "resource.key": "unit_3_journal"
       }
     },
     {
@@ -4171,19 +4202,24 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
+        "resource.key": "teacher_forum",
         "script.name": "csp3-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "teacher_forum",
+        "resource.key": "unit_3_journal",
         "script.name": "csp3-2023"
       }
     }
   ],
   "scripts_student_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "unit_3_journal",
+        "script.name": "csp3-2023"
+      }
+    }
   ],
   "vocabularies": [
 

@@ -162,6 +162,14 @@ sk:
         name: Osnovy
       teacher_forum/csd/2019:
         name: Fórum učiteľov
+      all_code_2/csd/2023:
+        name: Všetok kód
+      all_resources_2/csd/2023:
+        name: Všetky zdroje
+      all_standards_2/csd/2023:
+        name: Všetky normy
+      all_vocabulary_2/csd/2023:
+        name: Všetky pojmy
       all_code/csd/2021:
         name: Všetok kód
       all_resources_1/csd/2021:
