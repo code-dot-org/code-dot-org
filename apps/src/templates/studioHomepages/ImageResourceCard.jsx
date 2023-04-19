@@ -3,8 +3,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Button from '../Button';
 import color from '../../util/color';
-import Typography, {Heading1} from '../../componentLibrary/typography';
-import style from './../dropdown-button.module.scss';
 class ImageResourceCard extends Component {
   static propTypes = {
     altText: PropTypes.string,
@@ -24,11 +22,10 @@ class ImageResourceCard extends Component {
   render() {
     const {altText, title, callout, description, buttonText, link, isRtl} =
       this.props;
-    console.log(style, style.thisIsATestClassName);
 
     return (
       <div style={{...styles.card, ...(isRtl && styles.rtl)}}>
-        <div style={styles.textbox} className={style.divThisIsATestClassName}>
+        <div style={styles.textbox}>
           <div>
             <div style={styles.titleContainer}>
               <div style={styles.title}>{title}</div>
@@ -40,17 +37,6 @@ class ImageResourceCard extends Component {
             </div>
             <div style={styles.description}>{description}</div>
           </div>
-          <Heading1 visualApproach="overline">
-            THIS IS A TESt oF TS IN JS
-          </Heading1>
-          <Typography
-            semanticTag="h1"
-            visualApproach="body-one"
-            // style={styles.button}
-            // className={style.thisIsATestClassName}
-          >
-            TypoGRAPHY TypoGRAPHY TypoGRAPHY TypoGRAPHY TypoGRAPHY
-          </Typography>
           <Button
             __useDeprecatedTag
             href={link}
