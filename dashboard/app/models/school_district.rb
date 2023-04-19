@@ -199,10 +199,9 @@ class SchoolDistrict < ApplicationRecord
     new_districts = []
     updated_districts = 0
     unchanged_districts = 0
-    CDO.log.info "summary_message: #{is_dry_run ? 'Dry run' : 'Importing'} school districts from #{filename}"
+
     ActiveRecord::Base.transaction do
       districts = CSV.read(filename, **options).each do |row|
-        CDO.log.info "Processing row: #{row.inspect}"
         parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
         loaded = find_by_id(parsed[:id])
         if loaded.nil?
