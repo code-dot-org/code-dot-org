@@ -151,8 +151,8 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
           <AdvancedSettingToggles
             updateSection={(key, val) => updateSection(0, key, val)}
             section={sections[0]}
-            assignedUnitTextToSpeechEnabled={true}
-            assignedUnitLessonExtrasAvailable={true}
+            hasLessonExtras={sections[0].course.hasLessonExtras}
+            hasTextToSpeech={sections[0].course.hasTextToSpeech}
             label={i18n.pairProgramming()}
           />
         )}
