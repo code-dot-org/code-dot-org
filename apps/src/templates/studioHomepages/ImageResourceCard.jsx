@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Button from '../Button';
 import color from '../../util/color';
+
 class ImageResourceCard extends Component {
   static propTypes = {
     altText: PropTypes.string,
