@@ -18,6 +18,7 @@ it:
       App Lab Intro - Video: 'App di Introduzione al Laboratorio: video'
       'App Project: Bugs and Features': 'App Project: Malfunzionamenti e Funzionalità'
       'App Project: Linking Screens': 'App Project: Linking Screens'
+      'App Project: Screen Design': 'Progetto app: progettazione della schermata'
       'App Project: Screen Import': 'App Project: Importazione videata'
       'App: Choose a Kid''s Movie': 'App: scegli un film per bambini'
       'App: Friend Finder': 'App: il trovamico'
@@ -102,6 +103,7 @@ it:
       Events and Linking Screens: Eventi e Collegare Schermate
       Events and Properties: Eventi e Proprietà
       Example: Esempio
+      Example Apps: App di esempio
       Example Projects: Progetti di esempio
       Example projects: Progetti d'esempio
       Expanding Personal Website: Espandere il Sito Web Personale
@@ -116,7 +118,7 @@ it:
       Explore HTML: Esplora l'HTML
       Exploring more CSS: Esplorare altri CSS
       Extra: Supplementare
-      Finish a Screen: Concludi una Schermata
+      Finish a Screen: Termina una schermata
       Finish the Prototype: Finisci un Prototipo
       Finishing Functions: Finire le Funzioni
       Finishing Touches: Finire Tocchi
@@ -262,7 +264,7 @@ it:
       Sample Programs: Programmi di esempio
       Sample Web Page: Pagina Web di esempio
       Sample Website: Sito Web di esempio
-      Screen Design: Design Schermata
+      Screen Design: Progettazione della schermata
       Sensor Events: Eventi del Sensore
       Sensors to Colors: Sensori a Colori
       Setting Properties: Impostare le Proprietà
@@ -307,6 +309,7 @@ it:
       Train AI to Clean the Ocean: Addestra l'Intelligenza Artificiale a ripulire l'oceano
       Train an AI to Clean the Ocean: Addestra l'Intelligenza Artificiale a pulire l'oceano
       UI Element Properties: Proprietà Elemento UI
+      Updating Your Prototype: Aggiornamento del tuo prototipo
       Upload Your Images: Carica le tue immagini
       User Interface: Interfaccia Utente
       Using Getters and Setters: Usare Getter e Setter
@@ -363,6 +366,7 @@ it:
       'Video: Impacts on Society': 'Video - Ripercussioni sociali'
       'Video: Intro to CSS - Part 1': 'Video: Introduzione ai CSS - Parte 1'
       'Video: Intro to CSS - Part 2': 'Video: Introduzione ai CSS - Parte 2'
+      'Video: Intro to Design Mode': 'Video: introduzione alla "Modalità progettazione"'
       'Video: Intro to Web Lab - Part 1': 'Video: Introduzione a "Sviluppo Web" - Parte 1'
       'Video: Intro to Web Lab - Part 2': 'Video: Introduzione a "Sviluppo Web - Parte 2'
       'Video: Introducing Sprite Lab': 'Video - Introduzione al Laboratorio dei personaggi'
