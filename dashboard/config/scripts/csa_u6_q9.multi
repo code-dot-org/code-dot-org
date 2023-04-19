@@ -25,3 +25,5 @@ Consider the following method:
 What value is returned as a result of the method call `mystery("abcdefg")`?
 
 MARKDOWN
+
+allow_multiple_attempts true

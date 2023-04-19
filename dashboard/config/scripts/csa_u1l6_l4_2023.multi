@@ -22,3 +22,5 @@ In these examples, it is possible to say that `Flower` is a `Plant` and that `Gr
 
 It is not possible to say that `Wheel` is a `Car`, so this would not be an example of inheritance.
 MARKDOWN
+
+allow_multiple_attempts true

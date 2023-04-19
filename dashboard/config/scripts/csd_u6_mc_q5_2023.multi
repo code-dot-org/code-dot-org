@@ -9,3 +9,5 @@ wrong 'When the text of the `feelingLabel` is changed to "Happy", the text of `h
 teacher_markdown <<MARKDOWN
 **Content: Unit 6 Lesson 3, 4**
 MARKDOWN
+
+allow_multiple_attempts true
