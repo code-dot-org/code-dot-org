@@ -417,7 +417,9 @@ class ProjectsController < ApplicationController
   end
 
   private def uses_animation_bucket?(project_type)
-    %w(gamelab poetry science spritelab story).include? project_type
+    has_standalone_app_method = defined? (@level.standalone_app_name)
+    is_spritelab = has_standalone_app_method == 'method'
+    return project_type == 'gamelab' || is_spritelab
   end
 
   private def uses_file_bucket?(project_type)
