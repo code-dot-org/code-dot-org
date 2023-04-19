@@ -4,6 +4,8 @@ const CORNER_RADIUS = 3;
 const INNER_HEIGHT = 16;
 
 export default class CdoFieldButton extends GoogleBlockly.Field {
+  // Third argument (color) is used by CDO blockly, so we include it in
+  // method signature for compatibility
   constructor(title, opt_buttonHandler, _, opt_changeHandler) {
     super('');
 
@@ -12,6 +14,9 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     this.changeHandler_ = opt_changeHandler;
   }
 
+  /**
+   * @override
+   */
   init() {
     super.init();
 
@@ -39,10 +44,16 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     this.fieldGroup_.insertBefore(this.buttonElement_, this.textElement_);
   }
 
+  /**
+   * @override
+   */
   getValue() {
     return String(this.value_);
   }
 
+  /**
+   * @override
+   */
   setValue(value) {
     if (this.value_ !== value) {
       if (this.changeHandler_) {
@@ -55,6 +66,9 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     }
   }
 
+  /**
+   * @override
+   */
   showEditor_() {
     if (!this.buttonHandler_) {
       return;
@@ -62,6 +76,10 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     this.buttonHandler_(this.setValue.bind(this));
   }
 
+  /**
+   * Keeps button element size in sync with parent Field
+   * @override
+   */
   updateSize_() {
     super.updateSize_();
 
@@ -71,6 +89,12 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     }
   }
 
+  /**
+   * Contrast background for button with source block,
+   * and match text element to source block each time.
+   * Keeps
+   * @override
+   */
   applyColour() {
     const sourceBlock = this.getSourceBlock();
     if (this.buttonElement_) {
