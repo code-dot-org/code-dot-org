@@ -236,8 +236,9 @@ Resources:
       HealthCheckIntervalSeconds: 10
       HealthCheckTimeoutSeconds: 5
       TargetGroupAttributes:
+        # Least Outstanding Requests algorithm precludes usage of Slow Start feature below.
         - Key: load_balancing.algorithm.type
-          Value: least_outstanding_requests
+          Value: round_robin
         - Key: stickiness.enabled
           Value: true
         - Key: stickiness.type
