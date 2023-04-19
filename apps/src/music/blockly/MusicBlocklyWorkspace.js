@@ -20,12 +20,7 @@ import {
 } from './extensions';
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
-import ProjectManager from '@cdo/apps/labs/ProjectManager';
-import {S3SourcesStore, LocalSourcesStore} from '@cdo/apps/labs/SourcesStore';
-import {
-  S3ChannelsStore,
-  LocalChannelsStore
-} from '@cdo/apps/labs/ChannelsStore';
+import ProjectManagerFactory from '@cdo/apps/labs/ProjectManagerFactory';
 import FieldChord from './FieldChord';
 
 /**
@@ -33,12 +28,13 @@ import FieldChord from './FieldChord';
  * workspace view, execute code, and save/load projects.
  */
 export default class MusicBlocklyWorkspace {
-  constructor(channelId) {
+  constructor(appOptions) {
+    console.log('appOptions', appOptions);
     this.codeHooks = {};
     this.compiledEvents = null;
     this.lastExecutedEvents = null;
-    this.channel = {id: channelId};
-    this.projectManager = this.getProjectManager(channelId);
+    this.channel = {};
+    this.projectManager = this.getProjectManager(appOptions);
   }
 
   triggerIdToEvent = id => `triggeredAtButton-${id}`;
@@ -402,25 +398,22 @@ export default class MusicBlocklyWorkspace {
 
   // Get the project manager for the current storage type.
   // If no storage type is specified in AppConfig, use local storage.
-  getProjectManager(channelId) {
+  getProjectManager(appOptions) {
     let storageType = AppConfig.getValue('storage-type');
-    if (!storageType || !channelId) {
+    if (!storageType) {
       storageType = LOCAL_STORAGE;
     }
     storageType = storageType.toLowerCase();
 
     if (storageType === REMOTE_STORAGE) {
-      return new ProjectManager(
-        channelId,
-        new S3SourcesStore(),
-        new S3ChannelsStore(),
+      return ProjectManagerFactory.createS3ProjectManager(
+        appOptions,
         this.getProject.bind(this)
       );
     } else {
-      return new ProjectManager(
+      return ProjectManagerFactory.createLocalProjectManager(
+        appOptions,
         this.getLocalStorageKeyName(),
-        new LocalSourcesStore(),
-        new LocalChannelsStore(),
         this.getProject.bind(this)
       );
     }

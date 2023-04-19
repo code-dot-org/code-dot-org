@@ -6,9 +6,10 @@ import getScriptData from '../../../util/getScriptData';
 
 $(document).ready(function () {
   const appOptions = getScriptData('appoptions');
+  console.log(appOptions);
 
   ReactDOM.render(
-    <MusicLabView channelId={appOptions.channel} />,
+    <MusicLabView appOptions={appOptions} />,
     document.getElementById('musiclab-container')
   );
 });

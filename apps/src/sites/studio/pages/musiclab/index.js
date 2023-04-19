@@ -8,7 +8,7 @@ $(document).ready(function () {
     .channelid;
 
   ReactDOM.render(
-    <MusicLabView channelId={channelId} />,
+    <MusicLabView appOptions={{channel: channelId, app: 'music'}} />,
     document.getElementById('musiclab-container')
   );
 });

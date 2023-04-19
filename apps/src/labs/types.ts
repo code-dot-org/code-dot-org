@@ -10,10 +10,10 @@ export interface Channel {
   id: string;
   name: string;
   isOwner: boolean;
-  projectType: string; // TODO: Make this an actual type
-  publishedAt: string; // TODO: Is this the correct type?
-  createdAt: string; // TODO: Is this the correct type?
-  updatedAt: string; // TODO: Is this the correct type?
+  projectType: ProjectType | null;
+  publishedAt: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export type DefaultChannel = Pick<Channel, 'name'>;
@@ -55,3 +55,76 @@ export interface BlocklyVariable {
   name: string;
   id: string;
 }
+
+// TODO: these are not all the properties of the level.
+// Fill this in as we need them.
+export interface Level {
+  projectType: ProjectType;
+  isK1: boolean;
+  standaloneAppName: StandaloneAppName;
+  useContractEditor: boolean;
+  // Minecraft specific properties
+  isAgentLevel: boolean;
+  isEventLevel: boolean;
+  isConnectionLevel: boolean;
+  isAquaticLevel: boolean;
+}
+
+// TODO: these are not all the properties of app options.
+// Fill this in as we need them.
+export interface AppOptions {
+  app: AppName;
+  level: Level;
+  skinId: string;
+  droplet: boolean;
+  channel: string;
+}
+
+export type ProjectType =
+  | AppName
+  | StandaloneAppName
+  | 'artist'
+  | 'artist_k1'
+  | 'frozen'
+  | 'minecraft_adventurer'
+  | 'minecraft_hero'
+  | 'minecraft_designer'
+  | 'minecraft_codebuilder'
+  | 'minecraft_aquatic'
+  | 'algebra_game'
+  | 'starwars'
+  | 'starwarsblocks_hour'
+  | 'iceage'
+  | 'infinity'
+  | 'gumball'
+  | 'playlab'
+  | 'playlab_k1'
+  | 'sports'
+  | 'basketball';
+
+export type AppName =
+  | 'applab'
+  | 'calc'
+  | 'dance'
+  | 'eval'
+  | 'flappy'
+  | 'gamelab'
+  | 'javalab'
+  | 'music'
+  | 'thebadguys'
+  | 'weblab'
+  | 'turtle'
+  | 'craft'
+  | 'studio'
+  | 'bounce'
+  | 'poetry'
+  | 'spritelab';
+
+export type StandaloneAppName =
+  | 'spritelab'
+  | 'story'
+  | 'science'
+  | 'poetry_hoc'
+  | 'poetry'
+  | 'time_capsule'
+  | 'dance';

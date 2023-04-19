@@ -46,7 +46,7 @@ const baseUrl = 'https://curriculum.code.org/media/musiclab/';
  */
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
-    channelId: PropTypes.string,
+    appOptions: PropTypes.object,
 
     // populated by Redux
     userId: PropTypes.number,
@@ -73,7 +73,7 @@ class UnconnectedMusicView extends React.Component {
     this.programSequencer = new ProgramSequencer();
     this.randomSkipManager = new RandomSkipManager();
     this.analyticsReporter = new AnalyticsReporter();
-    this.musicBlocklyWorkspace = new MusicBlocklyWorkspace(props.channelId);
+    this.musicBlocklyWorkspace = new MusicBlocklyWorkspace(props.appOptions);
     this.soundUploader = new SoundUploader(this.player);
     this.playingTriggers = [];
 
