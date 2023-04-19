@@ -9,10 +9,6 @@ import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/Curricu
 import CheckboxDropdown from '../CheckboxDropdown';
 
 const CurriculumCatalog = ({curriculaData, isEnglish}) => {
-  // Add CollapserIcon.jsx? (if so add tests for its presence and function)
-  // Connect to real information
-  // Start styling
-
   const filterTypes = [
     {name: 'course', label: 'Course', options: ['CSA', 'CSD', 'CSP', 'CSF']},
     {name: 'color', label: 'Color', options: ['Red', 'Blue', 'Green']}
@@ -46,6 +42,17 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
     }
   };
 
+  const handleClear = () => {
+    filterTypes.forEach(filterType => {
+      filterType.options.forEach(option => {
+        document.getElementById(
+          `${filterType.name}-${option}-check`
+        ).checked = false;
+      });
+    });
+    setAppliedFilters(getClearedFilters());
+  };
+
   return (
     <>
       <div className={style.catalogHeader}>
@@ -60,7 +67,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
         {filterTypes.map(filterType => {
           return (
             <CheckboxDropdown
-              key={`${filterType.name}-dropdown`}
+              key={filterType.name}
               name={filterType.name}
               label={filterType.label}
               options={filterType.options}
@@ -68,6 +75,9 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
             />
           );
         })}
+        <button id="clear-filters" type="button" onClick={handleClear}>
+          Clear
+        </button>
       </div>
       <div className={style.catalogContentContainer}>
         <div className={style.catalogContent}>
