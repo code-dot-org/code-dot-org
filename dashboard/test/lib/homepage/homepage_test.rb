@@ -2,9 +2,6 @@ require 'test_helper'
 
 class HomepageTest < ActiveSupport::TestCase
   setup_all do
-    Homepage.class_variable_set(:@@loaded, true)
-    Homepage.class_variable_set(:@@load_error, false)
-
     @request = ActionDispatch::Request.new({})
   end
 
