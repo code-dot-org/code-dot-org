@@ -46,6 +46,7 @@ import {
   NOTIFICATION_ALERT_TYPE,
   START_BLOCKS
 } from './constants';
+import {Renderers} from '@cdo/apps/blockly/constants';
 import {assets as assetsApi} from './clientApi';
 import {
   configCircuitPlayground,
@@ -1214,9 +1215,9 @@ StudioApp.prototype.inject = function (div, options) {
 
   // Allows Google Blockly labs to use the Zelos or legacy Geras renderer instead of the default Thrasos.
   if (experiments.isEnabled('zelos')) {
-    options.renderer = 'cdo_renderer_zelos';
+    options.renderer = Renderers.ZELOS;
   } else if (experiments.isEnabled('geras')) {
-    options.renderer = 'cdo_renderer';
+    options.renderer = Renderers.GERAS;
   }
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };

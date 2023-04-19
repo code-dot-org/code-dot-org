@@ -1288,7 +1288,8 @@
         "csd3-2022/Drawing in Game Lab": {
           "name": "Disegnare in Sviluppo Giochi",
           "overview": "\\*\\*Domanda del giorno: come possiamo comunicare a un computer come disegnare forme sullo schermo? \\*\\*\n\nGli studenti vengono introdotti a Sviluppo Giochi, l'ambiente di programmazione di questa unità, e iniziano a usarlo per posizionare le forme sullo schermo. Apprendono le basi del sequenziamento e del processo di correzione degli errori (debugging), oltre ad alcune semplici istruzioni. Alla fine della lezione, gli studenti saranno in grado di programmare immagini come quelle realizzate con lo strumento di disegno nella lezione precedente.",
-          "purpose": "Lo scopo principale di questa lezione è dare agli studenti la possibilità di abituarsi all'ambiente di programmazione, nonché al sequenziamento e al debug di base che useranno in tutta l'unità. Gli studenti iniziano con un'introduzione all'ambiente di sviluppo interattivo (IDE) di Sviluppo Giochi, quindi imparano le tre istruzioni ([\\`rect\\` (#4dd0e1)](/docs/gamelab/rect/), [\\`ellipse\\` (#4dd0e1)](/docs/gamelab/ellipse/)e [\\`fill\\` (#4dd0e1)](/docs/gamelab/fill/)) di cui avranno bisogno per programmare gli stessi tipi di immagini che hanno creato su carta nella lezione precedente. Gli esercizi di sfida offrono agli studenti con più esperienza di programmazione la possibilità di esplorare ulteriormente Sviluppo Giochi."
+          "purpose": "Lo scopo principale di questa lezione è dare agli studenti la possibilità di abituarsi all'ambiente di programmazione, nonché al sequenziamento e al debug di base che useranno in tutta l'unità. Gli studenti iniziano con un'introduzione all'ambiente di sviluppo interattivo (IDE) di Sviluppo Giochi, quindi imparano le tre istruzioni ([\\`rect\\` (#4dd0e1)](/docs/gamelab/rect/), [\\`ellipse\\` (#4dd0e1)](/docs/gamelab/ellipse/)e [\\`fill\\` (#4dd0e1)](/docs/gamelab/fill/)) di cui avranno bisogno per programmare gli stessi tipi di immagini che hanno creato su carta nella lezione precedente. Gli esercizi di sfida offrono agli studenti con più esperienza di programmazione la possibilità di esplorare ulteriormente Sviluppo Giochi.",
+          "student_overview": "\\*\\*Domanda del giorno: come possiamo comunicare a un computer come disegnare forme sullo schermo? \\*\\*\n\nIn questa lezione, inizierai a usare \"Sviluppo Giochi\" per posizionare le forme sullo schermo mentre approfondisci i concetti di sequenziamento e debugging. "
         },
         "csd3-2022/Shapes and Parameters": {
           "name": "Forme e Parametri",
@@ -1518,6 +1519,83 @@
         "csd2-2022/CS Discoveries Post-Course Survey": {
           "name": "Sondaggio Post-corso di Alla Scoperta dell'Informatica"
         },
+        "csd4-2022/Designing With Empathy": {
+          "name": "Progettare con empatia",
+          "purpose": "Gli studenti entreranno in questa unità con una comprensione del processo di risoluzione dei problemi delle unità precedenti.\n\nIl processo di risoluzione dei problemi utilizzato in \"Alla scoperta dell'informatica\" è:\n\n-   Definisci\n-   Prepara\n-   Prova\n-   Rifletti\n\nIn questa lezione, gli studenti esaminano oggetti del mondo reale per capire come il processo di risoluzione dei problemi può essere applicato per aiutare gli altri. A partire da questa lezione, riformuleremo questo processo per includere un livello di empatia, incoraggiando gli studenti a considerare come gli altri sperimenteranno e useranno le cose che creano.\n\nStiamo iniziando intenzionalmente a esaminare oggetti non tecnici per incoraggiare gli studenti a pensare in modo più ampio a cosa significhi considerare l'utente finale di un prodotto prima di approfondire come questo si applica specificamente alla progettazione del software"
+        },
+        "csd4-2022/Understanding Your User": {
+          "name": "Comprendere il tuo utente",
+          "overview": "\\*\\*Domanda del giorno: come possiamo assicurarci che un prodotto soddisfi le esigenze di un utente? \\*\\*\n\nI progettisti devono comprendere le esigenze dei propri utenti per creare prodotti utili. Questa lezione incoraggia gli studenti a pensare a come progettare per un'altra persona mettendosi nei suoi panni, utilizzando un profilo utente e reagendo come quell'utente a una serie di prodotti. A ogni studente viene assegnato un profilo utente che descrive una persona, che poi utilizza per scegliere i prodotti appropriati, criticare il progetto del prodotto e suggerire miglioramenti progettuali.",
+          "purpose": "Questa lezione si basa su quella precedente chiedendo agli studenti non solo di considerare l'esistenza di un utente per cui i prodotti sono progettati, ma anche di provare empatia con quei potenziali utenti. Durante questa unità, gli studenti lavoreranno per applicare il processo di risoluzione dei problemi dall'Unità 1 ai problemi di altre persone. L'empatia è un elemento chiave di questo tipo di progettazione incentrato sull'utente e un'abilità difficile da padroneggiare per gli studenti di questa età."
+        },
+        "csd4-2022/User Centered Design   Define and Prepare": {
+          "overview": "\\*\\*Domanda del giorno: come possiamo progettare per persone diverse da noi stessi? \\*\\*\n\nQuesta è la prima parte di una lezione di due giorni in cui gli studenti vengono guidati attraverso una versione abbreviata del processo di progettazione che vedranno in questa unità. Questa lezione si concentra sulle fasi di definizione e preparazione del processo. Per prima cosa, gli studenti fanno una riflessione di gruppo su un elenco di potenziali utilizzatori di abbigliamento intelligente. Come classe, raggruppano quindi queste idee in ampie categorie e ogni gruppo sceglierà una categoria di utenti. I gruppi ripetono questo processo per riflettere sulle esigenze o le preoccupazioni dei propri utenti, classificando infine queste esigenze e scegliendone una su cui concentrarsi. Nella lezione successiva, gli studenti completeranno le fasi \"Prova e rifletti\" del processo di progettazione.",
+          "purpose": "Questa microattività è il primo dei tre progetti di design di questa unità. È un'introduzione rapida al processo di progettazione incentrato sull'utente, destinata a offrire agli studenti un'esperienza con la progettazione incentrata sull'utente su cui basarsi nei progetti successivi. In questa lezione l'obiettivo principale è stabilire che le decisioni di progettazione verranno prese tenendo conto delle esigenze dell'utente. La pratica di classificare molte idee disparate per aiutare a prendere decisioni riapparirà più avanti nell'unità.\n\nL'attività di questa lezione è un adattamento della [Design Charrette dell'Università di Washington](http://www.hcde.washington.edu/research/archives#UCD-outreach)."
+        },
+        "csd4-2022/User Centered Design   Try and Reflect": {
+          "overview": "\\*\\*Domanda del giorno: come possiamo progettare un prodotto per soddisfare le esigenze di un utente? \\*\\*\n\nQuesta è la seconda parte di una lezione di due giorni in cui gli studenti vengono guidati attraverso una versione abbreviata del processo di progettazione che vedranno durante questa unità. Ieri gli studenti hanno completato le fasi di definizione e preparazione del processo di progettazione. Oggi completano le porzioni \"prova e rifletti\". Gli studenti continuano il loro lavoro di ieri disegnando un capo di abbigliamento intelligente, utilizzando le esigenze e le preoccupazioni specifiche che hanno elaborato per guidare il loro processo decisionale. Gli studenti hanno la possibilità di condividere il loro processo decisionale e ottenere riscontri su come il loro prodotto soddisfi le esigenze degli utenti che hanno selezionato.",
+          "purpose": "Questa microattività è il primo dei tre progetti di progettazione di questa unità. È un'introduzione rapida al processo di progettazione focalizzata sull'utente, destinata a offrire agli studenti un'esperienza con la progettazione focalizzata sull'utente su cui basarsi nei progetti successivi. In questa lezione l'obiettivo principale è allineare il progetto di un prodotto alle esigenze dell'utente, a volte mettendo da parte convinzioni o preferenze personali. L'atto di basare le decisioni su un utente piuttosto che su se stessi è una mentalità chiave che appare in tutta l'unità.\n\nL'attività di questa lezione è un adattamento della [Design Charrette dell'Università di Washington](http://www.hcde.washington.edu/research/archives#UCD-outreach)."
+        },
+        "csd4-2022/User Interfaces": {
+          "name": "Interfaccia Utente (UI)",
+          "overview": "\\*\\*Domanda del giorno: \\*\\* come possiamo testare un'app per assicurarci che soddisfi le esigenze dell'utente?\n\nDopo il mini progetto di progettazione, gli studenti guardano alla fase successiva della progettazione: la prototipazione di un prodotto che tenti di soddisfare le esigenze degli utenti. In squadra, gli studenti esaminano un prototipo su carta per un'app di chat chiamata «Txt Ur Grndkdz». Utilizzando questo prototipo su carta, gli studenti hanno la possibilità di vedere come un semplice prototipo su carta può essere utilizzato per testare rapidamente idee e ipotesi prima di passare a lavorare su computer. Dopo aver «utilizzato» il prototipo fornito, gli studenti iniziano a identificare i modi per migliorare la ripetizione successiva di tutti i passaggi.",
+          "purpose": "Questa lezione introduce per gli studenti il concetto di prototipo su carta come strumento rapido e rozzo per dare il via allo sviluppo di un'app. I prototipi cartacei torneranno sia nelle prossime lezioni che nel progetto del secondo capitolo. Questo prototipo fungerà anche da contesto attorno al quale gli studenti inizieranno ad analizzare e organizzare i riscontri di un'ampia varietà di utenti. Sebbene questa lezione chieda agli studenti di lavorare con un prototipo esistente, presto svilupperanno prototipi di propria progettazione."
+        },
+        "csd4-2022/Feedback and Testing": {
+          "name": "Riscontro e collaudo",
+          "overview": "\\*\\*Domanda del giorno: come possiamo utilizzare il riscontro degli utenti per migliorare un'app? \\*\\*\n\nIn questa lezione, gli studenti utilizzano il riscontro degli «utenti» dell'app con prototipi cartacei della lezione precedente per sviluppare miglioramenti all'interfaccia utente di quel prototipo su carta. La lezione inizia con una riflessione sul fatto che i progettisti devono tradurre le esigenze umane con la tecnologia in modifiche all'interfaccia o all'esperienza utente. Agli studenti viene quindi fornita una raccolta di riscontri e richieste degli utenti dell'app della lezione precedente. In gruppi, gli studenti classificano il riscontro e identificano i modi in cui le esigenze espresse nel riscontro potrebbero essere soddisfatte modificando l'interfaccia dell'app. Perciò i gruppi di studenti implementeranno alcune di queste modifiche per soddisfare una delle esigenze da loro identificate.",
+          "purpose": "Questa lezione introduce diverse abilità che gli studenti dovranno utilizzare più avanti nell'unità. Impareranno a classificare il riscontro degli utenti per organizzare e dare priorità alla loro risposta. Imparano a interpretare i bisogni umani con una tecnologia in termini di modifiche all'interfaccia utente. Hanno la prima opportunità di creare un proprio prototipo su carta progettando la nuova schermata di un'app. Man mano che gli studenti si avvicinano alla progettazione di app proprie da zero, queste saranno abilità importanti che gli studenti useranno ripetutamente."
+        },
+        "csd4-2022/Identifying User Needs": {
+          "name": "Identificazione delle esigenze degli utenti",
+          "overview": "\\*\\*Domanda del giorno: in che modo le interviste agli utenti possono aiutarci a creare app per soddisfare le esigenze di un utente? \\*\\*\n\nIn questa lezione, gli studenti valutano le interviste agli utenti per determinare le esigenze e gli interessi di un utente. Quindi speculano sulle difficoltà che questi utenti stanno affrontando o sulle opportunità disponibili per ciascun utente. In gruppo, condividono queste difficoltà e opportunità e fanno una riflessione di gruppo su diverse app che potrebbero essere utilizzate per risolvere questi problemi. Alla fine della lezione, gli studenti avranno deciso su un'idea di app che risolva un ostacolo o un'opportunità per un utente.",
+          "purpose": "Nelle lezioni precedenti, le esigenze e gli interessi sono stati presentati in modo più esplicito agli studenti. In questa lezione, hanno il compito di estrarre tali informazioni da un'intervista utente, che motiva l'app che creeranno. Anche se vengono forniti esempi di interviste agli utenti, questa lezione può avere un impatto maggiore se vengono utilizzate interviste con utenti reali di persone della propria comunità di riferimento. Questa lezione fa anche riferimento al progetto nella lezione successiva, che utilizza la riflessione condivisa sull'app come punto di partenza per creare un prototipo su carta."
+        },
+        "csd4-2022/Project - Paper Prototype": {
+          "name": "Progetto - Prototipo su carta",
+          "overview": "\\*\\*Domanda del giorno: come posso sviluppare un prototipo di app per un utente? \\*\\*\n\nIn base all'intervista con gli utenti della lezione precedente, ogni studente ha un'idea per un'app che risolva il problema dell'utente. Gli studenti possono quindi creare il proprio prototipo su carta delle loro idee per le app disegnando «schermate» su singole schede. Una guida al progetto guida gli studenti attraverso il processo, compresa la creazione del prototipo cartaceo e il test con l'utente per verificare se le loro ipotesi sulle interfacce utente che hanno creato sono accurate.\n\nQuesta è una lezione di due giorni, con orari specifici indicati nel piano delle lezioni qui sotto"
+        },
+        "csd4-2022/Designing Apps for Good": {
+          "name": "Progettare app per fare del bene",
+          "student_overview": "\\*\\*Domanda del giorno: cos'è una \"App per fare del bene\" come quella che vogliamo creare? \\*\\*\n\nIn questa lezione, inizierai il processo di progettazione di un'app che durerà fino alla fine di questa unità e inizierai a pianificare il modo in cui il tuo gruppo di lavoro collaborerà insieme durante la creazione di questa app, argomento per la tua app e per i potenziali utenti. "
+        },
+        "csd4-2022/Market Research": {
+          "name": "Ricerche di mercato"
+        },
+        "csd4-2022/Exploring UI Elements": {
+          "name": "Esplorazione degli elementi dell'interfaccia utente",
+          "overview": "\\*\\*Domanda del giorno: quali elementi dell'interfaccia utente saranno utili per la nostra app? \\*\\*\n\nPrima di iniziare a progettare app, dobbiamo aiutare gli studenti a definire le proprie aspettative. Poiché alla fine gli studenti prototiperanno queste app in \"Sviluppo App\", saranno più in forma se le loro idee saranno in linea con i tipi di app che possono essere realizzate utilizzando gli strumenti di \"Sviluppo App\". Oggi si concentra sul fatto che i gruppi di lavoro esaminino diversi esempi di app realizzate in \"Sviluppo App\" e identifichino i componenti dell'interfaccia utente. Quindi elaborano un piano per quali funzionalità potrebbero utilizzare quali componenti della loro app.",
+          "student_overview": "\\*\\*Domanda del giorno: quali elementi dell'interfaccia utente saranno utili per la nostra app? \\*\\*\n\nIn questa lezione, esplorerai alcuni esempi di app create in \"Sviluppo App\" e utilizzerai questi esempi per aiutarti a creare il tuo primo prototipo su carta della tua app. "
+        },
+        "csd4-2022/Build a Paper Prototype": {
+          "name": "Costruisci un prototipo su carta"
+        },
+        "csd4-2022/Prototype Testing": {
+          "name": "Collaudo di un prototipo"
+        },
+        "csd4-2022/Design Mode in App Lab": {
+          "name": "Modalità di progettazione in \"Sviluppo App\"",
+          "overview": "\\*\\*Domanda del giorno: come possiamo usare \"Sviluppo App\" e \"Modalità Progettazione\" per creare app? \\*\\*\n\nGli studenti vengono introdotti all'ambiente di programmazione \"Sviluppo App\" che utilizzeranno per creare le loro app. Gli studenti seguono una progressione di livelli di sviluppo delle competenze per imparare a utilizzare la modalità di progettazione drag-and-drop di Sviluppo App. Concludono la lezione elaborando un piano per adattare una delle loro schermate di prototipo su carta a Sviluppo App, concentrandosi sull'avere ID univoci per ogni elemento.",
+          "student_overview": "\\*\\*Domanda del giorno: come possiamo usare \"Sviluppo App\" e \"Modalità Progettazione\" per creare app? \\*\\*\n\nIn questa lezione, collaborerai con il tuo gruppo di lavoro per iniziare a creare la prossima iterazione della tua app in \"Sviluppo App\". "
+        },
+        "csd4-2022/Build a Digital Prototype": {
+          "name": "Costruisci un prototipo digitale"
+        },
+        "csd4-2022/Linking Prototype Screens": {
+          "name": "Collegamento delle schermate dei prototipi"
+        },
+        "csd4-2022/Testing the App": {
+          "name": "Testare l'app"
+        },
+        "csd4-2022/Bugs and Features": {
+          "name": "Errori e funzionalità"
+        },
+        "csd4-2022/Updating Your Prototype": {
+          "name": "Aggiornamento del tuo prototipo"
+        },
+        "csd4-2022/Project - App Presentation": {
+          "name": "Progetto - Presentazione dell'app"
+        },
         "csd4-2022/CS Discoveries Post-Course Survey": {
           "name": "Sondaggio Post-corso di Alla Scoperta dell'Informatica"
         },
@@ -1532,6 +1610,9 @@
         },
         "csd7-2022/Introduction to AI Lab": {
           "name": "Lezione 6"
+        },
+        "csd7-2022/Issue Statements": {
+          "name": "Esposizione di un problema (issue statement)"
         },
         "csd7-2022/Survey Planning": {
           "name": "Progettare la Raccolta dei Dati"
@@ -2154,6 +2235,39 @@
         "csd5-2018/CS Discoveries Post-Course Survey": {
           "name": "Sondaggio Post-corso di Alla Scoperta dell'Informatica"
         },
+        "csd4-2018/Understanding Your User": {
+          "name": "Comprendere il tuo utente"
+        },
+        "csd4-2018/User Interfaces": {
+          "name": "Interfaccia Utente (UI)"
+        },
+        "csd4-2018/Feedback and Testing": {
+          "name": "Riscontro e collaudo"
+        },
+        "csd4-2018/Identifying User Needs": {
+          "name": "Identificazione delle esigenze degli utenti"
+        },
+        "csd4-2018/Project - Paper Prototype": {
+          "name": "Progetto - Prototipo su carta"
+        },
+        "csd4-2018/Designing Apps for Good": {
+          "name": "Progettare app per fare del bene"
+        },
+        "csd4-2018/Market Research": {
+          "name": "Ricerche di mercato"
+        },
+        "csd4-2018/Paper Prototypes": {
+          "name": "Prototipi su carta"
+        },
+        "csd4-2018/Prototype Testing": {
+          "name": "Collaudo di un prototipo"
+        },
+        "csd4-2018/Testing the App": {
+          "name": "Testare l'app"
+        },
+        "csd4-2018/Project - App Presentation": {
+          "name": "Progetto - Presentazione dell'app"
+        },
         "csd4-2018/CS Discoveries Post-Course Survey": {
           "name": "Sondaggio Post-corso di Alla Scoperta dell'Informatica"
         },
@@ -2666,6 +2780,39 @@
         },
         "csd6-2019/Functions with Parameters": {
           "name": "Funzioni con parametri"
+        },
+        "csd4-2019/Understanding Your User": {
+          "name": "Comprendere il tuo utente"
+        },
+        "csd4-2019/User Interfaces": {
+          "name": "Interfaccia Utente (UI)"
+        },
+        "csd4-2019/Feedback and Testing": {
+          "name": "Riscontro e collaudo"
+        },
+        "csd4-2019/Identifying User Needs": {
+          "name": "Identificazione delle esigenze degli utenti"
+        },
+        "csd4-2019/Project - Paper Prototype": {
+          "name": "Progetto - Prototipo su carta"
+        },
+        "csd4-2019/Designing Apps for Good": {
+          "name": "Progettare app per fare del bene"
+        },
+        "csd4-2019/Market Research": {
+          "name": "Ricerche di mercato"
+        },
+        "csd4-2019/Paper Prototypes": {
+          "name": "Prototipi su carta"
+        },
+        "csd4-2019/Prototype Testing": {
+          "name": "Collaudo di un prototipo"
+        },
+        "csd4-2019/Testing the App": {
+          "name": "Testare l'app"
+        },
+        "csd4-2019/Project - App Presentation": {
+          "name": "Progetto - Presentazione dell'app"
         },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Introduzione alla risoluzione di problemi"
@@ -3302,6 +3449,39 @@
         },
         "csd1-2017/Project - Propose an App": {
           "name": "Progetto - Proponi un'app"
+        },
+        "csd4-2017/Understanding Your User": {
+          "name": "Comprendere il tuo utente"
+        },
+        "csd4-2017/User Interfaces": {
+          "name": "Interfaccia Utente (UI)"
+        },
+        "csd4-2017/Feedback and Testing": {
+          "name": "Riscontro e collaudo"
+        },
+        "csd4-2017/Identifying User Needs": {
+          "name": "Identificazione delle esigenze degli utenti"
+        },
+        "csd4-2017/Project - Paper Prototype": {
+          "name": "Progetto - Prototipo su carta"
+        },
+        "csd4-2017/Designing Apps for Good": {
+          "name": "Progettare app per fare del bene"
+        },
+        "csd4-2017/Market Research": {
+          "name": "Ricerche di mercato"
+        },
+        "csd4-2017/Paper Prototypes": {
+          "name": "Prototipi su carta"
+        },
+        "csd4-2017/Prototype Testing": {
+          "name": "Collaudo di un prototipo"
+        },
+        "csd4-2017/Testing the App": {
+          "name": "Testare l'app"
+        },
+        "csd4-2017/Project - App Presentation": {
+          "name": "Progetto - Presentazione dell'app"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Pixellazione Bianco e Nero Tutorial"
@@ -4649,11 +4829,104 @@
         "csd7-2021/Introduction to AI Lab": {
           "name": "Lezione 6"
         },
+        "csd7-2021/Issue Statements": {
+          "name": "Esposizione di un problema (issue statement)"
+        },
         "csd7-2021/Survey Planning": {
           "name": "Progettare la Raccolta dei Dati"
         },
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "Sondaggio Post-corso di Alla Scoperta dell'Informatica"
+        },
+        "csd4-2021/Analysis of Design": {
+          "name": "Progettare con empatia",
+          "overview": "**Domanda del giorno:** come possiamo scegliere i prodotti in base alle esigenze di un utente?\n\nPer dare il via a un'unità dedicata alla risoluzione di problemi di gruppo e allo sviluppo di prodotti per altri utenti, gli studenti iniziano studiando la progettazione di scarpe diverse. Gli studenti guardano divrsi tipi di scarpe e tentano di abbinare ciascuna scarpa a un potenziale utente. Gli studenti forniscono anche un riscontro su questi progetti, utilizzando una struttura \"Mi piace...\" / \"Vorrei...\" / \"Mi chiedo...\" che verrà ripetuta durante l'unità. Per concludere l'attività, agli studenti viene chiesto di proporre alcune modifiche a un paio di scarpe che le renderebbero più utili o utilizzabili.",
+          "preparation": "-   Stampa una copia della guida alle attività per ogni studente (o preparati a distribuire il documento in formato digitale).",
+          "purpose": "Gli studenti entreranno in questa unità con una comprensione del processo di risoluzione dei problemi delle unità precedenti.\n\nIl processo di risoluzione dei problemi utilizzato in \"Alla scoperta dell'informatica\" è:\n\n-   Definisci\n-   Prepara\n-   Prova\n-   Rifletti\n\nIn questa lezione, gli studenti esaminano oggetti del mondo reale per capire come il processo di risoluzione dei problemi può essere applicato per aiutare gli altri. A partire da questa lezione, riformuleremo questo processo per includere un livello di empatia, incoraggiando gli studenti a considerare come gli altri sperimenteranno e useranno le cose che creano.\n\nStiamo iniziando intenzionalmente a esaminare oggetti non tecnici per incoraggiare gli studenti a pensare in modo più ampio a cosa significhi considerare l'utente finale di un prodotto prima di approfondire come questo si applica specificamente alla progettazione del software"
+        },
+        "csd4-2021/Understanding Your User": {
+          "name": "Comprendere il tuo utente",
+          "overview": "\\*\\*Domanda del giorno: come possiamo assicurarci che un prodotto soddisfi le esigenze di un utente? \\*\\*\n\nI progettisti devono comprendere le esigenze dei propri utenti per creare prodotti utili. Questa lezione incoraggia gli studenti a pensare a come progettare per un'altra persona mettendosi nei suoi panni, utilizzando un profilo utente e reagendo come quell'utente a una serie di prodotti. A ogni studente viene assegnato un profilo utente che descrive una persona, che poi utilizza per scegliere i prodotti appropriati, criticare il progetto del prodotto e suggerire miglioramenti progettuali.",
+          "preparation": "-   Stampa un numero sufficiente di profili utente per tutti gli studenti, garantendo la massima varietà possibile\n-   Stampa una guida alle attività per ogni utente\n-   Prepara domande immediate per l'esercizio di avvio\n-   Etichetta i quattro angoli della stanza come A, B, C e D\n-   Disponi la stanza in gruppi di tavoli da 4 e posiziona un numero (1, 2, 3,...) su ogni gruppo di tavoli",
+          "purpose": "Questa lezione si basa su quella precedente chiedendo agli studenti non solo di considerare l'esistenza di un utente per cui i prodotti sono progettati, ma anche di provare empatia con quei potenziali utenti. Durante questa unità, gli studenti lavoreranno per applicare il processo di risoluzione dei problemi dall'Unità 1 ai problemi di altre persone. L'empatia è un elemento chiave di questo tipo di progettazione incentrato sull'utente e un'abilità difficile da padroneggiare per gli studenti di questa età."
+        },
+        "csd4-2021/User-Centered Design 1": {
+          "name": "Progettazione focalizzata sull'utente -  definisci e prepara",
+          "overview": "\\*\\*Domanda del giorno: come possiamo progettare per persone diverse da noi stessi? \\*\\*\n\nQuesta è la prima parte di una lezione di due giorni in cui gli studenti vengono guidati attraverso una versione abbreviata del processo di progettazione che vedranno in questa unità. Questa lezione si concentra sulle fasi di definizione e preparazione del processo. Per prima cosa, gli studenti fanno una riflessione di gruppo su un elenco di potenziali utilizzatori di abbigliamento intelligente. Come classe, raggruppano quindi queste idee in ampie categorie e ogni gruppo sceglierà una categoria di utenti. I gruppi ripetono questo processo per riflettere sulle esigenze o le preoccupazioni dei propri utenti, classificando infine queste esigenze e scegliendone una su cui concentrarsi. Nella lezione successiva, gli studenti completeranno le fasi \"Prova e rifletti\" del processo di progettazione.",
+          "preparation": "-   Assicurati di avere una certa quantità di foglietti adesivi, penne e carta per un cartellone di grandi dimensioni su cui gli studenti possano lavorare\n-   Organizza gruppi preferibilmente da 3 studenti ciascuno",
+          "purpose": "Questa microattività è il primo dei tre progetti di design di questa unità. È un'introduzione rapida al processo di progettazione incentrato sull'utente, destinata a offrire agli studenti un'esperienza con la progettazione incentrata sull'utente su cui basarsi nei progetti successivi. In questa lezione l'obiettivo principale è stabilire che le decisioni di progettazione verranno prese tenendo conto delle esigenze dell'utente. La pratica di classificare molte idee disparate per aiutare a prendere decisioni riapparirà più avanti nell'unità.\n\nL'attività di questa lezione è un adattamento della [Design Charrette dell'Università di Washington](http://www.hcde.washington.edu/research/archives#UCD-outreach)."
+        },
+        "csd4-2021/User-Centered Design 2": {
+          "name": "Progettazione focalizzata sull'utente - Prova e rifletti",
+          "overview": "\\*\\*Domanda del giorno: come possiamo progettare un prodotto per soddisfare le esigenze di un utente? \\*\\*\n\nQuesta è la seconda parte di una lezione di due giorni in cui gli studenti vengono guidati attraverso una versione abbreviata del processo di progettazione che vedranno durante questa unità. Ieri gli studenti hanno completato le fasi di definizione e preparazione del processo di progettazione. Oggi completano le porzioni \"prova e rifletti\". Gli studenti continuano il loro lavoro di ieri disegnando un capo di abbigliamento intelligente, utilizzando le esigenze e le preoccupazioni specifiche che hanno elaborato per guidare il loro processo decisionale. Gli studenti hanno la possibilità di condividere il loro processo decisionale e ottenere riscontri su come il loro prodotto soddisfi le esigenze degli utenti che hanno selezionato.",
+          "preparation": "-   Riconsegna la guida alle attività di ieri agli studenti\n-   Crea per ogni gruppo una copia della guida alle attività \"prova e rifletti\"",
+          "purpose": "Questa microattività è il primo dei tre progetti di progettazione di questa unità. È un'introduzione rapida al processo di progettazione focalizzata sull'utente, destinata a offrire agli studenti un'esperienza con la progettazione focalizzata sull'utente su cui basarsi nei progetti successivi. In questa lezione l'obiettivo principale è allineare il progetto di un prodotto alle esigenze dell'utente, a volte mettendo da parte convinzioni o preferenze personali. L'atto di basare le decisioni su un utente piuttosto che su se stessi è una mentalità chiave che appare in tutta l'unità.\n\nL'attività di questa lezione è un adattamento della [Design Charrette dell'Università di Washington](http://www.hcde.washington.edu/research/archives#UCD-outreach)."
+        },
+        "csd4-2021/User Interfaces": {
+          "name": "Interfaccia Utente (UI)",
+          "overview": "\\*\\*Domanda del giorno: \\*\\* come possiamo testare un'app per assicurarci che soddisfi le esigenze dell'utente?\n\nDopo il mini progetto di progettazione, gli studenti guardano alla fase successiva della progettazione: la prototipazione di un prodotto che tenti di soddisfare le esigenze degli utenti. In squadra, gli studenti esaminano un prototipo su carta per un'app di chat chiamata «Txt Ur Grndkdz». Utilizzando questo prototipo su carta, gli studenti hanno la possibilità di vedere come un semplice prototipo su carta può essere utilizzato per testare rapidamente idee e ipotesi prima di passare a lavorare su computer. Dopo aver «utilizzato» il prototipo fornito, gli studenti iniziano a identificare i modi per migliorare la ripetizione successiva di tutti i passaggi.",
+          "preparation": "-   Stampa una copia della guida alle attività delle \"Schermate dell'interfaccia utente\" per ogni coppia di studenti\n-   Stampa una copia della guida alle attività dell' \"Esperienza utente\" (computer) per ogni coppia di studenti\n-   Stampa una copia della guida alle attività dell' \"Esperienza utente\"(utente) per ogni coppia di studenti\n-   Ritaglia le \"Schermate dell'interfaccia utentes o fornisci delle forbici agli studenti per farlo da soli",
+          "purpose": "Questa lezione introduce per gli studenti il concetto di prototipo su carta come strumento rapido e rozzo per dare il via allo sviluppo di un'app. I prototipi cartacei torneranno sia nelle prossime lezioni che nel progetto del secondo capitolo. Questo prototipo fungerà anche da contesto attorno al quale gli studenti inizieranno ad analizzare e organizzare i riscontri di un'ampia varietà di utenti. Sebbene questa lezione chieda agli studenti di lavorare con un prototipo esistente, presto svilupperanno prototipi di propria progettazione."
+        },
+        "csd4-2021/Feedback and Testing": {
+          "name": "Riscontro e collaudo",
+          "overview": "\\*\\*Domanda del giorno: come possiamo utilizzare il riscontro degli utenti per migliorare un'app? \\*\\*\n\nIn questa lezione, gli studenti utilizzano il riscontro degli «utenti» dell'app con prototipi cartacei della lezione precedente per sviluppare miglioramenti all'interfaccia utente di quel prototipo su carta. La lezione inizia con una riflessione sul fatto che i progettisti devono tradurre le esigenze umane con la tecnologia in modifiche all'interfaccia o all'esperienza utente. Agli studenti viene quindi fornita una raccolta di riscontri e richieste degli utenti dell'app della lezione precedente. In gruppi, gli studenti classificano il riscontro e identificano i modi in cui le esigenze espresse nel riscontro potrebbero essere soddisfatte modificando l'interfaccia dell'app. Perciò i gruppi di studenti implementeranno alcune di queste modifiche per soddisfare una delle esigenze da loro identificate.",
+          "preparation": "-   Stampa una copia della risorsa \"Schermate dell'interfaccia utente\" per ogni gruppo o preparati a visualizzare le schermate davanti alla classe\n-   Stampa una copia della risorsa \"Riscontri sul prototipo\" per ogni gruppo. Se possibile, ritaglia in anticipo\n-   Stampa una copia di \"Migliora una schermata\" per ogni gruppo. Se possibile, stampa su un solo lato in modo che gli studenti possano dividersi la guida alle attività.\n-   Matite o pennarelli colorati per i prototipi su carta",
+          "purpose": "Questa lezione introduce diverse abilità che gli studenti dovranno utilizzare più avanti nell'unità. Impareranno a classificare il riscontro degli utenti per organizzare e dare priorità alla loro risposta. Imparano a interpretare i bisogni umani con una tecnologia in termini di modifiche all'interfaccia utente. Hanno la prima opportunità di creare un proprio prototipo su carta progettando la nuova schermata di un'app. Man mano che gli studenti si avvicinano alla progettazione di app proprie da zero, queste saranno abilità importanti che gli studenti useranno ripetutamente."
+        },
+        "csd4-2021/Identifying User Needs": {
+          "name": "Identificazione delle esigenze degli utenti",
+          "overview": "\\*\\*Domanda del giorno: in che modo le interviste agli utenti possono aiutarci a creare app per soddisfare le esigenze di un utente? \\*\\*\n\nIn questa lezione, gli studenti valutano le interviste agli utenti per determinare le esigenze e gli interessi di un utente. Quindi speculano sulle difficoltà che questi utenti stanno affrontando o sulle opportunità disponibili per ciascun utente. In gruppo, condividono queste difficoltà e opportunità e fanno una riflessione di gruppo su diverse app che potrebbero essere utilizzate per risolvere questi problemi. Alla fine della lezione, gli studenti avranno deciso su un'idea di app che risolva un ostacolo o un'opportunità per un utente.",
+          "preparation": "-   Stampa una copia della guida alle attività di intervista agli utenti per ogni studente\n-   Stampa una copia delle interviste utente di esempio per ogni gruppo\n-   Raccogli carta per il cartellone e materiale per la riflessione di gruppo (penne, foglietti adesivi, ecc.)",
+          "purpose": "Nelle lezioni precedenti, le esigenze e gli interessi sono stati presentati in modo più esplicito agli studenti. In questa lezione, hanno il compito di estrarre tali informazioni da un'intervista utente, che motiva l'app che creeranno. Anche se vengono forniti esempi di interviste agli utenti, questa lezione può avere un impatto maggiore se vengono utilizzate interviste con utenti reali di persone della propria comunità di riferimento. Questa lezione fa anche riferimento al progetto nella lezione successiva, che utilizza la riflessione condivisa sull'app come punto di partenza per creare un prototipo su carta."
+        },
+        "csd4-2021/Project - Paper Prototype": {
+          "name": "Progetto - Prototipo su carta",
+          "overview": "\\*\\*Domanda del giorno: come posso sviluppare un prototipo di app per un utente? \\*\\*\n\nIn base all'intervista con gli utenti della lezione precedente, ogni studente ha un'idea per un'app che risolva il problema dell'utente. Gli studenti possono quindi creare il proprio prototipo su carta delle loro idee per le app disegnando «schermate» su singole schede. Una guida al progetto guida gli studenti attraverso il processo, compresa la creazione del prototipo cartaceo e il test con l'utente per verificare se le loro ipotesi sulle interfacce utente che hanno creato sono accurate.\n\nQuesta è una lezione di due giorni, con orari specifici indicati nel piano delle lezioni qui sotto"
+        },
+        "csd4-2021/Designing Apps for Good": {
+          "name": "Progettare app per fare del bene",
+          "student_overview": "\\*\\*Domanda del giorno: cos'è una \"App per fare del bene\" come quella che vogliamo creare? \\*\\*\n\nIn questa lezione, inizierai il processo di progettazione di un'app che durerà fino alla fine di questa unità e inizierai a pianificare il modo in cui il tuo gruppo di lavoro collaborerà insieme durante la creazione di questa app, argomento per la tua app e per i potenziali utenti. "
+        },
+        "csd4-2021/Market Research": {
+          "name": "Ricerche di mercato"
+        },
+        "csd4-2021/Exploring UI Elements": {
+          "name": "Esplorazione degli elementi dell'interfaccia utente",
+          "overview": "\\*\\*Domanda del giorno: quali elementi dell'interfaccia utente saranno utili per la nostra app? \\*\\*\n\nPrima di iniziare a progettare app, dobbiamo aiutare gli studenti a definire le proprie aspettative. Poiché alla fine gli studenti prototiperanno queste app in \"Sviluppo App\", saranno più in forma se le loro idee saranno in linea con i tipi di app che possono essere realizzate utilizzando gli strumenti di \"Sviluppo App\". Oggi si concentra sul fatto che i gruppi di lavoro esaminino diversi esempi di app realizzate in \"Sviluppo App\" e identifichino i componenti dell'interfaccia utente. Quindi elaborano un piano per quali funzionalità potrebbero utilizzare quali componenti della loro app.",
+          "student_overview": "\\*\\*Domanda del giorno: quali elementi dell'interfaccia utente saranno utili per la nostra app? \\*\\*\n\nIn questa lezione, esplorerai alcuni esempi di app create in \"Sviluppo App\" e utilizzerai questi esempi per aiutarti a creare il tuo primo prototipo su carta della tua app. "
+        },
+        "csd4-2021/Paper Prototypes": {
+          "name": "Costruisci un prototipo su carta"
+        },
+        "csd4-2021/Prototype Testing": {
+          "name": "Collaudo di un prototipo"
+        },
+        "csd4-2021/Digital Design": {
+          "name": "Modalità di progettazione in \"Sviluppo App\"",
+          "overview": "\\*\\*Domanda del giorno: come possiamo usare \"Sviluppo App\" e \"Modalità Progettazione\" per creare app? \\*\\*\n\nGli studenti vengono introdotti all'ambiente di programmazione \"Sviluppo App\" che utilizzeranno per creare le loro app. Gli studenti seguono una progressione di livelli di sviluppo delle competenze per imparare a utilizzare la modalità di progettazione drag-and-drop di Sviluppo App. Concludono la lezione elaborando un piano per adattare una delle loro schermate di prototipo su carta a Sviluppo App, concentrandosi sull'avere ID univoci per ogni elemento.",
+          "student_overview": "\\*\\*Domanda del giorno: come possiamo usare \"Sviluppo App\" e \"Modalità Progettazione\" per creare app? \\*\\*\n\nIn questa lezione, collaborerai con il tuo gruppo di lavoro per iniziare a creare la prossima iterazione della tua app in \"Sviluppo App\". "
+        },
+        "csd4-2021/Build a Digital Prototype": {
+          "name": "Costruisci un prototipo digitale"
+        },
+        "csd4-2021/Events In AppLab": {
+          "name": "Eventi in \"Sviluppo App\""
+        },
+        "csd4-2021/Linking Screens": {
+          "name": "Collegamento delle schermate dei prototipi"
+        },
+        "csd4-2021/Testing the App": {
+          "name": "Testare l'app"
+        },
+        "csd4-2021/Bugs and Features": {
+          "name": "Errori e funzionalità"
+        },
+        "csd4-2021/Updating Your Prototype": {
+          "name": "Aggiornamento del tuo prototipo"
+        },
+        "csd4-2021/Project - App Presentation": {
+          "name": "Progetto - Presentazione dell'app"
         },
         "csd4-2021/CS Discoveries Post-Course Survey": {
           "name": "Sondaggio Post-corso di Alla Scoperta dell'Informatica"
@@ -4685,7 +4958,8 @@
           "name": "Disegnare in Sviluppo Giochi",
           "overview": "\\*\\*Domanda del giorno: come possiamo comunicare a un computer come disegnare forme sullo schermo? \\*\\*\n\nGli studenti vengono introdotti a Sviluppo Giochi, l'ambiente di programmazione di questa unità, e iniziano a usarlo per posizionare le forme sullo schermo. Apprendono le basi del sequenziamento e del processo di correzione degli errori (debugging), oltre ad alcune semplici istruzioni. Alla fine della lezione, gli studenti saranno in grado di programmare immagini come quelle realizzate con lo strumento di disegno nella lezione precedente.",
           "preparation": "-   Leggi il Forum\n-   Prepara un proiettore o un altro mezzo per mostrare i video se preferisci guardarli in classe",
-          "purpose": "Lo scopo principale di questa lezione è dare agli studenti la possibilità di abituarsi all'ambiente di programmazione, nonché al sequenziamento e al debug di base che useranno in tutta l'unità. Gli studenti iniziano con un'introduzione all'ambiente di sviluppo interattivo (IDE) di Sviluppo Giochi, quindi imparano le tre istruzioni ([\\`rect\\` (#4dd0e1)](/docs/gamelab/rect/), [\\`ellipse\\` (#4dd0e1)](/docs/gamelab/ellipse/)e [\\`fill\\` (#4dd0e1)](/docs/gamelab/fill/)) di cui avranno bisogno per programmare gli stessi tipi di immagini che hanno creato su carta nella lezione precedente. Gli esercizi di sfida offrono agli studenti con più esperienza di programmazione la possibilità di esplorare ulteriormente Sviluppo Giochi."
+          "purpose": "Lo scopo principale di questa lezione è dare agli studenti la possibilità di abituarsi all'ambiente di programmazione, nonché al sequenziamento e al debug di base che useranno in tutta l'unità. Gli studenti iniziano con un'introduzione all'ambiente di sviluppo interattivo (IDE) di Sviluppo Giochi, quindi imparano le tre istruzioni ([\\`rect\\` (#4dd0e1)](/docs/gamelab/rect/), [\\`ellipse\\` (#4dd0e1)](/docs/gamelab/ellipse/)e [\\`fill\\` (#4dd0e1)](/docs/gamelab/fill/)) di cui avranno bisogno per programmare gli stessi tipi di immagini che hanno creato su carta nella lezione precedente. Gli esercizi di sfida offrono agli studenti con più esperienza di programmazione la possibilità di esplorare ulteriormente Sviluppo Giochi.",
+          "student_overview": "\\*\\*Domanda del giorno: come possiamo comunicare a un computer come disegnare forme sullo schermo? \\*\\*\n\nIn questa lezione, inizierai a usare \"Sviluppo Giochi\" per posizionare le forme sullo schermo mentre approfondisci i concetti di sequenziamento e debugging. "
         },
         "csd3-2021/Shapes and Parameters": {
           "name": "Forme e Parametri",
