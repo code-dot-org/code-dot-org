@@ -91,19 +91,21 @@ Dashboard tests commands below should be run from the `dashboard/` directory:
 
 `cd dashboard`
 
-Before running dashboard tests for the first time, run the below command to seed the required test data
+Before running dashboard tests for the first time, run these commands to seed the required test data
 
-`RAILS_ENV=test bundle exec rake assets:precompile`
+1. `RAILS_ENV=test bundle exec rake assets:precompile`
+2. `RAILS_ENV=test UTF8=1 bundle exec rake db:reset db:test:prepare` : seed the DB with test data
+3. `cd ../pegasus && RAILS_ENV=test rake test:reset_dependencies && cd ../dashboard` : the pegasus test DB must be seeded as well.
 
 To run all dashboard tests, which takes about 15 mintues
 
-`RAILS_ENV=test bundle exec rails test` 
+`RAILS_ENV=test bundle exec rails test`
+
+#### Running a subset of Dashboard tests
 
 If you just want to run a single file of tests
 `bundle exec spring testunit ./path/to/your/test.rb` 
 (if you get a seemingly unrelated error `Unable to autoload constant..` try running `spring stop` and trying again)
-or
-`RAILS_ENV=test bundle exec spring testunit ./path/to/your/test.rb`
 
 To run a specific unit test
 `bundle exec spring testunit ./path/to/your/test.rb --name your_amazing_test_name`
