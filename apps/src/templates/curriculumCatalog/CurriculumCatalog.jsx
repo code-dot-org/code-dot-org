@@ -70,12 +70,18 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
               key={filterType.name}
               name={filterType.name}
               label={filterType.label}
+              className={style.catalogFilterDropdown}
               options={filterType.options}
               onChange={e => handleSelect(e, filterType.name)}
             />
           );
         })}
-        <button id="clear-filters" type="button" onClick={handleClear}>
+        <button
+          id="clear-filters"
+          type="button"
+          className={style.catalogClearFiltersButton}
+          onClick={handleClear}
+        >
           Clear
         </button>
       </div>

@@ -4,6 +4,20 @@
   background-color: color.$darkest_gray;
 }
 
+.catalogFiltersContainer {
+  display: flex;
+  max-width: 60em;
+  margin: 1em auto;
+}
+
+.catalogFilterDropdown {
+  float: left;
+}
+
+.catalogClearFiltersButton {
+  margin-left: auto;
+}
+
 .catalogContentContainer {
   max-width: 60em;
   margin: 1em auto;
