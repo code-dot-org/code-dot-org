@@ -56,15 +56,13 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
 
   return (
     <>
-      <div className={style.catalogHeader}>
-        <HeaderBanner
-          headingText={i18n.curriculumCatalogHeaderTitle()}
-          subHeadingText={i18n.curriculumCatalogHeaderSubtitle()}
-          short={false}
-          backgroundUrl={CourseCatalogBannerBackground}
-          imageUrl={CourseCatalogIllustration01}
-        />
-      </div>
+      <HeaderBanner
+        headingText={i18n.curriculumCatalogHeaderTitle()}
+        subHeadingText={i18n.curriculumCatalogHeaderSubtitle()}
+        short={false}
+        backgroundUrl={CourseCatalogBannerBackground}
+        imageUrl={CourseCatalogIllustration01}
+      />
       <div className={style.catalogFiltersContainer}>
         {filterTypes.map(filterType => {
           return (

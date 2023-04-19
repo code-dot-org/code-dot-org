@@ -1,9 +1,5 @@
 @use "color.scss";
 
-.catalogHeader {
-  background-color: color.$darkest_gray;
-}
-
 .catalogFiltersContainer {
   display: flex;
   max-width: 60em;
