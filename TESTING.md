@@ -51,15 +51,16 @@ If you have a personal email address additionally added to GitHub, you can re-se
 
 ### Top-level Test Helpers
 
-Our top-level `lib/rake/test.rake` file contains a handful of tasks that can be used to start tests for our different sub-projects. A full, up-to-date list of these can be found by running `rake --tasks | grep test:`.
+Our top-level `lib/rake/test.rake` file contains a handful of tasks that can be used to start tests for our different sub-projects. A full, up-to-date list of these can be found by running `bundle exec rake --tasks | grep test:`.
 
 Worth noting:
 
-* `rake test:all` - runs all tests across all sub-projects
-* `rake test:apps`, `rake test:pegasus`, `rake test:blockly_core` ... etc  - runs tests for specific sub-project
-* `rake test:changed` - detects which sub-projects have changed in this branch, runs those tests
-* `rake test:changed:apps` - runs apps tests if sub-project folder has changed
-
+* `bundle exec rake test:all` - runs all tests across all sub-projects
+* `bundle exec rake test:apps`, `bundle exec rake test:pegasus`, `bundle exec rake test:blockly_core` ... etc  - runs tests for specific sub-project
+* `bundle exec rake test:changed` - detects which sub-projects have changed in this branch, runs those tests
+* `bundle exec rake test:changed:apps` - runs apps tests if sub-project folder has changed
+* `bundle exec rake test:dashboard` - runs dashboard tests, but see [Dashboard Tests](#dashboard-tests) below for first time setup
+  
 ### Shared and Lib Tests
 Tests in the `shared/` and `lib/` directories need to be run slightly differently since they are outside of our Rails environment.
 
@@ -85,21 +86,26 @@ To debug tests in Chrome, prepend `BROWSER=Chrome WATCH=1` to any test command.
 See [the apps readme](./apps/README.md) for more details.
 
 ### Dashboard Tests
+
+Dashboard tests commands below should be run from the `dashboard/` directory: 
+
+`cd dashboard`
+
 Before running dashboard tests for the first time, run the below command to seed the required test data
 
- `RAILS_ENV=test bundle exec rake assets:precompile`
+`RAILS_ENV=test bundle exec rake assets:precompile`
 
 To run all dashboard tests, which takes about 15 mintues
 
-`cd dashboard && RAILS_ENV=test bundle exec rails test` 
+`RAILS_ENV=test bundle exec rails test` 
 
-If you just want to run a single file of tests, from the dashboard directory you can run
+If you just want to run a single file of tests
 `bundle exec spring testunit ./path/to/your/test.rb` 
 (if you get a seemingly unrelated error `Unable to autoload constant..` try running `spring stop` and trying again)
 or
 `RAILS_ENV=test bundle exec spring testunit ./path/to/your/test.rb`
 
-To run a specific unit test, from the dashboard directory you can run
+To run a specific unit test
 `bundle exec spring testunit ./path/to/your/test.rb --name your_amazing_test_name`
 The test name is `test_` concatenated with the name of the test listed in the test file (convert spaces to underscores). Ex: If the test is called "testing some unit" you would use `--name test_testing_some_unit`.
 
