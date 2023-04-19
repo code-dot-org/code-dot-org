@@ -357,7 +357,7 @@ export default class MusicBlocklyWorkspace {
 
     const {source, channel} = await projectResponse.json();
     this.channel = channel;
-    if (source) {
+    if (source && source.source) {
       const exitingCodeJson = JSON.parse(source.source);
       Blockly.serialization.workspaces.load(exitingCodeJson, this.workspace);
     } else {
