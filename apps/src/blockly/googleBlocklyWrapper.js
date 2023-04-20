@@ -398,8 +398,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return false;
   };
 
-  blocklyWrapper.Input.prototype.setStrictCheck = function (check) {
-    return this.setCheck(check);
+  blocklyWrapper.Block.prototype.setStrictOutput = function (isOutput, check) {
+    return this.setOutput(isOutput, check);
   };
   // We use fieldRow because it is public.
   blocklyWrapper.Input.prototype.getFieldRow = function () {
