@@ -645,11 +645,11 @@ const STANDARD_INPUT_TYPES = {
       const inputRow = block
         .appendValueInput(inputConfig.name)
         .setAlign(blockly.ALIGN_RIGHT);
-      if (inputConfig.strict) {
-        inputRow.setStrictCheck(inputConfig.type);
-      } else {
-        inputRow.setCheck(inputConfig.type);
-      }
+      Blockly.cdoUtils.setStrictCheck(
+        inputRow,
+        inputConfig.type,
+        inputConfig.strict
+      );
       return inputRow;
     },
     generateCode(block, inputConfig) {
