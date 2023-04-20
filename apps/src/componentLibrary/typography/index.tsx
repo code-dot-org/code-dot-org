@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import {SemanticTag, VisualApproach} from './types';
+// import  from './SpecificComponentsGenerator'
 
 const styles = require('./typography.module.scss').default;
 
@@ -39,16 +40,17 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
   );
 };
 
-export {default as Heading1} from './components/Heading1';
-export {default as Heading2} from './components/Heading2';
-export {default as Heading3} from './components/Heading3';
-export {default as Heading4} from './components/Heading4';
-export {default as Heading5} from './components/Heading5';
-export {default as Heading6} from './components/Heading6';
-export {default as BodyOneText} from './components/BodyOneText';
-export {default as BodyTwoText} from './components/BodyTwoText';
-export {default as OverlineText} from './components/OverlineText';
-export {default as StrongText} from './components/StrongText';
-export {default as EmText} from './components/EmText';
-export {default as Figcaption} from './components/Figcaption';
+// export {default as Heading1} from './components/Heading1';
+// export {default as Heading2} from './components/Heading2';
+// export {default as Heading3} from './components/Heading3';
+// export {default as Heading4} from './components/Heading4';
+// export {default as Heading5} from './components/Heading5';
+// export {default as Heading6} from './components/Heading6';
+// export {default as BodyOneText} from './components/BodyOneText';
+// export {default as BodyTwoText} from './components/BodyTwoText';
+// export {default as OverlineText} from './components/OverlineText';
+// export {default as StrongText} from './components/StrongText';
+// export {default as EmText} from './components/EmText';
+// export {default as Figcaption} from './components/Figcaption';
+export * from './SpecificComponentsGenerator';
 export default Typography;
