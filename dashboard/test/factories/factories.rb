@@ -138,7 +138,7 @@ FactoryBot.define do
         end
 
         sequence(:name) {|n| "Facilitator Person #{n}"}
-        email {("Facilitator_#{(User.maximum(:id) || 0) + 1}@code.org")}
+        email {"Facilitator_#{SecureRandom.uuid}@code.org"}
 
         after(:create) do |facilitator, evaluator|
           facilitator.permission = UserPermission::FACILITATOR
@@ -156,7 +156,7 @@ FactoryBot.define do
       end
       factory :workshop_organizer do
         sequence(:name) {|n| "Workshop Organizer Person #{n}"}
-        email {("WorkshopOrganizer_#{(User.maximum(:id) || 0) + 1}@code.org")}
+        email {"WorkshopOrganizer_#{SecureRandom.uuid}@code.org"}
         after(:create) do |workshop_organizer|
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
         end
@@ -1516,7 +1516,7 @@ FactoryBot.define do
   end
 
   factory :regional_partners_school_district do
-    association :school_district, strategy: build
+    association :school_district
     association :regional_partner
   end
 
