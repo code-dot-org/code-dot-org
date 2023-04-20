@@ -26,7 +26,8 @@ const useSections = section => {
             pairingAllowed: true,
             restrictSection: false,
             ttsAutoplayEnabled: false,
-            lessonExtras: true
+            lessonExtras: true,
+            course: {hasTextToSpeech: false, hasLessonExtras: false}
           }
         ]
   );
@@ -131,6 +132,7 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
       />
       <span>
         <div style={style.div}>
+          <hr />
           <FontAwesome
             id={'uitest-advanced-settings'}
             onClick={toggleAdvancedSettingsOpen}

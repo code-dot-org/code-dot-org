@@ -87,6 +87,7 @@ export default function AdvancedSettingToggles({
           />
         </div>
       )}
+      <hr />
     </div>
   );
 }
