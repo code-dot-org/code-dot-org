@@ -16,6 +16,7 @@ theme: responsive_full_width
 - icon_book = "fa-solid fa-book"
 - icon_person_chalkboard = "fa-solid fa-person-chalkboard"
 - icon_video = "fa-solid fa-video"
+- icon_megaphone = "fa-solid fa-megaphone"
 
 %section.hero-banner-basic.bg-neutral-dark{style: "display: block !important"}
   .wrapper
@@ -23,6 +24,11 @@ theme: responsive_full_width
       %h1{style: "color: white; margin-bottom: 0"}=hoc_s(:ai_hero_heading_01)
       %h2.heading-xxl{style: "color: white"}=hoc_s(:ai_hero_heading_02)
       %p{style: "color: white"}=hoc_s(:ai_hero_desc)
+      -# Make this evergreen when DCDO flag is set to false
+      - if !!DCDO.get('teach-ai-launch-2023', false)
+        %a.link-button{href: "#teach-ai-callout"}
+          %i{class: "#{icon_megaphone}", style: "margin-right: 6px"}
+          =hoc_s(:ai_hero_button_announcement)
     %figure.col-33{style: "float: right"}
       %img.fade-in-out{src: "/images/banners/ai-bot-wizard.svg", alt: "", style: "z-index: 10"}
       %img{src: "/images/banners/ai-bot-default.svg", alt: "", style: "position: relative;"}
@@ -57,6 +63,17 @@ theme: responsive_full_width
             %h3=hoc_s(:ai_intro_list_title_03)
             %p.no-margin-bottom=hoc_s(:ai_intro_list_desc_03)
     .clear
+
+-# Make this evergreen when DCDO flag is set to false
+%a{id: "teach-ai-callout"}
+- if !!DCDO.get('teach-ai-launch-2023', false)
+  %section.bg-primary-light
+    .wrapper{style: "display: flex; justify-content: space-between"}
+      %i{class: "#{icon_megaphone}", style: "font-size: 2em; margin-right: 1em"}
+      .text-wrapper{style: "width: 100%"}
+        %p.heading-sm Blog post heading here
+        %p Blog post blurb here.
+        %a.link-button{href: "#", target: "_blank", rel: "noopener noreferrer"} Read more
 
 %section.bg-neutral-light
   .wrapper
