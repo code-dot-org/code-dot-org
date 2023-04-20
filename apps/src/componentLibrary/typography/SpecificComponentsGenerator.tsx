@@ -39,9 +39,9 @@ const specificTypographyComponentsToGenerate: SpecificTypographyElementToGenerat
     {displayName: 'Figcaption', semanticTag: 'figcaption'}
   ];
 
-function generateSpecificTypographyComponents(
+const generateSpecificTypographyComponents = (
   componentsToGenerate: SpecificTypographyElementToGenerateTemplate[]
-): {[key: string]: React.FunctionComponent<SpecificTypographyElementProps>} {
+): {[key: string]: React.FunctionComponent<SpecificTypographyElementProps>} => {
   return componentsToGenerate.reduce((acc, componentTemplateData) => {
     const {displayName, semanticTag, defaultVisualApproach} =
       componentTemplateData;
@@ -65,7 +65,7 @@ function generateSpecificTypographyComponents(
     SpecificTypographyComponent.displayName = displayName;
     return {...acc, [displayName]: SpecificTypographyComponent};
   }, {});
-}
+};
 
 export const {
   Heading1,
