@@ -68,7 +68,7 @@ class School < ApplicationRecord
     (stats.frl_eligible_total.to_f / stats.students_total) >= 0.5
   end
 
-  # Determines if school meets Amazon Fugure Engineer criteria.
+  # Determines if school meets Amazon Future Engineer criteria.
   # Eligible if the school is any of the following:
   # a) title I school,
   # b) >40% URM students,

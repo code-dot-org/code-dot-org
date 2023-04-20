@@ -7,6 +7,8 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 ## Overview
 
+1. Request and Configure AWS access (code.org staff) or configure local secrets (open source contributors). See [Configure AWS Access or Secrets](#configure-aws-access-or-secrets) below. This step is not required until rake is first run below, but staff may wish to submit the request first so its ready when rake is.
+
 1. Install OS-specific prerequisites
    - See the appropriate section below: [OS X](#os-x-monterey---including-apple-silicon-m1), [Ubuntu](#ubuntu-1804-download-iso), [Windows](#windows)
    - *Important*: When done, check for correct versions of these dependencies:
@@ -24,6 +26,8 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `gem install bundler -v 2.3.22`
 
 1. `rbenv rehash`
+
+1. `bundle config --local without staging test production levelbuilder`
 
 1. `bundle install`
     - This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
@@ -46,14 +50,10 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
     </details>
     <details>
-      <summary>Troubleshoot: `FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError` </summary>
+      <summary>Troubleshoot: `FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError` or similar `Aws::SecretsManager` errors</summary>
+      Reported when missing credentials for access to our AWS Account or local secret configuration.
 
-      - If you have issue `"rake aborted! FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError: unable to sign request without credentials set"`, or similar `Aws::SecretsManager` errors, you are missing configuration or credentials for access to our AWS Account. Staff should see instructions for AWS account access in our "Getting Started As A Developer" doc. External contributors can supply alternate placeholder values for secrets normally retrieved from AWS Secrets Manager by creating a file named "locals.yml", copying contents from ["locals.yml.default"](locals.yml.default) and uncommenting following configurations to use placeholder values
-          - slack_bot_token: localoverride
-          - pardot_private_key: localoverride
-          - firebase_secret: localoverride
-          - firebase_shared_secret: localoverride
-          - properties_encryption_key: localoverride
+      See [Configure AWS Access or Secrets](#configure-aws-access-or-secrets)
     </details>
     <details>
       <summary>Troubleshoot: `WSL: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock'` </summary>
@@ -73,9 +73,6 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     - This may fail if you are on a Mac and your OSX XCode Command Line Tools were not installed properly. See [Bundle Install Tips](#bundle-install-tips) for more information.
     - This may fail for external contributors who don't have permissions to access Code.org AWS Secrets. Assign placeholder values to any configuration settings that are [ordinarily populated in Development environments from AWS Secrets](https://github.com/code-dot-org/code-dot-org/blob/staging/config/development.yml.erb) as indicated in this example: https://github.com/code-dot-org/code-dot-org/blob/5b3baed4a9c2e7226441ca4492a3bca23a4d7226/locals.yml.default#L136-L139
 
-1. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
-    - Some functionality will not work on your local site without this, for example, some project-backed level types such as <https://studio.code.org/projects/gamelab>. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
-
 1. Run the website `bin/dashboard-server`
 
 1. Visit <http://localhost-studio.code.org:3000/> to verify it is running.
@@ -83,6 +80,21 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Install necessary plugins described in the [Editor configuration](#editor-configuration) section below.
 
 After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
+
+## Configure AWS Access or Secrets
+
+### For Code.org Staff
+
+Staff should see instructions for requesting AWS account access in our "AWS Account Access" doc linked from "Getting started as a Developer", and follow the setup steps in the "API access (for local development)" section.
+Some functionality will not work on your local site without this, for example, some project-backed level types such as <https://studio.code.org/projects/gamelab>. 
+### For external contributors
+
+External contributors can supply alternate placeholder values for secrets normally retrieved from AWS Secrets Manager by creating a file named "locals.yml", copying contents from ["locals.yml.default"](locals.yml.default) and uncommenting following configurations to use placeholder values
+          - slack_bot_token: localoverride
+          - pardot_private_key: localoverride
+          - firebase_secret: localoverride
+          - firebase_shared_secret: localoverride
+          - properties_encryption_key: localoverride
 
 ## OS-specific prerequisites
 
@@ -128,13 +140,16 @@ These steps may need to change over time as 3rd party tools update to have versi
           4. Confirm MySQL has started by running `brew services` again.
 
 1. Install the **Java 8 JSK**
-   1. Either explicitly via `brew cask install adoptopenjdk/openjdk/adoptopenjdk8` or for M1 in Rosetta, `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
+   1. `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
    2. Or by installing [sdkman](https://sdkman.io/) and installing a suitable JDK. Similar to **rbenv** and **nvm**, **sdkman** allows you to switch between versions of Java.
       1. Different versions will be available depending on your system architecture, use `sdk list java` to identify a Java 8 JDK available for ARM architecture.
       2. `sdk install java <version identifier>` to install a version
       3. `sdk default java <installed version>` to ensure it is the default for future shells.
 
-1. Install **rbenv** via `brew install rbenv`
+1. Install and configure **rbenv**
+    1. Install: `brew install rbenv`
+    2. Run `echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc` to configure ZSH to use **rbenv**. See https://github.com/rbenv/rbenv#basic-git-checkout for instructions on configuring bash and other shells.
+    3. Reload your .zshrc to load **rbenv**: `source ~/.zshrc`
 
 1. Install **Ruby**
     1. For non-M1 systems (including M1 systems using Rosetta), running `rbenv install` from the project root directory should be sufficient.

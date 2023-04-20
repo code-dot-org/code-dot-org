@@ -7,6 +7,10 @@ ruby '3.0.5'
 # see https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/
 gem 'thwait'
 
+# Ruby >= 2.7.7 targets a version of CGI with over-restrictive domain
+# validation; manually target a later version to pick up https://github.com/ruby/cgi/pull/29
+gem 'cgi', '~> 0.3.6'
+
 # Ruby 3.0 no longer provides sorted_set by default, so install it manually
 # see https://github.com/ruby/set/pull/2
 gem 'sorted_set'
