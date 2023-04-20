@@ -23,7 +23,7 @@ describe('InstructionsCSF', () => {
     registerReducers({authoredHints, instructions, isRtl, pageConstants});
     getStore().dispatch(
       setPageConstants({
-        showNextHint: function() {},
+        showNextHint: function () {},
         skinId: 'dance'
       })
     );
@@ -47,9 +47,11 @@ describe('InstructionsCSF', () => {
     );
 
     failWithMessage('Repeat block: <xml><block type="controls_repeat"/></xml>');
+    wrapper.update();
     assertFeedbackContainsText(wrapper, '>repeat</text>');
 
     failWithMessage('If block: <xml><block type="controls_if"/></xml>');
+    wrapper.update();
     assertFeedbackContainsText(wrapper, '>if</text>');
   });
 
@@ -58,16 +60,15 @@ describe('InstructionsCSF', () => {
   }
 
   function assertFeedbackContainsText(wrapper, text) {
-    assert.include(
-      wrapper
-        .getDOMNode()
-        .querySelector('.uitest-topInstructions-inline-feedback').innerHTML,
-      text
-    );
+    const html = wrapper
+      .find('.uitest-topInstructions-inline-feedback')
+      .first()
+      .html();
+    assert.include(html, text);
   }
 });
 
 const DEFAULT_PROPS = {
-  adjustMaxNeededHeight: function() {},
-  handleClickCollapser: function() {}
+  adjustMaxNeededHeight: function () {},
+  handleClickCollapser: function () {}
 };

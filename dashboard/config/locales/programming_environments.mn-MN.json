@@ -9,19 +9,92 @@
           "name": "Тоглоомын лаборатори",
           "categories": {
             "game_lab": {
-              "name": "Тоглоомын лаборатори"
+              "name": "Тоглоомын лаборатори",
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Хар ба цагаан"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Хөгжим зохиох"
+                    }
+                  },
+                  "short_description": "MP3 дууны файлыг заасан URL-аас тоглуулна."
+                }
+              }
             },
             "sprites": {
-              "name": "Шидтэнгүүд"
+              "name": "Шидтэнгүүд",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Спираль"
+                    }
+                  }
+                }
+              }
             },
             "groups": {
-              "name": "Бүлгүүд"
+              "name": "Бүлгүүд",
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Өнгө"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Өнгө"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
-              "name": "Зураг"
+              "name": "Зураг",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Од"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Математик"
+              "name": "Математик",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Хамгийн бага тоог буцаав"
+                    },
+                    "max": {
+                      "description": "Хамгийн их тоог буцаав"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Хамгийн бага тоог буцаав"
+                    },
+                    "max": {
+                      "description": "Хамгийн их тоог буцаав"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
               "name": "Хувьсагчууд"
@@ -35,11 +108,195 @@
           "name": "Апп-ын лаб",
           "description": "Программын лаборатори нь энгийн программ зохиох боломжтой программчлалын орчин юм. Үүнийг ажиллуулахын тулд блокууд ба JavaScript-н хамтаар программ, кодыг бүтээгээрэй. Дараа нь, программаа хэдэн секундын дотор хуваалцаарай.",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функц"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Хөгжим зохиох"
+                    }
+                  },
+                  "short_description": "MP3 дууны файлыг заасан URL-аас тоглуулна."
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "объект"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "объект"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "объект"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "объект"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "объект"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функц"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "объект"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "объект"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функц"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
-              "name": "Математик"
+              "name": "Математик",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Хамгийн бага тоог буцаав"
+                    },
+                    "max": {
+                      "description": "Хамгийн их тоог буцаав"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Хамгийн бага тоог буцаав"
+                    },
+                    "max": {
+                      "description": "Хамгийн их тоог буцаав"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Хувьсагчууд"
+              "name": "Хувьсагчууд",
+              "expressions": {
+                "addPair": {
+                  "return_value": "Байхгүй"
+                }
+              }
             },
             "functions": {
               "name": "Функцүүд"

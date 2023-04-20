@@ -5,7 +5,6 @@
   "dropletBlock_setCollider_param4": "tinggi",
   "dropletBlock_setColliderEach_param0": "tipe",
   "dropletBlock_setColliderEach_param4": "tinggi",
-  "errorLoadingAnimation": "Sepertinya kami mengalami kesulitan saat memuat animasi \"{animationName}\". Pastikan kamu tersambung dengan internet dan coba muat ulang halaman ini. Jika tetap masalah, animasi ini munkin rusak. Jika seperti itu, kamu bisa melanjutkan dengan menghapus animasinya.",
   "reinfFeedbackMsg": "Kamu telah selesai! Klik \"Lanjutkan\" untuk maju ke level selanjutnya.",
   "shareGame": "Bagikan permainanmu:"
 }

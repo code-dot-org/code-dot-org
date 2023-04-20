@@ -1,0 +1,50 @@
+@use "sass:math";
+@use "color.scss";
+
+$border-radius: 30px;
+$frame-height: 60px;
+
+.phoneFrame {
+  display: block;
+  height: $frame-height;
+  background-color: color.$lighter_gray;
+
+  &Dark {
+    background-color: color.$charcoal;
+  }
+
+  &Top {
+    border-radius: $border-radius $border-radius 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &Bottom {
+    border-radius: 0 0 $border-radius $border-radius;
+  }
+}
+
+.screenSelector {
+  width: 80%;
+}
+
+.centeredInFrame {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $frame-height;
+}
+
+.paused {
+  color: color.$white;
+  font-size: 20px;
+}
+
+.pauseIcon {
+  margin-right: 5px;
+}

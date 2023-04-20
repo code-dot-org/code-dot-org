@@ -114,3 +114,5 @@ Los niveles 2-4 utilizan un modelo preentrenado provisto por el proyecto [Tensor
 Los niveles 6-8 usan una \[Máquina vectorial de soporte\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Observamos cada componente del pez (como ojos, boca, cuerpo) y reunimos todos los metadatos de los componentes (como el número de dientes, la forma del cuerpo) en un vector de números para cada pez. Utilizamos estos vectores para entrenar la SVM. En base a los datos de entrenamiento, la SVM separa el "espacio" de todos los peces posibles en dos partes, que corresponden a las clases que estamos tratando de aprender (como "azul" o "no azul").
 
 [[Volver arriba]](#top)
+
+{{ visit_partial_event_logger }}

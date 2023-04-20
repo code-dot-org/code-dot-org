@@ -120,6 +120,10 @@ ko:
     (SVM)을 사용합니다. 우리는 물고기의 각 요소 (눈, 입, 몸통)를 보고 구성요소의 메타데이터 (치아 수, 몸통 형태 등) 모두를 각 물고기
     별 숫자 벡터로 어셈블리합니다. 우리는 이러한 벡터를 SVM을 훈련시키는 데 사용합니다. 트레이닝 데이터에 기초하여, SVM은 모든 가능한
     물고기의 "공간"을 우리가 배우려고 하는 클래스 ("파란색" 또는 "파란색이 아닌")에 상응하는 두 개의 부분으로  분리합니다.
+  heading_additional_resources: Additional resources
+  call_to_action_learn_more: 더보기
+  call_to_action_watch_now: Watch now
+  call_to_action_try_activity: Try activity
   social_hoc2019_oceans_title: '바다환경을 위한 AI #CSforGood'
   social_hoc2019_oceans_desc: 인공지능 (AI)과 머신러닝, 트레이닝 데이터, 편견에 관해 배우는 한편 윤리 문제를 탐구하고
     AI로 세계적 문제를 어떻게 해결할지 알아보세요. 컴퓨터 과학은 코딩 그 이상의 것에 관한 학문입니다!  우리의 커리큘럼 전체에서 AI에 관한
@@ -127,6 +131,49 @@ ko:
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
+  social_maker_title: I'm a Maker!
+  social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  social_blockchain_title: How Blockchain Works
+  social_blockchain_desc: Videos and lessons that explore what blockchain is and why
+    it's important.
+  pl_superhero_title: Help students become superheroes!
+  pl_superhero_desc: Join our highly supportive Professional Learning Program for
+    middle and high school educators.
+  blockchain_hero_heading: How Blockchain Works
+  blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
+    our new video series and accompanying lessons!
+  blockchain_intro_heading: See how blockchain works
+  blockchain_intro_desc: The video series, made in partnership with Coinbase, features
+    industry experts and aims to demystify this technology.
+  blockchain_intro_list_heading: 'This series will:'
+  blockchain_intro_list_item_01: Explain what blockchain is
+  blockchain_intro_list_item_02: Explore why it's important
+  blockchain_intro_list_item_03: Unpack its societal impacts — both good and bad
+  blockchain_video_title_01: Introduction to Blockchain
+  blockchain_video_title_02: Why Blockchain
+  blockchain_video_title_03: Under the Hood
+  blockchain_video_title_04: Beyond Currencies
+  blockchain_video_title_05: Marketplace and Price
+  blockchain_video_title_06: Trustworthy or a Scam?
+  blockchain_video_title_07: Societal Impact
+  blockchain_lessons_heading: Blockchain lessons for your class
+  blockchain_lessons_desc: The first five lessons can be taught as part of a "How
+    Blockchain Works" series or can stand alone. The last lesson condenses the whole
+    series to a single day.
+  blockchain_resources_desc: Interested in learning more about blockchain? Here are
+    some additional resources that can help extend your students' learning.
+  blockchain_resources_01_heading: Coinbase Learn
+  blockchain_resources_01_desc: Crypto questions answered, beginner guides, practical
+    tips, and market updates for first-timers, experienced investors, and everyone
+    in between.
+  blockchain_resources_01_button_label: Visit the Coinbase Learn website
+  blockchain_resources_02_heading: Whiteboard Crypto
+  blockchain_resources_02_desc: Watch videos from Whiteboard Crypto's YouTube channel
+    to learn even more about blockchain technology.
+  blockchain_resources_02_button_label: Visit the Whiteboard Crypto YouTube channel
+  blockchain_resources_03_heading: Hour of Code Activity
+  blockchain_resources_03_desc: Try a crypto memory game created by Coinbase.
+  blockchain_resources_03_button_label: Try the Crypto Memory Game activity
   hoc_live: 아워오브코드 라이브
   hoc_live_sign_up_title: 아워오브코드 라이브 가입
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -882,6 +929,10 @@ ko:
   footer_menu_terms: 이용약관
   footer_menu_privacy: Privacy Policy(개인정보보호정책)
   footer_menu_cookie: Cookie Notice
+  footer_menu_facebook: Code.org on Facebook
+  footer_menu_twitter: Code.org on Twitter
+  footer_menu_instagram: Code.org on Instagram
+  footer_menu_medium: Code.org on Medium.com
   learn_banner_heading: HOUR of CODE
   learn_banner_blurb: 45개 이상의 언어로 제공되는 모든 연령대를 위한 한 시간 분량의 튜토리얼을 사용해보세요. 180개 이상의
     국가에서 수 백만 명의 학생과 교사가 가입하여 아워오브코드로 시작하고 있습니다.
@@ -5582,7 +5633,7 @@ ko:
   tutorial_irobotphone_string_platforms: 모든 최신 브라우저
   tutorial_codeguppydraw_string_platforms: 모든 최신 브라우저
   tutorial_codejumper_string_platforms: 언플러그드, 스크린 리더
-  tutorial_meeempathy_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
+  tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: 치비트로틱스 치비 칩과 회로 스티커 LED
@@ -8306,8 +8357,7 @@ ko:
   tutorial_microsoftforest_string_platforms: 모든 최신 브라우저
   tutorial_blackbirdscreen_string_platforms: 크롬
   tutorial_toxicodecompute2_string_platforms: 모든 최신 브라우저
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: Windows, iPad, MacOS
   tutorial_blackbirdtether_string_platforms: 크롬
   tutorial_ob_string_platforms: 최신 웹 브라우저
   tutorial_codeartportrait_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
@@ -8696,6 +8746,10 @@ ko:
   tutorial_nasapackage_name: 'NASA: Package Delivery Drone Simulation Coding Activity '
   tutorial_nasalunar_name: 'NASA: Lunar Coding Challenge'
   tutorial_meeestate_name: Escape Estate
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_nafbrand_name: Code your Brand
   tutorial_rpccw_longdescription: Create your own character, design a T-shirt, and
     create some music. Earn badges for each completed project.
   tutorial_rpledfirefly_longdescription: Use a Raspberry Pi Pico microcontroller and
@@ -9031,6 +9085,18 @@ ko:
     clues. Code your way out by dawn and earn a million emeralds! With coding in blocks
     or Python, Hour of Code offers a learning pathway for anyone to learn the basics
     of code.'
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_nafbrand_longdescription: In Code your Brand, you will be creating a virtual
+    contact file to create a personalized QR code with your contact details. After
+    you complete this activity, you will be equipped with a modern business card that
+    you can share while you're networking with people who can help or guide you in
+    your career or college journey.
   tutorial_rpccw_string_detail_grades: 프리 리더 - 5학년
   tutorial_rpledfirefly_string_detail_grades: 6-8학년(11-13세)
   tutorial_rpcharting_string_detail_grades: 9학년 이상
@@ -9123,6 +9189,10 @@ ko:
   tutorial_nasapackage_string_detail_grades: 6-8학년(11-13세)
   tutorial_nasalunar_string_detail_grades: 6-8학년(11-13세)
   tutorial_meeestate_string_detail_grades: 초등 2학년 이상
+  tutorial_imagipixelart_string_detail_grades: 2-8 학년
+  tutorial_kcjhealth_string_detail_grades: 6 학년 이상 (11 세 이상)
+  tutorial_msftwakanda_string_detail_grades: 6 학년 이상 (11 세 이상)
+  tutorial_nafbrand_string_detail_grades: 9학년 이상
   tutorial_rpccw_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 윈도우즈 폰, 안드로이드 폰, 아이폰
   tutorial_rpledfirefly_string_platforms: 모든 최신 브라우저
   tutorial_rpcharting_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
@@ -9239,8 +9309,13 @@ ko:
   tutorial_nasaorbit_string_platforms: 모든 최신 브라우저
   tutorial_nasapackage_string_platforms: 모든 최신 브라우저
   tutorial_nasalunar_string_platforms: 모든 최신 브라우저, 아이패드, 아이폰
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: Windows, iPad, MacOS
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_string_platforms: 모든 최신 브라우저
+  tutorial_msftwakanda_string_platforms: 모든 최신 브라우저
+  tutorial_nafbrand_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 윈도우즈 폰, 안드로이드 폰,
+    아이폰
   tutorial_rpccw_string_detail_platforms: ''
   tutorial_rpledfirefly_string_detail_platforms: Raspberry Pi Pico
   tutorial_rpcharting_string_detail_platforms: ''
@@ -9334,6 +9409,10 @@ ko:
   tutorial_nasapackage_string_detail_platforms: ''
   tutorial_nasalunar_string_detail_platforms: ''
   tutorial_meeestate_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_nafbrand_string_detail_platforms: ''
   tutorial_rpccw_string_detail_programming_languages: 블록
   tutorial_rpledfirefly_string_detail_programming_languages: 파이썬
   tutorial_rpcharting_string_detail_programming_languages: 파이썬
@@ -9432,29 +9511,10 @@ ko:
   tutorial_nasapackage_string_detail_programming_languages: 블록
   tutorial_nasalunar_string_detail_programming_languages: 블록, 자바스크립트
   tutorial_meeestate_string_detail_programming_languages: 블록, 파이썬
-  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
-    animations in this 1 hour crash course!
-  tutorial_imagipixelart_name: Code your own pixel art!
-  tutorial_imagipixelart_string_detail_grades: 2-8 학년
-  tutorial_imagipixelart_string_detail_platforms: ''
-  tutorial_imagipixelart_string_detail_programming_languages: typing
-  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
-    Windows phone, Android phone, iPhone
-  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
-    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
-  tutorial_kcjhealth_name: The Health & Well-Being Challenge
-  tutorial_kcjhealth_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_programming_languages: Typing
   tutorial_kcjhealth_string_detail_programming_languages: 블록
-  tutorial_kcjhealth_string_platforms: 모든 최신 브라우저
-  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
-    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
-    ''Black Panther: Wakanda Forever''!'
-  tutorial_msftwakanda_name: Long Live Wakanda
-  tutorial_msftwakanda_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_msftwakanda_string_detail_platforms: ''
   tutorial_msftwakanda_string_detail_programming_languages: 블록
-  tutorial_msftwakanda_string_platforms: 모든 최신 브라우저
+  tutorial_nafbrand_string_detail_programming_languages: 파이썬
   school_not_found_heading: 귀하의 학교를 찾을 수 없습니다. 더 자세한 정보를 입력하시기 바랍니다.
   school_name: 학교 이름
   school_name_error: 학교 이름은 필수입력항목입니다.
@@ -9503,6 +9563,13 @@ ko:
   all: 모두
   dont_know: 잘 모르겠음
   language_label: 언어
+  team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
+    yellow t-shirts pose in a hotel conference room for the company's summer 2022
+    Codechella event.
+  careers_page_code_pride_alt_text: Two feminine-presenting employees smile while
+    holding the ends of a Code.org-branded rainbow banner. Behind them, several people
+    are wearing Code.org shirts and waving rainbow flags while walking alongside a
+    multi-colored Volkswagen bug.
   language_code:
     ar: Arabic
     az: Azerbaijani

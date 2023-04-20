@@ -28,11 +28,11 @@ export const Direction = {
   NORTHWEST: 9
 };
 
-export const turnLeft90 = function(direction) {
+export const turnLeft90 = function (direction) {
   return direction >> 1 || Direction.WEST;
 };
 
-export const turnRight90 = function(direction) {
+export const turnRight90 = function (direction) {
   return (direction << 1) & 0xf || Direction.NORTH;
 };
 
@@ -65,7 +65,7 @@ export const CardinalDirections = [Dir.NORTH, Dir.SOUTH, Dir.EAST, Dir.WEST];
  * @param {number} y
  * @returns {Direction}
  */
-export const getClosestDirection = function(x, y) {
+export const getClosestDirection = function (x, y) {
   // Y is inverted between our playlab coordinate space and what atan2 expects.
   const radiansFromNorth = Math.atan2(x, -y);
   const stepRadians = Math.PI / 4;
@@ -132,7 +132,7 @@ UNIT_VECTOR[Dir.NORTHEAST] = {x: 1, y: -1};
 UNIT_VECTOR[Dir.SOUTHEAST] = {x: 1, y: 1};
 UNIT_VECTOR[Dir.SOUTHWEST] = {x: -1, y: 1};
 UNIT_VECTOR[Dir.NORTHWEST] = {x: -1, y: -1};
-Dir.getUnitVector = function(dir) {
+Dir.getUnitVector = function (dir) {
   return UNIT_VECTOR[dir];
 };
 

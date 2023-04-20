@@ -50,13 +50,13 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 2000);
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert(
           spriteTalking(0) || Studio.sayComplete === 1,
           'Actor is talking'
@@ -82,13 +82,13 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 2000);
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert(spriteTalking(1) === false, 'Not talking');
         assert(Studio.sayComplete === 0, 'Nothing said');
         return true;
@@ -123,13 +123,13 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 2000);
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert(spriteTalking(1) === false, 'Not talking');
         assert(Studio.sayComplete === 0, 'Nothing said');
         return true;

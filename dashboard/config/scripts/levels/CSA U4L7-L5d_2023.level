@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A comic book enthusiast wants to create a visualization that shows a comparison of the number of wins each character has in a battle.\r\n\r\n✅ **TO DO #1:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">BattleScene.java</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getBattles()</code> method to find and return a 1D array containing all <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Battle</code> objects where the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">mainCharacter</code> matches the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">firstCharacter</code> and the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">enemyCharacter</code> matches the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">secondCharacter</code>.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner.java</code>, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawResults()</code> method with the 1D array returned from calling the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getBattles()</code> method.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing nested <code style=\"background-color: #ececec; color: black; font-weight: bold;\">if</code> statements.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Superhero Battles",
+    "bubble_choice_description": "A comic book enthusiast wants to create a visualization that shows a comparison of the number of wins each character has in a battle.",
+    "thumbnail_url": "https://images.code.org/17727a98f8649cc14e4f87fb3387987c-superhero.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-02-17T18:51:51.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-02-17T18:51:51.184+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L5c_2023\\\"\"],\"cloned_from\":\"CSA U4L7-L5c_2023\"},{\"changed_at\":\"2023-02-17 18:51:52 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-07 21:30:28 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-07 21:31:38 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

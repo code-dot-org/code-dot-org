@@ -10,7 +10,9 @@ ca:
       left: esquerra
       length: longitud
       min: min
-      points: punts
+      points: puntes
+      radius: radi
+      sides: costats
       size: mida
       speed: velocitat
       width: amplada

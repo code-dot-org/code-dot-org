@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {setRenderedHeight, setEditorColumnHeight} from './redux/viewRedux';
 import {
   setSource,
   sourceTextUpdated,
@@ -8,8 +9,6 @@ import {
   sourceFileOrderUpdated,
   renameFile,
   removeFile,
-  setRenderedHeight,
-  setEditorColumnHeight,
   setEditTabKey,
   setActiveTabKey,
   setOrderedTabKeys,
@@ -21,7 +20,7 @@ import {
   setNewFileError,
   clearNewFileError,
   setRenameFileError
-} from './javalabRedux';
+} from './redux/editorRedux';
 import {DisplayTheme} from './DisplayTheme';
 import PropTypes from 'prop-types';
 import {EditorView} from '@codemirror/view';
@@ -35,7 +34,7 @@ import JavalabEditorTabMenu from './JavalabEditorTabMenu';
 import JavalabFileExplorer from './JavalabFileExplorer';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
-import msg from '@cdo/locale';
+import i18n from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import {
   getDefaultFileContents,
@@ -44,11 +43,11 @@ import {
 } from './JavalabFileHelper';
 import {darkMode, lightMode} from './editorThemes';
 import {hasQueryParam} from '@cdo/apps/code-studio/utils';
-import JavalabEditorDialogManager, {
-  JavalabEditorDialog
-} from './JavalabEditorDialogManager';
+import JavalabEditorDialogManager from './JavalabEditorDialogManager';
+import {JavalabEditorDialog} from './types';
 import JavalabEditorHeader from './JavalabEditorHeader';
 import {java} from '@codemirror/lang-java';
+import CloseOnEscape from './components/CloseOnEscape';
 
 // This is the height of the "editor" header and the file tabs combined
 const HEADER_OFFSET = 63;
@@ -201,12 +200,8 @@ class JavalabEditor extends React.Component {
   }
 
   createEditor(key, doc) {
-    const {
-      displayTheme,
-      isReadOnlyWorkspace,
-      fileMetadata,
-      editorFontSize
-    } = this.props;
+    const {displayTheme, isReadOnlyWorkspace, fileMetadata, editorFontSize} =
+      this.props;
     const extensions = [...editorSetup];
 
     extensions.push(
@@ -640,7 +635,7 @@ class JavalabEditor extends React.Component {
 
   editorHeaderText = () =>
     this.props.isReadOnlyWorkspace
-      ? msg.readonlyWorkspaceHeader()
+      ? i18n.readonlyWorkspaceHeader()
       : javalabMsg.editor();
 
   render() {
@@ -675,7 +670,7 @@ class JavalabEditor extends React.Component {
       zIndex: 1000
     };
     return (
-      <div>
+      <CloseOnEscape handleClose={this.cancelTabMenu}>
         <JavalabEditorHeader onBackpackImportFile={this.onImportFile} />
         <Tab.Container
           activeKey={activeTabKey}
@@ -714,6 +709,8 @@ class JavalabEditor extends React.Component {
                     <span>{fileMetadata[tabKey]}</span>
                     {activeTabKey === tabKey && !isReadOnlyWorkspace && (
                       <button
+                        aria-label={i18n.fileOptions()}
+                        aria-expanded={contextTarget === tabKey}
                         ref={`${tabKey}-file-toggle`}
                         type="button"
                         className={classNames(
@@ -762,13 +759,23 @@ class JavalabEditor extends React.Component {
               {showOpenCodeReviewWarning && (
                 <div
                   id="openCodeReviewWarningBanner"
-                  className={style.openCodeReviewWarningBanner}
+                  className={style.warningBanner}
                 >
                   {isViewingOwnProject
                     ? javalabMsg.editingDisabledUnderReview()
                     : javalabMsg.codeReviewingPeer({
                         peerName: codeOwnersName
                       })}
+                </div>
+              )}
+              {isEditingStartSources && (
+                <div
+                  id="startSourcesWarningBanner"
+                  className={style.warningBanner}
+                >
+                  {isProjectTemplateLevel
+                    ? javalabMsg.startSourcesTemplateWarning()
+                    : javalabMsg.inStartSourcesMode()}
                 </div>
               )}
               {orderedTabKeys.map(tabKey => {
@@ -800,27 +807,27 @@ class JavalabEditor extends React.Component {
           handleClearPuzzle={handleClearPuzzle}
           isProjectTemplateLevel={isProjectTemplateLevel}
         />
-      </div>
+      </CloseOnEscape>
     );
   }
 }
 
 export default connect(
   state => ({
-    sources: state.javalab.sources,
-    validation: state.javalab.validation,
-    displayTheme: state.javalab.displayTheme,
+    sources: state.javalabEditor.sources,
+    validation: state.javalabEditor.validation,
+    displayTheme: state.javalabView.displayTheme,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
     hasOpenCodeReview: state.javalab.hasOpenCodeReview,
     isViewingOwnProject: state.pageConstants.isViewingOwnProject,
     codeOwnersName: state.pageConstants.codeOwnersName,
-    fileMetadata: state.javalab.fileMetadata,
-    orderedTabKeys: state.javalab.orderedTabKeys,
-    activeTabKey: state.javalab.activeTabKey,
-    lastTabKeyIndex: state.javalab.lastTabKeyIndex,
-    editTabKey: state.javalab.editTabKey,
-    editorFontSize: state.javalab.editorFontSize
+    fileMetadata: state.javalabEditor.fileMetadata,
+    orderedTabKeys: state.javalabEditor.orderedTabKeys,
+    activeTabKey: state.javalabEditor.activeTabKey,
+    lastTabKeyIndex: state.javalabEditor.lastTabKeyIndex,
+    editTabKey: state.javalabEditor.editTabKey,
+    editorFontSize: state.javalabView.editorFontSize
   }),
   dispatch => ({
     setSource: (filename, source, tabOrder) =>

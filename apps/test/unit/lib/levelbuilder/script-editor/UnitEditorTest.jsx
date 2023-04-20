@@ -173,26 +173,6 @@ describe('UnitEditor', () => {
       expect(wrapper.find('UnitCard').length).to.equal(1);
     });
 
-    it('maker unit checkbox shows for CSD course offering', () => {
-      const wrapper = createWrapper({
-        isMigrated: true,
-        initialCourseVersionId: 1,
-        isCSDCourseOffering: true
-      });
-
-      expect(wrapper.find('.maker-unit-checkbox').length).to.equal(1);
-    });
-
-    it('maker unit checkbox does not show for non-CSD course offering', () => {
-      const wrapper = createWrapper({
-        isMigrated: true,
-        initialCourseVersionId: 1,
-        isCSDCourseOffering: false
-      });
-
-      expect(wrapper.find('.maker-unit-checkbox').length).to.equal(0);
-    });
-
     it('disables changing student facing lesson plan checkbox when not allowed to make major curriculum changes', () => {
       const wrapper = createWrapper({
         initialPublishedState: 'stable',
@@ -237,18 +217,12 @@ describe('UnitEditor', () => {
       const wrapper = createWrapper({});
       expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(2);
       expect(
-        wrapper
-          .find('TextareaWithMarkdownPreview')
-          .at(0)
-          .prop('markdown')
+        wrapper.find('TextareaWithMarkdownPreview').at(0).prop('markdown')
       ).to.equal(
         '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
       );
       expect(
-        wrapper
-          .find('TextareaWithMarkdownPreview')
-          .at(1)
-          .prop('markdown')
+        wrapper.find('TextareaWithMarkdownPreview').at(1).prop('markdown')
       ).to.equal(
         '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
       );

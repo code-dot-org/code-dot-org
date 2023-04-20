@@ -1,0 +1,19 @@
+name 'CSD U3 MC Q5_2023'
+type 'multi'
+question 'Given the following functions, write a program that will draw this scene.'
+wrong '![](https://images.code.org/8431af975e0375210f8ce8d0ab9ba2a1-CSDunit3usefunction1.png)'
+wrong '![](https://images.code.org/af96dcacb66ba5e95ee307a7a25e81b0-CSDunit3usefunction2.png)'
+right '![](https://images.code.org/4be58f1832471b8e174b562c81aed8c5-CSDunit3usefunction3.png)'
+wrong '![](https://images.code.org/e2acbd5d579c97361c7d777931c2559b-CSDunit3usefunction4.png)'
+wrong '![](https://images.code.org/6acf824f9ee2ed33eea0ca7720e889ee-CSDunit3usefunction5.png)'
+markdown <<MARKDOWN
+| Functions      | Scene |
+| ----------- | ----------- |
+| <img src="https://images.code.org/2c614e5926ee3fff343ae24f766d6374-CSDunit3usefunctioncode.png" style="height: 300px">      | <img src="https://images.code.org/132715046162dc2a0a43e09f733c35c8-CSDunit3usefunction.png" style="height: 300px">       |
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 3 Lesson 24**
+
+Since the background is yellow, `drawBackground()` must be called. Since the red rectangle is on top of the green ellipse, `drawTwo()` is called after `drawOne()`.
+MARKDOWN

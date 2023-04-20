@@ -269,7 +269,7 @@ def get_row_from_column_row(column_row)
   one_based_row = column_row.
     chars.
     reject {|c| c.ord >= 'A'.ord && c.ord <= 'Z'.ord}.
-    join('').
+    join.
     to_i
   one_based_row - 1
 end
@@ -281,7 +281,7 @@ def get_column_from_column_row(column_row)
   column_as_string = column_row.
     chars.
     reject {|c| c.ord >= '0'.ord && c.ord <= '9'.ord}.
-    join('')
+    join
   convert_column_to_integer(column_as_string)
 end
 

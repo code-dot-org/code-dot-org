@@ -102,8 +102,8 @@ export default class CensusTeacherBanner extends Component {
           'user[school_info_attributes][school_name]': this.state.schoolName,
           'user[school_info_attributes][school_state]': this.state.schoolState,
           'user[school_info_attributes][school_zip]': this.state.schoolZip,
-          'user[school_info_attributes][full_address]': this.state
-            .schoolLocation
+          'user[school_info_attributes][full_address]':
+            this.state.schoolLocation
         };
       } else {
         schoolData = {
@@ -168,7 +168,8 @@ export default class CensusTeacherBanner extends Component {
   isValid = () => {
     return (
       !this.props.teaches ||
-      (this.props.inClass === true || this.props.inClass === false)
+      this.props.inClass === true ||
+      this.props.inClass === false
     );
   };
 
@@ -303,15 +304,14 @@ export default class CensusTeacherBanner extends Component {
             __useDeprecatedTag
             onClick={this.props.onDismiss}
             style={styles.button}
-            color="gray"
-            size="large"
+            color={Button.ButtonColor.neutralDark}
             text="No thanks"
           />
           <Button
             __useDeprecatedTag
             onClick={this.props.onSubmit}
             style={styles.button}
-            size="large"
+            color={Button.ButtonColor.brandSecondaryDefault}
             text="Add my school to the map!"
           />
         </div>
@@ -331,9 +331,7 @@ export default class CensusTeacherBanner extends Component {
         ? this.state.ncesSchoolId
         : this.props.ncesSchoolId;
       const link = encodeURI(
-        `/yourschool?schoolId=${schoolId}&isTeacher=true&name=${
-          this.props.teacherName
-        }&email=${this.props.teacherEmail}#form`
+        `/yourschool?schoolId=${schoolId}&isTeacher=true&name=${this.props.teacherName}&email=${this.props.teacherEmail}#form`
       );
       buttons = (
         <div style={styles.buttonDiv}>
@@ -545,7 +543,8 @@ const styles = {
   },
   shareButton: {
     color: color.white,
-    backgroundColor: '#7E5CA2',
+    backgroundColor: color.brand_primary_default,
+    boxShadow: 'none',
     minWidth: 40
   },
   title: {
@@ -557,6 +556,7 @@ const styles = {
     marginBottom: 0
   },
   updateSchoolLink: {
-    cursor: 'pointer'
+    cursor: 'pointer',
+    fontFamily: '"Gotham 5r", sans-serif'
   }
 };

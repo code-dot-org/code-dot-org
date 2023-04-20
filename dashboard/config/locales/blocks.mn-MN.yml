@@ -1147,6 +1147,19 @@ mn:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: "{GROUP} маягт нь {FORMAT} шиг байна"
+        options:
+          FORMAT:
+            '"border"': хил
+            '"circle"': тойрог
+            '"grid"': сүлжээ
+            '"top"': дээд эгнээ
+            '"row"': мөр
+            '"bottom"': доод эгнээ
+            '"left"': зүүн багана
+            '"column"': багана
+            '"right"': баруун багана
       gamelab_locationAt:
         text: 'байршил х: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1168,6 +1181,18 @@ mn:
             '"rain"': бороотой
       gamelab_makeNewSpriteAnon:
         text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': хил
+            '"circle"': тойрог
+            '"grid"': сүлжээ
+            '"top"': дээд эгнээ
+            '"row"': мөр
+            '"bottom"': доод эгнээ
+            '"left"': зүүн багана
+            '"column"': багана
+            '"right"': баруун багана
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -1766,8 +1791,6 @@ mn:
         text: зүүн эргэх
       RyanLab_turnRight:
         text: баруун эргэх
-      SpriteLab2Beta_spriteSay:
-        text: шидтэн {SPRITE} нь {TEXT}-г {SECONDS} секундын турш хэлсэн
       Vector_createSpriteWith:
         text: |-
           шидтэн бүтээх
@@ -1964,5 +1987,3 @@ mn:
             '"hearts"': зүрхнүүд
             '"rain"': бороотой
             '"starburst"': Оддын тэсрэлт
-      validation_validatedBackground:
-        text: суурь өнгийг {IMG} руу тохируулах

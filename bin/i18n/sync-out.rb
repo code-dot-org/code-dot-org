@@ -14,6 +14,7 @@ require 'json'
 require 'parallel'
 require 'tempfile'
 require 'yaml'
+require 'active_support/core_ext/object/blank'
 
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
@@ -36,9 +37,9 @@ def sync_out(upload_manifests=false)
   end
   clean_up_sync_out(CROWDIN_PROJECTS)
   puts "Sync out completed successfully"
-rescue => e
-  puts "Sync out failed from the error: #{e}"
-  raise e
+rescue => exception
+  puts "Sync out failed from the error: #{exception}"
+  raise exception
 end
 
 # Cleans up any files the sync-out is responsible for managing. When this function is done running,
@@ -167,9 +168,7 @@ def restore_redacted_files
         # data doesn't get lost
         restored_data = RedactRestoreUtils.restore_file(original_path, translated_path, ['blockly'])
         translated_data = JSON.parse(File.read(translated_path))
-        File.open(translated_path, "w") do |file|
-          file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))
-        end
+        File.write(translated_path, JSON.pretty_generate(translated_data.deep_merge(restored_data)))
       else
         # Everything else is differentiated only by the plugins used
         plugins = []
@@ -252,9 +251,7 @@ def sanitize_data_and_write(data, dest_path)
     end
 
   FileUtils.mkdir_p(File.dirname(dest_path))
-  File.open(dest_path, 'w+') do |f|
-    f.write(dest_data)
-  end
+  File.write(dest_path, dest_data)
 end
 
 # Wraps hash in correct format to be loaded by our i18n backend.
@@ -347,6 +344,26 @@ def distribute_course_content(locale)
   end
 end
 
+# We provide URLs to the translators for Resources only; because
+# the sync has a side effect of applying Markdown formatting to
+# everything it encounters, we want to make sure to un-Markdownify
+# these URLs
+def postprocess_course_resources(locale, courses_source)
+  courses_yaml = YAML.load_file(courses_source)
+  lang_code = PegasusLanguages.get_code_by_locale(locale)
+  return if courses_yaml[lang_code].nil? # no processing of empty files
+  if courses_yaml[lang_code]['data']['resources']
+    courses_resources = courses_yaml[lang_code]['data']['resources']
+    courses_resources.each do |_key, resource|
+      next if resource['url'].blank?
+      resource['url'].strip!
+      resource['url'].delete_prefix!('<')
+      resource['url'].delete_suffix!('>')
+    end
+  end
+  File.write(courses_source, I18nScriptUtils.to_crowdin_yaml(courses_yaml))
+end
+
 # Distribute downloaded translations from i18n/locales
 # back to blockly, apps, pegasus, and dashboard.
 def distribute_translations(upload_manifests)
@@ -366,7 +383,7 @@ def distribute_translations(upload_manifests)
       next unless file_changed?(locale, relative_path)
 
       basename = File.basename(loc_file, ext)
-
+      postprocess_course_resources(locale, loc_file) if File.basename(loc_file) == 'courses.yml'
       # Special case the un-prefixed Yaml file.
       destination = (basename == "base") ?
         "dashboard/config/locales/#{locale}#{ext}" :
@@ -396,21 +413,31 @@ def distribute_translations(upload_manifests)
       sanitize_file_and_write(loc_file, destination)
     end
 
-    ### Merge ml-playground datasets into apps' ailab JSON
-    Dir.glob("#{locale_dir}/external-sources/ml-playground/datasets/*.json") do |loc_file|
-      ailab_path = "apps/i18n/ailab/#{js_locale}.json"
-      name = File.basename(loc_file, '.json')
+    ### ml-playground strings to Apps directory
+    Dir.glob("#{locale_dir}/external-sources/ml-playground/mlPlayground.json") do |loc_file|
       relative_path = loc_file.delete_prefix(locale_dir)
       next unless file_changed?(locale, relative_path)
 
-      external_translations = JSON.parse(File.read(loc_file))
+      basename = File.basename(loc_file, '.json')
+      destination = "apps/i18n/#{basename}/#{js_locale}.json"
+      sanitize_file_and_write(loc_file, destination)
+    end
+
+    ### Merge ml-playground datasets into apps' mlPlayground JSON
+    Dir.glob("#{locale_dir}/external-sources/ml-playground/datasets/*.json") do |loc_file|
+      ml_playground_path = "apps/i18n/mlPlayground/#{js_locale}.json"
+      dataset_id = File.basename(loc_file, '.json')
+      relative_path = loc_file.delete_prefix(locale_dir)
+      next unless file_changed?(locale, relative_path)
+
+      external_translations = parse_file(loc_file)
       next if external_translations.empty?
 
       # Merge new translations
-      existing_translations = JSON.parse(File.read(ailab_path))
+      existing_translations = File.exist?(ml_playground_path) ? parse_file(ml_playground_path) || {} : {}
       existing_translations['datasets'] = existing_translations['datasets'] || Hash.new
-      existing_translations['datasets'][name] = external_translations
-      sanitize_data_and_write(existing_translations, ailab_path)
+      existing_translations['datasets'][dataset_id] = external_translations
+      sanitize_data_and_write(existing_translations, ml_playground_path)
     end
 
     ### Animation library
@@ -579,15 +606,15 @@ def restore_markdown_headers
     end
     begin
       source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
-    rescue Exception => err
+    rescue Exception => exception
       puts "Error parsing yaml header in source_path=#{source_path} for path=#{path}"
-      raise err
+      raise exception
     end
     begin
       header, content, _line = Documents.new.helpers.parse_yaml_header(path)
-    rescue Exception => err
+    rescue Exception => exception
       puts "Error parsing yaml header path=#{path}"
-      raise err
+      raise exception
     end
     I18nScriptUtils.sanitize_header!(header)
     restored_header = source_header.merge(header)

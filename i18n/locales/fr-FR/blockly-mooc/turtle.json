@@ -62,7 +62,7 @@
   "lengthFeedback": "C'est bon sauf pour les longueurs à parcourir.",
   "lengthParameter": "longueur",
   "loopVariable": "compteur",
-  "moveBackward": "recule de",
+  "moveBackward": "reculer de",
   "moveEastTooltip": "Déplace l'artiste vers l'Est.",
   "moveDirectionByPixels": "avance %1 de %2 pixels",
   "moveForward": "avancer de",

@@ -1975,7 +1975,7 @@ fr:
           j''aurais envie qu''il y soit indiqué : « Joyeux Anniversaire, tu vas avoir
           11 ans ! ». Je pourrais donc créer une variable que j''appelerais « âge »
           pour stocker l''âge de mon frère et faire que mon algorithme indique plutôt
-          : « Joyeux Anniversaire, tu as "âge" ». Comme les variables peuvent changer,
+          : « Joyeux Anniversaire, tu as « âge » ». Comme les variables peuvent changer,
           chaque année, je pourrais mettre à jour la variable « âge » pour qu''elle
           soit égale à « âge » plus 1.'
       3:
@@ -3817,10 +3817,10 @@ fr:
         text: La vraie magie du CPU est comment il connaît les circuits à utiliser
           et quand les utiliser. Le processeur reçois des commandes simples qui lui
           disent quel circuit utiliser pour une tâche spécifique. Par exemple, une
-          commande "add" (ajouter) ordonne au processeur d'utiliser un de ses circuits
-          externes pour calculer un nouveau nombre. Ensuite, la commande "store" (ranger)
-          ordonne au processeur d'utiliser un autre circuit pour enregistrer le résultat
-          dans la mémoire.
+          commande « add » (ajouter) ordonne au processeur d'utiliser un de ses circuits
+          externes pour calculer un nouveau nombre. Ensuite, la commande « store »
+          (ranger) ordonne au processeur d'utiliser un autre circuit pour enregistrer
+          le résultat dans la mémoire.
       8:
         image: notes/csd_concept_hardware_software_8.png
         text: Comme pour les nombres, toutes ces commandes simples peuvent être représentées
@@ -3917,7 +3917,7 @@ fr:
       10:
         text: Pour commencer, faisons un nouveau danseur avec ce bloc rouge. Faites-le
           d’abord glisser en dehors de la boîte à outils et accrochez-le sous ce bloc
-          de configuration orange. Ce danseur là est un chat et il s'appelle "my_first_dancer".
+          de configuration orange. Ce danseur là est un chat et il s'appelle « my_first_dancer ».
           Vous pouvez changer le nom en cliquant ici.
       11:
         text: Tu peux aussi changer l'endroit où le danceur apparaît dans l'espace

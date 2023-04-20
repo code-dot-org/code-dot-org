@@ -2,6 +2,23 @@
 @no_mobile
 Feature: Using the teacher homepage sections feature
 
+  Scenario: See a section creation dialog when logging for the first time
+    # After a teacher creates an account, they see the section create dialog
+    Given I create a teacher who has never signed in named "Ariel" and go home
+    And I wait until I am on "http://studio.code.org/home"
+    And I wait to see a modal containing text "Let's get you started teaching with Code.org!"
+
+    # Section Creation dialog is not displayed when reloaded
+    Then I reload the page
+    And element ".modal" is not visible
+
+  Scenario: Do not see a section creation dialog when logging after first time
+    # After a teacher creates an account and logins in multiple times,
+      # they do not see the section create dialog
+    Given I create a teacher named "Belle" and go home
+    And I wait until I am on "http://studio.code.org/home"
+    And element ".modal" is not visible
+  
   Scenario: Loading the teacher homepage with new sections
     # Create my first section (via the SetUpSections component)
     When I create a new student section and go home

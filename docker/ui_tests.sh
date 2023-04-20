@@ -24,7 +24,7 @@ export CIRCLE_ARTIFACTS=/home/circleci/artifacts
 mkdir $CIRCLE_ARTIFACTS
 
 # rbenv-doctor https://github.com/rbenv/rbenv-installer#readme
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
 
 bundle install --verbose
 

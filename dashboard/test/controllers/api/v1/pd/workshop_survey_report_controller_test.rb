@@ -233,14 +233,14 @@ module Api::V1::Pd
       workshop_1.enrollments.each do |enrollment|
         hash = build :pd_local_summer_workshop_survey_hash
         hash[:who_facilitated] = ['Cersei']
-        hash[:how_clearly_presented] = {'Cersei': 'Extremely clearly'}
-        hash[:how_interesting] = {'Cersei': 'Extremely interesting'}
-        hash[:how_often_given_feedback] = {'Cersei': 'All the time'}
-        hash[:help_quality] = {'Cersei': 'Extremely good'}
-        hash[:how_comfortable_asking_questions] = {'Cersei': 'Extremely comfortable'}
-        hash[:how_often_taught_new_things] = {'Cersei': 'All the time'}
-        hash[:things_facilitator_did_well] = {'Cersei': 'Cersei brought good wine'}
-        hash[:things_facilitator_could_improve] = {'Cersei': 'Cersei drank it all'}
+        hash[:how_clearly_presented] = {Cersei: 'Extremely clearly'}
+        hash[:how_interesting] = {Cersei: 'Extremely interesting'}
+        hash[:how_often_given_feedback] = {Cersei: 'All the time'}
+        hash[:help_quality] = {Cersei: 'Extremely good'}
+        hash[:how_comfortable_asking_questions] = {Cersei: 'Extremely comfortable'}
+        hash[:how_often_taught_new_things] = {Cersei: 'All the time'}
+        hash[:things_facilitator_did_well] = {Cersei: 'Cersei brought good wine'}
+        hash[:things_facilitator_could_improve] = {Cersei: 'Cersei drank it all'}
 
         create :pd_local_summer_workshop_survey, form_data: hash.to_json, pd_enrollment: enrollment
       end
@@ -249,14 +249,14 @@ module Api::V1::Pd
         hash = build :pd_local_summer_workshop_survey_hash
         hash[:how_much_learned] = 'Almost nothing'
         hash[:who_facilitated] = ['Jaime']
-        hash[:how_clearly_presented] = {'Jaime': 'Not at all clearly'}
-        hash[:how_interesting] = {'Jaime': 'Extremely interesting'}
-        hash[:how_often_given_feedback] = {'Jaime': 'All the time'}
-        hash[:help_quality] = {'Jaime': 'Extremely good'}
-        hash[:how_comfortable_asking_questions] = {'Jaime': 'Extremely comfortable'}
-        hash[:how_often_taught_new_things] = {'Jaime': 'All the time'}
-        hash[:things_facilitator_did_well] = {'Jaime': 'Jaime was very funny'}
-        hash[:things_facilitator_could_improve] = {'Jaime': 'Jaime was rather snide'}
+        hash[:how_clearly_presented] = {Jaime: 'Not at all clearly'}
+        hash[:how_interesting] = {Jaime: 'Extremely interesting'}
+        hash[:how_often_given_feedback] = {Jaime: 'All the time'}
+        hash[:help_quality] = {Jaime: 'Extremely good'}
+        hash[:how_comfortable_asking_questions] = {Jaime: 'Extremely comfortable'}
+        hash[:how_often_taught_new_things] = {Jaime: 'All the time'}
+        hash[:things_facilitator_did_well] = {Jaime: 'Jaime was very funny'}
+        hash[:things_facilitator_could_improve] = {Jaime: 'Jaime was rather snide'}
 
         create :pd_local_summer_workshop_survey, form_data: hash.to_json, pd_enrollment: enrollment
       end

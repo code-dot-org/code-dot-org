@@ -15,7 +15,7 @@ The videos introduce teachers to the curriculum materials and tools,  data model
 
 <div style="float:left; padding:10px; width:50%">
   <h3>1. Why is Algebra so Hard?</h3>
-  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/5MbL4jxHTvY?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/5MbL4jxHTvY?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
     <a href="https://videos.code.org/cs-in-algebra/why-is-algebra-so-hard.mp4">
       Download the video
@@ -25,7 +25,7 @@ The videos introduce teachers to the curriculum materials and tools,  data model
 
 <div style="float:left; padding:10px; width:50%">
   <h3>2. Modeling and Coordinates</h3>
-  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/KSt_3ovWfjk?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/KSt_3ovWfjk?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
     <a href="https://videos.code.org/cs-in-algebra/modeling-coordinates.mp4">
       Download the video
@@ -37,7 +37,7 @@ The videos introduce teachers to the curriculum materials and tools,  data model
 
 <div style="float:left; padding:10px; width:50%">
   <h3>3. Order of Operations</h3>
-  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/AMFaPKHp3Mg?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/AMFaPKHp3Mg?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
     <a href="https://videos.code.org/cs-in-algebra/order-of-operations.mp4">
       Download the video
@@ -47,7 +47,7 @@ The videos introduce teachers to the curriculum materials and tools,  data model
 
 <div style="float:left; padding:10px; width:50%">
   <h3>4. Domain and Range</h3>
-  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/88WhYoMxrGw?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/88WhYoMxrGw?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
     <a href="https://videos.code.org/cs-in-algebra/domain-and-range.mp4">
       Download the video
@@ -59,7 +59,7 @@ The videos introduce teachers to the curriculum materials and tools,  data model
 
 <div style="float:left; padding:10px; width:50%">
   <h3>5. Defining Values</h3>
-  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/xRUoQO1AdVs?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/xRUoQO1AdVs?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
     <a href="https://videos.code.org/cs-in-algebra/defining-values.mp4">
       Download the video
@@ -69,7 +69,7 @@ The videos introduce teachers to the curriculum materials and tools,  data model
 
 <div style="float:left; padding:10px; width:50%">
   <h3>6. Using the Design Recipe to Solve Word Problems</h3>
-  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/ZWdLNtPu6PQ?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/ZWdLNtPu6PQ?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
     <a href="https://videos.code.org/cs-in-algebra/word-problems-part1.mp4">
       Download the video
@@ -81,7 +81,7 @@ The videos introduce teachers to the curriculum materials and tools,  data model
 
 <div style="float:left; padding:10px; width:50%">
   <h3>7. Using the Design Recipe to Help Students</h3>
-  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/SL2zLs2P-mU?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/SL2zLs2P-mU?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
     <a href="https://videos.code.org/cs-in-algebra/word-problems-part2.mp4">
       Download the video
@@ -91,7 +91,7 @@ The videos introduce teachers to the curriculum materials and tools,  data model
 
 <div style="float:left; padding:10px; width:50%">
   <h3>8. Boolean Logic and Inequalities in the Plane</h3>
-  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/OMQO66wWqjk?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/OMQO66wWqjk?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
     <a href="https://videos.code.org/cs-in-algebra/boolean-logic.mp4">
       Download the video
@@ -103,7 +103,7 @@ The videos introduce teachers to the curriculum materials and tools,  data model
 
 <div style="float:left; padding:10px; width:50%">
   <h3>9. Piecewise Functions</h3>
-  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/joF6lOgCN14?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/joF6lOgCN14?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
     <a href="https://videos.code.org/cs-in-algebra/piecewise-functions.mp4">
       Download the video
@@ -113,7 +113,7 @@ The videos introduce teachers to the curriculum materials and tools,  data model
 
 <div style="float:left; padding:10px; width:50%">
   <h3>10. The Pythagorean Theorem</h3>
-  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/Bbq0oCmvSmA?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+  <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/Bbq0oCmvSmA?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
     <a href="https://videos.code.org/cs-in-algebra/pythagorean-theorem.mp4">
       Download the video

@@ -343,39 +343,39 @@ describe('project.js', () => {
     });
   });
 
-  describe('project.getProjectUrl', function() {
+  describe('project.getProjectUrl', function () {
     let stubUrl;
     let url;
 
-    beforeEach(function() {
+    beforeEach(function () {
       stubUrl = sinon.stub(project, 'getUrl').callsFake(() => url);
     });
 
-    afterEach(function() {
+    afterEach(function () {
       stubUrl.restore();
     });
 
-    it('typical url', function() {
+    it('typical url', function () {
       url = 'http://url';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view');
     });
 
-    it('with ending slashes', function() {
+    it('with ending slashes', function () {
       url = 'http://url//';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view');
     });
 
-    it('with query string', function() {
+    it('with query string', function () {
       url = 'http://url?query';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view?query');
     });
 
-    it('with hash', function() {
+    it('with hash', function () {
       url = 'http://url#hash';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view');
     });
 
-    it('with ending slashes, query, and hash', function() {
+    it('with ending slashes, query, and hash', function () {
       url = 'http://url/?query#hash';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view?query');
     });
@@ -1246,6 +1246,10 @@ function createStubSourceHandler() {
     getSelectedPoem: sinon.stub(),
     prepareForRemix: sinon.stub().resolves(),
     setInitialLibrariesList: sinon.stub(),
-    getLibrariesList: sinon.stub()
+    getLibrariesList: sinon.stub(),
+    setInRestrictedShareMode: sinon.stub(),
+    inRestrictedShareMode: sinon.stub(),
+    setTeacherHasConfirmedUploadWarning: sinon.stub(),
+    teacherHasConfirmedUploadWarning: sinon.stub()
   };
 }

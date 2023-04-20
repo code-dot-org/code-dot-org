@@ -6,7 +6,7 @@ import {getStore} from '@cdo/apps/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import MakerLanding from '@cdo/apps/templates/MakerLanding';
 
-$(function() {
+$(function () {
   const store = getStore();
   const course = getScriptData('makerHome').course;
 

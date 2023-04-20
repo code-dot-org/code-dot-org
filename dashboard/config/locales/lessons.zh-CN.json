@@ -527,6 +527,9 @@
           "preparation": "-   打印计划指南或分发电子版给每个学生。如果你想做出修改以适应你的课堂，提前检查。\n\n-   提前检查级别3的选项，熟悉学生需要遵循的流程。\n\n-   本课有可能延伸到多个课时。提前考虑日程安排的影响。",
           "purpose": "本课不介绍新的技能或概念，而是给学生一个机会，以创造性的方式应用他们学到的东西。"
         },
+        "coursef-2022/[New] Mini-Project: Collector Game": {
+          "name": "小项目：收集游戏"
+        },
         "coursef-2022/Simulating Experiments": {
           "name": "模拟实验",
           "overview": "通过运行精灵图实验室的简单模拟，学生可以体验到计算是如何被用于收集数据来发现趋势或模式。运行几次模拟以后，学生有机会能预测出变量是如何影响到输出的，并测试这些假设。",
@@ -1411,6 +1414,9 @@
         },
         "csd4-2022/Testing the App": {
           "name": "测试应用程序"
+        },
+        "csd4-2022/Updating Your Prototype": {
+          "name": "更新您的原型"
         },
         "csd4-2022/Project - App Presentation": {
           "name": "项目 - 应用程序演示"
@@ -4140,6 +4146,9 @@
         "allthethings/lesson-48": {
           "name": "诗歌"
         },
+        "allthethings/lesson-49": {
+          "name": "音乐"
+        },
         "coursef-2021/lesson-6": {
           "name": "向你介绍精灵图实验室",
           "overview": "在这个**背景-设置**课程中，学生将讨论计算机和技术在生活中扮演的角色，重点是应用程序和工具如何给予用户如何使用它们的选择。学生还将探索与他们以后自己创建的应用程序类似的应用程序。",
@@ -5076,6 +5085,9 @@
         },
         "csd4-2021/Testing the App": {
           "name": "测试应用程序"
+        },
+        "csd4-2021/Updating Your Prototype": {
+          "name": "更新您的原型"
         },
         "csd4-2021/Project - App Presentation": {
           "name": "项目 - 应用程序演示"

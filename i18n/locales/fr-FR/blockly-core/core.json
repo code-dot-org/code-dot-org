@@ -67,7 +67,7 @@
     "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "Tant qu’une valeur est fausse, alors exécuter certaines instructions.",
     "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "Tant qu’une valeur est vraie, alors exécuter certaines instructions.",
     "DEFINE_HEADER_DEFINITION": "Définition",
-    "DEFINE_FUNCTION_DEFINE": "Définis",
+    "DEFINE_FUNCTION_DEFINE": "Définir",
     "DEFINE_FUNCTION_FOR_EXAMPLE": "Définir la fonction ci-dessous et réessayer.",
     "DELETE": "Supprimer",
     "DELETE_BLOCK": "Supprimer le bloc",

@@ -142,15 +142,13 @@ class PDFMergerTest < Minitest::Test
     delete_outfiles
   end
 
-  private
-
-  def merge_all_file_pdfs(glob)
+  private def merge_all_file_pdfs(glob)
     Dir.glob(glob).each do |file|
       merge_file_pdfs(file, file.sub('.collate', '.pdf'))
     end
   end
 
-  def merge_file_pdfs(collate_file, output_path)
+  private def merge_file_pdfs(collate_file, output_path)
     _, pdfs = PDF.parse_collate_file(collate_file)
     PDF.merge_pdfs(output_path, *pdfs)
   end

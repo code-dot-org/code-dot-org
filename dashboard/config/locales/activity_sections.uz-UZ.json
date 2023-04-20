@@ -108,6 +108,9 @@
         "14006414-2422-4d85-bbed-d7bd50c95996": {
           "progression_name": "Malaka orttirish"
         },
+        "a6528f05-51ce-4f9d-ae5e-0cc1543f71b6": {
+          "progression_name": "Bepul o'yin"
+        },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
             null
@@ -486,7 +489,7 @@
           "progression_name": ""
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": ""
+          "progression_name": "Bepul o'yin"
         },
         "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
           "description": ""
@@ -690,7 +693,7 @@
         "711dd3c2-55d7-4e71-8714-fea9ceb6cb4a": {
           "name": "Reflection",
           "tips": [
-            null
+            "Bu kabi aks ettirish takliflari turli uslublarda bajarilishi mumkin. Jurnal yoki munozara (guruhlar yoki hamkorlar bilan) ajoyib tanlovdir!"
           ]
         },
         "88774581-810b-4ffd-9baf-292c584f9a3e": {
@@ -759,6 +762,9 @@
         "5b25dba2-c68c-43c3-814f-98e4e743cf7f": {
           "name": "Events in Bounce"
         },
+        "16d61ffc-4200-4a4d-b11e-6fffb02ab38b": {
+          "progression_name": "Bepul o'yin"
+        },
         "77973449-e6b7-4855-a2cc-1db18970a8e0": {
           "tips": [
             null
@@ -790,7 +796,8 @@
         "cda08e32-7472-46e5-900d-947542cde40e": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Bepul o'yin"
         },
         "2f77a890-cf45-4d1a-a4ca-d12e723d8d6f": {
           "name": "Reflection"
@@ -825,6 +832,9 @@
           "tips": [
             null
           ]
+        },
+        "3e984275-638c-49e0-afb6-fc959cd05771": {
+          "progression_name": "Bepul o'yin"
         },
         "92a12478-0870-4331-a034-b5f1ed4164af": {
           "progression_name": "Dars qo‘shimchalari"
@@ -955,6 +965,9 @@
         },
         "4d4e1c44-ff30-4ba6-bdcc-67dc52d3c85a": {
           "progression_name": "Chaqiriq (Challenge)"
+        },
+        "268e56b4-6f3e-4a44-8383-2e538ae1ab72": {
+          "progression_name": "Bepul o'yin"
         },
         "3ea15706-caac-499b-aef5-a7210f291bfc": {
           "progression_name": "Dars qo‘shimchalari"
@@ -1293,7 +1306,8 @@
           "description": "**Displey:** “3-6-darajali – Virtual uy hayvonini yaratish” slaydni ko‘rsating"
         },
         "70b98dfc-752d-47f0-a29f-2c39cbad42be": {
-          "description": "**Displey:** “7-darajali – Bepul o‘ynash” slaydni ko‘rsating"
+          "description": "**Displey:** “7-darajali – Bepul o‘ynash” slaydni ko‘rsating",
+          "progression_name": "Bepul o'yin"
         },
         "6007c0c9-9fe0-4bf5-9861-e64847bd3161": {
           "name": "Reflection",
@@ -1431,7 +1445,8 @@
           "progression_name": "Amaliyot"
         },
         "6962360d-5a78-47ae-8686-4038e83ebfbf": {
-          "description": "#### Bepul o'yin (10 daqiqa)\n\n**Displey**: “10-daraja – Bepul o‘ynash” slaydni ko‘rsatish\n\n**O'tish**: Talabalar endi o'zlarining loyihalarini yaratishlari mumkin bo'lgan darsning yakuniy bosqichiga o'tishlari kerak. Bu yerdagi har bir tanlov o‘quvchilarga turli xil sprayt kostyumlar to‘plamini taqdim etadi. Talabalar boshlash uchun birini tanlashlari kerak."
+          "description": "#### Bepul o'yin (10 daqiqa)\n\n**Displey**: “10-daraja – Bepul o‘ynash” slaydni ko‘rsatish\n\n**O'tish**: Talabalar endi o'zlarining loyihalarini yaratishlari mumkin bo'lgan darsning yakuniy bosqichiga o'tishlari kerak. Bu yerdagi har bir tanlov o‘quvchilarga turli xil sprayt kostyumlar to‘plamini taqdim etadi. Talabalar boshlash uchun birini tanlashlari kerak.",
+          "progression_name": "Bepul o'yin"
         },
         "95e83631-dfdc-4398-bde7-941a56206de6": {
           "name": "O‘ylamoq",
@@ -1459,7 +1474,7 @@
           ]
         },
         "04c4b8b1-e89f-4593-b843-2c7ef2ed3299": {
-          "name": "O'zgaruvchilar bilan hisoblash"
+          "name": "O'zgaruvchilarni sanash"
         },
         "51946ebc-7151-47c2-88bb-29d89d0338c5": {
           "description": "#### Bashorat (3 daqiqa)\n\n**Displey**: “1-daraja – bashorat qilish” slaydni ko‘rsatish\n\n**Buni bajaring**: Talabalarga taqdim etilgan kodni o‘qib chiqing va nima bo‘lishini bashorat qiling. “Ishga tushirish” tugmasini bosgandan so‘ng, o‘quvchilarga o‘zlari qiziq bo‘lgan yoki ularni hayratda qoldirgan narsa haqida mulohaza yuritishlari uchun vaqt bering.\n\n**Displey**: “2-darajali – bashorat qilish” slaydni ko‘rsatish\n\n**Buni bajaring**: Talabalarga taqdim etilgan kodni o‘qib chiqing va nima bo‘lishini bashorat qiling. “Ishga tushirish” tugmasini bosgandan so‘ng, o‘quvchilarga o‘zlari qiziq bo‘lgan yoki ularni hayratda qoldirgan narsa haqida mulohaza yuritishlari uchun vaqt bering.",
@@ -1760,7 +1775,7 @@
         "7af8b468-66ad-4d3b-a9c3-2ff50362f027": {
           "name": "Kirish",
           "tips": [
-            null
+            "Bu kabi aks ettirish takliflari turli uslublarda bajarilishi mumkin. Jurnal yoki munozara (guruhlar yoki hamkorlar bilan) ajoyib tanlovdir!"
           ]
         },
         "9a18adb7-3bfe-410d-89dc-79ccde9c3419": {
@@ -1785,6 +1800,9 @@
         "a5c4b601-4e45-4261-b7a6-9ffefd154aa2": {
           "progression_name": "Amaliyot"
         },
+        "dce569eb-0a60-42a9-9e31-855a6b138f92": {
+          "progression_name": "Bepul o'yin"
+        },
         "470b57f7-12df-47d0-acc3-63cb72051541": {
           "name": "Reflection"
         },
@@ -1793,6 +1811,9 @@
         },
         "0121aca1-bd15-436e-ac4d-5424f269e25a": {
           "progression_name": "Malaka orttirish"
+        },
+        "83a864f0-7f6f-4ef6-8969-b0627bf8ef55": {
+          "progression_name": "Bepul o'yin"
         },
         "ebbcd2fa-1991-41d3-a054-232b53cf8f17": {
           "name": "Reflection"
@@ -1851,6 +1872,9 @@
         },
         "0ecc0bd0-6893-4e8d-abf3-176120a15c2b": {
           "progression_name": "Amaliyot"
+        },
+        "45275988-8cf4-4043-b5a4-659cc090346a": {
+          "progression_name": "Bepul o'yin"
         },
         "cd8571ad-24a7-4231-92f5-ec2e33b8c7c2": {
           "progression_name": "Dars qo‘shimchalari"
@@ -1924,6 +1948,9 @@
         "356734de-fbb9-4ac7-b554-2daaa9d70fee": {
           "progression_name": "Malaka orttirish"
         },
+        "6ddf83bf-3856-4d68-a048-ac5a0ac26349": {
+          "progression_name": "Bepul o'yin"
+        },
         "78a9d808-3832-4ea0-976e-f89295d9e96f": {
           "name": "Reflection"
         },
@@ -1960,6 +1987,9 @@
         },
         "6d700f77-eea3-46c2-8ea6-27454cbaf9ab": {
           "progression_name": "Malaka orttirish"
+        },
+        "cbae92bc-d7b3-4707-a5f9-c5b373bdaee7": {
+          "progression_name": "Bepul o'yin"
         },
         "a8369823-7441-45a9-993c-3546a2f85efe": {
           "name": "Reflection"
@@ -2101,7 +2131,7 @@
         "8c941561-9506-4101-ad8a-d14a51edb181": {
           "name": "Reflection",
           "tips": [
-            null
+            "Bu kabi aks ettirish takliflari turli uslublarda bajarilishi mumkin. Jurnal yoki munozara (guruhlar yoki hamkorlar bilan) ajoyib tanlovdir!"
           ]
         },
         "d08fa292-1f72-4045-ba8c-26822c11b020": {
@@ -2401,21 +2431,38 @@
           "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n\\*\\* Bitta odamning harakati - bu boshqasining reaksiyasi \\*\\* \n\n Har bir talabaga takshirish uchun voqea va ushbu voqeaga tegishli munosabatni tayinlang. Harakatlarni zanjir usulida shunday bog‘lang-ki, har bir bolaning reaksiyasi boshqa o‘quvchining reaksiyasini keltirib chiqaradigan hodisaga aylansin. Hamma biron voqeaga ega bo‘lmaguncha va hamma kimnidir reaksiyaga solguncha tayinlashni davom eting. \n\n \\*\\* Eventopalooza \\*\\* \n\n Sinfni guruhlarga ajratish. Voqealar boshqaruvchisidan foydalanib, har bir guruhga bir xil tugmachaga har xil reaksiyani tayinlang. Buni uchta tugma uchun ham bajaring, so‘ngra xaosni tomosha qiling!"
         },
         "252c66a6-6257-4049-829c-1fc9fdef2303": {
-          "name": "Kirish"
+          "name": "Kirish",
+          "description": "Talabalar bilan \"Katta voqea\" faoliyatini ko'rib chiqing:\n\n-   _Biz tugma hodisalarini nima qilish uchun \"dasturlashtirdik\"?_\n\n_Endi biz kodimizga voqealar qo'shamiz. Aniqrog‘i, ikki qahramon bir-biriga tegishi uchun tadbir o‘tkazamiz._\n\n-   _Qachon oʻyinlarda ikki qahramonning bir-biriga tegishini koʻrgansiz?_"
+        },
+        "9be237cd-9b5c-48e3-9785-1abfb219a687": {
+          "description": "Ushbu tadbirlar \"Katta voqea\" dan ajratilgan tushunchalarni o'quvchilar o'tayotgan onlayn dunyoga olib kirishga yordam beradi. Sinfingiz bilan ishlash uchun quyidagilardan \\_ birini\\_ tanlang:"
         },
         "bde6629f-e67a-4eca-82de-7d379e9b22f2": {
           "tips": [
             null
           ]
         },
+        "4aed8179-0c0e-4484-968f-13756541f600": {
+          "name": "Qog'oz bloklari yordamida o'chirilgan faoliyat"
+        },
         "896b109f-f671-46b5-97d3-54292dc5fedd": {
           "name": "Onlayn boshqotirmalarni sinf bilan ko‘rib chiqish"
         },
         "fb86d63a-88cc-40a1-a21e-eef2197c9587": {
-          "name": "A Royal Battle with Events"
+          "name": "A Royal Battle with Events",
+          "description": "Bu kursning eng erkin shakldagi ulangan faoliyati. Yakuniy bosqichda talabalar o'zlarining hikoyalarini yaratish erkinligiga ega. Siz qanday hikoya yozish bo'yicha tuzilgan ko'rsatmalar berishni xohlashingiz mumkin, ayniqsa variantlar juda ko'p bo'lgan talabalar uchun."
+        },
+        "415d59cc-8ee3-4a80-95fe-0099c6a3515c": {
+          "progression_name": "Video: Play Laboratoriyasiga kirish"
+        },
+        "d4687de2-d2c6-4e40-ae76-4daca6ebfe30": {
+          "progression_name": "Bepul o'yin"
         },
         "564e41dc-2b6c-4aac-a1a5-1825568084dc": {
           "progression_name": "Mini-loyiha: Royal Battle"
+        },
+        "763a51bb-efc3-4451-92e7-1d455731442a": {
+          "progression_name": "Bepul o'yin"
         },
         "3d102930-9eee-4921-b3fc-9766a293a8df": {
           "progression_name": "Dars qo‘shimchalari"
@@ -2445,7 +2492,7 @@
         },
         "2af4acbc-a5cf-43b6-b7a7-e02e5949bcfb": {
           "tips": [
-            null
+            "Ushbu darsdagi barcha tanlovlar \"Bepul o'yin\" deb hisoblanadi, ya'ni bitta to'g'ri javob yo'q. Agar talaba Finish tugmasini bossa, u tanlovlar ro‘yxatiga qaytadi. Siz talabalarga faqat bitta tanlovni yoki vaqt imkoni bo'lganda to'ldirishga qiziqqan ko'plab tanlovlarni bajarishingiz mumkin."
           ]
         },
         "1c38d573-e689-4c3a-84b6-f6c5deb4cd55": {
@@ -2848,6 +2895,9 @@
         "95e84aa8-80ce-430c-b12c-92d51483644e": {
           "progression_name": "Mini-loyiha: Sticker Design"
         },
+        "568dc8e1-9914-45bf-98bf-b878327ea8c1": {
+          "progression_name": "Bepul o'yin"
+        },
         "6fc84d3c-2f86-40ab-b9bd-cd54d3700fe6": {
           "name": "Reflection"
         },
@@ -2903,6 +2953,9 @@
         },
         "47b5c27a-db1c-4abd-a3c9-4d90561d7d79": {
           "progression_name": "Chaqiriq (Challenge)"
+        },
+        "9798ab7a-f709-42df-b9fb-1828099a88d3": {
+          "progression_name": "Bepul o'yin"
         },
         "57cf4b4c-bc9c-480c-8645-715b23cedd68": {
           "name": "Reflection"
@@ -3204,7 +3257,7 @@
         },
         "aa72fe0f-492d-4c13-827d-43918664378e": {
           "name": "Kirish",
-          "description": "**Muhokama qiling**: _Quyidagi ma'lumotlarning qaysi turlari vaqt o'tishi bilan o'zgaradi?_\n\n-   _Ismingiz_\n-   _Tug'ilgan kuningiz_\n-   _Sizning bo'yingiz_\n-   _Yoshingiz_\n-   _Tashqi havo harorati_\n-   _2+2 ga javob_\n-   _Mamlakatimiz poytaxti_\n-   _Bugungi sana_\n-   _O'yindagi hisob_\n\n**Buni bajaring**: Talabalarga vaqt o'tishi bilan qaysi ma'lumotlar o'zgarishini va qaysi biri o'zgarmasligini muhokama qiling. Ba'zi elementlar kengroq muhokamani keltirib chiqarishi mumkin. Masalan, ismingizni o'zgartirish yoki taxallusni ishlatish mumkin. Bundan tashqari, vaqt o'tishi bilan sizning bo'yingiz o'zgarishini to'xtatadi.\n\n**Reflect**: _O‘zgaruvchida saqlangan narsani qachon o‘zgartirish foydali bo‘ladi?_\n\n**Muhokama maqsadi**: Talabalar o'zgarmas yoki vaqt o'tishi bilan o'zgarib turadigan ma'lumotlarni saqlaydigan o'zgaruvchi yaratishi mumkinligini tushunishlari kerak. Ochkolar bilan o'yinda o'zgaruvchi o'yin davomida foydalanuvchining hisobini kuzatib borish uchun javobgardir. Odatda, bu o'zgaruvchi 0 ga o'rnatila boshlaydi va foydalanuvchi to'plagan har bir ball uchun 1 ga ortadi. Yakuniy ball oxirida o'zgaruvchini chop etish orqali xabar qilinadi."
+          "description": "**Muhokama qiling**: _Quyidagi ma'lumotlarning qaysi turlari vaqt o'tishi bilan o'zgaradi?_\n\n-   _Ismingiz_\n-   _Tug'ilgan kuningiz_\n-   _Sizning bo'yingiz_\n-   _Yoshingiz_\n-   _Tashqi havo harorati_\n-   _2+2 ga javob_\n-   _Mamlakatimiz poytaxti_\n-   _Bugungi sana_\n-   _O'yindagi hisob_\n\n**Buni bajaring**: Talabalarga vaqt o'tishi bilan qaysi ma'lumotlar o'zgarishini va qaysi biri o'zgarmasligini muhokama qiling. Ba'zi elementlar kengroq muhokamani keltirib chiqarishi mumkin. Masalan, ismingizni o'zgartirish yoki taxallusni ishlatish mumkin. Bundan tashqari, vaqt o'tishi bilan sizning bo'yingiz o'zgarishini yakunlaydi.\n\n**Reflect**: _O‘zgaruvchida saqlangan narsani qachon o‘zgartirish foydali bo‘ladi?_\n\n**Muhokama maqsadi**: Talabalar o'zgarmas yoki vaqt o'tishi bilan o'zgarib turadigan ma'lumotlarni saqlaydigan o'zgaruvchi yaratishi mumkinligini tushunishlari kerak. Ochkolar bilan o'yinda o'zgaruvchi o'yin davomida foydalanuvchining hisobini kuzatib borish uchun javobgardir. Odatda, bu o'zgaruvchi 0 ga o'rnatila boshlaydi va foydalanuvchi to'plagan har bir ball uchun 1 ga ortadi. Yakuniy ball oxirida o'zgaruvchini chop etish orqali xabar qilinadi."
         },
         "bb115604-d0c7-4483-98c0-2d59d04351bb": {
           "tips": [
@@ -3224,7 +3277,7 @@
           ]
         },
         "78a9627d-1365-414a-b492-8e2e6fe8892c": {
-          "name": "O'zgaruvchilar bilan hisoblash"
+          "name": "O'zgaruvchilarni sanash"
         },
         "b2d87065-8954-443d-a9be-bb206b411b24": {
           "description": "#### Bashorat (3 daqiqa)\n\n**Buni bajaring**: Talabalarga taqdim etilgan kodni o‘qib chiqing va nima bo‘lishini bashorat qiling. “Ishga tushirish” tugmasini bosgandan so‘ng, o‘quvchilarga o‘zlari qiziq bo‘lgan yoki ularni hayratda qoldirgan narsa haqida mulohaza yuritishlari uchun vaqt bering.\n\n**Buni bajaring**: Talabalarga taqdim etilgan kodni o‘qib chiqing va nima bo‘lishini bashorat qiling. “Ishga tushirish” tugmasini bosgandan so‘ng, o‘quvchilarga o‘zlari qiziq bo‘lgan yoki ularni hayratda qoldirgan narsa haqida mulohaza yuritishlari uchun vaqt bering.",
@@ -3254,6 +3307,9 @@
         },
         "84a9b36a-0025-40e0-a586-3a4b7922202d": {
           "progression_name": "Malaka orttirish"
+        },
+        "29bc9a2b-2f0e-4f9f-becf-3264d6d93b43": {
+          "progression_name": "Bepul o'yin"
         },
         "65203df8-9f72-4d3a-9666-25fd7cb97962": {
           "name": "Reflection"
@@ -3760,38 +3816,70 @@
         "7a945439-a8e0-438c-a2a3-7e81b6832618": {
           "progression_name": "Mening onlayn qo‘shnilarim"
         },
+        "05ed12f0-289f-4706-976f-cd05c6780b2e": {
+          "description": "### Asosiy lug'at\n\n-   **onlayn**: veb-sayt yoki ilovaga kirish uchun kompyuter, telefon yoki planshetdan foydalanish\n-   **veb-sayt yoki ilova**: Internetda tashrif buyurishingiz mumkin bo'lgan joy\n\n**So'rang**: _Yangi joylarga tashrif buyurganingizda xavfsiz bo'lish uchun nima qilish kerak?_ ([3-slayd](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_54))\n\nTalabalarni javob berishga taklif qiling. Javoblar har xil bo'ladi, lekin quyidagi xavfsizlik qoidalarini mustahkamlang:\n\n-   Har doim kattalar bilan joylarga boring.\n-   O'z-o'zidan sarson bo'lmang.\n-   Faqat tanish odamlar bilan gaplashing.\n\n**Ayting**: _Bugun biz Internetdagi joylarga tashrif buyurish haqiqiy hayotdagi joylarga tashrif buyurishga o'xshashligi haqida gaplashamiz. Dunyoning yangi joylariga tashrif buyurganingizda xavfsizlik qoidalari mavjud bo'lgani kabi, internetda ham o'zingizni xavfsiz saqlash usullari mavjud._\n\n**Loyiha** [4-slayd](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g5c15fa078c_0_0) va **onlayn** ni _veb-sayt yoki ilovaga tashrif buyurish uchun kompyuter, telefon yoki planshetdan foydalanish_ deb belgilang.\n\n**[5-slayd](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_93) da [Mening onlayn mahallam](https://www.commonsense.org/education/videos/my-online-neighborhood) videosini** ko‘rsating va so‘ng so‘rang: _Armsga internet nima yoqdi? U internetda qanday ishlarni qila oladi?_\n\nTalabalarni javob berishga taklif qiling. Javoblar namunasi:\n\n-   U salqin joylarga borishni yaxshi ko'radi.\n-   U oilasi va do'stlari bilan gaplasha oladi.\n-   U ko'p yangi narsalarni o'rganishi mumkin.\n-   U internetda narsalarni yaratishi mumkin.\n\n**So'rang**: _Arms Internetga kirganda qaysi uchta qoidaga amal qiladi?_\n\nTalabalarni javob berishga taklif qiling. [6-slayd](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_141) loyihasini yarating va uchta asosiy qoidani mustahkamlang:\n\n1.  Avval ota-onangizdan (yoki siz ishonadigan kattalardan) so'rang.\n2.  Faqat o'zingiz bilgan odamlar bilan gaplashing.\n3.  Sizga mos keladigan joylarga yopishib oling.\n\n\"To'g'ri\" joylarga yopishib olish bu bolalar uchun mos sayt yoki ilova ekanligiga ishonch hosil qilish va u yerda bo'lishga ruxsatingiz borligini anglatishini tushuntiring."
+        },
         "11cff0b0-c89c-4fa0-978f-787e3b4e4c27": {
           "description": "**Ayting**: _Endi biz Internetdagi xavfsizlik qoidalarini eslab qolishimizga yordam beradigan qisqa she'rni o'rganamiz. Avval she'r o'qiyman, keyin birga o'qiymiz._\n\n**Loyiha** [7-slayd](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_196) va she'rni ovoz chiqarib o'qiyotganingizda she'rning harakatlarini taqlid qiling. Bu uchta xavfsizlik qoidalarining har biriga mos keladigan turli harakatlarga ega bo'lgan qo'ng'iroq va javob she'ri.\n\n**She'rni o'quvchilaringiz bilan birga ovoz chiqarib o'qing**. Talabalar o'qiyotganda, ular harakatlarni bajarishlari kerak. O‘quvchilardan biri o‘qituvchi rolini o‘ynasa va sinf unga javob qaytarsa, she’r ham yaxshi ishlaydi.\n\n\\*\\* Xavfsizlik, qoidalari! Jenni Pritchet\\*\\*\n\n_Biz xavfsizlikda bo'lishimiz kerak_\n\n_Biz onlayn bo'lganimizda_\n\n_Shuning uchun biz ushbu qoidalarga amal qilamiz_\n\n_Vaqtingiz maroqli o'tsin!_\n\n[1 barmogʻingizni koʻtaring] \\*Birinchi navbatda ota-onangizdan soʻrang! \\*\n\n[2 barmogʻingizni koʻtaring] \\*Faqat oʻzingiz bilgan odamlar bilan gaplashing! \\*\n\n[3 barmog'ingizni ko'taring] _O'zingizga mos saytlarni tutib turing!_\n\n_Va biz xavfsiz bo'lamiz_\n\n_Qaerga borsak ham!_\n\nEslatma: [She'r plakati](https://docs.google.com/document/d/10SHj9Xh4JJPwJJrjzJ48mpLhm3PM8orzJbWCTHY6VUo/edit) haftalik she'r yozish yoki kompyuter  qurilmangiz vaqtini boshlash uchun doimiy foydalanish uchun yaxshi."
         },
+        "0fef2713-dcd5-4c38-96e3-78954af93fec": {
+          "description": "**Ayting**: _Kompyuter sizga sinfdan chiqmasdan uzoq joylarga borish imkonini beradi._\n\n**veb-sayt**ni _internetda tashrif buyurishingiz mumkin bo'lgan joy sifatida belgilang._ ([8-slayd](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_245)) Talabalarga internetda hayvonot bog'lari va muzeylar kabi haqiqiy joylar uchun veb-saytlar yoki ilovalarga tashrif buyurishi mumkinligini tushuntiring. . Bu joylar ular yashaydigan joydan uzoqda bo'lishi mumkin, lekin ular ularga onlayn tashrif buyurishlari mumkin.\n\n**Sinf sifatida kashf qilish uchun veb-saytni tanlang**. Agar o'rganish uchun yaxshi narsa ekanligiga ishonchingiz komil bo'lmasa, quyidagilardan birini sinab ko'ring:\n\n-   [San-Diego hayvonot bog'i](http://kids.sandiegozoo.org/)\n-   [National Geographic bolalar dunyoni o'rganmoqda](https://kids.nationalgeographic.com/explore/countries/)\n\n**Soʻrang**: _Qurilmani yoqish yoki veb-sayt yoki ilovani ochishdan oldin birinchi qoida nima?_\n\nTalabalarni qurilmadan foydalanish yoki veb-sayt yoki ilovaga tashrif buyurishdan oldin har doim kattalardan ruxsat so‘rashlari kerakligini eslatib, baham ko‘rishga taklif qiling.\n\n**Sinfingiz bilan tanlagan veb-saytni o‘rganing**, bu o‘quvchilarga o‘zlari uchun eng qiziq bo‘lgan sahifalar va mashg‘ulotlarni tanlash imkonini beradi. Saytni kezib chiqayotganingizda, talabalar Internetga kirishda boshqa ikkita xavfsizlik qoidalariga qanday rioya qilishlarini ko'rsating: faqat o'zlari tanigan odamlar bilan gaplashish va ular uchun mos bo'lgan joylarga yopishib olish.\n\nEslatma: Agar siz kompyuter laboratoriyasida bo'lsangiz yoki sinfingizda yetarlicha jihozlar bo'lsa, o'quvchilardan izlanishlarni yakka tartibda yoki juftlikda bajarishlarini so'rang.\n\n**Talabalardan internet sayohatlarida nimani o'rganganlarini so'rang**. Shuningdek, savol bering: _Saytga tashrif buyurganingizda uchta xavfsizlik qoidalariga qanday amal qildingiz?_"
+        },
+        "d467ff79-be78-48b7-ae3d-915d6c776e78": {
+          "description": "**Ayting**: _Bugun biz internet bizga uzoq joylarga borishga qanday imkon berishi haqida gaplashdik. Biz Internetda yangi joylarga sayohat qilish haqiqiy hayotdagi joylarga borishga o'xshashligini bilib oldik. Shuningdek, biz veb-saytlar yoki ilovalarga tashrif buyurishda uchta muhim xavfsizlik qoidalarini bilib oldik._\n\n**Har bir talabaga [Pauza va o'ylash lahzasini](https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/edit) tarqating**. Yo'nalishlarni ovoz chiqarib o'qing va talabalarga tarqatma materialni mustaqil ravishda to'ldirishga imkon bering. ([9-slayd](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g5b457108e7_0_0))\n\n**Talabalarni o'z mulohazalarini sinf bilan baham ko'rishga taklif qiling**. Talabalarning bilimini baholash uchun tarqatma materiallar to'plang."
+        },
+        "03cbbbdf-41c3-47a1-aad7-d871e5c43061": {
+          "description": "Talabalarga o'z bilimlarini oshirish uchun taqdim etishingiz mumkin bo'lgan qo'shimcha manbalar:\n\n-   [Oilaviy faoliyat](https://drive.google.com/open?id=17Tq9wgw2F9sMkE2Z2a2zkriLK0zp1qDsSkv5YTB7Ldg)\n-   [Oilaviy maslahatlar](https://www.commonsense.org/education/family-tips/k-5-privacy-and-security)"
+        },
         "5e98b1b4-ab1d-4607-8234-fb70c37ae557": {
-          "name": "Kirish"
+          "name": "Kirish",
+          "description": "#### Kompyuter laboratoriyasida o'zini tutish\n\n**Maqsad:** Ushbu munozara talabalarga kompyuter laboratoriyasiga kirganlarida nimani kutishlari va o'zlarini qanday tutishlari kerakligini o'rgatadi."
         },
         "15b4677a-d313-433b-848f-8e1a9e87f4cd": {
           "tips": [
-            null
+            "-   Laboratoriyada tinch jismlardan foydalaning\n-   Esingizda bo'lsin, saqich yoki konfet chaynamaslik kerak\n-   Qo'llaringizni tozalang\n-   Hamkoringiz bilan bitta kompyuterda o'tiring\n-   Birinchi \"haydovchi\" sichqonchaga etib borishiga ishonch hosil qiling\n-   Hafsalangiz pir bo'lganda, kompyuter yoki monitorni urmang yoki silkitmang\n-   **\\*20/20/20 qoidasiga rioya qiling** - Ko'z zo'riqishini qanday oldini olish mumkin\n-   Har 20-30 daqiqada **\\*Wiggles** bilan qanday kurashish mumkin (GoNoodle-ga bepul kirishni talab qiladi).\n-   O'qituvchidan so'rashdan oldin sherigingizdan so'rang\n-   Hamma hamkorlarini eshitishi uchun ovoz balandligini pasaytiring\n-   Tuyg'ular va echimlarni kuzatib borish uchun jurnalingizdan foydalaning"
           ]
         },
+        "7890644b-ce6b-45ce-9d69-f94127e930f0": {
+          "description": "**Muhokama:**\n\nTalabalar qoidalarni tushunishlariga ishonch hosil qilish uchun kompyuter laboratoriyasida kutilayotgan narsalar atrofida yaxshi muhokama qiling. Ba'zi muhokama mavzulari quyidagilarni o'z ichiga olishi mumkin:\n\n-   _Kompyuter laboratoriyasida ishlash yaxshimi?_\n-   _Kompyuter laboratoriyasida bo'lganimizda qanday baland ovozda gapirishimiz kerak?_\n-   _Agar jumboqda qolib ketsangiz nima qilish kerak?_\n-   _Agar hafsalamiz pir bo'lsa, bu kompyuterni urishga yordam beradimi?_\n-   _Biz kompyuter laboratoriyasiga bormoqchi bo'lganimizda, qanday tayyorlanishimiz kerak?_"
+        },
+        "ffe0c470-7eb8-4ca5-ba9c-3f7c3cdce068": {
+          "description": "### Ko'rib chiqish\n\nDarsdan boshqotirmani loyihalash. Sinfga rasmni qanday bosish va sudrab tashlash orqali uni to'g'ri joyga joylashtirishni ko'rsating. Kerakli joyga tushmasdan oldin fonni bosish yoki rasmni tashlab yuborish kabi xatolarga yo'l qo'ying. Bunday muammolarga duch kelganingizda sinfdagi ko'ngillilardan yordam so'rang."
+        },
         "f3d9ff95-5a31-4d0d-b1f5-7934be9edf02": {
-          "name": "Drag&Drop - Olib ko‘chirishni o‘rganish"
+          "name": "Drag&Drop - Olib ko‘chirishni o‘rganish",
+          "description": "**Maqsad:** Bu talabalarga onlayn boshqotirmalarni bajarish uchun Code.org’dan qanday foydalanishni o‘rgatadi.\n\nUshbu bosqich talabalarga qo'l-ko'zni muvofiqlashtirish, bosish va sudrab tashlash ko'nikmalarini mashq qilish imkoniyatini berish uchun mo'ljallangan. Talabalar ham ketma-ketlik bilan o'ynaydilar."
         },
         "e9117446-0648-4712-9bab-f477cc4a7763": {
+          "description": "Qanday qilib bosish, sudrab tashlash va tushirishni aniq o'rgatish uchun biroz vaqt ajrating. Talabalar boshqotirma ustida ishlashda foydalanadigan qurilmalar atrofidagi tilni tanishtirishga vaqt ajrating. Agar sizda planshetlar bo'lsa, talabalar _sensorli ekrandan_ foydalanadilar. Agar sizda noutbuklar bo'lsa, ular _trackpad_ dan foydalanishi mumkin. Laboratoriyada topishingiz mumkin bo'lgan ish stoli kompyuterlari _sichqonchani_ ishlatishga tayanadi.",
           "tips": [
-            null
+            "Talabalarga sudrab tashlash va tushirish bosqichlarini parchalashini va ularni doskaga yozib qo'yishini o'ylab ko'ring. Misol uchun:\n\n1.  O'qni blokga o'tkazing.\n2.  Sichqoncha tugmasini bosing va ushlab turing.\n3.  Sichqonchani harakatlantiring.\n4.  Tugmani qo'yib yuboring.\n\nBuni amalga oshirish talabalarga algoritm yaratish bo‘yicha amaliyot beradi, bu tushuncha kelgusi darslarda o‘rganiladi."
           ]
         },
         "4297e33f-2028-4d9e-bfe0-76e774c504a5": {
+          "description": "O'qituvchilar informatika ta'limida muhim rol o'ynaydi va birgalikdagi va jonli sinf muhitini qo'llab-quvvatlaydi. Onlayn boshqotirmalar paytida o'qituvchining roli birinchi navbatda rag'batlantirish va qo'llab-quvvatlashdir. Onlayn jumboqlar talabalarga qaratilgan bo'lishi kerak, shuning uchun o'quvchilar tiqilib qolganda o'qituvchilar aralashmasliklari kerak. Buni qanday qilish haqida ba'zi fikrlar:",
           "tips": [
-            null
+            "Talabalarga sinfdoshlariga yordam berishning to'g'ri yo'lini ko'rsating:\n\n-   Sinfdoshingizning kursiga o'tirmang\n-   Sinfdoshingizning klaviaturasidan foydalanmang\n-   Sinfdoshingizning sichqonchasiga tegmang\n-   Ketishdan oldin sinfdoshingiz sizga yechimni ovoz chiqarib aytib berishiga ishonch hosil qiling"
           ]
+        },
+        "b1e6ef4c-a3bc-4e05-8cb4-e02e93c90bad": {
+          "description": "-   Faoliyat davomida iloji boricha juftlik dasturlashdan foydalaning.\n-   Talabalarni savollar/qiyinchiliklar bilan sherigidan so'rashdan boshlashga undash.\n-   Javobsiz savollar yaqin atrofdagi guruhga yuborilishi mumkin, ular yechimni allaqachon bilishi mumkin.\n-   Talabalarga yaqinlashishdan oldin disk raskadrovka jarayonidan foydalanishni eslating.\n-   Talabalardan o'zlari ko'rayotgan muammoni tasvirlab bering. _Nima qilish kerak? Bu nima qiladi? Bu sizga nima deydi?_\n-   Hafsalasi pir bo‘lgan o‘quvchilarga umidsizlik o‘rganish yo‘lidagi qadam ekanligini va qat’iyatlilik o‘z samarasini berishini eslating.\n-   Agar talaba bularning barchasidan keyin ham tiqilib qolgan bo'lsa, talaba xatoni o'zi aniqlashi uchun etakchi savollarni bering."
         },
         "1649ef8d-4ee4-47d1-8bcc-bb5d13194f38": {
           "progression_name": "Malaka orttirish"
         },
         "719202e7-e59f-44af-9208-46eb120b3ba0": {
           "name": "Aks ettirish",
+          "description": "Talabalarga o'zlari o'rganganlari, nima uchun foydali ekanligi va bunga qanday munosabatda bo'lishlari haqida yozishlari bugungi kunda olgan bilimlarini mustahkamlashga yordam beradi va kelajakda ular uchun ko'rib chiqish varaqasi tuzadi.\n\n**Ko'rsatmalar:**\n\n-   Kompyuter laboratoriyasiga borishga tayyorlanish ketma-ketligini chiza olasizmi?\n-   “Qilish” va “Qilmang” kompyuter laboratoriyasini chizish.\n-   Boshqotirmalarni bosish va sudrab borishda foydalanilgan kompyuter qismi nomini chizing va belgilang. (sichqoncha tugmasi, sensorli ekran, trek paneli)",
           "tips": [
-            null
+            "Bu kabi aks ettirish takliflari turli uslublarda bajarilishi mumkin. Jurnal yoki munozara (guruhlar yoki hamkorlar bilan) ajoyib tanlovdir!"
           ]
+        },
+        "6fb725dc-f6ed-4c29-ab59-3e6978d3ec1b": {
+          "description": "Talabalarning bilimini oshirish uchun ushbu tadbirlardan foydalaning. Ular sinfdan tashqari mashg'ulotlar yoki boshqa boyitish sifatida ishlatilishi mumkin.\n\n-   Agar o‘quvchilar boshqotirmalarni erta bajarsalar, ularga o‘z jurnallarida o‘z jumboqlarini o‘ylab topishga vaqt ajrating."
+        },
+        "15e1804c-771f-4d59-97a6-ec3cc0c798c5": {
+          "description": "### Shu bilan qofiya - (20-30 daqiqa)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) **Kompyuter fanlari + ingliz tili san'ati + matematika**\n\n[\\*\\*Bu bilan qofiyalash\\*\\*](https://docs.google.com/document/d/1abRo0DBkRiB1gIPWjdxv70TwO28N5_QGpmtMQ-oyYd0/edit#). Rhyme With That oʻqituvchilar hamjamiyatimiz tomonidan yozilgan Common Core ELA va Math standartlariga moslashtirilgan ixtiyoriy faoliyatdir. Talabalar kompyuter sichqonchasidan CVC so'zlarini yaratish, qofiyali so'zlarni moslashtirish va hisoblash uchun harfni sudrab olib tashlash uchun foydalanadilar.\n\n**Manzil qilingan standartlar:**\n\n-   **CCSS.ELA-LITERACY.RF.K.2.A:** Qofiyali so‘zlarni aniqlang va yarating.\n-   **CCSS.ELA-LITERACY.RF.K.2.D:** Uch fonemali (undosh-unli-undosh yoki CVC) so‘zlardagi boshlang‘ich, medial va oxirgi tovushlarni (fonemalarni) ajratib oling va talaffuz qiling. 1 (Bu /l/, /r/ yoki /x/ bilan tugaydigan CVC'larni o'z ichiga olmaydi.)\n-   **CCSS.MATH.CONTENT.K.CC.B.5:** \"qancha?\" deb javob berish uchun sanang. bir chiziq, to'rtburchaklar massiv yoki aylana bo'ylab joylashtirilgan 20 tagacha yoki tarqoq konfiguratsiyadagi 10 tagacha narsalar haqida savollar; 1 dan 20 gacha bo'lgan raqam berilganda, shuncha ko'p narsalarni sanang."
         },
         "6b3b5eca-1657-4a57-a9d4-883dc76a29cb": {
           "name": "Kirish",
@@ -3809,6 +3897,12 @@
         },
         "c0c3f787-1bdf-4d94-8727-baa1f58abc9a": {
           "description": "Ushbu mashqda sinf oldindan belgilangan etakchi boshliqlar (flurb) va bosh joy (meva) bilan kartalarni olishadi.Talabalar berilgan strelkalar yordamida har bir kartochkadagi mevalarga o'tishlari kerak bo'ladi.\n**Model:** Happy Maps Cards ish varag‘idan oraliq xaritalardan birini tanlang (masalan, №3). Uni sinf ga ko'rsating va birgalikda boshqotirma ustida ishlang.\nTalabalar jumboqni korib chiqishini  taklif qiling, so'ngra juft bo'lib o'ylab ko'rib va mevani qanday olishlari haqida o'z yechimlaringiz bilan o'rtoqlashing.\n**O'ylab ko'ring:**  Flurb mevaga erishish uchun ikki qadam tashlashi kerak. Ushbu ikki bosqichga qanday munosabatda bo'lishingizni hal qilish uchun  sherigingiz bilan ishlang.\n\n**Juftlik:** O‘quvchilarni sheriklari bilan taxminan 90 soniya davomida muhokama qilishlarini ayting.\n**Ulashish:** Ko‘ngillilardan doskaga streklalarni  chizishlarini so‘rang. Agar manba kodi ishlamasa, sinfda nosozliklar uchun biroz vaqt sarflang. Talabalar oldingi darslardan \"nosozliklarni tuzatish\" g'oyasi bilan tanish bo'lishi kerak, shuning uchun ular o'zlarini qulay his qilishlari uchun lug'atdan foydalaning.\n\nKod doskaga muvaffaqiyatli yozilgandan so'ng, sinfni birinchi qo'shma dasturini yozish bilan tabriklang!"
+        },
+        "8af9a60e-494a-40ae-b8a2-a5ef46a86f2b": {
+          "description": "### Talabalar navbati\n\n**Guruh:** Agar sinfingiz qulay bo'lsa, o'quvchilarni 2-3 kishidan iborat kichik guruhlarga joylashtiring. Aks holda, siz ushbu muammolarni sinf sifatida hal qilishni davom ettirishingiz va dasturlarni yozish uchun ularni o'ylab ko'rishingiz mumkin.\n\n**Tarqatish:** Zarur bo‘lganda **\\*Ishchi varaq**dagi rasmlardan birini har bir guruhga tarqating.\\\n_(Ixtiyoriy)_ Agar talabalar koʻproq narsaga tayyor ekanliklarini sezsangiz, taqdim etilgan **\\*Manipulyativlardan** foydalaning va talabalarga boʻsh xaritada oʻzlari boshlash va tugatish manzillarini tanlashlariga ruxsat bering.\n\nTalabalarni quyidagi amallarni bajarishga undash:\n\n-   Meva hosil qilish uchun algoritmni muhokama qiling.\n-   Algoritmni jurnallaridagi strelkalar shaklida kodlash.\n-   Hamma narsa kutilganidek ishlayotganligini bilish uchun ularning kodini sinab ko'ring.\n-   Har qanday muammolarni tuzating va to'g'ri ishlaguncha ularning kodini tuzating.\n\n**Ulashish:** Dars tugagach, guruhlarga o‘zlari hal qilgan eng qiyin xaritalarni baham ko‘rishlarini taklif qiling. Agar vaqtingiz bo'lsa, ulardan o'z yechimlari bilan bo'lishishlarini ham so'rang."
+        },
+        "08454579-6a2e-4e8f-842c-30ca28ed1fa1": {
+          "description": "#### Flash Chat\n\n**Muhokama qiling:** Dam olish vaqti kelganida, o‘quvchilardan algoritm va dastur o‘rtasidagi farqni ayta olishlarini so‘rang. Ikkalasi ham qadamlar ro'yxati, lekin dastur (_code_) mashina (yoki bolalar bog'chasi!) tomonidan boshqarilishi mumkin bo'lgan tarzda kodlangan.\n\n-   _Sizning dasturingizni boshqa tilda gapiradigan odam boshqara oladi deb o'ylaysizmi?_\n-   _Nega yoki nega?_\n\n#### Reflektsiya\n\n**Ko'rsatmalar:**\n\n-   Bugungi dars nima haqida edi?\n-   **\\*This yuzlaridan birini chizing**\n     Bu sizning jurnal sahifangiz burchagida bugungi darsga qanday munosabatda bo'lganingizni ko'rsatadi.\n-   O'zingizning florb xaritangizni chiza olasizmi?\n-   Xaritangizni hal qilish uchun kod nima bo'lar edi?"
         },
         "db8c80aa-92a2-47be-bd6e-ccb990be20d4": {
           "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n\\*\\* Stuffie Maps \\*\\*\n\n-   Skotch bilan gilamchada katak yarating va o‘quvchiga o‘yinchoq hayvonlarni maktabga olib kelishni ayting. \n\n-   Endi talabalar do‘stlariga dasturlarda ko‘rsatilgandek, o‘zlarining haqiqiy narsalarini ko‘chirish uchun dasturlashlari mumkin. \n\n    \\*\\* O‘zingiznikini yarating \\*\\* \n\n-   Talabalardan o‘z xaritalarini tuzishlarini so‘rang. \n\n-   Boshqa talabalar ularni dasturlardan foydalanib yechishlarini so‘rang."
@@ -3949,6 +4043,9 @@
           "tips": [
             null
           ]
+        },
+        "51547753-2cb4-4275-ba76-1aefc4e65f51": {
+          "name": "Qog'oz bloklari yordamida o'chirilgan faoliyat"
         },
         "7060a52b-e96b-4b92-a2d2-7cca708e81ea": {
           "name": "Onlayn boshqotirmalarni sinf bilan ko‘rib chiqish"
@@ -4099,18 +4196,34 @@
           "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n\\*\\* Bitta odamning harakati - bu boshqasining reaksiyasi \\*\\* \n\n Har bir talabaga takshirish uchun voqea va ushbu voqeaga tegishli munosabatni tayinlang. Harakatlarni zanjir usulida shunday bog‘lang-ki, har bir bolaning reaksiyasi boshqa o‘quvchining reaksiyasini keltirib chiqaradigan hodisaga aylansin. Hamma biron voqeaga ega bo‘lmaguncha va hamma kimnidir reaksiyaga solguncha tayinlashni davom eting. \n\n \\*\\* Eventopalooza \\*\\* \n\n Sinfni guruhlarga ajratish. Voqealar boshqaruvchisidan foydalanib, har bir guruhga bir xil tugmachaga har xil reaksiyani tayinlang. Buni uchta tugma uchun ham bajaring, so‘ngra xaosni tomosha qiling!"
         },
         "ebbfd882-a637-4029-af3d-6238838878f0": {
-          "name": "Kirish"
+          "name": "Kirish",
+          "description": "Talabalar bilan \"Katta voqea\" faoliyatini ko'rib chiqing:\n\n-   _Biz tugma hodisalarini nima qilish uchun \"dasturlashtirdik\"?_\n\n_Endi biz kodimizga voqealar qo'shamiz. Aniqrog‘i, ikki qahramon bir-biriga tegishi uchun tadbir o‘tkazamiz._\n\n-   _Qachon oʻyinlarda ikki qahramonning bir-biriga tegishini koʻrgansiz?_"
+        },
+        "9984d52f-279f-4aac-8f83-93ea4c64ab7b": {
+          "description": "Ushbu tadbirlar \"Katta voqea\" dan ajratilgan tushunchalarni o'quvchilar o'tayotgan onlayn dunyoga olib kirishga yordam beradi. Sinfingiz bilan ishlash uchun quyidagilardan \\_ birini\\_ tanlang:"
         },
         "6a7e8f19-fa58-48f8-bbf5-a32c80d3e742": {
           "tips": [
-            null
+            "Talabalar o'zlarining yakuniy mahsulotlarini havola bilan baham ko'rish imkoniyatiga ega bo'ladilar. Bu sizning maktab jamoasiga o'quvchilaringiz qilayotgan ajoyib ishlarni ko'rsatish uchun ajoyib imkoniyatdir. Barcha havolalarni to'plang va hamma ko'rishi uchun ularni sinfingiz veb-saytida saqlang!\n\nTalabalarga o'z ishlarini faqat yaqin do'stlari yoki oilalari bilan baham ko'rishlarini eslatib turing. Qo'shimcha ma'lumot olish uchun darsni tomosha qiling yoki ko'rsating **\\*To'xtatib turing va Onlayn o'ylab ko'ring** video."
           ]
         },
+        "837efd25-c963-4480-a6e0-d88f5ca32661": {
+          "name": "Qog'oz bloklari yordamida o'chirilgan faoliyat",
+          "description": "**\\*Controller Image** masofadan boshqarish pultidan va **\\*Manipulatives** bloklaridan foydalanib, oldingi darsdagi faoliyatni takrorlash uchun sinfingizni yig'ing. Sinfdan _koʻk rangli tugma bosilganda, biz nima qilamiz?_ deb soʻrang, soʻng “when” hodisa bloklaridan birini va mos ravishda koʻk harakat bloklaridan birini toʻldiring. Talabalar \"qachon\" bloklari ko'k blokning tepasida bo'lishi kerakligini va dastur ishga tushishi uchun ularga teginish kerakligini tushunishlariga ishonch hosil qiling.\n\n#### -Yoki-"
+        },
         "573402e5-9215-457d-9709-f2d71a8cfdd3": {
-          "name": "Onlayn boshqotirmalarni sinf bilan ko‘rib chiqish"
+          "name": "Onlayn boshqotirmalarni sinf bilan ko‘rib chiqish",
+          "description": "Onlaynda mos keladigan jumboqlardan jumboqni torting. Biz jumboqni tavsiya qilamiz 7. Xorxeni bosganingizda kulgili shovqin qilish uchun turli talabalarni chaqiring. Bu ular munosabat bildirayotgan voqea ekanligini tushuntiring va Xorxe uni bosganingizda shovqin qilish uchun kodlangan bo'lishi mumkin."
         },
         "60a4885c-c85c-4e63-9f82-79465bccb97c": {
-          "name": "Hodisalar bilan harakatda"
+          "name": "Hodisalar bilan harakatda",
+          "description": "Bu kursning eng erkin shakldagi ulangan faoliyati. Yakuniy bosqichda talabalar o'zlarining hikoyalarini yaratish erkinligiga ega. Siz qanday hikoya yozish bo'yicha tuzilgan ko'rsatmalar berishni xohlashingiz mumkin, ayniqsa variantlar juda ko'p bo'lgan talabalar uchun."
+        },
+        "2528954c-2716-4cae-b57d-8b23953c85c2": {
+          "progression_name": "Video: Play Laboratoriyasiga kirish"
+        },
+        "c8827180-bb39-48f4-b7bd-bf5804cc5830": {
+          "progression_name": "Bepul o'yin"
         },
         "a7d05e68-da4d-411a-a07d-d53ba2e04e20": {
           "progression_name": "Amaliyot"
@@ -4122,31 +4235,41 @@
           "progression_name": "Dars qo‘shimchalari"
         },
         "fa68abb6-1549-4910-9b4e-7c1dcd17c68d": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": "**Ko'rsatmalar:**\n\n-   Bugungi dars nima haqida edi?\n-   Jurnal sahifangiz burchagiga bugungi darsga qanday munosabatda bo'lganingizni ko'rsatadigan yuzlardan birini chizing.\n-   Bugun dasturingizda foydalangan voqeani chizing.\n-   Tasavvur qiling, sizda masofadan boshqariladigan robot bor. Masofadan boshqarish pulti qanday ko'rinishga ega bo'lar edi? Robotni nima qilishga majburlash mumkin deb o'ylaganingizning rasmini chizing."
         },
         "498a91b4-c0fa-46f2-bf36-aa35dc346de5": {
           "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n**Kapyushon ostiga qarang**\n\nO‘zingizning hikoyangizga havolani ulashganingizda, siz uning orqasida turgan barcha kodlarni ulashasiz. Bu o‘quvchilar uchun bir-biridan o‘rganish uchun ajoyib usuldir.\n\n-   Tugallangan hikoyalarga havolalarni Internetda joylashtiring.\n    -   O‘zingizning hikoyangizni ham ulashing!\n-   Talabalar havolani yuklaganlarida, hikoyaning orqasidagi kodni ko‘rish uchun ularga \"Qanday ishlaydi \" tugmasini bosishini ayting.\n-   Sinfdoshlaringiz bilan o‘zlarining hikoyalarini kodlash usullarini guruh sifatida muhokama qiling.\n    -   Sizni nima ajablantirdi?\n    -   Siz nimani sinab ko‘rishni xohlaysiz?\n-   Birovning hikoyasini tanlang va uning asosida yasash uchun `Remix` tugmasini bosing. (Xavotir olmang, asl hikoya xavfsiz bo‘ladi.)"
         },
         "eaf088f5-1fd2-48c5-94c7-cea53aa102c8": {
           "name": "Sharh",
+          "description": "**Buni bajaring:**\n\n-   O'quvchilarni hayajonlantiring va bugungi mashg'ulotga tayyorlang. Talabalardan Rassom vositalaridan foydalangan holda oldingi darsda nima qilganlarini eslab qolishlarini so'rashdan boshlang.\n-   **loop** lug'at so'zini ko'rib chiqing.\n-   Agar siz o'zingizning loyiha namunangizni yaratgan bo'lsangiz, uni hozir baham ko'ring.",
           "progression_name": "Loyiha"
         },
         "04be5fa4-0840-4707-9fb5-9e107ce342d8": {
+          "name": "Rassom bilan hikoya qilish",
+          "description": "**Buni bajaring:** Proyektorda ushbu dars uchun darajani ko'taring.",
           "progression_name": "Loyiha"
+        },
+        "9eb77329-f532-447a-a567-8715fc47c91c": {
+          "description": "_Bugun biz Rassom bilan hikoya qilish uchun o'z loyihalarimizni yaratish orqali barchangiz qanchalik ko'p narsalarni o'rganganingizni nishonlaymiz. Rassom bugun uchta joyga sayohat qiladi: bog', hayvonot bog'i va koinot!_\n\n_Sizning vazifangiz unga yo'l ochish va u qilgan va ko'rgan narsalar haqida hikoya qilishdir._\n\n_U gullar orasidan yuradimi?_\n\n_Hayvonlar uchun uy quradimi?_\n\n_U yana nimani ko'rishi yoki qilishi mumkin?_"
         },
         "b2a0edc8-b5bc-4798-8b44-7149d863a8ab": {
           "name": "Planning",
+          "description": "**Buni bajaring:** **rejalashtirish bo‘yicha qo‘llanma** tarqatma materialni tarqating va uni talabalar bilan ko‘rib chiqing.\nTalabalar rassom uchun _kamida bitta_ joy tanlaydilar. Keyin ular rassom yuradigan yo'lni chizishlari kerak. (Bu nuqtadan nuqtaga jumboqga o'xshaydi, lekin raqamlarsiz!)\nRasm yonida talabalar o'z hikoyalarini yozishlari kerak.",
           "tips": [
-            null
+            "Hikoyalar sinfingiz uchun mos keladigan narsadan qat'i nazar, bir yoki ikkita jumla bo'lishi mumkin."
           ]
         },
         "346269ec-d737-4b4f-a539-ea4c4b066609": {
           "name": "Loyiha",
+          "description": "Kompyuteringizda faoliyatni olganingizda, boshlash uchun tanlovlardan birini bosing. O'zingizning rejangiz bilan boshlang, lekin siz rassomga xohlagan narsani chizishingiz mumkin! Dars oxirida biz o'z loyihalarimizni sinf bilan baham ko'ramiz.",
           "progression_name": "Loyiha"
         },
         "70d5ed4e-2d56-4271-8005-8af00a99cbdb": {
+          "description": "Talabalar ishlayotganda, savollarga javob berish va g'oyalar berish orqali ularni qo'llab-quvvatlang. Faoliyatni yanada hamkorlikka aylantirish uchun ularni fikr almashishga undash.",
           "tips": [
-            null
+            "Ushbu darsdagi barcha tanlovlar \"Bepul o'yin\" deb hisoblanadi, ya'ni bitta to'g'ri javob yo'q. Agar talaba Finish tugmasini bossa, u tanlovlar ro‘yxatiga qaytadi. Siz talabalarga faqat bitta tanlovni yoki vaqt imkoni bo'lganda to'ldirishga qiziqqan ko'plab tanlovlarni bajarishingiz mumkin."
           ]
         },
         "f86b3a26-0226-4464-a507-412b217cb947": {
@@ -4154,6 +4277,9 @@
         },
         "a4e7ad08-e07b-4d9b-bc75-838ae92df60d": {
           "name": "Asosiy Lug‘at"
+        },
+        "a3b81bea-2a8e-4fe9-907f-45ba73aa23e2": {
+          "description": "Talabalarga o'z bilimlarini oshirish uchun taqdim etishingiz mumkin bo'lgan qo'shimcha manbalar:\n\n-   [Oilaviy faoliyat](https://drive.google.com/open?id=1tsYWY76Y9BJpl_mHcxb0-BiLIHL2PrGBt3GqeeBNAD8)\n-   [Oilaviy maslahatlar](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)"
         },
         "5fc2cc60-64ea-4c01-8c9e-21280799d17b": {
           "name": "O‘ylamoq",
@@ -4193,7 +4319,7 @@
         "e24379b7-bf97-4179-948d-ea5af39d8089": {
           "name": "Reflection",
           "tips": [
-            null
+            "Bu kabi aks ettirish takliflari turli uslublarda bajarilishi mumkin. Jurnal yoki munozara (guruhlar yoki hamkorlar bilan) ajoyib tanlovdir!"
           ]
         },
         "71572e70-b82e-4aca-b685-910711e02c57": {
@@ -4459,6 +4585,9 @@
         "a36ffc45-1507-4d23-b7c0-f095cd7c0550": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: O'tish harakati slaydni ko'rsatish\n\nUshbu faoliyat My Loopy Robotic Friends-dan bog'lanmagan tushunchalarni talabalar o'tayotgan onlayn dunyoga olib kirishga yordam beradi. Sinfingiz bilan bajarish uchun quyidagilardan \\_ birini\\_ tanlang:"
         },
+        "a8481f49-9b56-474e-8c05-28251c46f468": {
+          "name": "Qog'oz bloklari yordamida o'chirilgan faoliyat"
+        },
         "6adb6ede-2fc4-47f7-97d8-32cd0c02402f": {
           "name": "Onlayn boshqotirmalarni sinf bilan ko‘rib chiqish"
         },
@@ -4564,7 +4693,8 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “1-8-daraja – Challenge” slaydni ko‘rsatish"
         },
         "c5f36648-ac0d-405f-af7a-3020ebdce7f3": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: \"9-darajali - Bepul o'yin\" slaydni ko'rsatish.\n\n**Aytib bering:**\n\n-   _O'z stiker san'atingizni yarating._\n-   _Dizayningizni rejalashtiring._\n-   _Dizayningizni dasturlang._\n-   _Dizayningizni dars oxirida baham ko'ring._"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: \"9-darajali - Bepul o'yin\" slaydni ko'rsatish.\n\n**Aytib bering:**\n\n-   _O'z stiker san'atingizni yarating._\n-   _Dizayningizni rejalashtiring._\n-   _Dizayningizni dasturlang._\n-   _Dizayningizni dars oxirida baham ko'ring._",
+          "progression_name": "Bepul o'yin"
         },
         "5ef885b2-0000-4e19-b7be-39fe06f3b7e7": {
           "name": "Reflection",
@@ -4622,6 +4752,12 @@
           "name": "Kirish",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Show**: Tez ko‘rish slaydni ko‘rsatish\n\n**Ayting:** _Biz tugmani bosish voqealarini nima uchun \"dasturladik\"?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ekran**: \"kodlash uchun voqealar qo'shish\" slaydni ko'rsatish\n\n\\*\\* Ayting:\\*\\* _Endi biz kodimizga voqealar qo'shamiz. Biz sichqonchani bosish uchun hodisa va qushning yerga yoki to'siq kabi ob'ektga urishi uchun bitta hodisa yaratamiz._"
         },
+        "1a9e3fe9-eb6a-4e32-8e8a-e53a469f6d4a": {
+          "description": "Ushbu tadbirlar \"Katta voqea\" dan ajratilgan tushunchalarni o'quvchilar o'tayotgan onlayn dunyoga olib kirishga yordam beradi. Sinfingiz bilan ishlash uchun quyidagilardan \\_ birini\\_ tanlang:"
+        },
+        "40fa01ec-8eb2-4f37-af04-b4a4ec5bdad8": {
+          "name": "Qog'oz bloklari yordamida o'chirilgan faoliyat"
+        },
         "c18dfa97-b98e-4a9b-99e1-59c56b29905b": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: O'tish harakati slaydni ko'rsatish\n\nDarsni mos keladigan onlayn bosqichdan tortib oling, biz 4-jumboqni tavsiya qilamiz.\n\n**Ayting:** _Flappy Bird erga yoki to'siqqa o'xshash narsaga urilsa nima bo'ladi?_\n\nUshbu o'yinda Flappy bir marta bosish bilan oldinga siljishi va Flappy biror narsaga tegsa, o'yin tugashini tushuntiring.\n\nSinf bilan jumboqni yeching  nima bo'lgan va nima bo'lmagani haqida tez muhokama qilish uchun vaqt ajrating. Har bir voqea uchun o'quvchilardan ushbu hodisaga qanday harakat mos kelishini so'rang."
         },
@@ -4658,8 +4794,14 @@
             null
           ]
         },
+        "bd4cd8f9-a5e1-4bfa-b3be-85bf3c6c7119": {
+          "progression_name": "Video: Play Laboratoriyasiga kirish"
+        },
         "1b396a72-6c8e-4667-a4a5-8ef61ac9687f": {
           "progression_name": "Mini-loyiha: Chase Game"
+        },
+        "657133fd-6697-4f38-8ef7-8f53811eb2ef": {
+          "progression_name": "Bepul o'yin"
         },
         "f0b5eef7-fc2b-430a-84d1-0db90863beac": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Dars qo‘shimchalari” slaydni ko‘rsatish",
@@ -4713,6 +4855,9 @@
           "tips": [
             null
           ]
+        },
+        "9c825c56-c35d-4a06-93e4-6dd4159ac7a7": {
+          "name": "Ixtiyoriy baholash (15 daqiqa)"
         },
         "3568529d-36f9-48e4-8075-63bf63a1b309": {
           "name": "Reflection"
@@ -9691,8 +9836,14 @@
         "f822fcc2-30b2-4b10-a349-eb0f82b2bc06": {
           "progression_name": "Amaliyot"
         },
+        "3ead06ef-2d2b-49b0-b62b-ededeff21bcb": {
+          "progression_name": "Bepul o'yin"
+        },
         "44560936-2766-4602-966c-bb69eec25ecf": {
           "progression_name": "Hikoya yarating"
+        },
+        "372e55a3-82dc-4e92-b50d-242dc2f7328d": {
+          "progression_name": "Bepul o'yin"
         },
         "66dbbe49-0e5e-40f0-95c6-e5399acda145": {
           "progression_name": "Amaliyot"
@@ -9790,11 +9941,20 @@
         "6cd0313d-20b7-41af-a555-f7a40a9dc6ea": {
           "progression_name": "Amaliyot"
         },
+        "ff0bdda6-cf62-4449-a308-76b365386a4c": {
+          "progression_name": "Bepul o'yin"
+        },
         "0c082796-a8ea-4cc9-afc7-0b1edb4d77ee": {
           "progression_name": "Hikoya yarating"
         },
+        "8eeabef8-20df-4bea-ba8d-10376953fb46": {
+          "progression_name": "Bepul o'yin"
+        },
         "69bff80f-8f24-42fa-9400-acda568b9042": {
           "progression_name": "Mini-loyiha: Royal Battle"
+        },
+        "1ebe2c8c-ee7d-405e-927f-cae153b2a188": {
+          "progression_name": "Bepul o'yin"
         },
         "a9d3e2b0-f156-4174-a237-1918783170f0": {
           "progression_name": "Labirintga kirish: Blocklar bilan dasturlash"
@@ -9825,8 +9985,16 @@
         "addf5ec5-154f-4227-839e-c02d5fd5e122": {
           "progression_name": "Amaliyot"
         },
+        "eaf5aad1-3ca8-4a7a-82a9-0e62b210afb6": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
+        },
         "e49139a8-ee0c-485b-b2a8-8e76de4e61e1": {
           "progression_name": "Amaliyot"
+        },
+        "cdd48ff9-10dc-4f20-be98-28178ec9d7f6": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
         },
         "e2314a32-dd2f-4699-9f77-a5398fd0a9f2": {
           "progression_name": "Amaliyot"
@@ -9972,11 +10140,22 @@
         "a2c17858-a7b4-4d15-8e46-256e77e8ea44": {
           "progression_name": "Oldindan ko'rish"
         },
+        "0914c4d0-b269-4072-a1b7-ed41eb2b7224": {
+          "progression_name": "Bepul o'yin"
+        },
         "6f5806b8-1761-48ea-a9de-f04bb6ab8ac5": {
           "progression_name": "Amaliyot"
         },
+        "3c1c493d-0ff2-4b95-a772-669f86180408": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
+        },
         "51f9b1b8-8997-4a97-98c5-34ab76e433b0": {
           "progression_name": "Amaliyot"
+        },
+        "76fe9ba2-dbf2-4b31-a6f1-b35c3c4d2963": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
         },
         "d72f7249-432e-4ae6-b265-c1fe66a6150d": {
           "progression_name": "Sprite laboratoriyasi bilan tanishish"
@@ -9992,6 +10171,10 @@
         },
         "9c484311-a0f9-4660-9bc7-a13b03e87d58": {
           "progression_name": "Mini-loyiha: Swimming Fish (continued)"
+        },
+        "18e78998-a305-4084-83a3-df1cd05da78f": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
         },
         "78afdb2c-722d-478e-a2f4-6430fed7a679": {
           "progression_name": "Oldindan ko'rish"
@@ -10075,6 +10258,9 @@
         "5192c608-aa04-4206-81f7-598dbb05ddbb": {
           "progression_name": "Amaliyot"
         },
+        "3b6fb751-1751-4a04-9d40-73b9356aa8f6": {
+          "progression_name": "Bepul o'yin"
+        },
         "f20e0a43-d882-4449-975c-8e93e532cf29": {
           "progression_name": "Simulyatorni ishga tushurish"
         },
@@ -10103,17 +10289,32 @@
         "3a5abcea-13cc-4d68-ae27-8f48d9eabb37": {
           "progression_name": "For sikliga kirish"
         },
+        "26da0974-cf83-41fe-b6d8-b6c9f7a29c03": {
+          "progression_name": "Bepul o'yin"
+        },
         "62173a7a-b9db-4cf0-acfa-31f807f04c02": {
           "progression_name": "Amaliyot"
         },
+        "4ab09fad-0ce3-4895-9507-c6661641a4f8": {
+          "progression_name": "Bepul o'yin"
+        },
         "439d3e06-30eb-4733-8ab7-0f18f61dce89": {
           "progression_name": "Oldindan ko'rish"
+        },
+        "2e631519-0aa2-4dbf-be3b-7c0c62ff4311": {
+          "progression_name": "Bepul o'yin"
         },
         "ae273b80-0385-417e-bab6-aeeac5c89544": {
           "progression_name": "Oldindan ko'rish"
         },
         "1d520edd-37b0-4929-93d6-c064a8b535ae": {
           "progression_name": "Amaliyot"
+        },
+        "9c91866c-ab25-464c-a9ff-8155b888b147": {
+          "progression_name": "Bepul o'yin"
+        },
+        "30f90504-21cc-4713-949c-c5bcdb5c3288": {
+          "progression_name": "Bepul o'yin"
         },
         "11964f47-1926-4d07-b751-656b37e887c3": {
           "name": "Mini-loyiha: Virtual Pet",
@@ -10210,6 +10411,10 @@
         "0ab3565a-6d5b-4555-adf0-2133008ae1fa": {
           "progression_name": "Mini-loyiha: Swimming Fish (continued)"
         },
+        "fe9fe0d9-b57c-45ff-ac09-b7b3cdbd4303": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
+        },
         "10da4a66-a4c2-413a-a37a-fe686d9a4c88": {
           "progression_name": "Oldindan ko'rish"
         },
@@ -10222,6 +10427,9 @@
         "c4c65714-c80f-4d71-938d-60757a4dcd3f": {
           "name": "Mini-loyiha: Alien Dance Party",
           "progression_name": "Mini-loyiha: Alien Dance Party"
+        },
+        "a7fbfcf7-5c63-4f6d-a1c4-21540179724d": {
+          "progression_name": "Bepul o'yin"
         },
         "1149d576-7d1e-4bd0-b17d-cbb82358303c": {
           "name": "Mini-loyiha: Interactive Poster",
@@ -10266,6 +10474,9 @@
         "25fa3787-447d-462b-a046-a8d14a36b30b": {
           "progression_name": "Oldindan ko'rish"
         },
+        "1405ae48-2e0c-4a36-878f-668639ba0f51": {
+          "progression_name": "Bepul o'yin"
+        },
         "53be673c-1d10-49fe-8845-ef08b0f5a0e2": {
           "progression_name": "Mini-loyiha: Snowflake #1"
         },
@@ -10275,6 +10486,10 @@
         },
         "5469d3f7-7017-41cd-b9b2-a8c56d0971b6": {
           "progression_name": "Amaliyot"
+        },
+        "55bf14c5-94b0-4b92-91b6-f49a15ed6342": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
         },
         "0b309aa0-00ca-47e2-9f46-288d25694b0d": {
           "progression_name": "Terimchi (Harvester)"
@@ -10430,8 +10645,16 @@
         "27431483-208d-45bb-8b5e-fa0303272904": {
           "progression_name": "Amaliyot"
         },
+        "84b14f6c-d011-4e52-8664-233fda16599e": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
+        },
         "7ab4168b-2e87-4c12-a76a-8e98f20c7260": {
           "progression_name": "Mini-loyiha: Sticker Design"
+        },
+        "7922a128-215c-4076-9a6a-b0c22a626d92": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
         },
         "92340731-e0b6-4342-8045-17e19688a200": {
           "progression_name": "O'z Flappy o'yiningizni yasang"
@@ -10448,6 +10671,9 @@
         },
         "c5b3e4e2-d259-4fec-834e-080d28afc415": {
           "progression_name": "Mini-loyiha: Chase Game"
+        },
+        "a4dd80f8-6d8c-4475-af2e-762cc3b7c8ed": {
+          "progression_name": "Bepul o'yin"
         },
         "a7acf14f-0f67-4412-aa8b-f0167bc5a4e9": {
           "name": "Loyiha",
@@ -11023,6 +11249,10 @@
         "cb684307-ce51-4674-9ce0-cf32e34f02c4": {
           "progression_name": "Chaqiriqlar"
         },
+        "aaec28b5-6d69-44c7-a70d-37dcba2745b6": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
+        },
         "fdd422c2-71f0-46ba-992b-e84a5036881e": {
           "progression_name": "Yangi shakllar"
         },
@@ -11034,6 +11264,10 @@
         },
         "b188c296-ff87-409b-8540-2143ded296bf": {
           "progression_name": "Tasodifiy sonlardan foydalanish"
+        },
+        "62752d2a-eb7b-46eb-80b3-96001b0f729b": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
         },
         "c027966d-615f-4349-94ca-26973efb91c1": {
           "progression_name": "O'zgaruvchilarda kirish"
@@ -11047,6 +11281,10 @@
         "2cd8644a-d0bd-47fe-8144-cc529c94fe52": {
           "progression_name": "O'zgaruvchilarda kirish"
         },
+        "d7ef1e6d-9ab7-448f-8aca-80b5b3239b85": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
+        },
         "e9c923af-0bf2-42f6-8330-02d063158fa5": {
           "progression_name": "Spraytlarga kirish"
         },
@@ -11058,6 +11296,10 @@
         },
         "7837e5c4-b7a2-4b7b-a19b-d88da6f1c973": {
           "progression_name": "Sahna yaratish"
+        },
+        "3d8197af-4652-485f-9f96-a5a2c78bb3d6": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
         },
         "dc64960a-61a1-492a-9019-267233fa287d": {
           "progression_name": "Shakllar va Draw sikli"
@@ -11077,6 +11319,10 @@
         "219f0d70-6ef7-4477-949e-180dbaef8e34": {
           "progression_name": "Sahnani jonlantiring"
         },
+        "bb202266-76ce-425e-83e1-fa5ccee34421": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
+        },
         "fe4198fb-befb-412f-afbf-b751b480f0e2": {
           "progression_name": "Hisoblagich patterni bilan harakatlanish"
         },
@@ -11086,11 +11332,19 @@
         "76616c94-01ef-48fd-9d26-e0e33a34cd1f": {
           "progression_name": "Chaqiriqlar"
         },
+        "7e89c3a6-7df0-4c79-95e0-c9d3bde52013": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
+        },
         "586fbd28-f37c-401d-b660-2536ef45eca0": {
           "progression_name": "Mantiqiy solishtirish"
         },
         "376e5a15-45d2-4f2f-b204-5a11130eca07": {
           "progression_name": "Shartli bayonorlar asoslari"
+        },
+        "88f47fb8-346f-4fba-8ed1-ee4550344298": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
         },
         "acc4297f-692d-410f-877d-b724074e3705": {
           "progression_name": "Keyboard Input"
@@ -11098,11 +11352,19 @@
         "b905e7c7-4dbf-4629-bba0-a716c025f35e": {
           "progression_name": "Keyboard Input"
         },
+        "970e0d56-a8de-4dde-a5ab-a2597f95aa1d": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
+        },
         "ac99a65f-1266-4232-bf0f-2bff2b585158": {
           "progression_name": "Sichqonchaga ergashish"
         },
         "639ee94d-ffeb-4d6d-ab50-dc6ed0701855": {
           "progression_name": "If-Else bilan kiritishlar"
+        },
+        "af0c5a51-2804-4dd1-996f-de522aa7b283": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
         },
         "83a1fd2c-8a1e-470d-8036-d1cd88d0ef0f": {
           "progression_name": "Loyiha ishi"
@@ -11123,14 +11385,26 @@
         "1cbdcce5-22a2-48dd-a2cd-28086ca9579b": {
           "progression_name": "Yon skroller"
         },
+        "3c2057a7-5065-43b6-9b53-bef50c2f9f3c": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
+        },
         "bbb32454-ac91-4c28-8d6d-3449992074f4": {
           "progression_name": "isTouching"
         },
         "6f39dc37-d877-443d-9495-3188eaf31c66": {
           "progression_name": "O'yinlarda to'qnashuvlar"
         },
+        "53169820-0257-4ae6-9c9a-9bc618b8f16b": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
+        },
         "973cffaa-e89d-411f-8df1-14665ba79ec9": {
           "progression_name": "Flayer o'yini"
+        },
+        "fa0cb5a5-111c-4d06-ba91-66d4bf49daac": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
         },
         "3403945d-a572-4b10-b27d-49e00450b1f5": {
           "progression_name": "Collisions"
@@ -11138,11 +11412,19 @@
         "66b65bec-5ac1-4e36-8c28-fb678e5c6340": {
           "progression_name": "Flayer o'yini"
         },
+        "744fd0ee-23fb-497a-a32e-edd8c31ffe13": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
+        },
         "6ab5af14-9b04-48d9-8ca9-8f6f99ebd20b": {
           "progression_name": "Funksiyalar"
         },
         "f650608e-baa7-49b7-a4e9-2f0b12af0d4f": {
           "progression_name": "Kollektor o'yini"
+        },
+        "887f45bd-2611-4441-860d-ac358b2e0d04": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
         },
         "875e0e8b-955a-4e86-b112-ec188da3f859": {
           "progression_name": "Ko'p kadrli animatsiyalar"
@@ -11596,8 +11878,9 @@
           "name": "Topishmoq"
         },
         "6610529a-20b8-4b76-83d1-1215f72ed51b": {
+          "description": "O'qituvchilar informatika ta'limida muhim rol o'ynaydi va birgalikdagi va jonli sinf muhitini qo'llab-quvvatlaydi. Onlayn boshqotirmalar paytida o'qituvchining roli birinchi navbatda rag'batlantirish va qo'llab-quvvatlashdir. Onlayn jumboqlar talabalarga qaratilgan bo'lishi kerak, shuning uchun o'quvchilar tiqilib qolganda o'qituvchilar aralashmasliklari kerak. Buni qanday qilish haqida ba'zi fikrlar:",
           "tips": [
-            null
+            "Talabalarga sinfdoshlariga yordam berishning to'g'ri yo'lini ko'rsating:\n\n-   Sinfdoshingizning kursiga o'tirmang\n-   Sinfdoshingizning klaviaturasidan foydalanmang\n-   Sinfdoshingizning sichqonchasiga tegmang\n-   Ketishdan oldin sinfdoshingiz sizga yechimni ovoz chiqarib aytib berishiga ishonch hosil qiling"
           ]
         },
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
@@ -11702,6 +11985,9 @@
         "a13d087d-2f1e-4ac7-ae0b-2123e880e772": {
           "progression_name": "O‘rganish"
         },
+        "0e7630ac-9846-4c7f-9a3f-1a78ad5e4993": {
+          "progression_name": "Bepul o'yin"
+        },
         "c2ac88a2-6e26-49e5-a893-c3915816141a": {
           "name": "Reflection"
         },
@@ -11798,6 +12084,9 @@
         "88c99bab-0045-4d56-a8ae-a12f32e2866e": {
           "progression_name": "Malaka orttirish"
         },
+        "d6137926-640f-4180-a257-20c5f32317f5": {
+          "progression_name": "Bepul o'yin"
+        },
         "910b513b-27b0-40c5-9793-782805d1da8e": {
           "name": "Reflection"
         },
@@ -11857,6 +12146,9 @@
         "2e172722-51c4-49c9-8a05-4447b2627ab3": {
           "name": "Kirish"
         },
+        "f636ac37-29ac-45d0-8b65-8bad3da1ab56": {
+          "name": "Qog'oz bloklari yordamida o'chirilgan faoliyat"
+        },
         "eeea4847-21c3-4f1e-a2a2-980aa7fe8d9b": {
           "name": "Onlayn boshqotirmalarni sinf bilan ko‘rib chiqish"
         },
@@ -11893,6 +12185,9 @@
         },
         "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6": {
           "progression_name": "Malaka orttirish"
+        },
+        "2faabfda-d8cb-4b9d-b49c-2e79c30f7507": {
+          "progression_name": "Bepul o'yin"
         },
         "6ea6e198-fa99-46cb-a234-0f2b60eaff4d": {
           "progression_name": "Dars qo‘shimchalari"
@@ -12036,7 +12331,7 @@
         "93f8de74-6246-4227-8418-08d5c736633b": {
           "name": "Reflection",
           "tips": [
-            null
+            "Bu kabi aks ettirish takliflari turli uslublarda bajarilishi mumkin. Jurnal yoki munozara (guruhlar yoki hamkorlar bilan) ajoyib tanlovdir!"
           ]
         },
         "d8233290-3b13-4062-b13e-6bc56ccd2f7f": {
@@ -12047,10 +12342,13 @@
             null
           ]
         },
+        "bca3fd9d-6986-4755-80d1-056fcf486977": {
+          "name": "Qog'oz bloklari yordamida o'chirilgan faoliyat"
+        },
         "07f0915c-fd00-4787-8a53-251613824cc8": {
           "name": "Jahldor qushlar bilan tartiblash",
           "tips": [
-            null
+            "Talabalarga sinfdoshlariga yordam berishning to'g'ri yo'lini ko'rsating:\n\n-   Sinfdoshingizning kursiga o'tirmang\n-   Sinfdoshingizning klaviaturasidan foydalanmang\n-   Sinfdoshingizning sichqonchasiga tegmang\n-   Ketishdan oldin sinfdoshingiz sizga yechimni ovoz chiqarib aytib berishiga ishonch hosil qiling"
           ]
         },
         "b43821ea-fcde-4389-a55f-285b77e61964": {
@@ -12063,6 +12361,9 @@
           "tips": [
             null
           ]
+        },
+        "4d06cf45-70a0-47fb-a3ff-0d4818645b5c": {
+          "name": "Qog'oz bloklari yordamida o'chirilgan faoliyat"
         },
         "8d4c8d73-6930-4a7f-a73d-3c3312a2705b": {
           "name": "Jahldor qushlar bilan dasturlash"
@@ -12130,6 +12431,9 @@
         "4d2a4e7e-8950-4697-a7c2-1035fe6a4d4c": {
           "name": "Kirish"
         },
+        "312282bb-1122-4f51-b143-605d761309d1": {
+          "name": "Qog'oz bloklari yordamida o'chirilgan faoliyat"
+        },
         "bce6dafd-6066-46f8-872c-1b793b1098c7": {
           "name": "Onlayn boshqotirmalarni sinf bilan ko‘rib chiqish"
         },
@@ -12192,6 +12496,9 @@
         "a7cf273e-6085-402a-bf47-e5985364e7a2": {
           "progression_name": "Amaliyot"
         },
+        "22891986-f61f-4e37-aae4-177019581071": {
+          "progression_name": "Bepul o'yin"
+        },
         "6c661991-bf9d-4271-a318-5878b3ef438c": {
           "progression_name": "Dars qo‘shimchalari"
         },
@@ -12216,21 +12523,38 @@
           "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n\\*\\* Bitta odamning harakati - bu boshqasining reaksiyasi \\*\\* \n\n Har bir talabaga takshirish uchun voqea va ushbu voqeaga tegishli munosabatni tayinlang. Harakatlarni zanjir usulida shunday bog‘lang-ki, har bir bolaning reaksiyasi boshqa o‘quvchining reaksiyasini keltirib chiqaradigan hodisaga aylansin. Hamma biron voqeaga ega bo‘lmaguncha va hamma kimnidir reaksiyaga solguncha tayinlashni davom eting. \n\n \\*\\* Eventopalooza \\*\\* \n\n Sinfni guruhlarga ajratish. Voqealar boshqaruvchisidan foydalanib, har bir guruhga bir xil tugmachaga har xil reaksiyani tayinlang. Buni uchta tugma uchun ham bajaring, so‘ngra xaosni tomosha qiling!"
         },
         "3506957f-7430-4cc9-8e53-36f1d67496a7": {
-          "name": "Kirish"
+          "name": "Kirish",
+          "description": "Talabalar bilan \"Katta voqea\" faoliyatini ko'rib chiqing:\n\n-   _Biz tugma hodisalarini nima qilish uchun \"dasturlashtirdik\"?_\n\n_Endi biz kodimizga voqealar qo'shamiz. Aniqrog‘i, ikki qahramon bir-biriga tegishi uchun tadbir o‘tkazamiz._\n\n-   _Qachon oʻyinlarda ikki qahramonning bir-biriga tegishini koʻrgansiz?_"
+        },
+        "fb42b64a-9f49-441b-95d8-2bdb596c93a9": {
+          "description": "Ushbu tadbirlar \"Katta voqea\" dan ajratilgan tushunchalarni o'quvchilar o'tayotgan onlayn dunyoga olib kirishga yordam beradi. Sinfingiz bilan ishlash uchun quyidagilardan \\_ birini\\_ tanlang:"
         },
         "505b9963-28e4-43cc-81b2-51cd954beb7f": {
           "tips": [
             null
           ]
         },
+        "a1d91fb3-f7e1-49e4-a901-9316fa8a8327": {
+          "name": "Qog'oz bloklari yordamida o'chirilgan faoliyat"
+        },
         "182167a6-e7b1-425e-88d6-5f08d4b98a8b": {
           "name": "Onlayn boshqotirmalarni sinf bilan ko‘rib chiqish"
         },
         "707682de-e28a-4f30-8033-e5568bc30572": {
-          "name": "A Royal Battle with Events"
+          "name": "A Royal Battle with Events",
+          "description": "Bu kursning eng erkin shakldagi ulangan faoliyati. Yakuniy bosqichda talabalar o'zlarining hikoyalarini yaratish erkinligiga ega. Siz qanday hikoya yozish bo'yicha tuzilgan ko'rsatmalar berishni xohlashingiz mumkin, ayniqsa variantlar juda ko'p bo'lgan talabalar uchun."
+        },
+        "dd9fba95-8daa-47d3-8c05-3429f3f25b77": {
+          "progression_name": "Video: Play Laboratoriyasiga kirish"
+        },
+        "40e7d1f1-3b7e-4a2f-abd8-43d076a34702": {
+          "progression_name": "Bepul o'yin"
         },
         "31c0685f-1407-4c10-9077-b081c1843c07": {
           "progression_name": "Mini-loyiha: Royal Battle"
+        },
+        "afc1b191-5ed3-4f1e-9457-8499c5445f54": {
+          "progression_name": "Bepul o'yin"
         },
         "9e0be8b0-1cf0-479e-8b0a-e8bec10e796a": {
           "progression_name": "Dars qo‘shimchalari"
@@ -12260,41 +12584,73 @@
         },
         "ec336597-2c69-4bfa-b542-abe5ccf06d5c": {
           "tips": [
-            null
+            "Ushbu darsdagi barcha tanlovlar \"Bepul o'yin\" deb hisoblanadi, ya'ni bitta to'g'ri javob yo'q. Agar talaba Finish tugmasini bossa, u tanlovlar ro‘yxatiga qaytadi. Siz talabalarga faqat bitta tanlovni yoki vaqt imkoni bo'lganda to'ldirishga qiziqqan ko'plab tanlovlarni bajarishingiz mumkin."
           ]
         },
         "ef4f13d4-c5b0-4778-8ca1-359132023d82": {
           "progression_name": "Mening onlayn qo‘shnilarim"
         },
+        "66dc5fd4-eacf-41f8-9d21-196b81d35d7a": {
+          "description": "### Asosiy lug'at\n\n-   **onlayn**: veb-sayt yoki ilovaga kirish uchun kompyuter, telefon yoki planshetdan foydalanish\n-   **veb-sayt yoki ilova**: Internetda tashrif buyurishingiz mumkin bo'lgan joy\n\n**So'rang**: _Yangi joylarga tashrif buyurganingizda xavfsiz bo'lish uchun nima qilish kerak?_ ([3-slayd](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_54))\n\nTalabalarni javob berishga taklif qiling. Javoblar har xil bo'ladi, lekin quyidagi xavfsizlik qoidalarini mustahkamlang:\n\n-   Har doim kattalar bilan joylarga boring.\n-   O'z-o'zidan sarson bo'lmang.\n-   Faqat tanish odamlar bilan gaplashing.\n\n**Ayting**: _Bugun biz Internetdagi joylarga tashrif buyurish haqiqiy hayotdagi joylarga tashrif buyurishga o'xshashligi haqida gaplashamiz. Dunyoning yangi joylariga tashrif buyurganingizda xavfsizlik qoidalari mavjud bo'lgani kabi, internetda ham o'zingizni xavfsiz saqlash usullari mavjud._\n\n**Loyiha** [4-slayd](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g5c15fa078c_0_0) va **onlayn** ni _veb-sayt yoki ilovaga tashrif buyurish uchun kompyuter, telefon yoki planshetdan foydalanish_ deb belgilang.\n\n**[5-slayd](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_93) da [Mening onlayn mahallam](https://www.commonsense.org/education/videos/my-online-neighborhood) videosini** ko‘rsating va so‘ng so‘rang: _Armsga internet nima yoqdi? U internetda qanday ishlarni qila oladi?_\n\nTalabalarni javob berishga taklif qiling. Javoblar namunasi:\n\n-   U salqin joylarga borishni yaxshi ko'radi.\n-   U oilasi va do'stlari bilan gaplasha oladi.\n-   U ko'p yangi narsalarni o'rganishi mumkin.\n-   U internetda narsalarni yaratishi mumkin.\n\n**So'rang**: _Arms Internetga kirganda qaysi uchta qoidaga amal qiladi?_\n\nTalabalarni javob berishga taklif qiling. [6-slayd](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_141) loyihasini yarating va uchta asosiy qoidani mustahkamlang:\n\n1.  Avval ota-onangizdan (yoki siz ishonadigan kattalardan) so'rang.\n2.  Faqat o'zingiz bilgan odamlar bilan gaplashing.\n3.  Sizga mos keladigan joylarga yopishib oling.\n\n\"To'g'ri\" joylarga yopishib olish bu bolalar uchun mos sayt yoki ilova ekanligiga ishonch hosil qilish va u yerda bo'lishga ruxsatingiz borligini anglatishini tushuntiring."
+        },
+        "39a4de29-4980-411c-9999-90a2bb94b72b": {
+          "description": "**Ayting**: _Kompyuter sizga sinfdan chiqmasdan uzoq joylarga borish imkonini beradi._\n\n**veb-sayt**ni _internetda tashrif buyurishingiz mumkin bo'lgan joy sifatida belgilang._ ([8-slayd](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_245)) Talabalarga internetda hayvonot bog'lari va muzeylar kabi haqiqiy joylar uchun veb-saytlar yoki ilovalarga tashrif buyurishi mumkinligini tushuntiring. . Bu joylar ular yashaydigan joydan uzoqda bo'lishi mumkin, lekin ular ularga onlayn tashrif buyurishlari mumkin.\n\n**Sinf sifatida kashf qilish uchun veb-saytni tanlang**. Agar o'rganish uchun yaxshi narsa ekanligiga ishonchingiz komil bo'lmasa, quyidagilardan birini sinab ko'ring:\n\n-   [San-Diego hayvonot bog'i](http://kids.sandiegozoo.org/)\n-   [National Geographic bolalar dunyoni o'rganmoqda](https://kids.nationalgeographic.com/explore/countries/)\n\n**Soʻrang**: _Qurilmani yoqish yoki veb-sayt yoki ilovani ochishdan oldin birinchi qoida nima?_\n\nTalabalarni qurilmadan foydalanish yoki veb-sayt yoki ilovaga tashrif buyurishdan oldin har doim kattalardan ruxsat so‘rashlari kerakligini eslatib, baham ko‘rishga taklif qiling.\n\n**Sinfingiz bilan tanlagan veb-saytni o‘rganing**, bu o‘quvchilarga o‘zlari uchun eng qiziq bo‘lgan sahifalar va mashg‘ulotlarni tanlash imkonini beradi. Saytni kezib chiqayotganingizda, talabalar Internetga kirishda boshqa ikkita xavfsizlik qoidalariga qanday rioya qilishlarini ko'rsating: faqat o'zlari tanigan odamlar bilan gaplashish va ular uchun mos bo'lgan joylarga yopishib olish.\n\nEslatma: Agar siz kompyuter laboratoriyasida bo'lsangiz yoki sinfingizda yetarlicha jihozlar bo'lsa, o'quvchilardan izlanishlarni yakka tartibda yoki juftlikda bajarishlarini so'rang.\n\n**Talabalardan internet sayohatlarida nimani o'rganganlarini so'rang**. Shuningdek, savol bering: _Saytga tashrif buyurganingizda uchta xavfsizlik qoidalariga qanday amal qildingiz?_"
+        },
+        "f06d2db8-bdc8-44ce-9d41-73fe53003e35": {
+          "description": "**Ayting**: _Bugun biz internet bizga uzoq joylarga borishga qanday imkon berishi haqida gaplashdik. Biz Internetda yangi joylarga sayohat qilish haqiqiy hayotdagi joylarga borishga o'xshashligini bilib oldik. Shuningdek, biz veb-saytlar yoki ilovalarga tashrif buyurishda uchta muhim xavfsizlik qoidalarini bilib oldik._\n\n**Har bir talabaga [Pauza va o'ylash lahzasini](https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/edit) tarqating**. Yo'nalishlarni ovoz chiqarib o'qing va talabalarga tarqatma materialni mustaqil ravishda to'ldirishga imkon bering. ([9-slayd](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g5b457108e7_0_0))\n\n**Talabalarni o'z mulohazalarini sinf bilan baham ko'rishga taklif qiling**. Talabalarning bilimini baholash uchun tarqatma materiallar to'plang."
+        },
+        "e89c6579-86c7-4478-8ddf-e941751a06c5": {
+          "description": "Talabalarga o'z bilimlarini oshirish uchun taqdim etishingiz mumkin bo'lgan qo'shimcha manbalar:\n\n-   [Oilaviy faoliyat](https://drive.google.com/open?id=17Tq9wgw2F9sMkE2Z2a2zkriLK0zp1qDsSkv5YTB7Ldg)\n-   [Oilaviy maslahatlar](https://www.commonsense.org/education/family-tips/k-5-privacy-and-security)"
+        },
         "5cd698e0-d82e-4e9d-af4f-1923b453d12b": {
-          "name": "Kirish"
+          "name": "Kirish",
+          "description": "#### Kompyuter laboratoriyasida o'zini tutish\n\n**Maqsad:** Ushbu munozara talabalarga kompyuter laboratoriyasiga kirganlarida nimani kutishlari va o'zlarini qanday tutishlari kerakligini o'rgatadi."
         },
         "23d5a35a-6de5-4a3e-92cc-0c1336f61470": {
           "tips": [
-            null
+            "-   Laboratoriyada tinch jismlardan foydalaning\n-   Esingizda bo'lsin, saqich yoki konfet chaynamaslik kerak\n-   Qo'llaringizni tozalang\n-   Hamkoringiz bilan bitta kompyuterda o'tiring\n-   Birinchi \"haydovchi\" sichqonchaga etib borishiga ishonch hosil qiling\n-   Hafsalangiz pir bo'lganda, kompyuter yoki monitorni urmang yoki silkitmang\n-   **\\*20/20/20 qoidasiga rioya qiling** - Ko'z zo'riqishini qanday oldini olish mumkin\n-   Har 20-30 daqiqada **\\*Wiggles** bilan qanday kurashish mumkin (GoNoodle-ga bepul kirishni talab qiladi).\n-   O'qituvchidan so'rashdan oldin sherigingizdan so'rang\n-   Hamma hamkorlarini eshitishi uchun ovoz balandligini pasaytiring\n-   Tuyg'ular va echimlarni kuzatib borish uchun jurnalingizdan foydalaning"
           ]
         },
+        "3dc37e4e-05d9-463f-a734-f65322cccb1a": {
+          "description": "**Muhokama:**\n\nTalabalar qoidalarni tushunishlariga ishonch hosil qilish uchun kompyuter laboratoriyasida kutilayotgan narsalar atrofida yaxshi muhokama qiling. Ba'zi muhokama mavzulari quyidagilarni o'z ichiga olishi mumkin:\n\n-   _Kompyuter laboratoriyasida ishlash yaxshimi?_\n-   _Kompyuter laboratoriyasida bo'lganimizda qanday baland ovozda gapirishimiz kerak?_\n-   _Agar jumboqda qolib ketsangiz nima qilish kerak?_\n-   _Agar hafsalamiz pir bo'lsa, bu kompyuterni urishga yordam beradimi?_\n-   _Biz kompyuter laboratoriyasiga bormoqchi bo'lganimizda, qanday tayyorlanishimiz kerak?_"
+        },
+        "128e4de4-71a8-4dac-9606-4444cac424ff": {
+          "description": "### Ko'rib chiqish\n\nDarsdan boshqotirmani loyihalash. Sinfga rasmni qanday bosish va sudrab tashlash orqali uni to'g'ri joyga joylashtirishni ko'rsating. Kerakli joyga tushmasdan oldin fonni bosish yoki rasmni tashlab yuborish kabi xatolarga yo'l qo'ying. Bunday muammolarga duch kelganingizda sinfdagi ko'ngillilardan yordam so'rang."
+        },
         "e1c4af11-08ae-4ddd-90dc-da28738444fb": {
-          "name": "Drag&Drop - Olib ko‘chirishni o‘rganish"
+          "name": "Drag&Drop - Olib ko‘chirishni o‘rganish",
+          "description": "**Maqsad:** Bu talabalarga onlayn boshqotirmalarni bajarish uchun Code.org’dan qanday foydalanishni o‘rgatadi.\n\nUshbu bosqich talabalarga qo'l-ko'zni muvofiqlashtirish, bosish va sudrab tashlash ko'nikmalarini mashq qilish imkoniyatini berish uchun mo'ljallangan. Talabalar ham ketma-ketlik bilan o'ynaydilar."
         },
         "b1107182-e8bd-4439-bf3e-135d5c0ab145": {
+          "description": "Qanday qilib bosish, sudrab tashlash va tushirishni aniq o'rgatish uchun biroz vaqt ajrating. Talabalar boshqotirma ustida ishlashda foydalanadigan qurilmalar atrofidagi tilni tanishtirishga vaqt ajrating. Agar sizda planshetlar bo'lsa, talabalar _sensorli ekrandan_ foydalanadilar. Agar sizda noutbuklar bo'lsa, ular _trackpad_ dan foydalanishi mumkin. Laboratoriyada topishingiz mumkin bo'lgan ish stoli kompyuterlari _sichqonchani_ ishlatishga tayanadi.",
           "tips": [
-            null
+            "Talabalarga sudrab tashlash va tushirish bosqichlarini parchalashini va ularni doskaga yozib qo'yishini o'ylab ko'ring. Misol uchun:\n\n1.  O'qni blokga o'tkazing.\n2.  Sichqoncha tugmasini bosing va ushlab turing.\n3.  Sichqonchani harakatlantiring.\n4.  Tugmani qo'yib yuboring.\n\nBuni amalga oshirish talabalarga algoritm yaratish bo‘yicha amaliyot beradi, bu tushuncha kelgusi darslarda o‘rganiladi."
           ]
         },
         "2f105d16-8751-4faa-a550-ae4dc2ef5078": {
+          "description": "O'qituvchilar informatika ta'limida muhim rol o'ynaydi va birgalikdagi va jonli sinf muhitini qo'llab-quvvatlaydi. Onlayn boshqotirmalar paytida o'qituvchining roli birinchi navbatda rag'batlantirish va qo'llab-quvvatlashdir. Onlayn jumboqlar talabalarga qaratilgan bo'lishi kerak, shuning uchun o'quvchilar tiqilib qolganda o'qituvchilar aralashmasliklari kerak. Buni qanday qilish haqida ba'zi fikrlar:",
           "tips": [
-            null
+            "Talabalarga sinfdoshlariga yordam berishning to'g'ri yo'lini ko'rsating:\n\n-   Sinfdoshingizning kursiga o'tirmang\n-   Sinfdoshingizning klaviaturasidan foydalanmang\n-   Sinfdoshingizning sichqonchasiga tegmang\n-   Ketishdan oldin sinfdoshingiz sizga yechimni ovoz chiqarib aytib berishiga ishonch hosil qiling"
           ]
+        },
+        "25da4eea-6dc0-40ad-88ee-365e7f1ce9aa": {
+          "description": "-   Faoliyat davomida iloji boricha juftlik dasturlashdan foydalaning.\n-   Talabalarni savollar/qiyinchiliklar bilan sherigidan so'rashdan boshlashga undash.\n-   Javobsiz savollar yaqin atrofdagi guruhga yuborilishi mumkin, ular yechimni allaqachon bilishi mumkin.\n-   Talabalarga yaqinlashishdan oldin disk raskadrovka jarayonidan foydalanishni eslating.\n-   Talabalardan o'zlari ko'rayotgan muammoni tasvirlab bering. _Nima qilish kerak? Bu nima qiladi? Bu sizga nima deydi?_\n-   Hafsalasi pir bo‘lgan o‘quvchilarga umidsizlik o‘rganish yo‘lidagi qadam ekanligini va qat’iyatlilik o‘z samarasini berishini eslating.\n-   Agar talaba bularning barchasidan keyin ham tiqilib qolgan bo'lsa, talaba xatoni o'zi aniqlashi uchun etakchi savollarni bering."
         },
         "31f60124-e5bb-4ed5-b5ef-97509d71cbda": {
           "progression_name": "Malaka orttirish"
         },
         "4aa550d3-10b9-4151-9ed8-45ce24b49e7d": {
           "name": "Reflection",
+          "description": "Talabalarga o'zlari o'rganganlari, nima uchun foydali ekanligi va bunga qanday munosabatda bo'lishlari haqida yozishlari bugungi kunda olgan bilimlarini mustahkamlashga yordam beradi va kelajakda ular uchun ko'rib chiqish varaqasi tuzadi.\n\n**Ko'rsatmalar:**\n\n-   Kompyuter laboratoriyasiga borishga tayyorlanish ketma-ketligini chiza olasizmi?\n-   “Qilish” va “Qilmang” kompyuter laboratoriyasini chizish.\n-   Boshqotirmalarni bosish va sudrab borishda foydalanilgan kompyuter qismi nomini chizing va belgilang. (sichqoncha tugmasi, sensorli ekran, trek paneli)",
           "tips": [
-            null
+            "Bu kabi aks ettirish takliflari turli uslublarda bajarilishi mumkin. Jurnal yoki munozara (guruhlar yoki hamkorlar bilan) ajoyib tanlovdir!"
           ]
+        },
+        "902cde98-a6eb-4a14-b992-43ba04b6c522": {
+          "description": "Talabalarning bilimini oshirish uchun ushbu tadbirlardan foydalaning. Ular sinfdan tashqari mashg'ulotlar yoki boshqa boyitish sifatida ishlatilishi mumkin.\n\n-   Agar o‘quvchilar boshqotirmalarni erta bajarsalar, ularga o‘z jurnallarida o‘z jumboqlarini o‘ylab topishga vaqt ajrating."
+        },
+        "e2b3e229-08fd-47a4-9f9b-6c32f6c6406c": {
+          "description": "### Shu bilan qofiya - (20-30 daqiqa)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) **Kompyuter fanlari + ingliz tili san'ati + matematika**\n\n[\\*\\*Bu bilan qofiyalash\\*\\*](https://docs.google.com/document/d/1abRo0DBkRiB1gIPWjdxv70TwO28N5_QGpmtMQ-oyYd0/edit#). Rhyme With That oʻqituvchilar hamjamiyatimiz tomonidan yozilgan Common Core ELA va Math standartlariga moslashtirilgan ixtiyoriy faoliyatdir. Talabalar kompyuter sichqonchasidan CVC so'zlarini yaratish, qofiyali so'zlarni moslashtirish va hisoblash uchun harfni sudrab olib tashlash uchun foydalanadilar.\n\n**Manzil qilingan standartlar:**\n\n-   **CCSS.ELA-LITERACY.RF.K.2.A:** Qofiyali so‘zlarni aniqlang va yarating.\n-   **CCSS.ELA-LITERACY.RF.K.2.D:** Uch fonemali (undosh-unli-undosh yoki CVC) so‘zlardagi boshlang‘ich, medial va oxirgi tovushlarni (fonemalarni) ajratib oling va talaffuz qiling. 1 (Bu /l/, /r/ yoki /x/ bilan tugaydigan CVC'larni o'z ichiga olmaydi.)\n-   **CCSS.MATH.CONTENT.K.CC.B.5:** \"qancha?\" deb javob berish uchun sanang. bir chiziq, to'rtburchaklar massiv yoki aylana bo'ylab joylashtirilgan 20 tagacha yoki tarqoq konfiguratsiyadagi 10 tagacha narsalar haqida savollar; 1 dan 20 gacha bo'lgan raqam berilganda, shuncha ko'p narsalarni sanang."
         },
         "1a3b430e-95cd-4425-b5d7-953dfae5e5d2": {
           "name": "Kirish"
@@ -12303,6 +12659,12 @@
           "tips": [
             null
           ]
+        },
+        "84f50800-a9f3-4ae6-b023-f63cc376e061": {
+          "description": "### Talabalar navbati\n\n**Guruh:** Agar sinfingiz qulay bo'lsa, o'quvchilarni 2-3 kishidan iborat kichik guruhlarga joylashtiring. Aks holda, siz ushbu muammolarni sinf sifatida hal qilishni davom ettirishingiz va dasturlarni yozish uchun ularni o'ylab ko'rishingiz mumkin.\n\n**Tarqatish:** Zarur bo‘lganda **\\*Ishchi varaq**dagi rasmlardan birini har bir guruhga tarqating.\\\n_(Ixtiyoriy)_ Agar talabalar koʻproq narsaga tayyor ekanliklarini sezsangiz, taqdim etilgan **\\*Manipulyativlardan** foydalaning va talabalarga boʻsh xaritada oʻzlari boshlash va tugatish manzillarini tanlashlariga ruxsat bering.\n\nTalabalarni quyidagi amallarni bajarishga undash:\n\n-   Meva hosil qilish uchun algoritmni muhokama qiling.\n-   Algoritmni jurnallaridagi strelkalar shaklida kodlash.\n-   Hamma narsa kutilganidek ishlayotganligini bilish uchun ularning kodini sinab ko'ring.\n-   Har qanday muammolarni tuzating va to'g'ri ishlaguncha ularning kodini tuzating.\n\n**Ulashish:** Dars tugagach, guruhlarga o‘zlari hal qilgan eng qiyin xaritalarni baham ko‘rishlarini taklif qiling. Agar vaqtingiz bo'lsa, ulardan o'z yechimlari bilan bo'lishishlarini ham so'rang."
+        },
+        "a6b03761-2c05-45cd-be08-78c966e2f444": {
+          "description": "#### Flash Chat\n\n**Muhokama qiling:** Dam olish vaqti kelganida, o‘quvchilardan algoritm va dastur o‘rtasidagi farqni ayta olishlarini so‘rang. Ikkalasi ham qadamlar ro'yxati, lekin dastur (_code_) mashina (yoki bolalar bog'chasi!) tomonidan boshqarilishi mumkin bo'lgan tarzda kodlangan.\n\n-   _Sizning dasturingizni boshqa tilda gapiradigan odam boshqara oladi deb o'ylaysizmi?_\n-   _Nega yoki nega?_\n\n#### Reflektsiya\n\n**Ko'rsatmalar:**\n\n-   Bugungi dars nima haqida edi?\n-   **\\*This yuzlaridan birini chizing**\n     Bu sizning jurnal sahifangiz burchagida bugungi darsga qanday munosabatda bo'lganingizni ko'rsatadi.\n-   O'zingizning florb xaritangizni chiza olasizmi?\n-   Xaritangizni hal qilish uchun kod nima bo'lar edi?"
         },
         "c3cfdbc4-82d5-4717-bf83-22860936a687": {
           "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n\\*\\* Stuffie Maps \\*\\*\n\n-   Skotch bilan gilamchada katak yarating va o‘quvchiga o‘yinchoq hayvonlarni maktabga olib kelishni ayting. \n\n-   Endi talabalar do‘stlariga dasturlarda ko‘rsatilgandek, o‘zlarining haqiqiy narsalarini ko‘chirish uchun dasturlashlari mumkin. \n\n    \\*\\* O‘zingiznikini yarating \\*\\* \n\n-   Talabalardan o‘z xaritalarini tuzishlarini so‘rang. \n\n-   Boshqa talabalar ularni dasturlardan foydalanib yechishlarini so‘rang."
@@ -12391,6 +12753,9 @@
             null
           ]
         },
+        "d1bd79aa-b64e-4e66-b7e5-657d5b990a60": {
+          "name": "Qog'oz bloklari yordamida o'chirilgan faoliyat"
+        },
         "62d22669-d8bd-4e18-a767-8269aa7322f8": {
           "name": "Onlayn boshqotirmalarni sinf bilan ko‘rib chiqish"
         },
@@ -12464,7 +12829,8 @@
         "1e2c8e78-0b20-48a4-aeba-08cad3060e42": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Bepul o'yin"
         },
         "cfcb405b-99fc-4686-bd02-4e37b3f5c337": {
           "progression_name": "Dars qo‘shimchalari"
@@ -12494,18 +12860,34 @@
           "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n\\*\\* Bitta odamning harakati - bu boshqasining reaksiyasi \\*\\* \n\n Har bir talabaga takshirish uchun voqea va ushbu voqeaga tegishli munosabatni tayinlang. Harakatlarni zanjir usulida shunday bog‘lang-ki, har bir bolaning reaksiyasi boshqa o‘quvchining reaksiyasini keltirib chiqaradigan hodisaga aylansin. Hamma biron voqeaga ega bo‘lmaguncha va hamma kimnidir reaksiyaga solguncha tayinlashni davom eting. \n\n \\*\\* Eventopalooza \\*\\* \n\n Sinfni guruhlarga ajratish. Voqealar boshqaruvchisidan foydalanib, har bir guruhga bir xil tugmachaga har xil reaksiyani tayinlang. Buni uchta tugma uchun ham bajaring, so‘ngra xaosni tomosha qiling!"
         },
         "cb6735d8-d986-408b-adef-61e9a52ad30f": {
-          "name": "Kirish"
+          "name": "Kirish",
+          "description": "Talabalar bilan \"Katta voqea\" faoliyatini ko'rib chiqing:\n\n-   _Biz tugma hodisalarini nima qilish uchun \"dasturlashtirdik\"?_\n\n_Endi biz kodimizga voqealar qo'shamiz. Aniqrog‘i, ikki qahramon bir-biriga tegishi uchun tadbir o‘tkazamiz._\n\n-   _Qachon oʻyinlarda ikki qahramonning bir-biriga tegishini koʻrgansiz?_"
+        },
+        "59ef2dfe-0dad-4172-8225-3e844fecb36f": {
+          "description": "Ushbu tadbirlar \"Katta voqea\" dan ajratilgan tushunchalarni o'quvchilar o'tayotgan onlayn dunyoga olib kirishga yordam beradi. Sinfingiz bilan ishlash uchun quyidagilardan \\_ birini\\_ tanlang:"
         },
         "4282b236-dd48-4702-81fd-452fb86a8288": {
           "tips": [
-            null
+            "Talabalar o'zlarining yakuniy mahsulotlarini havola bilan baham ko'rish imkoniyatiga ega bo'ladilar. Bu sizning maktab jamoasiga o'quvchilaringiz qilayotgan ajoyib ishlarni ko'rsatish uchun ajoyib imkoniyatdir. Barcha havolalarni to'plang va hamma ko'rishi uchun ularni sinfingiz veb-saytida saqlang!\n\nTalabalarga o'z ishlarini faqat yaqin do'stlari yoki oilalari bilan baham ko'rishlarini eslatib turing. Qo'shimcha ma'lumot olish uchun darsni tomosha qiling yoki ko'rsating **\\*To'xtatib turing va Onlayn o'ylab ko'ring** video."
           ]
         },
+        "9126c997-86b1-4d78-9eaf-3d07e06c6355": {
+          "name": "Qog'oz bloklari yordamida o'chirilgan faoliyat",
+          "description": "**\\*Controller Image** masofadan boshqarish pultidan va **\\*Manipulatives** bloklaridan foydalanib, oldingi darsdagi faoliyatni takrorlash uchun sinfingizni yig'ing. Sinfdan _koʻk rangli tugma bosilganda, biz nima qilamiz?_ deb soʻrang, soʻng “when” hodisa bloklaridan birini va mos ravishda koʻk harakat bloklaridan birini toʻldiring. Talabalar \"qachon\" bloklari ko'k blokning tepasida bo'lishi kerakligini va dastur ishga tushishi uchun ularga teginish kerakligini tushunishlariga ishonch hosil qiling.\n\n#### -Yoki-"
+        },
         "b4da0866-a056-4d28-bbca-119bbd17fe04": {
-          "name": "Onlayn boshqotirmalarni sinf bilan ko‘rib chiqish"
+          "name": "Onlayn boshqotirmalarni sinf bilan ko‘rib chiqish",
+          "description": "Onlaynda mos keladigan jumboqlardan jumboqni torting. Biz jumboqni tavsiya qilamiz 7. Xorxeni bosganingizda kulgili shovqin qilish uchun turli talabalarni chaqiring. Bu ular munosabat bildirayotgan voqea ekanligini tushuntiring va Xorxe uni bosganingizda shovqin qilish uchun kodlangan bo'lishi mumkin."
         },
         "d20df183-f25b-45af-ae7c-f80a4405f2d2": {
-          "name": "Hodisalar bilan harakatda"
+          "name": "Hodisalar bilan harakatda",
+          "description": "Bu kursning eng erkin shakldagi ulangan faoliyati. Yakuniy bosqichda talabalar o'zlarining hikoyalarini yaratish erkinligiga ega. Siz qanday hikoya yozish bo'yicha tuzilgan ko'rsatmalar berishni xohlashingiz mumkin, ayniqsa variantlar juda ko'p bo'lgan talabalar uchun."
+        },
+        "c37ca368-ea56-4b4d-a06c-1d2b94516bf8": {
+          "progression_name": "Video: Play Laboratoriyasiga kirish"
+        },
+        "4221ebcd-383b-44bf-a876-41e658bd8460": {
+          "progression_name": "Bepul o'yin"
         },
         "73856fdc-aee0-4543-b7ac-71a0cdc9f11c": {
           "progression_name": "Amaliyot"
@@ -12517,35 +12899,48 @@
           "progression_name": "Dars qo‘shimchalari"
         },
         "bae8edf5-1fe0-4f2b-ae79-08f18b2c3001": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": "**Ko'rsatmalar:**\n\n-   Bugungi dars nima haqida edi?\n-   Jurnal sahifangiz burchagiga bugungi darsga qanday munosabatda bo'lganingizni ko'rsatadigan yuzlardan birini chizing.\n-   Bugun dasturingizda foydalangan voqeani chizing.\n-   Tasavvur qiling, sizda masofadan boshqariladigan robot bor. Masofadan boshqarish pulti qanday ko'rinishga ega bo'lar edi? Robotni nima qilishga majburlash mumkin deb o'ylaganingizning rasmini chizing."
         },
         "807c4bfd-ed3e-4400-a83a-a535c56f3155": {
           "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n**Kapyushon ostiga qarang**\n\nO‘zingizning hikoyangizga havolani ulashganingizda, siz uning orqasida turgan barcha kodlarni ulashasiz. Bu o‘quvchilar uchun bir-biridan o‘rganish uchun ajoyib usuldir.\n\n-   Tugallangan hikoyalarga havolalarni Internetda joylashtiring.\n    -   O‘zingizning hikoyangizni ham ulashing!\n-   Talabalar havolani yuklaganlarida, hikoyaning orqasidagi kodni ko‘rish uchun ularga \"Qanday ishlaydi \" tugmasini bosishini ayting.\n-   Sinfdoshlaringiz bilan o‘zlarining hikoyalarini kodlash usullarini guruh sifatida muhokama qiling.\n    -   Sizni nima ajablantirdi?\n    -   Siz nimani sinab ko‘rishni xohlaysiz?\n-   Birovning hikoyasini tanlang va uning asosida yasash uchun `Remix` tugmasini bosing. (Xavotir olmang, asl hikoya xavfsiz bo‘ladi.)"
         },
         "4ae60932-ccb3-411c-bfb4-bc9e52149b27": {
           "name": "Sharh",
+          "description": "**Buni bajaring:**\n\n-   O'quvchilarni hayajonlantiring va bugungi mashg'ulotga tayyorlang. Talabalardan Rassom vositalaridan foydalangan holda oldingi darsda nima qilganlarini eslab qolishlarini so'rashdan boshlang.\n-   **loop** lug'at so'zini ko'rib chiqing.\n-   Agar siz o'zingizning loyiha namunangizni yaratgan bo'lsangiz, uni hozir baham ko'ring.",
           "progression_name": "Loyiha"
         },
         "d07826c3-fe5d-4ffa-a4ff-6bd799a62342": {
+          "name": "Rassom bilan hikoya qilish",
+          "description": "**Buni bajaring:** Proyektorda ushbu dars uchun darajani ko'taring.",
           "progression_name": "Loyiha"
+        },
+        "22c1ade3-49af-45ce-84bb-ba4337206074": {
+          "description": "_Bugun biz Rassom bilan hikoya qilish uchun o'z loyihalarimizni yaratish orqali barchangiz qanchalik ko'p narsalarni o'rganganingizni nishonlaymiz. Rassom bugun uchta joyga sayohat qiladi: bog', hayvonot bog'i va koinot!_\n\n_Sizning vazifangiz unga yo'l ochish va u qilgan va ko'rgan narsalar haqida hikoya qilishdir._\n\n_U gullar orasidan yuradimi?_\n\n_Hayvonlar uchun uy quradimi?_\n\n_U yana nimani ko'rishi yoki qilishi mumkin?_"
         },
         "76119a2d-a3f8-4c17-b38a-c0194431de25": {
           "name": "Planning",
+          "description": "**Buni bajaring:** **rejalashtirish bo‘yicha qo‘llanma** tarqatma materialni tarqating va uni talabalar bilan ko‘rib chiqing.\nTalabalar rassom uchun _kamida bitta_ joy tanlaydilar. Keyin ular rassom yuradigan yo'lni chizishlari kerak. (Bu nuqtadan nuqtaga jumboqga o'xshaydi, lekin raqamlarsiz!)\nRasm yonida talabalar o'z hikoyalarini yozishlari kerak.",
           "tips": [
-            null
+            "Hikoyalar sinfingiz uchun mos keladigan narsadan qat'i nazar, bir yoki ikkita jumla bo'lishi mumkin."
           ]
         },
         "0ab5b62b-a464-4801-a963-d23d293ea5ff": {
           "name": "Loyiha",
+          "description": "Kompyuteringizda faoliyatni olganingizda, boshlash uchun tanlovlardan birini bosing. O'zingizning rejangiz bilan boshlang, lekin siz rassomga xohlagan narsani chizishingiz mumkin! Dars oxirida biz o'z loyihalarimizni sinf bilan baham ko'ramiz.",
           "progression_name": "Loyiha"
         },
         "16e34527-4efe-46f1-970b-f365858958a9": {
+          "description": "Talabalar ishlayotganda, savollarga javob berish va g'oyalar berish orqali ularni qo'llab-quvvatlang. Faoliyatni yanada hamkorlikka aylantirish uchun ularni fikr almashishga undash.",
           "tips": [
-            null
+            "Ushbu darsdagi barcha tanlovlar \"Bepul o'yin\" deb hisoblanadi, ya'ni bitta to'g'ri javob yo'q. Agar talaba Finish tugmasini bossa, u tanlovlar ro‘yxatiga qaytadi. Siz talabalarga faqat bitta tanlovni yoki vaqt imkoni bo'lganda to'ldirishga qiziqqan ko'plab tanlovlarni bajarishingiz mumkin."
           ]
         },
         "8fcf051c-e4b4-4140-8a06-9d59d03b85ab": {
           "name": "Asosiy Lug‘at"
+        },
+        "69edb680-3657-4056-82ba-59c74c6a0e96": {
+          "description": "Talabalarga o'z bilimlarini oshirish uchun taqdim etishingiz mumkin bo'lgan qo'shimcha manbalar:\n\n-   [Oilaviy faoliyat](https://drive.google.com/open?id=1tsYWY76Y9BJpl_mHcxb0-BiLIHL2PrGBt3GqeeBNAD8)\n-   [Oilaviy maslahatlar](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)"
         },
         "8ca4dc30-75b2-408b-a475-bb57fd296c23": {
           "name": "My Robotic Friends"
@@ -12558,7 +12953,7 @@
         "1d9f53b2-4d8b-4d95-83b3-a9775f72da01": {
           "name": "Reflection",
           "tips": [
-            null
+            "Bu kabi aks ettirish takliflari turli uslublarda bajarilishi mumkin. Jurnal yoki munozara (guruhlar yoki hamkorlar bilan) ajoyib tanlovdir!"
           ]
         },
         "0919b37a-9bc1-44a3-ac64-8be4769d5ef4": {
@@ -12697,6 +13092,9 @@
         "ff476c40-142d-458c-8c84-04f775b46de3": {
           "name": "Kirish"
         },
+        "3ac4fdef-870d-4cad-8022-649ab64336b0": {
+          "name": "Qog'oz bloklari yordamida o'chirilgan faoliyat"
+        },
         "870aa404-0931-4b87-ab53-5fc373ff8dc2": {
           "name": "Onlayn boshqotirmalarni sinf bilan ko‘rib chiqish"
         },
@@ -12769,6 +13167,9 @@
             null
           ]
         },
+        "9af30f82-82cd-4807-9609-900519e17c43": {
+          "progression_name": "Bepul o'yin"
+        },
         "44ad4fa6-3b97-4af4-ae1e-f9b9f3988a66": {
           "name": "Reflection"
         },
@@ -12800,6 +13201,12 @@
         "6cc5d299-00fd-477a-a654-60dc83031733": {
           "name": "Kirish"
         },
+        "c83b9630-0560-4bd5-8574-6e4a25d4de4e": {
+          "description": "Ushbu tadbirlar \"Katta voqea\" dan ajratilgan tushunchalarni o'quvchilar o'tayotgan onlayn dunyoga olib kirishga yordam beradi. Sinfingiz bilan ishlash uchun quyidagilardan \\_ birini\\_ tanlang:"
+        },
+        "029d4726-2804-4d14-9270-4405e9461405": {
+          "name": "Qog'oz bloklari yordamida o'chirilgan faoliyat"
+        },
         "64988ef3-1287-4486-9d41-cd475637575b": {
           "name": "Build a Flappy Game"
         },
@@ -12829,8 +13236,14 @@
             null
           ]
         },
+        "e8c36f82-146f-40bd-a83c-0f0d9fac33d0": {
+          "progression_name": "Video: Play Laboratoriyasiga kirish"
+        },
         "a0c869e7-3fa2-4bec-8fa4-56daf0261d2d": {
           "progression_name": "Mini-loyiha: Chase Game"
+        },
+        "a7a8c0ca-7507-4a7a-84da-2763a0e562a7": {
+          "progression_name": "Bepul o'yin"
         },
         "9f2441ae-b524-455b-b43b-8c01d9458d0d": {
           "progression_name": "Dars qo‘shimchalari"
@@ -12908,7 +13321,7 @@
         "47c800d4-0c46-42ae-bc19-d837d28fd912": {
           "name": "Reflection",
           "tips": [
-            null
+            "Bu kabi aks ettirish takliflari turli uslublarda bajarilishi mumkin. Jurnal yoki munozara (guruhlar yoki hamkorlar bilan) ajoyib tanlovdir!"
           ]
         },
         "8d3b579a-9959-4190-aa92-858495574689": {
@@ -12974,6 +13387,9 @@
         "3fea7621-ed7a-4f12-852d-ccc7768ce6db": {
           "name": "Events in Bounce"
         },
+        "57c05fc2-b193-48bc-ac4e-a6ad469f6abb": {
+          "progression_name": "Bepul o'yin"
+        },
         "4003564b-1d22-445e-9ef4-02c1c2d64eac": {
           "tips": [
             null
@@ -13002,7 +13418,8 @@
         "2708da4e-dd8b-4b03-ad52-f16a0af26363": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Bepul o'yin"
         },
         "df2c1698-1e56-4e44-9a0b-9d43facaf9f2": {
           "name": "Reflection"
@@ -13029,6 +13446,9 @@
             null
           ]
         },
+        "248f398f-18b7-4f09-a251-8d119f3c167d": {
+          "progression_name": "Bepul o'yin"
+        },
         "f5a8a534-e7fe-4056-88e3-2f8c8f6c85ab": {
           "progression_name": "Dars qo‘shimchalari"
         },
@@ -13038,6 +13458,9 @@
         "9c113356-76b9-4324-b22f-e35ce5a49216": {
           "name": "Baholash",
           "description": "Talabalardan eshik tashqarisidagi “Informatika” aql xaritangizga yopishqoq qog‘ozlarda yoki kartalarda eslatmalar qoldirishini so‘rang. Doskani Informatika aslida nima ekanligi va u nima uchun muhimligi haqidagi ko‘plab yaxshi fikrlar bilan boyiting."
+        },
+        "18fe5772-b05d-4e30-ada7-28d06b1bdf5d": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "d343f1b8-bbf5-455e-8d7d-e50907b2fc18": {
           "name": "Sikllar bilan tanishish"
@@ -13143,6 +13566,9 @@
         },
         "16432484-49b1-47dc-bbd9-60f67bacc790": {
           "progression_name": "Chaqiriq (Challenge)"
+        },
+        "f5e9d0c0-d9c2-40af-b9aa-781078d95fa2": {
+          "progression_name": "Bepul o'yin"
         },
         "3cb11179-29ea-4362-b237-a509e3e0943f": {
           "name": "Reflection"
@@ -13407,6 +13833,9 @@
         "a8372901-5a6f-40c1-88ec-bf6c62c79c95": {
           "progression_name": "Amaliyot"
         },
+        "5526b3db-d4a9-4d0d-a4a1-81732ba5d7ab": {
+          "progression_name": "Bepul o'yin"
+        },
         "35c19cbc-9b7b-4a5c-9d88-5f971a66fab2": {
           "name": "Reflection"
         },
@@ -13461,6 +13890,9 @@
         "6e424d72-bab8-46a2-8a4c-8e9b9bfa8e85": {
           "progression_name": "O‘rganish"
         },
+        "95d18f1f-9406-4eb0-9be8-8ba8439d2bd4": {
+          "progression_name": "Bepul o'yin"
+        },
         "8970ddea-49ba-429a-9607-6239c33e06be": {
           "name": "Reflection"
         },
@@ -13479,11 +13911,17 @@
           ],
           "progression_name": "Xususiyatlar"
         },
+        "86741327-b7d6-4dfb-b703-f23be6b2a7dc": {
+          "progression_name": "Bepul o'yin"
+        },
         "436d2aa5-5369-462c-acdd-5ae81d6b0423": {
           "progression_name": "Dars qo‘shimchalari"
         },
         "93b0085f-79bb-48eb-a786-f20c04016a31": {
           "name": "Reflection"
+        },
+        "163a2d46-638a-490a-81b4-f34a3d78a096": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "ee5c8682-facd-4fcb-88e1-597ca5e436c4": {
           "name": "Kirish"
@@ -13532,6 +13970,9 @@
         },
         "8661dd7f-0898-4902-89a3-9695c52e77c4": {
           "progression_name": "Mini-loyiha: Sticker Design"
+        },
+        "ea33c4e3-5280-41e4-9496-1dc01d2fcbd3": {
+          "progression_name": "Bepul o'yin"
         },
         "c40cef20-3f9c-4084-8440-4394cc4ea03a": {
           "name": "Reflection"
@@ -13588,6 +14029,9 @@
         },
         "3ab2228f-c257-4ffd-bcc0-1e5b29118ccf": {
           "progression_name": "Chaqiriq (Challenge)"
+        },
+        "61cffed6-e526-428f-9d2c-e53fbe5b2653": {
+          "progression_name": "Bepul o'yin"
         },
         "a8610908-835c-4ecf-87b2-0f10e7381e88": {
           "name": "Reflection"
@@ -13670,6 +14114,9 @@
         "e7ee7550-aa29-42ad-8be2-a126b7919fb4": {
           "progression_name": "Malaka orttirish"
         },
+        "7064cb92-5320-4d9f-9de2-6de2ca05c5d1": {
+          "progression_name": "Bepul o'yin"
+        },
         "59d6d7fb-e5be-4534-b78a-c3899159474b": {
           "name": "Reflection"
         },
@@ -13746,6 +14193,9 @@
         "f05f4ec1-71a1-4e00-8d93-935c6f47e01d": {
           "progression_name": "Malaka orttirish"
         },
+        "91e51520-32ea-4e43-bc6e-603cf76a7d22": {
+          "progression_name": "Bepul o'yin"
+        },
         "18f44055-e1bd-4cc4-9291-26a997c32a45": {
           "name": "Reflection"
         },
@@ -13767,6 +14217,9 @@
         },
         "f707862b-4d76-4f17-a853-7bb132b1f6f4": {
           "progression_name": "Oldindan ko'rish"
+        },
+        "94ce59c5-2479-4a35-b9f3-acf6615471ce": {
+          "progression_name": "Bepul o'yin"
         },
         "8a16a242-40d2-407c-b2c2-92012cc69e3d": {
           "progression_name": "Dars qo‘shimchalari"
@@ -13834,6 +14287,9 @@
         "79a73c29-5877-4ffc-8570-fad97926f939": {
           "progression_name": "Malaka orttirish"
         },
+        "47be5db0-347f-4617-a652-e0b01325b180": {
+          "progression_name": "Bepul o'yin"
+        },
         "e1938d70-43cf-4038-8782-51509d171b00": {
           "name": "Reflection"
         },
@@ -13890,6 +14346,9 @@
         "5cb283f5-dd23-4694-a205-a97ffd80c3cc": {
           "progression_name": "Malaka orttirish"
         },
+        "1582774d-bc37-4642-8f63-dccb08adea1c": {
+          "progression_name": "Bepul o'yin"
+        },
         "ad447053-20d4-49cb-a771-7fd893973f54": {
           "progression_name": "Dars qo‘shimchalari"
         },
@@ -13925,16 +14384,19 @@
           ]
         },
         "4dd75533-0a88-4007-b78d-c6237dc99e05": {
-          "name": "Drag&Drop - Olib ko‘chirishni o‘rganish"
+          "name": "Drag&Drop - Olib ko‘chirishni o‘rganish",
+          "description": "**Maqsad:** Bu talabalarga onlayn boshqotirmalarni bajarish uchun Code.org’dan qanday foydalanishni o‘rgatadi.\n\nUshbu bosqich talabalarga qo'l-ko'zni muvofiqlashtirish, bosish va sudrab tashlash ko'nikmalarini mashq qilish imkoniyatini berish uchun mo'ljallangan. Talabalar ham ketma-ketlik bilan o'ynaydilar."
         },
         "f8ae0c1b-6fd2-4f09-9ab3-67830399dfe0": {
+          "description": "Qanday qilib bosish, sudrab tashlash va tushirishni aniq o'rgatish uchun biroz vaqt ajrating. Talabalar boshqotirma ustida ishlashda foydalanadigan qurilmalar atrofidagi tilni tanishtirishga vaqt ajrating. Agar sizda planshetlar bo'lsa, talabalar _sensorli ekrandan_ foydalanadilar. Agar sizda noutbuklar bo'lsa, ular _trackpad_ dan foydalanishi mumkin. Laboratoriyada topishingiz mumkin bo'lgan ish stoli kompyuterlari _sichqonchani_ ishlatishga tayanadi.",
           "tips": [
             null
           ]
         },
         "d42ef620-4171-4966-a8ef-47c6079cd1ef": {
+          "description": "O'qituvchilar informatika ta'limida muhim rol o'ynaydi va birgalikdagi va jonli sinf muhitini qo'llab-quvvatlaydi. Onlayn boshqotirmalar paytida o'qituvchining roli birinchi navbatda rag'batlantirish va qo'llab-quvvatlashdir. Onlayn jumboqlar talabalarga qaratilgan bo'lishi kerak, shuning uchun o'quvchilar tiqilib qolganda o'qituvchilar aralashmasliklari kerak. Buni qanday qilish haqida ba'zi fikrlar:",
           "tips": [
-            null
+            "Talabalarga sinfdoshlariga yordam berishning to'g'ri yo'lini ko'rsating:\n\n-   Sinfdoshingizning kursiga o'tirmang\n-   Sinfdoshingizning klaviaturasidan foydalanmang\n-   Sinfdoshingizning sichqonchasiga tegmang\n-   Ketishdan oldin sinfdoshingiz sizga yechimni ovoz chiqarib aytib berishiga ishonch hosil qiling"
           ]
         },
         "bde027df-b2a3-4252-980a-7e8493d898e6": {
@@ -13955,7 +14417,7 @@
         },
         "d5b98b5f-7fc7-4ad4-8d79-b02a63621c46": {
           "tips": [
-            null
+            "Talabalarga sinfdoshlariga yordam berishning to'g'ri yo'lini ko'rsating:\n\n-   Sinfdoshingizning kursiga o'tirmang\n-   Sinfdoshingizning klaviaturasidan foydalanmang\n-   Sinfdoshingizning sichqonchasiga tegmang\n-   Ketishdan oldin sinfdoshingiz sizga yechimni ovoz chiqarib aytib berishiga ishonch hosil qiling"
           ]
         },
         "0394c5d4-246e-42bc-aca2-97d7bd159173": {
@@ -14110,6 +14572,9 @@
         "c2ef410e-28ad-4ebe-9061-f5658d8fe975": {
           "progression_name": "Amaliyot"
         },
+        "9501ab3a-0fa4-46d5-88a1-d546663cdffa": {
+          "progression_name": "Bepul o'yin"
+        },
         "71d66635-8ac0-46fa-94d5-1f574f1c7996": {
           "progression_name": "Dars qo‘shimchalari"
         },
@@ -14134,6 +14599,9 @@
         "5620ec7b-1ab2-40ae-9468-13e15bb2d4e0": {
           "progression_name": "Amaliyot"
         },
+        "92674c9e-c2dc-4023-a386-8fae5c2b8074": {
+          "progression_name": "Bepul o'yin"
+        },
         "b1227c60-2106-47a0-a2a0-d7fb4a460d44": {
           "progression_name": "Dars qo‘shimchalari"
         },
@@ -14151,6 +14619,12 @@
         },
         "6c8d4815-0e66-45fd-980a-dacf20015a66": {
           "name": "Hodisalar bilan harakatda"
+        },
+        "dbb4fe5e-fe4d-40d4-8509-c11f826128ae": {
+          "progression_name": "Video: Play Laboratoriyasiga kirish"
+        },
+        "708df6be-8599-4a1a-993b-13ca6e874d5c": {
+          "progression_name": "Bepul o'yin"
         },
         "dd7a6bce-6e0d-4774-8588-76327c4315d6": {
           "progression_name": "Amaliyot"
@@ -14175,6 +14649,9 @@
         },
         "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7": {
           "progression_name": "Mini-loyiha: Royal Battle"
+        },
+        "ddebabd0-cce0-446d-81ad-f4734e71d06c": {
+          "progression_name": "Bepul o'yin"
         },
         "85076d8d-1ddf-45cc-b510-0eeddffaff85": {
           "progression_name": "Dars qo‘shimchalari"
@@ -14219,6 +14696,9 @@
         "30997374-8929-4152-b55b-94e459e3ee58": {
           "progression_name": "Amaliyot"
         },
+        "83778d93-2959-4776-94d0-e82985346914": {
+          "progression_name": "Bepul o'yin"
+        },
         "c925e7be-2487-4ebe-892b-bfe452625d91": {
           "name": "Reflection"
         },
@@ -14239,6 +14719,9 @@
         },
         "dc08f2e2-dab1-43b0-8349-9ce3161eec83": {
           "progression_name": "Malaka orttirish"
+        },
+        "f05ee764-4bce-42ba-bc3d-48685d6ba404": {
+          "progression_name": "Bepul o'yin"
         },
         "fd74ff7a-4b6f-42d4-99ea-63fdf9036656": {
           "name": "Reflection"
@@ -14335,6 +14818,9 @@
         "dbdfa13e-a251-458a-b549-4143f4e77cde": {
           "progression_name": "Oldindan ko'rish"
         },
+        "a2a794ce-1af9-4258-84ad-352ee9f9f187": {
+          "progression_name": "Bepul o'yin"
+        },
         "0c0b60c9-9aee-43f0-9018-6f1d770ae014": {
           "progression_name": "Dars qo‘shimchalari"
         },
@@ -14407,6 +14893,9 @@
         "8543e376-7910-45df-b486-372036c19fdc": {
           "progression_name": "Malaka orttirish"
         },
+        "faa2f676-cf14-4bd7-b277-8e0a30245c0d": {
+          "progression_name": "Bepul o'yin"
+        },
         "9639ed09-b00f-4186-a5e8-0a1020965a44": {
           "name": "Reflection"
         },
@@ -14446,6 +14935,9 @@
         },
         "3b64705c-3a17-44b9-b688-4bbc029ba2ea": {
           "progression_name": "Malaka orttirish"
+        },
+        "dc8187ff-3bc9-4079-adda-93abea4abd16": {
+          "progression_name": "Bepul o'yin"
         },
         "c88e1d86-4746-4a47-8721-3e7e07784f19": {
           "name": "Reflection"
@@ -18345,11 +18837,20 @@
         "4ed5644a-db0a-41e0-a07d-a0447e4c04d3": {
           "progression_name": "Amaliyot"
         },
+        "eed9001e-67f2-44d8-8704-1f8fd9cf4897": {
+          "progression_name": "Bepul o'yin"
+        },
         "9b7e88a6-ef85-4623-a3b0-53ace52b42da": {
           "progression_name": "Hikoya yarating"
         },
+        "fbfcd848-6942-4978-81d3-3a9c70938d3c": {
+          "progression_name": "Bepul o'yin"
+        },
         "c7ba3184-330c-4e7a-b462-7bf2c39e1858": {
           "progression_name": "Mini-loyiha: Royal Battle"
+        },
+        "6099eea1-c9b0-4572-889e-1bdcc45f9835": {
+          "progression_name": "Bepul o'yin"
         },
         "5cf42359-4241-4e00-95c0-af09796c2ee6": {
           "progression_name": "Labirintga kirish: Blocklar bilan dasturlash"
@@ -18380,8 +18881,16 @@
         "b8c78940-0b89-4ede-98eb-5cae6537492a": {
           "progression_name": "Amaliyot"
         },
+        "c0ced3bc-751b-4626-90df-e7037256bf81": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
+        },
         "246304a1-0186-48ee-845a-b9e3673a2c3c": {
           "progression_name": "Amaliyot"
+        },
+        "723796e5-0838-430f-95b2-5fff018731ef": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
         },
         "94714177-352d-4ab8-ac96-ec07dc7ba441": {
           "progression_name": "Qizdirish"
@@ -18400,6 +18909,9 @@
         },
         "7a2b3e7f-2f8f-4592-a166-1d279f647fb2": {
           "progression_name": "Yakun"
+        },
+        "29a36d4b-797c-4517-970d-7ba25fe9f9a4": {
+          "progression_name": "Bepul o'yin"
         },
         "dbe9dad9-78fd-4f1c-8778-79bec55d6fc1": {
           "progression_name": "Amaliyot"
@@ -18545,6 +19057,9 @@
         "2bd7b8d8-dd08-4795-b6c8-aa6ee39d45bf": {
           "progression_name": "Oldindan ko'rish"
         },
+        "d82614b6-8420-4d3f-83c7-b7fb9d353453": {
+          "progression_name": "Bepul o'yin"
+        },
         "0b1979f9-ab58-4284-adc9-ff2ccb176fde": {
           "progression_name": "Namunaviy loyihalar"
         },
@@ -18652,8 +19167,16 @@
         "7f1d11ff-d2c9-4fb9-ab23-f1a3dd5116b4": {
           "progression_name": "Amaliyot"
         },
+        "8131dce7-4fb6-4612-aef7-24ffa0c07804": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
+        },
         "ec290ff1-322f-443a-a148-83f7be2da31c": {
           "progression_name": "Mini-loyiha: Sticker Design"
+        },
+        "78cd35d9-e60c-4add-b041-78ad1104a479": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
         },
         "25e197c5-7687-48f6-ba36-a1a571283b2c": {
           "progression_name": "O'z Flappy o'yiningizni yasang"
@@ -18670,6 +19193,9 @@
         },
         "d2b5ccfb-8e51-4ab0-9ab4-b05980e8c155": {
           "progression_name": "Mini-loyiha: Chase Game"
+        },
+        "08f9c234-1d3f-4d54-a1bf-878c064dd68d": {
+          "progression_name": "Bepul o'yin"
         },
         "52633201-af13-45e4-9869-11411c3797e2": {
           "name": "Loyiha",
@@ -18759,6 +19285,9 @@
         "bde1e72a-f2b7-494c-99be-1736a8653391": {
           "progression_name": "Mini-loyiha: Swimming Fish (continued)"
         },
+        "4280e340-3549-4814-9afe-d6c9fe291025": {
+          "progression_name": "Bepul o'yin"
+        },
         "f40b7158-a223-40b4-b67d-67ff397672cd": {
           "progression_name": "Oldindan ko'rish"
         },
@@ -18771,6 +19300,9 @@
         "a4a989c4-c43d-49e7-b103-a6475d31a57c": {
           "name": "Mini-loyiha: Alien Dance Party",
           "progression_name": "Mini-loyiha: Alien Dance Party"
+        },
+        "84c7f95c-006b-46bc-ba15-67e59c540a18": {
+          "progression_name": "Bepul o'yin"
         },
         "09dc1358-e6b6-46e9-9995-78d64b507557": {
           "name": "Mini-loyiha: Interactive Poster",
@@ -18815,6 +19347,9 @@
         "6d55424a-e89a-46c8-b523-b2cab76c0700": {
           "progression_name": "Oldindan ko'rish"
         },
+        "08cf29e4-2239-4519-b813-5d66842379ae": {
+          "progression_name": "Bepul o'yin"
+        },
         "62445b52-b1d7-46ff-9df7-0adfc102426b": {
           "progression_name": "Mini-loyiha: Snowflake #1"
         },
@@ -18824,6 +19359,10 @@
         },
         "42aa151d-e1f6-4ebc-ac61-1997a9aa4719": {
           "progression_name": "Amaliyot"
+        },
+        "f578d2c6-5557-4872-8505-2ee73c254d6e": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
         },
         "f62b5dfa-a6d0-4152-9486-204c989f79d6": {
           "progression_name": "Terimchi (Harvester)"
@@ -18963,8 +19502,14 @@
         "10794a6b-9996-4891-abc5-f99fb0f41539": {
           "progression_name": "Amaliyot"
         },
+        "9f9f6cf1-1591-4de2-9a70-4e190059f0fe": {
+          "progression_name": "Bepul o'yin"
+        },
         "92f4978e-be8c-41eb-8da8-093888c80d52": {
           "progression_name": "Hikoya yarating"
+        },
+        "103b8d99-b691-4dea-a207-36eaacacbfcb": {
+          "progression_name": "Bepul o'yin"
         },
         "1b6f4aee-cb66-406f-9478-1fb310b7eb1f": {
           "progression_name": "Amaliyot"
@@ -18974,6 +19519,10 @@
         },
         "097a9734-6e4d-4773-9b0a-ada946ac92de": {
           "progression_name": "Amaliyot"
+        },
+        "1f1bd2f3-0410-4c52-b995-f664007c6ec5": {
+          "name": "Bepul o'yin",
+          "progression_name": "Bepul o'yin"
         },
         "72c41db7-4475-47f2-8d3b-62a5bc7e082e": {
           "progression_name": "Sprite laboratoriyasi bilan tanishish"
@@ -18989,6 +19538,9 @@
         },
         "6187ab8b-2e80-4e5c-bd96-16747d3deea8": {
           "progression_name": "Mini-loyiha: Swimming Fish (continued)"
+        },
+        "0d749e3d-cf8b-4e7e-bb6e-104a1812a49f": {
+          "progression_name": "Bepul o'yin"
         },
         "db78f4b0-5180-490c-a47d-1bbf68839626": {
           "progression_name": "Oldindan ko'rish"
@@ -19072,6 +19624,9 @@
         "1f9bf302-470c-4cc4-b73c-ef2423c9c633": {
           "progression_name": "Amaliyot"
         },
+        "d3262ee6-45e9-4506-a341-94177402f767": {
+          "progression_name": "Bepul o'yin"
+        },
         "bb1d2d36-2ac2-40c1-b5ff-797d844b5038": {
           "progression_name": "Simulyatorni ishga tushurish"
         },
@@ -19099,17 +19654,32 @@
         "9cce9bff-8463-4d5b-963c-66c5e6716865": {
           "progression_name": "For sikliga kirish"
         },
+        "d0c8bc0d-00a5-4a23-98f1-36d9b6dd43b9": {
+          "progression_name": "Bepul o'yin"
+        },
         "4ec3b235-0d88-4ebb-a4af-d133e61f5fcf": {
           "progression_name": "Amaliyot"
         },
+        "bd909077-76b1-4f89-a833-62cb66c95d2c": {
+          "progression_name": "Bepul o'yin"
+        },
         "d001df79-0c30-43b8-bcfd-b835f85c3fc2": {
           "progression_name": "Oldindan ko'rish"
+        },
+        "5ce15fb0-b81e-4daf-9a26-d382aa1450d2": {
+          "progression_name": "Bepul o'yin"
         },
         "bb001c5f-4cd3-468a-a98e-83250ca39668": {
           "progression_name": "Oldindan ko'rish"
         },
         "a52faa35-27f1-4f9a-aa43-7a425f8e149b": {
           "progression_name": "Amaliyot"
+        },
+        "844a1727-43ab-47a8-9b55-14c924ee9345": {
+          "progression_name": "Bepul o'yin"
+        },
+        "20614514-4e5f-4737-8071-c17f2ae6f1e4": {
+          "progression_name": "Bepul o'yin"
         },
         "cc5d6565-d338-4155-973c-d9eb5df8f228": {
           "name": "Mini-loyiha: Virtual Pet",

@@ -12,6 +12,7 @@ import {allowAnimationMode, countAllowedModes} from './stateQueries';
 import PoemSelector from './poetry/PoemSelector';
 import * as utils from '../utils';
 import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Controls above the visualization header, including the code/animation toggle.
@@ -21,7 +22,8 @@ class P5LabVisualizationHeader extends React.Component {
     labType: PropTypes.oneOf(Object.keys(P5LabType)).isRequired,
     interfaceMode: PropTypes.oneOf([
       P5LabInterfaceMode.CODE,
-      P5LabInterfaceMode.ANIMATION
+      P5LabInterfaceMode.ANIMATION,
+      P5LabInterfaceMode.BACKGROUND
     ]).isRequired,
     allowAnimationMode: PropTypes.bool.isRequired,
     onInterfaceModeChange: PropTypes.func.isRequired,
@@ -41,7 +43,10 @@ class P5LabVisualizationHeader extends React.Component {
         // Fire a window resize event to tell Game Lab (Droplet) to rerender.
         setTimeout(() => utils.fireResizeEvent(), 0);
       }
-    } else if (mode === P5LabInterfaceMode.ANIMATION) {
+    } else if (
+      mode === P5LabInterfaceMode.ANIMATION ||
+      mode === P5LabInterfaceMode.BACKGROUND
+    ) {
       if (this.props.isBlockly) {
         Blockly.WidgetDiv.hide();
         Blockly.DropDownDiv?.hide();
@@ -77,6 +82,7 @@ class P5LabVisualizationHeader extends React.Component {
             <ToggleGroup
               selected={interfaceMode}
               onChange={this.changeInterfaceMode}
+              flex={true}
             >
               <button
                 style={styles.buttonFocus}
@@ -98,6 +104,25 @@ class P5LabVisualizationHeader extends React.Component {
                     : msg.animationMode()}
                 </button>
               )}
+              {allowAnimationMode &&
+                this.props.isBlockly &&
+                experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD) && (
+                  <button
+                    style={{
+                      ...styles.buttonFocus,
+                      // All truncation if the visualize column is very small
+                      // or if translated strings are longer than English.
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      whiteSpace: 'nowrap'
+                    }}
+                    type="button"
+                    value={P5LabInterfaceMode.BACKGROUND}
+                    id="backgroundMode"
+                  >
+                    {msg.backgroundMode()}
+                  </button>
+                )}
             </ToggleGroup>
           </div>
         )}
@@ -126,7 +151,11 @@ export default connect(
     isShareView: state.pageConstants.isShareView,
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
   }),
-  dispatch => ({
-    onInterfaceModeChange: mode => dispatch(changeInterfaceMode(mode))
-  })
+  dispatch => {
+    return {
+      onInterfaceModeChange(mode) {
+        dispatch(changeInterfaceMode(mode));
+      }
+    };
+  }
 )(P5LabVisualizationHeader);

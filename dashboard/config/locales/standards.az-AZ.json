@@ -139,6 +139,21 @@
         },
         "5.b": {
           "description": "Əməkdaşlıq, öyrənmə və məhsuldarlığı dəstəkləyən texnologiyadan istifadəyə müsbət münasibət nümayiş etdirin."
+        },
+        "AAP-2.E.1": {
+          "description": "Boolean dəyəri doğru və ya yalandır"
+        },
+        "CSN-1.D.3": {
+          "description": "World Wide Web İnternetdən istifadə edir."
+        },
+        "DAT-1.A.4": {
+          "description": "1 bayt 8 bitdir."
+        },
+        "F.BF.4": {
+          "description": "Tərs funksiyaları tapın."
+        },
+        "G.C.1": {
+          "description": "Bütün dairələrin oxşar olduğunu sübut edin."
         }
       }
     }

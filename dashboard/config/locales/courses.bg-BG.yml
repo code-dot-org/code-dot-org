@@ -5,10 +5,49 @@ bg:
       name:
         csp-2017:
           assignment_family_title: AP ® Принципи на компютърните науки
+          title: Принципи на Компютърните Науки ('17-'18)
+          version_title: "'17-'18"
+        csd-2017:
+          assignment_family_title: Открития в Компютърните Науки
+          title: Открития в Компютърните Науки ('17-'18)
+          version_title: "'17-'18"
         allthethingscourse:
           title: курс за всичко
           description_short: Това е курс за всичко
           description_student: Това е курс за всичко и има по-дълго описание за учениците
           description_teacher: Това е курс за всичко и има по-дълго описание за учителите
+        csd-2018:
+          assignment_family_title: Открития в Компютърните Науки
+          title: Открития в Компютърните Науки ('18-'19)
+          version_title: "'18-'19"
         csp-2018:
           assignment_family_title: AP ® Принципи на компютърните науки
+          title: Принципи на Компютърните Науки ('18-'19)
+          version_title: "'18-'19"
+        csp-2019:
+          title: Принципи на Компютърните Науки ('19-'20)
+          version_title: "'19-'20"
+        csd-2019:
+          title: Открития в Компютърните Науки ('19-'20)
+          version_title: "'19-'20"
+        mike-test:
+          title: Основи на компютърните науки
+        csd-2023:
+          title: Открития в Компютърните Науки
+    resources:
+      curriculum/csd/2020:
+        name: Учебна програма
+      teacher_forum/csd/2020:
+        name: Учителски форум
+      curriculum/csd/2017:
+        name: Учебна програма
+      teacher_forum_6/csd/2017:
+        name: Учителски форум
+      curriculum/csd/2019:
+        name: Учебна програма
+      teacher_forum/csd/2019:
+        name: Учителски форум
+      curriculum/csd/2018:
+        name: Учебна програма
+      teacher_forum_6/csd/2018:
+        name: Учителски форум

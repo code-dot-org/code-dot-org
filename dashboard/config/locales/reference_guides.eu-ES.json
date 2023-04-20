@@ -58,6 +58,9 @@
         },
         "csd-2022/velocity": {
           "display_name": "Abiadura"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Web Lab"
         }
       }
     }

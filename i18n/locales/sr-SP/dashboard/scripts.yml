@@ -944,6 +944,10 @@ sr:
           lessons:
             lesson-4:
               name: Променљиве
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Бројачке петље
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -954,7 +958,73 @@ sr:
               display_name: Функције
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: Листе
             csp_loops:
               display_name: Петље
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Листе
+            lessonGroup-3:
+              display_name: Петље
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Петље
+            csf_events:
+              display_name: Догађаји
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+            csf_conditionals:
+              display_name: Кондиционали
+            csf_functions:
+              display_name: Функције
+            csf_variables:
+              display_name: Променљиве
+            csf_for_loops:
+              display_name: Бројачке петље
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_loops:
+              display_name: Петље
+            csf_events:
+              display_name: Догађаји
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_loops:
+              display_name: Петље
+            csf_events:
+              display_name: Догађаји
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_loops:
+              display_name: Петље
+            csf_events:
+              display_name: Догађаји
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+            csf_conditionals:
+              display_name: Кондиционали
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_functions:
+              display_name: Функције
+            csf_nested_loops:
+              display_name: Кондиционали

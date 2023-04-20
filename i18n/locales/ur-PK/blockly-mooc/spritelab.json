@@ -77,7 +77,6 @@
   "didntMoveRight": "آپ کی سپرائٹ دائیں جانب نہیں ہلی.",
   "didntMoveUp": "آپ کی سپرائٹ اوپر نہیں گئی۔",
   "didntPressKey": "*\"Run\"* کو دبانے کے بعد ایک تیر والی بٹن ضرور دبائیں۔ آپ پلے ایریا کے نیچے نارنجی بٹنوں پر کلک کر سکتے ہیں یا اپنے کیبورڈ پر کیز (keys) دبا سکتے ہیں۔",
-  "errorLoadingAnimation": "ایسا لگتا ہے کہ ہمیں آپ کی اینیمیشن \"{animationName}\" لوڈ کرنے میں مشکل ہو رہی ہے۔ یقینی بنائیں کہ آپ کا انٹرنیٹ کنیکشن اچھا ہے اور صفحہ دوبارہ لوڈ کرنے کی کوشش کریں۔ اگر یہ مسئلہ برقرار رہتا ہے، تو ممکن ہے کہ یہ اینیمیشن خراب ہے۔ اس صورت میں، آپ کو اینیمیشن کو ہٹا کر آگے بڑھنے کی ضرورت پڑ سکتی ہے۔",
   "eventsOneChange": "آپ کا اسپرائٹ بدل گیا، لیکن صرف ایک بار۔ key کو چند بار دبا کر اپنے پروگرام کی جانچ کریں، اور درست بلاک کا استعمال یقینی بنائیں۔  <xml><block type=\"gamelab_changePropBy\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"creature_10_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value></block></xml>",
   "eventsWrongBehaviors": "آپ کے سپرائٹ میں بالکل 3 طرز عمل ہونے چاہئیں۔ اپنے کوڈ میں 'stops everything' بلاک کو کسی مختلف جگہ پر منتقل کرنے کی کوشش کریں۔",
   "foodNotTouchPet": "اپنے کھانے کے سپرائٹ کو گھسیٹیں تاکہ یہ آپ کے پالتو جانور کے سپرائٹ کو چھوئے۔",

@@ -32,11 +32,8 @@ export default class ProgressTableSummaryCell extends React.Component {
   }
 
   render() {
-    const {
-      studentLessonProgress,
-      isAssessmentLesson,
-      onSelectDetailView
-    } = this.props;
+    const {studentLessonProgress, isAssessmentLesson, onSelectDetailView} =
+      this.props;
 
     if (!studentLessonProgress) {
       return (

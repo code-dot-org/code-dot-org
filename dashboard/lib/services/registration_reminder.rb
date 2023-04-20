@@ -2,19 +2,19 @@ class Services::RegistrationReminder
   # Don't send reminders for applications created prior to this date
   REMINDER_START_DATE = Date.new(2019, 10, 1)
 
-  # This method queues enrollment reminder emails for any applications that are eligible for a
+  # This method sends enrollment reminder emails for any applications that are eligible for a
   # reminder.  It is designed to be called repeatedly (e.g. from a cronjob).
   #
   # This is an enrollment reminder email for any teacher that has been accepted, but has not
   # registered in a workshop. This form will automatically be sent 2 weeks after the first
   # registration email was sent. If the teacher is still not registered after another 1 week,
   # a second (and last) email will be sent.
-  def self.queue_registration_reminders!
+  def self.send_registration_reminders!
     (
       applications_needing_first_reminder |
       applications_needing_second_reminder
     ).each do |application|
-      application.queue_email 'registration_reminder'
+      application.queue_email 'registration_reminder', deliver_now: true
     end
   end
 
@@ -27,7 +27,7 @@ class Services::RegistrationReminder
     # Not enrolled in a workshop since the 'accepted' email was sent
     applications_awaiting_enrollment.
       where("accepted.sent_at <= ?", 1.week.ago).
-      where("registration_reminder.id is null")
+      where(registration_reminder: {id: nil})
   end
 
   # Locate all applications that are eligible to receive their second workshop registration
@@ -68,7 +68,7 @@ class Services::RegistrationReminder
         and pd_enrollments.created_at >= accepted.sent_at
       SQL
       where("pd_applications.created_at >= ?", REMINDER_START_DATE).
-      where('pd_enrollments.id is null').
+      where(pd_enrollments: {id: nil}).
       distinct
   end
 end

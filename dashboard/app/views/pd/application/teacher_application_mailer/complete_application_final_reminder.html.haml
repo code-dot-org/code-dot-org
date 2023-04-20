@@ -1,8 +1,11 @@
 - registration_url = "https://studio.code.org/pd/application/teacher"
 
 %p
-  Hello
-  = @application.first_name + ","
+  - if !!@application.first_name&.present?
+    Hello
+    = @application.first_name + ","
+  - else
+    Hello,
 
 %p
   We noticed that you still have not completed your application. We just wanted to check in
@@ -10,6 +13,8 @@
   program is right for you. If there is anything we can do to support you in completing your
   application, please reach out to us at
   = mail_to 'teacher@code.org' + '.'
+  You can also find details about the professional learning program and Code.org curriculum at
+  = link_to('code.org/apply', 'https://code.org/apply') + '.'
 
 %p
   As a reminder, in order to be considered for one of the spots in your region's Professional

@@ -573,7 +573,7 @@
           "name": "Səviyyələr"
         },
         "e708101d-3a86-4ff0-85a9-f5ec782683fe": {
-          "name": "İstiləşmə: Pssst ... Parol nədir?"
+          "name": "İsinmə: Psst ... Şifrə nədir?"
         },
         "e285d097-bd01-4c40-a00c-068a9ace8e8d": {
           "name": "Qiymətləndirin: Uh-Oh! Əgər... Onda..."
@@ -713,6 +713,9 @@
         "a54509a7-dac6-4985-830d-91272c3de923": {
           "name": "Yekun"
         },
+        "f7559bae-c62e-4cc6-94a2-26b09e8c1eed": {
+          "name": "Əlavə təlim"
+        },
         "a97a978a-4f85-4d03-b3aa-f9ade97cac23": {
           "name": "Araşdırın: Problem nədir?"
         },
@@ -823,6 +826,9 @@
         },
         "6114e1af-1c83-4f1f-add9-a97c2523b343": {
           "name": "Analiz et: İnsanlar niyə paylaşır?"
+        },
+        "d1c5ae68-dd15-4aec-aff6-44d0ea484781": {
+          "name": "Təhlil edin: Özəl və ya şəxsi?"
         },
         "74025568-d2f7-4ad1-8196-55a2955dd2f8": {
           "name": "Əlavə təlim"
@@ -942,6 +948,9 @@
           "name": "Yekun"
         },
         "36227e91-065d-4acc-8155-f954f1fe1ffc": {
+          "name": "Əlavə təlim"
+        },
+        "07ac5b5f-997f-4ee3-bbd3-45cb1aeca6af": {
           "name": "Əlavə təlim"
         },
         "5b342453-cd42-4221-8375-618cf1ddb41b": {
@@ -1609,6 +1618,9 @@
         },
         "74e2ce00-926c-4dff-9ffe-161c3e10e05e": {
           "name": "Yekun"
+        },
+        "b351a875-cdc3-4da8-a2c0-fb84cee29102": {
+          "name": "Əlavə təlim"
         },
         "9299d981-71c8-4dfb-a0b7-3f994bd62bbf": {
           "name": "Dərsdən əvvəl"
@@ -5766,7 +5778,7 @@
           "name": "Yekun"
         },
         "aebca980-e26c-4993-b001-dc20e492f04e": {
-          "name": "İstiləşmə: Pssst ... Parol nədir?"
+          "name": "İsinmə: Psst ... Şifrə nədir?"
         },
         "139034de-1cee-48f9-abd8-40e8c15cd439": {
           "name": "Qiymətləndirin: Uh-Oh! Əgər... Onda..."
@@ -6220,6 +6232,9 @@
         },
         "3d33781b-194e-4311-b493-e6cd3bf140ac": {
           "name": "Analiz et: İnsanlar niyə paylaşır?"
+        },
+        "202398a5-6b48-4360-9ed8-10db2039b064": {
+          "name": "Təhlil edin: Özəl və ya şəxsi?"
         },
         "02429a22-ab18-4df6-9062-d88960fe9ae8": {
           "name": "Əlavə təlim"
@@ -7150,6 +7165,9 @@
         },
         "bb408703-11ec-4822-a86b-b8625a121f6f": {
           "name": "Vitrin"
+        },
+        "6e1384cd-1561-474c-bd34-f0b50f33d24a": {
+          "name": "Kurs sorğusunun sonu"
         },
         "e159a5eb-31ca-47d9-bc81-e2777d7027a0": {
           "name": "Səviyyələr"

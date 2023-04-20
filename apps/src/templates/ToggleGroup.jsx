@@ -10,6 +10,7 @@ class ToggleGroup extends Component {
     selected: PropTypes.string,
     activeColor: PropTypes.string,
     onChange: PropTypes.func.isRequired,
+    flex: PropTypes.bool,
     children(props, propName, componentName) {
       const prop = props[propName];
       let error;
@@ -42,8 +43,10 @@ class ToggleGroup extends Component {
 
   render() {
     // Reverse children order if locale is RTL
-    const {isRtl} = this.props;
-    const spanStyle = isRtl ? styles.buttonReverse : null;
+    const {isRtl, flex} = this.props;
+    const spanStyle = isRtl
+      ? styles.flexButtonReverse
+      : flex && styles.flexButtons;
 
     return <span style={spanStyle}>{this.renderChildren()}</span>;
   }
@@ -80,7 +83,10 @@ class ToggleGroup extends Component {
 }
 
 const styles = {
-  buttonReverse: {
+  flexButtons: {
+    display: 'flex'
+  },
+  flexButtonReverse: {
     display: 'flex',
     flexDirection: 'row-reverse'
   }

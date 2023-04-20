@@ -3,9 +3,11 @@ import $ from 'jquery';
 import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import PropTypes from 'prop-types';
 import {SectionLoginType, PlGradeValue} from '../../util/sharedConstants';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -23,7 +25,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'courseOfferingId',
   'courseVersionId',
   'unitId',
-  'grade',
+  'grades',
   'hidden',
   'restrictSection',
   'codeReviewExpiresAt'
@@ -244,6 +246,27 @@ export const assignToSection = (
     {includeUserId: true}
   );
   return (dispatch, getState) => {
+    const section = getState().teacherSections.sections[sectionId];
+    // Only log if the assignment is changing.
+    // We need an OR here because unitId will be null for standalone units
+    if (
+      (courseOfferingId && section.courseOfferingId !== courseOfferingId) ||
+      (courseVersionId && section.courseVersionId !== courseVersionId) ||
+      (unitId && section.unitId !== unitId)
+    ) {
+      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+        sectionName: section.name,
+        sectionId,
+        sectionLoginType: section.loginType,
+        previousUnitId: section.unitId,
+        previousCourseId: section.courseOfferingId,
+        previousCourseVersionId: section.courseVersionId,
+        newUnitId: unitId,
+        newCourseId: courseOfferingId,
+        newCourseVersionId: courseVersionId
+      });
+    }
+
     dispatch(beginEditingSection(sectionId, true));
     dispatch(
       editSectionProperties({
@@ -262,39 +285,38 @@ export const assignToSection = (
  * the server
  * @param {number} sectionId
  */
-export const unassignSection = (sectionId, location) => (
-  dispatch,
-  getState
-) => {
-  dispatch(beginEditingSection(sectionId, true));
-  const {initialCourseId, initialUnitId} = getState().teacherSections;
-  dispatch(
-    editSectionProperties({
-      courseId: null,
-      courseOfferingId: null,
-      courseVersionId: null,
-      unitId: null
-    })
-  );
-  firehoseClient.putRecord(
-    {
-      study: 'assignment',
-      event: 'course-unassigned-from-section',
-      data_json: JSON.stringify(
-        {
-          sectionId,
-          scriptId: initialUnitId,
-          courseId: initialCourseId,
-          location: location,
-          date: new Date()
-        },
-        removeNullValues
-      )
-    },
-    {includeUserId: true}
-  );
-  return dispatch(finishEditingSection());
-};
+export const unassignSection =
+  (sectionId, location) => (dispatch, getState) => {
+    dispatch(beginEditingSection(sectionId, true));
+    const {initialCourseId, initialUnitId} = getState().teacherSections;
+
+    dispatch(
+      editSectionProperties({
+        courseId: null,
+        courseOfferingId: null,
+        courseVersionId: null,
+        unitId: null
+      })
+    );
+    firehoseClient.putRecord(
+      {
+        study: 'assignment',
+        event: 'course-unassigned-from-section',
+        data_json: JSON.stringify(
+          {
+            sectionId,
+            scriptId: initialUnitId,
+            courseId: initialCourseId,
+            location: location,
+            date: new Date()
+          },
+          removeNullValues
+        )
+      },
+      {includeUserId: true}
+    );
+    return dispatch(finishEditingSection());
+  };
 
 export const beginCreatingSection = (
   courseOfferingId,
@@ -520,26 +542,24 @@ export const beginGoogleImportRosterFlow = () => dispatch => {
  * @param {string} courseName
  * @return {function():Promise}
  */
-export const importOrUpdateRoster = (courseId, courseName) => (
-  dispatch,
-  getState
-) => {
-  const state = getState();
-  const provider = getRoot(state).rosterProvider;
-  const importSectionUrl = importUrlByProvider[provider];
-  let sectionId;
+export const importOrUpdateRoster =
+  (courseId, courseName) => (dispatch, getState) => {
+    const state = getState();
+    const provider = getRoot(state).rosterProvider;
+    const importSectionUrl = importUrlByProvider[provider];
+    let sectionId;
 
-  dispatch({type: IMPORT_ROSTER_REQUEST});
-  return fetchJSON(importSectionUrl, {courseId, courseName})
-    .then(newSection => (sectionId = newSection.id))
-    .then(() => dispatch(asyncLoadSectionData()))
-    .then(() =>
-      dispatch({
-        type: IMPORT_ROSTER_SUCCESS,
-        sectionId
-      })
-    );
-};
+    dispatch({type: IMPORT_ROSTER_REQUEST});
+    return fetchJSON(importSectionUrl, {courseId, courseName})
+      .then(newSection => (sectionId = newSection.id))
+      .then(() => dispatch(asyncLoadSectionData()))
+      .then(() =>
+        dispatch({
+          type: IMPORT_ROSTER_SUCCESS,
+          sectionId
+        })
+      );
+  };
 
 /**
  * Initial state of this redux module.
@@ -599,7 +619,7 @@ function newSectionData(participantType) {
     id: PENDING_NEW_SECTION_ID,
     name: '',
     loginType: undefined,
-    grade: '',
+    grades: [''],
     providerManaged: false,
     lessonExtras: true,
     pairingAllowed: true,
@@ -869,7 +889,7 @@ export default function teacherSections(state = initialState, action) {
       action.props.participantType !== ParticipantAudience.student
     ) {
       loginTypeSettings.loginType = SectionLoginType.email;
-      gradeSettings.grade = PlGradeValue;
+      gradeSettings.grades = [PlGradeValue];
     }
 
     const lessonExtraSettings = {};
@@ -1155,7 +1175,7 @@ export function isSaveInProgress(state) {
 export function assignedCourseOffering(state) {
   const {sectionBeingEdited, courseOfferings} = getRoot(state);
 
-  return courseOfferings[(sectionBeingEdited?.courseOfferingId)];
+  return courseOfferings[sectionBeingEdited?.courseOfferingId];
 }
 
 function assignedUnit(state) {
@@ -1227,7 +1247,7 @@ export function getSectionRows(state, sectionIds) {
       'studentCount',
       'code',
       'participantType',
-      'grade',
+      'grades',
       'providerManaged',
       'hidden'
     ]),
@@ -1250,7 +1270,7 @@ export const sectionFromServerSection = serverSection => ({
   courseVersionName: serverSection.courseVersionName,
   createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
-  grade: serverSection.grade,
+  grades: serverSection.grades,
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
   lessonExtras: serverSection.lesson_extras,
   pairingAllowed: serverSection.pairing_allowed,
@@ -1283,6 +1303,7 @@ export const studentFromServerStudent = (serverStudent, sectionId) => ({
   name: serverStudent.name,
   sharingDisabled: serverStudent.sharing_disabled,
   secretPicturePath: serverStudent.secret_picture_path,
+  secretPictureName: serverStudent.secret_picture_name,
   secretWords: serverStudent.secret_words
 });
 
@@ -1397,8 +1418,8 @@ export function sectionsForDropdown(
       (unitId !== null && section.unitId === unitId) ||
       (courseOfferingId !== null &&
         section.courseOfferingId === courseOfferingId &&
-        (courseVersionId !== null &&
-          section.courseVersionId === courseVersionId))
+        courseVersionId !== null &&
+        section.courseVersionId === courseVersionId)
   }));
 }
 

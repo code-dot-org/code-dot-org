@@ -216,9 +216,7 @@ export default class IntroPanel extends React.Component {
           );
         } else {
           // account not required
-          const signupUrl = `${
-            location.origin
-          }/pd/workshops/${workshopId}/enroll`;
+          const signupUrl = `${location.origin}/pd/workshops/${workshopId}/enroll`;
           contents = (
             <div>
               <p>

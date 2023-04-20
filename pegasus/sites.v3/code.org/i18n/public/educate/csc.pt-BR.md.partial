@@ -77,3 +77,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>Concluiu uma atividade da Conexão de CC e/ou está em busca de mais opções para sua sala de aula? <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">Compartilhe seus comentários</a> e suas ideias para novas lições clicando aqui!</em>
+
+{{ visit_partial_event_logger }}

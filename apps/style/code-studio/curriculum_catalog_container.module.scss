@@ -1,0 +1,13 @@
+@use "color.scss";
+
+.catalogContentContainer {
+  max-width: 60em;
+  margin: 1em auto;
+}
+
+.catalogContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}

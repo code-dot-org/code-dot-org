@@ -156,12 +156,8 @@ class LessonEditor extends Component {
       preparation,
       announcements
     } = this.state;
-    const {
-      relatedLessons,
-      standards,
-      opportunityStandards,
-      unitInfo
-    } = this.props;
+    const {relatedLessons, standards, opportunityStandards, unitInfo} =
+      this.props;
     const frameworks = this.props.initialLessonData.frameworks;
 
     const allowMajorCurriculumChanges = unitInfo.allowMajorCurriculumChanges;

@@ -128,6 +128,11 @@ class WebLabView extends React.Component {
                       ? this.props.onEndFullScreenPreview
                       : this.props.onStartFullScreenPreview
                   }
+                  ariaLabel={
+                    this.props.isFullScreenPreviewOn
+                      ? weblabMsg.closeFullscreenPreview()
+                      : weblabMsg.openFullscreenPreview()
+                  }
                   label=""
                 />
                 {!this.props.isFullScreenPreviewOn && (
@@ -211,8 +216,8 @@ export default connect(state => ({
   isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
   isInspectorOn: state.inspectorOn,
   isFullScreenPreviewOn: state.fullScreenPreviewOn,
-  showProjectTemplateWorkspaceIcon: !!state.pageConstants
-    .showProjectTemplateWorkspaceIcon,
+  showProjectTemplateWorkspaceIcon:
+    !!state.pageConstants.showProjectTemplateWorkspaceIcon,
   maxProjectCapacity: state.maxProjectCapacity,
   projectSize: state.projectSize
 }))(WebLabView);

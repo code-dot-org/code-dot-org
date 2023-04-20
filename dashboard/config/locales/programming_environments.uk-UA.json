@@ -13,19 +13,94 @@
           "name": "Ігрова лабораторія",
           "categories": {
             "game_lab": {
-              "name": "Ігрова лабораторія"
+              "name": "Ігрова лабораторія",
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Чорний та білий"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Відтворює звуковий MP3-файл із зазначеного URL."
+                }
+              }
             },
             "sprites": {
-              "name": "Спрайти"
+              "name": "Спрайти",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Спіраль"
+                    }
+                  }
+                }
+              }
             },
             "groups": {
-              "name": "Групи"
+              "name": "Групи",
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Колір"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Колір"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Зірка"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Математика"
+              "name": "Математика",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Найменше число, котре можна повернути"
+                    },
+                    "max": {
+                      "description": "Найбільше число, котре можна повернути"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Найменше число, котре можна повернути"
+                    },
+                    "max": {
+                      "description": "Найбільше число, котре можна повернути"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Змінні"
+              "name": "Змінні",
+              "expressions": {
+                "declareAssign_x": {
+                  "short_description": "Оголошує змінну з даним ім'ям після \"var\", і присвоює їй значення правої частини виразу"
+                }
+              }
             },
             "functions": {
               "name": "Функції"
@@ -36,14 +111,194 @@
           "name": "App Lab",
           "description": "App Lab - це середовище програмування для створення простих додатків. Розробляйте програму, програмуйте її блоками чи JavaScript, а тоді поділіться нею з іншими.",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функція"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Відтворює звуковий MP3-файл із зазначеного URL."
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "об'єкта"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "об'єкта"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "об'єкта"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "об'єкта"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "об'єкта"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "об'єкта"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "об'єкта"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "об'єкта"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "об'єкта"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "об'єкта"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "Дані"
+              "name": "Дані",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "об'єкта"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "об'єкта"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "об'єкта"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "об'єкта"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функція"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "об'єкта"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "об'єкта"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функція"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Математика"
+              "name": "Математика",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Найменше число, котре можна повернути"
+                    },
+                    "max": {
+                      "description": "Найбільше число, котре можна повернути"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Найменше число, котре можна повернути"
+                    },
+                    "max": {
+                      "description": "Найбільше число, котре можна повернути"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Змінні"
+              "name": "Змінні",
+              "expressions": {
+                "declareAssign_x": {
+                  "short_description": "Оголошує змінну з даним ім'ям після \"var\", і присвоює їй значення правої частини виразу"
+                },
+                "addPair": {
+                  "return_value": "Немає"
+                }
+              }
             },
             "functions": {
               "name": "Функції"

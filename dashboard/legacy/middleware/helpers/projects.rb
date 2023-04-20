@@ -6,6 +6,7 @@ require_relative './profanity_privacy_helper'
 # Projects
 #
 class Projects
+  include SharedConstants
   class NotFound < Sinatra::NotFound
   end
 
@@ -395,6 +396,19 @@ class Projects
 
   def self.table
     DASHBOARD_DB[:projects]
+  end
+
+  def self.in_restricted_share_mode(channel_id, project_type)
+    # Only do this check if the project type is one that can be restricted, as this check
+    # requires a call to S3.
+    return false unless RESTRICTED_PUBLISH_PROJECT_TYPES.include?(project_type)
+
+    # Check for restricted share mode
+    source_data = SourceBucket.new.get(channel_id, SourceBucket.main_json_filename)
+    return unless source_data && source_data[:body] && source_data[:body].respond_to?(:string)
+    source_body = source_data[:body].string
+    project_src = ProjectSourceJson.new(source_body)
+    return project_src.in_restricted_share_mode?
   end
 
   private

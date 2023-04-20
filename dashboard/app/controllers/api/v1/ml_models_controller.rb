@@ -20,16 +20,17 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
     model_id = UserMlModel.generate_id
     model_data = params["ml_model"]
     return head :bad_request if model_data.nil? || model_data == ""
+
     # If there's a PII/profanity API error, we rescue the exception and the save
     # will succeed. The saved model will bypass the PII/profanity filters.
-
     begin
       profanity_or_pii = ShareFiltering.find_failure(
         model_data.except(:trainedModel).to_s,
         request.locale,
         PROFANITY_FILTER_REPLACE_TEXT_LIST
       )
-    rescue OpenURI::HTTPError => share_filtering_error
+    rescue OpenURI::HTTPError => exception
+      share_filtering_error = exception
     end
     if share_filtering_error
       FirehoseClient.instance.put_record(
@@ -44,7 +45,18 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
       )
     end
     if profanity_or_pii
-      render json: {id: model_id, status: "piiProfanity"}
+      FirehoseClient.instance.put_record(
+        :analysis,
+        {
+          study: 'ai-ml',
+          study_group: 'pii-profanity-api',
+          event: 'profanity_or_pii',
+          user_id: current_user&.id,
+          data_json: model_data.except(:trainedModel).to_json,
+          profanity_or_pii_json: profanity_or_pii&.to_json
+        }
+      )
+      render json: {id: model_id, status: "piiProfanity", data: profanity_or_pii}
     else
       metadata = model_data.except(:trainedModel, :featureNumberKey)
       @user_ml_model = UserMlModel.create(
@@ -108,17 +120,15 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
     render json: {id: @user_ml_model.model_id, status: status}
   end
 
-  private
-
-  def upload_to_s3(model_id, trained_model)
+  private def upload_to_s3(model_id, trained_model)
     AWS::S3.upload_to_bucket(S3_BUCKET, model_id, trained_model, no_random: true)
   end
 
-  def download_from_s3(model_id)
+  private def download_from_s3(model_id)
     AWS::S3.download_from_bucket(S3_BUCKET, model_id)
   end
 
-  def delete_from_s3(model_id)
+  private def delete_from_s3(model_id)
     AWS::S3.delete_from_bucket(S3_BUCKET, model_id)
   end
 end

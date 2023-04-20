@@ -17,6 +17,7 @@
         "type": "Number",
         "field": false
       }
-    ]
+    ],
+    "style": "default"
   }
 }

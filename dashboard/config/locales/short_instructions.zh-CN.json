@@ -4223,7 +4223,6 @@
         "courseD_artist_42022": "在线的末尾增加一个小形状！",
         "courseD_artist_52022": "玩一玩雪花功能!",
         "courseD_artist_62022": "画一个阶梯楼梯模式, 使用75和105度之间的角度来转弯。",
-        "courseD_artist_nestedLoops102022": "从以前的代码里活动的正方形，但这次只需要7个，并将它们排成一行。",
         "courseD_artist_nestedLoops12022": "画一个三角形来开始这个阶段。\n（每条边是100像素长，你需要在每个外角转120度。）",
         "courseD_artist_nestedLoops1a2022": "现在循环6次三角形。",
         "courseD_artist_nestedLoops22022": "这次，用尽可能少的模块完成这关。",
@@ -4506,7 +4505,8 @@
         "helloworld_food_sizes_soccer-2022": "让我们学习改变精灵图的大小。",
         "helloworld_food_sizes_space-2022": "让我们学习改变精灵图的大小。",
         "helloworld_food_sounds_soccer-2022": "让我们学习如何播放声音。",
-        "helloworld_food_sounds_space-2022": "让我们学习如何播放声音。"
+        "helloworld_food_sounds_space-2022": "让我们学习如何播放声音。",
+        "courseD_artist_nestedLoops32022": "使用你的新技能，快速画出这座建筑物的最后一排窗户。\n\n窗口是 20 个像素的正方形，每个方块间隔 20 个像素。"
       }
     }
   }

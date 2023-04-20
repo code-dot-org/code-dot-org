@@ -7,11 +7,11 @@ MODULE_PROGRESS_COLOR_MAP = {not_started: 'rgb(255, 255, 255)', in_progress: 'rg
 def wait_until(timeout = DEFAULT_WAIT_TIMEOUT)
   Selenium::WebDriver::Wait.new(timeout: timeout).until do
     yield
-  rescue Selenium::WebDriver::Error::UnknownError => e
-    puts "Unknown error: #{e}"
+  rescue Selenium::WebDriver::Error::UnknownError => exception
+    puts "Unknown error: #{exception}"
     false
-  rescue Selenium::WebDriver::Error::WebDriverError => e
-    raise unless e.message.include?('no such element')
+  rescue Selenium::WebDriver::Error::WebDriverError => exception
+    raise unless exception.message.include?('no such element')
     false
   rescue Selenium::WebDriver::Error::StaleElementReferenceError
     false
@@ -25,17 +25,17 @@ end
 def element_stale?(element)
   element.enabled?
   false
-rescue Selenium::WebDriver::Error::JavascriptError => e
-  e.message.starts_with? 'Element does not exist in cache'
-rescue Selenium::WebDriver::Error::UnknownError => e
-  puts "Unknown error: #{e}"
+rescue Selenium::WebDriver::Error::JavascriptError => exception
+  exception.message.starts_with? 'Element does not exist in cache'
+rescue Selenium::WebDriver::Error::UnknownError => exception
+  puts "Unknown error: #{exception}"
   true
 rescue Selenium::WebDriver::Error::StaleElementReferenceError
   true
-rescue Selenium::WebDriver::Error::WebDriverError => e
-  return true if e.message.include?('stale element reference') ||
-    e.message.include?('no such element')
-  puts "Unknown error: #{e}"
+rescue Selenium::WebDriver::Error::WebDriverError => exception
+  return true if exception.message.include?('stale element reference') ||
+    exception.message.include?('no such element')
+  puts "Unknown error: #{exception}"
   true
 end
 
@@ -520,6 +520,10 @@ When /^I send click events to selector "([^"]*)"$/ do |jquery_selector|
   @browser.execute_script("$(\"#{jquery_selector}\").click();")
 end
 
+When /^I complete the CAPTCHA$/ do
+  @browser.execute_script("$('#g-recaptcha-response').val('test-captcha-response');")
+end
+
 When /^I press delete$/ do
   script = "Blockly.mainBlockSpaceEditor.onKeyDown_("
   script += "{"
@@ -541,6 +545,17 @@ end
 
 When /^I type '([^']*)' into "([^"]*)"$/ do |input_text, selector|
   type_into_selector("\'#{input_text}\'", selector)
+end
+
+When /^I type "([^"]*)" into "([^"]*)" if I see it$/ do |input_text, selector|
+  type_into_selector("\"#{input_text}\"", selector)
+
+  wait_until(5) do
+    @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
+  end
+  type_into_selector("\"#{input_text}\"", selector)
+rescue Selenium::WebDriver::Error::TimeOutError
+  # Element never appeared, ignore it
 end
 
 # The selector should be wrapped in appropriate quotes when passed into here.
@@ -629,6 +644,13 @@ Then /^I wait to see a dialog containing text "((?:[^"\\]|\\.)*)"$/ do |expected
   steps %{
     Then I wait to see a ".modal-body"
     And element ".modal-body" contains text "#{expected_text}"
+  }
+end
+
+Then /^I wait to see a modal containing text "((?:[^"\\]|\\.)*)"$/ do |expected_text|
+  steps %{
+    Then I wait to see a ".modal"
+    And element ".modal" contains text "#{expected_text}"
   }
 end
 
@@ -1123,11 +1145,17 @@ def convert_keys(keys)
   keys.chars.map {|k| k == "\n" ? :enter : k}
 end
 
-# Known issue: IE does not register the key presses in this step.
-# Add @no_ie tag to your scenario to skip IE when using this step.
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   element = @browser.find_element(:css, selector)
   press_keys(element, key)
+end
+
+And(/^I wait until element "([^"]*)" has the value "([^"]*)"$/) do |selector, value|
+  element = @browser.find_element(:css, selector)
+  wait_short_until do
+    element_text = element.attribute("value")
+    element_text.include? value
+  end
 end
 
 When /^I press keys "([^"]*)"$/ do |keys|
@@ -1140,8 +1168,6 @@ When /^I clear the text from element "([^"]*)"$/ do |selector|
 end
 
 # Press backspace repeatedly to clear an element.  Handy for React.
-# Known issue: IE does not register the key presses in this step.
-# Add @no_ie tag to your scenario to skip IE when using this step.
 When /^I press backspace to clear element "([^"]*)"$/ do |selector|
   element = @browser.find_element(:css, selector)
   press_keys(element, ":backspace") while @browser.execute_script("return $('#{selector}').val()") != ""

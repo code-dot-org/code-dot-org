@@ -40,15 +40,6 @@ export const styles = {
     marginRight: 20,
     marginLeft: 20
   },
-  existingInaccuracy: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.charcoal,
-    marginRight: 20,
-    marginLeft: 20
-  },
-  existingInaccuracyTooltip: {
-    width: 270
-  },
   option: {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,

@@ -31,11 +31,8 @@ export class UnconnectedLevelToken extends Component {
   };
 
   render() {
-    const {
-      draggedLevelPos,
-      scriptLevel,
-      allowMajorCurriculumChanges
-    } = this.props;
+    const {draggedLevelPos, scriptLevel, allowMajorCurriculumChanges} =
+      this.props;
     const springConfig = {stiffness: 1000, damping: 80};
 
     return (
@@ -57,23 +54,25 @@ export class UnconnectedLevelToken extends Component {
         }
         key={scriptLevel.position}
       >
-        {// Use react-motion to interpolate the following values and create
-        // smooth transitions.
-        ({y, scale, shadow}) => (
-          <LevelTokenContents
-            y={y}
-            scale={scale}
-            shadow={shadow}
-            draggedLevelPos={draggedLevelPos}
-            scriptLevel={scriptLevel}
-            handleDragStart={this.props.handleDragStart}
-            toggleExpand={this.props.toggleExpand}
-            removeLevel={this.props.removeLevel}
-            activitySectionPosition={this.props.activitySectionPosition}
-            activityPosition={this.props.activityPosition}
-            allowMajorCurriculumChanges={allowMajorCurriculumChanges}
-          />
-        )}
+        {
+          // Use react-motion to interpolate the following values and create
+          // smooth transitions.
+          ({y, scale, shadow}) => (
+            <LevelTokenContents
+              y={y}
+              scale={scale}
+              shadow={shadow}
+              draggedLevelPos={draggedLevelPos}
+              scriptLevel={scriptLevel}
+              handleDragStart={this.props.handleDragStart}
+              toggleExpand={this.props.toggleExpand}
+              removeLevel={this.props.removeLevel}
+              activitySectionPosition={this.props.activitySectionPosition}
+              activityPosition={this.props.activityPosition}
+              allowMajorCurriculumChanges={allowMajorCurriculumChanges}
+            />
+          )
+        }
       </Motion>
     );
   }
@@ -146,11 +145,10 @@ export class LevelTokenContents extends Component {
     return (
       <div
         style={Object.assign({}, styles.levelToken, {
-          transform: `translate3d(0, ${this.props.y}px, 0) scale(${
-            this.props.scale
-          })`,
-          boxShadow: `${color.shadow} 0 ${this.props.shadow}px ${this.props
-            .shadow * 3}px`,
+          transform: `translate3d(0, ${this.props.y}px, 0) scale(${this.props.scale})`,
+          boxShadow: `${color.shadow} 0 ${this.props.shadow}px ${
+            this.props.shadow * 3
+          }px`,
           zIndex: this.props.draggedLevelPos ? 1000 : 500 - scriptLevel.position
         })}
       >
@@ -309,7 +307,9 @@ export const LevelToken = connect(
   state => ({}),
   {
     toggleExpand
-  }
+  },
+  null,
+  {forwardRef: true}
 )(UnconnectedLevelToken);
 
 export default LevelToken;

@@ -11,6 +11,8 @@
 #   code.org/prize
 #   code.org/hourofcode2022
 #   code.org/maker
+#   code.org/blockchain
+#   code.org/ai
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
@@ -52,6 +54,8 @@ def get_social_metadata_for_page(request)
     cs_leaders_prize: {path: "/images/social-media/cs-leaders-prize-opengraph.png", width: 1200, height: 630},
     hoc_2022_landing_page: {path: "/shared/images/social-media/hoc2022_social_landing_page.png", width: 1200, height: 630},
     maker_physical_computing: {path: "/shared/images/social-media/maker_social.png", width: 1200, height: 630},
+    blockchain: {path: "/shared/images/social-media/blockchain-social.png", width: 1200, height: 630},
+    ai: {path: "/shared/images/social-media/ai-social.png", width: 1200, height: 630},
   }
 
   # Important:
@@ -181,6 +185,20 @@ def get_social_metadata_for_page(request)
         image: images[:maker_physical_computing]
       }
     },
+    "blockchain" => {
+      "default" => {
+        title: hoc_s(:social_blockchain_title),
+        description: hoc_s(:social_blockchain_desc),
+        image: images[:blockchain]
+      }
+    },
+    "ai" => {
+      "default" => {
+        title: hoc_s(:social_ai_title),
+        description: hoc_s(:social_ai_desc),
+        image: images[:ai]
+      }
+    },
   }
 
   if request.path == "/challenge" && request.site == "code.org"
@@ -209,6 +227,10 @@ def get_social_metadata_for_page(request)
     page = "hoc-2022-landing-page"
   elsif request.path == "/maker" && request.site == "code.org"
     page = "maker"
+  elsif request.path == "/blockchain" && request.site == "code.org"
+    page = "blockchain"
+  elsif request.path == "/ai" && request.site == "code.org"
+    page = "ai"
   else
     return {}
   end
@@ -223,9 +245,10 @@ def get_social_metadata_for_page(request)
   # Additional hoc variants.
   extension = ""
   hoc_launch = DCDO.get("hoc_launch", CDO.default_hoc_launch)
-  if hoc_launch == "mc"
+  case hoc_launch
+  when "mc"
     extension = "-mc"
-  elsif hoc_launch == "dance"
+  when "dance"
     extension = "-dance"
   end
 
@@ -236,13 +259,14 @@ def get_social_metadata_for_page(request)
 
   output = {}
   social_tag_set.each do |name, value|
-    if name == :image
+    case name
+    when :image
       output["og:image"] = "https://#{request.host}#{value[:path]}"
       output["twitter:image:src"] = "https://#{request.host}#{value[:path]}"
       output["og:image:width"] = value[:width]
       output["og:image:height"] = value[:height]
       output["twitter:card"] = "photo"
-    elsif name == :video
+    when :video
       output["og:video:url"] = "http://youtube.com/v/#{value[:youtube_key]}"
       output["og:video:secure_url"] = "https://youtube.com/v/#{value[:youtube_key]}"
       output["og:video:type"] = "video/mp4"
@@ -252,13 +276,13 @@ def get_social_metadata_for_page(request)
       output["twitter:player:width"] = value[:width]
       output["twitter:player:height"] = value[:height]
       output["twitter:card"] = "player"
-    elsif name == :title
+    when :title
       output["og:title"] = value
       output["twitter:title"] = value
-    elsif name == :description
+    when :description
       output["og:description"] = value
       output["twitter:description"] = value
-    elsif name == :description_twitter
+    when :description_twitter
       output["twitter:description"] = value
     end
   end

@@ -1,13 +1,18 @@
 name 'U2L14 Assessment4'
-encrypted 'yPLFGOZafrgywUArUbmeXlxc6L2OuCuK7uJyAyFdYaLq6kUAhO6HA7p24jJC
-eicMvXr0EJLVtp6sL6AQPoJdWxTTSqJNGOXH0nzEMDi9wt9zobMosjU7qkvv
-yAnvxYsFbecdhF97bIAplmXtF3/IhP+nHSQ7Ow8CSFtFDsMGT/0cXFd964E8
-KfO4ZJJP4415H/dIAl18eIGLMgoLoNUNUaW1C2kq2l5bxYLWmZUBNCcOJc7t
-vjTpA5ndoGLDe2hS8txjDnrz8V2uTEncN09/p0DdSsW7+2xcnq5ki/VzNwo/
-sD3bjURoNTXVArkwa/E/q/M7NVYs8eAetMcjXcpl93mz2+ljo9WAXYYqKBnB
-B8V6WLCUfQQBnzkA4XLEYmFxzeIZh4E0gpRFy0VjRobYk1tHmYjjSG9dhu4t
-h5VR4c3EiN2SqXXE0K+EHyxxg7LU/MxFARi23Z4aWdiEhZ/JEgowGu4dllhM
-KnwPCfAPvQBEKxpc1bX3YKwbqFs9KY3E3CWkfi+I39q1jQhvXYBeT9EqXpk/
-iE7yg3KWSvl008Y8RNMAA0wC6RhrTJalVYhqIhTiy9ekc/0MHJOEZjLoGrGz
-YLXLOP6hM0DzNc3Mvfk=
-'
+title 'Which encryption technique?'
+description 'Given the original plaintext: “AAAABBBBCCCCDDDD”
+Match the encryption method that must have been used to produce the ciphertext:'
+
+question 'SECRFULF_UGEUHWN'
+answer 'Vigenere Cipher'
+
+question 'TTTTUUUUVVVVWWWW'
+answer 'The Caesar Cipher'
+
+question 'SSSSFFFFXXXXTTTT'
+answer 'Random Substitution Cipher'
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

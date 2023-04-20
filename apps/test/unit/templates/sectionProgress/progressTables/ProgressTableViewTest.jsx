@@ -23,6 +23,7 @@ import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
 import * as Sticky from 'reactabular-sticky';
 import locales from '@cdo/apps/redux/localesRedux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {
   fakeLessonWithLevels,
   fakeStudents,
@@ -50,7 +51,8 @@ const setUp = (currentView = ViewType.SUMMARY, overrideState = {}) => {
       teacherSections,
       sectionProgress,
       unitSelection,
-      locales
+      locales,
+      isRtl
     }),
     _.merge({}, initialState, overrideState)
   );
@@ -234,9 +236,7 @@ describe('ProgressTableView', () => {
   });
 
   it('adds rows to state when a row is toggled', () => {
-    const wrapper = setUp()
-      .find(UnconnectedProgressTableView)
-      .instance();
+    const wrapper = setUp().find(UnconnectedProgressTableView).instance();
 
     expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
 
@@ -250,9 +250,7 @@ describe('ProgressTableView', () => {
   });
 
   it('restores original rows when a row is toggled twice', () => {
-    const wrapper = setUp()
-      .find(UnconnectedProgressTableView)
-      .instance();
+    const wrapper = setUp().find(UnconnectedProgressTableView).instance();
 
     expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
 

@@ -37,8 +37,6 @@ describe('DetailViewContents', () => {
     application_year: '2019-2020',
     course_name: 'CS Discoveries',
     course: 'csd',
-    registered_fit_weekend: false,
-    registered_teachercon: false,
     form_data: {
       firstName: 'First Name',
       lastName: 'Last Name',
@@ -204,10 +202,7 @@ describe('DetailViewContents', () => {
       });
       const mockRouter = sinon.mock(context.router);
 
-      detailView
-        .find('button#admin-edit')
-        .first()
-        .simulate('click');
+      detailView.find('button#admin-edit').first().simulate('click');
       const adminEditMenuitem = detailView
         .find('.dropdown.open a')
         .findWhere(a => a.text() === '(Admin) Edit Form Data')
@@ -222,55 +217,13 @@ describe('DetailViewContents', () => {
       const detailView = mountDetailView({
         isWorkshopAdmin: true
       });
-      detailView
-        .find('button#admin-edit')
-        .first()
-        .simulate('click');
+      detailView.find('button#admin-edit').first().simulate('click');
       const deleteApplicationMenuitem = detailView
         .find('.dropdown.open a')
         .findWhere(a => a.text() === 'Delete Application')
         .first();
 
       expect(deleteApplicationMenuitem).to.have.length(1);
-    });
-
-    it('Has Delete FiT Weekend Registration menu item if there is a FiT weekend registration', () => {
-      const overrides = {
-        isWorkshopAdmin: true,
-        applicationData: {registered_fit_weekend: true}
-      };
-      const detailView = mountDetailView(overrides);
-      detailView
-        .find('button#admin-edit')
-        .first()
-        .simulate('click');
-      const deleteFitWeekendRegistrationMenuitem = detailView
-        .find('.dropdown.open a')
-        .findWhere(a => a.text() === 'Delete FiT Weekend Registration')
-        .first();
-
-      expect(deleteFitWeekendRegistrationMenuitem).to.have.length(1);
-    });
-
-    it('Does not have delete registration menu items if there are not registrations', () => {
-      const detailView = mountDetailView({
-        isWorkshopAdmin: true
-      });
-      detailView
-        .find('button#admin-edit')
-        .first()
-        .simulate('click');
-      const deleteTeacherconRegistrationMenuitem = detailView
-        .find('.dropdown.open a')
-        .findWhere(a => a.text() === 'Delete Teachercon Registration')
-        .first();
-      const deleteFitWeekendRegistrationMenuitem = detailView
-        .find('.dropdown.open a')
-        .findWhere(a => a.text() === 'Delete FiT Weekend Registration')
-        .first();
-
-      expect(deleteTeacherconRegistrationMenuitem).to.have.length(0);
-      expect(deleteFitWeekendRegistrationMenuitem).to.have.length(0);
     });
   });
 
@@ -290,10 +243,7 @@ describe('DetailViewContents', () => {
       expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.true;
 
       expectedButtons = ['Save', 'Cancel'];
-      detailView
-        .find('button#edit')
-        .first()
-        .simulate('click');
+      detailView.find('button#edit').first().simulate('click');
       expect(
         detailView.find('#DetailViewHeader Button').map(button => {
           return button.text();
@@ -304,10 +254,7 @@ describe('DetailViewContents', () => {
       expect(detailView.find('textarea#notes').prop('disabled')).to.be.false;
       expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.false;
 
-      detailView
-        .find('#DetailViewHeader Button')
-        .last()
-        .simulate('click');
+      detailView.find('#DetailViewHeader Button').last().simulate('click');
       expect(detailView.find('#DetailViewHeader FormControl').prop('disabled'))
         .to.be.true;
       expect(detailView.find('textarea#notes').prop('disabled')).to.be.true;
@@ -369,6 +316,45 @@ describe('DetailViewContents', () => {
         'Make not required'
       );
     });
+    it(`Shows button to resend admin email if status is awaiting_admin_approval and it is allowed to be resent`, () => {
+      const detailView = mountDetailView({
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          principal_approval_state: PrincipalApprovalState.inProgress,
+          allow_sending_principal_email: true,
+          status: 'awaiting_admin_approval'
+        }
+      });
+      expect(detailView.find('PrincipalApprovalButtons').text()).to.contain(
+        'Resend request'
+      );
+    });
+    it(`Does not show button to resend admin email if status is awaiting_admin_approval but is not allowed to be resent`, () => {
+      const detailView = mountDetailView({
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          principal_approval_state: PrincipalApprovalState.inProgress,
+          allow_sending_principal_email: false,
+          status: 'awaiting_admin_approval'
+        }
+      });
+      expect(detailView.find('PrincipalApprovalButtons').text()).not.to.contain(
+        'Resend request'
+      );
+    });
+    it(`Does not show button to resend admin email if is allowed to be resent but status is pending`, () => {
+      const detailView = mountDetailView({
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          principal_approval_state: PrincipalApprovalState.inProgress,
+          allow_sending_principal_email: true,
+          status: 'pending'
+        }
+      });
+      expect(detailView.find('PrincipalApprovalButtons').text()).not.to.contain(
+        'Resend request'
+      );
+    });
   });
 
   describe('Regional Partner View', () => {
@@ -393,11 +379,7 @@ describe('DetailViewContents', () => {
           .filterWhere(row => row.text().includes('Scholarship Teacher?'));
 
       // Dropdown is disabled
-      expect(
-        getLastRow()
-          .find('Select')
-          .prop('disabled')
-      ).to.equal(true);
+      expect(getLastRow().find('Select').prop('disabled')).to.equal(true);
 
       // Click "Edit"
       detailView
@@ -407,24 +389,13 @@ describe('DetailViewContents', () => {
         .simulate('click');
 
       // Dropdown is no longer disabled
-      expect(
-        getLastRow()
-          .find('Select')
-          .prop('disabled')
-      ).to.equal(false);
+      expect(getLastRow().find('Select').prop('disabled')).to.equal(false);
 
       // Click "Save"
-      detailView
-        .find('#DetailViewHeader Button')
-        .last()
-        .simulate('click');
+      detailView.find('#DetailViewHeader Button').last().simulate('click');
 
       // Dropdown is disabled
-      expect(
-        getLastRow()
-          .find('Select')
-          .prop('disabled')
-      ).to.equal(true);
+      expect(getLastRow().find('Select').prop('disabled')).to.equal(true);
     });
   });
 
@@ -530,10 +501,7 @@ describe('DetailViewContents', () => {
     });
 
     function clickEditButton() {
-      detailView
-        .find('#DetailViewHeader Button')
-        .last()
-        .simulate('click');
+      detailView.find('#DetailViewHeader Button').last().simulate('click');
     }
 
     function getApplicationStatus() {
@@ -574,10 +542,7 @@ describe('DetailViewContents', () => {
     }
 
     function dismissModal() {
-      detailView
-        .find('ConfirmationDialog')
-        .first()
-        .prop('onOk')();
+      detailView.find('ConfirmationDialog').first().prop('onOk')();
       detailView.update();
     }
   });

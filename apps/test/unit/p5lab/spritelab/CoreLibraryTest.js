@@ -19,7 +19,7 @@ describe('SpriteLab Core Library', () => {
   let coreLibrary;
   const spriteName = 'spriteName';
 
-  beforeEach(function() {
+  beforeEach(function () {
     const p5Wrapper = createP5Wrapper();
     coreLibrary = new CoreLibrary(p5Wrapper.p5);
     let image = new p5.Image(100, 100, coreLibrary.p5);
@@ -190,22 +190,23 @@ describe('SpriteLab Core Library', () => {
 
   describe('Workspace alert dispatch', () => {
     let stubbedDispatch;
-    beforeEach(function() {
+    beforeEach(function () {
       stubbedDispatch = stub();
       stub(redux, 'getStore').returns({
         dispatch: stubbedDispatch
       });
     });
 
-    afterEach(function() {
+    afterEach(function () {
       redux.getStore.restore();
     });
 
     // If the total number of sprites created is equal to or less than
     // MAX_NUM_SPRITES - SPRITE_WARNING_BUFFER, then a display workspace alert
     // should not have been dispatched
-    it(`If ${MAX_NUM_SPRITES -
-      SPRITE_WARNING_BUFFER} sprites or less are created, a workspace alert is NOT dispatched`, () => {
+    it(`If ${
+      MAX_NUM_SPRITES - SPRITE_WARNING_BUFFER
+    } sprites or less are created, a workspace alert is NOT dispatched`, () => {
       for (let i = 0; i < MAX_NUM_SPRITES - SPRITE_WARNING_BUFFER; i++) {
         coreLibrary.addSprite();
       }
@@ -392,13 +393,13 @@ describe('SpriteLab Core Library', () => {
 
     describe('Click events', () => {
       let eventLog, mouseWentDownStub, mouseIsOverStub, mousePressedOverStub;
-      beforeEach(function() {
+      beforeEach(function () {
         eventLog = [];
         mouseWentDownStub = stub(coreLibrary.p5, 'mouseWentDown');
         mouseIsOverStub = stub(coreLibrary.p5, 'mouseIsOver');
         mousePressedOverStub = stub(coreLibrary.p5, 'mousePressedOver');
       });
-      afterEach(function() {
+      afterEach(function () {
         mouseWentDownStub.restore();
         mouseIsOverStub.restore();
         mousePressedOverStub.restore();
@@ -467,7 +468,7 @@ describe('SpriteLab Core Library', () => {
     describe('Collision Events with individual sprites', () => {
       let eventLog, sprite, overlapStub;
       const targetName = 'targetName';
-      beforeEach(function() {
+      beforeEach(function () {
         eventLog = [];
         let spriteId = coreLibrary.addSprite({name: spriteName});
         sprite = coreLibrary.nativeSpriteMap[spriteId];
@@ -475,7 +476,7 @@ describe('SpriteLab Core Library', () => {
         overlapStub = stub(sprite, 'overlap');
       });
 
-      afterEach(function() {
+      afterEach(function () {
         overlapStub.restore();
       });
 
@@ -578,7 +579,7 @@ describe('SpriteLab Core Library', () => {
         sprite2,
         target1,
         target2;
-      beforeEach(function() {
+      beforeEach(function () {
         eventLog = [];
 
         let sprite1Id = coreLibrary.addSprite({
@@ -605,7 +606,7 @@ describe('SpriteLab Core Library', () => {
         overlapStub1 = stub(sprite1, 'overlap');
         overlapStub2 = stub(sprite2, 'overlap');
       });
-      afterEach(function() {
+      afterEach(function () {
         overlapStub1.restore();
         overlapStub2.restore();
       });

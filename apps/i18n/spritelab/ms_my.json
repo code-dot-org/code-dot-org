@@ -77,7 +77,6 @@
   "didntMoveRight": "Pari-pari anda tidak bergerak ke kanan.",
   "didntMoveUp": "Pari-pari anda tidak bergerak ke atas.",
   "didntPressKey": "Pastikan anda menekan kekunci anak panah selepas menekan *\"Jalankan\"*. Anda boleh klik butang oren di bawah kawasan main atau tekan kekunci pada papan kekunci anda.",
-  "errorLoadingAnimation": "Ia kelihatan seperti kita menghadapi masalah memuatkan animasi anda \"{animationName}\". Pastikan anda mempunyai sambungan internet yang baik dan cuba muatkan semula halaman. Jika masalah ini berterusan, ada kemungkinan animasi ini rosak. Dalam kes ini, anda mungkin perlu meneruskan dengan mengalih keluar animasi.",
   "eventsOneChange": "Pari-parianda berubah, tetapi hanya sekali. Uji atur cara anda dengan menekan kekunci itu beberapa kali, dan pastikan anda menggunakan blok yang betul. \n <xml><block type=\"gamelab_changePropBy\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"creature_10_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value></block></xml>",
   "eventsWrongBehaviors": "Pari-pari anda harus mempunyai betul-betul 3 tingkah laku. Cuba gerakkan blok 'hentikan segala-galanya' ke tempat lain dalam kod anda.",
   "foodNotTouchPet": "Seret pari-pari makanan anda supaya ia menyentuh pari-pari haiwan kesayangan anda.",

@@ -75,4 +75,15 @@ describe('InlineMarkdown', () => {
       'block html is ignored'
     ).to.equal(true);
   });
+
+  // This test was added as part of a change to prevent this component from
+  // erroring out. See https://github.com/code-dot-org/code-dot-org/pull/49585
+  // for more info.
+  it('renders InlineMarkdown with trailing newline', () => {
+    shallow(
+      <InlineMarkdown
+        markdown={'some markdown with an _accidental_ new line \n'}
+      />
+    );
+  });
 });
