@@ -4,7 +4,7 @@ title 'Making Counters'
 
 markdown <<MARKDOWN
 >#Sustainable Fishing Practice #2:
->>##Create a Fishing Season <img src="https://images.code.org/32c4c5634e48de538133fa51abeec1ba-image-1681746145623.png"  width=300 style="margin-right: 30px; float: left">
+>>##Create a Fishing Season <img src="https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png"  width=400 style="margin-right: 30px; float: left">
 **Set limits on when people can catch fish. When it is not fishing season the ecosystem has time to recover.** 
 <br>
 
@@ -21,5 +21,4 @@ markdown <<MARKDOWN
 <br>
 <br>
 <br>
-
 MARKDOWN
