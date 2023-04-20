@@ -24,7 +24,7 @@ theme: responsive_full_width
       %h1{style: "color: white; margin-bottom: 0"}=hoc_s(:ai_hero_heading_01)
       %h2.heading-xxl{style: "color: white"}=hoc_s(:ai_hero_heading_02)
       %p{style: "color: white"}=hoc_s(:ai_hero_desc)
-      -# Make this evergreen when DCDO flag is set to false
+      -# Remove this after the TeachAI launch
       - if !!DCDO.get('teach-ai-launch-2023', false)
         %a.link-button{href: "#teach-ai-callout"}
           %i{class: "#{icon_megaphone}", style: "margin-right: 6px"}
