@@ -39,7 +39,7 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function() {
+      customValidator: function () {
         return Maze.controller.subtype.nectars_.length === 1;
       },
       xml:

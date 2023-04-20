@@ -72,14 +72,14 @@ def run_tests(options = {})
         location_uri = URI.join(response["Location"])
         raise "Redirect error. Expecting #{test[:redirect]}, got #{location_uri.path}- #{" - #{test[:failure_message]}" if test[:failure_message]}" if location_uri.path != test[:redirect]
       end
-    rescue Exception => e
-      exit 1 if /Interrupt/.match?(e.inspect)
+    rescue Exception => exception
+      exit 1 if /Interrupt/.match?(exception.inspect)
       if options[:quiet]
-        puts "#{url} ... #{e}"
+        puts "#{url} ... #{exception}"
       else
-        puts e.to_s
+        puts exception.to_s
       end
-      puts "#{url} ... #{e}"
+      puts "#{url} ... #{exception}"
       next
     end
 

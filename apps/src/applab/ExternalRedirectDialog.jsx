@@ -51,16 +51,16 @@ class ExternalRedirectDialog extends React.Component {
       footer = (
         <DialogFooter>
           <Button
-            __useDeprecatedTag
             onClick={this.props.handleClose}
             text={i18n.goBack()}
             color={Button.ButtonColor.gray}
+            style={{margin: 0}}
           />
           <Button
-            __useDeprecatedTag
             onClick={() => this.handleRedirect(url)}
             text={i18n.continue()}
             color={Button.ButtonColor.orange}
+            style={{margin: 0}}
           />
         </DialogFooter>
       );

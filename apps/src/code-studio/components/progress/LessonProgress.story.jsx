@@ -9,7 +9,6 @@ import progress, {
   setLessonExtrasEnabled
 } from '../../progressRedux';
 import {TestResults} from '@cdo/apps/constants';
-import {allowConsoleWarnings} from '../../../../test/util/throwOnConsole';
 
 const activityPuzzle = {
   ids: ['123'],
@@ -90,273 +89,151 @@ const bonus = {
   bonus: true
 };
 
-export default storybook => {
-  // TODO: allowConsoleWarnings can be removed once react-tooltip has been upgraded
-  // to a version that no longer uses unsafe lifecycle hooks.
-  if (IN_UNIT_TEST) {
-    allowConsoleWarnings();
+export default {
+  title: 'LessonProgress',
+  component: LessonProgress
+};
+
+const createStoreForLevels = (
+  levels,
+  currentLevelIndex,
+  showLessonExtras,
+  onLessonExtras,
+  bonusCompleted
+) => {
+  const store = createStore(combineReducers({progress, lessonLock}));
+  store.dispatch(
+    initProgress({
+      currentLevelId: currentLevelIndex
+        ? levels[currentLevelIndex].ids[0].toString()
+        : null,
+      isLessonExtras: onLessonExtras,
+      scriptName: 'csp1',
+      saveAnswersBeforeNavigation: false,
+      lessons: [
+        {
+          id: 123,
+          lesson_extras_level_url: showLessonExtras && 'fakeurl',
+          levels
+        }
+      ]
+    })
+  );
+  const results = {123: TestResults.ALL_PASS};
+  if (bonusCompleted) {
+    results[100] = TestResults.ALL_PASS;
   }
+  store.dispatch(mergeResults(results));
+  store.dispatch(setLessonExtrasEnabled(showLessonExtras));
+  return store;
+};
 
-  const createStoreForLevels = (
-    levels,
-    currentLevelIndex,
-    showLessonExtras,
-    onLessonExtras,
-    bonusCompleted
-  ) => {
-    const store = createStore(combineReducers({progress, lessonLock}));
-    store.dispatch(
-      initProgress({
-        currentLevelId: currentLevelIndex
-          ? levels[currentLevelIndex].ids[0].toString()
-          : null,
-        isLessonExtras: onLessonExtras,
-        scriptName: 'csp1',
-        saveAnswersBeforeNavigation: false,
-        lessons: [
-          {
-            id: 123,
-            lesson_extras_level_url: showLessonExtras && 'fakeurl',
-            levels
-          }
-        ]
-      })
-    );
-    const results = {123: TestResults.ALL_PASS};
-    if (bonusCompleted) {
-      results[100] = TestResults.ALL_PASS;
-    }
-    store.dispatch(mergeResults(results));
-    store.dispatch(setLessonExtrasEnabled(showLessonExtras));
-    return store;
-  };
+// Template
+const Template = args => {
+  return (
+    <Provider store={args.store}>
+      <LessonProgress />
+    </Provider>
+  );
+};
 
-  storybook.storiesOf('LessonProgress', module).addStoryTable([
-    {
-      name: 'LessonProgress example',
-      // Provide an outer div to simulate some of the CSS that gets leaked into
-      // this component
-      story: () => {
-        const store = createStoreForLevels(
-          [
-            activityPuzzle,
-            conceptPuzzle,
-            assessment1,
-            assessment2,
-            assessment3
-          ],
-          4
-        );
-        return (
-          <div style={{display: 'inline-block'}} className="header_level">
-            <Provider store={store}>
-              <LessonProgress />
-            </Provider>
-          </div>
-        );
-      }
-    },
+// Stories
+export const LessonProgressExample = Template.bind({});
+LessonProgressExample.args = {
+  store: createStoreForLevels(
+    [activityPuzzle, conceptPuzzle, assessment1, assessment2, assessment3],
+    4
+  )
+};
 
-    {
-      name: 'with unplugged level as current level',
-      // Provide an outer div to simulate some of the CSS that gets leaked into
-      // this component
-      story: () => {
-        const store = createStoreForLevels([unplugged, assessment1], 0);
-        return (
-          <div style={{display: 'inline-block'}} className="header_level">
-            <Provider store={store}>
-              <LessonProgress />
-            </Provider>
-          </div>
-        );
-      }
-    },
+export const UnpluggedAsCurrent = Template.bind({});
+UnpluggedAsCurrent.args = {
+  store: createStoreForLevels([unplugged, assessment1], 0)
+};
 
-    {
-      name: 'with unplugged level as non-current level',
-      // Provide an outer div to simulate some of the CSS that gets leaked into
-      // this component
-      story: () => {
-        const store = createStoreForLevels([unplugged, assessment1], 1);
-        return (
-          <div style={{display: 'inline-block'}} className="header_level">
-            <Provider store={store}>
-              <LessonProgress />
-            </Provider>
-          </div>
-        );
-      }
-    },
+export const UnpluggedAsNonCurrent = Template.bind({});
+UnpluggedAsNonCurrent.args = {
+  store: createStoreForLevels([unplugged, assessment1], 1)
+};
 
-    {
-      name: 'with lesson extras not started',
-      // Provide an outer div to simulate some of the CSS that gets leaked into
-      // this component
-      story: () => {
-        const store = createStoreForLevels(
-          [activityPuzzle, conceptPuzzle],
-          1,
-          true /* showLessonExtras */,
-          false /* onLessonExtras */
-        );
-        return (
-          <div style={{display: 'inline-block'}} className="header_level">
-            <Provider store={store}>
-              <LessonProgress />
-            </Provider>
-          </div>
-        );
-      }
-    },
+export const LessonExtrasNotStarted = Template.bind({});
+LessonExtrasNotStarted.args = {
+  store: createStoreForLevels(
+    [activityPuzzle, conceptPuzzle],
+    1,
+    true /* showLessonExtras */,
+    false /* onLessonExtras */
+  )
+};
 
-    {
-      name: 'with lesson extras completed',
-      // Provide an outer div to simulate some of the CSS that gets leaked into
-      // this component
-      story: () => {
-        const store = createStoreForLevels(
-          [activityPuzzle, conceptPuzzle, bonus],
-          1,
-          true /* showLessonExtras */,
-          false /* onLessonExtras */,
-          true /* bonusCompleted */
-        );
-        return (
-          <div style={{display: 'inline-block'}} className="header_level">
-            <Provider store={store}>
-              <LessonProgress />
-            </Provider>
-          </div>
-        );
-      }
-    },
+export const LessonExtrasCompleted = Template.bind({});
+LessonExtrasCompleted.args = {
+  store: createStoreForLevels(
+    [activityPuzzle, conceptPuzzle, bonus],
+    1,
+    true /* showLessonExtras */,
+    false /* onLessonExtras */,
+    true /* bonusCompleted */
+  )
+};
 
-    {
-      name: 'with lesson extras as current level, not started',
-      // Provide an outer div to simulate some of the CSS that gets leaked into
-      // this component
-      story: () => {
-        const store = createStoreForLevels(
-          [activityPuzzle, conceptPuzzle],
-          null,
-          true /* showLessonExtras */,
-          true /* onLessonExtras */
-        );
-        return (
-          <div style={{display: 'inline-block'}} className="header_level">
-            <Provider store={store}>
-              <LessonProgress />
-            </Provider>
-          </div>
-        );
-      }
-    },
+export const LessonExtrasCurrentLevelNotStarted = Template.bind({});
+LessonExtrasCurrentLevelNotStarted.args = {
+  store: createStoreForLevels(
+    [activityPuzzle, conceptPuzzle],
+    null,
+    true /* showLessonExtras */,
+    true /* onLessonExtras */
+  )
+};
 
-    {
-      name: 'with lesson extras as current level, completed',
-      // Provide an outer div to simulate some of the CSS that gets leaked into
-      // this component
-      story: () => {
-        const store = createStoreForLevels(
-          [activityPuzzle, conceptPuzzle, bonus],
-          null,
-          true /* showLessonExtras */,
-          true /* onLessonExtras */,
-          true /* bonusCompleted */
-        );
-        return (
-          <div style={{display: 'inline-block'}} className="header_level">
-            <Provider store={store}>
-              <LessonProgress />
-            </Provider>
-          </div>
-        );
-      }
-    },
+export const LessonExtrasCurrentLevelCompleted = Template.bind({});
+LessonExtrasCurrentLevelCompleted.args = {
+  store: createStoreForLevels(
+    [activityPuzzle, conceptPuzzle, bonus],
+    null,
+    true /* showLessonExtras */,
+    true /* onLessonExtras */,
+    true /* bonusCompleted */
+  )
+};
 
-    {
-      name: 'with lesson empty trophy',
-      // Provide an outer div to simulate some of the CSS that gets leaked into
-      // this component
-      story: () => {
-        const store = createStoreForLevels(
-          [assessment1, assessment1],
-          0,
-          false /* showLessonExtras */,
-          true /* onLessonExtras */
-        );
-        return (
-          <div style={{display: 'inline-block'}} className="header_level">
-            <Provider store={store}>
-              <LessonProgress lessonTrophyEnabled />
-            </Provider>
-          </div>
-        );
-      }
-    },
+export const LessonEmptyTrophy = Template.bind({});
+LessonEmptyTrophy.args = {
+  store: createStoreForLevels(
+    [assessment1, assessment1],
+    0,
+    false /* showLessonExtras */,
+    true /* onLessonExtras */
+  )
+};
 
-    {
-      name: 'with lesson 20% trophy',
-      // Provide an outer div to simulate some of the CSS that gets leaked into
-      // this component
-      story: () => {
-        const store = createStoreForLevels(
-          [activityPuzzle, assessment1, assessment1, assessment1, assessment1],
-          0,
-          false /* showLessonExtras */,
-          true /* onLessonExtras */
-        );
-        return (
-          <div style={{display: 'inline-block'}} className="header_level">
-            <Provider store={store}>
-              <LessonProgress lessonTrophyEnabled />
-            </Provider>
-          </div>
-        );
-      }
-    },
+export const Lesson20PercentTrophy = Template.bind({});
+Lesson20PercentTrophy.args = {
+  store: createStoreForLevels(
+    [activityPuzzle, assessment1, assessment1, assessment1, assessment1],
+    0,
+    false /* showLessonExtras */,
+    true /* onLessonExtras */
+  )
+};
 
-    {
-      name: 'with lesson 67% trophy',
-      // Provide an outer div to simulate some of the CSS that gets leaked into
-      // this component
-      story: () => {
-        const store = createStoreForLevels(
-          [activityPuzzle, activityPuzzle, assessment1],
-          0,
-          false /* showLessonExtras */,
-          true /* onLessonExtras */
-        );
-        return (
-          <div style={{display: 'inline-block'}} className="header_level">
-            <Provider store={store}>
-              <LessonProgress lessonTrophyEnabled />
-            </Provider>
-          </div>
-        );
-      }
-    },
+export const Lesson67PercentTrophy = Template.bind({});
+Lesson67PercentTrophy.args = {
+  store: createStoreForLevels(
+    [activityPuzzle, activityPuzzle, assessment1],
+    0,
+    false /* showLessonExtras */,
+    true /* onLessonExtras */
+  )
+};
 
-    {
-      name: 'with lesson mastered trophy',
-      // Provide an outer div to simulate some of the CSS that gets leaked into
-      // this component
-      story: () => {
-        const store = createStoreForLevels(
-          [activityPuzzle, activityPuzzle, activityPuzzle],
-          0,
-          false /* showLessonExtras */,
-          true /* onLessonExtras */
-        );
-        return (
-          <div style={{display: 'inline-block'}} className="header_level">
-            <Provider store={store}>
-              <LessonProgress lessonTrophyEnabled />
-            </Provider>
-          </div>
-        );
-      }
-    }
-  ]);
+export const LessonMasteryTrophy = Template.bind({});
+LessonMasteryTrophy.args = {
+  store: createStoreForLevels(
+    [activityPuzzle, activityPuzzle, activityPuzzle],
+    0,
+    false /* showLessonExtras */,
+    true /* onLessonExtras */
+  )
 };

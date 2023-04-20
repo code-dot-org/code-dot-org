@@ -43,9 +43,7 @@ export function uploadDefaultListMetadata(metadata, environment) {
     .then(response => {
       if (!response.ok) {
         throw new Error(
-          `Default Sprite Metadata Upload Error(${response.status}: ${
-            response.statusText
-          })`
+          `Default Sprite Metadata Upload Error(${response.status}: ${response.statusText})`
         );
       }
       return Promise.resolve();
@@ -78,6 +76,14 @@ export function moveDefaultSpriteMetadataToProduction() {
     });
 }
 
+export function getSourceUrlForLevelAnimation(
+  versionId,
+  filename,
+  extension = ''
+) {
+  return `/api/v1/animation-library/level_animations/${versionId}/${filename}${extension}`;
+}
+
 export function generateAnimationMetadataForFile(fileObject) {
   const json = fileObject.json;
   const png = fileObject.png;
@@ -89,9 +95,11 @@ export function generateAnimationMetadataForFile(fileObject) {
         jsonLastModified: json.last_modified,
         pngLastModified: png.last_modified,
         version: png.version_id,
-        sourceUrl: `/api/v1/animation-library/level_animations/${
-          png.version_id
-        }/${metadata.name}.png`,
+        sourceUrl: getSourceUrlForLevelAnimation(
+          png.version_id,
+          metadata.name,
+          '.png'
+        ),
         sourceSize: png.source_size
       };
       return Promise.resolve(combinedMetadata);

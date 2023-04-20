@@ -1,4 +1,5 @@
 import {ToolboxType, CLAMPED_NUMBER_REGEX} from '../constants';
+import cdoTheme from '../themes/cdoTheme';
 
 export function setHSV(block, h, s, v) {
   block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
@@ -19,9 +20,11 @@ export function getToolboxType() {
   if (!workspace) {
     return;
   }
-  if (workspace.flyout_) {
+  // True is passed so we only get the flyout directly owned by the workspace.
+  // Otherwise getFlyout will return the flyout for the toolbox if it has categories.
+  if (workspace.getFlyout(true)) {
     return ToolboxType.UNCATEGORIZED;
-  } else if (workspace.toolbox_) {
+  } else if (workspace.getToolbox()) {
     return ToolboxType.CATEGORIZED;
   } else {
     return ToolboxType.NONE;
@@ -88,4 +91,20 @@ export function getField(type) {
     field = new Blockly.FieldTextInput();
   }
   return field;
+}
+
+/**
+ * Returns a theme object, based on the presence of an option in the browser's localStorage.
+ * @param {string} type
+ * @returns {?Blockly.Field}
+ */
+// Users can change their active theme using the context menu. Use this setting, if present.
+export function getUserTheme(themeOption) {
+  return Blockly.themes[localStorage.blocklyTheme] || themeOption || cdoTheme;
+}
+
+export function getCode(workspace) {
+  return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
+  // After supporting JSON block sources, change to:
+  // return JSON.stringify(Blockly.serialization.workspaces.save(workspace));
 }

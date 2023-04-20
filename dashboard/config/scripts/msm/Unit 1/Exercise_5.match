@@ -14,3 +14,4 @@ answer '/script_assets/msm/Unit 1/Exercise_5_question_3.png'
 
 question "(+ 3 (/ 4 7))"
 answer '/script_assets/msm/Unit 1/Exercise_5_question_4.png'
+allow_multiple_attempts true

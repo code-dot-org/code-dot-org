@@ -45,3 +45,9 @@ export const frameSizes = {
   MARGIN_BOTTOM: 5,
   HEADER_HEIGHT: 25
 };
+
+export const blockTypes = {
+  SPRITE: 'Sprite',
+  BEHAVIOR: 'Behavior',
+  LOCATION: 'Location'
+};

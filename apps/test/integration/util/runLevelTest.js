@@ -12,7 +12,7 @@ import {installCustomBlocks} from '@cdo/apps/block_utils';
 
 var testCollectionUtils = require('./testCollectionUtils');
 
-module.exports = function(testCollection, testData, dataItem, done) {
+module.exports = function (testCollection, testData, dataItem, done) {
   const finished = _.once(() => done(/*ensure no args*/));
 
   // LegacyDialog is stubbed in the beforeEach step in levelTests.js
@@ -60,7 +60,7 @@ module.exports = function(testCollection, testData, dataItem, done) {
   var validationCallCount = 0;
 
   // Validate successful solution.
-  var validateResult = function(report) {
+  var validateResult = async function (report) {
     try {
       assert(testData.expected, 'Have expectations');
       var expected;
@@ -70,11 +70,9 @@ module.exports = function(testCollection, testData, dataItem, done) {
         expected = testData.expected;
       }
       assert(Object.keys(expected).length > 0, 'No expected keys specified');
-      Object.keys(expected).forEach(function(key) {
+      Object.keys(expected).forEach(function (key) {
         if (report[key] !== expected[key]) {
-          var failureMsg = `Failure for key: ${key}. Expected: ${
-            expected[key]
-          }. Got: ${report[key]}\n`;
+          var failureMsg = `Failure for key: ${key}. Expected: ${expected[key]}. Got: ${report[key]}\n`;
           assert(false, failureMsg);
         }
       });
@@ -83,7 +81,23 @@ module.exports = function(testCollection, testData, dataItem, done) {
       // StudioApp.report gets called. Allows us to access some things that
       // aren't on the options object passed into report
       if (testData.customValidator) {
-        assert(testData.customValidator(assert), 'Custom validator failed');
+        // Wait some amount of time for long-running code to complete. (E.g. k1_6.js).
+        // Increase the timer below if things start failing here. It's important that
+        // we ONLY do this for studio tests, which depend on timing.
+        if (app === 'studio') {
+          await new Promise(resolve => {
+            setTimeout(() => {
+              assert(
+                testData.customValidator(assert),
+                'Custom validator failed'
+              );
+              resolve();
+            }, 2500);
+          });
+        } else {
+          // For non-studio tests, run without waiting.
+          assert(testData.customValidator(assert), 'Custom validator failed');
+        }
       }
 
       // Notify the app that the report operation is complete
@@ -148,7 +162,7 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
       : () => {
           throw unexpectedExecutionErrorMsg;
         },
-    onInitialize: function() {
+    onInitialize: function () {
       // we have a race condition for loading our editor. give it another 500ms
       // to load if it hasnt already
       var timeout = 0;
@@ -167,8 +181,8 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
         getConfigRef().autoFlush();
         getConfigRef().set({
           limits: {
-            '15': 5,
-            '60': 10
+            15: 5,
+            60: 10
           },
           maxRecordSize: 100,
           maxPropertySize: 100,
@@ -180,7 +194,7 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
         getProjectDatabase().set(null);
       }
 
-      setTimeout(function() {
+      setTimeout(function () {
         assert(window.droplet, 'droplet is in global');
 
         // Click the run button!

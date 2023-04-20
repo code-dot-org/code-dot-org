@@ -13,7 +13,7 @@ class Pd::PageHelperTest < ActionView::TestCase
 
   test 'new_page_button' do
     expects(:link_to).with('<', {page: 1}, class: 'btn btn-default')
-    new_page_button '<', page: 1
+    new_page_button '<', {page: 1}
   end
 
   test 'new_page_size_button' do
@@ -91,7 +91,7 @@ class Pd::PageHelperTest < ActionView::TestCase
     mock_params.expects(:permit).with([:allow, :page_size]).returns({})
     mock_params.expects(:[], :page_size).returns(nil)
 
-    page_size_buttons = 3.times.map {mock}
+    page_size_buttons = Array.new(3) {mock}
     expects(:new_page_size_button).with('25', {}).returns(page_size_buttons[0])
     expects(:new_page_size_button).with('50', {}).returns(page_size_buttons[1])
     expects(:new_page_size_button).with('All', {}).returns(page_size_buttons[2])

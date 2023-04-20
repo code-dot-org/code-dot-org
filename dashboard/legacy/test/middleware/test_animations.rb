@@ -277,6 +277,7 @@ class AnimationsTest < FilesApiTestBase
   end
 
   def test_copy_abusive_animation
+    skip "Abuse score functionality moved to Rails"
     source_image_filename = @api.randomize_filename('copy_source.png')
     source_image_body = 'stub-source-contents'
     dest_image_filename = @api.randomize_filename('copy_dest.png')

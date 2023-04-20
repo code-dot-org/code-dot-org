@@ -330,7 +330,7 @@ levels['10'] = {
   },
   softButtons: ['leftButton', 'rightButton'],
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Bounce.opponentScore >= 2;
     }
   },
@@ -401,7 +401,7 @@ levels['11'] = {
   softButtons: ['leftButton', 'rightButton'],
   minWorkspaceHeight: 750,
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Bounce.opponentScore >= 2;
     }
   },

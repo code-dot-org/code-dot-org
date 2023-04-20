@@ -14,6 +14,8 @@ import {
 } from '@cdo/apps/templates/instructions/teacherFeedback/types';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 import {updateTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackDataApi';
@@ -62,6 +64,13 @@ export class EditableTeacherFeedback extends Component {
 
   componentDidMount = () => {
     window.addEventListener('beforeunload', this.onUnload);
+    if (this.props.rubric) {
+      analyticsReporter.sendEvent(EVENTS.RUBRIC_LEVEL_VIEWED_EVENT, {
+        sectionId: this.props.selectedSectionId,
+        unitId: this.props.serverScriptId,
+        levelId: this.props.serverLevelId
+      });
+    }
   };
 
   componentWillUnmount() {
@@ -155,15 +164,17 @@ export class EditableTeacherFeedback extends Component {
           submitting: false
         });
       });
+    analyticsReporter.sendEvent(EVENTS.FEEDBACK_SUBMITTED, {
+      sectionId: this.props.selectedSectionId,
+      unitId: this.props.serverScriptId,
+      levelId: this.props.serverLevelId,
+      isRubric: this.props.rubric
+    });
   };
 
   didFeedbackChange = () => {
-    const {
-      latestFeedback,
-      comment,
-      performance,
-      reviewStateUpdated
-    } = this.state;
+    const {latestFeedback, comment, performance, reviewStateUpdated} =
+      this.state;
 
     if (latestFeedback) {
       const commentChanged = comment !== latestFeedback.comment;
@@ -303,5 +314,7 @@ export default connect(
       dispatch(queryUserProgress(userId));
       dispatch(loadLevelsWithProgress());
     }
-  })
+  }),
+  null,
+  {forwardRef: true}
 )(EditableTeacherFeedback);

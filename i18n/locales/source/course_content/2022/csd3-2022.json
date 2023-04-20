@@ -678,7 +678,7 @@
       "CSD U3 properties tint_2022": {
         "display_name": "New Block : Tint",
         "bubble_choice_description": "Adjust the sprite's color with tint.",
-        "long_instructions": "# Tint\r\n\r\nTint is a property that will overlay a color on top of a sprite to tint it. This tint doesn't change the existing colors of a sprite, but is more like putting a pane of colored glass over the top of the sprite.\r\n\r\n## Do This:\r\n\r\nUsing either the sprite already created for you or with any other sprites of your choosing, play around with the tint property and see how it works and how it changes on different colored sprites!\r\n",
+        "long_instructions": "# Tint\r\n\r\nTint is a property that will overlay a color on top of a sprite to tint it. This tint doesn't change the existing colors of a sprite, but is more like putting a pane of colored glass over the top of the sprite.\r\n\r\n## Do This:\r\n\r\n1) Using either the sprite already created for you or with any other sprites of your choosing, play around with the tint property and see how it works and how it changes on different colored sprites!\r\n   - **Tip:** Make sure to put the tint color you would like in quotation marks (example: \"red\"). \r\n",
         "callouts": {
           "CSD_U3_rect_c1": "Here is the code",
           "CSD_U3_rect_c2": "Drag this block into the code area."
@@ -1299,7 +1299,7 @@
   },
   "https://studio.code.org/s/csd3-2022/lessons/16/levels/7": {
     "dsls": {
-      "description": "Practice keyboard input and using the if/else block with these activities.",
+      "description": "Practice keyboard input and using conditional statements with these activities.",
       "display_name": "Mouse Input and If/else Practice"
     },
     "sublevels": {
@@ -1364,7 +1364,7 @@
   },
   "https://studio.code.org/s/csd3-2022/lessons/17/levels/2": {
     "dsls": {
-      "description": "In the next few levels, you'll be completing your own interactive card. Here are some examples to give you some ideas. Don't forget to look at the code to see how they work.",
+      "description": "In the next few levels, you'll be completing your own interactive card. Here are some examples to give you some ideas.",
       "display_name": "Your Interactive Card"
     },
     "sublevels": {
@@ -1390,7 +1390,7 @@
     "long_instructions": "# Laying Out Your Background\n\nBefore beginning this project, you should have already completed the Interactive Card Planning activity, and you'll want to have that paper with you as you develop your program. Preparation is one of the **most important** elements of successfully creating a program!\n\n# Do This\n\nRefer to your planning activity sheet to help you lay out the shapes that will become the background to your card.\n\n-   First, figure out what the lowest layer in your image is (this should use the `background()` block) and add it to the very top of the draw loop.\n-   Next, layer each additional drawing block in the order you want them to appear in the stack.\n-   Finally, add a comment to the top of this section of code to describe what it does, and if you have any particularly complicated chunks of code within (such as code to draw a tree or a house), add a descriptive comment to that as well.\n\n**Challenge:** Can you use variables or `randomNumber()` to add some subtle animation to your background layer?"
   },
   "https://studio.code.org/s/csd3-2022/lessons/17/levels/4": {
-    "long_instructions": "# Adding Sprites\n\nNow that you have the more static elements of your card layed out, it's time to add the Sprites. Your Sprites should provide the primary animations and interactions for your card - so feel free to get creative here and have fun.\n\n# Do This\n\nCheck out the Sprites table on the back of your planning sheet. For each Sprite in your table:\n\n-   Initialize the Sprite at the top of your program with `createSprite()`.\n-   Find or create the image(s) for the Sprite and set it with `setAnimation()`.\n-   Inside the `draw()` loop update any Sprite properties that we will be constantly animating (we'll deal with conditionals in a minute)."
+    "long_instructions": "# Adding Sprites\n\nNow that you have the more static elements of your card laid out, it's time to add the Sprites. Your Sprites should provide the primary animations and interactions for your card - so feel free to get creative here and have fun.\n\n# Do This\n\nCheck out the Sprites table on the back of your planning sheet. For each Sprite in your table:\n\n-   Initialize the Sprite at the top of your program with `createSprite()`.\n-   Find or create the image(s) for the Sprite and set it with `setAnimation()`.\n-   Inside the `draw()` loop update any Sprite properties that we will be constantly animating (we'll deal with conditionals in a minute)."
   },
   "https://studio.code.org/s/csd3-2022/lessons/17/levels/5": {
     "long_instructions": "# User Input\n\nYou've got a background, you've got Sprites, now it's time to give your user something to do!\n\n# Do This\n\nOn the interactions table from your planning sheet, find all of the interactions that rely on user input (key presses and mouse movements). For each of those interactions:\n\n-   Add an `if` block (or `if-else` block if you need a fallback action) inside the `draw()` loop.\n-   Add the appropriate input block for your condition (such as `keyDown()` or `mouseDown()`).\n-   Add the necessary actions inside the `if` block.\n\n**Challenge:** Can you create more sophisticated conditionals by nesting them or using compound booleans?"

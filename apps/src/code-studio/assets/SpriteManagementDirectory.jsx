@@ -6,16 +6,16 @@ export default class SpriteManagementDirectory extends React.Component {
       <div>
         <h1>Manage Sprite Lab Assets</h1>
         <p>This is an internal set of tools for Code.org content authors.</p>
-        <h2>New Animations</h2>
+        <h2>Add/Replace Animations</h2>
         <ul>
           <li>
-            <a href="/sprites/sprite_upload">Upload New Animations</a>
+            <a href="/sprites/sprite_upload">Upload Animations</a>
           </li>
         </ul>
         <p>
           <br />
-          Make new costumes and backgrounds available in Sprite Lab projects and
-          curriculum levels.
+          Add new or replace existing costumes and backgrounds in Sprite Lab
+          projects and curriculum levels.
         </p>
         <h2>Animation JSON</h2>
         <ul>

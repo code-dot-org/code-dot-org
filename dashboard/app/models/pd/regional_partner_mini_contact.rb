@@ -30,7 +30,7 @@ class Pd::RegionalPartnerMiniContact < ApplicationRecord
 
   after_create :send_regional_partner_contact_emails
   def send_regional_partner_contact_emails
-    form = sanitize_and_trim_form_data_hash
+    form = sanitized_and_trimmed_form_data_hash
 
     # role is optional, use another word if role not given
     form[:role] = "person" unless form[:role]
@@ -62,19 +62,17 @@ class Pd::RegionalPartnerMiniContact < ApplicationRecord
   end
 
   def email
-    sanitize_form_data_hash[:email]
+    sanitized_form_data_hash[:email]
   end
 
-  private
-
-  def validate_email
-    hash = sanitize_form_data_hash
+  private def validate_email
+    hash = sanitized_form_data_hash
 
     add_key_error(:email) unless Cdo::EmailValidator.email_address?(hash[:email])
   end
 
-  def update_regional_partner
-    hash = sanitize_form_data_hash
+  private def update_regional_partner
+    hash = sanitized_form_data_hash
     zipcode = hash[:zip]
 
     self.regional_partner, _ = RegionalPartner.find_by_zip(zipcode)

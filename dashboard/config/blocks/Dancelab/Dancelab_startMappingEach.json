@@ -3,11 +3,7 @@
   "config": {
     "func": "startMappingEach",
     "blockText": "{GROUP} begin {PROPERTY} following {RANGE}",
-    "color": [
-      136,
-      0.84,
-      0.8
-    ],
+    "style": "behavior_blocks",
     "args": [
       {
         "name": "GROUP",

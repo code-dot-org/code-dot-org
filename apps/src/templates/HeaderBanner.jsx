@@ -17,7 +17,7 @@ class HeaderBanner extends React.Component {
     children: PropTypes.node,
     short: PropTypes.bool,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
-    backgroundUrl: PropTypes.string,
+    backgroundUrl: PropTypes.string.isRequired,
     imageUrl: PropTypes.string
   };
 
@@ -67,7 +67,7 @@ class HeaderBanner extends React.Component {
               style={headerBannerContainerStyle}
             >
               <div className={'bannerContent'}>
-                <div style={headingStyle}>{headingText}</div>
+                <h1 style={headingStyle}>{headingText}</h1>
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@ class HeaderBanner extends React.Component {
             style={headerBannerContainerStyle}
           >
             <div className={'bannerContent'}>
-              <div style={headingStyle}>{headingText}</div>
+              <h1 style={headingStyle}>{headingText}</h1>
               {subHeadingText && (
                 <div style={subHeadingStyle}>{subHeadingText}</div>
               )}
@@ -101,7 +101,9 @@ class HeaderBanner extends React.Component {
                 <div className={'children'}>{this.props.children}</div>
               )}
             </div>
-            {imageUrl && <img style={bannerContentImageStyle} src={imageUrl} />}
+            {imageUrl && (
+              <img style={bannerContentImageStyle} src={imageUrl} alt="" />
+            )}
           </div>
         </div>
       );
@@ -119,16 +121,16 @@ const styles = {
     maxWidth: styleConstants['content-width']
   },
   bannerHeading: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    fontFamily: '"Barlow Semi Condensed Semibold", sans-serif',
     color: color.white,
-    fontSize: 32,
-    lineHeight: '40px'
+    fontSize: 48,
+    marginBottom: 0
   },
   bannerHeadingShort: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    fontFamily: '"Barlow Semi Condensed Semibold", sans-serif',
     color: color.white,
-    fontSize: 32,
-    lineHeight: '40px'
+    fontSize: 48,
+    marginBottom: 0
   },
   bannerSubHeading: {
     fontFamily: '"Gotham 4r", sans-serif',

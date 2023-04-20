@@ -95,9 +95,9 @@ export default class Results extends React.Component {
       <Tab
         eventKey={i + 1}
         key={i}
-        title={`${session} (${this.props.thisWorkshop[session][
-          'response_count'
-        ] || 0})`}
+        title={`${session} (${
+          this.props.thisWorkshop[session]['response_count'] || 0
+        })`}
       >
         <br />
         {this.renderResultsForSession(session)}

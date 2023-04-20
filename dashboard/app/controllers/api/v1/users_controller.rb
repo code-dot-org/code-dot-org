@@ -4,6 +4,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
   skip_before_action :load_user, only: [:current, :netsim_signed_in]
+  skip_before_action :clear_sign_up_session_vars, only: [:current]
 
   def load_user
     user_id = params[:user_id]

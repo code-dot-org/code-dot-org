@@ -12,7 +12,8 @@ import {personalProjectDataPropType} from './projectConstants';
 import {PROJECT_TYPE_MAP} from './projectTypeMap';
 import {
   AlwaysPublishableProjectTypes,
-  ConditionallyPublishableProjectTypes
+  ConditionallyPublishableProjectTypes,
+  RestrictedPublishProjectTypes
 } from '@cdo/apps/util/sharedConstants';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
@@ -60,7 +61,9 @@ class PersonalProjectsTable extends React.Component {
     const {canShare} = this.props;
     const isPublishable =
       AlwaysPublishableProjectTypes.includes(rowData.type) ||
-      (ConditionallyPublishableProjectTypes.includes(rowData.type) && canShare);
+      (ConditionallyPublishableProjectTypes.includes(rowData.type) &&
+        canShare) ||
+      RestrictedPublishProjectTypes.includes(rowData.type);
 
     return (
       <PersonalProjectsPublishedCell
@@ -339,7 +342,7 @@ export const styles = {
 };
 
 // Cell formatters.
-const thumbnailFormatter = function(thumbnailUrl, {rowData}) {
+const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/edit`;
   thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
   return (
@@ -376,7 +379,7 @@ const typeFormatter = type => {
   return PROJECT_TYPE_MAP[type];
 };
 
-const dateFormatter = function(time) {
+const dateFormatter = function (time) {
   const date = new Date(time);
   return date.toLocaleDateString();
 };

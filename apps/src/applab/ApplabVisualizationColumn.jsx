@@ -134,7 +134,9 @@ class ApplabVisualizationColumn extends React.Component {
             <ResetButton hideText style={styles.resetButton} />
           </div>
         )}
-        <GameButtons>
+        {/* The playspace phone frame has a run/reset button, so we don't need to render and hide
+            run/reset in GameButtons */}
+        <GameButtons noRunResetButton={playspacePhoneFrame}>
           {/* This div is used to control whether or not our finish button is centered*/}
           <div style={this.getCompletionButtonSyle()}>
             <CompletionButton />

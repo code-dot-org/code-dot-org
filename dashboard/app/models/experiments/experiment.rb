@@ -62,9 +62,9 @@ class Experiment < ApplicationRecord
         (experiment.script_id.nil? || experiment.script_id == script.try(:id)) &&
         (experiment_name.nil? || experiment.name == experiment_name)
     end
-  rescue => e
+  rescue => exception
     Honeybadger.notify(
-      e,
+      exception,
       error_message: 'Error getting experiments',
       context: {
         user_id: user&.id

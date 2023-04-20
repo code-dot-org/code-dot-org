@@ -187,14 +187,15 @@ class Blockly < Level
     default_category = category_node = Nokogiri::XML("<category name='Default'>").child
     xml.child << default_category
     xml.xpath('/xml/block').each do |block|
-      if block.attr('type') == 'category'
+      case block.attr('type')
+      when 'category'
         category_name = block.xpath(tag).text
         category_node = Nokogiri::XML("<category name='#{category_name}'>").child
         category_node['custom'] = 'PROCEDURE' if category_name == 'Functions'
         category_node['custom'] = 'VARIABLE' if category_name == 'Variables'
         xml.child << category_node
         block.remove
-      elsif block.attr('type') == 'custom_category'
+      when 'custom_category'
         custom_type = block.xpath(tag).text
         category_name = CATEGORY_CUSTOM_NAMES[custom_type.to_sym]
         category_node = Nokogiri::XML("<category name='#{category_name}'>").child
@@ -448,10 +449,10 @@ class Blockly < Level
 
   def localized_start_html(start_html)
     return unless start_html
-    start_html_xml = Nokogiri::XML(start_html, &:noblanks)
+    start_html_doc = Nokogiri::HTML(start_html, &:noblanks)
 
     # match any element that contains text
-    start_html_xml.xpath('//*[text()[normalize-space()]]').each do |element|
+    start_html_doc.xpath('//*[text()[normalize-space()]]').each do |element|
       localized_text = I18n.t(
         element.text,
         scope: [:data, :start_html, name],
@@ -461,7 +462,13 @@ class Blockly < Level
       element.content = localized_text if localized_text
     end
 
-    start_html_xml.serialize(save_with: XML_OPTIONS).strip
+    # returning the children of body removes extra <html><body> tags added by parsing with ::HTML
+    # the save_with option prevents the to_html method from pretty printing and adding newlines
+    # see: https://github.com/premailer/premailer/issues/345
+    start_html_doc.xpath("//body").children.to_html(
+      encoding: 'UTF-8',
+      save_with: Nokogiri::XML::Node::SaveOptions::DEFAULT_HTML ^ Nokogiri::XML::Node::SaveOptions::FORMAT
+    )
   end
 
   def localized_authored_hints
@@ -948,7 +955,7 @@ class Blockly < Level
   end
 
   def update_goal_override
-    if goal_override&.is_a?(String)
+    if goal_override.is_a?(String)
       self.goal_override = JSON.parse(goal_override)
     end
   end

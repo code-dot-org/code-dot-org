@@ -100,8 +100,9 @@ class JsDebugger extends React.Component {
     }
     let commandsWidth = 0;
     if (document.getElementById('debug-commands-header')) {
-      commandsWidth = document.getElementById('debug-commands-header')
-        .offsetWidth;
+      commandsWidth = document.getElementById(
+        'debug-commands-header'
+      ).offsetWidth;
     }
     let watchersWidth = 0;
     if (document.getElementById('debug-watch-header')) {
@@ -223,9 +224,8 @@ class JsDebugger extends React.Component {
 
   slideShut() {
     const closedHeight =
-      $(this.root)
-        .find('#debug-area-header')
-        .height() + $(this._debugResizeBar).height();
+      $(this.root).find('#debug-area-header').height() +
+      $(this._debugResizeBar).height();
     this.setState({
       transitionType: 'closing',
       open: false,
@@ -383,8 +383,8 @@ class JsDebugger extends React.Component {
    *  Handle mouse moves while dragging the debug resize bar.
    */
   onMouseMoveWatchersResizeBar = event => {
-    const watchers = this._watchers.getWrappedInstance();
-    const watchersRect = watchers.scrollableContainer.getBoundingClientRect();
+    const watchersRect =
+      this._watchers.scrollableContainer.getBoundingClientRect();
     const movement = watchersRect.left - event.clientX;
     const newDesiredWidth = watchersRect.width + movement;
     const newWatchersWidth = Math.max(
@@ -394,9 +394,8 @@ class JsDebugger extends React.Component {
 
     const watchersResizeRect = this._watchersResizeBar.getBoundingClientRect();
     const watchersResizeRight = newWatchersWidth - watchersResizeRect.width / 2;
-    watchers.scrollableContainer.style.width = newWatchersWidth + 'px';
-    this._debugConsole.getWrappedInstance().root.style.right =
-      newWatchersWidth + 'px';
+    this._watchers.scrollableContainer.style.width = newWatchersWidth + 'px';
+    this._debugConsole.root.style.right = newWatchersWidth + 'px';
     this._watchersResizeBar.style.right = watchersResizeRight + 'px';
 
     const headerLBorderWidth = 1;
@@ -415,13 +414,8 @@ class JsDebugger extends React.Component {
   };
 
   render() {
-    const {
-      appType,
-      isAttached,
-      canRunNext,
-      isRunning,
-      debugButtons
-    } = this.props;
+    const {appType, isAttached, canRunNext, isRunning, debugButtons} =
+      this.props;
     const hasFocus = this.props.isDebuggerPaused && !this.props.isEditWhileRun;
 
     const canShowDebugSprites = appType === 'gamelab';

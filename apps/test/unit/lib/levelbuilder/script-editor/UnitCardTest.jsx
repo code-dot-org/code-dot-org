@@ -106,7 +106,9 @@ describe('UnitCard', () => {
 
   it('displays UnitCard correctly when user facing lesson groups', () => {
     const wrapper = createWrapper({});
-    expect(wrapper.find('Connect(LessonGroupCard)')).to.have.lengthOf(2);
+    // There are 2 lesson groups, but they have forwardRefs which causes each component
+    // to be counted twice.
+    expect(wrapper.find('Connect(LessonGroupCard)')).to.have.lengthOf(4);
     expect(wrapper.find('LessonToken')).to.have.lengthOf(4);
     expect(wrapper.find('textarea')).to.have.lengthOf(4);
 
@@ -126,18 +128,10 @@ describe('UnitCard', () => {
     );
     expect(wrapper.find('Connect(LessonGroupCard)')).to.have.lengthOf(1);
     expect(wrapper.find('button')).to.have.lengthOf(2);
-    expect(
-      wrapper
-        .find('button')
-        .at(0)
-        .text()
-    ).to.include('Add Lesson Group');
-    expect(
-      wrapper
-        .find('button')
-        .at(1)
-        .text()
-    ).to.include('Disable Lesson Groups');
+    expect(wrapper.find('button').at(0).text()).to.include('Add Lesson Group');
+    expect(wrapper.find('button').at(1).text()).to.include(
+      'Disable Lesson Groups'
+    );
   });
 
   it('displays UnitCard correctly when non user facing lesson group', () => {

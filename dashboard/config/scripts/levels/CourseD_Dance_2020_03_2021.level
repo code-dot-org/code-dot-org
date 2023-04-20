@@ -75,7 +75,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="Dancelab_whenSetup" movable="false">
+        <block type="Dancelab_whenSetup" deletable="false" movable="false">
           <statement name="DO">
             <block type="Dancelab_makeAnonymousDanceSprite" movable="false">
               <title name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;SLOTH&quot;">"CAT"</title>

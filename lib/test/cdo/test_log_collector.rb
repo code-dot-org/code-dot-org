@@ -23,14 +23,12 @@ class LogCollectorTest < Minitest::Test
     assert_equal 0, log_object.exceptions.size
   end
 
-  private
-
   # Dummy function to be used in a block
-  def do_something
+  private def do_something
     1
   end
 
-  def do_something_that_errors
+  private def do_something_that_errors
     raise 'error'
   end
 end

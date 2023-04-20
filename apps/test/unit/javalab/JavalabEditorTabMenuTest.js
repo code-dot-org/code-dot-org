@@ -47,12 +47,7 @@ describe('JavalabEditorTabMenu', () => {
     it('displays moveRight option and not moveLeft if active tab is leftmost tab', () => {
       const wrapper = createWrapper();
       assert.strictEqual(wrapper.children().length, 3);
-      assert.isTrue(
-        wrapper
-          .childAt(1)
-          .text()
-          .includes(javalabMsg.moveRight())
-      );
+      assert.isTrue(wrapper.childAt(1).text().includes(javalabMsg.moveRight()));
     });
 
     it('displays moveLeft option and not moveRight if active tab is rightmost tab', () => {
@@ -60,12 +55,7 @@ describe('JavalabEditorTabMenu', () => {
         activeTabKey: 'file-2'
       });
       assert.strictEqual(wrapper.children().length, 3);
-      assert.isTrue(
-        wrapper
-          .childAt(1)
-          .text()
-          .includes(javalabMsg.moveLeft())
-      );
+      assert.isTrue(wrapper.childAt(1).text().includes(javalabMsg.moveLeft()));
     });
 
     it('displays both moveRight and moveLeft if active tab is one of middle tabs', () => {
@@ -73,18 +63,8 @@ describe('JavalabEditorTabMenu', () => {
         activeTabKey: 'file-1'
       });
       assert.strictEqual(wrapper.children().length, 4);
-      assert.isTrue(
-        wrapper
-          .childAt(1)
-          .text()
-          .includes(javalabMsg.moveLeft())
-      );
-      assert.isTrue(
-        wrapper
-          .childAt(2)
-          .text()
-          .includes(javalabMsg.moveRight())
-      );
+      assert.isTrue(wrapper.childAt(1).text().includes(javalabMsg.moveLeft()));
+      assert.isTrue(wrapper.childAt(2).text().includes(javalabMsg.moveRight()));
     });
   });
 
@@ -94,18 +74,8 @@ describe('JavalabEditorTabMenu', () => {
         orderedTabKeys: ['file-0']
       });
       assert.strictEqual(wrapper.children().length, 2);
-      assert.isTrue(
-        wrapper
-          .childAt(0)
-          .text()
-          .includes(javalabMsg.rename())
-      );
-      assert.isTrue(
-        wrapper
-          .childAt(1)
-          .text()
-          .includes(javalabMsg.delete())
-      );
+      assert.isTrue(wrapper.childAt(0).text().includes(javalabMsg.rename()));
+      assert.isTrue(wrapper.childAt(1).text().includes(javalabMsg.delete()));
     });
   });
 });

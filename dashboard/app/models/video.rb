@@ -121,14 +121,6 @@ class Video < ApplicationRecord
     "#{Video.youtube_base_url}/embed/#{youtube_code}/?#{defaults.to_query}"
   end
 
-  def embed_url
-    Video.embed_url youtube_code
-  end
-
-  def self.embed_url(id)
-    CDO.studio_url "videos/embed/#{id}"
-  end
-
   def self.download_url(key)
     "#{CDO.videos_url}/youtube/#{key}.mp4"
   end
@@ -150,15 +142,17 @@ class Video < ApplicationRecord
   end
 
   def summarize(autoplay = true)
-    # Note: similar video info is also set in javascript at levels/_blockly.html.haml
-    {
-      src: youtube_url(autoplay: autoplay ? 1 : 0),
-      key: key,
-      name: localized_name,
-      download: download,
-      thumbnail: thumbnail_path,
-      enable_fallback: true,
-      autoplay: autoplay,
-    }
+    ActiveRecord::Base.connected_to(role: :reading) do
+      # Note: similar video info is also set in javascript at levels/_blockly.html.haml
+      {
+        src: youtube_url(autoplay: autoplay ? 1 : 0),
+        key: key,
+        name: localized_name,
+        download: download,
+        thumbnail: thumbnail_path,
+        enable_fallback: true,
+        autoplay: autoplay,
+      }
+    end
   end
 end

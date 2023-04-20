@@ -11,7 +11,7 @@ require('../utils'); // provide Function.prototype.inherits
  * @constructor
  * @extends Error
  */
-var NetSimApiError = (module.exports = function(request) {
+var NetSimApiError = (module.exports = function (request) {
   /** @type {string} */
   this.name = 'NetSimApiError';
 

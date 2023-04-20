@@ -45,6 +45,10 @@ function member(elt, array) {
   return false;
 }
 
+function checkSpriteExists(id) {
+  return member(id, getSpriteIdsInUse());
+}
+
 /**
 Updates several helper variables that are used in validation code:
 - spriteIds - an array of all the current sprite IDs
@@ -293,12 +297,15 @@ SPRITE VALIDATION
  }, "changeLocation");  // include i18n feedback string
  */
 function checkMovedSpritePin(spriteId) {
-  var sprite = {id: spriteId};
-  var spriteX = getProp(sprite, "x");
-  var spriteY = getProp(sprite, "y");
-  if(spriteX != 200 || spriteY != 200) {
-    return true;
+  if (checkSpriteExists(spriteId)) {
+    var sprite = {id: spriteId};
+    var spriteX = getProp(sprite, "x");
+    var spriteY = getProp(sprite, "y");
+    if(spriteX != 200 || spriteY != 200) {
+      return true;
+ 	}
   }
+  return false;
 }
 
 
@@ -314,13 +321,16 @@ function checkMovedSpritePin(spriteId) {
   }, "useSetpropBlock");
  */
 function checkNotDefaultSize(spriteId) {
-  var sprite = {id: spriteId};
-  var spriteScale = getProp(sprite, "scale");
-  if(spriteScale != 100) {
-    return true;
-  } else {
-  	return false;
+  if (checkSpriteExists(spriteId)) {
+    var sprite = {id: spriteId};
+    var spriteScale = getProp(sprite, "scale");
+    if(spriteScale != 100) {
+      return true;
+    } else {
+      return false;
+    }
   }
+  return false;
 }
 
 //Checks if the sprite has been changed from the default costume
@@ -338,13 +348,16 @@ function checkNotDefaultSize(spriteId) {
  }, "cscLandmarkChangeCostume");  // include i18n feedback string
  */
 function checkNotDefaultCostume(spriteId, defaultCostume) {
-  var sprite = {id: spriteId};
-  var spriteCostume = getProp(sprite, "costume");
-  if(spriteCostume != defaultCostume) {
-    return true;
-  } else {
-    return false;
+  if (checkSpriteExists(spriteId)) {
+    var sprite = {id: spriteId};
+    var spriteCostume = getProp(sprite, "costume");
+    if(spriteCostume != defaultCostume) {
+      return true;
+    } else {
+      return false;
+    }
   }
+  return false;
 }
 
 
@@ -557,7 +570,10 @@ function checkThisSpriteClickedThisFrame(spriteId) {
   }, "cscLandmarkBackgroundStoryteller");  // include i18n feedback string
   */
 function checkNewBackground() {
-  return getBackground() != validationProps.previous.background;
+  if (getBackground() != '' && getBackground() != null) {
+  	return getBackground() != validationProps.previous.background;
+  }
+  return false;
 }
 
 //Checks if n unique touch events have happened
@@ -602,7 +618,10 @@ function checkUniqueTouchEvents(n, delayTime) {
  }, "noEvents");
  */
 function checkAtLeastNEvents(n) {
-  return eventLog.length >= n;
+  if (eventLog) {
+      return eventLog.length >= n;
+  }
+  return false;
 }
 
 //Checks if a prompt appeared with an event
@@ -747,6 +766,93 @@ function checkNewSpriteSpeakThisFrame(spriteId) {
     return false;
   }
   return validationProps.spriteSpeeches[spriteId] != validationProps.previous.spriteSpeeches[spriteId];
+}
+
+/**
+ * Updates current sprite costume for given sprite id. Meant to be called every frame, similar to getHelperVars()
+ @param {number} spriteId - the id of the sprite to track, usually by passing an index of the spriteIds object
+ @example
+if(World.frameCount == 1) {
+  setFailTime(150);
+  setDelayTime(90);
+  setupPrevious(); 
+  addCriteria(function() {
+    //update to the criteria you want
+    return minimumSprites(1) && checkThisSpriteClickedThisFrame(spriteIds[0]) && checkNewSpriteCostumeThisFrame(spriteIds[0]);
+  }, "Make sure you change the costume of your sprite!");
+}
+getHelperVars();
+trackSpriteCostume(spriteIds[0]); // <-------
+check();
+updatePrevSpriteCostume(spriteIds[0]);
+updatePrevious();
+ */
+function trackSpriteCostume(spriteId) {
+  if(!validationProps.spriteCostumes) {
+    validationProps.spriteCostumes = {};
+  }
+  if(!validationProps.previous.spriteCostumes) {
+    validationProps.previous.spriteCostumes = {};
+  }
+  
+  validationProps.spriteCostumes[spriteId] = getProp({id: spriteId}, "costume");
+}
+
+/**
+ * Keeps track of previous frame sprite costume. Meant to be called just before the end of the validation loop, similar to updatePrevious();
+ @param {number} spriteId - the id of the sprite to track, usually by passing an index of the spriteIds object
+ @example
+if(World.frameCount == 1) {
+  setFailTime(150);
+  setDelayTime(90);
+  setupPrevious(); 
+  addCriteria(function() {
+    //update to the criteria you want
+    return minimumSprites(1) && checkThisSpriteClickedThisFrame(spriteIds[0]) && checkNewSpriteCostumeThisFrame(spriteIds[0]);
+  }, "Make sure you change the costume of your sprite!");
+}
+getHelperVars();
+trackSpriteCostume(spriteIds[0]); 
+check();
+updatePrevSpriteCostume(spriteIds[0]); // <-------
+updatePrevious();
+ */
+function updatePrevSpriteCostume(spriteId) {
+  if(!validationProps.spriteCostumes) {
+    validationProps.spriteCostumes = {};
+  }
+  if(!validationProps.previous.spriteCostumes) {
+    validationProps.previous.spriteCostumes = {};
+  }
+  
+  validationProps.previous.spriteCostumes[spriteId] = validationProps.spriteCostumes[spriteId];
+}
+
+/**
+ * Checks if the sprite's costume changed this frame
+ @param {number} spriteId - the id of the sprite to track, usually by passing an index of the spriteIds object
+ @example
+if(World.frameCount == 1) {
+  setFailTime(150);
+  setDelayTime(90);
+  setupPrevious(); 
+  addCriteria(function() {
+    //update to the criteria you want
+    return minimumSprites(1) && checkThisSpriteClickedThisFrame(spriteIds[0]) && checkNewSpriteCostumeThisFrame(spriteIds[0]); // <-------
+  }, "Make sure you change the costume of your sprite!");
+}
+getHelperVars();
+trackSpriteCostume(spriteIds[0]); 
+check();
+updatePrevSpriteCostume(spriteIds[0]); 
+updatePrevious();
+ */
+function checkNewSpriteCostumeThisFrame(spriteId) {
+  if(!validationProps.spriteCostumes) {
+    console.log("Validation error - in order to use checkNewSpriteCostumeThisFrame, you must also call trackSpriteCostume() and updatePrevSpriteCostume(). See documentation for more information.");
+    return false;
+  }
+  return validationProps.spriteCostumes[spriteId] != validationProps.previous.spriteCostumes[spriteId];
 }
 
 // NEWSECTION
@@ -1083,6 +1189,51 @@ function checkInteractiveSpriteMovement() {
     }
 }
 
-function checkUsedWhenRun() {
-	console.log(getEventLog());
+
+/**
+ * Checks that a sprite has been moved from their default position in one given dimension by a given amount. 
+ * @returns {boolean} true if the sprite with the given `spriteID` moved an `amount` of pixels in a given `direction`
+ * @see [Click here for example](https://levelbuilder-studio.code.org/levels/44327?show_callouts=1)
+ * @example
+if (World.frameCount == 1) {
+
+  setFailTime(400); // Frames to wait before failing student
+  setDelayTime(90); // Frames to wait after success before stopping program
+  setupPrevious(); //Defines the validationProps.previous{} object. To use it, call updatePrevious() at the end of this box
+  
+  addCriteria(function() {
+    return spriteIds.length >= 1 && checkSpriteMoved(spriteIds[0], 'x', 30);
+  }, "didntMoveUp");  // include i18n feedback string
+
+}
+getHelperVars();
+check();
+updatePrevious();
+
+ */
+
+function checkSpriteMoved(spriteId, direction, amount) {
+	validationProps.initialPosition = validationProps.initialPosition || undefined;
+  	if (validationProps.initialPosition == undefined) {
+		validationProps.initialPosition = [];
+      	validationProps.initialPosition.push(locationOf({"id": spriteId}).x);
+      	validationProps.initialPosition.push(locationOf({"id": spriteId}).y);
+      	console.log(validationProps.initialPosition[1]);
+    }
+ 	if (!amount) { console.log("Amount missing or malformed from checkSpriteMoved call"); }
+  	var sign = 1;
+  	if (amount < 0) { sign = -1; }
+	if (direction !== 'x' && direction !== 'y') { console.log("Direction missing or malformated from checkSpriteMoved call"); }
+  	if (direction === 'x') {
+		return (sign*locationOf({"id": spriteId}).x - (sign * validationProps.initialPosition[0])) > Math.abs(amount);
+	} else if ( direction === 'y') {
+		return (-1*sign*locationOf({"id": spriteId}).y - (-1 * sign * validationProps.initialPosition[1])) > Math.abs(amount);
+    }
+}
+
+function checkSpriteHasBehavior(spriteId, behaviorString) {
+  if (spriteId == undefined) { console.log("No sprite ID supplied to checkSpriteHasBehavior"); return; }
+  if (behaviorString == undefined) { console.log("No behavior string supplied to checkSpriteHasBehavior"); return; }
+
+  return member(behaviorString, getBehaviorsForSpriteId(spriteId));
 }

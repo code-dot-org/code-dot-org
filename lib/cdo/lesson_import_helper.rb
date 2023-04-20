@@ -164,17 +164,18 @@ module LessonImportHelper
     sections = []
     name = ''
     sorted_matches.each do |match|
-      if match[:type] == 'tip'
+      case match[:type]
+      when 'tip'
         activity_section = ActivitySection.new
         key = match[:match][3]&.strip || "#{match[:match][1]}-0"
         activity_section.tips = [create_tip(key, match[:match][1] || "tip", match[:match][4])]
         activity_section.key ||= SecureRandom.uuid
         activity_sections = [activity_section]
         match[:activity_section_key] = activity_section.key
-      elsif match[:type] == 'name'
+      when 'name'
         name = match[:match][1]
         next
-      elsif match[:type] == 'pullthrough'
+      when 'pullthrough'
         next if levels.empty?
         pullthrough_match = match[:match]
         # If the syntax takes the form of [code-studio], [code-studio 1-<length>], or [code-studio 2-<length>],
@@ -185,7 +186,7 @@ module LessonImportHelper
           levels.clear
         end
         next
-      elsif match[:type] == 'remark'
+      when 'remark'
         activity_sections = [create_activity_section_with_remark(match[:match], tip_match_map)]
       else
         activity_sections = create_activity_sections_from_markdown(match[:substring].strip, tip_match_map)

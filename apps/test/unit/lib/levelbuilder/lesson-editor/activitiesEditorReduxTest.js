@@ -55,11 +55,10 @@ describe('activitiesEditorRedux reducer tests', () => {
         markdown: 'Programming is about solving puzzles.'
       })
     ).activities;
-    assert.deepEqual(nextState[0].activitySections[1].tips.map(s => s.type), [
-      'teachingTip',
-      'discussionGoal',
-      'contentCorner'
-    ]);
+    assert.deepEqual(
+      nextState[0].activitySections[1].tips.map(s => s.type),
+      ['teachingTip', 'discussionGoal', 'contentCorner']
+    );
   });
 
   it('update tip', () => {
@@ -86,17 +85,22 @@ describe('activitiesEditorRedux reducer tests', () => {
   });
 
   it('remove tip', () => {
-    const nextState = reducer(initialState, removeTip(1, 2, 'tip-1'))
-      .activities;
-    assert.deepEqual(nextState[0].activitySections[1].tips.map(s => s.type), [
-      'discussionGoal'
-    ]);
+    const nextState = reducer(
+      initialState,
+      removeTip(1, 2, 'tip-1')
+    ).activities;
+    assert.deepEqual(
+      nextState[0].activitySections[1].tips.map(s => s.type),
+      ['discussionGoal']
+    );
   });
 
   describe('levels', () => {
     it('reorder levels', () => {
-      const nextState = reducer(initialState, reorderLevel(1, 3, 2, 1))
-        .activities;
+      const nextState = reducer(
+        initialState,
+        reorderLevel(1, 3, 2, 1)
+      ).activities;
       assert.deepEqual(
         nextState[0].activitySections[2].scriptLevels.map(l => l.id),
         ['11', '10']
@@ -341,7 +345,8 @@ describe('activitiesEditorRedux reducer tests', () => {
         );
 
         let expectedState = _.cloneDeep(initialActivities);
-        expectedState[1].activitySections = expectedState[1].activitySections.reverse();
+        expectedState[1].activitySections =
+          expectedState[1].activitySections.reverse();
         expectedState[1].activitySections[0].position = 1;
         expectedState[1].activitySections[1].position = 2;
 
@@ -366,9 +371,8 @@ describe('activitiesEditorRedux reducer tests', () => {
           expectedState[1].activitySections[0]
         );
         expectedState[0].activitySections[2].position = 3;
-        expectedState[1].activitySections = expectedState[1].activitySections.slice(
-          1
-        );
+        expectedState[1].activitySections =
+          expectedState[1].activitySections.slice(1);
         expectedState[1].activitySections[0].position = 1;
 
         assert.deepEqual(expectedState, state.activities);
@@ -378,9 +382,8 @@ describe('activitiesEditorRedux reducer tests', () => {
         let state = reducer(initialState, removeActivitySection(1, 1));
 
         let expectedState = _.cloneDeep(initialActivities);
-        expectedState[0].activitySections = expectedState[0].activitySections.slice(
-          1
-        );
+        expectedState[0].activitySections =
+          expectedState[0].activitySections.slice(1);
         expectedState[0].activitySections[0].position = 1;
 
         assert.deepEqual(expectedState, state.activities);
@@ -416,11 +419,10 @@ describe('activitiesEditorRedux reducer tests', () => {
           initialState,
           addActivitySection(1, 'activitySection-key')
         ).activities;
-        assert.deepEqual(nextState[0].activitySections.map(s => s.key), [
-          'a',
-          'b',
-          'activitySection-key'
-        ]);
+        assert.deepEqual(
+          nextState[0].activitySections.map(s => s.key),
+          ['a', 'b', 'activitySection-key']
+        );
       });
     });
   });

@@ -3,10 +3,10 @@
 const Interpreter = require('@code-dot-org/js-interpreter');
 const CustomMarshaler = require('./CustomMarshaler');
 
-const DEFAULT_MAX_STEPS = 5e5;
+const DEFAULT_MAX_STEPS = 5e4;
 export const DEFAULT_EXECUTION_INFO = {
   ticks: DEFAULT_MAX_STEPS,
-  checkTimeout: function() {
+  checkTimeout: function () {
     if (this.ticks-- < 0) {
       throw new Error('Infinity');
     }
@@ -410,7 +410,7 @@ export default class CustomMarshalingInterpreter extends Interpreter {
     let interpreter, currentCallback, lastReturnValue;
     const hooks = [];
     const apis = {
-      executionInfo: DEFAULT_EXECUTION_INFO,
+      executionInfo: {...DEFAULT_EXECUTION_INFO},
       ...scope
     };
 
@@ -461,9 +461,8 @@ export default class CustomMarshalingInterpreter extends Interpreter {
           scope,
           'setReturnValue',
           interpreter.createNativeFunction(returnValue => {
-            lastReturnValue = interpreter.marshalInterpreterToNative(
-              returnValue
-            );
+            lastReturnValue =
+              interpreter.marshalInterpreterToNative(returnValue);
           })
         );
       }
@@ -625,7 +624,7 @@ export default class CustomMarshalingInterpreter extends Interpreter {
         args.push(globals[k]);
       }
       params.push(code);
-      var ctor = function() {
+      var ctor = function () {
         return Function.apply(this, params);
       };
       ctor.prototype = Function.prototype;
@@ -733,7 +732,8 @@ export default class CustomMarshalingInterpreter extends Interpreter {
       var state = opts.callbackState || {};
       state.node = {
         type: 'CallExpression',
-        arguments: intArgs /* this just needs to be an array of the same size */,
+        arguments:
+          intArgs /* this just needs to be an array of the same size */,
         // give this node an end so that the interpreter doesn't treat it
         // like polyfill code and do weird weird scray terrible things.
         end: 1

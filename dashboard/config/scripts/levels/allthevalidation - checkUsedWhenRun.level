@@ -37,7 +37,7 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "authored_hints": "[]",
-    "long_instructions": "# allthevalidation Template\r\n\r\n**Make sure to import the correct helper libraries, especially `zCriterionValidationLibrary`**\r\n\r\nThis level validates the function getClickedSpriteId(), which returns the ID of the sprite clicked this frame.\r\n\r\nTest criteria: When the sprite is clicked, it should print the sprite's ID to the canvas and pass the level.",
+    "long_instructions": "# allthevalidation Template\r\n\r\n**Make sure to import the correct helper libraries, especially `zCriterionValidationLibrary`**\r\n\r\nhttps://github.com/code-dot-org/code-dot-org/wiki/zCriterionValidationLibrary-Documentation",
     "validation_code": "if(World.frameCount == 1) {\r\n  setFailTime(150);\r\n  setDelayTime(90);\r\n  setupPrevious();\r\n\r\n  addCriteria(function() {\r\n    checkUsedWhenRun();\r\n  }, \"subject\");\r\n}\r\ngetHelperVars();\r\ncheck();\r\nupdatePrevious();",
     "preload_asset_list": null,
     "encrypted_examples": [
@@ -49,33 +49,14 @@
   "created_at": "2022-12-10T16:17:34.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-12-10T16:17:34.481+00:00\",\"changed\":[\"cloned from \\\"allthevalidation - getClickedSpriteId\\\"\"],\"cloned_from\":\"allthevalidation - getClickedSpriteId\"},{\"changed_at\":\"2022-12-10 16:18:07 +0000\",\"changed\":[\"toolbox_blocks\",\"validation_code\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-12-10T16:17:34.481+00:00\",\"changed\":[\"cloned from \\\"allthevalidation - getClickedSpriteId\\\"\"],\"cloned_from\":\"allthevalidation - getClickedSpriteId\"},{\"changed_at\":\"2022-12-10 16:18:07 +0000\",\"changed\":[\"toolbox_blocks\",\"validation_code\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-12-30 20:30:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-12-30 20:31:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run">
-          <next>
-            <block type="gamelab_makeNewSpriteAnon">
-              <field name="ANIMATION_NAME">"bear"</field>
-              <value name="LOCATION">
-                <block type="gamelab_location_picker">
-                  <field name="LOCATION">undefined</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_spriteClicked">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"bear"</field>
-            </block>
-          </value>
-        </block>
+        <block type="when_run"/>
         <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
           <mutation>
             <arg name="this sprite" type="Sprite"/>

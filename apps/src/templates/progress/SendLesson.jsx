@@ -45,7 +45,6 @@ export default class SendLesson extends React.Component {
     return (
       <div className="uitest-sendlesson">
         <Button
-          __useDeprecatedTag
           onClick={this.openDialog}
           text={i18n.sendLessonButton()}
           icon="share-square-o"

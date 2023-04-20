@@ -14,7 +14,7 @@ User.where('birthday IS NULL OR birthday > ?', min_birthday).in_batches(of: batc
     if properties
       properties['sharing_disabled'] = true
     else
-      properties = {'sharing_disabled': true}
+      properties = {sharing_disabled: true}
     end
     [id, properties]
   end

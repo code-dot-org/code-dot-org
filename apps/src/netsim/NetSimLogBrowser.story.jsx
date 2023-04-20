@@ -4,11 +4,11 @@ import NetSimLogBrowser from './NetSimLogBrowser';
 import Packet from './Packet';
 import {createUuid} from '@cdo/apps/utils';
 
-const range = function(i) {
+const range = function (i) {
   return new Array(i).fill().map((_, i) => i);
 };
 
-const randInt = function(i) {
+const randInt = function (i) {
   return Math.floor(i * Math.random());
 };
 

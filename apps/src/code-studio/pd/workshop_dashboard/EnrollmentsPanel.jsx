@@ -318,6 +318,8 @@ export default class EnrollmentsPanel extends React.Component {
 
           {viewSurveyUrl &&
             shouldShowSurveyResults(
+              // TODO: Add prop types for this field
+              // eslint-disable-next-line react/prop-types
               workshop.state,
               workshop.course,
               workshop.subject,

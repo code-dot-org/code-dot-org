@@ -6,6 +6,7 @@ import {getStore} from '../redux';
 import {setAssetPath} from '@code-dot-org/ml-playground/dist/assetPath';
 import {TestResults} from '@cdo/apps/constants';
 import ailabMsg from './locale';
+import mlPlaygroundMsg from './mlPlayground_locale';
 import $ from 'jquery';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
@@ -47,7 +48,7 @@ function getInstructionsDefaults() {
  * An instantiable Ailab class
  */
 
-const Ailab = function() {
+const Ailab = function () {
   this.skin = null;
   this.level = null;
 
@@ -58,14 +59,14 @@ const Ailab = function() {
 /**
  * Inject the studioApp singleton.
  */
-Ailab.prototype.injectStudioApp = function(studioApp) {
+Ailab.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
 };
 
 /**
  * Initialize this Ailab instance.  Called on page load.
  */
-Ailab.prototype.init = function(config) {
+Ailab.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error('Ailab requires a StudioApp');
   }
@@ -134,7 +135,7 @@ Ailab.prototype.init = function(config) {
 };
 
 // Called by the ailab app when it wants to go to the next level.
-Ailab.prototype.onContinue = function() {
+Ailab.prototype.onContinue = function () {
   const onReportComplete = result => {
     this.studioApp_.onContinue();
   };
@@ -151,11 +152,11 @@ Ailab.prototype.onContinue = function() {
   });
 };
 
-Ailab.prototype.setInstructionsKey = function(instructionsKey, options) {
+Ailab.prototype.setInstructionsKey = function (instructionsKey, options) {
   getStore().dispatch(setDynamicInstructionsKey(instructionsKey, options));
 };
 
-Ailab.prototype.initMLActivities = function() {
+Ailab.prototype.initMLActivities = function () {
   const mode = this.level.mode ? JSON.parse(this.level.mode) : null;
   const onContinue = this.onContinue.bind(this);
   const setInstructionsKey = this.setInstructionsKey.bind(this);
@@ -203,7 +204,7 @@ Ailab.prototype.initMLActivities = function() {
     mode,
     onContinue,
     setInstructionsKey,
-    i18n: ailabMsg,
+    i18n: mlPlaygroundMsg,
     saveTrainedModel,
     logMetric
   });

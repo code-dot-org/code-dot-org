@@ -113,6 +113,7 @@ export default function CodeReviewGroupsDialog({
         setLoadingStatus(LOADING_STATES.LOADED);
       })
       .fail(() => setLoadingStatus(LOADING_STATES.ERROR));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const submitNewGroups = () => {
@@ -130,11 +131,9 @@ export default function CodeReviewGroupsDialog({
 
   return (
     <div style={{...styles.buttonContainer, ...buttonContainerStyle}}>
-      {/* use div instead of button HTML element via __useDeprecatedTag
-          for consistent spacing with other "buttons" in ManageStudentsTable header */}
       <Button
         id="uitest-code-review-groups-button"
-        __useDeprecatedTag
+        style={styles.button}
         onClick={openDialog}
         color={Button.ButtonColor.gray}
         text={i18n.manageCodeReviewGroups()}
@@ -177,5 +176,9 @@ const styles = {
   errorMessageContainer: {
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.red
+  },
+  button: {
+    boxShadow: 'inset 0 2px 0 0 rgba(255, 255, 255, 0.8)',
+    marginTop: 0
   }
 };

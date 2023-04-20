@@ -105,6 +105,7 @@ const ReviewNavigator = ({
       color={Button.ButtonColor.gray}
       icon={'caret-left'}
       size={Button.ButtonSize.default}
+      useDefaultLineHeight
       iconStyle={styles.backToProjectIcon}
       onClick={onClickBackToProject}
       style={styles.backToProjectButton}

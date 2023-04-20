@@ -114,3 +114,5 @@ Level 2-4 menggunakan model yang sudah dilatih dan disediakan oleh proyek [Tenso
 Level 6-8 menggunakan \[Mesin Dukung-Vektor\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Kami mempelajari setiap komponen ikan (seperti mata, mulut, tubuh) dan menghimpun semua metadata untuk komponen tersebut (seperti jumlah gigi, bentuk tubuh) ke dalam vektor angka untuk setiap ikan. Kami menggunakan vektor ini untuk melatih SVM. Berdasarkan data pelatihan, SVM memisahkan "ruang" untuk semua calon ikan menjadi dua bagian, yang sesuai dengan materi pelajaran yang kami coba pelajari (seperti "biru" atau "bukan biru").
 
 [[Kembali ke atas]](#top)
+
+{{ visit_partial_event_logger }}

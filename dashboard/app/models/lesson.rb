@@ -454,7 +454,7 @@ class Lesson < ApplicationRecord
       standards: standards.map(&:summarize_for_lesson_show),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_show),
       is_instructor: script.can_be_instructor?(user),
-      assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
+      assessmentOpportunities: render_property(:assessment_opportunities),
       lessonPlanPdfUrl: lesson_plan_pdf_url,
       courseVersionStandardsUrl: course_version_standards_url,
       isVerifiedInstructor: user&.verified_instructor?,
@@ -891,12 +891,10 @@ class Lesson < ApplicationRecord
     "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
   end
 
-  private
-
   # Finds the LessonActivity by id, or creates a new one if id is not specified.
   # @param activity [Hash]
   # @returns [LessonActivity]
-  def fetch_activity(activity)
+  private def fetch_activity(activity)
     if activity['id']
       lesson_activity = lesson_activities.find(activity['id'])
       return lesson_activity if lesson_activity

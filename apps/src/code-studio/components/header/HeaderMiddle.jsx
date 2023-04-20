@@ -176,13 +176,8 @@ class HeaderMiddle extends React.Component {
   }
 
   render() {
-    const {
-      scriptNameData,
-      lessonData,
-      scriptData,
-      currentLevelId,
-      isRtl
-    } = this.props;
+    const {scriptNameData, lessonData, scriptData, currentLevelId, isRtl} =
+      this.props;
 
     const showFinish = !!(
       this.props.lessonData && this.props.lessonData.finishLink

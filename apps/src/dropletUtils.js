@@ -638,7 +638,7 @@ function populateCompleterApisFromConfigBlocks(
       }
 
       newApi.completer = {
-        insertMatch: function(value, editor) {
+        insertMatch: function (value, editor) {
           // Remove the filterText that was already typed (ace's built-in
           // insertMatch would normally do this automatically) plus the rest of
           // the identifier after the filterText...
@@ -649,10 +649,11 @@ function populateCompleterApisFromConfigBlocks(
               range.start.column -=
                 editor.completer.completions.filterText.length;
               const line = editor.session.getLine(range.end.row);
-              const lengthOfRestOfIdentifier = acUtil.retrieveFollowingIdentifier(
-                line,
-                range.end.column
-              ).length;
+              const lengthOfRestOfIdentifier =
+                acUtil.retrieveFollowingIdentifier(
+                  line,
+                  range.end.column
+                ).length;
               range.end.column += lengthOfRestOfIdentifier;
               modifyingExistingFunctionCall = line[range.end.column] === '(';
               editor.session.remove(range);
@@ -830,11 +831,9 @@ function filterListBasedOnWordMatches(prefix, list) {
   return list.filter(completion => {
     const {value} = completion;
     // https://stackoverflow.com/a/34680912
-    const edges = /([A-Z](?=[A-Z][a-z])|[^A-Z](?=[A-Z])|[a-zA-Z](?=[^a-zA-Z]))/g;
-    const words = value
-      .replace('.', '_')
-      .replace(edges, '$1_')
-      .split('_');
+    const edges =
+      /([A-Z](?=[A-Z][a-z])|[^A-Z](?=[A-Z])|[a-zA-Z](?=[^a-zA-Z]))/g;
+    const words = value.replace('.', '_').replace(edges, '$1_').split('_');
     // Transform words into phrases that we consider to be "matches": e.g.
     // words ['get', 'Time'] become phrases ['getTime', 'Time']
     const phrases = words.map((word, index) => words.slice(index).join(''));
@@ -1147,7 +1146,9 @@ export function setParamAtIndex(index, value, block) {
 
 /**
  * Take a string like "'param1', 'param2'" and an index and return
- * the param at the given index without extra quotes, commas or spaces.
+ * the param at the given index without extra quotes, commas or spaces
+ * Note: The sanitization here is too aggressive for some parameters and
+ * is the cause of at least one bug: https://codedotorg.atlassian.net/browse/SL-580
  */
 function formatParamString(index, params) {
   // Use encodeURIComponent to encode everything except commas outside

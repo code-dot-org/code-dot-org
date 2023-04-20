@@ -5,31 +5,25 @@ import {
   matchQuestionWith4Pairs
 } from './assessmentsTestHelpers';
 
-export default storybook => {
-  return storybook
-    .storiesOf('SectionAssessments/MatchAssessmentsOverviewTable', module)
-    .addStoryTable([
-      {
-        name: 'Assessment match with 4 option/answer pairs',
-        description: 'Ability to see assessment overview for a section',
-        story: () => (
-          <UnconnectedMatchAssessmentsOverviewTable
-            questionAnswerData={matchQuestionWith4Pairs}
-            openDialog={() => {}}
-            setQuestionIndex={() => {}}
-          />
-        )
-      },
-      {
-        name: 'Assessment match with 2 option/answer pairs',
-        description: 'Ability to see assessment overview for a section',
-        story: () => (
-          <UnconnectedMatchAssessmentsOverviewTable
-            questionAnswerData={matchQuestionWith2Pairs}
-            openDialog={() => {}}
-            setQuestionIndex={() => {}}
-          />
-        )
-      }
-    ]);
+export default {
+  title: 'MatchAssessmentsOverviewTable',
+  component: UnconnectedMatchAssessmentsOverviewTable
+};
+
+const Template = args => (
+  <UnconnectedMatchAssessmentsOverviewTable
+    openDialog={() => {}}
+    setQuestionIndex={() => {}}
+    {...args}
+  />
+);
+
+export const With4OptionAnswerPairs = Template.bind({});
+With4OptionAnswerPairs.args = {
+  questionAnswerData: matchQuestionWith4Pairs
+};
+
+export const With2OptionAnswerPairs = Template.bind({});
+With2OptionAnswerPairs.args = {
+  questionAnswerData: matchQuestionWith2Pairs
 };

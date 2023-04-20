@@ -1,0 +1,68 @@
+{
+  "name": "focus-on-design-with-purpose-2023",
+  "script_names": [
+    "focus-on-design-with-purpose1-2023",
+    "focus-on-design-with-purpose2-2023",
+    "focus-on-design-with-purpose3-2023",
+    "focus-on-design-with-purpose4a-2023",
+    "focus-on-design-with-purpose4b-2023"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "focus-on-design-with-purpose",
+    "has_verified_resources": true,
+    "version_year": "2023"
+  },
+  "resources": [
+    {
+      "name": "All Code",
+      "url": "/courses/focus-on-design-with-purpose-2023/code",
+      "key": "all_code_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code_4"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/courses/focus-on-design-with-purpose-2023/resources",
+      "key": "all_resources_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_3"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/focus-on-design-with-purpose-2023/standards",
+      "key": "all_standards_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_5"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/focus-on-design-with-purpose-2023/vocab",
+      "key": "all_vocabulary_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2"
+      }
+    }
+  ],
+  "student_resources": [
+
+  ]
+}

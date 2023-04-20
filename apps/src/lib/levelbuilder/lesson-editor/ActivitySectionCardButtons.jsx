@@ -18,7 +18,7 @@ import {
   removeTip
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
-const AddButton = function(props) {
+const AddButton = function (props) {
   let className = 'btn';
   if (props.className) {
     className += ' ' + props.className;
@@ -187,11 +187,8 @@ class ActivitySectionCardButtons extends Component {
   };
 
   render() {
-    const {
-      allowMajorCurriculumChanges,
-      isLastActivitySection,
-      isLastActivity
-    } = this.props;
+    const {allowMajorCurriculumChanges, isLastActivitySection, isLastActivity} =
+      this.props;
 
     return (
       <div>

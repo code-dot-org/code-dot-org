@@ -155,6 +155,15 @@ class ProjectsController < ApplicationController
     },
     thebadguys: {
       name: 'New The Bad Guys Project'
+    },
+    story: {
+      name: 'New Story Project'
+    },
+    science: {
+      name: 'New Science Project'
+    },
+    time_capsule: {
+      name: 'New Time Capsule Project'
     }
   }.with_indifferent_access.freeze
 
@@ -386,6 +395,8 @@ class ProjectsController < ApplicationController
       return head :bad_request
     end
     project_type = params[:key]
+    return head :forbidden if Projects.in_restricted_share_mode(src_channel_id, project_type)
+
     new_channel_id = ChannelToken.create_channel(
       request.ip,
       Projects.new(get_storage_id),
@@ -406,7 +417,12 @@ class ProjectsController < ApplicationController
   end
 
   private def uses_animation_bucket?(project_type)
-    %w(gamelab spritelab).include? project_type
+    projects_that_use_animations = ['gamelab']
+    poetry_subtypes = Poetry.standalone_app_names.map {|item| item[1]}
+    spritelab_subtypes = GamelabJr.standalone_app_names.map {|item| item[1]}
+    projects_that_use_animations.concat(poetry_subtypes)
+    projects_that_use_animations.concat(spritelab_subtypes)
+    projects_that_use_animations.include?(project_type)
   end
 
   private def uses_file_bucket?(project_type)
@@ -466,12 +482,10 @@ class ProjectsController < ApplicationController
     !project_validator && limited_project_gallery
   end
 
-  private
-
   # @param iframe_embed [Boolean] Whether the project view event was via iframe.
   # @param sharing [Boolean] Whether the project view event was via share page.
   # @returns [String] A string representing the project view event type.
-  def project_view_event_type(iframe_embed, sharing)
+  private def project_view_event_type(iframe_embed, sharing)
     if iframe_embed
       'iframe_embed'
     elsif sharing
@@ -481,7 +495,7 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def get_from_cache(key)
+  private def get_from_cache(key)
     if Unit.should_cache?
       @@project_level_cache[key] ||= Level.find_by_key(key)
     else
@@ -490,7 +504,7 @@ class ProjectsController < ApplicationController
   end
 
   # For certain actions, check a special permission before proceeding.
-  def authorize_load_project!
+  private def authorize_load_project!
     authorize! :load_project, params[:key]
   end
 
