@@ -68,7 +68,7 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
     <div>
       <div className={moduleStyles.input}>
         <label className={moduleStyles.decideLater} htmlFor="decide-later">
-          {i18n.decideLater()}
+          {i18n.noCurriculumAssigned()}
         </label>
         <input
           checked={decideLater}
