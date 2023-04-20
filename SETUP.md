@@ -10,7 +10,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Request and Configure AWS access (code.org staff) or configure local secrets (open source contributors). See [Configure AWS Access or Secrets](#configure-aws-access-or-secrets) below. This step is not required until rake is first run below, but staff may wish to submit the request first so its ready when rake is.
 
 1. Install OS-specific prerequisites
-   - See the appropriate section below: [OS X](#os-x-monterey---including-apple-silicon-m1), [Ubuntu](#ubuntu-1804-download-iso), [Windows](#windows)
+   - See the appropriate section below: [macOS](#macos), [Ubuntu](#ubuntu-1804-download-iso), [Windows](#windows)
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
@@ -98,13 +98,18 @@ External contributors can supply alternate placeholder values for secrets normal
 
 ## OS-specific prerequisites
 
-### OS X Monterey - including Apple Silicon (M1)
+### macOS
 
-These steps are for OSX devices, including Apple Macbooks running on [Apple Silicon (M1)](https://en.wikipedia.org/wiki/Apple_silicon#M_series). At this time, if you are using an M1 Macbook, we strongly recommend using Rosetta to set up an Intel-based development environment vs. trying to make things work with the ARM-based Apple Silicon environment.
+These steps are for Apple devices running **macOS Monterey and Ventura**, including those running on [Apple Silicon (M1|M2)](https://en.wikipedia.org/wiki/Apple_silicon#M_series). 
 
-These steps may need to change over time as 3rd party tools update to have versions compatible with the new architecture.
+Notes:
+- At this time, if you are using an M1 Macbook, we recommend using Rosetta to set up an Intel-based development environment vs. trying to make things work with the ARM-based Apple Silicon environment.
+- These steps may need to change over time as 3rd party tools update to have versions compatible with the new architecture.
+- As macOS Catalina is no longer receiving security updates, we cannot recommend using it. If you still need support, see [old setup.md instructions for Catalina](https://github.com/code-dot-org/code-dot-org/blob/138d08a6f304c289e2b4388f513d81954ec85158/SETUP.md#os-x-catalina)
 
-0. _(M1 Mac users only)_ Install Rosetta 2.
+Setup steps for macOS:
+
+1. _(M1 Mac users only)_ Install Rosetta 2.
 
   - Check if Rosetta is already installed: `/usr/bin/pgrep -q oahd && echo Yes || echo No`
   - If not, install Rosetta using
@@ -196,114 +201,6 @@ These steps may need to change over time as 3rd party tools update to have versi
 1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
 1. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. Note that there are additional steps for Apple Silicon (M1) when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
-
-### OS X Catalina
-
-1. Choose shell. Starting in Catalina, [the default shell for new users is zsh](https://support.apple.com/en-us/HT208050). Most developers at Code.org are still using bash so that may be a smoother experience for now.
-    <details>
-      <summary>To use bash:</summary>
-
-      * Switch the default shell back to bash and disable the warning:
-        * `chsh -s /bin/bash`
-        * Add the following to `~/.bash_profile` or your desired shell configuration file:
-          ```
-          export BASH_SILENCE_DEPRECATION_WARNING=1
-          ```
-    </details>
-    <details>
-      <summary>Optional configuration steps for zsh:</summary>
-              
-      * Setup git prompt and git autocompletion
-        * Download git-prompt.sh
-          ```
-          mkdir -p ~/bin/oh-my-zsh
-          curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/gitfast/git-prompt.sh > ~/bin/oh-my-zsh/git-prompt.sh
-          ```
-        * Add the following to `~/.zshrc` or your desired shell configuration file:
-          ```
-          # git prompt
-          source ~/bin/oh-my-zsh/git-prompt.sh
-          GIT_PS1_SHOWCOLORHINTS=1
-          GIT_PS1_SHOWDIRTYSTATE=1
-          GIT_PS1_SHOWUNTRACKEDFILES=1
-          setopt PROMPT_SUBST ; PS1='%m:%~$(__git_ps1 " (%s)")\$ '
-           
-          # git completion
-          source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.zsh >/dev/null 2>&1
-           
-          # make git checkout not show remote branches
-          GIT_COMPLETION_CHECKOUT_NO_GUESS=1
-          autoload -Uz compinit && compinit
-          ```
-        * fix any problems with compinit:
-          ```
-          compaudit | xargs chmod g-w
-          ```
-    </details>
-1. Install Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
-1. Install Redis: `brew install redis`
-1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite parallel tidy-html5`
-    <details>
-      <summary>Troubleshoot: pdftk errors</summary>
-
-      * If it complains about pdftk, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb from the above command seems to not have serious side effects (it will cause `PDFMergerTest` to fail). It may be a new URL is needed in the dependency list, see https://leancrew.com/all-this/2017/01/pdftk/
-    </details>
-    <details>
-      <summary>Troubleshoot: old version of <code>&lt;package&gt;</code></summary>
-
-      * If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
-    </details>
-1. Set up MySQL
-    1. Force link 5.7 version: `brew link mysql@5.7 --force`
-    1. Have `launchd` start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
-        1. Note, the folder name may instead be "mysql@5.7", if so, modify the command accordingly: `ln -sfv /usr/local/opt/mysql@5.7/*.plist ~/Library/LaunchAgents`, or use `ls -d /usr/local/opt/mysql*` to check for the correct folder name.
-    1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
-        1. Note: if this fails check your plist file (`ls ~/Library/LaunchAgents/`) to see if it is "homebrew.mxcl.mysql@5.7.plist". If it is try: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql@5.7.plist` instead
-1. Set up rbenv
-    1. Run `rbenv init`
-    1. Add the following to `~/.bash_profile` or your desired shell: `eval "$(rbenv init -)"`. More info [here](https://github.com/rbenv/rbenv#homebrew-on-mac-os-x).
-    1. Pick up those changes: `source ~/.bash_profile`
-1. Install Ruby
-    1. Execute `rbenv install --skip-existing` from the root directory
-    1. Install shims for all Ruby executables: `rbenv rehash`. More info [here](https://github.com/rbenv/rbenv#rbenv-rehash).
-1. Set up [nvm](https://github.com/creationix/nvm)
-    1. Create nvm's working directory if it doesnt exist: `mkdir ~/.nvm`
-    1. Add the following to `~/.bash_profile` or your desired shell configuration file:
-
-        ```
-        # Load nvm function into the shell
-        export NVM_DIR=~/.nvm
-        source $(brew --prefix nvm)/nvm.sh
-        ```
-
-    1. Pick up those changes: `source ~/.bash_profile`
-1. Install Node and yarn
-    1. `nvm install 16.19.0 && nvm alias default 16.19.0` this command should make this version the default version and print something like: `Creating default alias: default -> 16.19.0 (-> v16.19.0)`
-    1. `npm install -g yarn@1.22.5`.
-    1. (Note: You will have to come back to this step after you clone your repository) Reinstall node_modules `cd apps; yarn; cd ..`
-1. Install OpenSSL:
-    1. `brew install openssl`
-    1. `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
-1. If you want to render personalized certificates locally, see these special instructions regarding [ImageMagick with pango](#imagemagick-with-pango).
-1. Prevent future problems related to the `Too many open files` error:
-    1. Add the following to `~/.bash_profile` or your desired shell configuration file:
-        ```
-        ulimit -n 8192
-        ```
-    1. close and reopen your current terminal window
-    1. make sure that `ulimit -n` returns 8192
-1. Install the Xcode Command Line Tools:
-    1. `xcode-select --install`
-
-    <details>
-      <summary>Troubleshoot: command line tools already installed</summary>
-
-      If it complains `xcode-select: error: command line tools are already installed, use "Software Update" to install updates`, check to make sure XCode is downloaded and up to date manually.
-    </details>
-
-1. Install the Java 8 JDK: `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`. More info [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
-
-1. [Download](https://www.google.com/chrome/) and install Google Chrome, if you have not already. This is needed in order to be able to run apps tests locally.
 
 ### Ubuntu 18.04
 [Ubuntu 18.04 iso download][ubuntu-iso-url]

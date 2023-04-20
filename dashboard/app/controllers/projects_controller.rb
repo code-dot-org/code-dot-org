@@ -417,7 +417,12 @@ class ProjectsController < ApplicationController
   end
 
   private def uses_animation_bucket?(project_type)
-    %w(gamelab spritelab).include? project_type
+    projects_that_use_animations = ['gamelab']
+    poetry_subtypes = Poetry.standalone_app_names.map {|item| item[1]}
+    spritelab_subtypes = GamelabJr.standalone_app_names.map {|item| item[1]}
+    projects_that_use_animations.concat(poetry_subtypes)
+    projects_that_use_animations.concat(spritelab_subtypes)
+    projects_that_use_animations.include?(project_type)
   end
 
   private def uses_file_bucket?(project_type)
