@@ -222,7 +222,7 @@
             },
             {
               "value": "some_units",
-              "text": "Teaching some Code.org units that align to my curriculum for a course that is not only about computer science"
+              "text": "Teaching some Code.org units or lessons that align to my curriculum"
             },
             {
               "value": "expose_cs_concepts",
@@ -600,12 +600,12 @@
               "text": "Data Science"
             },
             {
-              "value": "integrated_cs",
-              "text": "Computer science integrated into other subjects"
+              "value": "python",
+              "text": "Coding with Python"
             },
             {
-              "value": "how_the_internet_works",
-              "text": "How the internet works"
+              "value": "integrated_cs",
+              "text": "Computer science integrated into other subjects"
             },
             {
               "value": "other",
@@ -913,7 +913,7 @@
             },
             {
               "value": "pd_barriers_commute",
-              "text": "Attending professional learning requires a long commute"
+              "text": "Attending professional learning requires travel or a long commute"
             },
             {
               "value": "pd_barriers_too_long",
