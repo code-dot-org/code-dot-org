@@ -106,7 +106,7 @@ module Cdo
 
       # Get the CloudFormation Stack Name that the EC2 Instance this code is executing on belongs to.
       # @return [String]
-      def current_stack_name
+      def self.current_stack_name
         metadata_service_request = Net::HTTP.new(EC2_METADATA_SERVICE_BASE_URL.host, EC2_METADATA_SERVICE_BASE_URL.port)
         # Set a short timeout so that when not executing on an EC2 Instance we fail fast.
         metadata_service_request.open_timeout = metadata_service_request.read_timeout = 10
