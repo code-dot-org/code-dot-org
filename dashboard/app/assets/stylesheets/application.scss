@@ -8,6 +8,10 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ * Application assets
+ *= require_self
+ *= require_directory .
+ *
  * Gem assets
  *= require jquery-ui
  *
@@ -15,10 +19,6 @@
  *= require add2home
  *= require gotham-font
  *= require jquery.qtip.min
- *
- * Application assets
- *= require_self
- *= require_directory .
  *
  * Shared
  *= require barlow-semi-condensed-font
@@ -28,6 +28,13 @@
  *= require details-polyfill
  *= require warning-banner
  */
+
+@import url("https://dsco.code.org/assets/font-awesome-pro/css/fontawesome.min.css");
+@import url("https://dsco.code.org/assets/font-awesome-pro/css/brands.min.css");
+@import url("https://dsco.code.org/assets/font-awesome-pro/css/solid.min.css");
+@import url("https://dsco.code.org/assets/font-awesome-pro/css/regular.min.css");
+@import url("https://dsco.code.org/assets/font-awesome-pro/css/v4-font-face.min.css");
+@import url("https://dsco.code.org/assets/font-awesome-pro/css/v4-shims.min.css");
 
 @import "color";
 @import "font";
@@ -47,8 +54,6 @@ $selectUserTypeButtonBackgroundColorSelected: #00adbc;
 $selectUserTypeButtonTextColorSelected: #fff;
 
 @import "bootstrap";
-// Font-awesome 4.6.3
-@import "font-awesome";
 
 p,pre,span {
   @include selectable;
