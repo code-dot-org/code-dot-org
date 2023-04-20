@@ -5,6 +5,14 @@ Implements Typography components with our rebranded styles. Part of global rebra
 At some point it will be moved to (https://github.com/code-dot-org/dsco_), however the signature of the components should
 remain the same, and we'll just need to update the import statements once it's in that library.
 
+### Why there's semanticTag and visualApproach props?
+We're using `semanticTag` prop to define the semantic tag of the element we're going to render (h1, h2, ..., h6, p, strong,
+em, figcaption ), and `visualApproach` prop to define the components styles based on our Design system styling.
+
+Short explanation is that we in order to use semantic tags correctly we might want to render an h2 element, but make it look like h5 or vice versa.
+
+The long explanation [can be found here](https://github.com/code-dot-org/code-dot-org/pull/51116#discussion_r1159915772)
+
 ### Additional styling / rewriting existing styles of the components
 Since we're using scss modules and classnames inside, to overwrite the styles of the components, you need to make sure 
 overwriting styles has highest styles priority. Here's some examples:

@@ -27,6 +27,7 @@ type VisualApproach =
   | 'figcaption';
 
 interface SpecificTypographyElementProps {
+  // Scss module classname to use for the typography element
   visualApproach?: VisualApproach;
   // Additional classnames to apply to the typography element
   className?: string;

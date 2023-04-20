@@ -1,10 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import {
-  SemanticTag,
-  VisualApproach,
-  SpecificTypographyElementProps
-} from './types';
+import {SemanticTag, VisualApproach} from './types';
 
 const styles = require('./typography.module.scss').default;
 
