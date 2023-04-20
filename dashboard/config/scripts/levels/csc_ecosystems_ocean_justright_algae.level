@@ -22,7 +22,7 @@
     "authored_hints": "[]",
     "instructions_important": "false",
     "short_instructions": "Add a third conditional to check if there is the right amount of algae to allow the coral to heal. ",
-    "long_instructions": "##Just Right - Rejuvenating Coral!\r\n**If the fish eat enough algae, the coral heals**\r\n\r\n\r\n- Connect a third conditional block under the second one\r\n\r\n- This  condition should check <code style=\"color:black; background-color:#99CEDB\">if just right algae</code> \r\n- Place a <code style=\"color:black; background-color:#5ED5DD\">change costume</code> behavior ***inside*** the conditional \r\n- Click <code style=\"color:black; background-color:#FFBD46\">Run</code>\r\n- Does the coral change from sick to healthy? \r\n\r\n*Eventually the boat catches most or all of the fish and the sick coral can no longer heal. In the next level you can make modifications to the code to try and balance your ecosystem.*\r\n\r\n",
+    "long_instructions": "##Just Right - A delicate balance!\r\n**If the fish eat enough algae, the coral heals**\r\n\r\n\r\n- Connect a third conditional block under the second one\r\n\r\n- This  condition should check <code style=\"color:black; background-color:#99CEDB\">if just right algae</code> \r\n- Place a <code style=\"color:black; background-color:#5ED5DD\">change costume</code> behavior ***inside*** the conditional \r\n- Click <code style=\"color:black; background-color:#FFBD46\">Run</code> and watch the simulation. Does the coral turn healthy when the fish eat some algae? \r\n\r\n**It is a delicate balance and eventually the boat is overfishing and the sick coral can no longer heal.**\r\n\r\n---\r\n\r\n\r\n**In the next level you can make modifications to the code to try and balance your ecosystem. In lesson 2 you will work on 3 sustainable fishing practices that prevent overfishing.**\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -36,10 +36,9 @@
     "start_in_animation_tab": "false",
     "mini_toolbox": "true",
     "hide_pause_button": "false",
-    "start_animations": "{\"orderedKeys\":[\"c247d528-91b4-4ab1-a93f-8916b87956a1\",\"c0387e17-fd00-46f3-8bcf-ced018027c26\",\"3eefb468-1c6f-466c-bbf3-1a7040c4d104\",\"d5db3227-0338-4a35-9c8e-25a5550c12ac\",\"ba90e012-31f0-4176-9724-7305d95ed96d\",\"333526ee-24fc-4998-bd97-8b5b9f99ef1f\"],\"propsByKey\":{\"333526ee-24fc-4998-bd97-8b5b9f99ef1f\":{\"name\":\"background_underwater_17\",\"categories\":[\"backgrounds\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":399},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:53:15 UTC\",\"pngLastModified\":\"2021-01-19 23:53:16 UTC\",\"version\":\"T3iCeWVvk34YAqG8qfnOzbGcWXDnBqlp\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/T3iCeWVvk34YAqG8qfnOzbGcWXDnBqlp/category_backgrounds/background_underwater_17.png\",\"sourceSize\":{\"x\":400,\"y\":399}},\"ba90e012-31f0-4176-9724-7305d95ed96d\":{\"name\":\"red-coral-dead\",\"frameCount\":1,\"frameSize\":{\"x\":316,\"y\":394},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-18T23:10:11.000Z\",\"pngLastModified\":\"2022-04-18T23:10:10.000Z\",\"version\":\"RQCgmEclO.axc7PWfRZ4NIZdWq6_O8BS\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/RQCgmEclO.axc7PWfRZ4NIZdWq6_O8BS/red-coral-dead.png\",\"sourceSize\":{\"x\":316,\"y\":394}},\"d5db3227-0338-4a35-9c8e-25a5550c12ac\":{\"name\":\"underseadeco_25\",\"categories\":[\"aquatic_objects\"],\"frameCount\":1,\"frameSize\":{\"x\":316,\"y\":394},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:51:11 UTC\",\"pngLastModified\":\"2021-01-19 23:51:14 UTC\",\"version\":\"BhwhWkxxwEdIvnGKm6st6kqUm9QvS.bw\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/BhwhWkxxwEdIvnGKm6st6kqUm9QvS.bw/category_aquatic_objects/underseadeco_25.png\",\"sourceSize\":{\"x\":316,\"y\":394}},\"3eefb468-1c6f-466c-bbf3-1a7040c4d104\":{\"name\":\"green-sea-plant-2\",\"frameCount\":1,\"frameSize\":{\"x\":360,\"y\":390},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-11T21:02:50.000Z\",\"pngLastModified\":\"2022-04-11T21:02:50.000Z\",\"version\":\"5b9IyVs3kjEFG_er_OO9IkBNGtw1AtpA\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/5b9IyVs3kjEFG_er_OO9IkBNGtw1AtpA/green-sea-plant-2.png\",\"sourceSize\":{\"x\":360,\"y\":390}},\"c0387e17-fd00-46f3-8bcf-ced018027c26\":{\"name\":\"boat-net\",\"frameCount\":1,\"frameSize\":{\"x\":970,\"y\":430},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-18T23:22:58.000Z\",\"pngLastModified\":\"2022-04-18T23:22:58.000Z\",\"version\":\"49XQ13C7i18vCcmpZBhHre6n7tDCnjTJ\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/49XQ13C7i18vCcmpZBhHre6n7tDCnjTJ/boat-net.png\",\"sourceSize\":{\"x\":1082,\"y\":480}},\"c247d528-91b4-4ab1-a93f-8916b87956a1\":{\"name\":\"fish_10\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":395,\"y\":247},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:46:44 UTC\",\"pngLastModified\":\"2021-01-19 23:46:45 UTC\",\"version\":\"0rhBDi4DUUwKbJatsf.dSkxMiiPwS2HQ\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/0rhBDi4DUUwKbJatsf.dSkxMiiPwS2HQ/category_animals/fish_10.png\",\"sourceSize\":{\"x\":395,\"y\":247}}}}\r\n\r\n",
+    "start_animations": "{\"orderedKeys\":[\"224a49c5-c59f-4da8-8e87-2b7c68e11657\",\"dd1e6250-a641-4bbf-b5ff-c9502e7b7743\",\"32f872bb-78fc-41d9-97c1-ed4e5613ab05\",\"2e3e0cec-9d68-42b4-9966-8a7a198cb727\",\"aff99bb2-a237-4d1e-818e-996ab82e001e\",\"1918c24b-863e-4a04-8acd-6366b7a0e114\"],\"propsByKey\":{\"1918c24b-863e-4a04-8acd-6366b7a0e114\":{\"name\":\"underseadeco_25\",\"categories\":[\"aquatic_objects\"],\"frameCount\":1,\"frameSize\":{\"x\":316,\"y\":394},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:51:11 UTC\",\"pngLastModified\":\"2021-01-19 23:51:14 UTC\",\"version\":\"BhwhWkxxwEdIvnGKm6st6kqUm9QvS.bw\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/BhwhWkxxwEdIvnGKm6st6kqUm9QvS.bw/category_aquatic_objects/underseadeco_25.png\",\"sourceSize\":{\"x\":316,\"y\":394}},\"aff99bb2-a237-4d1e-818e-996ab82e001e\":{\"name\":\"red-coral-dead\",\"frameCount\":1,\"frameSize\":{\"x\":316,\"y\":394},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-18T23:10:11.000Z\",\"pngLastModified\":\"2022-04-18T23:10:10.000Z\",\"version\":\"RQCgmEclO.axc7PWfRZ4NIZdWq6_O8BS\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/RQCgmEclO.axc7PWfRZ4NIZdWq6_O8BS/red-coral-dead.png\",\"sourceSize\":{\"x\":316,\"y\":394}},\"2e3e0cec-9d68-42b4-9966-8a7a198cb727\":{\"name\":\"green-sea-plant-2\",\"frameCount\":1,\"frameSize\":{\"x\":360,\"y\":390},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-11T21:02:50.000Z\",\"pngLastModified\":\"2022-04-11T21:02:50.000Z\",\"version\":\"5b9IyVs3kjEFG_er_OO9IkBNGtw1AtpA\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/5b9IyVs3kjEFG_er_OO9IkBNGtw1AtpA/green-sea-plant-2.png\",\"sourceSize\":{\"x\":360,\"y\":390}},\"32f872bb-78fc-41d9-97c1-ed4e5613ab05\":{\"name\":\"background_underwater_17\",\"categories\":[\"backgrounds\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":399},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:53:15 UTC\",\"pngLastModified\":\"2021-01-19 23:53:16 UTC\",\"version\":\"T3iCeWVvk34YAqG8qfnOzbGcWXDnBqlp\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/T3iCeWVvk34YAqG8qfnOzbGcWXDnBqlp/category_backgrounds/background_underwater_17.png\",\"sourceSize\":{\"x\":400,\"y\":399}},\"dd1e6250-a641-4bbf-b5ff-c9502e7b7743\":{\"name\":\"fishing_boat\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":257},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2023-04-18T14:06:23.000Z\",\"pngLastModified\":\"2023-04-18T14:06:23.000Z\",\"version\":\"1A9TeBxUn2WkvaG5XC.LuRFKOXzbWPST\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/1A9TeBxUn2WkvaG5XC.LuRFKOXzbWPST/fishing_boat.png\",\"sourceSize\":{\"x\":400,\"y\":257}},\"224a49c5-c59f-4da8-8e87-2b7c68e11657\":{\"name\":\"fish_10\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":395,\"y\":247},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:46:44 UTC\",\"pngLastModified\":\"2021-01-19 23:46:45 UTC\",\"version\":\"0rhBDi4DUUwKbJatsf.dSkxMiiPwS2HQ\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/0rhBDi4DUUwKbJatsf.dSkxMiiPwS2HQ/category_animals/fish_10.png\",\"sourceSize\":{\"x\":395,\"y\":247}}}}\r\n\r\n",
     "instructions_icon": "crab",
     "name_suffix": "_2023",
-    "validation_code": "if (World.frameCount == 1) {\r\n  \tvalidationProps.coralSickened = false;\r\n  \tsetWaitTime(500);\r\n  \t// Check that the coral starts in the right costume\r\n\taddCriteria(function() {\r\n      return countByAnimation({\"costume\": \"underseadeco_24\"}) >= 1 &&\r\n        \t countByAnimation({\"costume\": \"underseadeco_25\"}) >= 1;\r\n    }, \"changeOrSetCostumeEvent\");\r\n\r\n \t// Check that there is more than 8 algae and the coral costume changes appropriately\r\n  \taddCriteria(function() {\r\n    \tvar criteriaState = (\r\n          countByAnimation({\"costume\": \"green-sea-plant-2\"}) > 8 &&\r\n          countByAnimation({\"costume\": \"red-coral-dead\"}) >= 1 &&\r\n          countByAnimation({\"costume\": \"purple-coral-dead\"}) >= 1\r\n        );\r\n      \tif (criteriaState == true) {\r\n        \tvalidationProps.coralSickened = true;\r\n          \treturn true;\r\n        }\r\n      \treturn false;\r\n    }, \"changeOrSetCostumeEvent\");\r\n\r\n  \t// Check that the coral was sickened and then check that if the algae count is less than 8 that the costumes change back\r\n    addCriteria(function() {\r\n      \tconsole.log(validationProps.coralSickened == true);\r\n          return (\r\n           \tvalidationProps.coralSickened == true &&\r\n            countByAnimation({\"costume\": \"green-sea-plant-2\"}) < 8 &&\r\n            countByAnimation({\"costume\": \"underseadeco_25\"}) >= 1 &&\r\n            countByAnimation({\"costume\": \"underseadeco_24\"}) >= 1\r\n          );\r\n      }, \"changeOrSetCostumeEvent\");\r\n}\r\n\r\ncheck();",
     "standalone_app_name": "spritelab",
     "preload_asset_list": null,
     "encrypted_examples": [
@@ -51,7 +50,7 @@
   "created_at": "2023-03-30T01:04:11.000Z",
   "level_num": "custom",
   "user_id": 18528,
-  "audit_log": "[{\"changed_at\":\"2023-03-30T01:04:11.593+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_coral_health_2023\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_coral_health_2023\"},{\"changed_at\":\"2023-03-30 01:07:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-30 01:08:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-30 01:09:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-30 02:01:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-30 22:48:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-03-31 16:52:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-31 16:57:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-31 16:59:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-04-03 21:32:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-04-06 21:48:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-04-10 22:05:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-10 22:06:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-10 22:08:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-10 22:11:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-12 20:56:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-12 20:58:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-12 20:59:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-12 21:00:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-13 23:34:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-30T01:04:11.593+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_coral_health_2023\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_coral_health_2023\"},{\"changed_at\":\"2023-03-30 01:07:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-30 01:08:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-30 01:09:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-30 02:01:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-30 22:48:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-03-31 16:52:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-31 16:57:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-31 16:59:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-04-03 21:32:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-04-06 21:48:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-04-10 22:05:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-10 22:06:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-10 22:08:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-10 22:11:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-12 20:56:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-12 20:58:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-12 20:59:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-12 21:00:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-13 23:34:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-18 15:26:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-18 15:42:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-18 15:44:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-18 15:46:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-18 15:47:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-18 15:49:13 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-18 16:00:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-18 22:30:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-18 22:32:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -62,7 +61,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"boat-net"</field>
+              <field name="ANIMATION">"fishing_boat"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -75,6 +74,72 @@
               <value name="THIS">
                 <block type="gamelab_objectSpritePointer"/>
               </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"fish_10"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"green-sea-plant-2"</field>
+            </block>
+          </value>
+          <next>
+            <block type="ecosystems_eat">
+              <value name="THIS">
+                <block type="gamelab_objectSpritePointer"/>
+              </value>
+              <next>
+                <block type="ecosystems_goldilocks">
+                  <field name="CONDITION">"too much"</field>
+                  <field name="SPRITE">"green-sea-plant-2"</field>
+                  <statement name="STATEMENT">
+                    <block type="gamelab_setAnimation">
+                      <field name="ANIMATION">"red-coral-dead"</field>
+                      <value name="THIS">
+                        <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                          <field name="ANIMATION">"underseadeco_25"</field>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="ecosystems_goldilocks">
+                      <field name="CONDITION">"too little"</field>
+                      <field name="SPRITE">"green-sea-plant-2"</field>
+                      <statement name="STATEMENT">
+                        <block type="gamelab_removeAllBehaviors">
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <field name="ANIMATION">"fish_10"</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_addBehaviorSimple" can_disconnect_from_parent="false">
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <field name="ANIMATION">"fish_10"</field>
+                                </block>
+                              </value>
+                              <value name="BEHAVIOR">
+                                <block type="gamelab_behavior_get">
+                                  <mutation/>
+                                  <field name="VAR" id="moving east">leaving the area</field>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
             </block>
           </next>
         </block>
@@ -252,72 +317,6 @@
               </next>
             </block>
           </statement>
-        </block>
-        <block type="gamelab_checkTouching">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"fish_10"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"green-sea-plant-2"</field>
-            </block>
-          </value>
-          <next>
-            <block type="ecosystems_eat">
-              <value name="THIS">
-                <block type="gamelab_objectSpritePointer"/>
-              </value>
-              <next>
-                <block type="ecosystems_goldilocks">
-                  <field name="CONDITION">"too much"</field>
-                  <field name="SPRITE">"green-sea-plant-2"</field>
-                  <statement name="STATEMENT">
-                    <block type="gamelab_setAnimation">
-                      <field name="ANIMATION">"red-coral-dead"</field>
-                      <value name="THIS">
-                        <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                          <field name="ANIMATION">"underseadeco_25"</field>
-                        </block>
-                      </value>
-                    </block>
-                  </statement>
-                  <next>
-                    <block type="ecosystems_goldilocks">
-                      <field name="CONDITION">"too little"</field>
-                      <field name="SPRITE">"green-sea-plant-2"</field>
-                      <statement name="STATEMENT">
-                        <block type="gamelab_removeAllBehaviors">
-                          <value name="SPRITE">
-                            <block type="gamelab_allSpritesWithAnimation">
-                              <field name="ANIMATION">"fish_10"</field>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="gamelab_addBehaviorSimple" can_disconnect_from_parent="false">
-                              <value name="SPRITE">
-                                <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"fish_10"</field>
-                                </block>
-                              </value>
-                              <value name="BEHAVIOR">
-                                <block type="gamelab_behavior_get">
-                                  <mutation/>
-                                  <field name="VAR" id="moving east">leaving the area</field>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </statement>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
         </block>
         <block type="behavior_definition" editable="false" uservisible="false" usercreated="true">
           <mutation>
@@ -1474,7 +1473,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"fish_05"</field>
+              <field name="ANIMATION">"fish_10"</field>
             </block>
           </value>
           <value name="SPRITE2">

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "katies-playground",
-    "serialized_at": "2023-04-11 21:17:31 UTC",
+    "serialized_at": "2023-04-18 14:12:30 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -120,6 +120,18 @@
       }
     },
     {
+      "key": "75cc4d2b-8260-4058-a702-05b44373209f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "75cc4d2b-8260-4058-a702-05b44373209f",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
       "key": "6ba8448f-f4b4-4507-b927-dafa1a62090f",
       "position": 1,
       "properties": {
@@ -151,6 +163,16 @@
       "seeding_key": {
         "activity_section.key": "0bd34327-76e4-4e46-9c5a-ec13578c44d5",
         "lesson_activity.key": "3a59b3ea-70c8-438a-8cc0-4c13067d1c50"
+      }
+    },
+    {
+      "key": "cf464d25-60d7-4749-aabf-0614d64b05d4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cf464d25-60d7-4749-aabf-0614d64b05d4",
+        "lesson_activity.key": "75cc4d2b-8260-4058-a702-05b44373209f"
       }
     },
     {
@@ -535,6 +557,30 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "New Ocean Setup Test"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "cf464d25-60d7-4749-aabf-0614d64b05d4"
+      },
+      "level_keys": [
+        "New Ocean Setup Test"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Artist Functions Test 1"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "Artist Functions Test 1"
         ],
         "lesson.key": "lesson-4",
@@ -547,11 +593,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Collecting Samples 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -568,11 +617,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Collecting Samples 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -589,11 +641,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Counting Samples 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -610,11 +665,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Counting Samples 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -810,6 +868,18 @@
         "lesson_group.key": "",
         "script.name": "katies-playground",
         "activity_section.key": "0bd34327-76e4-4e46-9c5a-ec13578c44d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "New Ocean Setup Test",
+        "script_level.level_keys": [
+          "New Ocean Setup Test"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "cf464d25-60d7-4749-aabf-0614d64b05d4"
       }
     },
     {
