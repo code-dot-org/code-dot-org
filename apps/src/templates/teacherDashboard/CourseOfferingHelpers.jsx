@@ -46,3 +46,20 @@ export const translatedCourseOfferingDurations = {
   week: i18n.week(),
   lesson: i18n.lesson()
 };
+
+export const subjectsAndTopicsOrder = [
+  'math',
+  'science',
+  'english_language_arts',
+  'history',
+  'artificial_intelligence',
+  'web_design',
+  'cybersecurity',
+  'physical_computing',
+  'internet',
+  'app_design',
+  'games_and_animations',
+  'art_and_design',
+  'data',
+  'programming'
+];
