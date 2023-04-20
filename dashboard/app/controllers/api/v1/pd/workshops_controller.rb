@@ -175,7 +175,11 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       current_user.permission?(UserPermission::PROGRAM_MANAGER) ||
       current_user.permission?(UserPermission::WORKSHOP_ADMIN)
 
-    if @workshop.update(workshop_params(can_update_regional_partner))
+    new_workshop_params = workshop_params(can_update_regional_partner)
+
+    if @workshop.virtual != new_workshop_params[:virtual] && user_cannot_freely_edit_virtual
+      render json: {error: "non-workshop-admin cannot change CSP/CSA Summer Workshop virtual field within a month of it starting."}, status: :bad_request
+    elsif @workshop.update(new_workshop_params)
       notify if should_notify?
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
     else
@@ -187,7 +191,10 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   def create
     @workshop.organizer = current_user
     adjust_facilitators
-    if @workshop.save
+
+    if @workshop.virtual && user_cannot_freely_edit_virtual
+      render json: {error: "non-workshop-admin cannot create a virtual CSP/CSA Summer Workshop within a month of it starting."}, status: :bad_request
+    elsif @workshop.save
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
     else
       render json: {errors: @workshop.errors.full_messages}, status: :bad_request
@@ -316,5 +323,21 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     allowed_params.delete :organizer_id unless current_user.permission?(UserPermission::WORKSHOP_ADMIN)
 
     params.require(:pd_workshop).permit(*allowed_params)
+  end
+
+  # Determine if the 'virtual' workshop field cannot be freely set/updated by the user.
+  # Returns true if the following are all true:
+  #   - it is a CSP or CSA Summer Workshop
+  #   - the user is not a Workshop Admin
+  #   - it is being created within a month of it starting
+  # If true, then setting/updating 'virtual' is limited:
+  #   - when creating this workshop, 'virtual' can only be set as false (i.e. 'in-person').
+  #   - when editing this workshop, 'virtual' cannot be changed.
+  private def user_cannot_freely_edit_virtual
+    (
+      (@workshop.course == Pd::Workshop::COURSE_CSP || @workshop.course == Pd::Workshop::COURSE_CSA) &&
+      !current_user.permission?(UserPermission::WORKSHOP_ADMIN) &&
+      (@workshop.workshop_starting_date - 1.month <= Time.now && Time.now <= @workshop.workshop_starting_date)
+    )
   end
 end
