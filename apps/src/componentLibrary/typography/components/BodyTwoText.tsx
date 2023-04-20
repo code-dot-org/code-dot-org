@@ -1,14 +1,8 @@
 import React from 'react';
-import Typography, {VisualApproach} from './../index';
+import Typography from './../index';
+import {SpecificTypographyElementProps} from '../types';
 
-interface BodyTwoTextProps {
-  visualApproach?: VisualApproach;
-  className?: string;
-  style?: React.CSSProperties;
-  children: React.ReactNode;
-}
-
-const BodyTwoText: React.FunctionComponent<BodyTwoTextProps> = ({
+const BodyTwoText: React.FunctionComponent<SpecificTypographyElementProps> = ({
   visualApproach,
   className,
   style,

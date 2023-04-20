@@ -1,14 +1,8 @@
 import React from 'react';
-import Typography, {VisualApproach} from './../index';
+import Typography from './../index';
+import {SpecificTypographyElementProps} from '../types';
 
-interface BodyOneTextProps {
-  visualApproach?: VisualApproach;
-  className?: string;
-  style?: React.CSSProperties;
-  children: React.ReactNode;
-}
-
-const BodyOneText: React.FunctionComponent<BodyOneTextProps> = ({
+const BodyOneText: React.FunctionComponent<SpecificTypographyElementProps> = ({
   visualApproach,
   className,
   style,

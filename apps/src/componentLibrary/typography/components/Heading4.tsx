@@ -1,14 +1,8 @@
 import React from 'react';
-import Typography, {VisualApproach} from './../index';
+import Typography from './../index';
+import {SpecificTypographyElementProps} from '../types';
 
-interface Heading4Props {
-  visualApproach?: VisualApproach;
-  className?: string;
-  style?: React.CSSProperties;
-  children: React.ReactNode;
-}
-
-const Heading4: React.FunctionComponent<Heading4Props> = ({
+const Heading4: React.FunctionComponent<SpecificTypographyElementProps> = ({
   visualApproach,
   className,
   style,

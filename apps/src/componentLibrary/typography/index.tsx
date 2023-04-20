@@ -1,40 +1,18 @@
 import React from 'react';
 import classnames from 'classnames';
+import {
+  SemanticTag,
+  VisualApproach,
+  SpecificTypographyElementProps
+} from './types';
 
 const styles = require('./typography.module.scss').default;
-
-type SemanticTag =
-  | 'h1'
-  | 'h2'
-  | 'h3'
-  | 'h4'
-  | 'h5'
-  | 'h6'
-  | 'p'
-  | 'strong'
-  | 'em'
-  | 'figcaption';
-
-type VisualApproach =
-  | 'heading-xxl'
-  | 'heading-xl'
-  | 'heading-lg'
-  | 'heading-md'
-  | 'heading-sm'
-  | 'heading-xs'
-  | 'body-one'
-  | 'body-two'
-  | 'overline'
-  | 'strong'
-  | 'em'
-  | 'figcaption';
 
 interface TypographyProps {
   // Html tag to use for the typography element
   semanticTag: SemanticTag;
   // Scss module classname to use for the typography element
   visualApproach?: VisualApproach;
-
   // Additional classnames to apply to the typography element
   className?: string;
   // Inline styles to apply to the typography element
@@ -65,7 +43,6 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
   );
 };
 
-export {SemanticTag, VisualApproach};
 export {default as Heading1} from './components/Heading1';
 export {default as Heading2} from './components/Heading2';
 export {default as Heading3} from './components/Heading3';

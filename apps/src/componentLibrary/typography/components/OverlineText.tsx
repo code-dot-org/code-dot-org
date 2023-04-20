@@ -1,14 +1,8 @@
 import React from 'react';
-import Typography, {VisualApproach} from './../index';
+import Typography from './../index';
+import {SpecificTypographyElementProps} from '../types';
 
-interface OverlineTextProps {
-  visualApproach?: VisualApproach;
-  className?: string;
-  style?: React.CSSProperties;
-  children: React.ReactNode;
-}
-
-const OverlineText: React.FunctionComponent<OverlineTextProps> = ({
+const OverlineText: React.FunctionComponent<SpecificTypographyElementProps> = ({
   visualApproach,
   className,
   style,

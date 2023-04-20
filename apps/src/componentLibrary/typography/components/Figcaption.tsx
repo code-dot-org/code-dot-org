@@ -1,14 +1,8 @@
 import React from 'react';
-import Typography, {VisualApproach} from './../index';
+import Typography from './../index';
+import {SpecificTypographyElementProps} from '../types';
 
-interface FigcaptionProps {
-  visualApproach?: VisualApproach;
-  className?: string;
-  style?: React.CSSProperties;
-  children: React.ReactNode;
-}
-
-const Figcaption: React.FunctionComponent<FigcaptionProps> = ({
+const Figcaption: React.FunctionComponent<SpecificTypographyElementProps> = ({
   visualApproach,
   className,
   style,
