@@ -41,8 +41,8 @@ const specificTypographyComponentsToGenerate: SpecificTypographyElementToGenerat
 
 const generateSpecificTypographyComponents = (
   componentsToGenerate: SpecificTypographyElementToGenerateTemplate[]
-): {[key: string]: React.FunctionComponent<SpecificTypographyElementProps>} => {
-  return componentsToGenerate.reduce((acc, componentTemplateData) => {
+): {[key: string]: React.FunctionComponent<SpecificTypographyElementProps>} =>
+  componentsToGenerate.reduce((acc, componentTemplateData) => {
     const {displayName, semanticTag, defaultVisualApproach} =
       componentTemplateData;
 
@@ -65,7 +65,6 @@ const generateSpecificTypographyComponents = (
     SpecificTypographyComponent.displayName = displayName;
     return {...acc, [displayName]: SpecificTypographyComponent};
   }, {});
-};
 
 export const {
   Heading1,
