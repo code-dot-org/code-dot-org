@@ -4,15 +4,19 @@ const CORNER_RADIUS = 3;
 const INNER_HEIGHT = 16;
 
 export default class CdoFieldButton extends GoogleBlockly.Field {
-  constructor(title, opt_buttonHandler, opt_color, opt_changeHandler) {
+  // Third argument (color) is used by CDO blockly, so we include it in
+  // method signature for compatibility
+  constructor(title, opt_buttonHandler, _, opt_changeHandler) {
     super('');
 
     this.title_ = title;
     this.buttonHandler_ = opt_buttonHandler;
-    this.color_ = opt_color;
     this.changeHandler_ = opt_changeHandler;
   }
 
+  /**
+   * @override
+   */
   init() {
     super.init();
 
@@ -29,20 +33,27 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
       this.fieldGroup_
     );
     this.buttonElement_.style.fillOpacity = 1;
-    this.buttonElement_.style.fill = this.color_;
+    this.buttonElement_.style.fill =
+      this.getSourceBlock().style.colourSecondary;
 
     this.textElement_.style.fontSize = '11pt';
-    this.textElement_.style.fill = 'white';
+    this.textElement_.style.fill = this.getSourceBlock().style.colourPrimary;
     this.textElement_.textContent = '';
     this.textElement_.appendChild(this.title_);
 
     this.fieldGroup_.insertBefore(this.buttonElement_, this.textElement_);
   }
 
+  /**
+   * @override
+   */
   getValue() {
     return String(this.value_);
   }
 
+  /**
+   * @override
+   */
   setValue(value) {
     if (this.value_ !== value) {
       if (this.changeHandler_) {
@@ -55,6 +66,9 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     }
   }
 
+  /**
+   * @override
+   */
   showEditor_() {
     if (!this.buttonHandler_) {
       return;
@@ -62,10 +76,32 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     this.buttonHandler_(this.setValue.bind(this));
   }
 
-  updateWidth_() {
-    super.updateWidth_();
+  /**
+   * Keeps button element size in sync with parent Field
+   * @override
+   */
+  updateSize_() {
+    super.updateSize_();
+
     if (this.buttonElement_) {
-      this.buttonElement_.setAttribute('width', this.size_.width + 8);
+      this.buttonElement_.setAttribute('width', this.size_.width - 2);
+      this.buttonElement_.setAttribute('height', this.size_.height - 2);
+    }
+  }
+
+  /**
+   * Contrast background for button with source block,
+   * and match text element to source block each time.
+   * Keeps
+   * @override
+   */
+  applyColour() {
+    const sourceBlock = this.getSourceBlock();
+    if (this.buttonElement_) {
+      this.buttonElement_.style.fill = sourceBlock.style.colourSecondary;
+    }
+    if (this.textElement_) {
+      this.textElement_.style.fill = sourceBlock.style.colourPrimary;
     }
   }
 }
