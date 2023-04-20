@@ -7,8 +7,10 @@ import i18n from '@cdo/locale';
 import {
   translatedCourseOfferingCsTopics,
   translatedCourseOfferingSchoolSubjects,
-  translatedCourseOfferingDurations
+  translatedCourseOfferingDurations,
+  subjectsAndTopicsOrder
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
+import {concat, intersection} from 'lodash';
 import style from './curriculum_catalog_card.module.scss';
 
 const CurriculumCatalogCard = ({
@@ -35,12 +37,14 @@ const CurriculumCatalogCard = ({
       oldestGrade: gradesArray[gradesArray.length - 1]
     })}
     imageSrc={imageSrc}
-    subjectsAndTopics={[
-      ...subjects?.map(
-        subject => translatedCourseOfferingSchoolSubjects[subject]
-      ),
-      ...topics?.map(topic => translatedCourseOfferingCsTopics[topic])
-    ]}
+    subjectsAndTopics={intersection(
+      subjectsAndTopicsOrder,
+      concat(subjects, topics)
+    )?.map(
+      subject_or_topic_key =>
+        translatedCourseOfferingSchoolSubjects[subject_or_topic_key] ||
+        translatedCourseOfferingCsTopics[subject_or_topic_key]
+    )}
     quickViewButtonDescription={i18n.quickViewDescription({
       course_name: courseDisplayName
     })}
@@ -94,9 +98,13 @@ const CustomizableCurriculumCatalogCard = ({
   >
     <img src={imageSrc} alt={imageAltText} />
     <div className={style.curriculumInfoContainer}>
-      {/*TODO [MEG]: Show all subjects and topics rather than only the first one */}
-      <div className={style.tagsAndTranslatabilityContainer}>
-        <p className={style.overline}>{subjectsAndTopics[0]}</p>
+      <div className={style.labelsAndTranslatabilityContainer}>
+        <div className={style.labelsContainer}>
+          {subjectsAndTopics.length > 0 && <div>{subjectsAndTopics[0]}</div>}
+          {subjectsAndTopics.length > 1 && (
+            <div>{`+${subjectsAndTopics.length - 1}`}</div>
+          )}
+        </div>
         {/*TODO [MEG]: Ensure this icon matches spec when we update FontAwesome */}
         {isTranslated && (
           <FontAwesome
@@ -109,12 +117,12 @@ const CustomizableCurriculumCatalogCard = ({
       <h4>{courseDisplayName}</h4>
       <div className={style.iconWithDescription}>
         <FontAwesome icon="user" className="fa-solid" />
-        <p className={style.iconWithDescriptionText}>{gradeRange}</p>
+        <p>{gradeRange}</p>
       </div>
       <div className={style.iconWithDescription}>
         {/*TODO [MEG]: Update this to be clock fa-solid when we update FontAwesome */}
         <FontAwesome icon="clock-o" />
-        <p className={style.iconWithDescriptionText}>{duration}</p>
+        <p>{duration}</p>
       </div>
       <div
         className={classNames(

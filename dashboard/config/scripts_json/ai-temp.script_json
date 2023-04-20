@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-04-18 03:33:37 UTC",
+    "serialized_at": "2023-04-19 02:50:22 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -347,28 +347,28 @@
       }
     },
     {
-      "key": "e9dc2621-41aa-462f-ad59-bea401630ac9",
+      "key": "dc78ffe6-c1cd-49ad-aceb-a39b233a3931",
       "position": 4,
       "properties": {
         "duration": 10,
-        "name": "WIP Beyond Currencies"
+        "name": "How Neural Networks Work"
       },
       "seeding_key": {
-        "lesson_activity.key": "e9dc2621-41aa-462f-ad59-bea401630ac9",
+        "lesson_activity.key": "dc78ffe6-c1cd-49ad-aceb-a39b233a3931",
         "lesson.key": "Blockchain In a Day",
         "lesson_group.key": "",
         "script.name": "ai-temp"
       }
     },
     {
-      "key": "dc78ffe6-c1cd-49ad-aceb-a39b233a3931",
+      "key": "e9dc2621-41aa-462f-ad59-bea401630ac9",
       "position": 5,
       "properties": {
         "duration": 10,
-        "name": "WIP Marketplace & Price"
+        "name": "How Computer Vision Works"
       },
       "seeding_key": {
-        "lesson_activity.key": "dc78ffe6-c1cd-49ad-aceb-a39b233a3931",
+        "lesson_activity.key": "e9dc2621-41aa-462f-ad59-bea401630ac9",
         "lesson.key": "Blockchain In a Day",
         "lesson_group.key": "",
         "script.name": "ai-temp"
@@ -1257,32 +1257,10 @@
       }
     },
     {
-      "key": "cfb8bf7d-4bf2-4b17-be26-b05b2946cf02",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_beyond_currencies/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
-      },
-      "seeding_key": {
-        "activity_section.key": "cfb8bf7d-4bf2-4b17-be26-b05b2946cf02",
-        "lesson_activity.key": "e9dc2621-41aa-462f-ad59-bea401630ac9"
-      }
-    },
-    {
-      "key": "0b86a3b4-4b47-44de-a8e5-874e7709e7dd",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s a real-world situation that you think smart contracts could help with? What might make them better than how it’s handled now?"
-      },
-      "seeding_key": {
-        "activity_section.key": "0b86a3b4-4b47-44de-a8e5-874e7709e7dd",
-        "lesson_activity.key": "e9dc2621-41aa-462f-ad59-bea401630ac9"
-      }
-    },
-    {
       "key": "8c4a7f98-250e-49c7-b5f0-cfef533907e7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_marketplace_price/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the [r introduction_to_ai_how_neural_networks_work/ai-temp/unversioned]\n video as a class. Students should be listening for vocabulary terms to match on their notetaker.\n"
       },
       "seeding_key": {
         "activity_section.key": "8c4a7f98-250e-49c7-b5f0-cfef533907e7",
@@ -1293,11 +1271,33 @@
       "key": "6f2516e8-0002-4e88-964e-a10e42bae5f2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s an example of something whose value has changed over time? What factors caused it to change? Did it go mostly up, mostly down, or mostly stay the same?"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** WIP"
       },
       "seeding_key": {
         "activity_section.key": "6f2516e8-0002-4e88-964e-a10e42bae5f2",
         "lesson_activity.key": "dc78ffe6-c1cd-49ad-aceb-a39b233a3931"
+      }
+    },
+    {
+      "key": "cfb8bf7d-4bf2-4b17-be26-b05b2946cf02",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the [r introduction_to_ai_how_computer_vision_works/ai-temp/unversioned]\n video as a class. Students should be listening for vocabulary terms to match on their notetaker.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "cfb8bf7d-4bf2-4b17-be26-b05b2946cf02",
+        "lesson_activity.key": "e9dc2621-41aa-462f-ad59-bea401630ac9"
+      }
+    },
+    {
+      "key": "0b86a3b4-4b47-44de-a8e5-874e7709e7dd",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How would you summarize how a computer \"sees\" something in an image?"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b86a3b4-4b47-44de-a8e5-874e7709e7dd",
+        "lesson_activity.key": "e9dc2621-41aa-462f-ad59-bea401630ac9"
       }
     },
     {
@@ -1744,6 +1744,30 @@
       }
     },
     {
+      "name": "Introduction to AI: How Computer Vision Works",
+      "url": "https://youtu.be/2hXG8v8p0KM",
+      "key": "introduction_to_ai_how_computer_vision_works",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_how_computer_vision_works"
+      }
+    },
+    {
+      "name": "Introduction to AI: How Neural Networks Work",
+      "url": "https://youtu.be/JrXazCEACVo",
+      "key": "introduction_to_ai_how_neural_networks_work",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_how_neural_networks_work"
+      }
+    },
+    {
       "name": "Introduction to AI: Training Data and Bias",
       "url": "https://youtu.be/x2mRoFNm22g",
       "key": "introduction_to_ai_training_data_and_bias",
@@ -1871,6 +1895,18 @@
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
         "resource.key": "introduction_to_ai_ethics_ai_privacy_the_future_of_work"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "resource.key": "introduction_to_ai_how_computer_vision_works"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "resource.key": "introduction_to_ai_how_neural_networks_work"
       }
     },
     {
