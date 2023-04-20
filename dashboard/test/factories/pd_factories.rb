@@ -402,7 +402,9 @@ FactoryBot.define do
   end
 
   factory :pd_pre_workshop_survey, class: 'Pd::PreWorkshopSurvey' do
-    association :pd_enrollment
+    # Always create (never build) the associated Enrollment to guarantee that
+    # the through association to workshops will work
+    association :pd_enrollment, strategy: :create
   end
 
   factory :pd_regional_partner_contact, class: 'Pd::RegionalPartnerContact' do
