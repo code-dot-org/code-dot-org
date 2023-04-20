@@ -382,6 +382,84 @@ function checkSpriteSpeech(spriteId) {
   }
 }
 
+//Gets the sprite ID that has that costume
+function getSpecificSpriteByCostume(costume) {
+  for(var i = 0; i < spriteIds.length; i++) {
+    var sprite = spriteIds[i];
+    if(isCostumeEqual({"id": sprite}, costume)) {
+       return spriteIds[i];
+    }
+  }
+  return -1;
+}
+
+/**
+ * Checks if at least one of the costumes (in an array) is set to a sprite in the scene
+ * @param spriteCostumes - An array of costumes (as strings) to check for
+ * @returns {boolean} true if at least one of these costumes is in the scene, false otherwise
+ * @see [Click here for example - checking for an octopus](https://levelbuilder-studio.code.org/levels/47067/)
+ * @example
+ * addCriteria(function() {
+    return World.frameCount == 1 && atLeastOneFromCostumes(["octopus_green", "octopus_purple", "octopus_red"]);
+  }, "There is no octopus at the beginning of the scene!");
+ */
+function atLeastOneFromCostumes(spriteCostumes) {
+  for(var i = 0; i < spriteCostumes.length; i++) {
+    var costume = spriteCostumes[i];
+    var spriteId = getSpecificSpriteByCostume(costume);
+    if(spriteId != -1) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * Checks if there is exactly one of the costumes from the array of costumes (ie: the level expects just one character, but a student added many)
+ * @param spriteCostumes - An array of costumes (as strings) to check for
+ * @returns {boolean} true if exactly one of these costumes is in the scene, false otherwise
+ * @see [Click here for example - checking for an octopus](https://levelbuilder-studio.code.org/levels/47067/)
+ * @example
+ * addCriteria(function() {
+    return World.frameCount == 1 && exactlyOneFromCostumes(["octopus_green", "octopus_purple", "octopus_red"]);
+  }, "There are too many octopi in the beginning of this scene!");
+ */
+function exactlyOneFromCostumes(spriteCostumes) {
+  var count = 0;
+  for(var i = 0; i < spriteCostumes.length; i++) {
+    var costume = spriteCostumes[i];
+    var spriteId = getSpecificSpriteByCostume(costume);
+    if(spriteId != -1) {
+      count += 1;
+    }
+  }
+  return count == 1;
+}
+
+/**
+ * Returns the spriteId of a sprite that has the costume in the array. Should be used with exactlyOneFromCostumes() to ensure there is a unique ID returned. If there is no sprite: -1 is returned
+ * @param spriteCostumes - An array of costumes (as strings) to check for
+ * @returns {number} number representing the spriteId; -1 otherwise
+ * @see [Click here for example - checking for an octopus](https://levelbuilder-studio.code.org/levels/47067/)
+ * @example
+ * addCriteria(function() {
+    var octopusId = getExactlyOneSpriteIdFromCostumes(["octopus_green", "octopus_purple", "octopus_red"]);
+    return checkSpriteTouchedThisFrame() && checkNewSpriteCostumeThisFrame(octopusId);
+  }, "There was an event, but the octopus sprite didn't change costume!");
+ */
+function getExactlyOneSpriteIdFromCostumes(spriteCostumes) {
+  for(var i = 0; i < spriteCostumes.length; i++) {
+    var costume = spriteCostumes[i];
+    var spriteId = getSpecificSpriteByCostume(costume);
+    if(spriteId != -1) {
+      return spriteId;
+    }
+  }
+  return -1;
+}
+
+
+
 // NEWSECTION
 // # <a name="eventValidation">Event Validation</a>
 
@@ -673,6 +751,30 @@ function getSpritesThatTouched(){
     }
   }
   return -1;
+}
+
+
+/**
+ * Returns whether two specific sprite costumes are touching, such as wanting to check that a certain sprite interacted with a another specific 
+ * @param costume1 - A string of one costume to check
+ * @param costume2 - A string of one costume to check
+ * @returns {boolean} Whether or not two sprites with these costumes are touching
+ * @see [Click here for example - checking for an octopus adapting to its environment](https://levelbuilder-studio.code.org/levels/47067/)
+ * @example
+ * addCriteria(function() {
+    var octopusId = getExactlyOneSpriteIdFromCostumes(["octopus_green", "octopus_purple", "octopus_red"]);
+    return checkSpriteTouchedThisFrame() && checkNewSpriteCostumeThisFrame(octopusId) &&
+      	  (checkTheseTwoSpriteCostumesTouched("octopus_green", "underseadeco_34") || 
+          checkTheseTwoSpriteCostumesTouched("octopus_red", "underseadeco_25") ||
+          checkTheseTwoSpriteCostumesTouched("octopus_purple", "underseadeco_24"));
+  }, "cscAdaptationsMoveOctopusToPlant");
+ */
+function checkTheseTwoSpriteCostumesTouched(costume1, costume2) {
+  var sprites = getSpritesThatTouched();
+  var movingSprite = parseInt(sprites[0]);
+  var touchedSprite = parseInt(sprites[1]);
+  return (isCostumeEqual({"id": movingSprite}, costume1) && isCostumeEqual({"id": touchedSprite}, costume2)) ||
+    (isCostumeEqual({"id": touchedSprite}, costume1) && isCostumeEqual({"id": movingSprite}, costume2));
 }
 
 /**
