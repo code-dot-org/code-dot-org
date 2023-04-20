@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-04-19 02:50:22 UTC",
+    "serialized_at": "2023-04-19 22:18:12 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -209,6 +209,19 @@
       }
     },
     {
+      "key": "380689a6-76b5-4746-a0d5-60a5d41f28e0",
+      "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "380689a6-76b5-4746-a0d5-60a5d41f28e0",
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
       "key": "3bbd3bbf-aa1f-407f-be08-e40f71186cdd",
       "position": 1,
       "properties": {
@@ -245,6 +258,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "672b41e0-8b3b-44d7-a904-aa6b84585145",
+        "lesson.key": "Algorithmic Bias",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "1a9dfbcf-3379-4148-a8bc-ee3435f19706",
+      "position": 4,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1a9dfbcf-3379-4148-a8bc-ee3435f19706",
         "lesson.key": "Algorithmic Bias",
         "lesson_group.key": "",
         "script.name": "ai-temp"
@@ -299,6 +325,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "8ed127df-c40b-4809-8803-c1abd706b689",
+        "lesson.key": "Our AI Code of Ethics",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "017827aa-77fd-48b5-9b18-3f4e25f81174",
+      "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "017827aa-77fd-48b5-9b18-3f4e25f81174",
         "lesson.key": "Our AI Code of Ethics",
         "lesson_group.key": "",
         "script.name": "ai-temp"
@@ -799,6 +838,18 @@
       }
     },
     {
+      "key": "06bdab50-c475-4990-bb5a-31bb6c04ca21",
+      "position": 1,
+      "properties": {
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "name": "Teacher Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "06bdab50-c475-4990-bb5a-31bb6c04ca21",
+        "lesson_activity.key": "380689a6-76b5-4746-a0d5-60a5d41f28e0"
+      }
+    },
+    {
       "key": "d45e6861-be58-4328-a8d3-8d16dbf7123d",
       "position": 1,
       "properties": {
@@ -1016,6 +1067,18 @@
       }
     },
     {
+      "key": "247a4935-25fb-49e9-b4bb-eb8a95818189",
+      "position": 1,
+      "properties": {
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "name": "Teacher Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "247a4935-25fb-49e9-b4bb-eb8a95818189",
+        "lesson_activity.key": "1a9dfbcf-3379-4148-a8bc-ee3435f19706"
+      }
+    },
+    {
       "key": "0dde8851-174a-476e-bd8c-3182e03aab12",
       "position": 1,
       "properties": {
@@ -1163,6 +1226,18 @@
       "seeding_key": {
         "activity_section.key": "340bfba4-be24-40bc-b080-acd39d6a5767",
         "lesson_activity.key": "8ed127df-c40b-4809-8803-c1abd706b689"
+      }
+    },
+    {
+      "key": "904e1685-6341-44a3-9acc-bfc0fa57e933",
+      "position": 1,
+      "properties": {
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "name": "Teacher Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "904e1685-6341-44a3-9acc-bfc0fa57e933",
+        "lesson_activity.key": "017827aa-77fd-48b5-9b18-3f4e25f81174"
       }
     },
     {
@@ -1348,23 +1423,11 @@
       "key": "ca0eb773-44d3-4664-aa7c-74eb256866f4",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How Blockchain Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLScoKvmhSCoQqK1HxKK_s3ZaCZZkjXnVoHkGKTocqA788wj5ZQ/viewform?usp=sf_link).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
         "activity_section.key": "ca0eb773-44d3-4664-aa7c-74eb256866f4",
-        "lesson_activity.key": "7ea72882-4b8e-479e-a4bf-2e556ec5d35f"
-      }
-    },
-    {
-      "key": "afebd90a-7666-400a-975d-fbdc0960d6bb",
-      "position": 2,
-      "properties": {
-        "description": "Depending on your goals and student interests, you may decide to offer optional extensions related to blockchain and cryptocurrencies. Additional resources and the rest of the How Blockchain Works video series are available on [https://code.org/blockchain](https://code.org/blockchain), including a [Blockchain & Cryptocurreny Hour of Code Activity](https://coinbase.github.io/memorygame/story.html).",
-        "name": "Extended Learning"
-      },
-      "seeding_key": {
-        "activity_section.key": "afebd90a-7666-400a-975d-fbdc0960d6bb",
         "lesson_activity.key": "7ea72882-4b8e-479e-a4bf-2e556ec5d35f"
       }
     }
