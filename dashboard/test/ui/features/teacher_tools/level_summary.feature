@@ -2,28 +2,31 @@
 Feature: Level summary
 
 Scenario: Free Response level 1
+  When I open my eyes to test "free response summary 1"
   Given I am a teacher
   And I create a new student section
-  Given I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/summary"
+  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/summary"
   And I wait until element "#summary-container" is visible
   And I wait to see ".uitest-sectionselect"
-  And I see no difference for "level summary"
+  Then I see no difference for "free response level summary 1"
   And I close my eyes
 
 Scenario: Free Response level 2
+  When I open my eyes to test "free response summary 2"
   Given I am a teacher
   And I create a new student section
-  Given I am on "http://studio.code.org/s/csp2-2022/lessons/6/levels/3/summary"
+  And I am on "http://studio.code.org/s/csp2-2022/lessons/6/levels/3/summary"
   And I wait until element "#summary-container" is visible
   And I wait to see ".uitest-sectionselect"
-  And I see no difference for "level summary"
+  Then I see no difference for "free response level summary 2"
   And I close my eyes
 
 Scenario: Free Response level 3
+  When I open my eyes to test "free response summary 3"
   Given I am a teacher
   And I create a new student section
-  Given I am on "http://studio.code.org/s/csa1-2022/lessons/4/levels/1/summary"
+  And I am on "http://studio.code.org/s/csa1-2022/lessons/4/levels/1/summary"
   And I wait until element "#summary-container" is visible
   And I wait to see ".uitest-sectionselect"
-  And I see no difference for "level summary"
+  Then I see no difference for "free response level summary 3"
   And I close my eyes
