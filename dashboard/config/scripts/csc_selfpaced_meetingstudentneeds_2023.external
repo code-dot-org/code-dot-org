@@ -22,6 +22,7 @@ markdown <<MARKDOWN
 
 * ##### choose among different sprites?
 * ##### give sprites a location and behaviors?
+* ##### change and set the size of sprites?
 
 <hr style="clear:both">
 
@@ -31,7 +32,6 @@ markdown <<MARKDOWN
 
 * ##### with a click?
 * ##### when sprites touch?
-* ##### during a set amount of time?
 
 </details>
 
@@ -44,6 +44,10 @@ markdown <<MARKDOWN
 
 * ##### ... what challenges might my students have with sprites?
 * ##### ... what challenges might my students have with events?
+
+##### Before sharing CS Connections with your students, prepare by collecting the challenges you encountered and how you overcame those challenges.  Do this while working through examples in this module as well as lesson levels in the modules you plan to teach.  
+
+##### Your students are likely to face these challenges too and you will be ready to guide them!
 
 </details>
 
