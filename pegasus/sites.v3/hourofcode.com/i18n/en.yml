@@ -118,13 +118,6 @@
   pl_superhero_title: "Help students become superheroes!"
   pl_superhero_desc: "Join our highly supportive Professional Learning Program for middle and high school educators."
 
-  ai_banner_hero_title: "AI education for the world"
-  ai_banner_hero_desc: "Code.org is forming a coalition for AI education and planning big updates to integrate AI into our platform!"
-  ai_banner_skinny_desc: "See how we're planning to bring AI education to classrooms everywhere."
-  ai_announcement_title_student: "Explore Artificial Intelligence (AI)"
-  ai_announcement_desc_student: "AI is changing everything. Learn more about this technology and how it works."
-  ai_announcement_desc_teacher: "See how we're planning to bring AI education to students around the world."
-
   blockchain_hero_heading: 'How Blockchain Works'
   blockchain_hero_desc: 'Dive into the world of blockchain with "How Blockchain Works," our new video series and accompanying lessons!'
   blockchain_intro_heading: 'See how blockchain works'
@@ -152,6 +145,13 @@
   blockchain_resources_03_heading: 'Hour of Code Activity'
   blockchain_resources_03_desc: 'Try a crypto memory game created by Coinbase.'
   blockchain_resources_03_button_label: 'Try the Crypto Memory Game activity'
+
+  ai_banner_title: "AI education for the world"
+  ai_banner_desc_01: "Code.org is forming a coalition for AI education and planning big updates to integrate AI into our platform!"
+  ai_banner_desc_02: "See how we're planning to bring AI education to classrooms everywhere."
+  ai_announcement_title_student: "Explore Artificial Intelligence (AI)"
+  ai_announcement_desc_student: "AI is changing everything. Learn more about this technology and how it works."
+  ai_announcement_desc_teacher: "See how we're planning to bring AI education to students around the world."
 
   ai_hero_heading_01: "Artificial intelligence isn't magic…"
   ai_hero_heading_02: "It's just code!"
