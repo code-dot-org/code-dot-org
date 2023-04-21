@@ -12,6 +12,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     this.title_ = title;
     this.buttonHandler_ = opt_buttonHandler;
     this.changeHandler_ = opt_changeHandler;
+    console.log('changeHandler_', this.changeHandler_);
   }
 
   /**
@@ -48,6 +49,9 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
    * @override
    */
   getValue() {
+    let val = this.value_;
+    console.log(typeof val);
+    console.log(this.value_);
     return String(this.value_);
   }
 
@@ -55,6 +59,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
    * @override
    */
   setValue(value) {
+    console.log('value in setValue', value);
     if (this.value_ !== value) {
       if (this.changeHandler_) {
         const override = this.changeHandler_(value);
