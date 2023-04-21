@@ -37,8 +37,12 @@ describe('CurriculumCatalog', () => {
     school_subject: null,
   };
 
-  const allCurricula = [makerCurriculum, countingCurriculum, noImageCurriculum];
-  const defaultProps = {curriculaData: allCurricula, isEnglish: false};
+  const allShownCurricula = [
+    makerCurriculum,
+    countingCurriculum,
+    noImageCurriculum
+  ];
+  const defaultProps = {curriculaData: allShownCurricula, isEnglish: false};
 
   beforeEach(() => {
     const store = configureStore({reducer: {responsive}});
@@ -59,7 +63,7 @@ describe('CurriculumCatalog', () => {
   });
 
   it('renders name of each curriculum', () => {
-    allCurricula
+    allShownCurricula
       .map(curriculum => curriculum.display_name)
       .forEach(courseName => screen.getByRole('heading', {name: courseName}));
   });
@@ -68,7 +72,7 @@ describe('CurriculumCatalog', () => {
     const images = screen.getAllByRole('img');
     const imagesStr = images.map(image => image.outerHTML).toString();
 
-    allCurricula.forEach(curriculum => {
+    allShownCurricula.forEach(curriculum => {
       if (curriculum.image && curriculum.image !== null) {
         expect(imagesStr).to.match(new RegExp(`src="${curriculum.image}"`));
       } else {
