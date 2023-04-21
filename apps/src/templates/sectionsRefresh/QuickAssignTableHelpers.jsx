@@ -91,30 +91,26 @@ function updateSectionCourse(updateCourse, course) {
       versions => versions.is_recommended
     )?.id;
   }
+
+  const courseVersion = courseVersions[courseVersionId];
+  const isStandaloneUnit = courseVersion.type === 'Unit';
+
+  let hasLessonExtras;
+  let hasTextToSpeech;
+
+  if (isStandaloneUnit) {
+    hasLessonExtras = Object.values(courseVersion.units)[0]
+      .lesson_extras_available;
+    hasTextToSpeech = Object.values(courseVersion.units)[0]
+      .text_to_speech_enabled;
+  }
+
   updateCourse({
     displayName: course.display_name,
     courseOfferingId: course.id,
     versionId: courseVersionId,
-    unitId: null
+    unitId: null,
+    hasLessonExtras: hasLessonExtras,
+    hasTextToSpeech: hasTextToSpeech
   });
-
-  // Determine if it is a stand alone unit
-  const courseVersion = courseVersions[courseVersionId];
-  const isStandaloneUnit = Object.keys(courseVersion.units).length < 2;
-
-  // if so, update the values for LessonExtras and TTS
-  if (isStandaloneUnit) {
-    const hasLessonExtras = Object.values(courseVersion.units)[0]
-      .lesson_extras_available;
-    const hasTextToSpeech = Object.values(courseVersion.units)[0]
-      .text_to_speech_enabled;
-    updateCourse({
-      displayName: course.display_name,
-      courseOfferingId: course.id,
-      versionId: courseVersionId,
-      unitId: null,
-      hasLessonExtras: hasLessonExtras,
-      hasTextToSpeech: hasTextToSpeech
-    });
-  }
 }

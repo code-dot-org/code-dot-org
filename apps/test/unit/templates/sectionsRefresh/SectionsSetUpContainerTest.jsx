@@ -30,12 +30,7 @@ describe('SectionsSetUpContainer', () => {
 
     expect(wrapper.find('h1').length).to.equal(1);
     expect(wrapper.find('Button').length).to.equal(1);
-    expect(
-      wrapper
-        .find('Button')
-        .at(0)
-        .props().text
-    ).to.equal('Save');
+    expect(wrapper.find('Button').at(0).props().text).to.equal('Save');
   });
 
   it('renders curriculum quick assign', () => {

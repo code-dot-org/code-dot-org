@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import moduleStyles from './sections-refresh.module.scss';
@@ -40,12 +40,9 @@ export default function CurriculumQuickAssign({
   }, []);
 
   useEffect(() => {
-    // if (!updateSection) return;
     if (!courseOfferings) return;
-    // const updateCourse = course => updateSection('course', course);
     if (!isNewSection) {
-      // note that the desire is to come back and refactor this section to
-      // make it more efficient
+      //  TO DO: refactor for efficiency.  Consider using a flatten-like function (maybe in a helper file?)
       const highData = {
         ...courseOfferings[MARKETING_AUDIENCE.HIGH][curriculumTypes.course],
         ...courseOfferings[MARKETING_AUDIENCE.HIGH][
@@ -69,39 +66,6 @@ export default function CurriculumQuickAssign({
         ]
       };
       const hocData = {...courseOfferings[MARKETING_AUDIENCE.HOC]};
-
-      // Note to self: Needed to move this inside the useEffect or make a custom hook
-      const updateSectionCourseForExisitngSections = course => {
-        const courseVersions = {};
-        // The structure of cv is an array with the first item an id and the second
-        // item an object of everything. See 'CourseOfferingsTestData' for examples
-        course.course_versions.map(cv => {
-          courseVersions[cv[1].id] = cv[1];
-        });
-        const courseVersionId = sectionCourse.versionId;
-        // Determine if it is a stand alone unit
-        const courseVersion = courseVersions[courseVersionId];
-        const isStandaloneUnit = Object.keys(courseVersion.units).length < 2;
-
-        let targetUnit;
-
-        if (isStandaloneUnit) {
-          targetUnit = Object.values(courseVersion.units)[0];
-        } else if (sectionCourse.unitId) {
-          targetUnit = courseVersion.units[sectionCourse.unitId];
-        }
-
-        const updateSectionData = {
-          displayName: course.display_name,
-          courseOfferingId: course.id,
-          versionId: courseVersionId,
-          unitId: isStandaloneUnit ? null : sectionCourse.unitId,
-          hasLessonExtras: targetUnit?.lesson_extras_available,
-          hasTextToSpeech: targetUnit?.text_to_speech_enabled
-        };
-
-        updateSection('course', updateSectionData);
-      };
 
       const determineSelectedCourseOffering = (startingData, audience) => {
         const headers = Object.keys(startingData);
@@ -134,8 +98,44 @@ export default function CurriculumQuickAssign({
     isNewSection,
     sectionCourse,
     selectedCourseOffering,
-    updateSection
+    updateSection,
+    updateSectionCourseForExisitngSections
   ]);
+
+  const updateSectionCourseForExisitngSections = useCallback(
+    course => {
+      const courseVersions = {};
+      // The structure of cv is an array with the first item an id and the second
+      // item an object of everything. See 'CourseOfferingsTestData' for examples
+      course.course_versions.map(cv => {
+        courseVersions[cv[1].id] = cv[1];
+      });
+
+      const courseVersionId = sectionCourse.versionId;
+      const courseVersion = courseVersions[courseVersionId];
+      const isStandaloneUnit = courseVersion.type === 'Unit';
+
+      let targetUnit;
+
+      if (isStandaloneUnit) {
+        targetUnit = Object.values(courseVersion.units)[0];
+      } else if (sectionCourse.unitId) {
+        targetUnit = courseVersion.units[sectionCourse.unitId];
+      }
+
+      const updateSectionData = {
+        displayName: course.display_name,
+        courseOfferingId: course.id,
+        versionId: courseVersionId,
+        unitId: isStandaloneUnit ? null : sectionCourse.unitId,
+        hasLessonExtras: targetUnit?.lesson_extras_available,
+        hasTextToSpeech: targetUnit?.text_to_speech_enabled
+      };
+
+      updateSection('course', updateSectionData);
+    },
+    [updateSection, sectionCourse]
+  );
 
   /*
   When toggling 'decide later', clear out marketing audience or assign one to make
