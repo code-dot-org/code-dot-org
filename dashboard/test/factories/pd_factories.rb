@@ -499,7 +499,6 @@ FactoryBot.define do
     city {'Magic City'}
     state {'Washington'}
     add_attribute :zip_code, '98101'
-    association :school
     principal_role {'Headmaster'}
     principal_first_name {'Albus'}
     principal_last_name {'Dumbledore'}
@@ -512,6 +511,10 @@ FactoryBot.define do
     committed {'Yes'}
     willing_to_travel {'Up to 50 miles'}
     agree {'Yes'}
+
+    # Make sure school gets persisted; otherwise we might return a school_id
+    # for a school that doesn't exist
+    school {create(:school)}
 
     initialize_with do
       attributes.dup.tap do |hash|
