@@ -1,3 +1,4 @@
+function oceanSetup() {
 function math_random_int(a, b) {
   if (a > b) {
     // Swap a and b to ensure a is smaller.
@@ -164,42 +165,20 @@ function moving_south_and_looping(this_sprite) {
 }
 
 setBackgroundImageAs("background_underwater_17");
-makeNewSpriteAnon("boat-net", ({"x":11,"y":49}));
-setProp(({costume: "boat-net"}), "scale", 200);
-makeNumSprites(10, "fish_10");
-setProp(({costume: "fish_10"}), "scale", 40);
-makeNumSprites(10, "green-sea-plant-2");
-setProp(({costume: "green-sea-plant-2"}), "scale", 40);
+makeNewSpriteAnon("fishing_boat", ({"x":15,"y":40}));
+setProp(({costume: "fishing_boat"}), "scale", 100);
 makeNewSpriteAnon("underseadeco_25", ({"x":49,"y":349}));
 makeNewSpriteAnon("underseadeco_25", ({"x":350,"y":351}));
+makeNumSprites(0, "fish_10");
+setProp(({costume: "fish_10"}), "scale", 40);
+for (var count = 0; count < 0; count++) {
+  makeNewSpriteAnon("green-sea-plant-2", locationAt(math_random_int(1, 400), math_random_int(1, 300)));
+}
+setProp(({costume: "green-sea-plant-2"}), "scale", 40);
+
 setProp(({costume: "underseadeco_25"}), "scale", 120);
 addBehaviorSimple(({costume: "fish_10"}), collectibleBehaviors(new Behavior(wandering, [])));
-addBehaviorSimple(({costume: "boat-net"}), collectibleBehaviors(new Behavior(patrolling, [])));
+addBehaviorSimple(({costume: "fishing_boat"}), collectibleBehaviors(new Behavior(patrolling, [])));
 
-checkTouching("when", ({costume: "boat-net"}), ({costume: "fish_10"}), function (extraArgs) {
-  destroy(({id: extraArgs.objectSprite}));
-});
-
-checkTouching("when", ({costume: "fish_10"}), ({costume: "green-sea-plant-2"}), function (extraArgs) {
-  destroy(({id: extraArgs.objectSprite}));
-  if (countByAnimation(({costume: "green-sea-plant-2"})) > 10) {
-    setAnimation(({costume: "underseadeco_25"}), "red-coral-dead");
-  } else if (countByAnimation(({costume: "green-sea-plant-2"})) < 1) {
-    removeAllBehaviors(({costume: "fish_10"}));
-    addBehaviorSimple(({costume: "fish_10"}), new Behavior(jittering, []));
-  } else {
-    setAnimation(({costume: "red-coral-dead"}), "underseadeco_25");
-  }
-
-});
-
-everyInterval(3, "seconds", function () {
-  makeNumSprites(15, "green-sea-plant-2");
-  setProp(({costume: "green-sea-plant-2"}), "scale", 40);
-});
-
-everyInterval(5, "seconds", function () {
-  makeNumSprites(1, "fish_10");
-  setProp(({costume: "fish_10"}), "scale", 40);
-  addBehaviorSimple(({costume: "fish_10"}), collectibleBehaviors(new Behavior(wandering, [])));
-});
+}
+oceanSetup();

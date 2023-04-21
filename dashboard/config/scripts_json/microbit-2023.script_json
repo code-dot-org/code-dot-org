@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "microbit",
-    "serialized_at": "2023-04-13 17:31:19 UTC",
+    "serialized_at": "2023-04-20 18:47:51 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -34,7 +34,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Introduduction to App Lab"
+        "display_name": "Introduction to App Lab"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
