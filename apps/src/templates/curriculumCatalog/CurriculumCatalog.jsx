@@ -21,7 +21,10 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => (
       <div className={style.catalogContent}>
         {/*TODO [MEG]: calculate and pass in duration and translated from backend */}
         {curriculaData
-          .filter(curriculum => !!curriculum.grade_levels)
+          .filter(
+            curriculum =>
+              !!curriculum.grade_levels && !!curriculum.course_version_path
+          )
           .map(
             ({
               key,
