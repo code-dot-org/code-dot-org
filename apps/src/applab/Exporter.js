@@ -166,8 +166,23 @@ export function getAppOptionsFile() {
   return `window.APP_OPTIONS = ${JSON.stringify(options)};`;
 }
 
-const fontAwesomeWOFFRelativeSourcePath = '/fonts/fontawesome-webfont.woff2';
-const fontAwesomeWOFFPath = 'applab/fontawesome-webfont.woff2';
+// This list of fonts is derived from the v4 compatibility fonts.
+// Icons in use in Applab are still limited to FontAwesome v4, while
+// the rest of Code.org (ie, the pegasus/dashboard sites themselves)
+// are all on v6.
+const fontAwesomeBrandsWOFFRelativeSourcePath =
+  'https://dsco.code.org/assets/font-awesome-pro/webfonts/fa-brands-400.woff2';
+const fontAwesomeSolidWOFFRelativeSourcePath =
+  'https://dsco.code.org/assets/font-awesome-pro/webfonts/fa-solid-900.woff2';
+const fontAwesomeRegularWOFFRelativeSourcePath =
+  'https://dsco.code.org/assets/font-awesome-pro/webfonts/fa-regular-400.woff2';
+const fontAwesomeV4CompatibilityWOFFRelativeSourcePath =
+  'https://dsco.code.org/assets/font-awesome-pro/webfonts/fa-v4compatibility.woff2';
+
+const fontAwesomeBrandsWOFFPath = 'applab/fa-brands-400.woff2';
+const fontAwesomeSolidWOFFPath = 'applab/fa-solid-900.woff2';
+const fontAwesomeRegularWOFFPath = 'applab/fa-regular-400.woff2';
+const fontAwesomeV4CompatibilityWOFFPath = 'applab/fa-v4compatibility.woff2';
 
 /**
  * Retrieves the export config object.
@@ -189,7 +204,10 @@ export default {
       appName,
       exportConfigPath: exportConfig.path,
       htmlBody: transformedHTML,
-      fontPath: fontAwesomeWOFFPath,
+      faBrandsPath: fontAwesomeBrandsWOFFPath,
+      faSolidPath: fontAwesomeSolidWOFFPath,
+      faRegularPath: fontAwesomeRegularWOFFPath,
+      faV4CompatibilityPath: fontAwesomeV4CompatibilityWOFFPath,
     });
     var readme = exportProjectReadmeEjs({appName: appName});
     var cacheBust = '?__cb__=' + '' + new String(Math.random()).slice(2);
@@ -208,7 +226,19 @@ export default {
       },
       {
         dataType: 'binary',
-        url: fontAwesomeWOFFRelativeSourcePath + cacheBust,
+        url: fontAwesomeBrandsWOFFRelativeSourcePath + cacheBust,
+      },
+      {
+        dataType: 'binary',
+        url: fontAwesomeSolidWOFFRelativeSourcePath + cacheBust,
+      },
+      {
+        dataType: 'binary',
+        url: fontAwesomeRegularWOFFRelativeSourcePath + cacheBust,
+      },
+      {
+        dataType: 'binary',
+        url: fontAwesomeV4CompatibilityWOFFRelativeSourcePath + cacheBust,
       },
     ];
 
@@ -231,7 +261,10 @@ export default {
       rewriteAssetUrls(appAssets, html)
     );
     const fontAwesomeCSS = exportFontAwesomeCssEjs({
-      fontPath: fontAwesomeWOFFPath,
+      fontBrandsPath: fontAwesomeBrandsWOFFPath,
+      fontSolidPath: fontAwesomeSolidWOFFPath,
+      fontRegularPath: fontAwesomeRegularWOFFPath,
+      fontV4CompatibilityPath: fontAwesomeV4CompatibilityWOFFPath,
     });
     zip.file(mainProjectFilesPrefix + 'style.css', fontAwesomeCSS);
     zip.file(
@@ -275,7 +308,10 @@ export default {
           [applabLocale],
           [applabCSS],
           [commonCSS],
-          [fontAwesomeWOFF],
+          [fontAwesomeBrandsWOFF],
+          [fontAwesomeSolidWOFF],
+          [fontAwesomeRegularWOFF],
+          [fontAwesomeV4CompatibilityWOFF],
           ...rest
         ) => {
           const appOptionsContents = getAppOptionsFile();
@@ -290,8 +326,20 @@ export default {
             ].join('\n')
           );
           zip.file(
-            mainProjectFilesPrefix + fontAwesomeWOFFPath,
-            fontAwesomeWOFF
+            mainProjectFilesPrefix + fontAwesomeBrandsWOFFPath,
+            fontAwesomeBrandsWOFF
+          );
+          zip.file(
+            mainProjectFilesPrefix + fontAwesomeSolidWOFFPath,
+            fontAwesomeSolidWOFF
+          );
+          zip.file(
+            mainProjectFilesPrefix + fontAwesomeRegularWOFFPath,
+            fontAwesomeRegularWOFF
+          );
+          zip.file(
+            mainProjectFilesPrefix + fontAwesomeV4CompatibilityWOFFPath,
+            fontAwesomeV4CompatibilityWOFF
           );
           rest.forEach(([data], index) => {
             zip.file(appAssets[index].zipPath, data, {binary: true});
