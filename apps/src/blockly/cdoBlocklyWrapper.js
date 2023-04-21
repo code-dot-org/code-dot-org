@@ -274,9 +274,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     getCode: function (workspace) {
       return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
-    },
-    setStrictCheck: function (inputRow, type, strict) {
-      strict ? inputRow.setStrictCheck(type) : inputRow.setCheck(type);
     }
   };
   return blocklyWrapper;
