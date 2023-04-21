@@ -43,28 +43,28 @@ CongratsMinecraftPre2017Student.args = {
   userType: 'student'
 };
 
-export const Congrats2017MinecraftSignedout = Template.bind({});
-Congrats2017MinecraftSignedout.args = {
+export const CongratsMinecraft2017SignedOut = Template.bind({});
+CongratsMinecraft2017SignedOut.args = {
   userType: 'signedOut',
   tutorial: 'hero',
   language: 'en'
 };
 
-export const Congrats2017MinecraftStudent = Template.bind({});
-Congrats2017MinecraftStudent.args = {
-  ...Congrats2017MinecraftSignedout.args,
+export const CongratsMinecraft2017Student = Template.bind({});
+CongratsMinecraft2017Student.args = {
+  ...CongratsMinecraft2017SignedOut.args,
   userType: 'student'
 };
 
-export const Congrats2017MinecraftStudentKorean = Template.bind({});
-Congrats2017MinecraftStudentKorean.args = {
+export const CongratsMinecraft2017StudentKorean = Template.bind({});
+CongratsMinecraft2017StudentKorean.args = {
   userType: 'student',
   tutorial: 'hero',
   language: 'ko'
 };
 
-export const Congrats2018MinecraftSignedOut = Template.bind({});
-Congrats2018MinecraftSignedOut.args = {
+export const CongratsMinecraft2018SignedOut = Template.bind({});
+CongratsMinecraft2018SignedOut.args = {
   userType: 'signedOut',
   tutorial: 'aquatic',
   language: 'en'
