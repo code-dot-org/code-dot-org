@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "design-process",
-    "serialized_at": "2023-04-13 17:26:41 UTC",
+    "serialized_at": "2023-04-20 18:00:25 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -7201,16 +7201,6 @@
       }
     },
     {
-      "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
-      "key": "csd_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide"
-      }
-    },
-    {
       "name": "CSD Guide to Debugging",
       "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
       "key": "csd_guide_to_debugging",
@@ -8836,12 +8826,6 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary",
-        "script.name": "design-process-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
         "script.name": "design-process-2023"
       }
     },

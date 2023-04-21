@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Short one-sentence description of problem to solve.\r\n\r\n🎒 **IMPORT:** Import your <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PainterPlus</code> class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO #1:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n✅ **TO DO #2:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClassName</code> class in the <strong>Documentation</strong> tab ⬆️ for a thing to look for!\r\n</div>\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for a thing to look for!\r\n</div>\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">🔦 Need help with your algorithm?</summary>\r\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\r\n    \t<p>Here is one approach to solving this problem.</p>\r\n        <pre style=\"background-color: #333333; color: white;\">\r\nalgorithm for method to write\r\n</pre>\r\n    </div>\r\n</details>\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "A teacher wants to place students in pairs for an assignment. They have a list of students and want to find the name of a student whose name is closest to the target name and comes after the target name.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PairFinder</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findPartner()</code> method to use the binary search algorithm to find and return the name that is closest and comes after the name to find.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> When returning the student from <code style=\"background-color: #ececec; color: black; font-weight: bold;\">students</code>, use the mod ( <code style=\"background-color: #ececec; color: black; font-weight: bold;\">%</code> ) operator to return the name at the front of the list if the target name comes after the last name in <code style=\"background-color: #ececec; color: black; font-weight: bold;\">students</code>.\r\n</div>\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PairRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findPartner()</code> method.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with implementing a binary search.\r\n</div>",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -16,13 +16,20 @@
     },
     "encrypted_examples": [
 
-    ]
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/binary-search"
+    ],
+    "video_key": "csa_searching_algorithms",
+    "display_name": "Finding Students",
+    "bubble_choice_description": "A teacher wants to place students in pairs for an assignment. They have a list of students and want to find the name of a student whose name is closest and comes after the target name.",
+    "thumbnail_url": "https://images.code.org/71345917b57ae89670566bff83934dcc-pair.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-04-14T14:09:16.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-04-14T14:09:16.475+00:00\",\"changed\":[\"cloned from \\\"CSA U8L7-L7a_2023\\\"\"],\"cloned_from\":\"CSA U8L7-L7a_2023\"},{\"changed_at\":\"2023-04-14 14:09:18 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-14T14:09:16.475+00:00\",\"changed\":[\"cloned from \\\"CSA U8L7-L7a_2023\\\"\"],\"cloned_from\":\"CSA U8L7-L7a_2023\"},{\"changed_at\":\"2023-04-14 14:09:18 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 02:35:15 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
