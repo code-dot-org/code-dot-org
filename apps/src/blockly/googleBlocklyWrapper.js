@@ -51,6 +51,7 @@ import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
+import variableBlocks from './addons/variableBlocks';
 
 const options = {
   contextMenu: true,
@@ -628,6 +629,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
       Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
         FUNCTION_BLOCK.init;
     }
+    // Customize the connection type checks of variable blocks.
+    Blockly.blockly_.defineBlocksWithJsonArray(variableBlocks);
 
     return workspace;
   };
