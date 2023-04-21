@@ -59,7 +59,7 @@ class AddMultipleStudents extends Component {
     return (
       <div>
         <Button
-          __useDeprecatedTag
+          style={styles.button}
           onClick={this.openDialog}
           color={Button.ButtonColor.gray}
           text={i18n.addStudentsMultiple()}
@@ -81,13 +81,13 @@ class AddMultipleStudents extends Component {
           />
           <DialogFooter>
             <Button
-              __useDeprecatedTag
+              style={styles.button}
               text={i18n.dialogCancel()}
               onClick={this.closeDialog}
               color={Button.ButtonColor.gray}
             />
             <Button
-              __useDeprecatedTag
+              style={styles.button}
               text={i18n.done()}
               onClick={this.add}
               color={Button.ButtonColor.orange}
@@ -107,6 +107,10 @@ const styles = {
   },
   textarea: {
     width: '75%'
+  },
+  button: {
+    margin: 0,
+    marginBottom: 5
   }
 };
 
