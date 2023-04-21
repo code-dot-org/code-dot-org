@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-06 04:54:24 UTC",
+    "serialized_at": "2023-04-20 16:46:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2971,16 +2971,6 @@
       }
     },
     {
-      "name": "CSD Curriculum Guide\t",
-      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view\t",
-      "key": "csd_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide"
-      }
-    },
-    {
       "name": "CSD Implementation Guide\t",
       "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view\t",
       "key": "csd_implementation_guide",
@@ -3492,12 +3482,6 @@
     {
       "seeding_key": {
         "resource.key": "all_standards",
-        "script.name": "focus-on-design-with-purpose1-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
         "script.name": "focus-on-design-with-purpose1-2023"
       }
     },
