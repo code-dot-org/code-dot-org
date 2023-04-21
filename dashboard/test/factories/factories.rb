@@ -140,7 +140,7 @@ FactoryBot.define do
         end
 
         sequence(:name) {|n| "Facilitator Person #{n}"}
-        email {("Facilitator_#{(User.maximum(:id) || 0) + 1}@code.org")}
+        email {"Facilitator_#{SecureRandom.uuid}@code.org"}
 
         after(:create) do |facilitator, evaluator|
           facilitator.permission = UserPermission::FACILITATOR
@@ -158,7 +158,7 @@ FactoryBot.define do
       end
       factory :workshop_organizer do
         sequence(:name) {|n| "Workshop Organizer Person #{n}"}
-        email {("WorkshopOrganizer_#{(User.maximum(:id) || 0) + 1}@code.org")}
+        email {"WorkshopOrganizer_#{SecureRandom.uuid}@code.org"}
         after(:create) do |workshop_organizer|
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
         end
@@ -1282,8 +1282,10 @@ FactoryBot.define do
     end
 
     trait :with_school do
-      # Use state and school_type from the parent school_info
-      school {build :public_school, state: state, school_type: school_type}
+      # Use state and school_type from the parent school_info. Also make sure
+      # that we create rather than just building the school, to accommodate the
+      # custom School#id logic
+      school {create :public_school, state: state, school_type: school_type}
     end
   end
 
