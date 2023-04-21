@@ -8,11 +8,11 @@ function AmazonTeacherOfYearBanner({handleCloseBanner}) {
       header="Amazon Teacher of the Year Award!"
       primaryButton={{
         href: 'http://bit.ly/dash-AFETeacher2021',
-        text: 'Learn more'
+        text: 'Learn more',
       }}
       secondaryButton={{
         text: 'No thanks',
-        onClick: handleCloseBanner
+        onClick: handleCloseBanner,
       }}
     >
       <p>
@@ -32,7 +32,7 @@ function AmazonTeacherOfYearBanner({handleCloseBanner}) {
 }
 
 AmazonTeacherOfYearBanner.propTypes = {
-  handleCloseBanner: PropTypes.func.isRequired
+  handleCloseBanner: PropTypes.func.isRequired,
 };
 
 export default AmazonTeacherOfYearBanner;

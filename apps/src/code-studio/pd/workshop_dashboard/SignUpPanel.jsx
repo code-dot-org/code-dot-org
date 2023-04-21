@@ -8,7 +8,7 @@ import WorkshopPanel from './WorkshopPanel';
 export default class SignUpPanel extends React.Component {
   static propTypes = {
     workshopId: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-      .isRequired
+      .isRequired,
   };
 
   render() {

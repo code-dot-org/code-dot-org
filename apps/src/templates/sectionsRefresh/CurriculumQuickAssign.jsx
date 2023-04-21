@@ -13,7 +13,7 @@ export const MARKETING_AUDIENCE = {
   MIDDLE: 'middle',
   HIGH: 'high',
   HOC: 'hoc',
-  PL: 'pl'
+  PL: 'pl',
 };
 
 export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
@@ -118,5 +118,5 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
 
 CurriculumQuickAssign.propTypes = {
   updateSection: PropTypes.func.isRequired,
-  sectionCourse: PropTypes.object
+  sectionCourse: PropTypes.object,
 };

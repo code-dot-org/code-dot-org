@@ -46,7 +46,7 @@ FieldGroup.propTypes = {
   helpText: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   id: PropTypes.string.isRequired,
   isErrored: PropTypes.bool,
-  label: PropTypes.string
+  label: PropTypes.string,
 };
 
 const ControlledFieldGroup = ({
@@ -58,7 +58,7 @@ const ControlledFieldGroup = ({
   const overlappingProps = {
     id: id,
     name: id,
-    key: id
+    key: id,
   };
   return componentClass === 'select' ? (
     <FieldGroup
@@ -82,7 +82,7 @@ ControlledFieldGroup.propTypes = {
   placeholderOrLabel: PropTypes.string.isRequired,
   componentClass: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired
+  value: PropTypes.string.isRequired,
 };
 
 export default ControlledFieldGroup;

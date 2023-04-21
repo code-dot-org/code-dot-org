@@ -41,7 +41,7 @@ export interface ProgressState {
 export const initialProgressState: ProgressState = {
   step: 0,
   satisfied: false,
-  message: null
+  message: null,
 };
 
 export default class ProgressManager {

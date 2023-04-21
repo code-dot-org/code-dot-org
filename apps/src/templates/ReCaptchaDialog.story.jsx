@@ -3,7 +3,7 @@ import ReCaptchaDialog from './ReCaptchaDialog';
 
 export default {
   title: 'ReCaptchaDialog',
-  component: ReCaptchaDialog
+  component: ReCaptchaDialog,
 };
 
 //Using Google's publicly available test key:
@@ -13,7 +13,7 @@ const DEFAULT_PROPS = {
   handleCancel: () => {},
   isOpen: true,
   submitText: 'Join section',
-  siteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
+  siteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
 };
 const Template = args => <ReCaptchaDialog {...DEFAULT_PROPS} {...args} />;
 

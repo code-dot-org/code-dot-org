@@ -13,7 +13,7 @@ class FoormEntityEditorPreview extends Component {
     errorMessages: PropTypes.array,
 
     // Populated by Redux
-    hasJSONError: PropTypes.bool
+    hasJSONError: PropTypes.bool,
   };
 
   renderErrorMessages() {
@@ -53,14 +53,14 @@ class FoormEntityEditorPreview extends Component {
 
 const styles = {
   previewBox: {
-    border: '1px solid #eee'
+    border: '1px solid #eee',
   },
   errorMessage: {
     fontWeight: 'bold',
-    padding: '1em'
-  }
+    padding: '1em',
+  },
 };
 
 export default connect(state => ({
-  hasJSONError: state.foorm.hasJSONError
+  hasJSONError: state.foorm.hasJSONError,
 }))(FoormEntityEditorPreview);

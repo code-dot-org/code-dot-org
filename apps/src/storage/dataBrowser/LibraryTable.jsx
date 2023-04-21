@@ -18,16 +18,16 @@ class LibraryTable extends React.Component {
     // Provided via redux
     libraryManifest: PropTypes.object.isRequired,
     locale: PropTypes.string,
-    onShowPreview: PropTypes.func.isRequired
+    onShowPreview: PropTypes.func.isRequired,
   };
 
   state = {
-    collapsed: true
+    collapsed: true,
   };
 
   toggleCollapsed = () =>
     this.setState({
-      collapsed: !this.state.collapsed
+      collapsed: !this.state.collapsed,
     });
 
   render() {
@@ -63,7 +63,7 @@ class LibraryTable extends React.Component {
               {datasetInfo.lastUpdated && (
                 <span style={styles.lastUpdated}>
                   {msg.lastUpdatedWithTime({
-                    time: moment(datasetInfo.lastUpdated).fromNow()
+                    time: moment(datasetInfo.lastUpdated).fromNow(),
                   })}
                 </span>
               )}
@@ -108,12 +108,12 @@ const styles = {
   tableName: {
     fontFamily: '"Gotham 7r", sans-serif',
     cursor: 'pointer',
-    color: color.dark_charcoal
+    color: color.dark_charcoal,
   },
   tableDescription: {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.dark_charcoal,
-    wordBreak: 'break-word'
+    wordBreak: 'break-word',
   },
   preview: {
     backgroundColor: color.background_gray,
@@ -124,7 +124,7 @@ const styles = {
     height: '30px',
     width: '90px',
     margin: 10,
-    marginLeft: 0
+    marginLeft: 0,
   },
   import: {
     backgroundColor: color.orange,
@@ -136,27 +136,27 @@ const styles = {
     height: '30px',
     width: '90px',
     margin: 10,
-    marginRight: 0
+    marginRight: 0,
   },
   collapsibleContainer: {
-    paddingLeft: '16px'
+    paddingLeft: '16px',
   },
   lastUpdated: {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: '12px',
     color: color.light_gray,
-    display: 'inline-block'
-  }
+    display: 'inline-block',
+  },
 };
 
 export default connect(
   state => ({
     libraryManifest: state.data.libraryManifest || {},
-    locale: state.pageConstants && state.pageConstants.locale
+    locale: state.pageConstants && state.pageConstants.locale,
   }),
   dispatch => ({
     onShowPreview(tableName) {
       dispatch(showPreview(tableName));
-    }
+    },
   })
 )(LibraryTable);

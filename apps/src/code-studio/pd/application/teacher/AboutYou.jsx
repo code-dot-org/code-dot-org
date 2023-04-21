@@ -4,7 +4,7 @@ import UsPhoneNumberInput from '../../form_components/UsPhoneNumberInput';
 import {
   PageLabels,
   SectionHeaders,
-  TextFields
+  TextFields,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 import {FormGroup, Row, Col} from 'react-bootstrap';
@@ -13,7 +13,7 @@ import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRad
 import {LabeledCheckBoxesWithAdditionalTextFields} from '../../form_components_func/labeled/LabeledCheckBoxes';
 import {
   LabeledInput,
-  LabeledLargeInput
+  LabeledLargeInput,
 } from '../../form_components_func/labeled/LabeledInput';
 import {LabeledUsPhoneNumberInput} from '../../form_components_func/labeled/LabeledUsPhoneNumberInput';
 import {LabeledSelect} from '../../form_components_func/labeled/LabeledSelect';
@@ -61,7 +61,7 @@ const AboutYou = props => {
           <LabeledCheckBoxesWithAdditionalTextFields
             name="howHeard"
             textFieldMap={{
-              [TextFields.otherWithText]: 'other'
+              [TextFields.otherWithText]: 'other',
             }}
             required={false}
           />
@@ -72,7 +72,7 @@ const AboutYou = props => {
 };
 AboutYou.propTypes = {
   data: PropTypes.object.isRequired,
-  accountEmail: PropTypes.string.isRequired
+  accountEmail: PropTypes.string.isRequired,
 };
 
 AboutYou.associatedFields = [...Object.keys(PageLabels.aboutYou)];

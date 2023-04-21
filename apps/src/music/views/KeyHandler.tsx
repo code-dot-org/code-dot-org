@@ -6,7 +6,7 @@ import {
   advanceInstructionsPosition,
   toggleBeatPad,
   toggleInstructions,
-  toggleTimelinePosition
+  toggleTimelinePosition,
 } from '../redux/musicRedux';
 
 interface KeyHandlerProps {
@@ -20,7 +20,7 @@ interface KeyHandlerProps {
  */
 const KeyHandler: React.FunctionComponent<KeyHandlerProps> = ({
   togglePlaying,
-  playTrigger
+  playTrigger,
 }) => {
   const analyticsReporter = useContext(AnalyticsContext);
   const dispatch = useDispatch();
