@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-14 19:51:46 UTC",
+    "serialized_at": "2023-04-20 16:45:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2878,6 +2878,17 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/s/focus-on-impact-in-society1-2023/resources",
+      "key": "all_resources_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_1"
+      }
+    },
+    {
       "name": "All Standards",
       "url": "/s/focus-on-impact-in-society1-2023/standards",
       "key": "all_standards",
@@ -2958,16 +2969,6 @@
       },
       "seeding_key": {
         "resource.key": "code_org_how-to_videos"
-      }
-    },
-    {
-      "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
-      "key": "csd_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide"
       }
     },
     {
@@ -3475,13 +3476,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_standards",
+        "resource.key": "all_resources_1",
         "script.name": "focus-on-impact-in-society1-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
+        "resource.key": "all_standards",
         "script.name": "focus-on-impact-in-society1-2023"
       }
     },

@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-03 23:41:59 UTC",
+    "serialized_at": "2023-04-20 17:58:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -16375,16 +16375,6 @@
       }
     },
     {
-      "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
-      "key": "csd_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide"
-      }
-    },
-    {
       "name": "CSD Guide to Debugging",
       "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
       "key": "csd_guide_to_debugging",
@@ -18226,12 +18216,6 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary",
-        "script.name": "focus-on-creativity3-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
         "script.name": "focus-on-creativity3-2023"
       }
     },
