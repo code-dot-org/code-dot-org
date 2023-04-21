@@ -298,7 +298,8 @@ const styles = {
     marginLeft: -(DIALOG_WIDTH / 2)
   },
   buttonWithoutMargin: {
-    margin: 0
+    margin: 0,
+    marginBottom: 5
   },
   label: {
     paddingTop: PADDING / 2
