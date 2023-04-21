@@ -17,6 +17,7 @@ describe('CurriculumCatalog', () => {
     image: 'devices.png',
     cs_topic: 'art_and_design,app_design,physical_computing,programming',
     school_subject: null,
+    course_version_path: '/s/course',
   };
 
   const countingCurriculum = {
@@ -26,6 +27,7 @@ describe('CurriculumCatalog', () => {
     image: 'csc.png',
     cs_topic: 'programming',
     school_subject: 'math',
+    course_version_path: '/s/course',
   };
 
   const noImageCurriculum = {
@@ -35,14 +37,41 @@ describe('CurriculumCatalog', () => {
     image: null,
     cs_topic: 'programming',
     school_subject: null,
+    course_version_path: '/s/course',
+  };
+
+  const noGradesCurriculum = {
+    key: 'no-grades',
+    display_name: 'No Grades',
+    grade_levels: null,
+    image: 'grades.png',
+    cs_topic: 'programming',
+    school_subject: 'math',
+    course_version_path: '/s/course',
+  };
+
+  const noPathCurriculum = {
+    key: 'no-path',
+    display_name: 'No Path',
+    grade_levels: 'K,1',
+    image: 'grades.png',
+    cs_topic: 'programming',
+    school_subject: 'math',
+    course_version_path: null,
   };
 
   const allShownCurricula = [
     makerCurriculum,
     countingCurriculum,
-    noImageCurriculum
+    noImageCurriculum,
   ];
-  const defaultProps = {curriculaData: allShownCurricula, isEnglish: false};
+  const allCurricula = [
+    ...allShownCurricula,
+    noGradesCurriculum,
+    noPathCurriculum,
+  ];
+
+  const defaultProps = {curriculaData: allCurricula, isEnglish: false};
 
   beforeEach(() => {
     const store = configureStore({reducer: {responsive}});
@@ -62,10 +91,15 @@ describe('CurriculumCatalog', () => {
     screen.getByText('Code.org courses, tutorials, and more', {exact: false});
   });
 
-  it('renders name of each curriculum', () => {
+  it('renders name of each curriculum with grade levels and path', () => {
     allShownCurricula
       .map(curriculum => curriculum.display_name)
       .forEach(courseName => screen.getByRole('heading', {name: courseName}));
+  });
+
+  it('does not render any curriculum without grade levels and path', () => {
+    expect(screen.queryByText(noGradesCurriculum.display_name)).to.be.null;
+    expect(screen.queryByText(noPathCurriculum.display_name)).to.be.null;
   });
 
   it('all curricula show an image, including curricula without a specific image', () => {
