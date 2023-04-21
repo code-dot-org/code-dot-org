@@ -39,5 +39,4 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
   );
 };
 
-export * from './componentsGenerator';
 export default Typography;
