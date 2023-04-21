@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import {styleTypes} from './blockly/themes/cdoBlockStyles.mjs';
 import xml from './xml';
+import {DEFAULT_BLOCK_TYPE_CHECKS} from './constants.js';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
@@ -645,9 +646,8 @@ const STANDARD_INPUT_TYPES = {
       const inputRow = block
         .appendValueInput(inputConfig.name)
         .setAlign(blockly.ALIGN_RIGHT);
-      Blockly.cdoUtils.setStrictCheck(
-        inputRow,
-        inputConfig.type,
+      inputRow.connection.setCheck(
+        inputConfig.type || DEFAULT_BLOCK_TYPE_CHECKS,
         inputConfig.strict
       );
       return inputRow;
