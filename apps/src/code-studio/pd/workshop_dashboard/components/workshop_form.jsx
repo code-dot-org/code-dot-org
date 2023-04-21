@@ -26,13 +26,7 @@ import {
   Radio,
   Alert
 } from 'react-bootstrap';
-import {
-  TIME_FORMAT,
-  DATE_FORMAT,
-  DATETIME_FORMAT,
-  COURSE_CSP,
-  COURSE_CSA
-} from '../workshopConstants';
+import {TIME_FORMAT, DATE_FORMAT, DATETIME_FORMAT} from '../workshopConstants';
 import {
   PermissionPropType,
   WorkshopAdmin,
@@ -41,7 +35,9 @@ import {
   CsfFacilitator
 } from '../permission';
 import {
+  ActiveCourseWorkshops,
   Subjects,
+  SubjectNames,
   HideFeeInformationSubjects,
   HideOnWorkshopMapSubjects,
   HideFundedSubjects,
@@ -104,6 +100,7 @@ export class WorkshopForm extends React.Component {
       })
     }),
     onSaved: PropTypes.func,
+    today: PropTypes.instanceOf(Date),
     readOnly: PropTypes.bool,
     children: PropTypes.node
   };
@@ -170,7 +167,8 @@ export class WorkshopForm extends React.Component {
       initialState.cannotChangeIfWorkshopVirtual =
         this.checkCannotChangeIfWorkshopVirtual(
           initialState.sessions,
-          props.workshop.course
+          props.workshop.course,
+          props.workshop.subject
         );
     }
 
@@ -268,7 +266,11 @@ export class WorkshopForm extends React.Component {
       destroyedSessions.push(removedSession);
     }
     const cannotChangeIfWorkshopVirtual =
-      this.checkCannotChangeIfWorkshopVirtual(sessions, this.state.course);
+      this.checkCannotChangeIfWorkshopVirtual(
+        sessions,
+        this.state.course,
+        this.state.subject
+      );
     this.setState({
       sessionsModified: true,
       sessions,
@@ -381,17 +383,19 @@ export class WorkshopForm extends React.Component {
   // the “Is this a virtual workshop” field within one month of the workshop
   // in order to prevent people from changing this last minute without
   // talking to us or the Friday institute.
-  checkCannotChangeIfWorkshopVirtual(sessions, course) {
+  checkCannotChangeIfWorkshopVirtual(sessions, course, subject) {
     return (
-      (course === COURSE_CSP || course === COURSE_CSA) &&
+      (course === ActiveCourseWorkshops.CSP ||
+        course === ActiveCourseWorkshops.CSA) &&
+      subject === SubjectNames.SUBJECT_SUMMER_WORKSHOP &&
       !this.props.permission.has(WorkshopAdmin) &&
       sessions.some(this.workshopStartsWithinMonth)
     );
   }
 
   // Returns whether today is within a month before the workshop start.
-  workshopStartsWithinMonth(session) {
-    const today = new Date();
+  workshopStartsWithinMonth = session => {
+    const today = this.props.today;
     const workshopDate = new Date(session.date);
     const monthBeforeWorkshopDate = new Date(
       workshopDate.getFullYear(),
@@ -399,7 +403,7 @@ export class WorkshopForm extends React.Component {
       workshopDate.getDate()
     );
     return monthBeforeWorkshopDate <= today && today <= workshopDate;
-  }
+  };
 
   renderWorkshopTypeOptions(validation) {
     const isCsf = this.state.course === 'CS Fundamentals';
@@ -777,7 +781,11 @@ export class WorkshopForm extends React.Component {
   handleCourseChange = event => {
     const course = this.handleFieldChange(event);
     const cannotChangeIfWorkshopVirtual =
-      this.checkCannotChangeIfWorkshopVirtual(this.state.sessions, course);
+      this.checkCannotChangeIfWorkshopVirtual(
+        this.state.sessions,
+        course,
+        this.state.subject
+      );
 
     // clear facilitators, subject, funding, and email reminders
     this.setState({
@@ -794,6 +802,16 @@ export class WorkshopForm extends React.Component {
 
   handleSubjectChange = event => {
     const subject = this.handleFieldChange(event);
+    const cannotChangeIfWorkshopVirtual =
+      this.checkCannotChangeIfWorkshopVirtual(
+        this.state.sessions,
+        this.state.course,
+        subject
+      );
+
+    this.setState({
+      cannotChangeIfWorkshopVirtual: cannotChangeIfWorkshopVirtual
+    });
 
     if (
       HideFundedSubjects.includes(subject) ||

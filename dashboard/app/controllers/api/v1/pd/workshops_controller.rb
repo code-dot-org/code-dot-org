@@ -177,7 +177,9 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
     new_workshop_params = workshop_params(can_update_regional_partner)
 
-    if @workshop.virtual != new_workshop_params[:virtual] && user_cannot_freely_edit_virtual
+    workshop_start_date = Date.parse(new_workshop_params[:sessions_attributes].select {|s| s.key?(:start)}.min_by {|s| Date.parse(s[:start])}[:start])
+
+    if @workshop.virtual != new_workshop_params[:virtual] && user_cannot_freely_edit_virtual(new_workshop_params[:course], new_workshop_params[:subject], workshop_start_date)
       render json: {error: "non-workshop-admin cannot change CSP/CSA Summer Workshop virtual field within a month of it starting."}, status: :bad_request
     elsif @workshop.update(new_workshop_params)
       notify if should_notify?
@@ -192,7 +194,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     @workshop.organizer = current_user
     adjust_facilitators
 
-    if @workshop.virtual && user_cannot_freely_edit_virtual
+    if @workshop.virtual && user_cannot_freely_edit_virtual(@workshop.course, @workshop.subject, @workshop.workshop_starting_date)
       render json: {error: "non-workshop-admin cannot create a virtual CSP/CSA Summer Workshop within a month of it starting."}, status: :bad_request
     elsif @workshop.save
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
@@ -333,11 +335,12 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   # If true, then setting/updating 'virtual' is limited:
   #   - when creating this workshop, 'virtual' can only be set as false (i.e. 'in-person').
   #   - when editing this workshop, 'virtual' cannot be changed.
-  private def user_cannot_freely_edit_virtual
+  private def user_cannot_freely_edit_virtual(course, subject, start_date)
     (
-      (@workshop.course == Pd::Workshop::COURSE_CSP || @workshop.course == Pd::Workshop::COURSE_CSA) &&
+      [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSA].include?(course) &&
+      subject == Pd::Workshop::SUBJECT_SUMMER_WORKSHOP &&
       !current_user.permission?(UserPermission::WORKSHOP_ADMIN) &&
-      (@workshop.workshop_starting_date - 1.month <= Time.now && Time.now <= @workshop.workshop_starting_date)
+      (start_date - 1.month <= Time.zone.now && Time.zone.now <= start_date)
     )
   end
 end
