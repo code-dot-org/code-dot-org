@@ -30,6 +30,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => (
               grade_levels,
               school_subject,
               cs_topic,
+              course_version_path,
             }) => (
               <CurriculumCatalogCard
                 key={key}
@@ -41,6 +42,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => (
                 topics={cs_topic?.split(',')}
                 isTranslated={false} // TODO [MEG]: actually pass in this data
                 isEnglish={isEnglish}
+                pathToCourse={course_version_path}
               />
             )
           )}

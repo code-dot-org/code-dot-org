@@ -78,6 +78,10 @@ class CourseOffering < ApplicationRecord
     offering
   end
 
+  def course_version_path(locale_code='en-US')
+    course_versions.find {|cv| cv.recommended?(locale_code)}&.content_root&.link || course_versions.first.content_root.link
+  end
+
   def self.should_cache?
     Unit.should_cache?
   end
@@ -208,6 +212,19 @@ class CourseOffering < ApplicationRecord
       cs_topic: cs_topic,
       school_subject: school_subject,
       device_compatibility: device_compatibility
+    }
+  end
+
+  def summarize_for_catalog
+    {
+      key: key,
+      display_name: display_name,
+      grade_levels: grade_levels,
+      image: image,
+      cs_topic: cs_topic,
+      school_subject: school_subject,
+      device_compatibility: device_compatibility,
+      course_version_path: course_version_path
     }
   end
 
