@@ -1,11 +1,11 @@
 import React from 'react';
 import Typography from './Typography';
-import {SemanticTag, VisualApproach, TypographyElementProps} from './types';
+import {SemanticTag, VisualAppearance, TypographyElementProps} from './types';
 
 interface TypographyElementToGenerateTemplate {
   displayName: string;
   semanticTag: SemanticTag;
-  defaultVisualApproach?: VisualApproach;
+  defaultVisualAppearance?: VisualAppearance;
 }
 const typographyElementsToGenerate: TypographyElementToGenerateTemplate[] = [
   {displayName: 'Heading1', semanticTag: 'h1'},
@@ -17,17 +17,17 @@ const typographyElementsToGenerate: TypographyElementToGenerateTemplate[] = [
   {
     displayName: 'BodyOneText',
     semanticTag: 'p',
-    defaultVisualApproach: 'body-one'
+    defaultVisualAppearance: 'body-one'
   },
   {
     displayName: 'BodyTwoText',
     semanticTag: 'p',
-    defaultVisualApproach: 'body-two'
+    defaultVisualAppearance: 'body-two'
   },
   {
     displayName: 'OverlineText',
     semanticTag: 'p',
-    defaultVisualApproach: 'overline'
+    defaultVisualAppearance: 'overline'
   },
   {displayName: 'EmText', semanticTag: 'em'},
   {displayName: 'StrongText', semanticTag: 'strong'},
@@ -39,18 +39,18 @@ const generateComponents = (
   componentsToGenerate: TypographyElementToGenerateTemplate[]
 ): {[key: string]: React.FunctionComponent<TypographyElementProps>} =>
   componentsToGenerate.reduce((acc, componentTemplateData) => {
-    const {displayName, semanticTag, defaultVisualApproach} =
+    const {displayName, semanticTag, defaultVisualAppearance} =
       componentTemplateData;
 
     const TypographyElement: React.FunctionComponent<
       TypographyElementProps
     > = componentProps => {
-      const {visualApproach, children, className, style} = componentProps;
+      const {visualAppearance, children, className, style} = componentProps;
 
       return (
         <Typography
           semanticTag={semanticTag}
-          visualApproach={visualApproach || defaultVisualApproach}
+          visualAppearance={visualAppearance || defaultVisualAppearance}
           className={className}
           style={style}
         >

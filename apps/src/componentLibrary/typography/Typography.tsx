@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import {SemanticTag, VisualApproach} from './types';
+import {SemanticTag, VisualAppearance} from './types';
 
 const styles = require('./typography.module.scss').default;
 
@@ -8,7 +8,7 @@ interface TypographyProps {
   // Html tag to use for the typography element
   semanticTag: SemanticTag;
   // Scss module classname to use for the typography element
-  visualApproach?: VisualApproach;
+  visualAppearance?: VisualAppearance;
   // Additional classnames to apply to the typography element
   className?: string;
   // Inline styles to apply to the typography element
@@ -19,7 +19,7 @@ interface TypographyProps {
 
 const Typography: React.FunctionComponent<TypographyProps> = ({
   semanticTag,
-  visualApproach,
+  visualAppearance,
   children,
   className,
   style
@@ -29,7 +29,7 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
   return (
     <Tag
       className={classnames(
-        visualApproach && styles[visualApproach],
+        visualAppearance && styles[visualAppearance],
         className
       )}
       style={style}

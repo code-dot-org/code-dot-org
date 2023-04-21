@@ -5,9 +5,9 @@ Implements Typography components with our rebranded styles. Part of global rebra
 At some point it will be moved to (https://github.com/code-dot-org/dsco_), however the signature of the components should
 remain the same, and we'll just need to update the import statements once it's in that library.
 
-### Why there's semanticTag and visualApproach props?
+### Why there's semanticTag and visualAppearance props?
 We're using `semanticTag` prop to define the semantic tag of the element we're going to render (h1, h2, ..., h6, p, strong,
-em, figcaption ), and `visualApproach` prop to define the components styles based on our Design system styling.
+em, figcaption ), and `visualAppearance` prop to define the components styles based on our Design system styling.
 
 Short explanation is that we in order to use semantic tags correctly we might want to render an h2 element, but make it look like h5 or vice versa.
 
@@ -43,7 +43,7 @@ overwriting styles has highest styles priority. Here's some examples:
 ```javascript
  // Assuming we want to make h1 element that will look like h5 with a different color than Typography's default.
     <div>
-        <Heading1 visualApproach="heading-sm">
+        <Heading1 visualAppearance="heading-sm">
             Some Heading
         </Heading1>
     </div>
@@ -58,7 +58,7 @@ overwriting styles has highest styles priority. Here's some examples:
 //     </style>
 
             <div className={scssModule.parentDiv}>
-                <Heading1 visualApproach="heading-lg">
+                <Heading1 visualAppearance="heading-lg">
                     Some Heading
                 </Heading1>
             </div>
@@ -72,14 +72,14 @@ overwriting styles has highest styles priority. Here's some examples:
 //     </style>
 
             <div>
-                <Heading1 visualApproach="heading-lg" className={scssModule.customHeadingStyle}>
+                <Heading1 visualAppearance="heading-lg" className={scssModule.customHeadingStyle}>
                     Some Heading
                 </Heading1>
             </div>
 
 // 2. Use inline styles:
             <div>
-                <Heading1 visualApproach="heading-lg" style={{color: '#f00'}}>
+                <Heading1 visualAppearance="heading-lg" style={{color: '#f00'}}>
                     Some Heading
                 </Heading1>
             </div>
@@ -103,7 +103,7 @@ import {Heading1, BodyOneText} from './../componentsLibrary/typography';
 import Typography from './../componentsLibrary/typography';
 
 <Typography semanticTag="h1">Some Heading1</Typography>
-<Typography semanticTag="p" visualApproach="body-one">Some body text</Typography>
+<Typography semanticTag="p" visualAppearance="body-one">Some body text</Typography>
 
 
 ```

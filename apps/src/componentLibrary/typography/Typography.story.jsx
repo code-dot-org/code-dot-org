@@ -26,7 +26,7 @@ Heading1.args = {
 export const Heading1asHeading3 = Template.bind({});
 Heading1asHeading3.args = {
   semanticTag: 'h1',
-  visualApproach: 'heading-lg',
+  visualAppearance: 'heading-lg',
   children: 'This is a Typography Component. (H1 as H3)'
 };
 
@@ -39,7 +39,7 @@ Heading2.args = {
 export const Heading2asBodyOne = Template.bind({});
 Heading2asBodyOne.args = {
   semanticTag: 'h2',
-  visualApproach: 'body-one',
+  visualAppearance: 'body-one',
   children: 'This is a Typography Component. (H2 as p.body-one)'
 };
 
@@ -52,7 +52,7 @@ Heading3.args = {
 export const Heading3asHeading5 = Template.bind({});
 Heading3asHeading5.args = {
   semanticTag: 'h3',
-  visualApproach: 'heading-sm',
+  visualAppearance: 'heading-sm',
   children: 'This is a Typography Component. (H3 as H5)'
 };
 
@@ -77,21 +77,21 @@ Heading6.args = {
 export const BodyOne = Template.bind({});
 BodyOne.args = {
   semanticTag: 'p',
-  visualApproach: 'body-one',
+  visualAppearance: 'body-one',
   children: 'This is a Typography Component. (p.body-one)'
 };
 
 export const BodyTwo = Template.bind({});
 BodyTwo.args = {
   semanticTag: 'p',
-  visualApproach: 'body-two',
+  visualAppearance: 'body-two',
   children: 'This is a Typography Component. (p.body-two)'
 };
 
 export const OverlineText = Template.bind({});
 OverlineText.args = {
   semanticTag: 'p',
-  visualApproach: 'overline',
+  visualAppearance: 'overline',
   children: 'This is a Typography Component. (p.overline)'
 };
 

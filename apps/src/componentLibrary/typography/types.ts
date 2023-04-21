@@ -12,7 +12,7 @@ type SemanticTag =
   | 'em'
   | 'figcaption';
 
-type VisualApproach =
+type VisualAppearance =
   | 'heading-xxl'
   | 'heading-xl'
   | 'heading-lg'
@@ -28,7 +28,7 @@ type VisualApproach =
 
 interface TypographyElementProps {
   // Scss module classname to use for the typography element
-  visualApproach?: VisualApproach;
+  visualAppearance?: VisualAppearance;
   // Additional classnames to apply to the typography element
   className?: string;
   // Inline styles to apply to the typography element
@@ -37,4 +37,4 @@ interface TypographyElementProps {
   children: React.ReactNode;
 }
 
-export {SemanticTag, VisualApproach, TypographyElementProps};
+export {SemanticTag, VisualAppearance, TypographyElementProps};
