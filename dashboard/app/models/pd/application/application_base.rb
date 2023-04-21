@@ -140,7 +140,6 @@ module Pd::Application
       )
 
       email.send!
-      email.save!
     end
 
     # Override in any application class that will deliver email.
