@@ -1,8 +1,4 @@
-import {
-  ToolboxType,
-  CLAMPED_NUMBER_REGEX,
-  DEFAULT_BLOCK_TYPE_CHECKS
-} from '../constants';
+import {ToolboxType, CLAMPED_NUMBER_REGEX} from '../constants';
 import cdoTheme from '../themes/cdoTheme';
 
 export function setHSV(block, h, s, v) {
@@ -111,10 +107,4 @@ export function getCode(workspace) {
   return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
   // After supporting JSON block sources, change to:
   // return JSON.stringify(Blockly.serialization.workspaces.save(workspace));
-}
-
-export function setStrictCheck(inputRow, type) {
-  // If no type check is specified, allow any types from the default set.
-  // The default set does not include Sprite, Behavior, or Location types.
-  inputRow.setCheck(type || DEFAULT_BLOCK_TYPE_CHECKS);
 }
