@@ -1,2 +1,2 @@
-export * from './componentsGenerator';
+export * from './TypographyElements';
 export {default as default} from './Typography';

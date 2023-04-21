@@ -34,6 +34,7 @@ const typographyElementsToGenerate: TypographyElementToGenerateTemplate[] = [
   {displayName: 'Figcaption', semanticTag: 'figcaption'}
 ];
 
+// Generates a set of components(Typography Elements) based on the data in typographyElementsToGenerate
 const generateComponents = (
   componentsToGenerate: TypographyElementToGenerateTemplate[]
 ): {[key: string]: React.FunctionComponent<TypographyElementProps>} =>
