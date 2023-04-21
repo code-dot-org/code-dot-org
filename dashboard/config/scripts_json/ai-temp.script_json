@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-04-19 22:18:12 UTC",
+    "serialized_at": "2023-04-20 21:37:17 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1256,8 +1256,7 @@
       "key": "97acbc7c-b1d1-4ff0-a0b5-168f430d5a9f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the \n[r how_blockchain_works_introduction/ai-temp/unversioned] video",
-        "name": "WIP: to be deleted"
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the [r introduction_to_ai_introduction/ai-temp/unversioned]\n video\n"
       },
       "seeding_key": {
         "activity_section.key": "97acbc7c-b1d1-4ff0-a0b5-168f430d5a9f",
@@ -1831,6 +1830,18 @@
       }
     },
     {
+      "name": "Introduction to AI: Introduction",
+      "url": "https://youtu.be/Ok-xpKjKp2g",
+      "key": "introduction_to_ai_introduction",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_introduction"
+      }
+    },
+    {
       "name": "Introduction to AI: Training Data and Bias",
       "url": "https://youtu.be/x2mRoFNm22g",
       "key": "introduction_to_ai_training_data_and_bias",
@@ -1905,7 +1916,7 @@
     },
     {
       "name": "Vocabulary Matching",
-      "url": "https://docs.google.com/document/d/1Ns3EMBk8gNumJ9SMbXbnDbvsCi7wA0XjKbIainuiU4M/edit",
+      "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit",
       "key": "vocabulary_matching",
       "properties": {
         "audience": "Student",
@@ -1970,6 +1981,12 @@
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
         "resource.key": "introduction_to_ai_how_neural_networks_work"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "resource.key": "introduction_to_ai_introduction"
       }
     },
     {
