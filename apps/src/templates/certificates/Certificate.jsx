@@ -65,7 +65,8 @@ function Certificate(props) {
       course: props.tutorial,
       donor
     };
-    return btoa(reEncodeNonLatin1(JSON.stringify(data)));
+    const encoded = btoa(reEncodeNonLatin1(JSON.stringify(data)));
+    return encoded.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/g, '');
   };
 
   const getCertificateImagePath = () => {
