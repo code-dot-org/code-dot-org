@@ -8,7 +8,7 @@ module Pd::Application
 
     freeze_time
 
-    setup_all do
+    setup do
       Pd::Application::ApplicationBase.any_instance.stubs(:deliver_email)
     end
 
