@@ -81,9 +81,6 @@ RUN \
   # Install yarn
   npm install -g yarn@${YARN_VERSION} && \
   #
-  # Setup rbenv & ruby-build
-  echo -n 'eval "$(rbenv init -)"' | tee -a ${HOME}/.bashrc ${HOME}/.zshrc && \
-  #
   # Install oh-my-zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
   #
@@ -98,7 +95,10 @@ RUN \
   rm awscliv2.zip && \
   #
   # Add CHROME_BIN env var to bashrc
-  echo -n '\n# Chromium Binary\nexport CHROME_BIN=/usr/bin/chromium-browser\n' | tee -a ${HOME}/.bashrc ${HOME}/.zshrc && \
+  echo '# Chromium Binary\nexport CHROME_BIN=/usr/bin/chromium-browser' | tee -a ${HOME}/.bashrc ${HOME}/.zshrc && \
+  #
+  # Setup rbenv & ruby-build
+  echo 'eval "$(rbenv init -)"' | tee -a ${HOME}/.bashrc ${HOME}/.zshrc && \
   true
 
 WORKDIR ${SRC}
@@ -158,3 +158,5 @@ COPY --chown=${USERNAME} \
   ./
 
 SHELL [ "zsh", "-l", "-c" ]
+
+CMD tail -f /dev/null
