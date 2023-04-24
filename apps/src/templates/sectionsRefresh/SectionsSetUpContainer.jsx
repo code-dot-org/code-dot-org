@@ -8,6 +8,8 @@ import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+//import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+//import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
@@ -68,6 +70,8 @@ const saveSection = (e, section) => {
     return;
   }
 
+  //recordSectionSetupEvent(section);
+
   const csrfToken = document.querySelector('meta[name="csrf-token"]')
     .attributes['content'].value;
   const loginType = queryParams('loginType');
@@ -97,6 +101,42 @@ const saveSection = (e, section) => {
       console.error(err);
     });
 };
+
+/* Start of analytics recording
+const recordSectionSetupEvent = section => {
+  if (isNewSection) {
+    analyticsReporter.sendEvent(EVENTS.COMPLETED_EVENT, {
+      sectionUnitId: section.course.unitId,
+      sectionCurriculumLocalizedName: section.course.displayName,
+      sectionCurriculum: section.course.courseOfferingId, //this is course Offering id
+      sectionCurriculumVersionYear: versionYear,
+      sectionGrade: section.grades ? section.grades[0] : null,
+      sectionLockSelection: section.restrictSection,
+      sectionName: section.name,
+      sectionPairProgramSelection: section.pairingAllowed,
+    });
+  }
+  if (
+    (section.courseOfferingId &&
+      section.courseOfferingId !== initialCourseOfferingId) ||
+    (section.unitId && section.unitId !== initialUnitId)
+  ) {
+    analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+      sectionName: section.name,
+      sectionId: section.id,
+      sectionLoginType: section.loginType,
+      previousUnitId: initialUnitId,
+      previousCourseId: initialCourseOfferingId,
+      previousCourseVersionId: initialCourseVersionId,
+      previousVersionYear: initialVersionYear,
+      newUnitId: section.unitId,
+      newCourseId: section.courseOfferingId,
+      newCourseVersionId: section.courseVersionId,
+      newVersionYear: versionYear,
+    });
+  }
+};
+*/
 
 export default function SectionsSetUpContainer({sectionToBeEdited}) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
