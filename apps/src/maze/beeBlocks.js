@@ -8,18 +8,18 @@ var blockUtils = require('../block_utils');
 var OPERATORS = [
   ['=', '=='],
   ['<', '<'],
-  ['>', '>']
+  ['>', '>'],
 ];
 const RTL_OPERATORS = [
   ['=', '=='],
   ['>', '<'],
-  ['<', '>']
+  ['<', '>'],
 ];
 
 var TOOLTIPS = {
   '==': Blockly.Msg.LOGIC_COMPARE_TOOLTIP_EQ,
   '<': Blockly.Msg.LOGIC_COMPARE_TOOLTIP_LT,
-  '>': Blockly.Msg.LOGIC_COMPARE_TOOLTIP_GT
+  '>': Blockly.Msg.LOGIC_COMPARE_TOOLTIP_GT,
 };
 
 // Install extensions to Blockly's language and JavaScript generator.
@@ -66,7 +66,7 @@ exports.install = function (blockly, blockInstallOptions) {
     'if',
     [
       [msg.nectarRemaining(), 'nectarRemaining'],
-      [msg.honeyAvailable(), 'honeyAvailable']
+      [msg.honeyAvailable(), 'honeyAvailable'],
     ]
   );
 
@@ -77,13 +77,13 @@ exports.install = function (blockly, blockInstallOptions) {
     'ifelse',
     [
       [msg.nectarRemaining(), 'nectarRemaining'],
-      [msg.honeyAvailable(), 'honeyAvailable']
+      [msg.honeyAvailable(), 'honeyAvailable'],
     ]
   );
 
   addConditionalComparisonBlock(blockly, generator, 'bee_ifTotalNectar', 'if', [
     [msg.totalNectar(), 'nectarCollected'],
-    [msg.totalHoney(), 'honeyCreated']
+    [msg.totalHoney(), 'honeyCreated'],
   ]);
 
   addConditionalComparisonBlock(
@@ -93,7 +93,7 @@ exports.install = function (blockly, blockInstallOptions) {
     'ifelse',
     [
       [msg.totalNectar(), 'nectarCollected'],
-      [msg.totalHoney(), 'honeyCreated']
+      [msg.totalHoney(), 'honeyCreated'],
     ]
   );
 
@@ -104,7 +104,7 @@ exports.install = function (blockly, blockInstallOptions) {
     'while',
     [
       [msg.nectarRemaining(), 'nectarRemaining'],
-      [msg.honeyAvailable(), 'honeyAvailable']
+      [msg.honeyAvailable(), 'honeyAvailable'],
     ]
   );
 
@@ -114,7 +114,7 @@ exports.install = function (blockly, blockInstallOptions) {
     title: isK1 ? msg.get() : msg.nectar(),
     titleImage: isK1 ? skin.redFlower : undefined,
     tooltip: msg.nectarTooltip(),
-    functionName: 'Maze.getNectar'
+    functionName: 'Maze.getNectar',
   });
 
   blockUtils.generateSimpleBlock(blockly, generator, {
@@ -123,7 +123,7 @@ exports.install = function (blockly, blockInstallOptions) {
     title: isK1 ? msg.make() : msg.honey(),
     titleImage: isK1 ? skin.honey : undefined,
     tooltip: msg.honeyTooltip(),
-    functionName: 'Maze.makeHoney'
+    functionName: 'Maze.makeHoney',
   });
 };
 
@@ -142,7 +142,7 @@ function addIfOnlyFlower(blockly, generator) {
       this.setTooltip(msg.ifOnlyFlowerTooltip());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   // EXAMPLE:
@@ -165,7 +165,7 @@ function addIfFlowerHive(blockly, generator) {
     init: function () {
       var LOCATIONS = [
         [msg.atFlower(), 'atFlower'],
-        [msg.atHoneycomb(), 'atHoneycomb']
+        [msg.atHoneycomb(), 'atHoneycomb'],
       ];
 
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
@@ -179,7 +179,7 @@ function addIfFlowerHive(blockly, generator) {
       this.setTooltip(msg.ifFlowerTooltip());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   // EXAMPLES:
@@ -204,7 +204,7 @@ function addIfElseFlowerHive(blockly, generator) {
     init: function () {
       var LOCATIONS = [
         [msg.atFlower(), 'atFlower'],
-        [msg.atHoneycomb(), 'atHoneycomb']
+        [msg.atHoneycomb(), 'atHoneycomb'],
       ];
 
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
@@ -219,7 +219,7 @@ function addIfElseFlowerHive(blockly, generator) {
       this.setTooltip(msg.ifelseFlowerTooltip());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   // EXAMPLES:
@@ -259,7 +259,7 @@ function addRepeatedActionBlock(
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(tooltip);
-    }
+    },
   };
 
   generator[name] = function () {
@@ -324,7 +324,7 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
         var op = self.getFieldValue('OP');
         return TOOLTIPS[op];
       });
-    }
+    },
   };
 
   // if (Maze.nectarCollected() > 0) { code }

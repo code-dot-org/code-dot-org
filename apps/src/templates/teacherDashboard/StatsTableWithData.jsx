@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import StatsTable from './StatsTable';
 import {
   getStudentsCompletedLevelCount,
-  asyncSetCompletedLevelCount
+  asyncSetCompletedLevelCount,
 } from './statsRedux';
 
 class StatsTableWithData extends Component {
@@ -13,7 +13,7 @@ class StatsTableWithData extends Component {
     sectionId: PropTypes.number,
     students: PropTypes.array,
     studentsCompletedLevelCount: PropTypes.object,
-    asyncSetCompletedLevelCount: PropTypes.func.isRequired
+    asyncSetCompletedLevelCount: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
@@ -42,11 +42,11 @@ export default connect(
     studentsCompletedLevelCount: getStudentsCompletedLevelCount(
       state,
       state.teacherSections.selectedSectionId
-    )
+    ),
   }),
   dispatch => ({
     asyncSetCompletedLevelCount(sectionId) {
       dispatch(asyncSetCompletedLevelCount(sectionId));
-    }
+    },
   })
 )(StatsTableWithData);

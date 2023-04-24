@@ -9,13 +9,13 @@ export const MARKETING_AUDIENCE = {
   MIDDLE: 'middle',
   HIGH: 'high',
   HOC: 'hoc',
-  PL: 'pl'
+  PL: 'pl',
 };
 
 export default function CurriculumQuickAssignTopRow({
   showPlOfferings,
   marketingAudience,
-  updateMarketingAudience
+  updateMarketingAudience,
 }) {
   // Determines which icon to render for each audience
   const marketingAudienceIcon = audience => {
@@ -100,5 +100,5 @@ export default function CurriculumQuickAssignTopRow({
 CurriculumQuickAssignTopRow.propTypes = {
   showPlOfferings: PropTypes.bool.isRequired,
   marketingAudience: PropTypes.string,
-  updateMarketingAudience: PropTypes.func.isRequired
+  updateMarketingAudience: PropTypes.func.isRequired,
 };

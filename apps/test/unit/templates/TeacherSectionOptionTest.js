@@ -12,7 +12,7 @@ describe('TeacherSectionOption', () => {
   const defaultProps = {
     section: assignedCourseANDUnitSection,
     onChange: changeFunction,
-    isChecked: true
+    isChecked: true,
   };
   const setUp = (overrideProps = {}) => {
     const props = {...defaultProps, ...overrideProps};

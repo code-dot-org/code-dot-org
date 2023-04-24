@@ -3,7 +3,7 @@ import React, {
   useEffect,
   useCallback,
   useMemo,
-  forwardRef
+  forwardRef,
 } from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
@@ -17,7 +17,7 @@ import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/Co
 import Button from '@cdo/apps/templates/Button';
 import {
   setIsReadOnlyWorkspace,
-  setHasOpenCodeReview
+  setHasOpenCodeReview,
 } from '@cdo/apps/javalab/redux/javalabRedux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
@@ -39,7 +39,7 @@ const CommitsAndReviewTab = forwardRef(function (
     setIsReadOnlyWorkspace,
     setHasOpenCodeReview,
     isCommitSaveInProgress,
-    hasCommitSaveError
+    hasCommitSaveError,
   },
   ref
 ) {
@@ -111,7 +111,7 @@ const CommitsAndReviewTab = forwardRef(function (
       );
       setOpenReviewData({
         ...openReviewData,
-        comments: [...openReviewData.comments, newComment]
+        comments: [...openReviewData.comments, newComment],
       });
       onSuccess();
     } catch (err) {
@@ -230,7 +230,7 @@ const CommitsAndReviewTab = forwardRef(function (
           <CodeReviewTimeline
             timelineData={[
               ...timelineData,
-              ...(openReviewData ? [openReviewData] : [])
+              ...(openReviewData ? [openReviewData] : []),
             ]}
             addCodeReviewComment={addCodeReviewComment}
             closeReview={handleCloseReview}
@@ -254,7 +254,7 @@ const CommitsAndReviewTab = forwardRef(function (
             <div
               style={{
                 ...styles.timelineAligned,
-                ...styles.reviewDisabledMsg
+                ...styles.reviewDisabledMsg,
               }}
             >
               {javalabMsg.codeReviewDisabledMessage()}
@@ -280,13 +280,13 @@ export default connect(
     locale: state.pageConstants.locale,
     isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
     isCommitSaveInProgress: state.javalab.isCommitSaveInProgress,
-    hasCommitSaveError: state.javalab.hasCommitSaveError
+    hasCommitSaveError: state.javalab.hasCommitSaveError,
   }),
   dispatch => ({
     setIsReadOnlyWorkspace: isReadOnly =>
       dispatch(setIsReadOnlyWorkspace(isReadOnly)),
     setHasOpenCodeReview: hasOpenCodeReview =>
-      dispatch(setHasOpenCodeReview(hasOpenCodeReview))
+      dispatch(setHasOpenCodeReview(hasOpenCodeReview)),
   }),
   null,
   {forwardRef: true}
@@ -307,46 +307,46 @@ CommitsAndReviewTab.propTypes = {
   setIsReadOnlyWorkspace: PropTypes.func.isRequired,
   setHasOpenCodeReview: PropTypes.func.isRequired,
   isCommitSaveInProgress: PropTypes.bool,
-  hasCommitSaveError: PropTypes.bool
+  hasCommitSaveError: PropTypes.bool,
 };
 
 const styles = {
   loadingContainer: {
     display: 'flex',
     margin: '25px',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   reviewsContainer: {
-    margin: '0px 5px 25px 16px'
+    margin: '0px 5px 25px 16px',
   },
   header: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    margin: '5px 0'
+    margin: '5px 0',
   },
   refreshButtonContainer: {
-    margin: '5px 0'
+    margin: '5px 0',
   },
   navigator: {
-    margin: '5px 0'
+    margin: '5px 0',
   },
   messageText: {
     fontSize: 13,
     margin: '15px 5px 25px 16px',
-    color: color.light_gray
+    color: color.light_gray,
   },
   refreshButtonStyle: {
     fontSize: 13,
-    margin: 0
+    margin: 0,
   },
   timelineAligned: {
-    marginLeft: '30px'
+    marginLeft: '30px',
   },
   reviewDisabledMsg: {
     padding: '12px 6px',
     fontStyle: 'italic',
     color: color.charcoal,
-    lineHeight: '22px'
-  }
+    lineHeight: '22px',
+  },
 };

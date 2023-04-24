@@ -14,5 +14,5 @@ export const curriculumDataShape = PropTypes.shape({
   image: PropTypes.string,
   cs_topic: PropTypes.string,
   school_subject: PropTypes.string,
-  device_compatibility: PropTypes.string
+  device_compatibility: PropTypes.string,
 });

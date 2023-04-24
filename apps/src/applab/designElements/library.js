@@ -270,5 +270,5 @@ export default {
       return elements[elementType].readProperty(element, name);
     }
     throw `unknown property type ${name}`;
-  }
+  },
 };

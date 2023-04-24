@@ -8,7 +8,7 @@ class LargeChevronLink extends Component {
   static propTypes = {
     linkText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -32,12 +32,12 @@ class LargeChevronLink extends Component {
 
 const styles = {
   link: {
-    textDecoration: 'none'
+    textDecoration: 'none',
   },
   linkBox: {
     marginTop: 10,
     marginBottom: 10,
-    width: '100%'
+    width: '100%',
   },
   linkText: {
     fontSize: 20,
@@ -48,22 +48,22 @@ const styles = {
     display: 'inline',
     fontWeight: 'bold',
     marginLeft: 15,
-    marginRight: 15
+    marginRight: 15,
   },
   chevron: {
     display: 'inline',
     color: color.teal,
     fontSize: 20,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   left: {
-    float: 'left'
+    float: 'left',
   },
   right: {
-    float: 'right'
-  }
+    float: 'right',
+  },
 };
 
 export default connect(state => ({
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(LargeChevronLink);

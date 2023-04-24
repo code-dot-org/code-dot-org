@@ -8,7 +8,7 @@ import style from './restore-theme-defaults-button.module.scss';
  */
 class RestoreThemeDefaultsButton extends React.Component {
   static propTypes = {
-    handleRestore: PropTypes.func.isRequired
+    handleRestore: PropTypes.func.isRequired,
   };
 
   render() {

@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import {
   blankStudentTransfer,
   blankStudentTransferStatus,
-  TransferStatus
+  TransferStatus,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {UnconnectedMoveStudents as MoveStudents} from '@cdo/apps/templates/manageStudents/MoveStudents';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
@@ -13,13 +13,13 @@ import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 const studentData = [
   {id: 1, name: 'studentb'},
   {id: 3, name: 'studentc'},
-  {id: 0, name: 'studenta'}
+  {id: 0, name: 'studenta'},
 ];
 const sections = [
   {id: 0, name: 'sectiona', loginType: SectionLoginType.google_classroom},
   {id: 1, name: 'sectionb', loginType: SectionLoginType.email},
   {id: 2, name: 'sectionc', loginType: SectionLoginType.clever},
-  {id: 3, name: 'sectiond', loginType: SectionLoginType.word}
+  {id: 3, name: 'sectiond', loginType: SectionLoginType.word},
 ];
 
 describe('MoveStudents', () => {
@@ -40,7 +40,7 @@ describe('MoveStudents', () => {
       currentSectionId: 1,
       updateStudentTransfer,
       transferStudents,
-      cancelStudentTransfer
+      cancelStudentTransfer,
     };
   });
 
@@ -55,7 +55,7 @@ describe('MoveStudents', () => {
   it('renders additional inputs if other teacher is selected', () => {
     const transferData = {
       ...blankStudentTransfer,
-      otherTeacher: true
+      otherTeacher: true,
     };
     const wrapper = mount(
       <MoveStudents {...DEFAULT_PROPS} transferData={transferData} />
@@ -70,7 +70,7 @@ describe('MoveStudents', () => {
     const transferData = {
       ...blankStudentTransfer,
       studentIds: [1],
-      sectionId: 2
+      sectionId: 2,
     };
     const wrapper = mount(
       <MoveStudents {...DEFAULT_PROPS} transferData={transferData} />
@@ -92,7 +92,7 @@ describe('MoveStudents', () => {
   it('renders an error message if the transfer status is fail', () => {
     const transferStatus = {
       status: TransferStatus.FAIL,
-      error: 'failed to transfer students!'
+      error: 'failed to transfer students!',
     };
     const wrapper = mount(
       <MoveStudents {...DEFAULT_PROPS} transferStatus={transferStatus} />
@@ -128,7 +128,7 @@ describe('MoveStudents', () => {
     const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
     wrapper.instance().toggleAll(true);
     expect(updateStudentTransfer).to.have.been.calledWith({
-      studentIds: [1, 3, 0]
+      studentIds: [1, 3, 0],
     });
   });
 

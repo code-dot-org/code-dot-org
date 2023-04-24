@@ -14,7 +14,7 @@ const PlaygroundThermometer = {
         enumerable: true,
         get: function () {
           return thermometerRawValue;
-        }
+        },
       };
       if (!this.hasOwnProperty('raw')) {
         Object.defineProperty(this, 'raw', rawValueDescriptor);
@@ -22,13 +22,13 @@ const PlaygroundThermometer = {
       if (!this.hasOwnProperty('value')) {
         Object.defineProperty(this, 'value', rawValueDescriptor);
       }
-    }
+    },
   },
   toCelsius: {
     value: function (raw) {
       thermometerRawValue = raw;
       return Playground.Thermometer.toCelsius.value(raw);
-    }
-  }
+    },
+  },
 };
 export default PlaygroundThermometer;

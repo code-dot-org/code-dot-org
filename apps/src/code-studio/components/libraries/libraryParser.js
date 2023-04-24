@@ -37,7 +37,7 @@ function createDropletConfig(functions, libraryName) {
       func: currentFunction.functionName,
       category: 'Functions',
       comment: currentFunction.comment,
-      type: 'either'
+      type: 'either',
     };
 
     if (currentFunction.parameters && currentFunction.parameters.length > 0) {
@@ -139,7 +139,7 @@ export function createLibraryJson(
     description: libraryDescription,
     functions: functions,
     dropletConfig: config,
-    source: code
+    source: code,
   });
 }
 
@@ -177,5 +177,5 @@ export default {
   createLibraryJson,
   suggestName,
   sanitizeName,
-  createLibraryClosure
+  createLibraryClosure,
 };
