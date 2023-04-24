@@ -39,6 +39,7 @@ class ChannelToken < ApplicationRecord
   # @param [Hash] data
   # @return [ChannelToken] The channel token (new or existing).
   def self.find_or_create_channel_token(level, ip, user_storage_id, script_id = nil, data = {})
+    puts "about to create project"
     project = Projects.new(user_storage_id)
     # If `create` fails because it was beat by a competing request, a second
     # `find_by` should succeed.

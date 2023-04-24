@@ -17,6 +17,8 @@ class Projects
   end
 
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true)
+    puts "in projects.rb create"
+    puts "type is #{type}"
     timestamp = DateTime.now
     row = {
       storage_id: @storage_id,
@@ -349,6 +351,63 @@ class Projects
   #
   def project_type_from_channel_id(channel_id)
     project_type_from_merged_row(get(channel_id))
+  end
+
+  # Given a level, get the project type for that level.
+  def self.get_project_type_for_level(level)
+    app = level.game.app
+    case app
+    when 'applab', 'calc', 'dance', 'eval', 'flappy', 'weblab', 'gamelab', 'thebadguys', 'javalab'
+      app
+    when 'turtle'
+      if level.skin == 'elsa' || level.skin == 'anna'
+        'frozen'
+      elsif level.is_k1
+        'artist_k1'
+      else
+        'artist'
+      end
+    when 'craft'
+      if level.is_agent_level
+        'minecraft_hero'
+      elsif level.is_event_level
+        'minecraft_designer'
+      elsif level.is_connection_level
+        'minecraft_codebuilder'
+      elsif level.is_aquatic_level
+        'minecraft_aquatic'
+      else
+        'minecraft_adventurer'
+      end
+    when 'studio'
+      if level.use_contract_editor
+        'algebra_game'
+      elsif level.skin == 'hoc2015'
+        if level.uses_droplet?
+          'starwars'
+        else
+          'starwarsblocks_hour'
+        end
+      elsif level.skin == 'iceage' || level.skin == 'infinity' || level.skin == 'gumball'
+        level.skin
+      elsif level.is_k1
+        'playlab_k1'
+      else
+        'playlab'
+      end
+    when 'bounce'
+      if level.skin == 'sports' || level.skin == 'basketball'
+        level.skin
+      else
+        'bounce'
+      end
+    when 'poetry'
+      level.standalone_app_name
+    when 'spritelab'
+      level.standalone_app_name || app
+    else
+      nil
+    end
   end
 
   #

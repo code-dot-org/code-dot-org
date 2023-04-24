@@ -266,6 +266,8 @@ class ProjectsController < ApplicationController
   end
 
   def create_new
+    puts "in create_new project"
+    puts "type is #{params[:key]}"
     return if redirect_under_13_without_tos_teacher(@level)
     channel = ChannelToken.create_channel(
       request.ip,

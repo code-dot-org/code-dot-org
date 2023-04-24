@@ -88,12 +88,14 @@ module LevelsHelper
   # Otherwise, gets the storage_id associated with the (potentially signed out)
   # current user, and either finds or creates a channel for the level
   def get_channel_for(level, script_id = nil, user = nil)
+    puts "in get_channel_for, user: #{user}"
     if user
       # "answers" are in the channel so instead of doing
       # set_level_source to load answers when looking at another user,
       # we have to load the channel here.
       user_storage_id = storage_id_for_user_id(user.id)
       channel_token = ChannelToken.find_channel_token(level, user_storage_id, script_id)
+      puts "got channel token for user"
     else
       user_storage_id = get_storage_id
       channel_token = ChannelToken.find_or_create_channel_token(
@@ -105,8 +107,9 @@ module LevelsHelper
           hidden: true,
         }
       )
+      puts "no user, got channel token"
     end
-
+    puts "channel token channel: #{channel_token&.channel}"
     channel_token&.channel
   end
 
