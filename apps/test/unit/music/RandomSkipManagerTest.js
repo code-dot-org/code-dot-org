@@ -11,7 +11,7 @@ describe('Music random skip manager tests', function () {
 
     assert.deepEqual(randomSkipManager.getSkipContext(), {
       insideRandom: false,
-      skipSound: false
+      skipSound: false,
     });
 
     // Preserve the indentation:

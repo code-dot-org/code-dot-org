@@ -3,7 +3,7 @@ import {
   isUnsupportedBrowser,
   isIE11,
   isMobileDevice,
-  isStorageAvailable
+  isStorageAvailable,
 } from '@cdo/apps/util/browser-detector';
 import $ from 'jquery';
 

@@ -107,7 +107,7 @@ var NetSimPacketEditor = (module.exports = function (initialConfig) {
       shortNumberAllowedCharacters: /[AB]/i,
       shortNumberConversion: truncatedABToInt,
       messageAllowedCharacters: /[AB\s]/i,
-      messageConversion: abToBinary
+      messageConversion: abToBinary,
     },
     {
       typeName: EncodingType.BINARY,
@@ -121,7 +121,7 @@ var NetSimPacketEditor = (module.exports = function (initialConfig) {
       shortNumberAllowedCharacters: /[01]/,
       shortNumberConversion: truncatedBinaryToInt,
       messageAllowedCharacters: /[01\s]/,
-      messageConversion: minifyBinary
+      messageConversion: minifyBinary,
     },
     {
       typeName: EncodingType.HEXADECIMAL,
@@ -135,7 +135,7 @@ var NetSimPacketEditor = (module.exports = function (initialConfig) {
       shortNumberAllowedCharacters: /[0-9a-f]/i,
       shortNumberConversion: truncatedHexToInt,
       messageAllowedCharacters: /[0-9a-f\s]/i,
-      messageConversion: hexToBinary
+      messageConversion: hexToBinary,
     },
     {
       typeName: EncodingType.DECIMAL,
@@ -146,7 +146,7 @@ var NetSimPacketEditor = (module.exports = function (initialConfig) {
       messageAllowedCharacters: /[0-9\s]/,
       messageConversion: function (decimalString) {
         return decimalToBinary(decimalString, this.currentChunkSize_);
-      }.bind(this)
+      }.bind(this),
     },
     {
       typeName: EncodingType.ASCII,
@@ -157,8 +157,8 @@ var NetSimPacketEditor = (module.exports = function (initialConfig) {
       messageAllowedCharacters: /./,
       messageConversion: function (asciiString) {
         return asciiToBinary(asciiString, this.currentChunkSize_);
-      }.bind(this)
-    }
+      }.bind(this),
+    },
   ];
 
   /**
@@ -374,7 +374,7 @@ NetSimPacketEditor.prototype.render = function () {
     markup({
       messageGranularity: this.messageGranularity_,
       packetSpec: this.packetSpec_,
-      enabledEncodingsHash: this.enabledEncodingsHash_
+      enabledEncodingsHash: this.enabledEncodingsHash_,
     })
   );
   this.rootDiv_.html(newMarkup);
@@ -817,14 +817,14 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
       if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
         liveFields.push({
           inputElement: this.ui_[EncodingType.A_AND_B][fieldName],
-          newValue: binaryToAB(fieldBinary).substr(truncatedBits)
+          newValue: binaryToAB(fieldBinary).substr(truncatedBits),
         });
       }
 
       if (this.isEncodingEnabled_(EncodingType.BINARY)) {
         liveFields.push({
           inputElement: this.ui_[EncodingType.BINARY][fieldName],
-          newValue: fieldBinary.substr(truncatedBits)
+          newValue: fieldBinary.substr(truncatedBits),
         });
       }
 
@@ -832,7 +832,7 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
         var truncatedHexDigits = Math.floor(truncatedBits / 4);
         liveFields.push({
           inputElement: this.ui_[EncodingType.HEXADECIMAL][fieldName],
-          newValue: binaryToHex(fieldBinary).substr(truncatedHexDigits)
+          newValue: binaryToHex(fieldBinary).substr(truncatedHexDigits),
         });
       }
     } else {
@@ -840,35 +840,35 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
       if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
         liveFields.push({
           inputElement: this.ui_[EncodingType.A_AND_B][fieldName],
-          newValue: ''
+          newValue: '',
         });
       }
 
       if (this.isEncodingEnabled_(EncodingType.BINARY)) {
         liveFields.push({
           inputElement: this.ui_[EncodingType.BINARY][fieldName],
-          newValue: ''
+          newValue: '',
         });
       }
 
       if (this.isEncodingEnabled_(EncodingType.HEXADECIMAL)) {
         liveFields.push({
           inputElement: this.ui_[EncodingType.HEXADECIMAL][fieldName],
-          newValue: ''
+          newValue: '',
         });
       }
 
       if (this.isEncodingEnabled_(EncodingType.DECIMAL)) {
         liveFields.push({
           inputElement: this.ui_[EncodingType.DECIMAL][fieldName],
-          newValue: ''
+          newValue: '',
         });
       }
 
       if (this.isEncodingEnabled_(EncodingType.ASCII)) {
         liveFields.push({
           inputElement: this.ui_[EncodingType.ASCII][fieldName],
-          newValue: ''
+          newValue: '',
         });
       }
     }
@@ -890,7 +890,7 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
         chunkSize,
         -truncatedBits
       ),
-      watermark: netsimMsg.a_and_b()
+      watermark: netsimMsg.a_and_b(),
     });
   }
 
@@ -902,7 +902,7 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
         chunkSize,
         -truncatedBits
       ),
-      watermark: netsimMsg.binary()
+      watermark: netsimMsg.binary(),
     });
   }
 
@@ -915,7 +915,7 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
         chunkSize,
         -truncatedHexDigits
       ),
-      watermark: netsimMsg.hexadecimal()
+      watermark: netsimMsg.hexadecimal(),
     });
   }
 
@@ -925,7 +925,7 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
       newValue: alignDecimal(
         binaryToDecimal(partialBinaryAtChunkSize, chunkSize)
       ),
-      watermark: netsimMsg.decimal()
+      watermark: netsimMsg.decimal(),
     });
   }
 
@@ -933,7 +933,7 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
     liveFields.push({
       inputElement: this.ui_[EncodingType.ASCII].message,
       newValue: binaryToAscii(partialBinaryAtChunkSize, chunkSize),
-      watermark: netsimMsg.ascii()
+      watermark: netsimMsg.ascii(),
     });
   }
 
@@ -1018,35 +1018,35 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
     if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
       liveFields.push({
         inputElement: this.ui_[EncodingType.A_AND_B][fieldName],
-        newValue: abConverter(this[fieldName], fieldWidth)
+        newValue: abConverter(this[fieldName], fieldWidth),
       });
     }
 
     if (this.isEncodingEnabled_(EncodingType.BINARY)) {
       liveFields.push({
         inputElement: this.ui_[EncodingType.BINARY][fieldName],
-        newValue: binaryConverter(this[fieldName], fieldWidth)
+        newValue: binaryConverter(this[fieldName], fieldWidth),
       });
     }
 
     if (this.isEncodingEnabled_(EncodingType.HEXADECIMAL)) {
       liveFields.push({
         inputElement: this.ui_[EncodingType.HEXADECIMAL][fieldName],
-        newValue: hexConverter(this[fieldName], Math.ceil(fieldWidth / 4))
+        newValue: hexConverter(this[fieldName], Math.ceil(fieldWidth / 4)),
       });
     }
 
     if (this.isEncodingEnabled_(EncodingType.DECIMAL)) {
       liveFields.push({
         inputElement: this.ui_[EncodingType.DECIMAL][fieldName],
-        newValue: decimalConverter(this[fieldName], fieldWidth)
+        newValue: decimalConverter(this[fieldName], fieldWidth),
       });
     }
 
     if (this.isEncodingEnabled_(EncodingType.ASCII)) {
       liveFields.push({
         inputElement: this.ui_[EncodingType.ASCII][fieldName],
-        newValue: asciiConverter(this[fieldName], fieldWidth)
+        newValue: asciiConverter(this[fieldName], fieldWidth),
       });
     }
   }, this);
@@ -1055,7 +1055,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
     liveFields.push({
       inputElement: this.ui_[EncodingType.A_AND_B].message,
       newValue: formatAB(binaryToAB(this.message), chunkSize),
-      watermark: netsimMsg.a_and_b()
+      watermark: netsimMsg.a_and_b(),
     });
   }
 
@@ -1063,7 +1063,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
     liveFields.push({
       inputElement: this.ui_[EncodingType.BINARY].message,
       newValue: formatBinary(this.message, chunkSize),
-      watermark: netsimMsg.binary()
+      watermark: netsimMsg.binary(),
     });
   }
 
@@ -1071,7 +1071,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
     liveFields.push({
       inputElement: this.ui_[EncodingType.HEXADECIMAL].message,
       newValue: formatHex(binaryToHex(this.message), chunkSize),
-      watermark: netsimMsg.hexadecimal()
+      watermark: netsimMsg.hexadecimal(),
     });
   }
 
@@ -1079,7 +1079,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
     liveFields.push({
       inputElement: this.ui_[EncodingType.DECIMAL].message,
       newValue: alignDecimal(binaryToDecimal(this.message, chunkSize)),
-      watermark: netsimMsg.decimal()
+      watermark: netsimMsg.decimal(),
     });
   }
 
@@ -1087,7 +1087,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
     liveFields.push({
       inputElement: this.ui_[EncodingType.ASCII].message,
       newValue: binaryToAscii(this.message, chunkSize),
-      watermark: netsimMsg.ascii()
+      watermark: netsimMsg.ascii(),
     });
   }
 
@@ -1134,7 +1134,7 @@ NetSimPacketEditor.prototype.getPacketBinary = function () {
       toAddress: this.toAddress,
       fromAddress: this.fromAddress,
       packetIndex: this.packetIndex,
-      packetCount: this.packetCount
+      packetCount: this.packetCount,
     }),
     this.message
   );
@@ -1272,7 +1272,7 @@ NetSimPacketEditor.prototype.updateBitCounter = function () {
   this.bitCounter_.html(
     netsimMsg.bitCounter({
       x: size,
-      y: maxSize
+      y: maxSize,
     })
   );
 

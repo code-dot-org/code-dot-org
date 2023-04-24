@@ -13,7 +13,7 @@ describe('CurriculumCatalogCard', () => {
   const subjects = [
     // mix up the order to check consistent order prioritization
     subjectsAndTopicsOrder[firstSubjectIndexUsed + 1],
-    subjectsAndTopicsOrder[firstSubjectIndexUsed]
+    subjectsAndTopicsOrder[firstSubjectIndexUsed],
   ];
 
   const firstTopicIndexInList = 4;
@@ -22,7 +22,7 @@ describe('CurriculumCatalogCard', () => {
     // mix up the order to check consistent order prioritization
     subjectsAndTopicsOrder[firstTopicIndexUsed + 3],
     subjectsAndTopicsOrder[firstTopicIndexUsed],
-    subjectsAndTopicsOrder[firstTopicIndexUsed + 4]
+    subjectsAndTopicsOrder[firstTopicIndexUsed + 4],
   ];
 
   beforeEach(() => {
@@ -30,7 +30,7 @@ describe('CurriculumCatalogCard', () => {
       courseDisplayName: 'AI for Oceans',
       duration: 'quarter',
       gradesArray: ['4', '5', '6', '7', '8'],
-      isEnglish: true
+      isEnglish: true,
     };
   });
 
@@ -65,7 +65,7 @@ describe('CurriculumCatalogCard', () => {
     );
 
     screen.getByText(subjectsAndTopicsOrder[firstSubjectIndexUsed], {
-      exact: false
+      exact: false,
     });
   });
 
@@ -85,7 +85,7 @@ describe('CurriculumCatalogCard', () => {
     render(<CurriculumCatalogCard {...defaultProps} topics={topics} />);
 
     screen.getByText(subjectsAndTopicsOrder[firstTopicIndexUsed], {
-      exact: false
+      exact: false,
     });
   });
 
@@ -159,7 +159,7 @@ describe('CurriculumCatalogCard', () => {
     render(<CurriculumCatalogCard {...defaultProps} />);
 
     screen.getByRole('button', {
-      name: new RegExp(`View details about ${defaultProps.courseDisplayName}`)
+      name: new RegExp(`View details about ${defaultProps.courseDisplayName}`),
     });
   });
 
@@ -169,7 +169,7 @@ describe('CurriculumCatalogCard', () => {
     screen.getByRole('button', {
       name: new RegExp(
         `Assign ${defaultProps.courseDisplayName} to your classroom`
-      )
+      ),
     });
   });
 });

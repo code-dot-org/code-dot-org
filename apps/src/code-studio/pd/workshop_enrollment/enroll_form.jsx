@@ -9,7 +9,7 @@ import {
   Button,
   ControlLabel,
   HelpBlock,
-  Alert
+  Alert,
 } from 'react-bootstrap';
 import Select from 'react-select';
 import {ButtonList} from '../form_components/ButtonList.jsx';
@@ -38,21 +38,21 @@ const SCHOOL_TYPES_MAPPING = {
   'Public school': 'public',
   'Private school': 'private',
   'Charter school': 'charter',
-  Other: 'other'
+  Other: 'other',
 };
 
 const DESCRIBE_ROLES = [
   'School Administrator',
   'District Administrator',
   'Parent',
-  'Other'
+  'Other',
 ];
 
 const CSF_ROLES = [
   'Classroom Teacher',
   'Media Specialist',
   'Tech Teacher',
-  'Librarian'
+  'Librarian',
 ].concat(DESCRIBE_ROLES);
 
 const ADMIN_COUNSELOR_ROLES = ['Administrator', 'Counselor', 'Other'];
@@ -66,7 +66,7 @@ const GRADES_TEACHING = [
   'Grade 4',
   'Grade 5',
   'Grade 6-8',
-  'Grade 9-12'
+  'Grade 9-12',
 ];
 
 const CSF_COURSES = {
@@ -77,7 +77,7 @@ const CSF_COURSES = {
   courseE: 'Course E',
   courseF: 'Course F',
   express: 'Express',
-  courses14_accelerated: 'Courses 1-4 or Accelerated'
+  courses14_accelerated: 'Courses 1-4 or Accelerated',
 };
 
 const ATTENDED_CSF_COURSES_OPTIONS = {
@@ -85,19 +85,19 @@ const ATTENDED_CSF_COURSES_OPTIONS = {
     'Yes, this year',
   'Yes, I attended a CS Fundamentals Intro workshop in a previous academic year.':
     'Yes, prior year',
-  'Nope, I have never attended a CS Fundamentals workshop.': 'No'
+  'Nope, I have never attended a CS Fundamentals workshop.': 'No',
 };
 
 const CSF_HAS_CURIICULUM_COPY_OPTIONS = {
   'Yes, and I will bring it to the workshop.': 'Yes',
-  'Nope. I will need a new copy provided. Thanks!': 'No'
+  'Nope. I will need a new copy provided. Thanks!': 'No',
 };
 
 const REPLACE_EXISTING_OPTIONS = [
   'Yes, this course will replace an existing computer science course',
   'No, this course will be added to the schedule in addition to an existing computer science course',
   'No, this will be the only computer science course on the master schedule',
-  'I don’t know'
+  'I don’t know',
 ];
 
 export default class EnrollForm extends React.Component {
@@ -109,7 +109,7 @@ export default class EnrollForm extends React.Component {
     onSubmissionComplete: PropTypes.func,
     workshop_subject: PropTypes.string,
     previous_courses: PropTypes.arrayOf(PropTypes.string).isRequired,
-    collect_demographics: PropTypes.bool
+    collect_demographics: PropTypes.bool,
   };
 
   constructor(props) {
@@ -121,7 +121,7 @@ export default class EnrollForm extends React.Component {
       isSubmitting: false,
       errors: {},
       showFormErrorMessage: false,
-      submissionErrorMessage: ''
+      submissionErrorMessage: '',
     };
   }
 
@@ -253,7 +253,7 @@ export default class EnrollForm extends React.Component {
         school_name: this.state.school_info.school_name,
         school_state: this.state.school_info.school_state,
         school_zip: this.state.school_info.school_zip,
-        school_type: this.schoolType()
+        school_type: this.schoolType(),
       };
     }
     const params = {
@@ -282,7 +282,7 @@ export default class EnrollForm extends React.Component {
       years_teaching: this.state.years_teaching,
       years_teaching_cs: this.state.years_teaching_cs,
       taught_ap_before: this.state.taught_ap_before,
-      planning_to_teach_ap: this.state.planning_to_teach_ap
+      planning_to_teach_ap: this.state.planning_to_teach_ap,
     };
     this.submitRequest = $.ajax({
       method: 'POST',
@@ -294,10 +294,10 @@ export default class EnrollForm extends React.Component {
         result?.responseJSON?.workshop_enrollment_status === 'error' &&
           this.setState({
             submissionErrorMessage:
-              result?.responseJSON?.error_message || 'unknown error'
+              result?.responseJSON?.error_message || 'unknown error',
           });
         this.props.onSubmissionComplete(result);
-      }
+      },
     });
   }
 
@@ -344,13 +344,13 @@ export default class EnrollForm extends React.Component {
       {
         answerText: `${NOT_TEACHING} ${EXPLAIN}`,
         inputValue: this.state.explain_not_teaching,
-        onInputChange: this.handleNotTeachingChange
+        onInputChange: this.handleNotTeachingChange,
       },
       {
         answerText: `${OTHER} ${EXPLAIN}`,
         inputValue: this.state.explain_teaching_other,
-        onInputChange: this.handleTeachingOtherChange
-      }
+        onInputChange: this.handleTeachingOtherChange,
+      },
     ]);
 
     const csfIntroIntentLabel =
@@ -368,14 +368,14 @@ export default class EnrollForm extends React.Component {
       'I have available time on my schedule for teaching computer science.',
       'I want to learn computer science concepts.',
       'Computer science is a required subject in my region.',
-      'I am here to bring information back to my school or district.'
+      'I am here to bring information back to my school or district.',
     ];
 
     const cspReturningTeachersTaughtAPLabel = `Have you taught an Advanced Placement (AP) course before?`;
     const cspReturningTeachersTaughtAPAnswers = [
       'Yes, AP CS Principles or AP CS A',
       'Yes, but in another subject',
-      'No'
+      'No',
     ];
 
     const cspReturningTeachersPlanningAPLabel = `Are you planning to teach CS Principles as an AP course?`;
@@ -383,7 +383,7 @@ export default class EnrollForm extends React.Component {
       'Yes',
       'No',
       'Both AP and non-AP',
-      'Unsure / Still deciding'
+      'Unsure / Still deciding',
     ];
 
     const csfCourses = Object.keys(CSF_COURSES)
@@ -393,11 +393,11 @@ export default class EnrollForm extends React.Component {
         {
           answerText: `${OTHER} ${EXPLAIN}`,
           inputValue: this.state.explain_csf_course_other,
-          onInputChange: this.handleCsfCourseOtherChange
-        }
+          onInputChange: this.handleCsfCourseOtherChange,
+        },
       ]);
     const previousCourses = this.props.previous_courses.concat([
-      'I don’t have experience teaching any of these courses'
+      'I don’t have experience teaching any of these courses',
     ]);
 
     const roles =
@@ -578,11 +578,11 @@ export default class EnrollForm extends React.Component {
                   'none',
                   'a few lessons',
                   'most lessons',
-                  'all lessons'
+                  'all lessons',
                 ]}
                 questions={Object.keys(CSF_COURSES).map(key => ({
                   label: CSF_COURSES[key],
-                  name: key
+                  name: key,
                 }))}
                 selectedItems={this.state.csf_course_experience}
               />

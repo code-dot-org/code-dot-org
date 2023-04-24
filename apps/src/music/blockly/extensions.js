@@ -5,7 +5,7 @@ import {
   MINUS_IMAGE,
   PLUS_IMAGE,
   SOUND_VALUE_TYPE,
-  TRACK_NAME_FIELD
+  TRACK_NAME_FIELD,
 } from './constants';
 
 export const dynamicTriggerExtension = function () {
@@ -28,7 +28,7 @@ export const playMultiMutator = {
   extraSoundInputCount_: 0,
   saveExtraState: function () {
     return {
-      extraSoundInputCount: this.extraSoundInputCount_
+      extraSoundInputCount: this.extraSoundInputCount_,
     };
   },
   loadExtraState: function (state) {
@@ -119,5 +119,5 @@ export const playMultiMutator = {
     }
 
     this.updateShape_(this.extraSoundInputCount_ - 1);
-  }
+  },
 };

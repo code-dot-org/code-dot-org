@@ -28,7 +28,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
         x: 1,
         y: 1,
         height: INNER_HEIGHT,
-        width: INNER_HEIGHT
+        width: INNER_HEIGHT,
       },
       this.fieldGroup_
     );

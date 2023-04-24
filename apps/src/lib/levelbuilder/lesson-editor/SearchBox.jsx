@@ -9,7 +9,7 @@ export default class SearchBox extends Component {
     onSearchSelect: PropTypes.func.isRequired,
     searchUrl: PropTypes.string.isRequired,
     constructOptions: PropTypes.func.isRequired,
-    additionalQueryParams: PropTypes.object
+    additionalQueryParams: PropTypes.object,
   };
 
   /**
@@ -24,7 +24,7 @@ export default class SearchBox extends Component {
     const searchLimit = 7;
     const params = {
       query: encodeURIComponent(q),
-      limit: searchLimit
+      limit: searchLimit,
     };
     if (this.props.additionalQueryParams) {
       Object.assign(params, this.props.additionalQueryParams);
@@ -41,7 +41,7 @@ export default class SearchBox extends Component {
     // We are including the X-Requested-With header to avoid getting a 403
     // returned by Rack::Protection::JsonCsrf in some environments
     fetch(searchUrl, {
-      headers: {'X-Requested-With': 'XMLHttpRequest'}
+      headers: {'X-Requested-With': 'XMLHttpRequest'},
     })
       .then(response => (response.ok ? response.json() : []))
       .then(json => {

@@ -17,7 +17,7 @@ const TYPE_OPTIONS = [
   'Resource',
   'Rubric',
   'Slides',
-  'Video'
+  'Video',
 ];
 
 const AUDIENCE_OPTIONS = ['Student', 'Teacher', 'Verified Teacher'];
@@ -30,7 +30,7 @@ const initialState = {
   assessment: false,
   url: '',
   downloadUrl: '',
-  error: ''
+  error: '',
 };
 
 export default class AddResourceDialog extends Component {
@@ -39,7 +39,7 @@ export default class AddResourceDialog extends Component {
     onSave: PropTypes.func,
     handleClose: PropTypes.func.isRequired,
     existingResource: resourceShape,
-    courseVersionId: PropTypes.number
+    courseVersionId: PropTypes.number,
   };
 
   constructor(props) {
@@ -54,7 +54,7 @@ export default class AddResourceDialog extends Component {
         assessment: props.existingResource.assessment,
         url: props.existingResource.url,
         downloadUrl: props.existingResource.downloadUrl,
-        error: ''
+        error: '',
       };
     } else {
       this.state = {...initialState};
@@ -94,7 +94,7 @@ export default class AddResourceDialog extends Component {
       fetch(url, {
         method,
         headers: {'X-CSRF-Token': formData.get('authenticity_token')},
-        body: formData
+        body: formData,
       })
         .then(response => {
           if (!response.ok) {
@@ -249,31 +249,31 @@ export default class AddResourceDialog extends Component {
 const styles = {
   container: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   dropdownRow: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   inputAndLabel: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   textInput: {
-    width: '98%'
+    width: '98%',
   },
   selectAndLabel: {
     display: 'flex',
     flexDirection: 'column',
-    width: '45%'
+    width: '45%',
   },
   selectInput: {
-    width: '100%'
+    width: '100%',
   },
   checkboxInput: {
     marginTop: 0,
-    marginLeft: 10
+    marginLeft: 10,
   },
   submitButton: {
     color: 'white',
@@ -286,6 +286,6 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     paddingTop: 5,
-    paddingBottom: 5
-  }
+    paddingBottom: 5,
+  },
 };

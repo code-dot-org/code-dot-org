@@ -11,7 +11,7 @@ export const translatedCourseOfferingCsTopics = {
   internet: i18n.courseOfferingCsTopicInternet(),
   physical_computing: i18n.courseOfferingCsTopicPhysicalComputing(),
   web_design: i18n.courseOfferingCsTopicWebDesign(),
-  programming: i18n.courseOfferingCsTopicProgramming()
+  programming: i18n.courseOfferingCsTopicProgramming(),
 };
 
 // Same list as CourseOfferingSchoolSubjects in sharedCourseConstants but with translated strings
@@ -19,7 +19,7 @@ export const translatedCourseOfferingSchoolSubjects = {
   math: i18n.courseOfferingSchoolSubjectMath(),
   science: i18n.courseOfferingSchoolSubjectScience(),
   english_language_arts: i18n.courseOfferingSchoolSubjectEnglishLanguageArts(),
-  history: i18n.courseOfferingSchoolSubjectHistory()
+  history: i18n.courseOfferingSchoolSubjectHistory(),
 };
 
 // Same list as DeviceTypes in sharedCourseConstants but with translated strings
@@ -28,14 +28,14 @@ export const translatedCourseOfferingDeviceTypes = {
   chromebook: i18n.courseOfferingDeviceTypeChromebook(),
   tablet: i18n.courseOfferingDeviceTypeTablet(),
   mobile: i18n.courseOfferingDeviceTypeMobile(),
-  no_device: i18n.courseOfferingDeviceTypeNoDevice()
+  no_device: i18n.courseOfferingDeviceTypeNoDevice(),
 };
 
 // Same list as DeviceCompatibilityLevels in sharedCourseConstants but with translated strings
 export const translatedCourseOfferingDeviceCompatibilityLevels = {
   ideal: i18n.courseOfferingDeviceCompatibilityLevelIdeal(),
   not_recommended: i18n.courseOfferingDeviceCompatibilityLevelNotRecommended(),
-  incompatible: i18n.courseOfferingDeviceCompatibilityLevelIncompatible()
+  incompatible: i18n.courseOfferingDeviceCompatibilityLevelIncompatible(),
 };
 
 export const translatedCourseOfferingDurations = {
@@ -44,7 +44,7 @@ export const translatedCourseOfferingDurations = {
   quarter: i18n.quarter(),
   month: i18n.month(),
   week: i18n.week(),
-  lesson: i18n.lesson()
+  lesson: i18n.lesson(),
 };
 
 export const subjectsAndTopicsOrder = [
@@ -61,5 +61,5 @@ export const subjectsAndTopicsOrder = [
   'games_and_animations',
   'art_and_design',
   'data',
-  'programming'
+  'programming',
 ];
