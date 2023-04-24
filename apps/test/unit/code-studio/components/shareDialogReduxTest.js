@@ -7,7 +7,7 @@ describe('Share dialog redux module', () => {
     isOpen: false,
     isUnpublishPending: false,
     didUnpublish: false,
-    libraryDialogIsOpen: false
+    libraryDialogIsOpen: false,
   };
 
   const UNPUBLISH_REQUEST = 'shareDialog/UNPUBLISH_REQUEST';
@@ -27,7 +27,7 @@ describe('Share dialog redux module', () => {
   it('showShareDialog sets isOpen to true', () => {
     expect(reducer(undefined, shareDialog.showShareDialog())).to.deep.equal({
       ...originalState,
-      ...{isOpen: true}
+      ...{isOpen: true},
     });
   });
 
@@ -37,7 +37,7 @@ describe('Share dialog redux module', () => {
         {
           isUnpublishPending: true,
           didUnpublish: true,
-          libraryDialogIsOpen: true
+          libraryDialogIsOpen: true,
         },
         shareDialog.showShareDialog()
       )
@@ -59,7 +59,7 @@ describe('Share dialog redux module', () => {
     ).to.deep.equal({
       isOpen: false,
       isUnpublishPending: false,
-      didUnpublish: false
+      didUnpublish: false,
     });
   });
 
@@ -81,7 +81,7 @@ describe('Share dialog redux module', () => {
     let state = {isOpen: true, libraryDialogIsOpen: true};
     expect(reducer(state, {type: UNPUBLISH_REQUEST})).to.deep.equal({
       ...state,
-      isUnpublishPending: true
+      isUnpublishPending: true,
     });
   });
 
@@ -107,11 +107,11 @@ describe('Share dialog redux module', () => {
       isOpen: true,
       isUnpublishPending: true,
       didUnpublish: true,
-      libraryDialogIsOpen: true
+      libraryDialogIsOpen: true,
     };
     expect(reducer(state, {type: UNPUBLISH_FAILURE})).to.deep.equal({
       ...state,
-      ...{isUnpublishPending: false}
+      ...{isUnpublishPending: false},
     });
   });
 
@@ -120,12 +120,12 @@ describe('Share dialog redux module', () => {
       isOpen: true,
       isUnpublishPending: true,
       didUnpublish: true,
-      libraryDialogIsOpen: true
+      libraryDialogIsOpen: true,
     };
     let testLog = 'test';
     expect(reducer(state, shareDialog.saveReplayLog(testLog))).to.deep.equal({
       ...state,
-      ...{replayLog: testLog}
+      ...{replayLog: testLog},
     });
   });
 });

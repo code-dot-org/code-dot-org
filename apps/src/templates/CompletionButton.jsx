@@ -14,7 +14,7 @@ class CompletionButton extends Component {
     isProjectLevel: PropTypes.bool.isRequired,
     isSubmittable: PropTypes.bool.isRequired,
     isSubmitted: PropTypes.bool.isRequired,
-    playspacePhoneFrame: PropTypes.bool
+    playspacePhoneFrame: PropTypes.bool,
   };
 
   render() {
@@ -65,8 +65,8 @@ const styles = {
   // 105px looks better than 11px so I'm going with that.
   phoneFrameButton: {
     minWidth: 105,
-    textAlign: 'center'
-  }
+    textAlign: 'center',
+  },
 };
 
 export const UnconnectedCompletionButton = CompletionButton;
@@ -75,7 +75,7 @@ export default connect(state => ({
   isProjectLevel: state.pageConstants.isProjectLevel,
   isSubmittable: state.pageConstants.isSubmittable,
   isSubmitted: state.pageConstants.isSubmitted,
-  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
+  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
 }))(CompletionButton);
 
 export {styles};

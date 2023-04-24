@@ -4,7 +4,7 @@ import {action} from '@storybook/addon-actions';
 
 export default {
   name: 'LoginTypeCard',
-  component: LoginTypeCard
+  component: LoginTypeCard,
 };
 
 export const WithSubtitle = () => (

@@ -13,7 +13,7 @@ class SummaryProgressTable extends React.Component {
     minimal: PropTypes.bool,
 
     // redux provided
-    lessonIsVisible: PropTypes.func.isRequired
+    lessonIsVisible: PropTypes.func.isRequired,
   };
 
   render() {
@@ -67,14 +67,14 @@ const styles = {
     borderLeftColor: color.border_gray,
     borderTopColor: color.border_gray,
     borderBottomColor: color.border_light_gray,
-    borderRightColor: color.border_light_gray
+    borderRightColor: color.border_light_gray,
   },
   headerRow: {
-    backgroundColor: color.table_header
-  }
+    backgroundColor: color.table_header,
+  },
 };
 
 export const UnconnectedSummaryProgressTable = SummaryProgressTable;
 export default connect(state => ({
-  lessonIsVisible: lesson => lessonIsVisible(lesson, state, state.viewAs)
+  lessonIsVisible: lesson => lessonIsVisible(lesson, state, state.viewAs),
 }))(SummaryProgressTable);

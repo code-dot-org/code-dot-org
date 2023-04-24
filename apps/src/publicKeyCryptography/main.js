@@ -29,7 +29,7 @@ function onDOMContentLoaded() {
   // Get options / default options
   const options = {
     cryptographyWidgetView: MODULO_CLOCK_VIEW,
-    ...window.options
+    ...window.options,
   };
   initialize(options);
 }

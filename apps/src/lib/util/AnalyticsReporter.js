@@ -3,13 +3,13 @@ import {
   track,
   Identify,
   identify,
-  setUserId
+  setUserId,
 } from '@amplitude/analytics-browser';
 import logToCloud from '@cdo/apps/logToCloud';
 import {
   getEnvironment,
   isProductionEnvironment,
-  isStagingEnvironment
+  isStagingEnvironment,
 } from '../../utils';
 
 // A flag that can be toggled to send events regardless of environment
@@ -47,7 +47,7 @@ class AnalyticsReporter {
         logToCloud.addPageAction(
           logToCloud.PageAction.NoValidAmplitudeEventNameError,
           {
-            payload: payload
+            payload: payload,
           }
         );
         track('NO_VALID_EVENT_NAME_LOG_ERROR', payload);

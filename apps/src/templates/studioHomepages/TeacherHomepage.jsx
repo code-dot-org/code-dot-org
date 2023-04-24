@@ -53,7 +53,7 @@ export const UnconnectedTeacherHomepage = ({
   beginGoogleImportRosterFlow,
   hasFeedback,
   showIncubatorBanner,
-  currentUserId
+  currentUserId,
 }) => {
   const censusBanner = useRef(null);
   const teacherReminders = useRef(null);
@@ -89,7 +89,7 @@ export const UnconnectedTeacherHomepage = ({
         url: '/dashboardapi/v1/census/CensusTeacherBannerV1',
         type: 'post',
         dataType: 'json',
-        data: censusBanner.current.getData()
+        data: censusBanner.current.getData(),
       })
         .done(() => {
           setCensusSubmittedSuccessfully(true);
@@ -106,7 +106,7 @@ export const UnconnectedTeacherHomepage = ({
   const dismissCensusBanner = (onSuccess, onFailure) => {
     $.ajax({
       url: `/api/v1/users/${teacherId}/dismiss_census_banner`,
-      type: 'post'
+      type: 'post',
     })
       .done(onSuccess)
       .fail(xhr => {
@@ -128,7 +128,7 @@ export const UnconnectedTeacherHomepage = ({
   const postponeCensusBanner = () => {
     $.ajax({
       url: `/api/v1/users/${teacherId}/postpone_census_banner`,
-      type: 'post'
+      type: 'post',
     })
       .done(hideCensusBanner)
       .fail(xhr => {
@@ -154,7 +154,7 @@ export const UnconnectedTeacherHomepage = ({
     trySetSessionStorage(LOGGED_TEACHER_SESSION, 'true');
 
     analyticsReporter.sendEvent(EVENTS.TEACHER_LOGIN_EVENT, {
-      'user id': currentUserId
+      'user id': currentUserId,
     });
   }
 
@@ -313,14 +313,14 @@ UnconnectedTeacherHomepage.propTypes = {
   beginGoogleImportRosterFlow: PropTypes.func,
   hasFeedback: PropTypes.bool,
   showIncubatorBanner: PropTypes.bool,
-  currentUserId: PropTypes.number
+  currentUserId: PropTypes.number,
 };
 
 const styles = {
   clear: {
     clear: 'both',
-    height: 30
-  }
+    height: 30,
+  },
 };
 
 export default connect(state => ({}), {beginGoogleImportRosterFlow})(

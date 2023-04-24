@@ -4,10 +4,10 @@ import React from 'react';
 
 const style = {
   clear: {
-    clear: 'both'
+    clear: 'both',
   },
   logBrowserFilters: {
-    marginBottom: 12
+    marginBottom: 12,
   },
   dropdown: {
     margin: '5px 5px 0 5px',
@@ -15,8 +15,8 @@ const style = {
     height: 22,
     lineHeight: 20,
     verticalAlign: 'middle',
-    fontSize: 14
-  }
+    fontSize: 14,
+  },
 };
 
 /**
@@ -34,7 +34,7 @@ export default class NetSimLogBrowserFilters extends React.Component {
     currentSentByFilter: PropTypes.string.isRequired,
     setSentByFilter: PropTypes.func.isRequired,
     teacherView: PropTypes.bool,
-    senderNames: PropTypes.arrayOf(PropTypes.string).isRequired
+    senderNames: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   render() {
@@ -73,7 +73,7 @@ class RouterLogModeDropdown extends React.Component {
   static propTypes = {
     i18n: PropTypes.objectOf(PropTypes.func).isRequired,
     isAllRouterLogMode: PropTypes.bool,
-    setRouterLogMode: PropTypes.func.isRequired
+    setRouterLogMode: PropTypes.func.isRequired,
   };
 
   onChange = event => this.props.setRouterLogMode(event.target.value);
@@ -103,7 +103,7 @@ class TrafficFilterDropdown extends React.Component {
     i18n: PropTypes.objectOf(PropTypes.func).isRequired,
     localAddress: PropTypes.string,
     currentTrafficFilter: PropTypes.string.isRequired,
-    setTrafficFilter: PropTypes.func.isRequired
+    setTrafficFilter: PropTypes.func.isRequired,
   };
 
   onChange = event => this.props.setTrafficFilter(event.target.value);
@@ -139,7 +139,7 @@ export class SentByDropdown extends React.Component {
     i18n: PropTypes.objectOf(PropTypes.func).isRequired,
     currentSentByFilter: PropTypes.string.isRequired,
     setSentByFilter: PropTypes.func.isRequired,
-    senderNames: PropTypes.arrayOf(PropTypes.string).isRequired
+    senderNames: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   onChange = event => this.props.setSentByFilter(event.target.value);

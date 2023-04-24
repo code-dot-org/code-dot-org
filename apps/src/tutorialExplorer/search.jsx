@@ -7,7 +7,7 @@ import debounce from 'lodash/debounce';
 export default class Search extends React.Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
-    showClearIcon: PropTypes.bool
+    showClearIcon: PropTypes.bool,
   };
 
   debouncedOnChange = debounce(this.props.onChange, 300);

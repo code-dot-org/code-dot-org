@@ -11,7 +11,7 @@ export default class DownloadParentLetter extends Component {
     sectionId: PropTypes.number,
     buttonMetricsCategory: PropTypes.oneOf(
       Object.values(ParentLetterButtonMetricsCategory)
-    )
+    ),
   };
 
   onDownloadParentLetter = () => {
@@ -24,8 +24,8 @@ export default class DownloadParentLetter extends Component {
         event: 'download-parent-letter-button',
         data_json: JSON.stringify({
           sectionId: this.props.sectionId,
-          entryPoint: this.props.buttonMetricsCategory
-        })
+          entryPoint: this.props.buttonMetricsCategory,
+        }),
       },
       {includeUserId: true}
     );
@@ -50,9 +50,9 @@ export default class DownloadParentLetter extends Component {
 const styles = {
   container: {
     marginLeft: 5,
-    marginBottom: 5
+    marginBottom: 5,
   },
   buttonWithoutMargin: {
-    margin: 0
-  }
+    margin: 0,
+  },
 };

@@ -3,19 +3,19 @@ import {
   registerReducers,
   getStore,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import reducer, {
   GOOGLE_PLATFORM_API_ID,
   loadGooglePlatformApi,
-  canShowGoogleShareButton
+  canShowGoogleShareButton,
 } from '@cdo/apps/templates/progress/googlePlatformApiRedux';
 
 describe('Google Platoform API redux module', () => {
   const initialState = {
     loading: false,
     loaded: false,
-    loadStartTime: null
+    loadStartTime: null,
   };
   let store;
 

@@ -25,13 +25,13 @@ export default class AssetRow extends React.Component {
 
     // For logging purposes
     imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
-    elementId: PropTypes.string
+    elementId: PropTypes.string,
   };
 
   state = {
     action: 'normal',
     actionText: '',
-    attemptedUsedDelete: false
+    attemptedUsedDelete: false,
   };
 
   /**
@@ -49,8 +49,8 @@ export default class AssetRow extends React.Component {
       project_id: this.props.projectId,
       data_json: JSON.stringify({
         assetName: this.props.name,
-        elementId: this.props.elementId
-      })
+        elementId: this.props.elementId,
+      }),
     });
   };
 
@@ -71,7 +71,7 @@ export default class AssetRow extends React.Component {
     this.props.api.deleteFile(this.props.name, this.props.onDelete, () => {
       this.setState({
         action: 'confirming delete',
-        actionText: i18n.errorDeleting()
+        actionText: i18n.errorDeleting(),
       });
     });
   };
@@ -83,7 +83,7 @@ export default class AssetRow extends React.Component {
           study: 'sound-dialog-2',
           study_group: 'library-tab',
           event: 'choose-uploaded-sound',
-          data_json: this.props.name
+          data_json: this.props.name,
         },
         {includeUserId: true}
       );
@@ -163,7 +163,7 @@ export default class AssetRow extends React.Component {
               className="fa fa-spinner fa-spin"
               style={{
                 fontSize: '32px',
-                marginRight: '15px'
+                marginRight: '15px',
               }}
             />
           </td>
@@ -194,6 +194,6 @@ const styles = {
   deleteWarning: {
     paddingLeft: '34px',
     textAlign: 'left',
-    color: color.red
-  }
+    color: color.red,
+  },
 };

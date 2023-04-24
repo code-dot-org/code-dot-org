@@ -10,7 +10,7 @@ import project from '../code-studio/initApp/project';
 import VisualizationOverlay from '../templates/VisualizationOverlay';
 import {
   VISUALIZATION_DIV_ID,
-  isResponsiveFromState
+  isResponsiveFromState,
 } from '../templates/ProtectedVisualizationDiv';
 import * as applabConstants from './constants';
 import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
@@ -26,7 +26,7 @@ class Visualization extends React.Component {
     isRunning: PropTypes.bool.isRequired,
     playspacePhoneFrame: PropTypes.bool.isRequired,
     isResponsive: PropTypes.bool.isRequired,
-    widgetMode: PropTypes.bool
+    widgetMode: PropTypes.bool,
   };
 
   handleDisableMaker = () => project.setMakerEnabled(null);
@@ -45,7 +45,7 @@ class Visualization extends React.Component {
 
     return classNames({
       responsive: isResponsive,
-      with_padding: visualizationHasPadding
+      with_padding: visualizationHasPadding,
     });
   };
 
@@ -61,13 +61,13 @@ class Visualization extends React.Component {
         style={[
           !this.props.isResponsive && {
             ...styles.nonResponsive,
-            width: appWidth // Required for the project share page.
+            width: appWidth, // Required for the project share page.
           },
           this.props.isShareView && styles.share,
           this.props.playspacePhoneFrame && styles.phoneFrame,
           this.props.playspacePhoneFrame &&
             this.props.isRunning &&
-            styles.phoneFrameRunning
+            styles.phoneFrameRunning,
         ]}
       >
         <div id="divApplab" className="appModern" tabIndex="1" />
@@ -91,7 +91,7 @@ class Visualization extends React.Component {
           style={[
             {...styles.screenBlock, ...{width: appWidth}},
             !(this.props.isPaused && this.props.playspacePhoneFrame) &&
-              commonStyles.hidden
+              commonStyles.hidden,
           ]}
         />
       </div>
@@ -101,18 +101,18 @@ class Visualization extends React.Component {
 
 const styles = {
   nonResponsive: {
-    height: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT
+    height: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT,
   },
   share: {
     // overrides nonReponsive
-    height: applabConstants.APP_HEIGHT
+    height: applabConstants.APP_HEIGHT,
   },
   phoneFrame: {
     marginBottom: 0,
-    borderColor: color.lighter_gray
+    borderColor: color.lighter_gray,
   },
   phoneFrameRunning: {
-    borderColor: color.charcoal
+    borderColor: color.charcoal,
   },
   screenBlock: {
     backgroundColor: 'rgba(255, 255, 255, 0.5)',
@@ -125,8 +125,8 @@ const styles = {
     zIndex: 4,
     position: 'absolute',
     top: 0,
-    left: 0
-  }
+    left: 0,
+  },
 };
 
 export const UnconnectedVisualization = Visualization;
@@ -138,5 +138,5 @@ export default connect(state => ({
   isPaused: state.runState.isDebuggerPaused,
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
   isResponsive: isResponsiveFromState(state),
-  widgetMode: state.pageConstants.widgetMode
+  widgetMode: state.pageConstants.widgetMode,
 }))(Radium(Visualization));

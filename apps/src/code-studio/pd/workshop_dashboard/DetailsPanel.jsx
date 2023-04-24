@@ -14,18 +14,18 @@ export default class DetailsPanel extends React.Component {
     view: PropTypes.string,
     workshopId: PropTypes.string,
     workshop: PropTypes.shape({
-      state: PropTypes.string
+      state: PropTypes.string,
     }),
     isWorkshopAdmin: PropTypes.bool,
-    onWorkshopSaved: PropTypes.func.isRequired
+    onWorkshopSaved: PropTypes.func.isRequired,
   };
 
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   state = {
-    showAdminEditConfirmation: false
+    showAdminEditConfirmation: false,
   };
 
   handleEditClick = () => {
@@ -138,5 +138,5 @@ const HeaderButton = ({text, bsStyle, onClick}) => (
 HeaderButton.propTypes = {
   text: PropTypes.string.isRequired,
   bsStyle: PropTypes.string,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
 };

@@ -13,7 +13,7 @@ export default class LibraryViewCode extends React.Component {
     description: PropTypes.string.isRequired,
     onClose: PropTypes.func.isRequired,
     sourceCode: PropTypes.string.isRequired,
-    buttons: PropTypes.node
+    buttons: PropTypes.node,
   };
 
   componentDidMount() {
@@ -22,7 +22,7 @@ export default class LibraryViewCode extends React.Component {
       allowFloatingBlocks: false,
       enablePaletteAtStart: false,
       textModeAtStart: true,
-      palette: []
+      palette: [],
     });
 
     this.editor.setValue(this.props.sourceCode);
@@ -56,7 +56,7 @@ export default class LibraryViewCode extends React.Component {
 
 const styles = {
   dialog: {
-    padding: 15
+    padding: 15,
   },
   header: {
     textAlign: 'left',
@@ -65,7 +65,7 @@ const styles = {
     whiteSpace: 'pre-wrap',
     lineHeight: 1.25,
     textOverflow: 'ellipsis',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   message: {
     color: color.dark_charcoal,
@@ -73,13 +73,13 @@ const styles = {
     overflow: 'auto',
     whiteSpace: 'pre-wrap',
     fontSize: 14,
-    maxHeight: 95
+    maxHeight: 95,
   },
   code: {
     position: 'relative',
     // Our droplet editor requires a specific height to display correctly.
     // Therefore, we use `height` rather than `maxHeight` here.
     height: 390,
-    margin: DEFAULT_MARGIN
-  }
+    margin: DEFAULT_MARGIN,
+  },
 };
