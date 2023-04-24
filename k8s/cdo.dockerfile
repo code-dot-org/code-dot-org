@@ -7,7 +7,7 @@ ENV \
   AWS_PROFILE=cdo \
   NODE_VERSION=16.19.0 \
   YARN_VERSION=1.22.5 \
-  SRC="/app"
+  SRC="/code-dot-org"
 
 RUN \
   # Ideally install all apt packages here
@@ -153,6 +153,8 @@ FROM cdo-node_modules
 # Copy in .rbenv from the cdo-rbenv stage (runs in parallel with cdo-node_modules)
 COPY --from=cdo-rbenv ${HOME}/.rbenv ${HOME}/.rbenv
 
-COPY ./ ./
+COPY --chown=${USERNAME} \
+  ./ \
+  ./
 
 SHELL [ "zsh", "-l", "-c" ]
