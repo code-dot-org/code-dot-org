@@ -12,7 +12,7 @@ export class LocalSourcesStore implements SourcesStore {
   load(key: string) {
     const source = {source: localStorage.getItem(key) || ''};
     const blob = new Blob([JSON.stringify(source, null, 2)], {
-      type: 'application/json'
+      type: 'application/json',
     });
     return Promise.resolve(new Response(blob));
   }
@@ -46,7 +46,7 @@ export class S3SourcesStore implements SourcesStore {
         currentVersion: this.currentVersionId,
         replace: replace || this.shouldReplace(),
         firstSaveTimestamp: encodeURIComponent(this.firstSaveTime || ''),
-        tabId: getTabId()
+        tabId: getTabId(),
       };
     }
     const response = await sourcesApi.update(channelId, source, options);

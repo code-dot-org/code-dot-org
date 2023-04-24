@@ -9,9 +9,9 @@ export async function get(channelId: string): Promise<Response> {
 export async function update(channel: Channel): Promise<Response> {
   return fetch(`${rootUrl}/${channel.id}`, {
     headers: {
-      'Content-Type': 'application/json; charset=utf-8'
+      'Content-Type': 'application/json; charset=utf-8',
     },
     method: 'POST',
-    body: JSON.stringify(channel)
+    body: JSON.stringify(channel),
   });
 }

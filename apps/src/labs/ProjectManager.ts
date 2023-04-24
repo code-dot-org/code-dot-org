@@ -7,7 +7,7 @@ export enum ProjectManagerEvent {
   SaveStart,
   SaveNoop,
   SaveSuccess,
-  SaveFail
+  SaveFail,
 }
 
 export default class ProjectManager {
@@ -58,7 +58,7 @@ export default class ProjectManager {
     channel.projectType = this.appOptionsStore.getProjectType();
     const project = {source, channel};
     const blob = new Blob([JSON.stringify(project, null, 2)], {
-      type: 'application/json'
+      type: 'application/json',
     });
     return new Response(blob);
   }
