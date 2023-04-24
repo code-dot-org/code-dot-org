@@ -23,5 +23,5 @@ export default function HelpTip({children}) {
   );
 }
 HelpTip.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };

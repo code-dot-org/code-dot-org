@@ -25,7 +25,7 @@ var NetSimBitRateControl = (module.exports = function (
     value: initialValue,
     min: 1,
     max: 20,
-    upperBoundInfinite: true
+    upperBoundInfinite: true,
   });
 
   // Auto-render, unlike our base class

@@ -7,7 +7,7 @@ class Comment extends React.Component {
     isEditable: PropTypes.bool,
     comment: PropTypes.string,
     placeholderText: PropTypes.string,
-    onCommentChange: PropTypes.func
+    onCommentChange: PropTypes.func,
   };
 
   commentChanged = event => {
@@ -36,10 +36,10 @@ const styles = {
     marginBottom: 8,
     display: 'block',
     width: '90%',
-    fontSize: 12
+    fontSize: 12,
   },
   readOnly: {
-    backgroundColor: color.lightest_cyan
+    backgroundColor: color.lightest_cyan,
   },
   h1: {
     color: color.charcoal,
@@ -48,8 +48,8 @@ const styles = {
     fontSize: 18,
     lineHeight: '18px',
     fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'normal'
-  }
+    fontWeight: 'normal',
+  },
 };
 
 export default Comment;

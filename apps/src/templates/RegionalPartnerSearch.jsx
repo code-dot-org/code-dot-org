@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {
   WorkshopApplicationStates,
   WorkshopSearchErrors,
-  ActiveCourseWorkshops
+  ActiveCourseWorkshops,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
 import Notification from '@cdo/apps/templates/Notification';
@@ -20,7 +20,7 @@ const WorkshopCard = props => {
     <div
       style={{
         ...styles.workshopCollection,
-        ...props.style
+        ...props.style,
       }}
     >
       {props.content}
@@ -29,13 +29,13 @@ const WorkshopCard = props => {
 };
 WorkshopCard.propTypes = {
   style: PropTypes.object,
-  content: PropTypes.element
+  content: PropTypes.element,
 };
 
 class RegionalPartnerSearch extends Component {
   static propTypes = {
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
-    sourcePageId: PropTypes.string
+    sourcePageId: PropTypes.string,
   };
 
   constructor(props) {
@@ -59,7 +59,7 @@ class RegionalPartnerSearch extends Component {
           url: '/dashboardapi/v1/regional_partners/show/' + partnerId,
           type: 'get',
           dataType: 'json',
-          jsonp: false
+          jsonp: false,
         })
           .done(this.partnerIdSuccess)
           .fail(this.partnerIdFail);
@@ -78,10 +78,10 @@ class RegionalPartnerSearch extends Component {
     $.ajax({
       method: 'GET',
       url: `/dashboardapi/v1/pd/application/applications_closed`,
-      dataType: 'json'
+      dataType: 'json',
     }).done(data => {
       this.setState({
-        applicationsClosed: data
+        applicationsClosed: data,
       });
     });
 
@@ -92,7 +92,7 @@ class RegionalPartnerSearch extends Component {
       error: error,
       loading: loading,
       nominated: nominated,
-      applicationsClosed: undefined
+      applicationsClosed: undefined,
     };
   }
 
@@ -139,8 +139,8 @@ class RegionalPartnerSearch extends Component {
       dataType: 'json',
       jsonp: false,
       data: {
-        source_page_id: this.props.sourcePageId
-      }
+        source_page_id: this.props.sourcePageId,
+      },
     })
       .done(this.partnerZipSuccess)
       .fail(this.partnerZipFail);
@@ -162,7 +162,7 @@ class RegionalPartnerSearch extends Component {
         isOffered: partnerInfo?.pl_programs_offered?.includes(courseKey),
         summerWorkshops: partnerInfo?.summer_workshops?.filter(
           workshop => workshop.course === ActiveCourseWorkshops[courseKey]
-        )
+        ),
       });
     });
 
@@ -498,78 +498,78 @@ class RegionalPartnerSearch extends Component {
 
 const styles = {
   schoolZipLabel: {
-    marginRight: 40
+    marginRight: 40,
   },
   zipInput: {
-    height: 28
+    height: 28,
   },
   zipSubmit: {
     marginTop: 20,
     display: 'inline-block',
-    marginLeft: 10
+    marginLeft: 10,
   },
   hr: {
     borderColor: color.charcoal,
     marginTop: 50,
-    marginBottom: 50
+    marginBottom: 50,
   },
   spinner: {
     fontSize: 32,
     marginTop: 20,
-    marginLeft: 48
+    marginLeft: 48,
   },
   noState: {
     marginTop: 20,
-    color: color.dark_red
+    color: color.dark_red,
   },
   noPartner: {
-    marginTop: 20
+    marginTop: 20,
   },
   bold: {
-    fontFamily: '"Gotham 7r", sans-serif'
+    fontFamily: '"Gotham 7r", sans-serif',
   },
   linkLike: {
     fontFamily: '"Gotham 7r", sans-serif',
     cursor: 'pointer',
-    color: color.purple
+    color: color.purple,
   },
   workshopCollection: {
     backgroundColor: color.lightest_purple,
     padding: 20,
     borderRadius: 10,
-    marginBottom: 20
+    marginBottom: 20,
   },
   halfWidth: {
     width: '40%',
     float: 'left',
-    marginRight: 20
+    marginRight: 20,
   },
   fullWidth: {
-    width: '100%'
+    width: '100%',
   },
   workshop: {
-    marginBottom: 20
+    marginBottom: 20,
   },
   action: {
     marginTop: 20,
-    marginBottom: 20
+    marginBottom: 20,
   },
   scholarship: {
     backgroundColor: color.lightest_gray,
     padding: 20,
-    borderRadius: 10
+    borderRadius: 10,
   },
   partnerContact: {
-    marginBottom: 20
+    marginBottom: 20,
   },
   bigButton: {
     padding: '10px 20px 10px 20px',
     height: 'initial',
-    marginTop: 22
+    marginTop: 22,
   },
   clear: {
-    clear: 'both'
-  }
+    clear: 'both',
+  },
 };
 
 const StartApplicationButton = ({
@@ -579,7 +579,7 @@ const StartApplicationButton = ({
   link,
   partnerSite,
   nominated,
-  priorityDeadlineDate
+  priorityDeadlineDate,
 }) => {
   if (!link) {
     link = studio('/pd/application/teacher');
@@ -635,11 +635,11 @@ StartApplicationButton.propTypes = {
   link: PropTypes.string,
   partnerSite: PropTypes.bool,
   nominated: PropTypes.bool,
-  priorityDeadlineDate: PropTypes.string
+  priorityDeadlineDate: PropTypes.string,
 };
 
 export const UnconnectedRegionalPartnerSearch = RegionalPartnerSearch;
 
 export default connect(state => ({
-  responsiveSize: state.responsive.responsiveSize
+  responsiveSize: state.responsive.responsiveSize,
 }))(RegionalPartnerSearch);

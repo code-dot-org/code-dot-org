@@ -5,7 +5,7 @@ import {
   showProjectHeader,
   showMinimalProjectHeader,
   showProjectBackedHeader,
-  showLevelBuilderSaveButton
+  showLevelBuilderSaveButton,
 } from './headerRedux';
 import {
   setProjectUpdatedError,
@@ -13,7 +13,7 @@ import {
   showProjectUpdatedAt,
   setProjectUpdatedAt,
   refreshProjectName,
-  setShowTryAgainDialog
+  setShowTryAgainDialog,
 } from './projectRedux';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -23,7 +23,7 @@ import progress from './progress';
 import {getStore} from '../redux';
 import {
   setUserSignedIn,
-  setInitialData
+  setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import logToCloud from '../logToCloud';
@@ -160,7 +160,7 @@ header.buildUserMenu = function () {
     const showCreateMenu = $('.create_menu').length > 0;
 
     fetch(`/dashboardapi/user_menu?showCreateMenu=${showCreateMenu}`, {
-      credentials: 'same-origin'
+      credentials: 'same-origin',
     })
       .then(response => response.text())
       .then(data => $('#sign_in_or_user').html(data))
@@ -203,7 +203,7 @@ setupReduxSubscribers(getStore());
 
 function setUpGlobalData(store) {
   fetch('/api/v1/users/current', {
-    credentials: 'same-origin'
+    credentials: 'same-origin',
   })
     .then(response => response.json())
     .then(data => {

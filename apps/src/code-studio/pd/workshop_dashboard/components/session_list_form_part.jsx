@@ -13,7 +13,7 @@ export default class SessionListFormPart extends React.Component {
     sessions: PropTypes.array.isRequired,
     onChange: PropTypes.func,
     shouldValidate: PropTypes.bool,
-    readOnly: PropTypes.bool
+    readOnly: PropTypes.bool,
   };
 
   nextPlaceholderId = 1;
@@ -34,7 +34,7 @@ export default class SessionListFormPart extends React.Component {
         .add(1, 'days')
         .format(DATE_FORMAT),
       startTime: lastSession.startTime,
-      endTime: lastSession.endTime
+      endTime: lastSession.endTime,
     };
 
     sessions.push(newSession);

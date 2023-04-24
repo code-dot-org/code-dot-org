@@ -1,6 +1,6 @@
 name 'CSD U6 MC Q1_2023'
 type 'multi2'
-question 'Which of the following are outputs of a Circuit Playground? (Select all that apply)'
+question 'Which of the following are outputs of a Circuit Playground? (*Select two*)'
 wrong 'Left button'
 right 'LEDs'
 wrong 'Temperature sensor'

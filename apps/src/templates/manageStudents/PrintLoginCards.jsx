@@ -11,7 +11,7 @@ export default class PrintLoginCards extends Component {
     entryPointForMetrics: PropTypes.oneOf(
       Object.values(PrintLoginCardsButtonMetricsCategory)
     ),
-    onPrintLoginCards: PropTypes.func.isRequired
+    onPrintLoginCards: PropTypes.func.isRequired,
   };
 
   onClick = () => {
@@ -23,8 +23,8 @@ export default class PrintLoginCards extends Component {
         event: 'print-login-cards-button-click',
         data_json: JSON.stringify({
           sectionId: sectionId,
-          entryPoint: entryPointForMetrics
-        })
+          entryPoint: entryPointForMetrics,
+        }),
       },
       {includeUserId: true}
     );
@@ -49,6 +49,6 @@ export default class PrintLoginCards extends Component {
 
 const styles = {
   button: {
-    marginLeft: 5
-  }
+    marginLeft: 5,
+  },
 };

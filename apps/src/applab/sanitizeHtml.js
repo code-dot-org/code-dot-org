@@ -56,11 +56,11 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
     'vk_19391', // Origin unknown.
     'vk_197cd', // Origin unknown.
     '_vkenabled', // Origin unknown.
-    'abp' // adblock plus plugin.
+    'abp', // adblock plus plugin.
   ];
 
   var ignoredTags = [
-    'grammarly-btn' // Grammarly plugin.
+    'grammarly-btn', // Grammarly plugin.
   ];
 
   var processed = sanitize(unsafe, {
@@ -79,13 +79,13 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
         }
         return {
           tagName: tagName,
-          attribs: attribs
+          attribs: attribs,
         };
-      }
+      },
     },
     exclusiveFilter: function (element) {
       return ignoredTags.indexOf(element.tag) !== -1;
-    }
+    },
   });
   if (processed !== safe) {
     warn(removedHtml(processed, safe), unsafe, safe, warnings);
@@ -102,7 +102,7 @@ function isIdAvailable(elementId) {
   var options = {
     allowCodeElements: false,
     allowDesignElements: true,
-    allowDesignPrefix: true
+    allowDesignPrefix: true,
   };
   if (!elementUtils.isIdAvailable(elementId, options)) {
     return false;
@@ -139,7 +139,7 @@ export default function sanitizeHtml(
     'spellcheck',
     'style',
     'title',
-    'width'
+    'width',
   ];
   // <i> could allow people to covertly specify font awesome icons, which seems ok
   var tagsWithStandardAttributes = [
@@ -167,7 +167,7 @@ export default function sanitizeHtml(
     'th',
     'tr',
     'u',
-    'ul'
+    'ul',
   ];
   if (!persistingHtml) {
     // Spans are allowed when using write(), but we don't want to persist them
@@ -188,7 +188,7 @@ export default function sanitizeHtml(
       'data-canonical-image-url',
       'data-theme',
       'tabindex',
-      'xmlns'
+      'xmlns',
     ]),
     img: standardAttributes.concat(['data-canonical-image-url', 'src']),
     input: standardAttributes.concat([
@@ -204,9 +204,9 @@ export default function sanitizeHtml(
       'accept',
       'hidden',
       'capture',
-      'readonly'
+      'readonly',
     ]),
-    select: standardAttributes.concat(['multiple', 'size'])
+    select: standardAttributes.concat(['multiple', 'size']),
   };
   var tagsWithCustomAttributes = Object.keys(customAttributesMap);
 
@@ -237,10 +237,10 @@ export default function sanitizeHtml(
         }
         return {
           tagName: tagName,
-          attribs: attribs
+          attribs: attribs,
         };
-      }
-    }
+      },
+    },
   });
 
   if (typeof warn === 'function' && safe !== unsafe) {

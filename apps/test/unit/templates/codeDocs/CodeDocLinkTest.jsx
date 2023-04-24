@@ -9,7 +9,7 @@ describe('CodeDocLink', () => {
       <CodeDocLink
         programmingExpression={{
           link: '/docs/applab/code',
-          name: 'App Lab Code'
+          name: 'App Lab Code',
         }}
         showBlocks
       />
@@ -27,7 +27,7 @@ describe('CodeDocLink', () => {
         programmingExpression={{
           link: '/docs/spritelab/code',
           name: 'Sprite Lab Block',
-          blockName: 'code_block'
+          blockName: 'code_block',
         }}
         showBlocks
       />
@@ -42,7 +42,7 @@ describe('CodeDocLink', () => {
         programmingExpression={{
           link: '/docs/spritelab/code',
           name: 'Sprite Lab Block',
-          blockName: 'code_block'
+          blockName: 'code_block',
         }}
         showBlocks={false}
       />

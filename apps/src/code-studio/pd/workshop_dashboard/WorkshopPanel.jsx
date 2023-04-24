@@ -9,7 +9,7 @@ import {Row, Col, Panel} from 'react-bootstrap';
 export default class WorkshopPanel extends React.Component {
   static propTypes = {
     header: PropTypes.node,
-    children: PropTypes.node
+    children: PropTypes.node,
   };
 
   render() {

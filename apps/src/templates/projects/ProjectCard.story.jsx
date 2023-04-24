@@ -10,7 +10,7 @@ const defaultData = {
   studentAgeRange: '8+',
   type: 'applab',
   publishedAt: new Date(),
-  updatedAt: new Date()
+  updatedAt: new Date(),
 };
 
 const Template = args => <ProjectCard projectData={defaultData} {...args} />;
@@ -18,17 +18,17 @@ const Template = args => <ProjectCard projectData={defaultData} {...args} />;
 export const PublicAllAppTypes = Template.bind({});
 PublicAllAppTypes.args = {
   currentGallery: 'public',
-  isDetailView: false
+  isDetailView: false,
 };
 
 export const PublicSingleAppTypeDetails = Template.bind({});
 PublicSingleAppTypeDetails.args = {
   currentGallery: 'public',
-  isDetailView: true
+  isDetailView: true,
 };
 
 export const Personal = Template.bind({});
 Personal.args = {
   currentGallery: 'personal',
-  isDetailView: true
+  isDetailView: true,
 };

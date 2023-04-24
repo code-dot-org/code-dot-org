@@ -11,9 +11,9 @@ describe('errorMapper correctly maps different errors', function () {
           raw: "'{a}' is defined but never used.",
           row: 0,
           text: "'x' is defined but never used.",
-          type: 'info'
-        }
-      ]
+          type: 'info',
+        },
+      ],
     };
 
     errorMapper.processResults(jslintResults);
@@ -32,9 +32,9 @@ describe('errorMapper correctly maps different errors', function () {
           raw: 'Assignment in conditional expression',
           row: 0,
           text: 'Assignment in conditional expression',
-          type: 'warning'
-        }
-      ]
+          type: 'warning',
+        },
+      ],
     };
 
     errorMapper.processResults(jslintResults);
@@ -53,9 +53,9 @@ describe('errorMapper correctly maps different errors', function () {
           raw: "'{a}' is not defined.",
           row: 0,
           text: "'x' is not defined.",
-          type: 'warning'
-        }
-      ]
+          type: 'warning',
+        },
+      ],
     };
 
     errorMapper.processResults(jslintResults);
@@ -71,9 +71,9 @@ describe('errorMapper correctly maps different errors', function () {
           raw: "Expected an identifier and instead saw '{a}' (a reserved word).",
           row: 0,
           text: "Expected an identifier and instead saw 'x' (a reserved word).",
-          type: 'error'
-        }
-      ]
+          type: 'error',
+        },
+      ],
     };
 
     errorMapper.processResults(jslintResults, 'Applab');
@@ -91,9 +91,9 @@ describe('errorMapper correctly maps different errors', function () {
           raw: "Expected an identifier and instead saw '{a}' (a reserved word).",
           row: 0,
           text: "Expected an identifier and instead saw 'x' (a reserved word).",
-          type: 'error'
-        }
-      ]
+          type: 'error',
+        },
+      ],
     };
 
     errorMapper.processResults(jslintResults, 'Gamelab');
@@ -111,9 +111,9 @@ describe('errorMapper correctly maps different errors', function () {
           raw: "'{a}' is defined but never used.",
           row: 0,
           text: "'setup' is defined but never used.",
-          type: 'error'
-        }
-      ]
+          type: 'error',
+        },
+      ],
     };
 
     errorMapper.processResults(jslintResults, 'Gamelab');

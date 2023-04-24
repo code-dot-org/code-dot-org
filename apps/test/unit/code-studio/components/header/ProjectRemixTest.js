@@ -8,7 +8,7 @@ import * as utils from '@cdo/apps/utils';
 import {UnconnectedProjectRemix as ProjectRemix} from '@cdo/apps/code-studio/components/header/ProjectRemix';
 
 const defaultProps = {
-  refreshProjectName: () => {}
+  refreshProjectName: () => {},
 };
 
 describe('ProjectRemix', () => {
@@ -19,14 +19,14 @@ describe('ProjectRemix', () => {
         copy: () => {},
         getCurrentId: () => {},
         getCurrentName: () => {},
-        serverSideRemix: () => {}
-      }
+        serverSideRemix: () => {},
+      },
     });
 
     replaceOnWindow('appOptions', {
       level: {
-        projectTemplateLevelName: 'Test Project'
-      }
+        projectTemplateLevelName: 'Test Project',
+      },
     });
   });
 

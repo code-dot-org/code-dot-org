@@ -83,7 +83,7 @@ var NetSimBitLogPanel = (module.exports = function (rootDiv, options) {
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-log-panel',
     panelTitle: options.logTitle,
-    beginMinimized: options.isMinimized
+    beginMinimized: options.isMinimized,
   });
 });
 NetSimBitLogPanel.inherits(NetSimPanel);
@@ -98,7 +98,7 @@ NetSimBitLogPanel.prototype.render = function () {
       binary: this.binary_,
       enabledEncodings: this.encodings_,
       chunkSize: this.chunkSize_,
-      showReadWireButton: this.showReadWireButton_
+      showReadWireButton: this.showReadWireButton_,
     })
   );
   this.getBody().html(newMarkup);

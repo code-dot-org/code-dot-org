@@ -17,7 +17,7 @@ let levelGroup = {};
 function basicGetResult() {
   return {
     response: 'ok',
-    result: true
+    result: true,
   };
 }
 
@@ -135,7 +135,7 @@ export function getContainedLevelResult() {
     app: level.getAppName(),
     callback: appOptions.report.sublevelCallback + level.levelId,
     result: level.getResult(),
-    feedback: level.getCurrentAnswerFeedback()
+    feedback: level.getCurrentAnswerFeedback(),
   };
 }
 
@@ -151,7 +151,7 @@ function getAuthenticityToken() {
     return Promise.resolve();
   } else {
     return fetch('/user_levels/get_token', {
-      headers: {credentials: 'same-origin'}
+      headers: {credentials: 'same-origin'},
     }).then(response => {
       if (response.ok) {
         authenticityToken = response.headers.get('csrf-token');
@@ -173,12 +173,12 @@ export function resetContainedLevel() {
       credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json',
-        'X-CSRF-Token': authenticityToken
+        'X-CSRF-Token': authenticityToken,
       },
       body: JSON.stringify({
         script_id: appOptions.serverScriptId,
-        level_id: levelIds[0]
-      })
+        level_id: levelIds[0],
+      }),
     }).then(response => {
       if (response.ok) {
         getLevel(levelIds[0]).resetAnswers();

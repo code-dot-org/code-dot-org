@@ -20,13 +20,13 @@ const DEFAULT_PROPS = {
     verified_teacher_account: false,
     attended: false,
     cdo_scholarship: true,
-    other_scholarship: false
+    other_scholarship: false,
   },
   onSaving: () => {},
   onSaved: () => {},
   accountRequiredForAttendance: false,
   scholarshipWorkshop: false,
-  displayYesNoAttendance: false
+  displayYesNoAttendance: false,
 };
 
 describe('SessionAttendanceRow', () => {
@@ -55,7 +55,7 @@ describe('SessionAttendanceRow', () => {
         {...DEFAULT_PROPS}
         attendance={{
           ...DEFAULT_PROPS.attendance,
-          attended: true
+          attended: true,
         }}
       />
     );

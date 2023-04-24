@@ -42,7 +42,7 @@ export function queryParams(name) {
 export function updateQueryParam(param, value, useReplaceState = false) {
   const newString = queryString.stringify({
     ...queryString.parse(windowLocation.search),
-    [param]: value
+    [param]: value,
   });
 
   let newLocation = windowLocation.pathname;
