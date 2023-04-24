@@ -11,6 +11,7 @@ import {
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {canChangeLevelInPage} from '../../browserNavigation';
 import $ from 'jquery';
 
 /**
@@ -133,15 +134,6 @@ class LessonProgress extends Component {
     );
   }
 
-  /*
-   * Returns whether we can safely navigate between the two given level apps
-   * without reloading the whole page.  For now, this only works when moving
-   * from a "music" level to another "music" level.
-   */
-  canChangeLevelInPage(currentLevelApp, newLevelApp) {
-    return currentLevelApp === 'music' && newLevelApp === 'music';
-  }
-
   render() {
     const {currentPageNumber, lessonExtrasUrl, lessonName, onLevelChanged} =
       this.props;
@@ -178,7 +170,7 @@ class LessonProgress extends Component {
               // that level without reloading the page, we use a click handler which
               // calls through to the progress redux store to change to that level
               // immediately.
-              const onBubbleClick = this.canChangeLevelInPage(
+              const onBubbleClick = canChangeLevelInPage(
                 currentLevelApp,
                 level.app
               )
