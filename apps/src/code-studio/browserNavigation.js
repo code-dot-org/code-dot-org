@@ -6,6 +6,13 @@
 import {getStore} from '../redux';
 import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
 
+// Returns whether we can safely navigate between the two given level apps
+// without reloading the whole page.  For now, this only works when moving
+// from a "music" level to another "music" level.
+export function canChangeLevelInPage(currentLevelApp, newLevelApp) {
+  return currentLevelApp === 'music' && newLevelApp === 'music';
+}
+
 // Called once on page load for a script-level only, this sets up a
 // handler, for user-initiated browser back & forward button
 // presses, which is fired when arriving on a page that we pushed onto the
