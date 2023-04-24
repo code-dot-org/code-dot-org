@@ -19,7 +19,7 @@ export const reportTeacherReviewingStudentNonLabLevel = (
       ...additionalPayload,
       unitId: appOptions.serverScriptId,
       levelId: appOptions.serverLevelId,
-      sectionId: queryParams('section_id')
+      sectionId: queryParams('section_id'),
     });
   }
 };

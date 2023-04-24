@@ -5,7 +5,7 @@ import EnrollmentUnitAssignment from './EnrollmentUnitAssignment';
 
 export default class PlcEnrollment extends React.Component {
   static propTypes = {
-    plcData: PropTypes.object
+    plcData: PropTypes.object,
   };
 
   renderEnrollmentUnitAssignments() {
@@ -36,11 +36,11 @@ export default class PlcEnrollment extends React.Component {
 const styles = {
   courseSection: {
     display: 'flex',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   courseSectionHeader: {
     color: color.dark_charcoal,
     fontFamily: '"Gotham 4r"',
-    fontSize: '18px'
-  }
+    fontSize: '18px',
+  },
 };

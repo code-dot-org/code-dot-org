@@ -18,7 +18,7 @@ export default function GetVerifiedBanner({courseName}) {
             verificationFormUrl:
               'https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform',
             verificationInfoUrl:
-              'https://support.code.org/hc/en-us/articles/115001550131-How-do-I-get-a-verified-teacher-account-for-CS-Principles-CS-Discoveries-and-CSA-'
+              'https://support.code.org/hc/en-us/articles/115001550131-How-do-I-get-a-verified-teacher-account-for-CS-Principles-CS-Discoveries-and-CSA-',
           })}
         />
       </div>
@@ -27,7 +27,7 @@ export default function GetVerifiedBanner({courseName}) {
 }
 
 GetVerifiedBanner.propTypes = {
-  courseName: PropTypes.string
+  courseName: PropTypes.string,
 };
 
 const styles = {
@@ -37,16 +37,16 @@ const styles = {
     borderRadius: 5,
     marginRight: 20,
     display: 'flex',
-    marginTop: 5
+    marginTop: 5,
   },
   warningIcon: {
     color: color.goldenrod,
     fontSize: 22,
-    margin: '10px 15px'
+    margin: '10px 15px',
   },
   title: {
     color: color.goldenrod,
     marginTop: 10,
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  },
 };

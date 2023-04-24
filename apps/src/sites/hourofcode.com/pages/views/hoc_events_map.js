@@ -8,7 +8,7 @@ $(document).ready(function () {
     style: stylePath,
     zoom: 1,
     minZoom: 1,
-    center: [-98, 39]
+    center: [-98, 39],
   });
 
   let popup = null;
@@ -53,7 +53,7 @@ $(document).ready(function () {
   map.on('load', function () {
     map.addSource('hoctiles', {
       type: 'vector',
-      url: 'mapbox://codeorg.hoctiles'
+      url: 'mapbox://codeorg.hoctiles',
     });
 
     // The order we add layers matters here as layers are added on top of each
@@ -68,9 +68,9 @@ $(document).ready(function () {
         visibility: 'visible',
         'icon-allow-overlap': true,
         'icon-size': 1,
-        'icon-image': 'circle-11-orange'
+        'icon-image': 'circle-11-orange',
       },
-      filter: ['!=', 'review', 'approved']
+      filter: ['!=', 'review', 'approved'],
     });
 
     map.addLayer({
@@ -82,9 +82,9 @@ $(document).ready(function () {
         visibility: 'visible',
         'icon-allow-overlap': true,
         'icon-size': 1.1,
-        'icon-image': 'marker-15-red'
+        'icon-image': 'marker-15-red',
       },
-      filter: ['==', 'review', 'approved']
+      filter: ['==', 'review', 'approved'],
     });
 
     map.addControl(new mapboxgl.FullscreenControl(), 'top-right');

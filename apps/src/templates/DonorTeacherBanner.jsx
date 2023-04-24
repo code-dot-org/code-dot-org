@@ -9,19 +9,19 @@ import TeacherInfoBanner from './TeacherInfoBanner';
 export default class DonorTeacherBanner extends Component {
   static propTypes = {
     showPegasusLink: PropTypes.bool,
-    source: PropTypes.string.isRequired
+    source: PropTypes.string.isRequired,
   };
 
   initialState = {
     participate: undefined,
-    submitted: false
+    submitted: false,
   };
 
   state = this.initialState;
 
   onParticipateChange = event => {
     this.setState({
-      participate: event.target.id === 'participateYes'
+      participate: event.target.id === 'participateYes',
     });
   };
 
@@ -30,7 +30,7 @@ export default class DonorTeacherBanner extends Component {
       putRecord({
         study: 'afe-schools',
         event: 'submit',
-        data_string: $('input[name="nces-id"]').val()
+        data_string: $('input[name="nces-id"]').val(),
       });
 
       // redirect to form on amazon-future-engineer page
@@ -48,8 +48,8 @@ export default class DonorTeacherBanner extends Component {
       type: 'post',
       data: {
         participate: this.state.participate,
-        source: this.props.source
-      }
+        source: this.props.source,
+      },
     })
       .done(onSuccess)
       .fail(onFailure);
@@ -125,12 +125,12 @@ export default class DonorTeacherBanner extends Component {
         primaryButton={{
           onClick: this.handleSubmit,
           text: 'Submit',
-          disabled: this.state.participate === undefined
+          disabled: this.state.participate === undefined,
         }}
         secondaryButton={{
           isHidden: !this.props.showPegasusLink,
           href: pegasus('/amazon-future-engineer'),
-          text: 'Learn more'
+          text: 'Learn more',
         }}
       >
         {this.renderBannerContent()}
@@ -178,15 +178,15 @@ export default class DonorTeacherBanner extends Component {
 
 const styles = {
   paragraph: {
-    marginBottom: 10
+    marginBottom: 10,
   },
   label: {
     fontFamily: '"Gotham 4r", sans-serif',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   radio: {
     verticalAlign: 'top',
     marginRight: 10,
-    cursor: 'pointer'
-  }
+    cursor: 'pointer',
+  },
 };

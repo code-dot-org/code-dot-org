@@ -17,19 +17,19 @@ describe('VocabulariesEditor', () => {
           key: '1',
           word: 'word1',
           definition: 'def1',
-          commonSenseMedia: false
+          commonSenseMedia: false,
         },
         {
           id: 2,
           key: '2',
           word: 'word2',
           definition: 'def2',
-          commonSenseMedia: false
-        }
+          commonSenseMedia: false,
+        },
       ],
       addVocabulary,
       updateVocabulary,
-      removeVocabulary
+      removeVocabulary,
     };
   });
 

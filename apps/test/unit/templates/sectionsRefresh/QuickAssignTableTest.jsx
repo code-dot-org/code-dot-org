@@ -6,7 +6,7 @@ import QuickAssignTable from '@cdo/apps/templates/sectionsRefresh/QuickAssignTab
 import {MARKETING_AUDIENCE} from '@cdo/apps/templates/sectionsRefresh/CurriculumQuickAssign';
 import {
   elementarySchoolCourseOffering,
-  highSchoolCourseOfferings
+  highSchoolCourseOfferings,
 } from './CourseOfferingsTestData';
 import i18n from '@cdo/locale';
 
@@ -15,7 +15,7 @@ const DEFAULT_PROPS = {
   courseOfferings: highSchoolCourseOfferings,
   setSelectedCourseOffering: () => {},
   updateCourse: () => {},
-  sectionCourse: {}
+  sectionCourse: {},
 };
 
 const setUpShallow = (overrideProps = {}) => {
@@ -32,7 +32,7 @@ describe('QuickAssignTable', () => {
   it('renders Course as the first and only table/column header', () => {
     const wrapper = setUpShallow({
       marketingAudience: MARKETING_AUDIENCE.ELEMENTARY,
-      courseOfferings: elementarySchoolCourseOffering
+      courseOfferings: elementarySchoolCourseOffering,
     });
 
     expect(wrapper.find('table').length).to.equal(1);
@@ -53,14 +53,14 @@ describe('QuickAssignTable', () => {
     const radio = wrapper.find("input[value='Computer Science A']");
     expect(updateSpy).not.to.have.been.called;
     radio.simulate('change', {
-      target: {value: 'Computer Science A', checked: true}
+      target: {value: 'Computer Science A', checked: true},
     });
     expect(updateSpy).to.have.been.called;
   });
 
   it('automatically checks correct radio button if course is already assigned', () => {
     const wrapper = setUpMount({
-      sectionCourse: {displayName: 'Computer Science A'}
+      sectionCourse: {displayName: 'Computer Science A'},
     });
 
     const radio = wrapper.find("input[value='Computer Science A']");

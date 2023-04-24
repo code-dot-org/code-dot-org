@@ -6,7 +6,7 @@ import {
   SENSOR_CHANNELS,
   MAX_SENSOR_BUFFER_DURATION,
   SAMPLE_INTERVAL,
-  MAX_LIGHT_SENSOR_VALUE
+  MAX_LIGHT_SENSOR_VALUE,
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 
 describe('LightSensor', function () {

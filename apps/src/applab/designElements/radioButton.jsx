@@ -15,7 +15,7 @@ class RadioButtonProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onDepthChange: PropTypes.func.isRequired
+    onDepthChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -84,7 +84,7 @@ class RadioButtonEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
   };
 
   getChangeEventCode() {
@@ -201,5 +201,5 @@ export default {
         element.checked = !element.checked;
       }
     });
-  }
+  },
 };

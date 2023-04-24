@@ -23,7 +23,7 @@ export default function AlertExclamation({children}) {
 }
 
 AlertExclamation.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 const styles = {
@@ -33,7 +33,7 @@ const styles = {
     maxWidth: 600,
     margin: '0 auto',
     marginTop: 20,
-    borderRadius: 15
+    borderRadius: 15,
   },
   circleStyle: {
     width: 100,
@@ -43,19 +43,19 @@ const styles = {
     MozBorderRadius: 50,
     WebkitBorderRadius: 50,
     margin: 20,
-    position: 'relative'
+    position: 'relative',
   },
   exclamationStyle: {
     fontSize: 80,
     position: 'absolute',
     top: '50%',
     left: '50%',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
   },
   bodyStyle: {
     paddingLeft: 0,
     paddingTop: 10,
     paddingBottom: 10,
-    paddingRight: 20
-  }
+    paddingRight: 20,
+  },
 };

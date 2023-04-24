@@ -4,7 +4,7 @@ import TeacherDashboardNavigation from './teacherDashboard/TeacherDashboardNavig
 
 export default {
   name: 'TeacherDashboardNavigation',
-  component: TeacherDashboardNavigation
+  component: TeacherDashboardNavigation,
 };
 
 export const Primary = () => (

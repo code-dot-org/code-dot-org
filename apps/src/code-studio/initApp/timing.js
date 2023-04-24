@@ -14,5 +14,5 @@ module.exports = {
     var startTime = userTimings[key];
     var timeElapsed = endTime - startTime;
     ga('send', 'timing', category, variable, timeElapsed, label);
-  }
+  },
 };

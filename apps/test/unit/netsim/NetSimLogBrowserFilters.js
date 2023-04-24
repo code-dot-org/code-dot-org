@@ -5,7 +5,7 @@ import {shallow, mount} from 'enzyme';
 import {spy} from 'sinon';
 import {expect} from '../../util/reconfiguredChai';
 import NetSimLogBrowserFilters, {
-  SentByDropdown
+  SentByDropdown,
 } from '@cdo/apps/netsim/NetSimLogBrowserFilters';
 import i18n from '@cdo/netsim/locale';
 
@@ -14,7 +14,7 @@ describe('NetSimLogBrowserFilters', function () {
     it('does not show sent-by dropdown', function () {
       expect(
         shallowWithDefaults({
-          teacherView: false
+          teacherView: false,
         })
       ).not.to.have.descendants(SentByDropdown);
     });
@@ -28,7 +28,7 @@ describe('NetSimLogBrowserFilters', function () {
         shallowWithDefaults({
           teacherView: true,
           setSentByFilter,
-          senderNames
+          senderNames,
         })
       ).to.contain(
         <SentByDropdown
@@ -79,7 +79,7 @@ describe('SentByDropdown', function () {
       {'sent-by': 'Alice'},
       {'sent-by': 'Bob'},
       {'sent-by': 'Bob'},
-      {'sent-by': 'Bob'}
+      {'sent-by': 'Bob'},
     ]);
     expect(result.find('option[value="by Alice"]')).to.have.length(1);
     expect(result.find('option[value="by Bob"]')).to.have.length(1);

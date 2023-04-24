@@ -8,7 +8,7 @@ import ProjectUpdatedAt from './ProjectUpdatedAt';
 import {
   refreshProjectName,
   setNameFailure,
-  unsetNameFailure
+  unsetNameFailure,
 } from '../../projectRedux';
 import NameFailureDialog from '../NameFailureDialog';
 import NameFailureError from '../../NameFailureError';
@@ -17,21 +17,21 @@ export const styles = {
   buttonWrapper: {
     float: 'left',
     display: 'flex',
-    margin: 0
+    margin: 0,
   },
   buttonSpacing: {
     marginTop: 0,
     marginBottom: 0,
     marginLeft: 10,
     marginRight: 0,
-    boxShadow: 'none'
-  }
+    boxShadow: 'none',
+  },
 };
 
 class UnconnectedDisplayProjectName extends React.Component {
   static propTypes = {
     beginEdit: PropTypes.func.isRequired,
-    projectName: PropTypes.string.isRequired
+    projectName: PropTypes.string.isRequired,
   };
 
   render() {
@@ -56,7 +56,7 @@ class UnconnectedDisplayProjectName extends React.Component {
   }
 }
 const DisplayProjectName = connect(state => ({
-  projectName: state.project.projectName
+  projectName: state.project.projectName,
 }))(UnconnectedDisplayProjectName);
 
 class UnconnectedEditProjectName extends React.Component {
@@ -66,11 +66,11 @@ class UnconnectedEditProjectName extends React.Component {
     refreshProjectName: PropTypes.func.isRequired,
     projectNameFailure: PropTypes.string,
     setNameFailure: PropTypes.func.isRequired,
-    unsetNameFailure: PropTypes.func.isRequired
+    unsetNameFailure: PropTypes.func.isRequired,
   };
 
   state = {
-    savingName: false
+    savingName: false,
   };
 
   componentDidMount() {
@@ -101,14 +101,14 @@ class UnconnectedEditProjectName extends React.Component {
     }
 
     this.setState({
-      savingName: true
+      savingName: true,
     });
 
     dashboard.project
       .rename(newName)
       .then(() => {
         this.setState({
-          savingName: false
+          savingName: false,
         });
         dashboard.header.updateTimestamp();
         this.props.refreshProjectName();
@@ -119,7 +119,7 @@ class UnconnectedEditProjectName extends React.Component {
           this.props.setNameFailure(error.nameFailure);
         }
         this.setState({
-          savingName: false
+          savingName: false,
         });
       });
   };
@@ -168,18 +168,18 @@ class UnconnectedEditProjectName extends React.Component {
 const EditProjectName = connect(
   state => ({
     projectName: state.project.projectName,
-    projectNameFailure: state.project.projectNameFailure
+    projectNameFailure: state.project.projectNameFailure,
   }),
   {
     refreshProjectName,
     setNameFailure,
-    unsetNameFailure
+    unsetNameFailure,
   }
 )(UnconnectedEditProjectName);
 
 export default class EditableProjectName extends React.Component {
   static propTypes = {
-    onChangedWidth: PropTypes.func
+    onChangedWidth: PropTypes.func,
   };
 
   componentDidUpdate() {
@@ -189,18 +189,18 @@ export default class EditableProjectName extends React.Component {
   }
 
   state = {
-    editName: false
+    editName: false,
   };
 
   beginEdit = () => {
     this.setState({
-      editName: true
+      editName: true,
     });
   };
 
   finishEdit = () => {
     this.setState({
-      editName: false
+      editName: false,
     });
   };
 

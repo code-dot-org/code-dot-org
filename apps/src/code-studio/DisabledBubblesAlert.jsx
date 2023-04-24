@@ -16,7 +16,7 @@ export default class DisabledBubblesAlert extends React.Component {
       'disabledBubblesAlertSeen'
     );
     this.state = {
-      visible: !disabledBubblesAlertSeen
+      visible: !disabledBubblesAlertSeen,
     };
   }
 
@@ -50,6 +50,6 @@ export default class DisabledBubblesAlert extends React.Component {
 
 const styles = {
   bold: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  }
+    fontFamily: '"Gotham 5r", sans-serif',
+  },
 };
