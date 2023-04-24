@@ -273,7 +273,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.CONNECTION_CHECKER,
     'cdo_connection_checker',
-    CdoConnectionChecker
+    CdoConnectionChecker,
+    true /* opt_allowOverrides */
   );
 
   registerAllContextMenuItems();
