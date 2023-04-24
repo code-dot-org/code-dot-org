@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-21 01:29:39 UTC",
+    "serialized_at": "2023-04-21 17:57:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -44,6 +44,8 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "**Purpose:**\nThis session is intended to welcome and orient participants to the day.\n\n\n**Objectives:**\n* Participants are oriented to the day\n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**You will:**\n* Get and orientation to the day"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -59,6 +61,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "**Purpose:**\nThis session is designed for participants to begin to understand their context related to equity in CS education. Participants will use data to explore who has access to CS both nationally and within their home state. They will then discuss systemic barriers that limit access, diversity, and inclusion in CS education.\n\n\n**Objectives:**\n* Participants use a shared definition for access, diversity, inclusion, equity, and “students from underrepresented groups” in the context of CS education\n* Participants recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally\n* Participants identify systemic barriers that limit access, diversity, and inclusion in CS education\n* Participants list strategies to gather data (quantitative and qualitative) about access, diversity, and inclusion in CS courses locally (within school and classroom)\n\n**Suggessted Time:** 50 minutes ",
+        "student_overview": "**You will:**\n* Use a shared definition for access, diversity, inclusion, equity, and “students from underrepresented groups” in the context of CS education\n* Recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education\n* List strategies to gather data (quantitative and qualitative) about access, diversity, and inclusion in CS courses locally (within school and classroom)"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -74,6 +78,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "overview": "**Purpose:**\nBy this point in the workshop, participants have had experience with the computer science concepts in Units 1-3. This session invites participants to consider what it might feel like to teach these concepts to their students and act as the “lead learner” during the school year.\n\n\n**Objectives:**\n* Participants reflect on how being a lead learner in the classroom is similar to and different from how they have previously taught.\n* Participants understand the importance of modeling as a lead learner in the CS classroom.\n\n**Suggested Time:** 40 minutes",
+        "student_overview": "**You will:**\n* Reflect on how being a lead learner in the classroom is similar to and different from how you have previously taught\n* Understand the importance of modeling as a lead learner in the CS classroom"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -89,6 +95,8 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "**Purpose:**\nThis session is a preparation for the next two TLOs that participants will engage in: U3L6 Random Numbers and U3L8 Sprites. This curriculum investigation builds on the Summer Workshop focus of preparing participants to teach units 1-3 (the most heavily implemented units).\n\n\n**Objectives:**\n* Participants learn how to use variables in Game Lab to prepare for their model lesson and TLOs\n* Participants know what sprites are in Game Lab \n\n**Suggested Time:** 40 minutes",
+        "student_overview": "**You will:**\n* Learn how to use variables in Game Lab to prepare for their model lesson and TLOs\n* Learn what sprites are in Game Lab "
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -98,14 +106,14 @@
     },
     {
       "key": "Random Numbers",
-      "name": "Random Numbers",
+      "name": "TLO 1 - U3L6 Random Numbers",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson introduces randomness, which is important both as a way to make programs more interesting and also to motivate the use of variables. Students are introduced to the [`randomNumber()`(#FFB74D)](/docs/gamelab/randomNumber/) block and how it can be used to create new behaviors in their programs. They then learn how to update variables during a program.  Combining all of these skills, students draw randomized images.\n\n**Question of the Day:** How can we make our programs behave differently each time they are run?\n",
+        "overview": "**Purpose:**\n* **Essential Practice:** Students have strategies for debugging\n\n\n* **Potential Teaching Group Decisions:**\n  * The teacher directs participants to the student version of the “Guide to Debugging” (page 24 of the Resource Packet) and prompts them to use the debugging process when they encounter bugs.\n  * Teacher instructs participants to complete at least one debugging level in the practice choice level (Level 6b)\n  * Teacher has participants document bugs in their journals\n  * In the wrap up, after students have written about things that might like to be random in their programs, teachers lead a discussion on potential bugs that might arise.\n\n\n**Objectives:**\n* Participants have brainstormed ways to support students in the process of debugging\n* Participants can generate and use random numbers in a program and update a value stored in a variable\n\n**Suggested Time:** 65 minutes\n",
         "preparation": "- Review the level progression in Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
         "student_overview": "**Question of the Day:** How can we make our programs behave differently each time they are run?\n\nIn this lesson, you will learn how to use the randomNumber() block to create new behaviors in your programs!\n\n"
       },
@@ -200,6 +208,54 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "0aab4caf-9478-41fe-864c-893f9f689359",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0aab4caf-9478-41fe-864c-893f9f689359",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "56123fbe-4df4-4ea9-8981-5168ada38fff",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "56123fbe-4df4-4ea9-8981-5168ada38fff",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "cb96df91-6a91-45f4-8682-ced8b03df961",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cb96df91-6a91-45f4-8682-ced8b03df961",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "c639b269-7929-492a-8e9b-5f7d4ca133fb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c639b269-7929-492a-8e9b-5f7d4ca133fb",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-day3"
+      }
+    },
     {
       "key": "2c7fc820-f346-4d04-b953-8b4e2f12ed5c",
       "position": 1,
@@ -328,6 +384,46 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "12a9a614-978f-444d-a70e-f459509b8776",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "12a9a614-978f-444d-a70e-f459509b8776",
+        "lesson_activity.key": "0aab4caf-9478-41fe-864c-893f9f689359"
+      }
+    },
+    {
+      "key": "e59df550-a536-4966-8bbc-cbf4fd72d994",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e59df550-a536-4966-8bbc-cbf4fd72d994",
+        "lesson_activity.key": "56123fbe-4df4-4ea9-8981-5168ada38fff"
+      }
+    },
+    {
+      "key": "df1fc3f4-b0f2-4a73-b17a-bee479ad2418",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "df1fc3f4-b0f2-4a73-b17a-bee479ad2418",
+        "lesson_activity.key": "cb96df91-6a91-45f4-8682-ced8b03df961"
+      }
+    },
+    {
+      "key": "8e326b96-4e79-4a12-b98d-7e6d1ad9623f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8e326b96-4e79-4a12-b98d-7e6d1ad9623f",
+        "lesson_activity.key": "c639b269-7929-492a-8e9b-5f7d4ca133fb"
+      }
+    },
     {
       "key": "550f2455-a517-4695-9b6e-a29a6c7befac",
       "position": 1,
@@ -1082,6 +1178,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L6 - Predict_pl"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1104,6 +1203,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse_pl"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1126,6 +1228,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse2_pl"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1148,6 +1253,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random with assignment_pl"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1170,6 +1278,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random reassign_pl"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1192,6 +1303,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random practice_pl"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1214,6 +1328,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random rainbow snake_pl"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1236,6 +1353,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random challenge_pl"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1258,6 +1378,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L7 - Predict_pl"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1280,6 +1403,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites_pl"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1302,6 +1428,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro debug_pl"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1324,6 +1453,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites Exploration_pl"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1346,6 +1478,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites_pl"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1368,6 +1503,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites anitab 1_pl"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1390,6 +1528,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites sequencing_pl"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1412,6 +1553,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawSprites placement match_pl"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1434,6 +1578,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites practice_pl"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1456,6 +1603,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites assessment_pl"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1478,6 +1628,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites Challenges_pl"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1727,6 +1880,19 @@
   ],
   "resources": [
     {
+      "name": "Activity Packet",
+      "url": "https://docs.google.com/document/d/15gERZooKYoMlBjeHTEb63zlkG9oaCayUUblHzaSW9VE/view",
+      "key": "activity_packet",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/15gERZooKYoMlBjeHTEb63zlkG9oaCayUUblHzaSW9VE/view",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "activity_packet"
+      }
+    },
+    {
       "name": "Animation Tab",
       "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
       "key": "animation_tab",
@@ -1736,6 +1902,34 @@
       },
       "seeding_key": {
         "resource.key": "animation_tab"
+      }
+    },
+    {
+      "name": "Day 3 Agenda",
+      "url": "https://docs.google.com/document/d/1Oaq7AuEaepfqTuELad0ymvBIv455LRwfWIrJtQlfI6s/edit?usp=share_link",
+      "key": "day_3_agenda",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1Oaq7AuEaepfqTuELad0ymvBIv455LRwfWIrJtQlfI6s/edit?usp=share_link",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "day_3_agenda"
+      }
+    },
+    {
+      "name": "Day 3 Slides Template",
+      "url": "https://docs.google.com/presentation/d/1cRUvbNDhcybvQYoeakvi9RkxPH74ewc1C1grYJKj674/edit?usp=share_link",
+      "key": "day_3_slides_template",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1cRUvbNDhcybvQYoeakvi9RkxPH74ewc1C1grYJKj674/edit?usp=share_link",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "day_3_slides_template"
       }
     },
     {
@@ -1773,6 +1967,19 @@
       },
       "seeding_key": {
         "resource.key": "random_numbers_1"
+      }
+    },
+    {
+      "name": "Resource Packet",
+      "url": "https://docs.google.com/document/d/15ho43-c0njEcIEIr-RmHcUjZfIJPFdVZvQdpH6GC4B4/edit?usp=sharing",
+      "key": "resource_packet_1",
+      "properties": {
+        "audience": "Teacher",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "resource_packet_1"
       }
     },
     {
@@ -1931,7 +2138,30 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "activity_packet",
+        "script.name": "pl-csd-summer-day3"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "day_3_agenda",
+        "script.name": "pl-csd-summer-day3"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "day_3_slides_template",
+        "script.name": "pl-csd-summer-day3"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "resource_packet_1",
+        "script.name": "pl-csd-summer-day3"
+      }
+    }
   ],
   "scripts_student_resources": [
 
