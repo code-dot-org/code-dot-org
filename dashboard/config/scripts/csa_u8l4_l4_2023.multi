@@ -7,7 +7,7 @@ wrong '`{10, 13, 12, 50, 40, 16}`'
 wrong '`{10, 12, 13, 50, 40, 10}`'
 right '`{10, 12, 13, 50, 40, 16}`'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the following sort method. This method correctly sorts the elements of array data into increasing order.
