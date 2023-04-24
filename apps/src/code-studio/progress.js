@@ -18,14 +18,14 @@ import {
   setIsAge13Required,
   setLessonExtrasEnabled,
   queryUserProgress as reduxQueryUserProgress,
-  useDbProgress
+  useDbProgress,
 } from './progressRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {renderTeacherPanel} from './teacherPanelHelpers';
 import {
   setUserRoleInCourse,
-  CourseRoles
+  CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
 
 var progress = module.exports;
@@ -52,7 +52,7 @@ progress.showDisabledBubblesAlert = function () {
     left: 0,
     right: 0,
     top: 45,
-    zIndex: 1000
+    zIndex: 1000,
   });
   $(document.body).append(div);
 
@@ -102,7 +102,7 @@ progress.generateLessonProgress = function (
       lessons: [lessonData],
       disablePostMilestone,
       age_13_required,
-      id: lessonData.script_id
+      id: lessonData.script_id,
     },
     currentLevelId,
     false,
@@ -173,33 +173,33 @@ function getLevelProgress(signedIn, progressData, scriptName) {
       return Promise.resolve({
         usingDbProgress: true,
         levelResults: extractLevelResults(progressData),
-        unitProgress: progressData.progress
+        unitProgress: progressData.progress,
       });
     case false:
       // User is not signed in, return a resolved promise with progress data
       // retrieved from session storage
       return Promise.resolve({
         usingDbProgress: false,
-        levelResults: clientState.levelProgress(scriptName)
+        levelResults: clientState.levelProgress(scriptName),
       });
     case null:
       // We do not know if user is signed in or not, send a request to the server
       // to find out if the user is signed in and retrieve progress information
       return $.ajax({
         url: `/api/user_progress/${scriptName}`,
-        data: {user_id: clientState.queryParams('user_id')}
+        data: {user_id: clientState.queryParams('user_id')},
       })
         .then(data => {
           if (data.signedIn) {
             return {
               usingDbProgress: true,
               levelResults: extractLevelResults(data),
-              unitProgress: data.progress
+              unitProgress: data.progress,
             };
           } else {
             return {
               usingDbProgress: false,
-              levelResults: clientState.levelProgress(scriptName)
+              levelResults: clientState.levelProgress(scriptName),
             };
           }
         })
@@ -355,7 +355,7 @@ function initializeStoreWithProgress(
       courseId: scriptData.course_id,
       isFullProgress: isFullProgress,
       isLessonExtras: isLessonExtras,
-      currentPageNumber: currentPageNumber
+      currentPageNumber: currentPageNumber,
     })
   );
 

@@ -3,13 +3,13 @@
 import {
   createUuid,
   trySetLocalStorage,
-  tryGetLocalStorage
+  tryGetLocalStorage,
 } from '@cdo/apps/utils';
 import {getStore} from '@cdo/apps/redux';
 import {
   getEnvironment,
   isDevelopmentEnvironment,
-  isTestEnvironment
+  isTestEnvironment,
 } from '../../utils';
 
 /**
@@ -104,7 +104,7 @@ class FirehoseClient {
       window_width: window.innerWidth,
       window_height: window.innerHeight,
       hostname: window.location.hostname,
-      full_path: window.location.href
+      full_path: window.location.href,
     };
     return device_info;
   }
@@ -164,11 +164,11 @@ class FirehoseClient {
       url: '/api/firehose_unreachable',
       data: JSON.stringify({
         original_data: requestData,
-        error_text: String(error)
+        error_text: String(error),
       }),
       contentType: 'application/json; charset=utf-8',
       method: 'PUT',
-      dataType: 'json'
+      dataType: 'json',
     });
   }
 
@@ -190,7 +190,7 @@ class FirehoseClient {
       alwaysPut: false,
       includeUserId: false,
       callback: null,
-      useProgressScriptId: true
+      useProgressScriptId: true,
     }
   ) {
     data = this.addCommonValues(
@@ -215,8 +215,8 @@ class FirehoseClient {
       {
         DeliveryStreamName: deliveryStreamName,
         Record: {
-          Data: JSON.stringify(data)
-        }
+          Data: JSON.stringify(data),
+        },
       },
       function (err, data) {
         if (options.callback) {
@@ -241,7 +241,7 @@ class FirehoseClient {
     options = {
       alwaysPut: false,
       includeUserId: false,
-      useProgressScriptId: true
+      useProgressScriptId: true,
     }
   ) {
     data.map(function (record) {
@@ -267,14 +267,14 @@ class FirehoseClient {
 
     const batch = data.map(function (record) {
       return {
-        Data: JSON.stringify(record)
+        Data: JSON.stringify(record),
       };
     });
 
     this.firehose.putRecordBatch(
       {
         DeliveryStreamName: deliveryStreamName,
-        Records: batch
+        Records: batch,
       },
       function (err, data) {}
     );
@@ -335,7 +335,7 @@ function getSingleton() {
     promise = Promise.all([
       import('aws-sdk/lib/core'),
       import('aws-sdk/clients/firehose'),
-      import('aws-sdk/lib/config')
+      import('aws-sdk/lib/config'),
     ])
       .then(
         ([{default: AWS}, {default: Firehose}]) =>

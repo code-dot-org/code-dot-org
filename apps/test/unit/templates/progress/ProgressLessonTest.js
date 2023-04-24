@@ -5,7 +5,7 @@ import {UnconnectedProgressLesson as ProgressLesson} from '@cdo/apps/templates/p
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   fakeLesson,
-  fakeLevels
+  fakeLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import color from '@cdo/apps/util/color';
 
@@ -15,7 +15,7 @@ describe('ProgressLesson', () => {
     lesson: {
       ...fakeLesson('lesson1', 1, false, lessonNumber),
       description_teacher: 'Teacher description here',
-      description_student: 'Student description here'
+      description_student: 'Student description here',
     },
     levels: fakeLevels(3),
     currentLessonId: 1,
@@ -27,7 +27,7 @@ describe('ProgressLesson', () => {
     lockableAuthorizedLoaded: true,
     lockableAuthorized: true,
     isMiniView: false,
-    lockStatusLoaded: true
+    lockStatusLoaded: true,
   };
 
   // This ID is used by the EndOfLessonDialog to scroll the recently completed lesson into view
@@ -334,11 +334,11 @@ describe('ProgressLesson', () => {
         {...defaultProps}
         levels={defaultProps.levels.map(level => ({
           ...level,
-          isLocked: true
+          isLocked: true,
         }))}
         lesson={{
           ...defaultProps.lesson,
-          lockable: false
+          lockable: false,
         }}
       />
     );

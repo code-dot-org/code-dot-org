@@ -6,7 +6,7 @@ import {action} from '@storybook/addon-actions';
 
 export default {
   title: 'Notification',
-  component: Notification
+  component: Notification,
 };
 
 const informationDetails =
@@ -31,7 +31,7 @@ Information.args = {
   type: 'bullhorn',
   notice: 'Here is some news',
   details: 'Here are the details of the news.',
-  dismissible: false
+  dismissible: false,
 };
 
 export const InfoCallToActionButton = Template.bind({});
@@ -39,7 +39,7 @@ InfoCallToActionButton.args = {
   ...Information.args,
   buttonText: 'Call to Action',
   buttonLink: 'to a new page',
-  dismissible: false
+  dismissible: false,
 };
 InfoCallToActionButton.storyName = 'Information - call-to-action button';
 
@@ -48,7 +48,7 @@ InfoCallToActionButtonAndDismissible.args = {
   ...Information.args,
   buttonText: 'Call to Action',
   buttonLink: 'to a new page',
-  dismissible: true
+  dismissible: true,
 };
 InfoCallToActionButtonAndDismissible.storyName =
   'Information - call-to-action button, dismissible';
@@ -56,7 +56,7 @@ InfoCallToActionButtonAndDismissible.storyName =
 export const InfoNonDefaultWidth = Template.bind({});
 InfoNonDefaultWidth.args = {
   ...Information.args,
-  width: 800
+  width: 800,
 };
 InfoNonDefaultWidth.storyName = 'Information - non-default width';
 
@@ -67,7 +67,7 @@ InfoLongDetails.args = {
     informationDetails +
     informationDetails +
     informationDetails +
-    informationDetails
+    informationDetails,
 };
 InfoLongDetails.storyName = 'Information - long details';
 
@@ -86,7 +86,7 @@ InfoMobileWidth.args = {
   buttonText: 'Call to Action',
   buttonLink: 'to a new page',
   dismissible: false,
-  width: '100%'
+  width: '100%',
 };
 InfoMobileWidth.storyName = 'Information - mobile width';
 
@@ -96,7 +96,7 @@ Success.args = {
   notice: 'Wonder Woman Saved the Day',
   details:
     "Things were pretty sketchy there for awhile, but don't worry- she's on top of it.",
-  dismissible: true
+  dismissible: true,
 };
 
 export const Failure = Template.bind({});
@@ -105,7 +105,7 @@ Failure.args = {
   notice: 'Lex Luther Attacked Metropolis',
   details:
     "If you're in the Metropolis area, get to saftey as quickly as possible",
-  dismissible: false
+  dismissible: false,
 };
 
 export const Warning = Template.bind({});
@@ -114,7 +114,7 @@ Warning.args = {
   notice: 'Batman is on Vacation in the Bahamas',
   details:
     'Now is probably not the best time to be in Gotham City. Watch your back.',
-  dismissible: true
+  dismissible: true,
 };
 
 export const FindACourse = Template.bind({});
@@ -124,7 +124,7 @@ FindACourse.args = {
   details: 'Try new courses to add them to your homepage.',
   dismissible: false,
   buttonText: 'Find a course',
-  buttonLink: '/courses'
+  buttonLink: '/courses',
 };
 
 export const Announcement = Template.bind({});
@@ -132,7 +132,7 @@ Announcement.args = {
   type: 'bullhorn',
   notice: 'Here is some news',
   details: 'Here are the details of the news.',
-  dismissible: false
+  dismissible: false,
 };
 
 export const AnnouncementWithButton = Template.bind({});
@@ -143,9 +143,9 @@ AnnouncementWithButton.args = {
   newWindow: true,
   firehoseAnalyticsData: {
     user_id: 1,
-    important_data_point: 2
+    important_data_point: 2,
   },
-  googleAnalyticsId: 'sample_announcement'
+  googleAnalyticsId: 'sample_announcement',
 };
 AnnouncementWithButton.storyName = 'Announcement - with button';
 
@@ -159,15 +159,15 @@ AnnouncementTwoButtonsAndALink.args = {
       text: 'Learn more',
       link: '/more',
       newWindow: true,
-      onClick: action('onClickPopupMore')
+      onClick: action('onClickPopupMore'),
     },
     {
       text: 'Learn less',
       link: '/less',
       newWindow: true,
-      onClick: action('onClickPopupLess')
-    }
-  ]
+      onClick: action('onClickPopupLess'),
+    },
+  ],
 };
 AnnouncementTwoButtonsAndALink.storyName =
   'Announcement - two buttons and a link';

@@ -88,7 +88,7 @@ export default class ProjectImport extends React.Component {
         $.ajax({
           url: levelSourcePath,
           type: 'get',
-          dataType: 'json'
+          dataType: 'json',
         })
           .done(function (data) {
             onFinish(data.data);

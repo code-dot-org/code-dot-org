@@ -8,7 +8,7 @@ export default class StudentSelector extends Component {
   static propTypes = {
     studentList: PropTypes.array.isRequired,
     studentId: PropTypes.number,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
   };
 
   render() {

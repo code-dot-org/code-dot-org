@@ -114,7 +114,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
 
 CurriculumCatalog.propTypes = {
   curriculaData: PropTypes.arrayOf(curriculumDataShape),
-  isEnglish: PropTypes.bool.isRequired
+  isEnglish: PropTypes.bool.isRequired,
 };
 
 const FilterCheckboxDropdown = ({

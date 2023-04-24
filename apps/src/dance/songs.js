@@ -36,7 +36,7 @@ export async function getSongManifest(useRestrictedSongs, manifestFilename) {
 
   return songManifest.map(song => ({
     ...song,
-    url: `${songPathPrefix}${song.url}.mp3`
+    url: `${songPathPrefix}${song.url}.mp3`,
   }));
 }
 
@@ -83,7 +83,7 @@ export function loadSong(songId, songData, onPreloadError) {
   const options = {
     id: url,
     mp3: url,
-    onPreloadError
+    onPreloadError,
   };
   Sounds.getSingleton().register(options);
 }

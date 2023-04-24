@@ -18,14 +18,14 @@ import reducers, {
   moveLevelToActivitySection,
   emptyActivity,
   emptyActivitySection,
-  getSerializedActivities
+  getSerializedActivities,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {sampleActivities} from './activitiesTestData';
 import _ from 'lodash';
 import {expect, assert} from '../../../../util/reconfiguredChai';
 
 const getInitialState = () => ({
-  activities: _.cloneDeep(sampleActivities)
+  activities: _.cloneDeep(sampleActivities),
 });
 
 const reducer = combineReducers(reducers);
@@ -52,7 +52,7 @@ describe('activitiesEditorRedux reducer tests', () => {
       addTip(1, 2, {
         key: 'new-tip',
         type: 'contentCorner',
-        markdown: 'Programming is about solving puzzles.'
+        markdown: 'Programming is about solving puzzles.',
       })
     ).activities;
     assert.deepEqual(
@@ -67,20 +67,20 @@ describe('activitiesEditorRedux reducer tests', () => {
       updateTip(1, 2, {
         key: 'tip-1',
         type: 'contentCorner',
-        markdown: 'Programming is about solving puzzles.'
+        markdown: 'Programming is about solving puzzles.',
       })
     ).activities;
     assert.deepEqual(nextState[0].activitySections[1].tips, [
       {
         key: 'tip-1',
         type: 'contentCorner',
-        markdown: 'Programming is about solving puzzles.'
+        markdown: 'Programming is about solving puzzles.',
       },
       {
         key: 'tip-2',
         markdown: 'Discussion Goal content',
-        type: 'discussionGoal'
-      }
+        type: 'discussionGoal',
+      },
     ]);
   });
 
@@ -122,9 +122,9 @@ describe('activitiesEditorRedux reducer tests', () => {
               remarks: true,
               scriptLevels: [],
               text: 'Drawing text',
-              tips: []
-            }
-          ]
+              tips: [],
+            },
+          ],
         });
       });
 
@@ -208,8 +208,8 @@ describe('activitiesEditorRedux reducer tests', () => {
               skin: null,
               videoKey: null,
               concepts: '',
-              conceptDifficulty: ''
-            }
+              conceptDifficulty: '',
+            },
           ],
           position: 4,
           activeId: '4',
@@ -217,7 +217,7 @@ describe('activitiesEditorRedux reducer tests', () => {
           bonus: false,
           assessment: false,
           challenge: false,
-          expand: false
+          expand: false,
         })
       ).activities;
       assert.deepEqual(
@@ -257,8 +257,8 @@ describe('activitiesEditorRedux reducer tests', () => {
           position: 1,
           activitySections: [
             {key: 'a', position: 1, displayName: 'A'},
-            {key: 'b', position: 2, displayName: 'B'}
-          ]
+            {key: 'b', position: 2, displayName: 'B'},
+          ],
         },
         {
           key: 'y',
@@ -266,9 +266,9 @@ describe('activitiesEditorRedux reducer tests', () => {
           position: 2,
           activitySections: [
             {key: 'c', position: 1, displayName: 'C'},
-            {key: 'd', position: 2, displayName: 'D'}
-          ]
-        }
+            {key: 'd', position: 2, displayName: 'D'},
+          ],
+        },
       ];
       initialState.activities = initialActivities;
     });

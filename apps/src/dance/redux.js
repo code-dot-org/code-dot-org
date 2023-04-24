@@ -8,33 +8,33 @@ export const SET_RUN_IS_STARTING = 'dance/SET_RUN_IS_STARTING';
 export function setSelectedSong(song) {
   return {
     type: SET_SELECTED_SONG,
-    value: song
+    value: song,
   };
 }
 
 export function setSongData(songData) {
   return {
     type: SET_SONG_DATA,
-    songData
+    songData,
   };
 }
 
 export function setRunIsStarting(runIsStarting) {
   return {
     type: SET_RUN_IS_STARTING,
-    runIsStarting
+    runIsStarting,
   };
 }
 
 export const actions = {
-  setSelectedSong
+  setSelectedSong,
 };
 
 // Reducers
 
 const initialState = {
   selectedSong: 'macklemore90',
-  songData: {}
+  songData: {},
 };
 
 function songs(state, action) {
@@ -43,17 +43,17 @@ function songs(state, action) {
     case SET_SELECTED_SONG:
       return {
         ...state,
-        selectedSong: action.value
+        selectedSong: action.value,
       };
     case SET_SONG_DATA:
       return {
         ...state,
-        songData: action.songData
+        songData: action.songData,
       };
     case SET_RUN_IS_STARTING:
       return {
         ...state,
-        runIsStarting: action.runIsStarting
+        runIsStarting: action.runIsStarting,
       };
     default:
       return state;
@@ -61,5 +61,5 @@ function songs(state, action) {
 }
 
 export const reducers = {
-  songs
+  songs,
 };

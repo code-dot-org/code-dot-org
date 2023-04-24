@@ -115,7 +115,7 @@ Eval.init = function (config) {
         origin: -200,
         firstLabel: -100,
         lastLabel: 100,
-        increment: 100
+        increment: 100,
       });
       background.setAttribute('visibility', 'visible');
     }
@@ -280,7 +280,7 @@ function evalCode(code) {
     CustomMarshalingInterpreter.evalWith(
       code,
       {
-        Eval: api
+        Eval: api,
       },
       {legacy: true}
     );
@@ -316,7 +316,7 @@ function evalCode(code) {
 function getDrawableFromBlockspace() {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', [
     'functional_display',
-    'functional_definition'
+    'functional_definition',
   ]);
   var result = evalCode(code);
   return result;
@@ -324,7 +324,7 @@ function getDrawableFromBlockspace() {
 
 function getDrawableFromBlock(block) {
   var definitionCode = Blockly.Generator.blockSpaceToCode('JavaScript', [
-    'functional_definition'
+    'functional_definition',
   ]);
   var blockCode = Blockly.Generator.blocksToCode('JavaScript', [block]);
   var lines = blockCode.split('\n');
@@ -504,7 +504,7 @@ Eval.execute = function () {
     testResult: Eval.testResults,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete,
-    image: Eval.encodedFeedbackImage
+    image: Eval.encodedFeedbackImage,
   };
 
   // don't try it if function is not defined, which should probably only be
@@ -520,7 +520,7 @@ Eval.execute = function () {
         );
 
         studioApp().report(reportData);
-      }
+      },
     });
   }
 
@@ -543,7 +543,7 @@ Eval.checkExamples_ = function (resetPlayspace) {
     Eval.result = false;
     Eval.testResults = TestResults.EXAMPLE_FAILED;
     Eval.message = commonMsg.emptyExampleBlockErrorMsg({
-      functionName: exampleless
+      functionName: exampleless,
     });
     return;
   }
@@ -570,7 +570,7 @@ Eval.checkExamples_ = function (resetPlayspace) {
     Eval.result = false;
     Eval.testResults = TestResults.EXAMPLE_FAILED;
     Eval.message = commonMsg.exampleErrorMessage({
-      functionName: failingBlockName
+      functionName: failingBlockName,
     });
     return;
   }
@@ -649,8 +649,8 @@ var displayFeedback = function (response) {
     showingSharing: !level.disableSharing && level.freePlay,
     feedbackImage: Eval.feedbackImage,
     appStrings: {
-      reinfFeedbackMsg: evalMsg.reinfFeedbackMsg({backButton: tryAgainText})
-    }
+      reinfFeedbackMsg: evalMsg.reinfFeedbackMsg({backButton: tryAgainText}),
+    },
   };
   if (Eval.message && !level.edit_blocks) {
     options.message = Eval.message;

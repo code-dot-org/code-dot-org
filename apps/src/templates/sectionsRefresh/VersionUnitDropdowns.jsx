@@ -8,7 +8,7 @@ import _ from 'lodash';
 export default function VersionUnitDropdowns({
   courseOffering,
   updateCourse,
-  sectionCourse
+  sectionCourse,
 }) {
   const VERSION_ID = 'versionId';
   const UNIT_ID = 'unitId';
@@ -53,7 +53,7 @@ export default function VersionUnitDropdowns({
         ...sectionCourse,
         unitId: unitId,
         hasLessonExtras: selectedUnit.lesson_extras_available,
-        hasTextToSpeech: selectedUnit.text_to_speech_enabled
+        hasTextToSpeech: selectedUnit.text_to_speech_enabled,
       });
     }
   };
@@ -95,5 +95,5 @@ export default function VersionUnitDropdowns({
 VersionUnitDropdowns.propTypes = {
   courseOffering: PropTypes.object,
   updateCourse: PropTypes.func.isRequired,
-  sectionCourse: PropTypes.object
+  sectionCourse: PropTypes.object,
 };

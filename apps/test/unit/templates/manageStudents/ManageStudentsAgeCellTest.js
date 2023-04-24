@@ -7,7 +7,7 @@ import {UnconnectedManageStudentAgeCell as ManageStudentAgeCell} from '@cdo/apps
 const DEFAULT_PROPS = {
   id: 2,
   isEditing: false,
-  editedValue: 13
+  editedValue: 13,
 };
 
 describe('ManageStudentAgeCell', () => {

@@ -36,7 +36,7 @@ export default function DefaultSpriteRow(props) {
 DefaultSpriteRow.propTypes = {
   name: PropTypes.string.isRequired,
   onDelete: PropTypes.func.isRequired,
-  onMove: PropTypes.func.isRequired
+  onMove: PropTypes.func.isRequired,
 };
 
 const styles = {
@@ -45,6 +45,6 @@ const styles = {
     borderColor: color.dark_slate_gray,
     display: 'flex',
     justifyContent: 'flex-start',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };
