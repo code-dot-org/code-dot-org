@@ -1,7 +1,7 @@
 import {assert} from '../../../../util/reconfiguredChai';
 import {
   shouldUseFoormSurvey,
-  shouldShowSurveyResults
+  shouldShowSurveyResults,
 } from '../../../../../src/code-studio/pd/workshop_dashboard/workshop_summary_utils';
 
 describe('Workshop Summary Utils', () => {

@@ -10,7 +10,7 @@ describe('PlaygroundButton', function () {
   it('is a johnny-five Button component', function () {
     const button = new PlaygroundButton({
       board: makeCPBoardStub(),
-      pin: 0
+      pin: 0,
     });
     expect(button).to.be.an.instanceOf(five.Button);
   });
@@ -21,7 +21,7 @@ describe('PlaygroundButton', function () {
     beforeEach(() => {
       button = new PlaygroundButton({
         board: makeCPBoardStub(),
-        pin: 0
+        pin: 0,
       });
     });
 
@@ -39,7 +39,7 @@ describe('PlaygroundButton', function () {
     EXTERNAL_PINS.forEach(pin => {
       const button = new PlaygroundButton({
         board: makeCPBoardStub(),
-        pin
+        pin,
       });
       expect(button.pullup).to.be.true;
     });
@@ -51,7 +51,7 @@ describe('PlaygroundButton', function () {
       .forEach(pin => {
         const button = new PlaygroundButton({
           board: makeCPBoardStub(),
-          pin
+          pin,
         });
         expect(button.pullup).to.be.false;
       });

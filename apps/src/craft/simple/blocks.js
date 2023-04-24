@@ -36,7 +36,7 @@ var allBlocks = [
   'stone',
   'tnt',
   'tree',
-  'wool'
+  'wool',
 ];
 
 // Install extensions to Blockly's language and JavaScript generator.
@@ -54,7 +54,7 @@ exports.install = function (blockly, blockInstallOptions) {
   var craftBlockOptions = {
     inventoryBlocks: Object.keys(dropdownBlockSet),
     ifBlockOptions: blockInstallOptions.level.ifBlockOptions,
-    placeBlockOptions: blockInstallOptions.level.placeBlockOptions
+    placeBlockOptions: blockInstallOptions.level.placeBlockOptions,
   };
 
   var inventoryBlocksEmpty =
@@ -73,7 +73,7 @@ exports.install = function (blockly, blockInstallOptions) {
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_moveForward = function () {
@@ -91,12 +91,12 @@ exports.install = function (blockly, blockInstallOptions) {
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.Blocks.craft_turn.DIRECTIONS = [
     [i18n.blockTurnLeft() + ' \u21BA', 'left'],
-    [i18n.blockTurnRight() + ' \u21BB', 'right']
+    [i18n.blockTurnRight() + ' \u21BB', 'right'],
   ];
 
   blockly.getGenerator().craft_turn = function () {
@@ -115,7 +115,7 @@ exports.install = function (blockly, blockInstallOptions) {
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_destroyBlock = function () {
@@ -131,7 +131,7 @@ exports.install = function (blockly, blockInstallOptions) {
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_shear = function () {
@@ -154,7 +154,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendStatementInput('DO').appendField(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_ifBlockAhead = function () {
@@ -179,7 +179,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendStatementInput('DO').appendField(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_ifLavaAhead = function () {
@@ -208,7 +208,7 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendField(dropdown, 'TYPE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_placeBlock = function () {
@@ -223,7 +223,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput().appendField(i18n.blockPlaceTorch());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_placeTorch = function () {
@@ -237,7 +237,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput().appendField(i18n.blockPlantCrop());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_plantCrop = function () {
@@ -251,7 +251,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput().appendField(i18n.blockTillSoil());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_tillSoil = function () {
@@ -274,7 +274,7 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendField(i18n.blockPlaceXAheadAhead());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_placeBlockAhead = function () {

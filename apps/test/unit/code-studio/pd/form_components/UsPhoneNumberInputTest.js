@@ -83,7 +83,7 @@ describe('UsPhoneNumberInput', () => {
         ['abc', ''],
         ['123', '123'],
         ['a1b2c3d', '123'],
-        ['   123-@~! ', '123']
+        ['   123-@~! ', '123'],
       ].forEach(testCase => {
         const [input, expectedResult] = testCase;
         const failMessage = `Expected toJustNumbers to return "${expectedResult}" for: "${input}"`;
@@ -117,7 +117,7 @@ describe('UsPhoneNumberInput', () => {
         ['(123) 4567', '(123) 456-7'],
         ['(123) 456-7x', '(123) 456-7'],
         ['(123) 456-7890', '(123) 456-7890'],
-        ['(123) 456-7890x', '(123) 456-7890']
+        ['(123) 456-7890x', '(123) 456-7890'],
       ].forEach(testCase => {
         const [input, expectedResult] = testCase;
         const failMessage = `Expected coercePhoneNubmer to return "${expectedResult}" for: "${input}"`;

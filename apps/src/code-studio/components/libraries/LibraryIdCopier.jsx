@@ -5,7 +5,7 @@ import Button from '@cdo/apps/templates/Button';
 
 export default class LibraryIdCopier extends React.Component {
   static propTypes = {
-    channelId: PropTypes.string.isRequired
+    channelId: PropTypes.string.isRequired,
   };
 
   copyChannelId = () => {
@@ -40,9 +40,9 @@ const styles = {
     cursor: 'copy',
     width: 250,
     height: 25,
-    marginBottom: 0
+    marginBottom: 0,
   },
   button: {
-    marginLeft: 10
-  }
+    marginLeft: 10,
+  },
 };

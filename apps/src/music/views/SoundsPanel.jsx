@@ -12,7 +12,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 const getLengthRepresentation = length => {
   const lengthToSymbol = {
     0.5: '\u00bd',
-    0.25: '\u00bc'
+    0.25: '\u00bc',
   };
   return lengthToSymbol[length] || length;
 };
@@ -23,7 +23,7 @@ const SoundsPanelRow = ({
   folder,
   sound,
   onSelect,
-  onPreview
+  onPreview,
 }) => {
   const soundPath = folder.path + '/' + sound.src;
   const isSelected = soundPath === currentValue;
@@ -72,7 +72,7 @@ SoundsPanelRow.propTypes = {
   folder: PropTypes.object.isRequired,
   sound: PropTypes.object.isRequired,
   onSelect: PropTypes.func.isRequired,
-  onPreview: PropTypes.func.isRequired
+  onPreview: PropTypes.func.isRequired,
 };
 
 const SoundsPanel = ({
@@ -80,7 +80,7 @@ const SoundsPanel = ({
   currentValue,
   playingPreview,
   onSelect,
-  onPreview
+  onPreview,
 }) => {
   const folders = library.getAllowedSounds(undefined);
 
@@ -115,7 +115,7 @@ SoundsPanel.propTypes = {
   currentValue: PropTypes.string.isRequired,
   playingPreview: PropTypes.string,
   onSelect: PropTypes.func.isRequired,
-  onPreview: PropTypes.func.isRequired
+  onPreview: PropTypes.func.isRequired,
 };
 
 export default SoundsPanel;

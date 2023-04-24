@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "A teacher needs a plagiarism detection tool to search for specific phrases within a student's essay to identify potential sources of plagiarism.\r\n\r\nThe <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Teacher</code> class has an instance variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">studentEssays</code>, which is a 2D array of student essays submitted each week for different topics.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Teacher</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findPhrases()</code> method to return the student essay that contains any of the phrases in the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">targetPhrases</code>.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TeacherRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findPhrases()</code> method and print the result.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> class in the <strong>Documentation</strong> tab ⬆️ for help with using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">indexOf()</code> method.\r\n</div>",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -16,13 +16,16 @@
     },
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "Plagiarism Checker",
+    "bubble_choice_description": "A teacher needs a plagiarism detection tool to search for specific phrases within a student's essay to identify potential sources of plagiarism.",
+    "thumbnail_url": "https://images.code.org/027ad460c87bfaf4d51f6e03f6285a26-essay.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-03-28T00:04:01.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-03-28T00:04:01.698+00:00\",\"changed\":[\"cloned from \\\"CSA U5L7-L5a_2023\\\"\"],\"cloned_from\":\"CSA U5L7-L5a_2023\"},{\"changed_at\":\"2023-03-28 00:04:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-28T00:04:01.698+00:00\",\"changed\":[\"cloned from \\\"CSA U5L7-L5a_2023\\\"\"],\"cloned_from\":\"CSA U5L7-L5a_2023\"},{\"changed_at\":\"2023-03-28 00:04:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-22 01:12:53 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

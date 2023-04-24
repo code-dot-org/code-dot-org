@@ -3,7 +3,7 @@ import {Provider} from 'react-redux';
 import sinon from 'sinon';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import teacherSections, {
-  serverSectionFromSection
+  serverSectionFromSection,
 } from '../teacherDashboard/teacherSectionsRedux';
 import TeacherHomepage from './TeacherHomepage';
 import {
@@ -14,7 +14,7 @@ import {
   topCourse,
   taughtSections,
   joinedPlSections,
-  joinedSections
+  joinedSections,
 } from '../../../test/unit/templates/studioHomepages/homepagesTestData';
 
 const serverSections = taughtSections.map(serverSectionFromSection);
@@ -24,14 +24,14 @@ const serverCourses = [
     title: 'Play Lab',
     link: 's/playlab',
     description: 'HOC for playlab',
-    name: 'playlab'
+    name: 'playlab',
   },
   {
     title: 'CSP Unit 2 - Digital Information',
     link: 's/csp2-2020',
     description: 'Learning about digital info',
-    name: 'csp2-2020'
-  }
+    name: 'csp2-2020',
+  },
 ];
 
 export default storybook => {
@@ -59,7 +59,7 @@ export default storybook => {
               />
             </Provider>
           );
-        }
+        },
       },
       {
         name: 'Teacher Homepage - courses, no sections',
@@ -82,7 +82,7 @@ export default storybook => {
               />
             </Provider>
           );
-        }
+        },
       },
       {
         name: 'Teacher Homepage - no courses, sections',
@@ -104,7 +104,7 @@ export default storybook => {
               />
             </Provider>
           );
-        }
+        },
       },
       {
         name: 'Teacher Homepage - courses and sections',
@@ -127,7 +127,7 @@ export default storybook => {
               />
             </Provider>
           );
-        }
+        },
       },
       {
         name: 'Teacher Homepage - courses, sections and joinedStudentSections',
@@ -150,7 +150,7 @@ export default storybook => {
               />
             </Provider>
           );
-        }
+        },
       },
       {
         name: 'Teacher Homepage - student and pl courses, sections, joinedStudentSections',
@@ -175,7 +175,7 @@ export default storybook => {
               />
             </Provider>
           );
-        }
+        },
       },
       {
         name: 'Teacher Homepage - courses, sections and joinedPlSections',
@@ -200,19 +200,19 @@ export default storybook => {
               />
             </Provider>
           );
-        }
-      }
+        },
+      },
     ]);
 };
 
 function withFakeServer({courses = [], sections = []} = {}) {
   const server = sinon.fakeServer.create({
-    autoRespond: true
+    autoRespond: true,
   });
   const successResponse = body => [
     200,
     {'Content-Type': 'application/json'},
-    JSON.stringify(body)
+    JSON.stringify(body),
   ];
   server.respondWith(
     'GET',

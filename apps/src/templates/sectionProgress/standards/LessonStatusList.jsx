@@ -6,7 +6,7 @@ import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
 import {connect} from 'react-redux';
 import {
   getUnpluggedLessonsForScript,
-  setSelectedLessons
+  setSelectedLessons,
 } from './sectionStandardsProgressRedux';
 import firehoseClient from '../../../lib/util/firehose';
 import color from '@cdo/apps/util/color';
@@ -19,7 +19,7 @@ class LessonStatusList extends Component {
     setSelectedLessons: PropTypes.func.isRequired,
     selectedLessons: PropTypes.array.isRequired,
     sectionId: PropTypes.number,
-    scriptId: PropTypes.number
+    scriptId: PropTypes.number,
   };
 
   handleChange = (selectedLessons, changedLesson) => {
@@ -33,8 +33,8 @@ class LessonStatusList extends Component {
           script_id: this.props.scriptId,
           changed_lesson_id: changedLesson.id,
           lesson_selected: !changedLesson.completed,
-          dialog: this.props.dialog
-        })
+          dialog: this.props.dialog,
+        }),
       },
       {includeUserId: true}
     );
@@ -46,7 +46,7 @@ class LessonStatusList extends Component {
     this.props.unpluggedLessonList.forEach(lesson =>
       Object.assign(lesson, {
         sectionId: this.props.sectionId,
-        scriptId: this.props.scriptId
+        scriptId: this.props.scriptId,
       })
     );
 
@@ -68,12 +68,12 @@ class LessonStatusList extends Component {
 const styles = {
   lessonListItem: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   links: {
     paddingLeft: 10,
-    color: color.teal
-  }
+    color: color.teal,
+  },
 };
 
 const handleLessonLinkClick = function (lesson) {
@@ -85,8 +85,8 @@ const handleLessonLinkClick = function (lesson) {
       data_json: JSON.stringify({
         link: lesson.url,
         section_id: lesson.sectionId,
-        script_id: lesson.scriptId
-      })
+        script_id: lesson.scriptId,
+      }),
     },
     {includeUserId: true}
   );
@@ -121,10 +121,10 @@ ComplexLessonComponent.propTypes = {
     number: PropTypes.number,
     url: PropTypes.string,
     completed: PropTypes.bool,
-    inProgress: PropTypes.bool
+    inProgress: PropTypes.bool,
   }),
   sectionId: PropTypes.number,
-  scriptId: PropTypes.number
+  scriptId: PropTypes.number,
 };
 
 export const UnconnectedLessonStatusList = LessonStatusList;
@@ -134,11 +134,11 @@ export default connect(
     unpluggedLessonList: getUnpluggedLessonsForScript(state),
     selectedLessons: state.sectionStandardsProgress.selectedLessons,
     sectionId: state.teacherSections.selectedSectionId,
-    scriptId: state.unitSelection.scriptId
+    scriptId: state.unitSelection.scriptId,
   }),
   dispatch => ({
     setSelectedLessons(selected) {
       dispatch(setSelectedLessons(selected));
-    }
+    },
   })
 )(LessonStatusList);

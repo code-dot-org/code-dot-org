@@ -18,7 +18,7 @@ class PhotoChooserProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onDepthChange: PropTypes.func.isRequired
+    onDepthChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -105,14 +105,14 @@ class PhotoChooserEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
   };
 
   getPhotoSelectedEventCode() {
     const id = elementUtils.getId(this.props.element);
     const commands = [
       `console.log("${id} photo selected!");`,
-      `console.log(getImageURL("${id}"));`
+      `console.log(getImageURL("${id}"));`,
     ];
     const callback = `function( ) {\n\t${commands.join('\n\t')}\n}`;
     return `onEvent("${id}", "change", ${callback});`;
@@ -183,5 +183,5 @@ export default {
     $(element).on('click', () => {
       element.childNodes[0].disabled = !Applab.isRunning();
     });
-  }
+  },
 };
