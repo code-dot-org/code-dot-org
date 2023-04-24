@@ -5,9 +5,6 @@ require 'cdo/yaml'
 module Cdo
   # Loads and combines structured application configuration settings.
   class Config
-    attr_reader :table
-    protected :table
-
     def initialize
       @table = {}
     end
@@ -39,13 +36,11 @@ module Cdo
       @table.freeze
     end
 
-    #def respond_to_missing?(mid, include_private = false) # :nodoc:
-    #  puts "respond_to_missing?(#{mid.inspect}, #{include_private.inspect})"
-    #  mname = mid.to_s.chomp("=").to_sym
-    #  defined?(@table) && @table.key?(mname) || super
-    #end
+    def respond_to_missing?(mid, include_all)
+      key?(mid) || super
+    end
 
-    private def method_missing(mid, *args) # :nodoc:
+    def method_missing(mid, *args)
       len = args.length
       if mname = mid[/.*(?==\z)/m]
         if len != 1
@@ -91,22 +86,18 @@ module Cdo
     end
 
     # Merge the provided config hash into the current config.
-    # 'Reverse-merge' keeps existing values.
     def merge(config)
       return if config.nil?
 
-      # Add an accessor method for each new key/value pair
-      #new_keys = config.keys.filter {|key| !self.key?(key)}
-      #new_keys.each do |key|
-      #  unless singleton_class.method_defined?(key)
-      #    define_singleton_method(key) { self[key] }
-      #  end
-      #end
-      new_keys = config.keys.filter {|key| !singleton_class.method_defined?(key)}
-      new_keys.each {|key| define_singleton_method(key) {self[key]}}
-
       # 'Reverse-merge' keeps existing values.
-      table.merge!(config) {|_key, old, _new| old}
+      @table.merge!(config) {|_key, old, _new| old}
+
+      # Add an accessor method for each new key/value pair
+      config.keys.each do |key|
+        unless singleton_class.method_defined?(key)
+          define_singleton_method(key) {self[key]}
+        end
+      end
     end
 
     # API for providing a default value for a property lookup.
