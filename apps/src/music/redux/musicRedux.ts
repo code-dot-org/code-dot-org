@@ -10,14 +10,14 @@ const registerReducers = require('@cdo/apps/redux').registerReducers;
 enum InstructionsPosition {
   TOP = 'TOP',
   LEFT = 'LEFT',
-  RIGHT = 'RIGHT'
+  RIGHT = 'RIGHT',
 }
 
 // Exporting enum as object for use in JS files
 export const InstructionsPositions = {
   TOP: InstructionsPosition.TOP,
   LEFT: InstructionsPosition.LEFT,
-  RIGHT: InstructionsPosition.RIGHT
+  RIGHT: InstructionsPosition.RIGHT,
 };
 
 interface MusicState {
@@ -43,7 +43,7 @@ const initialState: MusicState = {
   showInstructions: false,
   instructionsPosition: InstructionsPosition.LEFT,
   isBeatPadShowing: false,
-  currentProgressState: {...initialProgressState}
+  currentProgressState: {...initialProgressState},
 };
 
 const musicSlice = createSlice({
@@ -109,8 +109,8 @@ const musicSlice = createSlice({
     },
     setCurrentProgressState: (state, action: PayloadAction<ProgressState>) => {
       state.currentProgressState = {...action.payload};
-    }
-  }
+    },
+  },
 });
 
 // TODO: If/when a top-level component is created that wraps {@link MusicView}, then
@@ -132,5 +132,5 @@ export const {
   showBeatPad,
   hideBeatPad,
   toggleBeatPad,
-  setCurrentProgressState
+  setCurrentProgressState,
 } = musicSlice.actions;

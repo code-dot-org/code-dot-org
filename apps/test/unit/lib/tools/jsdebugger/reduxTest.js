@@ -4,12 +4,12 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import {
   reducers,
   selectors,
-  actions
+  actions,
 } from '@cdo/apps/lib/tools/jsdebugger/redux';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import Observer from '@cdo/apps/Observer';
@@ -25,7 +25,7 @@ describe('The JSDebugger redux duck', () => {
     studioApp = {hideSource: true};
     interpreter = new JSInterpreter({
       shouldRunAtMaxSpeed: () => false,
-      studioApp
+      studioApp,
     });
     sinon.spy(interpreter, 'handlePauseContinue');
     sinon.spy(interpreter, 'handleStepIn');
@@ -110,7 +110,7 @@ describe('The JSDebugger redux duck', () => {
     it('will append strings to the log output', () => {
       store.dispatch(
         actions.appendLog({
-          output: 'foo'
+          output: 'foo',
         })
       );
       var outputs = selectors.getLogOutput(store.getState());

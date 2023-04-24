@@ -4,7 +4,7 @@ import {action} from '@storybook/addon-actions';
 
 export default {
   title: 'SchoolInfoInterstitial',
-  component: SchoolInfoInterstitial
+  component: SchoolInfoInterstitial,
 };
 
 //
@@ -23,7 +23,7 @@ Overview.args = {
     formUrl: '',
     authTokenName: 'auth_token',
     authTokenValue: 'fake_auth_token',
-    existingSchoolInfo: {}
+    existingSchoolInfo: {},
   },
-  onClose: action('onClose callback')
+  onClose: action('onClose callback'),
 };

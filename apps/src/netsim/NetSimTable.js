@@ -299,7 +299,7 @@ NetSimTable.prototype.makeThrottledRefresh_ = function () {
     this.minimumDelayBetweenRefreshes_
   );
   return _.debounce(throttledRefresh, this.minimumDelayBeforeRefresh_, {
-    maxWait: this.minimumDelayBeforeRefresh_
+    maxWait: this.minimumDelayBeforeRefresh_,
   });
 };
 

@@ -78,14 +78,14 @@ module.exports = {
       },
       failureCondition: function () {
         return Flappy.avatarY > Flappy.MAZE_HEIGHT;
-      }
+      },
     },
     scale: {
-      snapRadius: 2
+      snapRadius: 2,
     },
     toolbox: tb(flapBlock + playSoundBlock),
     startBlocks: eventBlock('flappy_whenClick'),
-    appSpecificFailError: flappyMsg.flappySpecificFail()
+    appSpecificFailError: flappyMsg.flappySpecificFail(),
   },
 
   2: {
@@ -109,15 +109,15 @@ module.exports = {
           avatarBottom >= ground &&
           Flappy.gameState === Flappy.GameStates.ACTIVE
         );
-      }
+      },
     },
     scale: {
-      snapRadius: 2
+      snapRadius: 2,
     },
     toolbox: tb(flapBlock + endGameBlock + playSoundBlock),
     startBlocks:
       eventBlock('flappy_whenClick', flapBlock) +
-      eventBlock('flappy_whenCollideGround')
+      eventBlock('flappy_whenCollideGround'),
   },
 
   3: {
@@ -133,30 +133,30 @@ module.exports = {
       successCondition: function () {
         var avatarCenter = {
           x: (Flappy.avatarX + AVATAR_WIDTH) / 2,
-          y: (Flappy.avatarY + AVATAR_HEIGHT) / 2
+          y: (Flappy.avatarY + AVATAR_HEIGHT) / 2,
         };
         var goalCenter = {
           x: (Flappy.goalX + Flappy.GOAL_SIZE) / 2,
-          y: (Flappy.goalY + Flappy.GOAL_SIZE) / 2
+          y: (Flappy.goalY + Flappy.GOAL_SIZE) / 2,
         };
 
         var diff = {
           x: Math.abs(avatarCenter.x - goalCenter.x),
-          y: Math.abs(avatarCenter.y - goalCenter.y)
+          y: Math.abs(avatarCenter.y - goalCenter.y),
         };
 
         return diff.x < 15 && diff.y < 15;
       },
       failureCondition: function () {
         return Flappy.activeTicks() >= 120 && Flappy.SPEED === 0;
-      }
+      },
     },
     scale: {
-      snapRadius: 2
+      snapRadius: 2,
     },
     toolbox: tb(flapBlock + playSoundBlock + setSpeedBlock),
     startBlocks:
-      eventBlock('flappy_whenClick', flapBlock) + eventBlock('when_run')
+      eventBlock('flappy_whenClick', flapBlock) + eventBlock('when_run'),
   },
 
   4: {
@@ -180,21 +180,21 @@ module.exports = {
         // flew through pipe vs. didnt hook up endGame block
         var obstacleEnd = Flappy.obstacles[0].x + Flappy.OBSTACLE_WIDTH;
         return obstacleEnd < Flappy.avatarX;
-      }
+      },
     },
     scale: {
-      snapRadius: 2
+      snapRadius: 2,
     },
     toolbox: tb(flapBlock + endGameBlock + playSoundBlock + setSpeedBlock),
     startBlocks:
       eventBlock('flappy_whenClick', flapBlock) +
       eventBlock('when_run', setSpeedBlock) +
-      eventBlock('flappy_whenCollideObstacle')
+      eventBlock('flappy_whenCollideObstacle'),
   },
 
   5: {
     requiredBlocks: [
-      [{test: 'incrementPlayerScore', type: 'flappy_incrementPlayerScore'}]
+      [{test: 'incrementPlayerScore', type: 'flappy_incrementPlayerScore'}],
     ],
     defaultFlap: 'SMALL',
     obstacles: true,
@@ -221,10 +221,10 @@ module.exports = {
           }
         });
         return insideObstacle && Flappy.playerScore === 0;
-      }
+      },
     },
     scale: {
-      snapRadius: 2
+      snapRadius: 2,
     },
     toolbox: tb(
       flapBlock +
@@ -236,7 +236,7 @@ module.exports = {
     startBlocks:
       eventBlock('flappy_whenClick', flapBlock) +
       eventBlock('flappy_whenEnterObstacle') +
-      eventBlock('when_run', setSpeedBlock)
+      eventBlock('when_run', setSpeedBlock),
   },
 
   6: {
@@ -263,10 +263,10 @@ module.exports = {
           }
         });
         return insideObstacle && Flappy.playerScore === 0;
-      }
+      },
     },
     scale: {
-      snapRadius: 2
+      snapRadius: 2,
     },
     toolbox: tb(
       flapHeightBlock +
@@ -280,7 +280,7 @@ module.exports = {
       // eventBlock('flappy_whenCollideGround', endGameBlock) +
       // eventBlock('flappy_whenCollideObstacle', endGameBlock) +
       eventBlock('flappy_whenEnterObstacle', incrementScoreBlock) +
-      eventBlock('when_run', setSpeedBlock)
+      eventBlock('when_run', setSpeedBlock),
   },
 
   7: {
@@ -292,10 +292,10 @@ module.exports = {
     goal: {
       successCondition: function () {
         return Flappy.gameState === Flappy.GameStates.OVER;
-      }
+      },
     },
     scale: {
-      snapRadius: 2
+      snapRadius: 2,
     },
     toolbox: tb(
       flapHeightBlock +
@@ -310,7 +310,7 @@ module.exports = {
       eventBlock('flappy_whenCollideGround', endGameBlock) +
       eventBlock('flappy_whenCollideObstacle', endGameBlock) +
       eventBlock('flappy_whenEnterObstacle', incrementScoreBlock) +
-      eventBlock('when_run', setSpeedBlock)
+      eventBlock('when_run', setSpeedBlock),
   },
 
   8: {
@@ -328,10 +328,10 @@ module.exports = {
           },
           type: 'flappy_setBackground',
           titles: {
-            VALUE: 'random'
-          }
-        }
-      ]
+            VALUE: 'random',
+          },
+        },
+      ],
     ],
     obstacles: true,
     ground: true,
@@ -340,10 +340,10 @@ module.exports = {
     goal: {
       successCondition: function () {
         return Flappy.gameState === Flappy.GameStates.OVER;
-      }
+      },
     },
     scale: {
-      snapRadius: 2
+      snapRadius: 2,
     },
     toolbox: tb(
       flapHeightBlock +
@@ -359,7 +359,7 @@ module.exports = {
       eventBlock('flappy_whenCollideGround', endGameBlock) +
       eventBlock('flappy_whenCollideObstacle', endGameBlock) +
       eventBlock('flappy_whenEnterObstacle', incrementScoreBlock) +
-      eventBlock('when_run', setSpeedBlock)
+      eventBlock('when_run', setSpeedBlock),
   },
 
   9: {
@@ -369,9 +369,9 @@ module.exports = {
           test: function test(block) {
             return block.type === 'flappy_setScore';
           },
-          type: 'flappy_setScore'
-        }
-      ]
+          type: 'flappy_setScore',
+        },
+      ],
     ],
     obstacles: true,
     ground: true,
@@ -380,10 +380,10 @@ module.exports = {
     goal: {
       successCondition: function () {
         return Flappy.gameState === Flappy.GameStates.OVER;
-      }
+      },
     },
     scale: {
-      snapRadius: 2
+      snapRadius: 2,
     },
     toolbox: tb(
       flapHeightBlock +
@@ -400,7 +400,7 @@ module.exports = {
       eventBlock('flappy_whenCollideGround', endGameBlock) +
       eventBlock('flappy_whenCollideObstacle') +
       eventBlock('flappy_whenEnterObstacle', incrementScoreBlock) +
-      eventBlock('when_run', setSpeedBlock)
+      eventBlock('when_run', setSpeedBlock),
   },
 
   11: {
@@ -411,7 +411,7 @@ module.exports = {
     score: true,
     freePlay: true,
     scale: {
-      snapRadius: 2
+      snapRadius: 2,
     },
     toolbox: tb(
       flapHeightBlock +
@@ -432,7 +432,7 @@ module.exports = {
       eventBlock('flappy_whenCollideGround') +
       eventBlock('flappy_whenCollideObstacle') +
       eventBlock('flappy_whenEnterObstacle') +
-      eventBlock('when_run')
+      eventBlock('when_run'),
   },
   k1: {
     requiredBlocks: [],
@@ -442,7 +442,7 @@ module.exports = {
     freePlay: true,
     isK1: true,
     scale: {
-      snapRadius: 2
+      snapRadius: 2,
     },
     toolbox: tb(
       flapBlock +
@@ -464,8 +464,8 @@ module.exports = {
       eventBlock('flappy_whenCollideGround') +
       eventBlock('flappy_whenCollideObstacle') +
       eventBlock('flappy_whenEnterObstacle') +
-      eventBlock('when_run')
-  }
+      eventBlock('when_run'),
+  },
 };
 
 module.exports.k1_1 = {
@@ -477,7 +477,7 @@ module.exports.k1_1 = {
   score: true,
   freePlay: true,
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   toolbox: '',
   startBlocks:
@@ -491,7 +491,7 @@ module.exports.k1_1 = {
       'flappy_whenEnterObstacle',
       anchoredBlock('flappy_incrementPlayerScore')
     ) +
-    anchoredBlock('when_run', anchoredBlock('flappy_setSpeed'))
+    anchoredBlock('when_run', anchoredBlock('flappy_setSpeed')),
 };
 
 // flap to goal
@@ -513,7 +513,7 @@ module.exports.k1_6 = utils.extend(module.exports['5'], {isK1: true});
 module.exports.k1_7 = {
   isK1: true,
   requiredBlocks: [
-    [{test: 'incrementPlayerScore', type: 'flappy_incrementPlayerScore'}]
+    [{test: 'incrementPlayerScore', type: 'flappy_incrementPlayerScore'}],
   ],
   defaultFlap: 'SMALL',
   obstacles: true,
@@ -540,10 +540,10 @@ module.exports.k1_7 = {
         }
       });
       return insideObstacle && Flappy.playerScore <= 1;
-    }
+    },
   },
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   toolbox: tb(
     flapBlock +
@@ -555,7 +555,7 @@ module.exports.k1_7 = {
   startBlocks:
     eventBlock('flappy_whenClick', flapBlock) +
     eventBlock('flappy_whenEnterObstacle') +
-    eventBlock('when_run', setSpeedBlock)
+    eventBlock('when_run', setSpeedBlock),
 };
 
 // change the scene
@@ -575,7 +575,7 @@ module.exports.k1_8 = utils.extend(module.exports['7'], {
     eventBlock('flappy_whenCollideGround', endGameBlock) +
     eventBlock('flappy_whenCollideObstacle', endGameBlock) +
     eventBlock('flappy_whenEnterObstacle', incrementScoreBlock) +
-    eventBlock('when_run', setSpeedBlock)
+    eventBlock('when_run', setSpeedBlock),
 });
 
 // changing the player
@@ -589,10 +589,10 @@ module.exports.k1_9 = {
   goal: {
     successCondition: function () {
       return Flappy.gameState === Flappy.GameStates.OVER;
-    }
+    },
   },
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   toolbox: tb(
     flapBlock +
@@ -608,7 +608,7 @@ module.exports.k1_9 = {
     eventBlock('flappy_whenCollideGround', endGameBlock) +
     eventBlock('flappy_whenCollideObstacle', endGameBlock) +
     eventBlock('flappy_whenEnterObstacle', incrementScoreBlock) +
-    eventBlock('when_run', setSpeedBlock)
+    eventBlock('when_run', setSpeedBlock),
 };
 
 // custom
@@ -621,10 +621,10 @@ module.exports.custom = {
   goal: {
     successCondition: function () {
       return Flappy.gameState === Flappy.GameStates.OVER;
-    }
+    },
   },
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   toolbox: tb(
     flapBlock +
@@ -640,5 +640,5 @@ module.exports.custom = {
     eventBlock('flappy_whenCollideGround', endGameBlock) +
     eventBlock('flappy_whenCollideObstacle', endGameBlock) +
     eventBlock('flappy_whenEnterObstacle', incrementScoreBlock) +
-    eventBlock('when_run', setSpeedBlock)
+    eventBlock('when_run', setSpeedBlock),
 };

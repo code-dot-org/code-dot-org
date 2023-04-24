@@ -23,7 +23,7 @@ const useProgrammingEnvironment = initialProgrammingEnvironment => {
   return [
     programmingEnvironment,
     updateProgrammingEnvironment,
-    setProgrammingEnvironment
+    setProgrammingEnvironment,
   ];
 };
 
@@ -52,14 +52,14 @@ const renderCategoryEditor = (category, updateFunc) => {
 };
 
 export default function ProgrammingEnvironmentEditor({
-  initialProgrammingEnvironment
+  initialProgrammingEnvironment,
 }) {
   const {name, showPath, ...remainingProgrammingEnvironment} =
     initialProgrammingEnvironment;
   const [
     programmingEnvironment,
     updateProgrammingEnvironment,
-    setProgrammingEnvironment
+    setProgrammingEnvironment,
   ] = useProgrammingEnvironment(remainingProgrammingEnvironment);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
@@ -74,9 +74,9 @@ export default function ProgrammingEnvironmentEditor({
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
-        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content'),
       },
-      body: JSON.stringify(programmingEnvironment)
+      body: JSON.stringify(programmingEnvironment),
     })
       .then(response => {
         setIsSaving(false);
@@ -209,7 +209,7 @@ export default function ProgrammingEnvironmentEditor({
 }
 
 ProgrammingEnvironmentEditor.propTypes = {
-  initialProgrammingEnvironment: PropTypes.object.isRequired
+  initialProgrammingEnvironment: PropTypes.object.isRequired,
 };
 
 const styles = {
@@ -220,7 +220,7 @@ const styles = {
     color: '#555',
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
-    margin: 0
+    margin: 0,
   },
   selectInput: {
     boxSizing: 'border-box',
@@ -229,7 +229,7 @@ const styles = {
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
     marginBottom: 0,
-    marginLeft: 5
+    marginLeft: 5,
   },
   colorInput: {
     width: '100%',
@@ -239,9 +239,9 @@ const styles = {
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
     marginBottom: 0,
-    height: 25
+    height: 25,
   },
   checkboxInput: {
-    margin: '0px 4px'
-  }
+    margin: '0px 4px',
+  },
 };

@@ -3,7 +3,7 @@ import {
   SENSOR_CHANNELS,
   SAMPLE_INTERVAL,
   MAX_SENSOR_BUFFER_DURATION,
-  MAX_LIGHT_SENSOR_VALUE
+  MAX_LIGHT_SENSOR_VALUE,
 } from './MicroBitConstants';
 import {apiValidateTypeAndRange} from '../../../../util/javascriptMode';
 
@@ -18,7 +18,7 @@ export default class LightSensor extends EventEmitter {
       // Track 3 seconds of historical data in a circular buffer over which
       // we can average sensor readings
       buffer: new Float32Array(MAX_SENSOR_BUFFER_DURATION / SAMPLE_INTERVAL),
-      currentBufferWriteIndex: 0
+      currentBufferWriteIndex: 0,
     };
 
     this.board = board;
@@ -60,7 +60,7 @@ export default class LightSensor extends EventEmitter {
             this.state.rangeMin,
             this.state.rangeMax
           );
-        }
+        },
       },
       threshold: {
         set: function (value) {
@@ -68,8 +68,8 @@ export default class LightSensor extends EventEmitter {
         },
         get: function (value) {
           return this.state.threshold;
-        }
-      }
+        },
+      },
     });
   }
 

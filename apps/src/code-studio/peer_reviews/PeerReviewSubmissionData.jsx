@@ -5,7 +5,7 @@ import PeerReviewLinkSection from './PeerReviewLinkSection';
 
 class PeerReviewSubmissionData extends React.Component {
   static propTypes = {
-    submissions: PropTypes.arrayOf(PropTypes.object).isRequired
+    submissions: PropTypes.arrayOf(PropTypes.object).isRequired,
   };
 
   renderTableHeader() {

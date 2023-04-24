@@ -4,7 +4,7 @@
  */
 import {
   MB_COMPONENT_COUNT,
-  MB_COMPONENTS
+  MB_COMPONENTS,
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import {boardSetupAndStub} from './MicroBitTestHelperFunctions';
 import {expect} from '../../../../../../util/reconfiguredChai';
@@ -32,7 +32,7 @@ export function itMakesMicroBitComponentsAvailable(
         createGlobalProperty: function (key, value) {
           jsInterpreter.globalProperties[key] = value;
         },
-        addCustomMarshalObject: sinon.spy()
+        addCustomMarshalObject: sinon.spy(),
       };
       // Opportunity to stub anything needed to test a board
       if (boardSpecificSetup) {
@@ -116,7 +116,7 @@ export function itMakesMicroBitComponentsAvailable(
           'toggle',
           'clear',
           'scrollString',
-          'scrollNumber'
+          'scrollNumber',
         ].forEach(fnName => {
           it(`${fnName}()`, () => expectLedToHaveFunction(fnName));
         });

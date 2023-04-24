@@ -10,7 +10,7 @@ exports.ForStatementMode = {
   INIT: 0,
   TEST: 1,
   BODY: 2,
-  UPDATE: 3
+  UPDATE: 3,
 };
 
 function populateFunctionsIntoScope(
@@ -29,7 +29,7 @@ function populateFunctionsIntoScope(
       var wrapper = interpreter.makeNativeMemberFunction(
         utils.extend(options, {
           nativeFunc: func,
-          nativeParentObj: parent
+          nativeParentObj: parent,
         })
       );
       interpreter.setProperty(
@@ -69,7 +69,7 @@ function populateGlobalFunctions(interpreter, blocks, blockFilter, scope) {
         nativeParentObj: block.parent,
         dontMarshal,
         nativeIsAsync,
-        nativeCallsBackInterpreter
+        nativeCallsBackInterpreter,
       });
       var intFunc;
       if (block.nativeIsAsync) {
@@ -454,7 +454,7 @@ exports.selectCurrentCode = function (
           {
             row: userCodeRow,
             col: start - cumulativeLength[userCodeRow],
-            type: 'block'
+            type: 'block',
           },
           style
         );

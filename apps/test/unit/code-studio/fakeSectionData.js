@@ -18,9 +18,9 @@ const fakeSectionData = {
           user_level_data: {
             user_id: 1001,
             level_id: 2000,
-            script_id: scriptId
+            script_id: scriptId,
           },
-          readonly_answers: false
+          readonly_answers: false,
         },
         // unlocked
         {
@@ -29,9 +29,9 @@ const fakeSectionData = {
           user_level_data: {
             user_id: 1002,
             level_id: 2000,
-            script_id: scriptId
+            script_id: scriptId,
           },
-          readonly_answers: false
+          readonly_answers: false,
         },
         // view answers
         {
@@ -40,12 +40,12 @@ const fakeSectionData = {
           user_level_data: {
             user_id: 1003,
             level_id: 2000,
-            script_id: scriptId
+            script_id: scriptId,
           },
-          readonly_answers: true
-        }
-      ]
-    }
+          readonly_answers: true,
+        },
+      ],
+    },
   },
   [section2Id]: {
     section_id: section2Id,
@@ -58,13 +58,13 @@ const fakeSectionData = {
           user_level_data: {
             user_id: 1004,
             level_id: 2000,
-            script_id: scriptId
+            script_id: scriptId,
           },
-          readonly_answers: false
-        }
-      ]
-    }
-  }
+          readonly_answers: false,
+        },
+      ],
+    },
+  },
 };
 
 export default fakeSectionData;

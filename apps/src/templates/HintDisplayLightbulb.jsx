@@ -7,17 +7,17 @@ import {connect} from 'react-redux';
 class HintDisplayLightbulb extends React.Component {
   static propTypes = {
     unseenHints: PropTypes.arrayOf(PropTypes.object),
-    isMinecraft: PropTypes.bool
+    isMinecraft: PropTypes.bool,
   };
 
   state = {
-    shouldAnimate: false
+    shouldAnimate: false,
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     const receivingNewHints = nextProps.unseenHints.length > this.getCount();
     this.setState({
-      shouldAnimate: receivingNewHints
+      shouldAnimate: receivingNewHints,
     });
   }
 
@@ -42,6 +42,6 @@ class HintDisplayLightbulb extends React.Component {
 export default connect(function propsFromStore(state) {
   return {
     isMinecraft: !!state.pageConstants.isMinecraft,
-    unseenHints: state.authoredHints.unseenHints
+    unseenHints: state.authoredHints.unseenHints,
   };
 })(HintDisplayLightbulb);

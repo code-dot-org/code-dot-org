@@ -55,7 +55,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
       blocks.push({
         blockly_block: blockly_block,
         x: x,
-        y: y
+        y: y,
       });
     });
 
@@ -74,7 +74,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     // The cursor is used to position blocks that don't have explicit x/y coordinates
     let cursor = {
       x: padding,
-      y: padding
+      y: padding,
     };
     if (blockSpace.RTL && viewWidth) {
       // Position the cursor from the right of the workspace.

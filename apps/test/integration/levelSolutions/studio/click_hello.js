@@ -19,15 +19,15 @@ module.exports = {
         // simulate a click so that level gets completed
         tickWrapper.runOnAppTick(Studio, 1, function () {
           var e = {
-            preventDefault: function () {}
+            preventDefault: function () {},
           };
           Studio.onSpriteClicked(e, 0);
         });
       },
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
-      }
-    }
-  ]
+        testResult: TestResults.ALL_PASS,
+      },
+    },
+  ],
 };

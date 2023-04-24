@@ -14,8 +14,8 @@ export default class PrivacyDialog extends React.Component {
     onHide: PropTypes.func.isRequired,
     mode: PropTypes.oneOf([
       PrivacyDialogMode.TEACHER_APPLICATION,
-      PrivacyDialogMode.PRINCIPAL_APPROVAL
-    ]).isRequired
+      PrivacyDialogMode.PRINCIPAL_APPROVAL,
+    ]).isRequired,
   };
 
   render() {
@@ -117,11 +117,11 @@ export default class PrivacyDialog extends React.Component {
 const STYLE = {
   modal: {
     width: '50%',
-    marginLeft: '-25%'
+    marginLeft: '-25%',
   },
   bodyText: {
     color: color.dark_charcoal,
     fontSize: '10pt',
-    lineHeight: '14pt'
-  }
+    lineHeight: '14pt',
+  },
 };
