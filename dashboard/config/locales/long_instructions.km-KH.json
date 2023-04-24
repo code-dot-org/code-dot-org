@@ -1652,7 +1652,7 @@
         "ramp_artist_loops32022": "គូរបន្ទាត់ពណ៌ ៥ដង​ ម្តងទៀត តែនៅពេលនេះប្រើ​ `ធ្វើឡើងវិញ` រង្វិលជុំ។",
         "ramp_artist_loops52022": "Loops sure make writing code\neasier!\\\r\n\\\r\nUse loops to draw this staircase.\\\r\n\n-   Each stairstep is 50\n    pixels long and 50 pixels tall\\\r\n-   You will need to turn 90 degrees in each\n    direction",
         "ramp_artist_loops72022": "រកមើលលំនាំហើយធ្វើឱ្យកូដនេះខ្លីជាងដោយប្រើរង្វិលជុំ (loop) !",
-        "ramp_artist_loops82022": "\\*\\* ការប្រកួតប្រជែង៖ \\*\\* រកមើលគំរូមួយហើយធ្វើឱ្យកូដនេះខ្លីដោយប្រើរង្វិលជុំ (Loop)។",
+        "ramp_artist_loops82022": "** ការប្រកួតប្រជែង៖ ** រកមើលគំរូមួយហើយធ្វើឱ្យកូដនេះខ្លីដោយប្រើរង្វិលជុំ (Loop)។",
         "ramp_artist_loops92022": "ដោះស្រាយល្បែងផ្គុំរូបនេះដោយគូរការ៉េដែលមានជ្រុង ២០០ Pixel",
         "courseA_maze_seq12_2021": "ទៅកាន់តួអង្គជ្រូក!",
         "courseA_maze_seq5_2021": "សូម​សាកល្បង​ចំណោទមួយ​នេះ។",
@@ -1661,8 +1661,7 @@
         "courseB_Scrat_ramp3a_2021": "ចាប់យកប្លុក <xml><block type=\"maze_moveNorth\" block-text=\"move north\"/></xml> ពីប្រអប់កូដប្លុក ហើយភ្ជាប់វាទៅផ្នែកខាងក្រោមនៃប្លុកផ្សេងទៀត ដើម្បីបញ្ចប់កូដនេះ ហើយបន្ទាប់មកចុច \"▶ ប៊ូតុងដំណើរការ\"!។",
         "courseB_Scrat_ramp3b_2021": "មានកូដប្លុកមួយលើសនៅខាងក្រោមបង្អស់នៃកូដ!\n\nអូស កូដប្លុកដែលលើសត្រឡប់ទៅប្រអប់កូដប្លុក​ ដើម្បីដកវាចេញ។",
         "courseB_Scrat_ramp4a_2021": "តើអ្នកអាចដឹងទេថា តើប្លុកមួយណាដែលអ្នកត្រូវបន្ថែមទៅផ្នែកខាងក្រោមនៃប្លុកផ្សេងទៀតដើម្បីបញ្ចប់កូដនេះ?",
-        "courseB_Scrat_ramp5a_2021": "សាកល្បងវិធីនេះដោយខ្លួនឯងទាំងអស់គ្នា!",
-        "ramp_artist_loops62022": "This staircase is much bigger,\nbut it takes the same amount of code as the last puzzle!\\\r\n\\\r\nFix this loop\nto complete the puzzle."
+        "courseB_Scrat_ramp5a_2021": "សាកល្បងវិធីនេះដោយខ្លួនឯងទាំងអស់គ្នា!"
       }
     }
   }
