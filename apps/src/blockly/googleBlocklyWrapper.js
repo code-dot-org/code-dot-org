@@ -190,6 +190,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Input');
   blocklyWrapper.wrapReadOnlyProperty('INPUT_VALUE');
   blocklyWrapper.wrapReadOnlyProperty('js');
+  blocklyWrapper.wrapReadOnlyProperty('Menu');
   blocklyWrapper.wrapReadOnlyProperty('MenuItem');
   blocklyWrapper.wrapReadOnlyProperty('MetricsManager');
   blocklyWrapper.wrapReadOnlyProperty('modalBlockSpace');
