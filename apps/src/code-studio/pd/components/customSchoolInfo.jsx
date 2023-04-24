@@ -13,20 +13,20 @@ const SCHOOL_TYPES = {
   PUBLIC: 'Public school',
   PRIVATE: 'Private school',
   CHARTER: 'Charter school',
-  OTHER: 'Other'
+  OTHER: 'Other',
 };
 
 export default class CustomSchoolInfo extends React.Component {
   static propTypes = {
     school_info: SchoolInfoPropType,
     onSchoolInfoChange: PropTypes.func.isRequired,
-    errors: PropTypes.object
+    errors: PropTypes.object,
   };
 
   handleSchoolStateChange = selection => {
     const school_info = {
       ...this.props.school_info,
-      ...{school_state: selection.value}
+      ...{school_state: selection.value},
     };
     this.props.onSchoolInfoChange({school_info});
   };

@@ -5,7 +5,7 @@ export default {
     height: '100%',
     pointerEvents: 'none',
     background:
-      'linear-gradient(to right, rgba(0, 173, 188, 1) 0%, rgba(0, 173, 188, 0) 20px)'
+      'linear-gradient(to right, rgba(0, 173, 188, 1) 0%, rgba(0, 173, 188, 0) 20px)',
   },
   right: {
     position: 'absolute',
@@ -13,6 +13,6 @@ export default {
     height: '100%',
     pointerEvents: 'none',
     background:
-      'linear-gradient(to right, rgba(0, 173, 188, 0) calc(100% - 20px), rgba(0, 173, 188, 1) 100%)'
-  }
+      'linear-gradient(to right, rgba(0, 173, 188, 0) calc(100% - 20px), rgba(0, 173, 188, 1) 100%)',
+  },
 };

@@ -10,7 +10,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import AgeDialog, {
   ageDialogSelectedOver13,
-  songFilterOn
+  songFilterOn,
 } from '../templates/AgeDialog';
 import {getFilteredSongKeys} from '@cdo/apps/dance/songs';
 
@@ -21,7 +21,7 @@ const SongSelector = Radium(
       setSong: PropTypes.func.isRequired,
       selectedSong: PropTypes.string,
       songData: PropTypes.objectOf(PropTypes.object).isRequired,
-      filterOn: PropTypes.bool.isRequired
+      filterOn: PropTypes.bool.isRequired,
     };
 
     changeSong = event => {
@@ -69,11 +69,11 @@ class DanceVisualizationColumn extends React.Component {
     isShareView: PropTypes.bool.isRequired,
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
     userType: PropTypes.string.isRequired,
-    under13: PropTypes.bool.isRequired
+    under13: PropTypes.bool.isRequired,
   };
 
   state = {
-    filterOn: this.getFilterStatus()
+    filterOn: this.getFilterStatus(),
   };
 
   /*
@@ -110,7 +110,7 @@ class DanceVisualizationColumn extends React.Component {
 
   render() {
     const filenameToImgUrl = {
-      'click-to-run': require('@cdo/static/dance/click-to-run.png')
+      'click-to-run': require('@cdo/static/dance/click-to-run.png'),
     };
 
     const imgSrc = filenameToImgUrl['click-to-run'];
@@ -165,27 +165,27 @@ class DanceVisualizationColumn extends React.Component {
 const styles = {
   visualization: {
     width: MAX_GAME_WIDTH,
-    height: GAME_HEIGHT
+    height: GAME_HEIGHT,
   },
   container: {
     touchAction: 'none',
     background: '#fff',
     position: 'relative',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   loadingContainer: {
     // The value of display is controlled by StudioApp.
     display: 'none',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   loadingGif: {
     width: 100,
-    height: 100
+    height: 100,
   },
   selectStyle: {
-    width: '100%'
-  }
+    width: '100%',
+  },
 };
 
 export default connect(state => ({
@@ -195,5 +195,5 @@ export default connect(state => ({
   userType: state.currentUser.userType,
   under13: state.currentUser.under13,
   levelIsRunning: state.runState.isRunning,
-  levelRunIsStarting: state.songs.runIsStarting
+  levelRunIsStarting: state.songs.runIsStarting,
 }))(DanceVisualizationColumn);

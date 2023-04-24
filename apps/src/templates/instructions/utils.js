@@ -43,7 +43,7 @@ export function scrollTo(element, scrollTop, animate = 400) {
     if (!$elem.is(':animated')) {
       $elem.animate(
         {
-          scrollTop: scrollTop
+          scrollTop: scrollTop,
         },
         animate
       );
@@ -151,7 +151,7 @@ export function convertXmlToBlockly(xmlContainer, isRtl) {
       {
         noScrolling: true,
         inline: inline,
-        rtl: isRtl
+        rtl: isRtl,
       }
     );
 

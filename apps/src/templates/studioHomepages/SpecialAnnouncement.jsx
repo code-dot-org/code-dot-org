@@ -10,11 +10,11 @@ can be shown to users viewing the site in languages other than English. */
 export default class SpecialAnnouncement extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool,
-    isTeacher: PropTypes.bool
+    isTeacher: PropTypes.bool,
   };
 
   static defaultProps = {
-    isEnglish: true
+    isEnglish: true,
   };
 
   render() {
@@ -54,8 +54,8 @@ export default class SpecialAnnouncement extends Component {
           {
             id: buttonId,
             url: url,
-            text: buttonText
-          }
+            text: buttonText,
+          },
         ]}
       />
     );

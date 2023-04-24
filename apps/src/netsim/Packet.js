@@ -38,7 +38,7 @@ Packet.HeaderType = {
   TO_ADDRESS: 'toAddress',
   FROM_ADDRESS: 'fromAddress',
   PACKET_INDEX: 'packetIndex',
-  PACKET_COUNT: 'packetCount'
+  PACKET_COUNT: 'packetCount',
 };
 
 /**

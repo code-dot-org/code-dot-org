@@ -14,7 +14,7 @@ class Services::RegistrationReminder
       applications_needing_first_reminder |
       applications_needing_second_reminder
     ).each do |application|
-      application.queue_email 'registration_reminder', deliver_now: true
+      application.send_pd_application_email 'registration_reminder'
     end
   end
 

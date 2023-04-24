@@ -5,13 +5,13 @@ let testSongManifest = {
   allAgesSong: {
     text: 'Singer - Song For Everybody',
     pg13: false,
-    url: 'singer_song'
+    url: 'singer_song',
   },
   olderStudentSong: {
     text: 'Band - Song for Older Students',
     pg13: true,
-    url: 'band_song'
-  }
+    url: 'band_song',
+  },
 };
 
 describe('Dance Party Songs Utils', function () {

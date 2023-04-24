@@ -1,7 +1,7 @@
 import {javascriptGenerator} from 'blockly/javascript';
 import {
   ScrollBlockDragger,
-  ScrollOptions
+  ScrollOptions,
 } from '@blockly/plugin-scroll-options';
 import {NavigationController} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
@@ -30,12 +30,12 @@ import CdoHighContrastDarkTheme from './themes/cdoHighContrastDark';
 import {
   CdoProtanopiaTheme,
   CdoDeuteranopiaTheme,
-  CdoTritanopiaTheme
+  CdoTritanopiaTheme,
 } from './themes/cdoAccessibleThemes';
 import {
   CdoProtanopiaDarkTheme,
   CdoDeuteranopiaDarkTheme,
-  CdoTritanopiaDarkTheme
+  CdoTritanopiaDarkTheme,
 } from './themes/cdoAccessibleDarkThemes';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
@@ -55,7 +55,7 @@ import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor
 
 const options = {
   contextMenu: true,
-  shortcut: true
+  shortcut: true,
 };
 
 const plugin = new CrossTabCopyPaste();
@@ -82,7 +82,7 @@ const BlocklyWrapper = function (blocklyInstance) {
     Object.defineProperty(this, propertyName, {
       get: function () {
         return this.blockly_[propertyName];
-      }
+      },
     });
   };
 
@@ -93,7 +93,7 @@ const BlocklyWrapper = function (blocklyInstance) {
       },
       set: function (newValue) {
         this.blockly_[propertyName] = newValue;
-      }
+      },
     });
   };
 
@@ -233,7 +233,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     ['field_input', 'FieldTextInput', CdoFieldTextInput],
     ['field_number', 'FieldNumber', CdoFieldNumber],
     ['field_angle', 'FieldAngle', CdoFieldAngle],
-    ['field_multilinetext', 'FieldMultilineInput', CdoFieldMultilineInput]
+    ['field_multilinetext', 'FieldMultilineInput', CdoFieldMultilineInput],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
@@ -282,17 +282,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
     get: function () {
       return this.blockly_.getMainWorkspace();
-    }
+    },
   });
   Object.defineProperty(blocklyWrapper, 'mainBlockSpaceEditor', {
     get: function () {
       return this.blockly_.getMainWorkspace();
-    }
+    },
   });
   Object.defineProperty(blocklyWrapper, 'SVG_NS', {
     get: function () {
       return this.blockly_.utils.dom.SVG_NS;
-    }
+    },
   });
 
   // Properties cannot be modified until wrapSettableProperty has been called
@@ -319,7 +319,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     [Themes.DEUTERANOPIA]: CdoDeuteranopiaTheme,
     [Themes.DEUTERANOPIA_DARK]: CdoDeuteranopiaDarkTheme,
     [Themes.TRITANOPIA]: CdoTritanopiaTheme,
-    [Themes.TRITANOPIA_DARK]: CdoTritanopiaDarkTheme
+    [Themes.TRITANOPIA_DARK]: CdoTritanopiaDarkTheme,
   };
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.navigationController = new NavigationController();
@@ -333,7 +333,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     set: function (snapRadius) {
       this.blockly_.SNAP_RADIUS = snapRadius;
       this.blockly_.CONNECTING_SNAP_RADIUS = snapRadius;
-    }
+    },
   });
 
   blocklyWrapper.addChangeListener = function (blockspace, handler) {
@@ -469,7 +469,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   blocklyWrapper.WorkspaceSvg.prototype.events = {
-    dispatchEvent: () => {} // TODO
+    dispatchEvent: () => {}, // TODO
   };
 
   // TODO - called by StudioApp, not sure whether they're still needed.
@@ -500,7 +500,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       EVENT_BLOCKS_IMPORTED: 'blocksImported',
       BLOCK_SPACE_CHANGE: 'blockSpaceChange',
       BLOCK_SPACE_SCROLLED: 'blockSpaceScrolled',
-      RUN_BUTTON_CLICKED: 'runButtonClicked'
+      RUN_BUTTON_CLICKED: 'runButtonClicked',
     },
     onMainBlockSpaceCreated: callback => {
       if (Blockly.mainBlockSpace) {
@@ -520,7 +520,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
         theme: theme,
         plugins: {},
         RTL: options.rtl,
-        renderer: options.renderer || Renderers.DEFAULT
+        renderer: options.renderer || Renderers.DEFAULT,
       });
       const svg = Blockly.utils.dom.createSvgElement(
         'svg',
@@ -529,7 +529,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
           'xmlns:html': 'http://www.w3.org/1999/xhtml',
           'xmlns:xlink': 'http://www.w3.org/1999/xlink',
           version: '1.1',
-          class: `${Renderers.DEFAULT}-renderer modern-theme readOnlyBlockSpace injectionDiv`
+          class: `${Renderers.DEFAULT}-renderer modern-theme readOnlyBlockSpace injectionDiv`,
         },
         null
       );
@@ -566,7 +566,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       );
       workspace.setTheme(theme);
       return workspace;
-    }
+    },
   };
 
   blocklyWrapper.inject = function (container, opt_options, opt_audioPlayer) {
@@ -579,16 +579,16 @@ function initializeBlocklyWrapper(blocklyInstance) {
         drag: true,
         scrollbars: {
           vertical: true,
-          horizontal: false
-        }
+          horizontal: false,
+        },
       },
       plugins: {
         blockDragger: ScrollBlockDragger,
         metricsManager: CdoMetricsManager,
-        connectionChecker: CdoConnectionChecker
+        connectionChecker: CdoConnectionChecker,
       },
       renderer: opt_options.renderer || Renderers.DEFAULT,
-      comments: false
+      comments: false,
     };
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.

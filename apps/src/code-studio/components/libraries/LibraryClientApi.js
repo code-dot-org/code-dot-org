@@ -34,7 +34,7 @@ export default class LibraryClientApi {
         ...project,
         libraryName: undefined,
         libraryDescription: undefined,
-        libraryPublishedAt: null
+        libraryPublishedAt: null,
       };
       this.channelApi.update(this.channelId, value, callback);
     };
@@ -76,8 +76,8 @@ export default class LibraryClientApi {
               data_json: JSON.stringify({
                 error: error.message,
                 channelId: this.channelId,
-                pathname: location.pathname
-              })
+                pathname: location.pathname,
+              }),
             },
             {includeUserId: true}
           );
@@ -121,7 +121,7 @@ export default class LibraryClientApi {
     let data;
     try {
       let response = await fetch('/api/v1/section_libraries/', {
-        method: 'GET'
+        method: 'GET',
       });
       if (!response.ok) {
         onError(response.status + ': ' + response.statusText);
