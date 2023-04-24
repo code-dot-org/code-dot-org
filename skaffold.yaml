@@ -1,9 +1,14 @@
 apiVersion: skaffold/v4beta4
 kind: Config
 build:
+  # tagPolicy:
+  #   gitCommit:
+  #     ignoreChanges: true
+
+  # For dev ease atm, adds :latest, switch to gitCommit policy long term
   tagPolicy:
-    gitCommit:
-      ignoreChanges: true
+    sha256: {}
+  
   artifacts:
   - image: code.org
     sync:
@@ -17,7 +22,7 @@ build:
       - '*.jsx'
       - '*.json'
     docker:
-      dockerfile: ./k8s/Dockerfile
+      dockerfile: ./k8s/cdo.dockerfile
       cacheFrom:
       - code.org
       - 475661607190.dkr.ecr.us-east-1.amazonaws.com/code.org:staging
