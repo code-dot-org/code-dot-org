@@ -17,21 +17,21 @@ const typographyElementsToGenerate: TypographyElementToGenerateTemplate[] = [
   {
     displayName: 'BodyOneText',
     semanticTag: 'p',
-    defaultVisualAppearance: 'body-one'
+    defaultVisualAppearance: 'body-one',
   },
   {
     displayName: 'BodyTwoText',
     semanticTag: 'p',
-    defaultVisualAppearance: 'body-two'
+    defaultVisualAppearance: 'body-two',
   },
   {
     displayName: 'OverlineText',
     semanticTag: 'p',
-    defaultVisualAppearance: 'overline'
+    defaultVisualAppearance: 'overline',
   },
   {displayName: 'EmText', semanticTag: 'em'},
   {displayName: 'StrongText', semanticTag: 'strong'},
-  {displayName: 'Figcaption', semanticTag: 'figcaption'}
+  {displayName: 'Figcaption', semanticTag: 'figcaption'},
 ];
 
 // Generates a set of components(Typography Elements) based on the data in typographyElementsToGenerate
@@ -74,5 +74,5 @@ export const {
   OverlineText,
   EmText,
   StrongText,
-  Figcaption
+  Figcaption,
 } = generateComponents(typographyElementsToGenerate);
