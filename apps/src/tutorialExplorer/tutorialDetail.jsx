@@ -314,7 +314,7 @@ const styles = {
     height: 36,
     width: 36,
     fontSize: 36,
-    marginTop: 8,
+    marginTop: 6,
     marginRight: 6
   },
   tutorialDetailImageOuterContainer: {
