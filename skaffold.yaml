@@ -1,0 +1,29 @@
+apiVersion: skaffold/v4beta4
+kind: Config
+build:
+  tagPolicy:
+    gitCommit:
+      ignoreChanges: true
+  artifacts:
+  - image: code.org
+    sync:
+      infer:
+      # rerun watching
+      # /app/src/lib, /app/src/shared/middleware, /app/src/dashboard/legacy, /app/src/pegasus for **/*.{rb,ru,yml} (ignoring **/migrations/*.rb,test/**/*.rb)
+      - '*.rb'
+      - '*.ru'
+      - '*.yml'
+      - '*.js'
+      - '*.jsx'
+      - '*.json'
+    docker:
+      dockerfile: ./k8s/Dockerfile
+      cacheFrom:
+      - code.org
+      - 475661607190.dkr.ecr.us-east-1.amazonaws.com/code.org:staging
+  local:
+    useBuildkit: true # required for caching layers, see https://github.com/moby/moby/issues/34715#issuecomment-589655390
+deploy:
+  docker:
+    images:
+    - code.org
