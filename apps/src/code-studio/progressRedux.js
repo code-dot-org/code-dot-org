@@ -20,7 +20,7 @@ import {handleNavigateToLevel} from './browserNavigation';
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
 const SET_CURRENT_LEVEL_ID = 'progress/SET_CURRENT_LEVEL_ID';
-const NAVIGATE_TO_LEVEL_ID = 'progress/NAVIGATE_TO_LEVEL_ID';
+const NAVIGATED_TO_LEVEL_ID = 'progress/NAVIGATED_TO_LEVEL_ID';
 const SET_UNIT_PROGRESS = 'progress/SET_UNIT_PROGRESS';
 const CLEAR_RESULTS = 'progress/CLEAR_RESULTS';
 const MERGE_RESULTS = 'progress/MERGE_RESULTS';
@@ -83,6 +83,21 @@ const initialState = {
 };
 
 /**
+ * Thunks
+ */
+export function navigateToLevelId(levelId) {
+  return (dispatch, getState) => {
+    const state = getState().progress;
+    const newLevel = state.lessons[0].levels.find(level =>
+      level.ids.find(id => id === levelId)
+    );
+
+    handleNavigateToLevel(state, newLevel.url, levelId);
+    dispatch(navigatedToLevelId(levelId));
+  };
+}
+
+/**
  * Progress reducer
  */
 export default function reducer(state = initialState, action) {
@@ -123,13 +138,7 @@ export default function reducer(state = initialState, action) {
     };
   }
 
-  if (action.type === NAVIGATE_TO_LEVEL_ID) {
-    const newLevel = state.lessons[0].levels.find(level =>
-      level.ids.find(id => id === action.levelId)
-    );
-
-    handleNavigateToLevel(state, newLevel.url, action.levelId);
-
+  if (action.type === NAVIGATED_TO_LEVEL_ID) {
     return {
       ...state,
       currentLevelId: action.levelId
@@ -454,8 +463,8 @@ export const setCurrentLevelId = levelId => ({
   levelId: levelId
 });
 
-export const navigateToLevelId = levelId => ({
-  type: NAVIGATE_TO_LEVEL_ID,
+export const navigatedToLevelId = levelId => ({
+  type: NAVIGATED_TO_LEVEL_ID,
   levelId: levelId
 });
 
