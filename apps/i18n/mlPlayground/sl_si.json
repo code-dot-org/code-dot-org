@@ -31,6 +31,9 @@
     },
     "salsa_toy": {
       "fields": {
+        "avocado": {
+          "id": "avokado"
+        },
         "corn": {
           "id": "koruza"
         }
@@ -69,6 +72,9 @@
     },
     "salad_toy": {
       "fields": {
+        "avocado": {
+          "id": "avokado"
+        },
         "chicken": {
           "id": "piščanec"
         },
@@ -135,10 +141,24 @@
         }
       }
     },
+    "safari_toy": {
+      "fields": {
+        "alligator": {
+          "id": "aligator"
+        }
+      }
+    },
     "abalone": {
       "fields": {
         "Length": {
           "id": "Dolžina"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokado"
         }
       }
     },
