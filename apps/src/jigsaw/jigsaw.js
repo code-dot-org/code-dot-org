@@ -85,14 +85,14 @@ function configureLargeNotches() {
   Blockly.Connection.NOTCH_PATHS_OVERRIDE = {
     left: notchPathLeft,
     leftHighlight: notchPathLeftHighlight,
-    right: notchPathRight
+    right: notchPathRight,
   };
 }
 
 // Default Scalings
 Jigsaw.scale = {
   snapRadius: 1,
-  stepSpeed: 33
+  stepSpeed: 33,
 };
 
 var loadLevel = function () {
@@ -122,11 +122,11 @@ var drawMap = function () {
         'fill-opacity': '0.2',
         width: level.image.width,
         height: level.image.height,
-        transform: 'translate(' + level.ghost.x + ', ' + level.ghost.y + ')'
+        transform: 'translate(' + level.ghost.x + ', ' + level.ghost.y + ')',
       },
       blockCanvas,
       {
-        beforeExisting: true
+        beforeExisting: true,
       }
     );
   }
@@ -192,7 +192,7 @@ Jigsaw.init = function (config) {
   };
 
   studioApp().setPageConstants(config, {
-    noVisualization: true
+    noVisualization: true,
   });
 
   ReactDOM.render(
@@ -226,7 +226,7 @@ var displayFeedback = function () {
       feedbackType: Jigsaw.testResults,
       response: Jigsaw.response,
       level: level,
-      hideTryAgain: true
+      hideTryAgain: true,
     });
   }
 };
@@ -255,7 +255,7 @@ Jigsaw.onPuzzleComplete = function () {
   var levelComplete = Jigsaw.result === ResultType.SUCCESS;
 
   Jigsaw.testResults = studioApp().getTestResults(levelComplete, {
-    allowTopBlocks: true
+    allowTopBlocks: true,
   });
 
   if (Jigsaw.testResults >= TestResults.FREE_PLAY) {
@@ -275,6 +275,6 @@ Jigsaw.onPuzzleComplete = function () {
     result: Jigsaw.result === ResultType.SUCCESS,
     testResult: Jigsaw.testResults,
     program: encodeURIComponent(textBlocks),
-    onComplete: Jigsaw.onReportComplete
+    onComplete: Jigsaw.onReportComplete,
   });
 };

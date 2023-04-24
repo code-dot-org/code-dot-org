@@ -7,7 +7,7 @@ import sectionProgress, {
   finishLoadingProgress,
   getCurrentUnitData,
   startRefreshingProgress,
-  finishRefreshingProgress
+  finishRefreshingProgress,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
@@ -22,12 +22,12 @@ const fakeUnitData789 = {
       path: '/',
       lessons: [
         {id: 1, levels: []},
-        {id: 2, levels: []}
+        {id: 2, levels: []},
       ],
       family_name: 'fakeUnit789',
-      version_year: 2020
-    }
-  }
+      version_year: 2020,
+    },
+  },
 };
 
 const fakeUnitData456 = {
@@ -40,12 +40,12 @@ const fakeUnitData456 = {
       path: '/',
       lessons: [
         {id: 3, levels: []},
-        {id: 4, levels: []}
+        {id: 4, levels: []},
       ],
       family_name: 'fakeUnit456',
-      version_year: 2020
-    }
-  }
+      version_year: 2020,
+    },
+  },
 };
 
 const lessonOfInterest = 16;
@@ -156,15 +156,15 @@ describe('sectionProgressRedux', () => {
                       levelNumber: 'hello world',
                       bonus: false,
                       isUnplugged: false,
-                      sublevels: []
-                    }
-                  ]
-                }
-              ]
+                      sublevels: [],
+                    },
+                  ],
+                },
+              ],
             },
-            456: {}
-          }
-        }
+            456: {},
+          },
+        },
       };
       expect(getCurrentUnitData(stateWithUnit)).to.deep.equal({
         lessons: [
@@ -181,11 +181,11 @@ describe('sectionProgressRedux', () => {
                 progressionDisplayName: 'progression display name',
                 url: 'url',
                 bonus: false,
-                sublevels: []
-              }
-            ]
-          }
-        ]
+                sublevels: [],
+              },
+            ],
+          },
+        ],
       });
     });
   });

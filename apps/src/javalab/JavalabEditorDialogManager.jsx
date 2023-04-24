@@ -2,7 +2,6 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {makeEnum} from '@cdo/apps/utils';
 import javalabMsg from '@cdo/javalab/locale';
 import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 import JavalabDialog from './JavalabDialog';
@@ -12,16 +11,9 @@ import {DisplayTheme} from './DisplayTheme';
 import {
   clearNewFileError,
   clearRenameFileError,
-  closeEditorDialog
+  closeEditorDialog,
 } from './redux/editorRedux';
-
-export const JavalabEditorDialog = makeEnum(
-  'RENAME_FILE',
-  'DELETE_FILE',
-  'CREATE_FILE',
-  'COMMIT_FILES',
-  'VERSION_HISTORY'
-);
+import {JavalabEditorDialog} from './types';
 
 export const DEFAULT_FILE_NAME = '.java';
 
@@ -46,7 +38,7 @@ export function UnconnectedJavalabEditorDialogManager({
   editorOpenDialogName,
   closeEditorDialog,
   commitDialogFileNames,
-  displayTheme
+  displayTheme,
 }) {
   return (
     <>
@@ -55,7 +47,7 @@ export function UnconnectedJavalabEditorDialogManager({
         handleConfirm={onDeleteFile}
         handleClose={closeEditorDialog}
         message={javalabMsg.deleteFileConfirmation({
-          filename: filenameToDelete
+          filename: filenameToDelete,
         })}
         displayTheme={displayTheme}
         confirmButtonText={javalabMsg.delete()}
@@ -122,7 +114,7 @@ UnconnectedJavalabEditorDialogManager.propTypes = {
   clearRenameFileError: PropTypes.func.isRequired,
   editorOpenDialogName: PropTypes.oneOf(Object.values(JavalabEditorDialog)),
   closeEditorDialog: PropTypes.func.isRequired,
-  displayTheme: PropTypes.oneOf(Object.values(DisplayTheme))
+  displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)),
 };
 
 export default connect(
@@ -136,11 +128,11 @@ export default connect(
       sourceName =>
         state.javalabEditor.sources[sourceName].isVisible &&
         !state.javalabEditor.sources[sourceName].isValidation
-    )
+    ),
   }),
   dispatch => ({
     closeEditorDialog: () => dispatch(closeEditorDialog()),
     clearNewFileError: () => dispatch(clearNewFileError()),
-    clearRenameFileError: () => dispatch(clearRenameFileError())
+    clearRenameFileError: () => dispatch(clearRenameFileError()),
   })
 )(UnconnectedJavalabEditorDialogManager);

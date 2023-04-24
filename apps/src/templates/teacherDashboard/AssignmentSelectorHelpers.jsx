@@ -14,5 +14,5 @@ export const translatedCourseOfferingCategories = {
   csf_international: i18n.courseOfferingCSFInternational(),
   math: i18n.courseOfferingMath(),
   twenty_hour: i18n.courseOfferingTwentyHour(),
-  other: i18n.courseOfferingOther()
+  other: i18n.courseOfferingOther(),
 };

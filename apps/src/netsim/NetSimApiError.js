@@ -52,5 +52,5 @@ NetSimApiError.inherits(Error);
 NetSimApiError.ValidationError = {
   MALFORMED: 'malformed',
   CONFLICT: 'conflict',
-  LIMIT_REACHED: 'limit_reached'
+  LIMIT_REACHED: 'limit_reached',
 };

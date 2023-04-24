@@ -16,8 +16,8 @@ describe('EditTipDialog', () => {
       tip: {
         key: 'tip-1',
         type: 'teachingTip',
-        markdown: ''
-      }
+        markdown: '',
+      },
     };
   });
 

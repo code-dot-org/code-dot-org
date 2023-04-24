@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "A road safety team wants to brainstorm ways to reduce the number of major car accidents and needs to store information about car accidents in a program.\r\n\r\n✅ **TO DO #1:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">setupData()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">CarAccidents</code> class to return a two-dimensional (2D) array that has <code style=\"background-color: #ececec; color: black; font-weight: bold;\">5</code> columns and <code style=\"background-color: #ececec; color: black; font-weight: bold;\">3</code> rows.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">RoadRunner</code> class,\r\n\r\n1. Create a 2D array to store the array returned from calling the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">setupData()</code> method.\r\n\r\n2. Print the contents of the 2D array using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">dataToString()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">CarAccidents</code> class.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with declaring and initializing a two-dimensional (2D) array using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">new</code> keyword.\r\n</div>",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -14,15 +14,22 @@
         "tabOrder": 0
       }
     },
+    "video_key": "csa_two_dimensional_arrays",
     "encrypted_examples": [
 
-    ]
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/two-dimensional-arrays"
+    ],
+    "display_name": "Road Safety",
+    "bubble_choice_description": "A road safety team wants to brainstorm ways to reduce the number of major car accidents and needs to store information about car accidents. Declare and initialize a 2D array to store the values.",
+    "thumbnail_url": "https://images.code.org/b658e681b2363cdcc0f3284481855f47-image-1650903162852.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-03-27T22:18:10.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-03-27T22:18:10.234+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L3a_2023\\\"\"],\"cloned_from\":\"CSA U5L1-L3a_2023\"},{\"changed_at\":\"2023-03-27 22:18:12 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-27T22:18:10.234+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L3a_2023\\\"\"],\"cloned_from\":\"CSA U5L1-L3a_2023\"},{\"changed_at\":\"2023-03-27 22:18:12 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:39:29 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 20:01:57 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

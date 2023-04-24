@@ -4,7 +4,7 @@ import {expect} from 'chai';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {
   assignToSection,
-  testingFunction
+  testingFunction,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {UnconnectedMultipleAssignButton as MultipleAssignButton} from '@cdo/apps/templates/MultipleAssignButton';
 import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/sectionAssignmentTestHelper';
@@ -19,7 +19,7 @@ describe('MultipleAssignButtonTest', () => {
     assignToSection: assignToSection,
     updateHiddenScript: updateHiddenScript,
     testingFunction: testingFunction,
-    sectionsForDropdown: fakeTeacherSectionsForDropdown
+    sectionsForDropdown: fakeTeacherSectionsForDropdown,
   };
   const setUp = (overrideProps = {}) => {
     const props = {...defaultProps, ...overrideProps};

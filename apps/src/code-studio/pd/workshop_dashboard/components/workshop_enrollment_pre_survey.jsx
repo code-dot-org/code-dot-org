@@ -105,7 +105,7 @@ export default class WorkshopEnrollmentPreSurvey extends React.Component {
               title: '# of Attendees Teaching Each Lesson',
               legend: {position: 'none'},
               hAxis: {title: 'Units and Lessons'},
-              vAxis: {title: '# of Attendees'}
+              vAxis: {title: '# of Attendees'},
             }}
           />
         )}
@@ -117,11 +117,11 @@ export default class WorkshopEnrollmentPreSurvey extends React.Component {
 const styles = {
   ...workshopEnrollmentStyles,
   containerDiv: {
-    overflowY: 'hidden'
-  }
+    overflowY: 'hidden',
+  },
 };
 
 WorkshopEnrollmentPreSurvey.propTypes = {
   enrollments: PropTypes.arrayOf(enrollmentShape).isRequired,
-  workshopDate: PropTypes.string.isRequired
+  workshopDate: PropTypes.string.isRequired,
 };

@@ -4111,6 +4111,21 @@ ja:
               display_name: 内容
             lessonGroup-4:
               display_name: 代替レッスン
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: 知的財産
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-5:
+              display_name: 代替レッスン
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: アンケート
         hello-world-space-2022:
           title: ハローワールド:スペース
         hello-world-soccer-2022:

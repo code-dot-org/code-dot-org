@@ -5,9 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # Abstraction
 
-##### Abstraction is a major theme in Chapter 2 of the Interactive Animations and Games unit. Students will learn that complex behavior can be represented in simpler ways to make it easier to write and reason about code. 
+<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;">
 
-* ##### **Abstraction** - a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">Abstraction is a major theme in Chapter 2 of the Interactive Animations and Games unit. Students will learn that complex behavior can be represented in simpler ways to make it easier to write and reason about code. 
+</p></div>
+
+#### **Abstraction** - a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.
 
 ## Velocity
 

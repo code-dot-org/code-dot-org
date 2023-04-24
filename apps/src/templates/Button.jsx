@@ -13,7 +13,7 @@ import moduleStyles from './button.module.scss';
 // Note: Keep these constants in sync with button.module.scss.
 const Phase1ButtonColor = {
   brandSecondaryDefault: 'brandSecondaryDefault',
-  neutralDark: 'neutralDark'
+  neutralDark: 'neutralDark',
 };
 
 const ButtonColor = {
@@ -25,21 +25,21 @@ const ButtonColor = {
   white: 'white',
   red: 'red',
   green: 'green',
-  purple: 'purple'
+  purple: 'purple',
 };
 
 const ButtonSize = {
   default: 'default',
   large: 'large',
   narrow: 'narrow',
-  small: 'small'
+  small: 'small',
 };
 
 const ButtonHeight = {
   default: 34,
   large: 40,
   narrow: 40,
-  small: 20
+  small: 20,
 };
 
 class Button extends React.Component {
@@ -50,7 +50,7 @@ class Button extends React.Component {
     value: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number,
-      PropTypes.bool
+      PropTypes.bool,
     ]),
     children: PropTypes.node,
     size: PropTypes.oneOf(Object.keys(ButtonSize)),
@@ -68,8 +68,9 @@ class Button extends React.Component {
     tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     isPending: PropTypes.bool,
     pendingText: PropTypes.string,
+    useDefaultLineHeight: PropTypes.bool,
     __useDeprecatedTag: PropTypes.bool,
-    'aria-label': PropTypes.string
+    'aria-label': PropTypes.string,
   };
 
   onKeyDown = event => {
@@ -83,6 +84,8 @@ class Button extends React.Component {
 
   render() {
     const {
+      color = ButtonColor.orange,
+      size = ButtonSize.default,
       href,
       text,
       styleAsText,
@@ -99,12 +102,10 @@ class Button extends React.Component {
       isPending,
       pendingText,
       value,
+      useDefaultLineHeight,
       __useDeprecatedTag,
-      'aria-label': ariaLabel
+      'aria-label': ariaLabel,
     } = this.props;
-
-    const color = this.props.color || ButtonColor.orange;
-    const size = this.props.size || ButtonSize.default;
 
     if (!href && !onClick) {
       throw new Error('Expect at least one of href/onClick');
@@ -136,9 +137,9 @@ class Button extends React.Component {
     const sizeClassNames = __useDeprecatedTag
       ? [
           moduleStyles[size],
-          Phase1ButtonColor[color] ? moduleStyles.phase1Updated : ''
+          Phase1ButtonColor[color] ? moduleStyles.phase1Updated : '',
         ]
-      : [moduleStyles[size], moduleStyles.updated];
+      : [moduleStyles[size], !useDefaultLineHeight && moduleStyles.updated];
 
     // Opening links in new tabs with 'target=_blank' is inherently insecure.
     // Unfortunately, we depend on this functionality in a couple of place.

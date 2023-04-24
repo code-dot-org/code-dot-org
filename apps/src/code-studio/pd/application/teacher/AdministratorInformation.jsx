@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   PageLabels,
-  SectionHeaders
+  SectionHeaders,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {FormGroup} from 'react-bootstrap';
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
@@ -51,7 +51,7 @@ const AdministratorInformation = props => {
 };
 
 AdministratorInformation.associatedFields = [
-  ...Object.keys(PageLabels.administratorInformation)
+  ...Object.keys(PageLabels.administratorInformation),
 ];
 
 AdministratorInformation.getErrorMessages = data => {

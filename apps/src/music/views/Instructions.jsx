@@ -91,7 +91,7 @@ Instructions.propTypes = {
   onNextPanel: PropTypes.func,
   baseUrl: PropTypes.string.isRequired,
   vertical: PropTypes.bool,
-  right: PropTypes.bool
+  right: PropTypes.bool,
 };
 
 const InstructionsPanel = ({
@@ -102,7 +102,7 @@ const InstructionsPanel = ({
   path,
   imageClicked,
   right,
-  showBigImage
+  showBigImage,
 }) => {
   return (
     <div
@@ -172,7 +172,7 @@ InstructionsPanel.propTypes = {
   imageClicked: PropTypes.func.isRequired,
   showBigImage: PropTypes.bool,
   vertical: PropTypes.bool,
-  right: PropTypes.bool
+  right: PropTypes.bool,
 };
 
 export default Instructions;
