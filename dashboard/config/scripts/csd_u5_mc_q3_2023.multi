@@ -17,3 +17,5 @@ markdown <<MARKDOWN
 | Video Games | III | I |  | I |
 | Music | IIIIII | II | I | I |
 MARKDOWN
+
+allow_multiple_attempts true

@@ -1,15 +1,23 @@
 name 'CSD U4 Match Q8_2023'
-encrypted 'IiqqpWI9s5BK8rBWuHJeAC89xcyO6t1r4eNbPMQ+LE1uASyhk24JTvuHSn9a
-KIYBc7hxs5V1tTu3yGxuPUh680oeWYrORaGZ0k60QCTryTJFy5sL5Uj58Hrs
-1evp3dCCrNi4yolf4qJJpGb552y2nyfLfNIUPctbtU4vOmd/YWdgjSfCgK+Q
-bMefih0aUsyZSGPvVpZpEaZ+9a2g0o2CYf00piZBGyYwvPydpioG+K416kcr
-fxTCCPvSdLrxOrb3ZTqXbIdbUa6E8gR4Unm0t87Q1GqKQ0zHXPrgUIhv/5mC
-N0nPzW25GpaQrDUFc6Eo3DX6PtZTGwmYaY8rJLP2gI9xTm0FqgbzrLVfQy9Z
-WlJml8JBtf9bmp89eo2MrkrsF8v0h4hxz8m83OMqMwgN0IpCC2BvSYQ5M3Px
-rSrtawk9IpbMhiPMOxtiHvGsrHIefnKbh9BSCc26Q5D30d5aTWCPMazJh389
-2Z++Rk5Fms6QGmJV7xJn3LxvQDFX4EtjjtFSQpmOJi0bqneN37UoC3jAoWve
-Y+U6+R5vLM+sapd+E+DtBN7AHOcRDVj/nNYDZibkWIPma2GEZ559ooPfpev9
-SRuZLoULs8R1stD0RWGarTGLokexlt76nNtsCIVEfphS90/divHZENajxcqB
-zwSwruULOhJkYI/DGiSWqFNOK+jsX2Q5ecB44W8aOTsvDJyK7SCpUo6yEf0q
-ejs1jQ==
-'
+
+height '75'
+
+description 'Match each parameter of the `onEvent()` function to its role. ![](https://images.code.org/db79b580c5f6af0bbad38c1dc78a0711-CSDunit4events.png)'
+
+question '`"home_search_btn"`'
+question '`"click"`'
+question '![](https://images.code.org/11ffa02d8361378fb20f0982ad0663cb-CSDunit4events1.png)'
+
+answer 'The element id'
+answer 'The type of event'
+answer 'What happens on this event'
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 4 Lesson 16**
+
+
+
+
+MARKDOWN
+
+allow_multiple_attempts true
