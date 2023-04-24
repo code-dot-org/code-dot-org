@@ -213,7 +213,22 @@
           "moving north": "gumagalaw sa hilaga",
           "jittering": "nanginginig",
           "patrolling": "nagpapatrolya",
-          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key"
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "wandering2": "gumagala2",
+          "moving east2": "gumagalaw pasilangan2",
+          "moving west2": "gumagalaw pakanluran2",
+          "swimming left and right": "kaliwa't kanan ang paglangoy",
+          "spinning left2": "umiikot pakaliwa2",
+          "spinning right2": "umiikot pakanan2",
+          "shrinking2": "lumiliit2",
+          "growing2": "lumalaki2",
+          "moving south2": "gumagalaw patimog2",
+          "swimming left and right2": "kaliwa't kanan ang paglangoy2",
+          "moving north2": "gumagalaw pa hilaga2",
+          "jittering2": "nanginginig2",
+          "patrolling2": "nagpapatrol2",
+          "moving with arrow keys2": "gumagalaw gamit ang mga arrow key2",
+          "driving with arrow keys2": "pagmamaneho gamit ang mga arrow key2"
         },
         "courseF_apps_card": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
@@ -228,7 +243,9 @@
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
           "spinning right": "umiikot pakanan",
-          "spinning left": "umiikot pakaliwa"
+          "spinning left": "umiikot pakaliwa",
+          "blocking movement": "blocking movement",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "courseF_apps_chatbot": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
@@ -243,7 +260,23 @@
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
           "spinning right": "umiikot pakanan",
-          "spinning left": "umiikot pakaliwa"
+          "spinning left": "umiikot pakaliwa",
+          "blocking movement": "blocking movement",
+          "swimming left and right": "kaliwa't kanan ang paglangoy",
+          "wandering2": "gumagala2",
+          "moving east2": "gumagalaw pasilangan2",
+          "spinning left2": "umiikot pakaliwa2",
+          "spinning right2": "umiikot pakanan2",
+          "shrinking2": "lumiliit2",
+          "growing2": "lumalaki2",
+          "moving south2": "gumagalaw patimog2",
+          "swimming left and right2": "kaliwa't kanan ang paglangoy2",
+          "moving north2": "gumagalaw pa hilaga2",
+          "jittering2": "nanginginig2",
+          "moving west2": "gumagalaw pakanluran2",
+          "patrolling2": "nagpapatrol2",
+          "moving with arrow keys2": "gumagalaw gamit ang mga arrow key2",
+          "driving with arrow keys2": "pagmamaneho gamit ang mga arrow key2"
         },
         "courseF_apps_collector": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
@@ -258,7 +291,23 @@
           "moving north": "gumagalaw sa hilaga",
           "jittering": "nanginginig",
           "patrolling": "nagpapatrolya",
-          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key"
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "moving west2": "gumagalaw pakanluran2",
+          "flying west and looping": "lumilipad pakanluran at umiikot",
+          "moving east2": "gumagalaw pasilangan2",
+          "swimming left and right": "kaliwa't kanan ang paglangoy",
+          "wandering2": "gumagala2",
+          "spinning left2": "umiikot pakaliwa2",
+          "spinning right2": "umiikot pakanan2",
+          "shrinking2": "lumiliit2",
+          "growing2": "lumalaki2",
+          "moving south2": "gumagalaw patimog2",
+          "swimming left and right2": "kaliwa't kanan ang paglangoy2",
+          "moving north2": "gumagalaw pa hilaga2",
+          "jittering2": "nanginginig2",
+          "patrolling2": "nagpapatrol2",
+          "moving with arrow keys2": "gumagalaw gamit ang mga arrow key2",
+          "driving with arrow keys2": "pagmamaneho gamit ang mga arrow key2"
         },
         "courseF_apps_madlib": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
@@ -276,7 +325,8 @@
           "fluttering": "pumapagaspas",
           "wobbling": "gumulong-gulong",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "courseF_apps_pet": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
@@ -295,7 +345,8 @@
           "fluttering": "pumapagaspas",
           "wobbling": "gumulong-gulong",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "courseF_editable_card": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
@@ -310,7 +361,8 @@
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
           "spinning right": "umiikot pakanan",
-          "spinning left": "umiikot pakaliwa"
+          "spinning left": "umiikot pakaliwa",
+          "blocking movement": "blocking movement"
         },
         "courseF_editable_chatbot": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
@@ -325,7 +377,8 @@
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
           "spinning right": "umiikot pakanan",
-          "spinning left": "umiikot pakaliwa"
+          "spinning left": "umiikot pakaliwa",
+          "blocking movement": "blocking movement"
         },
         "courseF_editable_madlib": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
@@ -3167,7 +3220,9 @@
           "jittering": "nanginginig",
           "patrolling": "nagpapatrolya",
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
-          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key"
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "moving with arrow keys2": "gumagalaw gamit ang mga arrow key2",
+          "driving with arrow keys2": "pagmamaneho gamit ang mga arrow key2"
         },
         "courseF_apps_aquarium_-2022-2": {
           "wandering": "gumagala",
@@ -3183,7 +3238,9 @@
           "jittering": "nanginginig",
           "patrolling": "nagpapatrolya",
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
-          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key"
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "moving with arrow keys2": "gumagalaw gamit ang mga arrow key2",
+          "driving with arrow keys2": "pagmamaneho gamit ang mga arrow key2"
         },
         "courseF_apps_card2022": {
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
@@ -3198,7 +3255,8 @@
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
           "spinning right": "umiikot pakanan",
-          "spinning left": "umiikot pakaliwa"
+          "spinning left": "umiikot pakaliwa",
+          "blocking movement": "blocking movement"
         },
         "courseF_apps_card_-2022-2": {
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
@@ -3213,7 +3271,8 @@
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
           "spinning right": "umiikot pakanan",
-          "spinning left": "umiikot pakaliwa"
+          "spinning left": "umiikot pakaliwa",
+          "blocking movement": "blocking movement"
         },
         "courseF_apps_chatbot2022": {
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
@@ -3228,7 +3287,10 @@
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
           "spinning right": "umiikot pakanan",
-          "spinning left": "umiikot pakaliwa"
+          "spinning left": "umiikot pakaliwa",
+          "blocking movement": "blocking movement",
+          "moving with arrow keys2": "gumagalaw gamit ang mga arrow key2",
+          "driving with arrow keys2": "pagmamaneho gamit ang mga arrow key2"
         },
         "courseF_apps_chatbot_-2022-2": {
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
@@ -3243,7 +3305,10 @@
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
           "spinning right": "umiikot pakanan",
-          "spinning left": "umiikot pakaliwa"
+          "spinning left": "umiikot pakaliwa",
+          "blocking movement": "blocking movement",
+          "moving with arrow keys2": "gumagalaw gamit ang mga arrow key2",
+          "driving with arrow keys2": "pagmamaneho gamit ang mga arrow key2"
         },
         "courseF_apps_collector2022": {
           "wandering": "gumagala",
@@ -3258,7 +3323,10 @@
           "jittering": "nanginginig",
           "patrolling": "nagpapatrolya",
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
-          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key"
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "flying west and looping": "lumilipad pakanluran at umiikot",
+          "moving with arrow keys2": "gumagalaw gamit ang mga arrow key2",
+          "driving with arrow keys2": "pagmamaneho gamit ang mga arrow key2"
         },
         "courseF_apps_collector_-2022-2": {
           "wandering": "gumagala",
@@ -3273,7 +3341,10 @@
           "jittering": "nanginginig",
           "patrolling": "nagpapatrolya",
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
-          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key"
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "flying west and looping": "lumilipad pakanluran at umiikot",
+          "moving with arrow keys2": "gumagalaw gamit ang mga arrow key2",
+          "driving with arrow keys2": "pagmamaneho gamit ang mga arrow key2"
         },
         "courseF_apps_madlib2022": {
           "wandering": "gumagala",
@@ -3362,7 +3433,8 @@
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
           "spinning right": "umiikot pakanan",
-          "spinning left": "umiikot pakaliwa"
+          "spinning left": "umiikot pakaliwa",
+          "blocking movement": "blocking movement"
         },
         "courseF_editable_chatbot_-2022-2": {
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
@@ -3377,7 +3449,8 @@
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
           "spinning right": "umiikot pakanan",
-          "spinning left": "umiikot pakaliwa"
+          "spinning left": "umiikot pakaliwa",
+          "blocking movement": "blocking movement"
         },
         "courseF_editable_madlib_-2022-2": {
           "wandering": "gumagala",

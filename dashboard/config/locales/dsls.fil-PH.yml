@@ -2040,12 +2040,12 @@ fil-PH:
           pinapagana ang iyong simulasyon. Maaari mong bilangin ang mga halimaw na
           nagkakasakit o gumamit ng isang timer upang makita kung gaano kabilis mangyari
           ang mga bagay. Halimbawa, gaano katagal upang magkasakit ang lahat ng mga
-          halimaw kung wala silang mga mask? \n\n## Paggawa ng Mga Prediksiyon\nKung
-          naiintindihan mo ang iyong modelo, maaari mo itong gamitin upang makagawa
-          ng mga prediksiyon. Maaari mo ring baguhin kung paano gumana ang simulasyon
-          mo at hulaan kung ano ang ibang mangyayari. Halimbawa:\n* Ano ang mangyayari
-          kung merong mas maraming mga halimaw?\n* Ano ang mangyayari kung ang mga
-          halimaw ay gumalaw sa kalahating bilis?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          halimaw kung wala silang mga mask? \n\n## Paggawa ng Mga Hula\nKung naiintindihan
+          mo ang iyong modelo, maaari mo itong gamitin upang makagawa ng mga hula.
+          Maaari mo ring baguhin kung paano gumana ang simulasyon mo at hulaan kung
+          ano ang ibang mangyayari. Halimbawa:\n* Ano ang mangyayari kung merong mas
+          maraming mga halimaw?\n* Ano ang mangyayari kung ang mga halimaw ay gumalaw
+          sa kalahating bilis?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
           style=\"float:right\">\n\n## Ang Monster Town ba ay tulad ng totoong mundo?\nMerong
           limitasyon sa anumang modelo sa kung gaano ito maaring maging makatotohanan.
           \n* Ano ang pagkakatulad ng iyong simulasyon ng pagsiklab sa mga totoong
@@ -2248,7 +2248,7 @@ fil-PH:
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Basahin ang code, pagkatapos ay gumawa ng hula.
       courseF_labels_predict_multi:
         answers:
         - {}
@@ -2276,12 +2276,23 @@ fil-PH:
         - {}
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ang parehong eroplano ay lilipat ng isang espasyo sa loob ng grid,
+            pagkatapos ay hihinto.
+          feedback: Mali. Ang mga sprite na ito ay may "mga pag-uugali" na patuloy
+            na tumatakbo hanggang sa sabihin sa kanila na huminto.
+        - text: Magsisimulang gumalaw ang dalawang eroplano at hindi titigil.
+          correct: true
+          feedback: Tama! Ang mga pag-uugaling ito ay nagsasabi sa mga eroplano na
+            magsimulang gumalaw at magpatuloy.
+        - text: Ang isang eroplano ay unang lilipat, at ang isa pang eroplano ay lilipat
+            mamaya.
+          feedback: Mali. Ang bawat block ng code sa Sprite Lab ay tumatakbo kaagad
+            pagkatapos ng susunod.
+        - text: Babagsak ang mga eroplano.
+          feedback: Mali. Ang mga eroplano ay hindi nakaposisyon sa paraang tatama
+            sila.
         questions:
-        - {}
+        - text: Basahin ang code, pagkatapos ay gumawa ng hula.
       courseF_variables_predict_multi:
         answers:
         - {}
@@ -9814,12 +9825,12 @@ fil-PH:
           pinapagana ang iyong simulasyon. Maaari mong bilangin ang mga halimaw na
           nagkakasakit o gumamit ng isang timer upang makita kung gaano kabilis mangyari
           ang mga bagay. Halimbawa, gaano katagal upang magkasakit ang lahat ng mga
-          halimaw kung wala silang mga mask? \n\n## Paggawa ng Mga Prediksiyon\nKung
-          naiintindihan mo ang iyong modelo, maaari mo itong gamitin upang makagawa
-          ng mga prediksiyon. Maaari mo ring baguhin kung paano gumana ang simulasyon
-          mo at hulaan kung ano ang ibang mangyayari. Halimbawa:\n* Ano ang mangyayari
-          kung merong mas maraming mga halimaw?\n* Ano ang mangyayari kung ang mga
-          halimaw ay gumalaw sa kalahating bilis?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          halimaw kung wala silang mga mask? \n\n## Paggawa ng Mga Hula\nKung naiintindihan
+          mo ang iyong modelo, maaari mo itong gamitin upang makagawa ng mga hula.
+          Maaari mo ring baguhin kung paano gumana ang simulasyon mo at hulaan kung
+          ano ang ibang mangyayari. Halimbawa:\n* Ano ang mangyayari kung merong mas
+          maraming mga halimaw?\n* Ano ang mangyayari kung ang mga halimaw ay gumalaw
+          sa kalahating bilis?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
           style=\"float:right\">\n\n## Ang Monster Town ba ay tulad ng totoong mundo?\nMerong
           limitasyon sa anumang modelo sa kung gaano ito maaring maging makatotohanan.
           \n* Ano ang pagkakatulad ng iyong simulasyon ng pagsiklab sa mga totoong
@@ -10006,7 +10017,7 @@ fil-PH:
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Basahin ang code, pagkatapos ay gumawa ng hula.
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
         - text: Ang sprite na iyong na-click ay magiging mas malaki.
@@ -10048,12 +10059,23 @@ fil-PH:
         - {}
       courseF_sprites_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ang parehong eroplano ay lilipat ng isang espasyo sa loob ng grid,
+            pagkatapos ay hihinto.
+          feedback: Mali. Ang mga sprite na ito ay may "mga pag-uugali" na patuloy
+            na tumatakbo hanggang sa sabihin sa kanila na huminto.
+        - text: Magsisimulang gumalaw ang dalawang eroplano at hindi titigil.
+          correct: true
+          feedback: Tama! Ang mga pag-uugaling ito ay nagsasabi sa mga eroplano na
+            magsimulang gumalaw at magpatuloy.
+        - text: Ang isang eroplano ay unang lilipat, at ang isa pang eroplano ay lilipat
+            mamaya.
+          feedback: Mali. Ang bawat block ng code sa Sprite Lab ay tumatakbo kaagad
+            pagkatapos ng susunod.
+        - text: Babagsak ang mga eroplano.
+          feedback: Mali. Ang mga eroplano ay hindi nakaposisyon sa paraang tatama
+            sila.
         questions:
-        - {}
+        - text: Basahin ang code, pagkatapos ay gumawa ng hula.
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - text: Ang kuneho ay magsasabi ng "5".
@@ -10157,3 +10179,36 @@ fil-PH:
           makita kung ano ang posible. Sa pagtatapos ng kursong ito, makakagawa ka
           na ng sarili mong mga proyekto tulad nito... at higit pa!
         display_name: Mga App sa Sprite Lab
+        teacher_markdown: "# Pangkalahatang-ideya ng Antas ng Pagpipilian \nAng mga
+          antas ng pagpili ay nagbibigay ng menu ng mga karagdagang antas upang kumpletuhin
+          ng mga mag-aaral. Dapat kumpletuhin ng mga mag-aaral ang hindi bababa sa
+          isa sa mga sub-level dito, ngunit maaaring gawin ang lahat ng gusto nila
+          (o mo).\n\nAng mga pagpipilian dito ay nagdadala sa mga mag-aaral na magsampol
+          ng mga app na maaari nilang tuklasin. Nilalayon ng aktibidad na ito na makipag-ugnayan
+          sa worksheet ng Pag-explore ng Apps, na makikita sa [plano ng aralin](.././)."
+      courseF_sprites_freeplay:
+        description: Ikaw naman ang gumawa ng kahit anong gusto mo! Anong uri ng proyekto
+          ang gagawin mo?
+        display_name: Mga Sprite - Libreng Laro
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2:
+        description: Ikaw naman ang gumawa ng kahit anong gusto mo! Anong uri ng proyekto
+          ang gagawin mo?
+        display_name: Mga Sprite - Libreng Laro
+      courseF_sprites_practice:
+        description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
+          ang lahat ng kaya mo. Patuloy na magsanay sa mga sprite at pag-uugali!
+        display_name: Pagsasanay sa mga Sprite
+        teacher_markdown: |-
+          # Pangkalahatang-ideya ng Antas ng Pagpipilian
+          Ang mga antas ng pagpipilian ay nagbibigay ng menu ng mga karagdagang antas upang makumpleto ng mga mag-aaral. Dapat kumpletuhin ng mga mag-aaral ang hindi bababa sa isa sa mga sub-level dito, ngunit maaaring gawin ang lahat ng gusto nila (o mo).
+
+          Maaari mong gamitin ang mga paglalarawan sa ibaba upang matulungan ang mga mag-aaral na pumili ng sarili nilang mga pagpipilian, o upang magtakda ng mga inaasahan tungkol sa kung gaano karaming mga sub-level ang dapat nilang kumpletuhin.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Eksena sa Disyerto|Baguhin ang laki ng prutas.|Pagalawin ang Naglalayag na Barko|Isang Mahangin na Araw|
+          |-|-|-|-|-|
+          | ***I-type*** |**Repaso**|**Review**|**Repaso**|**Repaso**|
+          | ***Konsepto***|*sprites, locations*|*mga sprite, mga katangian*|*sprites, locations, behaviors*|*mga pag-uugali*|
+      courseF_sprites_practice2022_2022_pilot_-2022-2:
+        description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
+          ang lahat ng kaya mo. Patuloy na magsanay sa mga sprite at pag-uugali!
+        display_name: Pagsasanay sa mga Sprite

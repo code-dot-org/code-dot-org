@@ -2404,6 +2404,7 @@
           "description": "#### Bokabularyo\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita:** Ipakita ang “Bokabularyo” na slide\n\n-   **Algorithm** - Isang listahan ng mga hakbang upang makumpleto ang isang gawain.\n-   **Pag-uugali** - Isang aksiyon sa Sprite Lab na patuloy na ginagawa ng isang sprite hanggang sa sabihing huminto ito.\n-   **Program** - Isang algorithm na na-code sa isang bagay na maaaring patakbuhin ng isang makina.\n-   **Sprite** - Isang graphic sa screen na may lokasyon, laki, at hitsura."
         },
         "a4ff84ba-5105-458a-a950-ca4fdbc3d23b": {
+          "name": "Paggawa ng mga Sprite",
           "description": "#### Hula (3 min)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita:** Ipakita ang “Antas 1 - Hulaan” na slide \n\n**Gawin Ito:** Ipabasa sa mga mag-aaral ang ibinigay na code at gumawa ng hula tungkol sa kung ano ang mangyayari. Pagkatapos pindutin ang \"Run\", magbigay ng oras sa mga mag-aaral na pag-isipan ang anumang bagay na nakita nilang kawili-wili o gumulat sa kanila.",
           "tips": [
             null
@@ -2524,6 +2525,7 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Ipakita ang “Kwento ng Blank Space: Paboritong Pagkain” na slide \n\n**Gawin ito:** Ipakita ang unang kwentong blank space (Paboritong Pagkain) sa pisara gamit ang lesson slides. \n\n**Prompt:** _Sa tingin mo, paano gumagana ang blangkong space story na ito? Ano ang napapansin mo sa mga label para sa bawat blangkong espasyo?_ \n\nMahalagang maunawaan ng mga mag-aaral na karaniwang ibinibigay ng isang tao ang mga salitang itinalaga ng bawat label nang hindi muna nakikita ang kuwento. Maaaring mapansin ng mga mag-aaral na ang bawat espasyo ay may natatanging label. \n\n**Gawin Ito:** Ihanda ang unang tatlong sobre para sa demonstrasyon. Kung ginagamit ang mga slide, isulong ang animation upang ipakita ang tatlong lilang kahon."
         },
         "580f30a2-5998-427d-9399-f52a5426e91d": {
+          "name": "Mga Laro sa Parti",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Kwentong Blank Space: Mga Laro ng Party” na slide\n\n**Gawin Ito:**\n\n-   Ihanda ang mga sobre na may markang \"pang-uri\", \"bagay\", \"bahagi ng katawan\", at \"numero\". \n-   Ulitin ang laro sa itaas gamit ang pangalawang kuwento. Sa pagkakataong ito maaari kang magsimula sa mga label bago ipakita ang kuwento upang bumuo ng higit pang pananabik. Ang mga animation sa mga slide ng aralin ay naka-set up na upang makatulong na mapadali ito.\n\n#### (Opsyonal) Extension ng Role Play\n\nAng isang koneksiyon ay maaaring gawin sa pagitan ng mga boluntaryo at ang ideya ng app na may \"user\". Sa analogy na ito, ang iyong tungkulin bilang guro ay parang kompyuter. Hihilingin at iimbakin mo ang impormasyon mula sa \"mga user\" at pagkatapos ay pag-aralan kung paano pagsasama-samahin ang kuwento. Para makilahok ang mas maraming mag-aaral at ipagawa sa kanila ang modelong ito, magtalaga ng mga tungkulin:\n\n_Mga Computer:_ Ibahagi at mangolekta ng mga sobre. Buksan ang bawat sobre habang binabasa ang kuwento upang tingnan ang mga value na iniimbak.\n\n_Mga User:_ Isumite ang mga salitang kailangan upang makumpleto ang kuwento.\n\n_Tagabasa:_ Basahin nang malakas ang natapos na kuwento.\n\n#### Pagtatanong\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipan” na slide\n\n**Pag-isipan**: _Paano naiiba ang pagsulat ng isang blank space na kwento sa pagsusulat ng isang normal na kwento?_"
         },
         "6a51a240-94c7-47c6-880d-674a72b76bbf": {
@@ -13531,6 +13533,7 @@
           "name": "Panimula"
         },
         "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
+          "name": "Paggawa ng mga Sprite",
           "tips": [
             null
           ],
@@ -13606,6 +13609,9 @@
         },
         "06057973-b621-4a48-a991-4f99aafdedca": {
           "progression_name": "Ang Kapangyarihan ng Salita - Hindi Naka-plug na Aktibidad"
+        },
+        "437d0e58-a47c-4ea2-8125-501e4c0b154f": {
+          "name": "Mga Laro sa Parti"
         },
         "fefc9dd6-ed1d-411b-ae3e-75a95da347b9": {
           "progression_name": "Video: Mga Hindi Naka-plug na Variable sa Mga Sobre"
@@ -15460,6 +15466,7 @@
           "name": "Panimula"
         },
         "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
+          "name": "Paggawa ng mga Sprite",
           "tips": [
             null
           ],

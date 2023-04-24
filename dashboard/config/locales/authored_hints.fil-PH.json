@@ -3379,6 +3379,12 @@
         "courseF_variables2_set_-2022-2": {
           "set_block_hint": "Maaari kang magtakda ng variable na tulad nito: \n\n<xml>\n<block type=\"variables_set\">\n    <title name=\"VAR\">counter</title>\n    <value name=\"VALUE\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">3</title>\n      </block>\n    </value>\n  </block>\n  </xml>",
           "say_variable_hint": "Maaari kang magkaroon ng isang sprite na sabihin ang halaga ng variable na tulad nito:\n\n<xml><block type=\"gamelab_spriteSayTime\">\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <field name=\"ANIMATION\">\"purple bunny\"</field>\n      </block>\n    </value>\n    <value name=\"TEXT1\">\n      <block type=\"variables_get\">\n        <field name=\"VAR\">count</field>\n      </block>\n    </value>\n    <value name=\"NUM\">\n      <block type=\"math_number\">\n        <field name=\"NUM\">4</field>\n      </block>\n    </value>\n  </block></xml>"
+        },
+        "courseF_sprites_clouds": {
+          "behavior_list": "Subukang gumamit ng mga pag-uugali gaya ng \"paglipat pasilangan at pag-loop\", \"umiikot pakanan\", at \"gumagala\"."
+        },
+        "courseF_sprites_clouds_-2022-2": {
+          "behavior_list": "Subukang gumamit ng mga pag-uugali gaya ng \"paglipat pasilangan at pag-loop\", \"umiikot pakanan\", at \"gumagala\"."
         }
       }
     }
