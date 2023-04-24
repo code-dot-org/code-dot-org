@@ -11,3 +11,4 @@ right 'No parent or relative encouraged them'
 right 'No one at the school (teacher, counselor, coach, etc.) encouraged them'
 right 'Someone actively encouraged them NOT to take the class'
 right 'Other reasons not listed here.'
+allow_multiple_attempts true
