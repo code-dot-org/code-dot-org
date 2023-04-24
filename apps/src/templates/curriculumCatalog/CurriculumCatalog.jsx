@@ -7,7 +7,6 @@ import HeaderBanner from '../HeaderBanner';
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-illustration-01.png';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
-import CheckboxDropdown from '../CheckboxDropdown';
 
 const CurriculumCatalog = ({curriculaData, isEnglish}) => {
   const filterTypes = [
@@ -44,13 +43,6 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
   };
 
   const handleClear = () => {
-    filterTypes.forEach(filterType => {
-      filterType.options.forEach(option => {
-        document.getElementById(
-          `${filterType.name}-${option}-check`
-        ).checked = false;
-      });
-    });
     setAppliedFilters(getClearedFilters());
   };
 
@@ -66,14 +58,46 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
       <div className={style.catalogFiltersContainer}>
         {filterTypes.map(filterType => {
           return (
-            <CheckboxDropdown
-              key={filterType.name}
-              name={filterType.name}
-              label={filterType.label}
-              className={style.catalogFilterDropdown}
-              options={filterType.options}
-              onChange={e => handleSelect(e, filterType.name)}
-            />
+            <div
+              id={`${filterType.name}-dropdown`}
+              key={`${filterType.name}-dropdown`}
+              className="dropdown"
+            >
+              <button
+                id={`${filterType.name}-dropdown-button`}
+                type="button"
+                className="selectbox"
+                data-toggle="dropdown"
+              >
+                {filterType.label}
+              </button>
+              <ul className="dropdown-menu">
+                <form>
+                  {filterType.options.map(option => {
+                    return (
+                      <li
+                        key={`${filterType.name}-${option}`}
+                        className="checkbox form-group"
+                      >
+                        <input
+                          type="checkbox"
+                          id={`${filterType.name}-${option}-check`}
+                          name={option}
+                          value={option}
+                          checked={appliedFilters[filterType.name].includes(
+                            option
+                          )}
+                          onChange={e => handleSelect(e, filterType.name)}
+                        />
+                        <label htmlFor={`${filterType.name}-${option}-check`}>
+                          {option}
+                        </label>
+                      </li>
+                    );
+                  })}
+                </form>
+              </ul>
+            </div>
           );
         })}
         <button
