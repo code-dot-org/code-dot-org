@@ -299,6 +299,7 @@ const styles = {
   },
   buttonWithoutMargin: {
     margin: 0,
+    marginBottom: 5,
   },
   label: {
     paddingTop: PADDING / 2,
