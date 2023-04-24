@@ -36,5 +36,5 @@ export default {
     } else {
       return queryParams(name);
     }
-  }
+  },
 };

@@ -1356,10 +1356,10 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@4.0.13":
-  version "4.0.13"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-4.0.13.tgz#a63993a0bebbbd51ed60fbb56fe71a87e622aaee"
-  integrity sha512-5zzaS/sqUMa62+4E+IPOq9g02+QKzR2ih37ZbaxAFIfOAbq+gi/i9chBV+dJKe9HmlvtF19mnPv3KTpP3VLX5A==
+"@code-dot-org/blockly@4.0.14":
+  version "4.0.14"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-4.0.14.tgz#b386848b523e48ab5fd76fa8bba57575079a1c99"
+  integrity sha512-g/Lbne0jnk6c+B91MuYmORuQhNMGu0eDygTb8Yyy2Oxh7MgJL3zRNZv+/HCqkoKIqlSiv7480qc1dvfSt3GVzg==
 
 "@code-dot-org/craft@0.2.2":
   version "0.2.2"
@@ -5552,6 +5552,11 @@ classnames@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
   integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
+
+classnames@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.2.tgz#351d813bf0137fcc6a76a16b88208d2560a0d924"
+  integrity sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==
 
 clean-css@4.2.x:
   version "4.2.1"

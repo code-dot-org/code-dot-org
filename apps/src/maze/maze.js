@@ -34,7 +34,7 @@ module.exports = class Maze {
   constructor() {
     this.scale = {
       snapRadius: 1,
-      stepSpeed: 5
+      stepSpeed: 5,
     };
 
     this.shouldSpeedUpInfiniteLoops = true;
@@ -57,7 +57,7 @@ module.exports = class Maze {
    */
   getAppReducers() {
     return {
-      maze: mazeReducer.default
+      maze: mazeReducer.default,
     };
   }
 
@@ -92,8 +92,8 @@ module.exports = class Maze {
         },
         playAudioOnFailure: studioApp().playAudioOnFailure.bind(studioApp()),
         loadAudio: studioApp().loadAudio.bind(studioApp()),
-        getTestResults: studioApp().getTestResults.bind(studioApp())
-      }
+        getTestResults: studioApp().getTestResults.bind(studioApp()),
+      },
     });
 
     this.resultsHandler = createResultsHandlerForSubtype(
@@ -190,7 +190,7 @@ module.exports = class Maze {
 
     // Push initial level properties into the Redux store
     studioApp().setPageConstants(config, {
-      hideRunButton: alwaysHideRunButton
+      hideRunButton: alwaysHideRunButton,
     });
 
     var visualizationColumn = (
@@ -359,7 +359,7 @@ module.exports = class Maze {
             // Run trial
             CustomMarshalingInterpreter.evalWith(code, {
               Maze: api,
-              executionInfo: this.executionInfo
+              executionInfo: this.executionInfo,
             });
 
             // Sort static grids based on trial result
@@ -402,7 +402,7 @@ module.exports = class Maze {
 
         CustomMarshalingInterpreter.evalWith(code, {
           Maze: api,
-          executionInfo: this.executionInfo
+          executionInfo: this.executionInfo,
         });
       }
 
@@ -492,7 +492,7 @@ module.exports = class Maze {
         result: this.result === ResultType.SUCCESS,
         testResult: this.testResults,
         program: encodeURIComponent(program),
-        onComplete: this.onReportComplete_
+        onComplete: this.onReportComplete_,
       });
     }
 
@@ -560,7 +560,7 @@ module.exports = class Maze {
     var options = {
       feedbackType: this.testResults,
       response: this.response,
-      level: this.controller.level
+      level: this.controller.level,
     };
 
     let message;
@@ -609,7 +609,7 @@ module.exports = class Maze {
    */
   prepareForExecution_() {
     this.executionInfo = new ExecutionInfo({
-      ticks: 1000
+      ticks: 1000,
     });
     this.resultsHandler.executionInfo = this.executionInfo;
     this.result = ResultType.UNSET;

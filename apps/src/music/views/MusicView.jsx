@@ -30,12 +30,12 @@ import {
   setShowInstructions,
   setInstructionsPosition,
   InstructionsPositions,
-  setCurrentProgressState
+  setCurrentProgressState,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 import {
   levelsForLessonId,
-  navigateToLevelId
+  navigateToLevelId,
 } from '@cdo/apps/code-studio/progressRedux';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
@@ -70,7 +70,7 @@ class UnconnectedMusicView extends React.Component {
     setShowInstructions: PropTypes.func,
     setInstructionsPosition: PropTypes.func,
     setCurrentProgressState: PropTypes.func,
-    navigateToLevelId: PropTypes.func
+    navigateToLevelId: PropTypes.func,
   };
 
   constructor(props) {
@@ -98,7 +98,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.state = {
       updateNumber: 0,
-      showingVideo: true
+      showingVideo: true,
     };
   }
 
@@ -353,6 +353,10 @@ class UnconnectedMusicView extends React.Component {
     }
   };
 
+  togglePlaying = () => {
+    this.setPlaying(!this.props.isPlaying);
+  };
+
   playTrigger = id => {
     if (!this.props.isPlaying) {
       return;
@@ -363,7 +367,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.playingTriggers.push({
       id,
-      startPosition: currentPosition
+      startPosition: currentPosition,
     });
   };
 
@@ -373,7 +377,7 @@ class UnconnectedMusicView extends React.Component {
       ProgramSequencer: this.programSequencer,
       RandomSkipManager: this.randomSkipManager,
       getTriggerCount: () => this.playingTriggers.length,
-      MusicLibrary: this.library
+      MusicLibrary: this.library,
     });
   };
 
@@ -493,11 +497,11 @@ class UnconnectedMusicView extends React.Component {
           value={{
             getPlaybackEvents: () => this.player.getPlaybackEvents(),
             getTracksMetadata: () => this.player.getTracksMetadata(),
-            getLastMeasure: () => this.player.getLastMeasure()
+            getLastMeasure: () => this.player.getLastMeasure(),
           }}
         >
           <KeyHandler
-            togglePlaying={() => this.setPlaying(!this.props.isPlaying)}
+            togglePlaying={this.togglePlaying}
             playTrigger={this.playTrigger}
           />
           <div id="music-lab-container" className={moduleStyles.container}>
@@ -568,7 +572,7 @@ const MusicView = connect(
     selectedBlockId: state.music.selectedBlockId,
     timelineAtTop: state.music.timelineAtTop,
     showInstructions: state.music.showInstructions,
-    instructionsPosition: state.music.instructionsPosition
+    instructionsPosition: state.music.instructionsPosition,
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
@@ -582,7 +586,7 @@ const MusicView = connect(
       dispatch(setInstructionsPosition(instructionsPosition)),
     setCurrentProgressState: progressState =>
       dispatch(setCurrentProgressState(progressState)),
-    navigateToLevelId: levelId => dispatch(navigateToLevelId(levelId))
+    navigateToLevelId: levelId => dispatch(navigateToLevelId(levelId)),
   })
 )(UnconnectedMusicView);
 

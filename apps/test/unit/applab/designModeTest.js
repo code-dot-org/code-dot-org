@@ -56,7 +56,7 @@ describe('makeUrlProtocolRelative', () => {
     [
       '//test.code.org',
       '//example.com/http://something-else',
-      '//test-studio.code.org/media?u=http%3A%2F%2Fexample.com'
+      '//test-studio.code.org/media?u=http%3A%2F%2Fexample.com',
     ].forEach(originalUrl => {
       expect(makeUrlProtocolRelative(originalUrl)).to.equal(originalUrl);
     });
@@ -66,16 +66,16 @@ describe('makeUrlProtocolRelative', () => {
     [
       {
         input: 'http://test.code.org',
-        expected: '//test.code.org'
+        expected: '//test.code.org',
       },
       {
         input: 'http://example.com/http://something-else',
-        expected: '//example.com/http://something-else'
+        expected: '//example.com/http://something-else',
       },
       {
         input: 'http://test-studio.code.org/media?u=http%3A%2F%2Fexample.com',
-        expected: '//test-studio.code.org/media?u=http%3A%2F%2Fexample.com'
-      }
+        expected: '//test-studio.code.org/media?u=http%3A%2F%2Fexample.com',
+      },
     ].forEach(({input, expected}) => {
       expect(makeUrlProtocolRelative(input)).to.equal(expected);
     });
@@ -85,16 +85,16 @@ describe('makeUrlProtocolRelative', () => {
     [
       {
         input: 'https://test.code.org',
-        expected: '//test.code.org'
+        expected: '//test.code.org',
       },
       {
         input: 'https://example.com/http://something-else',
-        expected: '//example.com/http://something-else'
+        expected: '//example.com/http://something-else',
       },
       {
         input: 'https://test-studio.code.org/media?u=http%3A%2F%2Fexample.com',
-        expected: '//test-studio.code.org/media?u=http%3A%2F%2Fexample.com'
-      }
+        expected: '//test-studio.code.org/media?u=http%3A%2F%2Fexample.com',
+      },
     ].forEach(({input, expected}) => {
       expect(makeUrlProtocolRelative(input)).to.equal(expected);
     });

@@ -10,16 +10,12 @@ markdown <<MARKDOWN
 ## Example module landing page
 
 ##### Notice you can... 
-* get an overview of a lesson.
-* access lesson plans.
-* hide lessons to help with pacing.
-* go directly to lesson levels.
+* ##### access lesson plans.
+* ##### hide lessons to help with pacing the class.
+* ##### go directly to lesson levels.
 
-<img src="https://images.code.org/3df594a4e454e039675486a6e1c4ba83-image-1678904395700.png" width="800px" style="border-radius:0px; float:center; margin: 0 0 40px 40px;">
-
-
+<img src="https://images.code.org/101af5c0f9c0f5d8a2f872e6d129d29b-image-1681934963372.png" width="800px" style="border-radius:0px; float:center; margin: 0 0 40px 40px;">
 
 
 ## Let's keep learning! 
-
 MARKDOWN

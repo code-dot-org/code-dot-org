@@ -7,7 +7,7 @@ import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teac
 let defaultProps = {
   coursesWithProgress: fakeCoursesWithProgress,
   scriptId: null,
-  onChange: () => {}
+  onChange: () => {},
 };
 
 describe('UnitSelector', () => {

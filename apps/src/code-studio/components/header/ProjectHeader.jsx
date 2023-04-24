@@ -9,7 +9,7 @@ import ProjectShare from './ProjectShare';
 
 export default class ProjectHeader extends React.Component {
   static propTypes = {
-    onChangedWidth: PropTypes.func
+    onChangedWidth: PropTypes.func,
   };
 
   render() {

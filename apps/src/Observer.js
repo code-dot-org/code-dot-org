@@ -24,7 +24,7 @@ Observer.prototype.observe = function (event, callback) {
   var key = event.register(callback);
   this.observed_.push({
     event: event,
-    key: key
+    key: key,
   });
 };
 

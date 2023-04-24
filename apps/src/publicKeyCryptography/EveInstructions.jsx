@@ -5,7 +5,7 @@ import NumberedSteps, {
   Step,
   SubStep,
   Heading,
-  Subheading
+  Subheading,
 } from './NumberedSteps';
 
 export default function EveInstructions() {

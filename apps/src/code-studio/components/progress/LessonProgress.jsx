@@ -6,7 +6,7 @@ import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtra
 import {
   levelsForLessonId,
   lessonExtrasUrl,
-  navigateToLevelId
+  navigateToLevelId,
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
@@ -27,7 +27,7 @@ class LessonProgress extends Component {
     setDesiredWidth: PropTypes.func,
     currentPageNumber: PropTypes.number,
     currentLevelId: PropTypes.string,
-    navigateToLevelId: PropTypes.func
+    navigateToLevelId: PropTypes.func,
   };
 
   getFullWidth() {
@@ -105,7 +105,7 @@ class LessonProgress extends Component {
 
         return {
           headerFullProgressOffset: desiredOffset,
-          vignetteStyle: {...styles.headerVignette, ...vignetteStyle}
+          vignetteStyle: {...styles.headerVignette, ...vignetteStyle},
         };
       }
     }
@@ -183,7 +183,7 @@ class LessonProgress extends Component {
                   ref={isCurrent ? 'currentLevel' : null}
                   style={{
                     ...styles.inner,
-                    ...(level.isUnplugged && isCurrent && styles.pillContainer)
+                    ...(level.isUnplugged && isCurrent && styles.pillContainer),
                   }}
                 >
                   <ProgressBubble
@@ -220,41 +220,41 @@ const styles = {
     borderRadius: 5,
     height: 40,
     position: 'relative',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   outer: {
     position: 'absolute',
     paddingLeft: 4,
     paddingRight: 4,
     height: '100%',
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
   },
   inner: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    height: '100%'
+    height: '100%',
   },
   headerVignette: {
     width: '100%',
     height: '100%',
     position: 'absolute',
-    pointerEvents: 'none'
+    pointerEvents: 'none',
   },
   headerVignetteLeftRight: {
     background:
-      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)'
+      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)',
   },
   headerVignetteLeft: {
     background:
-      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px'
+      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px',
   },
   headerVignetteRight: {
     background:
-      'linear-gradient(to right, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)'
+      'linear-gradient(to right, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)',
   },
   spacer: {
-    marginRight: 'auto'
+    marginRight: 'auto',
   },
   lessonTrophyContainer: {
     border: 0,
@@ -262,13 +262,13 @@ const styles = {
     paddingLeft: 8,
     paddingRight: 0,
     minWidth: 350,
-    marginLeft: 48
+    marginLeft: 48,
   },
   pillContainer: {
     // Vertical padding is so that this lines up with other bubbles
     paddingTop: 4,
-    paddingBottom: 4
-  }
+    paddingBottom: 4,
+  },
 };
 
 export const UnconnectedLessonProgress = LessonProgress;
@@ -282,11 +282,11 @@ export default connect(
     ),
     isLessonExtras: state.progress.isLessonExtras,
     currentPageNumber: state.progress.currentPageNumber,
-    currentLevelId: state.progress.currentLevelId
+    currentLevelId: state.progress.currentLevelId,
   }),
   dispatch => ({
     navigateToLevelId(levelId) {
       dispatch(navigateToLevelId(levelId));
-    }
+    },
   })
 )(LessonProgress);

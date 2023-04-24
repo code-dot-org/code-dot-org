@@ -28,7 +28,7 @@ export const COMPLETED = 'COMPLETED';
 const NEXT_BUTTON_TEXT = {
   [NOT_STARTED]: i18n.tryNow(),
   [IN_PROGRESS]: i18n.continue(),
-  [COMPLETED]: i18n.printCertificate()
+  [COMPLETED]: i18n.printCertificate(),
 };
 
 class UnitOverviewTopRow extends React.Component {
@@ -62,13 +62,13 @@ class UnitOverviewTopRow extends React.Component {
     currentCourseId: PropTypes.number,
     unitAllowsHiddenLessons: PropTypes.bool,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired,
   };
 
   logTryNowButtonClick = unitProgress => {
     if (unitProgress === NOT_STARTED) {
       analyticsReporter.sendEvent(EVENTS.TRY_NOW_BUTTON_CLICK_EVENT, {
-        'unit name': this.props.unitTitle
+        'unit name': this.props.unitTitle,
       });
     }
   };
@@ -82,14 +82,14 @@ class UnitOverviewTopRow extends React.Component {
         event: 'open-pdf',
         data_json: JSON.stringify({
           name: this.props.scriptName,
-          pdfType: firehoseKey
-        })
+          pdfType: firehoseKey,
+        }),
       },
       {
         includeUserId: true,
         callback: () => {
           window.location.href = url;
-        }
+        },
       }
     );
   };
@@ -102,14 +102,14 @@ class UnitOverviewTopRow extends React.Component {
       options.push({
         key: 'lessonPlans',
         name: i18n.printLessonPlans(),
-        url: scriptOverviewPdfUrl
+        url: scriptOverviewPdfUrl,
       });
     }
     if (scriptResourcesPdfUrl) {
       options.push({
         key: 'scriptResources',
         name: i18n.printHandouts(),
-        url: scriptResourcesPdfUrl
+        url: scriptResourcesPdfUrl,
       });
     }
     return options;
@@ -141,7 +141,7 @@ class UnitOverviewTopRow extends React.Component {
       courseVersionId,
       isProfessionalLearningCourse,
       publishedState,
-      participantAudience
+      participantAudience,
     } = this.props;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
@@ -288,14 +288,14 @@ const styles = {
     minHeight: 50,
     position: 'relative',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   buttonsInRow: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   customText: {
-    margin: '0px 2px'
+    margin: '0px 2px',
   },
   icon: {
     margin: '0px 2px',
@@ -303,34 +303,34 @@ const styles = {
     // we want our icon text to be a different size than our button text, which
     // requires we manually offset to get it centered properly
     position: 'relative',
-    top: 1
+    top: 1,
   },
   right: {
     position: 'absolute',
     right: 0,
-    top: 0
+    top: 0,
   },
   left: {
     position: 'absolute',
     left: 0,
-    top: 0
+    top: 0,
   },
   dropdown: {
-    display: 'inline-block'
+    display: 'inline-block',
   },
   resourcesRow: {
-    display: 'flex'
+    display: 'flex',
   },
   buttonMarginLTR: {
-    marginLeft: 5
+    marginLeft: 5,
   },
   buttonMarginRTL: {
-    marginRight: 5
+    marginRight: 5,
   },
   sectionContainer: {
     display: 'flex',
-    justifyContent: 'space-between'
-  }
+    justifyContent: 'space-between',
+  },
 };
 
 export const UnconnectedUnitOverviewTopRow = UnitOverviewTopRow;
@@ -352,5 +352,5 @@ export default connect((state, ownProps) => ({
   currentCourseId: state.progress.courseId,
   unitAllowsHiddenLessons: state.hiddenLesson.hideableLessonsAllowed || false,
   viewAs: state.viewAs,
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(UnitOverviewTopRow);

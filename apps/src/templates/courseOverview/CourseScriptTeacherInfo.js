@@ -10,7 +10,7 @@ export default class CourseScriptTeacherInfo extends Component {
   static propTypes = {
     disabled: PropTypes.bool.isRequired,
     isHidden: PropTypes.bool.isRequired,
-    onToggleHiddenScript: PropTypes.func.isRequired
+    onToggleHiddenScript: PropTypes.func.isRequired,
   };
 
   render() {

@@ -1,7 +1,7 @@
 /** @file Test maker droplet config behavior */
 import {expect} from '../../../../util/reconfiguredChai';
 import dropletConfig, {
-  configMicrobit
+  configMicrobit,
 } from '@cdo/apps/lib/kits/maker/dropletConfig';
 import {CP_COMPONENT_EVENTS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import {MB_COMPONENT_EVENTS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
@@ -22,7 +22,7 @@ describe('maker/dropletConfig.js', () => {
         '"down"',
         '"open"',
         '"shake"',
-        '"up"'
+        '"up"',
       ]);
     });
 
@@ -129,7 +129,7 @@ describe('maker/dropletConfig.js', () => {
         dropletConfig.stringifySong([
           ['A1', 1 / 4],
           ['B2', 1 / 4],
-          ['C3', 1 / 2]
+          ['C3', 1 / 2],
         ])
       ).to.equal('[' + '["A1",0.25], ' + '["B2",0.25], ' + '["C3",0.5]' + ']');
     });
