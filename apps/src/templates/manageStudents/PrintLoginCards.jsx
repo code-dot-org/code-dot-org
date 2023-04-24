@@ -33,22 +33,22 @@ export default class PrintLoginCards extends Component {
 
   render() {
     return (
-      <div style={styles.button}>
-        <Button
-          __useDeprecatedTag
-          onClick={this.onClick}
-          target="_blank"
-          color={Button.ButtonColor.gray}
-          text={i18n.printLoginCards_button()}
-          icon="print"
-        />
-      </div>
+      <Button
+        style={styles.button}
+        onClick={this.onClick}
+        target="_blank"
+        color={Button.ButtonColor.gray}
+        text={i18n.printLoginCards_button()}
+        icon="print"
+      />
     );
   }
 }
 
 const styles = {
   button: {
+    margin: 0,
     marginLeft: 5,
+    marginBottom: 5,
   },
 };
