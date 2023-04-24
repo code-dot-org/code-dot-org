@@ -99,19 +99,20 @@ class AddMultipleStudents extends Component {
   }
 }
 
+// prettier-ignore
 const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   textarea: {
-    width: '75%'
+    width: '75%',
   },
   button: {
     margin: 0,
-    marginBottom: 5
-  }
+    marginBottom: 5,
+  },
 };
 
 export default connect(
