@@ -24,5 +24,5 @@ export const getBlockMode = () => {
 export default {
   getValue(name) {
     return queryParams(name);
-  }
+  },
 };

@@ -49,23 +49,23 @@ exports.install = function (blockly, blockInstallOptions) {
       West: {
         letter: commonMsg.directionWestLetter(),
         image: skin.leftArrow,
-        tooltip: msg.moveWestTooltip()
+        tooltip: msg.moveWestTooltip(),
       },
       East: {
         letter: commonMsg.directionEastLetter(),
         image: skin.rightArrow,
-        tooltip: msg.moveEastTooltip()
+        tooltip: msg.moveEastTooltip(),
       },
       North: {
         letter: commonMsg.directionNorthLetter(),
         image: skin.upArrow,
-        tooltip: msg.moveNorthTooltip()
+        tooltip: msg.moveNorthTooltip(),
       },
       South: {
         letter: commonMsg.directionSouthLetter(),
         image: skin.downArrow,
-        tooltip: msg.moveSouthTooltip()
-      }
+        tooltip: msg.moveSouthTooltip(),
+      },
     },
     generateBlocksForAllDirections: function () {
       SimpleMove.generateBlocksForDirection('North');
@@ -88,21 +88,21 @@ exports.install = function (blockly, blockInstallOptions) {
           this.appendDummyInput()
             .appendField(
               new blockly.FieldLabel(directionConfig.letter, {
-                fixedSize: {width: 12, height: 18}
+                fixedSize: {width: 12, height: 18},
               })
             )
             .appendField(new blockly.FieldImage(directionConfig.image));
           this.setPreviousStatement(true);
           this.setNextStatement(true);
           this.setTooltip(directionConfig.tooltip);
-        }
+        },
       };
     },
     generateCodeGenerator: function (direction) {
       return function () {
         return 'Maze.move' + direction + "('block_id_" + this.id + "');\n";
       };
-    }
+    },
   };
 
   SimpleMove.generateBlocksForAllDirections();
@@ -113,7 +113,7 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Move',
     title: msg.moveForward(),
     tooltip: msg.moveForwardTooltip(),
-    functionName: 'Maze.moveForward'
+    functionName: 'Maze.moveForward',
   });
 
   // Block for putting dirt on to a tile.
@@ -122,7 +122,7 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: 'http://code.google.com/p/blockly/wiki/PutDown',
     title: msg.fill(),
     tooltip: msg.fillTooltip(),
-    functionName: 'Maze.fill'
+    functionName: 'Maze.fill',
   });
 
   // Block for putting for removing dirt from a tile.
@@ -131,7 +131,7 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: 'http://code.google.com/p/blockly/wiki/PickUp',
     title: msg.dig(),
     tooltip: msg.digTooltip(),
-    functionName: 'Maze.dig'
+    functionName: 'Maze.dig',
   });
 
   blockly.Blocks.maze_move = {
@@ -146,12 +146,12 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.moveTooltip());
-    }
+    },
   };
 
   blockly.Blocks.maze_move.DIRECTIONS = [
     [msg.moveForward(), 'moveForward'],
-    [msg.moveBackward(), 'moveBackward']
+    [msg.moveBackward(), 'moveBackward'],
   ];
 
   generator.maze_move = function () {
@@ -172,12 +172,12 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.turnTooltip());
-    }
+    },
   };
 
   blockly.Blocks.maze_turn.DIRECTIONS = [
     [msg.turnLeft() + ' \u21BA', 'turnLeft'],
-    [msg.turnRight() + ' \u21BB', 'turnRight']
+    [msg.turnRight() + ' \u21BB', 'turnRight'],
   ];
 
   generator.maze_turn = function () {
@@ -197,13 +197,13 @@ exports.install = function (blockly, blockInstallOptions) {
         'DIR'
       );
       this.setTooltip(msg.isPathTooltip());
-    }
+    },
   };
 
   blockly.Blocks.maze_isPath.DIRECTIONS = [
     [msg.ifPathAhead(), 'isPathForward'],
     [msg.pathLeft() + ' \u21BA', 'isPathLeft'],
-    [msg.pathRight() + ' \u21BB', 'isPathRight']
+    [msg.pathRight() + ' \u21BB', 'isPathRight'],
   ];
 
   generator.maze_isPath = function () {
@@ -226,7 +226,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setTooltip(msg.ifTooltip());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.Blocks.maze_if.DIRECTIONS = blockly.Blocks.maze_isPath.DIRECTIONS;
@@ -255,7 +255,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setTooltip(msg.ifelseTooltip());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.Blocks.maze_ifElse.DIRECTIONS = blockly.Blocks.maze_isPath.DIRECTIONS;
@@ -286,7 +286,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setTooltip(msg.ifTooltip());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator.karel_if = function () {
@@ -301,7 +301,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.karel_if.DIRECTIONS = [
     [msg.pilePresent(), 'pilePresent'],
     [msg.holePresent(), 'holePresent'],
-    [msg.pathAhead(), 'isPathForward']
+    [msg.pathAhead(), 'isPathForward'],
     //     [msg.noPathAhead(), 'noPathForward']
   ];
 
@@ -321,7 +321,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setTooltip(msg.ifelseTooltip());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator.karel_ifElse = function () {
@@ -349,7 +349,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.whileTooltip());
-    }
+    },
   };
 
   generator.maze_whileNotClear = function () {
@@ -362,7 +362,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Blocks.maze_whileNotClear.DIRECTIONS = [
     [msg.whileMsg() + ' ' + msg.pilePresent(), 'pilePresent'],
-    [msg.whileMsg() + ' ' + msg.holePresent(), 'holePresent']
+    [msg.whileMsg() + ' ' + msg.holePresent(), 'holePresent'],
   ];
 
   blockly.Blocks.maze_untilBlocked = {
@@ -374,7 +374,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.whileTooltip());
-    }
+    },
   };
 
   generator.maze_untilBlocked = function () {
@@ -395,7 +395,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setTooltip(msg.whileTooltip());
-    }
+    },
   };
 
   generator.maze_forever = function () {
@@ -420,7 +420,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.whileTooltip());
-    }
+    },
   };
 
   generator.maze_untilBlockedOrNotClear = function () {
@@ -434,7 +434,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.maze_untilBlockedOrNotClear.DIRECTIONS = [
     [msg.whileMsg() + ' ' + msg.pilePresent(), 'pilePresent'],
     [msg.whileMsg() + ' ' + msg.holePresent(), 'holePresent'],
-    [msg.repeatUntilBlocked(), 'isPathForward']
+    [msg.repeatUntilBlocked(), 'isPathForward'],
   ];
 
   delete blockly.Blocks.procedures_defreturn;

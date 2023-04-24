@@ -12,7 +12,7 @@ class MultipleChoiceSurveyQuestionDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
     closeDialog: PropTypes.func.isRequired,
-    questionData: multipleChoiceDataPropType.isRequired
+    questionData: multipleChoiceDataPropType.isRequired,
   };
 
   render() {
@@ -69,30 +69,30 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   instructions: {
-    marginTop: 20
+    marginTop: 20,
   },
   answers: {
     float: 'left',
-    width: 550
+    width: 550,
   },
   icon: {
-    color: color.level_perfect
+    color: color.level_perfect,
   },
   iconSpace: {
     width: 40,
-    float: 'left'
+    float: 'left',
   },
   answerBlock: {
-    width: '100%'
+    width: '100%',
   },
   answerLetter: {
     width: 30,
     float: 'left',
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  },
 };
 
 export default MultipleChoiceSurveyQuestionDialog;

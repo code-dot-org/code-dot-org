@@ -132,7 +132,7 @@ NetSimVizWire.prototype.render = function (clock) {
       this.localVizNode.posY,
       'L',
       this.remoteVizNode.posX,
-      this.remoteVizNode.posY
+      this.remoteVizNode.posY,
     ].join(' ');
     this.wireCenter_ = this.getWireCenterPosition();
   }
@@ -365,7 +365,7 @@ NetSimVizWire.prototype.snapTextToPosition = function (destination) {
 NetSimVizWire.prototype.getLocalNodePosition = function () {
   return {
     x: this.localVizNode.posX,
-    y: this.localVizNode.posY
+    y: this.localVizNode.posY,
   };
 };
 
@@ -380,6 +380,6 @@ NetSimVizWire.prototype.getWireCenterPosition = function () {
     y:
       (this.remoteVizNode.posY - this.remoteVizNode.posY) / 2 +
       this.localVizNode.posY +
-      TEXT_FINAL_VERTICAL_OFFSET
+      TEXT_FINAL_VERTICAL_OFFSET,
   };
 };

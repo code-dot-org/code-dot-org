@@ -55,7 +55,7 @@ const Timeline = () => {
   const timelineElementProps = {
     barWidth,
     eventVerticalSpace,
-    getEventHeight
+    getEventHeight,
   };
 
   // Generate an array containing measure numbers from 1..measuresToDisplay.

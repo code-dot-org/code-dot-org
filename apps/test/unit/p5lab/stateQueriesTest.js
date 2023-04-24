@@ -3,7 +3,7 @@ import {expect} from '../../util/reconfiguredChai';
 import {forEveryBooleanPermutation} from '../../util/testUtils';
 import {
   allowAnimationMode,
-  countAllowedModes
+  countAllowedModes,
 } from '@cdo/apps/p5lab/stateQueries';
 
 describe('stateQueries', function () {
@@ -16,7 +16,7 @@ describe('stateQueries', function () {
               showAnimationMode: false,
               isEmbedView: a,
               isShareView: b,
-              isReadOnlyWorkspace: c
+              isReadOnlyWorkspace: c,
             })
           )
         ).to.be.false;
@@ -27,7 +27,7 @@ describe('stateQueries', function () {
       expect(
         allowAnimationMode(
           stateFromPageConstants({
-            showAnimationMode: true
+            showAnimationMode: true,
           })
         )
       ).to.be.true;
@@ -39,7 +39,7 @@ describe('stateQueries', function () {
           allowAnimationMode(
             stateFromPageConstants({
               showAnimationMode: a,
-              isEmbedView: true
+              isEmbedView: true,
             })
           )
         ).to.be.false;
@@ -52,7 +52,7 @@ describe('stateQueries', function () {
           allowAnimationMode(
             stateFromPageConstants({
               showAnimationMode: a,
-              isShareView: true
+              isShareView: true,
             })
           )
         ).to.be.false;
@@ -65,7 +65,7 @@ describe('stateQueries', function () {
           allowAnimationMode(
             stateFromPageConstants({
               showAnimationMode: a,
-              isReadOnlyWorkspace: true
+              isReadOnlyWorkspace: true,
             })
           )
         ).to.be.false;

@@ -1,13 +1,13 @@
 require 'test_helper'
 
 class Services::CompleteApplicationReminderTest < ActiveSupport::TestCase
-  setup do
+  setup_all do
     Pd::Application::TeacherApplication.any_instance.stubs(:deliver_email)
   end
 
   test 'send_complete_application_reminders!' do
     # The expected behavior of this method is to find applications needing incomplete reminder
-    # emails and queue up the emails to be sent at the appropriate times.  It runs on a cronjob.
+    # emails and send the emails to be sent at the appropriate times.  It runs on a cronjob.
     # Here, we walk through the typical flow for an application and verify that emails are queued
     # at the appropriate moments.
     #
@@ -57,7 +57,7 @@ class Services::CompleteApplicationReminderTest < ActiveSupport::TestCase
 
   test 'send_complete_application_reminders! takes into account user updates' do
     # Here, we walk through a flow for an application where a teacher is frequently
-    # updating and saving their application and verify that emails are queued
+    # updating and saving their application and verify that emails are sent
     # at the appropriate moments.
     #
     Timecop.freeze do

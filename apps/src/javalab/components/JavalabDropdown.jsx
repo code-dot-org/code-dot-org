@@ -24,7 +24,7 @@ export default class JavalabDropdown extends Component {
         }
       });
     },
-    style: PropTypes.object
+    style: PropTypes.object,
   };
 
   // filter removes null elements

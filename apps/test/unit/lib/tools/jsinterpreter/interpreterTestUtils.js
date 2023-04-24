@@ -72,6 +72,6 @@ export function makeAssertableObj(
     interpreterValue,
     nativeValue: nativeVar,
     nativeParentObj,
-    maxDepth
+    maxDepth,
   };
 }
