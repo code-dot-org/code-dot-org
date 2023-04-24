@@ -8,7 +8,7 @@ import {Validator} from './ProgressManager';
 const KnownConditions: KnownConditions = {
   PLAYED_ONE_SOUND: 'played_one_sound',
   PLAYED_TWO_SOUNDS_TOGETHER: 'played_two_sounds_together',
-  PLAYED_THREE_SOUNDS_TOGETHER: 'played_three_sounds_together'
+  PLAYED_THREE_SOUNDS_TOGETHER: 'played_three_sounds_together',
 };
 
 export default class MusicValidator extends Validator {

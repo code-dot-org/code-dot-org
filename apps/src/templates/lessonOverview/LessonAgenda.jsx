@@ -5,7 +5,7 @@ import _ from 'lodash';
 
 export default class LessonAgenda extends Component {
   static propTypes = {
-    activities: PropTypes.array.isRequired
+    activities: PropTypes.array.isRequired,
   };
 
   render() {

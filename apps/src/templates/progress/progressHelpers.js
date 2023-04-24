@@ -5,7 +5,7 @@ import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {PUZZLE_PAGE_NONE} from './progressTypes';
 import {
   activityCssClass,
-  resultFromStatus
+  resultFromStatus,
 } from '@cdo/apps/code-studio/activityUtils';
 import _ from 'lodash';
 
@@ -184,7 +184,7 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
     LevelStatus.perfect,
     LevelStatus.submitted,
     LevelStatus.free_play_complete,
-    LevelStatus.completed_assessment
+    LevelStatus.completed_assessment,
   ];
 
   let attempted = 0;
@@ -217,7 +217,7 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
     imperfectPercent: getPercent(imperfect),
     completedPercent: getPercent(completed),
     timeSpent: timeSpent,
-    lastTimestamp: lastTimestamp
+    lastTimestamp: lastTimestamp,
   };
 }
 
@@ -279,7 +279,7 @@ export const processedLevel = level => {
         ? level.page_number
         : PUZZLE_PAGE_NONE,
     sublevels:
-      level.sublevels && level.sublevels.map(level => processedLevel(level))
+      level.sublevels && level.sublevels.map(level => processedLevel(level)),
   };
 };
 
@@ -324,7 +324,7 @@ export const levelProgressFromServer = serverProgress => {
     timeSpent: serverProgress.time_spent,
     teacherFeedbackReviewState: serverProgress.teacher_feedback_review_state,
     lastTimestamp: serverProgress.last_progress_at,
-    pages: getPagesProgress(serverProgress)
+    pages: getPagesProgress(serverProgress),
   };
 };
 

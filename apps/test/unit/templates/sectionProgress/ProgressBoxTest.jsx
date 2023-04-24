@@ -10,7 +10,7 @@ const DEFAULT_PROPS = {
   imperfect: 0,
   perfect: 2,
   style: {},
-  lessonIsAllAssessment: false
+  lessonIsAllAssessment: false,
 };
 
 describe('ProgressBox', () => {

@@ -103,13 +103,13 @@ describe('Applab Exporter,', function () {
 
     assetPrefix.init({
       channel: 'some-channel-id',
-      assetPathPrefix: '/v3/assets/'
+      assetPathPrefix: '/v3/assets/',
     });
 
     assets.listStore.list.returns([
       {filename: 'foo.png'},
       {filename: 'bar.png'},
-      {filename: 'zoo.mp3'}
+      {filename: 'zoo.mp3'},
     ]);
     server.respondWith('/v3/assets/some-channel-id/foo.png', 'foo.png content');
     server.respondWith('/v3/assets/some-channel-id/bar.png', 'bar.png content');
@@ -170,7 +170,7 @@ describe('Applab Exporter,', function () {
         iframeEmbed: false,
         lastAttempt: null,
         submittable: false,
-        widgetMode: false
+        widgetMode: false,
       },
       showUnusedBlocks: true,
       fullWidth: true,
@@ -207,7 +207,7 @@ describe('Applab Exporter,', function () {
       report: {
         fallback_response: null,
         callback: null,
-        sublevelCallback: null
+        sublevelCallback: null,
       },
       isUS: true,
       send_to_phone_url: 'http://localhost-studio.code.org:3000/sms/send',
@@ -222,7 +222,7 @@ describe('Applab Exporter,', function () {
           'Code.org%20uses%20p5.play,%20which%20is%20licensed%20under%20%3Ca%20href=%22http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html%22%3Ethe%20GNU%20LGPL%202.1%3C/a%3E.',
         powered_by_aws: 'Powered by Amazon Web Services',
         trademark:
-          '\u0026copy;%20Code.org,%202017.%20Code.org\u0026reg;,%20the%20CODE%20logo%20and%20Hour%20of%20Code\u0026reg;%20are%20trademarks%20of%20Code.org.'
+          '\u0026copy;%20Code.org,%202017.%20Code.org\u0026reg;,%20the%20CODE%20logo%20and%20Hour%20of%20Code\u0026reg;%20are%20trademarks%20of%20Code.org.',
       },
       teacherMarkdown: null,
       dialog: {
@@ -233,9 +233,9 @@ describe('Applab Exporter,', function () {
         sublevelCallback: null,
         app: 'applab',
         level: 'custom',
-        shouldShowDialog: true
+        shouldShowDialog: true,
       },
-      locale: 'en_us'
+      locale: 'en_us',
     });
 
     stashedCookieKey = window.userNameCookieKey;
@@ -345,7 +345,7 @@ describe('Applab Exporter,', function () {
           'my-app/assets/zoo.mp3',
           'my-app/code.js',
           'my-app/index.html',
-          'my-app/style.css'
+          'my-app/style.css',
         ]);
       });
 
@@ -554,7 +554,7 @@ describe('Applab Exporter,', function () {
             'hi',
             'd',
             'e',
-            'f'
+            'f',
           ]);
           done();
         }
@@ -571,9 +571,9 @@ describe('getAppOptionsFile helper function', () => {
       channel: 'this should be there',
       level: {
         isK1: 'this should not show up',
-        skin: 'this should show up'
+        skin: 'this should show up',
       },
-      keyMissingFromAllowlist: 'should not show up'
+      keyMissingFromAllowlist: 'should not show up',
     });
     assert.equal(
       getAppOptionsFile(),

@@ -8,12 +8,12 @@ export const commands = {
     return new Promise((resolve, reject) => {
       $.ajax({
         url: '/api/v1/ml_models/' + opts.modelId,
-        method: 'GET'
+        method: 'GET',
       })
         .then(modelData => {
           const predictParams = {
             ...modelData,
-            testData: opts.testValues
+            testData: opts.testValues,
           };
           const result = predict(predictParams);
           opts.callback(result);
@@ -24,5 +24,5 @@ export const commands = {
           return reject({message: 'An error occurred'});
         });
     });
-  }
+  },
 };

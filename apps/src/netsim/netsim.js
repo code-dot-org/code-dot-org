@@ -219,8 +219,8 @@ NetSim.prototype.init = function (config) {
     return page({
       data: {
         localeDirection: getStore().getState().isRtl ? 'rtl' : 'ltr',
-        instructions: this.level.shortInstructions
-      }
+        instructions: this.level.shortInstructions,
+      },
     });
   }.bind(this);
 
@@ -332,36 +332,36 @@ NetSim.prototype.initWithUser_ = function (user) {
       logTitle: i18n.receivedMessageLog(),
       isMinimized: false,
       hasUnreadMessages: true,
-      packetSpec: this.level.clientInitialPacketHeader
+      packetSpec: this.level.clientInitialPacketHeader,
     });
 
     this.sentMessageLog_ = new NetSimLogPanel($('#netsim-sent'), {
       logTitle: i18n.sentMessageLog(),
       isMinimized: true,
       hasUnreadMessages: false,
-      packetSpec: this.level.clientInitialPacketHeader
+      packetSpec: this.level.clientInitialPacketHeader,
     });
   } else if (this.level.messageGranularity === MessageGranularity.BITS) {
     this.receivedMessageLog_ = new NetSimBitLogPanel($('#netsim-received'), {
       logTitle: i18n.receiveBits(),
       isMinimized: false,
       netsim: this,
-      showReadWireButton: true
+      showReadWireButton: true,
     });
 
     this.sentMessageLog_ = new NetSimBitLogPanel($('#netsim-sent'), {
       logTitle: i18n.sentBitsLog(),
       isMinimized: false,
-      netsim: this
+      netsim: this,
     });
   }
 
   this.statusPanel_ = new NetSimStatusPanel($('#netsim-status'), {
-    disconnectCallback: this.disconnectFromRemote.bind(this, function () {})
+    disconnectCallback: this.disconnectFromRemote.bind(this, function () {}),
   });
 
   this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'), {
-    user
+    user,
   });
 
   this.visualization_ = new NetSimVisualization(
@@ -381,7 +381,7 @@ NetSim.prototype.initWithUser_ = function (user) {
     showTeacherLogCallback: this.routerLogModal_.show.bind(
       this.routerLogModal_,
       true
-    )
+    ),
   });
 
   // Tab panel - contains instructions, my device, router, dns
@@ -401,7 +401,7 @@ NetSim.prototype.initWithUser_ = function (user) {
       showRouterLogCallback: this.routerLogModal_.show.bind(
         this.routerLogModal_,
         false
-      )
+      ),
     });
     this.tabs_.attachToRunLoop(this.runLoop_);
   }
@@ -1080,7 +1080,7 @@ NetSim.prototype.render = function () {
         myHostname: this.myNode.getHostname(),
         myAddress: myAddress,
         remoteNodeName: this.getConnectedRemoteNode().getDisplayName(),
-        shareLink: this.lobby_.getShareLink()
+        shareLink: this.lobby_.getShareLink(),
       });
     }
   } else {
@@ -1376,7 +1376,7 @@ NetSim.prototype.completeLevelAndContinue = function () {
           window.location.href = serverResponse.redirect;
         }
       }
-    }.bind(this)
+    }.bind(this),
   });
 };
 

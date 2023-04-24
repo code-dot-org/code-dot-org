@@ -29,7 +29,7 @@ describe('AdvancedSettingToggles', () => {
           pairingAllowed: true,
           restrictSection: false,
           ttsAutoplayEnabled: false,
-          lessonExtras: true
+          lessonExtras: true,
         }}
         assignedUnitLessonExtrasAvailable={true}
       />
@@ -47,7 +47,7 @@ describe('AdvancedSettingToggles', () => {
           pairingAllowed: true,
           restrictSection: false,
           ttsAutoplayEnabled: false,
-          lessonExtras: true
+          lessonExtras: true,
         }}
         assignedUnitTextToSpeechEnabled={true}
       />
@@ -65,7 +65,7 @@ describe('AdvancedSettingToggles', () => {
           pairingAllowed: true,
           restrictSection: false,
           ttsAutoplayEnabled: false,
-          lessonExtras: true
+          lessonExtras: true,
         }}
         assignedUnitTextToSpeechEnabled={true}
       />
@@ -85,7 +85,7 @@ describe('AdvancedSettingToggles', () => {
           pairingAllowed: true,
           restrictSection: false,
           ttsAutoplayEnabled: false,
-          lessonExtras: true
+          lessonExtras: true,
         }}
       />
     );

@@ -4,7 +4,7 @@ import {
   STATUS_MESSAGE_PREFIX,
   ExecutionType,
   AuthorizerSignalType,
-  CsaViewMode
+  CsaViewMode,
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -135,13 +135,13 @@ export default class JavabuilderConnection {
           data: JSON.stringify(data),
           headers: {
             'Content-Type': 'application/json',
-            'X-CSRF-Token': this.csrfToken
-          }
+            'X-CSRF-Token': this.csrfToken,
+          },
         }
       : {
           url: url,
           type: 'get',
-          data: data
+          data: data,
         };
 
     this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${javalabMsg.connecting()}`);
@@ -167,7 +167,7 @@ export default class JavabuilderConnection {
       options: this.options,
       executionType: this.executionType,
       useDashboardSources: false,
-      miniAppType: this.miniAppType
+      miniAppType: this.miniAppType,
     };
   }
 
@@ -208,7 +208,7 @@ export default class JavabuilderConnection {
         break;
       case StatusMessageType.GENERATING_PROGRESS:
         message = javalabMsg.generatingProgress({
-          progressTime: detail.progressTime
+          progressTime: detail.progressTime,
         });
         lineBreakCount = 1;
         break;
@@ -354,7 +354,7 @@ export default class JavabuilderConnection {
     if (!this.seenUnsupportedNeighborhoodMessage) {
       this.onOutputMessage(
         javalabMsg.exceptionMessage({
-          message: getUnsupportedMiniAppMessage(CsaViewMode.NEIGHBORHOOD)
+          message: getUnsupportedMiniAppMessage(CsaViewMode.NEIGHBORHOOD),
         })
       );
       this.onNewlineMessage();
@@ -366,7 +366,7 @@ export default class JavabuilderConnection {
     if (!this.seenUnsupportedTheaterMessage) {
       this.onOutputMessage(
         javalabMsg.exceptionMessage({
-          message: getUnsupportedMiniAppMessage(CsaViewMode.THEATER)
+          message: getUnsupportedMiniAppMessage(CsaViewMode.THEATER),
         })
       );
       this.onNewlineMessage();
@@ -420,7 +420,7 @@ export default class JavabuilderConnection {
         break;
       case AuthorizerSignalType.NEAR_LIMIT:
         message = javalabMsg.authorizerNearLimit({
-          attemptsLeft: detail.remaining
+          attemptsLeft: detail.remaining,
         });
         break;
       case AuthorizerSignalType.USER_BLOCKED:
@@ -466,7 +466,7 @@ export default class JavabuilderConnection {
       logToCloud.PageAction.JavabuilderWebSocketConnectionError,
       {
         errorMessage,
-        channelId: this.channelId
+        channelId: this.channelId,
       }
     );
   }

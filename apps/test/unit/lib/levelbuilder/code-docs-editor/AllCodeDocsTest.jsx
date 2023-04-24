@@ -12,17 +12,17 @@ describe('AllCodeDocs', () => {
         {
           id: 1,
           name: 'applab',
-          title: 'App Lab'
+          title: 'App Lab',
         },
         {
           id: 2,
-          name: 'spritelab'
+          name: 'spritelab',
         },
         {
           id: 3,
           name: 'gamelab',
-          title: 'Game Lab'
-        }
+          title: 'Game Lab',
+        },
       ],
       allCategories: [
         {
@@ -30,23 +30,23 @@ describe('AllCodeDocs', () => {
           environmentId: 2,
           environmentName: 'spritelab',
           key: 'math',
-          formattedName: 'Spritelab: Math'
+          formattedName: 'Spritelab: Math',
         },
         {
           id: 200,
           environmentId: 1,
           environmentName: 'applab',
           key: 'uicontrols',
-          formattedName: 'App Lab: UI Controls'
+          formattedName: 'App Lab: UI Controls',
         },
         {
           id: 300,
           environmentId: 3,
           environmentName: 'gamelab',
           key: 'sprites',
-          formattedName: 'Game Lab: Sprites'
-        }
-      ]
+          formattedName: 'Game Lab: Sprites',
+        },
+      ],
     };
   });
 

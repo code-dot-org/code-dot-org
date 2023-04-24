@@ -7,7 +7,7 @@ import {
   fakeLevels,
   fakeLevel,
   createStoreWithHiddenLesson,
-  createStoreWithLockedLesson
+  createStoreWithLockedLesson,
 } from './progressTestHelpers';
 import {Provider} from 'react-redux';
 
@@ -17,30 +17,30 @@ const defaultProps = {
       fakeLesson('Jigsaw', 1, false, 1),
       fakeLesson('Maze', 2, false, 2),
       fakeLesson('Artist', 3, false, 3),
-      fakeLesson('Something', 4, false, 4)
+      fakeLesson('Something', 4, false, 4),
     ],
     levelsByLesson: [
       [
         {
           ...fakeLevels(1)[0],
-          name: 'First progression'
+          name: 'First progression',
         },
         ...fakeLevels(5, 2).map(level => ({
           ...level,
-          progression: 'Second Progression'
+          progression: 'Second Progression',
         })),
         {
           ...fakeLevels(1)[0],
-          name: 'Last progression'
-        }
+          name: 'Last progression',
+        },
       ],
       fakeLevels(2),
       fakeLevels(2),
-      fakeLevels(2)
-    ]
+      fakeLevels(2),
+    ],
   },
   viewAs: ViewType.Participant,
-  lessonIsVisible: () => true
+  lessonIsVisible: () => true,
 };
 
 export default storybook => {
@@ -53,7 +53,7 @@ export default storybook => {
         >
           <SummaryProgressTable {...defaultProps} />
         </Provider>
-      )
+      ),
     },
     {
       name: 'SummaryProgressTable with focus area',
@@ -67,17 +67,17 @@ export default storybook => {
               lessons: defaultProps.groupedLesson.lessons.map(
                 (lesson, index) => ({
                   ...lesson,
-                  isFocusArea: index === 1
+                  isFocusArea: index === 1,
                 })
               ),
               levelsByLesson: defaultProps.groupedLesson.levelsByLesson.map(
                 (levels, index) => (index === 1 ? fakeLevels(8) : levels)
-              )
+              ),
             }}
             lessonIsVisible={() => true}
           />
         </Provider>
-      )
+      ),
     },
     {
       name: 'SummaryProgressTable for peer reviews',
@@ -92,8 +92,8 @@ export default storybook => {
                   id: -1,
                   isFocusArea: false,
                   lockable: false,
-                  name: 'You must complete 3 reviews for this unit'
-                }
+                  name: 'You must complete 3 reviews for this unit',
+                },
               ],
               levelsByLesson: [
                 [
@@ -103,7 +103,7 @@ export default storybook => {
                     status: LevelStatus.perfect,
                     isLocked: false,
                     url: '/peer_reviews/1',
-                    levelNumber: 1
+                    levelNumber: 1,
                   },
                   {
                     id: '-1',
@@ -111,7 +111,7 @@ export default storybook => {
                     status: LevelStatus.not_tried,
                     isLocked: false,
                     url: '/pull-review',
-                    levelNumber: 2
+                    levelNumber: 2,
                   },
                   {
                     id: '-1',
@@ -120,15 +120,15 @@ export default storybook => {
                     status: LevelStatus.not_tried,
                     isLocked: true,
                     url: '',
-                    levelNumber: 3
-                  }
-                ]
-              ]
+                    levelNumber: 3,
+                  },
+                ],
+              ],
             }}
             lessonIsVisible={() => true}
           />
         </Provider>
-      )
+      ),
     },
     {
       name: 'second lesson is a hidden lesson, viewing as instructor',
@@ -142,7 +142,7 @@ export default storybook => {
             }
           />
         </Provider>
-      )
+      ),
     },
     {
       name: 'third lesson is a hidden lesson, viewing as instructor',
@@ -156,7 +156,7 @@ export default storybook => {
             }
           />
         </Provider>
-      )
+      ),
     },
     {
       name: 'second lesson is a hidden lesson, viewing as participant',
@@ -172,7 +172,7 @@ export default storybook => {
             }
           />
         </Provider>
-      )
+      ),
     },
     {
       name: 'third row is a hidden lesson, viewing as participant',
@@ -188,7 +188,7 @@ export default storybook => {
             }
           />
         </Provider>
-      )
+      ),
     },
     {
       name: 'locked lesson in current section as instructor',
@@ -202,14 +202,14 @@ export default storybook => {
               lessons: [
                 fakeLesson('Jigsaw', 1, false, 1),
                 fakeLesson('Assessment One', 2, true),
-                fakeLesson('Artist', 3, false, 2)
+                fakeLesson('Artist', 3, false, 2),
               ],
-              levelsByLesson: [fakeLevels(3), fakeLevels(4), fakeLevels(2)]
+              levelsByLesson: [fakeLevels(3), fakeLevels(4), fakeLevels(2)],
             }}
             viewAs={ViewType.Instructor}
           />
         </Provider>
-      )
+      ),
     },
     {
       name: 'locked lesson as participant',
@@ -221,20 +221,20 @@ export default storybook => {
               lessons: [
                 fakeLesson('Jigsaw', 1, false, 1),
                 fakeLesson('Assessment One', 2, true),
-                fakeLesson('Artist', 3, false, 2)
+                fakeLesson('Artist', 3, false, 2),
               ],
               levelsByLesson: [
                 fakeLevels(3),
                 fakeLevels(4).map(level => ({
                   ...level,
-                  isLocked: true
+                  isLocked: true,
                 })),
-                fakeLevels(2)
-              ]
+                fakeLevels(2),
+              ],
             }}
           />
         </Provider>
-      )
+      ),
     },
     {
       name: 'unlocked lesson in current section as instructor',
@@ -248,15 +248,15 @@ export default storybook => {
               lessons: [
                 fakeLesson('Jigsaw', 1, false, 1),
                 fakeLesson('Assessment One', 2, true),
-                fakeLesson('Artist', 3, false, 2)
+                fakeLesson('Artist', 3, false, 2),
               ],
-              levelsByLesson: [fakeLevels(3), fakeLevels(4), fakeLevels(2)]
+              levelsByLesson: [fakeLevels(3), fakeLevels(4), fakeLevels(2)],
             }}
             viewAs={ViewType.Instructor}
             lessonIsVisible={() => true}
           />
         </Provider>
-      )
+      ),
     },
     {
       name: 'locked, hidden lesson as instructor',
@@ -268,9 +268,9 @@ export default storybook => {
               lessons: [
                 fakeLesson('Jigsaw', 1, false, 1),
                 fakeLesson('Assessment One', 2, true),
-                fakeLesson('Artist', 3, false, 2)
+                fakeLesson('Artist', 3, false, 2),
               ],
-              levelsByLesson: [fakeLevels(3), fakeLevels(4), fakeLevels(2)]
+              levelsByLesson: [fakeLevels(3), fakeLevels(4), fakeLevels(2)],
             }}
             viewAs={ViewType.Instructor}
             lessonIsVisible={(lesson, viewAs) =>
@@ -278,7 +278,7 @@ export default storybook => {
             }
           />
         </Provider>
-      )
+      ),
     },
     {
       name: 'unplugged lesson',
@@ -291,12 +291,12 @@ export default storybook => {
             groupedLesson={{
               lessons: [fakeLesson('Lesson with Unplugged', 1, false, 1)],
               levelsByLesson: [
-                [fakeLevel({isUnplugged: true}), ...fakeLevels(3)]
-              ]
+                [fakeLevel({isUnplugged: true}), ...fakeLevels(3)],
+              ],
             }}
           />
         </Provider>
-      )
-    }
+      ),
+    },
   ]);
 };

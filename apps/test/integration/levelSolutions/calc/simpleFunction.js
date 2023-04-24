@@ -36,7 +36,7 @@ var level = {
     '</block>' +
     '</xml>',
   ideal: Infinity,
-  freePlay: false
+  freePlay: false,
 };
 
 module.exports = {
@@ -48,7 +48,7 @@ module.exports = {
       description: 'Correct answer',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       xml:
         '<xml>' +
@@ -81,13 +81,13 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'Incorrect evaluation for f(3)',
       expected: {
         result: false,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL,
       },
       xml:
         '<xml>' +
@@ -117,13 +117,13 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'Correct evaluation for f(3), but not other inputs',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
       xml:
         '<xml>' +
@@ -178,13 +178,13 @@ module.exports = {
         }, 0);
 
         return true;
-      }
+      },
     },
     {
       description: 'Question marks in answer',
       expected: {
         result: false,
-        testResult: TestResults.QUESTION_MARKS_IN_NUMBER_FIELD
+        testResult: TestResults.QUESTION_MARKS_IN_NUMBER_FIELD,
       },
       // same as correct answer, but with a ???
       xml:
@@ -218,7 +218,7 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };
