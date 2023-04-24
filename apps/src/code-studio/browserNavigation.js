@@ -48,7 +48,11 @@ export function setupNavigationHandler(lessonData) {
 
 // Handles a user navigation to a new level, by pushing this new level's URL
 // onto the browser session history stack, and updating the window title.
-export function handleNavigateToLevel(progressStoreState, levelUrl, levelId) {
+export function updateBrowserForLevelNavigation(
+  progressStoreState,
+  levelUrl,
+  levelId
+) {
   window.history.pushState({}, '', levelUrl + window.location.search);
   setWindowTitle(progressStoreState, levelId);
 }

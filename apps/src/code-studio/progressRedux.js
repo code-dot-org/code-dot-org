@@ -15,12 +15,11 @@ import {
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {authorizeLockable} from './lessonLockRedux';
-import {handleNavigateToLevel} from './browserNavigation';
+import {updateBrowserForLevelNavigation} from './browserNavigation';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
 const SET_CURRENT_LEVEL_ID = 'progress/SET_CURRENT_LEVEL_ID';
-const NAVIGATED_TO_LEVEL_ID = 'progress/NAVIGATED_TO_LEVEL_ID';
 const SET_UNIT_PROGRESS = 'progress/SET_UNIT_PROGRESS';
 const CLEAR_RESULTS = 'progress/CLEAR_RESULTS';
 const MERGE_RESULTS = 'progress/MERGE_RESULTS';
@@ -92,8 +91,8 @@ export function navigateToLevelId(levelId) {
       level.ids.find(id => id === levelId)
     );
 
-    handleNavigateToLevel(state, newLevel.url, levelId);
-    dispatch(navigatedToLevelId(levelId));
+    updateBrowserForLevelNavigation(state, newLevel.url, levelId);
+    dispatch(setCurrentLevelId(levelId));
   };
 }
 
@@ -132,13 +131,6 @@ export default function reducer(state = initialState, action) {
   }
 
   if (action.type === SET_CURRENT_LEVEL_ID) {
-    return {
-      ...state,
-      currentLevelId: action.levelId
-    };
-  }
-
-  if (action.type === NAVIGATED_TO_LEVEL_ID) {
     return {
       ...state,
       currentLevelId: action.levelId
@@ -460,11 +452,6 @@ export const initProgress = ({
 
 export const setCurrentLevelId = levelId => ({
   type: SET_CURRENT_LEVEL_ID,
-  levelId: levelId
-});
-
-export const navigatedToLevelId = levelId => ({
-  type: NAVIGATED_TO_LEVEL_ID,
   levelId: levelId
 });
 
