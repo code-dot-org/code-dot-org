@@ -641,9 +641,9 @@ it:
         csd5-draft:
           lesson_groups:
             csd5_1:
-              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+              display_name: 'Capitolo 1: Rappresentazione dei dati'
             csd5_2:
-              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+              display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
         csd6-2017:
           lesson_groups:
             csd6_1:
@@ -652,12 +652,14 @@ it:
               display_name: 'Capitolo 2: Input Hardware'
             csd_survey:
               display_name: Sondaggio Post-corso
+        csd3-draft:
+          title: 'Unità 3 - Programmazione: animazioni e giochi'
         csd5-2017:
           lesson_groups:
             csd5_1:
-              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+              display_name: 'Capitolo 1: Rappresentazione dei dati'
             csd5_2:
-              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+              display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
             csd_survey:
               display_name: Sondaggio Post-corso
         csp-post-survey:
@@ -903,6 +905,7 @@ it:
             cspSurvey:
               display_name: Sondaggio
         csd4-draft:
+          title: Unità 4 - Revisione delle bozze
           lesson_groups:
             csd4_1:
               display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
@@ -962,9 +965,9 @@ it:
         csd5-old:
           lesson_groups:
             csd5_1:
-              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+              display_name: 'Capitolo 1: Rappresentazione dei dati'
             csd5_2:
-              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+              display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
         csd4-old:
           lesson_groups:
             csd4_1:
@@ -1023,6 +1026,7 @@ it:
             csd6_2:
               display_name: 'Capitolo 2: Input Hardware'
         csd3-1819draft:
+          title: Unità 3 - Animazioni e giochi
           description_short: Impara a programmare animazioni, arte interattiva e giochi
             in Sviluppo Giochi.
           lesson_groups:
@@ -1214,9 +1218,9 @@ it:
         csd5-2018:
           lesson_groups:
             csd5_1:
-              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+              display_name: 'Capitolo 1: Rappresentazione dei dati'
             csd5_2:
-              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+              display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
             cspSurvey:
               display_name: Sondaggio
         csp2-2018:
@@ -1719,15 +1723,15 @@ it:
             csd4_2:
               display_name: 'Capitolo 2: prototipazione di app'
             csd5_2:
-              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+              display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
             cspSurvey:
               display_name: Sondaggio
         csd5-2019:
           lesson_groups:
             csd5_1:
-              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+              display_name: 'Capitolo 1: Rappresentazione dei dati'
             csd5_2:
-              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+              display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
             cspSurvey:
               display_name: Sondaggio
         csd6-2019:
@@ -2201,6 +2205,7 @@ it:
             cspSurvey2020:
               display_name: Sondaggio Post-corso
         csd2-2020:
+          title: Unità 2 - Sviluppo Web ('20-'21)
           description_short: "  Imparare a costruire il tuo sito web con Sviluppo
             Web."
           lesson_groups:
@@ -2231,15 +2236,15 @@ it:
             csd4_2:
               display_name: 'Capitolo 2: prototipazione di app'
             csd5_2:
-              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+              display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
             cspSurvey:
               display_name: Sondaggio
         csd5-2020:
           lesson_groups:
             csd5_1:
-              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+              display_name: 'Capitolo 1: Rappresentazione dei dati'
             csd5_2:
-              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+              display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
             cspSurvey:
               display_name: Sondaggio
         csd6-2020:
@@ -2609,6 +2614,8 @@ it:
           name: epidemia
           student_description: Usa il Laboratorio dei personaggi per programmare la
             simulazione di un'epidemia di virus.
+        apps-for-good:
+          title: App per il bene comune
         2021drafting:
           lesson_groups:
             introduction:
@@ -2750,15 +2757,42 @@ it:
                 esplorare altri ruoli nello sviluppo del software, come la gestione
                 dei prodotti, il marketing, la progettazione e i test.
             csd5_2:
-              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+              display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
             cspSurvey:
               display_name: Sondaggio
         csd5-2021:
+          title: Dati e Società ('21-'22)
           lesson_groups:
             csd5_1:
-              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+              display_name: 'Capitolo 1: Rappresentazione dei dati'
+              big_questions: |-
+                -   Perché il modello di rappresentazione è importante nella risoluzione dei problemi?
+                -   Di quali caratteristiche ha bisogno un sistema di rappresentazione per essere utile?
+                -   Cosa serve per creare sistemi di rappresentazione binaria utilizzabili?
+                -   Come possiamo combinare più sistemi per ottenere informazioni più complesse?
+              description: Questo capitolo si concentra sulla rappresentazione dei
+                dati e sul suo ruolo nella risoluzione dei problemi relativi ai dati.
+                Gli studenti imparano di cosa ha bisogno un sistema di rappresentazione
+                per essere utile e come i computer sono in grado di rappresentare
+                diversi tipi di dati utilizzando sistemi binari. Per il progetto del
+                capitolo, ogni studente rappresenta il proprio giorno perfetto su
+                una scheda perforata binaria e poi tutti si scambiano le schede per
+                decifrarle.
             csd5_2:
-              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+              display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
+              big_questions: |-
+                -   In che modo i dati ci aiutano a risolvere i problemi?
+                -   In che modo computer e umani utilizzano i dati in modo diverso?
+                -   Quali parti del processo di risoluzione dei problemi relativi ai dati possono essere automatizzate?
+                -   Quali tipi di problemi i computer utilizzano i dati per risolvere nel mondo reale?
+              description: Gli studenti esplorano come i dati possono essere utilizzati
+                per rispondere a domande interessanti e risolvere problemi. Utilizzando
+                una versione modificata del processo generale di risoluzione dei problemi,
+                gli studenti esaminano come i computer e gli esseri umani utilizzano
+                i dati in modo diverso e valutano i pro e i contro dell'automazione
+                della risoluzione dei problemi. Dopo aver appreso i modi in cui i
+                computer utilizzano i dati nel mondo reale, gli studenti scelgono
+                un loro problema e utilizzano i dati per risolverlo.
             cspSurvey:
               display_name: Sondaggio
         csd6-2021:
@@ -3098,7 +3132,7 @@ it:
             csd4_2:
               display_name: 'Capitolo 2: prototipazione di app'
             csd5_2:
-              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+              display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
             cspSurvey:
               display_name: Sondaggio
             csdSurvey:
@@ -3106,9 +3140,9 @@ it:
         csd5-preview-2021:
           lesson_groups:
             csd5_1:
-              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+              display_name: 'Capitolo 1: Rappresentazione dei dati'
             csd5_2:
-              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+              display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
             cspSurvey:
               display_name: Sondaggio
         contagion-pilot:
@@ -3193,12 +3227,80 @@ it:
               display_name: Sondaggio
         aiml-2021:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolo 1 - Comprendere l'apprendimento automatico
+              description: Gli studenti imparano le basi dell'apprendimento automatico
+                e utilizzano uno strumento chiamato Laboratorio di Intelligenza Artificiale
+                per creare modelli di machine learning che possono essere utilizzati
+                in Sviluppo App. L'unità inizia con una panoramica dell'apprendimento
+                automatico e di come i computer possono utilizzare i modelli nei dati
+                per prendere decisioni e previsioni. Quindi, gli studenti imparano
+                come utilizzare Laboratorio di Intelligenza Artificiale per addestrare
+                modelli a partire da dati tabulari esplorando al contempo i problemi
+                di pregiudizio. Le lezioni seguono uno schema ripetuto «Lezione tradizionale
+                - Laboratorio di Intelligenza Artificiale - Sviluppo App» in modo
+                che gli studenti vengano costantemente esposti ai concetti e agli
+                strumenti dell'apprendimento automatico. Il capitolo si conclude con
+                un progetto in cui gli studenti selezionano da una serie di insiemi
+                di dati appartenenti al mondo reale per addestrare un modello di apprendimento
+                automatico e creare un'app.
+              big_questions: |-
+                -   In che modo l'apprendimento automatico trova modelli nei dati per prendere decisioni?
+                -   Come possiamo evitare i pregiudizi durante l'addestramento di un modello di apprendimento automatico?
+            lessonGroup-3:
+              display_name: Capitolo 2 - Progettazione di un'app di apprendimento
+                automatico
+              big_questions: "-   Come si può utilizzare l'apprendimento automatico
+                per risolvere i problemi della nostra comunità?"
+              description: Questo capitolo prepara gli studenti a diventare studiosi
+                dell'apprendimento automatico per creare un'app che risolva un problema
+                nella loro comunità. Gli studenti seguono un gruppo immaginario di
+                studenti mentre definiscono un problema, sviluppano un sondaggio per
+                raccogliere dati, analizzano i propri dati nel Laboratorio di Intelligenza
+                Artificiale, creano una scheda modello e creano un'app per risolvere
+                il problema. Poi, nel progetto finale, gli studenti ripetono questi
+                stessi passaggi con un problema che stia a cuore alla propria comunità.
             lessonGroup-4:
               display_name: Sondaggio
         csd7-2021:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolo 1 - Comprendere l'apprendimento automatico
+              big_questions: |-
+                -   In che modo l'apprendimento automatico trova modelli nei dati per prendere decisioni?
+                -   Come possiamo evitare i pregiudizi durante l'addestramento di un modello di apprendimento automatico?
+              description: Gli studenti imparano le basi dell'apprendimento automatico
+                e utilizzano uno strumento chiamato Laboratorio di Intelligenza Artificiale
+                per creare modelli di machine learning che possono essere utilizzati
+                in Sviluppo App. L'unità inizia con una panoramica dell'apprendimento
+                automatico e di come i computer possono utilizzare i modelli nei dati
+                per prendere decisioni e previsioni. Quindi, gli studenti imparano
+                come utilizzare Laboratorio di Intelligenza Artificiale per addestrare
+                modelli a partire da dati tabulari esplorando al contempo i problemi
+                di pregiudizio. Le lezioni seguono uno schema ripetuto «Lezione tradizionale
+                - Laboratorio di Intelligenza Artificiale - Sviluppo App» in modo
+                che gli studenti vengano costantemente esposti ai concetti e agli
+                strumenti dell'apprendimento automatico. Il capitolo si conclude con
+                un progetto in cui gli studenti selezionano da una serie di insiemi
+                di dati appartenenti al mondo reale per addestrare un modello di apprendimento
+                automatico e creare un'app.
+            lessonGroup-3:
+              display_name: Capitolo 2 - Progettazione di un'app di apprendimento
+                automatico
+              big_questions: "-   Come si può utilizzare l'apprendimento automatico
+                per risolvere i problemi della nostra comunità?"
+              description: Questo capitolo prepara gli studenti a diventare studiosi
+                dell'apprendimento automatico per creare un'app che risolva un problema
+                nella loro comunità. Gli studenti seguono un gruppo immaginario di
+                studenti mentre definiscono un problema, sviluppano un sondaggio per
+                raccogliere dati, analizzano i propri dati nel Laboratorio di Intelligenza
+                Artificiale, creano una scheda modello e creano un'app per risolvere
+                il problema. Poi, nel progetto finale, gli studenti ripetono questi
+                stessi passaggi con un problema che stia a cuore alla propria comunità.
             lessonGroup-4:
               display_name: Sondaggio
+          title: Intelligenza artificiale (AI) e Apprendimento automatico (Machine
+            Learning)
         kodea-pd-2021:
           description: 'Guida online gratuita per imparare autonomamente come insegnare
             l''informatica usando il corso di Code.org "Fondamenti di informatica"
@@ -3403,12 +3505,12 @@ it:
         csd-post-survey-2021:
           name: csd-post-survey-2021
           title: Sondaggio Post-corso di Alla Scoperta dell'Informatica
-          description: Questa unità contiene il sondaggio post-corso CS Discoveries.
-            Questa unità può essere assegnata dopo che gli studenti hanno completato
-            la loro unità finale in CS Discoveries.
+          description: Questa unità contiene il sondaggio post-corso Alla scoperta
+            dell'informatica. Questa unità può essere assegnata dopo che gli studenti
+            hanno completato la loro unità finale in Alla scoperta dell'informatica.
           student_description: Questa unità contiene un sondaggio per quando la tua
-            classe ha finito le unità di CS Discoveries. Il tuo insegnante ti dirà
-            quando è il momento di fare questo sondaggio.
+            classe ha finito le unità di Alla scoperta dell'informatica. Il tuo insegnante
+            ti dirà quando è il momento di compilare questo sondaggio.
         csa-pl-test:
           name: csa-pl-test
         csa-pl-module-1-test:
@@ -4027,14 +4129,19 @@ it:
         csd5-2022:
           lesson_groups:
             csd5_1:
-              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+              display_name: 'Capitolo 1: Rappresentazione dei dati'
             csd5_2:
-              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+              display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
             cspSurvey:
               display_name: Sondaggio
           title: Dati e Società ('22-'23)
         csd7-2022:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolo 1 - Comprendere l'apprendimento automatico
+            lessonGroup-3:
+              display_name: Capitolo 2 - Progettazione di un'app di apprendimento
+                automatico
             lessonGroup-4:
               display_name: Sondaggio
         csd6-2022:
@@ -4045,12 +4152,19 @@ it:
               display_name: Sondaggio
         csd-post-survey-2022:
           title: Sondaggio Post-corso di Alla Scoperta dell'Informatica
-          description: Questa unità contiene il sondaggio post-corso CS Discoveries.
-            Questa unità può essere assegnata dopo che gli studenti hanno completato
-            la loro unità finale in CS Discoveries.
+          description: Questa unità contiene il sondaggio post-corso Alla scoperta
+            dell'informatica. Questa unità può essere assegnata dopo che gli studenti
+            hanno completato la loro unità finale in Alla scoperta dell'informatica.
           student_description: Questa unità contiene un sondaggio per quando la tua
-            classe ha finito le unità di CS Discoveries. Il tuo insegnante ti dirà
-            quando è il momento di fare questo sondaggio.
+            classe ha finito le unità di Alla scoperta dell'informatica. Il tuo insegnante
+            ti dirà quando è il momento di compilare questo sondaggio.
+        aiml-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolo 1 - Comprendere l'apprendimento automatico
+            lessonGroup-3:
+              display_name: Capitolo 2 - Progettazione di un'app di apprendimento
+                automatico
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -4196,9 +4310,9 @@ it:
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+              display_name: 'Capitolo 1: Rappresentazione dei dati'
             lessonGroup-3:
-              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+              display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4558,9 +4672,9 @@ it:
         data-society-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+              display_name: 'Capitolo 1: Rappresentazione dei dati'
             lessonGroup-3:
-              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+              display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
         aiml-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4598,9 +4712,9 @@ it:
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+              display_name: 'Capitolo 1: Rappresentazione dei dati'
             lessonGroup-3:
-              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+              display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
         focus-on-hardware3a-2023:
           lesson_groups:
             lessonGroup-4:
@@ -4612,13 +4726,13 @@ it:
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+              display_name: 'Capitolo 1: Rappresentazione dei dati'
         focus-on-data2-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+              display_name: 'Capitolo 1: Rappresentazione dei dati'
             lessonGroup-3:
-              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+              display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4680,7 +4794,7 @@ it:
         focus-on-impact-in-society3-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+              display_name: 'Capitolo 1: Rappresentazione dei dati'
             lessonGroup-3:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
         focus-on-impact-in-society4-2023:

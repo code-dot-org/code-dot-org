@@ -3,6 +3,7 @@ it:
   data:
     progressions:
       '"If/Else" with the Bee': '"If/Else" con l''Ape'
+      8-Bit Binary Number Widget: Componente per numeri binari a 8-bit
       AI Machine Learning - Video: 'Apprendimento automatico IA: video'
       'AI: Impact on Society - Video': 'IA: impatto sulla società - Video'
       'AI: Training Data & Bias - Video': 'IA: dati di training e bias - video'
@@ -48,7 +49,9 @@ it:
       Bass, Mid, and Treble: Bassi, medi e alti
       Be a Super Digital Citizen: Super cittadino digitale
       Binary Bracelets - Unplugged Activity: Braccialetti binari - Attività tradizionale
+      Binary Number Widget: Componente per numeri binari
       Binary Numbers: Numeri Binari
+      Binary and Data: Sistema binario e dati
       Board Input and Output: Input e Output del Circuito
       Boolean Comparison: Confronto Booleano
       Build a Screen: Costruire una Schermata
@@ -76,6 +79,7 @@ it:
       Collisions in Games: Collisioni nei Giochi
       Color LEDs: LED colorati
       Combining Projects: Combinare Progetti
+      Combining Representations: Combinazione di rappresentazioni
       Conditionals with Cards - Unplugged Activity: Istruzioni condizionali con le
         carte da gioco - Attività tradizionale
       'Conditionals: If Statements': 'Condizionali: Istruzioni If'
@@ -144,6 +148,7 @@ it:
       Get In Formation: Tutti in formazione!
       Graph Paper Programming - Unplugged Activity: Programmazione su carta a quadretti
         - Attività tradizionale
+      Green Glass Door: Porta in vetro verde
       HTML Tags: Tag HTML
       Headings: Intestazioni
       Headings in HTML: Intestazioni in HTML
@@ -176,6 +181,7 @@ it:
       Light Show: Spettacolo di Luci
       Linking Pages: Creare collegamenti alle pagine
       Lists: Liste
+      Looking for Patterns: Alla ricerca di schemi
       Loops with the Artist: Cicli con l'Artista
       Make a Prediction: Fai una previsione
       Make it Interactive: Rendilo Interattivo
@@ -270,6 +276,8 @@ it:
       Revise Sprite Lab Project: Riesamina il tuo progetto nel Laboratorio dei personaggi
       Robot Doodle: Robot
       Run a simulation: Esegui una simulazione
+      Sample App: App di esempio
+      Sample Apps for Good: App di esempio per il bene comune
       Sample Personal Web Pages: Pagine Web personali di esempio
       Sample Personal Websites: Sito web personale di esempio
       Sample Programs: Programmi di esempio
@@ -312,7 +320,6 @@ it:
       The Big Event - Unplugged Activity: Il grande evento - Attività tradizionale
       The Buzzer: Il Cicalino
       The Collector: Il Collezionista
-      The Draw Loop: Il disegno ciclico
       The Harvester: La contadina
       The Internet - Unplugged Activity: Internet - Attività tradizionale
       The Power of Words - Unplugged Activity: Il potere delle parole - Attività tradizionale
@@ -393,7 +400,7 @@ it:
       'Video: Impacts on Society': Video - Ripercussioni sociali
       'Video: Intro to CSS - Part 1': 'Video: Introduzione ai CSS - Parte 1'
       'Video: Intro to CSS - Part 2': 'Video: Introduzione ai CSS - Parte 2'
-      'Video: Intro to Design Mode': 'Video: introduzione alla "Modalità progettazione"'
+      'Video: Intro to Design Mode': 'Video: introduzione alla Modalità Interfaccia'
       'Video: Intro to Web Lab - Part 1': 'Video: Introduzione a "Sviluppo Web" -
         Parte 1'
       'Video: Intro to Web Lab - Part 2': 'Video: Introduzione a "Sviluppo Web - Parte

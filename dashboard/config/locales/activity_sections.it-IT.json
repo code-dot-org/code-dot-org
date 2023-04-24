@@ -5624,6 +5624,9 @@
             null
           ]
         },
+        "4454a825-3e39-4e79-bc6a-012f5029fe21": {
+          "progression_name": "Componente per numeri binari"
+        },
         "cacfe459-bd5f-40ec-ba14-122bb639c1cb": {
           "tips": [
             null
@@ -5632,7 +5635,8 @@
         "8a2809d2-8749-402e-9d1d-65ff875d072e": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Sistema binario e dati"
         },
         "e6c4a521-3a5a-4d98-b443-d62fde18aa3f": {
           "name": "Diario"
@@ -5656,6 +5660,9 @@
           "tips": [
             null
           ]
+        },
+        "8a0f0675-afba-4c25-9de4-b4f8e0eda208": {
+          "progression_name": "Componente per numeri binari a 8-bit"
         },
         "6925d871-b4de-4782-ae71-af992d2a3858": {
           "tips": [
@@ -5968,6 +5975,9 @@
           "tips": [
             null
           ]
+        },
+        "375bc2b0-7e2e-46ca-a9ca-d0ab73bad9d0": {
+          "progression_name": "App di esempio"
         },
         "3965a4d3-9081-49cf-b5ec-16dcec0a1713": {
           "tips": [
@@ -6357,7 +6367,7 @@
           "description": "Per risolvere questo problema, dovevi **ottenere** dati dal tuo partner sotto forma di risposte alle tue domande. Dovevi anche **mettere a disposizione** dati al tuo partner sotto forma di consigli. I computer fanno la stessa cosa. I dati che ricevono dagli utenti si chiamano **input/dati in ingresso**, quelli che forniscono agli utenti si chiamano **output/dati in uscita**. Diamo un'occhiata a un'app che fornisce anche consigli riguardo agli animali domestici."
         },
         "367477fd-5490-44cd-91ab-1d919f69ef56": {
-          "description": "\\*\\*Glossario delle parole chiave: \\*\\*\n\n-   **Input/dati in ingresso** - i dati che i computer ottengono da utenti, dispositivi o altri computer\n-   **Output/dati in uscita**: i dati che il computer mettono a disposizione di utenti, dispositivi o altri computer\n\n**Domanda del giorno: in che modo i computer utilizzano dati in ingresso e in uscita per ottenere e fornire le informazioni necessarie alla risoluzione dei problemi?**"
+          "description": "\\*\\*Glossario delle parole chiave: \\*\\*\n\n-   **Input/dati in ingresso** - i dati che i computer ottengono da utenti, dispositivi o altri computer\n-   **Output/dati in uscita**: i dati che il computer mettono a disposizione di utenti, dispositivi o altri computer\n\n**Domanda del giorno: in che modo i computer utilizzano dati in ingresso e in uscita per ottenere e fornire i dati necessari alla risoluzione dei problemi?**"
         },
         "833c817c-2dad-4e3f-919d-3eba339b2028": {
           "name": "Ingressi e uscite",
@@ -6373,13 +6383,13 @@
           "name": "Selettore di animali domestici",
           "description": "Guardate insieme l'app Selettore di animali domestici. Nota che fa qualcosa di molto simile a quello che gli studenti hanno appena fatto in coppia. In gruppo, rispondi alle prime due domande sugli ingressi dell'app. Assicurati che gli studenti comprendano che l'app riceve dati in ingresso in base al comportamento dell'utente, in questo caso premendo un pulsante. A seconda del gruppo, potresti voler modellare la domanda in base al risultato o fare in modo che gli studenti ci lavorino in coppia.",
           "tips": [
-            "Gli studenti non hanno bisogno dell'input esatto per ogni possibile domanda posta. È sufficiente dire che l'input è un dato che riguarda eventuali allergie dell'utente, disponibilità a giocare con l'animale, ecc. e che l'app riceve queste informazioni dall'utente attraverso la pression di un pulsante."
+            "Gli studenti non hanno bisogno dell'input esatto per ogni possibile domanda posta. È sufficiente dire che l'input è un dato che riguarda eventuali allergie dell'utente, disponibilità a giocare con l'animale, ecc. e che l'app riceve questi dati dall'utente attraverso la pressione di un pulsante."
           ],
           "progression_name": "App: selettore per animali domestici"
         },
         "52a024ed-055f-4d25-a4f8-52e0a48bff85": {
           "name": "Generatore di storie",
-          "description": "Di seguito, consenti a ogni coppia di guardare per conto proprio l'app per la creazione della storia, rispondendo a domande simili sui dati in ingresso e in uscita. Questa app consente agli studenti di inserire informazioni specifiche in un modulo, quindi generare una storia personalizzata in base alle informazioni fornite.",
+          "description": "Di seguito, consenti a ogni coppia di guardare per conto proprio l'app per la creazione della storia, rispondendo a domande simili sui dati in ingresso e in uscita. Questa app consente agli studenti di inserire dati specifici in un modulo, quindi generare una storia personalizzata in base ai dati forniti.",
           "tips": [
             "Assicurati che gli studenti stiano identificando gli ingressi e le uscite appropriate. Le risposte degli studenti possono variare leggermente, ma devono essere simili a quelle dell'esempio fornito nella casella «Solo insegnanti» del primo esercizio di Code Studio."
           ],
@@ -6527,7 +6537,7 @@
         "fba0356b-d79b-4c1c-83f9-9b770ae8c5e5": {
           "description": "Chiedi agli studenti di condividere quali dati ritengano debbano essere memorizzati e perché.",
           "tips": [
-            "Sebbene non sia importante che gli studenti concordino sulle risposte, questa discussione inizia a suggerire l'idea di memorizzare le informazioni per una fase successiva e li incentiva a pensare a quali dati vadano o non vadano memorizzati in un'app. "
+            "Sebbene non sia importante che gli studenti concordino sulle risposte, questa discussione inizia a suggerire l'idea di memorizzare i dati per una fase successiva e li incentiva a pensare a quali dati vadano o non vadano memorizzati in un'app. "
           ]
         },
         "0ff42327-3014-4bae-9477-4b96f7b8ae29": {
@@ -6600,7 +6610,7 @@
         "4965f12c-d6da-48ba-8073-290ea2469298": {
           "description": "**Condividi:** se c'è tempo, dai modo agli studenti di condividere le proprie idee.",
           "tips": [
-            "Quando lo studente condivide le proprie idee, fai in modo che utilizzi il glossario delle parole chiave della lezione:\n\n**memorizzazione** - salvataggio delle informazioni da utilizzare in futuro"
+            "Quando lo studente condivide le proprie idee, fai in modo che utilizzi il glossario delle parole chiave della lezione:\n\n**memorizzazione** - salvataggio dei dati da utilizzare in futuro"
           ]
         },
         "0a4f5de8-7cfb-4bca-9d6a-c430c7da0fa7": {
@@ -7028,7 +7038,7 @@
           ]
         },
         "72fc9428-64ca-4d87-9102-44cc8e9f15c8": {
-          "description": "Conduci la classe al problema Pianifica un evento di adozione di animali domestici. Ogni membro del gruppo svilupperà individualmente un piano per progettare uno spazio che segua i criteri che svilupperà come squadra. Dai agli studenti il tempo di scegliere gli obiettivi da utilizzare per pianificare il loro piano. Ad esempio, potrebbero esserci alcune cose che vorrebbero spostare, luoghi in cui le persone dovranno andare, persone che vogliono aiutarle, ecc.\n\n\\*\\*Girando tra i banchi: \\*\\* una volta che i gruppi avranno degli obiettivi, procederanno all'attività sviluppando un piano per creare l'evento di adozione. Dai loro un limite di tempo per questa parte del processo, ad esempio 15 minuti, per assicurarti che si concentrino sugli elementi chiave del loro piano anziché perfezionarlo. Dovrebbero registrare le informazioni chiave sul loro piano nelle loro guide alle attività.\n\nRiunisci i gruppi e chiedi loro di condividere i loro piani iniziali. Nelle guide alle attività possono registrare il feedback che i compagni di classe danno loro sui loro piani.\n\nUna volta che i gruppi hanno discusso ciò che gli piace o non gli piace dei piani proposti dai compagni di classe, possono riesaminarli e apportare miglioramenti. Ci sono altre cose che vorrebbero fare? Hanno nuovi obiettivi? Concedi loro alcuni minuti per apportare miglioramenti ai loro piani prima di decidere sulla versione finale.\n\nRiunisci la classe e chiedi loro di registrare le diverse fasi del processo di risoluzione dei problemi che hanno utilizzato nelle loro guide di attività.\n\n\\*\\*Discussione: \\*\\* discuti brevemente con gli studenti quali parti dell'attività ritenevano rientrassero in ogni fase del processo di risoluzione dei problemi. Di seguito sono riportate alcune possibili osservazioni da fare dopo la condivisione degli studenti.\n\n-   **Definisci**: questo problema non era ben definito. Bisognava decidere in autonomia che aspetto avesse un «buon» evento di adozione e questa definizione si sarebbe potuta persino modificare durante il processo.\n-   **Prepara**: è utile restringere un elenco di possibili disposizioni. Puoi anche scegliere di sottolineare che l'intera attività è un esempio di preparazione. Alcuni tipi di disposizione semplicemente non hanno senso o altri funzionano meglio, quindi devi fare il tipo di pianificazione che stanno facendo qui.\n-   **Prova**: come in precedenza, la pazienza e la tenacia sono importanti per portare a termine il piano\n-   **Rifletti**: in questo problema la riflessione è avvenuta principalmente attraverso i riscontri dei compagni. Alcuni tipi di disposizione potrebbero non sembrare così pratiche agli altri membri del gruppo. Alcuni sono divertenti ma richiedono troppi spostamenti o troppe cose nuove. Il riscontro da parte degli altri è una parte importante della fase di riflessione, specialmente nel lavoro di gruppo."
+          "description": "Fai andare la classe sul problema Pianifica un evento di adozione di animali domestici. Ogni membro del gruppo svilupperà individualmente un piano per progettare uno spazio che segua i criteri che svilupperà come squadra. Dai agli studenti il tempo di scegliere gli obiettivi da utilizzare per pianificare il loro piano. Ad esempio, potrebbero esserci alcune cose che vorrebbero spostare, luoghi in cui le persone dovranno andare, persone che vogliono aiutarle, ecc.\n\n\\*\\*Girando tra i banchi: \\*\\* una volta che i gruppi avranno degli obiettivi, procederanno all'attività sviluppando un piano per creare l'evento di adozione. Dai loro un limite di tempo per questa parte del processo, ad esempio 15 minuti, per assicurarti che si concentrino sugli elementi chiave del loro piano anziché perfezionarlo. Dovrebbero registrare le informazioni chiave sul loro piano nelle loro guide alle attività.\n\nRiunisci i gruppi e chiedi loro di condividere i loro piani iniziali. Nelle guide alle attività possono registrare il feedback che i compagni di classe danno loro sui loro piani.\n\nUna volta che i gruppi hanno discusso ciò che gli piace o non gli piace dei piani proposti dai compagni di classe, possono riesaminarli e apportare miglioramenti. Ci sono altre cose che vorrebbero fare? Hanno nuovi obiettivi? Concedi loro alcuni minuti per apportare miglioramenti ai loro piani prima di decidere sulla versione finale.\n\nRiunisci la classe e chiedi loro di registrare le diverse fasi del processo di risoluzione dei problemi che hanno utilizzato nelle loro guide di attività.\n\n\\*\\*Discussione: \\*\\* discuti brevemente con gli studenti quali parti dell'attività ritenevano rientrassero in ogni fase del processo di risoluzione dei problemi. Di seguito sono riportate alcune possibili osservazioni da fare dopo la condivisione degli studenti.\n\n-   **Definisci**: questo problema non era ben definito. Bisognava decidere in autonomia che aspetto avesse un «buon» evento di adozione e questa definizione si sarebbe potuta persino modificare durante il processo.\n-   **Prepara**: è utile restringere un elenco di possibili disposizioni. Puoi anche scegliere di sottolineare che l'intera attività è un esempio di preparazione. Alcuni tipi di disposizione semplicemente non hanno senso o altri funzionano meglio, quindi devi fare il tipo di pianificazione che stanno facendo qui.\n-   **Prova**: come in precedenza, la pazienza e la tenacia sono importanti per portare a termine il piano\n-   **Rifletti**: in questo problema la riflessione è avvenuta principalmente attraverso i riscontri dei compagni. Alcuni tipi di disposizione potrebbero non sembrare così pratiche agli altri membri del gruppo. Alcuni sono divertenti ma richiedono troppi spostamenti o troppe cose nuove. Il riscontro da parte degli altri è una parte importante della fase di riflessione, specialmente nel lavoro di gruppo."
         },
         "8957f88b-0acb-48b3-880f-fe8bb916493c": {
           "name": "Comprensione del processo di risoluzione dei problemi",
@@ -7096,7 +7106,7 @@
           ]
         },
         "a8487fd1-e753-4053-8136-22af26e649d2": {
-          "description": "Conduci la classe sul problema Crea un gioco. Ogni membro del gruppo svilupperà individualmente un piano per una disposizione che segua i criteri che svilupperà come squadra. Dai agli studenti il tempo di scegliere gli obiettivi che useranno per pianificare il loro gioco. Ad esempio, potrebbero esserci alcune limitazioni di spazio, numero di studenti inclusi, ecc.\n\nUna volta che i gruppi hanno degli obiettivi, procederanno all'attività sviluppando un piano per realizzare il loro gioco. Dai loro un limite di tempo per questa parte del processo, ad esempio 15 minuti, per assicurarti che si concentrino sugli elementi chiave del loro piano anziché perfezionarlo. Dovrebbero registrare le informazioni chiave sul loro piano nelle loro guide alle attività.\n\nRiunisci i gruppi e chiedi loro di condividere i loro piani iniziali. Nelle guide alle attività possono registrare il riscontro che i compagni di classe danno loro sui loro piani.\n\nUna volta che i gruppi hanno discusso ciò che gli piace o non gli piace dei piani proposti dai compagni di classe, possono riesaminarli e apportare miglioramenti. Ci sono altre cose che vorrebbero fare? Hanno nuovi obiettivi? Concedi loro alcuni minuti per apportare miglioramenti ai loro piani prima di decidere sulla versione finale.\n\nRiunisci la classe e chiedi loro di registrare le diverse fasi del processo di risoluzione dei problemi che hanno utilizzato nelle loro guide di attività.\n\n\\*\\*Discussione: \\*\\* discuti brevemente con gli studenti quali parti dell'attività ritenevano rientrassero in ogni fase del processo di risoluzione dei problemi. Di seguito sono riportate alcune possibili osservazioni da fare dopo la condivisione degli studenti.\n\n-   **Definisci**: questo problema non era ben definito. Dovevano decidere da soli che aspetto avesse un «buon» gioco, e questa definizione avrebbe potuto persino cambiare nel corso del processo.\n-   **Prepara**: è utile restringere un elenco di possibili disposizioni spaziali. Puoi anche scegliere di sottolineare che l'intera attività è un esempio di preparazione. Alcuni giochi semplicemente non hanno senso o altri funzionano meglio, quindi devi fare il tipo di pianificazione che stanno facendo qui.\n-   **Prova**: come in precedenza, la pazienza e la tenacia sono importanti per portare a termine il piano\n-   **Rifletti**: in questo problema la riflessione è avvenuta principalmente attraverso il riscontro da parte dei compagni. Alcuni giochi potrebbero non essere così interessanti per gli altri membri del gruppo. Alcuni sono divertenti ma richiedono troppo lavoro o troppi materiali. Il riscontro dei compagni è una parte importante della fase di riflessione, specialmente nel lavoro di gruppo."
+          "description": "Fai andare la classe sul problema Crea un gioco. Ogni membro del gruppo svilupperà individualmente un piano per una disposizione che segua i criteri che svilupperà come squadra. Dai agli studenti il tempo di scegliere gli obiettivi che useranno per pianificare il loro gioco. Ad esempio, potrebbero esserci alcune limitazioni di spazio, numero di studenti inclusi, ecc.\n\nUna volta che i gruppi hanno degli obiettivi, procederanno all'attività sviluppando un piano per realizzare il loro gioco. Dai loro un limite di tempo per questa parte del processo, ad esempio 15 minuti, per assicurarti che si concentrino sugli elementi chiave del loro piano anziché perfezionarlo. Dovrebbero registrare le informazioni chiave sul loro piano nelle loro guide alle attività.\n\nRiunisci i gruppi e chiedi loro di condividere i loro piani iniziali. Nelle guide alle attività possono registrare il riscontro che i compagni di classe danno loro sui loro piani.\n\nUna volta che i gruppi hanno discusso ciò che gli piace o non gli piace dei piani proposti dai compagni di classe, possono riesaminarli e apportare miglioramenti. Ci sono altre cose che vorrebbero fare? Hanno nuovi obiettivi? Concedi loro alcuni minuti per apportare miglioramenti ai loro piani prima di decidere sulla versione finale.\n\nRiunisci la classe e chiedi loro di registrare le diverse fasi del processo di risoluzione dei problemi che hanno utilizzato nelle loro guide di attività.\n\n\\*\\*Discussione: \\*\\* discuti brevemente con gli studenti quali parti dell'attività ritenevano rientrassero in ogni fase del processo di risoluzione dei problemi. Di seguito sono riportate alcune possibili osservazioni da fare dopo la condivisione degli studenti.\n\n-   **Definisci**: questo problema non era ben definito. Dovevano decidere da soli che aspetto avesse un «buon» gioco e questa definizione avrebbe potuto persino cambiare nel corso del processo.\n-   **Prepara**: è utile restringere un elenco di possibili disposizioni spaziali. Puoi anche scegliere di sottolineare che l'intera attività è un esempio di preparazione. Alcuni giochi semplicemente non hanno senso o altri funzionano meglio, quindi devi fare il tipo di pianificazione che stanno facendo qui.\n-   **Prova**: come in precedenza, la pazienza e la tenacia sono importanti per portare a termine il piano\n-   **Rifletti**: in questo problema la riflessione è avvenuta principalmente attraverso il riscontro da parte dei compagni. Alcuni giochi potrebbero non essere così interessanti per gli altri membri del gruppo. Alcuni sono divertenti ma richiedono troppo lavoro o troppi materiali. Il riscontro dei compagni è una parte importante della fase di riflessione, specialmente nel lavoro di gruppo."
         },
         "c06dcc87-e0b3-40fa-b2a5-3dd5ac5b3f8d": {
           "name": "Comprensione del processo di risoluzione dei problemi",
@@ -8307,7 +8317,7 @@
           ]
         },
         "666411d1-40a5-49a4-bb55-30a8a71e4b5a": {
-          "description": "\\*\\*Demo: \\*\\* esegui una rapida demo seguendo le istruzioni riportate di seguito.\n\n-   Scegli uno studente per condividere oralmente con te una delle sue istruzioni.\n-   L'insegnante dovrebbe agire come la persona al telefono che cerca di disegnare la pagina web\n-   «Disegnare» pubblicamente il sito web esattamente come dicono le istruzioni dello studente. Ad esempio, se ti viene detto «scrivi più grande», scrivi la parola «più grande» sulla pagina. Se non indicano dove va il testo, posiziona il testo in posizioni casuali.\n-   Quando lo studente ti dà le istruzioni, chiedi loro di dirti se le hai disegnate correttamente. Se non l'hai disegnato correttamente, chiedi loro di rendere le loro direzioni più specifiche finché non riesci a disegnarlo correttamente.\n-   Cambia studente dopo un paio di istruzioni per coinvolgere più studenti.\n-   Tieni traccia, in una qualche parte visibile, di tutte le istruzioni fornite dagli studenti e dei miglioramenti che apportano alle istruzioni.\n-   Ripetere questa procedura fino a ricreare la maggior parte della pagina web.\n\n\\*\\*Discussione: \\*\\* una volta che hai finito di disegnare il sito, crea rapidamente un elenco di tutti i diversi tipi di informazioni di cui dovevano tenere conto nelle loro istruzioni. Ad esempio, posizione, dimensione, carattere, ecc."
+          "description": "\\*\\*Demo: \\*\\* esegui una rapida demo seguendo le istruzioni riportate di seguito.\n\n-   Scegli uno studente per condividere oralmente con te una delle sue istruzioni.\n-   L'insegnante dovrebbe agire come la persona al telefono che cerca di disegnare la pagina web\n-   «Disegnare» pubblicamente il sito web esattamente come dicono le istruzioni dello studente. Ad esempio, se ti viene detto «scrivi più grande», scrivi la parola «più grande» sulla pagina. Se non indicano dove va il testo, posiziona il testo in posizioni casuali.\n-   Quando lo studente ti dà le istruzioni, chiedi loro di dirti se le hai disegnate correttamente. Se non l'hai disegnato correttamente, chiedi loro di rendere le loro direzioni più specifiche finché non riesci a disegnarlo correttamente.\n-   Cambia studente dopo un paio di istruzioni per coinvolgere più studenti.\n-   Tieni traccia, in una qualche parte visibile, di tutte le istruzioni fornite dagli studenti e dei miglioramenti che apportano alle istruzioni.\n-   Ripetere questa procedura fino a ricreare la maggior parte della pagina web.\n\n\\*\\*Discussione: \\*\\* una volta che hai finito di disegnare il sito, crea rapidamente un elenco di tutti i dati di diversa natura di cui dovevano tenere conto nelle loro istruzioni. Ad esempio, posizione, dimensione, carattere, ecc."
         },
         "b6cd484f-c948-4bfd-b4aa-8c70dfa8ec4b": {
           "description": "Ci sono molte informazioni che dobbiamo comunicare se vogliamo creare pagine web. Non è sufficiente sapere solo quali contenuti vuoi inserire nella tua pagina, ad esempio le parole o le immagini effettive. Devi sapere dove dovrebbero essere le cose e come dovrebbero apparire. Oggi inizieremo a imparare i linguaggi impiegati sul web per rappresentare queste informazioni aggiuntive."
@@ -8334,7 +8344,7 @@
         "28f081b4-ca19-42ad-9fb0-65f43be5782c": {
           "description": "\\*\\*Domanda da considerare con il video: \\*\\*\n\n-   Quali sono le diverse parti di \"Sviluppo Web\" e a cosa servono?",
           "tips": [
-            "\\*\\*Obiettivi della discussione: \\*\\*\nSebbene non ci siano obiettivi formativi generali per questo video, gli studenti devono capire che le istruzioni per gli esercizi di \"Sviluppo Web\" appaiono nell'ampio pannello in alto e i tre pannelli inferiori, da sinistra a destra, includono l'elenco dei file su cui stanno lavorando, l'area in cui digitano il codice e l'area in cui vedono i risultati del loro codice. Per ora, non devono preoccuparsi di ogni pulsante, come verrà spiegato più avanti, ma devono capire che l'Inspector Tool li aiuta a collegare parti della pagina web al codice che le ha create e il pulsante Aggiorna e salva consente loro di aggiornare la loro pagina web se non si aggiorna automaticamente quando modificano il codice.\n\nSebbene non faccia parte del video, il riquadro delle istruzioni spesso include anche domande e risposte a discesa che gli studenti possono utilizzare quando completano un'attività e, in alcuni esercizi, le schede nella parte superiore del riquadro delle istruzioni indirizzano gli studenti a un'area «Guida e suggerimenti» che include informazioni di riferimento relative alle attività."
+            "\\*\\*Obiettivi della discussione: \\*\\*\nSebbene non ci siano obiettivi formativi generali per questo video, gli studenti devono capire che le istruzioni per gli esercizi di \"Sviluppo Web\" appaiono nell'ampio pannello in alto e i tre pannelli inferiori, da sinistra a destra, includono l'elenco dei file su cui stanno lavorando, l'area in cui digitano il codice e l'area in cui vedono i risultati del loro codice. Per ora, non devono preoccuparsi di ogni pulsante, come verrà spiegato più avanti, ma devono capire che lo \"Strumento Ispettore\" li aiuta a collegare parti della pagina web al codice che le ha create e il pulsante Aggiorna e salva consente loro di aggiornare la loro pagina web se non si aggiorna automaticamente quando modificano il codice.\n\nSebbene non faccia parte del video, il riquadro delle istruzioni spesso include anche domande e risposte a discesa che gli studenti possono utilizzare quando completano un'attività e, in alcuni esercizi, le schede nella parte superiore del riquadro delle istruzioni indirizzano gli studenti a un'area «Guida e suggerimenti» che include informazioni di riferimento relative alle attività."
           ],
           "progression_name": "Video: Introduzione a \"Sviluppo Web\" - Parte 1"
         },
@@ -8358,7 +8368,7 @@
         },
         "743410de-0104-458b-9a14-ab44c6c6eb8f": {
           "tips": [
-            "\\*\\*Uso dello strumento: \\*\\* questo esercizio contiene una nuova scheda, «Rubrica», che fornisce indicazioni su come valutare il lavoro degli studenti e consente di lasciare un riscontro. Questo rende l'esercizio particolarmente utile come valutazione. Gli studenti possono vedere come viene valutato il loro lavoro facendo clic sulla scheda «Rubrica». Successivamente, qualsiasi riscontro degli insegnanti verrà visualizzato nella stessa area. [Clicca qui](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-CS-Discoveries-and-CS-Principles-only-) per saperne di più su come fornire riscontro agli studenti\n\nPuoi usare questo esercizio come valutazione formativa per gli studenti. Fai clic all'interno dell'esercizio per visualizzare una rubrica e lasciare un feedback ai tuoi studenti"
+            "\\*\\*Uso dello strumento: \\*\\* questo esercizio contiene una nuova scheda, «Criteri di valutazione», che fornisce indicazioni su come valutare il lavoro degli studenti e consente di lasciare un riscontro. Questo rende l'esercizio particolarmente utile come valutazione. Gli studenti possono vedere come viene valutato il loro lavoro facendo clic sulla scheda «Criteri di valutazione». Successivamente, qualsiasi riscontro degli insegnanti verrà visualizzato nella stessa area. [Clicca qui](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-CS-Discoveries-and-CS-Principles-only-) per saperne di più su come fornire riscontro agli studenti\n\nPuoi usare questo esercizio come valutazione formativa per gli studenti. Fai clic all'interno dell'esercizio per visualizzare i Criteri di valutazione e lasciare un riscontro ai tuoi studenti"
           ],
           "progression_name": "Valutazione"
         },
@@ -8566,23 +8576,23 @@
         },
         "64eb335c-2719-44f0-b4bc-ad728a0d7098": {
           "name": "Segui le tracce digitali",
-          "description": "**Presentazione:** cagli studenti di considerare a quali siti web hanno fornito informazioni personali. In piccoli gruppi, chiedi agli studenti di creare un elenco di siti web su cui hanno un account (anche se utilizzano l'accesso con Facebook, Google o simili) e il tipo di informazioni che ritengono possano avere su di loro."
+          "description": "**Presentazione:** cagli studenti di considerare a quali siti web hanno fornito dati personali. In piccoli gruppi, chiedi agli studenti di creare un elenco di siti web su cui hanno un account (anche se utilizzano l'accesso con Facebook, Google o simili) e il tipo di dati che ritengono possano avere su di loro."
         },
         "2cbd46bf-9495-40a0-a228-aab9d07cb064": {
-          "description": "**Discussione:** chiedi agli studenti di fare una riflessione di gruppo o un diario in silenzio, poi di condividerlo con un compagno e infine di condividierlo con tutta la classe. Crea un elenco completo di tutti i siti web che potrebbero contenere informazioni personali.",
+          "description": "**Discussione:** chiedi agli studenti di fare una riflessione di gruppo o un diario in silenzio, poi di condividerlo con un compagno e infine di condividierlo con tutta la classe. Crea un elenco completo di tutti i siti web che potrebbero contenere dati personali.",
           "tips": [
-            "\\*\\*Obiettivo: \\*\\* questa discussione non ha lo scopo di elaborare un elenco completo di informazioni personali che gli studenti potrebbero aver condiviso con i siti web, né di spaventarli dal condividere informazioni. L'obiettivo è che gli studenti inizino a pensare in modo più critico a quando e dove condividono informazioni su se stessi.\n\nQuesto li spingerà a dedicarsi all'attività principale della giornata, esaminando informazioni e destinatari specifici per valutare quando la loro privacy è importante e se stanno rinunciando inconsapevolmente alla propria privacy.\n\nSe gli studenti hanno difficoltà a pensare alle informazioni, potresti voler seguire con alcuni suggerimenti più specifici: \n\n-   Quali informazioni sai di aver fornito a un sito web (ad esempio il tuo indirizzo email)\n-   Quali informazioni potresti aver fornito inconsapevolmente a un sito Web (ad esempio una foto con il tuo indirizzo di casa)\n-   Quali informazioni potrebbero aver condiviso altre persone su di te a tua insaputa o senza il tuo permesso (ad esempio taggandoti su Facebook)"
+            "\\*\\*Obiettivo: \\*\\* questa discussione non ha lo scopo di elaborare un elenco completo di dati personali che gli studenti potrebbero aver condiviso con i siti web, né di spaventarli dal condividere informazioni. L'obiettivo è che gli studenti inizino a pensare in modo più critico a quando e dove condividono informazioni su se stessi.\n\nQuesto li spingerà a dedicarsi all'attività principale della giornata, esaminando dati e destinatari specifici per valutare quando la loro privacy è importante e se stanno rinunciando inconsapevolmente alla propria privacy.\n\nSe gli studenti hanno difficoltà a pensare ai dati, potresti voler seguire con alcuni suggerimenti più specifici: \n\n-   Quali dati sai di aver fornito a un sito web (ad esempio il tuo indirizzo email)\n-   Quali dati potresti aver fornito inconsapevolmente a un sito Web (ad esempio una foto con il tuo indirizzo di casa)\n-   Quali dati potrebbero aver condiviso altre persone su di te a tua insaputa o senza il tuo permesso (ad esempio taggandoti su Facebook)"
           ]
         },
         "01d74636-6c38-449d-a6c6-e88bdd0ed9ce": {
-          "description": "Ci sono molte informazioni che mettiamo su Internet, che lo vogliamo fare o meno. Anche se potremmo essere d'accordo con alcune di queste informazioni online, ci sono altre cose che vorremmo mantenere private. Tutte le informazioni su di noi che si possono trovare su Internet sono note come la nostra orma digitale. Vogliamo fare attenzione a quali informazioni sono incluse in quell'orma digitale."
+          "description": "Ci sono molti dati che mettiamo su Internet, che lo vogliamo fare o meno. Anche se potremmo essere d'accordo con alcuni di questi dati online, ci sono altre cose che vorremmo mantenere private. Tutti i dati su di noi che si possono trovare su Internet sono noti come la nostra traccia digitale. Vogliamo fare attenzione a quali sono i dati presenti in quella traccia digitale."
         },
         "e6185207-1fc7-4ed0-9668-17ad584330e0": {
-          "description": "\\*\\*Glossario delle parole chiave: \\*\\*\n\n-   **Orma digitale** - Le informazioni raccolte su un individuo su più siti web su Internet.\n\n\\*\\*Domanda del giorno: come puoi assicurarti che le tue informazioni private rimangano private? \\*\\*"
+          "description": "\\*\\*Glossario delle parole chiave: \\*\\*\n\n-   **Traccia digitale** - I dati raccolti su un individuo su più siti web su Internet.\n\n\\*\\*Domanda del giorno: come puoi assicurarti che i tui dati personali rimangano privati? \\*\\*"
         },
         "2af0db12-92d1-4053-becb-b6735b85abb8": {
           "name": "Indagando sui profili social",
-          "description": "\\*\\*Obiettivo: \\*\\* esplora come piccole informazioni personali, sparse su più siti su Internet, possono produrre un'immagine abbastanza dettagliata di una persona, nota come [v digital_footprint/csd/2022].\n\n\\*\\*Forma i gruppi: \\*\\* questa attività può essere svolta individualmente, ma è preferibile se fatta in gruppi di 2-3 studenti\n\n\\*\\*Distribuisci \\*\\* la guida alle attività di «Investigatore Social»\n\n\\*\\*Transizione: \\*\\* porta gli studenti su Code Studio."
+          "description": "\\*\\*Obiettivo: \\*\\* esplora come piccoli dati personali, sparsi su più siti su Internet, possono produrre un'immagine abbastanza dettagliata di una persona, nota come [v digital_footprint/csd/2022].\n\n\\*\\*Forma i gruppi: \\*\\* questa attività può essere svolta individualmente, ma è preferibile se fatta in gruppi di 2-3 studenti\n\n\\*\\*Distribuisci \\*\\* la guida alle attività di «Investigatore Social»\n\n\\*\\*Transizione: \\*\\* porta gli studenti su Code Studio."
         },
         "2b9c4b37-c9ff-4fb2-b2a0-d99293cae36f": {
           "progression_name": "Investigatore social"
@@ -8600,11 +8610,11 @@
           "description": "\\*\\*Condivisione: \\*\\* chiedi alla classe di condividere le orme digitali che hanno raccolto durante l'attività."
         },
         "6ae630c4-0a49-4099-bd9e-f3c296ffb21c": {
-          "description": "\\*\\*Discussione: \\*\\*\n\n-   Quali sono state le informazioni più difficili da trovare?\n-   Quali dettagli erano innocui di per sé, ma rivelavano informazioni private se combinati con altri dettagli?\n-   In che modo questo ti fa pensare in modo diverso a ciò che scegli di pubblicare online?"
+          "description": "\\*\\*Discussione: \\*\\*\n\n-   Quali sono state le informazioni più difficili da trovare?\n-   Quali dettagli erano innocui di per sé, ma rivelavano dati personali se combinati con altri dettagli?\n-   In che modo questo ti fa pensare in modo diverso a ciò che scegli di pubblicare online?"
         },
         "6742c0f0-1094-4688-8b8a-d4931338c092": {
           "name": "Dare forma alla tua orma digitale",
-          "description": "\\*\\*Domanda del giorno: come puoi assicurarti che le tue informazioni private rimangano private? \\*\\*"
+          "description": "\\*\\*Domanda del giorno: come puoi assicurarti che i tui dati personali rimangano privati? \\*\\*"
         },
         "17265585-f90e-4e54-babe-be39e027d56f": {
           "description": "L'attività odierna si è concentrata su come i siti di social media contribuiscono a creare un'orma digitale. Mentre ci prepariamo a pubblicare le nostre prime pagine web, dovrai pensare a come queste contribuiscono alle tua orme digitali."
@@ -8612,7 +8622,7 @@
         "930ac9e6-be17-4f69-a02d-24e0b4eb7c5e": {
           "description": "\\*\\*Discussione: \\*\\* con il tuo compagno, prepara una lista di controllo da utilizzare per determinare cosa dovrebbe e non dovrebbe essere pubblicato online.",
           "tips": [
-            "\\*\\*Obiettivo: \\*\\* usa questa discussione per creare un elenco duraturo delle migliori pratiche per la pubblicazione di informazioni online. I controlli possibili includono:\n\n-   Qualcuno potrebbe identificarmi con queste informazioni? - ad esempio nome, indirizzo, numero di telefono, ecc.\n-   Voglio che tutti lo vedano? - Non pubblicare nulla che non vorresti fosse pubblicato nel mondo.\n-   Voglio che sia permanente? - Puoi perdere il controllo delle informazioni una volta pubblicate e potrebbero rimanere disponibili per tutta la vita.\n\nGli elenchi degli studenti possono essere diversi, ma dovrebbero includere questi principi e altri principi che hanno visto nella lezione di oggi.\n\nAssicurati che gli studenti stiano utilizzando il glossario delle parole chiave della lezione:\n\n**impronta digitale**: le informazioni raccolte su un individuo su più siti web su Internet"
+            "\\*\\*Obiettivo: \\*\\* usa questa discussione per creare un elenco finale delle migliori pratiche per la pubblicazione di dati online. I controlli possibili includono:\n\n-   Qualcuno potrebbe identificarmi con questi dati? - ad esempio nome, indirizzo, numero di telefono, ecc.\n-   Voglio che tutti lo vedano? - Non pubblicare nulla che non vorresti fosse pubblicato nel mondo.\n-   Voglio che sia permanente? - Puoi perdere il controllo dei dati una volta pubblicate e potrebbero rimanere disponibili per tutta la vita.\n\nGli elenchi degli studenti possono essere diversi, ma dovrebbero includere questi principi e altri principi che hanno visto nella lezione di oggi.\n\nAssicurati che gli studenti stiano utilizzando il glossario delle parole chiave della lezione:\n\n**tracce digitali**: i dati di un individuo raccolti su più siti web su Internet"
           ]
         },
         "9bba29bd-56fa-4b7e-acfc-9c6ae07872be": {
@@ -8873,7 +8883,7 @@
         "95af61c6-ce31-4c40-a822-886367828342": {
           "description": "\\*\\*Discussione: \\*\\* nel tuo diario, pensa ad alcune linee guida da tenere a mente quando usi le immagini. Come possiamo assicurarci di essere al sicuro e di rispettare i diritti degli altri?",
           "tips": [
-            "Man mano che gli studenti elaborano le loro linee guida, puoi scegliere di suggerirli ricordando loro le attività recenti che hanno svolto per la condivisione di informazioni personali e il rispetto del copyright. Molte classi potrebbero anche voler aggiungere altre linee guida, ad esempio definire ciò che è appropriato in un ambiente scolastico o assicurarsi che tutte le persone raffigurate nell'immagine si sentano a proprio agio con l'immagine pubblicata online. Indipendentemente da ciò, assicurati di essere soddisfatto che le linee guida siano sufficienti prima di andare avanti."
+            "Man mano che gli studenti elaborano le loro linee guida, puoi scegliere di fornire dei suggerimenti ricordando loro le attività recenti che hanno svolto per la condivisione di dati personali e il rispetto del copyright. Molte classi potrebbero anche voler aggiungere altre linee guida, ad esempio definire ciò che è appropriato in un ambiente scolastico o assicurarsi che tutte le persone raffigurate nell'immagine si sentano a proprio agio con l'immagine pubblicata online. Indipendentemente da ciò, prima di andare avanti, assicurati di essere soddisfatto che le linee guida siano adeguate."
           ]
         },
         "814c20b3-8ac2-4e06-aac7-b552b31b7455": {
@@ -9081,7 +9091,7 @@
         "5b1cc2a7-88f9-47bb-bb47-e974281b2ace": {
           "description": "\\*\\*Richiesta: \\*\\* \n\n-   Quali sono i principali **3** bug che hai visto finora durante la creazione di pagine web? \n-   Quali sono le **2** cose che puoi fare durante la programmazione per rendere i bug più facili da trovare e correggere? \n-   Qual è il consiglio **1** che daresti a qualcuno che ha un bug?",
           "tips": [
-            "Lo scopo di questa discussione è sia normalizzare il debugging sia assicurarsi che gli studenti inizino la parte di programmazione del progetto con alcune buone strategie che li aiuteranno a eseguire il debugging. I bug più comuni che potrebbero aver riscontrato potrebbero essere errori di ortografia, dimenticanza di collegare il foglio di stile, non inserire correttamente i tag, ecc. Questo varierà da classe a classe, ma la maggior parte degli studenti avrà riscontrato più bug nel capitolo. Durante la programmazione, gli studenti dovrebbero usare una formattazione adeguata per aiutarli a leggere il codice, codificare piccoli bit alla volta e controllare man mano che procedono, e usare buone convenzioni di denominazione. Per consigli sul debugging, gli studenti possono fornire consigli motivazionali («Non arrenderti!» , «Ricorda che è normale»), risorse consigliate («Chiedi a un amico di guardarlo», «guarda la mappa degli esercizi»), consigli basati sui processi («descrivi prima il bug, poi cercalo prima di cambiare qualcosa», «guarda cosa c'è di sbagliato e controlla l'ortografia in quella parte») o consigli basati sugli strumenti («guarda sopra dov'è il rosa», «usa l'Inspector Tool»). Dai agli studenti il tempo di condividere i loro consigli e assicurati che stiano facendo riferimento al processo di debugging."
+            "Lo scopo di questa discussione è sia normalizzare il debugging sia assicurarsi che gli studenti inizino la parte di programmazione del progetto con alcune buone strategie che li aiuteranno a eseguire il debugging. I bug più comuni che potrebbero aver riscontrato potrebbero essere errori di ortografia, dimenticanza di collegare il foglio di stile, non inserire correttamente i tag, ecc. Questo varierà da classe a classe, ma la maggior parte degli studenti avrà riscontrato più bug nel capitolo. Durante la programmazione, gli studenti dovrebbero usare una formattazione adeguata per aiutarli a leggere il codice, codificare piccoli bit alla volta e controllare man mano che procedono e usare buone convenzioni di denominazione. Per consigli sul debugging, gli studenti possono fornire consigli motivazionali («Non arrenderti!» , «Ricorda che è normale»), risorse consigliate («Chiedi a un amico di guardarlo», «guarda la mappa degli esercizi»), consigli basati sui processi («descrivi prima il bug, poi cercalo prima di cambiare qualcosa», «guarda cosa c'è di sbagliato e controlla l'ortografia in quella parte») o consigli basati sugli strumenti («guarda sopra dov'è il rosa», «usa o Strumento Ispettore»). Dai agli studenti il tempo di condividere i loro consigli e assicurati che stiano facendo riferimento al processo di debugging."
           ]
         },
         "8a237df6-0901-4369-9dc0-aa9ff04ceb06": {
@@ -9089,9 +9099,9 @@
         },
         "0dcdacff-ed60-45ca-bb06-ad4c9ce0a218": {
           "name": "Siti Web personali",
-          "description": "**Distribuisci** restituisci agli studenti le parti «Definisci» e «Prepara» della Guida al progetto. Distribuisci anche una copia della rubrica o della lista di controllo degli studenti agli studenti. Invitali a leggere i requisiti di questo progetto in modo che possano autovalutarsi e riflettere mentre lavorano.\n\n\\*\\*Transizione: \\*\\* Invia gli studenti a Code Studio.",
+          "description": "**Distribuisci** restituisci agli studenti le parti «Definisci» e «Prepara» della Guida al progetto. Distribuisci anche una copia dei Criteri di valutazione o della lista di controllo degli studenti agli studenti. Invitali a leggere i requisiti di questo progetto in modo che possano autovalutarsi e riflettere mentre lavorano.\n\n\\*\\*Transizione: \\*\\* invia gli studenti a Code Studio.",
           "tips": [
-            "\\*\\*Tabella e lista di controllo: \\*\\* gli studenti hanno due risorse che possono usare per autoriflessione e assicurarsi di essere sulla strada giusta: la tablla e la lista di controllo degli studenti. Consigliamo agli studenti di utilizzare la lista di controllo per la propria autovalutazione e riflessione, poiché può essere più facile da digerire e comprendere quando si esamina il proprio progetto. Tuttavia, consigliamo agli insegnanti di utilizzare la rubrica completa per valutare i progetti per fornire un riscontro più dettagliato e specifico agli studenti."
+            "\\*\\*Tabella e lista di controllo: \\*\\* gli studenti hanno due risorse che possono usare per autoriflessione e assicurarsi di essere sulla strada giusta: la tabella e la lista di controllo degli studenti. Consigliamo agli studenti di utilizzare la lista di controllo per la propria autovalutazione e riflessione, poiché può essere più facile da digerire e comprendere quando si esamina il proprio progetto. Tuttavia, consigliamo agli insegnanti di utilizzare i Criteri di valutazione completi per valutare i progetti per fornire un riscontro più dettagliato e specifico agli studenti."
           ]
         },
         "34513068-c4eb-4fad-bf11-87cb7a26ca7f": {
@@ -9109,7 +9119,7 @@
         "62d838c5-9acc-4c5c-94d8-1047abe4f6ce": {
           "description": "\\*\\*Domande da prendere in considerazione con il video: \\*\\*\n\n-   Quali pensi che siano le tue responsabilità come creatore di siti web?\n-   Perché potresti voler vedere il codice o rimescolare quello del sito di qualcun altro?",
           "tips": [
-            "**Obiettivo**\n\nI contenuti video sono abbastanza semplici, ma questo è il tuo ultimo incontro con gli studenti prima della pubblicazione, quindi è un buon momento per assicurarti che abbiano riflettuto a fondo sulle implicazioni della pubblicazione per il mondo intero. Dovrebbero assicurarsi di non condividere informazioni sensibili e di avere il diritto di utilizzare tutti i contenuti della pagina.\n\nQuando hanno iniziato a condividere, dovrebbero anche pensare a come rispettano il lavoro degli altri editori di siti web, in particolare dei loro compagni di classe. Potresti dedicare del tempo a stabilire delle norme in classe su come parlano e fornire un riscontro sui siti dei compagni di classe, nonché delle linee guida per l'uso del codice scritto da altri."
+            "**Obiettivo**\n\nI contenuti video sono abbastanza semplici, ma questo è il tuo ultimo incontro con gli studenti prima della pubblicazione, quindi è un buon momento per assicurarti che abbiano riflettuto a fondo sulle implicazioni della pubblicazione per il mondo intero. Dovrebbero assicurarsi di non condividere dati sensibili e di avere il diritto di utilizzare tutti i contenuti della pagina.\n\nQuando hanno iniziato a condividere, dovrebbero anche pensare a come rispettano il lavoro degli altri editori di siti web, in particolare dei loro compagni di classe. Potresti dedicare del tempo a stabilire delle norme in classe su come parlano e fornire un riscontro sui siti dei compagni di classe, nonché delle linee guida per l'uso del codice scritto da altri."
           ],
           "progression_name": "Video: pubblicare il tuo sito web"
         },
@@ -9163,7 +9173,7 @@
         "1e37aef5-440b-46ca-a199-9ca14925cb46": {
           "description": "\\*\\*Discussione: \\*\\* chiedi agli studenti di condividere l'ultimo sito web che hanno visitato. Assicurati che gli studenti condividano il motivo per cui sono andati su quel sito web e se in quel sito web hanno effettivamente trovato ciò che stavano cercando.",
           "tips": [
-            "\\*\\*Obiettivo: \\*\\* l'obiettivo di questa discussione è capire che i siti web condividono informazioni e che le persone visitano i siti web per uno scopo particolare."
+            "\\*\\*Obiettivo: \\*\\* l'obiettivo di questa discussione è capire che i siti web condividono dati e che le persone visitano i siti web per uno scopo particolare."
           ]
         },
         "ab64b02a-2ef1-475c-8a48-30d47e532b20": {
@@ -9718,7 +9728,7 @@
           "description": "#### Reagire come il tuo utente"
         },
         "962479f8-9bcf-4cdf-867b-1f89b7bd3e75": {
-          "description": "**Mostra**: le tre diapositive successive contengono prodotti diversi a cui ogni gruppo di utenti può reagire: stivali impermeabili, una bicicletta e dolcetti al cioccolato. Gli studenti reagiranno a ciascun prodotto come utente compilando una riga nella guida alle attività. La guida chiede agli studenti di fare una distinzione tra l' _usabilità_ di un articolo per il proprio utente e se a un utente piace o non piace. Potresti voler esaminare il primo come gruppo in modo da poter modellare che un prodotto può essere esteticamente accattivante, ma non molto utilizzabile, o utilizzabile ma non esteticamente accattivante.",
+          "description": "**Mostra:** le tre diapositive successive contengono prodotti diversi a cui ogni gruppo di utenti può reagire: stivali impermeabili, una bicicletta e dolcetti al cioccolato. Gli studenti reagiranno a ciascun prodotto come utente compilando una riga nella guida alle attività. La guida chiede agli studenti di fare una distinzione tra l' _usabilità_ di un articolo per il proprio utente e se a un utente piace o non piace. Potresti voler esaminare il primo come gruppo in modo da poter modellare che un prodotto può essere esteticamente accattivante ma non molto utilizzabile oppure utilizzabile ma non esteticamente accattivante.",
           "tips": [
             "\\*\\*Adattamento dell'attività: \\*\\* le diapositive fornite includono già diversi prodotti, ma potresti aggiungere altri prodotti e immagini che ritieni possano interessare i tuoi studenti."
           ]
@@ -9756,7 +9766,7 @@
           "name": "Introduci il pensiero progettuale",
           "description": "\\*\\*Video: \\*\\* guarda con gli studenti il video del \"Processo del pensiero progettuale\". Interrompi il video dopo la 5a parte (circa 3:10).",
           "tips": [
-            "**Pensiero progettuale:** L'attività di oggi, così come l'intera unità, è fortemente influenzata dal \"Pensiero progettuale\". Questo è un processo creativo molto aperto che potrebbe essere difficile da immaginare se non hai mai partecipato tu stesso a un'attività di pensiero progettuale. Le risorse seguenti possono aiutarti a immaginare come sarà la tua classe durante queste attività di pensiero progettuale. \n\n-   [Cos'è il pensiero progettuale? Una guida pratica per gli educatori](https://www.makersempire.com/what-is-design-thinking-a-handy-guide-for-classroom-teachers/).\n-   [Pensiero progettuale: lezioni per la classe](https://www.edutopia.org/blog/design-thinking-betty-ray)\n-   [Formazione per insegnanti di pensiero progettuale (Video)](https://www.youtube.com/watch?v=qqM8lf3zfFo)\n\nAlcune di queste risorse sono incentrate su aule di scienze o prototipi fisici, il che è diverso da questa unità che si concentra in ultima analisi sulla creazione di app. Indipendentemente da ciò, dovrebbero offrire una certa chiarezza su come si presenta l'intero processo dall'inizio alla fine e su quale potrebbero essere forma e ritmo delle tue lezioni durante queste attività."
+            "**Pensiero progettuale:** L'attività di oggi, così come l'intera unità, è fortemente influenzata dal \"Pensiero progettuale\". Questo è un processo creativo molto aperto che potrebbe essere difficile da immaginare se non hai mai partecipato tu stesso a un'attività di pensiero progettuale. Le risorse seguenti possono aiutarti a immaginare come sarà la tua classe durante queste attività di pensiero progettuale. \n\n-   [Cos'è il pensiero progettuale? Una guida pratica per gli educatori](https://www.makersempire.com/what-is-design-thinking-a-handy-guide-for-classroom-teachers/).\n-   [Pensiero progettuale: lezioni per la classe](https://www.edutopia.org/blog/design-thinking-betty-ray)\n-   [Formazione per insegnanti di pensiero progettuale (Video)](https://www.youtube.com/watch?v=qqM8lf3zfFo)\n\nAlcune di queste risorse sono incentrate su aule di scienze o prototipi fisici, il che è diverso da questa unità che si concentra in ultima analisi sulla creazione di app. Indipendentemente da ciò, dovrebbero offrire una certa chiarezza su come si presenta l'intero processo dall'inizio alla fine e su quale potrebbe essere durante queste attività il clima della classe nelle tue lezioni."
           ]
         },
         "87cdf0a2-66ce-47b9-b60b-39a64b310214": {
@@ -10155,10 +10165,11 @@
           ]
         },
         "79a5148b-1c7b-48b0-a8c9-ee7cbedc102e": {
-          "description": "\\*\\*Mostra: \\*\\* prepara 2-3 app di esempio da mostrare agli studenti. Alcune sono suggerite dalle diapositive, ma puoi anche usare app della risorsa \"Esempi di app per fare del bene\" o altre app per studenti della tua scuola o della tua comunità. Per ogni app:\n\n\\*\\*Discussione: \\*\\* quale pensi sia la questione sociale che questa app è stata progettata per risolvere? Come si ottiene questo risultato?",
+          "description": "\\*\\*Mostra: \\*\\* prepara 2-3 app di esempio da mostrare agli studenti. Alcune sono suggerite dalle diapositive, ma puoi anche usare app della risorsa \"Esempi di app per il bene comune\" o altre app per studenti della tua scuola o della tua comunità. Per ogni app:\n\n\\*\\*Discussione: \\*\\* quale pensi sia la questione sociale che questa app è stata progettata per risolvere? Come si ottiene questo risultato?",
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "App di esempio per il bene comune"
         },
         "004d280d-6609-4e4e-a118-f7005c976046": {
           "tips": [
@@ -10207,7 +10218,7 @@
           ]
         },
         "d0a26891-e4cd-488e-9ec6-121686e29fac": {
-          "description": "\\*\\*Mostra: \\*\\* leggi le istruzioni sulla guida alle attività di \"ricerca di mercato\". Ogni studente dovrebbe trovare almeno un'app da analizzare per il gruppo di lavoro. Dai agli studenti il tempo di fare ricerche prima individualmente, poi il tempo di condividere le app che hanno trovato nei loro gruppi di lavoro. Dovrebbero prestare particolare attenzione se ci sono funzionalità delle app che hanno scoperto che potrebbero «prendere in prestito» per la propria app.\n\n\\*\\*Ricerca di app: \\*\\* ecco alcuni posti in cui gli studenti possono cercare:\n\n-   [Galleria pubblica di Code.org](//studio.code.org/projects/public)\n-   Lezioni o concorsi di app per dispositivi mobili come:\n    -   [App per fare del bene](https://www.appsforgood.org/)\n    -   [Technovation](http://www.technovationchallenge.org/)\n-   App store per dispositivi mobili come Apple App Store o Google Play\n-   Ricerca generica sul web con Google o Bing\n    -   Prova frasi come «concorso app» o «app per il bene della società»\n    -   Includi il nome del tuo stato per idee o concorsi locali"
+          "description": "\\*\\*Mostra: \\*\\* leggi le istruzioni sulla guida alle attività di \"ricerca di mercato\". Ogni studente dovrebbe trovare almeno un'app da analizzare per il gruppo di lavoro. Dai agli studenti il tempo di fare ricerche prima individualmente, poi il tempo di condividere le app che hanno trovato nei loro gruppi di lavoro. Dovrebbero prestare particolare attenzione se ci sono funzionalità delle app che hanno scoperto che potrebbero «prendere in prestito» per la propria app.\n\n\\*\\*Ricerca di app: \\*\\* ecco alcuni posti in cui gli studenti possono cercare:\n\n-   [Galleria pubblica di Code.org](//studio.code.org/projects/public)\n-   Lezioni o concorsi di app per dispositivi mobili come:\n    -   [App per il bene comune](https://www.appsforgood.org/)\n    -   [Technovation](http://www.technovationchallenge.org/)\n-   App store per dispositivi mobili come Apple App Store o Google Play\n-   Ricerca generica sul web con Google o Bing\n    -   Prova frasi come «concorso app» o «app per il bene comune»\n    -   Includi il nome della tua regione per idee o concorsi locali"
         },
         "701bc509-9dcb-403e-becd-aa35133b39c7": {
           "tips": [
@@ -10319,10 +10330,10 @@
           ]
         },
         "4a48d593-ad1b-4693-a027-041759320afd": {
-          "name": "Modalità di progettazione in \"Sviluppo App\""
+          "name": "Modalità Interfaccia in \"Sviluppo App\""
         },
         "f09b7694-1ba5-4e04-89a4-e9bac566fd23": {
-          "progression_name": "Video: introduzione alla \"Modalità progettazione\""
+          "progression_name": "Video: introduzione alla Modalità Interfaccia"
         },
         "95d0c831-8b6a-4a34-80b1-92befbf89ba0": {
           "tips": [
@@ -11251,7 +11262,11 @@
         "057c9015-057e-489e-a76f-820db91f0985": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Alla ricerca di schemi"
+        },
+        "fc8eb6f2-d251-482f-ac26-c939fc8b3c0f": {
+          "progression_name": "Porta in vetro verde"
         },
         "72a32d70-36a4-4a3b-86dc-e259990901f1": {
           "tips": [
@@ -11634,18 +11649,32 @@
           "name": "Diario"
         },
         "d212a1de-7271-46d1-a950-956443922687": {
-          "name": "Esposizione di un problema (issue statement)",
+          "name": "Definizione del problema (issue statement)",
           "tips": [
             null
           ]
         },
+        "1561e8b5-bfe4-4354-b137-199f449513e1": {
+          "description": "Quando noterai che gli studenti hanno finito con i 5 perché, raggruppali in modo da poter mostrare loro come costruire una definizione del problema."
+        },
         "6f2134b8-5066-4311-9ad1-0f57eb91ec37": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostra**  agli studenti la definizione di definizione del problema. Vai alla diapositiva successiva e offri agli studenti suggerimenti su come scrivere una definizione del problema.",
           "tips": [
-            "**L'esposizione strutturata di un problema (issue statement)** fa parte del pensiero progettuale e costituisce un contesto più ampio per affrontare in modo creativo i problemi della comunità. Per ulteriori suggerimenti e informazioni sulle dichiarazioni di problemi, considera la lettura di questi articoli [here](https://www.interaction-design.org/literature/article/stage-2-in-the-design-thinking-process-define-the-problem-and-interpret-the-results) e [here](https://careerfoundry.com/en/blog/ux-design/stage-two-design-thinking-define-the-problem/)"
+            "**La definizione del problema (issue statement)** fa parte del pensiero progettuale e costituisce un contesto più ampio per affrontare in modo creativo i problemi della comunità. Per ulteriori suggerimenti e informazioni sulle definizioni di un problema, puoi leggere questi articoli [here](https://www.interaction-design.org/literature/article/stage-2-in-the-design-thinking-process-define-the-problem-and-interpret-the-results) e [here](https://careerfoundry.com/en/blog/ux-design/stage-two-design-thinking-define-the-problem/)"
           ]
         },
+        "17e0bbba-39f7-47cd-966d-a9909f94eb7a": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Fai questo: \\*\\* chiedi agli studenti di identificare un problema fondamentale scoperto nell'esercizio dei 5 Perché, quindi chiedi loro di scrivere la propria definizione del problema in fondo al foglio di lavoro dei 5 perché."
+        },
+        "cb0dc0f5-10a5-4a6e-a877-a68a14ab5620": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Condividi:** chiedi a 2-3 studenti di condividere le definizioni del problema che hanno formulato. "
+        },
+        "b2ced448-9ae5-47a3-9573-eb65494c00db": {
+          "description": "Avete condiviso alcuni esempi davvero fantastici di come questa osservazione possa portare a una varietà di problemi diversi che potremmo affrontare. Diamo un'occhiata alla definizione del problema che l'altra nostra squadra di studenti ha formulato e vediamo se possiamo raccogliere alcune idee per le app che possono aiutare a risolvere quel problema."
+        },
         "5b5cb2d4-fb82-4d8a-9447-65592e3ccc30": {
-          "name": "Riflessione di gruppo sull'app"
+          "name": "Riflessione di gruppo sull'app",
+          "description": "**Distribuisci** le copie della [r app_brainstorm_-_activity_guide/csd/2022]. La definizione del problema indicata in alto è già stata compilata. "
         },
         "2e00cb64-89aa-4cea-a333-fa8af48559b8": {
           "tips": [
@@ -11750,6 +11779,8 @@
           ]
         },
         "4d128db2-a3e5-4d49-bb69-5f2619848f34": {
+          "name": "Fase 1 - Scegli una definizione del problema",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Fai questo: \\*\\* Chiedi agli studenti di fare un brainstorming sulla definizione di un problema che vorrebbero affrontare con l'apprendimento automatico. Incoraggia gli studenti a utilizzare la strategia dei 5 perché delle lezioni precedenti. Potresti anche decidere di mettere a disposizione degli studenti alcune copie del [r 5_why_s_-_activity_guide/csd/2022] .",
           "tips": [
             null
           ]
@@ -11990,9 +12021,6 @@
         },
         "23ab6af6-1209-49cd-9a80-45b112fb2cf8": {
           "progression_name": "Forme e Cicli Infiniti"
-        },
-        "3555c4f2-ed9f-4c28-9f73-5fc27d44fc07": {
-          "progression_name": "Il disegno ciclico"
         },
         "d62b8a9f-6329-4ab4-baf1-72df019672fc": {
           "progression_name": "Forme e Cicli Infiniti"
@@ -12373,11 +12401,19 @@
         "8c2572d4-ae23-481b-9a2d-a82c1ca6c083": {
           "progression_name": "Numeri Binari"
         },
+        "039f881e-d9a5-42e0-add5-9780d8bdc15f": {
+          "name": "Sistema binario e dati",
+          "progression_name": "Sistema binario e dati"
+        },
         "19d294ee-d319-4f1c-b2b1-6892c54a7118": {
           "progression_name": "Panoramica della Lezione"
         },
         "6a46d21d-6961-486b-a56f-cbb94df0e318": {
           "progression_name": "Panoramica della Lezione"
+        },
+        "f8979fd0-4649-466a-8e5f-f5f4a70eb355": {
+          "name": "Combinazione di rappresentazioni",
+          "progression_name": "Combinazione di rappresentazioni"
         },
         "54ac0f9e-97de-400c-9e06-30225b854909": {
           "progression_name": "Panoramica della Lezione"
@@ -12413,6 +12449,9 @@
         },
         "f1461b1f-02bf-4335-83d4-24056f5bdfc3": {
           "progression_name": "Panoramica della Lezione"
+        },
+        "3e60526e-3827-4efc-b233-519ef83ccc9e": {
+          "progression_name": "App di esempio"
         },
         "5707e98f-8fcf-43b9-8354-de0f584c610f": {
           "name": "Riflessione",
@@ -13806,9 +13845,6 @@
         "9d10f9c7-aa20-4ed7-826f-dfaef530dd61": {
           "progression_name": "Forme e Cicli Infiniti"
         },
-        "4088b01c-c76d-4836-bfc1-7b0d3ce2fe68": {
-          "progression_name": "Il disegno ciclico"
-        },
         "f269697b-d250-479d-933b-2deab5e1db6a": {
           "progression_name": "Forme e Cicli Infiniti"
         },
@@ -14299,11 +14335,19 @@
         "d9046a60-1bfa-40fd-bc94-4d9fb418cabf": {
           "progression_name": "Numeri Binari"
         },
+        "f6def880-27cc-4670-a83c-e3649b67f3aa": {
+          "name": "Sistema binario e dati",
+          "progression_name": "Sistema binario e dati"
+        },
         "6201931c-36b8-45a1-8ce9-48c53f418a29": {
           "progression_name": "Panoramica della Lezione"
         },
         "682050de-bfb6-467f-9e31-3723a5ce0b70": {
           "progression_name": "Panoramica della Lezione"
+        },
+        "2dcdc80f-1e16-4654-9660-acc51f191356": {
+          "name": "Combinazione di rappresentazioni",
+          "progression_name": "Combinazione di rappresentazioni"
         },
         "74a6211b-44bb-4dfa-8c12-1d20eb6c07ab": {
           "progression_name": "Panoramica della Lezione"
@@ -14339,6 +14383,9 @@
         },
         "2828d915-f212-40c7-bd63-19ae9d2e9ac9": {
           "progression_name": "Panoramica della Lezione"
+        },
+        "6d338f9b-be35-4f30-bf3a-a9bdde4c9cd1": {
+          "progression_name": "App di esempio"
         },
         "40a3f261-c8e8-4724-83fd-10c3f539083f": {
           "name": "Riflessione",
@@ -14692,9 +14739,6 @@
         },
         "dc64960a-61a1-492a-9019-267233fa287d": {
           "progression_name": "Forme e Cicli Infiniti"
-        },
-        "d0abce5e-23db-4b3c-ae93-6bc44a0b400e": {
-          "progression_name": "Il disegno ciclico"
         },
         "01fe979b-e5d4-4c9d-a64f-9fc1887156f7": {
           "progression_name": "Forme e Cicli Infiniti"
@@ -15318,11 +15362,19 @@
         "ea794705-6489-44b1-a635-9a1a2249d4e5": {
           "progression_name": "Numeri Binari"
         },
+        "a2699212-b72a-4863-9d12-e8451b93f5c6": {
+          "name": "Sistema binario e dati",
+          "progression_name": "Sistema binario e dati"
+        },
         "c4174fc9-a3ee-4295-9ebc-e7759cc27251": {
           "progression_name": "Panoramica della Lezione"
         },
         "095bd460-b24f-44b2-b807-acdf71759f73": {
           "progression_name": "Panoramica della Lezione"
+        },
+        "90bc96dd-c98e-4ad8-a361-a51e2f1e060c": {
+          "name": "Combinazione di rappresentazioni",
+          "progression_name": "Combinazione di rappresentazioni"
         },
         "85e6dc1d-2751-4551-9624-c0e8c5b44984": {
           "progression_name": "Panoramica della Lezione"
@@ -20607,7 +20659,11 @@
         "57d8014b-4da5-4981-b5aa-bd5feb656548": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Alla ricerca di schemi"
+        },
+        "3b73e965-37ee-48c9-b346-0b2f05e5664d": {
+          "progression_name": "Porta in vetro verde"
         },
         "14ad319c-b3ec-4f24-a9c7-5f80f29c9ba8": {
           "tips": [
@@ -20955,18 +21011,32 @@
           "name": "Diario"
         },
         "f2c599ed-2dc6-4fa2-8ebd-5123c77dd9c3": {
-          "name": "Esposizione di un problema (issue statement)",
+          "name": "Definizione del problema (issue statement)",
           "tips": [
             null
           ]
         },
+        "ed1b18bf-d328-418f-b226-5de76c9cfd2c": {
+          "description": "Quando noterai che gli studenti hanno finito con i 5 perché, raggruppali in modo da poter mostrare loro come costruire una definizione del problema."
+        },
         "38761f3b-2e5b-4626-8f10-3a562e8d0c3b": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostra**  agli studenti la definizione di definizione del problema. Vai alla diapositiva successiva e offri agli studenti suggerimenti su come scrivere una definizione del problema.",
           "tips": [
-            "**L'esposizione strutturata di un problema (issue statement)** fa parte del pensiero progettuale e costituisce un contesto più ampio per affrontare in modo creativo i problemi della comunità. Per ulteriori suggerimenti e informazioni sulle dichiarazioni di problemi, considera la lettura di questi articoli [here](https://www.interaction-design.org/literature/article/stage-2-in-the-design-thinking-process-define-the-problem-and-interpret-the-results) e [here](https://careerfoundry.com/en/blog/ux-design/stage-two-design-thinking-define-the-problem/)"
+            "**La definizione del problema (issue statement)** fa parte del pensiero progettuale e costituisce un contesto più ampio per affrontare in modo creativo i problemi della comunità. Per ulteriori suggerimenti e informazioni sulle definizioni di un problema, puoi leggere questi articoli [here](https://www.interaction-design.org/literature/article/stage-2-in-the-design-thinking-process-define-the-problem-and-interpret-the-results) e [here](https://careerfoundry.com/en/blog/ux-design/stage-two-design-thinking-define-the-problem/)"
           ]
         },
+        "09b3b319-aea7-4490-99e1-190b3de6c550": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Fai questo: \\*\\* chiedi agli studenti di identificare un problema fondamentale scoperto nell'esercizio dei 5 Perché, quindi chiedi loro di scrivere la propria definizione del problema in fondo al foglio di lavoro dei 5 perché."
+        },
+        "d12ba435-1589-48c6-bb8a-af74a052ae03": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Condividi:** chiedi a 2-3 studenti di condividere le definizioni del problema che hanno formulato. "
+        },
+        "76173b6c-c5a5-4733-9e70-feb438583a3d": {
+          "description": "Avete condiviso alcuni esempi davvero fantastici di come questa osservazione possa portare a una varietà di problemi diversi che potremmo affrontare. Diamo un'occhiata alla definizione del problema che l'altra nostra squadra di studenti ha formulato e vediamo se possiamo raccogliere alcune idee per le app che possono aiutare a risolvere quel problema."
+        },
         "d3bd1ebf-06e8-44b4-a4ae-e60b2bf4907a": {
-          "name": "Riflessione di gruppo sull'app"
+          "name": "Riflessione di gruppo sull'app",
+          "description": "**Distribuisci** le copie della [r app_brainstorm_-_activity_guide/aiml/2021]. La definizione del problema indicata in alto è già stata compilata. "
         },
         "bb1e1371-d01e-43c2-913a-5fe680de2bf4": {
           "tips": [
@@ -21055,6 +21125,8 @@
           "name": "Attività"
         },
         "5b3b512d-42b8-4c2f-bbb3-7ebad7908e62": {
+          "name": "Fase 1 - Scegli una definizione del problema",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Fai questo: \\*\\* Chiedi agli studenti di fare un brainstorming sulla definizione di un problema che vorrebbero affrontare con l'apprendimento automatico. Incoraggia gli studenti a utilizzare la strategia dei 5 perché delle lezioni precedenti. Potresti anche decidere di mettere a disposizione degli studenti alcune copie del [r 5_why_s_-_activity_guide/csd/2021] .",
           "tips": [
             null
           ]
@@ -21220,7 +21292,7 @@
           "description": "#### Reagire come il tuo utente"
         },
         "8accf144-8730-45d6-a806-475e5164395c": {
-          "description": "**Mostra**: le tre diapositive successive contengono prodotti diversi a cui ogni gruppo di utenti può reagire: stivali impermeabili, una bicicletta e dolcetti al cioccolato. Gli studenti reagiranno a ciascun prodotto come utente compilando una riga nella guida alle attività. La guida chiede agli studenti di fare una distinzione tra l' _usabilità_ di un articolo per il proprio utente e se a un utente piace o non piace. Potresti voler esaminare il primo come gruppo in modo da poter modellare che un prodotto può essere esteticamente accattivante, ma non molto utilizzabile, o utilizzabile ma non esteticamente accattivante.",
+          "description": "**Mostra:** le tre diapositive successive contengono prodotti diversi a cui ogni gruppo di utenti può reagire: stivali impermeabili, una bicicletta e dolcetti al cioccolato. Gli studenti reagiranno a ciascun prodotto come utente compilando una riga nella guida alle attività. La guida chiede agli studenti di fare una distinzione tra l' _usabilità_ di un articolo per il proprio utente e se a un utente piace o non piace. Potresti voler esaminare il primo come gruppo in modo da poter modellare che un prodotto può essere esteticamente accattivante ma non molto utilizzabile oppure utilizzabile ma non esteticamente accattivante.",
           "tips": [
             "\\*\\*Adattamento dell'attività: \\*\\* le diapositive fornite includono già diversi prodotti, ma potresti aggiungere altri prodotti e immagini che ritieni possano interessare i tuoi studenti."
           ]
@@ -21258,7 +21330,7 @@
           "name": "Introduci il pensiero progettuale",
           "description": "\\*\\*Video: \\*\\* guarda con gli studenti il video del \"Processo del pensiero progettuale\". Interrompi il video dopo la 5a parte (circa 3:10).",
           "tips": [
-            "**Pensiero progettuale:** L'attività di oggi, così come l'intera unità, è fortemente influenzata dal \"Pensiero progettuale\". Questo è un processo creativo molto aperto che potrebbe essere difficile da immaginare se non hai mai partecipato tu stesso a un'attività di pensiero progettuale. Le risorse seguenti possono aiutarti a immaginare come sarà la tua classe durante queste attività di pensiero progettuale. \n\n-   [Cos'è il pensiero progettuale? Una guida pratica per gli educatori](https://www.makersempire.com/what-is-design-thinking-a-handy-guide-for-classroom-teachers/).\n-   [Pensiero progettuale: lezioni per la classe](https://www.edutopia.org/blog/design-thinking-betty-ray)\n-   [Formazione per insegnanti di pensiero progettuale (Video)](https://www.youtube.com/watch?v=qqM8lf3zfFo)\n\nAlcune di queste risorse sono incentrate su aule di scienze o prototipi fisici, il che è diverso da questa unità che si concentra in ultima analisi sulla creazione di app. Indipendentemente da ciò, dovrebbero offrire una certa chiarezza su come si presenta l'intero processo dall'inizio alla fine e su quale potrebbero essere forma e ritmo delle tue lezioni durante queste attività."
+            "**Pensiero progettuale:** L'attività di oggi, così come l'intera unità, è fortemente influenzata dal \"Pensiero progettuale\". Questo è un processo creativo molto aperto che potrebbe essere difficile da immaginare se non hai mai partecipato tu stesso a un'attività di pensiero progettuale. Le risorse seguenti possono aiutarti a immaginare come sarà la tua classe durante queste attività di pensiero progettuale. \n\n-   [Cos'è il pensiero progettuale? Una guida pratica per gli educatori](https://www.makersempire.com/what-is-design-thinking-a-handy-guide-for-classroom-teachers/).\n-   [Pensiero progettuale: lezioni per la classe](https://www.edutopia.org/blog/design-thinking-betty-ray)\n-   [Formazione per insegnanti di pensiero progettuale (Video)](https://www.youtube.com/watch?v=qqM8lf3zfFo)\n\nAlcune di queste risorse sono incentrate su aule di scienze o prototipi fisici, il che è diverso da questa unità che si concentra in ultima analisi sulla creazione di app. Indipendentemente da ciò, dovrebbero offrire una certa chiarezza su come si presenta l'intero processo dall'inizio alla fine e su quale potrebbe essere durante queste attività il clima della classe nelle tue lezioni."
           ]
         },
         "44cf2df5-54a8-46bb-97d0-e2f2d1c56afe": {
@@ -21654,10 +21726,11 @@
           ]
         },
         "233defe7-9977-4539-8a42-7e146979db0e": {
-          "description": "\\*\\*Mostra: \\*\\* prepara 2-3 app di esempio da mostrare agli studenti. Alcune sono suggerite dalle diapositive, ma puoi anche usare app della risorsa \"Esempi di app per fare del bene\" o altre app per studenti della tua scuola o della tua comunità. Per ogni app:\n\n\\*\\*Discussione: \\*\\* quale pensi sia la questione sociale che questa app è stata progettata per risolvere? Come si ottiene questo risultato?",
+          "description": "\\*\\*Mostra: \\*\\* prepara 2-3 app di esempio da mostrare agli studenti. Alcune sono suggerite dalle diapositive, ma puoi anche usare app della risorsa \"Esempi di app per il bene comune\" o altre app per studenti della tua scuola o della tua comunità. Per ogni app:\n\n\\*\\*Discussione: \\*\\* quale pensi sia la questione sociale che questa app è stata progettata per risolvere? Come si ottiene questo risultato?",
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "App di esempio per il bene comune"
         },
         "f5bad206-6147-4a6c-af88-bf15c41f6469": {
           "tips": [
@@ -21706,7 +21779,7 @@
           ]
         },
         "fe2928a5-5696-46a3-9e5f-6cd655e44bc4": {
-          "description": "\\*\\*Mostra: \\*\\* leggi le istruzioni sulla guida alle attività di \"ricerca di mercato\". Ogni studente dovrebbe trovare almeno un'app da analizzare per il gruppo di lavoro. Dai agli studenti il tempo di fare ricerche prima individualmente, poi il tempo di condividere le app che hanno trovato nei loro gruppi di lavoro. Dovrebbero prestare particolare attenzione se ci sono funzionalità delle app che hanno scoperto che potrebbero «prendere in prestito» per la propria app.\n\n\\*\\*Ricerca di app: \\*\\* ecco alcuni posti in cui gli studenti possono cercare:\n\n-   [Galleria pubblica di Code.org](//studio.code.org/projects/public)\n-   Lezioni o concorsi di app per dispositivi mobili come:\n    -   [App per fare del bene](https://www.appsforgood.org/)\n    -   [Technovation](http://www.technovationchallenge.org/)\n-   App store per dispositivi mobili come Apple App Store o Google Play\n-   Ricerca generica sul web con Google o Bing\n    -   Prova frasi come «concorso app» o «app per il bene della società»\n    -   Includi il nome del tuo stato per idee o concorsi locali"
+          "description": "\\*\\*Mostra: \\*\\* leggi le istruzioni sulla guida alle attività di \"ricerca di mercato\". Ogni studente dovrebbe trovare almeno un'app da analizzare per il gruppo di lavoro. Dai agli studenti il tempo di fare ricerche prima individualmente, poi il tempo di condividere le app che hanno trovato nei loro gruppi di lavoro. Dovrebbero prestare particolare attenzione se ci sono funzionalità delle app che hanno scoperto che potrebbero «prendere in prestito» per la propria app.\n\n\\*\\*Ricerca di app: \\*\\* ecco alcuni posti in cui gli studenti possono cercare:\n\n-   [Galleria pubblica di Code.org](//studio.code.org/projects/public)\n-   Lezioni o concorsi di app per dispositivi mobili come:\n    -   [App per il bene comune](https://www.appsforgood.org/)\n    -   [Technovation](http://www.technovationchallenge.org/)\n-   App store per dispositivi mobili come Apple App Store o Google Play\n-   Ricerca generica sul web con Google o Bing\n    -   Prova frasi come «concorso app» o «app per il bene comune»\n    -   Includi il nome della tua regione per idee o concorsi locali"
         },
         "7e704d36-1603-46a8-be78-8f13dcdae93f": {
           "tips": [
@@ -21818,13 +21891,13 @@
           ]
         },
         "2e5264db-0d1d-4fc1-adf1-c5bf13967af5": {
-          "name": "Modalità di progettazione in \"Sviluppo App\"",
+          "name": "Modalità Interfaccia in \"Sviluppo App\"",
           "tips": [
             null
           ]
         },
         "5d7ed2d7-0498-45a5-8969-679ad3abcad6": {
-          "progression_name": "Video: introduzione alla \"Modalità progettazione\""
+          "progression_name": "Video: introduzione alla Modalità Interfaccia"
         },
         "ff254aeb-ed49-4b8f-83b5-1bbfbc1eb7c8": {
           "progression_name": "Costruire una Schermata"
@@ -22590,6 +22663,9 @@
             null
           ]
         },
+        "b4133437-14b2-4221-8202-c411f147e13c": {
+          "progression_name": "Componente per numeri binari"
+        },
         "30ef889b-387b-4dbd-b6bc-96ca25489944": {
           "tips": [
             null
@@ -22598,7 +22674,8 @@
         "59dffdf2-728b-4b66-a29b-7635c858be00": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Sistema binario e dati"
         },
         "f5e577d7-b133-493e-995f-76c9ef44de1d": {
           "name": "Diario"
@@ -22622,6 +22699,9 @@
           "tips": [
             null
           ]
+        },
+        "5b070069-8e80-48a8-8a84-435906d67aef": {
+          "progression_name": "Componente per numeri binari a 8-bit"
         },
         "38324708-63cb-4738-92c9-af06aed187f7": {
           "tips": [
@@ -22689,7 +22769,7 @@
           ]
         },
         "6fc7958a-8055-43c0-b691-c935982236fd": {
-          "description": "**Il processo di risoluzione dei problemi:** ricorda agli studenti il processo di risoluzione dei problemi: definisci, prepara, prova, rifletti. Useremo questo processo per risolvere il problema di oggi.\n\n**Forma i gruppi:** crea gruppi di 3-4 studenti\n\n**Distribuisci** una copia di [r problem-solving-with-data/csd/2021] per ciascuno studente.\n\n#### Risoluzione di un problema relativo alle informazioni"
+          "description": "**Il processo di risoluzione dei problemi:** ricorda agli studenti il processo di risoluzione dei problemi: definisci, prepara, prova, rifletti. Useremo questo processo per risolvere il problema di oggi.\n\n**Forma i gruppi:** crea gruppi di 3-4 studenti\n\n**Distribuisci** una copia di [r problem-solving-with-data/csd/2021] per ciascuno studente.\n\n#### Risoluzione di un problema relativo ai dati"
         },
         "928ac428-64ef-4359-ad63-12d175fa700e": {
           "name": "Definisci"
@@ -22922,6 +23002,9 @@
           "tips": [
             null
           ]
+        },
+        "84929552-ebfc-43ef-a97d-f1857609d4ae": {
+          "progression_name": "App di esempio"
         },
         "ff9b8b39-860d-427b-9a2d-80c537bc539f": {
           "tips": [
@@ -23161,7 +23244,7 @@
         "1f66ca37-97c5-48be-9f14-d7f4938b2632": {
           "description": "**Supporto: \\*\\* man mano che gli studenti lavorano sugli esercizi, puoi aiutarli, ma incoraggiali a cercare di dedicare un po' di tempo a capire le cose da soli. Se hai bisogno di aiuto per supportare gli studenti, consulta gli esempi nel visualizzatore delle risposte degli insegnanti. Quando gli studenti raggiungono gli \\*\\*esercizi di sfida**, possono scegliere di affrontare una o più sfide, tornare a migliorare gli esercizi precedenti o aiutare un compagno di classe.",
           "tips": [
-            "Gli studenti che si avvicinano per la prima volta alla programmazione hanno spesso alcune idee sbagliate comuni in cui si imbattono. Per evitare che ciò accada, continua a ricordare agli studenti le seguenti cose:\n\n-   Un comando per riga\n-   I comandi vengono eseguiti in ordine dall'alto verso il basso\n-   L'ordine degli input nella forma i comandi sono importanti\n-   Ogni comando di input nella forma è separato da virgole\n-   (0,0) si trova nell'angolo superiore sinistro del display\n-   Tutti i valori x e y sul display sono positivi"
+            "Gli studenti che si avvicinano per la prima volta alla programmazione hanno spesso alcune idee sbagliate comuni in cui si imbattono. Per evitare che ciò accada, continua a ricordare agli studenti le seguenti cose:\n\n-   Un comando per riga\n-   I comandi vengono eseguiti in ordine dall'alto verso il basso\n-   È importante l'ordine con cui si scrivono le istruzioni che disegnano forme\n-   Ogni comando di input nella forma è separato da virgole\n-   (0,0) si trova nell'angolo superiore sinistro della schermata\n-   Tutti i valori x e y sul display sono positivi"
           ]
         },
         "69985cec-7330-4730-a85a-a49cb816af3e": {
@@ -23972,7 +24055,7 @@
           ]
         },
         "ad03dcc6-515c-4a86-bf14-d0bb13c89769": {
-          "description": "## Prima della lezione\n\n#### Assicurati di essere registrato su Code Studio come account insegnante «verificato»\n\nChiunque può creare un account insegnante su Code Studio, il che significa che abbiamo bisogno di un ulteriore livello di autorizzazione per consentire agli insegnanti di CS Discoveries di vedere valutazioni, chiavi di risposta e qualsiasi altro materiale a cui gli studenti non dovrebbero essere in grado di accedere banalmente. Se hai partecipato a un TeacherCon di Code.org durante l'estate, dovresti già avere questo accesso.\n\nPer verificare di disporre dell'accesso:\n\n1.  Vai alla [pagina panoramica del corso dell'Unità 1](https://studio.code.org/s/csd1-2021)\n2.  Consideri il sondaggio pre-corso di \"Alla scoperta dell'informatica\" come la prima «fase» del corso?\n3.  In caso contrario, compila [questo modulo](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Tieni presente che può volerci circa un giorno per diventare un account insegnante verificato, quindi esegui questo passaggio in anticipo!\n\nSe non sei un account insegnante verificato, puoi comunque creare una sezione per la tua classe, ma non sarai in grado di amministrare il sondaggio pre-corso il primo giorno.\n\n#### Crea una sezione di classe su Code Studio.\n\nPer creare una sezione:\n\n1.  Vai alla [Cruscotto di controllo dell'insegnante](https://studio.code.org/home)\n2.  Fai clic su «Nuova sezione» in «Sezioni della classe»\n3.  Scegli «Accessi via email» \n4.  Nell'apposito spazio, dai un nome alla sezione (ad esempio Periodo CSD 1), il voto dei tuoi studenti, il corso: «Alla scoperta dell'informatica», l'unità corrente: «Unità 1: Risoluzione dei problemi» e fai clic su «Salva»\n5.  Una volta creata la sezione, fate clic sul nome della sezione\n6.  Nella nuova pagina, vedrai un URL di iscrizione univoco che distribuirai ai tuoi studenti in classe. \n\nPer un video che illustra questi passaggi e altro ancora sulla navigazione del tuo account Code.org, vai al \n[r how-to-videos/csd/2021]"
+          "description": "## Prima della lezione\n\n#### Assicurati di essere registrato su Code Studio come account insegnante «verificato»\n\nChiunque può creare un account insegnante su Code Studio, il che significa che abbiamo bisogno di un ulteriore livello di autorizzazione per consentire agli insegnanti del corso di vedere valutazioni, chiavi di risposta e qualsiasi altro materiale a cui gli studenti non dovrebbero essere in grado di accedere banalmente. Se hai partecipato a un TeacherCon di Code.org durante l'estate, dovresti già avere questo accesso.\n\nPer verificare di disporre dell'accesso:\n\n1.  Vai alla [pagina panoramica del corso dell'Unità 1](https://studio.code.org/s/csd1-2021)\n2.  Consideri il sondaggio pre-corso di \"Alla scoperta dell'informatica\" come la prima «fase» del corso?\n3.  In caso contrario, compila [questo modulo](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Tieni presente che può volerci circa un giorno per diventare un account insegnante verificato, quindi esegui questo passaggio in anticipo!\n\nSe non sei un account insegnante verificato, puoi comunque creare una sezione per la tua classe, ma non sarai in grado di amministrare il sondaggio pre-corso il primo giorno.\n\n#### Crea una sezione di classe su Code Studio.\n\nPer creare una sezione:\n\n1.  Vai alla [Cruscotto di controllo dell'insegnante](https://studio.code.org/home)\n2.  Fai clic su «Nuova sezione» in «Sezioni della classe»\n3.  Scegli «Accessi via email» \n4.  Nell'apposito spazio, dai un nome alla sezione (ad esempio Fase del corso 1), il voto dei tuoi studenti, il corso: «Alla scoperta dell'informatica», l'unità corrente: «Unità 1: Risoluzione dei problemi» e fai clic su «Salva»\n5.  Una volta creata la sezione, fate clic sul nome della sezione\n6.  Nella nuova pagina, vedrai un URL di iscrizione univoco che distribuirai ai tuoi studenti in classe. \n\nPer un video che illustra questi passaggi e altro ancora sulla navigazione del tuo account Code.org, vai al \n[r how-to-videos/csd/2021]"
         },
         "32772c7d-26fd-4352-b09c-6a7331500a70": {
           "description": "## In fase di creazione della classe\n\n1.  Se non ne hanno già uno, chiedi agli studenti di creare un account Code Studio all'indirizzo <https://studio.code.org> \n2.  Condividi con gli studenti la sezione Unisciti all'URL e chiedi loro di raggiungerla per entrare nella tua sezione\n    -   Puoi confermare che uno studente si è iscritto con successo alla tua sezione aprendo la pagina di avanzamento della sezione nel \"Cruscotto di controllo dell'insegnante\" e premendo aggiorna quando gli studenti si iscrivono. Gli studenti dovrebbero vedere una piccola barra verde nella parte superiore della pagina che dice «Ti sei iscritto con successo...» \n3.  A partire da [studio.code.org]a[1] , chiedi agli studenti di individuare il riquadro Alla scoperta dell'informatica e fare clic su «Visualizza corso», quindi passare all'Unità 1.\n\nUna volta che gli studenti avranno consultato la pagina riepilogativa dell'Unità 1, saranno pronti per rispondere al sondaggio pre-corso del CSD"
@@ -24330,7 +24413,7 @@
           "description": "Per risolvere questo problema, dovevi **ottenere** dati dal tuo partner sotto forma di risposte alle tue domande. Dovevi anche **mettere a disposizione** dati al tuo partner sotto forma di consigli. I computer fanno la stessa cosa. I dati che ricevono dagli utenti si chiamano **input/dati in ingresso**, quelli che forniscono agli utenti si chiamano **output/dati in uscita**. Diamo un'occhiata a un'app che fornisce anche consigli riguardo agli animali domestici."
         },
         "324a171f-99ef-42b7-b94b-df073186ff8a": {
-          "description": "\\*\\*Glossario delle parole chiave: \\*\\*\n\n-   **Input/dati in ingresso** - i dati che i computer ottengono da utenti, dispositivi o altri computer\n-   **Output/dati in uscita**: i dati che il computer mettono a disposizione di utenti, dispositivi o altri computer\n\n**Domanda del giorno: in che modo i computer utilizzano dati in ingresso e in uscita per ottenere e fornire le informazioni necessarie alla risoluzione dei problemi?**"
+          "description": "\\*\\*Glossario delle parole chiave: \\*\\*\n\n-   **Input/dati in ingresso** - i dati che i computer ottengono da utenti, dispositivi o altri computer\n-   **Output/dati in uscita**: i dati che il computer mettono a disposizione di utenti, dispositivi o altri computer\n\n**Domanda del giorno: in che modo i computer utilizzano dati in ingresso e in uscita per ottenere e fornire i dati necessari alla risoluzione dei problemi?**"
         },
         "502a9053-c029-441d-aac1-5dcfc540fe9d": {
           "name": "Ingressi e uscite",
@@ -24343,13 +24426,13 @@
           "name": "Selettore di animali domestici",
           "description": "Guardate insieme l'app Selettore di animali domestici. Nota che fa qualcosa di molto simile a quello che gli studenti hanno appena fatto in coppia. In gruppo, rispondi alle prime due domande sugli ingressi dell'app. Assicurati che gli studenti comprendano che l'app riceve dati in ingresso in base al comportamento dell'utente, in questo caso premendo un pulsante. A seconda del gruppo, potresti voler modellare la domanda in base al risultato o fare in modo che gli studenti ci lavorino in coppia.",
           "tips": [
-            "Gli studenti non hanno bisogno dell'input esatto per ogni possibile domanda posta. È sufficiente dire che l'input è un dato che riguarda eventuali allergie dell'utente, disponibilità a giocare con l'animale, ecc. e che l'app riceve queste informazioni dall'utente attraverso la pression di un pulsante."
+            "Gli studenti non hanno bisogno dell'input esatto per ogni possibile domanda posta. È sufficiente dire che l'input è un dato che riguarda eventuali allergie dell'utente, disponibilità a giocare con l'animale, ecc. e che l'app riceve questi dati dall'utente attraverso la pressione di un pulsante."
           ],
           "progression_name": "App: selettore per animali domestici"
         },
         "e606d7d3-d552-4db3-91b7-c26f98da237c": {
           "name": "Generatore di storie",
-          "description": "Di seguito, consenti a ogni coppia di guardare per conto proprio l'app per la creazione della storia, rispondendo a domande simili sui dati in ingresso e in uscita. Questa app consente agli studenti di inserire informazioni specifiche in un modulo, quindi generare una storia personalizzata in base alle informazioni fornite.",
+          "description": "Di seguito, consenti a ogni coppia di guardare per conto proprio l'app per la creazione della storia, rispondendo a domande simili sui dati in ingresso e in uscita. Questa app consente agli studenti di inserire dati specifici in un modulo, quindi generare una storia personalizzata in base ai dati forniti.",
           "tips": [
             "Assicurati che gli studenti stiano identificando gli ingressi e le uscite appropriate. Le risposte degli studenti possono variare leggermente, ma devono essere simili a quelle dell'esempio fornito nella casella «Solo insegnanti» del primo esercizio di Code Studio."
           ],
@@ -24503,7 +24586,7 @@
         "9c0439ca-8ac8-463f-889c-47df291b32d9": {
           "description": "Chiedi agli studenti di condividere quali dati ritengano debbano essere memorizzati e perché.",
           "tips": [
-            "Sebbene non sia importante che gli studenti concordino sulle risposte, questa discussione inizia a suggerire l'idea di memorizzare le informazioni per una fase successiva e li incentiva a pensare a quali dati vadano o non vadano memorizzati in un'app. "
+            "Sebbene non sia importante che gli studenti concordino sulle risposte, questa discussione inizia a suggerire l'idea di memorizzare i dati per una fase successiva e li incentiva a pensare a quali dati vadano o non vadano memorizzati in un'app. "
           ]
         },
         "2f41e74b-1693-4621-a008-ee942996e062": {
@@ -24576,7 +24659,7 @@
         "40b16a1c-add1-445a-81de-c281c495fe6f": {
           "description": "**Condividi:** se c'è tempo, dai modo agli studenti di condividere le proprie idee.",
           "tips": [
-            "Quando lo studente condivide le proprie idee, fai in modo che utilizzi il glossario delle parole chiave della lezione:\n\n**memorizzazione** - salvataggio delle informazioni da utilizzare in futuro"
+            "Quando lo studente condivide le proprie idee, fai in modo che utilizzi il glossario delle parole chiave della lezione:\n\n**memorizzazione** - salvataggio dei dati da utilizzare in futuro"
           ]
         },
         "fbec93b8-ebae-4b0b-9c2f-3ceee251e162": {
@@ -24759,7 +24842,7 @@
         },
         "6c301b18-2257-43b7-ad69-d9d8eab042bd": {
           "name": "Prima della lezione",
-          "description": "#### Assicurati di essere registrato su Code Studio come account insegnante «verificato»\n\nChiunque può creare un account insegnante su Code Studio, il che significa che abbiamo bisogno di un ulteriore livello di autorizzazione per consentire agli insegnanti del corso \"Alla scoperta dell'informatica\" di vedere valutazioni, chiavi di risposta e qualsiasi altro materiale a cui gli studenti non dovrebbero essere in grado di accedere banalmente. Se hai partecipato a un TeacherCon di Code.org durante l'estate, dovresti già avere questo accesso.\n\nPer verificare se hai accesso:\n\n1.  Vai alla [pagina panoramica del corso dell'Unità 1](https://studio.code.org/s/csd1-2018)\n2.  Ritieni il sondaggio pre-corso di \"Alla scoperta dell'informatica\" come la prima «fase» del corso?\n3.  In caso contrario, compila [questo modulo](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Tieni presente che può essere necessario circa un giorno per diventare un account insegnante verificato, quindi esegui questo passaggio in anticipo!\n\nSe non disponi di un account insegnante verificato, puoi comunque creare una classe per i tui studenti, ma non sarai in grado di amministrare il sondaggio pre-corso il primo giorno.\n\n#### Crea una classe su Code Studio.\n\nPer creare una classe:\n\n1.  Vai alla [Cruscotto di controllo dell'insegnante](https://studio.code.org/home)\n2.  Fai clic su «Nuova classe» in «Sezioni della classe»\n3.  Scegli «Accessi via email» \n4.  Nell'apposito spazio, dai un nome alla classe (ad esempio Periodo CSD 1), il voto dei tuoi studenti, il corso: «Scoperte dell'informatica», l'unità corrente: «Unità 1: Risoluzione dei problemi» e fai clic su «Salva»\n5.  Una volta creata la classe, fate clic sul nome della classe\n6.  Nella nuova pagina, vedrai un URL di iscrizione univoco che distribuirai ai tuoi studenti della classe. \n\nPer un video che illustra questi passaggi e altri passaggi sulla navigazione del tuo account Code.org, vai alla [Playlist video dimostrativa di Code.org](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)"
+          "description": "#### Assicurati di essere registrato su Code Studio come account insegnante «verificato»\n\nChiunque può creare un account insegnante su Code Studio, il che significa che abbiamo bisogno di un ulteriore livello di autorizzazione per consentire agli insegnanti del corso \"Alla scoperta dell'informatica\" di vedere valutazioni, chiavi di risposta e qualsiasi altro materiale a cui gli studenti non dovrebbero essere in grado di accedere banalmente. Se hai partecipato a un TeacherCon di Code.org durante l'estate, dovresti già avere questo accesso.\n\nPer verificare se hai accesso:\n\n1.  Vai alla [pagina panoramica del corso dell'Unità 1](https://studio.code.org/s/csd1-2018)\n2.  Ritieni il sondaggio pre-corso di \"Alla scoperta dell'informatica\" come la prima «fase» del corso?\n3.  In caso contrario, compila [questo modulo](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Tieni presente che può essere necessario circa un giorno per diventare un account insegnante verificato, quindi esegui questo passaggio in anticipo!\n\nSe non disponi di un account insegnante verificato, puoi comunque creare una classe per i tui studenti, ma non sarai in grado di amministrare il sondaggio pre-corso il primo giorno.\n\n#### Crea una classe su Code Studio.\n\nPer creare una classe:\n\n1.  Vai alla [Cruscotto di controllo dell'insegnante](https://studio.code.org/home)\n2.  Fai clic su «Nuova classe» in «Sezioni della classe»\n3.  Scegli «Accessi via email» \n4.  Nell'apposito spazio, dai un nome alla classe (ad esempio Fase del corso 1), il voto dei tuoi studenti, il corso: «Scoperte dell'informatica», l'unità corrente: «Unità 1: Risoluzione dei problemi» e fai clic su «Salva»\n5.  Una volta creata la classe, fate clic sul nome della classe\n6.  Nella nuova pagina, vedrai un URL di iscrizione univoco che distribuirai ai tuoi studenti della classe. \n\nPer un video che illustra questi passaggi e altri passaggi sulla navigazione del tuo account Code.org, vai alla [Playlist video dimostrativa di Code.org](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)"
         },
         "9f212653-f99f-40a5-aee5-1ce6ad6b9d86": {
           "name": "All'inizio della lezione",
@@ -25014,7 +25097,7 @@
           ]
         },
         "57d8a9aa-841c-468d-abcd-d9a82353eac3": {
-          "description": "Conduci la classe al problema Pianifica un evento di adozione di animali domestici. Ogni membro del gruppo svilupperà individualmente un piano per progettare uno spazio che segua i criteri che svilupperà come squadra. Dai agli studenti il tempo di scegliere gli obiettivi da utilizzare per pianificare il loro piano. Ad esempio, potrebbero esserci alcune cose che vorrebbero spostare, luoghi in cui le persone dovranno andare, persone che vogliono aiutarle, ecc.\n\n\\*\\*Girando tra i banchi: \\*\\* una volta che i gruppi avranno degli obiettivi, procederanno all'attività sviluppando un piano per creare l'evento di adozione. Dai loro un limite di tempo per questa parte del processo, ad esempio 15 minuti, per assicurarti che si concentrino sugli elementi chiave del loro piano anziché perfezionarlo. Dovrebbero registrare le informazioni chiave sul loro piano nelle loro guide alle attività.\n\nRiunisci i gruppi e chiedi loro di condividere i loro piani iniziali. Nelle guide alle attività possono registrare il feedback che i compagni di classe danno loro sui loro piani.\n\nUna volta che i gruppi hanno discusso ciò che gli piace o non gli piace dei piani proposti dai compagni di classe, possono riesaminarli e apportare miglioramenti. Ci sono altre cose che vorrebbero fare? Hanno nuovi obiettivi? Concedi loro alcuni minuti per apportare miglioramenti ai loro piani prima di decidere sulla versione finale.\n\nRiunisci la classe e chiedi loro di registrare le diverse fasi del processo di risoluzione dei problemi che hanno utilizzato nelle loro guide di attività.\n\n\\*\\*Discussione: \\*\\* discuti brevemente con gli studenti quali parti dell'attività ritenevano rientrassero in ogni fase del processo di risoluzione dei problemi. Di seguito sono riportate alcune possibili osservazioni da fare dopo la condivisione degli studenti.\n\n-   **Definisci**: questo problema non era ben definito. Bisognava decidere in autonomia che aspetto avesse un «buon» evento di adozione e questa definizione si sarebbe potuta persino modificare durante il processo.\n-   **Prepara**: è utile restringere un elenco di possibili disposizioni. Puoi anche scegliere di sottolineare che l'intera attività è un esempio di preparazione. Alcuni tipi di disposizione semplicemente non hanno senso o altri funzionano meglio, quindi devi fare il tipo di pianificazione che stanno facendo qui.\n-   **Prova**: come in precedenza, la pazienza e la tenacia sono importanti per portare a termine il piano\n-   **Rifletti**: in questo problema la riflessione è avvenuta principalmente attraverso i riscontri dei compagni. Alcuni tipi di disposizione potrebbero non sembrare così pratiche agli altri membri del gruppo. Alcuni sono divertenti ma richiedono troppi spostamenti o troppe cose nuove. Il riscontro da parte degli altri è una parte importante della fase di riflessione, specialmente nel lavoro di gruppo."
+          "description": "Fai andare la classe sul problema Pianifica un evento di adozione di animali domestici. Ogni membro del gruppo svilupperà individualmente un piano per progettare uno spazio che segua i criteri che svilupperà come squadra. Dai agli studenti il tempo di scegliere gli obiettivi da utilizzare per pianificare il loro piano. Ad esempio, potrebbero esserci alcune cose che vorrebbero spostare, luoghi in cui le persone dovranno andare, persone che vogliono aiutarle, ecc.\n\n\\*\\*Girando tra i banchi: \\*\\* una volta che i gruppi avranno degli obiettivi, procederanno all'attività sviluppando un piano per creare l'evento di adozione. Dai loro un limite di tempo per questa parte del processo, ad esempio 15 minuti, per assicurarti che si concentrino sugli elementi chiave del loro piano anziché perfezionarlo. Dovrebbero registrare le informazioni chiave sul loro piano nelle loro guide alle attività.\n\nRiunisci i gruppi e chiedi loro di condividere i loro piani iniziali. Nelle guide alle attività possono registrare il feedback che i compagni di classe danno loro sui loro piani.\n\nUna volta che i gruppi hanno discusso ciò che gli piace o non gli piace dei piani proposti dai compagni di classe, possono riesaminarli e apportare miglioramenti. Ci sono altre cose che vorrebbero fare? Hanno nuovi obiettivi? Concedi loro alcuni minuti per apportare miglioramenti ai loro piani prima di decidere sulla versione finale.\n\nRiunisci la classe e chiedi loro di registrare le diverse fasi del processo di risoluzione dei problemi che hanno utilizzato nelle loro guide di attività.\n\n\\*\\*Discussione: \\*\\* discuti brevemente con gli studenti quali parti dell'attività ritenevano rientrassero in ogni fase del processo di risoluzione dei problemi. Di seguito sono riportate alcune possibili osservazioni da fare dopo la condivisione degli studenti.\n\n-   **Definisci**: questo problema non era ben definito. Bisognava decidere in autonomia che aspetto avesse un «buon» evento di adozione e questa definizione si sarebbe potuta persino modificare durante il processo.\n-   **Prepara**: è utile restringere un elenco di possibili disposizioni. Puoi anche scegliere di sottolineare che l'intera attività è un esempio di preparazione. Alcuni tipi di disposizione semplicemente non hanno senso o altri funzionano meglio, quindi devi fare il tipo di pianificazione che stanno facendo qui.\n-   **Prova**: come in precedenza, la pazienza e la tenacia sono importanti per portare a termine il piano\n-   **Rifletti**: in questo problema la riflessione è avvenuta principalmente attraverso i riscontri dei compagni. Alcuni tipi di disposizione potrebbero non sembrare così pratiche agli altri membri del gruppo. Alcuni sono divertenti ma richiedono troppi spostamenti o troppe cose nuove. Il riscontro da parte degli altri è una parte importante della fase di riflessione, specialmente nel lavoro di gruppo."
         },
         "e550c27b-967f-46f1-a1bf-96eb4e4ccc2e": {
           "name": "Comprensione del processo di risoluzione dei problemi",
@@ -25082,7 +25165,7 @@
           ]
         },
         "fdb68438-a8b1-4310-aed5-72afcc6beaff": {
-          "description": "Conduci la classe sul problema Crea un gioco. Ogni membro del gruppo svilupperà individualmente un piano per una disposizione che segua i criteri che svilupperà come squadra. Dai agli studenti il tempo di scegliere gli obiettivi che useranno per pianificare il loro gioco. Ad esempio, potrebbero esserci alcune limitazioni di spazio, numero di studenti inclusi, ecc.\n\nUna volta che i gruppi hanno degli obiettivi, procederanno all'attività sviluppando un piano per realizzare il loro gioco. Dai loro un limite di tempo per questa parte del processo, ad esempio 15 minuti, per assicurarti che si concentrino sugli elementi chiave del loro piano anziché perfezionarlo. Dovrebbero registrare le informazioni chiave sul loro piano nelle loro guide alle attività.\n\nRiunisci i gruppi e chiedi loro di condividere i loro piani iniziali. Nelle guide alle attività possono registrare il riscontro che i compagni di classe danno loro sui loro piani.\n\nUna volta che i gruppi hanno discusso ciò che gli piace o non gli piace dei piani proposti dai compagni di classe, possono riesaminarli e apportare miglioramenti. Ci sono altre cose che vorrebbero fare? Hanno nuovi obiettivi? Concedi loro alcuni minuti per apportare miglioramenti ai loro piani prima di decidere sulla versione finale.\n\nRiunisci la classe e chiedi loro di registrare le diverse fasi del processo di risoluzione dei problemi che hanno utilizzato nelle loro guide di attività.\n\n\\*\\*Discussione: \\*\\* discuti brevemente con gli studenti quali parti dell'attività ritenevano rientrassero in ogni fase del processo di risoluzione dei problemi. Di seguito sono riportate alcune possibili osservazioni da fare dopo la condivisione degli studenti.\n\n-   **Definisci**: questo problema non era ben definito. Dovevano decidere da soli che aspetto avesse un «buon» gioco, e questa definizione avrebbe potuto persino cambiare nel corso del processo.\n-   **Prepara**: è utile restringere un elenco di possibili disposizioni spaziali. Puoi anche scegliere di sottolineare che l'intera attività è un esempio di preparazione. Alcuni giochi semplicemente non hanno senso o altri funzionano meglio, quindi devi fare il tipo di pianificazione che stanno facendo qui.\n-   **Prova**: come in precedenza, la pazienza e la tenacia sono importanti per portare a termine il piano\n-   **Rifletti**: in questo problema la riflessione è avvenuta principalmente attraverso il riscontro da parte dei compagni. Alcuni giochi potrebbero non essere così interessanti per gli altri membri del gruppo. Alcuni sono divertenti ma richiedono troppo lavoro o troppi materiali. Il riscontro dei compagni è una parte importante della fase di riflessione, specialmente nel lavoro di gruppo."
+          "description": "Fai andare la classe sul problema Crea un gioco. Ogni membro del gruppo svilupperà individualmente un piano per una disposizione che segua i criteri che svilupperà come squadra. Dai agli studenti il tempo di scegliere gli obiettivi che useranno per pianificare il loro gioco. Ad esempio, potrebbero esserci alcune limitazioni di spazio, numero di studenti inclusi, ecc.\n\nUna volta che i gruppi hanno degli obiettivi, procederanno all'attività sviluppando un piano per realizzare il loro gioco. Dai loro un limite di tempo per questa parte del processo, ad esempio 15 minuti, per assicurarti che si concentrino sugli elementi chiave del loro piano anziché perfezionarlo. Dovrebbero registrare le informazioni chiave sul loro piano nelle loro guide alle attività.\n\nRiunisci i gruppi e chiedi loro di condividere i loro piani iniziali. Nelle guide alle attività possono registrare il riscontro che i compagni di classe danno loro sui loro piani.\n\nUna volta che i gruppi hanno discusso ciò che gli piace o non gli piace dei piani proposti dai compagni di classe, possono riesaminarli e apportare miglioramenti. Ci sono altre cose che vorrebbero fare? Hanno nuovi obiettivi? Concedi loro alcuni minuti per apportare miglioramenti ai loro piani prima di decidere sulla versione finale.\n\nRiunisci la classe e chiedi loro di registrare le diverse fasi del processo di risoluzione dei problemi che hanno utilizzato nelle loro guide di attività.\n\n\\*\\*Discussione: \\*\\* discuti brevemente con gli studenti quali parti dell'attività ritenevano rientrassero in ogni fase del processo di risoluzione dei problemi. Di seguito sono riportate alcune possibili osservazioni da fare dopo la condivisione degli studenti.\n\n-   **Definisci**: questo problema non era ben definito. Dovevano decidere da soli che aspetto avesse un «buon» gioco e questa definizione avrebbe potuto persino cambiare nel corso del processo.\n-   **Prepara**: è utile restringere un elenco di possibili disposizioni spaziali. Puoi anche scegliere di sottolineare che l'intera attività è un esempio di preparazione. Alcuni giochi semplicemente non hanno senso o altri funzionano meglio, quindi devi fare il tipo di pianificazione che stanno facendo qui.\n-   **Prova**: come in precedenza, la pazienza e la tenacia sono importanti per portare a termine il piano\n-   **Rifletti**: in questo problema la riflessione è avvenuta principalmente attraverso il riscontro da parte dei compagni. Alcuni giochi potrebbero non essere così interessanti per gli altri membri del gruppo. Alcuni sono divertenti ma richiedono troppo lavoro o troppi materiali. Il riscontro dei compagni è una parte importante della fase di riflessione, specialmente nel lavoro di gruppo."
         },
         "9ceef85f-40f8-4692-bcb4-1a689968a685": {
           "name": "Comprensione del processo di risoluzione dei problemi",
@@ -25178,7 +25261,7 @@
           ]
         },
         "c9391ac2-6364-4957-ae92-c6bbd6b0cc11": {
-          "description": "\\*\\*Demo: \\*\\* esegui una rapida demo seguendo le istruzioni riportate di seguito.\n\n-   Scegli uno studente per condividere oralmente con te una delle sue istruzioni.\n-   L'insegnante dovrebbe agire come la persona al telefono che cerca di disegnare la pagina web\n-   «Disegnare» pubblicamente il sito web esattamente come dicono le istruzioni dello studente. Ad esempio, se ti viene detto «scrivi più grande», scrivi la parola «più grande» sulla pagina. Se non indicano dove va il testo, posiziona il testo in posizioni casuali.\n-   Quando lo studente ti dà le istruzioni, chiedi loro di dirti se le hai disegnate correttamente. Se non l'hai disegnato correttamente, chiedi loro di rendere le loro direzioni più specifiche finché non riesci a disegnarlo correttamente.\n-   Cambia studente dopo un paio di istruzioni per coinvolgere più studenti.\n-   Tieni traccia, in una qualche parte visibile, di tutte le istruzioni fornite dagli studenti e dei miglioramenti che apportano alle istruzioni.\n-   Ripetere questa procedura fino a ricreare la maggior parte della pagina web.\n\n\\*\\*Discussione: \\*\\* una volta che hai finito di disegnare il sito, crea rapidamente un elenco di tutti i diversi tipi di informazioni di cui dovevano tenere conto nelle loro istruzioni. Ad esempio, posizione, dimensione, carattere, ecc."
+          "description": "\\*\\*Demo: \\*\\* esegui una rapida demo seguendo le istruzioni riportate di seguito.\n\n-   Scegli uno studente per condividere oralmente con te una delle sue istruzioni.\n-   L'insegnante dovrebbe agire come la persona al telefono che cerca di disegnare la pagina web\n-   «Disegnare» pubblicamente il sito web esattamente come dicono le istruzioni dello studente. Ad esempio, se ti viene detto «scrivi più grande», scrivi la parola «più grande» sulla pagina. Se non indicano dove va il testo, posiziona il testo in posizioni casuali.\n-   Quando lo studente ti dà le istruzioni, chiedi loro di dirti se le hai disegnate correttamente. Se non l'hai disegnato correttamente, chiedi loro di rendere le loro direzioni più specifiche finché non riesci a disegnarlo correttamente.\n-   Cambia studente dopo un paio di istruzioni per coinvolgere più studenti.\n-   Tieni traccia, in una qualche parte visibile, di tutte le istruzioni fornite dagli studenti e dei miglioramenti che apportano alle istruzioni.\n-   Ripetere questa procedura fino a ricreare la maggior parte della pagina web.\n\n\\*\\*Discussione: \\*\\* una volta che hai finito di disegnare il sito, crea rapidamente un elenco di tutti i dati di diversa natura di cui dovevano tenere conto nelle loro istruzioni. Ad esempio, posizione, dimensione, carattere, ecc."
         },
         "8410909f-137b-47cf-bf22-7001ab81d9b2": {
           "description": "Ci sono molte informazioni che dobbiamo comunicare se vogliamo creare pagine web. Non è sufficiente sapere solo quali contenuti vuoi inserire nella tua pagina, ad esempio le parole o le immagini effettive. Devi sapere dove dovrebbero essere le cose e come dovrebbero apparire. Oggi inizieremo a imparare i linguaggi impiegati sul web per rappresentare queste informazioni aggiuntive."
@@ -25193,7 +25276,7 @@
         "3af02eab-916a-4774-8a13-5a420dd53fc5": {
           "description": "\\*\\*Mostra: \\*\\* nella parte anteriore della stanza, scrivi il titolo «Risorse» sulla lavagna o su un cartellone bianco, lasciando spazio per elencare le varie risorse così come appaiono nella lezione.",
           "tips": [
-            "\\*\\*Utilizzo delle risorse: \\*\\* di seguito puoi trovare consigli per utilizzare le numerose risorse a cui gli studenti vengono introdotti nella lezione. Attendi che gli studenti abbiano visto tutte queste risorse per esaminarle alla fine della lezione, ma aggiungile all'elenco e modellane l'uso corretto man mano che appaiono.\n\n-   \\*\\*Video: \\*\\* visto in classe, ma gli studenti possono sempre riprenderli.\n-   **Scheda di aiuto e suggerimenti:** questa scheda contiene tutti i video e gli esercizi della mappa pertinenti per un determinato esercizio.\n-   \\*\\*Esercizi della mappa: \\*\\* contiene testo e diagrammi che spiegano il contenuto. Queste sono intese come risorse utili per gli studenti, non letture in classe. Sono un ottimo punto di riferimento per la revisione dei contenuti dopo aver appreso i contenuti o quando gli studenti rimangono bloccati negli esercizi.\n-   \\*\\*Istruzioni dell'esercizio: \\*\\* le istruzioni possono introdurre piccoli pezzi di nuovi contenuti. Ogni esercizio presenta una sezione «Fai questo» che spiega cosa dovrebbero fare gli studenti in quell'esercizio. Poniti subito l'aspettativa che leggere queste istruzioni, non solo la sezione «Fai questo», sia importante.\n-   \\*\\*Suggerimenti dal menu a tendina degli esercizi: \\*\\* gli studenti possono fare clic su questi suggerimenti nelle aree di istruzione delle lezioni. Gli studenti dovrebbero usarli come primo luogo in cui chiedere aiuto prima di parlare con i compagni o con un insegnante.\n-   \\*\\*Inspector Tool: \\*\\* evidenzia il codice corrispondente a un elemento della pagina web quando si posiziona il puntatore del mouse nell'area di anteprima.\n-   \\*\\*Bolle colorate: \\*\\* le bolle possono diventare verdi ma non c'è alcuna convalida della correttezza. Il verde indica solo che uno studente ha fatto clic su Continua o Termina per un esercizio. Comprendi subito che questo è più uno strumento per loro che un'indicazione di completezza o correttezza."
+            "\\*\\*Utilizzo delle risorse: \\*\\* di seguito puoi trovare consigli per utilizzare le numerose risorse a cui gli studenti vengono introdotti nella lezione. Attendi che gli studenti abbiano visto tutte queste risorse per esaminarle alla fine della lezione, ma aggiungile all'elenco e modellane l'uso corretto man mano che appaiono.\n\n-   \\*\\*Video: \\*\\* visto in classe, ma gli studenti possono sempre riprenderli.\n-   **Scheda di aiuto e suggerimenti:** questa scheda contiene tutti i video e gli esercizi della mappa pertinenti per un determinato esercizio.\n-   \\*\\*Esercizi della mappa: \\*\\* contiene testo e diagrammi che spiegano il contenuto. Queste sono intese come risorse utili per gli studenti, non letture in classe. Sono un ottimo punto di riferimento per la revisione dei contenuti dopo aver appreso i contenuti o quando gli studenti rimangono bloccati negli esercizi.\n-   \\*\\*Istruzioni dell'esercizio: \\*\\* le istruzioni possono introdurre piccoli pezzi di nuovi contenuti. Ogni esercizio presenta una sezione «Fai questo» che spiega cosa dovrebbero fare gli studenti in quell'esercizio. Poniti subito l'aspettativa che leggere queste istruzioni, non solo la sezione «Fai questo», sia importante.\n-   \\*\\*Suggerimenti dal menu a tendina degli esercizi: \\*\\* gli studenti possono fare clic su questi suggerimenti nelle aree di istruzione delle lezioni. Gli studenti dovrebbero usarli come primo luogo in cui chiedere aiuto prima di parlare con i compagni o con un insegnante.\n-   \\*\\*Strumento Ispettore: \\*\\* evidenzia il codice corrispondente a un elemento della pagina web quando si posiziona il puntatore del mouse nell'area di anteprima.\n-   \\*\\*Bolle colorate: \\*\\* le bolle possono diventare verdi ma non c'è alcuna convalida della correttezza. Il verde indica solo che uno studente ha fatto clic su Continua o Termina per un esercizio. Comprendi subito che questo è più uno strumento per loro che un'indicazione di completezza o correttezza."
           ]
         },
         "2ca0bf9a-5cd6-4beb-8b48-d788ad425fa7": {
@@ -25205,13 +25288,13 @@
         "08e81098-b771-4c82-bb64-9108ece6c97c": {
           "description": "\\*\\*Domanda da considerare con il video: \\*\\*\n\n-   Quali sono le diverse parti di \"Sviluppo Web\" e a cosa servono?",
           "tips": [
-            "\\*\\*Obiettivi della discussione: \\*\\*\nSebbene non ci siano obiettivi formativi generali per questo video, gli studenti devono capire che le istruzioni per gli esercizi di \"Sviluppo Web\" appaiono nell'ampio pannello in alto e i tre pannelli inferiori, da sinistra a destra, includono l'elenco dei file su cui stanno lavorando, l'area in cui digitano il codice e l'area in cui vedono i risultati del loro codice. Per ora, non devono preoccuparsi di ogni pulsante, come verrà spiegato più avanti, ma devono capire che l'Inspector Tool li aiuta a collegare parti della pagina web al codice che le ha create e il pulsante Aggiorna e salva consente loro di aggiornare la loro pagina web se non si aggiorna automaticamente quando modificano il codice.\n\nSebbene non faccia parte del video, il riquadro delle istruzioni spesso include anche domande e risposte a discesa che gli studenti possono utilizzare quando completano un'attività e, in alcuni esercizi, le schede nella parte superiore del riquadro delle istruzioni indirizzano gli studenti a un'area «Guida e suggerimenti» che include informazioni di riferimento relative alle attività."
+            "\\*\\*Obiettivi della discussione: \\*\\*\nSebbene non ci siano obiettivi formativi generali per questo video, gli studenti devono capire che le istruzioni per gli esercizi di \"Sviluppo Web\" appaiono nell'ampio pannello in alto e i tre pannelli inferiori, da sinistra a destra, includono l'elenco dei file su cui stanno lavorando, l'area in cui digitano il codice e l'area in cui vedono i risultati del loro codice. Per ora, non devono preoccuparsi di ogni pulsante, come verrà spiegato più avanti, ma devono capire che lo \"Strumento Ispettore\" li aiuta a collegare parti della pagina web al codice che le ha create e il pulsante Aggiorna e salva consente loro di aggiornare la loro pagina web se non si aggiorna automaticamente quando modificano il codice.\n\nSebbene non faccia parte del video, il riquadro delle istruzioni spesso include anche domande e risposte a discesa che gli studenti possono utilizzare quando completano un'attività e, in alcuni esercizi, le schede nella parte superiore del riquadro delle istruzioni indirizzano gli studenti a un'area «Guida e suggerimenti» che include informazioni di riferimento relative alle attività."
           ],
           "progression_name": "Video: Introduzione a \"Sviluppo Web\" - Parte 1"
         },
         "693d5350-e425-4ae5-926e-85984858fb31": {
           "tips": [
-            "**Uso dello strumento**\nMentre gli studenti esplorano il sito, assicurati di aver compreso come usare l'Inspector Tool, i suggerimenti a discesa sul lato destro del riquadro delle istruzioni e la scheda «Guida e suggerimenti», che consentirà loro di accedere al video precedente.\n\n**Discussione HTML**\nDovresti riunire gli studenti dopo aver passato un paio di minuti a esaminare questo esercizio. Le istruzioni di discussione elencate nell'esercizio devono essere utilizzate in una struttura \"Rifletti-Lavora in coppia-Condividi\" standard.\n\n-   Quale testo appare sia nel codice che nella pagina web?\n-   In che modo questo linguaggio comunica informazioni aggiuntive sul modo di rappresentare il testo?\n\nL'obiettivo della discussione è quello di evidenziare le caratteristiche dell'HTML che gli studenti stanno notando. Le due conclusioni principali (rafforzate anche nel video successivo) sono che l'HTML utilizza un sistema di etichette (tag) per racchiudere i contenuti e indicare cos'è e come deve essere visualizzato."
+            "**Uso dello strumento**\nMentre gli studenti esplorano il sito, assicurati di aver compreso come usare o \"Strumento Ispettore\", i suggerimenti a discesa sul lato destro del riquadro delle istruzioni e la scheda «Guida e suggerimenti», che consentirà loro di accedere al video precedente.\n\n**Discussione HTML**\nDovresti riunire gli studenti dopo aver passato un paio di minuti a esaminare questo esercizio. Le istruzioni di discussione elencate nell'esercizio devono essere utilizzate in una struttura \"Rifletti-Lavora in coppia-Condividi\" standard.\n\n-   Quale testo appare sia nel codice che nella pagina web?\n-   In che modo questo linguaggio comunica informazioni aggiuntive sul modo di rappresentare il testo?\n\nL'obiettivo della discussione è quello di evidenziare le caratteristiche dell'HTML che gli studenti stanno notando. Le due conclusioni principali (rafforzate anche nel video successivo) sono che l'HTML utilizza un sistema di etichette (tag) per racchiudere i contenuti e indicare cos'è e come deve essere visualizzato."
           ],
           "progression_name": "Esplora l'HTML"
         },
@@ -25230,7 +25313,7 @@
         },
         "73435ea5-4c6f-4317-b21a-4fc9c732a4bf": {
           "tips": [
-            "\\*\\*Uso dello strumento: \\*\\* questo esercizio contiene una nuova scheda, «Rubrica», che fornisce indicazioni su come valutare il lavoro degli studenti e consente di lasciare un riscontro. Questo rende l'esercizio particolarmente utile come valutazione. Gli studenti possono vedere come viene valutato il loro lavoro facendo clic sulla scheda «Rubrica». Successivamente, qualsiasi riscontro degli insegnanti verrà visualizzato nella stessa area. [Clicca qui](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-CS-Discoveries-and-CS-Principles-only-) per saperne di più su come fornire riscontro agli studenti\n\nPuoi usare questo esercizio come valutazione formativa per gli studenti. Fai clic all'interno dell'esercizio per visualizzare una rubrica e lasciare un feedback ai tuoi studenti"
+            "\\*\\*Uso dello strumento: \\*\\* questo esercizio contiene una nuova scheda, «Criteri di valutazione», che fornisce indicazioni su come valutare il lavoro degli studenti e consente di lasciare un riscontro. Questo rende l'esercizio particolarmente utile come valutazione. Gli studenti possono vedere come viene valutato il loro lavoro facendo clic sulla scheda «Criteri di valutazione». Successivamente, qualsiasi riscontro degli insegnanti verrà visualizzato nella stessa area. [Clicca qui](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-CS-Discoveries-and-CS-Principles-only-) per saperne di più su come fornire riscontro agli studenti\n\nPuoi usare questo esercizio come valutazione formativa per gli studenti. Fai clic all'interno dell'esercizio per visualizzare i Criteri di valutazione e lasciare un riscontro ai tuoi studenti"
           ],
           "progression_name": "Valutazione"
         },
@@ -25430,23 +25513,23 @@
         },
         "b9efce7e-87cf-466d-8916-1ef98f26db40": {
           "name": "Segui le tracce digitali",
-          "description": "**Presentazione:** cagli studenti di considerare a quali siti web hanno fornito informazioni personali. In piccoli gruppi, chiedi agli studenti di creare un elenco di siti web su cui hanno un account (anche se utilizzano l'accesso con Facebook, Google o simili) e il tipo di informazioni che ritengono possano avere su di loro."
+          "description": "**Presentazione:** cagli studenti di considerare a quali siti web hanno fornito dati personali. In piccoli gruppi, chiedi agli studenti di creare un elenco di siti web su cui hanno un account (anche se utilizzano l'accesso con Facebook, Google o simili) e il tipo di dati che ritengono possano avere su di loro."
         },
         "ec53cc7b-755c-461d-a075-16cf2ca7f1dd": {
-          "description": "**Discussione:** chiedi agli studenti di fare una riflessione di gruppo o un diario in silenzio, poi di condividerlo con un compagno e infine di condividierlo con tutta la classe. Crea un elenco completo di tutti i siti web che potrebbero contenere informazioni personali.",
+          "description": "**Discussione:** chiedi agli studenti di fare una riflessione di gruppo o un diario in silenzio, poi di condividerlo con un compagno e infine di condividierlo con tutta la classe. Crea un elenco completo di tutti i siti web che potrebbero contenere dati personali.",
           "tips": [
-            "\\*\\*Obiettivo: \\*\\* questa discussione non ha lo scopo di elaborare un elenco completo di informazioni personali che gli studenti potrebbero aver condiviso con i siti web, né di spaventarli dal condividere informazioni. L'obiettivo è che gli studenti inizino a pensare in modo più critico a quando e dove condividono informazioni su se stessi.\n\nQuesto li spingerà a dedicarsi all'attività principale della giornata, esaminando informazioni e destinatari specifici per valutare quando la loro privacy è importante e se stanno rinunciando inconsapevolmente alla propria privacy.\n\nSe gli studenti hanno difficoltà a pensare alle informazioni, potresti voler seguire con alcuni suggerimenti più specifici: \n\n-   Quali informazioni sai di aver fornito a un sito web (ad esempio il tuo indirizzo email)\n-   Quali informazioni potresti aver fornito inconsapevolmente a un sito Web (ad esempio una foto con il tuo indirizzo di casa)\n-   Quali informazioni potrebbero aver condiviso altre persone su di te a tua insaputa o senza il tuo permesso (ad esempio taggandoti su Facebook)"
+            "\\*\\*Obiettivo: \\*\\* questa discussione non ha lo scopo di elaborare un elenco completo di dati personali che gli studenti potrebbero aver condiviso con i siti web, né di spaventarli dal condividere informazioni. L'obiettivo è che gli studenti inizino a pensare in modo più critico a quando e dove condividono informazioni su se stessi.\n\nQuesto li spingerà a dedicarsi all'attività principale della giornata, esaminando dati e destinatari specifici per valutare quando la loro privacy è importante e se stanno rinunciando inconsapevolmente alla propria privacy.\n\nSe gli studenti hanno difficoltà a pensare ai dati, potresti voler seguire con alcuni suggerimenti più specifici: \n\n-   Quali dati sai di aver fornito a un sito web (ad esempio il tuo indirizzo email)\n-   Quali dati potresti aver fornito inconsapevolmente a un sito Web (ad esempio una foto con il tuo indirizzo di casa)\n-   Quali dati potrebbero aver condiviso altre persone su di te a tua insaputa o senza il tuo permesso (ad esempio taggandoti su Facebook)"
           ]
         },
         "c4655dca-e5f0-4b84-8d9b-7212f13b440f": {
-          "description": "Ci sono molte informazioni che mettiamo su Internet, che lo vogliamo fare o meno. Anche se potremmo essere d'accordo con alcune di queste informazioni online, ci sono altre cose che vorremmo mantenere private. Tutte le informazioni su di noi che si possono trovare su Internet sono note come la nostra orma digitale. Vogliamo fare attenzione a quali informazioni sono incluse in quell'orma digitale."
+          "description": "Ci sono molti dati che mettiamo su Internet, che lo vogliamo fare o meno. Anche se potremmo essere d'accordo con alcuni di questi dati online, ci sono altre cose che vorremmo mantenere private. Tutti i dati su di noi che si possono trovare su Internet sono noti come la nostra traccia digitale. Vogliamo fare attenzione a quali sono i dati presenti in quella traccia digitale."
         },
         "4c49a2d4-20e8-4c45-9abe-ff95adb5d085": {
-          "description": "\\*\\*Glossario delle parole chiave: \\*\\*\n\n-   **Orma digitale** - Le informazioni raccolte su un individuo su più siti web su Internet.\n\n\\*\\*Domanda del giorno: come puoi assicurarti che le tue informazioni private rimangano private? \\*\\*"
+          "description": "\\*\\*Glossario delle parole chiave: \\*\\*\n\n-   **Traccia digitale** - I dati raccolti su un individuo su più siti web su Internet.\n\n\\*\\*Domanda del giorno: come puoi assicurarti che i tui dati personali rimangano privati? \\*\\*"
         },
         "dfb7b97b-9a3b-4424-8b24-e4e1f208b5a9": {
           "name": "Indagando sui profili social",
-          "description": "\\*\\*Obiettivo: \\*\\* esplora come piccole informazioni personali, sparse su più siti su Internet, possono produrre un'immagine abbastanza dettagliata di una persona, nota come [v digital_footprint/csd/2021].\n\n\\*\\*Forma i gruppi: \\*\\* questa attività può essere svolta individualmente, ma è preferibile se fatta in gruppi di 2-3 studenti\n\n\\*\\*Distribuisci \\*\\* la guida alle attività di «Investigatore Social»\n\n\\*\\*Transizione: \\*\\* porta gli studenti su Code Studio."
+          "description": "\\*\\*Obiettivo: \\*\\* esplora come piccoli dati personali, sparsi su più siti su Internet, possono produrre un'immagine abbastanza dettagliata di una persona, nota come [v digital_footprint/csd/2021].\n\n\\*\\*Forma i gruppi: \\*\\* questa attività può essere svolta individualmente, ma è preferibile se fatta in gruppi di 2-3 studenti\n\n\\*\\*Distribuisci \\*\\* la guida alle attività di «Investigatore Social»\n\n\\*\\*Transizione: \\*\\* porta gli studenti su Code Studio."
         },
         "71a885a3-e705-4367-8d43-5711b5af7e8f": {
           "progression_name": "Investigatore social"
@@ -25464,11 +25547,11 @@
           "description": "\\*\\*Condivisione: \\*\\* chiedi alla classe di condividere le orme digitali che hanno raccolto durante l'attività."
         },
         "d8c2fd98-00cb-4da5-865a-517396312eec": {
-          "description": "\\*\\*Discussione: \\*\\*\n\n-   Quali sono state le informazioni più difficili da trovare?\n-   Quali dettagli erano innocui di per sé, ma rivelavano informazioni private se combinati con altri dettagli?\n-   In che modo questo ti fa pensare in modo diverso a ciò che scegli di pubblicare online?"
+          "description": "\\*\\*Discussione: \\*\\*\n\n-   Quali sono state le informazioni più difficili da trovare?\n-   Quali dettagli erano innocui di per sé, ma rivelavano dati personali se combinati con altri dettagli?\n-   In che modo questo ti fa pensare in modo diverso a ciò che scegli di pubblicare online?"
         },
         "4ceacace-978a-4cfc-8073-7a068146ea78": {
           "name": "Dare forma alla tua orma digitale",
-          "description": "\\*\\*Domanda del giorno: come puoi assicurarti che le tue informazioni private rimangano private? \\*\\*"
+          "description": "\\*\\*Domanda del giorno: come puoi assicurarti che i tui dati personali rimangano privati? \\*\\*"
         },
         "e14f1593-1162-4c12-88e3-9b6a1c7e7286": {
           "description": "L'attività odierna si è concentrata su come i siti di social media contribuiscono a creare un'orma digitale. Mentre ci prepariamo a pubblicare le nostre prime pagine web, dovrai pensare a come queste contribuiscono alle tua orme digitali."
@@ -25476,7 +25559,7 @@
         "69dde422-3372-406e-9efe-b1df46472d00": {
           "description": "\\*\\*Discussione: \\*\\* con il tuo compagno, prepara una lista di controllo da utilizzare per determinare cosa dovrebbe e non dovrebbe essere pubblicato online.",
           "tips": [
-            "\\*\\*Obiettivo: \\*\\* usa questa discussione per creare un elenco duraturo delle migliori pratiche per la pubblicazione di informazioni online. I controlli possibili includono:\n\n-   Qualcuno potrebbe identificarmi con queste informazioni? - ad esempio nome, indirizzo, numero di telefono, ecc.\n-   Voglio che tutti lo vedano? - Non pubblicare nulla che non vorresti fosse pubblicato nel mondo.\n-   Voglio che sia permanente? - Puoi perdere il controllo delle informazioni una volta pubblicate e potrebbero rimanere disponibili per tutta la vita.\n\nGli elenchi degli studenti possono essere diversi, ma dovrebbero includere questi principi e altri principi che hanno visto nella lezione di oggi.\n\nAssicurati che gli studenti stiano utilizzando il glossario delle parole chiave della lezione:\n\n**impronta digitale**: le informazioni raccolte su un individuo su più siti web su Internet"
+            "\\*\\*Obiettivo: \\*\\* usa questa discussione per creare un elenco finale delle migliori pratiche per la pubblicazione di dati online. I controlli possibili includono:\n\n-   Qualcuno potrebbe identificarmi con questi dati? - ad esempio nome, indirizzo, numero di telefono, ecc.\n-   Voglio che tutti lo vedano? - Non pubblicare nulla che non vorresti fosse pubblicato nel mondo.\n-   Voglio che sia permanente? - Puoi perdere il controllo dei dati una volta pubblicate e potrebbero rimanere disponibili per tutta la vita.\n\nGli elenchi degli studenti possono essere diversi, ma dovrebbero includere questi principi e altri principi che hanno visto nella lezione di oggi.\n\nAssicurati che gli studenti stiano utilizzando il glossario delle parole chiave della lezione:\n\n**tracce digitali**: i dati di un individuo raccolti su più siti web su Internet"
           ]
         },
         "0db491eb-577a-4715-873f-1ea5a2282093": {
@@ -25734,7 +25817,7 @@
         "2c7139b2-bd78-402d-9d57-1191bfcf3d3c": {
           "description": "\\*\\*Discussione: \\*\\* nel tuo diario, pensa ad alcune linee guida da tenere a mente quando usi le immagini. Come possiamo assicurarci di essere al sicuro e di rispettare i diritti degli altri?",
           "tips": [
-            "Man mano che gli studenti elaborano le loro linee guida, puoi scegliere di suggerirli ricordando loro le attività recenti che hanno svolto per la condivisione di informazioni personali e il rispetto del copyright. Molte classi potrebbero anche voler aggiungere altre linee guida, ad esempio definire ciò che è appropriato in un ambiente scolastico o assicurarsi che tutte le persone raffigurate nell'immagine si sentano a proprio agio con l'immagine pubblicata online. Indipendentemente da ciò, assicurati di essere soddisfatto che le linee guida siano sufficienti prima di andare avanti."
+            "Man mano che gli studenti elaborano le loro linee guida, puoi scegliere di fornire dei suggerimenti ricordando loro le attività recenti che hanno svolto per la condivisione di dati personali e il rispetto del copyright. Molte classi potrebbero anche voler aggiungere altre linee guida, ad esempio definire ciò che è appropriato in un ambiente scolastico o assicurarsi che tutte le persone raffigurate nell'immagine si sentano a proprio agio con l'immagine pubblicata online. Indipendentemente da ciò, prima di andare avanti, assicurati di essere soddisfatto che le linee guida siano adeguate."
           ]
         },
         "992521a5-bde4-4478-91be-3b6a5344bacd": {
@@ -25953,7 +26036,7 @@
         "710ee97e-1fb7-429d-a724-cb0a92f72425": {
           "description": "\\*\\*Richiesta: \\*\\* \n\n-   Quali sono i principali **3** bug che hai visto finora durante la creazione di pagine web? \n-   Quali sono le **2** cose che puoi fare durante la programmazione per rendere i bug più facili da trovare e correggere? \n-   Qual è il consiglio **1** che daresti a qualcuno che ha un bug?",
           "tips": [
-            "Lo scopo di questa discussione è sia normalizzare il debugging sia assicurarsi che gli studenti inizino la parte di programmazione del progetto con alcune buone strategie che li aiuteranno a eseguire il debugging. I bug più comuni che potrebbero aver riscontrato potrebbero essere errori di ortografia, dimenticanza di collegare il foglio di stile, non inserire correttamente i tag, ecc. Questo varierà da classe a classe, ma la maggior parte degli studenti avrà riscontrato più bug nel capitolo. Durante la programmazione, gli studenti dovrebbero usare una formattazione adeguata per aiutarli a leggere il codice, codificare piccoli bit alla volta e controllare man mano che procedono, e usare buone convenzioni di denominazione. Per consigli sul debugging, gli studenti possono fornire consigli motivazionali («Non arrenderti!» , «Ricorda che è normale»), risorse consigliate («Chiedi a un amico di guardarlo», «guarda la mappa degli esercizi»), consigli basati sui processi («descrivi prima il bug, poi cercalo prima di cambiare qualcosa», «guarda cosa c'è di sbagliato e controlla l'ortografia in quella parte») o consigli basati sugli strumenti («guarda sopra dov'è il rosa», «usa l'Inspector Tool»). Dai agli studenti il tempo di condividere i loro consigli e assicurati che stiano facendo riferimento al processo di debugging."
+            "Lo scopo di questa discussione è sia normalizzare il debugging sia assicurarsi che gli studenti inizino la parte di programmazione del progetto con alcune buone strategie che li aiuteranno a eseguire il debugging. I bug più comuni che potrebbero aver riscontrato potrebbero essere errori di ortografia, dimenticanza di collegare il foglio di stile, non inserire correttamente i tag, ecc. Questo varierà da classe a classe, ma la maggior parte degli studenti avrà riscontrato più bug nel capitolo. Durante la programmazione, gli studenti dovrebbero usare una formattazione adeguata per aiutarli a leggere il codice, codificare piccoli bit alla volta e controllare man mano che procedono e usare buone convenzioni di denominazione. Per consigli sul debugging, gli studenti possono fornire consigli motivazionali («Non arrenderti!» , «Ricorda che è normale»), risorse consigliate («Chiedi a un amico di guardarlo», «guarda la mappa degli esercizi»), consigli basati sui processi («descrivi prima il bug, poi cercalo prima di cambiare qualcosa», «guarda cosa c'è di sbagliato e controlla l'ortografia in quella parte») o consigli basati sugli strumenti («guarda sopra dov'è il rosa», «usa o Strumento Ispettore»). Dai agli studenti il tempo di condividere i loro consigli e assicurati che stiano facendo riferimento al processo di debugging."
           ]
         },
         "491aad33-b3c4-4c36-887a-0df138c18ddd": {
@@ -25961,9 +26044,9 @@
         },
         "793b6091-27f6-48c5-9b0c-b02534f8bc79": {
           "name": "Siti Web personali",
-          "description": "**Distribuisci** restituisci agli studenti le parti «Definisci» e «Prepara» della Guida al progetto. Distribuisci anche una copia della rubrica o della lista di controllo degli studenti agli studenti. Invitali a leggere i requisiti di questo progetto in modo che possano autovalutarsi e riflettere mentre lavorano.\n\n\\*\\*Transizione: \\*\\* Invia gli studenti a Code Studio.",
+          "description": "**Distribuisci** restituisci agli studenti le parti «Definisci» e «Prepara» della Guida al progetto. Distribuisci anche una copia dei Criteri di valutazione o della lista di controllo degli studenti agli studenti. Invitali a leggere i requisiti di questo progetto in modo che possano autovalutarsi e riflettere mentre lavorano.\n\n\\*\\*Transizione: \\*\\* invia gli studenti a Code Studio.",
           "tips": [
-            "\\*\\*Tabella e lista di controllo: \\*\\* gli studenti hanno due risorse che possono usare per autoriflessione e assicurarsi di essere sulla strada giusta: la tablla e la lista di controllo degli studenti. Consigliamo agli studenti di utilizzare la lista di controllo per la propria autovalutazione e riflessione, poiché può essere più facile da digerire e comprendere quando si esamina il proprio progetto. Tuttavia, consigliamo agli insegnanti di utilizzare la rubrica completa per valutare i progetti per fornire un riscontro più dettagliato e specifico agli studenti."
+            "\\*\\*Tabella e lista di controllo: \\*\\* gli studenti hanno due risorse che possono usare per autoriflessione e assicurarsi di essere sulla strada giusta: la tabella e la lista di controllo degli studenti. Consigliamo agli studenti di utilizzare la lista di controllo per la propria autovalutazione e riflessione, poiché può essere più facile da digerire e comprendere quando si esamina il proprio progetto. Tuttavia, consigliamo agli insegnanti di utilizzare i Criteri di valutazione completi per valutare i progetti per fornire un riscontro più dettagliato e specifico agli studenti."
           ]
         },
         "8b6eb0b5-4aba-4b1e-8c0b-5ef7c4035ae1": {
@@ -25978,7 +26061,7 @@
         "f82407b3-02da-446b-9c56-6e11c8f2df36": {
           "description": "\\*\\*Domande da prendere in considerazione con il video: \\*\\*\n\n-   Quali pensi che siano le tue responsabilità come creatore di siti web?\n-   Perché potresti voler vedere il codice o rimescolare quello del sito di qualcun altro?",
           "tips": [
-            "**Obiettivo**\n\nI contenuti video sono abbastanza semplici, ma questo è il tuo ultimo incontro con gli studenti prima della pubblicazione, quindi è un buon momento per assicurarti che abbiano riflettuto a fondo sulle implicazioni della pubblicazione per il mondo intero. Dovrebbero assicurarsi di non condividere informazioni sensibili e di avere il diritto di utilizzare tutti i contenuti della pagina.\n\nQuando hanno iniziato a condividere, dovrebbero anche pensare a come rispettano il lavoro degli altri editori di siti web, in particolare dei loro compagni di classe. Potresti dedicare del tempo a stabilire delle norme in classe su come parlano e fornire un riscontro sui siti dei compagni di classe, nonché delle linee guida per l'uso del codice scritto da altri."
+            "**Obiettivo**\n\nI contenuti video sono abbastanza semplici, ma questo è il tuo ultimo incontro con gli studenti prima della pubblicazione, quindi è un buon momento per assicurarti che abbiano riflettuto a fondo sulle implicazioni della pubblicazione per il mondo intero. Dovrebbero assicurarsi di non condividere dati sensibili e di avere il diritto di utilizzare tutti i contenuti della pagina.\n\nQuando hanno iniziato a condividere, dovrebbero anche pensare a come rispettano il lavoro degli altri editori di siti web, in particolare dei loro compagni di classe. Potresti dedicare del tempo a stabilire delle norme in classe su come parlano e fornire un riscontro sui siti dei compagni di classe, nonché delle linee guida per l'uso del codice scritto da altri."
           ],
           "progression_name": "Video: pubblicare il tuo sito web"
         },
@@ -26035,7 +26118,7 @@
         "887eb66a-9701-4ec2-961e-2df7358980f6": {
           "description": "\\*\\*Discussione: \\*\\* chiedi agli studenti di condividere l'ultimo sito web che hanno visitato. Assicurati che gli studenti condividano il motivo per cui sono andati su quel sito web e se in quel sito web hanno effettivamente trovato ciò che stavano cercando.",
           "tips": [
-            "\\*\\*Obiettivo: \\*\\* l'obiettivo di questa discussione è capire che i siti web condividono informazioni e che le persone visitano i siti web per uno scopo particolare."
+            "\\*\\*Obiettivo: \\*\\* l'obiettivo di questa discussione è capire che i siti web condividono dati e che le persone visitano i siti web per uno scopo particolare."
           ]
         },
         "8f260b2d-3718-492f-b75b-fa99597fef18": {

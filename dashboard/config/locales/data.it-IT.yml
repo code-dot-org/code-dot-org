@@ -701,6 +701,7 @@ it:
           sui film?
         csd_external_waze_data: Perchè cosi tanti utenti sono ossesionati con Waze?
         csd_gamelab_animation_tab: The Animation Tab
+        csd_gamelab_drawloop: Introduzione alla funzione ciclica draw
         csd_gamelab_velocity: Velocità
         csd_weblab_intro_1: Introduzione a Sviluppo Web - Parte 1
         csd_weblab_intro_2: Introduzione a Sviluppo Web - Parte 2
@@ -848,7 +849,8 @@ it:
           in Pari'
         teaching_problem_solving: 'Insegnare i Fondamenti di CS: Insegnare la Risoluzione
           dei Problemi'
-        csd_applab_designmode: 'Scoperte CS: Sviluppo App - Modalità Progettazione'
+        csd_applab_designmode: 'Alla scoperta dell''informatica: Sviluppo App - Modalità
+          Interfaccia'
         csd_pair_programming: Programmazione in coppia
         csd_gamelab_functions: Chiamare e Definire Funzioni
         csd_applab_parameters: Funzioni con parametri
@@ -913,7 +915,7 @@ it:
         PL_CSD_TeacherTips_Advise: 'Suggerimenti per gli insegnanti: consigli per
           i nuovi insegnanti'
         PL_CSD_TeacherTips_IntroToCSD: 'Suggerimenti per gli insegnanti: introduzione
-          Alla scoperta dell''informatica'
+          al corso Alla scoperta dell''informatica'
         PL_CSD_TeacherTips_ProblemSolvingProcess: 'Suggerimenti per gli insegnanti:
           la procedura di risoluzione dei problemi'
         PL_CSD_TeacherTips_PairProgramming: 'Suggerimenti per gli insegnanti: programmazione

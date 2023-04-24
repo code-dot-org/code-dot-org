@@ -1465,6 +1465,7 @@
           "type": "Diapositive"
         },
         "binary_and_data/csd/2022": {
+          "name": "Sistema binario e dati",
           "type": "Video"
         },
         "number_cards/csd/2022": {
@@ -1474,6 +1475,7 @@
           "url": "https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/"
         },
         "representing_numbers/csd/2022": {
+          "name": "Rappresentazione dei numeri",
           "url": "https://docs.google.com/document/d/1t9wdaM33w8EfC6MNxoqdkC0M974ez5FGQIPDj8lHgn4/edit",
           "type": "Modello"
         },
@@ -1482,6 +1484,7 @@
           "type": "Guida alle attività"
         },
         "representing_numbers_1/csd/2022": {
+          "name": "Rappresentazione dei numeri",
           "type": "Diapositive"
         },
         "activity_guide_-_pet_records/csd/2022": {
@@ -1496,6 +1499,7 @@
           "type": "Modello"
         },
         "combining_representations/csd/2022": {
+          "name": "Combinazione di rappresentazioni",
           "type": "Diapositive"
         },
         "medical_records/csd/2022": {
@@ -1540,12 +1544,12 @@
           "type": "Diapositive"
         },
         "problem_solving_with_data/csd/2022": {
-          "name": "Risoluzione dei problemi con le informazioni",
+          "name": "Risoluzione dei problemi con i dati",
           "url": "https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok/edit",
           "type": "Modello"
         },
         "problem_solving_with_data_1/csd/2022": {
-          "name": "Risoluzione dei problemi con le informazioni",
+          "name": "Risoluzione dei problemi con i dati",
           "url": "https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw",
           "type": "Guida alle attività"
         },
@@ -1595,18 +1599,22 @@
           "type": "Diapositive"
         },
         "automating_data_decisions/csd/2022": {
+          "name": "Automatizzare decisioni basate sui dati",
           "url": "https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4/edit",
           "type": "Modello"
         },
         "automating_data_decisions_1/csd/2022": {
+          "name": "Automatizzare decisioni basate sui dati",
           "url": "https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/edit",
           "type": "Risorse"
         },
         "automating_data_decisions_2/csd/2022": {
+          "name": "Automatizzare decisioni basate sui dati",
           "url": "https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/",
           "type": "Guida alle attività"
         },
         "automating_data_decisions_3/csd/2022": {
+          "name": "Automatizzare decisioni basate sui dati",
           "type": "Diapositive"
         },
         "amazon_and_data/csd/2022": {
@@ -1673,10 +1681,11 @@
           "type": "Modello"
         },
         "sample_marked_rubrics_3/csd/2022": {
-          "name": "Esempi di tabella compilata",
+          "name": "Esempi di applicazione dei criteri di valutazione",
           "type": "Modello"
         },
         "project_-_make_a_recommendation/csd/2022": {
+          "name": "Progetto - Dai un consiglio",
           "type": "Diapositive"
         },
         "aluminum_boats/csd/2022": {
@@ -1836,7 +1845,7 @@
           "type": "Modello"
         },
         "sample_marked_rubrics/csd/2022": {
-          "name": "Esempi di tabella compilata",
+          "name": "Esempi di applicazione dei criteri di valutazione",
           "url": "https://docs.google.com/document/d/17C1pGuIk1FL84FjMvUIisYa6x_U8aKREcljfqnEm21c/edit",
           "type": "Modello"
         },
@@ -2077,6 +2086,7 @@
           "type": "Video"
         },
         "introduction_to_the_draw_loop/csd/2022": {
+          "name": "Introduzione alla funzione ciclica draw",
           "url": "https://youtu.be/G6QJeuHhqCM",
           "type": "Video"
         },
@@ -2087,12 +2097,10 @@
           "url": "https://docs.google.com/drawings/d/1u6hSZ108BcnasuoKM1etB4sEzShGIrmk8GgQyJZ0P8Y/edit"
         },
         "the_draw_loop/csd/2022": {
-          "name": "Il disegno ciclico",
           "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing",
           "type": "Risorse"
         },
         "the_draw_loop_1/csd/2022": {
-          "name": "Il disegno ciclico",
           "type": "Diapositive"
         },
         "sprite_movement/csd/2022": {
@@ -2924,7 +2932,7 @@
           "type": "Criteri di valutazione"
         },
         "sample_marked_rubrics_1/csd/2022": {
-          "name": "Esempi di tabella compilata",
+          "name": "Esempi di applicazione dei criteri di valutazione",
           "url": "https://docs.google.com/document/d/1TK80IOPnC3Z3Oz5BnGu4JELZ9ewnOzWshu9dZH90iX8/view",
           "type": "Modello"
         },
@@ -2941,11 +2949,11 @@
           "type": "Modello"
         },
         "example_apps_for_good/csd/2022": {
-          "name": "App di esempio per fare del bene",
+          "name": "App di esempio per il bene comune",
           "url": "https://docs.google.com/document/d/1kCuDUhTJb7Vcrv_pzvA4yL79WyZn_7PorV-F-gTxBuk/edit"
         },
         "designing_apps_for_good/csd/2022": {
-          "name": "Progettare app per fare del bene",
+          "name": "Progettare app per il bene comune",
           "type": "Diapositive"
         },
         "market_research/csd/2022": {
@@ -3040,7 +3048,7 @@
           "type": "Guida alle attività"
         },
         "design_mode_in_app_lab/csd/2022": {
-          "name": "Modalità di progettazione in \"Sviluppo App\"",
+          "name": "Modalità Interfaccia in \"Sviluppo App\"",
           "type": "Diapositive"
         },
         "build_a_digital_prototype/csd/2022": {
@@ -3128,7 +3136,7 @@
           "type": "Modello"
         },
         "sample_marked_rubrics_2/csd/2022": {
-          "name": "Esempi di tabella compilata",
+          "name": "Esempi di applicazione dei criteri di valutazione",
           "url": "https://docs.google.com/document/d/1jpcg90ImVQKQoWMCsHQwFcnNCFwbx_kTxxVwuYjR3bQ/edit",
           "type": "Modello"
         },
@@ -3436,13 +3444,16 @@
           "type": "Diapositive"
         },
         "types_of_machine_learning/csd/2022": {
+          "name": "Tipologie di apprendimento automatico",
           "type": "Diapositive"
         },
         "types_of_machine_learning_1/csd/2022": {
+          "name": "Tipologie di apprendimento automatico",
           "url": "https://docs.google.com/document/d/1-riv3aqTarYTrUJlrrzWDU86Aga5gx1f7es6MoLg5bY/edit#",
           "type": "Guida alle attività"
         },
         "types_of_machine_learning_2/csd/2022": {
+          "name": "Tipologie di apprendimento automatico",
           "url": "https://docs.google.com/document/d/1vFoKH-h2k6wZRtlOeXYRzVORv1dzTsFO7EJ7l_CxV6Q/edit#",
           "type": "Soluzione"
         },
@@ -3636,7 +3647,7 @@
           "url": "https://docs.google.com/document/d/1ocmp1I80kRxFDYByT0B-IIjbK-c01cTmnsy_Lz1DApM/view"
         },
         "issue_statements/csd/2022": {
-          "name": "Esposizione di un problema (issue statement)",
+          "name": "Definizione del problema (issue statement)",
           "type": "Diapositive"
         },
         "creating_a_survey/csd/2022": {
@@ -5725,14 +5736,17 @@
           "type": "Video"
         },
         "types_of_machine_learning/csd/2021": {
+          "name": "Tipologie di apprendimento automatico",
           "url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/copy",
           "type": "Diapositive"
         },
         "types_of_machine_learning_1/csd/2021": {
+          "name": "Tipologie di apprendimento automatico",
           "url": "https://docs.google.com/document/d/1-riv3aqTarYTrUJlrrzWDU86Aga5gx1f7es6MoLg5bY/edit#",
           "type": "Guida alle attività"
         },
         "types_of_machine_learning_2/csd/2021": {
+          "name": "Tipologie di apprendimento automatico",
           "url": "https://docs.google.com/document/d/1vFoKH-h2k6wZRtlOeXYRzVORv1dzTsFO7EJ7l_CxV6Q/edit#",
           "type": "Soluzione"
         },
@@ -5937,7 +5951,7 @@
           "url": "https://docs.google.com/document/d/1ocmp1I80kRxFDYByT0B-IIjbK-c01cTmnsy_Lz1DApM/view"
         },
         "issue_statements/csd/2021": {
-          "name": "Esposizione di un problema (issue statement)",
+          "name": "Definizione del problema (issue statement)",
           "url": "https://docs.google.com/presentation/d/11vB9jz1WAIcz2NFEJNMrl5IT87DfVfEPWgTxHG2_7Z4/copy",
           "type": "Diapositive"
         },
@@ -6002,6 +6016,7 @@
           "url": "/s/csd4-2021/vocab"
         },
         "unit-4-the-design-process/csd/2021": {
+          "name": "Unità 4 - Il processo di progettazione",
           "url": "https://docs.google.com/presentation/d/1aM1QmHeYJTx1V-Puzinc4Jp8gpae7ZArLW1Y1sI3CYY/copy",
           "type": "Diapositive"
         },
@@ -6147,7 +6162,7 @@
           "url": "https://docs.google.com/document/d/1tysTwNU1ZCRVEROiOZ2gKYUYP8QRYn2D92IdDjvBSpk/edit"
         },
         "sample_marked_rubrics/csd/2021": {
-          "name": "Esempi di tabella compilata",
+          "name": "Esempi di applicazione dei criteri di valutazione",
           "url": "https://docs.google.com/document/d/1TK80IOPnC3Z3Oz5BnGu4JELZ9ewnOzWshu9dZH90iX8/view",
           "type": "Modello"
         },
@@ -6156,7 +6171,7 @@
           "type": "Guida alle attività"
         },
         "example-apps-for-good/csd/2021": {
-          "name": "App di esempio per fare del bene",
+          "name": "App di esempio per il bene comune",
           "url": "https://docs.google.com/document/d/1kCuDUhTJb7Vcrv_pzvA4yL79WyZn_7PorV-F-gTxBuk/edit"
         },
         "app_design_kickoff/csd/2021": {
@@ -6296,7 +6311,7 @@
           "type": "Modello"
         },
         "sample_marked_rubrics_1_1/csd/2021": {
-          "name": "Esempi di tabella compilata",
+          "name": "Esempi di applicazione dei criteri di valutazione",
           "url": "https://docs.google.com/document/d/1jpcg90ImVQKQoWMCsHQwFcnNCFwbx_kTxxVwuYjR3bQ/edit",
           "type": "Modello"
         },
@@ -6477,7 +6492,7 @@
           "url": "https://docs.google.com/document/d/1PkarqOeVEuHi24QFVuYsEy3EY5WPmi3pbmKjOB161EM/edit"
         },
         "sample_marked_rubrics_4/csd/2021": {
-          "name": "Esempi di tabella compilata",
+          "name": "Esempi di applicazione dei criteri di valutazione",
           "url": "https://docs.google.com/document/d/1DLFzMQSYnRei9JzBDl_c-Moz4AczcUGwU9dtxvyjagc/edit",
           "type": "Modello"
         },
@@ -6488,6 +6503,7 @@
           "url": "/s/csd5-2021/vocab"
         },
         "unit-5-data-society/csd/2021": {
+          "name": "Unità 5 - Dati e società",
           "url": "https://docs.google.com/presentation/d/1qAf-Nt78JMDtvqh837cyP8dtudTv5o2AvAsWiUH2YJs/copy",
           "type": "Diapositive"
         },
@@ -6535,6 +6551,7 @@
           "type": "Soluzione"
         },
         "how-computers-work-data-and-binary/csd/2021": {
+          "name": "Sistema binario e dati",
           "type": "Video"
         },
         "representing-numbers-2021/csd/2021": {
@@ -6545,6 +6562,7 @@
           "url": "https://docs.google.com/presentation/u/2/d/1pZVjuP_Mwz4nOIxc6Hxz-SFIMzn3oS-zy3klSIgrEAc/copy"
         },
         "representing-numbers-exemplar-2019/csd/2021": {
+          "name": "Rappresentazione dei numeri",
           "url": "https://docs.google.com/document/d/1t9wdaM33w8EfC6MNxoqdkC0M974ez5FGQIPDj8lHgn4/edit",
           "type": "Modello"
         },
@@ -6601,12 +6619,12 @@
           "type": "Modello"
         },
         "problem-solving-with-data-exemplar-2019/csd/2021": {
-          "name": "Risoluzione dei problemi con le informazioni",
+          "name": "Risoluzione dei problemi con i dati",
           "url": "https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok/edit",
           "type": "Modello"
         },
         "problem-solving-with-data/csd/2021": {
-          "name": "Risoluzione dei problemi con le informazioni",
+          "name": "Risoluzione dei problemi con i dati",
           "url": "https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw",
           "type": "Guida alle attività"
         },
@@ -6643,14 +6661,17 @@
           "type": "Risorse"
         },
         "automating-data-decisions-exemplar-2019/csd/2021": {
+          "name": "Automatizzare decisioni basate sui dati",
           "url": "https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4/edit",
           "type": "Modello"
         },
         "data-decisions-resource/csd/2021": {
+          "name": "Automatizzare decisioni basate sui dati",
           "url": "https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/edit",
           "type": "Risorse"
         },
         "automating-data-decisions-1/csd/2021": {
+          "name": "Automatizzare decisioni basate sui dati",
           "url": "https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/",
           "type": "Guida alle attività"
         },
@@ -6716,7 +6737,7 @@
           "url": "https://docs.google.com/document/d/1E_k-oOdK8c7CuN1TcR5GWomeAGXvXfafgzLHda1w6J4/edit"
         },
         "sample_marked_rubrics_3/csd/2021": {
-          "name": "Esempi di tabella compilata",
+          "name": "Esempi di applicazione dei criteri di valutazione",
           "type": "Modello"
         },
         "teacher_forum_1/csd/2021": {
@@ -6740,6 +6761,7 @@
           "type": "Modello"
         },
         "csd_unit_3_-_interactive_animations_and_games/csd/2021": {
+          "name": "Unità 3 - Animazioni e giochi interattivi",
           "url": "https://docs.google.com/presentation/d/1I66LrxwPZPiGX3d7PhIYZbTfp0_-qnmAK41Q-hMb6hI/copy",
           "type": "Diapositive"
         },
@@ -6851,11 +6873,11 @@
           "type": "Video"
         },
         "introduction_to_the_draw_loop/csd/2021": {
+          "name": "Introduzione alla funzione ciclica draw",
           "url": "https://youtu.be/G6QJeuHhqCM",
           "type": "Video"
         },
         "the_draw_loop/csd/2021": {
-          "name": "Il disegno ciclico",
           "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing",
           "type": "Risorse"
         },
@@ -7065,7 +7087,7 @@
           "url": "https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-"
         },
         "csd_unit_1_-_problem_solving_and_computing/csd/2021": {
-          "name": "CSD Unità 1 - Risoluzione dei problemi e informatica",
+          "name": "Unità 1 - Risoluzione dei problemi e informatica",
           "url": "https://docs.google.com/presentation/d/1shN8hHC5rgEgb09IU_2eYoU1cDBEee924-E7q6RDUcc/copy",
           "type": "Diapositive"
         },
@@ -7169,7 +7191,7 @@
           "type": "Valutazioni dei parigrado"
         },
         "apps-and-problem-solving-marked-rubrics/csd/2021": {
-          "name": "Esempi di tabella compilata",
+          "name": "Esempi di applicazione dei criteri di valutazione",
           "url": "https://docs.google.com/document/d/17C1pGuIk1FL84FjMvUIisYa6x_U8aKREcljfqnEm21c/edit",
           "type": "Modello"
         },
@@ -7263,7 +7285,7 @@
           "type": "Guida alle attività"
         },
         "csd_unit_2_-_web_development/csd/2021": {
-          "name": "Unità CSD 2 - Sviluppo Web",
+          "name": "Unità 2 - Sviluppo Web",
           "url": "https://docs.google.com/presentation/d/1rg7Lf6ahVruRMzmYnZuXZZqLUgqK5ahp53tCIPtl8wc/copy",
           "type": "Diapositive"
         },

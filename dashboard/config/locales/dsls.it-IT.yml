@@ -6799,7 +6799,7 @@ it-IT:
           * [Barche in alluminio - esemplari](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Guida per l'attività ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
 
           [/key]
-        title: Alla Scoperta dell'Informatica - Indagine preliminare
+        title: Alla Scoperta dell'Informatica - Sondaggio di inizio corso
       csf_be_a_super_digital_citizen:
         content1: descrizione qui
         markdown: |-
@@ -6922,9 +6922,9 @@ it-IT:
 
           [/key]
       csd-pre-survey-2017-levelgroup_2018:
-        title: Alla Scoperta dell'Informatica - Indagine preliminare
+        title: Alla Scoperta dell'Informatica - Sondaggio di inizio corso
       csd-pre-survey-levelgroup_2019:
-        title: Alla Scoperta dell'Informatica - Indagine preliminare
+        title: Alla Scoperta dell'Informatica - Sondaggio di inizio corso
       outbreak_story:
         content1: descrizione qui
         markdown: "# Epidemia: programma la tua simulazione\n\n## Benvenuto nella
@@ -7656,9 +7656,9 @@ it-IT:
 
           ![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
-        title: Sondaggio Studenti di Fine del Corso Scoperte di Informatica
+        title: Sondaggio finale per gli studenti del corso "Alla scoperta dell'informatica"
       csd-post-survey-levelgroup-2018:
-        title: Sondaggio Studenti di Fine del Corso Scoperte di Informatica
+        title: Sondaggio finale per gli studenti del corso "Alla scoperta dell'informatica"
       BigEvent-Unplugged_2021:
         markdown: |-
           # Il Grande Evento
@@ -9817,13 +9817,17 @@ it-IT:
           di una mappa da utilizzare nella loro app.\n"
       CSD Games Properties multi predict_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: un personaggio "ape" al centro dello schermo
+        - text: un personaggio "ape" nell’angolo in basso a destra
+          correct: true
+        - text: due personaggi "ape", uno al centro e uno nell’angolo in basso a destra
+        - text: tre personaggi "ape", tutti in posti diversi
+        - text: niente, ci sarà un errore
         questions:
-        - {}
+        - text: Cosa mostrerà il programma?
+        content1: Guarda il programma qui sotto e prevedi dove apparirà il personaggio
+          delle api.
+        title: Posizionamento del personaggio "ape"
       CSD Header Size MC_2018_2019_pilot_2021:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -9905,7 +9909,7 @@ it-IT:
           * Come formattare il codice per facilitarne la lettura
           * Come eseguire il debugging del codice HTML e CSS
           * Come utilizzare le immagini in modo responsabile
-          * Come proteggere le informazioni personali online
+          * Come proteggere i dati personali online
 
           ## Esempi
 
@@ -9940,6 +9944,14 @@ it-IT:
         questions:
         - {}
         title: titolo
+        markdown: |
+          # Espressioni booleane
+
+          **Espressione booleana** - un'espressione che può restituire solo `TRUE` (VERO) o `FALSE` (FALSO).
+
+          # Previsione
+
+          Leggi il programma qui sotto. Ci sono alcuni nuovi simboli che non ti sono stati presentati. Prova a indovinare cosa significano e prova a rispondere alla seguente domanda
       CSD U3 Card Examples_2018_2019_pilot_2021:
         content1: descrizione qui
       CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
@@ -9974,6 +9986,26 @@ it-IT:
         content1: descrizione qui
       CSD U3 platform intro_2018_2019_pilot_2021:
         content1: descrizione qui
+        markdown: |
+          # Realizzare un gioco a piattaforme
+
+          Mentre costruisci il tuo gioco a piattaforme, utilizzerai il processo di risoluzione dei problemi.
+
+          ## Definisci
+
+          Il problema è chiaramente definito per questo gioco, perché hai già visto una versione di esempio. Tuttavia, potresti voler apportare alcune modifiche. Assicurati che tutte le nuove funzionalità del tuo gioco siano chiaramente definite.
+
+          ## Preparara
+
+          Prima di iniziare a programmare, è necessario compilare una guida al progetto. Ti preparerà e renderà la codifica molto più semplice.
+
+          ## Prova
+
+          Metterai poi alla prova il tuo progetto quando inizierai a programmare. E, a quel punto, non dimenticare tutto il materiale disponibile: la documentazione tecnica e la scheda “Guida e suggerimenti”.
+
+          ## Rifletti
+
+          Dopo aver terminato il tuo progetto, ti consigliamo di chiederti se il gioco ha funzionato come previsto e se potresti migliorare il tuo processo per la prossima volta.
       CSD U5 test_2021:
         title: Test Post-Progetto su Dati e Società
       CSD U6 LED create intro_2021:
@@ -10003,18 +10035,25 @@ it-IT:
         title: Testo Post-Progetto di Sviluppo Web
       CSD games cake challenge choice_2021:
         display_name: Sfide
+        description: |2-
+
+          Personalizzazione
+          Hai appena seguito il piano di qualcun altro per creare un gioco, quindi ora è il momento di farlo tuo. Quali funzionalità o sfide aggiuntive desideri creare?
       CSD games platform challenge choice_2021:
         display_name: Sfide
+        description: Migliora il tuo gioco con queste sfide!
       CSD web draw loop practice choice_2021:
         display_name: Pratica
-        description: Prova a usare il disegno ciclico con queste attività.
+        description: Prova a usare la funzione ciclica draw con queste attività.
       CSD web movement practice choice_2021:
         display_name: Pratica
-        description: Prova a usare il disegno ciclico con queste attività.
+        description: Prova a usare la funzione ciclica draw con queste attività.
       CSD web text practice choice_2021:
         display_name: Pratica
+        description: In queste attività, metti alla prova le tue abilità la gestione
+          del testo.
       csd-pre-survey-levelgroup_21_22:
-        title: Alla Scoperta dell'Informatica - Indagine preliminare
+        title: Alla Scoperta dell'Informatica - Sondaggio di inizio corso
       Choose 2 Test:
         answers:
         - correct: true
@@ -10096,17 +10135,25 @@ it-IT:
         - text: Nessuno dei precedenti
       CSD Games Properties practice_2021:
         display_name: Proprietà del personaggio
+        description: Prova ad usare le proprietà dei personaggi che hai imparato fin
+          qui
       CSD Games Properties multi predict_2022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: un personaggio "ape" al centro dello schermo
+        - text: un personaggio "ape" nell’angolo in basso a destra
+          correct: true
+        - text: due personaggi "ape", uno al centro e uno nell’angolo in basso a destra
+        - text: tre personaggi "ape", tutti in posti diversi
+        - text: niente, ci sarà un errore
         questions:
-        - {}
+        - text: Cosa mostrerà il programma?
+        content1: Guarda il programma qui sotto e prevedi dove apparirà il personaggio
+          delle api.
+        title: Posizionamento del personaggio "ape"
       CSD Games Properties practice_2022:
         display_name: Proprietà del personaggio
+        description: Prova ad usare le proprietà dei personaggi che hai imparato fin
+          qui
       CSD Header Size MC_2018_2019_pilot_2022:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -10477,7 +10524,7 @@ it-IT:
           * Come formattare il codice per facilitarne la lettura
           * Come eseguire il debugging del codice HTML e CSS
           * Come utilizzare le immagini in modo responsabile
-          * Come proteggere le informazioni personali online
+          * Come proteggere i dati personali online
 
           ## Esempi
 
@@ -10512,6 +10559,14 @@ it-IT:
         questions:
         - {}
         title: titolo
+        markdown: |
+          # Espressioni booleane
+
+          **Espressione booleana** - un'espressione che può restituire solo `TRUE` (VERO) o `FALSE` (FALSO).
+
+          # Previsione
+
+          Leggi il programma qui sotto. Ci sono alcuni nuovi simboli che non ti sono stati presentati. Prova a indovinare cosa significano e prova a rispondere alla seguente domanda
       CSD U3 Functions Prediction define first_2018_2019_pilot_2022:
         answers:
         - {}
@@ -10710,6 +10765,26 @@ it-IT:
         description: Fai molta pratica!
       CSD U3 platform intro_2018_2019_pilot_2022:
         content1: descrizione qui
+        markdown: |
+          # Realizzare un gioco a piattaforme
+
+          Mentre costruisci il tuo gioco a piattaforme, utilizzerai il processo di risoluzione dei problemi.
+
+          ## Definisci
+
+          Il problema è chiaramente definito per questo gioco, perché hai già visto una versione di esempio. Tuttavia, potresti voler apportare alcune modifiche. Assicurati che tutte le nuove funzionalità del tuo gioco siano chiaramente definite.
+
+          ## Preparara
+
+          Prima di iniziare a programmare, è necessario compilare una guida al progetto. Ti preparerà e renderà la codifica molto più semplice.
+
+          ## Prova
+
+          Metterai poi alla prova il tuo progetto quando inizierai a programmare. E, a quel punto, non dimenticare tutto il materiale disponibile: la documentazione tecnica e la scheda “Guida e suggerimenti”.
+
+          ## Rifletti
+
+          Dopo aver terminato il tuo progetto, ti consigliamo di chiederti se il gioco ha funzionato come previsto e se potresti migliorare il tuo processo per la prossima volta.
       CSD U4 test feature match:
         answers:
         - text: "«Dimentico sempre i miei occhiali da lettura»."
@@ -10955,29 +11030,47 @@ it-IT:
           <img src="https://images.code.org/67db4444236c97d345c69bf6decb3047-image-1559246113075.png" style="float:left; width:150px; margin:10px;border: solid;">
       CSD U5 test clean multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: No, non è onesto modificare i dati prima di inserirli in un grafico.
+        - text: Sì, dovrebbero correggere gli errori di ortografia e uniformare i
+            nomi in modo che il grafico sia più preciso.
+          correct: true
+        - text: Sì, dovrebbero visitare luoghi che ritengono non adatti alla gita
+            scolastica.
+        - text: No, la modifica dei dati confonderà le persone se le loro risposte
+            non sono nel grafico.
+        - text: No, se i dati presentano problemi, bisogna ripetere il sondaggio.
         questions:
-        - {}
+        - text: Una classe ha partecipato a un sondaggio per decidere dove andare
+            durante una gita scolastica e vuole creare un grafico per vedere quanto
+            è stata popolare ciascuna scelta. Potrebbe essere necessario apportare
+            modifiche ai dati prima di creare il grafico?
       CSD U5 test clean multi_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: No, non è onesto modificare i dati prima di inserirli in un grafico.
+        - text: Sì, dovrebbero correggere gli errori di ortografia e uniformare i
+            nomi in modo che il grafico sia più preciso.
+          correct: true
+        - text: Sì, dovrebbero visitare luoghi che ritengono non adatti alla gita
+            scolastica.
+        - text: No, la modifica dei dati confonderà le persone se le loro risposte
+            non sono nel grafico.
+        - text: No, se i dati presentano problemi, bisogna ripetere il sondaggio.
         questions:
-        - {}
+        - text: Una classe ha partecipato a un sondaggio per decidere dove andare
+            durante una gita scolastica e vuole creare un grafico per vedere quanto
+            è stata popolare ciascuna scelta. Potrebbe essere necessario apportare
+            modifiche ai dati prima di creare il grafico?
       CSD U5 test clean multi_2022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: No, non è onesto modificare i dati prima di inserirli in un grafico.
+        - text: Sì, dovrebbero correggere gli errori di ortografia e uniformare i
+            nomi in modo che il grafico sia più preciso.
+          correct: true
+        - text: Sì, dovrebbero visitare luoghi che ritengono non adatti alla gita
+            scolastica.
+        - text: No, la modifica dei dati confonderà le persone se le loro risposte
+            non sono nel grafico.
+        - text: No, se i dati presentano problemi, bisogna ripetere il sondaggio.
         questions:
         - {}
       CSD U5 test crosstab multi:
@@ -10987,9 +11080,10 @@ it-IT:
         - text: Ranocchio
           correct: true
         - text: giraffa
-        - {}
+        - text: È impossibile capirlo da queste informazioni.
         questions:
-        - {}
+        - text: Secondo questo grafico, se qualcuno ti dicesse che la sua stagione
+            preferita è l'autunno, quale animale preferirebbe con maggiore probabilità?
       CSD U5 test crosstab multi_2021:
         answers:
         - text: cane
@@ -10997,9 +11091,10 @@ it-IT:
         - text: Ranocchio
           correct: true
         - text: giraffa
-        - {}
+        - text: È impossibile capirlo da queste informazioni.
         questions:
-        - {}
+        - text: Secondo questo grafico, se qualcuno ti dicesse che la sua stagione
+            preferita è l'autunno, quale animale preferirebbe con maggiore probabilità?
       CSD U5 test crosstab multi_2022:
         answers:
         - text: cane
@@ -11007,9 +11102,10 @@ it-IT:
         - text: Ranocchio
           correct: true
         - text: giraffa
-        - {}
+        - text: È impossibile capirlo da queste informazioni.
         questions:
-        - {}
+        - text: Secondo questo grafico, se qualcuno ti dicesse che la sua stagione
+            preferita è l'autunno, quale animale preferirebbe con maggiore probabilità?
       CSD U5 test datacount multi:
         answers:
         - text: cane
@@ -11017,9 +11113,12 @@ it-IT:
         - text: pinguino
         - text: Ranocchio
         - text: giraffa
-        - {}
+        - text: È impossibile capirlo da queste informazioni.
         questions:
-        - {}
+        - text: Qual è, secondo questo grafico, l'animale che riscuote più successo?
+        markdown: "La tabella seguente mostra la relazione tra animali preferiti e
+          stagioni preferite. \n\n<img src='https://images.code.org/ea4a2068f77bf0283cf19ad643422189-image-1558116149426.01.35
+          AM.png' width=\"400px\">\n"
       CSD U5 test datacount multi_2021:
         answers:
         - text: cane
@@ -11027,9 +11126,12 @@ it-IT:
         - text: pinguino
         - text: Ranocchio
         - text: giraffa
-        - {}
+        - text: È impossibile capirlo da queste informazioni.
         questions:
-        - {}
+        - text: Qual è, secondo questo grafico, l'animale che riscuote più successo?
+        markdown: "La tabella seguente mostra la relazione tra animali preferiti e
+          stagioni preferite. \n\n<img src='https://images.code.org/ea4a2068f77bf0283cf19ad643422189-image-1558116149426.01.35
+          AM.png' width=\"400px\">\n"
       CSD U5 test datacount multi_2022:
         answers:
         - text: cane
@@ -11037,63 +11139,105 @@ it-IT:
         - text: pinguino
         - text: Ranocchio
         - text: giraffa
-        - {}
+        - text: È impossibile capirlo da queste informazioni.
         questions:
-        - {}
+        - text: Qual è, secondo questo grafico, l'animale che riscuote più successo?
+        markdown: "La tabella seguente mostra la relazione tra animali preferiti e
+          stagioni preferite. \n\n<img src='https://images.code.org/ea4a2068f77bf0283cf19ad643422189-image-1558116149426.01.35
+          AM.png' width=\"400px\">\n"
       CSD U5 test encoding multi2:
         answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
-        - {}
+        - text: Il sistema deve utilizzare solo due elementi diversi per codificare
+            le informazioni.
+        - text: Chiunque lo utilizzi deve concordare sulle regole del sistema.
+          correct: true
+        - text: Le regole del sistema devono essere chiare, in modo che ci sia un
+            solo modo per interpretare i dati codificati.
+          correct: true
+        - text: Il sistema dovrebbe disporre di uno schema, in modo che sia facile
+            da ricordare.
+        - text: La chiave del sistema deve essere tenuta segreta in modo che le persone
+            non possano spiare le informazioni.
         questions:
-        - {}
+        - text: Quale delle due seguenti cose è necessaria per il funzionamento di
+            qualsiasi sistema di codifica?
       CSD U5 test encoding multi2_2021:
         answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
-        - {}
+        - text: Il sistema deve utilizzare solo due elementi diversi per codificare
+            le informazioni.
+        - text: Chiunque lo utilizzi deve concordare sulle regole del sistema.
+          correct: true
+        - text: Le regole del sistema devono essere chiare, in modo che ci sia un
+            solo modo per interpretare i dati codificati.
+          correct: true
+        - text: Il sistema dovrebbe disporre di uno schema, in modo che sia facile
+            da ricordare.
+        - text: La chiave del sistema deve essere tenuta segreta in modo che le persone
+            non possano spiare le informazioni.
         questions:
-        - {}
+        - text: Quale delle due seguenti cose è necessaria per il funzionamento di
+            qualsiasi sistema di codifica?
       CSD U5 test encoding multi2_2022:
         answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
-        - {}
+        - text: Il sistema deve utilizzare solo due elementi diversi per codificare
+            le informazioni.
+        - text: Chiunque lo utilizzi deve concordare sulle regole del sistema.
+          correct: true
+        - text: Le regole del sistema devono essere chiare, in modo che ci sia un
+            solo modo per interpretare i dati codificati.
+          correct: true
+        - text: Il sistema dovrebbe disporre di uno schema, in modo che sia facile
+            da ricordare.
+        - text: La chiave del sistema deve essere tenuta segreta in modo che le persone
+            non possano spiare le informazioni.
         questions:
-        - {}
+        - text: Quale delle due seguenti cose è necessaria per il funzionamento di
+            qualsiasi sistema di codifica?
       CSD U5 test secure multi:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Assicurarsi che l'algoritmo utilizzato per crittografare i dati sia
+            tenuto segreto
+          correct: true
+        - text: Assicurarsi che la chiave utilizzata per crittografare i dati sia
+            mantenuta segreta
+        - text: Fai sempre attenzione ai dati che potresti produrre, anche involontariamente
+        - text: Assicurare la sicurezza fisica per i dispositivi che contengono dati
+            (chiusura delle porte, ecc.)
+        - text: Usare una chiave di cifratura forte che non può essere facilmente
+            indovinata
         questions:
-        - {}
+        - text: Quando si mantengono i dati al sicuro, quale delle seguenti cose non
+            è un problema?
       CSD U5 test secure multi_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Assicurarsi che l'algoritmo utilizzato per crittografare i dati sia
+            tenuto segreto
+          correct: true
+        - text: Assicurarsi che la chiave utilizzata per crittografare i dati sia
+            mantenuta segreta
+        - text: Fai sempre attenzione ai dati che potresti produrre, anche involontariamente
+        - text: Assicurare la sicurezza fisica per i dispositivi che contengono dati
+            (chiusura delle porte, ecc.)
+        - text: Usare una chiave di cifratura forte che non può essere facilmente
+            indovinata
         questions:
-        - {}
+        - text: Quando si mantengono i dati al sicuro, quale delle seguenti cose non
+            è un problema?
       CSD U5 test secure multi_2022:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Assicurarsi che l'algoritmo utilizzato per crittografare i dati sia
+            tenuto segreto
+          correct: true
+        - text: Assicurarsi che la chiave utilizzata per crittografare i dati sia
+            mantenuta segreta
+        - text: Fai sempre attenzione ai dati che potresti produrre, anche involontariamente
+        - text: Assicurare la sicurezza fisica per i dispositivi che contengono dati
+            (chiusura delle porte, ecc.)
+        - text: Usare una chiave di cifratura forte che non può essere facilmente
+            indovinata
         questions:
-        - {}
+        - text: Quando si mantengono i dati al sicuro, quale delle seguenti cose non
+            è un problema?
       CSD U5 test_2022:
         title: Test Post-Progetto su Dati e Società
       CSD U6 - Accelerometer - Chal_2222:
@@ -11131,22 +11275,32 @@ it-IT:
         title: Fai una previsione
       CSD U6 test algorithms multi2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: gestori di eventi
+        - text: cicli con contatore e matrici
+          correct: true
+        - text: funzioni con parametri
+        - text: getters/getProperty
+          correct: true
+        - text: conversione da analogico a digitale
         questions:
-        - {}
+        - text: Una classe vuole creare un programma che dia il buongiorno a tutti.
+            Ad esempio, il programma potrà mostrare «Buongiorno, Dwayne!» , «Buongiorno,
+            Mari!» per ciascuno studente. Quali DUE strumenti di programmazione saranno
+            i più utili per scrivere questo programma?
       CSD U6 test algorithms multi2_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: gestori di eventi
+        - text: cicli con contatore e matrici
+          correct: true
+        - text: funzioni con parametri
+        - text: getters/getProperty
+          correct: true
+        - text: conversione da analogico a digitale
         questions:
-        - {}
+        - text: Una classe vuole creare un programma che dia il buongiorno a tutti.
+            Ad esempio, il programma potrà mostrare «Buongiorno, Dwayne!» , «Buongiorno,
+            Mari!» per ciascuno studente. Quali DUE strumenti di programmazione saranno
+            i più utili per scrivere questo programma?
       CSD U6 test debugging multi:
         answers:
         - correct: true
@@ -11261,16 +11415,23 @@ it-IT:
         title: Testo Post-Progetto di Sviluppo Web
       CSD games cake challenge choice_2022:
         display_name: Sfide
+        description: |2-
+
+          Personalizzazione
+          Hai appena seguito il piano di qualcun altro per creare un gioco, quindi ora è il momento di farlo tuo. Quali funzionalità o sfide aggiuntive desideri creare?
       CSD games platform challenge choice_2022:
         display_name: Sfide
+        description: Migliora il tuo gioco con queste sfide!
       CSD web draw loop practice choice_2022:
         display_name: Pratica
-        description: Prova a usare il disegno ciclico con queste attività.
+        description: Prova a usare la funzione ciclica draw con queste attività.
       CSD web movement practice choice_2022:
         display_name: Pratica
-        description: Prova a usare il disegno ciclico con queste attività.
+        description: Prova a usare la funzione ciclica draw con queste attività.
       CSD web text practice choice_2022:
         display_name: Pratica
+        description: In queste attività, metti alla prova le tue abilità la gestione
+          del testo.
       CSP PD Example Question 1:
         answers:
         - {}
@@ -12712,7 +12873,7 @@ it-IT:
       csd-post-survey-unit6-preamble:
         content1: descrizione qui
       csd-pre-survey-levelgroup_21_22_2022:
-        title: Alla Scoperta dell'Informatica - Indagine preliminare
+        title: Alla Scoperta dell'Informatica - Sondaggio di inizio corso
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -21125,7 +21286,7 @@ it-IT:
 
           |Esempio 1| Esempio 2|Esempio 3|
           |-|-|-|
-          | [! [] (https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/view) | [! [] (https://images.code.org/00410044eee7dedc993ec9d6c8887444-image-1589309900750.56.13 PM.png)] (https://studio.code.org/projects/weblab/3ZP18hc29B_ZMG2Yh17zXJfOZ_97JAa882aj9oJScME/view) | [! [] (https://images.code.org/c67c9e9b8e44094a403e3974db09e2e3-image-1589314612876.15.47 PM.png)] (https://studio.code.org/projects/weblab/Hdfq1QJEwNjrbpI8x7qwPO6ZHgLyywZOxGRKqIZGp8Y/view) |
+          |[![](https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/view)|[![](https://images.code.org/00410044eee7dedc993ec9d6c8887444-image-1589309900750.56.13 PM.png)](https://studio.code.org/projects/weblab/3ZP18hc29B_ZMG2Yh17zXJfOZ_97JAa882aj9oJScME/view)|[![](https://images.code.org/c67c9e9b8e44094a403e3974db09e2e3-image-1589314612876.15.47 PM.png)](https://studio.code.org/projects/weblab/Hdfq1QJEwNjrbpI8x7qwPO6ZHgLyywZOxGRKqIZGp8Y/view)|
 
 
       CSD U2 Sample CSS layout_2022:
@@ -21136,37 +21297,37 @@ it-IT:
 
           |Esempio 1| Esempio 2|Esempio 3|
           |-|-|-|
-          | [! [] (https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/view) | [! [] (https://images.code.org/00410044eee7dedc993ec9d6c8887444-image-1589309900750.56.13 PM.png)] (https://studio.code.org/projects/weblab/3ZP18hc29B_ZMG2Yh17zXJfOZ_97JAa882aj9oJScME/view) | [! [] (https://images.code.org/c67c9e9b8e44094a403e3974db09e2e3-image-1589314612876.15.47 PM.png)] (https://studio.code.org/projects/weblab/Hdfq1QJEwNjrbpI8x7qwPO6ZHgLyywZOxGRKqIZGp8Y/view) |
+          |[![](https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/view)|[![](https://images.code.org/00410044eee7dedc993ec9d6c8887444-image-1589309900750.56.13 PM.png)](https://studio.code.org/projects/weblab/3ZP18hc29B_ZMG2Yh17zXJfOZ_97JAa882aj9oJScME/view)|[![](https://images.code.org/c67c9e9b8e44094a403e3974db09e2e3-image-1589314612876.15.47 PM.png)](https://studio.code.org/projects/weblab/Hdfq1QJEwNjrbpI8x7qwPO6ZHgLyywZOxGRKqIZGp8Y/view)|
 
 
       CSD U2 Sample CSS text_2021:
         markdown: |
           # Sito web di esempio
 
-          Fai clic sul sito Web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
+          Fai clic sul sito web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
 
-          [! [] (https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
+          [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
       CSD U2 Sample CSS text_2022:
         markdown: |
           # Sito web di esempio
 
-          Fai clic sul sito Web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
+          Fai clic sul sito web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
 
-          [! [] (https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
+          [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
       CSD U2 Sample classes_2021:
         markdown: |
           # Sito web di esempio
 
           Fai clic sul sito web qui sotto per scoprire alcuni nuovi modi per modellare gli elementi.
 
-          [! [] (https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)] (https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
+          [![](https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)] (https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
       CSD U2 Sample classes_2022:
         markdown: |
           # Sito web di esempio
 
           Fai clic sul sito web qui sotto per scoprire alcuni nuovi modi per modellare gli elementi.
 
-          [! [] (https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)] (https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
+          [![](https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)] (https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
       CSD U2 Top Websites_2018_2019_pilot_2021:
         markdown: |
           # Risoluzione dei problemi sui siti web
@@ -21294,6 +21455,17 @@ it-IT:
 
 
 
+        teacher_markdown: |+
+          Questo esercizio si presenta alla fine di ogni unità. **Chiedi ai tuoi studenti di completare questo sondaggio alla fine dell'ultima unità! ** Gli studenti devono rispondere al sondaggio solo una volta alla fine del corso.
+
+          * I risultati sono fondamentali per noi (code.org) per sostenere i nostri corsi e apportare miglioramenti.
+          * Ci sarà anche un sondaggio per insegnanti in cui potrai fornire il tuo contributo. Riceverai una notifica via e-mail sul sondaggio per gli insegnanti.
+
+          **Istruzioni per sbloccare il sondaggio per studenti: ** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]
+
+          Se gli studenti fanno clic sul link e visualizzano un messaggio di errore relativo al blocco del sondaggio, segui i passaggi indicati nelle istruzioni sopra per sbloccare il sondaggio per gli studenti.
+
+
       CSD Games Parameters challenge_2021:
         description: Dai un'occhiata a uno o più di questi blocchi aggiuntivi che
           puoi usare per rendere le tue foto più interessanti.
@@ -21318,3 +21490,377 @@ it-IT:
       CSD U3 drawing challenges_2022:
         description: Prova alcune sfide!
         display_name: Sfide di disegno
+      CSD Games Properties challenge_2021:
+        description: Prova queste nuove sfide con le proprietà dei personaggi
+        display_name: 'Sfide: proprietà dei personaggi'
+      CSD Games Properties challenge_2022:
+        description: Prova queste nuove sfide con le proprietà dei personaggi
+        display_name: 'Sfide: proprietà dei personaggi'
+      CSD Games Sprites Challenges_2021:
+        description: Prova queste sfide extra che ti aiuteranno a rendere i tuoi personaggi
+          ancora più speciali.
+        display_name: 'Sfida: personaggi e animazioni'
+      CSD Games Sprites Challenges_2022:
+        description: Prova queste sfide extra che ti aiuteranno a rendere i tuoi personaggi
+          ancora più speciali.
+        display_name: 'Sfida: personaggi e animazioni'
+      CSD Games Sprites practice_2021:
+        description: |-
+          Utilizza le tue nuove conoscenze su personaggi e animazioni per completare i seguenti
+          esercizi.
+        display_name: Creare personaggi e animazioni
+      CSD Games Sprites practice_2022:
+        description: |-
+          Utilizza le tue nuove conoscenze su personaggi e animazioni per completare i seguenti
+          esercizi.
+        display_name: Creare personaggi e animazioni
+      CSD Games variables challenge_2021:
+        description: Espandi le tue competenze in materia di variabili con queste
+          sfide.
+        display_name: Sfide con le variabili
+      CSD Games variables challenge_2022:
+        description: Espandi le tue competenze in materia di variabili con queste
+          sfide.
+        display_name: Sfide con le variabili
+      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021:
+        markdown: |
+          # Pianifica il tuo progetto
+
+          Guarda alla guida al progetto, che è già stata compilata per te.
+
+          * La guida al progetto descrive gli stessi personaggi a cui hai pensato?
+          * Utilizza le stesse variabili per memorizzare i dati necessari al funzionamento del gioco?
+          * Le funzioni che descrive sono le stesse che hai descritto?
+      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022:
+        markdown: |
+          # Pianifica il tuo progetto
+
+          Guarda alla guida al progetto, che è già stata compilata per te.
+
+          * La guida al progetto descrive gli stessi personaggi a cui hai pensato?
+          * Utilizza le stesse variabili per memorizzare i dati necessari al funzionamento del gioco?
+          * Le funzioni che descrive sono le stesse che hai descritto?
+      CSD games collisions challenge choice_2021:
+        description: Prova questi nuovi blocchi di istruzione e affronta la sfida
+          con le collisioni.
+        display_name: Sfide con le collisioni
+      CSD games collisions challenge choice_2022:
+        description: Prova questi nuovi blocchi di istruzione e affronta la sfida
+          con le collisioni.
+        display_name: Sfide con le collisioni
+      CSD games collisions practice choice_2021:
+        description: Esercitarsi con i nuovi blocchi di istruzione per le collisioni.
+        display_name: Esercizi sulle collisioni
+      CSD games collisions practice choice_2022:
+        description: Esercitarsi con i nuovi blocchi di istruzione per le collisioni.
+        display_name: Esercizi sulle collisioni
+      CSD games functions challenge choice_2021:
+        description: Migliora il tuo gioco e prova queste sfide con le funzioni.
+        display_name: Sfide con le funzioni
+      CSD games functions challenge choice_2022:
+        description: Migliora il tuo gioco e prova queste sfide con le funzioni.
+        display_name: Sfide con le funzioni
+      CSD games functions practice choice_2021:
+        description: Esercitati con le funzioni e scopri di più su cosa le rende così
+          utili.
+        display_name: Esercitarsi con le funzioni
+      CSD games functions practice choice_2022:
+        description: Esercitati con le funzioni e scopri di più su cosa le rende così
+          utili.
+        display_name: Esercitarsi con le funzioni
+      CSD games istouching challenge choice_2021:
+        description: Prova questi nuovi blocchi di istruzione e affronta la sfida
+          con le collisioni.
+        display_name: Sfide con le collisioni
+      CSD games istouching challenge choice_2022:
+        description: Prova questi nuovi blocchi di istruzione e affronta la sfida
+          con le collisioni.
+        display_name: Sfide con le collisioni
+      CSD games istouching practice choice_2021:
+        description: Esercitati a utilizzare il rilevamento delle collisioni con queste
+          attività.
+        display_name: Esercizi sulle collisioni
+      CSD games istouching practice choice_2022:
+        description: Esercitati a utilizzare il rilevamento delle collisioni con queste
+          attività.
+        display_name: Esercizi sulle collisioni
+      CSD games movement2 challenge choice_2021:
+        description: Prova questi nuovi blocchi e queste sfide con la velocità e lo
+          schema a contatore.
+        display_name: Sfide su un movimento più complesso dei personaggi
+      CSD games movement2 challenge choice_2022:
+        description: Prova questi nuovi blocchi e queste sfide con la velocità e lo
+          schema a contatore.
+        display_name: Sfide su un movimento più complesso dei personaggi
+      CSD games movement2 practice choice_2021:
+        description: Esercitati su nuovi metodi per far muovere i personaggi.
+        display_name: Esercizi sul movimento del personaggi
+      CSD games movement2 practice choice_2022:
+        description: Esercitati su nuovi metodi per far muovere i personaggi.
+        display_name: Esercizi sul movimento del personaggi
+      CSD games random challenge_2021:
+        description: Tenta queste sfide supplementari con numeri casuali
+        display_name: 'Sfide: numeri casuali'
+      CSD games random challenge_2022:
+        description: Tenta queste sfide supplementari con numeri casuali
+        display_name: 'Sfide: numeri casuali'
+      CSD games random practice_2021:
+        description: Metti alla prova le tue nuove abilità su questi esercizi.
+        display_name: Esercitati con numeri casuali
+      CSD games random practice_2022:
+        description: Metti alla prova le tue nuove abilità su questi esercizi.
+        display_name: Esercitati con numeri casuali
+      CSD games velocity challenge choice_2021:
+        description: Prova questi nuovi blocchi e queste nuove sfide con velocità.
+        display_name: Sfide con la velocità
+      CSD games velocity challenge choice_2022:
+        description: Prova questi nuovi blocchi e queste nuove sfide con velocità.
+        display_name: Sfide con la velocità
+      CSD games velocity practice choice_2021:
+        description: Esercitati a usare i blocchi di velocità con queste attività.
+        display_name: Esercizi con la velocità
+      CSD games velocity practice choice_2022:
+        description: Esercitati a usare i blocchi di velocità con queste attività.
+        display_name: Esercizi con la velocità
+      CSD web conditionals challenge choice_2021:
+        description: Prova queste sfide con le istruzioni condizionali.
+        display_name: Sfide con le istruzioni condizionali
+      CSD web conditionals challenge choice_2022:
+        description: Prova queste sfide con le istruzioni condizionali.
+        display_name: Sfide con le istruzioni condizionali
+      CSD web conditionals practice choice_2021:
+        description: Esercitati ad utilizzare le espressioni booleane e le istruzioni
+          condizionali in queste attività.
+        display_name: Esercizi sulle istruzioni condizionali
+      CSD web conditionals practice choice_2022:
+        description: Esercitati ad utilizzare le espressioni booleane e le istruzioni
+          condizionali in queste attività.
+        display_name: Esercizi sulle istruzioni condizionali
+      CSD web draw loop challenge choice_2021:
+        description: Prova queste sfide di funzione ciclica draw.
+        display_name: Sfide di funzione ciclica draw
+      CSD web draw loop challenge choice_2022:
+        description: Prova queste sfide di funzione ciclica draw.
+        display_name: Sfide di funzione ciclica draw
+      CSD web keyboard challenge choice_2021:
+        description: Prova questi nuovi blocchi e queste sfide con gli input da tastiera.
+        display_name: Sfide – Input da tastiera
+      CSD web keyboard challenge choice_2022:
+        description: Prova questi nuovi blocchi e queste sfide con gli input da tastiera.
+        display_name: Sfide – Input da tastiera
+      CSD web keyboard practice choice_2021:
+        description: Fai pratica con gli input da tastiera in queste attività.
+        display_name: Pratica con gli input da tastiera
+      CSD web keyboard practice choice_2022:
+        description: Fai pratica con gli input da tastiera in queste attività.
+        display_name: Pratica con gli input da tastiera
+      CSD web mouse challenge choice_2021:
+        description: Prova le nuove istruzioni che troverai in queste sfide con il
+          mouse.
+        display_name: Sfide con il mouse
+      CSD web mouse challenge choice_2022:
+        description: Prova le nuove istruzioni che troverai in queste sfide con il
+          mouse.
+        display_name: Sfide con il mouse
+      CSD web mouse practice choice_2021:
+        description: Esercitati a inserire la tastiera e a usare il blocco if/else
+          con queste attività.
+        display_name: Inserimento con il mouse ed esercitazione If/else
+      CSD web mouse practice choice_2022:
+        display_name: Inserimento con il mouse ed esercitazione If/else
+      CSD web movement challenge choice_2021:
+        description: Aggiungi altro alla tua scena di pesci o crea qualcosa di nuovo.
+        display_name: Sfide sul movimento dei personaggi
+      CSD web movement challenge choice_2022:
+        description: Aggiungi altro alla tua scena di pesci o crea qualcosa di nuovo.
+        display_name: Sfide sul movimento dei personaggi
+      CSD web text challenge choice_2021:
+        description: Prova questi nuovi blocchi e nuove sfide.
+        display_name: Sfide con il testo
+      CSD web text challenge choice_2022:
+        description: Prova questi nuovi blocchi e nuove sfide.
+        display_name: Sfide con il testo
+      CSDU6 Innovation_2021:
+        markdown: |
+          # Ricerca sull'innovazione
+
+          Scegli uno dei seguenti argomenti da esaminare. Ti consigliamo di trovare informazioni su alcuni dei più recenti dispositivi informatici innovativi relativi alla tua categoria.
+
+          ## Tecnologia indossabile
+          La tecnologia indossabile include qualsiasi forma di elaborazione progettata per essere indossata dall'utente, sia essa incorporata negli abiti o indossata come accessorio. Molti dispositivi indossabili, come i pedometri intelligenti, si sovrappongono in qualche modo alla salute e alla sicurezza in quanto il dispositivo è sia indossabile sia destinato a contribuire a migliorare la salute personale.
+
+          ## Salute e sicurezza
+          L'argomento più ampio include sia la tecnologia di consumo (elementi che potresti usare per migliorare la tua salute o la tua sicurezza) sia la tecnologia professionale (attrezzatura che un medico o un altro professionista potrebbe usare).
+
+          ## Agricoltura
+          L'agricoltura potrebbe non essere un argomento ovvio, ma le innovazioni tecnologiche hanno avuto un impatto enorme sul modo in cui affrontiamo l'agricoltura. Ciò include l'integrazione di computer nelle attrezzature agricole esistenti, l'utilizzo di sensori e robotica per monitorare le colture e l'analisi dei dati per migliorare l'efficienza e la sostenibilità.
+
+          ## Produzione
+          I progressi nella prototipazione rapida, nella robotica industriale e nell'automazione hanno avuto un impatto notevole sul modo in cui vengono prodotti i beni. Che si tratti della tecnologia per consentire la produzione su piccola scala a prezzi accessibili (come stampanti 3D e taglierine laser) o dell'integrazione dei computer nel lavoro di fabbrica, ci sono molte aree interessanti da ricercare qui.
+
+          ## Arte e design
+          L'intersezione tra espressione artistica e informatica può produrre risultati impressionanti e inaspettati. Sebbene sia meno probabile trovare prodotti disponibili in commercio legati all'arte e al design, troverai un'ampia varietà di creazioni fatte in casa che utilizzano tutti i tipi di dispositivi informatici in modi creativi ed espressivi.
+
+          ## Casa intelligente
+          Il sogno di una casa che capisca e addirittura anticipi le tue esigenze è più vicino che mai. Che siano controllati esplicitamente tramite comandi vocali o utilizzando sensori per monitorare e rispondere alle mutevoli condizioni, i dispositivi domestici intelligenti si occupano di qualsiasi numero di attività banali o ripetitive in casa.
+
+
+          # Considerazioni sulla ricerca
+
+          Mentre cerchi dispositivi sul tuo argomento, tieni a mente le seguenti considerazioni:
+
+          * Concentrati sulle soluzioni basate sull'hardware rispetto ai programmi software
+          * Concentrati sulle innovazioni recenti rispetto alle notizie più vecchie
+          * Segui ciò che ti interessa
+
+          # Iniziare la ricerca
+
+          Rivolgiti al tuo insegnante per i siti web consigliati per inizia la tua ricerca. Puoi anche utilizzare alcune delle parole chiave sopra riportate per iniziare a cercare idee specifiche su Internet. Ad esempio, considera di dare un'occhiata ai vari siti di raccolta fondi (come Kickstarter e Indiegogo) per vedere i prodotti che non sono ancora stati lanciati.
+      aiml-ch1-pulse-survey_2021:
+        title: Sondaggio rapido su intelligenza artificiale e apprendimento automatico!
+      aiml-ch1-pulse-survey_2022:
+        title: Sondaggio rapido su intelligenza artificiale e apprendimento automatico!
+      aiml-intro-pulse-survey_2021:
+        title: Sondaggio rapido su intelligenza artificiale e apprendimento automatico!
+      aiml-intro-pulse-survey_2022:
+        title: Sondaggio rapido su intelligenza artificiale e apprendimento automatico!
+      csd-post-survey-markdown-with-link-to-survey_2022:
+        markdown: |+
+          # Sondaggio di fine corso "Alla Scoperta dell'Informatica"
+
+          Il tuo contributo e il tuo riscontro sono importanti per noi!** Li utilizziamo per:
+
+          *   comprendere la qualità della tua esperienza
+          *   apportare miglioramenti al corso
+
+          Grazie per aver dedicato del tempo per contribuire a rendere Alla scoperta dell'informatica ancora migliore!
+
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey-2022/lockable/1/levels/1/page/1" target="top">Fai clic qui per completare il sondaggio post-corso di Alla scoperta dell'informatica</a>
+
+          (si apre in una nuova scheda)
+
+          <br>
+
+
+
+
+
+        teacher_markdown: |+
+          Questo esercizio si presenta alla fine di ogni unità. **Chiedi ai tuoi studenti di completare questo sondaggio alla fine dell'ultima unità! ** Gli studenti devono rispondere al sondaggio solo una volta alla fine del corso.
+
+          * I risultati sono fondamentali per noi (code.org) per sostenere i nostri corsi e apportare miglioramenti.
+          * Ci sarà anche un sondaggio per insegnanti in cui potrai fornire il tuo contributo. Riceverai una notifica via e-mail sul sondaggio per gli insegnanti.
+
+          **Istruzioni per sbloccare il sondaggio per studenti: ** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]
+
+          Se gli studenti fanno clic sul link e visualizzano un messaggio di errore relativo al blocco del sondaggio, segui i passaggi indicati nelle istruzioni sopra per sbloccare il sondaggio per gli studenti.
+
+
+      csd-pulse-check-survey-1-levelgroup U1Ch2:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U2Ch1:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2022:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U2Ch2:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U3Ch1:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2022:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U3Ch2:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U4Ch1:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2022:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U4Ch2:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U5Ch1:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2022:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U5Ch2:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U6Ch1:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2222:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U6Ch2:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      ml-models-shoe survey:
+        markdown: |
+          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## [Clicca qui](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) per partecipare al sondaggio sul Suggeritore di scarpe
+      ml-models-shoe survey_2022:
+        markdown: |
+          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## [Clicca qui](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) per partecipare al sondaggio sul Suggeritore di scarpe

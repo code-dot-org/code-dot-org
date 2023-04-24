@@ -1770,19 +1770,63 @@
         },
         "csd u5 recommender sample": {
           "Start": "Inizia",
-          "flying": "volo"
+          "flying": "volo",
+          "Where should you go on vacation?": "Dove dovresti andare in vacanza?",
+          "What is your favorite food?": "Qual è il tuo cibo preferito?",
+          "What is the best superpower?": "Qual è il tuo superpotere preferito?",
+          "invisibility": "invisibilità",
+          "super strength": "forza sovrumana",
+          "teleport": "teletrasporto",
+          "Which animal do you like the best?": "Qual è il tuo animale preferito?",
+          "You should go to the beach!": "Dovresti andare al mare!",
+          "You should go to an amusement park!": "Dovresti andare in un parco di divertimenti!",
+          "You should go to a national park!": "Dovresti andare in un parco nazionale!",
+          "You should go to a big city!": "Dovresti andare in una grande città!"
         },
         "csd u5 recommender sample_2019": {
           "Start": "Inizia",
-          "flying": "volo"
+          "flying": "volo",
+          "Where should you go on vacation?": "Dove dovresti andare in vacanza?",
+          "What is your favorite food?": "Qual è il tuo cibo preferito?",
+          "What is the best superpower?": "Qual è il tuo superpotere preferito?",
+          "invisibility": "invisibilità",
+          "super strength": "forza sovrumana",
+          "teleport": "teletrasporto",
+          "Which animal do you like the best?": "Qual è il tuo animale preferito?",
+          "You should go to the beach!": "Dovresti andare al mare!",
+          "You should go to an amusement park!": "Dovresti andare in un parco di divertimenti!",
+          "You should go to a national park!": "Dovresti andare in un parco nazionale!",
+          "You should go to a big city!": "Dovresti andare in una grande città!"
         },
         "csd u5 recommender sample_2021": {
           "Start": "Inizia",
-          "flying": "volo"
+          "flying": "volo",
+          "Where should you go on vacation?": "Dove dovresti andare in vacanza?",
+          "What is your favorite food?": "Qual è il tuo cibo preferito?",
+          "What is the best superpower?": "Qual è il tuo superpotere preferito?",
+          "invisibility": "invisibilità",
+          "super strength": "forza sovrumana",
+          "teleport": "teletrasporto",
+          "Which animal do you like the best?": "Qual è il tuo animale preferito?",
+          "You should go to the beach!": "Dovresti andare al mare!",
+          "You should go to an amusement park!": "Dovresti andare in un parco di divertimenti!",
+          "You should go to a national park!": "Dovresti andare in un parco nazionale!",
+          "You should go to a big city!": "Dovresti andare in una grande città!"
         },
         "csd u5 recommender sample_2022": {
           "Start": "Inizia",
-          "flying": "volo"
+          "flying": "volo",
+          "Where should you go on vacation?": "Dove dovresti andare in vacanza?",
+          "What is your favorite food?": "Qual è il tuo cibo preferito?",
+          "What is the best superpower?": "Qual è il tuo superpotere preferito?",
+          "invisibility": "invisibilità",
+          "super strength": "forza sovrumana",
+          "teleport": "teletrasporto",
+          "Which animal do you like the best?": "Qual è il tuo animale preferito?",
+          "You should go to the beach!": "Dovresti andare al mare!",
+          "You should go to an amusement park!": "Dovresti andare in un parco di divertimenti!",
+          "You should go to a national park!": "Dovresti andare in un parco nazionale!",
+          "You should go to a big city!": "Dovresti andare in una grande città!"
         },
         "csd-apps for good-2": {
           "Next": "Seguente",
@@ -2172,11 +2216,13 @@
         },
         "ml-L2 supervised - green glass door-2021": {
           "Accepted": "Accettato",
-          "Rejected": "Rifiutato"
+          "Rejected": "Rifiutato",
+          "Green Glass Door": "Porta in vetro verde"
         },
         "ml-L2 supervised - green glass door_2022": {
           "Accepted": "Accettato",
-          "Rejected": "Rifiutato"
+          "Rejected": "Rifiutato",
+          "Green Glass Door": "Porta in vetro verde"
         },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "Seguente"
