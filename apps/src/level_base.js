@@ -16,7 +16,7 @@ exports.call = function (name) {
       );
     },
     type: 'procedures_callnoreturn',
-    titles: {NAME: name}
+    titles: {NAME: name},
   };
 };
 
@@ -41,7 +41,7 @@ exports.callWithArg = function (func_name, arg_name) {
       func_name +
       '"><arg name="' +
       arg_name +
-      '"></arg></mutation>'
+      '"></arg></mutation>',
   };
 };
 
@@ -62,6 +62,6 @@ exports.define = function (name) {
       );
     },
     type: 'procedures_defnoreturn',
-    titles: {NAME: name}
+    titles: {NAME: name},
   };
 };

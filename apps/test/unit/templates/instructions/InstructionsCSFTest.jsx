@@ -7,11 +7,11 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import instructions, {
   setFeedback,
-  setInstructionsConstants
+  setInstructionsConstants,
 } from '@cdo/apps/redux/instructions';
 import authoredHints from '@cdo/apps/redux/authoredHints';
 import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
@@ -24,12 +24,12 @@ describe('InstructionsCSF', () => {
     getStore().dispatch(
       setPageConstants({
         showNextHint: function () {},
-        skinId: 'dance'
+        skinId: 'dance',
       })
     );
     getStore().dispatch(
       setInstructionsConstants({
-        longInstructions: 'Use this new block.'
+        longInstructions: 'Use this new block.',
       })
     );
   });
@@ -70,5 +70,5 @@ describe('InstructionsCSF', () => {
 
 const DEFAULT_PROPS = {
   adjustMaxNeededHeight: function () {},
-  handleClickCollapser: function () {}
+  handleClickCollapser: function () {},
 };

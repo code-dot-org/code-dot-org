@@ -15,11 +15,11 @@ const JS_DATA = {
     type: 'FreeResponse',
     id: 0,
     properties: {
-      long_instructions: 'test'
-    }
+      long_instructions: 'test',
+    },
   },
   last_attempt: 'teacher answer',
-  responses: [{user_id: 0, text: 'student answer'}]
+  responses: [{user_id: 0, text: 'student answer'}],
 };
 
 const INITIAL_STATE = {
@@ -29,7 +29,7 @@ const INITIAL_STATE = {
     selectedStudents: [{id: 0}],
     selectedSectionId: 0,
     sectionIds: [0],
-    sections: [{id: 0, name: 'test section'}]
+    sections: [{id: 0, name: 'test section'}],
   },
   progress: {
     currentLessonId: 0,
@@ -37,10 +37,10 @@ const INITIAL_STATE = {
     lessons: [
       {
         id: 0,
-        levels: [{activeId: '0', position: 1}]
-      }
-    ]
-  }
+        levels: [{activeId: '0', position: 1}],
+      },
+    ],
+  },
 };
 
 const setUpWrapper = (state = {}, jsData = {}) => {
@@ -49,7 +49,7 @@ const setUpWrapper = (state = {}, jsData = {}) => {
       isRtl,
       viewAs,
       teacherSections,
-      progress
+      progress,
     }),
     {...INITIAL_STATE, ...state}
   );
@@ -98,11 +98,11 @@ describe('CheckForUnderstanding', () => {
             id: 0,
             levels: [
               {activeId: '0', position: 1},
-              {activeId: '1', position: 2}
-            ]
-          }
-        ]
-      }
+              {activeId: '1', position: 2},
+            ],
+          },
+        ],
+      },
     });
 
     expect(wrapper.find(`.${styles.studentsSubmittedRight}`).length).to.eq(0);
@@ -130,8 +130,8 @@ describe('CheckForUnderstanding', () => {
         selectedStudents: [{id: 0}],
         selectedSectionId: null,
         sectionIds: [0],
-        sections: [{id: 0, name: 'test section'}]
-      }
+        sections: [{id: 0, name: 'test section'}],
+      },
     });
 
     expect(wrapper.find(`.${styles.studentsSubmittedRight}`).length).to.eq(0);

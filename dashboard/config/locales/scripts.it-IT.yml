@@ -538,9 +538,9 @@ it:
         csd4-2017:
           lesson_groups:
             csd4_1:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             csd4_2:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
             csd_survey:
               display_name: Sondaggio Post-corso
         minecraft:
@@ -905,9 +905,9 @@ it:
         csd4-draft:
           lesson_groups:
             csd4_1:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             csd4_2:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
         applab-intro:
           title: Introduzione a Sviluppo App
           description_short: Crea la tua app in JavaScript usando la programmazione
@@ -968,9 +968,9 @@ it:
         csd4-old:
           lesson_groups:
             csd4_1:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             csd4_2:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
         csp3-staging:
           lesson_groups:
             csp3_1:
@@ -1206,9 +1206,9 @@ it:
         csd4-2018:
           lesson_groups:
             csd4_1:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             csd4_2:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
             cspSurvey:
               display_name: Sondaggio
         csd5-2018:
@@ -1715,9 +1715,9 @@ it:
         csd4-2019:
           lesson_groups:
             csd4_1:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             csd4_2:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
             csd5_2:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
@@ -2227,9 +2227,9 @@ it:
         csd4-2020:
           lesson_groups:
             csd4_1:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             csd4_2:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
             csd5_2:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
@@ -2664,7 +2664,7 @@ it:
                 -   Perché le persone creano siti Web?
                 -   In che modo il testo può comunicare contenuto, struttura e stile di una pagina web?
                 -   Come posso utilizzare in modo sicuro e appropriato i contenuti pubblicati su Internet?
-                -   Quali strategie posso utilizzare durante la codifica per trovare e risolvere i problemi?
+                -   Quali strategie posso utilizzare durante la programmazione per trovare e risolvere i problemi?
               description: Gli studenti usano l'informatica come forma di espressione
                 personale mentre progettano e sviluppano pagine Web di base. Concentrandosi
                 sui tag, sulle parole chiave e sulla sintassi utilizzati per comunicare
@@ -2685,21 +2685,70 @@ it:
             cspSurvey:
               display_name: Sondaggio
         csd3-2021:
+          title: Animazioni e giochi interattivi ('21-'22)
           description_short: Impara a programmare animazioni, arte interattiva e giochi
             in Sviluppo Giochi.
           lesson_groups:
             csd3_1:
               display_name: 'Capitolo 1: Immagini e animazioni'
+              big_questions: |-
+                -   Cos'è un programma per computer?
+                -   Quali sono le caratteristiche principali della maggior parte dei linguaggi di programmazione?
+                -   In che modo la programmazione consente la creatività e l'espressione individuale?
+                -   Quali pratiche e strategie mi aiuteranno nella stesura dei programmi?
+              description: Gli studenti iniziano a programmare animazioni interattive
+                nell'ambiente Sviluppo giochi. Iniziano con forme semplici e oggetti
+                "personaggio", quindi usano i cicli per creare animazioni in stile
+                flipbook. Successivamente, imparano a usare i valori booleani e le
+                istruzioni condizionali per rispondere all'input dell'utente. Alla
+                fine del capitolo, gli studenti progettano e creano un'animazione
+                interattiva che possono condividere con chiunque.
             csd3_2:
               display_name: 'Capitolo 2: Costruzione di Giochi'
+              big_questions: |-
+                -   In che modo gli sviluppatori di software gestiscono la complessità e la scalabilità?
+                -   Come possono essere organizzati i programmi in modo che i problemi comuni debbano essere risolti solo una volta?
+                -   Come posso basarmi sulle soluzioni precedenti per creare comportamenti ancora più complessi?
+              description: In questo capitolo gli studenti combinano i costrutti appresi
+                nel primo capitolo per programmare movimenti e collisioni più complessi
+                nei loro personaggi. Man mano che creano programmi più complessi,
+                iniziano a utilizzare le funzioni per organizzare il codice. Alla
+                fine, gli studenti utilizzano un processo di progettazione per creare
+                un gioco originale.
             cspSurvey:
               display_name: Sondaggio
         csd4-2021:
+          title: Il processo di progettazione ('21-'22)
           lesson_groups:
             csd4_1:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
+              big_questions: |-
+                -   In che modo i progettisti individuano le esigenze dei loro utenti?
+                -   Come possiamo garantire che le esigenze di un utente siano soddisfatte dai nostri progetti?
+                -   Quali processi ci consentiranno di creare, testare e iterare in modo efficiente i nostri progetti?
+              description: Questo capitolo introduce il processo di progettazione
+                come una versione specifica del processo di risoluzione dei problemi
+                in cui l'empatia per le esigenze dell'utente è costantemente integrata.
+                Gli studenti apprendono strategie per identificare le esigenze degli
+                utenti e valutare in che modo le diverse modalità di progettazione
+                le soddisfano. In particolare, imparano a sviluppare un prototipo
+                su carta, a raccogliere e rispondere ai riscontri su un prototipo
+                e a considerare i modi in cui le diverse interfacce utente influiscono
+                o meno sull'usabilità delle loro app.
             csd4_2:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
+              big_questions: |-
+                -   In che modo i gruppi di lavoro collaborano efficacemente per sviluppare software?
+                -   Quali ruoli oltre alla programmazione sono necessari per progettare e sviluppare software?
+                -   In che modo i progettisti incorporano più e più volte i riscontri su un prodotto?
+              description: Questo capitolo è incentrato su un progetto di gruppo di
+                lunga data che consente agli studenti di applicare tutto ciò che hanno
+                appreso sulla progettazione centrata sull'utente per sviluppare un
+                prototipo di app. Lavorando in squadra, gli studenti individuano una
+                questione sociale che sta loro a cuore e progettano e prototipano
+                un'app per affrontarlo. Questa è un'opportunità per gli studenti di
+                esplorare altri ruoli nello sviluppo del software, come la gestione
+                dei prodotti, il marketing, la progettazione e i test.
             csd5_2:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
@@ -3045,9 +3094,9 @@ it:
         csd4-preview-2021:
           lesson_groups:
             csd4_1:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             csd4_2:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
             csd5_2:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
@@ -3353,6 +3402,7 @@ it:
           title: 'Unità 5: organizzazione degli oggetti [Exemplars]'
         csd-post-survey-2021:
           name: csd-post-survey-2021
+          title: Sondaggio Post-corso di Alla Scoperta dell'Informatica
           description: Questa unità contiene il sondaggio post-corso CS Discoveries.
             Questa unità può essere assegnata dopo che gli studenti hanno completato
             la loro unità finale in CS Discoveries.
@@ -3969,9 +4019,9 @@ it:
         csd4-2022:
           lesson_groups:
             csd4_1:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             csd4_2:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
             cspSurvey:
               display_name: Sondaggio
         csd5-2022:
@@ -3994,6 +4044,7 @@ it:
             lessonGroup-4:
               display_name: Sondaggio
         csd-post-survey-2022:
+          title: Sondaggio Post-corso di Alla Scoperta dell'Informatica
           description: Questa unità contiene il sondaggio post-corso CS Discoveries.
             Questa unità può essere assegnata dopo che gli studenti hanno completato
             la loro unità finale in CS Discoveries.
@@ -4105,6 +4156,21 @@ it:
               display_name: Contenuto
             lessonGroup-4:
               display_name: Lezioni alternative
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Proprietà intellettuale
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-5:
+              display_name: Lezioni alternative
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-4:
+              display_name: Sondaggio
         hello-world-space-2022:
           title: Ciao mondo - Spazio
         hello-world-soccer-2022:
@@ -4124,9 +4190,9 @@ it:
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             lessonGroup-3:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4486,9 +4552,9 @@ it:
         design-process-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             lessonGroup-3:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
         data-society-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4574,9 +4640,9 @@ it:
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             lessonGroup-3:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
         focus-on-design-with-purpose4a-2023:
           lesson_groups:
             lessonGroup-4:
@@ -4608,9 +4674,9 @@ it:
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capitolo 1: Design a cura dell''Utente'
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             lessonGroup-3:
-              display_name: 'Capitolo 2: Prototipazione di App'
+              display_name: 'Capitolo 2: prototipazione di app'
         focus-on-impact-in-society3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4720,6 +4786,9 @@ it:
             con i concetti chiave inclusi nell'unità.\n-   Scoprire la fine dei progetti
             dei capitoli.\n\n**Tempo stimato:** 90 minuti"
         vpl-csd-ci-7:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Insegnare IA e Apprendimento Automatico
           title: 'Modulo 7: preparazione all''insegnamento dell''intelligenza Artificiale
             e dell''Apprendimento Automatico'
           description: "Questo modulo di apprendimento professionale è progettato

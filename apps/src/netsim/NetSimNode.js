@@ -43,7 +43,7 @@ NetSimNode.prototype.getTable = function () {
 NetSimNode.prototype.buildRow = function () {
   return {
     type: this.getNodeType(),
-    name: this.getDisplayName()
+    name: this.getDisplayName(),
   };
 };
 
@@ -153,7 +153,7 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
 NetSimNode.prototype.makeWireRowForConnectingTo = function (otherNode) {
   return {
     localNodeID: this.entityID,
-    remoteNodeID: otherNode.entityID
+    remoteNodeID: otherNode.entityID,
   };
 };
 

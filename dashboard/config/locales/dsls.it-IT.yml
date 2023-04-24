@@ -655,8 +655,14 @@ it-IT:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
-        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
-          Scegli da una delle opzioni a destra.
+        content1: Guarda il codice qui sotto e prevedi come verranno visualizzati
+          i titoli. Scegli una delle opzioni a destra.
+        markdown: |
+          <pre>
+          &lt;h3&gt; Uova &lt;/h3&gt;
+          &lt;h1&gt; Pancetta &lt;/h1&gt;
+          &lt;h6&gt; Cialde &lt;/h6&gt;
+          </pre>
       CSD Header Size MC_2018:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -668,8 +674,14 @@ it-IT:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
-        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
-          Scegli da una delle opzioni a destra.
+        content1: Guarda il codice qui sotto e prevedi come verranno visualizzati
+          i titoli. Scegli una delle opzioni a destra.
+        markdown: |
+          <pre>
+          &lt;h3&gt; Uova &lt;/h3&gt;
+          &lt;h1&gt; Pancetta &lt;/h1&gt;
+          &lt;h6&gt; Cialde &lt;/h6&gt;
+          </pre>
       CSD Header Size MC_2018_2019:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -681,14 +693,20 @@ it-IT:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
-        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
-          Scegli da una delle opzioni a destra.
+        content1: Guarda il codice qui sotto e prevedi come verranno visualizzati
+          i titoli. Scegli una delle opzioni a destra.
         teacher_markdown: |-
           <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
 
           **Tipi di livello:** Questa domanda a scelta multipla chiede agli studenti di scegliere come visualizzare le intestazioni HTML su una pagina web. Puoi vedere quali studenti hanno risposto correttamente alla domanda andando a quel livello e richiamando il riquadro Insegnante dal lato destro.  Gli studenti che hanno risposto correttamente alla domanda avranno una bolla verde.  Gli studenti hanno tutte le possibilità che vogliono per rispondere correttamente, quindi indovinare e controllare può anche portare ad una risposta corretta.
 
           <div class="clear"></div>
+        markdown: |
+          <pre>
+          &lt;h3&gt; Uova &lt;/h3&gt;
+          &lt;h1&gt; Pancetta &lt;/h1&gt;
+          &lt;h6&gt; Cialde &lt;/h6&gt;
+          </pre>
       CSD U1 Lesson 5 Overview:
         markdown: |
           # Panoramica
@@ -9817,14 +9835,20 @@ it-IT:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
-        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
-          Scegli da una delle opzioni a destra.
+        content1: Guarda il codice qui sotto e prevedi come verranno visualizzati
+          i titoli. Scegli una delle opzioni a destra.
         teacher_markdown: |-
           <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
 
           **Tipi di livello:** Questa domanda a scelta multipla chiede agli studenti di scegliere come visualizzare le intestazioni HTML su una pagina web. Puoi vedere quali studenti hanno risposto correttamente alla domanda andando a quel livello e richiamando il riquadro Insegnante dal lato destro.  Gli studenti che hanno risposto correttamente alla domanda avranno una bolla verde.  Gli studenti hanno tutte le possibilità che vogliono per rispondere correttamente, quindi indovinare e controllare può anche portare ad una risposta corretta.
 
           <div class="clear"></div>
+        markdown: |
+          <pre>
+          &lt;h3&gt; Uova &lt;/h3&gt;
+          &lt;h1&gt; Pancetta &lt;/h1&gt;
+          &lt;h6&gt; Cialde &lt;/h6&gt;
+          </pre>
       CSD Interactive Animations and Games Post-Project Test_pilot_2021:
         title: Animazioni Interattive e Test Post-Progetto dei Giochi
       CSD Physical Computing Post-Project Test_2021:
@@ -9945,6 +9969,7 @@ it-IT:
         - {}
       CSD U3 drawing practice choice_2021:
         display_name: Pratica
+        description: Fai molta pratica!
       CSD U3 game intro_2018_2019_pilot_2021:
         content1: descrizione qui
       CSD U3 platform intro_2018_2019_pilot_2021:
@@ -9982,8 +10007,10 @@ it-IT:
         display_name: Sfide
       CSD web draw loop practice choice_2021:
         display_name: Pratica
+        description: Prova a usare il disegno ciclico con queste attività.
       CSD web movement practice choice_2021:
         display_name: Pratica
+        description: Prova a usare il disegno ciclico con queste attività.
       CSD web text practice choice_2021:
         display_name: Pratica
       csd-pre-survey-levelgroup_21_22:
@@ -10091,14 +10118,20 @@ it-IT:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
-        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
-          Scegli da una delle opzioni a destra.
+        content1: Guarda il codice qui sotto e prevedi come verranno visualizzati
+          i titoli. Scegli una delle opzioni a destra.
         teacher_markdown: |-
           <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
 
           **Tipi di livello:** Questa domanda a scelta multipla chiede agli studenti di scegliere come visualizzare le intestazioni HTML su una pagina web. Puoi vedere quali studenti hanno risposto correttamente alla domanda andando a quel livello e richiamando il riquadro Insegnante dal lato destro.  Gli studenti che hanno risposto correttamente alla domanda avranno una bolla verde.  Gli studenti hanno tutte le possibilità che vogliono per rispondere correttamente, quindi indovinare e controllare può anche portare ad una risposta corretta.
 
           <div class="clear"></div>
+        markdown: |
+          <pre>
+          &lt;h3&gt; Uova &lt;/h3&gt;
+          &lt;h1&gt; Pancetta &lt;/h1&gt;
+          &lt;h6&gt; Cialde &lt;/h6&gt;
+          </pre>
       CSD Interactive Animations and Games Post-Project Test_pilot_2022:
         title: Animazioni Interattive e Test Post-Progetto dei Giochi
       CSD Physical Computing Post-Project Test_2022:
@@ -10674,155 +10707,252 @@ it-IT:
         - {}
       CSD U3 drawing practice choice_2022:
         display_name: Pratica
+        description: Fai molta pratica!
       CSD U3 platform intro_2018_2019_pilot_2022:
         content1: descrizione qui
       CSD U4 test feature match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "«Dimentico sempre i miei occhiali da lettura»."
+        - text: "«Non mi piace quando le app sembrano troppo noiose»."
+        - text: "«Spesso dimentico di controllare il mio telefono, quindi perdo le
+            notifiche»"
+        - text: "«I miei amici pensano che sia divertente modificare le mie impostazioni,
+            ma è fastidioso!»"
+        - text: "«Sono daltonico, quindi molti colori mi sembrano uguali»."
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Testo grande
+        - text: Un sacco di colori
+        - text: Avvisi sonori
+        - text: Blocco tramite password
+        - text: Opzione bianco e nero
       CSD U4 test feature match_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "«Dimentico sempre i miei occhiali da lettura»."
+        - text: "«Non mi piace quando le app sembrano troppo noiose»."
+        - text: "«Spesso dimentico di controllare il mio telefono, quindi perdo le
+            notifiche»"
+        - text: "«I miei amici pensano che sia divertente modificare le mie impostazioni,
+            ma è fastidioso!»"
+        - text: "«Sono daltonico, quindi molti colori mi sembrano uguali»."
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Testo grande
+        - text: Un sacco di colori
+        - text: Avvisi sonori
+        - text: Blocco tramite password
+        - text: Opzione bianco e nero
       CSD U4 test feature match_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "«Dimentico sempre i miei occhiali da lettura»."
+        - text: "«Non mi piace quando le app sembrano troppo noiose»."
+        - text: "«Spesso dimentico di controllare il mio telefono, quindi perdo le
+            notifiche»"
+        - text: "«I miei amici pensano che sia divertente modificare le mie impostazioni,
+            ma è fastidioso!»"
+        - text: "«Sono daltonico, quindi molti colori mi sembrano uguali»."
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Testo grande
+        - text: Un sacco di colori
+        - text: Avvisi sonori
+        - text: Blocco tramite password
+        - text: Opzione bianco e nero
       CSD U4 test needs multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Intervistare gli utenti e porre loro domande dirette sulle loro esigenze
+        - text: Utilizzo degli eventi per modificare una schermata quando l'utente
+            preme un determinato pulsante
+          correct: true
+        - text: Osservazione dell'utente mentre interagisce con un'app e registrazione
+            in caso di problemi
+        - text: Creazione di prototipi su carta e prototipi digitali per eseguire
+            test sugli utenti
+        - text: Ricerca delle app attuali e verifica in che modo tali app soddisfano
+            le esigenze degli utenti
         questions:
-        - {}
+        - text: Tra le seguenti, quale strategia NON aiuterà un progettista a comprendere
+            meglio le esigenze degli utenti?
       CSD U4 test needs multi_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Intervistare gli utenti e porre loro domande dirette sulle loro esigenze
+        - text: Utilizzo degli eventi per modificare una schermata quando l'utente
+            preme un determinato pulsante
+          correct: true
+        - text: Osservazione dell'utente mentre interagisce con un'app e registrazione
+            in caso di problemi
+        - text: Creazione di prototipi su carta e prototipi digitali per eseguire
+            test sugli utenti
+        - text: Ricerca delle app attuali e verifica in che modo tali app soddisfano
+            le esigenze degli utenti
         questions:
-        - {}
+        - text: Tra le seguenti, quale strategia NON aiuterà un progettista a comprendere
+            meglio le esigenze degli utenti?
       CSD U4 test needs multi_2022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Intervistare gli utenti e porre loro domande dirette sulle loro esigenze
+        - text: Utilizzo degli eventi per modificare una schermata quando l'utente
+            preme un determinato pulsante
+          correct: true
+        - text: Osservazione dell'utente mentre interagisce con un'app e registrazione
+            in caso di problemi
+        - text: Creazione di prototipi su carta e prototipi digitali per eseguire
+            test sugli utenti
+        - text: Ricerca delle app attuali e verifica in che modo tali app soddisfano
+            le esigenze degli utenti
         questions:
-        - {}
+        - text: Tra le seguenti, quale strategia NON aiuterà un progettista a comprendere
+            meglio le esigenze degli utenti?
       CSD U4 test prioritize multi:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Facile, perché potrai completarne di più nello stesso lasso di tempo.
+          correct: true
+        - text: Semplice, perché non ti scoraggerai quando migliorerai la tua app.
+        - text: Difficile, perché di solito le cose difficili sono più importanti.
+        - text: Difficile, perché una volta che li avrai fatti, quelli facili non
+            ti disturberanno.
+        - text: Dovresti farli nell'ordine in cui li hai trovati, indipendentemente
+            dal fatto che siano facili o difficili.
         questions:
-        - {}
+        - text: Una volta classificati i problemi in base all'urgenza e alla difficoltà
+            da affrontare, quali problemi dovresti affrontare per primi e perché?
       CSD U4 test prioritize multi_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Facile, perché potrai completarne di più nello stesso lasso di tempo.
+          correct: true
+        - text: Semplice, perché non ti scoraggerai quando migliorerai la tua app.
+        - text: Difficile, perché di solito le cose difficili sono più importanti.
+        - text: Difficile, perché una volta che li avrai fatti, quelli facili non
+            ti disturberanno.
+        - text: Dovresti farli nell'ordine in cui li hai trovati, indipendentemente
+            dal fatto che siano facili o difficili.
         questions:
-        - {}
+        - text: Una volta classificati i problemi in base all'urgenza e alla difficoltà
+            da affrontare, quali problemi dovresti affrontare per primi e perché?
       CSD U4 test prioritize multi_2022:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Facile, perché potrai completarne di più nello stesso lasso di tempo.
+          correct: true
+        - text: Semplice, perché non ti scoraggerai quando migliorerai la tua app.
+        - text: Difficile, perché di solito le cose difficili sono più importanti.
+        - text: Difficile, perché una volta che li avrai fatti, quelli facili non
+            ti disturberanno.
+        - text: Dovresti farli nell'ordine in cui li hai trovati, indipendentemente
+            dal fatto che siano facili o difficili.
         questions:
-        - {}
+        - text: Una volta classificati i problemi in base all'urgenza e alla difficoltà
+            da affrontare, quali problemi dovresti affrontare per primi e perché?
       CSD U4 test testing multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Fornisci ulteriori suggerimenti nel test utente per aiutare gli utenti
+            a comprendere meglio i pulsanti
+        - text: Trova utenti che utilizzano meglio la tecnologia e usali invece per
+            i test
+        - text: Usa il team di progettazione come utenti nei test, perché comprendono
+            meglio l'app
+        - text: Riprogetta i test in modo che gli utenti non debbano capire quella
+            parte dell'app
+        - text: Riprogetta l'app per semplificare l'uso dei pulsanti, quindi esegui
+            altri test utente
+          correct: true
         questions:
-        - {}
+        - text: Durante i test per una nuova app, gli utenti non sono riusciti a capire
+            quali pulsanti premere, anche se il team di progettazione lo ha ritenuto
+            ovvio. Per la squadra di progettazione, qual è il modo MIGLIORE di affrontare
+            questo problema?
       CSD U4 test testing multi_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Fornisci ulteriori suggerimenti nel test utente per aiutare gli utenti
+            a comprendere meglio i pulsanti
+        - text: Trova utenti che utilizzano meglio la tecnologia e usali invece per
+            i test
+        - text: Usa il team di progettazione come utenti nei test, perché comprendono
+            meglio l'app
+        - text: Riprogetta i test in modo che gli utenti non debbano capire quella
+            parte dell'app
+        - text: Riprogetta l'app per semplificare l'uso dei pulsanti, quindi esegui
+            altri test utente
+          correct: true
         questions:
-        - {}
+        - text: Durante i test per una nuova app, gli utenti non sono riusciti a capire
+            quali pulsanti premere, anche se il team di progettazione lo ha ritenuto
+            ovvio. Per la squadra di progettazione, qual è il modo MIGLIORE di affrontare
+            questo problema?
       CSD U4 test testing multi_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Fornisci ulteriori suggerimenti nel test utente per aiutare gli utenti
+            a comprendere meglio i pulsanti
+        - text: Trova utenti che utilizzano meglio la tecnologia e usali invece per
+            i test
+        - text: Usa il team di progettazione come utenti nei test, perché comprendono
+            meglio l'app
+        - text: Riprogetta i test in modo che gli utenti non debbano capire quella
+            parte dell'app
+        - text: Riprogetta l'app per semplificare l'uso dei pulsanti, quindi esegui
+            altri test utente
+          correct: true
         questions:
-        - {}
+        - text: Durante i test per una nuova app, gli utenti non sono riusciti a capire
+            quali pulsanti premere, anche se il team di progettazione lo ha ritenuto
+            ovvio. Per la squadra di progettazione, qual è il modo MIGLIORE di affrontare
+            questo problema?
       CSD U4 wireframe test multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - correct: true
+        - text: All'utente piace la combinazione di colori
+        - text: L'utente pensa che l'app sia una buona idea
+        - text: L'utente comprende come effettuare il login
+          correct: true
+        - text: La marca del telefono dell'utente
+        - text: L'utente può accedere a tutte le schermate
+          correct: true
         questions:
-        - {}
+        - text: Data l'opportunità di testare questo wireframe con gli utenti, quali
+            DUE cose sarebbero più importanti da cercare?
+        markdown: |
+          <img src="https://images.code.org/0f2f4d728bc3c3328b4ee3ea31caa562-image-1559246095187.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+          <img src="https://images.code.org/f1334f18a893b084ad80be45231c818e-image-1559246106816.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+          <img src="https://images.code.org/6df005697b26dca114fcfc7eec4a2556-image-1559246110092.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+          <img src="https://images.code.org/67db4444236c97d345c69bf6decb3047-image-1559246113075.png" style="float:left; width:150px; margin:10px;border: solid;">
       CSD U4 wireframe test multi_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - correct: true
+        - text: All'utente piace la combinazione di colori
+        - text: L'utente pensa che l'app sia una buona idea
+        - text: L'utente comprende come effettuare il login
+          correct: true
+        - text: La marca del telefono dell'utente
+        - text: L'utente può accedere a tutte le schermate
+          correct: true
         questions:
-        - {}
+        - text: Data l'opportunità di testare questo wireframe con gli utenti, quali
+            DUE cose sarebbero più importanti da cercare?
+        markdown: |
+          <img src="https://images.code.org/0f2f4d728bc3c3328b4ee3ea31caa562-image-1559246095187.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+          <img src="https://images.code.org/f1334f18a893b084ad80be45231c818e-image-1559246106816.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+          <img src="https://images.code.org/6df005697b26dca114fcfc7eec4a2556-image-1559246110092.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+          <img src="https://images.code.org/67db4444236c97d345c69bf6decb3047-image-1559246113075.png" style="float:left; width:150px; margin:10px;border: solid;">
       CSD U4 wireframe test multi_2022:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - correct: true
+        - text: All'utente piace la combinazione di colori
+        - text: L'utente pensa che l'app sia una buona idea
+        - text: L'utente comprende come effettuare il login
+          correct: true
+        - text: La marca del telefono dell'utente
+        - text: L'utente può accedere a tutte le schermate
+          correct: true
         questions:
-        - {}
+        - text: Data l'opportunità di testare questo wireframe con gli utenti, quali
+            DUE cose sarebbero più importanti da cercare?
+        markdown: |
+          <img src="https://images.code.org/0f2f4d728bc3c3328b4ee3ea31caa562-image-1559246095187.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+          <img src="https://images.code.org/f1334f18a893b084ad80be45231c818e-image-1559246106816.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+          <img src="https://images.code.org/6df005697b26dca114fcfc7eec4a2556-image-1559246110092.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+          <img src="https://images.code.org/67db4444236c97d345c69bf6decb3047-image-1559246113075.png" style="float:left; width:150px; margin:10px;border: solid;">
       CSD U5 test clean multi:
         answers:
         - {}
@@ -11135,8 +11265,10 @@ it-IT:
         display_name: Sfide
       CSD web draw loop practice choice_2022:
         display_name: Pratica
+        description: Prova a usare il disegno ciclico con queste attività.
       CSD web movement practice choice_2022:
         display_name: Pratica
+        description: Prova a usare il disegno ciclico con queste attività.
       CSD web text practice choice_2022:
         display_name: Pratica
       CSP PD Example Question 1:
@@ -21141,3 +21273,48 @@ it-IT:
       ml-models in applab-choice parent_2022:
         description: Metti alla prova ciò che hai imparato in una o più delle seguenti
           attività.
+      csd-post-survey-markdown-with-link-to-survey_2021:
+        markdown: |+
+          # Sondaggio post-corso Alla scoperta dell'informatica
+
+          **Il tuo contributo e il tuo riscontro sono importanti per noi! ** Lo usiamo per:
+
+          *   comprendere la tua esperienza
+          *   apportare miglioramenti al corso
+
+          Grazie per aver dedicato del tempo per contribuire a rendere Alla scoperta dell'informatica ancora migliore!
+
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey-2021/lockable/1/levels/1/page/1" target="top">Fai clic qui per completare il sondaggio post-corso di Alla scoperta dell'informatica</a>
+
+          (si apre in una nuova scheda)
+
+          <br>
+
+
+
+
+
+      CSD Games Parameters challenge_2021:
+        description: Dai un'occhiata a uno o più di questi blocchi aggiuntivi che
+          puoi usare per rendere le tue foto più interessanti.
+        display_name: Sfide relative a forme e parametri
+      CSD Games Parameters challenge_2022:
+        description: Dai un'occhiata a uno o più di questi blocchi aggiuntivi che
+          puoi usare per rendere le tue foto più interessanti.
+        display_name: Sfide relative a forme e parametri
+      CSD Games parameters practice_2021:
+        display_name: Fai pratica con i parametri
+      CSD Games parameters practice_2022:
+        display_name: Fai pratica con i parametri
+      CSD Games variables practice_2021:
+        description: Scegli tra le seguenti attività per esercitarti con le variabili.
+        display_name: Esercitarsi con le variabili
+      CSD Games variables practice_2022:
+        description: Scegli tra le seguenti attività per esercitarti con le variabili.
+        display_name: Esercitarsi con le variabili
+      CSD U3 drawing challenges_2021:
+        description: Prova alcune sfide!
+        display_name: Sfide di disegno
+      CSD U3 drawing challenges_2022:
+        description: Prova alcune sfide!
+        display_name: Sfide di disegno

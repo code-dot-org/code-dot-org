@@ -16,7 +16,7 @@ export function onTestResult(data, callback, miniAppType) {
     errorLine,
     isValidation,
     exceptionName,
-    stackTrace
+    stackTrace,
   } = data.detail && data.detail;
   const statusDetails = {className: className, methodName: methodName};
   let successful = true;

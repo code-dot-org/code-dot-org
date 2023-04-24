@@ -50,7 +50,7 @@ describe('NetSimWire', function () {
         testShard,
         {
           localNodeID: 0,
-          remoteNodeID: 0
+          remoteNodeID: 0,
         },
         function () {}
       );
@@ -63,7 +63,7 @@ describe('NetSimWire', function () {
         testShard,
         {
           localNodeID: 1,
-          remoteNodeID: 2
+          remoteNodeID: 2,
         },
         function () {}
       );
@@ -79,7 +79,7 @@ describe('NetSimWire', function () {
         testShard,
         {
           localNodeID: 0,
-          remoteNodeID: 0
+          remoteNodeID: 0,
         },
         function (err, result) {
           assert.instanceOf(result, NetSimWire, 'Result is a NetSimWire');
@@ -99,7 +99,7 @@ describe('NetSimWire', function () {
         localAddress: 3,
         remoteAddress: 4,
         localHostname: 'me',
-        remoteHostname: 'you'
+        remoteHostname: 'you',
       },
       function (err, row) {
         testRow = row;

@@ -41,7 +41,7 @@ export interface ProgressState {
 export const initialProgressState: ProgressState = {
   step: 0,
   satisfied: false,
-  message: null
+  message: null,
 };
 
 export default class ProgressManager {
@@ -74,8 +74,8 @@ export default class ProgressManager {
   }
 
   updateProgress(): void {
-    const validations = this.progression.steps[this.currentProgressState.step]
-      .validations;
+    const validations =
+      this.progression.steps[this.currentProgressState.step].validations;
 
     if (!validations) {
       return;

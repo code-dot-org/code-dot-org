@@ -30,7 +30,7 @@ describe('WorkshopForm test', () => {
     fakeWorkshop = Factory.build('workshop');
     store = createStore(
       combineReducers({
-        mapbox: mapboxReducer
+        mapbox: mapboxReducer,
       })
     );
   });

@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import loadAppOptions, {
   setupApp,
-  setAppOptions
+  setAppOptions,
 } from '@cdo/apps/code-studio/initApp/loadApp';
 import {files} from '@cdo/apps/clientApi';
 import * as imageUtils from '@cdo/apps/imageUtils';
@@ -31,7 +31,7 @@ describe('loadApp.js', () => {
         return OLD_CODE;
       });
     sinon.stub(project, 'load').callsFake(() => ({
-      then: successCallback => successCallback()
+      then: successCallback => successCallback(),
     }));
     sinon.stub(project, 'hideBecauseAbusive').returns(false);
     sinon.stub(project, 'hideBecausePrivacyViolationOrProfane').returns(false);
@@ -43,13 +43,13 @@ describe('loadApp.js', () => {
       done: successCallback => ({
         fail: failureCallback => {
           successCallback({signedIn: false});
-        }
-      })
+        },
+      }),
     }));
     writtenLevelId = undefined;
     readLevelId = undefined;
     appOptions = {
-      level: {}
+      level: {},
     };
     setAppOptions(appOptions);
   });
@@ -93,7 +93,7 @@ describe('loadApp.js', () => {
         scriptName: 'test-script',
         lessonPosition: '1',
         levelPosition: '2',
-        serverLevelId: SERVER_LEVEL_ID
+        serverLevelId: SERVER_LEVEL_ID,
       };
     });
 
@@ -159,13 +159,13 @@ describe('loadApp.js', () => {
     it('gets channel if appOptions has levelRequiresChannel true and no channel', done => {
       appOptions = {
         ...appOptions,
-        levelRequiresChannel: true
+        levelRequiresChannel: true,
       };
 
       const responseChannel = 'fakeChannelId';
       stubAppOptionsRequests(appOptions, {
         signedIn: false,
-        channel: responseChannel
+        channel: responseChannel,
       });
 
       const appOptionsData = document.createElement('script');
@@ -187,14 +187,14 @@ describe('loadApp.js', () => {
     it('calls example_solutions endpoint and sets example solutions to appOptions', done => {
       appOptions = {
         ...appOptions,
-        serverScriptLevelId: '5'
+        serverScriptLevelId: '5',
       };
 
       const exampleSolutions = ['/example-solution'];
       stubAppOptionsRequests(
         appOptions,
         {
-          signedIn: false
+          signedIn: false,
         },
         exampleSolutions
       );
