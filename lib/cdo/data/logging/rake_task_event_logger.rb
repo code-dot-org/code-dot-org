@@ -91,7 +91,7 @@ class RakeTaskEventLogger
     metric_value = duration_ms.nil? ? 1 : duration_ms.to_i
     extra_dimensions = {task_name: @rake_task.name}
     total_dependencies = task_chain.split(',').count
-    if @depth == 0
+    if @@depth == 0
       metric_name = "rake_tasks_root_task_#{event}"
       Infrastructure::Logger.put(metric_name, metric_value, extra_dimensions)
     end
