@@ -11,7 +11,7 @@
   }
 
   @media screen and (max-width: $width-sm) {
-    padding: 1em 1em 0.5em;
+    padding: 1em 1em 0;
     height: unset;
   }
 
@@ -32,6 +32,7 @@
 
     @media screen and (max-width: $width-sm) {
       justify-content: center;
+      gap: 1em 1.5em;
     }
   }
 
@@ -44,11 +45,6 @@
 
     @media screen and (max-width: $width-sm) {
       width: 50px;
-      margin-right: 1.5em;
-    }
-
-    @media screen and (max-width: $width-xs) {
-      margin: 0 0 1em 0;
     }
   }
 
@@ -95,15 +91,18 @@
     }
   }
 
-  button {
-    background: #3CFFF8;
-    border-color: #3CFFF8;
-    color: $neutral_dark;
-    font-family: 'Gotham 5r', sans-serif;
-    margin: 0;
-
+  .button-wrapper {
     @media screen and (max-width: $width-sm) {
-      margin: 1em auto;
+      width: 100%;
+      text-align: center;
+    }
+
+    button {
+      background: #3CFFF8;
+      border-color: #3CFFF8;
+      color: $neutral_dark;
+      font-family: 'Gotham 5r', sans-serif;
+      margin: 0;
     }
   }
 }
