@@ -1,0 +1,281 @@
+#!/usr/bin/env ruby
+
+# This script does double duty. It can write out a set of channel tokens for
+# a particular level. And it can download the source data associated with a
+# list of such tokens.
+#
+# The level in question MUST be from an assignable unit. Our database is only
+# optimized to find sources from the perspective of User accounts. This makes
+# sense as that is the primary way sources are negotiated in practice: learners
+# load a level and want their previous saved work. That means, this script must
+# find User accounts that have source code for a level. That is only well-known
+# by finding User accounts that are attached to sections for a Unit that
+# contains that level. So, the process is to find the given Level, find all
+# Sections for the Unit for that Level, find all Followers for those Sections,
+# using the User id from that join, find the storage ids for those Users, and
+# finally calculate the channel tokens. This way, all queries will quickly run
+# within our alarm constraints.
+#
+# Building A Tokens File:
+# -----------------------
+#
+# To get a tokens file, use the script as such:
+# ./bin/download-level-source csd3-2022 3 9
+#
+# This will download a random sample of tokens for the given level found by
+# navigating the given unit name (csd3-2022), lesson (3), and level (9). It
+# will create the file `tokens-csd3-2022-3-9.json`. This script would be
+# run on the machine with access to the database containing such tokens,
+# usually the production environment.
+#
+# If you perform this on a production environment, copy the resulting JSON
+# from the server to your local machine and run this script again using that
+# tokens file. Your local machine can download production sources from a
+# development environment.
+#
+# Downloading Sources From A Token File:
+# --------------------------------------
+#
+# With a given tokens file, you can download the sources on any machine by
+# running the script like so:
+#
+# ./bin/download-level-source tokens-csd3-2022-3-9.json
+#
+# This will download the sources and place them in the current path under
+# the directory structure matching the unit, lesson, and level. In this case,
+# the sources will be found in `./downloaded-sources/csd3-2022/3/9`.
+#
+# This script attempts to detect the type of source and mark the file
+# extension appropriately. Some source data (applab, etc) will be XML. Others
+# may be JavaScript.
+
+# Bail quickly if the usage is wrong
+# (The requires below can take a little bit)
+args = ARGV.dup
+if args.length != 1 && args.length != 3
+  warn "usage: #{$0} <tokens json file>"
+  warn "usage: #{$0} <course> <lesson index> <level index>"
+  warn "example: #{$0} tokens-csd3-2022-3-9.json"
+  warn "example: #{$0} csd3-2022 3 9"
+  exit(1)
+end
+
+require 'uri'
+require 'net/http'
+require 'net/https'
+require 'date'
+require 'json'
+require 'fileutils'
+
+# Searches all applab source code for each regex and prints results to a corresponding tsv file.
+# This is useful for seeing if we will break anyone's program if we change how a block works.
+# Multiple regex-filename pairs can be specified to avoid having to run the script multiple times.
+
+REMOTE_URL = ENV['REMOTE_URL'] || 'https://studio.code.org'
+
+# We will negotiate the level id
+level_id = nil
+
+# Do we have a unit/lesson/level tuple?
+if args.length == 3
+  require_relative '../deployment'
+  require_relative '../lib/cdo/aws/s3'
+  require_relative '../shared/middleware/helpers/storage_id'
+  require 'cdo/db'
+
+  puts "Getting the level identifier."
+
+  # Get a readonly view of the database
+  DASHBOARD_REPORTING_DB_READONLY = sequel_connect CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader
+
+  unit = DASHBOARD_REPORTING_DB_READONLY[:scripts].where(name: args[0]).to_a[0]
+  unit_id = unit[:id]
+
+  stage_id = DASHBOARD_REPORTING_DB_READONLY[:stages].where(script_id: unit_id, absolute_position: args[1].to_i).to_a[0][:id]
+  script_level_id = DASHBOARD_REPORTING_DB_READONLY[:script_levels].where(stage_id: stage_id, position: args[2].to_i).to_a[0][:id]
+  level_id = DASHBOARD_REPORTING_DB_READONLY[:levels_script_levels].where(script_level_id: script_level_id).to_a[0][:level_id]
+
+  puts "Fetching a list of sections from Dashboard DB for unit id #{unit_id}."
+
+  # We should now decide if the level has a "host"
+  # Hosted levels are one with a project template. These are workspaced levels
+  # where the level progress is stored with the template level id instead of
+  # the actual level id.
+  level = DASHBOARD_REPORTING_DB_READONLY[:levels].where(id: level_id).to_a[0]
+  level_properties = {}
+  begin
+    level_properties = JSON.parse(level[:properties])
+  rescue
+    level_properties = {}
+  end
+  template = level_properties["project_template_level_name"]
+
+  if template
+    puts "Level template discovered. Looking instead at template: #{template}"
+    level = DASHBOARD_REPORTING_DB_READONLY[:levels].where(name: template).to_a[0]
+    level_id = level[:id]
+  end
+
+  puts "Fetching a list of channels from Dashboard DB for level id #{level_id}."
+
+  # Get all sections that have assigned the desired unit
+  sections = DASHBOARD_REPORTING_DB_READONLY[:sections].where(script_id: unit_id).to_a.map {|row| row[:id]}
+
+  # Get all learners' user ids that are assigned to these sections
+  followers = DASHBOARD_REPORTING_DB_READONLY[:followers].where(section_id: sections).to_a.map {|row| row[:student_user_id]}
+
+  # For each learner, get their 'channel token' for the desired level
+  tokens = []
+  followers.each do |follower|
+    storage_id = storage_id_for_user_id(follower)
+    channel_token = DASHBOARD_REPORTING_DB_READONLY[:channel_tokens].where(storage_id: storage_id, level_id: level_id, script_id: unit_id).to_a[0]
+    next unless channel_token
+
+    storage_app_id = channel_token[:storage_app_id]
+    token = storage_encrypt_channel_id(storage_id, storage_app_id)
+    tokens << token
+  end
+
+  # We have ALL possible students... let's just cap this file size
+  # by randomly taking a certain amount.
+  puts "Found #{tokens.length} possible tokens."
+  sample_count = 10000
+  puts "Taking #{sample_count} samples of tokens."
+  tokens = tokens.sample(sample_count)
+
+  # We save the tokens to this particular file which we can
+  # then read on another invocation.
+  filename = "tokens-#{args[0]}-#{args[1]}-#{args[2]}.json"
+  File.write(filename, {
+    tokens: tokens,
+    unit: args[0],
+    lesson: args[1],
+    level: args[2]
+  }.to_json
+  )
+
+  # Done!
+  puts "Wrote #{filename}."
+  puts "Done."
+
+  # Exit out... we don't produce token listings and download at the same time.
+  exit(0)
+end
+
+# This is the token reading path of the script.
+
+# Read in the tokens JSON file
+tokens = {}
+File.open(args[0], 'r') do |f|
+  tokens = JSON.parse(f.read)
+end
+
+# Get unit/lesson/level from the tokens file.
+unit = tokens["unit"]
+lesson = tokens["lesson"]
+level = tokens["level"]
+tokens = tokens["tokens"]
+
+# The output path we will place downloaded source
+base_output_path = "downloaded-sources/#{unit}/#{lesson}/#{level}"
+puts "Writing #{tokens.length} sources"
+puts "to: #{base_output_path} ..."
+
+# This function helps us download JSON and returns an object resulting from
+# the parsing of the JSON or a generic nil on error.
+def download_json(uri)
+  uri = URI.parse(uri)
+
+  http = Net::HTTP.new(uri.host, uri.port)
+  http.use_ssl = uri.scheme == 'https'
+  request = Net::HTTP::Get.new(uri.request_uri)
+
+  response = http.request(request)
+
+  if response.code == "200"
+    return JSON.parse(response.body)
+  else
+    puts "error: got unexpected HTTP response code: #{response.code}"
+    return nil
+  end
+rescue Exception => exception
+  puts "error: #{exception}"
+  return nil
+end
+
+# Keep track of errors
+retrieve_versions_errors = 0
+versions_empty_errors = 0
+
+# For each channel in our DB, pull out all relevant versions
+puts "Downloading sources... (Will report every 50 done.)"
+count = 0
+tokens.each do |channel|
+  # Keep track of count
+  count += 1
+  if count % 50 == 0
+    puts "#{count} / #{tokens.length} processed."
+  end
+
+  # Get the versions of this file
+  source_url = "#{REMOTE_URL}/v3/sources/#{channel}/main.json"
+  versions_url = "#{source_url}/versions"
+
+  # Download that file as JSON and parse it out to get version tags
+  versions = download_json(versions_url)
+  if versions.nil?
+    puts "error: could not receive versions metadata: #{versions_url}"
+    retrieve_versions_errors += 1
+    if retrieve_versions_errors > 10
+      puts "Bailing... too many error responses."
+      exit(1)
+    end
+
+    next
+  end
+
+  # Sometimes the version block is empty... students haven't started work.
+  # We ignore these.
+  if versions.empty?
+    versions_empty_errors += 1
+    next
+  end
+
+  # Our version tags contain surprising results. They have years of versions
+  # where the source is for a completely different level or a completely
+  # unexpected form. Just filter out any but those from a few days prior
+  latest = Date.parse(versions[0]["lastModified"])
+  compare = latest - 4
+  versions.filter! do |version|
+    Date.parse(version["lastModified"]) > compare
+  end
+
+  # For each one, download that source file metadata as JSON
+  versions.each do |version|
+    # Canonical timestamp for filename
+    timestamp = version["lastModified"].gsub(/[:T.]/, "-").gsub(/Z|[-]000$/, "")
+
+    # Download it
+    version_url = "#{source_url}?version=#{version['versionId']}"
+    metadata = download_json(version_url)
+
+    # Create the file path and detect JS vs XML
+    output_path = File.join(base_output_path, channel)
+    output_file = File.join(output_path, "#{timestamp}.js")
+    if metadata["source"].start_with?("<")
+      output_file = File.join(output_path, "#{timestamp}.xml")
+    end
+
+    # Build the output path, if necessary
+    FileUtils.mkdir_p output_path
+
+    # Write out the file
+    File.write(output_file, metadata["source"])
+  end
+end
+
+puts "#{tokens.length} / #{tokens.length} processed."
+puts
+puts "Done."
+puts "Errors receiving versions count: #{retrieve_versions_errors}"
+puts "Errors receiving empty versions: #{versions_empty_errors}"
