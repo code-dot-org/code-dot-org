@@ -53,33 +53,95 @@ es:
           description_student: Descubrimientos de Informática es un curso introductorio que permite a los estudiantes crear artefactos auténticos e interactuar con las Ciencias de la Computación como un medio para la creatividad, comunicación, resolución de problemas y diversión.
         csp-2020:
           title: Principios de Informática ('20-'21)
+          version_title: "'20-'21"
           description_short: Aprender los conceptos básicos de la Informática.
+          description_student: En 2016, el College Board lanzó su curso AP® más reciente, Principios de Informática AP. Para el curso escolar 2020-21 han realizado importantes actualizaciones en el marco del curso. CSP introduce a los estudiantes a los conceptos fundamentales de la informática y los desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó Principios de Ciencias de la Computación AP con el objetivo de crear líderes en los campos de ciencias de la computación y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+          description_teacher: En 2016, el College Board lanzó su curso AP® más reciente, Principios de Informática AP. Para el curso escolar 2020-21 han realizado importantes actualizaciones en el marco del curso. CSP introduce a los estudiantes a los conceptos fundamentales de la informática y los desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó Principios de Ciencias de la Computación AP con el objetivo de crear líderes en los campos de ciencias de la computación y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinarias.
         csd-2020:
+          title: Descubrimientos de Informática ('20-'21)
+          version_title: "'20-'21"
           description_short: Un curso de introducción a la informática que permite a los estudiantes crear artefactos auténticos.
           description_student: Descubrimientos de Informática es un curso introductorio que permite a los estudiantes crear artefactos auténticos e interactuar con las Ciencias de la Computación como un medio para la creatividad, comunicación, resolución de problemas y diversión.
           description_teacher: Descubrimientos de Informática es un curso introductorio que permite a los estudiantes crear artefactos auténticos e interactuar con las Ciencias de la Computación como un medio para la creatividad, comunicación, resolución de problemas y diversión.
         csp-2021:
+          title: Principios de Informática ('21-'22)
           description_short: Aprender los conceptos básicos de la Informática.
+          description_student: CSP introduce a los estudiantes a los conceptos fundamentales de la informática y los desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática con el objetivo de crear líderes en los campos de la informática y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinares.
+          description_teacher: |-
+            CSP introduce a los estudiantes en los conceptos fundamentales de la informática y les desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática con el objetivo de crear líderes en los campos de la informática y atraer e involucrar a aquellos que tradicionalmente están poco representados con herramientas informáticas esenciales y oportunidades multidisciplinares.
+
+            \*\*¿Sabías que...?
+
+            -   El desarrollo profesional está disponible para ayudarte en los primeros pasos de la enseñanza de los Principios de Informática. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Pulsa aquí</a> para saber más sobre las oportunidades de aprendizaje profesional en tu zona o <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">pulsa aquí</a> para obtener más información sobre la opción de autoaprendizaje en línea.
+
+            -   Puedes encontrar la _Guía del Plan de Estudios_, el _Vocabulario del Curso_ y otros recursos que te ayudarán a poner en práctica este plan de estudios en el menú de Recursos para el Profesor que aparece a continuación
+          version_title: "'21-'22"
+        csd-2021:
+          title: Descubrimientos de Informática ('21-'22)
+          description_short: Un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos.
+          description_student: |-
+            Descubrimientos de Informática (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y comprometerse con la informática como un medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+
+            **¿Interesado en enseñar Descubrimientos de Informática?** El desarrollo profesional está disponible para ayudarte a empezar a enseñar Descubrimientos de Informática. [Pulsa aquí](https://code.org/educate/professional-learning/middle-high) para obtener más información sobre las oportunidades de aprendizaje profesional en tu zona o [pulsa aquí](https://code.org/educate/professional-development-online) para obtener más información sobre una opción de autoaprendizaje en línea.
+          description_teacher: |-
+            Descubrimientos de Informática (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y comprometerse con la informática como un medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+
+            **¿Sabías que...?**
+
+            -   El desarrollo profesional está disponible para ayudarte a empezar a enseñar Descubrimientos de Informática. [Pulsa aquí](https://code.org/educate/professional-learning/middle-high) para obtener más información sobre las oportunidades de aprendizaje profesional en tu zona o [pulsa aquí](https://code.org/educate/professional-development-online) para obtener más información sobre una opción en línea autodidacta.
+
+            -   Este curso es modular y puede ser enseñado en diferentes configuraciones basadas en las necesidades de cada aula. Consulte la _Guía de Implantación de la CDS_ en el menú de Recursos para el Profesorado más abajo para conocer las diferentes opciones.
+
+            -   Puedes encontrar la _Guía del Plan de Estudios_, la _Guía para Comenzar_, la _Guía de Evaluación_, y muchos otros recursos para ayudarte a implementar este plan de estudios en el menú de Recursos para Profesores más abajo.
+          version_title: "'21-'22"
+        csa-pilot:
+          title: Piloto de la CSA
         mike-test:
           title: Fundamentos de la informatica
         self-paced-pl-csd-2021:
           title: autodidáctico-pl-csd-2021
         self-paced-pl-csp-2021:
           title: autodidáctico-pl-csp-2021
+          version_title: "'21-'22"
         csa-pilot-facilitator:
           title: Organizadores del Proyecto Piloto CSA
         csp-2022:
           description_short: Aprender los conceptos básicos de la Informática.
+          description_student: CSP introduce a los estudiantes a los conceptos fundamentales de la informática y los desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática con el objetivo de crear líderes en los campos de la informática y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinares.
+          description_teacher: |-
+            CSP introduce a los estudiantes en los conceptos fundamentales de la informática y les desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática con el objetivo de crear líderes en los campos de la informática y atraer e involucrar a aquellos que tradicionalmente están poco representados con herramientas informáticas esenciales y oportunidades multidisciplinares.
+
+            \*\*¿Sabías que...?
+
+            -   El desarrollo profesional está disponible para ayudarte en los primeros pasos de la enseñanza de los Principios de Informática. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Pulsa aquí</a> para saber más sobre las oportunidades de aprendizaje profesional en tu zona o <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">pulsa aquí</a> para obtener más información sobre la opción de autoaprendizaje en línea.
+
+            -   Puedes encontrar la _Guía del Plan de Estudios_, el _Vocabulario del Curso_ y otros recursos que te ayudarán a poner en práctica este plan de estudios en el menú de Recursos para el Profesor que aparece a continuación
         vpl-csd-summer-pilot-ci-2022:
           title: vpl-csd-verano-piloto-ci
+          version_title: "'21-'22"
         self-paced-pl-csa-2022:
           title: autodidáctico-pl-csa
+        csd-2022:
+          description_short: Un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos.
+          description_student: |-
+            Descubrimientos de Informática (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y comprometerse con la informática como un medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+
+            **¿Interesado en enseñar Descubrimientos de Informática?** El desarrollo profesional está disponible para ayudarte a empezar a enseñar Descubrimientos de Informática. [Pulsa aquí](https://code.org/educate/professional-learning/middle-high) para obtener más información sobre las oportunidades de aprendizaje profesional en tu zona o [pulsa aquí](https://code.org/educate/professional-development-online) para obtener más información sobre una opción de autoaprendizaje en línea.
         self-paced-pl-csd-2022:
           title: autodidáctico-pl-csd-2021
         self-paced-pl-csp-2022:
           title: autodidáctico-pl-csp-2021
         csp-2023:
           description_short: Aprender los conceptos básicos de la Informática.
+          description_student: CSP introduce a los estudiantes a los conceptos fundamentales de la informática y los desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática con el objetivo de crear líderes en los campos de la informática y atraer e involucrar a aquellos que tradicionalmente están subrepresentados con herramientas informáticas esenciales y oportunidades multidisciplinares.
+          description_teacher: |-
+            CSP introduce a los estudiantes en los conceptos fundamentales de la informática y les desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática con el objetivo de crear líderes en los campos de la informática y atraer e involucrar a aquellos que tradicionalmente están poco representados con herramientas informáticas esenciales y oportunidades multidisciplinares.
+
+            \*\*¿Sabías que...?
+
+            -   El desarrollo profesional está disponible para ayudarte en los primeros pasos de la enseñanza de los Principios de Informática. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Pulsa aquí</a> para saber más sobre las oportunidades de aprendizaje profesional en tu zona o <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">pulsa aquí</a> para obtener más información sobre la opción de autoaprendizaje en línea.
+
+            -   Puedes encontrar la _Guía del Plan de Estudios_, el _Vocabulario del Curso_ y otros recursos que te ayudarán a poner en práctica este plan de estudios en el menú de Recursos para el Profesor que aparece a continuación
         self-paced-pl-csa-2023:
           title: autodidáctico-pl-csa
         csd-2023:
