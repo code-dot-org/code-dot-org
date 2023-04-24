@@ -7,7 +7,7 @@ const defaultProps = {
   sectionIds: [11, 12, 13],
   hiddenSectionIds: [],
   beginEditingSection: () => {},
-  isPlSections: false
+  isPlSections: false,
 };
 
 describe('OwnedSections', () => {

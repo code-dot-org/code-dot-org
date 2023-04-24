@@ -8,7 +8,7 @@ import {
   translatedCourseOfferingCsTopics,
   translatedCourseOfferingSchoolSubjects,
   translatedCourseOfferingDurations,
-  subjectsAndTopicsOrder
+  subjectsAndTopicsOrder,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import {concat, intersection} from 'lodash';
 import style from './curriculum_catalog_card.module.scss';
@@ -22,19 +22,19 @@ const CurriculumCatalogCard = ({
   subjects = [],
   topics = [],
   isTranslated = false,
-  isEnglish
+  isEnglish,
 }) => (
   <CustomizableCurriculumCatalogCard
     assignButtonText={i18n.assign()}
     assignButtonDescription={i18n.assignDescription({
-      course_name: courseDisplayName
+      course_name: courseDisplayName,
     })}
     courseDisplayName={courseDisplayName}
     duration={translatedCourseOfferingDurations[duration]}
     gradeRange={i18n.gradeRange({
       numGrades: gradesArray.length,
       youngestGrade: gradesArray[0],
-      oldestGrade: gradesArray[gradesArray.length - 1]
+      oldestGrade: gradesArray[gradesArray.length - 1],
     })}
     imageSrc={imageSrc}
     subjectsAndTopics={intersection(
@@ -46,7 +46,7 @@ const CurriculumCatalogCard = ({
         translatedCourseOfferingCsTopics[subject_or_topic_key]
     )}
     quickViewButtonDescription={i18n.quickViewDescription({
-      course_name: courseDisplayName
+      course_name: courseDisplayName,
     })}
     quickViewButtonText={i18n.quickView()}
     imageAltText={imageAltText}
@@ -70,7 +70,7 @@ CurriculumCatalogCard.propTypes = {
   topics: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(translatedCourseOfferingCsTopics))
   ),
-  isEnglish: PropTypes.bool.isRequired
+  isEnglish: PropTypes.bool.isRequired,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -86,7 +86,7 @@ const CustomizableCurriculumCatalogCard = ({
   subjectsAndTopics,
   quickViewButtonDescription,
   quickViewButtonText,
-  isEnglish
+  isEnglish,
 }) => (
   <div
     className={classNames(
@@ -168,7 +168,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   // for screenreaders
   imageAltText: PropTypes.string,
   quickViewButtonDescription: PropTypes.string.isRequired,
-  assignButtonDescription: PropTypes.string.isRequired
+  assignButtonDescription: PropTypes.string.isRequired,
 };
 
 export default CurriculumCatalogCard;

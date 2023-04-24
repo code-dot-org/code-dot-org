@@ -11,7 +11,7 @@ const DEFAULT_PROPS = {
   assetUrl: () => '/',
   isEmbedView: false,
   isShareView: false,
-  children: <div />
+  children: <div />,
 };
 
 const setUp = (overrideProps = {}) => {

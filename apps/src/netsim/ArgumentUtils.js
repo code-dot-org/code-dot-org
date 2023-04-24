@@ -77,7 +77,7 @@ exports.extendOptionsObject = function (optionsObject) {
       }
 
       return optionsObject[optionKey];
-    }
+    },
   });
 };
 

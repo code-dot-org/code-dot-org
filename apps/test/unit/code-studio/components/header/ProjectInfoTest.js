@@ -23,7 +23,7 @@ describe('ProjectInfo', () => {
       [possibleHeaders.project]: ProjectHeader,
       [possibleHeaders.minimalProject]: MinimalProjectHeader,
       [possibleHeaders.projectBacked]: ProjectBackedHeader,
-      [possibleHeaders.levelBuilderSave]: LevelBuilderSaveButton
+      [possibleHeaders.levelBuilderSave]: LevelBuilderSaveButton,
     };
 
     Object.entries(headerComponents).forEach(([currentHeader, component]) => {

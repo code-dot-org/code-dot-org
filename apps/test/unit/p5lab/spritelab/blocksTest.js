@@ -4,11 +4,11 @@ import {
   registerReducers,
   stubRedux,
   restoreRedux,
-  getStore
+  getStore,
 } from '@cdo/apps/redux';
 import reducer, {
   setInitialAnimationList,
-  animationSourceUrl
+  animationSourceUrl,
 } from '@cdo/apps/p5lab/redux/animationList';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import commonReducers from '@cdo/apps/redux/commonReducers';
@@ -24,7 +24,7 @@ describe('Gamelab blocks', () => {
           frameSize: 0,
           frameCount: 1,
           looping: false,
-          frameDelay: 0
+          frameDelay: 0,
         },
         2: {
           sourceUrl: '/v3/library/test.png',
@@ -32,9 +32,9 @@ describe('Gamelab blocks', () => {
           frameSize: 0,
           frameCount: 1,
           looping: false,
-          frameDelay: 0
-        }
-      }
+          frameDelay: 0,
+        },
+      },
     };
 
     beforeEach(() => {
@@ -43,7 +43,7 @@ describe('Gamelab blocks', () => {
       registerReducers(commonReducers);
       getStore().dispatch(
         setPageConstants({
-          channelId: 'a1'
+          channelId: 'a1',
         })
       );
       getStore().dispatch(setInitialAnimationList(animationList));
@@ -62,7 +62,7 @@ describe('Gamelab blocks', () => {
           animationList.propsByKey['1'],
           getStore().getState().pageConstants.channelId
         ),
-        '"drawn"'
+        '"drawn"',
       ]);
       expect(items[1]).to.deep.equal(['/v3/library/test.png', '"library"']);
     });

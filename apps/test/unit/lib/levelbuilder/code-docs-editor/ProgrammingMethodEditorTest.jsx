@@ -20,7 +20,7 @@ describe('ProgrammingMethodEditor', () => {
       examples: [{name: 'example 1'}],
       parameters: [{name: 'parameter 1'}],
       overloadOf: null,
-      canHaveOverload: false
+      canHaveOverload: false,
     };
     fetchSpy = sinon.stub(window, 'fetch');
   });
@@ -51,11 +51,11 @@ describe('ProgrammingMethodEditor', () => {
       <ProgrammingMethodEditor
         initialProgrammingMethod={{
           ...initialProgrammingMethod,
-          canHaveOverload: true
+          canHaveOverload: true,
         }}
         overloadOptions={[
           {key: 'droppaint', name: 'dropPaint()'},
-          {key: 'turnleft', name: 'turnLeft'}
+          {key: 'turnleft', name: 'turnLeft'},
         ]}
       />
     );
@@ -65,7 +65,7 @@ describe('ProgrammingMethodEditor', () => {
     expect(overloadSelector.find('option').map(o => o.props().value)).to.eql([
       '',
       'droppaint',
-      'turnleft'
+      'turnleft',
     ]);
   });
 
@@ -74,11 +74,11 @@ describe('ProgrammingMethodEditor', () => {
       <ProgrammingMethodEditor
         initialProgrammingMethod={{
           ...initialProgrammingMethod,
-          canHaveOverload: false
+          canHaveOverload: false,
         }}
         overloadOptions={[
           {key: 'droppaint', name: 'dropPaint()'},
-          {key: 'turnleft', name: 'turnLeft'}
+          {key: 'turnleft', name: 'turnLeft'},
         ]}
       />
     );
@@ -199,7 +199,7 @@ describe('ProgrammingMethodEditor', () => {
         'externalLink',
         'syntax',
         'examples',
-        'parameters'
+        'parameters',
       ].sort()
     );
     expect(fetchCallBody.name).to.equal('PainterClass');

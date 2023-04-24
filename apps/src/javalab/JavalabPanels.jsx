@@ -14,7 +14,7 @@ import {
   setInstructionsHeight,
   setInstructionsFullHeight,
   setConsoleHeight,
-  setEditorColumnHeight
+  setEditorColumnHeight,
 } from './redux/viewRedux';
 import {DisplayTheme} from './DisplayTheme';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
@@ -51,7 +51,7 @@ class JavalabPanels extends React.Component {
     topLeftPanel: PropTypes.func,
     bottomLeftPanel: PropTypes.func,
     topRightPanel: PropTypes.func,
-    bottomRightPanel: PropTypes.func
+    bottomRightPanel: PropTypes.func,
   };
 
   componentDidMount() {
@@ -214,7 +214,7 @@ class JavalabPanels extends React.Component {
       'max-width': availableWidth,
       'max-height': newVisualizationWidth,
       height: newVisualizationWidth,
-      'margin-left': (availableWidth - newVisualizationWidth) / 2
+      'margin-left': (availableWidth - newVisualizationWidth) / 2,
     });
 
     // Also adjust the width of the small footer at the bottom.
@@ -252,7 +252,7 @@ class JavalabPanels extends React.Component {
       bottomRightPanel,
       leftWidth,
       rightWidth,
-      editorColumnHeight
+      editorColumnHeight,
     } = this.props;
 
     return (
@@ -300,7 +300,7 @@ class JavalabPanels extends React.Component {
               color:
                 displayTheme === DisplayTheme.DARK ? color.white : color.black,
               height: editorColumnHeight,
-              width: rightWidth
+              width: rightWidth,
             }}
             className="editor-column"
           >
@@ -323,11 +323,11 @@ const styles = {
   editorAndVisualization: {
     display: 'flex',
     flexGrow: '1',
-    height: '100%'
+    height: '100%',
   },
   instructionsAndPreview: {
     color: color.black,
-    right: '15px'
+    right: '15px',
   },
   editorAndConsole: {
     right: '15px',
@@ -335,18 +335,18 @@ const styles = {
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: globalStyleConstants['resize-bar-width']
+    marginLeft: globalStyleConstants['resize-bar-width'],
   },
   editorAndConsoleOnly: {
     right: '15px',
     width: '100%',
     height: '100%',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   rightResizer: {
-    position: 'static'
-  }
+    position: 'static',
+  },
 };
 
 export default connect(
@@ -361,7 +361,7 @@ export default connect(
     consoleHeight: state.javalabView.consoleHeight,
     editorColumnFullHeight: state.javalabView.editorColumnFullHeight,
     isVisualizationCollapsed: state.javalabView.isVisualizationCollapsed,
-    isInstructionsCollapsed: state.instructions.isCollapsed
+    isInstructionsCollapsed: state.instructions.isCollapsed,
   }),
   dispatch => ({
     setLeftWidth: width => dispatch(setLeftWidth(width)),
@@ -370,6 +370,6 @@ export default connect(
     setInstructionsFullHeight: height =>
       dispatch(setInstructionsFullHeight(height)),
     setConsoleHeight: height => dispatch(setConsoleHeight(height)),
-    setEditorColumnHeight: height => dispatch(setEditorColumnHeight(height))
+    setEditorColumnHeight: height => dispatch(setEditorColumnHeight(height)),
   })
 )(JavalabPanels);

@@ -11,7 +11,7 @@ export default class AppLabCrosshairOverlay extends React.Component {
     width: PropTypes.number,
     height: PropTypes.number,
     mouseX: PropTypes.number,
-    mouseY: PropTypes.number
+    mouseY: PropTypes.number,
   };
 
   render() {
