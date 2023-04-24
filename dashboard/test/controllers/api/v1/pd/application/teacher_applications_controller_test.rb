@@ -76,8 +76,8 @@ module Api::V1::Pd::Application
 
       put :create, params: @test_params
       application = TEACHER_APPLICATION_CLASS.last
-      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'confirmation').count
       assert_response :success
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'confirmation').count
     end
 
     test 'does not create principal approval email on successful create if RP has selective principal approval' do
@@ -86,8 +86,8 @@ module Api::V1::Pd::Application
 
       put :create, params: {form_data: @hash_without_admin_approval}
       application = TEACHER_APPLICATION_CLASS.last
-      assert_equal 1, application.emails.where(email_type: 'confirmation').count
       assert_response :success
+      assert_equal 1, application.emails.where(email_type: 'confirmation').count
     end
 
     test 'does not create confirmation mail on unsuccessful create' do
