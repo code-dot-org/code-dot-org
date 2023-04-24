@@ -27,7 +27,7 @@ class LessonProgress extends Component {
     setDesiredWidth: PropTypes.func,
     currentPageNumber: PropTypes.number,
     currentLevelId: PropTypes.string,
-    onLevelChanged: PropTypes.func
+    navigateToLevelId: PropTypes.func
   };
 
   getFullWidth() {
@@ -135,7 +135,7 @@ class LessonProgress extends Component {
   }
 
   render() {
-    const {currentPageNumber, lessonExtrasUrl, lessonName, onLevelChanged} =
+    const {currentPageNumber, lessonExtrasUrl, lessonName, navigateToLevelId} =
       this.props;
     let levels = this.props.levels;
 
@@ -174,7 +174,7 @@ class LessonProgress extends Component {
                 currentLevelApp,
                 level.app
               )
-                ? () => onLevelChanged(level.id)
+                ? () => navigateToLevelId(level.id)
                 : undefined;
 
               return (
@@ -285,7 +285,7 @@ export default connect(
     currentLevelId: state.progress.currentLevelId
   }),
   dispatch => ({
-    onLevelChanged(levelId) {
+    navigateToLevelId(levelId) {
       dispatch(navigateToLevelId(levelId));
     }
   })
