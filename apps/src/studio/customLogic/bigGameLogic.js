@@ -79,7 +79,7 @@ BigGameLogic.prototype.onTick = function () {
       function () {
         this.studio_.setSprite({
           spriteIndex: this.playerSpriteIndex,
-          value: 'visible'
+          value: 'visible',
         });
       }.bind(this),
       20 * 40 + 50
@@ -106,12 +106,12 @@ BigGameLogic.prototype.onTick = function () {
     score.setAttribute('visibility', 'hidden');
     this.studio_.showTitleScreen({
       title: 'Game Over',
-      text: 'Click Reset to Play Again'
+      text: 'Click Reset to Play Again',
     });
     for (var i = 0; i < this.studio_.spriteCount; i++) {
       this.studio_.setSprite({
         spriteIndex: i,
-        value: 'hidden'
+        value: 'hidden',
       });
     }
     this.finished = true;
@@ -176,7 +176,7 @@ BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
     // sprite has returned to screen, make it visible again
     this.studio_.setSprite({
       spriteIndex: this.studio_.sprite.indexOf(sprite),
-      value: 'visible'
+      value: 'visible',
     });
   }
 };
@@ -221,7 +221,7 @@ BigGameLogic.prototype.resetSprite_ = function (sprite) {
   );
   this.studio_.setSprite({
     spriteIndex: this.studio_.sprite.indexOf(sprite),
-    value: 'hidden'
+    value: 'hidden',
   });
 };
 

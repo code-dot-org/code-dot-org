@@ -32,7 +32,7 @@ describe('CourseVersionPublishingEditor', () => {
       versionYearOptions: ['1990', '1991', '1992'],
       initialPublishedState: PublishedState.beta,
       publishedState: PublishedState.beta,
-      courseOfferingEditorLink: null
+      courseOfferingEditorLink: null,
     };
   });
 

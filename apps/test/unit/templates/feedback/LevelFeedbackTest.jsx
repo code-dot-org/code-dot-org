@@ -14,7 +14,7 @@ const feedback = {
   comment: 'Great Work',
   performance: 'performanceLevel1',
   review_state: null,
-  is_awaiting_teacher_review: false
+  is_awaiting_teacher_review: false,
 };
 
 const additionalFeedback = {
@@ -25,7 +25,7 @@ const additionalFeedback = {
   comment: 'Great Work',
   performance: 'performanceLevel1',
   review_state: null,
-  is_awaiting_teacher_review: false
+  is_awaiting_teacher_review: false,
 };
 
 const DEFAULT_PROPS = {
@@ -34,7 +34,7 @@ const DEFAULT_PROPS = {
   levelNum: 5,
   linkToLevel: '/link-to-level',
   unitName: 'A Unit',
-  feedbacks: [feedback]
+  feedbacks: [feedback],
 };
 
 const setUp = overrideProps => {

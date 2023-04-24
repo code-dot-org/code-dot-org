@@ -59,7 +59,7 @@ const EVENTS = {
   // Maker setup
   MAKER_SETUP_PAGE_BOARD_TYPE_EVENT: 'Board Type On Maker Setup Page',
   MAKER_SETUP_PAGE_MB_VERSION_EVENT: 'Microbit Version',
-  MAKER_SETUP_PAGE_MB_UPDATE_ERROR_EVENT: 'Microbit Software Update Error'
+  MAKER_SETUP_PAGE_MB_UPDATE_ERROR_EVENT: 'Microbit Software Update Error',
 };
 
 export {EVENTS};

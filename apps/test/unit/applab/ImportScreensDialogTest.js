@@ -7,12 +7,12 @@ import Dialog, {
   Body,
   Buttons,
   Confirm,
-  Cancel
+  Cancel,
 } from '@cdo/apps/templates/Dialog';
 import {
   ImportScreensDialog,
   ScreenListItem,
-  AssetListItem
+  AssetListItem,
 } from '@cdo/apps/applab/ImportScreensDialog';
 import AssetThumbnail from '@cdo/apps/code-studio/components/AssetThumbnail';
 
@@ -83,7 +83,7 @@ describe('ScreenListItem', () => {
           assetsToReplace: [],
           canBeImported: true,
           conflictingIds: [],
-          html: ''
+          html: '',
         }}
       />
     );
@@ -100,7 +100,7 @@ describe('ScreenListItem', () => {
           assetsToReplace: [],
           canBeImported: true,
           conflictingIds: [],
-          html: ''
+          html: '',
         }}
       />
     );
@@ -120,7 +120,7 @@ describe('ScreenListItem', () => {
           assetsToReplace: ['foo.png', 'bar.png'],
           canBeImported: true,
           conflictingIds: [],
-          html: ''
+          html: '',
         }}
       />
     );
@@ -143,7 +143,7 @@ describe('ScreenListItem', () => {
           assetsToReplace: ['foo.png', 'bar.png'],
           canBeImported: false,
           conflictingIds: ['input1', 'input2'],
-          html: ''
+          html: '',
         }}
       />
     );
@@ -194,10 +194,10 @@ describe('ImportScreensDialog', () => {
                 assetsToReplace: [],
                 canBeImported: true,
                 conflictingIds: [],
-                html: exampleHtml
-              }
+                html: exampleHtml,
+              },
             ],
-            otherAssets: []
+            otherAssets: [],
           }}
         />
       );
@@ -271,8 +271,8 @@ describe('ImportScreensDialog', () => {
             screens: [],
             otherAssets: [
               {filename: 'foo.png', category: 'image', willReplace: false},
-              {filename: 'bar.mov', category: 'video', willReplace: true}
-            ]
+              {filename: 'bar.mov', category: 'video', willReplace: true},
+            ],
           }}
         />
       );
@@ -333,10 +333,10 @@ describe('ImportScreensDialog', () => {
                 assetsToReplace: [],
                 canBeImported: false,
                 conflictingIds: ['img2'],
-                html: exampleHtml
-              }
+                html: exampleHtml,
+              },
             ],
-            otherAssets: []
+            otherAssets: [],
           }}
         />
       );
@@ -403,10 +403,10 @@ describe('ImportScreensDialog', () => {
                 assetsToReplace: [],
                 canBeImported: true,
                 conflictingIds: [],
-                html: exampleHtml
-              }
+                html: exampleHtml,
+              },
             ],
-            otherAssets: []
+            otherAssets: [],
           }}
         />
       );

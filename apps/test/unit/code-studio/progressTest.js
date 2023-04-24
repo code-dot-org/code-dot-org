@@ -20,7 +20,7 @@ describe('bestResultLevelId', function () {
       4: 20,
       5: 100,
       6: 0,
-      7: 100
+      7: 100,
     };
   });
   it("returns the level when there's only one", function () {
@@ -44,7 +44,7 @@ describe('initViewAs', function () {
   let mockStore, mockSetViewType, mockQueryStringParse;
   before(function () {
     mockStore = {
-      dispatch: sinon.fake()
+      dispatch: sinon.fake(),
     };
 
     mockSetViewType = sinon.stub(viewAsRedux, 'setViewType');

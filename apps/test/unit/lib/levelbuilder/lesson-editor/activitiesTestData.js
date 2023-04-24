@@ -13,7 +13,7 @@ export const sampleActivities = [
         remarks: true,
         scriptLevels: [],
         text: 'Simple text',
-        tips: []
+        tips: [],
       },
       {
         key: 'section-1',
@@ -27,14 +27,14 @@ export const sampleActivities = [
           {
             key: 'tip-1',
             type: 'teachingTip',
-            markdown: 'Teaching tip content'
+            markdown: 'Teaching tip content',
           },
           {
             key: 'tip-2',
             type: 'discussionGoal',
-            markdown: 'Discussion Goal content'
-          }
-        ]
+            markdown: 'Discussion Goal content',
+          },
+        ],
       },
       {
         tips: [],
@@ -59,8 +59,8 @@ export const sampleActivities = [
                 skin: null,
                 videoKey: null,
                 concepts: '',
-                conceptDifficulty: ''
-              }
+                conceptDifficulty: '',
+              },
             ],
             position: 1,
             levelNumber: 1,
@@ -69,7 +69,7 @@ export const sampleActivities = [
             bonus: false,
             assessment: false,
             challenge: false,
-            expand: false
+            expand: false,
           },
           {
             id: '11',
@@ -84,7 +84,7 @@ export const sampleActivities = [
                 skin: null,
                 videoKey: null,
                 concepts: '',
-                conceptDifficulty: ''
+                conceptDifficulty: '',
               },
               {
                 name: 'Level 3',
@@ -96,8 +96,8 @@ export const sampleActivities = [
                 skin: null,
                 videoKey: null,
                 concepts: '',
-                conceptDifficulty: ''
-              }
+                conceptDifficulty: '',
+              },
             ],
             position: 2,
             levelNumber: 2,
@@ -106,12 +106,12 @@ export const sampleActivities = [
             bonus: false,
             assessment: true,
             challenge: false,
-            expand: false
-          }
-        ]
-      }
-    ]
-  }
+            expand: false,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export const sampleActivityForLessonWithoutLessonPlan = {
@@ -143,8 +143,8 @@ export const sampleActivityForLessonWithoutLessonPlan = {
               skin: null,
               videoKey: null,
               concepts: '',
-              conceptDifficulty: ''
-            }
+              conceptDifficulty: '',
+            },
           ],
           position: 1,
           levelNumber: 1,
@@ -153,27 +153,27 @@ export const sampleActivityForLessonWithoutLessonPlan = {
           bonus: false,
           assessment: true,
           challenge: false,
-          expand: false
-        }
-      ]
-    }
-  ]
+          expand: false,
+        },
+      ],
+    },
+  ],
 };
 
 export const searchOptions = {
   levelOptions: [
     ['All types', ''],
     ['Applab', 'Applab'],
-    ['Dancelab', 'Dancelab']
+    ['Dancelab', 'Dancelab'],
   ],
   scriptOptions: [
     ['All scripts', ''],
     ['Script 1', 'script-1'],
-    ['Script 2', 'script-2']
+    ['Script 2', 'script-2'],
   ],
   ownerOptions: [
     ['Any owner', ''],
     ['Levelbuilder 1', 1],
-    ['Levelbuilder 2', 2]
-  ]
+    ['Levelbuilder 2', 2],
+  ],
 };

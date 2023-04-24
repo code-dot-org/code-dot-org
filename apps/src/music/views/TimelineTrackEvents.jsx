@@ -7,7 +7,7 @@ import TimelineElement from './TimelineElement';
 const TimelineTrackEvents = ({
   barWidth,
   eventVerticalSpace,
-  getEventHeight
+  getEventHeight,
 }) => {
   const playerUtils = useContext(PlayerUtilsContext);
   // useMemo() compares dependency using Object.is() comparison, which won't work correctly
@@ -31,7 +31,7 @@ const TimelineTrackEvents = ({
             name: tracksMetadata[event.trackId].name,
             soundsByTime: {},
             maxConcurrentSounds:
-              tracksMetadata[event.trackId].maxConcurrentSounds
+              tracksMetadata[event.trackId].maxConcurrentSounds,
           };
         }
 
@@ -100,7 +100,7 @@ const TimelineTrackEvents = ({
 TimelineTrackEvents.propTypes = {
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
-  getEventHeight: PropTypes.func.isRequired
+  getEventHeight: PropTypes.func.isRequired,
 };
 
 export default TimelineTrackEvents;

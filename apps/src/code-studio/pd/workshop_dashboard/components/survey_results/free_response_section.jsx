@@ -6,7 +6,7 @@ import _ from 'lodash';
 export default class FreeResponseSection extends React.Component {
   static propTypes = {
     questions: PropTypes.arrayOf(PropTypes.object).isRequired,
-    responseData: PropTypes.object.isRequired
+    responseData: PropTypes.object.isRequired,
   };
 
   renderFacilitatorsAndAnswers(answers) {

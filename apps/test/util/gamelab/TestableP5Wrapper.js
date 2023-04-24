@@ -20,7 +20,7 @@ function createP5WrapperWithInterpreter(interpreter) {
     onExecutionStarting: function () {},
     onPreload: function () {},
     onSetup: function () {},
-    onDraw: function () {}
+    onDraw: function () {},
   });
   p5Wrapper.startExecution();
 
