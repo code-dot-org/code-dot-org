@@ -14,7 +14,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
     {name: 'color', label: 'Color', options: ['Red', 'Blue', 'Green']}
   ];
 
-  const getClearedFilters = () => {
+  const getEmptyFilters = () => {
     let filters = {};
     filterTypes.forEach(filter => {
       filters[filter.name] = [];
@@ -22,28 +22,30 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
     return filters;
   };
 
-  const [appliedFilters, setAppliedFilters] = useState(getClearedFilters());
+  const [appliedFilters, setAppliedFilters] = useState(getEmptyFilters());
 
   const handleSelect = (event, filterName) => {
     const value = event.target.value;
     const isChecked = event.target.checked;
 
-    let newFilters = appliedFilters;
+    let newFilters = {...appliedFilters};
     if (isChecked) {
       //Add checked item into applied filters
       newFilters[filterName] = [...appliedFilters[filterName], value];
+      console.log(newFilters);
       setAppliedFilters(newFilters);
     } else {
       //Remove unchecked item from applied filters
       newFilters[filterName] = appliedFilters[filterName].filter(
         item => item !== value
       );
+      console.log(newFilters);
       setAppliedFilters(newFilters);
     }
   };
 
   const handleClear = () => {
-    setAppliedFilters(getClearedFilters());
+    setAppliedFilters(getEmptyFilters());
   };
 
   return (
@@ -58,46 +60,14 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
       <div className={style.catalogFiltersContainer}>
         {filterTypes.map(filterType => {
           return (
-            <div
-              id={`${filterType.name}-dropdown`}
-              key={`${filterType.name}-dropdown`}
-              className="dropdown"
-            >
-              <button
-                id={`${filterType.name}-dropdown-button`}
-                type="button"
-                className="selectbox"
-                data-toggle="dropdown"
-              >
-                {filterType.label}
-              </button>
-              <ul className="dropdown-menu">
-                <form>
-                  {filterType.options.map(option => {
-                    return (
-                      <li
-                        key={`${filterType.name}-${option}`}
-                        className="checkbox form-group"
-                      >
-                        <input
-                          type="checkbox"
-                          id={`${filterType.name}-${option}-check`}
-                          name={option}
-                          value={option}
-                          checked={appliedFilters[filterType.name].includes(
-                            option
-                          )}
-                          onChange={e => handleSelect(e, filterType.name)}
-                        />
-                        <label htmlFor={`${filterType.name}-${option}-check`}>
-                          {option}
-                        </label>
-                      </li>
-                    );
-                  })}
-                </form>
-              </ul>
-            </div>
+            <FilterCheckboxDropdown
+              key={filterType.name}
+              name={filterType.name}
+              label={filterType.label}
+              allOptions={filterType.options}
+              checkedOptions={appliedFilters[filterType.name]}
+              onChange={e => handleSelect(e, filterType.name)}
+            />
           );
         })}
         <button
@@ -145,6 +115,53 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
 CurriculumCatalog.propTypes = {
   curriculaData: PropTypes.arrayOf(curriculumDataShape),
   isEnglish: PropTypes.bool.isRequired
+};
+
+const FilterCheckboxDropdown = ({
+  name,
+  label,
+  allOptions,
+  checkedOptions,
+  onChange
+}) => {
+  return (
+    <div id={`${name}-dropdown`} className="dropdown">
+      <button
+        id={`${name}-dropdown-button`}
+        type="button"
+        className="selectbox"
+        data-toggle="dropdown"
+      >
+        {label}
+      </button>
+      <ul className="dropdown-menu">
+        <form>
+          {allOptions.map(option => {
+            return (
+              <li key={`${name}-${option}`} className="checkbox form-group">
+                <input
+                  type="checkbox"
+                  id={`${name}-${option}-check`}
+                  name={option}
+                  value={option}
+                  checked={checkedOptions.includes(option)}
+                  onChange={onChange}
+                />
+                <label htmlFor={`${name}-${option}-check`}>{option}</label>
+              </li>
+            );
+          })}
+        </form>
+      </ul>
+    </div>
+  );
+};
+FilterCheckboxDropdown.propTypes = {
+  name: PropTypes.string,
+  label: PropTypes.string,
+  allOptions: PropTypes.arrayOf(PropTypes.string),
+  checkedOptions: PropTypes.arrayOf(PropTypes.string),
+  onChange: PropTypes.func
 };
 
 export default CurriculumCatalog;
