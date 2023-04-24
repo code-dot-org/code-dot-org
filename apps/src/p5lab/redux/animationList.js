@@ -8,7 +8,7 @@ import {createUuid} from '@cdo/apps/utils';
 import {
   fetchURLAsBlob,
   blobToDataURI,
-  dataURIToSourceSize
+  dataURIToSourceSize,
 } from '@cdo/apps/imageUtils';
 import {animations as animationsApi} from '@cdo/apps/clientApi';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
@@ -18,7 +18,7 @@ import {throwIfSerializedAnimationListIsInvalid} from '../shapes';
 import {
   projectChanged,
   isOwner,
-  getCurrentId
+  getCurrentId,
 } from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import trackEvent from '@cdo/apps/util/trackEvent';
@@ -67,7 +67,7 @@ export const REMOVE_PENDING_FRAMES = 'AnimationList/REMOVE_PENDING_FRAMES';
 export default combineReducers({
   orderedKeys,
   propsByKey,
-  pendingFrames
+  pendingFrames,
 });
 
 const BACKGROUNDS_CATEGORY = 'backgrounds';
@@ -82,7 +82,7 @@ function pendingFrames(state, action) {
     case SET_PENDING_FRAMES:
       return {
         key: action.key,
-        props: action.props
+        props: action.props,
       };
 
     case REMOVE_PENDING_FRAMES:
@@ -90,14 +90,14 @@ function pendingFrames(state, action) {
 
     case START_LOADING_PENDING_FRAMES_FROM_SOURCE:
       return Object.assign({}, state, {
-        loadedFromSource: false
+        loadedFromSource: false,
       });
 
     case DONE_LOADING_PENDING_FRAMES_FROM_SOURCE:
       return Object.assign({}, state, {
         loadedFromSource: true,
         saved: true,
-        loadedProps: action.loadedProps
+        loadedProps: action.loadedProps,
       });
 
     default:
@@ -146,7 +146,7 @@ function propsByKey(state, action) {
     case DONE_LOADING_FROM_SOURCE:
     case ON_ANIMATION_SAVED:
       return Object.assign({}, state, {
-        [action.key]: animationPropsReducer(state[action.key], action)
+        [action.key]: animationPropsReducer(state[action.key], action),
       });
 
     case DELETE_ANIMATION:
@@ -172,27 +172,27 @@ function animationPropsReducer(state, action) {
     case EDIT_ANIMATION:
       return Object.assign({}, state, action.props, {
         sourceUrl: null, // Once edited this animation is custom.
-        saved: false // Dirty, so it'll get saved soon.
+        saved: false, // Dirty, so it'll get saved soon.
       });
 
     case SET_ANIMATION_NAME:
       return Object.assign({}, state, {
-        name: action.name
+        name: action.name,
       });
 
     case SET_ANIMATION_FRAME_DELAY:
       return Object.assign({}, state, {
-        frameDelay: action.frameDelay
+        frameDelay: action.frameDelay,
       });
 
     case SET_ANIMATION_LOOPING:
       return Object.assign({}, state, {
-        looping: action.looping
+        looping: action.looping,
       });
 
     case START_LOADING_FROM_SOURCE:
       return Object.assign({}, state, {
-        loadedFromSource: false
+        loadedFromSource: false,
       });
 
     case DONE_LOADING_FROM_SOURCE:
@@ -201,13 +201,13 @@ function animationPropsReducer(state, action) {
         saved: true,
         blob: action.blob,
         dataURI: action.dataURI,
-        sourceSize: action.sourceSize
+        sourceSize: action.sourceSize,
       });
 
     case ON_ANIMATION_SAVED:
       return Object.assign({}, state, {
         saved: true,
-        version: action.version
+        version: action.version,
       });
 
     default:
@@ -288,7 +288,7 @@ export function setInitialAnimationList(
       propsByKey: serializedAnimationList.reduce((memo, next) => {
         memo[next.key] = next;
         return memo;
-      }, {})
+      }, {}),
     };
   }
 
@@ -364,7 +364,7 @@ export function setInitialAnimationList(
   return dispatch => {
     dispatch({
       type: SET_INITIAL_ANIMATION_LIST,
-      animationList: serializedAnimationList
+      animationList: serializedAnimationList,
     });
     // Sprite Lab supports both costumes and backgrounds.
     // We need to select a default animation for each tab.
@@ -422,7 +422,7 @@ export function addBlankAnimation(interfaceMode) {
     frameCount: 1,
     looping: true,
     frameDelay: 4,
-    version: 'mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz'
+    version: 'mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz',
   };
   const blankBackground = {
     name: 'blank_background',
@@ -433,7 +433,7 @@ export function addBlankAnimation(interfaceMode) {
     looping: true,
     frameDelay: 2,
     categories: [BACKGROUNDS_CATEGORY],
-    version: '.31YUNsUQNxLZeGkrQper8CLl_jyNb71'
+    version: '.31YUNsUQNxLZeGkrQper8CLl_jyNb71',
   };
   return addLibraryAnimation(
     isBackground ? blankBackground : blankAnimation,
@@ -582,8 +582,8 @@ export function cloneAnimation(key, type = P5LabInterfaceMode.ANIMATION) {
           animationList.propsByKey
         ),
         version: sourceAnimation.version,
-        saved: false
-      })
+        saved: false,
+      }),
     });
     const selector =
       type === P5LabInterfaceMode.BACKGROUND
@@ -605,7 +605,7 @@ export function setAnimationName(key, name) {
     dispatch({
       type: SET_ANIMATION_NAME,
       key,
-      name
+      name,
     });
     projectChanged();
   };
@@ -622,7 +622,7 @@ export function setAnimationFrameDelay(key, frameDelay) {
     dispatch({
       type: SET_ANIMATION_FRAME_DELAY,
       key,
-      frameDelay
+      frameDelay,
     });
     projectChanged();
   };
@@ -639,7 +639,7 @@ export function setAnimationLooping(key, looping) {
     dispatch({
       type: SET_ANIMATION_LOOPING,
       key,
-      looping
+      looping,
     });
     projectChanged();
   };
@@ -655,7 +655,7 @@ export function editAnimation(key, props) {
     dispatch({
       type: EDIT_ANIMATION,
       key,
-      props
+      props,
     });
     projectChanged();
   };
@@ -729,7 +729,7 @@ function loadAnimationFromSource(key, callback) {
     );
     dispatch({
       type: START_LOADING_FROM_SOURCE,
-      key: key
+      key: key,
     });
     fetchURLAsBlob(sourceUrl, (err, blob) => {
       if (err) {
@@ -751,8 +751,8 @@ function loadAnimationFromSource(key, callback) {
               mainJsonSourceUrl: state.animationList.propsByKey[key].sourceUrl,
               version: state.animationList.propsByKey[key].version,
               animationName: state.animationList.propsByKey[key].name,
-              error: err.message
-            })
+              error: err.message,
+            }),
           },
           {includeUserId: true}
         );
@@ -778,7 +778,7 @@ function loadAnimationFromSource(key, callback) {
             key,
             blob,
             dataURI,
-            sourceSize
+            sourceSize,
           });
           callback();
         });
@@ -801,13 +801,13 @@ export function addAnimationAction(key, props, index) {
       type: ADD_ANIMATION_AT,
       key,
       props,
-      index
+      index,
     };
   }
   return {
     type: ADD_ANIMATION,
     key,
-    props
+    props,
   };
 }
 
@@ -822,7 +822,7 @@ function setPendingFramesAction(key, props) {
   return {
     type: SET_PENDING_FRAMES,
     key,
-    props
+    props,
   };
 }
 
@@ -832,7 +832,7 @@ function setPendingFramesAction(key, props) {
  */
 export function removePendingFramesAction() {
   return {
-    type: REMOVE_PENDING_FRAMES
+    type: REMOVE_PENDING_FRAMES,
   };
 }
 
@@ -844,7 +844,7 @@ function doneLoadingPendingFramesFromSourceAction(key, loadedProps) {
   return {
     type: DONE_LOADING_PENDING_FRAMES_FROM_SOURCE,
     key,
-    loadedProps
+    loadedProps,
   };
 }
 
@@ -854,7 +854,7 @@ function doneLoadingPendingFramesFromSourceAction(key, loadedProps) {
  */
 function startLoadingPendingFramesFromSourceAction() {
   return {
-    type: START_LOADING_PENDING_FRAMES_FROM_SOURCE
+    type: START_LOADING_PENDING_FRAMES_FROM_SOURCE,
   };
 }
 
@@ -887,7 +887,7 @@ function loadPendingFramesFromSource(key, props, callback) {
             doneLoadingPendingFramesFromSourceAction(key, {
               blob,
               dataURI,
-              sourceSize
+              sourceSize,
             })
           );
           callback();
@@ -1016,7 +1016,7 @@ export function saveAnimation(animationKey, animationProps) {
         resolve({
           type: ON_ANIMATION_SAVED,
           key: animationKey,
-          version: response.versionId
+          version: response.versionId,
         });
       } catch (e) {
         reject(e);

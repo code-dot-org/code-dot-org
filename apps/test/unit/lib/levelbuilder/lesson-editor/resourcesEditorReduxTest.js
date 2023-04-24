@@ -2,7 +2,7 @@ import {assert} from 'chai';
 import createResourcesReducer, {
   addResource,
   editResource,
-  removeResource
+  removeResource,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import resourceTestData from './resourceTestData';
 import _ from 'lodash';
@@ -22,7 +22,7 @@ describe('resourcesEditorRedux reducer tests', () => {
       addResource('lessonResource', {
         key: 'new-key',
         name: 'new-name',
-        url: 'new-fake.url'
+        url: 'new-fake.url',
       })
     );
     assert.deepEqual(
@@ -40,7 +40,7 @@ describe('resourcesEditorRedux reducer tests', () => {
         key: 'new-key',
         name: 'new-name',
         url: 'new-fake.url',
-        isRollup: false
+        isRollup: false,
       })
     );
     assert.deepEqual(
@@ -81,7 +81,7 @@ describe('resourcesEditorRedux reducer tests', () => {
       addResource('teacherResource', {
         key: 'new-teacher-resource-key',
         name: 'new-teacher-resource0name',
-        url: 'new-fake.url'
+        url: 'new-fake.url',
       })
     );
     const nextStudentResourceState = studentResourcesEditor(
@@ -89,7 +89,7 @@ describe('resourcesEditorRedux reducer tests', () => {
       addResource('studentResource', {
         key: 'new-student-resource-key',
         name: 'new-student-resourcename',
-        url: 'new-fake.url'
+        url: 'new-fake.url',
       })
     );
     assert.deepEqual(

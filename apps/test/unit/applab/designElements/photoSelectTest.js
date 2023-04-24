@@ -6,7 +6,7 @@ function getRect(photoSelectComponent) {
     left: parseInt(photoSelectComponent.style.left, 10),
     top: parseInt(photoSelectComponent.style.top, 10),
     width: parseInt(photoSelectComponent.style.width, 10),
-    height: parseInt(photoSelectComponent.style.height, 10)
+    height: parseInt(photoSelectComponent.style.height, 10),
   };
 }
 

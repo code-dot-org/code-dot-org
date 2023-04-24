@@ -20,7 +20,7 @@ var NetSimChunkSizeControl = (module.exports = function (
   NetSimSlider.call(this, rootDiv, {
     onChange: chunkSizeChangeCallback,
     min: 1,
-    max: 32
+    max: 32,
   });
 
   // Auto-render, unlike our parent class
@@ -37,7 +37,7 @@ NetSimChunkSizeControl.inherits(NetSimSlider);
  */
 NetSimChunkSizeControl.prototype.valueToLabel = function (val) {
   return i18n.numBitsPerChunk({
-    numBits: val
+    numBits: val,
   });
 };
 

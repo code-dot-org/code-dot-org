@@ -38,6 +38,6 @@ StyledCodeBlock.propTypes = {
     color: PropTypes.string,
     syntax: PropTypes.string.isRequired,
     link: PropTypes.string,
-    parameters: PropTypes.array
-  }).isRequired
+    parameters: PropTypes.array,
+  }).isRequired,
 };

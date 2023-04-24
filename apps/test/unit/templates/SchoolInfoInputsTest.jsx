@@ -8,7 +8,7 @@ const MINIMUM_PROPS = {
   onCountryChange: () => {},
   onSchoolTypeChange: () => {},
   onSchoolChange: () => {},
-  onSchoolNotFoundChange: () => {}
+  onSchoolNotFoundChange: () => {},
 };
 
 describe('SchoolInfoInputs', () => {

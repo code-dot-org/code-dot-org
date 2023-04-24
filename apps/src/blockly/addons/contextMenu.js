@@ -27,7 +27,7 @@ const registerDeletable = function () {
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
     id: 'blockDeletable',
-    weight: 6
+    weight: 6,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(deletableOption);
 };
@@ -52,7 +52,7 @@ const registerMovable = function () {
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
     id: 'blockMovable',
-    weight: 7
+    weight: 7,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(movableOption);
 };
@@ -77,7 +77,7 @@ const registerEditable = function () {
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
     id: 'blockEditable',
-    weight: 8
+    weight: 8,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(editableOption);
 };
@@ -98,7 +98,7 @@ const registerShadow = function () {
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
     id: 'blockToShadow',
-    weight: 9
+    weight: 9,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(shadowOption);
 };
@@ -127,7 +127,7 @@ const registerUnshadow = function () {
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
     id: 'childUnshadow',
-    weight: 10
+    weight: 10,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(unshadowOption);
 };
@@ -152,7 +152,7 @@ const registerKeyboardNavigation = function () {
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: 'keyboardNavigation',
-    weight: 11
+    weight: 11,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(keyboardNavigationOption);
 };
@@ -179,7 +179,7 @@ const registerDarkMode = function () {
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: 'toggleDarkMode',
-    weight: 12
+    weight: 12,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(toggleDarkModeOption);
 };
@@ -187,24 +187,24 @@ const registerDarkMode = function () {
 const themes = [
   {
     name: Themes.MODERN,
-    label: msg.blocklyModernTheme()
+    label: msg.blocklyModernTheme(),
   },
   {
     name: Themes.HIGH_CONTRAST,
-    label: msg.blocklyHighContrastTheme()
+    label: msg.blocklyHighContrastTheme(),
   },
   {
     name: Themes.PROTANOPIA,
-    label: msg.blocklyProtanopiaTheme()
+    label: msg.blocklyProtanopiaTheme(),
   },
   {
     name: Themes.DEUTERANOPIA,
-    label: msg.blocklyDeuteranopiaTheme()
+    label: msg.blocklyDeuteranopiaTheme(),
   },
   {
     name: Themes.TRITANOPIA,
-    label: msg.blocklyTritanopiaTheme()
-  }
+    label: msg.blocklyTritanopiaTheme(),
+  },
 ];
 /**
  * Change workspace theme to specified theme
@@ -231,7 +231,7 @@ const registerTheme = function (name, label, index) {
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: name + 'ThemeOption',
-    weight: 13 + index
+    weight: 13 + index,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(themeOption);
 };

@@ -4,7 +4,7 @@ import {shallow} from 'enzyme';
 import {
   InstructionType,
   InstructorAudience,
-  ParticipantAudience
+  ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
 
@@ -15,7 +15,7 @@ const defaultProps = {
   handleInstructionTypeChange: () => {},
   handleInstructorAudienceChange: () => {},
   handleParticipantAudienceChange: () => {},
-  allowMajorCurriculumChanges: true
+  allowMajorCurriculumChanges: true,
 };
 
 describe('CourseTypeEditor', () => {

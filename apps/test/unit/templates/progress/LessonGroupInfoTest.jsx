@@ -5,7 +5,7 @@ import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
 
 const DEFAULT_PROPS = {
   description: 'This is an awesome Lesson Group.',
-  bigQuestions: 'Who? What?'
+  bigQuestions: 'Who? What?',
 };
 
 describe('LessonGroupInfoDialog', () => {

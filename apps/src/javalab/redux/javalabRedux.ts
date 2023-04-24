@@ -31,7 +31,7 @@ const initialState: JavalabState = {
   hasCommitSaveError: false,
   validationPassed: false,
   hasRunOrTestedCode: false,
-  isJavabuilderConnecting: false
+  isJavabuilderConnecting: false,
 };
 
 const javalabSlice = createSlice({
@@ -83,8 +83,8 @@ const javalabSlice = createSlice({
     },
     setHasRunOrTestedCode(state, action: PayloadAction<boolean>) {
       state.hasRunOrTestedCode = action.payload;
-    }
-  }
+    },
+  },
 });
 
 export const {
@@ -98,7 +98,7 @@ export const {
   setHasOpenCodeReview,
   setCommitSaveStatus,
   setValidationPassed,
-  setHasRunOrTestedCode
+  setHasRunOrTestedCode,
 } = javalabSlice.actions;
 
 export default javalabSlice.reducer;

@@ -1,11 +1,11 @@
 import React from 'react';
 import ConfirmRemoveStudentDialog, {
-  MINIMUM_TEST_PROPS
+  MINIMUM_TEST_PROPS,
 } from './ConfirmRemoveStudentDialog';
 
 const STORY_PROPS = {
   ...MINIMUM_TEST_PROPS,
-  hideBackdrop: true
+  hideBackdrop: true,
 };
 
 export default storybook =>
@@ -19,7 +19,7 @@ export default storybook =>
         `,
       story: () => (
         <ConfirmRemoveStudentDialog {...STORY_PROPS} hasEverSignedIn={false} />
-      )
+      ),
     },
     {
       name: 'For a student who has signed in',
@@ -30,7 +30,7 @@ export default storybook =>
         `,
       story: () => (
         <ConfirmRemoveStudentDialog {...STORY_PROPS} hasEverSignedIn={true} />
-      )
+      ),
     },
     {
       name: 'For a student who depends on this section to sign in',
@@ -45,6 +45,6 @@ export default storybook =>
           hasEverSignedIn={true}
           dependsOnThisSectionForLogin={true}
         />
-      )
-    }
+      ),
+    },
   ]);

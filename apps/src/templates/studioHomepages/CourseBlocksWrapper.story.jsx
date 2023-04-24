@@ -5,12 +5,12 @@ import {reduxStore} from '@cdo/storybook/decorators';
 import {
   TeacherGradeBandCards,
   ToolsCards,
-  ToolsAIExtrasCard
+  ToolsAIExtrasCard,
 } from '@cdo/apps/util/courseBlockCardsConstants';
 
 export default {
   title: 'CourseBlocksWrapper',
-  component: CourseBlocksWrapper
+  component: CourseBlocksWrapper,
 };
 
 // Template
@@ -27,7 +27,7 @@ CardsWithLinkAndDescription.args = {
   description: 'Descriptions of these cards and their relevance',
   link: '/test/link',
   linkText: 'View more of these cards',
-  hideBottomMargin: false
+  hideBottomMargin: false,
 };
 
 export const CardsWithOnlyLink = Template.bind({});
@@ -35,7 +35,7 @@ CardsWithOnlyLink.args = {
   cards: TeacherGradeBandCards,
   link: '/test/link',
   linkText: 'View more of these cards',
-  hideBottomMargin: false
+  hideBottomMargin: false,
 };
 
 export const CardsWithOnlyDescription = Template.bind({});
@@ -43,13 +43,13 @@ CardsWithOnlyDescription.args = {
   cards: TeacherGradeBandCards,
   heading: 'Course Blocks Title',
   description: 'Descriptions of these cards and their relevance',
-  hideBottomMargin: false
+  hideBottomMargin: false,
 };
 
 export const CardsWithoutBottomMarginAndLinkAndDescription = Template.bind({});
 CardsWithoutBottomMarginAndLinkAndDescription.args = {
   cards: TeacherGradeBandCards,
-  hideBottomMargin: true
+  hideBottomMargin: true,
 };
 
 export const ManyCardsWithDescription = Template.bind({});
@@ -57,5 +57,5 @@ ManyCardsWithDescription.args = {
   cards: ToolsCards.concat(ToolsAIExtrasCard),
   heading: 'Course Blocks Title',
   description: 'Descriptions of these cards and their relevance',
-  hideBottomMargin: true
+  hideBottomMargin: true,
 };

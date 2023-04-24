@@ -9,7 +9,7 @@ class ArrowButtons extends React.Component {
   static propTypes = {
     // from redux
     visible: PropTypes.bool.isRequired,
-    disabled: PropTypes.bool.isRequired
+    disabled: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -56,10 +56,10 @@ class ArrowButtons extends React.Component {
 
 const styles = {
   hidden: {display: 'none'},
-  visible: {display: 'inline-block'}
+  visible: {display: 'inline-block'},
 };
 
 export default connect(state => ({
   visible: state.arrowDisplay.buttonsAreVisible,
-  disabled: state.arrowDisplay.buttonsAreDisabled
+  disabled: state.arrowDisplay.buttonsAreDisabled,
 }))(ArrowButtons);

@@ -9,7 +9,7 @@ import {
   FIELD_PATTERN_NAME,
   FIELD_PATTERN_TYPE,
   FIELD_CHORD_TYPE,
-  FIELD_CHORD_NAME
+  FIELD_CHORD_NAME,
 } from './constants';
 
 export const fieldSoundsDefinition = {
@@ -19,7 +19,7 @@ export const fieldSoundsDefinition = {
   playPreview: (id, onStop) => {
     Globals.getPlayer().previewSound(id, onStop);
   },
-  currentValue: DEFAULT_SOUND
+  currentValue: DEFAULT_SOUND,
 };
 
 export const fieldPatternDefinition = {
@@ -36,7 +36,7 @@ export const fieldPatternDefinition = {
   cancelPreviews: () => {
     Globals.getPlayer().cancelPreviews();
   },
-  currentValue: DEFAULT_PATTERN
+  currentValue: DEFAULT_PATTERN,
 };
 
 export const fieldChordDefinition = {
@@ -52,7 +52,7 @@ export const fieldChordDefinition = {
   cancelPreviews: () => {
     Globals.getPlayer().cancelPreviews();
   },
-  currentValue: DEFAULT_CHORD
+  currentValue: DEFAULT_CHORD,
 };
 
 export const fieldRestDurationDefinition = {
@@ -63,6 +63,6 @@ export const fieldRestDurationDefinition = {
     ['1 beat', '0.25'],
     ['2 beats', '0.5'],
     ['1 measure', '1'],
-    ['2 measures', '2']
-  ]
+    ['2 measures', '2'],
+  ],
 };

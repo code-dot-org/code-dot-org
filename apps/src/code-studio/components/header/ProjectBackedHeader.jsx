@@ -19,6 +19,6 @@ export default class ProjectBackedHeader extends React.Component {
 
 const styles = {
   projectButtons: {
-    display: 'flex'
-  }
+    display: 'flex',
+  },
 };

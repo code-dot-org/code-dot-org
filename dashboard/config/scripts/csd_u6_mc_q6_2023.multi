@@ -1,6 +1,6 @@
 name 'CSD U6 MC Q6_2023'
 type 'multi2'
-question 'In which scenarios would you most likely use `getProperty`? (Select all that apply)'
+question 'In which scenarios would you most likely use `getProperty`? (*Select two*)'
 wrong 'Change the homescreen background color to beige'
 right 'See which option the user selected in the dropdown'
 wrong 'Update the width of a picture'
