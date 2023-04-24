@@ -16,7 +16,7 @@ module.exports = {
         'loadJSON',
         'loadStrings',
         'loadTable',
-        'loadXML'
+        'loadXML',
       ]
         .map(name => `console.log("${name}: " + typeof ${name});`)
         .concat(`console.log('done');`)
@@ -29,6 +29,6 @@ module.exports = {
         const debugOutput = document.getElementById('debug-output').textContent;
         assert.notInclude(debugOutput, 'function');
       }
-    )
-  ]
+    ),
+  ],
 };

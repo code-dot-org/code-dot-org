@@ -84,6 +84,6 @@ function updateSectionCourse(updateCourse, course) {
     displayName: course.display_name,
     courseOfferingId: course.id,
     versionId: courseVersionId,
-    unitId: null
+    unitId: null,
   });
 }

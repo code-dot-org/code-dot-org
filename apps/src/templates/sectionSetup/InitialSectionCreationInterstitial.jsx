@@ -13,14 +13,14 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 class InitialSectionCreationInterstitial extends Component {
   static propTypes = {
     // Connected to Redux
-    beginEditingSection: PropTypes.func.isRequired
+    beginEditingSection: PropTypes.func.isRequired,
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      isOpen: true
+      isOpen: true,
     };
   }
 
@@ -76,32 +76,32 @@ class InitialSectionCreationInterstitial extends Component {
 const styles = {
   dialogCentering: {
     marginLeft: '20px',
-    marginRight: '20px'
+    marginRight: '20px',
   },
   title: {
     color: color.neutral_dark,
     fontSize: '1.25em',
     marginBottom: '0.5em',
-    fontFamily: "'Gotham 5r', sans-serif"
+    fontFamily: "'Gotham 5r', sans-serif",
   },
   descriptionText: {
     fontSize: '1em',
     marginBottom: '1em',
-    color: color.neutral_dark
+    color: color.neutral_dark,
   },
   footerButtons: {
     display: 'flex',
     flexFlow: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   leftButton: {
-    marginLeft: 0
+    marginLeft: 0,
   },
   rightButton: {
-    marginRight: 0
-  }
+    marginRight: 0,
+  },
 };
 
 export default connect(undefined, {
-  beginEditingSection
+  beginEditingSection,
 })(InitialSectionCreationInterstitial);

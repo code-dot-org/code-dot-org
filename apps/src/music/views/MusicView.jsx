@@ -31,7 +31,7 @@ import {
   setShowInstructions,
   setInstructionsPosition,
   InstructionsPositions,
-  setCurrentProgressState
+  setCurrentProgressState,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 
@@ -61,7 +61,7 @@ class UnconnectedMusicView extends React.Component {
     instructionsPosition: PropTypes.string,
     setShowInstructions: PropTypes.func,
     setInstructionsPosition: PropTypes.func,
-    setCurrentProgressState: PropTypes.func
+    setCurrentProgressState: PropTypes.func,
   };
 
   constructor(props) {
@@ -85,7 +85,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.state = {
       updateNumber: 0,
-      showingVideo: true
+      showingVideo: true,
     };
   }
 
@@ -325,7 +325,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.playingTriggers.push({
       id,
-      startPosition: currentPosition
+      startPosition: currentPosition,
     });
   };
 
@@ -335,7 +335,7 @@ class UnconnectedMusicView extends React.Component {
       ProgramSequencer: this.programSequencer,
       RandomSkipManager: this.randomSkipManager,
       getTriggerCount: () => this.playingTriggers.length,
-      MusicLibrary: this.library
+      MusicLibrary: this.library,
     });
   };
 
@@ -454,7 +454,7 @@ class UnconnectedMusicView extends React.Component {
           value={{
             getPlaybackEvents: () => this.player.getPlaybackEvents(),
             getTracksMetadata: () => this.player.getTracksMetadata(),
-            getLastMeasure: () => this.player.getLastMeasure()
+            getLastMeasure: () => this.player.getLastMeasure(),
           }}
         >
           <KeyHandler
@@ -517,7 +517,7 @@ const MusicView = connect(
     selectedBlockId: state.music.selectedBlockId,
     timelineAtTop: state.music.timelineAtTop,
     showInstructions: state.music.showInstructions,
-    instructionsPosition: state.music.instructionsPosition
+    instructionsPosition: state.music.instructionsPosition,
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
@@ -530,7 +530,7 @@ const MusicView = connect(
     setInstructionsPosition: instructionsPosition =>
       dispatch(setInstructionsPosition(instructionsPosition)),
     setCurrentProgressState: progressState =>
-      dispatch(setCurrentProgressState(progressState))
+      dispatch(setCurrentProgressState(progressState)),
   })
 )(UnconnectedMusicView);
 

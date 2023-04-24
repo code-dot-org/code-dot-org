@@ -24,8 +24,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'Fireball',
@@ -90,8 +90,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'Fireball collision',
@@ -172,8 +172,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'Fireball multiple collision',
@@ -241,8 +241,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'Throw hearts',
@@ -307,8 +307,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'heart collision',
@@ -354,8 +354,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'projectile from hidden sprite',
@@ -396,8 +396,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'collide with hidden actor',
@@ -452,8 +452,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'collision with any actor',
@@ -534,8 +534,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'collision with any actor - bidirectional',
@@ -598,8 +598,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'collision with any edge',
@@ -661,8 +661,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'collision with any projectile',
@@ -729,8 +729,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'collision with anything',
@@ -792,8 +792,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'random background/avatar',
@@ -806,12 +806,12 @@ module.exports = {
             'studio_setSprite',
             {
               SPRITE: 0,
-              VALUE: 'random'
+              VALUE: 'random',
             },
             blockUtils.blockWithNext(
               'studio_setBackground',
               {
-                VALUE: 'random'
+                VALUE: 'random',
               },
               '<block type="studio_setSpriteParams" inline="true"><title name="VALUE">random</title><value name="SPRITE"><block type="math_number"><title name="NUM">1</title></block></value></block>'
             )
@@ -837,8 +837,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'unnamed function',
@@ -871,12 +871,12 @@ module.exports = {
         '</xml>',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTION_NAME
+        testResult: TestResults.EMPTY_FUNCTION_NAME,
       },
       customValidator: function (assert) {
         assert.equal(Studio.message, commonMsg.unnamedFunction());
         return true;
-      }
+      },
     },
     {
       description: 'Set and read score var',
@@ -918,8 +918,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    }
-  ]
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+  ],
 };

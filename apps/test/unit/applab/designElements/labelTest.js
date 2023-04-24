@@ -11,7 +11,7 @@ function getRect(e) {
     left: parseInt(e.style.left, 10),
     top: parseInt(e.style.top, 10),
     width: parseInt(e.style.width, 10),
-    height: parseInt(e.style.height, 10)
+    height: parseInt(e.style.height, 10),
   };
 }
 
@@ -108,7 +108,7 @@ describe('Applab designElements/label component', function () {
       top: oldRect.top,
       left: oldRect.left,
       width: applabConstants.APP_WIDTH - oldRect.left,
-      height: 0 // not used
+      height: 0, // not used
     };
     expectSameWidth(getRect(e), expectedRect);
   });
@@ -135,7 +135,7 @@ describe('Applab designElements/label component', function () {
       top: oldRect.top,
       left: 0,
       width: applabConstants.APP_WIDTH,
-      height: 0 // not used
+      height: 0, // not used
     };
     expectSameWidth(getRect(e), expectedRect);
   });
@@ -162,7 +162,7 @@ describe('Applab designElements/label component', function () {
       top: oldRect.top,
       left: 0,
       width: oldRect.left + oldRect.width,
-      height: 0 // not used
+      height: 0, // not used
     };
     expectSameWidth(getRect(e), expectedRect);
   });

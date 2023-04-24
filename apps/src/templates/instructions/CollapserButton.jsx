@@ -14,7 +14,7 @@ class CollapserButton extends Component {
     isRtl: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired,
     collapsed: PropTypes.bool.isRequired,
-    isMinecraft: PropTypes.bool.isRequired
+    isMinecraft: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -33,7 +33,7 @@ class CollapserButton extends Component {
             src="/blockly/media/1x1.gif"
             className={[
               this.props.collapsed ? 'more-btn' : 'less-btn',
-              'toggle26'
+              'toggle26',
             ].join(' ')}
           />
         ) : (
@@ -52,7 +52,7 @@ class CollapserButton extends Component {
               style={{
                 opacity: this.props.collapsed ? 1 : 0,
                 gridRow: 1,
-                gridColumn: 1
+                gridColumn: 1,
               }}
             >
               {msg.more()}
@@ -61,7 +61,7 @@ class CollapserButton extends Component {
               style={{
                 opacity: this.props.collapsed ? 0 : 1,
                 gridRow: 1,
-                gridColumn: 1
+                gridColumn: 1,
               }}
             >
               {msg.less()}
@@ -81,15 +81,15 @@ const styles = {
     whiteSpace: 'nowrap',
     ':hover': {
       backgroundColor: color.neutral_dark20,
-      boxShadow: 'none'
-    }
+      boxShadow: 'none',
+    },
   },
   collapseIcon: {
-    marginRight: 5
+    marginRight: 5,
   },
   collapseIconRtl: {
-    marginLeft: 5
-  }
+    marginLeft: 5,
+  },
 };
 
 export default Radium(CollapserButton);

@@ -12,10 +12,10 @@ describe('Survey Rollup Table Foorm', () => {
         rows: {
           best_pd: 6.22,
           feel_community: 5.11,
-          more_prepared: 4.33
-        }
-      }
-    }
+          more_prepared: 4.33,
+        },
+      },
+    },
   };
   const sampleRollupAverages2 = {
     response_count: 10,
@@ -25,15 +25,15 @@ describe('Survey Rollup Table Foorm', () => {
         rows: {
           best_pd: 1.23,
           feel_community: 3.72,
-          more_prepared: 4.32
-        }
-      }
-    }
+          more_prepared: 4.32,
+        },
+      },
+    },
   };
 
   const sampleFacilitatorRollup = {
     1: sampleRollupAverages1,
-    2: sampleRollupAverages2
+    2: sampleRollupAverages2,
   };
 
   const sampleQuestions = {
@@ -49,18 +49,18 @@ describe('Survey Rollup Table Foorm', () => {
         more_prepared:
           'I feel more prepared to teach the material covered in this workshop than before I came.',
         suitable_my_level:
-          'This professional development was suitable for my level of experience with teaching CS.'
+          'This professional development was suitable for my level of experience with teaching CS.',
       },
       title: 'sample title',
-      type: 'matrix'
-    }
+      type: 'matrix',
+    },
   };
 
   const sampleRollup = {
     overall: sampleRollupAverages1,
     overall_facilitator: sampleFacilitatorRollup,
     single_workshop: sampleRollupAverages2,
-    questions: sampleQuestions
+    questions: sampleQuestions,
   };
 
   const sampleFacilitators = {1: 'Facilitator 1', 2: 'Facilitator 2'};

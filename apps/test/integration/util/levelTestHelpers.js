@@ -34,8 +34,8 @@ export function testAsyncProgramGameLab(
     },
     expected: {
       result: true,
-      testResult: TestResults.FREE_PLAY
-    }
+      testResult: TestResults.FREE_PLAY,
+    },
   };
 }
 
@@ -69,7 +69,7 @@ export function testApplabConsoleOutput({testName, source, expect, ticks = 2}) {
     },
     expected: {
       result: true,
-      testResult: TestResults.FREE_PLAY
-    }
+      testResult: TestResults.FREE_PLAY,
+    },
   };
 }

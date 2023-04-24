@@ -354,7 +354,7 @@ describe('Artist', () => {
         MIDDLERIGHT: [400, 200],
         BOTTOMLEFT: [0, 400],
         BOTTOMCENTER: [200, 400],
-        BOTTOMRIGHT: [400, 400]
+        BOTTOMRIGHT: [400, 400],
       };
 
       Object.keys(expectations).forEach(position => {
@@ -377,8 +377,8 @@ describe('Artist', () => {
         .init({
           skin: {},
           level: {
-            autoRun: true
-          }
+            autoRun: true,
+          },
         })
         .then(done)
         .catch(() => done());
@@ -400,9 +400,9 @@ describe('Artist', () => {
         .init({
           skin: {},
           level: {
-            autoRun: true
+            autoRun: true,
           },
-          containerId: 'artistContainer'
+          containerId: 'artistContainer',
         })
         .then(done)
         .catch(() => done());
@@ -440,11 +440,11 @@ describe('Artist', () => {
           },
           domToBlockSpace(blockspace, dom) {
             newDom = dom;
-          }
+          },
         },
         mainBlockSpace: {
-          clear() {}
-        }
+          clear() {},
+        },
       };
     });
 
@@ -458,7 +458,7 @@ describe('Artist', () => {
 
     it('adds moveTo block if initialX is set', () => {
       artist.level = {
-        initialX: 30
+        initialX: 30,
       };
       artist.prepareForRemix();
 
@@ -471,7 +471,7 @@ describe('Artist', () => {
     it('adds moveTo block if initialX and initialY are set', () => {
       artist.level = {
         initialX: 30,
-        initialY: 50
+        initialY: 50,
       };
       artist.prepareForRemix();
 
@@ -487,7 +487,7 @@ describe('Artist', () => {
 
     it('adds a moveTo block with 200 for the y coordinate if initialY is not specified in the level', () => {
       artist.level = {
-        initialX: 30
+        initialX: 30,
       };
       artist.prepareForRemix();
 
@@ -500,7 +500,7 @@ describe('Artist', () => {
     it('adds moveTo and turn blocks if initialX and startDirection are set', () => {
       artist.level = {
         initialX: 30,
-        startDirection: 45
+        startDirection: 45,
       };
       artist.prepareForRemix();
 
@@ -516,7 +516,7 @@ describe('Artist', () => {
 
     it('adds a whenRun block if none is present', () => {
       artist.level = {
-        initialX: 30
+        initialX: 30,
       };
       oldXml = '';
 
@@ -533,7 +533,7 @@ describe('Artist', () => {
 
     artist.evalCode('while(true) executionInfo.checkTimeout();', {
       ...DEFAULT_EXECUTION_INFO,
-      ticks: 10 // Declare an infinite loop after 10 ticks
+      ticks: 10, // Declare an infinite loop after 10 ticks
     });
 
     expect(alertStub).to.not.have.been.called;

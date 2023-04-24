@@ -44,7 +44,7 @@ export default class FreeResponse {
       response: response,
       valid: response.length > 0,
       result: true,
-      testResult: TestResults.FREE_PLAY
+      testResult: TestResults.FREE_PLAY,
     };
   }
 

@@ -30,7 +30,7 @@ function createNested() {
 const defaultProps = {
   elementType: defaultType,
   cacheKey: defaultKeys[0],
-  createElement: createDiv
+  createElement: createDiv,
 };
 
 const spy = sinon.spy(createDiv);

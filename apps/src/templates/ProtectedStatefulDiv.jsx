@@ -16,11 +16,11 @@ class ProtectedStatefulDiv extends React.Component {
   static propTypes = {
     contentFunction: PropTypes.func,
     children: PropTypes.node,
-    canUpdate: PropTypes.bool
+    canUpdate: PropTypes.bool,
   };
 
   static defaultProps = {
-    canUpdate: false
+    canUpdate: false,
   };
 
   shouldComponentUpdate() {
@@ -53,7 +53,7 @@ class ProtectedStatefulDiv extends React.Component {
           'contentFunction',
           'radiumConfigContext',
           'styleKeeperContext',
-          'canUpdate'
+          'canUpdate',
         ])}
         ref="root"
       />

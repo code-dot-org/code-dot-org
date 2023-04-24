@@ -13,9 +13,9 @@ describe('FieldEditor', () => {
       field: {
         name: 'field 1',
         type: 'int',
-        description: 'this is the first field'
+        description: 'this is the first field',
       },
-      updateField: updateSpy
+      updateField: updateSpy,
     };
   });
 

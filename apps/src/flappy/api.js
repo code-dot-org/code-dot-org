@@ -5,7 +5,7 @@ exports.FlapHeight = {
   SMALL: -8,
   NORMAL: -11,
   LARGE: -13,
-  VERY_LARGE: -15
+  VERY_LARGE: -15,
 };
 
 exports.LevelSpeed = {
@@ -13,7 +13,7 @@ exports.LevelSpeed = {
   SLOW: 3,
   NORMAL: 4,
   FAST: 6,
-  VERY_FAST: 8
+  VERY_FAST: 8,
 };
 
 exports.GapHeight = {
@@ -21,7 +21,7 @@ exports.GapHeight = {
   SMALL: 75,
   NORMAL: 100,
   LARGE: 125,
-  VERY_LARGE: 150
+  VERY_LARGE: 150,
 };
 
 exports.Gravity = {
@@ -29,7 +29,7 @@ exports.Gravity = {
   LOW: 0.75,
   NORMAL: 1,
   HIGH: 1.25,
-  VERY_HIGH: 1.5
+  VERY_HIGH: 1.5,
 };
 
 exports.random = function (values) {

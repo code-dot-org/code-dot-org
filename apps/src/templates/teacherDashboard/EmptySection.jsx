@@ -5,7 +5,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 export default class EmptySection extends React.Component {
   static propTypes = {
-    sectionId: PropTypes.number.isRequired
+    sectionId: PropTypes.number.isRequired,
   };
 
   render() {
@@ -15,7 +15,7 @@ export default class EmptySection extends React.Component {
       <div style={styles.text}>
         <SafeMarkdown
           markdown={i18n.emptySection({
-            url: `/teacher_dashboard/sections/${sectionId}/manage_students`
+            url: `/teacher_dashboard/sections/${sectionId}/manage_students`,
           })}
         />
       </div>
@@ -27,6 +27,6 @@ const styles = {
   text: {
     fontStyle: 'italic',
     textAlign: 'center',
-    paddingTop: 10
-  }
+    paddingTop: 10,
+  },
 };

@@ -12,11 +12,11 @@ class AddMultipleStudents extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
     // Provided by redux
-    addMultipleStudents: PropTypes.func.isRequired
+    addMultipleStudents: PropTypes.func.isRequired,
   };
 
   state = {
-    isDialogOpen: false
+    isDialogOpen: false,
   };
 
   openDialog = () => {
@@ -27,8 +27,8 @@ class AddMultipleStudents extends Component {
         study_group: 'manage-students-actions',
         event: 'add-students-button-click',
         data_json: JSON.stringify({
-          sectionId: this.props.sectionId
-        })
+          sectionId: this.props.sectionId,
+        }),
       },
       {includeUserId: true}
     );
@@ -47,8 +47,8 @@ class AddMultipleStudents extends Component {
         study_group: 'manage-students-actions',
         event: 'add-students-confirm',
         data_json: JSON.stringify({
-          sectionId: this.props.sectionId
-        })
+          sectionId: this.props.sectionId,
+        }),
       },
       {includeUserId: true}
     );
@@ -103,11 +103,11 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   textarea: {
-    width: '75%'
-  }
+    width: '75%',
+  },
 };
 
 export default connect(
@@ -115,6 +115,6 @@ export default connect(
   dispatch => ({
     addMultipleStudents(names) {
       dispatch(addMultipleAddRows(names));
-    }
+    },
   })
 )(AddMultipleStudents);

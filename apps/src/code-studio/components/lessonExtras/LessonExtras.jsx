@@ -17,7 +17,7 @@ export default class LessonExtras extends React.Component {
     bonusLevels: PropTypes.arrayOf(PropTypes.shape(lessonOfBonusLevels)),
     sectionId: PropTypes.number,
     userId: PropTypes.number,
-    showLessonExtrasWarning: PropTypes.bool
+    showLessonExtrasWarning: PropTypes.bool,
   };
 
   render() {
@@ -30,7 +30,7 @@ export default class LessonExtras extends React.Component {
       userId,
       showProjectWidget,
       projectTypes,
-      showLessonExtrasWarning
+      showLessonExtrasWarning,
     } = this.props;
 
     let nextMessage = i18n.extrasNextUnitOverview();
@@ -80,15 +80,15 @@ export default class LessonExtras extends React.Component {
 
 const styles = {
   header: {
-    fontSize: 24
+    fontSize: 24,
   },
   headerAndButton: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   button: {
-    margin: '10px 0px'
+    margin: '10px 0px',
   },
   subHeader: {
     fontSize: 24,
@@ -97,6 +97,6 @@ const styles = {
     fontWeight: 'normal',
     fontStyle: 'normal',
     paddingTop: 10,
-    paddingBottom: 20
-  }
+    paddingBottom: 20,
+  },
 };

@@ -5,7 +5,7 @@ import {shallow, mount} from 'enzyme';
 import * as expandableImages from '@cdo/apps/templates/utils/expandableImages';
 import EnhancedSafeMarkdown, {
   ExpandableImagesWrapper,
-  UnconnectedExpandableImagesWrapper
+  UnconnectedExpandableImagesWrapper,
 } from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {expect} from '../../util/reconfiguredChai';

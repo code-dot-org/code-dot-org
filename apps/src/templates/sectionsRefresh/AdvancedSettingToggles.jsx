@@ -12,7 +12,7 @@ export default function AdvancedSettingToggles({
   // these are currently hard coded into the parent component
   // TO DO: In the future we will want to make these dynamic based on the course
   assignedUnitTextToSpeechEnabled,
-  assignedUnitLessonExtrasAvailable
+  assignedUnitLessonExtrasAvailable,
 }) {
   const handlePairProgrammingToggle = e => {
     const updatedValue = !section.pairingAllowed;
@@ -98,5 +98,5 @@ AdvancedSettingToggles.propTypes = {
   section: PropTypes.object.isRequired,
   updateSection: PropTypes.func.isRequired,
   assignedUnitLessonExtrasAvailable: PropTypes.bool,
-  assignedUnitTextToSpeechEnabled: PropTypes.bool
+  assignedUnitTextToSpeechEnabled: PropTypes.bool,
 };
