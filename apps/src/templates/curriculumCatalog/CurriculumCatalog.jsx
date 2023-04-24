@@ -11,7 +11,7 @@ import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/Curricu
 const CurriculumCatalog = ({curriculaData, isEnglish}) => {
   const filterTypes = [
     {name: 'course', label: 'Course', options: ['CSA', 'CSD', 'CSP', 'CSF']},
-    {name: 'color', label: 'Color', options: ['Red', 'Blue', 'Green']}
+    {name: 'color', label: 'Color', options: ['Red', 'Blue', 'Green']},
   ];
 
   const getEmptyFilters = () => {
@@ -91,7 +91,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
                 display_name,
                 grade_levels,
                 school_subject,
-                cs_topic
+                cs_topic,
               }) => (
                 <CurriculumCatalogCard
                   key={key}
@@ -122,7 +122,7 @@ const FilterCheckboxDropdown = ({
   label,
   allOptions,
   checkedOptions,
-  onChange
+  onChange,
 }) => {
   return (
     <div id={`${name}-dropdown`} className="dropdown">
@@ -161,7 +161,7 @@ FilterCheckboxDropdown.propTypes = {
   label: PropTypes.string,
   allOptions: PropTypes.arrayOf(PropTypes.string),
   checkedOptions: PropTypes.arrayOf(PropTypes.string),
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
 };
 
 export default CurriculumCatalog;
