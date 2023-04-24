@@ -1,3 +1,13 @@
+/**
+ * ProjectManager manages loading and saving projects that have a source
+ * and channel component, and are indexed on a channel id (or other unique identifier).
+ * It accepts a sources and channels store, which handle communication with the relevant
+ * apis for loading and saving sources and channels.
+ *
+ * ProjectManager throttles saves to only occur once every 30 seconds, unless a force
+ * save is requested. If save is called within 30 seconds of the previous save,
+ * the save is queued and will be executed after the 30 second interval has passed.
+ */
 import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
 import {Project} from './types';
@@ -57,7 +67,7 @@ export default class ProjectManager {
     // ensure the project type is set on the channel
     channel.projectType = this.appOptionsStore.getProjectType();
     const project = {source, channel};
-    const blob = new Blob([JSON.stringify(project, null, 2)], {
+    const blob = new Blob([JSON.stringify(project)], {
       type: 'application/json',
     });
     return new Response(blob);

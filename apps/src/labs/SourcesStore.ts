@@ -11,7 +11,7 @@ export interface SourcesStore {
 export class LocalSourcesStore implements SourcesStore {
   load(key: string) {
     const source = {source: localStorage.getItem(key) || ''};
-    const blob = new Blob([JSON.stringify(source, null, 2)], {
+    const blob = new Blob([JSON.stringify(source)], {
       type: 'application/json',
     });
     return Promise.resolve(new Response(blob));

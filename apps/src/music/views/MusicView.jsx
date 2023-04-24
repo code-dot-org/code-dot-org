@@ -261,7 +261,7 @@ class UnconnectedMusicView extends React.Component {
   };
 
   clearCode = () => {
-    this.musicBlocklyWorkspace.resetCode();
+    this.musicBlocklyWorkspace.loadDefaultCode();
 
     this.setPlaying(false);
   };

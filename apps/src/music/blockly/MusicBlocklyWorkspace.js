@@ -347,8 +347,8 @@ export default class MusicBlocklyWorkspace {
     const projectResponse = await this.projectManager.load();
     if (!projectResponse.ok) {
       if (projectResponse.status === 404) {
-        // TODO: maybe rename resetCode?
-        this.resetCode();
+        // This is expected if the user has never saved before.
+        this.loadDefaultCode();
       }
 
       // TODO: Error handling
@@ -361,7 +361,7 @@ export default class MusicBlocklyWorkspace {
       const exitingCodeJson = JSON.parse(source.source);
       Blockly.serialization.workspaces.load(exitingCodeJson, this.workspace);
     } else {
-      this.resetCode();
+      this.loadDefaultCode();
     }
   }
 
@@ -373,7 +373,7 @@ export default class MusicBlocklyWorkspace {
     return this.projectManager.hasQueuedSave();
   }
 
-  resetCode() {
+  loadDefaultCode() {
     const defaultCodeFilename = 'defaultCode' + getBlockMode();
     const defaultCode = require(`@cdo/static/music/${defaultCodeFilename}.json`);
     Blockly.serialization.workspaces.load(defaultCode, this.workspace);
