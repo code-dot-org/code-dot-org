@@ -33,6 +33,12 @@ module Cdo
       @table.key?(name.to_sym)
     end
 
+    # Implement our own soft-freeze: Don't allow any config items to be
+    # created/modified, but allow stubbing for unit tests.
+    def freeze_config
+      @table.freeze
+    end
+
     #def respond_to_missing?(mid, include_private = false) # :nodoc:
     #  puts "respond_to_missing?(#{mid.inspect}, #{include_private.inspect})"
     #  mname = mid.to_s.chomp("=").to_sym
@@ -56,14 +62,6 @@ module Cdo
           raise!
         end
       end
-    end
-
-    # Soft-freeze: Don't allow any config items to be created/modified,
-    # but allow stubbing for unit tests.
-    def freeze
-      @frozen = true
-      @table.freeze
-      super
     end
 
     # Loads one or several sources into the merged configuration.
