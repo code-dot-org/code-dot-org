@@ -1,0 +1,7 @@
+**/.git
+i18n/locales/**
+**/node_modules
+apps/build
+dashboard/config/locales
+dashboard/tmp
+pegasus/sites.v3/code.org/public/minecraft
