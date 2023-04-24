@@ -73,7 +73,11 @@ class AnimationPicker extends React.Component {
     exitingDialog: false,
   };
 
-  onUploadClick = () => this.refs.uploader.openFileChooser();
+  onUploadClick = () => {
+    this.refs.uploader.openFileChooser();
+  };
+
+  handleGeneratedImageUpload = () => {};
 
   onClose = () => {
     // If the user has not selected any animations yet, close immediately
@@ -110,6 +114,7 @@ class AnimationPicker extends React.Component {
     return (
       <div>
         <AnimationPickerBody
+          channelId={this.props.channelId}
           onDrawYourOwnClick={this.props.onPickNewAnimation}
           onPickLibraryAnimation={this.props.onPickLibraryAnimation}
           onUploadClick={this.onUploadClick}
@@ -214,6 +219,7 @@ export default connect(
       dispatch(pickLibraryAnimation(animation));
     },
     onUploadStart(data) {
+      console.log('here is my data in onUploadStart', data);
       if (data.files[0].size >= MAX_UPLOAD_SIZE) {
         dispatch(handleUploadError(msg.animationPicker_unsupportedSize()));
       } else if (

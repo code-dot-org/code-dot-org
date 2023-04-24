@@ -269,7 +269,10 @@ export default class AnimationPickerBody extends React.Component {
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
         {generating ? (
-          <AnimationPickerImageGenerator />
+          <AnimationPickerImageGenerator
+            channelId={this.props.channelId}
+            onUploadClick={onUploadClick}
+          />
         ) : (
           <>
             <SearchBar

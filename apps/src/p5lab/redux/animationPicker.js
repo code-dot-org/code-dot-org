@@ -151,6 +151,7 @@ export function hide() {
  * @returns {{type: string, filename: string}}
  */
 export function beginUpload(filename) {
+  console.log('beginning upload with: ', filename);
   return {
     type: BEGIN_UPLOAD,
     filename: filename,
@@ -198,6 +199,11 @@ export function handleUploadComplete(result) {
     const isBackgroundMode =
       getState().interfaceMode === P5LabInterfaceMode.BACKGROUND;
     const {goal, uploadFilename} = getState().animationPicker;
+    console.log('in handleUploadComplete');
+    console.log('goal: ', goal);
+    console.log('uploadFilename: ', uploadFilename);
+    console.log('result: ', result);
+    console.log('result.filename', result.filename.replace(/\.png$/i, ''));
     const key = result.filename.replace(/\.png$/i, '');
     const sourceUrl = animationsApi.basePath(key + '.png');
 
