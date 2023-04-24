@@ -123,6 +123,24 @@ es-MX:
           title: Principios de Ciencias de la Computación ('20-'21)
           version_title: "'20-'21"
           description_short: Aprende conceptos fundamentales de Ciencias de la Computación.
+          description_student: En 2016, el College Board lanzó su curso AP® más reciente,
+            Principios de Informática AP. Para el curso escolar 2020-21 han realizado
+            importantes actualizaciones en el marco del curso. CSP introduce a los
+            estudiantes a los conceptos fundamentales de la informática y los desafía
+            a explorar cómo la informática y la tecnología pueden impactar en el mundo.
+            El Programa AP diseñó Principios de Ciencias de la Computación AP con
+            el objetivo de crear líderes en los campos de ciencias de la computación
+            y atraer e involucrar a aquellos que tradicionalmente están subrepresentados
+            con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+          description_teacher: En 2016, el College Board lanzó su curso AP® más reciente,
+            Principios de Informática AP. Para el curso escolar 2020-21 han realizado
+            importantes actualizaciones en el marco del curso. CSP introduce a los
+            estudiantes a los conceptos fundamentales de la informática y los desafía
+            a explorar cómo la informática y la tecnología pueden impactar en el mundo.
+            El Programa AP diseñó Principios de Ciencias de la Computación AP con
+            el objetivo de crear líderes en los campos de ciencias de la computación
+            y atraer e involucrar a aquellos que tradicionalmente están subrepresentados
+            con herramientas informáticas esenciales y oportunidades multidisciplinarias.
         csd-2020:
           title: Descubrimientos de Ciencias de la Computación ('20-'21)
           version_title: "'20-'21"
@@ -139,6 +157,20 @@ es-MX:
         csp-2021:
           title: Principios de Informática ('21-'22)
           description_short: Aprende conceptos fundamentales de Ciencias de la Computación.
+          description_student: CSP introduce a los estudiantes a los conceptos fundamentales
+            de la informática y los desafía a explorar cómo la informática y la tecnología
+            pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática
+            con el objetivo de crear líderes en los campos de la informática y atraer
+            e involucrar a aquellos que tradicionalmente están subrepresentados con
+            herramientas informáticas esenciales y oportunidades multidisciplinares.
+          description_teacher: |-
+            CSP introduce a los estudiantes en los conceptos fundamentales de la informática y les desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática con el objetivo de crear líderes en los campos de la informática y atraer e involucrar a aquellos que tradicionalmente están poco representados con herramientas informáticas esenciales y oportunidades multidisciplinares.
+
+            \*\*¿Sabías que...?
+
+            -   El desarrollo profesional está disponible para ayudarte en los primeros pasos de la enseñanza de los Principios de Informática. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Pulsa aquí</a> para saber más sobre las oportunidades de aprendizaje profesional en tu zona o <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">pulsa aquí</a> para obtener más información sobre la opción de autoaprendizaje en línea.
+
+            -   Puedes encontrar la _Guía del Plan de Estudios_, el _Vocabulario del Curso_ y otros recursos que te ayudarán a poner en práctica este plan de estudios en el menú de Recursos para el Profesor que aparece a continuación
           version_title: "'21-'22"
         csd-2021:
           title: Descubrimientos de Ciencias de la Computación ('21-'22)
@@ -159,6 +191,8 @@ es-MX:
 
             -   Puedes encontrar la _Guía Curricular_, _Guía de Iniciación_, _Guía de Evaluación_, y muchos otros recursos para ayudarte a implementar este plan de estudios en el menú de Recursos para Docentes a continuación
           version_title: "'21-'22"
+        csa-pilot:
+          title: Piloto de la CSA
         mike-test:
           title: Fundamentos de la informática
         self-paced-pl-csd-2021:
@@ -170,6 +204,20 @@ es-MX:
           title: Organizadores del Proyecto Piloto CSA
         csp-2022:
           description_short: Aprende conceptos fundamentales de Ciencias de la Computación.
+          description_student: CSP introduce a los estudiantes a los conceptos fundamentales
+            de la informática y los desafía a explorar cómo la informática y la tecnología
+            pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática
+            con el objetivo de crear líderes en los campos de la informática y atraer
+            e involucrar a aquellos que tradicionalmente están subrepresentados con
+            herramientas informáticas esenciales y oportunidades multidisciplinares.
+          description_teacher: |-
+            CSP introduce a los estudiantes en los conceptos fundamentales de la informática y les desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática con el objetivo de crear líderes en los campos de la informática y atraer e involucrar a aquellos que tradicionalmente están poco representados con herramientas informáticas esenciales y oportunidades multidisciplinares.
+
+            \*\*¿Sabías que...?
+
+            -   El desarrollo profesional está disponible para ayudarte en los primeros pasos de la enseñanza de los Principios de Informática. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Pulsa aquí</a> para saber más sobre las oportunidades de aprendizaje profesional en tu zona o <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">pulsa aquí</a> para obtener más información sobre la opción de autoaprendizaje en línea.
+
+            -   Puedes encontrar la _Guía del Plan de Estudios_, el _Vocabulario del Curso_ y otros recursos que te ayudarán a poner en práctica este plan de estudios en el menú de Recursos para el Profesor que aparece a continuación
         vpl-csd-summer-pilot-2022:
           title: 'Descubrimientos de las Ciencias de la Computació: Taller de Verano
             Virtual '
@@ -237,6 +285,20 @@ es-MX:
             -   **Elija su contenido:** El contenido de este curso de aprendizaje profesional está organizado en base a la progresión sugerida para profesores nuevos en Code.org y Descubrimientos CS. Sin embargo, puede **interactuar con el contenido en el orden que mejor se adapte a su horario.** Recomendamos a todos los profesores **comenzar con la breve unidad de bienvenida** para obtener más información sobre el curso antes de comenzar.
         csp-2023:
           description_short: Aprende conceptos fundamentales de Ciencias de la Computación.
+          description_student: CSP introduce a los estudiantes a los conceptos fundamentales
+            de la informática y los desafía a explorar cómo la informática y la tecnología
+            pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática
+            con el objetivo de crear líderes en los campos de la informática y atraer
+            e involucrar a aquellos que tradicionalmente están subrepresentados con
+            herramientas informáticas esenciales y oportunidades multidisciplinares.
+          description_teacher: |-
+            CSP introduce a los estudiantes en los conceptos fundamentales de la informática y les desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática con el objetivo de crear líderes en los campos de la informática y atraer e involucrar a aquellos que tradicionalmente están poco representados con herramientas informáticas esenciales y oportunidades multidisciplinares.
+
+            \*\*¿Sabías que...?
+
+            -   El desarrollo profesional está disponible para ayudarte en los primeros pasos de la enseñanza de los Principios de Informática. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Pulsa aquí</a> para saber más sobre las oportunidades de aprendizaje profesional en tu zona o <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">pulsa aquí</a> para obtener más información sobre la opción de autoaprendizaje en línea.
+
+            -   Puedes encontrar la _Guía del Plan de Estudios_, el _Vocabulario del Curso_ y otros recursos que te ayudarán a poner en práctica este plan de estudios en el menú de Recursos para el Profesor que aparece a continuación
         self-paced-pl-csa-2023:
           title: autodidáctico-pl-csa
         csd-2023:
@@ -266,6 +328,7 @@ es-MX:
         name: CSD Guía Curricular
       csd_guide_to_assessment/csd/2022:
         name: CSD Guía de Evaluacíon
+        url: https://docs.google.com/document/d/10OAqq0ecEAHsSy37l_h7-H3EGh5LE_gi/view
       csd_guide_to_debugging/csd/2022:
         name: CSD Guía para la Depuración
       csd_guide_to_differentiation/csd/2022:
@@ -277,6 +340,7 @@ es-MX:
         name: CSD Guía de Implementación
       csd_learning_frameworks/csd/2022:
         name: CSD Entorno de Aprendizaje
+        url: https://docs.google.com/document/d/1HgFqY7I4wyUSK9cWMk4vuAvWZ7OcdH9c/view
       csd_programming_levels_guide/csd/2022:
         name: CSD Guía de Niveles de Programación
       curriculum/csd/2019:
@@ -303,6 +367,7 @@ es-MX:
         name: CSD Guía Curricular
       csd_guide_to_assessment/csd/2021:
         name: CSD Guía de Evaluacíon
+        url: https://docs.google.com/document/d/10OAqq0ecEAHsSy37l_h7-H3EGh5LE_gi/view
       csd_guide_to_debugging/csd/2021:
         name: CSD Guía para la Depuración
       csd_guide_to_differentiation/csd/2021:
@@ -314,6 +379,7 @@ es-MX:
         name: CSD Guía de Implementación
       getting_started_with_csd/csd/2021:
         name: Primeros pasos con CSD
+        url: https://docs.google.com/document/d/1jwPgmlorztdxnVUChhNjE32V651ZWFDs/view
       curriculum/csd/2018:
         name: Plan de estudios
       teacher_forum_6/csd/2018:
