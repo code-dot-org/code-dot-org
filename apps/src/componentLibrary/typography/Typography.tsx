@@ -22,7 +22,7 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
   visualAppearance,
   children,
   className,
-  style
+  style,
 }) => {
   const Tag = semanticTag;
 
