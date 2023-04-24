@@ -134,7 +134,7 @@ export class WorkshopForm extends React.Component {
       virtual: false,
       suppress_email: false,
       third_party_provider: null,
-      cannotChangeIfWorkshopVirtual: false
+      cannotChangeIfWorkshopVirtual: false,
     };
 
     if (props.workshop) {
@@ -275,7 +275,7 @@ export class WorkshopForm extends React.Component {
       sessionsModified: true,
       sessions,
       destroyedSessions,
-      cannotChangeIfWorkshopVirtual: cannotChangeIfWorkshopVirtual
+      cannotChangeIfWorkshopVirtual: cannotChangeIfWorkshopVirtual,
     });
   };
 
@@ -795,7 +795,7 @@ export class WorkshopForm extends React.Component {
       funded: '',
       funding_type: null,
       suppress_email: false,
-      cannotChangeIfWorkshopVirtual: cannotChangeIfWorkshopVirtual
+      cannotChangeIfWorkshopVirtual: cannotChangeIfWorkshopVirtual,
     });
     this.loadAvailableFacilitators(course);
   };
@@ -810,7 +810,7 @@ export class WorkshopForm extends React.Component {
       );
 
     this.setState({
-      cannotChangeIfWorkshopVirtual: cannotChangeIfWorkshopVirtual
+      cannotChangeIfWorkshopVirtual: cannotChangeIfWorkshopVirtual,
     });
 
     if (
@@ -1220,7 +1220,7 @@ SelectIsVirtual.propTypes = {
   value: PropTypes.string.isRequired,
   readOnly: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
-  showVirtualOptions: PropTypes.bool.isRequired
+  showVirtualOptions: PropTypes.bool.isRequired,
 };
 
 const SelectSuppressEmail = ({value, readOnly, onChange}) => (

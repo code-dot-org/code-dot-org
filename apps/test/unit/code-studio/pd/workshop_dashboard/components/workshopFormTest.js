@@ -5,7 +5,7 @@ import {Factory} from 'rosie';
 import {FormControl} from 'react-bootstrap';
 import Permission, {
   WorkshopAdmin,
-  ProgramManager
+  ProgramManager,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 import {WorkshopForm} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_form';
 import '../workshopFactory';
