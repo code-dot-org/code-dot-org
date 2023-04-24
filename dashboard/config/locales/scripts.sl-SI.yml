@@ -433,6 +433,8 @@ sl:
               display_name: Pregled
             content:
               display_name: Vsebina
+        aquatic:
+          name: vodni
         cspplayground:
           lesson_groups:
             csp_variables:
