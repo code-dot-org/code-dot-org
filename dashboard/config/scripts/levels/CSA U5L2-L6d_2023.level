@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "Land plots in a small district are represented as a 2D array with three rows and three columns, where each position in the array is assigned the number of floors in a building.\r\n\r\n🎒 **IMPORT:** Import your <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PainterPlus</code> class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO #1:** A new regulation requires swapping the number of floors between the first and last buildings in the first row. In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Community</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">swapFloors()</code> method to swap the values in the first and last positions of the first row in the 2D array <code style=\"background-color: #ececec; color: black; font-weight: bold;\">landPlots</code>.\r\n\r\n✅ **TO DO #2:** The city council wants to add a new community center in the middle of the second row. Its number of floors should be determined by the sum of the first building in the first row and the last building in the last row. In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Community</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">setCommunityCenter()</code> method to find find the sum of the first building in the first row and the last building in the last row and assign the result to the center position of the 2D array <code style=\"background-color: #ececec; color: black; font-weight: bold;\">landPlots</code>.\r\n\r\n✅ **TO DO #3:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">CommunityRunner</code> class,\r\n\r\n1. Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">swapFloors()</code> method and print the updated 2D array using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">landToString()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Community</code> class.\r\n\r\n2. Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">setCommunityCenter()</code> method and print the updated 2D array using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">landToString()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Community</code> class.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with accessing and modifying elements in a two-dimensional (2D) array.\r\n</div>",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -14,16 +14,22 @@
         "tabOrder": 0
       }
     },
+    "video_key": "csa_working_with_2d_array_elements",
     "encrypted_examples": [
 
     ],
-    "video_key": "csa_working_with_2d_array_elements"
+    "reference_links": [
+      "/courses/csa-2023/guides/two-dimensional-arrays"
+    ],
+    "display_name": "Community Modifications",
+    "bubble_choice_description": "Land plots in a small district are represented as a 2D array with three rows and three columns, where each position in the array is assigned the number of floors in a building.",
+    "thumbnail_url": "https://images.code.org/54361502c4d272a3c581a60e4ccaf2c9-land.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-03-27T23:46:12.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-03-27T23:46:12.978+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L6c_2023\\\"\"],\"cloned_from\":\"CSA U5L2-L6c_2023\"},{\"changed_at\":\"2023-03-27 23:46:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:41:31 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-27T23:46:12.978+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L6c_2023\\\"\"],\"cloned_from\":\"CSA U5L2-L6c_2023\"},{\"changed_at\":\"2023-03-27 23:46:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:41:31 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 20:55:17 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

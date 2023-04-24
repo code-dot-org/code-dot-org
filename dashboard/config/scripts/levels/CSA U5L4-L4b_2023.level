@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "An airline reservation system stores the availability of seats in a 2D array, where each row represents a row of seats and each column represents a specific seat in that row (e.g., window, aisle, or middle seat).\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Plane</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">updateMiddleSeat()</code> method to traverse the 2D array <code style=\"background-color: #ececec; color: black; font-weight: bold;\">seats</code> in column-major order and upgrade the first available middle seat to a window seat if one is available.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PlaneRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">updateMiddleSeat()</code> method and print the updated 2D array using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">seatsToString()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Plane</code> class.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with traversing a two-dimensional (2D) array in column-major order.\r\n</div>",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -14,16 +14,22 @@
         "tabOrder": 0
       }
     },
+    "video_key": "csa_column_major_traversal",
     "encrypted_examples": [
 
     ],
-    "video_key": "csa_column_major_traversal"
+    "reference_links": [
+      "/courses/csa-2023/guides/two-dimensional-arrays"
+    ],
+    "display_name": "Flight Seat Upgrade",
+    "bubble_choice_description": "Upgrade the first available middle seat to a window seat if one is available.",
+    "thumbnail_url": "https://images.code.org/34683329ab3c43adf0be22021db79d5f-plane.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-03-27T23:53:36.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-03-27T23:53:36.961+00:00\",\"changed\":[\"cloned from \\\"CSA U5L4-L4a_2023\\\"\"],\"cloned_from\":\"CSA U5L4-L4a_2023\"},{\"changed_at\":\"2023-03-27 23:53:38 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:45:04 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-27T23:53:36.961+00:00\",\"changed\":[\"cloned from \\\"CSA U5L4-L4a_2023\\\"\"],\"cloned_from\":\"CSA U5L4-L4a_2023\"},{\"changed_at\":\"2023-03-27 23:53:38 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:45:04 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 23:42:04 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

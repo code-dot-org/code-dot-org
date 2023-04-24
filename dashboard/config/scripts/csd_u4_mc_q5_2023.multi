@@ -1,7 +1,7 @@
 name 'CSD U4 MC Q5_2023'
 title 'Question 1'
 type 'multi2'
-question 'In which of these scenarios would the best input element be a button? (Select all that apply)'
+question 'In which of these scenarios would the best input element be a button? (*Select two*)'
 wrong 'Input username'
 right 'Move to the next screen'
 wrong 'Adjust the brightness of the colors in the app'
