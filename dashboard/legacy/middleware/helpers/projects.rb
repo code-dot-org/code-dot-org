@@ -17,10 +17,7 @@ class Projects
   end
 
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
-    puts "in projects.rb create"
-    puts "type is #{type}"
     project_type = type || (level && Projects.get_project_type_for_level(level))
-    puts "project_type is #{project_type}"
     timestamp = DateTime.now
     row = {
       storage_id: @storage_id,
@@ -29,7 +26,7 @@ class Projects
       updated_at: timestamp,
       updated_ip: ip,
       abuse_score: 0,
-      project_type: type,
+      project_type: project_type,
       published_at: published_at,
       remix_parent_id: remix_parent_id,
       skip_content_moderation: false,
