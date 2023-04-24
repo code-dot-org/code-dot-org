@@ -99,7 +99,6 @@ class AddMultipleStudents extends Component {
   }
 }
 
-// prettier-ignore
 const styles = {
   dialog: {
     paddingLeft: 20,
