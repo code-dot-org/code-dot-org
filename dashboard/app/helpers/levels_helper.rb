@@ -88,7 +88,8 @@ module LevelsHelper
   # Otherwise, gets the storage_id associated with the (potentially signed out)
   # current user, and either finds or creates a channel for the level
   def get_channel_for(level, script_id = nil, user = nil)
-    puts "in get_channel_for, user: #{user}"
+    puts "in get_channel_for, user id: #{user&.id}"
+    puts "in get_channel_for, level name: #{level.name}, level app: #{level.game.app}"
     if user
       # "answers" are in the channel so instead of doing
       # set_level_source to load answers when looking at another user,

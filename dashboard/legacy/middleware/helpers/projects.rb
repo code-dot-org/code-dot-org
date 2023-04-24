@@ -16,9 +16,11 @@ class Projects
     @table = Projects.table
   end
 
-  def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true)
+  def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
     puts "in projects.rb create"
     puts "type is #{type}"
+    project_type = type || (level && Projects.get_project_type_for_level(level))
+    puts "project_type is #{project_type}"
     timestamp = DateTime.now
     row = {
       storage_id: @storage_id,
@@ -355,6 +357,7 @@ class Projects
 
   # Given a level, get the project type for that level.
   def self.get_project_type_for_level(level)
+    return nil unless level
     app = level.game.app
     case app
     when 'applab', 'calc', 'dance', 'eval', 'flappy', 'weblab', 'gamelab', 'thebadguys', 'javalab'
