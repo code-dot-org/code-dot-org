@@ -253,7 +253,7 @@ export function lessonProgressForSection(sectionLevelProgress, lessons) {
 }
 
 /**
- * The level object passed down to use via the server (and stored in
+ * The level object passed down to us via the server (and stored in
  * script.lessons.levels) contains more data than we need. This parses the parts
  * we care about to conform to our `levelType` object.
  */
@@ -262,6 +262,7 @@ export const processedLevel = level => {
     id: level.activeId || level.id,
     url: level.url,
     name: level.name,
+    app: level.app,
     progression: level.progression,
     progressionDisplayName: level.progression_display_name,
     kind: level.kind,

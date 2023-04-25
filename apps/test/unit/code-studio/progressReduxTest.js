@@ -25,7 +25,7 @@ import reducer, {
   __testonly__,
 } from '@cdo/apps/code-studio/progressRedux';
 
-// This is some sample lesson data taken a course. I truncated to the first two
+// This is some sample lesson data taken from a course. I truncated to the first two
 // lessons, and also truncated the second lesson to the first 3 levels
 const lessonData = [
   // lesson 1
@@ -53,6 +53,7 @@ const lessonData = [
         bonus: false,
         display_as_unplugged: true,
         sublevels: [],
+        app: 'maze',
       },
       {
         ids: ['323'],
@@ -67,6 +68,7 @@ const lessonData = [
         bonus: false,
         display_as_unplugged: false,
         sublevels: [],
+        app: 'maze',
       },
       {
         ids: ['322'],
@@ -82,6 +84,7 @@ const lessonData = [
         bonus: true,
         display_as_unplugged: false,
         sublevels: [],
+        app: 'maze',
       },
     ],
     lesson_plan_html_url:
@@ -116,6 +119,7 @@ const lessonData = [
         bonus: false,
         display_as_unplugged: false,
         sublevels: [],
+        app: 'maze',
       },
       {
         ids: ['339'],
@@ -129,6 +133,7 @@ const lessonData = [
         bonus: false,
         display_as_unplugged: false,
         sublevels: [],
+        app: 'maze',
       },
       {
         ids: ['341'],
@@ -142,6 +147,7 @@ const lessonData = [
         bonus: false,
         display_as_unplugged: false,
         sublevels: [],
+        app: 'maze',
       },
     ],
     lesson_plan_html_url:
@@ -583,6 +589,7 @@ describe('progressReduxTest', () => {
             bonus: false,
             sublevels: [],
             teacherFeedbackReviewState: null,
+            app: 'maze',
           },
           {
             id: '323',
@@ -604,6 +611,7 @@ describe('progressReduxTest', () => {
             bonus: false,
             sublevels: [],
             teacherFeedbackReviewState: null,
+            app: 'maze',
           },
           {
             id: '322',
@@ -625,6 +633,7 @@ describe('progressReduxTest', () => {
             bonus: true,
             sublevels: [],
             teacherFeedbackReviewState: null,
+            app: 'maze',
           },
         ],
         [
@@ -648,6 +657,7 @@ describe('progressReduxTest', () => {
             bonus: false,
             sublevels: [],
             teacherFeedbackReviewState: null,
+            app: 'maze',
           },
           {
             id: '339',
@@ -669,6 +679,7 @@ describe('progressReduxTest', () => {
             bonus: false,
             sublevels: [],
             teacherFeedbackReviewState: null,
+            app: 'maze',
           },
           {
             id: '341',
@@ -690,6 +701,7 @@ describe('progressReduxTest', () => {
             bonus: false,
             sublevels: [],
             teacherFeedbackReviewState: null,
+            app: 'maze',
           },
         ],
       ];
