@@ -377,4 +377,14 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_response :redirect
     assert @response.headers['Location'].ends_with? '/edit?enableMaker=true'
   end
+
+  test 'get_or_create_for_level creates new channel if none exists' do
+    puts "hi"
+    level = create(:level)
+    puts "about to make request"
+    get :get_or_create_for_level, params: {level_id: level.id}
+    puts "made request"
+    puts @response
+    assert_response :success
+  end
 end
