@@ -13,7 +13,7 @@ export const playSoundAtCurrentLocation = {
     nextStatement: null,
     colour: 230,
     tooltip: 'play sound',
-    helpUrl: ''
+    helpUrl: '',
   },
   generator: ctx =>
     'MusicPlayer.playSoundAtMeasureById("' +
@@ -22,7 +22,7 @@ export const playSoundAtCurrentLocation = {
     'currentMeasureLocation' +
     ', ' +
     (isBlockInsideWhenRun(ctx) ? 'true' : 'false') +
-    ');\n'
+    ');\n',
 };
 
 export const setCurrentLocationNextMeasure = {
@@ -34,7 +34,7 @@ export const setCurrentLocationNextMeasure = {
     nextStatement: null,
     style: 'lab_blocks',
     tooltip: 'go to next measure',
-    helpUrl: ''
+    helpUrl: '',
   },
-  generator: ctx => 'currentMeasureLocation++\n'
+  generator: ctx => 'currentMeasureLocation++\n',
 };

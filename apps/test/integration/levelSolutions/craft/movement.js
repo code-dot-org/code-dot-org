@@ -27,35 +27,36 @@ module.exports = {
     }).toString(),
     requiredBlocks: '',
     ideal: 3,
-    freePlay: false
+    freePlay: false,
   },
   tests: [
     {
       description: 'walk forward next to sheep',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       xml:
         '<xml>' +
         blockUtils.blocksFromList(['craft_moveForward', 'craft_moveForward']) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'walk forward turn right',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
-      xml: '<xml><block type="craft_moveForward"><next><block type="craft_turn"><title name="DIR">right</title></block></next></block></xml>'
+      xml: '<xml><block type="craft_moveForward"><next><block type="craft_turn"><title name="DIR">right</title></block></next></block></xml>',
     },
     {
       description: 'walk forward with too few blocks to reach sheep',
       expected: {
         result: false,
-        testResult: TestResults.TOO_FEW_BLOCKS_FAIL
+        testResult: TestResults.TOO_FEW_BLOCKS_FAIL,
       },
-      xml: '<xml>' + blockUtils.blocksFromList(['craft_moveForward']) + '</xml>'
-    }
-  ]
+      xml:
+        '<xml>' + blockUtils.blocksFromList(['craft_moveForward']) + '</xml>',
+    },
+  ],
 };

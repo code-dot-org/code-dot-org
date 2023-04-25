@@ -37,11 +37,11 @@ function installPlus(blockly, generator, gensym) {
         blockly.BlockValueType.NUMBER,
         [
           {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
-          {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
+          {name: 'ARG2', type: blockly.BlockValueType.NUMBER},
         ],
         {titleFontSize: ARITHMETIC_TITLE_FONT_SIZE}
       );
-    }
+    },
   };
 
   generator.functional_plus = function () {
@@ -61,11 +61,11 @@ function installMinus(blockly, generator, gensym) {
         blockly.BlockValueType.NUMBER,
         [
           {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
-          {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
+          {name: 'ARG2', type: blockly.BlockValueType.NUMBER},
         ],
         {titleFontSize: ARITHMETIC_TITLE_FONT_SIZE}
       );
-    }
+    },
   };
 
   generator.functional_minus = function () {
@@ -85,11 +85,11 @@ function installTimes(blockly, generator, gensym) {
         blockly.BlockValueType.NUMBER,
         [
           {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
-          {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
+          {name: 'ARG2', type: blockly.BlockValueType.NUMBER},
         ],
         {titleFontSize: ARITHMETIC_TITLE_FONT_SIZE}
       );
-    }
+    },
   };
 
   generator.functional_times = function () {
@@ -109,11 +109,11 @@ function installDividedBy(blockly, generator, gensym) {
         blockly.BlockValueType.NUMBER,
         [
           {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
-          {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
+          {name: 'ARG2', type: blockly.BlockValueType.NUMBER},
         ],
         {titleFontSize: ARITHMETIC_TITLE_FONT_SIZE}
       );
-    }
+    },
   };
 
   generator.functional_dividedby = function () {
@@ -135,10 +135,10 @@ function installGreaterThan(blockly, generator, gensym) {
         blockly.BlockValueType.BOOLEAN,
         [
           {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
-          {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
+          {name: 'ARG2', type: blockly.BlockValueType.NUMBER},
         ]
       );
-    }
+    },
   };
 
   generator.functional_greater_than = function () {
@@ -158,10 +158,10 @@ function installLessThan(blockly, generator, gensym) {
         blockly.BlockValueType.BOOLEAN,
         [
           {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
-          {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
+          {name: 'ARG2', type: blockly.BlockValueType.NUMBER},
         ]
       );
-    }
+    },
   };
 
   generator.functional_less_than = function () {
@@ -181,10 +181,10 @@ function installNumberEquals(blockly, generator, gensym) {
         blockly.BlockValueType.BOOLEAN,
         [
           {name: 'ARG1', type: blockly.BlockValueType.NUMBER},
-          {name: 'ARG2', type: blockly.BlockValueType.NUMBER}
+          {name: 'ARG2', type: blockly.BlockValueType.NUMBER},
         ]
       );
-    }
+    },
   };
 
   generator.functional_number_equals = function () {
@@ -204,10 +204,10 @@ function installStringEquals(blockly, generator, gensym) {
         blockly.BlockValueType.BOOLEAN,
         [
           {name: 'ARG1', type: blockly.BlockValueType.STRING},
-          {name: 'ARG2', type: blockly.BlockValueType.STRING}
+          {name: 'ARG2', type: blockly.BlockValueType.STRING},
         ]
       );
-    }
+    },
   };
 
   generator.functional_string_equals = function () {
@@ -229,10 +229,10 @@ function installLogicalAnd(blockly, generator, gensym) {
         blockly.BlockValueType.BOOLEAN,
         [
           {name: 'ARG1', type: blockly.BlockValueType.BOOLEAN},
-          {name: 'ARG2', type: blockly.BlockValueType.BOOLEAN}
+          {name: 'ARG2', type: blockly.BlockValueType.BOOLEAN},
         ]
       );
-    }
+    },
   };
 
   generator.functional_logical_and = function () {
@@ -252,10 +252,10 @@ function installLogicalOr(blockly, generator, gensym) {
         blockly.BlockValueType.BOOLEAN,
         [
           {name: 'ARG1', type: blockly.BlockValueType.BOOLEAN},
-          {name: 'ARG2', type: blockly.BlockValueType.BOOLEAN}
+          {name: 'ARG2', type: blockly.BlockValueType.BOOLEAN},
         ]
       );
-    }
+    },
   };
 
   generator.functional_logical_or = function () {
@@ -275,7 +275,7 @@ function installLogicalNot(blockly, generator, gensym) {
         blockly.BlockValueType.BOOLEAN,
         [{name: 'ARG1', type: blockly.BlockValueType.BOOLEAN}]
       );
-    }
+    },
   };
 
   generator.functional_logical_not = function () {
@@ -290,7 +290,7 @@ function installBoolean(blockly, generator, gensym) {
     init: function () {
       this.setFunctional(true, {
         headerHeight: 0,
-        rowBuffer: 3
+        rowBuffer: 3,
       });
       Blockly.cdoUtils.setHSV(
         this,
@@ -301,12 +301,12 @@ function installBoolean(blockly, generator, gensym) {
         .appendField(new blockly.FieldDropdown(values), 'VAL')
         .setAlign(Blockly.ALIGN_CENTRE);
       this.setFunctionalOutput(true, blockly.BlockValueType.BOOLEAN);
-    }
+    },
   };
 
   blockly.Blocks.functional_boolean.VALUES = [
     [msg.booleanTrue(), 'true'],
-    [msg.booleanFalse(), 'false']
+    [msg.booleanFalse(), 'false'],
   ];
 
   generator.functional_boolean = function () {
@@ -320,7 +320,7 @@ function installMathNumber(blockly, generator, gensym) {
     init: function () {
       this.setFunctional(true, {
         headerHeight: 0,
-        rowBuffer: 3
+        rowBuffer: 3,
       });
       Blockly.cdoUtils.setHSV(
         this,
@@ -336,7 +336,7 @@ function installMathNumber(blockly, generator, gensym) {
         )
         .setAlign(Blockly.ALIGN_CENTRE);
       this.setFunctionalOutput(true, blockly.BlockValueType.NUMBER);
-    }
+    },
   };
 
   generator.functional_math_number = function () {
@@ -348,7 +348,7 @@ function installMathNumber(blockly, generator, gensym) {
     init: function () {
       this.setFunctional(true, {
         headerHeight: 0,
-        rowBuffer: 3
+        rowBuffer: 3,
       });
       Blockly.cdoUtils.setHSV(
         this,
@@ -358,7 +358,7 @@ function installMathNumber(blockly, generator, gensym) {
         .appendField(new Blockly.FieldDropdown(), 'NUM')
         .setAlign(Blockly.ALIGN_CENTRE);
       this.setFunctionalOutput(true, blockly.BlockValueType.NUMBER);
-    }
+    },
   };
 
   generator.functional_math_number_dropdown = generator.functional_math_number;
@@ -369,7 +369,7 @@ function installString(blockly, generator) {
     init: function () {
       this.setFunctional(true, {
         headerHeight: 0,
-        rowBuffer: 3
+        rowBuffer: 3,
       });
       Blockly.cdoUtils.setHSV(
         this,
@@ -381,7 +381,7 @@ function installString(blockly, generator) {
         .appendField(new Blockly.FieldLabel('"'))
         .setAlign(Blockly.ALIGN_CENTRE);
       this.setFunctionalOutput(true, blockly.BlockValueType.STRING);
-    }
+    },
   };
 
   generator.functional_string = function () {
@@ -399,7 +399,7 @@ function installSqrt(blockly, generator) {
         'Number',
         [{name: 'ARG1', type: 'Number'}]
       );
-    }
+    },
   };
 
   generator.functional_sqrt = function () {
@@ -418,10 +418,10 @@ function installPow(blockly, generator) {
         'Number',
         [
           {name: 'ARG1', type: 'Number'},
-          {name: 'ARG2', type: 'Number'}
+          {name: 'ARG2', type: 'Number'},
         ]
       );
-    }
+    },
   };
 
   generator.functional_pow = function () {
@@ -441,7 +441,7 @@ function installSquared(blockly, generator) {
         'Number',
         [{name: 'ARG1', type: 'Number'}]
       );
-    }
+    },
   };
 
   generator.functional_squared = function () {
@@ -461,7 +461,7 @@ function installCond(blockly, generator) {
     Blockly.BlockValueType.NUMBER,
     Blockly.BlockValueType.STRING,
     Blockly.BlockValueType.IMAGE,
-    Blockly.BlockValueType.BOOLEAN
+    Blockly.BlockValueType.BOOLEAN,
   ];
 
   // Generates the following blocks:
@@ -486,11 +486,11 @@ function installCondForType(blockly, generator, type) {
     init: function () {
       this.pairs_ = [];
       this.setFunctional(true, {
-        headerHeight: 30
+        headerHeight: 30,
       });
 
       var options = {
-        fixedSize: {height: 35}
+        fixedSize: {height: 35},
       };
       Blockly.cdoUtils.setHSV(this, ...Blockly.FunctionalTypeColors[type]);
 
@@ -630,7 +630,7 @@ function installCondForType(blockly, generator, type) {
           this.removeConditionalRow(i);
         }
       }
-    }
+    },
   };
 
   /**

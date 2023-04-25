@@ -28,7 +28,7 @@ _.extend(window.levelbuilder, {
   initializeBlockPreview: require('@cdo/apps/code-studio/initializeBlockPreview'),
   jsonEditor: require('@cdo/apps/code-studio/jsonEditor'),
   acapela: require('@cdo/apps/code-studio/acapela'),
-  ajaxSubmit: require('@cdo/apps/code-studio/ajaxSubmit')
+  ajaxSubmit: require('@cdo/apps/code-studio/ajaxSubmit'),
 });
 
 window.levelbuilder.installBlocks = function (app, blockly, options) {

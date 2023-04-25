@@ -18,9 +18,9 @@ const DEFAULT_PROPS = {
     body: 'Descriptive information..',
     buttonUrl: '/takemehere',
     buttonText: 'Click me',
-    buttonId: 'announcement-button'
+    buttonId: 'announcement-button',
   },
-  marginBottom: '20px'
+  marginBottom: '20px',
 };
 
 const store = createStore(combineReducers({isRtl, responsive}));
@@ -101,8 +101,8 @@ describe('MarketingAnnouncementBanner', () => {
       study_group: 'homepage_banner',
       event: 'close_button_clicked',
       data_json: JSON.stringify({
-        banner_title: 'Announcement Title'
-      })
+        banner_title: 'Announcement Title',
+      }),
     });
 
     utils.tryGetLocalStorage.restore();
@@ -121,8 +121,8 @@ describe('MarketingAnnouncementBanner', () => {
       study_group: 'homepage_banner',
       event: 'cta_button_clicked',
       data_json: JSON.stringify({
-        banner_title: 'Announcement Title'
-      })
+        banner_title: 'Announcement Title',
+      }),
     });
 
     utils.tryGetLocalStorage.restore();

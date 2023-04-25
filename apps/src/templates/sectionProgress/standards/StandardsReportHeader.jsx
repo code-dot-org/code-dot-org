@@ -6,7 +6,7 @@ import color from '@cdo/apps/util/color';
 export default class StandardsReportHeader extends Component {
   static propTypes = {
     teacherName: PropTypes.string,
-    sectionName: PropTypes.string
+    sectionName: PropTypes.string,
   };
 
   render() {
@@ -46,43 +46,43 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: color.teal,
-    color: color.white
+    color: color.white,
   },
   headerRightColumn: {
     display: 'flex',
     flexDirection: 'row',
-    padding: '5px 20px'
+    padding: '5px 20px',
   },
   headerRightColumnTitles: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-end',
-    paddingRight: 10
+    paddingRight: 10,
   },
   headerRightColumnItems: {
     display: 'flex',
     flexDirection: 'column',
     fontFamily: '"Gotham 7r", sans-serif',
     alignItems: 'flex-start',
-    paddingRight: 25
+    paddingRight: 25,
   },
   headerName: {
     fontSize: 40,
-    marginLeft: 15
+    marginLeft: 15,
   },
   logo: {
     height: 30,
-    marginLeft: 30
+    marginLeft: 30,
   },
   imageAndTitle: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   infoStrings: {
     width: 200,
     whiteSpace: 'nowrap',
     overflow: 'hidden',
-    textOverflow: 'ellipsis'
-  }
+    textOverflow: 'ellipsis',
+  },
 };

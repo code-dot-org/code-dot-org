@@ -26,8 +26,8 @@ describe('logConditions: getResultsFromLog', function () {
           entries: ['function1'],
           matchType: 'exact',
           minTimes: 1,
-          message: 'test-1'
-        }
+          message: 'test-1',
+        },
       ],
       ['function1:0', 'function2:0']
     );
@@ -42,15 +42,15 @@ describe('logConditions: getResultsFromLog', function () {
           entries: ['function3'],
           matchType: 'exact',
           minTimes: 1,
-          message: 'test-2'
-        }
+          message: 'test-2',
+        },
       ],
       ['function1:0', 'function2:0']
     );
 
     assert.deepEqual(results, {
       testResult: TestResults.LOG_CONDITION_FAIL,
-      message: 'test-2'
+      message: 'test-2',
     });
   });
 
@@ -61,14 +61,14 @@ describe('logConditions: getResultsFromLog', function () {
           entries: ['function1'],
           matchType: 'exact',
           minTimes: 1,
-          message: 'test-3'
+          message: 'test-3',
         },
         {
           entries: ['function2'],
           matchType: 'exact',
           minTimes: 1,
-          message: 'test-4'
-        }
+          message: 'test-4',
+        },
       ],
       ['function1:0', 'function2:0']
     );
@@ -83,21 +83,21 @@ describe('logConditions: getResultsFromLog', function () {
           entries: ['function1'],
           matchType: 'exact',
           minTimes: 1,
-          message: 'test-5'
+          message: 'test-5',
         },
         {
           entries: ['function3'],
           matchType: 'exact',
           minTimes: 1,
-          message: 'test-6'
-        }
+          message: 'test-6',
+        },
       ],
       ['function1:0', 'function2:0']
     );
 
     assert.deepEqual(results, {
       testResult: TestResults.LOG_CONDITION_FAIL,
-      message: 'test-6'
+      message: 'test-6',
     });
   });
 
@@ -108,8 +108,8 @@ describe('logConditions: getResultsFromLog', function () {
           entries: ['function1', 'function2'],
           matchType: 'exact',
           minTimes: 1,
-          message: 'test-7'
-        }
+          message: 'test-7',
+        },
       ],
       ['function1:0', 'function2:0']
     );
@@ -124,15 +124,15 @@ describe('logConditions: getResultsFromLog', function () {
           entries: ['function1', 'function2'],
           matchType: 'exact',
           minTimes: 2,
-          message: 'test-8'
-        }
+          message: 'test-8',
+        },
       ],
       ['function1:0', 'function2:0']
     );
 
     assert.deepEqual(results, {
       testResult: TestResults.LOG_CONDITION_FAIL,
-      message: 'test-8'
+      message: 'test-8',
     });
   });
 
@@ -143,8 +143,8 @@ describe('logConditions: getResultsFromLog', function () {
           entries: ['function1', 'function2'],
           matchType: 'inexact',
           minTimes: 1,
-          message: 'test-9'
-        }
+          message: 'test-9',
+        },
       ],
       ['function1:0', 'other:0', 'function2:0']
     );
@@ -159,15 +159,15 @@ describe('logConditions: getResultsFromLog', function () {
           entries: ['function1', 'function2'],
           matchType: 'inexact',
           minTimes: 2,
-          message: 'test-10'
-        }
+          message: 'test-10',
+        },
       ],
       ['function1:0', 'other:0', 'function2:0', 'function2:0', 'function1:0']
     );
 
     assert.deepEqual(results, {
       testResult: TestResults.LOG_CONDITION_FAIL,
-      message: 'test-10'
+      message: 'test-10',
     });
   });
 
@@ -178,8 +178,8 @@ describe('logConditions: getResultsFromLog', function () {
           entries: ['function1', 'function2'],
           matchType: 'inexact',
           maxTimes: 2,
-          message: 'test-11'
-        }
+          message: 'test-11',
+        },
       ],
       ['function1:0', 'other:0', 'function2:0', 'function1:0', 'function2:0']
     );
@@ -194,8 +194,8 @@ describe('logConditions: getResultsFromLog', function () {
           entries: ['function1', 'function2'],
           matchType: 'inexact',
           maxTimes: 2,
-          message: 'test-12'
-        }
+          message: 'test-12',
+        },
       ],
       [
         'function1:0',
@@ -205,13 +205,13 @@ describe('logConditions: getResultsFromLog', function () {
         'function2:0',
         'other:0',
         'function1:0',
-        'function2:0'
+        'function2:0',
       ]
     );
 
     assert.deepEqual(results, {
       testResult: TestResults.LOG_CONDITION_FAIL,
-      message: 'test-12'
+      message: 'test-12',
     });
   });
 
@@ -222,8 +222,8 @@ describe('logConditions: getResultsFromLog', function () {
           entries: ['function1:2', 'function2'],
           matchType: 'inexact',
           minTimes: 1,
-          message: 'test-13'
-        }
+          message: 'test-13',
+        },
       ],
       ['function1:3', 'other:1', 'function2:0']
     );
@@ -238,8 +238,8 @@ describe('logConditions: getResultsFromLog', function () {
           entries: ['function1:2', 'function2'],
           matchType: 'inexact',
           minTimes: 1,
-          message: 'test-14'
-        }
+          message: 'test-14',
+        },
       ],
       [
         'function1:0',
@@ -249,13 +249,13 @@ describe('logConditions: getResultsFromLog', function () {
         'function2:0',
         'other:1',
         'function1:0',
-        'function2:0'
+        'function2:0',
       ]
     );
 
     assert.deepEqual(results, {
       testResult: TestResults.LOG_CONDITION_FAIL,
-      message: 'test-14'
+      message: 'test-14',
     });
   });
 });

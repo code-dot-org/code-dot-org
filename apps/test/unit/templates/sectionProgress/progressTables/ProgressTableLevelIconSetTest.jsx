@@ -5,7 +5,7 @@ import ProgressTableLevelIconSet from '@cdo/apps/templates/sectionProgress/progr
 import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelSpacer';
 import {
   bubbleContainerWidths,
-  BubbleSize
+  BubbleSize,
 } from '@cdo/apps/templates/progress/BubbleFactory';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
@@ -14,12 +14,12 @@ const levelWithSublevels = {
   id: '123',
   levelNumber: 1,
   sublevels: [{id: '1'}, {id: '2'}],
-  kind: 'assessment'
+  kind: 'assessment',
 };
 const otherLevels = fakeLevels(2);
 
 const DEFAULT_PROPS = {
-  levels: [levelWithSublevels, ...otherLevels]
+  levels: [levelWithSublevels, ...otherLevels],
 };
 
 describe('ProgressTableLevelIconSet', () => {

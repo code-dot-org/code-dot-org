@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {
   announcementShape,
-  VisibilityType
+  VisibilityType,
 } from '@cdo/apps/code-studio/announcementsRedux';
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
 import {NotificationType} from '@cdo/apps/templates/Notification';
@@ -15,7 +15,7 @@ export default class AnnouncementsEditor extends Component {
   static propTypes = {
     announcements: PropTypes.arrayOf(announcementShape),
     inputStyle: PropTypes.object.isRequired,
-    updateAnnouncements: PropTypes.func.isRequired
+    updateAnnouncements: PropTypes.func.isRequired,
   };
 
   add = () => {
@@ -28,7 +28,7 @@ export default class AnnouncementsEditor extends Component {
         type: NotificationType.information,
         visibility: VisibilityType.teacher,
         dismissible: true,
-        buttonText: ''
+        buttonText: '',
       })
     );
   };
@@ -103,6 +103,6 @@ export default class AnnouncementsEditor extends Component {
 
 const styles = {
   preview: {
-    marginTop: 10
-  }
+    marginTop: 10,
+  },
 };

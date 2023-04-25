@@ -14,7 +14,7 @@ export default class Results extends React.Component {
     thisWorkshop: PropTypes.object.isRequired,
     workshopTabs: PropTypes.arrayOf(PropTypes.string).isRequired,
     courseName: PropTypes.string,
-    workshopRollups: PropTypes.object
+    workshopRollups: PropTypes.object,
   };
 
   render() {

@@ -14,9 +14,9 @@ describe('ParameterEditor', () => {
         name: 'param1',
         type: 'string',
         required: false,
-        description: 'The first parameter'
+        description: 'The first parameter',
       },
-      update: updateSpy
+      update: updateSpy,
     };
   });
 

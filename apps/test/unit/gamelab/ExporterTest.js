@@ -9,10 +9,10 @@ const emptyAnimationOpts = {
   animationList: {
     orderedKeys: [],
     propsByKey: {},
-    pendingFrames: {}
+    pendingFrames: {},
   },
   allAnimationsSingleFrame: false,
-  pauseAnimationsByDefault: false
+  pauseAnimationsByDefault: false,
 };
 
 const WEBPACK_RUNTIME_JS_CONTENT = 'webpack-runtime.js content';
@@ -74,7 +74,7 @@ describe('The Gamelab Exporter,', function () {
 
     assetPrefix.init({
       channel: 'some-channel-id',
-      assetPathPrefix: '/v3/assets/'
+      assetPathPrefix: '/v3/assets/',
     });
 
     if (!window.dashboard.assets.listStore.list.returns) {
@@ -83,7 +83,7 @@ describe('The Gamelab Exporter,', function () {
     window.dashboard.assets.listStore.list.returns([
       {filename: 'foo.png'},
       {filename: 'bar.png'},
-      {filename: 'zoo.mp3'}
+      {filename: 'zoo.mp3'},
     ]);
     server.respondWith('/v3/assets/some-channel-id/foo.png', 'foo.png content');
     server.respondWith('/v3/assets/some-channel-id/bar.png', 'bar.png content');
@@ -108,7 +108,7 @@ describe('The Gamelab Exporter,', function () {
       server.respondWith(/\/blockly\/js\/p5play\/p5\.js\?__cb__=\d+/, [
         500,
         {},
-        ''
+        '',
       ]);
     });
 
@@ -178,7 +178,7 @@ describe('The Gamelab Exporter,', function () {
           'my-app/gamelab.css',
           'my-app/index.html',
           'my-app/p5.js',
-          'my-app/p5.play.js'
+          'my-app/p5.play.js',
         ]);
       });
 

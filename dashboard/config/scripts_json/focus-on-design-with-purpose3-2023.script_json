@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-14 19:51:44 UTC",
+    "serialized_at": "2023-04-20 18:00:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7006,6 +7006,17 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/focus-on-design-with-purpose3-2023/resources",
+      "key": "all_resources_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_4"
+      }
+    },
+    {
       "name": "All Standards",
       "url": "/s/focus-on-design-with-purpose3-2023/standards",
       "key": "all_standards_3",
@@ -7014,6 +7025,17 @@
       },
       "seeding_key": {
         "resource.key": "all_standards_3"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/focus-on-design-with-purpose3-2023/vocab",
+      "key": "all_vocabulary_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_3"
       }
     },
     {
@@ -7174,16 +7196,6 @@
       },
       "seeding_key": {
         "resource.key": "computer_science_practices"
-      }
-    },
-    {
-      "name": "CSD Curriculum Guide\t",
-      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view\t",
-      "key": "csd_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide"
       }
     },
     {
@@ -8781,13 +8793,19 @@
     },
     {
       "seeding_key": {
+        "resource.key": "all_resources_4",
+        "script.name": "focus-on-design-with-purpose3-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "all_standards_3",
         "script.name": "focus-on-design-with-purpose3-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
+        "resource.key": "all_vocabulary_3",
         "script.name": "focus-on-design-with-purpose3-2023"
       }
     },

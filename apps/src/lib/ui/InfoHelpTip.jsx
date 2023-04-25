@@ -18,7 +18,7 @@ export default function InfoHelpTip({id, content}) {
 
 InfoHelpTip.propTypes = {
   id: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired
+  content: PropTypes.string.isRequired,
 };
 
 const styles = {
@@ -28,6 +28,6 @@ const styles = {
     marginRight: '5px',
     fontSize: '18px',
     verticalAlign: 'middle',
-    color: 'gray'
-  }
+    color: 'gray',
+  },
 };

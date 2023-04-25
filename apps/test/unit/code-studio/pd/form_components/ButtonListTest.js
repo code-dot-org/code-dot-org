@@ -8,7 +8,7 @@ import {
   Checkbox,
   ControlLabel,
   FormGroup,
-  HelpBlock
+  HelpBlock,
 } from 'react-bootstrap';
 
 describe('ButtonList', () => {
@@ -187,8 +187,8 @@ describe('ButtonList', () => {
               answerText: 'Specific dog breed',
               inputId: 'dog-breed-input',
               inputValue: '--enter dog breed--',
-              onInputChange: onDogBreedInputChange
-            }
+              onInputChange: onDogBreedInputChange,
+            },
           ]}
         />
       );

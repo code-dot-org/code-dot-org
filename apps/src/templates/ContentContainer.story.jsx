@@ -6,7 +6,7 @@ import {reduxStore} from '@cdo/storybook/decorators';
 
 export default {
   title: 'ContentContainer',
-  component: ContentContainer
+  component: ContentContainer,
 };
 
 // ContentContainer is a generic component that will render whatever child components are passed to it.  CourseCards are used here as an example because it was first built to render them for the Teacher Homepage.
@@ -15,7 +15,7 @@ const exampleCard = {
   title: 'CSP Unit 2 - Digital Information',
   description:
     'Explore how more complex digital information is represented and manipulated through computation and visualization',
-  link: 'https://curriculum.code.org/csp/unit2/'
+  link: 'https://curriculum.code.org/csp/unit2/',
 };
 
 //
@@ -47,7 +47,7 @@ const Template = args => (
 
 export const WithoutLink = Template.bind({});
 WithoutLink.args = {
-  heading: 'Recent Courses'
+  heading: 'Recent Courses',
 };
 
 export const WithLink = Template.bind({});
@@ -55,7 +55,7 @@ WithLink.args = {
   heading: 'Recent Courses',
   linkText: 'View all courses',
   link: 'link to see all of the courses',
-  showLink: true
+  showLink: true,
 };
 
 export const WithLinkAndDescription = Template.bind({});
@@ -64,5 +64,5 @@ WithLinkAndDescription.args = {
   linkText: 'View all courses',
   link: 'link to see all of the courses',
   showLink: true,
-  description: 'These are courses that you have worked on recently'
+  description: 'These are courses that you have worked on recently',
 };
