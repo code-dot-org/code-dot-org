@@ -12,20 +12,20 @@ const style = {
   twoColumns: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   descriptionFlexCard: {
-    width: '45%'
+    width: '45%',
   },
   circuitPlaygroundImg: {
     float: 'right',
     margin: '0 0 15px 10px',
-    borderRadius: '50%'
+    borderRadius: '50%',
   },
   microbitImg: {
     float: 'right',
-    margin: '0 0 15px 10px'
-  }
+    margin: '0 0 15px 10px',
+  },
 };
 
 export default class SetupGuide extends React.Component {
@@ -39,24 +39,23 @@ export default class SetupGuide extends React.Component {
           imgSrc: '/blockly/media/maker/microbit-drawing-green.png',
           description: applabI18n.makerSetupMicrobitDescription(),
           imgStyle: style.microbitImg,
-          alt: applabI18n.makerSetupMicrobitImageAltText()
+          alt: applabI18n.makerSetupMicrobitImageAltText(),
         };
       case 'circuitPlayground':
         return {
           id: 'circuit-playground-description',
           title: applabI18n.makerSetupCircuitPlaygroundTitle(),
-          href:
-            'https://learn.adafruit.com/introducing-circuit-playground/overview',
+          href: 'https://learn.adafruit.com/introducing-circuit-playground/overview',
           imgSrc: '/blockly/media/maker/circuit-playground-x-1.png',
           description: applabI18n.makerSetupCircuitPlaygroundDescription(),
           imgStyle: style.circuitPlaygroundImg,
-          alt: applabI18n.makerSetupCircuitPlaygroundImageAltText()
+          alt: applabI18n.makerSetupCircuitPlaygroundImageAltText(),
         };
       case 'general':
         return {
           id: 'general-description',
           title: applabI18n.makerSetupGeneralTitle(),
-          description: applabI18n.makerSetupGeneralDescription()
+          description: applabI18n.makerSetupGeneralDescription(),
         };
     }
   };
@@ -141,7 +140,7 @@ DescriptionCard.propTypes = {
   imgStyle: PropTypes.object,
   description: PropTypes.string.isRequired,
   divStyle: PropTypes.object,
-  alt: PropTypes.string.isRequired
+  alt: PropTypes.string.isRequired,
 };
 
 function HeaderCard(props) {
@@ -158,5 +157,5 @@ HeaderCard.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  divStyle: PropTypes.object
+  divStyle: PropTypes.object,
 };

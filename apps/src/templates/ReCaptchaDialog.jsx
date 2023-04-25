@@ -16,14 +16,14 @@ export default class ReCaptchaDialog extends React.Component {
     handleCancel: PropTypes.func.isRequired,
     isOpen: PropTypes.bool.isRequired,
     submitText: PropTypes.string.isRequired,
-    siteKey: PropTypes.string.isRequired
+    siteKey: PropTypes.string.isRequired,
   };
 
   constructor(props) {
     super(props);
     this.state = {
       submitButtonEnabled: false,
-      loadedCaptcha: false
+      loadedCaptcha: false,
     };
     this.token = '';
     this.onCaptchaVerification = this.onCaptchaVerification.bind(this);
@@ -107,6 +107,6 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
-  }
+    paddingBottom: 20,
+  },
 };

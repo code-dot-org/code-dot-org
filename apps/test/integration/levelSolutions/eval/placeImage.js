@@ -5,10 +5,10 @@ var solutionXml = blockUtils.mathBlockXml('place_image', {
   IMAGE: blockUtils.mathBlockXml('functional_circle', {
     COLOR: blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'}),
     STYLE: blockUtils.mathBlockXml('functional_string', null, {VAL: 'outline'}),
-    SIZE: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50})
+    SIZE: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50}),
   }),
   X: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 25}),
-  Y: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50})
+  Y: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50}),
 });
 
 module.exports = {
@@ -17,16 +17,16 @@ module.exports = {
   levelDefinition: {
     solutionBlocks: solutionXml,
     requiredBlocks: '',
-    freePlay: false
+    freePlay: false,
   },
   tests: [
     {
       description: 'correct answer',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         var user = document.getElementById('user');
         var circle = user.querySelector('circle');
         var fill = circle.getAttribute('fill');
@@ -40,7 +40,7 @@ module.exports = {
         assert(circle.getAttribute('transform'), ' translate(225, 150)');
         return true;
       },
-      xml: '<xml>' + solutionXml + '</xml>'
-    }
-  ]
+      xml: '<xml>' + solutionXml + '</xml>',
+    },
+  ],
 };

@@ -211,10 +211,6 @@ Rails/NegateInclude:
 Rails/Output:
   Enabled: false
 
-# Offense count: 6
-Rails/OutputSafety:
-  Enabled: false
-
 # Offense count: 4
 # This cop supports unsafe auto-correction (--auto-correct-all).
 Rails/Pick:
@@ -360,13 +356,6 @@ Style/GlobalStdStream:
 # Offense count: 325
 # Configuration parameters: AllowedVariables.
 Style/GlobalVars:
-  Enabled: false
-
-# Offense count: 2
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: braces, no_braces
-Style/HashAsLastArrayItem:
   Enabled: false
 
 # Offense count: 20

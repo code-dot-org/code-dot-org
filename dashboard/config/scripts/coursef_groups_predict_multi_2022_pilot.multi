@@ -4,3 +4,4 @@ right 'The sprite you click will get bigger.', feedback: 'Correct! The sprite yo
 wrong 'The sprite you click will get smaller.', feedback: 'Incorrect. The sprite you click will get bigger.'
 wrong 'All of the sprites will get bigger.', feedback: 'Incorrect. The sprite you click will get bigger.'
 wrong 'All of the sprites will get smaller.', feedback: 'Incorrect. The sprite you click will get bigger.'
+allow_multiple_attempts false

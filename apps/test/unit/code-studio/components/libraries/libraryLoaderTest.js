@@ -15,8 +15,8 @@ describe('libraryLoader.load', () => {
     replaceOnWindow('dashboard', {
       project: {
         getUpdatedSourceAndHtml_: () => {},
-        getLevelName: () => {}
-      }
+        getLevelName: () => {},
+      },
     });
     libraryClientApi = new LibraryClientApi('123');
   });
@@ -90,7 +90,7 @@ describe('libraryLoader.load', () => {
       libraryName: libraryName,
       librarySource: library + source,
       selectedFunctions: {},
-      sourceFunctionList: sourceFunctionList
+      sourceFunctionList: sourceFunctionList,
     });
 
     libraryParser.createLibraryClosure.restore();
@@ -99,12 +99,12 @@ describe('libraryLoader.load', () => {
   it('pre-sets library values to the values of the already-published library', async () => {
     let sourceFunctionList = [
       {functionName: 'foo', comment: ''},
-      {functionName: 'bar', comment: ''}
+      {functionName: 'bar', comment: ''},
     ];
     let existingLibrary = {
       description: 'description',
       name: 'existingLibraryName',
-      functions: ['foo', 'baz']
+      functions: ['foo', 'baz'],
     };
     getJSLintAnnotationsStub.returns([]);
     functionStub.returns(sourceFunctionList);
@@ -120,7 +120,7 @@ describe('libraryLoader.load', () => {
       libraryName: existingLibrary.name,
       librarySource: source,
       selectedFunctions: {foo: true},
-      sourceFunctionList: sourceFunctionList
+      sourceFunctionList: sourceFunctionList,
     });
   });
 });

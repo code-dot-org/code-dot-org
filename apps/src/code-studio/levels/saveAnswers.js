@@ -8,7 +8,7 @@ function saveAnswersAndNavigate(url) {
   if (window.appOptions.readonlyWorkspace) {
     window.location.href = url;
   } else {
-    saveAnswers(function() {
+    saveAnswers(function () {
       window.location.href = url;
     });
   }
@@ -38,11 +38,11 @@ function saveAnswers(completeFn) {
     pass: result,
     testResult: result ? UNSUBMITTED_ATTEMPT : 0,
     submitted: submitted,
-    onComplete: completeFn
+    onComplete: completeFn,
   });
 }
 
 module.exports = {
   saveAnswersAndNavigate: saveAnswersAndNavigate,
-  saveAnswers: saveAnswers
+  saveAnswers: saveAnswers,
 };

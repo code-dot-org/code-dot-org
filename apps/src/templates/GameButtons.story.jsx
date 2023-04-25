@@ -1,12 +1,12 @@
 import React from 'react';
 import {UnconnectedGameButtons, RunButton, ResetButton} from './GameButtons';
 
-export default function(storybook) {
+export default function (storybook) {
   storybook.storiesOf('Buttons/GameButtons/RunButton', module).addStoryTable([
     {
       name: 'default',
       description: 'The way the button is rendered with only default props',
-      story: () => <RunButton />
+      story: () => <RunButton />,
     },
     {
       name: 'minecraft version',
@@ -19,8 +19,8 @@ export default function(storybook) {
         <div className="minecraft">
           <RunButton />
         </div>
-      )
-    }
+      ),
+    },
   ]);
 
   storybook.storiesOf('Buttons/GameButtons/ResetButton', module).addStoryTable([
@@ -28,7 +28,7 @@ export default function(storybook) {
       name: 'default',
       description:
         'You have to explicitly set display: block to make this show up. It is hidden by default?!',
-      story: () => <ResetButton style={{display: 'block'}} />
+      story: () => <ResetButton style={{display: 'block'}} />,
     },
     {
       name: 'minecraft version',
@@ -41,12 +41,12 @@ export default function(storybook) {
         <div className="minecraft">
           <ResetButton style={{display: 'block'}} />
         </div>
-      )
+      ),
     },
     {
       name: 'text hidden',
       description: 'You can hide the text with the hideText prop',
-      story: () => <ResetButton style={{display: 'block'}} hideText />
+      story: () => <ResetButton style={{display: 'block'}} hideText />,
     },
     {
       name: 'minecraft text hidden',
@@ -56,25 +56,25 @@ export default function(storybook) {
         <div className="minecraft">
           <ResetButton style={{display: 'block'}} hideText />
         </div>
-      )
-    }
+      ),
+    },
   ]);
 
   storybook.storiesOf('Buttons/GameButtons/GameButtons', module).addStoryTable([
     {
       name: 'default',
       description: 'The default version with no props',
-      story: () => <UnconnectedGameButtons />
+      story: () => <UnconnectedGameButtons />,
     },
     {
       name: 'playspace phone frame',
       description: 'the playspace phone frame just renders an empty div...',
-      story: () => <UnconnectedGameButtons playspacePhoneFrame />
+      story: () => <UnconnectedGameButtons playspacePhoneFrame />,
     },
     {
       name: 'hideRunButton',
       description: 'the run button is hidden when this prop is supplied',
-      story: () => <UnconnectedGameButtons hideRunButton />
+      story: () => <UnconnectedGameButtons hideRunButton />,
     },
     {
       name: 'minecraft version',
@@ -87,7 +87,7 @@ export default function(storybook) {
         <div className="minecraft">
           <UnconnectedGameButtons />
         </div>
-      )
+      ),
     },
     {
       name: 'with extra content',
@@ -96,7 +96,7 @@ export default function(storybook) {
         <UnconnectedGameButtons>
           <button type="button">another button</button>
         </UnconnectedGameButtons>
-      )
+      ),
     },
     {
       name: 'with a skip button',
@@ -105,7 +105,7 @@ export default function(storybook) {
         <UnconnectedGameButtons showSkipButton nextLevelUrl="#">
           <button type="button">another button</button>
         </UnconnectedGameButtons>
-      )
-    }
+      ),
+    },
   ]);
 }

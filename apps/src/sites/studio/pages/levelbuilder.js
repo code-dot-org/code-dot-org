@@ -11,12 +11,9 @@ $(document).ready(initPage);
 
 function initPage() {
   function make_selection_handler(flag) {
-    return function(e) {
+    return function (e) {
       e.preventDefault();
-      const options = $(this)
-        .parent()
-        .siblings('select')
-        .children('option');
+      const options = $(this).parent().siblings('select').children('option');
       options[flag ? 'attr' : 'removeAttr']('selected', true);
     };
   }
@@ -31,10 +28,10 @@ _.extend(window.levelbuilder, {
   initializeBlockPreview: require('@cdo/apps/code-studio/initializeBlockPreview'),
   jsonEditor: require('@cdo/apps/code-studio/jsonEditor'),
   acapela: require('@cdo/apps/code-studio/acapela'),
-  ajaxSubmit: require('@cdo/apps/code-studio/ajaxSubmit')
+  ajaxSubmit: require('@cdo/apps/code-studio/ajaxSubmit'),
 });
 
-window.levelbuilder.installBlocks = function(app, blockly, options) {
+window.levelbuilder.installBlocks = function (app, blockly, options) {
   var appBlocks = require('@cdo/apps/' + app + '/blocks');
   var commonBlocks = require('@cdo/apps/blocksCommon');
 
@@ -42,14 +39,14 @@ window.levelbuilder.installBlocks = function(app, blockly, options) {
   appBlocks.install(blockly, options);
 };
 
-window.levelbuilder.copyWorkspaceToClipboard = function() {
+window.levelbuilder.copyWorkspaceToClipboard = function () {
   const str = Blockly.Xml.domToPrettyText(
     Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
   );
   copyToClipboard(str);
 };
 
-window.levelbuilder.copySelectedBlockToClipboard = function() {
+window.levelbuilder.copySelectedBlockToClipboard = function () {
   if (Blockly.selected) {
     const str = Blockly.Xml.domToPrettyText(
       Blockly.Xml.blockToDom(Blockly.selected)

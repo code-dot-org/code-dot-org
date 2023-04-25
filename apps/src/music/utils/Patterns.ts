@@ -1,6 +1,6 @@
 import {
   PatternEventValue,
-  PatternTickEvent
+  PatternTickEvent,
 } from '../player/interfaces/PatternEvent';
 import MusicLibrary from '../player/MusicLibrary';
 
@@ -20,7 +20,6 @@ interface GenerateGraphDataFromPatternOptions {
   width: number;
   height: number;
   padding: number;
-  eventScale: number;
   library: MusicLibrary;
 }
 
@@ -30,8 +29,7 @@ export function generateGraphDataFromPattern({
   width,
   height,
   padding,
-  eventScale,
-  library
+  library,
 }: GenerateGraphDataFromPatternOptions): PatternGraphEvent[] {
   // Event widths fit in the space; event heights match the widths.
   const noteWidth = Math.ceil((width - 2 * padding) / 16);
@@ -57,7 +55,7 @@ export function generateGraphDataFromPattern({
       x: 1 + ((event.tick - 1) * useWidth) / (16 - 1) + padding,
       y: 1 + padding + (soundIndex * useHeight) / (numSounds - 1),
       width: noteWidth,
-      height: noteHeight
+      height: noteHeight,
     };
   });
 }

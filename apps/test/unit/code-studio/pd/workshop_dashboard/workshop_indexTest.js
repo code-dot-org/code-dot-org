@@ -8,15 +8,15 @@ import Permission, {
   CsfFacilitator,
   Organizer,
   ProgramManager,
-  WorkshopAdmin
+  WorkshopAdmin,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 
 describe('WorkshopIndex', () => {
   const fakeRouter = {
-    createHref() {}
+    createHref() {},
   };
   const context = {
-    router: fakeRouter
+    router: fakeRouter,
   };
 
   beforeEach(() => {
@@ -30,7 +30,7 @@ describe('WorkshopIndex', () => {
       [Facilitator, ['Legacy Facilitator Survey Summaries', 'Filter View']],
       [
         CsfFacilitator,
-        ['New Workshop', 'Legacy Facilitator Survey Summaries', 'Filter View']
+        ['New Workshop', 'Legacy Facilitator Survey Summaries', 'Filter View'],
       ],
       [Organizer, ['New Workshop', 'Attendance Reports', 'Filter View']],
       [ProgramManager, ['New Workshop', 'Attendance Reports', 'Filter View']],
@@ -40,17 +40,17 @@ describe('WorkshopIndex', () => {
           'New Workshop',
           'Attendance Reports',
           'Filter View',
-          'Export Survey Results'
-        ]
-      ]
+          'Export Survey Results',
+        ],
+      ],
     ]);
 
-    permissionButtonMap.forEach(function(buttons, permissionName) {
+    permissionButtonMap.forEach(function (buttons, permissionName) {
       it(permissionName + ' has ' + buttons.length + ' buttons', () => {
         const permission = new Permission([permissionName]);
 
         let workshopIndex = shallow(<WorkshopIndex permission={permission} />, {
-          context
+          context,
         });
 
         expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(
@@ -58,10 +58,7 @@ describe('WorkshopIndex', () => {
         );
         expect(
           workshopIndex.find('ButtonToolbar Button').map(button => {
-            return button
-              .children()
-              .first()
-              .text();
+            return button.children().first().text();
           })
         ).to.deep.equal(buttons);
       });

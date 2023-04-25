@@ -5,8 +5,7 @@ export const announcement = {
   buttonText: 'Go Beyond',
   description:
     "Go Beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels - and it's free. No experience required - find the next step that's right for your classroom.",
-  link:
-    'http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the'
+  link: 'http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the',
 };
 
 export const courses = [
@@ -15,15 +14,15 @@ export const courses = [
     description:
       'Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.',
     link: 'https://studio.code.org/s/course1',
-    assignedSections: []
+    assignedSections: [],
   },
   {
     title: 'Course 2',
     description:
       'Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.',
     link: 'https://studio.code.org/s/course2',
-    assignedSections: []
-  }
+    assignedSections: [],
+  },
 ];
 
 export const plCourses = [
@@ -31,14 +30,14 @@ export const plCourses = [
     title: 'PL Course 1',
     description: 'Teachers learning things about teaching',
     link: 'https://studio.code.org/s/pl-course1',
-    assignedSections: []
+    assignedSections: [],
   },
   {
     title: 'Course 2',
     description: 'Facilitators learning stuff about facilitating',
     link: 'https://studio.code.org/s/pl-course2',
-    assignedSections: []
-  }
+    assignedSections: [],
+  },
 ];
 
 export const moreCourses = [
@@ -48,29 +47,29 @@ export const moreCourses = [
     description:
       'Start with Course 3 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.',
     link: 'https://studio.code.org/s/course3',
-    assignedSections: []
+    assignedSections: [],
   },
   {
     title: 'Course 4',
     description:
       'Start with Course 4 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.',
     link: 'https://studio.code.org/s/course4',
-    assignedSections: []
+    assignedSections: [],
   },
   {
     title: 'Course 5',
     description:
       'Start with Course 5 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.',
     link: 'https://studio.code.org/s/course5',
-    assignedSections: []
+    assignedSections: [],
   },
   {
     title: 'Course 6',
     description:
       'Start with Course 6 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.',
     link: 'https://studio.code.org/s/course6',
-    assignedSections: []
-  }
+    assignedSections: [],
+  },
 ];
 
 export const taughtSections = [
@@ -88,7 +87,7 @@ export const taughtSections = [
     unitId: 361,
     grade: 'K',
     providerManaged: false,
-    hidden: false
+    hidden: false,
   },
   {
     id: 15,
@@ -104,8 +103,8 @@ export const taughtSections = [
     unitId: 13,
     grade: '7',
     providerManaged: false,
-    hidden: false
-  }
+    hidden: false,
+  },
 ];
 
 export const joinedSections = [
@@ -118,7 +117,7 @@ export const joinedSections = [
     linkToAssigned: 'https://studio.code.org/s/course1',
     numberOfStudents: 1,
     linkToStudents: manageStudentsUrl,
-    code: 'ClassOneCode'
+    code: 'ClassOneCode',
   },
   {
     id: 12,
@@ -131,7 +130,7 @@ export const joinedSections = [
     linkToCurrentUnit: 'https://studio.code.org/s/course2-unit3',
     numberOfStudents: 2,
     linkToStudents: manageStudentsUrl,
-    code: 'ClassTwoCode'
+    code: 'ClassTwoCode',
   },
   {
     id: 13,
@@ -143,7 +142,7 @@ export const joinedSections = [
     numberOfStudents: 3,
     linkToStudents: manageStudentsUrl,
     login_type: 'google_classroom',
-    code: 'DoNotShowThis'
+    code: 'DoNotShowThis',
   },
   {
     id: 14,
@@ -155,8 +154,8 @@ export const joinedSections = [
     numberOfStudents: 4,
     linkToStudents: manageStudentsUrl,
     login_type: 'clever',
-    code: 'OrThisEither'
-  }
+    code: 'OrThisEither',
+  },
 ];
 
 export const joinedPlSections = [
@@ -169,7 +168,7 @@ export const joinedPlSections = [
     linkToAssigned: 'https://studio.code.org/s/course1',
     numberOfStudents: 1,
     linkToStudents: manageStudentsUrl,
-    code: 'ClassOneCode'
+    code: 'ClassOneCode',
   },
   {
     id: 12,
@@ -182,7 +181,7 @@ export const joinedPlSections = [
     linkToCurrentUnit: 'https://studio.code.org/s/course2-unit3',
     numberOfStudents: 2,
     linkToStudents: manageStudentsUrl,
-    code: 'ClassTwoCode'
+    code: 'ClassTwoCode',
   },
   {
     id: 13,
@@ -194,7 +193,7 @@ export const joinedPlSections = [
     numberOfStudents: 3,
     linkToStudents: manageStudentsUrl,
     login_type: 'google_classroom',
-    code: 'DoNotShowThis'
+    code: 'DoNotShowThis',
   },
   {
     id: 14,
@@ -206,8 +205,8 @@ export const joinedPlSections = [
     numberOfStudents: 4,
     linkToStudents: manageStudentsUrl,
     login_type: 'clever',
-    code: 'OrThisEither'
-  }
+    code: 'OrThisEither',
+  },
 ];
 
 export const topCourse = {
@@ -215,12 +214,12 @@ export const topCourse = {
   lessonName: 'Lesson 3: Learn to drag and drop',
   linkToOverview: 'http://localhost-studio.code.org:3000/s/course1',
   linkToLesson:
-    'http://localhost-studio.code.org:3000/s/course1/lessons/3/levels/1'
+    'http://localhost-studio.code.org:3000/s/course1/lessons/3/levels/1',
 };
 
 export const topPlCourse = {
   assignableName: 'PL Course 1',
   lessonName: 'Learning how to teacher',
   linkToOverview: 'http://studio.code.org/s/vpl-csp-2021',
-  linkToLesson: 'http://studio.code.org/s/vpl-csp-2021/lessons/3/levels/1'
+  linkToLesson: 'http://studio.code.org/s/vpl-csp-2021/lessons/3/levels/1',
 };

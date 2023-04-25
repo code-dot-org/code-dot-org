@@ -8,19 +8,19 @@ import i18n from '@cdo/tutorialExplorer/locale';
 
 const TUTORIAL_1 = {
   name: 'Tutorial 1',
-  code: 'tutorial-1'
+  code: 'tutorial-1',
 };
 
 const TUTORIAL_2 = {
   name: 'Tutorial 2',
-  code: 'tutorial-2'
+  code: 'tutorial-2',
 };
 
 const DEFAULT_PROPS = {
   tutorials: [],
   localeEnglish: true,
   disabledTutorials: [],
-  grade: 'all'
+  grade: 'all',
 };
 
 describe('TutorialSet', () => {
@@ -62,22 +62,12 @@ describe('TutorialSet', () => {
         <Tutorial
           item={TUTORIAL_1}
           key={TUTORIAL_1.code}
-          tutorialClicked={
-            wrapper
-              .find(Tutorial)
-              .at(0)
-              .props().tutorialClicked
-          }
+          tutorialClicked={wrapper.find(Tutorial).at(0).props().tutorialClicked}
         />
         <Tutorial
           item={TUTORIAL_2}
           key={TUTORIAL_2.code}
-          tutorialClicked={
-            wrapper
-              .find(Tutorial)
-              .at(1)
-              .props().tutorialClicked
-          }
+          tutorialClicked={wrapper.find(Tutorial).at(1).props().tutorialClicked}
         />
       </div>
     );
@@ -89,11 +79,7 @@ describe('TutorialSet', () => {
     );
 
     // Call the click callback directly.
-    wrapper
-      .find(Tutorial)
-      .at(0)
-      .props()
-      .tutorialClicked();
+    wrapper.find(Tutorial).at(0).props().tutorialClicked();
 
     const instance = wrapper.instance();
     expect(wrapper).to.containMatchingElement(

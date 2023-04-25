@@ -13,15 +13,15 @@ var patternCache = {
   /**
    * Stick an item in our queue
    */
-  addToQueue: function(patternInfo) {
+  addToQueue: function (patternInfo) {
     this.queued.push(patternInfo);
   },
 
   /**
    * Add all the svg patterns we've queued up.
    */
-  addQueuedPatterns: function() {
-    this.queued.forEach(function(pattern) {
+  addQueuedPatterns: function () {
+    this.queued.forEach(function (pattern) {
       addPattern(
         pattern.id,
         pattern.imagePath,
@@ -38,14 +38,14 @@ var patternCache = {
    * Have we already created an svg element for this patternInfo?  Throws if
    * we ask with a patternInfo that has the same id but different attributes.
    */
-  wasCreated: function(patternInfo) {
+  wasCreated: function (patternInfo) {
     var equal = true;
     var cached = this.created[patternInfo.id];
     if (!cached) {
       return false;
     }
 
-    Object.keys(patternInfo).forEach(function(key) {
+    Object.keys(patternInfo).forEach(function (key) {
       if (patternInfo[key] !== cached[key]) {
         equal = false;
       }
@@ -61,12 +61,12 @@ var patternCache = {
   /**
    * Mark that we've created an svg pattern
    */
-  markCreated: function(patternInfo) {
+  markCreated: function (patternInfo) {
     if (this.created[patternInfo.id]) {
       throw new Error('Already have cached item with id: ' + patternInfo.id);
     }
     this.created[patternInfo.id] = patternInfo;
-  }
+  },
 };
 
 /**
@@ -80,7 +80,7 @@ var patternCache = {
  * @param {number|function} offsetX Offset of the image to start pattern
  * @param {number|function} offsetY Offset of the image to start pattern
  */
-var addPattern = function(id, imagePath, width, height, offsetX, offsetY) {
+var addPattern = function (id, imagePath, width, height, offsetX, offsetY) {
   var x, y, pattern, patternImage;
   var patternInfo = {
     id: id,
@@ -88,7 +88,7 @@ var addPattern = function(id, imagePath, width, height, offsetX, offsetY) {
     width: width,
     height: height,
     offsetX: offsetX,
-    offsetY: offsetY
+    offsetY: offsetY,
   };
 
   // If we don't yet have an svgDefs, queue the pattern and wait until we do
@@ -107,7 +107,7 @@ var addPattern = function(id, imagePath, width, height, offsetX, offsetY) {
         width: '100%',
         height: height,
         x: x,
-        y: y
+        y: y,
       },
       svgDefs
     );
@@ -115,7 +115,7 @@ var addPattern = function(id, imagePath, width, height, offsetX, offsetY) {
       'image',
       {
         width: width,
-        height: height
+        height: height,
       },
       pattern
     );
@@ -139,14 +139,14 @@ function addQueuedWhenReady() {
 }
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function(blockly, blockInstallOptions) {
+exports.install = function (blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   // could make this settable on the level if I need
   var HSV = [0, 1.0, 0.98];
 
   var existingBlocks = Object.keys(blockly.Blocks);
 
-  Object.keys(levels).forEach(function(key) {
+  Object.keys(levels).forEach(function (key) {
     var level = levels[key];
     generateJigsawBlocksForLevel(blockly, skin, {
       image: skin[level.image.name],
@@ -155,7 +155,7 @@ exports.install = function(blockly, blockInstallOptions) {
       height: level.image.height,
       numBlocks: level.numBlocks,
       notchedEnds: level.notchedEnds,
-      level: key
+      level: key,
     });
 
     if (level.numBlocks === 0) {
@@ -187,9 +187,9 @@ exports.install = function(blockly, blockInstallOptions) {
   // weren't already given generators
   var generator = blockly.getGenerator();
   blockly.JavaScript = generator;
-  Object.keys(blockly.Blocks).forEach(function(block) {
+  Object.keys(blockly.Blocks).forEach(function (block) {
     if (existingBlocks.indexOf(block) === -1 && !generator[block]) {
-      generator[block] = function() {
+      generator[block] = function () {
         return '\n';
       };
     }
@@ -204,19 +204,19 @@ exports.install = function(blockly, blockInstallOptions) {
 function generateBlankBlock(blockly, skin, name, hsv, width, label) {
   blockly.Blocks[name] = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, ...hsv);
       this.appendDummyInput()
         .appendField(new blockly.FieldImage(skin.blank, width, 54))
         .appendField(
           new blockly.FieldLabel(label, {
             fixedSize: {width: width, height: 64},
-            fontSize: 32
+            fontSize: 32,
           })
         );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 }
 
@@ -241,7 +241,7 @@ function generateJigsawBlocksForLevel(blockly, skin, options) {
     var patternName = 'pat_' + level + letters[blockNum];
     blockly.Blocks[blockName] = {
       helpUrl: '',
-      init: function() {
+      init: function () {
         Blockly.cdoUtils.setHSV(this, ...HSV);
         this.appendDummyInput().appendField(
           new blockly.FieldImage(skin.blank, titleWidth, titleHeight)
@@ -258,7 +258,7 @@ function generateJigsawBlocksForLevel(blockly, skin, options) {
             blockHeight * (blockNum - 1)
           )
         );
-      }
+      },
     };
   }
 

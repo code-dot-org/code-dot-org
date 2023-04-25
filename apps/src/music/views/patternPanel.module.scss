@@ -2,6 +2,7 @@
 
 .patternPanel {
   font-size: 13px;
+  user-select: none;
 }
 
 .row {
@@ -13,10 +14,16 @@
   }
 }
 
-.name {
+.nameContainer {
   display: inline-block;
-  width: 80px;
+  width: 100px;
   vertical-align: middle;
+  padding-left: 3px;
+
+  .name {
+    cursor: pointer;
+    user-select: none;
+  }
 }
 
 .outerCell {

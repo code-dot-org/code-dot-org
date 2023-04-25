@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": "problem-solving-computing",
-    "serialized_at": "2023-03-20 21:58:07 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-04-20 16:44:38 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -4484,6 +4484,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd1_2023"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -4506,6 +4509,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 IO Pet Chooser_2023"
+        ],
         "progression": "App: Pet Chooser"
       },
       "bonus": false,
@@ -4528,6 +4534,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 IO Story_2023"
+        ],
         "progression": "App: Story Creator"
       },
       "bonus": false,
@@ -4550,6 +4559,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 IO Pet Chooser 2_2023"
+        ],
         "progression": "App: Improved Pet App"
       },
       "bonus": false,
@@ -4572,6 +4584,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing bday_2023"
+        ],
         "progression": "App: Is It Your Birthday?"
       },
       "bonus": false,
@@ -4594,6 +4609,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing npark_2023"
+        ],
         "progression": "App: National Parks"
       },
       "bonus": false,
@@ -4616,6 +4634,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing countries_2023"
+        ],
         "progression": "App: How Many Countries"
       },
       "bonus": false,
@@ -4638,6 +4659,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing writers_2023"
+        ],
         "progression": "App: My Famous Birthday"
       },
       "bonus": false,
@@ -4660,6 +4684,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing notebook_2023"
+        ],
         "progression": "App: Stamp Notebook"
       },
       "bonus": false,
@@ -4682,6 +4709,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing fastest_2023"
+        ],
         "progression": "App: The Fastest Finger"
       },
       "bonus": false,
@@ -4704,6 +4734,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing guess_2023"
+        ],
         "progression": "App: Guess the Number"
       },
       "bonus": false,
@@ -4726,6 +4759,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing live_2023"
+        ],
         "progression": "App: Where Should I Live?"
       },
       "bonus": false,
@@ -4748,6 +4784,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage outfit_2023"
+        ],
         "progression": "App: Outfit Picker"
       },
       "bonus": false,
@@ -4770,6 +4809,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage friends_2023"
+        ],
         "progression": "App: Friend Finder"
       },
       "bonus": false,
@@ -4792,6 +4834,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage movies_2023"
+        ],
         "progression": "App: Choose a Kid's Movie"
       },
       "bonus": false,
@@ -4814,6 +4859,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Student End of Unit Survey - Unit 1_2023"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -4836,6 +4884,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U1 Test_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5301,16 +5352,6 @@
       },
       "seeding_key": {
         "resource.key": "computer_science_practices"
-      }
-    },
-    {
-      "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
-      "key": "csd_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide"
       }
     },
     {
@@ -6136,12 +6177,6 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary",
-        "script.name": "problem-solving-computing-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
         "script.name": "problem-solving-computing-2023"
       }
     },

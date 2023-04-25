@@ -4,7 +4,7 @@ import {DragDropContext} from 'react-beautiful-dnd';
 import _ from 'lodash';
 import {
   DROPPABLE_ID_UNASSIGNED,
-  generateNewGroup
+  generateNewGroup,
 } from './CodeReviewGroupsUtils';
 import UnassignedStudentsPanel from './UnassignedStudentsPanel';
 import AssignedStudentsPanel from './AssignedStudentsPanel';
@@ -49,7 +49,7 @@ export default function CodeReviewGroupsManager({groups, setGroups}) {
 
     const updatedAssignedGroups = getAssignedGroups().map(group => ({
       ...group,
-      members: []
+      members: [],
     }));
     setGroups([...updatedAssignedGroups, updatedUnassignedGroup]);
   };
@@ -96,7 +96,7 @@ export default function CodeReviewGroupsManager({groups, setGroups}) {
 
       const updatedGroups = updateGroups(groups, [
         result.updatedSource,
-        result.updatedDest
+        result.updatedDest,
       ]);
 
       setGroups(updatedGroups);
@@ -125,7 +125,7 @@ export default function CodeReviewGroupsManager({groups, setGroups}) {
 
 CodeReviewGroupsManager.propTypes = {
   groups: PropTypes.array.isRequired,
-  setGroups: PropTypes.func.isRequired
+  setGroups: PropTypes.func.isRequired,
 };
 
 // Reorders members in a group if member dragged elsewhere in the same group.
@@ -172,6 +172,6 @@ const updateGroups = (groups, changedGroups) => {
 
 const styles = {
   dragAndDropContainer: {
-    display: 'flex'
-  }
+    display: 'flex',
+  },
 };

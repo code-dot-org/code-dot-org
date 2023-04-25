@@ -5,7 +5,7 @@ import ActivityCardAndPreview from '@cdo/apps/lib/levelbuilder/lesson-editor/Act
 import {connect} from 'react-redux';
 import {
   addActivity,
-  getSerializedActivities
+  getSerializedActivities,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import ReactDOM from 'react-dom';
 import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
@@ -23,7 +23,7 @@ class ActivitiesEditor extends Component {
 
     //redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
-    addActivity: PropTypes.func.isRequired
+    addActivity: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -31,7 +31,7 @@ class ActivitiesEditor extends Component {
 
     this.state = {
       targetActivityPos: null,
-      targetActivitySectionPos: null
+      targetActivitySectionPos: null,
     };
   }
 
@@ -103,7 +103,7 @@ class ActivitiesEditor extends Component {
   clearTargetActivitySection = () => {
     this.setState({
       targetActivityPos: null,
-      targetActivitySectionPos: null
+      targetActivitySectionPos: null,
     });
   };
 
@@ -116,7 +116,7 @@ class ActivitiesEditor extends Component {
         if (y > rect.top && y < rect.top + rect.height) {
           this.setState({
             targetActivityPos: activityPos,
-            targetActivitySectionPos: sectionPos
+            targetActivitySectionPos: sectionPos,
           });
         }
       });
@@ -168,24 +168,24 @@ class ActivitiesEditor extends Component {
 
 const styles = {
   activityEditAndPreview: {
-    margin: 10
+    margin: 10,
   },
   addActivity: {
     fontSize: 14,
     color: 'white',
     background: color.cyan,
     border: `1px solid ${color.cyan}`,
-    boxShadow: 'none'
-  }
+    boxShadow: 'none',
+  },
 };
 
 export const UnconnectedActivitiesEditor = ActivitiesEditor;
 
 export default connect(
   state => ({
-    activities: state.activities
+    activities: state.activities,
   }),
   {
-    addActivity
+    addActivity,
   }
 )(ActivitiesEditor);

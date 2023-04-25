@@ -2,9 +2,9 @@
 export const elementarySchoolCourseOffering = {
   elementary: {
     Course: {
-      'CS Fundamentals': [{id: 19, key: 'coursea', display_name: 'Course A'}]
-    }
-  }
+      'CS Fundamentals': [{id: 19, key: 'coursea', display_name: 'Course A'}],
+    },
+  },
 };
 
 // Use this sample to test multiple headings, course versions, etc
@@ -31,37 +31,37 @@ export const highSchoolCourseOfferings = {
                 is_recommended: true,
                 locales: ['English'],
                 units: {
-                  '3159': {
+                  3159: {
                     id: 3159,
                     name: "Object-Oriented Programming ('22-'23)",
                     path: '/s/csa1-2022',
                     lesson_extras_available: false,
                     text_to_speech_enabled: true,
                     position: 1,
-                    requires_verified_instructor: true
+                    requires_verified_instructor: true,
                   },
-                  '3167': {
+                  3167: {
                     id: 3167,
                     name: "Arrays and Algorithms ('22-'23)",
                     path: '/s/csa3-2022',
                     lesson_extras_available: false,
                     text_to_speech_enabled: true,
                     position: 3,
-                    requires_verified_instructor: true
+                    requires_verified_instructor: true,
                   },
-                  '5341': {
+                  5341: {
                     id: 5341,
                     name: "AP Exam Review and Practice ('22-'23)",
                     path: '/s/csa9-2022',
                     lesson_extras_available: true,
                     text_to_speech_enabled: true,
                     position: 9,
-                    requires_verified_instructor: true
-                  }
-                }
-              }
-            ]
-          ]
+                    requires_verified_instructor: true,
+                  },
+                },
+              },
+            ],
+          ],
         },
         {
           id: 74,
@@ -82,26 +82,26 @@ export const highSchoolCourseOfferings = {
                 is_recommended: false,
                 locales: ['English'],
                 units: {
-                  '182': {
+                  182: {
                     id: 182,
                     name: "Problem Solving and Computing ('21-'22)",
                     path: '/s/csd1-2021',
                     lesson_extras_available: false,
                     text_to_speech_enabled: true,
                     position: 1,
-                    requires_verified_instructor: false
+                    requires_verified_instructor: false,
                   },
-                  '190': {
+                  190: {
                     id: 190,
                     name: "Web Development ('21-'22)",
                     path: '/s/csd2-2021',
                     lesson_extras_available: false,
                     text_to_speech_enabled: true,
                     position: 2,
-                    requires_verified_instructor: false
-                  }
-                }
-              }
+                    requires_verified_instructor: false,
+                  },
+                },
+              },
             ],
             [
               737,
@@ -117,30 +117,30 @@ export const highSchoolCourseOfferings = {
                 is_recommended: true,
                 locales: ['English'],
                 units: {
-                  '5080': {
+                  5080: {
                     id: 5080,
                     name: "Problem Solving and Computing ('22-'23)",
                     path: '/s/csd1-2022',
                     lesson_extras_available: false,
                     text_to_speech_enabled: true,
                     position: 1,
-                    requires_verified_instructor: false
+                    requires_verified_instructor: false,
                   },
-                  '5089': {
+                  5089: {
                     id: 5089,
                     name: "Web Development ('22-'23)",
                     path: '/s/csd2-2022',
                     lesson_extras_available: false,
                     text_to_speech_enabled: true,
                     position: 2,
-                    requires_verified_instructor: false
-                  }
-                }
-              }
-            ]
-          ]
-        }
-      ]
+                    requires_verified_instructor: false,
+                  },
+                },
+              },
+            ],
+          ],
+        },
+      ],
     },
     'Standalone Unit': {
       'Teacher-Led': [
@@ -163,17 +163,17 @@ export const highSchoolCourseOfferings = {
                 is_recommended: false,
                 locales: ['English'],
                 units: {
-                  '49': {
+                  49: {
                     id: 49,
                     name: 'AI and Machine Learning Module',
                     path: '/s/aiml-2021',
                     lesson_extras_available: false,
                     text_to_speech_enabled: true,
                     position: null,
-                    requires_verified_instructor: false
-                  }
-                }
-              }
+                    requires_verified_instructor: false,
+                  },
+                },
+              },
             ],
             [
               799,
@@ -189,19 +189,19 @@ export const highSchoolCourseOfferings = {
                 is_recommended: true,
                 locales: ['English'],
                 units: {
-                  '5191': {
+                  5191: {
                     id: 5191,
                     name: 'AI and Machine Learning Module',
                     path: '/s/aiml-2022',
                     lesson_extras_available: false,
                     text_to_speech_enabled: true,
                     position: null,
-                    requires_verified_instructor: false
-                  }
-                }
-              }
-            ]
-          ]
+                    requires_verified_instructor: false,
+                  },
+                },
+              },
+            ],
+          ],
         },
         {
           id: 407,
@@ -222,23 +222,23 @@ export const highSchoolCourseOfferings = {
                 is_recommended: true,
                 locales: ['English'],
                 units: {
-                  '12097': {
+                  12097: {
                     id: 12097,
                     name: 'Creating Apps for Devices',
                     path: '/s/devices-2022',
                     lesson_extras_available: false,
                     text_to_speech_enabled: true,
                     position: null,
-                    requires_verified_instructor: false
-                  }
-                }
-              }
-            ]
-          ]
-        }
-      ]
-    }
-  }
+                    requires_verified_instructor: false,
+                  },
+                },
+              },
+            ],
+          ],
+        },
+      ],
+    },
+  },
 };
 
 // Keeping 5 categories to be able to test the uneven split of headers
@@ -264,19 +264,19 @@ export const hocCourseOfferings = {
               is_recommended: true,
               locales: ['English'],
               units: {
-                '451': {
+                451: {
                   id: 451,
                   name: 'AI for Oceans',
                   path: '/s/oceans',
                   lesson_extras_available: false,
                   text_to_speech_enabled: false,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
       },
       {
         id: 31,
@@ -297,19 +297,19 @@ export const hocCourseOfferings = {
               is_recommended: false,
               locales: ['English'],
               units: {
-                '344': {
+                344: {
                   id: 344,
                   name: 'Dance Party',
                   path: '/s/dance-2019',
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
       },
       {
         id: 57,
@@ -330,19 +330,19 @@ export const hocCourseOfferings = {
               is_recommended: true,
               locales: ['English'],
               units: {
-                '455': {
+                455: {
                   id: 455,
                   name: 'Outbreak Simulator',
                   path: '/s/outbreak',
                   lesson_extras_available: false,
                   text_to_speech_enabled: false,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
       },
       {
         id: 60,
@@ -363,20 +363,20 @@ export const hocCourseOfferings = {
               is_recommended: true,
               locales: ['English'],
               units: {
-                '1161': {
+                1161: {
                   id: 1161,
                   name: 'Poem Art',
                   path: '/s/poem-art-2021',
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
-      }
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
+      },
     ],
     'Hello World': [
       {
@@ -398,19 +398,19 @@ export const hocCourseOfferings = {
               is_recommended: true,
               locales: ['English'],
               units: {
-                '1110': {
+                1110: {
                   id: 1110,
                   name: 'Hello World: Animals',
                   path: '/s/hello-world-animals-2021',
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
       },
       {
         id: 46,
@@ -431,19 +431,19 @@ export const hocCourseOfferings = {
               is_recommended: true,
               locales: ['English'],
               units: {
-                '1118': {
+                1118: {
                   id: 1118,
                   name: 'Hello World: Retro',
                   path: '/s/hello-world-retro-2021',
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
       },
       {
         id: 379,
@@ -464,20 +464,20 @@ export const hocCourseOfferings = {
               is_recommended: true,
               locales: ['English'],
               units: {
-                '8609': {
+                8609: {
                   id: 8609,
                   name: 'Hello World: Soccer',
                   path: '/s/hello-world-soccer-2022',
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
-      }
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
+      },
     ],
     'Labs and Skills': [
       {
@@ -499,19 +499,19 @@ export const hocCourseOfferings = {
               is_recommended: true,
               locales: ['English'],
               units: {
-                '424': {
+                424: {
                   id: 424,
                   name: 'Hour of Code: Simple Encryption',
                   path: '/s/hoc-encryption',
                   lesson_extras_available: false,
                   text_to_speech_enabled: false,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
       },
       {
         id: 8,
@@ -532,20 +532,20 @@ export const hocCourseOfferings = {
               is_recommended: true,
               locales: ['English'],
               units: {
-                '76': {
+                76: {
                   id: 76,
                   name: 'Intro to App Lab',
                   path: '/s/applab-intro',
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
-      }
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
+      },
     ],
     'Popular Media': [
       {
@@ -567,20 +567,20 @@ export const hocCourseOfferings = {
               is_recommended: true,
               locales: ['English'],
               units: {
-                '527': {
+                527: {
                   id: 527,
                   name: 'Star Wars: Building a Galaxy With Code (Blockly)',
                   path: '/s/starwarsblocks',
                   lesson_extras_available: false,
                   text_to_speech_enabled: false,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
-      }
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
+      },
     ],
     Sports: [
       {
@@ -602,19 +602,19 @@ export const hocCourseOfferings = {
               is_recommended: true,
               locales: ['English'],
               units: {
-                '84': {
+                84: {
                   id: 84,
                   name: 'Choose your team and make a basketball game',
                   path: '/s/basketball',
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
       },
       {
         id: 68,
@@ -635,19 +635,19 @@ export const hocCourseOfferings = {
               is_recommended: true,
               locales: ['English'],
               units: {
-                '520': {
+                520: {
                   id: 520,
                   name: 'Code your own sports game',
                   path: '/s/sports',
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
       },
       {
         id: 33,
@@ -668,22 +668,22 @@ export const hocCourseOfferings = {
               is_recommended: true,
               locales: ['English'],
               units: {
-                '348': {
+                348: {
                   id: 348,
                   name: 'Keep On Dancing (2018)',
                   path: '/s/dance-extras',
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
-      }
-    ]
-  }
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
+      },
+    ],
+  },
 };
 
 export const plCourseOfferings = {
@@ -708,20 +708,19 @@ export const plCourseOfferings = {
               is_recommended: true,
               locales: ['English'],
               units: {
-                '7343': {
+                7343: {
                   id: 7343,
-                  name:
-                    'CS Discoveries Virtual Professional Learning 2022 - 23',
+                  name: 'CS Discoveries Virtual Professional Learning 2022 - 23',
                   path: '/s/vpl-csd-2022',
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
       },
       {
         id: 362,
@@ -742,20 +741,20 @@ export const plCourseOfferings = {
               is_recommended: true,
               locales: ['English'],
               units: {
-                '7340': {
+                7340: {
                   id: 7340,
                   name: 'CSA Virtual Professional Learning',
                   path: '/s/vpl-csa-2022',
                   lesson_extras_available: false,
                   text_to_speech_enabled: false,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
-      }
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
+      },
     ],
     'Self-Paced': [
       {
@@ -777,38 +776,38 @@ export const plCourseOfferings = {
               is_recommended: true,
               locales: ['English'],
               units: {
-                '4162': {
+                4162: {
                   id: 4162,
                   name: 'Module 1: Welcome',
                   path: '/s/self-paced-pl-csa1-2022',
                   lesson_extras_available: false,
                   text_to_speech_enabled: false,
                   position: 1,
-                  requires_verified_instructor: false
+                  requires_verified_instructor: false,
                 },
-                '4163': {
+                4163: {
                   id: 4163,
                   name: 'Module 2: Navigating Code.org',
                   path: '/s/self-paced-pl-csa2-2022',
                   lesson_extras_available: false,
                   text_to_speech_enabled: false,
                   position: 2,
-                  requires_verified_instructor: false
+                  requires_verified_instructor: false,
                 },
-                '4164': {
+                4164: {
                   id: 4164,
                   name: 'Module 3: Support for text-based programming',
                   path: '/s/self-paced-pl-csa3-2022',
                   lesson_extras_available: false,
                   text_to_speech_enabled: false,
                   position: 3,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
-      }
-    ]
-  }
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
+      },
+    ],
+  },
 };

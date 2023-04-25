@@ -10,7 +10,7 @@ class UnitCalendarLessonChunk extends Component {
     minuteWidth: PropTypes.number.isRequired,
     lessonChunk: unitCalendarLessonChunk,
     isHover: PropTypes.bool,
-    handleHover: PropTypes.func.isRequired
+    handleHover: PropTypes.func.isRequired,
   };
 
   handleMouseEnter = () => {
@@ -33,7 +33,7 @@ class UnitCalendarLessonChunk extends Component {
       isEnd,
       isMajority,
       url,
-      lessonNumber
+      lessonNumber,
     } = this.props.lessonChunk;
 
     const chunkWidth = Math.floor(minuteWidth * duration) - 10;
@@ -50,7 +50,7 @@ class UnitCalendarLessonChunk extends Component {
         ? styles.instructionalHover
         : styles.instructional),
       ...(isStart ? styles.isStart : styles.isNotStart),
-      ...(isEnd ? styles.isEnd : styles.isNotEnd)
+      ...(isEnd ? styles.isEnd : styles.isNotEnd),
     };
 
     let displayTitle = smallChunk ? lessonNumber : title;
@@ -83,7 +83,7 @@ class UnitCalendarLessonChunk extends Component {
                   icon="check-circle"
                   style={{
                     color: isHover ? color.white : color.purple,
-                    visibility: assessment ? 'visible' : 'hidden'
+                    visibility: assessment ? 'visible' : 'hidden',
                   }}
                   onMouseEnter={this.handleMouseEnter}
                   onMouseOut={this.handleMouseOut}
@@ -91,7 +91,7 @@ class UnitCalendarLessonChunk extends Component {
                 <FontAwesome
                   icon="scissors"
                   style={{
-                    visibility: unplugged ? 'visible' : 'hidden'
+                    visibility: unplugged ? 'visible' : 'hidden',
                   }}
                   onMouseEnter={this.handleMouseEnter}
                   onMouseOut={this.handleMouseOut}
@@ -126,7 +126,7 @@ const styles = {
     margin: 5,
     color: '#333',
     textDecorationLine: 'none',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
   },
   boxContent: {
     display: 'flex',
@@ -134,38 +134,38 @@ const styles = {
     justifyContent: 'center',
     textAlign: 'center',
     fontFamily: '"Gotham 4r", sans-serif',
-    height: '100%'
+    height: '100%',
   },
   assessment: {
-    border: '2px solid ' + color.purple
+    border: '2px solid ' + color.purple,
   },
   assessmentHover: {
     border: '2px solid ' + color.purple,
     backgroundColor: color.purple,
-    color: 'white'
+    color: 'white',
   },
   instructional: {
-    border: '2px solid ' + color.teal
+    border: '2px solid ' + color.teal,
   },
   instructionalHover: {
     border: '2px solid ' + color.teal,
     backgroundColor: color.teal,
-    color: color.white
+    color: color.white,
   },
   isNotStart: {
-    borderLeftStyle: 'dashed'
+    borderLeftStyle: 'dashed',
   },
   isStart: {
-    borderLeftStyle: 'solid'
+    borderLeftStyle: 'solid',
   },
   isNotEnd: {
-    borderRightStyle: 'dashed'
+    borderRightStyle: 'dashed',
   },
   isEnd: {
-    borderRightStyle: 'solid'
+    borderRightStyle: 'solid',
   },
   titleText: {
-    width: '100%'
+    width: '100%',
   },
   iconSection: {
     display: 'flex',
@@ -175,8 +175,8 @@ const styles = {
     paddingLeft: 2,
     paddingTop: 2,
     paddingBottom: 2,
-    boxSizing: 'border-box'
-  }
+    boxSizing: 'border-box',
+  },
 };
 
 export default UnitCalendarLessonChunk;
