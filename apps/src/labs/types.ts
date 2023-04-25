@@ -128,3 +128,8 @@ export type StandaloneAppName =
   | 'poetry'
   | 'time_capsule'
   | 'dance';
+
+export enum ProjectManagerType {
+  LOCAL = 'LOCAL',
+  S3 = 'S3',
+}
