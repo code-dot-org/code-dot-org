@@ -110,10 +110,6 @@ export function getCode(workspace) {
 }
 
 // TODO: Re-define with a new custom field.
-export function playSoundButton(dashboard, onSelect) {
-  return new Blockly.FieldDropdown([['Choose', 'Choose']], () => {
-    dashboard.assets.showAssetManager(onSelect, 'audio', null, {
-      libraryOnly: true,
-    });
-  });
+export function soundField(onChange) {
+  return new Blockly.FieldDropdown([['Choose', 'Choose']], onChange);
 }
