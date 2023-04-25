@@ -294,10 +294,10 @@ ul {
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
+    gap: 1em 3em;
 
     li {
       text-indent: 0 !important;
-      margin: 1em 3em 1em 0;
       padding: 0;
 
       &::before {
@@ -764,12 +764,12 @@ form {
 
   .wrapper{
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    gap: 2em;
   }
 
   i {
     font-size: 2em;
-    margin-right: 1em
   }
 
   .text-wrapper {
