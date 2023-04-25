@@ -1,5 +1,5 @@
 /**
- * A utility for retrieving the Rails authentication token, needed for certain
+ * A utility for retrieving the Rails authenticity token, needed for certain
  * requests made to dashboard. On some pages, this is passed down as part of the
  * DOM, but in others, it may need to be retrieved by a separate AJAX request.
  */
