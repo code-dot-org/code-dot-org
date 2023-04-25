@@ -44,6 +44,7 @@ window.levelbuilder.copyWorkspaceToClipboard = function () {
     Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
   );
   copyToClipboard(str);
+  localStorage.setItem('blockXml', str);
 };
 
 window.levelbuilder.copySelectedBlockToClipboard = function () {
@@ -52,7 +53,28 @@ window.levelbuilder.copySelectedBlockToClipboard = function () {
       Blockly.Xml.blockToDom(Blockly.selected)
     );
     copyToClipboard(str);
+    localStorage.setItem('blockXml', str);
   }
+};
+
+window.levelbuilder.pasteBlocksToWorkspace = function () {
+  let str = localStorage.getItem('blockXml');
+
+  if (str.startsWith('<xml') && str.endsWith('</xml>')) {
+    // If an entire workspace has been copied, clear the current workspace.
+    Blockly.mainBlockSpace.clear();
+  } else if (str.startsWith('<block') && str.endsWith('</block>')) {
+    // If a single block has been copied, wrap it in <xml></xml>
+    str = `<xml>${str}</xml>`;
+  } else {
+    // str is not valid block xml.
+    return;
+  }
+
+  Blockly.Xml.domToBlockSpace(
+    Blockly.mainBlockSpace,
+    Blockly.Xml.textToDom(str)
+  );
 };
 
 // TODO: Remove when global `CodeMirror` is no longer required.
