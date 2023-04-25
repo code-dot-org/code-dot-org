@@ -8,7 +8,7 @@ export default function IntegerField(props) {
       backgroundColor: props.color || 'transparent',
       padding: '4px 8px',
       borderRadius: 15,
-      fontWeight: 'bold'
+      fontWeight: 'bold',
     },
     props.style
   );
@@ -23,5 +23,5 @@ IntegerField.propTypes = {
   className: PropTypes.string,
   value: PropTypes.number,
   color: PropTypes.string,
-  style: PropTypes.object
+  style: PropTypes.object,
 };

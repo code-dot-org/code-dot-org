@@ -16,7 +16,7 @@ const responses = [
     lesson: 'Lesson 1',
     studentId: 1,
     studentName: 'Student A',
-    url: 'http://fake.url'
+    url: 'http://fake.url',
   },
   {
     puzzle: 3,
@@ -25,7 +25,7 @@ const responses = [
     lesson: 'Lesson 2',
     studentId: 1,
     studentName: 'Student A',
-    url: 'http://fake.url'
+    url: 'http://fake.url',
   },
   {
     puzzle: 3,
@@ -34,8 +34,8 @@ const responses = [
     lesson: 'Lesson 2',
     studentId: 3,
     studentName: 'Student C',
-    url: 'http://fake.url'
-  }
+    url: 'http://fake.url',
+  },
 ];
 
 describe('TextResponses', () => {

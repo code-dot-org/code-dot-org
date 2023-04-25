@@ -27,7 +27,7 @@ const FlappyVisualizationColumn = ({showFinishButton}) => {
   );
 };
 FlappyVisualizationColumn.propTypes = {
-  showFinishButton: PropTypes.bool.isRequired
+  showFinishButton: PropTypes.bool.isRequired,
 };
 
 module.exports = FlappyVisualizationColumn;

@@ -759,7 +759,11 @@ module LevelsHelper
       nonGlobal: true,
     }
     app = level.game.app
+    # We can safely treat this string as HTML-safe because it's constructed
+    # from levelbuilder-provided data, not user- or translator-provided.
+    # rubocop:disable Rails/OutputSafety
     blocks = content_tag(:xml, level.blocks_to_embed(level.properties[block_type]).html_safe)
+    # rubocop:enable Rails/OutputSafety
 
     unless @blockly_loaded
       @blockly_loaded = true
@@ -805,7 +809,11 @@ module LevelsHelper
     return match_answer_as_iframe(path, width) if File.extname(path) == '.level'
 
     @@markdown_renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Inline.new(filter_html: true))
+    # We can safely treat this string as HTML-safe because the markdown
+    # renderer is configured to filter out any non-markdown-standard HTML.
+    # rubocop:disable Rails/OutputSafety
     @@markdown_renderer.render(text).html_safe
+    # rubocop:enable Rails/OutputSafety
   end
 
   def level_title

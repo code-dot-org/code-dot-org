@@ -16,7 +16,7 @@ export default function QuickAssignTableHocPl({
   courseOfferings,
   setSelectedCourseOffering,
   updateCourse,
-  sectionCourse
+  sectionCourse,
 }) {
   // Begins the table construction given the first table title
   const allTables = title => {
@@ -97,5 +97,5 @@ QuickAssignTableHocPl.propTypes = {
   courseOfferings: PropTypes.object.isRequired,
   setSelectedCourseOffering: PropTypes.func.isRequired,
   updateCourse: PropTypes.func.isRequired,
-  sectionCourse: PropTypes.object
+  sectionCourse: PropTypes.object,
 };

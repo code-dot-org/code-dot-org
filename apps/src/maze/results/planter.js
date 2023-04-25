@@ -5,7 +5,7 @@ import {TestResults} from '../../constants.js';
 export default class PlanterHandler extends ResultsHandler {
   static TerminationValue = {
     PLANT_IN_NON_SOIL: 0,
-    DID_NOT_PLANT_EVERYWHERE: 1
+    DID_NOT_PLANT_EVERYWHERE: 1,
   };
 
   constructor(maze, config) {

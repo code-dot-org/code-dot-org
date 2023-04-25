@@ -16,5 +16,5 @@ export const PlayerUtilsContext: React.Context<PlayerUtils> =
   React.createContext<PlayerUtils>({
     getPlaybackEvents: () => [],
     getTracksMetadata: () => ({}),
-    getLastMeasure: () => 0
+    getLastMeasure: () => 0,
   });

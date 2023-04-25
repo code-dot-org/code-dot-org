@@ -16,14 +16,14 @@ describe('Authored Hint Utils', function () {
       id: 'first',
       prevTime: 'something decent',
       nextTime: 'something great',
-      finalTime: 'something awesome'
+      finalTime: 'something awesome',
     };
 
     hintTwo = {
       id: 'second',
       prevTestResult: 'something okay',
       nextTestResult: 'something fine',
-      finalTestResult: 'something rather poor'
+      finalTestResult: 'something rather poor',
     };
 
     record = {
@@ -31,14 +31,14 @@ describe('Authored Hint Utils', function () {
       testResult: 'something grand',
       activityId: 0,
       attempt: 1,
-      levelSourceId: 2
+      levelSourceId: 2,
     };
     recordTwo = {
       time: 'something superb',
       testResult: 'something glorious',
       activityId: 3,
       attempt: 4,
-      levelSourceId: 5
+      levelSourceId: 5,
     };
 
     // some of our tests modify $.ajax. Cache the original value here so
@@ -124,7 +124,7 @@ describe('Authored Hint Utils', function () {
           finalTestResult: 'something grand',
           finalActivityId: 0,
           finalAttempt: 1,
-          finalLevelSourceId: 2
+          finalLevelSourceId: 2,
         },
         {
           id: 'second',
@@ -134,8 +134,8 @@ describe('Authored Hint Utils', function () {
           finalTime: 'something standard',
           finalActivityId: 0,
           finalAttempt: 1,
-          finalLevelSourceId: 2
-        }
+          finalLevelSourceId: 2,
+        },
       ]);
     });
   });
@@ -162,8 +162,8 @@ describe('Authored Hint Utils', function () {
           prevTestResult: 'something grand',
           prevActivityId: 0,
           prevAttempt: 1,
-          prevLevelSourceId: 2
-        }
+          prevLevelSourceId: 2,
+        },
       ]);
     });
   });
@@ -209,8 +209,8 @@ describe('Authored Hint Utils', function () {
           nextTestResult: 'something grand',
           nextActivityId: 0,
           nextAttempt: 1,
-          nextLevelSourceId: 2
-        }
+          nextLevelSourceId: 2,
+        },
       ]);
     });
   });
@@ -242,7 +242,7 @@ describe('Authored Hint Utils', function () {
           prevAttempt: 1,
           prevLevelSourceId: 2,
           prevTestResult: 'something grand',
-          prevTime: 'something decent'
+          prevTime: 'something decent',
         },
         {
           id: 'second',
@@ -256,8 +256,8 @@ describe('Authored Hint Utils', function () {
           prevAttempt: 4,
           prevLevelSourceId: 5,
           prevTestResult: 'something okay',
-          prevTime: 'something superb'
-        }
+          prevTime: 'something superb',
+        },
       ]);
     });
 
@@ -278,7 +278,7 @@ describe('Authored Hint Utils', function () {
       assert.deepEqual(
         data,
         JSON.stringify({
-          hints: finalizedHints
+          hints: finalizedHints,
         })
       );
     });

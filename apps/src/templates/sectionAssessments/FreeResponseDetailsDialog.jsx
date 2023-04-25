@@ -14,7 +14,7 @@ class FreeResponseDetailsDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
     closeDialog: PropTypes.func.isRequired,
-    questionAndAnswers: PropTypes.object
+    questionAndAnswers: PropTypes.object,
   };
 
   render() {
@@ -47,15 +47,15 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   instructions: {
-    marginTop: 20
-  }
+    marginTop: 20,
+  },
 };
 
 export const UnconnectedFreeResponseDetailsDialog = FreeResponseDetailsDialog;
 
 export default connect(state => ({
-  questionAndAnswers: getCurrentQuestion(state)
+  questionAndAnswers: getCurrentQuestion(state),
 }))(FreeResponseDetailsDialog);

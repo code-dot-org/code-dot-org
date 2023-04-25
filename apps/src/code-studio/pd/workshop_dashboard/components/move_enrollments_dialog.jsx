@@ -7,14 +7,14 @@ export default class MoveEnrollmentsDialog extends React.Component {
     selectedEnrollments: PropTypes.array,
     show: PropTypes.bool,
     onCancel: PropTypes.func,
-    onMove: PropTypes.func
+    onMove: PropTypes.func,
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      destination_workshop_id: null
+      destination_workshop_id: null,
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -61,8 +61,8 @@ export default class MoveEnrollmentsDialog extends React.Component {
 
 const styles = {
   warning: {
-    color: 'red'
-  }
+    color: 'red',
+  },
 };
 
 const EnrollmentList = ({enrollments}) => {
@@ -80,5 +80,5 @@ const EnrollmentList = ({enrollments}) => {
 };
 
 EnrollmentList.propTypes = {
-  enrollments: PropTypes.array
+  enrollments: PropTypes.array,
 };

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import $ from 'jquery';
 import StylizedBaseDialog, {
-  FooterButton
+  FooterButton,
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import {TextLink} from '@dsco_/link';
 import color from '@cdo/apps/util/color';
@@ -13,7 +13,7 @@ export function CloneFormDialog({
   programmingEnvironmentsForSelect,
   categoriesForSelect,
   onClose,
-  onCloneSuccess
+  onCloneSuccess,
 }) {
   const [destinationEnvironment, setDestinationEnvironment] = useState(null);
   const [destinationCategory, setDestinationCategory] = useState(null);
@@ -25,12 +25,12 @@ export function CloneFormDialog({
       method: 'POST',
       headers: {
         'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content'),
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         destinationProgrammingEnvironmentName: destinationEnvironment,
-        destinationCategoryKey: destinationCategory
-      })
+        destinationCategoryKey: destinationCategory,
+      }),
     })
       .then(response => {
         if (response.ok) {
@@ -100,7 +100,7 @@ export default function CloneProgrammingExpressionDialog({
   itemToClone,
   programmingEnvironmentsForSelect,
   categoriesForSelect,
-  onClose
+  onClose,
 }) {
   const [clonedEditUrl, setClonedEditUrl] = useState(null);
 
@@ -146,7 +146,7 @@ CloneProgrammingExpressionDialog.propTypes = {
   programmingEnvironmentsForSelect: PropTypes.arrayOf(PropTypes.object)
     .isRequired,
   categoriesForSelect: PropTypes.arrayOf(PropTypes.object).isRequired,
-  onClose: PropTypes.func.isRequired
+  onClose: PropTypes.func.isRequired,
 };
 
 CloneFormDialog.propTypes = {
@@ -155,7 +155,7 @@ CloneFormDialog.propTypes = {
     .isRequired,
   categoriesForSelect: PropTypes.arrayOf(PropTypes.object).isRequired,
   onClose: PropTypes.func.isRequired,
-  onCloneSuccess: PropTypes.func
+  onCloneSuccess: PropTypes.func,
 };
 
 const styles = {
@@ -166,6 +166,6 @@ const styles = {
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
     marginBottom: 0,
-    marginLeft: 5
-  }
+    marginLeft: 5,
+  },
 };

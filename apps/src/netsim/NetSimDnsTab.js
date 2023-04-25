@@ -69,7 +69,7 @@ NetSimDnsTab.prototype.render = function () {
 
   var renderedMarkup = $(
     markup({
-      level: levelConfig
+      level: levelConfig,
     })
   );
   this.rootDiv_.html(renderedMarkup);

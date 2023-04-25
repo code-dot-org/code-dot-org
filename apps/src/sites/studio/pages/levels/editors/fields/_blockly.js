@@ -23,7 +23,7 @@ if (window.Blockly && !data.uses_droplet) {
     'maze',
     'netsim',
     'studio',
-    'turtle'
+    'turtle',
   ];
   if (customSkins.includes(data.app)) {
     skinsLocation = data.app + '/';
@@ -31,7 +31,7 @@ if (window.Blockly && !data.uses_droplet) {
   const skinsModule = require('@cdo/apps/' + skinsLocation + 'skins');
   const options = {
     skin: skinsModule.load(function () {}, data.skin_id),
-    isK1: data.isK1
+    isK1: data.isK1,
   };
   commonBlocks.install(window.Blockly, options);
   appBlocks.install(window.Blockly, options);
@@ -40,7 +40,7 @@ if (window.Blockly && !data.uses_droplet) {
     installCustomBlocks({
       blockly: window.Blockly,
       blockDefinitions: data.shared_blocks,
-      customInputTypes: appBlocks.customInputTypes
+      customInputTypes: appBlocks.customInputTypes,
     });
   }
 }
@@ -48,34 +48,34 @@ if (window.Blockly && !data.uses_droplet) {
 const fieldConfig = {
   startEditor: {
     codemirror: 'level_start_blocks',
-    blockPreview: 'start-preview'
+    blockPreview: 'start-preview',
   },
   requiredEditor: {
     codemirror: 'level_required_blocks',
-    blockPreview: 'required-preview'
+    blockPreview: 'required-preview',
   },
   recommendedEditor: {
     codemirror: 'level_recommended_blocks',
-    blockPreview: 'recommended-preview'
+    blockPreview: 'recommended-preview',
   },
   toolboxEditor: {
     codemirror: 'level_toolbox_blocks',
-    blockPreview: 'toolbox-preview'
+    blockPreview: 'toolbox-preview',
   },
   initializationEditor: {
     codemirror: 'level_initialization_blocks',
-    blockPreview: 'initialization-preview'
+    blockPreview: 'initialization-preview',
   },
   solutionEditor: {
     hideWhen: !data.solution_blocks,
     codemirror: 'level_solution_blocks',
-    blockPreview: 'solution-preview'
+    blockPreview: 'solution-preview',
   },
   inputOutputTable: {
     hideWhen: !data.input_output_table,
     codemirror: 'level_input_output_table',
-    codemirrorMode: 'javascript'
-  }
+    codemirrorMode: 'javascript',
+  },
 };
 
 Object.keys(fieldConfig).forEach(key => {
