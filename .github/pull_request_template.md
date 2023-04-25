@@ -57,5 +57,5 @@ the Student Learning team or Curriculum team for more details.
 - [ ] Privacy and Security impacts have been assessed
 - [ ] Performing and caching impacts have been assessed
 - [ ] New features are translatable and updates will not break translations
-- [ ] UI changes improve or maintain accessibility
+- [ ] UI changes improve or maintain accessibility for keyboard navigation, screenreader compatibility, and WCAG color contrast guidelines
 - [ ] Follow-up work items (including potential tech debt) are tracked and linked
