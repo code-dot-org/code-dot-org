@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-pl-csc",
-    "serialized_at": "2023-04-19 19:54:37 UTC",
+    "serialized_at": "2023-04-24 23:52:53 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "universal_instructor",
@@ -358,7 +358,7 @@
       "key": "a7a72337-60a3-4976-9f4e-e35af08b86d4",
       "position": 5,
       "properties": {
-        "progression_name": "Using pair programming"
+        "progression_name": "Next steps"
       },
       "seeding_key": {
         "activity_section.key": "a7a72337-60a3-4976-9f4e-e35af08b86d4",
@@ -573,6 +573,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSC-SelfPaced-behavior_2023"
+        ],
         "progression": "Introducing Sprite Lab"
       },
       "bonus": false,
@@ -1045,6 +1048,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSC-SelfPaced-freeplay_2023"
+        ],
         "progression": "Types of levels"
       },
       "bonus": false,
@@ -1067,6 +1073,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSC-SelfPaced-choicelevel_2023"
+        ],
         "progression": "Types of levels"
       },
       "bonus": false,
@@ -1306,6 +1315,28 @@
       },
       "level_keys": [
         "CSC-SelfPaced-learningexperiences_2023"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Next steps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSC-SelfPaced-end_2023"
+        ],
+        "lesson.key": "Consider real world implications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csc-2023",
+        "activity_section.key": "a7a72337-60a3-4976-9f4e-e35af08b86d4"
+      },
+      "level_keys": [
+        "CSC-SelfPaced-end_2023"
       ]
     }
   ],
@@ -1764,6 +1795,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csc-2023",
         "activity_section.key": "36b52dd6-ea32-4a0e-84b9-51105db7c9cb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSC-SelfPaced-end_2023",
+        "script_level.level_keys": [
+          "CSC-SelfPaced-end_2023"
+        ],
+        "lesson.key": "Consider real world implications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csc-2023",
+        "activity_section.key": "a7a72337-60a3-4976-9f4e-e35af08b86d4"
       }
     }
   ],

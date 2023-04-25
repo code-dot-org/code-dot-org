@@ -50,7 +50,7 @@ describe('SingleSectionSetUp', () => {
 
     const checkbox = wrapper.find('input[type="checkbox"]').at(0);
     checkbox.simulate('change', {
-      target: {setCustomValidity: () => {}, checked: true}
+      target: {setCustomValidity: () => {}, checked: true},
     });
     expect(updateSectionSpy).to.have.been.calledOnce;
   });

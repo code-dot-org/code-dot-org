@@ -31,7 +31,7 @@ export function blobToDataURI(blob, onComplete) {
 export function dataURIToSourceSize(dataURI) {
   return toImage(dataURI).then(image => ({
     x: image.width,
-    y: image.height
+    y: image.height,
   }));
 }
 

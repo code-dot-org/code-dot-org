@@ -6,14 +6,14 @@ import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 
 const LevelCopyText = {
   deepCopy: 'Deep Copy',
-  shallowCopy: 'Shallow Copy'
+  shallowCopy: 'Shallow Copy',
 };
 
 export default class CloneLessonDialog extends Component {
   static propTypes = {
     lessonId: PropTypes.number,
     lessonName: PropTypes.string,
-    handleClose: PropTypes.func.isRequired
+    handleClose: PropTypes.func.isRequired,
   };
 
   defaultState = {
@@ -23,7 +23,7 @@ export default class CloneLessonDialog extends Component {
     saving: false,
     cloneFailed: false,
     cloneSucceeded: false,
-    responseData: null
+    responseData: null,
   };
 
   constructor(props) {
@@ -42,12 +42,12 @@ export default class CloneLessonDialog extends Component {
       method: 'POST',
       body: JSON.stringify({
         destinationUnitName: this.state.destinationUnit,
-        newLevelSuffix
+        newLevelSuffix,
       }),
       headers: {
         'Content-Type': 'application/json',
-        'X-CSRF-Token': csrfContainer && csrfContainer.content
-      }
+        'X-CSRF-Token': csrfContainer && csrfContainer.content,
+      },
     })
       .then(response => {
         success = response.ok;
@@ -59,7 +59,7 @@ export default class CloneLessonDialog extends Component {
           responseData: json,
           cloneSucceeded: success,
           cloneFailed: !success,
-          saving: false
+          saving: false,
         });
       });
   };
@@ -183,14 +183,14 @@ export default class CloneLessonDialog extends Component {
 
 const styles = {
   dropdown: {
-    width: 200
+    width: 200,
   },
   table: {
     border: 'none',
-    marginBottom: 10
+    marginBottom: 10,
   },
   tableCell: {
     border: '1px solid black',
-    padding: 3
-  }
+    padding: 3,
+  },
 };

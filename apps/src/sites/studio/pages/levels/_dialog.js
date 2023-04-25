@@ -2,7 +2,7 @@
 
 import {
   showDialog,
-  processResults
+  processResults,
 } from '@cdo/apps/code-studio/levels/dialogHelper';
 import {getResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {LegacyUnsubmitDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';

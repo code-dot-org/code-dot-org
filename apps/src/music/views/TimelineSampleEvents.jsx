@@ -10,7 +10,7 @@ import TimelineElement from './TimelineElement';
 const TimelineSampleEvents = ({
   barWidth,
   eventVerticalSpace,
-  getEventHeight
+  getEventHeight,
 }) => {
   const playerUtils = useContext(PlayerUtilsContext);
   const soundEvents = playerUtils.getPlaybackEvents();
@@ -55,7 +55,7 @@ const TimelineSampleEvents = ({
 TimelineSampleEvents.propTypes = {
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
-  getEventHeight: PropTypes.func.isRequired
+  getEventHeight: PropTypes.func.isRequired,
 };
 
 export default TimelineSampleEvents;

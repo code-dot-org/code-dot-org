@@ -9,7 +9,7 @@ const clickSpy = sinon.spy();
 
 const defaultProps = {
   icon: 'icon',
-  children: [<a href="foo">href</a>, <a onClick={clickSpy}>onclick</a>]
+  children: [<a href="foo">href</a>, <a onClick={clickSpy}>onclick</a>],
 };
 
 describe('InlineDropdownMenu', () => {

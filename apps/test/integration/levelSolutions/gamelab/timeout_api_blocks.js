@@ -80,6 +80,6 @@ module.exports = {
         assert.include(debugOutput, 'timedLoop 2');
         assert.notInclude(debugOutput, 'do not expect this');
       }
-    )
-  ]
+    ),
+  ],
 };

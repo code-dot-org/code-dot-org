@@ -11,7 +11,7 @@ class ShareDialog extends Component {
     isProjectLevel: PropTypes.bool.isRequired,
     allowSignedOutShare: PropTypes.bool,
     // Only applicable to Dance Party projects, used to Tweet at song artist.
-    selectedSong: PropTypes.string
+    selectedSong: PropTypes.string,
   };
 
   render() {
@@ -35,5 +35,5 @@ class ShareDialog extends Component {
 export const UnconnectedShareDialog = ShareDialog;
 
 export default connect(state => ({
-  signInState: state.currentUser.signInState
+  signInState: state.currentUser.signInState,
 }))(ShareDialog);

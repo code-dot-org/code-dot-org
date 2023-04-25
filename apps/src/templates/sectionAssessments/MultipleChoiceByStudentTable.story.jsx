@@ -2,12 +2,12 @@ import React from 'react';
 import MultipleChoiceByStudentTable from './MultipleChoiceByStudentTable';
 import {
   studentMCData,
-  multipleChoiceDataForSingleStudent
+  multipleChoiceDataForSingleStudent,
 } from './assessmentsTestHelpers';
 
 export default {
   title: 'MultipleChoiceByStudentTable',
-  component: MultipleChoiceByStudentTable
+  component: MultipleChoiceByStudentTable,
 };
 
 export const Primary = () => (

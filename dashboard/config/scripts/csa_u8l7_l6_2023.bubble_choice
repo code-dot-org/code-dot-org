@@ -1,6 +1,6 @@
 name 'CSA U8L7-L6_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Traversing Multiple Lists'
+description 'Implement standard algorithms to traverse multiple lists'
 
 sublevels
 level 'CSA U8L7-L6a_2023'

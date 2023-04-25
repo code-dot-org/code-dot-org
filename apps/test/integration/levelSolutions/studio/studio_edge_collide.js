@@ -18,12 +18,12 @@ var levelDef = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   timeoutFailureTick: 200,
   freePlay: true,
   edgeCollisions: true,
-  allowSpritesOutsidePlayspace: false
+  allowSpritesOutsidePlayspace: false,
 };
 
 module.exports = {
@@ -106,8 +106,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -160,8 +160,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -214,8 +214,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -295,8 +295,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    }
-  ]
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+  ],
 };

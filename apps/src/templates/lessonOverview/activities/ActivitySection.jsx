@@ -8,7 +8,7 @@ import i18n from '@cdo/locale';
 
 export default class ActivitySection extends Component {
   static propTypes = {
-    section: activitySectionShape
+    section: activitySectionShape,
   };
 
   render() {
@@ -21,7 +21,7 @@ export default class ActivitySection extends Component {
           {section.duration > 0 && (
             <span>
               {i18n.activityHeaderTime({
-                activityDuration: section.duration
+                activityDuration: section.duration,
               })}
             </span>
           )}
@@ -29,7 +29,7 @@ export default class ActivitySection extends Component {
         <div className="activity-section-text">
           <div
             style={{
-              ...styles.textAndProgression
+              ...styles.textAndProgression,
             }}
           >
             {section.remarks && (
@@ -45,8 +45,8 @@ export default class ActivitySection extends Component {
                 ...(section.remarks && {
                   borderLeft: '5px solid #CCC',
                   paddingLeft: 5,
-                  marginBottom: 5
-                })
+                  marginBottom: 5,
+                }),
               }}
             >
               <EnhancedSafeMarkdown markdown={section.text} expandableImages />
@@ -72,32 +72,32 @@ const styles = {
   activitySection: {
     display: 'flex',
     flexDirection: 'row',
-    width: '100%'
+    width: '100%',
   },
   tipIcons: {
     display: 'flex',
     flexDirection: 'column',
     width: 20,
     padding: 5,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   tips: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   remarks: {
     marginLeft: 5,
-    fontStyle: 'italic'
+    fontStyle: 'italic',
   },
   remarksHeader: {
-    marginTop: 0
+    marginTop: 0,
   },
   textAndProgression: {
     display: 'flex',
     flexDirection: 'column',
-    width: '100%' // If there are tips for the activity section this is updated below
+    width: '100%', // If there are tips for the activity section this is updated below
   },
   progression: {
-    marginBottom: 5
-  }
+    marginBottom: 5,
+  },
 };

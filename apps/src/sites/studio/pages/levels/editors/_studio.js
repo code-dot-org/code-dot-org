@@ -13,7 +13,7 @@ $(document).ready(function () {
     CodeMirror.fromTextArea(jQuerySuccessConditionBox.get(0), {
       mode: 'javascript',
       viewportMargin: Infinity,
-      matchBrackets: true
+      matchBrackets: true,
     });
   }
 
@@ -22,7 +22,7 @@ $(document).ready(function () {
     CodeMirror.fromTextArea(jQueryFailureConditionBox.get(0), {
       mode: 'javascript',
       viewportMargin: Infinity,
-      matchBrackets: true
+      matchBrackets: true,
     });
   }
 });
