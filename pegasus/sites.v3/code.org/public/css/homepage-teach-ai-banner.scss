@@ -3,10 +3,10 @@
 .homepage-teach-ai-banner {
   box-sizing: content-box;
   height: 130px;
-  background: url("/images/banners/teach-ai-bg.svg") top center no-repeat;
+  background: url("/images/banners/teach-ai-bg.png") top center no-repeat;
   background-size: cover;
 
-  @media screen and (max-width: $width-md) {
+  @media screen and (max-width: $width-lg) {
     padding: 0 1.5em;
   }
 
