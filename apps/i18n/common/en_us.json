@@ -345,6 +345,7 @@
   "classSection": "Class Section",
   "classSectionNum": "Class Section #{num}",
   "clearAssignedCurriculum": "Clear assigned curriculum",
+  "clearFilters": "Clear filters",
   "clearTable": "Clear table",
   "clearPuzzle": "Start Over",
   "clearPuzzleConfirm": "This will reset the puzzle to its start state and delete all the blocks you've added or changed.",

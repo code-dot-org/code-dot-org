@@ -101,7 +101,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
           className={style.catalogClearFiltersButton}
           onClick={handleClear}
         >
-          Clear filters
+          {i18n.clearFilters()}
         </button>
       </div>
       <div className={style.catalogContentContainer}>
