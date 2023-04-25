@@ -79,11 +79,9 @@ class SchoolStatsByYear < ApplicationRecord
         end
       end
 
-      CDO.log.debug("New #{new_schools}, updated #{updated_schools}, unchanged #{unchanged_schools}")
       # Raise an error so that the db transaction rolls back
-      raise "[2:41] This was a dry run. No rows were modified or added. Set dry_run: false to modify db" if dry_run
+      raise "This was a dry run. No rows were modified or added. Set dry_run: false to modify db" if dry_run
     ensure
-      CDO.log.debug "Transaction roll back, getting stats on processing"
       future_tense_dry_run = dry_run ? ' to be' : ''
       summary_message = "School stats seeding: done processing #{filename}.\n"\
         "#{new_schools} new stats#{future_tense_dry_run} added.\n"\
