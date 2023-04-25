@@ -10,7 +10,7 @@ $(document).ready(function () {
   // Some Music Lab-specific configuration.
   const appConfig = {
     'load-progression': 'true',
-    'local-progression': 'true'
+    'local-progression': 'true',
   };
 
   ReactDOM.render(

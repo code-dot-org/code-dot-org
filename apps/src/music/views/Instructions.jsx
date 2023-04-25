@@ -14,7 +14,7 @@ const Instructions = ({
   onNextPanel,
   baseUrl,
   vertical,
-  right
+  right,
 }) => {
   const [showBigImage, setShowBigImage] = useState(false);
   const progressState = useSelector(state => state.music.currentProgressState);

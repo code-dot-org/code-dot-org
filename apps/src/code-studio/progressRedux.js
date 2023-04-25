@@ -133,7 +133,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === SET_CURRENT_LEVEL_ID) {
     return {
       ...state,
-      currentLevelId: action.levelId
+      currentLevelId: action.levelId,
     };
   }
 
@@ -452,7 +452,7 @@ export const initProgress = ({
 
 export const setCurrentLevelId = levelId => ({
   type: SET_CURRENT_LEVEL_ID,
-  levelId: levelId
+  levelId: levelId,
 });
 
 /**
