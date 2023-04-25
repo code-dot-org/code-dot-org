@@ -299,6 +299,8 @@ ul {
     li {
       text-indent: 0 !important;
       padding: 0;
+      display: flex;
+      gap: 0 0.75em;
 
       &::before {
         content: none;
@@ -306,7 +308,7 @@ ul {
 
       i {
         font-size: 1.25em;
-        margin: 0 4px 0 0;
+        margin: 3px 0 0;
         vertical-align: text-bottom;
 
         &:before {
