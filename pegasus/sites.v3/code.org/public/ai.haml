@@ -65,13 +65,15 @@ theme: responsive_full_width
 
 %a{id: "teach-ai-callout"}
 - if !!DCDO.get('teach-ai-launch-2023', false)
-  %section.bg-primary-light
-    .wrapper{style: "display: flex; justify-content: space-between"}
-      %i{class: "#{icon_megaphone}", style: "font-size: 2em; margin-right: 1em"}
-      .text-wrapper{style: "width: 100%"}
-        %p.heading-sm Blog post heading here
-        %p Blog post blurb here.
-        %a.link-button{href: "#", target: "_blank", rel: "noopener noreferrer"} Read more
+  %section.bg-primary-light.blog-post-callout
+    .wrapper
+      %i{class: "#{icon_megaphone}"}
+      .text-wrapper
+        %h2.heading-sm=hoc_s(:teachai_launch_blog_title)
+        %p
+          %strong=hoc_s(:teachai_launch_blog_desc_01)
+        %p=hoc_s(:teachai_launch_blog_desc_02)
+        %a.link-button{href: "https://teachai.org/launch", target: "_blank", rel: "noopener noreferrer"} Read more
 
 %section.bg-neutral-light
   .wrapper

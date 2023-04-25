@@ -758,3 +758,25 @@ form {
     margin-top: 1.25em;
   }
 }
+
+// Blog post callout
+.blog-post-callout {
+
+  .wrapper{
+    display: flex;
+    justify-content: space-between
+  }
+
+  i {
+    font-size: 2em;
+    margin-right: 1em
+  }
+
+  .text-wrapper {
+    width: 100%;
+
+    h2 {
+      margin-bottom: 1em;
+    }
+  }
+}
