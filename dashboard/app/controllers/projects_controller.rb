@@ -4,8 +4,8 @@ require 'cdo/firehose'
 class ProjectsController < ApplicationController
   before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :weblab_footer]
   before_action :redirect_admin_from_labs, only: [:load, :create_new, :show, :edit, :remix]
-  before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
-  before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config, :export_create_channel]
+  before_action :authorize_load_project!, only: [:load, :create_new, :get_or_create_for_level, :edit, :remix]
+  before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config, :export_create_channel, :get_or_create_for_level,]
   protect_from_forgery except: :export_config
   include LevelsHelper
 
@@ -283,18 +283,12 @@ class ProjectsController < ApplicationController
   # GET /projects/for_level/:level_id
   def get_or_create_for_level
     level = Levels.find(params[:level_id])
-    project_type = Projects.get_project_type_for_level(level)
-    user_storage_id = nil
-    if current_user
-      user_storage_id = storage_id_for_user_id(current_user.id)
-    else
-      user_storage_id = get_storage_id
-    end
+    user_storage_id = current_user ? storage_id_for_user_id(current_user.id) : get_storage_id
     # find channel for user and level if it exists, or create a new one
-    # how do we get: user storage id (does above work?), script id (either param or infer from level??),
-    # isHidden (is hidden is maybe a param??)
-    ChannelToken.find_or_create_channel_token(level, user_storage_id, script_id, {hidden: isHidden})
+    # how do we get: user storage id (does above work?), script id (do we need this? Can add a param. Can't always infer from level),
+    # Can hidden always be true? Will we use this api for a standalone project?
     # always return the channel id
+    ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, nil, {hidden: true})
   end
 
   def weblab_footer
