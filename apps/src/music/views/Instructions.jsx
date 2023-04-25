@@ -8,10 +8,17 @@ import {useSelector} from 'react-redux';
 /**
  * Renders the Music Lab instructions component.
  */
-const Instructions = ({progression, onNextPanel, baseUrl, vertical, right}) => {
+const Instructions = ({
+  progression,
+  currentLevelIndex,
+  onNextPanel,
+  baseUrl,
+  vertical,
+  right,
+}) => {
   const [showBigImage, setShowBigImage] = useState(false);
   const progressState = useSelector(state => state.music.currentProgressState);
-  const currentPanel = progressState.step;
+  const currentPanel = currentLevelIndex;
 
   const getNextPanel = () => {
     return currentPanel + 1 < progression.steps.length
@@ -79,7 +86,7 @@ const Instructions = ({progression, onNextPanel, baseUrl, vertical, right}) => {
 
 Instructions.propTypes = {
   progression: PropTypes.object,
-  currentPanel: PropTypes.number,
+  currentLevelIndex: PropTypes.number,
   message: PropTypes.string,
   onNextPanel: PropTypes.func,
   baseUrl: PropTypes.string.isRequired,
