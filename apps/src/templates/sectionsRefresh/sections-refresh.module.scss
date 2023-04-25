@@ -60,13 +60,16 @@
 .headerRow {
   background-color: $brand_primary_default;
   color: $white;
-  height: 42px;
+  height: 47px;
 }
 
 .headerCell {
-  font-weight: 500;
-  font-size: 24px;
   padding: 12px;
+
+  h4 {
+    color: $neutral_white;
+    margin-bottom: 0;
+  }
 }
 
 .tableBody {
@@ -75,9 +78,6 @@
 }
 
 .courseHeaders {
-  font-weight: 350;
-  font-size: 20px;
-  line-height: 24px;
   position: relative;
   left: 10px;
 }

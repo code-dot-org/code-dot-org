@@ -4,6 +4,7 @@ import MultiSelectGroup from '@cdo/apps/templates/teacherDashboard/MultiSelectGr
 import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 import moduleStyles from './sections-refresh.module.scss';
 import i18n from '@cdo/locale';
+import {Heading2} from '@cdo/apps/componentLibrary/typography';
 
 export default function SingleSectionSetUp({
   sectionNum,
@@ -14,7 +15,7 @@ export default function SingleSectionSetUp({
 
   return (
     <div>
-      <h2>{i18n.classSection()}</h2>
+      <Heading2>{i18n.classSection()}</Heading2>
       <label>
         {i18n.className()}
         <input
@@ -26,9 +27,9 @@ export default function SingleSectionSetUp({
         />
       </label>
       <MultiSelectGroup
+        required
         label={i18n.chooseGrades()}
         name="grades"
-        required={true}
         options={gradeOptions}
         values={section.grades || []}
         setValues={g => updateSection('grades', g)}

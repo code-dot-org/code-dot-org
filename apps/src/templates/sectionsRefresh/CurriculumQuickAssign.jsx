@@ -7,6 +7,7 @@ import QuickAssignTableHocPl from './QuickAssignTableHocPl';
 import CurriculumQuickAssignTopRow from './CurriculumQuickAssignTopRow';
 import VersionUnitDropdowns from './VersionUnitDropdowns';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {BodyOneText, Heading3} from '@cdo/apps/componentLibrary/typography';
 
 export const MARKETING_AUDIENCE = {
   ELEMENTARY: 'elementary',
@@ -79,8 +80,8 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
           id="decide-later"
           onChange={toggleDecideLater}
         />
-        <h3>{i18n.assignACurriculum()}</h3>
-        <h5>{i18n.useDropdownMessage()}</h5>
+        <Heading3>{i18n.assignACurriculum()}</Heading3>
+        <BodyOneText>{i18n.useDropdownMessage()}</BodyOneText>
       </div>
       <CurriculumQuickAssignTopRow
         showPlOfferings={showPlOfferings}

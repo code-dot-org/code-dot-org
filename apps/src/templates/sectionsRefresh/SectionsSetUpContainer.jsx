@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 import i18n from '@cdo/locale';
 import SingleSectionSetUp from './SingleSectionSetUp';
 import CurriculumQuickAssign from './CurriculumQuickAssign';
@@ -93,9 +93,14 @@ export default function SectionsSetUpContainer() {
 
   const caret = advancedSettingsOpen ? 'caret-down' : 'caret-right';
 
-  const toggleAdvancedSettingsOpen = () => {
-    setAdvancedSettingsOpen(!advancedSettingsOpen);
-  };
+  const toggleAdvancedSettingsOpen = useCallback(
+    e => {
+      e.preventDefault();
+
+      setAdvancedSettingsOpen(!advancedSettingsOpen);
+    },
+    [advancedSettingsOpen]
+  );
 
   return (
     <form id={FORM_ID}>

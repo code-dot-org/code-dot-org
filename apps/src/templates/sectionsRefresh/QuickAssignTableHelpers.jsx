@@ -1,5 +1,6 @@
 import React from 'react';
 import moduleStyles from './sections-refresh.module.scss';
+import {Heading5} from '@cdo/apps/componentLibrary/typography';
 
 /*
 This is a file to house the shared pieces of both types of Curriculum
@@ -21,7 +22,7 @@ export function renderRows(
   return headers.map(header => (
     <tr key={header}>
       <td className={moduleStyles.courseHeaders}>
-        {header}
+        <Heading5>{header}</Heading5>
         {renderOfferings(
           courseData[header],
           sectionCourse,
