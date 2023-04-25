@@ -30,7 +30,7 @@ const LabContainer = ({children}) => {
 
 LabContainer.propTypes = {
   currentLevelId: PropTypes.string,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default LabContainer;
