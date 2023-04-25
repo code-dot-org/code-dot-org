@@ -15,12 +15,12 @@ build:
       infer:
       # rerun watching
       # /app/src/lib, /app/src/shared/middleware, /app/src/dashboard/legacy, /app/src/pegasus for **/*.{rb,ru,yml} (ignoring **/migrations/*.rb,test/**/*.rb)
-      - '*.rb'
-      - '*.ru'
-      - '*.yml'
-      - '*.js'
-      - '*.jsx'
-      - '*.json'
+      - '**/*.rb'
+      - '**/*.ru'
+      - '**/*.yml'
+      - '**/*.js'
+      - '**/*.jsx'
+      - '**/*.json'
     docker:
       dockerfile: ./k8s/cdo.dockerfile
       cacheFrom:
