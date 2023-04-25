@@ -22,7 +22,7 @@ describe('Sprite Commands', () => {
       a: animation,
       b: animation,
       label: animation,
-      costume_label: animation
+      costume_label: animation,
     };
   });
 
@@ -73,12 +73,12 @@ describe('Sprite Commands', () => {
     coreLibrary.addSprite({
       name: sprite1Name,
       animation: 'label',
-      location: {x: 123, y: 321}
+      location: {x: 123, y: 321},
     });
     actionCommands.setProp.apply(coreLibrary, [
       {name: sprite1Name},
       'anotherProp',
-      'value'
+      'value',
     ]);
 
     expect(
@@ -99,12 +99,12 @@ describe('Sprite Commands', () => {
     coreLibrary.addSprite({
       name: sprite1Name,
       animation: 'label',
-      location: {x: 123, y: 321}
+      location: {x: 123, y: 321},
     });
     coreLibrary.addSprite({
       name: sprite2Name,
       animation: 'label',
-      location: {x: 321, y: 123}
+      location: {x: 321, y: 123},
     });
 
     expect(
@@ -116,7 +116,7 @@ describe('Sprite Commands', () => {
     coreLibrary.addSprite({name: sprite1Name});
     commands.setAnimation.apply(coreLibrary, [
       {name: sprite1Name},
-      'costume_label'
+      'costume_label',
     ]);
     expect(
       commands.getProp.apply(coreLibrary, [{name: sprite1Name}, 'costume'])
@@ -163,7 +163,7 @@ describe('Sprite Commands', () => {
       commands.makeBurst.apply(coreLibrary, [
         100000000,
         'costume_label',
-        'burst'
+        'burst',
       ]);
       expect(coreLibrary.getNumberOfSprites()).to.equal(MAX_NUM_SPRITES);
     });

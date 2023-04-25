@@ -116,7 +116,7 @@ describe('Packet.Encoder', function () {
       assert.throws(function () {
         new Packet.Encoder(addressFormat, packetFieldWidth, [
           'packetIndex',
-          'packetIndex'
+          'packetIndex',
         ]);
       }, Error);
     });
@@ -126,7 +126,7 @@ describe('Packet.Encoder', function () {
       var packetFieldWidth = 4;
       new Packet.Encoder(addressFormat, packetFieldWidth, [
         'packetIndex',
-        'packetCount'
+        'packetCount',
       ]);
     });
   });
@@ -142,7 +142,7 @@ describe('Packet.Encoder', function () {
       var binary = shortFormat.concatenateBinary(
         shortFormat.makeBinaryHeaders({
           toAddress: 1,
-          fromAddress: 2
+          fromAddress: 2,
         }),
         '0010'
       );
@@ -154,7 +154,7 @@ describe('Packet.Encoder', function () {
       var binary = shortFormat.concatenateBinary(
         shortFormat.makeBinaryHeaders({
           fromAddress: 2,
-          toAddress: 1
+          toAddress: 1,
         }),
         '0010'
       );
@@ -166,7 +166,7 @@ describe('Packet.Encoder', function () {
       var binary = shortFormat.concatenateBinary(
         {
           toAddress: '101',
-          fromAddress: '10'
+          fromAddress: '10',
         },
         ''
       );
@@ -178,7 +178,7 @@ describe('Packet.Encoder', function () {
       var binary = shortFormat.concatenateBinary(
         {
           toAddress: '01011',
-          fromAddress: '0000'
+          fromAddress: '0000',
         },
         ''
       );
@@ -189,7 +189,7 @@ describe('Packet.Encoder', function () {
     it('zero-fills missing fields in data', function () {
       var binary = shortFormat.concatenateBinary(
         {
-          fromAddress: '10'
+          fromAddress: '10',
         },
         ''
       );
@@ -202,7 +202,7 @@ describe('Packet.Encoder', function () {
         {
           toAddress: '101',
           fromAddress: '10',
-          other: '1101'
+          other: '1101',
         },
         ''
       );
@@ -222,7 +222,7 @@ describe('Packet.Encoder', function () {
       var binary = encoder.concatenateBinary(
         encoder.makeBinaryHeaders({
           toAddress: '6.1',
-          fromAddress: '6.2'
+          fromAddress: '6.2',
         }),
         '0010'
       );
@@ -235,7 +235,7 @@ describe('Packet.Encoder', function () {
       var binary = encoder.concatenateBinary(
         encoder.makeBinaryHeaders({
           toAddress: '6',
-          fromAddress: '6.'
+          fromAddress: '6.',
         }),
         '0010'
       );
@@ -248,7 +248,7 @@ describe('Packet.Encoder', function () {
       var binary = encoder.concatenateBinary(
         encoder.makeBinaryHeaders({
           toAddress: '3.4.5',
-          fromAddress: '6.a.7.8'
+          fromAddress: '6.a.7.8',
         }),
         '0010'
       );
@@ -269,7 +269,7 @@ describe('Packet.Encoder', function () {
 
       var otherFormat = new Packet.Encoder('4', 0, [
         'toAddress',
-        'fromAddress'
+        'fromAddress',
       ]);
 
       assert.equal('0000', otherFormat.getHeader('toAddress', packet));
@@ -332,7 +332,7 @@ describe('Packet.Encoder', function () {
 
       var otherFormat = new Packet.Encoder('2.5', 0, [
         'toAddress',
-        'fromAddress'
+        'fromAddress',
       ]);
 
       assert.equal('0100000', otherFormat.getHeader('toAddress', packet));

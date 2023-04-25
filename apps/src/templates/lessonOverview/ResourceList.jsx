@@ -11,7 +11,7 @@ import {
   isGDocsUrl,
   gDocsPdfUrl,
   gDocsMsOfficeUrl,
-  gDocsCopyUrl
+  gDocsCopyUrl,
 } from './googleDocsUtils';
 import style from './resource-list.module.scss';
 
@@ -21,8 +21,8 @@ export default class ResourceList extends Component {
     pageType: PropTypes.oneOf([
       'student-lesson-plan',
       'teacher-lesson-plan',
-      'resources-rollup'
-    ]).isRequired
+      'resources-rollup',
+    ]).isRequired,
   };
 
   normalizeUrl = url => {
@@ -49,8 +49,8 @@ export default class ResourceList extends Component {
         event: 'download-resource',
         data_int: resource.id,
         data_json: JSON.stringify({
-          resourceId: resource.id
-        })
+          resourceId: resource.id,
+        }),
       },
       {
         includeUserId: true,
@@ -60,7 +60,7 @@ export default class ResourceList extends Component {
             'noopener',
             'noreferrer'
           );
-        }
+        },
       }
     );
   };
@@ -80,14 +80,14 @@ export default class ResourceList extends Component {
         event: 'open-resource',
         data_int: resource.id,
         data_json: JSON.stringify({
-          resourceId: resource.id
-        })
+          resourceId: resource.id,
+        }),
       },
       {
         includeUserId: true,
         callback: () => {
           windowOpen(this.normalizeUrl(resource.url), 'noopener', 'noreferrer');
-        }
+        },
       }
     );
   };
@@ -101,7 +101,7 @@ export default class ResourceList extends Component {
       resourceUrl: resource.url,
       resourceDownloadUrl: resource.download_url,
       visitType: visitType,
-      path: document.location.pathname
+      path: document.location.pathname,
     });
   };
 

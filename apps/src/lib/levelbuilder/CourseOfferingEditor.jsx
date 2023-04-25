@@ -13,7 +13,7 @@ import {
   CourseOfferingCsTopics,
   CourseOfferingSchoolSubjects,
   DeviceTypes,
-  DeviceCompatibilityLevels
+  DeviceCompatibilityLevels,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 import {translatedCourseOfferingCategories} from '@cdo/apps/templates/teacherDashboard/AssignmentSelectorHelpers';
@@ -21,7 +21,7 @@ import {
   translatedCourseOfferingCsTopics,
   translatedCourseOfferingSchoolSubjects,
   translatedCourseOfferingDeviceTypes,
-  translatedCourseOfferingDeviceCompatibilityLevels
+  translatedCourseOfferingDeviceCompatibilityLevels,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import ImageInput from './ImageInput';
 
@@ -56,7 +56,7 @@ export default function CourseOfferingEditor(props) {
       method: 'PUT',
       dataType: 'json',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(courseOffering)
+      data: JSON.stringify(courseOffering),
     })
       .done(data => {
         if (shouldCloseAfterSave) {
@@ -354,13 +354,13 @@ CourseOfferingEditor.propTypes = {
     image: PropTypes.string,
     cs_topic: PropTypes.string,
     school_subject: PropTypes.string,
-    device_compatibility: PropTypes.string
-  })
+    device_compatibility: PropTypes.string,
+  }),
 };
 
 const styles = {
   checkbox: {
-    margin: '0 0 0 7px'
+    margin: '0 0 0 7px',
   },
   input: {
     width: '100%',
@@ -369,9 +369,9 @@ const styles = {
     color: '#555',
     border: '1px solid #ccc',
     borderRadius: 4,
-    margin: 0
+    margin: 0,
   },
   dropdown: {
-    margin: '0 6px'
-  }
+    margin: '0 6px',
+  },
 };

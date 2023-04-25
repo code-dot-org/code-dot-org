@@ -18,7 +18,7 @@ import {
   reducers,
   setSelectedSong,
   setSongData,
-  setRunIsStarting
+  setRunIsStarting,
 } from './redux';
 import trackEvent from '../util/trackEvent';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -26,7 +26,7 @@ import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
 import {
   captureThumbnailFromCanvas,
-  setThumbnailBlobFromCanvas
+  setThumbnailBlobFromCanvas,
 } from '../util/thumbnail';
 import project from '../code-studio/initApp/project';
 import {
@@ -36,7 +36,7 @@ import {
   loadSongMetadata,
   parseSongOptions,
   unloadSong,
-  fetchSignedCookies
+  fetchSignedCookies,
 } from './songs';
 import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArtistTags';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -46,14 +46,14 @@ import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
 
 const ButtonState = {
   UP: 0,
-  DOWN: 1
+  DOWN: 1,
 };
 
 const ArrowIds = {
   LEFT: 'leftButton',
   UP: 'upButton',
   RIGHT: 'rightButton',
-  DOWN: 'downButton'
+  DOWN: 'downButton',
 };
 
 /**
@@ -77,7 +77,7 @@ var Dance = function () {
     // Time the run button was last clicked
     lastRunButtonClick: null,
     // Time between last run click and last time the song actually started playing
-    lastRunButtonDelay: null
+    lastRunButtonDelay: null,
   };
 };
 
@@ -144,7 +144,7 @@ Dance.prototype.init = function (config) {
 
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
-    isProjectLevel: !!config.level.isProjectLevel
+    isProjectLevel: !!config.level.isProjectLevel,
   });
 
   this.initSongsPromise = this.initSongs(config);
@@ -206,8 +206,8 @@ Dance.prototype.initSongs = async function (config) {
           event: 'initial-auth-error',
           data_json: JSON.stringify({
             currentUrl: window.location.href,
-            channelId: config.channel
-          })
+            channelId: config.channel,
+          }),
         },
         {includeUserId: true}
       );
@@ -248,8 +248,8 @@ Dance.prototype.setSongCallback = function (songId) {
                 event: 'repeated-auth-error',
                 data_json: JSON.stringify({
                   currentUrl: window.location.href,
-                  channelId: getStore().getState().pageConstants.channelId
-                })
+                  channelId: getStore().getState().pageConstants.channelId,
+                }),
               },
               {includeUserId: true}
             );
@@ -277,7 +277,7 @@ const KeyCodes = {
   LEFT_ARROW: 37,
   UP_ARROW: 38,
   RIGHT_ARROW: 39,
-  DOWN_ARROW: 40
+  DOWN_ARROW: 40,
 };
 
 function keyCodeFromArrow(idBtn) {
@@ -358,7 +358,7 @@ Dance.prototype.afterInject_ = function () {
         'validationResult',
         'validationProps',
         'levelSuccess',
-        'levelFailure'
+        'levelFailure',
       ].join(',')
     );
     Blockly.JavaScript.addReservedWords(DancelabReservedWords.join(','));
@@ -392,7 +392,7 @@ Dance.prototype.afterInject_ = function () {
         logToCloud.PageAction.DancePartyOnInit,
         {
           logSampleRate,
-          share: this.share
+          share: this.share,
         },
         logSampleRate
       );
@@ -402,7 +402,7 @@ Dance.prototype.afterInject_ = function () {
     i18n: danceMsg,
     resourceLoader: new ResourceLoader(
       'https://curriculum.code.org/images/sprites/dance_20191106/'
-    )
+    ),
   });
 
   // Expose an interface for testing
@@ -412,8 +412,8 @@ Dance.prototype.afterInject_ = function () {
     ...nativeAPITestInterface,
     getPerformanceData: () => ({
       ...nativeAPITestInterface.getPerformanceData(),
-      ...this.performanceData_
-    })
+      ...this.performanceData_,
+    }),
   };
 
   if (recordReplayLog) {
@@ -428,7 +428,7 @@ Dance.prototype.playSong = function (url, callback, onEnded) {
     onEnded: () => {
       onEnded();
       this.studioApp_.toggleRunReset('run');
-    }
+    },
   });
 };
 
@@ -493,7 +493,7 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
       result: levelComplete,
       testResult: this.testResults,
       program: program,
-      onComplete: this.onReportComplete.bind(this)
+      onComplete: this.onReportComplete.bind(this),
     });
   };
 
@@ -621,7 +621,7 @@ Dance.prototype.initInterpreter = function () {
   const events = {
     runUserSetup: {code: 'runUserSetup();'},
     runUserEvents: {code: 'runUserEvents(events);', args: ['events']},
-    getCueList: {code: 'return getCueList();'}
+    getCueList: {code: 'return getCueList();'},
   };
 
   this.hooks = CustomMarshalingInterpreter.evalWithEvents(
@@ -696,9 +696,9 @@ Dance.prototype.displayFeedback_ = function () {
     saveToProjectGallery: true,
     disableSaveToGallery: !isSignedIn,
     appStrings: {
-      reinfFeedbackMsg: 'TODO: localized feedback message.'
+      reinfFeedbackMsg: 'TODO: localized feedback message.',
     },
-    twitter: {text: twitterText, hashtag: hashtags}
+    twitter: {text: twitterText, hashtag: hashtags},
   };
 
   // Disable social share for users under 13 if we have the cookie set.

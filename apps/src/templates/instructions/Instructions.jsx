@@ -27,7 +27,7 @@ export default class Instructions extends React.Component {
     //  once we update Javalab to new styles we'll need to remove this prop and all of it's usage
     //  more info here: https://github.com/code-dot-org/code-dot-org/pull/50924
     isLegacyImmersiveStyles: PropTypes.bool,
-    noInstructionsWhenCollapsed: PropTypes.bool
+    noInstructionsWhenCollapsed: PropTypes.bool,
   };
 
   render() {
@@ -41,7 +41,7 @@ export default class Instructions extends React.Component {
       noInstructionsWhenCollapsed,
       inputOutputTable,
       imgURL,
-      authoredHints
+      authoredHints,
     } = this.props;
 
     return (
@@ -74,9 +74,9 @@ export default class Instructions extends React.Component {
 
 const styles = {
   inTopPane: {
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   notInTopPane: {
-    overflow: 'auto'
-  }
+    overflow: 'auto',
+  },
 };

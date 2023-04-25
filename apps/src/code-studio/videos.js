@@ -63,8 +63,8 @@ function onYouTubeIframeAPIReady() {
           var size = error.target.f.getBoundingClientRect();
           addFallbackVideoPlayer(currentVideoOptions, size.width, size.height);
         }
-      }
-    }
+      },
+    },
   });
 }
 
@@ -72,7 +72,7 @@ function createVideo(options) {
   const videoDiv = $('<iframe id="video"/>').addClass('video-player').attr({
     src: options.src,
     allowfullscreen: 'true',
-    scrolling: 'no'
+    scrolling: 'no',
   });
 
   const videoTabContainerDiv = $("<div id='videoTabContainer'></div>").append(
@@ -187,7 +187,7 @@ videos.showVideoDialog = function (options, forceShowVideo) {
     event: 'click touchend',
     activate: tabHandler,
     create: tabHandler,
-    active: lastTab !== null ? lastTab : 0 // Set starting tab.
+    active: lastTab !== null ? lastTab : 0, // Set starting tab.
   });
 
   var download = $('<a/>')
@@ -217,7 +217,7 @@ videos.showVideoDialog = function (options, forceShowVideo) {
   ).css({
     'padding-right': '40px',
     'padding-top': '9px',
-    'text-align': 'right'
+    'text-align': 'right',
   });
   nav.append(fallbackPlayerLinkDiv);
 
@@ -306,7 +306,7 @@ function resizeVideoPlayer() {
     position: 'fixed',
     top: top,
     left: '50%',
-    marginLeft: containerWidth / -2 + 'px'
+    marginLeft: containerWidth / -2 + 'px',
   });
 
   // The nav bar will have changed dimensions due to the resizing of the
@@ -514,7 +514,7 @@ function getShowNotes(key, success, error) {
   $.ajax({
     url: '/notes/' + key,
     success: success,
-    error: error
+    error: error,
   });
 }
 

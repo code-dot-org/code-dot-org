@@ -2,14 +2,14 @@ import React from 'react';
 import {
   LocalClassActionBlock,
   AdministratorResourcesActionBlock,
-  TwoColumnActionBlock
+  TwoColumnActionBlock,
 } from './TwoColumnActionBlock';
 import {Provider} from 'react-redux';
 import {reduxStore} from '@cdo/storybook/decorators';
 
 export default {
   title: 'TwoColumnActionBlock',
-  component: TwoColumnActionBlock
+  component: TwoColumnActionBlock,
 };
 
 const LocalClassActionBlockTemplate = args => {

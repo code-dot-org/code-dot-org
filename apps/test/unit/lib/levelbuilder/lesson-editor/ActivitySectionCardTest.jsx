@@ -7,20 +7,20 @@ import {
   stubRedux,
   restoreRedux,
   getStore,
-  registerReducers
+  registerReducers,
 } from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
 import resourceTestData from './resourceTestData';
 import {sampleActivities, searchOptions} from './activitiesTestData';
 import reducers, {
   initActivities,
-  initLevelSearching
+  initLevelSearching,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import createResourcesReducer, {
-  initResources
+  initResources,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import vocabulariesEditor, {
-  initVocabularies
+  initVocabularies,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
@@ -46,7 +46,7 @@ describe('ActivitySectionCard', () => {
     registerReducers({
       ...reducers,
       resources: createResourcesReducer('lessonResource'),
-      vocabularies: vocabulariesEditor
+      vocabularies: vocabulariesEditor,
     });
 
     store = getStore();
@@ -54,7 +54,7 @@ describe('ActivitySectionCard', () => {
     store.dispatch(
       initLevelSearching({
         searchOptions: searchOptions,
-        programmingEnvironments: []
+        programmingEnvironments: [],
       })
     );
     store.dispatch(initResources('lessonResource', resourceTestData));
@@ -90,7 +90,7 @@ describe('ActivitySectionCard', () => {
       updateActivitySectionField,
       reorderLevel,
       moveLevelToActivitySection,
-      addLevel
+      addLevel,
     };
   });
 

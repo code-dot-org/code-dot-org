@@ -10,7 +10,7 @@ describe('Enrollment unit assignment', () => {
         courseUnitData={{
           moduleAssignments: [{}, {}, {}],
           unitName: 'Unit Name',
-          status: 'in_progress'
+          status: 'in_progress',
         }}
       />
     );
@@ -26,7 +26,7 @@ describe('Enrollment unit assignment', () => {
         courseUnitData={{
           moduleAssignments: [{}, {}, {}],
           unitName: 'Unit Name',
-          status: 'start_blocked'
+          status: 'start_blocked',
         }}
       />
     );

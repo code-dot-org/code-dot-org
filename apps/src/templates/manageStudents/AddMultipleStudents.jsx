@@ -12,11 +12,11 @@ class AddMultipleStudents extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
     // Provided by redux
-    addMultipleStudents: PropTypes.func.isRequired
+    addMultipleStudents: PropTypes.func.isRequired,
   };
 
   state = {
-    isDialogOpen: false
+    isDialogOpen: false,
   };
 
   openDialog = () => {
@@ -27,8 +27,8 @@ class AddMultipleStudents extends Component {
         study_group: 'manage-students-actions',
         event: 'add-students-button-click',
         data_json: JSON.stringify({
-          sectionId: this.props.sectionId
-        })
+          sectionId: this.props.sectionId,
+        }),
       },
       {includeUserId: true}
     );
@@ -47,8 +47,8 @@ class AddMultipleStudents extends Component {
         study_group: 'manage-students-actions',
         event: 'add-students-confirm',
         data_json: JSON.stringify({
-          sectionId: this.props.sectionId
-        })
+          sectionId: this.props.sectionId,
+        }),
       },
       {includeUserId: true}
     );
@@ -59,7 +59,7 @@ class AddMultipleStudents extends Component {
     return (
       <div>
         <Button
-          __useDeprecatedTag
+          style={styles.button}
           onClick={this.openDialog}
           color={Button.ButtonColor.gray}
           text={i18n.addStudentsMultiple()}
@@ -81,13 +81,13 @@ class AddMultipleStudents extends Component {
           />
           <DialogFooter>
             <Button
-              __useDeprecatedTag
+              style={styles.button}
               text={i18n.dialogCancel()}
               onClick={this.closeDialog}
               color={Button.ButtonColor.gray}
             />
             <Button
-              __useDeprecatedTag
+              style={styles.button}
               text={i18n.done()}
               onClick={this.add}
               color={Button.ButtonColor.orange}
@@ -103,11 +103,15 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   textarea: {
-    width: '75%'
-  }
+    width: '75%',
+  },
+  button: {
+    margin: 0,
+    marginBottom: 5,
+  },
 };
 
 export default connect(
@@ -115,6 +119,6 @@ export default connect(
   dispatch => ({
     addMultipleStudents(names) {
       dispatch(addMultipleAddRows(names));
-    }
+    },
   })
 )(AddMultipleStudents);

@@ -3,7 +3,7 @@ import {UnconnectedSignInOrAgeDialog as SignInOrAgeDialog} from './SignInOrAgeDi
 
 export default {
   title: 'SignInOrAgeDialog',
-  component: SignInOrAgeDialog
+  component: SignInOrAgeDialog,
 };
 
 const Template = args => (
