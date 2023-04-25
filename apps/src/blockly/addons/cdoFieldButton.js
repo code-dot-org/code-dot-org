@@ -12,6 +12,8 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     this.title_ = title;
     this.buttonHandler_ = opt_buttonHandler;
     this.changeHandler_ = opt_changeHandler;
+    console.log('inside CdoFieldButton constructor');
+    console.log('buttonHandler_', this.buttonHandler_);
     console.log('changeHandler_', this.changeHandler_);
   }
 
@@ -39,7 +41,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
 
     this.textElement_.style.fontSize = '11pt';
     this.textElement_.style.fill = this.getSourceBlock().style.colourPrimary;
-    this.textElement_.textContent = '';
+    this.textElement_.textContent = 'textContent';
     this.textElement_.appendChild(this.title_);
 
     this.fieldGroup_.insertBefore(this.buttonElement_, this.textElement_);

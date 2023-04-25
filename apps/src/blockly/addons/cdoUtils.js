@@ -108,3 +108,7 @@ export function getCode(workspace) {
   // After supporting JSON block sources, change to:
   // return JSON.stringify(Blockly.serialization.workspaces.save(workspace));
 }
+
+export function playSoundButton(dashboard, onSelect) {
+  return new Blockly.FieldSoundsPicker();
+}

@@ -200,18 +200,12 @@ const customInputTypes = {
         return soundValue;
       };
       // label is command 'play sound'
-      currentInputRow.appendField(inputConfig.label).appendField(
-        new Blockly.FieldButton(
-          'Click to Choose',
-          () => {
-            dashboard.assets.showAssetManager(onSelect, 'audio', null, {
-              libraryOnly: true
-            });
-          },
-          block.getHexColour(),
-          () => {}
-        )
-      );
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(
+          Blockly.cdoUtils.playSoundButton(dashboard, onSelect),
+          inputConfig.name
+        );
     },
     generateCode(block, arg) {
       return `'${block.getFieldValue(arg.name)}'`;

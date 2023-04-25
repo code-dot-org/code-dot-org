@@ -21,6 +21,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
         connectedToParentNext
       );
     } catch (e) {
+      console.log(e);
       block = blocklyWrapper.Xml.originalDomToBlock(
         blocklyWrapper.Xml.textToDom('<block type="unknown" />'),
         workspace,
