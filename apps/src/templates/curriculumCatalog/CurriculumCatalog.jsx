@@ -6,6 +6,7 @@ import style from '../../../style/code-studio/curriculum_catalog_container.modul
 import HeaderBanner from '../HeaderBanner';
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-illustration-01.png';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
+import CheckboxDropdown from '../CheckboxDropdown';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 
 const CurriculumCatalog = ({curriculaData, isEnglish}) => {
@@ -57,7 +58,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
       />
       <div className={style.catalogFiltersContainer}>
         {filterTypes.map(filterType => (
-          <FilterCheckboxDropdown
+          <CheckboxDropdown
             key={filterType.name}
             name={filterType.name}
             label={filterType.label}
@@ -111,51 +112,6 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
 CurriculumCatalog.propTypes = {
   curriculaData: PropTypes.arrayOf(curriculumDataShape),
   isEnglish: PropTypes.bool.isRequired,
-};
-
-const FilterCheckboxDropdown = ({
-  name,
-  label,
-  allOptions,
-  checkedOptions = [],
-  onChange,
-}) => {
-  return (
-    <div id={`${name}-dropdown`} className="dropdown">
-      <button
-        id={`${name}-dropdown-button`}
-        type="button"
-        className="selectbox"
-        data-toggle="dropdown"
-      >
-        {label}
-      </button>
-      <ul className="dropdown-menu">
-        <form>
-          {allOptions.map(option => (
-            <li key={`${name}-${option}`} className="checkbox form-group">
-              <input
-                type="checkbox"
-                id={`${name}-${option}-check`}
-                name={option}
-                value={option}
-                checked={checkedOptions.includes(option)}
-                onChange={onChange}
-              />
-              <label htmlFor={`${name}-${option}-check`}>{option}</label>
-            </li>
-          ))}
-        </form>
-      </ul>
-    </div>
-  );
-};
-FilterCheckboxDropdown.propTypes = {
-  name: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  allOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
-  checkedOptions: PropTypes.arrayOf(PropTypes.string),
-  onChange: PropTypes.func.isRequired,
 };
 
 export default CurriculumCatalog;
