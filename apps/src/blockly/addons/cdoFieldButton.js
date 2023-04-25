@@ -60,6 +60,8 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
         }
       }
       this.value_ = newValue;
+      console.log('inside doValueUpdate_ - newValue');
+      console.log(newValue);
     }
     this.isDirty_ = true;
   }
