@@ -8,6 +8,7 @@ import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {navigateToHref} from '@cdo/apps/utils';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
@@ -72,14 +73,16 @@ const saveSection = (e, section, shouldShowCelebrationDialogOnRedirect) => {
     },
     body: JSON.stringify(section_data),
   })
-    .then(response => response.json())
+    .then(response => {
+      return response.json();
+    })
     .then(data => {
       // Redirect to the sections list.
       let redirectUrl = window.location.origin + '/home';
       if (shouldShowCelebrationDialogOnRedirect) {
         redirectUrl += '?showSectionCreationDialog=true';
       }
-      window.location.href = redirectUrl;
+      navigateToHref(redirectUrl);
     })
     .catch(err => {
       // TODO: Design how we want to show errors.
@@ -166,7 +169,7 @@ export default function SectionsSetUpContainer({isUsersFirstSection}) {
 }
 
 SectionsSetUpContainer.propTypes = {
-  isUsersFirstSection: PropTypes.bool
+  isUsersFirstSection: PropTypes.bool,
 };
 
 const style = {
