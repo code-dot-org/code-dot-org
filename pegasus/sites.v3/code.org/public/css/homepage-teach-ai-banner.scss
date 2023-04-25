@@ -3,7 +3,7 @@
 .homepage-teach-ai-banner {
   box-sizing: content-box;
   height: 130px;
-  background: url("/images/banners/ai-bg.png") top center no-repeat;
+  background: url("/images/banners/teach-ai-bg.svg") top center no-repeat;
   background-size: cover;
 
   @media screen and (max-width: $width-md) {
@@ -11,7 +11,7 @@
   }
 
   @media screen and (max-width: $width-sm) {
-    padding: 1em 1em 0.5em;
+    padding: 2em 1.5em;
     height: unset;
   }
 
@@ -29,6 +29,7 @@
     flex-wrap: wrap;
     max-width: 1020px;
     margin: 0 auto;
+    gap: 1.5em 1em;
 
     @media screen and (max-width: $width-sm) {
       justify-content: center;
@@ -39,48 +40,27 @@
     width: 200px;
 
     @media screen and (max-width: $width-md) {
-      margin: 0;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      width: 50px;
-      margin-right: 1.5em;
-    }
-
-    @media screen and (max-width: $width-xs) {
-      width: 50px;
-      margin: 0 0 1em 0;
+      width: 160px;
     }
   }
 
   .text-wrapper {
-    color: white;
     text-align: center;
-    width: 50%;
-
-    @media screen and (max-width: $width-md) {
-      text-align: left;
-      width: 57%;
-    }
+    width: 52%;
 
     @media screen and (max-width: $width-sm) {
-      width: 75%;
-    }
-
-    @media screen and (max-width: $width-xs) {
       width: 100%;
       text-align: center;
     }
 
     h1 {
-      font-family: $barlowSemiCondensed-semibold;
-      font-size: 2.125em;
+      font-size: 1.75em;
       line-height: 1.2;
-      color: $white;
+      color: #102C7E;
       margin: 0 auto 6px;
 
-      @media screen and (max-width: $width-sm) {
-        font-size: 1.65em;
+      @media screen and (max-width: $width-md) {
+        font-size: 1.5em;
       }
     }
 
@@ -89,23 +69,21 @@
       font-size: 1.15em;
       line-height: 1.3;
       margin-bottom: 0;
-      color: $white;
+      color: $neutral_dark;
 
-      @media screen and (max-width: $width-sm) {
+      @media screen and (max-width: $width-md) {
         font-size: 1em;
       }
     }
   }
 
   button {
-    background: #3CFFF8;
-    border-color: #3CFFF8;
-    color: $neutral_dark;
+    background: #102C7E;
+    border-color: #102C7E;
+    color: $neutral_white;
     font-family: 'Gotham 5r', sans-serif;
+    height: unset;
+    padding: 0.625em 1.5em;
     margin: 0;
-
-    @media screen and (max-width: $width-sm) {
-      margin: 1em auto;
-    }
   }
 }
