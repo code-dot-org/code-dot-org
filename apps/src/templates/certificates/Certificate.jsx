@@ -66,6 +66,9 @@ function Certificate(props) {
       donor
     };
     const encoded = btoa(reEncodeNonLatin1(JSON.stringify(data)));
+    // This method complies with “Base 64 Encoding with URL and Filename
+    // Safe Alphabet” in RFC 4648. The alphabet uses ‘-’ instead of ‘+’ and
+    // ‘_’ instead of ‘/’.
     return encoded.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/g, '');
   };
 
