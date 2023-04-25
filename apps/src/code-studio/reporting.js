@@ -244,7 +244,7 @@ reporting.sendReport = function (report) {
     'timeSinceLastMilestone',
     'lines',
     'attempt',
-    'image'
+    'image',
   ];
 
   validateReport(report);
@@ -338,7 +338,7 @@ reporting.sendReport = function (report) {
         }
         reportComplete(report, response);
       },
-      error: xhr => onNoSuccess(xhr)
+      error: xhr => onNoSuccess(xhr),
     });
 
     lastAjaxRequest = thisAjax;

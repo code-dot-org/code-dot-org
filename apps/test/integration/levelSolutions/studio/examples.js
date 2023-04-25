@@ -150,7 +150,7 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
+      [0, 0, 0, 0, 0, 0, 0, 0],
     ],
     useContractEditor: true,
     examplesRequired: true,
@@ -159,8 +159,8 @@ module.exports = {
     goal: {
       successCondition: function () {
         return Studio.tickCount > 2;
-      }
-    }
+      },
+    },
   },
   // Note: Thought the solution blocks are slightly different (Studio doesn't
   // have a compute block) and the success condition is added,  these tests are
@@ -170,7 +170,7 @@ module.exports = {
       description: 'example is missing result block',
       expected: {
         result: false,
-        testResult: TestResults.EXAMPLE_FAILED
+        testResult: TestResults.EXAMPLE_FAILED,
       },
       customValidator: function (assert) {
         assert.equal(
@@ -185,13 +185,13 @@ module.exports = {
         solutionBlocks +
         invalidExampleMissingResult +
         validExample2 +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'example result doesnt match definition',
       expected: {
         result: false,
-        testResult: TestResults.EXAMPLE_FAILED
+        testResult: TestResults.EXAMPLE_FAILED,
       },
       customValidator: function (assert) {
         assert.equal(
@@ -202,25 +202,26 @@ module.exports = {
         );
         return true;
       },
-      xml: '<xml>' + solutionBlocks + invalidExample1 + validExample2 + '</xml>'
+      xml:
+        '<xml>' + solutionBlocks + invalidExample1 + validExample2 + '</xml>',
     },
     {
       description: 'example result does match definition',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       customValidator: function (assert) {
         assert.equal(Studio.message, null);
         return true;
       },
-      xml: '<xml>' + solutionBlocks + validExample1 + validExample2 + '</xml>'
+      xml: '<xml>' + solutionBlocks + validExample1 + validExample2 + '</xml>',
     },
     {
       description: "variables don't need examples",
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       customValidator: function (assert) {
         assert.equal(Studio.message, null);
@@ -244,14 +245,14 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
 
     {
       description: 'no examples when examples required',
       expected: {
         result: false,
-        testResult: TestResults.EXAMPLE_FAILED
+        testResult: TestResults.EXAMPLE_FAILED,
       },
       customValidator: function (assert) {
         assert.equal(
@@ -262,7 +263,7 @@ module.exports = {
         );
         return true;
       },
-      xml: '<xml>' + solutionBlocks + '</xml>'
-    }
-  ]
+      xml: '<xml>' + solutionBlocks + '</xml>',
+    },
+  ],
 };

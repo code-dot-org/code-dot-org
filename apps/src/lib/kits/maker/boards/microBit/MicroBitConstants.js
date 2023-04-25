@@ -7,7 +7,7 @@ export const SENSOR_CHANNELS = {
   lightSensor: 11,
   tempSensor: 12,
   magX: 13,
-  magY: 14
+  magY: 14,
 };
 export const EXTERNAL_PINS = [0, 1, 2];
 
@@ -31,7 +31,7 @@ export const MB_COMPONENTS = [
   'LightSensor',
   'ExternalButton',
   'ExternalLed',
-  'CapacitiveTouchSensor'
+  'CapacitiveTouchSensor',
 ];
 
 export const MB_BUTTON_VARS = ['buttonA', 'buttonB'];
@@ -52,7 +52,7 @@ const SENSOR_EVENTS = ['change', 'data'];
 export const MB_COMPONENT_EVENTS = {
   buttonA: BUTTON_EVENTS,
   buttonB: BUTTON_EVENTS,
-  accelerometer: ['change', 'data', 'shake']
+  accelerometer: ['change', 'data', 'shake'],
 };
 MB_SENSOR_VARS.forEach(sensor => (MB_COMPONENT_EVENTS[sensor] = SENSOR_EVENTS));
 
@@ -74,7 +74,7 @@ export const SQUARE_LEDS = [
   [4, 0],
   [3, 0],
   [2, 0],
-  [1, 0]
+  [1, 0],
 ];
 
 export const CHECKMARK_LEDS = [
@@ -84,7 +84,7 @@ export const CHECKMARK_LEDS = [
   [3, 1],
   [4, 0],
   [0, 2],
-  [0, 3]
+  [0, 3],
 ];
 
 let allLeds = [];

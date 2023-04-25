@@ -7,7 +7,7 @@
 
 const {
   fileMetadataForEditor,
-  updateAllSourceFileOrders
+  updateAllSourceFileOrders,
 } = require('@cdo/apps/javalab/JavalabFileHelper');
 import _ from 'lodash';
 import {createSelector, createSlice, PayloadAction} from '@reduxjs/toolkit';
@@ -45,7 +45,7 @@ interface JavalabEditorState {
 }
 
 const initialSources: EditorFilesMap = {
-  'MyClass.java': {text: '', tabOrder: 0, isVisible: true, isValidation: false}
+  'MyClass.java': {text: '', tabOrder: 0, isVisible: true, isValidation: false},
 };
 
 const {fileMetadata, orderedTabKeys, activeTabKey, lastTabKeyIndex} =
@@ -62,7 +62,7 @@ export const initialState: JavalabEditorState = {
   editorOpenDialogName: null,
   newFileError: null,
   renameFileError: null,
-  editTabKey: null
+  editTabKey: null,
 };
 
 const javalabEditorSlice = createSlice({
@@ -85,11 +85,11 @@ const javalabEditorSlice = createSlice({
           source,
           tabOrder,
           isVisible = true,
-          isValidation = false
+          isValidation = false,
         } = action.payload;
         const newSources = {
           ...state.sources,
-          [filename]: {text: source, tabOrder, isVisible, isValidation}
+          [filename]: {text: source, tabOrder, isVisible, isValidation},
         };
         state.sources = newSources;
       },
@@ -101,7 +101,7 @@ const javalabEditorSlice = createSlice({
         isValidation = false
       ) {
         return {payload: {filename, source, tabOrder, isVisible, isValidation}};
-      }
+      },
     },
     setAllValidation(state, action: PayloadAction<EditorFilesMap>) {
       state.validation = action.payload;
@@ -132,7 +132,7 @@ const javalabEditorSlice = createSlice({
       },
       prepare(sources: EditorFilesMap, isEditingStartSources: boolean) {
         return {payload: {sources, isEditingStartSources}};
-      }
+      },
     },
     renameFile: {
       reducer(
@@ -150,7 +150,7 @@ const javalabEditorSlice = createSlice({
       },
       prepare(oldFilename: string, newFilename: string) {
         return {payload: {oldFilename, newFilename}};
-      }
+      },
     },
     sourceTextUpdated: {
       reducer(state, action: PayloadAction<{filename: string; text: string}>) {
@@ -158,7 +158,7 @@ const javalabEditorSlice = createSlice({
       },
       prepare(filename: string, text: string) {
         return {payload: {filename, text}};
-      }
+      },
     },
     sourceVisibilityUpdated: {
       reducer(
@@ -170,7 +170,7 @@ const javalabEditorSlice = createSlice({
       },
       prepare(filename: string, isVisible: boolean) {
         return {payload: {filename, isVisible}};
-      }
+      },
     },
     sourceValidationUpdated: {
       reducer(
@@ -182,7 +182,7 @@ const javalabEditorSlice = createSlice({
       },
       prepare(filename: string, isValidation: boolean) {
         return {payload: {filename, isValidation}};
-      }
+      },
     },
     sourceFileOrderUpdated(state) {
       const sources = _.cloneDeep(state.sources);
@@ -242,9 +242,14 @@ const javalabEditorSlice = createSlice({
         lastTabKeyIndex: number
       ) {
         return {
-          payload: {fileMetadata, orderedTabKeys, activeTabKey, lastTabKeyIndex}
+          payload: {
+            fileMetadata,
+            orderedTabKeys,
+            activeTabKey,
+            lastTabKeyIndex,
+          },
         };
-      }
+      },
     },
     setNewFileError(state, action: PayloadAction<string>) {
       state.newFileError = action.payload;
@@ -257,8 +262,8 @@ const javalabEditorSlice = createSlice({
     },
     clearRenameFileError(state) {
       state.renameFileError = null;
-    }
-  }
+    },
+  },
 });
 
 // Selectors
@@ -272,7 +277,7 @@ export const getSources = createSelector(selectSources, sources => {
       result[key] = {
         text: sources[key].text,
         isVisible: sources[key].isVisible,
-        tabOrder: sources[key].tabOrder
+        tabOrder: sources[key].tabOrder,
       };
     }
   }
@@ -285,7 +290,7 @@ export const getValidation = createSelector(selectSources, sources => {
     if (sources[key].isValidation) {
       validation[key] = {
         text: sources[key].text,
-        tabOrder: sources[key].tabOrder
+        tabOrder: sources[key].tabOrder,
       };
     }
   }
@@ -313,7 +318,7 @@ export const {
   setRenameFileError,
   clearRenameFileError,
   setNewFileError,
-  clearNewFileError
+  clearNewFileError,
 } = javalabEditorSlice.actions;
 
 export default javalabEditorSlice.reducer;

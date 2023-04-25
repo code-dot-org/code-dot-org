@@ -4,7 +4,7 @@ import {assert} from 'chai';
 import {Factory} from 'rosie';
 import {FormControl} from 'react-bootstrap';
 import Permission, {
-  WorkshopAdmin
+  WorkshopAdmin,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 import {WorkshopForm} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_form';
 import '../workshopFactory';
@@ -20,7 +20,7 @@ describe('WorkshopForm test', () => {
     fakeWorkshop = Factory.build('workshop');
     store = createStore(
       combineReducers({
-        mapbox: mapboxReducer
+        mapbox: mapboxReducer,
       })
     );
   });

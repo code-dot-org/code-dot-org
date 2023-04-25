@@ -9,7 +9,7 @@ const DEFAULT_PROPS = {
   loginType: 'picture',
   sectionId: 2,
   setSecretImage: () => {},
-  setSecretWords: () => {}
+  setSecretWords: () => {},
 };
 
 describe('ShowSecret', () => {

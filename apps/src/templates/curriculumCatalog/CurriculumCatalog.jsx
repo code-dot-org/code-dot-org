@@ -29,7 +29,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => (
               display_name,
               grade_levels,
               school_subject,
-              cs_topic
+              cs_topic,
             }) => (
               <CurriculumCatalogCard
                 key={key}
@@ -52,7 +52,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => (
 
 CurriculumCatalog.propTypes = {
   curriculaData: PropTypes.arrayOf(curriculumDataShape),
-  isEnglish: PropTypes.bool.isRequired
+  isEnglish: PropTypes.bool.isRequired,
 };
 
 export default CurriculumCatalog;

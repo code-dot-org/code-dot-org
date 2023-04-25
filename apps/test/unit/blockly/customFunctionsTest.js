@@ -1,7 +1,7 @@
 import {expect} from '../../util/reconfiguredChai';
 import {
   newDefinitionBlock,
-  allCallBlocks
+  allCallBlocks,
 } from '../../../src/blockly/addons/functionEditor.js';
 import xml from '@cdo/apps/xml';
 
@@ -24,7 +24,7 @@ describe('Custom Functions', () => {
     const definedFunctions = [['myTestFunction', [], false]];
     const callBlock = allCallBlocks(definedFunctions);
     const expectedXML = [
-      '<block type="procedures_callnoreturn" gap="16"><mutation name="myTestFunction"></mutation></block>'
+      '<block type="procedures_callnoreturn" gap="16"><mutation name="myTestFunction"></mutation></block>',
     ];
 
     expect(callBlock[0].isEqualNode(xml.parseElement(expectedXML[0], true))).to
@@ -35,13 +35,13 @@ describe('Custom Functions', () => {
     const definedFunctions = [
       ['myFirstTestFunction', [], false],
       ['mySecondTestFunction', [], false],
-      ['myThirdTestFunction', [], false]
+      ['myThirdTestFunction', [], false],
     ];
     const callBlocks = allCallBlocks(definedFunctions);
     const expectedXML = [
       '<block type="procedures_callnoreturn" gap="16"><mutation name="myFirstTestFunction"></mutation></block>',
       '<block type="procedures_callnoreturn" gap="16"><mutation name="mySecondTestFunction"></mutation></block>',
-      '<block type="procedures_callnoreturn" gap="16"><mutation name="myThirdTestFunction"></mutation></block>'
+      '<block type="procedures_callnoreturn" gap="16"><mutation name="myThirdTestFunction"></mutation></block>',
     ];
 
     callBlocks.forEach((block, index) => {

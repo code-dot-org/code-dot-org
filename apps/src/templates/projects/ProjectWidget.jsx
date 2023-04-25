@@ -13,11 +13,11 @@ class ProjectWidget extends React.Component {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     isLoading: PropTypes.bool,
     canViewFullList: PropTypes.bool,
-    canViewAdvancedTools: PropTypes.bool // Default: true
+    canViewAdvancedTools: PropTypes.bool, // Default: true
   };
 
   state = {
-    showFullList: false
+    showFullList: false,
   };
 
   toggleShowFullList = () => {
@@ -71,7 +71,7 @@ const convertChannelsToProjectData = function (projects) {
     channel: projectLists[i].id,
     thumbnailUrl: projectLists[i].thumbnailUrl,
     type: projectLists[i].projectType,
-    updatedAt: projectLists[i].updatedAt
+    updatedAt: projectLists[i].updatedAt,
   }));
 };
 

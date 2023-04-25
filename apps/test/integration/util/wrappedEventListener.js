@@ -43,5 +43,5 @@ module.exports = {
       window.removeEventListener.apply(window, argList);
     });
     window.wrappedListeners = null;
-  }
+  },
 };

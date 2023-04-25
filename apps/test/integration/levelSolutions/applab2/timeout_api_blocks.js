@@ -29,8 +29,8 @@ function testAsyncProgram(testName, program, doneCondition, validator) {
     },
     expected: {
       result: true,
-      testResult: TestResults.FREE_PLAY
-    }
+      testResult: TestResults.FREE_PLAY,
+    },
   };
 }
 
@@ -115,6 +115,6 @@ module.exports = {
         assert.include(debugOutput, 'timedLoop 2');
         assert.notInclude(debugOutput, 'do not expect this');
       }
-    )
-  ]
+    ),
+  ],
 };
