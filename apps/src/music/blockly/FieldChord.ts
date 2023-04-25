@@ -187,7 +187,7 @@ export default class FieldChord extends Field {
         previewChord: this.options.previewChord,
         previewNote: this.options.previewNote,
         cancelPreviews: this.options.cancelPreviews,
-        onChange: value => this.setValue(value),
+        onChange: this.onValueChange,
       }),
       this.newDiv
     );
@@ -204,4 +204,6 @@ export default class FieldChord extends Field {
       .join(', ');
     return notes.length > MAX_DISPLAY_NOTES ? allNotes + '...' : allNotes;
   }
+
+  private onValueChange = (value: ChordEventValue) => this.setValue(value);
 }
