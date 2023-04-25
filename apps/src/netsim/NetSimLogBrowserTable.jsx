@@ -11,20 +11,20 @@ import Packet from './Packet';
 
 let style = {
   nowrap: {
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
   },
   prewrap: {
-    whiteSpace: 'pre-wrap'
+    whiteSpace: 'pre-wrap',
   },
   table: {
-    marginBottom: 0
+    marginBottom: 0,
   },
   td: {
     color: color.charcoal,
     fontFamily: 'monospace',
     // Make sure table text can be selected and copied
-    userSelect: 'text'
-  }
+    userSelect: 'text',
+  },
 };
 style.nowrapTd = Object.assign({}, style.td, style.nowrap);
 style.prewrapTd = Object.assign({}, style.td, style.prewrap);
@@ -40,13 +40,13 @@ export default class NetSimLogBrowserTable extends React.Component {
     headerFields: PropTypes.arrayOf(PropTypes.string).isRequired,
     renderedRowLimit: PropTypes.number,
     teacherView: PropTypes.bool,
-    currentSentByFilter: PropTypes.string.isRequired
+    currentSentByFilter: PropTypes.string.isRequired,
   };
 
   state = {
     sortingColumns: {
-      0: {direction: 'desc', position: 0}
-    }
+      0: {direction: 'desc', position: 0},
+    },
   };
 
   getSortingColumns = () => this.state.sortingColumns || {};
@@ -60,10 +60,10 @@ export default class NetSimLogBrowserTable extends React.Component {
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc'
+          desc: 'asc',
         },
-        selectedColumn
-      })
+        selectedColumn,
+      }),
     });
   };
 
@@ -72,7 +72,7 @@ export default class NetSimLogBrowserTable extends React.Component {
 
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, {
-      default: {color: 'rgba(255, 255, 255, 0.2 )'}
+      default: {color: 'rgba(255, 255, 255, 0.2 )'},
     });
 
     const showToAddress =
@@ -92,12 +92,12 @@ export default class NetSimLogBrowserTable extends React.Component {
       header: {
         label: 'Time',
         transforms: [sortable],
-        props: {style: style.nowrap}
+        props: {style: style.nowrap},
       },
       cell: {
         formatters: [timeFormatter],
-        props: {style: style.nowrapTd}
-      }
+        props: {style: style.nowrapTd},
+      },
     });
 
     if (this.props.teacherView) {
@@ -106,9 +106,9 @@ export default class NetSimLogBrowserTable extends React.Component {
         header: {
           label: 'Sent By',
           transforms: [sortable],
-          props: {style: style.nowrap}
+          props: {style: style.nowrap},
         },
-        cell: {props: {style: style.nowrapTd}}
+        cell: {props: {style: style.nowrapTd}},
       });
     }
 
@@ -117,9 +117,9 @@ export default class NetSimLogBrowserTable extends React.Component {
       header: {
         label: 'Logged By',
         transforms: [sortable],
-        props: {style: style.nowrap}
+        props: {style: style.nowrap},
       },
-      cell: {props: {style: style.nowrapTd}}
+      cell: {props: {style: style.nowrapTd}},
     });
 
     columns.push({
@@ -127,9 +127,9 @@ export default class NetSimLogBrowserTable extends React.Component {
       header: {
         label: 'Status',
         transforms: [sortable],
-        props: {style: style.nowrap}
+        props: {style: style.nowrap},
       },
-      cell: {props: {style: style.nowrapTd}}
+      cell: {props: {style: style.nowrapTd}},
     });
 
     if (showFromAddress) {
@@ -138,9 +138,9 @@ export default class NetSimLogBrowserTable extends React.Component {
         header: {
           label: 'From',
           transforms: [sortable],
-          props: {style: style.nowrap}
+          props: {style: style.nowrap},
         },
-        cell: {props: {style: style.nowrapTd}}
+        cell: {props: {style: style.nowrapTd}},
       });
     }
 
@@ -150,9 +150,9 @@ export default class NetSimLogBrowserTable extends React.Component {
         header: {
           label: 'To',
           transforms: [sortable],
-          props: {style: style.nowrap}
+          props: {style: style.nowrap},
         },
-        cell: {props: {style: style.nowrapTd}}
+        cell: {props: {style: style.nowrapTd}},
       });
     }
 
@@ -162,9 +162,9 @@ export default class NetSimLogBrowserTable extends React.Component {
         header: {
           label: 'Packet',
           transforms: [sortable],
-          props: {style: style.nowrap}
+          props: {style: style.nowrap},
         },
-        cell: {props: {style: style.nowrapTd}}
+        cell: {props: {style: style.nowrapTd}},
       });
     }
 
@@ -173,9 +173,9 @@ export default class NetSimLogBrowserTable extends React.Component {
       header: {
         label: 'Message',
         transforms: [sortable],
-        props: {style: style.nowrap}
+        props: {style: style.nowrap},
       },
-      cell: {props: {style: style.prewrapTd}}
+      cell: {props: {style: style.prewrapTd}},
     });
 
     const {logRows} = this.props;
@@ -183,7 +183,7 @@ export default class NetSimLogBrowserTable extends React.Component {
     let sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(logRows);
 
     // Filter by "sent by"

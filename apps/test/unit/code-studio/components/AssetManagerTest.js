@@ -5,7 +5,7 @@ import {shallow} from 'enzyme';
 import AssetManager from '@cdo/apps/code-studio/components/AssetManager';
 
 const DEFAULT_PROPS = {
-  uploadsEnabled: true
+  uploadsEnabled: true,
 };
 
 describe('AssetManager', () => {
@@ -87,10 +87,10 @@ describe('AssetManager', () => {
               filename: 'name.jpg',
               category: 'image',
               size: 100,
-              versionId: 'asldfklsakdfj'
-            }
+              versionId: 'asldfklsakdfj',
+            },
           ],
-          filesVersionId: 'fake-version'
+          filesVersionId: 'fake-version',
         })
       );
 

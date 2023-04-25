@@ -7,12 +7,12 @@ describe('DataDocIndex', () => {
   const dataDoc1 = {
     key: 'key1',
     name: 'First Name',
-    content: 'First Content'
+    content: 'First Content',
   };
   const dataDoc2 = {
     key: 'key2',
     name: 'Second Name',
-    content: 'Second Content'
+    content: 'Second Content',
   };
   const allDocs = [dataDoc1, dataDoc2];
 
@@ -32,7 +32,7 @@ describe('DataDocIndex', () => {
   it('does not show Doc without a name', () => {
     const docNoName = {
       key: 'noName',
-      content: 'Content'
+      content: 'Content',
     };
     const links = getLinksOnIndexPage([docNoName]);
     expect(links).to.have.length(0);
@@ -41,7 +41,7 @@ describe('DataDocIndex', () => {
   it('does not show Doc without content', () => {
     const docNoContent = {
       key: 'noContent',
-      name: 'Name'
+      name: 'Name',
     };
     const links = getLinksOnIndexPage([docNoContent]);
     expect(links).to.have.length(0);

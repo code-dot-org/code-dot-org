@@ -6,7 +6,7 @@ import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import PaneHeader, {
   PaneSection,
-  PaneButton
+  PaneButton,
 } from '@cdo/apps/templates/PaneHeader';
 import {DisplayTheme} from './DisplayTheme';
 import Backpack from './Backpack';
@@ -23,7 +23,7 @@ function JavalabEditorHeader({
   isReadOnlyWorkspace,
   backpackEnabled,
   displayTheme,
-  showProjectTemplateWorkspaceIcon
+  showProjectTemplateWorkspaceIcon,
 }) {
   const editorHeaderText = isReadOnlyWorkspace
     ? msg.readonlyWorkspaceHeader()
@@ -87,7 +87,7 @@ JavalabEditorHeader.propTypes = {
   isReadOnlyWorkspace: PropTypes.bool.isRequired,
   backpackEnabled: PropTypes.bool.isRequired,
   displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)),
-  showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired
+  showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
 };
 
 const styles = {
@@ -95,8 +95,8 @@ const styles = {
     textAlign: 'left',
     display: 'inline-block',
     float: 'left',
-    overflow: 'visible'
-  }
+    overflow: 'visible',
+  },
 };
 
 export default connect(
@@ -106,9 +106,9 @@ export default connect(
     displayTheme: state.javalabView.displayTheme,
     showProjectTemplateWorkspaceIcon:
       !!state.pageConstants.isProjectTemplateLevel &&
-      state.javalab.isReadOnlyWorkspace
+      state.javalab.isReadOnlyWorkspace,
   }),
   dispatch => ({
-    openEditorDialog: dialogName => dispatch(openEditorDialog(dialogName))
+    openEditorDialog: dialogName => dispatch(openEditorDialog(dialogName)),
   })
 )(JavalabEditorHeader);

@@ -5,7 +5,7 @@ import {shallow} from 'enzyme';
 import {
   FindProgrammingExpressionDialog,
   ProgrammingExpressionTable,
-  SearchForm
+  SearchForm,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/FindProgrammingExpressionDialog';
 
 import {expect} from '../../../../util/reconfiguredChai';
@@ -19,12 +19,12 @@ describe('SearchForm', () => {
         programmingEnvironments={[
           {
             name: 'firstProgrammingEnvironment',
-            id: 1
+            id: 1,
           },
           {
             name: 'secondProgrammingEnvironment',
-            id: 2
-          }
+            id: 2,
+          },
         ]}
       />
     );
@@ -33,7 +33,7 @@ describe('SearchForm', () => {
     expect(wrapper.find('option').map(option => option.text())).to.eql([
       'filter',
       'firstProgrammingEnvironment',
-      'secondProgrammingEnvironment'
+      'secondProgrammingEnvironment',
     ]);
   });
 });
@@ -54,13 +54,13 @@ describe('ProgrammingExpressionTable', () => {
           {
             syntax: 'first_expression()',
             programmingEnvironmentName: 'environment',
-            uniqueKey: 'first'
+            uniqueKey: 'first',
           },
           {
             syntax: 'second_expression()',
             programmingEnvironmentName: 'environment',
-            uniqueKey: 'second'
-          }
+            uniqueKey: 'second',
+          },
         ]}
       />
     );
@@ -90,30 +90,30 @@ describe('FindProgrammingExpressionDialog', () => {
     // searches on a new query
     wrapper.instance().handleSearch({
       target: {
-        value: 'foo'
-      }
+        value: 'foo',
+      },
     });
     expect(searchStub.callCount).to.equal(1);
 
     // does not search again on the same query
     wrapper.instance().handleSearch({
       target: {
-        value: 'foo'
-      }
+        value: 'foo',
+      },
     });
     expect(searchStub.callCount).to.equal(1);
 
     // does not search on unrelated changes
     wrapper.setState({
-      foo: 'bar'
+      foo: 'bar',
     });
     expect(searchStub.callCount).to.equal(1);
 
     // does search on filter or page change
     wrapper.instance().handleFilter({
       target: {
-        value: 'foo'
-      }
+        value: 'foo',
+      },
     });
     expect(searchStub.callCount).to.equal(2);
     wrapper.instance().setCurrentPage(2);
@@ -135,31 +135,31 @@ describe('FindProgrammingExpressionDialog', () => {
     // doesn't search if there is no query
     wrapper.instance().handleSearch({
       target: {
-        value: false
-      }
+        value: false,
+      },
     });
     expect(fetchStub.callCount).to.equal(0);
 
     // searches with a query and page
     wrapper.instance().handleSearch({
       target: {
-        value: 'foo'
-      }
+        value: 'foo',
+      },
     });
     expect(fetchStub.callCount).to.equal(1);
     expect(fetchStub.lastCall.args).to.eql([
-      '/programming_expressions/search?page=1&query=foo'
+      '/programming_expressions/search?page=1&query=foo',
     ]);
 
     // optionally searches with filter
     wrapper.instance().handleFilter({
       target: {
-        value: 'bar'
-      }
+        value: 'bar',
+      },
     });
     expect(fetchStub.callCount).to.equal(2);
     expect(fetchStub.lastCall.args).to.eql([
-      '/programming_expressions/search?page=1&programmingEnvironmentName=bar&query=foo'
+      '/programming_expressions/search?page=1&programmingEnvironmentName=bar&query=foo',
     ]);
 
     fetchStub.restore();

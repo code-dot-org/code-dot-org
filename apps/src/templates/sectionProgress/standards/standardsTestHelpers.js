@@ -6,14 +6,14 @@ export const unpluggedLessonList = [
     id: 1,
     name: 'Lesson 1',
     number: 1,
-    url: 'https://curriculum.code.org/csf-19/coursea/1/'
+    url: 'https://curriculum.code.org/csf-19/coursea/1/',
   },
   {
     id: 2,
     name: 'Lesson 4',
     number: 3,
-    url: 'https://curriculum.code.org/csf-19/coursea/3/'
-  }
+    url: 'https://curriculum.code.org/csf-19/coursea/3/',
+  },
 ];
 
 export const lessonCompletedByStandard = {
@@ -24,7 +24,7 @@ export const lessonCompletedByStandard = {
       completed: true,
       numStudentsCompleted: 25,
       numStudents: 30,
-      url: 'https://curriculum.code.org/csf-19/coursea/1/'
+      url: 'https://curriculum.code.org/csf-19/coursea/1/',
     },
     {
       name: 'More Mazes',
@@ -32,7 +32,7 @@ export const lessonCompletedByStandard = {
       completed: true,
       numStudentsCompleted: 28,
       numStudents: 30,
-      url: 'https://curriculum.code.org/csf-19/coursea/14/'
+      url: 'https://curriculum.code.org/csf-19/coursea/14/',
     },
     {
       name: 'Even More Mazes',
@@ -40,7 +40,7 @@ export const lessonCompletedByStandard = {
       completed: false,
       numStudentsCompleted: 10,
       numStudents: 30,
-      url: 'https://curriculum.code.org/csf-19/coursea/15/'
+      url: 'https://curriculum.code.org/csf-19/coursea/15/',
     },
     {
       name: 'Hard Mazes',
@@ -48,7 +48,7 @@ export const lessonCompletedByStandard = {
       completed: false,
       numStudentsCompleted: 10,
       numStudents: 30,
-      url: 'https://curriculum.code.org/csf-19/coursea/16/'
+      url: 'https://curriculum.code.org/csf-19/coursea/16/',
     },
     {
       name: 'Really Hard Mazes',
@@ -56,9 +56,9 @@ export const lessonCompletedByStandard = {
       completed: false,
       numStudentsCompleted: 10,
       numStudents: 30,
-      url: 'https://curriculum.code.org/csf-19/coursea/17/'
-    }
-  ]
+      url: 'https://curriculum.code.org/csf-19/coursea/17/',
+    },
+  ],
 };
 
 const teacherSections = {
@@ -78,9 +78,9 @@ const teacherSections = {
       code: 'HQGBNJ',
       courseId: null,
       scriptId: 92,
-      hidden: false
-    }
-  }
+      hidden: false,
+    },
+  },
 };
 
 export const standardsData = [
@@ -89,14 +89,14 @@ export const standardsData = [
     shortcode: '1A-IC-17',
     description: 'Work respectfully and responsibly with others online.',
     category_description: 'Impacts of Computing',
-    lesson_ids: [662, 663]
+    lesson_ids: [662, 663],
   },
   {
     id: 17,
     shortcode: '1A-IC-18',
     description: '"Keep login information private',
     category_description: 'Impacts of Computing',
-    lesson_ids: [662, 663]
+    lesson_ids: [662, 663],
   },
   {
     id: 4,
@@ -104,8 +104,8 @@ export const standardsData = [
     description:
       'Decompose (break down) the steps needed to solve a problem into a precise sequence of instructions.',
     category_description: 'Algorithms & Programming',
-    lesson_ids: [663, 664, 665, 666, 667, 669, 670, 671, 672, 673]
-  }
+    lesson_ids: [663, 664, 665, 666, 667, 669, 670, 671, 672, 673],
+  },
 ];
 
 export const lessonId = 662;
@@ -139,7 +139,7 @@ const unitDataByUnit = {
         lesson_plan_pdf_url:
           '//localhost.code.org:3000/curriculum/coursea-2019/1/Teacher.pdf',
         lesson_extras_level_url:
-          'http://localhost-studio.code.org:3000/s/coursea-2019/lessons/1/extras'
+          'http://localhost-studio.code.org:3000/s/coursea-2019/lessons/1/extras',
       },
       {
         script_id: scriptId,
@@ -161,7 +161,7 @@ const unitDataByUnit = {
         lesson_plan_pdf_url:
           '//localhost.code.org:3000/curriculum/coursea-2019/2/Teacher.pdf',
         lesson_extras_level_url:
-          'http://localhost-studio.code.org:3000/s/coursea-2019/lessons/2/extras'
+          'http://localhost-studio.code.org:3000/s/coursea-2019/lessons/2/extras',
       },
       {
         script_id: scriptId,
@@ -184,10 +184,10 @@ const unitDataByUnit = {
         lesson_plan_pdf_url:
           '//localhost.code.org:3000/curriculum/coursea-2019/3/Teacher.pdf',
         lesson_extras_level_url:
-          'http://localhost-studio.code.org:3000/s/coursea-2019/lessons/3/extras'
-      }
-    ]
-  }
+          'http://localhost-studio.code.org:3000/s/coursea-2019/lessons/3/extras',
+      },
+    ],
+  },
 };
 
 export const pluggedLesson = unitDataByUnit[scriptId].lessons[1];
@@ -199,22 +199,22 @@ const sectionCompletedLesson = {
     100001: {
       10001: progress20,
       10002: progress20,
-      10003: progress20
+      10003: progress20,
     },
     100002: {
       10001: progress20,
       10002: progress20,
-      10003: progress20
+      10003: progress20,
     },
     100003: {
       10001: progress20,
-      10002: progress20
+      10002: progress20,
     },
     100004: {
       10001: progress20,
-      10002: progress20
-    }
-  }
+      10002: progress20,
+    },
+  },
 };
 
 const sectionPartialCompletedLesson = {
@@ -222,22 +222,22 @@ const sectionPartialCompletedLesson = {
     100001: {
       10001: progress20,
       10002: progress20,
-      10003: progress20
+      10003: progress20,
     },
     100002: {
       10001: progress20,
       10002: progress20,
-      10003: progress20
-    }
-  }
+      10003: progress20,
+    },
+  },
 };
 
 const studentLevelScoresByLessonComplete = {
-  92: {662: {100001: {10001: TeacherScores.COMPLETE}}}
+  92: {662: {100001: {10001: TeacherScores.COMPLETE}}},
 };
 
 const studentLevelScoresByLessonIncomplete = {
-  92: {662: {100001: {10001: TeacherScores.INCOMPLETE}}}
+  92: {662: {100001: {10001: TeacherScores.INCOMPLETE}}},
 };
 
 const selectedLessons = [
@@ -246,98 +246,98 @@ const selectedLessons = [
     completed: true,
     name: 'Going Places Safely',
     number: 1,
-    url: 'https://curriculum.code.org/csf-19/coursea/1'
-  }
+    url: 'https://curriculum.code.org/csf-19/coursea/1',
+  },
 ];
 
 // Construct state
 export const fakeState = {
   sectionProgress: {
     unitDataByUnit: unitDataByUnit,
-    studentLevelProgressByUnit: {92: {}}
+    studentLevelProgressByUnit: {92: {}},
   },
   unitSelection: {
-    scriptId: 92
+    scriptId: 92,
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
-    studentLevelScoresByLesson: {92: {662: {}}}
+    studentLevelScoresByLesson: {92: {662: {}}},
   },
-  teacherSections: teacherSections
+  teacherSections: teacherSections,
 };
 
 export const stateForPartiallyCompletedLesson = {
   sectionProgress: {
     unitDataByUnit: unitDataByUnit,
-    studentLevelProgressByUnit: sectionPartialCompletedLesson
+    studentLevelProgressByUnit: sectionPartialCompletedLesson,
   },
   unitSelection: {
-    scriptId: 92
+    scriptId: 92,
   },
   sectionStandardsProgress: {
-    standardsData: standardsData
+    standardsData: standardsData,
   },
-  teacherSections: teacherSections
+  teacherSections: teacherSections,
 };
 
 export const stateForCompletedLesson = {
   sectionProgress: {
     unitDataByUnit: unitDataByUnit,
-    studentLevelProgressByUnit: sectionCompletedLesson
+    studentLevelProgressByUnit: sectionCompletedLesson,
   },
   unitSelection: {
-    scriptId: 92
+    scriptId: 92,
   },
   sectionStandardsProgress: {
-    standardsData: standardsData
+    standardsData: standardsData,
   },
-  teacherSections: teacherSections
+  teacherSections: teacherSections,
 };
 
 export const stateForTeacherMarkedCompletedLesson = {
   sectionProgress: {
     unitDataByUnit: unitDataByUnit,
-    studentLevelProgressByUnit: sectionCompletedLesson
+    studentLevelProgressByUnit: sectionCompletedLesson,
   },
   unitSelection: {
-    scriptId: 92
+    scriptId: 92,
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
     studentLevelScoresByLesson: studentLevelScoresByLessonComplete,
-    selectedLessons: selectedLessons
+    selectedLessons: selectedLessons,
   },
-  teacherSections: teacherSections
+  teacherSections: teacherSections,
 };
 
 export const stateForTeacherMarkedIncompletedLesson = {
   sectionProgress: {
     unitDataByUnit: unitDataByUnit,
-    studentLevelProgressByUnit: sectionCompletedLesson
+    studentLevelProgressByUnit: sectionCompletedLesson,
   },
   unitSelection: {
-    scriptId: 92
+    scriptId: 92,
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
     studentLevelScoresByLesson: studentLevelScoresByLessonIncomplete,
-    selectedLessons: []
+    selectedLessons: [],
   },
-  teacherSections: teacherSections
+  teacherSections: teacherSections,
 };
 
 export const stateForTeacherMarkedAndProgress = {
   sectionProgress: {
     unitDataByUnit: unitDataByUnit,
-    studentLevelProgressByUnit: sectionCompletedLesson
+    studentLevelProgressByUnit: sectionCompletedLesson,
   },
   unitSelection: {
-    scriptId: 92
+    scriptId: 92,
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
     studentLevelScoresByLesson: studentLevelScoresByLessonComplete,
-    selectedLessons: selectedLessons
+    selectedLessons: selectedLessons,
   },
-  teacherSections: teacherSections
+  teacherSections: teacherSections,
 };

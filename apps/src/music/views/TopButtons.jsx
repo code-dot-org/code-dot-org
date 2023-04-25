@@ -104,7 +104,7 @@ const TopButtons = ({clearCode, uploadSound}) => {
 
 TopButtons.propTypes = {
   clearCode: PropTypes.func.isRequired,
-  uploadSound: PropTypes.func.isRequired
+  uploadSound: PropTypes.func.isRequired,
 };
 
 export default TopButtons;

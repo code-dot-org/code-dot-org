@@ -14,7 +14,7 @@ export default class LessonExtrasProgressBubble extends Component {
   static propTypes = {
     lessonExtrasUrl: PropTypes.string.isRequired,
     isPerfect: PropTypes.bool,
-    isSelected: PropTypes.bool
+    isSelected: PropTypes.bool,
   };
 
   /**

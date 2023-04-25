@@ -9,7 +9,7 @@ import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shap
 import TeacherSectionOption from './TeacherSectionOption';
 import {
   assignToSection,
-  unassignSection
+  unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 
@@ -31,7 +31,7 @@ class MultipleSectionsAssigner extends Component {
     unassignSection: PropTypes.func.isRequired,
     assignToSection: PropTypes.func.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
-    selectedSectionId: PropTypes.number
+    selectedSectionId: PropTypes.number,
   };
 
   constructor(props) {
@@ -68,7 +68,7 @@ class MultipleSectionsAssigner extends Component {
 
     this.state = {
       currentSectionsAssigned: initialSectionsAssignedToCourseList,
-      initialSectionsAssigned: initialSectionsAssignedToCourseList
+      initialSectionsAssigned: initialSectionsAssignedToCourseList,
     };
   }
 
@@ -99,7 +99,7 @@ class MultipleSectionsAssigner extends Component {
       courseVersionId,
       scriptId,
       assignToSection,
-      isOnCoursePage
+      isOnCoursePage,
     } = this.props;
     // Assign any courses that need to be assigned
     for (let i = 0; i < this.state.currentSectionsAssigned.length; i++) {
@@ -150,7 +150,7 @@ class MultipleSectionsAssigner extends Component {
       courseVersionId,
       scriptId,
       assignToSection,
-      updateHiddenScript
+      updateHiddenScript,
     } = this.props;
     const sectionId = section.id;
     updateHiddenScript(sectionId, scriptId, false);
@@ -260,7 +260,7 @@ const styles = {
   header: {
     fontSize: 16,
     marginBottom: 5,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   content: {
     fontSize: 14,
@@ -273,25 +273,25 @@ const styles = {
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderStyle: 'solid',
-    borderColor: color.lighter_gray
+    borderColor: color.lighter_gray,
   },
   grid: {
     display: 'grid',
-    gridTemplateColumns: '33% 33% 34%'
+    gridTemplateColumns: '33% 33% 34%',
   },
   functionSelector: {
     display: 'flex',
     alignItems: 'center',
-    margin: '10px 10px 10px 0'
+    margin: '10px 10px 10px 0',
   },
   largerCheckbox: {
     width: 20,
-    height: 20
+    height: 20,
   },
   selectAllFunctionsLabel: {
     margin: 0,
     fontSize: 20,
-    fontFamily: '"Gotham 5r", sans-serif'
+    fontFamily: '"Gotham 5r", sans-serif',
   },
   selectAllSectionsLabel: {
     fontFamily: "'Gotham 5r', sans-serif",
@@ -299,9 +299,9 @@ const styles = {
     cursor: 'pointer',
     color: color.link_color,
     ':hover': {
-      color: color.link_color
-    }
-  }
+      color: color.link_color,
+    },
+  },
 };
 
 export const UnconnectedMultipleSectionsAssigner = MultipleSectionsAssigner;
@@ -309,5 +309,5 @@ export const UnconnectedMultipleSectionsAssigner = MultipleSectionsAssigner;
 export default connect(state => ({}), {
   assignToSection,
   updateHiddenScript,
-  unassignSection
+  unassignSection,
 })(MultipleSectionsAssigner);

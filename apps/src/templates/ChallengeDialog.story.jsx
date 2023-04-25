@@ -5,11 +5,11 @@ import React from 'react';
 
 export default {
   title: 'ChallengeDialog',
-  component: ChallengeDialog
+  component: ChallengeDialog,
 };
 
 const wrapperStyle = {
-  marginTop: 100
+  marginTop: 100,
 };
 
 // TEMPLATE
@@ -29,7 +29,7 @@ StartingDialog.args = {
   primaryButtonLabel: "I'm Ready!",
   text: 'Challenge Puzzles are lessons designed to push your skills to a new level.',
   title: 'Challenge Puzzle!',
-  isIntro: true
+  isIntro: true,
 };
 
 export const StartingDialogWithLargeAvatar = Template.bind({});
@@ -39,7 +39,7 @@ StartingDialogWithLargeAvatar.args = {
   primaryButtonLabel: "I'm Ready!",
   text: 'Challenge Puzzles are lessons designed to stretch your brain! Just do the best that you can!',
   title: 'Challenge Puzzle!',
-  isIntro: true
+  isIntro: true,
 };
 
 export const StartingDialogIfPreviouslyCompleted = Template.bind({});
@@ -50,7 +50,7 @@ StartingDialogIfPreviouslyCompleted.args = {
   primaryButtonLabel: "I'm Ready!",
   text: 'Challenge Puzzles are lessons designed to push your skills to a new level.',
   title: 'Challenge Puzzle!',
-  isIntro: true
+  isIntro: true,
 };
 
 export const PassedDialog = Template.bind({});
@@ -67,8 +67,8 @@ PassedDialog.args = {
         message="Here's your code:"
         code="console.log('F is friends who do stuff together!');"
       />
-    </CodeWritten>
-  ]
+    </CodeWritten>,
+  ],
 };
 
 export const PassedDialogWithABird = Template.bind({});
@@ -85,8 +85,8 @@ PassedDialogWithABird.args = {
         message="Here's your code:"
         code="console.log('U is for you and me!');"
       />
-    </CodeWritten>
-  ]
+    </CodeWritten>,
+  ],
 };
 
 export const PerfectCompletion = Template.bind({});
@@ -103,8 +103,8 @@ PerfectCompletion.args = {
         message="Here's your code:"
         code="console.log('N is for anywhere and anytime at all');"
       />
-    </CodeWritten>
-  ]
+    </CodeWritten>,
+  ],
 };
 
 export const PerfectCompletionWithoutPuzzleRatings = Template.bind({});
@@ -120,6 +120,6 @@ PerfectCompletionWithoutPuzzleRatings.args = {
         message="Here's your code:"
         code="console.log('N is for anywhere and anytime at all');"
       />
-    </CodeWritten>
-  ]
+    </CodeWritten>,
+  ],
 };

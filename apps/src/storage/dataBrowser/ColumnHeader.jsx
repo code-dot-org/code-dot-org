@@ -15,7 +15,7 @@ import style from './column-header.module.scss';
 const INITIAL_STATE = {
   newName: undefined,
   hasEnteredText: false,
-  isDialogOpen: false
+  isDialogOpen: false,
 };
 
 class ColumnHeader extends React.Component {
@@ -29,7 +29,7 @@ class ColumnHeader extends React.Component {
     isEditing: PropTypes.bool.isRequired,
     isPending: PropTypes.bool.isRequired,
     readOnly: PropTypes.bool,
-    renameColumn: PropTypes.func.isRequired
+    renameColumn: PropTypes.func.isRequired,
   };
 
   state = {...INITIAL_STATE};
@@ -58,7 +58,7 @@ class ColumnHeader extends React.Component {
   handleChange = event => {
     this.setState({
       newName: event.target.value,
-      hasEnteredText: true
+      hasEnteredText: true,
     });
   };
 
@@ -120,8 +120,8 @@ class ColumnHeader extends React.Component {
       ...{
         display: this.props.isEditing ? null : 'none',
         backgroundColor: this.isInputValid() ? null : color.lightest_red,
-        minWidth: 80
-      }
+        minWidth: 80,
+      },
     };
     return (
       <th

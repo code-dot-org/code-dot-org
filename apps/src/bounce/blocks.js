@@ -34,7 +34,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenLeftTooltip());
-    }
+    },
   };
 
   generator.bounce_whenLeft = function () {
@@ -51,7 +51,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenRightTooltip());
-    }
+    },
   };
 
   generator.bounce_whenRight = function () {
@@ -68,7 +68,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenUpTooltip());
-    }
+    },
   };
 
   generator.bounce_whenUp = function () {
@@ -85,7 +85,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenDownTooltip());
-    }
+    },
   };
 
   generator.bounce_whenDown = function () {
@@ -102,7 +102,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenWallCollidedTooltip());
-    }
+    },
   };
 
   generator.bounce_whenWallCollided = function () {
@@ -119,7 +119,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenBallInGoalTooltip());
-    }
+    },
   };
 
   generator.bounce_whenBallInGoal = function () {
@@ -136,7 +136,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenBallMissesPaddleTooltip());
-    }
+    },
   };
 
   generator.bounce_whenBallMissesPaddle = function () {
@@ -153,7 +153,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(skin.blockMsgs.paddleCollideTooltip);
-    }
+    },
   };
 
   generator.bounce_whenPaddleCollided = function () {
@@ -170,7 +170,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.moveLeftTooltip());
-    }
+    },
   };
 
   generator.bounce_moveLeft = function () {
@@ -187,7 +187,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.moveRightTooltip());
-    }
+    },
   };
 
   generator.bounce_moveRight = function () {
@@ -204,7 +204,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.moveUpTooltip());
-    }
+    },
   };
 
   generator.bounce_moveUp = function () {
@@ -221,7 +221,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.moveDownTooltip());
-    }
+    },
   };
 
   generator.bounce_moveDown = function () {
@@ -241,7 +241,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.playSoundTooltip());
-    }
+    },
   };
 
   blockly.Blocks.bounce_playSound.SOUNDS = [];
@@ -249,7 +249,7 @@ exports.install = function (blockly, blockInstallOptions) {
     if (skin.customSounds[sound].msg) {
       blockly.Blocks.bounce_playSound.SOUNDS.push([
         skin.customSounds[sound].msg,
-        sound
+        sound,
       ]);
     }
   }
@@ -274,7 +274,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.incrementPlayerScoreTooltip());
-    }
+    },
   };
 
   generator.bounce_incrementPlayerScore = function () {
@@ -291,7 +291,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.incrementOpponentScoreTooltip());
-    }
+    },
   };
 
   generator.bounce_incrementOpponentScore = function () {
@@ -308,7 +308,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.bounceBallTooltip());
-    }
+    },
   };
 
   generator.bounce_bounceBall = function () {
@@ -325,7 +325,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(skin.blockMsgs.launchBallTooltip);
-    }
+    },
   };
 
   generator.bounce_launchBall = function () {
@@ -345,7 +345,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setBallSpeedTooltip());
-    }
+    },
   };
 
   blockly.Blocks.bounce_setBallSpeed.VALUES = [
@@ -354,7 +354,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [msg.setBallSpeedSlow(), 'Bounce.BallSpeed.SLOW'],
     [msg.setBallSpeedNormal(), 'Bounce.BallSpeed.NORMAL'],
     [msg.setBallSpeedFast(), 'Bounce.BallSpeed.FAST'],
-    [msg.setBallSpeedVeryFast(), 'Bounce.BallSpeed.VERY_FAST']
+    [msg.setBallSpeedVeryFast(), 'Bounce.BallSpeed.VERY_FAST'],
   ];
 
   generator.bounce_setBallSpeed = function (velocity) {
@@ -373,7 +373,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(skin.blockMsgs.paddleSpeedTooltip);
-    }
+    },
   };
 
   blockly.Blocks.bounce_setPaddleSpeed.VALUES = [
@@ -382,7 +382,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [skin.blockMsgs.paddleSpeedSlow, 'Bounce.PaddleSpeed.SLOW'],
     [skin.blockMsgs.paddleSpeedNormal, 'Bounce.PaddleSpeed.NORMAL'],
     [skin.blockMsgs.paddleSpeedFast, 'Bounce.PaddleSpeed.FAST'],
-    [skin.blockMsgs.paddleSpeedVeryFast, 'Bounce.PaddleSpeed.VERY_FAST']
+    [skin.blockMsgs.paddleSpeedVeryFast, 'Bounce.PaddleSpeed.VERY_FAST'],
   ];
 
   generator.bounce_setPaddleSpeed = function (velocity) {
@@ -404,15 +404,15 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setBackgroundTooltip());
-    }
+    },
   };
 
   blockly.Blocks.bounce_setBackground.VALUES = [
-    [msg.setBackgroundRandom(), 'random']
+    [msg.setBackgroundRandom(), 'random'],
   ].concat(
     skin.backgrounds.map(background => [
       msg.setBackground({background: background}),
-      `"${background}"`
+      `"${background}"`,
     ])
   );
 
@@ -439,11 +439,11 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setTeamTooltip());
-    }
+    },
   };
 
   blockly.Blocks.bounce_setTeam.VALUES = [
-    [msg.setTeamRandom(), 'random']
+    [msg.setTeamRandom(), 'random'],
   ].concat(skin.teams.map(team => [msg.setTeam({team: team}), `"${team}"`]));
 
   generator.bounce_setTeam = function () {
@@ -465,11 +465,11 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setBallTooltip());
-    }
+    },
   };
 
   blockly.Blocks.bounce_setBall.VALUES = [
-    [msg.setBallRandom(), 'random']
+    [msg.setBallRandom(), 'random'],
   ].concat(skin.balls.map(ball => [msg.setBall({ball: ball}), `"${ball}"`]));
 
   generator.bounce_setBall = function () {
@@ -491,13 +491,13 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setPaddleTooltip());
-    }
+    },
   };
 
   blockly.Blocks.bounce_setPaddle.VALUES = [
     [msg.setPaddleRandom(), 'random'],
     [msg.setPaddleHardcourt(), '"hardcourt"'],
-    [msg.setPaddleRetro(), '"retro"']
+    [msg.setPaddleRetro(), '"retro"'],
   ];
 
   generator.bounce_setPaddle = function () {
@@ -523,12 +523,12 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setPaddleTooltip());
-    }
+    },
   };
 
   blockly.Blocks.bounce_setPaddleDropdown.VALUES = skin.paddles.map(paddle => [
     skin[paddle].paddle || skin[paddle],
-    `"${paddle}"`
+    `"${paddle}"`,
   ]);
 
   generator.bounce_setPaddleDropdown = function () {

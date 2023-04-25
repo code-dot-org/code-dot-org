@@ -167,7 +167,7 @@ export default class StudioSpriteSheet {
       top: y,
       left: x,
       right: x + this.frameWidth,
-      bottom: y + this.frameHeight
+      bottom: y + this.frameHeight,
     };
   }
 }

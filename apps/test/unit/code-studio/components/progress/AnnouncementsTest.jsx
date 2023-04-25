@@ -9,18 +9,18 @@ import {
   fakeTeacherAndStudentAnnouncement,
   fakeTeacherAnnouncement,
   fakeTeacherAnnouncementWithDismissibleAndButtonText,
-  fakeOldTeacherAnnouncement
+  fakeOldTeacherAnnouncement,
 } from './FakeAnnouncementsTestData';
 
 const defaultProps = {
   announcements: [],
   viewAs: ViewType.Instructor,
-  width: 1000
+  width: 1000,
 };
 
 const firehoseAnalyticsData = {
   user_id: 1,
-  script_id: 2
+  script_id: 2,
 };
 
 describe('Announcements', () => {
@@ -94,7 +94,7 @@ describe('Announcements', () => {
         announcements={[
           fakeStudentAnnouncement,
           fakeTeacherAndStudentAnnouncement,
-          fakeTeacherAnnouncement
+          fakeTeacherAnnouncement,
         ]}
       />
     );
@@ -120,7 +120,7 @@ describe('Announcements', () => {
         announcements={[
           fakeStudentAnnouncement,
           fakeTeacherAndStudentAnnouncement,
-          fakeTeacherAnnouncement
+          fakeTeacherAnnouncement,
         ]}
       />,
       {disableLifecycleMethods: true}
