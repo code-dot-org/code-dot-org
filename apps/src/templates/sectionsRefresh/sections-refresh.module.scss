@@ -102,6 +102,19 @@
   align-items: center;
 }
 
+button.advancedSettingsButton {
+  margin: 5px;
+
+  i {
+    color: $neutral_dark;
+    margin-right: 10px;
+  }
+
+  h3 {
+    display: inline-block;
+  }
+}
+
 .celebrationDialogBody {
   padding: 36px;
   font: $barlowSemiCondensed-medium;

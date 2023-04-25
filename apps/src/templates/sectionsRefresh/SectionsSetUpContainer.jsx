@@ -6,7 +6,11 @@ import AdvancedSettingToggles from './AdvancedSettingToggles';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {
+  BodyOneText,
+  Heading1,
+  Heading3,
+} from '@cdo/apps/componentLibrary/typography';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
@@ -87,7 +91,6 @@ export default function SectionsSetUpContainer() {
   const [sections, updateSection] = useSections();
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
 
-  const caretStyle = style.caret;
   const caret = advancedSettingsOpen ? 'caret-down' : 'caret-right';
 
   const toggleAdvancedSettingsOpen = () => {
@@ -96,13 +99,13 @@ export default function SectionsSetUpContainer() {
 
   return (
     <form id={FORM_ID}>
-      <h1>{i18n.setUpClassSectionsHeader()}</h1>
-      <p>{i18n.setUpClassSectionsSubheader()}</p>
-      <p>
+      <Heading1>{i18n.setUpClassSectionsHeader()}</Heading1>
+      <BodyOneText>{i18n.setUpClassSectionsSubheader()}</BodyOneText>
+      <BodyOneText>
         <a href="https://www.youtube.com/watch?v=4Wugxc80fNU">
           {i18n.setUpClassSectionsSubheaderLink()}
         </a>
-      </p>
+      </BodyOneText>
       <SingleSectionSetUp
         sectionNum={1}
         section={sections[0]}
@@ -112,39 +115,32 @@ export default function SectionsSetUpContainer() {
         updateSection={(key, val) => updateSection(0, key, val)}
         sectionCourse={sections[0].course}
       />
-      <span>
-        <div style={style.div}>
-          <FontAwesome
-            id={'uitest-advanced-settings'}
-            onClick={toggleAdvancedSettingsOpen}
-            icon={caret}
-            style={caretStyle}
-          />
-          <h3
-            style={style.label}
-            onClick={toggleAdvancedSettingsOpen}
-            htmlFor={'uitest-advanced-settings'}
-          >
-            {i18n.advancedSettings()}
-          </h3>
-        </div>
-      </span>
+      <Button
+        id="uitest-advanced-settings"
+        className={moduleStyles.advancedSettingsButton}
+        styleAsText
+        icon={caret}
+        onClick={toggleAdvancedSettingsOpen}
+      >
+        <Heading3>{i18n.advancedSettings()}</Heading3>
+      </Button>
       <div>
         {advancedSettingsOpen && (
           <AdvancedSettingToggles
             updateSection={(key, val) => updateSection(0, key, val)}
             section={sections[0]}
-            assignedUnitTextToSpeechEnabled={true}
-            assignedUnitLessonExtrasAvailable={true}
+            assignedUnitTextToSpeechEnabled
+            assignedUnitLessonExtrasAvailable
             label={i18n.pairProgramming()}
           />
         )}
       </div>
       <div className={moduleStyles.buttonsContainer}>
         <Button
+          useDefaultLineHeight
           icon="plus"
           text={i18n.addAnotherClassSection()}
-          color="white"
+          color={Button.ButtonColor.neutralDark}
           onClick={e => {
             e.preventDefault();
             console.log('Add Another Class Section clicked');
@@ -152,23 +148,10 @@ export default function SectionsSetUpContainer() {
         />
         <Button
           text={i18n.finishCreatingSections()}
-          color="purple"
+          color={Button.ButtonColor.brandSecondaryDefault}
           onClick={e => saveSection(e, sections[0])}
         />
       </div>
     </form>
   );
 }
-
-const style = {
-  caret: {
-    marginRight: 10,
-  },
-  label: {
-    display: 'inline-block',
-  },
-  div: {
-    cursor: 'pointer',
-    flexGrow: 1,
-  },
-};
