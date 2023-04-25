@@ -31,6 +31,8 @@ import logToCloud from '../logToCloud';
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
 import SignInCalloutWrapper from './components/header/SignInCalloutWrapper';
+import {setupNavigationHandler} from './browserNavigation';
+import {setCurrentLevelId} from './progressRedux';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -128,6 +130,15 @@ header.build = function (
         document.querySelector('.signin_callout_wrapper')
       );
     }
+    // Store the current level ID in the progress redux handler.
+    // This is important for levels which don't require reloads between
+    // other levels, since the initial URL determines where we start
+    // in a progression.
+    setCurrentLevelId(currentLevelId);
+
+    // Set up a navigation handler, in case we contain levels that don't
+    // require a page reload when switching between them.
+    setupNavigationHandler(lessonData);
   });
 };
 

@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import {getStore} from '@cdo/apps/redux';
 import MusicLabView from '@cdo/apps/music/views/MusicView';
 
 $(document).ready(function () {
@@ -8,7 +10,9 @@ $(document).ready(function () {
     .channelid;
 
   ReactDOM.render(
-    <MusicLabView appOptions={{channel: channelId, app: 'music'}} />,
+    <Provider store={getStore()}>
+      <MusicLabView appOptions={{channel: channelId, app: 'music'}} />
+    </Provider>,
     document.getElementById('musiclab-container')
   );
 });

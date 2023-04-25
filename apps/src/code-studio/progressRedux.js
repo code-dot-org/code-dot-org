@@ -15,9 +15,11 @@ import {
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {authorizeLockable} from './lessonLockRedux';
+import {updateBrowserForLevelNavigation} from './browserNavigation';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
+const SET_CURRENT_LEVEL_ID = 'progress/SET_CURRENT_LEVEL_ID';
 const SET_UNIT_PROGRESS = 'progress/SET_UNIT_PROGRESS';
 const CLEAR_RESULTS = 'progress/CLEAR_RESULTS';
 const MERGE_RESULTS = 'progress/MERGE_RESULTS';
@@ -80,6 +82,21 @@ const initialState = {
 };
 
 /**
+ * Thunks
+ */
+export function navigateToLevelId(levelId) {
+  return (dispatch, getState) => {
+    const state = getState().progress;
+    const newLevel = state.lessons[0].levels.find(level =>
+      level.ids.find(id => id === levelId)
+    );
+
+    updateBrowserForLevelNavigation(state, newLevel.url, levelId);
+    dispatch(setCurrentLevelId(levelId));
+  };
+}
+
+/**
  * Progress reducer
  */
 export default function reducer(state = initialState, action) {
@@ -100,6 +117,7 @@ export default function reducer(state = initialState, action) {
       peerReviewLessonInfo: action.peerReviewLessonInfo,
       scriptId: action.scriptId,
       scriptName: action.scriptName,
+      scriptDisplayName: action.scriptDisplayName,
       unitTitle: action.unitTitle,
       unitDescription: action.unitDescription,
       unitStudentDescription: action.unitStudentDescription,
@@ -109,6 +127,13 @@ export default function reducer(state = initialState, action) {
       hasFullProgress: action.isFullProgress,
       isLessonExtras: action.isLessonExtras,
       currentPageNumber: action.currentPageNumber,
+    };
+  }
+
+  if (action.type === SET_CURRENT_LEVEL_ID) {
+    return {
+      ...state,
+      currentLevelId: action.levelId,
     };
   }
 
@@ -395,6 +420,7 @@ export const initProgress = ({
   peerReviewLessonInfo,
   scriptId,
   scriptName,
+  scriptDisplayName,
   unitTitle,
   unitDescription,
   unitStudentDescription,
@@ -413,6 +439,7 @@ export const initProgress = ({
   peerReviewLessonInfo,
   scriptId,
   scriptName,
+  scriptDisplayName,
   unitTitle,
   unitDescription,
   unitStudentDescription,
@@ -421,6 +448,11 @@ export const initProgress = ({
   isFullProgress,
   isLessonExtras,
   currentPageNumber,
+});
+
+export const setCurrentLevelId = levelId => ({
+  type: SET_CURRENT_LEVEL_ID,
+  levelId: levelId,
 });
 
 /**
@@ -644,7 +676,7 @@ export const levelsByLesson = ({
  * Get data for a particular lesson
  */
 export const levelsForLessonId = (state, lessonId) => {
-  const lesson = state.lessons.find(lesson => lesson.id === lessonId);
+  const lesson = state.lessons?.find(lesson => lesson.id === lessonId);
   return lesson.levels.map(level =>
     levelWithProgress(state, level, lesson.lockable)
   );
