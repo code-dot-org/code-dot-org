@@ -18,7 +18,7 @@ def level_is_standalone?(level)
 end
 
 def level_is_contained?(level)
-  level.levels_parent_levels.count {|l| l.kind == 'contained'} > 0
+  ParentLevelsChildLevel.where(child_level_id: level.id).where(kind: 'contained').count > 0
 end
 
 def find_union(standalone_levels, contained_levels)
@@ -78,7 +78,8 @@ def backfill_match_levels
     update_dsl_level(level, false)
   end
 
-  Match.all.filter {|l| l.allow_multiple_attempts.nil?}.each do |level|
+  contained_level_names = contained_match_levels.map(&:name)
+  Match.all.filter {|l| l.allow_multiple_attempts.nil? && !contained_level_names.include?(l.name)}.each do |level|
     update_dsl_level(level, true)
   end
 end
