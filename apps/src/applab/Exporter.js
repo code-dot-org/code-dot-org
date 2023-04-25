@@ -171,13 +171,13 @@ export function getAppOptionsFile() {
 // the rest of Code.org (ie, the pegasus/dashboard sites themselves)
 // are all on v6.
 const fontAwesomeBrandsWOFFRelativeSourcePath =
-  'https://dsco.code.org/assets/font-awesome-pro/webfonts/fa-brands-400.woff2';
+  'https://dsco.code.org/assets/font-awesome-pro/1682441295/webfonts/fa-brands-400.woff2';
 const fontAwesomeSolidWOFFRelativeSourcePath =
-  'https://dsco.code.org/assets/font-awesome-pro/webfonts/fa-solid-900.woff2';
+  'https://dsco.code.org/assets/font-awesome-pro/1682441295/webfonts/fa-solid-900.woff2';
 const fontAwesomeRegularWOFFRelativeSourcePath =
-  'https://dsco.code.org/assets/font-awesome-pro/webfonts/fa-regular-400.woff2';
+  'https://dsco.code.org/assets/font-awesome-pro/1682441295/webfonts/fa-regular-400.woff2';
 const fontAwesomeV4CompatibilityWOFFRelativeSourcePath =
-  'https://dsco.code.org/assets/font-awesome-pro/webfonts/fa-v4compatibility.woff2';
+  'https://dsco.code.org/assets/font-awesome-pro/1682441295/webfonts/fa-v4compatibility.woff2';
 
 const fontAwesomeBrandsWOFFPath = 'applab/fa-brands-400.woff2';
 const fontAwesomeSolidWOFFPath = 'applab/fa-solid-900.woff2';
