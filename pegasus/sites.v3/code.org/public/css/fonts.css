@@ -1,13 +1,13 @@
 /*
-   Note: do not inline the contents file, as @import statements do not work when inlined.
+   Note: do not inline the contents of this file, as @import statements do not work when inlined.
    FontAwesome icons will fail to load.
  */
-@import url("https://dsco.code.org/assets/font-awesome-pro/css/fontawesome.min.css");
-@import url("https://dsco.code.org/assets/font-awesome-pro/css/brands.min.css");
-@import url("https://dsco.code.org/assets/font-awesome-pro/css/solid.min.css");
-@import url("https://dsco.code.org/assets/font-awesome-pro/css/regular.min.css");
-@import url("https://dsco.code.org/assets/font-awesome-pro/css/v4-font-face.min.css");
-@import url("https://dsco.code.org/assets/font-awesome-pro/css/v4-shims.min.css");
+@import url("https://dsco.code.org/assets/font-awesome-pro/1682441295/css/fontawesome.min.css");
+@import url("https://dsco.code.org/assets/font-awesome-pro/1682441295/css/brands.min.css");
+@import url("https://dsco.code.org/assets/font-awesome-pro/1682441295/css/solid.min.css");
+@import url("https://dsco.code.org/assets/font-awesome-pro/1682441295/css/regular.min.css");
+@import url("https://dsco.code.org/assets/font-awesome-pro/1682441295/css/v4-font-face.min.css");
+@import url("https://dsco.code.org/assets/font-awesome-pro/1682441295/css/v4-shims.min.css");
 
 /*
 	Copyright (C) 2011-2014 Hoefler & Co.
