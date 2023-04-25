@@ -50,6 +50,7 @@ export default class DownloadParentLetter extends Component {
 const styles = {
   container: {
     marginLeft: 5,
+    marginBottom: 5,
   },
   buttonWithoutMargin: {
     margin: 0,
