@@ -389,12 +389,12 @@ export class WorkshopForm extends React.Component {
         course === ActiveCourseWorkshops.CSA) &&
       subject === SubjectNames.SUBJECT_SUMMER_WORKSHOP &&
       !this.props.permission.has(WorkshopAdmin) &&
-      sessions.some(this.workshopStartsWithinMonth)
+      sessions.some(this.sessionStartsWithinMonth)
     );
   }
 
-  // Returns whether today is within a month before the workshop start.
-  workshopStartsWithinMonth = session => {
+  // Returns whether today is within a month before the given session.
+  sessionStartsWithinMonth = session => {
     const today = this.props.today;
     const workshopDate = new Date(session.date);
     const monthBeforeWorkshopDate = new Date(

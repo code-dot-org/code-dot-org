@@ -78,7 +78,7 @@ describe('WorkshopForm test', () => {
 
   it('virtual field disabled for non-ws-admin for CSP/CSA summer workshop within a month of starting', () => {
     const cspSummerWorkshopStartSoon = Factory.build(
-      'csp summer workshop starting within month of middleOfYearFakeToday'
+      'csp summer workshop starting within a month'
     );
     const wrapper = mount(
       <Provider store={store}>
@@ -101,7 +101,7 @@ describe('WorkshopForm test', () => {
 
   it('virtual field enabled for ws-admin for CSP/CSA summer workshop within a month of starting', () => {
     const cspSummerWorkshopStartSoon = Factory.build(
-      'csp summer workshop starting within month of middleOfYearFakeToday'
+      'csp summer workshop starting within a month'
     );
     const wrapper = mount(
       <Provider store={store}>
@@ -124,7 +124,7 @@ describe('WorkshopForm test', () => {
 
   it('virtual field enabled for non-ws-admin for non-CSP/CSA summer workshop within a month of starting', () => {
     const csdSummerWorkshopStartSoon = Factory.build(
-      'csd summer workshop starting within month of middleOfYearFakeToday'
+      'csd summer workshop starting within a month'
     );
     const wrapper = mount(
       <Provider store={store}>
@@ -147,7 +147,7 @@ describe('WorkshopForm test', () => {
 
   it('virtual field enabled for non-ws-admin for CSP/CSA non-summer workshop within a month of starting', () => {
     const cspAYW1WorkshopStartSoon = Factory.build(
-      'csp ayw1 workshop starting within month of middleOfYearFakeToday'
+      'csp ayw1 workshop starting within a month'
     );
     const wrapper = mount(
       <Provider store={store}>
@@ -170,7 +170,7 @@ describe('WorkshopForm test', () => {
 
   it('virtual field enabled for non-ws-admin for CSP/CSA summer workshop over a month from starting', () => {
     const cspSummerWorkshopStartOverMonth = Factory.build(
-      'csp summer workshop starting in over a month from middleOfYearFakeToday'
+      'csp summer workshop starting in over a month'
     );
     const wrapper = mount(
       <Provider store={store}>

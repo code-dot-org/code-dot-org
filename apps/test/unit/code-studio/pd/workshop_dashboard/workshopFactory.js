@@ -51,9 +51,7 @@ Factory.define('csp ayw workshop 1')
   .attr('scholarship_workshop?', true)
   .attr('location_name', 'physical');
 
-Factory.define(
-  'csp summer workshop starting within month of middleOfYearFakeToday'
-)
+Factory.define('csp summer workshop starting within a month')
   .extend('csp summer workshop')
   .attr('sessions', () =>
     Factory.buildList(
@@ -62,21 +60,15 @@ Factory.define(
     )
   );
 
-Factory.define(
-  'csd summer workshop starting within month of middleOfYearFakeToday'
-)
-  .extend('csp summer workshop starting within month of middleOfYearFakeToday')
+Factory.define('csd summer workshop starting within a month')
+  .extend('csp summer workshop starting within a month')
   .attr('course', 'CS Discoveries');
 
-Factory.define(
-  'csp ayw1 workshop starting within month of middleOfYearFakeToday'
-)
-  .extend('csp summer workshop starting within month of middleOfYearFakeToday')
+Factory.define('csp ayw1 workshop starting within a month')
+  .extend('csp summer workshop starting within a month')
   .attr('subject', 'Academic Year Workshop 1');
 
-Factory.define(
-  'csp summer workshop starting in over a month from middleOfYearFakeToday'
-)
+Factory.define('csp summer workshop starting in over a month')
   .extend('csp summer workshop')
   .attr('sessions', () =>
     Factory.buildList(
