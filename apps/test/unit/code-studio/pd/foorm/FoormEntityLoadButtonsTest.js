@@ -15,20 +15,20 @@ describe('FoormEntityLoadButtons', () => {
       foormEntities: [
         {
           metadata: {name: 'b_library', version: 0},
-          text: 'b_library, version 0'
+          text: 'b_library, version 0',
         },
         {
           metadata: {name: 'a_library', version: 0},
-          text: 'a_library, version 0'
+          text: 'a_library, version 0',
         },
         {
           metadata: {name: 'a_library', version: 1},
-          text: 'a_library, version 1'
+          text: 'a_library, version 1',
         },
         {
           metadata: {name: 'c_library', version: 0},
-          text: 'c_library, version 0'
-        }
+          text: 'c_library, version 0',
+        },
       ],
       showCodeMirror: showCodeMirrorStub,
       resetCodeMirror: () => {},
@@ -37,7 +37,7 @@ describe('FoormEntityLoadButtons', () => {
       setSaveError: () => {},
       setHasJSONError: () => {},
       setHasLintError: () => {},
-      setLastSavedQuestions: () => {}
+      setLastSavedQuestions: () => {},
     };
   });
 
@@ -52,7 +52,7 @@ describe('FoormEntityLoadButtons', () => {
     const expectedOrder = [
       'a_library, version 1',
       'b_library, version 0',
-      'c_library, version 0'
+      'c_library, version 0',
     ];
 
     assert.equal(
@@ -80,7 +80,7 @@ describe('FoormEntityLoadButtons', () => {
       'a_library, version 0',
       'a_library, version 1',
       'b_library, version 0',
-      'c_library, version 0'
+      'c_library, version 0',
     ];
 
     assert.equal(
@@ -105,7 +105,7 @@ describe('FoormEntityLoadButtons', () => {
       'a_library, version 0',
       'a_library, version 1',
       'b_library, version 0',
-      'c_library, version 0'
+      'c_library, version 0',
     ];
 
     assert.equal(

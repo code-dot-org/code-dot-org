@@ -26,7 +26,7 @@ export const LegacySingleLevelGroupDialog = ({id, title, body}) => (
 LegacySingleLevelGroupDialog.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired
+  body: PropTypes.string.isRequired,
 };
 
 export const LegacyUnsubmitDialog = (
@@ -82,7 +82,7 @@ export const LegacyContractMatchErrorDialog = ({text}) => (
   </ProtectedStatefulDiv>
 );
 LegacyContractMatchErrorDialog.propTypes = {
-  text: PropTypes.string
+  text: PropTypes.string,
 };
 
 export const LegacyMatchErrorDialog = () => (
@@ -153,7 +153,7 @@ export const LegacyInstructionsDialog = ({title, markdown}) => (
 );
 LegacyInstructionsDialog.propTypes = {
   title: PropTypes.string.isRequired,
-  markdown: PropTypes.string.isRequired
+  markdown: PropTypes.string.isRequired,
 };
 
 export const LegacySuccessDialog = ({title, body}) => (
@@ -171,5 +171,5 @@ export const LegacySuccessDialog = ({title, body}) => (
 );
 LegacySuccessDialog.propTypes = {
   title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired
+  body: PropTypes.string.isRequired,
 };

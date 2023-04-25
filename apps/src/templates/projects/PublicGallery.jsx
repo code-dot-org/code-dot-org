@@ -13,7 +13,7 @@ export const publishedProjectPropType = PropTypes.shape({
   studentAgeRange: PropTypes.string,
   thumbnailUrl: PropTypes.string,
   type: PropTypes.string.isRequired,
-  publishedAt: PropTypes.string.isRequired
+  publishedAt: PropTypes.string.isRequired,
 });
 
 class PublicGallery extends Component {
@@ -32,8 +32,8 @@ class PublicGallery extends Component {
       artist: PropTypes.arrayOf(publishedProjectPropType),
       minecraft: PropTypes.arrayOf(publishedProjectPropType),
       dance: PropTypes.arrayOf(publishedProjectPropType),
-      poetry: PropTypes.arrayOf(publishedProjectPropType)
-    })
+      poetry: PropTypes.arrayOf(publishedProjectPropType),
+    }),
   };
 
   /**
@@ -48,9 +48,9 @@ class PublicGallery extends Component {
           projectData: {
             ...projectData,
             publishedToPublic: true,
-            publishedToClass: false
+            publishedToClass: false,
           },
-          currentGallery: 'public'
+          currentGallery: 'public',
         };
       });
     });
@@ -84,9 +84,9 @@ const styles = {
   bottomButton: {
     marginTop: '38px',
     marginBottom: '15px',
-    textAlign: 'center'
-  }
+    textAlign: 'center',
+  },
 };
 export default connect(state => ({
-  projectLists: state.projects.projectLists
+  projectLists: state.projects.projectLists,
 }))(PublicGallery);

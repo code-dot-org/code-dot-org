@@ -11,7 +11,7 @@ function showJobBoard() {
 
   $.ajax({
     type: 'GET',
-    url: 'https://boards-api.greenhouse.io/v1/boards/codeorg/jobs?content=true'
+    url: 'https://boards-api.greenhouse.io/v1/boards/codeorg/jobs?content=true',
   })
     .done(result => {
       // Reshape into an object with jobs by department. Shape:
@@ -38,7 +38,7 @@ function showJobBoard() {
         } else {
           jobsByDepartment[departmentName] = {
             name: departmentName,
-            jobs: [getJobDetails(job)]
+            jobs: [getJobDetails(job)],
           };
         }
       });
@@ -55,6 +55,6 @@ const getJobDetails = job => {
   return {
     jobTitle: job.title,
     location: job.location.name,
-    applicationUrl: job.absolute_url
+    applicationUrl: job.absolute_url,
   };
 };

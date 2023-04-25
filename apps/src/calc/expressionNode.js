@@ -8,7 +8,7 @@ var ValueType = {
   FUNCTION_CALL: 2,
   VARIABLE: 3,
   NUMBER: 4,
-  EXPONENTIAL: 5
+  EXPONENTIAL: 5,
 };
 
 function DivideByZeroError(message) {
@@ -370,7 +370,7 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
     tokens.push([
       tokensForChild(0),
       new Token(' ' + this.value_ + ' ', !nodesMatch),
-      tokensForChild(1)
+      tokensForChild(1),
     ]);
     tokens.push(new Token(')', !nodesMatch));
 
@@ -382,7 +382,7 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
       new Token('(', !nodesMatch),
       tokensForChild(0),
       new Token(' ^ 2', !nodesMatch),
-      new Token(')', !nodesMatch)
+      new Token(')', !nodesMatch),
     ]);
   } else if (this.value_ === 'pow') {
     return _.flattenDeep([
@@ -390,7 +390,7 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
       tokensForChild(0),
       new Token(' ^ ', !nodesMatch),
       tokensForChild(1),
-      new Token(')', !nodesMatch)
+      new Token(')', !nodesMatch),
     ]);
   }
 
@@ -399,7 +399,7 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
   // A function call will generate something like: foo(1, 2, 3)
   tokens = [
     new Token(this.value_, other && this.value_ !== other.value_),
-    new Token('(', !nodesMatch)
+    new Token('(', !nodesMatch),
   ];
 
   var numChildren = this.children_.length;
@@ -455,12 +455,12 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
 
   var tokens = [
     prefix,
-    this.children_[0].getTokenList(markDeepest && !rightDeeper)
+    this.children_[0].getTokenList(markDeepest && !rightDeeper),
   ];
   if (this.children_.length > 1) {
     tokens.push([
       new Token(' ' + this.value_ + ' ', false),
-      this.children_[1].getTokenList(markDeepest && rightDeeper)
+      this.children_[1].getTokenList(markDeepest && rightDeeper),
     ]);
   }
   if (suffix) {

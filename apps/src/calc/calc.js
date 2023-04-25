@@ -64,7 +64,7 @@ var appState = {
   message: null,
   result: null,
   testResults: null,
-  failedInput: null
+  failedInput: null,
 };
 Calc.appState_ = appState;
 
@@ -396,7 +396,7 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
     result: ResultType.UNSET,
     testResults: TestResults.NO_TESTS_RUN,
     message: undefined,
-    failedInput: null
+    failedInput: null,
   };
 
   // if our target is a single function, we evaluate success by evaluating the
@@ -416,7 +416,7 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
     var targetFunctionName = expression.getValue();
     if (!userSet.getEquation(targetFunctionName)) {
       outcome.message = calcMsg.missingFunctionError({
-        functionName: targetFunctionName
+        functionName: targetFunctionName,
       });
     }
 
@@ -485,7 +485,7 @@ function appSpecificFailureOutcome(message, failedInput) {
     result: ResultType.FAILURE,
     testResults: TestResults.APP_SPECIFIC_FAIL,
     message: message,
-    failedInput: utils.valueOr(failedInput, null)
+    failedInput: utils.valueOr(failedInput, null),
   };
 }
 
@@ -512,7 +512,7 @@ function divZeroOrFailure(err) {
     result: ResultType.FAILURE,
     testResults: TestResults.LEVEL_INCOMPLETE_FAIL,
     message: null,
-    failedInput: null
+    failedInput: null,
   };
 }
 
@@ -528,7 +528,7 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
     result: ResultType.UNSET,
     testResults: TestResults.NO_TESTS_RUN,
     message: undefined,
-    failedInput: null
+    failedInput: null,
   };
 
   if (
@@ -653,7 +653,7 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
     result: ResultType.UNSET,
     testResults: TestResults.NO_TESTS_RUN,
     message: undefined,
-    failedInput: null
+    failedInput: null,
   };
 
   if (targetSet.computesFunctionCall()) {
@@ -721,7 +721,7 @@ Calc.execute = function () {
     result: appState.result === ResultType.SUCCESS,
     testResult: appState.testResults,
     program: encodeURIComponent(textBlocks),
-    onComplete: onReportComplete
+    onComplete: onReportComplete,
   };
 
   if (!level.isProjectLevel) {
@@ -865,7 +865,7 @@ Calc.checkExamples_ = function () {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
     outcome.message = commonMsg.emptyExampleBlockErrorMsg({
-      functionName: exampleless
+      functionName: exampleless,
     });
     return outcome;
   }
@@ -890,7 +890,7 @@ Calc.checkExamples_ = function () {
     outcome.result = false;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
     outcome.message = commonMsg.exampleErrorMessage({
-      functionName: failingBlockName
+      functionName: failingBlockName,
     });
   }
 
@@ -1270,9 +1270,9 @@ function displayFeedback() {
     tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
     continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
     appStrings: {
-      reinfFeedbackMsg: calcMsg.reinfFeedbackMsg()
+      reinfFeedbackMsg: calcMsg.reinfFeedbackMsg(),
     },
-    appDiv: appDiv
+    appDiv: appDiv,
   };
   if (appState.message && !level.edit_blocks) {
     options.message = appState.message;
@@ -1300,6 +1300,6 @@ Calc.__testonly__ = IN_UNIT_TEST
   ? {
       displayGoal: displayGoal,
       displayComplexUserExpressions: displayComplexUserExpressions,
-      appState: appState
+      appState: appState,
     }
   : {};

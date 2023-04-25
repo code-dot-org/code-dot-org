@@ -74,7 +74,7 @@ var LegacyDialog = (module.exports = function (options) {
   if (options.width) {
     this.div.css({
       width: `${options.width}px`,
-      marginLeft: `-${options.width / 2}px`
+      marginLeft: `-${options.width / 2}px`,
     });
   }
 
@@ -180,7 +180,7 @@ LegacyDialog.prototype.show = function (options) {
     show: true,
     // The default value for backdrop is true, meaning clicking the backdrop
     // will close the modal. A value of 'static' will not close the modal.
-    backdrop: options.backdrop || true
+    backdrop: options.backdrop || true,
   });
 
   this.isVisible = true;

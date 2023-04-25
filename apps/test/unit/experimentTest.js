@@ -72,7 +72,7 @@ describe('experiments', function () {
       JSON.parse(localStorage.getItem('experimentsList')),
       [
         {key: 'better-feature', expiration: expirationTime},
-        {key: 'awesome-feature', expiration: expirationTime}
+        {key: 'awesome-feature', expiration: expirationTime},
       ]
     );
 
@@ -90,7 +90,7 @@ describe('experiments', function () {
     experiments.setEnabled('better-feature', true);
     assert.sameMembers(experiments.getEnabledExperiments(), [
       'awesome-feature',
-      'better-feature'
+      'better-feature',
     ]);
   });
 

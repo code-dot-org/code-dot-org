@@ -26,25 +26,25 @@ describe('ResultsHandlers', function () {
         planter: PlanterHandler,
         harvester: HarvesterHandler,
         letters: WordsearchHandler,
-        "unimplemented skin that doesn't exist": ResultsHandler
+        "unimplemented skin that doesn't exist": ResultsHandler,
       };
 
       Object.entries(skinToExpected).forEach(([key, value]) => {
         const mazeController = new MazeController(
           {
-            serializedMaze: [[{tileType: 0}]]
+            serializedMaze: [[{tileType: 0}]],
           },
           {},
           {
             skinId: key,
             level: {
-              flowerType: 'redWithNectar'
-            }
+              flowerType: 'redWithNectar',
+            },
           }
         );
 
         const handler = createResultsHandlerForSubtype(mazeController, {
-          level: {}
+          level: {},
         });
         expect(handler).to.be.an.instanceof(value);
       });

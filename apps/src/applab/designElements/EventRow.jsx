@@ -7,7 +7,7 @@ export default class EventRow extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
-    handleInsert: PropTypes.func.isRequired
+    handleInsert: PropTypes.func.isRequired,
   };
 
   render() {
@@ -16,12 +16,12 @@ export default class EventRow extends React.Component {
       name: {
         color: color.dark_charcoal,
         fontWeight: 'bold',
-        fontSize: 15
+        fontSize: 15,
       },
       desc: {
         color: color.light_gray,
-        fontStyle: 'italic'
-      }
+        fontStyle: 'italic',
+      },
     };
 
     return (

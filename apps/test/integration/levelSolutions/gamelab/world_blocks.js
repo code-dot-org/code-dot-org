@@ -44,8 +44,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'Deprecated Game. still works',
@@ -79,8 +79,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     // Check that createEdgeSprites makes the edges group and the
     // edge sprites available in the global namespace
@@ -114,8 +114,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     testAsyncProgramGameLab(
       "showMobileControls() with default params doesn't show on desktop",
@@ -212,6 +212,6 @@ module.exports = {
         assert.equal($('#studio-dpad-rim').is(':visible'), false);
         assert.equal($('#studio-dpad-cone').is(':visible'), false);
       }
-    )
-  ]
+    ),
+  ],
 };

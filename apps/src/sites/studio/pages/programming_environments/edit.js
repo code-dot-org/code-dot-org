@@ -10,7 +10,7 @@ import {Provider} from 'react-redux';
 $(document).ready(() => {
   // instructionsDialog reducer is needed for the ExpandableImageDialog
   registerReducers({
-    instructionsDialog
+    instructionsDialog,
   });
   const store = getStore();
 

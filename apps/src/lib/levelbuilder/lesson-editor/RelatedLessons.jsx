@@ -5,7 +5,7 @@ import {relatedLessonShape} from '../shapes';
 
 export default class RelatedLessons extends Component {
   static propTypes = {
-    relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired
+    relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
   };
 
   getRelatedLessonText(lesson) {
@@ -49,16 +49,16 @@ const styles = {
   relatedLessonHeader: {
     fontSize: 16,
     marginTop: 15,
-    marginBottom: 10
+    marginBottom: 10,
   },
   relatedLessonContainer: {
-    marginBottom: -15
+    marginBottom: -15,
   },
   relatedLessonLink: {
     marginRight: 30,
     marginBottom: 15,
     display: 'inline-block',
     color: color.purple,
-    textDecoration: 'underline'
-  }
+    textDecoration: 'underline',
+  },
 };

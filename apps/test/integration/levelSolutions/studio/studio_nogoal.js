@@ -11,10 +11,10 @@ var levelDef = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   firstSpriteIndex: 3,
-  timeoutFailureTick: 200
+  timeoutFailureTick: 200,
 };
 
 module.exports = {
@@ -27,8 +27,8 @@ module.exports = {
       xml: '',
       expected: {
         result: false,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
-      }
-    }
-  ]
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL,
+      },
+    },
+  ],
 };
