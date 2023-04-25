@@ -32,14 +32,12 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
     if (isChecked) {
       //Add checked item into applied filters
       newFilters[filterName] = [...appliedFilters[filterName], value];
-      console.log(newFilters);
       setAppliedFilters(newFilters);
     } else {
       //Remove unchecked item from applied filters
       newFilters[filterName] = appliedFilters[filterName].filter(
         item => item !== value
       );
-      console.log(newFilters);
       setAppliedFilters(newFilters);
     }
   };
@@ -58,25 +56,23 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
         imageUrl={CourseCatalogIllustration01}
       />
       <div className={style.catalogFiltersContainer}>
-        {filterTypes.map(filterType => {
-          return (
-            <FilterCheckboxDropdown
-              key={filterType.name}
-              name={filterType.name}
-              label={filterType.label}
-              allOptions={filterType.options}
-              checkedOptions={appliedFilters[filterType.name]}
-              onChange={e => handleSelect(e, filterType.name)}
-            />
-          );
-        })}
+        {filterTypes.map(filterType => (
+          <FilterCheckboxDropdown
+            key={filterType.name}
+            name={filterType.name}
+            label={filterType.label}
+            allOptions={filterType.options}
+            checkedOptions={appliedFilters[filterType.name]}
+            onChange={e => handleSelect(e, filterType.name)}
+          />
+        ))}
         <button
           id="clear-filters"
           type="button"
           className={style.catalogClearFiltersButton}
           onClick={handleClear}
         >
-          Clear
+          Clear filters
         </button>
       </div>
       <div className={style.catalogContentContainer}>
@@ -121,7 +117,7 @@ const FilterCheckboxDropdown = ({
   name,
   label,
   allOptions,
-  checkedOptions,
+  checkedOptions = [],
   onChange,
 }) => {
   return (
@@ -136,32 +132,30 @@ const FilterCheckboxDropdown = ({
       </button>
       <ul className="dropdown-menu">
         <form>
-          {allOptions.map(option => {
-            return (
-              <li key={`${name}-${option}`} className="checkbox form-group">
-                <input
-                  type="checkbox"
-                  id={`${name}-${option}-check`}
-                  name={option}
-                  value={option}
-                  checked={checkedOptions.includes(option)}
-                  onChange={onChange}
-                />
-                <label htmlFor={`${name}-${option}-check`}>{option}</label>
-              </li>
-            );
-          })}
+          {allOptions.map(option => (
+            <li key={`${name}-${option}`} className="checkbox form-group">
+              <input
+                type="checkbox"
+                id={`${name}-${option}-check`}
+                name={option}
+                value={option}
+                checked={checkedOptions.includes(option)}
+                onChange={onChange}
+              />
+              <label htmlFor={`${name}-${option}-check`}>{option}</label>
+            </li>
+          ))}
         </form>
       </ul>
     </div>
   );
 };
 FilterCheckboxDropdown.propTypes = {
-  name: PropTypes.string,
-  label: PropTypes.string,
-  allOptions: PropTypes.arrayOf(PropTypes.string),
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  allOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
   checkedOptions: PropTypes.arrayOf(PropTypes.string),
-  onChange: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default CurriculumCatalog;
