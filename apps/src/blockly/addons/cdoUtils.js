@@ -109,7 +109,7 @@ export function getCode(workspace) {
   // return JSON.stringify(Blockly.serialization.workspaces.save(workspace));
 }
 
-// TODO: Re-defined with a new custom field.
+// TODO: Re-define with a new custom field.
 export function playSoundButton(dashboard, onSelect) {
   return new Blockly.FieldDropdown([['Choose', 'Choose']], () => {
     dashboard.assets.showAssetManager(onSelect, 'audio', null, {
