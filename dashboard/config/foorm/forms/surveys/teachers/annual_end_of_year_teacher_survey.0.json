@@ -7,6 +7,17 @@
       "elements": [
         {
           "type": "html",
+          "name": "variable_testing",
+          "visible": true,
+          "html": "<h3>variables</h3>\n<p>Test to make sure variables are working as expected - make invisible when live</p><p><li>userId = {userId}</li>"
+        },
+        {
+          "type": "html",
+          "name": "testing_warning",
+          "html": "<p style='background-color: yellow; text-align:center'>-- End of testing panel -- </p>"
+        },
+        {
+          "type": "html",
           "name": "survey_preamble_header_and_text",
           "html": "<h1>Welcome to the End-of-School-Year Survey</h2>\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience.</strong></p>\n<p>This survey asks questions about your experience using Code.org in your classroom during this school year.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>At the end, you will be offered a $10 Amazon gift card for your time (supplies limited to first 1000 respondents).</strong></P>\n<p>This survey should take <strong>less than 10 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
         }

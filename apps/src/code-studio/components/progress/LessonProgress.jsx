@@ -6,10 +6,12 @@ import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtra
 import {
   levelsForLessonId,
   lessonExtrasUrl,
+  navigateToLevelId,
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {canChangeLevelInPage} from '../../browserNavigation';
 import $ from 'jquery';
 
 /**
@@ -25,6 +27,7 @@ class LessonProgress extends Component {
     setDesiredWidth: PropTypes.func,
     currentPageNumber: PropTypes.number,
     currentLevelId: PropTypes.string,
+    navigateToLevelId: PropTypes.func,
   };
 
   getFullWidth() {
@@ -52,6 +55,9 @@ class LessonProgress extends Component {
       levelIndex < this.props.levels.length;
       levelIndex++
     ) {
+      const currentLevelChanged =
+        this.props.currentLevelId !== nextProps.currentLevelId;
+
       const statusChanged =
         this.props.levels[levelIndex].status !==
         nextProps.levels[levelIndex].status;
@@ -60,7 +66,7 @@ class LessonProgress extends Component {
         this.props.levels[levelIndex].teacherFeedbackReviewState !==
         nextProps.levels[levelIndex].teacherFeedbackReviewState;
 
-      if (statusChanged || badgeChanged) {
+      if (currentLevelChanged || statusChanged || badgeChanged) {
         return true;
       }
     }
@@ -129,7 +135,8 @@ class LessonProgress extends Component {
   }
 
   render() {
-    const {currentPageNumber, lessonExtrasUrl, lessonName} = this.props;
+    const {currentPageNumber, lessonExtrasUrl, lessonName, navigateToLevelId} =
+      this.props;
     let levels = this.props.levels;
 
     // Bonus levels should not count towards mastery.
@@ -139,6 +146,8 @@ class LessonProgress extends Component {
       this.getFullProgressOffset();
 
     const onBonusLevel = this.isOnBonusLevel();
+
+    const currentLevelApp = levels.find(level => level.isCurrentLevel)?.app;
 
     return (
       <div className="react_stage" style={styles.container}>
@@ -156,6 +165,18 @@ class LessonProgress extends Component {
               if (isCurrent && level.kind === LevelKind.assessment) {
                 isCurrent = currentPageNumber === level.pageNumber;
               }
+
+              // When the user clicks on a level bubble for which we support changing to
+              // that level without reloading the page, we use a click handler which
+              // calls through to the progress redux store to change to that level
+              // immediately.
+              const onBubbleClick = canChangeLevelInPage(
+                currentLevelApp,
+                level.app
+              )
+                ? () => navigateToLevelId(level.id)
+                : undefined;
+
               return (
                 <div
                   key={index}
@@ -170,6 +191,7 @@ class LessonProgress extends Component {
                     disabled={false}
                     smallBubble={!isCurrent}
                     lessonName={lessonName}
+                    onClick={onBubbleClick}
                   />
                 </div>
               );
@@ -251,13 +273,20 @@ const styles = {
 
 export const UnconnectedLessonProgress = LessonProgress;
 
-export default connect(state => ({
-  levels: levelsForLessonId(state.progress, state.progress.currentLessonId),
-  lessonExtrasUrl: lessonExtrasUrl(
-    state.progress,
-    state.progress.currentLessonId
-  ),
-  isLessonExtras: state.progress.isLessonExtras,
-  currentPageNumber: state.progress.currentPageNumber,
-  currentLevelId: state.progress.currentLevelId,
-}))(LessonProgress);
+export default connect(
+  state => ({
+    levels: levelsForLessonId(state.progress, state.progress.currentLessonId),
+    lessonExtrasUrl: lessonExtrasUrl(
+      state.progress,
+      state.progress.currentLessonId
+    ),
+    isLessonExtras: state.progress.isLessonExtras,
+    currentPageNumber: state.progress.currentPageNumber,
+    currentLevelId: state.progress.currentLevelId,
+  }),
+  dispatch => ({
+    navigateToLevelId(levelId) {
+      dispatch(navigateToLevelId(levelId));
+    },
+  })
+)(LessonProgress);
