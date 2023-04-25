@@ -31,6 +31,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     response: :forbidden
   test_user_gets_response_for :access_token_with_override_sources,
     method: :post,
+    params: {overrideSources: "{'source': {}}", executionType: 'RUN', miniAppType: 'console'},
     user: :teacher,
     response: :forbidden
   test_user_gets_response_for :access_token_with_override_sources,
