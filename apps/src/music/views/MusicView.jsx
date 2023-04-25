@@ -36,6 +36,7 @@ import KeyHandler from './KeyHandler';
 import {
   levelsForLessonId,
   navigateToLevelId,
+  sendSuccessReport,
 } from '@cdo/apps/code-studio/progressRedux';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
@@ -52,7 +53,6 @@ class UnconnectedMusicView extends React.Component {
     appConfig: PropTypes.object,
     levels: PropTypes.array,
     currentLevelIndex: PropTypes.number,
-    onChangeLevel: PropTypes.func,
 
     // populated by Redux
     userId: PropTypes.number,
@@ -71,6 +71,7 @@ class UnconnectedMusicView extends React.Component {
     setInstructionsPosition: PropTypes.func,
     setCurrentProgressState: PropTypes.func,
     navigateToLevelId: PropTypes.func,
+    sendSuccessReport: PropTypes.func,
   };
 
   constructor(props) {
@@ -201,7 +202,12 @@ class UnconnectedMusicView extends React.Component {
   };
 
   onProgressChange = () => {
-    this.props.setCurrentProgressState(this.progressManager.getCurrentState());
+    const currentState = this.progressManager.getCurrentState();
+    this.props.setCurrentProgressState(currentState);
+
+    if (currentState.satisfied) {
+      this.props.sendSuccessReport();
+    }
   };
 
   getIsPlaying = () => {
@@ -587,6 +593,7 @@ const MusicView = connect(
     setCurrentProgressState: progressState =>
       dispatch(setCurrentProgressState(progressState)),
     navigateToLevelId: levelId => dispatch(navigateToLevelId(levelId)),
+    sendSuccessReport: () => dispatch(sendSuccessReport()),
   })
 )(UnconnectedMusicView);
 
