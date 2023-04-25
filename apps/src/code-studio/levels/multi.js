@@ -3,7 +3,7 @@ import React from 'react';
 import {
   registerGetResult,
   onAnswerChanged,
-  resetContainedLevel
+  resetContainedLevel,
 } from './codeStudioLevels';
 import {sourceForLevel} from '../clientState';
 import Sounds from '../../Sounds';
@@ -254,7 +254,7 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
     result: result,
     errorDialog: errorDialog,
     submitted: submitted,
-    valid: valid
+    valid: valid,
   };
 };
 

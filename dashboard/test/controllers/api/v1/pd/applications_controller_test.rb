@@ -9,6 +9,8 @@ module Api::V1::Pd
     freeze_time
 
     setup_all do
+      Pd::Application::ApplicationBase.any_instance.stubs(:deliver_email)
+
       @workshop_admin = create :workshop_admin
       @workshop_organizer = create :workshop_organizer
       @program_manager = create :teacher
@@ -371,6 +373,43 @@ module Api::V1::Pd
       assert_equal expected_log, @csd_teacher_application_with_partner.sanitize_status_timestamp_change_log
     end
 
+    test 'update sends a decision email once if status changed to decision and if associated with an RP' do
+      sign_in @program_manager
+      Pd::Application::TeacherApplicationMailer.expects(:accepted).once
+
+      post :update, params: {id: @csd_teacher_application_with_partner.id, application: {
+        status: 'accepted'
+      }}
+
+      # A different update does not trigger another decision email sent
+      post :update, params: {id: @csd_teacher_application_with_partner.id, application: {
+        notes: 'More notes'
+      }}
+      assert_equal 1, @csd_teacher_application_with_partner.emails.where.not(sent_at: nil).where(email_type: 'accepted').count
+    end
+
+    test 'update does not send a decision email if status changed to decision but no RP' do
+      sign_in @program_manager
+      Pd::Application::TeacherApplicationMailer.expects(:accepted).never
+
+      post :update, params: {id: @csd_teacher_application.id, application: {
+        status: 'accepted'
+      }}
+    end
+
+    test 'update does not send a decision email if status changed to non-decision even with an RP' do
+      hash_csp_with_rp = build TEACHER_APPLICATION_HASH_FACTORY, :csp, regional_partner_id: @regional_partner.id
+      csp_teacher_application_with_partner = create TEACHER_APPLICATION_FACTORY, form_data_hash: hash_csp_with_rp
+
+      sign_in @program_manager
+      Pd::Application::TeacherApplicationMailer.expects(:accepted).never
+
+      csp_teacher_application_with_partner.expects(:send_pd_application_email).never
+      post :update, params: {id: csp_teacher_application_with_partner.id, application: {
+        status: 'pending'
+      }}
+    end
+
     test 'workshop admins can update form_data' do
       sign_in @workshop_admin
       updated_form_data = @csd_teacher_application_with_partner.form_data_hash.merge('alternateEmail' => 'my.other@email.net')
@@ -487,7 +526,7 @@ module Api::V1::Pd
 
         application = create(
           TEACHER_APPLICATION_FACTORY,
-          course: 'csp',
+          course: 'csd',
           form_data_hash: @hash_csd_with_rp,
           user: @serializing_teacher,
           pd_workshop_id: workshop.id

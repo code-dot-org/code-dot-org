@@ -1,4 +1,4 @@
-import {BlocklyVersion} from '@cdo/apps/constants';
+import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 import {CLAMPED_NUMBER_REGEX} from './constants';
 
 const INFINITE_LOOP_TRAP =
@@ -24,7 +24,7 @@ const BlocklyWrapper = function (blocklyInstance) {
     Object.defineProperty(this, propertyName, {
       get: function () {
         return this.blockly_[propertyName];
-      }
+      },
     });
     this.wrapSettableProperty = function (propertyName) {
       Object.defineProperty(this, propertyName, {
@@ -33,7 +33,7 @@ const BlocklyWrapper = function (blocklyInstance) {
         },
         set: function (newValue) {
           this.blockly_[propertyName] = newValue;
-        }
+        },
       });
     };
   };
@@ -274,7 +274,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     getCode: function (workspace) {
       return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
-    }
+    },
   };
   return blocklyWrapper;
 }

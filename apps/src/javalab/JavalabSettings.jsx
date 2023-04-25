@@ -12,7 +12,7 @@ import {DisplayTheme} from './DisplayTheme';
 import {
   decreaseEditorFontSize,
   increaseEditorFontSize,
-  setDisplayTheme
+  setDisplayTheme,
 } from './redux/viewRedux';
 import CloseOnEscape from './components/CloseOnEscape';
 
@@ -28,11 +28,11 @@ export class UnconnectedJavalabSettings extends Component {
     decreaseEditorFontSize: PropTypes.func.isRequired,
     canIncreaseFontSize: PropTypes.bool.isRequired,
     canDecreaseFontSize: PropTypes.bool.isRequired,
-    editorFontSize: PropTypes.number.isRequired
+    editorFontSize: PropTypes.number.isRequired,
   };
 
   state = {
-    dropdownOpen: false
+    dropdownOpen: false,
   };
 
   expandDropdown = () => {
@@ -96,7 +96,7 @@ export class UnconnectedJavalabSettings extends Component {
       decreaseEditorFontSize,
       canIncreaseFontSize,
       canDecreaseFontSize,
-      editorFontSize
+      editorFontSize,
     } = this.props;
 
     return (
@@ -166,11 +166,11 @@ export default connect(
     displayTheme: state.javalabView.displayTheme,
     canIncreaseFontSize: state.javalabView.canIncreaseFontSize,
     canDecreaseFontSize: state.javalabView.canDecreaseFontSize,
-    editorFontSize: state.javalabView.editorFontSize
+    editorFontSize: state.javalabView.editorFontSize,
   }),
   dispatch => ({
     setDisplayTheme: displayTheme => dispatch(setDisplayTheme(displayTheme)),
     increaseEditorFontSize: () => dispatch(increaseEditorFontSize()),
-    decreaseEditorFontSize: () => dispatch(decreaseEditorFontSize())
+    decreaseEditorFontSize: () => dispatch(decreaseEditorFontSize()),
   })
 )(onClickOutside(UnconnectedJavalabSettings));

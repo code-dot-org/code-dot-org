@@ -80,7 +80,7 @@ describe('Google Blockly Wrapper', () => {
       'weblab_locale',
       'Workspace',
       'WorkspaceSvg',
-      'Xml'
+      'Xml',
     ];
     readOnlyProperties.forEach(property => {
       expect(() => {

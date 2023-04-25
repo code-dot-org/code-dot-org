@@ -4,7 +4,7 @@ import {
   Identify,
   identify,
   setSessionId,
-  flush
+  flush,
 } from '@amplitude/analytics-browser';
 import {Block} from 'blockly';
 
@@ -20,14 +20,14 @@ const blockFeatureList = [
   BlockTypes.PLAY_SOUNDS_TOGETHER,
   BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
   'functions',
-  BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2
+  BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
 ];
 
 const triggerBlocks = [
   BlockTypes.TRIGGERED_AT,
   BlockTypes.TRIGGERED_AT_SIMPLE,
   BlockTypes.TRIGGERED_AT_SIMPLE2,
-  BlockTypes.NEW_TRACK_ON_TRIGGER
+  BlockTypes.NEW_TRACK_ON_TRIGGER,
 ];
 
 const functionBlocks = ['procedures_defnoreturn', 'procedures_callnoreturn'];
@@ -78,7 +78,7 @@ export default class AnalyticsReporter {
       endingTriggerBlocksWithCode: 0,
       maxBlockCount: 0,
       maxTriggerBlockCount: 0,
-      maxTriggerBlocksWithCode: 0
+      maxTriggerBlocksWithCode: 0,
     };
 
     this.featuresUsed = {};
@@ -126,14 +126,14 @@ export default class AnalyticsReporter {
   onButtonClicked(buttonName: string, properties?: object) {
     this.trackUIEvent('Button clicked', {
       buttonName,
-      ...properties
+      ...properties,
     });
   }
 
   onKeyPressed(keyName: string, properties?: object) {
     this.trackUIEvent('Key pressed', {
       keyName,
-      ...properties
+      ...properties,
     });
   }
 
@@ -215,7 +215,7 @@ export default class AnalyticsReporter {
       maxTriggerBlocksWithCode: Math.max(
         this.blockStats.maxTriggerBlocksWithCode,
         triggerBlocksWithCode
-      )
+      ),
     };
   }
 
@@ -236,7 +236,7 @@ export default class AnalyticsReporter {
       lastInstructionsVisited: this.currentInstructionsPage,
       soundsUsed: Array.from(this.soundsUsed),
       blockStats: this.blockStats,
-      featuresUsed: this.featuresUsed
+      featuresUsed: this.featuresUsed,
     };
 
     track('Session end', payload);

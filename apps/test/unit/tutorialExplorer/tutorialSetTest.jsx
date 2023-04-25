@@ -8,19 +8,19 @@ import i18n from '@cdo/tutorialExplorer/locale';
 
 const TUTORIAL_1 = {
   name: 'Tutorial 1',
-  code: 'tutorial-1'
+  code: 'tutorial-1',
 };
 
 const TUTORIAL_2 = {
   name: 'Tutorial 2',
-  code: 'tutorial-2'
+  code: 'tutorial-2',
 };
 
 const DEFAULT_PROPS = {
   tutorials: [],
   localeEnglish: true,
   disabledTutorials: [],
-  grade: 'all'
+  grade: 'all',
 };
 
 describe('TutorialSet', () => {

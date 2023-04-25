@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-adaptations",
-    "serialized_at": "2023-04-13 23:12:53 UTC",
+    "serialized_at": "2023-04-14 20:08:20 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -80,7 +80,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "In this CS and science-integrated lesson, students will learn how to edit animal behaviors in code. First, students will make a prediction about a fox’s mystery behavior. Then, in the following levels they will use the “edit” button to debug different animal behaviors, including speed, direction, and rotation style. Finally, students will use their new skills to code a unique tropical bird mating dance! \n\nAt the end of class, students will share out their custom projects with their classmates. Students will have a chance to reflect on what they have learned about behaviors in code and animal behaviors in real life. \n",
-        "preparation": "- Review and complete the online tutorial yourself.\n- Determine in advance which levels might be more challenging for students.\n- Review slides and decide on pacing between student work time and whole group instruction.\n",
+        "preparation": "- Review and complete the online tutorial yourself.\n- Determine in advance which levels might be more challenging for students.\n- Review slides and decide on pacing between student work time and whole group instruction.\n\n#####Optional\n- Prerequisite: \n   - Complete [Animal Adaptations: Lesson 1 & 2](https://studio.code.org/s/csc-adaptations-2023/lessons/1/levels/1)\n   - Complete [Hello World](https://studio.code.org/s/hello-world-food-2021/lessons/1)\n   - Complete [CSF: Course F, Sprites in Action](https://studio.code.org/s/coursef/lessons/4/levels/1)\n",
         "purpose": "Today, you will make predictions about mystery behaviors and debug animal behaviors that aren’t working right. Then, you’ll use your skills to code a unique tropical bird mating dance! "
       },
       "seeding_key": {
@@ -271,7 +271,9 @@
       "key": "4f4fd4fd-6d15-4b1a-9b68-261f3d2a1d5f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discussion:**\n* _Why do only some animals have webbed feet?_\n* _Did these animals always have webbed feet?_\n\n**Discussion Goal**: Students should understand that webbed feet are an adaptation that helps animals swim in water. Certain animals don’t have webbed feet because they do not live in water or do not need to swim well. They should also understand that adaptations also happen over many generations. In order for animals to survive in their environment, they need to develop certain physical adaptations such as webbed feet."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discussion:**\n* _Why do only some animals have webbed feet?_\n* _Did these animals always have webbed feet?_\n\n**Discussion Goal**: Students should understand that webbed feet are an adaptation that helps animals swim in water. Certain animals don’t have webbed feet because they do not live in water or do not need to swim well. They should also understand that adaptations also happen over many generations. In order for animals to survive in their environment, they need to develop certain physical adaptations such as webbed feet.",
+        "duration": "5",
+        "name": "Discuss"
       },
       "seeding_key": {
         "activity_section.key": "4f4fd4fd-6d15-4b1a-9b68-261f3d2a1d5f",
@@ -298,7 +300,7 @@
       "key": "2541896d-e85a-4cfc-8dec-21f8e3df759a",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Science + Coding” slide\n\n**Display**:\n\n_**Adaptations**_\n \n_Animals change over many generations so that they have a better chance of survival._ \n\n_**Build a Model**_\n\n_Today you will use computer science and code to build models that show animal adaptations._\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Science + Coding” slide\n\n\n_**Adaptations**_\n \n_Animals change over many generations so that they have a better chance of survival._ \n\n_**Build a Model**_\n\n_Today you will use computer science and code to build models that show animal adaptations._\n\n"
       },
       "seeding_key": {
         "activity_section.key": "2541896d-e85a-4cfc-8dec-21f8e3df759a",
@@ -373,7 +375,7 @@
       "key": "af28437f-8bd2-48d3-84b2-f731d8ba090e",
       "position": 6,
       "properties": {
-        "description": "**Do This**: Preview levels 2-5 with the whole class, then allow students to complete levels at their own pace. \n\n**Levels 2-3:** Bunny Adaptations - Students will add code to switch the background and sprite location. This simulates how bunnies have adapted the color of their fur to blend into their environment. \n\n**Level 4:** Bird Beak Evolution - Students will add code to explain that birds have different beaks to do different things.\n\n**Level 5:** Elephant Size Adaptations - Students will model how elephants have evolved to be very large animals. \n\n**Do This**: Circulate as students work at their own pace using the instructions to learn and code programs on each level. \n\n\n"
+        "description": "**Do This**: Preview levels 2-5 with the whole class, then allow students to complete levels at their own pace. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Adaptations - Leve 2-3\" slide\n\n**Levels 2-3:** Bunny Adaptations - Students will add code to switch the background and sprite location. This simulates how bunnies have adapted the color of their fur to blend into their environment. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Evolution - Level 4\" slide\n\n**Level 4:** Bird Beak Evolution - Students will add code to explain that birds have different beaks to do different things.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Evolution - Level 5\" slide\n\n\n**Level 5:** Elephant Size Adaptations - Students will model how elephants have evolved to be very large animals. \n\n**Do This**: Circulate as students work at their own pace using the instructions to learn and code programs on each level. \n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "af28437f-8bd2-48d3-84b2-f731d8ba090e",
@@ -436,9 +438,9 @@
       "key": "f8b819ac-8167-4a55-8c10-fa7febe38b15",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think About It” slide \n\n**Do This:** Read the two questions out loud. Allow students 2-4 minutes to think or write independently.\n\n**Discuss:** \n- _What are these animals doing?_\n- _What do the pictures have in common?_\n\n**Discussion Goal**: Students should start to notice that both pictures show animals moving in groups. This is a behavior for survival! \n\n",
-        "duration": "10",
-        "name": "Think & Discuss"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think About It” slide \n\n**Do This:** Read the two questions out loud. Allow students 2-4 minutes to think or write independently.\n\n**Prompts:** \n- _What are these animals doing?_\n- _What do the pictures have in common?_\n\n**Goal**: Students should start to notice that both pictures show animals moving in groups. This is a behavior for survival! \n\n",
+        "duration": "5",
+        "name": "Think About It"
       },
       "seeding_key": {
         "activity_section.key": "f8b819ac-8167-4a55-8c10-fa7febe38b15",
@@ -449,7 +451,9 @@
       "key": "1fb909c3-a900-42a6-97b0-3595ad3a9301",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Turn & Talk” slide\n\n**Discuss:** \n- _Why is this school of sardines acting like this?_\n\n**Discussion Goals:** Students should create an argument for why there is strength in numbers. This could include facts about how small sardines are, how easy it would be to catch a sardine on its own, how this swarming behavior confuses its predators, and that there is a smaller chance of being eaten or caught when they swarm.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Science & Coding” slide\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Turn & Talk” slide\n\n**Discuss:** \n- _Why is this school of sardines acting like this?_\n\n**Discussion Goals:** Students should create an argument for why there is strength in numbers. This could include facts about how small sardines are, how easy it would be to catch a sardine on its own, how this swarming behavior confuses its predators, and that there is a smaller chance of being eaten or caught when they swarm.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Science & Coding” slide\n",
+        "duration": "5",
+        "name": "Turn & Talk"
       },
       "seeding_key": {
         "activity_section.key": "1fb909c3-a900-42a6-97b0-3595ad3a9301",
@@ -2081,6 +2085,16 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "objective.key": "36e2c3bf-e310-4aba-bdda-019164e55231"
+      }
+    },
+    {
+      "key": "48ed70e5-f9cb-4c65-9d5e-64240219fcd0",
+      "properties": {
+        "description": "Code a new, imaginary or hypothetical adaptations given fictional environmental changes"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "48ed70e5-f9cb-4c65-9d5e-64240219fcd0"
       }
     },
     {

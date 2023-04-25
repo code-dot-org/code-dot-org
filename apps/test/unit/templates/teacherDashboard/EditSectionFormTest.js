@@ -7,7 +7,7 @@ import {UnconnectedEditSectionForm as EditSectionForm} from '@cdo/apps/templates
 import {
   courseOfferings,
   testSection,
-  noStudentsSection
+  noStudentsSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
@@ -83,7 +83,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...testSection,
-          loginType: SectionLoginType.picture
+          loginType: SectionLoginType.picture,
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -116,7 +116,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.picture
+          loginType: SectionLoginType.picture,
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -149,7 +149,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...testSection,
-          loginType: SectionLoginType.email
+          loginType: SectionLoginType.email,
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -173,7 +173,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.email
+          loginType: SectionLoginType.email,
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -197,7 +197,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...testSection,
-          loginType: SectionLoginType.google_classroom
+          loginType: SectionLoginType.google_classroom,
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -221,7 +221,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.google_classroom
+          loginType: SectionLoginType.google_classroom,
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -245,7 +245,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...testSection,
-          loginType: SectionLoginType.clever
+          loginType: SectionLoginType.clever,
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -269,7 +269,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.clever
+          loginType: SectionLoginType.clever,
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -295,7 +295,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.clever
+          loginType: SectionLoginType.clever,
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -321,7 +321,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.clever
+          loginType: SectionLoginType.clever,
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -346,7 +346,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.clever
+          loginType: SectionLoginType.clever,
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -371,7 +371,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.clever
+          loginType: SectionLoginType.clever,
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -422,7 +422,7 @@ describe('EditSectionForm', () => {
       sectionLockSelection: testSection.restrictSection,
       sectionName: testSection.name,
       sectionPairProgramSelection: testSection.pairingAllowed,
-      sectionUnitId: null
+      sectionUnitId: null,
     });
 
     assert.equal(
@@ -442,7 +442,7 @@ describe('EditSectionForm', () => {
       newCourseVersionId: Object.values(
         courseOfferings[testSection.courseOfferingId].course_versions
       ).find(cv => cv.key === '2017').id,
-      newVersionYear: '2017'
+      newVersionYear: '2017',
     });
 
     analyticsSpy.restore();
@@ -485,7 +485,7 @@ describe('EditSectionForm', () => {
       sectionLockSelection: testSection.restrictSection,
       sectionName: testSection.name,
       sectionPairProgramSelection: testSection.pairingAllowed,
-      sectionUnitId: null
+      sectionUnitId: null,
     });
 
     analyticsSpy.restore();

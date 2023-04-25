@@ -16,7 +16,7 @@ import experiments from '@cdo/apps/util/experiments';
 function editSectionDialog(Form) {
   class EditSectionDialog extends Component {
     static propTypes = {
-      isOpen: PropTypes.bool.isRequired // From Redux
+      isOpen: PropTypes.bool.isRequired, // From Redux
     };
 
     redirectToNewSectionEditPage() {
@@ -49,9 +49,9 @@ function editSectionDialog(Form) {
 }
 
 export default connect(state => ({
-  isOpen: isEditingSection(state.teacherSections)
+  isOpen: isEditingSection(state.teacherSections),
 }))(editSectionDialog(EditSectionForm));
 
 export const ReloadAfterEditSectionDialog = connect(state => ({
-  isOpen: isEditingSection(state.teacherSections)
+  isOpen: isEditingSection(state.teacherSections),
 }))(editSectionDialog(ReloadAfterEditSectionForm));

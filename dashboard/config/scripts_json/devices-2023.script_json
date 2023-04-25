@@ -5,6 +5,7 @@
     "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_course": true,
@@ -17,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "devices",
-    "serialized_at": "2023-04-13 17:27:41 UTC",
+    "serialized_at": "2023-04-20 18:31:44 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -11138,16 +11139,6 @@
       }
     },
     {
-      "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view\t",
-      "key": "csd_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide"
-      }
-    },
-    {
       "name": "CSD Guide to Debugging",
       "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view\t",
       "key": "csd_guide_to_debugging",
@@ -12506,12 +12497,6 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary",
-        "script.name": "devices-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
         "script.name": "devices-2023"
       }
     },

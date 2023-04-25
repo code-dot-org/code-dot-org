@@ -8,7 +8,7 @@ import {
   getInvalidFields,
   getErrorMessage,
   getAgeSafeData,
-  professionOptions
+  professionOptions,
 } from '@cdo/apps/templates/certificates/petition/petitionHelpers';
 import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/ControlledFieldGroup';
 import PropTypes from 'prop-types';
@@ -55,7 +55,7 @@ const PetitionForm = ({tutorial}) => {
         // Do not send email or name server-side for under sixteen users to protect privacy.
         sendDataToEndpoint(getAgeSafeData(sanitizedData));
         ga('send', 'event', 'studio_petition', 'click', {
-          tutorial: tutorial
+          tutorial: tutorial,
         });
       }
     },
@@ -75,7 +75,7 @@ const PetitionForm = ({tutorial}) => {
       url: '/v2/forms/Petition',
       type: 'post',
       contentType: 'application/json; charset=UTF-8',
-      data: JSON.stringify(data)
+      data: JSON.stringify(data),
     })
       .done(handleSuccessfulSubmit)
       .fail(handleFailedSubmit);
@@ -165,7 +165,7 @@ const PetitionForm = ({tutorial}) => {
 };
 
 PetitionForm.propTypes = {
-  tutorial: PropTypes.string
+  tutorial: PropTypes.string,
 };
 
 export default PetitionForm;

@@ -14,7 +14,7 @@ class AilabView extends React.Component {
   static propTypes = {
     isProjectLevel: PropTypes.bool.isRequired,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
-    onMount: PropTypes.func.isRequired
+    onMount: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -50,7 +50,7 @@ const styles = {
     userSelect: 'none',
     overflow: 'scroll',
     width: '100%',
-    height: 'calc(100% - 35px)'
+    height: 'calc(100% - 35px)',
   },
   containerReact: {
     position: 'absolute',
@@ -60,11 +60,11 @@ const styles = {
     userSelect: 'none',
     fontFamily: '"Gotham 4r", arial, sans-serif',
     color: 'rgb(30,30,30)',
-    lineHeight: 1.3
-  }
+    lineHeight: 1.3,
+  },
 };
 
 export default connect(state => ({
   isProjectLevel: state.pageConstants.isProjectLevel,
-  isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
+  isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
 }))(AilabView);
