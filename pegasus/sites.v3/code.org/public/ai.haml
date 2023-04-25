@@ -63,9 +63,8 @@ theme: responsive_full_width
             %p.no-margin-bottom=hoc_s(:ai_intro_list_desc_03)
     .clear
 
-%a{id: "teach-ai-callout"}
 - if !!DCDO.get('teach-ai-launch-2023', false)
-  %section.bg-primary-light.blog-post-callout
+  %section.bg-primary-light.blog-post-callout{id: "teach-ai-callout"}
     .wrapper
       %i{class: "#{icon_megaphone}"}
       .text-wrapper
@@ -90,8 +89,7 @@ theme: responsive_full_width
         %i{class: "#{icon_video}"}
         %a{href:"#ai-videos"}=hoc_s(:ai_why_link_03)
 
-%a{id: "ai-curricula"}
-%section
+%section{id: "ai-curricula"}
   .wrapper
     %h2=hoc_s(:ai_curricula_heading)
     %p=hoc_s(:ai_curricula_desc)
@@ -127,8 +125,7 @@ theme: responsive_full_width
     .quotes-wrapper
       = view :ai_carousel
 
-%a{id: "ai-pl"}
-%section
+%section{id: "ai-pl"}
   .wrapper
     %h2=hoc_s(:ai_pl_heading)
     .action-block.action-block--two-col
@@ -147,8 +144,7 @@ theme: responsive_full_width
 
 = view :section_divider_line
 
-%a{id: "ai-videos"}
-%section
+%section{id: "ai-videos"}
   .wrapper
     %h2=hoc_s(:ai_video_series_title)
     %p=hoc_s(:ai_video_series_desc)
