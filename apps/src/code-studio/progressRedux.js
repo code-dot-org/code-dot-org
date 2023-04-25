@@ -40,8 +40,9 @@ const OVERWRITE_RESULTS = 'progress/OVERWRITE_RESULTS';
 const PEER_REVIEW_ID = -1;
 
 const initialState = {
-  // These first fields never change after initialization
   currentLevelId: null,
+
+  // These first fields never change after initialization
   currentLessonId: null,
   deeperLearningCourse: null,
   // used on multi-page assessments
@@ -93,6 +94,30 @@ export function navigateToLevelId(levelId) {
 
     updateBrowserForLevelNavigation(state, newLevel.url, levelId);
     dispatch(setCurrentLevelId(levelId));
+  };
+}
+
+export function sendSuccessReport() {
+  return (dispatch, getState) => {
+    const state = getState().progress;
+    const currentLevel = state.lessons[0].levels.find(level =>
+      level.ids.find(id => id === state.currentLevelId)
+    );
+    const scriptLevelId = currentLevel.id;
+
+    const data = {
+      app: 'music',
+      result: true,
+      testResult: 100,
+    };
+
+    return $.ajax({
+      type: 'POST',
+      url: `/milestone/0/${scriptLevelId}`,
+      data: data,
+    }).done(data => {
+      console.log('done');
+    });
   };
 }
 
