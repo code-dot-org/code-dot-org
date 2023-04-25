@@ -4,7 +4,7 @@ require 'cdo/firehose'
 
 class JavabuilderSessionsController < ApplicationController
   include JavalabFilesHelper
-  # authorize_resource class: false
+  authorize_resource class: false
 
   PRIVATE_KEY = CDO.javabuilder_private_key
   PASSWORD = CDO.javabuilder_key_password
@@ -60,17 +60,7 @@ class JavabuilderSessionsController < ApplicationController
   end
 
   private def upload_project_files_and_render(session_id, project_files, encoded_payload)
-    # this gets called from all of the access token methods, not sure if that's desired/necessary
-    # how do we want this to interact with local development?
-    if current_user.verified_instructor? || current_user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
-      javabuilder_url = CDO.javabuilder_url
-      javabuilder_upload_url = CDO.javabuilder_upload_url
-    else
-      javabuilder_url = 'wss://javabuilder-demo.code.org'
-      javabuilder_upload_url = 'https://javabuilder-demo-http.code.org/seedsources/sources.json'
-    end
-    # add condition for non-teacher accounts
-
+    javabuilder_url, javabuilder_upload_url = get_javabuilder_urls
     response = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload, javabuilder_upload_url)
     if response
       return render(json: {token: encoded_payload, session_id: session_id, javabuilder_url: javabuilder_url}) if response.code == '200'
@@ -155,5 +145,16 @@ class JavabuilderSessionsController < ApplicationController
     end
 
     true
+  end
+
+  private def get_javabuilder_urls
+    if current_user.verified_instructor? || current_user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
+      javabuilder_url = CDO.javabuilder_url
+      javabuilder_upload_url = CDO.javabuilder_upload_url
+    else
+      javabuilder_url = CDO.javabuilder_demo_url
+      javabuilder_upload_url = CDO.javabuilder_demo_upload_url
+    end
+    [javabuilder_url, javabuilder_upload_url]
   end
 end
