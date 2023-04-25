@@ -43,16 +43,6 @@ function renderOfferings(
   updateCourse,
   setSelectedCourseOffering
 ) {
-  // useEffect(() => {
-  //   const courseValues = Object.values(courseData);
-
-  //   courseValues.map(course =>
-  //     sectionCourse?.courseOfferingId === course.id
-  //       ? setSelectedCourseOffering(course)
-  //       : null
-  //   );
-  // }, []);
-
   const courseValues = Object.values(courseData);
 
   return courseValues.map(course => (

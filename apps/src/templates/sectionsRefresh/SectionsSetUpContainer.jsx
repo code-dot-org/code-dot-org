@@ -20,7 +20,7 @@ const useSections = section => {
   // added "default properties" for any new section
   const [sections, setSections] = useState(
     section
-      ? [section]
+      ? [{...section, lessonExtras: section.stageExtras}]
       : [
           {
             pairingAllowed: true,
@@ -158,8 +158,14 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
             label={i18n.pairProgramming()}
           />
         )}
+        <hr />
       </div>
       <div className={moduleStyles.buttonsContainer}>
+        {/* TO DO: for the first iteration of this feature we will only have 
+        participants create one section at a time.  For edit section redirects, 
+        adding another section is not needed.  This can be uncommented when the
+        functionality of adding another class section is ready.
+
         {isNewSection && (
           <Button
             icon="plus"
@@ -171,6 +177,7 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
             }}
           />
         )}
+        */}
         {/* TO DO: currently this button just changes text if it is a "new" or "editied"
         screen, depending on how we want the functionality of this button to work,
         this might mean creating a different button for the "edit" page */}

@@ -22,13 +22,8 @@ export default function AdvancedSettingToggles({
   };
 
   const handleLessonExtrasToggle = e => {
-    if (section.lessonExtras === undefined) {
-      const updatedValue = !section.stageExtras;
-      updateSection('stageExtras', updatedValue);
-    } else if (section.stageExtras === undefined) {
-      const updatedValue = !section.lessonExtras;
-      updateSection('lessonExtras', updatedValue);
-    }
+    const updatedValue = !section.lessonExtras;
+    updateSection('lessonExtras', updatedValue);
   };
 
   const handleTtsAutoplayEnabledToggle = e => {
@@ -82,11 +77,7 @@ export default function AdvancedSettingToggles({
         <div className={style.toolTipContainer}>
           <ToggleSwitch
             id={'uitest-lesson-extras-toggle'}
-            isToggledOn={
-              section.stageExtras === undefined
-                ? section.lessonExtras
-                : section.stageExtras
-            }
+            isToggledOn={section.lessonExtras}
             onToggle={e => handleLessonExtrasToggle(e)}
             label={i18n.enableLessonExtrasToggle()}
           />
@@ -96,7 +87,6 @@ export default function AdvancedSettingToggles({
           />
         </div>
       )}
-      <hr />
     </div>
   );
 }
