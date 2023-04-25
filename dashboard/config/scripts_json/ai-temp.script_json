@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-04-24 02:20:13 UTC",
+    "serialized_at": "2023-04-24 17:39:13 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -88,7 +88,7 @@
     },
     {
       "key": "lesson-7",
-      "name": "[Generative AI Lesson]",
+      "name": "[Generative LLM Lesson (chatbot)]",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -102,12 +102,27 @@
       }
     },
     {
-      "key": "Algorithmic Bias",
-      "name": "Algorithmic Bias",
+      "key": "lesson-8",
+      "name": "[Generative Images Lesson (dall-e-esque)]",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "Algorithmic Bias",
+      "name": "Algorithmic Bias",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
       "properties": {
         "overview": "In this lesson, students will practice cropping images to uncover the bias underlying the Twitter cropping algorithm. Then, students will read and watch a video about the discovery of this biased algorithm. Finally, students will discuss ways to recognize and reduce bias along with analyzing Twitter's response to the allegations of bias in their cropping algorithm.",
         "preparation": "* Complete the cropping widget activity yourself so you can see what your students will experience with the widget will be and what questions or issues they may bring up.\n* Watch the parts of the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) referenced in the lesson plan.\n* Read the two articles from the links section below.",
@@ -122,10 +137,10 @@
     {
       "key": "Our AI Code of Ethics",
       "name": "Our AI Code of Ethics",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.",
@@ -141,10 +156,10 @@
     {
       "key": "Blockchain In a Day",
       "name": "Introduction to AI In a Day",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
         "overview": "⚠️This lesson is intended for classrooms that want to show the entire Introduction to AI video series in a **single day**. It is not intended to be taught in sequence with the other lessons in this unit, which introduces each video one day at a time.\n\nStudents follow along with each video by matching vocabulary from the video, then answering a reflection question about each video. The lesson plan and slides are very sparse and open-ended to allow for improvisation and customization to fit your classroom."
       },
@@ -275,6 +290,18 @@
       "seeding_key": {
         "lesson_activity.key": "aec17932-137c-4f4a-940c-e6941ec16520",
         "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "82731c6b-052b-425a-aad4-62f85474fd23",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "82731c6b-052b-425a-aad4-62f85474fd23",
+        "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "ai-temp"
       }
@@ -1642,6 +1669,16 @@
       "seeding_key": {
         "activity_section.key": "7dec4bea-c382-45c7-bff3-98501fe3e2a1",
         "lesson_activity.key": "aec17932-137c-4f4a-940c-e6941ec16520"
+      }
+    },
+    {
+      "key": "ce11fd33-a8b0-4edc-86cf-2e4c59f86b10",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ce11fd33-a8b0-4edc-86cf-2e4c59f86b10",
+        "lesson_activity.key": "82731c6b-052b-425a-aad4-62f85474fd23"
       }
     },
     {
