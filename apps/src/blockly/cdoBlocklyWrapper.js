@@ -275,6 +275,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
     getCode: function (workspace) {
       return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
     },
+    playSoundButton: function (dashboard, onSelect) {
+      return new Blockly.FieldDropdown([['Choose', 'Choose']], () => {
+        dashboard.assets.showAssetManager(onSelect, 'audio', null, {
+          libraryOnly: true,
+        });
+      });
+    },
   };
   return blocklyWrapper;
 }
