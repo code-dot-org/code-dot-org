@@ -192,14 +192,12 @@ const customInputTypes = {
       var onSelect = function (soundValue) {
         block.setTitleValue(soundValue, inputConfig.name);
       };
-      currentInputRow.appendField(inputConfig.label).appendField(
-        new Blockly.FieldDropdown([['Choose', 'Choose']], () => {
-          dashboard.assets.showAssetManager(onSelect, 'audio', null, {
-            libraryOnly: true,
-          });
-        }),
-        inputConfig.name
-      );
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(
+          Blockly.cdoUtils.playSoundButton(dashboard, onSelect),
+          inputConfig.name
+        );
     },
     generateCode(block, arg) {
       return `'${block.getFieldValue(arg.name)}'`;
