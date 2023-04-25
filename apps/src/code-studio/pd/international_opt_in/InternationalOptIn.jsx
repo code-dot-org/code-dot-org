@@ -223,7 +223,7 @@ class InternationalOptInComponent extends FormComponent {
     const names = cities[selectedCity] || [];
     let nameOptions = [i18n.pdNotApplicable()];
     if (selectedCity !== i18n.pdNotApplicable()) {
-      nameOptions = nameOptions.concat(Object.keys(names));
+      nameOptions = nameOptions.concat(names);
     }
     const selectName = this.buildSelectFieldGroup({
       name: 'schoolName',
@@ -306,7 +306,7 @@ class InternationalOptInComponent extends FormComponent {
     const ids = names[selectedName] || [];
     let idOptions = [i18n.pdNotApplicable()];
     if (selectedName !== i18n.pdNotApplicable()) {
-      idOptions = idOptions.concat(Object.keys(ids));
+      idOptions = idOptions.concat(ids);
     }
     const selectId = this.buildSelectFieldGroup({
       name: 'schoolId',
@@ -373,7 +373,7 @@ class InternationalOptInComponent extends FormComponent {
     const schools = districts[selectedDistrict] || [];
     let schoolOptions = [i18n.pdNotApplicable()];
     if (selectDistrict !== i18n.pdNotApplicable()) {
-      schoolOptions = schoolOptions.concat(Object.keys(schools));
+      schoolOptions = schoolOptions.concat(schools);
     }
     const selectSchool = this.buildSelectFieldGroup({
       name: 'schoolName',
