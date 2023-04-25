@@ -1100,6 +1100,7 @@
   "goToMyDashboard": "Go to my Dashboard",
   "goToUnit": "Go to Unit",
   "grade": "Grade",
+  "gradeLevel": "Grade {level}",
   "gradeRange": "{numGrades, plural, one {Grade: {youngestGrade}} other {Grades: {youngestGrade}-{oldestGrade}}}",
   "greaterThan": "Greater than",
   "greaterThanOrEqualTo": "Greater than or equal to",

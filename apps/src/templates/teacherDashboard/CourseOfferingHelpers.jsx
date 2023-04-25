@@ -53,18 +53,18 @@ export const translatedCourseOfferingDurations = {
 
 export const translatedGradeLevels = {
   kindergarten: i18n.kindergarten(),
-  grade_1: i18n.grade() + ' 1',
-  grade_2: i18n.grade() + ' 2',
-  grade_3: i18n.grade() + ' 3',
-  grade_4: i18n.grade() + ' 4',
-  grade_5: i18n.grade() + ' 5',
-  grade_6: i18n.grade() + ' 6',
-  grade_7: i18n.grade() + ' 7',
-  grade_8: i18n.grade() + ' 8',
-  grade_9: i18n.grade() + ' 9',
-  grade_10: i18n.grade() + ' 10',
-  grade_11: i18n.grade() + ' 11',
-  grade_12: i18n.grade() + ' 12',
+  grade_1: i18n.gradeLevel({level: 1}),
+  grade_2: i18n.gradeLevel({level: 2}),
+  grade_3: i18n.gradeLevel({level: 3}),
+  grade_4: i18n.gradeLevel({level: 4}),
+  grade_5: i18n.gradeLevel({level: 5}),
+  grade_6: i18n.gradeLevel({level: 6}),
+  grade_7: i18n.gradeLevel({level: 7}),
+  grade_8: i18n.gradeLevel({level: 8}),
+  grade_9: i18n.gradeLevel({level: 9}),
+  grade_10: i18n.gradeLevel({level: 10}),
+  grade_11: i18n.gradeLevel({level: 11}),
+  grade_12: i18n.gradeLevel({level: 12}),
 };
 
 export const subjectsAndTopicsOrder = [
