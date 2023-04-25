@@ -58,8 +58,8 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
         }
       }
       this.value_ = newValue;
+      this.isDirty_ = true; // Block needs to be re-rendered.
     }
-    this.isDirty_ = true; // Block needs to be re-rendered.
   }
 
   /**
