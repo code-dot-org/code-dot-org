@@ -58,7 +58,7 @@ var example = {
       // this is passed to report
       expected: {
         result: true, // expected result value
-        testResult: 10 // expected testResult value
+        testResult: 10, // expected testResult value
       },
       // a function that returns a level definition on demand. this allows for
       // per test level definitions (dont need a collection levelId/levelDefinition
@@ -80,9 +80,9 @@ var example = {
       runBeforeClick: function (assert) {
         // optional function called after puzzle loads, but before execution
         // starts
-      }
-    }
-  ]
+      },
+    },
+  ],
 };
 
 describe('Level tests', function () {
@@ -127,7 +127,7 @@ describe('Level tests', function () {
       currentUser,
       arrowDisplay,
       project: projectRedux,
-      ...jsDebuggerReducers
+      ...jsDebuggerReducers,
     });
 
     tickInterval = window.setInterval(function () {
@@ -161,7 +161,7 @@ describe('Level tests', function () {
       Object.defineProperty(Studio, 'Globals', {
         value: {},
         writable: true,
-        configurable: true
+        configurable: true,
       });
     }
 

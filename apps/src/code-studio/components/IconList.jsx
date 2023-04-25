@@ -10,7 +10,7 @@ import i18n from '@cdo/locale';
 export default class IconList extends React.Component {
   static propTypes = {
     assetChosen: PropTypes.func.isRequired,
-    search: PropTypes.string.isRequired
+    search: PropTypes.string.isRequired,
   };
 
   getMatches(query) {
@@ -32,8 +32,8 @@ export default class IconList extends React.Component {
       root: {
         height: '330px',
         overflowY: 'scroll',
-        clear: 'both'
-      }
+        clear: 'both',
+      },
     };
 
     let search = this.props.search;

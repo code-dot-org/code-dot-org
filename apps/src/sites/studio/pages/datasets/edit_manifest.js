@@ -20,7 +20,7 @@ $(document).ready(function () {
   );
   const codeMirrorArea = document.getElementsByTagName('textarea')[0];
   initializeCodeMirror(codeMirrorArea, 'application/json', {
-    callback: onChange
+    callback: onChange,
   });
 });
 

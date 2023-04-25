@@ -13,7 +13,7 @@ class ProjectRemix extends React.Component {
     isSignedIn: PropTypes.bool,
     lightStyle: PropTypes.bool,
     refreshProjectName: PropTypes.func.isRequired,
-    inRestrictedShareMode: PropTypes.bool
+    inRestrictedShareMode: PropTypes.bool,
   };
 
   remixProject = () => {
@@ -65,7 +65,7 @@ export const UnconnectedProjectRemix = ProjectRemix;
 export default connect(
   state => ({
     isSignedIn: state.pageConstants && state.pageConstants.isSignedIn,
-    inRestrictedShareMode: state.project && state.project.inRestrictedShareMode
+    inRestrictedShareMode: state.project && state.project.inRestrictedShareMode,
   }),
   {refreshProjectName}
 )(ProjectRemix);

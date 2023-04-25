@@ -54,7 +54,7 @@ var NetSimEncodingControl = (module.exports = function (
 NetSimEncodingControl.prototype.render = function () {
   var renderedMarkup = $(
     markup({
-      level: this.levelConfig_
+      level: this.levelConfig_,
     })
   );
   this.rootDiv_.html(renderedMarkup);

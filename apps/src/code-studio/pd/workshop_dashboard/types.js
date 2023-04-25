@@ -14,11 +14,11 @@ const workshopShape = PropTypes.shape({
   facilitators: PropTypes.array.isRequired,
   organizer: PropTypes.shape({
     name: PropTypes.string,
-    email: PropTypes.string
+    email: PropTypes.string,
   }).isRequired,
   enrollment_code: PropTypes.string,
   workshop_starting_date: PropTypes.string,
-  pre_workshop_survey_url: PropTypes.string
+  pre_workshop_survey_url: PropTypes.string,
 });
 
 const enrollmentShape = PropTypes.shape({
@@ -36,8 +36,8 @@ const enrollmentShape = PropTypes.shape({
     unit: PropTypes.string,
     lesson: PropTypes.string,
     questionsAndTopics: PropTypes.string,
-    unitLessonShortName: PropTypes.string
-  })
+    unitLessonShortName: PropTypes.string,
+  }),
 });
 
 export {workshopShape, enrollmentShape};

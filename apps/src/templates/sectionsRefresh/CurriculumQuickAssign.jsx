@@ -147,6 +147,7 @@ export default function CurriculumQuickAssign({
     updateSection('course', {});
     if (marketingAudience !== '') {
       setMarketingAudience('');
+      setSelectedCourseOffering(null);
     } else {
       setMarketingAudience(MARKETING_AUDIENCE.ELEMENTARY);
     }
@@ -170,7 +171,9 @@ export default function CurriculumQuickAssign({
     <div>
       <div className={moduleStyles.input}>
         <label className={moduleStyles.decideLater} htmlFor="decide-later">
-          {i18n.decideLater()}
+          {selectedCourseOffering
+            ? i18n.clearAssignedCurriculum()
+            : i18n.decideLater()}
         </label>
         <input
           checked={decideLater}

@@ -21,7 +21,7 @@ export default class TimeSelect extends React.Component {
     readOnly: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
     minTime: PropTypes.object, // moment
-    maxTime: PropTypes.object // moment
+    maxTime: PropTypes.object, // moment
   };
 
   handleChange = e => {
@@ -116,27 +116,27 @@ export default class TimeSelect extends React.Component {
 
 const styles = {
   dropdown: {
-    width: '100%'
+    width: '100%',
   },
   toggle: {
     padding: 0,
     border: 0,
     margin: 0,
-    width: '100%'
+    width: '100%',
   },
   menu: {
     height: 'auto',
     maxHeight: 300,
     overflowX: 'hidden',
-    width: '100%'
+    width: '100%',
   },
   input: {
-    fontFamily: '"Gotham 4r"'
+    fontFamily: '"Gotham 4r"',
   },
   readOnlyInput: {
     fontFamily: '"Gotham 4r"',
     backgroundColor: 'inherit',
     cursor: 'default',
-    border: 'none'
-  }
+    border: 'none',
+  },
 };

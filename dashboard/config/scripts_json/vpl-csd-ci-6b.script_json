@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-11 01:46:37 UTC",
+    "serialized_at": "2023-04-20 15:42:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -152,7 +152,7 @@
       "key": "f1395886-cc51-4405-a53c-1f66777bf9cc",
       "position": 3,
       "properties": {
-        "progression_name": "Connect your Circuit Playground"
+        "progression_name": "Connect your BBC micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "f1395886-cc51-4405-a53c-1f66777bf9cc",
@@ -299,6 +299,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computing_-ci_ci-_2023"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -321,6 +324,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-computing_-ci_ci_2023"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -343,50 +349,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Unit Overview"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL-CSD-Summer-CI-Unit_PSP-U6L3_2023"
+        "level_keys": [
+          "SP-VPL-PC-22-LessonTypes_-ci_2023"
         ],
-        "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "vpl-csd-ci-6b",
-        "activity_section.key": "5a1f24fe-c7bc-45cf-b87b-852282fac003"
-      },
-      "level_keys": [
-        "VPL-CSD-Summer-CI-Unit_PSP-U6L3_2023"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Unit Overview"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-PC-22-PSP-vid_2023"
-        ],
-        "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "vpl-csd-ci-6b",
-        "activity_section.key": "5a1f24fe-c7bc-45cf-b87b-852282fac003"
-      },
-      "level_keys": [
-        "SP-VPL-PC-22-PSP-vid_2023"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -404,12 +369,65 @@
       ]
     },
     {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-Summer-CI-Unit_PSP-U6L3_2023"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-Unit_PSP-U6L3_2023"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd-ci-6b",
+        "activity_section.key": "5a1f24fe-c7bc-45cf-b87b-852282fac003"
+      },
+      "level_keys": [
+        "VPL-CSD-Summer-CI-Unit_PSP-U6L3_2023"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-PSP-vid_2023"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-PSP-vid_2023"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd-ci-6b",
+        "activity_section.key": "5a1f24fe-c7bc-45cf-b87b-852282fac003"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-PSP-vid_2023"
+      ]
+    },
+    {
       "chapter": 6,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Connect your Circuit Playground"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_2023"
+        ],
+        "progression": "Connect your BBC micro:bit"
       },
       "bonus": false,
       "seeding_key": {
@@ -431,7 +449,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Connect your Circuit Playground"
+        "level_keys": [
+          "VPL-CSD-CI-U6-MB_setup_ci-6-mb_2023"
+        ],
+        "progression": "Connect your BBC micro:bit"
       },
       "bonus": false,
       "seeding_key": {
@@ -453,7 +474,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Connect your Circuit Playground"
+        "level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-MakerApp-appLab_physical-computing_-c_ci_2023"
+        ],
+        "progression": "Connect your BBC micro:bit"
       },
       "bonus": false,
       "seeding_key": {
@@ -475,7 +499,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Connect your Circuit Playground"
+        "level_keys": [
+          "VPL-CSD-Summer-CI-MB Test-U6L1_2023"
+        ],
+        "progression": "Connect your BBC micro:bit"
       },
       "bonus": false,
       "seeding_key": {
@@ -497,6 +524,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L3_physical-computing_-ci_ci-6-mb_2023"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -519,6 +549,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI6-CSD circuit video_2023"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -541,6 +574,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Ove_physical-c_ci_2023"
+        ],
         "progression": "Introduction to Inputs and Outputs"
       },
       "bonus": false,
@@ -563,6 +599,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-S23-CI-U6-MB-Back-inputOutput-ci-6-mb_2023"
+        ],
         "progression": "Introduction to Inputs and Outputs"
       },
       "bonus": false,
@@ -585,6 +624,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-Summer-CI-U6 - MB Board Outputs_2023"
+        ],
         "progression": "Introduction to Inputs and Outputs"
       },
       "bonus": false,
@@ -607,6 +649,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-CI-U6-Board Inputs-MB_2023"
+        ],
         "progression": "Introduction to Inputs and Outputs"
       },
       "bonus": false,
@@ -629,6 +674,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-CI-U6- Board Inputs-MB_2023"
+        ],
         "progression": "Introduction to Inputs and Outputs"
       },
       "bonus": false,
@@ -651,6 +699,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-Summer-CI-U6-If Variables_2023"
+        ],
         "progression": "Add Complexity to your App"
       },
       "bonus": false,
@@ -673,6 +724,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-Summer-U6-If Variables-Counter-MB_2023"
+        ],
         "progression": "Add Complexity to your App"
       },
       "bonus": false,
@@ -695,6 +749,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-Summer-U6-If Variables-MB-L8_2023"
+        ],
         "progression": "Add Complexity to your App"
       },
       "bonus": false,
@@ -717,6 +774,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-CI-U6MB-Predict-Combine Inputs_2023"
+        ],
         "progression": "Explore Additional Inputs and Outputs"
       },
       "bonus": false,
@@ -739,6 +799,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-CI-U6MB-Combine Inputs2_2023"
+        ],
         "progression": "Explore Additional Inputs and Outputs"
       },
       "bonus": false,
@@ -761,6 +824,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-CI-U6MB-Combine Inputs-Sliders_2023"
+        ],
         "progression": "Explore Additional Inputs and Outputs"
       },
       "bonus": false,
@@ -783,6 +849,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-CI-U6MB-Combine Inputs-TicTacToe_2023"
+        ],
         "progression": "Explore Additional Inputs and Outputs"
       },
       "bonus": false,
@@ -805,6 +874,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-c_ci_2023"
+        ],
         "progression": "Preview the End of Chapter Project"
       },
       "bonus": false,
@@ -827,6 +899,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L4_physical-computing_-ci_2023"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -849,6 +924,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-CI-U6MB-Sensors-Play_2023"
+        ],
         "progression": "Use sensors "
       },
       "bonus": false,
@@ -871,6 +949,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-CI-U6MB-Accelerometer-Predict_2023"
+        ],
         "progression": "Use sensors "
       },
       "bonus": false,
@@ -893,12 +974,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-CI-U6bMB-Sensors-2023"
+        ],
         "progression": "Interact with apps and prototypes "
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_2023"
+          "VPL-CSD-CI-U6bMB-Sensors-2023"
         ],
         "lesson.key": "Engage with Prototypes",
         "lesson_group.key": "lessonGroup-2",
@@ -906,7 +990,7 @@
         "activity_section.key": "c762758b-2d9b-4a8c-931c-ad8b4ec3eccc"
       },
       "level_keys": [
-        "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_2023"
+        "VPL-CSD-CI-U6bMB-Sensors-2023"
       ]
     },
     {
@@ -915,6 +999,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-CI-U6MB-FunctionsWParameters_2023"
+        ],
         "progression": "Interact with apps and prototypes "
       },
       "bonus": false,
@@ -942,7 +1029,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Rev_2023"
+          "VPL-CSD-PILOT-22-CI-mod6-Interactive Pet_physical-computing_-c_ci_2023"
         ],
         "lesson.key": "Engage with Prototypes",
         "lesson_group.key": "lessonGroup-2",
@@ -950,7 +1037,7 @@
         "activity_section.key": "c762758b-2d9b-4a8c-931c-ad8b4ec3eccc"
       },
       "level_keys": [
-        "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Rev_2023"
+        "VPL-CSD-PILOT-22-CI-mod6-Interactive Pet_physical-computing_-c_ci_2023"
       ]
     },
     {
@@ -959,6 +1046,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview_physical-computing_-c_ci_2023"
+        ],
         "progression": "Interact with apps and prototypes "
       },
       "bonus": false,
@@ -981,6 +1071,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-c_ci_2023"
+        ],
         "progression": "Preview the End of Chapter Project"
       },
       "bonus": false,
@@ -1003,6 +1096,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation_2023"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -1047,6 +1143,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "SP-VPL-PC-22-LessonTypes_-ci_2023",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-LessonTypes_-ci_2023"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd-ci-6b",
+        "activity_section.key": "5a1f24fe-c7bc-45cf-b87b-852282fac003"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "VPL-CSD-Summer-CI-Unit_PSP-U6L3_2023",
         "script_level.level_keys": [
           "VPL-CSD-Summer-CI-Unit_PSP-U6L3_2023"
@@ -1062,18 +1170,6 @@
         "level.key": "SP-VPL-PC-22-PSP-vid_2023",
         "script_level.level_keys": [
           "SP-VPL-PC-22-PSP-vid_2023"
-        ],
-        "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "vpl-csd-ci-6b",
-        "activity_section.key": "5a1f24fe-c7bc-45cf-b87b-852282fac003"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "SP-VPL-PC-22-LessonTypes_-ci_2023",
-        "script_level.level_keys": [
-          "SP-VPL-PC-22-LessonTypes_-ci_2023"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
@@ -1347,9 +1443,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_2023",
+        "level.key": "VPL-CSD-CI-U6bMB-Sensors-2023",
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_2023"
+          "VPL-CSD-CI-U6bMB-Sensors-2023"
         ],
         "lesson.key": "Engage with Prototypes",
         "lesson_group.key": "lessonGroup-2",
@@ -1371,9 +1467,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Rev_2023",
+        "level.key": "VPL-CSD-PILOT-22-CI-mod6-Interactive Pet_physical-computing_-c_ci_2023",
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Rev_2023"
+          "VPL-CSD-PILOT-22-CI-mod6-Interactive Pet_physical-computing_-c_ci_2023"
         ],
         "lesson.key": "Engage with Prototypes",
         "lesson_group.key": "lessonGroup-2",

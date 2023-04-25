@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import i18n from '@cdo/locale';
 import StylizedBaseDialog, {
-  FooterButton
+  FooterButton,
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 
 /*

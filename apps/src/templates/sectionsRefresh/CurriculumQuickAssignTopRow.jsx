@@ -9,14 +9,29 @@ export const MARKETING_AUDIENCE = {
   MIDDLE: 'middle',
   HIGH: 'high',
   HOC: 'hoc',
-  PL: 'pl'
+  PL: 'pl',
 };
 
 export default function CurriculumQuickAssignTopRow({
   showPlOfferings,
   marketingAudience,
-  updateMarketingAudience
+  updateMarketingAudience,
 }) {
+  // Determines which icon to render for each audience
+  const marketingAudienceIcon = audience => {
+    return marketingAudience === audience ? 'caret-down' : 'caret-right';
+  };
+
+  // If the given audience is already selected, deselect it.
+  // Otherwise, set to this audience
+  const determineMarketingAudience = newAudience => {
+    if (newAudience === marketingAudience) {
+      updateMarketingAudience('');
+    } else {
+      updateMarketingAudience(newAudience);
+    }
+  };
+
   return (
     <div className={moduleStyles.buttonRow}>
       <div className={moduleStyles.buttonsInRow}>
@@ -25,14 +40,10 @@ export default function CurriculumQuickAssignTopRow({
           className={moduleStyles.buttonStyle}
           text={i18n.courseBlocksGradeBandsElementary()}
           size={Button.ButtonSize.large}
-          icon={
-            marketingAudience === MARKETING_AUDIENCE.ELEMENTARY
-              ? 'caret-up'
-              : 'caret-down'
-          }
+          icon={marketingAudienceIcon(MARKETING_AUDIENCE.ELEMENTARY)}
           onClick={e => {
             e.preventDefault();
-            updateMarketingAudience(MARKETING_AUDIENCE.ELEMENTARY);
+            determineMarketingAudience(MARKETING_AUDIENCE.ELEMENTARY);
           }}
         />
         <Button
@@ -40,14 +51,10 @@ export default function CurriculumQuickAssignTopRow({
           className={moduleStyles.buttonStyle}
           text={i18n.courseBlocksGradeBandsMiddle()}
           size={Button.ButtonSize.large}
-          icon={
-            marketingAudience === MARKETING_AUDIENCE.MIDDLE
-              ? 'caret-up'
-              : 'caret-down'
-          }
+          icon={marketingAudienceIcon(MARKETING_AUDIENCE.MIDDLE)}
           onClick={e => {
             e.preventDefault();
-            updateMarketingAudience(MARKETING_AUDIENCE.MIDDLE);
+            determineMarketingAudience(MARKETING_AUDIENCE.MIDDLE);
           }}
         />
         <Button
@@ -55,14 +62,10 @@ export default function CurriculumQuickAssignTopRow({
           className={moduleStyles.buttonStyle}
           text={i18n.courseBlocksGradeBandsHigh()}
           size={Button.ButtonSize.large}
-          icon={
-            marketingAudience === MARKETING_AUDIENCE.HIGH
-              ? 'caret-up'
-              : 'caret-down'
-          }
+          icon={marketingAudienceIcon(MARKETING_AUDIENCE.HIGH)}
           onClick={e => {
             e.preventDefault();
-            updateMarketingAudience(MARKETING_AUDIENCE.HIGH);
+            determineMarketingAudience(MARKETING_AUDIENCE.HIGH);
           }}
         />
         <Button
@@ -70,14 +73,10 @@ export default function CurriculumQuickAssignTopRow({
           className={moduleStyles.buttonStyle}
           text={i18n.teacherCourseHoc()}
           size={Button.ButtonSize.large}
-          icon={
-            marketingAudience === MARKETING_AUDIENCE.HOC
-              ? 'caret-up'
-              : 'caret-down'
-          }
+          icon={marketingAudienceIcon(MARKETING_AUDIENCE.HOC)}
           onClick={e => {
             e.preventDefault();
-            updateMarketingAudience(MARKETING_AUDIENCE.HOC);
+            determineMarketingAudience(MARKETING_AUDIENCE.HOC);
           }}
         />
         {showPlOfferings && (
@@ -86,14 +85,10 @@ export default function CurriculumQuickAssignTopRow({
             className={moduleStyles.buttonStyle}
             text={i18n.professionalLearning()}
             size={Button.ButtonSize.large}
-            icon={
-              marketingAudience === MARKETING_AUDIENCE.PL
-                ? 'caret-up'
-                : 'caret-down'
-            }
+            icon={marketingAudienceIcon(MARKETING_AUDIENCE.PL)}
             onClick={e => {
               e.preventDefault();
-              updateMarketingAudience(MARKETING_AUDIENCE.PL);
+              determineMarketingAudience(MARKETING_AUDIENCE.PL);
             }}
           />
         )}
@@ -105,5 +100,5 @@ export default function CurriculumQuickAssignTopRow({
 CurriculumQuickAssignTopRow.propTypes = {
   showPlOfferings: PropTypes.bool.isRequired,
   marketingAudience: PropTypes.string,
-  updateMarketingAudience: PropTypes.func.isRequired
+  updateMarketingAudience: PropTypes.func.isRequired,
 };

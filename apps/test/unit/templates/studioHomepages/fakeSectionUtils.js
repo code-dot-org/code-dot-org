@@ -23,7 +23,7 @@ export const sections = [
     courseId: null,
     courseOfferingId: null,
     courseVersionId: null,
-    unitId: null
+    unitId: null,
   },
   {
     id: 12,
@@ -41,8 +41,8 @@ export const sections = [
     courseId: null,
     courseOfferingId: null,
     courseVersionId: null,
-    unitId: null
-  }
+    unitId: null,
+  },
 ];
 
 export const serverSections = sections.map(serverSectionFromSection);

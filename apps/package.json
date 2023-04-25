@@ -9,7 +9,7 @@
   },
   "scripts": {
     "lint": "yarn lint:scss && yarn lint:js",
-    "lint:js": "eslint --format ./.eslintCustomMessagesFormatter.js --ext .js,.jsx src test --resolve-plugins-relative-to .",
+    "lint:js": "eslint --format ./.eslintCustomMessagesFormatter.js --ext .js,.jsx,.ts,.tsx src test --resolve-plugins-relative-to .",
     "lint:scss": "npx stylelint '**/*.scss'",
     "test": "TZ=UTC ./test-low-memory.sh",
     "test-low-memory": "TZ=UTC ./test-low-memory.sh",
@@ -56,7 +56,7 @@
     "@babel/preset-react": "^7.18.6",
     "@cdo/interpreted": "link:../dashboard/config/libraries",
     "@code-dot-org/artist": "0.2.1",
-    "@code-dot-org/blockly": "4.0.13",
+    "@code-dot-org/blockly": "4.0.14",
     "@code-dot-org/craft": "0.2.2",
     "@code-dot-org/dance-party": "1.0.5",
     "@code-dot-org/js-interpreter-tyrant": "0.2.2",

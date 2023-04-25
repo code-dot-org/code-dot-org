@@ -11,7 +11,7 @@ const sampleAnnouncement = {
   details: 'See what changed and how it may affect your classroom.',
   link: 'https://support.code.org/hc/en-us/articles/115001931251',
   type: 'information',
-  visibility: 'Teacher-only'
+  visibility: 'Teacher-only',
 };
 
 describe('AnnouncementsEditor', () => {
@@ -24,7 +24,7 @@ describe('AnnouncementsEditor', () => {
     defaultProps = {
       announcements: [],
       inputStyle: {},
-      updateAnnouncements
+      updateAnnouncements,
     };
   });
 
@@ -69,8 +69,8 @@ describe('AnnouncementsEditor', () => {
         type: 'information',
         visibility: 'Teacher-only',
         dismissible: true,
-        buttonText: ''
-      }
+        buttonText: '',
+      },
     ]);
   });
 
@@ -110,8 +110,8 @@ describe('AnnouncementsEditor', () => {
         link: 'https://support.code.org/hc/en-us/articles/115001931251',
         notice: 'notice',
         type: 'information',
-        visibility: 'Teacher-only'
-      }
+        visibility: 'Teacher-only',
+      },
     ]);
   });
 
@@ -136,8 +136,8 @@ describe('AnnouncementsEditor', () => {
         link: 'https://support.code.org/hc/en-us/articles/115001931251',
         notice: 'notice',
         type: 'information',
-        visibility: 'Teacher-only'
-      }
+        visibility: 'Teacher-only',
+      },
     ]);
   });
 
@@ -162,8 +162,8 @@ describe('AnnouncementsEditor', () => {
         link: 'link',
         notice: 'notice',
         type: 'information',
-        visibility: 'Teacher-only'
-      }
+        visibility: 'Teacher-only',
+      },
     ]);
   });
 
@@ -187,8 +187,8 @@ describe('AnnouncementsEditor', () => {
         link: 'link',
         notice: 'notice',
         type: 'bullhorn',
-        visibility: 'Teacher-only'
-      }
+        visibility: 'Teacher-only',
+      },
     ]);
   });
 
@@ -212,8 +212,8 @@ describe('AnnouncementsEditor', () => {
         link: 'link',
         notice: 'notice',
         type: 'bullhorn',
-        visibility: 'Student-only'
-      }
+        visibility: 'Student-only',
+      },
     ]);
   });
 
@@ -224,7 +224,7 @@ describe('AnnouncementsEditor', () => {
         'This announcement was made before students could see announcements',
       details: "So I don't have a visibility",
       link: 'https://support.code.org/hc/en-us/articles/115001931251',
-      type: 'information'
+      type: 'information',
     };
     const wrapper = shallow(
       <AnnouncementsEditor
@@ -246,8 +246,8 @@ describe('AnnouncementsEditor', () => {
         notice:
           'This announcement was made before students could see announcements',
         type: 'information',
-        visibility: 'Student-only'
-      }
+        visibility: 'Student-only',
+      },
     ]);
   });
 

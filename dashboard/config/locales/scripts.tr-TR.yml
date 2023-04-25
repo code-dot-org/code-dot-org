@@ -9098,16 +9098,26 @@ tr:
             için API belgeleri oluşturmak üzere Javadoc yorumları yazarak yazılım
             mühendisliği becerilerinizi daha da geliştirirsiniz.
         csa7-2023:
+          lessons:
+            lesson-6:
+              name: Fikri Mülkiyet
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+            lessonGroup-3:
+              display_name: Bildiklerini Göster
+            lessonGroup-5:
+              display_name: Alternatif Dersler
           description: |-
             Bu ünite, öğrencilerin The Theatre'ı kullanarak kişisel bir ilgi alanını veya hikayeyi iletmek için yaratıcı bir kodlama projesi planlayıp geliştirirken, müfredat boyunca öğrendikleri becerileri kullanarak yazılım tasarımı ve geliştirme pratiği yapmalarına olanak tanır. Öğrenciler, projelerinin belirtilen gereksinimleri karşılamasını sağlarken fikirlerini planlamak ve uygulamak için ayrıştırma stratejilerini ve nesne yönelimli ilkeleri kullanır. Bu süreçte öğrenciler "özel", aşırı yüklenmiş ve geçersiz kılınan yöntemleri yazmayı ve yöntemlerin ve parametrelerinin işlevselliğini keşfederken bir üst sınıf yöntemini çağırmak için bir alt sınıf yönteminde "super" anahtar sözcüğünü kullanmayı öğrenirler. Ünite boyunca öğrenciler, yinelemeli yöntemleri izleme ve yazma ve bu yöntemleri yinelemeli çözümlerle karşılaştırma alıştırmaları yapar. Yıl boyunca edinilen bilgi ve becerilerle öğrenciler, mevcut programlardaki hataları ve sorunları keşfederken sistem güvenilirliğini en üst düzeye çıkarma ihtiyacını göz önünde bulundururlar.
 
             ### AP Classroom Kişisel İlerleme Kontrolleri
 
-            AP Classroom Soru Bankasından bu üniteyle uyumlu sorular atamak için, ünitenin [\*\*Standartlar\*\*](https://studio.code.org/s/csa7-2022/standards) sayfasındaki Temel Bilgi ifadeleri için Soru Bankasında arama yaparak AP Classroom'da özel bir sınav oluşturun. [\*\*AP Central\*\*](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)'da bunu yapmak için talimatlar ve video gösterileri bulabilirsiniz.
+            AP Classroom Soru Bankasından bu üniteyle uyumlu sorular atamak için, ünitenin [\*\*Standartlar\*\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=7) sayfasındaki Temel Bilgi ifadeleri için Soru Bankasında arama yaparak AP Classroom'da özel bir sınav oluşturun. [**AP Central**][1]'da bunu yapmak için talimatlar ve video gösterileri bulabilirsiniz.
 
             ## Bu Üniteyi Öğretmeyi Bitirdiniz mi?
 
-            Code.org müfredat ekibinin ünitenin nasıl gittiğini öğrenmesi için bu [\*\*kısa anketi\*\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=7) yanıtlayın.
+            Code.org müfredat ekibinin ünitenin nasıl gittiğini öğrenmesi için bu [**kısa anketi**][2] yanıtlayın.
           student_description: Bu ünite, The Theatre'ı kullanarak kişisel bir ilgi
             alanınızı veya hikayenizi iletmek için yaratıcı bir kodlama projesi planlayıp
             geliştirirken, müfredat boyunca öğrendiğiniz becerileri kullanarak yazılım
@@ -9123,6 +9133,13 @@ tr:
             hataları ve sorunları keşfederken sistem güvenilirliğini en üst düzeye
             çıkarma ihtiyacını düşünürsünüz.
         csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+            lessonGroup-3:
+              display_name: Bildiklerini Göster
+            lessonGroup-4:
+              display_name: Anket
           description: |-
             Bu ünite, öğrencilerin 1D ve 2D dizileri ve `ArrayList`leri arama ve sıralamaya yönelik ortak yaklaşımları tanıtmayı öğrendikleri algoritmaları genişletir. Bu süreçte öğrenciler, ifade yürütme sayılarını kullanarak bu algoritmaların verimliliklerini analiz eder ve karşılaştırır ve karmaşık sorunları ayrıştırmak için problem çözme becerilerini daha da geliştirir. Ünite boyunca öğrenciler, nesne yönelimli tasarım, veri yapıları ve algoritmik düşünme içeren konsolu kullanarak yaratıcı bir kodlama projesi planlamak ve geliştirmek için programlama ve yazılım mühendisliği becerilerini kullanırlar. Yıl boyunca edinilen bilgi ve becerilerle öğrenciler, programların ve kullanıcıların gizliliğini ve güvenliğini göz önünde bulundurur.
 
@@ -10268,6 +10285,9 @@ tr:
 
             **Önerilen süre:** 90 dakika
         vpl-csd-ci-7:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Yapay zeka ve makine öğrenimini öğretmek
           title: 'Modül 7: Yapay Zeka ve Makine Öğrenimini Öğretme Hazırlığı'
           description: |-
             Bu profesyonel öğrenim modülü, Code.org'un Yapay Zeka ve Makine Öğrenimi ünitesini öğretmeye hazırlanmanıza yardımcı olmak için tasarlanmıştır.

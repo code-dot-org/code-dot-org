@@ -72,7 +72,7 @@ describe('SectionsSetUpContainer', () => {
       .withArgs('#sections-set-up-container')
       .returns({
         checkValidity: () => {},
-        reportValidity: reportSpy
+        reportValidity: reportSpy,
       });
 
     const wrapper = shallow(<SectionsSetUpContainer />);
@@ -92,11 +92,11 @@ describe('SectionsSetUpContainer', () => {
       .stub(document, 'querySelector')
       .withArgs('#sections-set-up-container')
       .returns({
-        checkValidity: () => true
+        checkValidity: () => true,
       })
       .withArgs('meta[name="csrf-token"]')
       .returns({
-        attributes: {content: {value: null}}
+        attributes: {content: {value: null}},
       });
     const fetchSpy = sinon.spy(window, 'fetch');
 
@@ -117,11 +117,11 @@ describe('SectionsSetUpContainer', () => {
       .stub(document, 'querySelector')
       .withArgs('#sections-set-up-container')
       .returns({
-        checkValidity: () => true
+        checkValidity: () => true,
       })
       .withArgs('meta[name="csrf-token"]')
       .returns({
-        attributes: {content: {value: null}}
+        attributes: {content: {value: null}},
       });
     sinon
       .stub(utils, 'queryParams')

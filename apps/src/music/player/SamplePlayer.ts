@@ -74,7 +74,7 @@ export default class SamplePlayer {
     soundApi.StartPlayback();
   }
 
-  previewSample(sampleId: string, onStop?: () => any) {
+  previewSample(sampleId: string, onStop?: () => void) {
     if (!this.isInitialized) {
       console.warn('Sample player not initialized.');
       return;
@@ -90,7 +90,7 @@ export default class SamplePlayer {
     );
   }
 
-  previewSamples(events: SampleEvent[], onStop?: () => any) {
+  previewSamples(events: SampleEvent[], onStop?: () => void) {
     if (!this.isInitialized) {
       console.warn('Sample player not initialized.');
       return;
@@ -170,7 +170,7 @@ export default class SamplePlayer {
 
         this.playingSamples.push({
           eventStart,
-          uniqueId
+          uniqueId,
         });
       }
     }

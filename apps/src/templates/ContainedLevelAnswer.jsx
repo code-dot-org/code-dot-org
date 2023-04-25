@@ -9,7 +9,7 @@ class ContainedLevelAnswer extends Component {
   // copied elsewhere.
 
   static propTypes = {
-    hidden: PropTypes.bool
+    hidden: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -30,8 +30,8 @@ class ContainedLevelAnswer extends Component {
 
 const styles = {
   hidden: {
-    display: 'none'
-  }
+    display: 'none',
+  },
 };
 
 export default ContainedLevelAnswer;

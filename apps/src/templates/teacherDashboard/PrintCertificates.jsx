@@ -9,11 +9,11 @@ import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 class PrintCertificates extends Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
-    courseVersionName: PropTypes.string
+    courseVersionName: PropTypes.string,
   };
 
   state = {
-    names: []
+    names: [],
   };
 
   onClickPrintCerts = () => {

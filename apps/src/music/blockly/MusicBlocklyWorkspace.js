@@ -11,16 +11,17 @@ import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DYNAMIC_TRIGGER_EXTENSION,
   PLAY_MULTI_MUTATOR,
-  TRIGGER_FIELD
+  TRIGGER_FIELD,
 } from './constants';
 import {
   dynamicTriggerExtension,
   getDefaultTrackNameExtension,
-  playMultiMutator
+  playMultiMutator,
 } from './extensions';
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
 import FieldChord from './FieldChord';
+import {Renderers} from '@cdo/apps/blockly/constants';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -63,7 +64,7 @@ export default class MusicBlocklyWorkspace {
       Blockly.Blocks[blockType] = {
         init: function () {
           this.jsonInit(MUSIC_BLOCKS[blockType].definition);
-        }
+        },
       };
 
       Blockly.JavaScript[blockType] = MUSIC_BLOCKS[blockType].generator;
@@ -78,12 +79,12 @@ export default class MusicBlocklyWorkspace {
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
       theme: CdoDarkTheme,
       renderer: experiments.isEnabled('zelos')
-        ? 'cdo_renderer_zelos'
-        : 'cdo_renderer_thrasos',
+        ? Renderers.ZELOS
+        : Renderers.DEFAULT,
       noFunctionBlockFrame: true,
       zoom: {
-        startScale: experiments.isEnabled('zelos') ? 0.9 : 1
-      }
+        startScale: experiments.isEnabled('zelos') ? 0.9 : 1,
+      },
     });
 
     // Remove two default entries in the toolbox's Functions category that
@@ -178,7 +179,7 @@ export default class MusicBlocklyWorkspace {
           code: GeneratorHelpersSimple2.getDefaultWhenRunImplementation(
             functionCallsCode,
             functionImplementationsCode
-          )
+          ),
         };
       }
     }
@@ -187,7 +188,7 @@ export default class MusicBlocklyWorkspace {
       if (getBlockMode() !== BlockMode.SIMPLE2) {
         if (block.type === BlockTypes.WHEN_RUN) {
           this.compiledEvents.whenRunButton = {
-            code: Blockly.JavaScript.blockToCode(block)
+            code: Blockly.JavaScript.blockToCode(block),
           };
         }
       } else {
@@ -195,7 +196,7 @@ export default class MusicBlocklyWorkspace {
           this.compiledEvents.whenRunButton = {
             code:
               Blockly.JavaScript.blockToCode(block) +
-              functionImplementationsCode
+              functionImplementationsCode,
           };
         }
       }
@@ -203,7 +204,7 @@ export default class MusicBlocklyWorkspace {
       if (
         [
           BlockTypes.NEW_TRACK_AT_START,
-          BlockTypes.NEW_TRACK_AT_MEASURE
+          BlockTypes.NEW_TRACK_AT_MEASURE,
         ].includes(block.type)
       ) {
         if (!this.compiledEvents.tracks) {
@@ -218,14 +219,14 @@ export default class MusicBlocklyWorkspace {
           BlockTypes.TRIGGERED_AT,
           BlockTypes.TRIGGERED_AT_SIMPLE,
           BlockTypes.TRIGGERED_AT_SIMPLE2,
-          BlockTypes.NEW_TRACK_ON_TRIGGER
+          BlockTypes.NEW_TRACK_ON_TRIGGER,
         ].includes(block.type)
       ) {
         const id = block.getFieldValue(TRIGGER_FIELD);
         this.compiledEvents[this.triggerIdToEvent(id)] = {
           code:
             Blockly.JavaScript.blockToCode(block) + functionImplementationsCode,
-          args: ['startPosition']
+          args: ['startPosition'],
         };
       }
     });

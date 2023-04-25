@@ -3,11 +3,14 @@
  * (widths/heights/font sizes/etc.)
  */
 
+// TODO: Can we fix our imports and no longer need to ignore this rule?
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 import {
   AnyAction,
   PayloadAction,
   ThunkAction,
-  createSlice
+  createSlice,
 } from '@reduxjs/toolkit';
 
 const {DisplayTheme} = require('@cdo/apps/javalab/DisplayTheme');
@@ -16,7 +19,7 @@ const {
   DEFAULT_FONT_SIZE_PX,
   FONT_SIZE_INCREMENT_PX,
   MAX_FONT_SIZE_PX,
-  MIN_FONT_SIZE_PX
+  MIN_FONT_SIZE_PX,
 } = require('@cdo/apps/javalab/editorThemes');
 
 type DisplayThemeValue = 'light' | 'dark';
@@ -48,7 +51,7 @@ const initialState: JavalabViewState = {
   isVisualizationCollapsed: false,
   editorFontSize: DEFAULT_FONT_SIZE_PX,
   canIncreaseFontSize: DEFAULT_FONT_SIZE_PX < MAX_FONT_SIZE_PX,
-  canDecreaseFontSize: DEFAULT_FONT_SIZE_PX > MIN_FONT_SIZE_PX
+  canDecreaseFontSize: DEFAULT_FONT_SIZE_PX > MIN_FONT_SIZE_PX,
 };
 
 // THUNKS
@@ -106,8 +109,8 @@ const javalabViewSlice = createSlice({
     },
     setEditorColumnHeight(state, action: PayloadAction<number>) {
       state.editorColumnHeight = action.payload;
-    }
-  }
+    },
+  },
 });
 
 function updateEditorFontSize(state: JavalabViewState, newFontSize: number) {
@@ -126,7 +129,7 @@ export const {
   setInstructionsHeight,
   setInstructionsFullHeight,
   setConsoleHeight,
-  setEditorColumnHeight
+  setEditorColumnHeight,
 } = javalabViewSlice.actions;
 
 export default javalabViewSlice.reducer;

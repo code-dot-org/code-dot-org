@@ -7,7 +7,7 @@
         "Play": ["play_sound_at_current_location_simple2"]
       },
       "sounds": {
-        "dance": ["disco_beat", "funky_bass"]
+        "beats": ["disco_beat", "reggaeton_beat"]
       },
       "validations": [
         {
@@ -25,8 +25,8 @@
         "Control": ["play_sounds_together"]
       },
       "sounds": {
-        "pop": ["cafe_beat", "acoustic_bass"],
-        "rock": ["arena_beat", "riff_guitar"]
+        "beats": ["cafe_beat", "reggaeton_beat"],
+        "leads": ["lucky_guitar", "picked_guitar"]
       },
       "validations": [
         {

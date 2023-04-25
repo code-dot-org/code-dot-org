@@ -21,5 +21,5 @@ module.exports = {
   instructionsDialog,
   watchedExpressions,
   feedback,
-  studioAppActivity
+  studioAppActivity,
 };

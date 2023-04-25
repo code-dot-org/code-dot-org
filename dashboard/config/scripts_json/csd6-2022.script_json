@@ -40,7 +40,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-03 15:44:50 UTC",
+    "serialized_at": "2023-04-13 18:07:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -11176,7 +11176,7 @@
     },
     {
       "name": "The Counter Pattern",
-      "url": "https://youtu.be/sLIJNEIE0Rs",
+      "url": "https://www.youtube.com/watch?v=GiHbeLq1ZkM",
       "key": "the_counter_pattern_1",
       "properties": {
         "audience": "Student",
