@@ -101,6 +101,6 @@ function updateSectionCourse(updateCourse, course) {
     versionId: courseVersionId,
     unitId: null,
     hasLessonExtras: hasLessonExtras,
-    hasTextToSpeech: hasTextToSpeech
+    hasTextToSpeech: hasTextToSpeech,
   });
 }

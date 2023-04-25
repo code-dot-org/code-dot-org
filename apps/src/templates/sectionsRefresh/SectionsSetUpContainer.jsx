@@ -20,15 +20,25 @@ const useSections = section => {
   // added "default properties" for any new section
   const [sections, setSections] = useState(
     section
-      ? [{...section, lessonExtras: section.stageExtras}]
+      ? [
+          {
+            ...Object.keys(section).reduce((acc, cur) => {
+              if (cur !== 'stageExtras') {
+                acc[cur] = section[cur];
+              }
+              return acc;
+            }, {}),
+            lessonExtras: section.stageExtras,
+          },
+        ]
       : [
           {
             pairingAllowed: true,
             restrictSection: false,
             ttsAutoplayEnabled: false,
             lessonExtras: true,
-            course: {hasTextToSpeech: false, hasLessonExtras: false}
-          }
+            course: {hasTextToSpeech: false, hasLessonExtras: false},
+          },
         ]
   );
 
@@ -39,7 +49,7 @@ const useSections = section => {
       if (idx === sectionIdx) {
         return {
           ...section,
-          [keyToUpdate]: val
+          [keyToUpdate]: val,
         };
       } else {
         return section;
@@ -68,16 +78,16 @@ const saveSection = (e, section) => {
   const section_data = {
     login_type: loginType,
     participant_type: participantType,
-    ...section
+    ...section,
   };
 
   fetch(SECTIONS_API, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'X-CSRF-Token': csrfToken
+      'X-CSRF-Token': csrfToken,
     },
-    body: JSON.stringify(section_data)
+    body: JSON.stringify(section_data),
   })
     .then(response => response.json())
     .then(data => {
@@ -193,17 +203,17 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
 
 const style = {
   caret: {
-    marginRight: 10
+    marginRight: 10,
   },
   label: {
-    display: 'inline-block'
+    display: 'inline-block',
   },
   div: {
     cursor: 'pointer',
-    flexGrow: 1
-  }
+    flexGrow: 1,
+  },
 };
 
 SectionsSetUpContainer.propTypes = {
-  sectionToBeEdited: PropTypes.object
+  sectionToBeEdited: PropTypes.object,
 };
