@@ -192,14 +192,11 @@ const customInputTypes = {
       const onSelect = function (soundValue) {
         block.setTitleValue(soundValue, inputConfig.name);
       };
-      const onChange = dashboard.assets.showAssetManager(
-        onSelect,
-        'audio',
-        null,
-        {
+      const onChange = () => {
+        dashboard.assets.showAssetManager(onSelect, 'audio', null, {
           libraryOnly: true,
-        }
-      );
+        });
+      };
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(Blockly.cdoUtils.soundField(onChange), inputConfig.name);
