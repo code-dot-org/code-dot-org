@@ -912,7 +912,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     @organizer_workshop.save!
     assert_equal 1, @organizer_workshop.sessions.count
 
-    params = {sessions_attributes: [{id: session.id.to_s, _destroy: true}]}
+    params = {sessions_attributes: [{id: session.id.to_s, start: session.start, end: session.end, _destroy: true}]}
 
     put :update, params: {id: @organizer_workshop.id, pd_workshop: params}
     assert_response :success
@@ -926,7 +926,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     session = workshop.sessions.first
 
     sign_in program_manager
-    params = {sessions_attributes: [{id: session.id.to_s, _destroy: true}]}
+    params = {sessions_attributes: [{id: session.id.to_s, start: session.start, end: session.end, _destroy: true}]}
     put :update, params: {id: workshop.id, pd_workshop: params}
     assert_response :success
 
