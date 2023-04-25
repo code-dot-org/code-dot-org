@@ -166,7 +166,9 @@ export default class Simple2Sequencer extends Sequencer {
   // Move to the next child of a play_random block.
   nextRandom() {
     if (this.randomStack.length === 0) {
-      // weird, warn
+      console.warn(
+        'Invalid state; tried to call nextRandom() without active random context'
+      );
       return;
     }
     const currentEntry = this.randomStack[this.randomStack.length - 1];
@@ -198,7 +200,7 @@ export default class Simple2Sequencer extends Sequencer {
   playSound(id: string) {
     const currentFunctionId = this.getCurrentFunctionId();
     if (currentFunctionId === null) {
-      // weird, warn?
+      console.warn('Invalid state: no current function ID');
       return;
     }
 
@@ -233,7 +235,7 @@ export default class Simple2Sequencer extends Sequencer {
   playPattern(value: PatternEventValue) {
     const currentFunctionId = this.getCurrentFunctionId();
     if (currentFunctionId === null) {
-      // weird, warn?
+      console.warn('Invalid state: no current function ID');
       return;
     }
     const currentFunction = this.functionMap[currentFunctionId];
@@ -262,7 +264,7 @@ export default class Simple2Sequencer extends Sequencer {
   playChord(value: ChordEventValue) {
     const currentFunctionId = this.getCurrentFunctionId();
     if (currentFunctionId === null) {
-      // weird, warn?
+      console.warn('Invalid state: no current function ID');
       return;
     }
     const currentFunction = this.functionMap[currentFunctionId];
