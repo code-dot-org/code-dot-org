@@ -19,17 +19,19 @@ const CheckboxDropdown = ({
     </button>
     <ul className="dropdown-menu">
       <form>
-        {allOptions.map(option => (
-          <li key={`${name}-${option}`} className="checkbox form-group">
+        {Object.keys(allOptions).map(optionKey => (
+          <li key={`${name}-${optionKey}`} className="checkbox form-group">
             <input
               type="checkbox"
-              id={`${name}-${option}-check`}
-              name={option}
-              value={option}
-              checked={checkedOptions.includes(option)}
+              id={`${name}-${optionKey}-check`}
+              name={optionKey}
+              value={optionKey}
+              checked={checkedOptions.includes(optionKey)}
               onChange={onChange}
             />
-            <label htmlFor={`${name}-${option}-check`}>{option}</label>
+            <label htmlFor={`${name}-${optionKey}-check`}>
+              {allOptions[optionKey]}
+            </label>
           </li>
         ))}
       </form>
@@ -39,7 +41,7 @@ const CheckboxDropdown = ({
 CheckboxDropdown.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  allOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
+  allOptions: PropTypes.objectOf(PropTypes.string).isRequired,
   checkedOptions: PropTypes.arrayOf(PropTypes.string),
   onChange: PropTypes.func.isRequired,
 };
