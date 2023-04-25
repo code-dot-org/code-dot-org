@@ -34,6 +34,7 @@ module Cdo
     # created/modified, but allow stubbing for unit tests.
     def freeze_config
       @table.freeze
+      @frozen = true
     end
 
     def respond_to_missing?(mid, include_all)
@@ -41,21 +42,21 @@ module Cdo
     end
 
     def method_missing(mid, *args)
+      raise ArgumentError, "Undefined #{self.class} reference: #{mid}", caller(1) if @frozen
+
+      # Inspired by OpenStruct; if unfrozen, allow assigning new configuration
+      # values with `=` and default undefined values to nil
+      # See https://github.com/ruby/ostruct/blob/e61b4464a033c38a65657eaf0467d12e2c7b9ec1/lib/ostruct.rb#L207-L229
       len = args.length
       if mname = mid[/.*(?==\z)/m]
         if len != 1
-          raise! ArgumentError, "wrong number of arguments (given #{len}, expected 1)", caller(1)
+          raise ArgumentError, "wrong number of arguments (given #{len}, expected 1)", caller(1)
         end
         load_configuration({mname => args[0]})
       elsif len == 0
-        # intentional no-op
+        return nil
       else
-        begin
-          super
-        rescue NoMethodError => exception
-          exception.backtrace.shift
-          raise!
-        end
+        super
       end
     end
 
@@ -87,6 +88,7 @@ module Cdo
 
     # Merge the provided config hash into the current config.
     def merge(config)
+      raise RuntimeError, "can't modify frozen #{self.class}", caller(2) if @frozen
       return if config.nil?
 
       # 'Reverse-merge' keeps existing values.
