@@ -134,7 +134,6 @@ export class WorkshopForm extends React.Component {
       virtual: false,
       suppress_email: false,
       third_party_provider: null,
-      cannotChangeIfWorkshopVirtual: false,
     };
 
     if (props.workshop) {
@@ -163,13 +162,6 @@ export class WorkshopForm extends React.Component {
         props.workshop.sessions
       );
       this.loadAvailableFacilitators(props.workshop.course);
-
-      initialState.cannotChangeIfWorkshopVirtual =
-        this.checkCannotChangeIfWorkshopVirtual(
-          initialState.sessions,
-          props.workshop.course,
-          props.workshop.subject
-        );
     }
 
     this.loadRegionalPartners();
@@ -265,17 +257,10 @@ export class WorkshopForm extends React.Component {
     if (removedSession && removedSession.id) {
       destroyedSessions.push(removedSession);
     }
-    const cannotChangeIfWorkshopVirtual =
-      this.checkCannotChangeIfWorkshopVirtual(
-        sessions,
-        this.state.course,
-        this.state.subject
-      );
     this.setState({
       sessionsModified: true,
       sessions,
       destroyedSessions,
-      cannotChangeIfWorkshopVirtual: cannotChangeIfWorkshopVirtual,
     });
   };
 
@@ -383,13 +368,13 @@ export class WorkshopForm extends React.Component {
   // the “Is this a virtual workshop” field within one month of the workshop
   // in order to prevent people from changing this last minute without
   // talking to us or the Friday institute.
-  checkCannotChangeIfWorkshopVirtual(sessions, course, subject) {
+  checkCannotChangeIfWorkshopVirtual() {
     return (
-      (course === ActiveCourseWorkshops.CSP ||
-        course === ActiveCourseWorkshops.CSA) &&
-      subject === SubjectNames.SUBJECT_SUMMER_WORKSHOP &&
+      (this.state.course === ActiveCourseWorkshops.CSP ||
+        this.state.course === ActiveCourseWorkshops.CSA) &&
+      this.state.subject === SubjectNames.SUBJECT_SUMMER_WORKSHOP &&
       !this.props.permission.has(WorkshopAdmin) &&
-      sessions.some(this.sessionStartsWithinMonth)
+      this.state.sessions.some(this.sessionStartsWithinMonth)
     );
   }
 
@@ -423,7 +408,7 @@ export class WorkshopForm extends React.Component {
     const showFundedInput = !(
       isAdminCounselor || isCsfSubjectWithHiddenFundedField
     );
-    const virtualWorkshopHelpTip = this.state.cannotChangeIfWorkshopVirtual ? (
+    const virtualWorkshopHelpTip = this.checkCannotChangeIfWorkshopVirtual() ? (
       <p>
         There is less than a month until your workshop. Please contact
         partner@code.org to update this setting.
@@ -479,11 +464,11 @@ export class WorkshopForm extends React.Component {
                 readOnly={
                   this.props.readOnly ||
                   VirtualOnlySubjects.includes(this.state.subject) ||
-                  this.state.cannotChangeIfWorkshopVirtual
+                  this.checkCannotChangeIfWorkshopVirtual()
                 }
                 showVirtualOptions={
                   !!this.props.workshop ||
-                  !this.state.cannotChangeIfWorkshopVirtual
+                  !this.checkCannotChangeIfWorkshopVirtual()
                 }
               />
               <HelpBlock>{validation.help.virtual}</HelpBlock>
@@ -780,12 +765,6 @@ export class WorkshopForm extends React.Component {
 
   handleCourseChange = event => {
     const course = this.handleFieldChange(event);
-    const cannotChangeIfWorkshopVirtual =
-      this.checkCannotChangeIfWorkshopVirtual(
-        this.state.sessions,
-        course,
-        this.state.subject
-      );
 
     // clear facilitators, subject, funding, and email reminders
     this.setState({
@@ -795,23 +774,12 @@ export class WorkshopForm extends React.Component {
       funded: '',
       funding_type: null,
       suppress_email: false,
-      cannotChangeIfWorkshopVirtual: cannotChangeIfWorkshopVirtual,
     });
     this.loadAvailableFacilitators(course);
   };
 
   handleSubjectChange = event => {
     const subject = this.handleFieldChange(event);
-    const cannotChangeIfWorkshopVirtual =
-      this.checkCannotChangeIfWorkshopVirtual(
-        this.state.sessions,
-        this.state.course,
-        subject
-      );
-
-    this.setState({
-      cannotChangeIfWorkshopVirtual: cannotChangeIfWorkshopVirtual,
-    });
 
     if (
       HideFundedSubjects.includes(subject) ||
