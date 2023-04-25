@@ -12,9 +12,9 @@ describe('ParametersTable', () => {
         name: 'param1',
         type: 'string',
         required: true,
-        description: 'description'
+        description: 'description',
       },
-      {name: 'param2'}
+      {name: 'param2'},
     ];
   });
 

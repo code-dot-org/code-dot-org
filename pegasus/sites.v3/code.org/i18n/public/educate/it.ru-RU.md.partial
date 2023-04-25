@@ -10,7 +10,8 @@ theme: responsive
 
 - Для проведения уроков рекомендуется, чтобы скорость подключения интернета в школе была не менее 15 Мбит/с.
 - Наименьший поддерживаемый размер экрана: 1024 x 728 пикселей.
-- Для уроков среднего и старшего уровня («Знакомство с информатикой», «Принципы информатики» и «Введение в App Lab») понадобится настольный или портативный компьютер с мышью (или сенсорной панелью) и клавиатурой. Большинство планшетов и мобильных устройств не подойдут для этих уроков. Исключения, касающиеся конкретных устройств, см. в разделе «Информация о поддержке мобильных устройств и планшетов» ниже.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Исключения, касающиеся конкретных устройств, см. в разделе «Информация о поддержке мобильных устройств и планшетов» ниже.
 - Весь остальной контент, например уроки K-5 (Основы информатики) и задания Часа кода совместимы с iPad и Chromebook, а также всеми остальными современными планшетами, ноутбуками и настольными компьютерами.
 - Нужна информация о поддержке мобильных устройств? Читайте далее.
 
@@ -82,12 +83,12 @@ theme: responsive
 
 ## Информация о поддержке мобильных устройств и планшетов
 
-Все курсы «Знакомство с информатикой», «Принципы информатики» и «Введение в App Lab» несовместимы с планшетами или мобильными устройствами — для них требуется полноценная клавиатура и мышь (или сенсорная панель, как на MacBook). Большинство планшетов не поддерживаются, за исключением перечисленных ниже:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Большинство планшетов не поддерживаются, за исключением перечисленных ниже:
 
 - Microsoft Surface Pro с внешней клавиатурой
 - iPad на ОС iPadOS 13.4 или более поздней версии с внешней клавиатурой и внешней мышью или сенсорной панелью
 
-Весь остальной контент, например уроки K-5 (Основы информатики) и задания Часа кода совместимы с iPad и Chromebook, а также всеми остальными современными планшетами, ноутбуками и настольными компьютерами.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### Мобильные телефоны
 

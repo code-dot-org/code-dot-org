@@ -6,46 +6,18 @@ markdown <<MARKDOWN
 # More student features
 
 
-### Pause button
+### Workspace and version history
 
-Students can on the pause button to stop their code from running.  This is useful when debugging!
-
-<details>
-
-<summary><strong>Demo of pause button</strong></summary>
-
-<img src="https://images.code.org/9b6959aa8dfe1ff674aad8c0a78119ec-image-1680739466965.gif" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
-
-</details>
-
-<div style="clear:both"/>
-
-<hr style="clear:both">
-
-### Version history
-
-Students can click on the version history button followed by the "Start Over" button to reset the code on the current level.
-<details>
-
-<summary><strong>Demo of version history</strong></summary>
-
-<img src="https://images.code.org/9b6959aa8dfe1ff674aad8c0a78119ec-image-1680739466965.gif" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
-
-</details>
-
-<div style="clear:both"/>
-
-<hr style="clear:both">
-
-### Levels part of larger projects 
-
-When this icon appears, students' work and changes are saved between levels to help them create a their project.
+* ##### When the workspace icon appears, students' work and changes are saved between levels as they add more code.  
+* ##### Students can click on the version history button and restore or view previous versions of their saved code.  
+* ##### Students can also scroll down and click on the "Start Over" button to reset to the initial version of the level.  
+	* Note this deletes code in the current level as well as any shared code in other levels.
 
 <details>
 
-<summary><strong>Demo of levels part of larger projects</strong></summary>
+<summary><strong>Demo of workspace and version history</strong></summary>
 
-<img src="https://images.code.org/9b6959aa8dfe1ff674aad8c0a78119ec-image-1680739466965.gif" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/11f3c1c68e79ad59c6d486127cb49b3c-image-1681494209380.gif" style="float: left; height: 300px; clear: both; margin: 0 20px 20px 0;">
 
 </details>
 
@@ -53,4 +25,5 @@ When this icon appears, students' work and changes are saved between levels to h
 
 
 ## Let's keep learning! 
+
 MARKDOWN

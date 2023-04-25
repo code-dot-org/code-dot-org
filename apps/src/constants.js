@@ -11,7 +11,7 @@ export const ResultType = {
   SUCCESS: 1, // The program completed successfully, achieving the goal.
   FAILURE: -1, // The program ran without error but did not achieve goal.
   TIMEOUT: 2, // The program did not complete (likely infinite loop).
-  ERROR: -2 // The program generated an error.
+  ERROR: -2, // The program generated an error.
 };
 
 /**
@@ -108,7 +108,7 @@ export const TestResults = {
   SUBMITTED_RESULT: 1000,
 
   REVIEW_REJECTED_RESULT: 1500,
-  REVIEW_ACCEPTED_RESULT: 2000
+  REVIEW_ACCEPTED_RESULT: 2000,
 };
 
 export const BeeTerminationValue = {
@@ -123,13 +123,13 @@ export const BeeTerminationValue = {
   UNCHECKED_PURPLE: 6, // Finished puzzle, but didn't check every purple flower
   INSUFFICIENT_NECTAR: 7, // Didn't collect all nectar by finish
   INSUFFICIENT_HONEY: 8, // Didn't make all honey by finish
-  DID_NOT_COLLECT_EVERYTHING: 9 // For quantum levels, didn't try to collect all available honey/nectar
+  DID_NOT_COLLECT_EVERYTHING: 9, // For quantum levels, didn't try to collect all available honey/nectar
 };
 
 export const HarvesterTerminationValue = {
   WRONG_CROP: 1,
   EMPTY_CROP: 2,
-  DID_NOT_COLLECT_EVERYTHING: 3
+  DID_NOT_COLLECT_EVERYTHING: 3,
 };
 
 export const KeyCodes = {
@@ -142,7 +142,7 @@ export const KeyCodes = {
   DOWN: 40,
   COPY: 67,
   PASTE: 86,
-  DELETE: 127
+  DELETE: 127,
 };
 
 export const Position = {
@@ -170,7 +170,7 @@ export const Position = {
   OUTBOTTOMLEFT: 22,
   OUTBOTTOMCENTER: 23,
   OUTBOTTOMRIGHT: 24,
-  OUTBOTTOMOUTRIGHT: 25
+  OUTBOTTOMOUTRIGHT: 25,
 };
 
 /** @const {string} SVG element namespace */
@@ -186,10 +186,5 @@ export const BASE_DIALOG_WIDTH = 700;
 export const TOOLBOX_EDIT_MODE = 'toolbox_blocks';
 
 export const NOTIFICATION_ALERT_TYPE = 'notification';
-
-export const BlocklyVersion = {
-  CDO: 'CDO',
-  GOOGLE: 'Google'
-};
 
 export const START_BLOCKS = 'start_blocks';

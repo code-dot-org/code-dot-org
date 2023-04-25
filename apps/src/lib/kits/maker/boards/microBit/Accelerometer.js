@@ -49,48 +49,48 @@ export default class Accelerometer extends EventEmitter {
         get: function () {
           let rads = Math.atan2(this.x, Math.hypot(this.y, this.z));
           return roundToHundredth(rads * (180 / Math.PI));
-        }
+        },
       },
       pitch: {
         get: function () {
           let rads = Math.atan2(this.y, Math.hypot(this.x, this.z));
           return roundToHundredth(rads * (180 / Math.PI));
-        }
+        },
       },
       inclination: {
         get: function () {
           let rads = Math.atan2(this.y, this.x);
           return roundToHundredth(rads * (180 / Math.PI));
-        }
+        },
       },
       x: {
         get: function () {
           return unitsFromMGToMS2(
             this.board.mb.analogChannel[SENSOR_CHANNELS.accelX]
           );
-        }
+        },
       },
       y: {
         get: function () {
           return unitsFromMGToMS2(
             this.board.mb.analogChannel[SENSOR_CHANNELS.accelY]
           );
-        }
+        },
       },
       z: {
         get: function () {
           return unitsFromMGToMS2(
             this.board.mb.analogChannel[SENSOR_CHANNELS.accelZ]
           );
-        }
+        },
       },
       acceleration: {
         get: function () {
           return roundToHundredth(
             Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z)
           );
-        }
-      }
+        },
+      },
     });
   }
 

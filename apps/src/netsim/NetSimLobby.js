@@ -191,11 +191,11 @@ NetSimLobby.prototype.render = function () {
         displayName: this.displayName_,
         shardChoices: this.shardChoices_,
         selectedShardID: this.selectedShardID_,
-        disableControls: this.isEverythingDisabled()
+        disableControls: this.isEverythingDisabled(),
       },
       {
         setNameCallback: this.setDisplayName.bind(this),
-        setShardCallback: this.setShardID.bind(this)
+        setShardCallback: this.setShardID.bind(this),
       }
     );
   } else {
@@ -212,7 +212,7 @@ NetSimLobby.prototype.render = function () {
         incomingConnectionNodes: this.incomingConnectionNodes_,
         remoteNode: this.remoteNode_,
         myNodeID: this.myNode_.entityID,
-        disableControls: this.isEverythingDisabled()
+        disableControls: this.isEverythingDisabled(),
       },
       {
         addRouterCallback: this.addRouterToLobby.bind(this),
@@ -220,7 +220,7 @@ NetSimLobby.prototype.render = function () {
         joinButtonCallback: this.onJoinButtonClick_.bind(this),
         resetShardCallback: this.onResetShardButtonClick_.bind(this),
         showRouterLogCallback: this.showRouterLogCallback_,
-        showTeacherLogCallback: this.showTeacherLogCallback_
+        showTeacherLogCallback: this.showTeacherLogCallback_,
       }
     );
   }
@@ -550,7 +550,7 @@ NetSimLobby.prototype.buildShardChoiceList_ = function (
     this.shardChoices_.push({
       shardSeed: sharedShardSeed,
       shardID: sharedShardID,
-      displayName: sharedShardSeed
+      displayName: sharedShardSeed,
     });
   }
 
@@ -562,7 +562,7 @@ NetSimLobby.prototype.buildShardChoiceList_ = function (
         return {
           shardSeed: section.id,
           shardID: this.makeShardIDFromSeed_(section.id),
-          displayName: section.name
+          displayName: section.name,
         };
       }.bind(this)
     )
@@ -575,7 +575,7 @@ NetSimLobby.prototype.buildShardChoiceList_ = function (
     this.shardChoices_.push({
       shardSeed: seed,
       shardID: randomShardID,
-      displayName: i18n.myPrivateNetwork()
+      displayName: i18n.myPrivateNetwork(),
     });
   }
 

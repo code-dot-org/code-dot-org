@@ -12,7 +12,7 @@ import {
   ButtonToolbar,
   Button,
   Panel,
-  Table
+  Table,
 } from 'react-bootstrap';
 import parseJson from 'json-parse-better-errors';
 import color from '@cdo/apps/util/color';
@@ -22,12 +22,12 @@ export default class FormDataEdit extends React.Component {
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
       course_name: PropTypes.string,
-      form_data: PropTypes.object.isRequired
-    }).isRequired
+      form_data: PropTypes.object.isRequired,
+    }).isRequired,
   };
 
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   constructor(props) {
@@ -39,7 +39,7 @@ export default class FormDataEdit extends React.Component {
     return {
       formData: JSON.stringify(this.props.applicationData.form_data, null, 2),
       parseError: null,
-      saveErrors: null
+      saveErrors: null,
     };
   }
 
@@ -68,9 +68,9 @@ export default class FormDataEdit extends React.Component {
       dataType: 'json',
       data: JSON.stringify({
         application: {
-          form_data: parsedFormData
-        }
-      })
+          form_data: parsedFormData,
+        },
+      }),
     })
       .done(() => {
         this.setState({saveErrors: null});
@@ -160,6 +160,6 @@ export default class FormDataEdit extends React.Component {
 
 const styles = {
   error: {
-    color: color.red
-  }
+    color: color.red,
+  },
 };

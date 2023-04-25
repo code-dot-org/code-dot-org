@@ -16,7 +16,7 @@ export default class CodeReviewGroupsDataApi {
     return this.postJSON(
       `/api/v1/sections/${this.sectionId}/code_review_groups`,
       {
-        groups: this.convertGroupsToSnakeCase(_.cloneDeep(groups))
+        groups: this.convertGroupsToSnakeCase(_.cloneDeep(groups)),
       }
     );
   }
@@ -25,7 +25,7 @@ export default class CodeReviewGroupsDataApi {
     return this.postJSON(
       `/api/v1/sections/${this.sectionId}/code_review_enabled`,
       {
-        enabled
+        enabled,
       }
     );
   }
@@ -35,7 +35,7 @@ export default class CodeReviewGroupsDataApi {
       url,
       type: 'POST',
       contentType: 'application/json',
-      data: JSON.stringify(data)
+      data: JSON.stringify(data),
     });
 
   /**

@@ -3,7 +3,7 @@ import {expect} from '../../../../../../util/reconfiguredChai';
 import {
   createMicroBitComponents,
   cleanupMicroBitComponents,
-  enableMicroBitComponents
+  enableMicroBitComponents,
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitComponents';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import {EventEmitter} from 'events';
@@ -17,7 +17,7 @@ const COMPONENTS = [
   'tempSensor',
   'accelerometer',
   'compass',
-  'lightSensor'
+  'lightSensor',
 ];
 
 describe('MicroBit Components', () => {

@@ -11,7 +11,7 @@ import {
   SyncOmniAuthSectionButton,
   READY,
   IN_PROGRESS,
-  SUCCESS
+  SUCCESS,
 } from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 
 describe('SyncOmniAuthSectionControl', () => {
@@ -44,7 +44,7 @@ describe('SyncOmniAuthSectionControl', () => {
       sectionCode: 'G-123456',
       sectionName: 'Test Google Classroom Section',
       sectionProvider: OAuthSectionTypes.google_classroom,
-      updateRoster: updateRoster
+      updateRoster: updateRoster,
     };
   });
 

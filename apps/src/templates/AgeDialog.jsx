@@ -27,17 +27,17 @@ export const songFilterOn = () => {
 
 class AgeDialog extends Component {
   state = {
-    open: true
+    open: true,
   };
 
   static propTypes = {
     signedIn: PropTypes.bool.isRequired,
     turnOffFilter: PropTypes.func.isRequired,
-    storage: PropTypes.object.isRequired
+    storage: PropTypes.object.isRequired,
   };
 
   static defaultProps = {
-    storage: window.sessionStorage
+    storage: window.sessionStorage,
   };
 
   setSessionStorage = over13 => {
@@ -114,11 +114,11 @@ class AgeDialog extends Component {
 const styles = {
   container: {
     margin: 20,
-    color: color.charcoal
+    color: color.charcoal,
   },
   dancePartyHeading: {
     fontSize: 32,
-    fontFamily: "'Gotham 7r', sans-serif"
+    fontFamily: "'Gotham 7r', sans-serif",
   },
   middle: {
     marginTop: 20,
@@ -131,26 +131,26 @@ const styles = {
     borderLeftWidth: 0,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
-    display: 'flex'
+    display: 'flex',
   },
   middleCell: {
     display: 'inline-block',
     verticalAlign: 'top',
-    maxWidth: '50%'
+    maxWidth: '50%',
   },
   age: {
-    paddingTop: 15
+    paddingTop: 15,
   },
   dropdown: {
     verticalAlign: 'top',
     marginRight: 10,
     marginTop: 2,
-    width: 160
-  }
+    width: 160,
+  },
 };
 
 export const UnconnectedAgeDialog = AgeDialog;
 
 export default connect(state => ({
-  signedIn: state.currentUser.signInState === SignInState.SignedIn
+  signedIn: state.currentUser.signInState === SignInState.SignedIn,
 }))(AgeDialog);

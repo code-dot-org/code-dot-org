@@ -2313,6 +2313,16 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+            lessonGroup-4:
+              display_name: Проучване
         csd7-2023:
           title: AI и Машинно Обучение
         csp1-2023:

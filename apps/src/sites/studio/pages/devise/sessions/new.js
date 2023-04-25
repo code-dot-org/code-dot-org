@@ -8,7 +8,7 @@ $(document).ready(() => {
   $('#new_user').on('submit', function (e) {
     window.dashboard.hashEmail({
       email_selector: '#user_login',
-      hashed_email_selector: '#user_hashed_email'
+      hashed_email_selector: '#user_hashed_email',
     });
 
     window.dashboard.clientState.reset();

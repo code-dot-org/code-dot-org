@@ -13,20 +13,20 @@ import javalab, {
   setHasOpenCodeReview,
   setValidationPassed,
   setHasRunOrTestedCode,
-  setIsJavabuilderConnecting
+  setIsJavabuilderConnecting,
 } from './redux/javalabRedux';
 import javalabConsole, {
   appendOutputLog,
   appendNewlineToConsoleLog,
   appendMarkdownLog,
   closePhotoPrompter,
-  openPhotoPrompter
+  openPhotoPrompter,
 } from './redux/consoleRedux';
 import javalabEditor, {
   getSources,
   getValidation,
   setAllSourcesAndFileMetadata,
-  setAllValidation
+  setAllValidation,
 } from './redux/editorRedux';
 import javalabView, {setDisplayTheme} from './redux/viewRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -42,7 +42,7 @@ import {getDisplayThemeFromString} from './DisplayTheme';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
-  runAfterPostContainedLevel
+  runAfterPostContainedLevel,
 } from '../containedLevels';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
@@ -167,7 +167,7 @@ Javalab.prototype.init = function (config) {
     initializeSubmitHelper({
       studioApp: this.studioApp_,
       onPuzzleComplete: this.onContinue.bind(this),
-      unsubmitUrl: config.level.unsubmitUrl
+      unsubmitUrl: config.level.unsubmitUrl,
     });
 
     // Fixes viewport for small screens.  Also usually done by studioApp_.init().
@@ -191,7 +191,7 @@ Javalab.prototype.init = function (config) {
     isViewingOwnProject: !!config.isViewingOwnProject,
     isResponsive: true,
     isSubmittable: !!config.level.submittable,
-    isSubmitted: !!config.level.submitted
+    isSubmitted: !!config.level.submitted,
   });
 
   registerReducers({javalab, javalabConsole, javalabEditor, javalabView});
@@ -201,13 +201,13 @@ Javalab.prototype.init = function (config) {
     config.level.lastAttempt = '';
     showLevelBuilderSaveButton(() => ({
       start_sources: getSources(getStore().getState()),
-      validation: getValidation(getStore().getState())
+      validation: getValidation(getStore().getState()),
     }));
   }
   if (this.isEditingExemplar) {
     showLevelBuilderSaveButton(
       () => ({
-        exemplar_sources: getSources(getStore().getState())
+        exemplar_sources: getSources(getStore().getState()),
       }),
       'Levelbuilder: edit exemplar',
       `/levels/${
@@ -243,7 +243,7 @@ Javalab.prototype.init = function (config) {
         setAllSourcesAndFileMetadata(
           {
             ...startSources,
-            ...validation
+            ...validation,
           },
           this.isStartMode
         )
@@ -298,7 +298,7 @@ Javalab.prototype.init = function (config) {
   // when providing overrideSources or commiting code.
   // Code review manages a csrf token separately.
   fetch('/project_commits/get_token', {
-    method: 'GET'
+    method: 'GET',
   }).then(response => (this.csrf_token = response.headers.get('csrf-token')));
 
   ReactDOM.render(
@@ -436,7 +436,7 @@ Javalab.prototype.onJavabuilderMessage = function (messageType, message) {
   this.javabuilderConnection.sendMessage(
     JSON.stringify({
       messageType,
-      message
+      message,
     })
   );
 };
@@ -463,7 +463,7 @@ Javalab.prototype.onContinue = function (submit) {
       submitted: submit,
       onComplete: result => {
         onComplete(result);
-      }
+      },
     });
   }
 };
@@ -484,13 +484,13 @@ Javalab.prototype.onCommitCode = function (commitNotes, onSuccessCallback) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-CSRF-Token': this.csrf_token
+        'X-CSRF-Token': this.csrf_token,
       },
       body: JSON.stringify({
         storage_id: project.getCurrentId(),
         version_id: project.getCurrentSourceVersionId(),
-        comment: commitNotes
-      })
+        comment: commitNotes,
+      }),
     }).then(() => onSuccessCallback());
   });
 };
@@ -536,7 +536,7 @@ Javalab.prototype.onValidationPassed = function (studioApp) {
     testResult: TestResults.ALL_PASS,
     program: '',
     submitted: getStore().getState().pageConstants.isSubmitted,
-    onComplete: () => {}
+    onComplete: () => {},
   });
   getStore().dispatch(setValidationPassed(true));
 };
@@ -549,7 +549,7 @@ Javalab.prototype.onValidationFailed = function (studioApp) {
     testResult: TestResults.APP_SPECIFIC_FAIL,
     program: '',
     submitted: getStore().getState().pageConstants.isSubmitted,
-    onComplete: () => {}
+    onComplete: () => {},
   });
 };
 

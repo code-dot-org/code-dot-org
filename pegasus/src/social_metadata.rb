@@ -12,6 +12,7 @@
 #   code.org/hourofcode2022
 #   code.org/maker
 #   code.org/blockchain
+#   code.org/ai
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
@@ -54,6 +55,7 @@ def get_social_metadata_for_page(request)
     hoc_2022_landing_page: {path: "/shared/images/social-media/hoc2022_social_landing_page.png", width: 1200, height: 630},
     maker_physical_computing: {path: "/shared/images/social-media/maker_social.png", width: 1200, height: 630},
     blockchain: {path: "/shared/images/social-media/blockchain-social.png", width: 1200, height: 630},
+    ai: {path: "/shared/images/social-media/ai-social.png", width: 1200, height: 630},
   }
 
   # Important:
@@ -190,6 +192,13 @@ def get_social_metadata_for_page(request)
         image: images[:blockchain]
       }
     },
+    "ai" => {
+      "default" => {
+        title: hoc_s(:social_ai_title),
+        description: hoc_s(:social_ai_desc),
+        image: images[:ai]
+      }
+    },
   }
 
   if request.path == "/challenge" && request.site == "code.org"
@@ -220,6 +229,8 @@ def get_social_metadata_for_page(request)
     page = "maker"
   elsif request.path == "/blockchain" && request.site == "code.org"
     page = "blockchain"
+  elsif request.path == "/ai" && request.site == "code.org"
+    page = "ai"
   else
     return {}
   end

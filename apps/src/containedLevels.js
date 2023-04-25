@@ -10,7 +10,7 @@ import queryString from 'query-string';
 const PostState = {
   None: 'None',
   Started: 'Started',
-  Finished: 'Finished'
+  Finished: 'Finished',
 };
 
 let postState = PostState.None;
@@ -34,7 +34,7 @@ export function getContainedLevelResultInfo() {
     testResult: TestResults.CONTAINED_LEVEL_RESULT,
     program: containedResult.result.response,
     feedback: containedResult.feedback,
-    submitted: false
+    submitted: false,
   };
 }
 
@@ -59,7 +59,7 @@ export function getValidatedResult() {
 export function postContainedLevelAttempt({
   hasContainedLevels,
   attempts,
-  onAttempt
+  onAttempt,
 }) {
   if (!hasContainedLevels) {
     return;
@@ -97,7 +97,7 @@ export function postContainedLevelAttempt({
         callOnPostCompletion();
         callOnPostCompletion = null;
       }
-    }
+    },
   });
 }
 
@@ -146,15 +146,15 @@ export function initializeContainedLevel() {
         localized_text: locale.containedLevelRunDisabledTooltip(),
         qtip_config: {
           codeStudio: {
-            canReappear: true
+            canReappear: true,
           },
           position: {
             my: 'top left',
-            at: 'bottom center'
-          }
+            at: 'bottom center',
+          },
         },
-        on: 'attemptedRunButtonClick'
-      }
+        on: 'attemptedRunButtonClick',
+      },
     ]);
     store.dispatch(setAwaitingContainedResponse(true));
   }

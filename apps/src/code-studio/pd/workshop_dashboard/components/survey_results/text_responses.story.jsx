@@ -14,7 +14,7 @@ export default storybook => {
             question="What is your favorite food?"
             answers={['Tacos', 'Pizza', 'Burritos', 'Vegetable Fried Rice']}
           />
-        )
+        ),
       },
       {
         name: 'Facilitator specific text responses',
@@ -27,18 +27,18 @@ export default storybook => {
                 'Apples',
                 'Nachos',
                 'Nachos',
-                'Cookies'
+                'Cookies',
               ],
               'Facilitator 2': [
                 'Fries',
                 'Carrots',
                 'Carrots',
                 'Peppers',
-                'Donuts'
-              ]
+                'Donuts',
+              ],
             }}
           />
-        )
+        ),
       },
       {
         name: 'General responses with an average',
@@ -48,7 +48,7 @@ export default storybook => {
             answers={['1', '2', '3', '6', '3', '3', '2', '0', 'Dunno']}
             showAverage={true}
           />
-        )
+        ),
       },
       {
         name: 'Facilitator responses with averages',
@@ -57,11 +57,11 @@ export default storybook => {
             question="On a scale of 1 to 5, how good was the facilitator's cooking?"
             answers={{
               'Facilitator 1': ['3', '4', '5', '5', '4', '5', '5'],
-              'Facilitator 2': ['2', '3', '1', '1', '1', '2', 'Dunno']
+              'Facilitator 2': ['2', '3', '1', '1', '1', '2', 'Dunno'],
             }}
             showAverage={true}
           />
-        )
-      }
+        ),
+      },
     ]);
 };

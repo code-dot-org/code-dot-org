@@ -8,13 +8,13 @@ markdown <<MARKDOWN
 
 ### Adjusting windows
 
-Students can click and drag the three dots of the workspace or playspace to adjust the size of each.
+##### Students can click and drag the three dots of the workspace or playspace to adjust the size of each.
 
 <details>
 
 <summary><strong>Demo of adjusting windows</strong></summary>
 
-<img src="https://images.code.org/9b6959aa8dfe1ff674aad8c0a78119ec-image-1680739466965.gif" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/883c1280e1ac491fdf09a80c27a32826-image-1681492214527.gif" alt= "moving playspace and workspace window size" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 </details>
 
@@ -24,13 +24,13 @@ Students can click and drag the three dots of the workspace or playspace to adju
 
 ### Instruction hints
 
-Students can click on the lightbulb to get hints throughout a level.
+##### Students can click on the lightbulb to get hints throughout a level.
 
 <details>
 
 <summary><strong>Demo of instruction hints</strong></summary>
 
-<img src="https://images.code.org/9b6959aa8dfe1ff674aad8c0a78119ec-image-1680739466965.gif" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/399c6a5f4b4cddd06e5ebaa1e162d8ce-image-1681492569784.gif" alt=" hint image and words displayed" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 </details>
 
@@ -40,36 +40,17 @@ Students can click on the lightbulb to get hints throughout a level.
 
 ### Video hints
 
-Students can watch videos provided in some levels to review the CS concept they are practicing.
+##### Students can watch videos provided in some levels to review the CS concept they are practicing.
 
 <details>
 
 <summary><strong>Demo of video hints</strong></summary>
 
-<img src="https://images.code.org/9b6959aa8dfe1ff674aad8c0a78119ec-image-1680739466965.gif" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/5b55685520d1d8bbdd06575ceac69529-image-1682378944264.gif" alt=" video starting from the lesson level" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 </details>
 
 <div style="clear:both"/>
-
-<hr style="clear:both">
-
-### Text-to-speech
-
-Students can click on the audio icon to have the text read to them.
-
-<details>
-
-<summary><strong>Demo of text-to-speech</strong></summary>
-
-<img src="https://images.code.org/9b6959aa8dfe1ff674aad8c0a78119ec-image-1680739466965.gif" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
-
-</details>
-
-<div style="clear:both"/>
-
-<hr style="clear:both">
-
 
 
 ## Let's keep learning! 

@@ -11,7 +11,7 @@
 import {getResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {
   sendReport,
-  getLastServerResponse
+  getLastServerResponse,
 } from '@cdo/apps/code-studio/reporting';
 import {TestResults} from '@cdo/apps/constants';
 
@@ -58,6 +58,6 @@ export function onContinue() {
       }
 
       window.location.href = url;
-    }
+    },
   });
 }

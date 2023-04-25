@@ -42,7 +42,7 @@ NetSimDnsTable.prototype.render = function () {
   var renderedMarkup = $(
     markup({
       dnsMode: this.dnsMode_,
-      tableData: this.addressTableData_
+      tableData: this.addressTableData_,
     })
   );
   this.rootDiv_.html(renderedMarkup);

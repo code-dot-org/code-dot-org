@@ -58,7 +58,7 @@ experiments.getStoredExperiments_ = function () {
   const experimentsCookie = Cookie.get('_experiments' + window.cookieEnvSuffix);
   const userExperiments = experimentsCookie
     ? JSON.parse(decodeURIComponent(experimentsCookie)).map(name => ({
-        key: name
+        key: name,
       }))
     : [];
 
