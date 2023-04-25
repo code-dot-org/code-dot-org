@@ -106,6 +106,7 @@ module LevelsHelper
         }
       )
     end
+
     channel_token&.channel
   end
 

@@ -280,6 +280,23 @@ class ProjectsController < ApplicationController
     )
   end
 
+  # GET /projects/for_level/:level_id
+  def get_or_create_for_level
+    level = Levels.find(params[:level_id])
+    project_type = Projects.get_project_type_for_level(level)
+    user_storage_id = nil
+    if current_user
+      user_storage_id = storage_id_for_user_id(current_user.id)
+    else
+      user_storage_id = get_storage_id
+    end
+    # find channel for user and level if it exists, or create a new one
+    # how do we get: user storage id (does above work?), script id (either param or infer from level??),
+    # isHidden (is hidden is maybe a param??)
+    ChannelToken.find_or_create_channel_token(level, user_storage_id, script_id, {hidden: isHidden})
+    # always return the channel id
+  end
+
   def weblab_footer
     render partial: 'projects/weblab_footer'
   end

@@ -17,7 +17,7 @@ class Projects
   end
 
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
-    project_type = type || (level && Projects.get_project_type_for_level(level))
+    project_type = type || Projects.get_project_type_for_level(level)
     timestamp = DateTime.now
     row = {
       storage_id: @storage_id,
