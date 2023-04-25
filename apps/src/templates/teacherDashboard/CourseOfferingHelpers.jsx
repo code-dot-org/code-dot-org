@@ -14,6 +14,10 @@ export const translatedCourseOfferingCsTopics = {
   programming: i18n.courseOfferingCsTopicProgramming(),
 };
 
+export const translatedInterdisciplinary = {
+  interdisciplinary: i18n.courseOfferingInterdisciplinary(),
+};
+
 // Same list as CourseOfferingSchoolSubjects in sharedCourseConstants but with translated strings
 export const translatedCourseOfferingSchoolSubjects = {
   math: i18n.courseOfferingSchoolSubjectMath(),
@@ -45,6 +49,22 @@ export const translatedCourseOfferingDurations = {
   month: i18n.month(),
   week: i18n.week(),
   lesson: i18n.lesson(),
+};
+
+export const translatedGradeLevels = {
+  kindergarten: i18n.kindergarten(),
+  grade_1: i18n.grade() + ' 1',
+  grade_2: i18n.grade() + ' 2',
+  grade_3: i18n.grade() + ' 3',
+  grade_4: i18n.grade() + ' 4',
+  grade_5: i18n.grade() + ' 5',
+  grade_6: i18n.grade() + ' 6',
+  grade_7: i18n.grade() + ' 7',
+  grade_8: i18n.grade() + ' 8',
+  grade_9: i18n.grade() + ' 9',
+  grade_10: i18n.grade() + ' 10',
+  grade_11: i18n.grade() + ' 11',
+  grade_12: i18n.grade() + ' 12',
 };
 
 export const subjectsAndTopicsOrder = [
