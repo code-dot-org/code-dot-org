@@ -1,8 +1,8 @@
-import {AppOptionsStore} from './AppOptionsStore';
+import {AppOptionsStore} from '../AppOptionsStore';
 import {S3ChannelsStore, LocalChannelsStore} from './ChannelsStore';
 import ProjectManager from './ProjectManager';
 import {S3SourcesStore, LocalSourcesStore} from './SourcesStore';
-import {AppOptions, Project, ProjectManagerType} from './types';
+import {AppOptions, Project, ProjectManagerType} from '../types';
 
 export default class ProjectManagerFactory {
   static getProjectManager(

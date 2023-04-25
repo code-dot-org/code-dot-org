@@ -1,5 +1,5 @@
-import {Source, SourceUpdateOptions} from './types';
-import {SOURCE_FILE} from './constants';
+import {Source, SourceUpdateOptions} from '../types';
+import {SOURCE_FILE} from '../constants';
 const {stringifyQueryParams} = require('@cdo/apps/utils');
 
 const rootUrl = (channelId: string) =>

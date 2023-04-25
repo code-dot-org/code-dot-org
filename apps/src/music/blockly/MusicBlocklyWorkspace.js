@@ -20,7 +20,7 @@ import {
 } from './extensions';
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
-import ProjectManagerFactory from '@cdo/apps/labs/ProjectManagerFactory';
+import ProjectManagerFactory from '@cdo/apps/labs/projects/ProjectManagerFactory';
 import {ProjectManagerType} from '@cdo/apps/labs/types';
 import FieldChord from './FieldChord';
 import {Renderers} from '@cdo/apps/blockly/constants';

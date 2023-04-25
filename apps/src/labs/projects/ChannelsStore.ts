@@ -1,4 +1,4 @@
-import {Channel, DefaultChannel} from './types';
+import {Channel, DefaultChannel} from '../types';
 import * as channelsApi from './channelsApi';
 
 export interface ChannelsStore {

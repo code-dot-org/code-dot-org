@@ -1,4 +1,4 @@
-import {Source} from './types';
+import {Source} from '../types';
 import * as sourcesApi from './sourcesApi';
 const {getTabId} = require('@cdo/apps/utils');
 

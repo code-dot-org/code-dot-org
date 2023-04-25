@@ -10,8 +10,8 @@
  */
 import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
-import {Project} from './types';
-import {AppOptionsStore} from './AppOptionsStore';
+import {Project} from '../types';
+import {AppOptionsStore} from '../AppOptionsStore';
 
 export enum ProjectManagerEvent {
   SaveStart,
