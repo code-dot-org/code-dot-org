@@ -9,7 +9,7 @@ export default function AdvancedSettingToggles({
   updateSection,
   section,
   hasLessonExtras,
-  hasTextToSpeech
+  hasTextToSpeech,
 }) {
   const handlePairProgrammingToggle = e => {
     const updatedValue = !section.pairingAllowed;
@@ -95,5 +95,5 @@ AdvancedSettingToggles.propTypes = {
   section: PropTypes.object.isRequired,
   updateSection: PropTypes.func.isRequired,
   hasLessonExtras: PropTypes.bool,
-  hasTextToSpeech: PropTypes.bool
+  hasTextToSpeech: PropTypes.bool,
 };

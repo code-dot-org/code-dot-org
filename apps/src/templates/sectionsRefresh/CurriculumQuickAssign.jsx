@@ -14,13 +14,13 @@ export const MARKETING_AUDIENCE = {
   MIDDLE: 'middle',
   HIGH: 'high',
   HOC: 'hoc',
-  PL: 'pl'
+  PL: 'pl',
 };
 
 export default function CurriculumQuickAssign({
   isNewSection,
   updateSection,
-  sectionCourse
+  sectionCourse,
 }) {
   const [courseOfferings, setCourseOfferings] = useState(null);
   const [decideLater, setDecideLater] = useState(false);
@@ -48,14 +48,14 @@ export default function CurriculumQuickAssign({
         ...courseOfferings[MARKETING_AUDIENCE.HIGH][
           curriculumTypes.standalone_unit
         ],
-        ...courseOfferings[MARKETING_AUDIENCE.HIGH][curriculumTypes.module]
+        ...courseOfferings[MARKETING_AUDIENCE.HIGH][curriculumTypes.module],
       };
       const middleData = {
         ...courseOfferings[MARKETING_AUDIENCE.MIDDLE][curriculumTypes.course],
         ...courseOfferings[MARKETING_AUDIENCE.MIDDLE][
           curriculumTypes.standalone_unit
         ],
-        ...courseOfferings[MARKETING_AUDIENCE.MIDDLE][curriculumTypes.module]
+        ...courseOfferings[MARKETING_AUDIENCE.MIDDLE][curriculumTypes.module],
       };
       const elementaryData = {
         ...courseOfferings[MARKETING_AUDIENCE.ELEMENTARY][
@@ -63,7 +63,7 @@ export default function CurriculumQuickAssign({
         ],
         ...courseOfferings[MARKETING_AUDIENCE.ELEMENTARY][
           curriculumTypes.module
-        ]
+        ],
       };
       const hocData = {...courseOfferings[MARKETING_AUDIENCE.HOC]};
 
@@ -99,7 +99,7 @@ export default function CurriculumQuickAssign({
     sectionCourse,
     selectedCourseOffering,
     updateSection,
-    updateSectionCourseForExisitngSections
+    updateSectionCourseForExisitngSections,
   ]);
 
   const updateSectionCourseForExisitngSections = useCallback(
@@ -129,7 +129,7 @@ export default function CurriculumQuickAssign({
         versionId: courseVersionId,
         unitId: isStandaloneUnit ? null : sectionCourse.unitId,
         hasLessonExtras: targetUnit?.lesson_extras_available,
-        hasTextToSpeech: targetUnit?.text_to_speech_enabled
+        hasTextToSpeech: targetUnit?.text_to_speech_enabled,
       };
 
       updateSection('course', updateSectionData);
@@ -224,5 +224,5 @@ export default function CurriculumQuickAssign({
 CurriculumQuickAssign.propTypes = {
   updateSection: PropTypes.func.isRequired,
   sectionCourse: PropTypes.object,
-  isNewSection: PropTypes.bool
+  isNewSection: PropTypes.bool,
 };
