@@ -8,7 +8,7 @@ import i18n from '@cdo/locale';
 export default function SingleSectionSetUp({
   sectionNum,
   section,
-  updateSection
+  updateSection,
 }) {
   const gradeOptions = StudentGradeLevels.map(g => ({label: g, value: g}));
 
@@ -40,5 +40,5 @@ export default function SingleSectionSetUp({
 SingleSectionSetUp.propTypes = {
   sectionNum: PropTypes.number.isRequired,
   section: PropTypes.object.isRequired,
-  updateSection: PropTypes.func.isRequired
+  updateSection: PropTypes.func.isRequired,
 };

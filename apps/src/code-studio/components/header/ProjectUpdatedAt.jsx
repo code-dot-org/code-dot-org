@@ -12,7 +12,7 @@ class ProjectUpdatedAt extends React.Component {
   static propTypes = {
     status: PropTypes.oneOf(Object.values(statuses)),
     updatedAt: PropTypes.string,
-    onContentUpdated: PropTypes.func
+    onContentUpdated: PropTypes.func,
   };
 
   componentDidMount() {
@@ -71,11 +71,11 @@ class ProjectUpdatedAt extends React.Component {
 const styles = {
   container: {
     display: 'block',
-    textAlign: 'left'
-  }
+    textAlign: 'left',
+  },
 };
 
 export default connect(state => ({
   status: state.project.projectUpdatedStatus,
-  updatedAt: state.project.projectUpdatedAt
+  updatedAt: state.project.projectUpdatedAt,
 }))(ProjectUpdatedAt);

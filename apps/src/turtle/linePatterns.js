@@ -50,6 +50,6 @@ exports.load = function (assetUrl) {
     traintrackLine: assetUrl('media/common_images/traintrack.png'),
     traintrackMenu: assetUrl('media/common_images/traintrack-menuicon.png'),
     waterLine: assetUrl('media/common_images/water.png'),
-    waterMenu: assetUrl('media/common_images/water-menuicon.png')
+    waterMenu: assetUrl('media/common_images/water-menuicon.png'),
   };
 };

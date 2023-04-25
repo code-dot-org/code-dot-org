@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "phase1-design-system";
 
 $border-radius: 4px;
@@ -18,11 +19,11 @@ $container-width: 309px;
 }
 
 .curriculumCatalogCardContainer_english {
-  height: 24em;
+  height: 25em;
 }
 
 .curriculumCatalogCardContainer_notEnglish {
-  height: 26em;
+  height: 28em;
 }
 
 .curriculumInfoContainer {
@@ -45,38 +46,70 @@ $container-width: 309px;
   h4 {
     margin-bottom: 0.75em;
     color: $neutral_dark;
+
+    // Shows max two lines before truncating with ellipsis
+    // See https://css-tricks.com/line-clampin/
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 }
 
-.tagsAndTranslatabilityContainer {
+.labelsAndTranslatabilityContainer {
   display: flex;
+  column-gap: 0.25em;
   justify-content: space-between;
+  margin-bottom: 0.5em;
+  height: 1.5em;
 
   i {
-    margin-left: auto;
     font-size: 1.5em;
+  }
+}
+
+.labelsContainer {
+  display: flex;
+  column-gap: 0.5em;
+
+  > div {
+    // font styles
+    font-size: 0.75em;
+    line-height: 0.875em;
+    letter-spacing: 0.04em;
+    font-family: $gotham-bold, sans-serif;
+    text-transform: uppercase;
+    color: $neutral-dark;
+
+    // label styles
+    padding: 0.6em 0.75em 0 0.75em;
+    background-color: $brand_primary_light;
+    border-radius: 1em;
+
+    // ellipsis overflow
+    max-width: 15em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover {
+      max-width: inherit;
+      overflow: inherit;
+    }
   }
 }
 
 .iconWithDescription {
   display: flex;
-  margin: 0 0 0.5em 0;
   align-items: center;
+  column-gap: 0.5em;
+  margin: 0 0 0.5em 0;
 
-  .iconWithDescriptionText {
+  > p {
     font-size: 0.875em;
-    margin: 0 0 0 0.5em;
+    margin: 0;
     color: $neutral_dark;
   }
-}
-
-.overline {
-  color: $brand_primary_default;
-  margin-bottom: 0.5em;
-  font-size: 0.75em;
-  font-family: $gotham-bold;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .buttonsContainer {
@@ -91,7 +124,7 @@ $container-width: 309px;
 
   button {
     width: 100%;
-    height: 34px;
+    height: 40px;
     font-size: 1em;
   }
 }
@@ -102,7 +135,7 @@ $container-width: 309px;
   button {
     // width calculated to ensure space between buttons is 12px
     // (totalContainerWidth - 2*padding - minimumSpaceBetweenButtons) / 2
-    width: ($container-width - (2 * 16) - 12) / 2;
+    width: math.div($container-width - (2 * 16) - 12, 2);
     height: 40px;
     font-size: 1em;
   }

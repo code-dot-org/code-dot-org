@@ -12,7 +12,7 @@ import Button from '../Button';
 import TextResponsesLessonSelector from '@cdo/apps/templates/textResponses/TextResponsesLessonSelector';
 import {
   setScriptId,
-  getSelectedScriptName
+  getSelectedScriptName,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {loadTextResponsesFromServer} from '@cdo/apps/templates/textResponses/textReponsesDataApi';
 
@@ -21,7 +21,7 @@ const CSV_HEADERS = [
   {label: i18n.lesson(), key: 'lesson'},
   {label: i18n.puzzle(), key: 'puzzle'},
   {label: i18n.question(), key: 'question'},
-  {label: i18n.response(), key: 'response'}
+  {label: i18n.response(), key: 'response'},
 ];
 const PADDING = 8;
 
@@ -30,7 +30,7 @@ function TextResponses({
   coursesWithProgress,
   scriptId,
   scriptName,
-  setScriptId
+  setScriptId,
 }) {
   const [textResponsesByScript, setTextResponsesByScript] = useState({});
   const [isLoadingResponses, setIsLoadingResponses] = useState(false);
@@ -72,7 +72,7 @@ function TextResponses({
     (scriptId, textResponses) => {
       const newTextResponsesByScript = {
         ...textResponsesByScript,
-        [scriptId]: textResponses
+        [scriptId]: textResponses,
       };
       setTextResponsesByScript(newTextResponsesByScript);
     },
@@ -90,7 +90,7 @@ function TextResponses({
   if (filterByLessonName) {
     filteredResponses = filter(filteredResponses, [
       'lesson',
-      filterByLessonName
+      filterByLessonName,
     ]);
   }
 
@@ -145,15 +145,15 @@ TextResponses.propTypes = {
   coursesWithProgress: PropTypes.array.isRequired,
   scriptId: PropTypes.number,
   scriptName: PropTypes.string,
-  setScriptId: PropTypes.func.isRequired
+  setScriptId: PropTypes.func.isRequired,
 };
 
 const styles = {
   header: {
-    marginBottom: 0
+    marginBottom: 0,
   },
   unitSelection: {
-    marginTop: 30
+    marginTop: 30,
   },
   actionRow: {
     height: 47,
@@ -162,15 +162,15 @@ const styles = {
     backgroundColor: color.table_header,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   buttonContainer: {
     display: 'flex',
-    textDecoration: 'none'
+    textDecoration: 'none',
   },
   table: {
-    paddingTop: PADDING / 4
-  }
+    paddingTop: PADDING / 4,
+  },
 };
 
 export const UnconnectedTextResponses = TextResponses;
@@ -180,11 +180,11 @@ export default connect(
     sectionId: state.teacherSections.selectedSectionId,
     coursesWithProgress: state.unitSelection.coursesWithProgress,
     scriptId: state.unitSelection.scriptId,
-    scriptName: getSelectedScriptName(state)
+    scriptName: getSelectedScriptName(state),
   }),
   dispatch => ({
     setScriptId(scriptId) {
       dispatch(setScriptId(scriptId));
-    }
+    },
   })
 )(TextResponses);

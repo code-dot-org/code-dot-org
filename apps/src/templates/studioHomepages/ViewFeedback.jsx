@@ -24,5 +24,5 @@ const ViewFeedback = ({isProfessionalLearningCourse}) => (
 export default ViewFeedback;
 
 ViewFeedback.propTypes = {
-  isProfessionalLearningCourse: PropTypes.bool
+  isProfessionalLearningCourse: PropTypes.bool,
 };

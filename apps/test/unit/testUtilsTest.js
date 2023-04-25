@@ -25,7 +25,7 @@ describe('forEveryBooleanPermutation', function () {
       [false, false],
       [false, true],
       [true, false],
-      [true, true]
+      [true, true],
     ];
     forEveryBooleanPermutation((a, b) => {
       expect([a, b]).to.deep.equal(expectedInvocations[0]);
@@ -43,7 +43,7 @@ describe('forEveryBooleanPermutation', function () {
       [true, false, false],
       [true, false, true],
       [true, true, false],
-      [true, true, true]
+      [true, true, true],
     ];
     forEveryBooleanPermutation((a, b, c) => {
       expect([a, b, c]).to.deep.equal(expectedInvocations[0]);

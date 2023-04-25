@@ -6,15 +6,15 @@ import {
   stubRedux,
   restoreRedux,
   getStore,
-  registerReducers
+  registerReducers,
 } from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
 import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityEditor';
 import FoormFormSaveBar, {
-  UnconnectedFoormFormSaveBar
+  UnconnectedFoormFormSaveBar,
 } from '@cdo/apps/code-studio/pd/foorm/editor/form/FoormFormSaveBar';
 import foorm, {
-  setFormData
+  setFormData,
 } from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
 import sinon from 'sinon';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
@@ -44,7 +44,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
     const SaveBar = React.createElement(FoormFormSaveBar, {
       resetCodeMirror: () => {},
       formCategories: ['surveys/pd', 'surveys/teacher'],
-      isLatestVersion: true
+      isLatestVersion: true,
     });
 
     defaultProps = {
@@ -56,7 +56,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
       headerTitle: HeaderTitle,
       validateURL: '/a/fake/url',
       validateDataKey: 'a_string',
-      saveBar: SaveBar
+      saveBar: SaveBar,
     };
   });
 
@@ -79,7 +79,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
     published: false,
     name: 'sample_form_name',
     version: 0,
-    id: 0
+    id: 0,
   };
 
   const samplePublishedFormData = {
@@ -87,7 +87,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
     published: true,
     name: 'sample_form_name',
     version: 0,
-    id: 1
+    id: 1,
   };
 
   const sampleNewFormData = {
@@ -95,7 +95,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
     published: null,
     name: null,
     version: null,
-    id: null
+    id: null,
   };
 
   const sampleSaveData = {
@@ -103,7 +103,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
     name: 'sample_form_name',
     version: 0,
     questions: '{}',
-    published: false
+    published: false,
   };
 
   it('can save draft form', () => {
@@ -114,7 +114,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
     server.respondWith('PUT', `/foorm/forms/0/update_questions`, [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(sampleSaveData)
+      JSON.stringify(sampleSaveData),
     ]);
 
     const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
@@ -146,7 +146,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
     server.respondWith('PUT', publishUrl, [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(sampleSaveData)
+      JSON.stringify(sampleSaveData),
     ]);
 
     const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
@@ -187,7 +187,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
     server.respondWith('PUT', `/foorm/forms/0/update_questions`, [
       500,
       {'Content-Type': 'application/json'},
-      'Save error'
+      'Save error',
     ]);
 
     const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
@@ -223,7 +223,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
     server.respondWith('PUT', url, [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(sampleSaveData)
+      JSON.stringify(sampleSaveData),
     ]);
 
     const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
@@ -277,7 +277,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
     const SaveBarNotLatestVersion = React.createElement(FoormFormSaveBar, {
       resetCodeMirror: () => {},
       formCategories: ['surveys/pd', 'surveys/teacher'],
-      isLatestVersion: false
+      isLatestVersion: false,
     });
     const wrapper = createWrapper({saveBar: SaveBarNotLatestVersion});
 
@@ -387,7 +387,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
     server.respondWith('POST', `/foorm/forms`, [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(sampleSaveData)
+      JSON.stringify(sampleSaveData),
     ]);
 
     // expect to see no form name

@@ -4,7 +4,7 @@ type 'multi2'
 right 'Touchscreen'
 right 'Microphone'
 wrong 'Speaker'
-wrong 'Flashlight'
+wrong 'Monitor'
 wrong 'All of the above'
 
 teacher_markdown <<MARKDOWN

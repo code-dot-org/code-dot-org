@@ -17,7 +17,7 @@ export class UnconnectedRemoveLessonDialog extends Component {
     handleClose: PropTypes.func.isRequired,
 
     // provided by redux
-    removeLesson: PropTypes.func.isRequired
+    removeLesson: PropTypes.func.isRequired,
   };
 
   handleConfirm = () => {
@@ -49,6 +49,6 @@ export class UnconnectedRemoveLessonDialog extends Component {
 }
 
 const RemoveLessonDialog = connect(state => ({}), {
-  removeLesson
+  removeLesson,
 })(UnconnectedRemoveLessonDialog);
 export default RemoveLessonDialog;

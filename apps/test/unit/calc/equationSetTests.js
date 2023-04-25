@@ -272,7 +272,7 @@ describe('EquationSet', function () {
       // f(x,y) = ((2 * x) + y)
       var fnExpression = new ExpressionNode('+', [
         new ExpressionNode('*', [2, 'x']),
-        new ExpressionNode('y')
+        new ExpressionNode('y'),
       ]);
 
       var set = new EquationSet();
@@ -329,7 +329,7 @@ describe('EquationSet', function () {
       );
       var computeExpression = new ExpressionNode('+', [
         new ExpressionNode('f', [1]),
-        new ExpressionNode('g', [2])
+        new ExpressionNode('g', [2]),
       ]);
       set.addEquation_(new Equation(null, [], computeExpression));
 
@@ -343,7 +343,7 @@ describe('EquationSet', function () {
 
       var otherExpression = new ExpressionNode('+', [
         new ExpressionNode('f', [2]),
-        new ExpressionNode('g', [2])
+        new ExpressionNode('g', [2]),
       ]);
       evaluation = set.evaluateWithExpression(otherExpression);
       assert(!evaluation.err);
@@ -359,7 +359,7 @@ describe('EquationSet', function () {
       set.addEquation_(new Equation('myvar', [], new ExpressionNode(1)));
       var computeEquation = new ExpressionNode('+', [
         new ExpressionNode('f', [1]),
-        new ExpressionNode('myvar')
+        new ExpressionNode('myvar'),
       ]);
       set.addEquation_(new Equation(null, [], computeEquation));
 

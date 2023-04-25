@@ -42,8 +42,6 @@ const useSections = section => {
         ]
   );
 
-  // create a set state that creates a list using the section you gave me.
-
   const updateSection = (sectionIdx, keyToUpdate, val) => {
     const newSections = sections.map((section, idx) => {
       if (idx === sectionIdx) {

@@ -10,7 +10,8 @@ theme: responsive
 
 - Pre vašu školu odporúčame internetové pripojenie s minimálnou rýchlosťou 15 MBit/s.
 - Najmenšia podporovaná veľkosť obrazovky je 1024 x 728 px.
-- Na naše kurzy pre základné a stredné školy – CS Discoveries (Informatické objavy), CS Principles (Princípy informatiky) a Intro to App Lab (Úvod do laboratória aplikácií), budete potrebovať stolný počítač či laptop s myšou (alebo touchpadom) a klávesnicu. Tieto kurzy zvyčajne nie sú podporované na tabletoch a mobilných zariadeniach. Výnimky týkajúce sa konkrétnych zariadení nájdete v časti „Podrobnosti o podpore mobilných zariadení a tabletov“ nižšie.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Výnimky týkajúce sa konkrétnych zariadení nájdete v časti „Podrobnosti o podpore mobilných zariadení a tabletov“ nižšie.
 - Všetok ďalší obsah, napríklad kurzy pre deti od 5 rokov (Základy informatiky) a aktivity v rámci Hodiny kódu je kompatibilný so všetkými modernými tabletmi, laptopmi a stolovými počítačmi, ale aj s iPadmi a Chromebookmi.
 - Chcete vedieť viac o podpore mobilných zariadení? Čítajte ďalej.
 
@@ -82,12 +83,12 @@ Pre ten najlepší zážitok zo stránky Code.org odporúčame konzultovať spr�
 
 ## Podrobnosti o podpore mobilných zariadení a tabletov
 
-Žiadny z kurzov CS Discoveries (Informatické objavy), CS Principles (Principles informatiky) a Intro to App Lab (Úvod do laboratória aplikácií) nie je kompatibilný s tabletmi ani mobilnými zariadeniami – vyžaduje sa plnohodnotná klávesnica a myš (alebo touchpad na MacBook-u). Väčšina tabletov nie je podporovaná, až na nasledovné výnimky:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Väčšina tabletov nie je podporovaná, až na nasledovné výnimky:
 
 - Microsoft Surface Pro s externou klávesnicou
 - iPad so systémom iPadOS 13.4 alebo novším a s externou klávesnicou, externou myšou alebo touchpadom.
 
-Všetok ďalší obsah, napríklad kurzy pre deti od 5 rokov (Základy informatiky) a aktivity v rámci Hodiny kódu je kompatibilný so všetkými modernými tabletmi, laptopmi a stolovými počítačmi, ale aj s iPadmi a Chromebookmi.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### Mobilné telefóny
 
