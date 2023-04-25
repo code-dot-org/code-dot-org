@@ -104,7 +104,7 @@ class UnconnectedMusicView extends React.Component {
     // correct approach.
     window.addEventListener('beforeunload', event => {
       this.analyticsReporter.endSession();
-      // force a save before the page unloads, if there are unsaved changes.
+      // Force a save before the page unloads, if there are unsaved changes.
       // If we need to force a save, prevent navigation so we can save first.
       if (this.musicBlocklyWorkspace.hasUnsavedChanges()) {
         this.musicBlocklyWorkspace.saveCode(true);

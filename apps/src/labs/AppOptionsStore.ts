@@ -1,4 +1,6 @@
-// Load and parse app options data for a given level.
+/**
+ * The AppOptionsStore loads and stores the app options for the current level.
+ */
 import {AppOptions, ProjectType} from './types';
 
 export class AppOptionsStore {

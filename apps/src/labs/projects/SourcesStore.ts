@@ -1,3 +1,8 @@
+/**
+ * This file contains the SourcesStore interface and the local and remote implementations
+ * of the SourcesStore. A SourcesStore manages the loading and
+ * saving of sources to the appropriate location.
+ */
 import {Source} from '../types';
 import * as sourcesApi from './sourcesApi';
 const {getTabId} = require('@cdo/apps/utils');
@@ -23,7 +28,7 @@ export class LocalSourcesStore implements SourcesStore {
   }
 }
 
-export class S3SourcesStore implements SourcesStore {
+export class RemoteSourcesStore implements SourcesStore {
   private readonly newVersionInterval: number = 15 * 60 * 1000; // 15 minutes
   private currentVersionId: string | null = null;
   private firstSaveTime: string | null = null;

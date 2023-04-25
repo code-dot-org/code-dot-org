@@ -21,7 +21,7 @@ import {
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
 import ProjectManagerFactory from '@cdo/apps/labs/projects/ProjectManagerFactory';
-import {ProjectManagerType} from '@cdo/apps/labs/types';
+import {ProjectManagerStorageType} from '@cdo/apps/labs/types';
 import FieldChord from './FieldChord';
 import {Renderers} from '@cdo/apps/blockly/constants';
 
@@ -408,14 +408,14 @@ export default class MusicBlocklyWorkspace {
 
     if (storageType === REMOTE_STORAGE) {
       return ProjectManagerFactory.getProjectManager(
-        ProjectManagerType.S3,
+        ProjectManagerStorageType.REMOTE,
         appOptions,
         appOptions.channel,
         this.getProject.bind(this)
       );
     } else {
       return ProjectManagerFactory.getProjectManager(
-        ProjectManagerType.LOCAL,
+        ProjectManagerStorageType.LOCAL,
         appOptions,
         this.getLocalStorageKeyName(),
         this.getProject.bind(this)

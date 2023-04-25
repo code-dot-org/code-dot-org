@@ -129,7 +129,7 @@ export type StandaloneAppName =
   | 'time_capsule'
   | 'dance';
 
-export enum ProjectManagerType {
+export enum ProjectManagerStorageType {
   LOCAL = 'LOCAL',
-  S3 = 'S3',
+  REMOTE = 'REMOTE',
 }

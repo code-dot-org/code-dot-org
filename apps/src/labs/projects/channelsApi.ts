@@ -1,3 +1,8 @@
+/**
+ * API for getting and updating channels via the code.org dashboard. A channel contains
+ * metadata about a project.
+ */
+
 import {Channel} from '../types';
 
 const rootUrl = '/v3/channels';

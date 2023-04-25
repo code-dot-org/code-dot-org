@@ -1,3 +1,8 @@
+/**
+ * API for loading and saving sources via the code.org dashboard, which saves to S3.
+ * A source is the code of a project.
+ */
+
 import {Source, SourceUpdateOptions} from '../types';
 import {SOURCE_FILE} from '../constants';
 const {stringifyQueryParams} = require('@cdo/apps/utils');

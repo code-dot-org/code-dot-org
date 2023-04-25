@@ -1,3 +1,7 @@
+/**
+ * This file contains the ChannelsStore interface and the local and remote implementations
+ * of the ChannelStore. A ChannelsStore manages the loading and saving of channels.
+ */
 import {Channel, DefaultChannel} from '../types';
 import * as channelsApi from './channelsApi';
 
@@ -20,7 +24,7 @@ export class LocalChannelsStore implements ChannelsStore {
   }
 }
 
-export class S3ChannelsStore implements ChannelsStore {
+export class RemoteChannelsStore implements ChannelsStore {
   defaultChannel: DefaultChannel = {name: 'New Project'};
 
   load(channelId: string) {
