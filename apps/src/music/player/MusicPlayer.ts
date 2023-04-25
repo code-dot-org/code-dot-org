@@ -106,7 +106,7 @@ export default class MusicPlayer {
       effects,
       length: soundData.length,
       soundType: soundData.type,
-      blockId
+      blockId,
     };
 
     this.addNewEvent(soundEvent);
@@ -145,7 +145,8 @@ export default class MusicPlayer {
       skipContext,
       effects,
       length: constants.DEFAULT_PATTERN_LENGTH,
-      blockId
+      blockId,
+      id: JSON.stringify(value),
     };
 
     this.addNewEvent(patternEvent);
@@ -184,7 +185,8 @@ export default class MusicPlayer {
       skipContext,
       effects,
       length: constants.DEFAULT_CHORD_LENGTH,
-      blockId
+      blockId,
+      id: JSON.stringify(value),
     };
 
     this.addNewEvent(chordEvent);
@@ -200,17 +202,18 @@ export default class MusicPlayer {
    * @param id unique ID of the sound
    * @param onStop called when the sound finished playing
    */
-  previewSound(id: string, onStop?: () => any) {
+  previewSound(id: string, onStop?: () => void) {
     this.samplePlayer.previewSample(id, onStop);
   }
 
-  previewChord(chordValue: ChordEventValue, onStop?: () => any) {
+  previewChord(chordValue: ChordEventValue, onStop?: () => void) {
     const chordEvent: ChordEvent = {
       type: 'chord',
       when: 1,
       value: chordValue,
       triggered: false,
-      length: constants.DEFAULT_CHORD_LENGTH
+      length: constants.DEFAULT_CHORD_LENGTH,
+      id: 'preview',
     };
     this.samplePlayer.previewSamples(
       this.convertEventToSamples(chordEvent),
@@ -218,7 +221,7 @@ export default class MusicPlayer {
     );
   }
 
-  previewNote(note: number, instrument: string, onStop?: () => any) {
+  previewNote(note: number, instrument: string, onStop?: () => void) {
     const sampleId = this.getSampleForNote(note, instrument);
     if (sampleId === null) {
       return;
@@ -227,13 +230,14 @@ export default class MusicPlayer {
     this.previewSound(sampleId, onStop);
   }
 
-  previewPattern(patternValue: PatternEventValue, onStop?: () => any) {
+  previewPattern(patternValue: PatternEventValue, onStop?: () => void) {
     const patternEvent: PatternEvent = {
       type: 'pattern',
       when: 1,
       value: patternValue,
       triggered: false,
-      length: constants.DEFAULT_PATTERN_LENGTH
+      length: constants.DEFAULT_PATTERN_LENGTH,
+      id: 'preview',
     };
 
     this.samplePlayer.previewSamples(
@@ -270,7 +274,7 @@ export default class MusicPlayer {
   }
 
   /**
-   * Clear all from the list of playback events, and stop any sounds that have 
+   * Clear all from the list of playback events, and stop any sounds that have
    * not yet been played, if playback is in progress.
    */
   clearAllEvents() {
@@ -351,7 +355,7 @@ export default class MusicPlayer {
       name,
       insideWhenRun,
       currentMeasure: measureStart,
-      maxConcurrentSounds: 0
+      maxConcurrentSounds: 0,
     };
   }
 
@@ -375,7 +379,7 @@ export default class MusicPlayer {
     const {currentMeasure, insideWhenRun} = this.tracksMetadata[trackId];
     let maxSoundLength = 0;
 
-    for (let soundId of soundIds) {
+    for (const soundId of soundIds) {
       this.playSoundAtMeasureById(
         soundId,
         currentMeasure,
@@ -447,7 +451,10 @@ export default class MusicPlayer {
 
   private addNewEvent(event: PlaybackEvent) {
     this.playbackEvents.push(event);
-    this.lastMeasure = Math.max(this.lastMeasure, event.when + event.length - 1);
+    this.lastMeasure = Math.max(
+      this.lastMeasure,
+      event.when + event.length - 1
+    );
   }
 
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
@@ -462,8 +469,8 @@ export default class MusicPlayer {
           sampleId: soundEvent.id,
           offsetSeconds: this.convertPlayheadPositionToSeconds(soundEvent.when),
           triggered: soundEvent.triggered,
-          effects: soundEvent.effects
-        }
+          effects: soundEvent.effects,
+        },
       ];
     } else if (event.type === 'pattern') {
       const patternEvent = event as PatternEvent;
@@ -472,14 +479,14 @@ export default class MusicPlayer {
 
       const kit = patternEvent.value.kit;
 
-      for (let event of patternEvent.value.events) {
+      for (const event of patternEvent.value.events) {
         const resultEvent = {
           sampleId: `${kit}/${event.src}`,
           offsetSeconds: this.convertPlayheadPositionToSeconds(
             patternEvent.when + (event.tick - 1) / 16
           ),
           triggered: patternEvent.triggered,
-          effects: patternEvent.effects
+          effects: patternEvent.effects,
         };
 
         results.push(resultEvent);
@@ -487,9 +494,8 @@ export default class MusicPlayer {
 
       return results;
     } else if (event.type === 'chord') {
-      const results: SampleEvent[] = this.convertChordEventToSampleEvents(
-        event
-      );
+      const results: SampleEvent[] =
+        this.convertChordEventToSampleEvents(event);
       return results;
     }
 
@@ -522,7 +528,7 @@ export default class MusicPlayer {
         results.push({
           sampleId,
           offsetSeconds: this.convertPlayheadPositionToSeconds(noteWhen),
-          ...event
+          ...event,
         });
       }
     });
@@ -536,9 +542,8 @@ export default class MusicPlayer {
       return null;
     }
 
-    const folder: SoundFolder | null = this.library.getFolderForPath(
-      instrument
-    );
+    const folder: SoundFolder | null =
+      this.library.getFolderForPath(instrument);
 
     if (folder === null) {
       console.warn(`No instrument ${instrument}`);

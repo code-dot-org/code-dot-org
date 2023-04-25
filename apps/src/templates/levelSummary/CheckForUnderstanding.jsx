@@ -1,11 +1,14 @@
-import React from 'react';
+import React, {useCallback, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 import styles from './check-for-understanding.module.scss';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const FREE_RESPONSE = 'FreeResponse';
 
@@ -17,10 +20,13 @@ const CheckForUnderstanding = ({
   selectedSection,
   students,
   currentLevelId,
-  levels
+  levels,
 }) => {
   const currentLevel = levels.find(l => l.activeId === currentLevelId);
   const nextLevel = levels.find(l => l.position === currentLevel.position + 1);
+  const sectionParam = selectedSection?.id
+    ? `?section_id=${selectedSection.id}`
+    : '';
 
   // To avoid confusion, if a teacher tries to view the summary as a student,
   // send them back to the level in Participant mode instead.
@@ -32,15 +38,49 @@ const CheckForUnderstanding = ({
   const teacherMarkdown = scriptData.teacher_markdown;
   const height = scriptData.level.height || '80';
 
+  const logEvent = useCallback(eventName => {
+    const {level} = scriptData;
+    analyticsReporter.sendEvent(eventName, {
+      levelId: level.id,
+      levelName: level.name,
+      levelType: level.type,
+      sectionSelected: !!selectedSection,
+      ...scriptData.reportingData,
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    logEvent(EVENTS.SUMMARY_PAGE_LOADED);
+  }, [logEvent]);
+
+  const onBackToLevelClick = e => {
+    e.preventDefault();
+    logEvent(EVENTS.SUMMARY_PAGE_BACK_TO_LEVEL_CLICKED);
+    window.location.href = currentLevel.url + sectionParam;
+  };
+
+  const onNextLevelClick = e => {
+    e.preventDefault();
+    logEvent(EVENTS.SUMMARY_PAGE_NEXT_LEVEL_CLICKED);
+    window.location.href = nextLevel.url + sectionParam;
+  };
+
   return (
     <div className={styles.summaryContainer}>
       {/* Top Nav Links */}
       <p className={styles.navLinks}>
-        <a href={currentLevel.url}>&lt; {i18n.backToLevel()}</a>
+        <a
+          href={`${currentLevel.url}${sectionParam}`}
+          onClick={onBackToLevelClick}
+        >
+          &lt; {i18n.backToLevel()}
+        </a>
         {nextLevel && (
           <a
             className={isRtl ? styles.navLinkLeft : styles.navLinkRight}
-            href={nextLevel.url}
+            href={`${nextLevel.url}${sectionParam}`}
+            onClick={onNextLevelClick}
           >
             {i18n.nextLevelLink()} &gt;
           </a>
@@ -77,19 +117,23 @@ const CheckForUnderstanding = ({
       <div className={styles.studentResponses}>
         <h2>{i18n.studentResponses()}</h2>
 
-        <div
-          className={
-            isRtl ? styles.studentsSubmittedLeft : styles.studentsSubmittedRight
-          }
-        >
-          <p>
-            <i className="fa fa-user" />
-            <span>
-              {scriptData.responses.length}/{students.length}{' '}
-              {i18n.studentsAnswered()}
-            </span>
-          </p>
-        </div>
+        {selectedSection && (
+          <div
+            className={
+              isRtl
+                ? styles.studentsSubmittedLeft
+                : styles.studentsSubmittedRight
+            }
+          >
+            <p>
+              <i className="fa fa-user" />
+              <span>
+                {scriptData.responses.length}/{students.length}{' '}
+                {i18n.studentsAnswered()}
+              </span>
+            </p>
+          </div>
+        )}
 
         <label>
           {i18n.responsesForClassSection()}
@@ -104,6 +148,16 @@ const CheckForUnderstanding = ({
           ))}
         </div>
       </div>
+
+      {/* Feedback sharing banner */}
+      <Notification
+        type={NotificationType.feedback}
+        notice={i18n.feedbackShareBannerTitle()}
+        details={i18n.feedbackShareBannerDesc()}
+        buttonText={i18n.feedbackShareBannerButton()}
+        buttonLink={'https://forms.gle/XsjRL9L3Mo5aC3KbA'}
+        dismissible={false}
+      />
 
       {/* Teacher Instructions */}
       {teacherMarkdown && (
@@ -126,21 +180,21 @@ CheckForUnderstanding.propTypes = {
   viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
   selectedSection: PropTypes.shape({
     id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired
+    name: PropTypes.string.isRequired,
   }),
   students: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      name: PropTypes.string
+      name: PropTypes.string,
     })
   ),
   currentLevelId: PropTypes.string,
   levels: PropTypes.arrayOf(
     PropTypes.shape({
       activeId: PropTypes.string.isRequired,
-      position: PropTypes.number.isRequired
+      position: PropTypes.number.isRequired,
     })
-  )
+  ),
 };
 
 export default connect(
@@ -159,7 +213,7 @@ export default connect(
         state.teacherSections.sections[state.teacherSections.selectedSectionId],
       students: state.teacherSections.selectedStudents,
       currentLevelId: state.progress.currentLevelId,
-      levels: currentLesson.levels
+      levels: currentLesson.levels,
     };
   }
 )(CheckForUnderstanding);

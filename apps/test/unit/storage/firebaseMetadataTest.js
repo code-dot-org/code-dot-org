@@ -4,12 +4,12 @@ import {
   deleteColumnName,
   renameColumnName,
   getColumnNamesSnapshot,
-  onColumnsChange
+  onColumnsChange,
 } from '@cdo/apps/storage/firebaseMetadata';
 import {
   init,
   getProjectDatabase,
-  getConfigRef
+  getConfigRef,
 } from '@cdo/apps/storage/firebaseUtils';
 
 describe('firebaseMetadata', () => {
@@ -18,19 +18,19 @@ describe('firebaseMetadata', () => {
       channelId: 'test-firebase-channel-id',
       firebaseName: 'test-firebase-name',
       firebaseAuthToken: 'test-firebase-auth-token',
-      showRateLimitAlert: () => {}
+      showRateLimitAlert: () => {},
     });
     getProjectDatabase().autoFlush();
     return getConfigRef()
       .set({
         limits: {
-          '15': 5,
-          '60': 10
+          15: 5,
+          60: 10,
         },
         maxRecordSize: 100,
         maxPropertySize: 100,
         maxTableRows: 20,
-        maxTableCount: 3
+        maxTableCount: 3,
       })
       .then(() => {
         getProjectDatabase().set(null);
@@ -84,7 +84,7 @@ describe('firebaseMetadata', () => {
       ['foo'],
       ['foo', 'bar'],
       ['foo', 'baz'],
-      ['baz']
+      ['baz'],
     ];
     onColumnsChange(getProjectDatabase(), 'mytable', columnNames => {
       expect(columnNames).to.deep.equal(expectedNames[count]);

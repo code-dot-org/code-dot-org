@@ -9,7 +9,7 @@ import experiments from '@cdo/apps/util/experiments';
 import Sounds from '../../Sounds';
 import {
   LegacyErrorDialog,
-  LegacySuccessDialog
+  LegacySuccessDialog,
 } from '@cdo/apps/lib/ui/LegacyDialogContents';
 import i18n from '@cdo/locale';
 
@@ -35,7 +35,7 @@ export function showDialog(component, callback, onHidden) {
     // Content is a div with a specific expected structure. See LegacyDialog.
     body: content,
     onHidden,
-    autoResizeScrollableElement: '.scrollable-element'
+    autoResizeScrollableElement: '.scrollable-element',
   });
 
   // Note: This approach of rendering a React component to the dom and then
@@ -44,7 +44,7 @@ export function showDialog(component, callback, onHidden) {
   // Clicking the okay button in the dialog box dismisses it, and calls the callback.
   $(content)
     .find('#ok-button')
-    .click(function() {
+    .click(function () {
       dialog.hide();
       if (callback) {
         callback();
@@ -54,7 +54,7 @@ export function showDialog(component, callback, onHidden) {
   // Clicking the cancel button in the dialog box dismisses it.
   $(content)
     .find('#cancel-button')
-    .click(function() {
+    .click(function () {
       dialog.hide();
     });
 
@@ -75,7 +75,7 @@ function adjustScroll() {
   if (winPos < elPos) {
     $('html, body').animate(
       {
-        scrollTop: $('.submitButton:first').offset().top - 10
+        scrollTop: $('.submitButton:first').offset().top - 10,
       },
       1000
     );
@@ -141,8 +141,9 @@ export function processResults(onComplete, beforeHook) {
       pass: result,
       testResult: testResult,
       submitted: submitted,
-      onComplete: function() {
-        var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
+      onComplete: function () {
+        var lastServerResponse =
+          window.dashboard.reporting.getLastServerResponse();
         var willRedirect = !!lastServerResponse.nextRedirect;
         if (onComplete) {
           onComplete(willRedirect);
@@ -168,13 +169,14 @@ export function processResults(onComplete, beforeHook) {
           const dialog = new LegacyDialog({
             body: body,
             width: 800,
-            redirect: lastServerResponse.nextRedirect
+            redirect: lastServerResponse.nextRedirect,
           });
           dialog.show();
         } else if (lastServerResponse.nextRedirect) {
           if (appOptions.dialog.shouldShowDialog) {
             showDialog(getSuccessDialog(appOptions), null, () => {
-              var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
+              var lastServerResponse =
+                window.dashboard.reporting.getLastServerResponse();
               if (lastServerResponse.nextRedirect) {
                 window.location.href = lastServerResponse.nextRedirect;
               }
@@ -183,7 +185,7 @@ export function processResults(onComplete, beforeHook) {
             window.location.href = lastServerResponse.nextRedirect;
           }
         }
-      }
+      },
     });
   }
 }

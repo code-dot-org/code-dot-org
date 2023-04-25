@@ -208,11 +208,13 @@
         },
         "CSD U1 processing live_2021": {
           "bear": "熊",
-          "rat": "老鼠"
+          "rat": "老鼠",
+          "walking": "行走"
         },
         "CSD U1 processing live_2022": {
           "bear": "熊",
-          "rat": "老鼠"
+          "rat": "老鼠",
+          "walking": "行走"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "叮咚！答对啦！",
@@ -447,7 +449,7 @@
           "yellow": "黄色",
           "green": "绿色",
           "blue": "蓝色",
-          "orange": "桔子"
+          "orange": "橙子"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "quiet": "安静",

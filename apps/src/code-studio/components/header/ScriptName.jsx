@@ -13,7 +13,7 @@ class ScriptName extends React.Component {
     showProjectUpdatedAt: PropTypes.bool,
     width: PropTypes.number,
     setDesiredWidth: PropTypes.func,
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   getFullWidth() {
@@ -121,23 +121,23 @@ const styles = {
   headerContainer: {
     position: 'relative',
     overflow: 'hidden',
-    height: 40
+    height: 40,
   },
   headerInner: {
-    position: 'absolute'
+    position: 'absolute',
   },
   scriptLinkWithUpdatedAt: {
-    display: 'block'
+    display: 'block',
   },
   outerContainer: {
-    textAlign: 'right'
+    textAlign: 'right',
   },
   containerWithUpdatedAt: {
     verticalAlign: 'bottom',
-    display: 'inline-block'
-  }
+    display: 'inline-block',
+  },
 };
 
 export default connect(state => ({
-  showProjectUpdatedAt: state.project.showProjectUpdatedAt
+  showProjectUpdatedAt: state.project.showProjectUpdatedAt,
 }))(ScriptName);

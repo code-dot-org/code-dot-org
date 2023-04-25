@@ -8,13 +8,13 @@ import Playground from 'playground-io';
 let thermometerRawValue;
 const PlaygroundThermometer = {
   initialize: {
-    value: function() {
+    value: function () {
       Playground.Thermometer.initialize.value.apply(this, arguments);
       const rawValueDescriptor = {
         enumerable: true,
-        get: function() {
+        get: function () {
           return thermometerRawValue;
-        }
+        },
       };
       if (!this.hasOwnProperty('raw')) {
         Object.defineProperty(this, 'raw', rawValueDescriptor);
@@ -22,13 +22,13 @@ const PlaygroundThermometer = {
       if (!this.hasOwnProperty('value')) {
         Object.defineProperty(this, 'value', rawValueDescriptor);
       }
-    }
+    },
   },
   toCelsius: {
-    value: function(raw) {
+    value: function (raw) {
       thermometerRawValue = raw;
       return Playground.Thermometer.toCelsius.value(raw);
-    }
-  }
+    },
+  },
 };
 export default PlaygroundThermometer;

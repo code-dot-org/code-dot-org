@@ -11,7 +11,7 @@
 import {getResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {
   sendReport,
-  getLastServerResponse
+  getLastServerResponse,
 } from '@cdo/apps/code-studio/reporting';
 import {TestResults} from '@cdo/apps/constants';
 
@@ -49,7 +49,7 @@ export function onContinue() {
     result: result.result,
     pass: true,
     testResult: TestResults.ALL_PASS,
-    onComplete: function() {
+    onComplete: function () {
       const lastServerResponse = getLastServerResponse();
       let url = lastServerResponse && lastServerResponse.nextRedirect;
       if (!url) {
@@ -58,6 +58,6 @@ export function onContinue() {
       }
 
       window.location.href = url;
-    }
+    },
   });
 }

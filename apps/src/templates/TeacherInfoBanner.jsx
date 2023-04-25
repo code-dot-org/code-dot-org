@@ -42,35 +42,35 @@ const infoBannerButtonShape = {
   onClick: PropTypes.func,
   href: PropTypes.string,
   disabled: PropTypes.bool,
-  isHidden: PropTypes.bool
+  isHidden: PropTypes.bool,
 };
 
 TeacherInfoBanner.propTypes = {
   header: PropTypes.string.isRequired,
   primaryButton: PropTypes.shape(infoBannerButtonShape),
   secondaryButton: PropTypes.shape(infoBannerButtonShape),
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export default TeacherInfoBanner;
 
 const styles = {
   heading: {
-    marginTop: 25
+    marginTop: 25,
   },
   button: {
     marginLeft: 7,
     marginRight: 7,
-    marginTop: 15
+    marginTop: 15,
   },
   clear: {
-    clear: 'both'
+    clear: 'both',
   },
   header: {
     marginTop: 10,
     marginBottom: 5,
     marginLeft: 20,
-    marginRight: 20
+    marginRight: 20,
   },
   main: {
     borderWidth: 1,
@@ -78,13 +78,13 @@ const styles = {
     borderColor: color.teal,
     minHeight: 72,
     backgroundColor: color.white,
-    overflowWrap: 'break-word'
+    overflowWrap: 'break-word',
   },
   message: {
     marginTop: 0,
     marginBottom: 20,
     marginLeft: 20,
     marginRight: 20,
-    fontSize: 14
-  }
+    fontSize: 14,
+  },
 };

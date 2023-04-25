@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-22 23:40:55 UTC",
+    "serialized_at": "2023-04-20 16:46:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2841,6 +2841,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd1_2023"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -2965,16 +2968,6 @@
       },
       "seeding_key": {
         "resource.key": "code_org_how-to_videos"
-      }
-    },
-    {
-      "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view\t",
-      "key": "csd_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide"
       }
     },
     {
@@ -3489,12 +3482,6 @@
     {
       "seeding_key": {
         "resource.key": "all_standards_2",
-        "script.name": "focus-on-data1-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
         "script.name": "focus-on-data1-2023"
       }
     },

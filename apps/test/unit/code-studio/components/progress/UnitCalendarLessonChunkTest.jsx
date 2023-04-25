@@ -15,7 +15,7 @@ const sampleLessonChunk = {
   isStart: true,
   isEnd: true,
   isMajority: true,
-  url: 'https://www.google.com/'
+  url: 'https://www.google.com/',
 };
 
 describe('UnitCalendarLessonChunk', () => {
@@ -25,7 +25,7 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          assessment: true
+          assessment: true,
         }}
         isHover={false}
         handleHover={() => console.log('hover')}
@@ -46,7 +46,7 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          assessment: true
+          assessment: true,
         }}
         isHover={true}
         handleHover={() => console.log('hover')}
@@ -72,7 +72,7 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          assessment: false
+          assessment: false,
         }}
         isHover={false}
         handleHover={() => console.log('hover')}
@@ -93,7 +93,7 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          assessment: false
+          assessment: false,
         }}
         isHover={true}
         handleHover={() => console.log('hover')}
@@ -119,7 +119,7 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          isStart: false
+          isStart: false,
         }}
         isHover={false}
         handleHover={() => console.log('hover')}
@@ -139,7 +139,7 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          isEnd: false
+          isEnd: false,
         }}
         isHover={false}
         handleHover={() => console.log('hover')}
@@ -159,7 +159,7 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          isMajority: false
+          isMajority: false,
         }}
         isHover={false}
         handleHover={() => console.log('hover')}
@@ -177,7 +177,7 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          duration: 30
+          duration: 30,
         }}
         isHover={false}
         handleHover={() => console.log('hover')}
@@ -204,7 +204,7 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          assessment: false
+          assessment: false,
         }}
         isHover={false}
         handleHover={() => console.log('hover')}
@@ -212,10 +212,7 @@ describe('UnitCalendarLessonChunk', () => {
     );
 
     assert.propertyVal(
-      wrapper
-        .find('FontAwesome')
-        .at(0)
-        .prop('style'),
+      wrapper.find('FontAwesome').at(0).prop('style'),
       'visibility',
       'hidden'
     );
@@ -227,7 +224,7 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          unplugged: false
+          unplugged: false,
         }}
         isHover={false}
         handleHover={() => console.log('hover')}
@@ -235,10 +232,7 @@ describe('UnitCalendarLessonChunk', () => {
     );
 
     assert.propertyVal(
-      wrapper
-        .find('FontAwesome')
-        .at(1)
-        .prop('style'),
+      wrapper.find('FontAwesome').at(1).prop('style'),
       'visibility',
       'hidden'
     );

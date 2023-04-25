@@ -9,14 +9,15 @@
       "hideable_lessons": true,
       "is_migrated": true,
       "lesson_extras_available": true,
+      "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-29 18:21:53 UTC",
-    "published_state": null,
+    "serialized_at": "2023-04-12 19:42:53 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -2718,6 +2719,17 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa9-2023/resources",
+      "key": "all_resources_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_7"
+      }
+    },
+    {
       "name": "AP Classroom: Authoring New FRQs",
       "url": "https://apclassroom.clickhelp.co/articles/#!ap-classroom-user-guide-for-teachers-publication/tcb-qb-creating-new-frqs",
       "key": "ap_classroom_authoring_new_frqs",
@@ -3339,7 +3351,12 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_7",
+        "script.name": "csa9-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 

@@ -11,7 +11,7 @@ import {RecordingFileType} from '../components/recorders';
 
 module.exports = {
   showAssetManager,
-  hideAssetManager
+  hideAssetManager,
 };
 
 let dialog;
@@ -54,7 +54,7 @@ function showAssetManager(assetChosen, typeFilter, onClose, options) {
       if (onClose) {
         onClose();
       }
-    }
+    },
   });
 
   let pickerType = typeFilter === 'audio' ? SoundPicker : ImagePicker;
@@ -66,7 +66,7 @@ function showAssetManager(assetChosen, typeFilter, onClose, options) {
       uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),
       useFilesApi: !!options.useFilesApi,
       assetChosen: showChoseImageButton
-        ? function(fileWithPath, timestamp) {
+        ? function (fileWithPath, timestamp) {
             dialog.hide();
             assetChosen(fileWithPath, timestamp);
           }
@@ -79,7 +79,7 @@ function showAssetManager(assetChosen, typeFilter, onClose, options) {
       elementId: options.elementId,
       libraryOnly: options.libraryOnly,
       currentValue: options.currentValue,
-      currentImageType: options.currentImageType
+      currentImageType: options.currentImageType,
     }),
     codeDiv
   );

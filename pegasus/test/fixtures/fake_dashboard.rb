@@ -249,7 +249,7 @@ module FakeDashboard
 
   # Patch Mysql2Adapter to stub create_view when loading the schema.
   module SchemaViewFilter
-    def create_view(name, options = {})
+    def create_view(name, **)
     end
   end
   ActiveRecord::ConnectionAdapters::Mysql2Adapter.prepend SchemaViewFilter

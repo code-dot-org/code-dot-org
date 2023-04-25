@@ -121,6 +121,10 @@ he:
         Hour of Code:
           title: שעת קוד 2013
           description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
+        allthethings:
+          lessons:
+            lesson-49:
+              name: מוסיקה
         asUnplugged:
           description_audience: גילאי 6-13
         afterschool1:
@@ -1997,6 +2001,10 @@ he:
           lessons:
             lesson-3:
               name: בשביל לולאות
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: סקר
         hello-world-space-2022:
           title: 'שלום, עולם: שטח'
         csd1-2023:
@@ -2275,4 +2283,8 @@ he:
         csd6a-2023:
           lesson_groups:
             lessonGroup-3:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
               display_name: 'פרק 2: יצור אב טיפוס פיזי'

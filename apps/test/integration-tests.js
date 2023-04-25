@@ -6,7 +6,7 @@ import stubFirehose from './util/stubFirehose';
 
 var integrationContext = require.context('./integration', false, /Tests?\.js$/);
 
-describe('integration tests', function() {
+describe('integration tests', function () {
   throwOnConsoleErrorsEverywhere();
 
   // TODO: Add warnings back once redux/react-redux and react-inspector have been upgraded.

@@ -1218,6 +1218,19 @@ uk:
             '"x"': x
             '"y"': у
             '"z"': z
+      gamelab_layoutSprites:
+        text: розмістити {GROUP} у формі {FORMAT}
+        options:
+          FORMAT:
+            '"border"': рамка
+            '"circle"': коло
+            '"grid"': сітка
+            '"top"': верхня шеренга
+            '"row"': клас
+            '"bottom"': нижня шеренга
+            '"left"': ліва колона
+            '"column"': колона
+            '"right"': права колона
       gamelab_locationAt:
         text: 'місце розташування x: {X} Y: {Y}'
       gamelab_locationModifier:
@@ -1241,6 +1254,18 @@ uk:
             '"rain"': дощ
       gamelab_makeNewSpriteAnon:
         text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': рамка
+            '"circle"': коло
+            '"grid"': сітка
+            '"top"': верхня шеренга
+            '"row"': клас
+            '"bottom"': нижня шеренга
+            '"left"': ліва колона
+            '"column"': колона
+            '"right"': права колона
       gamelab_makeNumSprites:
         text: створити {NUM} нових {ANIMATION_NAME} спрайтів
       gamelab_makeProjectile:

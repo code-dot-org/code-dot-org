@@ -9,3 +9,5 @@ teacher_markdown <<MARKDOWN
 The typical threshold for "Big Data" is when common desktop tools and techniques for handling, processing and manipulating data are not enough.  This is not a hard and fast definition, but the important note is that what makes it "big" is not only a function of the number of bytes, but how it needs to be processed as well.
 
 MARKDOWN
+
+allow_multiple_attempts true

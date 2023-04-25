@@ -25,11 +25,11 @@ var msg = require('./locale');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function(blockly, blockInstallOptions) {
+exports.install = function (blockly, blockInstallOptions) {
   var generator = blockly.getGenerator();
   blockly.JavaScript = generator;
 
-  var gensym = function(name) {
+  var gensym = function (name) {
     var NAME_TYPE = blockly.Variables.NAME_TYPE;
     return generator.variableDB_.getDistinctName(name, NAME_TYPE);
   };
@@ -41,7 +41,7 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.displayBlockTitle(),
     apiName: 'display',
     returnType: blockly.BlockValueType.NONE,
-    args: [{name: 'ARG1', type: blockly.BlockValueType.NONE}]
+    args: [{name: 'ARG1', type: blockly.BlockValueType.NONE}],
   });
 
   // shapes
@@ -52,8 +52,8 @@ exports.install = function(blockly, blockInstallOptions) {
     args: [
       {name: 'SIZE', type: blockly.BlockValueType.NUMBER},
       {name: 'STYLE', type: blockly.BlockValueType.STRING},
-      {name: 'COLOR', type: blockly.BlockValueType.STRING}
-    ]
+      {name: 'COLOR', type: blockly.BlockValueType.STRING},
+    ],
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
@@ -63,8 +63,8 @@ exports.install = function(blockly, blockInstallOptions) {
     args: [
       {name: 'SIZE', type: blockly.BlockValueType.NUMBER},
       {name: 'STYLE', type: blockly.BlockValueType.STRING},
-      {name: 'COLOR', type: blockly.BlockValueType.STRING}
-    ]
+      {name: 'COLOR', type: blockly.BlockValueType.STRING},
+    ],
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
@@ -74,8 +74,8 @@ exports.install = function(blockly, blockInstallOptions) {
     args: [
       {name: 'SIZE', type: blockly.BlockValueType.NUMBER},
       {name: 'STYLE', type: blockly.BlockValueType.STRING},
-      {name: 'COLOR', type: blockly.BlockValueType.STRING}
-    ]
+      {name: 'COLOR', type: blockly.BlockValueType.STRING},
+    ],
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
@@ -86,8 +86,8 @@ exports.install = function(blockly, blockInstallOptions) {
       {name: 'WIDTH', type: blockly.BlockValueType.NUMBER},
       {name: 'HEIGHT', type: blockly.BlockValueType.NUMBER},
       {name: 'STYLE', type: blockly.BlockValueType.STRING},
-      {name: 'COLOR', type: blockly.BlockValueType.STRING}
-    ]
+      {name: 'COLOR', type: blockly.BlockValueType.STRING},
+    ],
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
@@ -98,8 +98,8 @@ exports.install = function(blockly, blockInstallOptions) {
       {name: 'WIDTH', type: blockly.BlockValueType.NUMBER},
       {name: 'HEIGHT', type: blockly.BlockValueType.NUMBER},
       {name: 'STYLE', type: blockly.BlockValueType.STRING},
-      {name: 'COLOR', type: blockly.BlockValueType.STRING}
-    ]
+      {name: 'COLOR', type: blockly.BlockValueType.STRING},
+    ],
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
@@ -109,8 +109,8 @@ exports.install = function(blockly, blockInstallOptions) {
     args: [
       {name: 'SIZE', type: blockly.BlockValueType.NUMBER},
       {name: 'STYLE', type: blockly.BlockValueType.STRING},
-      {name: 'COLOR', type: blockly.BlockValueType.STRING}
-    ]
+      {name: 'COLOR', type: blockly.BlockValueType.STRING},
+    ],
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
@@ -122,8 +122,8 @@ exports.install = function(blockly, blockInstallOptions) {
       {name: 'INNER', type: blockly.BlockValueType.NUMBER},
       {name: 'OUTER', type: blockly.BlockValueType.NUMBER},
       {name: 'STYLE', type: blockly.BlockValueType.STRING},
-      {name: 'COLOR', type: blockly.BlockValueType.STRING}
-    ]
+      {name: 'COLOR', type: blockly.BlockValueType.STRING},
+    ],
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
@@ -134,8 +134,8 @@ exports.install = function(blockly, blockInstallOptions) {
       {name: 'SIDES', type: blockly.BlockValueType.NUMBER},
       {name: 'LENGTH', type: blockly.BlockValueType.NUMBER},
       {name: 'STYLE', type: blockly.BlockValueType.STRING},
-      {name: 'COLOR', type: blockly.BlockValueType.STRING}
-    ]
+      {name: 'COLOR', type: blockly.BlockValueType.STRING},
+    ],
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
@@ -145,8 +145,8 @@ exports.install = function(blockly, blockInstallOptions) {
     args: [
       {name: 'TEXT', type: blockly.BlockValueType.STRING},
       {name: 'SIZE', type: blockly.BlockValueType.NUMBER},
-      {name: 'COLOR', type: blockly.BlockValueType.STRING}
-    ]
+      {name: 'COLOR', type: blockly.BlockValueType.STRING},
+    ],
   });
 
   // image manipulation
@@ -156,9 +156,9 @@ exports.install = function(blockly, blockInstallOptions) {
     apiName: 'overlay',
     args: [
       {name: 'TOP', type: blockly.BlockValueType.IMAGE},
-      {name: 'BOTTOM', type: blockly.BlockValueType.IMAGE}
+      {name: 'BOTTOM', type: blockly.BlockValueType.IMAGE},
     ],
-    verticallyStackInputs: true
+    verticallyStackInputs: true,
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
@@ -167,9 +167,9 @@ exports.install = function(blockly, blockInstallOptions) {
     apiName: 'underlay',
     args: [
       {name: 'BOTTOM', type: blockly.BlockValueType.IMAGE},
-      {name: 'TOP', type: blockly.BlockValueType.IMAGE}
+      {name: 'TOP', type: blockly.BlockValueType.IMAGE},
     ],
-    verticallyStackInputs: true
+    verticallyStackInputs: true,
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
@@ -179,8 +179,8 @@ exports.install = function(blockly, blockInstallOptions) {
     args: [
       {name: 'X', type: blockly.BlockValueType.NUMBER},
       {name: 'Y', type: blockly.BlockValueType.NUMBER},
-      {name: 'IMAGE', type: blockly.BlockValueType.IMAGE}
-    ]
+      {name: 'IMAGE', type: blockly.BlockValueType.IMAGE},
+    ],
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
@@ -190,8 +190,8 @@ exports.install = function(blockly, blockInstallOptions) {
     args: [
       {name: 'X', type: blockly.BlockValueType.NUMBER},
       {name: 'Y', type: blockly.BlockValueType.NUMBER},
-      {name: 'IMAGE', type: blockly.BlockValueType.IMAGE}
-    ]
+      {name: 'IMAGE', type: blockly.BlockValueType.IMAGE},
+    ],
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
@@ -200,8 +200,8 @@ exports.install = function(blockly, blockInstallOptions) {
     apiName: 'rotateImage',
     args: [
       {name: 'DEGREES', type: blockly.BlockValueType.NUMBER},
-      {name: 'IMAGE', type: blockly.BlockValueType.IMAGE}
-    ]
+      {name: 'IMAGE', type: blockly.BlockValueType.IMAGE},
+    ],
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
@@ -210,8 +210,8 @@ exports.install = function(blockly, blockInstallOptions) {
     apiName: 'scaleImage',
     args: [
       {name: 'FACTOR', type: blockly.BlockValueType.NUMBER},
-      {name: 'IMAGE', type: blockly.BlockValueType.IMAGE}
-    ]
+      {name: 'IMAGE', type: blockly.BlockValueType.IMAGE},
+    ],
   });
 
   // string manipulation
@@ -222,8 +222,8 @@ exports.install = function(blockly, blockInstallOptions) {
     returnType: blockly.BlockValueType.STRING,
     args: [
       {name: 'FIRST', type: blockly.BlockValueType.STRING},
-      {name: 'SECOND', type: blockly.BlockValueType.STRING}
-    ]
+      {name: 'SECOND', type: blockly.BlockValueType.STRING},
+    ],
   });
 
   // polling for values
@@ -232,7 +232,7 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.stringLengthBlockTitle(),
     apiName: 'stringLength',
     returnType: blockly.BlockValueType.NUMBER,
-    args: [{name: 'STR', type: blockly.BlockValueType.STRING}]
+    args: [{name: 'STR', type: blockly.BlockValueType.STRING}],
   });
 
   blockly.FunctionalBlockUtils.installStringPicker(blockly, generator, {
@@ -242,8 +242,8 @@ exports.install = function(blockly, blockInstallOptions) {
       ['75%', '75%'],
       ['50%', '50%'],
       ['25%', '25%'],
-      [msg.outline(), 'outline']
-    ]
+      [msg.outline(), 'outline'],
+    ],
   });
 };
 
@@ -255,20 +255,20 @@ function installFunctionalBlock(blockly, generator, gensym, options) {
   var returnType = options.returnType || blockly.BlockValueType.IMAGE;
 
   blockly.Blocks[blockName] = {
-    init: function() {
+    init: function () {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
         this,
         blockTitle,
         returnType,
         args,
         {
-          verticallyStackInputs: options.verticallyStackInputs
+          verticallyStackInputs: options.verticallyStackInputs,
         }
       );
-    }
+    },
   };
 
-  generator[blockName] = function() {
+  generator[blockName] = function () {
     var apiArgs = [];
     for (var i = 0; i < args.length; i++) {
       var arg = args[i];

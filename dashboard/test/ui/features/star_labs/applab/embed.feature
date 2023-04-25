@@ -1,5 +1,3 @@
-# Skip on IE due to blocked pop-ups and possible "new document" issues
-@no_ie
 @as_student
 @no_mobile
 Feature: App Lab Embed

@@ -9,7 +9,7 @@ describe('UnitRollup', () => {
   beforeEach(() => {
     defaultProps = {
       objectToRollUp: 'Vocabulary',
-      unit: courseData.units[0]
+      unit: courseData.units[0],
     };
   });
 

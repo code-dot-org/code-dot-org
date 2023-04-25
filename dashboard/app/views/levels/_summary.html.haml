@@ -9,9 +9,9 @@
   responses = @responses&.map do |response|
     {
       user_id: response.user_id,
-      text: response.level_source.data,
+      text: response.level_source&.data,
     }
-  end
+  end.filter { |r| !!r[:text] }  # Remove empty responses.
 
   teacher_markdown = if level.respond_to?(:solution) && level.solution.present? && Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
     level.solution
@@ -23,11 +23,19 @@
       height: level.respond_to?(:height) ? level.height : nil,
       type: level.type,
       id: level.id,
+      name: level.name
     },
     last_attempt: last_attempt,
     left_align: left_align,
     responses: responses,
     teacher_markdown: teacher_markdown,
+    reportingData: {
+      lessonName: @script_level.lesson.name,
+      lessonId: @script_level.lesson.id,
+      unitName: @script.name,
+      unitId: @script.id,
+      curriculumUmbrella: @script.curriculum_umbrella
+    }
   }
 
 

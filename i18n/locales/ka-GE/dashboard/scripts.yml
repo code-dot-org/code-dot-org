@@ -117,6 +117,10 @@ ka:
           description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
           description_short: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
           student_description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
+        allthethings:
+          lessons:
+            lesson-49:
+              name: მუსიკა
         algebraPD2b:
           description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
           description_short: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
@@ -2671,6 +2675,19 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: ინტელექტუალური ქონება
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+            lessonGroup-4:
+              display_name: გამოკითხვა
         hello-world-soccer-2022:
           title: 'გამარჯობა მსოფლიო: ფეხბურთი'
         csd1-2023:
@@ -3008,3 +3025,31 @@ ka:
             lessonGroup-3:
               display_name: 'თავი 2: აპარატული შეყვანა'
           description_short: შეისწავლეთ პროგრამირება ფიზიკური მოწყობილობების საშუალებით.
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია

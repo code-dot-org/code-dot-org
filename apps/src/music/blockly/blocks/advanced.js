@@ -12,14 +12,14 @@ export const playSound = {
       fieldSoundsDefinition,
       {
         type: 'input_value',
-        name: 'measure'
-      }
+        name: 'measure',
+      },
     ],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
     tooltip: 'play sound',
-    helpUrl: ''
+    helpUrl: '',
   },
   generator: ctx =>
     'MusicPlayer.playSoundAtMeasureById("' +
@@ -32,5 +32,5 @@ export const playSound = {
     ) +
     ', ' +
     (isBlockInsideWhenRun(ctx) ? 'true' : 'false') +
-    ');\n'
+    ');\n',
 };

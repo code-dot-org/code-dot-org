@@ -61,7 +61,7 @@ const blockPlaceOrder = [
   'wool_orange',
   'wool_pink',
   'wool_red',
-  'wool_yellow'
+  'wool_yellow',
 ];
 
 // Agent code uses numbers for relative directions; semantically they represent
@@ -71,7 +71,7 @@ const directionToString = Object.freeze({
   0: 'forward',
   1: 'right',
   2: 'back',
-  3: 'left'
+  3: 'left',
 });
 
 // Map naming scheme for Agent-style block types to CodeBuilder-style block
@@ -115,11 +115,11 @@ const blockTypes = Object.freeze({
   planksBirch: 'planks,2',
   planksJungle: 'planks,3',
   planksOak: 'planks',
-  planksSpruce: 'planks,1'
+  planksSpruce: 'planks,1',
 });
 
 const blockConversions = Object.freeze({
-  craft_moveForward: function(xml) {
+  craft_moveForward: function (xml) {
     const next = getChildNodeByName(xml, 'next');
 
     return `
@@ -130,7 +130,7 @@ const blockConversions = Object.freeze({
     `;
   },
 
-  craft_moveBackward: function(xml) {
+  craft_moveBackward: function (xml) {
     const next = getChildNodeByName(xml, 'next');
 
     return `
@@ -141,7 +141,7 @@ const blockConversions = Object.freeze({
     `;
   },
 
-  craft_placeBlock: function(xml) {
+  craft_placeBlock: function (xml) {
     const next = getChildNodeByName(xml, 'next');
     const title = getChildNodeByName(xml, 'title');
     const blockType = title.textContent;
@@ -160,7 +160,7 @@ const blockConversions = Object.freeze({
     `;
   },
 
-  craft_placeBlockDirection: function(xml) {
+  craft_placeBlockDirection: function (xml) {
     const next = getChildNodeByName(xml, 'next');
     const blockType = getTitleByNameAttr(xml, 'TYPE').textContent;
     const direction = getTitleByNameAttr(xml, 'DIR').textContent;
@@ -180,7 +180,7 @@ const blockConversions = Object.freeze({
     `;
   },
 
-  craft_destroyBlock: function(xml) {
+  craft_destroyBlock: function (xml) {
     const next = getChildNodeByName(xml, 'next');
     return `
       <block type="craft_destroy">
@@ -190,7 +190,7 @@ const blockConversions = Object.freeze({
     `;
   },
 
-  craft_ifBlockAhead: function(xml) {
+  craft_ifBlockAhead: function (xml) {
     const statement = getChildNodeByName(xml, 'statement');
     const next = getChildNodeByName(xml, 'next');
     const title = getChildNodeByName(xml, 'title');
@@ -231,7 +231,7 @@ const blockConversions = Object.freeze({
         ${next ? serialize(next) : ''}
       </block>
     `;
-  }
+  },
 });
 
 function convertBlockXml(blockXml) {
@@ -251,8 +251,10 @@ function convertBlockXml(blockXml) {
   // inline-replace block if it is one of the types that should be converted
   if (blockConversions[type]) {
     const newBlockString = blockConversions[type](blockXml);
-    const newBlock = new DOMParser().parseFromString(newBlockString, 'text/xml')
-      .firstChild;
+    const newBlock = new DOMParser().parseFromString(
+      newBlockString,
+      'text/xml'
+    ).firstChild;
     blockXml.parentNode.replaceChild(newBlock, blockXml);
   }
 }

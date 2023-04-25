@@ -9,18 +9,18 @@ import Sounds from '../Sounds';
  * Returns a list of options (optionally filtered by type) for code-mode
  * asset dropdowns.
  */
-module.exports = function(typeFilter) {
+module.exports = function (typeFilter) {
   var options = dashboard.assets.listStore
     .list(typeFilter)
-    .map(function(asset) {
+    .map(function (asset) {
       return {
         text: utils.quote(asset.filename),
-        display: utils.quote(asset.filename)
+        display: utils.quote(asset.filename),
       };
     });
-  var handleChooseClick = function(callback) {
+  var handleChooseClick = function (callback) {
     dashboard.assets.showAssetManager(
-      function(filename) {
+      function (filename) {
         callback(utils.quote(filename));
       },
       typeFilter,
@@ -28,7 +28,7 @@ module.exports = function(typeFilter) {
         Sounds.getSingleton().stopAllAudio();
       },
       {
-        showUnderageWarning: !getStore().getState().pageConstants.is13Plus
+        showUnderageWarning: !getStore().getState().pageConstants.is13Plus,
       }
     );
   };
@@ -38,7 +38,7 @@ module.exports = function(typeFilter) {
       '<span class="chooseAssetDropdownOption">' +
       commonMsg.choosePrefix() +
       '</a>',
-    click: handleChooseClick
+    click: handleChooseClick,
   });
   return options;
 };

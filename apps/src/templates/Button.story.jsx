@@ -4,7 +4,7 @@ import {action} from '@storybook/addon-actions';
 
 export default {
   title: 'Button',
-  component: Button
+  component: Button,
 };
 
 export const ButtonSizes = () => (

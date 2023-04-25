@@ -152,6 +152,9 @@ pl:
           title: Skoncentruj się na kodowaniu
         focus-on-impact-in-society-2023:
           title: Skoncentruj się na wpływie w społeczeństwie
+        vpl-csd-summer-ci-2023:
+          title: Badania programu Odkryć informatycznych
+          version_title: "'23-'24"
     resources:
       curriculum/csd/2020:
         name: Program nauczania
@@ -203,6 +206,18 @@ pl:
       teacher_forum/csd/2019:
         name: Forum Nauczycieli
         url: https://forum.code.org/c/csd
+      all_code_2/csd/2023:
+        name: Cały kod
+        url: "/courses/csd-2023/code"
+      all_resources_2/csd/2023:
+        name: Wszystkie zasoby
+        url: "/courses/csd-2023/resources"
+      all_standards_2/csd/2023:
+        name: Wszystkie standardy
+        url: "/courses/csd-2023/standards"
+      all_vocabulary_2/csd/2023:
+        name: Całe słownictwo
+        url: "/courses/csd-2023/vocab"
       all_code/csd/2021:
         name: Cały kod
         url: "/courses/csd-2021/code"

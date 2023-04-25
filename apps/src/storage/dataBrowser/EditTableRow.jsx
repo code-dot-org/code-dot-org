@@ -13,7 +13,7 @@ const INITIAL_STATE = {
   isEditing: false,
   isSaving: false,
   // An object whose keys are column names and values are the raw user input.
-  newInput: {}
+  newInput: {},
 };
 
 class EditTableRow extends React.Component {
@@ -23,7 +23,7 @@ class EditTableRow extends React.Component {
     record: PropTypes.object.isRequired,
     readOnly: PropTypes.bool,
     showError: PropTypes.func.isRequired,
-    hideError: PropTypes.func.isRequired
+    hideError: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
@@ -45,7 +45,7 @@ class EditTableRow extends React.Component {
 
   handleChange(columnName, event) {
     const newInput = Object.assign({}, this.state.newInput, {
-      [columnName]: event.target.value
+      [columnName]: event.target.value,
     });
     this.setState({newInput});
   }
@@ -79,7 +79,7 @@ class EditTableRow extends React.Component {
   handleEdit = () => {
     this.setState({
       isEditing: true,
-      newInput: _.mapValues(this.props.record, editableValue)
+      newInput: _.mapValues(this.props.record, editableValue),
     });
   };
 

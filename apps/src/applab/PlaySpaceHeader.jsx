@@ -20,12 +20,12 @@ class PlaySpaceHeader extends React.Component {
     interfaceMode: PropTypes.oneOf([
       ApplabInterfaceMode.CODE,
       ApplabInterfaceMode.DESIGN,
-      ApplabInterfaceMode.DATA
+      ApplabInterfaceMode.DATA,
     ]).isRequired,
     playspacePhoneFrame: PropTypes.bool,
     screenIds: PropTypes.array.isRequired,
     onScreenCreate: PropTypes.func.isRequired,
-    onInterfaceModeChange: PropTypes.func.isRequired
+    onInterfaceModeChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -104,14 +104,14 @@ export default connect(
       hasDesignMode: state.pageConstants.hasDesignMode,
       isShareView: state.pageConstants.isShareView,
       interfaceMode: state.interfaceMode,
-      playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
+      playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
     };
   },
   function propsFromDispatch(dispatch) {
     return {
-      onInterfaceModeChange: function(mode) {
+      onInterfaceModeChange: function (mode) {
         dispatch(actions.changeInterfaceMode(mode));
-      }
+      },
     };
   }
 )(PlaySpaceHeader);

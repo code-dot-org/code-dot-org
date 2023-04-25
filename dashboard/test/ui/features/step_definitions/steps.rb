@@ -1145,11 +1145,17 @@ def convert_keys(keys)
   keys.chars.map {|k| k == "\n" ? :enter : k}
 end
 
-# Known issue: IE does not register the key presses in this step.
-# Add @no_ie tag to your scenario to skip IE when using this step.
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   element = @browser.find_element(:css, selector)
   press_keys(element, key)
+end
+
+And(/^I wait until element "([^"]*)" has the value "([^"]*)"$/) do |selector, value|
+  element = @browser.find_element(:css, selector)
+  wait_short_until do
+    element_text = element.attribute("value")
+    element_text.include? value
+  end
 end
 
 When /^I press keys "([^"]*)"$/ do |keys|
@@ -1162,8 +1168,6 @@ When /^I clear the text from element "([^"]*)"$/ do |selector|
 end
 
 # Press backspace repeatedly to clear an element.  Handy for React.
-# Known issue: IE does not register the key presses in this step.
-# Add @no_ie tag to your scenario to skip IE when using this step.
 When /^I press backspace to clear element "([^"]*)"$/ do |selector|
   element = @browser.find_element(:css, selector)
   press_keys(element, ":backspace") while @browser.execute_script("return $('#{selector}').val()") != ""
