@@ -425,10 +425,11 @@ class Ability
     end
 
     if user.persisted?
-      # update this comment
       # These checks control access to Javabuilder.
-      # All verified instructors and can generate a Javabuilder session token to run Java code.
-      # Students who are also assigned to a CSA section with a verified instructor can run Java code.
+      # All teachers can generate a Javabuilder session token to run Java code,
+      # although only verified teachers can generate tokens will be valid for "main" javabuilder.
+      # Unverified teachers are given limited access to a separate "demo" javabuilder stack.
+      # Students who are also assigned to a CSA section with a verified instructor can run Java code in "main" javabuilder.
       # The get_access_token endpoint is used for normal execution, and the access_token_with_override_sources
       # is used when viewing another version of a student's project (in preview or Code Review mode).
       # It is also used for running exemplars, but only teachers can access exemplars.
