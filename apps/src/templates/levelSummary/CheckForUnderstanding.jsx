@@ -67,7 +67,7 @@ const CheckForUnderstanding = ({
   };
 
   return (
-    <div className={styles.summaryContainer} id="summary-container">
+    <div className={styles.summaryContainer}>
       {/* Top Nav Links */}
       <p className={styles.navLinks}>
         <a
