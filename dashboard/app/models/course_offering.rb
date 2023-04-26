@@ -32,6 +32,9 @@ class CourseOffering < ApplicationRecord
   validates :category, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
   validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}
   validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}
+  validates_presence_of :grade_levels, if: proc {|co| co.any_version_is_in_published_state? && co.get_participant_audience == 'student'}
+  validates_presence_of :device_compatibility, if: proc {|co| co.any_version_is_in_published_state? && co.get_participant_audience == 'student'}
+  validates_presence_of :course_version_path, if: proc {|co| co.any_version_is_in_published_state? && co.get_participant_audience == 'student'}
   validate :grade_levels_format
 
   KEY_CHAR_RE = /[a-z0-9\-]/
@@ -78,8 +81,14 @@ class CourseOffering < ApplicationRecord
     offering
   end
 
-  def course_version_path(locale_code='en-US')
-    course_versions.find {|cv| cv.recommended?(locale_code)}&.content_root&.link || course_versions.first.content_root.link
+  def latest_published_version
+    course_versions.select do |cv|
+      cv.content_root.launched?
+    end.max_by(&:version_year)
+  end
+
+  def path_to_latest_published_version
+    latest_published_version.content_root.link
   end
 
   def self.should_cache?
@@ -224,7 +233,7 @@ class CourseOffering < ApplicationRecord
       cs_topic: cs_topic,
       school_subject: school_subject,
       device_compatibility: device_compatibility,
-      course_version_path: course_version_path
+      course_version_path: path_to_latest_published_version
     }
   end
 
