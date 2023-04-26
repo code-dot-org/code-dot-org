@@ -17,6 +17,7 @@ require_relative '../lib/cdo/infra_production_topic'
 require_relative '../lib/cdo/github'
 require_relative '../lib/cdo/honeybadger'
 require_relative '../lib/cdo/test_server_status'
+require_relative '../lib/cdo/honeybadger/honeybadger_url_parser'
 include CdoCli
 
 LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
@@ -513,6 +514,9 @@ end
 
 # The main method of the script, responsible for dispatching control flow to other methods.
 def main
+  test = HoneyBadgerUrlParser.new.set_is_paused(true)
+  puts test
+  return 0
   check_for_cdo_keys
   check_github_token
 
