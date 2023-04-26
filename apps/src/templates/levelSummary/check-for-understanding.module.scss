@@ -3,63 +3,67 @@
 .summaryContainer {
   max-width: 970px;
   margin: auto;
+}
 
-  .navLinks {
-    padding-top: 12px;
-    padding-bottom: 12px;
+.navLinks {
+  padding-top: 12px;
+  padding-bottom: 12px;
 
-    a {
-      text-decoration: underline;
-    }
-
-    a.navLinkLeft {
-      float: left;
-    }
-
-    a.navLinkRight {
-      float: right;
-    }
+  a {
+    text-decoration: underline;
   }
 
-  h1,
-  h2 {
-    color: $neutral_dark;
-    margin-top: 32px;
-    margin-bottom: 0.5em;
-    border-bottom: 1px solid $neutral_dark20;
-    line-height: 1.2;
+  a.navLinkLeft {
+    float: left;
   }
 
-  .levelTitle,
-  .markdown h1,
-  .markdown h2 {
-    border-bottom: unset;
+  a.navLinkRight {
+    float: right;
   }
+}
 
-  h1 {
-    font-size: 48px;
-  }
+h1,
+h2 {
+  color: $neutral_dark;
+  margin-top: 32px;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid $neutral_dark20;
+  line-height: 1.2;
+}
 
-  h2 {
-    font-size: 34px;
-  }
+/* stylelint-disable selector-pseudo-class-no-unknown */
+.levelTitle,
+.markdown h1,
+.markdown h2,
+:global(.markdown-container) h1,
+:global(.markdown-container) h2 {
+  border-bottom: unset;
+}
+/* stylelint-enable selector-pseudo-class-no-unknown */
 
-  p,
-  label,
-  ul,
-  ol,
-  li,
-  textarea {
-    color: $neutral_dark;
-    font-size: 16px;
-    line-height: 24px;
-  }
+h1 {
+  font-size: 48px;
+}
 
-  textarea.freeResponse {
-    width: 100%;
-    box-sizing: border-box;
-    resize: vertical;
-  }
+h2 {
+  font-size: 34px;
+}
+
+p,
+label,
+ul,
+ol,
+li,
+textarea {
+  color: $neutral_dark;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+textarea.freeResponse {
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
 }
 
 .studentResponses {
