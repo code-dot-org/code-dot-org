@@ -216,16 +216,19 @@ class CourseOfferingTest < ActiveSupport::TestCase
   test "latest_published_version returns most recent published course version" do
     offering = create :course_offering
 
+    most_recent_version = create :course_version, course_offering: offering, key: '2021'
+    most_recent_version.content_root.update!(published_state: 'beta')
+
     preview_version = create :course_version, course_offering: offering, key: '2019'
     preview_version.content_root.update!(published_state: 'preview')
 
-    most_recent_version = create :course_version, course_offering: offering, key: '2020'
-    most_recent_version.content_root.update!(published_state: 'preview')
+    most_recent_published_version = create :course_version, course_offering: offering, key: '2020'
+    most_recent_published_version.content_root.update!(published_state: 'preview')
 
     stable_version = create :course_version, course_offering: offering, key: '2018'
     stable_version.content_root.update!(published_state: 'stable')
 
-    assert_equal offering.latest_published_version, most_recent_version
+    assert_equal offering.latest_published_version, most_recent_published_version
   end
 
   test 'any_version_is_assignable_pilot? is true if user has pilot access to any course versions' do
