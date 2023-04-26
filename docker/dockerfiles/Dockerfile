@@ -91,33 +91,33 @@ FROM base as primary-layer
 
 # MAINLINE UBUNTU PACKAGE DEPS SHOULD BE ADDED HERE
 RUN apt-get install -y --no-install-recommends \
-    apt-transport-https \
-    ca-certificates \
-    enscript \
-    gnupg \
-    gzip \
-    imagemagick \   
-    jq \
-    libaio-dev \
-    libaio1 \
-    libicu-dev \
-    libmagickwand-dev \
-    libsqlite3-dev \
-    locales \
-    moreutils \
-    openssh-client \
-    parallel \
-    python \
-    python-dev \
-    software-properties-common \
-    sudo \
-    tar \
-    unzip \
-    vim \
-    xvfb \
-    xz-utils \
-    zlib1g-dev \
-    && true
+      apt-transport-https \
+      ca-certificates \
+      enscript \
+      gnupg \
+      gzip \
+      imagemagick \
+      jq \
+      libaio-dev \
+      libaio1 \
+      libicu-dev \
+      libmagickwand-dev \
+      libsqlite3-dev \
+      locales \
+      moreutils \
+      openssh-client \
+      parallel \
+      python \
+      python-dev \
+      software-properties-common \
+      sudo \
+      tar \
+      unzip \
+      vim \
+      xvfb \
+      xz-utils \
+      zlib1g-dev \
+      && true
 
 WORKDIR /tmp
 
