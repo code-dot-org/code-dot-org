@@ -245,4 +245,16 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     teachers_string = decoded_token[0]['verified_teachers']
     assert_equal (levelbuilder.id).to_s, teachers_string
   end
+
+  test 'regular teacher account has correct verified_teachers parameter (supports javalab eval mode)' do
+    teacher = create :teacher
+    sign_in(teacher)
+    get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
+
+    response = JSON.parse(@response.body)
+    token = response['token']
+    decoded_token = JWT.decode(token, @rsa_key_test.public_key, true, {algorithm: 'RS256'})
+    teachers_string = decoded_token[0]['verified_teachers']
+    assert_equal (teacher.id).to_s, teachers_string
+  end
 end
