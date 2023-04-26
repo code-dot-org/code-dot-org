@@ -126,8 +126,8 @@ Test.prototype.updateView = function () {
   row.className = this.status;
   if (succeeded || failed) {
     var formattedDuration = new Date(this.duration * 1000)
-      .toISOString()
-      .slice(11, 19)
+      .toISOString() // Sample formatting - 1970-01-01T00:00:42.000Z
+      .slice(11, 19) // extracts the time from the above string
       .split(":");
 
     statusCell.innerHTML =
