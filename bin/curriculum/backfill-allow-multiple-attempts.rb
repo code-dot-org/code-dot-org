@@ -51,14 +51,17 @@ end
 def update_dsl_level(level, allow_multiple_attempts)
   begin
     allow_multiple_attempts_str = allow_multiple_attempts.to_s
-    text = level.dsl_text
+    path = level.file_path
+    file_contents = File.read(path)
+    text = level.class.decrypt_dsl_text_if_necessary(file_contents)
+    encrypted = file_contents =~ /^encrypted '(.*)'$/m
     if text.include?('allow_multiple_attempts')
       return if text.include?("allow_multiple_attempts #{allow_multiple_attempts_str}")
       text.gsub!(/allow_multiple_attempts.*$/, "allow_multiple_attempts #{allow_multiple_attempts_str}")
     else
       text += "\nallow_multiple_attempts #{allow_multiple_attempts_str}"
     end
-    level.assign_attributes({dsl_text: text, allow_multiple_attempts: allow_multiple_attempts_str})
+    level.assign_attributes({dsl_text: text, allow_multiple_attempts: allow_multiple_attempts_str, encrypted: encrypted})
     level.save!
     raise "allow_multiple_attempts unset for #{level.name}" if level.reload.allow_multiple_attempts.nil?
   rescue => exception
@@ -85,7 +88,7 @@ def backfill_match_levels
 end
 
 def main
-  backfill_free_response_levels
+  # backfill_free_response_levels
   backfill_match_levels
 end
 
