@@ -7,7 +7,14 @@ describe('CheckboxDropdown', function () {
   const defaultProps = {
     name: 'colors',
     label: 'Colors',
-    allOptions: ['Red', 'Green', 'Blue', 'Yellow', 'Pink', 'Black'],
+    allOptions: {
+      red: 'Red',
+      green: 'Green',
+      blue: 'Blue',
+      yellow: 'Yellow',
+      pink: 'Pink',
+      black: 'Black',
+    },
     checkedOptions: [],
     onChange: () => {},
   };
@@ -16,22 +23,26 @@ describe('CheckboxDropdown', function () {
     const wrapper = mount(<CheckboxDropdown {...defaultProps} />);
     const checkboxes = wrapper.find('input');
 
-    expect(checkboxes).to.have.lengthOf(defaultProps.allOptions.length);
+    expect(checkboxes).to.have.lengthOf(
+      Object.keys(defaultProps.allOptions).length
+    );
     checkboxes.forEach(checkbox => assert(!checkbox.props().checked));
   });
 
   it('renders all checkboxes with checkedOptions already checked', function () {
     const propsWithCheckedOptions = {
       ...defaultProps,
-      checkedOptions: ['Green', 'Pink', 'Black'],
+      checkedOptions: ['green', 'pink', 'black'],
     };
     const wrapper = mount(<CheckboxDropdown {...propsWithCheckedOptions} />);
     const checkboxes = wrapper.find('input');
 
-    expect(checkboxes).to.have.lengthOf(defaultProps.allOptions.length);
+    expect(checkboxes).to.have.lengthOf(
+      Object.keys(defaultProps.allOptions).length
+    );
     checkboxes.forEach(checkbox => {
       expect(checkbox.props().checked).to.equal(
-        propsWithCheckedOptions.checkedOptions.includes(checkbox.props().name)
+        propsWithCheckedOptions.checkedOptions.includes(checkbox.props().value)
       );
     });
   });
