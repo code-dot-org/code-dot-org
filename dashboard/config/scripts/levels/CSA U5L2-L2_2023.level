@@ -14,16 +14,17 @@
         "tabOrder": 0
       }
     },
+    "project_template_level_name": "CSA U5L2-2D Arrays PBT_2023",
     "encrypted_examples": [
 
     ],
-    "project_template_level_name": "CSA U5L2-2D Arrays PBT_2023"
+    "teacher_markdown": "The `weeklyGrades[row][col]` access the value in row `row` and column `col`. For example, if `row` is `1` and `col` is `1`, this would access the value at row 1 column 1."
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-03-27T23:44:59.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-03-27T23:44:59.605+00:00\",\"changed\":[\"cloned from \\\"CSA Investigate Level Template\\\"\"],\"cloned_from\":\"CSA Investigate Level Template\"},{\"changed_at\":\"2023-03-27 23:45:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 20:40:27 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-27T23:44:59.605+00:00\",\"changed\":[\"cloned from \\\"CSA Investigate Level Template\\\"\"],\"cloned_from\":\"CSA Investigate Level Template\"},{\"changed_at\":\"2023-03-27 23:45:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 20:40:27 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-24 16:56:59 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
