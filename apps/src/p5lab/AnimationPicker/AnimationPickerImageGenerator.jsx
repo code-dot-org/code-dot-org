@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {createUuid} from '@cdo/apps/utils';
+import FontAwesome from '../../templates/FontAwesome';
 
 import {
   select,
@@ -40,7 +41,8 @@ class AnimationPickerImageGenerator extends React.Component {
     this.state = {
       useDropdowns: false,
       query: '',
-      results: []
+      results: [],
+      loading: false
     };
   }
 
@@ -66,12 +68,17 @@ class AnimationPickerImageGenerator extends React.Component {
   };
 
   handleGenerateClick = () => {
+    this.setState({loading: true});
     console.log('selecting your animations!');
     console.log('query: ', this.state.query);
-    const prompt = generateOpenAIImage(this.state.query).then(results => {
-      console.log('here are my results', results);
-      this.setState({results, query: ''});
-    });
+    const prompt = generateOpenAIImage(this.state.query)
+      .then(results => {
+        console.log('here are my results', results);
+        this.setState({results, query: '', loading: false});
+      })
+      .catch(err => {
+        console.log('error: ', err);
+      });
   };
 
   handleDropdownChange = ({target: {value}}) => {
@@ -84,18 +91,21 @@ class AnimationPickerImageGenerator extends React.Component {
     var animal = document.getElementById(
       `${GENERATOR_DROPDOWNS_PREFIX}-animals`
     ).value;
-    var number = document.getElementById(
-      `${GENERATOR_DROPDOWNS_PREFIX}-number`
-    ).value;
-    var bodyPart = document.getElementById(
-      `${GENERATOR_DROPDOWNS_PREFIX}-bodyParts`
+    // var number = document.getElementById(
+    //   `${GENERATOR_DROPDOWNS_PREFIX}-number`
+    // ).value;
+    // var bodyPart = document.getElementById(
+    //   `${GENERATOR_DROPDOWNS_PREFIX}-bodyParts`
+    // ).value;
+    var artisticStyle = document.getElementById(
+      `${GENERATOR_DROPDOWNS_PREFIX}-artisticStyles`
     ).value;
     console.log(
       'setting State',
-      `${emotion} ${color} ${animal} with ${number} ${bodyPart}`
+      `${emotion} ${color} ${animal} ${artisticStyle}`
     );
     this.setState({
-      query: `${emotion} ${color} ${animal} with ${number} ${bodyPart}`
+      query: `${emotion} ${color} ${animal} ${artisticStyle}`
     });
   };
 
@@ -158,9 +168,12 @@ class AnimationPickerImageGenerator extends React.Component {
                 <form style={{marginTop: 10}}>
                   I would like a {select.emotions(this.handleDropdownChange)}{' '}
                   {select.colors(this.handleDropdownChange)}{' '}
-                  {select.animals(this.handleDropdownChange)} with{' '}
+                  {select.animals(this.handleDropdownChange)}
+                  {/* with{' '}
                   {select.number(this.handleDropdownChange)}{' '}
-                  {select.bodyParts(this.handleDropdownChange)}.
+                  {select.bodyParts(this.handleDropdownChange)}. */}
+                  in the style of
+                  {select.artisticStyles(this.handleDropdownChange)}
                 </form>
               )
             }
@@ -171,6 +184,9 @@ class AnimationPickerImageGenerator extends React.Component {
           onClick={this.handleGenerateClick}
           color={Button.ButtonColor.orange}
         />
+        {this.state.loading && (
+          <FontAwesome icon="spinner" className="fa-fw fa-spin" />
+        )}
         {!!this.state.results.length && this.renderGeneratedImages()}
       </>
     );

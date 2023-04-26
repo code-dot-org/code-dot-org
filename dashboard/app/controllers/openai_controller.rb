@@ -11,7 +11,7 @@ class OpenaiController < ApplicationController
     puts 'to api_key: ' + api_key + ' and organization: ' + organization
 
     # prompt = params[:prompt] ? params[:prompt] : 'a husky wearing a blue sweater and holding a banana'
-    prompt = "A clip art-style #{params[:prompt]} appropriate for a kindergartener with a white background"
+    prompt = "#{params[:prompt]}, kindergarten-appropriate, transparent background"
     puts prompt
     
     options = {
