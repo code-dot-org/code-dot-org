@@ -1,5 +1,6 @@
 import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 import {CLAMPED_NUMBER_REGEX} from './constants';
+import {showAssetManager} from '@cdo/apps/code-studio/assets/show';
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
@@ -275,7 +276,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     getCode: function (workspace) {
       return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
     },
-    soundField: function (onChange) {
+    soundPickerField: function (assetChosen, typeFilter, onClose, options) {
+      const onChange = () => {
+        showAssetManager(assetChosen, typeFilter, onClose, options);
+      };
       return new Blockly.FieldDropdown([['Choose', 'Choose']], onChange);
     },
   };

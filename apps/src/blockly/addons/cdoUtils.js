@@ -110,6 +110,15 @@ export function getCode(workspace) {
 }
 
 // TODO: Re-define with a new custom field.
-export function soundField(onChange) {
-  return new Blockly.FieldDropdown([['Choose', 'Choose']], onChange);
+// export function soundField(onChange) {
+//   return new Blockly.FieldDropdown([['Choose', 'Choose']], onChange);
+// }
+export function soundPickerField(assetChosen, typeFilter, onClose, options) {
+  const fieldOptions = {
+    assetChosen,
+    typeFilter,
+    onClose,
+    options,
+  };
+  return new Blockly.FieldSoundPicker('Choose', fieldOptions);
 }

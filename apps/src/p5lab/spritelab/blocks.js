@@ -1,4 +1,3 @@
-/* global dashboard */
 /* global appOptions */
 
 import {SVG_NS} from '@cdo/apps/constants';
@@ -192,14 +191,12 @@ const customInputTypes = {
       const onSelect = function (soundValue) {
         block.setTitleValue(soundValue, inputConfig.name);
       };
-      const onChange = () => {
-        dashboard.assets.showAssetManager(onSelect, 'audio', null, {
+      currentInputRow.appendField(inputConfig.label).appendField(
+        Blockly.cdoUtils.soundPickerField(onSelect, 'audio', null, {
           libraryOnly: true,
-        });
-      };
-      currentInputRow
-        .appendField(inputConfig.label)
-        .appendField(Blockly.cdoUtils.soundField(onChange), inputConfig.name);
+        }),
+        inputConfig.name
+      );
     },
     generateCode(block, arg) {
       return `'${block.getFieldValue(arg.name)}'`;

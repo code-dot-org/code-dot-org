@@ -14,6 +14,7 @@ import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldMultilineInput from './addons/cdoFieldMultilineInput';
 import CdoFieldNumber from './addons/cdoFieldNumber';
+import CdoFieldSoundPicker from './addons/cdoFieldSoundPicker';
 import CdoFieldTextInput from './addons/cdoFieldTextInput';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import FunctionEditor from './addons/functionEditor';
@@ -243,6 +244,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // Code.org custom fields
   blocklyWrapper.FieldButton = CdoFieldButton;
   blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
+  blocklyWrapper.FieldSoundPicker = CdoFieldSoundPicker;
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
