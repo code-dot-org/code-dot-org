@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-11 17:52:31 UTC",
+    "serialized_at": "2023-04-26 07:28:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -429,6 +429,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CI-LessonTypes-U2-2023"
+        ],
         "progression": "Unit overview"
       },
       "bonus": false,
@@ -626,6 +629,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSDU2 - Type Anything_2023"
         ],
@@ -651,6 +655,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-Summer-CI-CSD U2 Inspector Warm Up_2023"
         ],
@@ -701,6 +706,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-Summer-CI-CSD U2 HTML Adding Paragraphs_2023"
         ],
@@ -726,6 +732,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-mod2-HTML-overview_2023"
         ],
@@ -751,6 +758,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-Summer-CI-CSD U2 Heading Demo_2023"
         ],
@@ -801,6 +809,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-Summer-CI-CSD-U2 Unordered Lists_2023"
         ],
@@ -826,6 +835,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-Summer-CI-CSD U2 Image Tag 1_2023"
         ],
@@ -876,6 +886,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-Summer-CI-CSD U2 Image Tag Inconsistent Spelling_2023"
         ],
@@ -951,6 +962,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-Summer-CI-CSD U2 text style h1_2023"
         ],
@@ -976,6 +988,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-Summer-CI-CSD U2 text style rgb practice 2_2023"
         ],
@@ -1001,6 +1014,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-Summer-CI-CSD U2 text style h3_2023"
         ],
@@ -1026,6 +1040,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-Summer-CI-CSD U2 text style size_2023"
         ],
@@ -1051,6 +1066,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-Summer-CI-CSD Web Headings Wrong Tag in Rule Set_2023"
         ],
@@ -1101,6 +1117,7 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-Summer-CI-CSD U2 add file_2023"
         ],
@@ -1151,6 +1168,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_2023"
         ],
