@@ -12,7 +12,7 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {
   InternationalGradeBandCards,
   ToolsCards,
-  ToolsWidgetsCard
+  ToolsWidgetsCard,
 } from '@cdo/apps/util/courseBlockCardsConstants';
 
 class ModernCsfCourses extends Component {
@@ -85,13 +85,13 @@ const LegacyCSFNotification = () => (
       {
         text: i18n.courseBlocksLegacyNotificationButtonCourses14(),
         link: pegasus('/educate/curriculum/elementary-school'),
-        newWindow: true
+        newWindow: true,
       },
       {
         text: i18n.courseBlocksLegacyNotificationButtonCoursesAccelerated(),
         link: '/s/20-hour',
-        newWindow: true
-      }
+        newWindow: true,
+      },
     ]}
   />
 );
@@ -157,7 +157,7 @@ export class CourseBlocks extends Component {
   static propTypes = {
     // Array of jQuery selectors to course blocks.
     tiles: PropTypes.arrayOf(PropTypes.string).isRequired,
-    showViewMoreTile: PropTypes.bool
+    showViewMoreTile: PropTypes.bool,
   };
 
   render() {
@@ -183,7 +183,7 @@ export class CourseBlocks extends Component {
 
 export class CourseBlocksHoc extends Component {
   static propTypes = {
-    isInternational: PropTypes.bool
+    isInternational: PropTypes.bool,
   };
 
   tiles() {
@@ -209,7 +209,7 @@ export class CourseBlocksHoc extends Component {
 export class CourseBlocksIntl extends Component {
   static propTypes = {
     isTeacher: PropTypes.bool.isRequired,
-    showModernElementaryCourses: PropTypes.bool.isRequired
+    showModernElementaryCourses: PropTypes.bool.isRequired,
   };
 
   componentDidMount() {

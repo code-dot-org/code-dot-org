@@ -2,9 +2,10 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import {Provider} from 'react-redux';
 import {configureStore} from '@reduxjs/toolkit';
+import {expect} from '../../../util/reconfiguredChai';
 import responsive, {
   setResponsiveSize,
-  ResponsiveSize
+  ResponsiveSize,
 } from '@cdo/apps/code-studio/responsiveRedux';
 import CurriculumCatalog from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalog';
 
@@ -13,30 +14,30 @@ describe('CurriculumCatalog', () => {
     key: 'devices',
     display_name: 'Creating Apps for Devices',
     grade_levels: '6,7,8,9,10,11,12',
-    image: 'https://images.code.org/name.png',
+    image: 'devices.png',
     cs_topic: 'art_and_design,app_design,physical_computing,programming',
-    school_subject: null
+    school_subject: null,
   };
 
   const countingCurriculum = {
     key: 'counting-csc',
-    display_name: 'Computer Science Discoveries',
+    display_name: 'Computer Science Connections',
     grade_levels: '3,4,5',
-    image: 'https://images.code.org/name.png',
+    image: 'csc.png',
     cs_topic: 'programming',
-    school_subject: 'math'
+    school_subject: 'math',
   };
 
-  const course1Curriculum = {
+  const noImageCurriculum = {
     key: 'course1',
     display_name: 'Course 1',
     grade_levels: 'K,1',
-    image: 'https://images.code.org/name.png',
+    image: null,
     cs_topic: 'programming',
-    school_subject: null
+    school_subject: null,
   };
 
-  const allCurricula = [makerCurriculum, countingCurriculum, course1Curriculum];
+  const allCurricula = [makerCurriculum, countingCurriculum, noImageCurriculum];
   const defaultProps = {curriculaData: allCurricula, isEnglish: false};
 
   beforeEach(() => {
@@ -61,5 +62,20 @@ describe('CurriculumCatalog', () => {
     allCurricula
       .map(curriculum => curriculum.display_name)
       .forEach(courseName => screen.getByRole('heading', {name: courseName}));
+  });
+
+  it('all curricula show an image, including curricula without a specific image', () => {
+    const images = screen.getAllByRole('img');
+    const imagesStr = images.map(image => image.outerHTML).toString();
+
+    allCurricula.forEach(curriculum => {
+      if (curriculum.image && curriculum.image !== null) {
+        expect(imagesStr).to.match(new RegExp(`src="${curriculum.image}"`));
+      } else {
+        expect(imagesStr).to.match(
+          new RegExp(`src="https:\\/\\/images\\.code\\.org\\/\\S*.png"`)
+        );
+      }
+    });
   });
 });

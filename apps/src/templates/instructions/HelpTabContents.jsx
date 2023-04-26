@@ -9,7 +9,7 @@ export default class HelpTabContents extends Component {
     videoData: videoDataShape,
     mapReference: PropTypes.string,
     referenceLinks: PropTypes.array,
-    openReferenceLinksInNewTab: PropTypes.bool
+    openReferenceLinksInNewTab: PropTypes.bool,
   };
 
   render() {
@@ -45,6 +45,6 @@ export default class HelpTabContents extends Component {
 
 const styles = {
   referenceArea: {
-    marginTop: 20
-  }
+    marginTop: 20,
+  },
 };

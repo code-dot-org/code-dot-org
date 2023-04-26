@@ -20,7 +20,7 @@ export default function LoadableComponent({
   spinnerStyle,
   spinnerSize,
   errorMessageStyle,
-  errorMessage
+  errorMessage,
 }) {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -89,17 +89,17 @@ LoadableComponent.propTypes = {
   /** Optional. Additional styles to apply to the error message. */
   errorMessageStyle: PropTypes.object,
   /** Optional. Custom error message text. Defaults to a standard load error message. */
-  errorMessage: PropTypes.string
+  errorMessage: PropTypes.string,
 };
 
 LoadableComponent.defaultProps = {
   spinnerSize: 'medium',
-  errorMessage: i18n.loadingError()
+  errorMessage: i18n.loadingError(),
 };
 
 const styles = {
   errorMessage: {
     fontSize: 12,
-    color: color.red
-  }
+    color: color.red,
+  },
 };

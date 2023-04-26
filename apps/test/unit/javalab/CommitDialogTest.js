@@ -29,7 +29,7 @@ describe('CommitDialog test', () => {
       backpackEnabled: true,
       isCommitSaveInProgress: false,
       hasCommitSaveError: false,
-      setCommitSaveStatus: setCommitSaveStatusSpy
+      setCommitSaveStatus: setCommitSaveStatusSpy,
     };
   });
 
@@ -79,7 +79,7 @@ describe('CommitDialog test', () => {
     expect(backpackApiStub.saveFiles).to.be.called.once;
     expect(setCommitSaveStatusSpy).to.be.calledWith({
       isCommitSaveInProgress: true,
-      hasCommitSaveError: false
+      hasCommitSaveError: false,
     });
 
     expect(wrapper.instance().state.backpackSaveInProgress).to.be.true;
@@ -90,7 +90,7 @@ describe('CommitDialog test', () => {
     const wrapper = renderWithProps({
       handleClose: handleCloseSpy,
       isCommitSaveInProgress: true,
-      hasCommitSaveError: false
+      hasCommitSaveError: false,
     });
     wrapper.instance().updateNotes('commit notes');
     wrapper.update();
@@ -99,7 +99,7 @@ describe('CommitDialog test', () => {
     expect(backpackApiStub.saveFiles).to.be.called.once;
     expect(setCommitSaveStatusSpy).to.be.calledWith({
       isCommitSaveInProgress: true,
-      hasCommitSaveError: false
+      hasCommitSaveError: false,
     });
 
     expect(wrapper.instance().state.backpackSaveInProgress).to.be.true;
@@ -123,7 +123,7 @@ describe('CommitDialog test', () => {
     expect(backpackApiStub.saveFiles).to.be.called.once;
     expect(setCommitSaveStatusSpy).to.be.calledWith({
       isCommitSaveInProgress: true,
-      hasCommitSaveError: false
+      hasCommitSaveError: false,
     });
 
     expect(wrapper.instance().state.backpackSaveInProgress).to.be.true;

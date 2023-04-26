@@ -9,9 +9,9 @@ export const whenRun = {
     inputsInline: true,
     nextStatement: null,
     tooltip: 'when run',
-    helpUrl: ''
+    helpUrl: '',
   },
-  generator: () => 'var currentMeasureLocation = 1;\n'
+  generator: () => 'var currentMeasureLocation = 1;\n',
 };
 
 export const triggeredAt = {
@@ -22,18 +22,18 @@ export const triggeredAt = {
     args0: [
       {
         type: 'input_dummy',
-        name: TRIGGER_FIELD
+        name: TRIGGER_FIELD,
       },
       {
         type: 'field_variable',
         name: 'var',
-        variable: 'currentTime'
-      }
+        variable: 'currentTime',
+      },
     ],
     inputsInline: true,
     nextStatement: null,
     tooltip: 'at trigger',
-    extensions: ['dynamic_trigger_extension']
+    extensions: ['dynamic_trigger_extension'],
   },
   generator: ctx => {
     const varName = Blockly.JavaScript.nameDB_.getName(
@@ -43,7 +43,7 @@ export const triggeredAt = {
     return `
       ${varName} = startPosition;
       \n`;
-  }
+  },
 };
 
 export const triggeredAtSimple = {
@@ -53,14 +53,14 @@ export const triggeredAtSimple = {
     args0: [
       {
         type: 'input_dummy',
-        name: TRIGGER_FIELD
-      }
+        name: TRIGGER_FIELD,
+      },
     ],
     inputsInline: true,
     nextStatement: null,
     style: 'event_blocks',
     tooltip: 'at trigger',
-    extensions: ['dynamic_trigger_extension']
+    extensions: ['dynamic_trigger_extension'],
   },
   generator: ctx => {
     const varName = Blockly.JavaScript.nameDB_.getDistinctName(
@@ -71,5 +71,5 @@ export const triggeredAtSimple = {
       `${varName} = startPosition;\n` +
       `currentMeasureLocation = Math.ceil(${varName});\n`
     );
-  }
+  },
 };

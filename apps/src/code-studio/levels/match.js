@@ -83,7 +83,7 @@ export default class Match {
       response: response,
       result: !wrongAnswer,
       errorDialog: wrongAnswer ? <LegacyMatchErrorDialog /> : null,
-      valid
+      valid,
     };
   }
   getAppName() {
@@ -108,7 +108,7 @@ export default class Match {
     $(this.container).find('.mainblock .match_answers li.answer').draggable({
       revert: 'invalid',
       stack: '.answer',
-      containment: this.container
+      containment: this.container,
     });
 
     this.makeInitialAnswersDroppable(this.container);
@@ -150,7 +150,7 @@ export default class Match {
             var slot = $(event.target);
             this.moveAnswerToSlot(slot, answer);
           }
-        }
+        },
       });
   }
 
@@ -207,7 +207,7 @@ export default class Match {
 
         // and animate back to its new location
         $(event.target).animate({top: '0px'});
-      }
+      },
     });
   }
 

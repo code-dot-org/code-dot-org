@@ -67,7 +67,7 @@ module.exports = {
   getPubSubConfig: function () {
     return {
       usePusher: netsim_.usePusher,
-      pusherApplicationKey: netsim_.pusherApplicationKey
+      pusherApplicationKey: netsim_.pusherApplicationKey,
     };
   },
 
@@ -135,5 +135,5 @@ module.exports = {
     }
 
     return collection[randomIntInRange(0, size)];
-  }
+  },
 };

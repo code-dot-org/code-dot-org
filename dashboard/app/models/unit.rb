@@ -1635,6 +1635,7 @@ class Unit < ApplicationRecord
   def summarize_header
     {
       name: name,
+      displayName: title_for_display,
       disablePostMilestone: disable_post_milestone?,
       student_detail_progress_view: student_detail_progress_view?,
       age_13_required: logged_out_age_13_required?,

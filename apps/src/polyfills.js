@@ -16,7 +16,7 @@ if (!HTMLCanvasElement.prototype.toBlob) {
 
       const blob = new Blob([arr], {type: type || 'image/png'});
       callback(blob);
-    }
+    },
   });
 }
 
