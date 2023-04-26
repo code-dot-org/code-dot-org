@@ -192,7 +192,7 @@ Setup steps for macOS:
        nvm use && nvm alias default $(cat ./.nvmrc)
        ```
 
-1. Install **yarn** via `npm install -g yarn@1.22.5`
+1. Install **yarn** via `npm install -g yarn@1.22.19`
 
 1. Install **OpenSSL**
     1. Run `brew install openssl`
