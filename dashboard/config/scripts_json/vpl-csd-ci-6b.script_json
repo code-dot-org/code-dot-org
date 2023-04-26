@@ -7,11 +7,12 @@
       "curriculum_umbrella": "CSD Self Paced PL",
       "has_verified_resources": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-20 15:42:57 UTC",
+    "serialized_at": "2023-04-26 08:11:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -624,6 +625,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-Summer-CI-U6 - MB Board Outputs_2023"
         ],
@@ -649,6 +651,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-CI-U6-Board Inputs-MB_2023"
         ],
@@ -674,6 +677,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-CI-U6- Board Inputs-MB_2023"
         ],
@@ -699,6 +703,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-Summer-CI-U6-If Variables_2023"
         ],
@@ -724,6 +729,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-Summer-U6-If Variables-Counter-MB_2023"
         ],
@@ -749,6 +755,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-Summer-U6-If Variables-MB-L8_2023"
         ],
@@ -774,6 +781,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-CI-U6MB-Predict-Combine Inputs_2023"
         ],
@@ -799,6 +807,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-CI-U6MB-Combine Inputs2_2023"
         ],
@@ -824,6 +833,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-CI-U6MB-Combine Inputs-Sliders_2023"
         ],
@@ -849,6 +859,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-CI-U6MB-Combine Inputs-TicTacToe_2023"
         ],
@@ -1024,6 +1035,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-Interactive Pet_physical-computing_-c_ci_2023"
+        ],
         "progression": "Interact with apps and prototypes "
       },
       "bonus": false,
