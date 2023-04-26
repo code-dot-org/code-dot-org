@@ -57,19 +57,19 @@ window.levelbuilder.copySelectedBlockToClipboard = function () {
   }
 };
 
-window.levelbuilder.pasteBlocksToWorkspace = function () {
+window.levelbuilder.pasteBlocksToWorkspace = function (clearWorkspace) {
   let str = localStorage.getItem('blockXml');
 
-  if (str.startsWith('<xml') && str.endsWith('</xml>')) {
-    // If an entire workspace has been copied, clear the current workspace.
-    Blockly.mainBlockSpace.clear();
-  } else if (str.startsWith('<block') && str.endsWith('</block>')) {
+  if (str.startsWith('<block') && str.endsWith('</block>')) {
     // If a single block has been copied, wrap it in <xml></xml>
     str = `<xml>${str}</xml>`;
-  } else {
+  }
+  if (!(str.startsWith('<xml') && str.endsWith('</xml>'))) {
     // str is not valid block xml.
     return;
   }
+
+  clearWorkspace && Blockly.mainBlockSpace.clear();
 
   Blockly.Xml.domToBlockSpace(
     Blockly.mainBlockSpace,
