@@ -1,3 +1,10 @@
+# Drone CI pipeline running at: https://drone.cdn-code.org/code-dot-org/code-dot-org/
+# 
+# Docs here: https://docs.google.com/document/d/1Qls20xfNN6T_DErOMwVQOFJsxAEAdMWFHzBDIbxyUQQ/edit#heading=h.9bln2fv2lgqd
+#
+# NOTE: after making changes to this file, you'll need to sign them using
+# `drone sign code-dot-org/code-dot-org --save`
+
 ---
 kind: pipeline
 type: docker
