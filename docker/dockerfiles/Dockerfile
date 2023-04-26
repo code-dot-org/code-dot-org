@@ -203,6 +203,8 @@ RUN curl -SsL https://github.com/boxboat/fixuid/releases/download/v0.4/fixuid-0.
 
 USER ${USER}
 
+WORKDIR /home/{$USER}
+
 # This bashrc file will be used whenever someone runs bash in interactive mode.
 # This is mostly intended for the use case where you want to start a shell into a running container with
 # docker exec -it <container_name> bash, which bypasses the entrypoint script.
