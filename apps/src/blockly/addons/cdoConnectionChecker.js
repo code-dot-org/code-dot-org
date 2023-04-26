@@ -39,13 +39,6 @@ export default class CdoConnectionChecker extends GoogleBlockly.ConnectionChecke
       return false;
     }
 
-    // Based on:
-    // https://github.com/google/blockly/blob/ec6e951e687953dedfb0072f0941b44ad6278994/core/connection_checker.ts#L187-L199
-    if (!checkArrayOne || !checkArrayTwo) {
-      // One or both sides are promiscuous enough that anything will fit.
-      return true;
-    }
-    // Find any intersection in the check lists.
-    return checkArrayOne.some(check => checkArrayTwo.includes(check));
+    return super.doTypeChecks(a, b);
   }
 }
