@@ -33,7 +33,10 @@ class BrowserEventsController < ApplicationController
 
     render status: :ok, json: {}
   rescue => exception
-    fallback_log_to_firehose('put-log-events-error', {exception: exception, logs: logs})
+    Honeybadger.notify(
+      exception,
+      error_message: "Error publishing logs to Cloudwatch"
+    )
     render status: :internal_server_error, json: {error: exception}
   end
 
