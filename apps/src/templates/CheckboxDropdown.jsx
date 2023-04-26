@@ -20,7 +20,7 @@ const CheckboxDropdown = ({
     <ul className="dropdown-menu">
       <form>
         {Object.keys(allOptions).map(optionKey => (
-          <li key={`${name}-${optionKey}`} className="checkbox form-group">
+          <li key={optionKey} className="checkbox form-group">
             <input
               type="checkbox"
               id={`${name}-${optionKey}-check`}
