@@ -373,7 +373,6 @@ Javalab.prototype.executeJavabuilder = function (executionType) {
   }
 
   this.javabuilderConnection = new JavabuilderConnection(
-    this.level.javabuilderUrl,
     this.onOutputMessage,
     this.miniApp,
     getStore().getState().pageConstants.serverLevelId,

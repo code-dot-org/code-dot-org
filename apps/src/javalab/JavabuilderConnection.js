@@ -17,7 +17,6 @@ import {getUnsupportedMiniAppMessage} from './utils';
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
   constructor(
-    javabuilderUrl,
     onMessage,
     miniApp,
     serverLevelId,
@@ -35,7 +34,6 @@ export default class JavabuilderConnection {
     onConnectDone
   ) {
     this.channelId = project.getCurrentId();
-    // this.javabuilderUrl = javabuilderUrl;
     this.onOutputMessage = onMessage;
     this.miniApp = miniApp;
     this.levelId = serverLevelId;

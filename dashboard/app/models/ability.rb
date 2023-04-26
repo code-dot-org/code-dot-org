@@ -425,6 +425,7 @@ class Ability
     end
 
     if user.persisted?
+      # update this comment
       # These checks control access to Javabuilder.
       # All verified instructors and can generate a Javabuilder session token to run Java code.
       # Students who are also assigned to a CSA section with a verified instructor can run Java code.
@@ -439,6 +440,10 @@ class Ability
 
       can :access_token_with_override_validation, :javabuilder_session do
         user.permission?(UserPermission::LEVELBUILDER)
+      end
+
+      can :use_main_javabuilder, :javabuilder_session do
+        user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
     end
 
