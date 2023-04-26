@@ -1,3 +1,4 @@
+---
 # Drone CI pipeline running at: https://drone.cdn-code.org/code-dot-org/code-dot-org/
 # 
 # Docs here: https://docs.google.com/document/d/1Qls20xfNN6T_DErOMwVQOFJsxAEAdMWFHzBDIbxyUQQ/edit#heading=h.9bln2fv2lgqd
@@ -207,6 +208,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: 753cfe2cb54dcd48fe3b7e788a03307b83b40c6550e6d84d62813b108308f350
+hmac: 39c9b38da4af2810b39570d86904aca6eb0e5aeba5dac8861ed9915bcf9eab0b
 
 ...
