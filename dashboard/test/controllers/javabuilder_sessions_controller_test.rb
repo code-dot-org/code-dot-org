@@ -18,6 +18,10 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     response: :forbidden
   test_user_gets_response_for :get_access_token,
     params: {channelId: storage_encrypt_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
+    user: :teacher,
+    response: :success
+  test_user_gets_response_for :get_access_token,
+    params: {channelId: storage_encrypt_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
     user: :levelbuilder,
     response: :success
   test_user_gets_response_for :get_access_token,
@@ -33,7 +37,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     method: :post,
     params: {overrideSources: "{'source': {}}", executionType: 'RUN', miniAppType: 'console'},
     user: :teacher,
-    response: :forbidden
+    response: :success
   test_user_gets_response_for :access_token_with_override_sources,
     method: :post,
     params: {overrideSources: "{'source': {}}", executionType: 'RUN', miniAppType: 'console'},
@@ -94,6 +98,26 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
 
     # decoded_token[0] is the JWT payload. Check that options are sent as stringified json
     assert_equal "{\"useNeighborhood\":\"true\"}", decoded_token[0]['options']
+  end
+
+  test 'response for verified teacher includes javabuilder url' do
+    verified_teacher = create(:authorized_teacher)
+    sign_in(verified_teacher)
+
+    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
+    response = JSON.parse(@response.body)
+
+    assert_equal(CDO.javabuilder_url, response['javabuilder_url'])
+  end
+
+  test 'response for unverified teacher includes demo javabuilder url' do
+    teacher = create(:teacher)
+    sign_in(teacher)
+
+    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
+    response = JSON.parse(@response.body)
+
+    assert_equal(CDO.javabuilder_demo_url, response['javabuilder_url'])
   end
 
   test 'student of authorized teacher without csa section cannot get access token' do

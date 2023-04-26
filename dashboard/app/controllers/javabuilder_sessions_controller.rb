@@ -60,7 +60,14 @@ class JavabuilderSessionsController < ApplicationController
   end
 
   private def upload_project_files_and_render(session_id, project_files, encoded_payload)
-    javabuilder_url, javabuilder_upload_url = get_javabuilder_urls
+    if can?(:use_main_javabuilder, :javabuilder_session)
+      javabuilder_url = CDO.javabuilder_url
+      javabuilder_upload_url = CDO.javabuilder_upload_url
+    else
+      javabuilder_url = CDO.javabuilder_demo_url
+      javabuilder_upload_url = CDO.javabuilder_demo_upload_url
+    end
+
     response = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload, javabuilder_upload_url)
     if response
       return render(json: {token: encoded_payload, session_id: session_id, javabuilder_url: javabuilder_url}) if response.code == '200'
@@ -145,16 +152,5 @@ class JavabuilderSessionsController < ApplicationController
     end
 
     true
-  end
-
-  private def get_javabuilder_urls
-    if current_user.verified_instructor? || current_user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
-      javabuilder_url = CDO.javabuilder_url
-      javabuilder_upload_url = CDO.javabuilder_upload_url
-    else
-      javabuilder_url = CDO.javabuilder_demo_url
-      javabuilder_upload_url = CDO.javabuilder_demo_upload_url
-    end
-    [javabuilder_url, javabuilder_upload_url]
   end
 end
