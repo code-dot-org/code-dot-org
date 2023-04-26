@@ -205,7 +205,8 @@ class UnconnectedMusicView extends React.Component {
     const currentState = this.progressManager.getCurrentState();
     this.props.setCurrentProgressState(currentState);
 
-    if (currentState.satisfied) {
+    // Tell the external system (if there is one) about the success.
+    if (this.props.levels && currentState.satisfied) {
       this.props.sendSuccessReport('music');
     }
   };
