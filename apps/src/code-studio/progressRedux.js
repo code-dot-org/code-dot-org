@@ -103,17 +103,17 @@ export function navigateToLevelId(levelId) {
 
 // The user has successfully completed the level and the page
 // will not be reloading.
-export function sendSuccessReport() {
+export function sendSuccessReport(appType) {
   return (dispatch, getState) => {
     const state = getState().progress;
     const levelId = state.currentLevelId;
-    const currentLevel = state.lessons[0].levels.find(level =>
-      level.ids.find(id => id === levelId)
-    );
+    const currentLevel = state.lessons
+      .find(lesson => lesson.id === state.currentLessonId)
+      .levels.find(level => level.ids.find(id => id === levelId));
     const scriptLevelId = currentLevel.id;
 
     const data = {
-      app: 'music',
+      app: appType,
       result: true,
       testResult: 100,
     };

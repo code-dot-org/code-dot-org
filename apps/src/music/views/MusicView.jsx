@@ -206,7 +206,7 @@ class UnconnectedMusicView extends React.Component {
     this.props.setCurrentProgressState(currentState);
 
     if (currentState.satisfied) {
-      this.props.sendSuccessReport();
+      this.props.sendSuccessReport('music');
     }
   };
 
@@ -593,7 +593,7 @@ const MusicView = connect(
     setCurrentProgressState: progressState =>
       dispatch(setCurrentProgressState(progressState)),
     navigateToLevelId: levelId => dispatch(navigateToLevelId(levelId)),
-    sendSuccessReport: () => dispatch(sendSuccessReport()),
+    sendSuccessReport: appType => dispatch(sendSuccessReport(appType)),
   })
 )(UnconnectedMusicView);
 
