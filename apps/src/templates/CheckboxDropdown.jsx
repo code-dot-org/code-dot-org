@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import FontAwesome from './FontAwesome';
 
 const CheckboxDropdown = ({
   name,
@@ -15,6 +16,7 @@ const CheckboxDropdown = ({
       className="selectbox"
       data-toggle="dropdown"
     >
+      {checkedOptions.length > 0 && <FontAwesome icon="check-circle" />}
       {label}
     </button>
     <ul className="dropdown-menu">
