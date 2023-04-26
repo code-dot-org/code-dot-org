@@ -32,9 +32,6 @@ class CourseOffering < ApplicationRecord
   validates :category, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
   validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}
   validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}
-  validates_presence_of :grade_levels, if: proc {|co| co.any_version_is_in_published_state? && co.get_participant_audience == 'student'}
-  validates_presence_of :device_compatibility, if: proc {|co| co.any_version_is_in_published_state? && co.get_participant_audience == 'student'}
-  validates_presence_of :course_version_path, if: proc {|co| co.any_version_is_in_published_state? && co.get_participant_audience == 'student'}
   validate :grade_levels_format
 
   KEY_CHAR_RE = /[a-z0-9\-]/
