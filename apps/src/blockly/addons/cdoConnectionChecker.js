@@ -13,13 +13,6 @@ import {customConnectionBlockTypes} from './cdoConstants';
 
 export default class CdoConnectionChecker extends GoogleBlockly.ConnectionChecker {
   /**
-   * Constructor for the connection checker.
-   */
-  constructor() {
-    super();
-  }
-
-  /**
    * Check whether this connection is compatible with another connection with
    * respect to the value type system.  E.g. square_root("Hello") is not
    * compatible. Includes custom logic for CDO custom connection type checks.
@@ -29,8 +22,8 @@ export default class CdoConnectionChecker extends GoogleBlockly.ConnectionChecke
    * @returns True if the connections share a type.
    */
   doTypeChecks(a, b) {
-    const checkArrayOne = a.getCheck();
-    const checkArrayTwo = b.getCheck();
+    const checkArrayOne = a.getCheck(); // An array of strings or null
+    const checkArrayTwo = b.getCheck(); // An array of strings or null
 
     // For our custom implementation, connections are rejected if only one
     // check array contains a CDO custom connection type (Behaviors, Locations,
