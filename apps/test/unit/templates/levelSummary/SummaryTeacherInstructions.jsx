@@ -4,7 +4,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import SummaryTeacherInstructions from '@cdo/apps/templates/levelSummary/SummaryTeacherInstructions';
 
 const JS_DATA = {
-  level: {}
+  level: {},
 };
 
 const setUpWrapper = (jsData = {}) => {

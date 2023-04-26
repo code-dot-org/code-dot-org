@@ -25,7 +25,7 @@ const SummaryTeacherInstructions = ({scriptData}) => {
 };
 
 SummaryTeacherInstructions.propTypes = {
-  scriptData: PropTypes.object
+  scriptData: PropTypes.object,
 };
 
 export default SummaryTeacherInstructions;

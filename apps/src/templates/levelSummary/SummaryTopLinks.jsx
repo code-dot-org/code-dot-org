@@ -12,7 +12,7 @@ const SummaryTopLinks = ({
   isRtl,
   selectedSection,
   currentLevelId,
-  levels
+  levels,
 }) => {
   const currentLevel = levels.find(l => l.activeId === currentLevelId);
   const nextLevel = levels.find(l => l.position === currentLevel.position + 1);
@@ -26,7 +26,7 @@ const SummaryTopLinks = ({
       levelId: level.id,
       levelName: level.name,
       levelType: level.type,
-      ...scriptData.reportingData
+      ...scriptData.reportingData,
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -72,15 +72,15 @@ SummaryTopLinks.propTypes = {
   isRtl: PropTypes.bool,
   selectedSection: PropTypes.shape({
     id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired
+    name: PropTypes.string.isRequired,
   }),
   currentLevelId: PropTypes.string,
   levels: PropTypes.arrayOf(
     PropTypes.shape({
       activeId: PropTypes.string.isRequired,
-      position: PropTypes.number.isRequired
+      position: PropTypes.number.isRequired,
     })
-  )
+  ),
 };
 
 export default connect(
@@ -97,7 +97,7 @@ export default connect(
       selectedSection:
         state.teacherSections.sections[state.teacherSections.selectedSectionId],
       currentLevelId: state.progress.currentLevelId,
-      levels: currentLesson.levels
+      levels: currentLesson.levels,
     };
   }
 )(SummaryTopLinks);

@@ -12,8 +12,8 @@ import progress from '@cdo/apps/code-studio/progressRedux';
 
 const JS_DATA = {
   level: {
-    id: 0
-  }
+    id: 0,
+  },
 };
 
 const INITIAL_STATE = {
@@ -23,7 +23,7 @@ const INITIAL_STATE = {
     selectedStudents: [{id: 0}],
     selectedSectionId: 0,
     sectionIds: [0],
-    sections: [{id: 0, name: 'test section'}]
+    sections: [{id: 0, name: 'test section'}],
   },
   progress: {
     currentLessonId: 0,
@@ -31,10 +31,10 @@ const INITIAL_STATE = {
     lessons: [
       {
         id: 0,
-        levels: [{activeId: '0', position: 1}]
-      }
-    ]
-  }
+        levels: [{activeId: '0', position: 1}],
+      },
+    ],
+  },
 };
 
 const setUpWrapper = (state = {}, jsData = {}) => {
@@ -43,7 +43,7 @@ const setUpWrapper = (state = {}, jsData = {}) => {
       isRtl,
       viewAs,
       teacherSections,
-      progress
+      progress,
     }),
     {...INITIAL_STATE, ...state}
   );
@@ -76,11 +76,11 @@ describe('SummaryTopLinks', () => {
             id: 0,
             levels: [
               {activeId: '0', position: 1},
-              {activeId: '1', position: 2}
-            ]
-          }
-        ]
-      }
+              {activeId: '1', position: 2},
+            ],
+          },
+        ],
+      },
     });
 
     expect(wrapper.find(`.${styles.navLinkRight}`).length).to.eq(0);
