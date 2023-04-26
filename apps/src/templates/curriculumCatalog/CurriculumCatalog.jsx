@@ -6,6 +6,7 @@ import style from '../../../style/code-studio/curriculum_catalog_container.modul
 import HeaderBanner from '../HeaderBanner';
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-illustration-01.png';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
+import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import CheckboxDropdown from '../CheckboxDropdown';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import {
@@ -85,6 +86,9 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
         imageUrl={CourseCatalogIllustration01}
       />
       <div className={style.catalogFiltersContainer}>
+        <Heading6 className={style.catalogFiltersRowLabel}>
+          {i18n.filterBy()}
+        </Heading6>
         {filterTypes.map(filterType => (
           <CheckboxDropdown
             key={filterType.name}

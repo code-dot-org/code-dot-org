@@ -1043,6 +1043,7 @@
   "fileExplorer": "File explorer",
   "fileOptions": "File options",
   "filter": "Filter",
+  "filterBy": "Filter by:",
   "filterByStudent": "Filter by student:",
   "filterByStage": "Filter by lesson:",
   "finalStage": "Congratulations! You have completed the final puzzle.",
