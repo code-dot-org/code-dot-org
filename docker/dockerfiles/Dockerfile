@@ -48,15 +48,15 @@ RUN apt-get update && \
       vim
 
 # install node
-RUN wget https://nodejs.org/dist/v16.19.0/node-v16.19.0.tar.gz && \
-    tar -xzvf node-v16.19.0.tar.gz && \
-    rm node-v16.19.0.tar.gz && \
-    cd node-v16.19.0 && \
+RUN wget https://nodejs.org/dist/v18.16.0/node-v18.16.0.tar.gz && \
+    tar -xzvf node-v18.16.0.tar.gz && \
+    rm node-v18.16.0.tar.gz && \
+    cd node-v18.16.0 && \
     ./configure && \
     make -j4 && \
     make install && \
     cd .. && \
-    rm -r node-v16.19.0
+    rm -r node-v18.16.0
 
 # more more tools
 RUN apt-get install -y unzip
