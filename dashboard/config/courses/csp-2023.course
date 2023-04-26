@@ -59,6 +59,30 @@
       }
     },
     {
+      "name": "Guide to Assessment",
+      "url": "https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit?usp=sharing",
+      "key": "guide_to_assessment",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_assessment"
+      }
+    },
+    {
+      "name": "Guide to Classroom Discussions",
+      "url": "https://docs.google.com/document/d/1Y3HdoKknnw5tdH_I5XtcONQrDxueMi0Xdgp3Nyr-Atk/edit?usp=sharing",
+      "key": "guide_to_classroom_discussions",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_classroom_discussions"
+      }
+    },
+    {
       "name": "Guide to Curriculum Videos ",
       "url": "https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/view",
       "key": "guide_to_curriculum_videos",
@@ -116,6 +140,18 @@
       },
       "seeding_key": {
         "resource.key": "peer_feedback"
+      }
+    },
+    {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
       }
     },
     {

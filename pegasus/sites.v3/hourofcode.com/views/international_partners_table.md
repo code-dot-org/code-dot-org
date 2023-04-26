@@ -102,7 +102,7 @@
 | Slovakia                              | Accenture                                                         | Zuzana Tankova                       | http://ds.blf.sk <br> ucme.informatiku.inak@gmail.com                                              |
 | South Africa                          | Code for Change                                                   |                                      | http://www.codeforchange.co.za                                                                     |
 | South Africa                          | ITC CLUB Mpumalanga                                               | Nomusa Keninda                       | http://mpumalangaictclub.blogspot.com                                                              |
-| South Korea				| Enuma								    | Eugine Chung			   | https://enuma.com/ 		 								|
+| South Korea				| Enuma								    | Eugine Chung			   | https://enuma.com/ <br> info@enuma.com		 					        |
 | South Korea                           | Korea Information Science Education Federation                    | Soohwan Kim                          | http://kcode.kr <br> hwankim92@gmail.com                                                           |
 | South Korea                           | KOFAC                                                             | Sewon Chun                           | https://kofac.re.kr/main <br> sewon@kofac.re.kr                                                    |
 | South Korea                           | Future Class Network                                              | Chanpil Jung                         | https://www.futureclassnet.org/index.do <br> malgu@futureclass.net                                 |
