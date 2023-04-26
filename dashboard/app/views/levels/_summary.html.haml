@@ -4,6 +4,7 @@
   else
     @level.contained_levels.first
   end
+  in_level_group ||= false
   last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
   left_align = local_assigns[:left_align]
   responses = @responses&.map do |response|
