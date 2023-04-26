@@ -9,3 +9,5 @@ right '3'
 right '4'
 right '5'
 
+
+allow_multiple_attempts true

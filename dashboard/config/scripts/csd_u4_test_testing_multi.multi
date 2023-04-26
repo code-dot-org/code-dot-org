@@ -5,3 +5,5 @@ wrong 'Find users who are better with technology and use them for the tests inst
 wrong 'Use the design team as users in the tests, because they understand the app better'
 wrong 'Redesign the tests so that the users don\’t need to figure out that part of the app'
 right 'Redesign the app to make it easier to use the buttons, then run more user tests'
+
+allow_multiple_attempts true
