@@ -108,7 +108,7 @@ Dashboard::Application.routes.draw do
     get '/catalog', to: 'curriculum_catalog#index'
 
     # User-facing section routes
-    resources :sections, only: [:show, :new] do
+    resources :sections, only: [:show, :new, :edit] do
       member do
         post 'log_in'
       end
