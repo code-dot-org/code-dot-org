@@ -1,7 +1,10 @@
 # Pushed to Docker Hub at codedotorg/code-dot-org:<version>
-FROM ubuntu:18.04
+FROM ubuntu:18.04 as base
 
-USER root
+# We use a multi-stage build for parallel compiling node & ruby: 
+# see: https://docs.docker.com/build/building/multi-stage/
+#
+# For modifying regular deps, skip to the primary-layer below
 
 ENV \
   LANG=C.UTF-8 \
@@ -9,85 +12,128 @@ ENV \
   USER=circleci \
   GROUP=circleci
 
-RUN \
-  # set timezone to UTC by default
-  ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime && \
-  # use unicode
-  locale-gen C.UTF-8 || true
-
-# install packages from mainline ubuntu repositories
+# just enough to compile ruby (add other packages in the primary-layer)
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-      apt-transport-https \
       autoconf \
+      bison \
       build-essential \
-      ca-certificates \
       curl \
-      curl \
-      enscript \
-      g++-8 \
-      gcc-8 \
       git \
-      gnupg \
-      gzip \
-      imagemagick \   
-      jq \
-      libaio-dev \
-      libaio1 \
-      libicu-dev \
-      libmagickwand-dev \
+      libffi-dev \
+      libgdbm-dev \
+      libncurses5-dev \
       libreadline-dev \
-      libsqlite3-dev \
       libssl-dev \
-      locales \
-      moreutils \
-      openssh-client \
-      parallel \
-      python3 python3-dev \
+      libyaml-dev \
       rbenv \
-      software-properties-common \
-      sudo \
-      sudo \
-      tar \
-      unzip \
-      vim \
-      xvfb \
-      xz-utils \
       zlib1g-dev \
       && true
 
-WORKDIR /tmp
+#########################################################
+FROM ubuntu:18.04 as node
+#########################################################
+# compile node to /node, this layer is merged at the end
+#########################################################
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+      build-essential \
+      curl \
+      g++ \
+      g++-8 \
+      gcc-8 \
+      python3-pip
 
 # install node
 RUN curl -sSLOJ https://nodejs.org/dist/v18.16.0/node-v18.16.0.tar.gz && \
-  tar -xzvf node-v18.16.0.tar.gz && \
-  rm node-v18.16.0.tar.gz && \
-  cd node-v18.16.0 && \
-  # C and CXX flags needed for ubuntu <=18.04: see https://github.com/nodesource/distributions/issues/1392
-  C=/usr/bin/gcc-8 CXX=/usr/bin/g++-8 \
-  ./configure && \
-  make -j8 && \
-  make install && \
-  cd .. && \
-  rm -r node-v18.16.0
+    tar -xzf node-v18.16.0.tar.gz && \
+    rm node-v18.16.0.tar.gz && \
+    cd node-v18.16.0 && \
+    # C and CXX flags needed for ubuntu <=18.04: see https://github.com/nodesource/distributions/issues/1392
+    C=/usr/bin/gcc-8 CXX=/usr/bin/g++-8 \
+    ./configure && \
+    make -j8 && \
+    make install PREFIX=/build && \
+    cd .. && \
+    rm -r node-v18.16.0
+
+#########################################################
+FROM base as rbenv
+#########################################################
+# compile ruby to /rbenv, this layer is merged at the end
+#########################################################
+
+RUN mkdir -p "$(rbenv root)"/plugins && \
+    git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build && \
+    rbenv install 2.7.5 && \
+    eval "$(rbenv init -)" && \
+    rbenv shell 2.7.5 && \
+    rbenv rehash && \
+    gem install bundler -v 2.3.22 && \
+    mv $(rbenv root) /rbenv
+
+#########################################################
+FROM base as primary-layer
+#########################################################
+# Back to normal Dockerfile, add packages etc below
+#########################################################
+
+# MAINLINE UBUNTU PACKAGE DEPS SHOULD BE ADDED HERE
+RUN apt-get install -y --no-install-recommends \
+    apt-transport-https \
+    ca-certificates \
+    enscript \
+    gnupg \
+    gzip \
+    imagemagick \   
+    jq \
+    libaio-dev \
+    libaio1 \
+    libicu-dev \
+    libmagickwand-dev \
+    libsqlite3-dev \
+    locales \
+    moreutils \
+    openssh-client \
+    parallel \
+    python \
+    python-dev \
+    software-properties-common \
+    sudo \
+    tar \
+    unzip \
+    vim \
+    xvfb \
+    xz-utils \
+    zlib1g-dev \
+    && true
+
+WORKDIR /tmp
+
+RUN \
+    # set timezone to UTC by default
+    ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime && \
+    # en_US.UTF-8 locale not available by default
+    locale-gen en_US.UTF-8
 
 # install mysql
 RUN curl -sSLOJ https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb && \
-  echo "mysql-apt-config mysql-apt-config/select-server select mysql-5.7" | /usr/bin/debconf-set-selections && \
-  dpkg -i mysql-apt-config_0.8.22-1_all.deb || apt-get -fy install && \
-  rm -rf mysql-apt-config_0.8.22-1_all.deb && \
-  apt-get update && \
-  # warning: mysql-server debconf hangs forever if wget is already installed (!)
-  apt-get install -y mysql-server libmysqlclient-dev
+    echo "mysql-apt-config mysql-apt-config/select-server select mysql-5.7" | /usr/bin/debconf-set-selections && \
+    dpkg -i mysql-apt-config_0.8.22-1_all.deb || apt-get -fy install && \
+    rm -rf mysql-apt-config_0.8.22-1_all.deb && \
+    apt-get update && \
+    # warning: mysql-server debconf hangs forever if wget is already installed (!)
+    apt-get install -y mysql-server libmysqlclient-dev
 
 # disable auth for local dashboard mysql db
 RUN chown -R mysql:mysql /var/lib/mysql && \
-  service mysql start && \
-  echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | mysql && \
-  echo "CREATE USER 'readonly'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | mysql && \
-  echo "GRANT SELECT ON dashboard_test.* TO 'readonly'@'localhost';" | mysql && \
-  chown -R mysql:mysql /var/lib/mysql /var/run/mysqld && \
-  service mysql stop
+    service mysql start && \
+    echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | mysql && \
+    echo "CREATE USER 'readonly'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | mysql && \
+    echo "GRANT SELECT ON dashboard_test.* TO 'readonly'@'localhost';" | mysql && \
+    chown -R mysql:mysql /var/lib/mysql /var/run/mysqld && \
+    service mysql stop
 
 # install yarn
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
@@ -133,13 +179,10 @@ RUN mv /usr/bin/parallel /usr/bin/gnu_parallel && \
     rm tidy-5.4.0-64bit.deb && \
     mv /usr/bin/gnu_parallel /usr/bin/parallel
 
-# en_US.UTF-8 locale not available by default
-RUN locale-gen en_US.UTF-8
-
 # add circleci user
 RUN groupadd --gid 3434 ${USER} && \
     useradd --uid 3434 --gid ${GROUP} --shell /bin/bash --create-home ${USER} && \
-    echo "${USER} ALL=NOPASSWD: ALL" >> /etc/sudoers.d/50-${USER}
+    printf "${USER} ALL=NOPASSWD: ALL\n" > /etc/sudoers.d/50-${USER}
 
 # install https://github.com/boxboat/fixuid
 RUN curl -SsL https://github.com/boxboat/fixuid/releases/download/v0.4/fixuid-0.4-linux-amd64.tar.gz | tar -C /usr/local/bin -xzf - && \
@@ -150,19 +193,14 @@ RUN curl -SsL https://github.com/boxboat/fixuid/releases/download/v0.4/fixuid-0.
 
 USER ${USER}
 
-# install rbenv & ruby-build
-RUN mkdir -p "$(rbenv root)"/plugins && \
-    git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build && \
-    rbenv install 2.7.5 && \
-    eval "$(rbenv init -)" && \
-    rbenv shell 2.7.5 && \
-    rbenv rehash && \
-    gem install bundler -v 2.3.22 && \
-    # This bashrc file will be used whenever someone runs bash in interactive mode.
-    # This is mostly intended for the use case where you want to start a shell into a running container with
-    # docker exec -it <container_name> bash, which bypasses the entrypoint script.
-    echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+# This bashrc file will be used whenever someone runs bash in interactive mode.
+# This is mostly intended for the use case where you want to start a shell into a running container with
+# docker exec -it <container_name> bash, which bypasses the entrypoint script.
+RUN echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+
+# Finally, merge in the node & ruby layers
+COPY --from=rbenv --chown=${USER}:${GROUP} /rbenv /home/${USER}/.rbenv
+COPY --from=node /node /usr/local
 
 COPY entrypoint.sh /entrypoint.sh
-
 ENTRYPOINT ["/entrypoint.sh"]
