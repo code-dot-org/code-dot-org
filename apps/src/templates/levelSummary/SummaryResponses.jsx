@@ -19,6 +19,14 @@ const SummaryResponses = ({
   currentLevelId,
   levels,
 }) => {
+  const currentLevel = levels.find(l => l.activeId === currentLevelId);
+
+  // To avoid confusion, if a teacher tries to view the summary as a student,
+  // send them back to the level in Participant mode instead.
+  if (viewAs === ViewType.Participant) {
+    document.location.replace(currentLevel.url + document.location.search);
+  }
+
   const logEvent = useCallback(eventName => {
     const {level} = scriptData;
     analyticsReporter.sendEvent(eventName, {
