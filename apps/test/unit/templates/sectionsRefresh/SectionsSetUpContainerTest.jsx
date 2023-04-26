@@ -2,8 +2,8 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
-import sinon from 'sinon';
-import * as utils from '@cdo/apps/code-studio/utils';
+// import sinon from 'sinon';
+// import * as utils from '@cdo/apps/code-studio/utils';
 
 describe('SectionsSetUpContainer', () => {
   it('renders an initial set up section form', () => {
