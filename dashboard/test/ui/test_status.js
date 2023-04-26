@@ -125,10 +125,14 @@ Test.prototype.updateView = function () {
   // Update row appearance
   row.className = this.status;
   if (succeeded || failed) {
-    var formattedDuration = new Date(this.duration * 1000);
+    var formattedDuration = new Date(this.duration * 1000)
+      .toISOString()
+      .slice(11, 19)
+      .split(":");
+
     statusCell.innerHTML =
       (succeeded ? "Succeeded" : "Failed") +
-      ` in ${formattedDuration.toISOString().slice(11, 19)}` +
+      ` in ${formattedDuration[0]} hr ${formattedDuration[1]} min ${formattedDuration[2]} sec` +
       (this.attempt > 0 ? ` on retry #${this.attempt}` : "");
     logLinkCell.innerHTML = `<a href="${this.publicLogUrl()}">Log on S3</a>`;
   } else {
