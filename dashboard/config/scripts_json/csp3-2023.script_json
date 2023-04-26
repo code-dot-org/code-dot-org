@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-19 22:44:13 UTC",
+    "serialized_at": "2023-04-25 23:07:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -191,8 +191,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete the Unit Assessment and then spend the rest of class sharing their projects. ",
-        "preparation": "* Make sure students have access to their App Development Planning Guides",
-        "purpose": "This lesson provides a bookend to Unit 3 where students demonstrate their learning through their projects and a multiple choice assessment. ",
+        "preparation": "* Preview the questions on the assessment.\n* If you are teaching this virtually, consider checking out the [Virtual Modifications](https://docs.google.com/document/d/1PgE-pMa_iGneFOXdHuITtFyeGYG_9Fpc2hCCCA3Nw8I/edit?usp=sharing)",
         "student_overview": "Complete your app and share it with classmates before reflecting on the overall process of designing the app."
       },
       "seeding_key": {
@@ -520,21 +519,8 @@
       }
     },
     {
-      "key": "68c227f3-b94b-4cf4-b637-5d37bec17d10",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "68c227f3-b94b-4cf4-b637-5d37bec17d10",
-        "lesson.key": "Assessment Day",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2023"
-      }
-    },
-    {
       "key": "80f0069e-e5e9-49ac-b06f-69e0635ee9ad",
-      "position": 2,
+      "position": 1,
       "properties": {
         "name": "Warm Up"
       },
@@ -547,7 +533,7 @@
     },
     {
       "key": "a384dc94-ebe3-4aa7-8aa9-a7c45795b27d",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -561,7 +547,7 @@
     },
     {
       "key": "caf786b6-feff-4330-9541-1ffc5217758a",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -575,7 +561,7 @@
     },
     {
       "key": "dc3660bc-9a51-4789-a532-7d2ddf8741ea",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -2143,17 +2129,6 @@
       }
     },
     {
-      "key": "4a535566-0d7f-4f17-9cec-718b8733311d",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1PgE-pMa_iGneFOXdHuITtFyeGYG_9Fpc2hCCCA3Nw8I/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "4a535566-0d7f-4f17-9cec-718b8733311d",
-        "lesson_activity.key": "68c227f3-b94b-4cf4-b637-5d37bec17d10"
-      }
-    },
-    {
       "key": "b7c17f2d-1483-414b-a819-d24f2fc1caf8",
       "position": 1,
       "properties": {
@@ -2171,7 +2146,8 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students complete the Unit Assessment on Code Studio.",
         "duration": "25",
-        "name": "Unit Assessment"
+        "name": "Unit Assessment",
+        "progression_name": "Unit Assessment - Intro to App Design"
       },
       "seeding_key": {
         "activity_section.key": "2f053470-d91c-44d8-ab9b-5b1114791766",
@@ -3336,7 +3312,8 @@
       "properties": {
         "level_keys": [
           "CSP Unit 3 MC Assessment 2022_2023"
-        ]
+        ],
+        "progression": "Unit Assessment - Intro to App Design"
       },
       "bonus": false,
       "seeding_key": {
@@ -3932,6 +3909,18 @@
       }
     },
     {
+      "name": "Assessment Day - Intro to App Development",
+      "url": "https://docs.google.com/presentation/d/1TgJ5dvncE-Ch_svWzAn53-9jryR-k1XF4Oue6MhVEso/edit?usp=sharing",
+      "key": "assessment_day_-_intro_to_app_development",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "assessment_day_-_intro_to_app_development"
+      }
+    },
+    {
       "name": "Class Chats: Olawale Oladehin",
       "url": "https://drive.google.com/file/d/1Z9L6przjSwWZcP4lnF0w1jJBf-w-FdqB/view?usp=sharing",
       "key": "class_chats_olawale_oladehin",
@@ -3954,19 +3943,6 @@
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
-      }
-    },
-    {
-      "name": "CSP Unit 3 - Intro to App Design",
-      "url": "https://docs.google.com/presentation/d/1A9JhTTjQ4IGsCgO_uStJ1l3EMd9pHJsmMbSMSBjJzMQ/copy",
-      "key": "csp_unit_3_-_intro_to_app_design",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1A9JhTTjQ4IGsCgO_uStJ1l3EMd9pHJsmMbSMSBjJzMQ/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_3_-_intro_to_app_design"
       }
     },
     {
@@ -4093,6 +4069,18 @@
       }
     },
     {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -4139,7 +4127,7 @@
     {
       "seeding_key": {
         "lesson.key": "Assessment Day",
-        "resource.key": "csp_unit_3_-_intro_to_app_design"
+        "resource.key": "assessment_day_-_intro_to_app_development"
       }
     },
     {
@@ -4254,6 +4242,12 @@
     },
     {
       "seeding_key": {
+        "resource.key": "syllabus",
+        "script.name": "csp3-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "teacher_forum",
         "script.name": "csp3-2023"
       }
@@ -4266,12 +4260,7 @@
     }
   ],
   "scripts_student_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "unit_3_journal",
-        "script.name": "csp3-2023"
-      }
-    }
+
   ],
   "vocabularies": [
 

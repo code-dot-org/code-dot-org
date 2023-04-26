@@ -11,10 +11,10 @@
     },
     "new_name": null,
     "family_name": "k5-onlinepd",
-    "serialized_at": "2023-04-20 05:07:42 UTC",
+    "serialized_at": "2023-04-26 07:19:53 UTC",
     "published_state": "in_development",
-    "instruction_type": "self_paced",
-    "instructor_audience": "universal_instructor",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "facilitator",
     "participant_audience": "teacher",
     "seeding_key": {
       "script.name": "k5-onlinepd-2023"
@@ -556,6 +556,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Begin_2023"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -703,6 +706,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Debugging_2023"
+        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -725,6 +731,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Debuggingvideo_2023"
+        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -772,6 +781,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 pairprogrammingvideo_2023"
+        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
