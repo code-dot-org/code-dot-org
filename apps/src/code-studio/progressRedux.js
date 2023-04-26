@@ -85,23 +85,30 @@ const initialState = {
 /**
  * Thunks
  */
+
+// The user has navigated to a new level in the current lesson,
+// so we should update the browser and also set this as the new
+// current level.
 export function navigateToLevelId(levelId) {
   return (dispatch, getState) => {
     const state = getState().progress;
-    const newLevel = state.lessons[0].levels.find(level =>
-      level.ids.find(id => id === levelId)
-    );
+    const newLevel = state.lessons
+      .find(lesson => lesson.id === state.currentLessonId)
+      .levels.find(level => level.ids.find(id => id === levelId));
 
     updateBrowserForLevelNavigation(state, newLevel.url, levelId);
     dispatch(setCurrentLevelId(levelId));
   };
 }
 
+// The user has successfully completed the level and the page
+// will not be reloading.
 export function sendSuccessReport() {
   return (dispatch, getState) => {
     const state = getState().progress;
+    const levelId = state.currentLevelId;
     const currentLevel = state.lessons[0].levels.find(level =>
-      level.ids.find(id => id === state.currentLevelId)
+      level.ids.find(id => id === levelId)
     );
     const scriptLevelId = currentLevel.id;
 
@@ -113,10 +120,12 @@ export function sendSuccessReport() {
 
     return $.ajax({
       type: 'POST',
-      url: `/milestone/0/${scriptLevelId}`,
+      url: `/milestone/0/${scriptLevelId}/${levelId}`,
       data: data,
     }).done(data => {
-      console.log('done');
+      // Update the progress store by merging in this
+      // particular result immediately.
+      dispatch(mergeResults({[levelId]: 100}));
     });
   };
 }
@@ -134,7 +143,7 @@ export default function reducer(state = initialState, action) {
     // extract fields we care about from action
     return {
       ...state,
-      currentLevelId: action.currentLevelId,
+      currentLevelId: state.currentLevelId || action.currentLevelId,
       deeperLearningCourse: action.deeperLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
       lessons: processedLessons(lessons, action.deeperLearningCourse),
