@@ -247,7 +247,7 @@ Resources:
           Value: 30
         # Linearly increase the HTTP throughput share to new instances to give them time to initialize and load caches.
         - Key: slow_start.duration_seconds
-          Value: 120
+          Value: 300
 
 <%   unless frontends -%>
       Targets:
