@@ -6,7 +6,6 @@
 # NOTE: after making changes to this file, you'll need to sign them using
 # `drone sign code-dot-org/code-dot-org --save`
 
----
 kind: pipeline
 type: docker
 name: unit
