@@ -8,21 +8,49 @@ import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/co
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
 import CheckboxDropdown from '../CheckboxDropdown';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
+import {
+  translatedCourseOfferingCsTopics,
+  translatedInterdisciplinary,
+  translatedCourseOfferingDeviceTypes,
+  translatedCourseOfferingDurations,
+  translatedGradeLevels,
+} from '../teacherDashboard/CourseOfferingHelpers';
+
+const filterTypes = [
+  {
+    name: 'grade',
+    label: i18n.grade(),
+    options: translatedGradeLevels,
+  },
+  {
+    name: 'duration',
+    label: i18n.duration(),
+    options: translatedCourseOfferingDurations,
+  },
+  {
+    name: 'topic',
+    label: i18n.topic(),
+    options: {
+      ...translatedInterdisciplinary,
+      ...translatedCourseOfferingCsTopics,
+    },
+  },
+  {
+    name: 'device',
+    label: i18n.device(),
+    options: translatedCourseOfferingDeviceTypes,
+  },
+];
+
+const getEmptyFilters = () => {
+  let filters = {};
+  filterTypes.forEach(filter => {
+    filters[filter.name] = [];
+  });
+  return filters;
+};
 
 const CurriculumCatalog = ({curriculaData, isEnglish}) => {
-  const filterTypes = [
-    {name: 'course', label: 'Course', options: ['CSA', 'CSD', 'CSP', 'CSF']},
-    {name: 'color', label: 'Color', options: ['Red', 'Blue', 'Green']},
-  ];
-
-  const getEmptyFilters = () => {
-    let filters = {};
-    filterTypes.forEach(filter => {
-      filters[filter.name] = [];
-    });
-    return filters;
-  };
-
   const [appliedFilters, setAppliedFilters] = useState(getEmptyFilters());
 
   const handleSelect = (event, filterName) => {
@@ -73,7 +101,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
           className={style.catalogClearFiltersButton}
           onClick={handleClear}
         >
-          Clear filters
+          {i18n.clearFilters()}
         </button>
       </div>
       <div className={style.catalogContentContainer}>
