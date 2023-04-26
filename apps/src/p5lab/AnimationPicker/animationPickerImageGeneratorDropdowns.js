@@ -23,13 +23,13 @@ export const select = {
       id={`${GENERATOR_DROPDOWNS_PREFIX}-colors`}
       onChange={changeHandler}
     >
-      <option value="#FFD700">Really Rainbow</option>
-      <option value="#FFB6C1">Bunny Nose Pink</option>
-      <option value="#FFC5A4">Peachy Keen</option>
-      <option value="#00FF7F">Giggly Green</option>
-      <option value="#7FFFD4">Happy Aqua</option>
-      <option value="#FFD1DC">Frolicking Fuchsia</option>
-      <option value="#FFCC00">Sunny Sunflower</option>
+      <option value="rainbow">rainbow</option>
+      <option value="pink">pink</option>
+      <option value="peach">peach</option>
+      <option value="green">green</option>
+      <option value="aqua">aqua</option>
+      <option value="fuchsia">fuchsia</option>
+      <option value="yellow">sunflower</option>
     </select>
   ),
   animals: changeHandler => (
@@ -53,15 +53,17 @@ export const select = {
     </select>
   ),
   number: changeHandler => (
-    <input
+    <select
       type="number"
       id={`${GENERATOR_DROPDOWNS_PREFIX}-number`}
       name="number"
-      min="1"
-      max="4"
-      value="2"
       onChange={changeHandler}
-    ></input>
+    >
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
   ),
   bodyParts: changeHandler => (
     <select
@@ -75,6 +77,25 @@ export const select = {
       <option value="beak">Beak</option>
       <option value="fins">Fins</option>
       <option value="antennae">Antennae</option>
+    </select>
+  ),
+  artisticStyles: changeHandler => (
+    <select
+      name="artisticStyles"
+      id={`${GENERATOR_DROPDOWNS_PREFIX}-artisticStyles`}
+      onChange={changeHandler}
+    >
+      <option value="realistic">Realistic</option>
+      <option value="cartoon">Cartoon</option>
+      <option value="abstract">Abstract</option>
+      <option value="surreal">Surreal</option>
+      <option value="minimalist">Minimalist</option>
+      <option value="stained_glass">Stained Glass</option>
+      <option value="watercolor">Watercolor</option>
+      <option value="pointillist">Pointillist</option>
+      <option value="popArt">Pop Art</option>
+      <option value="graffiti">Graffiti</option>
+      <option value="pixelArt">Pixel Art</option>
     </select>
   )
 };
