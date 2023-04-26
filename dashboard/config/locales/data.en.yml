@@ -787,6 +787,7 @@ en:
         csa_recursion: 'CSA: Recursion'
         csa_searching_algorithms: 'CSA: Searching Algorithms'
         csa_sorting_algorithms: 'CSA: Sorting Algorithms'
+        star_quilts_intro_to_artist: 'Star Quilts: Intro to Artist'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

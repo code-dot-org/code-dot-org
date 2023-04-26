@@ -7,6 +7,18 @@
       "elements": [
         {
           "type": "html",
+          "name": "variable_testing",
+          "visible": false,
+          "html": "<h3>variables</h3>\n<p>Test to make sure variables are working as expected - make invisible when live</p><p><li>userId = {userId}</li>"
+        },
+        {
+          "type": "html",
+          "name": "testing_warning",
+          "visible": false,
+          "html": "<p style='background-color: yellow; text-align:center'>-- End of testing panel -- </p>"
+        },
+        {
+          "type": "html",
           "name": "survey_preamble_header_and_text",
           "html": "<h1>Welcome to the End-of-School-Year Survey</h2>\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience.</strong></p>\n<p>This survey asks questions about your experience using Code.org in your classroom during this school year.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>At the end, you will be offered a $10 Amazon gift card for your time (supplies limited to first 1000 respondents).</strong></P>\n<p>This survey should take <strong>less than 10 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
         }
@@ -124,7 +136,7 @@
         {
           "type": "checkbox",
           "name": "teach_other_courses",
-          "visibleIf": "{teacher_role} <> 'classroom_teacher'",
+          "visibleIf": "{teacher_role} anyof ['cs_teacher', 'stem_teacher', 'Librarian', 'other']",
           "title": "Are you responsible for teaching other courses or subjects at your school?",
           "description": "(If so, please select all that apply)",
           "choices": [
@@ -979,6 +991,77 @@
             {
               "value": "maybe",
               "text": "Maybe, I am not very familiar with the existing content"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "ai_integrated_subjects",
+          "visibleIf": "{ai_teaching_interest} anyof ['yes', 'maybe']",
+          "title": "Code.org is exploring ways to integrate AI into other subjects and topics. Out of the following subjects, which one would you want to have AI-integrated curriculum for?",
+          "choices": [
+            {
+              "value": "none",
+              "text": "None"
+            },
+            {
+              "value": "math",
+              "text": "Math"
+            },
+            {
+              "value": "english",
+              "text": "English"
+            },
+            {
+              "value": "history",
+              "text": "History"
+            },
+            {
+              "value": "art",
+              "text": "Art (visual or performing)"
+            },
+            {
+              "value": "science",
+              "text": "Science (any area)"
+            },
+            {
+              "value": "social_studies",
+              "text": "Social Studies"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "ai_integrated_subjects_other",
+          "visibleIf": "{ai_integrated_subjects} = 'other'",
+          "title": "What other subjects would you want to have AI-integrated curriculum for?"
+        },
+        {
+          "type": "checkbox",
+          "name": "ai_barriers",
+          "visibleIf": "{ai_teaching_interest} <> 'maybe'",
+          "title": "Which of the following do you see as the biggest barrier to implementing new AI curriculum at your school?",
+          "description": "(Select all that apply)",
+          "choices": [
+            {
+              "value": "need_more_prep_or_knowledge",
+              "text": "I would like more preparation before introducing AI to my students"
+            },
+            {
+              "value": "time_adoption",
+              "text": "Limited time to adopt new curriculum"
+            },
+            {
+              "value": "support_admin",
+              "text": "Lack of support from my school's administration"
+            },
+            {
+              "value": "support_teachers",
+              "text": "Lack of support from other teachers"
             }
           ]
         },
