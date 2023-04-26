@@ -57,7 +57,7 @@ window.levelbuilder.copySelectedBlockToClipboard = function () {
   }
 };
 
-window.levelbuilder.pasteBlocksToWorkspace = function (clearWorkspace) {
+window.levelbuilder.pasteBlocksToWorkspace = function () {
   let str = localStorage.getItem('blockXml');
 
   if (str.startsWith('<block') && str.endsWith('</block>')) {
@@ -68,8 +68,6 @@ window.levelbuilder.pasteBlocksToWorkspace = function (clearWorkspace) {
     // str is not valid block xml.
     return;
   }
-
-  clearWorkspace && Blockly.mainBlockSpace.clear();
 
   Blockly.Xml.domToBlockSpace(
     Blockly.mainBlockSpace,
