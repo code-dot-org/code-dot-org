@@ -191,10 +191,19 @@ const customInputTypes = {
       const onSelect = function (soundValue) {
         block.setTitleValue(soundValue, inputConfig.name);
       };
+      console.log('inside blocks.js soundPicker - inputConfig');
+      console.log(inputConfig);
       currentInputRow.appendField(inputConfig.label).appendField(
-        Blockly.cdoUtils.soundPickerField(onSelect, 'audio', null, {
-          libraryOnly: true,
-        }),
+        Blockly.cdoUtils.soundPickerField(
+          onSelect,
+          'audio',
+          null,
+          {
+            libraryOnly: true,
+          },
+          block,
+          inputConfig.name
+        ),
         inputConfig.name
       );
     },

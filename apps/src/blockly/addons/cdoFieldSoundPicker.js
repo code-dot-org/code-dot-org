@@ -10,9 +10,6 @@ import {
   getCurrentId,
 } from '@cdo/apps/code-studio/initApp/project';
 
-const ImagePicker = loadable(() =>
-  import('@cdo/apps/code-studio/components/ImagePicker')
-);
 const SoundPicker = loadable(() =>
   import('@cdo/apps/code-studio/components/SoundPicker')
 );
@@ -27,11 +24,20 @@ const FIELD_PADDING = 2;
 class CdoFieldSoundPicker extends GoogleBlockly.Field {
   constructor(value, options) {
     super(value);
+
     console.log('options', options);
-    this.assetChosen = options.assetChosen;
     this.typeFilter = options.typeFilter;
     this.onClose = options.onClose;
     this.options = options.options;
+    this.name = options.name;
+    this.block = options.block;
+    this.dialog = null;
+    this.onChange = function (soundValue, block, name) {
+      console.log('inside this.assetChosen');
+      console.log(block);
+      console.log(soundValue);
+      // block.setTitleValue(soundValue);
+    };
     this.newDiv = null;
     this.SERIALIZABLE = true;
     this.CURSOR = 'default';
@@ -138,13 +144,12 @@ class CdoFieldSoundPicker extends GoogleBlockly.Field {
   renderContent() {
     console.log('in renderContent - this.newDiv_', this.newDiv_);
     if (!this.newDiv_) {
+      console.log('!this.newDiv_ is true - return early');
       return;
     }
-
+    console.log('!this.newDiv_ is false - proceed');
     let sounds = new Sounds();
     this.newDiv = document.createElement('div');
-    let showChoseImageButton =
-      this.assetChosen && typeof assetChosen === 'function';
     let dialog = new Dialog({
       body: this.newDiv,
       id: 'manageAssetsModal',
@@ -155,19 +160,23 @@ class CdoFieldSoundPicker extends GoogleBlockly.Field {
         }
       },
     });
-
-    let pickerType = this.typeFilter === 'audio' ? SoundPicker : ImagePicker;
-
+    let onChange = this.onChange;
+    let block = this.block;
+    let name = this.name;
+    console.log('dialog', dialog);
+    console.log('onChange', onChange);
     ReactDOM.render(
-      React.createElement(pickerType, {
+      React.createElement(SoundPicker, {
         typeFilter: this.typeFilter,
         uploadsEnabled: !exceedsAbuseThreshold(),
-        assetChosen: showChoseImageButton
-          ? function (fileWithPath, timestamp) {
-              dialog.hide();
-              this.assetChosen(fileWithPath, timestamp);
-            }
-          : null,
+        assetChosen: function (fileWithPath) {
+          console.log('inside function - calling dialog.hide and assetChosen');
+          console.log('dialog', dialog);
+          console.log('onChange', onChange);
+          dialog.hide();
+          console.log('called dialog.hide() about to call onChange');
+          onChange(fileWithPath, block, name);
+        },
         projectId: getCurrentId(),
         soundPlayer: sounds,
         recordingFileType: RecordingFileType.MP3,

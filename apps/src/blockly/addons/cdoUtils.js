@@ -113,12 +113,20 @@ export function getCode(workspace) {
 // export function soundField(onChange) {
 //   return new Blockly.FieldDropdown([['Choose', 'Choose']], onChange);
 // }
-export function soundPickerField(assetChosen, typeFilter, onClose, options) {
+export function soundPickerField(
+  assetChosen,
+  typeFilter,
+  onClose,
+  options,
+  block,
+  name
+) {
   const fieldOptions = {
-    assetChosen,
     typeFilter,
     onClose,
     options,
+    block,
+    name,
   };
   return new Blockly.FieldSoundPicker('Choose', fieldOptions);
 }

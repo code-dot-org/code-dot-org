@@ -38,7 +38,13 @@ export default class SoundPicker extends React.Component {
   state = {mode: MODE.sounds};
 
   getAssetNameWithPrefix = sound => {
+    console.log('sound', sound);
+    console.log('sound constants');
+    console.log(DEFAULT_SOUND_PATH_PREFIX);
+    console.log(SOUND_PREFIX);
     const soundName = sound.replace(DEFAULT_SOUND_PATH_PREFIX, SOUND_PREFIX);
+    console.log(this.props);
+    console.log(this.props.assetChosen);
     this.props.assetChosen(soundName);
   };
 
