@@ -36,7 +36,9 @@ h2 {
 .markdown h1,
 .markdown h2,
 :global(.markdown-container) h1,
-:global(.markdown-container) h2 {
+:global(.markdown-container) h2,
+:global(h1.no-underline),
+:global(h2.no-underline) {
   border-bottom: unset;
 }
 /* stylelint-enable selector-pseudo-class-no-unknown */

@@ -48,7 +48,7 @@
       .free-response
         - title = level.get_property(:title)
         - if title.present? && !in_level_group
-          %h1= title
+          %h1.no-underline= title
         - long_instructions = level.get_property("long_instructions")
         - if long_instructions
           / Markdown will be rendered clientside by _free_response.js
