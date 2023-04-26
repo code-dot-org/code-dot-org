@@ -1,5 +1,3 @@
-FactoryBot.allow_class_lookup = false
-
 FactoryBot.define do
   # example zip: 35010
   factory :regional_partner_alabama, parent: :regional_partner_with_summer_workshops do
@@ -404,7 +402,9 @@ FactoryBot.define do
   end
 
   factory :pd_pre_workshop_survey, class: 'Pd::PreWorkshopSurvey' do
-    association :pd_enrollment
+    # Always create (never build) the associated Enrollment to guarantee that
+    # the through association to workshops will work
+    association :pd_enrollment, strategy: :create
   end
 
   factory :pd_regional_partner_contact, class: 'Pd::RegionalPartnerContact' do
@@ -498,7 +498,7 @@ FactoryBot.define do
     street_address {'333 Hogwarts Place'}
     city {'Magic City'}
     state {'Washington'}
-    add_attribute :zip_code, '98101'
+    add_attribute(:zip_code) {'98101'}
     principal_role {'Headmaster'}
     principal_first_name {'Albus'}
     principal_last_name {'Dumbledore'}
