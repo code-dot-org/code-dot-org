@@ -1,10 +1,17 @@
 # Pushed to Docker Hub at codedotorg/code-dot-org:<version>
-FROM ubuntu:18.04 as base
+#
+# This Dockerfile builds the image used on DroneCI
+# and is referenced by version in .drone.yml
 
-# We use a multi-stage build for parallel compiling node & ruby: 
+
+#########################################################
+FROM ubuntu:18.04 as base
+#########################################################
+# multi-stage build for parallel compiling node & ruby: 
 # see: https://docs.docker.com/build/building/multi-stage/
 #
-# For modifying regular deps, skip to the primary-layer below
+# For adding regular deps, skip to `primary-layer` below
+#########################################################
 
 ENV \
   LANG=C.UTF-8 \
@@ -12,7 +19,7 @@ ENV \
   USER=circleci \
   GROUP=circleci
 
-# just enough to compile ruby (add other packages in the primary-layer)
+# just enough to compile ruby: other deps => primary-layer below
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
       autoconf \
@@ -29,6 +36,7 @@ RUN apt-get update && \
       rbenv \
       zlib1g-dev \
       && true
+
 
 #########################################################
 FROM ubuntu:18.04 as node
@@ -58,6 +66,7 @@ RUN curl -sSLOJ https://nodejs.org/dist/v18.16.0/node-v18.16.0.tar.gz && \
     cd .. && \
     rm -r node-v18.16.0
 
+
 #########################################################
 FROM base as rbenv
 #########################################################
@@ -73,10 +82,11 @@ RUN mkdir -p "$(rbenv root)"/plugins && \
     gem install bundler -v 2.3.22 && \
     mv $(rbenv root) /rbenv
 
+
 #########################################################
 FROM base as primary-layer
 #########################################################
-# Back to normal Dockerfile, add packages etc below
+# Main layer of this Dockerfile: add packages etc below
 #########################################################
 
 # MAINLINE UBUNTU PACKAGE DEPS SHOULD BE ADDED HERE
@@ -200,7 +210,7 @@ RUN echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
 # Finally, merge in the node & ruby layers
 COPY --from=rbenv --chown=${USER}:${GROUP} /rbenv /home/${USER}/.rbenv
-COPY --from=node /node /usr/local
+COPY --from=node /build /usr/local
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
