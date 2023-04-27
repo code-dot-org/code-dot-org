@@ -275,6 +275,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     getCode: function (workspace) {
       return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
     },
+    soundField: function (onChange) {
+      return new Blockly.FieldDropdown([['Choose', 'Choose']], onChange);
+    },
   };
   return blocklyWrapper;
 }

@@ -21,8 +21,7 @@ theme: responsive_full_width
 %section.hero-banner-basic.bg-neutral-dark{style: "display: block !important"}
   .wrapper
     .text-wrapper.col-60
-      %h1{style: "color: white; margin-bottom: 0"}=hoc_s(:ai_hero_heading_01)
-      %h2.heading-xxl{style: "color: white"}=hoc_s(:ai_hero_heading_02)
+      %h1{style: "color: white"}=hoc_s(:ai_hero_heading)
       %p{style: "color: white"}=hoc_s(:ai_hero_desc)
       - if !!DCDO.get('teach-ai-launch-2023', false)
         %a.link-button{href: "#teach-ai-callout"}

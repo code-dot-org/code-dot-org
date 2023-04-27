@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import moduleStyles from './sections-refresh.module.scss';
@@ -7,6 +7,7 @@ import QuickAssignTableHocPl from './QuickAssignTableHocPl';
 import CurriculumQuickAssignTopRow from './CurriculumQuickAssignTopRow';
 import VersionUnitDropdowns from './VersionUnitDropdowns';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {CourseOfferingCurriculumTypes as curriculumTypes} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 export const MARKETING_AUDIENCE = {
   ELEMENTARY: 'elementary',
@@ -16,11 +17,15 @@ export const MARKETING_AUDIENCE = {
   PL: 'pl',
 };
 
-export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
+export default function CurriculumQuickAssign({
+  isNewSection,
+  updateSection,
+  sectionCourse,
+}) {
   const [courseOfferings, setCourseOfferings] = useState(null);
   const [decideLater, setDecideLater] = useState(false);
   const [marketingAudience, setMarketingAudience] = useState(null);
-  const [selectedCourseOffering, setSelectedCourseOffering] = useState(null);
+  const [selectedCourseOffering, setSelectedCourseOffering] = useState();
 
   const showPlOfferings = queryParams('participantType') !== 'student';
 
@@ -33,6 +38,104 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
       .then(response => response.json())
       .then(data => setCourseOfferings(data));
   }, []);
+
+  useEffect(() => {
+    if (!courseOfferings) return;
+    if (!isNewSection) {
+      //  TO DO: refactor for efficiency.  Consider using a flatten-like function (maybe in a helper file?)
+      const highData = {
+        ...courseOfferings[MARKETING_AUDIENCE.HIGH][curriculumTypes.course],
+        ...courseOfferings[MARKETING_AUDIENCE.HIGH][
+          curriculumTypes.standalone_unit
+        ],
+        ...courseOfferings[MARKETING_AUDIENCE.HIGH][curriculumTypes.module],
+      };
+      const middleData = {
+        ...courseOfferings[MARKETING_AUDIENCE.MIDDLE][curriculumTypes.course],
+        ...courseOfferings[MARKETING_AUDIENCE.MIDDLE][
+          curriculumTypes.standalone_unit
+        ],
+        ...courseOfferings[MARKETING_AUDIENCE.MIDDLE][curriculumTypes.module],
+      };
+      const elementaryData = {
+        ...courseOfferings[MARKETING_AUDIENCE.ELEMENTARY][
+          curriculumTypes.course
+        ],
+        ...courseOfferings[MARKETING_AUDIENCE.ELEMENTARY][
+          curriculumTypes.module
+        ],
+      };
+      const hocData = {...courseOfferings[MARKETING_AUDIENCE.HOC]};
+
+      const determineSelectedCourseOffering = (startingData, audience) => {
+        const headers = Object.keys(startingData);
+
+        headers.forEach(header => {
+          const courseDataByHeaderValues = Object.values(startingData[header]);
+          courseDataByHeaderValues.forEach(course => {
+            if (sectionCourse?.courseOfferingId === course.id) {
+              setSelectedCourseOffering(course);
+              updateSectionCourseForExisitngSections(course);
+              setMarketingAudience(audience);
+            }
+          });
+        });
+      };
+
+      if (!selectedCourseOffering) {
+        determineSelectedCourseOffering(highData, MARKETING_AUDIENCE.HIGH);
+        determineSelectedCourseOffering(middleData, MARKETING_AUDIENCE.MIDDLE);
+        determineSelectedCourseOffering(
+          elementaryData,
+          MARKETING_AUDIENCE.ELEMENTARY
+        );
+        determineSelectedCourseOffering(hocData, MARKETING_AUDIENCE.HOC);
+      }
+    }
+    // added all these dependencies given the eslint warning
+  }, [
+    courseOfferings,
+    isNewSection,
+    sectionCourse,
+    selectedCourseOffering,
+    updateSection,
+    updateSectionCourseForExisitngSections,
+  ]);
+
+  const updateSectionCourseForExisitngSections = useCallback(
+    course => {
+      const courseVersions = {};
+      // The structure of cv is an array with the first item an id and the second
+      // item an object of everything. See 'CourseOfferingsTestData' for examples
+      course.course_versions.map(cv => {
+        courseVersions[cv[1].id] = cv[1];
+      });
+
+      const courseVersionId = sectionCourse.versionId;
+      const courseVersion = courseVersions[courseVersionId];
+      const isStandaloneUnit = courseVersion.type === 'Unit';
+
+      let targetUnit;
+
+      if (isStandaloneUnit) {
+        targetUnit = Object.values(courseVersion.units)[0];
+      } else if (sectionCourse.unitId) {
+        targetUnit = courseVersion.units[sectionCourse.unitId];
+      }
+
+      const updateSectionData = {
+        displayName: course.display_name,
+        courseOfferingId: course.id,
+        versionId: courseVersionId,
+        unitId: isStandaloneUnit ? null : sectionCourse.unitId,
+        hasLessonExtras: targetUnit?.lesson_extras_available,
+        hasTextToSpeech: targetUnit?.text_to_speech_enabled,
+      };
+
+      updateSection('course', updateSectionData);
+    },
+    [updateSection, sectionCourse]
+  );
 
   /*
   When toggling 'decide later', clear out marketing audience or assign one to make
@@ -96,6 +199,7 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
           }
           updateCourse={course => updateSection('course', course)}
           sectionCourse={sectionCourse}
+          isNewSection={isNewSection}
         />
       )}
       {marketingAudience && isPlOrHoc() && courseOfferings && (
@@ -109,10 +213,12 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
           sectionCourse={sectionCourse}
         />
       )}
+
       <VersionUnitDropdowns
         courseOffering={selectedCourseOffering}
         updateCourse={course => updateSection('course', course)}
         sectionCourse={sectionCourse}
+        isNewSection={isNewSection}
       />
     </div>
   );
@@ -121,4 +227,5 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
 CurriculumQuickAssign.propTypes = {
   updateSection: PropTypes.func.isRequired,
   sectionCourse: PropTypes.object,
+  isNewSection: PropTypes.bool,
 };
