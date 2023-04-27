@@ -96,9 +96,9 @@ class CdoFieldSoundPicker extends GoogleBlockly.Field {
     }
   }
 
-  // getText() {
-  //   return this.options.getLibrary().getSoundForId(this.getValue()).name;
-  // }
+  getText() {
+    return this.getValue();
+  }
 
   /**
    * An editor for the field.
@@ -106,26 +106,13 @@ class CdoFieldSoundPicker extends GoogleBlockly.Field {
    */
   showEditor_() {
     super.showEditor_();
-    const editor = this.dropdownCreate_();
-    Blockly.DropDownDiv.getContentDiv().appendChild(editor);
-
-    const style = this.sourceBlock_.style;
-    Blockly.DropDownDiv.setColour(style.colourPrimary, style.colourTertiary);
-  }
-
-  dropdownCreate_() {
-    console.log('inside dropdownCreate_');
     this.newDiv_ = document.createElement('div');
-
-    this.renderContent();
-
     this.newDiv_.style.color = 'white';
     this.newDiv_.style.width = '100px';
     this.newDiv_.style.backgroundColor = 'black';
     this.newDiv_.style.padding = '5px';
     this.newDiv_.style.cursor = 'pointer';
-
-    return this.newDiv_;
+    this.renderContent();
   }
 
   renderContent() {
@@ -142,9 +129,6 @@ class CdoFieldSoundPicker extends GoogleBlockly.Field {
       id: 'manageAssetsModal',
       onHidden: () => {
         sounds.stopAllAudio();
-        if (this.onClose) {
-          this.onClose();
-        }
       },
     });
     ReactDOM.render(
