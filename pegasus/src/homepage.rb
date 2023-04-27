@@ -33,7 +33,7 @@ class Homepage
 
       # If the banner has a showInternationally flag,
       # only show if exactly one of showInternationally or location_unknown_or_usa are true
-      location_unknown_or_usa = request.country.nil? || request.country.to_s.casecmp?('us')
+      location_unknown_or_usa = request.country.nil? || request.country.to_s.casecmp?('rd') || request.country.to_s.casecmp?('us')
       next if banner.key?("showInternationally") && !(banner["showInternationally"] ^ location_unknown_or_usa)
 
       # We have a banner.  Add the ID to the hash that we return.
