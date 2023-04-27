@@ -61,8 +61,7 @@ const useSections = section => {
   return [sections, updateSection];
 };
 
-const saveSection = (e, section, isNewSection) => {
-  e.preventDefault();
+const saveSection = (section, isNewSection) => {
   // Determine data sources and save method based on new vs edit section
   const dataUrl = isNewSection ? SECTIONS_API : `${SECTIONS_API}/${section.id}`;
   const method = isNewSection ? 'POST' : 'PATCH';
@@ -118,7 +117,7 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
 
   const isNewSection = !sectionToBeEdited;
-  const initialSection = useRef(sectionToBeEdited);
+  const initialSectionRef = useRef(sectionToBeEdited);
 
   const caretStyle = style.caret;
   const caret = advancedSettingsOpen ? 'caret-down' : 'caret-right';
@@ -127,14 +126,13 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
     setAdvancedSettingsOpen(!advancedSettingsOpen);
   };
 
-  const recordSectionSetupEvent = (e, section) => {
-    e.preventDefault();
-    const initial = initialSection.current;
-    // We do not currently store version year on the section, and the version dropdown
-    // does not update it. We will need to query all course offerings or set up a new
-    // course offerings controller function in order to populate these values.
-    let versionYear;
-    let initialVersionYear;
+  const recordSectionSetupEvent = section => {
+    const initialSection = initialSectionRef.current;
+    /* 
+    We do not currently store version year on the section, and the version dropdown
+    does not update it. We will need to query all course offerings or set up a new
+    course offerings controller function to populate previousVersionYear and newVersionYear.
+    */
     if (isNewSection) {
       analyticsReporter.sendEvent(EVENTS.COMPLETED_EVENT, {
         sectionUnitId: section.course?.unitId,
@@ -147,27 +145,32 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
         sectionPairProgramSelection: section.pairingAllowed,
       });
     }
+    /*
+    We want to send a 'curriculum assigned' event if this is not a new section
+    (the check for initialSection) and if we are changing the courseOffering
+    or the unit (hence the checks before and after the ||). 
+    */
     if (
       (section.course?.courseOfferingId &&
-        initial &&
+        initialSection &&
         section.course?.courseOfferingId !==
-          initial.course?.courseOfferingId) ||
+          initialSection.course?.courseOfferingId) ||
       (section.course?.unitId &&
-        initial &&
-        section.course?.unitId !== initial.course?.unitId)
+        initialSection &&
+        section.course?.unitId !== initialSection.course?.unitId)
     ) {
       analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
         sectionName: section.name,
         sectionId: section.id,
         sectionLoginType: section.loginType,
-        previousUnitId: initial.course?.unitId,
-        previousCourseId: initial.course?.courseOfferingId,
-        previousCourseVersionId: initial.course?.versionId,
-        previousVersionYear: initialVersionYear,
+        previousUnitId: initialSection.course?.unitId,
+        previousCourseId: initialSection.course?.courseOfferingId,
+        previousCourseVersionId: initialSection.course?.versionId,
+        previousVersionYear: null,
         newUnitId: section.course?.unitId,
         newCourseId: section.course?.courseOfferingId,
         newCourseVersionId: section.course?.courseVersionId,
-        newVersionYear: versionYear,
+        newVersionYear: null,
       });
     }
   };
@@ -255,8 +258,9 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
           text={isNewSection ? i18n.finishCreatingSections() : i18n.save()}
           color="purple"
           onClick={e => {
-            recordSectionSetupEvent(e, sections[0]);
-            saveSection(e, sections[0], isNewSection);
+            e.preventDefault();
+            recordSectionSetupEvent(sections[0]);
+            saveSection(sections[0], isNewSection);
           }}
         />
       </div>
