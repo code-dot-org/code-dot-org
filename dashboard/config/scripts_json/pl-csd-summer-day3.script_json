@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-21 17:57:34 UTC",
+    "serialized_at": "2023-04-27 09:18:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -150,6 +150,8 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "**Purpose:**\nOn Days 2 and 3, participants engaged in four Unit 3 - Interactive Animations and Games lessons. This session provides participants with space to review what they’ve learned and ask questions about the unit.\n\n\n**Objectives:**\n* Participants are aware of the content in Unit 3 that has not been covered in the workshop\n\n**Suggested Time:** 25 minutes",
+        "student_overview": "**You will:**\n* Get an overview of the content in Unit 3 that has not been covered in the workshop"
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -336,6 +338,18 @@
       "seeding_key": {
         "lesson_activity.key": "7bd408e1-6036-44bf-afc2-b383451fdb6e",
         "lesson.key": "Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "c81fe2e8-fad8-42f0-a7a6-6b3e4b3269ee",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c81fe2e8-fad8-42f0-a7a6-6b3e4b3269ee",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-day3"
       }
@@ -852,6 +866,16 @@
       "seeding_key": {
         "activity_section.key": "97318bb2-d35a-40fc-ab41-551e67851d6c",
         "lesson_activity.key": "7bd408e1-6036-44bf-afc2-b383451fdb6e"
+      }
+    },
+    {
+      "key": "abea81d3-d636-4c2c-9ad4-ea91c88c3016",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "abea81d3-d636-4c2c-9ad4-ea91c88c3016",
+        "lesson_activity.key": "c81fe2e8-fad8-42f0-a7a6-6b3e4b3269ee"
       }
     },
     {
