@@ -1,4 +1,5 @@
 import React, {useState, useCallback} from 'react';
+import classnames from 'classnames';
 import i18n from '@cdo/locale';
 import SingleSectionSetUp from './SingleSectionSetUp';
 import CurriculumQuickAssign from './CurriculumQuickAssign';
@@ -104,13 +105,18 @@ export default function SectionsSetUpContainer() {
 
   return (
     <form id={FORM_ID}>
-      <Heading1>{i18n.setUpClassSectionsHeader()}</Heading1>
-      <BodyOneText>{i18n.setUpClassSectionsSubheader()}</BodyOneText>
-      <BodyOneText>
-        <a href="https://www.youtube.com/watch?v=4Wugxc80fNU">
-          {i18n.setUpClassSectionsSubheaderLink()}
-        </a>
-      </BodyOneText>
+      <div className={moduleStyles.containerWithMarginTop}>
+        <Heading1>{i18n.setUpClassSectionsHeader()}</Heading1>
+        <BodyOneText className={moduleStyles.noMarginBottom}>
+          {i18n.setUpClassSectionsSubheader()}
+        </BodyOneText>
+        <BodyOneText>
+          <a href="https://www.youtube.com/watch?v=4Wugxc80fNU">
+            {i18n.setUpClassSectionsSubheaderLink()}
+          </a>
+        </BodyOneText>
+      </div>
+
       <SingleSectionSetUp
         sectionNum={1}
         section={sections[0]}
@@ -120,27 +126,35 @@ export default function SectionsSetUpContainer() {
         updateSection={(key, val) => updateSection(0, key, val)}
         sectionCourse={sections[0].course}
       />
-      <Button
-        id="uitest-advanced-settings"
-        className={moduleStyles.advancedSettingsButton}
-        styleAsText
-        icon={caret}
-        onClick={toggleAdvancedSettingsOpen}
-      >
-        <Heading3>{i18n.advancedSettings()}</Heading3>
-      </Button>
-      <div>
-        {advancedSettingsOpen && (
-          <AdvancedSettingToggles
-            updateSection={(key, val) => updateSection(0, key, val)}
-            section={sections[0]}
-            assignedUnitTextToSpeechEnabled
-            assignedUnitLessonExtrasAvailable
-            label={i18n.pairProgramming()}
-          />
-        )}
+      <div className={moduleStyles.containerWithMarginTop}>
+        <Button
+          id="uitest-advanced-settings"
+          className={moduleStyles.advancedSettingsButton}
+          styleAsText
+          icon={caret}
+          onClick={toggleAdvancedSettingsOpen}
+        >
+          <Heading3>{i18n.advancedSettings()}</Heading3>
+        </Button>
+        <div>
+          {advancedSettingsOpen && (
+            <AdvancedSettingToggles
+              updateSection={(key, val) => updateSection(0, key, val)}
+              section={sections[0]}
+              assignedUnitTextToSpeechEnabled
+              assignedUnitLessonExtrasAvailable
+              label={i18n.pairProgramming()}
+            />
+          )}
+        </div>
       </div>
-      <div className={moduleStyles.buttonsContainer}>
+
+      <div
+        className={classnames(
+          moduleStyles.buttonsContainer,
+          moduleStyles.containerWithMarginTop
+        )}
+      >
         <Button
           useDefaultLineHeight
           icon="plus"

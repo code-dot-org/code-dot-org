@@ -15,25 +15,29 @@ export default function SingleSectionSetUp({
 
   return (
     <div>
-      <Heading2>{i18n.classSection()}</Heading2>
-      <label>
-        {i18n.className()}
-        <input
+      <div className={moduleStyles.containerWithMarginTop}>
+        <Heading2>{i18n.classSection()}</Heading2>
+        <label>
+          {i18n.className()}
+          <input
+            required
+            type="text"
+            className={moduleStyles.classNameTextField}
+            value={section.name}
+            onChange={e => updateSection('name', e.target.value)}
+          />
+        </label>
+      </div>
+      <div className={moduleStyles.containerWithMarginTop}>
+        <MultiSelectGroup
           required
-          type="text"
-          className={moduleStyles.classNameTextField}
-          value={section.name}
-          onChange={e => updateSection('name', e.target.value)}
+          label={i18n.chooseGrades()}
+          name="grades"
+          options={gradeOptions}
+          values={section.grades || []}
+          setValues={g => updateSection('grades', g)}
         />
-      </label>
-      <MultiSelectGroup
-        required
-        label={i18n.chooseGrades()}
-        name="grades"
-        options={gradeOptions}
-        values={section.grades || []}
-        setValues={g => updateSection('grades', g)}
-      />
+      </div>
     </div>
   );
 }

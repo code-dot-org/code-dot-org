@@ -1,8 +1,18 @@
 @import "color.scss";
 @import "font.scss";
 
+.containerWithMarginTop {
+  margin-top: 40px;
+}
+
+.noMarginBottom {
+  margin-bottom: 0;
+}
+
 .classNameTextField {
   width: 100%;
+  box-sizing: border-box;
+  height: unset;
 }
 
 .buttonsContainer {
@@ -11,8 +21,6 @@
 }
 
 .buttonRow {
-  // ensure we have height when we only have our toggle (which is floated)
-  min-height: 50px;
   position: relative;
   display: flex;
   flex-direction: column;

@@ -66,7 +66,7 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
   };
 
   return (
-    <div>
+    <div className={moduleStyles.containerWithMarginTop}>
       <div className={moduleStyles.input}>
         <label className={moduleStyles.decideLater} htmlFor="decide-later">
           {selectedCourseOffering
