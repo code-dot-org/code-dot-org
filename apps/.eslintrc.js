@@ -44,6 +44,20 @@ module.exports = {
     CDOSounds: 'writeable',
     ga: 'readonly',
     google: 'readonly',
+    // PISKEL_DEVELOPMENT_MODE is a build flag.  See Gruntfile.js for how to enable it.
+    PISKEL_DEVELOPMENT_MODE: 'writeable',
+    thanksUrl: 'writeable',
+    signupErrorMessage: 'writeable',
+    censusErrorMessage: 'writeable',
+    hocYear: 'writeable',
+    CanvasPixelArray: 'writeable',
+    adjustScroll: 'writeable',
+    Craft: 'writeable',
+    addToHome: 'writeable',
+    Dialog: 'writeable',
+    YT: 'writeable',
+    Handsontable: 'writeable',
+    inlineAttach: 'writeable',
   },
   rules: {
     'babel/semi': 'error', // autofixable

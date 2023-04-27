@@ -1,5 +1,3 @@
-/* globals Craft */
-
 import $ from 'jquery';
 import React from 'react';
 import i18n from '@cdo/locale';
