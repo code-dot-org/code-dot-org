@@ -154,8 +154,12 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
         sectionCourse={sections[0].course}
       />
 
-      <div className={moduleStyles.containerWithMarginTop}>
-        <hr />
+      <div
+        className={classnames(
+          moduleStyles.containerWithMarginTop,
+          moduleStyles.withBorderTopAndBottom
+        )}
+      >
         <Button
           id="uitest-advanced-settings"
           className={moduleStyles.advancedSettingsButton}
@@ -176,7 +180,6 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
             />
           )}
         </div>
-        <hr />
       </div>
 
       <div

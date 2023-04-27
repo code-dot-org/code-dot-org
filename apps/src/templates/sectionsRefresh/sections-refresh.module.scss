@@ -1,12 +1,18 @@
 @import "color.scss";
 @import "font.scss";
 
+// In order to make typography work correctly with em units. (Design system is build for 16px default font size)
 body {
   font-size: 16px;
 }
 
 .containerWithMarginTop {
   margin-top: 40px;
+}
+
+.withBorderTopAndBottom {
+  border-top: 1px solid $neutral_dark20;
+  border-bottom: 1px solid $neutral_dark20;
 }
 
 p.noMarginBottomParagraph {
@@ -138,6 +144,7 @@ label.typographyLabel {
 
 button.advancedSettingsButton {
   margin: 5px;
+  font-size: unset;
 
   i {
     color: $neutral_dark;
@@ -146,6 +153,7 @@ button.advancedSettingsButton {
 
   h3 {
     display: inline-block;
+    margin-top: 0.5em;
   }
 }
 
