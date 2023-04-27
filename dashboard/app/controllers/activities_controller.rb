@@ -21,7 +21,7 @@ class ActivitiesController < ApplicationController
 
   def milestone
     # TODO: do we use the :result and :testResult params for the same thing?
-    solved = ('true' == params[:result])
+    solved = (params[:result] == 'true')
     script_name = ''
 
     if params[:script_level_id]
@@ -145,7 +145,7 @@ class ActivitiesController < ApplicationController
     authorize! :create, UserLevel
 
     test_result = params[:testResult].to_i
-    solved = ('true' == params[:result])
+    solved = (params[:result] == 'true')
 
     lines = params[:lines].to_i
 

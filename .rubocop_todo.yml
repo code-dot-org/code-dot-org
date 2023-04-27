@@ -541,10 +541,3 @@ Style/TernaryParentheses:
 # Configuration parameters: AllowNamedUnderscoreVariables.
 Style/TrailingUnderscoreVariable:
   Enabled: false
-
-# Offense count: 13
-# This cop supports unsafe auto-correction (--auto-correct-all).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: forbid_for_all_comparison_operators, forbid_for_equality_operators_only, require_for_all_comparison_operators, require_for_equality_operators_only
-Style/YodaCondition:
-  Enabled: false
