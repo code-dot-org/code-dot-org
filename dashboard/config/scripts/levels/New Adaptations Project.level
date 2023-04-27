@@ -47,17 +47,17 @@
     "validation_enabled": "false",
     "mini_toolbox": "false",
     "hide_pause_button": "false",
-    "standalone_app_name": "adaptation",
+    "standalone_app_name": "spritelab",
     "instructions_icon": "poet",
     "preload_asset_list": null
   },
   "game_id": 64,
   "published": true,
-  "created_at": "2023-04-28T05:04:30.000Z",
+  "created_at": "2023-04-28T05:16:10.000Z",
   "level_num": "custom",
   "user_id": 831,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-04-27T15:04:30.058-07:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_make_behavior\\\"\"],\"cloned_from\":\"csc_animal_adaptations_make_behavior\"},{\"changed_at\":\"2023-04-27 15:05:06 -0700\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"standalone_app_name\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-04-27T15:16:10.959-07:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_make_behavior\\\"\"],\"cloned_from\":\"csc_animal_adaptations_make_behavior\"},{\"changed_at\":\"2023-04-27 15:16:54 -0700\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

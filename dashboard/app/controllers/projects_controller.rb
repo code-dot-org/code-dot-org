@@ -25,8 +25,8 @@ class ProjectsController < ApplicationController
   # @option {Boolean|nil} :i18n If present, include this level in the i18n sync
   # thumbnail image url when creating a project of this type.
   STANDALONE_PROJECTS = {
-    adaptation: {
-      name: 'New Adaptation Project'
+    adaptations: {
+      name: 'New Adaptations Project'
     },
     artist: {
       name: 'New Artist Project',
