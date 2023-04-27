@@ -2,6 +2,7 @@
 Feature: Level summary
 
 Scenario: Free Response level 1
+  # Complex level with many different features in use, including a title h1.
   When I open my eyes to test "free response summary 1"
   Given I am a teacher
   And I create a new student section
@@ -12,6 +13,7 @@ Scenario: Free Response level 1
   And I close my eyes
 
 Scenario: Free Response level 2
+  # Simpler level with an h2 in the markdown.
   When I open my eyes to test "free response summary 2"
   Given I am a teacher
   And I create a new student section
@@ -22,6 +24,7 @@ Scenario: Free Response level 2
   And I close my eyes
 
 Scenario: Free Response level 3
+  # Minimal level with no heading, just text and a textarea.
   When I open my eyes to test "free response summary 3"
   Given I am a teacher
   And I create a new student section
