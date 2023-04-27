@@ -83,9 +83,9 @@ const saveSection = (e, section, isNewSection) => {
   const section_data = {
     login_type: loginType,
     participant_type: participantType,
-    course_offering_id: section.course.courseOfferingId,
-    course_version_id: section.course.versionId,
-    unit_id: section.course.unitId,
+    course_offering_id: section.course?.courseOfferingId,
+    course_version_id: section.course?.versionId,
+    unit_id: section.course?.unitId,
     restrict_section: section.restrictSection,
     lesson_extras: section.lessonExtras,
     pairing_allowed: section.pairingAllowed,
@@ -137,10 +137,10 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
     let initialVersionYear;
     if (isNewSection) {
       analyticsReporter.sendEvent(EVENTS.COMPLETED_EVENT, {
-        sectionUnitId: section.course.unitId,
-        sectionCurriculumLocalizedName: section.course.displayName,
-        sectionCurriculum: section.course.courseOfferingId, //this is course Offering id
-        sectionCurriculumVersionYear: section.course.versionYear,
+        sectionUnitId: section.course?.unitId,
+        sectionCurriculumLocalizedName: section.course?.displayName,
+        sectionCurriculum: section.course?.courseOfferingId, //this is course Offering id
+        sectionCurriculumVersionYear: section.course?.versionYear,
         sectionGrade: section.grade ? section.grade[0] : null,
         sectionLockSelection: section.restrictSection,
         sectionName: section.name,
@@ -148,24 +148,25 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
       });
     }
     if (
-      (section.course.courseOfferingId &&
+      (section.course?.courseOfferingId &&
         initial &&
-        section.course.courseOfferingId !== initial.course.courseOfferingId) ||
-      (section.course.unitId &&
+        section.course?.courseOfferingId !==
+          initial.course?.courseOfferingId) ||
+      (section.course?.unitId &&
         initial &&
-        section.course.unitId !== initial.course.unitId)
+        section.course?.unitId !== initial.course?.unitId)
     ) {
       analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
         sectionName: section.name,
         sectionId: section.id,
         sectionLoginType: section.loginType,
-        previousUnitId: initial.course.unitId,
-        previousCourseId: initial.course.courseOfferingId,
-        previousCourseVersionId: initial.course.versionId,
+        previousUnitId: initial.course?.unitId,
+        previousCourseId: initial.course?.courseOfferingId,
+        previousCourseVersionId: initial.course?.versionId,
         previousVersionYear: initialVersionYear,
-        newUnitId: section.course.unitId,
-        newCourseId: section.course.courseOfferingId,
-        newCourseVersionId: section.course.courseVersionId,
+        newUnitId: section.course?.unitId,
+        newCourseId: section.course?.courseOfferingId,
+        newCourseVersionId: section.course?.courseVersionId,
         newVersionYear: versionYear,
       });
     }
@@ -254,8 +255,8 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
           text={isNewSection ? i18n.finishCreatingSections() : i18n.save()}
           color="purple"
           onClick={e => {
-            recordSectionSetupEvent(e, sections[0]),
-              saveSection(e, sections[0], isNewSection);
+            recordSectionSetupEvent(e, sections[0]);
+            saveSection(e, sections[0], isNewSection);
           }}
         />
       </div>
