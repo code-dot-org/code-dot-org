@@ -92,9 +92,11 @@ const initialState = {
 export function navigateToLevelId(levelId) {
   return (dispatch, getState) => {
     const state = getState().progress;
-    const newLevel = state.lessons
-      .find(lesson => lesson.id === state.currentLessonId)
-      .levels.find(level => level.ids.find(id => id === levelId));
+    const newLevel = getLevelById(
+      state.lessons,
+      state.currentLessonId,
+      levelId
+    );
 
     updateBrowserForLevelNavigation(state, newLevel.url, levelId);
     dispatch(setCurrentLevelId(levelId));
@@ -107,25 +109,37 @@ export function sendSuccessReport(appType) {
   return (dispatch, getState) => {
     const state = getState().progress;
     const levelId = state.currentLevelId;
-    const currentLevel = state.lessons
-      .find(lesson => lesson.id === state.currentLessonId)
-      .levels.find(level => level.ids.find(id => id === levelId));
+    const currentLevel = getLevelById(
+      state.lessons,
+      state.currentLessonId,
+      levelId
+    );
     const scriptLevelId = currentLevel.id;
+
+    // The server can determine the user ID.
+    const userId = 0;
+
+    // An ideal score.
+    const idealPassResult = TestResults.ALL_PASS;
 
     const data = {
       app: appType,
       result: true,
-      testResult: 100,
+      testResult: idealPassResult,
     };
 
-    return $.ajax({
-      type: 'POST',
-      url: `/milestone/0/${scriptLevelId}/${levelId}`,
-      data: data,
-    }).done(data => {
-      // Update the progress store by merging in this
-      // particular result immediately.
-      dispatch(mergeResults({[levelId]: 100}));
+    fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    }).then(response => {
+      if (response.ok) {
+        // Update the progress store by merging in this
+        // particular result immediately.
+        dispatch(mergeResults({[levelId]: idealPassResult}));
+      }
     });
   };
 }
@@ -443,6 +457,16 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
     }
   });
 };
+
+/**
+ * Given an array of lessons, a lesson ID, and a level ID, returns
+ * the requested level.
+ */
+function getLevelById(lessons, lessonId, levelId) {
+  return lessons
+    .find(lesson => lesson.id === lessonId)
+    .levels.find(level => level.ids.find(id => id === levelId));
+}
 
 // Action creators
 export const initProgress = ({
