@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MultiSelectGroup from '@cdo/apps/templates/teacherDashboard/MultiSelectGroup';
 import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import moduleStyles from './sections-refresh.module.scss';
 import i18n from '@cdo/locale';
 
@@ -9,8 +10,12 @@ export default function SingleSectionSetUp({
   sectionNum,
   section,
   updateSection,
+  isNewSection,
 }) {
   const gradeOptions = StudentGradeLevels.map(g => ({label: g, value: g}));
+  const participantType = isNewSection
+    ? queryParams('participantType')
+    : section.participantType;
 
   return (
     <div>
@@ -25,14 +30,16 @@ export default function SingleSectionSetUp({
           onChange={e => updateSection('name', e.target.value)}
         />
       </label>
-      <MultiSelectGroup
-        label={i18n.chooseGrades()}
-        name="grades"
-        required={true}
-        options={gradeOptions}
-        values={section.grade || []}
-        setValues={g => updateSection('grade', g)}
-      />
+      {participantType !== 'teacher' && (
+        <MultiSelectGroup
+          label={i18n.chooseGrades()}
+          name="grades"
+          required={true}
+          options={gradeOptions}
+          values={section.grade || []}
+          setValues={g => updateSection('grade', g)}
+        />
+      )}
     </div>
   );
 }
@@ -41,4 +48,5 @@ SingleSectionSetUp.propTypes = {
   sectionNum: PropTypes.number.isRequired,
   section: PropTypes.object.isRequired,
   updateSection: PropTypes.func.isRequired,
+  isNewSection: PropTypes.bool.isRequired,
 };

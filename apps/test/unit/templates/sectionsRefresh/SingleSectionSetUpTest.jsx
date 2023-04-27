@@ -12,6 +12,7 @@ describe('SingleSectionSetUp', () => {
         sectionNum={1}
         section={{}}
         updateSection={updateSectionSpy}
+        isNewSection={true}
       />
     );
 
@@ -28,6 +29,7 @@ describe('SingleSectionSetUp', () => {
         sectionNum={1}
         section={{}}
         updateSection={() => {}}
+        isNewSection={true}
       />
     );
 
@@ -45,6 +47,7 @@ describe('SingleSectionSetUp', () => {
         sectionNum={1}
         section={{}}
         updateSection={updateSectionSpy}
+        isNewSection={true}
       />
     );
 
