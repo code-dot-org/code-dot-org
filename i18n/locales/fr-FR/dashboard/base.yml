@@ -1125,6 +1125,13 @@ fr:
     no_teacher_email:
       body_markdown: 'Votre compte n’est pas associé à une adresse e-mail. Veuillez [consulter les paramètres de votre compte](%{user_registration}) pour ajouter votre adresse e-mail avant de remplir ce formulaire.'
   courses_category: 'Cours Complets'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      hello_world: 'Bonjour tout le monde !'
+      sports: 'Sports'
+      csf: 'Fondamentaux d''Informatique'
+      csc: 'Connexions CS'
   cookie_banner:
     message: 'En poursuivant votre navigation sur ce site ou en cliquant sur « J’accepte », vous acceptez le stockage de cookies sur votre ordinateur ou appareil.'
     more_information: "Consulter la Politique de Confidentialité de Code.org."

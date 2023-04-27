@@ -19,7 +19,7 @@ export class UnconnectedRemoveLevelDialog extends Component {
     handleClose: PropTypes.func.isRequired,
 
     // provided by redux
-    removeLevel: PropTypes.func.isRequired
+    removeLevel: PropTypes.func.isRequired,
   };
 
   handleConfirm = () => {
@@ -28,7 +28,7 @@ export class UnconnectedRemoveLevelDialog extends Component {
       activityPosition,
       levelPosToRemove,
       removeLevel,
-      handleClose
+      handleClose,
     } = this.props;
     removeLevel(activityPosition, activitySection.position, levelPosToRemove);
     handleClose();
@@ -62,10 +62,7 @@ export class UnconnectedRemoveLevelDialog extends Component {
   }
 }
 
-const RemoveLevelDialog = connect(
-  state => ({}),
-  {
-    removeLevel
-  }
-)(UnconnectedRemoveLevelDialog);
+const RemoveLevelDialog = connect(state => ({}), {
+  removeLevel,
+})(UnconnectedRemoveLevelDialog);
 export default RemoveLevelDialog;

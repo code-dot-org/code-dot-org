@@ -3,13 +3,13 @@ import React, {Component} from 'react';
 import MultipleChoiceByStudentTable from './MultipleChoiceByStudentTable';
 import {
   studentWithMCResponsesPropType,
-  multipleChoiceQuestionPropType
+  multipleChoiceQuestionPropType,
 } from './assessmentDataShapes';
 import {
   getMultipleChoiceStructureForCurrentAssessment,
   getStudentMCResponsesForCurrentAssessment,
   ALL_STUDENT_FILTER,
-  currentStudentHasResponses
+  currentStudentHasResponses,
 } from './sectionAssessmentsRedux';
 import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
@@ -19,7 +19,7 @@ class MultipleChoiceByStudentContainer extends Component {
     multipleChoiceStructure: PropTypes.arrayOf(multipleChoiceQuestionPropType),
     studentAnswerData: studentWithMCResponsesPropType,
     studentId: PropTypes.number,
-    currentStudentHasResponses: PropTypes.bool
+    currentStudentHasResponses: PropTypes.bool,
   };
 
   render() {
@@ -27,7 +27,7 @@ class MultipleChoiceByStudentContainer extends Component {
       multipleChoiceStructure,
       studentAnswerData,
       studentId,
-      currentStudentHasResponses
+      currentStudentHasResponses,
     } = this.props;
     return (
       <div>
@@ -35,7 +35,7 @@ class MultipleChoiceByStudentContainer extends Component {
           <div>
             <h2>
               {i18n.multipleChoiceStudentOverview({
-                studentName: studentAnswerData.name
+                studentName: studentAnswerData.name,
               })}
             </h2>
             <MultipleChoiceByStudentTable
@@ -49,13 +49,13 @@ class MultipleChoiceByStudentContainer extends Component {
   }
 }
 
-export const UnconnectedMultipleChoiceByStudentContainer = MultipleChoiceByStudentContainer;
+export const UnconnectedMultipleChoiceByStudentContainer =
+  MultipleChoiceByStudentContainer;
 
 export default connect(state => ({
-  multipleChoiceStructure: getMultipleChoiceStructureForCurrentAssessment(
-    state
-  ),
+  multipleChoiceStructure:
+    getMultipleChoiceStructureForCurrentAssessment(state),
   studentAnswerData: getStudentMCResponsesForCurrentAssessment(state),
   studentId: state.sectionAssessments.studentId,
-  currentStudentHasResponses: currentStudentHasResponses(state)
+  currentStudentHasResponses: currentStudentHasResponses(state),
 }))(MultipleChoiceByStudentContainer);

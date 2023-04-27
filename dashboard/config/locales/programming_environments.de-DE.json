@@ -196,10 +196,24 @@
                     }
                   }
                 },
+                "getImageData": {
+                  "examples": {
+                    "Example: Duplicate": {
+                      "name": "Beispiel: Duplizieren"
+                    }
+                  }
+                },
                 "getRed": {
                   "palette_params": {
                     "imageData": {
                       "type": "Objekt"
+                    }
+                  }
+                },
+                "line": {
+                  "examples": {
+                    "Example: two lines": {
+                      "name": "Beispiel: zwei Linien"
                     }
                   }
                 },
@@ -301,8 +315,26 @@
                 }
               }
             },
+            "turtle": {
+              "expressions": {
+                "turnLeft": {
+                  "examples": {
+                    "Example: House": {
+                      "name": "Beispiel: Haus"
+                    }
+                  }
+                }
+              }
+            },
             "control": {
               "expressions": {
+                "stopTimedLoop": {
+                  "examples": {
+                    "Countdown": {
+                      "name": "Countdown"
+                    }
+                  }
+                },
                 "timedLoop": {
                   "palette_params": {
                     "callback": {
@@ -315,6 +347,13 @@
             "math": {
               "name": "Mathematik",
               "expressions": {
+                "moduloOperator": {
+                  "examples": {
+                    "Odd or Even?": {
+                      "name": "Gerade oder ungerade?"
+                    }
+                  }
+                },
                 "randomNumber_min_max": {
                   "palette_params": {
                     "min": {
@@ -340,6 +379,13 @@
             "variables": {
               "name": "Variablen",
               "expressions": {
+                "assign_x": {
+                  "examples": {
+                    "Fibonacci": {
+                      "name": "Fibonacci"
+                    }
+                  }
+                },
                 "declareAssign_object": {
                   "examples": {
                     "Choose Your Own Adventure": {
@@ -357,6 +403,54 @@
             },
             "advanced": {
               "name": "Erweitert"
+            },
+            "maker": {
+              "expressions": {
+                "createLed": {
+                  "return_value": "Neues LED-Objekt"
+                }
+              }
+            },
+            "circuit": {
+              "expressions": {
+                "buzzer.play": {
+                  "palette_params": {
+                    "notes": {
+                      "type": "Liste"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "notes": {
+                      "type": "Liste"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "notes": {
+                      "type": "Liste"
+                    }
+                  }
+                },
+                "lightSensor.start": {
+                  "short_description": "lightSensor.start"
+                },
+                "lightSensor.value": {
+                  "short_description": "lightSensor.value"
+                },
+                "soundSensor.value": {
+                  "short_description": "soundSensor.value"
+                },
+                "tempSensor": {
+                  "examples": {
+                    "Thermometer": {
+                      "name": "Thermometer"
+                    }
+                  }
+                }
+              }
             }
           }
         },

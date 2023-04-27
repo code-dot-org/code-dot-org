@@ -4,8 +4,8 @@
 var assert = require('assert');
 var consoleShim = require('@cdo/apps/code-studio/consoleShim');
 
-describe('consoleShim', function() {
-  it('creates console object with standard functions if console is missing', function() {
+describe('consoleShim', function () {
+  it('creates console object with standard functions if console is missing', function () {
     var fakeWindow = {};
     consoleShim(fakeWindow);
     var console = fakeWindow.console;
@@ -40,14 +40,14 @@ describe('consoleShim', function() {
     console.log("Arguments don't matter");
   });
 
-  it('does not replace functions on existing console', function() {
-    var originalLogFunction = function() {};
-    var someNonstandardFunction = function() {};
+  it('does not replace functions on existing console', function () {
+    var originalLogFunction = function () {};
+    var someNonstandardFunction = function () {};
     var fakeWindow = {
       console: {
         log: originalLogFunction,
-        snf: someNonstandardFunction
-      }
+        snf: someNonstandardFunction,
+      },
     };
     consoleShim(fakeWindow);
     var console = fakeWindow.console;

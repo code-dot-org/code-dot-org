@@ -34,9 +34,7 @@ class Api::V1::Pd::RegionalPartnerWorkshopsController < ::ApplicationController
            scope: {course: @course, subject: @subject}
   end
 
-  private
-
-  def get_filtered_workshops
+  private def get_filtered_workshops
     @partners = RegionalPartner.includes(:pd_workshops)
 
     @course = params[:course]

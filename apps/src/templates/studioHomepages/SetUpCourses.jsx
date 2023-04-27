@@ -17,6 +17,6 @@ const SetUpCourses = ({isTeacher, hasCourse}) => (
 );
 SetUpCourses.propTypes = {
   isTeacher: PropTypes.bool.isRequired,
-  hasCourse: PropTypes.bool
+  hasCourse: PropTypes.bool,
 };
 export default SetUpCourses;

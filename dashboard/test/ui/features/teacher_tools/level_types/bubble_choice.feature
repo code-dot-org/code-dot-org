@@ -10,6 +10,8 @@ Feature: BubbleChoice
     And I click selector ".submitButton"
 
     # Make sure you are taken back to the BubbleChoice activity page with progress
+    And I wait until current URL contains "/lessons/40/levels/1"
+    And I wait for jquery to load
     And I wait until element ".uitest-bubble-choice:eq(0)" is visible
     And element ".uitest-bubble-choice:eq(0) .progress-bubble:first" is visible
     And check that the url contains "/s/allthethings/lessons/40/levels/1"

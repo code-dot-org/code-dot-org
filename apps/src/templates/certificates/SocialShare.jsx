@@ -12,12 +12,12 @@ export default class SocialShare extends Component {
     facebook: PropTypes.string.isRequired,
     twitter: PropTypes.string.isRequired,
     print: PropTypes.string.isRequired,
-    under13: PropTypes.bool
+    under13: PropTypes.bool,
   };
 
   state = {
     isTwitterAvailable: false,
-    isFacebookAvailable: false
+    isFacebookAvailable: false,
   };
 
   componentDidMount() {
@@ -33,9 +33,7 @@ export default class SocialShare extends Component {
 
   render() {
     const {under13} = this.props;
-    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?${
-      this.props.facebook
-    }`;
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?${this.props.facebook}`;
     const twitterShareUrl = `https://twitter.com/share?${this.props.twitter}`;
 
     return (
@@ -87,6 +85,6 @@ export default class SocialShare extends Component {
 const styles = {
   shareButton: {
     color: color.white,
-    minWidth: 40
-  }
+    minWidth: 40,
+  },
 };

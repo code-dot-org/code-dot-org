@@ -1,0 +1,28 @@
+{
+  "category": "CSC",
+  "config": {
+    "func": "makeNumSpritesNear",
+    "inline": true,
+    "blockText": "make {NUM} new {ANIMATION_NAME} sprites near {LOCATION}",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "style": "sprite_blocks",
+    "args": [
+      {
+        "name": "NUM",
+        "type": "Number"
+      },
+      {
+        "name": "ANIMATION_NAME",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "LOCATION",
+        "type": "Location"
+      }
+    ]
+  }
+}

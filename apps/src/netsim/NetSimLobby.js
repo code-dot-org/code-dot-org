@@ -46,7 +46,7 @@ var NetSimGlobals = require('./NetSimGlobals');
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimLobby = (module.exports = function(rootDiv, netsim, options) {
+var NetSimLobby = (module.exports = function (rootDiv, netsim, options) {
   /**
    * @type {jQuery}
    * @private
@@ -180,7 +180,7 @@ var NetSimLobby = (module.exports = function(rootDiv, netsim, options) {
 /**
  * Recreate markup within panel body.
  */
-NetSimLobby.prototype.render = function() {
+NetSimLobby.prototype.render = function () {
   var isConnectedToShard = this.shard_ !== null;
   if (!isConnectedToShard) {
     // Shard selection panel: Controls for setting display name and picking
@@ -191,11 +191,11 @@ NetSimLobby.prototype.render = function() {
         displayName: this.displayName_,
         shardChoices: this.shardChoices_,
         selectedShardID: this.selectedShardID_,
-        disableControls: this.isEverythingDisabled()
+        disableControls: this.isEverythingDisabled(),
       },
       {
         setNameCallback: this.setDisplayName.bind(this),
-        setShardCallback: this.setShardID.bind(this)
+        setShardCallback: this.setShardID.bind(this),
       }
     );
   } else {
@@ -212,7 +212,7 @@ NetSimLobby.prototype.render = function() {
         incomingConnectionNodes: this.incomingConnectionNodes_,
         remoteNode: this.remoteNode_,
         myNodeID: this.myNode_.entityID,
-        disableControls: this.isEverythingDisabled()
+        disableControls: this.isEverythingDisabled(),
       },
       {
         addRouterCallback: this.addRouterToLobby.bind(this),
@@ -220,7 +220,7 @@ NetSimLobby.prototype.render = function() {
         joinButtonCallback: this.onJoinButtonClick_.bind(this),
         resetShardCallback: this.onResetShardButtonClick_.bind(this),
         showRouterLogCallback: this.showRouterLogCallback_,
-        showTeacherLogCallback: this.showTeacherLogCallback_
+        showTeacherLogCallback: this.showTeacherLogCallback_,
       }
     );
   }
@@ -228,7 +228,7 @@ NetSimLobby.prototype.render = function() {
   this.netsim_.debouncedResizeFooter();
 };
 
-NetSimLobby.prototype.updateLayout = function() {
+NetSimLobby.prototype.updateLayout = function () {
   if (this.nodeSelectionPanel_) {
     this.nodeSelectionPanel_.updateLayout();
   }
@@ -237,7 +237,7 @@ NetSimLobby.prototype.updateLayout = function() {
 /**
  * @param {string} displayName
  */
-NetSimLobby.prototype.setDisplayName = function(displayName) {
+NetSimLobby.prototype.setDisplayName = function (displayName) {
   this.displayName_ = displayName;
   this.render();
 
@@ -253,7 +253,7 @@ NetSimLobby.prototype.setDisplayName = function(displayName) {
 /**
  * @param {string} shardID
  */
-NetSimLobby.prototype.setShardID = function(shardID) {
+NetSimLobby.prototype.setShardID = function (shardID) {
   this.selectedShardID_ = shardID;
   this.render();
 
@@ -271,7 +271,7 @@ NetSimLobby.prototype.setShardID = function(shardID) {
  * @param {NetSimLocalClientNode} myNode
  * @private
  */
-NetSimLobby.prototype.onShardChange_ = function(shard, myNode) {
+NetSimLobby.prototype.onShardChange_ = function (shard, myNode) {
   // Unregister old handlers
   if (this.eventKeys.registeredShard) {
     this.eventKeys.registeredShard.nodeTable.tableChange.unregister(
@@ -324,10 +324,10 @@ NetSimLobby.prototype.onShardChange_ = function(shard, myNode) {
  * have to wait until a change was detected in one of those tables.
  * @private
  */
-NetSimLobby.prototype.fetchInitialLobbyData_ = function() {
+NetSimLobby.prototype.fetchInitialLobbyData_ = function () {
   $.when(this.shard_.nodeTable.refresh(), this.shard_.wireTable.refresh())
     .fail(
-      function(nodeErr, wireErr) {
+      function (nodeErr, wireErr) {
         if (nodeErr) {
           logger.warn('Node table refresh failed: ' + nodeErr);
         } else if (wireErr) {
@@ -336,7 +336,7 @@ NetSimLobby.prototype.fetchInitialLobbyData_ = function() {
       }.bind(this)
     )
     .done(
-      function() {
+      function () {
         // Because the lobby may not get table-change events from this refresh,
         // manually pass the cached table contents in.
         this.onNodeTableChange_();
@@ -358,10 +358,10 @@ NetSimLobby.prototype.fetchInitialLobbyData_ = function() {
  * @returns {boolean} whether the currently cached node data for the shard
  *          includes a router node.
  */
-NetSimLobby.prototype.doesShardContainRouter = function() {
+NetSimLobby.prototype.doesShardContainRouter = function () {
   return (
     undefined !==
-    _.find(this.nodesOnShard_, function(shardNode) {
+    _.find(this.nodesOnShard_, function (shardNode) {
       return shardNode instanceof NetSimRouterNode;
     })
   );
@@ -372,11 +372,11 @@ NetSimLobby.prototype.doesShardContainRouter = function() {
  * The change to the node table should trigger appropriate updates to various
  * UI elements.
  */
-NetSimLobby.prototype.addRouterToLobby = function() {
+NetSimLobby.prototype.addRouterToLobby = function () {
   var enableCallback = this.disableEverything();
   NetSimRouterNode.create(
     this.shard_,
-    function(err) {
+    function (err) {
       enableCallback();
       if (err) {
         var ValidationError = NetSimApiError.ValidationError;
@@ -411,7 +411,7 @@ NetSimLobby.prototype.addRouterToLobby = function() {
  * @returns {boolean} TRUE if anything has requested the whole lobby to be
  *          disabled, false otherwise.
  */
-NetSimLobby.prototype.isEverythingDisabled = function() {
+NetSimLobby.prototype.isEverythingDisabled = function () {
   return Object.keys(this.disableEverythingKeys_).length > 0;
 };
 
@@ -419,7 +419,7 @@ NetSimLobby.prototype.isEverythingDisabled = function() {
  * Disable all of the lobby controls together.
  * @returns {function} Callback for re-enabling the lobby.
  */
-NetSimLobby.prototype.disableEverything = function() {
+NetSimLobby.prototype.disableEverything = function () {
   var requestKey = utils.createUuid();
   this.disableEverythingKeys_[requestKey] = true;
 
@@ -437,7 +437,7 @@ NetSimLobby.prototype.disableEverything = function() {
  * @param {!string} key - a unique identifier for this particular disable request.
  * @private
  */
-NetSimLobby.prototype.enableEverything_ = function(key) {
+NetSimLobby.prototype.enableEverything_ = function (key) {
   delete this.disableEverythingKeys_[key];
   if (!this.isEverythingDisabled()) {
     if (this.nodeSelectionPanel_) {
@@ -450,7 +450,7 @@ NetSimLobby.prototype.enableEverything_ = function(key) {
  * Handler for clicking the "Join" button.
  * @param {NetSimClientNode|NetSimRouterNode} nodeToJoin
  */
-NetSimLobby.prototype.onJoinButtonClick_ = function(nodeToJoin) {
+NetSimLobby.prototype.onJoinButtonClick_ = function (nodeToJoin) {
   var enableCallback = this.disableEverything();
   if (nodeToJoin instanceof NetSimRouterNode) {
     this.netsim_.connectToRouter(nodeToJoin.entityID, enableCallback);
@@ -464,7 +464,7 @@ NetSimLobby.prototype.onJoinButtonClick_ = function(nodeToJoin) {
  * another client.
  * @private
  */
-NetSimLobby.prototype.onCancelButtonClick_ = function() {
+NetSimLobby.prototype.onCancelButtonClick_ = function () {
   var enableCallback = this.disableEverything();
   this.netsim_.disconnectFromRemote(enableCallback);
 };
@@ -473,7 +473,7 @@ NetSimLobby.prototype.onCancelButtonClick_ = function() {
  * Handle for clicking the reset shard button.
  * @private
  */
-NetSimLobby.prototype.onResetShardButtonClick_ = function() {
+NetSimLobby.prototype.onResetShardButtonClick_ = function () {
   this.netsim_.resetShard();
 };
 
@@ -482,7 +482,7 @@ NetSimLobby.prototype.onResetShardButtonClick_ = function() {
  * trigger a refresh of the lobby listing
  * @private
  */
-NetSimLobby.prototype.onNodeTableChange_ = function() {
+NetSimLobby.prototype.onNodeTableChange_ = function () {
   this.nodesOnShard_ = NetSimNodeFactory.nodesFromRows(
     this.shard_,
     this.shard_.nodeTable.readAll()
@@ -494,19 +494,19 @@ NetSimLobby.prototype.onNodeTableChange_ = function() {
  * Called whenever a change is detected in the wires table.
  * @private
  */
-NetSimLobby.prototype.onWireTableChange_ = function() {
+NetSimLobby.prototype.onWireTableChange_ = function () {
   var rows = this.shard_.wireTable.readAll();
   // Update the collection of nodes with connections pointing toward us.
   this.incomingConnectionNodes_ = rows
-    .filter(function(wireRow) {
+    .filter(function (wireRow) {
       return wireRow.remoteNodeID === this.myNode_.entityID;
     }, this)
-    .map(function(wireRow) {
-      return _.find(this.nodesOnShard_, function(node) {
+    .map(function (wireRow) {
+      return _.find(this.nodesOnShard_, function (node) {
         return node.entityID === wireRow.localNodeID;
       });
     }, this)
-    .filter(function(node) {
+    .filter(function (node) {
       // In case the wire table change comes in before the node table change.
       return node !== undefined;
     });
@@ -514,13 +514,13 @@ NetSimLobby.prototype.onWireTableChange_ = function() {
   // Find outgoing wires
   var outgoingWireRow = _.find(
     rows,
-    function(wireRow) {
+    function (wireRow) {
       return wireRow.localNodeID === this.myNode_.entityID;
     }.bind(this)
   );
 
   this.remoteNode_ = outgoingWireRow
-    ? _.find(this.nodesOnShard_, function(node) {
+    ? _.find(this.nodesOnShard_, function (node) {
         return node.entityID === outgoingWireRow.remoteNodeID;
       })
     : null;
@@ -538,7 +538,7 @@ NetSimLobby.prototype.onWireTableChange_ = function() {
  *        via a share link.  We should make sure this shard is an option.
  * @private
  */
-NetSimLobby.prototype.buildShardChoiceList_ = function(
+NetSimLobby.prototype.buildShardChoiceList_ = function (
   sectionList,
   sharedShardSeed
 ) {
@@ -550,7 +550,7 @@ NetSimLobby.prototype.buildShardChoiceList_ = function(
     this.shardChoices_.push({
       shardSeed: sharedShardSeed,
       shardID: sharedShardID,
-      displayName: sharedShardSeed
+      displayName: sharedShardSeed,
     });
   }
 
@@ -558,11 +558,11 @@ NetSimLobby.prototype.buildShardChoiceList_ = function(
   const unarchivedSections = sectionList.filter(section => !section.hidden);
   this.shardChoices_ = this.shardChoices_.concat(
     unarchivedSections.map(
-      function(section) {
+      function (section) {
         return {
           shardSeed: section.id,
           shardID: this.makeShardIDFromSeed_(section.id),
-          displayName: section.name
+          displayName: section.name,
         };
       }.bind(this)
     )
@@ -575,7 +575,7 @@ NetSimLobby.prototype.buildShardChoiceList_ = function(
     this.shardChoices_.push({
       shardSeed: seed,
       shardID: randomShardID,
-      displayName: i18n.myPrivateNetwork()
+      displayName: i18n.myPrivateNetwork(),
     });
   }
 
@@ -590,7 +590,7 @@ NetSimLobby.prototype.buildShardChoiceList_ = function(
  * @param {string} seed
  * @private
  */
-NetSimLobby.prototype.makeShardIDFromSeed_ = function(seed) {
+NetSimLobby.prototype.makeShardIDFromSeed_ = function (seed) {
   return ('ns_' + this.levelKey_ + '_' + seed).substr(0, 48);
 };
 
@@ -598,14 +598,14 @@ NetSimLobby.prototype.makeShardIDFromSeed_ = function(seed) {
  * Gets a share URL for the currently-selected shard ID.
  * @returns {string} or empty string if there is no shard selected.
  */
-NetSimLobby.prototype.getShareLink = function() {
+NetSimLobby.prototype.getShareLink = function () {
   if (!this.displayName_) {
     return '';
   }
 
   var selectedShard = _.find(
     this.shardChoices_,
-    function(shard) {
+    function (shard) {
       return shard.shardID === this.selectedShardID_;
     }.bind(this)
   );
@@ -627,6 +627,6 @@ NetSimLobby.prototype.getShareLink = function() {
  * @returns {string} display name of the associated shard
  * @private
  */
-NetSimLobby.prototype.shardDisplayNameFromID_ = function(shardID) {
+NetSimLobby.prototype.shardDisplayNameFromID_ = function (shardID) {
   return _.find(this.shardChoices_, s => s.shardID === shardID).displayName;
 };

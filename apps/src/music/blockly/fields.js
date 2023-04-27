@@ -9,7 +9,7 @@ import {
   FIELD_PATTERN_NAME,
   FIELD_PATTERN_TYPE,
   FIELD_CHORD_TYPE,
-  FIELD_CHORD_NAME
+  FIELD_CHORD_NAME,
 } from './constants';
 
 export const fieldSoundsDefinition = {
@@ -19,14 +19,24 @@ export const fieldSoundsDefinition = {
   playPreview: (id, onStop) => {
     Globals.getPlayer().previewSound(id, onStop);
   },
-  currentValue: DEFAULT_SOUND
+  currentValue: DEFAULT_SOUND,
 };
 
 export const fieldPatternDefinition = {
   type: FIELD_PATTERN_TYPE,
   name: FIELD_PATTERN_NAME,
+  getBPM: () => Globals.getPlayer().getBPM(),
   getLibrary: Globals.getLibrary,
-  currentValue: DEFAULT_PATTERN
+  previewSound: (id, onStop) => {
+    Globals.getPlayer().previewSound(id, onStop);
+  },
+  previewPattern: (patternValue, onStop) => {
+    Globals.getPlayer().previewPattern(patternValue, onStop);
+  },
+  cancelPreviews: () => {
+    Globals.getPlayer().cancelPreviews();
+  },
+  currentValue: DEFAULT_PATTERN,
 };
 
 export const fieldChordDefinition = {
@@ -36,7 +46,13 @@ export const fieldChordDefinition = {
   previewChord: (chordValue, onStop) => {
     Globals.getPlayer().previewChord(chordValue, onStop);
   },
-  currentValue: DEFAULT_CHORD
+  previewNote: (note, instrument, onStop) => {
+    Globals.getPlayer().previewNote(note, instrument, onStop);
+  },
+  cancelPreviews: () => {
+    Globals.getPlayer().cancelPreviews();
+  },
+  currentValue: DEFAULT_CHORD,
 };
 
 export const fieldRestDurationDefinition = {
@@ -47,6 +63,6 @@ export const fieldRestDurationDefinition = {
     ['1 beat', '0.25'],
     ['2 beats', '0.5'],
     ['1 measure', '1'],
-    ['2 measures', '2']
-  ]
+    ['2 measures', '2'],
+  ],
 };

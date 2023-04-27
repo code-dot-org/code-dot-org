@@ -340,13 +340,11 @@ class Unit < ApplicationRecord
       end
     end
 
-    private
-
-    def visible_units
+    private def visible_units
       @@visible_units ||= all_scripts.select(&:launched?).to_a.freeze
     end
 
-    def log_script_yml_write(log_event_type:, unit_name:, old_size:, new_size:, lessons_i18n:, metadata_i18n:)
+    private def log_script_yml_write(log_event_type:, unit_name:, old_size:, new_size:, lessons_i18n:, metadata_i18n:)
       record = {
         study: 'scripts_en_yml',
         event: log_event_type,
@@ -1637,6 +1635,7 @@ class Unit < ApplicationRecord
   def summarize_header
     {
       name: name,
+      displayName: title_for_display,
       disablePostMilestone: disable_post_milestone?,
       student_detail_progress_view: student_detail_progress_view?,
       age_13_required: logged_out_age_13_required?,

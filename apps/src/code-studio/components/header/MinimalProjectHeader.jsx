@@ -9,7 +9,7 @@ import ProjectRemix from './ProjectRemix';
 class MinimalProjectHeader extends React.Component {
   static propTypes = {
     projectName: PropTypes.string.isRequired,
-    inRestrictedShareMode: PropTypes.bool
+    inRestrictedShareMode: PropTypes.bool,
   };
 
   render() {
@@ -33,5 +33,5 @@ class MinimalProjectHeader extends React.Component {
 
 export default connect(state => ({
   projectName: state.project.projectName,
-  inRestrictedShareMode: state.project && state.project.inRestrictedShareMode
+  inRestrictedShareMode: state.project && state.project.inRestrictedShareMode,
 }))(MinimalProjectHeader);

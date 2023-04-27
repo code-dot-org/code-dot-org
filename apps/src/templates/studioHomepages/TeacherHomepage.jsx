@@ -33,7 +33,7 @@ export const UnconnectedTeacherHomepage = ({
   censusQuestion,
   plCourses,
   courses,
-  donorBannerName,
+  afeEligible,
   isEnglish,
   joinedStudentSections,
   joinedPlSections,
@@ -53,44 +53,34 @@ export const UnconnectedTeacherHomepage = ({
   beginGoogleImportRosterFlow,
   hasFeedback,
   showIncubatorBanner,
-  currentUserId
+  currentUserId,
 }) => {
   const censusBanner = useRef(null);
   const teacherReminders = useRef(null);
   const flashes = useRef(null);
 
-  const [displayCensusBanner, setDisplayCensusBanner] = useState(
-    showCensusBanner
-  );
-  const [
-    censusSubmittedSuccessfully,
-    setCensusSubmittedSuccessfully
-  ] = useState(null);
-  const [
-    censusBannerTeachesSelection,
-    setCensusBannerTeachesSelection
-  ] = useState(null);
-  const [
-    censusBannerInClassSelection,
-    setCensusBannerInClassSelection
-  ] = useState(null);
+  const [displayCensusBanner, setDisplayCensusBanner] =
+    useState(showCensusBanner);
+  const [censusSubmittedSuccessfully, setCensusSubmittedSuccessfully] =
+    useState(null);
+  const [censusBannerTeachesSelection, setCensusBannerTeachesSelection] =
+    useState(null);
+  const [censusBannerInClassSelection, setCensusBannerInClassSelection] =
+    useState(null);
   const [showCensusUnknownError, setShowCensusUnknownError] = useState(false);
   const [showCensusInvalidError, setShowCensusInvalidError] = useState(false);
 
   useEffect(() => {
     // The component used here is implemented in legacy HAML/CSS rather than React.
-    $('#teacher_reminders')
-      .appendTo(teacherReminders.current.refs.root)
-      .show();
-    $('#flashes')
-      .appendTo(flashes.current.refs.root)
-      .show();
+    $('#teacher_reminders').appendTo(teacherReminders.current.refs.root).show();
+    $('#flashes').appendTo(flashes.current.refs.root).show();
 
     // A special on-load behavior: If requested by queryparam, automatically
     // launch the Google Classroom rostering flow.
     if (queryStringOpen === 'rosterDialog') {
       beginGoogleImportRosterFlow();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleCensusBannerSubmit = () => {
@@ -99,7 +89,7 @@ export const UnconnectedTeacherHomepage = ({
         url: '/dashboardapi/v1/census/CensusTeacherBannerV1',
         type: 'post',
         dataType: 'json',
-        data: censusBanner.current.getData()
+        data: censusBanner.current.getData(),
       })
         .done(() => {
           setCensusSubmittedSuccessfully(true);
@@ -116,7 +106,7 @@ export const UnconnectedTeacherHomepage = ({
   const dismissCensusBanner = (onSuccess, onFailure) => {
     $.ajax({
       url: `/api/v1/users/${teacherId}/dismiss_census_banner`,
-      type: 'post'
+      type: 'post',
     })
       .done(onSuccess)
       .fail(xhr => {
@@ -138,7 +128,7 @@ export const UnconnectedTeacherHomepage = ({
   const postponeCensusBanner = () => {
     $.ajax({
       url: `/api/v1/users/${teacherId}/postpone_census_banner`,
-      type: 'post'
+      type: 'post',
     })
       .done(hideCensusBanner)
       .fail(xhr => {
@@ -153,7 +143,7 @@ export const UnconnectedTeacherHomepage = ({
   // Verify background image works for both LTR and RTL languages.
   const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
 
-  const showDonorBanner = isEnglish && donorBannerName;
+  const showAFEBanner = isEnglish && afeEligible;
 
   // Send one analytics event when a teacher logs in. Use session storage to determine
   // whether they've just logged in.
@@ -164,7 +154,7 @@ export const UnconnectedTeacherHomepage = ({
     trySetSessionStorage(LOGGED_TEACHER_SESSION, 'true');
 
     analyticsReporter.sendEvent(EVENTS.TEACHER_LOGIN_EVENT, {
-      'user id': currentUserId
+      'user id': currentUserId,
     });
   }
 
@@ -251,7 +241,7 @@ export const UnconnectedTeacherHomepage = ({
             <br />
           </div>
         )}
-        {showDonorBanner && (
+        {showAFEBanner && (
           <div>
             <DonorTeacherBanner showPegasusLink={true} source="teacher_home" />
             <div style={styles.clear} />
@@ -302,7 +292,7 @@ UnconnectedTeacherHomepage.propTypes = {
   censusQuestion: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']),
   plCourses: shapes.courses,
   courses: shapes.courses,
-  donorBannerName: PropTypes.string,
+  afeEligible: PropTypes.bool,
   hocLaunch: PropTypes.string,
   isEnglish: PropTypes.bool.isRequired,
   joinedStudentSections: shapes.sections,
@@ -323,17 +313,16 @@ UnconnectedTeacherHomepage.propTypes = {
   beginGoogleImportRosterFlow: PropTypes.func,
   hasFeedback: PropTypes.bool,
   showIncubatorBanner: PropTypes.bool,
-  currentUserId: PropTypes.number
+  currentUserId: PropTypes.number,
 };
 
 const styles = {
   clear: {
     clear: 'both',
-    height: 30
-  }
+    height: 30,
+  },
 };
 
-export default connect(
-  state => ({}),
-  {beginGoogleImportRosterFlow}
-)(UnconnectedTeacherHomepage);
+export default connect(state => ({}), {beginGoogleImportRosterFlow})(
+  UnconnectedTeacherHomepage
+);

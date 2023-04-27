@@ -11,13 +11,14 @@
     "skip_dialog": true,
     "skip_sound": true,
     "teacher_markdown": "Answer:\r\n```public ElectricCar(String model, int topSpeed, int chargeLevel)```",
-    "encrypted_solution": "2IXrQW2q7p1VU1iXMH6zOycDpxLz5yACza7zUsrB/oCwjVezhvuCy9etKyKI\nEDyqVLQCMoOH+0brMke2BZXeKrYI/ilaMbo0Nc9Dpq/5sOjEkP8oD5HJGnKq\nbgx8G/5h\n"
+    "encrypted_solution": "2IXrQW2q7p1VU1iXMH6zOycDpxLz5yACza7zUsrB/oCwjVezhvuCy9etKyKI\nEDyqVLQCMoOH+0brMke2BZXeKrYI/ilaMbo0Nc9Dpq/5sOjEkP8oD5HJGnKq\nbgx8G/5h\n",
+    "allow_multiple_attempts": "true"
   },
-  "game_id": 52,
-  "published": true,
-  "created_at": "2021-06-22T16:50:22.000Z",
   "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2021-06-22T16:50:22.000Z",
   "user_id": 9271,
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2021-10-08 16:41:42 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2021-10-08 17:01:18 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2021-10-08 17:28:16 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2021-11-09 23:47:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }

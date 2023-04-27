@@ -13,6 +13,7 @@
   "columnDetailsMaximumValue": "max",
   "dataCardLastUpdated": "Huling na-update",
   "predictButton": "Hula",
+  "uniqueOptionsWarningNotice": "Paalala",
   "datasets": {
     "medical_priority": {
       "fields": {

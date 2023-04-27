@@ -87,7 +87,7 @@ describe('removeItem', () => {
 
   it('warns and does nothing when passed a large index', () => {
     const errorHandler = {
-      outputWarning: sinon.spy()
+      outputWarning: sinon.spy(),
     };
     injectErrorHandler(errorHandler);
 

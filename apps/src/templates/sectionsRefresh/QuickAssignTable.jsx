@@ -13,8 +13,9 @@ as independent tables makes styling them simpler.
 export default function QuickAssignTable({
   marketingAudience,
   courseOfferings,
+  setSelectedCourseOffering,
   updateCourse,
-  sectionCourse
+  sectionCourse,
 }) {
   // Key is type of curriculum e.g. 'Course' or 'Module', which is the singular
   // version of the title we want for the column
@@ -32,7 +33,8 @@ export default function QuickAssignTable({
           {renderRows(
             courseOfferings[marketingAudience][key],
             sectionCourse,
-            updateCourse
+            updateCourse,
+            setSelectedCourseOffering
           )}
         </tbody>
       </table>
@@ -52,8 +54,9 @@ export default function QuickAssignTable({
 }
 
 QuickAssignTable.propTypes = {
-  courseOfferings: PropTypes.object.isRequired,
   marketingAudience: PropTypes.string.isRequired,
+  courseOfferings: PropTypes.object.isRequired,
+  setSelectedCourseOffering: PropTypes.func.isRequired,
   updateCourse: PropTypes.func.isRequired,
-  sectionCourse: PropTypes.object
+  sectionCourse: PropTypes.object,
 };

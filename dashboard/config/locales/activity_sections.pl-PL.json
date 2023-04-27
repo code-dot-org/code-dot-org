@@ -6735,6 +6735,9 @@
           ],
           "progression_name": "Nagranie: Proces Rozwiązywania Problemów"
         },
+        "957ef2cd-b951-40d7-933b-3e2b61fd10a8": {
+          "name": "Jak to wygląda"
+        },
         "f9167a6d-5aac-465c-8021-e17c9e90b60c": {
           "tips": [
             null
@@ -7147,6 +7150,9 @@
             null
           ]
         },
+        "16665617-63d6-466e-a02b-9f15215ceb4b": {
+          "name": "Informatyka w rozrywce"
+        },
         "56d3bbbd-9eec-4102-8e92-91724e9cdf52": {
           "tips": [
             null
@@ -7164,6 +7170,9 @@
         },
         "db70080e-e443-42ef-af8d-df3a0d609324": {
           "progression_name": "Przykładowe Programy"
+        },
+        "88b2ede9-10b9-48d0-943d-9ccfe8204ab7": {
+          "name": "Patrząc w przyszłość"
         },
         "f3567ee3-1a31-40e8-9a59-6455234aab7a": {
           "tips": [
@@ -8177,6 +8186,9 @@
           "tips": [
             null
           ]
+        },
+        "2787c6fa-bcb8-4c5a-89e0-a0a003787472": {
+          "name": "Osobiste strony internetowe"
         },
         "d43801bf-efbb-477d-8bdc-4365121344d0": {
           "tips": [
@@ -9607,6 +9619,12 @@
           "tips": [
             null
           ]
+        },
+        "531dec3a-c36d-4a48-9aad-023569475cf7": {
+          "name": "Plakaty innowacji"
+        },
+        "c54ed502-b1d2-4421-9f7d-3b27dd349d46": {
+          "name": "Innowacyjne strony internetowe"
         },
         "01ae9522-6c73-4653-beb4-2d7fcf1cbff9": {
           "tips": [
@@ -20879,6 +20897,12 @@
           ],
           "progression_name": "Innowacyjne badania"
         },
+        "b82e7960-4420-4c1a-9653-0428887167c7": {
+          "name": "Plakaty innowacji"
+        },
+        "bcb31c61-bd73-4a2d-99c4-a2ca8c1e87ef": {
+          "name": "Innowacyjne strony internetowe"
+        },
         "2bddbd31-7cae-4867-96fd-f8ba2f18b6c8": {
           "tips": [
             null
@@ -21815,6 +21839,9 @@
             null
           ]
         },
+        "3051c3a3-5ddc-4d4c-85c0-502d2a2e1f70": {
+          "name": "Informatyka w rozrywce"
+        },
         "f348d317-252e-4581-b489-fe1bbe700f67": {
           "tips": [
             null
@@ -21827,6 +21854,9 @@
         },
         "1d9fcb2e-5d45-47f4-b834-65c714a78452": {
           "progression_name": "Przykładowe Programy"
+        },
+        "88943583-e1bd-4692-bfda-ac470e102014": {
+          "name": "Patrząc w przyszłość"
         },
         "31ee2243-fd15-45ab-a0d7-80c2c97d88c7": {
           "tips": [
@@ -22772,6 +22802,9 @@
           ],
           "progression_name": "Nagranie: Proces Rozwiązywania Problemów"
         },
+        "aab191bf-3a2c-4f58-86d1-bfa34cf48052": {
+          "name": "Jak to wygląda"
+        },
         "f3ad86f7-7c83-415c-aa5a-a276d6186faa": {
           "tips": [
             null
@@ -23179,6 +23212,9 @@
           "tips": [
             null
           ]
+        },
+        "fef149c4-da5f-4737-806d-cee5311c12f2": {
+          "name": "Osobiste strony internetowe"
         },
         "aeb0ec32-aea0-4bfd-82de-d37b71b2075c": {
           "progression_name": "Przykładowe osobiste strony internetowe"
