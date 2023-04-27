@@ -6,29 +6,44 @@ module.exports = {
   plugins: ['cdo-custom-rules', 'react', 'react-hooks', 'mocha', 'babel'],
   parserOptions: {
     babelOptions: {
-      presets: ['@babel/preset-react']
-    }
+      presets: ['@babel/preset-react'],
+    },
   },
   extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
   env: {
-    es6: true
+    es6: true,
   },
   globals: {
-    Blockly: true,
-    Phaser: true,
-    Studio: true,
-    Maze: true,
-    Turtle: true,
-    Bounce: true,
-    Eval: true,
-    Flappy: true,
-    Applab: true,
-    Calc: true,
-    Jigsaw: true,
-    $: true,
-    jQuery: true,
-    IN_UNIT_TEST: true,
-    IN_STORYBOOK: true
+    Blockly: 'writeable',
+    Phaser: 'writeable',
+    Studio: 'writeable',
+    Maze: 'writeable',
+    Turtle: 'writeable',
+    Bounce: 'writeable',
+    Eval: 'writeable',
+    Flappy: 'writeable',
+    Applab: 'writeable',
+    Calc: 'writeable',
+    Jigsaw: 'writeable',
+    $: 'writeable',
+    jQuery: 'writeable',
+    IN_UNIT_TEST: 'writeable',
+    IN_STORYBOOK: 'writeable',
+    dashboard: 'writeable',
+    ace: 'writeable',
+    requirejs: 'writeable',
+    appOptions: 'writeable',
+    options: 'writeable',
+    droplet: 'writeable',
+    p5: 'writeable',
+    mapboxgl: 'writeable',
+    MapboxGeocoder: 'writeable',
+    SerialPort: 'writeable',
+    Gamelab: 'writeable',
+    LEVEL_TYPE: 'writeable',
+    CDOSounds: 'writeable',
+    ga: 'readonly',
+    google: 'readonly',
   },
   rules: {
     'babel/semi': 'error', // autofixable
@@ -50,12 +65,12 @@ module.exports = {
     'react/self-closing-comp': 'error',
     'react/no-danger': 'error',
     'react-hooks/exhaustive-deps': 'error',
-    'react-hooks/rules-of-hooks': 'error'
+    'react-hooks/rules-of-hooks': 'error',
   },
   settings: {
     react: {
-      version: 'detect'
-    }
+      version: 'detect',
+    },
   },
   overrides: [
     {
@@ -70,8 +85,8 @@ module.exports = {
         // TODO: We are temporarily disabling this rule to allow using require() to import
         // JavaScript files in TypeScript. Instead, we should add 'allowJs': true to our
         // tsconfig.json file, but this is currently causing some build issues (SL-791)
-        '@typescript-eslint/no-var-requires': 'off'
-      }
-    }
-  ]
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+  ],
 };
