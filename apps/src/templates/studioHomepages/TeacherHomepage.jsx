@@ -24,6 +24,7 @@ import IncubatorBanner from './IncubatorBanner';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import ProfessionalLearningSkinnyBanner from '../ProfessionalLearningSkinnyBanner';
 
 const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
 
@@ -201,6 +202,7 @@ export const UnconnectedTeacherHomepage = ({
             solidBorder={true}
           />
         )}
+        <ProfessionalLearningSkinnyBanner />
         {showReturnToReopenedTeacherApplication && (
           <BorderedCallToAction
             headingText="Return to Your Application"
