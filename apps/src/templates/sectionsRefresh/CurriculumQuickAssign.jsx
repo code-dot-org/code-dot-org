@@ -7,7 +7,10 @@ import QuickAssignTableHocPl from './QuickAssignTableHocPl';
 import CurriculumQuickAssignTopRow from './CurriculumQuickAssignTopRow';
 import VersionUnitDropdowns from './VersionUnitDropdowns';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {CourseOfferingCurriculumTypes as curriculumTypes} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {
+  CourseOfferingCurriculumTypes as curriculumTypes,
+  ParticipantAudience,
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 export const MARKETING_AUDIENCE = {
   ELEMENTARY: 'elementary',
@@ -21,23 +24,27 @@ export default function CurriculumQuickAssign({
   isNewSection,
   updateSection,
   sectionCourse,
+  initialParticipantType,
 }) {
   const [courseOfferings, setCourseOfferings] = useState(null);
   const [decideLater, setDecideLater] = useState(false);
   const [marketingAudience, setMarketingAudience] = useState(null);
   const [selectedCourseOffering, setSelectedCourseOffering] = useState();
 
-  const showPlOfferings = queryParams('participantType') !== 'student';
+  const participantType = isNewSection
+    ? queryParams('participantType')
+    : initialParticipantType;
+
+  const showPlOfferings = participantType !== ParticipantAudience.student;
 
   // Retrieve course offerings on mount and convert to JSON
   useEffect(() => {
-    const participantType = queryParams('participantType');
     fetch(
       `/course_offerings/quick_assign_course_offerings?participantType=${participantType}`
     )
       .then(response => response.json())
       .then(data => setCourseOfferings(data));
-  }, []);
+  }, [participantType]);
 
   useEffect(() => {
     if (!courseOfferings) return;
@@ -228,4 +235,5 @@ CurriculumQuickAssign.propTypes = {
   updateSection: PropTypes.func.isRequired,
   sectionCourse: PropTypes.object,
   isNewSection: PropTypes.bool,
+  initialParticipantType: PropTypes.string,
 };
