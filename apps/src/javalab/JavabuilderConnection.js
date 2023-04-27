@@ -5,6 +5,7 @@ import {
   ExecutionType,
   AuthorizerSignalType,
   CsaViewMode,
+  JavabuilderLockoutType,
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -419,18 +420,29 @@ export default class JavabuilderConnection {
         message = javalabMsg.authorizerTokenUsed();
         break;
       case AuthorizerSignalType.NEAR_LIMIT:
-        message = javalabMsg.authorizerNearLimit({
-          attemptsLeft: detail.remaining,
-        });
+        if (detail.lock_out_type === JavabuilderLockoutType.PERMANENT) {
+          message = javalabMsg.authorizerNearLimit({
+            attemptsLeft: detail.remaining,
+            lockoutPeriod: detail.period.toLowerCase(),
+          });
+        } else {
+          message = javalabMsg.authorizerNearLimitTemporary({
+            attemptsLeft: detail.remaining,
+            lockoutPeriod: detail.period.toLowerCase(),
+          });
+        }
         break;
       case AuthorizerSignalType.USER_BLOCKED:
         message = javalabMsg.userBlocked();
+        break;
+      case AuthorizerSignalType.USER_BLOCKED_TEMPORARY:
+        message = "You've been temporarily blocked from running programs.";
         break;
       case AuthorizerSignalType.CLASSROOM_BLOCKED:
         message = javalabMsg.classroomBlocked();
         break;
     }
-    this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${message}`);
+    this.onMarkdownLog(`${STATUS_MESSAGE_PREFIX} ${message}`);
     this.onNewlineMessage();
   }
 
