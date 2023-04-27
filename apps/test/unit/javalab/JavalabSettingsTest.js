@@ -23,7 +23,7 @@ describe('JavalabSettings', () => {
       decreaseEditorFontSize,
       canIncreaseFontSize: true,
       canDecreaseFontSize: false,
-      editorFontSize: 13
+      editorFontSize: 13,
     };
   });
 
@@ -76,7 +76,7 @@ describe('JavalabSettings', () => {
   it('increases or decreases font when increase/decrease buttons are clicked', () => {
     const wrapper = createWrapper({
       canIncreaseFontSize: true,
-      canDecreaseFontSize: true
+      canDecreaseFontSize: true,
     });
     wrapper.instance().toggleDropdown();
 
@@ -94,7 +94,7 @@ describe('JavalabSettings', () => {
   it('disables increase/decrease font buttons based on props', () => {
     let wrapper = createWrapper({
       canIncreaseFontSize: false,
-      canDecreaseFontSize: true
+      canDecreaseFontSize: true,
     });
     wrapper.instance().toggleDropdown();
     let decreaseButton = wrapper.find('#javalab-settings-decrease-font');
@@ -104,7 +104,7 @@ describe('JavalabSettings', () => {
 
     wrapper = createWrapper({
       canIncreaseFontSize: true,
-      canDecreaseFontSize: false
+      canDecreaseFontSize: false,
     });
     wrapper.instance().toggleDropdown();
     decreaseButton = wrapper.find('#javalab-settings-decrease-font');

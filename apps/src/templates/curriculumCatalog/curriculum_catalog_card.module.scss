@@ -19,11 +19,11 @@ $container-width: 309px;
 }
 
 .curriculumCatalogCardContainer_english {
-  height: 24em;
+  height: 25em;
 }
 
 .curriculumCatalogCardContainer_notEnglish {
-  height: 26.5em;
+  height: 28em;
 }
 
 .curriculumInfoContainer {
@@ -56,12 +56,46 @@ $container-width: 309px;
   }
 }
 
-.tagsAndTranslatabilityContainer {
+.labelsAndTranslatabilityContainer {
   display: flex;
+  column-gap: 0.25em;
   justify-content: space-between;
+  margin-bottom: 0.5em;
+  height: 1.5em;
 
   i {
     font-size: 1.5em;
+  }
+}
+
+.labelsContainer {
+  display: flex;
+  column-gap: 0.5em;
+
+  > div {
+    // font styles
+    font-size: 0.75em;
+    line-height: 0.875em;
+    letter-spacing: 0.04em;
+    font-family: $gotham-bold, sans-serif;
+    text-transform: uppercase;
+    color: $neutral-dark;
+
+    // label styles
+    padding: 0.6em 0.75em 0 0.75em;
+    background-color: $brand_primary_light;
+    border-radius: 1em;
+
+    // ellipsis overflow
+    max-width: 15em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover {
+      max-width: inherit;
+      overflow: inherit;
+    }
   }
 }
 
@@ -71,20 +105,11 @@ $container-width: 309px;
   column-gap: 0.5em;
   margin: 0 0 0.5em 0;
 
-  .iconWithDescriptionText {
+  > p {
     font-size: 0.875em;
     margin: 0;
     color: $neutral_dark;
   }
-}
-
-.overline {
-  color: $brand_primary_default;
-  margin-bottom: 0.5em;
-  font-size: 0.75em;
-  font-family: $gotham-bold;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .buttonsContainer {
@@ -99,7 +124,7 @@ $container-width: 309px;
 
   button {
     width: 100%;
-    height: 34px;
+    height: 40px;
     font-size: 1em;
   }
 }

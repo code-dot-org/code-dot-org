@@ -8,7 +8,7 @@ export const lessonShapeForUnitEdit = PropTypes.shape({
   lockable: PropTypes.bool,
   unplugged: PropTypes.bool,
   assessment: PropTypes.bool,
-  relativePosition: PropTypes.number
+  relativePosition: PropTypes.number,
 });
 
 export const lessonGroupShape = PropTypes.shape({
@@ -18,5 +18,5 @@ export const lessonGroupShape = PropTypes.shape({
   userFacing: PropTypes.bool.isRequired,
   bigQuestions: PropTypes.string,
   description: PropTypes.string,
-  lessons: PropTypes.arrayOf(lessonShapeForUnitEdit).isRequired
+  lessons: PropTypes.arrayOf(lessonShapeForUnitEdit).isRequired,
 });

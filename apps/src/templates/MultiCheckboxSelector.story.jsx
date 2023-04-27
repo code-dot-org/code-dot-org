@@ -19,8 +19,8 @@ ComplexItemComponent.propTypes = {
   style: PropTypes.object,
   screen: PropTypes.shape({
     id: PropTypes.string,
-    name: PropTypes.string
-  })
+    name: PropTypes.string,
+  }),
 };
 
 export default storybook => {
@@ -36,7 +36,7 @@ export default storybook => {
         >
           <ItemComponent />
         </MultiCheckboxSelector>
-      )
+      ),
     },
     {
       name: 'with all selected',
@@ -49,7 +49,7 @@ export default storybook => {
         >
           <ItemComponent />
         </MultiCheckboxSelector>
-      )
+      ),
     },
     {
       name: 'with complex item component',
@@ -58,7 +58,7 @@ export default storybook => {
           header="Some Items"
           items={[
             {id: 'one', name: 'Item the First'},
-            {id: 'two', name: 'Item the Second!'}
+            {id: 'two', name: 'Item the Second!'},
           ]}
           itemPropName="screen"
           selected={[]}
@@ -68,7 +68,7 @@ export default storybook => {
             style={{border: '1px solid black', padding: 10}}
           />
         </MultiCheckboxSelector>
-      )
+      ),
     },
     {
       name: 'disabled',
@@ -82,7 +82,7 @@ export default storybook => {
         >
           <ItemComponent />
         </MultiCheckboxSelector>
-      )
+      ),
     },
     {
       name: 'no header',
@@ -95,7 +95,7 @@ export default storybook => {
         >
           <ItemComponent />
         </MultiCheckboxSelector>
-      )
-    }
+      ),
+    },
   ]);
 };

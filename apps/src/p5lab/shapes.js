@@ -10,7 +10,7 @@ import {P5LabInterfaceMode} from './constants';
  */
 const Vector2 = PropTypes.shape({
   x: PropTypes.number.isRequired,
-  y: PropTypes.number.isRequired
+  y: PropTypes.number.isRequired,
 });
 
 /*
@@ -54,7 +54,7 @@ export const AnimationKey = PropTypes.string;
  */
 export const CurrentAnimations = PropTypes.shape({
   [P5LabInterfaceMode.ANIMATION]: AnimationKey.isRequired,
-  [P5LabInterfaceMode.BACKGROUND]: AnimationKey.isRequired
+  [P5LabInterfaceMode.BACKGROUND]: AnimationKey.isRequired,
 });
 
 /**
@@ -75,7 +75,7 @@ const serializedAnimationPropsShape = {
   frameCount: PropTypes.number.isRequired,
   looping: PropTypes.bool.isRequired,
   frameDelay: PropTypes.number.isRequired,
-  version: PropTypes.string
+  version: PropTypes.string,
 };
 
 /**
@@ -107,7 +107,7 @@ const animationPropsShape = _.assign({}, serializedAnimationPropsShape, {
   saved: PropTypes.bool,
   blob: PropTypes.object,
   dataURI: PropTypes.string,
-  hasNewVersionThisSession: PropTypes.bool
+  hasNewVersionThisSession: PropTypes.bool,
 });
 export const AnimationProps = PropTypes.shape(animationPropsShape);
 
@@ -126,7 +126,7 @@ function getSerializedAnimationProps(animation) {
     'looping',
     'frameDelay',
     'version',
-    'categories'
+    'categories',
   ]);
 }
 
@@ -137,7 +137,7 @@ function getSerializedAnimationProps(animation) {
  */
 export const AnimationList = PropTypes.shape({
   orderedKeys: PropTypes.arrayOf(AnimationKey).isRequired,
-  propsByKey: PropTypes.objectOf(AnimationProps).isRequired
+  propsByKey: PropTypes.objectOf(AnimationProps).isRequired,
 });
 
 /**
@@ -162,7 +162,7 @@ export function getSerializedAnimationList(animationList) {
     propsByKey: _.pick(
       _.mapValues(animationList.propsByKey, getSerializedAnimationProps),
       animationList.orderedKeys
-    )
+    ),
   };
 }
 

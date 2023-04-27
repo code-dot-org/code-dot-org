@@ -10,7 +10,7 @@ export default class FilterGroupHeaderSelection extends React.Component {
     containerStyle: PropTypes.object.isRequired,
     filterGroup: PropTypes.object.isRequired,
     selection: PropTypes.array.isRequired,
-    onUserInput: PropTypes.func.isRequired
+    onUserInput: PropTypes.func.isRequired,
   };
 
   handleChange = value => {
@@ -69,11 +69,11 @@ const styles = {
     overflow: 'hidden',
     lineHeight: '34px',
     border: 'solid 1px #a2a2a2',
-    borderRadius: 5
+    borderRadius: 5,
   },
   flexContainer: {
     display: 'flex',
-    flexWrap: 'nowrap'
+    flexWrap: 'nowrap',
   },
   item: {
     backgroundColor: 'white',
@@ -93,14 +93,14 @@ const styles = {
     padding: 0,
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   select: {
     backgroundColor: '#2799a4',
     color: 'white',
-    borderLeft: 'solid 1px #2799a4'
+    borderLeft: 'solid 1px #2799a4',
   },
   borderOnLeft: {
-    borderLeft: 'solid 1px #a2a2a2'
-  }
+    borderLeft: 'solid 1px #a2a2a2',
+  },
 };

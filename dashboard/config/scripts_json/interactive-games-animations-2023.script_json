@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "interactive-games-animations",
-    "serialized_at": "2023-04-13 17:25:35 UTC",
+    "serialized_at": "2023-04-20 17:58:27 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -16379,16 +16379,6 @@
       }
     },
     {
-      "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view\t",
-      "key": "csd_curriculum_guide_2",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide_2"
-      }
-    },
-    {
       "name": "CSD Guide to Debugging",
       "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
       "key": "csd_guide_to_debugging_1",
@@ -18230,12 +18220,6 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary",
-        "script.name": "interactive-games-animations-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide_2",
         "script.name": "interactive-games-animations-2023"
       }
     },

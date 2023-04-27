@@ -11,7 +11,7 @@ const HintPrompt = ({
   borderColor,
   isMinecraft,
   skinId,
-  textToSpeechEnabled
+  textToSpeechEnabled,
 }) => {
   let message = msg.hintPromptInline();
 
@@ -40,7 +40,7 @@ HintPrompt.propTypes = {
   onDismiss: PropTypes.func.isRequired,
   isMinecraft: PropTypes.bool.isRequired,
   skinId: PropTypes.string.isRequired,
-  textToSpeechEnabled: PropTypes.bool
+  textToSpeechEnabled: PropTypes.bool,
 };
 
 export default Radium(HintPrompt);

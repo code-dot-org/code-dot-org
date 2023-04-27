@@ -32,5 +32,5 @@ export const FUNCTION_BLOCK = {
         this.functionalSvg_.render(this.svgGroup_, this.RTL);
       }
     });
-  }
+  },
 };

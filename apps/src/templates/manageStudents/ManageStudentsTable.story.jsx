@@ -3,7 +3,7 @@ import {UnconnectedManageStudentsTable} from './ManageStudentsTable';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import manageStudents, {
   RowType,
-  blankStudentTransfer
+  blankStudentTransfer,
 } from './manageStudentsRedux';
 import teacherSections from '../teacherDashboard/teacherSectionsRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
@@ -12,7 +12,7 @@ const initialState = {
   manageStudents: {
     loginType: '',
     studentData: {},
-    addStatus: {}
+    addStatus: {},
   },
   teacherSections: {
     selectedSectionId: 53,
@@ -21,9 +21,9 @@ const initialState = {
         id: 53,
         name: 'Test section',
         loginType: SectionLoginType.email,
-        hidden: false
-      }
-    ]
+        hidden: false,
+      },
+    ],
   },
   unitSelection: {
     scriptId: 22,
@@ -31,10 +31,10 @@ const initialState = {
       {
         id: 11,
         name: 'All the Things *',
-        units: [{id: 22, key: 'allthethings'}]
-      }
-    ]
-  }
+        units: [{id: 22, key: 'allthethings'}],
+      },
+    ],
+  },
 };
 
 // Student names out of alphabetical order to demonstrate
@@ -53,7 +53,7 @@ const passwordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -68,7 +68,7 @@ const passwordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT
+    rowType: RowType.STUDENT,
   },
   {
     id: 3,
@@ -83,8 +83,8 @@ const passwordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT
-  }
+    rowType: RowType.STUDENT,
+  },
 ];
 
 const wordAccountData = [
@@ -101,7 +101,7 @@ const wordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -116,7 +116,7 @@ const wordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT
+    rowType: RowType.STUDENT,
   },
   {
     id: 3,
@@ -130,8 +130,8 @@ const wordAccountData = [
     secretPictureName: 'wizard',
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
-    rowType: RowType.STUDENT
-  }
+    rowType: RowType.STUDENT,
+  },
 ];
 
 const pictureAccountData = [
@@ -149,7 +149,7 @@ const pictureAccountData = [
       'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -165,7 +165,7 @@ const pictureAccountData = [
       'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT
+    rowType: RowType.STUDENT,
   },
   {
     id: 3,
@@ -181,8 +181,8 @@ const pictureAccountData = [
       'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT
-  }
+    rowType: RowType.STUDENT,
+  },
 ];
 
 const googleData = [
@@ -199,7 +199,7 @@ const googleData = [
     secretPicturePath:
       'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
-    rowType: RowType.STUDENT
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -214,8 +214,8 @@ const googleData = [
     secretPicturePath:
       'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
-    rowType: RowType.STUDENT
-  }
+    rowType: RowType.STUDENT,
+  },
 ];
 
 const cleverData = [
@@ -232,7 +232,7 @@ const cleverData = [
     secretPicturePath:
       'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
-    rowType: RowType.STUDENT
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -247,8 +247,8 @@ const cleverData = [
     secretPicturePath:
       'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
-    rowType: RowType.STUDENT
-  }
+    rowType: RowType.STUDENT,
+  },
 ];
 
 export default storybook => {
@@ -274,7 +274,7 @@ export default storybook => {
             sectionCode="ABCDEF"
             sectionName="My Section"
           />
-        )
+        ),
       },
       {
         name: 'Table for word accounts',
@@ -292,7 +292,7 @@ export default storybook => {
             sectionCode="ABCDEF"
             sectionName="My Section"
           />
-        )
+        ),
       },
       {
         name: 'Table for picture accounts',
@@ -310,7 +310,7 @@ export default storybook => {
             sectionCode="ABCDEF"
             sectionName="My Section"
           />
-        )
+        ),
       },
       {
         name: 'Table for Google accounts',
@@ -327,7 +327,7 @@ export default storybook => {
             sectionCode="ABCDEF"
             sectionName="My Section"
           />
-        )
+        ),
       },
       {
         name: 'Table for Clever accounts',
@@ -344,7 +344,7 @@ export default storybook => {
             sectionCode="ABCDEF"
             sectionName="My Section"
           />
-        )
-      }
+        ),
+      },
     ]);
 };

@@ -19,7 +19,7 @@ export default class AudioRecorder extends React.Component {
     recordingFileType: PropTypes.oneOf(Object.values(RecordingFileType)),
 
     //Temporary prop for logging - indicates user chose 'Manage Assets'
-    imagePicker: PropTypes.bool
+    imagePicker: PropTypes.bool,
   };
 
   constructor(props) {
@@ -29,7 +29,7 @@ export default class AudioRecorder extends React.Component {
     this.state = {
       audioName: '',
       recording: false,
-      loading: true
+      loading: true,
     };
   }
 
@@ -98,7 +98,7 @@ export default class AudioRecorder extends React.Component {
           study: 'sound-dialog-2',
           study_group: studyGroup,
           event: 'record-sound',
-          data_json: this.state.audioName
+          data_json: this.state.audioName,
         },
         {includeUserId: true}
       );
@@ -175,20 +175,20 @@ const styles = {
     display: 'flex',
     flexFlow: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   recordingIcon: {
     color: 'red',
-    margin: 5
+    margin: 5,
   },
   warning: {
     textAlign: 'left',
-    color: color.red
+    color: color.red,
   },
   spinner: {
     display: 'inline-block',
     verticalAlign: 'top',
     marginTop: '16px',
-    marginRight: '10px'
-  }
+    marginRight: '10px',
+  },
 };

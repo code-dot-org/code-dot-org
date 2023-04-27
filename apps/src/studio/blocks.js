@@ -24,7 +24,7 @@ import {
   EMPTY_QUOTES,
   HIDDEN_VALUE,
   RANDOM_VALUE,
-  VISIBLE_VALUE
+  VISIBLE_VALUE,
 } from './constants';
 
 var msg = i18n;
@@ -40,7 +40,7 @@ var POSITION_VALUES = [
   [commonMsg.middleRight(), Position.MIDDLERIGHT.toString()],
   [commonMsg.bottomLeft(), Position.BOTTOMLEFT.toString()],
   [commonMsg.bottomCenter(), Position.BOTTOMCENTER.toString()],
-  [commonMsg.bottomRight(), Position.BOTTOMRIGHT.toString()]
+  [commonMsg.bottomRight(), Position.BOTTOMRIGHT.toString()],
 ];
 
 var generateSetterCode = function (opts) {
@@ -226,13 +226,13 @@ exports.install = function (blockly, blockInstallOptions) {
     Blockly.Blocks[regular] = {
       init: function () {
         initFunc.call(this, true);
-      }
+      },
     };
 
     Blockly.Blocks[params] = {
       init: function () {
         initFunc.call(this, false);
-      }
+      },
     };
 
     generator[regular] = function () {
@@ -280,7 +280,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenLeftTooltip());
-    }
+    },
   };
 
   generator.studio_whenLeft = generator.studio_eventHandlerPrologue;
@@ -300,7 +300,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenRightTooltip());
-    }
+    },
   };
 
   generator.studio_whenRight = generator.studio_eventHandlerPrologue;
@@ -320,7 +320,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenUpTooltip());
-    }
+    },
   };
 
   generator.studio_whenUp = generator.studio_eventHandlerPrologue;
@@ -340,7 +340,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenDownTooltip());
-    }
+    },
   };
 
   generator.studio_whenDown = generator.studio_eventHandlerPrologue;
@@ -366,21 +366,21 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.whenArrowTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_whenArrow.K1_VALUES = [
     [skin.whenUp, 'up'],
     [skin.whenRight, 'right'],
     [skin.whenDown, 'down'],
-    [skin.whenLeft, 'left']
+    [skin.whenLeft, 'left'],
   ];
 
   blockly.Blocks.studio_whenArrow.VALUES = [
     [msg.whenArrowUp(), 'up'],
     [msg.whenArrowDown(), 'down'],
     [msg.whenArrowLeft(), 'left'],
-    [msg.whenArrowRight(), 'right']
+    [msg.whenArrowRight(), 'right'],
   ];
 
   generator.studio_whenArrow = generator.studio_eventHandlerPrologue;
@@ -402,7 +402,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(false);
       this.setTooltip(msg.repeatForeverTooltip());
-    }
+    },
   };
 
   generator.studio_repeatForever = function () {
@@ -447,7 +447,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.whenSpriteClickedTooltip());
-    }
+    },
   };
 
   generator.studio_whenSpriteClicked = generator.studio_eventHandlerPrologue;
@@ -461,7 +461,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenTouchCharacterTooltip());
-    }
+    },
   };
 
   generator.studio_whenTouchCharacter = generator.studio_eventHandlerPrologue;
@@ -475,7 +475,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenTouchObstacleTooltip());
-    }
+    },
   };
 
   generator.studio_whenTouchObstacle = generator.studio_eventHandlerPrologue;
@@ -489,7 +489,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenTouchGoalTooltip());
-    }
+    },
   };
 
   generator.studio_whenTouchGoal = generator.studio_eventHandlerPrologue;
@@ -507,7 +507,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.whenGetCharacterTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_whenGetCharacter.VALUES = [
@@ -518,7 +518,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [msg.whenGetCharacterMynock(), 'mynock'],
     [msg.whenGetCharacterProbot(), 'probot'],
     [msg.whenGetCharacterMouseDroid(), 'mousedroid'],
-    [msg.whenGetCharacterRebelPilot(), 'rebelpilot']
+    [msg.whenGetCharacterRebelPilot(), 'rebelpilot'],
   ];
 
   generator.studio_whenGetCharacter = generator.studio_eventHandlerPrologue;
@@ -533,7 +533,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.whenGetAllCharactersTooltip());
-    }
+    },
   };
 
   generator.studio_whenGetAllCharacters = generator.studio_eventHandlerPrologue;
@@ -551,7 +551,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.whenGetAllCharacterClassTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_whenGetAllCharacterClass.VALUES = [
@@ -561,7 +561,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [msg.whenGetAllCharacterMynock(), 'mynock'],
     [msg.whenGetAllCharacterProbot(), 'probot'],
     [msg.whenGetAllCharacterMouseDroid(), 'mousedroid'],
-    [msg.whenGetAllCharacterRebelPilot(), 'rebelpilot']
+    [msg.whenGetAllCharacterRebelPilot(), 'rebelpilot'],
   ];
 
   generator.studio_whenGetAllCharacterClass =
@@ -612,7 +612,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.whenSpriteCollidedTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_whenSpriteCollided.GROUPINGS = [
@@ -621,7 +621,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [msg.whenSpriteCollidedWithAnyProjectile(), 'any_projectile'],
     [msg.whenSpriteCollidedWithAnyGoal(), 'goal'],
     [msg.whenSpriteCollidedWithAnyObstacle(), 'wall'],
-    [msg.whenSpriteCollidedWithAnyEdge(), 'any_edge']
+    [msg.whenSpriteCollidedWithAnyEdge(), 'any_edge'],
   ];
 
   blockly.Blocks.studio_whenSpriteCollided.PROJECTILES =
@@ -631,7 +631,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [msg.whenSpriteCollidedWithTopEdge(), 'top'],
     [msg.whenSpriteCollidedWithLeftEdge(), 'left'],
     [msg.whenSpriteCollidedWithBottomEdge(), 'bottom'],
-    [msg.whenSpriteCollidedWithRightEdge(), 'right']
+    [msg.whenSpriteCollidedWithRightEdge(), 'right'],
   ];
 
   generator.studio_whenSpriteCollided = generator.studio_eventHandlerPrologue;
@@ -643,7 +643,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown([
           [msg.allowActorsToLeaveThePlayspace(), 'true'],
-          [msg.dontAllowActorsToLeaveThePlayspace(), 'false']
+          [msg.dontAllowActorsToLeaveThePlayspace(), 'false'],
         ]),
         'VALUE'
       );
@@ -651,7 +651,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.allowActorsOutsidePlayspaceTooltip());
-    }
+    },
   };
 
   generator.studio_allowSpritesOutsidePlayspace = function () {
@@ -677,7 +677,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.stopTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_stopSprite = {
@@ -692,7 +692,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.stopTooltip());
-    }
+    },
   };
 
   generator.studio_stop = function () {
@@ -726,7 +726,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.addCharacterTooltip());
-    }
+    },
   };
 
   generator.studio_addCharacter = function () {
@@ -761,7 +761,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setActivityTooltip());
-    }
+    },
   };
 
   generator.studio_setItemActivity = function () {
@@ -812,14 +812,14 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setItemSpeedTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_setItemSpeed.VALUES = [
     [msg.setSpriteSpeedRandom(), RANDOM_VALUE],
     [msg.setSpriteSpeedSlow(), '"slow"'],
     [msg.setSpriteSpeedNormal(), '"normal"'],
-    [msg.setSpriteSpeedFast(), '"fast"']
+    [msg.setSpriteSpeedFast(), '"fast"'],
   ];
 
   generator.studio_setItemSpeed = function () {
@@ -833,7 +833,7 @@ exports.install = function (blockly, blockInstallOptions) {
     return generateSetterCode({
       ctx: this,
       extraParams: classParam,
-      name: 'setItemSpeed'
+      name: 'setItemSpeed',
     });
   };
 
@@ -895,7 +895,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [msg.moveDirectionDown(), Direction.SOUTH.toString()],
     [msg.moveDirectionLeft(), Direction.WEST.toString()],
     [msg.moveDirectionRight(), Direction.EAST.toString()],
-    [msg.moveDirectionRandom(), 'random']
+    [msg.moveDirectionRandom(), 'random'],
   ];
 
   // Note: this block is for causing an action to happen to a projectile, not
@@ -918,14 +918,14 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.makeProjectileTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_makeProjectile.VALUES = skin.makeProjectileChoices;
 
   blockly.Blocks.studio_makeProjectile.ACTIONS = [
     [msg.makeProjectileBounce(), '"bounce"'],
-    [msg.makeProjectileDisappear(), '"disappear"']
+    [msg.makeProjectileDisappear(), '"disappear"'],
   ];
 
   generator.studio_makeProjectile = function () {
@@ -976,7 +976,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setSpritePositionTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_setSpritePosition.VALUES = POSITION_VALUES;
@@ -985,7 +985,7 @@ exports.install = function (blockly, blockInstallOptions) {
     return generateSetterCode({
       ctx: this,
       extraParams: this.getFieldValue('SPRITE') || '0',
-      name: 'setSpritePosition'
+      name: 'setSpritePosition',
     });
   };
 
@@ -1012,14 +1012,14 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setSpritePositionTooltip());
-    }
+    },
   };
 
   generator.studio_setSpritePositionParams = function () {
     return generateSetterCode({
       ctx: this,
       extraParams: getSpriteIndex(this) || '0',
-      name: 'setSpritePosition'
+      name: 'setSpritePosition',
     });
   };
 
@@ -1043,7 +1043,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator.studio_setSpriteXY = function () {
@@ -1091,7 +1091,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.addGoalTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_addGoal.VALUES = POSITION_VALUES;
@@ -1123,7 +1123,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.addGoalTooltip());
-    }
+    },
   };
 
   generator.studio_addGoalXY = function () {
@@ -1156,54 +1156,54 @@ exports.install = function (blockly, blockInstallOptions) {
         letter: commonMsg.directionWestLetter(),
         image: skin.leftArrow,
         studioValue: Direction.WEST,
-        tooltip: msg.moveLeftTooltip()
+        tooltip: msg.moveLeftTooltip(),
       },
       East: {
         letter: commonMsg.directionEastLetter(),
         image: skin.rightArrow,
         studioValue: Direction.EAST,
-        tooltip: msg.moveRightTooltip()
+        tooltip: msg.moveRightTooltip(),
       },
       North: {
         letter: commonMsg.directionNorthLetter(),
         image: skin.upArrow,
         studioValue: Direction.NORTH,
-        tooltip: msg.moveUpTooltip()
+        tooltip: msg.moveUpTooltip(),
       },
       South: {
         letter: commonMsg.directionSouthLetter(),
         image: skin.downArrow,
         studioValue: Direction.SOUTH,
-        tooltip: msg.moveDownTooltip()
+        tooltip: msg.moveDownTooltip(),
       },
       Northwest: {
         letter: commonMsg.directionNorthwestLetter(),
         image: skin.upLeftArrow,
         studioValue: Direction.NORTHWEST,
-        tooltip: msg.moveUpLeftTooltip()
+        tooltip: msg.moveUpLeftTooltip(),
       },
       Northeast: {
         letter: commonMsg.directionNortheastLetter(),
         image: skin.upRightArrow,
         studioValue: Direction.NORTHEAST,
-        tooltip: msg.moveUpRightTooltip()
+        tooltip: msg.moveUpRightTooltip(),
       },
       Southwest: {
         letter: commonMsg.directionSouthwestLetter(),
         image: skin.downLeftArrow,
         studioValue: Direction.SOUTHWEST,
-        tooltip: msg.moveDownLeftTooltip()
+        tooltip: msg.moveDownLeftTooltip(),
       },
       Southeast: {
         letter: commonMsg.directionSoutheastLetter(),
         image: skin.downRightArrow,
         studioValue: Direction.SOUTHEAST,
-        tooltip: msg.moveDownRightTooltip()
-      }
+        tooltip: msg.moveDownRightTooltip(),
+      },
     },
     DISTANCES: [
       [skin.shortLine, '25'],
-      [skin.longLine, '400']
+      [skin.longLine, '400'],
     ],
     DEFAULT_MOVE_DISTANCE: '100',
     generateBlocksForAllDirections: function () {
@@ -1259,7 +1259,7 @@ exports.install = function (blockly, blockInstallOptions) {
           this.setInputsInline(true);
           this.setNextStatement(true);
           this.setTooltip(directionConfig.tooltip);
-        }
+        },
       };
     },
     generateCodeGenerator: function (direction, isEventMove) {
@@ -1292,7 +1292,7 @@ exports.install = function (blockly, blockInstallOptions) {
           ');\n'
         );
       };
-    }
+    },
   };
 
   SimpleMove.generateBlocksForAllDirections();
@@ -1333,21 +1333,21 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.moveTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_move.K1_DIR = [
     [skin.upArrow, Direction.NORTH.toString()],
     [skin.rightArrow, Direction.EAST.toString()],
     [skin.downArrow, Direction.SOUTH.toString()],
-    [skin.leftArrow, Direction.WEST.toString()]
+    [skin.leftArrow, Direction.WEST.toString()],
   ];
 
   blockly.Blocks.studio_move.DIR = [
     [msg.moveDirectionUp(), Direction.NORTH.toString()],
     [msg.moveDirectionDown(), Direction.SOUTH.toString()],
     [msg.moveDirectionLeft(), Direction.WEST.toString()],
-    [msg.moveDirectionRight(), Direction.EAST.toString()]
+    [msg.moveDirectionRight(), Direction.EAST.toString()],
   ];
 
   generator.studio_move = function () {
@@ -1430,7 +1430,7 @@ exports.install = function (blockly, blockInstallOptions) {
       [skin.upArrow, Direction.NORTH.toString()],
       [skin.rightArrow, Direction.EAST.toString()],
       [skin.downArrow, Direction.SOUTH.toString()],
-      [skin.leftArrow, Direction.WEST.toString()]
+      [skin.leftArrow, Direction.WEST.toString()],
     ];
 
     block.DIR = [
@@ -1438,7 +1438,7 @@ exports.install = function (blockly, blockInstallOptions) {
       [msg.moveDirectionDown(), Direction.SOUTH.toString()],
       [msg.moveDirectionLeft(), Direction.WEST.toString()],
       [msg.moveDirectionRight(), Direction.EAST.toString()],
-      [msg.moveDirectionRandom(), 'random']
+      [msg.moveDirectionRandom(), 'random'],
     ];
 
     if (!options.params) {
@@ -1448,12 +1448,12 @@ exports.install = function (blockly, blockInstallOptions) {
         [msg.moveDistance100(), '100'],
         [msg.moveDistance200(), '200'],
         [msg.moveDistance400(), '400'],
-        [msg.moveDistanceRandom(), 'random']
+        [msg.moveDistanceRandom(), 'random'],
       ];
 
       block.K1_DISTANCE = [
         [skin.shortLine, '25'],
-        [skin.longLine, '400']
+        [skin.longLine, '400'],
       ];
     }
 
@@ -1462,11 +1462,11 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Blocks.studio_moveDistance = initMoveDistanceBlock({});
   blockly.Blocks.studio_moveDistanceParams = initMoveDistanceBlock({
-    params: true
+    params: true,
   });
   blockly.Blocks.studio_moveDistanceParamsSprite = initMoveDistanceBlock({
     params: true,
-    sprite: true
+    sprite: true,
   });
 
   generator.studio_moveDistance = function () {
@@ -1574,12 +1574,12 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.moveTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_moveOrientation.DIRECTIONS = [
     [msg.moveForward(), 'moveForward'],
-    [msg.moveBackward(), 'moveBackward']
+    [msg.moveBackward(), 'moveBackward'],
   ];
 
   generator.studio_moveOrientation = function () {
@@ -1600,12 +1600,12 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.turnTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_turnOrientation.DIRECTIONS = [
     [msg.turnLeft() + ' \u21BA', 'turnLeft'],
-    [msg.turnRight() + ' \u21BB', 'turnRight']
+    [msg.turnRight() + ' \u21BB', 'turnRight'],
   ];
 
   generator.studio_turnOrientation = function () {
@@ -1623,7 +1623,7 @@ exports.install = function (blockly, blockInstallOptions) {
     var skinSoundMetadata = valueOr(skin.soundMetadata, []);
     var playbackOptions = Object.assign(
       {
-        volume: 1.0
+        volume: 1.0,
       },
       _.find(skinSoundMetadata, function (metadata) {
         return metadata.name.toLowerCase().trim() === lowercaseSound;
@@ -1655,7 +1655,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.playSoundTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_playSound.soundChoices = function () {
@@ -1702,12 +1702,12 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setTooltip(
         isK1 ? msg.changeScoreTooltipK1() : msg.changeScoreTooltip()
       );
-    }
+    },
   };
 
   blockly.Blocks.studio_changeScore.VALUES = [
     [msg.incrementPlayerScore(), '1'],
-    [msg.decrementPlayerScore(), '-1']
+    [msg.decrementPlayerScore(), '-1'],
   ];
 
   generator.studio_changeScore = function () {
@@ -1733,7 +1733,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.addPointsTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_addPoints.VALUES = [
@@ -1741,7 +1741,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [msg.addPoints50(), '50'],
     [msg.addPoints100(), '100'],
     [msg.addPoints300(), '300'],
-    [msg.addPoints1000(), '1000']
+    [msg.addPoints1000(), '1000'],
   ];
 
   generator.studio_addPoints = function () {
@@ -1767,7 +1767,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.removePointsTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_removePoints.VALUES = [
@@ -1775,7 +1775,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [msg.removePoints50(), '50'],
     [msg.removePoints100(), '100'],
     [msg.removePoints300(), '300'],
-    [msg.removePoints1000(), '1000']
+    [msg.removePoints1000(), '1000'],
   ];
 
   generator.studio_removePoints = function () {
@@ -1797,7 +1797,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setScoreTooltip());
-    }
+    },
   };
 
   generator.studio_setScore = function () {
@@ -1817,7 +1817,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput().appendField(msg.score());
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
       this.setTooltip(msg.getScoreTooltip());
-    }
+    },
   };
 
   generator.studio_getScore = function () {
@@ -1838,7 +1838,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.addPointsTooltip());
-    }
+    },
   };
 
   generator.studio_addNumPoints = function () {
@@ -1863,7 +1863,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.removePointsTooltip());
-    }
+    },
   };
 
   generator.studio_removeNumPoints = function () {
@@ -1886,7 +1886,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setScoreTextTooltip());
-    }
+    },
   };
 
   generator.studio_setScoreText = function () {
@@ -1910,7 +1910,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.showCoordinatesTooltip());
-    }
+    },
   };
 
   generator.studio_showCoordinates = function () {
@@ -1930,14 +1930,14 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setDroidSpeedTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_setDroidSpeed.VALUES = [
     [msg.setDroidSpeedRandom(), 'random'],
     [msg.setDroidSpeedSlow(), 'slow'],
     [msg.setDroidSpeedNormal(), 'normal'],
-    [msg.setDroidSpeedFast(), 'fast']
+    [msg.setDroidSpeedFast(), 'fast'],
   ];
 
   generator.studio_setDroidSpeed = function () {
@@ -1987,7 +1987,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setSpriteSpeedTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_setSpriteSpeedParams = {
@@ -2005,13 +2005,13 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setSpriteSpeedTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_setSpriteSpeed.K1_VALUES = [
     [skin.speedSlow, 'Studio.SpriteSpeed.SLOW'],
     [skin.speedMedium, 'Studio.SpriteSpeed.NORMAL'],
-    [skin.speedFast, 'Studio.SpriteSpeed.FAST']
+    [skin.speedFast, 'Studio.SpriteSpeed.FAST'],
   ];
 
   blockly.Blocks.studio_setSpriteSpeed.VALUES = [
@@ -2020,14 +2020,14 @@ exports.install = function (blockly, blockInstallOptions) {
     [msg.setSpriteSpeedSlow(), 'Studio.SpriteSpeed.SLOW'],
     [msg.setSpriteSpeedNormal(), 'Studio.SpriteSpeed.NORMAL'],
     [msg.setSpriteSpeedFast(), 'Studio.SpriteSpeed.FAST'],
-    [msg.setSpriteSpeedVeryFast(), 'Studio.SpriteSpeed.VERY_FAST']
+    [msg.setSpriteSpeedVeryFast(), 'Studio.SpriteSpeed.VERY_FAST'],
   ];
 
   generator.studio_setSpriteSpeed = function () {
     return generateSetterCode({
       ctx: this,
       extraParams: this.getFieldValue('SPRITE') || '0',
-      name: 'setSpriteSpeed'
+      name: 'setSpriteSpeed',
     });
   };
 
@@ -2074,7 +2074,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setSpriteSizeTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_setSpriteSizeParams = {
@@ -2092,7 +2092,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setSpriteSizeTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_setSpriteSize.VALUES = [
@@ -2101,14 +2101,14 @@ exports.install = function (blockly, blockInstallOptions) {
     [msg.setSpriteSizeSmall(), 'Studio.SpriteSize.SMALL'],
     [msg.setSpriteSizeNormal(), 'Studio.SpriteSize.NORMAL'],
     [msg.setSpriteSizeLarge(), 'Studio.SpriteSize.LARGE'],
-    [msg.setSpriteSizeVeryLarge(), 'Studio.SpriteSize.VERY_LARGE']
+    [msg.setSpriteSizeVeryLarge(), 'Studio.SpriteSize.VERY_LARGE'],
   ];
 
   generator.studio_setSpriteSize = function () {
     return generateSetterCode({
       ctx: this,
       extraParams: this.getFieldValue('SPRITE') || '0',
-      name: 'setSpriteSize'
+      name: 'setSpriteSize',
     });
   };
 
@@ -2161,13 +2161,13 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setSpritesWanderTooltip());
-    }
+    },
   };
 
   generator.studio_setSpritesWander = function () {
     return generateSetterCode({
       ctx: this,
-      name: 'setSpritesWander'
+      name: 'setSpritesWander',
     });
   };
 
@@ -2181,13 +2181,13 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setSpritesStopTooltip());
-    }
+    },
   };
 
   generator.studio_setSpritesStop = function () {
     return generateSetterCode({
       ctx: this,
-      name: 'setSpritesStop'
+      name: 'setSpritesStop',
     });
   };
 
@@ -2204,14 +2204,14 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setSpritesChaseTooltip());
-    }
+    },
   };
 
   generator.studio_setSpritesChase = function () {
     return generateSetterCode({
       ctx: this,
       name: 'setSpritesChase',
-      extraParams: getSpriteIndex(this)
+      extraParams: getSpriteIndex(this),
     });
   };
 
@@ -2228,14 +2228,14 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setSpritesFleeTooltip());
-    }
+    },
   };
 
   generator.studio_setSpritesFlee = function () {
     return generateSetterCode({
       ctx: this,
       name: 'setSpritesFlee',
-      extraParams: getSpriteIndex(this)
+      extraParams: getSpriteIndex(this),
     });
   };
 
@@ -2250,7 +2250,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setSpriteSpeedTooltip());
-    }
+    },
   };
 
   generator.studio_setSpritesSpeed = function () {
@@ -2262,7 +2262,7 @@ exports.install = function (blockly, blockInstallOptions) {
     return generateSetterCode({
       ctx: this,
       name: 'setSpritesSpeed',
-      extraParams: speed
+      extraParams: speed,
     });
   };
 
@@ -2276,7 +2276,7 @@ exports.install = function (blockly, blockInstallOptions) {
       const behaviorValues = [
         [msg.setSpriteChase(), BEHAVIOR_CHASE],
         [msg.setSpriteFlee(), BEHAVIOR_FLEE],
-        [msg.toWander(), BEHAVIOR_WANDER]
+        [msg.toWander(), BEHAVIOR_WANDER],
       ].map(kv => [kv[0], `"${kv[1]}"`]);
       const behaviorDropdown = new blockly.FieldDropdown(
         behaviorValues,
@@ -2307,7 +2307,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setSpriteBehaviorTooltip());
-    }
+    },
   };
 
   generator.studio_setSpriteBehavior = function () {
@@ -2315,7 +2315,7 @@ exports.install = function (blockly, blockInstallOptions) {
       ctx: this,
       name: 'setSpriteBehavior',
       extraParams:
-        getSpriteIndex(this) + ', ' + getSpriteIndex(this, 'TARGETSPRITE')
+        getSpriteIndex(this) + ', ' + getSpriteIndex(this, 'TARGETSPRITE'),
     });
   };
 
@@ -2347,7 +2347,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenSpriteAndGroupCollideTooltip());
-    }
+    },
   };
 
   generator.studio_whenSpriteAndGroupCollide = function () {
@@ -2376,7 +2376,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenSpriteAndGroupCollideTooltip());
-    }
+    },
   };
 
   generator.studio_whenSpriteAndGroupCollideSimple =
@@ -2412,7 +2412,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setBackgroundTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_setBackgroundParam = {
@@ -2428,7 +2428,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setBackgroundTooltip());
-    }
+    },
   };
 
   generator.studio_setBackground = function () {
@@ -2444,7 +2444,7 @@ exports.install = function (blockly, blockInstallOptions) {
     return generateSetterCode({
       value: backgroundValue,
       ctx: this,
-      name: 'setBackground'
+      name: 'setBackground',
     });
   };
 
@@ -2458,7 +2458,7 @@ exports.install = function (blockly, blockInstallOptions) {
       // 'random' is a special value, don't put it in quotes
       this.VALUES = skin.mapChoices.map(opt => [
         opt[0],
-        opt[1] === RANDOM_VALUE ? opt[1] : `"${opt[1]}"`
+        opt[1] === RANDOM_VALUE ? opt[1] : `"${opt[1]}"`,
       ]);
 
       var dropdown = new blockly.FieldDropdown(this.VALUES);
@@ -2470,7 +2470,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setMapTooltip());
-    }
+    },
   };
 
   generator.studio_setMap = function () {
@@ -2487,7 +2487,7 @@ exports.install = function (blockly, blockInstallOptions) {
       // 'random' is a special value, don't put it in quotes
       this.VALUES = skin.mapChoices.map(opt => [
         opt[0],
-        opt[1] === RANDOM_VALUE ? opt[1] : `"${opt[1]}"`
+        opt[1] === RANDOM_VALUE ? opt[1] : `"${opt[1]}"`,
       ]);
 
       var dropdown = new blockly.FieldDropdown(this.VALUES);
@@ -2503,7 +2503,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setMapTooltip());
-    }
+    },
   };
 
   generator.studio_setMapAndColor = function () {
@@ -2513,7 +2513,7 @@ exports.install = function (blockly, blockInstallOptions) {
     return generateSetterCode({
       ctx: this,
       name: 'setMapAndColor',
-      extraParams: color
+      extraParams: color,
     });
   };
 
@@ -2568,7 +2568,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Blocks.studio_showTitleScreen = initShowTitleScreenBlock({});
   blockly.Blocks.studio_showTitleScreenParams = initShowTitleScreenBlock({
-    params: true
+    params: true,
   });
 
   generator.studio_showTitleScreen = function () {
@@ -2630,12 +2630,12 @@ exports.install = function (blockly, blockInstallOptions) {
         this.setPreviousStatement(true);
         this.setNextStatement(true);
         this.setTooltip(msg.setSpriteK1Tooltip());
-      }
+      },
     };
 
     blockly.Blocks.studio_setSprite.VALUES = [
       [msg.setSpriteHideK1(), HIDDEN_VALUE],
-      [msg.setSpriteShowK1(), VISIBLE_VALUE]
+      [msg.setSpriteShowK1(), VISIBLE_VALUE],
     ];
   } else {
     /**
@@ -2671,7 +2671,7 @@ exports.install = function (blockly, blockInstallOptions) {
         this.setPreviousStatement(true);
         this.setNextStatement(true);
         this.setTooltip(msg.setSpriteTooltip());
-      }
+      },
     };
   }
 
@@ -2692,7 +2692,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setSpriteTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_setSpriteParamValue = {
@@ -2712,7 +2712,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setSpriteTooltip());
-    }
+    },
   };
 
   generator.studio_setSprite = function () {
@@ -2720,7 +2720,7 @@ exports.install = function (blockly, blockInstallOptions) {
     return generateSetterCode({
       ctx: this,
       extraParams: indexString,
-      name: 'setSprite'
+      name: 'setSprite',
     });
   };
 
@@ -2729,7 +2729,7 @@ exports.install = function (blockly, blockInstallOptions) {
     return generateSetterCode({
       ctx: this,
       extraParams: indexString,
-      name: 'setSprite'
+      name: 'setSprite',
     });
   };
 
@@ -2745,7 +2745,7 @@ exports.install = function (blockly, blockInstallOptions) {
       value: spriteValue,
       ctx: this,
       extraParams: indexString,
-      name: 'setSprite'
+      name: 'setSprite',
     });
   };
 
@@ -2787,7 +2787,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setSpriteEmotionTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_setSpriteEmotionParams = {
@@ -2804,7 +2804,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setSpriteEmotionTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_setSpriteEmotion.VALUES =
@@ -2813,7 +2813,7 @@ exports.install = function (blockly, blockInstallOptions) {
       [msg.setSpriteEmotionNormal(), Emotions.NORMAL.toString()],
       [msg.setSpriteEmotionHappy(), Emotions.HAPPY.toString()],
       [msg.setSpriteEmotionAngry(), Emotions.ANGRY.toString()],
-      [msg.setSpriteEmotionSad(), Emotions.SAD.toString()]
+      [msg.setSpriteEmotionSad(), Emotions.SAD.toString()],
     ];
 
   blockly.Blocks.studio_setSpriteEmotion.K1_VALUES = [
@@ -2821,14 +2821,14 @@ exports.install = function (blockly, blockInstallOptions) {
     [skin.emotionHappy, Emotions.HAPPY.toString()],
     [skin.emotionAngry, Emotions.ANGRY.toString()],
     [skin.emotionSad, Emotions.SAD.toString()],
-    [skin.randomPurpleIcon, RANDOM_VALUE]
+    [skin.randomPurpleIcon, RANDOM_VALUE],
   ];
 
   generator.studio_setSpriteEmotion = function () {
     return generateSetterCode({
       ctx: this,
       extraParams: this.getFieldValue('SPRITE') || '0',
-      name: 'setSpriteEmotion'
+      name: 'setSpriteEmotion',
     });
   };
 
@@ -2837,7 +2837,7 @@ exports.install = function (blockly, blockInstallOptions) {
     return generateSetterCode({
       ctx: this,
       extraParams: indexString,
-      name: 'setSpriteEmotion'
+      name: 'setSpriteEmotion',
     });
   };
 
@@ -2911,12 +2911,12 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Blocks.studio_saySprite = initSayBlock({});
   blockly.Blocks.studio_saySpriteChoices = initSayBlock({
-    restrictedDialog: true
+    restrictedDialog: true,
   });
   blockly.Blocks.studio_saySpriteParams = initSayBlock({params: true});
   blockly.Blocks.studio_saySpriteParamsTime = initSayBlock({
     params: true,
-    time: true
+    time: true,
   });
 
   generator.studio_saySprite = function () {
@@ -3007,7 +3007,7 @@ exports.install = function (blockly, blockInstallOptions) {
           let dropdown = new blockly.FieldDropdown(
             [1, 2, 3, 4, 5].map(val => [
               val.toString(),
-              (val * 1000).toString()
+              (val * 1000).toString(),
             ])
           );
           dropdown.setValue('1000');
@@ -3039,7 +3039,7 @@ exports.install = function (blockly, blockInstallOptions) {
         [msg.waitFor1Second(), '1000'],
         [msg.waitFor2Seconds(), '2000'],
         [msg.waitFor5Seconds(), '5000'],
-        [msg.waitFor10Seconds(), '10000']
+        [msg.waitFor10Seconds(), '10000'],
       ];
     }
 
@@ -3052,7 +3052,7 @@ exports.install = function (blockly, blockInstallOptions) {
   generator.studio_wait = function () {
     return generateSetterCode({
       ctx: this,
-      name: 'wait'
+      name: 'wait',
     });
   };
 
@@ -3080,12 +3080,12 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.endGameTooltip());
-    }
+    },
   };
 
   blockly.Blocks.studio_endGame.VALUES = [
     [msg.endGameWin(), 'win'],
-    [msg.endGameLose(), 'lose']
+    [msg.endGameLose(), 'lose'],
   ];
 
   generator.studio_endGame = function () {
@@ -3114,7 +3114,7 @@ exports.install = function (blockly, blockInstallOptions) {
         blockType,
         blockArgs
       );
-    }
+    },
   };
 
   generator.functional_start_setValue = function () {
@@ -3138,7 +3138,7 @@ exports.install = function (blockly, blockInstallOptions) {
         {name: 'background', type: blockly.BlockValueType.IMAGE},
         {name: 'player', type: blockly.BlockValueType.IMAGE},
         {name: 'target', type: blockly.BlockValueType.IMAGE},
-        {name: 'danger', type: blockly.BlockValueType.IMAGE}
+        {name: 'danger', type: blockly.BlockValueType.IMAGE},
       ];
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
         this,
@@ -3146,7 +3146,7 @@ exports.install = function (blockly, blockInstallOptions) {
         blockType,
         blockArgs
       );
-    }
+    },
   };
 
   generator.functional_start_setVars = function () {
@@ -3175,10 +3175,10 @@ exports.install = function (blockly, blockInstallOptions) {
         {name: 'update-danger', type: blockly.BlockValueType.FUNCTION},
         {name: 'update-player', type: blockly.BlockValueType.FUNCTION},
         {name: 'collide?', type: blockly.BlockValueType.FUNCTION},
-        {name: 'on-screen?', type: blockly.BlockValueType.FUNCTION}
+        {name: 'on-screen?', type: blockly.BlockValueType.FUNCTION},
       ];
       this.setFunctional(true, {
-        headerHeight: 30
+        headerHeight: 30,
       });
       Blockly.cdoUtils.setHSV(
         this,
@@ -3186,7 +3186,7 @@ exports.install = function (blockly, blockInstallOptions) {
       );
 
       var options = {
-        fixedSize: {height: 35}
+        fixedSize: {height: 35},
       };
 
       this.appendDummyInput()
@@ -3201,7 +3201,7 @@ exports.install = function (blockly, blockInstallOptions) {
         'update-target, update-danger, update-player',
         [this.blockArgs[6], this.blockArgs[7], this.blockArgs[8]],
         'collide?, onscreen?',
-        [this.blockArgs[9], this.blockArgs[10]]
+        [this.blockArgs[9], this.blockArgs[10]],
       ];
 
       rows.forEach(function (row) {
@@ -3224,7 +3224,7 @@ exports.install = function (blockly, blockInstallOptions) {
       }, this);
 
       this.setFunctionalOutput(false);
-    }
+    },
   };
 
   generator.functional_start_setFuncs = function () {
@@ -3251,7 +3251,7 @@ exports.install = function (blockly, blockInstallOptions) {
       var blockType = blockly.BlockValueType.NONE;
       var blockArgs = [
         {name: 'PLAYER_SPEED', type: 'Number'},
-        {name: 'ENEMY_SPEED', type: 'Number'}
+        {name: 'ENEMY_SPEED', type: 'Number'},
       ];
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
         this,
@@ -3259,7 +3259,7 @@ exports.install = function (blockly, blockInstallOptions) {
         blockType,
         blockArgs
       );
-    }
+    },
   };
 
   generator.functional_start_setSpeeds = function () {
@@ -3298,7 +3298,7 @@ exports.install = function (blockly, blockInstallOptions) {
       var blockArgs = [
         {name: 'BACKGROUND', type: blockly.BlockValueType.STRING},
         {name: 'PLAYER_SPEED', type: 'Number'},
-        {name: 'ENEMY_SPEED', type: 'Number'}
+        {name: 'ENEMY_SPEED', type: 'Number'},
       ];
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
         this,
@@ -3306,7 +3306,7 @@ exports.install = function (blockly, blockInstallOptions) {
         blockType,
         blockArgs
       );
-    }
+    },
   };
 
   generator.functional_start_setBackgroundAndSpeeds = function () {
@@ -3356,7 +3356,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.FunctionalBlockUtils.installStringPicker(blockly, generator, {
     blockName: 'functional_background_string_picker',
-    values: functional_background_values
+    values: functional_background_values,
   });
 
   blockly.Blocks.studio_vanishSprite = {
@@ -3370,7 +3370,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.vanishTooltip());
-    }
+    },
   };
 
   generator.studio_vanishSprite = function () {
@@ -3403,7 +3403,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput().appendField(dropdown, 'SPRITE_INDEX');
 
       this.setFunctionalOutput(true);
-    }
+    },
   };
 
   generator.functional_sprite_dropdown = function () {
@@ -3432,7 +3432,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput().appendField(dropdown, 'BACKGROUND');
 
       this.setFunctionalOutput(true);
-    }
+    },
   };
 
   generator.functional_background_dropdown = function () {
@@ -3440,7 +3440,7 @@ exports.install = function (blockly, blockInstallOptions) {
     return generateSetterCode({
       value: this.getFieldValue('BACKGROUND'),
       ctx: this,
-      returnValue: true
+      returnValue: true,
     });
   };
 
@@ -3457,7 +3457,7 @@ exports.install = function (blockly, blockInstallOptions) {
         blockly.BlockValueType.BOOLEAN,
         [{name: 'ARG1', type: 'Number'}]
       );
-    }
+    },
   };
 
   generator.functional_keydown = function () {
@@ -3503,7 +3503,7 @@ exports.install = function (blockly, blockInstallOptions) {
     },
     getVars: Blockly.Blocks.variables_get.getVars,
     renameVar: Blockly.Blocks.variables_get.renameVar,
-    removeVar: Blockly.Blocks.variables_get.removeVar
+    removeVar: Blockly.Blocks.variables_get.removeVar,
   };
 
   generator.studio_ask = function () {
@@ -3553,7 +3553,7 @@ function installVanish(
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.vanishTooltip());
-    }
+    },
   };
 
   generator.studio_vanish = function () {
@@ -3606,14 +3606,14 @@ function installConditionals(
     [msg.getActorHasEmotionNormal(), Emotions.NORMAL.toString()],
     [msg.getActorHasEmotionHappy(), Emotions.HAPPY.toString()],
     [msg.getActorHasEmotionAngry(), Emotions.ANGRY.toString()],
-    [msg.getActorHasEmotionSad(), Emotions.SAD.toString()]
+    [msg.getActorHasEmotionSad(), Emotions.SAD.toString()],
   ];
 
   const K1_EMOTION_VALUES = [
     [blockInstallOptions.skin.emotionNormal, Emotions.NORMAL.toString()],
     [blockInstallOptions.skin.emotionHappy, Emotions.HAPPY.toString()],
     [blockInstallOptions.skin.emotionAngry, Emotions.ANGRY.toString()],
-    [blockInstallOptions.skin.emotionSad, Emotions.SAD.toString()]
+    [blockInstallOptions.skin.emotionSad, Emotions.SAD.toString()],
   ];
 
   addIfAndIfElseVersions(
@@ -3672,7 +3672,7 @@ function installConditionals(
   // Actor Position
   const POSITION_VALUES = [
     [msg.getActorXPosition(), 'x'],
-    [msg.getActorYPosition(), 'y']
+    [msg.getActorYPosition(), 'y'],
   ];
 
   addIfAndIfElseVersions(
@@ -3685,7 +3685,7 @@ function installConditionals(
             ['>', 'LT'],
             ['\u2265', 'LTE'],
             ['<', 'GT'],
-            ['\u2264', 'GTE']
+            ['\u2264', 'GTE'],
           ]
         : [
             ['=', 'EQ'],
@@ -3693,7 +3693,7 @@ function installConditionals(
             ['<', 'LT'],
             ['\u2264', 'LTE'],
             ['>', 'GT'],
-            ['\u2265', 'GTE']
+            ['\u2265', 'GTE'],
           ];
 
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
@@ -3732,7 +3732,7 @@ function installConditionals(
         LT: '<',
         LTE: '<=',
         GT: '>',
-        GTE: '>='
+        GTE: '>=',
       };
       let sprite = actorSelectDropdown
         ? this.getFieldValue('SPRITE') || 0
@@ -3761,7 +3761,7 @@ function installConditionals(
   // Actor Visibility
   const VISIBILITY_VALUES = [
     [msg.getActorHidden(), 'false'],
-    [msg.getActorVisible(), 'true']
+    [msg.getActorVisible(), 'true'],
   ];
 
   addIfAndIfElseVersions(
