@@ -9,23 +9,22 @@ module Cdo
       @table = {}
     end
 
+    # Converts the Config object to a hash
     def to_h
       @table.dup
     end
 
+    # Computes a hash code for this Config object.
     def hash
       @table.hash
     end
 
+    # Returns the value of an attribute, or `nil` if there is no such attribute.
     def [](name)
       @table[name.to_sym]
     end
 
-    #def []=(name, value)
-    #  puts "[]=(#{name.inspect}, #{value.inspect})"
-    #  @table[name.to_sym] = value
-    #end
-
+    # Returns `true` if the given name is a configuration key
     def key?(name)
       @table.key?(name.to_sym)
     end
@@ -36,16 +35,12 @@ module Cdo
       @frozen = true
     end
 
-    def respond_to_missing?(mid, include_all)
-      key?(mid) || super
-    end
-
+    # Inspired by OpenStruct; if unfrozen, allow assigning new configuration
+    # values with `=` and default undefined values to nil
+    # See https://github.com/ruby/ostruct/blob/e61b4464a033c38a65657eaf0467d12e2c7b9ec1/lib/ostruct.rb#L207-L229
     def method_missing(mid, *args)
       raise ArgumentError, "Undefined #{self.class} reference: #{mid}", caller(1) if @frozen
 
-      # Inspired by OpenStruct; if unfrozen, allow assigning new configuration
-      # values with `=` and default undefined values to nil
-      # See https://github.com/ruby/ostruct/blob/e61b4464a033c38a65657eaf0467d12e2c7b9ec1/lib/ostruct.rb#L207-L229
       len = args.length
       if mname = mid[/.*(?==\z)/m]
         if len != 1
@@ -59,9 +54,16 @@ module Cdo
       end
     end
 
+    # Because we override `method_missing`, also update `respond_to_missing?`
+    def respond_to_missing?(mid, include_all)
+      key?(mid) || super
+    end
+
     # Loads one or several sources into the merged configuration.
     # Resolves dynamic config self-references by re-rendering + merging until result is unchanged.
     def load_configuration(*sources)
+      raise RuntimeError, "can't modify frozen #{self.class}", caller(2) if @frozen
+
       config = nil
       i = 8
       table = @table
@@ -87,7 +89,6 @@ module Cdo
 
     # Merge the provided config hash into the current config.
     def merge(config)
-      raise RuntimeError, "can't modify frozen #{self.class}", caller(2) if @frozen
       return if config.nil?
 
       # 'Reverse-merge' keeps existing values.
