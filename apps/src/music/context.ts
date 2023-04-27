@@ -6,15 +6,10 @@ import MusicPlayer from './player/MusicPlayer';
 export const AnalyticsContext: React.Context<AnalyticsReporter | null> =
   React.createContext<AnalyticsReporter | null>(null);
 
-type PlayerUtils = Pick<
-  MusicPlayer,
-  'getPlaybackEvents' | 'getTracksMetadata' | 'getLastMeasure'
->;
+type PlayerUtils = Pick<MusicPlayer, 'getTracksMetadata'>;
 
 /** Provides access to commonly used MusicPlayer APIs (without exposing the entire player) */
 export const PlayerUtilsContext: React.Context<PlayerUtils> =
   React.createContext<PlayerUtils>({
-    getPlaybackEvents: () => [],
     getTracksMetadata: () => ({}),
-    getLastMeasure: () => 0,
   });

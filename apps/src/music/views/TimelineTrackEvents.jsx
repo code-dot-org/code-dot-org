@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {useContext, useMemo} from 'react';
+import {useSelector} from 'react-redux';
 import {PlayerUtilsContext} from '../context';
 import moduleStyles from './timeline.module.scss';
 import TimelineElement from './TimelineElement';
@@ -14,7 +15,9 @@ const TimelineTrackEvents = ({
   // for arrays and objects, as it will consider object/arrays with different contents the same
   // if they are the same object/array reference. These values are relatively small and simple
   // so convert to JSON strings to get around this.
-  const soundEventsJson = JSON.stringify(playerUtils.getPlaybackEvents());
+  const soundEventsJson = JSON.stringify(
+    useSelector(state => state.music.playbackEvents)
+  );
   const tracksMetadataJson = JSON.stringify(playerUtils.getTracksMetadata());
 
   const organizeSoundsByTracks = (soundEventsJson, tracksMetadataJson) => {

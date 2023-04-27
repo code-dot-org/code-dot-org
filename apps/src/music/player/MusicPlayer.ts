@@ -106,7 +106,7 @@ export default class MusicPlayer {
       effects,
       length: soundData.length,
       soundType: soundData.type,
-      blockId,
+      blockId: blockId || '',
     };
 
     this.addNewEvent(soundEvent);
@@ -145,7 +145,7 @@ export default class MusicPlayer {
       skipContext,
       effects,
       length: constants.DEFAULT_PATTERN_LENGTH,
-      blockId,
+      blockId: blockId || '',
       id: JSON.stringify(value),
     };
 
@@ -185,7 +185,7 @@ export default class MusicPlayer {
       skipContext,
       effects,
       length: constants.DEFAULT_CHORD_LENGTH,
-      blockId,
+      blockId: blockId || '',
       id: JSON.stringify(value),
     };
 
@@ -214,6 +214,7 @@ export default class MusicPlayer {
       triggered: false,
       length: constants.DEFAULT_CHORD_LENGTH,
       id: 'preview',
+      blockId: 'preview',
     };
     this.samplePlayer.previewSamples(
       this.convertEventToSamples(chordEvent),
@@ -238,6 +239,7 @@ export default class MusicPlayer {
       triggered: false,
       length: constants.DEFAULT_PATTERN_LENGTH,
       id: 'preview',
+      blockId: 'preview',
     };
 
     this.samplePlayer.previewSamples(
@@ -258,12 +260,19 @@ export default class MusicPlayer {
    * and tells the {@link SamplePlayer} to start playing.
    */
   playSong() {
-    const sampleEvents = [];
-    for (const event of this.playbackEvents) {
-      sampleEvents.push(...this.convertEventToSamples(event));
-    }
+    this.startPlayback(this.playbackEvents);
+  }
 
-    this.samplePlayer.startPlayback(sampleEvents);
+  startPlayback(events: PlaybackEvent[]) {
+    this.samplePlayer.startPlayback(
+      events.map(event => this.convertEventToSamples(event)).flat()
+    );
+  }
+
+  playEvents(events: PlaybackEvent[]) {
+    this.samplePlayer.playSamples(
+      events.map(event => this.convertEventToSamples(event)).flat()
+    );
   }
 
   /**

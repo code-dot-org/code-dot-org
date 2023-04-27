@@ -24,7 +24,8 @@ const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
 export function generateNotesFromChord(
   chordEventValue: ChordEventValue
 ): ChordNote[] {
-  const {notes, playStyle} = chordEventValue;
+  const playStyle = chordEventValue.playStyle;
+  const notes = [...chordEventValue.notes];
   if (notes.length === 0) {
     return [];
   }
