@@ -179,7 +179,7 @@ class ActivitiesController < ApplicationController
         time_spent: time_since_last_milestone
       )
 
-      is_sublevel = !@script_level.levels.include?(@level)
+      is_sublevel = @script_level.levels.exclude?(@level)
 
       # The level might belong to more than one bubble choice parent level.
       # Find the one that's in this script.
