@@ -1039,6 +1039,8 @@ Dashboard::Application.routes.draw do
     get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
     get '/offline-files.json', action: :offline_files, controller: :offline
 
+    post '/browser_events/put_logs', to: 'browser_events#put_logs'
+
     get '/get_token', to: 'authenticity_token#get_token'
   end
 end
