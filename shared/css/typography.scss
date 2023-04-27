@@ -9,6 +9,8 @@
 // identical classes for potential use on other elements if needed.
 
 // ----------------------------------------
+// v 1.0.1
+// ----------------------------------------
 
 // Heading styles
 // Heading mixins are used to maintain accessible heading hierarchy
@@ -52,7 +54,7 @@
 
 @mixin heading-md {
   @include heading-common;
-  font-family: $barlowSemiCondensed-semibold;
+  font-family: $barlowSemiCondensed-medium;
   font-size: 1.5em;
 }
 
