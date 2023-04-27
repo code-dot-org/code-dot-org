@@ -199,7 +199,6 @@ export default class Simple2Sequencer extends Sequencer {
 
   /**
    * Play a sound at the current location.
-   * @param id
    */
   playSound(id: string, blockId: string) {
     const soundData = this.library.getSoundForId(id);
@@ -219,8 +218,7 @@ export default class Simple2Sequencer extends Sequencer {
   }
 
   /**
-   * Play a pattern event at the current location
-   * @param value
+   * Play a pattern event at the current location.
    */
   playPattern(value: PatternEventValue, blockId: string) {
     this.addNewEvent<PatternEvent>({
@@ -235,15 +233,13 @@ export default class Simple2Sequencer extends Sequencer {
 
   /**
    * Play a chord event at the current location.
-   * @param
-   * @returns
    */
   playChord(value: ChordEventValue, blockId: string) {
     this.addNewEvent<ChordEvent>({
       type: 'chord',
       id: JSON.stringify(value),
       value,
-      length: DEFAULT_PATTERN_LENGTH,
+      length: DEFAULT_CHORD_LENGTH,
       blockId,
       ...this.getCommonEventFields(),
     });

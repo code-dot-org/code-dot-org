@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
-import React, {useContext, useMemo} from 'react';
+import React, {useMemo} from 'react';
 import {useSelector} from 'react-redux';
-import {PlayerUtilsContext} from '../context';
 import moduleStyles from './timeline.module.scss';
 import TimelineElement from './TimelineElement';
 
@@ -10,7 +9,6 @@ const TimelineTrackEvents = ({
   eventVerticalSpace,
   getEventHeight,
 }) => {
-  const playerUtils = useContext(PlayerUtilsContext);
   // useMemo() compares dependency using Object.is() comparison, which won't work correctly
   // for arrays and objects, as it will consider object/arrays with different contents the same
   // if they are the same object/array reference. These values are relatively small and simple
@@ -18,7 +16,7 @@ const TimelineTrackEvents = ({
   const soundEventsJson = JSON.stringify(
     useSelector(state => state.music.playbackEvents)
   );
-  const tracksMetadataJson = JSON.stringify(playerUtils.getTracksMetadata());
+  const tracksMetadataJson = JSON.stringify({}); // TODO: Replace with Sequencer output when re-enabling Tracks mode
 
   const organizeSoundsByTracks = (soundEventsJson, tracksMetadataJson) => {
     const soundEvents = JSON.parse(soundEventsJson);
