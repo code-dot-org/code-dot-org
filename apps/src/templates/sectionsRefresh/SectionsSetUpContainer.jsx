@@ -1,4 +1,5 @@
 import React, {useState, useCallback} from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import i18n from '@cdo/locale';
 import SingleSectionSetUp from './SingleSectionSetUp';
@@ -20,16 +21,31 @@ const SECTIONS_API = '/api/v1/sections';
 // Currently, this hook returns two things:
 //   - sections: list of objects that represent the sections to create
 //   - updateSection: function to update the section at the given index
-const useSections = () => {
+const useSections = section => {
   // added "default properties" for any new section
-  const [sections, setSections] = useState([
-    {
-      pairingAllowed: true,
-      restrictSection: false,
-      ttsAutoplayEnabled: false,
-      lessonExtras: true,
-    },
-  ]);
+  const [sections, setSections] = useState(
+    section
+      ? [
+          {
+            ...Object.keys(section).reduce((acc, cur) => {
+              if (cur !== 'stageExtras') {
+                acc[cur] = section[cur];
+              }
+              return acc;
+            }, {}),
+            lessonExtras: section.stageExtras,
+          },
+        ]
+      : [
+          {
+            pairingAllowed: true,
+            restrictSection: false,
+            ttsAutoplayEnabled: false,
+            lessonExtras: true,
+            course: {hasTextToSpeech: false, hasLessonExtras: false},
+          },
+        ]
+  );
 
   const updateSection = (sectionIdx, keyToUpdate, val) => {
     const newSections = sections.map((section, idx) => {
@@ -87,10 +103,11 @@ const saveSection = (e, section) => {
     });
 };
 
-// TO DO: Add a prop to indicate if this is a new section or an existing section
-export default function SectionsSetUpContainer() {
-  const [sections, updateSection] = useSections();
+export default function SectionsSetUpContainer({sectionToBeEdited}) {
+  const [sections, updateSection] = useSections(sectionToBeEdited);
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
+
+  const isNewSection = !sectionToBeEdited;
 
   const caret = advancedSettingsOpen ? 'caret-down' : 'caret-right';
 
@@ -106,15 +123,23 @@ export default function SectionsSetUpContainer() {
   return (
     <form id={FORM_ID}>
       <div className={moduleStyles.containerWithMarginTop}>
-        <Heading1>{i18n.setUpClassSectionsHeader()}</Heading1>
-        <BodyOneText className={moduleStyles.noMarginBottom}>
-          {i18n.setUpClassSectionsSubheader()}
-        </BodyOneText>
-        <BodyOneText>
-          <a href="https://www.youtube.com/watch?v=4Wugxc80fNU">
-            {i18n.setUpClassSectionsSubheaderLink()}
-          </a>
-        </BodyOneText>
+        <Heading1>
+          {isNewSection
+            ? i18n.setUpClassSectionsHeader()
+            : i18n.editSectionDetails()}
+        </Heading1>
+        {isNewSection && (
+          <>
+            <BodyOneText className={moduleStyles.noMarginBottom}>
+              {i18n.setUpClassSectionsSubheader()}
+            </BodyOneText>
+            <BodyOneText>
+              <a href="https://www.youtube.com/watch?v=4Wugxc80fNU">
+                {i18n.setUpClassSectionsSubheaderLink()}
+              </a>
+            </BodyOneText>
+          </>
+        )}
       </div>
 
       <SingleSectionSetUp
@@ -122,11 +147,15 @@ export default function SectionsSetUpContainer() {
         section={sections[0]}
         updateSection={(key, val) => updateSection(0, key, val)}
       />
+
       <CurriculumQuickAssign
+        isNewSection={isNewSection}
         updateSection={(key, val) => updateSection(0, key, val)}
         sectionCourse={sections[0].course}
       />
+
       <div className={moduleStyles.containerWithMarginTop}>
+        <hr />
         <Button
           id="uitest-advanced-settings"
           className={moduleStyles.advancedSettingsButton}
@@ -141,12 +170,13 @@ export default function SectionsSetUpContainer() {
             <AdvancedSettingToggles
               updateSection={(key, val) => updateSection(0, key, val)}
               section={sections[0]}
-              assignedUnitTextToSpeechEnabled
-              assignedUnitLessonExtrasAvailable
+              hasLessonExtras={sections[0].course.hasLessonExtras}
+              hasTextToSpeech={sections[0].course.hasTextToSpeech}
               label={i18n.pairProgramming()}
             />
           )}
         </div>
+        <hr />
       </div>
 
       <div
@@ -155,6 +185,13 @@ export default function SectionsSetUpContainer() {
           moduleStyles.containerWithMarginTop
         )}
       >
+        {/*
+         TODO: for the first iteration of this feature we will only have
+        participants create one section at a time.  For edit section redirects,
+        adding another section is not needed.  This can be uncommented when the
+        functionality of adding another class section is ready.
+
+        {isNewSection && (
         <Button
           useDefaultLineHeight
           icon="plus"
@@ -165,8 +202,14 @@ export default function SectionsSetUpContainer() {
             console.log('Add Another Class Section clicked');
           }}
         />
+        */}
+        {/*
+        TODO: currently this button just changes text if it is a "new" or "editied"
+        screen, depending on how we want the functionality of this button to work,
+        this might mean creating a different button for the "edit" page
+        */}
         <Button
-          text={i18n.finishCreatingSections()}
+          text={isNewSection ? i18n.finishCreatingSections() : i18n.save()}
           color={Button.ButtonColor.brandSecondaryDefault}
           onClick={e => saveSection(e, sections[0])}
         />
@@ -174,3 +217,7 @@ export default function SectionsSetUpContainer() {
     </form>
   );
 }
+
+SectionsSetUpContainer.propTypes = {
+  sectionToBeEdited: PropTypes.object,
+};

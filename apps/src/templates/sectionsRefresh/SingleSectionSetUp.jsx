@@ -34,8 +34,8 @@ export default function SingleSectionSetUp({
           label={i18n.chooseGrades()}
           name="grades"
           options={gradeOptions}
-          values={section.grades || []}
-          setValues={g => updateSection('grades', g)}
+          values={section.grade || []}
+          setValues={g => updateSection('grade', g)}
         />
       </div>
     </div>
