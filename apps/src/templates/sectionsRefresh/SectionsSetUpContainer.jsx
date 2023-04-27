@@ -130,7 +130,7 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
         </Heading1>
         {isNewSection && (
           <>
-            <BodyOneText className={moduleStyles.noMarginBottom}>
+            <BodyOneText className={moduleStyles.noMarginBottomParagraph}>
               {i18n.setUpClassSectionsSubheader()}
             </BodyOneText>
             <BodyOneText>

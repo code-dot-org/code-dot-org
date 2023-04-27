@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import i18n from '@cdo/locale';
 import moduleStyles from './sections-refresh.module.scss';
 import QuickAssignTable from './QuickAssignTable';
@@ -171,14 +172,23 @@ export default function CurriculumQuickAssign({
   return (
     <div className={moduleStyles.containerWithMarginTop}>
       <div className={moduleStyles.input}>
-        <label className={moduleStyles.decideLater} htmlFor="decide-later">
+        <label
+          className={classnames(
+            moduleStyles.decideLater,
+            moduleStyles.typographyLabel
+          )}
+          htmlFor="decide-later"
+        >
           {selectedCourseOffering
             ? i18n.clearAssignedCurriculum()
             : i18n.decideLater()}
         </label>
         <input
           checked={decideLater}
-          className={moduleStyles.inputBox}
+          className={classnames(
+            moduleStyles.inputBox,
+            moduleStyles.withBrandAccentColor
+          )}
           type="checkbox"
           id="decide-later"
           onChange={toggleDecideLater}
