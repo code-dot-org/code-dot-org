@@ -2,6 +2,16 @@
 # Ref: https://github.com/aws/aws-sdk-ruby/issues/1455
 ENV['AWS_DEFAULT_REGION'] ||= CDO.aws_region
 
+
+config_data = {
+    role_arn: CDO.aws_role,
+    client_id: CDO.google_client_id,
+    client_secret: CDO.google_client_secret,
+    port: CDO.dashboard_port
+}
+
+puts "config_data: #{config_data.inspect}"
+
 # Support Google Account credentials if provided in the AWS config.
 begin
   require 'aws/google'
