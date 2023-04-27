@@ -166,7 +166,7 @@ module ProxyHelper
       !ip_address.link_local? &&
       !ip_address.loopback? &&
       !ip_address.private? &&
-      !IPAddr.new('0.0.0.0/8').include?(ip_address)
+      IPAddr.new('0.0.0.0/8').exclude?(ip_address)
     )
   end
 end
