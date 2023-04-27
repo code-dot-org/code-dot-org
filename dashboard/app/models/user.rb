@@ -2271,7 +2271,7 @@ class User < ApplicationRecord
   end
 
   def within_united_states?
-    'United States' == user_geos.first&.country
+    user_geos.first&.country == 'United States'
   end
 
   def associate_with_potential_pd_enrollments

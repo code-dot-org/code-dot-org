@@ -38,7 +38,7 @@ end
 
 thread_count = [ARGV.shift.to_i, 1].max
 repeat_count = [ARGV.shift.to_i, 1].max
-quiet = 'quiet' == ARGV.shift
+quiet = ARGV.shift == 'quiet'
 
 def run_tests(options = {})
   TESTS.each do |test|
