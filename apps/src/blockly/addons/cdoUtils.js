@@ -109,7 +109,7 @@ export function getCode(workspace) {
   // return JSON.stringify(Blockly.serialization.workspaces.save(workspace));
 }
 
-// TODO: Re-define with a new custom field.
 export function soundField(onChange) {
-  return new Blockly.FieldDropdown([['Choose', 'Choose']], onChange);
+  // The second parameter is for a custom validator, which we do not need.
+  return new Blockly.FieldSound('sound://default.mp3', undefined, onChange);
 }
