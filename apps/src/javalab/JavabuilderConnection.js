@@ -421,7 +421,7 @@ export default class JavabuilderConnection {
         message = javalabMsg.authorizerTokenUsed();
         break;
       case AuthorizerSignalType.NEAR_LIMIT:
-        if (detail.lock_out_type === JavabuilderLockoutType.PERMANENT) {
+        if (detail.lockout_type === JavabuilderLockoutType.PERMANENT) {
           message = javalabMsg.authorizerNearLimit({
             attemptsLeft: detail.remaining,
             lockoutPeriod: detail.period.toLowerCase(),
