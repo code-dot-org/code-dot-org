@@ -202,7 +202,9 @@ export default function SectionsSetUpContainer({
         <Button
           text={isNewSection ? i18n.finishCreatingSections() : i18n.save()}
           color="purple"
-          onClick={e => saveSection(e, sections[0], !!isUsersFirstSection)}
+          onClick={e =>
+            saveSection(e, sections[0], !!isUsersFirstSection && isNewSection)
+          }
         />
       </div>
     </form>
