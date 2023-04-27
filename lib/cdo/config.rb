@@ -33,7 +33,6 @@ module Cdo
     # Implement our own soft-freeze: Don't allow any config items to be
     # created/modified, but allow stubbing for unit tests.
     def freeze_config
-      @table.freeze
       @frozen = true
     end
 
