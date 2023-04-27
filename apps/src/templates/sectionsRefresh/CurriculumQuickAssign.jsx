@@ -7,7 +7,10 @@ import QuickAssignTableHocPl from './QuickAssignTableHocPl';
 import CurriculumQuickAssignTopRow from './CurriculumQuickAssignTopRow';
 import VersionUnitDropdowns from './VersionUnitDropdowns';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {CourseOfferingCurriculumTypes as curriculumTypes} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {
+  CourseOfferingCurriculumTypes as curriculumTypes,
+  ParticipantAudience,
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 export const MARKETING_AUDIENCE = {
   ELEMENTARY: 'elementary',
@@ -32,7 +35,7 @@ export default function CurriculumQuickAssign({
     ? queryParams('participantType')
     : initialParticipantType;
 
-  const showPlOfferings = participantType !== 'student';
+  const showPlOfferings = participantType !== ParticipantAudience.student;
 
   // Retrieve course offerings on mount and convert to JSON
   useEffect(() => {
