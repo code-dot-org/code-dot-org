@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-04-26 02:56:13 UTC",
+    "serialized_at": "2023-04-27 02:56:57 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -95,6 +95,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "Large Language Models (LLMs) generate new text. The text LLMs generate looks like a human might have written it because large language models are built based on large bodies of text, such as Wikipedia.\n\nIn this activity, students learn what an LLM is and how it works, then use an LLM to co-create a text with AI. Finally, the class wraps up with a discussion about whether or not LLMs are intelligent or creative.\n",
+        "preparation": "- Print copies of the activity guide for each student",
         "student_overview": "Are Large Language Models (LLMs) intelligent or creative? Decide for yourself as you work with them to create something, and learn more about how they work!"
       },
       "seeding_key": {
@@ -333,6 +334,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "c6f6081e-0e67-4413-a217-07ecfeca95f8",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "969658e5-7a77-4157-8c32-47a88346b337",
+      "position": 4,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "969658e5-7a77-4157-8c32-47a88346b337",
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "ai-temp"
@@ -1707,7 +1721,7 @@
       "key": "ce11fd33-a8b0-4edc-86cf-2e4c59f86b10",
       "position": 1,
       "properties": {
-        "description": "Distribute: Give each student a copy of the LLM Lesson Plan Handout (WIP linked to Resource)"
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each student a copy of the \n[r generative_llm_guide/ai-temp/unversioned]"
       },
       "seeding_key": {
         "activity_section.key": "ce11fd33-a8b0-4edc-86cf-2e4c59f86b10",
@@ -1728,7 +1742,7 @@
       "key": "bc247004-971f-44c4-b492-db1c701a503c",
       "position": 3,
       "properties": {
-        "description": "Prompt: Complete the following sentences with one word only:\n- Thank \\_\\_\\_.\n- Please buy me a \\_\\_\\_.\n- Video games are \\_\\_\\_.\n- I enjoy playing outside in the Spring because it is \\_\\_\\_.\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  Complete the following sentences with one word only:\n- Thank \\_\\_\\_.\n- Please buy me a \\_\\_\\_.\n- Video games are \\_\\_\\_.\n- I enjoy playing outside in the Spring because it is \\_\\_\\_.\n"
       },
       "seeding_key": {
         "activity_section.key": "bc247004-971f-44c4-b492-db1c701a503c",
@@ -1749,7 +1763,7 @@
       "key": "d26cb547-c5ba-4e2f-90d6-83f7223bfa38",
       "position": 5,
       "properties": {
-        "description": "Discuss: Compare your answers with your neighbors. Where did you pick the same words? Where did you pick different ones?\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Compare your answers with your neighbors. Where did you pick the same words? Where did you pick different ones?\n"
       },
       "seeding_key": {
         "activity_section.key": "d26cb547-c5ba-4e2f-90d6-83f7223bfa38",
@@ -1770,7 +1784,7 @@
       "key": "9f7cb538-3510-47d6-8c0e-f64e4a92d115",
       "position": 7,
       "properties": {
-        "description": "Discussion Goal: \nThere are no right or wrong answers here; the idea is to collect a diversity of responses. This activity is meant to make students think about what words “probably” follow other words, and why. In this lesson, students will be learning about Large Language Models (LLMs), and how they guess likely next words based on context and what words have been close to each other in the past.\n",
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** \n There are no right or wrong answers here; the idea is to collect a diversity of responses. This activity is meant to make students think about what words “probably” follow other words, and why. In this lesson, students will be learning about Large Language Models (LLMs), and how they guess likely next words based on context and what words have been close to each other in the past.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1797,7 +1811,7 @@
       "key": "1d0120ad-8d89-4375-bd96-ebb2eb2a9aa8",
       "position": 9,
       "properties": {
-        "description": "Discuss: Why did you pick these words?\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Why did you pick these words?\n"
       },
       "seeding_key": {
         "activity_section.key": "1d0120ad-8d89-4375-bd96-ebb2eb2a9aa8",
@@ -1818,7 +1832,7 @@
       "key": "28940825-d678-4ce5-9ab0-3ec39ee2a830",
       "position": 11,
       "properties": {
-        "description": "Discussion Goal: Students will likely have similar answers for the first sentence, but will diverge quickly with the other answers, such as which thing to buy. Emphasize how some prompts rely on the context of the sentence, like how students may have different opinions about video games, but they are more likely to give a positive answer to the last sentence because of the word 'enjoy’."
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** \n Students will likely have similar answers for the first sentence, but will diverge quickly with the other answers, such as which thing to buy. Emphasize how some prompts rely on the context of the sentence, like how students may have different opinions about video games, but they are more likely to give a positive answer to the last sentence because of the word 'enjoy’."
       },
       "seeding_key": {
         "activity_section.key": "28940825-d678-4ce5-9ab0-3ec39ee2a830",
@@ -1875,7 +1889,7 @@
       "key": "cc2616fa-582e-478d-b737-2285e98f6693",
       "position": 3,
       "properties": {
-        "description": "Vocabulary:\n\n- **Model** - a computer program designed to make a decision",
+        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** \n\n- **Model** - a computer program designed to make a decision",
         "tips": [
           {
             "type": "teachingTip",
@@ -1902,7 +1916,7 @@
       "key": "b57bec27-2967-40ea-b6b4-fc6a5b4333b7",
       "position": 5,
       "properties": {
-        "description": "Video: Show the How AI Works: Chatbots and Large Language Models video (WIP link to resource). At key points throughout (described below) we will be pausing the video to give students a chance to synthesize their understanding."
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the How AI Works: Chatbots and Large Language Models video (WIP link to resource). At key points throughout (described below) we will be pausing the video to give students a chance to synthesize their understanding."
       },
       "seeding_key": {
         "activity_section.key": "b57bec27-2967-40ea-b6b4-fc6a5b4333b7",
@@ -1923,11 +1937,11 @@
       "key": "58c45ad6-b7e1-4403-949c-d3a19539a03e",
       "position": 7,
       "properties": {
-        "description": "| Video                                                                                                                                                                                                    | Teacher                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |\n|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| [Screenshot of last frame of video]<br /><br />  Pause video at [timestamp] when they say “Everything Available on the Internet”                                                                         | After pausing the video, ask this question: <br /> - What is a large language model? <br /><br />  **Discussion Goal:**<br /> Looking for a quick answer to check for understanding of the video so far<br /><br />  Students should explain that a large language model learns from a very  large  body of text (such as all of wikipedia) in order to generate new text.                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| [Screenshot of last frame of video]<br /><br />  Pause video at [timestamp] when they say “Once we have the next letter, we repeat the process to find the next letter, and the next letter, and so on.” | After pausing the video, ask these questions:<br /> - How is the model picking the next letter?<br /> - What seems to be the problem with this method?<br /><br />  **Discussion Goal:**<br /> The first two questions are looking for a quick check for understanding. Students should mention that the model is picking the next letter randomly, and they have probably noticed that these random picks of letters are not generating real words.<br /><br />  **Follow-up Discussion:**<br /> What might fix that problem?<br /><br />  **Discussion Goal:**<br /> Do not spend too much time on this question, and let students know that wild (on topic) guesses are ok here; the point is to prime students to be interested in the next part of the video, where it explains the fix.<br /><br />  **Say:**<br />  Let’s find out! |\n| [Screenshot of last frame of video]<br /><br />  Pause video at [timestamp] when they say “As you see, this works surprisingly well!”                                                                    | After pausing the video, ask these questions:<br /> - How does the system come up with better results?<br /><br />  **Discussion Goal:**<br /> Quick check for understanding for this part of the video. Better results come from  **context**.  Make sure students also explain what context means – in this case all the words before the word in question.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |\n| [Screenshot of last frame of video]<br /><br />  This is the end of the video                                                                                                                            | When the video ends, ask this summary question:<br /> - What can a Large Language Model create?<br /><br />  **Discussion Goal:**<br /> LLMs generate text that sounds plausibly like a human might have written it.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |",
+        "description": "| Video                                                                                                                                                                                                    | Teacher                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |\n|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| [Screenshot of last frame of video]<br /><br />  Pause video at [timestamp] when they say “Everything Available on the Internet”                                                                         | After pausing the video, ask this question: <br /> - What is a large language model? <br /><br />  <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> Looking for a quick answer to check for understanding of the video so far<br /><br />  Students should explain that a large language model learns from a very  large  body of text (such as all of wikipedia) in order to generate new text.                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| [Screenshot of last frame of video]<br /><br />  Pause video at [timestamp] when they say “Once we have the next letter, we repeat the process to find the next letter, and the next letter, and so on.” | After pausing the video, ask these questions:<br /> - How is the model picking the next letter?<br /> - What seems to be the problem with this method?<br /><br /> <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> The first two questions are looking for a quick check for understanding. Students should mention that the model is picking the next letter randomly, and they have probably noticed that these random picks of letters are not generating real words.<br /><br />  **Follow-up Discussion:**<br /> What might fix that problem?<br /><br />  <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> Do not spend too much time on this question, and let students know that wild (on topic) guesses are ok here; the point is to prime students to be interested in the next part of the video, where it explains the fix.<br /><br />  **Say:**<br />  Let’s find out! |\n| [Screenshot of last frame of video]<br /><br />  Pause video at [timestamp] when they say “As you see, this works surprisingly well!”                                                                    | After pausing the video, ask these questions:<br /> - How does the system come up with better results?<br /><br />  <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> Quick check for understanding for this part of the video. Better results come from  **context**.  Make sure students also explain what context means – in this case all the words before the word in question.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |\n| [Screenshot of last frame of video]<br /><br />  This is the end of the video                                                                                                                            | When the video ends, ask this summary question:<br /> - What can a Large Language Model create?<br /><br />  <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> LLMs generate text that sounds plausibly like a human might have written it.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |",
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "Deep dive into how machines “guess” the probability of the next word.\nThe model that these programs build computes a “distance” between words – words that often follow each other, or are often used in place of each other, will have a shorter “distance.” \nIf you are interested in exploring what models see as the distance between words, Google’s [Semantris](https://research.google.com/semantris/) visualizes what words Google’s model thinks are closer to each other, and is a fun game to play. [Semantle](https://semantle.com/) is a Wordle-ish variant that allows players to guess a word by finding words that are slowly getting closer in distance.\nIf you would like more information about the models behind Large Language Models, look into Recurrent Neural Networks and Transformers. The YouTube channel [AI Coffee Break with Letitia](https://www.youtube.com/watch?v=iH-wmtxHunk&list=PLpZBeKTZRGPNdymdEsSSSod5YQ3Vu0sKY&index=2) has a lot of great explanatory videos on this topic. "
+            "markdown": "Deep dive into how machines “guess” the probability of the next word:\nThe model that these programs build computes a “distance” between words – words that often follow each other, or are often used in place of each other, will have a shorter “distance.” \nIf you are interested in exploring what models see as the distance between words, Google’s [Semantris](https://research.google.com/semantris/) visualizes what words Google’s model thinks are closer to each other, and is a fun game to play. [Semantle](https://semantle.com/) is a Wordle-ish variant that allows players to guess a word by finding words that are slowly getting closer in distance. [Context Atlas](https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#word=code) also visualizes this.\nIf you would like more information about the models behind Large Language Models, look into Recurrent Neural Networks and Transformers. The YouTube channel [AI Coffee Break with Letitia](https://www.youtube.com/watch?v=iH-wmtxHunk&list=PLpZBeKTZRGPNdymdEsSSSod5YQ3Vu0sKY&index=2) has a lot of great explanatory videos on this topic. "
           }
         ]
       },
@@ -1950,7 +1964,7 @@
       "key": "89c6e27a-e752-4993-81aa-dbcc1c1607ca",
       "position": 9,
       "properties": {
-        "description": "Vocabulary: Review the following vocabulary from the video. Allow students to check their answers from the activity guide.\n\n- Large Language Model (LLM): a general purpose form of AI that is trained on a very, very large body of knowledge.\n- Context:\n"
+        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:**  Review the following vocabulary from the video. Allow students to check their answers from the activity guide.\n\n- Large Language Model (LLM): a general purpose form of AI that is trained on a very, very large body of knowledge.\n- Context:\n"
       },
       "seeding_key": {
         "activity_section.key": "89c6e27a-e752-4993-81aa-dbcc1c1607ca",
@@ -1971,7 +1985,7 @@
       "key": "f07929f7-fa1e-46cc-8aad-8d609d9bd5ca",
       "position": 11,
       "properties": {
-        "description": "Prompt: What’s an example of something you’ve interacted with that probably uses an LLM? What things can you imagine using an LLM for in the future?"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  What’s an example of something you’ve interacted with that probably uses an LLM? What things can you imagine using an LLM for in the future?"
       },
       "seeding_key": {
         "activity_section.key": "f07929f7-fa1e-46cc-8aad-8d609d9bd5ca",
@@ -1992,7 +2006,7 @@
       "key": "c0cd6ed5-3a71-411c-b46d-d771c8548c9b",
       "position": 13,
       "properties": {
-        "description": "Discussion Goal: \nThis discussion connects the video to things the students have experienced – they have probably seen predictive text in emails or cell phones, and have probably heard of ChatGPT, for instance. Students may imagine using this technology for anything that generates text, including writing code or news articles. If students are struggling to find answers, you can provide the examples of predictive text, and / or demonstrate.",
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** \nThis discussion connects the video to things the students have experienced – they have probably seen predictive text in emails or cell phones, and have probably heard of ChatGPT, for instance. Students may imagine using this technology for anything that generates text, including writing code or news articles. If students are struggling to find answers, you can provide the examples of predictive text, and / or demonstrate.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2019,7 +2033,7 @@
       "key": "18e9b083-6b59-4be5-86b0-ab74ebc84e51",
       "position": 15,
       "properties": {
-        "description": "Discuss: Remember, these LLMs are learning from every word on the internet. What is a benefit of using the entire internet as input? What is a drawback?\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Remember, these LLMs are learning from every word on the internet. What is a benefit of using the entire internet as input? What is a drawback?\n"
       },
       "seeding_key": {
         "activity_section.key": "18e9b083-6b59-4be5-86b0-ab74ebc84e51",
@@ -2040,11 +2054,11 @@
       "key": "808eacba-cd56-4608-9090-2d4e48cfdef8",
       "position": 17,
       "properties": {
-        "description": "Discussion Goal:\nLearning from every word on the internet gives Large Language Models a ton of information to learn from, but not all of that information is factual, and not all the wording will be kind or appropriate. \n\nAlso encourage students to consider how people with access to writing on the internet tend to be more privileged voices, and therefore further marginalize the voices of already marginalized groups. ",
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Learning from every word on the internet gives Large Language Models a ton of information to learn from, but not all of that information is factual, and not all the wording will be kind or appropriate. \n\nAlso encourage students to consider how people with access to writing on the internet tend to be more privileged voices, and therefore further marginalize the voices of already marginalized groups. ",
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "Vocabulary – Bias is when a decision favors some things and de-prioritizes or excludes others, Algorithmic bias is the term for bias that occurs within computational systems. Often, it stems from the fact that the data the model learned from comes from humans, and is thus biased. This [video](https://www.youtube.com/watch?v=heQzqX35c9A) has more information about algorithmic bias."
+            "markdown": "Vocabulary – Bias is when a decision favors some things and de-prioritizes or excludes others. **Algorithmic bias** is the term for bias that occurs within computational systems. Often, it stems from the fact that the data the model learned from comes from humans, and is thus biased. This [video](https://www.youtube.com/watch?v=heQzqX35c9A) has more information about algorithmic bias."
           }
         ]
       },
@@ -2097,7 +2111,7 @@
       "key": "715e20fc-e095-4227-bfd4-fdde30a4a368",
       "position": 21,
       "properties": {
-        "description": "Model: Show the students how to use the Predictive Text Widget, taking examples from the class."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:**  Show the students how to use the Predictive Text Widget, taking examples from the class."
       },
       "seeding_key": {
         "activity_section.key": "715e20fc-e095-4227-bfd4-fdde30a4a368",
@@ -2124,7 +2138,7 @@
       "key": "02c34eb9-a754-4d55-ac24-78c0ab34e649",
       "position": 23,
       "properties": {
-        "description": "Code Studio: Have students log into Code Studio and begin interacting with the widget"
+        "description": "**Code Studio:** Have students log into Code Studio and begin interacting with the widget"
       },
       "seeding_key": {
         "activity_section.key": "02c34eb9-a754-4d55-ac24-78c0ab34e649",
@@ -2145,7 +2159,7 @@
       "key": "fe4f53d8-396f-4e67-90e9-ece8fa9945b6",
       "position": 25,
       "properties": {
-        "description": "Circulate: As the students write their stories, encourage them by telling them your thoughts and ideas, making sure they stay on task."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As the students write their stories, encourage them by telling them your thoughts and ideas, making sure they stay on task."
       },
       "seeding_key": {
         "activity_section.key": "fe4f53d8-396f-4e67-90e9-ece8fa9945b6",
@@ -2166,7 +2180,7 @@
       "key": "d8503792-ae7d-470d-98e5-072d39553051",
       "position": 27,
       "properties": {
-        "description": "Regroup: Have students close out of the widget and re-focus as a whole class"
+        "description": "**Regroup:** Have students close out of the widget and re-focus as a whole class"
       },
       "seeding_key": {
         "activity_section.key": "d8503792-ae7d-470d-98e5-072d39553051",
@@ -2187,7 +2201,7 @@
       "key": "8609db90-f18c-4a60-b28e-c9670f676dc4",
       "position": 29,
       "properties": {
-        "description": "Share Out: In small groups, have students share the stories they wrote with each other. Students can comment on each other’s stories.\n"
+        "description": "**Share Out:** In small groups, have students share the stories they wrote with each other. Students can comment on each other’s stories.\n"
       },
       "seeding_key": {
         "activity_section.key": "8609db90-f18c-4a60-b28e-c9670f676dc4",
@@ -2208,7 +2222,7 @@
       "key": "8c5569de-472b-4605-8294-87538485a2ca",
       "position": 31,
       "properties": {
-        "description": "Circulate: Make sure students are on task, being kind, and that all students get to share their stories.",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Make sure students are on task, being kind, and that all students get to share their stories.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2235,7 +2249,7 @@
       "key": "774b52e9-6b41-4ceb-96a5-a7bf8268abb3",
       "position": 33,
       "properties": {
-        "description": "Prompt: How was this activity acting like an LLM as described by the video? How was it different?"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How was this activity acting like an LLM as described by the video? How was it different?"
       },
       "seeding_key": {
         "activity_section.key": "774b52e9-6b41-4ceb-96a5-a7bf8268abb3",
@@ -2256,7 +2270,7 @@
       "key": "63466701-0e1a-484a-975e-22356086e24b",
       "position": 35,
       "properties": {
-        "description": "Discussion Goal: An LLM is usually learning from more words.  An LLM has context. This model only knew the word right before the one being chosen. We, the people choosing the next word, had context. (it’s possible the students won’t have noticed this, point it out directly if it didn’t come up). "
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** An LLM is usually learning from more words.  An LLM has context. This model only knew the word right before the one being chosen. We, the people choosing the next word, had context. (it’s possible the students won’t have noticed this, point it out directly if it didn’t come up). "
       },
       "seeding_key": {
         "activity_section.key": "63466701-0e1a-484a-975e-22356086e24b",
@@ -2277,7 +2291,7 @@
       "key": "94baedf3-8164-4b90-96b3-87e1fdfed32b",
       "position": 37,
       "properties": {
-        "description": "Discuss: What did these stories have in common? How were they different? Why?\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  What did these stories have in common? How were they different? Why?\n"
       },
       "seeding_key": {
         "activity_section.key": "94baedf3-8164-4b90-96b3-87e1fdfed32b",
@@ -2298,7 +2312,7 @@
       "key": "d9812780-e164-49bc-8897-b3e5c2df5cb8",
       "position": 39,
       "properties": {
-        "description": "Discussion Goal: Students have probably found that stories told by the same \"voice\" had more similar words, but choosing different words still meant different stories came out. This is to help students begin to have a framework around the Wrap Up Question, about whether LLMs are Creative and/or intelligent."
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students have probably found that stories told by the same \"voice\" had more similar words, but choosing different words still meant different stories came out. This is to help students begin to have a framework around the Wrap Up Question, about whether LLMs are Creative and/or intelligent."
       },
       "seeding_key": {
         "activity_section.key": "d9812780-e164-49bc-8897-b3e5c2df5cb8",
@@ -2343,7 +2357,7 @@
       "key": "d802ab4d-027b-406c-a388-ad6d02901ebb",
       "position": 43,
       "properties": {
-        "description": "Option 1: Pull up an example Eliza displayed on the projector, and take responses from students for what to say to Eliza.\n"
+        "description": "**Option 1:** Pull up an example Eliza displayed on the projector, and take responses from students for what to say to Eliza.\n"
       },
       "seeding_key": {
         "activity_section.key": "d802ab4d-027b-406c-a388-ad6d02901ebb",
@@ -2364,7 +2378,7 @@
       "key": "288a039b-6428-48d8-8eea-7173712585f2",
       "position": 45,
       "properties": {
-        "description": "Option 2 (takes more time): Allow students to to play with Eliza on their own computers for a few minutes.\n"
+        "description": "**Option 2 (takes more time):** Allow students to to play with Eliza on their own computers for a few minutes.\n"
       },
       "seeding_key": {
         "activity_section.key": "288a039b-6428-48d8-8eea-7173712585f2",
@@ -2385,7 +2399,7 @@
       "key": "8b5cad22-513a-4df7-9375-361cd81cd899",
       "position": 47,
       "properties": {
-        "description": "Discuss: How did using Eliza feel different from using a Large Language Model. How does Eliza feel similarly to using a Large Language Model?\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  How did using Eliza feel different from using a Large Language Model? How does Eliza feel similar to using a Large Language Model?\n"
       },
       "seeding_key": {
         "activity_section.key": "8b5cad22-513a-4df7-9375-361cd81cd899",
@@ -2406,7 +2420,7 @@
       "key": "bf3d8cc5-0d42-4d9e-99ac-d3d1053cd96a",
       "position": 49,
       "properties": {
-        "description": "Discussion Goal: Students will probably notice that the responses are more limited, though they may also notice that it can still feel real sometimes.\n"
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students will probably notice that the responses are more limited, though they may also notice that it can still feel real sometimes.\n"
       },
       "seeding_key": {
         "activity_section.key": "bf3d8cc5-0d42-4d9e-99ac-d3d1053cd96a",
@@ -2417,7 +2431,7 @@
       "key": "c428b4fe-e4a2-4902-b70e-0fabd2b96a54",
       "position": 1,
       "properties": {
-        "description": "Prompt: Is a Large Language Model Creative? Intelligent? Why or why not? "
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  Is a Large Language Model Creative? Intelligent? Why or why not? "
       },
       "seeding_key": {
         "activity_section.key": "c428b4fe-e4a2-4902-b70e-0fabd2b96a54",
@@ -2438,11 +2452,23 @@
       "key": "03b9189c-a2d5-416e-8b7b-ff8967d82f80",
       "position": 3,
       "properties": {
-        "description": "Discussion Goal: Students may have very different answers to this question. Some may think LLMs are intelligent because they come up with intelligent sounding responses, but others should notice that the LLM does not understand what it is saying, just what words tend to go together. Intelligence itself is a hard to define concept. "
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students may have very different answers to this question. Some may think LLMs are intelligent because they come up with intelligent sounding responses, but others should notice that the LLM does not understand what it is saying, just what words tend to go together. Intelligence itself is a hard to define concept. "
       },
       "seeding_key": {
         "activity_section.key": "03b9189c-a2d5-416e-8b7b-ff8967d82f80",
         "lesson_activity.key": "c6f6081e-0e67-4413-a217-07ecfeca95f8"
+      }
+    },
+    {
+      "key": "d7cc0b02-94a5-4416-b536-389b0c47a6ca",
+      "position": 1,
+      "properties": {
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "name": "Teacher Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "d7cc0b02-94a5-4416-b536-389b0c47a6ca",
+        "lesson_activity.key": "969658e5-7a77-4157-8c32-47a88346b337"
       }
     },
     {
@@ -3366,6 +3392,30 @@
       }
     },
     {
+      "name": "Generative LLM",
+      "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/copy",
+      "key": "generative_llm",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "generative_llm"
+      }
+    },
+    {
+      "name": "Generative LLM Guide",
+      "url": "https://docs.google.com/document/d/1e9CLjhlrADSDx79CdWqAkDLneq7Xj1XH3ZgJJX2EN0I/edit?usp=sharing",
+      "key": "generative_llm_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "generative_llm_guide"
+      }
+    },
+    {
       "name": "Introduction to AI",
       "url": "https://docs.google.com/presentation/d/1Ca1i3-7p6sjC16TuEVF5chfC6Fw3ecM12inLOFXEKQg/template/preview",
       "key": "introduction_to_ai",
@@ -3764,6 +3814,18 @@
         "lesson.key": "lesson-6",
         "resource.key": "what_a_neural_network_sees"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "generative_llm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "generative_llm_guide"
+      }
     }
   ],
   "scripts_resources": [
@@ -3801,6 +3863,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "ethics"
+      }
+    },
+    {
+      "key": "large_language_model_llm_",
+      "word": "Large Language Model (LLM)",
+      "definition": "a general purpose form of AI that is trained on a very, very large body of knowledge",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "large_language_model_llm_"
       }
     },
     {
@@ -3863,6 +3935,12 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "vocabulary.key": "network"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "large_language_model_llm_"
       }
     },
     {
@@ -3969,7 +4047,7 @@
     {
       "key": "e4f8c8d3-0a13-468d-8a9d-af7647bef878",
       "properties": {
-        "description": "Describe that having a large amount of text to learn from allows computers to appear intelligent in written form."
+        "description": "Describe that having a large amount of text to learn from allows computers to appear intelligent in written form"
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
