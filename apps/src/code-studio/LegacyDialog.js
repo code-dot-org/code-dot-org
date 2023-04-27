@@ -194,6 +194,7 @@ LegacyDialog.prototype.show = function (options) {
 };
 
 LegacyDialog.prototype.hide = function () {
+  console.log('legacy dialog hide');
   $(this.div).modal('hide');
   this.isVisible = false;
 };

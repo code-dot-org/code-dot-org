@@ -24,21 +24,16 @@ const FIELD_PADDING = 2;
 class CdoFieldSoundPicker extends GoogleBlockly.Field {
   constructor(value, options) {
     super(value);
-
-    console.log('options', options);
     this.typeFilter = options.typeFilter;
     this.onClose = options.onClose;
     this.options = options.options;
     this.name = options.name;
     this.block = options.block;
-    this.dialog = null;
-    this.onChange = function (soundValue, block, name) {
-      console.log('inside this.assetChosen');
-      console.log(block);
-      console.log(soundValue);
-      // block.setTitleValue(soundValue);
+    this.onChange = soundValue => {
+      this.setValue(soundValue);
+      console.log(this.getValue());
     };
-    this.newDiv = null;
+    this.newDiv_ = null;
     this.SERIALIZABLE = true;
     this.CURSOR = 'default';
     this.backgroundElement = null;
@@ -88,7 +83,7 @@ class CdoFieldSoundPicker extends GoogleBlockly.Field {
       this.fieldGroup_
     );
 
-    this.updateSize_(); // this is in FieldChord
+    this.updateSize_();
   }
 
   /**
@@ -113,7 +108,6 @@ class CdoFieldSoundPicker extends GoogleBlockly.Field {
    */
   showEditor_(e) {
     super.showEditor_();
-
     const editor = this.dropdownCreate_();
     Blockly.DropDownDiv.getContentDiv().appendChild(editor);
 
@@ -147,11 +141,11 @@ class CdoFieldSoundPicker extends GoogleBlockly.Field {
       console.log('!this.newDiv_ is true - return early');
       return;
     }
-    console.log('!this.newDiv_ is false - proceed');
+    console.log('!this.newDiv_ is false - proceed - this.newDiv_');
     let sounds = new Sounds();
-    this.newDiv = document.createElement('div');
+    let codeDiv = document.createElement('div');
     let dialog = new Dialog({
-      body: this.newDiv,
+      body: codeDiv,
       id: 'manageAssetsModal',
       onHidden: () => {
         sounds.stopAllAudio();
@@ -163,18 +157,12 @@ class CdoFieldSoundPicker extends GoogleBlockly.Field {
     let onChange = this.onChange;
     let block = this.block;
     let name = this.name;
-    console.log('dialog', dialog);
-    console.log('onChange', onChange);
     ReactDOM.render(
       React.createElement(SoundPicker, {
         typeFilter: this.typeFilter,
         uploadsEnabled: !exceedsAbuseThreshold(),
-        assetChosen: function (fileWithPath) {
-          console.log('inside function - calling dialog.hide and assetChosen');
-          console.log('dialog', dialog);
-          console.log('onChange', onChange);
+        assetChosen: fileWithPath => {
           dialog.hide();
-          console.log('called dialog.hide() about to call onChange');
           onChange(fileWithPath, block, name);
         },
         projectId: getCurrentId(),
@@ -185,9 +173,9 @@ class CdoFieldSoundPicker extends GoogleBlockly.Field {
         showUnderageWarning: false,
         useFilesApi: false,
       }),
-      this.newDiv
+      codeDiv
     );
-    console.log('after createElement - this.newDiv', this.newDiv);
+    dialog.show();
   }
 
   dropdownDispose_() {
@@ -209,8 +197,6 @@ class CdoFieldSoundPicker extends GoogleBlockly.Field {
     }
     this.renderContent();
   }
-
-  getText_() {}
 
   /**
    * Updates the size of the field based on the text.
