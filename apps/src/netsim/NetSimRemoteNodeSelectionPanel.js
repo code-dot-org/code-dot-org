@@ -107,7 +107,7 @@ var NetSimRemoteNodeSelectionPanel = (module.exports = function (
   function buttonDebounce(callback) {
     return _.debounce(callback, BUTTON_DEBOUNCE_DURATION_MS, {
       leading: true,
-      trailing: false
+      trailing: false,
     });
   }
 
@@ -153,7 +153,7 @@ var NetSimRemoteNodeSelectionPanel = (module.exports = function (
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-lobby-panel',
     panelTitle: this.getLocalizedPanelTitle(),
-    userToggleable: false
+    userToggleable: false,
   });
 
   if (options.disableControls) {
@@ -183,7 +183,7 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
       incomingConnectionNodes: this.incomingConnectionNodes_,
       remoteNode: this.remoteNode_,
       canSeeTeacherLog:
-        levelConfig.showAddRouterButton && this.canCurrentUserSeeTeacherLog_()
+        levelConfig.showAddRouterButton && this.canCurrentUserSeeTeacherLog_(),
     })
   );
   this.getBody().html(newMarkup);

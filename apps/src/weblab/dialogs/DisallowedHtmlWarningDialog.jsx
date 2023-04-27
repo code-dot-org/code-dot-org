@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import commonI18n from '@cdo/locale';
 import weblabI18n from '@cdo/weblab/locale';
 import StylizedBaseDialog, {
-  FooterButton
+  FooterButton,
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SupportArticleMarkdown from '@cdo/apps/weblab/SupportArticleMarkdown';
@@ -20,7 +20,7 @@ export default function DisallowedHtmlWarningDialog({
       <SafeMarkdown
         markdown={weblabI18n.disallowedHtml({
           filename,
-          disallowedTags: disallowedTags.join(', ')
+          disallowedTags: disallowedTags.join(', '),
         })}
       />
       <SupportArticleMarkdown />
@@ -49,5 +49,5 @@ DisallowedHtmlWarningDialog.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   filename: PropTypes.string.isRequired,
   disallowedTags: PropTypes.arrayOf(PropTypes.string).isRequired,
-  handleClose: PropTypes.func.isRequired
+  handleClose: PropTypes.func.isRequired,
 };

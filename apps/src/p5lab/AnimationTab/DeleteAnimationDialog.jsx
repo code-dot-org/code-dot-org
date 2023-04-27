@@ -10,7 +10,7 @@ export default class DeleteAnimationDialog extends React.Component {
     onDelete: PropTypes.func.isRequired,
     onCancel: PropTypes.func.isRequired,
     isOpen: PropTypes.bool.isRequired,
-    labType: PropTypes.string.isRequired
+    labType: PropTypes.string.isRequired,
   };
 
   render() {

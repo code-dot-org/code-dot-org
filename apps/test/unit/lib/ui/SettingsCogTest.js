@@ -9,14 +9,14 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import * as makerRedux from '@cdo/apps/lib/kits/maker/redux';
 import * as assets from '@cdo/apps/code-studio/assets';
 import pageConstantsReducer, {
-  setPageConstants
+  setPageConstants,
 } from '@cdo/apps/redux/pageConstants';
 import {Provider} from 'react-redux';
 import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 
 describe('SettingsCog', () => {
@@ -142,7 +142,7 @@ describe('SettingsCog', () => {
       it('does not display maker toggle if a curriculum level', () => {
         getStore().dispatch(
           setPageConstants({
-            isCurriculumLevel: true
+            isCurriculumLevel: true,
           })
         );
         let wrapper = mount(
@@ -159,7 +159,7 @@ describe('SettingsCog', () => {
       it('does display maker toggle if not a curriculum level (standalone project)', () => {
         getStore().dispatch(
           setPageConstants({
-            isCurriculumLevel: false
+            isCurriculumLevel: false,
           })
         );
         let wrapper = mount(

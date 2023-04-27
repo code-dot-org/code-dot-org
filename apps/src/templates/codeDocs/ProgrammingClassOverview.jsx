@@ -14,7 +14,7 @@ export default function ProgrammingClassOverview({
   programmingEnvironmentName,
   programmingEnvironmentLanguage,
   includeMethodSummary,
-  isSmallWindow
+  isSmallWindow,
 }) {
   return (
     <div style={{width: '100%'}}>
@@ -26,7 +26,7 @@ export default function ProgrammingClassOverview({
             style={{
               backgroundColor: programmingClass.color,
               marginLeft: 10,
-              padding: '5px 10px'
+              padding: '5px 10px',
             }}
           >
             {programmingClass.category}
@@ -77,7 +77,7 @@ export default function ProgrammingClassOverview({
           <EnhancedSafeMarkdown
             markdown={i18n.additionalInformationText({
               externalDocumentationUrl:
-                programmingClass.externalDocumentation.trim()
+                programmingClass.externalDocumentation.trim(),
             })}
           />
         </div>
@@ -119,7 +119,7 @@ const programmingClassShape = PropTypes.shape({
   externalDocumentation: PropTypes.string,
   content: PropTypes.string,
   syntax: PropTypes.string,
-  tips: PropTypes.string
+  tips: PropTypes.string,
 });
 
 ProgrammingClassOverview.propTypes = {
@@ -127,5 +127,5 @@ ProgrammingClassOverview.propTypes = {
   programmingEnvironmentName: PropTypes.string,
   programmingEnvironmentLanguage: PropTypes.string,
   includeMethodSummary: PropTypes.bool,
-  isSmallWindow: PropTypes.bool
+  isSmallWindow: PropTypes.bool,
 };

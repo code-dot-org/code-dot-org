@@ -12,13 +12,13 @@ const CORRECT = 2;
 const STATUS_TEXT = {
   [UNKNOWN]: '',
   [INCORRECT]: 'Try again',
-  [CORRECT]: 'You got it!'
+  [CORRECT]: 'You got it!',
 };
 
 const FIELD_COLORS = {
   [UNKNOWN]: color.light_gray,
   [INCORRECT]: color.red,
-  [CORRECT]: color.green
+  [CORRECT]: color.green,
 };
 
 const FIELD_STYLES = {
@@ -26,26 +26,26 @@ const FIELD_STYLES = {
     color: color.white,
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.black
+    borderColor: color.black,
   },
   [INCORRECT]: {
     color: color.white,
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.black
+    borderColor: color.black,
   },
   [CORRECT]: {
     color: color.white,
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.black
-  }
+    borderColor: color.black,
+  },
 };
 
 const TEXT_STYLES = {
   [UNKNOWN]: {whiteSpace: 'nowrap'},
   [INCORRECT]: {whiteSpace: 'nowrap', color: color.red},
-  [CORRECT]: {whiteSpace: 'nowrap', color: color.realgreen}
+  [CORRECT]: {whiteSpace: 'nowrap', color: color.realgreen},
 };
 
 export default function ValidatorField(props) {
@@ -68,7 +68,7 @@ ValidatorField.propTypes = {
   className: PropTypes.string,
   value: PropTypes.number,
   expectedValue: PropTypes.number,
-  shouldEvaluate: PropTypes.bool
+  shouldEvaluate: PropTypes.bool,
 };
 
 function statusFromProps({value, expectedValue, shouldEvaluate}) {

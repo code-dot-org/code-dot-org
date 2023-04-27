@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-18 04:13:11 UTC",
+    "serialized_at": "2023-04-20 12:26:16 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -61,6 +61,19 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa8-2023"
       }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Alternate Lessons",
+        "description": "This section contains the one-day version of the Creative Coding with the Console Project."
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa8-2023"
+      }
     }
   ],
   "lessons": [
@@ -73,7 +86,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**Why is it important to start a project by first identifying requirements, tasks, and priorities?**\n\nStudents are introduced to the Creative Coding with the Console Project and evaluate requirements and examples to identify questions and key features. Students use the requirements and key features they identify to determine the initial tasks they need to complete and set up their Project Planning Board.",
-        "preparation": "* Print copies of the Unit 8 Guide (one for each student)\n* Print copies of the Creative Coding with the Console Project Planning Guide (one for each student)\n* Gather students' Project Backlog folders from the previous unit and a small stack of sticky notes (10-12) for each student\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the Unit 8 Guide (one for each student)\n* Print copies of the Creative Coding with the Console Project Planning Guide (one for each student)\n* Gather students' Project Backlog folders from the previous unit and a small stack of sticky notes (10-12) for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-1-project-planning/37951) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**Why is it important to start a project by first identifying requirements, tasks, and priorities?**\n\nIn this lesson, you are introduced to the Creative Coding with the Console Project and evaluate requirements and examples to identify questions and key features. You use the requirements and key features you identify to determine the initial tasks you need to complete and set up your Project Planning Board."
       },
       "seeding_key": {
@@ -91,7 +104,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**How can I determine the efficiency of an algorithm?**\n\nStudents have learned and practiced implementing standard algorithms to find a target element in a list throughout the year. In this lesson, they realize that they have been using the linear search algorithm to find elements and review how this algorithm is applied to different data structures. Students learn how to use execution counts to determine the best, average, and worst cases and practice evaluating the linear search algorithm to determine its efficiency. Students then write user stories for their Creative Coding with the Console Project to identify required program features.",
-        "preparation": "* Gather or prepare enough cards so that each pair of students can have six cards (actual playing cards, printed cards, or index cards that are numbered)\n* Print copies of the Counting Executions with Code handout (one for each student)\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Gather or prepare enough cards so that each pair of students can have six cards (actual playing cards, printed cards, or index cards that are numbered)\n* Print copies of the Counting Executions with Code handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-2-searching/37952) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I determine the efficiency of an algorithm?**\n\nYou have learned and practiced implementing standard algorithms to find a target element in a list throughout the year. In this lesson, you realize that you have been using the linear search algorithm to find elements and review how this algorithm is applied to different data structures. You learn how to use execution counts to determine the best, average, and worst cases and practice evaluating the linear search algorithm to determine its efficiency. You then write user stories for your Creative Coding with the Console Project to identify required program features."
       },
       "seeding_key": {
@@ -109,7 +122,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**How is a binary search more efficient than a linear search?**\n\nStudents previously learned how to evaluate the linear search algorithm to determine its efficiency using execution counts and identified limitations of this approach to searching. In this lesson, they discover a better searching algorithm that can perform more efficiently if the list is already sorted. Students explore the binary search algorithm to evaluate its efficiency and compare it to the linear search. Students also revisit recursion and explore how the binary search algorithm can be implemented recursively.",
-        "preparation": "* Print copies of the Binary Search handout (one for each pair of students)\n* Gather or prepare enough cards so that each pair of students can have five cards (actual playing cards, printed cards, or index cards that are numbered)\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the Binary Search handout (one for each pair of students)\n* Gather or prepare enough cards so that each pair of students can have five cards (actual playing cards, printed cards, or index cards that are numbered)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-3-binary-search/37953) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How is a binary search more efficient than a linear search?**\n\nYou previously learned how to evaluate the linear search algorithm to determine its efficiency using execution counts and identified limitations of this approach to searching. In this lesson, you discover a better searching algorithm that can perform more efficiently if the list is already sorted. You explore the binary search algorithm to evaluate its efficiency and compare it to the linear search. You also revisit recursion and explore how the binary search algorithm can be implemented recursively."
       },
       "seeding_key": {
@@ -127,7 +140,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How can I sort elements in a data structure?**\n\nIn this lesson, students learn about the selection sort algorithm. After investigating a program using the selection sort algorithm to sort a list of values, they explore its functionality using manipulatives and evaluate its efficiency using execution counts. Students then identify the benefits and limitations of the selection sort algorithm and scenarios where a selection sort would be useful to sort a list of values.",
-        "preparation": "* Review the Selection Sort Activity Setup resource\n* Gather five cups and prepare sticky note manipulatives for each group of students\n* Print copies of the Selection Sort handout (one for each group of students)\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Review the Selection Sort Activity Setup resource\n* Gather five cups and prepare sticky note manipulatives for each group of students\n* Print copies of the Selection Sort handout (one for each group of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-4-selection-sort/37954) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I sort elements in a data structure?**\n\nIn this lesson, you learn about the selection sort algorithm. After investigating a program using the selection sort algorithm to sort a list of values, you explore its functionality using manipulatives and evaluate its efficiency using execution counts. You then identify the benefits and limitations of the selection sort algorithm and scenarios where a selection sort would be useful to sort a list of values."
       },
       "seeding_key": {
@@ -145,7 +158,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "**How does the insertion sort algorithm compare in efficiency with the selection sort algorithm?**\n\nStudents previously learned about the selection sort algorithm and evaluated its functionality and limitations. In this lesson, they explore the insertion sort algorithm and compare its functionality and efficiency with the selection sort algorithm. Students analyze the efficiency of each algorithm using execution counts and identify the benefits and limitations of both the selection and insertion sort algorithms.",
-        "preparation": "* Print copies of the Sorting Comparison handout (one for each pair of students)\n* Print copies of the Project Planning Feedback handout (one for each student)\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the Sorting Comparison handout (one for each pair of students)\n* Print copies of the Project Planning Feedback handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-5-insertion-sort/37955) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How does the insertion sort algorithm compare in efficiency with the selection sort algorithm?**\n\nYou previously learned about the selection sort algorithm and evaluated its functionality and limitations. In this lesson, you explore the insertion sort algorithm and compare its functionality and efficiency with the selection sort algorithm. You analyze the efficiency of each algorithm using execution counts and identify the benefits and limitations of both the selection and insertion sort algorithms."
       },
       "seeding_key": {
@@ -163,7 +176,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How does the merge sort algorithm compare in efficiency with the selection and insertion sort algorithms?**\n\nStudents explore the merge sort algorithm to organize elements in a list using a divide-and-conquer approach and identify the components of the algorithm. They learn how the algorithm uses helper functions to implement the divide-and-conquer approach and practice tracing the algorithm to understand its functionality. Students determine its efficiency using execution counts and compare it with the insertion and selection sort algorithms.",
-        "preparation": "* Print copies of the Merge Sort handout (one for each student)\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the Merge Sort handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-6-merge-sort/37956) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How does the merge sort algorithm compare in efficiency with the selection and insertion sort algorithms?**\n\nYou explore the merge sort algorithm to organize elements in a list using a divide-and-conquer approach and identify the components of the algorithm. You learn how the algorithm uses helper functions to implement the divide-and-conquer approach and practice tracing the algorithm to understand its functionality. You determine its efficiency using execution counts and compare it with the insertion and selection sort algorithms."
       },
       "seeding_key": {
@@ -181,7 +194,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "**How can I implement searching and sorting algorithms when working multiple lists?**\n\nThroughout the unit, students learned about searching and sorting algorithms and analyzed the efficiency of each. In this lesson, students have an opportunity to apply what they have learned about searching and sorting to work with multiple lists. They review the functionality and ideal scenario for each searching and sorting algorithm and explore how programs work with multiple lists to store different but related values. Students then practice implementing algorithms to traverse multiple lists and use searching and sorting algorithms to find and organize elements in a data structure.",
-        "preparation": "* Preview the *Searching Algorithms* and *Sorting Algorithms* videos\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview the *Searching Algorithms* and *Sorting Algorithms* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-7-searching-and-sorting/37957) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I implement searching and sorting algorithms when working multiple lists?**\n\nThroughout the unit, you learned about searching and sorting algorithms and analyzed the efficiency of each. In this lesson, you have an opportunity to apply what you have learned about searching and sorting to work with multiple lists. You review the functionality and ideal scenario for each searching and sorting algorithm and explore how programs work with multiple lists to store different but related values. You then practice implementing algorithms to traverse multiple lists and use searching and sorting algorithms to find and organize elements in a data structure."
       },
       "seeding_key": {
@@ -199,7 +212,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "Students have worked on their Creative Coding with the Console Project throughout the unit to plan the classes and algorithms they will need to develop and get feedback from their peers on their plans. In this lesson, they review the project requirements and benchmarks and update their Project Planning Boards before beginning development on their projects. Students have an opportunity to get feedback on their initial program code through a code review to help ensure they are on the right track and to emphasize the iterative development process.",
-        "preparation": "* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-8-project-development/37958) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "You have worked on your Creative Coding with the Console Project throughout the unit to plan the classes and algorithms you will need to develop and get feedback from your peers on your plans. In this lesson, you review the project requirements and benchmarks and update your Project Planning Board before beginning development on your project. You have an opportunity to get feedback on your initial program code through a code review to help ensure you are on the right track and to emphasize the iterative development process."
       },
       "seeding_key": {
@@ -217,7 +230,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**What are the tradeoffs between the utility of data collection and safeguarding privacy and security?**\n\nIn this lesson, students consider how the apps and programs they use when at home or at school collect data about them, such as their name, address, or favorite TV show. They explore issues related to privacy and security by reading case studies about real-world breaches and debate about the tradeoffs between the utility of data collection and safeguarding privacy and security.",
-        "preparation": "* Print copies of the Data, Privacy, and Security handout (one for each student)\n* Print copies of the Unit 8 Study Guide (one for each student)\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the Data, Privacy, and Security handout (one for each student)\n* Print copies of the Unit 8 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-9-privacy-and-security/37959) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What are the tradeoffs between the utility of data collection and safeguarding privacy and security?**\n\nIn this lesson, you consider how the apps and programs you use when at home or at school collect data about you, such as your name, address, or favorite TV show. You explore issues related to privacy and security by reading case studies about real-world breaches and debate about the tradeoffs between the utility of data collection and safeguarding privacy and security."
       },
       "seeding_key": {
@@ -228,12 +241,16 @@
     },
     {
       "key": "lesson-10",
-      "name": "Creative Coding with the Console",
+      "name": "Creative Coding with the Console Project",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "assessment": true,
+        "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with the Console Project to create a program that portrays a personal interest or solves a problem using the console. Students first self-assess their work to evaluate their progress in completing project requirements, then continue development of your program. They conduct acceptance testing to determine which of their user stories are complete and use the self-assessment and peer feedback to prioritize their remaining tasks. Students use this feedback to finalize development before sharing their projects with their peers to celebrate their successes.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-10-creative-coding-with-the-console-project/37960) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou continue to develop your Creative Coding with the Console Project to create a program that portrays a personal interest or solves a problem using the console. You first self-assess your work to evaluate your progress in completing project requirements, then continue development of your program. You conduct acceptance testing to determine which of your user stories are complete and use the self-assessment and peer feedback to prioritize your remaining tasks. You use this feedback to finalize development before sharing your project with your peers to celebrate your success."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -243,12 +260,15 @@
     },
     {
       "key": "lesson-11",
-      "name": "FRQ Practice",
+      "name": "SeatingChart FRQ",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "**How will I use what I know about 2D arrays and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock 2D Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
+        "preparation": "* Print copies of the SeatingChart FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the SeatingChart FRQ Scoring Guidelines (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-11-seatingchart-frq/37961) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How will I use what I know about 2D arrays and standard algorithms to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock 2D Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -260,10 +280,14 @@
       "key": "lesson-12",
       "name": "Unit 8 Assessment",
       "absolute_position": 12,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "assessment": true,
+        "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-12-unit-8-assessment/37962) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "Assess your progress through the Unit 8 Assessment."
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -283,6 +307,25 @@
       "seeding_key": {
         "lesson.key": "CSA Post-Survey",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa8-2023"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Creative Coding with the Console Project [1-Day Version]",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+        "assessment": true,
+        "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with the Console Project to create a program that portrays a personal interest or solves a problem using the Console. Students first self-assess their work to evaluate their progress in completing project requirements, then finish developing their projects. ",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-10-creative-coding-with-the-console-project/37960) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou continue to develop your Creative Coding with the Console Project to create a program that portrays a personal interest or solves a problem using the Console. You first self-assess your work to evaluate your progress in completing project requirements, then finish developing your project. "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa8-2023"
       }
     }
@@ -680,6 +723,130 @@
       }
     },
     {
+      "key": "5d2fda60-d452-4a7b-9a1d-60f327909f84",
+      "position": 1,
+      "properties": {
+        "name": "Project Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5d2fda60-d452-4a7b-9a1d-60f327909f84",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa8-2023"
+      }
+    },
+    {
+      "key": "4f0f6258-a436-40ce-bb72-2065ea214dac",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4f0f6258-a436-40ce-bb72-2065ea214dac",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa8-2023"
+      }
+    },
+    {
+      "key": "a4085965-78cd-4934-9ecc-122c1c8e94c0",
+      "position": 3,
+      "properties": {
+        "duration": 45,
+        "name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a4085965-78cd-4934-9ecc-122c1c8e94c0",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa8-2023"
+      }
+    },
+    {
+      "key": "734b4197-3a91-4a2f-ad38-c038cd6c96fb",
+      "position": 4,
+      "properties": {
+        "duration": 45,
+        "name": "Day 3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "734b4197-3a91-4a2f-ad38-c038cd6c96fb",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa8-2023"
+      }
+    },
+    {
+      "key": "2eb401e0-ae03-4e1b-b590-f43dc0eb11bf",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2eb401e0-ae03-4e1b-b590-f43dc0eb11bf",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa8-2023"
+      }
+    },
+    {
+      "key": "81397c21-91fd-4515-9a09-35834580041a",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "81397c21-91fd-4515-9a09-35834580041a",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa8-2023"
+      }
+    },
+    {
+      "key": "108983f6-af81-4c6e-a9e0-e6fe5adcb2ab",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "108983f6-af81-4c6e-a9e0-e6fe5adcb2ab",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa8-2023"
+      }
+    },
+    {
+      "key": "04c94df9-fe1a-49e4-8883-eebe95f837c5",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "04c94df9-fe1a-49e4-8883-eebe95f837c5",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa8-2023"
+      }
+    },
+    {
+      "key": "f7298c77-3321-466c-8cfd-1a59ec6518d4",
+      "position": 2,
+      "properties": {
+        "name": "Wrap Up (Optional)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f7298c77-3321-466c-8cfd-1a59ec6518d4",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa8-2023"
+      }
+    },
+    {
       "key": "cc1e5c30-a0bc-4007-9a2a-0b06e1d4ac41",
       "position": 1,
       "properties": {
@@ -688,6 +855,48 @@
         "lesson_activity.key": "cc1e5c30-a0bc-4007-9a2a-0b06e1d4ac41",
         "lesson.key": "CSA Post-Survey",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa8-2023"
+      }
+    },
+    {
+      "key": "d23c8ac1-6205-4f45-9c6a-ea2b70062b6d",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d23c8ac1-6205-4f45-9c6a-ea2b70062b6d",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa8-2023"
+      }
+    },
+    {
+      "key": "2dd5787c-29e0-4d85-b848-04068c89dec2",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2dd5787c-29e0-4d85-b848-04068c89dec2",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa8-2023"
+      }
+    },
+    {
+      "key": "3e088acc-a56b-490d-a687-5a2f2f0e8ec9",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3e088acc-a56b-490d-a687-5a2f2f0e8ec9",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa8-2023"
       }
     }
@@ -880,7 +1089,7 @@
       "key": "3951e890-834a-4210-9325-238851b211c8",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student their Project Backlog folder and a small stack of sticky notes (10-12).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Identify the key benchmarks and deadlines for the project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write the tasks they need to complete for each benchmark on individual sticky notes. Have students post these sticky notes on the other side of their manilla folder.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student their Project Backlog folder and a small stack of sticky notes (10-12).\n\n**Do This:** Explain the key benchmarks and deadlines for the project:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Benchmark #1\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Benchmark #2\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Benchmark #3\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write the tasks they need to complete for each benchmark on individual sticky notes. Have students post these sticky notes on the other side of their manilla folder.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1261,7 +1470,7 @@
       "key": "a5787fc7-d93c-423b-90db-0800243353ee",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define **binary search** and demonstrate the example.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Binary Search handout and five cards. Assign each pair an option (A, B, C) for the trace tables on pages 4, 5, and 6 of the handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Binary Search handout with their partners by completing pages 1, 2, and 3 and the trace table option they were assigned."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***binary search*** and demonstrate the example.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Binary Search handout and five cards. Assign each pair an option (A, B, C) for the trace tables on pages 4, 5, and 6 of the handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Binary Search handout with their partners by completing pages 1, 2, and 3 and the trace table option they were assigned."
       },
       "seeding_key": {
         "activity_section.key": "a5787fc7-d93c-423b-90db-0800243353ee",
@@ -1534,7 +1743,7 @@
       "key": "db28e854-d9f4-4aca-806a-f9a183d14a31",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***selection sort***.\n\n**Group:** Place students in groups of four to six.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Selection Sort handout and five cups.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Selection Sort activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Selection Sort handout.",
+        "description": "**Do This:** Click through the animated slides to define ***selection sort*** and demonstrate the example:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> First swap\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Second swap\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Third swap\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Final check\n\n**Group:** Place students in groups of four to six.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Selection Sort handout and five cups.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Selection Sort activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Selection Sort handout.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1774,7 +1983,7 @@
       "key": "ec9f2a3a-2953-4176-bce2-e5b5763bade8",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the insertion sort method traverses the array and compares the current element to the element before it. Students identify that if the current element is smaller than the element before it, it continues to check the elements before until it finds the correct position to insert the current element. Students may wonder why the insertion sort is more efficient than the selection sort.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***insertion sort** and explain the pseudocode for the algorithm."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the insertion sort method traverses the array and compares the current element to the element before it. Students identify that if the current element is smaller than the element before it, it continues to check the elements before until it finds the correct position to insert the current element. Students may wonder why the insertion sort is more efficient than the selection sort.\n\n**Do This:** Click through the animated slides to define ***insertion sort*** and demonstrate the algorithm:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> First comparison\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Updating current\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Second comparison\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Updating current\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Third comparison\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Updating current\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the pseudocode."
       },
       "seeding_key": {
         "activity_section.key": "ec9f2a3a-2953-4176-bce2-e5b5763bade8",
@@ -1828,7 +2037,7 @@
       "key": "6ac5a67b-6ee8-4a28-8f24-e679c8ed5a0e",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Sorting Comparison handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Sorting Comparison handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share the number of swaps and shifts as a class. Create a table of the number of shifts for each initial condition on the board.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Sorting Comparison handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Sorting Comparison handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share the number of comparisons made as a class. Create a table of the number of comparisons for each initial condition on the board.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2057,7 +2266,7 @@
       "key": "f4fd00ba-504c-4d82-817e-1b4221391fe9",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***merge sort***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***helper method***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What are the base cases?*\n* *What is the recursive call?*\n\n**Discussion Goal:** Students identify two base cases in the merge sort algorithm. The first base case is if the list is empty, and the second base case is if a list contains one item. Students realize that the merge sort algorithm recursively divides the list in half until the size of the list is one element.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***merge sort***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***helper method***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the base cases?*\n\n**Discussion Goal:** Students identify two base cases in the merge sort algorithm. The first base case is if the list is empty, and the second base case is if a list contains one item.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is the recursive call?*\n\n**Discussion Goal:** Students realize that the merge sort algorithm recursively divides the list in half until the size of the list is one element.",
         "duration": "15",
         "name": "Merge Sort",
         "tips": [
@@ -2510,7 +2719,7 @@
       "key": "e362fd6f-9be0-4b2b-906b-facc2ffbce7a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements and rubric.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the second benchmark.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with the tasks they need to complete."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the second benchmark.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with the tasks they need to complete."
       },
       "seeding_key": {
         "activity_section.key": "e362fd6f-9be0-4b2b-906b-facc2ffbce7a",
@@ -2622,25 +2831,8 @@
       }
     },
     {
-      "key": "5889c639-299d-404a-a0ac-e12c424eae85",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 8 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "5889c639-299d-404a-a0ac-e12c424eae85",
-        "lesson_activity.key": "fd2eb46d-13f4-443a-9812-bff4414f93de"
-      }
-    },
-    {
       "key": "b15e259d-81d5-47f2-bcc5-39115b6965ad",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "---"
       },
@@ -2651,7 +2843,7 @@
     },
     {
       "key": "de7b3d58-5c15-4894-93c2-a480468ee8ac",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -2787,7 +2979,7 @@
       "key": "8ce1bb88-d963-4ed8-8d43-a3a0dd2886cc",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 7 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know Week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the goals of the project workdays.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 7 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know Week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the goals of the project workdays.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
       },
       "seeding_key": {
         "activity_section.key": "8ce1bb88-d963-4ed8-8d43-a3a0dd2886cc",
@@ -2831,6 +3023,666 @@
       }
     },
     {
+      "key": "d28ae988-bcd7-4c8d-9def-7fb6a1f34424",
+      "position": 1,
+      "properties": {
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. Students work on the project throughout the unit to brainstorm, plan, and begin developing their program. Students then have three dedicated class periods to refine and complete their projects.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Creative Coding with the Console Project 1-Day Lesson Plan**](https://studio.code.org/s/csa8-2023/lessons/13). While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+      },
+      "seeding_key": {
+        "activity_section.key": "d28ae988-bcd7-4c8d-9def-7fb6a1f34424",
+        "lesson_activity.key": "5d2fda60-d452-4a7b-9a1d-60f327909f84"
+      }
+    },
+    {
+      "key": "06bae78b-86a0-410b-8166-cf5ccea53b38",
+      "position": 1,
+      "properties": {
+        "description": "Before working towards your final benchmark, review the project requirements and rubric and evaluate your progress. Self-assessing your progress will help you identify which tasks to focus on during your project workdays.",
+        "duration": "10",
+        "name": "Warm Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "06bae78b-86a0-410b-8166-cf5ccea53b38",
+        "lesson_activity.key": "4f0f6258-a436-40ce-bb72-2065ea214dac"
+      }
+    },
+    {
+      "key": "629a1ba2-77c9-4b4a-ac90-5c16ea3f9a2a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with the Console Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nStudents may have questions that are unrelated or beyond the scope of the project. Encourage students to research these questions as extension activities. Focus this discussion on answering questions specific to the content covered in this unit and for the project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "629a1ba2-77c9-4b4a-ac90-5c16ea3f9a2a",
+        "lesson_activity.key": "4f0f6258-a436-40ce-bb72-2065ea214dac"
+      }
+    },
+    {
+      "key": "e847516a-d16d-4601-b6df-555390fa5b68",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
+      },
+      "seeding_key": {
+        "activity_section.key": "e847516a-d16d-4601-b6df-555390fa5b68",
+        "lesson_activity.key": "4f0f6258-a436-40ce-bb72-2065ea214dac"
+      }
+    },
+    {
+      "key": "604f19cb-be1f-4c8e-bff6-84c8365e09da",
+      "position": 4,
+      "properties": {
+        "description": "Using the remaining items on your Project Planning Board and the feedback from your peers, continue to develop your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
+        "duration": "15",
+        "name": "Development",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "604f19cb-be1f-4c8e-bff6-84c8365e09da",
+        "lesson_activity.key": "4f0f6258-a436-40ce-bb72-2065ea214dac"
+      }
+    },
+    {
+      "key": "6ab7ff80-3d0e-402d-ab3a-f29b29993d30",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with the Console Project.",
+        "progression_name": "Creative Coding with the Console Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to refer to their Project Planning Board to decide what tasks to work on during this time. You can also encourage students to request a code review from their peers as they work."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6ab7ff80-3d0e-402d-ab3a-f29b29993d30",
+        "lesson_activity.key": "4f0f6258-a436-40ce-bb72-2065ea214dac"
+      }
+    },
+    {
+      "key": "894e9f55-19c3-4e92-ba5b-2db4d05a8ef0",
+      "position": 6,
+      "properties": {
+        "description": "You wrote acceptance criteria for your previous Creative Coding Project's user stories to define when each user story can be considered complete. With these, you were able to conduct acceptance testing to determine which of your user stories are complete and which ones still need work.",
+        "name": "Acceptance Testing",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "894e9f55-19c3-4e92-ba5b-2db4d05a8ef0",
+        "lesson_activity.key": "4f0f6258-a436-40ce-bb72-2065ea214dac"
+      }
+    },
+    {
+      "key": "f1b47f6f-b983-4f6d-a202-d9b4dd14c2b8",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review acceptance testing."
+      },
+      "seeding_key": {
+        "activity_section.key": "f1b47f6f-b983-4f6d-a202-d9b4dd14c2b8",
+        "lesson_activity.key": "4f0f6258-a436-40ce-bb72-2065ea214dac"
+      }
+    },
+    {
+      "key": "196170d9-6c3a-4b87-820e-8de34887dfa7",
+      "position": 8,
+      "properties": {
+        "description": "Let's write and test acceptance criteria for your user stories. Your reviewer should test your program and determine which of your user stories are complete and which ones still need work.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "196170d9-6c3a-4b87-820e-8de34887dfa7",
+        "lesson_activity.key": "4f0f6258-a436-40ce-bb72-2065ea214dac"
+      }
+    },
+    {
+      "key": "26811af4-48bc-4380-aca8-72b5c2f7e3be",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with the Console Project. Have students write a code review request that includes acceptance criteria for their user stories. Afterward, students review their peer’s code and determine if the acceptance criteria are met.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may be at different points when it is time for the code review. Emphasize to students that their work does not need to be completed to get feedback. Remind students that the problem-solving and development process is iterative and that receiving feedback from peers while they are working can help give them additional insights, perspectives, and guidance."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "26811af4-48bc-4380-aca8-72b5c2f7e3be",
+        "lesson_activity.key": "4f0f6258-a436-40ce-bb72-2065ea214dac"
+      }
+    },
+    {
+      "key": "1c2860ed-9280-4f57-a7fe-c175c407ea23",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can review the Project Planning Board as an optional completion assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1c2860ed-9280-4f57-a7fe-c175c407ea23",
+        "lesson_activity.key": "4f0f6258-a436-40ce-bb72-2065ea214dac"
+      }
+    },
+    {
+      "key": "04ab0d2f-584a-43bc-bde4-afe321967342",
+      "position": 1,
+      "properties": {
+        "description": "For this unit project, you are using computer science to explore a topic or problem that you are interested in and create a program using the console that conveys your topic and demonstrates your programming skills. You are also using your software engineering characteristics to create your programs.",
+        "duration": "10",
+        "name": "Warm Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "04ab0d2f-584a-43bc-bde4-afe321967342",
+        "lesson_activity.key": "a4085965-78cd-4934-9ecc-122c1c8e94c0"
+      }
+    },
+    {
+      "key": "60c56576-2ef2-4e10-a4a1-660c16656645",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Creative Coding with the Console Project Planning Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "60c56576-2ef2-4e10-a4a1-660c16656645",
+        "lesson_activity.key": "a4085965-78cd-4934-9ecc-122c1c8e94c0"
+      }
+    },
+    {
+      "key": "cf496219-a805-443e-a3c5-b00e0cc7965b",
+      "position": 3,
+      "properties": {
+        "description": "Using the remaining items on your Project Planning Board and the feedback from your peers, continue to develop your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
+        "duration": "15",
+        "name": "Development",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cf496219-a805-443e-a3c5-b00e0cc7965b",
+        "lesson_activity.key": "a4085965-78cd-4934-9ecc-122c1c8e94c0"
+      }
+    },
+    {
+      "key": "28228852-63fd-4b96-9530-e91a3c8e8b49",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Creative Coding with the Console Project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to refer to their Project Planning Board to decide what tasks to work on during this time. You can also encourage students to request a code review from their peers as they work."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "28228852-63fd-4b96-9530-e91a3c8e8b49",
+        "lesson_activity.key": "a4085965-78cd-4934-9ecc-122c1c8e94c0"
+      }
+    },
+    {
+      "key": "75d411a6-40ed-418c-8734-111c6b19aca0",
+      "position": 5,
+      "properties": {
+        "description": "This is a good time to commit our code and save our superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "duration": "15",
+        "name": "Code Review",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "75d411a6-40ed-418c-8734-111c6b19aca0",
+        "lesson_activity.key": "a4085965-78cd-4934-9ecc-122c1c8e94c0"
+      }
+    },
+    {
+      "key": "3705cd7c-62cf-49ee-8ddb-7fb48e75df54",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3705cd7c-62cf-49ee-8ddb-7fb48e75df54",
+        "lesson_activity.key": "a4085965-78cd-4934-9ecc-122c1c8e94c0"
+      }
+    },
+    {
+      "key": "c19e54fc-c6f3-4d01-b6ff-b65da2e8078f",
+      "position": 7,
+      "properties": {
+        "description": "You have made a lot of progress in your development work on your project. As we near the end of our project work, let's assess our progress on our last benchmark and get feedback on the work you have done.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c19e54fc-c6f3-4d01-b6ff-b65da2e8078f",
+        "lesson_activity.key": "a4085965-78cd-4934-9ecc-122c1c8e94c0"
+      }
+    },
+    {
+      "key": "84a0573c-2906-4b08-b84a-50d81a4cbb09",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with the Console Project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may be at different points when it is time for the code review. Emphasize to students that their work does not need to be completed to get feedback. Remind students that the problem-solving and development process is iterative and that receiving feedback from peers while they are working can help give them additional insights, perspectives, and guidance."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "84a0573c-2906-4b08-b84a-50d81a4cbb09",
+        "lesson_activity.key": "a4085965-78cd-4934-9ecc-122c1c8e94c0"
+      }
+    },
+    {
+      "key": "5001c2ad-571e-4849-9281-d11cec5385e0",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can review the Project Planning Board as an optional completion assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5001c2ad-571e-4849-9281-d11cec5385e0",
+        "lesson_activity.key": "a4085965-78cd-4934-9ecc-122c1c8e94c0"
+      }
+    },
+    {
+      "key": "8eaed829-e3e1-49ee-9180-55a8b81df202",
+      "position": 1,
+      "properties": {
+        "description": "We are almost done with our project! You should be proud of what you have accomplished in this unit and this project.",
+        "duration": "5",
+        "name": "Warm Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8eaed829-e3e1-49ee-9180-55a8b81df202",
+        "lesson_activity.key": "734b4197-3a91-4a2f-ad38-c038cd6c96fb"
+      }
+    },
+    {
+      "key": "03f10edd-1d77-48f4-874d-d739436fa81c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
+      },
+      "seeding_key": {
+        "activity_section.key": "03f10edd-1d77-48f4-874d-d739436fa81c",
+        "lesson_activity.key": "734b4197-3a91-4a2f-ad38-c038cd6c96fb"
+      }
+    },
+    {
+      "key": "efad8385-d54d-4335-ae5b-1b226db9d2c4",
+      "position": 3,
+      "properties": {
+        "description": "It's time to put the finishing touches on our projects!\n\nUsing the remaining items on your Project Planning Board and the feedback from your peers, continue to develop your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
+        "duration": "15",
+        "name": "Development",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "efad8385-d54d-4335-ae5b-1b226db9d2c4",
+        "lesson_activity.key": "734b4197-3a91-4a2f-ad38-c038cd6c96fb"
+      }
+    },
+    {
+      "key": "4894ba2c-aa34-41fb-af97-179552c7fde7",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish and submit their Creative Coding with the Console Project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that they may not complete every item on their Project Planning Board or Project Backlog, and that is okay! Software engineers have to make decisions all the time about which features are most important. The purpose of creating Project Planning Boards and Project Backlogs is to focus on completing the most important items first."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4894ba2c-aa34-41fb-af97-179552c7fde7",
+        "lesson_activity.key": "734b4197-3a91-4a2f-ad38-c038cd6c96fb"
+      }
+    },
+    {
+      "key": "c8c65690-3a45-410c-add2-29cff242027c",
+      "position": 5,
+      "properties": {
+        "description": "Congratulations! You have completed your creative coding project for this unit. Let's show off our work through a Gallery Walk so you can share your work with your classmates.",
+        "duration": "15",
+        "name": "Peer Presentations",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c8c65690-3a45-410c-add2-29cff242027c",
+        "lesson_activity.key": "734b4197-3a91-4a2f-ad38-c038cd6c96fb"
+      }
+    },
+    {
+      "key": "c3c321b9-4bac-4a86-a0dd-fb00a4679b0c",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
+      },
+      "seeding_key": {
+        "activity_section.key": "c3c321b9-4bac-4a86-a0dd-fb00a4679b0c",
+        "lesson_activity.key": "734b4197-3a91-4a2f-ad38-c038cd6c96fb"
+      }
+    },
+    {
+      "key": "b41bfb02-a3c1-47ae-9430-ba6f20a93b32",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with the Console Project Planning Guide.",
+        "duration": "10",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b41bfb02-a3c1-47ae-9430-ba6f20a93b32",
+        "lesson_activity.key": "734b4197-3a91-4a2f-ad38-c038cd6c96fb"
+      }
+    },
+    {
+      "key": "1f3b16d3-dfd6-4243-9f89-0c013e4a80fb",
+      "position": 8,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "1f3b16d3-dfd6-4243-9f89-0c013e4a80fb",
+        "lesson_activity.key": "734b4197-3a91-4a2f-ad38-c038cd6c96fb"
+      }
+    },
+    {
+      "key": "d9a8e7ef-9f5c-4ded-80c0-e446d601b24c",
+      "position": 9,
+      "properties": {
+        "description": "**Creative Coding with the Console Project Planning Guide:** Use the rubric in the Creative Coding with the Console Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "d9a8e7ef-9f5c-4ded-80c0-e446d601b24c",
+        "lesson_activity.key": "734b4197-3a91-4a2f-ad38-c038cd6c96fb"
+      }
+    },
+    {
+      "key": "bc40f93d-3df2-4e24-8646-30c0dda24f32",
+      "position": 1,
+      "properties": {
+        "description": "Today, you will independently complete an FRQ called `SeatingChart`.\n\nToday's FRQ will be conducted similarly to the AP Exam to prepare you for exam day. The strategies we have been using are the same, but the classroom setup will be more formal.",
+        "name": "Exam Structure",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bc40f93d-3df2-4e24-8646-30c0dda24f32",
+        "lesson_activity.key": "2eb401e0-ae03-4e1b-b590-f43dc0eb11bf"
+      }
+    },
+    {
+      "key": "a386db7c-4bc7-4841-9f06-ae6e759a536e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through an animated slide to review the exam structure. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in one of the breathing exercises."
+      },
+      "seeding_key": {
+        "activity_section.key": "a386db7c-4bc7-4841-9f06-ae6e759a536e",
+        "lesson_activity.key": "2eb401e0-ae03-4e1b-b590-f43dc0eb11bf"
+      }
+    },
+    {
+      "key": "63a39545-e71b-4594-aaee-ffa67893bb83",
+      "position": 1,
+      "properties": {
+        "description": "For this section of the exam, you will use a No. 2 pencil to write your responses. Please raise your hand if you need a No. 2 pencil.",
+        "duration": "5",
+        "name": "Exam Setup",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "63a39545-e71b-4594-aaee-ffa67893bb83",
+        "lesson_activity.key": "81397c21-91fd-4515-9a09-35834580041a"
+      }
+    },
+    {
+      "key": "ea897e9d-f70f-49f3-bbf1-e894710b5c6c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a sharpened No. 2 pencil to students who raised their hands."
+      },
+      "seeding_key": {
+        "activity_section.key": "ea897e9d-f70f-49f3-bbf1-e894710b5c6c",
+        "lesson_activity.key": "81397c21-91fd-4515-9a09-35834580041a"
+      }
+    },
+    {
+      "key": "460e5809-4cf8-49dc-9d4b-d3ec83582684",
+      "position": 3,
+      "properties": {
+        "description": "I will now distribute the exam materials. Please do not turn over any materials until you are told to do so.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "460e5809-4cf8-49dc-9d4b-d3ec83582684",
+        "lesson_activity.key": "81397c21-91fd-4515-9a09-35834580041a"
+      }
+    },
+    {
+      "key": "101fb86f-9d63-45d6-bbfb-3b5393b3704f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the SeatingChart FRQ handout, Java Quick Reference, and a sheet of scratch paper faced down on each student’s desk. "
+      },
+      "seeding_key": {
+        "activity_section.key": "101fb86f-9d63-45d6-bbfb-3b5393b3704f",
+        "lesson_activity.key": "81397c21-91fd-4515-9a09-35834580041a"
+      }
+    },
+    {
+      "key": "62a2f453-d864-476c-a643-efc87455a9c4",
+      "position": 5,
+      "properties": {
+        "description": "In front of you, you should have a copy of the SeatingChart FRQ handout, Java Quick Reference handout, and a sheet of scratch paper. Please raise your hand if you are missing any exam materials.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "62a2f453-d864-476c-a643-efc87455a9c4",
+        "lesson_activity.key": "81397c21-91fd-4515-9a09-35834580041a"
+      }
+    },
+    {
+      "key": "428b2436-5f8c-4bb9-a39f-068343e231fc",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give any missing exam materials to students who raised their hands."
+      },
+      "seeding_key": {
+        "activity_section.key": "428b2436-5f8c-4bb9-a39f-068343e231fc",
+        "lesson_activity.key": "81397c21-91fd-4515-9a09-35834580041a"
+      }
+    },
+    {
+      "key": "38e050ff-f20d-4b49-bfb6-3eed3e5c98f7",
+      "position": 7,
+      "properties": {
+        "description": "On the cover of the SeatingChart FRQ handout, print your name and today’s date where indicated.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "38e050ff-f20d-4b49-bfb6-3eed3e5c98f7",
+        "lesson_activity.key": "81397c21-91fd-4515-9a09-35834580041a"
+      }
+    },
+    {
+      "key": "75a4f3ce-4c6d-4625-81f9-c3ac22d091c2",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to fill in their names and the current date on the cover of the SeatingChart FRQ handout."
+      },
+      "seeding_key": {
+        "activity_section.key": "75a4f3ce-4c6d-4625-81f9-c3ac22d091c2",
+        "lesson_activity.key": "81397c21-91fd-4515-9a09-35834580041a"
+      }
+    },
+    {
+      "key": "d82bb2b2-8b90-4160-b2ba-d10c9f54d924",
+      "position": 9,
+      "properties": {
+        "description": "You now have 25 minutes to complete the free response question. You are responsible for pacing yourself and may proceed freely from Part A to Part B. Show all necessary work and final solutions on the SeatingChart FRQ handout. Solutions written on scratch paper will not be considered. \n\nGood luck! You may now begin the exam.",
+        "duration": "25",
+        "name": "Free Response Question",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d82bb2b2-8b90-4160-b2ba-d10c9f54d924",
+        "lesson_activity.key": "81397c21-91fd-4515-9a09-35834580041a"
+      }
+    },
+    {
+      "key": "f72b68ff-2e0f-4c74-be40-cc5795b9ba3d",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the free-response question on the SeatingChart FRQ handout. On the board, write the start and end times.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If there is not a visible clock in the room, consider displaying a 25-minute timer.\n\nDuring the AP Exam, students must sit quietly until the allotted testing time has elapsed. If you decide to adhere to this rule closely, encourage students that finish early to:\n* Continue to work on their FRQ.\n* Trace their code to ensure it is correct.\n* Check their solution to ensure it aligns with their pseudocode solution."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f72b68ff-2e0f-4c74-be40-cc5795b9ba3d",
+        "lesson_activity.key": "81397c21-91fd-4515-9a09-35834580041a"
+      }
+    },
+    {
+      "key": "87c62964-b611-4808-a645-8dd2c4239c87",
+      "position": 1,
+      "properties": {
+        "description": "On the cover of the SeatingChart FRQ handout, print your name and today’s date where indicated.",
+        "name": "Give One, Get One",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "87c62964-b611-4808-a645-8dd2c4239c87",
+        "lesson_activity.key": "108983f6-af81-4c6e-a9e0-e6fe5adcb2ab"
+      }
+    },
+    {
+      "key": "8de6e1b0-785f-4312-922d-299cc1865855",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Collect the SeatingChart FRQ handout, Java Quick Reference, and scrap paper from each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the SeatingChart FRQ Scoring Guidelines and one sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on their sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One."
+      },
+      "seeding_key": {
+        "activity_section.key": "8de6e1b0-785f-4312-922d-299cc1865855",
+        "lesson_activity.key": "108983f6-af81-4c6e-a9e0-e6fe5adcb2ab"
+      }
+    },
+    {
+      "key": "c30dd52a-4af2-4294-a43d-26f55ca6182d",
+      "position": 3,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "c30dd52a-4af2-4294-a43d-26f55ca6182d",
+        "lesson_activity.key": "108983f6-af81-4c6e-a9e0-e6fe5adcb2ab"
+      }
+    },
+    {
+      "key": "ff178391-8c63-4e7a-80d7-e18c95cac173",
+      "position": 4,
+      "properties": {
+        "description": "**SeatingChart FRQ:** The SeatingChart FRQ handout can be used as an optional formative assessment.",
+        "name": "Assessment (Optional)"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff178391-8c63-4e7a-80d7-e18c95cac173",
+        "lesson_activity.key": "108983f6-af81-4c6e-a9e0-e6fe5adcb2ab"
+      }
+    },
+    {
+      "key": "688f046c-ea28-4438-a724-f8c5d9b43333",
+      "position": 1,
+      "properties": {
+        "description": "Congratulations, you have made it to the end of Unit 8! You learned a lot about searching and sorting algorithms and used these concepts to develop a creative coding project using the console. Today, you will each complete a multiple-choice assessment to put your skills to the test.",
+        "name": "Unit 8 Assessment",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "688f046c-ea28-4438-a724-f8c5d9b43333",
+        "lesson_activity.key": "04c94df9-fe1a-49e4-8883-eebe95f837c5"
+      }
+    },
+    {
+      "key": "060c4dee-27de-4253-8d4c-676ed02b38e0",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 8 Assessment on Code Studio.",
+        "progression_name": "Unit 8 Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "060c4dee-27de-4253-8d4c-676ed02b38e0",
+        "lesson_activity.key": "04c94df9-fe1a-49e4-8883-eebe95f837c5"
+      }
+    },
+    {
+      "key": "43f10d49-0aaa-4056-b360-94ba582e4162",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
+        "name": "Assessment Review",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Discuss any questions that come up and take note of topics where students may need extra review.\n\nAs you review answers with students, consider the following suggested strategies:\n* Students write down solutions to questions in their journals that they answered incorrectly.\n* Identify mostly missed questions and review as a class together.\n* Review answers asynchronously and allow students to do corrections.\n* Place students in pairs to review answers and share areas that need extra review.\n\nIf you do not have time to review answers with students, create a data chart that includes assessment results. For students who did not meet the learning expectation, follow up so they have the opportunity to learn from errors made on the assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "43f10d49-0aaa-4056-b360-94ba582e4162",
+        "lesson_activity.key": "f7298c77-3321-466c-8cfd-1a59ec6518d4"
+      }
+    },
+    {
       "key": "75381a30-b537-4d5b-ad83-7e801480b995",
       "position": 1,
       "properties": {
@@ -2838,6 +3690,148 @@
       "seeding_key": {
         "activity_section.key": "75381a30-b537-4d5b-ad83-7e801480b995",
         "lesson_activity.key": "cc1e5c30-a0bc-4007-9a2a-0b06e1d4ac41"
+      }
+    },
+    {
+      "key": "caaafb91-08ec-4417-87cc-1135443271bb",
+      "position": 1,
+      "properties": {
+        "description": "Before working towards your final benchmark, review the project requirements and rubric and evaluate your progress. Self-assessing your progress will help you identify which tasks to focus on during your project workdays.",
+        "name": "Project Self-Assessment",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "caaafb91-08ec-4417-87cc-1135443271bb",
+        "lesson_activity.key": "d23c8ac1-6205-4f45-9c6a-ea2b70062b6d"
+      }
+    },
+    {
+      "key": "c00a582d-313e-438a-ace6-6f96c894aa04",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with the Console Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nStudents may have questions that are unrelated or beyond the scope of the project. Encourage students to research these questions as extension activities. Focus this discussion on answering questions specific to the content covered in this unit and for the project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c00a582d-313e-438a-ace6-6f96c894aa04",
+        "lesson_activity.key": "d23c8ac1-6205-4f45-9c6a-ea2b70062b6d"
+      }
+    },
+    {
+      "key": "bff6b918-268a-4ed3-ac02-1f175bdf41b5",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
+      },
+      "seeding_key": {
+        "activity_section.key": "bff6b918-268a-4ed3-ac02-1f175bdf41b5",
+        "lesson_activity.key": "d23c8ac1-6205-4f45-9c6a-ea2b70062b6d"
+      }
+    },
+    {
+      "key": "cc594641-1559-4211-a6e5-b4a33fb05d98",
+      "position": 1,
+      "properties": {
+        "description": "Using the remaining items on your Project Planning Board and the feedback from your peers, continue to develop your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
+        "name": "Development",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cc594641-1559-4211-a6e5-b4a33fb05d98",
+        "lesson_activity.key": "2dd5787c-29e0-4d85-b848-04068c89dec2"
+      }
+    },
+    {
+      "key": "762ef20d-6626-49bb-a3a4-8131512298c8",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with the Console Project.",
+        "progression_name": "Creative Coding with the Console Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to refer to their Project Planning Board to decide what tasks to work on during this time. You can also encourage students to request a code review from their peers as they work."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "762ef20d-6626-49bb-a3a4-8131512298c8",
+        "lesson_activity.key": "2dd5787c-29e0-4d85-b848-04068c89dec2"
+      }
+    },
+    {
+      "key": "16768a9d-ecf5-41b2-b511-385eb1989a81",
+      "position": 3,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "16768a9d-ecf5-41b2-b511-385eb1989a81",
+        "lesson_activity.key": "2dd5787c-29e0-4d85-b848-04068c89dec2"
+      }
+    },
+    {
+      "key": "144ca840-5313-429d-92ab-3e0a1abea370",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "144ca840-5313-429d-92ab-3e0a1abea370",
+        "lesson_activity.key": "2dd5787c-29e0-4d85-b848-04068c89dec2"
+      }
+    },
+    {
+      "key": "49208645-d24a-4c48-9189-905bfed9004e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with the Console Project Planning Guide.",
+        "name": "End of Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "49208645-d24a-4c48-9189-905bfed9004e",
+        "lesson_activity.key": "3e088acc-a56b-490d-a687-5a2f2f0e8ec9"
+      }
+    },
+    {
+      "key": "d9d9d862-63b1-4f39-9c28-7a009d19d456",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "d9d9d862-63b1-4f39-9c28-7a009d19d456",
+        "lesson_activity.key": "3e088acc-a56b-490d-a687-5a2f2f0e8ec9"
+      }
+    },
+    {
+      "key": "8bb9cb46-28da-422b-a405-793f94e67db6",
+      "position": 3,
+      "properties": {
+        "description": "**Creative Coding with the Console Project:** Use the rubric in the Creative Coding with the Console Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "8bb9cb46-28da-422b-a405-793f94e67db6",
+        "lesson_activity.key": "3e088acc-a56b-490d-a687-5a2f2f0e8ec9"
       }
     }
   ],
@@ -2848,6 +3842,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L1-L1_2023"
+        ],
         "progression": "Creative Coding with the Console Example Projects"
       },
       "bonus": false,
@@ -2870,6 +3867,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L1-L2_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2892,6 +3892,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L2-L1_2023"
+        ],
         "progression": "Investigate and Modify: Linear Search"
       },
       "bonus": false,
@@ -2914,6 +3917,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L2-L2_2023"
+        ],
         "progression": "Investigate and Modify: Linear Search"
       },
       "bonus": false,
@@ -2936,6 +3942,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L2-L3_2023"
+        ],
         "progression": "Investigate and Modify: Linear Search"
       },
       "bonus": false,
@@ -2958,6 +3967,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L2-L4_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2980,6 +3992,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L1_2023"
+        ],
         "progression": "Predict and Run: Binary Search"
       },
       "bonus": false,
@@ -3002,6 +4017,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L2_2023"
+        ],
         "progression": "Investigate and Modify: Recursive Binary Search"
       },
       "bonus": false,
@@ -3024,6 +4042,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L3_2023"
+        ],
         "progression": "Investigate and Modify: Recursive Binary Search"
       },
       "bonus": false,
@@ -3046,6 +4067,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L4_2023"
+        ],
         "progression": "Investigate and Modify: Recursive Binary Search"
       },
       "bonus": false,
@@ -3068,6 +4092,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L5_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3090,6 +4117,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L1_2023"
+        ],
         "progression": "Investigate and Modify: Selection Sort"
       },
       "bonus": false,
@@ -3112,6 +4142,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L2_2023"
+        ],
         "progression": "Investigate and Modify: Selection Sort"
       },
       "bonus": false,
@@ -3134,6 +4167,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L3_2023"
+        ],
         "progression": "Investigate and Modify: Selection Sort"
       },
       "bonus": false,
@@ -3156,6 +4192,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L4_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3178,6 +4217,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L5-L1_2023"
+        ],
         "progression": "Investigate and Modify: Insertion Sort"
       },
       "bonus": false,
@@ -3200,6 +4242,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L5-L2_2023"
+        ],
         "progression": "Investigate and Modify: Insertion Sort"
       },
       "bonus": false,
@@ -3222,6 +4267,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L5-L3_2023"
+        ],
         "progression": "Investigate and Modify: Insertion Sort"
       },
       "bonus": false,
@@ -3244,6 +4292,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L5-L4_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3266,6 +4317,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L6-L1_2023"
+        ],
         "progression": "Investigate and Modify: Merge Sort"
       },
       "bonus": false,
@@ -3288,6 +4342,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L6-L2_2023"
+        ],
         "progression": "Investigate and Modify: Merge Sort"
       },
       "bonus": false,
@@ -3310,6 +4367,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L6-L3_2023"
+        ],
         "progression": "Investigate and Modify: Merge Sort"
       },
       "bonus": false,
@@ -3332,6 +4392,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L6-L4_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3354,6 +4417,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L1_2023"
+        ],
         "progression": "Predict and Run: Multiple Lists"
       },
       "bonus": false,
@@ -3376,6 +4442,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L2_2023"
+        ],
         "progression": "Investigate and Modify: Multiple Lists"
       },
       "bonus": false,
@@ -3398,6 +4467,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L3_2023"
+        ],
         "progression": "Investigate and Modify: Multiple Lists"
       },
       "bonus": false,
@@ -3420,6 +4492,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L4_2023"
+        ],
         "progression": "Investigate and Modify: Multiple Lists"
       },
       "bonus": false,
@@ -3442,6 +4517,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L5_2023"
+        ],
         "progression": "Practice: Searching and Sorting"
       },
       "bonus": false,
@@ -3464,6 +4542,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L6_2023"
+        ],
         "progression": "Practice: Searching and Sorting"
       },
       "bonus": false,
@@ -3486,6 +4567,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L7_2023"
+        ],
         "progression": "Practice: Searching and Sorting"
       },
       "bonus": false,
@@ -3508,6 +4592,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L8_2023"
+        ],
         "progression": "Practice: Searching and Sorting"
       },
       "bonus": false,
@@ -3530,6 +4617,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L9_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3552,6 +4642,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L1_2023"
+        ],
         "progression": "Creative Coding with the Console Project"
       },
       "bonus": false,
@@ -3574,6 +4667,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L2_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3596,6 +4692,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L9-L1_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3619,6 +4718,56 @@
       "assessment": true,
       "properties": {
         "level_keys": [
+          "CSA U8 Creative Coding with the Console Project_2023"
+        ],
+        "progression": "Creative Coding with the Console Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8 Creative Coding with the Console Project_2023"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa8-2023",
+        "activity_section.key": "6ab7ff80-3d0e-402d-ab3a-f29b29993d30"
+      },
+      "level_keys": [
+        "CSA U8 Creative Coding with the Console Project_2023"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA Unit 8 Assessment_2023"
+        ],
+        "progression": "Unit 8 Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 8 Assessment_2023"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa8-2023",
+        "activity_section.key": "060c4dee-27de-4253-8d4c-676ed02b38e0"
+      },
+      "level_keys": [
+        "CSA Unit 8 Assessment_2023"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
           "csp-post-survey-levelgroup_csa_2023"
         ]
       },
@@ -3634,6 +4783,31 @@
       },
       "level_keys": [
         "csp-post-survey-levelgroup_csa_2023"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U8 Creative Coding with the Console Project 1-Day_2023"
+        ],
+        "progression": "Creative Coding with the Console Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8 Creative Coding with the Console Project 1-Day_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa8-2023",
+        "activity_section.key": "762ef20d-6626-49bb-a3a4-8131512298c8"
+      },
+      "level_keys": [
+        "CSA U8 Creative Coding with the Console Project 1-Day_2023"
       ]
     }
   ],
@@ -4060,6 +5234,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U8 Creative Coding with the Console Project_2023",
+        "script_level.level_keys": [
+          "CSA U8 Creative Coding with the Console Project_2023"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa8-2023",
+        "activity_section.key": "6ab7ff80-3d0e-402d-ab3a-f29b29993d30"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 8 Assessment_2023",
+        "script_level.level_keys": [
+          "CSA Unit 8 Assessment_2023"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa8-2023",
+        "activity_section.key": "060c4dee-27de-4253-8d4c-676ed02b38e0"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "csp-post-survey-levelgroup_csa_2023",
         "script_level.level_keys": [
           "csp-post-survey-levelgroup_csa_2023"
@@ -4069,9 +5267,45 @@
         "script.name": "csa8-2023",
         "activity_section.key": "75381a30-b537-4d5b-ad83-7e801480b995"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U8 Creative Coding with the Console Project 1-Day_2023",
+        "script_level.level_keys": [
+          "CSA U8 Creative Coding with the Console Project 1-Day_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa8-2023",
+        "activity_section.key": "762ef20d-6626-49bb-a3a4-8131512298c8"
+      }
     }
   ],
   "resources": [
+    {
+      "name": "[EXEMPLAR] Creative Coding with the Console Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1MY13L0h7Ox1iJgTfOearB_2QctbhU9axgdp1nbHinS0/edit?usp=share_link",
+      "key": "_exemplar_creative_coding_with_the_console_project_planning_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_creative_coding_with_the_console_project_planning_guide"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Creative Coding with the Console Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1Ll6LfcIkDzc8cmpK6GVOX_R7Bb95cwkyMmIDaRv0yCQ/edit?usp=share_link",
+      "key": "_exemplar_creative_coding_with_the_console_project_planning_guide_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_creative_coding_with_the_console_project_planning_guide_1"
+      }
+    },
     {
       "name": "[EXEMPLAR] Unit 8 Guide",
       "url": "https://docs.google.com/document/d/1cLxDHJ_5S5R0k-W1feAj2VtTSctg1W1csmTXDUd39ys/edit?usp=share_link",
@@ -4130,6 +5364,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_merge_sort"
+      }
+    },
+    {
+      "name": "[KEY] SeatingChart FRQ",
+      "url": "https://docs.google.com/document/d/1PoOyF2u8zm0t8aV2wEdJalFrhY59hBEBeInuE8_YJ3U/edit?usp=share_link",
+      "key": "_key_seatingchart_frq",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_seatingchart_frq"
       }
     },
     {
@@ -4230,7 +5476,7 @@
     },
     {
       "name": "[KEY] U8L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1xh2XWmTLsWtfu8DJwMCbrvNviAzxULDg7xlrhn6G3f4/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1PWjEw5bv_DNT4zD6B7NndVFUaF8rYmMqQLpGMxSu_bc/edit?usp=sharing",
       "key": "_key_u8l7_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -4303,6 +5549,30 @@
       }
     },
     {
+      "name": "Creative Coding with the Console Project",
+      "url": "https://docs.google.com/presentation/d/1lh6onAMuWynslLCa8GRJ3ukMI9lZYLOXl0LVO15UhM4/edit?usp=share_link",
+      "key": "creative_coding_with_the_console_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "creative_coding_with_the_console_project"
+      }
+    },
+    {
+      "name": "Creative Coding with the Console Project",
+      "url": "https://docs.google.com/presentation/d/12W6s4nkkjIOdDFQB6mm-jTG-vAA9mHbbyZ3gudH3wKs/edit?usp=share_link",
+      "key": "creative_coding_with_the_console_project_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "creative_coding_with_the_console_project_1"
+      }
+    },
+    {
       "name": "Creative Coding with the Console Project Planning Guide",
       "url": "https://docs.google.com/document/d/106yMPOWgb1Ql0zQQZTrNwbQPvHVWn0ItheY3gWeCEwc/edit?usp=share_link",
       "key": "creative_coding_with_the_console_project_planning_guide",
@@ -4313,6 +5583,18 @@
       },
       "seeding_key": {
         "resource.key": "creative_coding_with_the_console_project_planning_guide"
+      }
+    },
+    {
+      "name": "Creative Coding with the Console Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1vnLrDLFiDuV76sQwKelv4D6qru6yQqVB9RN5kkZJBKM/edit?usp=share_link",
+      "key": "creative_coding_with_the_console_project_planning_guide_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "creative_coding_with_the_console_project_planning_guide_1"
       }
     },
     {
@@ -4350,6 +5632,19 @@
       },
       "seeding_key": {
         "resource.key": "insertion_sort"
+      }
+    },
+    {
+      "name": "Java Quick Reference",
+      "url": "https://drive.google.com/file/d/1Z7P-QFWuNUeMIQ60xz-pXrIlSjPAloxX/view?usp=sharing",
+      "key": "java_quick_reference",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "java_quick_reference"
       }
     },
     {
@@ -4460,6 +5755,44 @@
       },
       "seeding_key": {
         "resource.key": "searching_and_sorting"
+      }
+    },
+    {
+      "name": "SeatingChart FRQ",
+      "url": "https://docs.google.com/presentation/d/1xcJCgJeQrbqSHLU_T20Yy1zPRAqGRYIOH060l0ArGPc/edit?usp=share_link",
+      "key": "seatingchart_frq",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "seatingchart_frq"
+      }
+    },
+    {
+      "name": "SeatingChart FRQ",
+      "url": "https://docs.google.com/document/d/1rq1WxP8T777ZqV7V2FvZqTC89Ziouln-WTa1cvasyzw/edit?usp=share_link",
+      "key": "seatingchart_frq_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "seatingchart_frq_1"
+      }
+    },
+    {
+      "name": "SeatingChart FRQ Scoring Guidelines",
+      "url": "https://docs.google.com/document/d/1OtFSvcK_4i5CeKkxCXo3yx9XmIjCrsXH3swsgqTyI5Y/edit?usp=share_link",
+      "key": "seatingchart_frq_scoring_guidelines",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "seatingchart_frq_scoring_guidelines"
       }
     },
     {
@@ -4604,7 +5937,7 @@
     },
     {
       "name": "U8L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1PWjEw5bv_DNT4zD6B7NndVFUaF8rYmMqQLpGMxSu_bc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1xh2XWmTLsWtfu8DJwMCbrvNviAzxULDg7xlrhn6G3f4/edit?usp=sharing",
       "key": "u8l7_extra_practice",
       "properties": {
         "audience": "Student",
@@ -4639,6 +5972,18 @@
       },
       "seeding_key": {
         "resource.key": "u8l9_extra_practice"
+      }
+    },
+    {
+      "name": "Unit 8 Assessment",
+      "url": "https://docs.google.com/presentation/d/1VoBeZgs-q6BP7PemgZxG3cdN5H-oJBWkMhtiNctnbIQ/edit?usp=share_link",
+      "key": "unit_8_assessment",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "unit_8_assessment"
       }
     },
     {
@@ -4678,6 +6023,18 @@
       "seeding_key": {
         "resource.key": "unit_8_study_guide"
       }
+    },
+    {
+      "name": "Unlocking Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
+      "key": "unlocking_assessments",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unlocking_assessments"
+      }
     }
   ],
   "lessons_resources": [
@@ -4709,6 +6066,84 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "unit_8_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_exemplar_creative_coding_with_the_console_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "creative_coding_with_the_console_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "creative_coding_with_the_console_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_seatingchart_frq"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "java_quick_reference"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "seatingchart_frq"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "seatingchart_frq_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "seatingchart_frq_scoring_guidelines"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "unit_8_assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "unlocking_assessments"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "_exemplar_creative_coding_with_the_console_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "creative_coding_with_the_console_project_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "creative_coding_with_the_console_project_planning_guide_1"
       }
     },
     {
@@ -5230,6 +6665,16 @@
       }
     },
     {
+      "key": "05bdf2e0-2c7c-41c7-addf-a0e9f5bd88b6",
+      "properties": {
+        "description": "Develop a program using object-oriented programming that portrays a personal interest or solves a problem"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "05bdf2e0-2c7c-41c7-addf-a0e9f5bd88b6"
+      }
+    },
+    {
       "key": "12cebadd-5fdc-4780-b602-f225a3bd3a30",
       "properties": {
         "description": "Identify the benefits and limitations of the merge sort algorithm"
@@ -5330,6 +6775,26 @@
       }
     },
     {
+      "key": "635b46db-52e9-4143-abfc-1f63c4beff45",
+      "properties": {
+        "description": "Write scenario-based acceptance criteria for a program feature"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "635b46db-52e9-4143-abfc-1f63c4beff45"
+      }
+    },
+    {
+      "key": "6398cb2e-0844-4f0f-acf0-f38464c4db5e",
+      "properties": {
+        "description": "Prioritize project tasks based on self-assessment and peer feedback"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "6398cb2e-0844-4f0f-acf0-f38464c4db5e"
+      }
+    },
+    {
       "key": "6d1620e8-ce5b-436e-94c1-d084a3ea0ba0",
       "properties": {
         "description": "Implement a linear or binary search algorithm to find a target element in a data structure"
@@ -5337,6 +6802,26 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "objective.key": "6d1620e8-ce5b-436e-94c1-d084a3ea0ba0"
+      }
+    },
+    {
+      "key": "881f571b-10f4-4258-8861-bcc1dc15b8c5",
+      "properties": {
+        "description": "Plan an algorithm using pseudocode"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "881f571b-10f4-4258-8861-bcc1dc15b8c5"
+      }
+    },
+    {
+      "key": "9ca31ff8-8bc8-4f59-8353-1a01abbd245c",
+      "properties": {
+        "description": "Prioritize project tasks based on self-assessment and peer feedback"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "9ca31ff8-8bc8-4f59-8353-1a01abbd245c"
       }
     },
     {
@@ -5370,6 +6855,16 @@
       }
     },
     {
+      "key": "c41b4a90-b3bf-4eca-80fa-8c302fc80dd0",
+      "properties": {
+        "description": "Implement methods based on a given set of specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "c41b4a90-b3bf-4eca-80fa-8c302fc80dd0"
+      }
+    },
+    {
       "key": "e46434b7-6a04-4511-80ed-9ecb2bf4b154",
       "properties": {
         "description": "Explain the functionality of the insertion sort algorithm"
@@ -5397,6 +6892,16 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "objective.key": "ea053a33-b0b2-416c-adf8-6e65b4acbc19"
+      }
+    },
+    {
+      "key": "eb47485c-4a1d-46f8-8a5d-28aef04f1333",
+      "properties": {
+        "description": "Develop a program using object-oriented programming that portrays a personal interest or solves a problem"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "eb47485c-4a1d-46f8-8a5d-28aef04f1333"
       }
     },
     {

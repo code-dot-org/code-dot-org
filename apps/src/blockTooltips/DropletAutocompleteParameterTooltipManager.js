@@ -37,7 +37,7 @@ var DropletAutocompleteParameterTooltipManager = function (
     restoration: 'none',
     updateAnimation: false,
     positionTracker: true,
-    tooltipsEnabled: true
+    tooltipsEnabled: true,
   };
 };
 
@@ -188,13 +188,13 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
         dropdownCompletions.push({
           name: 'dropdown',
           value: valString,
-          click: valClick
+          click: valClick,
         });
       });
       editor.completer.overrideCompleter = {
         getCompletions: function (editor, session, pos, prefix, callback) {
           callback(null, dropdownCompletions);
-        }
+        },
       };
       // Mark the we are starting auto-complete so that we can guard against
       // re-entrancy when we see more cursor movement events:
@@ -337,7 +337,7 @@ DropletAutocompleteParameterTooltipManager.prototype.createOrUpdateCursorTooltip
       this.cursorTooltip_.tooltipster({
         ...this.tooltipConfig,
         position,
-        offsetX
+        offsetX,
       });
     }
     return this.cursorTooltip_;
@@ -359,7 +359,7 @@ DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
     showExamplesLink: this.showExamplesLink,
-    currentParameterIndex: currentParameterIndex
+    currentParameterIndex: currentParameterIndex,
   });
 };
 

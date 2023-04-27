@@ -171,7 +171,7 @@ NetSimSlider.prototype.render = function () {
       ),
       maxValue: this.valueToShortLabel(
         this.isStepNegative_() ? minValue : maxValue
-      )
+      ),
     })
   );
   this.rootDiv_.html(renderedMarkup);
@@ -183,7 +183,7 @@ NetSimSlider.prototype.render = function () {
     step: Math.abs(this.step_),
     slide: this.onSliderValueChange_.bind(this),
     stop: this.onSliderStop_.bind(this),
-    disabled: this.isDisabled_
+    disabled: this.isDisabled_,
   });
 
   // Use wider labels if we have an infinite bound

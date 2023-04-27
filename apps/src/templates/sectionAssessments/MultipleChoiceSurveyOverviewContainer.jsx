@@ -4,7 +4,7 @@ import MultipleChoiceSurveyOverviewTable from './MultipleChoiceSurveyOverviewTab
 import {multipleChoiceDataPropType} from './assessmentDataShapes';
 import {
   getMultipleChoiceSurveyResults,
-  countSubmissionsForCurrentAssessment
+  countSubmissionsForCurrentAssessment,
 } from './sectionAssessmentsRedux';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
@@ -13,21 +13,21 @@ class MultipleChoiceSurveyOverviewContainer extends Component {
   static propTypes = {
     multipleChoiceSurveyData: PropTypes.arrayOf(multipleChoiceDataPropType),
     totalStudentCount: PropTypes.number,
-    totalStudentSubmissions: PropTypes.number
+    totalStudentSubmissions: PropTypes.number,
   };
 
   render() {
     const {
       multipleChoiceSurveyData,
       totalStudentCount,
-      totalStudentSubmissions
+      totalStudentSubmissions,
     } = this.props;
     return (
       <div>
         <h2>
           {i18n.multipleChoiceQuestionsOverview({
             numSubmissions: totalStudentSubmissions,
-            numStudents: totalStudentCount
+            numStudents: totalStudentCount,
           })}
         </h2>
         {multipleChoiceSurveyData.length > 0 && (
@@ -46,5 +46,5 @@ export const UnconnectedMultipleChoiceSurveyOverviewContainer =
 export default connect(state => ({
   multipleChoiceSurveyData: getMultipleChoiceSurveyResults(state),
   totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
-  totalStudentCount: state.teacherSections.selectedStudents.length
+  totalStudentCount: state.teacherSections.selectedStudents.length,
 }))(MultipleChoiceSurveyOverviewContainer);

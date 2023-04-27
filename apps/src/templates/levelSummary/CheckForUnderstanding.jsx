@@ -20,7 +20,7 @@ const CheckForUnderstanding = ({
   selectedSection,
   students,
   currentLevelId,
-  levels
+  levels,
 }) => {
   const currentLevel = levels.find(l => l.activeId === currentLevelId);
   const nextLevel = levels.find(l => l.position === currentLevel.position + 1);
@@ -45,7 +45,7 @@ const CheckForUnderstanding = ({
       levelName: level.name,
       levelType: level.type,
       sectionSelected: !!selectedSection,
-      ...scriptData.reportingData
+      ...scriptData.reportingData,
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -67,7 +67,7 @@ const CheckForUnderstanding = ({
   };
 
   return (
-    <div className={styles.summaryContainer}>
+    <div className={styles.summaryContainer} id="summary-container">
       {/* Top Nav Links */}
       <p className={styles.navLinks}>
         <a
@@ -180,21 +180,21 @@ CheckForUnderstanding.propTypes = {
   viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
   selectedSection: PropTypes.shape({
     id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired
+    name: PropTypes.string.isRequired,
   }),
   students: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      name: PropTypes.string
+      name: PropTypes.string,
     })
   ),
   currentLevelId: PropTypes.string,
   levels: PropTypes.arrayOf(
     PropTypes.shape({
       activeId: PropTypes.string.isRequired,
-      position: PropTypes.number.isRequired
+      position: PropTypes.number.isRequired,
     })
-  )
+  ),
 };
 
 export default connect(
@@ -213,7 +213,7 @@ export default connect(
         state.teacherSections.sections[state.teacherSections.selectedSectionId],
       students: state.teacherSections.selectedStudents,
       currentLevelId: state.progress.currentLevelId,
-      levels: currentLesson.levels
+      levels: currentLesson.levels,
     };
   }
 )(CheckForUnderstanding);

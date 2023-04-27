@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "problem-solving-computing",
-    "serialized_at": "2023-04-13 17:17:47 UTC",
+    "serialized_at": "2023-04-20 16:44:38 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -5355,16 +5355,6 @@
       }
     },
     {
-      "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
-      "key": "csd_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide"
-      }
-    },
-    {
       "name": "CSD Implementation Guide",
       "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
       "key": "csd_implementation_guide",
@@ -6187,12 +6177,6 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary",
-        "script.name": "problem-solving-computing-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
         "script.name": "problem-solving-computing-2023"
       }
     },

@@ -9,7 +9,7 @@ import TimelineElement from './TimelineElement';
 const TimelineSimple2Events = ({
   barWidth,
   eventVerticalSpace,
-  getEventHeight
+  getEventHeight,
 }) => {
   const playerUtils = useContext(PlayerUtilsContext);
   const soundEvents = playerUtils.getPlaybackEvents();
@@ -66,7 +66,7 @@ const TimelineSimple2Events = ({
         positionLeft: positionLeft,
         positionRight: positionRight,
         positionTop: positionTop,
-        positionBottom: positionBottom
+        positionBottom: positionBottom,
       });
     } else {
       const item = uniqueFunctionExtents[uniqueFunctionIndex];
@@ -75,7 +75,7 @@ const TimelineSimple2Events = ({
         positionLeft: Math.min(item.positionLeft, positionLeft),
         positionRight: Math.max(item.positionRight, positionRight),
         positionTop: Math.min(item.positionTop, positionTop),
-        positionBottom: Math.max(item.positionBottom, positionBottom)
+        positionBottom: Math.max(item.positionBottom, positionBottom),
       };
     }
   }
@@ -96,7 +96,7 @@ const TimelineSimple2Events = ({
                 barWidth,
               top: 20 + uniqueFunction.positionTop,
               height:
-                uniqueFunction.positionBottom - uniqueFunction.positionTop - 3
+                uniqueFunction.positionBottom - uniqueFunction.positionTop - 3,
             }}
           >
             &nbsp;
@@ -133,7 +133,7 @@ const TimelineSimple2Events = ({
 TimelineSimple2Events.propTypes = {
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
-  getEventHeight: PropTypes.func.isRequired
+  getEventHeight: PropTypes.func.isRequired,
 };
 
 export default TimelineSimple2Events;
