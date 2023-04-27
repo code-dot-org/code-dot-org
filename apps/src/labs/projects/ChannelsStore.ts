@@ -1,6 +1,7 @@
 /**
- * This file contains the ChannelsStore interface and the local and remote implementations
- * of the ChannelStore. A ChannelsStore manages the loading and saving of channels.
+ * This file contains the ChannelsStore interface and the local (saved to browser local storage)
+ * and remote (saved to the server) implementations of the ChannelStore.
+ * A ChannelsStore manages the loading and saving of channels.
  */
 import {Channel, DefaultChannel} from '../types';
 import * as channelsApi from './channelsApi';

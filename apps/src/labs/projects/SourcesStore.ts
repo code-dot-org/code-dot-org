@@ -1,7 +1,7 @@
 /**
- * This file contains the SourcesStore interface and the local and remote implementations
- * of the SourcesStore. A SourcesStore manages the loading and
- * saving of sources to the appropriate location.
+ * This file contains the SourcesStore interface and the local (saved to broswer local storage)
+ * and remote (saved to the server) implementations of the SourcesStore.
+ * A SourcesStore manages the loading and saving of sources to the appropriate location.
  */
 import {Source} from '../types';
 import * as sourcesApi from './sourcesApi';

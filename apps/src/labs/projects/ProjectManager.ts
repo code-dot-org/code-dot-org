@@ -79,6 +79,16 @@ export default class ProjectManager {
 
   // TODO: Add functionality to reduce channel updates during
   // HoC "emergency mode" (see 1182-1187 in project.js).
+  /**
+   * Enqueue a save to happen in the next saveInterval, unless a force save is requested.
+   * On a save, we get the project, which consists of a source and a channel. We
+   * first save the source. Only if the source save succeeds do we update the channel, as the
+   * channel is metadata about the project and we don't want to save it unless the source
+   * save succeeded.
+   * @param forceSave boolean: if the save should happen immediately
+   * @returns a promise that resolves to a Response. If the save is successful, the response
+   * will be empty, otherwise it will contain failure information.
+   */
   async save(forceSave = false): Promise<Response> {
     if (!this.canSave(forceSave)) {
       if (!this.saveQueued) {
