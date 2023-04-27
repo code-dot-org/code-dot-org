@@ -44,6 +44,7 @@ function renderOfferings(
   setSelectedCourseOffering
 ) {
   const courseValues = Object.values(courseData);
+
   return courseValues.map(course => (
     <div className={moduleStyles.flexDisplay} key={course.display_name}>
       <input
@@ -52,7 +53,7 @@ function renderOfferings(
         type="radio"
         name={course.display_name}
         value={course.display_name}
-        checked={sectionCourse?.displayName === course.display_name}
+        checked={sectionCourse?.courseOfferingId === course.id}
         onChange={() => {
           updateSectionCourse(updateCourse, course);
           setSelectedCourseOffering(course);
@@ -80,10 +81,26 @@ function updateSectionCourse(updateCourse, course) {
       versions => versions.is_recommended
     )?.id;
   }
+
+  const courseVersion = courseVersions[courseVersionId];
+  const isStandaloneUnit = courseVersion.type === 'Unit';
+
+  let hasLessonExtras;
+  let hasTextToSpeech;
+
+  if (isStandaloneUnit) {
+    hasLessonExtras = Object.values(courseVersion.units)[0]
+      .lesson_extras_available;
+    hasTextToSpeech = Object.values(courseVersion.units)[0]
+      .text_to_speech_enabled;
+  }
+
   updateCourse({
     displayName: course.display_name,
     courseOfferingId: course.id,
     versionId: courseVersionId,
     unitId: null,
+    hasLessonExtras: hasLessonExtras,
+    hasTextToSpeech: hasTextToSpeech,
   });
 }

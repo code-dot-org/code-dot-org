@@ -28,6 +28,10 @@ export default class DetailsPanel extends React.Component {
     showAdminEditConfirmation: false,
   };
 
+  getToday = () => {
+    return new Date();
+  };
+
   handleEditClick = () => {
     const {workshopId} = this.props;
     this.context.router.push(`/workshops/${workshopId}/edit`);
@@ -61,7 +65,11 @@ export default class DetailsPanel extends React.Component {
       return (
         <WorkshopPanel header={header}>
           <div>
-            <WorkshopForm workshop={workshop} onSaved={onWorkshopSaved} />
+            <WorkshopForm
+              workshop={workshop}
+              onSaved={onWorkshopSaved}
+              today={this.getToday()}
+            />
           </div>
         </WorkshopPanel>
       );
@@ -76,7 +84,7 @@ export default class DetailsPanel extends React.Component {
     return (
       <WorkshopPanel header={header}>
         <div>
-          <WorkshopForm workshop={workshop} readOnly>
+          <WorkshopForm workshop={workshop} today={this.getToday()} readOnly>
             <Row>
               <Col sm={4}>
                 <ButtonToolbar>
