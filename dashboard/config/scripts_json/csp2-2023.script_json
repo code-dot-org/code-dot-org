@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-19 22:13:25 UTC",
+    "serialized_at": "2023-04-25 20:59:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -159,7 +159,7 @@
     },
     {
       "key": "Project   Internet Dilemmas Part 1",
-      "name": "Project Internet Dilemmas",
+      "name": "Project - Internet Dilemmas",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -2279,7 +2279,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "### Topic Coverage\r\n\r\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\r\n\r\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\r\n\r\nWithin our own course we recommend that you use them in a variety of ways:\r\n\r\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\r\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\r\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\r\n\r\n![](https://curriculum.code.org/media/uploads/topics2.png)\r\n\r\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing)\r\n\r\n"
+            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n![](https://curriculum.code.org/media/uploads/topics2.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=share_link)\n\n"
           }
         ]
       },
@@ -3068,6 +3068,18 @@
       }
     },
     {
+      "name": "Assessment Day - The Internet",
+      "url": "https://docs.google.com/presentation/d/1C7TRNRrwA9kjLpx5ywlwqF0S3f-iIaSGYiUGBsn63Cg/edit?usp=sharing",
+      "key": "assessment_day_-_the_internet",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "assessment_day_-_the_internet"
+      }
+    },
+    {
       "name": "Building a Network",
       "url": "https://docs.google.com/presentation/d/1kxB2sHjJvwG0tyYUz2I2-aeL5FUfXFNDsAd--ALT9cY/template/preview",
       "key": "building_a_network",
@@ -3092,19 +3104,6 @@
       }
     },
     {
-      "name": "CSP Unit 2 - The Internet",
-      "url": "https://docs.google.com/presentation/d/1_zu1SnbU6qUkfR16tk6eWHyQzoCrwhUP4IhnHQXCmLE/copy",
-      "key": "csp_unit_2_-_the_internet",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1_zu1SnbU6qUkfR16tk6eWHyQzoCrwhUP4IhnHQXCmLE/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_2_-_the_internet"
-      }
-    },
-    {
       "name": "EXEMPLAR: Internet Dilemmas",
       "url": "https://docs.google.com/document/d/1LHCRJlpBK56ynaYp5-RfiKlaAzCoh99QXUU8xbMPJS4/edit?usp=sharing",
       "key": "exemplar_internet_dilemmas",
@@ -3115,6 +3114,54 @@
       },
       "seeding_key": {
         "resource.key": "exemplar_internet_dilemmas"
+      }
+    },
+    {
+      "name": "Guide to Assessment",
+      "url": "https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit?usp=sharing",
+      "key": "guide_to_assessment",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_assessment"
+      }
+    },
+    {
+      "name": "Guide to Classroom Discussions",
+      "url": "https://docs.google.com/document/d/1Y3HdoKknnw5tdH_I5XtcONQrDxueMi0Xdgp3Nyr-Atk/edit?usp=sharing",
+      "key": "guide_to_classroom_discussions",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_classroom_discussions"
+      }
+    },
+    {
+      "name": "Guide to Curriculum Videos ",
+      "url": "https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/view",
+      "key": "guide_to_curriculum_videos",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_curriculum_videos"
+      }
+    },
+    {
+      "name": "Guide to Pre-Unit Pulse Questions",
+      "url": "https://docs.google.com/document/d/1jx43dakN6og2n7iey_uQrNwcpMHQRbv1RCPZFHpQdYw/view",
+      "key": "guide_to_pre-unit_pulse_questions",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_pre-unit_pulse_questions"
       }
     },
     {
@@ -3143,7 +3190,7 @@
       }
     },
     {
-      "name": "Internet Dilemmas",
+      "name": "Project - Internet Dilemmas",
       "url": "https://docs.google.com/presentation/d/1TgJ5dvncE-Ch_svWzAn53-9jryR-k1XF4Oue6MhVEso/template/preview",
       "key": "internet_dilemmas_1",
       "properties": {
@@ -3201,6 +3248,18 @@
       },
       "seeding_key": {
         "resource.key": "routers_and_redundancy"
+      }
+    },
+    {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
       }
     },
     {
@@ -3384,7 +3443,7 @@
     {
       "seeding_key": {
         "lesson.key": "Assessment Day",
-        "resource.key": "csp_unit_2_-_the_internet"
+        "resource.key": "assessment_day_-_the_internet"
       }
     },
     {
@@ -3541,6 +3600,36 @@
     },
     {
       "seeding_key": {
+        "resource.key": "guide_to_assessment",
+        "script.name": "csp2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_classroom_discussions",
+        "script.name": "csp2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_curriculum_videos",
+        "script.name": "csp2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_pre-unit_pulse_questions",
+        "script.name": "csp2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "syllabus",
+        "script.name": "csp2-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "teacher_forum",
         "script.name": "csp2-2023"
       }
@@ -3553,12 +3642,7 @@
     }
   ],
   "scripts_student_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "unit_2_journal",
-        "script.name": "csp2-2023"
-      }
-    }
+
   ],
   "vocabularies": [
 

@@ -7,4 +7,4 @@ export interface Effects {
   delay?: EffectValue;
 }
 
-type EffectValue = 'normal' | 'medium' | 'low';
+export type EffectValue = 'normal' | 'medium' | 'low';

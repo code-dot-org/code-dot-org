@@ -7,11 +7,12 @@
       "curriculum_umbrella": "CSD Self Paced PL",
       "has_verified_resources": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-11 20:08:33 UTC",
+    "serialized_at": "2023-04-26 08:05:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -435,6 +436,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CI-LessonTypes-U7-2023"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -657,6 +661,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSD-Mod5-ml-intro ai lab-shapes v1_2023"
         ],
@@ -757,6 +762,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSD-Mod5-ml-intro categorical-pizza_2023"
         ],
@@ -832,6 +838,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-21-CSD-Mod5ml-intro app lab-book recommender 0_2023"
         ],
@@ -982,6 +989,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2_2023"
         ],
