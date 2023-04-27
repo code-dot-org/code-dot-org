@@ -56,6 +56,7 @@ export default class JavabuilderConnection {
     this.seenUnsupportedTheaterMessage = false;
     this.sawValidationTests = false;
     this.allValidationPassed = true;
+    this.seenMessage = false;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -149,12 +150,15 @@ export default class JavabuilderConnection {
 
     try {
       const result = await $.ajax(ajaxPayload);
+      this.seenMessage = false;
       this.establishWebsocketConnection(result.token);
     } catch (error) {
       if (error.status === 403) {
         this.displayUnauthorizedMessage(error);
       } else {
-        this.onOutputMessage(javalabMsg.errorJavabuilderConnectionGeneral());
+        this.onOutputMessage(
+          `${STATUS_MESSAGE_PREFIX} ${javalabMsg.errorJavabuilderConnectionGeneral()}`
+        );
         this.onNewlineMessage();
         console.error(error.responseText);
       }
@@ -187,12 +191,24 @@ export default class JavabuilderConnection {
     // happen if our token was somehow valid for the initial Javabuilder HTTP request and
     // then became invalid when establishing the WebSocket connection.
     this.sendMessage(WebSocketMessageType.CONNECTED);
+    // If we don't receive a message back within 10 seconds, Javabuilder may be at maximum capacity and
+    // the request will be queued to execute when an instance is available. Notify the user that this may
+    // be the case.
+    setTimeout(() => {
+      if (!this.seenMessage) {
+        this.onOutputMessage(
+          `${STATUS_MESSAGE_PREFIX} ${javalabMsg.waitingForServer()}`
+        );
+        this.onNewlineMessage();
+      }
+    }, 10000);
     this.miniApp?.onCompile?.();
   }
 
   onStatusMessage(messageKey, detail) {
     let message;
     let lineBreakCount = 0;
+    this.seenMessage = true;
     switch (messageKey) {
       case StatusMessageType.COMPILING:
         message = javalabMsg.compiling();
@@ -310,12 +326,29 @@ export default class JavabuilderConnection {
   }
 
   onClose(event) {
-    if (event.wasClean) {
+    // Event code 1000 is "connection closed normally", so we should treat
+    // it as an expected close event. For some reason many close events with code
+    // 1000 are not marked as clean. We should treat them as clean.
+    if (event.code === 1000 || event.wasClean) {
+      // Don't notify the user here, the program ended as expected.
+      // Mini apps handle setting the run state in this case, as the program
+      // output may run longer than the program execution.
       console.log(`[close] code=${event.code} reason=${event.reason}`);
     } else {
       // e.g. server process ended or network down
       // event.code is usually 1006 in this case
-      console.log(`[close] Connection died. code=${event.code}`);
+      console.log(
+        `[close] Connection died. code=${event.code} reason=${event.reason}`
+      );
+      // Notify the user that their program ended unexpectedly
+      // and set the run state to false.
+      this.onOutputMessage(
+        `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programEndedUnexpectedly()}`
+      );
+      // Add two newlines so there is a blank line between program executions.
+      this.onNewlineMessage();
+      this.onNewlineMessage();
+      this.setIsRunning(false);
     }
   }
 
@@ -338,7 +371,7 @@ export default class JavabuilderConnection {
 
   onError(error) {
     this.onOutputMessage(
-      'We hit an error connecting to our server. Try again.'
+      `${STATUS_MESSAGE_PREFIX} ${javalabMsg.errorJavabuilderConnectionGeneral()}`
     );
     this.onNewlineMessage();
     this.handleExecutionFinished();

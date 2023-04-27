@@ -121,6 +121,7 @@
   "onlyVisibleToYou": "teacher comments are only visible to you",
   "openedDate": "opened {date}",
   "programCompleted": "Program completed.",
+  "programEndedUnexpectedly": "Your program stopped unexpectedly. We may be out of capacity to run your program, or you may be having network issues. Please check your network connection and try again.",
   "programStopped": "Program stopped.",
   "refresh": "Refresh",
   "rename": "Rename",
@@ -154,6 +155,7 @@
   "unknownError": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.\n{type}",
   "unsupportedMiniAppMessage": "Level type mismatch: {miniAppType} projects are not supported on a non-{miniAppType} level.",
   "userBlocked": "You have run your code too many times and your account has been locked. Contact support@code.org to unlock your account.",
+  "waitingForServer": "Your request has been put in line. Please hold as we wait for the next available machine.",
   "youHaveProjectsToReview": "You have projects to review...",
   "yourPeer": "your peer"
 }
