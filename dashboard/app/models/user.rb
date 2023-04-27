@@ -1068,6 +1068,7 @@ class User < ApplicationRecord
     end
   end
 
+  # Could we do a conditional block here and do something different if they are a teacher?
   def self.authenticate_with_section(section:, params:)
     User.authenticate_with_section_and_secret_words(section: section, params: params.slice(:user_id, :secret_words)) ||
       User.authenticate_with_section_and_secret_picture(section: section, params: params.slice(:user_id, :secret_picture_id))
@@ -1587,6 +1588,13 @@ class User < ApplicationRecord
 
   def generate_secret_picture
     MAX_SECRET_RESET_ATTEMPTS.times do
+      # Teachers should NOT have a secret picture login, as this leads to 
+      # a security risk when joining a section created by another teacher
+      if teacher?
+        self.secret_picture = nil
+        break
+      end
+
       new_secret_picture = SecretPicture.random
 
       # retry if random picture is same as user's current secret picture
@@ -1599,6 +1607,13 @@ class User < ApplicationRecord
 
   def generate_secret_words
     MAX_SECRET_RESET_ATTEMPTS.times do
+      # Teachers should NOT have a secret words login, as this leads to 
+      # a security risk
+      if teacher?
+        self.secret_words = nil
+        break
+      end
+      
       new_secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
 
       # retry if random words are same as user's current secret words
