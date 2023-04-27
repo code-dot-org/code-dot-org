@@ -4,26 +4,60 @@ require 'cdo/yaml'
 
 module Cdo
   # Loads and combines structured application configuration settings.
-  class Config < OpenStruct
-    # Soft-freeze: Don't allow any config items to be created/modified,
-    # but allow stubbing for unit tests.
-    def freeze
-      # Some implementation changes in OpenStruct in Ruby 3.0 affect behavior
-      # that this class is relying on, so we need to include some special logic
-      # here. See https://bugs.ruby-lang.org/issues/15409#note-9
-      @table.each_key {|k| new_ostruct_member!(k.to_sym)}
+  class Config
+    def initialize
+      @table = {}
+    end
+
+    def to_h
+      @table.dup
+    end
+
+    def hash
+      @table.hash
+    end
+
+    def [](name)
+      @table[name.to_sym]
+    end
+
+    #def []=(name, value)
+    #  puts "[]=(#{name.inspect}, #{value.inspect})"
+    #  @table[name.to_sym] = value
+    #end
+
+    def key?(name)
+      @table.key?(name.to_sym)
+    end
+
+    # Implement our own soft-freeze: Don't allow any config items to be
+    # created/modified, but allow stubbing for unit tests.
+    def freeze_config
+      @table.freeze
       @frozen = true
     end
 
-    def method_missing(key, *args)
-      return self[key.to_sym] if args.empty? && @table.key?(key.to_sym) # accommodate https://bugs.ruby-lang.org/issues/15409#note-9
-      raise ArgumentError, "Undefined #{self.class} reference: #{key}", caller(1) if @frozen
-      super
+    def respond_to_missing?(mid, include_all)
+      key?(mid) || super
     end
 
-    def modifiable?
-      raise RuntimeError, "can't modify frozen #{self.class}", caller(2) if @frozen
-      super
+    def method_missing(mid, *args)
+      raise ArgumentError, "Undefined #{self.class} reference: #{mid}", caller(1) if @frozen
+
+      # Inspired by OpenStruct; if unfrozen, allow assigning new configuration
+      # values with `=` and default undefined values to nil
+      # See https://github.com/ruby/ostruct/blob/e61b4464a033c38a65657eaf0467d12e2c7b9ec1/lib/ostruct.rb#L207-L229
+      len = args.length
+      if mname = mid[/.*(?==\z)/m]
+        if len != 1
+          raise ArgumentError, "wrong number of arguments (given #{len}, expected 1)", caller(1)
+        end
+        load_configuration({mname => args[0]})
+      elsif len == 0
+        return nil
+      else
+        super
+      end
     end
 
     # Loads one or several sources into the merged configuration.
@@ -53,10 +87,19 @@ module Cdo
     end
 
     # Merge the provided config hash into the current config.
-    # 'Reverse-merge' keeps existing values.
     def merge(config)
+      raise RuntimeError, "can't modify frozen #{self.class}", caller(2) if @frozen
       return if config.nil?
-      table.merge!(config) {|_key, old, _new| old}
+
+      # 'Reverse-merge' keeps existing values.
+      @table.merge!(config) {|_key, old, _new| old}
+
+      # Add an accessor method for each new key/value pair
+      config.keys.each do |key|
+        unless singleton_class.method_defined?(key)
+          define_singleton_method(key) {self[key]}
+        end
+      end
     end
 
     # API for providing a default value for a property lookup.
