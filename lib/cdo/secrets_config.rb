@@ -31,7 +31,7 @@ module Cdo
       results
     end
 
-    def freeze
+    def freeze_config
       lazy_load_secrets!
       super
     end
