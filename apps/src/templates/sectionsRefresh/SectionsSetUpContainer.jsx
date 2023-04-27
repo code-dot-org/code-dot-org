@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
+import _ from 'lodash';
 import SingleSectionSetUp from './SingleSectionSetUp';
 import CurriculumQuickAssign from './CurriculumQuickAssign';
 import AdvancedSettingToggles from './AdvancedSettingToggles';
@@ -8,9 +9,12 @@ import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
+const SECTIONS_API_UPDATE = '/api/v1/sections/update';
 
 // Custom hook to update the list of sections to create
 // Currently, this hook returns two things:
@@ -59,8 +63,12 @@ const useSections = section => {
   return [sections, updateSection];
 };
 
-const saveSection = (e, section) => {
+const saveSection = (e, section, isNewSection) => {
   e.preventDefault();
+
+  const dataUrl = isNewSection
+    ? SECTIONS_API
+    : `${SECTIONS_API_UPDATE}?id=${section.id}`;
 
   const form = document.querySelector(`#${FORM_ID}`);
   if (!form.checkValidity()) {
@@ -76,10 +84,13 @@ const saveSection = (e, section) => {
   const section_data = {
     login_type: loginType,
     participant_type: participantType,
+    courseOfferingId: section.course.courseOfferingId,
+    versionId: section.course.versionId,
+    scriptId: section.course.unitId,
     ...section,
   };
 
-  fetch(SECTIONS_API, {
+  fetch(dataUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -103,12 +114,51 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
 
   const isNewSection = !sectionToBeEdited;
+  const initialSection = _.clone(sectionToBeEdited);
 
   const caretStyle = style.caret;
   const caret = advancedSettingsOpen ? 'caret-down' : 'caret-right';
 
   const toggleAdvancedSettingsOpen = () => {
     setAdvancedSettingsOpen(!advancedSettingsOpen);
+  };
+
+  const recordSectionSetupEvent = section => {
+    let versionYear;
+    let initialVersionYear;
+    if (isNewSection) {
+      analyticsReporter.sendEvent(EVENTS.COMPLETED_EVENT, {
+        sectionUnitId: section.course.unitId,
+        sectionCurriculumLocalizedName: section.course.displayName,
+        sectionCurriculum: section.course.courseOfferingId, //this is course Offering id
+        sectionCurriculumVersionYear: section.course.versionYear,
+        sectionGrade: section.grades ? section.grades[0] : null,
+        sectionLockSelection: section.restrictSection,
+        sectionName: section.name,
+        sectionPairProgramSelection: section.pairingAllowed,
+      });
+    }
+    if (
+      (section.course.courseOfferingId &&
+        section.course.courseOfferingId !==
+          initialSection.course.courseOfferingId) ||
+      (section.course.unitId &&
+        section.course.unitId !== initialSection.course.unitId)
+    ) {
+      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+        sectionName: section.name,
+        sectionId: section.id,
+        sectionLoginType: section.loginType,
+        previousUnitId: initialSection.course.unitId,
+        previousCourseId: initialSection.course.courseOfferingId,
+        previousCourseVersionId: initialSection.course.versionId,
+        previousVersionYear: initialVersionYear,
+        newUnitId: section.course.unitId,
+        newCourseId: section.course.courseOfferingId,
+        newCourseVersionId: section.course.courseVersionId,
+        newVersionYear: versionYear,
+      });
+    }
   };
 
   return (
@@ -192,7 +242,10 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
         <Button
           text={isNewSection ? i18n.finishCreatingSections() : i18n.save()}
           color="purple"
-          onClick={e => saveSection(e, sections[0])}
+          onClick={e => {
+            recordSectionSetupEvent(sections[0]),
+              saveSection(e, sections[0], isNewSection);
+          }}
         />
       </div>
     </form>
