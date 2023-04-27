@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-08 02:06:42 UTC",
+    "serialized_at": "2023-04-25 21:24:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -322,7 +322,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete a multiple choice assessment which covers the unit topics.",
-        "preparation": "* Preview the assessment questions",
+        "preparation": "* Preview the assessment questions\n* If you are teaching virtually, check out the [Virtual Modifications](https://docs.google.com/document/d/1uKzYgOlOTqNJNTvVuioqX-o8xhmXQMfjOvAh9pWDcb4/edit?usp=sharing)",
         "student_overview": "Assessment day to conclude the unit."
       },
       "seeding_key": {
@@ -965,21 +965,8 @@
       }
     },
     {
-      "key": "9c862920-accd-4bd8-869b-a697a602aacf",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "9c862920-accd-4bd8-869b-a697a602aacf",
-        "lesson.key": "Assessment Day",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
       "key": "4339e6e3-3531-4b82-bf20-9d69f5ab6acb",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 25,
         "name": "Assessment"
@@ -993,7 +980,7 @@
     },
     {
       "key": "6cf4df18-ba73-437a-a37d-b2ea604a17be",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 20,
         "name": "Assessment Review"
@@ -1301,7 +1288,7 @@
       "key": "98ae6e4b-964d-4f0d-bcc4-0401bf62ce7e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 3:** This program is an updated version of the Thermostat app. This time students should continue to work in partners but do not need to work with other groups. They will need to:\n\n* Run the app: Let students run the app for a few minutes.\n* Discuss Changes: Talk through how the app is different than the first version. \n* Find the [`Math.round`(#FFB74D)](/docs/applab/mathRound/) command: Discuss with a partner how this command might work. Try deleting [`Math.round`(#FFB74D)](/docs/applab/mathRound/) in lines 3, 15, and 28. What happens? Add it back in.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 3:** Students look through the code and find the [`Math.round`(#FFB74D)](/docs/applab/mathRound/) command: Discuss with a partner how this command might work. On this predict level, students must answer the question before being able to run the code.\n\n**Level 4:** This program is an updated version of the Thermostat app. This time students should continue to work in partners but do not need to work with other groups. They will need to:\n\n* Run the app: Let students run the app for a few minutes.\n* Discuss Changes: Talk through how the app is different than the first version. \n Try deleting [`Math.round`(#FFB74D)](/docs/applab/mathRound/) in lines 3, 15, and 28. What happens? Add it back in.",
         "duration": "10",
         "name": "Investigation #2: Thermostat App v.2",
         "progression_name": "Investigation #2: Thermostat App v.2"
@@ -1326,7 +1313,7 @@
       "key": "0a62508c-3c1d-4c4f-82ed-07b3e0e7d539",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 4:** This program is again an updated version of the Thermostat app with a login screen. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 5:** The code for Thermostat App v.3 is displayed.\n\n* Read Code: Give students a few minutes to read and discuss the code with their partners. What has changed? What has stayed the same?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 5:** This program is again an updated version of the Thermostat app with a login screen. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 6:** The code for Thermostat App v.3 is displayed.\n\n* Read Code: Give students a few minutes to read and discuss the code with their partners. What has changed? What has stayed the same?",
         "duration": "8",
         "name": "Investigation #3: Thermostat App v.3",
         "progression_name": "Investigation #3: Thermostat App v.3"
@@ -1997,8 +1984,19 @@
       }
     },
     {
-      "key": "57c174d5-6e7e-40d1-90df-82d942b5c83b",
+      "key": "41de0beb-5580-48cd-ae90-748226f8ed91",
       "position": 1,
+      "properties": {
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "41de0beb-5580-48cd-ae90-748226f8ed91",
+        "lesson_activity.key": "3f83304a-4ab6-4d5b-b7be-5de673849e3a"
+      }
+    },
+    {
+      "key": "57c174d5-6e7e-40d1-90df-82d942b5c83b",
+      "position": 2,
       "properties": {
         "description": "**Group:** Place students in pairs. One student per group should navigate to the lesson on Code Studio."
       },
@@ -2009,7 +2007,7 @@
     },
     {
       "key": "c209c8f7-76d0-40b1-bc0a-32cf4909c611",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": "15",
         "name": "Investigation 1: If-Statements",
@@ -2027,7 +2025,7 @@
     },
     {
       "key": "21807348-cb79-4378-8ce3-5120d8d722c0",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Video - Conditionals: If Statements** As a class watch the video [r introduction_to_conditionals_-_part_2a/csp/2023] on if-statements.",
         "progression_name": "Condi",
@@ -2045,7 +2043,7 @@
     },
     {
       "key": "36ad57b2-b07b-43c1-bd6b-f115706fb0b7",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 1 - Lemon Squeeze App Pt 1:** This code investigation includes a number of steps to help students get familiar with a new app."
       },
@@ -2056,7 +2054,7 @@
     },
     {
       "key": "42da57f3-21d1-485a-81dd-9bc13d019648",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "* Form Pairs: Place students in pairs\n* Play the Game: Let students play the game for a couple minutes\n* Assign Code Sections: Count off pairs by three and assign them to one of the three code sections.\n* Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so.\n* Explain Your Section: Have groups find members of the other two sections and carefully explain how their section works. Give each group 1-2 minutes to do so.\n* **Discuss**: *Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together.*\n  * **Discussion Goal:** The goal of this investigation is to get practice carefully reading a program that uses the new concept of conditionals as well as build on their knowledge and understanding of variables.\n    \n    * **What to look for:** As students describe their section of code, push students to go beyond reading the comments in their section of code to describe what their code does.  For example, instead of saying “It increases the score by one”, students should explain HOW that happens.  They might say “The value stored in the score variable increases by 1 and then the setProperty is used to show the increased score on the screen”.\n\n* **Modify**: Have groups return to their original seats. Give them a couple minutes to work on the modify the app so that the game ends once a user has 0 lives remaining."
       },
@@ -2067,7 +2065,7 @@
     },
     {
       "key": "20bf347d-8acc-49c7-adc0-de91dcd53c78",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "If-Statements"
       },
@@ -2078,7 +2076,7 @@
     },
     {
       "key": "a8f5e02f-a657-4699-9167-399ff2247409",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video - Conditionals: If-Else Statements** As a class watch the video [r introduction_to_conditionals_-_part_2b/csp/2023] on if-else statements. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2 - Lemon Squeeze App Pt 2:** This code investigation includes a number of steps to help students get familiar with a new app.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Now look together at lines 54-58. Students discuss with a partner how they think the MOD operator works.",
         "name": "Investigation 2: If-Else Statements and MOD",
@@ -2096,7 +2094,7 @@
     },
     {
       "key": "b7536dfa-9fec-4b17-87fc-85b0362843ab",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** The MOD operator is just like any other operator - it takes two numbers, processes them, and then returns a value. Click through the animations one by one as students give answers to each arithmetic statement.  \n    \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students a few minutes to practice using the MOD operator with a partner, solving the problem on the screen. Then click through to see the answer."
       },
@@ -2107,7 +2105,7 @@
     },
     {
       "key": "3ab283fb-f7cf-4e87-903d-9197795ae0f3",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> MOD can be a little tricky, but here's what you need to remember: it's the remainder that is left after a number is divided by another number.\n\nWhy is this useful? A common usage is to determine if a number is even or odd. If you divide any number by two and there is no remainder, the number is even! You can also use MOD to determine if a number is divisible by another number.\n\nNow let's get back to another app investigation with functions with parameters and return values.",
         "remarks": true
@@ -2119,7 +2117,7 @@
     },
     {
       "key": "0b0ce97b-af1b-4e7c-9f3c-3c0d65f09225",
-      "position": 10,
+      "position": 11,
       "properties": {
         "progression_name": "If-Else Statements"
       },
@@ -2130,7 +2128,7 @@
     },
     {
       "key": "23d812e6-4c05-426e-a3f7-92ff4ae20c02",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video - Conditionals: If-Else-If Statements** As a class watch the video [r introduction_to_conditionals_-_part_2c/csp/2023] on if-else-if statements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 3 - Lemon Squeeze App Pt 3** This program is an updated version of the Lemon Squeeze app. This time students should continue to work in partners but do not need to work with other groups. They will need to",
         "duration": "10",
@@ -2149,7 +2147,7 @@
     },
     {
       "key": "1c1a8993-7fe7-4faa-bebf-99d62780f4f0",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "* Play the Game: Have students play the game\n* Discuss Changes: Talk through how the game plays differently now\n* Find the `if-else-if` command: Have students find the command\n* Draw a flowchart: Students should draw a flow chart for the if-else-if command in their journals\n* **Modify**: Modify the program to make the lemon even smaller when the player has more than 15 points."
       },
@@ -2160,7 +2158,7 @@
     },
     {
       "key": "142e29dc-a269-4661-817b-4409f558eba4",
-      "position": 13,
+      "position": 14,
       "properties": {
         "progression_name": "If-Else-If Statements"
       },
@@ -2171,7 +2169,7 @@
     },
     {
       "key": "46577e3e-2960-46c5-bc3f-bafdb23cc543",
-      "position": 14,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video - Conditionals: If-Else Statements** As a class watch the video [r introduction_to_conditionals_-_part_3/csp/2023] on logical operators.",
         "duration": "10",
@@ -2184,7 +2182,7 @@
     },
     {
       "key": "c4db6dc0-85b0-4174-91eb-d4c64d4fb3e2",
-      "position": 15,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 4 - Lemon Squeeze App Pt 4:** This program is a final version of the Lemon Squeeze app. Again students should work with partners.",
         "tips": [
@@ -2201,7 +2199,7 @@
     },
     {
       "key": "23486461-f3f1-4361-bba4-2d1a0e6c7673",
-      "position": 16,
+      "position": 17,
       "properties": {
         "description": "* Play the Game: Have students play the game\n* Discuss Changes: Talk through how the game plays differently now\n* Find the `if-else-if` command: Have students find the if-else-if command that was added\n* Draw a Flowchart: Students should draw a flowchart of this new if-else-if command\n* **Modify**: Modify the program to add a new username and password. Students will have to modify the code as well as the user interface."
       },
@@ -2212,7 +2210,7 @@
     },
     {
       "key": "7c061907-0662-4db5-b83c-4e5d618cc95c",
-      "position": 17,
+      "position": 18,
       "properties": {
         "progression_name": "Logical Operators: AND OR"
       },
@@ -3377,17 +3375,6 @@
       }
     },
     {
-      "key": "e9013e1f-8e25-42ae-8337-d6c86c979b34",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1uKzYgOlOTqNJNTvVuioqX-o8xhmXQMfjOvAh9pWDcb4/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "e9013e1f-8e25-42ae-8337-d6c86c979b34",
-        "lesson_activity.key": "9c862920-accd-4bd8-869b-a697a602aacf"
-      }
-    },
-    {
       "key": "c7913e51-255d-4850-98eb-e48dbfba9d05",
       "position": 1,
       "properties": {
@@ -3396,7 +3383,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n![](https://curriculum.code.org/media/uploads/topics4_exilLPP.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1pjzi6hjYC6WJPjVGiCfsevZcfQQ-c7TgAlprjXjNrwo/edit?usp=sharing)\n"
+            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n![](https://curriculum.code.org/media/uploads/topics4_exilLPP.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=share_link)\n"
           }
         ]
       },
@@ -3424,6 +3411,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4 Pre-Unit Pulse Q1"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -3446,6 +3436,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4 Pre-Unit Pulse Q2"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -3619,6 +3612,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "CSP U4L2 Predict Embed"
+        ],
+        "progression": "Investigation #2: Thermostat App v.2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L2 Predict Embed"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2023",
+        "activity_section.key": "98ae6e4b-964d-4f0d-bcc4-0401bf62ce7e"
+      },
+      "level_keys": [
+        "CSP U4L2 Predict Embed"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "U4 L02 Thermostat App v2_new2023"
         ],
         "progression": "Investigation #2: Thermostat App v.2"
@@ -3638,8 +3656,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 4,
+      "chapter": 11,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3663,8 +3681,8 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 5,
+      "chapter": 12,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3688,8 +3706,8 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 6,
+      "chapter": 13,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -3713,7 +3731,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3738,7 +3756,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3763,7 +3781,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3788,7 +3806,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -3813,7 +3831,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -3838,7 +3856,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -3863,7 +3881,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -3888,7 +3906,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -3913,7 +3931,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -3938,7 +3956,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -3963,7 +3981,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 11,
       "activity_section_position": 1,
       "assessment": true,
@@ -3988,7 +4006,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 12,
       "activity_section_position": 2,
       "assessment": true,
@@ -4013,7 +4031,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4038,7 +4056,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4063,7 +4081,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4088,7 +4106,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4113,8 +4131,33 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U4L6 Predict"
+        ],
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L6 Predict"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2023",
+        "activity_section.key": "41de0beb-5580-48cd-ae90-748226f8ed91"
+      },
+      "level_keys": [
+        "CSP U4L6 Predict"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4138,8 +4181,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 2,
+      "chapter": 32,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4163,8 +4206,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 3,
+      "chapter": 33,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4188,8 +4231,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 4,
+      "chapter": 34,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4213,8 +4256,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 5,
+      "chapter": 35,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4238,8 +4281,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 6,
+      "chapter": 36,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4263,7 +4306,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4288,7 +4331,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4313,7 +4356,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4338,7 +4381,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4363,7 +4406,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -4388,7 +4431,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -4413,7 +4456,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4438,7 +4481,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4463,7 +4506,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4488,7 +4531,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4513,7 +4556,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4538,7 +4581,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4563,7 +4606,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -4588,7 +4631,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -4613,7 +4656,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4638,7 +4681,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -4663,7 +4706,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4688,7 +4731,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4713,7 +4756,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4738,7 +4781,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4763,7 +4806,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -4788,7 +4831,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4813,7 +4856,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -4838,7 +4881,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4863,7 +4906,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4888,7 +4931,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -4913,7 +4956,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4938,7 +4981,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4963,11 +5006,14 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L12 Practice PT 1_2023"
+        ],
         "progression": "Sample Apps"
       },
       "bonus": false,
@@ -4985,11 +5031,14 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L12 Practice PT 2_2023"
+        ],
         "progression": "Sample Apps"
       },
       "bonus": false,
@@ -5007,11 +5056,14 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L13 Practice PT 1_2023"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -5029,11 +5081,14 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L13 Practice PT 2_2023"
+        ],
         "progression": "Create the Variables"
       },
       "bonus": false,
@@ -5051,11 +5106,14 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 69,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L13 Practice PT 3_2023"
+        ],
         "progression": "Create the Function"
       },
       "bonus": false,
@@ -5073,11 +5131,14 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L13 Practice PT 4_2023"
+        ],
         "progression": "Add onEvents"
       },
       "bonus": false,
@@ -5095,11 +5156,14 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L14 Practice PT 1_2023"
+        ],
         "progression": "Test the Decision Maker App"
       },
       "bonus": false,
@@ -5117,11 +5181,14 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 72,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 L14 Practice PT 2_2023"
+        ],
         "progression": "Submit Your Decision Maker App"
       },
       "bonus": false,
@@ -5139,11 +5206,14 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 73,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp4_2023"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -5161,7 +5231,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5281,6 +5351,18 @@
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
         "activity_section.key": "a9c9bc81-fc45-4258-8e6e-a21821732b5e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L2 Predict Embed",
+        "script_level.level_keys": [
+          "CSP U4L2 Predict Embed"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2023",
+        "activity_section.key": "98ae6e4b-964d-4f0d-bcc4-0401bf62ce7e"
       }
     },
     {
@@ -5521,6 +5603,18 @@
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2023",
         "activity_section.key": "f5a4d780-a1ef-4296-9317-3e3849440046"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L6 Predict",
+        "script_level.level_keys": [
+          "CSP U4L6 Predict"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2023",
+        "activity_section.key": "41de0beb-5580-48cd-ae90-748226f8ed91"
       }
     },
     {
@@ -6427,6 +6521,18 @@
       }
     },
     {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -6859,6 +6965,12 @@
     {
       "seeding_key": {
         "resource.key": "guide_to_eipm_lessons",
+        "script.name": "csp4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "syllabus",
         "script.name": "csp4-2023"
       }
     },

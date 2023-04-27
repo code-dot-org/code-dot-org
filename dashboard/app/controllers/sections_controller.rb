@@ -11,6 +11,26 @@ class SectionsController < ApplicationController
     @is_users_first_section = current_user.sections.empty?
   end
 
+  def edit
+    return head :forbidden unless current_user&.admin
+
+    redirect_to '/home' unless params[:loginType] && params[:participantType]
+
+    existing_section = Section.find_by(
+      id: params[:id]
+    )
+
+    @section = existing_section.attributes
+
+    @section['course'] = {
+      course_offering_id: existing_section.unit_group ? existing_section.unit_group&.course_version&.course_offering&.id : existing_section.script&.course_version&.course_offering&.id,
+      version_id: existing_section.unit_group ? existing_section.unit_group&.course_version&.id : existing_section.script&.course_version&.id,
+      unit_id: existing_section.unit_group ? existing_section.script_id : nil
+    }
+
+    @section = @section.to_json.camelize
+  end
+
   def show
     @secret_pictures = SecretPicture.all.shuffle
   end

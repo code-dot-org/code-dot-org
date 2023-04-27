@@ -211,10 +211,6 @@ Rails/NegateInclude:
 Rails/Output:
   Enabled: false
 
-# Offense count: 6
-Rails/OutputSafety:
-  Enabled: false
-
 # Offense count: 4
 # This cop supports unsafe auto-correction (--auto-correct-all).
 Rails/Pick:
@@ -362,13 +358,6 @@ Style/GlobalStdStream:
 Style/GlobalVars:
   Enabled: false
 
-# Offense count: 2
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: braces, no_braces
-Style/HashAsLastArrayItem:
-  Enabled: false
-
 # Offense count: 20
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: AllowSplatArgument.
@@ -492,11 +481,6 @@ Style/RedundantInitialize:
 # Offense count: 65
 # This cop supports safe auto-correction (--auto-correct).
 Style/RedundantParentheses:
-  Enabled: false
-
-# Offense count: 23
-# This cop supports safe auto-correction (--auto-correct).
-Style/RedundantPercentQ:
   Enabled: false
 
 # Offense count: 26
