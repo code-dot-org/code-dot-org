@@ -3,7 +3,6 @@
  *
  * @see https://developers.google.com/chart/
  */
-/* global google */
 
 require('../utils'); // Provides Function.prototype.inherits
 

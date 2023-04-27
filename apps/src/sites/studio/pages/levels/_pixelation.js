@@ -1,4 +1,3 @@
-/* global appOptions dashboard options */
 // This file does not pass eslint.
 /* eslint-disable */
 

@@ -1,4 +1,4 @@
-/* globals MapboxGeocoder mapboxgl thanksUrl signupErrorMessage censusErrorMessage hocYear */
+/* globals thanksUrl signupErrorMessage censusErrorMessage hocYear */
 
 import React from 'react';
 import ReactDOM from 'react-dom';

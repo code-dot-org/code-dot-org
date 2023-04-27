@@ -1,4 +1,4 @@
-/* globals dashboard, Craft */
+/* globals Craft */
 
 import $ from 'jquery';
 import React from 'react';
