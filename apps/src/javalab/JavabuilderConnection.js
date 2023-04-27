@@ -415,6 +415,7 @@ export default class JavabuilderConnection {
 
   onAuthorizerMessage(value, detail) {
     let message = '';
+    let stopProgram = false;
     switch (value) {
       case AuthorizerSignalType.TOKEN_USED:
         message = javalabMsg.authorizerTokenUsed();
@@ -434,16 +435,22 @@ export default class JavabuilderConnection {
         break;
       case AuthorizerSignalType.USER_BLOCKED:
         message = javalabMsg.userBlocked();
+        stopProgram = true;
         break;
       case AuthorizerSignalType.USER_BLOCKED_TEMPORARY:
-        message = "You've been temporarily blocked from running programs.";
+        message = javalabMsg.userBlockedTemporary();
+        stopProgram = true;
         break;
       case AuthorizerSignalType.CLASSROOM_BLOCKED:
         message = javalabMsg.classroomBlocked();
+        stopProgram = true;
         break;
     }
     this.onMarkdownLog(`${STATUS_MESSAGE_PREFIX} ${message}`);
     this.onNewlineMessage();
+    if (stopProgram) {
+      this.setIsRunning(false);
+    }
   }
 
   displayUnauthorizedMessage(error) {
