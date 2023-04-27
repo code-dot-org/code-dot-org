@@ -125,14 +125,11 @@ Test.prototype.updateView = function () {
   // Update row appearance
   row.className = this.status;
   if (succeeded || failed) {
-    var formattedDuration = new Date(this.duration * 1000)
-      .toISOString() // Sample formatting - 1970-01-01T00:00:42.000Z
-      .slice(11, 19) // extracts the time from the above string
-      .split(":");
+    var formatDurn = new Date(this.duration * 1000);
 
     statusCell.innerHTML =
       (succeeded ? "Succeeded" : "Failed") +
-      ` in ${formattedDuration[0]} hr ${formattedDuration[1]} min ${formattedDuration[2]} sec` +
+      ` in ${formatDurn.getUTCHours()} hr ${formatDurn.getUTCMinutes()} min ${formatDurn.getUTCSeconds()} sec` +
       (this.attempt > 0 ? ` on retry #${this.attempt}` : "");
     logLinkCell.innerHTML = `<a href="${this.publicLogUrl()}">Log on S3</a>`;
   } else {
