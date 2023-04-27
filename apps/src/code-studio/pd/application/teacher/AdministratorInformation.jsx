@@ -24,8 +24,8 @@ const AdministratorInformation = props => {
     'submission of this application, we will contact the\n' +
     'Administrator/School Leader that you listed via email in order to\n' +
     'obtain their approval. Note that your application cannot be fully\n' +
-    'reviewed until there is approval from your administrator/school\n' +
-    'leader. Therefore, we encourage you to follow up with them directly\n' +
+    'reviewed until there is approval from your Administrator/School\n' +
+    'Leader. Therefore, we encourage you to follow up with them directly\n' +
     'to let them know about your application and to expect an email\n' +
     'seeking their approval.';
   const formDescriptionWithoutAdminApprovalRequired =
