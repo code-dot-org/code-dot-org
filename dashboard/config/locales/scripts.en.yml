@@ -11404,8 +11404,8 @@ en:
           title: Preparing to Teach Creating Apps for Devices (Option A - Circuit Playground)
           description_audience: ''
           description_short: ''
-          description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
-          student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 75 minutes"
+          student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 75 minutes"
         vpl-csd-ci-7:
           lessons: {}
           lesson_groups:
@@ -11533,8 +11533,8 @@ en:
           title: Preparing to Teach Creating Apps for Devices (Option B - micro:bit)
           description_audience: ''
           description_short: ''
-          description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
-          student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 75 minutes"
+          student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 75 minutes"
         self-paced-pl-physical-computing1-2023:
           lessons: {}
           lesson_groups:

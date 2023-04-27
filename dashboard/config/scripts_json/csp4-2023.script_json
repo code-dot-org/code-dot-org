@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-24 22:42:37 UTC",
+    "serialized_at": "2023-04-25 21:24:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -322,7 +322,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete a multiple choice assessment which covers the unit topics.",
-        "preparation": "* Preview the assessment questions",
+        "preparation": "* Preview the assessment questions\n* If you are teaching virtually, check out the [Virtual Modifications](https://docs.google.com/document/d/1uKzYgOlOTqNJNTvVuioqX-o8xhmXQMfjOvAh9pWDcb4/edit?usp=sharing)",
         "student_overview": "Assessment day to conclude the unit."
       },
       "seeding_key": {
@@ -965,21 +965,8 @@
       }
     },
     {
-      "key": "9c862920-accd-4bd8-869b-a697a602aacf",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "9c862920-accd-4bd8-869b-a697a602aacf",
-        "lesson.key": "Assessment Day",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
       "key": "4339e6e3-3531-4b82-bf20-9d69f5ab6acb",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 25,
         "name": "Assessment"
@@ -993,7 +980,7 @@
     },
     {
       "key": "6cf4df18-ba73-437a-a37d-b2ea604a17be",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 20,
         "name": "Assessment Review"
@@ -3388,17 +3375,6 @@
       }
     },
     {
-      "key": "e9013e1f-8e25-42ae-8337-d6c86c979b34",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1uKzYgOlOTqNJNTvVuioqX-o8xhmXQMfjOvAh9pWDcb4/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "e9013e1f-8e25-42ae-8337-d6c86c979b34",
-        "lesson_activity.key": "9c862920-accd-4bd8-869b-a697a602aacf"
-      }
-    },
-    {
       "key": "c7913e51-255d-4850-98eb-e48dbfba9d05",
       "position": 1,
       "properties": {
@@ -3407,7 +3383,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n![](https://curriculum.code.org/media/uploads/topics4_exilLPP.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1pjzi6hjYC6WJPjVGiCfsevZcfQQ-c7TgAlprjXjNrwo/edit?usp=sharing)\n"
+            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n![](https://curriculum.code.org/media/uploads/topics4_exilLPP.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=share_link)\n"
           }
         ]
       },
@@ -3635,6 +3611,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L2 Predict Embed"
+        ],
         "progression": "Investigation #2: Thermostat App v.2"
       },
       "bonus": false,
@@ -4157,6 +4136,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L6 Predict"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -6539,6 +6521,18 @@
       }
     },
     {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -6971,6 +6965,12 @@
     {
       "seeding_key": {
         "resource.key": "guide_to_eipm_lessons",
+        "script.name": "csp4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "syllabus",
         "script.name": "csp4-2023"
       }
     },

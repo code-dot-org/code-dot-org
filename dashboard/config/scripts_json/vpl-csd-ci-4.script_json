@@ -7,11 +7,12 @@
       "curriculum_umbrella": "CSD Self Paced PL",
       "has_verified_resources": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-11 19:52:52 UTC",
+    "serialized_at": "2023-04-26 08:09:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -356,6 +357,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CI-LessonTypes-U4-2023"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -803,6 +807,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-U4 Model Design 1_2023"
         ],
@@ -828,6 +833,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-U4 Model Design 2_2023"
         ],
@@ -853,6 +859,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-U4 Model Design 3_2023"
         ],
@@ -878,6 +885,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-U4 Model Design 4_2023"
         ],
@@ -903,6 +911,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-U4 Model Design 5_2023"
         ],
@@ -928,6 +937,7 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-U4 Model Design 6_2023"
         ],
@@ -978,6 +988,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-U4 Model Program 1_2023"
         ],
@@ -1003,6 +1014,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-U4 Model Program 1.5_2023"
         ],
@@ -1028,6 +1040,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-U4 Model Program 2_2023"
         ],
@@ -1053,6 +1066,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-U4 Model Program 4_2023"
         ],
