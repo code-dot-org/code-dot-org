@@ -8,7 +8,7 @@ describe('SoundPicker', () => {
     assetChosen: () => true,
     uploadsEnabled: false,
     showUnderageWarning: false,
-    useFilesApi: false
+    useFilesApi: false,
   };
   it('does not show mode switch tabs when libraryOnly is true', () => {
     const props = {...defaultProps, libraryOnly: true};

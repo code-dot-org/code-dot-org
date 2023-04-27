@@ -13,15 +13,16 @@ import {
   isChrome,
   isChromeOS,
   isCodeOrgBrowser,
-  isLinux
+  isLinux,
 } from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
-import experiments from '@cdo/apps/util/experiments';
 import {BOARD_TYPE, shouldUseWebSerial, delayPromise} from '../util/boardUtils';
 import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 import Button from '../../../../templates/Button';
 import MBFirmataUpdater from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataUpdater';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
@@ -46,7 +47,7 @@ const initialState = {
   [STATUS_BOARD_PLUG]: Status.WAITING,
   [STATUS_BOARD_CONNECT]: Status.WAITING,
   [STATUS_BOARD_COMPONENTS]: Status.WAITING,
-  [STATUS_BOARD_UPDATE_FIRMATA]: Status.WAITING
+  [STATUS_BOARD_UPDATE_FIRMATA]: Status.WAITING,
 };
 
 class SetupChecklist extends Component {
@@ -63,7 +64,7 @@ class SetupChecklist extends Component {
   static propTypes = {
     webSerialPort: PropTypes.object,
     stepDelay: PropTypes.number,
-    firmataPercentComplete: PropTypes.number
+    firmataPercentComplete: PropTypes.number,
   };
 
   fail(selector) {
@@ -119,9 +120,10 @@ class SetupChecklist extends Component {
       // What type of board is this?
       .then(() => {
         this.setState({boardTypeDetected: this.setupChecker.detectBoardType()});
-        if (experiments.isEnabled('microbit')) {
-          console.log('Board detected: ' + this.setupChecker.detectBoardType());
-        }
+        analyticsReporter.sendEvent(EVENTS.MAKER_SETUP_PAGE_BOARD_TYPE_EVENT, {
+          'Maker Board Type': this.state.boardTypeDetected,
+        });
+
         Promise.resolve();
       })
 
@@ -257,7 +259,7 @@ class SetupChecklist extends Component {
           >
             <SafeMarkdown
               markdown={applabI18n.makerSetupInstallSerialConnector({
-                webstoreURL: CHROME_APP_WEBSTORE_URL
+                webstoreURL: CHROME_APP_WEBSTORE_URL,
               })}
             />
             <br />
@@ -281,15 +283,150 @@ class SetupChecklist extends Component {
     }
   }
 
+  renderBoardPluggedInStep() {
+    const errorDetails =
+      this.state.caughtError && this.state.caughtError.reason ? (
+        <pre>{this.state.caughtError.reason}</pre>
+      ) : null;
+    const windowDetails = isWindows() ? (
+      <SafeMarkdown markdown={applabI18n.makerSetupAdafruitWindowsDrivers()} />
+    ) : null;
+    return (
+      <ValidationStep
+        stepStatus={this.state[STATUS_BOARD_PLUG]}
+        stepName={i18n.validationStepBoardPluggedIn()}
+        hideWaitingSteps={true}
+      >
+        {errorDetails}
+        {applabI18n.makerSetupPlugInBoardCheck()}
+        <a href="#" onClick={this.redetect.bind(this)}>
+          {applabI18n.redetect()}
+        </a>
+        .{this.contactSupport()}
+        {windowDetails}
+      </ValidationStep>
+    );
+  }
+
+  renderMicroBitUpdateStep() {
+    const boardUpdateStatus = this.state[STATUS_BOARD_UPDATE_FIRMATA];
+    if (
+      this.state.boardTypeDetected !== BOARD_TYPE.MICROBIT ||
+      boardUpdateStatus === Status.WAITING
+    ) {
+      return;
+    }
+    let stepDetails = null;
+    if (boardUpdateStatus === Status.ATTEMPTING) {
+      stepDetails = (
+        <div>
+          <p>{applabI18n.makerSetupMicrobitFirmataTransferring()}</p>
+        </div>
+      );
+    } else if (boardUpdateStatus === Status.SUCCEEDED) {
+      stepDetails = (
+        <div>
+          <p>{applabI18n.makerSetupMicrobitFirmataUpdateSuccess()}</p>
+          <p>
+            <strong>{applabI18n.makerSetupClickRedetect()}</strong>
+            &nbsp;
+            {applabI18n.makerSetupConfirmConnection()}
+          </p>
+        </div>
+      );
+    }
+    return (
+      <ValidationStep
+        stepStatus={this.state[STATUS_BOARD_UPDATE_FIRMATA]}
+        stepName={i18n.validationStepUpdateMicroBitSoftware()}
+        hideWaitingSteps={false}
+        alwaysShowChildren={true}
+        percentComplete={this.props.firmataPercentComplete}
+      >
+        {stepDetails}
+      </ValidationStep>
+    );
+  }
+
+  renderBoardConnectableStep() {
+    const linuxPermissionError =
+      isLinux() &&
+      this.state.caughtError?.message?.includes('Permission denied');
+    const showUpdateMicroBitButton =
+      this.state.boardTypeDetected === BOARD_TYPE.MICROBIT &&
+      this.state[STATUS_BOARD_CONNECT] === Status.FAILED &&
+      (this.state[STATUS_BOARD_UPDATE_FIRMATA] === Status.WAITING ||
+        this.state[STATUS_BOARD_UPDATE_FIRMATA] === Status.FAILED);
+    let errorDetails = null;
+    if (linuxPermissionError) {
+      errorDetails = (
+        <div>
+          <p>{applabI18n.makerSetupLinuxSerialport()}</p>
+          <p>{applabI18n.makerSetupLinuxGroupsCheck()}</p>
+          <pre>groups $&#123;USER&#125;</pre>
+          <p>{applabI18n.makerSetupLinuxAddDialout()}</p>
+          <pre>sudo gpasswd --add $&#123;USER&#125; dialout</pre>
+          <p> {applabI18n.makerSetupLinuxRestart()} </p>
+        </div>
+      );
+    } else if (!linuxPermissionError) {
+      errorDetails = this.installFirmware();
+    }
+    const microBitButton = showUpdateMicroBitButton ? (
+      <div>
+        <Button
+          text={applabI18n.makerSetupUpdateMBFirmata()}
+          color={Button.ButtonColor.orange}
+          size={Button.ButtonSize.medium}
+          style={downloadButtonStyle}
+          onClick={() => this.updateMBFirmata()}
+          title={applabI18n.makerSetupUpdateMBFirmataDescription()}
+        />
+        <SafeMarkdown
+          markdown={applabI18n.makerSetupMicrobitSupportArticle()}
+        />{' '}
+      </div>
+    ) : null;
+    return (
+      <ValidationStep
+        stepStatus={this.state[STATUS_BOARD_CONNECT]}
+        stepName={i18n.validationStepBoardConnectable()}
+        hideWaitingSteps={true}
+      >
+        {applabI18n.makerSetupBoardBadResponse()}
+        {errorDetails}
+        {microBitButton}
+      </ValidationStep>
+    );
+  }
+
+  renderComponentsUsable() {
+    if (this.state.boardTypeDetected === BOARD_TYPE.MICROBIT) {
+      return;
+    }
+    return (
+      <ValidationStep
+        stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
+        stepName={i18n.validationStepBoardComponentsUsable()}
+        hideWaitingSteps={true}
+      >
+        {applabI18n.makerSetupVerifyComponents()}
+        <br />
+        {this.installFirmware()}
+        {this.contactSupport()}
+      </ValidationStep>
+    );
+  }
+
   contactSupport() {
     return <SafeMarkdown markdown={i18n.contactGeneralSupport()} />;
   }
 
-  installFirmwareSketch() {
+  installFirmware() {
     let firmataMarkdown;
     if (this.state.boardTypeDetected === BOARD_TYPE.MICROBIT) {
       firmataMarkdown = applabI18n.makerSetupInstallFirmataMB({
-        firmataURL: MICROBIT_FIRMATA_URL
+        firmataURL: MICROBIT_FIRMATA_URL,
       });
     } else if (
       this.state.boardTypeDetected === BOARD_TYPE.EXPRESS ||
@@ -297,22 +434,15 @@ class SetupChecklist extends Component {
     ) {
       firmataMarkdown = applabI18n.makerSetupInstallFirmataCP({
         firmataURLExpress: EXPRESS_FIRMATA_URL,
-        firmataURLClassic: CLASSIC_FIRMATA_URL
+        firmataURLClassic: CLASSIC_FIRMATA_URL,
       });
     } else {
       // Board Type is Other/Unknown
-      if (experiments.isEnabled('microbit')) {
-        firmataMarkdown = applabI18n.makerSetupInstallFirmataOther({
-          firmataURLExpress: EXPRESS_FIRMATA_URL,
-          firmataURLClassic: CLASSIC_FIRMATA_URL,
-          firmataURLMB: MICROBIT_FIRMATA_URL
-        });
-      } else {
-        firmataMarkdown = applabI18n.makerSetupInstallFirmataCP({
-          firmataURLExpress: EXPRESS_FIRMATA_URL,
-          firmataURLClassic: CLASSIC_FIRMATA_URL
-        });
-      }
+      firmataMarkdown = applabI18n.makerSetupInstallFirmataOther({
+        firmataURLExpress: EXPRESS_FIRMATA_URL,
+        firmataURLClassic: CLASSIC_FIRMATA_URL,
+        firmataURLMB: MICROBIT_FIRMATA_URL,
+      });
     }
     return (
       <div style={styles.suggestionHeader}>
@@ -322,20 +452,6 @@ class SetupChecklist extends Component {
   }
 
   render() {
-    const linuxPermissionError =
-      isLinux() &&
-      this.state.caughtError?.message?.includes('Permission denied');
-
-    const showUpdateMicroBitButton =
-      this.state.boardTypeDetected === BOARD_TYPE.MICROBIT &&
-      this.state[STATUS_BOARD_CONNECT] === Status.FAILED &&
-      (this.state[STATUS_BOARD_UPDATE_FIRMATA] === Status.WAITING ||
-        this.state[STATUS_BOARD_UPDATE_FIRMATA] === Status.FAILED);
-
-    const showUpdateMicroBitValidationStep =
-      this.state.boardTypeDetected === BOARD_TYPE.MICROBIT &&
-      this.state[STATUS_BOARD_UPDATE_FIRMATA] !== Status.WAITING;
-
     return (
       <div>
         <h2>
@@ -351,95 +467,10 @@ class SetupChecklist extends Component {
         </h2>
         <div className="setup-status">
           {this.renderPlatformSpecificSteps()}
-          <ValidationStep
-            stepStatus={this.state[STATUS_BOARD_PLUG]}
-            stepName={i18n.validationStepBoardPluggedIn()}
-            hideWaitingSteps={true}
-          >
-            {this.state.caughtError && this.state.caughtError.reason && (
-              <pre>{this.state.caughtError.reason}</pre>
-            )}
-            {applabI18n.makerSetupPlugInBoardCheck()}
-            <a href="#" onClick={this.redetect.bind(this)}>
-              {applabI18n.redetect()}
-            </a>
-            .
-            {isWindows() && (
-              <SafeMarkdown
-                markdown={applabI18n.makerSetupAdafruitWindowsDrivers()}
-              />
-            )}
-            {this.contactSupport()}
-          </ValidationStep>
-          {experiments.isEnabled('microbit') &&
-            showUpdateMicroBitValidationStep && (
-              <ValidationStep
-                stepStatus={this.state[STATUS_BOARD_UPDATE_FIRMATA]}
-                stepName={i18n.validationStepUpdateMicroBitSoftware()}
-                hideWaitingSteps={false}
-                alwaysShowChildren={true}
-                percentComplete={this.props.firmataPercentComplete}
-              >
-                {this.state[STATUS_BOARD_UPDATE_FIRMATA] ===
-                  Status.ATTEMPTING && (
-                  <div>
-                    <p>{applabI18n.makerSetupMicrobitFirmataTransferring()}</p>
-                  </div>
-                )}
-                {this.state[STATUS_BOARD_UPDATE_FIRMATA] ===
-                  Status.SUCCEEDED && (
-                  <div>
-                    <p>{applabI18n.makerSetupMicrobitFirmataUpdateSuccess()}</p>
-                    <p>
-                      <strong>{applabI18n.makerSetupClickRedetect()}</strong>
-                      &nbsp;
-                      {applabI18n.makerSetupConfirmConnection()}
-                    </p>
-                  </div>
-                )}
-              </ValidationStep>
-            )}
-          <ValidationStep
-            stepStatus={this.state[STATUS_BOARD_CONNECT]}
-            stepName={i18n.validationStepBoardConnectable()}
-            hideWaitingSteps={true}
-          >
-            {applabI18n.makerSetupBoardBadResponse()}
-            {linuxPermissionError && (
-              <div>
-                <p>{applabI18n.makerSetupLinuxSerialport()}</p>
-                <p>{applabI18n.makerSetupLinuxGroupsCheck()}</p>
-                <pre>groups $&#123;USER&#125;</pre>
-                <p>{applabI18n.makerSetupLinuxAddDialout()}</p>
-                <pre>sudo gpasswd --add $&#123;USER&#125; dialout</pre>
-                <p> {applabI18n.makerSetupLinuxRestart()} </p>
-              </div>
-            )}
-            {!linuxPermissionError && this.installFirmwareSketch()}
-            {experiments.isEnabled('microbit') && showUpdateMicroBitButton && (
-              <Button
-                text={applabI18n.makerSetupUpdateMBFirmata()}
-                color={Button.ButtonColor.orange}
-                size={Button.ButtonSize.medium}
-                style={downloadButtonStyle}
-                onClick={() => this.updateMBFirmata()}
-                title={applabI18n.makerSetupUpdateMBFirmataDescription()}
-              />
-            )}
-          </ValidationStep>
-
-          {this.state.boardTypeDetected !== BOARD_TYPE.MICROBIT && (
-            <ValidationStep
-              stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
-              stepName={i18n.validationStepBoardComponentsUsable()}
-              hideWaitingSteps={true}
-            >
-              {applabI18n.makerSetupVerifyComponents()}
-              <br />
-              {this.installFirmwareSketch()}
-              {this.contactSupport()}
-            </ValidationStep>
-          )}
+          {this.renderBoardPluggedInStep()}
+          {this.renderMicroBitUpdateStep()}
+          {this.renderBoardConnectableStep()}
+          {this.renderComponentsUsable()}
         </div>
       </div>
     );
@@ -447,15 +478,16 @@ class SetupChecklist extends Component {
 }
 
 export default connect(state => ({
-  firmataPercentComplete: state.microBit.microBitFirmataUpdatePercent
+  firmataPercentComplete: state.microBit.microBitFirmataUpdatePercent,
 }))(SetupChecklist);
 
 const styles = {
   suggestionHeader: {
-    marginTop: 15
-  }
+    marginTop: 15,
+  },
 };
 
 const downloadButtonStyle = {
-  textAlign: 'center'
+  textAlign: 'center',
+  marginBottom: 15,
 };

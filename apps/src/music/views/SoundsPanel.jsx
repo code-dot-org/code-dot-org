@@ -9,24 +9,10 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
  * custom Blockly Field {@link FieldSounds}
  */
 
-const getIcon = type => {
-  const typeToIcon = {
-    beat: 'volume-up',
-    bass: 'headphones',
-    lead: 'music',
-    fx: 'asterisk'
-  };
-  return typeToIcon[type];
-};
-
-const getIconClassName = type => {
-  return styles['icon-' + type];
-};
-
 const getLengthRepresentation = length => {
   const lengthToSymbol = {
     0.5: '\u00bd',
-    0.25: '\u00bc'
+    0.25: '\u00bc',
   };
   return lengthToSymbol[length] || length;
 };
@@ -37,11 +23,12 @@ const SoundsPanelRow = ({
   folder,
   sound,
   onSelect,
-  onPreview
+  onPreview,
 }) => {
   const soundPath = folder.path + '/' + sound.src;
   const isSelected = soundPath === currentValue;
   const isPlayingPreview = playingPreview === soundPath;
+  const typeIconPath = `/blockly/media/music/icon-${sound.type}.png`;
 
   return (
     <div
@@ -52,10 +39,7 @@ const SoundsPanelRow = ({
       onClick={() => onSelect(folder.path + '/' + sound.src)}
     >
       <div className={styles.soundRowLeft}>
-        <FontAwesome
-          icon={getIcon(sound.type)}
-          className={getIconClassName(sound.type)}
-        />
+        <img src={typeIconPath} className={styles.typeIcon} />
       </div>
       <div className={styles.soundRowMiddle}>{sound.name}</div>
       <div className={styles.soundRowRight}>
@@ -88,7 +72,7 @@ SoundsPanelRow.propTypes = {
   folder: PropTypes.object.isRequired,
   sound: PropTypes.object.isRequired,
   onSelect: PropTypes.func.isRequired,
-  onPreview: PropTypes.func.isRequired
+  onPreview: PropTypes.func.isRequired,
 };
 
 const SoundsPanel = ({
@@ -96,34 +80,32 @@ const SoundsPanel = ({
   currentValue,
   playingPreview,
   onSelect,
-  onPreview
+  onPreview,
 }) => {
-  const group = library.groups[0];
+  const folders = library.getAllowedSounds(undefined);
 
   return (
     <div className={styles.soundsPanel}>
-      {group.folders
-        .filter(folder => folder.type !== 'kit' && folder.type !== 'instrument')
-        .map((folder, folderIndex) => {
-          return (
-            <div className={styles.folder} key={folderIndex}>
-              <div className={styles.folderName}>{folder.name}</div>
-              {folder.sounds.map((sound, soundIndex) => {
-                return (
-                  <SoundsPanelRow
-                    key={soundIndex}
-                    currentValue={currentValue}
-                    playingPreview={playingPreview}
-                    folder={folder}
-                    sound={sound}
-                    onSelect={onSelect}
-                    onPreview={onPreview}
-                  />
-                );
-              })}
-            </div>
-          );
-        })}
+      {folders.map((folder, folderIndex) => {
+        return (
+          <div className={styles.folder} key={folderIndex}>
+            <div className={styles.folderName}>{folder.name}</div>
+            {folder.sounds.map((sound, soundIndex) => {
+              return (
+                <SoundsPanelRow
+                  key={soundIndex}
+                  currentValue={currentValue}
+                  playingPreview={playingPreview}
+                  folder={folder}
+                  sound={sound}
+                  onSelect={onSelect}
+                  onPreview={onPreview}
+                />
+              );
+            })}
+          </div>
+        );
+      })}
     </div>
   );
 };
@@ -133,7 +115,7 @@ SoundsPanel.propTypes = {
   currentValue: PropTypes.string.isRequired,
   playingPreview: PropTypes.string,
   onSelect: PropTypes.func.isRequired,
-  onPreview: PropTypes.func.isRequired
+  onPreview: PropTypes.func.isRequired,
 };
 
 export default SoundsPanel;

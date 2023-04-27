@@ -8,7 +8,7 @@ import {Breadcrumb} from 'react-bootstrap';
 
 export default class Header extends React.Component {
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   static propTypes = {
@@ -19,15 +19,15 @@ export default class Header extends React.Component {
           PropTypes.arrayOf(
             PropTypes.shape({
               name: PropTypes.string,
-              path: PropTypes.string
+              path: PropTypes.string,
             })
-          )
-        ])
+          ),
+        ]),
       })
     ).isRequired,
     params: PropTypes.object.isRequired,
     children: PropTypes.object.isRequired,
-    baseName: PropTypes.string
+    baseName: PropTypes.string,
   };
 
   handleClick = path => {

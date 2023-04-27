@@ -3,29 +3,18 @@ import AnalyticsReporter from './analytics/AnalyticsReporter';
 import MusicPlayer from './player/MusicPlayer';
 
 /** Provides access to the Analytics reporter object */
-export const AnalyticsContext: React.Context<AnalyticsReporter | null> = React.createContext<AnalyticsReporter | null>(null);
-
-/** Provicess access to commonly used APIs related to the playing state. */
-type PlayingInfo = {
-  isPlaying: boolean;
-};
-
-export const PlayingContext: React.Context<
-  PlayingInfo
-> = React.createContext<PlayingInfo>({isPlaying: false});
+export const AnalyticsContext: React.Context<AnalyticsReporter | null> =
+  React.createContext<AnalyticsReporter | null>(null);
 
 type PlayerUtils = Pick<
   MusicPlayer,
-  | 'getPlaybackEvents'
-  | 'getTracksMetadata'
-  | 'getLastMeasure'
+  'getPlaybackEvents' | 'getTracksMetadata' | 'getLastMeasure'
 >;
 
 /** Provides access to commonly used MusicPlayer APIs (without exposing the entire player) */
-export const PlayerUtilsContext: React.Context<
-  PlayerUtils
-> = React.createContext<PlayerUtils>({
-  getPlaybackEvents: () => [],
-  getTracksMetadata: () => ({}),
-  getLastMeasure: () => 0
-});
+export const PlayerUtilsContext: React.Context<PlayerUtils> =
+  React.createContext<PlayerUtils>({
+    getPlaybackEvents: () => [],
+    getTracksMetadata: () => ({}),
+    getLastMeasure: () => 0,
+  });

@@ -1,9 +1,5 @@
 <Poetry>
   <config><![CDATA[{
-  "game_id": 69,
-  "created_at": "2023-03-09T15:12:52.000Z",
-  "level_num": "custom",
-  "user_id": 13468,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -22,7 +18,7 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"poetry_sprite_begins\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".blocklyDraggable[data-id=\\\"4\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"poetry_sprite_stops\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".blocklyDraggable[data-id=\\\"5\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",
     "short_instructions": "Sprites can do certain actions or behaviors over and over while the program runs.",
-    "long_instructions": "Sprites can do certain actions or **behaviors** over and over while the program runs.\r\n\r\n* Add a `sprite begins` block to your code.\r\n* Explore different sprite behaviors.\r\n* Choose a behavior that matches your poem.\r\n\r\n*Extra Challenge:* Add a `sprite begins` block to an **event**!",
+    "long_instructions": "Sprites can do certain actions or **behaviors** over and over while the program runs.\r\n\r\n* Add a <code style=\"color:black; background-color:#F79EA5\">sprite begins</code> block to your code.\r\n* Explore different sprite behaviors.\r\n* Choose a behavior that matches your poem.\r\n\r\n*Extra Challenge:* Add a <code style=\"color:black; background-color:#F79EA5\">sprite begins</code> block to an **event**!",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -44,12 +40,16 @@
     "standalone_app_name": "poetry_hoc",
     "default_poem": "hughes1",
     "skip_autosave": true,
-    "encrypted_examples": "ccWOgsb/h44zWisyO5OFISCQ9xkTAsOhRGeE0ryB1zbcEJl+pElAIvq4lI58\nF53+xdH/J5kTwop5ccktkA6cEsnuq96FxCcUHVkeMAk9WfXwEKAYd71+qhBf\no2oMHo4rXwgNNSowL8jpjJJAk1GVlw==\n",
+    "encrypted_examples": "b6C0WWsnVDe9Njki2fdz3eA2uSSjFDnfVr162lVkuU0mRHPDHq3tTMueM2SR\nIJRaaqoqhiscoiGOU4e9TGcV+w==\n",
     "name_suffix": "_2023",
     "preload_asset_list": null
   },
+  "game_id": 69,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-03-09T15:12:52.055+00:00\",\"changed\":[\"cloned from \\\"poetry_hoc_spriteBehaviors\\\"\"],\"cloned_from\":\"poetry_hoc_spriteBehaviors\"}]",
+  "created_at": "2023-03-09T15:12:52.000Z",
+  "level_num": "custom",
+  "user_id": 13468,
+  "audit_log": "[{\"changed_at\":\"2023-03-09T15:12:52.055+00:00\",\"changed\":[\"cloned from \\\"poetry_hoc_spriteBehaviors\\\"\"],\"cloned_from\":\"poetry_hoc_spriteBehaviors\"},{\"changed_at\":\"2023-03-24 21:44:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-04-12 20:38:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\",\"available_poems\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-25 19:33:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\",\"available_poems\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

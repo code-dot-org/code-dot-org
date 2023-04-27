@@ -2337,7 +2337,7 @@ es-MX:
   header_educate_overview: Descripción del educador
   header_educate_elementary: Escuela primaria
   header_educate_middle: Escuela secundaria
-  header_educate_high: Educación media superior
+  header_educate_high: Preparatoria
   header_educate_hoc: Hora del código
   header_educate_partner: Colabora con nosotros
   header_educate_beyond: Más allá de Code.org
@@ -2889,7 +2889,11 @@ es-MX:
   try_it_yourself: Inténtalo tú mismo!
   try_an_activity: Prueba una actividad
   see_more_activities: Prueba más actividades
+  hoc2022_nasa_webb_alt_text: Ilustración del telescopio James Webb de la NASA
   hoc2022_nasa_banner_heading: "¡Aprende sobre las ciencias de la computación en el
     espacio con la NASA en esta función especial de la Hora del Código!"
   hoc2022_nasa_banner_description: Sintonízate a las 10AM ET el 5 de Diciembre via
     el canal de YouTube de NASA STEM.
+  hoc2022_nasa_banner_heading_posthoc: "¡Checa la función especial de La Hora del
+    Código de la NASA sobre la ciencia de computación en el espacio!"
+  microsoft_logo_alt: Logo de Microsoft

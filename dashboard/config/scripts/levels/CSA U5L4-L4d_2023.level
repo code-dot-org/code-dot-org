@@ -1,0 +1,35 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A building manager has recorded the daily energy consumption (in kilowatt-hours) for various apartments in a 2D array, where each row represents an apartment and each column represents a day of the week. Write a Java program to traverse the 2D array in column-major order and find the day with the minimum and maximum total energy consumption.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Energy</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findMinEnergy()</code> method to find the day with the minimum total energy consumption.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Energy</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findMaxEnergy()</code> method to find the day with the maximum total energy consumption.\r\n\r\n✅ **TO DO #3:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">EnergyRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findMinEnergy()</code> and <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findMaxEnergy()</code> methods and print the results.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with traversing a two-dimensional (2D) array in column-major order.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "video_key": "csa_column_major_traversal",
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/two-dimensional-arrays"
+    ],
+    "display_name": "Energy Consumption",
+    "bubble_choice_description": "Find the days with the minimum and maximum total energy consumption.",
+    "thumbnail_url": "https://images.code.org/d0ac36212c89e2b5e0b21e287ce7c044-renewable-energy.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-03-27T23:53:53.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-03-27T23:53:53.463+00:00\",\"changed\":[\"cloned from \\\"CSA U5L4-L4c_2023\\\"\"],\"cloned_from\":\"CSA U5L4-L4c_2023\"},{\"changed_at\":\"2023-03-27 23:53:54 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:45:17 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 23:42:52 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

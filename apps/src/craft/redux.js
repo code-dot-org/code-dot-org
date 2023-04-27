@@ -5,7 +5,7 @@ import {getStore} from '@cdo/apps/redux';
  */
 const initialState = {
   playerSelectionDialogOpen: false,
-  handlePlayerSelection: () => {}
+  handlePlayerSelection: () => {},
 };
 
 /**
@@ -24,7 +24,7 @@ const setPlayerSelectionDialog = (
 ) => ({
   type: SET_PLAYER_SELECTION_DIALOG,
   isOpen,
-  handlePlayerSelection
+  handlePlayerSelection,
 });
 
 /**
@@ -35,7 +35,7 @@ function craft(state = initialState, action) {
     return {
       ...state,
       playerSelectionDialogOpen: action.isOpen,
-      handlePlayerSelection: action.handlePlayerSelection
+      handlePlayerSelection: action.handlePlayerSelection,
     };
   }
 
@@ -43,7 +43,7 @@ function craft(state = initialState, action) {
 }
 
 export default {
-  craft
+  craft,
 };
 
 /**

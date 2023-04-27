@@ -48,9 +48,10 @@ export const UnconnectedDocumentationTab = forwardRef(
         setFallbackKey(firstKey);
       }
       setClassMap(classes);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [data]);
 
-    const getDropdownOptions = function() {
+    const getDropdownOptions = function () {
       const options = [];
       for (const key in classMap) {
         options.push(
@@ -109,12 +110,12 @@ export const UnconnectedDocumentationTab = forwardRef(
 
 UnconnectedDocumentationTab.propTypes = {
   programmingEnvironment: PropTypes.string.isRequired,
-  defaultClassKey: PropTypes.string
+  defaultClassKey: PropTypes.string,
 };
 
 export default connect(
   state => ({
-    programmingEnvironment: state.instructions.programmingEnvironment
+    programmingEnvironment: state.instructions.programmingEnvironment,
   }),
   null,
   null,
@@ -124,21 +125,21 @@ export default connect(
 const styles = {
   select: {
     width: 275,
-    marginTop: 5
+    marginTop: 5,
   },
   header: {
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   loadingInformation: {
     display: 'flex',
     margin: '25px',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   docLink: {
     marginRight: 5,
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };

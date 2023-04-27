@@ -7,7 +7,7 @@ export default class TeacherSectionOption extends Component {
   static propTypes = {
     section: sectionForDropdownShape,
     onChange: PropTypes.func.isRequired,
-    isChecked: PropTypes.bool
+    isChecked: PropTypes.bool,
   };
 
   renderCheckbox = id => {
@@ -53,20 +53,20 @@ const styles = {
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-    paddingLeft: 10
+    paddingLeft: 10,
   },
   checkboxIcon: {
-    color: color.lighter_gray
+    color: color.lighter_gray,
   },
   checkbox: {
     height: 20,
-    width: 20
+    width: 20,
   },
   sectionOptionContainer: {
     display: 'flex',
-    alignItems: 'baseline'
+    alignItems: 'baseline',
   },
   sectionOptionLabel: {
-    padding: '7px'
-  }
+    padding: '7px',
+  },
 };

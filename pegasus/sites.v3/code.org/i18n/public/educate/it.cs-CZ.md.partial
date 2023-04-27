@@ -10,7 +10,8 @@ theme: responsive
 
 - Vaší škole doporučujeme internetové připojení o rychlosti alespoň 15 MBit/s.
 - Nejmenší velikost obrazovky, kterou podporujeme, je 1024 x 728 px.
-- Na naše středoškolské kurzy Objevy v počítačových vědách, Principy počítačových věd a Úvod do Laboratoře aplikací budete potřebovat stolní počítač nebo laptop s myší (nebo touchpadem) a klávesnicí. Většinu tabletů a mobilních zařízení tyto kurzy nepodporují. Viz níže uvedenou část „Podrobnosti o podpoře mobilních zařízení a tabletů“, kde najdete výjimky specifické pro příslušná zařízení.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Viz níže uvedenou část „Podrobnosti o podpoře mobilních zařízení a tabletů“, kde najdete výjimky specifické pro příslušná zařízení.
 - Veškerý jiný obsah, jako například kurzy K-5 (Základy počítačových věd) a aktivity Hodina programování jsou kompatibilní s iPady a Chromebooky a veškerými ostatními moderními tablety a laptopy nebo stolními počítači.
 - Hledáte informace o podpoře mobilních zařízení? Přečtěte si níže uvedené.
 
@@ -82,12 +83,12 @@ Pro co nejlepší prožitek s veškerým obsahem od Code.org Vám doporučujeme 
 
 ## Údaje o podpoře mobilů a tabletů
 
-Ne všechny kurzy Objevy v počítačových vědách, Principy počítačových věd a Úvod do Laboratoře apliakcí jsou kompatibilní s tablety či mobilními zařízeními — je potřeba kompletní klávesnice a myš (nebo touchpad, jako například na počítačích MacBook). Tablety většinou podporovány nejsou, s následujícími výjimkami:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Tablety většinou podporovány nejsou, s následujícími výjimkami:
 
 - Microsoft Surface Pro s externí klávesnicí
 - iPad, na němž je spuštěn iPadOS 13.4 nebo novější s externí klávesnicí a externí myší nebo touchpadem
 
-Veškerý jiný obsah, jako například kurzy K-5 (Základy počítačových věd) a aktivity Hodina programování jsou kompatibilní s iPady a Chromebooky a veškerými ostatními moderními tablety a laptopy nebo stolními počítači.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### Mobilní telefony
 
@@ -101,15 +102,25 @@ K začlenění videí do Code.org a do naší [online výukové platformy](http
 
 Než zahájíte online kurzy na Code.org, vyzkoušejte si přehrávání níže uvedeného videa, abyste se ujistili, zda máte připraveno vše potřebné.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
-Toto je přehrávač používaný v těchto výukových materiálech. Pokusí se zobrazit video přes YouTube, a jestliže bude YouTube zablokováno, zobrazí namísto něho video umístěné na serveru Code.org pomocí našeho „náhradního“ prohlížeče.
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
+
+This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
 
 ### Nelze přehrávat video?
 
-Jestliže video nefunguje, můžete nám poslat e-mail na adresu support@code.org.
+If video does not work, you can email us at support@code.org.
 
-I tak však můžete používat naše výukové kurzy bez videa.
+However, you can still use our tutorials without video.
 
 1. Zařídili jsme, aby všechna naše videa [bylo možno stáhnout najednou](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Jestliže má Vaše škola nízkou přenosovou šířku, doporučujeme Vám videa stáhnout a zobrazovat je studentům na společnou obrazovku.
 2. Do našich výukových kurzů jsme integrovali zelenou ikonu odkazu ke stahování <img src="/images/green-download.png" width=25 height=25 /> pro jednotlivá videa, která studentům umožní stahovat si jednotlivá výuková videa.
@@ -119,8 +130,8 @@ I tak však můžete používat naše výukové kurzy bez videa.
 
 ## Speciální nastavení pro uživatele Google Apps/G-Suite
 
-Jestliže jste správcem G-suite, nezapomeňte si zkontrolovat, jaká jsou nastavení Vašich omezení pro YouTube. Jestliže jste specifikovali nastavení „Přísně omezený přístup na YouTube“ nebo jestliže se Vám zobrazují zprávy uvádějící „toto video bylo omezeno“, můžete přidat náš kanál do schváleného seznamu kanálů. Chcete-li se dozvědět, jak přidat náš kanál do sezanmu schválených, podívejte se do  [tohoto průvodce](https://support.google.com/a/answer/6245597) od společnosti Google. Chcete-li se dozvědět více o různých nastaveních a o tom, které je nejlepší pro Vaši třídu, můžete se podívat také do [tohoto průvodce](https://support.google.com/a/answer/6212415?hl=en).
+If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
 
 ## Ještě stále máte problémy?
 
-Pomůžeme Vám — jen nám napište e-mail na adresu support@code.org!
+We'll help you out - just email us at support@code.org!

@@ -6,9 +6,9 @@ var solutionXml = blockUtils.mathBlockXml('rotate', {
     WIDTH: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50}),
     HEIGHT: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 100}),
     COLOR: blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'}),
-    STYLE: blockUtils.mathBlockXml('functional_string', null, {VAL: 'outline'})
+    STYLE: blockUtils.mathBlockXml('functional_string', null, {VAL: 'outline'}),
   }),
-  DEGREES: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 45})
+  DEGREES: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 45}),
 });
 
 module.exports = {
@@ -17,24 +17,24 @@ module.exports = {
   levelDefinition: {
     solutionBlocks: solutionXml,
     requiredBlocks: '',
-    freePlay: false
+    freePlay: false,
   },
   tests: [
     {
       description: 'Nothing',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
-      xml: '<xml>' + '</xml>'
+      xml: '<xml>' + '</xml>',
     },
     {
       description: 'correct answer',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         var user = document.getElementById('user');
         var rect = user.querySelector('rect');
 
@@ -50,15 +50,15 @@ module.exports = {
         assert(rect.getAttribute('height', 100));
         return true;
       },
-      xml: '<xml>' + solutionXml + '</xml>'
+      xml: '<xml>' + solutionXml + '</xml>',
     },
     {
       description: 'correct answer, rotated an extra 360 degrees',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         var user = document.getElementById('user');
         var rect = user.querySelector('rect');
 
@@ -74,7 +74,7 @@ module.exports = {
         assert(rect.getAttribute('height', 100));
         return true;
       },
-      xml: '<xml>' + solutionXml.replace('45', '405') + '</xml>'
-    }
-  ]
+      xml: '<xml>' + solutionXml.replace('45', '405') + '</xml>',
+    },
+  ],
 };

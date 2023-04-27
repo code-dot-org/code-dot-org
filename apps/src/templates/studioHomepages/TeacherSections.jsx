@@ -7,7 +7,7 @@ import OwnedSections from '../teacherDashboard/OwnedSections';
 import {
   asyncLoadSectionData,
   hiddenPlSectionIds,
-  hiddenStudentSectionIds
+  hiddenStudentSectionIds,
 } from '../teacherDashboard/teacherSectionsRedux';
 import SetUpSections from './SetUpSections';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
@@ -23,7 +23,7 @@ class TeacherSections extends Component {
     plSectionIds: PropTypes.array,
     hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     hiddenStudentSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
-    asyncLoadComplete: PropTypes.bool
+    asyncLoadComplete: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -35,7 +35,7 @@ class TeacherSections extends Component {
       plSectionIds,
       studentSectionIds,
       hiddenPlSectionIds,
-      hiddenStudentSectionIds
+      hiddenStudentSectionIds,
     } = this.props;
 
     const hasSections =
@@ -83,15 +83,15 @@ export default connect(
     plSectionIds: state.teacherSections.plSectionIds,
     hiddenPlSectionIds: hiddenPlSectionIds(state),
     hiddenStudentSectionIds: hiddenStudentSectionIds(state),
-    asyncLoadComplete: state.teacherSections.asyncLoadComplete
+    asyncLoadComplete: state.teacherSections.asyncLoadComplete,
   }),
   {
-    asyncLoadSectionData
+    asyncLoadSectionData,
   }
 )(TeacherSections);
 
 const styles = {
   spinner: {
-    marginTop: '10px'
-  }
+    marginTop: '10px',
+  },
 };
