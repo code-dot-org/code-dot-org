@@ -115,30 +115,32 @@ const customInputTypes = {
       const icon = document.createElementNS(SVG_NS, 'tspan');
       icon.style.fontFamily = 'FontAwesome';
       icon.textContent = '\uf276';
-      const button = new Blockly.FieldButton(
-        icon,
-        updateValue => {
-          getLocation(loc => {
-            if (loc) {
-              button.setValue(JSON.stringify(loc));
-            }
-          });
-        },
-        block.getHexColour(), // Google Blockly includes block.getColour
-        value => {
-          if (value) {
-            try {
-              const loc = JSON.parse(value);
-              label.setValue(
-                `${inputConfig.label}(${loc.x}, ${APP_HEIGHT - loc.y})`
-              );
-            } catch (e) {
-              // Just ignore bad values
-            }
+      const onChange = updateValue => {
+        getLocation(loc => {
+          if (loc) {
+            picker.setValue(JSON.stringify(loc));
+          }
+        });
+      };
+      const onDisplay = value => {
+        if (value) {
+          try {
+            const loc = JSON.parse(value);
+            label.setValue(
+              `${inputConfig.label}(${loc.x}, ${APP_HEIGHT - loc.y})`
+            );
+          } catch (e) {
+            // Just ignore bad values
           }
         }
+      };
+      const picker = Blockly.cdoUtils.locationField(
+        icon,
+        onChange,
+        block.getHexColour(), // Google Blockly includes block.getColour
+        onDisplay
       );
-      currentInputRow.appendField(button, inputConfig.name);
+      currentInputRow.appendField(picker, inputConfig.name);
     },
     generateCode(block, arg) {
       return `(${block.getFieldValue(arg.name)})`;
