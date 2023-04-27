@@ -1,4 +1,4 @@
-/* global jQuery, CDOSounds */
+/* global CDOSounds */
 
 import React from 'react';
 import {LegacyMatchErrorDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
