@@ -28,15 +28,13 @@ class CdoFieldSoundPicker extends GoogleBlockly.Field {
     this.onClose = options.onClose;
     this.options = options.options;
     this.name = options.name;
-    this.block = options.block;
     this.onChange = soundValue => {
       this.setValue(soundValue);
+      this.hide_();
       console.log(this.getValue());
     };
-    this.newDiv_ = null;
     this.SERIALIZABLE = true;
     this.CURSOR = 'default';
-    this.backgroundElement = null;
   }
 
   /**
@@ -59,8 +57,8 @@ class CdoFieldSoundPicker extends GoogleBlockly.Field {
     this.setValue(state);
   }
 
-  static fromJson(options) {
-    return new CdoFieldSoundPicker(options);
+  static fromJson(value, options) {
+    return new CdoFieldSoundPicker(value, options);
   }
 
   /**
@@ -106,18 +104,13 @@ class CdoFieldSoundPicker extends GoogleBlockly.Field {
    * An editor for the field.
    * @override
    */
-  showEditor_(e) {
+  showEditor_() {
     super.showEditor_();
     const editor = this.dropdownCreate_();
     Blockly.DropDownDiv.getContentDiv().appendChild(editor);
 
     const style = this.sourceBlock_.style;
     Blockly.DropDownDiv.setColour(style.colourPrimary, style.colourTertiary);
-
-    // Blockly.DropDownDiv.showPositionedByField(
-    //   this,
-    //   this.disposeDropdown.bind(this)
-    // );
   }
 
   dropdownCreate_() {
@@ -141,7 +134,7 @@ class CdoFieldSoundPicker extends GoogleBlockly.Field {
       console.log('!this.newDiv_ is true - return early');
       return;
     }
-    console.log('!this.newDiv_ is false - proceed - this.newDiv_');
+    console.log('!this.newDiv_ is false - proceed');
     let sounds = new Sounds();
     let codeDiv = document.createElement('div');
     let dialog = new Dialog({
@@ -154,16 +147,13 @@ class CdoFieldSoundPicker extends GoogleBlockly.Field {
         }
       },
     });
-    let onChange = this.onChange;
-    let block = this.block;
-    let name = this.name;
     ReactDOM.render(
       React.createElement(SoundPicker, {
         typeFilter: this.typeFilter,
         uploadsEnabled: !exceedsAbuseThreshold(),
         assetChosen: fileWithPath => {
           dialog.hide();
-          onChange(fileWithPath, block, name);
+          this.onChange(fileWithPath);
         },
         projectId: getCurrentId(),
         soundPlayer: sounds,
@@ -183,8 +173,8 @@ class CdoFieldSoundPicker extends GoogleBlockly.Field {
   }
 
   hide_() {
-    Blockly.WidgetDiv.hide();
-    Blockly.DropDownDiv.hideWithoutAnimation();
+    console.log('calling hide_');
+    Blockly.DropDownDiv.hide();
   }
 
   /**
