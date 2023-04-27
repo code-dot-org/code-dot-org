@@ -108,3 +108,8 @@ export function getCode(workspace) {
   // After supporting JSON block sources, change to:
   // return JSON.stringify(Blockly.serialization.workspaces.save(workspace));
 }
+
+// TODO: Re-define with a new custom field.
+export function soundField(onChange) {
+  return new Blockly.FieldDropdown([['Choose', 'Choose']], onChange);
+}
