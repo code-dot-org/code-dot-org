@@ -27,17 +27,31 @@ describe('SingleSectionSetUp', () => {
     const wrapper = shallow(
       <SingleSectionSetUp
         sectionNum={1}
-        section={{}}
+        section={{participantType: 'student'}}
         updateSection={() => {}}
-        isNewSection={true}
+        isNewSection={false}
       />
     );
 
     const multiSelectGroup = wrapper.find('MultiSelectGroup');
+    expect(multiSelectGroup.length).to.equal(1);
     expect(multiSelectGroup.prop('name')).to.eq('grades');
     expect(multiSelectGroup.prop('required')).to.eq(true);
     expect(multiSelectGroup.prop('options').length).to.eq(14); // K + 12 + Other
     expect(multiSelectGroup.prop('values')).to.eql([]);
+  });
+
+  it('does not render grade selector when participantType is teacher', () => {
+    const wrapper = shallow(
+      <SingleSectionSetUp
+        sectionNum={1}
+        section={{participantType: 'teacher'}}
+        updateSection={() => {}}
+        isNewSection={false}
+      />
+    );
+
+    expect(wrapper.find('MultiSelectGroup').length).to.equal(0);
   });
 
   it('calls updateSection when grade selection is updated', () => {
