@@ -85,7 +85,6 @@ export default class CdoFieldPicker extends GoogleBlockly.Field {
 
   showEditor_() {
     this.onChange();
-    super.showEditor_();
   }
 
   /**
