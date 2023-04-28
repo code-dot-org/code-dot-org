@@ -45,25 +45,34 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
   }
 
   /**
+   * Used to update the value of a field.
    * @override
+   * @param newValue The value to be saved.
    */
-  getValue() {
-    return String(this.value_);
+  doValueUpdate_(newValue) {
+    if (this.value_ !== newValue) {
+      if (this.changeHandler_) {
+        const override = this.changeHandler_(newValue);
+        if (override !== undefined) {
+          newValue = override;
+        }
+      }
+      this.value_ = newValue;
+      this.isDirty_ = true; // Block needs to be re-rendered.
+    }
   }
 
   /**
+   * Validate the changes to the field's value before they are set.
    * @override
+   * @param newValue The value that is being validated
+   * @returns `String` or `null`
    */
-  setValue(value) {
-    if (this.value_ !== value) {
-      if (this.changeHandler_) {
-        const override = this.changeHandler_(value);
-        if (override !== undefined) {
-          value = override;
-        }
-      }
-      this.value_ = value;
+  doClassValidation_(newValue) {
+    if (newValue === null || newValue === undefined) {
+      return null;
     }
+    return String(newValue);
   }
 
   /**

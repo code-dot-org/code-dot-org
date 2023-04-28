@@ -29,26 +29,22 @@ Given(/^I sign in as "([^"]*)"( and go home)?$/) do |name, home|
 end
 
 Given(/^I sign out and sign in as "([^"]*)"$/) do |name|
-  steps %Q{
-    And I sign in as "#{name}"
-  }
+  steps "And I sign in as \"#{name}\""
 end
 
 Given(/^I sign in as "([^"]*)" from the sign in page$/) do |name|
-  steps %Q{
+  steps <<~GHERKIN
     And check that the url contains "/users/sign_in"
     And I wait to see "#signin"
     And I fill in username and password for "#{name}"
     And I click "#signin-button"
     And I wait to see ".header_user"
-  }
+  GHERKIN
 end
 
 Given(/^I am a (student|teacher)( and go home)?$/) do |user_type, home|
   random_name = "Test#{user_type.capitalize} " + SecureRandom.base64
-  steps %Q{
-    And I create a #{user_type} named "#{random_name}"#{home}
-  }
+  steps "And I create a #{user_type} named \"#{random_name}\"#{home}"
 end
 
 def generate_user(name)
@@ -75,9 +71,7 @@ def sign_up(name)
     expect(opacity).to eq(0)
   end
   page_load(wait_proc: wait_proc) do
-    steps %Q{
-      And I click selector "#signup-button"
-    }
+    steps 'And I click selector "#signup-button"'
   end
 rescue RSpec::Expectations::ExpectationNotMetError
   tries ||= 0
@@ -85,9 +79,7 @@ rescue RSpec::Expectations::ExpectationNotMetError
   sleep 1
 
   email, _ = generate_user(name)
-  steps %Q{
-    And I type "#{email}" into "#user_email"
-  }
+  steps "And I type \"#{email}\" into \"#user_email\""
   retry
 end
 
@@ -141,28 +133,28 @@ And(/^I fill in the sign up form with (in)?valid values for "([^"]*)"$/) do |inv
   password = invalid ? 'Short' : 'ExtraLong'
   email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
   age = "10"
-  steps %Q{
+  steps <<~GHERKIN
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "#{age}" option in dropdown "user_age"
     And I click ".btn.btn-primary" to load a new page
-  }
+  GHERKIN
 end
 
 And(/I fill in username and password for "([^"]*)"$/) do |name|
-  steps %Q{
+  steps <<~GHERKIN
     And I type "#{@users[name][:email]}" into "#user_login"
     And I type "#{@users[name][:password]}" into "#user_password"
-  }
+  GHERKIN
 end
 
 And(/I fill in account email and current password for "([^"]*)"$/) do |name|
-  steps %Q{
+  steps <<~GHERKIN
     And I type "#{@users[name][:email]}" into "#user_email"
     And I type "#{@users[name][:password]}" into "#user_current_password"
-  }
+  GHERKIN
 end
 
 When(/^I sign out$/) do
