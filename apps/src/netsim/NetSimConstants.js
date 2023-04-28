@@ -1,6 +1,7 @@
 /**
  * @overview Constants and enums used across Internet Simulator.
  */
+/* global exports */
 
 /**
  * @type {number}

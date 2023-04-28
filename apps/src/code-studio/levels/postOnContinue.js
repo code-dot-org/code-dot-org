@@ -1,3 +1,5 @@
+/* global appOptions */
+
 /**
  * A set of helpers used for cases where we want to make our milestone post
  * when clicking 'Continue'.

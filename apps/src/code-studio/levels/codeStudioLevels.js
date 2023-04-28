@@ -1,3 +1,5 @@
+/* global appOptions */
+
 let registeredGetResult = null;
 let answerChangedFn = null;
 let authenticityToken = null;

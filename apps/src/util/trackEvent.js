@@ -1,3 +1,5 @@
+/* global window */
+
 /**
  * Report an event to Google Analytics.
  * trackEvent is provided by _analytics.html.haml in most cases.

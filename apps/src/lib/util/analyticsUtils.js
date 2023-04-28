@@ -1,3 +1,4 @@
+/* global appOptions */
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';

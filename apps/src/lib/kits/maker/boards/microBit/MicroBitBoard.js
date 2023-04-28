@@ -1,4 +1,5 @@
 /** @file Board controller for BBC micro:bit */
+/* global SerialPort */ // Provided by the Code.org Browser
 
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import {

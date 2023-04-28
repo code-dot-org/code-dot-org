@@ -1,3 +1,5 @@
+/* globals dashboard, appOptions */
+
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';

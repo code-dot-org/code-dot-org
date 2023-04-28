@@ -1,3 +1,5 @@
+/* global LEVEL_TYPE */
+
 var _ = require('lodash');
 
 /**

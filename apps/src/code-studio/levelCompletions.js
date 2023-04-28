@@ -1,3 +1,4 @@
+/* globals Handsontable */
 import $ from 'jquery';
 
 /**

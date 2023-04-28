@@ -1,3 +1,4 @@
+/* global requirejs */
 import CdoBramble, {BRAMBLE_CONTAINER} from './CdoBramble';
 import {FILE_SYSTEM_ERROR, BRAMBLE_READY_STATE} from './constants';
 

@@ -1,3 +1,5 @@
+/* global appOptions */
+
 import $ from 'jquery';
 import {getStore} from '@cdo/apps/redux';
 import React from 'react';

@@ -6,58 +6,29 @@ module.exports = {
   plugins: ['cdo-custom-rules', 'react', 'react-hooks', 'mocha', 'babel'],
   parserOptions: {
     babelOptions: {
-      presets: ['@babel/preset-react'],
-    },
+      presets: ['@babel/preset-react']
+    }
   },
   extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
   env: {
-    es6: true,
+    es6: true
   },
   globals: {
-    $: 'readonly',
-    ace: 'readonly',
-    addToHome: 'readonly',
-    adjustScroll: 'readonly',
-    Applab: 'readonly',
-    appOptions: 'readonly',
-    Blockly: 'readonly',
-    Bounce: 'readonly',
-    Calc: 'readonly',
-    CanvasPixelArray: 'readonly',
-    CDOSounds: 'readonly',
-    censusErrorMessage: 'readonly',
-    Craft: 'readonly',
-    dashboard: 'readonly',
-    Dialog: 'readonly',
-    droplet: 'readonly',
-    Eval: 'readonly',
-    Flappy: 'readonly',
-    ga: 'readonly',
-    Gamelab: 'readonly',
-    google: 'readonly',
-    Handsontable: 'readonly',
-    hocYear: 'readonly',
-    IN_STORYBOOK: 'readonly',
-    IN_UNIT_TEST: 'readonly',
-    inlineAttach: 'readonly',
-    Jigsaw: 'readonly',
-    jQuery: 'readonly',
-    LEVEL_TYPE: 'readonly',
-    MapboxGeocoder: 'readonly',
-    mapboxgl: 'readonly',
-    Maze: 'readonly',
-    options: 'readonly',
-    p5: 'readonly',
-    Phaser: 'readonly',
-    // PISKEL_DEVELOPMENT_MODE is a build flag.  See Gruntfile.js for how to enable it.
-    PISKEL_DEVELOPMENT_MODE: 'readonly',
-    requirejs: 'readonly',
-    SerialPort: 'readonly',
-    signupErrorMessage: 'readonly',
-    Studio: 'readonly',
-    thanksUrl: 'readonly',
-    Turtle: 'readonly',
-    YT: 'readonly',
+    Blockly: true,
+    Phaser: true,
+    Studio: true,
+    Maze: true,
+    Turtle: true,
+    Bounce: true,
+    Eval: true,
+    Flappy: true,
+    Applab: true,
+    Calc: true,
+    Jigsaw: true,
+    $: true,
+    jQuery: true,
+    IN_UNIT_TEST: true,
+    IN_STORYBOOK: true
   },
   rules: {
     'babel/semi': 'error', // autofixable
@@ -79,12 +50,12 @@ module.exports = {
     'react/self-closing-comp': 'error',
     'react/no-danger': 'error',
     'react-hooks/exhaustive-deps': 'error',
-    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/rules-of-hooks': 'error'
   },
   settings: {
     react: {
-      version: 'detect',
-    },
+      version: 'detect'
+    }
   },
   overrides: [
     {
@@ -99,8 +70,8 @@ module.exports = {
         // TODO: We are temporarily disabling this rule to allow using require() to import
         // JavaScript files in TypeScript. Instead, we should add 'allowJs': true to our
         // tsconfig.json file, but this is currently causing some build issues (SL-791)
-        '@typescript-eslint/no-var-requires': 'off',
-      },
-    },
-  ],
+        '@typescript-eslint/no-var-requires': 'off'
+      }
+    }
+  ]
 };

@@ -1,3 +1,5 @@
+/* global Text */
+
 var xml = require('./xml');
 var msg = require('@cdo/locale');
 var _ = require('lodash');

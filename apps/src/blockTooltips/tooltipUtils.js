@@ -1,3 +1,5 @@
+/* global ace */
+
 /**
  * @typedef {Object} parameterSlotInfo
  * @property {string} funcName

@@ -1,3 +1,4 @@
+/* global navigator */
 import PropTypes from 'prop-types';
 import React from 'react';
 import Button from '../../templates/Button';

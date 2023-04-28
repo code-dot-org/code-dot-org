@@ -1,3 +1,5 @@
+/* globals appOptions */
+
 import PropTypes from 'prop-types';
 import React from 'react';
 import EditableProjectName from './EditableProjectName';

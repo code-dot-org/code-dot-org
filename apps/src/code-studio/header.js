@@ -1,3 +1,5 @@
+/* globals dashboard */
+
 import $ from 'jquery';
 import {
   showProjectHeader,

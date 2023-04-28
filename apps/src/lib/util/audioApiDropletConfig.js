@@ -1,3 +1,4 @@
+/* globals dashboard, appOptions */
 import {getStore} from '../../redux';
 import getAssetDropdown from '@cdo/apps/assetManagement/getAssetDropdown';
 import {executors} from './audioApi';
