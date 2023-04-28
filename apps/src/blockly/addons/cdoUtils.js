@@ -117,5 +117,5 @@ export function soundField(onChange) {
 }
 
 export function locationField(icon, onChange, color, onDisplay) {
-  return new Blockly.FieldButton(icon, onChange, color, onDisplay);
+  return new Blockly.FieldPicker('', onChange, onDisplay, icon);
 }
