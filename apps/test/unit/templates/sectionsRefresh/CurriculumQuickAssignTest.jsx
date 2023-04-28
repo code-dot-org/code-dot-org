@@ -11,7 +11,7 @@ describe('CurriculumQuickAssign', () => {
     );
 
     expect(wrapper.find('h3').length).to.equal(1);
-    expect(wrapper.find('h5').length).to.equal(1);
+    expect(wrapper.find('p').length).to.equal(1);
     // We haven't specified participantType = student, so all 5 buttons appear
     expect(wrapper.find('Button').length).to.equal(5);
     expect(wrapper.find('Button').at(0).props().text).to.equal(
