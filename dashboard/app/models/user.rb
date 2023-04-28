@@ -1068,7 +1068,6 @@ class User < ApplicationRecord
     end
   end
 
-  # Could we do a conditional block here and do something different if they are a teacher?
   def self.authenticate_with_section(section:, params:)
     User.authenticate_with_section_and_secret_words(section: section, params: params.slice(:user_id, :secret_words)) ||
       User.authenticate_with_section_and_secret_picture(section: section, params: params.slice(:user_id, :secret_picture_id))
