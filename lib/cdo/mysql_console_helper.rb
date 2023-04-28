@@ -19,7 +19,7 @@ module MysqlConsoleHelper
       "*** Please connect to the reporting database instead via      ***\n"\
       "*** bin/dashboard-reporting-sql or bin/pegasus-reporting-sql. ***\n"\
       "*****************************************************************"
-    puts warning if warn && (db.host == CDO.db_writer_endpoint) && rack_env?(:production)
+    puts warning if warn && (db.host == CDO.db_endpoint_writer) && rack_env?(:production)
 
     mysql_command = "mysql #{options(db)}"
     mysql_command += " --execute=\"#{args}\"" unless args.empty?
