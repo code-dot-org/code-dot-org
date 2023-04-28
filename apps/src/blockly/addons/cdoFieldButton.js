@@ -1,116 +1,112 @@
 import GoogleBlockly from 'blockly/core';
 
-const CORNER_RADIUS = 3;
-const INNER_HEIGHT = 16;
+const BUTTON_CORNER_RADIUS = 3;
+const BUTTON_INNER_HEIGHT = 16;
+import {DEFAULT_SOUND} from '@cdo/apps/blockly/constants';
 
-export default class CdoFieldButton extends GoogleBlockly.Field {
-  // Third argument (color) is used by CDO blockly, so we include it in
-  // method signature for compatibility
-  constructor(title, opt_buttonHandler, _, opt_changeHandler) {
-    super('');
+export default class CdoFieldPicker extends GoogleBlockly.Field {
+  constructor(value, onChange, onDisplay, buttonIcon) {
+    super(value);
+    this.onChange = onChange;
+    this.onDisplay = onDisplay;
+    this.buttonIcon = buttonIcon;
 
-    this.title_ = title;
-    this.buttonHandler_ = opt_buttonHandler;
-    this.changeHandler_ = opt_changeHandler;
+    this.SERIALIZABLE = true;
   }
 
-  /**
-   * @override
-   */
-  init() {
-    super.init();
-
-    this.buttonElement_ = Blockly.utils.dom.createSvgElement(
-      'rect',
-      {
-        rx: CORNER_RADIUS,
-        ry: CORNER_RADIUS,
-        x: 1,
-        y: 1,
-        height: INNER_HEIGHT,
-        width: INNER_HEIGHT,
-      },
-      this.fieldGroup_
+  static fromJson(options) {
+    return new CdoFieldPicker(
+      options.value,
+      options.onChange,
+      options.onDisplay,
+      options.buttonIcon
     );
-    this.buttonElement_.style.fillOpacity = 1;
-    this.buttonElement_.style.fill =
-      this.getSourceBlock().style.colourSecondary;
+  }
 
-    this.textElement_.style.fontSize = '11pt';
-    this.textElement_.style.fill = this.getSourceBlock().style.colourPrimary;
-    this.textElement_.textContent = '';
-    this.textElement_.appendChild(this.title_);
+  doClassValidation_(newValue) {
+    if (typeof newValue !== 'string') {
+      return null;
+    }
+    // Handle 'play sound' block with default param from CDO blockly.
+    // TODO: Remove when sprite lab is migrated to Google blockly.
+    if (newValue === 'Choose') {
+      return DEFAULT_SOUND;
+    }
+    return newValue;
+  }
 
-    this.fieldGroup_.insertBefore(this.buttonElement_, this.textElement_);
+  initView() {
+    super.initView();
+    if (this.buttonIcon) {
+      this.buttonElement_ = Blockly.utils.dom.createSvgElement(
+        'rect',
+        {
+          rx: BUTTON_CORNER_RADIUS,
+          ry: BUTTON_CORNER_RADIUS,
+          x: 1,
+          y: 1,
+          height: BUTTON_INNER_HEIGHT,
+          width: BUTTON_INNER_HEIGHT,
+        },
+        this.fieldGroup_
+      );
+      this.buttonElement_.style.fillOpacity = 1;
+      this.buttonElement_.style.fill =
+        this.getSourceBlock().style.colourSecondary;
+
+      this.textElement_.style.fontSize = '11pt';
+      this.textElement_.style.fill = this.getSourceBlock().style.colourPrimary;
+      this.textElement_.textContent = '';
+      this.textElement_.appendChild(this.buttonIcon);
+
+      this.fieldGroup_.insertBefore(this.buttonElement_, this.textElement_);
+    }
+  }
+
+  getDisplayText_() {
+    let text = this.getText();
+    if (!text) {
+      return GoogleBlockly.Field.NBSP;
+    }
+    // The onDisplay function customizes the text for display.
+    return this.onDisplay(text);
   }
 
   /**
-   * Used to update the value of a field.
-   * @override
-   * @param newValue The value to be saved.
+Expand All
+	@@ -51,38 +79,20 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
    */
   doValueUpdate_(newValue) {
     if (this.value_ !== newValue) {
-      if (this.changeHandler_) {
-        const override = this.changeHandler_(newValue);
-        if (override !== undefined) {
-          newValue = override;
-        }
-      }
       this.value_ = newValue;
+      if (this.buttonIcon) {
+        // For location picker, update coordinates of block when dragged out from toolbox.
+        this.onDisplay(newValue);
+      }
       this.isDirty_ = true; // Block needs to be re-rendered.
     }
-  }
-
-  /**
-   * Validate the changes to the field's value before they are set.
-   * @override
-   * @param newValue The value that is being validated
-   * @returns `String` or `null`
-   */
-  doClassValidation_(newValue) {
-    if (newValue === null || newValue === undefined) {
-      return null;
-    }
-    return String(newValue);
   }
 
   /**
    * @override
    */
   showEditor_() {
-    if (!this.buttonHandler_) {
-      return;
-    }
-    this.buttonHandler_(this.setValue.bind(this));
+    this.onChange();
   }
 
   /**
-   * Keeps button element size in sync with parent Field
-   * @override
-   */
-  updateSize_() {
-    super.updateSize_();
-
-    if (this.buttonElement_) {
-      this.buttonElement_.setAttribute('width', this.size_.width - 2);
-      this.buttonElement_.setAttribute('height', this.size_.height - 2);
-    }
+Expand All
+	@@ -99,18 +109,13 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
   }
 
   /**
-   * Contrast background for button with source block,
-   * and match text element to source block each time.
-   * Keeps
+   * Contrast background for button with source block
    * @override
    */
   applyColour() {
     const sourceBlock = this.getSourceBlock();
     if (this.buttonElement_) {
       this.buttonElement_.style.fill = sourceBlock.style.colourSecondary;
-    }
-    if (this.textElement_) {
-      this.textElement_.style.fill = sourceBlock.style.colourPrimary;
     }
   }
 }
