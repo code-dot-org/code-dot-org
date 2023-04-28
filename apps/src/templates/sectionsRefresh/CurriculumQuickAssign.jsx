@@ -73,6 +73,7 @@ export default function CurriculumQuickAssign({
         ],
       };
       const hocData = {...courseOfferings[MARKETING_AUDIENCE.HOC]};
+      const plData = {...courseOfferings[MARKETING_AUDIENCE.PL]};
 
       const determineSelectedCourseOffering = (startingData, audience) => {
         const headers = Object.keys(startingData);
@@ -97,6 +98,7 @@ export default function CurriculumQuickAssign({
           MARKETING_AUDIENCE.ELEMENTARY
         );
         determineSelectedCourseOffering(hocData, MARKETING_AUDIENCE.HOC);
+        determineSelectedCourseOffering(plData, MARKETING_AUDIENCE.PL);
       }
     }
     // added all these dependencies given the eslint warning
