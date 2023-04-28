@@ -1771,6 +1771,126 @@
         },
         "courseF_groups_size_-2022-2": {
           "mini-toolbox-blue-button": "I-click ang asul na button para buksan o isara."
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_aquarium2022": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_card2022": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_chatbot2022": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_collector2022": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_collector_-2022-2": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_collector_drive_-2022-2": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_collector_move2_-2022-2": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_madlib2022": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_pet2022": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_pet_-2022-2": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Mag-click dito upang buksan ang kategoryang Mga Pag-uugali."
+        },
+        "courseF_sprites_behaviors_-2022-2": {
+          "behaviors_category": "Mag-click dito upang buksan ang kategoryang Mga Pag-uugali."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Mag-click dito upang buksan ang kategoryang Mga Sprite."
+        },
+        "courseF_sprites_make_-2022-2": {
+          "sprites_category": "Mag-click dito upang buksan ang kategoryang Mga Sprite."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Mag-click dito upang buksan ang kategoryang Mga Lokasyon."
+        },
+        "courseF_sprites_positioning_-2022-2": {
+          "locations_category": "Mag-click dito upang buksan ang kategoryang Mga Lokasyon."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Maghanap ng bagong block dito."
+        },
+        "courseF_sprites_properties_-2022-2": {
+          "sprites_category2": "Maghanap ng bagong block dito."
         }
       }
     }
