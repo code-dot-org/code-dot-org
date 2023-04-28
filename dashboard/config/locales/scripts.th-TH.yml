@@ -2721,3 +2721,15 @@ th:
             \  ฝึกฝนด้านรูปแบบคีย์ที่มีในบทเรียน\n-   เข้าร่วมทำงานใน AI Lab และ App
             Lab\n-   เรียนจนจบโปรเจกต์\n-   สร้างแผนการสอนเพื่อนำหน่วยการเรียนรู้ไปใช้กับนักเรียน\n\n**เวลาที่แนะนำ:**
             120 นาที"
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: บทเกริ่นนำ
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: สรุป
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: สรุป
