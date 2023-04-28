@@ -6607,3 +6607,36 @@ pt:
           lesson_groups:
             lessonGroup-3:
               display_name: Entradas e saídas
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bem-vindo
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Introdução
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dia 1
+          title: Dia 1
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Resumo
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dia 2
+          title: Dia 2
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dia 3
+          title: Dia 3
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Resumo
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dia 4
+          title: Dia 4
