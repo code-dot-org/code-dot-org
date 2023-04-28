@@ -14,29 +14,29 @@ FROM ubuntu:18.04 as base
 #########################################################
 
 ENV \
-  LANG=C.UTF-8 \
-  DEBIAN_FRONTEND=noninteractive \
-  USER=circleci \
-  GROUP=circleci
+    LANG=C.UTF-8 \
+    DEBIAN_FRONTEND=noninteractive \
+    USER=circleci \
+    GROUP=circleci
 
 # just enough to compile ruby: other deps => primary-layer below
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-      autoconf \
-      bison \
-      build-essential \
-      curl \
-      git \
-      libffi-dev \
-      libgdbm-dev \
-      libncurses5-dev \
-      libreadline-dev \
-      libssl-dev \
-      libyaml-dev \
-      rbenv \
-      sudo \
-      zlib1g-dev \
-      && true
+        autoconf \
+        bison \
+        build-essential \
+        curl \
+        git \
+        libffi-dev \
+        libgdbm-dev \
+        libncurses5-dev \
+        libreadline-dev \
+        libssl-dev \
+        libyaml-dev \
+        rbenv \
+        sudo \
+        zlib1g-dev \
+        && true
 
 # add circleci user
 RUN groupadd --gid 3434 ${USER} && \
@@ -51,12 +51,12 @@ FROM ubuntu:18.04 as node
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-      build-essential \
-      curl \
-      g++ \
-      g++-8 \
-      gcc-8 \
-      python3-pip
+        build-essential \
+        curl \
+        g++ \
+        g++-8 \
+        gcc-8 \
+        python3-pip
 
 # install node
 RUN curl -sSLOJ https://nodejs.org/dist/v18.16.0/node-v18.16.0.tar.gz && \
@@ -97,33 +97,33 @@ FROM base as primary-layer
 
 # MAINLINE UBUNTU PACKAGE DEPS SHOULD BE ADDED HERE
 RUN apt-get install -y --no-install-recommends \
-      apt-transport-https \
-      ca-certificates \
-      enscript \
-      gnupg \
-      gzip \
-      imagemagick \
-      jq \
-      libaio-dev \
-      libaio1 \
-      libicu-dev \
-      libmagickwand-dev \
-      libsqlite3-dev \
-      locales \
-      moreutils \
-      openssh-client \
-      parallel \
-      python \
-      python-dev \
-      software-properties-common \
-      sudo \
-      tar \
-      unzip \
-      vim \
-      xvfb \
-      xz-utils \
-      zlib1g-dev \
-      && true
+        apt-transport-https \
+        ca-certificates \
+        enscript \
+        gnupg \
+        gzip \
+        imagemagick \
+        jq \
+        libaio-dev \
+        libaio1 \
+        libicu-dev \
+        libmagickwand-dev \
+        libsqlite3-dev \
+        locales \
+        moreutils \
+        openssh-client \
+        parallel \
+        python \
+        python-dev \
+        software-properties-common \
+        sudo \
+        tar \
+        unzip \
+        vim \
+        xvfb \
+        xz-utils \
+        zlib1g-dev \
+        && true
 
 WORKDIR /tmp
 
@@ -174,8 +174,8 @@ RUN curl -sSLOJ https://dl.google.com/linux/direct/google-chrome-stable_current_
     dpkg -i google-chrome-stable_current_amd64.deb || apt-get -fy install && \
     rm google-chrome-stable_current_amd64.deb && \
     sed -i \
-      's|HERE/chrome"|HERE/chrome" --disable-setuid-sandbox --no-sandbox|g' \
-      "/opt/google/chrome/google-chrome"
+        's|HERE/chrome"|HERE/chrome" --disable-setuid-sandbox --no-sandbox|g' \
+        "/opt/google/chrome/google-chrome"
 
 # install chromedriver
 RUN export CHROMEDRIVER_RELEASE=$(curl http://chromedriver.storage.googleapis.com/LATEST_RELEASE) && \
