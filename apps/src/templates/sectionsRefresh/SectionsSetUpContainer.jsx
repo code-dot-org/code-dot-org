@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import SingleSectionSetUp from './SingleSectionSetUp';
@@ -8,6 +8,8 @@ import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
@@ -59,8 +61,14 @@ const useSections = section => {
   return [sections, updateSection];
 };
 
-const saveSection = (e, section) => {
-  e.preventDefault();
+const saveSection = (section, isNewSection) => {
+  // Determine data sources and save method based on new vs edit section
+  const dataUrl = isNewSection ? SECTIONS_API : `${SECTIONS_API}/${section.id}`;
+  const method = isNewSection ? 'POST' : 'PATCH';
+  const loginType = isNewSection ? queryParams('loginType') : section.loginType;
+  const participantType = isNewSection
+    ? queryParams('participantType')
+    : section.participantType;
 
   const form = document.querySelector(`#${FORM_ID}`);
   if (!form.checkValidity()) {
@@ -70,17 +78,23 @@ const saveSection = (e, section) => {
 
   const csrfToken = document.querySelector('meta[name="csrf-token"]')
     .attributes['content'].value;
-  const loginType = queryParams('loginType');
-  const participantType = queryParams('participantType');
 
   const section_data = {
     login_type: loginType,
     participant_type: participantType,
+    course_offering_id: section.course?.courseOfferingId,
+    course_version_id: section.course?.versionId,
+    unit_id: section.course?.unitId,
+    restrict_section: section.restrictSection,
+    lesson_extras: section.lessonExtras,
+    pairing_allowed: section.pairingAllowed,
+    tts_autoplay_enabled: section.ttsAutoplayEnabled,
+    sharing_disabled: section.sharingDisabled,
     ...section,
   };
 
-  fetch(SECTIONS_API, {
-    method: 'POST',
+  fetch(dataUrl, {
+    method: method,
     headers: {
       'Content-Type': 'application/json',
       'X-CSRF-Token': csrfToken,
@@ -103,12 +117,62 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
 
   const isNewSection = !sectionToBeEdited;
+  const initialSectionRef = useRef(sectionToBeEdited);
 
   const caretStyle = style.caret;
   const caret = advancedSettingsOpen ? 'caret-down' : 'caret-right';
 
   const toggleAdvancedSettingsOpen = () => {
     setAdvancedSettingsOpen(!advancedSettingsOpen);
+  };
+
+  const recordSectionSetupEvent = section => {
+    const initialSection = initialSectionRef.current;
+    /* 
+    We do not currently store version year on the section, and the version dropdown
+    does not update it. We will need to query all course offerings or set up a new
+    course offerings controller function to populate previousVersionYear and newVersionYear.
+    */
+    if (isNewSection) {
+      analyticsReporter.sendEvent(EVENTS.COMPLETED_EVENT, {
+        sectionUnitId: section.course?.unitId,
+        sectionCurriculumLocalizedName: section.course?.displayName,
+        sectionCurriculum: section.course?.courseOfferingId, //this is course Offering id
+        sectionCurriculumVersionYear: section.course?.versionYear,
+        sectionGrade: section.grade ? section.grade[0] : null,
+        sectionLockSelection: section.restrictSection,
+        sectionName: section.name,
+        sectionPairProgramSelection: section.pairingAllowed,
+      });
+    }
+    /*
+    We want to send a 'curriculum assigned' event if this is not a new section
+    (the check for initialSection) and if we are changing the courseOffering
+    or the unit (hence the checks before and after the ||). 
+    */
+    if (
+      (section.course?.courseOfferingId &&
+        initialSection &&
+        section.course?.courseOfferingId !==
+          initialSection.course?.courseOfferingId) ||
+      (section.course?.unitId &&
+        initialSection &&
+        section.course?.unitId !== initialSection.course?.unitId)
+    ) {
+      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+        sectionName: section.name,
+        sectionId: section.id,
+        sectionLoginType: section.loginType,
+        previousUnitId: initialSection.course?.unitId,
+        previousCourseId: initialSection.course?.courseOfferingId,
+        previousCourseVersionId: initialSection.course?.versionId,
+        previousVersionYear: null,
+        newUnitId: section.course?.unitId,
+        newCourseId: section.course?.courseOfferingId,
+        newCourseVersionId: section.course?.courseVersionId,
+        newVersionYear: null,
+      });
+    }
   };
 
   return (
@@ -137,6 +201,7 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
         isNewSection={isNewSection}
         updateSection={(key, val) => updateSection(0, key, val)}
         sectionCourse={sections[0].course}
+        initialParticipantType={sections[0].participantType}
       />
       <span>
         <div style={style.div}>
@@ -192,7 +257,11 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
         <Button
           text={isNewSection ? i18n.finishCreatingSections() : i18n.save()}
           color="purple"
-          onClick={e => saveSection(e, sections[0])}
+          onClick={e => {
+            e.preventDefault();
+            recordSectionSetupEvent(sections[0]);
+            saveSection(sections[0], isNewSection);
+          }}
         />
       </div>
     </form>

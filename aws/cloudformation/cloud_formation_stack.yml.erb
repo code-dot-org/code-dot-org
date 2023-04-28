@@ -236,14 +236,19 @@ Resources:
       HealthCheckIntervalSeconds: 10
       HealthCheckTimeoutSeconds: 5
       TargetGroupAttributes:
+        # Least Outstanding Requests algorithm precludes usage of Slow Start feature below.
         - Key: load_balancing.algorithm.type
-          Value: least_outstanding_requests
+          Value: round_robin
         - Key: stickiness.enabled
           Value: true
         - Key: stickiness.type
           Value: lb_cookie
         - Key: stickiness.lb_cookie.duration_seconds
           Value: 30
+        # Linearly increase the HTTP throughput share to new instances to give them time to initialize and load caches.
+        - Key: slow_start.duration_seconds
+          Value: 300
+
 <%   unless frontends -%>
       Targets:
         - {Id: !Ref <%=daemon%>, Port: 80}
