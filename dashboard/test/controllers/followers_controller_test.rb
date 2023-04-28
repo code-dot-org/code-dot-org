@@ -382,7 +382,7 @@ class FollowersControllerTest < ActionController::TestCase
       post :student_register, params: {section_code: 'INVALID'}
       @new_student.reload
     end
-    assert_equal true, @new_student.display_captcha?
+    assert_equal true, @new_student.display_join_section_captcha?
   end
 
   # Enable reCAPTCHA gem in test env for just this unit test.
