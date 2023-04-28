@@ -110,8 +110,35 @@ export function getCode(workspace) {
 }
 
 export function soundField(onChange) {
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+  const parsePathString = text => {
+    // Example string paths:
+    // 'sound://category_board_games/card_dealing_multiple.mp3'
+    // 'sound://default.mp3'
+    const pathStringArray = text.split('/');
+    let category = '';
+    // Some sounds do not include a category, such as default.mp3
+    if (pathStringArray[2].includes('category_')) {
+      // Example: 'category_board_games' becomes 'Board games: '
+      category = capitalizeFirstLetter(
+        pathStringArray[2].replace('category_', '').replaceAll('_', ' ') + ': '
+      );
+    }
+    // Example: 'card_dealing_multiple.mp3' becomes 'Card dealing multiple'
+    const soundName = pathStringArray[pathStringArray.length - 1].replace(
+      '.mp3',
+      ''
+    );
+    // Examples: 'Board Games: Card dealing multiple', 'Default'
+    const fieldText = `${category}${soundName}`;
+    return fieldText;
+  };
+
   const onDisplay = soundPath => {
-    return `Selected song: ${soundPath}`;
+    return parsePathString(soundPath);
   };
   return new Blockly.FieldPicker('Choose', onChange, onDisplay);
 }
