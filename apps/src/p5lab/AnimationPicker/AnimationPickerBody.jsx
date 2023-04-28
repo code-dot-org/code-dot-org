@@ -208,7 +208,6 @@ export default class AnimationPickerBody extends React.Component {
 
   render() {
     let assetType;
-    console.log('calling render!');
     switch (this.props.pickerType) {
       case PICKER_TYPE.spritelab:
         assetType = msg.costumeMode();
@@ -223,7 +222,7 @@ export default class AnimationPickerBody extends React.Component {
     if (!this.props.libraryManifest) {
       return <div>{msg.loading()}</div>;
     }
-    const {searchQuery, categoryQuery, results} = this.state;
+    const {searchQuery, categoryQuery, results, generating} = this.state;
     const {
       hideUploadOption,
       onDrawYourOwnClick,
@@ -232,11 +231,7 @@ export default class AnimationPickerBody extends React.Component {
       shouldWarnOnAnimationUpload,
     } = this.props;
 
-    console.log('this.state.generating', this.state.generating);
-
-    const generating = this.state.generating;
     const searching = searchQuery !== '' && !generating;
-    console.log('searching', searching);
     const inCategory = categoryQuery !== '';
     const isBackgroundsTab =
       this.props.pickerType === 'backgrounds' &&
