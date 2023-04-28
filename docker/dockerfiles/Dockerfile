@@ -15,6 +15,7 @@ FROM ubuntu:18.04 as base
 
 ENV \
     LANG=C.UTF-8 \
+    TZ=Etc/UTC \
     DEBIAN_FRONTEND=noninteractive \
     USER=circleci \
     GROUP=circleci
@@ -118,6 +119,7 @@ RUN apt-get install -y --no-install-recommends \
         software-properties-common \
         sudo \
         tar \
+        tzdata \
         unzip \
         vim \
         xvfb \
@@ -127,11 +129,8 @@ RUN apt-get install -y --no-install-recommends \
 
 WORKDIR /tmp
 
-RUN \
-    # set timezone to UTC by default
-    ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime && \
-    # en_US.UTF-8 locale not available by default
-    locale-gen en_US.UTF-8
+# en_US.UTF-8 locale not available by default
+RUN locale-gen en_US.UTF-8
 
 # install mysql
 RUN curl -sSLOJ https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb && \
