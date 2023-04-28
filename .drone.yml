@@ -143,6 +143,7 @@ steps:
 
   - name: ui-tests
     image: codedotorg/code-dot-org:node-18.16.0 # see docker/dockerfiles/Dockerfile
+    pull: always
     volumes:
       - name: rbenv
         path: /home/circleci/.rbenv
