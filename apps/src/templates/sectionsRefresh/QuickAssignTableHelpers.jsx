@@ -1,5 +1,7 @@
 import React from 'react';
+import classnames from 'classnames';
 import moduleStyles from './sections-refresh.module.scss';
+import {Heading5} from '@cdo/apps/componentLibrary/typography';
 
 /*
 This is a file to house the shared pieces of both types of Curriculum
@@ -21,7 +23,7 @@ export function renderRows(
   return headers.map(header => (
     <tr key={header}>
       <td className={moduleStyles.courseHeaders}>
-        {header}
+        <Heading5>{header}</Heading5>
         {renderOfferings(
           courseData[header],
           sectionCourse,
@@ -49,7 +51,10 @@ function renderOfferings(
     <div className={moduleStyles.flexDisplay} key={course.display_name}>
       <input
         id={course.display_name}
-        className={moduleStyles.radio}
+        className={classnames(
+          moduleStyles.radio,
+          moduleStyles.withBrandAccentColor
+        )}
         type="radio"
         name={course.display_name}
         value={course.display_name}
