@@ -153,8 +153,12 @@ export default class JavabuilderConnection {
       this.establishWebsocketConnection(result.token);
     } catch (error) {
       if (error.status === 403) {
-        if (error.responseJSON.captcha_required === true) {
+        if (error.responseJSON?.captcha_required === true) {
           this.setCaptchaRequired();
+          this.onOutputMessage(
+            javalabMsg.errorJavabuilderVerificationRequired()
+          );
+          this.onNewlineMessage();
         } else {
           this.displayUnauthorizedMessage(error);
         }
@@ -163,6 +167,7 @@ export default class JavabuilderConnection {
         this.onNewlineMessage();
         console.error(error.responseText);
       }
+      this.handleExecutionFinished();
     }
   }
 

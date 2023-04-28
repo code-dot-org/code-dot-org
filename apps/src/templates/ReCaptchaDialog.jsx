@@ -17,6 +17,7 @@ export default class ReCaptchaDialog extends React.Component {
     isOpen: PropTypes.bool.isRequired,
     submitText: PropTypes.string,
     siteKey: PropTypes.string.isRequired,
+    children: PropTypes.node,
   };
 
   constructor(props) {
@@ -74,7 +75,8 @@ export default class ReCaptchaDialog extends React.Component {
           style={styles.dialog}
           isOpen={isOpen}
         >
-          <h3>{i18n.verifyNotBot()}</h3>
+          <h3>Please confirm you're human</h3>
+          {this.props.children}
           {!this.state.loadedCaptcha && <Spinner size="large" />}
           {this.state.loadedCaptcha && (
             <div
