@@ -31,6 +31,18 @@ if is_ubuntu_18_04 && is_node_18
     action :remove
   end
 else
+  # Install binary nodejs from nodesource apt repo
+
+  # Remove a potential source compile of nodejs, if it exists
+  execute 'uninstall_nodejs_source' do
+    cwd '/usr/local/nodejs-source-18.16.0'
+    command [
+      'make uninstall',
+      'rm -rf /usr/local/nodejs-source-18.16.0'
+    ]
+    only_if {File.exist?('/usr/local/nodejs-source-18.16.0')}
+  end
+
   node.default['nodejs']['repo'] = "https://deb.nodesource.com/node_#{node['cdo-nodejs']['version']}"
   include_recipe 'nodejs'
 
