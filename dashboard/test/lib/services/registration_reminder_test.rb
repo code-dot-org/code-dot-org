@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class Services::RegistrationReminderTest < ActiveSupport::TestCase
-  setup_all do
+  setup do
     Pd::Application::TeacherApplication.any_instance.stubs(:deliver_email)
   end
 
@@ -14,7 +14,7 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
     Timecop.freeze do
       # Initial creation: No reminders
       application_hash = build :pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id
-      application = create :pd_teacher_application, form_data_hash: application_hash, pd_workshop_id: (create :summer_workshop).id
+      application = create :pd_teacher_application, form_data_hash: application_hash
       Services::RegistrationReminder.send_registration_reminders!
       assert_empty application.emails.where(email_type: 'registration_reminder')
 
