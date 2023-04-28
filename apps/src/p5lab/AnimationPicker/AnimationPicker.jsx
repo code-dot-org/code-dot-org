@@ -77,8 +77,6 @@ class AnimationPicker extends React.Component {
     this.refs.uploader.openFileChooser();
   };
 
-  handleGeneratedImageUpload = () => {};
-
   onClose = () => {
     // If the user has not selected any animations yet, close immediately
     if (this.props.selectedAnimations.length > 0) {
@@ -219,7 +217,6 @@ export default connect(
       dispatch(pickLibraryAnimation(animation));
     },
     onUploadStart(data) {
-      console.log('here is my data in onUploadStart', data);
       if (data.files[0].size >= MAX_UPLOAD_SIZE) {
         dispatch(handleUploadError(msg.animationPicker_unsupportedSize()));
       } else if (

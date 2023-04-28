@@ -582,14 +582,9 @@ class FilesApi < Sinatra::Base
     # though this is JSON data, we're making the POST request via iframe
     # form submission. IE9 will try to download the response if we have
     # content_type json
-    puts '**** GOT TO ANIMATIONS POST REQUEST ****'
     content_type 'text/plain'
 
-    puts 'request.POST[files]'
-    puts request.POST['files']
-
     bad_request unless request.POST['files'] && request.POST['files'][0]
-    puts 'threw bad request'
     file = request.POST['files'][0]
 
     bad_request unless file[:filename] && file[:tempfile]
