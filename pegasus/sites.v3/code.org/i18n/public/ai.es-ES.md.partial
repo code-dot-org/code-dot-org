@@ -1,19 +1,5 @@
 ---
 title: Conoce la Inteligencia Artificial (IA)
-video_player: true
-theme: responsive
-style_min: true
-social:
-  og:title: Learn about Artificial Intelligence (AI)
-  og:description: Join us to explore AI in a new video series, train AI for Oceans in 25+ languages, discuss ethics, and more!
-  og:image: https://code.org/images/ai/exploring-ai.png
-  og:image:width: 1200
-  og:image:height: 630
-  twitter:image:src: https://code.org/images/ai/exploring-ai.png
-  og:video: ''
-  og:video:width: ''
-  og:video:height: ''
-  og:video:type: ''
 ---
 
 {{ ai_header_stylesheets_links }}
