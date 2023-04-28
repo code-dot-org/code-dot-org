@@ -2,6 +2,7 @@ import GoogleBlockly from 'blockly/core';
 
 const BUTTON_CORNER_RADIUS = 3;
 const BUTTON_INNER_HEIGHT = 16;
+
 export default class CdoFieldPicker extends GoogleBlockly.Field {
   constructor(value, onChange, onDisplay, buttonIcon) {
     super(value);
