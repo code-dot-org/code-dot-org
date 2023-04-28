@@ -52,6 +52,7 @@
   "emptyBackpackMessage": "Files saved to your backpack will appear here.",
   "enablePeerReview": "Enable Peer Review",
   "errorJavabuilderConnectionGeneral": "We hit an error connecting to our server. Try again.",
+  "errorJavabuilderVerificationRequired": "Verification required: please verify you're a human and try again.",
   "errorLoadingClassmates": "There was an error loading the list of your classmates. Please try again.",
   "errorMediaImageLoadError": "There was an error loading the image.",
   "errorNeighborhoodInvalidGrid": "There was an error loading the neighborhood level. Please contact us at support@code.org, and be sure to include the URL to this page in your message.",

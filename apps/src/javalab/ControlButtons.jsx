@@ -6,6 +6,8 @@ import JavalabButton from './JavalabButton';
 import JavalabSettings from './JavalabSettings';
 import style from './control-buttons.module.scss';
 import ReCaptchaDialog from '@cdo/apps/templates/ReCaptchaDialog';
+import {appendOutputLog, appendNewlineToConsoleLog} from './redux/consoleRedux';
+import {getStore} from '@cdo/apps/redux';
 
 export default function ControlButtons({
   isRunning,
@@ -41,11 +43,11 @@ export default function ControlButtons({
     finishButtonId = 'finishButton';
   }
 
-  const [isDialogOpen, setIsDialogOpen] = useState(true);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   // need authenticity token?
   // does x work?
-  // block run button until submit has finished?
+  // need to make captchaRequired modifyable (add to state)
   return (
     <div>
       <div className={style.leftButtons}>
@@ -60,10 +62,23 @@ export default function ControlButtons({
                   'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({'g-recaptcha-response': token}),
-              }).then(() => setIsDialogOpen(false));
+              }).then(() => {
+                getStore().dispatch(
+                  appendOutputLog('Verification successful!')
+                );
+                getStore().dispatch(appendNewlineToConsoleLog());
+                setIsDialogOpen(false);
+              });
             }}
             siteKey={recaptchaSiteKey}
-          />
+          >
+            <p>
+              Java usage is limited for new users. Verified teachers have access
+              to a much higher quota for themselves and their students without
+              any additional checks. You can learn why verification is needed on
+              this blog pages: link
+            </p>
+          </ReCaptchaDialog>
         )}
         <JavalabButton
           id="runButton"
@@ -71,7 +86,10 @@ export default function ControlButtons({
           icon={
             <FontAwesome icon={isRunning ? 'stop' : 'play'} className="fa" />
           }
-          onClick={toggleRun}
+          onClick={() => {
+            toggleRun();
+            setIsDialogOpen(true);
+          }}
           isHorizontal
           className={style.buttonOrange}
           isDisabled={disableRunButton}
@@ -81,7 +99,10 @@ export default function ControlButtons({
             id="testButton"
             text={isTesting ? i18n.stopTests() : i18n.test()}
             icon={<FontAwesome icon="flask" className="fa" />}
-            onClick={toggleTest}
+            onClick={() => {
+              toggleTest();
+              setIsDialogOpen(true);
+            }}
             isHorizontal
             className={style.buttonWhite}
             isDisabled={disableTestButton}
