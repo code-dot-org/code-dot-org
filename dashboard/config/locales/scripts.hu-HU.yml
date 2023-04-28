@@ -3481,3 +3481,7 @@ hu:
               display_name: 1.  fejezet
             lessonGroup-4:
               display_name: 2.  fejezet
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Bevezető
